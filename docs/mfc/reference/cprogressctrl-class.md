@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6317ce9484cc471611762d10e6f1482f24c2742a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ccc4acfdfd618bf0fa11f4a49c1e0b78f009ca
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378320"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079389"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Statusanzeige-Steuerelements bereit.  
@@ -142,27 +142,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Gibt das Statusanzeige-Steuerelement Stil. Wenden Sie eine beliebige Kombination von Fenster Stylesdescribed in [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK, zusätzlich zu den folgenden Statusanzeige Steuerelementtypen an das Steuerelement:  
   
 - `PBS_VERTICAL` Zeigt Informationen vertikal Status, von oben nach unten. Wenn dieses Kennzeichen nicht zeigt das Statusanzeige-Steuerelement horizontal und/oder links nach rechts.  
   
 - `PBS_SMOOTH` Zeigt die schrittweisen, smooth ausfüllen das Statusanzeige-Steuerelement. Wenn dieses Kennzeichen wird das Steuerelement mit Blöcken füllen.  
   
- `rect`  
- Gibt an, des Statusanzeige-Steuerelements die Größe und Position. Es kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Da das Steuerelement ein untergeordnetes Fenster sein muss, werden die angegebenen Koordinaten relativ zum Clientbereich der `pParentWnd`.  
+ *Rect*  
+ Gibt an, des Statusanzeige-Steuerelements die Größe und Position. Es kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Da das Steuerelement ein untergeordnetes Fenster sein muss, werden die angegebenen Koordinaten relativ zum Clientbereich der *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Gibt an, die Statusanzeige-Steuerelements übergeordnetes Fenster, in der Regel eine `CDialog`. Es muss nicht **NULL.**  
   
- `nID`  
+ *nID*  
  Gibt das Statusanzeige-Steuerelement ID an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  **"True"** Wenn die `CProgressCtrl` Objekt wurde erfolgreich erstellt wird; andernfalls **"false"**.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CProgressCtrl` Objekt in zwei Schritten. Rufen Sie zunächst den Konstruktor erstellt die `CProgressCtrl` Objekt, und rufen Sie anschließend **erstellen**, wodurch das Statusanzeige-Steuerelement erstellt wird.  
+ Sie erstellen eine `CProgressCtrl` Objekt in zwei Schritten. Rufen Sie zunächst den Konstruktor erstellt die `CProgressCtrl` Objekt, und rufen Sie anschließend `Create`, wodurch das Statusanzeige-Steuerelement erstellt wird.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CProgressCtrl#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_2.cpp)]  
@@ -180,19 +180,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwExStyle`  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der `dwExStyle` -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ *dwExStyle*  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt das Statusanzeige-Steuerelement Stil. Wenden Sie eine beliebige Kombination von Fensterstilen, die in beschriebenen [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK.  
   
- `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der `pParentWnd`.  
+ *Rect*  
+ Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das Fenster, das das Steuerelement übergeordnet ist.  
   
- `nID`  
+ *nID*  
  Das Steuerelement untergeordnete Fenster-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -253,14 +253,14 @@ void GetRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nLower`  
+ *nLower*  
  Ein Verweis auf eine ganze Zahl, die die untere Grenze der Statusanzeige-Steuerelements empfängt.  
   
- `nUpper`  
+ *nUpper*  
  Ein Verweis auf eine ganze Zahl, die die obere Grenze der Statusanzeige-Steuerelements empfängt.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion kopiert die Werte der oberen und unteren Grenzen in der ganzen Zahlen verweist `nLower` und `nUpper`zugeordnet.  
+ Diese Funktion kopiert die Werte der oberen und unteren Grenzen in der ganzen Zahlen verweist *nLower* und *nUpper*zugeordnet.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]  
@@ -320,14 +320,14 @@ int GetStep() const;
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_7.cpp)]  
   
 ##  <a name="offsetpos"></a>  CProgressCtrl::OffsetPos  
- Verschiebt die Statusanzeige der aktuellen Position des Steuerelements durch das Inkrement gemäß `nPos` und zeichnet die Leiste, um die neue Position wiedergegeben.  
+ Verschiebt die Statusanzeige der aktuellen Position des Steuerelements durch das Inkrement gemäß *nPos* und zeichnet die Leiste, um die neue Position wiedergegeben.  
   
 ```  
 int OffsetPos(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nPos`  
+ *nPos*  
  Betrag, um die Position zu wechseln.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `clrBar`|Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der angibt, die neue ausgewählte Farbe von der Statusanzeige. Geben Sie `CLR_DEFAULT` , dazu führen, dass die Statusanzeige auf ihre Standardfarbe verwenden.|  
+|[in] *ClrBar*|Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der angibt, die neue ausgewählte Farbe von der Statusanzeige. Geben Sie `CLR_DEFAULT` , dazu führen, dass die Statusanzeige auf ihre Standardfarbe verwenden.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die vorherigen Farbe von der Statusanzeige, dargestellt als eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert oder `CLR_DEFAULT` ist die Farbe von der Statusanzeige die Standardfarbe.  
@@ -375,7 +375,7 @@ COLORREF SetBkColor(COLORREF clrNew);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clrNew`  
+ *clrNew*  
  Ein **COLORREF** Wert, der die neue Hintergrundfarbe angibt. Geben Sie die `CLR_DEFAULT` die Standardhintergrundfarbe für die Statusanzeige zu verwendende Wert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -397,8 +397,8 @@ BOOL SetMarquee(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `fMarqueeMode`|`true` Um Laufschrift Modus aktivieren, oder `false` Laufschrift Modus deaktivieren.|  
-|[in] `nInterval`|Zeit in Millisekunden zwischen den Updates für die Animation.|  
+|[in] *fMarqueeMode*|`true` Um Laufschrift Modus aktivieren, oder `false` Laufschrift Modus deaktivieren.|  
+|[in] *Nintervall*|Zeit in Millisekunden zwischen den Updates für die Animation.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt immer `true` zurück.  
@@ -419,14 +419,14 @@ BOOL SetMarquee(
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_11.cpp)]  
   
 ##  <a name="setpos"></a>  CProgressCtrl::SetPos  
- Legt den Status Balken der aktuellen Position des Steuerelements entsprechend den Angaben von `nPos` und zeichnet die Leiste, um die neue Position wiedergegeben.  
+ Legt den Status Balken der aktuellen Position des Steuerelements entsprechend den Angaben von *nPos* und zeichnet die Leiste, um die neue Position wiedergegeben.  
   
 ```  
 int SetPos(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nPos`  
+ *nPos*  
  Neue Position der Statusanzeige-Steuerelements.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -453,10 +453,10 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nLower`  
+ *nLower*  
  Gibt die Untergrenze des Bereichs (die Standardeinstellung ist 0 (null)).  
   
- `nUpper`  
+ *nUpper*  
  Gibt die obere Grenze des Bereichs (die Standardeinstellung ist 100).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -476,7 +476,7 @@ int SetState(int iState);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iState`|Der Status zum Festlegen der Statusleiste. Verwenden Sie einen der folgenden Werte:<br /><br /> - `PBST_NORMAL` -In Bearbeitung<br />- `PBST_ERROR` -Fehler<br />- `PBST_PAUSED` -Angehalten|  
+|[in] *iState*|Der Status zum Festlegen der Statusleiste. Verwenden Sie einen der folgenden Werte:<br /><br /> - `PBST_NORMAL` -In Bearbeitung<br />- `PBST_ERROR` -Fehler<br />- `PBST_PAUSED` -Angehalten|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der vorherige Status des aktuellen Statusanzeige-Steuerelements.  

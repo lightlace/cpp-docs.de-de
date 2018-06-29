@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17337239a3a58a0283fc96eadcd4417c3d5c69b0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376378"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079589"
 ---
 # <a name="cpen-class"></a>CPen-Klasse
 Kapselt einen Stift der Windows GDI (Graphics Device Interface).  
@@ -103,7 +103,7 @@ CPen(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nPenStyle`  
+ *nPenStyle*  
  Gibt die Art der Stift. Dieser Parameter in der ersten Version des Konstruktors kann einen der folgenden Werte sein:  
   
 - **PS_SOLID** eine durchgehend erstellt.  
@@ -118,7 +118,7 @@ CPen(
   
 - **PS_NULL** erstellt einen null-Stift.  
   
-- **PS_INSIDEFRAME** erstellt einen Stift, der zeichnet eine verbindende Linie im Rahmen von geschlossene Formen erzeugt, die von den Funktionen der Windows-GDI-Ausgabe, die ein umschließendes Rechteck angeben (z. B. die **Ellipse**, **Rechteck** , `RoundRect`, `Pie`, und `Chord` Memberfunktionen). Bei Verendung dieses Format mit Funktionen von Windows-GDI-Ausgabe, die ein umschließendes Rechteck nicht angeben (z. B. die `LineTo` Memberfunktion), der Zeichnungsbereich des Stifts wird nicht von einem Frame beschränkt.  
+- **PS_INSIDEFRAME** erstellt einen Stift, der zeichnet eine verbindende Linie im Rahmen von geschlossene Formen erzeugt, die von den Funktionen der Windows-GDI-Ausgabe, die ein umschließendes Rechteck angeben (z. B. die `Ellipse`, `Rectangle`, `RoundRect`, `Pie`, und `Chord` Memberfunktionen). Bei Verendung dieses Format mit Funktionen von Windows-GDI-Ausgabe, die ein umschließendes Rechteck nicht angeben (z. B. die `LineTo` Memberfunktion), der Zeichnungsbereich des Stifts wird nicht von einem Frame beschränkt.  
   
  Die zweite Version der `CPen` Konstruktor gibt eine Kombination von Typ, Stil Linienende und Join-Attribute. Die Werte aus jeder Kategorie mit dem bitweisen OR-Operator kombiniert werden soll (&#124;). Der Stifttyp ist einer der folgenden Werte möglich:  
   
@@ -126,7 +126,7 @@ CPen(
   
 - **PS_COSMETIC** erstellt einen optische Stift.  
   
-     Die zweite Version der `CPen` Konstruktor fügt die folgenden Stift Formate für `nPenStyle`:  
+     Die zweite Version der `CPen` Konstruktor fügt die folgenden Stift Formate für *nPenStyle*:  
   
 - **PS_ALTERNATE** erstellt einen Stift, der alle anderen Pixel festlegt. (Dieser Stil gilt nur für kosmetische Stifte).  
   
@@ -148,24 +148,24 @@ CPen(
   
 - **PS_JOIN_ROUND** Joins sind runden.  
   
- `nWidth`  
+ *nWidth*  
  Gibt die Breite des Stifts.  
   
 -   Für die erste Version des Konstruktors Wenn dieser Wert 0 ist, ist die Breite in Geräteeinheiten immer 1 Pixel, unabhängig von den Zuordnungsmodus.  
   
--   Für die zweite Version des Konstruktors Wenn `nPenStyle` ist **PS_GEOMETRIC**, erhält die Breite in logischen Einheiten. Wenn `nPenStyle` ist **PS_COSMETIC**, der die Breite muss auf 1 festgelegt werden.  
+-   Für die zweite Version des Konstruktors Wenn *nPenStyle* ist **PS_GEOMETRIC**, erhält die Breite in logischen Einheiten. Wenn *nPenStyle* ist **PS_COSMETIC**, der die Breite muss auf 1 festgelegt werden.  
   
- `crColor`  
+ *crColor*  
  Enthält eine RGB-Farbe für den Stift an.  
   
- `pLogBrush`  
- Verweist auf eine `LOGBRUSH` Struktur. Wenn `nPenStyle` ist **PS_COSMETIC**, `lbColor` Mitglied der `LOGBRUSH` Struktur gibt die Farbe des Stifts und die `lbStyle` Mitglied der `LOGBRUSH` Struktur muss festgelegt werden, um **BS_ EINFARBIG**. Wenn `nPenStyle` ist **PS_GEOMETRIC**, müssen alle Elemente an, die Pinsel-Attribute des Stifts verwendet werden.  
+ *pLogBrush*  
+ Verweist auf eine `LOGBRUSH` Struktur. Wenn *nPenStyle* ist **PS_COSMETIC**, *LbColor* Mitglied der `LOGBRUSH` Struktur gibt die Farbe des Stifts und *LbStyle*Mitglied der `LOGBRUSH` Struktur muss festgelegt werden, um **BS_SOLID**. Wenn *nPenStyle* ist **PS_GEOMETRIC**, müssen alle Elemente an, die Pinsel-Attribute des Stifts verwendet werden.  
   
- `nStyleCount`  
- Gibt die Länge in Einheiten Doppelwort, der die `lpStyle` Array. Dieser Wert muss NULL, wenn sein `nPenStyle` nicht **PS_USERSTYLE**.  
+ *nStyleCount*  
+ Gibt die Länge in Einheiten Doppelwort, der die *LpStyle* Array. Dieser Wert muss NULL, wenn sein *nPenStyle* nicht **PS_USERSTYLE**.  
   
- `lpStyle`  
- Verweist auf ein Array von Werten Doppelwort. Der erste Wert gibt die Länge des ersten Bindestrich in einem benutzerdefinierten Format, der zweite Wert gibt die Länge der ersten Leerzeichen und So weiter. This-Zeiger muss **NULL** Wenn `nPenStyle` nicht **PS_USERSTYLE**.  
+ *lpStyle*  
+ Verweist auf ein Array von Werten Doppelwort. Der erste Wert gibt die Länge des ersten Bindestrich in einem benutzerdefinierten Format, der zweite Wert gibt die Länge der ersten Leerzeichen und So weiter. This-Zeiger muss **NULL** Wenn *nPenStyle* nicht **PS_USERSTYLE**.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie den Konstruktor ohne Argumente verwenden, müssen Sie initialisieren, das resultierende `CPen` -Objekt mit den `CreatePen`, `CreatePenIndirect`, oder `CreateStockObject` Memberfunktionen.  
@@ -194,27 +194,27 @@ BOOL CreatePen(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nPenStyle`  
- Gibt den Stil für den Stift. Eine Liste der möglichen Werte finden Sie unter der `nPenStyle` Parameter in der [CPen](#cpen) Konstruktor.  
+ *nPenStyle*  
+ Gibt den Stil für den Stift. Eine Liste der möglichen Werte finden Sie unter der *nPenStyle* Parameter in der [CPen](#cpen) Konstruktor.  
   
- `nWidth`  
+ *nWidth*  
  Gibt die Breite des Stifts.  
   
 -   Für die erste Version des `CreatePen`, wenn dieser Wert 0 ist, die Breite in Geräteeinheiten ist immer 1 Pixel, unabhängig von den Zuordnungsmodus.  
   
--   Für die zweite Version der `CreatePen`, wenn `nPenStyle` ist **PS_GEOMETRIC**, erhält die Breite in logischen Einheiten. Wenn `nPenStyle` ist **PS_COSMETIC**, der die Breite muss auf 1 festgelegt werden.  
+-   Für die zweite Version der `CreatePen`, wenn *nPenStyle* ist **PS_GEOMETRIC**, erhält die Breite in logischen Einheiten. Wenn *nPenStyle* ist **PS_COSMETIC**, der die Breite muss auf 1 festgelegt werden.  
   
- `crColor`  
+ *crColor*  
  Enthält eine RGB-Farbe für den Stift an.  
   
- `pLogBrush`  
- Verweist auf eine [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) Struktur. Wenn `nPenStyle` ist **PS_COSMETIC**, **LbColor** Mitglied der `LOGBRUSH` Struktur gibt die Farbe des Stifts und die `lbStyle` Mitglied der `LOGBRUSH` Struktur aufweisen Legen Sie auf **BS_SOLID**. Wenn **nPenStyle** ist **PS_GEOMETRIC**, müssen alle Elemente an, die Pinsel-Attribute des Stifts verwendet werden.  
+ *pLogBrush*  
+ Verweist auf eine [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) Struktur. Wenn *nPenStyle* ist **PS_COSMETIC**, **LbColor** Mitglied der `LOGBRUSH` Struktur gibt die Farbe des Stifts und *LbStyle*Mitglied der `LOGBRUSH` Struktur muss festgelegt werden, um **BS_SOLID**. Wenn **nPenStyle** ist **PS_GEOMETRIC**, müssen alle Elemente an, die Pinsel-Attribute des Stifts verwendet werden.  
   
- `nStyleCount`  
- Gibt die Länge in Einheiten Doppelwort, der die `lpStyle` Array. Dieser Wert muss NULL, wenn sein `nPenStyle` nicht **PS_USERSTYLE**.  
+ *nStyleCount*  
+ Gibt die Länge in Einheiten Doppelwort, der die *LpStyle* Array. Dieser Wert muss NULL, wenn sein *nPenStyle* nicht **PS_USERSTYLE**.  
   
- `lpStyle`  
- Verweist auf ein Array von Werten Doppelwort. Der erste Wert gibt die Länge des ersten Bindestrich in einem benutzerdefinierten Format, der zweite Wert gibt die Länge der ersten Leerzeichen und So weiter. This-Zeiger muss **NULL** Wenn `nPenStyle` nicht **PS_USERSTYLE**.  
+ *lpStyle*  
+ Verweist auf ein Array von Werten Doppelwort. Der erste Wert gibt die Länge des ersten Bindestrich in einem benutzerdefinierten Format, der zweite Wert gibt die Länge der ersten Leerzeichen und So weiter. This-Zeiger muss **NULL** Wenn *nPenStyle* nicht **PS_USERSTYLE**.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn erfolgreich, oder 0 (null), wenn die Methode fehlschlägt.  
@@ -228,11 +228,11 @@ BOOL CreatePen(
   
  Die zweite Version der `CreatePen` einen logischen kosmetischen oder geometrischen Stift, der dem angegebenen Stil, Breite und Pinsel Attribute initialisiert. Die Breite eines Stiftes kosmetische ist immer 1. eine geometrische Stiftbreite wird immer im globalen Einheiten angegeben. Nachdem eine Anwendung einen logischen Stift erstellt hat, können sie den Stift einen Gerätekontext auswählen, durch Aufrufen der [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) Funktion. Nachdem ein Stift einen Gerätekontext ausgewählt ist, können sie zum Zeichnen von Linien und Kurven verwendet werden.  
   
--   Wenn `nPenStyle` ist **PS_COSMETIC** und **PS_USERSTYLE**, die Einträge in der `lpStyle` Array Längen der Striche und Zwischenräume in Einheiten Stil anzugeben. Eine Einheit Stil wird vom Gerät definiert, in dem der Stift verwendet wird, um eine Linie zu zeichnen.  
+-   Wenn *nPenStyle* ist **PS_COSMETIC** und **PS_USERSTYLE**, die Einträge in der *LpStyle* Array geben die Längen der Striche und Zwischenräume in Stil-Einheiten. Eine Einheit Stil wird vom Gerät definiert, in dem der Stift verwendet wird, um eine Linie zu zeichnen.  
   
--   Wenn `nPenStyle` ist **PS_GEOMETRIC** und **PS_USERSTYLE**, die Einträge in der `lpStyle` Array Längen der Striche und Zwischenräume in logischen Einheiten anzugeben.  
+-   Wenn *nPenStyle* ist **PS_GEOMETRIC** und **PS_USERSTYLE**, die Einträge in der *LpStyle* Array geben die Längen der Striche und Zwischenräume in logische Einheiten.  
   
--   Wenn `nPenStyle` ist **PS_ALTERNATE**, die Formatvorlage Einheit wird ignoriert, und alle anderen Pixel festgelegt ist.  
+-   Wenn *nPenStyle* ist **PS_ALTERNATE**, die Formatvorlage Einheit wird ignoriert, und alle anderen Pixel festgelegt ist.  
   
  Wenn eine Anwendung einen bestimmten Stift nicht mehr erforderlich ist, rufen sie die [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) Member-Funktion oder sogar zerstört werden die `CPen` Objekt, damit die Ressource nicht mehr verwendet wird. Eine Anwendung sollte ein Stiftes nicht löschen, wenn der Stift in einem Gerätekontext ausgewählt ist.  
   
@@ -240,14 +240,14 @@ BOOL CreatePen(
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
 ##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
- Initialisiert einen Stift, der die Art, Breite und Farbe in der Struktur verweist hat `lpLogPen`.  
+ Initialisiert einen Stift, der die Art, Breite und Farbe in der Struktur verweist hat *LpLogPen*.  
   
 ```  
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpLogPen`  
+ *lpLogPen*  
  Verweist auf den Windows [LOGPEN](../../mfc/reference/logpen-structure.md) -Struktur, die Informationen zu den Stift enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -289,7 +289,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pLogPen`  
+ *pLogPen*  
  Verweist auf ein [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) -Struktur, die Informationen zu den Stift enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -321,7 +321,7 @@ int GetLogPen(LOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pLogPen`  
+ *pLogPen*  
  Verweist auf eine [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) Struktur, um Informationen zu den Stift enthalten.  
   
 ### <a name="return-value"></a>Rückgabewert  

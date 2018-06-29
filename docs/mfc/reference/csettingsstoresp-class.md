@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9b7cdc0d75ec207e3bd8141ac3a0f9c5ce1d3eb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376046"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078698"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP-Klasse
 Die `CSettingsStoreSP` Klasse ist eine Hilfsklasse, die Sie, zum Erstellen von Instanzen verwenden können der [CSettingsStore-Klasse](../../mfc/reference/csettingsstore-class.md).  
@@ -88,10 +88,10 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bAdmin`  
+ [in] *bAdminpfad*  
  Ein boolescher Parameter, der bestimmt, ob ein `CSettingsStore` Objekt wird erstellt, im Administratormodus.  
   
- [in] `bReadOnly`  
+ [in] *bReadOnly*  
  Ein boolescher Parameter, der bestimmt, ob eine `CSettingsStore` Objekt wird für nur-Lese-Zugriff erstellt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -102,7 +102,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  Wenn Sie erstellen ein `CSettingsStore` -Objekt im Administratormodus, der Standardspeicherort für alle Registrierungszugriff HKEY_LOCAL_MACHINE. Andernfalls ist der Standardspeicherort für alle Registrierungszugriff HKEY_CURRENT_USER.  
   
- Wenn `bAdmin` ist `TRUE`, die Anwendung muss über Administratorrechte verfügen. Andernfalls schlägt er fehl, wenn er versucht, auf die Registrierung zugreifen.  
+ Wenn *bAdminpfad* ist `TRUE`, die Anwendung muss über Administratorrechte verfügen. Andernfalls schlägt er fehl, wenn er versucht, auf die Registrierung zugreifen.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die `Create` Methode der `CSettingsStoreSP` Klasse.  
@@ -117,11 +117,11 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dwUserData`  
+ [in] *DwUserData*  
  Benutzerdefinierte Daten, die die `CSettingsStoreSP` -Objekt speichert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `CSettingsStoreSP` Objekt speichert die Daten aus `dwUserData` in der geschützten Membervariablen `m_dwUserData`.  
+ Die `CSettingsStoreSP` Objekt speichert die Daten aus *DwUserData* in der geschützten Membervariablen `m_dwUserData`.  
   
 ##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  Legt die Common Language Runtime-Klasse. Die Methode [CSettingsStoreSP::Create](#create) verwendet die Common Language Runtime-Klasse, um zu bestimmen, welche Art des zu erstellenden Objekts.  
@@ -131,11 +131,11 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pRTI`  
+ [in] *pRTI*  
  Ein Zeiger auf die laufzeitklasseninformationen für eine Klasse abgeleitet wurde. die [CSettingsStore-Klasse](../../mfc/reference/csettingsstore-class.md).  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Bei Erfolg; `FALSE` Wenn von die Klasse identifiziert `pRTI` stammt nicht aus `CSettingsStore`.  
+ `TRUE` Bei Erfolg; `FALSE` Wenn von die Klasse identifiziert *pRTI* stammt nicht aus `CSettingsStore`.  
   
 ### <a name="remarks"></a>Hinweise  
  Können Sie die [CSettingsStoreSP Klasse](../../mfc/reference/csettingsstoresp-class.md) zum Ableiten von Klassen `CSettingsStore`. Verwenden Sie die Methode `SetRuntimeClass` Wunsch Objekte einer benutzerdefinierten Klasse erstellen, die abgeleitet ist `CSettingsStore`.  

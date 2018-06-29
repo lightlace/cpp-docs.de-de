@@ -119,12 +119,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4e6ae13efabd34c6c685b07691789634ca0aed9c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: db7398512e6b981f4da3fc0b88b6fbc7890c6016
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305916"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079785"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `list` Vewaltung eine Sequenz von Elementen als bidirektionale verknüpfte Liste von Knoten, jeweils ein Element speichern kann.  
@@ -146,7 +146,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  Wert  
  Der Typ eines Elements in der kontrollierten Sequenz.  
   
@@ -155,7 +155,7 @@ template<typename Value>
   
  **Namespace:** Cliext 
 
-## <a name="members"></a>Member  
+## <a name="declarations"></a>Deklarationen  
   
 |Typdefinition|Beschreibung|  
 |---------------------|-----------------|  
@@ -240,6 +240,8 @@ template<typename Value>
   
  Löschen oder Entfernen eines Elements ruft der Destruktor für den gespeicherten Wert. Zerstören von dem Container löscht alle Elemente. Somit wird sichergestellt, dass ein Container, dessen Elementtyp eine Verweisklasse ist, dass keine Elemente den Container Überleben. Beachten Sie jedoch, dass ein Container von Handles ist `not` seine Elemente zu zerstören.  
   
+## <a name="members"></a>Member
+
 ## <a name="assign"></a> List:: Assign (STL/CLR)
 Ersetzt alle Elemente.  
   

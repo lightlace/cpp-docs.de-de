@@ -1,7 +1,7 @@
 ---
 title: Übersicht über das Marshaling in C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/28/2018
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -20,16 +20,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1f950c8efbdd75e16096d158075e92594fb6b2d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76f6721ce4561e9c2b4323fef9c2eed3231f73cb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137133"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079159"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Übersicht über das Marshalling in C++
-Im gemischten Modus müssen Sie die Daten zwischen nativen und verwalteten Typen manchmal marshallen. Mit [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] wurde die Marshallingbibliothek eingeführt, mit der Sie Daten auf einfache Weise marshallen und konvertieren können.  
-  
+Im gemischten Modus müssen Sie die Daten zwischen nativen und verwalteten Typen manchmal marshallen. Visual Studio 2008 eingeführten der *Marshallingbibliothek* zu marshallen und konvertieren Sie Daten auf einfache Weise.  Die Marshallingbibliothek besteht aus einem Satz von Funktionen und eine `marshal_context` Klasse, die für allgemeine Typen ausführen Marshalling. Die Bibliothek wird definiert, in diese Header in der **enthalten/Msclr** Verzeichnis für Ihre Visual Studio-Edition:
+
+|Header|Beschreibung|  
+|---------------|-----------------|
+|marshal.h|`marshal_context` Klasse und Kontext frei Marshalling-Funktionen|
+|marshal_atl.h| Funktionen für das Marshalling von ATL-Typen|
+|marshal_cppstd.h|Funktionen für das Marshalling von Standard-c++-Typen|
+|marshal_windows.h|Funktionen für das Marshalling von Windows-Typen|
+
+
+Der Standardpfad für **Msclr** Ordner ist etwa wie folgt je nachdem welche Edition Sie verfügen und die Buildnummer:
+
+```cmd
+C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
+```
+
  Sie können die Marshallingbibliothek verwenden, mit oder ohne ein [Marshal_context-Klasse](../dotnet/marshal-context-class.md). Einige Konvertierungen erfordern einen Kontext. Andere Konvertierungen können implementiert werden, mithilfe der [Marshal_as](../dotnet/marshal-as.md) Funktion. Die folgende Tabelle enthält eine Liste der aktuell unterstützten Konvertierungen und Informationen dazu, ob sie einen Kontext benötigen und welche Marschalldatei Sie hinzufügen müssen:  
   
 |Von Typ|in Typ|Marschallmethode|Includedatei|  
@@ -62,7 +76,7 @@ Im gemischten Modus müssen Sie die Daten zwischen nativen und verwalteten Typen
 > [!NOTE]
 >  Wenn Sie `NULL` in die Zeichenfolge eingebettet haben, ist das Ergebnis des Marshallens der Zeichenfolge nicht garantiert. Durch eine eingebettete `NULL` kann die Zeichenfolge abgeschnitten oder beibehalten werden.  
   
- Die Marshallingbibliotheksheader sind im Includeverzeichnis im Unterverzeichnis "msclr" gespeichert. Dieses Beispiel zeigt, wie das Verzeichnis "msclr" einer Includeheaderdeklaration hinzugefügt wird:  
+Dieses Beispiel zeigt, wie das Verzeichnis "msclr" einer Includeheaderdeklaration hinzugefügt wird:  
   
  `#include "msclr\marshal_cppstd.h"`  
   

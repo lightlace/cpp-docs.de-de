@@ -109,12 +109,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e3691ad17aff90e866a21918c0853d2b1f4ce3a2
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 51570171fbd8de9919bcba5dabb47c26d8e1c748
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305825"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079902"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `map` Vewaltung eine Sequenz von Elementen als (fast) mit Lastenausgleich geordneten Struktur der Knoten, jeweils ein Element speichern kann. Ein Element besteht aus einem Schlüssel, für die Anordnung der Sequenz und zugeordneten Werts, der für die fuhr wechselt zusammen.  
@@ -147,7 +147,7 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  Key  
  Der Typ, der die zentrale Komponente eines Elements in der kontrollierten Sequenz.  
   
@@ -1516,7 +1516,7 @@ static value_type make_value(key_type key, mapped_type mapped);
  Key  
  Schlüsselwert verwenden.  
   
- Zugeordnet  
+ zugeordnet  
  Zugeordnet zu suchende Wert.  
   
 ### <a name="remarks"></a>Hinweise  

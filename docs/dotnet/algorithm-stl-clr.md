@@ -151,12 +151,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 71399d254b2b47b33959695a00227e316c04a008
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a494993eea8a82307243ee1a05b92212dd4cb216
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305799"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079837"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 Definiert die STL/CLR-containervorlagenfunktionen, die Algorithmen ausführen.  
@@ -172,7 +172,7 @@ Definiert die STL/CLR-containervorlagenfunktionen, die Algorithmen ausführen.
   
  **Namespace:** Cliext  
     
-## <a name="functions"></a>Funktionen  
+## <a name="declarations"></a>Deklarationen  
   
 |Funktion|Beschreibung|  
 |--------------|-----------------|  
@@ -243,6 +243,7 @@ Definiert die STL/CLR-containervorlagenfunktionen, die Algorithmen ausführen.
 |[unique_copy (STL/CLR)](#unique_copy)|Kopiert Elemente aus einem Quellbereich in einen Zielbereich mit Ausnahmen von doppelten Elementen, die nebeneinander angeordnet sind.|  
 |[upper_bound (STL/CLR)](#upper_bound)|Sucht die Position des ersten Elements in einem sortierten Bereich, der über einen Wert größer als einen angegebenen Wert verfügt. Dabei wird das Sortierkriterium möglicherweise von einen binären Prädikat bestimmt.|  
  
+## <a name="members"></a>Member
 
 ## <a name="adjacent_find"></a> Adjacent_find (STL/CLR)
 Sucht zwei benachbarte Elemente, die entweder gleich sind oder eine angegebene Bedingung erfüllen.  

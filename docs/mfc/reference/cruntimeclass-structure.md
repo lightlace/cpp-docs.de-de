@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e36baac5850942239bc9e553ed041a2914f8d670
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376290"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079543"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass-Struktur
 Jede Klasse abgeleitet `CObject` zugeordnet ist eine `CRuntimeClass` -Struktur, die Sie verwenden können, um Informationen über ein Objekt oder seine Basisklasse zur Laufzeit abzurufen.  
@@ -83,7 +83,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszClassName`  
+ *lpszClassName*  
  Der bekannte Name der Klasse erstellt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -105,11 +105,11 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszClassName`  
+ *lpszClassName*  
  Der bekannte Name einer Klasse abgeleitet `CObject`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine `CRuntimeClass` Objekt entspricht dem Namen übergebenen `lpszClassName`. Die Funktion gibt **NULL** , wenn kein übereinstimmender Klassenname gefunden wurde.  
+ Ein Zeiger auf eine `CRuntimeClass` Objekt entspricht dem Namen übergebenen *LpszClassName*. Die Funktion gibt **NULL** , wenn kein übereinstimmender Klassenname gefunden wurde.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
@@ -134,7 +134,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
  Die Beziehung wird festgelegt, indem "walking" von der Member-Klasse die Kette von abgeleiteten Klassen ganz nach oben. Diese Funktion nur gibt **"false"** Wenn für die Basisklasse keine Übereinstimmung gefunden wird.  
   
 > [!NOTE]
->  Verwenden der `CRuntimeClass` -Struktur, müssen Sie auch die `IMPLEMENT_DYNAMIC`, `IMPLEMENT_DYNCREATE`, oder `IMPLEMENT_SERIAL` Makros in der Implementierung der Klasse für die Laufzeitobjekt-Informationen abgerufen werden sollen.  
+>  Verwenden der `CRuntimeClass` -Struktur, müssen Sie das IMPLEMENT_DYNAMIC, IMPLEMENT_DYNCREATE oder IMPLEMENT_SERIAL-Makro einschließen, in der Implementierung der Klasse für die Laufzeitobjekt-Informationen abgerufen werden sollen.  
   
  Weitere Informationen zur Verwendung von `CRuntimeClass`, finden Sie im Artikel [CObject-Klasse: Zugreifen auf Laufzeit-Klasseninformationen](../../mfc/accessing-run-time-class-information.md).  
   

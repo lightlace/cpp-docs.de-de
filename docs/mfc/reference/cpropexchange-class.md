@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fef6d3e30791d2a08a82d1b152cd849cd4ebf24b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377339"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078407"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange-Klasse
 Unterstützt die Implementierung der Dauerhaftigkeit für die OLE-Steuerelemente.  
@@ -95,20 +95,20 @@ virtual BOOL ExchangeBlobProp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pszPropName`  
+ *pszPropName*  
  Der Name der Eigenschaft, die ausgetauscht werden.  
   
- `phBlob`  
+ *phBlob*  
  Zeiger auf eine Variable, die zeigen, in dem die Eigenschaft gespeichert wird (der Variable ist in der Regel auf ein Member einer Klasse).  
   
- `hBlobDefault`  
+ *hBlobDefault*  
  Der Standardwert für die Eigenschaft.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn nicht erfolgreich.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Wert der Eigenschaft von Lese- oder Schreibvorgang ausgeführt, je nach Bedarf die Variable verweist, zu `phBlob`. Wenn `hBlobDefault` angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn die Serialisierung des Steuerelements aus irgendeinem Grund fehlschlägt.  
+ Der Wert der Eigenschaft von Lese- oder Schreibvorgang ausgeführt, je nach Bedarf die Variable verweist, zu *PhBlob*. Wenn *hBlobDefault* angegeben wird, sondern wird als Standardwert für die Eigenschaft verwendet werden. Dieser Wert wird verwendet, wenn die Serialisierung des Steuerelements aus irgendeinem Grund fehlschlägt.  
   
  Die Funktionen **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, und **CPropsetPropExchange::ExchangeBlobProp** außer Kraft setzen Diese rein virtuelle Funktion.  
   
@@ -124,23 +124,23 @@ virtual BOOL ExchangeFontProp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pszPropName`  
+ *pszPropName*  
  Der Name der Eigenschaft, die ausgetauscht werden.  
   
- `font`  
+ *Schriftart*  
  Ein Verweis auf eine [CFontHolder](../../mfc/reference/cfontholder-class.md) Objekt, das die Schriftarteigenschaft enthält.  
   
- `pFontDesc`  
- Ein Zeiger auf eine [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) Struktur, die Werte für die Initialisierung der Standardzustand der Font-Eigenschaft bei `pFontDispAmbient` ist **NULL**.  
+ *pFontDesc*  
+ Ein Zeiger auf eine [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) Struktur, die Werte für die Initialisierung der Standardzustand der Font-Eigenschaft bei *pFontDispAmbient* ist **NULL**.  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  Ein Zeiger auf die **IFontDisp** Schnittstelle einer Schriftart zum Initialisieren der Standardzustand der Font-Eigenschaft verwendet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn nicht erfolgreich.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die Schriftarteigenschaft Medium für das Steuerelement geladen wird, werden Schriftmerkmale Medium abgerufen und die `CFontHolder` Objekt verweist `font` wird initialisiert, indem Sie sie. Wenn die Schriftarteigenschaft gespeichert wird, werden die Eigenschaften in der Schriftartobjekt an das Medium geschrieben.  
+ Wenn die Schriftarteigenschaft Medium für das Steuerelement geladen wird, werden Schriftmerkmale Medium abgerufen und die `CFontHolder` Objekt verweist *Schriftart* wird initialisiert, indem Sie sie. Wenn die Schriftarteigenschaft gespeichert wird, werden die Eigenschaften in der Schriftartobjekt an das Medium geschrieben.  
   
  Die Funktionen **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, und **CPropsetPropExchange::ExchangeFontProp** außer Kraft setzen Diese rein virtuelle Funktion.  
   
@@ -156,16 +156,16 @@ virtual BOOL ExchangePersistentProp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pszPropName`  
+ *pszPropName*  
  Der Name der Eigenschaft, die ausgetauscht werden.  
   
- `ppUnk`  
+ *ppUnk*  
  Ein Zeiger auf eine Variable, die einen Zeiger auf der Eigenschaft enthält **IUnknown** -Schnittstelle (diese Variable in der Regel ist ein Member der Klasse).  
   
- `iid`  
+ *IID*  
  Schnittstellen-ID, der die Schnittstelle für die Eigenschaft, die das Steuerelement verwendet wird.  
   
- `pUnkDefault`  
+ *pUnkDefault*  
  Der Standardwert für die Eigenschaft.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -188,10 +188,10 @@ virtual BOOL ExchangeProp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pszPropName`  
+ *pszPropName*  
  Der Name der Eigenschaft, die ausgetauscht werden.  
   
- `vtProp`  
+ *vtProp*  
  Ein Symbol, den Typ der Eigenschaft, die ausgetauscht werden. Dabei sind folgende Werte möglich:  
   
 |Symbol|Eigenschaftentyp|  
@@ -204,7 +204,7 @@ virtual BOOL ExchangeProp(
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
   
- `pvProp`  
+ *pvProp*  
  Ein Zeiger auf den Wert der Eigenschaft.  
   
  *pvDefault*  
@@ -214,7 +214,7 @@ virtual BOOL ExchangeProp(
  Wert ungleich NULL, wenn der Austausch erfolgreich war; 0, wenn nicht erfolgreich.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die Eigenschaft aus dem Medium für das Steuerelement geladen, wird der Wert der Eigenschaft Medium abgerufen und in das Objekt verweist gespeichert `pvProp`. Wenn die Eigenschaft auf dem Medium gespeichert wird, der Wert des Objekts verweist `pvProp` an das Medium geschrieben wird.  
+ Wenn die Eigenschaft aus dem Medium für das Steuerelement geladen, wird der Wert der Eigenschaft Medium abgerufen und in das Objekt verweist gespeichert *PvProp*. Wenn die Eigenschaft auf dem Medium gespeichert wird, der Wert des Objekts verweist *PvProp* an das Medium geschrieben wird.  
   
  Die Funktionen **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, und **CPropsetPropExchange::ExchangeProp** diesem reinen Außerkraftsetzung virtuelle Funktion.  
   
@@ -232,10 +232,10 @@ virtual BOOL ExchangeVersion(
  *dwVersionLoaded*  
  Verweis auf eine Variable, die die Versionsnummer der persistenten Daten geladen wird, in dem gespeichert werden.  
   
- `dwVersionDefault`  
+ *dwVersionDefault*  
  Die aktuelle Versionsnummer des Steuerelements.  
   
- `bConvert`  
+ *bConvert*  
  Gibt an, ob Daten in der aktuellen Version konvertieren oder behalten sie die gleiche Version, die geladen wurde.  
   
 ### <a name="return-value"></a>Rückgabewert  

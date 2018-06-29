@@ -61,19 +61,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 300cb9e7708c02717aeb8ea8fda59986f3fd9fa7
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: abfe2a740a51ffe8b2735942bc9387f0b13bb0d2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306033"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079530"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge sortierte Sequenz von Elementen, die mit Zugriff eingeschränkter gesteuert. Sie verwenden die Containeradapter `priority_queue` einen zugrunde liegenden Container als eine Prioritätswarteschlange zu verwalten.  
   
  In der folgenden Beschreibung `GValue` ist identisch mit `Value` , wenn die zweite Datei einen Ref-Typ ist, in diesem Fall wird `Value^`. Auf ähnliche Weise `GContainer` ist identisch mit `Container` , wenn die zweite Datei einen Ref-Typ ist, in diesem Fall wird `Container^`.  
   
-### <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Value,  
@@ -84,7 +84,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  Wert  
  Der Typ eines Elements in der kontrollierten Sequenz.  
   
@@ -138,7 +138,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Duplizieren Sie ein Objekt.|  
 |IPriorityQueue\<Container, den Wert >|Behalten Sie die generische Containeradapter.|  
   
-### <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Hinweise  
  Das Objekt weist und-Freigaben für die Sequenz, die sie über einen zugrunde liegenden Containers, des Typs steuert `Container`, zur Speicherung der `Value` Elemente und bei Bedarf vergrößert wird. Darin sind die als Heap mit der höchsten Priorität-Element (dem obersten Element) leicht zugänglich und Wechseldatenträger sortierte Sequenz. Das Objekt schränkt den Zugriff auf die Push neue Elemente und abholen nur die höchste Priorität Element, eine Prioritätswarteschlange implementieren.  
   
  Das Objekt sortiert die Sequenz, die sie durch Aufrufen einer gespeicherten Delegatobjekt des Typs steuert [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Sie können das gespeicherte Delegatobjekt angeben, beim Erstellen von Priority_queue. Wenn Sie keine Delegatobjekt angeben, wird der Standardwert ist der Vergleich `operator<(value_type, value_type)`. Sie Zugriff auf diesem gespeicherten Objekt durch Aufrufen der Memberfunktion [priority_queue:: value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.  

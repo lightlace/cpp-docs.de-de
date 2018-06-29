@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434a0b428199b7c2298815523517097aeee2ab47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: beeef0d8ff1a89a003987f9cd79172ad2ff86d75
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376173"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079628"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage-Klasse
 Stellt die einzelnen Seiten eines Eigenschaftenblatts dar; wird auch als "Dialogfeld im Registerformat" bezeichnet.  
@@ -165,19 +165,19 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDTemplate`  
+ *nIDTemplate*  
  ID der Vorlage, die für diese Seite verwendet.  
   
- `nIDCaption`  
+ *nIDCaption*  
  Die ID des Namens auf der Registerkarte für diese Seite platziert werden soll. Bei 0 werden der Name aus der Dialogfeldvorlage für diese Seite weitergeleitet.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Enthält eine Null-terminierte Zeichenfolge, die den Namen der Dialogfeldvorlagen-Ressource ist.  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  Die ID des Namens in die Position des Titels des Seitenkopfs Eigenschaft platziert werden soll. Standardmäßig 0.  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  Die ID des Namens am Speicherort Untertitel des Seitenkopfs Eigenschaft platziert werden soll. Standardmäßig 0.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -189,9 +189,9 @@ void Construct(
   
 -   Der Benutzer hat ausgewählt (im Registerkartenformat zu) auf dieser Seite.  
   
- Rufen Sie **erstellen** wäre die andere Klasse Konstruktoren nicht aufgerufen worden. Die `Construct` Memberfunktion ist flexibel, da die Anweisung Parameter leer lassen, und klicken Sie dann mehrere Parameter und zur Erstellung an einem beliebigen Punkt im Code angeben.  
+ Rufen Sie `Construct` , wenn die andere Klasse Konstruktoren nicht aufgerufen wurde. Die `Construct` Memberfunktion ist flexibel, da die Anweisung Parameter leer lassen, und klicken Sie dann mehrere Parameter und zur Erstellung an einem beliebigen Punkt im Code angeben.  
   
- Verwenden Sie `Construct` Wenn Sie arbeiten mit Arrays, und rufen Sie **erstellen** für jedes Element des Arrays, damit die Datenmember richtige Werte zugewiesen werden.  
+ Verwenden Sie `Construct` Wenn Sie arbeiten mit Arrays, und rufen Sie `Construct` für jedes Element des Arrays, damit die Datenmember richtige Werte zugewiesen werden.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
@@ -232,20 +232,20 @@ CPropertyPage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDTemplate`  
+ *nIDTemplate*  
  ID der Vorlage, die für diese Seite verwendet.  
   
- `nIDCaption`  
+ *nIDCaption*  
  Die ID des Namens auf der Registerkarte für diese Seite platziert werden soll. Bei 0 werden der Name aus der Dialogfeldvorlage für diese Seite weitergeleitet.  
   
- `dwSize`  
- `lpszTemplateName`  
+ *dwSize*  
+ *lpszTemplateName*  
  Verweist auf eine Zeichenfolge, die den Namen der Vorlage für diese Seite enthält. Nicht mit **NULL**.  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  Die ID des Namens in die Position des Titels des Seitenkopfs Eigenschaft platziert werden soll.  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  Die ID des Namens am Speicherort Untertitel des Seitenkopfs Eigenschaft platziert werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -488,10 +488,10 @@ LRESULT QuerySiblings(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `wParam`  
+ *wParam*  
  Gibt zusätzliche Nachricht abhängige Informationen.  
   
- `lParam`  
+ *lParam*  
  Gibt zusätzliche Nachricht abhängiges-Informationen  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -515,7 +515,7 @@ void SetModified(BOOL bChanged = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bChanged`  
+ *bChanged*  
  **"True"** , um anzugeben, dass die eigenschafteneinstellungen für die Seite sie angewendet wurden, seit der letzten Ausführung geändert wurde **"False"** angeben, dass die eigenschafteneinstellungen angewendet wurden, oder ignoriert werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  

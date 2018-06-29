@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e005d18b57a4ada2c1a3aad605b7724f17a62347
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376645"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079097"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx-Klasse
 Kapselt die Dienste, die von der Windows-druckeigenschaftenblatt bereitgestellt.  
@@ -146,10 +146,10 @@ CPrintDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwFlags`  
+ *dwFlags*  
  Ein oder mehrere Flags, die Sie verwenden können, zum Anpassen der Einstellungen im Dialogfeld mit dem bitweisen OR-Operator kombiniert. Z. B. die **PD_ALLPAGES** Flag legt den Standardbereich drucken für alle Seiten des Dokuments. Finden Sie unter der [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) Struktur in das Windows SDK für Weitere Informationen zu diesen Flags.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das Dialogfeld über- oder Besitzer Fenster.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -248,7 +248,7 @@ CString GetDriverName() const;
  Ein `CString` den systemdefinierte Treibernamen angeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie einen Zeiger auf die `CString` zurückgegebenes Objekt `GetDriverName` als Wert des `lpszDriverName` in einem Aufruf von [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
+ Verwenden Sie einen Zeiger auf die `CString` zurückgegebenes Objekt `GetDriverName` als Wert des *LpszDriverName* in einem Aufruf von [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
 ##  <a name="getportname"></a>  CPrintDialogEx::GetPortName  
  Mit dieser Funktion wird nach dem Aufruf [DoModal](#domodal) oder [GetDefaults](#getdefaults) , den Namen des aktuell ausgewählten Drucker Ports abzurufen.  

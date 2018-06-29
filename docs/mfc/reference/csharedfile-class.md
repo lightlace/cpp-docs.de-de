@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df3c052f3cefb3aa7d2a55e81fd5f7813632ceb1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370180"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078282"
 ---
 # <a name="csharedfile-class"></a>Klasse
 Die [CMemFile](../../mfc/reference/cmemfile-class.md)-abgeleitete Klasse, die unterstützt die freigegebene arbeitsspeicherdateien.  
@@ -56,9 +56,9 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>Hinweise  
  Arbeitsspeicherdateien Verhalten wie Dateien auf Datenträgern, außer dass die Datei im Arbeitsspeicher und nicht auf dem Datenträger gespeichert wird. Eine Arbeitsspeicherdatei eignet sich für die schnelle temporäre Speicherung oder zum Übertragen von unformatierten Bytes oder serialisiert Objekte zwischen unabhängigen Prozessen.  
   
- Freigegebene arbeitsspeicherdateien unterscheiden sich von anderen Speicherdateien, insofern, dass Arbeitsspeicher dafür zugeordnet wird, mit der [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows-Funktion. Die `CSharedFile` Klasse speichert Daten in eine Global belegten Speicherblocks (erstellt mit **GlobalAlloc**), und diesem Speicherblock mit DDE, die Zwischenablage oder andere OLE/COM uniform Data Transfer Vorgänge, z. B. freigegeben werden kann Mithilfe von `IDataObject`.  
+ Freigegebene arbeitsspeicherdateien unterscheiden sich von anderen Speicherdateien, insofern, dass Arbeitsspeicher dafür zugeordnet wird, mit der [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows-Funktion. Die `CSharedFile` Klasse speichert Daten in eine Global belegten Speicherblocks (erstellt mit `GlobalAlloc`), und diesem Speicherblock freigegeben werden kann mithilfe von DDE, die Zwischenablage oder andere OLE/COM uniform Data Transfer Vorgänge, z. B. mit `IDataObject`.  
   
- **GlobalAlloc** gibt eine `HGLOBAL` behandeln, anstatt ein Zeiger auf Speicher, z. B. der zurückgegebene Zeiger ["malloc"](../../c-runtime-library/reference/malloc.md). Die `HGLOBAL` Handle in bestimmten Anwendungen benötigt wird. Beispielsweise, um Daten zu speichern, auf die Zwischenablage müssen Sie eine `HGLOBAL` behandeln.  
+ `GlobalAlloc` Gibt eine `HGLOBAL` behandeln, anstatt ein Zeiger auf Speicher, z. B. der zurückgegebene Zeiger ["malloc"](../../c-runtime-library/reference/malloc.md). Die `HGLOBAL` Handle in bestimmten Anwendungen benötigt wird. Beispielsweise, um Daten zu speichern, auf die Zwischenablage müssen Sie eine `HGLOBAL` behandeln.  
   
  Bitte beachten Sie, dass `CSharedFile` keine Verwendung speicherzugeordnete Dateien und die Daten können nicht direkt zwischen Prozessen freigegeben werden.  
   
@@ -91,7 +91,7 @@ CSharedFile(
  *nAllocFlags*  
  Flags, der angibt, wie Arbeitsspeicher zugeordnet werden. Finden Sie unter [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) eine Liste der gültigen Flagwerte.  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  Das Inkrement Zuweisung, Arbeitsspeicher in Bytes.  
   
 ##  <a name="detach"></a>  CSharedFile::Detach  
@@ -120,11 +120,11 @@ void SetHandle(
  *hGlobalMemory*  
  Handle für den globalen Speicher zugeordnet werden soll die `CSharedFile`.  
   
- `bAllowGrow`  
+ *bAllowGrow*  
  Gibt an, ob der Speicherblock zulässig ist, vergrößert werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `bAllowGrow` ist ungleich NULL ist, die Größe des Speicherblocks ist erhöht, nach Bedarf, z. B. wenn ein Versuch ist versucht, mehr Bytes zu schreiben, in die Datei als für den Speicherblock zugewiesen wurden.  
+ Wenn *bAllowGrow* ist ungleich NULL ist, die Größe des Speicherblocks ist erhöht, nach Bedarf, z. B. wenn ein Versuch ist versucht, mehr Bytes zu schreiben, in die Datei als für den Speicherblock zugewiesen wurden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CMemFile-Klasse](../../mfc/reference/cmemfile-class.md)   

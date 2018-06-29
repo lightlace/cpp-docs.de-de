@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4a4255e5c6229ee570b9baa8952cc784044ef95
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: b3c81bc3fd5068f8269476608cc870272a0ef2e4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305812"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079798"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `multiset` Vewaltung eine Sequenz von Elementen als (fast) mit Lastenausgleich geordneten Struktur der Knoten, jeweils ein Element speichern kann.  
@@ -135,7 +135,7 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  Key  
  Der Typ, der die zentrale Komponente eines Elements in der kontrollierten Sequenz.  
 

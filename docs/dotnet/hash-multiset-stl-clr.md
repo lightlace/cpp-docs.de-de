@@ -105,12 +105,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 02678db98c40927114adf1b061482d9e8304aa30
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 3e5db2aafb10ad6d95fe50d073085041a1016cac
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305838"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079863"
 ---
 # <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `hash_multiset` zum Verwalten einer Sequenz von Elementen als Hashtabelle verknüpft jeder Tabelleneintrag speichern eine bidirektionale Liste der Knoten, und jeder Knoten ein Element speichern kann. Der Wert jedes Element wird als Schlüssel für die Anordnung der Sequenz verwendet.  
@@ -133,7 +133,7 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  Key  
  Der Typ, der die zentrale Komponente eines Elements in der kontrollierten Sequenz.  
 
@@ -142,7 +142,7 @@ template<typename Key>
   
  **Namespace:** Cliext  
   
-## <a name="members"></a>Member  
+## <a name="declarations"></a>Deklarationen  
   
 |Typdefinition|Beschreibung|  
 |---------------------|-----------------|  
@@ -207,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|Behalten Sie die Gruppe von typisierten Elementen.|  
 |IHash\<Schlüssel, Wert >|Verwalten von generischen Container.|  
   
-### <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Hinweise  
  Das Objekt weist und Speicherplatz für die Sequenz, die als einzelner Knoten in einer verknüpften Liste des bidirektionalen Steuersoftware frei. Um den Zugriff zu beschleunigen, gibt das Objekt auch ein variabler Länge Array von Zeigern in der Liste (die Hashtabelle), effektive Verwaltung der gesamten Liste als Sequenz von Unterlisten, verwaltet oder buckets. Er fügt Elemente in einem Bucket, die darin geordnete die Links zwischen Knoten sind, nie durch Kopieren den Inhalt eines Knotens zu einem anderen ändern. Bedeutet, dass Sie einfügen können, und Elemente beliebig ohne beunruhigende verbleibenden Elemente entfernen.  
   
  Das Objekt ordnet jedem Bucket Steuersoftware durch Aufrufen einer gespeicherten Delegatobjekt des Typs [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Sie können das gespeicherte Delegatobjekt angeben, beim Erstellen von Hash_set; Wenn Sie keine Delegatobjekt angeben, wird der Standardwert ist der Vergleich `operator<=(key_type, key_type)`.  
@@ -240,6 +240,8 @@ template<typename Key>
   
  Löschen oder Entfernen eines Elements ruft der Destruktor für den gespeicherten Wert. Zerstören von dem Container löscht alle Elemente. Somit wird sichergestellt, dass ein Container, dessen Elementtyp eine Verweisklasse ist, dass keine Elemente den Container Überleben. Beachten Sie jedoch, dass ein Container von Handles ist `not` seine Elemente zu zerstören.  
   
+## <a name="members"></a>Member
+
 ## <a name="begin"></a> hash_multiset:: begin (STL/CLR)
 Legt den Anfang der kontrollierten Sequenz fest.  
   

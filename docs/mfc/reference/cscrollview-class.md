@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b480ee1118551b09c705fb4f79f8a50c0a1f895
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375541"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079566"
 ---
 # <a name="cscrollview-class"></a>CScrollView-Klasse
 Ein [CView](../../mfc/reference/cview-class.md) mit Bildlauffunktionen.  
@@ -100,7 +100,7 @@ class CScrollView : public CView
   
  Vor der `OnDraw` Memberfunktion der Klasse abgeleitete Sicht aufgerufen wird, `CScrollView` automatisch anpasst und den Ursprung des Ausschnitts für die `CPaintDC` übergibt an gerätkontextobjekt `OnDraw`.  
   
- Der Ursprung des Ausschnitts für das Durchführen eines Bildlaufs Fenster anpassen `CScrollView` überschreibt [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Diese Anpassung wird automatisch für die `CPaintDC` Gerätekontext, `CScrollView` übergibt an `OnDraw`, allerdings müssen Aufrufen **CScrollView::OnPrepareDC** selbst für alle anderen Gerätekontexte Sie verwenden, z. B. eine `CClientDC`. Sie können außer Kraft setzen **CScrollView::OnPrepareDC** der Stift, Hintergrundfarbe und andere Zeichnungsattribute festlegen, aber der Basisklasse hierzu Skalierung aufrufen.  
+ Der Ursprung des Ausschnitts für das Durchführen eines Bildlaufs Fenster anpassen `CScrollView` überschreibt [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Diese Anpassung wird automatisch für die `CPaintDC` Gerätekontext, `CScrollView` übergibt `OnDraw`, jedoch müssen Sie aufrufen `CScrollView::OnPrepareDC` selbst für alle anderen Gerätekontexte Sie verwenden, z. B. eine `CClientDC`. Sie können außer Kraft setzen `CScrollView::OnPrepareDC` der Stift, Hintergrundfarbe und andere Zeichnungsattribute festlegen, aber der Basisklasse hierzu Skalierung aufrufen.  
   
  Bildlaufleisten können an drei Orten relativ zu einer Ansicht angezeigt werden, wie in den folgenden Fällen angezeigt:  
   
@@ -162,10 +162,10 @@ void FillOutsideRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Gerätekontext, in dem die füllen ist, durchgeführt werden.  
   
- `pBrush`  
+ *pBrush*  
  Der Pinsel, der Bereich ist gefüllt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -201,16 +201,16 @@ void GetDeviceScrollSizes(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nMapMode`  
+ *nMapMode*  
  Gibt den aktuellen Zuordnungsmodus für diese Sicht zurück. Eine Liste der möglichen Werte finden Sie unter `SetScrollSizes`.  
   
- `sizeTotal`  
+ *sizeTotal*  
  Gibt die aktuelle Gesamtgröße der Bildlaufansicht einen im Geräteeinheiten zurück.  
   
- `sizePage`  
+ *sizePage*  
  Gibt die aktuelle horizontale und vertikale Beträge für einen Bildlauf in jede Richtung als Antwort auf eine Maus eine Bildlaufleiste klicken Sie auf zurück. Die **Cx** Member enthält, die horizontale Größe. Die **cy** Member enthält, die vertikale Größe.  
   
- `sizeLine`  
+ *sizeLine*  
  Gibt die aktuelle horizontale und vertikale Beträge für einen Bildlauf in jede Richtung als Antwort auf eine Maus in einen Bildlaufpfeil klicken Sie auf zurück. Die **Cx** Member enthält, die horizontale Größe. Die **cy** Member enthält, die vertikale Größe.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -267,7 +267,7 @@ void ScrollToPosition(POINT pt);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pt`  
+ *pt*  
  Der Punkt, in logischen Einheiten befindet, zu scrollen. Die **x** angehören muss ein positiver Wert (größer als oder gleich 0 (null) bis zu der Gesamtgröße der Ansicht). Dasselbe gilt für die **y** Element wird vom Zuordnungsmodus `MM_TEXT`. Die **y** angehört, die bei der Zuordnung der Modi außer negative `MM_TEXT`.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -281,7 +281,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `sizeTotal`  
+ *sizeTotal*  
  Die horizontalen und vertikalen Größen für die Ansicht wird skaliert werden. Das Scroll-Ansicht Größe wird in logischen Einheiten gemessen. Die horizontale Größe ist Bestandteil der **Cx** Member. Die vertikale Größe ist Bestandteil der **cy** Member. Beide **Cx** und **cy** muss größer als oder gleich 0 sein.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -307,7 +307,7 @@ void SetScrollSizes(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nMapMode`  
+ *nMapMode*  
  Der Zuordnungsmodus für diese Sicht festgelegt. Mögliche Werte:  
   
 |Zuordnungsmodus|Logische Einheit|Positive y-Achse Extends...|  
@@ -321,13 +321,13 @@ void SetScrollSizes(
   
  Diese Modi werden von Windows definiert. Zwei standardmäßige Zuordnungsmodi `MM_ISOTROPIC` und `MM_ANISOTROPIC`, werden nicht zum `CScrollView`. Die-Klassenbibliothek stellt die `SetScaleToFitSize` Memberfunktion für die Skalierung der Ansicht, um die Fenstergröße. Spalte 3 in der obigen Tabelle beschreibt die-Koordinate Ausrichtung.  
   
- `sizeTotal`  
+ *sizeTotal*  
  Die Gesamtgröße der Bildlaufleiste angezeigt. Die **Cx** Member enthält den horizontalen Umfang. Die **cy** Member enthält den vertikalen Wertebereich. Größen sind in logischen Einheiten. Beide **Cx** und **cy** muss größer als oder gleich 0 sein.  
   
- `sizePage`  
+ *sizePage*  
  Die Beträge der horizontalen und vertikalen Bildlauf in jede Richtung als Antwort auf eine Maus klicken Sie auf einer Bildlaufleiste. Die **Cx** Member enthält, die horizontale Größe. Die **cy** Member enthält, die vertikale Größe.  
   
- `sizeLine`  
+ *sizeLine*  
  Die Beträge der horizontalen und vertikalen Bildlauf in jede Richtung als Antwort auf eine Maus klicken Sie in einen Bildlaufpfeil. Die **Cx** Member enthält, die horizontale Größe. Die **cy** Member enthält, die vertikale Größe.  
   
 ### <a name="remarks"></a>Hinweise  

@@ -105,19 +105,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 99ea41a77a8ed01cb78df3513ccb79b6b2a8b3f1
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 21c2ebc9ba59e6581a9f6d286f136c907b7c73aa
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305890"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079876"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `set` Vewaltung eine Sequenz von Elementen als (fast) mit Lastenausgleich geordneten Struktur der Knoten, jeweils ein Element speichern kann.  
   
  In der folgenden Beschreibung `GValue` ist identisch mit `GKey`, die wiederum ist identisch mit `Key` , wenn die zweite Datei einen Ref-Typ ist, in diesem Fall wird `Key^`.  
   
-### <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Key>  
@@ -133,10 +133,15 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  Key  
  Der Typ, der die zentrale Komponente eines Elements in der kontrollierten Sequenz.  
   
+## <a name="requirements"></a>Anforderungen  
+ **Header:** \<Cliext/Set >  
+  
+ **Namespace:** Cliext  
+
 ## <a name="declarations"></a>Deklarationen  
   
 |Typdefinition|Beschreibung|  
@@ -202,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|Behalten Sie die Gruppe von typisierten Elementen.|  
 |ITree\<Schlüssel, Wert >|Verwalten von generischen Container.|  
   
-### <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Hinweise  
  Das Objekt weist und Speicherplatz für die Sequenz, die als einzelne Knoten Steuersoftware frei. Er fügt Elemente in einen (fast) ausgewogenen Baum, den darin geordnete die Links zwischen Knoten sind, nie durch Kopieren den Inhalt eines Knotens zu einem anderen ändern. Bedeutet, dass Sie einfügen können, und Elemente beliebig ohne beunruhigende verbleibenden Elemente entfernen.  
   
  Das Objekt sortiert die Sequenz, die sie durch Aufrufen einer gespeicherten Delegatobjekt des Typs steuert [Set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md). Sie können das gespeicherte Delegatobjekt angeben, beim Erstellen des Satzes. Wenn Sie keine Delegatobjekt angeben, wird der Standardwert ist der Vergleich `operator<(key_type, key_type)`. Sie Zugriff auf diesem gespeicherten Objekt durch Aufrufen der Memberfunktion [Set:: key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`.  
@@ -228,11 +233,6 @@ template<typename Key>
  Ein Iterator Satz speichert ein Handle zum Knoten zugeordnet, der wiederum ein Handle für den zugehörigen Container gespeichert. Sie können nur mit ihrer zugeordneten Containerobjekte Iteratoren verwenden. Ein Iterator Satz bleibt gültig, solange die Knoten der zugeordneten Gruppe einige Satz zugeordnet ist. Darüber hinaus ein gültiger Iterator ist dereferencable – können sie Zugriff haben und den Elementwert, die er festlegt – ändern, solange er nicht gleich `end()`.  
   
  Löschen oder Entfernen eines Elements ruft der Destruktor für den gespeicherten Wert. Zerstören von dem Container löscht alle Elemente. Somit wird sichergestellt, dass ein Container, dessen Elementtyp eine Verweisklasse ist, dass keine Elemente den Container Überleben. Beachten Sie jedoch, dass ein Container von Handles ist `not` seine Elemente zu zerstören.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** \<Cliext/Set >  
-  
- **Namespace:** Cliext  
  
 ## <a name="members"></a>Member
 

@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4313b80a4fa83e5340f678834b64dd5269278a0d
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: f8d470928cb4cbc1625ad439efe75b97f2bb1bd7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305513"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079039"
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
 Definiert containervorlagenfunktionen, die für die numerische Verarbeitung bereitgestellte Algorithmen ausführen.  
@@ -57,7 +57,7 @@ Definiert containervorlagenfunktionen, die für die numerische Verarbeitung bere
 |[inner_product (STL/CLR)](#inner_product)|Berechnet die Summe des elementweisen Produkts von zwei Bereichen und fügt sie einem angegebenen Anfangswert hinzu oder berechnet das Ergebnis einer allgemeinen Prozedur, in der die Summen- und Produktvorgänge durch andere angegebene binäre Vorgänge ersetzt werden.|  
 |[partial_sum (STL/CLR)](#partial_sum)|Berechnet eine Reihe von Summen in einem Eingabebereich vom ersten Element über die `i`th-Element und speichert das Ergebnis jeder Summe im `i`th-Element eines Zielbereichs oder berechnet das Ergebnis einer allgemeinen Prozedur, in dem die Sum-Vorgang wird von einem anderen angegebenen binären Vorgang ersetzt.|  
  
-## <a name="functions"></a>Funktionen
+## <a name="members"></a>Member
 
 ## <a name="accumulate"></a> Accumulate (STL/CLR)
 Berechnet die Summe aller Elemente in einem angegebenen Bereich, einschließlich einigen Anfangswerten, indem aufeinander folgende Teilsummen berechnet werden, oder berechnet das Ergebnis der aufeinander folgenden Teilergebnisse, die auf ähnliche Weise mithilfe eines angegebenen binären Vorgangs (außer Summe) abgerufen werden.  

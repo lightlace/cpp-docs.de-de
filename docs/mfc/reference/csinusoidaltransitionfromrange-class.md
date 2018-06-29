@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09c302ec414e26c71d8989bb6d624314c8eb6db4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 646878a1cfd77dd61fbb854512c56512083ff609
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370206"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078682"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange-Klasse
 Kapselt einen Übergang mit sinusförmigem Bereich und angegebenem Schwingungsbereich.  
@@ -93,7 +93,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pLibrary`  
+ *pLibrary*  
  Ein Zeiger auf den Übergangsbibliothek, die für die Erstellung der standardmäßigen Übergänge verwendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -112,19 +112,19 @@ CSinusoidalTransitionFromRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `duration`  
+ *Dauer*  
  Die Dauer des Übergangs.  
   
- `dblMinimumValue`  
+ *dblMinimumValue*  
  Der Wert der Animationsvariablen bei einem Tiefpunkt mit sinusförmiger Welle.  
   
- `dblMaximumValue`  
+ *dblMaximumValue*  
  Der Wert der Animationsvariablen an eine Spitze des mit sinusförmiger Wave.  
   
- `period`  
+ *Zeitraum*  
  Der Zeitraum und angegebenem schwingungsbereich mit sinusförmiger Welle in Sekunden.  
   
- `slope`  
+ *Steigung*  
  Die Kurve am Anfang des Übergangs.  
   
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f672cbeeee0c297e3d1deb6a6b5e83bffda3e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86827a2f01e387eb6e7c8b2184567cb204f184e6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372768"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079120"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar-Klasse
 Stellt die Funktionalität eines Windows-Bildlaufleisten-Steuerelements bereit.  
@@ -117,23 +117,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Gibt den Bildlauf Standardstil der Statusleiste des. Wenden Sie eine beliebige Kombination von [Stile des Schiebeleisten Steuerelements](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) auf der Bildlaufleiste angezeigt.  
   
- `rect`  
+ *Rect*  
  Gibt die Bildlaufleiste Größe und Position. Kann es sich um eine `RECT` Struktur oder ein `CRect` Objekt.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Gibt den Bildlauf des übergeordneten Fensters, in der Regel eine `CDialog` Objekt. Es muss nicht **NULL**.  
   
- `nID`  
+ *nID*  
  Das Scroll Bar-Steuerelement-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CScrollBar` Objekt in zwei Schritten. Rufen Sie zunächst den Konstruktor erstellt die `CScrollBar` Objekt; rufen dann **erstellen**, das erstellt und initialisiert das zugeordnete Windows-Bildlaufleiste und fügt es der `CScrollBar` Objekt.  
+ Sie erstellen eine `CScrollBar` Objekt in zwei Schritten. Rufen Sie zunächst den Konstruktor erstellt die `CScrollBar` Objekt; rufen dann `Create`, das erstellt und initialisiert das zugeordnete Windows-Bildlaufleiste und fügt es der `CScrollBar` Objekt.  
   
  Übernehmen Sie die folgenden [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles) auf eine Bildlaufleiste angezeigt:  
   
@@ -169,7 +169,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nArrowFlags`  
+ *nArrowFlags*  
  Gibt an, ob der Bildlaufpfeile auf aktiviert oder deaktiviert sind und welche Pfeile aktiviert oder deaktiviert sind. Dieser Parameter kann einen der folgenden Werte sein:  
   
 - **ESB_ENABLE_BOTH** können beide Bildlaufpfeile einer Bildlaufleiste.  
@@ -213,10 +213,10 @@ BOOL GetScrollInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpScrollInfo`  
+ *lpScrollInfo*  
  Ein Zeiger auf eine [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) Struktur. Finden Sie in das Windows SDK für Weitere Informationen zu dieser Struktur.  
   
- `nMask`  
+ *nMask*  
  Gibt die Scroll Bar-Parameter abgerufen. Typischer Verwendung, SIF_ALL, gibt eine Kombination von SIF_PAGE, SIF_POS SIF_TRACKPOS und SIF_RANGE an. Finden Sie unter `SCROLLINFO` für Weitere Informationen zu den nMask-Werten.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -262,7 +262,7 @@ int GetScrollPos() const;
   Siehe das Beispiel für [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
 ##  <a name="getscrollrange"></a>  CScrollBar::GetScrollRange  
- Kopiert die aktuellen minimalen und maximalen Bildlaufleisten-Positionen für die angegebene scrollleiste an den Speicherorten von angegebenen `lpMinPos` und `lpMaxPos`.  
+ Kopiert die aktuellen minimalen und maximalen Bildlaufleisten-Positionen für die angegebene scrollleiste an den Speicherorten von angegebenen *LpMinPos* und *LpMaxPos*.  
   
 ```  
 void GetScrollRange(
@@ -271,10 +271,10 @@ void GetScrollRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpMinPos`  
+ *lpMinPos*  
  Verweist auf die ganzzahlige Variable, die die minimale Position zu empfangen.  
   
- `lpMaxPos`  
+ *lpMaxPos*  
  Verweist auf die ganzzahlige Variable, die die maximale Position zu empfangen.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -293,11 +293,11 @@ BOOL SetScrollInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpScrollInfo`  
+ *lpScrollInfo*  
  Ein Zeiger auf eine [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) Struktur.  
   
- `bRedraw`  
- Gibt an, ob die Bildlaufleiste neu gezeichnet werden soll, entsprechend den neuen Informationen. Wenn `bRedraw` ist **"true"**, die Bildlaufleiste neu gezeichnet wird. Ist er **"false"**, ihn nicht neu gezeichnet wird. Standardmäßig aktualisiert der Bildlaufleiste angezeigt wird.  
+ *bRedraw*  
+ Gibt an, ob die Bildlaufleiste neu gezeichnet werden soll, entsprechend den neuen Informationen. Wenn *bRedraw* ist **"true"**, die Bildlaufleiste neu gezeichnet wird. Ist er **"false"**, ihn nicht neu gezeichnet wird. Standardmäßig aktualisiert der Bildlaufleiste angezeigt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Bei einer erfolgreichen Rückgabe **"true"**. Andernfalls ist **"false"**.  
@@ -311,7 +311,7 @@ BOOL SetScrollInfo(
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
 ##  <a name="setscrollpos"></a>  CScrollBar::SetScrollPos  
- Legt die aktuelle Position eines scrollfelds auf, die durch `nPos` und, falls angegeben, zeichnet die Bildlaufleiste, um die neue Position zu berücksichtigen.  
+ Legt die aktuelle Position eines scrollfelds auf, die durch *nPos* und, falls angegeben, zeichnet die Bildlaufleiste, um die neue Position zu berücksichtigen.  
   
 ```  
 int SetScrollPos(
@@ -320,17 +320,17 @@ int SetScrollPos(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nPos`  
+ *nPos*  
  Gibt die neue Position für das Bildlauffeld. Es muss sich innerhalb des Bereichs Durchführen eines Bildlaufs.  
   
- `bRedraw`  
- Gibt an, ob die Bildlaufleiste neu gezeichnet werden soll, entsprechend die neue Position. Wenn `bRedraw` ist **"true"**, die Bildlaufleiste neu gezeichnet wird. Ist er **"false"**, ihn nicht neu gezeichnet wird. Standardmäßig aktualisiert der Bildlaufleiste angezeigt wird.  
+ *bRedraw*  
+ Gibt an, ob die Bildlaufleiste neu gezeichnet werden soll, entsprechend die neue Position. Wenn *bRedraw* ist **"true"**, die Bildlaufleiste neu gezeichnet wird. Ist er **"false"**, ihn nicht neu gezeichnet wird. Standardmäßig aktualisiert der Bildlaufleiste angezeigt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die vorherige Position des Bildlauffelds bei Erfolg; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Legen Sie `bRedraw` auf **"false"** immer die Bildlaufleiste wird neu gezeichnet werden über einen nachfolgenden Aufruf an eine andere Funktion zu vermeiden, dass die Bildlaufleiste zweimal innerhalb eines kurzen Zeitraums neu gezeichnet.  
+ Legen Sie *bRedraw* auf **"false"** immer die Bildlaufleiste wird neu gezeichnet werden über einen nachfolgenden Aufruf an eine andere Funktion zu vermeiden, dass die Bildlaufleiste zweimal innerhalb eines kurzen Zeitraums neu gezeichnet.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CScrollBar::SetScrollRange](#setscrollrange).  
@@ -346,23 +346,23 @@ void SetScrollRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nMinPos`  
+ *nMinPos*  
  Gibt die minimale Bildlauf Position an.  
   
- `nMaxPos`  
+ *nMaxPos*  
  Gibt die maximale Bildlauf Position.  
   
- `bRedraw`  
- Gibt an, ob die Bildlaufleiste neu gezeichnet werden sollte, um die Änderung zu übernehmen. Wenn `bRedraw` ist **"true"**, die Bildlaufleiste aktualisiert wird; Wenn **"false"**, ihn nicht neu gezeichnet wird. Es wird standardmäßig neu gezeichnet wird.  
+ *bRedraw*  
+ Gibt an, ob die Bildlaufleiste neu gezeichnet werden sollte, um die Änderung zu übernehmen. Wenn *bRedraw* ist **"true"**, die Bildlaufleiste aktualisiert wird; Wenn **"false"**, ihn nicht neu gezeichnet wird. Es wird standardmäßig neu gezeichnet wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Legen Sie `nMinPos` und `nMaxPos` auf 0, um die standard-Bildlaufleisten ausblenden.  
+ Legen Sie *nMinPos* und *nMaxPos* auf 0, um die standard-Bildlaufleisten ausblenden.  
   
  Rufen Sie diese Funktion, um eine Bildlaufleiste bei der Verarbeitung einer Bildlaufleiste – Meldung ausblenden nicht.  
   
- Wenn ein Aufruf von `SetScrollRange` unmittelbar folgt einen Aufruf der `SetScrollPos` Memberfunktion festgelegt `bRedraw` in `SetScrollPos` auf 0, um zu verhindern, dass die Bildlaufleiste zweimal neu gezeichnet wird.  
+ Wenn ein Aufruf von `SetScrollRange` unmittelbar folgt einen Aufruf der `SetScrollPos` Memberfunktion festgelegt *bRedraw* in `SetScrollPos` auf 0, um zu verhindern, dass die Bildlaufleiste zweimal neu gezeichnet wird.  
   
- Der Unterschied zwischen die angegebenen Werte von `nMinPos` und `nMaxPos` darf nicht größer als 32.767 sein. Der Standardbereich für ein Bildlaufleisten-Steuerelement ist leer (beide `nMinPos` und `nMaxPos` sind 0).  
+ Der Unterschied zwischen die angegebenen Werte von *nMinPos* und *nMaxPos* darf nicht größer als 32.767 sein. Der Standardbereich für ein Bildlaufleisten-Steuerelement ist leer (beide *nMinPos* und *nMaxPos* sind 0).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
@@ -375,7 +375,7 @@ void ShowScrollBar(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bShow`  
+ *bShow*  
  Gibt an, ob die Bildlaufleiste angezeigt oder ausgeblendet wird. Wenn dieser Parameter ist **"true"**, die Bildlaufleiste angezeigt wird; andernfalls wird es ausgeblendet.  
   
 ### <a name="remarks"></a>Hinweise  

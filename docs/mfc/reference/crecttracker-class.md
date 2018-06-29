@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff57e1fde0af6e794c2c47db7d1e31daf545715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4ce3c4dbfbf49791673392a1e1234728a680611
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375907"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079667"
 ---
 # <a name="crecttracker-class"></a>CRectTracker-Klasse
 Ermöglicht es einem Element angezeigt, verschoben und in unterschiedlichen Größen dargestellt werden.  
@@ -124,16 +124,16 @@ virtual void AdjustRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nHandle`  
+ *nHandle*  
  Der Index des Handles verwendet.  
   
- `lpRect`  
+ *lpRect*  
  Ein Zeiger auf die aktuelle Größe des Rechtecks. (Die Größe eines Rechtecks wird durch die Höhe und Breite angegeben.)  
   
 ### <a name="remarks"></a>Hinweise  
  Das Standardverhalten dieser Funktion ermöglicht das Rechteck Ausrichtung so ändern Sie nur, wenn `Track` und `TrackRubberBand` heißen mit invertieren zulässig.  
   
- Überschreiben Sie diese Funktion, um die Anpassung des Rechtecks Überwachung während eines Drag-Vorgangs steuern. Eine Methode besteht darin, passen Sie die angegebenen Koordinaten `lpRect` vor der Rückgabe.  
+ Überschreiben Sie diese Funktion, um die Anpassung des Rechtecks Überwachung während eines Drag-Vorgangs steuern. Eine Methode besteht darin, passen Sie die angegebenen Koordinaten *LpRect* vor der Rückgabe.  
   
  Spezielle Funktionen, die von nicht direkt unterstützt werden `CRectTracker`, z. B. ausrichtungsgitter- oder-Seitenverhältnis beibehalten, kann durch Außerkraftsetzen von dieser Funktion implementiert werden.  
   
@@ -150,10 +150,10 @@ CRectTracker(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpSrcRect`  
+ *lpSrcRect*  
  Die Koordinaten des Rechteckobjekts.  
   
- `nStyle`  
+ *nStyle*  
  Gibt das Format der `CRectTracker` Objekt. Die folgenden Stile werden unterstützt:  
   
 - **CRectTracker::solidLine** verwenden eine durchgehende Linie für den Rechteckrahmen.  
@@ -169,7 +169,7 @@ CRectTracker(
 - **CRectTracker::hatchInside** Hatched Muster behandelt das gesamte Rechteck.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Standardkonstruktor initialisiert die `CRectTracker` Objekt mit den Werten aus `lpSrcRect` und anderen Größen um Systemstandardwerte initialisiert. Wenn das Objekt, ohne Parameter erstellt wurde die `m_rect` und `m_nStyle` Datenmember nicht initialisiert werden.  
+ Der Standardkonstruktor initialisiert die `CRectTracker` Objekt mit den Werten aus *LpSrcRect* und anderen Größen um Systemstandardwerte initialisiert. Wenn das Objekt, ohne Parameter erstellt wurde die `m_rect` und `m_nStyle` Datenmember nicht initialisiert werden.  
   
 ##  <a name="draw"></a>  CRectTracker::Draw  
  Mit dieser Funktion wird zum Zeichnen des Rechtecks äußeren Zeilen und inneren Region.  
@@ -179,7 +179,7 @@ void Draw(CDC* pDC) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Ein Zeiger auf den Gerätekontext, auf dem gezeichnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -197,16 +197,16 @@ virtual void DrawTrackerRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpRect`  
+ *lpRect*  
  Zeiger auf die `RECT` , die zu zeichnenden Rechtecks enthält.  
   
- `pWndClipTo`  
+ *pWndClipTo*  
  Ein Zeiger auf das Fenster, in das Rechteck verwendet.  
   
- `pDC`  
+ *pDC*  
  Ein Zeiger auf den Gerätekontext, auf dem gezeichnet werden soll.  
   
- `pWnd`  
+ *pWnd*  
  Ein Zeiger auf das Fenster auf dem die Zeichnung ausgeführt wird.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -243,11 +243,11 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpTrueRect`  
+ *lpTrueRect*  
  Zeiger auf die `RECT` Struktur, die das Gerät enthalten Koordinaten, der die `CRectTracker` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Dimensionen des Rechtecks umfassen die Höhe und Breite des Ziehpunkte, die sich auf den äußeren Rahmen befindet. Beim Zurückgeben der `lpTrueRect` ist immer einem normalisierten Rechteck in logische Koordinaten.  
+ Die Dimensionen des Rechtecks umfassen die Höhe und Breite des Ziehpunkte, die sich auf den äußeren Rahmen befindet. Beim Zurückgeben der *LpTrueRect* ist immer einem normalisierten Rechteck in logische Koordinaten.  
   
 ##  <a name="hittest"></a>  CRectTracker::HitTest  
  Rufen Sie diese Funktion, um herauszufinden, ob der Benutzer einen Ziehpunkt Element erfasst wurde.  
@@ -257,7 +257,7 @@ int HitTest(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `point`  
+ *Punkt*  
  Die Stelle im Gerätekoordinaten, um zu testen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -328,7 +328,7 @@ int NormalizeHit(int nHandle) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nHandle`  
+ *nHandle*  
  Der Handle vom Benutzer ausgewählt wurden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -363,17 +363,17 @@ BOOL SetCursor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Verweist auf das Fenster, das derzeit den Cursor enthält.  
   
- `nHitTest`  
- Ergebnisse des vorherigen Treffertests, aus der `WM_SETCURSOR` Nachricht.  
+ *nHitTest*  
+ Die Ergebnisse des vorherigen Treffertests, aus der Nachricht WM_SETCURSOR.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, falls der vorherige Treffer über das Rechteck Tracker erfolgte; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Mit dieser Funktion aus wird innerhalb der Funktion des Fensters, die behandelt die `WM_SETCURSOR` Nachricht (in der Regel `OnSetCursor`).  
+ Mit dieser Funktion aus wird innerhalb der Funktion des Fensters, die die Nachricht WM_SETCURSOR behandelt (in der Regel `OnSetCursor`).  
   
 ##  <a name="track"></a>  CRectTracker::Track  
  Mit dieser Funktion wird zum Anzeigen der Benutzeroberfläche zum Ändern der Größe des Rechtecks.  
@@ -387,17 +387,17 @@ BOOL Track(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Das Window-Objekt, das das Rechteck enthält.  
   
- `point`  
+ *Punkt*  
  Gerätekoordinaten von der aktuellen Position des Mauszeigers relativ zum Clientbereich.  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  Wenn **"true"**, das Rechteck werden kann, andernfalls auf der x-Achse oder y-Achse invertierte **"false"**.  
   
- `pWndClipTo`  
- Das Fenster, dem Zeichenvorgänge auf zugeschnitten wird. Wenn **NULL**, `pWnd` dient als das Clippingrechteck an.  
+ *pWndClipTo*  
+ Das Fenster, dem Zeichenvorgänge auf zugeschnitten wird. Wenn **NULL**, *pWnd* dient als das Clippingrechteck an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die ESC-Taste gedrückt wird, der Tracking-Prozess wird angehalten, das Rechteck in der nachverfolgung gespeichert wird nicht geändert und wird 0 zurückgegeben. Wenn die Änderung übernommen wird, verschieben die Maus und die linke Maustaste loslassen, die neue Position und/oder die Größe in der nachverfolgung Rechteck aufgezeichnet wird und ungleich NULL wird zurückgegeben.  
@@ -407,7 +407,7 @@ BOOL Track(
   
  Diese Funktion wird die Maus erfassen, bis der Benutzer die linke Maustaste loslässt, die ESC-Taste drückt oder die rechte Maustaste drückt. Wenn der Benutzer den Mauszeiger bewegt wird, wird das Feedback durch Aufrufen aktualisiert `DrawTrackerRect` und `OnChangedRect`.  
   
- Wenn `bAllowInvert` ist **"true"**, das Überwachungsprofil Rechteck auf der x-Achse oder y-Achse umgekehrt werden kann.  
+ Wenn *bAllowInvert* ist **"true"**, das Überwachungsprofil Rechteck auf der x-Achse oder y-Achse umgekehrt werden kann.  
   
 ##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand  
  Mit dieser Funktion können Kunststoff-Band-Auswahl nicht.  
@@ -420,20 +420,20 @@ BOOL TrackRubberBand(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Das Window-Objekt, das das Rechteck enthält.  
   
- `point`  
+ *Punkt*  
  Gerätekoordinaten von der aktuellen Position des Mauszeigers relativ zum Clientbereich.  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  Wenn **"true"** Rechtecks werden kann, andernfalls auf der x-Achse oder y-Achse invertierte **"false"**.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Maus bewegt hat und das Rechteck nicht leer ist; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Es ist in der Regel von aufgerufen, innerhalb der Funktion der Anwendung, die behandelt die `WM_LBUTTONDOWN` Nachricht (in der Regel `OnLButtonDown`).  
+ Es ist in der Regel von aufgerufen, innerhalb der Funktion der Anwendung, die die Nachricht WM_LBUTTONDOWN behandelt (in der Regel `OnLButtonDown`).  
   
  Diese Funktion wird die Maus erfassen, bis der Benutzer die linke Maustaste loslässt, die ESC-Taste drückt oder die rechte Maustaste drückt. Wenn der Benutzer den Mauszeiger bewegt wird, wird das Feedback durch Aufrufen aktualisiert `DrawTrackerRect` und `OnChangedRect`.  
   

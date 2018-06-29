@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 973957609b56f3bcd697f650c75c59d07cc97173
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 5d5b3e94b0b594174538aebe6542b04df7214f1b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305770"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079811"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die zufälligen Zugriff hat. Verwenden Sie den Container `vector` um eine Sequenz von Elementen als einen zusammenhängenden Block von Speicher zu verwalten. Der Block wird als Array implementiert, die bei Bedarf vergrößert wird.  
@@ -135,7 +135,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  Wert  
  Der Typ eines Elements in der kontrollierten Sequenz.  
   
@@ -225,10 +225,7 @@ template<typename Value>
   
  Löschen oder Entfernen eines Elements ruft der Destruktor für den gespeicherten Wert. Zerstören von dem Container löscht alle Elemente. Somit wird sichergestellt, dass ein Container, dessen Elementtyp eine Verweisklasse ist, dass keine Elemente den Container Überleben. Beachten Sie jedoch, dass ein Container von Handles, die nicht über die Elemente gelöscht.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** \<Cliext/Vektor >  
-  
- **Namespace:** Cliext  
+## <a name="members"></a>Member
 
 ## <a name="assign"></a> Vector:: Assign (STL/CLR)
 Ersetzt alle Elemente.  

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71871eae42fc720481852be1e60c934f941858c6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374837"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078155"
 ---
 # <a name="collection-class-helpers"></a>Hilfsfunktionen für die Auflistungsklasse
-Die Auflistungsklassen `CMap`, `CList`, und `CArray` Hilfsvorlage globale Funktionen für Zwecke wie vergleichen, zum Kopieren und zum Serialisieren von Elementen verwenden. Als Teil der Implementierung von Klassen, die auf der Grundlage `CMap`, `CList`, und `CArray`, müssen Sie diese Funktionen bei Bedarf überschreiben, mit Versionen, die auf den Typ der Karte, Liste oder Array gespeicherten Daten zugeschnitten sind. Informationen zum Überschreiben von Hilfsfunktionen wie z. B. `SerializeElements`, finden Sie im Artikel [Sammlungen: Gewusst wie: Erstellen einer typsicheren Auflistung](../../mfc/how-to-make-a-type-safe-collection.md). Beachten Sie, dass **ConstructElements** und **DestructElements** sind veraltet.  
+Die Auflistungsklassen `CMap`, `CList`, und `CArray` Hilfsvorlage globale Funktionen für Zwecke wie vergleichen, zum Kopieren und zum Serialisieren von Elementen verwenden. Als Teil der Implementierung von Klassen, die auf der Grundlage `CMap`, `CList`, und `CArray`, müssen Sie diese Funktionen bei Bedarf überschreiben, mit Versionen, die auf den Typ der Karte, Liste oder Array gespeicherten Daten zugeschnitten sind. Informationen zum Überschreiben von Hilfsfunktionen wie z. B. `SerializeElements`, finden Sie im Artikel [Sammlungen: Gewusst wie: Erstellen einer typsicheren Auflistung](../../mfc/how-to-make-a-type-safe-collection.md). Beachten Sie, dass `ConstructElements` und `DestructElements` sind veraltet.  
   
  Die Microsoft Foundation Class-Bibliothek bietet die folgenden globalen Funktionen in afxtempl.h beim Anpassen Ihrer Auflistungsklassen:  
   
@@ -57,24 +57,24 @@ CompareElements(
  *TYPE*  
  Der Typ des ersten Elements, das verglichen werden soll.  
   
- `pElement1`  
+ *pElement1*  
  Zeiger auf das erste Element, verglichen werden soll.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Der Typ des zweiten Elements, das verglichen werden soll.  
   
- `pElement2`  
+ *pElement2*  
  Ein Zeiger auf das zweite Element verglichen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL, wenn das Objekt auf verweist `pElement1` ist gleich dem Objekt verweist, zu `pElement2`, andernfalls 0.  
+ Ungleich NULL, wenn das Objekt auf verweist *pElement1* ist gleich dem Objekt verweist, zu *pElement2*, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `CMap` ruft verwenden die `CMap` Vorlagenparameter *Schlüssel* und `ARG_KEY`.  
   
  Die Standardimplementierung gibt das Ergebnis des Vergleichs des  *\*pElement1* und  *\*pElement2*. Überschreiben Sie diese Funktion, sodass die Elemente in einer Weise verglichen wird, die für Ihre Anwendung geeignet ist.  
   
- Die Programmiersprache C++ definiert den Vergleichsoperator ( `==`) für einfache Typen ( `char`, `int`, **"float"** usw.), aber keinen Vergleichsoperator für Klassen und Strukturen definiert ist. Wenn Sie verwenden möchten `CompareElements` oder zum Instanziieren einer Auflistungsklasse, die verwendet werden, müssen Sie den Vergleichsoperator definieren oder überladen `CompareElements` mit einer Version, die entsprechenden Werte zurückgibt.  
+ Die Programmiersprache C++ definiert den Vergleichsoperator ( `==`) für einfache Typen ( **Char**, **Int**, **"float"** usw.), aber nicht für einen Vergleichsoperator definiert ist Klassen und Strukturen. Wenn Sie verwenden möchten `CompareElements` oder zum Instanziieren einer Auflistungsklasse, die verwendet werden, müssen Sie den Vergleichsoperator definieren oder überladen `CompareElements` mit einer Version, die entsprechenden Werte zurückgibt.  
   
 ### <a name="requirements"></a>Anforderungen  
    **Header:** afxtempl.h   
@@ -94,13 +94,13 @@ void AFXAPI CopyElements(
  *TYPE*  
  Der Vorlagenparameter, der den Typ der zu kopierenden Elemente angibt.  
   
- `pDest`  
+ *pDest*  
  Ein Zeiger auf das Ziel, die Elemente kopiert werden.  
   
- `pSrc`  
+ *pSrc*  
  Ein Zeiger auf die Quelle der zu kopierenden Elemente.  
   
- `nCount`  
+ *nCount*  
  Anzahl der zu kopierenden Elemente.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -123,20 +123,20 @@ void  AFXAPI DumpElements(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dc`  
+ *dc*  
  Kontext für das Sichern von Elementen zu speichern.  
   
  *TYPE*  
  Der Vorlagenparameter, der Typ der Elemente angibt.  
   
- `pElements`  
+ *pElements*  
  Ein Zeiger auf die Elemente, die gesichert werden.  
   
- `nCount`  
+ *nCount*  
  Die Anzahl von Elementen, die gesichert werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Die **CArray::Dump**, **CList::Dump**, und **CMap::Dump** Funktionen aufrufen, wenn die Tiefe des Speicherabbilds größer als 0 ist.  
+ Die `CArray::Dump`, `CList::Dump`, und `CMap::Dump` Funktionen aufrufen, wenn die Tiefe des Speicherabbilds größer als 0 ist.  
   
  Bei der Standardimplementierung wird keine Aktion ausgeführt. Wenn die Elemente der Auflistung abgeleitet sind `CObject`, Aufrufen die Außerkraftsetzung werden Elemente in der Auflistung, in der Regel durchlaufen. `Dump` für jedes Element im aktivieren.  
   
@@ -153,10 +153,10 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ARG_KEY`  
+ *ARG_KEY*  
  Der Vorlagenparameter Angabe des Datentyps verwendet, um Zuordnungsschlüssel zugreifen.  
   
- `key`  
+ *key*  
  Der Schlüssel, dessen Hashwert wird berechnet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -165,7 +165,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion wird aufgerufen, direkt über [CMap::RemoveKey](cmap-class.md#removekey) und indirekt durch [CMap::Lookup](cmap-class.md#lookup) und [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at).
   
- Die Standardimplementierung erstellt einen Hashwert, durch die Umstellung `key` um vier Positionen nach rechts. Überschreiben Sie diese Funktion, sodass Hashwerte für Ihre Anwendung geeignete zurückgegeben.  
+ Die Standardimplementierung erstellt einen Hashwert, durch die Umstellung *Schlüssel* um vier Positionen nach rechts. Überschreiben Sie diese Funktion, sodass Hashwerte für Ihre Anwendung geeignete zurückgegeben.  
   
 ### <a name="example"></a>Beispiel
  ```cpp  
@@ -192,13 +192,13 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
  *TYPE*  
  Der Vorlagenparameter, der Typ der Elemente angibt.  
   
- `ar`  
+ *ar*  
  Ein Archivobjekt zum Archivieren in oder aus.  
   
- `pElements`  
+ *pElements*  
  Ein Zeiger auf die Elemente, die archiviert.  
   
- `nCount`  
+ *nCount*  
  Anzahl der Elemente, die archiviert  
   
 ### <a name="remarks"></a>Hinweise  

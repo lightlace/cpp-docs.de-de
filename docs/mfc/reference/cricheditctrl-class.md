@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d18e1352e0d8ba74709e2f1a5626678e81729a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51d1cdb8eb803f9e76f7929f6f46279a7d4e7ea0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378812"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079928"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl-Klasse
 Stellt die Funktionalität des Rich-Edit-Steuerelements bereit.  
@@ -301,14 +301,14 @@ BOOL CanPaste(UINT nFormat = 0) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nFormat`  
+ *nFormat*  
  Das Datenformat der Zwischenablage an der Abfrage. Dieser Parameter kann eine der vordefinierten Zwischenablageformate oder den Rückgabewert von [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn das Format der Zwischenablage eingefügt werden kann; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `nFormat` ist 0, `CanPaste` versucht jedes Format der Zwischenablage.  
+ Wenn *nFormat* ist 0, `CanPaste` versucht jedes Format der Zwischenablage.  
   
  Weitere Informationen finden Sie unter [EM_CANPASTE](http://msdn.microsoft.com/library/windows/desktop/bb787993) Nachricht und [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Funktion im Windows SDK.  
   
@@ -347,14 +347,14 @@ BOOL CanUndo() const;
  [!code-cpp[NVC_MFC_CRichEditCtrl#2](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_2.cpp)]  
   
 ##  <a name="charfrompos"></a>  CRichEditCtrl::CharFromPos  
- Ruft Informationen über das Zeichen an der durch den Parameter angegebene Punkt `pt`.  
+ Ruft Informationen über das Zeichen an der durch den Parameter angegebene Punkt *pt*.  
   
 ```  
 int CharFromPos(CPoint pt) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pt`  
+ *pt*  
  Ein [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt, das die Koordinaten der angegebenen Punkt enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -373,7 +373,7 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Das Löschen von ausgeführten **deaktivieren** können rückgängig gemacht werden, durch Aufrufen der [Rückgängig](#undo) Memberfunktion.  
+ Das Löschen von ausgeführten `Clear` können rückgängig gemacht werden, durch Aufrufen der [Rückgängig](#undo) Memberfunktion.  
   
  Rufen Sie zum Löschen der aktuellen Auswahl, und fügen Sie den gelöschten Inhalt in die Zwischenablage, die [Ausschneiden](#cut) Memberfunktion.  
   
@@ -407,27 +407,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Gibt das Bearbeitungssteuerelement-Stil. Wenden Sie eine Kombination der Fensterstile aufgeführt, die der **"Hinweise"** Abschnitt unten, und [bearbeiten Steuerelementtypen für die](http://msdn.microsoft.com/library/windows/desktop/bb775464), im Windows SDK beschrieben.  
   
- `rect`  
+ *Rect*  
  Gibt des Bearbeitungssteuerelements Größe und Position. Kann eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](../../mfc/reference/rect-structure1.md) Struktur.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Gibt an, das Steuerelement zum Bearbeiten des übergeordneten Fensters (häufig eine [CDialog](../../mfc/reference/cdialog-class.md)). Es muss nicht **NULL**.  
   
- `nID`  
+ *nID*  
  Gibt den Edit-Steuerelement-ID an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Initialisierung erfolgreich ist; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CRichEditCtrl` Objekt in zwei Schritten. Rufen Sie zunächst die [CRichEditCtrl](#cricheditctrl) Konstruktor, rufen Sie anschließend **erstellen**, das erstellt die Windows-Bearbeitungssteuerelements und fügt es der `CRichEditCtrl` Objekt.  
+ Sie erstellen eine `CRichEditCtrl` Objekt in zwei Schritten. Rufen Sie zunächst die [CRichEditCtrl](#cricheditctrl) Konstruktor, rufen Sie anschließend `Create`, das erstellt die Windows-Bearbeitungssteuerelements und fügt es der `CRichEditCtrl` Objekt.  
   
  Wenn Sie ein rich-Edit-Steuerelement mit dieser Funktion erstellen, müssen zunächst die erforderlichen-Bibliothek für Standardsteuerelemente laden. Um die Bibliothek zu laden, rufen Sie die globale Funktion [AfxInitRichEdit](application-information-and-management.md#afxinitrichedit), der wiederum die Bibliothek für Standardsteuerelemente initialisiert. Aufrufen, müssen Sie `AfxInitRichEdit` nur einmal innerhalb des Prozesses.  
   
- Wenn **erstellen** ausgeführt wird, sendet Windows die [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), und [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) Nachrichten an das Steuerelement zum Bearbeiten.  
+ Wenn `Create` ausgeführt wird, sendet Windows die [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), und [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) Meldungen an das Steuerelement zum Bearbeiten.  
   
  Diese Nachrichten werden standardmäßig verarbeitet der [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), und [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) Memberfunktionen in der `CWnd` Basisklasse. Um die Standard-Meldungsbehandlung zu erweitern, leiten Sie eine Klasse von `CRichEditCtrl`, eine meldungszuordnung an die neue Klasse hinzufügen und die oben genannten Meldungshandler Memberfunktionen überschreiben. Überschreiben Sie `OnCreate`, z. B. für die erforderliche Initialisierung für die neue Klasse.  
   
@@ -461,26 +461,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwExStyle`  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der `dwExStyle` -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ *dwExStyle*  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt das Bearbeitungssteuerelement-Stil. Eine Kombination der Fensterstile abgelesen gelten die **"Hinweise"** Abschnitt [erstellen](#create) und [bearbeiten Steuerelementtypen für die](http://msdn.microsoft.com/library/windows/desktop/bb775464), im Windows SDK beschrieben.  
   
- `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der `pParentWnd`.  
+ *Rect*  
+ Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das Fenster, das das Steuerelement übergeordnet ist.  
   
- `nID`  
+ *nID*  
  Das Steuerelement untergeordnete Fenster-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Verwendung `CreateEx` anstelle von **erstellen** anzuwendende erweiterten Fensterstile, angegeben durch die Windows-erweiterten Stil ihm etwas voranzustellen **WS_EX_**.  
+ Verwendung `CreateEx` anstelle von `Create` anzuwendende erweiterten Fensterstile, angegeben durch die Windows-erweiterten Stil ihm etwas voranzustellen **WS_EX_**.  
   
 ##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl  
  Erstellt ein `CRichEditCtrl`-Objekt.  
@@ -503,7 +503,7 @@ void Cut();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Das Löschen von ausgeführten **Ausschneiden** können rückgängig gemacht werden, durch Aufrufen der [rückgängig machen](#undo) Memberfunktion.  
+ Das Löschen von ausgeführten `Cut` können rückgängig gemacht werden, durch Aufrufen der [Rückgängig](#undo) Memberfunktion.  
   
  Um die aktuelle Auswahl ohne platzieren den gelöschten Text in die Zwischenablage zu löschen, rufen die [deaktivieren](#clear) Memberfunktion.  
   
@@ -520,14 +520,14 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDisplayRect`  
+ *pDisplayRect*  
  Zeiger auf eine [RECT](../../mfc/reference/rect-structure1.md) oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das den Bereich des Geräts anzuzeigenden Text angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Anzeige des formatierten Text, andernfalls 0 erfolgreich ausgeführt wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Text und die OLE-Elemente werden in den Bereich, der vom Zeiger angegeben abgeschnitten `pDisplayRect`.  
+ Der Text und die OLE-Elemente werden in den Bereich, der vom Zeiger angegeben abgeschnitten *pDisplayRect*.  
   
  Weitere Informationen finden Sie unter [EM_DISPLAYBAND](http://msdn.microsoft.com/library/windows/desktop/bb787997) im Windows SDK.  
   
@@ -561,8 +561,8 @@ long FindText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwFlags`  
- Eine Liste der möglichen Werte finden Sie unter `wParam` in [EM_FINDTEXTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788011) im Windows SDK.  
+ *dwFlags*  
+ Eine Liste der möglichen Werte finden Sie unter *wParam* in [EM_FINDTEXTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788011) im Windows SDK.  
   
  *pFindText*  
  Zeiger auf die [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) strukturieren, erteilen die Parameter für die Suche und Rückgabe des Bereichs, in dem die Übereinstimmung gefunden wurde.  
@@ -579,7 +579,7 @@ long FindText(
  [!code-cpp[NVC_MFC_CRichEditCtrl#9](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_9.cpp)]  
   
 ##  <a name="findwordbreak"></a>  CRichEditCtrl::FindWordBreak  
- Sucht nach der nächsten Word Pause vor oder nach der angegebenen Position `nStart`.  
+ Sucht nach der nächsten Word Pause vor oder nach der angegebenen Position *nStart*.  
   
 ```  
 DWORD FindWordBreak(
@@ -588,14 +588,14 @@ DWORD FindWordBreak(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCode`  
- Gibt die auszuführende Aktion an. Eine Liste der möglichen Werte, finden Sie in der Beschreibung für den Parameter `code` in **EM_FINDWORDBREAK** im Windows SDK.  
+ *nCode*  
+ Gibt die auszuführende Aktion an. Eine Liste der möglichen Werte, finden Sie in der Beschreibung für den Parameter *Code* in **EM_FINDWORDBREAK** im Windows SDK.  
   
- `nStart`  
+ *nStart*  
  Die nullbasierte Zeichenposition, ab.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Basierend auf dem Parameter `nCode`. Weitere Informationen finden Sie unter [EM_FINDWORDBREAK](http://msdn.microsoft.com/library/windows/desktop/bb788018) im Windows SDK.  
+ Basierend auf dem Parameter *nCode*. Weitere Informationen finden Sie unter [EM_FINDWORDBREAK](http://msdn.microsoft.com/library/windows/desktop/bb788018) im Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
  Sie können diese Memberfunktion verwenden, zum Abrufen von Informationen zu einem Zeichen an der angegebenen Position.  
@@ -635,14 +635,14 @@ CPoint GetCharPos(long lChar) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lChar`  
+ *lChar*  
  Nullbasierter Index des Zeichens.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Position der linken oberen Ecke des durch angegebene Zeichen `lChar`.  
+ Die Position der linken oberen Ecke des durch angegebene Zeichen *lChar*.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Zeichen wird durch die Vergabe ihres nullbasierten Indexwerts angegeben. Wenn `lChar` ist größer als der Index des letzten Zeichens in dieser `CRichEditCtrl` -Objekt, der Rückgabewert gibt die Koordinaten der Position des Zeichens hinter dem letzten Zeichen in dieser `CRichEditCtrl` Objekt.  
+ Das Zeichen wird durch die Vergabe ihres nullbasierten Indexwerts angegeben. Wenn *lChar* ist größer als der Index des letzten Zeichens in dieser `CRichEditCtrl` -Objekt, der Rückgabewert gibt die Koordinaten der Position des Zeichens hinter dem letzten Zeichen in dieser `CRichEditCtrl` Objekt.  
   
  Weitere Informationen finden Sie unter [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) im Windows SDK.  
   
@@ -654,13 +654,13 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cf`  
+ *CF*  
  In der ersten Version, ein Zeiger auf eine **CHARFORMAT** Struktur des Standardzeichensatzes Formatierungsattribute.  
   
  In der zweiten Version, ein Zeiger auf eine **CHARFORMAT2** -Struktur, die eine Rich Edit 2.0-Erweiterung ist auf die **CHARFORMAT** Struktur des Standardzeichensatzes Formatierungsattribute aufrechterhält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die **DwMask** Datenmember `cf`. Angabe des Standardzeichensatzes Formatierungsattribute.  
+ Die **DwMask** Datenmember *Cf*. Angabe des Standardzeichensatzes Formatierungsattribute.  
   
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter der **EM_GETCHARFORMAT** Nachricht und die **CHARFORMAT** und **CHARFORMAT2** Strukturen im Windows SDK.  
@@ -703,7 +703,7 @@ int GetFirstVisibleLine() const;
  [!code-cpp[NVC_MFC_CRichEditCtrl#11](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_11.cpp)]  
   
 ##  <a name="getiricheditole"></a>  CRichEditCtrl::GetIRichEditOle  
- Greift auf die **IRichEditOle** für diese Schnittstelle `CRichEditCtrl` Objekt.  
+ Greift auf die `IRichEditOle` für diese Schnittstelle `CRichEditCtrl` Objekt.  
   
 ```  
 IRichEditOle* GetIRichEditOle() const;  
@@ -750,17 +750,17 @@ int GetLine(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Nullbasierte Index der Zeile abgerufen.  
   
- `lpszBuffer`  
+ *lpszBuffer*  
  Verweist auf den Puffer zur Aufnahme von Text. Das erste Wort des Puffers muss die maximale Anzahl von Bytes angeben, die in den Puffer kopiert werden können.  
   
- `nMaxLength`  
- Maximale Anzahl von Zeichen, die in kopiert werden können `lpszBuffer`. Die zweite Form der `GetLine` wird dieser Wert in den das erste Wort des Puffers gemäß `lpszBuffer`.  
+ *nMaxLength*  
+ Maximale Anzahl von Zeichen, die in kopiert werden können *LpszBuffer*. Die zweite Form der `GetLine` wird dieser Wert in den das erste Wort des Puffers gemäß *LpszBuffer*.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Zeichen in kopiert `lpszBuffer`.  
+ Die Anzahl der Zeichen in kopiert *LpszBuffer*.  
   
 ### <a name="remarks"></a>Hinweise  
  Der kopierte Zeile enthält kein abschließendes Nullzeichen.  
@@ -825,16 +825,16 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pf`  
+ *PF*  
  In der ersten Version, ein Zeiger auf eine [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) Struktur, um die Attribute der aktuellen Auswahl formatieren von Absätzen aufzunehmen.  
   
  In der zweiten Version, ein Zeiger auf eine [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) -Struktur, die eine Rich Edit 2.0-Erweiterung ist auf die **PARAFORMAT** Struktur des Standardzeichensatzes Formatierungsattribute aufrechterhält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die **DwMask** Datenmember `pf`. Es gibt die absatzformatierung Attribute, die innerhalb der aktuellen Auswahl konsistent sind.  
+ Die **DwMask** Datenmember *Pf*. Es gibt die absatzformatierung Attribute, die innerhalb der aktuellen Auswahl konsistent sind.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn mehr als ein Absatz ausgewählt ist, `pf` empfängt die Attribute aus dem ersten ausgewählten Absatz. Der Rückgabewert gibt an, welche Attribute in der gesamten die Auswahl konsistent sind.  
+ Wenn mehr als ein Absatz ausgewählt ist, *Pf* empfängt die Attribute aus dem ersten ausgewählten Absatz. Der Rückgabewert gibt an, welche Attribute in der gesamten die Auswahl konsistent sind.  
   
  Weitere Informationen finden Sie unter der [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182) Nachricht und die **PARAFORMAT** und **PARAFORMAT2** Strukturen im Windows SDK.  
   
@@ -851,10 +851,10 @@ BOOL GetPunctuation(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `fType`  
- Satzzeichen Typ-Flag, wie beschrieben in der `fType` Parameter [EM_GETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774184) im Windows SDK.  
+ *fType*  
+ Satzzeichen Typ-Flag, wie beschrieben in der *fType* Parameter [EM_GETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774184) im Windows SDK.  
   
- `lpPunc`  
+ *lpPunc*  
  Ein Zeiger auf eine [SATZZEICHEN](http://msdn.microsoft.com/library/windows/desktop/bb787944) strukturieren, wie im Windows SDK beschrieben.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -871,7 +871,7 @@ void GetRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpRect`  
+ *lpRect*  
  [CRect](../../atl-mfc-shared/reference/crect-class.md) oder ein Zeiger auf eine [RECT](../../mfc/reference/rect-structure1.md) zum Empfangen der Formatierung Rechtecks dieses `CRichEditCtrl` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -907,13 +907,13 @@ void GetSel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cr`  
+ *CR*  
  Ein Verweis auf eine [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) Struktur, um die Grenzen der aktuellen Auswahl erhalten.  
   
- `nStartChar`  
+ *nStartChar*  
  Nullbasierte Index des ersten Zeichens in der aktuellen Auswahl.  
   
- `nEndChar`  
+ *nEndChar*  
  Nullbasierte Index des letzten Zeichens in der aktuellen Auswahl.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -921,9 +921,9 @@ void GetSel(
   
 - **Memberfunktion GetSel (** `cr` **)** dieses Formular verwendet die **CHARRANGE** Struktur mit seiner **CpMin** und **CpMax** Elemente Zurückgeben des gültigen Bereichs.  
   
-- **Memberfunktion GetSel (** `nStartChar` **,** `nEndChar` **)** dieses Formular gibt die Grenzen in den Parametern `nStartChar` und `nEndChar`.  
+- **Memberfunktion GetSel (** `nStartChar` **,** `nEndChar` **)** dieses Formular gibt die Grenzen in den Parametern *nStartChar* und *nEndChar* .  
   
- Die Auswahl enthält alles, was, wenn der Anfang ( **CpMin** oder `nStartChar`) ist 0 und das Ende ( **CpMax** oder `nEndChar`) ist - 1.  
+ Die Auswahl enthält alles, was, wenn der Anfang ( **CpMin** oder *nStartChar*) ist 0 und das Ende ( **CpMax** oder *nEndChar*) ist - 1.  
   
  Weitere Informationen finden Sie unter [EM_EXGETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788001) Nachricht und [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) Struktur im Windows SDK.  
   
@@ -938,16 +938,16 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cf`  
+ *CF*  
  In der ersten Version, ein Zeiger auf eine [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Struktur, um die Attribute der aktuellen Auswahl formatieren von Zeichen zu empfangen.  
   
  In der zweiten Version, ein Zeiger auf eine [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) -Struktur, die eine Rich Edit 2.0-Erweiterung ist auf die **CHARFORMAT** Struktur, um die Attribute der aktuellen Auswahl formatieren von Zeichen zu empfangen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die **DwMask** Datenmember `cf`. Es gibt an, der die zeichenformatierung Attribute, die innerhalb der aktuellen Auswahl konsistent sind.  
+ Die **DwMask** Datenmember *Cf*. Es gibt an, der die zeichenformatierung Attribute, die innerhalb der aktuellen Auswahl konsistent sind.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `cf` Parameter erhält die Attribute des ersten Zeichens in der aktuellen Auswahl. Der Rückgabewert gibt an, welche Attribute in der gesamten die Auswahl konsistent sind.  
+ Die *Cf* Parameter erhält die Attribute des ersten Zeichens in der aktuellen Auswahl. Der Rückgabewert gibt an, welche Attribute in der gesamten die Auswahl konsistent sind.  
   
  Weitere Informationen finden Sie unter der [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026) Nachricht und die **CHARFORMAT** und **CHARFORMAT2** Strukturen im Windows SDK.  
   
@@ -988,13 +988,13 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpBuf`  
+ *lpBuf*  
  Zeiger auf den Puffer zur Aufnahme von Text in der aktuellen Auswahl.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Hängt davon ab, auf dem Formular:  
   
-- **Memberfunktion GetSelText (** `lpBuf` **)** die Anzahl der Zeichen in kopiert `lpBuf`, jedoch ohne den null-Terminierung.  
+- **Memberfunktion GetSelText (** `lpBuf` **)** die Anzahl der Zeichen in kopiert *LpBuf*, jedoch ohne den null-Terminierung.  
   
 - **Memberfunktion GetSelText ()** die Zeichenfolge, die die aktuelle Auswahl enthält.  
   
@@ -1032,14 +1032,14 @@ long GetTextLengthEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwFlags`  
+ *dwFlags*  
  Der Wert gibt die Methode zum Bestimmen der Länge verwendet werden. Dieser Member kann eine oder mehrere der Werte im Flags-Mitglied der aufgeführten [GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) im Windows SDK beschrieben.  
   
- `uCodePage`  
+ *uCodePage*  
  Die Codepage für die Übersetzung (für ANSI-Codepage, 1200 für Unicode CP_ACP verwendet).  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Zeichen oder Bytes in den Edit-Steuerelement. Wenn nicht kompatible Flags, im festgelegt wurden `dwFlags`, diese Memberfunktion gibt `E_INVALIDARG`.  
+ Die Anzahl der Zeichen oder Bytes in den Edit-Steuerelement. Wenn nicht kompatible Flags, im festgelegt wurden *DwFlags*, diese Memberfunktion gibt `E_INVALIDARG`.  
   
 ### <a name="remarks"></a>Hinweise  
  `GetTextLengthEx` Stellt zusätzliche Methoden zum Bestimmen der Länge des Texts an. Die Funktionalität des Rich Edit 2.0 unterstützt. Finden Sie unter [über Rich-Edit-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb787873) in der Windows-SDKfor Weitere Informationen.  
@@ -1065,13 +1065,13 @@ int GetTextRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nFirst`  
+ *nFirst*  
  Die Zeichenposition indizieren unmittelbar vor das erste Zeichen im Bereich.  
   
- `nLast`  
+ *Nletzte*  
  Die Zeichenposition, sofort nach dem letzten Zeichen im Bereich.  
   
- `refString`  
+ *refString*  
  Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, das den Text erhält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1118,14 +1118,14 @@ void HideSelection(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bHide`  
+ *bHide*  
  Gibt an, ob es sich bei die Auswahl angezeigt oder ausgeblendet ist, werden **"true"** So blenden Sie die Auswahl aus.  
   
- `bPerm`  
+ *bPerm*  
  Gibt an, ob diese Änderung der Sichtbarkeit für die Auswahl permanent sein soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `bPerm` ist **"true"**, ändert der `ECO_NOHIDESEL` Option dafür `CRichEditCtrl` Objekt. Eine kurze Beschreibung dieser Option, finden Sie unter [SetOptions](#setoptions). Verwenden Sie diese Funktion, legen Sie die Optionen für diesen `CRichEditCtrl` Objekt.  
+ Wenn *bPerm* ist **"true"**, ändert der `ECO_NOHIDESEL` Option dafür `CRichEditCtrl` Objekt. Eine kurze Beschreibung dieser Option, finden Sie unter [SetOptions](#setoptions). Verwenden Sie diese Funktion, legen Sie die Optionen für diesen `CRichEditCtrl` Objekt.  
   
  Weitere Informationen finden Sie unter [EM_HIDESELECTION](http://msdn.microsoft.com/library/windows/desktop/bb774210) im Windows SDK.  
   
@@ -1140,7 +1140,7 @@ void LimitText(long nChars = 0);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nChars`  
+ *nChars*  
  Gibt die Länge (in Bytes) des Texts, der der Benutzer eingeben kann. Wenn dieser Parameter auf 0 (Standardwert) ist, wird die Textlänge auf 64 KB festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1162,11 +1162,11 @@ long LineFromChar(long nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
- Den nullbasierte Indexwert für das gewünschte Zeichen im Text des Bearbeitungssteuerelements enthält, oder-1 enthält. Wenn `nIndex` ist-1, gibt die aktuelle Zeile, d. h. die Zeile, die den Textcursor enthält.  
+ *nIndex*  
+ Den nullbasierte Indexwert für das gewünschte Zeichen im Text des Bearbeitungssteuerelements enthält, oder-1 enthält. Wenn *nIndex* ist-1, gibt die aktuelle Zeile, d. h. die Zeile, die den Textcursor enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die nullbasierte Zeilennummer der Zeile mit der Zeichenindex gemäß `nIndex`. Wenn `nIndex` ist-1. die Zahl der Zeile, die das erste Zeichen der Auswahl zurückgegeben. Wenn keine Auswahl vorhanden ist, wird die aktuelle Zeilennummer zurückgegeben.  
+ Die nullbasierte Zeilennummer der Zeile mit der Zeichenindex gemäß *nIndex*. Wenn *nIndex* ist-1. die Zahl der Zeile, die das erste Zeichen der Auswahl zurückgegeben. Wenn keine Auswahl vorhanden ist, wird die aktuelle Zeilennummer zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein Zeichenindex ist die Anzahl der Zeichen vom Anfang des rich-Edit-Steuerelements. Ein OLE-Element ist für das Zählen von Zeichen als ein einzelnes Zeichen gezählt.  
@@ -1184,11 +1184,11 @@ int LineIndex(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nLine`  
- Den Indexwert für die gewünschte Position im Text des Bearbeitungssteuerelements enthält, oder-1 enthält. Wenn `nLine` ist-1, gibt die aktuelle Zeile, d. h. die Zeile, die den Textcursor enthält.  
+ *nLine*  
+ Den Indexwert für die gewünschte Position im Text des Bearbeitungssteuerelements enthält, oder-1 enthält. Wenn *nLine* ist-1, gibt die aktuelle Zeile, d. h. die Zeile, die den Textcursor enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Zeichenindex der Zeile im angegebenen `nLine` oder-1 zurück, wenn die angegebene Zeilennummer größer wird und dann die Anzahl der Zeilen im Bearbeitungssteuerelement.  
+ Der Zeichenindex der Zeile im angegebenen *nLine* oder-1 zurück, wenn die angegebene Zeilennummer größer wird und dann die Anzahl der Zeilen im Bearbeitungssteuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Zeichenindex ist die Anzahl der Zeichen vom Anfang des rich-Edit-Steuerelements in die angegebene Zeile.  
@@ -1206,11 +1206,11 @@ int LineLength(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nLine`  
+ *nLine*  
  Gibt an, der Zeichenindex eines Zeichens in der Zeile, deren Länge abgerufen werden sollen. Wenn dieser Parameter auf-1 festgelegt, die Länge der aktuellen Zeile (die Zeile, die den Textcursor enthält) wird zurückgegeben, ausgenommen die Länge eines beliebigen Text in die Zeile ausgewählt. Wenn `LineLength` wird aufgerufen, für ein Bearbeitungssteuerelement einzeilige dieser Parameter wird ignoriert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn `LineLength` wird aufgerufen, für ein Bearbeitungssteuerelement für mehrzeiligen ist der Rückgabewert der Länge (in `TCHAR`) der angegebene Zeile `nLine`.  Es umfasst nicht die Zeichen Wagenrücklauf am Ende der Zeile. Wenn `LineLength` wird aufgerufen, bei einem einzeiligen Edit-Steuerelement, ist der Rückgabewert die Länge (in `TCHAR`) des Texts im Bearbeitungssteuerelement. Wenn nLine größer als die Anzahl der Zeichen im Steuerelement ist, ist der Rückgabewert 0 (null).
+ Wenn `LineLength` wird aufgerufen, für ein Bearbeitungssteuerelement für mehrzeiligen ist der Rückgabewert der Länge (in `TCHAR`) der angegebene Zeile *nLine*.  Es umfasst nicht die Zeichen Wagenrücklauf am Ende der Zeile. Wenn `LineLength` wird aufgerufen, bei einem einzeiligen Edit-Steuerelement, ist der Rückgabewert die Länge (in `TCHAR`) des Texts im Bearbeitungssteuerelement. Wenn nLine größer als die Anzahl der Zeichen im Steuerelement ist, ist der Rückgabewert 0 (null).
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der [LineIndex](#lineindex) Memberfunktion einen Zeichenindex für eine bestimmte Zeilennummer innerhalb dieser abzurufenden `CRichEditCtrl` Objekt.  
@@ -1230,14 +1230,14 @@ void LineScroll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nLines`  
+ *nLines*  
  Gibt die Anzahl der Zeilen vertikaler Bildlauf durchgeführt wird.  
   
- `nChars`  
+ *nChars*  
  Gibt die Anzahl von Zeichenpositionen einen horizontalen Bildlauf durchführen. Dieser Wert wird ignoriert, wenn das rich-Edit-Steuerelement entweder verfügt die **ES_RIGHT** oder **ES_CENTER** Stil. [Bearbeiten von Stilen](../../mfc/reference/styles-used-by-mfc.md#edit-styles) werden in angegeben [erstellen](#create).  
   
 ### <a name="remarks"></a>Hinweise  
- Das Bearbeitungssteuerelement Bildlauf vertikal nicht hinter die letzte Zeile des Texts im Bearbeitungssteuerelement. Wenn plus die Anzahl der Zeilen, die gemäß der aktuellen Zeile `nLines` überschreitet die Gesamtanzahl der Zeilen im Bearbeitungssteuerelement, der Wert wird angepasst, damit die letzte Zeile des Bearbeitungssteuerelements an den Anfang der Edit-Steuerelement Fenster ein Bildlauf durchgeführt wird.  
+ Das Bearbeitungssteuerelement Bildlauf vertikal nicht hinter die letzte Zeile des Texts im Bearbeitungssteuerelement. Wenn plus die Anzahl der Zeilen, die gemäß der aktuellen Zeile *nLines* überschreitet die Gesamtanzahl der Zeilen im Bearbeitungssteuerelement, der Wert wird angepasst, damit die letzte Zeile des Bearbeitungssteuerelements an den Anfang der Edit-Steuerelement Fenster ein Bildlauf durchgeführt wird.  
   
  `LineScroll` kann verwendet werden, einen horizontalen Bildlauf hinter dem letzten Zeichen, der eine beliebige Zeile durchführen.  
   
@@ -1297,7 +1297,7 @@ CPoint PosFromChar(UINT nChar) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nChar`  
+ *nChar*  
  Der nullbasierte Index des Zeichens.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1329,10 +1329,10 @@ void ReplaceSel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszNewText`  
+ *lpszNewText*  
  Ein Zeiger auf eine Null-terminierte Zeichenfolge, die den Ersetzungstext enthält.  
   
- `bCanUndo`  
+ *bCanUndo*  
  Um anzugeben, dass diese Funktion rückgängig gemacht werden kann, legen Sie den Wert dieses Parameters auf **"true"**. Der Standardwert ist **"false"**.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1367,7 +1367,7 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bEnable`  
+ *bAktivieren*  
  Gibt an, ob das Steuerelement festgelegt ist, um eine URL automatisch zu erkennen. Wenn **"true"**, diese Einstellung aktiviert ist. Wenn **"false"**, er deaktiviert ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1389,11 +1389,11 @@ COLORREF SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bSysColor`  
- Gibt an, ob die Farbe des Hintergrunds auf den Systemwert festgelegt werden soll. Wenn dieser Wert ist **"true"**, `cr` wird ignoriert.  
+ *bSysColor*  
+ Gibt an, ob die Farbe des Hintergrunds auf den Systemwert festgelegt werden soll. Wenn dieser Wert ist **"true"**, *Cr* wird ignoriert.  
   
- `cr`  
- Die angeforderte Hintergrundfarbe. Verwendet nur, wenn `bSysColor` ist **"false"**.  
+ *CR*  
+ Die angeforderte Hintergrundfarbe. Verwendet nur, wenn *bSysColor* ist **"false"**.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die vorherigen Background-Farbe für dieses `CRichEditCtrl` Objekt.  
@@ -1415,7 +1415,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cf`  
+ *CF*  
  In der ersten Version, ein Zeiger auf eine [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Struktur, die die neue Standardeinstellung zeichenformatierung Attribute enthält.  
   
  In der zweiten Version, ein Zeiger auf eine [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) -Struktur, die eine Rich Edit 2.0-Erweiterung ist auf der **CHARFORMAT** Struktur, die das Standardzeichen Formatierungsattribute enthält.  
@@ -1424,7 +1424,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
  Ungleich 0 (null), wenn erfolgreich, andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Nur die Attribute, die gemäß der **DwMask** Mitglied `cf` , die von dieser Funktion geändert werden.  
+ Nur die Attribute, die gemäß der **DwMask** Mitglied *Cf* , die von dieser Funktion geändert werden.  
   
  Weitere Informationen finden Sie unter der [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) Nachricht und die **CHARFORMAT** und **CHARFORMAT2** Strukturen im Windows SDK.  
   
@@ -1461,7 +1461,7 @@ void SetModify(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bModified`  
+ *bModified*  
  Der Wert **"true"** gibt an, dass der Text geändert wurde, und der Wert **"false"** gibt an, es ist unverändert. Die geänderten Kennzeichen ist standardmäßig festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1480,14 +1480,14 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pCallback`  
+ *pCallback*  
  Zeiger auf eine [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) Objekt, das dieses `CRichEditCtrl` Objekt wird verwenden, um OLE-bezogene Ressourcen und Informationen zu erhalten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0 (null), wenn erfolgreich, andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Dies `CRichEditCtrl` Objekt ruft [IUnknown:: AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) zum Erhöhen der Verwendungszähler für die COM-Objekt, das vom angegebenen `pCallback`.  
+ Dies `CRichEditCtrl` Objekt ruft [IUnknown:: AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) zum Erhöhen der Verwendungszähler für die COM-Objekt, das vom angegebenen *pCallback*.  
   
  Weitere Informationen finden Sie unter [EM_SETOLECALLBACK](http://msdn.microsoft.com/library/windows/desktop/bb774252) Nachricht und [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) Schnittstelle im Windows SDK.  
   
@@ -1504,15 +1504,15 @@ void SetOptions(
  *wOp*  
  Gibt den Typ des Vorgangs an. Einer der folgenden Werte:  
   
-- `ECOOP_SET` Festlegen der Optionen für den vom angegebenen `dwFlags`.  
+- `ECOOP_SET` Festlegen der Optionen für den vom angegebenen *DwFlags*.  
   
-- `ECOOP_OR` Kombinieren Sie die aktuellen Optionen mit den vom angegebenen `dwFlags`.  
+- `ECOOP_OR` Kombinieren Sie die aktuellen Optionen mit den vom angegebenen *DwFlags*.  
   
-- `ECOOP_AND` Behalten Sie nur die aktuellen Optionen, die auch vom angegebenen `dwFlags`.  
+- `ECOOP_AND` Behalten Sie nur die aktuellen Optionen, die auch vom angegebenen *DwFlags*.  
   
-- `ECOOP_XOR` Logisch XOR-Operation mit den angegebenen, durch die aktuellen Optionen `dwFlags`.  
+- `ECOOP_XOR` Logisch XOR-Operation mit den angegebenen, durch die aktuellen Optionen *DwFlags*.  
   
- `dwFlags`  
+ *dwFlags*  
  Rich-edit-Optionen. Die Flagwerte sind im Abschnitt "Hinweise" aufgeführt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1548,7 +1548,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pf`  
+ *PF*  
  In der ersten Version, ein Zeiger auf eine [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) Struktur, die den neuen Standard enthält Absatz Formatierungsattribute.  
   
  In der zweiten Version, ein Zeiger auf eine [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) -Struktur, die eine Rich Edit 2.0-Erweiterung ist auf die **PARAFORMAT** Struktur des Standardzeichensatzes Formatierungsattribute aufrechterhält.  
@@ -1557,7 +1557,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
  Ungleich 0 (null), wenn erfolgreich, andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Nur die Attribute, die gemäß der **DwMask** Mitglied `pf` , die von dieser Funktion geändert werden.  
+ Nur die Attribute, die gemäß der **DwMask** Mitglied *Pf* , die von dieser Funktion geändert werden.  
   
  Weitere Informationen finden Sie unter der [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276) Nachricht und die **PARAFORMAT** und **PARAFORMAT2** Strukturen im Windows SDK.  
   
@@ -1574,10 +1574,10 @@ BOOL SetPunctuation(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `fType`  
- Das Flag Satzzeichen. Eine Liste der möglichen Werte finden Sie unter der `fType` -Parameter für [EM_SETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774278) im Windows SDK.  
+ *fType*  
+ Das Flag Satzzeichen. Eine Liste der möglichen Werte finden Sie unter der *fType* -Parameter für [EM_SETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774278) im Windows SDK.  
   
- `lpPunc`  
+ *lpPunc*  
  Ein Zeiger auf eine [SATZZEICHEN](http://msdn.microsoft.com/library/windows/desktop/bb787944) strukturieren, wie im Windows SDK beschrieben.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1594,7 +1594,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bReadOnly`  
+ *bReadOnly*  
  Gibt an, wenn diese `CRichEditCtrl` Objekt nur gelesen werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1616,7 +1616,7 @@ void SetRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpRect`  
+ *lpRect*  
  [CRect](../../atl-mfc-shared/reference/crect-class.md) oder ein Zeiger auf eine [RECT](../../mfc/reference/rect-structure1.md) , der die neuen Grenzen für die Formatierung Rechteck angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1639,13 +1639,13 @@ void SetSel(CHARRANGE& cr);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nStartChar`  
+ *nStartChar*  
  Nullbasierte Index des ersten Zeichens für die Auswahl.  
   
- `nEndChar`  
+ *nEndChar*  
  Nullbasierte Index des letzten Zeichens, für die Auswahl.  
   
- `cr`  
+ *CR*  
  [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) Struktur, die die Grenzen der aktuellen Auswahl enthält.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1653,9 +1653,9 @@ void SetSel(CHARRANGE& cr);
   
 - **Memberfunktion SetSel (** `cr` **)** dieses Formular verwendet die **CHARRANGE** Struktur mit seiner **CpMin** und **CpMax** Elemente Legen Sie die Grenzen an.  
   
-- **Memberfunktion SetSel (** `nStartChar` **,** `nEndChar` **)** dieser Form verwenden Sie die Parameter `nStartChar` und `nEndChar` des gültigen Bereichs festlegen.  
+- **Memberfunktion SetSel (** `nStartChar` **,** `nEndChar` **)** dieser Form verwenden Sie die Parameter *nStartChar* und *nEndChar*des gültigen Bereichs festlegen.  
   
- Die Einfügemarke befindet sich am Ende der Auswahl des Beginns größer erkennbar ( **CpMin** oder `nStartChar`) und Ende ( **CpMax** oder `nEndChar`) Indizes. Diese Funktion führt einen Bildlauf durch den Inhalt der `CRichEditCtrl` , damit der Textcursor angezeigt wird.  
+ Die Einfügemarke befindet sich am Ende der Auswahl des Beginns größer erkennbar ( **CpMin** oder *nStartChar*) und Ende ( **CpMax** oder *nEndChar*) Indizes. Diese Funktion führt einen Bildlauf durch den Inhalt der `CRichEditCtrl` , damit der Textcursor angezeigt wird.  
   
  Wählen Sie sämtlichen Text in dieser `CRichEditCtrl` -Objekt, rufen Sie `SetSel` mit einem startIndex von 0 und ein endIndex von - 1.  
   
@@ -1673,7 +1673,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cf`  
+ *CF*  
  In der ersten Version, ein Zeiger auf eine [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Struktur, die die neue Formatierung von Zeichen enthält Attribute, für die aktuelle Auswahl.  
   
  In der zweiten Version, ein Zeiger auf eine [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) -Struktur, die eine Rich Edit 2.0-Erweiterung ist auf die **CHARFORMAT** Struktur, mit der neuen zeichenformatierung-Attribute für den aktuellen Auswahl.  
@@ -1682,7 +1682,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
  Ungleich 0 (null), wenn erfolgreich, andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Nur die Attribute, die gemäß der **DwMask** Mitglied `cf` , die von dieser Funktion geändert werden.  
+ Nur die Attribute, die gemäß der **DwMask** Mitglied *Cf* , die von dieser Funktion geändert werden.  
   
  Weitere Informationen finden Sie unter der [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) und **CHARFORMAT** und **CHARFORMAT2** Strukturen im Windows SDK.  
   
@@ -1704,13 +1704,13 @@ BOOL SetTargetDevice(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hDC`  
+ *hDC*  
  Handle für den Gerätekontext für das neue Zielgerät.  
   
  *lLineWidth*  
  Die Linienstärke für die Formatierung verwenden.  
   
- `dc`  
+ *dc*  
  [CDC](../../mfc/reference/cdc-class.md) für das neue Zielgerät.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1769,7 +1769,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cf`  
+ *CF*  
  In der ersten Version, ein Zeiger auf eine [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Struktur, die die neue Formatierung von Zeichen enthält Attribute, für das aktuell ausgewählte Wort.  
   
  In der zweiten Version, ein Zeiger auf eine [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) -Struktur, die eine Rich Edit 2.0-Erweiterung ist auf die **CHARFORMAT** Struktur, die die neue Formatierung von Zeichen enthält Attribute, für die derzeit markierten Worts.  
@@ -1778,7 +1778,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
  Ungleich 0 (null), wenn erfolgreich, andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Nur die Attribute, die gemäß der **DwMask** Mitglied `cf` , die von dieser Funktion geändert werden.  
+ Nur die Attribute, die gemäß der **DwMask** Mitglied *Cf* , die von dieser Funktion geändert werden.  
   
  Weitere Informationen finden Sie unter der [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) Nachricht und die **CHARFORMAT** und **CHARFORMAT2** Strukturen im Windows SDK.  
   
@@ -1793,7 +1793,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `uFlags`  
+ *uFlags*  
  Die Optionen für den Zeilenumbruch und die wörtertrennung festgelegt. Eine Liste der möglichen Optionen, finden Sie unter [EM_SETWORDWRAPMODE](http://msdn.microsoft.com/library/windows/desktop/bb774294) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1824,17 +1824,17 @@ long StreamIn(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nFormat`  
+ *nFormat*  
  Flags, die die Eingabedaten Formate angeben. Weitere Informationen finden Sie im Abschnitt Hinweise.  
   
- `es`  
+ *Es*  
  [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) Struktur, die den Eingabedatenstrom angibt. Weitere Informationen finden Sie im Abschnitt Hinweise.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Anzahl von Zeichen aus dem Eingabestream zu lesen.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Wert des `nFormat` muss eines der folgenden sein:  
+ Der Wert der *nFormat* muss eines der folgenden sein:  
   
 - `SF_TEXT` Gibt nur Lesen von Text an.  
   
@@ -1842,7 +1842,7 @@ long StreamIn(
   
  Beide Werte können kombiniert werden, mit `SFF_SELECTION`. Wenn `SFF_SELECTION` angegeben wird, `StreamIn` ersetzt die aktuelle Markierung mit dem Inhalt des Eingabedatenstroms. Wenn sie nicht angegeben ist, `StreamIn` ersetzt den gesamten Inhalt dieses `CRichEditCtrl` Objekt.  
   
- In der **EDITSTREAM** Parameter `es`, geben Sie eine Rückruffunktion, die einen Puffer mit Text aufgefüllt. Diese Rückruffunktion wird wiederholt aufgerufen, bis der Eingabestreams erreicht ist.  
+ In der **EDITSTREAM** Parameter *vorangestellten*, geben Sie eine Rückruffunktion, die einen Puffer mit Text aufgefüllt. Diese Rückruffunktion wird wiederholt aufgerufen, bis der Eingabestreams erreicht ist.  
   
  Weitere Informationen finden Sie unter [EM_STREAMIN](http://msdn.microsoft.com/library/windows/desktop/bb774302) Nachricht und [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) Struktur im Windows SDK.  
   
@@ -1861,17 +1861,17 @@ long StreamOut(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nFormat`  
+ *nFormat*  
  Flags, die die Ausgabe-Datenformate angeben. Weitere Informationen finden Sie im Abschnitt Hinweise.  
   
- `es`  
+ *Es*  
  [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) Struktur, die den Ausgabestream angibt. Weitere Informationen finden Sie im Abschnitt Hinweise.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Anzahl der Zeichen, die in den Ausgabestream geschrieben.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Wert des `nFormat` muss eines der folgenden sein:  
+ Der Wert der *nFormat* muss eines der folgenden sein:  
   
 - `SF_TEXT` Gibt nur das Schreiben von Text an.  
   
@@ -1883,7 +1883,7 @@ long StreamOut(
   
  Diese Werte können kombiniert werden, mit `SFF_SELECTION`. Wenn `SFF_SELECTION` angegeben ist, `StreamOut` die aktuelle Auswahl in den Ausgabedatenstrom schreibt. Wenn sie nicht angegeben ist, `StreamOut` schreibt den gesamten Inhalt dieses `CRichEditCtrl` Objekt.  
   
- In der **EDITSTREAM** Parameter `es`, geben Sie eine Rückruffunktion, die einen Puffer mit Text aufgefüllt. Diese Rückruffunktion wird wiederholt aufgerufen, bis der Ausgabestream erschöpft ist.  
+ In der **EDITSTREAM** Parameter *vorangestellten*, geben Sie eine Rückruffunktion, die einen Puffer mit Text aufgefüllt. Diese Rückruffunktion wird wiederholt aufgerufen, bis der Ausgabestream erschöpft ist.  
   
  Weitere Informationen finden Sie unter [EM_STREAMOUT](http://msdn.microsoft.com/library/windows/desktop/bb774304) Nachricht und [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) Struktur im Windows SDK.  
   
@@ -1903,7 +1903,7 @@ BOOL Undo();
  Wert ungleich NULL, wenn der Rückgängig-Vorgang erfolgreich ist; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Rückgängig-Vorgang kann auch rückgängig gemacht werden. Sie können z. B. Wiederherstellen gelöschten Text mit dem ersten Aufruf **Rückgängig**. Solange keine Beteiligte Bearbeitungsvorgang vorhanden ist, können, entfernen Sie den Text erneut mit einem zweiten Aufruf von **Rückgängig**.  
+ Ein Rückgängig-Vorgang kann auch rückgängig gemacht werden. Sie können z. B. Wiederherstellen gelöschten Text mit dem ersten Aufruf `Undo`. Solange keine Beteiligte Bearbeitungsvorgang vorhanden ist, können, entfernen Sie den Text erneut mit einem zweiten Aufruf von `Undo`.  
   
  Weitere Informationen finden Sie unter [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) im Windows SDK.  
   

@@ -73,12 +73,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4d591d2abd7613777dec6ae668badd84fe31d0c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305552"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079706"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die FIFO-Reihenfolge Zugriff hat. Sie verwenden die Containeradapter `queue` einen zugrunde liegenden Container wie eine Warteschlange zu verwalten.  
@@ -97,7 +97,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  Wert  
  Der Typ eines Elements in der kontrollierten Sequenz.  
   
@@ -157,7 +157,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Duplizieren Sie ein Objekt.|  
 |IQueue\<Container, den Wert >|Behalten Sie die generische Containeradapter.|  
   
-### <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Hinweise  
  Das Objekt weist und-Freigaben für die Sequenz, die sie über einen zugrunde liegenden Containers, des Typs steuert `Container`, zur Speicherung der `Value` Elemente und bei Bedarf vergrößert wird. Das Objekt schränkt den Zugriff mit dem Betätigen nur des ersten Elements, und entfernt das letzte Element, eine Warteschlange implementieren eine FIFO-Reihenfolge (auch bekannt als eine FIFO-Warteschlange oder einfach eine Warteschlange).  
   
 ## <a name="members"></a>Member

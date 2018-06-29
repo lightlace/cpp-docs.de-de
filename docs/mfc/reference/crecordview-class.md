@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3784bfd637c40f326a67807d0002fae66177ac37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3d040f2da622cbfd6d1577729861917a5a03270
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373484"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079146"
 ---
 # <a name="crecordview-class"></a>CRecordView-Klasse
 Eine Sicht, die Datenbankdatensätze in Steuerelementen anzeigt.  
@@ -109,10 +109,10 @@ explicit CRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Enthält eine Null-terminierte Zeichenfolge, die den Namen des einer Dialogfeldvorlagen-Ressource ist.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Enthält die ID einer Dialogfeldvorlagen-Ressource.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -124,7 +124,7 @@ explicit CRecordView(UINT nIDTemplate);
  **CRecordView::OnInitialUpdate** Aufrufe `UpdateData`, welche Aufrufe `DoDataExchange`. Diese ersten Aufruf der `DoDataExchange` verbindet `CRecordView` steuert (indirekt) zu `CRecordset` Felddatenmember von ClassWizard erstellt. Diese Datenmember können nicht erst verwendet werden, nach dem Aufruf der Basisklasse **CFormView::OnInitialUpdate** Memberfunktion.  
   
 > [!NOTE]
->  Bei Verwendung von ClassWizard definiert der Assistent eine `enum` Wert `CRecordView::IDD`, gibt es in der Klassendeklaration, und es in der Member-Initialisierungsliste des Konstruktors verwendet.  
+>  Bei Verwendung von ClassWizard definiert der Assistent eine **Enum** Wert `CRecordView::IDD`, gibt es in der Klassendeklaration, und es in der Member-Initialisierungsliste des Konstruktors verwendet.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
@@ -158,7 +158,7 @@ BOOL IsOnLastRecord();
  Diese Funktion ist nützlich für das Schreiben von Ihren eigenen Implementierungen der standardmäßigen befehlsupdatehandler, die ClassWizard schreibt, um eine Benutzeroberfläche zum Navigieren zwischen Datensätzen zu unterstützen.  
   
 > [!CAUTION]
->  Das Ergebnis dieser Funktion ist zuverlässig, mit dem Unterschied, dass die Ansicht das Ende des Recordsets nicht erkennen kann, bis der Benutzer hinaus verschoben wurde. Der Benutzer muss hinter dem letzten Datensatz verschieben, bevor die Datensatzansicht erkennen kann, müssen sie jede Benutzeroberflächenobjekte für das Verschieben in den nächsten oder letzten Datensatz deaktivieren. Wenn der Benutzer wird hinter dem letzten Datensatz verschoben, und klicken Sie dann zurück zum letzten Datensatz wechselt (oder davor), kann die Datensatzansicht Position des Benutzers im Recordset nachverfolgen und Benutzeroberflächenobjekte ordnungsgemäß deaktiviert. `IsOnLastRecord` auch nach einem Aufruf an die Implementierung-Funktion nicht zuverlässig ist **OnRecordLast**, welche behandelt die `ID_RECORD_LAST` Befehl oder `CRecordset::MoveLast`.  
+>  Das Ergebnis dieser Funktion ist zuverlässig, mit dem Unterschied, dass die Ansicht das Ende des Recordsets nicht erkennen kann, bis der Benutzer hinaus verschoben wurde. Der Benutzer muss hinter dem letzten Datensatz verschieben, bevor die Datensatzansicht erkennen kann, müssen sie jede Benutzeroberflächenobjekte für das Verschieben in den nächsten oder letzten Datensatz deaktivieren. Wenn der Benutzer wird hinter dem letzten Datensatz verschoben, und klicken Sie dann zurück zum letzten Datensatz wechselt (oder davor), kann die Datensatzansicht Position des Benutzers im Recordset nachverfolgen und Benutzeroberflächenobjekte ordnungsgemäß deaktiviert. `IsOnLastRecord` auch nach einem Aufruf an die Implementierung-Funktion nicht zuverlässig ist `OnRecordLast`, welche behandelt die `ID_RECORD_LAST` Befehl oder `CRecordset::MoveLast`.  
   
 ##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset  
  Gibt einen Zeiger auf die `CRecordset`-abgeleitetes Objekt der Datensatzansicht zugeordnet.  
@@ -171,7 +171,7 @@ virtual CRecordset* OnGetRecordset() = 0;
  Ein Zeiger auf eine `CRecordset`-abgeleitetes Objekt aus, wenn das Objekt erfolgreich erstellt; andernfalls wurde eine **NULL** Zeiger.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Memberfunktion zum Erstellen oder einem Recordset-Objekt abrufen und einen Zeiger darauf zurückgeben. Wenn Sie die datensatzansichtsklasse mit ClassWizard deklarieren, schreibt der Assistent eine Standard-Außerkraftsetzung für Sie. ClassWizard die Standardimplementierung gibt den Recordsets Zeiger in der Datensatzansicht gespeichert werden, sofern vorhanden. Wenn nicht, die es einem Recordset-Objekt des Typs erstellt angegebenen mit ClassWizard und ruft seine **öffnen** Member Funktion, um öffnen Sie die Tabelle, oder führen Sie die Abfrage, und klicken Sie dann einen Zeiger auf das Objekt zurückgibt.  
+ Überschreiben Sie diese Memberfunktion zum Erstellen oder einem Recordset-Objekt abrufen und einen Zeiger darauf zurückgeben. Wenn Sie die datensatzansichtsklasse mit ClassWizard deklarieren, schreibt der Assistent eine Standard-Außerkraftsetzung für Sie. ClassWizard die Standardimplementierung gibt den Recordsets Zeiger in der Datensatzansicht gespeichert werden, sofern vorhanden. Wenn nicht, die es einem Recordset-Objekt des Typs erstellt angegebenen mit ClassWizard und ruft seine `Open` Member Funktion, um öffnen Sie die Tabelle, oder führen Sie die Abfrage, und klicken Sie dann einen Zeiger auf das Objekt zurückgibt.  
   
  Weitere Informationen und Beispiele finden Sie im Artikel [Datensatzansichten: Verwenden einer Datensatzansicht](../../data/using-a-record-view-mfc-data-access.md).  
   
@@ -198,7 +198,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Wert ungleich NULL, wenn die Verschiebung erfolgreich war; andernfalls 0, wenn die Anforderung zum Verschieben von verweigert wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Standardimplementierung Ruft die entsprechende **verschieben** Memberfunktion der `CRecordset` Objekt, das mit der Datensatzansicht zugeordnet.  
+ Die Standardimplementierung Ruft die entsprechende `Move` Memberfunktion der `CRecordset` Objekt, das mit der Datensatzansicht zugeordnet.  
   
  Standardmäßig `OnMove` den aktuellen Datensatz in der Datenquelle aktualisiert, wenn der Benutzer in der Datensatzansicht geändert hat.  
   
@@ -207,7 +207,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Wenn Sie hinter dem letzten Datensatz im Recordset verschieben, weiterhin die Datensatzansicht den letzten Datensatz anzuzeigen. Wenn Sie nach dem ersten Datensatz rückwärts verschieben, können Sie weiterhin die Datensatzansicht des ersten Datensatzes angezeigt.  
   
 > [!CAUTION]
->  Aufrufen von `OnMove` löst eine Ausnahme aus, wenn das Recordset keine Datensätze enthält. Rufen Sie die entsprechende Schnittstelle Update Handlerfunktion – **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, oder  **OnUpdateRecordPrev** – vor den entsprechenden Verschiebevorgang, um zu bestimmen, ob das Recordset alle Datensätze aufweist.  
+>  Aufrufen von `OnMove` löst eine Ausnahme aus, wenn das Recordset keine Datensätze enthält. Rufen Sie die entsprechende Schnittstelle Update Handlerfunktion – `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, oder `OnUpdateRecordPrev` – vor den entsprechenden Verschiebevorgang, um zu bestimmen, ob das Recordset alle Datensätze aufweist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CFormView-Klasse](../../mfc/reference/cformview-class.md)   

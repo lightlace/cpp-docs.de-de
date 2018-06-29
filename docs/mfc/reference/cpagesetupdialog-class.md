@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cffe2d337d611dff0387805c99965c3c2e9ef87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd96f0240f8dd97fdda54fd2d00231db14ae3d47
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374648"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079182"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog-Klasse
 Kapselt die Dienste, die durch das allgemeine Windows-OLE-Dialogfeld "Seiteneinrichtung" bereitgestellt werden, zusammen mit zusätzlicher Unterstützung für das Festlegen und Ändern von Druckrändern.  
@@ -123,7 +123,7 @@ CPageSetupDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwFlags`  
+ *dwFlags*  
  Ein oder mehrere Flags, die Sie verwenden können, um die Einstellungen im Dialogfeld Anpassen. Die Werte können mit dem bitweisen OR-Operator kombiniert werden. Diese Werte haben folgende Bedeutung:  
   
 - **PSD_DEFAULTMINMARGINS** legt die minimale zulässige Stärke für die Seitenränder an den Drucker Mindestwerte identisch sein. Dieses Flag wird ignoriert, wenn die **PSD_MARGINS** und **PSD_MINMARGINS** Flags sind ebenfalls angegeben.  
@@ -162,7 +162,7 @@ CPageSetupDialog(
   
 - **PSD_DISABLEPAGEPAINTING** deaktiviert den Draw-Bereich des Dialogfelds.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf den übergeordneten oder den Besitzer des Dialogfelds.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -213,7 +213,7 @@ CString GetDeviceName() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Name des Laufwerks verwendet werden, indem Sie die **CPageSetupDialog** Objekt.  
+ Der Name des Laufwerks verwendet werden, indem die `CPageSetupDialog` Objekt.  
   
 ##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  Mit dieser Funktion wird nach dem Aufruf `DoModal` zum Abrufen von Informationen zu den Druckergerätekontext von der `CPageSetupDialog` Objekt.  
@@ -301,10 +301,10 @@ virtual UINT OnDrawPage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Ein Zeiger auf den Druckergerätekontext.  
   
- `nMessage`  
+ *nMeldung*  
  Gibt eine Meldung an, den Bereich der Seite, die gerade gezeichnet wird. Einer der folgenden Werte ist möglich:  
   
 - **WM_PSD_FULLPAGERECT** den gesamten Bereich.  
@@ -319,7 +319,7 @@ virtual UINT OnDrawPage(
   
 - **WM_PSD_YAFULLPAGERECT** Bereich für eine Rückgabeadresse-Darstellung. Dieser Bereich erstreckt sich an den Rändern der Seite im Bereich Beispiel.  
   
- `lpRect`  
+ *lpRect*  
  Zeiger auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) oder [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) Objekt, das die Koordinaten des Zeichenbereichs enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -328,11 +328,11 @@ virtual UINT OnDrawPage(
 ### <a name="remarks"></a>Hinweise  
  Dieses Bild wird dann als Teil der OLE-Seiteneinrichtung Standarddialogfeld angezeigt. Die standardmäßige Implementierung zeichnet ein Bild von einer Seite des Texts.  
   
- Überschreiben Sie diese Funktion, um das Zeichnen von einem bestimmten Bereich des Bilds oder das gesamte Bild anzupassen. Sie erreichen dies, indem eine `switch` -Anweisung mit **Fall** Anweisungen, die Überprüfung des Werts der `nMessage`. Um das Rendern des Inhalts der Seite, Bild anzupassen, verwenden Sie z. B. den folgende Beispielcode:  
+ Überschreiben Sie diese Funktion, um das Zeichnen von einem bestimmten Bereich des Bilds oder das gesamte Bild anzupassen. Sie erreichen dies, indem eine **wechseln** -Anweisung mit **Fall** Anweisungen, die Überprüfung des Werts der *nMeldung*. Um das Rendern des Inhalts der Seite, Bild anzupassen, verwenden Sie z. B. den folgende Beispielcode:  
   
  [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
   
- Beachten Sie, dass Sie nicht benötigen, behandeln jede Groß-/Kleinschreibung `nMessage`. Sie können auswählen, um eine Komponente des Bilds, mehrere Komponenten des Bilds oder den gesamten Bereich zu behandeln.  
+ Beachten Sie, dass Sie nicht benötigen, behandeln jede Groß-/Kleinschreibung *nMeldung*. Sie können auswählen, um eine Komponente des Bilds, mehrere Komponenten des Bilds oder den gesamten Bereich zu behandeln.  
   
 ##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  Vom Framework aufgerufen, bevor das Bild der gedruckten Seite zeichnen.  
@@ -348,7 +348,7 @@ virtual UINT PreDrawPage(
  *wPaper*  
  Gibt einen Wert, der das Papierformat angibt. Dieser Wert kann eine von der **DMPAPER_** Werte aufgeführt, in der Beschreibung des der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Struktur.  
   
- `wFlags`  
+ *wFlags*  
  Gibt die Ausrichtung des Papiers oder des Umschlags, und gibt an, ob der Drucker einen Matrix- oder HPPCL (Hewlett-Packard Printer Control Language)-Gerät ist. Dieser Parameter kann einen der folgenden Werte aufweisen:  
   
 -   0 x 001 Papier im Querformat (Punkt Matrix)  
@@ -367,7 +367,7 @@ virtual UINT PreDrawPage(
   
 -   0x01f Umschlag im Hochformat (Punkt Matrix)  
   
- `pPSD`  
+ *pPSD*  
  Zeiger auf eine **PAGESETUPDLG** Struktur. Weitere Informationen zu [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), finden Sie im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  

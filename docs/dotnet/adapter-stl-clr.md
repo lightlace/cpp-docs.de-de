@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 598159ff01fe1628a693085f84077d9adfcbbf49
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a472284df67993a65de98df7db698ea533451ea3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305539"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079435"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 Die STL/CLR-Header `<cliext/adapter>` gibt zwei Vorlagenklassen (`collection_adapter` und `range_adapter`), und die Vorlagenfunktion `make_collection`.  
@@ -80,7 +80,7 @@ Die STL/CLR-Header `<cliext/adapter>` gibt zwei Vorlagenklassen (`collection_ada
   
  **Namespace:** Cliext 
   
-## <a name="members"></a>Member  
+## <a name="declarations"></a>Deklarationen  
   
 |Klasse|Beschreibung|  
 |-----------|-----------------|  
@@ -91,6 +91,8 @@ Die STL/CLR-Header `<cliext/adapter>` gibt zwei Vorlagenklassen (`collection_ada
 |--------------|-----------------|  
 |[make_collection (STL/CLR)](#make_collection)|Erstellt einen Bereich Adapter mit ein paar Iterator.|   
   
+## <a name="members"></a>Member
+
 ## <a name="collection_adapter"></a> Collection_adapter (STL/CLR)
 Dient als Wrapper für eine .NET Auflistung für die Verwendung als STL/CLR-Container. Ein `collection_adapter` ist eine Vorlagenklasse, die ein einfaches STL/CLR-Container-Objekt beschreibt. Es dient als Wrapper für eine Schnittstelle für die Basisklassenbibliothek (Base Class Library, BCL) und gibt ein Iterator-Paar, das Sie verwenden, um die gesteuerte Sequenz zu bearbeiten.  
   
@@ -990,7 +992,7 @@ template<typename Iter>
 ```  
   
 #### <a name="parameters"></a>Parameter  
- iter  
+ Iter  
  Der Typ, der die umschlossenen Iteratoren zugeordnet wird.  
   
 ### <a name="members"></a>Member  

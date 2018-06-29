@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0208a24b69c1884d72c0ae525ce95b3d3258271
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373050"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079973"
 ---
 # <a name="coleupdatedialog-class"></a>COleUpdateDialog-Klasse
 Wird für einen Sonderfall des OLE-Dialogfelds "Verknüpfungen bearbeiten" verwendet, das eingesetzt werden sollte, wenn in einem Dokument nur vorhandene Links oder eingebettete Objekte aktualisiert werden müssen.  
@@ -85,7 +85,7 @@ explicit COleUpdateDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDoc`  
+ *pDoc*  
  Verweist auf das Dokument mit den Links, die ggf. aktualisieren.  
   
  *bUpdateLinks*  
@@ -94,7 +94,7 @@ explicit COleUpdateDialog(
  *bUpdateEmbeddings*  
  Flag, die bestimmt, ob eingebettete Objekte aktualisiert werden.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs `CWnd`), der das Dialogfeldobjekt angehört. Ist er **NULL**, das übergeordnete Fenster des Dialogfelds auf das Hauptanwendungsfenster festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  

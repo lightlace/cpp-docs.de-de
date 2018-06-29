@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a143fd99a79212ed0078f06b334ab6ae0964b3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 421373969beb83d033ce8ca14bd11fdb5d8dcb14
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370239"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078620"
 ---
 # <a name="cptrlist-class"></a>CPtrList-Klasse
 Unterstützt Listen void-Zeigern.  
@@ -35,7 +35,7 @@ class CPtrList : public CObject
 ```  
   
 ## <a name="members"></a>Member  
- Die Memberfunktionen von `CPtrList` ähneln den Memberfunktionen der Klasse [CObList](../../mfc/reference/coblist-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CObList`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Wenn Sie einen `CObject`-Zeiger als Funktionsparameter oder als Rückgabewert finden, ersetzen Sie einen Zeiger auf `void`.  
+ Die Memberfunktionen von `CPtrList` ähneln den Memberfunktionen der Klasse [CObList](../../mfc/reference/coblist-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CObList`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo eine `CObject` -Zeiger als Funktionsparameter oder Rückgabewert, ersetzen Sie einen Zeiger auf **"void"**.  
   
  `CObject*& CObList::GetHead() const;`  
   

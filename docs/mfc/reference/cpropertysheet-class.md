@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7b49aba6ea5d2397baa0dc72f36b2693810fbeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f194b8119cb080c9a3b29e63781595ada0027ef
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377461"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079772"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet-Klasse
 Stellt Eigenschaftenblätter dar, auch als "Dialogfelder im Registerformat" bezeichnet.  
@@ -175,7 +175,7 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pPage`  
+ *pPage*  
  Verweist auf das Zeichenblatt, um das Eigenschaftenblatt hinzugefügt werden. Nicht mit **NULL**.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -227,25 +227,25 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDCaption`  
+ *nIDCaption*  
  ID der Beschriftung für das Eigenschaftenblatt verwendet werden soll.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das übergeordnete Fenster eines Eigenschaftenblatt. Wenn **NULL**, das übergeordnete Fenster werden das Hauptfenster der Anwendung.  
   
- `iSelectPage`  
+ *iSelectPage*  
  Der Index der Seite, die ursprünglich an erster Stelle stehen. Standardmäßig ist die erste Seite auf das Arbeitsblatt hinzugefügt.  
   
- `pszCaption`  
+ *pszCaption*  
  Ein Zeiger auf eine Zeichenfolge, enthält die Beschriftung für das Eigenschaftenblatt verwendet werden soll. Nicht mit **NULL**.  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  Handle für das Wasserzeichen Bitmuster der Eigenschaftenseite.  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  Handle für die Palette der Wasserzeichen Bitmap und/oder Header mithilfe einer Bitmap.  
   
- `hbmHeader`  
+ *hbmHeader*  
  Handle für die Bitmap "Header" der Eigenschaftenseite.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -253,7 +253,7 @@ void Construct(
   
  Um das Eigenschaftenfenster anzuzeigen, rufen [DoModal](#domodal) oder [erstellen](#create). Die Zeichenfolge in den ersten Parameter werden in der Titelleiste für das Eigenschaftenblatt platziert.  
   
- Sie Bilder anzeigen können Wasserzeichen und/oder Header automatisch bei der Verwendung der dritten oder vierten Prototypes `Construct`oben aufgeführten und übergeben Sie gültige Werte für die `hbmWatermark`, `hpalWatermark`, und/oder `hbmHeader` Parameter.  
+ Sie Bilder anzeigen können Wasserzeichen und/oder Header automatisch bei der Verwendung der dritten oder vierten Prototypes `Construct`oben aufgeführten und übergeben Sie gültige Werte für die *HbmWatermark*, *HpalWatermark* , und/oder *HbmHeader* Parameter.  
   
 ### <a name="example"></a>Beispiel  
  Im folgende Beispiel wird veranschaulicht, unter welchen Sie Umständen aufrufen würde `Construct`.  
@@ -298,25 +298,25 @@ CPropertySheet(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDCaption`  
+ *nIDCaption*  
  ID der Beschriftung für das Eigenschaftenblatt verwendet werden soll.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Verweist auf das übergeordnete Fenster der Eigenschaftenseite. Wenn **NULL**, das übergeordnete Fenster werden das Hauptfenster der Anwendung.  
   
- `iSelectPage`  
+ *iSelectPage*  
  Der Index der Seite, die ursprünglich an erster Stelle stehen. Standardmäßig ist die erste Seite auf das Arbeitsblatt hinzugefügt.  
   
- `pszCaption`  
+ *pszCaption*  
  Verweist auf eine Zeichenfolge, enthält die Beschriftung für das Eigenschaftenblatt verwendet werden soll. Nicht mit **NULL**.  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  Ein Handle für das Hintergrundbild des Eigenschaftenblatts.  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  Ein Handle für die Palette der Wasserzeichen Bitmap und/oder Header mithilfe einer Bitmap.  
   
- `hbmHeader`  
+ *hbmHeader*  
  Ein Handle für die Bitmap "Header" der Eigenschaftenseite.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -324,7 +324,7 @@ CPropertySheet(
   
  Wenn Sie mehrere Parameter (z. B., wenn Sie ein Array verwenden), verwenden [erstellen](#construct) anstelle von `CPropertySheet`.  
   
- Sie Bilder anzeigen können Wasserzeichen und/oder Header automatisch bei der Verwendung der dritten oder vierten Prototypes `CPropertySheet`oben, und übergeben Sie gültige Werte für die `hbmWatermark`, `hpalWatermark`, und/oder `hbmHeader` Parameter.  
+ Sie Bilder anzeigen können Wasserzeichen und/oder Header automatisch bei der Verwendung der dritten oder vierten Prototypes `CPropertySheet`oben, und übergeben Sie gültige Werte für die *HbmWatermark*, *HpalWatermark*, und / oder *HbmHeader* Parameter.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]  
@@ -339,26 +339,26 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentWnd`  
+ *pParentWnd*  
  Verweist auf das übergeordnete Fenster. Wenn **NULL**, übergeordnete stellt der Desktop dar.  
   
- `dwStyle`  
+ *dwStyle*  
  Fensterstile für Eigenschaftenblatt. Eine vollständige Liste der verfügbaren Formate finden Sie unter [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- `dwExStyle`  
+ *dwExStyle*  
  Erweiterte Fensterstile für Eigenschaftenblatt. Eine vollständige Liste der verfügbaren Formate finden Sie unter [erweiterte Fensterstile](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn das Eigenschaftenfenster erfolgreich erstellt wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Aufruf von **erstellen** innerhalb des Konstruktors kann oder Sie rufen es nach dem Aufruf des Konstruktors.  
+ Der Aufruf von `Create` innerhalb des Konstruktors kann oder Sie rufen es nach dem Aufruf des Konstruktors.  
   
- Das Standardformat, ausgedrückt als-1 übergeben `dwStyle`, handelt es sich tatsächlich **WS_SYSMENU&#124;**`WS_POPUP`**&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_ SICHTBARE**. Die Standardeinstellung erweiterten Stil des Fensters, übergeben Sie 0 als ausgedrückt `dwExStyle`, handelt es sich tatsächlich **WS_EX_DLGMODALFRAME**.  
+ Das Standardformat, ausgedrückt als-1 übergeben *DwStyle*, handelt es sich tatsächlich **WS_SYSMENU&#124;**`WS_POPUP`**&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_ CONTEXTHELP&#124;WS_VISIBLE**. Die Standardeinstellung erweiterten Stil des Fensters, übergeben Sie 0 als ausgedrückt *DwExStyle*, handelt es sich tatsächlich **WS_EX_DLGMODALFRAME**.  
   
- Die **erstellen** Memberfunktion gibt sofort nach dem Erstellen der Eigenschaftenblatt zurück. Aufrufen, um das Eigenschaftenfenster zu zerstören, [CWnd:: DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).  
+ Die `Create` Memberfunktion gibt sofort nach dem Erstellen der Eigenschaftenblatt zurück. Aufrufen, um das Eigenschaftenfenster zu zerstören, [CWnd:: DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).  
   
- Nicht modulare Eigenschaftenblätter angezeigt, die mit einem Aufruf von **erstellen** keine OK, "Abbrechen", jetzt anwenden und Hilfe-Schaltflächen ebenso modale Eigenschaftenblätter. Gewünschte Schaltflächen müssen vom Benutzer erstellt werden.  
+ Nicht modulare Eigenschaftenblätter angezeigt, die mit einem Aufruf von `Create` keinen OK, "Abbrechen", jetzt anwenden und Hilfe-Schaltflächen gemäß modale Eigenschaftenblätter führen. Gewünschte Schaltflächen müssen vom Benutzer erstellt werden.  
   
  Rufen Sie zum Anzeigen von modalen Eigenschaftenblatts [DoModal](#domodal) stattdessen.  
   
@@ -418,13 +418,13 @@ void EnableStackedTabs(BOOL bStacked);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bStacked`  
- Gibt an, ob im Eigenschaftenblatt gestapelte Registerkarten aktiviert sind. Gestapelte Zeilen von Tags zu deaktivieren, indem `bStacked` auf **"false"**.  
+ *bStacked*  
+ Gibt an, ob im Eigenschaftenblatt gestapelte Registerkarten aktiviert sind. Gestapelte Zeilen von Tags zu deaktivieren, indem *bStacked* auf **"false"**.  
   
 ### <a name="remarks"></a>Hinweise  
- Verfügt ein Eigenschaftenblatt weitere Registerkarten als in einer einzelnen Zeile in der Breite des Eigenschaftenblatts, passen, werden standardmäßig die Registerkarten in mehreren Zeilen Stapeln. Rufen Sie zum Durchführen eines Bildlaufs Registerkarten anstelle von Stapeln Registerkarten verwenden `EnableStackedTabs` mit `bStacked` festgelegt **"false"** vor dem Aufruf [DoModal](#domodal) oder [erstellen](#create).  
+ Verfügt ein Eigenschaftenblatt weitere Registerkarten als in einer einzelnen Zeile in der Breite des Eigenschaftenblatts, passen, werden standardmäßig die Registerkarten in mehreren Zeilen Stapeln. Rufen Sie zum Durchführen eines Bildlaufs Registerkarten anstelle von Stapeln Registerkarten verwenden `EnableStackedTabs` mit *bStacked* festgelegt **"false"** vor dem Aufruf [DoModal](#domodal) oder [erstellen](#create).  
   
- Rufen Sie `EnableStackedTabs` beim Erstellen eines modalen oder eines nicht modalen Eigenschaftenblatts. Integrieren Sie dieses Format in ein `CPropertySheet`-abgeleitete Klasse mit dem Schreiben eines meldungshandlers für `WM_CREATE`. In die überschriebene Version der [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), rufen Sie **EnableStackedTabs (FALSE)** vor der Implementierung der Basisklasse aufrufen.  
+ Rufen Sie `EnableStackedTabs` beim Erstellen eines modalen oder eines nicht modalen Eigenschaftenblatts. Integrieren Sie dieses Format in eine `CPropertySheet`-abgeleiteten Klasse einen Meldungshandler für WM_CREATE geschrieben. In die überschriebene Version der [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), rufen Sie **EnableStackedTabs (FALSE)** vor der Implementierung der Basisklasse aufrufen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]  
@@ -485,11 +485,11 @@ CPropertyPage* GetPage(int nPage) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nPage`  
+ *nPage*  
  Der Index der gewünschten Seite beginnend mit 0. Muss zwischen 0 und kleiner als die Anzahl der Seiten im Eigenschaftenblatt, inklusive.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Zeiger auf der Seite entspricht der `nPage` Parameter.  
+ Der Zeiger auf der Seite entspricht der *nPage* Parameter.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).  
@@ -515,7 +515,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pPage`  
+ *pPage*  
  Zeigt auf der Seite mit dem Index gefunden werden. Nicht mit **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -547,7 +547,7 @@ CTabCtrl* GetTabControl() const;
  Eine Struktur, deren Mitglieder die Merkmale des speichern [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Struktur verwenden, um die Darstellung des Eigenschaftenblatts zu initialisieren, nachdem es erstellt wurde, aber bevor er mit angezeigt wird der [DoModal](#domodal) Memberfunktion. Legen Sie z. B. die `dwSize` Mitglied `m_psh` auf die Größe der Eigenschaftenblatt haben sollen.  
+ Diese Struktur verwenden, um die Darstellung des Eigenschaftenblatts zu initialisieren, nachdem es erstellt wurde, aber bevor er mit angezeigt wird der [DoModal](#domodal) Memberfunktion. Legen Sie z. B. die *DwSize* Mitglied `m_psh` auf die Größe der Eigenschaftenblatt haben sollen.  
   
  Weitere Informationen zu dieser Struktur, einschließlich einer Liste der Member, finden Sie unter **PROPSHEETHEADER** im Windows SDK.  
   
@@ -562,7 +562,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpRect`  
+ *lpRect*  
  Verweist auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das das Dialogfeld enthält koordiniert, der konvertiert werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -570,7 +570,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  Die [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows-Funktion gibt Informationen zur Datenbankgröße für die Systemschriftart, aber Sie können eine andere Schriftart für jede Eigenschaftenblatt angeben, bei Verwendung der **DS_SETFONT** Stil die Ressource-Definitionsdatei. Die [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) beschriebenen im SDK für Windows, Windows-Funktion verwendet die passende Schriftart für das Dialogfeld zu öffnen.  
   
- Die `MapDialogRect` Memberfunktion ersetzt die Dialogfeld-Einheiten in `lpRect` mit Bildschirm Einheiten (in Pixel), damit das Rechteck zum Erstellen eines Dialogfelds oder positionieren ein Steuerelement innerhalb eines Felds verwendet werden kann.  
+ Die `MapDialogRect` Memberfunktion ersetzt die Dialogfeld-Einheiten in *LpRect* mit Bildschirm Einheiten (in Pixel), damit das Rechteck zum Erstellen eines Dialogfelds oder positionieren ein Steuerelement innerhalb eines Felds verwendet werden kann.  
   
 ##  <a name="oninitdialog"></a>  CPropertySheet:: OnInitDialog  
  Außerkraftsetzungen, um das Blatt eigenschaftsinitialisierung zu erweitern.  
@@ -580,10 +580,10 @@ virtual BOOL OnInitDialog();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt an, ob die Anwendung den Eingabefokus auf eines der Steuerelemente im Eigenschaftenblatt festgelegt wurde. Wenn **OnInitDialog** ungleich NULL zurückgegeben wird, wird Windows den Eingabefokus auf das erste Steuerelement im Eigenschaftenblatt. Die Anwendung kann 0 zurückgeben, nur dann, wenn er den Eingabefokus auf eines der Steuerelemente im Eigenschaftenblatt explizit festgelegt wurde.  
+ Gibt an, ob die Anwendung den Eingabefokus auf eines der Steuerelemente im Eigenschaftenblatt festgelegt wurde. Wenn `OnInitDialog` ungleich NULL zurückgegeben wird, wird Windows den Eingabefokus auf das erste Steuerelement im Eigenschaftenblatt. Die Anwendung kann 0 zurückgeben, nur dann, wenn er den Eingabefokus auf eines der Steuerelemente im Eigenschaftenblatt explizit festgelegt wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Memberfunktion wird als Antwort auf die **WM_INITDIALOG** Nachricht. Diese Nachricht wird gesendet, auf dem Eigenschaftenblatt während der [erstellen](#create) oder [DoModal](#domodal) Aufrufe, die auftreten, unmittelbar bevor die Eigenschaftenseite angezeigt wird.  
+ Diese Memberfunktion wird als Antwort auf die Nachricht WM_INITDIALOG aufgerufen. Diese Nachricht wird gesendet, auf dem Eigenschaftenblatt während der [erstellen](#create) oder [DoModal](#domodal) Aufrufe, die auftreten, unmittelbar bevor die Eigenschaftenseite angezeigt wird.  
   
  Überschreiben Sie diese Memberfunktion auf, wenn Sie besondere Verarbeitung bei der Initialisierung der Eigenschaftenblatt ausführen müssen. In der überschriebenen Version, rufen Sie zuerst die Basisklasse `OnInitDialog` aber dessen Rückgabewert ignorieren. Normalerweise wird nun wieder **"true"** von der überschriebenen Member-Funktion.  
   
@@ -597,7 +597,7 @@ void PressButton(int nButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nButton`  
+ *nButton*  
  nButton: die Schaltfläche gedrückt, identifiziert. Dieser Parameter kann einen der folgenden Werte sein:  
   
 - **PSBTN_BACK** wählt Sie die Schaltfläche "zurück".  
@@ -631,10 +631,10 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pPage`  
+ *pPage*  
  Zeigt auf der Seite aus dem Eigenschaftenblatt entfernt werden soll. Nicht mit `NULL`.  
   
- `nPage`  
+ *nPage*  
  Der Index der Seite entfernt werden soll. Muss zwischen 0 und kleiner als die Anzahl der Seiten im Eigenschaftenblatt, inklusive.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -649,10 +649,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nPage`  
+ *nPage*  
  Der Index der Seite festlegen. Es muss zwischen 0 und kleiner als die Anzahl der Seiten im Eigenschaftenblatt, inklusive.  
   
- `pPage`  
+ *pPage*  
  Zeigt auf, um im Eigenschaftenblatt festzulegen. Er darf nicht **NULL**.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -672,7 +672,7 @@ void SetFinishText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszText`  
+ *lpszText*  
  Verweist auf den Text für den Befehl "Fertig stellen" angezeigt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -691,10 +691,10 @@ void SetTitle(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nStyle`  
+ *nStyle*  
  Gibt die Art der der Titel des Eigenschaftenblattes. Das Format muss angegeben werden, auf dem Wert 0 oder als **PSH_PROPTITLE**. Wenn das Format, als festgelegt ist **PSH_PROPTITLE**, das Wort "Eigenschaften" angezeigt wird, nach dem Text als Beschriftung angegeben. Beispielsweise Aufrufen `SetTitle`("Einfache" **PSH_PROPTITLE**) führt zu einer Eigenschaftenblatt Beschriftung der "Einfache Eigenschaften".  
   
- `lpszText`  
+ *lpszText*  
  Verweist auf den Text als Beschriftung in der Titelleiste des Eigenschaftenblatts verwendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -711,7 +711,7 @@ void SetWizardButtons(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwFlags`  
+ *dwFlags*  
  Ein Satz von Flags, die die Funktion und Darstellung der Assistentenschaltflächen anpassen. Dieser Parameter kann eine Kombination der folgenden Werte sein:  
   
 - **PSWIZB_BACK** Schaltfläche "zurück"  

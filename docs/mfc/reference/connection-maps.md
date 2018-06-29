@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475314edba2a11535349991db644a4915e352ae7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28a82cc55e1cbf782603c7b34368fbc3d4ebe4c4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372837"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079197"
 ---
 # <a name="connection-maps"></a>Verbindungszuordnungen
 OLE-Steuerelemente sind in der Lage, Schnittstellen für andere Anwendungen verfügbar zu machen. Diese Schnittstellen können nur den Zugriff auf einen Container, in das entsprechende Steuerelement. Wenn ein OLE-Steuerelements externe Schnittstellen von anderen OLE-Objekte zugreifen möchte, muss ein Verbindungspunkt eingerichtet werden. Diese Verbindungspunkt kann ein Steuerelement ausgehenden Zugriff auf externe Dispatchzuordnungen, z. B. ereigniszuordnungen oder Benachrichtigungsfunktionen.  
@@ -59,14 +59,14 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theClass`  
+ *theClass*  
  Gibt an, dass der Name der Steuerelementklasse, deren Verbindung zeigen dies.  
   
  *localClass*  
  Gibt den Namen der lokalen Klasse, die den Verbindungspunkt implementiert.  
   
 ### <a name="remarks"></a>Hinweise  
- In der Deklaration (. h)-Datei, die Memberfunktionen für die Klasse definiert, starten Sie den Verbindungspunkt mit dem `BEGIN_CONNECTION_PART` -Makro, fügen Sie dann die `CONNECTION_IID` Makro angehalten und eine andere Memberfunktionen Sie implementieren, und schließen die Verbindung Punkt Zuordnung möchten mit der `END_CONNECTION_PART` Makro.  
+ Starten Sie in der Deklaration (. h)-Datei, die Memberfunktionen für die Klasse definiert den Verbindungspunkt mit dem BEGIN_CONNECTION_PART-Makro, und klicken Sie dann fügen Sie das CONNECTION_IID-Makro und anderen Memberfunktionen, die Sie implementieren möchten hinzu und schließen Sie die Verbindung Zeigen Sie die Zuordnung mit dem END_CONNECTION_PART-Makro.  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
@@ -86,18 +86,18 @@ END_CONNECTION_PART(localClass)
   **Header** afxdisp.h  
   
 ##  <a name="connection_iid"></a>  CONNECTION_IID  
- Verwenden Sie zwischen den `BEGIN_CONNECTION_PART` und `END_CONNECTION_PART` Makros definieren eine Schnittstellen-ID für einen Verbindungspunkt von OLE-Steuerelements unterstützt.  
+ Verwenden Sie zwischen dem BEGIN_CONNECTION_PART und END_CONNECTION_PART Makros definieren eine Schnittstellen-ID für einen Verbindungspunkt von OLE-Steuerelements unterstützt.  
   
 ```   
 CONNECTION_IID(iid)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iid`  
+ *IID*  
  Der Schnittstellen-ID der Schnittstelle, die von dem Verbindungspunkt aufgerufen werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `iid` Argument ist eine Schnittstelle, die ID verwendet wird, um die Schnittstelle zu identifizieren, die der Verbindungspunkt für die verbundenen senken aufruft. Zum Beispiel:  
+ Die *Iid* Argument ist eine Schnittstelle, die ID verwendet wird, um die Schnittstelle zu identifizieren, die der Verbindungspunkt für die verbundenen senken aufruft. Zum Beispiel:  
   
  [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
   
@@ -114,7 +114,7 @@ DECLARE_CONNECTION_MAP()
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn das Steuerelement die zusätzliche Punkte unterstützt, verwenden die `DECLARE_CONNECTION_MAP` Makro am Ende der Klassendeklaration. Verwenden Sie dann in der CPP-Datei, die die Memberfunktionen für die Klasse definiert die `BEGIN_CONNECTION_MAP` Makro `CONNECTION_PART` Makros für die einzelnen Verbindungspunkte für das Steuerelement, und die `END_CONNECTION_MAP` Makro, um das Ende der Zuordnung der Verbindung zu deklarieren.  
+ Wenn das Steuerelement die zusätzliche Punkte unterstützt, verwenden Sie am Ende der Klassendeklaration DECLARE_CONNECTION_MAP-Makro. Verwenden Sie dann in der CPP-Datei, die die Memberfunktionen für die Klasse definiert BEGIN_CONNECTION_MAP-Makro CONNECTION_PART-Makros für die einzelnen Verbindungspunkte für das Steuerelement und das END_CONNECTION_MAP-Makro, deklarieren das Ende der Zuordnung der Verbindung ein.  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
@@ -127,14 +127,14 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theClass`  
+ *theClass*  
  Gibt an, dass der Name der Steuerelementklasse, deren Verbindung ordnen.  
   
  *theBase*  
- Gibt den Namen der Basisklasse der `theClass`.  
+ Gibt den Namen der Basisklasse der *TheClass*.  
   
 ### <a name="remarks"></a>Hinweise  
- In der Implementierung (. Starten Sie CPP)-Datei, die Memberfunktionen für die Klasse definiert, die Zuordnung der Verbindung mit der `BEGIN_CONNECTION_MAP` -Makro, fügen Sie dann die Makroeinträge für jede Ihrer Verbindungspunkte mithilfe der [CONNECTION_PART](#connection_part) Makro. Schließen Sie am Ende der Zuordnung der Verbindung mit der [END_CONNECTION_MAP](#end_connection_map) Makro.  
+ In der Implementierung (. CPP)-Datei, die das Element definiert Funktionen für die Klasse, starten Sie die Zuordnung für die Verbindung mit dem BEGIN_CONNECTION_MAP-Makro, und fügen Sie Makroeinträge für jede Ihrer Verbindungspunkte mithilfe der [CONNECTION_PART](#connection_part) Makro. Schließen Sie am Ende der Zuordnung der Verbindung mit der [END_CONNECTION_MAP](#end_connection_map) Makro.  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
@@ -157,10 +157,10 @@ CONNECTION_PART(theClass, iid, localClass)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theClass`  
+ *theClass*  
  Gibt an, dass der Name der Steuerelementklasse, deren Verbindung zeigen dies.  
   
- `iid`  
+ *IID*  
  Der Schnittstellen-ID der Schnittstelle, die von dem Verbindungspunkt aufgerufen werden soll.  
   
  *localClass*  
@@ -177,7 +177,7 @@ CONNECTION_PART(theClass, iid, localClass)
   **Header** afxdisp.h  
   
 ##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
- Mit dieser Funktion werden zum Herstellen einer Verbindung zwischen einer Quelle, angegeben durch `pUnkSrc`, und eine Ereignissenke, gemäß `pUnkSink`.  
+ Mit dieser Funktion werden zum Herstellen einer Verbindung zwischen einer Quelle, angegeben durch *pUnkSrc*, und eine Ereignissenke, gemäß *pUnkSink*.  
   
 ```   
 BOOL AFXAPI AfxConnectionAdvise(
@@ -189,20 +189,20 @@ BOOL AFXAPI AfxConnectionAdvise(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pUnkSrc`  
+ *pUnkSrc*  
  Ein Zeiger auf das Objekt, das die Schnittstelle aufruft.  
   
- `pUnkSink`  
+ *pUnkSink*  
  Ein Zeiger auf das Objekt, das die Schnittstelle implementiert.  
   
- `iid`  
+ *IID*  
  Der Schnittstellen-ID der Verbindung.  
   
- `bRefCount`  
- **"True"** gibt an, dass das Herstellen der Verbindung den Verweiszähler des verursachen `pUnkSink` vorwärts verschoben werden soll. **"False"** gibt an, dass der Verweiszähler nicht erhöht werden soll.  
+ *bRefCount*  
+ **"True"** gibt an, dass das Herstellen der Verbindung den Verweiszähler des verursachen *pUnkSink* vorwärts verschoben werden soll. **"False"** gibt an, dass der Verweiszähler nicht erhöht werden soll.  
   
- `pdwCookie`  
- Ein Zeiger auf eine `DWORD` , in denen ein Bezeichner der Verbindung zurückgegeben. Dieser Wert sollte übergeben werden, als die `dwCookie` Parameter `AfxConnectionUnadvise` beim Trennen der Verbindungs.  
+ *pdwCookie*  
+ Ein Zeiger auf eine `DWORD` , in denen ein Bezeichner der Verbindung zurückgegeben. Dieser Wert sollte übergeben werden, als die *DwCookie* Parameter `AfxConnectionUnadvise` beim Trennen der Verbindungs.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Wert ist ungleich NULL, wenn eine Verbindung hergestellt wurde; andernfalls 0.  
@@ -214,7 +214,7 @@ BOOL AFXAPI AfxConnectionAdvise(
  **Header:** afxctl.h 
 
 ##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
- Mit dieser Funktion können Sie eine Verbindung zwischen einer Quelle, angegeben durch Trennen `pUnkSrc`, und eine Ereignissenke, gemäß `pUnkSink`.  
+ Mit dieser Funktion können Sie eine Verbindung zwischen einer Quelle, angegeben durch Trennen *pUnkSrc*, und eine Ereignissenke, gemäß *pUnkSink*.  
   
 ```   
 BOOL AFXAPI AfxConnectionUnadvise(
@@ -226,19 +226,19 @@ BOOL AFXAPI AfxConnectionUnadvise(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pUnkSrc`  
+ *pUnkSrc*  
  Ein Zeiger auf das Objekt, das die Schnittstelle aufruft.  
   
- `pUnkSink`  
+ *pUnkSink*  
  Ein Zeiger auf das Objekt, das die Schnittstelle implementiert.  
   
- `iid`  
+ *IID*  
  Die Schnittstellen-ID der Verbindungspunkt-Schnittstelle.  
   
- `bRefCount`  
- **"True"** gibt an, dass die Verbindung getrennt wird, den Verweiszähler des auftreten soll `pUnkSink` dekrementiert werden soll. **"False"** gibt an, dass der Verweiszähler nicht verringert werden soll.  
+ *bRefCount*  
+ **"True"** gibt an, dass die Verbindung getrennt wird, den Verweiszähler des auftreten soll *pUnkSink* dekrementiert werden soll. **"False"** gibt an, dass der Verweiszähler nicht verringert werden soll.  
   
- `dwCookie`  
+ *dwCookie*  
  Der Verbindungsbezeichner zurückgegebenes `AfxConnectionAdvise`.  
   
 ### <a name="return-value"></a>Rückgabewert  

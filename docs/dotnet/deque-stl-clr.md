@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ec92f1fcda75c8d632ea2c5a8f66583d960c744a
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 881db763518f31d9682ba050e460d4a3f7b39317
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305864"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079824"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die zufälligen Zugriff hat. Verwenden Sie den Container `deque` um eine Sequenz von Elementen zu verwalten, sieht, die einen zusammenhängenden Block von Speicher, aber die vergrößert oder verkleinert werden, an beiden Enden, ohne die Notwendigkeit, alle verbleibenden Elemente kopieren können. Sie können daher effizient implementieren, eine `double-ended queue`. (Daher den Namen.)  
@@ -148,7 +148,7 @@ template<typename Value>
   
  **Namespace:** Cliext  
 
-## <a name="members"></a>Member  
+## <a name="declarations"></a>Deklarationen  
   
 |Typdefinition|Beschreibung|  
 |---------------------|-----------------|  
@@ -229,7 +229,7 @@ template<typename Value>
   
  Löschen oder Entfernen eines Elements ruft der Destruktor für den gespeicherten Wert. Zerstören von dem Container löscht alle Elemente. Somit wird sichergestellt, dass ein Container, dessen Elementtyp eine Verweisklasse ist, dass keine Elemente den Container Überleben. Beachten Sie jedoch, dass ein Container von Handles ist `not` seine Elemente zu zerstören.  
  
-## <a name="member-definitions"></a>Elementdefinitionen
+## <a name="members"></a>Member
 
 ## <a name="assign"></a> deque:: Assign (STL/CLR)
 Ersetzt alle Elemente.  

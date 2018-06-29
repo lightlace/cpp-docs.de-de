@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c5be90e57d558ba2dcceb3965d1cc1474dcaf463
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 693d4f8b8f0e7271a4c1f7df9931e0a85e57c332
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305877"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079719"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `multimap` Vewaltung eine Sequenz von Elementen als (fast) mit Lastenausgleich geordneten Struktur der Knoten, jeweils ein Element speichern kann. Ein Element besteht aus einem Schlüssel, für die Anordnung der Sequenz und zugeordneten Werts, der für die fuhr wechselt zusammen.  
@@ -127,7 +127,7 @@ Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Län
   
  `GMapped` entspricht dem `Mapped` , wenn die zweite Datei einen Ref-Typ ist, in diesem Fall wird `Mapped^`  
   
-### <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<typename Key,  
@@ -144,7 +144,7 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  Key  
  Der Typ, der die zentrale Komponente eines Elements in der kontrollierten Sequenz.  
   
@@ -222,7 +222,7 @@ template<typename Key,
 |<xref:System.Collections.Generic.ICollection%601>|Behalten Sie die Gruppe von typisierten Elementen.|  
 |ITree\<Schlüssel, Wert >|Verwalten von generischen Container.|  
   
-### <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Hinweise  
  Das Objekt weist und Speicherplatz für die Sequenz, die als einzelne Knoten Steuersoftware frei. Er fügt Elemente in einen (fast) ausgewogenen Baum, den darin geordnete die Links zwischen Knoten sind, nie durch Kopieren den Inhalt eines Knotens zu einem anderen ändern. Bedeutet, dass Sie einfügen können, und Elemente beliebig ohne beunruhigende verbleibenden Elemente entfernen.  
   
  Das Objekt sortiert die Sequenz, die sie durch Aufrufen einer gespeicherten Delegatobjekt des Typs steuert [multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Sie können das gespeicherte Delegatobjekt angeben, beim Erstellen der mehrfachzuordnung. Wenn Sie keine Delegatobjekt angeben, wird der Standardwert ist der Vergleich `operator<(key_type, key_type)`. Sie Zugriff auf diesem gespeicherten Objekt durch Aufrufen der Memberfunktion [multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`.  
@@ -1514,7 +1514,7 @@ static value_type make_value(key_type key, mapped_type mapped);
  Key  
  Schlüsselwert verwenden.  
   
- Zugeordnet  
+ zugeordnet  
  Zugeordnet zu suchende Wert.  
   
 ### <a name="remarks"></a>Hinweise  

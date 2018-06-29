@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22aa408fe2933803083adc784c2dbf3a85dd4df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad0d928f7190d3908c41560c7fb106e3024ebc6e
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377170"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079643"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl-Klasse
 Die Klasse `CPagerCtrl` kapselt das Windows-Pagersteuerelement, in dem der Benutzer einen Bildlauf durchführen kann, um ein Fenster innerhalb eines anderen Fensters in den sichtbaren Bereich zu verschieben, sofern es größer ist als das umgebende Fenster.  
@@ -151,10 +151,10 @@ virtual BOOL Create(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `dwStyle`|Eine bitweise Kombination (OR) [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles) und [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859) auf das Steuerelement angewendet werden soll.|  
-|[in] `rect`|Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements in Clientkoordinaten enthält.|  
-|[in] `pParentWnd`|Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das das übergeordnete Fenster des Steuerelements darstellt. Dieser Parameter darf nicht sein `NULL`.|  
-|[in] `nID`|Die ID des Steuerelements.|  
+|[in] *DwStyle*|Eine bitweise Kombination (OR) [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles) und [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859) auf das Steuerelement angewendet werden soll.|  
+|[in] *Rect*|Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements in Clientkoordinaten enthält.|  
+|[in] *pParentWnd*|Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das das übergeordnete Fenster des Steuerelements darstellt. Dieser Parameter darf nicht sein `NULL`.|  
+|[in] *nID*|Die ID des Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -183,11 +183,11 @@ virtual BOOL CreateEx(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `dwExStyle`|Eine bitweise Kombination der erweiterten Stile, die auf das Steuerelement angewendet werden soll. Weitere Informationen finden Sie unter der `dwExStyle` Parameter von der [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Funktion.|  
-|[in] `dwStyle`|Eine bitweise Kombination (OR) [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles) und [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859) auf das Steuerelement angewendet werden soll.|  
-|[in] `rect`|Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements in Clientkoordinaten enthält.|  
-|[in] `pParentWnd`|Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das das übergeordnete Fenster des Steuerelements darstellt. Dieser Parameter darf nicht sein `NULL`.|  
-|[in] `nID`|Die ID des Steuerelements.|  
+|[in] *DwExStyle*|Eine bitweise Kombination der erweiterten Stile, die auf das Steuerelement angewendet werden soll. Weitere Informationen finden Sie unter der *DwExStyle* Parameter von der [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Funktion.|  
+|[in] *DwStyle*|Eine bitweise Kombination (OR) [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles) und [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859) auf das Steuerelement angewendet werden soll.|  
+|[in] *Rect*|Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements in Clientkoordinaten enthält.|  
+|[in] *pParentWnd*|Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das das übergeordnete Fenster des Steuerelements darstellt. Dieser Parameter darf nicht sein `NULL`.|  
+|[in] *nID*|Die ID des Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
@@ -206,7 +206,7 @@ void ForwardMouse(BOOL bForward);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `bForward`|`true` zum Weiterleiten von Nachrichten von Maus, oder `false` keine Maus Nachrichten weiterleiten.|  
+|[in] *bForward*|`true` zum Weiterleiten von Nachrichten von Maus, oder `false` keine Maus Nachrichten weiterleiten.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) Nachricht, die im Windows SDK beschrieben wird.  
@@ -273,10 +273,10 @@ DWORD GetButtonState(int iButton) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButton`|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Zustand der Schaltfläche gemäß der `iButton` Parameter. Der Status ist entweder `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, oder `PGF_HOT`. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
+ Der Zustand der Schaltfläche angegeben wird, indem Sie die *iButton* Parameter. Der Status ist entweder `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, oder `PGF_HOT`. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht, die im Windows SDK beschrieben wird.  
@@ -325,7 +325,7 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButton`|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn die angegebene Schaltfläche im Zustand "gedrückt" ist. andernfalls `false`.  
@@ -344,7 +344,7 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButton`|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn die angegebene Schaltfläche abgeblendet ist; andernfalls `false`.  
@@ -363,7 +363,7 @@ BOOL IsButtonHot(int iButton) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButton`|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn die angegebene Schaltfläche im aktiven Zustand ist. andernfalls `false`.  
@@ -382,7 +382,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButton`|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn die angegebene Schaltfläche nicht sichtbar ist; andernfalls `false`.  
@@ -408,7 +408,7 @@ BOOL IsButtonNormal(int iButton) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButton`|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn die angegebene Schaltfläche im Zustand "normal" ist. andernfalls `false`.  
@@ -447,7 +447,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `clrBk`|Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die neue Hintergrundfarbe des Steuerelements Pager enthält.|  
+|[in] *ClrBk*|Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die neue Hintergrundfarbe des Steuerelements Pager enthält.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die vorherige Hintergrundfarbe des Steuerelements Pager enthält.  
@@ -471,7 +471,7 @@ int SetBorder(int iBorder);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iBorder`|Die neue Rahmengröße, gemessen in Pixel. Wenn die `iBorder` Parameter ist ein negativer Wert, der Border Size auf 0 festgelegt ist.|  
+|[in] *iBorder*|Die neue Rahmengröße, gemessen in Pixel. Wenn die *iBorder* Parameter ist ein negativer Wert, der Border Size auf 0 festgelegt ist.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die vorherige Rahmengröße, gemessen in Pixel.  
@@ -495,7 +495,7 @@ int SetButtonSize(int iButtonSize);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButtonSize`|Die neue Schaltflächengröße in Pixel gemessen.|  
+|[in] *iButtonSize*|Die neue Schaltflächengröße in Pixel gemessen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die vorherige Schaltflächengröße in Pixel gemessen.  
@@ -521,7 +521,7 @@ void SetChild(HWND hwndChild);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `hwndChild`|Handle für das Fenster enthalten sein soll.|  
+|[in] *HwndChild*|Handle für das Fenster enthalten sein soll.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) Nachricht, die im Windows SDK beschrieben wird.  
@@ -544,7 +544,7 @@ void SetScrollPos(int iPos);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iPos`|Die neue Position der Bildlaufleiste, gemessen in Pixel.|  
+|[in] *iPos*|Die neue Position der Bildlaufleiste, gemessen in Pixel.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) Nachricht, die im Windows SDK beschrieben wird.  

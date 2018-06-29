@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a2c3e8e1c7956a5dff33cd8ff78612f5f844ad6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370154"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078420"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Erstellen einer MFC-Anwendung im Stil des Datei-Explorers
 Viele Windows-systemanwendungen verwenden die Benutzeroberfläche (UI) für Datei-Explorer. Wenn Sie die Datei-Explorer starten, sehen Sie z. B. eine Anwendung mit einem vertikalen Teilerleiste, das den Clientbereich. Der linken Seite des Clientbereichs bereitstellt Navigation und Suchfunktionen und der rechten Seite des Clientbereichs zeigt Details im linken Bereich für die Auswahl relevant sind. Klickt ein Benutzer ein Element im linken Bereich, füllt die Anwendung im rechten Bereich aus. Sie können Befehle in einer MDI-Anwendung verwenden, auf die **Ansicht** Menü so ändern Sie die Anzahl der Details im rechten Bereich angezeigt. (In einer SDI- oder Anwendung für mehrere Dokumente der höchsten Ebene können Sie die Details, die mithilfe der Symbolleisten-Schaltflächen ändern.)  
@@ -32,7 +32,7 @@ Viele Windows-systemanwendungen verwenden die Benutzeroberfläche (UI) für Date
   
  Der Assistent erstellt die folgenden Klassen für Sie:  
   
--   Die **CLeftView** Klasse definiert den linken Bereich des Clientbereichs. Es wird immer von abgeleitet [CTreeView](../../mfc/reference/ctreeview-class.md).  
+-   Die `CLeftView` Klasse definiert den linken Bereich des Clientbereichs. Es wird immer von abgeleitet [CTreeView](../../mfc/reference/ctreeview-class.md).  
   
 -   Das C*ProjName*View-Klasse definiert den rechten Bereich des Clientbereichs. Wird standardmäßig vom abgeleitet [CListView](../../mfc/reference/clistview-class.md) kann jedoch eine andere Sicht abhängig von der Objektklasse, die Sie angeben, aus der **Basisklasse** in Liste der [generierte Klassen](../../mfc/reference/generated-classes-mfc-application-wizard.md) auf der Seite der Assistenten.  
   

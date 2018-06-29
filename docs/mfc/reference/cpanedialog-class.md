@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f620f0a29e7d1715e7cb5bfb83c0685f97f643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 022fe884f611eb5bc3254ef23c7078280e2a1046
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374939"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078542"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog-Klasse
 Die `CPaneDialog` Klasse unterstützt ein nicht modales, andockbares Dialogfeld.  
@@ -58,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnEraseBkgnd`|Behandelt die [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) Nachricht. (Definiert [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
 |`CPaneDialog::OnLButtonDblClk`|Behandelt die [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) Nachricht. (Definiert [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
 |`CPaneDialog::OnLButtonDown`|Behandelt die [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) Nachricht. (Definiert [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Wird aufgerufen, durch das Framework, um das Dialogfeld zu aktualisieren. (Überschreibt [CDockablePane:: OnUpdateCmdUI](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Wird aufgerufen, durch das Framework, um das Dialogfeld zu aktualisieren. (Überschreibt [CDockablePane:: OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
 |`CPaneDialog::OnWindowPosChanging`|Behandelt die [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) Nachricht. (Definiert [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Gibt die Vorlage für ein Dialogfeld, das ein OLE-Container-Steuerelement ist.|  
   
@@ -122,31 +122,31 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszWindowName`  
+ [in] *LpszWindowName*  
  Der Name des Dialogfelds andocken.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Verweist auf das übergeordnete Fenster.  
   
- [in] `bHasGripper`  
+ [in] *bHasGripper*  
  `TRUE` So erstellen im Dialogfeld andockbaren mit einem Titel (Ziehpunkt); andernfalls `FALSE`.  
   
- [in] `lpszTemplateName`  
+ [in] *LpszTemplateName*  
  Der Name der Ressource Dialogfeldvorlage.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  Der Windows-Stil.  
   
- [in] `nID`  
+ [in] *nID*  
  Die Steuerelement-ID.  
   
- [in] `nIDTemplate`  
+ [in] *nIDTemplate*  
  Ressourcen-ID der Dialogfeldvorlage.  
   
- [in] `dwTabbedStyle`  
+ [in] *DwTabbedStyle*  
  Der Stil des Fensters im Registerkartenformat, die entsteht, wenn der Benutzer ein anderes Steuerelement im Bereich auf die Beschriftung des in diesem Bereich des Steuerelements gezogen wird. Der Standardwert ist `AFX_CBRS_REGULAR_TABS`. Weitere Informationen finden Sie im Abschnitt "Hinweise" der [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) Methode.  
   
- [in] `dwControlBarStyle`  
+ [in] *DwControlBarStyle*  
  Zusätzliche Formatattribute. Der Standardwert ist `AFX_DEFAULT_DOCKING_PANE_STYLE`. Weitere Informationen finden Sie im Abschnitt "Hinweise" der [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex) Methode.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -170,14 +170,14 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `wParam`  
+ [in] *wParam*  
  Handle für das Steuerelement, das den Tastaturfokus Standardwert zu erhalten.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Gibt zusätzliche Initialisierungsdaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`. Darüber hinaus `TRUE` legt den Tastaturfokus auf das Steuerelement, das gemäß der `wParam` -Parameter. `FALSE` wird verhindert, dass die Standard-Tastaturfokus festlegen.  
+ `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`. Darüber hinaus `TRUE` legt den Tastaturfokus auf das Steuerelement, das gemäß der *wParam* -Parameter. `FALSE` wird verhindert, dass die Standard-Tastaturfokus festlegen.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework verwendet diese Methode initialisiert werden, Steuerelemente und die Darstellung eines Dialogfelds an. Das Framework ruft diese Methode auf, bevor Sie das Dialogfeld angezeigt.  
@@ -190,7 +190,7 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pOccDialogInfo`  
+ [in] *pOccDialogInfo*  
  Ein Zeiger auf eine Dialogfeldvorlage, mit denen die Dialogfeldobjekt erstellt wird. Der Wert dieses Parameters wird anschließend in übergeben der [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) Methode.  
   
 ### <a name="return-value"></a>Rückgabewert  

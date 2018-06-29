@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be5d27adabe8b271e2f8f3ed338e63e18d2432fc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369924"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078235"
 ---
 # <a name="csimpleexception-class"></a>CSimpleException-Klasse
 Diese Klasse ist eine Basisklasse für ressourcenkritische MFC-Ausnahmen.  
@@ -84,8 +84,8 @@ explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bAutoDelete`  
- Geben Sie **"true"** Wenn der Arbeitsspeicher für die `CSimpleException` Objekt auf dem Heap zugewiesen wurde. Dies bewirkt, dass die `CSimpleException` zu Wenn löschendes Objekt die **löschen** Member-Funktion wird aufgerufen, um die Ausnahme zu löschen. Geben Sie **"false"** Wenn die `CSimpleException` Objekt ist auf dem Stapel oder ein globales Objekt. In diesem Fall die `CSimpleException` Objekt werden nicht gelöscht, sobald die **löschen** Memberfunktion aufgerufen wird.  
+ *bAutoDelete*  
+ Geben Sie **"true"** Wenn der Arbeitsspeicher für die `CSimpleException` Objekt auf dem Heap zugewiesen wurde. Dies bewirkt, dass die `CSimpleException` zu Wenn löschendes Objekt die `Delete` Member-Funktion wird aufgerufen, um die Ausnahme zu löschen. Geben Sie **"false"** Wenn die `CSimpleException` Objekt ist auf dem Stapel oder ein globales Objekt. In diesem Fall die `CSimpleException` Objekt werden nicht gelöscht, sobald die `Delete` Memberfunktion aufgerufen wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Sie müssen normalerweise nicht direkt aufrufen dieses Konstruktors. Erstellen Sie eine Funktion, die eine Ausnahme auslöst, sollte eine Instanz von einem `CException`-abgeleitete Klasse, und rufen Sie ihren Konstruktor, oder es sollten gehen die MFC-Bibliothek auslösen, Funktionen, wie z. B. [AfxThrowFileException](exception-processing.md#afxthrowfileexception), einen vordefinierten Typ ausgelöst werden soll.  
@@ -101,13 +101,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszError`  
+ *lpszError*  
  Ein Zeiger auf einen Puffer, der folgende Fehlermeldung angezeigt wird.  
   
- `nMaxError`  
+ *nMaxError*  
  Die maximale Anzahl von Zeichen, die der Puffer aufnehmen kann, einschließlich der **NULL** Abschlusszeichen.  
   
- `pnHelpContext`  
+ *pnHelpContext*  
  Die Adresse von einem **"uint"** erhalten, die die Hilfe-Kontext-ID Wenn **NULL**, keine ID zurückgegeben.  
   
 ### <a name="return-value"></a>Rückgabewert  

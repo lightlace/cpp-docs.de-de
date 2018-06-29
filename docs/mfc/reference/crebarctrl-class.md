@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e595db4e194744ce5d1f1d644a55423c1022fc2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85a3c51f5c59b510e1024cc5f363096952c0f35a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377586"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079461"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl-Klasse
 Kapselt die Funktionalität eines Grundleisten-Steuerelements. Dabei handelt es sich um einen Container für ein untergeordnetes Fenster.  
@@ -234,11 +234,11 @@ void BeginDrag(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `uBand`  
+ *uBand*  
  Nullbasierte Index des Bands, die der Drag-and-Drop-Vorgang auswirkt.  
   
- `dwPos`  
- Ein `DWORD` -Wert, beginnend Mauskoordinaten enthält. Die horizontale Koordinate in der LOWORD enthalten ist, und die vertikale Koordinate in die HIWORD enthalten ist. Wenn Sie übergeben `(DWORD)-1`, Grundleisten-Steuerelement verwendet die Position der Maus der letzten Ausführung des Steuerelements Thread aufgerufen **GetMessage** oder **PeekMessage**.  
+ *dwPos*  
+ Ein `DWORD` -Wert, beginnend Mauskoordinaten enthält. Die horizontale Koordinate in der LOWORD enthalten ist, und die vertikale Koordinate in die HIWORD enthalten ist. Wenn Sie übergeben `(DWORD)-1`, Grundleisten-Steuerelement verwendet die Position der Maus der letzten Ausführung des Steuerelements Thread aufgerufen `GetMessage` oder `PeekMessage`.  
   
 ##  <a name="create"></a>  CReBarCtrl::Create  
  Erstellt das Grundleistensteuerelement, und fügt es der `CReBarCtrl` Objekt.  
@@ -252,16 +252,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Gibt die Kombination von Grundleisten-Steuerelementtypen, die auf das Steuerelement angewendet. Finden Sie unter [Grundleisten-Steuerelementtypen für die](http://msdn.microsoft.com/library/windows/desktop/bb774377) in das Windows SDK für eine Liste der unterstützten Formate.  
   
- `rect`  
+ *Rect*  
  Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Position und Größe des Grundleisten-Steuerelements ist.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das das übergeordnete Fenster eines Grundleisten-Steuerelement darstellt. Es muss nicht **NULL**.  
   
- `nID`  
+ *nID*  
  Gibt an, das Grundleisten-Steuerelement-Steuerelement-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -292,19 +292,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwExStyle`  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der `dwExStyle` -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ *dwExStyle*  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt die Kombination von Grundleisten-Steuerelementtypen, die auf das Steuerelement angewendet. Eine Liste der unterstützten Formate finden Sie unter [Grundleisten-Steuerelementtypen für die](http://msdn.microsoft.com/library/windows/desktop/bb774377) im Windows SDK.  
   
- `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der `pParentWnd`.  
+ *Rect*  
+ Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das Fenster, das das Steuerelement übergeordnet ist.  
   
- `nID`  
+ *nID*  
  Das Steuerelement untergeordnete Fenster-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -331,7 +331,7 @@ BOOL DeleteBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `uBand`  
+ *uBand*  
  Nullbasierte Index des Bands gelöscht werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -348,8 +348,8 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwPos`  
- Ein `DWORD` Wert, der die neue Mauskoordinaten enthält. Die horizontale Koordinate in der LOWORD enthalten ist, und die vertikale Koordinate in die HIWORD enthalten ist. Wenn Sie übergeben `(DWORD)-1`, Grundleisten-Steuerelement verwendet die Position der Maus der letzten Ausführung des Steuerelements Thread aufgerufen **GetMessage** oder **PeekMessage**.  
+ *dwPos*  
+ Ein `DWORD` Wert, der die neue Mauskoordinaten enthält. Die horizontale Koordinate in der LOWORD enthalten ist, und die vertikale Koordinate in die HIWORD enthalten ist. Wenn Sie übergeben `(DWORD)-1`, Grundleisten-Steuerelement verwendet die Position der Maus der letzten Ausführung des Steuerelements Thread aufgerufen `GetMessage` oder `PeekMessage`.  
   
 ##  <a name="enddrag"></a>  CReBarCtrl::EndDrag  
  Implementiert das Verhalten der Win32-Nachricht [RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435)gemäß der Beschreibung im Windows SDK.  
@@ -368,10 +368,10 @@ void GetBandBorders(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `uBand`  
+ *uBand*  
  Nullbasierte Index des Bands für die Rahmen abgerufen werden sollen.  
   
- `prc`  
+ *VR China*  
  Ein Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Rahmen Band erhält. Wenn das Grundleistensteuerelement verfügt die **RBS_BANDBORDERS** Stil jedes Mitglied dieser Struktur erhalten die Anzahl der Pixel auf der entsprechenden Seite des das Band, das den Rahmen darstellen. Wenn das Grundleistensteuerelement keinen der **RBS_BANDBORDERS** formatieren, nur das linke Element dieser Struktur gültige Informationen empfängt. Eine Beschreibung der Stile für Grundleisten-Steuerelemente, finden Sie unter [Steuerelementtypen für die Infoleiste](http://msdn.microsoft.com/library/windows/desktop/bb774377) im Windows SDK.  
   
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount  
@@ -394,10 +394,10 @@ BOOL GetBandInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `uBand`  
+ *uBand*  
  Nullbasierte Index des Bands für die die Informationen abgerufen werden sollen.  
   
- `prbbi`  
+ *prbbi*  
  Ein Zeiger auf eine [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) Struktur das Band Informationen zu erhalten. Müssen Sie festlegen der `cbSize` Mitglied dieser Struktur zu `sizeof(REBARBANDINFO)` und legen Sie die **fMask** Member zu den Elementen, die Sie vor dem Senden dieser Nachricht abrufen möchten.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -435,8 +435,8 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `prbi`  
- Ein Zeiger auf eine [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) -Struktur, die die Grundleisten-Steuerelement-Informationen erhält. Sie müssen festlegen, die `cbSize` Mitglied dieser Struktur zu `sizeof(REBARINFO)` vor dem Senden dieser Nachricht.  
+ *prbi*  
+ Ein Zeiger auf eine [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) -Struktur, die die Grundleisten-Steuerelement-Informationen erhält. Sie müssen festlegen, die *CbSize* Mitglied dieser Struktur zu `sizeof(REBARINFO)` vor dem Senden dieser Nachricht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -459,7 +459,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpcs`  
+ *LPCs*  
  Ein Zeiger auf eine [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) strukturieren, wie im Windows SDK beschrieben.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -486,7 +486,7 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine bitweise Kombination (OR) von Flags, die die erweiterten Stile angeben. Die möglichen Flags sind `RBS_EX_SPLITTER` und `RBS_EX_TRANSPARENT`. Weitere Informationen finden Sie unter der `dwMask` Parameter von der [CReBarCtrl::SetExtendedStyle](#setextendedstyle) Methode.  
+ Eine bitweise Kombination (OR) von Flags, die die erweiterten Stile angeben. Die möglichen Flags sind `RBS_EX_SPLITTER` und `RBS_EX_TRANSPARENT`. Weitere Informationen finden Sie unter der *DwMask* Parameter von der [CReBarCtrl::SetExtendedStyle](#setextendedstyle) Methode.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sendet die [RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433) Nachricht, die im Windows SDK beschrieben wird.  
@@ -530,10 +530,10 @@ BOOL GetRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `uBand`  
+ *uBand*  
  Nullbasierte Index, der ein Band in der Grundleisten-Steuerelement.  
   
- `prc`  
+ *VR China*  
  Ein Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Grenzen des Bands Grundleisten erhält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -636,8 +636,8 @@ BOOL InsertBand(
  *uIndex*  
  Nullbasierte Index des Speicherorts, in dem das Band eingefügt wird. Wenn Sie diesen Parameter auf-1 festlegen, wird das Steuerelement das neue Band an der letzten Position hinzufügen.  
   
- `prbbi`  
- Ein Zeiger auf eine [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) -Struktur, die definiert, das Band aus, die eingefügt werden soll. Sie müssen festlegen, die `cbSize` Mitglied dieser Struktur zu `sizeof(REBARBANDINFO)` vor dem Aufrufen dieser Funktion.  
+ *prbbi*  
+ Ein Zeiger auf eine [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) -Struktur, die definiert, das Band aus, die eingefügt werden soll. Sie müssen festlegen, die *CbSize* Mitglied dieser Struktur zu `sizeof(REBARBANDINFO)` vor dem Aufrufen dieser Funktion.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -653,7 +653,7 @@ void MaximizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `uBand`  
+ *uBand*  
  Nullbasierte Index des Bands, maximiert werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -670,7 +670,7 @@ void MinimizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `uBand`  
+ *uBand*  
  Nullbasierte Index des Bands minimiert werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -708,11 +708,11 @@ void PushChevron(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `uBand`  
+ *uBand*  
  Nullbasierte Index des Bands, deren Chevron wird verschoben werden.  
   
- `lAppValue`  
- Eine Anwendung definiert die 32-Bit-Wert. Finden Sie unter `lAppValue` in [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) im Windows SDK.  
+ *lAppValue*  
+ Eine Anwendung definiert die 32-Bit-Wert. Finden Sie unter *lAppValue* in [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) im Windows SDK.  
   
 ##  <a name="restoreband"></a>  CReBarCtrl::RestoreBand  
  Ändert die Größe ein Band in einem Grundleisten-Steuerelement, um die ideale Größe.  
@@ -722,7 +722,7 @@ void RestoreBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `uBand`  
+ *uBand*  
  Nullbasierte Index des Bands, maximiert werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -741,10 +741,10 @@ BOOL SetBandInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `uBand`  
+ *uBand*  
  Nullbasierte Index des Bands an den neuen Einstellungen zu erhalten.  
   
- `prbbi`  
+ *prbbi*  
  Zeiger auf eine [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) -Struktur, die definiert, das Band aus, die eingefügt werden soll. Sie müssen festlegen, die `cbSize` Mitglied dieser Struktur zu `sizeof(REBARBANDINFO)` vor dem Senden dieser Nachricht.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `uBand`|Nullbasierte Index von einem Grundleisten-Band.|  
-|[in] `cxWidth`|Neue Breite des Bands Infoleiste in Pixel.|  
+|[in] *uBand*|Nullbasierte Index von einem Grundleisten-Band.|  
+|[in] *CxWidth*|Neue Breite des Bands Infoleiste in Pixel.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  `true` Wenn die Methode erfolgreich ist; andernfalls `false`.  
@@ -793,7 +793,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `prbi`  
+ *prbi*  
  Ein Zeiger auf eine [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) -Struktur, die die Informationen enthält, festgelegt werden sollen. Sie müssen festlegen, die `cbSize` Mitglied dieser Struktur zu `sizeof(REBARINFO)` vor dem Senden dieser Nachricht  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -810,7 +810,7 @@ COLORREF SetBkColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clr`  
+ *CLR*  
  Die **COLORREF** Wert, der die neue Standard-Hintergrundfarbe darstellt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `dwMask`|Eine bitweise Kombination (OR) von Flags, die angeben, welche Flags in der `dwStyleEx` Parameter angewendet. Verwenden Sie eine oder mehrere der folgenden Werte:<br /><br /> RBS_EX_SPLITTER: Standardmäßig zeigen Sie Splitters im unteren Bereich im horizontalen Modus, und klicken Sie rechts im vertikalen Modus an.<br /><br /> RBS_EX_TRANSPARENT: Weiterleiten der [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) Nachricht an das übergeordnete Fenster.|  
-|[in] `dwStyleEx`|Eine bitweise Kombination (OR) von Flags, die angeben, die Stile übernehmen. Eine Formatvorlage festlegen möchten, geben die gleichen Kennzeichen, das verwendet werden die `dwMask` Parameter. Geben Sie zum Zurücksetzen eines Stils binäre 0 (null).|  
+|[in] *DwMask*|Eine bitweise Kombination (OR) von Flags, die angeben, welche Flags in der *DwStyleEx* Parameter angewendet. Verwenden Sie eine oder mehrere der folgenden Werte:<br /><br /> RBS_EX_SPLITTER: Standardmäßig zeigen Sie Splitters im unteren Bereich im horizontalen Modus, und klicken Sie rechts im vertikalen Modus an.<br /><br /> RBS_EX_TRANSPARENT: Weiterleiten der [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) Nachricht an das übergeordnete Fenster.|  
+|[in] *DwStyleEx*|Eine bitweise Kombination (OR) von Flags, die angeben, die Stile übernehmen. Eine Formatvorlage festlegen möchten, geben die gleichen Kennzeichen, das verwendet werden die *DwMask* Parameter. Geben Sie zum Zurücksetzen eines Stils binäre 0 (null).|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der vorherige erweiterter Stil.  
@@ -863,7 +863,7 @@ BOOL SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pImageList`  
+ *pImageList*  
  Ein Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) Objekt, enthält die Bildliste, Grundleisten-Steuerelements zugewiesen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -877,7 +877,7 @@ CWnd* SetOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Ein Zeiger auf ein `CWnd` Objekt, das als Besitzer des Grundleisten-Steuerelement festgelegt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -914,7 +914,7 @@ COLORREF SetTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clr`  
+ *CLR*  
  Ein **COLORREF** Wert, der den neuen Text darstellt Farbe in der `CReBarCtrl` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -945,7 +945,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pszSubAppName`  
+ *pszSubAppName*  
  Ein Zeiger auf eine Unicode-Zeichenfolge, die den visuellen Stil der Infoleiste festzulegende enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -964,7 +964,7 @@ BOOL ShowBand(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `uBand`  
+ *uBand*  
  Nullbasierte Index, der ein Band in der Grundleisten-Steuerelement.  
   
  *fShow*  
@@ -981,7 +981,7 @@ BOOL SizeToRect(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rect`  
+ *Rect*  
  Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das das Rechteck angibt, deren Größe die Grundleisten-Steuerelements geändert werden sollte.  
   
 ### <a name="return-value"></a>Rückgabewert  

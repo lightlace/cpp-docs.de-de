@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ade76568f261c0e0320002d1a53ef1858c9509
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374382"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077977"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer-Klasse
 Wird für OLE-Server mit direkter Aktivierung, Automatisierungsserver und Linkcontainer verwendet (also in Anwendungen, die Links zu Einbettungen unterstützen).  
@@ -96,13 +96,13 @@ void ConnectTemplate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clsid`  
+ *clsid*  
  Verweis auf die OLE-Klassen-ID, die die Vorlage anfordert.  
   
- `pDocTemplate`  
+ *pDocTemplate*  
  Ein Zeiger auf das Dokumentvorlage.  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  Gibt an, ob eine einzelne Instanz der Anwendung mehrere Instanziierungen unterstützen kann. Wenn **"true"**, werden mehrere Instanzen der Anwendung, die für jede Anforderung zum Erstellen eines Objekts gestartet.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -133,7 +133,7 @@ void UpdateRegistry(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nAppType`  
+ *nAppType*  
  Ein Wert aus der **OLE_APPTYPE** -Enumeration, die in AFXDISP definiert ist. H. Es kann eine der folgenden Werte aufweisen:  
   
 - `OAT_INPLACE_SERVER` Server hat vollständige Server-Benutzeroberfläche.  
@@ -144,25 +144,25 @@ void UpdateRegistry(
   
 - `OAT_DISPATCH_OBJECT` Objekt ist `IDispatch`-fähig.  
   
-- **OAT_DOC_OBJECT_SERVER** Server unterstützt sowohl das Einbetten von und die Komponentenmodell "Document"-Objekt.  
+- `OAT_DOC_OBJECT_SERVER` Server unterstützt sowohl das Einbetten von und die Komponentenmodell "Document"-Objekt.  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  Eine Liste von Einträgen, die in der Registrierung geschrieben wurde, nur dann, wenn keine Einträge vorhanden sind.  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  Eine Liste von Einträgen, die geschrieben wird, in der Registrierung, unabhängig davon, ob alle vorherigen Einträge vorhanden sind.  
   
- `bRegister`  
- Bestimmt, ob die Klasse registriert werden. Wenn `bRegister` ist **"true"**, die Klasse bei der Registrierung registriert ist. Andernfalls, hebt die Klasse Registrierung.  
+ *bRegistrieren Sie sich*  
+ Bestimmt, ob die Klasse registriert werden. Wenn *bRegistrieren Sie sich* ist **"true"**, die Klasse bei der Registrierung registriert ist. Andernfalls, hebt die Klasse Registrierung.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Registrierungsinformationen erfolgt durch einen Aufruf von [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Die Teilzeichenfolgen abgerufen getroffenen identifiziert, die von den Indizes **RegFileTypeId**, **RegFileTypeName**, und **FileNewName**gemäß der Beschreibung in der `GetDocString` Referenzseiten.  
   
  Wenn die **RegFileTypeId** Teilzeichenfolge leer ist oder wenn der Aufruf von `GetDocString` ein Fehler auftritt, für andere Zwecke, diese Funktion schlägt fehl, und die Informationen in der Registrierung nicht eingegeben wird.  
   
- Die Informationen in den Argumenten `rglpszRegister` und `rglpszOverwrite` in der Registrierung durch einen Aufruf von geschrieben [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Informationen über das Standardformat, die registriert wird, sind die zwei Argumente **NULL**, eignet sich für die meisten Anwendungen. Informationen zur Struktur der Informationen in diesen Argumenten finden Sie unter `AfxOleRegisterServerClass`.  
+ Die Informationen in den Argumenten *RglpszRegister* und *RglpszOverwrite* in der Registrierung durch einen Aufruf von geschrieben [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Informationen über das Standardformat, die registriert wird, sind die zwei Argumente **NULL**, eignet sich für die meisten Anwendungen. Informationen zur Struktur der Informationen in diesen Argumenten finden Sie unter `AfxOleRegisterServerClass`.  
   
- Weitere Informationen finden Sie unter [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Weitere Informationen finden Sie unter [Implementieren der IDispatch-Schnittstelle](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Beispiel HIERSVR](../../visual-cpp-samples.md)   
