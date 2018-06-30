@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199aa7adc6cb96a4bc92e196ff94d57abdedfede
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb5fb6b09ba6d27828c9f76a1b2ee21323197f6b
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374298"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122940"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar-Klasse
 Eine Steuerleiste mit einer Zeile von Textausgabebereichen ("Indikatoren" genannt).  
@@ -110,7 +110,7 @@ class CStatusBar : public CControlBar
   
 1.  Rufen Sie [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) auf den Text im Bereich 0 nur zu aktualisieren.  
   
-2.  Rufen Sie [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) in der Statusleiste `ON_UPDATE_COMMAND_UI` Handler.  
+2.  Rufen Sie [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) in der Statusleiste ON_UPDATE_COMMAND_UI-Handler.  
   
 3.  Rufen Sie [SetPaneText aufgerufen wird](#setpanetext) auf den Text für einen beliebigen Bereich zu aktualisieren.  
   
@@ -140,7 +140,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDFind`  
+ *nIDFind*  
  Zeichenfolgen-ID des Indikators, dessen Index ist, abgerufen werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -160,19 +160,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentWnd`  
+ *pParentWnd*  
  Zeiger auf die [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, dessen Windows-Fenster das übergeordnete Element der Statusleiste ist.  
   
- `dwStyle`  
+ *dwStyle*  
  Die Statusleiste. Zusätzlich zu den standardmäßigen Windows [Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles), diese Stile werden unterstützt.  
   
-- `CBRS_TOP` Steuerleiste ist am Anfang des Rahmenfensters.  
+- CBRS_TOP Steuerleiste ist am Anfang des Rahmenfensters.  
   
-- `CBRS_BOTTOM` Steuerleiste wird am unteren Rand Frame-Fensters.  
+- CBRS_BOTTOM Steuerleiste wird am unteren Rand Frame-Fensters.  
   
-- `CBRS_NOALIGN` Steuerleiste ist nicht neu angeordnet, wenn die übergeordnetem Element geändert wird.  
+- CBRS_NOALIGN Steuerleiste ist nicht neu angeordnet, wenn die übergeordnetem Element geändert wird.  
   
- `nID`  
+ *nID*  
  Die Symbolleiste untergeordneten Fensters-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -193,22 +193,22 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentWnd`  
+ *pParentWnd*  
  Zeiger auf die [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, dessen Windows-Fenster das übergeordnete Element der Statusleiste ist.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  Weitere Formate für die Erstellung der eingebetteten [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) Objekt. Der Standardwert gibt an, eine Statusleiste, ohne einen Größenziehpunkt oder eine QuickInfo zu unterstützen. Status Leiste Stile unterstützt werden:  
   
-- **SBARS_SIZEGRIP** das StatusBar-Steuerelement enthält einen Größenziehpunkt am rechten Ende der Statusleiste. Ein Größenziehpunkt ist vergleichbar mit einem Rahmen; Es ist ein rechteckigen Bereichs, der der Benutzer kann klicken und ziehen Sie zum Ändern der Größe des übergeordneten Fensters.  
+- SBARS_SIZEGRIP Statusleisten-Steuerelement enthält einen Größenziehpunkt am rechten Ende der Statusleiste an. Ein Größenziehpunkt ist vergleichbar mit einem Rahmen; Es ist ein rechteckigen Bereichs, der der Benutzer kann klicken und ziehen Sie zum Ändern der Größe des übergeordneten Fensters.  
   
-- **SBT_TOOLTIPS** die Statusleiste unterstützt QuickInfos.  
+- SBT_TOOLTIPS die Statusleiste unterstützt QuickInfos.  
   
  Weitere Informationen zu diesen Formaten finden Sie unter [Einstellungen für CStatusBarCtrl](../../mfc/settings-for-the-cstatusbarctrl.md).  
   
- `dwStyle`  
+ *dwStyle*  
  Der Status Standardstil der Statusleiste. Der Standardwert gibt an, dass eine sichtbare Statusleiste am unteren Rand des Rahmenfensters erstellt werden. Wenden Sie eine beliebige Kombination von Steuerelementtypen aufgeführt, die der Statusleiste [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles) und [CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create). Dieser Parameter sollte jedoch immer die Stile WS_CHILD und WS_VISIBLE enthalten.  
   
- `nID`  
+ *nID*  
  Die Statusleiste untergeordneten Fensters-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -217,7 +217,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion auch legt die anfängliche Schriftart und den Status der Höhe des Balkens einen Standardwert.  
   
- Verwendung `CreateEx`, anstelle von [erstellen](#create), wenn bestimmte Formate während der Erstellung der eingebetteten Statusleisten-Steuerelement vorhanden sein müssen. Legen Sie z. B. `dwCtrlStyle` auf **SBT_TOOLTIPS** zum Anzeigen von QuickInfos in einem Status Leiste-Objekt.  
+ Verwendung `CreateEx`, anstelle von [erstellen](#create), wenn bestimmte Formate während der Erstellung der eingebetteten Statusleisten-Steuerelement vorhanden sein müssen. Legen Sie z. B. *DwCtrlStyle* auf SBT_TOOLTIPS zum Anzeigen von QuickInfos in einem Status Leiste-Objekt.  
   
 ##  <a name="cstatusbar"></a>  CStatusBar::CStatusBar  
  Erstellt ein `CStatusBar` Objekt, eine Statusleiste Standardschriftart bei Bedarf erstellt, und die Schriftartmerkmale auf Standardwerte festgelegt.  
@@ -234,28 +234,28 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Ein Zeiger auf eine [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) -Struktur, die Informationen über den Typ der Zeichnung erforderlich.  
   
 ### <a name="remarks"></a>Hinweise  
- Die **ItemAction** Mitglied der `DRAWITEMSTRUCT` Struktur definiert die Zeichnen-Aktion, die ausgeführt werden soll. Überschreiben Sie diese Memberfunktion zum Implementieren der Zeichnung für ein Ownerdrawn- `CStatusBar` Objekt. Die Anwendung muss alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen `lpDrawItemStruct` vor dem Beenden des diese Memberfunktion.  
+ Die `itemAction` Mitglied der `DRAWITEMSTRUCT` Struktur definiert die Zeichnen-Aktion, die ausgeführt werden soll. Überschreiben Sie diese Memberfunktion zum Implementieren der Zeichnung für ein Ownerdrawn- `CStatusBar` Objekt. Die Anwendung muss alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen *LpDrawItemStruct* vor dem Beenden des diese Memberfunktion.  
   
 ##  <a name="getitemid"></a>  CStatusBar::GetItemID  
- Gibt die ID des Indikators gemäß `nIndex`.  
+ Gibt die ID des Indikators gemäß *nIndex*.  
   
 ```  
 UINT GetItemID(int nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Der Index des Indikators, deren ID wird abgerufen werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die ID des Indikators gemäß `nIndex`.  
+ Die ID des Indikators gemäß *nIndex*.  
   
 ##  <a name="getitemrect"></a>  CStatusBar::GetItemRect  
- Kopiert die Koordinaten des Indikators gemäß `nIndex` in der Struktur verweist `lpRect`.  
+ Kopiert die Koordinaten des Indikators gemäß *nIndex* in der Struktur verweist *LpRect*.  
   
 ```  
 void GetItemRect(
@@ -264,17 +264,17 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Der Index des Indikators, dessen Rechteckkoordinaten sind, abgerufen werden sollen.  
   
- `lpRect`  
- Verweist auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die Koordinaten des Indikators gemäß erhält `nIndex`.  
+ *lpRect*  
+ Verweist auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die Koordinaten des Indikators gemäß erhält *nIndex*.  
   
 ### <a name="remarks"></a>Hinweise  
  Koordinaten werden in Pixel relativ zur linken oberen Ecke der Statusleiste.  
   
 ##  <a name="getpaneinfo"></a>  CStatusBar::GetPaneInfo  
- Legt `nID`, `nStyle`, und `cxWidth` auf die ID, Stil und die Breite des Indikatorbereichs an der vom angegebenen Position `nIndex`.  
+ Legt *nID*, *nStyle*, und *CxWidth* auf die ID, Stil und die Breite des Indikatorbereichs an der vom angegebenen Position *nIndex*.  
   
 ```  
 void GetPaneInfo(
@@ -285,16 +285,16 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Der Index der Bereich, dessen Informationen abgerufen werden sollen, ist.  
   
- `nID`  
- Ein Verweis auf eine **"uint"** , um die ID des Bereichs festgelegt ist.  
+ *nID*  
+ Verweis auf eine "uint", die auf die ID des Bereichs festgelegt wird.  
   
- `nStyle`  
- Ein Verweis auf eine **"uint"** , die den Stil des Bereichs festgelegt ist.  
+ *nStyle*  
+ Verweis auf eine "uint", die den Stil des Bereichs festgelegt wird.  
   
- `cxWidth`  
+ *cxWidth*  
  Verweis auf eine ganze Zahl, die auf die Breite des Bereichs festgelegt wird.  
   
 ##  <a name="getpanestyle"></a>  CStatusBar::GetPaneStyle  
@@ -305,11 +305,11 @@ UINT GetPaneStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Der Index des Bereichs, dessen Format ist abgerufen werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Format der Statusleiste gemäß `nIndex`.  
+ Das Format der Statusleiste gemäß *nIndex*.  
   
 ### <a name="remarks"></a>Hinweise  
  Format des Bereichs bestimmt, wie der Bereich angezeigt wird.  
@@ -324,10 +324,10 @@ CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rS
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Der Index des Bereichs, dessen Text ist, abgerufen werden sollen.  
   
- `rString`  
+ *rString*  
  Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt mit dem Text abgerufen werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -352,7 +352,7 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
  Weitere allgemeine Informationen über allgemeine Steuerelemente finden Sie unter [Standardsteuerelementen](http://msdn.microsoft.com/library/windows/desktop/bb775493) im Windows SDK.  
   
 ##  <a name="setindicators"></a>  CStatusBar:: SetIndicators  
- Legt jedes Indikators-ID auf den Wert, der durch das entsprechende Element im Array angegebenen `lpIDArray`, lädt der Zeichenfolgenressource, die durch jede ID angegeben und setzt des Indikators Text in der Zeichenfolge.  
+ Legt jedes Indikators-ID auf den Wert, der durch das entsprechende Element im Array angegebenen *LpIDArray*, lädt der Zeichenfolgenressource, die durch jede ID angegeben und setzt des Indikators Text in der Zeichenfolge.  
   
 ```  
 BOOL SetIndicators(
@@ -361,11 +361,11 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpIDArray`  
+ *lpIDArray*  
  Ein Zeiger auf ein Array von IDs.  
   
- `nIDCount`  
- Anzahl der Elemente im Array verweist `lpIDArray`.  
+ *nIDCount*  
+ Anzahl der Elemente im Array verweist *LpIDArray*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -382,30 +382,30 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Der Index des Indikatorbereichs, dessen Format ist, festgelegt werden.  
   
- `nID`  
+ *nID*  
  Neue ID für den Bereich des Indikators.  
   
- `nStyle`  
+ *nStyle*  
  Neue Formatvorlage für den Bereich des Indikators.  
   
- `cxWidth`  
+ *cxWidth*  
  Neue Breite für den Bereich des Indikators.  
   
 ### <a name="remarks"></a>Hinweise  
  Die folgenden Indikator Stile werden unterstützt:  
   
-- **SBPS_NOBORDERS** keine 3D Rahmen um den Bereich.  
+- SBPS_NOBORDERS Nein 3D Rahmen um den Bereich.  
   
-- **SBPS_POPOUT** Reverse Rahmen, sodass Text "out holt."  
+- Reverse-SBPS_POPOUT Rahmen, damit der Text "out holt."  
   
-- **SBPS_DISABLED** nicht Zeichnen von Text.  
+- Zeichnen von Text SBPS_DISABLED führen nicht.  
   
-- **SBPS_STRETCH** Stretch Bereich zum Ausfüllen von nicht belegtem Speicherplatzes. Nur pro Statusleiste einen Bereich für dieses Format.  
+- SBPS_STRETCH Stretch Bereich zum Ausfüllen von nicht belegtem Speicherplatzes. Nur pro Statusleiste einen Bereich für dieses Format.  
   
-- **SBPS_NORMAL** keine Stretch, Rahmen oder Popup-.  
+- SBPS_NORMAL Nein Stretch "," Rahmen "oder" Popup-".  
   
 ##  <a name="setpanestyle"></a>  CStatusBar::SetPaneStyle  
  Rufen Sie diese Memberfunktion um den Stil des Bereichs einer Statusleiste festzulegen.  
@@ -417,10 +417,10 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Der Index des Bereichs, dessen Format ist, festgelegt werden.  
   
- `nStyle`  
+ *nStyle*  
  Die Art des Bereich, dessen Format festgelegt werden, ist.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -429,7 +429,7 @@ void SetPaneStyle(
  Eine Liste der verfügbaren zeigerformate von Statusleisten, finden Sie unter [SetPaneInfo](#setpaneinfo).  
   
 ##  <a name="setpanetext"></a>  CStatusBar::SetPaneText  
- Rufen Sie diese Memberfunktion zum Festlegen des Texts im Bereich der Zeichenfolge verweist `lpszNewText`.  
+ Rufen Sie diese Memberfunktion zum Festlegen des Texts im Bereich der Zeichenfolge verweist *LpszNewText*.  
   
 ```  
 BOOL SetPaneText(
@@ -439,14 +439,14 @@ BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Der Index des Bereichs, dessen Text ist, festgelegt werden.  
   
- `lpszNewText`  
+ *lpszNewText*  
  Ein Zeiger auf den neuen Bereich Text.  
   
  *bUpdate*  
- Wenn **"true"**, Bereich ungültig ist, nachdem Sie den Text selbst festgelegt wird.  
+ Bei "true", wird der Bereich ungültig gemacht werden, nachdem der Text selbst festgelegt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  

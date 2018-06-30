@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7867f35a66abf0f5a33ecd411b81111e84e3800f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b757da27f2b4ae79a0192df0598f833b3d1e7b9
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368481"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121541"
 ---
 # <a name="cwindowdc-class"></a>CWindowDC-Klasse
 Abgeleitet von `CDC`.  
@@ -48,7 +48,7 @@ class CWindowDC : public CDC
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|Das `HWND`, an das `CWindowDC` angefügt ist.|  
+|[CWindowDC::m_hWnd](#m_hwnd)|Das HWND an das `CWindowDC` angefügt ist.|  
   
 ## <a name="remarks"></a>Hinweise  
  Ruft die Windows-Funktion [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)bei der Konstruktion und [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx) zur zerstörungszeit. Dies bedeutet, dass eine `CWindowDC` Objekt greift auf den ganzen Bildschirmbereich eine [CWnd](../../mfc/reference/cwnd-class.md) (sowohl Client als auch nicht-Bereiche).  
@@ -66,14 +66,14 @@ class CWindowDC : public CDC
  Header: afxwin.h  
   
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
- Erstellt eine `CWindowDC` -Objekt, das den ganzen Bildschirmbereich (sowohl Client als auch Größenanpassungslogik) greift auf die `CWnd` Objekt verweist `pWnd`.  
+ Erstellt eine `CWindowDC` -Objekt, das den ganzen Bildschirmbereich (sowohl Client als auch Größenanpassungslogik) greift auf die `CWnd` Objekt verweist *pWnd*.  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Das Fenster, dessen Clientbereich das Gerätekontext Objekt zugegriffen wird.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -85,14 +85,14 @@ explicit CWindowDC(CWnd* pWnd);
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
- Die `HWND` von der `CWnd` Zeiger zum Konstruieren der `CWindowDC` Objekt.  
+ Das HWND des der `CWnd` Zeiger zum Konstruieren der `CWindowDC` Objekt.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `m_hWnd` eine geschützte Variable vom Typ `HWND`.  
+ `m_hWnd` ist eine geschützte Variable des Typs HWND.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CWindowDC::CWindowDC](#cwindowdc).  

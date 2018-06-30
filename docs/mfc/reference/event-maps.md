@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce997441c11287626e9681a661f858e33ccdde24
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: f4522b9ea2f336f5ac88f5444edc0c7df16b5bc6
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322211"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122388"
 ---
 # <a name="event-maps"></a>Ereigniszuordnungen
 
@@ -71,7 +71,7 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden der `DECLARE_EVENT_MAP` Makro am Ende der Klassendeklaration. Verwenden Sie dann in der CPP-Datei, die die Memberfunktionen für die Klasse definiert die `BEGIN_EVENT_MAP` -Makro, Makroeinträge für die einzelnen Ereignisse für das Steuerelement, und die `END_EVENT_MAP` Makro, um das Ende der Ereignisliste zu deklarieren.
+Verwenden Sie das DECLARE_EVENT_MAP-Makro am Ende der Klassendeklaration. Klicken Sie dann in der CPP-Datei, die die Memberfunktionen für die Klasse definiert mithilfe der BEGIN_EVENT_MAP-Makro, Makroeinträge für alle Ereignisse des Steuerelements und der END_EVENT_MAP-Makro auf um das Ende der Ereignisliste zu deklarieren.
 
 Weitere Informationen zu ereigniszuordnungen, finden Sie im Artikel [ActiveX-Steuerelemente: Ereignisse](../../mfc/mfc-activex-controls-events.md).
 
@@ -97,9 +97,9 @@ Gibt den Namen der Basisklasse der *TheClass*.
 
 ### <a name="remarks"></a>Hinweise
 
-Starten Sie in der Implementierungsdatei (.cpp), die die Memberfunktionen für die Klasse definiert, die ereigniszuordnung mit der `BEGIN_EVENT_MAP` -Makro, dann fügen Sie die Makroeinträge für die einzelnen Ereignisse, und schließen Sie die ereigniszuordnung mit der `END_EVENT_MAP` Makro.
+Starten Sie in der Implementierungsdatei (.cpp), die die Memberfunktionen für die Klasse definiert die ereigniszuordnung mit dem BEGIN_EVENT_MAP-Makro, dann fügen Sie die Makroeinträge für die einzelnen Ereignisse und führen Sie die ereigniszuordnung mit dem END_EVENT_MAP-Makro.
 
-Weitere Informationen zum Ereignis zugeordnet ist und die `BEGIN_EVENT_MAP` -Makro, finden Sie im Artikel [ActiveX-Steuerelemente: Ereignisse](../../mfc/mfc-activex-controls-events.md).
+Weitere Informationen zu ereigniszuordnungen und BEGIN_EVENT_MAP-Makro, finden Sie im Artikel [ActiveX-Steuerelemente: Ereignisse](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -107,7 +107,7 @@ Weitere Informationen zum Ereignis zugeordnet ist und die `BEGIN_EVENT_MAP` -Mak
 
 ##  <a name="end_event_map"></a>  END_EVENT_MAP
 
-Verwenden der `END_EVENT_MAP` Makro zum Beenden der Definition der ereigniszuordnung.
+Verwenden Sie zum Beenden der Definition der ereigniszuordnung END_EVENT_MAP-Makro.
 
 ```cpp
 END_EVENT_MAP()
@@ -148,36 +148,36 @@ Die `VTS_` Konstanten und ihre Bedeutungen lauten wie folgt:
 
 |Symbol|Parametertyp|
 |------------|--------------------|
-|`VTS_I2`|**short**|
-|`VTS_I4`|**long**|
-|`VTS_R4`|**float**|
-|`VTS_R8`|**double**|
-|`VTS_COLOR`|`OLE_COLOR`|
-|`VTS_CY`|`CURRENCY`|
-|`VTS_DATE`|`DATE`|
-|`VTS_BSTR`|**const** __Char\*__|
-|`VTS_DISPATCH`|`LPDISPATCH`|
-|`VTS_FONT`|`IFontDispatch*`|
-|`VTS_HANDLE`|`HANDLE`|
-|`VTS_SCODE`|`SCODE`|
-|`VTS_BOOL`|`BOOL`|
-|`VTS_VARIANT`|`const VARIANT*`|
-|`VTS_PVARIANT`|`VARIANT*`|
-|`VTS_UNKNOWN`|`LPUNKNOWN`|
-|`VTS_OPTEXCLUSIVE`|`OLE_OPTEXCLUSIVE`|
-|`VTS_PICTURE`|`IPictureDisp*`|
-|`VTS_TRISTATE`|`OLE_TRISTATE`|
-|`VTS_XPOS_PIXELS`|`OLE_XPOS_PIXELS`|
-|`VTS_YPOS_PIXELS`|`OLE_YPOS_PIXELS`|
-|`VTS_XSIZE_PIXELS`|`OLE_XSIZE_PIXELS`|
-|`VTS_YSIZE_PIXELS`|`OLE_YSIZE_PIXELS`|
-|`VTS_XPOS_HIMETRIC`|`OLE_XPOS_HIMETRIC`|
-|`VTS_YPOS_HIMETRIC`|`OLE_YPOS_HIMETRIC`|
-|`VTS_XSIZE_HIMETRIC`|`OLE_XSIZE_HIMETRIC`|
-|`VTS_YSIZE_HIMETRIC`|`OLE_YSIZE_HIMETRIC`|
+|VTS_I2|**short**|
+|VTS_I4|**long**|
+|VTS_R4|**float**|
+|VTS_R8|**double**|
+|VTS_COLOR|OLE_COLOR|
+|VTS_CY|WÄHRUNG|
+|VTS_DATE|DATE|
+|VTS_BSTR|**const** __Char\*__|
+|VTS_DISPATCH|LPDISPATCH|
+|VTS_FONT|`IFontDispatch*`|
+|VTS_HANDLE|HANDLE|
+|VTS_SCODE|SCODE|
+|VTS_BOOL|BOOL|
+|VTS_VARIANT|`const VARIANT*`|
+|VTS_PVARIANT|`VARIANT*`|
+|VTS_UNKNOWN|LPUNKNOWN|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE|
+|VTS_PICTURE|`IPictureDisp*`|
+|VTS_TRISTATE|OLE_TRISTATE|
+|VTS_XPOS_PIXELS|OLE_XPOS_PIXELS|
+|VTS_YPOS_PIXELS|OLE_YPOS_PIXELS|
+|VTS_XSIZE_PIXELS|OLE_XSIZE_PIXELS|
+|VTS_YSIZE_PIXELS|OLE_YSIZE_PIXELS|
+|TS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
+|VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
+|VTS_XSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
+|VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> Zusätzliche Variante Konstanten für alle variant-Typen, mit Ausnahme von definiert wurden `VTS_FONT` und `VTS_PICTURE`, die einen Zeiger auf die Konstante variant-Daten bereitstellen. Diese Konstanten sind benannt der `VTS_Pconstantname` Konvention. Beispielsweise `VTS_PCOLOR` ist ein Zeiger auf eine `VTS_COLOR` konstant.
+> Für alle variant-Typen, mit Ausnahme von VTS_FONT und VTS_PICTURE, wurden zusätzliche Variante Konstanten definiert, die einen Zeiger auf die Konstante variant-Daten bereitstellen. Diese Konstanten sind benannt der `VTS_Pconstantname` Konvention. VTS_PCOLOR ist z. B. ein Zeiger auf eine VTS_COLOR-Konstante.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -251,7 +251,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-Die Werte der *LpMsg*, *hWndParent*, und *LpRect* Parameter stammen aus der entsprechenden Parameter des der **IOleObject** Memberfunktion.
+Die Werte der *LpMsg*, *hWndParent*, und *LpRect* Parameter stammen aus der entsprechenden Parameter des der `IOleObject::DoVerb` Memberfunktion.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -275,7 +275,7 @@ Die Funktion, die vom Framework aufgerufen, wenn das Verb aufgerufen wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Standardverb Index besitzt das Format `OLEIVERB_`, gefolgt von einer Aktion. `OLEIVERB_SHOW`, `OLEIVERB_HIDE`, und `OLEIVERB_UIACTIVATE` sind einige Beispiele für Standardverben.
+Der Standardverb Index besitzt das Format `OLEIVERB_`, gefolgt von einer Aktion. OLEIVERB_SHOW OLEIVERB_HIDE und OLEIVERB_UIACTIVATE sind einige Beispiele für Standardverben.
 
 Finden Sie unter [ON_OLEVERB](#on_oleverb) eine Beschreibung der Funktionsprototyp als verwendet werden soll die *MemberFxn* Parameter.
 

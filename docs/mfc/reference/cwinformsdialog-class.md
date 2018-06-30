@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fe7c8518366065e93360187247cbd07df42d79f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371558"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122496"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog-Klasse
 Ein Wrapper für eine MFC-Dialogfeldklasse, die ein Windows Forms-Benutzersteuerelement hostet.  
@@ -85,7 +85,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDTemplate`  
+ *nIDTemplate*  
  Enthält die ID der Dialogfeldvorlagen-Ressource ein Feld an. Verwenden Sie den Dialog-Editor, um der Dialogfeldvorlage erstellen und speichern es in der Anwendung Ressourcenskriptdatei. Weitere Informationen zu Dialogfeldvorlagen, finden Sie unter [CDialog-Klasse](../../mfc/reference/cdialog-class.md).  
   
 ##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
@@ -119,7 +119,7 @@ virtual BOOL OnInitDialog();
  Ein boolescher Wert, der angibt, ob die Anwendung den Eingabefokus auf eines der Steuerelemente im Dialogfeld festgelegt wurde. Wenn `OnInitDialog` ungleich NULL zurückgegeben wird, Windows legt den Eingabefokus auf das erste Steuerelement im Dialogfeld. Diese Methode kann 0 zurückgeben, nur dann, wenn die Anwendung explizit den Eingabefokus eines der Steuerelemente im Dialogfeld festgelegt wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die MFC-Dialogfeld erstellt wird (mithilfe der [erstellen](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), oder [DoModal](../../mfc/reference/cdialog-class.md#domodal) Methode geerbt von [CDialog](../../mfc/reference/cdialog-class.md)), eine `WM_INITDIALOG` Nachricht gesendet wird, und diese Methode wird aufgerufen. Erstellt eine Instanz eines Windows Forms-Steuerelements im Dialogfeld, und passt die Größe des Dialogfelds, um die Größe des Benutzersteuerelements Rechnung zu tragen. Klicken Sie dann hostet das neue Steuerelement in der MFC-Dialogfeld.  
+ Wenn die MFC-Dialogfeld erstellt wird (mithilfe der [erstellen](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), oder [DoModal](../../mfc/reference/cdialog-class.md#domodal) Methode geerbt von [CDialog](../../mfc/reference/cdialog-class.md)), eine WM_ INITDIALOG-Nachricht gesendet wird, und diese Methode wird aufgerufen. Erstellt eine Instanz eines Windows Forms-Steuerelements im Dialogfeld, und passt die Größe des Dialogfelds, um die Größe des Benutzersteuerelements Rechnung zu tragen. Klicken Sie dann hostet das neue Steuerelement in der MFC-Dialogfeld.  
   
  Überschreiben Sie diese Memberfunktion auf, wenn besondere Verarbeitung bei der Initialisierung des Dialogfelds "" ausführen müssen. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [CDialog::](../../mfc/reference/cdialog-class.md#oninitdialog).  
   

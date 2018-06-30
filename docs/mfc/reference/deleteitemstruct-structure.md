@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f56a09742276c7fcb1bd66ff1a36b1d17cdf882
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c844ad428143c82e8214eab74262b326bf2c9a4
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370945"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123239"
 ---
 # <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT-Struktur
 Die `DELETEITEMSTRUCT` Struktur beschreibt ein gelöschtes Besitzer gezeichnetes Listenfeld oder Kombinationsfeld Element.  
@@ -39,23 +39,23 @@ typedef struct tagDELETEITEMSTRUCT { /* ditms */
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `CtlType`  
- Gibt an, **odt_combobox** (ein Besitzer gezeichnetes Listenfeld) oder **ODT_COMBOBOX** (ein Ownerdrawn-Kombinationsfeld).  
+ *CtlType*  
+ Gibt odt_combobox (ein Besitzer gezeichnetes Listenfeld) oder ODT_COMBOBOX (ein Ownerdrawn-Kombinationsfeld) an.  
   
- `CtlID`  
+ *CtlID*  
  Gibt den Bezeichner der im Listenfeld oder Kombinationsfeld.  
   
- `itemID`  
+ *Element-ID*  
  Gibt den Index des Elements in das Listenfeld oder Kombinationsfeld, die entfernt an.  
   
- `hwndItem`  
+ *hwndItem*  
  Bezeichnet das Steuerelement.  
   
- `itemData`  
- Gibt anwendungsspezifische Daten für das Element an. Dieser Wert wird übergeben, auf das Steuerelement in der **lParam** -Parameter der Nachricht, die das Element im Listenfeld oder Kombinationsfeld hinzufügt.  
+ *itemData*  
+ Gibt anwendungsspezifische Daten für das Element an. Dieser Wert wird übergeben, auf das Steuerelement in der *lParam* -Parameter der Nachricht, die das Element im Listenfeld oder Kombinationsfeld hinzufügt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn ein Element entfernt wird, aus dem Listenfeld oder Kombinationsfeld, oder wenn das Listenfeld oder Kombinationsfeld zerstört wird, sendet Windows die `WM_DELETEITEM` Nachricht an den Besitzer jedes gelöschtes Element. Die **lParam** -Parameter der Nachricht enthält einen Zeiger auf diese Struktur.  
+ Wenn ein Element entfernt wird, aus dem Listenfeld oder Kombinationsfeld, oder wenn das Listenfeld oder Kombinationsfeld zerstört wird, sendet Windows die WM_DELETEITEM-Nachricht an den Besitzer jedes gelöschtes Element. Die *lParam* -Parameter der Nachricht enthält einen Zeiger auf diese Struktur.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cdd84b9ac7547ac7c0ae0a664de0f672c10202
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d098a88e57ecbbedfde1a4674a915e13c28ab435
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375352"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121013"
 ---
 # <a name="data-types-mfc"></a>Datentypen (MFC)
 Dieses Thema listet die Datentypen, die am häufigsten in der Microsoft Foundation Class-Bibliothek verwendet. Die meisten Datentypen sind dieselben wie in der Platform Software Development Kit (SDK), während andere für MFC eindeutig sind.  
@@ -48,9 +48,9 @@ Dieses Thema listet die Datentypen, die am häufigsten in der Microsoft Foundati
   
  Die folgenden: Datentypen, die nur für die Microsoft Foundation Class-Bibliothek  
   
--   **POSITION** ein Wert verwendet, um die Position eines Elements in einer Auflistung zu kennzeichnen; durch MFC-Auflistungsklassen verwendet.  
+-   Positionieren Sie einen Wert, der die Position eines Elements in einer Auflistung zu kennzeichnen. von MFC-Auflistungsklassen verwendet.  
   
--   **LPCRECT** eine 32-Bit-Zeiger auf eine Konstante (nicht veränderbaren) `RECT` Struktur.  
+-   Eine 32-Bit-Zeiger auf eine Konstante (nicht veränderbaren) LPCRECT `RECT` Struktur.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassenübersicht](../../mfc/class-library-overview.md)   

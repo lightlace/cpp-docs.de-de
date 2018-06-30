@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa99952daf401132768d9be5d4c589b5fdbee52
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf73aa44134aa05a61b372080b7e2033a73bf5b0
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376196"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122875"
 ---
 # <a name="cusertoolsmanager-class"></a>CUserToolsManager-Klasse
 Verwaltet die Auflistung der [CUserTool Klasse](../../mfc/reference/cusertool-class.md) Objekte in einer Anwendung. Ein Benutzertool ist ein Menüelement, das eine externe Anwendung ausführt. Mithilfe des Objekts `CUserToolsManager` können Benutzer oder Entwickler der Anwendung neue Benutzertools hinzuzufügen. Es unterstützt die Ausführung der Befehle, die Benutzertools zugeordnet sind, und speichert außerdem Informationen über Benutzertools in der Windows-Registrierung.  
@@ -135,7 +135,7 @@ CUserTool* CreateNewTool();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf das neu erstellte User-Tool oder `NULL` , wenn die Anzahl der Benutzertools das Maximum überschritten hat. Der zurückgegebene Typ entspricht der Typ, der an übergebene `CWinAppEx::EnableUserTools` als die `pToolRTC` Parameter.  
+ Ein Zeiger auf die neu erstellte benutzertool oder NULL, wenn die Anzahl der Benutzertools das Maximum überschritten hat. Der zurückgegebene Typ entspricht der Typ, der an übergebene `CWinAppEx::EnableUserTools` als die *pToolRTC* Parameter.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode sucht das erste verfügbare Menübefehl-ID in den Bereich, der im Aufruf angegeben wird [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) und weist das Tool, das diese ID.  
@@ -159,22 +159,22 @@ CUserToolsManager(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdToolsDummy`  
+ [in] *UiCmdToolsDummy*  
  Eine ganze Zahl ohne Vorzeichen, die das Framework für die Befehls-ID des Benutzers im Menü Extras als Platzhalter verwendet.  
   
- [in] `uiCmdFirst`  
+ [in] *UiCmdFirst*  
  Die Befehls-ID für den ersten Benutzer Tool-Befehl.  
   
- [in] `uiCmdLast`  
+ [in] *UiCmdLast*  
  Die Befehls-ID für den letzten Benutzer Tool-Befehl.  
   
- [in] `pToolRTC`  
+ [in] *pToolRTC*  
  Die Klasse, die [CUserToolsManager::CreateNewTool](#createnewtool) erstellt. Durch die Verwendung dieser Klasse können Sie einen abgeleiteten Typ von [CUserTool Klasse](../../mfc/reference/cusertool-class.md) statt die standardmäßige Implementierung.  
   
- [in] `uArgMenuID`  
+ [in] *uArgMenuID*  
  Die im Menü-Ressourcen-ID des Popupmenüs Argumente.  
   
- [in] `uInitDirMenuID`  
+ [in] *uInitDirMenuID*  
  Der Menü-Ressourcen-ID, der das Ausgangsverzeichnis Popupmenü werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -188,14 +188,14 @@ CUserTool* FindTool(UINT uiCmdId) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdId`  
+ [in] *UiCmdId*  
  Ein Bezeichner für den Menü-Befehl.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine [CUserTool Klasse](../../mfc/reference/cusertool-class.md) oder `CUserTool`-abgeleitetes Objekt aus, wenn erfolgreich; andernfalls `NULL`.  
+ Ein Zeiger auf eine [CUserTool Klasse](../../mfc/reference/cusertool-class.md) oder `CUserTool`-abgeleitetes Objekt aus, wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `FindTool` ist erfolgreich, der zurückgegebene Typ entspricht der Typ des der `pToolRTC` Parameter [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+ Wenn `FindTool` ist erfolgreich, der zurückgegebene Typ entspricht der Typ des der *pToolRTC* Parameter [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
 ##  <a name="getargumentsmenuid"></a>  CUserToolsManager::GetArgumentsMenuID  
  Gibt die Ressourcen-ID, die mit zugeordnetem der **Argumente** Menü auf die **Tools** auf der Registerkarte die **anpassen** (Dialogfeld).  
@@ -208,7 +208,7 @@ UINT GetArgumentsMenuID() const;
  Der Bezeichner des eine Menüressource.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `uArgMenuID` Parameter [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) gibt die ID der Ressource.  
+ Die *uArgMenuID* Parameter [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) gibt die ID der Ressource.  
   
 ##  <a name="getdefext"></a>  CUserToolsManager::GetDefExt  
  Gibt die standarderweiterung, die die **Datei öffnen** (Dialogfeld) ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) verwendet, der **Befehl** Feld der **Tools** auf der Registerkarte die **Anpassen** (Dialogfeld).  
@@ -241,7 +241,7 @@ UINT GetInitialDirMenuID() const;
  Ein Bezeichner für den Menü-Ressource.  
   
 ### <a name="remarks"></a>Hinweise  
- Die zurückgegebene ID wird angegeben, der `uInitDirMenuID` Parameter [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+ Die zurückgegebene ID wird angegeben, der *uInitDirMenuID* Parameter [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
 ##  <a name="getmaxtools"></a>  CUserToolsManager::GetMaxTools  
  Gibt die maximale Anzahl von Benutzertools zugeordnet werden kann, die in der Anwendung zurück.  
@@ -254,7 +254,7 @@ int GetMaxTools() const;
  Die maximale Anzahl von Benutzertools, die zugeordnet werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um die maximale Anzahl der Tools abrufen, die in der Anwendung zugeordnet werden kann. Diese Zahl ist die Anzahl von IDs im Bereich zwischen der `uiCmdFirst` über die `uiCmdLast` Parameter, die Sie übergeben [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+ Rufen Sie diese Methode, um die maximale Anzahl der Tools abrufen, die in der Anwendung zugeordnet werden kann. Diese Zahl ist die Anzahl von IDs im Bereich zwischen der *UiCmdFirst* über die *UiCmdLast* Parameter, die Sie übergeben [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
 ##  <a name="gettoolsentrycmd"></a>  CUserToolsManager::GetToolsEntryCmd  
  Gibt die Befehls-ID des Elementplatzhalters Menü für Benutzertools zurück.  
@@ -267,7 +267,7 @@ UINT GetToolsEntryCmd() const;
  Die Befehls-ID des Platzhalters.  
   
 ### <a name="remarks"></a>Hinweise  
- Um Benutzertools zu aktivieren, rufen Sie [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools). Die `uiCmdToolsDummy` Parameter gibt die Befehls-ID des Befehls Eintrag Tools. Diese Methode gibt die Tools Eintrag Befehls-ID. Wo diese ID in einem Menü verwendet wird, wird es durch die Liste der Benutzertools ersetzt, wenn das Menü angezeigt wird.  
+ Um Benutzertools zu aktivieren, rufen Sie [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools). Die *UiCmdToolsDummy* Parameter gibt die Befehls-ID des Befehls Eintrag Tools. Diese Methode gibt die Tools Eintrag Befehls-ID. Wo diese ID in einem Menü verwendet wird, wird es durch die Liste der Benutzertools ersetzt, wenn das Menü angezeigt wird.  
   
 ##  <a name="getusertools"></a>  CUserToolsManager::GetUserTools  
  Gibt einen Verweis auf die Liste der Benutzertools zurück.  
@@ -280,7 +280,7 @@ const CObList& GetUserTools() const;
  Ein konstanter Verweis auf eine [CObList Klasse](../../mfc/reference/coblist-class.md) Objekt, das eine Liste der Benutzertools enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufruf dieser Methode zum Abrufen einer Liste der Benutzer tools, die [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) -Objekt verwaltet. Jedes benutzertool ist ein Objekt vom Typ dargestellte [CUserTool Klasse](../../mfc/reference/cusertool-class.md) oder ein abgeleiteter Typ von `CUserTool`. Der Typ wird angegeben, indem die `pToolRTC` -Parameter beim Aufrufen [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) Benutzertools zu aktivieren.  
+ Aufruf dieser Methode zum Abrufen einer Liste der Benutzer tools, die [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) -Objekt verwaltet. Jedes benutzertool ist ein Objekt vom Typ dargestellte [CUserTool Klasse](../../mfc/reference/cusertool-class.md) oder ein abgeleiteter Typ von `CUserTool`. Der Typ wird angegeben, indem die *pToolRTC* -Parameter beim Aufrufen [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) Benutzertools zu aktivieren.  
   
 ##  <a name="invoketool"></a>  CUserToolsManager::InvokeTool  
  Führt eine Anwendung mit der benutzertool, das eine angegebene Befehls-ID wurde  
@@ -290,14 +290,14 @@ BOOL InvokeTool(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdId`  
+ [in] *UiCmdId*  
  Die Menübefehl-ID mit dem Benutzer zugeordnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der zugeordnete benutzertool Befehl erfolgreich ausgeführt wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufruf dieser Methode zum Ausführen einer Anwendung, die dem Benutzer zugeordneten tool, hat die Befehls-ID gemäß `uiCmdId`.  
+ Aufruf dieser Methode zum Ausführen einer Anwendung, die dem Benutzer zugeordneten tool, hat die Befehls-ID gemäß *UiCmdId*.  
   
 ##  <a name="isusertoolcmd"></a>  CUserToolsManager::IsUserToolCmd  
  Bestimmt, ob eine Befehls-ID ein benutzertool zugeordnet ist.  
@@ -307,7 +307,7 @@ BOOL IsUserToolCmd(UINT uiCmdId) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdId`  
+ [in] *UiCmdId*  
  Eine Befehls-ID des Menüelements.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -324,7 +324,7 @@ BOOL LoadState(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszProfileName`  
+ [in] *LpszProfileName*  
  Der Pfad der Windows-Registrierungsschlüssel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -343,14 +343,14 @@ BOOL MoveToolDown(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pTool`  
+ [in] *pTool*  
  Gibt das User-Tool zu verschieben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der benutzertool wurde erfolgreich nach unten verschoben; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Methode fehlschlägt, wenn das Tool, das `pTool` gibt an, befindet sich nicht in der internen Liste oder wenn das Tool zuletzt in der Liste angezeigt wird.  
+ Die Methode fehlschlägt, wenn das Tool, das *pTool* gibt an, befindet sich nicht in der internen Liste oder wenn das Tool zuletzt in der Liste angezeigt wird.  
   
 ##  <a name="movetoolup"></a>  CUserToolsManager::MoveToolUp  
  Verschiebt den angegebenen Benutzer-Tool nach oben in der Liste der Benutzertools.  
@@ -360,14 +360,14 @@ BOOL MoveToolUp(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pTool`  
+ [in] *pTool*  
  Gibt das User-Tool zu verschieben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn der benutzertool wurde erfolgreich nach oben verschoben; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Methode fehlschlägt, wenn das Tool, das `pTool` befindet sich nicht in der internen Liste angegeben wird oder wenn Sie das Tool das erste Tool-Element in der Liste.  
+ Die Methode fehlschlägt, wenn das Tool, das *pTool* befindet sich nicht in der internen Liste angegeben wird oder wenn Sie das Tool das erste Tool-Element in der Liste.  
   
 ##  <a name="removetool"></a>  CUserToolsManager::RemoveTool  
  Entfernt den angegebenen Benutzer-Tool aus der Anwendung an.  
@@ -377,14 +377,14 @@ BOOL RemoveTool(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in, out] `pTool`  
+ [in, out] *pTool*  
  Ein Zeiger auf ein benutzertool entfernt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn das Tool erfolgreich entfernt wird. Andernfalls `FALSE`.  
+ "True", wenn das Tool erfolgreich entfernt wird. Andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn das Tool erfolgreich entfernt wird, wird diese Methode löscht `pTool`.  
+ Wenn das Tool erfolgreich entfernt wird, wird diese Methode löscht *pTool*.  
   
 ##  <a name="savestate"></a>  CUserToolsManager::SaveState  
  Speichert Informationen über Benutzertools in der Windows-Registrierung.  
@@ -394,7 +394,7 @@ BOOL SaveState(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszProfileName`  
+ [in] *LpszProfileName*  
  Ein Pfad zu den Windows-Registrierungsschlüssel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -413,7 +413,7 @@ void SetDefExt(const CString& strDefExt);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `strDefExt`  
+ [in] *StrDefExt*  
  Eine Textzeichenfolge, die die standardmäßige Dateinamenerweiterung enthält.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -427,7 +427,7 @@ void SetFilter(const CString& strFilter);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `strFilter`  
+ [in] *StrFilter*  
  Gibt den Filter.  
   
 ## <a name="see-also"></a>Siehe auch  

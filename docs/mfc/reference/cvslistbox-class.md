@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 582ddd1340dd94f367d5401d517e9335d370b634
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372994"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122636"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox-Klasse
 Die `CVSListBox` Klasse unterstützt ein bearbeitbares Listensteuerelement.  
@@ -124,20 +124,20 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `strIext`  
+ [in] *StrIext*  
  Ein Verweis auf eine Zeichenfolge.  
   
- [in] `dwData`  
+ [in] *DwData*  
  Eine anwendungsspezifische 32-Bit-Wert, der die Zeichenfolge zugeordnet ist. Der Standardwert ist 0.  
   
- [in] `iIndex`  
- Der nullbasierte Index der Position, die die Zeichenfolge enthalten soll. Wenn die `iIndex` Parameter ist-1, wird die Zeichenfolge am Ende der Liste hinzugefügt. Der Standardwert ist -1.  
+ [in] *iIndex*  
+ Der nullbasierte Index der Position, die die Zeichenfolge enthalten soll. Wenn die *iIndex* Parameter ist-1, wird die Zeichenfolge am Ende der Liste hinzugefügt. Der Standardwert ist -1.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index der Position der Zeichenfolge im Listensteuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden der [CVSListBox::GetItemData](#getitemdata) Methode zum Abrufen des Werts, der von angegeben wird die `dwData` Parameter. Dieser Wert kann es sich um eine anwendungsspezifische ganze Zahl oder ein Zeiger auf andere Daten sein.  
+ Verwenden der [CVSListBox::GetItemData](#getitemdata) Methode zum Abrufen des Werts, der durch angegeben ist die *DwData* Parameter. Dieser Wert kann es sich um eine anwendungsspezifische ganze Zahl oder ein Zeiger auf andere Daten sein.  
   
 ##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  Erstellt ein `CVSListBox`-Objekt.  
@@ -158,11 +158,11 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iIndex`  
+ [in] *iIndex*  
  Nullbasierten Index eines Listenelement-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Bearbeitungsoperation wurde erfolgreich gestartet wird; andernfalls `FALSE`.  
+ True, wenn die Bearbeitung erfolgreich gestartet. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Der Benutzer startet einen Bearbeitungsvorgang an, entweder durch Doppelklicken auf die Bezeichnung eines Elements oder durch Drücken der **F2** oder **LEERTASTE** Schlüssel, wenn ein Element den Fokus besitzt.  
@@ -188,7 +188,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iIndex`  
+ [in] *iIndex*  
  Der nullbasierte Index des ein bearbeitbares Listenelement-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -246,11 +246,11 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iIndex`  
+ [in] *iIndex*  
  Der nullbasierte Index des ein bearbeitbares Listenelement-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn das angegebene Element entfernt wird; andernfalls `FALSE`.  
+ True, wenn das angegebene Element entfernt wird. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -262,11 +262,11 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iItem`  
+ [in] *iItem*  
  Der nullbasierte Index des ein bearbeitbares Listenelement-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ "True", wenn diese Methode erfolgreich ist; andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wählt das angegebene Element aus, und bei Bedarf, verschiebt das Element in der Ansicht.  
@@ -281,10 +281,10 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iIndex`  
+ [in] *iIndex*  
  Der nullbasierte Index des ein bearbeitbares Listenelement-Steuerelement.  
   
- [in] `dwData`  
+ [in] *DwData*  
  Ein 32-Bit-Wert. Dieser Wert kann es sich um eine anwendungsspezifische ganze Zahl oder ein Zeiger auf andere Daten sein.  
   
 ### <a name="remarks"></a>Hinweise  

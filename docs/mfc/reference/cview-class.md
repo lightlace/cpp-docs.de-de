@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ca94e9d1f870fe028faec413a79f13d8a3b8eaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7ff4e48bd7006c3706909d1791b82aa8cda2658
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377900"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123122"
 ---
 # <a name="cview-class"></a>CView-Klasse
 Stellt die grundlegende Funktionalität für benutzerdefinierte Ansichtsklassen bereit.  
@@ -155,7 +155,7 @@ class AFX_NOVTABLE CView : public CWnd
   
 - [CTreeView](../../mfc/reference/ctreeview-class.md), eine Sicht, die Verwendung der Dokument - View-Architektur mit Struktursteuerelemente ermöglicht.  
   
- Die `CView` -Klasse verfügt auch über eine der abgeleiteten Implementierungsklasse mit dem Namen **CPreviewView**, die vom Framework Seitenansicht ausführen verwendet wird. Diese Klasse bietet Unterstützung für die Funktionen im Seitenansichtsfenster z. B. eine Symbolleiste, oder Double-Einzelseiten-Vorschau, und vergrößern/verkleinern, ist, die das angezeigte Bild vergrößern. Sie müssen aufrufen oder Überschreiben eines **CPreviewView**Memberfunktionen, es sei denn, Sie möchten eine eigene Benutzeroberfläche für die Seitenansicht implementieren (beispielsweise, wenn Sie im Seitenansichtsmodus Bearbeitung unterstützen möchten). Weitere Informationen zur Verwendung von `CView`, finden Sie unter [Dokument-/Ansichtarchitektur](../../mfc/document-view-architecture.md) und [Drucken](../../mfc/printing.md). Darüber hinaus finden Sie unter [technischen Hinweis 30](../../mfc/tn030-customizing-printing-and-print-preview.md) detaillierte Informationen zum Anpassen der Seitenansicht zu blättern.  
+ Die `CView` -Klasse verfügt auch über eine der abgeleiteten Implementierungsklasse mit dem Namen `CPreviewView`, die vom Framework Seitenansicht ausführen verwendet wird. Diese Klasse bietet Unterstützung für die Funktionen im Seitenansichtsfenster z. B. eine Symbolleiste, oder Double-Einzelseiten-Vorschau, und vergrößern/verkleinern, ist, die das angezeigte Bild vergrößern. Sie müssen aufrufen oder Überschreiben eines `CPreviewView`Memberfunktionen, es sei denn, Sie möchten eine eigene Benutzeroberfläche für die Seitenansicht implementieren (beispielsweise, wenn Sie im Seitenansichtsmodus Bearbeitung unterstützen möchten). Weitere Informationen zur Verwendung von `CView`, finden Sie unter [Dokument-/Ansichtarchitektur](../../mfc/document-view-architecture.md) und [Drucken](../../mfc/printing.md). Darüber hinaus finden Sie unter [technischen Hinweis 30](../../mfc/tn030-customizing-printing-and-print-preview.md) detaillierte Informationen zum Anpassen der Seitenansicht zu blättern.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -187,14 +187,14 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pInfo`  
+ *"pInfo"*  
  Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Struktur, die den aktuellen Druckauftrag beschreibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn drucken oder seitenansichtauftrags beginnen kann; 0, wenn der Vorgang wurde abgebrochen.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Verhalten dieser Funktion hängt von, ob es für drucken oder seitenansichtauftrags aufgerufen wird (gemäß der **M_bPreview** Mitglied der `pInfo` Parameter). Wenn eine Datei gedruckt wird, ruft diese Funktion des Dialogfelds drucken, verwenden die Werte in der [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Datenstruktur, `pInfo` zeigt auf, nachdem der Benutzer das Dialogfeld geschlossen wurde, erstellt die Funktion einen Drucker-Gerätekontext anhand der Einstellungen im Dialogfeld angegebenen Benutzer und gibt dieser Gerätekontext über die `pInfo` Parameter. Dieser Gerätekontext wird verwendet, um das Dokument zu drucken.  
+ Das Verhalten dieser Funktion hängt von, ob es für drucken oder seitenansichtauftrags aufgerufen wird (gemäß der `m_bPreview` Mitglied der *"pInfo"* Parameter). Wenn eine Datei gedruckt wird, ruft diese Funktion des Dialogfelds drucken, verwenden die Werte in der [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Datenstruktur, *"pInfo"* verweist auf; nachdem der Benutzer das Dialogfeld geschlossen wurde, erstellt die Funktion ein Druckergerätekontext basierend auf Einstellungen im Dialogfeld angegebenen Benutzer und gibt dieser Gerätekontext über die *"pInfo"* Parameter. Dieser Gerätekontext wird verwendet, um das Dokument zu drucken.  
   
  Wenn eine Datei in der Vorschau wird, erstellt diese Funktion einen druckergerätkontext mit der aktuellen Druckereinstellungen zu verwenden; Dieser Gerätekontext dient zum Simulieren des Druckers während der Vorschau.  
   
@@ -206,7 +206,7 @@ CDocument* GetDocument() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die [CDocument](../../mfc/reference/cdocument-class.md) der Sicht zugeordneten Objekt. **NULL** , wenn die Ansicht nicht an ein Dokument angefügt ist.  
+ Ein Zeiger auf die [CDocument](../../mfc/reference/cdocument-class.md) der Sicht zugeordneten Objekt. NULL, wenn die Ansicht nicht an ein Dokument angefügt ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Dadurch können Sie das Dokument Memberfunktionen aufrufen.  
@@ -219,14 +219,14 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDocItem`  
+ *pDocItem*  
  Verweist auf das Dokumentelement getestet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn das angegebene Dokumentelement ausgewählt ist; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt die standardmäßige Implementierung dieser Funktion **"false"**. Überschreiben Sie diese Funktion, wenn Sie mit der Auswahl implementieren [CDocItem](../../mfc/reference/cdocitem-class.md) Objekte. Sie müssen diese Funktion überschreiben, wenn Ihre Sicht OLE-Elemente enthält.  
+ Die standardmäßige Implementierung dieser Funktion gibt "false" zurück. Überschreiben Sie diese Funktion, wenn Sie mit der Auswahl implementieren [CDocItem](../../mfc/reference/cdocitem-class.md) Objekte. Sie müssen diese Funktion überschreiben, wenn Ihre Sicht OLE-Elemente enthält.  
   
 ##  <a name="onactivateframe"></a>  CView::OnActivateFrame  
  Wird vom Framework aufgerufen, wenn das Rahmenfenster, die die Sicht enthält, aktiviert oder deaktiviert ist.  
@@ -238,16 +238,16 @@ virtual void OnActivateFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nState`  
+ *nState*  
  Gibt an, ob das Rahmenfenster ist aktiviert oder deaktiviert. Die folgenden Werte sind möglich:  
   
-- **WA_INACTIVE** das Rahmenfenster wird deaktiviert.  
+- WA_INACTIVE das Rahmenfenster wird deaktiviert.  
   
-- **WA_ACTIVE** das Rahmenfenster abgesehen einen Mausklick (z. B. durch Verwenden der Tastaturschnittstelle an, wählen Sie im Fenster) über eine Methode aktiviert wird.  
+- WA_ACTIVE, die das Rahmenfenster aktiviert wird, über eine Methode als eine Maus klicken Sie auf (z. B. durch Verwendung der Tastaturschnittstelle, um das Fenster auszuwählen).  
   
-- **WA_CLICKACTIVE** das Rahmenfenster per Mausklick aktiviert wird  
+- WA_CLICKACTIVE das Rahmenfenster ist durch einen Mausklick aktiviert wird  
   
- `pFrameWnd`  
+ *pFrameWnd*  
  Ein Zeiger auf das Rahmenfenster, die aktiviert werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -264,19 +264,19 @@ virtual void OnActivateView(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bActivate`  
+ *bActivate*  
  Gibt an, ob die Sicht wird aktiviert oder deaktiviert.  
   
- `pActivateView`  
+ *pActivateView*  
  Verweist auf das Ansichtsobjekt, das aktiviert wird.  
   
- `pDeactiveView`  
+ *pDeactiveView*  
  Verweist auf das Ansichtsobjekt, das deaktiviert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Die standardmäßige Implementierung dieser Funktion legt den Fokus auf die Ansicht aktiviert wird. Überschreiben Sie diese Funktion, wenn Ausführen spezieller Verarbeitung, wenn eine Sicht aktiviert oder deaktiviert ist. Z. B. Wenn Sie besondere visuelle Hinweise bereitstellen, die die aktive Ansicht von inaktiven Ansichten unterscheiden möchten, Sie würden Untersuchen der `bActivate` Parameter und die Ansicht Darstellung entsprechend aktualisieren.  
+ Die standardmäßige Implementierung dieser Funktion legt den Fokus auf die Ansicht aktiviert wird. Überschreiben Sie diese Funktion, wenn Ausführen spezieller Verarbeitung, wenn eine Sicht aktiviert oder deaktiviert ist. Z. B. Wenn Sie besondere visuelle Hinweise bereitstellen, die die aktive Ansicht von inaktiven Ansichten unterscheiden möchten, Sie würden Untersuchen der *bActivate* Parameter und die Ansicht Darstellung entsprechend aktualisieren.  
   
- Die `pActivateView` und `pDeactiveView` Parameter zeigen Sie auf die gleiche Ansicht, wenn Hauptrahmenfenster für die Anwendung, ändern sich die aktive Ansicht aktiviert ist – z. B. wenn der Fokus aus einer anderen Anwendung mit diesem, anstatt von einem übertragen werden Zeigen Sie in eine andere in der Anwendung oder beim Wechseln zwischen untergeordneten MDI-Fenster an. Dies ermöglicht eine Ansicht für ihre Palette erneut zu nutzen, bei Bedarf.  
+ Die *pActivateView* und *pDeactiveView* Parameter zeigen Sie auf die gleiche Ansicht, wenn die Anwendung Hauptrahmenfenster ändern sich die aktive Ansicht aktiviert ist, z. B., wenn der Fokus wird Beim Wechsel zwischen untergeordneten MDI-Fenster aus einer anderen Anwendung mit diesem anstatt von einer Sicht in eine andere in der Anwendung oder übertragen werden soll. Dies ermöglicht eine Ansicht für ihre Palette erneut zu nutzen, bei Bedarf.  
   
  Diese Parameter unterscheiden sich beim [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) aufgerufen wird und eine Sicht, die sich von Was ist [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) zurück. Dies geschieht am häufigsten mit Splitterfenster.  
   
@@ -290,10 +290,10 @@ virtual void OnBeginPrinting(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Verweist auf den Druckergerätekontext.  
   
- `pInfo`  
+ *"pInfo"*  
  Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Struktur, die den aktuellen Druckauftrag beschreibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -312,30 +312,30 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDataObject`  
+ *pDataObject*  
  Verweist auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) in der Ansicht der Drop-Filterbereich gezogen wird.  
   
- `dwKeyState`  
- Enthält den Status der Zusatztasten. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, und **MK_RBUTTON**.  
+ *dwKeyState*  
+ Enthält den Status der Zusatztasten. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.  
   
- `point`  
+ *Punkt*  
  Der aktuellen Position relativ zum Clientbereich der Ansicht.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Wert aus der `DROPEFFECT` aufgezählt-Typ, der den Typ der Drop, die auftreten würden angibt, wenn der Benutzer das Objekt an dieser Position gelöscht. Der Typ des Drop in der Regel hängt von den aktuellen Status erkennbar `dwKeyState`. Eine standardmäßige Zuordnung von Keystates zu `DROPEFFECT` Werte sind:  
+ Ein Wert aus der-DropEffect-aufgezählt-Typ, der den Typ der Drop, die auftreten würden angibt, wenn der Benutzer das Objekt an dieser Position gelöscht. Der Typ des Drop in der Regel hängt von den aktuellen Status erkennbar *DwKeyState*. Eine standardmäßige Zuordnung von Keystates-DropEffect-Werte ist:  
   
-- `DROPEFFECT_NONE` Das Datenobjekt kann nicht in diesem Fenster nicht gelöscht werden.  
+- In diesem Fenster können DROPEFFECT_NONE das Datenobjekt gelöscht werden.  
   
-- `DROPEFFECT_LINK` für **MK_CONTROL &#124; MK_SHIFT** erstellt eine Verknüpfung zwischen dem Objekt und dem Server.  
+- DROPEFFECT_LINK für MK_CONTROL &#124; MK_SHIFT erstellt eine Verknüpfung zwischen dem Objekt und dem Server.  
   
-- `DROPEFFECT_COPY` für **MK_CONTROL** erstellt eine Kopie des gelöschten Objekts.  
+- DROPEFFECT_COPY für MK_CONTROL erstellt eine Kopie des gelöschten Objekts.  
   
-- `DROPEFFECT_MOVE` für **MK_ALT** erstellt eine Kopie des gelöschten Objekts und das ursprüngliche Objekt zu löschen. Dies ist die Standard-Drop-Effekt in der Regel auf, wenn die Sicht dieses Datenobjekt annehmen kann.  
+- Den Wert DROPEFFECT_MOVE für MK_ALT erstellt eine Kopie des gelöschten Objekts und löschen Sie das ursprüngliche Objekt. Dies ist die Standard-Drop-Effekt in der Regel auf, wenn die Sicht dieses Datenobjekt annehmen kann.  
   
  Weitere Informationen finden Sie im MFC Advanced Concepts-Beispiel [OCLIENT](../../visual-cpp-samples.md).  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßige Implementierung werden keine Aktionen ausgeführt und zurückgegeben wird `DROPEFFECT_NONE`.  
+ Standardimplementierung wird keine und DROPEFFECT_NONE zurückgeben.  
   
  Überschreiben Sie diese Funktion zur Vorbereitung der späteren Aufrufen der [OnDragOver](#ondragover) Memberfunktion. Alle Daten, die erforderlich sind, aus dem Datenobjekt abgerufen werden sollen, zu diesem Zeitpunkt zur späteren Verwendung in der `OnDragOver` Memberfunktion. Die Ansicht sollte auch zu diesem Zeitpunkt visuelles Feedback erteilen aktualisiert werden. Weitere Informationen finden Sie im Artikel [Drag & Drop: Implementieren eines Drop-Ziels](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
@@ -360,30 +360,30 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDataObject`  
+ *pDataObject*  
  Verweist auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) über das Ablageziel gezogen werden.  
   
- `dwKeyState`  
- Enthält den Status der Zusatztasten. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, und **MK_RBUTTON**.  
+ *dwKeyState*  
+ Enthält den Status der Zusatztasten. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.  
   
- `point`  
+ *Punkt*  
  Der aktuellen Position relativ zum Clientbereich anzeigen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Wert aus der `DROPEFFECT` aufgezählt-Typ, der den Typ der Drop, die auftreten würden angibt, wenn der Benutzer das Objekt an dieser Position gelöscht. Der Typ des Drop hängt oft von den aktuellen Status des Schlüssels durch `dwKeyState`. Eine standardmäßige Zuordnung von Keystates zu `DROPEFFECT` Werte sind:  
+ Ein Wert aus der-DropEffect-aufgezählt-Typ, der den Typ der Drop, die auftreten würden angibt, wenn der Benutzer das Objekt an dieser Position gelöscht. Der Typ des Drop hängt oft von den aktuellen Status des Schlüssels durch *DwKeyState*. Eine standardmäßige Zuordnung von Keystates-DropEffect-Werte ist:  
   
-- `DROPEFFECT_NONE` Das Datenobjekt kann nicht in diesem Fenster nicht gelöscht werden.  
+- In diesem Fenster können DROPEFFECT_NONE das Datenobjekt gelöscht werden.  
   
-- `DROPEFFECT_LINK` für **MK_CONTROL &#124; MK_SHIFT** erstellt eine Verknüpfung zwischen dem Objekt und dem Server.  
+- DROPEFFECT_LINK für MK_CONTROL &#124; MK_SHIFT erstellt eine Verknüpfung zwischen dem Objekt und dem Server.  
   
-- `DROPEFFECT_COPY` für **MK_CONTROL** erstellt eine Kopie des gelöschten Objekts.  
+- DROPEFFECT_COPY für MK_CONTROL erstellt eine Kopie des gelöschten Objekts.  
   
-- `DROPEFFECT_MOVE` für **MK_ALT** erstellt eine Kopie des gelöschten Objekts und das ursprüngliche Objekt zu löschen. Dies ist der Standard-Drop-Effekt in der Regel auf, wenn die Ansicht das Datenobjekt annehmen kann.  
+- Den Wert DROPEFFECT_MOVE für MK_ALT erstellt eine Kopie des gelöschten Objekts und löschen Sie das ursprüngliche Objekt. Dies ist der Standard-Drop-Effekt in der Regel auf, wenn die Ansicht das Datenobjekt annehmen kann.  
   
  Weitere Informationen finden Sie im MFC Advanced Concepts-Beispiel [OCLIENT](../../visual-cpp-samples.md).  
   
 ### <a name="remarks"></a>Hinweise  
- Die Standardimplementierung gibt nichts zurück, und wählen Sie `DROPEFFECT_NONE`.  
+ Die Standardimplementierung gibt nichts Unternehmen und DROPEFFECT_NONE zurückgeben.  
   
  Überschreiben Sie diese Funktion, um während des Ziehvorgangs visuelles Feedback zu geben. Da diese Funktion kontinuierlich aufgerufen wird, sollten alle darin enthaltenen Code so weit wie möglich optimiert werden. Weitere Informationen finden Sie im Artikel [Drag & Drop: Implementieren eines Drop-Ziels](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
@@ -397,24 +397,24 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwKeyState`  
- Enthält den Status der Zusatztasten. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, und **MK_RBUTTON**.  
+ *dwKeyState*  
+ Enthält den Status der Zusatztasten. Dies ist eine Kombination einer beliebigen Anzahl von Folgendes: MK_CONTROL, MK_SHIFT MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON.  
   
- `point`  
+ *Punkt*  
  Enthält die Position des Cursors in Pixel relativ zu dem Bildschirm.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Wert aus der `DROPEFFECT` aufgezählt-Typ, der den Typ der Drop, die auftreten würden angibt, wenn der Benutzer das Objekt an dieser Position gelöscht. Der Typ des Drop in der Regel hängt von den aktuellen Status erkennbar `dwKeyState`. Eine standardmäßige Zuordnung von Keystates zu `DROPEFFECT` Werte sind:  
+ Ein Wert aus der-DropEffect-aufgezählt-Typ, der den Typ der Drop, die auftreten würden angibt, wenn der Benutzer das Objekt an dieser Position gelöscht. Der Typ des Drop in der Regel hängt von den aktuellen Status erkennbar *DwKeyState*. Eine standardmäßige Zuordnung von Keystates-DropEffect-Werte ist:  
   
-- `DROPEFFECT_NONE` Das Datenobjekt kann nicht in diesem Fenster nicht gelöscht werden.  
+- In diesem Fenster können DROPEFFECT_NONE das Datenobjekt gelöscht werden.  
   
-- `DROPEFFECT_LINK` für **MK_CONTROL &#124; MK_SHIFT** erstellt eine Verknüpfung zwischen dem Objekt und dem Server.  
+- DROPEFFECT_LINK für MK_CONTROL &#124; MK_SHIFT erstellt eine Verknüpfung zwischen dem Objekt und dem Server.  
   
-- `DROPEFFECT_COPY` für **MK_CONTROL** erstellt eine Kopie des gelöschten Objekts.  
+- DROPEFFECT_COPY für MK_CONTROL erstellt eine Kopie des gelöschten Objekts.  
   
-- `DROPEFFECT_MOVE` für **MK_ALT** erstellt eine Kopie des gelöschten Objekts und das ursprüngliche Objekt zu löschen.  
+- Den Wert DROPEFFECT_MOVE für MK_ALT erstellt eine Kopie des gelöschten Objekts und löschen Sie das ursprüngliche Objekt.  
   
-- `DROPEFFECT_SCROLL` Gibt an, dass ein Ziehvorgangs ein Bildlauf durchgeführt wird oder in der Ansicht der Ziel auftritt.  
+- DROPEFFECT_SCROLL gibt an, die ein Ziehvorgangs ein Bildlauf durchgeführt wird oder in der Ansicht der Ziel auftritt.  
   
  Weitere Informationen finden Sie im MFC Advanced Concepts-Beispiel [OCLIENT](../../visual-cpp-samples.md).  
   
@@ -429,13 +429,13 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Verweist auf den Gerätekontext für das Rendern eines Bilds des Dokuments verwendet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Funktion, um die Bildschirmanzeige, Drucken und Druckvorschau ausführen, und übergibt einen anderes Gerätekontext in jedem Fall. Es ist keine Standardimplementierung vorhanden.  
   
- Sie müssen diese Funktion, um die Ansicht des Dokuments anzuzeigen, überschreiben. Grafik Device Interface (GDI) Aufrufe mithilfe der [CDC](../../mfc/reference/cdc-class.md) Objekt verweist die `pDC` Parameter. Auswählen von GDI-Ressourcen, z. B. Stifte oder Schriftarten, den Gerätekontext vor dem Zeichnen und deaktivieren diese anschließend. Der Code zum Zeichnen sein häufig geräteunabhängige; d. h. erfordert es Informationen zur Art des Geräts das Bild angezeigt wird.  
+ Sie müssen diese Funktion, um die Ansicht des Dokuments anzuzeigen, überschreiben. Grafik Device Interface (GDI) Aufrufe mithilfe der [CDC](../../mfc/reference/cdc-class.md) Objekt verweist die *pDC* Parameter. Auswählen von GDI-Ressourcen, z. B. Stifte oder Schriftarten, den Gerätekontext vor dem Zeichnen und deaktivieren diese anschließend. Der Code zum Zeichnen sein häufig geräteunabhängige; d. h. erfordert es Informationen zur Art des Geräts das Bild angezeigt wird.  
   
  Rufen Sie zum Zeichnen zu optimieren, die [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) Memberfunktion des Gerätekontexts, um herauszufinden, ob ein angegebenes Rechteck gezeichnet wird. Wenn Sie zwischen normalen Bildschirm anzeigen und Drucken unterscheiden müssen, rufen Sie die [IsPrinting](../../mfc/reference/cdc-class.md#isprinting) Memberfunktion des Gerätekontexts.  
   
@@ -450,28 +450,28 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDataObject`  
+ "pDataObject *  
  Verweist auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) , die in das Ablageziel abgelegt wird.  
   
- `dropEffect`  
+ *-DropEffect-*  
  Die Drop-Effekt, den der Benutzer angefordert hat.  
   
-- `DROPEFFECT_COPY` Erstellt eine Kopie des Datenobjekts gelöscht wird.  
+- DROPEFFECT_COPY erstellt eine Kopie der Datenobjekt, das gelöscht werden.  
   
-- `DROPEFFECT_MOVE` Verschiebt das Datenobjekt auf der aktuellen Position des Mauszeigers.  
+- Den Wert DROPEFFECT_MOVE verschiebt das Datenobjekt an die aktuelle Position des Mauszeigers.  
   
-- `DROPEFFECT_LINK` Erstellt einen Link zwischen einem Datenobjekt und den Server.  
+- DROPEFFECT_LINK erstellt einen Link zwischen einem Datenobjekt und den Server.  
   
- `point`  
+ *Punkt*  
  Der aktuellen Position relativ zum Clientbereich anzeigen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn Sie der Löschvorgang erfolgreich war; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Bei der Standardimplementierung wird keine Aktion ausgeführt, und gibt **"false"**.  
+ Bei der Standardimplementierung wird keine Aktion ausgeführt, und gibt FALSE zurück.  
   
- Überschreiben Sie diese Funktion, um die Auswirkung der OLE-Drop in den Clientbereich der Ansicht zu implementieren. Das Datenobjekt untersucht werden kann, über `pDataObject` Zwischenablagedaten Formate und Daten gelöscht am angegebenen Punkt.  
+ Überschreiben Sie diese Funktion, um die Auswirkung der OLE-Drop in den Clientbereich der Ansicht zu implementieren. Das Datenobjekt untersucht werden kann, über *pDataObject* Zwischenablagedaten Formate und Daten gelöscht am angegebenen Punkt.  
   
 > [!NOTE]
 >  Das Framework mit dieser Funktion wird nicht, wenn es eine Überschreibung ist [OnDropEx](#ondropex) in dieser Ansichtsklasse.  
@@ -488,20 +488,20 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDataObject`  
+ *pDataObject*  
  Verweist auf die [COleDataObject](../../mfc/reference/coledataobject-class.md) , die in das Ablageziel abgelegt wird.  
   
- `dropDefault`  
- Die Auswirkungen, die für die Standard-Drop-Vorgang basierend auf den aktuellen Status der Benutzer ausgewählt haben. Es kann sein `DROPEFFECT_NONE`. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.  
+ *dropDefault*  
+ Die Auswirkungen, die für die Standard-Drop-Vorgang basierend auf den aktuellen Status der Benutzer ausgewählt haben. Es kann DROPEFFECT_NONE sein. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.  
   
- `dropList`  
+ *Dropdownliste*  
  Eine Liste der Drop-Effekte, die die Drop-Quelle unterstützt. Drop-Effekt-Werte können mit dem bitweisen OR kombiniert werden ( **&#124;**) Vorgang. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.  
   
- `point`  
+ *Punkt*  
  Der aktuellen Position relativ zum Clientbereich anzeigen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Drop-Effekt, die aus der Drop-Versuch, an der vom angegebenen Position resultieren `point`. Diese Angabe muss einen der Werte erkennbar *DropEffectList*. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.  
+ Die Drop-Effekt, die aus der Drop-Versuch, an der vom angegebenen Position resultieren *zeigen*. Diese Angabe muss einen der Werte erkennbar *DropEffectList*. Drop-Effekte werden im Abschnitt "Hinweise" erläutert.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Standardimplementierung gibt nichts, und Zurückgeben von Dummywert (-1), um anzugeben, dass das Framework aufgerufen, sollte die [OnDrop](#ondrop) Handler.  
@@ -512,27 +512,27 @@ virtual DROPEFFECT OnDropEx(
   
 -   Wenn die rechte Maustaste ausgefallen ist, sollte die Außerkraftsetzung ein Popupmenü anzeigen, die Drop-Effekte durch die Quelle des Drop-Unterstützung bietet.  
   
-    -   Untersuchen Sie `dropList` um zu bestimmen, die Drop-Effekte, die durch die Drop-Quelle unterstützt. Aktivieren Sie nur diese Aktionen über das Popupmenü.  
+    -   Untersuchen Sie *Dropdownliste* um zu bestimmen, die Drop-Effekte, die durch die Drop-Quelle unterstützt. Aktivieren Sie nur diese Aktionen über das Popupmenü.  
   
-    -   Verwendung [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) festzulegende die Standardaktion, die basierend auf `dropDefault`.  
+    -   Verwendung [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) festzulegende die Standardaktion, die basierend auf *DropDefault*.  
   
     -   Schalten Sie schließlich die Aktion, die durch die Auswahl des Benutzers im Popupmenü angegeben.  
   
--   Wenn die rechte Maustaste nicht ausgefallen ist, sollte die Außerkraftsetzung dies als standard-Drop-Anforderung verarbeiten. Verwenden Sie die Drop-Effekt, der im angegebenen `dropDefault`. Alternativ kann die Außerkraftsetzung den dummy Wert (-1), um anzugeben, dass zurückgeben `OnDrop` behandelt diese Drop-Vorgangs.  
+-   Wenn die rechte Maustaste nicht ausgefallen ist, sollte die Außerkraftsetzung dies als standard-Drop-Anforderung verarbeiten. Verwenden Sie die Drop-Effekt, der im angegebenen *DropDefault*. Alternativ kann die Außerkraftsetzung den dummy Wert (-1), um anzugeben, dass zurückgeben `OnDrop` behandelt diese Drop-Vorgangs.  
   
- Verwendung `pDataObject` Untersuchen der `COleDataObject` Zwischenablagedaten Format und Daten gelöscht am angegebenen Punkt.  
+ Verwendung *pDataObject* Untersuchen der `COleDataObject` Zwischenablagedaten Format und Daten gelöscht am angegebenen Punkt.  
   
  Drop-Effekte beschreiben die Aktion ein Drop-Vorgang zugeordnet ist. Die folgende Liste von Drop-Effekte finden Sie in:  
   
-- `DROPEFFECT_NONE` Ein solches löschen, ist nicht zulässig.  
+- DROPEFFECT_NONE ein Drop würde nicht zulässig.  
   
-- `DROPEFFECT_COPY` Ein Kopiervorgang würde ausgeführt werden.  
+- DROPEFFECT_COPY ein Kopiervorgang würde ausgeführt werden.  
   
-- `DROPEFFECT_MOVE` Ein Verschiebevorgang würde ausgeführt werden.  
+- Es würde den Wert DROPEFFECT_MOVE ein Verschiebevorgang ausgeführt werden.  
   
-- `DROPEFFECT_LINK` Eine Verknüpfung aus dem gelöschten Daten auf die ursprünglichen Daten würde hergestellt werden.  
+- Ein Link DROPEFFECT_LINK aus den gelöschten Daten auf die ursprünglichen Daten würden hergestellt werden.  
   
-- `DROPEFFECT_SCROLL` Gibt an, dass ein Ziehvorgangs ein Bildlauf durchgeführt wird, oder im Ziel auftritt.  
+- DROPEFFECT_SCROLL gibt an, die ein Ziehvorgangs ein Bildlauf durchgeführt wird oder im Ziel auftritt.  
   
  Weitere Informationen zum Festlegen des Standard-Menübefehls finden Sie unter [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) im Windows SDK und [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) in diesem Handbuch.  
   
@@ -546,10 +546,10 @@ virtual void OnEndPrinting(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Verweist auf den Druckergerätekontext.  
   
- `pInfo`  
+ *"pInfo"*  
  Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Struktur, die den aktuellen Druckauftrag beschreibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -567,20 +567,20 @@ virtual void OnEndPrintPreview(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Verweist auf den Druckergerätekontext.  
   
- `pInfo`  
+ *"pInfo"*  
  Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Struktur, die den aktuellen Druckauftrag beschreibt.  
   
- `point`  
+ *Punkt*  
  Gibt den Punkt auf der Seite, die im Vorschaumodus zuletzt angezeigt wurden.  
   
- `pView`  
+ *pView*  
  Verweist auf das Ansichtsobjekt, für die Vorschau verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
- Ruft die standardmäßige Implementierung dieser Funktion die [OnEndPrinting](#onendprinting) Memberfunktion und eine Wiederherstellung begann das Hauptrahmenfenster in den Zustand vor der Seitenansicht war. Überschreiben Sie diese Funktion zum Ausführen der besonderen Verarbeitung, wenn im Vorschaumodus beendet wird. Z. B., wenn Sie die Position des Benutzers im Dokument beibehalten, beim Wechseln vom Vorschaumodus auf normalen Anzeigemodus möchten, Sie können einen Bildlauf zu der Position von beschrieben die `point` Parameter und die `m_nCurPage` Mitglied der `CPrintInfo` Struktur die die `pInfo` -Parameter zeigt.  
+ Ruft die standardmäßige Implementierung dieser Funktion die [OnEndPrinting](#onendprinting) Memberfunktion und eine Wiederherstellung begann das Hauptrahmenfenster in den Zustand vor der Seitenansicht war. Überschreiben Sie diese Funktion zum Ausführen der besonderen Verarbeitung, wenn im Vorschaumodus beendet wird. Z. B., wenn Sie die Position des Benutzers im Dokument beibehalten, beim Wechseln vom Vorschaumodus auf normalen Anzeigemodus möchten, Sie können einen Bildlauf zu der Position von beschrieben die *zeigen* Parameter und die `m_nCurPage` Mitglied der `CPrintInfo` Datenstruktur, die *"pInfo"* -Parameter zeigt.  
   
  Rufen Sie immer die Basisklassenversion von `OnEndPrintPreview` aus Ihrer Override "," in der Regel am Ende der Funktion.  
   
@@ -592,7 +592,7 @@ virtual void OnInitialUpdate();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Ruft die standardmäßige Implementierung dieser Funktion die [OnUpdate](#onupdate) Memberfunktion ohne Hinweis Informationen (d. h. unter Verwendung der Standardwerte von 0 für die `lHint` Parameter und **NULL** für die `pHint` Parameter). Überschreiben Sie diese Funktion, um die einmalige Initialisierung auszuführen, die Informationen über das Dokument erfordert. Beispielsweise verfügt die Anwendung Dokumente fester Größe, können dieser Funktion Sie zum Durchführen eines Bildlaufs Grenzwerte für eine Sicht basierend auf die Größe des Dokuments zu initialisieren. Wenn Ihre Anwendung variabler Größe von Dokumenten unterstützt, verwenden [OnUpdate](#onupdate) zum Aktualisieren der Bildlauf schränkt jedes Mal das Dokument geändert wird.  
+ Ruft die standardmäßige Implementierung dieser Funktion die [OnUpdate](#onupdate) Memberfunktion ohne Hinweis Informationen (d. h. unter Verwendung der Standardwerte von 0 für die *lHint* Parameter und NULL für die  *pHint* Parameter). Überschreiben Sie diese Funktion, um die einmalige Initialisierung auszuführen, die Informationen über das Dokument erfordert. Beispielsweise verfügt die Anwendung Dokumente fester Größe, können dieser Funktion Sie zum Durchführen eines Bildlaufs Grenzwerte für eine Sicht basierend auf die Größe des Dokuments zu initialisieren. Wenn Ihre Anwendung variabler Größe von Dokumenten unterstützt, verwenden [OnUpdate](#onupdate) zum Aktualisieren der Bildlauf schränkt jedes Mal das Dokument geändert wird.  
   
 ##  <a name="onpreparedc"></a>  CView::OnPrepareDC  
  Aufgerufen, bevor die [OnDraw](#ondraw) Memberfunktion aufgerufen wird, für die Bildschirmanzeige und vor der [OnPrint](#onprint) Memberfunktion für jede Seite beim Drucken oder seitenansichtauftrags aufgerufen wird.  
@@ -604,24 +604,24 @@ virtual void OnPrepareDC(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Verweist auf den Gerätekontext für das Rendern eines Bilds des Dokuments verwendet werden soll.  
   
- `pInfo`  
- Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Struktur, die den aktuellen Druckauftrag beschreibt, wenn `OnPrepareDC` für die Vorschau Drucks oder zur aufgerufen wird die `m_nCurPage` Element gibt die Seite gedruckt werden soll. Dieser Parameter ist **NULL** Wenn `OnPrepareDC` für die Bildschirmanzeige aufgerufen wird.  
+ *"pInfo"*  
+ Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) -Struktur, die den aktuellen Druckauftrag beschreibt, wenn `OnPrepareDC` für die Vorschau Drucks oder zur aufgerufen wird die `m_nCurPage` Element gibt die Seite gedruckt werden soll. Dieser Parameter ist NULL, wenn `OnPrepareDC` für die Bildschirmanzeige aufgerufen wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Die standardmäßige Implementierung dieser Funktion wird keine Aktion ausgeführt, wenn die Funktion für die Bildschirmanzeige aufgerufen wird. Aber diese Funktion ist in abgeleiteten Klassen überschrieben, wie z. B. [CScrollView](../../mfc/reference/cscrollview-class.md), Anpassen der Attribute des Gerätekontexts; deshalb sollten Sie immer Implementierung der Basisklasse aufrufen, am Anfang der Außerkraftsetzung.  
   
- Die Funktion für den Druck aufgerufen wird, untersucht die standardmäßige Implementierung der Seiteninformationen gespeichert, der `pInfo` Parameter. Wenn die Länge des Dokuments nicht angegeben wurde, `OnPrepareDC` geht davon aus dem Dokument, eine Seite lang werden, und das Drucken-Schleife beendet, nachdem eine Seite gedruckt wurde. Die Funktion beendet das Drucken-Schleife durch Festlegen der `m_bContinuePrinting` Member der Struktur auf **"false"**.  
+ Die Funktion für den Druck aufgerufen wird, untersucht die standardmäßige Implementierung der Seiteninformationen gespeichert, der *"pInfo"* Parameter. Wenn die Länge des Dokuments nicht angegeben wurde, `OnPrepareDC` geht davon aus dem Dokument, eine Seite lang werden, und das Drucken-Schleife beendet, nachdem eine Seite gedruckt wurde. Die Funktion beendet das Drucken-Schleife durch Festlegen der `m_bContinuePrinting` Member der Struktur auf "false".  
   
  Überschreiben Sie `OnPrepareDC` für eine beliebige der folgenden Gründe:  
   
 -   Anpassen der Attribute des Gerätekontexts für die angegebene Seite nach Bedarf. Z. B. Wenn Sie den Zuordnungsmodus oder andere Merkmale des Gerätekontexts festlegen müssen, tun in dieser Funktion.  
   
--   Drucken-Time-Paginierung ausführen zu können. Normalerweise geben Sie die Länge des Dokuments beim Beginn des Druckens mit der [OnPreparePrinting](#onprepareprinting) Memberfunktion. Wenn Sie nicht wissen, im voraus, wie lange das Dokument ist (z. B. wenn eine unbestimmte Anzahl von Datensätzen aus einer Datenbank zu drucken) jedoch außer Kraft setzen `OnPrepareDC` um für das Ende des Dokuments zu testen, während es gedruckt wird. Wenn des Dokuments gedruckt werden nicht mehr vorhanden ist, legen Sie die `m_bContinuePrinting` Mitglied der `CPrintInfo` -Struktur an **"false"**.  
+-   Drucken-Time-Paginierung ausführen zu können. Normalerweise geben Sie die Länge des Dokuments beim Beginn des Druckens mit der [OnPreparePrinting](#onprepareprinting) Memberfunktion. Wenn Sie nicht wissen, im voraus, wie lange das Dokument ist (z. B. wenn eine unbestimmte Anzahl von Datensätzen aus einer Datenbank zu drucken) jedoch außer Kraft setzen `OnPrepareDC` um für das Ende des Dokuments zu testen, während es gedruckt wird. Wenn des Dokuments gedruckt werden nicht mehr vorhanden ist, legen Sie die `m_bContinuePrinting` Mitglied der `CPrintInfo` Struktur auf "false".  
   
--   Escapesequenzen, die an den Drucker auf Basis von Seite zu senden. Zum Senden von Escapezeichen aus `OnPrepareDC`, rufen Sie die **Escape** Memberfunktion von der `pDC` Parameter.  
+-   Escapesequenzen, die an den Drucker auf Basis von Seite zu senden. Zum Senden von Escapezeichen aus `OnPrepareDC`, rufen Sie die `Escape` Memberfunktion von der *pDC* Parameter.  
   
  Rufen Sie die Basisklassenversion von `OnPrepareDC` am Anfang der Außerkraftsetzung.  
   
@@ -636,7 +636,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pInfo`  
+ *"pInfo"*  
  Verweist auf eine [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Struktur, die den aktuellen Druckauftrag beschreibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -645,13 +645,13 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ### <a name="remarks"></a>Hinweise  
  Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
- Sie müssen diese Funktion zum Drucken und Druckvorschau aktivieren überschreiben. Aufrufen der [DoPreparePrinting](#doprepareprinting) Memberfunktion ist, und übergeben sie die `pInfo` Parameter, und klicken Sie dann dessen Rückgabewert; zurückgeben `DoPreparePrinting` zeigt das Dialogfeld "Drucken" und erstellt einen Drucker-Gerätekontext. Wenn Sie das Dialogfeld "Drucken" mit Werten als die Standardwerte initialisieren möchten, die Mitglieder der Werte zuweisen `pInfo`. Wenn Sie wissen, dass die Länge des Dokuments, übergeben Sie z. B. den Wert, der die [Anzahl](../../mfc/reference/cprintinfo-structure.md#setmaxpage) Memberfunktion von `pInfo` vor dem Aufruf `DoPreparePrinting`. Dieser Wert wird angezeigt, in der To: Feld im Bereich Teil des Dialogfelds drucken.  
+ Sie müssen diese Funktion zum Drucken und Druckvorschau aktivieren überschreiben. Aufrufen der [DoPreparePrinting](#doprepareprinting) Memberfunktion ist, und übergeben sie die *"pInfo"* Parameter, und klicken Sie dann dessen Rückgabewert; zurückgeben `DoPreparePrinting` zeigt das Dialogfeld "Drucken" und erstellt einen Drucker-Gerätekontext. Wenn Sie das Dialogfeld "Drucken" mit Werten als die Standardwerte initialisieren möchten, die Mitglieder der Werte zuweisen *"pInfo"*. Wenn Sie wissen, dass die Länge des Dokuments, übergeben Sie z. B. den Wert, der die [Anzahl](../../mfc/reference/cprintinfo-structure.md#setmaxpage) Memberfunktion von *"pInfo"* vor dem Aufruf `DoPreparePrinting`. Dieser Wert wird angezeigt, in der To: Feld im Bereich Teil des Dialogfelds drucken.  
   
- `DoPreparePrinting` Das Dialogfeld "Drucken" für einen Auftrag für die Vorschau wird nicht angezeigt werden. Wenn Sie das Dialogfeld "Drucken" für einen Druckauftrag umgehen möchten, überprüfen Sie, ob die **M_bPreview** Mitglied `pInfo` ist **"false"** und legen Sie es auf **"true"** vor der Übergabe an `DoPreparePrinting`; setzen Sie ihn auf **"false"** danach.  
+ `DoPreparePrinting` Das Dialogfeld "Drucken" für einen Auftrag für die Vorschau wird nicht angezeigt werden. Wenn Sie das Dialogfeld "Drucken" für einen Druckauftrag umgehen möchten, überprüfen Sie, ob die `m_bPreview` Mitglied *"pInfo"* ist "false", und klicken Sie dann auf "true" festlegen, bevor die Übergabe an `DoPreparePrinting`; im Anschluss auf "false" zurückgesetzt.  
   
  Wenn Sie Initialisierungen durchführen, die auf zugreifen müssen die `CDC` überschreiben Objekt, das den Druckergerätekontext (z. B., wenn Sie die Seitengröße zu kennen, bevor Sie die Länge des Dokuments angeben müssen), darstellt der `OnBeginPrinting` Member Funktion.  
   
- Wenn der Wert festgelegt werden sollen die **M_nNumPreviewPages** oder **M_strPageDesc** Mitglied der `pInfo` Parameter dazu nach dem Aufruf `DoPreparePrinting`. Die `DoPreparePrinting` Funktion Elementgruppen **M_nNumPreviewPages** auf den Wert in der Anwendungsverzeichnis gefunden. INI-Datei und legt **M_strPageDesc** auf seinen Standardwert.  
+ Wenn der Wert festgelegt werden sollen die `m_nNumPreviewPages` oder `m_strPageDesc` Mitglied der *"pInfo"* Parameter dazu nach dem Aufruf `DoPreparePrinting`. Die `DoPreparePrinting` Funktion Elementgruppen `m_nNumPreviewPages` auf den Wert in der Anwendungsverzeichnis gefunden. INI-Datei und legt `m_strPageDesc` auf seinen Standardwert.  
   
 ### <a name="example"></a>Beispiel  
   Außer Kraft setzen `OnPreparePrinting` , und rufen Sie `DoPreparePrinting` aus überschreiben, damit das Framework ein Druckdialogfeld angezeigt, und erstellen einen Drucker-Gerätekontext für Sie.  
@@ -672,14 +672,14 @@ virtual void OnPrint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Verweist auf den Druckergerätekontext.  
   
- `pInfo`  
+ *"pInfo"*  
  Verweist auf eine `CPrintInfo` Struktur, die den aktuellen Druckauftrag beschreibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework ruft diese Funktion für jede Seite gedruckt wird, sofort nach dem Aufruf der [OnPrepareDC](#onpreparedc) Memberfunktion. Die Seite wird angegeben, indem die `m_nCurPage` Mitglied der [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Datenstruktur, `pInfo` verweist auf. Die Standardimplementierung Ruft die [OnDraw](#ondraw) Memberfunktion und übergibt den Druckergerätekontext.  
+ Das Framework ruft diese Funktion für jede Seite gedruckt wird, sofort nach dem Aufruf der [OnPrepareDC](#onpreparedc) Memberfunktion. Die Seite wird angegeben, indem die `m_nCurPage` Mitglied der [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) Datenstruktur, *"pInfo"* verweist auf. Die Standardimplementierung Ruft die [OnDraw](#ondraw) Memberfunktion und übergibt den Druckergerätekontext.  
   
  Überschreiben Sie diese Funktion für eine beliebige der folgenden Gründe:  
   
@@ -691,7 +691,7 @@ virtual void OnPrint(
   
 -   So implementieren Sie Kopf- oder Fußzeilen Sie können weiterhin `OnDraw` dazu, dass das Rendering Einschränken des Bereichs, der auf Drucken können.  
   
- Beachten Sie, dass die **M_rectDraw** Mitglied der `pInfo` Parameter beschreibt die Druckbereichs der Seite in logischen Einheiten.  
+ Beachten Sie, dass die `m_rectDraw` Mitglied der *"pInfo"* Parameter beschreibt die Druckbereichs der Seite in logischen Einheiten.  
   
  Rufen Sie nicht `OnPrepareDC` in der Überschreibung der `OnPrint`; das Framework ruft `OnPrepareDC` automatisch vor dem Aufruf `OnPrint`.  
   
@@ -713,34 +713,34 @@ virtual BOOL OnScroll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nScrollCode`  
+ *nScrollCode*  
  Ein Bildlaufleisten-Code, der den Benutzer angibt, der Anforderung Bildlauf. Dieser Parameter besteht aus zwei Teilen: ein niederwertige Byte ist, die den Typ des horizontalen Bildlauf auftritt bestimmt wird, und ein höherwertige Byte ist, die festlegt, den Typ des vertikalen Bildlauf auftritt:  
   
-- **SB_BOTTOM** führt einen Bildlauf nach unten.  
+- SB_BOTTOM führt einen Bildlauf nach unten.  
   
-- **SB_LINEDOWN** führt einen Bildlauf eine Zeile nach unten.  
+- SB_LINEDOWN verschiebt eine Zeile nach unten.  
   
-- **SB_LINEUP** führt einen Bildlauf eine Zeile einrichten.  
+- SB_LINEUP verschiebt eine Zeile nach oben.  
   
-- **SB_PAGEDOWN** führt einen Bildlauf eine Seite nach unten.  
+- SB_PAGEDOWN führt einen Bildlauf eine Seite nach unten.  
   
-- **SB_PAGEUP** führt einen Bildlauf eine Seite einrichten.  
+- SB_PAGEUP scrollt eine Seite einrichten.  
   
-- **SB_THUMBTRACK** zieht Bildlauffeld auf die angegebene Position. Die aktuelle Position im angegeben `nPos`.  
+- SB_THUMBTRACK zieht Bildlauffeld auf die angegebene Position. Die aktuelle Position im angegeben *nPos*.  
   
-- **SB_TOP** führt einen Bildlauf nach oben.  
+- SB_TOP führt einen Bildlauf nach oben.  
   
- `nPos`  
- Enthält die aktuelle Position für das Bildlauffeld, wenn der Bildlaufleisten-Code ist **SB_THUMBTRACK**; andernfalls ist es nicht verwendet. Je nach der anfänglichen Scroll Bereich `nPos` kann negativ sein und sollte in umgewandelt werden ein `int` bei Bedarf.  
+ *nPos*  
+ Enthält die aktuelle Position für das Bildlauffeld, ist der Code Bildlaufleisten-SB_THUMBTRACK; Andernfalls wird es nicht verwendet. Je nach der anfänglichen Scroll Bereich *nPos* kann negativ sein und sollte in umgewandelt werden ein **Int** bei Bedarf.  
   
- `bDoScroll`  
- Bestimmt, ob Sie tatsächlich die angegebene Durchführen eines Bildlaufs Aktion ausführen soll. Wenn **"true"** und Durchführen eines Bildlaufs; Wenn stattfinden sollte **"false"**, und klicken Sie dann einen Bildlauf nicht ausgeführt werden soll.  
+ *bDoScroll*  
+ Bestimmt, ob Sie tatsächlich die angegebene Durchführen eines Bildlaufs Aktion ausführen soll. Bei "true", sollte dann stattfinden; Wenn "false" sollte dann nicht auftreten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn `bDoScroll` ist **"true"** und wurde die Sicht tatsächlich durch einen Bildlauf, dann zurückgeben ungleich NULL ist, andernfalls 0. Wenn `bDoScroll` ist **"false"**, klicken Sie dann den Wert, der Sie Wenn zurückgegeben wäre zurückgeben `bDoScroll` wurden **"true"**, obwohl Sie tatsächlich den Bildlauf nicht tun.  
+ Wenn *bDoScroll* ist "true", und die Ansicht wurde tatsächlich durch einen Bildlauf, dann zurückgeben ungleich NULL ist, andernfalls 0. Wenn *bDoScroll* ist "false", und Rückgabe der Wert, der Sie Wenn zurückgegeben wäre *bDoScroll* wurden "true", obwohl Sie tatsächlich den Bildlauf nicht tun.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion wird in einem Fall durch das Framework mit aufgerufen `bDoScroll` festgelegt **"true"** Wenn die Sicht eine Bildlaufleiste-Nachricht empfängt. In diesem Fall sollten Sie die Ansicht tatsächlich blättern. Diese Funktion wird im anderen Fall mit `bDoScroll` festgelegt **"false"** bei einem OLE-Element anfänglich gezogen wird in den Bereich des automatischen Bildlaufs, des Drop-Ziel vor dem Durchführen eines Bildlaufs tatsächlich erfolgt. In diesem Fall sollten Sie die Sicht nicht tatsächlich blättern.  
+ Diese Funktion wird in einem Fall durch das Framework mit aufgerufen *bDoScroll* auf "true" festgelegt werden, wenn die Sicht eine Bildlaufleiste-Nachricht empfängt. In diesem Fall sollten Sie die Ansicht tatsächlich blättern. Diese Funktion wird im anderen Fall mit *bDoScroll* auf "false" festgelegt werden, wenn ein OLE-Element zunächst in den Bereich des automatischen Bildlaufs, des Ablageziel gezogen wird, vor dem Durchführen eines Bildlaufs tatsächlich erfolgt. In diesem Fall sollten Sie die Sicht nicht tatsächlich blättern.  
   
 ##  <a name="onscrollby"></a>  CView::OnScrollBy  
  Wird vom Framework aufgerufen, wenn der Benutzer einen Bereich außerhalb der vorhanden Ansicht des Dokuments, entweder durch ein OLE-Element für die Sicht aktuelle Rahmen ziehen oder bearbeiten die vertikalen oder horizontalen Bildlaufleisten anzeigt.  
@@ -752,11 +752,11 @@ virtual BOOL OnScrollBy(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `sizeScroll`  
+ *sizeScroll*  
  Anzahl der Pixel durch einen Bildlauf horizontal und vertikal.  
   
- `bDoScroll`  
- Bestimmt, ob der Bildlauf der Ansicht auftritt. Wenn **"true"** und Durchführen eines Bildlaufs; Wenn erfolgt **"false"**, und klicken Sie dann einen Bildlauf nicht auftritt.  
+ *bDoScroll*  
+ Bestimmt, ob der Bildlauf der Ansicht auftritt. Bei "true", findet dann statt; Wenn "false" tritt dann nicht auf.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Ansicht gescrollt werden konnte; andernfalls 0.  
@@ -766,7 +766,7 @@ virtual BOOL OnScrollBy(
   
  Wenn er nicht aufgerufen wird, wird die Sicht nicht einen die standardmäßige Implementierung dieser Methode ändert sich nicht auf die Ansicht ist jedoch eine `CScrollView`-Klasse.  
   
- Wenn die Breite oder Höhe 32767 Pixel überschreitet, Durchführen eines Bildlaufs nach 32767 schlägt fehl, da `OnScrollBy` aufgerufen wird, mit einem ungültigen `sizeScroll` Argument.  
+ Wenn die Breite oder Höhe 32767 Pixel überschreitet, Durchführen eines Bildlaufs nach 32767 schlägt fehl, da `OnScrollBy` aufgerufen wird, mit einem ungültigen *SizeScroll* Argument.  
   
 ##  <a name="onupdate"></a>  CView::OnUpdate  
  Vom Framework aufgerufen, nachdem die Ansicht Dokument geändert wurde; Diese Funktion wird aufgerufen, indem [UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) und ermöglicht die Ansicht, um die Aktualisierung der Anzeige, um diese Änderungen widerzuspiegeln.  
@@ -779,23 +779,23 @@ virtual void OnUpdate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pSender`  
- Verweist auf die Sicht, die das Dokument geändert oder **NULL** Wenn alle Sichten aktualisiert werden.  
+ *pSender*  
+ Verweist auf die Sicht, die das Dokument geändert oder NULL, wenn alle Sichten aktualisiert werden.  
   
- `lHint`  
+ *lHint*  
  Enthält Informationen zu den Änderungen an.  
   
- `pHint`  
+ *pHint*  
  Verweist auf ein Objekt, das Informationen zu den Änderungen zu speichern.  
   
 ### <a name="remarks"></a>Hinweise  
- Es wird auch aufgerufen, durch die standardmäßige Implementierung des [OnInitialUpdate](#oninitialupdate). Die standardmäßige Implementierung erklärt den gesamten Clientbereich, markieren sie zum Zeichnen, wenn die nächste `WM_PAINT` Nachricht empfangen wird. Überschreiben Sie diese Funktion, wenn Sie nur diejenigen Regionen zu aktualisieren, die die geänderten Teile des Dokuments zuordnen möchten. Zu diesem Zweck müssen Sie Informationen zu den Änderungen, die mit den Parametern-Hinweis übergeben.  
+ Es wird auch aufgerufen, durch die standardmäßige Implementierung des [OnInitialUpdate](#oninitialupdate). Die standardmäßige Implementierung erklärt den gesamte Clientbereich für das Pixelbild markieren, wenn die nächste WM_PAINT-Meldung empfangen wird. Überschreiben Sie diese Funktion, wenn Sie nur diejenigen Regionen zu aktualisieren, die die geänderten Teile des Dokuments zuordnen möchten. Zu diesem Zweck müssen Sie Informationen zu den Änderungen, die mit den Parametern-Hinweis übergeben.  
   
- Mit `lHint`Hinweis spezielle Werte, in der Regel eine Bitmaske oder ein enumerierter Typ zu definieren und das Dokument, übergeben Sie einen der folgenden Werte haben. Verwenden `pHint`, leiten Sie eine Klasse Hinweis aus [CObject](../../mfc/reference/cobject-class.md) und das Dokument, das einen Zeiger auf ein Objekt auf Hinweis übergeben werden, überschreiben `OnUpdate`, verwenden die [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof) Memberfunktion Bestimmen der Laufzeittyp des Objekts Hinweis an.  
+ Mit *lHint*Hinweis spezielle Werte, in der Regel eine Bitmaske oder ein enumerierter Typ zu definieren und das Dokument, übergeben Sie einen der folgenden Werte haben. Verwenden *pHint*, leiten Sie eine Klasse Hinweis aus [CObject](../../mfc/reference/cobject-class.md) und das Dokument, das einen Zeiger auf ein Objekt auf Hinweis übergeben werden, überschreiben `OnUpdate`, verwenden Sie die [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof) die Memberfunktion um den Laufzeittyp des Objekts Hinweis zu bestimmen.  
   
  In der Regel führen Sie eine direkte zeichnen `OnUpdate`. Stattdessen ermittelt das Rechteck beschreiben, in Gerätekoordinaten des Bereichs, der muss aktualisiert werden; übergeben Sie diesem Rechteck [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect). Dies bewirkt, dass das nächste Mal ausgeführt Malen eine [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) Nachricht empfangen wird.  
   
- Wenn `lHint` ist 0 und `pHint` ist **NULL**, das Dokument verfügt über eine generische updatebenachrichtigung gesendet. Wenn eine Sicht eine generische updatebenachrichtigung empfängt oder die Hinweise nicht decodiert werden kann, sollte er seinen gesamten Clientbereich ungültig.  
+ Wenn *lHint* ist 0 und *pHint* NULL ist, das Dokument verfügt über eine generische updatebenachrichtigung gesendet. Wenn eine Sicht eine generische updatebenachrichtigung empfängt oder die Hinweise nicht decodiert werden kann, sollte er seinen gesamten Clientbereich ungültig.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Beispiel MDIDOCVW](../../visual-cpp-samples.md)   

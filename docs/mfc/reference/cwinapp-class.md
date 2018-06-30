@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105e8860746c4de4086e9481b06417b186ddc9ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aab01b0f55d19ef3c9d39fed38b42471f559ba8d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378715"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123200"
 ---
 # <a name="cwinapp-class"></a>CWinApp-Klasse
 Die Basisklasse, von der ein Windows-Anwendungsobjekt abgeleitet wird.  
@@ -238,7 +238,7 @@ class CWinApp : public CWinThread
 |[CWinApp::DelRegTree](#delregtree)|Löscht einen angegebenen Schlüssel und alle seine Unterschlüssel.|  
 |[CWinApp::DoMessageBox](#domessagebox)|Implementiert [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) für die Anwendung.|  
 |[CWinApp::DoWaitCursor](#dowaitcursor)|Schaltet den Wartecursor ein und aus.|  
-|[CWinApp::EnableD2DSupport](#enabled2dsupport)|Ermöglicht der Anwendung `D2D` unterstützen. Rufen Sie diese Methode vor der Initialisierung des Hauptfensters auf.|  
+|[CWinApp::EnableD2DSupport](#enabled2dsupport)|Ermöglicht die Anwendung D2D-Unterstützung. Rufen Sie diese Methode vor der Initialisierung des Hauptfensters auf.|  
 |[CWinApp::EnableHtmlHelp](#enablehtmlhelp)|Die Anwendung, anstatt WinHelp HTMLHelp implementiert.|  
 |[CWinApp::EnableTaskbarInteraction](#enabletaskbarinteraction)|Ermöglicht die Interaktion der Taskleiste.|  
 |[CWinApp:: ExitInstance](#exitinstance)|Außer Kraft setzen Sie, um zu bereinigen, wenn die Anwendung beendet wird.|  
@@ -301,13 +301,13 @@ class CWinApp : public CWinThread
 |[CWinApp::EnableShellOpen](#enableshellopen)|Ermöglicht es dem Benutzer um Datendateien vom Windows-Datei-Manager zu öffnen.|  
 |[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|Lädt-Standard. INI-Datei und ermöglicht die MRU-Datei-Funktion.|  
 |[CWinApp::OnContextHelp](#oncontexthelp)|UMSCHALT + F1-Hilfe in der Anwendung verarbeitet werden.|  
-|[CWinApp::OnFileNew](#onfilenew)|Implementiert die `ID_FILE_NEW` Befehl.|  
-|[CWinApp::OnFileOpen](#onfileopen)|Implementiert die `ID_FILE_OPEN` Befehl.|  
-|[CWinApp::OnFilePrintSetup](#onfileprintsetup)|Implementiert die `ID_FILE_PRINT_SETUP` Befehl.|  
+|[CWinApp::OnFileNew](#onfilenew)|Implementiert die ID_FILE_NEW-Befehl.|  
+|[CWinApp::OnFileOpen](#onfileopen)|Implementiert die ID_FILE_OPEN-Befehl.|  
+|[CWinApp::OnFilePrintSetup](#onfileprintsetup)|Implementiert die ID_FILE_PRINT_SETUP-Befehl.|  
 |[CWinApp::OnHelp](#onhelp)|Verarbeitet die F1-Hilfe in der Anwendung (unter Verwendung des aktuellen Kontexts).|  
-|[CWinApp::OnHelpFinder](#onhelpfinder)|Verarbeitet die Befehle `ID_HELP_FINDER` und `ID_DEFAULT_HELP`.|  
-|[CWinApp::OnHelpIndex](#onhelpindex)|Verarbeitet den Befehl `ID_HELP_INDEX` und stellt ein standardmäßiges Hilfethema bereit.|  
-|[CWinApp::OnHelpUsing](#onhelpusing)|Verarbeitet den Befehl `ID_HELP_USING`.|  
+|[CWinApp::OnHelpFinder](#onhelpfinder)|Verarbeitet die Befehle ID_HELP_FINDER und ID_DEFAULT_HELP an.|  
+|[CWinApp::OnHelpIndex](#onhelpindex)|ID_HELP_INDEX-Befehl verarbeitet und stellt ein standardmäßiges Hilfethema bereit.|  
+|[CWinApp::OnHelpUsing](#onhelpusing)|Verarbeitet die ID_HELP_USING-Befehl.|  
 |[CWinApp:: RegisterShellFileTypes](#registershellfiletypes)|Registriert alle Anwendung Dokumenttypen mit den Windows-Datei-Manager.|  
 |[CWinApp::SetAppID](#setappid)|Explizit festlegt Anwendungsbenutzer Modell-ID für die Anwendung ein. Diese Methode sollte aufgerufen werden, bevor die Benutzer Benutzeroberfläche angezeigt werden (am besten geeignet ist der Anwendungskonstruktor).|  
 |[CWinApp::SetRegistryKey](#setregistrykey)|Bewirkt, dass die Anwendungseinstellungen in der Registrierung gespeichert werden. INI-Dateien.|  
@@ -365,7 +365,7 @@ class CWinApp : public CWinThread
   
 - `CWinApp`der Schlüssel Overridables.  
   
- Die **M_hPrevInstance** Datenmember nicht mehr vorhanden ist. Informationen zum Erkennen von eine Vorgängerinstanz des `CWinApp`, finden Sie im Knowledge Base-Artikel "Wie zu identifizieren eines vorherigen Instanz von einer Anwendung" (KB106385) unter [ http://support.microsoft.com/default.aspxscid=kb; En-us; 106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385).  
+ Die `m_hPrevInstance` Datenmember nicht mehr vorhanden ist. Informationen zum Erkennen von eine Vorgängerinstanz des `CWinApp`, finden Sie im Knowledge Base-Artikel "Wie zu identifizieren eines vorherigen Instanz von einer Anwendung" (KB106385) unter [ http://support.microsoft.com/default.aspxscid=kb; En-us; 106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -387,7 +387,7 @@ void AddDocTemplate(CDocTemplate* pTemplate);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pTemplate`  
+ *pTemplate*  
  Ein Zeiger auf die `CDocTemplate` hinzugefügt werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -397,14 +397,14 @@ void AddDocTemplate(CDocTemplate* pTemplate);
  [!code-cpp[NVC_MFCWindowing#35](../../mfc/reference/codesnippet/cpp/cwinapp-class_1.cpp)]  
   
 ##  <a name="addtorecentfilelist"></a>  CWinApp::AddToRecentFileList  
- Rufen Sie diese Memberfunktion hinzuzufügende `lpszPathName` auf die Liste der zuletzt verwendeten Dateien.  
+ Rufen Sie diese Memberfunktion hinzuzufügende *LpszPathName* auf die Liste der zuletzt verwendeten Dateien.  
   
 ```  
 virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszPathName`  
+ *lpszPathName*  
  Der Pfad der Datei.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -423,7 +423,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpvParam`  
+ [in] *LpvParam*  
  Für zukünftige Verwendung reserviert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -444,8 +444,8 @@ void CloseAllDocuments(BOOL bEndSession);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bEndSession`  
- Gibt an, und zwar unabhängig davon, ob die Windows-Sitzung beendet wird. Es ist **"true"** wird die Sitzung beendet wird andernfalls **"false"**.  
+ *bEndSession*  
+ Gibt an, und zwar unabhängig davon, ob die Windows-Sitzung beendet wird. Es ist "true", wenn die Sitzung beendet wird, ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [HideApplication](#hideapplication) vor dem Aufruf `CloseAllDocuments`.  
@@ -458,7 +458,7 @@ BOOL CreatePrinterDC(CDC& dc);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dc`  
+ *dc*  
  Ein Verweis auf einen Drucker-Gerätekontext.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -470,15 +470,15 @@ BOOL CreatePrinterDC(CDC& dc);
  Wenn die Funktion erfolgreich ist, wenn Sie drucken abgeschlossen haben, müssen Sie den Gerätekontext zerstören. Lassen Sie den Destruktor, der die [CDC](../../mfc/reference/cdc-class.md) Objekt durchführen, oder explizit durch Aufrufen von durchführen [CDC::DeleteDC](../../mfc/reference/cdc-class.md#deletedc).  
   
 ##  <a name="cwinapp"></a>  CWinApp::CWinApp  
- Erstellt eine `CWinApp` Objekt auf und übergibt `lpszAppName` als den Namen der Anwendung gespeichert werden soll.  
+ Erstellt eine `CWinApp` Objekt auf und übergibt *LpszAppName* als den Namen der Anwendung gespeichert werden soll.  
   
 ```  
 CWinApp(LPCTSTR lpszAppName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszAppName`  
- Eine auf Null endende Zeichenfolge, die den Namen der Anwendung enthält, den von Windows verwendet. Wenn dieses Argument nicht angegeben oder ist **NULL**, `CWinApp` verwendet die Ressourcenzeichenfolge **AFX_IDS_APP_TITLE** oder den Dateinamen der ausführbaren Datei.  
+ *lpszAppName*  
+ Eine auf Null endende Zeichenfolge, die den Namen der Anwendung enthält, den von Windows verwendet. Wenn dieses Argument nicht angegeben oder NULL ist, `CWinApp` der Ressourcenzeichenfolge AFX_IDS_APP_TITLE oder den Dateinamen der ausführbaren Datei verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
  Sollten Sie ein globales Objekt des Erstellen Ihrer `CWinApp`-Klasse. Sie sind nur möglich `CWinApp` Objekten in der Anwendung. Der Konstruktor speichert einen Zeiger auf die `CWinApp` Objekt, damit `WinMain` Member des Objekts initialisiert, und führen Sie die Anwendung können aufrufen.  
@@ -528,10 +528,10 @@ virtual int DoMessageBox(
  *lpszPrompt*  
  Die Adresse des Texts in der MessageBox.  
   
- `nType`  
+ *%nbenachrichtigungen zu*  
  Das Meldungsfeld [Stil](../../mfc/reference/styles-used-by-mfc.md#message-box-styles).  
   
- `nIDPrompt`  
+ *nIDPrompt*  
  Ein Index in eine Zeichenfolge der Hilfe-Kontext.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -550,7 +550,7 @@ virtual void DoWaitCursor(int nCode);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCode`  
+ *nCode*  
  Wenn dieser Parameter 1 ist, wird ein Wartecursor angezeigt. Bei 0 wird der Wartecursor wiederhergestellt, ohne den Verweiszähler zu inkrementieren. Wenn-1 ist, endet der Wartecursor.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -575,10 +575,10 @@ DWRITE_FACTORY_TYPE writeFactoryType = DWRITE_FACTORY_TYPE_SHARED);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `d2dFactoryType`  
+ *d2dFactoryType*  
  Das Threadingmodell der D2D-Factory und die Ressourcen erstellt.  
   
- `writeFactoryType`  
+ *writeFactoryType*  
  Ein Wert, der angibt, ob das Write-Factoryobjekt freigegeben oder isoliert wird  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -614,17 +614,17 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bEnable`  
- Gibt an, ob die Interaktion mit Windows 7-Taskleiste aktiviert werden soll ( `TRUE`), oder deaktiviert ( `FALSE`).  
+ *bAktivieren*  
+ Gibt an, ob die Interaktion mit Windows 7-Taskleiste sollte ("true") aktiviert oder deaktiviert (FALSE).  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt `TRUE` Wenn Taskleiste Interaktion aktiviert oder deaktiviert werden kann.  
+ Gibt "true" zurück, wenn Taskleiste Interaktion aktiviert oder deaktiviert werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode muss vor der Erstellung des Hauptfensters aufgerufen werden, andernfalls bestätigt und gibt `FALSE`.  
+ Diese Methode vor der Erstellung des Hauptfensters aufgerufen werden muss, andernfalls bestätigt und gibt FALSE zurück.  
   
 ##  <a name="exitinstance"></a>  CWinApp:: ExitInstance  
- Vom Framework aufgerufen wird, innerhalb der **ausführen** Memberfunktion versucht, die dieser Instanz der Anwendung zu beenden.  
+ Vom Framework aufgerufen wird, innerhalb der `Run` Memberfunktion versucht, die dieser Instanz der Anwendung zu beenden.  
   
 ```  
 virtual int ExitInstance();
@@ -634,7 +634,7 @@ virtual int ExitInstance();
  Der Code der Anwendung beenden; 0 gibt an, keine Fehler, und geben einen Fehler an Werte größer als 0. Dieser Wert wird verwendet, als der Rückgabewert `WinMain`.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie nicht diese Memberfunktion überall jedoch innerhalb der **ausführen** Memberfunktion.  
+ Rufen Sie nicht diese Memberfunktion überall jedoch innerhalb der `Run` Memberfunktion.  
   
  Die standardmäßige Implementierung dieser Funktion schreibt Framework-Optionen in der Anwendungsverzeichnis. INI-Datei. Überschreiben Sie diese Funktion zu bereinigen, wenn die Anwendung beendet wird.  
   
@@ -652,7 +652,7 @@ virtual LPVOID GetApplicationRecoveryParameter();
  Der Eingabedaten Standardparameter für die Anwendung Wiederherstellungsmethode.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt das Standardverhalten dieser Funktion `NULL`.  
+ Das Standardverhalten dieser Funktion gibt NULL zurück.  
   
  Weitere Informationen finden Sie unter [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).  
   
@@ -688,13 +688,13 @@ virtual DWORD GetApplicationRestartFlags();
   
  Die möglichen Werte für den Neustart-Manager-Flags sind wie folgt aus:  
   
-- `RESTART_NO_CRASH`  
+- RESTART_NO_CRASH  
   
-- `RESTART_NO_HANG`  
+- RESTART_NO_HANG  
   
-- `RESTART_NO_PATCH`  
+- RESTART_NO_PATCH  
   
-- `RESTART_NO_REBOOT`  
+- RESTART_NO_REBOOT  
   
 ##  <a name="getappregistrykey"></a>  CWinApp::GetAppRegistryKey  
  Gibt den Schlüssel für HKEY_CURRENT_USER\\\RegistryKey\ProfileName "Software".  
@@ -704,11 +704,11 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pTM`  
+ *pTM*  
  Zeiger auf eine `CAtlTransactionManager` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- ANWENDUNGSTASTE, wenn die Funktion erfolgreich ausgeführt wird; andernfalls `NULL`.  
+ ANWENDUNGSTASTE, wenn die Funktion erfolgreich ausgeführt wird; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -725,7 +725,7 @@ virtual CDataRecoveryHandler *GetDataRecoveryHandler();
 ### <a name="remarks"></a>Hinweise  
  Jede Anwendung, die den Neustart-Manager verwendet haben muss eine Instanz von der [CDataRecoveryHandler Klasse](../../mfc/reference/cdatarecoveryhandler-class.md). Diese Klasse ist für die Überwachung geöffnete Dokumente und Dateien automatische Speicherung verantwortlich. Das Verhalten der `CDataRecoveryHandler` hängt von der Konfiguration des Neustart-Managers. Weitere Informationen finden Sie unter [CDataRecoveryHandler Klasse](../../mfc/reference/cdatarecoveryhandler-class.md).  
   
- Diese Methode gibt `NULL` unter Betriebssystemen vor Windows Vista. Der Neustart-Manager wird unter Betriebssystemen vor Windows Vista nicht unterstützt.  
+ Diese Methode gibt NULL zurück, unter Betriebssystemen vor Windows Vista. Der Neustart-Manager wird unter Betriebssystemen vor Windows Vista nicht unterstützt.  
   
  Wenn die Anwendung noch nicht über ein Wiederherstellung Datenhandler ist, wird diese Methode erstellt ein und gibt einen Zeiger auf diese.  
   
@@ -737,10 +737,10 @@ POSITION GetFirstDocTemplatePosition() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **POSITION** Wert, der für die Iteration oder Abrufen von Objekten Zeiger; verwendet werden kann **NULL** , wenn die Liste leer ist.  
+ Eine Positionswert, der für die Iteration oder der Zeiger Abrufen von Objekten verwendet werden kann; NULL, wenn die Liste leer ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden der **POSITION** zurückgegebene Wert in einem Aufruf von [GetNextDocTemplate](#getnextdoctemplate) zum Abrufen der ersten [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) Objekt.  
+ Verwenden der POSITION Wert in einem Aufruf von zurückgegebene [GetNextDocTemplate](#getnextdoctemplate) zum Abrufen der ersten [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) Objekt.  
   
 ##  <a name="gethelpmode"></a>  CWinApp::GetHelpMode  
  Ruft den Typ der Hilfe verwendet, die von der Anwendung ab.  
@@ -753,15 +753,15 @@ AFX_HELP_TYPE GetHelpMode();
  Der Help-Typ, der von der Anwendung verwendet wird. Finden Sie unter [CWinApp::m_eHelpType](#m_ehelptype) für Weitere Informationen.  
   
 ##  <a name="getnextdoctemplate"></a>  CWinApp::GetNextDocTemplate  
- Ruft die identifizierte Dokumentvorlage `pos`, dann legt `pos` auf die **POSITION** Wert.  
+ Ruft die identifizierte Dokumentvorlage *pos*, dann legt *pos* auf den Wert der POSITION.  
   
 ```  
 CDocTemplate* GetNextDocTemplate(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pos`  
- Ein Verweis auf eine **POSITION** durch einen vorherigen Aufruf zurückgegebene Wert `GetNextDocTemplate` oder [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). Der Wert wird auf der nächsten Position durch diesen Aufruf aktualisiert.  
+ *POS*  
+ Ein Verweis auf eine Positionswert, der von einem vorherigen Aufruf zurückgegebene `GetNextDocTemplate` oder [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). Der Wert wird auf der nächsten Position durch diesen Aufruf aktualisiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf eine [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) Objekt.  
@@ -769,9 +769,9 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 ### <a name="remarks"></a>Hinweise  
  Sie können `GetNextDocTemplate` in einer Schleife vorwärts, wenn Sie die erste Position mit einem Aufruf von einrichten `GetFirstDocTemplatePosition`.  
   
- Sie müssen sicherstellen, dass Ihre **POSITION** Wert ist ungültig. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
+ Sie müssen sicherstellen, dass Ihre Positionswert gültig ist. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
   
- Die abgerufene Dokumentvorlage ist die letzte verfügbar ist, klicken Sie dann den neuen Wert der `pos` festgelegt ist, um **NULL**.  
+ Die abgerufene Dokumentvorlage ist die letzte verfügbar ist, klicken Sie dann den neuen Wert der *pos* auf NULL festgelegt ist.  
   
 ##  <a name="getprinterdevicedefaults"></a>  CWinApp::GetPrinterDeviceDefaults  
  Rufen Sie diese Memberfunktion, um einen Drucker-Gerätekontext für das Drucken vorzubereiten.  
@@ -824,7 +824,7 @@ BOOL GetProfileBinary(
  Diese Memberfunktion ist daher nicht Groß-/ Kleinschreibung der Zeichenfolgen in der *LpszSection* und *LpszEntry* Parameter unterscheidet sich möglicherweise in Fällen.  
   
 > [!NOTE]
-> **GetProfileBinary** einen Puffer und gibt seine Adresse in \* *PpData*. Der Aufrufer ist verantwortlich für die Freigabe der Puffer mit **delete []**.  
+> `GetProfileBinary` reserviert einen Puffer und gibt seine Adresse in \* *PpData*. Der Aufrufer ist verantwortlich für die Freigabe der Puffer mit **delete []**.  
   
 > [!IMPORTANT]
 >  Die von dieser Funktion zurückgegebenen Daten enden nicht notwendigerweise auf NULL, und der Aufrufer muss die Validierung ausführen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -845,22 +845,22 @@ UINT GetProfileInt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszSection`  
+ *lpszSection*  
  Zeigt auf eine auf NULL endende Zeichenfolge, die den Abschnitt mit dem Eintrag angibt.  
   
- `lpszEntry`  
+ *lpszEntry*  
  Zeigt auf eine auf NULL endende Zeichenfolge, die den Eintrag mit dem abzurufenden Wert enthält.  
   
- `nDefault`  
+ *nDefault*  
  Gibt den zurückzugebenden Standardwert an, wenn der Eintrag vom Framework nicht gefunden werden kann.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der dem bei erfolgreicher Funktion angegebene Eintrag folgende Ganzzahlwert der Zeichenfolge. Der Rückgabewert ist der Wert des `nDefault`-Parameters, wenn von der Funktion kein Eintrag gefunden wird. Der Rückgabewert ist null (0), wenn der dem angegebenen Eintrag entsprechende Wert keine ganze Zahl ist.  
+ Der dem bei erfolgreicher Funktion angegebene Eintrag folgende Ganzzahlwert der Zeichenfolge. Der Rückgabewert ist der Wert, der die *nDefault* Parameter an, wenn die Funktion kein Eintrag gefunden wird. Der Rückgabewert ist null (0), wenn der dem angegebenen Eintrag entsprechende Wert keine ganze Zahl ist.  
   
- Diese Memberfunktion unterstützt Hexadezimalnotation für den Wert in der INI-Datei. Wenn Sie eine Zahl mit Vorzeichen abrufen, sollten Sie den Wert in `int` umwandeln.  
+ Diese Memberfunktion unterstützt Hexadezimalnotation für den Wert in der INI-Datei. Wenn Sie eine Ganzzahl mit Vorzeichen abrufen, sollten Sie den Wert in Umwandeln einer **Int**.  
   
 ### <a name="remarks"></a>Hinweise  
- Bei dieser Memberfunktion wird die Groß-/Kleinschreibung nicht beachtet, sodass sich die Zeichenfolgen in den Parametern `lpszSection` und `lpszEntry` bei der Groß- und Kleinschreibung unterscheiden.  
+ Diese Memberfunktion ist daher nicht Groß-/ Kleinschreibung der Zeichenfolgen in der *LpszSection* und *LpszEntry* Parameter unterscheidet sich möglicherweise in Fällen.  
   
 > [!IMPORTANT]
 >  Die von dieser Funktion zurückgegebenen Daten enden nicht notwendigerweise auf NULL, und der Aufrufer muss die Validierung ausführen. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -881,17 +881,17 @@ CString GetProfileString(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszSection`  
+ *lpszSection*  
  Zeigt auf eine auf NULL endende Zeichenfolge, die den Abschnitt mit dem Eintrag angibt.  
   
- `lpszEntry`  
- Zeigt auf eine auf Null endende Zeichenfolge, die den Eintrag, deren Zeichenfolge enthält abgerufen werden sollen. Dieser Wert darf nicht sein **NULL**.  
+ *lpszEntry*  
+ Zeigt auf eine auf Null endende Zeichenfolge, die den Eintrag, deren Zeichenfolge enthält abgerufen werden sollen. Dieser Wert darf nicht NULL sein.  
   
- `lpszDefault`  
+ *lpszDefault*  
  Verweist auf den Standard-Zeichenfolgenwert für den angegebenen Eintrag, wenn der Eintrag in der Initialisierungsdatei gefunden werden kann.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Rückgabewert ist die Zeichenfolge aus der Anwendungsverzeichnis. INI-Datei oder `lpszDefault` , wenn die Zeichenfolge nicht gefunden werden kann. Ist die maximale Zeichenfolgenlänge von Framework unterstützten `_MAX_PATH`. Wenn `lpszDefault` ist **NULL**, wird eine leere Zeichenfolge zurückgegeben.  
+ Der Rückgabewert ist die Zeichenfolge aus der Anwendungsverzeichnis. INI-Datei oder *LpszDefault* , wenn die Zeichenfolge nicht gefunden werden kann. Die maximale Zeichenfolgenlänge von Framework unterstützten ist _MAX_PATH. Wenn *LpszDefault* NULL ist, wird eine leere Zeichenfolge zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -913,14 +913,14 @@ CAtlTransactionManager* pTM = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszSection`  
+ *lpszSection*  
  Der Name des Schlüssels abgerufen werden soll.  
   
- `pTM`  
+ *pTM*  
  Zeiger auf eine `CAtlTransactionManager` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Abschnitt-Schlüssel, wenn die Funktion erfolgreich ausgeführt wird; andernfalls `NULL`.  
+ Abschnitt-Schlüssel, wenn die Funktion erfolgreich ausgeführt wird; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -941,11 +941,11 @@ virtual void HtmlHelp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwData`  
- Gibt die zusätzliche Daten. Der verwendete Wert hängt vom Wert von der `nCmd` Parameter.  
+ *dwData*  
+ Gibt die zusätzliche Daten. Der verwendete Wert hängt vom Wert von der *nCmd* Parameter.  
   
- `nCmd`  
- Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Einfluss auf die `dwData` Parameter, finden Sie unter der `uCommand` Parameter im über die HTMLHelp-API-Funktion im Windows SDK beschrieben.  
+ *nCmd*  
+ Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Einfluss auf die *DwData* Parameter, finden Sie unter der *uCommand* Parameter im über die HTMLHelp-API-Funktion im Windows SDK beschrieben.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft auch diese Funktion, um die HTMLHelp-Anwendung aufrufen.  
@@ -968,7 +968,7 @@ virtual BOOL InitInstance();
  Überschreiben Sie `InitInstance` initialisiert werden, jede neue Instanz der Anwendung unter Windows ausgeführt wird. Überschreiben Sie in der Regel `InitInstance` das Hauptfenster-Objekt zu erstellen und Festlegen der `CWinThread::m_pMainWnd` -Datenmember auf dieses Fenster zeigen. Weitere Informationen zum überschreiben diese Memberfunktion auf, finden Sie unter [CWinApp: die Anwendungsklasse](../../mfc/cwinapp-the-application-class.md).  
   
 > [!NOTE]
->  MFC-Anwendungen müssen als Singlethread-Apartment (STA) initialisiert werden. Beim Aufrufen [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) in Ihrer `InitInstance` außer Kraft setzen, geben Sie `COINIT_APARTMENTTHREADED` (statt `COINIT_MULTITHREADED`). Weitere Informationen finden Sie unter PRB: MFC-Anwendung nicht mehr reagiert, wenn Sie die Anwendung als eine Multithread-Apartment (828643) am initialisieren [ http://support.microsoft.com/default.aspxscid=kb; En-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  MFC-Anwendungen müssen als Singlethread-Apartment (STA) initialisiert werden. Beim Aufrufen [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) in Ihrer `InitInstance` außer Kraft setzen, geben Sie COINIT_APARTMENTTHREADED (anstelle von COINIT_MULTITHREADED). Weitere Informationen finden Sie unter PRB: MFC-Anwendung nicht mehr reagiert, wenn Sie die Anwendung als eine Multithread-Apartment (828643) am initialisieren [ http://support.microsoft.com/default.aspxscid=kb; En-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCListView#9](../../atl/reference/codesnippet/cpp/cwinapp-class_10.cpp)]  
@@ -981,27 +981,27 @@ virtual BOOL IsTaskbarInteractionEnabled();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt `TRUE` Wenn `EnableTaskbarInteraction` aufgerufen wurde und das Betriebssystem ist Windows 7 oder höher.  
+ Gibt "true" zurück, wenn `EnableTaskbarInteraction` aufgerufen wurde und das Betriebssystem ist Windows 7 oder höher.  
   
 ### <a name="remarks"></a>Hinweise  
  Taskleiste Interaktion bedeutet, dass MDI-Anwendung den Inhalt der untergeordnete MDI-Fenster in separaten im Registerkartenformat Miniaturansichten, die angezeigt werden angezeigt, wenn der Mauszeiger über die Taskleiste Anwendungsschaltfläche befindet.  
   
 ##  <a name="loadcursor"></a>  CWinApp::LoadCursor  
- Lädt die Cursorressource mit dem Namen von `lpszResourceName` oder vom angegebenen `nIDResource` aus der aktuellen ausführbaren Datei.  
+ Lädt die Cursorressource mit dem Namen von *LpszResourceName* oder vom angegebenen *nIDResource* aus der aktuellen ausführbaren Datei.  
   
 ```  
 HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nIDResource) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszResourceName`  
+ *lpszResourceName*  
  Zeigt auf eine auf Null endende Zeichenfolge, die den Namen der Cursorressource enthält. Sie können eine `CString` für dieses Argument.  
   
- `nIDResource`  
+ *nIDResource*  
  Die ID der Cursorressource. Eine Liste der Ressourcen, finden Sie unter [LoadCursor](http://msdn.microsoft.com/library/windows/desktop/ms648391) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Handle auf einen Cursor, wenn erfolgreich; andernfalls **NULL**.  
+ Ein Handle auf einen Cursor, wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
  `LoadCursor` nur, wenn es nicht bereits geladen wurde, wird den Cursor in den Arbeitsspeicher geladen; Andernfalls wird ein Handle für die vorhandene Ressource abgerufen.  
@@ -1012,21 +1012,21 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
  [!code-cpp[NVC_MFCWindowing#44](../../mfc/reference/codesnippet/cpp/cwinapp-class_11.cpp)]  
   
 ##  <a name="loadicon"></a>  CWinApp::LoadIcon  
- Lädt die Symbolressource benannt, indem `lpszResourceName` oder vom angegebenen `nIDResource` aus der ausführbaren Datei.  
+ Lädt die Symbolressource benannt, indem *LpszResourceName* oder vom angegebenen *nIDResource* aus der ausführbaren Datei.  
   
 ```  
 HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszResourceName`  
+ *lpszResourceName*  
  Zeigt auf eine auf Null endende Zeichenfolge, die den Namen der Symbolressource enthält. Sie können auch eine `CString` für dieses Argument.  
   
- `nIDResource`  
+ *nIDResource*  
  ID-Nummer, der die Symbolressource.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Handle für ein Symbol, wenn erfolgreich; andernfalls **NULL**.  
+ Ein Handle für ein Symbol, wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
  `LoadIcon` Lädt das Symbol an, nur dann, wenn es nicht bereits geladen wurde. Andernfalls wird ein Handle für die vorhandene Ressource abgerufen.  
@@ -1034,21 +1034,21 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
  Sie können die [LoadStandardIcon](#loadstandardicon) oder [LoadOEMIcon](#loadoemicon) Memberfunktion versucht, die vordefinierte Windows-Symbole zugreifen.  
   
 > [!NOTE]
->  Diese Memberfunktion Ruft die Win32-API-Funktion [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), laden die nur ein Symbol, dessen Größe entspricht, der **SM_CXICON zugeordnet** und **SM_CYICON zugeordnet** Metrikwerte System.  
+>  Diese Memberfunktion Ruft die Win32-API-Funktion [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), laden die nur ein Symbol, dessen Größe der System-Metrikwerte SM_CXICON zugeordnet und SM_CYICON zugeordnet entspricht.  
   
 ##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor  
- Lädt das Windows vordefinierten Cursor-Ressource, die vom angegebenen `nIDCursor`.  
+ Lädt das Windows vordefinierten Cursor-Ressource, die vom angegebenen *nIDCursor*.  
   
 ```  
 HCURSOR LoadOEMCursor(UINT nIDCursor) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDCursor`  
- Ein **OCR_** manifest Konstante Bezeichner, der einen vordefinierten Windows Cursor angibt. Sie benötigen **#define OEMRESOURCE** vor **#include \<afxwin.h >** für den Zugriff auf die **OCR_** Konstanten in WINDOWS. H.  
+ *nIDCursor*  
+ Ein **OCR_** manifest Konstante Bezeichner, der einen vordefinierten Windows Cursor angibt. Sie benötigen `#define OEMRESOURCE` vor `#include \<afxwin.h>` für den Zugriff auf die **OCR_** Konstanten in WINDOWS. H.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Handle auf einen Cursor, wenn erfolgreich; andernfalls **NULL**.  
+ Ein Handle auf einen Cursor, wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der `LoadOEMCursor` oder [LoadStandardCursor](#loadstandardcursor) Memberfunktion versucht, die vordefinierte Windows-Cursors zugreifen.  
@@ -1059,59 +1059,59 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
  [!code-cpp[NVC_MFCWindowing#46](../../mfc/reference/codesnippet/cpp/cwinapp-class_13.cpp)]  
   
 ##  <a name="loadoemicon"></a>  CWinApp::LoadOEMIcon  
- Lädt das Windows vordefinierte Symbolressource gemäß `nIDIcon`.  
+ Lädt das Windows vordefinierte Symbolressource gemäß *nIDIcon*.  
   
 ```  
 HICON LoadOEMIcon(UINT nIDIcon) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDIcon`  
- Ein **OIC_** manifest Konstante Bezeichner, der angibt, einen vordefinierten Symbol "Windows". Sie benötigen **#define OEMRESOURCE** vor **#include \<afxwin.h >** für den Zugriff auf die **OIC_** Konstanten in WINDOWS. H.  
+ *nIDIcon*  
+ Ein **OIC_** manifest Konstante Bezeichner, der angibt, einen vordefinierten Symbol "Windows". Sie benötigen `#define OEMRESOURCE` vor `#include \<afxwin.h>` für den Zugriff auf die **OIC_** Konstanten in WINDOWS. H.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Handle für ein Symbol, wenn erfolgreich; andernfalls **NULL**.  
+ Ein Handle für ein Symbol, wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der `LoadOEMIcon` oder [LoadStandardIcon](#loadstandardicon) Memberfunktion versucht, die vordefinierte Windows-Symbole zugreifen.  
   
 ##  <a name="loadstandardcursor"></a>  CWinApp::LoadStandardCursor  
- Lädt das Windows vordefinierten Cursor-Ressource, die `lpszCursorName` angibt.  
+ Lädt das Windows vordefinierten Cursor-Ressource, die *LpszCursorName* angibt.  
   
 ```  
 HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszCursorName`  
- Ein **IDC_** manifest Konstante Bezeichner, der einen vordefinierten Windows Cursor angibt. Diese Bezeichner sind in WINDOWS definiert. H. Die folgende Liste enthält die möglichen vordefinierte Werte und die Bedeutung für `lpszCursorName`:  
+ *lpszCursorName*  
+ Ein **IDC_** manifest Konstante Bezeichner, der einen vordefinierten Windows Cursor angibt. Diese Bezeichner sind in WINDOWS definiert. H. Die folgende Liste enthält die möglichen vordefinierte Werte und die Bedeutung für *LpszCursorName*:  
   
-- **IDC_ARROW** Standardpfeilcursor  
+- IDC_ARROW Standard-Pfeilcursor  
   
-- **IDC_IBEAM** Standard-Text-Einfügemarke  
+- IDC_IBEAM Standard-Text-Einfügemarke  
   
-- **IDC_WAIT** Sanduhr Cursor verwendet, wenn Windows eine zeitintensive Aufgabe ausführt  
+- IDC_WAIT Sanduhr Cursor verwendet, wenn Windows eine zeitintensive Aufgabe ausführt  
   
-- **IDC_CROSS** Fadenkreuztool Cursor für die Auswahl  
+- IDC_CROSS Fadenkreuztool Cursor für die Auswahl  
   
-- **IDC_UPARROW** Pfeil nach oben  
+- IDC_UPARROW Pfeil nach oben  
   
-- **IDC_SIZE** veraltet und wird nicht unterstützt; verwenden Sie **IDC_SIZEALL**  
+- IDC_SIZE veraltet und nicht unterstützten; Verwenden Sie IDC_SIZEALL  
   
-- **IDC_SIZEALL** ein Pfeil mit vier Spitzen. Der Cursor zu verwenden, um die Größe eines Fensters.  
+- IDC_SIZEALL ein Vierfachpfeil. Der Cursor zu verwenden, um die Größe eines Fensters.  
   
-- **IDC_ICON** veraltet und nicht unterstützt. Verwendung **IDC_ARROW**.  
+- IDC_ICON veraltet und nicht unterstützt. Verwenden Sie IDC_ARROW.  
   
-- **IDC_SIZENWSE** Doppelpfeil mit am oberen linken und unteren rechten endet  
+- IDC_SIZENWSE Doppelpfeil mit am oberen linken und unteren rechten endet  
   
-- **IDC_SIZENESW** Doppelpfeil mit am oberen rechten und unteren linken Ecke endet  
+- IDC_SIZENESW Doppelpfeil mit am oberen rechten und unteren linken Ecke endet  
   
-- **IDC_SIZEWE** horizontaler Pfeil mit zwei Spitzen  
+- IDC_SIZEWE horizontaler Pfeil mit zwei Spitzen  
   
-- **IDC_SIZENS** vertikalen Doppelpfeil  
+- Vertikale IDC_SIZENS Doppelpfeil  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Handle auf einen Cursor, wenn erfolgreich; andernfalls **NULL**.  
+ Ein Handle auf einen Cursor, wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der `LoadStandardCursor` oder [LoadOEMCursor](#loadoemcursor) Memberfunktion versucht, die vordefinierte Windows-Cursors zugreifen.  
@@ -1120,18 +1120,18 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
  [!code-cpp[NVC_MFCWindowing#47](../../mfc/reference/codesnippet/cpp/cwinapp-class_14.cpp)]  
   
 ##  <a name="loadstandardicon"></a>  CWinApp::LoadStandardIcon  
- Lädt das Windows vordefinierte Symbolressource, die `lpszIconName` angibt.  
+ Lädt das Windows vordefinierte Symbolressource, die *LpszIconName* angibt.  
   
 ```  
 HICON LoadStandardIcon(LPCTSTR lpszIconName) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszIconName`  
+ *lpszIconName*  
  Ein manifest Konstante Bezeichner, der angibt, einen vordefinierten Symbol "Windows". Diese Bezeichner sind in WINDOWS definiert. H. Eine Liste der möglichen vordefinierte Werte und deren Beschreibungen finden Sie die *LpIconName* im Parameters [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Handle für ein Symbol, wenn erfolgreich; andernfalls **NULL**.  
+ Ein Handle für ein Symbol, wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden der `LoadStandardIcon` oder [LoadOEMIcon](#loadoemicon) Memberfunktion versucht, die vordefinierte Windows-Symbole zugreifen.  
@@ -1144,21 +1144,21 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nMaxMRU`  
+ *nMaxMRU*  
  Die Anzahl der zuletzt verwendeten Dateien zu verfolgen.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `nMaxMRU` gleich 0 ist, keine MRU-Liste wird jedoch beibehalten.  
+ Wenn *nMaxMRU* gleich 0 ist, keine MRU-Liste wird jedoch beibehalten.  
   
 ##  <a name="m_bhelpmode"></a>  CWinApp::m_bHelpMode  
- **"True"** ist die Anwendung im Kontext Hilfemodus (konventionell mit UMSCHALT + F1 aufgerufen); andernfalls **"false"**.  
+ "True", wenn die Anwendung im Kontext Hilfemodus (konventionell aufgerufen mit UMSCHALT + F1) andernfalls "false".  
   
 ```  
 BOOL m_bHelpMode;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Im Modus für Hilfe-Kontext der Cursor wird ein Fragezeichen, und der Benutzer über den Bildschirm verschieben. Überprüfen Sie dieses Flag aus, wenn Sie besondere Behandlung in den Hilfemodus implementieren möchten. `m_bHelpMode` ist eine öffentliche Variable des Typs **BOOL**.  
+ Im Modus für Hilfe-Kontext der Cursor wird ein Fragezeichen, und der Benutzer über den Bildschirm verschieben. Überprüfen Sie dieses Flag aus, wenn Sie besondere Behandlung in den Hilfemodus implementieren möchten. `m_bHelpMode` ist eine öffentliche Variable vom Typ bool fest.  
   
 ##  <a name="m_dwrestartmanagersupportflags"></a>  CWinApp::m_dwRestartManagerSupportFlags  
  Flags, die bestimmen, wie die Neustart-Manager verhält.  
@@ -1173,26 +1173,26 @@ DWORD m_dwRestartManagerSupportFlags;
 |||  
 |-|-|  
 |Flag|Beschreibung|  
-|`AFX_RESTART_MANAGER_SUPPORT_RESTART`|Die Anwendung mit registriert [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager). Der Neustart-Manager ist verantwortlich für die Anwendung neu zu starten, wenn es unerwartet beendet wird.|  
-|- `AFX_RESTART_MANAGER_SUPPORT_RECOVERY`|Die Anwendung für den Neustart-Manager registriert ist, und der Neustart-Manager Ruft die Rückruffunktion Wiederherstellung beim Neustart der Anwendung. Die Standardrückruffunktion für die Wiederherstellung ist [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|  
-|- `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`|AutoSpeichern aktiviert ist und der Neustart-Manager speichert alle Dokumente öffnen, wenn die Anwendung neu gestartet wird.|  
-|- `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL`|AutoSpeichern aktiviert ist und der Neustart-Manager speichert alle Dokumente öffnen, in regelmäßigen Intervallen. Das Intervall wird definiert, indem [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|  
-|- `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`|Der Neustart-Manager wird zuvor geöffneten Dokumenten nach dem Neustart der Anwendung eine unerwartete Beendigung geöffnet. Die [CDataRecoveryHandler Klasse](../../mfc/reference/cdatarecoveryhandler-class.md) kümmert sich um die Liste der geöffneten Dokumente speichern und wiederhergestellt werden.|  
-|- `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`|Der Neustart-Manager fordert den Benutzer automatisch gespeicherte Dateien wiederherstellen, nach dem Neustart der Anwendung. Die `CDataRecoveryHandler` Klasse fragt die Benutzer.|  
-|- `AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE`|Die Kombination `AFX_RESTART_MANAGER_SUPPORT_RESTART`, `AFX_RESTART_MANAGER_SUPPORT_RECOVER`, und `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`.|  
-|- `AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS`|Die Kombination `AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE`, `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`, `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL`, und `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`.|  
-|- `AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS`|Die Kombination `AFX_RESTART_MANAGER_SUPPORT_RESTART`, `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`, und `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`.|  
-|- `AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS`|Die Kombination `AFX_RESTART_MANAGER_SUPPORT_RECOVERY`, `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL`, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`, und `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`.|  
+|AFX_RESTART_MANAGER_SUPPORT_RESTART|Die Anwendung mit registriert [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager). Der Neustart-Manager ist verantwortlich für die Anwendung neu zu starten, wenn es unerwartet beendet wird.|  
+|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|Die Anwendung für den Neustart-Manager registriert ist, und der Neustart-Manager Ruft die Rückruffunktion Wiederherstellung beim Neustart der Anwendung. Die Standardrückruffunktion für die Wiederherstellung ist [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|  
+|-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|AutoSpeichern aktiviert ist und der Neustart-Manager speichert alle Dokumente öffnen, wenn die Anwendung neu gestartet wird.|  
+|-AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|AutoSpeichern aktiviert ist und der Neustart-Manager speichert alle Dokumente öffnen, in regelmäßigen Intervallen. Das Intervall wird definiert, indem [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|  
+|-AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|Der Neustart-Manager wird zuvor geöffneten Dokumenten nach dem Neustart der Anwendung eine unerwartete Beendigung geöffnet. Die [CDataRecoveryHandler Klasse](../../mfc/reference/cdatarecoveryhandler-class.md) kümmert sich um die Liste der geöffneten Dokumente speichern und wiederhergestellt werden.|  
+|-AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|Der Neustart-Manager fordert den Benutzer automatisch gespeicherte Dateien wiederherstellen, nach dem Neustart der Anwendung. Die `CDataRecoveryHandler` Klasse fragt die Benutzer.|  
+|-AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|Die Union der AFX_RESTART_MANAGER_SUPPORT_RESTART AFX_RESTART_MANAGER_SUPPORT_RECOVER und AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|  
+|-AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|Die Union der AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL und AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|  
+|-AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|Die Union der AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES und AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|  
+|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|Die union OfAFX_RESTART_MANAGER_SUPPORT_RECOVERY, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES und AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|  
   
 ##  <a name="m_ehelptype"></a>  CWinApp::m_eHelpType  
- Der Typ dieses Datenelements ist den enumerierten Typ **AFX_HELP_TYPE**, die definiert ist, in der `CWinApp` Klasse.  
+ Der Typ dieses Datenelements ist den enumerierten Typ AFX_HELP_TYPE, die in definiert ist die `CWinApp` Klasse.  
   
 ```  
 AFX_HELP_TYPE m_eHelpType;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die **AFX_HELP_TYPE** Enumeration ist wie folgt definiert:  
+ Die Enumeration AFX_HELP_TYPE wird wie folgt definiert:  
   
 ```  
 enum AFX_HELP_TYPE {  
@@ -1201,32 +1201,32 @@ enum AFX_HELP_TYPE {
     };  
 ```  
   
--   Rufen Sie zum Festlegen der Anwendung dienen dem HTML-Hilfe [SetHelpMode](#sethelpmode) , und geben Sie **AfxHTMLHelp**.  
+-   Rufen Sie zum Festlegen der Anwendung dienen dem HTML-Hilfe [SetHelpMode](#sethelpmode) , und geben Sie `afxHTMLHelp`.  
   
--   Rufen Sie zum Festlegen der Anwendung dienen dem WinHelp `SetHelpMode` , und geben Sie **AfxWinHelp**.  
+-   Rufen Sie zum Festlegen der Anwendung dienen dem WinHelp `SetHelpMode` , und geben Sie `afxWinHelp`.  
   
 ##  <a name="m_hinstance"></a>  CWinApp::m_hInstance  
- Entspricht der `hInstance` Parameter übergeben von Windows zum `WinMain`.  
+ Entspricht der *hInstance* Parameter übergeben von Windows zum `WinMain`.  
   
 ```  
 HINSTANCE m_hInstance;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die `m_hInstance` -Datenmember ist ein Handle für die aktuelle Instanz der Anwendung unter Windows ausgeführt wird. Dies ist die globale Funktion zurückgegebene [AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle). `m_hInstance` ist eine öffentliche Variable des Typs `HINSTANCE`.  
+ Die `m_hInstance` -Datenmember ist ein Handle für die aktuelle Instanz der Anwendung unter Windows ausgeführt wird. Dies ist die globale Funktion zurückgegebene [AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle). `m_hInstance` ist eine öffentliche Variable des Typs HINSTANCE.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing#55](../../mfc/reference/codesnippet/cpp/cwinapp-class_15.cpp)]  
   
 ##  <a name="m_lpcmdline"></a>  CWinApp:: M_lpcmdline  
- Entspricht der `lpCmdLine` Parameter übergeben von Windows zum `WinMain`.  
+ Entspricht der *LpCmdLine* Parameter übergeben von Windows zum `WinMain`.  
   
 ```  
 LPTSTR m_lpCmdLine;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Zeigt auf eine auf Null endende Zeichenfolge, die die Befehlszeile für die Anwendung angibt. Verwendung `m_lpCmdLine` auf Befehlszeilenargumente zuzugreifen, vom Benutzer eingegeben werden, wenn die Anwendung gestartet wurde. `m_lpCmdLine` ist eine öffentliche Variable des Typs `LPTSTR`.  
+ Zeigt auf eine auf Null endende Zeichenfolge, die die Befehlszeile für die Anwendung angibt. Verwendung `m_lpCmdLine` auf Befehlszeilenargumente zuzugreifen, vom Benutzer eingegeben werden, wenn die Anwendung gestartet wurde. `m_lpCmdLine` ist eine öffentliche Variable des Typs LPTSTR.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing#52](../../mfc/reference/codesnippet/cpp/cwinapp-class_16.cpp)]  
@@ -1242,14 +1242,14 @@ int m_nAutosaveInterval;
  Sie können den Neustart-Manager, um AutoSpeichern geöffnete Dokumente in festgelegten Intervallen konfigurieren. Wenn Ihre Anwendung nicht AutoSpeichern-Dateien, hat dieser Parameter keine Auswirkungen.  
   
 ##  <a name="m_ncmdshow"></a>  CWinApp::m_nCmdShow  
- Entspricht der `nCmdShow` Parameter übergeben von Windows zum `WinMain`.  
+ Entspricht der *nCmdShow* Parameter übergeben von Windows zum `WinMain`.  
   
 ```  
 int m_nCmdShow;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Übergeben Sie `m_nCmdShow` als Argument beim Aufrufen von [ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) für im Hauptfenster der Anwendung. `m_nCmdShow` ist eine öffentliche Variable des Typs `int`.  
+ Übergeben Sie `m_nCmdShow` als Argument beim Aufrufen von [ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) für im Hauptfenster der Anwendung. `m_nCmdShow` ist eine öffentliche Variable des Typs **Int**.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing#56](../../mfc/reference/codesnippet/cpp/cwinapp-class_17.cpp)]  
@@ -1258,7 +1258,7 @@ int m_nCmdShow;
  Verwenden Sie dieses Datenelement, um einen Zeiger auf das Hauptfenster der Anwendung OLE-Container zu speichern, die OLE-Server-Anwendung direkte aktiviert hat.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn der Datenmember ist **NULL**, die Anwendung ist nicht in-Place aktiv.  
+ Wenn dieses Datenelement NULL ist, ist die Anwendung nicht direkt aktiviert.  
   
  Das Framework legt diese Membervariable fest, wenn das Rahmenfenster direktes von einer OLE-Container-Anwendung aktiviert ist.  
   
@@ -1280,7 +1280,7 @@ LPCTSTR m_pszAppName;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Anwendungsname kann stammen aus den übergebenen Parameter die [CWinApp](#cwinapp) -Konstruktor oder, wenn nicht angegeben, auf die Ressourcenzeichenfolge mit der ID **AFX_IDS_APP_TITLE**. Wenn der Anwendungsname in der Ressource nicht gefunden wird, kommt es des Programms. EXE-Dateiname.  
+ Der Anwendungsname kann stammen aus den übergebenen Parameter die [CWinApp](#cwinapp) Konstruktor oder, wenn nicht angegeben, auf die Ressourcenzeichenfolge mit der ID des AFX_IDS_APP_TITLE. Wenn der Anwendungsname in der Ressource nicht gefunden wird, kommt es des Programms. EXE-Dateiname.  
   
  Die globale Funktion zurückgegebene [AfxGetAppName](application-information-and-management.md#afxgetappname). `m_pszAppName` ist eine öffentliche Variable des Typs **const Char\***.  
   
@@ -1395,7 +1395,7 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
  [!code-cpp[NVC_MFCWindowing#48](../../mfc/reference/codesnippet/cpp/cwinapp-class_24.cpp)]  
   
 ##  <a name="onfilenew"></a>  CWinApp::OnFileNew  
- Implementiert die `ID_FILE_NEW` Befehl.  
+ Implementiert die ID_FILE_NEW-Befehl.  
   
 ```  
 afx_msg void OnFileNew();
@@ -1412,7 +1412,7 @@ afx_msg void OnFileNew();
  [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]  
   
 ##  <a name="onfileopen"></a>  CWinApp::OnFileOpen  
- Implementiert die `ID_FILE_OPEN` Befehl.  
+ Implementiert die ID_FILE_OPEN-Befehl.  
   
 ```  
 afx_msg void OnFileOpen();
@@ -1429,7 +1429,7 @@ afx_msg void OnFileOpen();
  [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]  
   
 ##  <a name="onfileprintsetup"></a>  CWinApp::OnFilePrintSetup  
- Implementiert die **ID_FILE_PRINT_SETUP** Befehl.  
+ Implementiert die ID_FILE_PRINT_SETUP-Befehl.  
   
 ```  
 afx_msg void OnFilePrintSetup();
@@ -1462,7 +1462,7 @@ afx_msg void OnHelp();
  Überschreiben Sie diese Memberfunktion zum Festlegen von des Hilfekontext auf einen anderen Wert als das Fenster, das Dialogfeld, Menüelement oder Symbolleisten-Schaltfläche, der gerade den Fokus besitzt. Rufen Sie `WinHelp` mit der gewünschten Hilfe-Kontext-ID  
   
 ##  <a name="onhelpfinder"></a>  CWinApp::OnHelpFinder  
- Behandelt die **ID_HELP_FINDER** und **ID_DEFAULT_HELP** Befehle.  
+ Verarbeitet die Befehle ID_HELP_FINDER und ID_DEFAULT_HELP an.  
   
 ```  
 afx_msg void OnHelpFinder();
@@ -1472,7 +1472,7 @@ afx_msg void OnHelpFinder();
  Müssen Sie hinzufügen, eine `ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )` Anweisung, um Ihre `CWinApp` Klasse meldungszuordnung So aktivieren Sie diese Memberfunktion auf. Wenn aktiviert, das Framework ruft diese Meldungshandler Funktion, wenn der Benutzer der Anwendung den Befehl Hilfe Finder aufzurufenden auswählt `WinHelp` mit dem Standard **HELP_FINDER** Thema.  
   
 ##  <a name="onhelpindex"></a>  CWinApp::OnHelpIndex  
- Behandelt die **ID_HELP_INDEX** Befehls- und stellt ein standardmäßiges Hilfethema bereit.  
+ ID_HELP_INDEX-Befehl verarbeitet und stellt ein standardmäßiges Hilfethema bereit.  
   
 ```  
 afx_msg void OnHelpIndex();
@@ -1482,7 +1482,7 @@ afx_msg void OnHelpIndex();
  Müssen Sie hinzufügen, eine `ON_COMMAND( ID_HELP_INDEX, OnHelpIndex )` Anweisung, um Ihre `CWinApp` Klasse meldungszuordnung So aktivieren Sie diese Memberfunktion auf. Wenn aktiviert, das Framework ruft diese Funktion Meldungshandler Wenn der Benutzer der Anwendung zum Aufrufen den Hilfe-Befehl auswählt `WinHelp` mit dem Standard **HELP_INDEX** Thema.  
   
 ##  <a name="onhelpusing"></a>  CWinApp::OnHelpUsing  
- Behandelt die **ID_HELP_USING** Befehl.  
+ Verarbeitet die ID_HELP_USING-Befehl.  
   
 ```  
 afx_msg void OnHelpUsing();
@@ -1499,8 +1499,8 @@ virtual BOOL OnIdle(LONG lCount);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lCount`  
- Eine erhöht, jedes Mal `OnIdle` wird aufgerufen, wenn die Nachricht der Anwendungswarteschlange leer ist. Diese Anzahl wird jedes Mal auf 0 zurückgesetzt, wenn eine neue Nachricht verarbeitet wird. Sie können die `lCount` Parameter, um die relative Dauer zu ermitteln, die Anwendung wurde ohne Verarbeitung einer Nachricht im Leerlauf.  
+ *lCount*  
+ Eine erhöht, jedes Mal `OnIdle` wird aufgerufen, wenn die Nachricht der Anwendungswarteschlange leer ist. Diese Anzahl wird jedes Mal auf 0 zurückgesetzt, wenn eine neue Nachricht verarbeitet wird. Sie können die *lCount* Parameter, um die relative Dauer zu ermitteln, die Anwendung wurde ohne Verarbeitung einer Nachricht im Leerlauf.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL im Leerlauf Verarbeitungszeit empfangen; 0, wenn keine weiteren Leerlaufzeit benötigt wird.  
@@ -1508,27 +1508,27 @@ virtual BOOL OnIdle(LONG lCount);
 ### <a name="remarks"></a>Hinweise  
  `OnIdle` wird in der Standardeinstellung Nachrichtenschleife aufgerufen werden, wenn die Nachricht der Anwendungswarteschlange leer ist. Verwenden Sie die Außerkraftsetzung, um eigene Hintergrund Aufgaben im Leerlauf Ereignishandler aufzurufen.  
   
- `OnIdle` sollte zurückgeben 0 an, um anzugeben, dass keine Leerlaufzeiten erforderlich ist. Die `lCount` Parameter wird jedes Mal inkrementiert `OnIdle` wird aufgerufen, wenn die Nachrichtenwarteschlange leer ist und wird jedes Mal eine neue Nachricht verarbeitet wird auf 0 zurückgesetzt. Sie können Ihre verschiedenen im Leerlauf Routinen, die basierend auf diese Anzahl aufrufen.  
+ `OnIdle` sollte zurückgeben 0 an, um anzugeben, dass keine Leerlaufzeiten erforderlich ist. Die *lCount* Parameter wird jedes Mal inkrementiert `OnIdle` wird aufgerufen, wenn die Nachrichtenwarteschlange leer ist und wird jedes Mal eine neue Nachricht verarbeitet wird auf 0 zurückgesetzt. Sie können Ihre verschiedenen im Leerlauf Routinen, die basierend auf diese Anzahl aufrufen.  
   
  Im folgenden werden Leerlaufschleifen-Verarbeitung zusammengefasst:  
   
-1.  Wenn die Nachrichtenschleife in der Microsoft Foundation Class-Bibliothek die Nachrichtenwarteschlange überprüft, und es keine ausstehende Nachrichten findet, ruft es `OnIdle` für den Application-Objekt und gibt 0, als die `lCount` Argument.  
+1.  Wenn die Nachrichtenschleife in der Microsoft Foundation Class-Bibliothek die Nachrichtenwarteschlange überprüft, und es keine ausstehende Nachrichten findet, ruft es `OnIdle` für den Application-Objekt und gibt 0, als die *lCount* Argument.  
   
 2. `OnIdle` Einige Verarbeitungsschritte ausführt, und gibt ein Wert ungleich NULL an, dass er sollte erneut aufgerufen werden, hierzu Weiterverarbeitung.  
   
-3.  Die Nachrichtenschleife prüft die Nachrichtenwarteschlange erneut aus. Wenn keine Nachrichten mehr ausstehen, ruft es `OnIdle` erneut, erhöht die `lCount` Argument.  
+3.  Die Nachrichtenschleife prüft die Nachrichtenwarteschlange erneut aus. Wenn keine Nachrichten mehr ausstehen, ruft es `OnIdle` erneut, erhöht die *lCount* Argument.  
   
 4.  Schließlich `OnIdle` seine Leerlaufaufgaben Verarbeitung beendet und gibt 0 zurück. Das weist darauf hin, den Aufruf beendet die Nachrichtenschleife `OnIdle` bis die nächste Nachricht aus der Warteschlange empfangen wird, an welchem Punkt im Leerlauf Zyklus neu gestartet wird mit dem Argument auf 0 festgelegt.  
   
  Führen Sie langwierige Aufgaben während nicht `OnIdle` da Benutzereingaben bis zu Ihrer Anwendung verarbeiten kann nicht `OnIdle` zurückgibt.  
   
 > [!NOTE]
->  Die standardmäßige Implementierung des `OnIdle` Updates Befehl Benutzeroberflächenobjekte wie Menüelemente und Symbolleisten-Schaltflächen und interne Daten Struktur Cleanup ausgeführt werden. Aus diesem Grund, wenn Sie außer Kraft setzen `OnIdle`, rufen Sie `CWinApp::OnIdle` mit der `lCount` in Ihrer überschriebene Version. Rufen Sie zuerst alle Basisklassen leerlaufverarbeitung (d. h., bis die Basisklasse `OnIdle` gibt 0 zurück). Wenn Sie müssen die Aufgaben ausführen, bevor die Basisklasse Verarbeitung abgeschlossen ist, überprüfen Sie die Implementierung der Basisklasse zum Auswählen der richtigen `lCount` währenddessen für Ihre Arbeit benötigen.  
+>  Die standardmäßige Implementierung des `OnIdle` Updates Befehl Benutzeroberflächenobjekte wie Menüelemente und Symbolleisten-Schaltflächen und interne Daten Struktur Cleanup ausgeführt werden. Aus diesem Grund, wenn Sie außer Kraft setzen `OnIdle`, rufen Sie `CWinApp::OnIdle` mit der `lCount` in Ihrer überschriebene Version. Rufen Sie zuerst alle Basisklassen leerlaufverarbeitung (d. h., bis die Basisklasse `OnIdle` gibt 0 zurück). Wenn Sie müssen die Aufgaben ausführen, bevor die Basisklasse Verarbeitung abgeschlossen ist, überprüfen Sie die Implementierung der Basisklasse zum Auswählen der richtigen *lCount* währenddessen für Ihre Arbeit benötigen.  
   
- Wenn Sie nicht wünschen `OnIdle` um aufgerufen werden, wenn eine Nachricht aus der Warteschlange abgerufen wird, können Sie überschreiben die [CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage). Wenn eine Anwendung einen sehr kurzen Zeitgeber festgelegt wurde oder vom System gesendet wird die **WM_SYSTIMER** Nachricht werden dann `OnIdle` wird wiederholt aufgerufen werden, und die Leistung beeinträchtigen.  
+ Wenn Sie nicht wünschen `OnIdle` um aufgerufen werden, wenn eine Nachricht aus der Warteschlange abgerufen wird, können Sie überschreiben die [CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage). Wenn eine Anwendung einen sehr kurzen Timer zurückgesetzt wurden oder wenn das System die Nachricht WM_SYSTIMER dann sendet `OnIdle` wird wiederholt aufgerufen werden, und die Leistung beeinträchtigen.  
   
 ### <a name="example"></a>Beispiel  
- Die beiden folgenden Beispiele zeigen, wie mit `OnIdle`. Im erste Beispiel verarbeitet zwei im Leerlauf Aufgaben mithilfe der `lCount` Argument für die Aufgaben zu priorisieren. Die erste Aufgabe besteht hoher Priorität sollten, und Sie sie wann immer möglich. Der zweite Task ist weniger wichtig und sollte nur bei eine lange Pause Benutzereingaben vorgenommen werden. Beachten Sie den Aufruf der Basisklassenversion von `OnIdle`. Im zweite Beispiel wird eine Gruppe von Leerlaufaufgaben mit unterschiedlichen Prioritäten verwaltet.  
+ Die beiden folgenden Beispiele zeigen, wie mit `OnIdle`. Im erste Beispiel verarbeitet zwei im Leerlauf Aufgaben mithilfe der *lCount* Argument für die Aufgaben zu priorisieren. Die erste Aufgabe besteht hoher Priorität sollten, und Sie sie wann immer möglich. Der zweite Task ist weniger wichtig und sollte nur bei eine lange Pause Benutzereingaben vorgenommen werden. Beachten Sie den Aufruf der Basisklassenversion von `OnIdle`. Im zweite Beispiel wird eine Gruppe von Leerlaufaufgaben mit unterschiedlichen Prioritäten verwaltet.  
   
  [!code-cpp[NVC_MFCWindowing#51](../../mfc/reference/codesnippet/cpp/cwinapp-class_27.cpp)]  
   
@@ -1542,14 +1542,14 @@ BOOL bAddToMRU = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszFileName`  
+ [in] *LpszFileName*  
  Der Name der Datei geöffnet werden.  
   
- [in] `bAddToMRU`  
- `TRUE` Gibt an, dass das Dokument ist eine der letzten Dateien. `FALSE` gibt an, das Dokument ist nicht die aktuellsten Dateien.  
+ [in] *bAddToMRU*  
+ "True" gibt an, dass das Dokument ist eine der neuesten Dateien. FALSE gibt an, dass das Dokument nicht die aktuellsten Dateien ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine `CDocument` Wenn erfolgreich; andernfalls `NULL`.  
+ Ein Zeiger auf eine `CDocument` Wenn erfolgreich, andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn ein Dokument, das diesem Namen ist bereits geöffnet ist, wird das erste Frame-Fenster, das das Dokument enthält den Fokus erhalten. Wenn eine Anwendung mehrere Dokumentvorlagen unterstützt, verwendet das Framework die Dateinamenerweiterung finden Sie die entsprechenden Dokumentvorlage zu dem Versuch, das Dokument geladen werden. Bei erfolgreicher Ausführung erstellt die Dokumentvorlage klicken Sie dann eine Rahmenfenster und die Ansicht für das Dokument.  
@@ -1565,7 +1565,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rCmdInfo`  
+ *rCmdInfo*  
  Ein Verweis auf eine [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1591,7 +1591,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pMsg`  
+ *pMsg*  
  Ein Zeiger auf eine [MSG](../../mfc/reference/msg-structure1.md) Struktur, die die zu verarbeitende Meldung enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1607,10 +1607,10 @@ virtual BOOL ProcessMessageFilter(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `code`  
- Gibt einen Hookcode. Diese Memberfunktion verwendet den Code, um zu bestimmen, wie verarbeitet `lpMsg.`  
+ *Code*  
+ Gibt einen Hookcode. Diese Memberfunktion verwendet den Code, um zu bestimmen, wie verarbeitet *LpMsg.*  
   
- `lpMsg`  
+ *lpMsg*  
  Ein Zeiger auf ein Windows [MSG](../../mfc/reference/msg-structure1.md) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -1622,18 +1622,18 @@ virtual BOOL ProcessMessageFilter(
  Wenn Sie diese erweiterte Funktion überschreiben, müssen Sie die Basisklassenversion zum Verwalten des Frameworks aufrufen Verarbeitung zu verknüpfen.  
   
 ##  <a name="processshellcommand"></a>  CWinApp::ProcessShellCommand  
- Diese Memberfunktion wird aufgerufen, indem [InitInstance](#initinstance) aus übergebenen Parameter akzeptiert die `CCommandLineInfo` identifizierte Objekt `rCmdInfo`, und führen Sie die angezeigte Aktion.  
+ Diese Memberfunktion wird aufgerufen, indem [InitInstance](#initinstance) aus übergebenen Parameter akzeptiert die `CCommandLineInfo` identifizierte Objekt *rCmdInfo*, und führen Sie die angezeigte Aktion.  
   
 ```  
 BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rCmdInfo`  
+ *rCmdInfo*  
  Ein Verweis auf eine [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Wert ist ungleich NULL, wenn die Shell-Befehl wurde erfolgreich verarbeitet wird. Bei 0 zurückgeben **"false"** aus [InitInstance](#initinstance).  
+ Der Wert ist ungleich NULL, wenn die Shell-Befehl wurde erfolgreich verarbeitet wird. Wenn 0, gibt "false", von [InitInstance](#initinstance).  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie ein neues MFC-Projekt mit dem Assistenten starten, wird den Assistenten zum Erstellen einer lokalen Instanz von `CCommandLineInfo`, und rufen dann `ProcessShellCommand` und [ParseCommandLine](#parsecommandline) in die `InitInstance` Memberfunktion. Über die Befehlszeile folgt die Route, die im folgenden beschrieben:  
@@ -1673,11 +1673,11 @@ virtual LRESULT ProcessWndProcException(
  *e*  
  Ein Zeiger auf eine nicht abgefangene Ausnahme.  
   
- `pMsg`  
+ *pMsg*  
  Ein [MSG](../../mfc/reference/msg-structure1.md) -Struktur, die Informationen über die Windows-Meldung enthält, die das Framework eine Ausnahme verursacht hat.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Wert, der an Windows zurückgegeben werden sollen. Normalerweise ist dies 0L für Windows-Nachrichten, 1L ( **"true"**) für Command-Meldungen.  
+ Der Wert, der an Windows zurückgegeben werden sollen. Normalerweise ist dies 0L für Windows-Nachrichten, 1L ("true") für Command-Meldungen.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie diese Memberfunktion nicht direkt auf.  
@@ -1707,8 +1707,8 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bCompat`  
- `TRUE` Fügt die Registrierungseinträge für Shell-Befehle, die Druck- und drucken, sodass einen Benutzer das Drucken von Dateien direkt von der Shell oder ziehen die Datei mit einem Druckerobjekt. Darüber hinaus wird einen DefaultIcon Schlüssel hinzugefügt. Standardmäßig ist dieser Parameter `FALSE` Gründen der Abwärtskompatibilität.  
+ [in] *bCompat*  
+ "True" fügt Registrierungseinträge für Shell-Befehle, die Druck- und drucken, sodass einen Benutzer das Drucken von Dateien direkt von der Shell oder ziehen die Datei mit einem Druckerobjekt. Darüber hinaus wird einen DefaultIcon Schlüssel hinzugefügt. Dieser Parameter ist standardmäßig "false" für die Abwärtskompatibilität.  
   
 ### <a name="remarks"></a>Hinweise  
  Dies ermöglicht es dem Benutzer zu eine Datendatei, die von der Anwendung erstellt wird, durch Doppelklick aus in Datei-Manager zu öffnen. Rufen Sie `RegisterShellFileTypes` nach dem Aufruf [AddDocTemplate](#adddoctemplate) für jedes Dokument Vorlagen in Ihrer Anwendung. Rufen Sie auch die [EnableShellOpen](#enableshellopen) Memberfunktion, die beim Aufrufen von `RegisterShellFileTypes`.  
@@ -1743,36 +1743,36 @@ DWORD dwCallbackFlags);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `bRegisterRecoveryCallback`|`TRUE` Gibt an, dass diese Instanz der Anwendung eine Rückruffunktion für die Wiederherstellung verwendet. `FALSE` gibt an, dass dies nicht der Fall. Das Framework Ruft die Rückruffunktion für die Wiederherstellung aus, wenn die Anwendung unerwartet beendet wird. Weitere Informationen finden Sie unter [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|  
-|[in] `strRestartIdentifier`|Die eindeutige Zeichenfolge, die diese Instanz des Neustart-Managers identifiziert wird. Die Neustart-Manager-Bezeichner ist für jede Instanz einer Anwendung eindeutig.|  
-|[in] `pwzCommandLineArgs`|Eine Zeichenfolge, die alle zusätzlichen Argumente über die Befehlszeile enthält.|  
-|[in] `dwRestartFlags`|Optionale Kennzeichen für den Neustart-Manager. Weitere Informationen finden Sie im Abschnitt "Hinweise".|  
-|[in] `pRecoveryCallback`|Die Rückruffunktion für die Wiederherstellung. Diese Funktion muss annehmen einer `LPVOID` Parameter als Eingabe- und der Rückgabewert eine `DWORD`. Die Standardrückruffunktion für die Wiederherstellung ist `CWinApp::ApplicationRecoveryCallback`.|  
-|[in] `lpvParam`|Die Eingabeparameter für die Wiederherstellung Rückruffunktion. Weitere Informationen finden Sie unter [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|  
-|[in] `dwPingInterval`|Die Zeitdauer, die der Neustart-Manager wartet, bis die Wiederherstellung Rückruffunktion zurückgegeben. Dieser Parameter ist in Millisekunden.|  
-|[in] `dwCallbackFlags`|Flags, die an die Rückruffunktion Recovery übergeben werden. Für zukünftige Verwendung reserviert.|  
+|[in] *bRegisterRecoveryCallback*|"True" gibt an, dass diese Instanz der Anwendung eine Rückruffunktion für die Wiederherstellung verwendet. FALSE gibt an, dass dies nicht der Fall. Das Framework Ruft die Rückruffunktion für die Wiederherstellung aus, wenn die Anwendung unerwartet beendet wird. Weitere Informationen finden Sie unter [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|  
+|[in] *StrRestartIdentifier*|Die eindeutige Zeichenfolge, die diese Instanz des Neustart-Managers identifiziert wird. Die Neustart-Manager-Bezeichner ist für jede Instanz einer Anwendung eindeutig.|  
+|[in] *PwzCommandLineArgs*|Eine Zeichenfolge, die alle zusätzlichen Argumente über die Befehlszeile enthält.|  
+|[in] *DwRestartFlags*|Optionale Kennzeichen für den Neustart-Manager. Weitere Informationen finden Sie im Abschnitt "Hinweise".|  
+|[in] *pRecoveryCallback*|Die Rückruffunktion für die Wiederherstellung. Diese Funktion muss nehmen einen Versionsparameter LPVOID als Eingabe und einen DWORD-Wert zurückgeben. Die Standardrückruffunktion für die Wiederherstellung ist `CWinApp::ApplicationRecoveryCallback`.|  
+|[in] *LpvParam*|Die Eingabeparameter für die Wiederherstellung Rückruffunktion. Weitere Informationen finden Sie unter [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|  
+|[in] *DwPingInterval*|Die Zeitdauer, die der Neustart-Manager wartet, bis die Wiederherstellung Rückruffunktion zurückgegeben. Dieser Parameter ist in Millisekunden.|  
+|[in] *DwCallbackFlags*|Flags, die an die Rückruffunktion Recovery übergeben werden. Für zukünftige Verwendung reserviert.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `S_OK` Wenn die Methode erfolgreich ist; andernfalls ein Fehlercode.  
+ S_OK, wenn die Methode erfolgreich ist; andernfalls ein Fehlercode.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Ihre Anwendung die Standard-MFC-Implementierung für die automatische Speicherung Dateien verwendet, verwenden Sie die einfache Version eines `RegisterWithRestartManager`. Verwenden Sie die komplexe Version des `RegisterWithRestartManager` , wenn die automatische Speicherung Verhalten der Anwendung angepasst werden soll.  
   
- Wenn Sie diese Methode mit einer leeren Zeichenfolge für Aufrufen `strRestartIdentifier`, `RegisterWithRestartManager` erstellt eine Zeichenfolge Eindeutiger Bezeichner für diese Instanz den Neustart-Manager.  
+ Wenn Sie diese Methode mit einer leeren Zeichenfolge für Aufrufen *StrRestartIdentifier*, `RegisterWithRestartManager` erstellt eine Zeichenfolge Eindeutiger Bezeichner für diese Instanz den Neustart-Manager.  
   
  Wenn eine Anwendung unerwartet beendet wird, wird der Neustart-Manager startet die Anwendung über die Befehlszeile neu und enthält den eindeutigen Bezeichner als optionales Argument neu gestartet. In diesem Szenario das Framework ruft `RegisterWithRestartManager` zweimal. Der erste Aufruf stammt [CWinApp:: InitInstance](#initinstance) mit einer leeren Zeichenfolge für den Zeichenfolgenbezeichner. Klicken Sie dann die Methode [CWinApp::ProcessShellCommand](#processshellcommand) Aufrufe `RegisterWithRestartManager` mit dem Neustart des eindeutigen Bezeichner.  
   
- Nachdem Sie eine Anwendung mit den Neustart-Manager registriert haben, überwacht der Neustart-Manager die Anwendung an. Wenn die Anwendung unerwartet beendet wird, ruft der Neustart-Manager die Rückruffunktion Wiederherstellung während der Prozess beendet wird. Die Neustart-Manager wartet die `dwPingInterval` auf eine Antwort von der Wiederherstellung Rückruffunktion. Wenn die Wiederherstellung Rückruffunktion innerhalb dieses Zeitraums nicht reagiert, beendet die Anwendung ohne die Rückruffunktion für die Wiederherstellung auszuführen.  
+ Nachdem Sie eine Anwendung mit den Neustart-Manager registriert haben, überwacht der Neustart-Manager die Anwendung an. Wenn die Anwendung unerwartet beendet wird, ruft der Neustart-Manager die Rückruffunktion Wiederherstellung während der Prozess beendet wird. Die Neustart-Manager wartet der *DwPingInterval* auf eine Antwort von der Wiederherstellung Rückruffunktion. Wenn die Wiederherstellung Rückruffunktion innerhalb dieses Zeitraums nicht reagiert, beendet die Anwendung ohne die Rückruffunktion für die Wiederherstellung auszuführen.  
   
- Standardmäßig die DwRestartFlags werden nicht unterstützt, jedoch werden für die zukünftige Verwendung bereitgestellt. Die möglichen Werte für `dwRestartFlags` lauten wie folgt:  
+ Standardmäßig die DwRestartFlags werden nicht unterstützt, jedoch werden für die zukünftige Verwendung bereitgestellt. Die möglichen Werte für *DwRestartFlags* lauten wie folgt:  
   
-- `RESTART_NO_CRASH`  
+- RESTART_NO_CRASH  
   
-- `RESTART_NO_HANG`  
+- RESTART_NO_HANG  
   
-- `RESTART_NO_PATCH`  
+- RESTART_NO_PATCH  
   
-- `RESTART_NO_REBOOT`  
+- RESTART_NO_REBOOT  
   
 ##  <a name="reopenpreviousfilesatrestart"></a>  CWinApp::ReopenPreviousFilesAtRestart  
  Bestimmt, ob der Neustart-Manager die Dateien erneut, die geöffnet waren geöffnet, als die Anwendung wurde unerwartet beendet.  
@@ -1782,7 +1782,7 @@ virtual BOOL ReopenPreviousFilesAtRestart() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Gibt die Neustart-Manager wieder, die zuvor geöffneten Dateien an. `FALSE` gibt an, der Neustart-Manager nicht.  
+ "True" gibt an, dass der Neustart-Manager die zuvor geöffneten Dateien wird daraufhin wieder geöffnet. FALSE gibt an, dass der Neustart-Manager nicht der Fall ist.  
   
 ##  <a name="restartinstance"></a>  CWinApp::RestartInstance  
  Verarbeitet einen Neustart der Anwendung vom Neustart-Manager initiiert werden.  
@@ -1792,12 +1792,12 @@ virtual BOOL CWinApp::RestartInstance();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Wiederherstellung Datenhandler öffnet zuvor öffnen Sie Dokumente; `FALSE` , wenn der Datenhandler für die Wiederherstellung einen Fehler aufweist oder es keine zuvor geöffneten Dokumente sind.  
+ True, wenn die Wiederherstellung Datenhandler zuvor geöffneten Dokumente öffnet. "False", wenn der Datenhandler für die Wiederherstellung einen Fehler aufweist oder es keine zuvor geöffneten Dokumente sind.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn eine Anwendung der Neustart-Manager neu gestartet wird, ruft das Framework diese Methode auf. Diese Methode ruft die Wiederherstellung Datenhandler ab und stellt die Dateien automatisch wieder her. Diese Methode ruft [CDataRecoveryHandler::RestoreAutosavedDocuments](../../mfc/reference/cdatarecoveryhandler-class.md#restoreautosaveddocuments) zu bestimmen, ob der Benutzer möchte die Dateien automatisch wiederhergestellt.  
   
- Diese Methode gibt `FALSE` Wenn die [CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md) feststellt, dass es keine geöffneten Dokumente wurden. Wenn gab es keine offenen Dokumente, startet die Anwendung in der Regel.  
+ Diese Methode gibt "false" zurück, wenn die [CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md) feststellt, dass es keine geöffneten Dokumente wurden. Wenn gab es keine offenen Dokumente, startet die Anwendung in der Regel.  
   
 ##  <a name="restoreautosavedfilesatrestart"></a>  CWinApp::RestoreAutosavedFilesAtRestart  
  Bestimmt, ob der Neustart-Manager die Dateien automatisch, beim Neustart der Anwendung wiederhergestellt.  
@@ -1807,7 +1807,7 @@ virtual BOOL RestoreAutosavedFilesAtRestart() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Gibt die Neustart-Manager Wiederherstellungen automatisch gespeicherte Dateien an. `FALSE` gibt an, der Neustart-Manager nicht.  
+ "True" gibt an, dass der Neustart-Manager automatisch eine Datei wiederhergestellt wird. FALSE gibt an, dass der Neustart-Manager nicht der Fall ist.  
   
 ##  <a name="run"></a>  CWinApp:: Run  
  Stellt eine Standard-Nachrichtenschleife.  
@@ -1817,12 +1817,12 @@ virtual int Run();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `int` von zurückgegebene Wert `WinMain`.  
+ Ein **Int** von zurückgegebene Wert `WinMain`.  
   
 ### <a name="remarks"></a>Hinweise  
- **Führen Sie** erhält und Windows-Meldungen sendet, bis die Anwendung empfängt eine **WM_QUIT** Nachricht. Wenn die Nachricht der Anwendungswarteschlange derzeit keine Nachrichten enthält **ausführen** Aufrufe [OnIdle](#onidle) leerlaufzeitverarbeitung ausführen. Eingehende Nachrichten werden an die [PreTranslateMessage](#pretranslatemessage) Memberfunktion für spezielle Verarbeitung und dann in der Windows-Funktion **TranslateMessage** für die Standardtastatur Übersetzung; schließlich die  **DispatchMessage** Windows-Funktion wird aufgerufen.  
+ `Run` Ruft ab und Windows-Meldungen sendet, bis die Anwendung eine WM_QUIT-Meldung empfängt. Wenn die Nachricht der Anwendungswarteschlange derzeit keine Nachrichten enthält `Run` Aufrufe [OnIdle](#onidle) leerlaufzeitverarbeitung ausführen. Eingehende Nachrichten werden an die [PreTranslateMessage](#pretranslatemessage) Memberfunktion für spezielle Verarbeitung und dann in der Windows-Funktion `TranslateMessage` für die Standardtastatur Übersetzung; schließlich die `DispatchMessage` Windows-Funktion wird aufgerufen.  
   
- **Führen Sie** wird selten überschrieben wird, aber Sie können überschreiben, um spezielle Verhalten bereitzustellen.  
+ `Run` wird selten überschrieben wird, aber Sie können überschreiben, um spezielle Verhalten bereitzustellen.  
   
 ##  <a name="runautomated"></a>  CWinApp::RunAutomated  
  Rufen Sie diese Funktion, um zu bestimmen, ob die " **/Automation**"oder" **-Automatisierung**" Option vorhanden ist, der angibt, ob die Anwendung für die von einer Clientanwendung gestartet wurde.  
@@ -1851,7 +1851,7 @@ BOOL RunEmbedded();
  Falls vorhanden, wird die Option in der Befehlszeile entfernt. Weitere Informationen zum Einbetten finden Sie im Artikel [Server: Implementieren eines Servers](../../mfc/servers-implementing-a-server.md).  
   
 ##  <a name="saveallmodified"></a>  CWinApp::SaveAllModified  
- Wird aufgerufen, durch das Framework zum Speichern aller Dokumente beim Hauptrahmenfenster für die Anwendung wird geschlossen, oder durch eine `WM_QUERYENDSESSION` Nachricht.  
+ Durch das Framework, um alle Dokumente zu speichern, wenn Hauptrahmenfenster für die Anwendung wird geschlossen oder über eine WM_QUERYENDSESSION Nachricht aufgerufen.  
   
 ```  
 virtual BOOL SaveAllModified();
@@ -1874,17 +1874,17 @@ void SelectPrinter(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hDevNames`  
+ *hDevNames*  
  Ein Handle für ein [DEVNAMES](../../mfc/reference/devnames-structure.md) Struktur, die die Treiber, Geräte und Ausgabe Anschlussnamen, der einen bestimmten Drucker bezeichnet.  
   
- `hDevMode`  
+ *hDevMode-Feld*  
  Ein Handle für ein [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) -Struktur, die Informationen über die Initialisierung für Grafikgeräte und die Umgebung eines Druckers angibt.  
   
  *bFreeOld*  
  Gibt den zuvor ausgewählten Drucker frei.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn beide `hDevMode` und `hDevNames` sind **NULL**, `SelectPrinter` verwendet den Standarddrucker.  
+ Wenn beide *hDevMode-Feld* und *hDevNames* NULL, `SelectPrinter` verwendet den Standarddrucker.  
   
 ##  <a name="sethelpmode"></a>  CWinApp::SetHelpMode  
  Legt die Anwendung Help Typ fest.  
@@ -1894,13 +1894,13 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `eHelpType`  
+ *eHelpType*  
  Gibt den Typ der Hilfe zu verwenden. Finden Sie unter [CWinApp::m_eHelpType](#m_ehelptype) für Weitere Informationen.  
   
 ### <a name="remarks"></a>Hinweise  
  Legt die Anwendung Help Typ fest.  
   
- Ihr Anwendungstyp Hilfe auf HTMLHelp festlegen möchten, rufen Sie [EnableHTMLHelp](#enablehtmlhelp). Sobald Sie aufrufen `EnableHTMLHelp`, muss die Anwendung HTMLHelp wie die Hilfe-Anwendung verwenden. Wenn Sie ändern, um die WinHelp verwenden möchten, können Sie aufrufen `SetHelpMode` und `eHelpType` auf **AfxWinHelp**.  
+ Ihr Anwendungstyp Hilfe auf HTMLHelp festlegen möchten, rufen Sie [EnableHTMLHelp](#enablehtmlhelp). Sobald Sie aufrufen `EnableHTMLHelp`, muss die Anwendung HTMLHelp wie die Hilfe-Anwendung verwenden. Wenn Sie ändern, um die WinHelp verwenden möchten, können Sie aufrufen `SetHelpMode` und *eHelpType* auf `afxWinHelp`.  
   
 ##  <a name="setregistrykey"></a>  CWinApp::SetRegistryKey  
  Bewirkt, dass die Anwendungseinstellungen in der Registrierung anstelle von INI-Dateien gespeichert werden.  
@@ -1928,7 +1928,7 @@ virtual BOOL SupportsApplicationRecovery() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Gibt die Neustart-Manager wiederhergestellt der Anwendung an. `FALSE` gibt an, der Neustart-Manager nicht.  
+ "True" gibt an, dass der Neustart-Manager die Anwendung wird wiederhergestellt. FALSE gibt an, dass der Neustart-Manager nicht der Fall ist.  
   
 ##  <a name="supportsautosaveatinterval"></a>  CWinApp::SupportsAutosaveAtInterval  
  Bestimmt, ob der Neustart-Manager speichert Dokumente in regelmäßigen Intervallen zu öffnen.  
@@ -1938,7 +1938,7 @@ virtual BOOL SupportsAutosaveAtInterval() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Gibt an, dass der Neustart-Manager speichert Dokumente zu öffnen. `FALSE` gibt an, der Neustart-Manager nicht.  
+ "True" gibt an, dass der Neustart-Manager speichert Dokumente zu öffnen. FALSE gibt an, dass der Neustart-Manager nicht der Fall ist.  
   
 ##  <a name="supportsautosaveatrestart"></a>  CWinApp::SupportsAutosaveAtRestart  
  Bestimmt, ob der Neustart-Manager speichert alle Dokumente öffnen, wenn die Anwendung neu gestartet wird.  
@@ -1948,7 +1948,7 @@ virtual BOOL SupportsAutosaveAtRestart() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Gibt an, dass der Neustart-Manager speichert Dokumente zu öffnen, wenn die Anwendung neu gestartet wird. `FALSE` gibt an, der Neustart-Manager nicht.  
+ "True" gibt an, dass der Neustart-Manager speichert Dokumente zu öffnen, wenn die Anwendung neu gestartet wird. FALSE gibt an, dass der Neustart-Manager nicht der Fall ist.  
   
 ##  <a name="supportsrestartmanager"></a>  CWinApp::SupportsRestartManager  
  Bestimmt, ob die Anwendung den Neustart-Manager unterstützt.  
@@ -1958,7 +1958,7 @@ virtual BOOL SupportsRestartManager() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Gibt an, dass die Anwendung den Neustart-Manager unterstützt. `FALSE` gibt an, die Anwendung hingegen nicht.  
+ "True" gibt an, dass die Anwendung den Neustart-Manager unterstützt. FALSE gibt an, dass die Anwendung nicht der Fall ist.  
   
 ##  <a name="unregister"></a>  CWinApp::Unregister  
  Hebt die Registrierung aller Dateien, die durch das Anwendungsobjekt registriert.  
@@ -1992,11 +1992,11 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwData`  
- Gibt die zusätzliche Daten. Der verwendete Wert hängt vom Wert von der `nCmd` Parameter.  
+ *dwData*  
+ Gibt die zusätzliche Daten. Der verwendete Wert hängt vom Wert von der *nCmd* Parameter.  
   
- `nCmd`  
- Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Einfluss auf die `dwData` Parameter, finden Sie unter der [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) Windows-Funktion.  
+ *nCmd*  
+ Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Einfluss auf die *DwData* Parameter, finden Sie unter der [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) Windows-Funktion.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft auch diese Funktion, um die WinHelp-Anwendung aufrufen.  
@@ -2018,16 +2018,16 @@ BOOL WriteProfileBinary(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszSection`  
+ *lpszSection*  
  Zeigt auf eine auf NULL endende Zeichenfolge, die den Abschnitt mit dem Eintrag angibt. Wenn der Abschnitt nicht vorhanden ist, wird er erstellt. Der Name des Abschnitts ist Kleinschreibung unterschieden. die Zeichenfolge kann eine beliebige Kombination von Groß- und Kleinbuchstaben sein.  
   
- `lpszEntry`  
+ *lpszEntry*  
  Zeigt auf eine auf Null endende Zeichenfolge, die den Eintrag enthält, in dem der Wert geschrieben werden. Wenn der Eintrag nicht im angegebenen Abschnitt vorhanden ist, wird es erstellt.  
   
- `pData`  
+ *pData*  
  Verweist auf die zu schreibenden Daten.  
   
- `nBytes`  
+ *Anzahl_byte*  
  Enthält die Anzahl der zu schreibenden Bytes.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -2051,13 +2051,13 @@ BOOL WriteProfileInt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszSection`  
+ *lpszSection*  
  Zeigt auf eine auf NULL endende Zeichenfolge, die den Abschnitt mit dem Eintrag angibt. Wenn der Abschnitt nicht vorhanden ist, wird er erstellt. Der Name des Abschnitts ist Kleinschreibung unterschieden. die Zeichenfolge kann eine beliebige Kombination von Groß- und Kleinbuchstaben sein.  
   
- `lpszEntry`  
+ *lpszEntry*  
  Zeigt auf eine auf Null endende Zeichenfolge, die den Eintrag enthält, in dem der Wert geschrieben werden. Wenn der Eintrag nicht im angegebenen Abschnitt vorhanden ist, wird es erstellt.  
   
- `nValue`  
+ *nWert*  
  Enthält den Wert geschrieben werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -2081,14 +2081,14 @@ BOOL WriteProfileString(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszSection`  
+ *lpszSection*  
  Zeigt auf eine auf NULL endende Zeichenfolge, die den Abschnitt mit dem Eintrag angibt. Wenn der Abschnitt nicht vorhanden ist, wird er erstellt. Der Name des Abschnitts ist Kleinschreibung unterschieden. die Zeichenfolge kann eine beliebige Kombination von Groß- und Kleinbuchstaben sein.  
   
- `lpszEntry`  
- Zeigt auf eine auf Null endende Zeichenfolge, die den Eintrag enthält, in dem der Wert geschrieben werden. Wenn der Eintrag nicht im angegebenen Abschnitt vorhanden ist, wird es erstellt. Wenn dieser Parameter ist `NULL`, vom angegebenen Abschnitt `lpszSection` wird gelöscht.  
+ *lpszEntry*  
+ Zeigt auf eine auf Null endende Zeichenfolge, die den Eintrag enthält, in dem der Wert geschrieben werden. Wenn der Eintrag nicht im angegebenen Abschnitt vorhanden ist, wird es erstellt. Wenn dieser Parameter NULL ist, im Abschnitt gemäß *LpszSection* wird gelöscht.  
   
- `lpszValue`  
- Verweist auf die Zeichenfolge, die geschrieben werden. Wenn dieser Parameter ist `NULL`, der Eintrag gemäß der `lpszEntry` Parameter wurde gelöscht.  
+ *lpszValue*  
+ Verweist auf die Zeichenfolge, die geschrieben werden. Wenn dieser Parameter NULL ist, der Eintrag gemäß der *LpszEntry* Parameter wurde gelöscht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -2106,7 +2106,7 @@ void SetAppID(LPCTSTR lpcszAppID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpcszAppID`  
+ *lpcszAppID*  
  Gibt an, die Anwendung Benutzer Modell-ID.  
   
 ### <a name="remarks"></a>Hinweise  

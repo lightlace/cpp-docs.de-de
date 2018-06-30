@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d126c7e6ef77142f20a9dd9d7ed68c44ede5fc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ec945c5f0cdbb0c12f49b90719c31bf841ef2f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375277"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121636"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl-Klasse
 Stellt die grundlegende Funktionalität zum Hosten eines Windows Forms-Steuerelements bereit.  
@@ -113,25 +113,25 @@ inline BOOL CreateManagedControl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pType`  
+ *PGeben*  
  Der Datentyp des Steuerelements erstellt werden. Muss ein [Typ](https://msdn.microsoft.com/en-us/library/system.type) -Datentyp.  
   
- `dwStyle`  
+ *dwStyle*  
  Der Fensterstil, um auf das Steuerelement angewendet werden soll. Geben Sie eine Kombination von [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles). Derzeit werden nur die folgenden Formate unterstützt: WS_TABSTOP, WS_VISIBLE, WS_DISABLED und WS_GROUP.  
   
- `rect`  
+ *Rect*  
  Ein [RECT-Struktur](../../mfc/reference/rect-structure1.md) , definiert die Koordinaten der oberen linken und unteren rechten Ecke des Steuerelements (zunächst nur Überladung).  
   
- `nPlaceHolderID`  
+ *nPlaceHolderID*  
  Das Handle des Steuerelements Inhaber statische Stelle platziert der Ressourcen-Editor. Das neu erstellte Windows Forms-Steuerelement ersetzt das statische-Steuerelement, vorausgesetzt, die Position, die Z-Reihenfolge und die Stile (nur zweite Überladung).  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das übergeordnete Fenster.  
   
- `nID`  
+ *nID*  
  Die Ressourcen-ID-Nummer, die neu erstellte Steuerelement zugewiesen werden soll.  
   
- `pControl`  
+ *pControl*  
  Eine Instanz eines Windows Forms-Steuerelements zugeordnet werden die [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) Objekt (vierte Überladung).  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -140,13 +140,13 @@ inline BOOL CreateManagedControl(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode wird .NET Framework Windows Forms-Steuerelements in einem MFC-Container instanziiert.  
   
- Die erste Überladung der Methode akzeptiert einen .NET Framework-Datentyp `pType` , damit ein neues Objekt dieses Typs von MFC instanziiert werden kann. `pType` muss ein [Typ](https://msdn.microsoft.com/en-us/library/system.type) -Datentyp.  
+ Die erste Überladung der Methode akzeptiert einen .NET Framework-Datentyp *PGeben* , damit ein neues Objekt dieses Typs von MFC instanziiert werden kann. *PGeben* muss ein [Typ](https://msdn.microsoft.com/en-us/library/system.type) -Datentyp.  
   
- Die zweite Überladung der Methode erstellt ein Windows Forms-Steuerelement, das basierend auf den `TManagedControl` Vorlagenparameter, der die `CWinFormsControl` Klasse. Die Größe und Position des Steuerelements basiert auf der `RECT` Struktur an die Methode übergeben. Nur `dwStyle` ist relevant für die Stile.  
+ Die zweite Überladung der Methode erstellt ein Windows Forms-Steuerelement, das basierend auf den `TManagedControl` Vorlagenparameter, der die `CWinFormsControl` Klasse. Die Größe und Position des Steuerelements basiert auf der `RECT` Struktur an die Methode übergeben. Nur *DwStyle* ist relevant für die Stile.  
   
- Die dritte Überladung der Methode erstellt ein Windows Forms-Steuerelement, das ein statisches Steuerelement zerstören und vorausgesetzt, seine Position, die Z-Reihenfolge und die Stile ersetzt. Statische Steuerelement dient nur als Platzhalter für das Windows Forms-Steuerelement. Wenn Sie das Steuerelement zu erstellen, kombiniert diese Überladung der Stile aus `dwStyle` mit der statischen Steuerelement Ressource Formatvorlagen.  
+ Die dritte Überladung der Methode erstellt ein Windows Forms-Steuerelement, das ein statisches Steuerelement zerstören und vorausgesetzt, seine Position, die Z-Reihenfolge und die Stile ersetzt. Statische Steuerelement dient nur als Platzhalter für das Windows Forms-Steuerelement. Wenn Sie das Steuerelement zu erstellen, kombiniert diese Überladung der Stile aus *DwStyle* mit der statischen Steuerelement Ressource Formatvorlagen.  
   
- Die vierte Überladung der Methode können Sie eine bereits instanziierte Windows Forms-Steuerelement übergeben `pControl` , die MFC umbrochen wird. Muss er den gleichen Typ aufweisen wie die `TManagedControl` Vorlagenparameter, der die `CWinFormsControl` Klasse.  
+ Die vierte Überladung der Methode können Sie eine bereits instanziierte Windows Forms-Steuerelement übergeben *pControl* , die MFC umbrochen wird. Muss er den gleichen Typ aufweisen wie die `TManagedControl` Vorlagenparameter, der die `CWinFormsControl` Klasse.  
   
  Finden Sie unter [Verwenden eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) Beispiele zur Verwendung von Windows Forms steuert.  
   

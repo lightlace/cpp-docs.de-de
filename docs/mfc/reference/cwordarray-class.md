@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf19865b4c11bb8305bea62b3682faebe39bef74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 562f0eff1470a4754d3eaac15a94d08fefb95951
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376684"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123018"
 ---
 # <a name="cwordarray-class"></a>CWordArray-Klasse
 Unterstützt Arrays mit 16-Bit-Wörtern.  
@@ -69,7 +69,7 @@ class CWordArray : public CObject
 ```  
   
 ## <a name="members"></a>Member  
- Die Memberfunktionen von `CWordArray` ähneln den Memberfunktionen der Klasse [CObArray](../../mfc/reference/cobarray-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CObArray`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo eine [CObject](../../mfc/reference/cobject-class.md) Zeiger als Funktionsparameter oder Rückgabewert, ersetzen Sie durch eine **WORD**.  
+ Die Memberfunktionen von `CWordArray` ähneln den Memberfunktionen der Klasse [CObArray](../../mfc/reference/cobarray-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CObArray`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo eine [CObject](../../mfc/reference/cobject-class.md) -Zeiger als Funktionsparameter oder Rückgabewert durch ein Wort ersetzen.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CWordArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Gibt den gesamten nicht verwendeten Arbeitsspeicher über der aktuellen Obergrenze frei.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Gibt den Wert an einem bestimmten Index zurück.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Ruft die Anzahl der Elemente im Array ab.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Ermöglicht den Zugriff auf Elemente im Array. Kann **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Ermöglicht den Zugriff auf Elemente im Array. NULL kann sein.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Ruft die Anzahl der Elemente im Array ab.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Gibt den größten gültigen Index zurück.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Fügt ein Element (oder alle Elemente in einem anderen Array) am angegebenen Index ein.|  
@@ -153,14 +153,14 @@ void AddCommandHandler(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdID`  
+ *cmdID*  
  Die Befehls-ID.  
   
- `cmdHandler`  
+ *cmdHandler*  
  Ein Handle für die Handlermethode.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode fügt Befehlshandler `cmdHandler` mit dem Befehlsquellobjekt und ordnet Sie den Ereignishandler `cmdID`.  
+ Diese Methode fügt Befehlshandler *CmdHandler* mit dem Befehlsquellobjekt und ordnet Sie den Ereignishandler *CmdID*.  
   
  Finden Sie unter [wie: Hinzufügen Befehlsrouting zum Windows Forms-Steuerelements](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zum Verwenden von `AddCommandHandler`.  
   
@@ -175,13 +175,13 @@ void AddCommandRangeHandler(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdIDMin`  
+ *cmdIDMin*  
  Der Anfangsindex der Befehls-ID-Bereich.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  Der Endindex der Befehls-ID-Bereich.  
   
- `cmdHandler`  
+ *cmdHandler*  
  Ein Handle für die Message-Handler-Methode, die die Befehle zugeordnet sind.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -198,13 +198,13 @@ void AddCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdIDMin`  
+ *cmdIDMin*  
  Der Anfangsindex der Befehls-ID-Bereich.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  Der Endindex der Befehls-ID-Bereich.  
   
- `cmdHandler`  
+ *cmdHandler*  
  Ein Handle für die Message-Handler-Methode, die die Befehle zugeordnet sind.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -220,14 +220,14 @@ void AddCommandUIHandler(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdID`  
+ *cmdID*  
  Die Befehls-ID.  
   
- `cmdUIHandler`  
+ *cmdUIHandler*  
  Ein Handle für die Benutzer-Schnittstelle Befehl Message-Handler-Methode.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode fügt den Benutzer Schnittstelle Befehl Message-Handler `cmdHandler` mit dem Befehlsquellobjekt und ordnet Sie den Ereignishandler `cmdID`.  
+ Diese Methode fügt den Benutzer Schnittstelle Befehl Message-Handler *CmdHandler* mit dem Befehlsquellobjekt und ordnet Sie den Ereignishandler *CmdID*.  
   
 ##  <a name="postcommand"></a>  ICommandSource::PostCommand  
  Sendet eine Meldung ohne zu warten, bis sie verarbeitet werden.  
@@ -237,11 +237,11 @@ void PostCommand(unsigned int command);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `command`  
+ *command*  
  Die Befehls-ID der Nachricht gesendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode asynchron sendet die Nachricht an die angegebene ID zugeordnet `command`. Sie ruft [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) , die Nachricht in die Nachrichtenwarteschlange und gibt dann des Fensters zu platzieren, ohne warten auf das entsprechende Fenster zum Verarbeiten der Nachricht.  
+ Diese Methode asynchron sendet die Nachricht an die angegebene ID zugeordnet *Befehl*. Sie ruft [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) , die Nachricht in die Nachrichtenwarteschlange und gibt dann des Fensters zu platzieren, ohne warten auf das entsprechende Fenster zum Verarbeiten der Nachricht.  
   
 ##  <a name="removecommandhandler"></a>  ICommandSource::RemoveCommandHandler  
  Entfernt einen Befehlshandler von einem Befehl-Quellobjekt.  
@@ -251,11 +251,11 @@ void RemoveCommandHandler(unsigned int cmdID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdID`  
+ *cmdID*  
  Die Befehls-ID.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode entfernt die Befehlshandler zugeordnet `cmdID` aus dem Befehlsquellobjekt.  
+ Diese Methode entfernt die Befehlshandler zugeordnet *CmdID* aus dem Befehlsquellobjekt.  
   
 ##  <a name="removecommandrangehandler"></a>  ICommandSource::RemoveCommandRangeHandler  
  Entfernt eine Gruppe von Befehlshandler von einem Befehl-Quellobjekt.  
@@ -267,14 +267,14 @@ void RemoveCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdIDMin`  
+ *cmdIDMin*  
  Der Anfangsindex der Befehls-ID-Bereich.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  Der Endindex der Befehls-ID-Bereich.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode entfernt eine Gruppe von Meldungshandler, durch die Befehls-IDs angegeben zugeordnet `cmdIDMin` und `cmdIDMax`, aus dem Befehlsquellobjekt.  
+ Diese Methode entfernt eine Gruppe von Meldungshandler, durch die Befehls-IDs angegeben zugeordnet *CmdIDMin* und *CmdIDMax*, aus dem Befehlsquellobjekt.  
   
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler  
  Entfernt eine Gruppe von Benutzer Schnittstelle Befehlshandler Nachricht von einem Befehl-Quellobjekt.  
@@ -286,14 +286,14 @@ void RemoveCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdIDMin`  
+ *cmdIDMin*  
  Der Anfangsindex der Befehls-ID-Bereich.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  Der Endindex der Befehls-ID-Bereich.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode entfernt eine Gruppe von Benutzer-Schnittstelle Befehl Meldungshandler, durch die Befehls-IDs angegeben zugeordnet `cmdIDMin` und `cmdIDMax`, aus dem Befehlsquellobjekt.  
+ Diese Methode entfernt eine Gruppe von Benutzer-Schnittstelle Befehl Meldungshandler, durch die Befehls-IDs angegeben zugeordnet *CmdIDMin* und *CmdIDMax*, aus dem Befehlsquellobjekt.  
   
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler  
  Entfernt einen Benutzer Schnittstelle Befehlshandler Nachricht von einem Befehl-Quellobjekt.  
@@ -303,11 +303,11 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdID`  
+ *cmdID*  
  Die Befehls-ID.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode entfernt den Benutzer Schnittstelle Befehl-Meldungshandler zugeordnet `cmdID` aus dem Befehlsquellobjekt.  
+ Diese Methode entfernt den Benutzer Schnittstelle Befehl-Meldungshandler zugeordnet *CmdID* aus dem Befehlsquellobjekt.  
   
 ##  <a name="sendcommand"></a>  ICommandSource::SendCommand  
  Sendet eine Nachricht und wartet, bis er vor der Rückgabe verarbeitet werden.  
@@ -317,11 +317,11 @@ void SendCommand(unsigned int command);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `command`  
+ *command*  
  Die Befehls-ID der Nachricht gesendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode synchron sendet die Nachricht an die angegebene ID zugeordnet `command`. Sie ruft [Funktion CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) , platzieren die Nachricht in des Fensters Nachrichtenwarteschlange und wartet, bis diese Fensterprozedur die Nachricht vor der Rückgabe verarbeitet hat.  
+ Diese Methode synchron sendet die Nachricht an die angegebene ID zugeordnet *Befehl*. Sie ruft [Funktion CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) , platzieren die Nachricht in des Fensters Nachrichtenwarteschlange und wartet, bis diese Fensterprozedur die Nachricht vor der Rückgabe verarbeitet hat.  
   
 ##  <a name="icommandtarget_interface"></a>  ICommandTarget-Schnittstelle  
  Bietet eine Schnittstelle zum Empfangen Befehle von einem Befehlsquellobjekt ein Benutzersteuerelement hinzu.  
@@ -345,13 +345,13 @@ void Initialize(ICommandSource^ cmdSource);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdSource`  
+ *cmdSource*  
  Ein Handle für das Quellobjekt für den Befehl.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie ein benutzerdefiniertes Steuerelement in einer MFC-Ansicht hosten [CWinFormsView](../../mfc/reference/cwinformsview-class.md) Routen Befehle und Update-Befehl UI Nachrichten auf das Benutzersteuerelement zum Behandeln von MFC-Befehle zuzulassen.  
   
- Diese Methode initialisiert die Ziel-Befehlsobjekt und ordnet das Quellobjekt für den angegebenen Befehl `cmdSource`. Es sollte in der Implementierung des Benutzersteuerelements Klasse aufgerufen werden. Bei der Initialisierung, sollten Sie Befehlshandler mit das Befehlsquellobjekt registrieren, durch den Aufruf [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) in die `Initialize` Implementierung. Finden Sie unter [wie: Hinzufügen Befehlsrouting zum Windows Forms-Steuerelements](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zum Verwenden von `Initialize` dazu.  
+ Diese Methode initialisiert die Ziel-Befehlsobjekt und ordnet das Quellobjekt für den angegebenen Befehl *CmdSource*. Es sollte in der Implementierung des Benutzersteuerelements Klasse aufgerufen werden. Bei der Initialisierung, sollten Sie Befehlshandler mit das Befehlsquellobjekt registrieren, durch den Aufruf [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) in die `Initialize` Implementierung. Finden Sie unter [wie: Hinzufügen Befehlsrouting zum Windows Forms-Steuerelements](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zum Verwenden von `Initialize` dazu.  
   
 ##  <a name="icommandui_interface"></a>  ICommandUI-Schnittstelle  
  Verwaltet von Befehlen der Benutzeroberfläche.  
@@ -395,7 +395,7 @@ void ContinueRouting();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Dies ist eine erweiterte Memberfunktion, die in Verbindung mit verwendet werden soll ein [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) Handler, der gibt `FALSE`. Weitere Informationen finden Sie im technischen Hinweis [TN006: Meldungszuordnungen](../../mfc/tn006-message-maps.md).  
+ Dies ist eine erweiterte Memberfunktion, die in Verbindung mit verwendet werden soll ein [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) Handler, der "false" zurückgibt. Weitere Informationen finden Sie im technischen Hinweis [TN006: Meldungszuordnungen](../../mfc/tn006-message-maps.md).  
   
 ##  <a name="enabled"></a>  ICommandUI::Enabled  
  Aktiviert oder deaktiviert die Benutzer-Schnittstelle-Element für diesen Befehl.  
@@ -405,7 +405,7 @@ property bool Enabled;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Eigenschaft aktiviert oder deaktiviert die Benutzer-Schnittstelle-Element für diesen Befehl. Legen Sie `Enabled` auf `TRUE` So aktivieren Sie das Element `FALSE` zu deaktivieren.  
+ Diese Eigenschaft aktiviert oder deaktiviert die Benutzer-Schnittstelle-Element für diesen Befehl. Legen Sie `Enabled` auf "true", um das Element "false" zu aktivieren, um ihn zu deaktivieren.  
   
 ##  <a name="id"></a>  ICommandUI::ID  
  Ruft die ID des Benutzerobjekts für die Schnittstelle dargestellt, die durch die `ICommandUI` Objekt.  
@@ -435,7 +435,7 @@ property bool Radio;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Eigenschaft legt die Benutzer-Schnittstelle-Element für diesen Befehl auf den entsprechenden Aktivierungszustand an. Legen Sie `Radio` auf `TRUE` So aktivieren Sie das Element; andernfalls `FALSE`.  
+ Diese Eigenschaft legt die Benutzer-Schnittstelle-Element für diesen Befehl auf den entsprechenden Aktivierungszustand an. Legen Sie `Radio` auf "true", um das Element; andernfalls "false" zu aktivieren.  
   
 ##  <a name="text"></a>  ICommandUI::Text  
  Legt den Text des Elements Schnittstelle Benutzer für diesen Befehl fest.  
@@ -469,7 +469,7 @@ void OnActivateView(bool activate);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `activate`  
+ *Aktivieren*  
  Gibt an, ob die Sicht wird aktiviert oder deaktiviert.  
   
 ##  <a name="oninitialupdate"></a>  IView:: OnInitialUpdate  

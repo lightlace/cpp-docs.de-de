@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 071eaeef6fbdbe4967d184936f5fb7bffb7786b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3d2b44c4e854a27bcc753c1403ea058b03906a8
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377848"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123148"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd-Klasse
 Stellt die Funktionalität eines unterteilten Fensters bereit. Dabei handelt es sich um ein Fenster, das mehrere Bereiche enthält.  
@@ -159,9 +159,9 @@ class CSplitterWnd : public CWnd
   
 3.  Von der überschriebenen `OnCreateClient`, rufen Sie die [erstellen](#create) oder [CreateStatic](#createstatic) Memberfunktion von `CSplitterWnd`.  
   
- Rufen Sie die **erstellen** Memberfunktion versucht, ein dynamisches Splitterfenster erstellen. Ein dynamisches Splitterfenster wird in der Regel zu erstellen, führen Sie einen Bildlauf eine Anzahl von einzelnen Bereiche oder Ansichten des gleichen Dokuments verwendet. Das Framework erstellt automatisch einen ersten Bereich für den Splitter; Das Framework dann erstellt, ändert die Größe und verwirft zusätzliche Bereiche wie der Benutzer den Splitter Window-Steuerelementen.  
+ Rufen Sie die `Create` Memberfunktion versucht, ein dynamisches Splitterfenster erstellen. Ein dynamisches Splitterfenster wird in der Regel zu erstellen, führen Sie einen Bildlauf eine Anzahl von einzelnen Bereiche oder Ansichten des gleichen Dokuments verwendet. Das Framework erstellt automatisch einen ersten Bereich für den Splitter; Das Framework dann erstellt, ändert die Größe und verwirft zusätzliche Bereiche wie der Benutzer den Splitter Window-Steuerelementen.  
   
- Beim Aufruf **erstellen**, geben Sie eine minimale Zeile Zeilenhöhe und Spaltenbreite, mit denen bestimmt wird, wenn die Bereiche zu klein, um vollständig angezeigt sind. Nach dem Aufruf **erstellen**, können Sie durch Aufrufen dieser Mindestwerte Anpassen der [SetColumnInfo](#setcolumninfo) und [SetRowInfo](#setrowinfo) Memberfunktionen.  
+ Beim Aufruf `Create`, geben Sie eine minimale Zeile Zeilenhöhe und Spaltenbreite, mit denen bestimmt wird, wenn die Bereiche zu klein, um vollständig angezeigt sind. Nach dem Aufruf `Create`, können Sie durch Aufrufen dieser Mindestwerte Anpassen der [SetColumnInfo](#setcolumninfo) und [SetRowInfo](#setrowinfo) Memberfunktionen.  
   
  Verwenden Sie auch die `SetColumnInfo` und `SetRowInfo` Memberfunktionen einer "ideale" Breite für eine Spalte und "optimale" Höhe für eine Zeile fest. Wenn das Framework ein unterteiltes Fenster angezeigt wird, wird zuerst den übergeordneten Frame, klicken Sie dann die unterteiltes Fenster angezeigt. Das Framework angeordnet klicken Sie dann auf die Bereiche in Spalten und Zeilen gemäß ihrer idealen Dimensionen, die von der linken oberen Ecke auf der unteren rechten Ecke des Clientbereichs des Splitterfensters zu arbeiten.  
   
@@ -171,13 +171,13 @@ class CSplitterWnd : public CWnd
   
  Bei der Erstellung des statischen Splitters, müssen Sie insbesondere alle statischen Splitters des Bereiche erstellen. Stellen Sie sicher, dass Sie alle Bereiche vor des übergeordneten Frames erstellen `OnCreateClient` Member-Funktion gibt oder das Framework wird das Fenster nicht richtig angezeigt.  
   
- Die `CreateStatic` Memberfunktion wird automatisch einen statischen Splitter mit einem minimalen Zeile Zeilenhöhe und Spaltenbreite 0 initialisiert. Nach dem Aufruf **erstellen**, passen Sie diese Mindestwerte durch Aufrufen der [SetColumnInfo](#setcolumninfo) und [SetRowInfo](#setrowinfo) Memberfunktionen. Verwenden Sie auch `SetColumnInfo` und `SetRowInfo` nach dem Aufruf `CreateStatic` an, dass die gewünschte ideal Bereich Dimensionen.  
+ Die `CreateStatic` Memberfunktion wird automatisch einen statischen Splitter mit einem minimalen Zeile Zeilenhöhe und Spaltenbreite 0 initialisiert. Nach dem Aufruf `Create`, passen Sie diese Mindestwerte durch Aufrufen der [SetColumnInfo](#setcolumninfo) und [SetRowInfo](#setrowinfo) Memberfunktionen. Verwenden Sie auch `SetColumnInfo` und `SetRowInfo` nach dem Aufruf `CreateStatic` an, dass die gewünschte ideal Bereich Dimensionen.  
   
  Die einzelnen Bereiche eines statischen Splitters gehören häufig zu verschiedenen Klassen. Beispiele für statisches Splitterfenster finden Sie in der Grafik-Editor und die Windows-Manager für Dateiserver.  
   
  Ein unterteiltes Fenster unterstützt spezielle Bildlaufleisten (abgesehen von den Bildlaufleisten, die Bereiche verfügen können). Diese Bildlaufleisten sind untergeordnete Elemente der `CSplitterWnd` -Objekt und gemeinsam mit den Bereichen.  
   
- Sie erstellen diese spezielle Bildlaufleisten, bei der Erstellung des Splitterfensters. Z. B. eine `CSplitterWnd` , besitzt eine Zeile, die zwei Spalten und die **WS_VSCROLL** Stil zeigt eine vertikale Bildlaufleiste angezeigt, die von den beiden Bereichen gemeinsam verwendet wird. Wenn der Benutzer die Bildlaufleiste bewegt `WM_VSCROLL` Nachrichten an beide Bereiche gesendet werden. Wenn die Bereiche die Bildlaufleisten-Position festgelegt, wird die freigegebene Bildlaufleiste festgelegt.  
+ Sie erstellen diese spezielle Bildlaufleisten, bei der Erstellung des Splitterfensters. Z. B. eine `CSplitterWnd` , besitzt eine Zeile, die zwei Spalten und der Stil WS_VSCROLL zeigt eine vertikale Bildlaufleiste angezeigt, die von den beiden Bereichen gemeinsam verwendet wird. Wenn der Benutzer die Bildlaufleiste verschoben wird, werden die WM_VSCROLL Nachrichten an beide Bereiche gesendet. Wenn die Bereiche die Bildlaufleisten-Position festgelegt, wird die freigegebene Bildlaufleiste festgelegt.  
   
  Weitere Informationen über Splitterfenster finden Sie unter:  
   
@@ -211,7 +211,7 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bPrev`  
+ *bPrev*  
  Gibt an, welches Fenster zu aktivieren. **"True"** für vorherige; **"False"** für weiter.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -225,7 +225,7 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bPrev`  
+ *bPrev*  
  Gibt an, welches Fenster zu aktivieren. **"True"** für vorherige; **"False"** für weiter.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -249,7 +249,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentWnd`  
+ *pParentWnd*  
  Der übergeordnete Rahmenfenster des Splitterfensters.  
   
  *nMaxRows*  
@@ -258,17 +258,17 @@ virtual BOOL Create(
  *nMaxCols*  
  Die maximale Anzahl der Spalten in der unterteiltes Fenster. Dieser Wert darf maximal 2.  
   
- `sizeMin`  
+ *sizeMin*  
  Gibt die minimale Größe, die bei der ein Bereich angezeigt werden kann.  
   
- `pContext`  
- Ein Zeiger auf eine [angegeben ist und](../../mfc/reference/ccreatecontext-structure.md) Struktur. In den meisten Fällen kann dies die `pContext` an der übergeordneten Rahmenfensters übergeben.  
+ *"pContext"*  
+ Ein Zeiger auf eine [angegeben ist und](../../mfc/reference/ccreatecontext-structure.md) Struktur. In den meisten Fällen kann dies die *"pContext"* an den übergeordneten Rahmenfensters übergeben.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt den Fensterstil.  
   
- `nID`  
- Die untergeordneten Fenster-ID des Fensters. Die ID kann **AFX_IDW_PANE_FIRST** , sofern Splitterfensters in einem anderen unterteiltes Fenster geschachtelt ist.  
+ *nID*  
+ Die untergeordneten Fenster-ID des Fensters. Die ID kann AFX_IDW_PANE_FIRST sein, es sei denn, Splitterfensters in einem anderen unterteiltes Fenster geschachtelt ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -280,11 +280,11 @@ virtual BOOL Create(
   
 2.  Überschreiben Sie des übergeordneten Frames [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) Memberfunktion.  
   
-3.  Rufen Sie die **erstellen** Memberfunktion, die von der überschriebenen `OnCreateClient`.  
+3.  Rufen Sie die `Create` Memberfunktion, die von der überschriebenen `OnCreateClient`.  
   
- Wenn Sie ein unterteiltes-Fenster innerhalb eines übergeordneten Frames erstellen, übergeben Sie des übergeordneten Frames `pContext` Splitterfensters Parameter. Dieser Parameter kann, andernfalls **NULL**.  
+ Wenn Sie ein unterteiltes-Fenster innerhalb eines übergeordneten Frames erstellen, übergeben Sie des übergeordneten Frames *"pContext"* Splitterfensters Parameter. Andernfalls kann dieser Parameter NULL sein.  
   
- Die Anfangszeile minimale Zeilenhöhe und Spaltenbreite für ein dynamisches Splitterfenster werden festgelegt, indem die `sizeMin` Parameter. Dieser Mindestwerte, die bestimmen, ob ein Bereich in seiner Gesamtheit anzuzeigenden zu klein ist, können geändert werden, mit der [SetRowInfo](#setrowinfo) und [SetColumnInfo](#setcolumninfo) Memberfunktionen.  
+ Die Anfangszeile minimale Zeilenhöhe und Spaltenbreite für ein dynamisches Splitterfenster werden festgelegt, indem die *SizeMin* Parameter. Dieser Mindestwerte, die bestimmen, ob ein Bereich in seiner Gesamtheit anzuzeigenden zu klein ist, können geändert werden, mit der [SetRowInfo](#setrowinfo) und [SetColumnInfo](#setcolumninfo) Memberfunktionen.  
   
  Weitere Informationen über dynamische Splitterfenster finden Sie unter "Splitterfenster" im Artikel [mehrere Dokumenttypen, Ansichten und Rahmenfenster](../../mfc/multiple-document-types-views-and-frame-windows.md), [technischen Hinweis 29](../../mfc/tn029-splitter-windows.md), und die `CSplitterWnd` -Klassenübersicht.  
   
@@ -301,11 +301,11 @@ virtual BOOL CreateScrollBarCtrl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Gibt den Fensterstil.  
   
- `nID`  
- Die untergeordneten Fenster-ID des Fensters. Die ID kann **AFX_IDW_PANE_FIRST** , sofern Splitterfensters in einem anderen unterteiltes Fenster geschachtelt ist.  
+ *nID*  
+ Die untergeordneten Fenster-ID des Fensters. Die ID kann AFX_IDW_PANE_FIRST sein, es sei denn, Splitterfensters in einem anderen unterteiltes Fenster geschachtelt ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -326,20 +326,20 @@ virtual BOOL CreateStatic(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentWnd`  
+ *pParentWnd*  
  Der übergeordnete Rahmenfenster des Splitterfensters.  
   
- `nRows`  
+ *nRows*  
  Die Anzahl von Zeilen. Dieser Wert darf 16 nicht überschreiten.  
   
  *nCols*  
  Die Anzahl von Spalten. Dieser Wert darf 16 nicht überschreiten.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt den Fensterstil.  
   
- `nID`  
- Die untergeordneten Fenster-ID des Fensters. Die ID kann **AFX_IDW_PANE_FIRST** , sofern Splitterfensters in einem anderen unterteiltes Fenster geschachtelt ist.  
+ *nID*  
+ Die untergeordneten Fenster-ID des Fensters. Die ID kann AFX_IDW_PANE_FIRST sein, es sei denn, Splitterfensters in einem anderen unterteiltes Fenster geschachtelt ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -359,7 +359,7 @@ virtual BOOL CreateStatic(
   
  Die Anfangszeile minimale Zeilenhöhe und Spaltenbreite für ein statisches Splitterfenster ist 0. Dieser Mindestwerte, die bestimmen, wenn ein Bereich in seiner Gesamtheit dargestellt werden zu klein ist, können geändert werden, mit der [SetRowInfo](#setrowinfo) und [SetColumnInfo](#setcolumninfo) Memberfunktionen.  
   
- Um ein statisches Splitterfenster Bildlaufleisten hinzuzufügen, fügen die **WS_HSCROLL** und **WS_VSCROLL** Stile auf `dwStyle`.  
+ Um ein statisches Splitterfenster Bildlaufleisten hinzugefügt haben, fügen Sie die Formate WS_HSCROLL und WS_VSCROLL *DwStyle*.  
   
  Finden Sie unter "Splitterfenster" im Artikel [mehrere Dokumenttypen, Ansichten und Rahmenfenster](../../mfc/multiple-document-types-views-and-frame-windows.md), [technischen Hinweis 29](../../mfc/tn029-splitter-windows.md), und die `CSplitterWnd` für Weitere Informationen über die statisches Splitterfenster-Klassenübersicht.  
   
@@ -376,20 +376,20 @@ virtual BOOL CreateView(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `row`  
+ *Zeile*  
  Gibt die Zeile Splitter Fenster, in das die neue Ansicht eingefügt werden soll.  
   
- `col`  
+ *Spalten-Nr*  
  Gibt die Spalte Splitter Fenster, in das die neue Ansicht eingefügt werden soll.  
   
- `pViewClass`  
+ *pViewClass*  
  Gibt an, die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) der neuen Sicht.  
   
  *sizeInit*  
  Gibt die Anfangsgröße der neuen Sicht an.  
   
- `pContext`  
- Ein Zeiger auf einen erstellen-Kontext verwendet, um die Ansicht zu erstellen (in der Regel die `pContext` an des übergeordneten Frames außer Kraft gesetzte übergeben [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) Memberfunktion, die in der Splitterfensters erstellt wird).  
+ *"pContext"*  
+ Ein Zeiger auf einen erstellen-Kontext verwendet, um die Ansicht zu erstellen (in der Regel die *"pContext"* an des übergeordneten Frames außer Kraft gesetzte übergeben [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient) Memberfunktion, die in der Splitterfensters ist erstellt wird).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -424,7 +424,7 @@ virtual void DeleteColumn(int colDelete);
  Gibt die Spalte gelöscht werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion wird vom Framework zum Implementieren der Logik des dynamischen Splitterfensters aufgerufen (d. h., wenn das Splitterfenster verfügt über die **SPLS_DYNAMIC_SPLIT** Stil). Sie können angepasst werden, zusammen mit der virtuellen Funktion [CreateView](#createview), um erweiterte dynamischen Splitterfenstern zu implementieren.  
+ Diese Memberfunktion wird vom Framework zum Implementieren der Logik des dynamischen Splitterfensters, (d. h., wenn Splitterfensters den SPLS_DYNAMIC_SPLIT-Stil wurde) aufgerufen. Sie können angepasst werden, zusammen mit der virtuellen Funktion [CreateView](#createview), um erweiterte dynamischen Splitterfenstern zu implementieren.  
   
 ##  <a name="deleterow"></a>  CSplitterWnd::DeleteRow  
  Löscht eine Zeile aus der unterteiltes Fenster.  
@@ -438,7 +438,7 @@ virtual void DeleteRow(int rowDelete);
  Gibt die zu löschende Zeile.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion wird vom Framework zum Implementieren der Logik des dynamischen Splitterfensters aufgerufen (d. h., wenn das Splitterfenster verfügt über die **SPLS_DYNAMIC_SPLIT** Stil). Sie können angepasst werden, zusammen mit der virtuellen Funktion [CreateView](#createview), um erweiterte dynamischen Splitterfenstern zu implementieren.  
+ Diese Memberfunktion wird vom Framework zum Implementieren der Logik des dynamischen Splitterfensters, (d. h., wenn Splitterfensters den SPLS_DYNAMIC_SPLIT-Stil wurde) aufgerufen. Sie können angepasst werden, zusammen mit der virtuellen Funktion [CreateView](#createview), um erweiterte dynamischen Splitterfenstern zu implementieren.  
   
 ##  <a name="deleteview"></a>  CSplitterWnd::DeleteView  
  Löscht eine Ansicht aus der unterteiltes Fenster an.  
@@ -450,16 +450,16 @@ virtual void DeleteView(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `row`  
+ *Zeile*  
  Gibt die Splitter Fenster Zeile, an dem die Sicht zu löschen.  
   
- `col`  
+ *Spalten-Nr*  
  Gibt die Splitter Fenster-Spalte, an dem die Sicht zu löschen.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn die aktive Ansicht gelöscht wird, wird die nächste Ansicht aktiviert werden. Die Standardimplementierung geht davon aus, die Sicht werden automatisch löschen [PostNcDestroy](../../mfc/reference/cwnd-class.md#postncdestroy).  
   
- Diese Memberfunktion wird vom Framework zum Implementieren der Logik des dynamischen Splitterfensters aufgerufen (d. h., wenn das Splitterfenster verfügt über die **SPLS_DYNAMIC_SPLIT** Stil). Sie können angepasst werden, zusammen mit der virtuellen Funktion [CreateView](#createview), um erweiterte dynamischen Splitterfenstern zu implementieren.  
+ Diese Memberfunktion wird vom Framework zum Implementieren der Logik des dynamischen Splitterfensters, (d. h., wenn Splitterfensters den SPLS_DYNAMIC_SPLIT-Stil wurde) aufgerufen. Sie können angepasst werden, zusammen mit der virtuellen Funktion [CreateView](#createview), um erweiterte dynamischen Splitterfenstern zu implementieren.  
   
 ##  <a name="dokeyboardsplit"></a>  CSplitterWnd::DoKeyboardSplit  
  Führt die Tastatur split-Befehl, in der Regel "Fenster teilen."  
@@ -485,26 +485,26 @@ virtual BOOL DoScroll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pViewFrom`  
+ *pViewFrom*  
  Ein Zeiger auf die Sicht aus der Durchführen eines Bildlaufs Nachricht stammt.  
   
- `nScrollCode`  
+ *nScrollCode*  
  Ein Bildlaufleisten-Code, der den Benutzer angibt, der Anforderung Bildlauf. Dieser Parameter besteht aus zwei Teilen: ein niederwertige Byte ist, die den Typ des horizontalen Bildlauf auftritt bestimmt wird, und ein höherwertige Byte ist, die festlegt, den Typ des vertikalen Bildlauf auftritt:  
   
-- **SB_BOTTOM** führt einen Bildlauf nach unten.  
+- SB_BOTTOM führt einen Bildlauf nach unten.  
   
-- **SB_LINEDOWN** führt einen Bildlauf eine Zeile nach unten.  
+- SB_LINEDOWN verschiebt eine Zeile nach unten.  
   
-- **SB_LINEUP** führt einen Bildlauf eine Zeile einrichten.  
+- SB_LINEUP verschiebt eine Zeile nach oben.  
   
-- **SB_PAGEDOWN** führt einen Bildlauf eine Seite nach unten.  
+- SB_PAGEDOWN führt einen Bildlauf eine Seite nach unten.  
   
-- **SB_PAGEUP** führt einen Bildlauf eine Seite einrichten.  
+- SB_PAGEUP scrollt eine Seite einrichten.  
   
-- **SB_TOP** führt einen Bildlauf nach oben.  
+- SB_TOP führt einen Bildlauf nach oben.  
   
- `bDoScroll`  
- Bestimmt, ob die angegebene Aktion durchführen eines Bildlaufs ausgeführt wird. Wenn `bDoScroll` ist **"true"** (d. h., wenn ein untergeordnetes Fenster vorhanden ist und die Fenster teilen ein Bildlaufbereichs einen haben), und klicken Sie dann die angegebene Aktion durchführen eines Bildlaufs; Wenn stattfinden kann `bDoScroll` ist **"false"** (d. h. wenn keine untergeordneten Fenster vorhanden ist, oder die geteilten Ansichten haben keine Bildlaufleisten-Bereich), und klicken Sie dann einen Bildlauf nicht auftritt.  
+ *bDoScroll*  
+ Bestimmt, ob die angegebene Aktion durchführen eines Bildlaufs ausgeführt wird. Wenn *bDoScroll* ist "true" (d. h., wenn ein untergeordnetes Fenster vorhanden ist und die Fenster teilen ein Bildlaufbereichs einen haben), und klicken Sie dann die angegebene Aktion durchführen eines Bildlaufs; stattfinden kann *bDoScroll* ist "false" (d. h., wenn keine untergeordneten Fenster vorhanden ist, oder die geteilten Ansichten haben keine Bildlaufleisten-Bereich), und klicken Sie dann einen Bildlauf nicht auftritt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Durchführen eines Bildlaufs ungleich NULL, wenn synchronisiert auftritt. andernfalls 0.  
@@ -523,20 +523,20 @@ virtual BOOL DoScrollBy(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pViewFrom`  
+ *pViewFrom*  
  Ein Zeiger auf die Sicht aus der Durchführen eines Bildlaufs Nachricht stammt.  
   
- `sizeScroll`  
+ *sizeScroll*  
  Anzahl der Pixel horizontal und vertikal angezeigt werden.  
   
- bDoScroll  
- Bestimmt, ob die angegebene Aktion durchführen eines Bildlaufs ausgeführt wird. Wenn `bDoScroll` ist **"true"** (d. h., wenn ein untergeordnetes Fenster vorhanden ist und die Fenster teilen ein Bildlaufbereichs einen haben), und klicken Sie dann die angegebene Aktion durchführen eines Bildlaufs; Wenn stattfinden kann `bDoScroll` ist **"false"** (d. h. wenn keine untergeordneten Fenster vorhanden ist, oder die geteilten Ansichten haben keine Bildlaufleisten-Bereich), und klicken Sie dann einen Bildlauf nicht auftritt.  
+ *bDoScroll*  
+ Bestimmt, ob die angegebene Aktion durchführen eines Bildlaufs ausgeführt wird. Wenn *bDoScroll* ist "true" (d. h., wenn ein untergeordnetes Fenster vorhanden ist und die Fenster teilen ein Bildlaufbereichs einen haben), und klicken Sie dann die angegebene Aktion durchführen eines Bildlaufs; stattfinden kann *bDoScroll* ist "false" (d. h., wenn keine untergeordneten Fenster vorhanden ist, oder die geteilten Ansichten haben keine Bildlaufleisten-Bereich), und klicken Sie dann einen Bildlauf nicht auftritt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Durchführen eines Bildlaufs ungleich NULL, wenn synchronisiert auftritt. andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion vom Framework als Antwort auf eine Nachricht Scroll aufgerufen wird, ausführen synchronisiert der geteilten Fenster erheben, in Pixel, angegeben durch Scrollen `sizeScroll`. Positive Werte geben einen Bildlauf nach unten und rechts; negative Werte geben Sie einen Bildlauf nach oben und nach links an.  
+ Diese Memberfunktion vom Framework als Antwort auf eine Nachricht Scroll aufgerufen wird, ausführen synchronisiert der geteilten Fenster erheben, in Pixel, angegeben durch Scrollen *SizeScroll*. Positive Werte geben einen Bildlauf nach unten und rechts; negative Werte geben Sie einen Bildlauf nach oben und nach links an.  
   
  Überschreiben Sie, um eine Aktion vom Benutzer zuzulassen Bildlauf erfordern.  
   
@@ -550,14 +550,14 @@ virtual CWnd* GetActivePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pRow`  
+ *pRow*  
  Ein Zeiger auf ein **Int** zum Abrufen der Zeilennummer im aktiven Bereich.  
   
- `pCol`  
+ *pCol*  
  Ein Zeiger auf ein **Int** die Spaltennummer des aktiven Bereichs abgerufen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf den aktiven Bereich. **NULL** Wenn keine aktiven Bereich vorhanden ist.  
+ Ein Zeiger auf den aktiven Bereich. NULL, wenn keine aktiven Bereich vorhanden ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion wird durch das Framework, um zu bestimmen, den aktiven Bereich in einem Splitterfenster aufgerufen. Überschreiben Sie, um eine Aktion vom Benutzer vor dem Abrufen des aktiven Bereichs erforderlich ist.  
@@ -583,14 +583,14 @@ void GetColumnInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `col`  
+ *Spalten-Nr*  
  Gibt eine Spalte an.  
   
  *cxCur*  
- Ein Verweis auf eine `int` auf die aktuelle Breite der Spalte festgelegt werden.  
+ Ein Verweis auf ein **Int** auf die aktuelle Breite der Spalte festgelegt werden.  
   
- `cxMin`  
- Ein Verweis auf eine `int` auf die aktuelle minimale Breite der Spalte festgelegt werden.  
+ *cxMin*  
+ Ein Verweis auf ein **Int** auf die aktuelle minimale Breite der Spalte festgelegt werden.  
   
 ##  <a name="getpane"></a>  CSplitterWnd::GetPane  
  Gibt den Bereich in der angegebenen Zeile und Spalte zurück.  
@@ -602,10 +602,10 @@ CWnd* GetPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `row`  
+ *Zeile*  
  Gibt eine Zeile an.  
   
- `col`  
+ *Spalten-Nr*  
  Gibt eine Spalte an.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -632,17 +632,17 @@ void GetRowInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `row`  
+ *Zeile*  
  Gibt eine Zeile an.  
   
- `cyCur`  
- Ein Verweis auf `int` auf der aktuellen Höhe der Zeile in Pixel festgelegt werden.  
+ *cyCur*  
+ Ein Verweis auf **Int** auf der aktuellen Höhe der Zeile in Pixel festgelegt werden.  
   
- `cyMin`  
- Ein Verweis auf `int` auf die aktuelle Mindesthöhe der Zeile in Pixel festgelegt werden.  
+ *cyMin*  
+ Ein Verweis auf **Int** auf die aktuelle Mindesthöhe der Zeile in Pixel festgelegt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Memberfunktion zum Abrufen von Informationen zu der angegebenen Zeile an. Die `cyCur` Parameter mit der aktuellen Höhe der angegebenen Zeile gefüllt ist und `cyMin` mit die Mindesthöhe der Zeile gefüllt ist.  
+ Rufen Sie diese Memberfunktion zum Abrufen von Informationen zu der angegebenen Zeile an. Die *CyCur* Parameter mit der aktuellen Höhe der angegebenen Zeile gefüllt ist und *CyMin* mit die Mindesthöhe der Zeile gefüllt ist.  
   
 ##  <a name="getscrollstyle"></a>  CSplitterWnd::GetScrollStyle  
  Gibt den Schriftschnitt freigegebenen Bildlaufleiste für das Splitterfenster.  
@@ -654,9 +654,9 @@ DWORD GetScrollStyle() const;
 ### <a name="return-value"></a>Rückgabewert  
  Eine oder mehrere der folgenden Windows style Flags, die bei Erfolg:  
   
-- **WS_HSCROLL** Wenn Splitters derzeit freigegebenen horizontale Bildlaufleisten verwaltet.  
+- WS_HSCROLL freigegeben, die derzeit der Splitter verwaltet horizontale Bildlaufleisten angezeigt werden.  
   
-- **WS_VSCROLL** Wenn Splitters derzeit freigegebenen vertikalen Schiebeleisten verwaltet.  
+- WS_VSCROLL freigegeben, die derzeit der Splitter verwaltet vertikale Bildlaufleisten angezeigt.  
   
  Wenn 0 (null), Splitterfensters kein derzeit freigegebenen Bildlaufleisten verwaltet werden.  
   
@@ -670,10 +670,10 @@ int IdFromRowCol(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `row`  
+ *Zeile*  
  Gibt die Zeile der Splitter-Fenster.  
   
- `col`  
+ *Spalten-Nr*  
  Gibt die Spalte der Splitter-Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -686,7 +686,7 @@ int IdFromRowCol(
  [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]  
   
 ##  <a name="ischildpane"></a>  CSplitterWnd::IsChildPane  
- Bestimmt, ob `pWnd` ist derzeit ein untergeordneten Bereich dieser unterteiltes Fenster.  
+ Bestimmt, ob *pWnd* ist derzeit ein untergeordneten Bereich dieser unterteiltes Fenster.  
   
 ```  
 BOOL IsChildPane(
@@ -696,17 +696,17 @@ BOOL IsChildPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWnd`  
+ *pWnd*  
  Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das getestet werden.  
   
- `pRow`  
- Ein Zeiger auf ein `int` in dem die Nummer der Zeile gespeichert.  
+ *pRow*  
+ Ein Zeiger auf ein **Int** in dem die Nummer der Zeile gespeichert.  
   
- `pCol`  
- Ein Zeiger auf ein `int` in der eine Spaltennummer gespeichert.  
+ *pCol*  
+ Ein Zeiger auf ein **Int** in dem Sie die Nummer einer Spalte zu speichern.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL `pWnd` ist derzeit ein untergeordneten Bereich dieses Fensters Splitter und `pRow` und `pCol` werden sich die Position des Bereichs in Splitterfensters gefüllt. Wenn `pWnd` ist es sich nicht um ein untergeordneten Bereich dieses Fensters Splitter wird 0 zurückgegeben.  
+ Wert ungleich NULL *pWnd* ist derzeit ein untergeordneten Bereich dieses Fensters Splitter und *pRow* und *pCol* werden sich die Position des Bereichs in Splitterfensters gefüllt. Wenn *pWnd* ist es sich nicht um ein untergeordneten Bereich dieses Fensters Splitter wird 0 zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
  In Visual C++-Versionen vor 6.0 wurde diese Funktion als definiert.  
@@ -736,21 +736,21 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
- Ein Zeiger auf den Gerätekontext, in dem gezeichnet werden soll. Wenn `pDC` ist **NULL**, klicken Sie dann [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) aufgerufen wird und keine Aufteilung Fensters gezeichnet wird.  
+ *pDC*  
+ Ein Zeiger auf den Gerätekontext, in dem gezeichnet werden soll. Wenn *pDC* NULL ist, klicken Sie dann [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) aufgerufen wird und keine Aufteilung Fensters gezeichnet wird.  
   
- `nType`  
- Der Wert der **Enum ESplitType**, kann die eines der folgenden sein:  
+ *%nbenachrichtigungen zu*  
+ Der Wert der `enum ESplitType`, kann die eines der folgenden sein:  
   
-- **SplitBox** Splitters ziehen Sie das Feld.  
+- `splitBox` Das Feld ein Splitter ziehen.  
   
 - `splitBar` Die Leiste, die zwischen den zwei Teilfenstern angezeigt wird.  
   
-- **SplitIntersection** die Schnittmenge der geteilten Fenster. Dieses Element wird nicht aufgerufen werden, wenn auf Windows 95-und Windows 98 ausgeführt wird.  
+- `splitIntersection` Die Schnittmenge der geteilten Fenster. Dieses Element wird nicht aufgerufen werden, wenn auf Windows 95-und Windows 98 ausgeführt wird.  
   
-- **SplitBorder** Fensterrahmen teilen.  
+- `splitBorder` Die Fensterrahmen "Split".  
   
- `rect`  
+ *Rect*  
  Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die Größe und Form des Windows-Teilung angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -766,7 +766,7 @@ virtual void OnInvertTracker(const CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rect`  
+ *Rect*  
  Ein Verweis auf eine `CRect` -Objekt, das Überwachungsprofil Rechteck angibt.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -800,19 +800,19 @@ virtual void SetActivePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `row`  
- Wenn `pWnd` ist **NULL**, gibt die Zeile im Bereich, die aktiv sind.  
+ *Zeile*  
+ Wenn *pWnd* NULL ist, gibt die Zeile im Bereich, die aktiv sind.  
   
- `col`  
- Wenn `pWnd` ist **NULL**, gibt die Spalte in den Bereich, die aktiv sind.  
+ *Spalten-Nr*  
+ Wenn *pWnd* NULL ist, gibt die Spalte in den Bereich, die aktiv sind.  
   
- `pWnd`  
- Ein Zeiger auf eine `CWnd` Objekt. Wenn **NULL**, dem Bereich gemäß `row` und `col` aktiv festgelegt ist. Wenn dies nicht der **NULL**, gibt der Bereich, der aktiv festgelegt ist.  
+ *pWnd*  
+ Ein Zeiger auf eine `CWnd` Objekt. Wenn NULL, der Bereich gemäß *Zeile* und *Col* aktiv festgelegt ist. Falls ungleich NULL, gibt den Bereich, der aktiv festgelegt ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion wird aufgerufen, durch das Framework einen Bereich als aktiv festlegen, wenn der Benutzer den Fokus auf einen Bereich innerhalb der Frame-Fensters ändert. Sie können explizit aufrufen, `SetActivePane` so ändern Sie den Fokus auf die angegebene Ansicht.  
   
- Geben Sie im Bereich durch die Bereitstellung von Zeile und Spalte **oder** durch die Bereitstellung `pWnd`.  
+ Geben Sie im Bereich durch die Bereitstellung von Zeile und Spalte **oder** durch die Bereitstellung *pWnd*.  
   
 ##  <a name="setcolumninfo"></a>  CSplitterWnd::SetColumnInfo  
  Rufen Sie Informationen über die angegebene Spalte festgelegt.  
@@ -825,13 +825,13 @@ void SetColumnInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `col`  
+ *Spalten-Nr*  
  Gibt eine Spalte der Splitter-Fenster.  
   
  *cxIdeal*  
  Gibt eine ideale Breite der Spalte der Splitter-Fenster in Pixel an.  
   
- `cxMin`  
+ *cxMin*  
  Gibt eine minimale Breite der Spalte der Splitter Fenster in Pixel an.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -853,13 +853,13 @@ void SetRowInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `row`  
+ *Zeile*  
  Gibt eine Zeile der Splitter-Fenster an.  
   
  *cyIdeal*  
  Gibt eine ideale Höhe der Zeile der Splitter-Fenster in Pixel an.  
   
- `cyMin`  
+ *cyMin*  
  Gibt eine minimale Höhe der Zeile der Splitter-Fenster in Pixel an.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -875,12 +875,12 @@ void SetScrollStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Die neue Scroll Formatvorlage für die unterteiltes Fenster freigegebene Bildlaufleisten-Unterstützung, die der folgenden Werte sind möglich:  
   
-- **WS_HSCROLL** erstellen/anzeigen horizontaler freigegebene Bildlaufleisten.  
+- WS_HSCROLL erstellen/horizontale freigegebenen Bildlaufleisten anzeigen.  
   
-- **WS_VSCROLL** erstellen/anzeigen vertikaler freigegebene Bildlaufleisten.  
+- WS_VSCROLL erstellen/vertikale freigegebenen Bildlaufleisten anzeigen.  
   
 ### <a name="remarks"></a>Hinweise  
  Nach der Erstellung einer Bildlaufleiste ist es, werden nicht zerstört selbst wenn `SetScrollStyle` aufgerufen wird, ohne diesen Stil; stattdessen diese Bildlaufleisten werden ausgeblendet. Dadurch wird die Bildlaufleisten, um ihren Zustand zu beizubehalten, auch wenn sie ausgeblendet sind. Nach dem Aufruf `SetScrollStyle` es ist erforderlich, rufen Sie [RecalcLayout](#recalclayout) für alle Änderungen wirksam werden.  
@@ -902,7 +902,7 @@ virtual BOOL SplitColumn(int cxBefore);
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion wird aufgerufen, wenn eine vertikale unterteiltes Fenster erstellt wird. `SplitColumn` Gibt den Standardspeicherort, wo die Teilung auftritt.  
   
- `SplitColumn` durch das Framework zum Implementieren der Logik des dynamischen Splitterfensters aufgerufen wird (d. h., wenn das Splitterfenster verfügt über die **SPLS_DYNAMIC_SPLIT** Stil). Sie können angepasst werden, zusammen mit der virtuellen Funktion [CreateView](#createview), um erweiterte dynamischen Splitterfenstern zu implementieren.  
+ `SplitColumn` wird aufgerufen, durch das Framework zum Implementieren der Logik des dynamischen Splitterfensters, (d. h., wenn Splitterfensters den Stil SPLS_DYNAMIC_SPLIT hat). Sie können angepasst werden, zusammen mit der virtuellen Funktion [CreateView](#createview), um erweiterte dynamischen Splitterfenstern zu implementieren.  
   
 ##  <a name="splitrow"></a>  CSplitterWnd::SplitRow  
  Gibt an, in dem ein Rahmenfenster horizontal aufgeteilt wird.  
@@ -921,7 +921,7 @@ virtual BOOL SplitRow(int cyBefore);
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion wird aufgerufen, wenn ein horizontaler unterteiltes Fenster erstellt wird. `SplitRow` Gibt den Standardspeicherort, wo die Teilung auftritt.  
   
- `SplitRow` durch das Framework zum Implementieren der Logik des dynamischen Splitterfensters aufgerufen wird (d. h., wenn das Splitterfenster verfügt über die **SPLS_DYNAMIC_SPLIT** Stil). Sie können angepasst werden, zusammen mit der virtuellen Funktion [CreateView](#createview), um erweiterte dynamischen Splitterfenstern zu implementieren.  
+ `SplitRow` wird aufgerufen, durch das Framework zum Implementieren der Logik des dynamischen Splitterfensters, (d. h., wenn Splitterfensters den Stil SPLS_DYNAMIC_SPLIT hat). Sie können angepasst werden, zusammen mit der virtuellen Funktion [CreateView](#createview), um erweiterte dynamischen Splitterfenstern zu implementieren.  
   
 ##  <a name="ondraw"></a>  CSplitterWnd::OnDraw  
  Wird aufgerufen, durch das Framework Splitterfensters gezeichnet werden soll.  
@@ -931,7 +931,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
 ### <a name="remarks"></a>Hinweise  

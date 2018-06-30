@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddf8e6530530552a4ef7b811698c816352f7719c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374690"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122966"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Drehfeld-Steuerelements bereit.  
@@ -120,25 +120,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
+ *dwStyle*  
  Gibt das Drehfeldsteuerelement-Stil. Eine beliebige Kombination von Drehfeld-Schaltflächenstile Steuerelement auf das Steuerelement anzuwenden. Diese Formate werden in beschrieben [auf-ab-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb759885) im Windows SDK.  
   
- `rect`  
+ *Rect*  
  Gibt das Drehfeldsteuerelement Größe und Position. Es kann es sich um eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur  
   
- `pParentWnd`  
- Ein Zeiger auf das Drehfeldsteuerelement übergeordnetes Fenster, in der Regel eine `CDialog`. Es muss nicht **NULL.**  
+ *pParentWnd*  
+ Ein Zeiger auf das Drehfeldsteuerelement übergeordnetes Fenster, in der Regel eine `CDialog`. Es darf nicht NULL sein.  
   
- `nID`  
+ *nID*  
  Gibt das Drehfeldsteuerelement-ID an.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn die Initialisierung erfolgreich war; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CSpinButtonCtrl` zunächst in zwei Schritten Objekt, rufen Sie den Konstruktor und rufen dann **erstellen**, das das Drehfeld-Steuerelement erstellt, und fügt es der `CSpinButtonCtrl` Objekt.  
+ Sie erstellen eine `CSpinButtonCtrl` zunächst in zwei Schritten Objekt, rufen Sie den Konstruktor und rufen dann `Create`, das das Drehfeld-Steuerelement erstellt, und fügt es der `CSpinButtonCtrl` Objekt.  
   
- Rufen Sie zum Erstellen einer Drehfeld-Steuerelement mit erweiterten Fensterstile [CSpinButtonCtrl::CreateEx](#createex) anstelle von **erstellen**.  
+ Rufen Sie zum Erstellen einer Drehfeld-Steuerelement mit erweiterten Fensterstile [CSpinButtonCtrl::CreateEx](#createex) anstelle von `Create`.  
   
 ##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  Erstellt ein Steuerelement (ein untergeordnetes Fenster) und ordnet sie der `CSpinButtonCtrl` Objekt.  
@@ -153,26 +153,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwExStyle`  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der `dwExStyle` -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ *dwExStyle*  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt das Drehfeldsteuerelement-Stil. Eine beliebige Kombination von Drehfeld-Schaltflächenstile Steuerelement auf das Steuerelement anzuwenden. Diese Formate werden in beschrieben [auf-ab-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb759885) im Windows SDK.  
   
- `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der `pParentWnd`.  
+ *Rect*  
+ Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Ein Zeiger auf das Fenster, das das Steuerelement übergeordnet ist.  
   
- `nID`  
+ *nID*  
  Das Steuerelement untergeordnete Fenster-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende erweiterten Fensterstile, angegeben durch die Windows-erweiterten Stil ihm etwas voranzustellen **WS_EX_**.  
+ Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende erweiterten Fensterstile, durch Windows erweiterten Stil ihm etwas voranzustellen WS_EX_ angegeben.  
   
 ##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  Erstellt ein `CSpinButtonCtrl`-Objekt.  
@@ -191,10 +191,10 @@ UINT GetAccel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nAccel`  
- Anzahl der Elemente im Array vom angegebenen `pAccel`.  
+ *nAccel*  
+ Anzahl der Elemente im Array vom angegebenen *pAccel*.  
   
- `pAccel`  
+ *pAccel*  
  Zeiger auf ein Array von [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) Strukturen, die Beschleunigung-Informationen erhält.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -229,7 +229,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
   
 ### <a name="parameters"></a>Parameter  
  *lpbError*  
- Ein Zeiger auf ein boolescher Wert, der auf NULL, wenn den Wert festgelegt ist, ist erfolgreich abgerufen oder ungleich NULL, wenn ein Fehler auftritt. Wenn dieser Parameter, um festgelegt wird **NULL**, Fehler werden nicht gemeldet.  
+ Ein Zeiger auf ein boolescher Wert, der auf NULL, wenn den Wert festgelegt ist, ist erfolgreich abgerufen oder ungleich NULL, wenn ein Fehler auftritt. Wenn dieser Parameter auf NULL festgelegt ist, werden keine Fehler gemeldet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die erste Version gibt die 16-Bit für die aktuelle Position in das niederwertige Wort. Das höherwertige Wort ist ungleich NULL, wenn ein Fehler aufgetreten.  
@@ -255,7 +255,7 @@ void GetRange32(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *Niedrigere*  
+ *niedrigere*  
  Verweis auf eine ganze Zahl, die die Untergrenze für das Steuerelement empfängt.  
   
  *obere*  
@@ -277,11 +277,11 @@ BOOL SetAccel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nAccel`  
- Anzahl der [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) Strukturen gemäß `pAccel`.  
+ *nAccel*  
+ Anzahl der [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) Strukturen gemäß *pAccel*.  
   
- `pAccel`  
- Zeiger auf ein Array von `UDACCEL` -Strukturen, die Beschleunigung Informationen enthalten. Elemente sortiert werden soll, in aufsteigender Reihenfolge auf Grundlage der **nSec** Member.  
+ *pAccel*  
+ Ein Zeiger auf ein Array von UDACCEL-Strukturen, die Beschleunigung Informationen enthalten. Elemente sortiert werden soll, in aufsteigender Reihenfolge auf Grundlage der `nSec` Member.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -294,7 +294,7 @@ int SetBase(int nBase);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nBase`  
+ *nBase*  
  Neue Basiswert für das Steuerelement. Sie können für Dezimalpunkt 10 oder 16 für hexadezimal sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -311,7 +311,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWndBuddy`  
+ *pWndBuddy*  
  Ein Zeiger auf das neue Buddyfenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -329,7 +329,7 @@ int SetPos32(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nPos`  
+ *nPos*  
  Neue Position für das Steuerelement. Dieser Wert muss im Bereich durch den oberen und unteren Grenzen für das Steuerelement angegeben sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -353,8 +353,8 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nLower` und `nUpper`  
- Obere und untere Grenzwerte für das Steuerelement. Für `SetRange`, weder Limit kann größer sein als **UD_MAXVAL** oder kleiner als **UD_MINVAL**; darüber hinaus nicht der Unterschied zwischen beiden Grenzwerte überschreiten **UD_MAXVAL**. `SetRange32` Schränkt die Grenzwerte; Verwenden Sie ganzen Zahlen.  
+ *nLower* und *nUpper*  
+ Obere und untere Grenzwerte für das Steuerelement. Für `SetRange`weder Grenzwert UD_MAXVAL größer bzw. kleiner als UD_MINVAL; darüber hinaus der Unterschied zwischen beiden Grenzwerte UD_MAXVAL überschreiten kann nicht. `SetRange32` Schränkt die Grenzwerte; Verwenden Sie ganzen Zahlen.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Memberfunktion `SetRange32` legt die 32-Bit-Bereich für das Drehfeld-Steuerelement fest.  

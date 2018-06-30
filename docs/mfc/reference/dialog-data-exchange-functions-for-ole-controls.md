@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542afe8ba67e1d9c6138998320483a964a08724a
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375972"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121824"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Dialogdatenaustausch-Funktionen für OLE-Steuerelemente
 Dieses Thema listet die DDX_OC-Funktionen, die zum Austausch von Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, Formularansicht oder steuerungsansichtsobjekts und einen Datenmember des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  
@@ -48,8 +48,8 @@ Dieses Thema listet die DDX_OC-Funktionen, die zum Austausch von Daten zwischen 
 |[DDX_OCColorRO](#ddx_occolorro)|Verwaltet die Übertragung von **OLE_COLOR** Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements und ein **OLE_COLOR** -Datenmember.|  
 |[DDX_OCFloat](#ddx_ocfloat)|Verwaltet die Übertragung von **"float"** (oder **doppelte**) Daten zwischen einer Eigenschaft eines OLE-Steuerelements und ein **"float"** (oder **doppelte**)-Datenmember.|  
 |[DDX_OCFloatRO](#ddx_ocfloatro)|Verwaltet die Übertragung von **"float"** (oder **doppelte**) Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements und ein **"float"** (oder **doppelte**) Daten Member.|  
-|[DDX_OCInt](#ddx_ocint)|Verwaltet die Übertragung von `int` (oder **lange**) Daten zwischen einer Eigenschaft eines OLE-Steuerelements und ein `int` (oder **lange**)-Datenmember.|  
-|[DDX_OCIntRO](#ddx_ocintro)|Verwaltet die Übertragung von `int` (oder **lange**) Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements und ein `int` (oder **lange**)-Datenmember.|  
+|[DDX_OCInt](#ddx_ocint)|Verwaltet die Übertragung von **Int** (oder **lange**) Daten zwischen einer Eigenschaft eines OLE-Steuerelements und ein **Int** (oder **lange**)-Datenmember.|  
+|[DDX_OCIntRO](#ddx_ocintro)|Verwaltet die Übertragung von **Int** (oder **lange**) Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements und ein **Int** (oder **lange**)-Datenmember.|  
 |[DDX_OCShort](#ddx_ocshort)|Verwaltet die Übertragung von **kurze** Daten zwischen einer Eigenschaft eines OLE-Steuerelements und ein **kurze** -Datenmember.|  
 |[DDX_OCShortRO](#ddx_ocshortro)|Verwaltet die Übertragung von **kurze** Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements und ein **kurze** -Datenmember.|  
 |[DDX_OCText](#ddx_octext)|Verwaltet die Übertragung von **CString** Daten zwischen einer Eigenschaft eines OLE-Steuerelements und ein **CString** -Datenmember.|  
@@ -67,13 +67,13 @@ void AFXAPI DDX_OCBool(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.  
   
- `dispid`  
+ *DISPID*  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
  *Wert*  
@@ -97,13 +97,13 @@ void AFXAPI DDX_OCBoolRO(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.  
   
- `dispid`  
+ *DISPID*  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
  *Wert*  
@@ -116,7 +116,7 @@ void AFXAPI DDX_OCBoolRO(
   **Header** afxdisp.h  
   
 ##  <a name="ddx_occolor"></a>  DDX_OCColor  
- Die `DDX_OCColor` -Funktion verwaltet die Übertragung von **OLE_COLOR** Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem **OLE_COLOR** Datenmember im Dialogfeld Formularansichts- oder steuerungsansichtsobjekts.  
+ Die `DDX_OCColor` -Funktion verwaltet die Übertragung von OLE_COLOR Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld Formularansicht oder steuerungsansichtsobjekts und einen Datenmember OLE_COLOR im Dialogfeld Formularansicht oder Sichtobjekt steuern.  
   
 ```   
 void AFXAPI DDX_OCColor(
@@ -127,13 +127,13 @@ void AFXAPI DDX_OCColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.  
   
- `dispid`  
+ *DISPID*  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
  *Wert*  
@@ -146,7 +146,7 @@ void AFXAPI DDX_OCColor(
   **Header** afxdisp.h  
   
 ##  <a name="ddx_occolorro"></a>  DDX_OCColorRO  
- Die `DDX_OCColorRO` -Funktion verwaltet die Übertragung von **OLE_COLOR** Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem **OLE_COLOR** Datenmember der Das Dialogfeld, Formularansicht oder steuerungsansichtsobjekt.  
+ Die `DDX_OCColorRO` -Funktion verwaltet die Übertragung von OLE_COLOR Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements in einem Dialogfeld Formularansicht oder steuerungsansichtsobjekts und einen Datenmember OLE_COLOR im Dialogfeld Formularansicht oder Sichtobjekt steuern.  
   
 ```   
 void AFXAPI DDX_OCColorRO(
@@ -157,13 +157,13 @@ void AFXAPI DDX_OCColorRO(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.  
   
- `dispid`  
+ *DISPID*  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
  *Wert*  
@@ -193,13 +193,13 @@ void AFXAPI DDX_OCFloat(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.  
   
- `dispid`  
+ *DISPID*  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
  *Wert*  
@@ -229,13 +229,13 @@ void AFXAPI DDX_OCFloatRO(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.  
   
- `dispid`  
+ *DISPID*  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
  *Wert*  
@@ -248,7 +248,7 @@ void AFXAPI DDX_OCFloatRO(
   **Header** afxdisp.h  
   
 ##  <a name="ddx_ocint"></a>  DDX_OCInt  
- Die `DDX_OCInt` -Funktion verwaltet die Übertragung von `int` (oder **lange**) Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem `int` (oder **lang**)-Datenmember des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  
+ Die `DDX_OCInt` -Funktion verwaltet die Übertragung von **Int** (oder **lange**) Daten zwischen einer Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem **Int**(oder **lange**)-Datenmember des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  
   
 ```   
 void AFXAPI DDX_OCInt(
@@ -265,13 +265,13 @@ void AFXAPI DDX_OCInt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.  
   
- `dispid`  
+ *DISPID*  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
  *Wert*  
@@ -284,7 +284,7 @@ void AFXAPI DDX_OCInt(
   **Header** afxdisp.h  
   
 ##  <a name="ddx_ocintro"></a>  DDX_OCIntRO  
- Die `DDX_OCIntRO` -Funktion verwaltet die Übertragung von `int` (oder **lange**) Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem `int` (oder **lang** )-Datenmember des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  
+ Die `DDX_OCIntRO` -Funktion verwaltet die Übertragung von **Int** (oder **lange**) Daten zwischen einer schreibgeschützten Eigenschaft eines OLE-Steuerelements in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem **Int** (oder **lange**)-Datenmember des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  
   
 ```   
 void AFXAPI DDX_OCIntRO(
@@ -301,13 +301,13 @@ void AFXAPI DDX_OCIntRO(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.  
   
- `dispid`  
+ *DISPID*  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
  *Wert*  
@@ -331,13 +331,13 @@ void AFXAPI DDX_OCShort(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.  
   
- `dispid`  
+ *DISPID*  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
  *Wert*  
@@ -361,13 +361,13 @@ void AFXAPI DDX_OCShortRO(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.  
   
- `dispid`  
+ *DISPID*  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
  *Wert*  
@@ -391,13 +391,13 @@ void AFXAPI DDX_OCText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf eine **CDataExchange** Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.  
   
- `dispid`  
+ *DISPID*  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
  *Wert*  
@@ -421,13 +421,13 @@ void AFXAPI DDX_OCTextRO(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf ein `CDataExchange` -Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines OLE-Steuerelements im Dialogfeld, im Formularansichts- oder Steuerungsansichtsobjekt.  
   
- `dispid`  
+ *DISPID*  
  Die Verteiler-ID einer Eigenschaft des Steuerelements.  
   
  *Wert*  

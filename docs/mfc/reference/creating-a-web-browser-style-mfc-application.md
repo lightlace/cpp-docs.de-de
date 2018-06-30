@@ -1,7 +1,7 @@
 ---
 title: Erstellen einer MFC-Anwendung im Webbrowserstil | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1553f7ccc3b22b4e3d76d8c49d94ba2a61c19e97
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374522"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122552"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Erstellen einer MFC-Anwendung im Webbrowserstil
 Eine Web-Anwendung im Webbrowserstil kann Informationen aus dem Internet (z. B. HTML- oder aktive Dokumente) oder einem Intranet als auch Ordner im lokalen Dateisystem und in einem Netzwerk zugreifen. Durch Ableiten von der Anwendung Ansichtsklasse aus [CHtmlView](../../mfc/reference/chtmlview-class.md)effektiv Sie machen der Anwendung einen Webbrowser, indem Sie die Ansicht mit dem WebBrowser-Steuerelement bereitstellen.  
@@ -50,30 +50,30 @@ Eine Web-Anwendung im Webbrowserstil kann Informationen aus dem Internet (z. B. 
   
  `CHtmlView` Dient als Wrapper für das Webbrowser-Steuerelement, das Ihre Anwendung in einer Web- oder eine HTML-Seite angezeigt gewährt. Der Assistent erstellt eine Überschreibung der [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) -Funktion in Ansichtsklasse, sodass ein Link auf der Website von Microsoft Visual C++:  
   
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     Navigate2(_T("http://www.msdn.microsoft.com/vstudio/"),
-    NULL,
-    NULL);
+        NULL,
+        NULL);
+}
+```
 
-} 
-```  
+Sie können diesen Standort mit einem Ihrer Wahl ersetzen oder können Sie die [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) Memberfunktion versucht, eine HTML-Seite zu öffnen, die als den Standardinhalt für die Ansicht des Projekts Ressourcenskript befindet. Zum Beispiel:  
   
- Sie können diesen Standort mit einem Ihrer Wahl ersetzen oder können Sie die [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) Memberfunktion versucht, eine HTML-Seite zu öffnen, die als den Standardinhalt für die Ansicht des Projekts Ressourcenskript befindet. Zum Beispiel:  
-  
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     LoadFromResource(IDR_HTML1);
-
-} 
+}
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -1,7 +1,7 @@
 ---
 title: ATL-OLE DB-Consumer-Assistent | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364949"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121688"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL-OLE DB-Consumer-Assistent
 Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum Zugriff auf die angegebene Datenquelle über den angegebenen OLE DB-Anbieter.  
@@ -111,7 +111,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
  `Class`  
  Nachdem Sie eine Datenquelle ausgewählt haben, wird dieses Feld mit einem Standardnamen-Klasse anhand der Tabelle oder gespeicherten Prozedur, die Sie ausgewählt aufgefüllt (finden Sie unter **wählen Sie eine Datenquelle** unten). Sie können den Klassennamen bearbeiten.  
   
- **.h-Datei**  
+ **H-Datei**  
  Nachdem Sie eine Datenquelle ausgewählt haben, dieses Feld wird aufgefüllt durch einen Klassennamen der Standard-Header basierend auf der Tabelle oder gespeicherten Prozedur, die Sie ausgewählt haben (finden Sie unter **wählen Sie eine Datenquelle** unten). Sie können Namen für die Header-Datei bearbeiten oder wählen Sie eine bestehende Headerdatei.  
   
  **Mit Attributen versehen**  
@@ -133,7 +133,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
   
  ``` 
  // Table accessor class  
-    class COrdersAccessor; *// Table class  
+    class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
  ... 
  // Column map  
@@ -178,7 +178,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
  **Unterstützung**  
  Wählen Sie die Kontrollkästchen, um die Art der Updates, die in der Consumer unterstützt werden (die Standardeinstellung ist "none") anzugeben. Jede der folgenden wird festgelegt, [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) und die entsprechenden Einträge für [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) im Eigenschaftensatz Zuordnung.  
   
- **Ändern Sie**  
+ **Ändern**  
  Gibt an, dass der Consumer Updates der Daten aus Zeile im Rowset unterstützt.  
   
  **Einfügen**  
@@ -189,5 +189,5 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
   
 ## <a name="see-also"></a>Siehe auch  
  [ATL-OLE DB-Consumers](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
- [Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Verbindungszeichenfolgen und Datenverknüpfungen (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)

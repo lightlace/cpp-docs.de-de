@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b14e0c397ac9179142627bca04b647c1db96db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79de28847809a9b9d7e0a160f2a4a45375f0e1fe
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371930"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121512"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Zeichenfolgen für Dokumentvorlagen, MFC-Assistent zum Hinzufügen von Klassen
 Auf dieser Seite des Assistenten ist verfügbar nur für Klassen, die die folgenden Kriterien erfüllen:  
@@ -43,7 +43,7 @@ Auf dieser Seite des Assistenten ist verfügbar nur für Klassen, die die folgen
  Gilt für Anwendungen, die Benutzerdokumente zu erstellen. Benutzer können Dokumente mehr einfach der Dokumenttyp verfügt eine Dateierweiterung und eine Datei-Typ-ID. öffnen und speichern Diese Elemente sind nicht lokalisiert werden, da sie vom System und nicht vom Benutzer verwendet werden.  
   
  **Dateierweiterung**  
- Legt fest, die Dateierweiterung, die den Dokumenttyp für diese Forms-Anwendung zugeordnet. Der Standardwert des Datei-Erweiterung, die basierend auf den Klassennamen abrufen. Wenn die neue MFC-Klasse heißt beispielsweise **CWidget**, wird standardmäßig die Erweiterung der Ausgabedatei lautet. Verdrahtung-Verbindungsdiagramm Die Erweiterung wird verwendet, in der Dateifilter und der **öffnen** und **speichern als** Dialogfelder.  
+ Legt fest, die Dateierweiterung, die den Dokumenttyp für diese Forms-Anwendung zugeordnet. Der Standardwert des Datei-Erweiterung, die basierend auf den Klassennamen abrufen. Wenn die neue MFC-Klasse heißt beispielsweise `CWidget`, wird standardmäßig die Erweiterung der Ausgabedatei lautet. Verdrahtung-Verbindungsdiagramm Die Erweiterung wird verwendet, in der Dateifilter und der **öffnen** und **speichern als** Dialogfelder.  
   
  Wenn Sie die Erweiterung zu ändern, wird die Änderung übernommen, der **Filtername** Feld.  
   
@@ -63,15 +63,15 @@ Auf dieser Seite des Assistenten ist verfügbar nur für Klassen, die die folgen
  Legt den Namen, den Benutzer angeben können, um die Dateien des Typs angegebenen Datei zu suchen. Diese Option ist verfügbar, von der **Dateityp** und **Dateityp** Optionen in den standardmäßigen Windows **öffnen** und **Dateityp** Dialogfelder. Wird standardmäßig der Name auf den Namen des Projekts basiert, sowie Dateien, gefolgt von der Erweiterung im angegebenen **Dateierweiterung**. Wenn Ihr Projekt Widget Namen und die Erweiterung der Ausgabedatei lautet .wid, z. B. die **Filtername** Widget-Dateien (*.wid) in der Standardeinstellung ist.  
   
  **Neue kurze Dateinamen**  
- Legt den Namen in das Windows-Standarddialogfeld `New` (Dialogfeld), wenn das Projekt mehr als eine Dokumentvorlage verfügt. Wenn Ihre Anwendung ist ein [Automatisierungsservers](../../mfc/automation-servers.md), dieser Name wird verwendet, als den Kurznamen der Ihr Automation-Objekt. Standardmäßig basiert dieser Name auf den Klassennamen abrufen.  
+ Legt den Namen in das Windows-Standarddialogfeld **neu** (Dialogfeld), wenn das Projekt mehr als eine Dokumentvorlage verfügt. Wenn Ihre Anwendung ist ein [Automatisierungsservers](../../mfc/automation-servers.md), dieser Name wird verwendet, als den Kurznamen der Ihr Automation-Objekt. Standardmäßig basiert dieser Name auf den Klassennamen abrufen.  
   
  **Lange Dateinamen für Typ**  
- Legt den Dateinamen für den Typ in der systemregistrierung fest. Wenn Ihre Anwendung eines Automatisierungsservers ist, wird dieser Name als den langen Namen für das Automatisierungsobjekt verwendet. Standardmäßig diesen Namen der Klassenname plus basiert. Dokument. Wenn der Klassenname ist z. B. **CWidget**, die **Dateityp langen Namen** Widget-Dokument ist.  
+ Legt den Dateinamen für den Typ in der systemregistrierung fest. Wenn Ihre Anwendung eines Automatisierungsservers ist, wird dieser Name als den langen Namen für das Automatisierungsobjekt verwendet. Standardmäßig diesen Namen der Klassenname plus basiert. Dokument. Wenn der Klassenname ist z. B. `CWidget`, die **Dateityp langen Namen** Widget-Dokument ist.  
   
  **Dokumentklasse**  
  Gibt das Projekt Dokumentklasse an. Diese Klasse wird standardmäßig der hauptanwendung Dokumentklasse, gemäß der [Überprüfung generierte Klassen](../../mfc/reference/generated-classes-mfc-application-wizard.md) Seite des Assistenten für die MFC-Anwendung. Wenn Sie andere Document-Klassen im Projekt hinzugefügt haben, können Sie eine andere Dokumentklasse aus der Liste auswählen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Klassen-Assistenten hinzufügen](../../mfc/reference/mfc-add-class-wizard.md)   
- [MFC-Klasse](../../mfc/reference/adding-an-mfc-class.md)   
+ [MFC Class (MFC-Klasse)](../../mfc/reference/adding-an-mfc-class.md)   
  [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)

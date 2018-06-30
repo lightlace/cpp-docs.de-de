@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2e9d2494463b502fda85c03fa1b861e1182cfc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6de53324eac663df7c12ee0cb2c0f4f02558157d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372074"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121701"
 ---
 # <a name="ddxdhtml-helper-macros"></a>Hilfsmakros DDX_DHtml
 Die DDX_DHtml Hilfsmakros ermöglichen einen einfachen Zugriff auf die häufig verwendeten Eigenschaften der Steuerelemente auf einer HTML-Seite.  
@@ -66,13 +66,13 @@ DDX_DHtml_Anchor_Href(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `dx`  
+ *DX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt.  
   
- `name`  
+ *name*  
  Der Wert, den Sie für die HTML-Steuerelement-ID-Parameter angegeben.  
   
- `var`  
+ *var*  
  Der Wert, der ausgetauscht wird.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -89,13 +89,13 @@ DDX_DHtml_Anchor_Target(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `dx`  
+ *DX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt.  
   
- `name`  
+ *name*  
  Der Wert, den Sie für die HTML-Steuerelement-ID-Parameter angegeben.  
   
- `var`  
+ *var*  
  Der Wert, der ausgetauscht wird.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -114,13 +114,13 @@ DDX_DHtml_ElementInnerHtml(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `dx`  
+ *DX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt.  
   
- `name`  
+ *name*  
  Der Wert, den Sie für die HTML-Steuerelement-ID-Parameter angegeben.  
   
- `var`  
+ *var*  
  Der Wert, der ausgetauscht wird.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -140,13 +140,13 @@ DDX_DHtml_ElementInnerText(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `dx`  
+ *DX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt.  
   
- `name`  
+ *name*  
  Der Wert, den Sie für die HTML-Steuerelement-ID-Parameter angegeben.  
   
- `var`  
+ *var*  
  Der Wert, der ausgetauscht wird.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -163,13 +163,13 @@ DDX_DHtml_ElementValue(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `dx`  
+ *DX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt.  
   
- `name`  
+ *name*  
  Der Wert, den Sie für die HTML-Steuerelement-ID-Parameter angegeben.  
   
- `var`  
+ *var*  
  Der Wert, der ausgetauscht wird. Finden Sie unter *Wert* in [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).  
   
 ## <a name="remarks"></a>Hinweise  
@@ -188,13 +188,13 @@ DDX_DHtml_Frame_Src(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `dx`  
+ *DX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt.  
   
- `name`  
+ *name*  
  Der Wert, den Sie für die HTML-Steuerelement-ID-Parameter angegeben.  
   
- `var`  
+ *var*  
  Der Wert, der ausgetauscht wird.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -213,13 +213,13 @@ DDX_DHtml_IFrame_Src(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `dx`  
+ *DX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt.  
   
- `name`  
+ *name*  
  Der Wert, den Sie für die HTML-Steuerelement-ID-Parameter angegeben.  
   
- `var`  
+ *var*  
  Der Wert, der ausgetauscht wird.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -236,17 +236,17 @@ DDX_DHtml_Img_Src(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `dx`  
+ *DX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt.  
   
- `name`  
+ *name*  
  Der Wert, den Sie für die HTML-Steuerelement-ID-Parameter angegeben.  
   
- `var`  
+ *var*  
  Der Wert, der ausgetauscht wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Bei Verwendung der `DDX_DHtml_Img_Src` Makro, um die Src-Eigenschaft für ein IMAGE-Element, das Internet Explorer-Image-Objekt abzurufen, wird die vollständig mit Escapezeichen versehene URL für die Bildquelle zurückgegeben. Angenommen, Sie verwenden die `DDX_DHtml_Img_Src` Makro, das der Src-Eigenschaft eines Bild-Elements auf die Zeichenfolge "einige interessantes Bild" festgelegt, wenn Sie diese Eigenschaft abzurufen, wird die Zeichenfolge "res://d:\myapplication\myapp.exe/some% von Internet Explorer zurück 20interesting % 20picture."  
+ Wenn das Makro DDX_DHtml_Img_Src mithilfe der Src-Eigenschaft für ein IMAGE-Element abrufen, gibt das Internet Explorer-Image-Objekt die vollständig mit Escapezeichen versehene URL für die Bildquelle zurück. Z. B. Wenn Sie das Makro DDX_DHtml_Img_Src verwenden, um der Src-Eigenschaft eines Bild-Elements auf die Zeichenfolge "einige interessantes Bild" festgelegt, gibt Wenn Sie diese Eigenschaft, Internet Explorer Abrufen die Zeichenfolge "res://d:\myapplication\myapp.exe/some% zurück 20interesting % 20picture."  
   
  Dieses Makro ruft die [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) Funktion mithilfe der DISPID_IHTMLIMGELEMENT_SRC dispatch-ID  
 

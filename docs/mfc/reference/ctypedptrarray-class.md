@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbbe2d9ed6ab7a17ccbd110d12070d4e295a62ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9082e28aad1edc584a1796d5bb5e97b5601753f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375819"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122914"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray-Klasse
 Stellt einen typsicheren Wrapper für Objekte der Klasse `CPtrArray` oder `CObArray`bereit.  
@@ -50,10 +50,10 @@ class CTypedPtrArray : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `BASE_CLASS`  
+ *BASIS_KLASSE*  
  Die Basisklasse der typisierten Zeiger Array-Klasse; muss eine Array-Klasse ( `CObArray` oder `CPtrArray`).  
   
- `TYPE`  
+ *TYPE*  
  Typ der Elemente in der Basisklasse Array gespeichert.  
   
 ## <a name="members"></a>Member  
@@ -105,7 +105,7 @@ INT_PTR Add(TYPE newElement);
  *TYPE*  
  Der Vorlagenparameter Angabe des Typs des Elements des Arrays hinzugefügt werden.  
   
- `newElement`  
+ *newElement*  
  Das Element mit diesem Array hinzugefügt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -115,14 +115,14 @@ INT_PTR Add(TYPE newElement);
  Ausführlichere Hinweise finden Sie unter [CObArray::Add](../../mfc/reference/cobarray-class.md#add).  
   
 ##  <a name="append"></a>  CTypedPtrArray::Append  
- Diese Memberfunktion ruft `BASE_CLASS` **:: Append**.  
+ Diese Memberfunktion ruft `BASE_CLASS`:: Append **.  
   
 ```  
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `BASE_CLASS`  
+ *BASIS_KLASSE*  
  Die Basisklasse der typisierten Zeiger Array-Klasse; muss eine Array-Klasse ( [CObArray](../../mfc/reference/cobarray-class.md) oder [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
  *TYPE*  
@@ -145,7 +145,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `BASE_CLASS`  
+ *BASIS_KLASSE*  
  Die Basisklasse der typisierten Zeiger Array-Klasse; muss eine Array-Klasse ( [CObArray](../../mfc/reference/cobarray-class.md) oder [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
  *TYPE*  
@@ -168,11 +168,11 @@ TYPE& ElementAt(INT_PTR nIndex);
  *TYPE*  
  Der Vorlagenparameter Angabe des Typs der Elemente im Array gespeichert.  
   
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Einen temporären Verweis auf das Element an der vom angegebenen Position `nIndex`. Dieses Element ist vom Typ mit dem Vorlagenparameter angegebene *Typ*.  
+ Einen temporären Verweis auf das Element an der vom angegebenen Position *nIndex*. Dieses Element ist vom Typ mit dem Vorlagenparameter angegebene *Typ*.  
   
 ### <a name="remarks"></a>Hinweise  
  Ausführlichere Hinweise finden Sie unter [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).  
@@ -188,11 +188,11 @@ TYPE GetAt(INT_PTR nIndex) const;
  *TYPE*  
  Der Vorlagenparameter Angabe des Typs der Elemente im Array gespeichert.  
   
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine Kopie des Elements an der vom angegebenen Position `nIndex`. Dieses Element ist vom Typ mit dem Vorlagenparameter angegebene *Typ*.  
+ Eine Kopie des Elements an der vom angegebenen Position *nIndex*. Dieses Element ist vom Typ mit dem Vorlagenparameter angegebene *Typ*.  
   
 ### <a name="remarks"></a>Hinweise  
  Ausführlichere Hinweise finden Sie unter [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
@@ -213,25 +213,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, die größer als der zurückgegebene Wert möglicherweise [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
   
  *TYPE*  
  Typ der Elemente in der Basisklasse Array gespeichert.  
   
- `newElement`  
- Der Zeiger in diesem Array platziert werden soll. Ein `newElement` des Werts **NULL** ist zulässig.  
+ *newElement*  
+ Der Zeiger in diesem Array platziert werden soll. Ein *NewElement* des Werts **NULL** ist zulässig.  
   
- `nCount`  
+ *nCount*  
  Die Anzahl der Häufigkeit, mit die dieses Element liegen eingefügt (Standardwert: 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Eine ganzzahlige Index, die größer als der zurückgegebene Wert möglicherweise `CObArray::GetUpperBound`.  
   
- `BASE_CLASS`  
+ *BASIS_KLASSE*  
  Die Basisklasse der typisierten Zeiger Array-Klasse; muss eine Array-Klasse ( [CObArray](../../mfc/reference/cobarray-class.md) oder [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
- `pNewArray`  
+ *pNewArray*  
  Ein anderes Array mit Elementen mit diesem Array hinzugefügt werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -249,7 +249,7 @@ TYPE operator[ ](int_ptr nindex) const;
  *TYPE*  
  Der Vorlagenparameter Angabe des Typs der Elemente im Array gespeichert.  
   
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -267,7 +267,7 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
   
  *TYPE*  
@@ -289,13 +289,13 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Ein Integer-Index, der größer als oder gleich 0 ist.  
   
  *TYPE*  
  Typ der Elemente in der Basisklasse Array gespeichert.  
   
- `newElement`  
+ *newElement*  
  Die Objektzeiger dieses Array hinzugefügt werden. Ein **NULL** Wert ist zulässig.  
   
 ### <a name="remarks"></a>Hinweise  

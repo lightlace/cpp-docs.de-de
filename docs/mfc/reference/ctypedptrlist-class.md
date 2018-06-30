@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f74782241ec69d77ec55b8613c59f87adb40fb
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374587"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122829"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList-Klasse
 Stellt einen typsicheren Wrapper für Objekte der Klasse `CPtrList`bereit.  
@@ -54,10 +54,10 @@ class CTypedPtrList : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `BASE_CLASS`  
+ *BASIS_KLASSE*  
  Die Basisklasse von typisierten Zeiger List-Klasse; muss eine Zeiger List-Klasse ( `CObList` oder `CPtrList`).  
   
- `TYPE`  
+ *TYPE*  
  Typ der Elemente in der Basisklassenliste gespeichert.  
   
 ## <a name="members"></a>Member  
@@ -119,17 +119,17 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
  *TYPE*  
  Typ der Elemente in der Basisklassenliste gespeichert.  
   
- `newElement`  
- Die Objektzeiger zu dieser Liste hinzugefügt werden. Ein **NULL** Wert ist zulässig.  
+ *newElement*  
+ Die Objektzeiger zu dieser Liste hinzugefügt werden. Es ist ein NULL-Wert zulässig.  
   
- `BASE_CLASS`  
+ *BASIS_KLASSE*  
  Die Basisklasse von typisierten Zeiger List-Klasse; muss eine Zeiger List-Klasse ( [CObList](../../mfc/reference/coblist-class.md) oder [CPtrList](../../mfc/reference/cptrlist-class.md)).  
   
- `pNewList`  
- Ein Zeiger auf eine andere [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) Objekt. Die Elemente in `pNewList` wird zu dieser Liste hinzugefügt werden.  
+ *pNewList*  
+ Ein Zeiger auf eine andere [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) Objekt. Die Elemente in *pNewList* wird zu dieser Liste hinzugefügt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die erste Version der **POSITION** Wert des neu eingefügten Element.  
+ Die erste Version gibt den Wert für die POSITION des neu eingefügten Element.  
   
 ### <a name="remarks"></a>Hinweise  
  Die erste Version fügt vor den Anfang der Liste ein neues Element hinzu. Die zweite Version fügt Elemente vor den Anfang einer anderen Liste.  
@@ -146,23 +146,23 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
  *TYPE*  
  Typ der Elemente in der Basisklassenliste gespeichert.  
   
- `newElement`  
- Die Objektzeiger zu dieser Liste hinzugefügt werden. Ein **NULL** Wert ist zulässig.  
+ *newElement*  
+ Die Objektzeiger zu dieser Liste hinzugefügt werden. Es ist ein NULL-Wert zulässig.  
   
- `BASE_CLASS`  
+ *BASIS_KLASSE*  
  Die Basisklasse von typisierten Zeiger List-Klasse; muss eine Zeiger List-Klasse ( [CObList](../../mfc/reference/coblist-class.md) oder [CPtrList](../../mfc/reference/cptrlist-class.md)).  
   
- `pNewList`  
- Ein Zeiger auf eine andere [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) Objekt. Die Elemente in `pNewList` wird zu dieser Liste hinzugefügt werden.  
+ *pNewList*  
+ Ein Zeiger auf eine andere [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) Objekt. Die Elemente in *pNewList* wird zu dieser Liste hinzugefügt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die erste Version der **POSITION** Wert des neu eingefügten Element.  
+ Die erste Version gibt den Wert für die POSITION des neu eingefügten Element.  
   
 ### <a name="remarks"></a>Hinweise  
  Die erste Version Fügt ein neues Element nach dem Ende der Liste hinzu. Die zweite Version Fügt eine andere Liste von Elementen nach dem Ende der Liste hinzu.  
   
 ##  <a name="getat"></a>  CTypedPtrList::GetAt  
- Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste.  
+ Eine Variable vom Typ POSITION ist ein Schlüssel für die Liste.  
   
 ```  
 TYPE& GetAt(POSITION position);  
@@ -174,17 +174,17 @@ TYPE GetAt(POSITION position) const;
  Der Vorlagenparameter Angabe des Typs der Elemente in der Liste gespeichert.  
   
  *Position*  
- Ein **POSITION** von einem vorherigen zurückgegebene Wert `GetHeadPosition` oder **suchen** Member-Funktionsaufruf.  
+ Ein Positionswert, der von einem vorherigen zurückgegebene `GetHeadPosition` oder `Find` Member-Funktionsaufruf.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn der Zugriff auf die Liste durch einen Zeiger auf eine **const CTypedPtrList**, klicken Sie dann `GetAt` gibt einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dies kann die Funktion nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und schützt folglich aus die Liste.  
+ Wenn der Zugriff auf die Liste durch einen Zeiger auf eine `const CTypedPtrList`, klicken Sie dann `GetAt` gibt einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dies kann die Funktion nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und schützt folglich aus die Liste.  
   
  Wenn die Liste zugegriffen wird, direkt oder über einen Zeiger auf eine `CTypedPtrList`, klicken Sie dann `GetAt` gibt einen Verweis auf einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dadurch können die Funktion, die auf beiden Seiten einer zuweisungsanweisung verwendet werden und somit Einträge in der Liste geändert werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden, auf eine **POSITION** Wert selbst. `GetAt` Ruft die `CObject` Zeiger, die einer bestimmten Position zugeordnet.  
+ Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden auf eine Positionswert selbst. `GetAt` Ruft die `CObject` Zeiger, die einer bestimmten Position zugeordnet.  
   
- Sie müssen sicherstellen, dass Ihre **POSITION** Wert stellt eine gültige Position in der Liste dar. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
+ Sie müssen sicherstellen, dass Ihre POSITION-Wert eine gültige Position in der Liste darstellt. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
   
  Diese Inlinefunktion ruft `BASE_CLASS` **:: GetAt**.  
   
@@ -201,7 +201,7 @@ TYPE GetHead() const;
  Der Vorlagenparameter Angabe des Typs der Elemente in der Liste gespeichert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn der Zugriff auf die Liste durch einen Zeiger auf eine **const CTypedPtrList**, klicken Sie dann `GetHead` gibt einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dies kann die Funktion nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und schützt folglich aus die Liste.  
+ Wenn der Zugriff auf die Liste durch einen Zeiger auf eine `const CTypedPtrList`, klicken Sie dann `GetHead` gibt einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dies kann die Funktion nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und schützt folglich aus die Liste.  
   
  Wenn die Liste zugegriffen wird, direkt oder über einen Zeiger auf eine `CTypedPtrList`, klicken Sie dann `GetHead` gibt einen Verweis auf einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dadurch können die Funktion, die auf beiden Seiten einer zuweisungsanweisung verwendet werden und somit Einträge in der Liste geändert werden kann.  
   
@@ -209,7 +209,7 @@ TYPE GetHead() const;
  Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf ist `GetHead`. Wenn die Liste leer ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek. Verwendung [IsEmpty](../../mfc/reference/coblist-class.md#isempty) um sicherzustellen, dass die Liste Elemente enthält.  
   
 ##  <a name="getnext"></a>  CTypedPtrList::GetNext  
- Ruft das Listenelement identifizierten `rPosition`, legt dann `rPosition` auf die **POSITION** Wert, der den nächsten Eintrag in der Liste.  
+ Ruft das Listenelement identifizierten *rposition zurück*, dann legt *rposition zurück* auf den Wert der POSITION eines nächsten Eintrag in der Liste.  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -220,25 +220,25 @@ TYPE GetNext(POSITION& rPosition) const;
  *TYPE*  
  Der Vorlagenparameter Angabe des Typs der Elemente in dieser Liste enthalten sind.  
   
- `rPosition`  
- Ein Verweis auf eine **POSITION** von einem vorherigen zurückgegebene Wert `GetNext`, `GetHeadPosition`, oder andere Member-Funktionsaufruf.  
+ *rposition zurück*  
+ Ein Verweis auf eine Positionswert, der von einem vorherigen zurückgegebene `GetNext`, `GetHeadPosition`, oder andere Member-Funktionsaufruf.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn der Zugriff auf die Liste durch einen Zeiger auf eine **const CTypedPtrList**, klicken Sie dann `GetNext` gibt einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dies kann die Funktion nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und schützt folglich aus die Liste.  
+ Wenn der Zugriff auf die Liste durch einen Zeiger auf eine `const CTypedPtrList`, klicken Sie dann `GetNext` gibt einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dies kann die Funktion nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und schützt folglich aus die Liste.  
   
  Wenn die Liste zugegriffen wird, direkt oder über einen Zeiger auf eine `CTypedPtrList`, klicken Sie dann `GetNext` gibt einen Verweis auf einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dadurch können die Funktion, die auf beiden Seiten einer zuweisungsanweisung verwendet werden und somit Einträge in der Liste geändert werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
  Sie können `GetNext` in einer Schleife vorwärts, wenn Sie die erste Position mit einem Aufruf von einrichten `GetHeadPosition` oder [CPtrList::Find](../../mfc/reference/coblist-class.md#find).  
   
- Sie müssen sicherstellen, dass Ihre **POSITION** Wert stellt eine gültige Position in der Liste dar. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
+ Sie müssen sicherstellen, dass Ihre POSITION-Wert eine gültige Position in der Liste darstellt. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
   
- Wenn das abgerufene Element das letzte Element in der Liste klicken Sie dann der neue Wert des `rPosition` festgelegt ist, um **NULL**.  
+ Wenn das abgerufene Element das letzte Element in der Liste klicken Sie dann der neue Wert des *rposition zurück* auf NULL festgelegt ist.  
   
  Es ist möglich, ein Element innerhalb einer Iteration zu entfernen. Siehe das Beispiel für [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).  
   
 ##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
- Ruft das Listenelement identifizierten `rPosition`, dann legt `rPosition` auf die **POSITION** Wert des vorherigen Eintrags in der Liste.  
+ Ruft das Listenelement identifizierten *rposition zurück*, dann legt *rposition zurück* auf den Wert der POSITION des vorherigen Eintrags in der Liste.  
   
 ```  
 TYPE& GetPrev(POSITION& rPosition);  
@@ -249,20 +249,20 @@ TYPE GetPrev(POSITION& rPosition) const;
  *TYPE*  
  Der Vorlagenparameter Angabe des Typs der Elemente in dieser Liste enthalten sind.  
   
- `rPosition`  
- Ein Verweis auf eine **POSITION** von einem vorherigen zurückgegebene Wert `GetPrev` oder andere Member-Funktionsaufruf.  
+ *rposition zurück*  
+ Ein Verweis auf eine Positionswert, der von einem vorherigen zurückgegebene `GetPrev` oder andere Member-Funktionsaufruf.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn der Zugriff auf die Liste durch einen Zeiger auf eine **const CTypedPtrList**, klicken Sie dann `GetPrev` gibt einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dies kann die Funktion nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und schützt folglich aus die Liste.  
+ Wenn der Zugriff auf die Liste durch einen Zeiger auf eine `const CTypedPtrList`, klicken Sie dann `GetPrev` gibt einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dies kann die Funktion nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und schützt folglich aus die Liste.  
   
  Wenn die Liste zugegriffen wird, direkt oder über einen Zeiger auf eine `CTypedPtrList`, klicken Sie dann `GetPrev` gibt einen Verweis auf einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dadurch können die Funktion, die auf beiden Seiten einer zuweisungsanweisung verwendet werden und somit Einträge in der Liste geändert werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können `GetPrev` in einer Schleife umgekehrte Iteration, wenn Sie die erste Position mit einem Aufruf von einrichten `GetTailPosition` oder **suchen**.  
+ Sie können `GetPrev` in einer Schleife umgekehrte Iteration, wenn Sie die erste Position mit einem Aufruf von einrichten `GetTailPosition` oder `Find`.  
   
- Sie müssen sicherstellen, dass Ihre **POSITION** Wert stellt eine gültige Position in der Liste dar. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
+ Sie müssen sicherstellen, dass Ihre POSITION-Wert eine gültige Position in der Liste darstellt. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
   
- Wenn das abgerufene Element die erste Aufgabe in der Liste aus, klicken Sie dann der neue Wert des `rPosition` festgelegt ist, um **NULL**.  
+ Wenn das abgerufene Element die erste Aufgabe in der Liste aus, klicken Sie dann der neue Wert des *rposition zurück* auf NULL festgelegt ist.  
   
 ##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  Ruft den Zeiger, der das Anfangselement dieser Liste darstellt.  
@@ -277,7 +277,7 @@ TYPE GetTail() const;
  Der Vorlagenparameter Angabe des Typs der Elemente in der Liste gespeichert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn der Zugriff auf die Liste durch einen Zeiger auf eine **const CTypedPtrList**, klicken Sie dann `GetTail` gibt einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dies kann die Funktion nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und schützt folglich aus die Liste.  
+ Wenn der Zugriff auf die Liste durch einen Zeiger auf eine `const CTypedPtrList`, klicken Sie dann `GetTail` gibt einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dies kann die Funktion nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und schützt folglich aus die Liste.  
   
  Wenn die Liste zugegriffen wird, direkt oder über einen Zeiger auf eine `CTypedPtrList`, klicken Sie dann `GetTail` gibt einen Verweis auf einen Zeiger des Typs mit dem Vorlagenparameter angegebene *Typ*. Dadurch können die Funktion, die auf beiden Seiten einer zuweisungsanweisung verwendet werden und somit Einträge in der Liste geändert werden kann.  
   
@@ -326,19 +326,19 @@ void SetAt(POSITION pos, TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pos`  
- Die **POSITION** des Elements festgelegt werden.  
+ *POS*  
+ Die POSITION des Elements festgelegt werden.  
   
  *TYPE*  
  Typ der Elemente in der Basisklassenliste gespeichert.  
   
- `newElement`  
+ *newElement*  
  Der Zeiger in der Liste geschrieben werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste. Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden, auf eine **POSITION** Wert selbst. `SetAt` Schreibt die Objektzeiger an der angegebenen Position in der Liste an.  
+ Eine Variable vom Typ POSITION ist ein Schlüssel für die Liste. Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden auf eine Positionswert selbst. `SetAt` Schreibt die Objektzeiger an der angegebenen Position in der Liste an.  
   
- Sie müssen sicherstellen, dass Ihre **POSITION** Wert stellt eine gültige Position in der Liste dar. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
+ Sie müssen sicherstellen, dass Ihre POSITION-Wert eine gültige Position in der Liste darstellt. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
   
  Ausführlichere Hinweise finden Sie unter [CObList::SetAt](../../mfc/reference/coblist-class.md#setat).  
   

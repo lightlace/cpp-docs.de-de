@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2f5f0a72c08aeabcd764cf4c7763c9506769585
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372404"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121623"
 ---
 # <a name="cuintarray-class"></a>CUIntArray-Klasse
 Unterstützt Arrays mit Ganzzahlen ohne Vorzeichen.  
@@ -69,7 +69,7 @@ class CUIntArray : public CObject
 ```  
   
 ## <a name="members"></a>Member  
- Die Memberfunktionen von `CUIntArray` ähneln den Memberfunktionen der Klasse [CObArray](../../mfc/reference/cobarray-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CObArray`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo eine `CObject` Zeiger als Funktionsparameter oder Rückgabewert, ersetzen Sie durch eine **"uint"**.  
+ Die Memberfunktionen von `CUIntArray` ähneln den Memberfunktionen der Klasse [CObArray](../../mfc/reference/cobarray-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CObArray`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo eine `CObject` -Zeiger als Funktionsparameter oder Rückgabewert, ersetzen Sie durch eine "uint".  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CUIntArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Gibt den gesamten nicht verwendeten Arbeitsspeicher über der aktuellen Obergrenze frei.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Gibt den Wert an einem bestimmten Index zurück.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Ruft die Anzahl der Elemente im Array ab.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Ermöglicht den Zugriff auf Elemente im Array. Kann **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Ermöglicht den Zugriff auf Elemente im Array. NULL kann sein.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Ruft die Anzahl der Elemente im Array ab.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Gibt den größten gültigen Index zurück.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Fügt ein Element (oder alle Elemente in einem anderen Array) am angegebenen Index ein.|  
@@ -112,7 +112,7 @@ class CUIntArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Ganzzahl ohne Vorzeichen oder **"uint"**, unterscheidet sich von Wörtern und Doppelwort, der physischen Größe einer **"uint"** können, hängen davon ab, das Ziel, das Betriebssystem. Ein **"uint"** ist die gleiche Größe wie ein Doppelwort.  
+ Eine Ganzzahl ohne Vorzeichen oder "uint", unterscheidet sich von Wörtern und Doppelwort, insofern, dass die physische Größe der UINT je nach Betriebssystem Ziel ändern kann. Eine "uint" ist die gleiche Größe wie ein Doppelwort.  
   
  `CUIntArray` enthält die [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) -Makro Laufzeittyp Unterstützung von laufzeittypenzugriff und eine [CDumpContext](../../mfc/reference/cdumpcontext-class.md) Objekt. Wenn Sie eine Sicherung der einzelnen Ganzzahl ohne Vorzeichen Elemente benötigen, müssen Sie die Tiefe des sicherungskontexts auf 1 oder größer festlegen. Ganze Zahl ohne Vorzeichen Arrays können nicht serialisiert werden.  
   

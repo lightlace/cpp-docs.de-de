@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89cd3a27869434bc5874037005fee6a592db233
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372507"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122670"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor-Klasse
 Ermöglicht mit einer Befehlszeile die Anzeige eines Wartecursors (normalerweise in Form einer Sanduhr), während ein längeren Vorgang ausgeführt wird.  
@@ -62,7 +62,7 @@ class CWaitCursor
 > [!NOTE]
 >  Aufgrund ihrer Konstruktoren und Destruktoren Funktionsweise `CWaitCursor` Objekte immer als lokale Variablen deklariert werden – sie nie als globale Variablen deklariert sind, noch werden sie mit zugeordneten **neue**.  
   
- Wenn Sie einen Vorgang, der den Cursor ausführen geändert werden, z. B. das Anzeigen einer Meldungsfeld oder im Dialogfeld, rufen ggf. verursacht die [wiederherstellen](#restore) Memberfunktion den Wartecursor wiederherstellen. Es ist angemessen, rufen Sie **wiederherstellen** selbst wenn ein Wartecursor derzeit angezeigt wird.  
+ Wenn Sie einen Vorgang, der den Cursor ausführen geändert werden, z. B. das Anzeigen einer Meldungsfeld oder im Dialogfeld, rufen ggf. verursacht die [wiederherstellen](#restore) Memberfunktion den Wartecursor wiederherstellen. Es ist angemessen, rufen Sie `Restore` selbst wenn ein Wartecursor derzeit angezeigt wird.  
   
  Eine weitere Möglichkeit zum Anzeigen eines Wartecursor ist die Verwendung die Kombination von [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor), und eventuell [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). Allerdings `CWaitCursor` ist einfacher zu verwenden, da Sie brauchen setzen Sie den Cursor auf den vorherigen Cursor, wenn Sie mit der längeren Vorgang fertig sind.  
   
@@ -106,7 +106,7 @@ void Restore();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Es ist in Ordnung Aufrufen **wiederherstellen** selbst wenn der Wartecursor derzeit angezeigt wird.  
+ Es ist in Ordnung Aufrufen `Restore` selbst wenn der Wartecursor derzeit angezeigt wird.  
   
  Wenn Sie in der eine Funktion als die in dem den Wartecursor wiederherstellen müssen die `CWaitCursor` Objekt deklariert ist, rufen Sie [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor).  
   
