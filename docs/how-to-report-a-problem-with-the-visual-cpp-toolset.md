@@ -1,6 +1,6 @@
 ---
 title: Melden eines Problems mit dem Visual C++-Toolset | Microsoft-Dokumentation
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dec9cfac5273469eb37418929d83e273f6ab8612
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253879"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322367"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Melden eines Problems mit dem Visual C++-Toolset oder der -Dokumentation
 
@@ -358,7 +358,7 @@ Erstellen Sie Ihre Reproduktion als minimales IDE-Projekt, und erstellen Sie dan
 Es gibt mehrere gute Möglichkeiten, uns Ihren Bericht zu übermitteln. Die können das in Visual Studio integrierte [Tool „Problem melden“](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) oder die Seiten der [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) verwenden. Sie gelangen direkt zu den Seiten der Developer Community, wenn Sie auf **Produktfeedback** unten auf der Seite klicken. Die Wahl hängt davon ab, ob Sie die integrierten Tools der IDE zum Erstellen von Screenshots und zum Organisieren Ihres Berichts verwenden möchten, um diesen auf den Seiten der Entwicklercommunity zu veröffentlichen, oder ob Sie lieber direkt die Website verwenden möchten.
 
 > [!NOTE]
-> Unabhängig davon, wie Sie den Bericht senden, respektiert Microsoft Ihre Privatsphäre. Microsoft verpflichtet sich der Einhaltung aller Datenschutzgesetze- und regeln. Informationen dazu, wie wir Daten behandeln, die Sie uns senden, finden Sie in der [Datenschutzerklärung von Microsoft](https://www.visualstudio.com/dn948229).
+> Unabhängig davon, wie Sie den Bericht senden, respektiert Microsoft Ihre Privatsphäre. Microsoft verpflichtet sich der Einhaltung aller Datenschutzgesetze- und regeln. Informationen dazu, wie wir Daten behandeln, die Sie uns senden, finden Sie in der [Datenschutzerklärung von Microsoft](https://privacy.microsoft.com/privacystatement).
 
 ### <a name="use-the-report-a-problem-tool"></a>Nutzen des Tools „Problem melden“
 
