@@ -145,7 +145,7 @@ TCHAR m_state[3] = 'CA';
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird ein Befehl definiert, der die Vor- und Nachnamen aus einer Tabelle auswählt, in der die Statusspalte „CA“ entspricht. **db_command** erstellt und liest ein Rowset, für das Sie sowohl über den Assistenten generierte Funktionen wie [OpenAll und CloseAll](../data/oledb/consumer-wizard-generated-methods.md)als auch `CRowset` -Memberfunktionen wie [MoveNext](../data/oledb/crowset-movenext.md)ausführen können.  
   
- Beachten Sie, dass Sie für diesen Code eine eigene Verbindungszeichenfolge bereitstellen müssen, die eine Verbindung mit der pubs-Datenbank herstellt. Weitere Informationen dazu, wie Sie dies in der Entwicklungsumgebung bewerkstelligen, finden Sie unter [How to: Connect to a Database from Server Explorer](http://msdn.microsoft.com/en-us/7c1c3067-0d77-471b-872b-639f9f50db74) und [How to: Add New Data Connections in Server Explorer/Database Explorer](http://msdn.microsoft.com/en-us/fb2f513b-ddad-4142-911e-856bba0054c8).  
+ Beachten Sie, dass Sie für diesen Code eine eigene Verbindungszeichenfolge bereitstellen müssen, die eine Verbindung mit der pubs-Datenbank herstellt. Weitere Informationen dazu, wie Sie dies in der Entwicklungsumgebung bewerkstelligen, finden Sie unter [Vorgehensweise: Verbinden mit einer Datenbank aus Server-Explorer](http://msdn.microsoft.com/en-us/7c1c3067-0d77-471b-872b-639f9f50db74) und [wie: Hinzufügen neuer Datenverbindungen in Server-Explorer/Datenbank-Explorer](http://msdn.microsoft.com/en-us/fb2f513b-ddad-4142-911e-856bba0054c8).  
   
 ```  
 // db_command.h  
