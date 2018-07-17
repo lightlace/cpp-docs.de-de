@@ -1,5 +1,5 @@
 ---
-title: Neues Projekt aus vorhandenem Code - Quelldateien (Visual C++) | Microsoft Docs
+title: 'Neues Projekt aus vorhandenen Codeeinstellungen: Quelldateien (Visual C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,50 +15,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d85a7b85996ed307596865a31d55cf4b119e5bd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33338694"
 ---
 # <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>Projektspeicherort und Quelldateien festlegen, Assistent "Neues Projekt aus vorhandenen Codedateien erstellen"
-Geben Sie mithilfe dieser Seite des Assistenten für neue Projekt aus vorhandenen Codedateien erstellen:  
+Verwenden Sie diese Seite des Assistenten zum Erstellen eines neuen Projekts aus vorhandenen Codedateien, um Folgendes anzugeben:  
   
 -   Der Verzeichnispfad des neuen Projekts  
   
--   Die Verzeichnisse, nach vorhandenen Quelldateien gesucht werden soll.  
+-   Die Verzeichnisse, in denen nach vorhandenen Quelldateien gesucht werden soll  
   
--   Der hochzuladenden Dateien wird vom Assistenten in das neue Projekt importiert.  
+-   Die Arten von Dateien, die der Assistent in das neue Projekt importiert  
   
 ## <a name="task-list"></a>Aufgabenliste  
  [Vorgehensweise: Erstellen eines C++-Projekts aus vorhandenem Code](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>UIElement-Liste  
- **Projekt-Dateispeicherort**  
- Gibt den Verzeichnispfad des neuen Projekts an. Dieser Speicherort unterscheidet, in dem der Assistent alle Dateien (und Unterverzeichnisse) des neuen Projekts ablegt.  
+ **Projektdateiverzeichnis**  
+ Gibt den Verzeichnispfad des neuen Projekts an. Dieser Speicherort befindet sich dort, wo der Assistent alle Dateien (und Unterverzeichnisse) des neuen Projekts ablegt.  
   
  **Browse** (Durchsuchen)  
- Zeigt die **Projekt Dateispeicherort** Dialogfelds können Sie das Verzeichnis angeben, die das neue Projekt enthält. Dieses Steuerelement ermöglicht es Ihnen, zum gewünschten Ordner zu navigieren.  
+ Zeigt das Dialogfeld **Projektdateiverzeichnis** an, das Sie beim Angeben des Verzeichnisses unterstützt, das das neue Projekt enthält. Mit diesem Steuerelement können Sie zum gewünschten Ordner navigieren.  
   
  **Projektname**  
- Gibt den Namen des neuen Projekts. Projektdateien, die Datei-Erweiterungen, z. B. vcxproj haben werden, diesen Namen übernehmen. Vorhandenen Codedateien behält ihren ursprünglichen Namen.  
+ Gibt den Namen des neuen Projekts an. Projektdateien mit Dateierweiterungen wie „.vcxproj“ übernehmen diesen Namen. Vorhandene Codedateien behalten ihren ursprünglichen Namen bei.  
   
- **Hinzufügen von Dateien zum Projekt aus diesen Ordnern**  
- Wenn dieses Kontrollkästchen aktiviert, legt den Assistenten zum Kopieren von vorhandenen Codedateien aus ihren ursprünglichen Verzeichnissen (die in das Listenfeld unterhalb dieses Steuerelements angegeben sind) in das neue Projekt.  
+ **Dem Projekt Dateien aus diesen Ordnern hinzufügen**  
+ Wenn diese Option aktiviert ist, kopiert der Assistent vorhandene Codedateien aus ihren ursprünglichen Verzeichnissen (die im Listenfeld unter diesem Steuerelement angezeigt werden) in das neue Projekt.  
   
- **Unterordner hinzufügen**  
- Gibt an, um Codedateien aus allen Unterverzeichnissen des Verzeichnisses kopieren aufgeführten **Ordner** Spalte in das neue Projekt.  
+ **Unterordner einbeziehen**  
+ Legt fest, dass Codedateien aus allen Unterverzeichnissen der in der Spalte **Ordner** aufgeführten Verzeichnisse in das neue Projekt kopiert werden.  
   
  **Ordner**  
- Gibt den Pfad zum Verzeichnis, das vorhandenen Codedateien zum Kopieren in das neue Projekt enthält. Diese Spalte enthält alle Verzeichnisse, die der Assistent nach vorhandenen Codedateien durchsucht.  
+ Gibt den Pfad zum Verzeichnis an, das vorhandene Codedateien enthält, die in das neue Projekt kopiert werden. In dieser Spalte werden alle Verzeichnisse aufgelistet, in denen der Assistent nach vorhandenen Codedateien sucht.  
   
  **Add**  
- Zeigt die **Hinzufügen von Dateien zum Projekt aus diesem Ordner** Dialogfeld, das Sie Verzeichnisse angeben kann, die der Assistent nach vorhandenen Codedateien durchsucht.  
+ Zeigt das Dialogfeld **Dateien von diesem Ordner zum Projekt hinzufügen** an, mit dem Sie Verzeichnisse angeben können, in denen der Assistent nach vorhandenen Codedateien sucht.  
   
  **Entfernen**  
- Löscht den Verzeichnispfad an, der im Listenfeld links von diesem Steuerelement ausgewählt ist.  
+ Löscht den Verzeichnispfad, der im Listenfeld links von diesem Steuerelement ausgewählt ist.  
   
- **Dateitypen, die dem Projekt hinzufügen**  
- Gibt die Arten von Dateien, die der Assistent das neue Projekt basierend auf bestimmten Dateierweiterungen hinzufügen. Erweiterungen, die mit dem Platzhalterzeichen vorangestellt werden und in der Liste der Dateierweiterungen durch ein Semikolon getrennt sind.  
+ **Dateitypen, die dem Projekt hinzugefügt werden sollen**  
+ Gibt die Arten von Dateien an, die der Assistent dem neuen Projekt basierend auf den jeweiligen Dateierweiterungen hinzufügt. Den Erweiterungen wird ein Sternchen als Platzhalterzeichen vorangestellt, und sie werden in der Liste von Dateierweiterungen durch Semikolons getrennt.  
   
  **Alle Dateien im Projektmappen-Explorer anzeigen**  
- Gibt an, dass alle Dateien in das neue Projekt im Projektmappen-Explorer-Fenster sichtbar sind und angezeigt werden. Diese Option ist standardmäßig aktiviert.
+ Gibt an, dass alle Dateien im neuen Projekt im Fenster des Projektmappen-Explorers sichtbar sind und angezeigt werden. Diese Option ist standardmäßig aktiviert.

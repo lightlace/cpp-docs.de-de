@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350848"
 ---
 # <a name="dynamic-layout"></a>Dynamisches Layout
 Mit MFC in Visual Studio 2015 können Sie Dialogfelder erstellen, die der Benutzer ändern kann, und Sie können steuern, wie, die das Layout auf die Änderung der Größe angepasst. Beispielsweise können Sie Schaltflächen am unteren Rand eines Dialogfelds anfügen, sodass sie sich immer am unteren Rand befinden. Sie können auch bestimmte Steuerelemente einrichten, wie z. B. Textfelder, Listenfelder und Bearbeitungsfelder, die erweitert werden, wenn der Benutzer das Dialogfeld erweitert.  

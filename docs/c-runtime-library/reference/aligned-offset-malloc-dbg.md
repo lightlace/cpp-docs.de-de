@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e0b0838f75e8fa95d19ed3abfe13b014157a217
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd938b935ff5e69adf4d4e56cd70693cfd1a872d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -66,10 +66,10 @@ Der Ausrichtungswert, der eine ganzzahlige Potenz von 2 sein muss.
 Der Offset in der Speicherbelegung zum Erzwingen der Ausrichtung.
 
 *filename*<br/>
-Zeiger zum Namen der Quelldatei, der die Belegung angefordert hat, oder NULL.
+Zeiger auf den Namen der Quelldatei, die die Belegung angefordert oder **NULL**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei, in der die Belegung angefordert wurde, oder NULL.
+Zeilennummer in der Quelldatei, in die Belegung angefordert wurde, oder **NULL**.
 
 ## <a name="return-value"></a>Rückgabewert
 

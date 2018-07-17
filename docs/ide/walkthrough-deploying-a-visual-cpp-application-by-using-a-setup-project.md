@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen eine Visual C++-Anwendung mithilfe eines Setupprojekts | Microsoft Docs
+title: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setup-Projekts | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,40 +15,41 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 454507a3a3f33b43af0e50c25dab6703aa75a56b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33332779"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setup-Projekts
-Beschreibt, wie ein Setup-Projekt zu verwenden, um ein Visual C++-Anwendung bereitzustellen.  
+In diesem Artikel wird beschrieben, wie Sie ein Setup-Projekt verwenden, um eine Visual C++-Anwendung bereitzustellen.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
   
--   Ein Computer mit [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] installiert.  
+-   Ein Computer, auf dem [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] installiert ist.  
   
--   Ein zusätzlicher Computer, die über keinen Visual C++-Bibliotheken.  
+-   Einen zusätzlichen Computer, auf dem keine Visual C++-Bibliotheken vorhanden sind.  
   
-### <a name="to-deploy-an-application-by-using-a-setup-project"></a>Zum Bereitstellen einer Anwendung mithilfe eines Setupprojekts  
+### <a name="to-deploy-an-application-by-using-a-setup-project"></a>So stellen Sie eine Anwendung mithilfe eines Setup-Projekts bereit  
   
-1.  Verwenden der **MFC ApplicationWizard** um eine neue Visual Studio-Projektmappe zu erstellen. Suchen Sie den Assistenten aus der **neues Projekt** Dialogfeld erweitern Sie die **Visual C++** Knoten **MFC**Option **MFC-Anwendung**, geben Sie eine für das Projekt, und klicken Sie dann auf **OK**.  
+1.  Verwenden Sie den **MFC-Anwendungs-Assistenten** zum Erstellen einer neuen Visual Studio-Projektmappe. Erweitern Sie im Dialogfeld **Neues Projekt** den Knoten **Visual C++**, klicken Sie auf **MFC** und dann auf **MFC-Anwendung**, geben Sie dann einen Namen für das Projekt ein, und klicken Sie auf **OK**, um den Assistenten zu finden.  
   
-2.  Ändern Sie die aktive Lösungskonfiguration auf **Version**. Aus der **erstellen** klicken Sie im Menü **Configuration Manger**. Aus der **Configuration Manager** wählen Sie im Dialogfeld **Release** aus der **aktive Projektmappenkonfiguration** Dropdown-Menü.  
+2.  Ändern Sie die aktive Projektmappenkonfiguration in **Release**. Klicken Sie im Menü **Build** auf **Konfigurations-Manager**. Wählen Sie im Dialogfeld **Konfigurations-Manager** im Dropdownfeld **Aktive Projektmappenkonfiguration** die Option **Release** aus.  
   
-3.  Drücken Sie F7, um die Anwendung zu erstellen. Alternativ können Sie auf die **erstellen** Menü klicken Sie auf **Projektmappe**. Dadurch wird das Setup-Projekt die Ausgabe dieses Projekts der MFC-Anwendung verwendet.  
+3.  Drücken Sie F7, um die Anwendung zu erstellen. Oder klicken Sie im Menü **Build** auf **Projektmappe erstellen**. Dadurch wird dem Setup-Projekt ermöglicht, die Ausgabe dieses MFC-Anwendungsprojekts zu verwenden.  
   
-4.  Laden Sie InstallShield Limited Edition (ISLE), die für Visual Studio-Entwickler kostenlos und ersetzt die Funktionen der Projektvorlagen in Visual Studio für Setup und Bereitstellung herunter, wenn Sie dies nicht bereits getan haben. Wenn Sie mit dem Internet verbunden sind, öffnen Sie die **neues Projekt** Dialogfelds auswählen **Datei**, **neu**, **Projekt** Balken- oder indem im Menü mit der rechten Maustaste der Lösung in **Projektmappen-Explorer** auswählen und **hinzufügen**, **neues Projekt**. Erweitern Sie die **andere Projekttypen** Knoten, wählen Sie **InstallShield Limited Edition aktivieren** in der **Setup und Bereitstellung** Knoten, und befolgen Sie die Anweisungen, die angezeigt werden. Sobald Sie heruntergeladen, installiert und aktiviert die InstallShield Limited Edition, schließen Sie Visual Studio, und öffnen Sie es erneut.  
+4.  Laden Sie InstallShield Limited Edition (ISLE) herunter, falls Sie das noch nicht getan haben. Visual Studio-Entwickler erhalten es kostenlos, und es ersetzt die Funktionen der Visual Studio-Projektvorlagen für Setup und Bereitstellung. Wenn eine Verbindung zum Internet besteht, öffnen Sie das Dialogfeld **Neues Projekt**, indem Sie in der Menüleiste auf **Datei**, **Neu** und **Projekt** klicken oder im **Projektmappen-Explorer** mit der rechten Maustaste auf Ihre Projektmappe klicken und dann auf **Hinzufügen**, **Neues Projekt** klicken. Erweitern Sie den Knoten **Andere Projekttypen**, wählen Sie dann **InstallShield Limited Edition aktivieren** im Knoten **Setup und Bereitstellung** aus, und führen Sie die angezeigten Anweisungen aus. Nachdem Sie ISLE heruntergeladen, installiert und aktiviert haben, schließen Sie Visual Studio und öffnen Sie das Programm erneut.  
   
-5.  Öffnen der **neues Projekt** (Dialogfeld) erneut aus, erweitern Sie die **andere Projekttypen** Knoten, und wählen Sie **InstallShield Limited Edition-Projekt** in der  **InstallShield Limited Edition** Knoten.  
+5.  Öffnen Sie erneut das Dialogfeld **Neues Projekt**, erweitern Sie den Knoten **Andere Projekttypen**, und wählen Sie **InstallShield Limited Edition-Projekt** im Knoten **InstallShield Limited Edition** aus.  
   
-6.  Führen Sie die Anweisungen in der **Einstieg** Knoten des Setup-Projekts erstellt, indem die InstallShield Limited Edition-Vorlage, die einen Ausgabeverweis auf das Visual Studio-MFC-Projekt hinzufügen.  
+6.  Führen Sie die Anweisungen im Knoten **Erste Schritte** des Setup-Projekts aus, das von der InstallShield Limited Edition-Vorlage erstellt wurde, um Ihrem Visual Studio-MFC-Projekt einen Ausgabeverweis hinzuzufügen.  
   
-7.  Erstellen Sie das Setupprojekt, um die Installationsdatei (setup.exe) zu erstellen. Zu diesem Zweck mit der rechten Maustaste in den Setup-Projektknoten **Projektmappen-Explorer** , und wählen Sie **erstellen**.  
+7.  Erstellen Sie das Setup-Projekt, um die Installationsdatei zu erstellen („setup.exe“). Klicken Sie dazu im **Projektmappen-Explorer** mit der rechten Maustaste auf den Knoten „Setup-Projekt“, und klicken Sie dann auf **Erstellen**.  
   
-     InstallShield Limited Edition erstellt die Setupdatei, in der Struktur der Setup-Projekt (standardmäßig, es kann werden befindet sich im Unterordner "Express\SingleImage\DiskImages\DISK1" des Setup-Projekts).  
+     InstallShield Limited Edition erstellt die Setupdatei in der Setup-Projektstruktur (standardmäßig befindet sich diese im Unterordner Express\SingleImage\DiskImages\DISK1 des Setup-Projekts).  
   
-8.  Führen Sie das Setup-Programm auf einem zweiten Computer, die über keinen Visual C++-Bibliotheken.  
+8.  Führen Sie das Setupprogramm auf einem zweiten Computer aus, der über keine der Visual C++-Bibliotheken verfügt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Bereitstellungsbeispiele](../ide/deployment-examples.md)

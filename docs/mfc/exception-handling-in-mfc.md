@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b246e9ed09cce2fdecf8a8d6327a912061247cad
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239436"
 ---
 # <a name="exception-handling-in-mfc"></a>Ausnahmebehandlung in MFC
 Dieser Artikel erläutert die Ausnahmebehandlungsmechanismen in MFC verfügbar. Es stehen zwei Mechanismen:  
@@ -63,7 +64,7 @@ Dieser Artikel erläutert die Ausnahmebehandlungsmechanismen in MFC verfügbar. 
  Wenn Sie bereits eine Anwendung mit der MFC-Ausnahmemakros entwickelt haben, können Sie weiterhin, verwenden diese Makros in vorhandenem Code, bei der Verwendung von C++-Ausnahmen im neuen Code. Der Artikel [Ausnahmen: Änderungen an Ausnahmemakros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) durch Richtlinien auf diese Weise erhalten.  
   
 > [!NOTE]
->  Um C++-Ausnahmebehandlung im Code zu aktivieren, wählen Sie auf den C++-Ausnahmen aktivieren, auf der Seite Codegenerierung im C/C++-Ordner des Projekts auf der [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md) (Dialogfeld), oder verwenden Sie die/GX (Compileroption). Der Standardwert ist /GX-, wodurch Ausnahmebehandlung deaktiviert.  
+>  Um C++-Ausnahmebehandlung im Code zu aktivieren, wählen Sie auf den C++-Ausnahmen aktivieren, auf der Seite Codegenerierung im C/C++-Ordner des Projekts auf der [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md) (Dialogfeld), oder verwenden Sie die [/EHsc /](../build/reference/eh-exception-handling-model.md) -Compileroption.  
   
  In diesem Artikel werden die folgenden Themen behandelt:  
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie die Deklaration / Definition | Microsoft Docs
+title: Deklaration/Definition erstellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -11,30 +11,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 60d583ec47a3f9c5b61599a5945e3cfa0d375b1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33331282"
 ---
 # <a name="create-declaration--definition"></a>Deklaration/Definition erstellen
-**Was:** können Sie der Deklaration oder Definition einer Funktion sofort zu generieren.
+**Zweck:** Sofortiges Generieren der Deklaration oder Definition einer Funktion.
 
-**Wann:** Sie verfügen über Funktionen, die eine verfügt, oder umgekehrt.  
+**Anwendung:** Wenn Sie über eine Funktion verfügen, die eine Deklaration benötigt und umgekehrt.  
 
-**Grund:** konnten Sie die Deklaration/Definition manuell erstellen, aber dies wird es automatisch erstellt, die Header/Codedatei erstellen, falls erforderlich.
+**Grund:** Sie können die Deklaration oder Definition manuell erstellen, hiermit wird sie jedoch automatisch erstellt. Außerdem wird bei Bedarf die Header- und die Codedatei erstellt.
 
 **Vorgehensweise**:
 
-1. Platzieren Sie den Text oder mit dem Mauszeiger-Cursor über die Funktion für die Sie der Deklaration oder Definition erstellen möchten.
+1. Platzieren Sie den Text oder Mauszeiger auf der Funktion, für die Sie die Deklaration oder Definition erstellen möchten.
 
    ![Markierter Code](images/createdefinition_highlight.png)
 
 1. Führen Sie dann eine der folgenden Aktionen aus:
    * **Tastatur**
-     * Drücken Sie **STRG+.**, Trigger die **Schnellaktionen und Refactorings** Menü **erstellen Deklaration / Definition** aus dem Kontextmenü.
+     * Drücken Sie **STRG+.**, um das Menü **Schnellaktionen und Refactorings** aufzurufen, und klicken Sie im Kontextmenü auf **Deklaration/Definition erstellen**.
    * **Maus**
-     * Mit der rechten Maustaste, und wählen Sie die **Schnellaktionen und Refactorings** Menü **erstellen Deklaration / Definition** aus dem Kontextmenü.
+     * Führen Sie einen Rechtsklick aus, und klicken Sie auf das Menü **Schnellaktionen und Refactorings**. Klicken Sie anschließend im Kontextmenü auf **Deklaration/Definition erstellen**.
 
-1. Die Funktion Deklaration/Definition wird in der Quelle oder das Header-Datei erstellt werden, die in einem Popup-Vorschaufenster angezeigt werden.  Wenn die Quelle oder das Header-Datei nicht vorhanden ist, wird er auch erstellt und in das Projekt eingefügt.
+1. Die Deklaration bzw. Definition der Funktion wird in der Quell- oder Headerdatei erstellt. Dies wird Ihnen in einem Vorschaufenster angezeigt.  Wenn die Quell- oder Headerdatei nicht vorhanden ist, wird diese erstellt und im Projekt platziert.
 
-   ![Erstellen Sie die Deklaration / Definition resultieren](images/createdefinition_result.png)
+   ![Ergebnis des Erstellens der Deklaration/Definition](images/createdefinition_result.png)

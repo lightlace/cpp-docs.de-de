@@ -28,11 +28,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68de7c3ab3b823c1e3d08a13a9d7363232e9712e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c0105ccc5a40c4e5fe789814adfabe6c9749650
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="dllonexit"></a>__dllonexit
 Registriert eine Routine, die zum Zeitpunkt der Beendigung aufgerufen werden soll.  
@@ -57,7 +57,7 @@ _onexit_t __dllonexit(   _onexit_t func,
  Ein Zeiger auf eine Variable, die auf das Ende einer Liste mit Funktionen zeigt, die beim Trennen ausgeführt werden sollen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Bei Erfolg ein Zeiger auf die Funktion des Benutzers. Andernfalls ein NULL-Zeiger.  
+ Bei Erfolg ein Zeiger auf die Funktion des Benutzers. Andernfalls ein **NULL**-Zeiger.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `__dllonexit`-Funktion unterscheidet sich von der [_onexit](../c-runtime-library/reference/onexit-onexit-m.md)-Funktion insofern, als dass die von der Funktion verwendeten globalen Variablen für diese Routine nicht sichtbar sind. Anstelle von globalen Variablen werden von dieser Funktion die Parameter `pbegin` und `pend` verwendet.  

@@ -30,11 +30,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e162c6b16e9ce9d0ea6763f5fb4c75d7975dc7bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13707791b78de2c000535d60ed3f298046e4576c
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
 Ruft die Befehlszeilenanalyse auf und kopiert die Argumente für `main()` zurück durch die übergebenen Zeiger.  
@@ -63,10 +63,10 @@ _startupinfo * _StartInfo);
  Eine Ganzzahl, die die Anzahl von Argumenten enthält, die in `argv` folgen. Der `argc`-Parameter ist immer größer als oder gleich 1.  
   
  `_Argv`  
- Ein Array von Zeigern auf Zeichenfolgen, die auf NULL enden und von den Benutzern des Programms eingegebene Befehlszeilenargumente darstellen. Gemäß Konvention ist `argv[0]` der Befehl, mit dem das Programm aufgerufen wird, argv[1] ist das erste Befehlszeilenargument, und so geht es weiter bis zu argv[argc], das immer NULL ist. Das erste Befehlszeilenargument ist immer `argv[1]`, und das letzte ist `argv[argc - 1]`.  
+ Ein Array von Zeigern auf Zeichenfolgen, die auf NULL enden und von den Benutzern des Programms eingegebene Befehlszeilenargumente darstellen. Gemäß Konvention ist `argv[0]` der Befehl, mit dem das Programm aufgerufen wird, argv[1] ist das erste Befehlszeilenargument, und so geht es weiter, bis zu argv[argc], das immer **NULL** ist. Das erste Befehlszeilenargument ist immer `argv[1]`, und das letzte ist `argv[argc - 1]`.  
   
  `_Env`  
- Ein Zeichenfolgenarray, das die Variablen darstellt, die in der Benutzerumgebung festgelegt werden. Das Array wird mit einem NULL-Eintrag beendet.  
+ Ein Zeichenfolgenarray, das die Variablen darstellt, die in der Benutzerumgebung festgelegt werden. Das Array wird mit einem **NULL**-Eintrag beendet.  
   
  `_DoWildCard`  
  Eine ganze Zahl, die, wenn sie auf 1 festgelegt wird, die Platzhalter in den Befehlszeilenargumenten erweitert, oder keine Aktion ausführt, wenn sie auf 0 festgelegt wird.  

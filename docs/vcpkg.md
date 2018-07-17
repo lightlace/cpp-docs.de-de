@@ -1,10 +1,10 @@
 ---
-title: 'Vcpkg: ein C++-Paket-Manager für Windows | Microsoft-Dokumentation'
+title: 'vcpkg: Ein C++-Paket-Manager für Windows, Linux und macOS | Microsoft-Dokumentation'
 description: Vcpkg ist ein Befehlszeilen-Paket-Manager, der den Erwerb und die Installation von Open Source-C++-Bibliotheken für Windows erheblich vereinfacht.
 keywords: vcpkg
 author: mikeblome
 ms.author: mblome
-ms.date: 04/06/2018
+ms.date: 05/14/2018
 ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
@@ -14,15 +14,16 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67b7fce0567c2c6daf18b625a2b759c31d0b040
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af51ee7c6fa4e1243b400be58ac22ba833cfae80
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705437"
 ---
-# <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Ein C++-Paket-Manager für Windows
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Ein C++-Paket-Manager für Windows, Linux und macOS
 
-Vcpkg ist ein Befehlszeilen-Paket-Manager, der den Erwerb und die Installation von Drittanbieterbibliotheken für Windows erheblich vereinfacht. Wenn Ihr Projekt Drittanbieterbibliotheken verwendet, wird empfohlen, dass Sie vcpkg verwenden, um diese zu installieren. Vcpkg unterstützt sowohl Open Source- als auch proprietäre Bibliotheken. Alle Bibliotheken im öffentlichen vcpkg-Katalog wurden auf ihre Kompatibilität mit Visual Studio 2015 und Visual Studio 2017 getestet. Ab Januar 2018 sind über 600 Bibliotheken im Katalog vorhanden, und die C++-Community fügt fortlaufend weitere Bibliotheken hinzu.
+vcpkg ist ein Befehlszeilen-Paket-Manager, der den Erwerb und die Installation von Drittanbieterbibliotheken für Windows, Linux und macOS erheblich vereinfacht. Wenn Ihr Projekt Drittanbieterbibliotheken verwendet, wird empfohlen, dass Sie vcpkg verwenden, um diese zu installieren. Vcpkg unterstützt sowohl Open Source- als auch proprietäre Bibliotheken. Alle Bibliotheken im vcpkg-Windows-Katalog wurden auf ihre Kompatibilität mit Visual Studio 2015 und Visual Studio 2017 getestet. Ab Mai 2018 befinden sich mehr als 900 Bibliotheken im Windows-Katalog und über 350 im Linux/macOS-Katalog. Die C++-Community fügt beiden Katalogen weiterhin neue Bibliotheken hinzu.
 
 ## <a name="simple-yet-flexible"></a>Einfach aber flexibel
 
@@ -30,19 +31,20 @@ Mit einem einzigen Befehl können Sie Quellen herunterladen und eine Bibliothek 
 
 ## <a name="sources-not-binaries"></a>Quellen statt Binärdateien
 
-Im Fall von Bibliotheken im öffentlichen Katalog lädt vcpkg Quellen anstelle von Binärdateien herunter[1]. Vcpkg kompiliert diese Quellen mithilfe von Visual Studio 2017 bzw. Visual Studio 2015, falls 2017 nicht installiert ist. In C++ ist es sehr wichtig, dass alle Bibliotheken, die Sie verwenden, mit dem gleichen Compiler und der gleichen Compilerversion wie der Anwendungscode kompiliert werden, der damit verknüpft ist. Durch die Verwendung von vcpkg eliminieren Sie das Risiko nicht übereinstimmender Binärdateien und die Probleme, die dadurch entstehen können, oder reduzieren dieses zumindest entscheidend. In Teams, in denen eine bestimmte Version des Visual C++-Compilers verwendet wird, kann ein Teammitglied vcpkg verwenden, um Quellen herunterzuladen und einen Satz von Binärdateien zu kompilieren, und anschließend den Exportbefehl verwenden, um die Binärdateien und Header für andere Teammitglieder zu zippen. Weitere Informationen finden Sie nachstehend unter „Exportieren von kompilierten Binärdateien und Headern“.
+Im Fall von Bibliotheken im Windows-Katalog lädt vcpkg Quellen anstelle von Binärdateien herunter[1]. Vcpkg kompiliert diese Quellen mithilfe von Visual Studio 2017 bzw. Visual Studio 2015, falls 2017 nicht installiert ist. In C++ ist es sehr wichtig, dass alle Bibliotheken, die Sie verwenden, mit dem gleichen Compiler und der gleichen Compilerversion wie der Anwendungscode kompiliert werden, der damit verknüpft ist. Durch die Verwendung von vcpkg eliminieren Sie das Risiko nicht übereinstimmender Binärdateien und die Probleme, die dadurch entstehen können, oder reduzieren dieses zumindest entscheidend. In Teams, in denen eine bestimmte Version eines Compilers verwendet wird, kann ein Teammitglied mit vcpkg Quellen herunterladen und Binärdateien kompilieren und anschließend mit dem Exportbefehl die Binärdateien und Header für andere Teammitglieder zippen. Weitere Informationen finden Sie nachstehend unter [Exportieren von kompilierten Binärdateien und Headern](#export_binaries_per_project).
 
 Bei der Erstellung eines vcpkg-Klons mit privaten Bibliotheken in der Ports-Sammlung können Sie einen Port hinzufügen, der vorab erstellte Binärdateien und Header herunterlädt und eine „portfile.cmake“-Datei schreibt, die diese Dateien einfach in den gewünschten Speicherort kopiert.
 
 [1] *Hinweis: für einige proprietäre Bibliotheken stehen Quellen nicht zur Verfügung. Vcpkg lädt in diesem Fall kompatible, vorab erstellte Binärdateien herunter.*
 
-## <a name="installation"></a>Installation
+## <a name="installation"></a>Installation 
 
 Klonen Sie das vcpkg-Repository von GitHub: https://github.com/Microsoft/vcpkg. Sie können es in jeden beliebigen Ordner herunterladen.
 
-Führen Sie den Bootstrapper im Stammverzeichnis aus: **bootstrap-vcpkg.bat**.
+Führen Sie den Bootstrapper im Stammverzeichnis aus: 
 
-## <a name="basic-tasks"></a>Grundlegende Aufgaben
+- **bootstrap-vcpkg.bat** (Windows)
+- **./bootstrap-vcpkg.sh** (Linux, macOS)
 
 ## <a name="search-the-list-of-available-libraries"></a>Suchen nach der Liste verfügbarer Bibliotheken
 
@@ -72,7 +74,11 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 ### <a name="install-a-library-on-your-local-machine"></a>Installieren einer Bibliothek auf Ihrem lokalen Computer
 
-Nachdem Sie den Namen einer Bibliothek mithilfe von **vcpkg search** erhalten, verwenden Sie **vcpkg install** zum Herunterladen der Bibliothek, und kompilieren Sie diese. Vcpkg verwendet die Portdatei der Bibliothek im Ports-Verzeichnis. Wenn keine Dreiergruppe angegeben wird, installiert und kompiliert vcpkg für die x86-Version von Windows. Wenn die Portdatei Abhängigkeiten angibt, lädt vcpkg diese ebenso herunter und installiert sie. Nach dem Herunterladen erstellt vcpkg die Bibliothek und verwendet dabei das Buildsystem, das die Bibliothek verwendet. CMake- und MSBuild-Projektdateien werden bevorzugt, jedoch wird MAKE zusammen mit jedem anderen Buildsystem unterstützt. Wenn vcpkg das angegebene Buildsystem auf dem lokalen Computer nicht finden kann, lädt es dieses herunter und installiert es.
+Nachdem Sie den Namen einer Bibliothek mithilfe von **vcpkg search** erhalten, verwenden Sie **vcpkg install** zum Herunterladen der Bibliothek, und kompilieren Sie diese. Vcpkg verwendet die Portdatei der Bibliothek im Ports-Verzeichnis. Wenn kein Tripel angegeben wird, installiert und kompiliert vcpkg für das Standard-Tripel der Zielplattform: Windows (x86), linux.cmake (x64) oder osx.cmake (x64).
+
+Bei Linux-Bibliotheken muss gcc für vcpkg auf dem lokalen Computer installiert sein. Unter macOS verwendet vcpkg Clang. 
+
+Wenn die Portdatei Abhängigkeiten angibt, lädt vcpkg diese ebenso herunter und installiert sie. Nach dem Herunterladen erstellt vcpkg die Bibliothek und verwendet dabei das Buildsystem, das die Bibliothek verwendet. CMake- und (unter Windows) MSBuild-Projekte werden bevorzugt, jedoch wird MAKE zusammen mit jedem anderen Buildsystem unterstützt. Wenn vcpkg das angegebene Buildsystem auf dem lokalen Computer nicht finden kann, lädt es dieses herunter und installiert es.
 
 ```cmd
 > vcpkg install boost:x86-windows
@@ -82,6 +88,14 @@ The following packages will be built and installed:
   * bzip2:x86-windows
   * zlib:x86-windows
 Additional packages (*) will be installed to complete this operation.
+
+```
+
+Verwenden Sie bei CMAKE-Projekten CMAKE_TOOLCHAIN_FILE, um Bibliotheken mit `find_package()` verfügbar zu machen. Zum Beispiel:  
+
+```cmd
+cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
+cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg\scripts\buildsystems\vcpkg.cmake (Windows)
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>Auflisten der bereits installierten Bibliotheken
@@ -99,7 +113,7 @@ websocketpp:x86-windows 0.7.0    Library that implements RFC6455 The WebSocket P
 zlib:x86-windows        1.2.11   A compression library
 ```
 
-## <a name="integrate-with-visual-studio"></a>Integrieren in Visual Studio
+## <a name="integrate-with-visual-studio-windows"></a>Integration mit Visual Studio (Windows)
 
 ### <a name="per-user"></a>Pro Benutzer
 
@@ -107,7 +121,7 @@ Führen Sie **vcpkg integrate install** aus, um Visual Studio so zu konfiguriere
 
 Nun können Sie auf Header einfach die #include-Anweisung ausführen, indem Sie den Ordner/Header eingeben und automatisch vervollständigen lassen. Es sind keine weiteren Schritte erforderlich, um Verknüpfungen mit Bibliotheken zu erstellen oder Projektverweise hinzuzufügen. Die folgende Abbildung zeigt, wie der Visual Studio die azure-storage-cpp-Header sucht. Vcpkg platziert seine Header im Unterordner **/installed**, partitioniert nach Zielplattform. Das folgende Diagramm zeigt die Liste der Includedateien im Unterordner **/was** für die Bibliothek:
 
-![vcpkg-IntelliSense-Integration](media/vcpkg-intellisense.png "vcpkg und IntelliSense")
+![vcpkg-IntelliSense-Integration](media/vcpkg-intellisense.png "vcpkg and IntelliSense")
 
 ### <a name="per-project"></a>Pro Projekt
 
@@ -118,41 +132,18 @@ Wenn Sie eine spezifische Version einer Bibliothek verwenden müssen, die sich v
 1. Führen Sie **vcpkg install \<library>** aus.
 1. Verwenden Sie **vcpkg integrate project**, um ein NuGet-Paket zu erstellen, das pro Projekt auf diese Bibliothek verweist.
 
-## <a name="export-compiled-binaries-and-headers"></a>Exportieren von kompilierten Binärdateien und Headern
+## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integration mit Visual Studio Code (Linux/macOS) 
 
-Von jedem Teammitglied zu verlangen, Bibliotheken herunterzuladen und zu erstellen, kann ineffizient sein. Ein einzelnes Teammitglied kann diese Arbeit übernehmen und dann **vcpkg export** verwenden, um eine ZIP-Datei der Binärdateien und Header zu erstellen, die einfach mit anderen Teammitgliedern geteilt werden kann.
+Führen Sie **vcpkg integrate install** aus, um Visual Studio Code unter Linux/macOS mit dem Speicherort der vcpkg-Eintragung zu konfigurieren und IntelliSense für Quelldateien zu aktivieren.
 
-## <a name="updateupgrade-installed-libraries"></a>Update/Upgrade für installierte Bibliotheken
+## <a name="target-linux-from-windows-via-wsl"></a>Erstellen von Dateien für Linux unter Windows mit WSL
 
-Die öffentliche Katalog wird mit den neuesten Versionen der Bibliotheken auf dem neuesten Stand gehalten. Um zu bestimmen, welche Ihrer lokalen Bibliotheken veraltet sind, verwenden Sie **vcpkg update**. Wenn Sie dazu bereit sind, Ihre Portauflistung auf die aktuelle Version des öffentlichen Katalogs zu aktualisieren, führen Sie den Befehl **vcpkg upgrade** aus, um alle Ihre installierten, veralteten Bibliotheken automatisch herunterzuladen oder neu zu erstellen.
+Mithilfe des Windows-Subsystems für Linux (WSL) können Sie Linux-Binärdateien auf einem Windows-Computer erstellen. Folgen Sie einfach der Anleitung zum [Einrichten von WSL unter Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10), und konfigurieren Sie es mit der [Visual Studio-Erweiterung für Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Sie können die erstellten Bibliotheken für Windows und Linux im selben Ordner ablegen und über Windows und WSL darauf zugreifen.
 
-Standardmäßig listet der **upgrade**-Befehl nur die Bibliotheken auf, die veraltet sind. Er führt kein Upgrade der Bibliotheken durch. Verwenden Sie die Option **--no-dry-run**, um ein Upgrade durchzuführen.
 
-```cmd
-  vcpkg upgrade --no-dry-run
-```
+## <a name="export_binaries_per_project"></a> Exportieren von kompilierten Binärdateien und Headern
 
-### <a name="upgrade-options"></a>Upgradeoptionen
-
-- **--no-dry-run**: Durchführen des Upgrades. Ist diese Option nicht angegeben, listet der Befehl nur die veralteten Pakete auf.
-- **--keep-going**: Die Installation der Pakete wird fortgeführt, auch wenn die Installation eines Pakets fehlschlägt.
-- **--triplet \<t>**: Festlegen der Standarddreiergruppe für nicht qualifizierte Pakete
-- **--vcpkg-root \<path>**: Angeben des zu verwendenden vcpkg-Verzeichnisses statt des aktuellen Verzeichnisse oder des Toolverzeichnisses
-
-### <a name="upgrade-example"></a>Beispiel für ein Upgrade
-
-### <a name="per-project"></a>Pro Projekt
-
-Wenn Sie eine spezifische Version einer Bibliothek verwenden müssen, die sich von der Version in Ihrer aktiven vcpkg-Instanz unterscheidet, führen Sie die folgenden Schritte aus:
-
-1. Erstellen Sie einen neuen Klon von vcpkg
-1. Modifizieren Sie die Portdatei für die Bibliothek, um die Version zu erhalten, die Sie benötigen
-1. Führen Sie **vcpkg install \<library>** aus.
-1. Verwenden Sie **vcpkg integrate project**, um ein NuGet-Paket zu erstellen, das pro Projekt auf diese Bibliothek verweist.
-
-## <a name="export-compiled-binaries-and-headers"></a>Exportieren von kompilierten Binärdateien und Headern
-
-Von jedem Teammitglied zu verlangen, Bibliotheken herunterzuladen und zu erstellen, kann ineffizient sein. Ein einzelnes Teammitglied kann diese Arbeit übernehmen und dann **vcpkg export** verwenden, um eine ZIP-Datei der Binärdateien und Header zu erstellen, die einfach mit anderen Teammitgliedern geteilt werden kann.
+Von jedem Teammitglied zu verlangen, Bibliotheken herunterzuladen und zu erstellen, kann ineffizient sein. Ein einzelnes Teammitglied kann diese Arbeit übernehmen und mit **vcpkg export** eine ZIP-Datei der Binärdateien und Header oder ein NuGet-Paket (verschiedene Formate verfügbar) erstellen, das einfach mit anderen Teammitgliedern geteilt werden kann.
 
 ## <a name="updateupgrade-installed-libraries"></a>Update/Upgrade für installierte Bibliotheken
 
@@ -206,7 +197,7 @@ Löschen Sie einfach das Verzeichnis.
 
 ## <a name="send-feedback-about-vcpkg"></a>Senden von Feedback zu vcpkg
 
-Verwenden Sie den Befehl **--survey**, um Microsoft Feedback zu vcpkg zu senden, einschließlich Fehlerberichten und Featurevorschlägen.
+Verwenden Sie den Befehl **vcpkg contact --survey**, um Microsoft Feedback zu vcpkg zu senden, einschließlich Fehlerberichten und Featurevorschlägen.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Die vcpkg-Ordnerhierarchie
 
@@ -241,12 +232,10 @@ Der Inhalt einer vcpkg-Instanz sieht folgendermaßen aus:
 |**vcpkg integrate project**|Erstellen eines Referenz-NuGet-Pakets für die individuelle VS-Projektverwendung|
 |**vcpkg export \<pkg>... [opt]...**|Exportieren eines Pakets|
 |**vcpkg edit \<pkg>**|Öffnen eines Ports zum Bearbeiten (verwendet %EDITOR%, Standard „code“)|
-|**vcpkg import \<pkg>**|Importieren einer vorab erstellten Bibliothek|
 |**vcpkg create \<pkg> \<url> [archivname]**|Erstellen eines neuen Pakets|
-|**vcpkg owns \<pat>**|Suchen nach Dateien in installierten Paketen|
 |**vcpkg cache**|Auflisten zwischengespeicherter kompilierter Pakete|
 |**vcpkg version**|Anzeigen von Versionsinformationen|
-|**vcpkg contact**|Anzeigen von Kontaktinformationen zum Senden von Feedback|
+|**vcpkg contact --survey**|Kontaktdaten zum Senden von Feedback anzeigen|
 
 ### <a name="options"></a>Optionen
 
@@ -254,3 +243,4 @@ Der Inhalt einer vcpkg-Instanz sieht folgendermaßen aus:
 |---------|---------|
 |**--triplet \<t>**|Angeben der Dreiergruppe der Zielarchitektur (Standard: `%VCPKG_DEFAULT_TRIPLET%`, siehe auch **vcpkg help triplet**)|
 |**--vcpkg-root \<path>**|Angeben des vcpkg-Stammverzeichnisses (Standard: `%VCPKG_ROOT%`)|
+

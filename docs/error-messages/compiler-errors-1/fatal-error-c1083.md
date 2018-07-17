@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b014ccc46434fd0c3f13689e579ed4798ebcdb2
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569809"
 ---
 # <a name="fatal-error-c1083"></a>Schwerwiegender Fehler C1083
 
@@ -106,6 +107,8 @@ Wenn ein Projekt zur Verwendung vorkompilierter Header konfiguriert ist, müssen
 
 - Die Datei wird mit einer anderen kompiliert **/ analyze** Einstellung als zum Vorkompilieren der Header verwendet wird. Wenn der Header für ein Projekt vorkompiliert werden, sollten alle verwenden die gleiche **/ analyze** Einstellungen. Weitere Informationen finden Sie unter [/analyze (Codeanalyse)](../../build/reference/analyze-code-analysis.md).
 
+- Die Datei oder das Verzeichnis wurde vom Windows-Subsystem für Linux erstellt und im angegebene Fall ein Pfad- oder Dateiname entspricht nicht den Fall, der den Pfad oder die Datei auf dem Datenträger pro Verzeichnis Groß-/Kleinschreibung aktiviert ist.
+
 - Die Datei, das Verzeichnis oder der Datenträger ist schreibgeschützt.
 
 - Visual Studio oder die Befehlszeilentools verfügen nicht über ausreichende Berechtigungen zum Lesen der Datei oder das Verzeichnis über. Dies kann beispielsweise auftreten, wenn die Projektdateien anderen Besitzer als der Prozess, der mit Visual Studio oder die Befehlszeilentools zur Verfügung haben. In einigen Fällen kann dieses Problem korrigiert werden, indem Sie Visual Studio oder Developer-Eingabeaufforderung als Administrator ausführen.
@@ -127,4 +130,4 @@ Informationen zum Erstellen von C/C++-Projekten in der IDE oder in der Befehlsze
 
 ## <a name="see-also"></a>Siehe auch
 
-[MSBuild-Eigenschaften](/visualstudio/msbuild/msbuild-properties)
+- [MSBuild-Eigenschaften](/visualstudio/msbuild/msbuild-properties)

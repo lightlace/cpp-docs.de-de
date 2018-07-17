@@ -1,7 +1,9 @@
 ---
 title: Konfigurieren eines C++ Linux-Projekts in Visual Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2017
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,11 +14,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 799eb17ec5cb34cdd0e266f389ad77cb427c7577
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="configure-a-linux-project"></a>Konfigurieren eines Linux-Projekts
 Dieses Thema beschreibt das Konfigurieren eines Visual Studio Linux-Projekts. Informationen zu CMake Linux-Projekten finden Sie unter [Konfigurieren eines Linux CMake-Projekts](cmake-linux-project.md).
@@ -40,8 +42,10 @@ Um die Einstellungen für den Linux-Remotecomputer zu ändern, konfigurieren Sie
 > [!NOTE]
 > Verwenden Sie zum Ändern der C- und C++-Standardcompiler bzw. der Linker und Archivierungsprogramme, die zur Erstellung des Projekts verwendet werden, die entsprechenden Einträge im Abschnitt **C/C++ > Allgemein** sowie im Abschnitt **Linker > Allgemein**.  Diese können beispielsweise für die Verwendung einer bestimmten GCC-Version oder sogar des Clang-Compilers festgelegt werden.
 
-## <a name="vc-directories"></a>VC++-Verzeichnisse
-Standardmäßig enthält Visual Studio keine Includedateien auf Systemebene des Linux-Computers.  So sind in Visual Studio beispielsweise keine Element aus dem Verzeichnis **/Usr/include** vorhanden.  Für vollständige [IntelliSense](/visualstudio/ide/using-intellisense)-Unterstützung müssen Sie diese Dateien an einen Speicherort auf dem Entwicklungscomputer kopieren und Visual Studio auf diesen Speicherort verweisen.  Eine Möglichkeit besteht darin, die Dateien über SCP (Secure Copy) zu kopieren.  Unter Windows 10 können Sie [Bash unter Windows ](https://msdn.microsoft.com/commandline/wsl/about) verwenden, um SCP ausführen.  Unter früheren Versionen von Windows können Sie beispielsweise [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) nutzen.
+## <a name="include-directories-and-intellisense-support"></a>Einschließen von Verzeichnissen und IntelliSense-Unterstützung
+
+**Visual Studio 2017-Version 15.6 und früher:** Standardmäßig enthält Visual Studio keine Includedateien auf Systemebene des Linux-Computers.  So sind in Visual Studio beispielsweise keine Element aus dem Verzeichnis **/Usr/include** vorhanden.
+Für vollständige [IntelliSense](/visualstudio/ide/using-intellisense)-Unterstützung müssen Sie diese Dateien an einen Speicherort auf dem Entwicklungscomputer kopieren und Visual Studio auf diesen Speicherort verweisen.  Eine Möglichkeit besteht darin, die Dateien über SCP (Secure Copy) zu kopieren.  Unter Windows 10 können Sie [Bash unter Windows ](https://msdn.microsoft.com/commandline/wsl/about) verwenden, um SCP ausführen.  Unter früheren Versionen von Windows können Sie beispielsweise [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) nutzen.
 
 Sie können die Dateien mithilfe eines Befehls wie dem folgenden kopieren:
 
@@ -52,6 +56,8 @@ Dazu müssen Sie natürlich für **linux_username** und **remote_host** die für
 Nachdem Sie die Dateien kopiert haben, verwenden Sie in den Projekteigenschaften den Eintrag **VC++-Verzeichnisse**, um Visual Studio mitzuteilen, wo sich die zusätzlichen Includedateien befinden, die Sie gerade kopiert haben.
 
 ![VC++-Verzeichnisse](media/settings_directories.png)
+
+**Visual Studio 2017-Version 15.7 und höher:** Weitere Informationen finden Sie unter [IntelliSense für Remoteheader (Visual Studio 2017-Version 15.7 und höher)](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Kopieren der Quellen
 Die Quelldateien werden bei der Erstellung auf Ihrem Entwicklungs-PC auf den Linux-Computer kopiert und dort kompiliert.  Standardmäßig werden alle Datenquellen im Visual Studio-Projekt an die Speicherorte kopiert, die in den oben genannten Einstellungen festgelegt wurden.  Zusätzliche Quellen können ebenfalls zur Liste hinzugefügt werden und das Kopieren von Datenquellen kann vollständig deaktiviert werden, was der Standardeinstellung für Makefile-Projekt entspricht.
@@ -68,6 +74,20 @@ Die Quelldateien werden bei der Erstellung auf Ihrem Entwicklungs-PC auf den Lin
 Da die gesamte Kompilierung auf einem Remotecomputer erfolgt, wurden dem Abschnitt über Build Events in den Projekteigenschaften mehrere zusätzliche Buildereignisse hinzugefügt.  Dazu gehören das **Remote-Präbuildereignis**, das **Remote-Prälinkereignis** und das **Remote-Postbuildereignis**. Diese Ereignisse finden auf dem Remotecomputer vor oder nach den einzelnen Schritten im Prozess statt.
 
 ![Buildereignisse](media/settings_buildevents.png)
+
+## <a name="remote_intellisense"></a> IntelliSense für Remoteheader (Visual Studio 2017-Version 15.7 und höher)
+
+Beim Hinzufügen einer neuen Verbindung im **Verbindungs-Manager** erkennt Visual Studio automatisch die Includeverzeichnisse für den Compiler auf dem Remotesystem. Visual Studio komprimiert diese Dateien dann und kopiert sie in ein Verzeichnis auf dem lokalen Windows-Computer. Wenn Sie anschließend diese Verbindung in Visual Studio oder CMake nutzen, wird mithilfe der Header in diesen Verzeichnissen IntelliSense bereitgestellt.
+
+Diese Funktion hängt davon ab, ob auf dem Linux-Computer Zip installiert ist. Sie können Zip mit diesem apt-get-Befehl installieren:
+
+```cmd
+apt install zip
+```
+
+Navigieren Sie zum Verwalten Ihres Header-Caches zu **Extras > Optionen > Plattformübergreifend > Verbindungs-Manager > IntelliSense-Manager für Remoteheader**. Wählen Sie zum Aktualisieren des Header-Caches nach Änderungen auf dem Linux-Computer die Remoteverbindung aus, und klicken Sie dann auf **Aktualisieren**. Klicken Sie auf **Löschen**, um die Header zu entfernen, ohne die Verbindung selbst zu löschen. Klicken Sie auf **Erkunden**, um das lokale Verzeichnis im **Datei-Explorer** zu öffnen. Behandeln Sie diesen Ordner, als sei er schreibgeschützt. Wählen Sie zum Herunterladen von Headern für eine vorhandene Verbindung, die vor Version 15.3 erstellt wurde, die Verbindung aus, und klicken Sie dann auf **Herunterladen**.
+
+![IntelliSense-Remoteheader](media/remote-header-intellisense.png)
 
 ## <a name="see-also"></a>Siehe auch
 [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)  

@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee3e30e5bde5a3bed67d975c96b00568306f926
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -77,7 +77,7 @@ Zeiger auf die Zeilennummer in der Quelldatei oder **NULL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_CrtIsMemoryBlock** Funktion überprüft, ob ein angegebener Speicherblock im lokalen Heap der Anwendung befindet und über einen gültigen blocktypbezeichner verfügt. Diese Funktion kann auch verwendet werden, um die Bestellnummer der Objektzuordnung und den Quelldateinamen/die Zeilennummer abzurufen, wo die Speicherblockbelegung ursprünglich angefordert wurde. Übergeben von Werten ungleich NULL für den *RequestNumber*, *Filename*, oder *Linenumber* Parameter Ursachen **_CrtIsMemoryBlock** festlegen Diese Parameter an die Werte in des Speicherblocks debug-Header, wenn den Block im lokalen Heap gefunden wird. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtIsMemoryBlock** während der vorverarbeitung entfernt.
+Die **_CrtIsMemoryBlock** Funktion überprüft, ob ein angegebener Speicherblock im lokalen Heap der Anwendung befindet und über einen gültigen blocktypbezeichner verfügt. Diese Funktion kann auch verwendet werden, um die Bestellnummer der Objektzuordnung und den Quelldateinamen/die Zeilennummer abzurufen, wo die Speicherblockbelegung ursprünglich angefordert wurde. Übergeben von nicht -**NULL** Werte für die *RequestNumber*, *Filename*, oder *Linenumber* Parameter Ursachen **_ CrtIsMemoryBlock** auf die Werte im debugheader des Speicherblocks, diese Parameter festlegen, wenn den Block im lokalen Heap gefunden wird. Wenn [_DEBUG](../../c-runtime-library/debug.md) nicht definiert ist, werden Aufrufe von **_CrtIsMemoryBlock** während der vorverarbeitung entfernt.
 
 Wenn **_CrtIsMemoryBlock** fehlschlägt, wird **"false"** und die Ausgabeparameter werden mit Standardwerten initialisiert: *RequestNumber* und **LineNumber**  werden auf 0 festgelegt und *Filename* festgelegt ist, um **NULL**.
 

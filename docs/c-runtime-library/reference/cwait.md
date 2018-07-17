@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a765a6a51a050b96dfd110c21810248b3bb58e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878c1c08dabe52a31a2bdf377c3e0bb167a9ae5d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cwait"></a>_cwait
 
@@ -58,7 +58,7 @@ intptr_t _cwait(
 ### <a name="parameters"></a>Parameter
 
 *termstat*<br/>
-Zeiger zu einem Puffer, in dem der Ergebniscode des angegebenen Prozesses gespeichert wird, oder NULL.
+Zeiger auf einen Puffer, in dem der Ergebniscode des angegebenen Prozesses gespeichert, oder **NULL**.
 
 *procHandle*<br/>
 Das Handle für den Prozess auf gewartet werden soll (d. h. den Prozess, der vor dem Beenden **_cwait** zurückgeben können).
@@ -81,7 +81,7 @@ Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [err
 
 Die **_cwait** -Funktion wartet auf die Beendigung der Prozess-ID des angegebenen Prozesses, die von bereitgestellte *ProcHandle*. Der Wert der *ProcHandle* übergebene **_cwait** muss der Wert, der durch den Aufruf zurückgegeben wird das [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) -Funktion, die den angegebenen Prozess erstellt hat. Wenn die Prozess-ID vor beendet **_cwait** aufgerufen wird, **_cwait** wird sofort zurückgegeben. **_cwait** können von jedem Prozess verwendet werden, um zu warten, für jeden anderen bekannten Prozess für den ein gültiges Handle (*ProcHandle*) vorhanden ist.
 
-*Termstat* verweist auf einen Puffer, in dem der Rückgabecode des angegebenen Prozesses gespeichert. Der Wert der *Termstat* gibt an, ob der angegebene Prozess ordnungsgemäß beendet wurde, durch Aufruf der Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) API. **ExitProcess** wird intern aufgerufen, wenn der angegebene Prozess **beenden** oder **_exit**, gibt aus **main**, oder das Erreichen des Endes des **main** . Weitere Informationen zu den Wert, der über zurück übergeben wird *Termstat*, finden Sie unter [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Wenn **_cwait** aufgerufen wird, mit einem Nullwert für *Termstat*, der Rückgabecode des angegebenen Prozesses nicht gespeichert.
+*Termstat* verweist auf einen Puffer, in dem der Rückgabecode des angegebenen Prozesses gespeichert. Der Wert der *Termstat* gibt an, ob der angegebene Prozess ordnungsgemäß beendet wurde, durch Aufruf der Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) API. **ExitProcess** wird intern aufgerufen, wenn der angegebene Prozess **beenden** oder **_exit**, gibt aus **main**, oder das Erreichen des Endes des **main** . Weitere Informationen zu den Wert, der über zurück übergeben wird *Termstat*, finden Sie unter [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Wenn **_cwait** aufgerufen wird, mithilfe einer **NULL** Wert für *Termstat*, der Rückgabecode des angegebenen Prozesses nicht gespeichert.
 
 Die *Aktion* Parameter wird vom Windows-Betriebssystem ignoriert, da die Parent-Child-Beziehungen in diesen Umgebungen nicht implementiert werden.
 

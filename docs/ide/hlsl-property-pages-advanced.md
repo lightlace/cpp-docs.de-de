@@ -1,5 +1,5 @@
 ---
-title: 'Eigenschaftenseiten "HLSL": Erweiterte | Microsoft Docs'
+title: 'HLSL-Eigenschaftenseiten: Erweitert | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 58dca91d5ab3bf0cf28d30a04d33ae8bf5819401
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33321193"
 ---
 # <a name="hlsl-property-pages-advanced"></a>Eigenschaftenseiten "HLSL": "Erweitert"
-Um die folgenden Eigenschaften des HLSL-Compilers (fxc.exe) zu konfigurieren, verwenden die **erweitert** Eigenschaftenseite. Informationen über den Zugriff auf die **erweitert** Eigenschaftenseite im Ordner "HLSL" finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).  
+Verwenden Sie zum Konfigurieren der folgenden Eigenschaften des HLSL-Compilers („fxc.exe“) die Eigenschaftenseite **Erweitert**. Informationen über das Zugreifen auf die Eigenschaftenseite **Erweitert** im Ordner „HLSL“ finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).  
   
 ## <a name="uielement-list"></a>UIElement-Liste  
  **Startbanner unterdrücken**  
- **Ja (/ Nologo)** unterdrückt die Anzeige der Dienststart Startbanner und Nachricht; andernfalls **keine**. Standardmäßig ist der Wert **Ja (/ Nologo)**.  
+ **Ja (/nologo)** gibt an, dass die Anzeige des Startbanners und der Informationsmeldung unterdrückt wird, andernfalls ist der Wert **Nein**. Der Wert ist standardmäßig auf **Ja (/nologo)** festgelegt.  
   
  **Warnungen als Fehler behandeln**  
- **Ja (/ / WX)** auf alle Compiler-Warnungen als Fehler zu behandeln, andernfalls **keine**.  
+ **Ja (/WX)** gibt an, dass alle Compilerwarnungen als Fehler behandelt werden sollen, andernfalls ist der Wert **Nein**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Eigenschaftenseiten "HLSL"](../ide/hlsl-property-pages.md)   
- [Eigenschaftenseiten "HLSL": Allgemein](../ide/hlsl-property-pages-general.md)   
+ [HLSL Property Pages (HLSL-Eigenschaftenseiten)](../ide/hlsl-property-pages.md)   
+ [HLSL Property Pages: General (HLSL-Eigenschaftenseiten: Allgemein)](../ide/hlsl-property-pages-general.md)   
  [Eigenschaftenseiten "HLSL": Ausgabedateien](../ide/hlsl-property-pages-output-files.md)

@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1522b292f04f1148722ddb0c85473c560372e88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebc1ff83840631074f04704e6df2a88437b8cc71
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 
@@ -63,16 +63,16 @@ Angeforderte Größe des Speicherblocks (Bytes).
 Angeforderter Typ des Speicherblocks: **_CLIENT_BLOCK** oder **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Zeiger zum Namen der Quelldatei, der die Belegung angefordert hat, oder NULL.
+Zeiger auf den Namen der Quelldatei, die die Belegung angefordert oder **NULL**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei, in der die Belegung angefordert wurde, oder NULL.
+Zeilennummer in der Quelldatei, in die Belegung angefordert wurde, oder **NULL**.
 
 Die *Filename* und *Linenumber* -Parameter sind nur verfügbar, wenn **_malloc_dbg** explizit aufgerufen wurde oder die [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)-Präprozessorkonstante definiert wurde.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreichem Abschluss gibt diese Funktion entweder einen Zeiger an den Benutzerteil des belegten Speicherblocks zurück, ruft die neue Handlerfunktion auf oder gibt NULL zurück. Eine vollständige Beschreibung des Rückgabeverhaltens finden Sie im folgenden Abschnitt "Hinweise". Weitere Informationen zur Verwendung der neuen Handlerfunktion finden Sie unter der [malloc](malloc.md)-Funktion.
+Bei erfolgreichem Abschluss dieser Funktion gibt einen Zeiger an den benutzerteil des belegten Speicherblocks zurück, ruft die neue Handlerfunktion, oder gibt **NULL**. Eine vollständige Beschreibung des Rückgabeverhaltens finden Sie im folgenden Abschnitt "Hinweise". Weitere Informationen zur Verwendung der neuen Handlerfunktion finden Sie unter der [malloc](malloc.md)-Funktion.
 
 ## <a name="remarks"></a>Hinweise
 

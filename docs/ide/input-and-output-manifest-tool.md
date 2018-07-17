@@ -1,5 +1,5 @@
 ---
-title: Manifest Tool Eingabe- und Ausgabeeigenschaften (Visual C++) | Microsoft Docs
+title: Eingabe- und Ausgabeeigenschaften des Manifesttools (Visual C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,54 +21,55 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 15be7636188bb670febd7875974d683c1d78360f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33331557"
 ---
-# <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Eingabe und Ausgabe, Tools, Konfigurationseigenschaften, Manifest &lt;Projektname&gt; Eigenschaftenseiten (Dialogfeld)
-Verwenden Sie dieses Dialogfeld zum Angeben von Eingabe- und Optionen für [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Eingabe und Ausgabe, Manifesttool, Konfigurationseigenschaften, Dialogfeld „&lt;Projektname&gt;-Eigenschaftenseiten“
+Verwenden Sie dieses Dialogfeld, um Eingabe- und Ausgabeoptionen für die Datei [Mt.exe](http://msdn.microsoft.com/library/aa375649) anzugeben.  
   
- Öffnen Sie diese Eigenschaftenseiten-Dialogfeld für den Zugriff auf die Eigenschaftenseiten für das Projekt oder das Eigenschaftenblatt. Erweitern Sie die **Manifesttool** Knoten unter **Konfigurationseigenschaften**, und wählen Sie dann **ein- und Ausgabe**.  
+ Öffnen Sie die Eigenschaftenseiten für Ihr Projekt oder Ihr Eigenschaftenblatt, um auf das Dialogfeld „Eigenschaftenseite“ zuzugreifen. Erweitern Sie den Knoten **Manifesttool** unter **Konfigurationseigenschaften**, und klicken Sie dann auf **Eingabe und Ausgabe**.  
   
 ## <a name="uielement-list"></a>UIElement-Liste  
  **Zusätzliche Manifestdateien**  
- Verwendet die **/manifest** Option, um die vollständigen Pfade der zusätzliche Manifestdateien, die die Manifesttool verarbeitet oder Merge anzugeben. Vollständige Pfade werden durch ein Semikolon getrennt.  
+ Verwendet die Option **/manifest**, um die vollständigen Pfade von zusätzlichen Manifestdateien anzugeben, die das Manifesttool verarbeitet oder zusammenführt. Vollständige Pfade werden durch Semikolons getrennt.  
   
- **Eingaberessource-Manifeste**  
- Verwendet die **inputresource** Option aus, um den vollständigen Pfad einer Ressource vom Typ RT_MANIFEST anzugeben, die das manifest Tool angeben. Der Pfad kann die angegebenen Ressourcen-ID folgen. Zum Beispiel:  
+ **Ressourcenmanifeste eingeben**  
+ Verwendet die Option **/inputresource**, um den vollständigen Pfad einer Ressource vom Typ RT_MANIFEST anzugeben, die in das Manifesttool eingegeben wird. Dem Pfad kann die angegebene Ressourcen-ID folgen. Zum Beispiel:  
   
  `dll_with_manifest.dll;#1`  
   
- Die Ressourcen-ID ist optional und standardmäßig CREATEPROCESS_MANIFEST_RESOURCE_ID in winuser.h standardmäßig.  
+ Die Ressourcen-ID ist optional und lautet standardmäßig CREATEPROCESS_MANIFEST_RESOURCE_ID in „winuser.h“.  
   
  **Manifest einbetten**  
- **Ja** gibt an, dass das Projektsystem die Anwendungsmanifestdatei in die Assembly eingebettet wird.  
+ **Ja** gibt an, dass das Projektsystem die Anwendungsmanifestdatei in die Assembly einbettet.  
   
- **Nicht** gibt an, dass das Projektsystem die Anwendungsmanifestdatei als eigenständige Datei erstellen.  
+ **Nein** gibt an, dass das Projektsystem die Anwendungsmanifestdatei als eigenständige Datei erstellt.  
   
- **Ausgabemanifestdatei an**  
- Gibt den Namen der der Ausgabemanifestdatei an. Diese Eigenschaft ist optional, wenn Sie nur eine Manifestdatei vom Manifesttool bearbeitet wird.  
+ **Manifestdatei ausgeben**  
+ Gibt den Namen der Ausgabemanifestdatei an. Diese Eigenschaft ist optional, wenn nur eine Manifestdatei mit dem Manifesttool bearbeitet wird.  
   
- **Manifestressource-Datei**  
- Gibt die Ausgabe mit dem Ressourcendateien verwendet, um das Manifest in die Projektausgabe eingebettet.  
+ **Manifestressourcendatei**  
+ Gibt die Ausgaberessourcendateien an, die verwendet werden, um das Manifest in die Projektausgabe einzubetten.  
   
  **Katalogdateien generieren**  
- Verwendet die **makecdfs** Option aus, um anzugeben, dass das manifest generiert das Tool Katalog-Definitionsdateien (CDF-Dateien), die verwendet werden, um Kataloge zu machen.  
+ Verwendet die Option **/makecdfs**, um anzugeben, dass das Manifesttool die Katalogdefinitionsdateien (CDF-Dateien) generiert, die zum Erstellen von Katalogen verwendet werden.  
   
- **Generieren des Manifests von ManagedAssembly**  
- Generiert ein Manifest aus einer verwalteten Assembly. (**- Managedassemblyname: *** Datei*).  
+ **Manifest aus einer verwalteten Assembly generieren**  
+ Generiert ein Manifest aus einer verwalteten Assembly. (**-managedassemblyname:***file*).  
   
  **Abhängigkeitselement unterdrücken**  
- Verwendet die **- Managedassembly** Option. Dieses Tag unterdrückt die Generierung der Abhängigkeitselemente im endgültigen Manifest.  
+ Wird mit der Option **-managedassembly** verwendet. Dieses Tag unterdrückt die Generierung von Abhängigkeitselementen im endgültigen Manifest.  
   
- **Von Kategorietags zu generieren**  
- Verwendet die **- Managedassembly** Option. Dieses Tag bewirkt, dass die Kategorietags generiert werden soll.  
+ **Kategorietags generieren**  
+ Wird mit der Option **-managedassembly** verwendet. Durch dieses Tag werden die Kategorietags generiert.  
   
- **Aktivieren der DPI-Ausführung**  
- Gibt an, ob die Anwendung DPI-fähig ist. Standardmäßig ist die Einstellung **Ja** für MFC-Projekte und **keine** andernfalls, da MFC-Projekten in DPI-Ausführung erstellt haben. Sie können die Einstellung zu überschreiben, **Ja** , wenn Sie Code zur Behandlung von unterschiedlichen DPI-Einstellungen hinzufügen. Ihre Anwendung möglicherweise fuzzy oder kleine, wenn Sie es als DPI-bewusst festlegen, wenn es nicht angezeigt.  
+ **DPI aktivieren**  
+ Gibt an, ob die Anwendung DPI-fähig ist. Für MFC-Projekte ist diese Einstellung standardmäßig auf **Ja** festgelegt, andernfalls ist **Nein** festgelegt, da nur MFC-Projekte über integrierte DPI-Unterstützung verfügen. Sie können die Einstellung auf **Ja** festlegen, indem Sie Code hinzufügen, um verschiedene DPI-Einstellungen zu verarbeiten. Wenn Sie Ihre Anwendung auf DPI-fähig einstellen und sie nicht DPI-fähig ist, wird sie möglicherweise verschwommen oder klein angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest)   
- [Manifesttool-Eigenschaftenseiten](../ide/manifest-tool-property-pages.md)   
+ [ClickOnce Application Manifest (ClickOnce-Anwendungsmanifest)](/visualstudio/deployment/clickonce-application-manifest)   
+ [Manifesttooleigenschaftenseiten](../ide/manifest-tool-property-pages.md)   
  [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)   

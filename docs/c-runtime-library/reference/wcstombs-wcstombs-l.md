@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facc4855d1e36965eff7af70c5cb48f8fb77d419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
@@ -94,11 +94,11 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn **Wcstombs** erfolgreich konvertiert die multibyte-Zeichenfolge gibt die Anzahl der Bytes, die geschrieben werden, in die multibyte-Ausgabezeichenfolge, ausschließen, die beendet **NULL** (sofern vorhanden). Wenn die *Mbstr* Argument ist **NULL**, **Wcstombs** gibt die erforderliche Größe in Bytes, der die Zielzeichenfolge zurück. Wenn **Wcstombs** findet ein Breitzeichen, es kann nicht in einem multibyte-Zeichen konvertiert, es gibt-1 zurück, die in den Typ umgewandelt, **Size_t** und legt **Errno** auf **EILSEQ** .
+Wenn **Wcstombs** erfolgreich konvertiert die multibyte-Zeichenfolge gibt die Anzahl der Bytes, die in der multibyte-Ausgabezeichenfolge, die ohne das abschließende Nullzeichen (sofern vorhanden) geschrieben. Wenn die *Mbstr* Argument ist **NULL**, **Wcstombs** gibt die erforderliche Größe in Bytes, der die Zielzeichenfolge zurück. Wenn **Wcstombs** findet ein Breitzeichen, es kann nicht in einem multibyte-Zeichen konvertiert, es gibt-1 zurück, die in den Typ umgewandelt, **Size_t** und legt **Errno** auf **EILSEQ** .
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Wcstombs** -Funktion konvertiert die Breitzeichen-Zeichenfolge verweist *Wcstr* auf die entsprechende Multibyte-Zeichen und speichert die Ergebnisse in die *Mbstr* Array. Die *Anzahl* Parameter gibt die maximale Anzahl von Bytes, die in der multibyte-Ausgabezeichenfolge gespeichert werden können (d. h. die Größe des *Mbstr*). Es ist allgemein nicht bekannt, wie viele Bytes bei der Konvertierung einer Breitzeichenfolge benötigt werden. Einige Breitzeichen benötigen nur ein Byte in der Ausgabezeichenfolge; andere erfordern zwei. Wenn zwei Bytes in der multibyte-Ausgabezeichenfolge für jedes Breitzeichen in der Eingabezeichenfolge vorhanden sind (einschließlich der Breitzeichen **NULL**), wird sichergestellt, dass das Ergebnis passen.
+Die **Wcstombs** -Funktion konvertiert die Breitzeichen-Zeichenfolge verweist *Wcstr* auf die entsprechende Multibyte-Zeichen und speichert die Ergebnisse in die *Mbstr* Array. Die *Anzahl* Parameter gibt die maximale Anzahl von Bytes, die in der multibyte-Ausgabezeichenfolge gespeichert werden können (d. h. die Größe des *Mbstr*). Es ist allgemein nicht bekannt, wie viele Bytes bei der Konvertierung einer Breitzeichenfolge benötigt werden. Einige Breitzeichen benötigen nur ein Byte in der Ausgabezeichenfolge; andere erfordern zwei. Wenn es sind zwei Bytes in der multibyte-Ausgabezeichenfolge für jedes Breitzeichen in der Eingabezeichenfolge (einschließlich den Null-Breitzeichen), ist sichergestellt, dass das Ergebnis passen.
 
 Wenn **Wcstombs** das Nullzeichen Breitzeichen (L '\0') erkennt, entweder vor oder bei *Anzahl* auftritt, konvertiert es in eine 8-Bit 0 und wird beendet. Daher die Multibyte-Zeichenfolge am *Mbstr* ist Null-terminierte nur, wenn **Wcstombs** trifft eine Breitzeichen-Null-Zeichen bei der Konvertierung. Wenn die Sequenzen auf verweist *Wcstr* und *Mbstr* überlappen, ist das Verhalten des **Wcstombs** ist nicht definiert.
 

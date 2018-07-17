@@ -12,11 +12,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: c0e0422859bc4053ea1e8fff424ff79c3b22f8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705698"
 ---
 # <a name="makefile-project-properties-linux-c"></a>MakeFile-Projekteigenschaften (Linux C++)
 
@@ -92,7 +93,7 @@ Includesuchpfad | Gibt den Includesuchpfad zum Auflösen von eingebundenen Datei
 Erzwungene Includedateien | Gibt die Dateien an, deren Einbindung erzwungen wird
 Präprozessordefinitionen | Gibt die von den Quelldateien verwendeten Präprozessordefinitionen an
 Präprozessordefinitionen aufheben | Gibt mindestens eine aufgehobene Präprozessordefinition an.     (/U[Makro])
-Zusätzliche Optionen | Gibt zusätzliche Compilerschalter an, die von Intellisense beim Analysieren von C++-Dateien verwendet werden sollen.
+Zusätzliche Optionen | Gibt zusätzliche Compilerschalter an, die von IntelliSense beim Analysieren von C++-Dateien verwendet werden sollen.
 
 ### <a name="build"></a>Build
 

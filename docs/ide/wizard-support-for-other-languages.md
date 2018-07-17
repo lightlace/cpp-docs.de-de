@@ -1,5 +1,5 @@
 ---
-title: Assistentenunterstützung für andere Sprachen | Microsoft Docs
+title: Assistentenunterstützung für andere Sprachen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,25 +19,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 75aafd7177c3799c17b75419fd5ab9f54af91d35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33332441"
 ---
 # <a name="wizard-support-for-other-languages"></a>Assistentenunterstützung für andere Sprachen
-Bei der Installation von Visual Studio wird die setupanwendung erkennt das Gebietsschema, die in Ihrem System aufgeführt und der entsprechenden Sprache-Vorlage oder die Vorlagen für dieses Gebietsschema installiert. Setup installiert für westeuropäische Gebietsschemas, z. B. Englisch, Französisch, Italienisch, Spanisch und Deutsch. Diese Sprachen angezeigt, der **Ressourcensprache** auf in der Liste der [Anwendungstyp](../mfc/reference/application-type-mfc-application-wizard.md) Seite des Assistenten für die MFC-Anwendung.  
+Wenn Sie Visual Studio installieren, erkennt die Setupanwendung das Gebietsschema Ihres Systems, und die entsprechenden Vorlagen werden für das Gebietsschema installiert. Zum Beispiel installiert das Setup für westeuropäische Gebietsschemas Englisch, Französisch, Italienisch, Spanisch und Deutsch. Diese Sprachen werden in der Liste **Ressourcensprache** auf der Seite [Anwendungstyp](../mfc/reference/application-type-mfc-application-wizard.md) des MFC-Anwendungs-Assistenten angezeigt.  
   
-## <a name="language-templates"></a>Language-Vorlagen  
- Nicht alle Vorlagen sind auf allen Systemen installiert, da die Vorlagen sind ANSI-Codierung basieren und nicht alle Ressourcen auf allen Systemen bearbeitet werden können. Standardmäßig können nicht Sie z. B. japanische Ressourcen auf einem französischen System bearbeiten.  
+## <a name="language-templates"></a>Sprachvorlagen  
+ Da die Vorlagen auf der ANSI-Codierung basieren, werden nicht alle Vorlagen auf allen Systemen installiert, und nicht alle Ressourcen können auf allen Systemen bearbeitet werden. Zum Beispiel können Sie japanische Ressourcen standardmäßig nicht auf einem französischen System bearbeiten.  
   
- Wenn Sie Windows 2000 oder höher verwenden, und Sie eine MFC-Anwendung in einer anderen Sprache erstellen möchten, müssen Sie das Vorlagenverzeichnis für die entsprechende Sprache von den Medien für Visual Studio-Installer (Datenträger 1) auf Ihrem System kopieren.  
+ Wenn Sie Windows 2000 oder höher verwenden und eine MFC-Anwendung in einer anderen Sprache erstellen möchten, müssen Sie zunächst das Vorlagenverzeichnis für die entsprechende Sprache vom Visual Studio-Installationsmedium (Disk 1) auf Ihr System kopieren.  
   
 > [!NOTE]
->  Um das Projekt zu bearbeiten, müssen Sie Ihr Gebietsschema des Systems zur entsprechenden Gebietsschema-für die ausgewählte Sprache festlegen.  
+>  Zum Bearbeiten des erstellten Projekts müssen Sie das Gebietsschema des Systems für die ausgewählte Sprache festlegen.  
   
- Vorlagen sind jeweils einen Ordner im Verzeichnis \Microsoft Visual Studio .NET 2003\Vc7\VCWizards\mfcappwiz\templates\ zugeordnet, wie in der folgenden Tabelle aufgeführt. Kopieren Sie die Vorlage für die gewünschte Sprache für den Zugriff auf den entsprechenden Ordner in das Verzeichnis \mfcappwiz\templates\ auf Ihrem Computer. Nachdem Sie den Ordner kopiert haben, erscheint die Sprache der **Ressourcensprache** auf in der Liste der **Anwendungstyp** Seite des Assistenten für die MFC-Anwendung.  
+ Die Vorlagen sind, wie in der folgenden Tabelle gezeigt wird, jeweils einem Ordner im Verzeichnis \Microsoft Visual Studio .NET 2003\Vc7\VCWizards\mfcappwiz\templates\ zugeordnet. Kopieren Sie zum Zugreifen auf die gewünschte Sprachvorlage den entsprechenden Ordner in das Verzeichnis \mfcappwiz\templates\ auf Ihrem Computer. Sobald Sie den Ordner kopiert haben, wird die Sprache in der Liste **Ressourcensprache** auf der Seite **Anwendungstyp** des MFC-Anwendungs-Assistenten angezeigt.  
   
-### <a name="language-templates-provided-in-visual-studio-net"></a>Language-Vorlagen in Visual Studio .NET bereitgestellt  
+### <a name="language-templates-provided-in-visual-studio-net"></a>Von Visual Studio .NET bereitgestellte Sprachvorlagen  
   
 |Sprache|Vorlage|  
 |--------------|--------------|  
@@ -51,10 +52,10 @@ Bei der Installation von Visual Studio wird die setupanwendung erkennt das Gebie
 |Koreanisch|1042|  
 |Spanisch|3082|  
   
-## <a name="format-of-visual-c-wizard-generated-files"></a>Format der Visual C++-Assistenten generierte Dateien  
- Visual C++-Assistenten erstellen Projekte im Unicode-Format an, wenn die installierte Sprachversion von Visual Studio nicht das Gebietsschema des Systems übereinstimmt. Wenn die japanische Version von Visual Studio auf einem Computer, die regionale Einstellungen, die auf einer anderen Sprache als Japanisch festgelegt wurde installiert ist, werden Visual C++-Assistenten z. B. Projekte, bestehend aus Unicode-Dateien generiert. Dies tritt häufig auf Computern mit Windows Multi (MUI) Sprachpakete einrichten.  
+## <a name="format-of-visual-c-wizard-generated-files"></a>Format der vom Visual C++-Assistenten generierten Dateien  
+ Die Visual C++-Assistenten generieren Projekte in Unicode, wenn die installierte Sprachversion von Visual Studio nicht mit dem Gebietsschema des Systems übereinstimmt. Wenn beispielsweise die japanische Version von Visual Studio auf einem Computer installiert ist, dessen regionale Einstellungen auf eine andere Sprache festgelegt sind, dann generieren Visual C++-Assistenten Projekte, die aus Unicode-Dateien bestehen. Dies tritt häufig bei Computern auf, die mit mehrsprachigen Windows-Paketen (MUI) eingerichtet wurden.  
   
- Dieses Verhalten unterscheidet sich von Systemen, die so eingerichtet, dass das Gebietsschema des Systems identisch mit der jeweiligen Sprachversion von Visual Studio ist. In diesem Fall werden im ANSI-Projektdateien in der Codepage des Systems erstellt werden.  
+ Dieses Verhalten unterscheidet sich von Systemen, die so eingerichtet sind, dass das Gebietsschema des Systems der Sprachversion von Visual Studio entspricht. In diesem Fall werden Projektdateien auf der System-Codepage in ANSI erstellt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Für Visual C++-Projekte erstellte Dateitypen](../ide/file-types-created-for-visual-cpp-projects.md)   

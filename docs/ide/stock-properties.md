@@ -1,5 +1,5 @@
 ---
-title: Vordefinierte Eigenschaften | Microsoft Docs
+title: Basiseigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33335433"
 ---
 # <a name="stock-properties"></a>Basiseigenschaften
-Wenn Sie eine Eigenschaft mit einem MFC-Dispinterface Hinzufügen der [Assistent zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md), können Sie eine Systemeigenschaft aus der **Eigenschaftsname** in Liste der [Namen](../ide/names-add-property-wizard.md) auf der Seite der Assistenten. Dort stehen die folgenden Eigenschaften zur Auswahl:  
+Wenn Sie einer MFC-Disp-Schnittstelle mithilfe des [Assistenten zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md) eine Eigenschaft hinzufügen, können Sie auf der [Namen](../ide/names-add-property-wizard.md)-Seite des Assistenten eine Basiseigenschaft aus der Liste **Eigenschaftennamen** auswählen. Dort stehen die folgenden Eigenschaften zur Auswahl:  
   
-|Name der Eigenschaft|Beschreibung|  
+|Name der Eigenschaft|description|  
 |-------------------|-----------------|  
-|**Darstellung**|Gibt an, oder legt einen Wert, der bestimmt, die Darstellung des Steuerelements fest. Des Steuerelements **Darstellung** Eigenschaft eingeschlossen oder weglassen von dreidimensionale Anzeigeeffekte kann. Dies ist eine ambient Lese-Schreib-Eigenschaft.|  
-|`BackColor`|Gibt zurück, oder legt des Steuerelements ambient `BackColor` Eigenschaft, um eine (RGB)-Palettenfarbe oder eine vordefinierte Systemfarbe. Standardmäßig entspricht dieser Wert die Vordergrundfarbe des Containers des Steuerelements. Dies ist eine ambient Lese-Schreib-Eigenschaft.|  
-|`BorderStyle`|Gibt an, oder legt die Rahmenart für ein Steuerelement. Dies ist eine Schreib-Lese-Eigenschaft.|  
-|**Beschriftung**|Gibt zurück, oder legt das Steuerelement **Beschriftung** Eigenschaft. Die Beschriftung ist der Titel des Fensters. **Beschriftung** hat keine **Membervariable** Implementierungstyp.|  
-|**Aktiviert**|Gibt zurück, oder legt das Steuerelement **aktiviert** Eigenschaft. Ein aktiviertes Steuerelement kann auf vom Benutzer generierte Ereignisse reagieren.|  
-|**Schriftart**|Gibt zurück, oder legt ihn fest Ambiente-Schriftart des Steuerelements. NULL, wenn das Steuerelement keine Schriftart besitzt.|  
-|`ForeColor`|Gibt zurück, oder legt des Steuerelements ambient `ForeColor` Eigenschaft.|  
-|**hWnd**|Gibt zurück, oder legt das Steuerelement **hWnd** Eigenschaft. **hWnd** hat keine **Membervariable** Implementierungstyp.|  
-|**ReadyState**|Gibt zurück, oder legt das Steuerelement **ReadyState** Eigenschaft. Ein Steuerelement kann nicht initialisiert, initialisiert, das Laden, interaktiven oder abgeschlossen sein. Finden Sie unter [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) in der *Internet SDK* für Weitere Informationen.|  
-|**Text**|Gibt an, oder legt den Text in einem Steuerelement enthalten. **Text** hat keine **Membervariable** Implementierungstyp.|  
+|**Darstellung**|Ruft einen Wert ab, der die Darstellung des Steuerelements bestimmt, oder legt diesen fest. Die Eigenschaft **Darstellung** des Steuerelements kann dreidimensionale Anzeigeeffekte anzeigen oder ausblenden. Dies ist eine Ambient-Lese-/Schreibeigenschaft.|  
+|`BackColor`|Gibt die Ambient-Eigenschaft `BackColor` des Steuerelements zurück oder legt diese auf eine Palettenfarbe (RGB) oder eine vordefinierte Systemfarbe fest. Der Wert entspricht standardmäßig der Vordergrundfarbe des Containers des Steuerelements. Dies ist eine Ambient-Lese-/Schreibeigenschaft.|  
+|`BorderStyle`|Gibt die Rahmenart eines Steuerelements zurück oder legt diese fest. Dies ist eine Lese-/Schreibeigenschaft.|  
+|**Beschriftung**|Gibt die Eigenschaft **Beschriftung** des Steuerelements zurück oder legt diese fest. Die Beschriftung ist der Titel des Fensters. **Beschriftung** verfügt nicht über den Implementierungstyp **Membervariable**.|  
+|**Aktiviert**|Gibt die Eigenschaft **Aktiviert** des Steuerelements zurück oder legt diese fest. Ein aktiviertes Steuerelement kann auf vom Benutzer generierte Ereignisse reagieren.|  
+|**Schriftart**|Gibt die Ambient-Schriftart des Steuerelements zurück oder legt diese fest. Wenn das Steuerelement über keine Schriftart verfügt, wird NULL zurückgegeben.|  
+|`ForeColor`|Gibt die Ambient-Eigenschaft `ForeColor` des Steuerelements zurück oder legt diese fest.|  
+|**hWnd**|Gibt die **hWnd**-Eigenschaft des Steuerelements zurück oder legt diese fest. **hWnd** verfügt nicht über den Implementierungstyp **Membervariable**.|  
+|**ReadyState**|Gibt die **ReadyState**-Eigenschaft des Steuerelements zurück oder legt diese fest. Ein Steuerelement kann folgenden Status aufweisen: nicht initialisiert, initialisiert, wird geladen, interaktiv und abgeschlossen. Weitere Informationen finden Sie unter [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) im *Internet SDK*.|  
+|**Text**|Gibt den Text zurück, der in einem Steuerelement enthalten ist, oder legt diesen fest. **Text** verfügt nicht über den Implementierungstyp **Membervariable**.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen einer Eigenschaft](../ide/adding-a-property-visual-cpp.md)   
+ [Adding a Property (Hinzufügen einer Eigenschaft)](../ide/adding-a-property-visual-cpp.md)   
  [IDL-Attribute, Assistent zum Hinzufügen von Eigenschaften](../ide/idl-attributes-add-property-wizard.md)

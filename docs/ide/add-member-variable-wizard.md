@@ -1,5 +1,5 @@
 ---
-title: Member Assistent zum Hinzufügen von | Microsoft Docs
+title: Assistent zum Hinzufügen von Membervariablen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f3ae6a3aef4bdf774b5630a9bb0b2a0b49f7f29b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33336325"
 ---
 # <a name="add-member-variable-wizard"></a>Assistent zum Hinzufügen von Membervariablen
-Dieser Assistent fügt einer Membervariablendeklaration der Headerdatei hinzu, und abhängig von den Optionen können sie Code hinzufügen, in der CPP-Datei. Nachdem Sie die Membervariable, die mit dem Assistenten hinzugefügt haben, können Sie den Code in der Entwicklungsumgebung bearbeiten.  
+Dieser Assistent fügt die Deklaration einer Membervariable zur Headerdatei und abhängig von den Optionen Code zur CPP-Datei hinzu. Sobald Sie eine Membervariable mithilfe des Assistenten hinzugefügt haben, können Sie den Code in der Entwicklungsumgebung bearbeiten.  
   
  **Zugriff**  
- Legt den Zugriff auf die Membervariable fest. Zugriffsmodifizierer sind Schlüsselwörter, die angeben, den Zugriff auf die Membervariable haben andere Klassen. Finden Sie unter [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md) für Weitere Informationen zum Zugriff angeben. Die Zugriffsebene für die Membervariable auf festgelegt ist **öffentlichen** standardmäßig.  
+ Legt den Zugriff auf die Membervariable fest. Bei Zugriffsmodifizierern handelt es sich um Schlüsselwörter, die den Zugriff festlegen, den andere Klassen auf die Membervariable haben. Weitere Informationen zum Festlegen des Zugriffs finden Sie unter [Member-Access Control (Steuerung des Memberzugriffs)](../cpp/member-access-control-cpp.md). Standardmäßig wird die Zugriffsebene von Membervariablen auf **public** festgelegt.  
   
 -   [public](../cpp/public-cpp.md)  
   
@@ -35,11 +36,11 @@ Dieser Assistent fügt einer Membervariablendeklaration der Headerdatei hinzu, u
 -   [private](../cpp/private-cpp.md)  
   
  **Variablentyp**  
- Legt den Rückgabetyp für die Membervariable, die Sie hinzufügen.  
+ Legt den Rückgabetyp für die hinzugefügte Membervariable fest.  
   
--   Wenn Sie eine Membervariable, die sich nicht um ein Dialogfeld-Steuerelement ist hinzufügen, wählen Sie aus der Liste der verfügbaren Typen.  
+-   Wenn Sie eine Membervariable hinzufügen, bei der es sich nicht um ein Steuerelement für Dialogfelder handelt, wählen Sie den Typ aus der Liste der verfügbaren Typen aus.  
   
-     Informationen zu den Typen finden Sie unter [grundlegende Typen](../cpp/fundamental-types-cpp.md).  
+     Weitere Informationen zu Typen finden Sie unter [Grundlegende Typen](../cpp/fundamental-types-cpp.md).  
   
     |||  
     |-|-|  
@@ -49,47 +50,47 @@ Dieser Assistent fügt einer Membervariablendeklaration der Headerdatei hinzu, u
     |`int`|`unsigned long`|  
     |**long**||  
   
--   Wenn Sie eine Membervariable für ein Dialogfeld-Steuerelement hinzufügen, wird dieses Feld mit dem Typ des Objekts, die für ein Steuerelement oder ein Wert zurückgegeben gefüllt. Bei Auswahl des **Steuerelement**, klicken Sie dann **Variablentyp** gibt die Basisklasse des Steuerelements, die Sie, in Auswählen der **Kontroll-ID** Feld. Wenn das Dialogfeld-Steuerelement einen Wert enthalten kann, und bei Auswahl des **Wert**, klicken Sie dann **Variablentyp** gibt den geeigneten Typ für den Wert an, das Steuerelement enthalten kann. Finden Sie unter [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md) für Weitere Informationen.  
+-   Wenn Sie eine Membervariable für ein Steuerelement für Dialogfelder hinzufügen, wird dieses Feld mit dem Typ des Objekts aufgefüllt, das für ein Steuerelement oder einen Wert zurückgegeben wird. Wenn Sie **Steuerelement** auswählen, gibt der **Variablentyp** die Basisklasse des Steuerelements an, das Sie im Feld **Steuerelement-ID** ausgewählt haben. Wenn das Steuerelement für ein Dialogfeld einen Wert enthalten kann und Sie **Wert** ausgewählt haben, gibt der **Variablentyp** den geeigneten Typ für den Wert an, den das Steuerelement enthalten kann. Weitere Informationen finden Sie unter [Dialog Box Controls and Variable Types (Steuerelemente für Dialogfelder und Variablentypen)](../ide/dialog-box-controls-and-variable-types.md).  
   
-     Dieser Wert hängt von der Auswahl im **Kontroll-ID** und kann nicht geändert werden.  
+     Dieser Wert hängt von der Auswahl in **Steuerelement-ID** ab und kann nicht geändert werden.  
   
  **Variablenname**  
- Legt den Namen der Membervariable, die Sie hinzufügen. Membervariablen beginnen in der Regel mit der identifizierende Zeichenfolge "M_" die standardmäßig für Sie bereitgestellt wird.  
+ Legt den Namen der hinzugefügten Membervariable fest. Membervariable beginnen üblicherweise mit der Identifizierungszeichenfolge „m_,“, die in der Regel standardmäßig bereitgestellt wird.  
   
  **Steuerelementvariable**  
- Gibt an, dass die Membervariable ein Steuerelements in ein Dialogfeld mit verwaltet [Datenaustausch und datenvalidierung](../mfc/dialog-data-exchange-and-validation.md) unterstützen. Finden Sie unter [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) für Weitere Informationen. Diese Option steht nur für Membervariablen von abgeleiteten Klassen hinzugefügt [CDialog](../mfc/reference/cdialog-class.md). Aktivieren Sie dieses Kontrollkästchen zum Aktivieren der **Kontroll-ID** und **Steuerelementtyp** Optionen.  
+ Gibt an, dass die Membervariable ein Steuerelement innerhalb eines Dialogfelds mit Unterstützung für [Datenaustausch und Datenvalidierung](../mfc/dialog-data-exchange-and-validation.md) verwaltet. Weitere Informationen finden Sie unter [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange). Diese Option ist nur für Membervariablen verfügbar, die zu Klassen hinzugefügt wurden, die von [CDialog](../mfc/reference/cdialog-class.md) abgeleitet wurden. Aktivieren Sie dieses Kontrollkästchen, um die Optionen **Steuerelement-ID** und **Steuerelementtyp** zu aktivieren.  
   
  **Steuerelement-ID**  
- Legt die ID für die Steuerelementvariable, die Sie hinzufügen. Wählen Sie aus der Liste aus, die ID für den Typ des Steuerelements für die Sie die Membervariable hinzufügen. Die Liste ist nur aktiv, wenn die **Steuerelementvariable** aktiviert ist, und er ist begrenzt-IDs für die Steuerelemente zum Dialogfeld bereits hinzugefügt. Z. B. für den Standard **OK** Schaltfläche, um die Steuerelement-ID ist **IDOK**.  
+ Legt die ID für die Steuerelementvariable fest, die Sie hinzufügen. Wählen Sie die ID für den Typ des Steuerelements, für den Sie die Membervariable hinzufügen, aus der Liste aus. Diese Liste ist nur aktiv, wenn das Kontrollkästchen **Steuerelementvariable** aktiviert und auf die Steuerelement-IDs beschränkt ist, die bereits zum Dialogfeld hinzugefügt wurden. Für die Standardschaltfläche **OK** entspricht die Steuerelement-ID beispielsweise **IDOK**.  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
-|**Steuerelement**|Diese Option ist standardmäßig für den Steuerelementtyp "festgelegt. Er verwaltet das Steuerelement selbst und nicht den Status oder den Inhalt (wie Sie möglicherweise mit einem Listenfeld, Kombinationsfeld oder im Bearbeitungsfeld möchten) des Steuerelements.|  
-|**Wert**|Diese Option steht nur für Steuerelementtypen, die einen Wert (z. B. ein Bearbeitungsfeld) enthalten oder einen Zustand (z. B. Kontrollkästchen) wiedergeben können, und für die Sie möglicherweise verwalten, Bereich, Inhalt und Status. Finden Sie unter [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md) für Weitere Informationen.|  
+|**Steuerelement**|Diese Option ist standardmäßig für den Steuerelementtyp festgelegt. Sie verwaltet das Steuerelement, nicht dessen Status oder Inhalte (wie es bei einem Listenfeld, einem Kombinationsfeld oder einem Bearbeitungsfeld möglicherweise gewünscht ist).|  
+|**Wert**|Diese Option ist nur für Steuerelementtypen verfügbar, die einen Wert enthalten können (z.B. ein Bearbeitungsfeld) oder einen Status wiedergeben (z.B. ein Kontrollkästchen), und für die Sie den Bereich, die Inhalte und den Status verwalten möchten. Weitere Informationen finden Sie unter [Dialog Box Controls and Variable Types (Steuerelemente für Dialogfelder und Variablentypen)](../ide/dialog-box-controls-and-variable-types.md).|  
   
  **Kategorie**  
- Gibt an, ob die Variable auf einen Steuerelementtyp oder den Wert des Steuerelements basiert.  
+ Gibt an, ob die Variable auf einem Steuerelementtyp oder auf dem Wert des Steuerelements basiert.  
   
  **Steuerelementtyp**  
- Legt den Typ des Steuerelements hinzugefügt werden. Dieses Feld ist nicht verfügbar ist, zu ändern. Eine Schaltfläche enthält z. B. den Steuerelementtyp " **Schaltfläche**, und ein Kombinationsfeld hat den Steuerelementtyp" **COMBOBOX**. Finden Sie unter [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md) für Weitere Informationen.  
+ Legt den Typ des Steuerelements fest, das hinzugefügt wird. Dieses Feld kann nicht geändert werden. Eine Schaltfläche hat beispielsweise den Steuerelementtyp **BUTTON**, und ein Kombinationsfeld hat den Steuerelementtyp **COMBOBOX**. Weitere Informationen finden Sie unter [Dialog Box Controls and Variable Types (Steuerelemente für Dialogfelder und Variablentypen)](../ide/dialog-box-controls-and-variable-types.md).  
   
- **Maximale Anzahl von Zeichen**  
- Nur verfügbar, wenn **Variablentyp** festgelegt ist, um [CString](../atl-mfc-shared/reference/cstringt-class.md). Gibt die maximale Anzahl von Zeichen, die das Steuerelement aufnehmen kann.  
+ **Maximale Zeichenanzahl**  
+ Nur verfügbar, wenn der **Variablentyp** auf [CString](../atl-mfc-shared/reference/cstringt-class.md) festgelegt ist. Gibt die maximale Anzahl von Zeichen an, die das Steuerelement enthalten kann.  
   
- **Minimalwert**  
- Nur verfügbar, wenn der Variablentyp ist **BOOL**, `int`, **"uint"**, **lange**, `DWORD`, **"float"**, **doppelte**, **BYTE**, **kurze**, [COLECurrency](../mfc/reference/colecurrency-class.md) oder [CTime](../atl-mfc-shared/reference/ctime-class.md). Gibt den niedrigsten Wert für eine Skalierung oder den Datumsbereich an.  
+ **Mindestwert**  
+ Nur verfügbar, wenn der Variablentyp **BOOL**, `int`, **UINT**, **long**, `DWORD`, **float**, **double**, **BYTE**, **short**, [COLECurrency](../mfc/reference/colecurrency-class.md) oder [CTime](../atl-mfc-shared/reference/ctime-class.md) ist. Gibt den niedrigsten Wert an, der für eine Skalierung oder einen Datenbereich akzeptiert wird.  
   
- **Max-Wert**  
- Nur verfügbar, wenn der Variablentyp ist **BOOL**, `int`, **"uint"**, **lange**, `DWORD`, **"float"**, **doppelte**, **BYTE**, **kurze**, `COLECurrency` oder `CTime`. Gibt den höchsten Wert für eine Skalierung oder den Datumsbereich an.  
+ **Höchstwert**  
+ Nur verfügbar, wenn der Variablentyp **BOOL**, `int`, **UINT**, **long**, `DWORD`, **float**, **double**, **BYTE**, **short**, `COLECurrency` oder `CTime` ist. Gibt den höchsten Wert an, der für eine Skalierung oder einen Datenbereich akzeptiert wird.  
   
- **.h-Datei**  
- Für ActiveX-Steuerelemente erfordern, deren Membervariablen eine Wrapperklasse. Legt den Namen der Headerdatei So fügen Sie der Klassendeklaration hinzu.  
+ **H-Datei**  
+ Gibt für ActiveX-Steuerelemente an, welche Membervariablen einer Wrapperklasse erfordern. Legt den Namen der Headerdatei fest, die zur Klassendeklaration hinzugefügt werden soll.  
   
  **CPP-Datei**  
- Für ActiveX-Steuerelemente erfordern, deren Membervariablen eine Wrapperklasse. Legt den Namen der Implementierungsdatei So fügen Sie der Klassendefinition hinzu.  
+ Gibt für ActiveX-Steuerelemente an, welche Membervariablen einer Wrapperklasse erfordern. Legt den Namen der Implementierungsdatei fest, die zur Klassendefinition hinzugefügt werden soll.  
   
  **Kommentar**  
- Stellt einen Kommentar in der Headerdatei für die Membervariable bereit.  
+ Fügt einen Kommentar zur Headerdatei der Membervariable hinzu.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen einer Membervariablen](../ide/adding-a-member-variable-visual-cpp.md)
+ [Adding a Member Variable (Hinzufügen einer Membervariablen)](../ide/adding-a-member-variable-visual-cpp.md)

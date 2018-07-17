@@ -13,14 +13,22 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e7d3612cd306dc2235b9fb4e6051415cba699c5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569793"
 ---
 # <a name="desktop-applications-visual-c"></a>Desktopanwendungen (Visual C++)
-Ein *Desktopanwendung* in C++ ist eine systemeigene Anwendung, die den vollständigen Satz von Windows-APIs und entweder ausgeführt wird, die in einem Fenster oder in der Systemkonsole zugreifen können. Desktopanwendungen in C++ können unter Windows XP bis Windows 10 ausgeführt werden (Obwohl Windows XP wird nicht mehr offiziell unterstützt, und es gibt viele Windows-APIs, die seitdem eingeführt wurden).   Eine Desktopanwendung unterscheidet sich von einer app für universelle Windows-Plattform (UWP), die auf PCs unter Windows 10 sowie auf XBox, Windows Phone, Surface Hub und anderen Geräten ausgeführt werden kann. Weitere Informationen zu desktop-Visual Studio. Uwp-Apps, finden Sie unter [wählen Sie Ihre Technologiekosten](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+Ein *Desktopanwendung* in C++ ist eine systemeigene Anwendung, die den vollständigen Satz von Windows-APIs und entweder ausgeführt wird, die in einem Fenster oder in der Systemkonsole zugreifen können. Desktopanwendungen in C++ können unter Windows XP bis Windows 10 ausgeführt werden (Obwohl Windows XP wird nicht mehr offiziell unterstützt, und es gibt viele Windows-APIs, die seitdem eingeführt wurden).
+
+Eine Desktopanwendung unterscheidet sich von einer app für universelle Windows-Plattform (UWP), die auf PCs unter Windows 10 sowie auf XBox, Windows Phone, Surface Hub und anderen Geräten ausgeführt werden kann. Weitere Informationen zu desktop-Visual Studio. Uwp-Apps, finden Sie unter [wählen Sie Ihre Technologiekosten](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+
+
+**Desktop-Bridge** In Windows 10 können Sie Ihre vorhandenen desktop-Anwendung oder COM-Objekt als uwp-app-Paket und hinzufügen, universelle Windows-Plattform Funktionen wie berühren oder APIs aufrufen, aus der modernen Windows-API festgelegt. Sie können auch eine uwp-app hinzufügen, um eine desktop-Lösung in Visual Studio und Paket werden zusammen in einem einzelnen Paket und Windows-APIs verwenden, um zwischen ihnen zu kommunizieren.  
+   
+In Visual Studio 2017 15.4 und höher können Sie ein Windows-Anwendungsprojekt Paket um erheblich vereinfachen, die Arbeit von Packen Ihrer vorhandene desktop-Anwendung erstellen. Einige Einschränkungen in Bezug auf welche Registrierung aufruft oder desktop-Anwendung-APIs verwendet, aber in vielen Fällen können Sie alternative Codepfade, um ähnliche Funktionalität zu erzielen, während der Ausführung in einem app-Paket erstellen. Weitere Informationen finden Sie unter [Desktop Bridge](/windows-uwp/porting/desktop-to-uwp-root).  
   
  **Terminologie**  
   

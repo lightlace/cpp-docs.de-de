@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb0a44414b01d0105f911732bc3dd2662a278158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
@@ -102,7 +102,7 @@ Wenn eine der oben genannten Fehlerbedingungen auftritt, wird ein Handler für u
 
 Die **Wctomb_s** -Funktion konvertiert die *Wchar* Argument an das entsprechende Multibytezeichen und speichert das Ergebnis an *Mbchar*. Sie können die Funktion von einem beliebigen Punkt in einem beliebigen Programm aufrufen.
 
-Wenn **Wctomb_s** konvertiert das Breitzeichen in ein Multibytezeichen, legt er die Anzahl der Bytes (also nie größer als **MB_CUR_MAX**) in der Breitzeichen in die Ganzzahl verweist *pRetValue*. Wenn *Wchar* ist das Nullzeichen Breitzeichen (L '\0'), **Wctomb_s** füllt *pRetValue* mit 1. Wenn die Zielzeiger *Mbchar* NULL ist, **Wctomb_s** setzt 0 in *pRetValue*. Wenn die Konvertierung nicht möglich, im aktuellen Gebietsschema ist **Wctomb_s** setzt-1 in *pRetValue*.
+Wenn **Wctomb_s** konvertiert das Breitzeichen in ein Multibytezeichen, legt er die Anzahl der Bytes (also nie größer als **MB_CUR_MAX**) in der Breitzeichen in die Ganzzahl verweist *pRetValue*. Wenn *Wchar* ist das Nullzeichen Breitzeichen (L '\0'), **Wctomb_s** füllt *pRetValue* mit 1. Wenn die Zielzeiger *Mbchar* ist **NULL**, **Wctomb_s** setzt 0 in *pRetValue*. Wenn die Konvertierung nicht möglich, im aktuellen Gebietsschema ist **Wctomb_s** setzt-1 in *pRetValue*.
 
 **Wctomb_s** verwendet das aktuelle Gebietsschema für gebietsschemaabhängige zu **_wctomb_s_l** ist nahezu identisch, das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 

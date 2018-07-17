@@ -1,5 +1,5 @@
 ---
-title: '&lt;Berechtigung&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;permission&gt; (Visual C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e13824780a5c73d4423bd544a97108b45d1b770a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33324082"
 ---
-# <a name="ltpermissiongt-visual-c"></a>&lt;Berechtigung&gt; (Visual C++)
-Mit dem \<permission>-Tag können Sie den Zugriff auf einen Member dokumentieren. <xref:System.Security.PermissionSet> können Sie den Zugriff auf ein Element angeben.  
+# <a name="ltpermissiongt-visual-c"></a>&lt;permission&gt; (Visual C++)
+Mit dem \<permission>-Tag können Sie den Zugriff auf einen Member dokumentieren. Mit der Klasse <xref:System.Security.PermissionSet> können Sie den Zugriff auf einen Member angeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +48,7 @@ Mit dem \<permission>-Tag können Sie den Zugriff auf einen Member dokumentieren
 ## <a name="remarks"></a>Hinweise  
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   
- Der Visual C++-Compiler versucht, cref-Verweise in einem einzigen Durchlauf durch die Dokumentationskommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Finden Sie unter [ \<Seealso >](../ide/seealso-visual-cpp.md) Weitere Informationen.  
+ Der Visual C++-Compiler versucht, cref-Verweise in einem einzigen Durchlauf durch die Dokumentationskommentare aufzulösen.  Bei Verwendung der C++-Suchregeln wird deshalb, wenn ein Symbol vom Compiler nicht gefunden wird, der Verweis als nicht aufgelöst markiert. Weitere Informationen finden Sie unter [\<seealso>](../ide/seealso-visual-cpp.md).  
   
 ## <a name="example"></a>Beispiel  
   

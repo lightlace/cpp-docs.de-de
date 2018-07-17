@@ -16,29 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44c4dec71cdf077dc8fbd1ba81b555090b524007
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ddf078420da8aba170bbd21a0db775f9246cea4
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703641"
 ---
 # <a name="compiler-error-c2435"></a>Compilerfehler C2435
-"Var": dynamische Initialisierung verwalteten CRT erfordert, kann nicht mit/clr: safe kompiliert werden  
-  
- Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.  
-  
- Initialisierung des globalen pro-AppDomain-Variablen erfordert kompilierte die CRT mit `/clr:pure`, die ein überprüfbares Image erstellt.  
-  
- Weitere Informationen finden Sie unter [appdomain](../../cpp/appdomain.md) und [process](../../cpp/process.md).  
-  
-## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird C2435 generiert:  
-  
-```  
-// C2435.cpp  
-// compile with: /clr:safe /c  
-int globalvar = 0;   // C2435  
-  
-__declspec(process)  
-int globalvar2 = 0;  
+
+> "*Var*': dynamische Initialisierung verwalteten CRT erfordert, kann nicht mit/clr: safe kompiliert werden
+
+## <a name="remarks"></a>Hinweise
+
+Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
+
+Initialisierung des globalen pro-AppDomain-Variablen erfordert kompilierte die CRT mit `/clr:pure`, die ein überprüfbares Image erstellt.
+
+Weitere Informationen finden Sie unter [appdomain](../../cpp/appdomain.md) und [process](../../cpp/process.md).
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird C2435 generiert:
+
+```cpp
+// C2435.cpp
+// compile with: /clr:safe /c
+int globalvar = 0;   // C2435
+
+__declspec(process)
+int globalvar2 = 0;
 ```

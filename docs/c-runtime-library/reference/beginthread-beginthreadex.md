@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f04d6bc5ab0864a1dfc27a1de8b09f1740f845d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d56bcc5ec779b077305d9d80e4a4e6b5e511df5e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704658"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -89,22 +90,22 @@ Startadresse einer Routine, die die Ausführung eines neuen Threads beginnt. Fü
 Stapelgröße für einen neuen Thread oder 0.
 
 *arglist*<br/>
-Argumentliste, die an einen neuen Thread übergeben wird, oder NULL.
+Argumentliste, die an einen neuen Thread übergeben werden oder **NULL**.
 
 *Sicherheit*<br/>
-Zeiger auf eine [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) -Struktur, die bestimmt, ob das zurückgegebene Handle von untergeordneten Prozessen geerbt werden kann. Wenn *Sicherheit* NULL ist, das Handle kann nicht vererbt werden. Muss für Windows 95-Anwendungen NULL sein.
+Zeiger auf eine [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) -Struktur, die bestimmt, ob das zurückgegebene Handle von untergeordneten Prozessen geerbt werden kann. Wenn *Sicherheit* ist **NULL**, das Handle kann nicht vererbt werden. Muss **NULL** für Windows 95-Anwendungen.
 
 *initflag*<br/>
 Flags, die den anfänglichen Zustand eines neuen Threads steuern. Legen Sie *Initflag* auf 0, sofort auszuführen oder um **CREATE_SUSPENDED** an den Thread in einem angehaltenen Zustand zu erstellen verwenden [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) um den Thread auszuführen. Legen Sie *Initflag* auf **STACK_SIZE_PARAM_IS_A_RESERVATION** Flag verwenden *Stack_size* wie die anfängliche Größe des Stapels in Byte zu reservieren, wenn dieses Flag ist nicht angegeben, *Stack_size* gibt die Commitgröße an.
 
 *thrdaddr*<br/>
-Zeigt auf eine 32-Bit-Variable, die den Threadbezeichner empfängt. Wenn sie NULL ist, wird sie nicht verwendet.
+Zeigt auf eine 32-Bit-Variable, die den Threadbezeichner empfängt. Ist er **NULL**, er wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Bei Erfolg gibt jede dieser Funktionen ein Handle für den neu erstellten Thread zurück. jedoch, wenn der neu erstellte Thread zu schnell beendet, **_beginthread** möglicherweise kein gültiges Handle zurück. (Weitere Informationen finden Sie bei der Diskussion im Abschnitt Hinweise.) Bei einem Fehler **_beginthread** gibt-1 L, und **Errno** festgelegt ist, um **EAGAIN** Wenn zu viele Threads vorhanden sind auf **EINVAL** Wenn das Argument ist ungültig, oder die Stapelgröße falsch ist oder **EACCES** Wenn nicht genügend Ressourcen (z. B. Arbeitsspeicher) vorhanden sind. Bei einem Fehler **_beginthreadex** 0 zurück, und **Errno** und **_doserrno** festgelegt sind.
 
-Wenn *Start_address* NULL ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** und geben-1 zurück.
+Wenn *Start_address* ist **NULL**, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, legen diese Funktionen **Errno** auf **EINVAL** und geben-1 zurück.
 
 Weitere Informationen zu diesen und anderen Rückgabecodes finden Sie unter [errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -137,15 +138,15 @@ Sie erreichen [_endthread](endthread-endthreadex.md) oder **_endthreadex** ausdr
 
 Vom Betriebssystem behandelt die speicherbelegung des Stapels beim entweder **_beginthread** oder **_beginthreadex** aufgerufen wird; Sie müssen die Adresse des Threadstapels an dieser Funktionen übergeben werden sollen. Darüber hinaus die *Stack_size* Argument "0, in dem Fall wird das Betriebssystem den gleichen Wert wie vom Stapel, die angegeben wird verwendet, wird für den Hauptthread" sein.
 
-*Arglist* ist ein Parameter für den neu erstellten Thread übergeben werden. In der Regel ist das die Adresse eines Datenelements, z. B. einer Zeichenfolge. *Arglist* kann NULL sein, wenn es nicht erforderlich ist, aber **_beginthread** und **_beginthreadex** müssen einige Werte erhalten werden an den neuen Thread übergeben. Alle Threads werden beendet, sobald ein Aufrufe thread [abort](abort.md), **beenden**, **_exit**, oder **ExitProcess**.
+*Arglist* ist ein Parameter für den neu erstellten Thread übergeben werden. In der Regel ist das die Adresse eines Datenelements, z. B. einer Zeichenfolge. *Arglist* kann **NULL** Wenn es nicht erforderlich ist, aber **_beginthread** und **_beginthreadex** müssen einige Werte erhalten werden an den neuen Thread übergeben. Alle Threads werden beendet, sobald ein Aufrufe thread [abort](abort.md), **beenden**, **_exit**, oder **ExitProcess**.
 
 Das Gebietsschema des neuen Threads wird initialisiert, mit der pro-Prozess globalen aktuellen Clientgebietsschema-Informationen. Wenn das threadspezifische Gebietsschema aktiviert ist, durch den Aufruf von [_configthreadlocale](configthreadlocale.md) (entweder global oder für neue Threads nur), kann der Thread ändern sein Gebietsschema unabhängig von anderen Threads durch Aufruf **Setlocale** oder **_wsetlocale**. Threads, die die threadspezifische Gebietsschema Kennzeichen festgelegt haben, können die Clientgebietsschema-Informationen in alle anderen Threads, die auch die threadspezifische Gebietsschema Kennzeichen festgelegt haben, sowie alle neu erstellten Threads beeinflussen. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-Für gemischten und reinen Code **_beginthread** und **_beginthreadex** haben jeweils zwei Überladungen. Eine akzeptiert einen systemeigenen Funktionszeiger für die Aufrufkonvention und die andere akzeptiert einen **__clrcall** -Funktionszeiger. Die erste Überladung ist nicht anwendungsdomänensicher und wird es niemals sein. Wenn Sie gemischten oder reinen Code schreiben, müssen Sie sicherstellen, dass der neue Thread die richtige Anwendungsdomäne angibt, bevor er auf verwaltete Ressourcen zugreift. Hierzu können Sie beispielsweise die [call_in_domain-Funktion](../../dotnet/call-in-appdomain-function.md) verwenden. Die zweite Überladung ist anwendungsdomänensicher. der neu erstellte Thread wird beendet immer in der Anwendungsdomäne des Aufrufers des **_beginthread** oder **_beginthreadex**.
+Für **"/ CLR"** Code **_beginthread** und **_beginthreadex** haben jeweils zwei Überladungen. Eine akzeptiert einen systemeigenen Funktionszeiger für die Aufrufkonvention und die andere akzeptiert einen **__clrcall** -Funktionszeiger. Die erste Überladung ist nicht anwendungsdomänensicher und wird es niemals sein. Wenn Sie schreiben **"/ CLR"** Code Sie sicherstellen müssen, dass der neue Thread die richtige Anwendungsdomäne angibt, bevor er greift auf verwaltete Ressourcen. Hierzu können Sie beispielsweise die [call_in_domain-Funktion](../../dotnet/call-in-appdomain-function.md) verwenden. Die zweite Überladung ist anwendungsdomänensicher. der neu erstellte Thread wird beendet immer in der Anwendungsdomäne des Aufrufers des **_beginthread** oder **_beginthreadex**.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_beginthread**|\<process.h>|
 |**_beginthreadex**|\<process.h>|
@@ -330,8 +331,8 @@ Counter should be 1000000; it is-> 1000000
 
 ## <a name="see-also"></a>Siehe auch
 
-[Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread, _endthreadex](endthread-endthreadex.md)<br/>
-[abort](abort.md)<br/>
-[exit, _Exit, _exit](exit-exit-exit.md)<br/>
-[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>
+- [Prozess- und Umgebungssteuerung](../../c-runtime-library/process-and-environment-control.md)
+- [_endthread, _endthreadex](endthread-endthreadex.md)
+- [abort](abort.md)
+- [exit, _Exit, _exit](exit-exit-exit.md)
+- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)

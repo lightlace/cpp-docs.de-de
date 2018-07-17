@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8ce4941dcad2a9b02b853640076b71a97f68cbe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de6adddc4e7d95f3212c80666816d4855897388
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="recallocdbg"></a>_recalloc_dbg
 
@@ -81,7 +81,7 @@ Die *Filename* und *Linenumber* -Parameter sind nur verfügbar, wenn **_recalloc
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreichem Abschluss gibt diese Funktion entweder einen Zeiger an den Benutzerteil des neu belegten Speicherblocks zurück, ruft die neue Handlerfunktion auf oder gibt NULL zurück. Eine vollständige Beschreibung des Rückgabeverhaltens finden Sie im folgenden Abschnitt "Hinweise". Weitere Informationen zur Verwendung der neuen Handlerfunktion finden Sie unter der [_recalloc](recalloc.md)-Funktion.
+Bei erfolgreichem Abschluss dieser Funktion gibt einen Zeiger an den benutzerteil des neu belegten Speicherblocks zurück, ruft die neue Handlerfunktion oder gibt **NULL**. Eine vollständige Beschreibung des Rückgabeverhaltens finden Sie im folgenden Abschnitt "Hinweise". Weitere Informationen zur Verwendung der neuen Handlerfunktion finden Sie unter der [_recalloc](recalloc.md)-Funktion.
 
 ## <a name="remarks"></a>Hinweise
 

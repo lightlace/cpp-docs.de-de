@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0354d0a910db0f4237a56607a7322acb7a1b57a0
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34686850"
 ---
 # <a name="pointers-to-members"></a>Zeiger auf Member
 Deklarationen von Zeigern auf Member sind Sonderfälle von Zeigerdeklarationen.  Sie können mithilfe der folgenden Sequenz deklariert werden:  
@@ -90,7 +91,7 @@ int main()
 }  
 ```  
   
- Im vorherigen Beispiel `pwCaption` ist ein Zeiger auf einen Member der Klasse `Window` , die weist den Typ **Char\***. Der Typ von `pwCaption` lautet `char * Window::*`. Im nächsten Codefragment werden Zeiger auf die Memberfunktionen `SetCaption` und `GetCaption` deklariert.  
+ Im vorherigen Beispiel `pwCaption` ist ein Zeiger auf einen Member der Klasse `Window` , die weist den Typ **Char\***. Der Typ von `pwCaption` lautet `char * Window::* `. Im nächsten Codefragment werden Zeiger auf die Memberfunktionen `SetCaption` und `GetCaption` deklariert.  
   
 ```  
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  

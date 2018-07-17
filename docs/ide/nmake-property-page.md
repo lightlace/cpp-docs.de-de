@@ -1,5 +1,5 @@
 ---
-title: Eigenschaftenseite "NMake" (Windows C++) | Microsoft Docs
+title: Eigenschaftenseite „NMake“ (Windows C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,52 +20,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f156d69467f00c4c4a62ec84d3b870e2999d7115
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33327459"
 ---
 # <a name="nmake-property-page"></a>NMake (Eigenschaftenseite)
-Die **NMake** Eigenschaftenseite können Sie die Buildeinstellungen für NMake-Projekte angeben.  
+Mit der Eigenschaftenseite **NMake** können Sie Buildeinstellungen für NMake-Projekte angeben.  
   
- Weitere Informationen über NMake-Projekte finden Sie unter [Erstellen eines Makefile-Projekts](../ide/creating-a-makefile-project.md). Non_Windows MakeFile-Projekte, finden Sie unter [MakeFile-Projekteigenschaften (Linux C++)](../linux/prop-pages/makefile-linux.md), [allgemeine Projekteigenschaften (Android C++-Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page) oder [NMake-Eigenschaften (Android C++)](/visualstudio/cross-platform/nmake-android-prop-page).
+ Weitere Informationen über NMake Projekte finden Sie unter [Creating a Makefile Project (Erstellen eines Makefile-Projekts)](../ide/creating-a-makefile-project.md). Informationen über Makefile-Projekten unter anderen Betriebssystemen finden Sie unter [Makefile-Projekteigenschaften (Linux C++)](../linux/prop-pages/makefile-linux.md), [Allgemeine Projekteigenschaften (Android C++-Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page) oder [NMake-Eigenschaften (Android C++)](/visualstudio/cross-platform/nmake-android-prop-page).
   
- Die **NMake** Eigenschaftenseite enthält die folgenden Eigenschaften.  
+ Die Eigenschaftenseite **NMake** enthält die folgenden Eigenschaften:  
   
 ## <a name="uielement-list"></a>UIElement-Liste  
- **Erstellen Sie über die Befehlszeile**  
- Gibt den Befehl ausgeführt werden, wenn sein **erstellen** geklickt wird, auf die **erstellen** Menü.  
+ **Buildbefehlszeile**  
+ Gibt den Befehl an, der ausgeführt werden soll, wenn im Menü **Erstellen** auf **Erstellen** geklickt wird.  
   
- **Erstellen Sie alle über die Befehlszeile neu.**  
- Gibt den Befehl ausgeführt werden, wenn sein **Rebuild All** geklickt wird, auf die **erstellen** im Menü.  
+ **Befehlszeile „Alles neu erstellen“**  
+ Gibt den Befehl an, der ausgeführt werden soll, wenn im Menü **Erstellen** auf **Alles neu erstellen** geklickt wird.  
   
- **Bereinigen Sie die Befehlszeile**  
- Gibt den Befehl ausgeführt werden, wenn sein **Bereinigen** geklickt wird, auf die **erstellen** Menü.  
+ **Befehlszeile „Bereinigen“**  
+ Gibt den Befehl an, der ausgeführt werden soll, wenn im Menü **Erstellen** auf **Bereinigen** geklickt wird.  
   
  **Ausgabe**  
- Gibt den Namen der Datei, die die Ausgabe für die Befehlszeile enthalten soll. Der Dateiname basiert standardmäßig auf den Projektnamen.  
+ Gibt den Namen der Datei an, in der die Ausgabe für die Befehlszeile enthalten ist. Dieser Dateiname basiert standardmäßig auf dem Projektnamen.  
   
- **Präprozessor-Definitionen**  
- Gibt alle Präprozessordefinitionen sind, dass die Quelldateien verwenden. Der Standardwert richtet sich nach der aktuellen Plattform und Konfiguration.  
+ **Präprozessordefinitionen**  
+ Gibt alle Präprozessordefinitionen an, die die Quelldateien verwenden. Der Standardwert wird durch die aktuelle Plattform und Konfiguration bestimmt.  
   
- **Suchpfad einschließen**  
- Gibt die Verzeichnisse, in denen der Compiler nach Includedateien durchsucht.  
+ **Includesuchpfad**  
+ Gibt die Verzeichnisse an, in denen der Compiler nach Includedateien sucht.  
   
- **Erzwungenes enthält**  
- Gibt Dateien an, denen der Präprozessor automatisch verarbeitet, auch wenn sie nicht in den Projektdateien enthalten sind.  
+ **Erzwungene Includedateien**  
+ Gibt Dateien an, die der Präprozessor automatisch verarbeitet, selbst wenn sie nicht in den Projektdateien enthalten sind.  
   
- **Assembly-Suchpfad**  
- Gibt die Verzeichnisse, in denen .NET Framework, wenn sucht, er versucht, die zum Auflösen von Assemblys für .NET.  
+ **Assemblysuchpfad**  
+ Gibt die Verzeichnisse an, in denen .NET Framework beim Auflösen von .NET-Assemblys sucht.  
   
  **Erzwungene Verwendung von Assemblys**  
- Gibt die Assemblys, die .NET Framework automatisch verarbeitet.  
+ Gibt Assemblys an, die .NET Framework automatisch verarbeitet.  
   
  **Zusätzliche Optionen**  
- Gibt alle zusätzlichen Compilerschalter für IntelliSense verwenden, wenn es sich um Dateien in C++ analysiert.  
+ Gibt alle zusätzlichen Compileroptionen für die Analyse von C++-Dateien durch IntelliSense an.  
   
- Informationen über den Zugriff auf die **NMake** auf der Seite finden Sie unter [arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md).  
+ Informationen dazu, wie Sie auf die **NMake**-Eigenschaftenseite zugreifen, finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../ide/working-with-project-properties.md).  
   
- Informationen zum programmgesteuerten Zugriff auf Member dieses Objekts finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
+ Informationen zum programmgesteuerten Zugriff auf Members dieses Objekts finden Sie unter <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)   

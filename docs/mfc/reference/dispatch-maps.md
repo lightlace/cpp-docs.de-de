@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377095"
 ---
 # <a name="dispatch-maps"></a>Dispatchzuordnungen
 OLE-Automatisierung bietet Möglichkeiten zum Aufrufen von Methoden und Eigenschaften für Anwendungen Zugriff auf. Der Mechanismus, durch die Microsoft Foundation Class-Bibliothek für die Verteilung dieser Anforderungen angegeben ist, die "Dispatchzuordnung" die internen und externen Namen des Objektfunktionen und Eigenschaften sowie die Datentypen, die von den Eigenschaften selbst und ausweist Funktionsargumente.  

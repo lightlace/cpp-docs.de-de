@@ -13,11 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705604"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: Neuerungen von 2003 bis 2015
 
@@ -1936,7 +1937,7 @@ In diesem Release sind bedeutende Änderungen des Compilers enthalten.
 - Native 64-Bit-Compiler und Cross-Compiler.
 - Die /analyze-Compileroption (Enterprise-Codeanalyse) wurde hinzugefügt.
 - Die /bigobj-Compileroption wurde hinzugefügt.
-- „/clr:pure“, „/clr:safe“ und „/clr:oldSyntax“ wurden hinzugefügt. (Später in Visual Studio 2015 veraltet.)
+- „/clr:pure“, „/clr:safe“ und „/clr:oldSyntax“ wurden hinzugefügt. (Dies wurde später in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 entfernt.)
 - Veraltete Compileroptionen: Viele Compileroptionen wurden in diesem Release als veraltet gekennzeichnet. Weitere Informationen finden Sie unter „Deprecated Compiler Options (Veraltete Compileroptionen)“.
 - Das doppelte Thunking in /clr-Code wurde reduziert. Weitere Informationen finden Sie unter „Doppeltes Thunking (C++)“.
 - „/EH“ (Ausnahmebehandlungsmodell) oder „/EHs“ können nicht mehr verwendet werden, um eine Ausnahme zu erfassen, die mit einer anderen Funktion als mit „Throw“ ausgelöst wird. Verwenden Sie stattdessen „/EHa“.

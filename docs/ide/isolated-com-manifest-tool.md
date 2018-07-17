@@ -1,5 +1,5 @@
 ---
-title: Manifesttool isolierte COM-Eigenschaften (Visual C++) | Microsoft Docs
+title: Isolated COM-Eigenschaften des Manifesttools (Visual C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,35 +18,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33330180"
 ---
-# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Isolierte COM, Manifesttool, Konfigurationseigenschaften, &lt;Projektname&gt; Eigenschaftenseiten (Dialogfeld)
-Mithilfe dieses Dialogfelds an **Isolated COM** Optionen für [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Isolated COM, Manifesttool, Konfigurationseigenschaften, &lt;Projektname&gt;-Eigenschaftenseiten (Dialogfeld)
+Verwenden Sie dieses Dialogfeld, um **Isolated COM**-Optionen für die Datei [Mt.exe](http://msdn.microsoft.com/library/aa375649) anzugeben.  
   
- Öffnen Sie diese Eigenschaftenseiten-Dialogfeld für den Zugriff auf die Eigenschaftenseiten für das Projekt oder das Eigenschaftenblatt. Erweitern Sie die **Manifesttool** Knoten unter **allgemeine Eigenschaften**, und wählen Sie dann **Isolated COM**.  
+ Öffnen Sie die Eigenschaftenseiten für Ihr Projekt oder Ihr Eigenschaftenblatt, um auf das Dialogfeld „Eigenschaftenseite“ zuzugreifen. Erweitern Sie den Knoten **Manifesttool** unter **Allgemeine Eigenschaften**, und klicken Sie dann auf **Isolated COM**.  
   
 ## <a name="task-list"></a>Aufgabenliste  
   
 -   [Vorgehensweise: Erstellen von isolierten Anwendungen zur Verwendung von COM-Komponenten](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
 ## <a name="uielement-list"></a>UIElement-Liste  
- **Typbibliotheksdatei an**  
- Verwendet die Option/tlb um den Namen der Typbibliotheksdatei (TLB-Datei) anzugeben, die zum Generieren der Manifestdatei Manifesttool verwenden.  
+ **Typbibliotheksdatei**  
+ Verwendet die Option „/tlb“, um den Namen der Typbibliotheksdatei (TLB-Datei) anzugeben, die das Manifesttool verwendet, um die Manifestdatei zu erstellen.  
   
  **Registrierungsskriptdatei**  
- Verwendet die Option legt den Namen der Registrierungsskriptdatei (.rgs-Datei) an, die zum Generieren der Manifestdatei Manifesttool verwenden.  
+ Verwendet die Option „/rgs“, um den Namen der Registrierungsskriptdatei (RGS-Datei) anzugeben, die das Manifesttool verwendet, um die Manifestdatei zu erstellen.  
   
- **Dateiname der Komponente**  
- Verwendet die/DLL-Option den Namen der Ressource an, die das manifest Tool generiert. Geben Sie einen Wert für diese Eigenschaft bei der Werte für entweder **Typbibliotheksdatei** oder **Registrierungsskriptdatei** angegeben werden.  
+ **Komponentendateiname**  
+ Verwendet die Option „/dll“, um den Namen der Ressource anzugeben, die das Manifesttool generiert. Sie müssen für diese Eigenschaft einen Wert eingeben, wenn Werte für die **Typbibliotheksdatei** oder die **Registrierungsskriptdatei** angegeben sind.  
   
  **Ersetzungsdatei**  
- Verwendet die Option/replacements fest, geben Sie den vollständigen Pfad zur Datei, die Werte für ersetzbare Zeichenfolgen in der RGS-Datei enthält.  
+ Verwendet die Option „/replacements“, um den vollständigen Pfad zu der Datei anzugeben, die Werte für ersetzbare Zeichenfolgen in der RGS-Datei enthält.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Isolierte Anwendungen](http://msdn.microsoft.com/library/aa375190)   
- [ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest)   
- [Manifesttool-Eigenschaftenseiten](../ide/manifest-tool-property-pages.md)   
+ [Isolated Applications (Isolierte Anwendungen)](http://msdn.microsoft.com/library/aa375190)   
+ [ClickOnce Application Manifest (ClickOnce-Anwendungsmanifest)](/visualstudio/deployment/clickonce-application-manifest)   
+ [Manifesttooleigenschaftenseiten](../ide/manifest-tool-property-pages.md)   
  [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)   

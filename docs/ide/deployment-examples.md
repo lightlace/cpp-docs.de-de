@@ -1,5 +1,5 @@
 ---
-title: Beispiele für die Bereitstellung | Microsoft Docs
+title: Bereitstellungsbeispiele | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,13 +17,14 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 436b289c14110dd8f616112a309e757618b6f954
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33327410"
 ---
 # <a name="deployment-examples"></a>Bereitstellungsbeispiele
-Dieser Abschnitt enthält Beispiele zur Veranschaulichung zum Bereitstellen von Visual C++-Anwendungen.  
+Dieser Abschnitt enthält Beispiele zur Veranschaulichung der Bereitstellung von Visual C++-Anwendungen.  
   
 ## <a name="examples"></a>Beispiele  
  [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setup-Projekts](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)  
@@ -36,4 +37,4 @@ Dieser Abschnitt enthält Beispiele zur Veranschaulichung zum Bereitstellen von 
   
 ## <a name="see-also"></a>Siehe auch  
  [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
- [Bereitstellen von Desktopanwendungen](../ide/deploying-native-desktop-applications-visual-cpp.md)
+ [Deploying Desktop Applications (Bereitstellen von Desktopanwendungen)](../ide/deploying-native-desktop-applications-visual-cpp.md)

@@ -57,11 +57,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74be09a9a852d2bfd29b40a5d63583784e3f75a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 467184acd7ef78ee52f1605d23f2d3b80e6adb83
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -129,7 +129,7 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf das nächste Token in gefunden *str*. Gibt **NULL** Wenn keine weiteren Token gefunden werden. Jeder Aufruf ändert *str* durch das Ersetzen einer **NULL** Zeichen für Trennzeichen, das nach dem zurückgegebenen Token auftritt.
+Gibt einen Zeiger auf das nächste Token in gefunden *str*. Gibt **NULL** Wenn keine weiteren Token gefunden werden. Jeder Aufruf ändert *str* durch das Ersetzen von Trennzeichen, das nach dem zurückgegebenen Token auftritt, ein Null-Zeichen.
 
 ### <a name="error-conditions"></a>Fehlerbedingungen
 
@@ -151,7 +151,7 @@ Beim ersten Aufruf von **Strtok_s** die Funktion vorangestellte Trennzeichen üb
 
 Da die *Kontext* Parameter hat Vorrang vor der im verwendeten statischen Puffer **Strtok** und **_strtok_l**, es ist möglich, zwei Zeichenfolgen im gleichen Thread gleichzeitig analysiert werden.
 
-Der Ausgabewert wird von der Einstellung der beeinflusst die **LC_CTYPE** -kategorieneinstellung des Gebietsschemas; Siehe [Setlocale](setlocale-wsetlocale.md) für Weitere Informationen. Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema des Threads für dieses vom Gebietsschema abhängiges Verhalten. Die Versionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch stattdessen den *Gebietsschema* Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+Der Ausgabewert ist von der Kategorieeinstellung **LC_CTYPE** des Gebietsschemas betroffen. Weitere Informationen finden Sie unter [setlocale](setlocale-wsetlocale.md). Die Versionen dieser Funktionen ohne das **_l** -Suffix verwenden das aktuelle Gebietsschema des Threads für dieses vom Gebietsschema abhängiges Verhalten. Die Versionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch stattdessen den *Gebietsschema* Parameter. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Anforderungen
 

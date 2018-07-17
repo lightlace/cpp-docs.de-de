@@ -1,5 +1,5 @@
 ---
-title: Hinweis Dateien | Microsoft Docs
+title: Hinweisdateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,23 +22,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33336696"
 ---
 # <a name="hint-files"></a>Hinweisdateien
-Ein *Hinweisdatei* kann Visual Studio integrierten Entwicklungsumgebung (IDE) interpretieren Visual C++-Bezeichnern, z. B. die Namen der Funktionen und Makros. Wenn Sie eine Visual C++-Projekts, der IDE öffnen *Analysesystem* analysiert den Code in jeder Quelldatei im Projekt, und sammelt Informationen zu jeder Bezeichner. Die IDE diese Informationen verwendet, um Funktionen zu unterstützen, wie die **Klassenansicht** Browser und **Navigationsleiste**.  
+Eine *Hinweisdatei* unterstützt die integrierte Visual Studio-Entwicklungsumgebung (IDE) dabei, Visual C++-Bezeichner wie die Namen von Funktionen und Makros zu interpretieren. Wenn Sie ein Visual C++-Projekt öffnen, analysiert das *Analysesystem* der IDE den Code in jeder Quelldatei des Projekts und sammelt Informationen zu jedem Bezeichner. Die IDE verwendet diese Informationen anschließend, um Features wie die **Klassenansicht** und die **Navigationsleiste** zu unterstützen.  
   
- Das Analysesystem, die in Visual C++ 2010 eingeführt wird, versteht die C/C++-Syntax, jedoch kann fälschlicherweise eine Anweisung, die ein Makro enthält. Die Anweisung kann fehlinterpretiert werden, wenn das Makro bewirkt, Quellcode dass und syntaktisch falsch geschrieben werden. Die Anweisung kann syntaktisch richtig werden, wenn der Quellcode kompiliert wird und die Preprocesser ersetzt die [Makrobezeichner](../preprocessor/hash-define-directive-c-cpp.md) mit seiner Definition. Das Analysesystem funktioniert, ohne das Projekt zu erstellen, da Hinweisdateien verwendet wird, um Makros zu interpretieren. Aus diesem Grund wie z. B. feature eine Durchsuchen **Klassenansicht** ist sofort verfügbar.  
+ Das Analysesystem, das in Visual C++ 2010 eingeführt wurde, versteht die C/C++-Syntax, kann jedoch Anweisungen falsch interpretieren, die Makros enthält. Die Anweisung kann falsch interpretiert werden, wenn das Makro dazu führt, dass der Quellcode syntaktisch falsch geschrieben ist. Die Syntax der Anweisung kann korrigiert werden, wenn der Quellcode kompiliert wird und der Präprozessor den [Makrobezeichner](../preprocessor/hash-define-directive-c-cpp.md) durch seine Definition ersetzt. Das Analysesystem funktioniert, ohne das Projekt erstellen zu müssen, da es Hinweisdateien verwendet, um Makros zu interpretieren. Aus diesem Grund steht eine Suchfunktion wie die **Klassenansicht** sofort zur Verfügung.  
   
- Hint-Datei enthält Benutzer anpassbaren *Hinweise*, wofür die gleiche Syntax wie C/C++-Makrodefinitionen. Visual C++ enthält eine integrierten Hint-Datei, die für die meisten Projekte ausreichend ist, aber Sie können eigene Hinweisdateien zum Verbessern der Visual Studio Bezeichner behandelt erstellen.  
+ Eine Hinweisdatei enthält vom Benutzer anpassbare *Hinweise*, die die gleiche Syntax wie die C/C++-Makrodefinitionen aufweisen. Visual C++ enthält eine integrierte Hinweisdatei, die für die meisten Projekte ausreicht. Sie können jedoch eigene Hinweisdateien erstellen, um zu verbessern, wie Visual Studio Bezeichner verarbeitet.  
   
 > [!IMPORTANT]
->  Wenn Sie ändern oder eine Hint-Datei hinzufügen, müssen Sie die SDF-Datei und/oder VC.db-Datei in der Reihenfolge, damit die Änderungen wirksam werden in der Projektmappe löschen.  
+>  Wenn Sie eine Hinweisdatei ändern oder hinzufügen, müssen Sie die SDF-Datei und/oder die Datei „VC.db“ aus der Projektmappe löschen, damit die Änderungen wirksam werden.  
   
 ## <a name="scenario"></a>Szenario  
- Angenommen, dass der folgende Code in einer Quelldatei, die Sie überprüfen, mit der **Klassenansicht** Browser. Die `STDMETHOD` Makro deklariert eine Methode namens `myMethod` , die einen Parameter annimmt, und gibt einen Zeiger auf eine **HRESULT**.  
+ Nehmen Sie an, dass folgender Code sich in einer Quelldatei befindet, die Sie mit der **Klassenansicht** überprüfen. Das `STDMETHOD`-Makro deklariert eine Methode namens `myMethod`, die einen Parameter annimmt und einen Zeiger auf **HRESULT** zurückgibt.  
   
 ```  
 // Source code file.  
@@ -54,69 +55,69 @@ STDMETHOD(myMethod)(int parameter1);
 #define HRESULT void*  
 ```  
   
- Das Analysesystem Quellcode nicht interpretiert werden kann, da eine Funktion namens STDMETHOD anscheinend deklariert werden, und diese Deklaration ist syntaktisch falsch, da sie zwei Parameterlisten verfügt. Das Analysesystem ist nicht geöffnet werden die Header-Datei, um die Definitionen für Ermitteln der `STDMETHOD`, `STDMETHODCALLTYPE`, und `HRESULT` Makros. Da das Analysesystem nicht interpretieren kann die `STDMETHOD` -Makro, es ignoriert die gesamte Anweisung und setzt die Analyse fort.  
+ Das Analysesystem kann den Quellcode nicht interpretieren, da eine Funktion namens „STDMETHOD“ deklariert zu sein scheint. Diese Deklaration ist jedoch syntaktisch falsch, da sie über zwei Parameterlisten verfügt. Das Analysesystem öffnet nicht die Headerdatei, um die Definition für die Makros `STDMETHOD`, `STDMETHODCALLTYPE` und `HRESULT` zu ermitteln. Da das Analysesystem das Makro `STDMETHOD` nicht interpretieren kann, ignoriert es die gesamte Anweisung und setzt die Analyse fort.  
   
- Das Analysesystem verwendet nicht Headerdateien, da das Projekt möglicherweise eine oder mehrere wichtige Headerdateien abhängig. Wenn alle Header-Datei geändert wird, möglicherweise die Analysesystem aller Headerdateien im Projekt nochmals die verlangsamt die Leistung der IDE. Stattdessen verwendet das Analysesystem Hinweise, die angeben, wie behandelt die `STDMETHOD`, `STDMETHODCALLTYPE`, und `HRESULT` Makros.  
+ Das Analysesystem verwendet keine Headerdateien, da Ihr Projekt möglicherweise von einer oder mehreren wichtigen Headerdateien abhängt. Wenn eine Headerdatei geändert wird, muss das Analysesystem alle Headerdateien im Projekt neu überprüfen, wodurch die Leistung der IDE verlangsamt wird. Stattdessen verwendet das Analysesystem Hinweise, die angeben, wie die Makros `STDMETHOD`, `STDMETHODCALLTYPE` und `HRESULT` verarbeitet werden.  
   
- Woher wissen Sie, dass Sie einen Hinweis benötigen? Und wenn Sie einen Hinweis, welche Art sollten Sie erstellen? Ist ein Zeichen dafür, dass ein Hinweis erforderlich ist wenn die Ansicht eines Bezeichners in **Klassenansicht** ist inkonsistent mit der Ansicht in der **Editor**. Beispielsweise **Klassenansicht** möglicherweise nicht anzeigen, die ein Klassenmember, die Sie kennen vorhanden ist, oder der Name des Members ist falsch. Weitere Informationen zu den Arten von hinweisen, die allgemeine Probleme gelöst werden, finden Sie unter der was-Makros erfordern ein Hinweis? weiter unten in diesem Thema.  
+ Woher wissen Sie, dass Sie einen Hinweis benötigen? Wenn Sie einen Hinweis benötigen, welchen sollten Sie dann erstellen? Ein Zeichen dafür, dass ein Hinweis erforderlich ist, liegt vor, wenn die Ansicht eines Bezeichners in der **Klassenansicht** sich von der Ansicht im **Editor** unterscheidet. Die **Klassenansicht** zeigt beispielsweise einen Klassenmember nicht an, von dem Sie wissen, dass er vorhanden ist, oder der Name des Members ist falsch. Weitere Informationen zu den Hinweistypen, mit denen allgemeine Probleme gelöst werden können, finden Sie im Verlauf dieses Artikels unter „Welche Makros benötigen einen Hinweis?“.  
   
 ## <a name="architecture"></a>Architektur  
- Hinweisdateien beziehen sich auf physische Verzeichnisse, nicht auf die logischen Verzeichnisse in dargestellten **Projektmappen-Explorer**. Sie müssen keinen Hint-Datei dem Projekt für eine Auswirkung hat die Hint-Datei hinzufügen. Das Analysesystem verwendet Hinweisdateien nur, wenn es Quelldateien analysiert.  
+ Hinweisdateien beziehen sich auf physische Verzeichnisse, nicht auf die lokalen Verzeichnisse, die im **Projektmappen-Explorer** dargestellt werden. Sie müssen eine Hinweisdatei nicht zu Ihrem Projekt hinzufügen, damit diese wirksam ist. Das Analysesystem verwendet Hinweisdateien nur, wenn es Quelldateien analysiert.  
   
- Jede Hint-Datei heißt **cpp.hint**. Daher viele Verzeichnisse können Hint-Datei enthalten, sondern nur eine Hint-Datei in einem bestimmten Verzeichnis auftreten kann.  
+ Jede Hinweisdatei heißt **cpp.hint**. Daher können viele Verzeichnisse eine Hinweisdatei enthalten, es kann jedoch nur eine Hinweisdatei pro Verzeichnis vorhanden sein.  
   
- Das Projekt kann von NULL oder mehr Hinweisdateien beeinflusst werden. Wenn keine Hinweisdateien vorhanden sind, verwendet das Analysesystem Fehler Wiederherstellungstechniken, unlesbare Quellcode ignoriert werden sollen. Andernfalls verwendet das Analysesystem die folgende Strategie zum Suchen und Hinweise zu sammeln.  
+ Null oder mehr Hinweisdateien können Auswirkungen auf Ihr Projekt haben. Wenn keine Hinweisdateien vorhanden sind, verwendet das Analysesystem Wiederherstellungstechniken für Fehler, um den unlesbaren Quellcode zu ignorieren. Andernfalls verwendet das Analysesystem folgende Strategie, um Hinweise zu suchen und zu sammeln.  
   
 ### <a name="search-order"></a>Suchreihenfolge  
- Das Analysesystem sucht Verzeichnisse für Hinweisdateien in der folgenden Reihenfolge an.  
+ Das Analysesystem durchsucht Verzeichnisse in folgender Reihenfolge nach Hinweisdateien.  
   
--   Das Verzeichnis, das das Installationspaket für Visual C++ enthält (**Vcpackages**). Dieses Verzeichnis enthält eine integrierte Hint-Datei, die Symbole in häufig verwendeten Systemdateien, wie z. B. beschreibt **windows.h**. Daher erbt das Projekt automatisch die meisten dieser Hinweise, die benötigt werden.  
+-   Das Verzeichnis, das das Installationspaket für Visual C++ enthält (**vcpackages**). Dieses Verzeichnis enthält eine integrierte Hinweisdatei, die Symbole in häufig verwendeten Systemdateien (z.B. **windows.h**) beschreibt. Deshalb erbt Ihr Projekt automatisch die meisten erforderlichen Hinweise.  
   
--   Der Pfad aus dem Stammverzeichnis einer Quelldatei in das Verzeichnis, das die Quelldatei selbst enthält. In einem typischen Visual C++-Projekt enthält das Stammverzeichnis die Projektmappe bzw. im Projekt-Datei.  
+-   Der Pfad vom Stammverzeichnis einer Quelldatei zu dem Verzeichnis, das die Quelldatei enthält. In einem typischen Visual C++-Projekt enthält das Stammverzeichnis die Projektmappen- oder die Projektdatei.  
   
-     Ausnahme dieser Regel besteht, wenn eine *Stoppdatei* befindet sich im Pfad zur Quelldatei. Eine Stoppdatei enthält zusätzliche Kontrolle über die Suchreihenfolge und ist Datei mit dem Namen **cpp.stop**. Sucht statt aus dem Stammverzeichnis, das Analysesystem aus dem Verzeichnis, das die Stoppdatei in das Verzeichnis enthält, die die Quelldatei enthält. In einem typischen Projekt benötigen Sie keine Stoppdatei.  
+     Eine Ausnahme besteht darin, wenn sich eine *STOP-Datei* im Pfad zur Quelldatei befindet. Eine STOP-Datei ermöglicht eine zusätzliche Steuerung der Suchreihenfolge. Dazu zählen alle Dateien, die **cpp.stop** heißen. Statt im Stammverzeichnis zu beginnen, sucht das Analysesystem von dem Verzeichnis aus, das die STOP-Datei enthält, und beendet die Suche in dem Verzeichnis, das die Quelldatei enthält. In einem typischen Projekt benötigen Sie keine STOP-Datei.  
   
-### <a name="hint-gathering"></a>Erfassen von Hinweisen  
- Hint-Datei enthält keinen oder mehr *Hinweise*. Ein Hinweis definiert wird, oder wie ein C/C++-Makro gelöscht. D. h. die `#define` Präprozessordirektive erstellt oder definiert einen Hinweis, und die `#undef` -Direktive löscht einen Hinweis.  
+### <a name="hint-gathering"></a>Sammeln von Hinweisen  
+ Eine Hinweisdatei enthält null oder mehr *Hinweise*. Ein Hinweis wird genau wie ein C/C++-Makro definiert oder gelöscht. Das bedeutet, dass die Präprozessordirektive `#define` einen Hinweis erstellt oder neu definiert und die Direktive `#undef` einen Hinweis löscht.  
   
- Analysesystem jedes Hint-Datei in der zuvor beschriebenen Suchreihenfolge öffnet, sammelt Hinweise für jede Datei in einen Satz von *effektive Hinweise*, und klicken Sie dann die effektive Hinweise verwendet, um die Bezeichner im Code zu interpretieren.  
+ Das Analysesystem öffnet jede Hinweisdatei in der zuvor beschriebenen Suchreihenfolge und sammelt die Hinweise in jeder Datei in einer Reihe von *effektiven Hinweisen*. Diese werden dann verwendet, um die Bezeichner im Code zu interpretieren.  
   
- Das Analysesystem verwendet die folgenden Regeln, um Hinweise zu sammeln.  
+ Das Analysesystem verwendet folgende Regeln, um Hinweise zu sammeln.  
   
--   Wenn der neue Hinweis einen Namen, der noch nicht definiert ist angibt, wird der Name der neue Hinweis effektive hinweisen hinzugefügt.  
+-   Wenn der neue Hinweis einen Namen festlegt, der noch nicht definiert ist, fügt der neue Hinweis den Namen zu den effektiven Hinweisen hinzu.  
   
--   Wenn der neue Hinweis einen Namen, der bereits definiert ist angibt, wird der neue Hinweis vorhandenen Hinweis neu definiert.  
+-   Wenn der neue Hinweis einen Namen festlegt, der bereits definiert ist, definiert der neue Hinweis den vorhandenen Hinweisen neu.  
   
--   Wenn der neue Hinweis ist ein `#undef` Richtlinie, die einen vorhandenen effektiven Hinweis angibt, der neue Hinweis löscht den vorhandenen Hinweis.  
+-   Wenn der neue Hinweis eine `#undef`-Direktive ist, die einen vorhandenen effektiven Hinweis angibt, löscht der neue Hinweis den vorhandenen Hinweis.  
   
- Die erste Regel besagt, dass effektive Hinweise von zuvor geöffneten Hinweisdateien geerbt werden. Die letzten beiden Regeln bedeuten, dass Hinweise, die später in die Suchreihenfolge auftreten Hinweise überschreiben können, die zuvor aufgetreten sind. Beispielsweise können Sie alle vorherigen Hinweise überschreiben, wenn Sie eine Hint-Datei im Verzeichnis erstellen, die eine Quelldatei enthält.  
+ Die erste Regel bedeutet, dass effektive Hinweise von zuvor geöffneten Hinweisdateien geerbt werden. Die letzten beiden Regeln bedeuten, dass Hinweise, die später in der Suchreihenfolge auftreten, zuvor aufgetretene Hinweise überschreiben können. Sie können beispielsweise alle vorherigen Hinweise überschreiben, wenn Sie eine Hinweisdatei in dem Verzeichnis erstellen, das eine Quelldatei enthält.  
   
- Eine Darstellung von Hinweisen sind, finden Sie unter der `Example` weiter unten in diesem Thema.  
+ Eine Darstellung, wie Hinweise gesammelt werden, finden Sie im Verlauf dieses Artikels im Abschnitt `Example`.  
   
 ### <a name="syntax"></a>Syntax  
- Hinweise werden erstellt und mit derselben Syntax wie die Präprozessordirektiven, die erstellen und Löschen von Makros gelöscht. Tatsächlich verwendet das Analysesystem die C/C++-Präprozessor die Hinweise ausgewertet. Weitere Informationen zu den Präprozessordirektiven, finden Sie unter [#define-Direktive (C/C++)](../preprocessor/hash-define-directive-c-cpp.md) und [#undef-Direktive (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md).  
+ Hinweise werden mit der gleichen Syntax erstellt und gelöscht, die die Präprozessordirektiven aufweisen, die Makros erstellen und löschen. Tatsächlich verwendet das Analysesystem den C/C++-Präprozessor, um die Hinweise auszuwerten. Weitere Informationen zu den Präprozessordirektiven finden Sie unter [#define Directive (C/C++) (#define-Direktive (C/C++))](../preprocessor/hash-define-directive-c-cpp.md) und [#undef Directive (C/C++) (#undef-Direktive (C/C++))](../preprocessor/hash-undef-directive-c-cpp.md).  
   
- Die einzigen ungewöhnlichen Syntaxelemente werden die `@<`, `@=`, und `@>` Ersatzzeichenfolgen. Hierbei handelt es sich um Hinweisdateien spezifische Ersetzungszeichenfolgen, die mit, nur verwendet werden *Zuordnung* Makros. Eine Karte ist ein Satz von Makros, die Daten, Funktionen oder Ereignissen auf anderen Daten, Funktionen oder Ereignishandler beziehen. Beispielsweise `MFC` verwendet Zuordnungen, um erstellen [meldungszuordnungen](../mfc/reference/message-maps-mfc.md), und `ATL` verwendet Zuordnungen, um erstellen [Objekt-Zuordnungen](../atl/reference/object-map-macros.md). Die spezifische Ersetzungszeichenfolgen Hinweisdatei Geben Sie die Start-, die intermediate und die Endadresse Elemente einer Zuordnung an. Nur der Name eines Zuordnungsmakros spielt. Aus diesem Grund blendet jede Ersetzungszeichenfolge die Implementierung des Makros absichtlich aus.  
+ Die einzigen ungewöhnlichen Syntaxelemente sind die Ersatzzeichenfolgen `@<`, `@=` und `@>`. Diese Ersatzzeichenfolgen sind für Hinweisdateien spezifisch und werden nur mit *Zuordnungsmakros* verwendet. Eine Zuordnung besteht aus mehreren Makros, die Daten, Funktionen oder Ereignisse mit anderen Daten, Funktionen oder Ereignishandlern in Verbindung bringen. `MFC` verwendet beispielsweise Zuordnungen, um [Meldungszuordnungen](../mfc/reference/message-maps-mfc.md) zu erstellen, und `ATL` verwendet Zuordnungen, um [Objektzuordnungen](../atl/reference/object-map-macros.md) zu erstellen. Die für die Hinweisdateien spezifischen Ersatzzeichenfolgen geben die Start-, Zwischen- und Endelemente einer Zuordnung an. Nur der Name eines Zuordnungsmakros ist relevant. Deshalb blendet jede Ersatzzeichenfolge die Implementierung des Makros absichtlich aus.  
   
- Hinweise verwenden die folgende Syntax.  
+ Hinweise verwenden folgende Syntax.  
   
 |Syntax|Bedeutung|  
 |------------|-------------|  
-|`#define` *Hinweis-Name* *Ersetzungszeichenfolge*<br /><br /> `#define` *Hinweis-Name* `(` *Parameter*,... `)` *Ersetzungszeichenfolge*|Eine Präprozessordirektive, die einen neuen Hinweis definiert oder einen vorhandenen Hinweis definiert. Nach der Richtlinie ersetzt der Präprozessor jedes Vorkommen von *Hinweis-Name* im Quellcode mit *Ersetzungszeichenfolge*.<br /><br /> Das zweite Syntaxformat definiert einen funktionsähnliche Hinweis. Tritt ein funktionsähnliche Hinweis im Quellcode, ersetzt der Präprozessor zuerst jedes Vorkommen von *Parameter* in *Ersetzungszeichenfolge* mit der entsprechenden Arguments in Quellcode, und klicken Sie dann ersetzt *Hinweis-Name* mit *Ersetzungszeichenfolge*.|  
-|`@<`|Eine bestimmte Hinweisdateien *Ersetzungszeichenfolge* , der den Anfang eines Satzes von Zuordnungselementen angibt.|  
-|`@=`|Eine bestimmte Hinweisdateien *Ersetzungszeichenfolge* , der ein intermediate kartenelement angibt. Eine Karte kann mehrere Elemente enthalten.|  
-|`@>`|Eine bestimmte Hinweisdateien *Ersetzungszeichenfolge* , der das Ende eines Satzes von Zuordnungselementen angibt.|  
-|`#undef` *Hinweis-name*|Die Präprozessordirektive angegeben, durch den einen vorhandenen Hinweis, der gelöscht werden. Der Name des Hinweises wird bereitgestellt, indem die *Hinweis-Name* Bezeichner.|  
+|`#define` *Hinweisname* *Ersatzzeichenfolge*<br /><br /> `#define` *Hinweisname* `(` *Parameter*, ...`)`*Ersatzzeichenfolge*|Eine Präprozessordirektive, die einen neuen Hinweis definiert oder einen vorhandenen Hinweis neu definiert. Nach der Direktive ersetzt der Präprozessor jedes Vorkommen von *Hinweisname* im Quellcode mit *Ersatzzeichenfolge*.<br /><br /> Durch das zweite Syntaxformat wird ein funktionsähnlicher Hinweis definiert. Wenn ein funktionsähnlicher Hinweis im Quellcode vorkommt, ersetzt der Präprozessor zunächst jedes Vorkommen von *Parameter* in *Ersatzzeichenfolge* mit dem entsprechenden Argument im Quellcode. Anschließend wird *Hinweisname* durch *Ersatzzeichenfolge* ersetzt.|  
+|`@<`|Eine für Hinweisdateien spezifische *Ersatzzeichenfolge*, die den Anfang von einer Reihe von Zuordnungselementen definiert.|  
+|`@=`|Eine für Hinweisdateien spezifische *Ersatzzeichenfolge*, die ein Zwischenzuordnungselement definiert. Eine Zuordnung kann mehrere Zuordnungselemente enthalten.|  
+|`@>`|Eine für Hinweisdateien spezifische *Ersatzzeichenfolge*, die das Ende von einer Reihe von Zuordnungselementen definiert.|  
+|`#undef` *Hinweisname*|Die Präprozessordirektive, die einen vorhandenen Hinweis löscht. Der Name des Hinweises wird durch den Bezeichner *Hinweisname* bereitgestellt.|  
 |`//` *Kommentar*|Ein einzeiliger Kommentar.|  
-|`/*` *comment* `*/`|Keinen mehrzeiligen Kommentar.|  
+|`/*` *comment* `*/`|Ein mehrzeiliger Kommentar.|  
   
-## <a name="what-macros-require-a-hint"></a>Was Makros erfordern einen Hinweis?  
- Bestimmte Arten von Makros können das Analysesystem beeinträchtigen. Dieser Abschnitt beschreibt die Typen von Makros, die zu einem Problem führen können, und den Typ der Hinweis, dass Sie erstellen können, um dieses Problem zu beheben.  
+## <a name="what-macros-require-a-hint"></a>Welche Makros erfordern einen Hinweis?  
+ Bestimmte Arten von Makros können das Analysesystem beeinträchtigen. In diesem Abschnitt werden die Arten von Makros beschrieben, die Probleme verursachen können, sowie die Hinweistypen, die Sie erstellen können, um diese Probleme zu beheben.  
   
 ### <a name="disruptive-macros"></a>Störende Makros  
- Einige Makros dazu führen, dass das Analysesystem Quellcode fälschlicherweise, aber ohne Beeinträchtigung des Browsers ignoriert werden können. Z. B. der Source Code Annotation Language ([SAL](../c-runtime-library/sal-annotations.md)) Makros in C++-Attribute, mit denen Sie Programmierfehler finden aufgelöst. Wenn Sie SAL-Anmerkungen zu ignorieren, da Sie Code durchsuchen möchten, empfiehlt es sich um Hint-Datei zu erstellen, die die Anmerkung ausblendet.  
+ Einige Makros führen dazu, dass das Analysesystem den Quellcode falsch interpretiert. Diese können jedoch ignoriert werden, ohne die Suche zu beeinträchtigen. Die SAL-Makros ([Source Code Annotation Language](../c-runtime-library/sal-annotations.md)) werden beispielsweise in C++-Attribute aufgelöst, die Sie beim Suchen von Programmierfehlern unterstützen können. Wenn Sie SAL-Anmerkungen beim Durchsuchen von Code ignorieren möchten, sollten Sie eine Hinweisdatei erstellen, die diese ausblendet.  
   
- In den folgenden Quellcode der Parametertyp für die `FormatWindowClassName()` Funktion `PXSTR`, und der Name des Parameters ist `szBuffer`. Allerdings die Analyse System Fehler der `_Pre_notnull_` und `_Post_z_` SAL-Anmerkungen für den Parametertyp oder der Name des Parameters.  
+ Im folgenden Quellcode ist der Parametertyp für die `FormatWindowClassName()`-Funktion `PXSTR`, und der Parametername ist `szBuffer`. Das Analysesystem verwechselt die SAL-Anmerkungen `_Pre_notnull_` und `_Post_z_` jedoch entweder mit dem Parametertyp oder mit dem Parameternamen.  
   
  **Quellcode:**  
   
@@ -124,20 +125,20 @@ STDMETHOD(myMethod)(int parameter1);
 static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)  
 ```  
   
- **Strategie:** Null-Definition  
+ **Strategie:** NULL-Definition  
   
- Die Strategie in dieser Situation ist die SAL-Anmerkungen behandelt, als wäre sie nicht vorhanden war. Zu diesem Zweck geben Sie einen Hinweis, dessen Ersetzungszeichenfolge null ist. Folglich Analysesystem die Anmerkungen ignoriert und die **Klassenansicht** Browser nicht angezeigt. (Visual C++ enthält eine integrierten Hint-Datei, die SAL-Anmerkung ausblendet.)  
+ Die Strategie besteht in dieser Situation darin, die SAL-Anmerkungen so zu behandeln, als wären sie nicht vorhanden. Geben Sie hierzu einen Hinweis an, dessen Ersatzzeichenfolge NULL ist. In Folge ignoriert das Analysesystem die Anmerkungen, und die **Klassenansicht** zeigt diese nicht an. (Visual C++ enthält eine integrierte Hinweisdatei, die SAL-Anmerkungen ausblendet.)  
   
- **Hint-Datei:**  
+ **Hinweisdatei:**  
   
 ```  
 #define _Pre_notnull_  
 ```  
   
-### <a name="concealed-cc-language-elements"></a>Verdeckten C-/C++-Sprachelemente  
- Wird ein typischer Grund dafür, dass das Analysesystem Quellcode Datenpakete falsch interpretiert wird, wenn ein Makro blendet Sie aus C/C++ [Markierungszeichen](../cpp/punctuators-cpp.md) oder [Schlüsselwort](../cpp/keywords-cpp.md) token. D. h., ein Makro möglicherweise enthalten die Hälfte eines Paars von Markierungszeichen, z. B. `<>`, `[]`, `{}`, und `()`.  
+### <a name="concealed-cc-language-elements"></a>Ausgeblendete C/C++-Sprachelemente  
+ Häufig ist der Grund dafür, dass das Analysesystem den Quellcode falsch interpretiert, dass ein Makro ein C++-Token für ein [Markierungszeichen](../cpp/punctuators-cpp.md) oder ein [Schlüsselwort](../cpp/keywords-cpp.md) ausblendet. Das bedeutet, dass ein Makro nur die Hälfte eines Paars von Markierungszeichen enthalten kann, z.B. `<>`, `[]`, `{}` und `()`.  
   
- In den folgenden Quellcode der `START_NAMESPACE` Makro blendet eine linke geschweifte Klammer (`{`).  
+ Im folgenden Quellcode blendet das Makro `START_NAMESPACE` eine linke geschweifte Klammer (`{`) aus, die kein Paar bildet.  
   
  **Quellcode:**  
   
@@ -145,22 +146,22 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 #define START_NAMESPACE namespace MyProject {  
 ```  
   
- **Strategie:** direkte Kopie  
+ **Strategie:** direktes Kopieren  
   
- Wenn die Semantik eines Makros für die browsing-Erlebnis entscheidend sind, erstellen Sie einen Hinweis, der mit dem Makro identisch ist. Das Analysesystem löst das Makro in der Definition in der Hint-Datei.  
+ Wenn die Semantik eines Makros für die Suchfunktion wichtig ist, erstellen Sie einen Hinweis, der mit dem Makro identisch ist. Das Analysesystem löst das Makro in die Definition in der Hinweisdatei auf.  
   
- Beachten Sie, dass das Makro in der Quelldatei andere Makros enthält, diese Makros interpretiert werden, nur dann, wenn sie bereits in der Menge der effektiven Hinweise sind.  
+ Wenn das Makro in der Quelldatei andere Makros enthält, sollten Sie beachten, dass diese nur interpretiert werden, wenn sie bereits in den effektiven Hinweisen enthalten sind.  
   
- **Hint-Datei:**  
+ **Hinweisdatei:**  
   
 ```  
 #define START_NAMESPACE namespace MyProject {  
 ```  
   
 ### <a name="maps"></a>Karten  
- Eine Zuordnung besteht aus Makros, die ein Startelement Endwert Element und NULL oder mehr Zwischenelemente festlegen. Das Analysesystem Datenpakete falsch interpretiert wird Maps daran, dass jede Zuordnung Makro blendet Sie aus C/C++-Sprachelemente, und die Syntax einer vollständigen C-/C++-Anweisung über viele separate Makros verteilt ist.  
+ Eine Zuordnung besteht aus Makros, die ein Startelement, ein Endelement und null oder mehr Zwischenelemente festlegen. Das Analysesystem interpretiert Zuordnungen falsch, da jedes Zuordnungsmakro C/C++-Sprachelemente ausblendet und die Syntax einer vollständigen C/C++-Anweisung auf viele separate Makros verteilt ist.  
   
- Der folgende Quellcode definiert die `BEGIN_CATEGORY_MAP`, `IMPLEMENTED_CATEGORY`, und `END_CATEGORY_MAP` Makros.  
+ Der folgende Quellcode definiert die Makros `BEGIN_CATEGORY_MAP`, `IMPLEMENTED_CATEGORY` und `END_CATEGORY_MAP`.  
   
  **Quellcode:**  
   
@@ -174,11 +175,11 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
    return( pMap ); }  
 ```  
   
- **Strategie:** kartenelemente identifizieren  
+ **Strategie:** Identifizieren von Zuordnungselementen  
   
- Geben Sie Hinweise für die Start-, Mittel-(sofern vorhanden) und Elemente einer Zuordnung. Verwenden Sie die spezielle Zuordnung Ersatzzeichenfolgen `@<`, `@=`, und `@>`. Weitere Informationen finden Sie unter der `Syntax` Abschnitt dieses Themas.  
+ Geben Sie Hinweise für die Start-, Zwischen- und Endelemente einer Zuordnung an. Verwenden Sie die speziellen Ersatzzeichenfolgen für Zuordnungen (`@<`, `@=` und `@>`). Weitere Informationen finden Sie im Abschnitt `Syntax` dieses Artikels.  
   
- **Hint-Datei:**  
+ **Hinweisdatei:**  
   
 ```  
 // Start of the map.  
@@ -192,9 +193,9 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 ```  
   
 ### <a name="composite-macros"></a>Zusammengesetzte Makros  
- Zusammengesetzte Makros enthalten eine oder mehrere der Typen von Makros, die das Analysesystem zu verwechseln.  
+ Zusammengesetzte Makros enthalten einen oder mehrere Arten von Makros, die beim Analysesystem zu Verwechslungen führen.  
   
- Der folgenden Quellcode enthält die `START_NAMESPACE` -Makro, das den Anfang einen Namespacebereich gibt an, und die `BEGIN_CATEGORY_MAP` -Makro, das den Beginn einer Zuordnung angibt.  
+ Der folgende Quellcode enthält das Makro `START_NAMESPACE`, das den Anfang eines Namespacebereichs festlegt, sowie das Makro `BEGIN_CATEGORY_MAP`, das den Anfang einer Zuordnung festlegt.  
   
  **Quellcode:**  
   
@@ -202,20 +203,20 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP  
 ```  
   
- **Strategie:** direkte Kopie  
+ **Strategie:** direktes Kopieren  
   
- Erstellen Sie die Hinweise für die `START_NAMESPACE` und `BEGIN_CATEGORY_MAP` Makros, und erstellen Sie einen Hinweis für die `NSandMAP` Makro, das mit der vorher gezeigten des Quellcodes übereinstimmt. Alternativ können Sie können ein zusammengesetztes Makro nur störende Makros und Leerzeichen besteht, Sie einen Hinweis definieren, dessen Ersetzungszeichenfolge eine null-Definition ist.  
+ Erstellen Sie Hinweise für die Makros `START_NAMESPACE` und `BEGIN_CATEGORY_MAP`, und erstellen Sie dann einen Hinweis für das Makro `NSandMAP`, das mit dem übereinstimmt, das zuvor im Quellcode gezeigt wurde. Wenn ein zusammengesetztes Makro nur aus störenden Markos und Leerräumen besteht, können Sie alternativ einen Hinweis erstellen, dessen Ersatzzeichenfolge eine NULL-Definition ist.  
   
- In diesem Beispiel wird davon ausgegangen `START_NAMESPACE` gelten bereits einen Hinweis aus, wie in diesem Thema im Abschnitt der `Concealed C/C++ Language Elements` Subheading. Und vorausgesetzt `BEGIN_CATEGORY_MAP` verfügt über einen Hinweis, wie dies zuvor im `Maps`.  
+ Gehen Sie in diesem Beispiel davon aus, dass `START_NAMESPACE` wie in diesem Artikel unter `Concealed C/C++ Language Elements` beschrieben bereits einen Hinweis besitzt. Gehen Sie ebenfalls davon aus, dass `BEGIN_CATEGORY_MAP` wie zuvor unter `Maps` beschrieben einen Hinweis besitzt.  
   
- **Hint-Datei:**  
+ **Hinweisdatei:**  
   
 ```  
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP  
 ```  
   
-### <a name="inconvenient-macros"></a>Unpraktisch Makros  
- Einige Makros vom Analysesystem interpretiert werden können, aber der Quellcode ist schwer zu lesen, da das Makro lang oder zu komplex ist. Aus Gründen der besseren Lesbarkeit können Sie einen Hinweis geben möchten, der die Anzeige des Makros vereinfacht.  
+### <a name="inconvenient-macros"></a>Unpraktische Makros  
+ Einige Makros können vom Analysesystem interpretiert werden, der Quellcode ist jedoch schwer lesbar, da das Makro lang oder komplex ist. Aus Gründen der Lesbarkeit können Sie einen Hinweis bereitstellen, der die Anzeige des Makros vereinfacht.  
   
  **Quellcode:**  
   
@@ -227,22 +228,22 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
   
  Erstellen Sie einen Hinweis, der eine einfachere Makrodefinition anzeigt.  
   
- **Hint-Datei:**  
+ **Hinweisdatei:**  
   
 ```  
 #define STDMETHOD(methodName) void* methodName  
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird veranschaulicht, wie Hinweise aus Hinweisdateien kumuliert werden. Stoppdateien werden in diesem Beispiel nicht verwendet.  
+ Im folgenden Beispiel wird veranschaulicht, wie Hinweise aus Hinweisdateien gesammelt werden. In diesem Beispiel werden keine STOP-Dateien verwendet.  
   
- Die folgende Abbildung zeigt einige der physischen Verzeichnisse in einem Visual C++-Projekt. Hinweisdateien befinden sich in der `vcpackages`, `Debug`, `A1`, und `A2` Verzeichnisse.  
+ Die folgende Abbildung stellt einige der physischen Verzeichnisse in einem Visual C++-Projekt dar. Hinweisdateien befinden sich in den Verzeichnissen `vcpackages`, `Debug`, `A1` und `A2`.  
   
 ### <a name="hint-file-directories"></a>Hinweisdateiverzeichnisse  
- ![Allgemeine und Projekt&#45;bestimmte Hinweisdateiverzeichnisse. ] (../ide/media/hintfile.png "HintFile")  
+ ![Allgemeine und projektspezifische Hinweisdateiverzeichnisse](../ide/media/hintfile.png "Hinweisdatei")  
   
 ### <a name="directories-and-hint-file-contents"></a>Verzeichnisse und Hinweisdateiinhalte  
- Die folgende Liste enthält die Verzeichnisse in diesem Projekt, die Hinweisdateien und den Inhalt dieser Hinweis Dateien enthalten. Nur einige der vielen Hinweise in der `vcpackages` Directory Hint-Datei aufgeführt sind.  
+ Die folgende Liste zeigt die Verzeichnisse in diesem Projekt an, die Hinweisdateien enthalten, sowie die Inhalte dieser Hinweisdateien. Es werden nur einige der vielen Hinweise in der Verzeichnishinweisdatei `vcpackages` aufgeführt.  
   
 -   vcpackages  
   
@@ -283,7 +284,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
     ```  
   
 ### <a name="effective-hints"></a>Effektive Hinweise  
- Die folgende Tabelle enthält die effektive Hinweise für die Quelldateien in diesem Projekt.  
+ Die folgende Tabelle führt die effektiven Hinweise für die Quelldateien in diesem Projekt auf.  
   
 -   Quelldatei: A1_A2_B.cpp  
   
@@ -303,15 +304,15 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
     #define END_NAMESPACE }  
     ```  
   
- Die folgenden Hinweise gelten für der vorangehenden Liste aufgeführt.  
+ Die folgenden Hinweise gelten für die vorangehende Liste.  
   
--   Die effektiven Hinweise stammen aus den `vcpackages`, `Debug`, `A1`, und `A2` Verzeichnisse.  
+-   Die effektiven Hinweise stammen aus den Verzeichnissen `vcpackages`, `Debug`, `A1`, und `A2`.  
   
--   Die **#undef** -Direktive in der `Debug` Hint-Datei entfernt die `#define _In_` -Hinweis in die `vcpackages` Directory Hint-Datei.  
+-   Die **#undef**-Direktive in der Hinweisdatei `Debug` hat den Hinweis `#define _In_` aus der Verzeichnishinweisdatei `vcpackages` gelöscht.  
   
--   Hint-Datei in die `A1` Directory definiert `START_NAMESPACE`.  
+-   Die Hinweisdatei im Verzeichnis `A1` definiert `START_NAMESPACE` neu.  
   
--   Die `#undef` -Hinweis in die `A2` Verzeichnis entfernt die Hinweise für `OBRACE` und `CBRACE` in die `Debug` Directory Hint-Datei.  
+-   Der Hinweis `#undef` im Verzeichnis `A2` hat die Hinweise für `OBRACE` und `CBRACE` aus der Verzeichnishinweisdatei `Debug` gelöscht.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Für Visual C++-Projekte erstellte Dateitypen](../ide/file-types-created-for-visual-cpp-projects.md)    

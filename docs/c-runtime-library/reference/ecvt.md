@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 302cfae33e1567c2dc94c73156df005fcbb667f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63514db5abe0a7cd531590dd419aa4b5931e7729
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ecvt"></a>_ecvt
 
@@ -71,7 +71,7 @@ Vorzeichen der konvertierten Zahl.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**_ecvt** gibt einen Zeiger auf die Zeichenfolge von Ziffern; NULL, wenn ein Fehler aufgetreten.
+**_ecvt** gibt einen Zeiger auf die Zeichenfolge von Ziffern; **NULL** Wenn ein Fehler aufgetreten.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -85,7 +85,7 @@ Der Unterschied zwischen **_ecvt** und **_fcvt** befindet sich in der Interpreta
 
 **_ecvt** und **_fcvt** verwenden Sie einen einzelnen statisch zugeordneten Puffer für die Konvertierung. Bei jedem Aufruf dieser Routinen wird das Ergebnis des vorherigen Aufrufs zerstört.
 
-Diese Funktion überprüft ihre Parameter. Wenn *Dec* oder *Anmeldung* NULL ist, oder *Anzahl* gleich 0 ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und NULL zurückgegeben.
+Diese Funktion überprüft ihre Parameter. Wenn *Dec* oder *Anmeldung* ist **NULL**, oder *Anzahl* gleich 0 ist, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parameter Überprüfung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und **NULL** zurückgegeben wird.
 
 ## <a name="requirements"></a>Anforderungen
 

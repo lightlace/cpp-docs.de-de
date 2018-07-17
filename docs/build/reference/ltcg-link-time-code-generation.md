@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d45f5b56dfb84d56bcba8ad0652ed86a8fb5223
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc4266e8b01201226c53584bed9f90ed9dcabef7
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703732"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Code zur Verknüpfungszeit generieren)
 
@@ -141,7 +142,7 @@ Wenn eine Funktion über einen Funktionszeiger aufgerufen wird oder wenn eine Fu
 
 Mit [/GL](../../build/reference/gl-whole-program-optimization.md) und [/clr](../../build/reference/clr-common-language-runtime-compilation.md) kompilierte Module können als Eingabe für den Linker verwendet werden, wenn **/LTCG** angegeben ist.
 
-- **/ LTCG** können akzeptiert systemeigene Objektdateien und gemischte systemeigene/verwaltete Objektdateien (kompiliert mit **"/ CLR"**). Die Compileroptionen **/clr:pure** und **/clr:safe** sind in Visual Studio 2015 veraltet.
+- **/ LTCG** können akzeptiert systemeigene Objektdateien und gemischte systemeigene/verwaltete Objektdateien (kompiliert mit **"/ CLR"**). Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
 
 - **/ LTCG: PGI** akzeptiert keine native Modulen mit kompiliert **/GL** und **"/ CLR"**
 
@@ -161,5 +162,5 @@ Sie können auch anwenden **/LTCG** auf bestimmte Builds durch Auswahl **erstell
 
 ## <a name="see-also"></a>Siehe auch
 
-[Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)<br/>
-[Linkeroptionen](../../build/reference/linker-options.md)<br/>
+- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)
+- [Linkeroptionen](../../build/reference/linker-options.md)

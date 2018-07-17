@@ -1,5 +1,5 @@
 ---
-title: Anwendungseinstellungen, Makefile-Projekt-Assistent | Microsoft Docs
+title: Anwendungseinstellungen, Makefile-Projekt-Assistent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 07459cd4971ea6aec95b632e5c03618248cca401
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33330738"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Anwendungseinstellungen, Makefile-Projekt-Assistent
-Geben Sie die Informationen für das Projekt. Die Optionen, die Sie angeben, werden in des Projekts wiedergegeben [Eigenschaftenseite](../ide/working-with-project-properties.md). Nachdem Sie das Projekt erstellt haben, können Sie anzeigen und bearbeiten Sie die folgenden Optionen in der **Nmake** Seite der Eigenschaftenseite des Projekts.  
+Geben Sie die Informationen für das Projekt an. Die von Ihnen angegebenen Optionen werden auf der [Eigenschaftenseite](../ide/working-with-project-properties.md) des Projekts dargestellt. Nachdem Sie das Projekt erstellt haben, können Sie die folgenden Optionen auf der **Nmake**-Seite der Eigenschaftenseite Ihres Projekts anzeigen und bearbeiten.  
   
- **Erstellen Sie über die Befehlszeile**  
- Gibt die Befehlszeile ausgeführt wird, wenn der Benutzer auswählt **erstellen** aus der **erstellen** Menü. Angezeigt der **Buildbefehlszeile** Feld der **Nmake** auf der Seite der Projekteigenschaften auf der Seite.  
+ **Buildbefehlszeile**  
+ Gibt die auszuführende Befehlszeile an, wenn der Benutzer im Menü **Build** auf **Erstellen** klickt. Wird im Feld **Buildbefehlszeile** auf der Seite **Nmake** der Eigenschaftenseite des Projekts angezeigt.  
   
  **Ausgabe**  
- Gibt den Namen der Datei, die die Ausgabe für die Befehlszeile enthalten soll. Diese Option wird standardmäßig auf den Projektnamen basieren. Angezeigt der **Ausgabe** Feld der **Nmake** auf der Seite der Projekteigenschaften auf der Seite.  
+ Gibt den Namen der Datei an, in der die Ausgabe für die Befehlszeile enthalten ist. Diese Option basiert standardmäßig auf dem Projektnamen. Wird im Feld **Ausgabe** auf der Seite **Nmake** der Eigenschaftenseite des Projekts angezeigt.  
   
- **Bereinigte Befehle**  
- Gibt die Befehlszeile ausgeführt wird, wenn der Benutzer auswählt **Bereinigen** aus der **erstellen** Menü. Angezeigt der **bereinigen Befehlszeile** Feld der **Nmake** auf der Seite der Projekteigenschaften auf der Seite.  
+ **„Bereinigen“-Befehle**  
+ Gibt die auszuführende Befehlszeile an, wenn der Benutzer im Menü **Erstellen** auf **Bereinigen** klickt. Wird im Feld **Befehlszeile „Bereinigen“** auf der Seite **Nmake** der Eigenschaftenseite des Projekts angezeigt.  
   
- **Erstellen Sie über die Befehlszeile neu.**  
- Gibt die Befehlszeile ausgeführt wird, wenn der Benutzer auswählt **Rebuild** aus der **erstellen** Menü. Angezeigt der **neu** Feld der **Nmake** auf der Seite der Projekteigenschaften auf der Seite.  
+ **Neuerstellungsbefehlszeile**  
+ Gibt die Befehlszeile an, die ausgeführt werden soll, wenn der Benutzer im Menü **Erstellen** auf **Neu erstellen** klickt. Wird im Feld **Befehlszeile „Alles neu erstellen“** auf der Seite **Nmake** der Eigenschaftenseite des Projekts angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Makefile-Projekt-Assistent](../ide/makefile-project-wizard.md)   
- [Erstellen eines Makefile-Projekts](../ide/creating-a-makefile-project.md)   
- [Visual C++-Projekttypen](../ide/visual-cpp-project-types.md)   
- [Erstellen von Desktopprojekten mit Anwendungs-Assistenten](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Makefile Project Wizard (Makefile-Projekt-Assistent)](../ide/makefile-project-wizard.md)   
+ [Creating a Makefile Project (Erstellen eines Makefile-Projekts)](../ide/creating-a-makefile-project.md)   
+ [Visual C++ Project Types (Visual C++-Projekttypen)](../ide/visual-cpp-project-types.md)   
+ [Creating Desktop Projects By Using Application Wizards (Erstellen von Desktopprojekten mit Anwendungs-Assistenten)](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Eigenschaftenseiten](../ide/property-pages-visual-cpp.md)   
  [Bereitstellen von Anwendungen](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)

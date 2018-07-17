@@ -16,35 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e995f90741ac4421622bb891f01deb92aebab283
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2819664fa94ca777339156dc9a31da17b991c6da
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705163"
 ---
 # <a name="compiler-warning-c4959"></a>Compilerwarnung C4959
-Struktur "type" (nicht verwaltet) in /clr:safe kann nicht definiert werden, da durch den Zugriff auf die Member nicht überprüfbarer Code ausgegeben wird  
-  
- Das Zugreifen auf einen Member eines nicht verwalteten Typs resultiert in einem nicht überprüfbaren Abbild (peverify.exe).  
-  
- Weitere Informationen finden Sie unter [reiner und überprüfbarer Code (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
-  
- Diese Warnung wird als Fehler ausgegeben. Sie kann mithilfe des [warning](../../preprocessor/warning.md) -Pragmas oder der Compileroption [/wd](../../build/reference/compiler-option-warning-level.md) deaktiviert werden.  
-  
- Im folgenden Beispiel wird C4959 generiert:  
-  
-```  
-// C4959.cpp  
-// compile with: /clr:safe  
-  
-// Uncomment the following line to resolve.  
-// #pragma warning( disable : 4959 )  
-struct X {  
-   int data;  
-};  
-  
-int main() {  
-   X x;  
-   x.data = 10;   // C4959  
-}  
+
+> nicht verwaltete Struktur kann nicht definiert "*Typ*" in/CLR: safe da führt zu nicht überprüfbaren Code den Zugriff auf ihre Member
+
+## <a name="remarks"></a>Hinweise
+
+Das Zugreifen auf einen Member eines nicht verwalteten Typs resultiert in einem nicht überprüfbaren Abbild (peverify.exe).
+
+Weitere Informationen finden Sie unter [reiner und überprüfbarer Code (C + c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+
+Die **/CLR: safe** -Compileroption in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt wird.
+
+Diese Warnung wird als Fehler ausgegeben. Sie kann mithilfe des [warning](../../preprocessor/warning.md) -Pragmas oder der Compileroption [/wd](../../build/reference/compiler-option-warning-level.md) deaktiviert werden.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird C4959 generiert:
+
+```cpp
+// C4959.cpp
+// compile with: /clr:safe
+
+// Uncomment the following line to resolve.
+// #pragma warning( disable : 4959 )
+struct X {
+   int data;
+};
+
+int main() {
+   X x;
+   x.data = 10;   // C4959
+}
 ```

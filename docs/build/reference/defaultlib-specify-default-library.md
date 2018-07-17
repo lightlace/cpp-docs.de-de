@@ -1,7 +1,7 @@
 ---
-title: -DEFAULTLIB (Standardbibliothek festlegen) | Microsoft Docs
+title: / DEFAULTLIB (Standardbibliothek festlegen) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/29/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -20,36 +20,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48db05ea50917a09e618c782d86dace73a1bf7e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9afcaa0e229ec34ba91b4d60a7a4fa9acec2d7e3
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569780"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (Standardbibliothek festlegen)
-```  
-/DEFAULTLIB:library  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Dabei gilt:  
-  
- *Bibliothek*  
- Der Name einer Bibliothek beim Auflösen externer Verweise durchsucht.  
-  
-## <a name="remarks"></a>Hinweise  
- Die Option Option Fügt eine *Bibliothek* zur Liste der Bibliotheken, mit dem LINK, beim Auflösen von Verweisen gesucht. Eine Bibliothek mit der Option angegeben, wird nach Bibliotheken in der Befehlszeile und vor Standardbibliotheken, die mit dem Namen in der OBJ-Dateien durchsucht.  
-  
- Die [alle Standardbibliotheken ignorieren](../../build/reference/nodefaultlib-ignore-libraries.md) (/ NODEFAULTLIB) überschreibt Option:*Bibliothek*. Die [Bibliotheken ignorieren](../../build/reference/nodefaultlib-ignore-libraries.md) (/ NODEFAULTLIB:*Bibliothek*) überschreibt Option:*Bibliothek* Wenn identisch *Bibliothek* Name ist in beiden angegeben.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
-  
--   Diese Linkeroption ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar. Um eine Bibliothek der Linkphase hinzuzufügen, verwenden Sie die **zusätzliche Abhängigkeiten** Eigenschaft aus der **Eingabe** Eigenschaftenseite.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
-  
--   Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+Geben Sie eine Standardbibliothek an, zum Auflösen externer Verweise durchsucht.
+
+## <a name="syntax"></a>Syntax
+
+> **/ DEFAULTLIB**:_Bibliothek_
+
+### <a name="arguments"></a>Argumente
+
+|Argument|Beschreibung|
+|-|-|
+*Bibliothek*|Der Name einer Bibliothek beim Auflösen externer Verweise durchsucht.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Option** Option Fügt eine *Bibliothek* zur Liste der Bibliotheken, mit dem LINK, beim Auflösen von Verweisen gesucht. Eine Bibliothek mit angegebenen **Option** nach Bibliotheken, die explizit angegeben werden, in der Befehlszeile und vor Standardbibliotheken, die mit dem Namen in der OBJ-Dateien gesucht wird.
+
+Wenn Sie ohne Argumente wird die [/NODEFAULTLIB (Bibliotheken ignorieren)](../../build/reference/nodefaultlib-ignore-libraries.md) Option überschreibt alle **Option**:*Bibliothek* Optionen. Die **/NODEFAULTLIB**:*Bibliothek* option überschreibt **Option**:*Bibliothek* bei dem *Bibliothek*Namen in beiden angegeben ist.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).
+
+1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **Befehlszeile** Eigenschaftenseite.
+
+1. In **Zusatzoptionen**, geben Sie einen **Option**:*Bibliothek* Option für jede Bibliothek zu suchen. Wählen Sie **OK** zum Speichern der Änderungen.
+
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
+
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)
+- [Linkeroptionen](../../build/reference/linker-options.md)

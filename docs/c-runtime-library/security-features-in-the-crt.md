@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ce188ea5d28fa99d6133129edbace8e2886f0f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8195e9a7e37ac9fa9186118889d7717698d2b784
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="security-features-in-the-crt"></a>Sicherheitsfunktionen in der CRT
 Viele alte CRT-Funktionen liegen in neueren, sichereren Versionen vor. Wenn eine sichere Funktion vorhanden ist, wird die ältere, weniger sichere Version als veraltet markiert, und die neue Version hat das `_s`-Suffix („sicher“).  
@@ -70,7 +70,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Parameter Validation` An CRT-Funktionen übergebene Parameter werden sowohl in sicheren Funktionen als auch in vielen bereits vorhandenen Versionen der Funktionen überprüft. Diese Überprüfungen umfassen:  
   
-    -   Überprüfung auf `NULL`-Werte, die den Funktionen übergeben werden.  
+    -   Überprüfung auf **NULL**-Werte, die den Funktionen übergeben werden.  
   
     -   Überprüfung von Enumerationswerten auf Gültigkeit.  
   
