@@ -1,5 +1,5 @@
 ---
-title: CHtmlEditCtrl Klasse | Microsoft Docs
+title: CHtmlEditCtrl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 4cc8cdc389edc8abbc424ec8277f759e7f3d81bb
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040141"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338567"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl-Klasse
 Stellt die Funktionalität des WebBrowser-ActiveX-Steuerelements in einem MFC-Fenster bereit.  
@@ -54,11 +54,11 @@ class CHtmlEditCtrl: public CWnd,
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CHtmlEditCtrl::Create](#create)|Erstellt ein WebBrowser ActiveX-Steuerelement, und fügt es der `CHtmlEditCtrl` Objekt. Diese Funktion setzt automatisch das WebBrowser ActiveX-Steuerelement in den Bearbeitungsmodus.|  
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Ruft die [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) Schnittstelle für das Dokument ist derzeit im WebBrowser-Steuerelement enthaltene geladen.|  
-|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Ruft die URL zu Standarddokument und Laden Sie in das enthaltene WebBrowser-Steuerelement ab.|  
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Ruft die [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) Schnittstelle für das Dokument derzeit geladen, im WebBrowser-Steuerelement enthalten.|  
+|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Ruft die URL ab, der ein Standarddokument in der enthaltenen WebBrowser-Steuerelement geladen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die gehostete WebBrowser, die Steuerelement automatisch abgelegt wird Bearbeitungsmodus, nachdem er erstellt wurde.  
+ Die gehostete WebBrowser, die Steuerelement automatisch angezeigt wird, in Bearbeitungsmodus befindet, nachdem dieser erstellt wurde.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,7 +82,7 @@ CHtmlEditCtrl();
 ```  
   
 ##  <a name="create"></a>  CHtmlEditCtrl::Create  
- Erstellt ein WebBrowser ActiveX-Steuerelement, und fügt es der `CHtmlEditCtrl` Objekt. Der WebBrowser ActiveX Steuerelement automatisch zu einem Standarddokument navigiert, und klicken Sie dann in eingefügt Bearbeitungsmodus von dieser Funktion.  
+ Erstellt ein WebBrowser ActiveX-Steuerelement, und fügt es der `CHtmlEditCtrl` Objekt. Der WebBrowser ActiveX Steuerelement automatisch zu einem Standarddokument navigiert und dann befindet sich im Bearbeitungsmodus befindet, von dieser Funktion.  
   
 ```  
 virtual BOOL Create(
@@ -102,22 +102,22 @@ virtual BOOL Create(
  Dieser Parameter wird nicht verwendet.  
   
  *Rect*  
- Gibt die Größe und Position des Steuerelements.  
+ Gibt an, die Größe und Position des Steuerelements.  
   
  *pParentWnd*  
- Gibt die übergeordnete Fenster des Steuerelements an. Es muss nicht **NULL**.  
+ Gibt die übergeordnete Fenster des Steuerelements an. Es darf nicht NULL sein.  
   
  *nID*  
- Gibt das Steuerelement-ID an.  
+ Gibt an, der ID des Steuerelements  
   
  *"pContext"*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt **"true"** bei Erfolg **"false"** bei einem Fehler.  
+ Gibt "true" bei Erfolg bei "false".  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument  
- Ruft die [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) Schnittstelle für das Dokument derzeit geladen, in das enthaltene WebBrowser-Steuerelement  
+ Ruft die [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) Schnittstelle für das Dokument derzeit geladen, im enthaltenen WebBrowser-Steuerelement  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
@@ -125,10 +125,10 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
   
 ### <a name="parameters"></a>Parameter  
  *ppDocument*  
- Der Dokumentschnittstelle.  
+ Die Dokumentschnittstelle.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  
- Ruft die URL zu Standarddokument und Laden Sie in das enthaltene WebBrowser-Steuerelement ab.  
+ Ruft die URL ab, der ein Standarddokument in der enthaltenen WebBrowser-Steuerelement geladen.  
   
 ```  
 virtual LPCTSTR GetStartDocument();

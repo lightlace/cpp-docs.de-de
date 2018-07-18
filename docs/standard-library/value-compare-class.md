@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594f3aaa45638ff2ab5d184a771070d87dbeb0bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f46153400744b4a6d0350b97fa7158ea9f69c34
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856582"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957107"
 ---
 # <a name="valuecompare-class"></a>value_compare-Klasse
 
@@ -49,7 +49,7 @@ protected:
 
 ## <a name="remarks"></a>Hinweise
 
-Die von value_compare bei einem Vergleich von **value_types** ganzer, in einer hash_map enthaltener Elemente bereitgestellten Vergleichskriterien werden von einem Vergleich der Schlüssel der jeweiligen Elemente durch die Erweiterungsklassenkonstruktion induziert. Der Operator der Memberfunktion verwendet das Objekt **comp** vom Typ `key_compare`, das in dem Funktionsobjekt gespeichert ist, das von value_compare für den Vergleich der Sortierschlüsselkomponenten von zwei Elementen bereitgestellt wird.
+Die von Value_compare bereitgestellten Vergleichskriterien `value_types` ganzer, in einer Hash_map enthaltener Elemente durch einen Vergleich der Schlüssel der jeweiligen Elemente durch die erweiterungsklassenkonstruktion induziert ausgelöst wird. Operator der Memberfunktion verwendet das Objekt `comp` des Typs `key_compare` gespeichert, in dem Funktionsobjekt, das von Value_compare für den Vergleich der sortierschlüsselkomponenten von zwei Elementen bereitgestellt.
 
 Bei hash_sets und hash_multisets, bei denen es sich um einfache Container handelt, bei denen die Schlüsselwerte mit den Elementwerten übereinstimmen, stimmt value_compare mit `key_compare` überein; bei hash_maps und hash_multimaps nicht, da der Wert von Elementen vom Typ `pair` nicht mit dem Wert des Elementschlüssels identisch ist.
 

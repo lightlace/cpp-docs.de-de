@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a117a7f9299591d971ecbfdd0a681b008937da33
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7d8b87b51bfeef68ef8bfe22c8e7e201929aa3f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847932"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957073"
 ---
 # <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt;-Struktur
 
-Eine Klasse, die eine Spezialisierung der Vorlagenstruktur **char_traits\<CharType>** für ein Element des Typs `wchar_t` ist.
+Eine Klasse, die eine Spezialisierung der Vorlagenstruktur **Char_traits\<CharType >** auf ein Element vom Typ **"wchar_t"**.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ struct char_traits<wchar_t>;
 
 ## <a name="remarks"></a>Hinweise
 
-Dank der Spezialisierung kann die Struktur Bibliotheksfunktionen nutzen, die Objekte dieses Typs `wchar_t` bearbeiten.
+Dank der Spezialisierung kann die Struktur Bibliotheksfunktionen nutzen, die Objekte dieses Typs zu bearbeiten **"wchar_t"**.
 
 ## <a name="requirements"></a>Anforderungen
 

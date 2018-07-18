@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63129ad04e2e74cdae9c590c76e1910e95117431
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52bc5ff0fe53dc89f932bf62dc98f7c8a03a725f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844431"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957004"
 ---
 # <a name="isfloatingpoint-class"></a>is_floating_point-Klasse
 
@@ -37,13 +37,13 @@ struct is_floating_point;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn der `Ty`-Typ ein Gleitkommatyp oder ein `cv-qualified`-Formular eines Gleitkommatyps ist; andernfalls „false“.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ein Gleitkommatyp Punkttyp oder `cv-qualified` Geben Sie die Form einer Gleitkommazahl, andernfalls ist Sie false.
 
-Ein Gleitkommatyp ist einer von `float`, `double` oder `long double`.
+Ein Gleitkommatyp ist einer der **"float"**, **doppelte**, oder **long double**.
 
 ## <a name="example"></a>Beispiel
 
