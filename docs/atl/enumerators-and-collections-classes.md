@@ -1,5 +1,5 @@
 ---
-title: Enumeratoren und Auflistungsklassen (ATL) | Microsoft Docs
+title: Emumerator- und Auflistungsklassen (ATL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbe8dfb4610b88b9a53e90b7af5f52b4d1c2807f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 62729df015e214f37acdda7d5cb2ef710dce6cb9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355645"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37847881"
 ---
-# <a name="enumerators-and-collections-classes"></a>Enumeratoren und Auflistungsklassen
+# <a name="enumerators-and-collections-classes"></a>Emumerator- und Auflistungsklassen
 Die folgenden Klassen bieten Unterstützung für COM-Auflistungen und Enumerationen:  
   
--   [CComEnum](../atl/reference/ccomenum-class.md) definiert eine COM-Enumerator-Objekt auf Grundlage eines Arrays.  
+-   [CComEnum](../atl/reference/ccomenum-class.md) definiert ein COM-Enumerator-Objekt auf Grundlage eines Arrays.  
   
 -   [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem Array gespeichert sind.  
   
--   [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) definiert eine COM-Enumerator-Objekt auf Grundlage einer C++-Standardbibliothek Auflistung.  
+-   [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) definiert ein COM-Enumerator-Objekt auf Grundlage einer C++-Standardbibliothek Auflistung.  
   
--   [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem C++-Standard-Bibliothek-kompatiblen Container gespeichert sind.  
+-   [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem C++-Standard-Bibliothek-kompatible Container gespeichert sind.  
   
--   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) stellt die Implementierung für die **Anzahl**, **Element**, und `_NewEnum` Eigenschaften einer Sammlung-Schnittstelle.  
+-   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) stellt die Implementierung für die `Count`, `Item`, und `_NewEnum` Eigenschaften einer Sammlung-Schnittstelle.  
   
 ## <a name="related-articles"></a>Verwandte Artikel  
  [ATL-Auflistungen und -Enumeratoren](../atl/atl-collections-and-enumerators.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../atl/atl-class-overview.md)
 

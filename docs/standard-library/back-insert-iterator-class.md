@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd633fb4617a5058afd9bd55b40ccb4fbcee06e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6830baf3d474b80f2e7906a7aadd27d2eee27f9a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847685"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958619"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator-Klasse
 
@@ -40,7 +40,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Parameter
 
-`Container` Der Typ des Containers, an dessen Ende Elemente von einzufügenden sind eine `back_insert_iterator`.
+*Container* sind, dass der Typ des Containers, an dessen Ende Elemente einfügen, eine `back_insert_iterator`.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -83,7 +83,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parameter
 
-`_Cont` Der Container, die die `back_insert_iterator` zum Einfügen eines Elements in ist.
+*_Cont* den Container, die die `back_insert_iterator` besteht darin, ein Element einfügen soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -193,7 +193,7 @@ After the insertion, the vector is: ( 1 2 3 40 ).
 
 ## <a name="op_star"></a> back_insert_iterator::operator*
 
-Der Dereferenzierungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks \* *i* = *x* verwendet wird.
+Der Dereferenzierungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks *\* *i* = *x* verwendet wird.
 
 ```cpp
 back_insert_iterator<Container>& operator*();
@@ -323,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Parameter
 
-`val` Der Wert in den Container eingefügt werden soll.
+*Val* den Wert in den Container eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 

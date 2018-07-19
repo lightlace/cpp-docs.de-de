@@ -1,5 +1,5 @@
 ---
-title: ATL und der freethreaded Marshaller | Microsoft Docs
+title: ATL und der freethreaded Marshaller | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,26 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1716985adf65b714a418f20d3873f45c32d368b4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 015b07e5870aa6269dc76af8610d42fb469a6d33
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355825"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848349"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL und der freethreaded Marshaller
-Der ATL-Assistent für einfache Objekte der Seite "Attribute" bietet eine Option, die Ihre Klasse der freethreaded Marshaller (FTM) aggregieren kann.  
+Der ATL-Assistent für einfache Objekte die Seite "Attribute" bietet eine Option, die Ihre Klasse die freethreaded Marshaller (FTM) aggregieren kann.  
   
- Der Assistent generiert Code zum Erstellen einer Instanz von der freethreaded Marshaller in `FinalConstruct` und gibt diese Instanz in `FinalRelease`. Ein `COM_INTERFACE_ENTRY_AGGREGATE` Makro wird automatisch hinzugefügt, um sicherzustellen, dass die COM-Zuordnung `QueryInterface` Anforderungen für [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707) werden von der freethreaded Marshaller behandelt.  
+ Der Assistent generiert Code zum Erstellen einer Instanz von FTM in `FinalConstruct` und gibt diese Instanz in `FinalRelease`. Ein COM_INTERFACE_ENTRY_AGGREGATE-Makro wird automatisch hinzugefügt, um sicherzustellen, dass die COM-Zuordnung `QueryInterface` Anforderungen für [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707) werden von der freethreaded Marshaller behandelt.  
   
- Freethreaded Marshaler ermöglicht den direkten Zugriff auf Schnittstellen für das Objekt von jedem Thread im selben Prozess apartmentübergreifende Aufrufe beschleunigen. Diese Option ist für Klassen vorgesehen, die beide Threadingmodell verwenden.  
+ FTM bietet direkten Zugriff auf Schnittstellen für das Objekt von jedem Thread im selben Prozess, apartmentübergreifende Aufrufe beschleunigen. Diese Option ist für Klassen vorgesehen, die sowohl das Threadingmodell zu verwenden.  
   
- Wenn Sie diese Option verwenden zu können, müssen Klassen Verantwortung für die Threadsicherheit ihrer Daten übernehmen. Darüber hinaus müssen Objekte, die die freethreaded Marshaler aggregiert und Schnittstellenzeigern abgerufen, die von anderen Objekten verwenden müssen zusätzliche Schritte Unternehmen, stellen Sie sicher, dass die Schnittstellen richtig gemarshallt werden. In der Regel umfasst dies Schnittstellenzeiger in der globalen Schnittstellentabelle (GIT) speichern und Abrufen von des Zeigers aus der GIT jedes Mal, die sie verwendet wird. ATL stellt die Klasse [CComGITPtr](../atl/reference/ccomgitptr-class.md) lassen sich in der GIT gespeicherten Schnittstellenzeigern verwenden.  
+ Wenn Sie diese Option verwenden zu können, müssen Klassen Verantwortung für die Threadsicherheit ihrer Daten ausführen. Darüber hinaus müssen Objekte, die die freethreaded Marshaler aggregiert und Schnittstellenzeiger abgerufen, die von anderen Objekten verwenden müssen zusätzliche Schritte, stellen Sie sicher, dass die Schnittstellen ordnungsgemäß gemarshallt werden. In der Regel umfasst das Speichern von den Schnittstellenzeiger in der globalen Schnittstellentabelle (GIT) und die Zeiger aus der GIT jedes Mal, wenn er verwendet wird. ATL stellt die Klasse [CComGITPtr](../atl/reference/ccomgitptr-class.md) zur Verwendung gespeichert, in der GIT-Schnittstellenzeiger auf.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konzepte](../atl/active-template-library-atl-concepts.md)   
  [CoCreateFreeThreadedMarshaler](http://msdn.microsoft.com/library/windows/desktop/ms694500)   
  [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707)   
- [Verwenden der globalen Schnittstellentabelle](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
- [In-Process-Server Threadingprobleme](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [Verwenden Sie die globale Schnittstellentabelle](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
+ [In-Process-Server, Threadingprobleme](http://msdn.microsoft.com/library/windows/desktop/ms687205)
 

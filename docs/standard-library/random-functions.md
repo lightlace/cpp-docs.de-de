@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: c8ee20759e66c7beb295de96b8311df46555ac6b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b0cd634dad099669d803d4a2717fc9198151781
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852815"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954157"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;random&gt;-Funktionen
 
@@ -31,15 +31,15 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Parameter
 
-`RealType` Der ganzzahlige Gleitkommatyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* der ganzzahlige Gleitkommatyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-`Bits` Der Zufallszahlengenerator.
+*Bits* den Zufallszahlengenerator an.
 
-`Gen` Der Zufallszahlengenerator.
+*Gen* den Zufallszahlengenerator an.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion ruft wiederholt `operator()` von `Gen` auf und verpackt die zurückgegebenen Werte in einem Gleitkommawert `x` des Typs `RealType`, bis die angegebene Anzahl von Mantissen-Bits in `x` erreicht ist. Die angegebene Anzahl ist die kleinere von `Bits` (die nicht Null sein darf) und die vollständige Anzahl von Mantissen-Bits in `RealType`. Beim ersten Aufruf werden die Bits mit dem geringsten Wert ausgegeben. Die Funktion gibt `x` zurück.
+Die Vorlagenfunktion ruft `operator()` von *Gen* wiederholt und verpackt die zurückgegebenen Werte in einen Gleitkommawert `x` des Typs *RealType* bis er die angegebene Anzahl erfasst hat von Mantissen-Bits in `x`. Die angegebene Zahl ist die kleinere von *Bits* (die muss ungleich NULL sein) und die volle Anzahl von Mantissen-Bits in *RealType*. Beim ersten Aufruf werden die Bits mit dem geringsten Wert ausgegeben. Die Funktion gibt `x` zurück.
 
 ## <a name="see-also"></a>Siehe auch
 

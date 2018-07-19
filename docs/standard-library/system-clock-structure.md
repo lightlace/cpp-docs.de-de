@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
-ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
+ms.openlocfilehash: b56a493ce91c6ac7f0864a1bf4e10476603d79fd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458900"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959042"
 ---
 # <a name="systemclock-structure"></a>system_clock-Struktur
 
@@ -78,7 +78,7 @@ Eine Uhr ist *gleichmäßig*, wenn sie *monoton* und die Zeit zwischen den Teils
 
 ## <a name="from_time_t"></a>  system_clock:: from_time_t
 
-Statische Methode, die ein [time_point](../standard-library/time-point-class.md)-Element zurückgibt, das am ehesten der von `Tm` dargestellten Uhrzeit entspricht.
+Statische Methode, die gibt eine [Time_point](../standard-library/time-point-class.md) , das am ehesten der Zeit, die durch dargestellt wird *Tm*.
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -86,7 +86,8 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-`Tm` Ein [Time_t](../c-runtime-library/standard-types.md) Objekt.
+*TM*  
+ Ein [time_t](../c-runtime-library/standard-types.md)-Objekt.
 
 ## <a name="is_monotonic_constant"></a> system_clock::is_monotonic-Konstante
 
@@ -98,7 +99,7 @@ static const bool is_monotonic = false;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Bei dieser Implementierung gibt `system_clock::is_monotonic` immer `false` zurück.
+In dieser Implementierung `system_clock::is_monotonic` gibt immer **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -114,7 +115,7 @@ static const bool is_steady = false;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Bei dieser Implementierung gibt `system_clock::is_steady` immer `false` zurück.
+In dieser Implementierung `system_clock::is_steady` gibt immer **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -134,7 +135,7 @@ Ein [time_point](../standard-library/time-point-class.md)-Objekt, das die aktuel
 
 ## <a name="to_time_t"></a>  system_clock:: to_time_t
 
-Statische Methode, die ein [time_t](../c-runtime-library/standard-types.md)-Element zurückgibt, das am ehesten der von `Time` dargestellten Uhrzeit entspricht.
+Statische Methode, die gibt eine [Time_t](../c-runtime-library/standard-types.md) , das am ehesten der Zeit, die durch dargestellt wird *Zeit*.
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -142,7 +143,8 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-`Time` Ein [Time_point](../standard-library/time-point-class.md) Objekt.
+*Zeit*  
+ Ein [time_point](../standard-library/time-point-class.md)-Objekt.
 
 ## <a name="see-also"></a>Siehe auch
 

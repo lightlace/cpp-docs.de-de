@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26164c391689c8fb7f24f49464e141f74a3058ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ca8621067c851b5a1e107eb16800d546562fbb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847841"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959928"
 ---
 # <a name="function-class"></a>function-Klasse
 
@@ -89,9 +89,9 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-`Fty` Die zu umschließende Funktionstyp.
+*Fty* der zu umschließende Funktionstyp.
 
-`Ax` Die Allocator-Funktion.
+*AX* die Zuweisungsfunktion.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -164,15 +164,15 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parameter
 
-`_Func` Ein aufrufbares Objekt.
+*_Func* ein aufrufbares Objekt.
 
-`_Fnref` Ein Verweis-Wrapper, der ein aufrufbares Objekt enthält.
+*_Fnref* ein verweiswrapper, der ein aufrufbares Objekt enthält.
 
-`Ax` Ein Zuweisungsobjekt.
+*AX* ein Zuweisungsobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktionen ersetzen jeweils das von `*this` gehaltene `callable object` durch ein aufrufbares Objekt, das als `operand` übergeben wurde. Beide weisen Speicher mit dem Zuweisungsobjekt `Ax` zu.
+Die Memberfunktionen ersetzen jeweils das von `*this` gehaltene `callable object` durch ein aufrufbares Objekt, das als `operand` übergeben wurde. Beide weisen Speicher mit dem Zuweisungsobjekt *Ax*.
 
 ## <a name="function"></a> function::function
 
@@ -199,17 +199,17 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parameter
 
-`right` Die zu kopierende Funktionsobjekt.
+*richtige* die zu kopierende Funktionsobjekt.
 
-`Fx` Der Typ des Objekts aufgerufen werden kann.
+*FX* den Typ des aufrufbaren Objekts.
 
-`_Func` Das aufrufbare Objekt umschlossen werden soll.
+*_Func* der zu umschließende Objekt.
 
-`Alloc` Der Allocator-Typ.
+*Alloc* der Zuweisungstyp.
 
-`Ax` Die Zuweisung.
+*AX* die allocator-Klasse.
 
-`_Fnref` Der Verweis aufrufbaren Objekts umschließen.
+*_Fnref* die aufrufbare Objektverweis umschließen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -295,7 +295,7 @@ operator unspecified();
 
 ### <a name="remarks"></a>Hinweise
 
-Der Operator gibt einen Wert zurück, der nur dann mit einem wahren Wert in `bool` konvertierbar ist, wenn das Objekt nicht leer ist. Damit können Sie prüfen, ob das Objekt leer ist.
+Der Operator gibt einen Wert, der konvertiert werden kann, **"bool"** mit einem wahren Wert nur dann, wenn das Objekt nicht leer ist. Damit können Sie prüfen, ob das Objekt leer ist.
 
 ### <a name="example"></a>Beispiel
 
@@ -340,9 +340,9 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parameter
 
-`TN` Der Typ des n-ten aufrufen Argument.
+*TN* den Typ des der n-te Aufrufargument.
 
-`tN` Das Argument n-te-Aufruf.
+*tN* der n-te Aufrufargument.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -391,13 +391,13 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parameter
 
-`npc` Eine null-Zeiger-Konstante.
+*%npc* eine null-Zeiger-Konstante.
 
-`right` Die zu kopierende Funktionsobjekt.
+*richtige* die zu kopierende Funktionsobjekt.
 
-`fn` Das aufrufbare Objekt umschlossen werden soll.
+*fn* der zu umschließende Objekt.
 
-`fnref` Der Verweis aufrufbaren Objekts umschließen.
+*Fnref* die aufrufbare Objektverweis umschließen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -506,11 +506,11 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Das Funktionsobjekt für den Tauschvorgang.
+*richtige* das Funktionsobjekt, mit dem getauscht.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion tauscht die Zielobjekte von `*this` und `right`. Die Funktion führt dies in konstanter Zeit aus und löst keine Ausnahmen aus.
+Die Memberfunktion tauscht die Zielobjekte von `*this` und *rechten*. Die Funktion führt dies in konstanter Zeit aus und löst keine Ausnahmen aus.
 
 ### <a name="example"></a>Beispiel
 
@@ -567,13 +567,13 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parameter
 
-`Fty2` Der Zieltyp des aufrufbaren Objekts zu testen.
+*Fty2* der Ziel-aufrufbare Objekt, das zu überprüfende Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ `Fty2` muss für die Argumenttypen `T1, T2, ..., TN` und den Rückgabetyp `Ret` aufrufbar sein. Wenn `target_type() == typeid(Fty2)`, dann gibt die Membervorlagenfunktion die Adresse des Zielobjekts zurück; andernfalls gibt sie 0 zurück.
+Der Typ *Fty2* muss für die Argumenttypen aufrufbar sein `T1, T2, ..., TN` sowie des Rückgabetyps `Ret`. Wenn `target_type() == typeid(Fty2)`, dann gibt die Membervorlagenfunktion die Adresse des Zielobjekts zurück; andernfalls gibt sie 0 zurück.
 
-Ein Typ `Fty2` ist für die Argumenttypen `T1, T2, ..., TN` und den Rückgabetyp `Ret` aufrufbar, wenn `INVOKE(fn, t1, t2, ..., tN)` für die Lvalues `fn, t1, t2, ..., tN` von `Fty2, T1, T2, ..., TN` wohlgeformt ist, bzw., wenn `Ret` nicht `void`ist, in `Ret` konvertierbar.
+Ein Typ *Fty2* wird aufgerufen, für die Argumenttypen `T1, T2, ..., TN` sowie des Rückgabetyps `Ret` If, für die Lvalues `fn, t1, t2, ..., tN` Typen `Fty2, T1, T2, ..., TN`, `INVOKE(fn, t1, t2, ..., tN)` wohlgeformt ist und, falls `Ret`nicht **"void"**, konvertierbar `Ret`.
 
 ### <a name="example"></a>Beispiel
 

@@ -1,5 +1,5 @@
 ---
-title: Eine ATL-Dialogfeld hinzufügen | Microsoft Docs
+title: Hinzufügen einer ATL-Dialogfelds | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0883b87ce991b08a96b1d10b4acedf8562022a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab00af6480e8893226be460a3d7c5641b8755bcf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361524"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953220"
 ---
-# <a name="adding-an-atl-dialog-box"></a>Eine ATL-Dialogfeld hinzufügen
-Um dem Projekt eine ATL-Dialogfeld hinzufügen, muss das Projekt eine ATL-Projekt oder ein MFC-Projekt, das ATL-Unterstützung umfasst. Können Sie die [ATL-Projektassistenten](../../atl/reference/atl-project-wizard.md) zum Erstellen einer Anwendung ATL oder [Hinzufügen eines ATL-Objekts zu der MFC-Anwendung](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL-Unterstützung für eine MFC-Anwendung zu implementieren.  
+# <a name="adding-an-atl-dialog-box"></a>Hinzufügen einer ATL-Dialogfelds
+Um ein ATL-Dialogfeld zu Ihrem Projekt hinzuzufügen, muss das Projekt entweder ein ATL-Projekt oder einem MFC-Projekt, die ATL-Unterstützung enthält. Sie können den [ATL-Projekt-Assistenten](../../atl/reference/atl-project-wizard.md) zum Erstellen einer ATL-Anwendung verwenden, oder [Ihrer MFC-Anwendung ein ATL-Objekt hinzufügen](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), um die ATL-Unterstützung in einer MFC-Anwendung zu implementieren.  
   
- Standardmäßig implementiert die ATL-Dialogfeld-Assistent ein Dialogfeld abgeleitet [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Diese Klasse enthält Unterstützung für das hosting von ActiveX- und Windows-Steuerelemente. Wenn Sie nicht möchten den Aufwand für das ActiveX-Steuerelemente unterstützen, nachdem der Assistent Code generiert wurde, ersetzen Sie alle Instanzen von `CAxDialogImpl` entweder mit [CSimpleDialog](../../atl/reference/csimpledialog-class.md) oder [CDialogImpl](../../atl/reference/cdialogimpl-class.md) als Basisklasse .  
+ Der ATL-Dialogfeld-Assistent implementiert standardmäßig ein Dialogfeld, das von abgeleiteten [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Diese Klasse enthält Unterstützung für das ActiveX- und Windows-Steuerelemente hosten. Wenn Sie nicht möchten den Aufwand für das ActiveX-Steuerelemente unterstützen, nachdem der Assistent Code generiert wurde, ersetzen Sie alle Instanzen von `CAxDialogImpl` mit [CSimpleDialog](../../atl/reference/csimpledialog-class.md) oder [CDialogImpl](../../atl/reference/cdialogimpl-class.md) als Basisklasse .  
   
 > [!NOTE]
 >  `CSimpleDialog` erstellt nur modale Dialogfelder, die nur die allgemeine Windows-Steuerelemente zu unterstützen. `CDialogImpl` erstellt entweder modal oder nicht modale Dialogfelder.  
   
-### <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Um dem Projekt eine ATL-Dialogfeldressource hinzufügen  
+### <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Zum Hinzufügen einer ATL-Dialogfeld-Ressource zu Ihrem Projekt  
   
 1.  Erstellen Sie eine ATL-Projekt mit der [ATL-Projektassistenten](../../atl/reference/atl-project-wizard.md).  
   
-2.  Von [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)mit der rechten Maustaste auf den Projektnamen, und klicken Sie auf **hinzufügen** aus dem Kontextmenü. Klicken Sie auf **Klasse hinzufügen**.  
+2.  Von [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code)mit der rechten Maustaste auf den Projektnamen, und klicken Sie auf **hinzufügen** aus dem Kontextmenü. Klicken Sie auf **hinzufügen**.  
   
-3.  Im Bereich Vorlagen die [Klasse hinzufügen](../../ide/add-class-dialog-box.md) (Dialogfeld), klicken Sie auf **ATL-Dialogfeld**. Klicken Sie auf **öffnen** zum Anzeigen der [ATL-Dialogfeld-Assistent](../../atl/reference/atl-dialog-wizard.md).  
+3.  Im Bereich Vorlagen die [Klasse hinzufügen](../../ide/add-class-dialog-box.md) Dialogfeld klicken Sie auf **ATL-Dialogfeld**. Klicken Sie auf **öffnen** zum Anzeigen der [ATL-Dialogfeld-Assistent](../../atl/reference/atl-dialog-wizard.md).  
   
  Weitere Informationen finden Sie unter [Implementieren eines Dialogfelds](../../atl/implementing-a-dialog-box.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Class (Hinzufügen einer Klasse)](../../ide/adding-a-class-visual-cpp.md)   
  [Fensterklassen](../../atl/atl-window-classes.md)   
  [Meldungszuordnungen](../../atl/message-maps-atl.md)
 

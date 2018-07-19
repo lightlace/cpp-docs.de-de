@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902e7a1a3ae4bcb35a4822228425747476d5bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864072"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958278"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine-Klasse
 
@@ -55,13 +55,13 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Parameter
 
-`UIntType` Der Ergebnistyp für die ganze Zahl ohne Vorzeichen. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*UIntType* der Ergebnistyp für die ganze Zahl ohne Vorzeichen. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-`A` **Multiplikator**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.
+*Ein* **Multiplikator**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.
 
-`C` **Inkrement**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.
+*C* **Inkrement**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.
 
-`M` **Modulo**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.
+*M* **Modulo**. **Vorbedingung**: Siehe Abschnitt „Hinweise“.
 
 ## <a name="members"></a>Member
 
@@ -80,9 +80,9 @@ Die Vorlagenklasse `linear_congruential_engine` ist die einfachste Generator-Eng
 
 Diese Engine produziert Werte eines benutzerdefinierten Ganzzahltyps ohne Vorzeichen mithilfe der Wiederholungsrelation (*period*) `x(i) = (A * x(i-1) + C) mod M`.
 
-Wenn `M` gleich Null ist, ist der für diese Modulooperation verwendete Wert `numeric_limits<result_type>::max() + 1`. Der Zustand der Engine ist der letzte zurückgegebene Wert oder der Startwert, wenn `operator()` nicht aufgerufen wurde.
+Wenn *M* ist 0 (null), der für diese modulooperation verwendete Wert lautet `numeric_limits<result_type>::max() + 1`. Der Zustand der Engine ist der letzte zurückgegebene Wert oder der Startwert, wenn `operator()` nicht aufgerufen wurde.
 
-Wenn `M` nicht gleich Null ist, müssen die Werte der Vorlagenargumente `A` und `C` niedriger sein als `M`.
+Wenn *M* nicht gleich NULL ist, die Werte der Vorlagenargumente *ein* und *C* muss weniger als *M*.
 
 Obwohl Sie direkt aus dieser Engine einen Generator konstruieren können, können Sie auch eine dieser voreingestellten Typdefinitionen verwenden.
 

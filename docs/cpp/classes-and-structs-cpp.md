@@ -1,5 +1,5 @@
 ---
-title: Klassen und Strukturen (C++) | Microsoft Docs
+title: Klassen und Strukturen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61348578018a5bbddcaff293fa3ed76575eb16de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 88836d93d6ce3ba4dff817c7b470e87f48f61b14
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413244"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954176"
 ---
 # <a name="classes-and-structs-c"></a>Klassen und Strukturen (C++)
 In diesem Abschnitt werden die C++-Klassen und -Strukturen vorgestellt. Die zwei Konstrukte sind identisch in C++. Der Unterschied besteht jedoch darin, dass der Standardzugriff in Strukturen öffentlich ist, während der Standard in Klassen privat ist.  
@@ -58,15 +58,15 @@ In diesem Abschnitt werden die C++-Klassen und -Strukturen vorgestellt. Die zwei
   
 -   [C++-Bitfelder](../cpp/cpp-bit-fields.md)  
   
- Die drei Klassentypen sind "structure", "class" und "union". Sie deklariert werden, mithilfe der [Struktur](../cpp/struct-cpp.md), [Klasse](../cpp/class-cpp.md), und [Union](../cpp/unions.md) Schlüsselwörter (finden Sie unter [Definieren von Klassentypen](http://msdn.microsoft.com/en-us/e8c65425-0f3a-4dca-afc2-418c3b1e57da)). In der folgenden Tabelle werden die Unterschiede zwischen den drei Klassentypen gezeigt.  
+ Die drei Klassentypen sind "structure", "class" und "union". Sie deklariert werden, mithilfe der [Struktur](../cpp/struct-cpp.md), [Klasse](../cpp/class-cpp.md), und [Union](../cpp/unions.md) Schlüsselwörter. In der folgenden Tabelle werden die Unterschiede zwischen den drei Klassentypen gezeigt.  
   
- Weitere Informationen zu Unions finden Sie unter [Unions](../cpp/unions.md). Informationen über verwaltete Klassen und Strukturen finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Weitere Informationen zu Unions finden Sie unter [Unions](../cpp/unions.md). Weitere Informationen über verwaltete Klassen und Strukturen finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md).  
   
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Zugriffssteuerung und Einschränkungen von Strukturen, Klassen und Unions  
   
 |Strukturen|Klassen|Unions|  
 |----------------|-------------|------------|  
-|Klassenschlüssel ist `struct`|Klassenschlüssel ist **Klasse**|Klassenschlüssel ist **Union**|  
+|Klassenschlüssel ist **Struktur**|Klassenschlüssel ist **Klasse**|Klassenschlüssel ist **Union**|  
 |Der Standardzugriff ist öffentlich.|Der Standardzugriff ist privat.|Der Standardzugriff ist öffentlich.|  
 |Keine Verwendungseinschränkungen|Keine Verwendungseinschränkungen|Verwenden Sie jeweils nur einen Member.|  
   

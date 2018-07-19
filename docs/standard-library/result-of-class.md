@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c13dcadc87c23e288c7f8c8a7f5bc9752aae5db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b385d822c2f58d26938b3300207a790dc1193060
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853650"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953022"
 ---
 # <a name="resultof-class"></a>result_of-Klasse
 
@@ -48,13 +48,13 @@ template<class T>
 
 ### <a name="parameters"></a>Parameter
 
-`Fn` Der abzufragende Typ aufgerufen werden kann.
+*Fn* der aufrufbare abzufragende Typ.
 
-`ArgTypes` Die Typen der Argumentliste zu der aufrufbaren abzufragende Typ.
+*ArgTypes* die Typen der Argumentliste, die das abzufragende, aufgerufene Typ Abfrage.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Vorlage zum Zeitpunkt der Kompilierung zur Bestimmung des Ergebnistyps des `Fn`(`ArgTypes`), wobei `Fn` ein aufrufbarer Typ ist, ein Verweis auf eine Funktion oder der Verweis auf einen aufrufbaren Typ, der mit einer Argumentliste der Typen in `ArgTypes` bereitgestellt werden kann. Der `type`-Member der Vorlagenklasse benennt den Ergebnistyp von `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))`, wenn der ausgewertete Ausdruck `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` wohlgeformt ist. Andernfalls hat die Vorlagenklasse keinen `type`-Member. Der `Fn`-Typ und alle Typen im Parameterpaket `ArgTypes` müssen vollständige Typen, `void` oder Arrays mit unbekannter Grenze sein.
+Verwenden Sie diese Vorlage zum Zeitpunkt der Kompilierung den Ergebnistyp des bestimmen `Fn`(`ArgTypes`), wobei *Fn* ist ein aufrufbarer Typ, Verweis auf Funktion oder Verweis auf einen aufrufbaren Typ, mit der eine Argumentliste der Typen in aufgerufen *ArgTypes*. Der `type`-Member der Vorlagenklasse benennt den Ergebnistyp von `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))`, wenn der ausgewertete Ausdruck `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` wohlgeformt ist. Andernfalls hat die Vorlagenklasse keinen `type`-Member. Der Typ *Fn* und alle Typen im parameterpaket *ArgTypes* müssen vollständige Typen werden **"void"**, oder Arrays mit Unbekannter Grenze.
 
 ## <a name="requirements"></a>Anforderungen
 

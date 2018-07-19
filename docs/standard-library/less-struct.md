@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac4528c976e99a77ceec8bc170323846a0e3a28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c146862a18d4292dd6c375dda83063bbcf4dee4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858915"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954354"
 ---
 # <a name="less-struct"></a>less-Struktur
 
-Ein binäres Prädikat, mit dem der kleiner-als-Vorgang (`operator<`) mit den Argumenten ausgeführt wird.
+Ein binäres Prädikat, mit dem der kleiner-als-Vorgang (`operator<`) auf den Argumenten ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,11 +49,11 @@ struct less<void>
 
 ### <a name="parameters"></a>Parameter
 
-`Type`, `T`, `U` Jeder Typ, der unterstützt ein `operator<` , das Operanden angegebenen oder abgeleiteten Typen akzeptiert.
+*Typ*, *T*, *U* jeder Typ, unterstützt eine `operator<` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-`Left` Der linke Operand des kleiner-als-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `T`.
+*Links* der linke Operand des kleiner-als-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-`Right` Der Rechte Operand des kleiner-als-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `U`.
+*Rechts* der Rechte Operand des kleiner-als-Vorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -61,7 +61,7 @@ Das Ergebnis von `Left < Right`. Die spezialisierte Vorlage vervollkommnet die W
 
 ## <a name="remarks"></a>Hinweise
 
-Das binäre Prädikat `less`< `Type`> stellt eine strenge, schwache Sortierung eines Satzes von Elementwerten vom Typ `Type` in Äquivalenzklassen bereit, wenn und nur wenn dieser Typ den mathematischen Standardanforderungen für eine solche Sortierung entspricht. Die Spezialisierungen für einen Zeigertyp ergeben eine gesamte Sortierung von Elementen, insofern, dass alle Elemente unterschiedlicher Werte zueinander in Beziehung stehend sortiert werden.
+Das binäre Prädikat `less` <  `Type`> stellt eine strenge schwache Sortierung eines Satzes von Elementwerten vom Typ *Typ* in Äquivalenzklassen, wenn dieser Typ den mathematischen Standard erfüllt Anforderungen für so sortiert wird. Die Spezialisierungen für einen Zeigertyp ergeben eine gesamte Sortierung von Elementen, insofern, dass alle Elemente unterschiedlicher Werte zueinander in Beziehung stehend sortiert werden.
 
 ## <a name="example"></a>Beispiel
 

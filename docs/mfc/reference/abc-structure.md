@@ -1,5 +1,5 @@
 ---
-title: ABC-Struktur | Microsoft Docs
+title: ABC-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61b5f67247b556b37cdf934f94c30947675533e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c9aac181edb12df8904a2bc6d891d59c0067ecc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339318"
 ---
 # <a name="abc-structure"></a>ABC-Struktur
-Die **ABC** Struktur enthält die Breite eines Zeichens in eine TrueType-Schriftart.  
+Die `ABC` Struktur enthält die Breite eines Zeichens in eine TrueType-Schriftart.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,16 +38,16 @@ typedef struct _ABC { /* abc */
   
 #### <a name="parameters"></a>Parameter  
  *abcA*  
- Gibt den Abstand ein des Zeichens. Der Abstand ein entspricht dem Abstand, der aktuellen Position vor dem Zeichnen des Symbols Zeichen hinzuzufügen.  
+ Gibt den Abstand ein des Zeichens. Der Abstand ein ist der Abstand und die aktuelle Position vor dem Zeichnen des Symbols Zeichen hinzuzufügen.  
   
  *abcB*  
- Gibt den Abstand B des Zeichens. Der Abstand B ist die Breite des gezeichneten Teils des Symbols für das Zeichen an.  
+ Gibt den Abstand B des Zeichens. Der Abstand B ist die Breite des gezeichneten Bereich des Symbols für das Zeichen an.  
   
  *abcC*  
- Gibt den Abstand C des Zeichens. Der Abstand C entspricht dem Abstand hinzufügen zu der aktuellen Position bis Leerraum auf der rechten Seite des Symbols für das Zeichen bereitzustellen.  
+ Gibt den Abstand C des Zeichens. Der C-Abstand wird der Abstand der aktuellen Position Leerraum auf der rechten Seite des Symbols für das Zeichen zu hinzu.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Gesamtbreite der ein Zeichen ist die Summe der Adressbereiche A, B und C. Die oder der C-Raum kann an Underhangs oder Überhängen negativ sein.  
+ Die gesamte Breite eines Zeichens ist die Summe der Leerzeichen A, B und C. A- oder der C-Space kann an Underhangs oder Überhängen negativ sein.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** wingdi.h  

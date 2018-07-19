@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e210af223ffe6d3b8e0766adaaf539f0bb97f73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63b2c11b7a5a8d48e3fe068807b641489c6aa323
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844366"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957359"
 ---
 # <a name="isfundamental-class"></a>is_fundamental-Klasse
 
@@ -37,11 +37,11 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typs Prädikat enthält true, wenn der Typ `Ty` ein grundlegender Typ ist, d. h., `void`, ein ganzzahliger Typ, ein Gleitkommawert, oder ein `cv-qualified`-Formular, andernfalls enthält er false.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein grundlegender Typ ist, d. h. **"void"**, ein ganzzahliger Typ, ein Gleitkommawert lassen, oder ein `cv-qualified` -Formular von einem davon ist, andernfalls er false enthält.
 
 ## <a name="example"></a>Beispiel
 

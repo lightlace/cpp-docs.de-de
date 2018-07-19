@@ -1,5 +1,5 @@
 ---
-title: Bitmapfunktionen zu ausgrauen und Dithern | Microsoft Docs
+title: Zu ausgrauen und Dithering Bitmap-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de887cdbe80642925bc935eb48726a59850f6f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46a1607b0d69be21e38cace117ec2c0e248827be
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339396"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>Bitmap-Funktionen zu Ausgrauen und Dithering
 **Ausgegraute Bitmap-Funktionen**  
@@ -62,7 +62,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Zeigt auf den Ziel-DC.  
   
  *w*  
@@ -71,10 +71,10 @@ void AFXAPI AfxDrawGrayBitmap(
  *y*  
  Die Y-Koordinate des Ziels.  
   
- `rSrc`  
+ *rSrc*  
  Die Quellbitmap.  
   
- `crBackground`  
+ *crBackground*  
  Die neue Hintergrundfarbe (normalerweise grau, wie etwa COLOR_MENU).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -99,13 +99,13 @@ void AFXAPI AfxGetGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rSrc`  
+ *rSrc*  
  Die Quellbitmap.  
   
- `pDest`  
+ *pDest*  
  Die Zielbitmap.  
   
- `crBackground`  
+ *crBackground*  
  Die neue Hintergrundfarbe (normalerweise grau, wie etwa COLOR_MENU).  
   
 ### <a name="remarks"></a>Hinweise  
@@ -120,7 +120,7 @@ void AFXAPI AfxGetGrayBitmap(
  **Header:** afxwin.h  
   
 ##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap  
- Zeichnet eine Bitmap, ersetzen den Hintergrund mit einem Muster Dithern (aus).  
+ Zeichnet eine Bitmap, dessen Hintergrund mit einem Muster für Dithering (Prüfung) ersetzt.  
   
 ```   
 void AFXAPI AfxDrawDitheredBitmap(
@@ -133,7 +133,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Zeigt auf den Ziel-DC.  
   
  *w*  
@@ -142,17 +142,17 @@ void AFXAPI AfxDrawDitheredBitmap(
  *y*  
  Die Y-Koordinate des Ziels.  
   
- `rSrc`  
+ *rSrc*  
  Die Quellbitmap.  
   
- `cr1`  
- Einer der beiden Dithering Farben ab, in der Regel weiß.  
+ *cr1*  
+ Einer der beiden Dithering mit Farben ab, in der Regel weiß.  
   
- `cr2`  
- Die anderen Dithering Farbe, in der Regel hellgrau (etwa COLOR_MENU).  
+ *cr2*  
+ Die anderen Dithering mit Farbe, in der Regel hellgrau (etwa COLOR_MENU).  
   
 ### <a name="remarks"></a>Hinweise  
- Die Quellbitmap auf den Zieldomänencontroller mit zwei Farben gezeichnet wird ( `cr1` und `cr2`) Karomuster der Bitmap-Hintergrund ersetzt. Der Hintergrund des Quellbitmaps ist als seine weißen Pixel und alle Pixel, die die Farbe des Pixels in der linken oberen Ecke der Bitmap für die Übereinstimmung definiert.  
+ Die Quell-Bitmap gezeichnet wird, auf dem Zieldomänencontroller mit einer zwei-Farbe (*cr1* und *cr2*) kariertes Muster, die die Bitmap-Hintergrund ersetzt. Der Hintergrund des Quellbitmaps ist als seine weißen Pixel und alle Pixel, die die Farbe des Pixels in der oberen linken Ecke der Bitmap für die Übereinstimmung definiert.  
   
  ![Vergleich von geditherten und ursprünglichen Symbolversionen](../../mfc/reference/media/vcditheredbitmap.gif "Vcditheredbitmap")  
   
@@ -164,7 +164,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 
 ##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap  
- Kopiert eine Bitmap, ersetzen den Hintergrund mit einem Muster Dithern (aus).  
+ Kopiert eine Bitmap, dessen Hintergrund mit einem Muster für Dithering (Prüfung) ersetzt.  
   
 ```   
 void AFXAPI AfxGetDitheredBitmap(
@@ -175,20 +175,20 @@ void AFXAPI AfxGetDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rSrc`  
+ *rSrc*  
  Die Quellbitmap.  
   
- `pDest`  
+ *pDest*  
  Die Zielbitmap.  
   
- `cr1`  
- Einer der beiden Dithering Farben ab, in der Regel weiß.  
+ *cr1*  
+ Einer der beiden Dithering mit Farben ab, in der Regel weiß.  
   
- `cr2`  
- Die anderen Dithering Farbe, in der Regel hellgrau (etwa COLOR_MENU).  
+ *cr2*  
+ Die anderen Dithering mit Farbe, in der Regel hellgrau (etwa COLOR_MENU).  
   
 ### <a name="remarks"></a>Hinweise  
- Die Quellbitmap in das Zielbitmap mit zwei Farben kopiert ( `cr1` und `cr2`) Karomuster die Quellbitmap im Hintergrund ersetzt. Der Hintergrund des Quellbitmaps ist als seine weißen Pixel und alle Pixel, die die Farbe des Pixels in der linken oberen Ecke der Bitmap für die Übereinstimmung definiert.  
+ Die Quell-Bitmap wird kopiert, in die Zielbitmap mit einer zwei-Farbe (*cr1* und *cr2*) kariertes Muster, und Ersetzen Sie dabei die Quell-Bitmap-Hintergrund. Der Hintergrund des Quellbitmaps ist als seine weißen Pixel und alle Pixel, die die Farbe des Pixels in der oberen linken Ecke der Bitmap für die Übereinstimmung definiert.  
   
  ![Vergleich von geditherten und ursprünglichen Symbolversionen](../../mfc/reference/media/vcditheredbitmap.gif "Vcditheredbitmap")  
   

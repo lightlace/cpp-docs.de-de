@@ -1,5 +1,5 @@
 ---
-title: CDialog-Klasse | Microsoft Docs
+title: CDialog-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ae7748c249cb9c7752b55d07bf10278c9c7f4ce
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: bb8dd6fbb4cbbcea6e452afadff5b0c0e081d34e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339409"
 ---
 # <a name="cdialog-class"></a>CDialog-Klasse
 Die Basisklasse für die Anzeige von Dialogfeldern auf dem Bildschirm verwendet.  
@@ -78,58 +78,58 @@ class CDialog : public CWnd
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CDialog::Create](#create)|Initialisiert die `CDialog` Objekt. Erstellt ein nicht modales Dialogfeld, und fügt es der `CDialog` Objekt.|  
-|[CDialog::CreateIndirect](#createindirect)|Erstellt ein nicht modales Dialogfeld aus einer Vorlage im Dialogfeld im Arbeitsspeicher (nicht ressourcenbasierte).|  
-|[Methode CDialog:: DoModal](#domodal)|Ruft ein modales Dialogfeld, und gibt Sie zurück, wenn fertig.|  
+|[CDialog::Create](#create)|Initialisiert das `CDialog`-Objekt. Erstellt ein nicht modales Dialogfeld, und fügt es der `CDialog` Objekt.|  
+|[CDialog::CreateIndirect](#createindirect)|Wird ein nicht modales Dialogfeld aus einer Vorlage im Dialogfeld im Arbeitsspeicher (nicht ressourcenbasiert) erstellt.|  
+|[Methode CDialog:: DoModal](#domodal)|Ruft ein modales Dialogfeld, und gibt zurück, wenn Sie fertig.|  
 |[CDialog::EndDialog](#enddialog)|Schließt ein modales Dialogfeld an.|  
-|[CDialog::GetDefID](#getdefid)|Ruft die ID der standardmäßige pushbutton-Steuerelement für ein Dialogfeld ab.|  
-|[CDialog::GotoDlgCtrl](#gotodlgctrl)|Verschiebt den Fokus zu einem angegebenen Dialogfeld-Steuerelement im Dialogfeld an.|  
-|[DLGTEMPL](#initmodalindirect)|Erstellt ein modales Dialogfeld aus einer Vorlage im Dialogfeld im Arbeitsspeicher (nicht ressourcenbasierte). Die Parameter werden gespeichert, bis die Funktion `DoModal` aufgerufen wird.|  
-|[CDialog::MapDialogRect](#mapdialogrect)|Konvertiert die Einheiten im Dialogfeld eines Rechtecks Bildschirm Einheiten.|  
+|[CDialog::GetDefID](#getdefid)|Ruft die ID des das standardmäßige pushbutton-Steuerelement für ein Dialogfeld an.|  
+|[CDialog::GotoDlgCtrl](#gotodlgctrl)|Verschiebt den Fokus auf ein im angegebenen Dialogfeld-Steuerelement im Dialogfeld an.|  
+|[DLGTEMPL](#initmodalindirect)|Erstellt ein modales Dialogfeld aus einer Vorlage im Dialogfeld im Arbeitsspeicher (nicht ressourcenbasiert) wird. Die Parameter werden gespeichert, bis die Funktion `DoModal` aufgerufen wird.|  
+|[CDialog::MapDialogRect](#mapdialogrect)|Konvertiert die Dialogfeld-Einheiten eines Rechtecks Bildschirm Einheiten.|  
 |[CDialog::NextDlgCtrl](#nextdlgctrl)|Verschiebt den Fokus auf das nächste Dialogfeld-Steuerelement im Dialogfeld an.|  
-|[CDialog::](#oninitdialog)|Überschreiben Sie, um das Dialogfeld Initialisierung zu erweitern.|  
+|[CDialog::](#oninitdialog)|Außer Kraft setzen Sie, um das Dialogfeld Initialisierung zu erweitern.|  
 |[CDialog::OnSetFont](#onsetfont)|Überschreiben Sie, um die Schriftart angeben, die ein Dialogfeld-Steuerelement verwenden, wenn es sich um Text zeichnet.|  
-|[CDialog::PrevDlgCtrl](#prevdlgctrl)|Verschiebt den Fokus auf das vorherige Dialogfeld-Steuerelement im Dialogfeld an.|  
-|[CDialog::SetDefID](#setdefid)|Das standardmäßige pushbutton-Steuerelement für ein Dialogfeld in einem angegebenen Pushbutton geändert.|  
-|[CDialog::SetHelpID](#sethelpid)|Legt eine kontextbezogene Hilfe-ID für das Dialogfeld.|  
+|[CDialog::PrevDlgCtrl](#prevdlgctrl)|Verschiebt den Fokus auf das vorherige Dialogfeld-Steuerelement im Dialogfeld.|  
+|[CDialog::SetDefID](#setdefid)|Die standardmäßige pushbutton-Steuerelement für ein Dialogfeld wird in einem angegebenen Pushbutton geändert.|  
+|[CDialog::SetHelpID](#sethelpid)|Legt eine kontextbezogene Hilfe-ID für das Dialogfeld fest.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CDialog::OnCancel](#oncancel)|Außer Kraft setzen Sie, um die Schaltfläche "Abbrechen" oder ESC Aktion auszuführen. Die Standardeinstellung schließt das Dialogfeld und `DoModal` gibt **IDCANCEL**.|  
-|[CDialog::OnOK](#onok)|Überschreiben Sie, um die Schaltfläche "OK"-Aktion in einem modalen Dialogfeld Ausführen. Die Standardeinstellung schließt das Dialogfeld und `DoModal` gibt **IDOK**.|  
+|[CDialog::OnCancel](#oncancel)|Überschreiben Sie, um die Schaltfläche "Abbrechen" oder die ESC-Taste Aktion auszuführen. Standardmäßig wird das Dialogfeld geschlossen und `DoModal` IDCANCEL zurückgibt.|  
+|[CDialog::OnOK](#onok)|Überschreiben Sie, um die Schaltfläche "OK"-Aktion in einem modalen Dialogfeld. Standardmäßig wird das Dialogfeld geschlossen und `DoModal` IDOK zurückgibt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dialogfelder werden zwei Typen: modale und nicht modale. Ein modales Dialogfeld muss vom Benutzer geschlossen werden, bevor die Anwendung fortgesetzt wird. Ein nicht modales Dialogfeld ermöglicht den Benutzer das Dialogfeld anzuzeigen und heraus zu einem anderen Vorgang abbrechen oder entfernen das Dialogfeld.  
+ Dialogfelder sind zwei Typen: modale und nicht modale. Ein modales Dialogfeld muss vom Benutzer geschlossen werden, bevor die Anwendung fortgesetzt wird. Ein nicht modales Dialogfeld ermöglicht den Benutzer das Dialogfeld anzuzeigen und zu einem anderen Vorgang zurückzugeben, ohne Abbrechen oder entfernen Sie das Dialogfeld.  
   
- Ein `CDialog` Objekt ist eine Kombination einer Dialogfeldvorlage und einem `CDialog`-abgeleitete Klasse. Dialog-Editor zum Erstellen der Dialogfeldvorlage und speichern es in einer Ressource, und verwenden Sie dann das Hinzufügen von Klassen-Assistent zum Erstellen einer Klasse abgeleitet wurde. `CDialog`.  
+ Ein `CDialog` Objekt ist eine Kombination aus einer Dialogfeldvorlage und einem `CDialog`-abgeleitete Klasse. Den Dialog-Editor zum Erstellen der Dialogfeldvorlage und speichern es in einer Ressource verwenden und dann den Assistenten zum Hinzufügen von Klassen zum Erstellen einer Klasse abgeleitet `CDialog`.  
   
- Ein Dialogfeld, z. B. ein anderes Fenster empfängt Nachrichten von Windows. In einem Dialogfeld interessieren Sie insbesondere bei der Verarbeitung von benachrichtigungsmeldungen aus den Dialogfeld-Steuerelemente, da dies ist die Interaktion des Benutzers mit dem Dialogfeld. Verwenden Sie auswählen, welche Nachrichten Sie trotzdem Handle und die entsprechenden Meldungszuordnungseinträge und Meldungshandler Memberfunktionen der Klasse hinzugefügt wird, werden das Eigenschaftenfenster. Sie müssen nur die Handler-Memberfunktionen anwendungsspezifischen Code schreiben.  
+ Ein Dialogfeld wie jedem anderen Fenster empfängt Nachrichten von Windows. In einem Dialogfeld interessieren Sie insbesondere bei der Verarbeitung von Benachrichtigungen von der Dialogfeld-Steuerelemente, weil es sich handelt, wie der Benutzer mit einem Dialogfeld interagiert. Verwenden Sie das Fenster "Eigenschaften" auswählen, welche Nachrichten Sie möchten Handle und die entsprechenden Meldungszuordnungseinträge und Meldungshandler-Memberfunktionen der Klasse hinzugefügt. Sie müssen nur die anwendungsspezifischen Code in die Ereignishandler-Member-Funktionen zu schreiben.  
   
  Falls gewünscht, können Sie immer Meldungszuordnungseinträge und Memberfunktionen manuell schreiben.  
   
- In alle bis auf die unbedeutendsten (Dialogfeld) fügen Sie Membervariablen zur Dialogfeldklasse abgeleiteten zum Speichern von Daten in das Dialogfeld-Steuerelemente vom Benutzer eingegebenen oder zum Anzeigen von Daten für den Benutzer an. Die Variable hinzufügen-Assistenten können Sie Member Variablen erstellen und diese mit Steuerelementen zuordnen. Gleichzeitig wählen Sie eine Variable vom Typ und den zulässigen Wertebereich für jede Variable ein. Der Code-Assistenten hinzugefügt abgeleiteten Dialogfeldklasse die Membervariablen.  
+ In allen außer den einfachsten Dialogfeld fügen Sie der abgeleiteten Dialogfeld-Klasse, die zum Speichern von Daten in das Dialogfeld-Steuerelemente vom Benutzer eingegebenen oder zum Anzeigen von Daten für den Benutzer Membervariablen hinzu. Sie können die Variable hinzufügen Assistent Member-Variablen erstellen, und ordnen sie Steuerelemente verwenden. Zur gleichen Zeit wählen Sie eine Variable vom Typ und die zulässigen Wertebereich für jede Variable ein. Der Code-Assistent fügt die Membervariablen abgeleiteten Dialogfeldklasse hinzu.  
   
- Eine Zuordnung wird generiert, um den Austausch von Daten zwischen der Membervariablen und das Dialogfeld-Steuerelementen automatisch behandelt. Die datenzuordnung bietet Funktionen, die die Steuerelemente im Dialogfeld mit den richtigen Werten zu initialisieren, rufen Sie die Daten, und überprüfen Sie die Daten.  
+ Eine datenzuordnung wird generiert, um den Austausch von Daten zwischen der Membervariablen und das Dialogfeld-Steuerelementen automatisch zu behandeln. Die datenzuordnung bietet Funktionen, die die Steuerelemente im Dialogfeld mit den richtigen Werten zu initialisieren, die Daten abrufen und überprüfen Sie die Daten.  
   
- Um ein modales Dialogfeld erstellen möchten, erstellen Sie ein Objekt auf dem Stapel mit dem Konstruktor für die abgeleiteten Dialogfeldklasse, und rufen Sie anschließend `DoModal` im Dialogfenster und seiner Steuerelemente zu erstellen. Wenn Sie ein nicht modales Dialogfeld erstellen möchten, rufen Sie `Create` im Konstruktor der Dialogfeldklasse.  
+ Um ein modales Dialogfeld erstellen möchten, erstellen Sie ein Objekt im Stapel mithilfe des Konstruktors für die Dialogfeldklasse abgeleiteten, und rufen Sie anschließend `DoModal` um das Dialogfeld und dessen Steuerelemente zu erstellen. Wenn Sie ein nicht modales Dialogfeld erstellen möchten, rufen Sie `Create` im Konstruktor der Dialogfeldklasse.  
   
- Sie können auch eine Vorlage im Arbeitsspeicher erstellen, mit einer [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Daten strukturieren, wie im Windows SDK beschrieben. Wenn Sie erstellt haben, eine `CDialog` -Objekt, rufen Sie [CreateIndirect](#createindirect) ein ohne Modus zu erstellen (Dialogfeld), oder rufen [InitModalIndirect](#initmodalindirect) und [DoModal](#domodal) ein modales erstellen Das Dialogfeld.  
+ Sie können auch eine Vorlage im Speicher erstellen, mit einem [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Daten strukturieren, wie im Windows SDK beschrieben. Wenn Sie erstellt haben, eine `CDialog` Objekt, rufen Sie [CreateIndirect](#createindirect) ein ohne Modus zu erstellen (Dialogfeld), oder rufen [InitModalIndirect](#initmodalindirect) und [DoModal](#domodal) zum Erstellen eines modales Das Dialogfeld.  
   
- Die datenzuordnung Dialogdatenaustausch und-Validierung wird geschrieben, in einer Überschreibung von `CWnd::DoDataExchange` , Ihre neue Dialogfeldklasse hinzugefügt wird. Finden Sie unter der [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) Memberfunktion in `CWnd` für Weitere Informationen über die Dialogdatenaustausch und-Validierung Funktionalität.  
+ Die datenzuordnung Dialogdatenaustausch und-Validierung hat eine Überschreibung der `CWnd::DoDataExchange` , die die neue Dialogfeldklasse hinzugefügt wird. Finden Sie unter den [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) -Memberfunktion im `CWnd` Weitere Informationen zu den Dialogdatenaustausch und-Validierung-Funktionalität.  
   
- Der Programmierer und der Aufruf Framework `DoDataExchange` indirekt durch einen Aufruf von [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata).  
+ Sowohl der Programmierer und der Aufruf Framework `DoDataExchange` indirekt durch einen Aufruf von [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata).  
   
- Das Framework ruft `UpdateData` Wenn klickt der Benutzer die Schaltfläche "OK", um ein modales Dialogfeld zu schließen. (Die Daten werden nicht abgerufen, wenn die Schaltfläche "Abbrechen" geklickt wird.) Die standardmäßige Implementierung des [OnInitDialog](#oninitdialog) ruft auch `UpdateData` die Anfangswerte der Steuerelemente festgelegt. Überschreiben Sie i. d. r. `OnInitDialog` um Steuerelemente zu initialisieren. `OnInitDialog` wird aufgerufen, nachdem der Dialogfeld-Steuerelemente werden erstellt, und unmittelbar bevor das Dialogfeld angezeigt wird.  
+ Das Framework ruft `UpdateData` Wenn klickt der Benutzer die Schaltfläche "OK", um ein modales Dialogfeld zu schließen. (Die Daten werden nicht abgerufen, wenn auf die Schaltfläche "Abbrechen" geklickt wird.) Die standardmäßige Implementierung des [OnInitDialog](#oninitdialog) ruft auch `UpdateData` die Anfangswerte der Steuerelemente festgelegt. Überschreiben Sie i. d. r. `OnInitDialog` um Steuerelemente zu initialisieren. `OnInitDialog` wird aufgerufen, nachdem alle die Dialogfeldsteuerelemente erstellt werden und noch bevor das Dialogfeld wird angezeigt.  
   
- Sie können Aufrufen `CWnd::UpdateData` zu einem beliebigen Zeitpunkt während der Ausführung einen gebunden oder ungebunden (Dialogfeld).  
+ Rufen Sie `CWnd::UpdateData` zu einem beliebigen Zeitpunkt während der Ausführung ein modales oder nicht modales Dialogfeld.  
   
- Wenn Sie ein Dialogfeld von hand entwickeln, Sie die erforderlichen Membervariablen zur Klasse abgeleiteten Dialogfeld selbst, und hinzufügen Memberfunktionen zur festlegen oder Abrufen dieser Werte.  
+ Wenn Sie ein Dialogfeld, das manuell entwickeln, Sie die erforderlichen Membervariablen die Dialogfeld-abgeleiteten Klasse selbst hinzufügen, und Sie die Member-Funktionen, um festzulegen, oder rufen Sie diese Werte hinzufügen.  
   
- Ein modales Dialogfeld wird automatisch geschlossen, wenn die Schaltfläche OK oder "Abbrechen" gedrückt wird oder wenn Ihr Code aufruft, die `EndDialog` Memberfunktion.  
+ Ein modales Dialogfeld wird automatisch geschlossen, wenn der Benutzer die Schaltflächen OK oder Abbrechen drückt oder wenn Ihr Code Ruft die `EndDialog` Member-Funktion.  
   
- Wenn Sie ein nicht modales Dialogfeld implementieren, immer außer Kraft setzen die `OnCancel` Memberfunktion und rufen `DestroyWindow` aus darin. Rufen Sie nicht die Basisklasse `CDialog::OnCancel`, da er ruft `EndDialog`, dem wird das Dialogfeld ausgeblendet, jedoch werden nicht gelöscht. Sie sollten auch überschreiben `PostNcDestroy` für nicht modale Dialogfelder zum Löschen von **dies**, da nicht modale Dialogfelder in der Regel zugeordnet sind, mit **neue**. Modale Dialogfelder werden in der Regel auf den Frame erstellt und müssen nicht `PostNcDestroy` Cleanup.  
+ Wenn Sie ein nicht modales Dialogfeld implementieren, immer außer Kraft setzen der `OnCancel` Member-Funktion und rufen `DestroyWindow` aus darin. Rufen Sie die Basisklasse nicht `CDialog::OnCancel`, da er aufruft `EndDialog`, dem wird das Dialogfeld ausgeblendet, jedoch wird nicht zerstört. Sie sollten auch überschreiben, `PostNcDestroy` für nicht modale Dialogfelder zum Löschen **dies**, da nicht modale Dialogfelder in der Regel zugeordnet sind **neue**. Modale Dialogfelder sind in der Regel auf den Frame erstellt und müssen nicht `PostNcDestroy` bereinigen.  
   
  Weitere Informationen zu `CDialog` finden Sie unter:  
   
@@ -167,22 +167,22 @@ CDialog();
   
 ### <a name="parameters"></a>Parameter  
  *lpszTemplateName*  
- Enthält eine Null-terminierte Zeichenfolge, die eine Dialogfeldvorlagen-Ressource im Dialogfeld heißt.  
+ Enthält eine Null-terminierte Zeichenfolge mit dem Namen von einer Ressource im Dialogfeld an.  
   
  *nIDTemplate*  
- Enthält die ID einer Dialogfeldvorlagen-Ressource im Dialogfeld an.  
+ Enthält die ID einer Ressource im Dialogfeld an.  
   
  *pParentWnd*  
- Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)), der das Dialogfeldobjekt angehört. Ist er **NULL**, dem Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt ist.  
+ Verweist auf das übergeordnete Element oder Besitzer Window-Objekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)) zu dem das Dialogfeldobjekt gehört. Wenn es NULL ist, wird das Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Form des Konstruktors bietet Zugriff auf die Dialogressource anhand des Namens der Vorlage. Der anderen Konstruktor ermöglicht den Zugriff von Vorlagen-ID-Nummer in der Regel mit einer **IDD_** Präfix (z. B. "IDD_DIALOG1").  
+ Eine Form des Konstruktors ermöglicht den Zugriff auf die Ressource anhand des Namens der Vorlage. Der andere Konstruktor bietet Zugriff über Vorlagen-ID an, in der Regel mit einer **IDD_** Präfix (z. B. IDD_DIALOG1).  
   
- Um ein modales Dialogfeld aus einer Vorlage im Arbeitsspeicher zu konstruieren, zuerst den parameterlosen, geschützten Konstruktor aufrufen, und rufen dann `InitModalIndirect`.  
+ Um ein modales Dialogfeld aus einer Vorlage speicherresident erstellen zu können, zuerst den parameterlosen, protected-Konstruktor aufrufen, und rufen dann `InitModalIndirect`.  
   
- Nachdem Sie ein modales Dialogfeld mit einer der oben aufgeführten Methoden erstellen, rufen Sie `DoModal`.  
+ Nachdem Sie ein modales Dialogfeld mit einer der oben genannten Methoden erstellen, rufen `DoModal`.  
   
- Um ein nicht modales Dialogfeld erstellen, verwenden die geschützte Form der `CDialog` Konstruktor. Der Konstruktor ist geschützt, da Sie eine eigene Klasse im Dialogfeld, um ein nicht modales Dialogfeld implementieren abgeleitet werden müssen. Konstruktion eines nicht modalen Dialogfelds ist ein zweistufiger Prozess. Rufen Sie zunächst den Konstruktor; Rufen Sie anschließend die `Create` Memberfunktion versucht, ein ressourcenbasierte Dialogfeld erstellen, oder rufen Sie `CreateIndirect` um das Dialogfeld aus einer Vorlage im Arbeitsspeicher zu erstellen.  
+ Verwenden Sie zum Erstellen eines nicht modalen Dialogfelds geschützte Form der `CDialog` Konstruktor. Der Konstruktor ist geschützt, da Sie eine eigene Klasse im Dialogfeld zum Implementieren eines nicht modalen Dialogfelds abgeleitet werden müssen. Konstruktion eines nicht modalen Dialogfelds ist ein zweistufiger Prozess. Rufen Sie zunächst den Konstruktor; Rufen Sie dann die `Create` Memberfunktion versucht, ein ressourcenbasierte Dialogfeld erstellen, oder rufen Sie `CreateIndirect` um das Dialogfeld aus einer Vorlage in den Arbeitsspeicher zu erstellen.  
   
 ##  <a name="create"></a>  CDialog::Create  
  Rufen Sie `Create` ein nicht modales Dialogfeld mit einer Vorlage im Dialogfeld aus einer Ressource zu erstellen.  
@@ -200,35 +200,35 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
  *lpszTemplateName*  
- Enthält eine Null-terminierte Zeichenfolge, die eine Dialogfeldvorlagen-Ressource im Dialogfeld heißt.  
+ Enthält eine Null-terminierte Zeichenfolge mit dem Namen von einer Ressource im Dialogfeld an.  
   
  *pParentWnd*  
- Verweist auf das übergeordnete Fenster-Objekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)), der das Dialogfeldobjekt angehört. Ist er **NULL**, dem Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt ist.  
+ Verweist auf das übergeordnete Fenster-Objekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)) zu dem das Dialogfeldobjekt gehört. Wenn es NULL ist, wird das Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt.  
   
  *nIDTemplate*  
- Enthält die ID einer Dialogfeldvorlagen-Ressource im Dialogfeld an.  
+ Enthält die ID einer Ressource im Dialogfeld an.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Bei beiden Formen zurückgegeben ungleich NULL, wenn das Dialogfeld Erstellung und Initialisierung erfolgreich waren. andernfalls 0.  
+ Ungleich NULL, wenn im Dialogfeld-Erstellung und Initialisierung erfolgreich war. beide Formen zurückgegeben wird. andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können den Aufruf von put `Create` in den Konstruktor oder rufen sie nach dem Konstruktor wird aufgerufen.  
+ Sie können den Aufruf von einfügen `Create` in den Konstruktor oder rufen sie nach dem Konstruktor aufgerufen wird.  
   
- Zwei Formen von der `Create` Memberfunktion werden von Vorlagenamen oder der ID-Nummer für die Vorlage (z. B. "IDD_DIALOG1") für den Zugriff auf das Dialogfeld Dialogfeldvorlagen-Ressource bereitgestellt.  
+ Zwei Arten von der `Create` Memberfunktion werden anhand des Namens der Vorlage oder Vorlagen-ID-Nummer (z. B. IDD_DIALOG1) für den Zugriff auf die Ressource im Dialogfeld bereitgestellt.  
   
- Übergeben Sie für eine der Formen einen Zeiger auf das Fenster des übergeordneten Objekts. Wenn *pParentWnd* ist **NULL**, mit seinem übergeordneten oder Besitzer-Fenster auf das Hauptanwendungsfenster festgelegt im Dialogfeld erstellt werden.  
+ Übergeben Sie für eine der Formen einen Zeiger auf das übergeordnete Fenster-Objekt. Wenn *pParentWnd* NULL ist, wird das Dialogfeld erstellt werden, mit einem übergeordneten oder Besitzer-Fenster auf das Hauptanwendungsfenster festgelegt.  
   
- Die `Create` Memberfunktion sofort zurück, nachdem sie das Dialogfeld erstellt.  
+ Die `Create` Memberfunktion gibt sofort, nachdem Sie das Dialogfeld erstellt.  
   
- Verwenden der **WS_VISIBLE** in der Vorlage im Dialogfeld Format zuzuweisen, wenn das Dialogfeld angezeigt werden soll, wenn das übergeordnete Fenster erstellt wird. Andernfalls müssen Sie aufrufen `ShowWindow`. Weitere Dialogfeld-Stile und ihre Anwendung finden Sie in der [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur im Windows SDK und [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles) in der *MFC-Referenz*.  
+ Verwenden Sie WS_VISIBLE-Stil in der Vorlage im Dialogfeld aus, wenn das Dialogfeld angezeigt werden soll, wenn das übergeordnete Fenster erstellt wird. Andernfalls müssen Sie aufrufen `ShowWindow`. Weitere Dialogfeld-Stile und ihre Anwendung finden Sie in der [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur im Windows SDK und [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles) in die *MFC-Referenz*.  
   
- Verwenden der `CWnd::DestroyWindow` Funktion zerstört ein Dialogfeld erstellt, indem die `Create` Funktion.  
+ Verwenden der `CWnd::DestroyWindow` Funktion zerstört ein Dialogfeld erstellt die `Create` Funktion.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
   
 ##  <a name="createindirect"></a>  CDialog::CreateIndirect  
- Rufen Sie diese Memberfunktion, um ein nicht modales Dialogfeld aus einer Vorlage im Dialogfeld im Arbeitsspeicher zu erstellen.  
+ Rufen Sie diese Memberfunktion, um ein nicht modales Dialogfeld aus einer Dialogfeldvorlage im Speicher zu erstellen.  
   
 ```  
 virtual BOOL CreateIndirect(
@@ -244,46 +244,46 @@ virtual BOOL CreateIndirect(
   
 ### <a name="parameters"></a>Parameter  
  *lpDialogTemplate*  
- Verweist auf Arbeitsspeicher, das Dialogfeld Vorlage verwendet enthält, um das Dialogfeld zu erstellen. Diese Vorlage wird in Form einer [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur und Informationen, wie im Windows SDK beschrieben.  
+ Verweist auf Arbeitsspeicher, eine Dialogfeld-Vorlage verwendet enthält, um das Dialogfeld zu erstellen. Diese Vorlage ist in Form einer [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur und das Steuerelement Informationen wie beschrieben in das Windows SDK.  
   
  *pParentWnd*  
- Verweist auf das Dialogfeldobjekt übergeordnete Fensterobjekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)). Ist er **NULL**, dem Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt ist.  
+ Verweist auf das Dialogfeldobjekt übergeordnete Window-Objekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)). Wenn es NULL ist, wird das Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt.  
   
  *lpDialogInit*  
- Verweist auf eine **DLGINIT** Ressource.  
+ Verweist auf eine Ressource DLGINIT.  
   
  *hDialogTemplate*  
- Enthält ein Handle für den globalen Arbeitsspeicher, die mit einer Vorlage im Dialogfeld an. Diese Vorlage wird in Form einer **DLGTEMPLATE** Struktur und die Daten für jedes Steuerelement im Dialogfeld.  
+ Enthält ein Handle für den globalen Arbeitsspeicher, die mit einer Vorlage im Dialogfeld an. Diese Vorlage ist in Form einer `DLGTEMPLATE` Struktur und die Daten für jedes Steuerelement im Dialogfeld.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn das Dialogfeld erstellt und wurde erfolgreich initialisiert wurde; andernfalls 0.  
+ Ungleich NULL, wenn das Dialogfeld erstellt und erfolgreich initialisiert wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `CreateIndirect` Memberfunktion sofort zurück, nachdem sie das Dialogfeld erstellt.  
+ Die `CreateIndirect` Memberfunktion gibt sofort, nachdem Sie das Dialogfeld erstellt.  
   
- Verwenden der **WS_VISIBLE** in der Vorlage im Dialogfeld Format zuzuweisen, wenn das Dialogfeld angezeigt werden soll, wenn das übergeordnete Fenster erstellt wird. Andernfalls müssen Sie aufrufen `ShowWindow` darin angezeigt werden. Weitere Informationen, wie Sie andere Dialogfeld-Stile in der Vorlage angeben können, finden Sie unter der [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur im Windows SDK.  
+ Verwenden Sie WS_VISIBLE-Stil in der Vorlage im Dialogfeld aus, wenn das Dialogfeld angezeigt werden soll, wenn das übergeordnete Fenster erstellt wird. Andernfalls müssen Sie aufrufen `ShowWindow` verursachen angezeigt werden. Weitere Informationen dazu, wie Sie andere Dialogfeld-Formatvorlagen in der Vorlage angeben können, finden Sie unter den [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur im Windows SDK.  
   
- Verwenden der `CWnd::DestroyWindow` Funktion zerstört ein Dialogfeld erstellt, indem die `CreateIndirect` Funktion.  
+ Verwenden der `CWnd::DestroyWindow` Funktion zerstört ein Dialogfeld erstellt die `CreateIndirect` Funktion.  
   
- Dialogfelder, die ActiveX-Steuerelemente enthalten, erfordern zusätzliche Informationen in einem **DLGINIT** Ressource. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage um ein MFC-Dialogfeld mit einem ActiveX-Steuerelement zu erstellen." Knowledge Base-Artikeln finden Sie unter [ http://support.microsoft.com ](http://support.microsoft.com/).  
+ Dialogfelder, die ActiveX-Steuerelemente enthalten erfordern zusätzliche Informationen, die in einer Ressource DLGINIT bereitgestellt. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage um ein MFC-Dialogfeld mit einem ActiveX-Steuerelement zu erstellen." Knowledge Base-Artikeln finden Sie unter [ http://support.microsoft.com ](http://support.microsoft.com/).  
   
 ##  <a name="domodal"></a>  Methode CDialog:: DoModal  
- Rufen Sie diese Memberfunktion zum Aufrufen des modalen Dialogfelds und die Dialogfeld-Ergebnis zurück.  
+ Rufen Sie diese Memberfunktion zum Aufrufen des modalen Dialogfelds sowie zum Zurückgeben des Ergebnisses im Dialogfeld, wenn fertig.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **Int** Wert, der der Wert gibt an die *%nergebnis* zu übergebene Parameter der [CDialog::EndDialog](#enddialog) Memberfunktion, die verwendet wird, um das Dialogfeld zu schließen. Der Rückgabewert ist -1, wenn die Funktion nicht das Dialogfeld erstellt werden konnte oder **IDABORT** Wenn ein anderer Fehler aufgetreten ist, in diesem Fall das Fenster "Ausgabe" enthält Fehlerinformationen von [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Ein **Int** -Wert, der der Wert gibt an die *%nergebnis* Parameter, der übergeben wurde die [CDialog::EndDialog](#enddialog) Member-Funktion, die verwendet wird, um das Dialogfeld zu schließen. Der zurückgegebene Wert ist 1, wenn die Funktion nicht erstellen konnte, die im Dialogfeld oder IDABORT Wenn ein anderer Fehler aufgetreten ist, in diesem Fall das Fenster "Ausgabe" Fehlerinformationen von enthält, [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion verarbeitet alle Interaktionen mit dem Benutzer, während das Dialogfeld aktiv ist. Dies ist, was die modales Dialogfeld. d. h. kann nicht der Benutzer mit anderen Fenstern interagieren, bis das Dialogfeld geschlossen wird.  
+ Diese Memberfunktion verarbeitet die gesamte Interaktion mit dem Benutzer, während das Dialogfeld aktiv ist. Dies ist, was die modales Dialogfeld. der Benutzer kann nicht, also mit anderen Windows interagieren, bis das Dialogfeld geschlossen wird.  
   
- Wenn der Benutzer eine der Schaltflächen im Dialogfeld, z. B. OK oder "Abbrechen", einer Nachrichtenhandler Memberfunktion, z. B. klickt [OnOK](#onok) oder [OnCancel](#oncancel), wird aufgerufen, um das Dialogfeld zu schließen. Die Standardeinstellung `OnOK` Memberfunktion wird überprüfen und aktualisieren Sie die Daten im Dialogfeld und schließen Sie das Dialogfeld mit dem Ergebnis **IDOK**, und der standardmäßige `OnCancel` Memberfunktion schließt das Dialogfeld mit dem Ergebnis  **IDCANCEL** ohne überprüfen oder Aktualisieren der Daten im Dialogfeld. Sie können diese Meldungshandler Funktionen zum Ändern des Verhaltens überschreiben.  
+ Klickt der Benutzer eines der Druckknöpfe, in das Dialogfeld, z. B. OK oder Abbrechen, einer-Nachrichtenhandler-Memberfunktion, z. B. [OnOK](#onok) oder [OnCancel](#oncancel), aufgerufen, um zu versuchen, das Dialogfeld zu schließen. Der Standardwert `OnOK` Memberfunktion wird überprüfen und aktualisieren Sie die Daten im Dialogfeld und schließen Sie das Dialogfeld mit dem Ergebnis IDOK und der Standardwert `OnCancel` Member-Funktion wird das Dialogfeld mit dem Ergebnis IDCANCEL schließen, ohne zu überprüfen oder Aktualisieren der Dialogfeld-Daten. Sie können diese Meldungshandler-Funktionen zum Ändern des Verhaltens überschreiben.  
   
 > [!NOTE]
-> `PreTranslateMessage` wird jetzt für modalen Dialog Box-Nachrichtenverarbeitung aufgerufen.  
+> `PreTranslateMessage` für modales Dialogfeld im Feld die Nachrichtenverarbeitung wird jetzt aufgerufen werden.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog#63](../../mfc/codesnippet/cpp/cdialog-class_2.cpp)]  
@@ -297,14 +297,14 @@ void EndDialog(int nResult);
   
 ### <a name="parameters"></a>Parameter  
  *%nergebnis*  
- Enthält den Wert aus dem Dialogfeld an den Aufrufer des zurückzugebenden `DoModal`.  
+ Enthält den Wert aus dem Dialogfeld an den Aufrufer der zurückzugebenden `DoModal`.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion gibt *%nergebnis* als Rückgabewert von `DoModal`. Verwenden Sie die `EndDialog` Funktion zum Abschließen der Verarbeitung, wenn ein modales Dialogfeld erstellt wird.  
+ Diese Memberfunktion gibt *%nergebnis* als Rückgabewert der `DoModal`. Verwenden Sie die `EndDialog` Funktion zum Abschließen der Verarbeitung, wenn ein modales Dialogfeld erstellt wird.  
   
- Sie können Aufrufen `EndDialog` jederzeit selbst im [OnInitDialog](#oninitdialog), in diesem Fall sollten Sie schließen, bevor sie das Dialogfeld angezeigt wird oder bevor der Eingabefokus festgelegt wird.  
+ Rufen Sie `EndDialog` jederzeit selbst im [OnInitDialog](#oninitdialog), in diesem Fall schließen Sie das Dialogfeld, davor angezeigt wird oder vor der Eingabefokus festgelegt ist.  
   
- `EndDialog` Das Dialogfeld wird nicht sofort geschlossen werden. Stattdessen wird ein Flag, das leitet das Dialogfeld zu schließen, sobald der aktuelle Message-Handler zurückgegeben.  
+ `EndDialog` Das Dialogfeld wird nicht sofort geschlossen werden. Stattdessen wird ein Flag, das leitet das Dialogfeld zu schließen, sobald der aktuellen Message-Handler zurückgegeben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog#64](../../mfc/codesnippet/cpp/cdialog-class_3.cpp)]  
@@ -319,10 +319,10 @@ DWORD GetDefID() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine 32-Bit-Wert ( `DWORD`). Wenn die standardmäßige Pushbutton einen ID-Wert aufweist, enthält das höherwertige Wort **DC_HASDEFID** und das niederwertige Wort enthält den ID-Wert. Wenn die standardmäßige Pushbutton nicht über ein ID-Wert verfügt, ist der Rückgabewert 0.  
+ Eine 32-Bit-Wert ( `DWORD`). Wenn die standardmäßige Pushbutton einen ID-Wert verfügt, wird das höherwertige Wort enthält DC_HASDEFID, und das niederwertige Wort enthält den ID-Wert. Wenn die standardmäßige Pushbutton nicht über ein ID-Wert verfügt, ist der Rückgabewert 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Dies ist normalerweise eine Schaltfläche "OK".  
+ Dies ist normalerweise die Schaltfläche "OK".  
   
 ##  <a name="gotodlgctrl"></a>  CDialog::GotoDlgCtrl  
  Verschiebt den Fokus auf das angegebene Steuerelement im Dialogfeld an.  
@@ -333,16 +333,16 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
   
 ### <a name="parameters"></a>Parameter  
  *pWndCtrl*  
- Identifiziert das Fenster (Steuerelement), den Fokus erhält.  
+ Gibt das Fenster (Steuerelement), um den Fokus erhalten.  
   
 ### <a name="remarks"></a>Hinweise  
- Um einen Zeiger auf das Steuerelement zu übergeben (untergeordneten Fensters) *pWndCtrl*, rufen die `CWnd::GetDlgItem` Memberfunktion, die zurückgibt, einen Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt.  
+ Um einen Zeiger auf das Steuerelement (untergeordnete Fenster) als übergeben *pWndCtrl*, rufen Sie die `CWnd::GetDlgItem` Memberfunktion, wodurch einen Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem).  
   
 ##  <a name="initmodalindirect"></a>  DLGTEMPL  
- Rufen Sie diese Memberfunktion zum Initialisieren Sie ein modales Dialogfeld-Objekt, das mit einer Dialogfeld-Vorlage, die Sie im Arbeitsspeicher erstellen.  
+ Rufen Sie diese Memberfunktion zum Initialisieren Sie ein modales Dialogfeld-Objekt, das mithilfe einer Dialogfeld-Vorlage, die Sie in den Arbeitsspeicher zu erstellen.  
   
 ```  
 BOOL InitModalIndirect(
@@ -358,27 +358,27 @@ BOOL InitModalIndirect(
   
 ### <a name="parameters"></a>Parameter  
  *lpDialogTemplate*  
- Verweist auf Arbeitsspeicher, das Dialogfeld Vorlage verwendet enthält, um das Dialogfeld zu erstellen. Diese Vorlage wird in Form einer [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur und Informationen, wie im Windows SDK beschrieben.  
+ Verweist auf Arbeitsspeicher, eine Dialogfeld-Vorlage verwendet enthält, um das Dialogfeld zu erstellen. Diese Vorlage ist in Form einer [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Struktur und das Steuerelement Informationen wie beschrieben in das Windows SDK.  
   
  *hDialogTemplate*  
- Enthält ein Handle für den globalen Arbeitsspeicher, die mit einer Vorlage im Dialogfeld an. Diese Vorlage wird in Form einer **DLGTEMPLATE** Struktur und die Daten für jedes Steuerelement im Dialogfeld.  
+ Enthält ein Handle für den globalen Arbeitsspeicher, die mit einer Vorlage im Dialogfeld an. Diese Vorlage ist in Form einer `DLGTEMPLATE` Struktur und die Daten für jedes Steuerelement im Dialogfeld.  
   
  *pParentWnd*  
- Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)), der das Dialogfeldobjekt angehört. Ist er **NULL**, dem Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt ist.  
+ Verweist auf das übergeordnete Element oder Besitzer Window-Objekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)) zu dem das Dialogfeldobjekt gehört. Wenn es NULL ist, wird das Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt.  
   
  *lpDialogInit*  
- Verweist auf eine **DLGINIT** Ressource.  
+ Verweist auf eine Ressource DLGINIT.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn das Dialogfeldobjekt erstellt und wurde erfolgreich initialisiert wurde; andernfalls 0.  
+ Ungleich NULL, wenn das Dialogfeldobjekt erstellt und erfolgreich initialisiert wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Um ein modales Dialogfeld indirekt zu erstellen, zunächst belegen einen Speicherblock auf dem globalen und mit der Dialogfeldvorlage gefüllt. Rufen Sie dann auf die leere `CDialog` Konstruktor, um das Dialogfeld-Objekt zu erstellen. Rufen Sie als Nächstes `InitModalIndirect` zum Speichern des Handles für die Vorlage in-Memory-Dialogfeld. Das Dialogfeld "Windows" wird erstellt und angezeigt höher, bei der [DoModal](#domodal) Memberfunktion aufgerufen wird.  
+ Um ein modales Dialogfeld indirekt zu erstellen, zunächst belegen Sie einen Speicherblock auf dem globalen und füllen Sie es mit der Dialogfeldvorlage. Rufen Sie dann auf die leere `CDialog` Konstruktor zum Erstellen des Dialogfeld-Objekts. Rufen Sie als Nächstes `InitModalIndirect` Ihr Handle an die in-Memory-Dialogfeld-Vorlage zu speichern. Das Dialogfeld "Windows" erstellt und angezeigt wird später bei der [DoModal](#domodal) Memberfunktion aufgerufen wird.  
   
- Dialogfelder, die ActiveX-Steuerelemente enthalten, erfordern zusätzliche Informationen in einem **DLGINIT** Ressource. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage um ein MFC-Dialogfeld mit einem ActiveX-Steuerelement zu erstellen." Knowledge Base-Artikeln finden Sie unter [ http://support.microsoft.com ](http://support.microsoft.com/).  
+ Dialogfelder, die ActiveX-Steuerelemente enthalten erfordern zusätzliche Informationen, die in einer Ressource DLGINIT bereitgestellt. Weitere Informationen finden Sie im Knowledge Base-Artikel Q231591, "So wird's gemacht: verwenden eine Dialogvorlage um ein MFC-Dialogfeld mit einem ActiveX-Steuerelement zu erstellen." Knowledge Base-Artikeln finden Sie unter [ http://support.microsoft.com ](http://support.microsoft.com/).  
   
 ##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect  
- Rufen Sie die Einheiten im Dialogfeld eines Rechtecks Bildschirm Einheiten zu konvertieren.  
+ Rufen Sie die Dialogfeld-Einheiten eines Rechtecks in Einheiten von Bildschirm zu konvertieren.  
   
 ```  
 void MapDialogRect(LPRECT lpRect) const;  
@@ -386,86 +386,86 @@ void MapDialogRect(LPRECT lpRect) const;
   
 ### <a name="parameters"></a>Parameter  
  *lpRect*  
- Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das das Dialogfeld enthält koordiniert, der konvertiert werden.  
+ Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das das Dialogfeld enthält koordiniert, konvertiert werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Dialogfeld Einheiten sind im Hinblick auf die aktuellen Dialogfeld-Basiseinheit abgeleitet wurde. die durchschnittliche Breite und Höhe der Zeichen in der Schriftart für Text im Dialogfeld angegeben. Eine horizontale Einheit ist ein Viertel der im Dialogfeld Basis-Breite Einheit, und eine vertikale Einheit ist ein Achtel des Geräts im Dialogfeld Basis Höhe.  
+ Dialogfeld-Einheiten sind im Hinblick auf die aktuellen Dialogfeld-Basiseinheit abgeleitet, die durchschnittliche Breite und Höhe der Zeichen in die Schriftart für Dialogfeld-Text angegeben. Eine horizontale Einheit ist ein Viertel der im Dialogfeld Basis-Width-Komponente und eine vertikale Einheit ist ein Achtel der Dialogfeld-Basis Height-Komponente.  
   
- Die **GetDialogBaseUnits** Windows-Funktion gibt Informationen zur Datenbankgröße für die Systemschriftart, aber Sie können eine andere Schriftart jedem Dialogfeld angeben, bei der Verwendung der **DS_SETFONT** Stil die Ressource-Definitionsdatei. Die `MapDialogRect` Windows-Funktion verwendet die passende Schriftart für das Dialogfeld zu öffnen.  
+ Die `GetDialogBaseUnits` Windows-Funktion gibt die Größeninformationen für die Systemschriftart, aber Sie können eine andere Schriftart für jedes Dialogfeld angeben, bei der Verwendung des DS_SETFONT-Stils in der Ressourcendefinition Datei. Die `MapDialogRect` Windows-Funktion verwendet die passende Schriftart für das Dialogfeld zu öffnen.  
   
- Die `MapDialogRect` Memberfunktion ersetzt die Dialogfeld-Einheiten in *LpRect* mit Bildschirm Einheiten (in Pixel), damit das Rechteck zum Erstellen eines Dialogfelds oder positionieren ein Steuerelement innerhalb eines Felds verwendet werden kann.  
+ Die `MapDialogRect` Memberfunktion ersetzt die Dialogfeld-Einheiten in *LpRect* mit Bildschirm von Einheiten (in Pixel), damit das Rechteck verwendet werden kann, erstellen ein Dialogfeld oder ein Steuerelement innerhalb eines Felds zu positionieren.  
   
 ##  <a name="nextdlgctrl"></a>  CDialog::NextDlgCtrl  
- Verschiebt den Fokus zum nächsten Steuerelement im Dialogfeld an.  
+ Verschiebt den Fokus auf das nächste Steuerelement im Dialogfeld an.  
   
 ```  
 void NextDlgCtrl() const;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn der Fokus auf das letzte Steuerelement im Dialogfeld befindet, wird in das erste Steuerelement verschoben.  
+ Wenn der Fokus auf das letzte Steuerelement im Dialogfeld befindet, bewegt auf das erste Steuerelement.  
   
 ##  <a name="oncancel"></a>  CDialog::OnCancel  
- Das Framework ruft diese Methode auf, wenn der Benutzer klickt **"Abbrechen"** oder in einem Dialogfeld gebunden oder ungebunden die ESC-Taste drückt.  
+ Das Framework ruft diese Methode auf, wenn der Benutzer klickt **Abbrechen** oder in ein modales oder nicht modales Dialogfeld, das die ESC-Taste drückt.  
   
 ```  
 virtual void OnCancel();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode zum Ausführen von Aktionen (z. B. das Wiederherstellen von alten Daten) Wenn ein Benutzer das Dialogfeld schließt, indem Sie auf **"Abbrechen"** oder drücken die ESC-Taste. Die Standardeinstellung schließt ein modales Dialogfeld durch Aufruf von ["EndDialog"](#enddialog) und dadurch [DoModal](#domodal) IDCANCEL zurückgegeben.  
+ Überschreiben Sie diese Methode zum Ausführen von Aktionen (z. B. das Wiederherstellen von alten Daten) Wenn ein Benutzer das Dialogfeld schließt, indem Sie auf **Abbrechen** oder die ESC-Taste drücken. Standardmäßig schließt ein modales Dialogfeld durch Aufruf von [EndDialog](#enddialog) und dadurch [DoModal](#domodal) IDCANCEL zurückgegeben.  
   
- Wenn Sie implementieren die **"Abbrechen"** Schaltfläche in ein nicht modales Dialogfeld, überschreiben Sie die `OnCancel` Methode, und rufen [DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow) darin. Rufen Sie die Basisklasse-Methode nicht, da er aufruft `EndDialog`, dem wird das Dialogfeld ausgeblendet, jedoch nicht zu zerstören.  
+ Wenn Sie implementieren die **Abbrechen** Schaltfläche in ein nicht modales Dialogfeld, müssen Sie überschreiben die `OnCancel` Methode, und rufen [DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow) darin. Rufen Sie die Methode der Basisklasse, da sie aufruft, nicht `EndDialog`, dem wird das Dialogfeld ausgeblendet, jedoch nicht zerstört es.  
   
 > [!NOTE]
->  Diese Methode kann nicht überschrieben werden, bei der Verwendung einer `CFileDialog` Objekt in einem Programm, das unter Windows XP kompiliert wird. Weitere Informationen zu `CFileDialog`, finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
+>  Sie können diese Methode können nicht überschreiben, bei der Verwendung einer `CFileDialog` Objekt in ein Programm, das unter Windows XP kompiliert wird. Weitere Informationen zu `CFileDialog`, finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog#66](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]  
   
 ##  <a name="oninitdialog"></a>  CDialog::  
- Diese Methode wird aufgerufen, als Antwort auf die `WM_INITDIALOG` Nachricht.  
+ Diese Methode wird aufgerufen, als Reaktion auf die `WM_INITDIALOG` Nachricht.  
   
 ```  
 virtual BOOL OnInitDialog();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt an, ob die Anwendung den Eingabefokus auf eines der Steuerelemente im Dialogfeld festgelegt wurde. Wenn `OnInitDialog` ungleich NULL zurückgegeben wird, wird Windows den Eingabefokus auf den Standardspeicherort, der das erste Steuerelement im Dialogfeld. Die Anwendung kann 0 zurückgeben, nur dann, wenn er explizit den Eingabefokus auf eines der Steuerelemente im Dialogfeld festgelegt wurde.  
+ Gibt an, ob die Anwendung, den Eingabefokus auf eines der Steuerelemente im Dialogfeld festgelegt wurde. Wenn `OnInitDialog` ungleich NULL zurückgegeben wird, wird Windows den Eingabefokus auf den Standardspeicherort an, das erste Steuerelement in das Dialogfeld. Die Anwendung kann 0 nur zurück, wenn sie explizit den Eingabefokus auf eines der Steuerelemente im Dialogfeld festgelegt wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Sendet Windows die `WM_INITDIALOG` Nachricht auf das Dialogfeld während der [erstellen](#create), [CreateIndirect](#createindirect), oder [DoModal](#domodal) -Aufrufe, die auftreten, unmittelbar bevor das Dialogfeld wird angezeigt.  
+ Windows sendet die `WM_INITDIALOG` Nachricht das Dialogfeld während der [erstellen](#create), [CreateIndirect](#createindirect), oder [DoModal](#domodal) -Aufrufe, die unmittelbar vor das Dialogfeld auf wird angezeigt.  
   
- Überschreiben Sie diese Methode, wenn Sie besondere Bearbeitung beim Initialisieren des Dialogfelds ausführen möchten. In der überschriebenen Version, rufen Sie zuerst die Basisklasse `OnInitDialog` aber ignorieren Sie den Rückgabewert. In der Regel wird nun wieder `TRUE` aus Ihrer außer Kraft gesetzte Methode.  
+ Überschreiben Sie diese Methode, wenn Sie beim Initialisieren des Dialogfelds spezielle Verarbeitungsaufgaben durchführen möchten. In der außer Kraft gesetzte Version, rufen Sie zuerst die Basisklasse `OnInitDialog` aber ignorieren Sie den Rückgabewert. Geben Sie in der Regel zurück, `TRUE` aus der überschriebenen Methode.  
   
- Windows-Aufrufe der `OnInitDialog` Funktion mithilfe der globalen-Standarddialogfeld-Prozedur, die häufig für alle Dialogfelder für die Microsoft Foundation Class-Bibliothek. Diese Funktion über die meldungszuordnung wird nicht aufgerufen, und Sie benötigen daher keinen Meldungszuordnungseintrag für diese Methode.  
+ Windows ruft die `OnInitDialog` Funktion mithilfe der globalen-Standarddialogfeld-Prozedur, die häufig für alle Dialogfelder für die Microsoft Foundation Class-Bibliothek. Diese Funktion über die meldungszuordnung wird nicht aufgerufen, und Sie benötigen daher keine Eintrags für eine Zuordnung für diese Methode.  
   
 > [!NOTE]
-> Diese Methode kann nicht überschrieben werden, bei der Verwendung einer `CFileDialog` Objekt in einem Programm, das unter Windows Vista oder höher kompiliert wird. Weitere Informationen zu Änderungen an `CFileDialog` unter Windows Vista und höheren Versionen finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
+> Sie können diese Methode können nicht überschreiben, bei der Verwendung einer `CFileDialog` Objekt in ein Programm, das unter Windows Vista oder höher kompiliert wird. Weitere Informationen zu Änderungen an `CFileDialog` unter Windows Vista und höher finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog#67](../../mfc/codesnippet/cpp/cdialog-class_6.cpp)]  
   
 ##  <a name="onok"></a>  CDialog::OnOK  
- Wird aufgerufen, wenn der Benutzer klickt auf die **OK** Schaltfläche (die Schaltfläche mit einer ID IDOK).  
+ Wird aufgerufen, wenn der Benutzer klickt auf die **OK** (die Schaltfläche mit einer ID von IDOK).  
   
 ```  
 virtual void OnOK();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode, um Aktionen durchzuführen, wenn die **OK** Schaltfläche aktiviert ist. Wenn das Dialogfeld Automatische datenvalidierung und Exchange enthält, wird die standardmäßige Implementierung dieser Methode überprüft der Dialogfelddaten, und der entsprechenden Variablen in der Anwendung aktualisiert.  
+ Überschreiben Sie diese Methode, um Aktionen durchzuführen, wenn die **OK** Schaltfläche aktiviert ist. Wenn Sie das Dialogfeld automatisch eine datenvalidierung als auch Exchange enthält, die Standardimplementierung dieser Methode überprüft die Dialogfelddaten, und Sie werden die entsprechenden Variablen in Ihrer Anwendung aktualisiert.  
   
- Wenn Sie implementieren die **OK** Schaltfläche in ein nicht modales Dialogfeld, überschreiben Sie die `OnOK` Methode, und rufen [DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow) darin. Rufen Sie die Basisklasse-Methode nicht, da er aufruft ["EndDialog"](#enddialog) die unsichtbar des Dialogfelds "", jedoch nicht zerstört.  
+ Wenn Sie implementieren die **OK** Schaltfläche in ein nicht modales Dialogfeld, müssen Sie überschreiben die `OnOK` Methode, und rufen [DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow) darin. Rufen Sie die Methode der Basisklasse, da sie aufruft, nicht [EndDialog](#enddialog) die ist das Dialogfeld nicht mehr sichtbar, jedoch nicht zerstört.  
   
 > [!NOTE]
->  Diese Methode kann nicht überschrieben werden, bei der Verwendung einer `CFileDialog` Objekt in einem Programm, das unter Windows XP kompiliert wird. Weitere Informationen zu `CFileDialog`, finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
+>  Sie können diese Methode können nicht überschreiben, bei der Verwendung einer `CFileDialog` Objekt in ein Programm, das unter Windows XP kompiliert wird. Weitere Informationen zu `CFileDialog`, finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCControlLadenDialog#68](../../mfc/codesnippet/cpp/cdialog-class_7.cpp)]  
   
 ##  <a name="onsetfont"></a>  CDialog::OnSetFont  
- Gibt die Schriftart, die ein Dialogfeld-Steuerelement beim Zeichnen von Text verwendet wird.  
+ Gibt die Schriftart, die ein Dialogfeld-Steuerelement beim Zeichnen von Text verwendet.  
   
 ```  
 Virtual void OnSetFont(CFont* pFont);
@@ -473,15 +473,15 @@ Virtual void OnSetFont(CFont* pFont);
   
 ### <a name="parameters"></a>Parameter  
  [in] *pFont*  
- Gibt einen Zeiger auf die Schriftart, die für alle Steuerelemente in diesem Dialogfeld als Standardschriftart verwendet werden.  
+ Gibt einen Zeiger auf die Schriftart, die als die Standardschriftart für alle Steuerelemente in diesem Dialogfeld verwendet wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Dialogfeld wird die angegebene Schriftart als Standard für alle Steuerelemente verwenden.  
+ Das Dialogfeld wird die angegebene Schriftart wird standardmäßig für alle Steuerelemente verwenden.  
   
- Dialog-Editor wird die im Dialogfeld-Schriftart in der Regel als Teil der Dialogfeldvorlagen-Ressource im Dialogfeld.  
+ Der Dialog-Editor legt die Dialogfeld-Schriftart in der Regel als Teil der Dialogfeldvorlagen-Ressource im Dialogfeld fest.  
   
 > [!NOTE]
-> Diese Methode kann nicht überschrieben werden, bei der Verwendung einer `CFileDialog` Objekt in einem Programm, das unter Windows Vista oder höher kompiliert wird. Weitere Informationen zu Änderungen an `CFileDialog` unter Windows Vista und höheren Versionen finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
+> Sie können diese Methode können nicht überschreiben, bei der Verwendung einer `CFileDialog` Objekt in ein Programm, das unter Windows Vista oder höher kompiliert wird. Weitere Informationen zu Änderungen an `CFileDialog` unter Windows Vista und höher finden Sie unter [CFileDialog-Klasse](../../mfc/reference/cfiledialog-class.md).  
   
 ##  <a name="prevdlgctrl"></a>  CDialog::PrevDlgCtrl  
  Legt den Fokus zum vorherigen Steuerelement im Dialogfeld fest.  
@@ -491,10 +491,10 @@ void PrevDlgCtrl() const;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn der Fokus auf das erste Steuerelement im Dialogfeld befindet, wird bis zum letzten Steuerelement im Feld verschoben.  
+ Wenn das erste Steuerelement in das Dialogfeld der Fokus hat, verschiebt er bis zum letzten Steuerelement in das Feld an.  
   
 ##  <a name="setdefid"></a>  CDialog::SetDefID  
- Ändert das standardmäßige pushbutton-Steuerelement für ein Dialogfeld an.  
+ Ändert die standardmäßige pushbutton-Steuerelement für ein Dialogfeld an.  
   
 ```  
 void SetDefID(UINT nID);
@@ -505,7 +505,7 @@ void SetDefID(UINT nID);
  Gibt die ID des pushbutton-Steuerelements, die standardmäßig verwendet wird.  
   
 ##  <a name="sethelpid"></a>  CDialog::SetHelpID  
- Legt eine kontextbezogene Hilfe-ID für das Dialogfeld.  
+ Legt eine kontextbezogene Hilfe-ID für das Dialogfeld fest.  
   
 ```  
 void SetHelpID(UINT nIDR);

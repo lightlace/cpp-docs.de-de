@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 278a9e33fb305b73c2919c455f55b816de644e4b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843391"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954004"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
@@ -51,11 +51,11 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parameter
 
-`_RealVal` Der Wert des Typs **"float"** für den reellen Teil der zu erstellenden komplexen Zahl.
+*_RealVal* der Wert des Typs **"float"** für den Realteil der komplexen Zahl, die erstellt wird.
 
-`_ImagVal` Der Wert des Typs **"float"** für den imaginären Teil der zu erstellenden komplexen Zahl.
+*_ImagVal* der Wert des Typs **"float"** für den imaginären Teil der komplexen Zahl, die erstellt wird.
 
-`complexNum` Die komplexe Zahl vom Typ **doppelte** oder vom Typ `long double` , deren reellen und imaginären Teile werden verwendet, um eine komplexe Zahl des Typs initialisieren **"float"** erstellt wird.
+*ComplexNum* die komplexe Zahl vom Typ **doppelte** oder eines Typs **long double** , deren tatsächliche und imaginäre Teile werden verwendet, um eine komplexe Zahl des Typs initialisieren **"float"** erstellt wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -63,7 +63,7 @@ Eine komplexe Zahl vom Typ **float**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die explizite Spezialisierung der complex-Vorlagenklasse in eine komplexe Klasse des Typs **float** unterscheidet sich von der Vorlagenklasse nur in den Konstruktoren, die sie definiert. Die Konvertierung von **float** in **double** darf implizit erfolgen, aber die weniger sichere Konvertierung von **float** in `long double` muss **explizit** erfolgen. Die Verwendung einer **expliziten** Konvertierung schließt die Initiierung mit Typkonvertierung über die Zuweisungssyntax aus.
+Die explizite Spezialisierung der complex-Vorlagenklasse in eine komplexe Klasse des Typs **float** unterscheidet sich von der Vorlagenklasse nur in den Konstruktoren, die sie definiert. Die Konvertierung von **"float"** zu **doppelte** darf implizit erfolgen, aber die weniger sichere Konvertierung von **"float"** zu **long double** ist muss **explizite**. Die Verwendung einer **expliziten** Konvertierung schließt die Initiierung mit Typkonvertierung über die Zuweisungssyntax aus.
 
 Weitere Informationen zur Vorlagenklasse `complex` finden Sie unter [complex-Klasse](../standard-library/complex-class.md). Eine Liste der Member der `complex`-Vorlagenklasse finden Sie unter .
 

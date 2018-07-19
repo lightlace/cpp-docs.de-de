@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77e158605deeae859132243ab624d4a1638973b8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3cbcf6a1a48f32f5976483d5bb70e7c2e3f1d469
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861486"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954850"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert-Klasse
 
@@ -52,9 +52,11 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parameter
 
-`Codecvt` Die [Gebietsschema](../standard-library/locale-class.md) Facet, die das Konvertierungsobjekt darstellt.
+*codecvt*  
+ Das Facet [locale](../standard-library/locale-class.md), das das Konvertierungsobjekt darstellt.
 
-`Elem` Der Breitzeichen-Elementtyp.
+*Elem*  
+ Der Breitzeichen-Elementtyp.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -145,11 +147,11 @@ wide_string from_bytes(const char* first, const char* last);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Byte`|Die zu konvertierende Einzelelement-Bytesequenz.|
-|`ptr`|Die auf NULL endende Zeichenfolge im C-Stil der zu konvertierenden Zeichen.|
-|`Bstr`|Der zu konvertierende [byte_string](#byte_string).|
-|`first`|Das erste Zeichen in einem Bereich von zu konvertierenden Zeichen.|
-|`last`|Das letzte Zeichen in einem Bereich von zu konvertierenden Zeichen.|
+|*Byte*|Die zu konvertierende Einzelelement-Bytesequenz.|
+|*ptr*|Die auf NULL endende Zeichenfolge im C-Stil der zu konvertierenden Zeichen.|
+|*BSTR*|Der zu konvertierende [byte_string](#byte_string).|
+|*Erste*|Das erste Zeichen in einem Bereich von zu konvertierenden Zeichen.|
+|*last*|Das letzte Zeichen in einem Bereich von zu konvertierenden Zeichen.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -157,7 +159,7 @@ Ein breites Zeichenfolgenobjekt, das sich aus der Konvertierung ergibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn das [Konvertierungsstatusobjekt](../standard-library/wstring-convert-class.md) `not` mit einem expliziten Wert erstellt wurde, wird es vor Beginn der Konvertierung auf den Standardwert (den ursprünglichen Konvertierungsstatus) festgelegt. Andernfalls bleibt es unverändert.
+Wenn die [konvertierungszustand](../standard-library/wstring-convert-class.md) Objekt war *nicht* mit einem expliziten Wert erstellt, es auf seinen Standardwert (den ursprünglichen konvertierungszustand) festgelegt ist vor Beginn der Konvertierung. Andernfalls bleibt es unverändert.
 
 Die Anzahl der erfolgreich konvertierten Eingabeelemente wird im Konvertierungsanzahlobjekt gespeichert. Wenn kein Konvertierungsfehler auftritt, gibt die Memberfunktion die konvertierte breite Zeichenfolge zurück. Wenn das Objekt mit einem Initialisierer für die Breitzeichen-Fehlermeldung erstellt wurde, gibt die Memberfunktion das Breitzeichen-Fehlermeldungsobjekt zurück. Andernfalls gibt die Memberfunktion ein Objekt der Klasse [range_error](../standard-library/range-error-class.md) aus.
 
@@ -214,15 +216,15 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Char`|Die zu konvertierenden Breitzeichenfolgen.|
-|`Wptr`|Die auf NULL endende Sequenz im C-Stil, die bei `wptr`beginnt und konvertiert werden soll.|
-|`Wstr`|Die zu konvertierende Zeichenfolge vom Typ [wide_string](#wide_string).|
-|`first`|Das erste Element in dem zu konvertierenden Elementbereich.|
-|`last`|Das letzte Element in dem zu konvertierenden Elementbereich.|
+|*Char*|Die zu konvertierenden Breitzeichenfolgen.|
+|*Wptr*|Die auf NULL endende Sequenz im C-Stil, die bei `wptr`beginnt und konvertiert werden soll.|
+|*WSTR*|Die zu konvertierende Zeichenfolge vom Typ [wide_string](#wide_string).|
+|*Erste*|Das erste Element in dem zu konvertierenden Elementbereich.|
+|*last*|Das letzte Element in dem zu konvertierenden Elementbereich.|
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn das [Konvertierungsstatusobjekt](../standard-library/wstring-convert-class.md) `not` mit einem expliziten Wert erstellt wurde, wird es vor Beginn der Konvertierung auf den Standardwert (den ursprünglichen Konvertierungsstatus) festgelegt. Andernfalls bleibt es unverändert.
+Wenn die [konvertierungszustand](../standard-library/wstring-convert-class.md) Objekt war *nicht* mit einem expliziten Wert erstellt, es auf seinen Standardwert (den ursprünglichen konvertierungszustand) festgelegt ist vor Beginn der Konvertierung. Andernfalls bleibt es unverändert.
 
 Die Anzahl der erfolgreich konvertierten Eingabeelemente wird im Konvertierungsanzahlobjekt gespeichert. Wenn kein Konvertierungsfehler auftritt, gibt die Memberfunktion die konvertierte Bytezeichenfolge zurück. Wenn das Objekt mit einem Initialisierer für die Bytezeichen-Fehlermeldung erstellt wurde, gibt die Memberfunktion das Bytezeichen-Fehlermeldungsobjekt zurück. Andernfalls gibt die Memberfunktion ein Objekt der Klasse [range_error](../standard-library/range-error-class.md) aus.
 
@@ -252,10 +254,10 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`*Pcvt`|Das Objekt des `Codecvt`-Typs zum Durchführen der Konvertierung.|
-|`_State`|Das Objekt vom Typ [state_type](#state_type), das den Konvertierungsstatus darstellt.|
-|`_Berr`|Die bei Fehlern anzuzeigende [byte_string](#byte_string).|
-|`Werr`|Die bei Fehlern anzuzeigende [wide_string](#wide_string).|
+|*\*Pcvt*|Das Objekt des `Codecvt`-Typs zum Durchführen der Konvertierung.|
+|*_State*|Das Objekt vom Typ [state_type](#state_type), das den Konvertierungsstatus darstellt.|
+|*_Berr*|Die bei Fehlern anzuzeigende [byte_string](#byte_string).|
+|*Werr*|Die bei Fehlern anzuzeigende [wide_string](#wide_string).|
 
 ### <a name="remarks"></a>Hinweise
 

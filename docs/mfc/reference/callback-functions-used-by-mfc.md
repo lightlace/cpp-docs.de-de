@@ -1,5 +1,5 @@
 ---
-title: Von MFC verwendete Rückruffunktionen | Microsoft Docs
+title: Von MFC verwendete Rückruffunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 96db2ea0c28e14f7a8e614d94e18cd3fad3cda53
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339009"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Von MFC verwendete Rückruffunktionen
-Drei Fehlerrückruf-Funktionen werden in der Microsoft Foundation Class-Bibliothek angezeigt. Diese Rückruffunktionen übergeben werden, um [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), und [CDC:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc). Beachten Sie, dass alle Rückruffunktionen MFC-Ausnahmen abfangen müssen, vor der Rückgabe an Windows, da Ausnahmen hinweg Rückruf ausgelöst werden, können nicht aus. Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).  
+Drei Rückruffunktionen werden in der Microsoft Foundation Class-Bibliothek angezeigt. An dieser Rückruffunktionen übergeben werden [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), und [CDC:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc). Beachten Sie, dass alle Rückruffunktionen MFC-Ausnahmen abfangen müssen, bevor an Windows, zurückgegeben werden, da Ausnahmen hinweg Rückruf ausgelöst werden, können nicht an. Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).  
 
 |name||  
 |----------|-----------------|  
@@ -51,16 +51,16 @@ int CALLBACK EXPORT ObjectFunc(
   
 ### <a name="parameters"></a>Parameter  
  *lpszLogObject*  
- Verweist auf eine [LOGPEN](../../mfc/reference/logpen-structure.md) oder [LOGBRUSH](../../mfc/reference/logbrush-structure.md) Datenstruktur, die Informationen zu den logischen Attributen des Objekts enthält.  
+ Verweist auf eine [LOGPEN](../../mfc/reference/logpen-structure.md) oder [LOGBRUSH](../../mfc/reference/logbrush-structure.md) -Datenstruktur, die Informationen zu den logischen Attributen des Objekts enthält.  
   
  *lpData*  
- Verweist auf die von der Anwendung bereitgestellten übergeben, um die `EnumObjects` Funktion.  
+ Verweist auf die Anwendung bereitgestellte Daten, die an die `EnumObjects` Funktion.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Rückruffunktion gibt eine **Int**. Der Wert dieser Rendite ist benutzerdefiniert. Wenn die Rückruffunktion 0 (null) zurückgibt `EnumObjects` Enumeration vorzeitig beendet.  
+ Die Callback-Funktion gibt ein **Int**. Der Wert von diesem Return wird vom Benutzer festgelegt. Wenn die Callback-Funktion gibt 0 (null) zurück, `EnumObjects` Enumeration frühzeitig beendet.  
   
 ### <a name="remarks"></a>Hinweise  
- Der tatsächliche Name muss exportiert werden.  
+ Der Name muss exportiert werden.  
   
 ## <a name="graystring"></a>  Rückruffunktion für CDC:: graystring
 *OutputFunc* ist ein Platzhalter für den Namen der Anwendung bereitgestellten Rückruffunktion.  
@@ -76,7 +76,7 @@ BOOL CALLBACK EXPORT OutputFunc(
   
 ### <a name="parameters"></a>Parameter  
  *hDC*  
- Bezeichnet einen Speichergerätekontext mit einer Bitmap mit mindestens der Breite und Höhe gemäß *nWidth* und *nHeight* auf `GrayString`.  
+ Identifiziert einen Speichergerätekontext mit einer Bitmap mit mindestens der Breite und Höhe gemäß `nWidth` und `nHeight` zu `GrayString`.  
   
  *lpData*  
  Zeigt auf die zu zeichnende Zeichenfolge.  
@@ -85,10 +85,10 @@ BOOL CALLBACK EXPORT OutputFunc(
  Gibt die Anzahl von Zeichen ausgegeben.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Rückgabewert der Rückruffunktion muss **"true"** zum Erfolg; andernfalls handelt es sich **"false"**.  
+ Die Callback-Funktion zurückgegebene Wert muss "true", um den Erfolg mitzuteilen, Andernfalls ist er "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Die Rückruffunktion (*OutputFunc*) muss ein Bild im Verhältnis die Koordinaten (0,0) zeichnen statt (*x*, *y*).  
+ Die Callback-Funktion (*OutputFunc*) müssen Zeichnen eines Bilds relativ zu den Koordinaten (0,0) statt (*x*, *y*).  
 
 ## <a name="setabortproc"></a>  Rückruffunktion für CDC:: setabortproc
 Der Name *AbortFunc* ist ein Platzhalter für den Namen der Anwendung bereitgestellte Funktion.  
@@ -103,16 +103,16 @@ BOOL CALLBACK EXPORT AbortFunc(
   
 ### <a name="parameters"></a>Parameter  
  *hPr*  
- Identifiziert den Gerätekontext.  
+ Gibt den Gerätekontext.  
   
  *Code*  
- Gibt an, ob ein Fehler aufgetreten ist. Es ist 0, wenn kein Fehler aufgetreten ist. Es ist **SP_OUTOFDISK** , wenn der Druck-Manager derzeit kein Speicherplatz mehr ist und mehr Speicherplatz Verfügung gestellt zur, wenn die Anwendung wartet. Wenn *Code* ist **SP_OUTOFDISK**, die Anwendung muss sich nicht in den Druckauftrag abbrechen. Wenn dies nicht der Fall sein, es muss Zurückhalten Druck-Manager durch Aufrufen der `PeekMessage` oder `GetMessage` Windows-Funktion.  
+ Gibt an, ob ein Fehler aufgetreten ist. Es ist 0, wenn kein Fehler aufgetreten ist. Es ist SP_OUTOFDISK, wenn der Druck-Manager befindet sich derzeit nicht genügend Speicherplatz und mehr Speicherplatz zur Verfügung stehen, wenn die Anwendung wartet. Wenn *Code* SP_OUTOFDISK, wird die Anwendung muss nicht den Druckauftrag abbrechen. Wenn dies nicht der Fall ist, muss, führt dies zu den Druck-Manager durch Aufrufen der `PeekMessage` oder `GetMessage` Windows-Funktion.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Rückgabewert der Funktion Abort-Handler ist ungleich NULL, wenn der Druckauftrag wird fortgesetzt, und 0, wenn sie abgebrochen wird.  
+ Der Rückgabewert der Funktion Abort-Handler ist ungleich NULL, wenn der Druckauftrag wird, um den Vorgang fortzusetzen, und 0, wenn sie abgebrochen wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Der tatsächliche Name muss exportiert werden, wie im Abschnitt "Hinweise" beschriebenen [CDC:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc).  
+ Der Name muss exportiert werden, wie beschrieben im Abschnitt "Hinweise" des [CDC:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc).  
  
   
 ## <a name="see-also"></a>Siehe auch  

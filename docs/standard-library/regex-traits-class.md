@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d6eb69787d20343e8ed289311dba02a55e85592
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451562"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960930"
 ---
 # <a name="regextraits-class"></a>regex_traits-Klasse
 
@@ -92,11 +92,11 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-`Elem` Der Elementtyp des Zeichen zu beschreiben.
+*Elem* der Zeichenfolgentyp zu beschreiben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt verschiedene Merkmale regulärer Ausdrücke für den Typ `Elem`. Die Vorlagenklasse [basic_regex-Klasse](../standard-library/basic-regex-class.md) verwendet diese Informationen zum Bearbeiten von Elementen des Typs `Elem`.
+Die Vorlagenklasse beschreibt verschiedene Merkmale des regulären Ausdrucks für den Typ *Elem*. Die Vorlagenklasse [Basic_regex-Klasse](../standard-library/basic-regex-class.md) verwendet diese Informationen zum Bearbeiten von Elementen des Typs *Elem*.
 
 Jedes `regex_traits` -Objekt enthält ein Objekt des Typs `regex_traits::locale` , das von einigen seiner Memberfunktionen verwendet wird. Das Standardgebietsschema ist eine Kopie von `regex_traits::locale()`. Die Memberfunktion `imbue` ersetzt das lokale Objekt, und die `getloc` -Memberfunktion gibt eine Kopie des Gebietsschemaobjekts zurück.
 
@@ -365,11 +365,11 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parameter
 
-`loc` Das zu speichernde Gebietsschemaobjekt.
+*LOC* das zu speichernde Gebietsschemaobjekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion kopiert `loc` in das gespeicherte `locale` -Objekt und gibt eine Kopie des vorherigen Werts des gespeicherten `locale` -Objekts zurück.
+Die Memberfunktion kopiert *Loc* gespeicherten `locale` Objekt und gibt eine Kopie des vorherigen Werts des gespeicherten `locale` Objekt.
 
 ### <a name="example"></a>Beispiel
 
@@ -452,13 +452,13 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parameter
 
-`ch` Das zu testende Element.
+*CH* das zu testende Element.
 
-`cls` Die Klassen zu testen.
+*CLS* der Klassen zum Testen.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt nur „true“ zurück, wenn sich das Zeichen `ch` in der durch `cls`bezeichneten Zeichenklasse befindet.
+Die Memberfunktion gibt "true" zurück, wenn nur das Zeichen *ch* befindet sich in der vom angegebenen Zeichenklasse *Cls*.
 
 ### <a name="example"></a>Beispiel
 
@@ -533,7 +533,7 @@ hex C == 12
 
 ## <a name="length"></a> regex_traits::length
 
-Gibt die Länge einer Null endende Sequenz zurück.
+Die Länge einer Null endende Sequenz zurückgegeben.
 
 ```cpp
 static size_type length(const char_type *str);
@@ -541,7 +541,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parameter
 
-`str`
+*str*
 
 Die nullterminierte Sequenz.
 
@@ -714,9 +714,9 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-`first` Anfang der Sequenz zu suchen.
+*erste* Anfang der Sequenz zu suchen.
 
-`last` Ende der Sequenz zu suchen.
+*letzte* Ende der Sequenz zu suchen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -808,9 +808,9 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-`first` Anfang der Sequenz zu suchen.
+*erste* Anfang der Sequenz zu suchen.
 
-`last` Ende der Sequenz zu suchen.
+*letzte* Ende der Sequenz zu suchen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1149,9 +1149,9 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-`first` Der Anfang der umzuwandelnden Sequenz.
+*erste* Anfang der umzuwandelnden Sequenz.
 
-`last` Ende der umzuwandelnden Sequenz.
+*letzte* Ende der Sequenz zu transformieren.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1239,9 +1239,9 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parameter
 
-`first` Der Anfang der umzuwandelnden Sequenz.
+*erste* Anfang der umzuwandelnden Sequenz.
 
-`last` Ende der umzuwandelnden Sequenz.
+*letzte* Ende der Sequenz zu transformieren.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1328,7 +1328,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parameter
 
-`ch` Das zu konvertierende Element.
+*CH* das zu konvertierende Element.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1415,7 +1415,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parameter
 
-`ch` Das zu konvertierende Element.
+*CH* das zu konvertierende Element.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1502,13 +1502,13 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parameter
 
-`ch` Das zu konvertierende Element.
+*CH* das zu konvertierende Element.
 
-`radix` Die zu verwendende arithmetische Basis.
+*Basis* die zu verwendende arithmetische Basis.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt den Wert, der durch das Zeichen `ch` in der Basis `radix`dargestellt wird, oder -1 zurück, wenn `ch` keine gültige Ziffer in der Basis `radix`ist. Die Funktion wird nur mit einem `radix` -Argument von 8, 10 oder 16 aufgerufen.
+Die Memberfunktion gibt den Wert, der durch das Zeichen dargestellt *ch* in der Basisklasse *Basis*, oder -1, wenn *ch* ist keine gültige Ziffer in der Basisklasse *Basis*. Die Funktion wird nur aufgerufen werden, mit einem *Basis* Argument von 8, 10 oder 16.
 
 ### <a name="example"></a>Beispiel
 

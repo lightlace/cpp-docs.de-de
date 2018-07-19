@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 676f6522a5625103a00310c6ce5353ce40da9359
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d104d8a64dd60e5aaa7244e5bf5f535343f6e132
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862925"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957424"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt;-Funktionen
 
@@ -113,11 +113,11 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>Parameter
 
-`Val` Das Objekt oder eine Funktion, für die die echte Adresse abgerufen.
+*Val* Objekts bzw. der Funktion für die die echte Adresse abgerufen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die tatsächliche Adresse des Objekts bzw. der Funktion, auf die `Val` verweist, selbst wenn ein überladenes `operator&()`-Element vorhanden ist.
+Die tatsächliche Adresse des Objekts oder der Funktion verwiesen wird, indem *Val*, selbst wenn ein überladenes `operator&()` vorhanden ist.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -136,23 +136,23 @@ void* align(
 
 ### <a name="parameters"></a>Parameter
 
-`Alignment` Die auszuprobierende Ausrichtungsgrenze.
+*Ausrichtung* die auszuprobierende Ausrichtungsgrenze.
 
-`Size` Die Größe in Bytes für den ausgerichteten Speicher.
+*Größe* die Größe in Bytes für den ausgerichteten Speicher.
 
-`Ptr` Die Startadresse des verfügbaren zusammenhängenden Speicherpools verwenden. Dieser Parameter ist auch ein Output-Parameter und wird festgelegt, um die neue Startadresse enthalten, wenn die Ausrichtung erfolgreich ist. Wenn `align()` nicht erfolgreich ist, wird dieser Parameter nicht geändert.
+*PTR* die Startadresse des verfügbaren zusammenhängenden Speicherpools verwenden. Dieser Parameter ist auch ein Output-Parameter, und es wird festgelegt, um die neue Startadresse enthalten, wenn die Ausrichtung erfolgreich ist. Wenn `align()` nicht erfolgreich ist, wird dieser Parameter nicht geändert.
 
-`Space` Die verfügbaren Gesamtspeicher `align()` beim Erstellen des ausgerichteten Speichers verwendet. Dieser Parameter ist auch ein Ausgabeparameter und enthält den angepassten Speicherplatz, der im Speicherpuffer verblieben ist, nachdem der ausgerichtete Speicher und der zugeordnete Mehraufwand subtrahiert wurden.
+*Speicherplatz* die gesamte verfügbare Speicherplatz, `align()` beim Erstellen des ausgerichteten Speichers verwendet. Dieser Parameter ist auch ein Ausgabeparameter und enthält den angepassten Speicherplatz, der im Speicherpuffer verblieben ist, nachdem der ausgerichtete Speicher und der zugeordnete Mehraufwand subtrahiert wurden.
 
 Wenn `align()` nicht erfolgreich ist, wird dieser Parameter nicht geändert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein NULL-Zeiger, wenn der angeforderte ausgerichtete Puffer nicht in den verfügbaren Speicherplatz passt; andernfalls der neue Wert für `Ptr`.
+Ein null-Zeiger, wenn der angeforderte ausgerichtete Puffer nicht in den verfügbaren Speicherplatz passt; andernfalls der neue Wert des *Ptr*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geänderten Parameter `Ptr` und `Space` ermöglichen es Ihnen, `align()` im gleichen Puffer wiederholt aufzurufen, möglicherweise mit verschiedenen Werten für `Alignment` und `Size` . Im folgenden Codeausschnitt wird eine Verwendung von `align()` veranschaulicht:
+Die geänderte *Ptr* und *Speicherplatz* Parameter ermöglichen es Ihnen, rufen Sie `align()` wiederholt auf dem gleichen Puffer, möglicherweise mit verschiedenen Werten für *Ausrichtung* und  *Größe*. Im folgenden Codeausschnitt wird eine Verwendung von `align()` veranschaulicht:
 
 ```cpp
 #include <type_traits> // std::alignment_of()
@@ -189,13 +189,13 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>Parameter
 
-`Alloc` Die Zuweisung zum Erstellen von Objekten verwendet.
+*Alloc* die Zuweisung, die zum Erstellen von Objekten verwendet.
 
-`Args` Die NULL oder mehr Argumente, die Objekte werden.
+*Args* NULL oder mehr Argumente, die die Objekte werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion erstellt das Objekt `shared_ptr<Type>`, ein Zeiger auf `Type(Args...)`, wie von `Alloc` zugewiesen und erstellt.
+Die Funktion erstellt das Objekt `shared_ptr<Type>`, ein Zeiger auf `Type(Args...)` wie zugewiesen und erstellt vom *Alloc*.
 
 ## <a name="const_pointer_cast"></a> const_pointer_cast
 
@@ -209,15 +209,15 @@ const_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der vom zurückgegebenen gemeinsamen Zeiger gesteuerte Typ.
+*Ty* gesteuerte mit dem zurückgegebenen Typ freigegebene Zeiger.
 
-`Other` Durch das Argument für den gemeinsamen Zeiger gesteuerte Typ.
+*Andere* vom Argument für den gemeinsamen Zeiger gesteuerte Typ.
 
-`Other` Das Argument den gemeinsamen Zeiger.
+*Andere* Argument für den gemeinsamen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion gibt ein leeres Shared_ptr-Objekt zurück, wenn `const_cast<Ty*>(sp.get())` einen null-Zeiger zurückgibt; andernfalls wird eine [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md)\<"ty" >-Objekt, das die Ressource besitzt, die im Besitz ist `sp`. Der Ausdruck `const_cast<Ty*>(sp.get())` muss gültig sein.
+Die Vorlagenfunktion gibt ein leeres Shared_ptr-Objekt zurück, wenn `const_cast<Ty*>(sp.get())` einen null-Zeiger zurückgibt; andernfalls wird eine [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md)\<Ty >-Objekt, das die Ressource besitzt, die im Besitz ist `sp`. Der Ausdruck `const_cast<Ty*>(sp.get())` muss gültig sein.
 
 ### <a name="example"></a>Beispiel
 
@@ -258,12 +258,12 @@ void declare_no_pointers(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Adresse des ersten Zeichens, das keinen nachweisbaren Zeiger mehr enthält.|
-|`_Size`|Größe des Blocks, der bei `ptr` beginnt, dass keine nachweisbaren Zeiger enthält.|
+|*ptr*|Adresse des ersten Zeichens, das keinen nachweisbaren Zeiger mehr enthält.|
+|*_Größe*|Größe des Blocks, die bei beginnt *Ptr* , die keine nachweisbaren Zeiger enthält.|
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion alle Garbage-Collector wird mitgeteilt, die den Bereich der Adressen `[ ptr, ptr + _Size)` mehr nachweisbare Zeiger enthalten. (Alle Zeiger in den belegten Speicher müssen nicht dereferenziert werden, es sei denn, erreichbar gemacht.)
+Die Funktion informiert jeden Garbage Collector, der den Bereich der Adressen `[ ptr, ptr + _Size)` nachweisbaren Zeiger ohne mehr enthält. (Alle Zeiger auf zugewiesenen Speicher müssen nicht dereferenziert werden, es sei denn, erreichbar gemacht.)
 
 ## <a name="declare_reachable"></a> declare_reachable
 
@@ -275,15 +275,15 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Ein Zeiger auf einen Speicherbereich erreichbar, zugeordneten, ungültig.
+*PTR* ein Zeiger auf einen Bereich erreichbar, gültigen zugewiesenen Speicher.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `ptr` nicht NULL ist, informiert die Funktion jeden Garbage Collector darüber, dass `ptr` zukünftig erreichbar ist (zeigt auf gültigen zugewiesenen Speicher).
+Wenn *Ptr* ist nicht null ist, die Funktion informiert jeden Garbage Collector, *Ptr* wird zukünftig erreichbar ist (zeigt auf gültigen zugewiesenen Speicher).
 
 ## <a name="default_delete"></a> default_delete
 
-Es werden Objekte gelöscht, die `operator new` zugeordnet sind. Kann mit `unique_ptr` verwendet werden.
+Löscht Objekte, die mit zugeordneten **new-Operator**. Kann mit `unique_ptr` verwendet werden.
 
 ```cpp
 struct default_delete {
@@ -296,13 +296,13 @@ struct default_delete {
 
 ### <a name="parameters"></a>Parameter
 
-`Ptr` Ein Zeiger auf das zu löschende Objekt.
+*PTR* Zeiger auf das Objekt zu löschen.
 
-Anderen den Typ der Elemente im Array gelöscht werden soll.
+Andere den Typ der Elemente im Array, das gelöscht werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt eine `deleter`-Methode, mit der skalare Objekte gelöscht werden, die mit `operator new` zugeordnet werden. Geeignet für die Verwendung mit der Vorlagenklasse `unique_ptr`. Außerdem ist die explizite Spezialisierung `default_delete<Type[]>` vorhanden.
+Die Vorlagenklasse beschreibt ein `deleter` , die der skalare Objekte mit zugeordneten gelöscht **new-Operator**geeignet für die Verwendung mit der Vorlagenklasse `unique_ptr`. Außerdem ist die explizite Spezialisierung `default_delete<Type[]>` vorhanden.
 
 ## <a name="dynamic_pointer_cast"></a> dynamic_pointer_cast
 
@@ -316,15 +316,15 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der vom zurückgegebenen gemeinsamen Zeiger gesteuerte Typ.
+*Ty* gesteuerte mit dem zurückgegebenen Typ freigegebene Zeiger.
 
-`Other` Durch das Argument für den gemeinsamen Zeiger gesteuerte Typ.
+*Andere* vom Argument für den gemeinsamen Zeiger gesteuerte Typ.
 
-`sp` Das Argument den gemeinsamen Zeiger.
+*SP* Argument für den gemeinsamen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion gibt ein leeres Shared_ptr-Objekt zurück, wenn `dynamic_cast<Ty*>(sp.get())` einen null-Zeiger zurückgibt; andernfalls wird eine [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md)\<"ty" >-Objekt, das die Ressource besitzt, die im Besitz ist `sp`. Der Ausdruck `dynamic_cast<Ty*>(sp.get())` muss gültig sein.
+Die Vorlagenfunktion gibt ein leeres Shared_ptr-Objekt zurück, wenn `dynamic_cast<Ty*>(sp.get())` einen null-Zeiger zurückgibt; andernfalls wird eine [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md)\<Ty >-Objekt, das die Ressource besitzt, die im Besitz ist *sp* . Der Ausdruck `dynamic_cast<Ty*>(sp.get())` muss gültig sein.
 
 ### <a name="example"></a>Beispiel
 
@@ -373,15 +373,15 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 
 ### <a name="parameters"></a>Parameter
 
-`D` Der Typ der Deleter.
+*D* den Typ der Deleter.
 
-`Ty` Der vom freigegebenen Zeiger gesteuerte Typ.
+*Ty* vom gemeinsamen Zeiger gesteuerte Typ.
 
-`sp` Die gemeinsamen Zeiger.
+*SP* der freigegebene Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion gibt einen Zeiger auf den Deleter des Typs `D` zurück, der sich im Besitz des [shared_ptr](../standard-library/shared-ptr-class.md)-Objekts `sp` befindet. Wenn `sp` keinen Deleter besitzt, oder sein Deleter nicht dem Typ `D` entspricht, gibt die Funktion 0 zurück.
+Die Vorlagenfunktion gibt einen Zeiger auf den Deleter des Typs *D* gehört, die die [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md) Objekt *sp*. Wenn *sp* keinen Deleter besitzt oder wenn die Deleter nicht vom Typ *D* gibt die Funktion 0 zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -438,7 +438,7 @@ pointer_safety get_pointer_safety();
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion gibt den Typ der zeigersicherheit, die von einem automatischen Garbage Collector angenommen wird.
+Die Funktion gibt den Typ der zeigersicherheit davon ausgegangen, dass von einem automatischen Garbage Collector.
 
 ## <a name="get_temporary_buffer"></a> get_temporary_buffer
 
@@ -451,7 +451,7 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 
 ### <a name="parameters"></a>Parameter
 
-`count` Die maximale Anzahl von Elementen angefordert für den Arbeitsspeicher zugeordnet werden soll.
+*Anzahl* die maximale Anzahl von Elementen, für welchen Speicher angefordert wird, die zugeordnet werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -510,7 +510,7 @@ make_shared(Types&&... _Args);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`_Args`|Null oder mehr Konstruktorargumente. Die Funktion leitet auf Grundlage der bereitgestellten Argumente die erforderliche die Konstruktorüberladung ab.|
+|*_Args*|Null oder mehr Konstruktorargumente. Die Funktion leitet auf Grundlage der bereitgestellten Argumente die erforderliche die Konstruktorüberladung ab.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -619,15 +619,15 @@ make_unique(Types&&...) = delete;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Der Typ des Objekts, das die `unique_ptr` zeigen auf.
+*T* den Typ des Objekts, das die `unique_ptr` zeigen auf.
 
-`Types` Die Typen der Konstruktorargumente gemäß `Args`.
+*Typen* die Typen der Konstruktorargumente gemäß *Args*.
 
-`Args` Die Argumente, die an den Konstruktor des Objekts vom Typ übergeben werden `T`.
+*Args* an den Konstruktor des Objekts vom Typ zu übergebenden Argumente *T*.
 
-`Elem` Ein Array von Elementen des Typs `T`.
+*Elem* ein Array von Elementen des Typs *T*.
 
-`Size` Die Anzahl der Elemente, um Speicherplatz für die im neuen Array zuzuweisen.
+*Größe* die Anzahl der Elemente zum Zuweisen von Speicherplatz für die im neuen Array.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -645,7 +645,7 @@ Wenn der Fehler "C2280" in Verbindung mit `unique_ptr` angezeigt wird, ist der G
 
 ## <a name="owner_less"></a> owner_less
 
-Ermöglicht Mischvergleiche, die auf Besitz basieren, freigegebener und schwacher Zeiger. Gibt `true` zurück, wenn der linke Parameter von der Memberfunktion `owner_before` vor den rechten Parameter gesetzt wurde.
+Ermöglicht Mischvergleiche, die auf Besitz basieren, freigegebener und schwacher Zeiger. Gibt **"true"** Wenn der linke Parameter vor den rechten Parameter, von der Memberfunktion sortiert ist `owner_before`.
 
 ```cpp
 template <class Type>
@@ -684,9 +684,9 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Parameter
 
-`_left` Eine freigegebene oder schwache Zeiger.
+*_left* ein freigegebener oder schwacher Zeiger.
 
-`right` Eine freigegebene oder schwache Zeiger.
+*richtige* ein freigegebener oder schwacher Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -703,7 +703,7 @@ void return_temporary_buffer(Type* _Pbuf);
 
 ### <a name="parameters"></a>Parameter
 
-*_Pbuf* ein Zeiger auf den Speicher freigegeben werden muss.
+*_Pbuf* ein Zeiger auf den Speicher aufgehoben werden.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -759,15 +759,15 @@ static_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der vom zurückgegebenen gemeinsamen Zeiger gesteuerte Typ.
+*Ty* gesteuerte mit dem zurückgegebenen Typ freigegebene Zeiger.
 
-`Other` Durch das Argument für den gemeinsamen Zeiger gesteuerte Typ.
+*Andere* vom Argument für den gemeinsamen Zeiger gesteuerte Typ.
 
-`Other` Das Argument den gemeinsamen Zeiger.
+*Andere* Argument für den gemeinsamen Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion gibt ein leeres Shared_ptr-Objekt zurück, wenn `sp` ist eine leere `shared_ptr` Objekt; andernfalls wird eine [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md)\<"ty" > Objekt, das die Ressource besitzt, die gehört`sp`. Der Ausdruck `static_cast<Ty*>(sp.get())` muss gültig sein.
+Die Vorlagenfunktion gibt ein leeres Shared_ptr-Objekt zurück, wenn `sp` ist eine leere `shared_ptr` Objekt; andernfalls ein [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md)\<Ty >-Objekt, das die Ressource besitzt, die gehört`sp`. Der Ausdruck `static_cast<Ty*>(sp.get())` muss gültig sein.
 
 ### <a name="example"></a>Beispiel
 
@@ -818,13 +818,13 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der vom linken gemeinsamen/schwachen Zeiger gesteuerte Typ.
+*Ty* vom linken gemeinsamen/schwachen Zeiger gesteuerte Typ.
 
-`Other` Der vom rechten gemeinsamen/schwachen Zeiger gesteuerte Typ.
+*Andere* vom rechten gemeinsamen/schwachen Zeiger gesteuerte Typ.
 
-`left` Der linke gemeinsame/schwache Zeiger.
+*linken* linken gemeinsamen/schwachen Zeiger.
 
-`right` Der Rechte gemeinsame/schwache Zeiger.
+*richtige* der Rechte gemeinsame/schwache Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -895,11 +895,11 @@ void undeclare_no_pointers(
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion alle Garbage-Collector wird mitgeteilt, die den Bereich der Adressen `[ptr, ptr + _Size)` jetzt möglicherweise nachweisbare Zeiger enthalten.
+Die Funktion informiert jeden Garbage Collector, der den Bereich der Adressen `[ptr, ptr + _Size)` kann jetzt nachweisbaren Zeiger enthalten.
 
 ## <a name="undeclare_reachable"></a> undeclare_reachable
 
-Widerruft eine Deklaration eines Erreichbarkeit für eine angegebene Speicheradresse.
+Widerruft eine Deklaration der Erreichbarkeit für eine angegebene Speicheradresse.
 
 ```cpp
 template <class Type>
@@ -910,11 +910,11 @@ Type *undeclare_reachable(Type* ptr);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger auf die Speicheradresse, die als nicht erreichbar deklariert werden soll.|
+|*ptr*|Ein Zeiger auf die Speicheradresse, die als nicht erreichbar deklariert werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `ptr` nicht `nullptr`, die Funktion alle Garbage-Collector wird mitgeteilt, `ptr` nicht mehr erreichbar ist. Es einen sicher abgeleitete Zeiger zurück, der vergleicht gleich `ptr`.
+Wenn *Ptr* nicht **"nullptr"**, die Funktion informiert jeden Garbage Collector, *Ptr* ist nicht mehr erreichbar. Es gibt einen sicher abgeleitete Zeiger, der vergleicht gleich *Ptr*.
 
 ## <a name="uninitialized_copy"></a> uninitialized_copy
 
@@ -927,15 +927,15 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>Parameter
 
-`first` Ein eingabeiterator, der das erste Element im Quellbereich adressiert.
+*erste* ein eingabeiterator, der das erste Element im Quellbereich adressiert.
 
-`last` Ein eingabeiterator, der das letzte Element im Quellbereich adressiert.
+*letzte* ein eingabeiterator, der das letzte Element im Quellbereich adressiert.
 
-`dest` Ein forward-Iterator, der das erste Element im Zielbereich adressiert.
+*Dest* ein forward-Iterator, der das erste Element im Zielbereich adressiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein forward-Iterator, die erste Position hinter dem Zielbereich adressiert, es sei denn, der Quellbereich leer war.
+Ein forward-Iterator, der die erste Position über dem Zielbereich hinaus adressiert, es sei denn, der Quellbereich leer war.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1032,15 +1032,15 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>Parameter
 
-`first` Ein eingabeiterator, die auf das zu kopierende Objekt verweist.
+*erste* ein Eingabe-Iterator, der auf das zu kopierende Objekt verweist.
 
-`count` Ein mit oder ohne Vorzeichen Ganzzahltyp angibt wie oft das Objekt kopiert.
+*Anzahl* ein signiert oder unsigned Integer-Datentyp, der die Anzahl der Male angibt, die das Objekt zu kopieren.
 
-`dest` Ein forward-Iterator, der auf die neue Kopien an mich verweist.
+*Dest* ein forward-Iterator, der, die neuen Kopien wo verweist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Forward-Iterator, der die erste Position nach dem Ziel adressiert. Der Quellbereich war leer, der Iterator adressiert `first`.
+Ein Forward-Iterator, der die erste Position nach dem Ziel adressiert. Wenn der Quellbereich leer war, adressiert der Iterator *erste*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1066,11 +1066,11 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>Parameter
 
-`first` Ein vorwärtsiterator für das erste Element im Zielbereich, der ausgelöst werden soll.
+*erste* ein vorwärtsiterator, der das erste Element im Zielbereich, die ausgelöst werden soll.
 
-`last` Ein vorwärtsiterator für das letzte Element im Zielbereich, der ausgelöst werden soll.
+*letzte* ein vorwärtsiterator, der das letzte Element im Zielbereich, die ausgelöst werden soll.
 
-`val` Der Wert, der zum Initialisieren des Zielbereichs verwendet werden.
+*Val* der Wert, der zum Initialisieren des Zielbereichs verwendet werden.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1135,11 +1135,11 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-`first` Ein forward-Iterator, der das erste Element im Zielbereich initiiert werden.
+*erste* ein forward-Iterator, der das erste Element im Zielbereich adressiert, initiiert werden.
 
-`count` Die Anzahl der zu initialisierenden Elementen.
+*Anzahl* die Anzahl von Elementen initialisiert wird.
 
-`val` Der Wert, der zum Initialisieren des Zielbereichs verwendet werden.
+*Val* der Wert, der zum Initialisieren des Zielbereichs verwendet werden.
 
 ### <a name="remarks"></a>Hinweise
 

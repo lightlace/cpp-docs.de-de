@@ -1,5 +1,5 @@
 ---
-title: CHeapPtrList Klasse | Microsoft Docs
+title: CHeapPtrList-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5b164fda27775a7b3fb272d8718c31815cb1ca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd3342e7c64a13761830073cd3ed82b627b8c407
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358814"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879295"
 ---
 # <a name="cheapptrlist-class"></a>CHeapPtrList-Klasse
-Diese Klasse bietet Methoden, die hilfreich beim Erstellen einer Liste von Zeigern Heap.  
+Diese Klasse stellt nützliche Methoden beim Erstellen einer Liste von Heap-Zeigern.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,11 +41,11 @@ class CHeapPtrList
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `E`  
- Der Objekttyp in die Auflistungsklasse gespeichert werden.  
+ *E*  
+ Der Objekttyp in der Auflistungsklasse gespeichert werden.  
   
- `Allocator`  
- Die Arbeitsspeicher-Allocation-Klasse, verwendet. Die Standardeinstellung ist [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ *Zuweisung*  
+ Die Speicher-Allocation-Klasse verwenden. Der Standardwert ist [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
 ## <a name="members"></a>Member  
   
@@ -56,7 +56,7 @@ class CHeapPtrList
 |[CHeapPtrList::CHeapPtrList](#cheapptrlist)|Der Konstruktor.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse stellt einen Konstruktor bereit, und leitet Sie Methoden aus [CAtlList](../../atl/reference/catllist-class.md) und [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) für die Erstellung eines Klassenobjekts Collection Heap Zeiger Speichern verwendet.  
+ Diese Klasse stellt einen Konstruktor bereit und leitet Sie Methoden aus [CAtlList](../../atl/reference/catllist-class.md) und [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) zur Unterstützung der Erstellung eines Klassenobjekts Collection Heap Zeiger speichern.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CAtlList](../../atl/reference/catllist-class.md)  
@@ -74,7 +74,7 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nBlockSize`  
+ *nBlockSize*  
  Die Blockgröße.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -84,4 +84,4 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
  [CAtlList-Klasse](../../atl/reference/catllist-class.md)   
  [CHeapPtr-Klasse](../../atl/reference/cheapptr-class.md)   
  [CHeapPtrElementTraits-Klasse](../../atl/reference/cheapptrelementtraits-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

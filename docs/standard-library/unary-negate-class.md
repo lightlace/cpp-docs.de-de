@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2529a38a7737fc45573f5c151477e0a5754cde50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7017ee7b29e8e41e4aa33f95560a10127dc812e7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854570"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960891"
 ---
 # <a name="unarynegate-class"></a>unary_negate-Klasse
 
@@ -42,9 +42,11 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-`Func` Die zu negierende unäre-Funktion.
+*Func*  
+ Die unäre Funktion, die negiert werden soll.
 
-`left` Der Operand des unären Funktion negiert werden soll.
+*left*  
+ Der Operand der unären Funktion, die negiert werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 

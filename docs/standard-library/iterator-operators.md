@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 411fcf8969ba13c4f50360c3db151f0801fd5a28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7dcd064216a9c1f1ba3f014b0f418b18b61193f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862048"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954694"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt;-Operatoren
 
@@ -53,9 +53,9 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt des Typs **Iterator**.
+*linken* ein Objekt des Typs `iterator`.
 
-`right` Ein Objekt des Typs **Iterator**.
+*richtige* ein Objekt des Typs `iterator`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -155,19 +155,19 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt des Typs Iterator.
+*linken* ein Objekt vom Typ Iterator.
 
-`right` Ein Objekt des Typs Iterator.
+*richtige* ein Objekt vom Typ Iterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Iterator-Objekte gleich sind; `false`, wenn die Iterator-Objekte nicht gleich sind.
+**"true"** Wenn die Iterator-Objekte gleich sind; **"false"** Wenn die Iterator-Objekte nicht gleich sind.
 
 ### <a name="remarks"></a>Hinweise
 
 Ein Iterator-Objekt entspricht einem anderen, wenn sie sich auf dieselben Elemente in einem Container beziehen. Wenn zwei Iteratoren auf verschiedene Elemente in einem Container zeigen, sind sie nicht gleich.
 
-Die ersten zwei Vorlagenoperatoren geben nur TRUE zurück, wenn sowohl `left` als auch `right` den gleichen Iterator speichern. Der dritte Vorlagenoperator gibt TRUE nur zurück, wenn sowohl `left` als auch `right` den gleichen Streamzeiger speichern. Der vierte Vorlagenoperator gibt ` left.equal ( right)` zurück.
+Die ersten zwei vorlagenoperatoren geben nur true, wenn beide zurück *linken* und *rechten* den gleichen Iterator speichern. Der dritte Vorlagenoperator gibt "true" nur, wenn beide *linken* und *rechten* den gleichen streamzeiger speichern. Der vierte Vorlagenoperator gibt ` left.equal ( right)` zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -242,9 +242,9 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt des Typs **Iterator**.
+*linken* ein Objekt des Typs `iterator`.
 
-`right` Ein Objekt des Typs **Iterator**.
+*richtige* ein Objekt des Typs `iterator`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -331,9 +331,9 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt des Typs Iterator.
+*linken* ein Objekt vom Typ Iterator.
 
-`right` Ein Objekt des Typs Iterator.
+*richtige* ein Objekt vom Typ Iterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -424,9 +424,9 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt des Typs Iterator.
+*linken* ein Objekt vom Typ Iterator.
 
-`right` Ein Objekt des Typs Iterator.
+*richtige* ein Objekt vom Typ Iterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -511,9 +511,9 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt des Typs Iterator.
+*linken* ein Objekt vom Typ Iterator.
 
-`right` Ein Objekt des Typs Iterator.
+*richtige* ein Objekt vom Typ Iterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -613,13 +613,13 @@ operator+(
 
 ### <a name="parameters"></a>Parameter
 
-`_Off` Die Anzahl von Positionen, dass das Move_iterator-Konstante oder const Reverse_iterator besteht darin, versetzt werden.
+*_Off* die Anzahl von Positionen ist die Konstante Move_iterator oder der Konstante Reverse_iterator versetzt werden.
 
-`right` Der Iterator versetzt werden soll.
+*richtige* der zu versetzende Iterator.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt die Summe `right` + `_Off` zurück.
+Gibt die Summe *rechten* + *_Off*.
 
 ### <a name="example"></a>Beispiel
 
@@ -688,9 +688,9 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Iterator.
+*linken* einen Iterator.
 
-`right` Ein Iterator.
+*richtige* einen Iterator.
 
 ### <a name="return-value"></a>Rückgabewert
 

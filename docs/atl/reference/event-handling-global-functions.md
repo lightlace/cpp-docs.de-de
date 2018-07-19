@@ -1,5 +1,5 @@
 ---
-title: Globale Funktionen für die Ereignisbehandlung | Microsoft Docs
+title: Globale Funktionen für die Ereignisbehandlung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2c7834e7d5475810973a42ef179ea4f5f0079f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85babf3155fdc94dafd5d62c2e67401e5add3663
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358337"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883998"
 ---
-# <a name="event-handling-global-functions"></a>Ereignis globale Funktionen
-Diese Funktion bietet einen Ereignishandler.  
+# <a name="event-handling-global-functions"></a>Globale Funktionen für Ereignis behandeln
+Diese Funktion bietet es sich um einen Ereignishandler.  
   
 > [!IMPORTANT]
 >  Die Funktion, die in der folgenden Tabelle aufgeführten kann nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 |||  
 |-|-|  
-|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Wartet auf ein Objekt auf die Signalisierung, Unterdessen fenstermeldungen nach Bedarf.|  
+|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Wartet auf ein Objekt, das signalisiert werden, Unterdessen fenstermeldungen nach Bedarf.|  
 
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
@@ -48,14 +48,14 @@ BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hEvent`  
- [in] Das Handle des Objekts gewartet werden soll.  
+ *hEvent*  
+ [in] Das Handle des Objekts, die gewartet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt **"true"** , wenn das Objekt signalisiert wurde.  
+ Gibt TRUE zurück, wenn das Objekt signalisiert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Dies ist hilfreich, wenn Sie ein Objekt Ereignisses ausgeführt werden und davon geschieht benachrichtigt werden möchten, aber ermöglichen fenstermeldungen beim Warten, gesendet werden soll.  
+ Dies ist nützlich, wenn Sie warten, bis ein Ereignis eines Objekts auftreten, und es geschieht benachrichtigt werden möchten, aber Windows-Meldungen während des Wartens verteilt werden können.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen](../../atl/reference/atl-functions.md)

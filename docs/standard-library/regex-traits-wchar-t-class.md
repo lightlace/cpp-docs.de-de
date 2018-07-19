@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b847280209b7844da6b1b9093a9a514aad7b423a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45710c4a1abca000b5cc8bca4a9db8032e874d9c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853949"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958957"
 ---
 # <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt;-Klasse
 
@@ -36,7 +36,7 @@ class regex_traits<wchar_t>
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse ist eine explizite Spezialisierung der Vorlagenklasse [regex_traits](../standard-library/regex-traits-class.md) für Elemente des Typs `wchar_t` (sodass sie Bibliotheksfunktionen zum Bearbeiten von Objekten dieses Typs nutzen kann).
+Die Klasse ist eine explizite Spezialisierung der Vorlagenklasse [Regex_traits](../standard-library/regex-traits-class.md) für Elemente des Typs **"wchar_t"** (sodass sie Bibliotheksfunktionen zum Bearbeiten von Objekten dieses Typs nutzen kann).
 
 ## <a name="requirements"></a>Anforderungen
 

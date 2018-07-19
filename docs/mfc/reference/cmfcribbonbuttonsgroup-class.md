@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonButtonsGroup-Klasse | Microsoft Docs
+title: CMFCRibbonButtonsGroup-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23f3672a3b78b1bf86c481b6991c003267e6b0bf
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 855bc48da10e8ca4dd83cf091e155746450a33f1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037433"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848518"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup-Klasse
-Die `CMFCRibbonButtonsGroup` -Klasse ermöglicht es Ihnen, einen Satz von Menübandschaltflächen in einer Gruppe zu organisieren. Alle Schaltflächen der Gruppe liegen innerhalb eines Rahmens direkt horizontal nebeneinander.  
+Die `CMFCRibbonButtonsGroup` -Klasse ermöglicht es Ihnen, einen Satz von Schaltflächen auf dem Menüband in einer Gruppe zu organisieren. Alle Schaltflächen der Gruppe liegen innerhalb eines Rahmens direkt horizontal nebeneinander.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -69,22 +69,22 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CMFCRibbonButtonsGroup::AddButton](#addbutton)|Fügt eine Schaltfläche zu einer Gruppe hinzu.|  
-|[CMFCRibbonButtonsGroup::AddButtons](#addbuttons)|Fügt eine Liste von Schaltflächen zu einer Gruppe hinzu.|  
-|[CMFCRibbonButtonsGroup::GetButton](#getbutton)|Gibt einen Zeiger auf die Schaltfläche, die auf einem angegebenen Index befindet.|  
-|[CMFCRibbonButtonsGroup::GetCount](#getcount)|Gibt die Anzahl von Schaltflächen in der Gruppe zurück.|  
-|[CMFCRibbonButtonsGroup::GetImageSize](#getimagesize)|Gibt die Bildgröße der normalen Bilder in der Menübandgruppe (Außerkraftsetzungen [cmfcribbonbaseelement:: Getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|  
-|[CMFCRibbonButtonsGroup::GetRegularSize](#getregularsize)|Gibt die reguläre Größe des Menübandelements zurück (Außerkraftsetzungen [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
+|[CMFCRibbonButtonsGroup::AddButtons](#addbuttons)|Fügt eine Liste der Schaltflächen zu einer Gruppe hinzu.|  
+|[CMFCRibbonButtonsGroup::GetButton](#getbutton)|Gibt einen Zeiger auf die Schaltfläche, die sich am angegebenen Index befindet.|  
+|[CMFCRibbonButtonsGroup::GetCount](#getcount)|Gibt die Anzahl der Schaltflächen in der Gruppe zurück.|  
+|[CMFCRibbonButtonsGroup::GetImageSize](#getimagesize)|Gibt die Bildgröße der normalen-Images in der Menübandgruppe (überschreibt [cmfcribbonbaseelement:: Getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|  
+|[CMFCRibbonButtonsGroup::GetRegularSize](#getregularsize)|Gibt die reguläre Größe des Menübandelements zurück (überschreibt [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
 |[CMFCRibbonButtonsGroup::HasImages](#hasimages)|Berichte, ob die `CMFCRibbonButtonsGroup` Objekt enthält Symbolleistenbilder.|  
-|[CMFCRibbonButtonsGroup::OnDrawImage](#ondrawimage)|Zeichnet das entsprechende Image für eine angegebene Schaltfläche, je nachdem, ob die Schaltfläche mit der normalen, hervorgehobene oder deaktiviert.|  
-|[CMFCRibbonButtonsGroup::RemoveAll](#removeall)|Entfernt alle Schaltflächen aus dem `CMFCRibbonButtonsGroup` Objekt.|  
-|[CMFCRibbonButtonsGroup::SetImages](#setimages)|Die Gruppe Bilder zugewiesen.|  
-|[CMFCRibbonButtonsGroup::SetParentCategory](#setparentcategory)|Legt die übergeordnete `CMFCRibbonCategory` von der `CMFCRibbonButtonsGroup` -Objekt und alle Schaltflächen darin (Außerkraftsetzungen [cmfcribbonbaseelement:: Setparentcategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|  
+|[CMFCRibbonButtonsGroup::OnDrawImage](#ondrawimage)|Zeichnet das entsprechende Image für eine angegebene Schaltfläche aus, je nachdem, ob die Schaltfläche mit der normalen, hervorgehobene oder deaktiviert.|  
+|[CMFCRibbonButtonsGroup::RemoveAll](#removeall)|Entfernt alle Schaltflächen aus der `CMFCRibbonButtonsGroup` Objekt.|  
+|[CMFCRibbonButtonsGroup::SetImages](#setimages)|Bilder und der Gruppe zugewiesen.|  
+|[CMFCRibbonButtonsGroup::SetParentCategory](#setparentcategory)|Legt die übergeordnete `CMFCRibbonCategory` von der `CMFCRibbonButtonsGroup` -Objekt und alle darin enthaltenen Schaltflächen (überschreibt [cmfcribbonbaseelement:: Setparentcategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Gruppe abgeleitet [CMFCBaseRibbonElement](../../mfc/reference/cmfcribbonbaseelement-class.md) und kann als eine Einheit bearbeitet werden. Sie können die Gruppe in keinem Bereich oder Popup-Menü positionieren.  
+ Die Gruppe ergibt sich aus [CMFCBaseRibbonElement](../../mfc/reference/cmfcribbonbaseelement-class.md) und kann als eine Einheit bearbeitet werden. Sie können die Gruppe alle Panel oder Popup-Menü positionieren.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCRibbonButtonsGroup` Klasse. Im Beispiel wird gezeigt, wie zum Erstellen einer `CMFCRibbonButtonsGroup` Objekt, weisen Sie der Gruppe der Menübandschaltflächen Bilder und eine Schaltfläche für die Gruppe von Menübandschaltflächen hinzufügen. Dieser Codeausschnitt ist Teil des [Draw Client-Beispiels](../../visual-cpp-samples.md).  
+ Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCRibbonButtonsGroup` Klasse. Das Beispiel zeigt, wie zum Erstellen einer `CMFCRibbonButtonsGroup` Objekt, weisen Sie Images für die Gruppe von Schaltflächen auf dem Menüband und die Gruppe von Schaltflächen auf dem Menüband eine Schaltfläche hinzufügen. Dieser Codeausschnitt ist Teil des [Draw Client-Beispiels](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]  
   
@@ -107,10 +107,10 @@ void AddButton(CMFCRibbonBaseElement* pButton);
   
 ### <a name="parameters"></a>Parameter  
  [in] *pButton*  
- Ein Zeiger auf eine Schaltfläche hinzufügen.  
+ Ein Zeiger auf eine Schaltfläche zum Hinzufügen.  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
- Fügt eine Liste von Schaltflächen zu einer Gruppe hinzu.  
+ Fügt eine Liste der Schaltflächen zu einer Gruppe hinzu.  
   
 ```  
 void AddButtons(
@@ -131,14 +131,14 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
   
 ### <a name="parameters"></a>Parameter  
  [in] *pButton*  
- Gibt an, eine Schaltfläche hinzufügen auf das neu erstellte `CMFCRibbonButtonsGroup` Objekt.  
+ Gibt an, eine Schaltfläche zum Hinzufügen auf das neu erstellte `CMFCRibbonButtonsGroup` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getbutton"></a>  CMFCRibbonButtonsGroup::GetButton  
- Gibt einen Zeiger auf die Schaltfläche, die auf einem angegebenen Index befindet.  
+ Gibt einen Zeiger auf die Schaltfläche, die sich am angegebenen Index befindet.  
   
 ```  
 CMFCRibbonBaseElement* GetButton(int i) const;  
@@ -146,32 +146,32 @@ CMFCRibbonBaseElement* GetButton(int i) const;
   
 ### <a name="parameters"></a>Parameter  
  [in] *ich*  
- Ein nullbasierter Index, der eine Schaltfläche, um zurückzukehren.  
+ Ein nullbasierter Index, eine Schaltfläche zurückgegeben werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die Schaltfläche ", die sich am angegebenen Index befindet. `NULL` Wenn der angegebene Index außerhalb des gültigen Bereichs liegt.  
+ Ein Zeiger auf die Schaltfläche, die sich am angegebenen Index befindet. NULL, wenn der angegebene Index außerhalb des gültigen Bereichs befindet.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getcount"></a>  CMFCRibbonButtonsGroup::GetCount  
- Gibt die Anzahl von Schaltflächen in der Gruppe zurück.  
+ Gibt die Anzahl der Schaltflächen in der Gruppe zurück.  
   
 ```  
 int GetCount() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl von Schaltflächen in der Gruppe.  
+ Die Anzahl der Schaltflächen in der Gruppe.  
   
 ##  <a name="getimagesize"></a>  CMFCRibbonButtonsGroup::GetImageSize  
- Ruft die Quelle Bildgröße der geschützten `CMFCToolBarImages` Member `m_Images`.  
+ Ruft die Größe der geschützten Image `CMFCToolBarImages` Member `m_Images`.  
   
 ```  
 const CSize GetImageSize() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Quelle Image Größe die Symbolleistenbilder zurück, wenn eine vorhanden ist, bzw. einen `CSize` 0 (null), wenn nicht.  
+ Gibt die Größe der Symbolleiste Images, Image zurück, wenn vorhanden, oder ein `CSize` 0 (null), ist dies nicht.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -184,7 +184,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parameter  
  [in] *pDC*  
- Ein Zeiger auf den Gerätekontext, der Gruppe "Menüband".  
+ Zeiger auf den Gerätekontext der Menübandgruppe.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -198,12 +198,12 @@ BOOL HasImages() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt "true" zurück, wenn die geschützte `CMFCToolBarImages` Member `m_Images` enthält Bilder oder "false", wenn nicht.  
+ Gibt "true" zurück, wenn die geschützte `CMFCToolBarImages` Member `m_Images` enthält alle Bilder oder FALSE, wenn nicht.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="ondrawimage"></a>  CMFCRibbonButtonsGroup::OnDrawImage  
- Zeichnet das entsprechende Image für eine angegebene Schaltfläche, je nachdem, ob die Schaltfläche mit der normalen, hervorgehobene oder deaktiviert.  
+ Zeichnet das entsprechende Image für eine angegebene Schaltfläche aus, je nachdem, ob die Schaltfläche mit der normalen, hervorgehobene oder deaktiviert.  
   
 ```  
 virtual void OnDrawImage(
@@ -221,15 +221,15 @@ virtual void OnDrawImage(
  Das Rechteck, in dem das Bild gezeichnet werden soll.  
   
  [in] *pButton*  
- Die Schaltfläche für die das Bild gezeichnet werden soll.  
+ Die Schaltfläche für die zum Zeichnen des Bilds.  
   
  [in] *nImageIndex*  
- Der Index des Bilds (in eines der drei Arrays für normale, hervorgehobene oder deaktivierte Schaltflächen) auf die Schaltfläche gezeichnet werden soll.  
+ Der Index des Bildes, das auf die Schaltfläche "(in einem der drei Images Arrays für normale, hervorgehobene oder deaktivierte Schaltflächen) zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="removeall"></a>  CMFCRibbonButtonsGroup::RemoveAll  
- Entfernt alle Schaltflächen aus dem `CMFCRibbonButtonsGroup` Objekt.  
+ Entfernt alle Schaltflächen aus der `CMFCRibbonButtonsGroup` Objekt.  
   
 ```  
 void RemoveAll();
@@ -238,7 +238,7 @@ void RemoveAll();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setimages"></a>  CMFCRibbonButtonsGroup::SetImages  
- Die Gruppe von Menübandschaltflächen Bilder zugewiesen.  
+ Weist Abbilder für die Gruppe von Schaltflächen auf dem Menüband.  
   
 ```  
 void SetImages(
@@ -249,22 +249,22 @@ void SetImages(
   
 ### <a name="parameters"></a>Parameter  
  [in] *pImages*  
- Reguläre Bilder.  
+ Regulären Abbildern.  
   
  [in] *pHotImages*  
- Hervorgehobenen Bilder.  
+ Hot-Images.  
   
  [in] *pDisabledImages*  
  Deaktivierte Bilder.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie `SetImages` vor dem Hinzufügen von Schaltflächen zu einer Gruppe. Die Anzahl von Images muss größer oder gleich der Anzahl von Schaltflächen der Gruppe hinzugefügt werden.  
+ Rufen Sie `SetImages` vor dem Hinzufügen von Schaltflächen zu einer Gruppe. Die Anzahl der Abbilder muss größer oder gleich der Anzahl der Schaltflächen, um der Gruppe hinzugefügt werden.  
   
 > [!NOTE]
->  Hervorgehobenen Bilder sind Bilder, die angezeigt werden, wenn der Benutzer über die Schaltfläche bewegt wird. Deaktivierte Images sind Bilder, die angezeigt werden, wenn die Schaltfläche deaktiviert ist.  
+>  Hot-Images sind die Images, die angezeigt werden, wenn der Benutzer über die Schaltfläche bewegt wird. Deaktiviert-Images sind die Images, die angezeigt werden, wenn die Schaltfläche deaktiviert ist.  
   
 ##  <a name="setparentcategory"></a>  CMFCRibbonButtonsGroup::SetParentCategory  
- Legt die übergeordnete `CMFCRibbonCategory` von der `CMFCRibbonButtonsGroup` -Objekt und alle Schaltflächen einstuft.  
+ Legt die übergeordnete `CMFCRibbonCategory` von der `CMFCRibbonButtonsGroup` -Objekt und alle darin enthaltenen Schaltflächen.  
   
 ```  
 virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
@@ -272,7 +272,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
   
 ### <a name="parameters"></a>Parameter  
  [in] *pCategory*  
- Zeiger auf die übergeordnete Kategorie festlegen (der Gruppen im Registerkartenformat im Menübandsteuerelemente sind Kategorien genannt).  
+ Zeiger auf die übergeordnete Kategorie festlegen (der Gruppen im Registerkartenformat im Menübandsteuerelemente werden Kategorien genannt).  
   
 ### <a name="remarks"></a>Hinweise  
   

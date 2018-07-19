@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfae58c03d18638ad44f844909d585b41d710cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 453c2eb186175b275defdc87dcfcdc79ff5f258a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862909"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956504"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -61,7 +61,7 @@ Hier sind einige Tipps zu bedenken, wenn mit \<random >:
 
 - Die hilfreichste Paarung für die meisten Anwendungen ist die `mt19937`-Engine mit `uniform_int_distribution`, wie später in diesem Artikel im [Codebeispiel](#code) gezeigt.
 
-Es gibt zahlreiche Möglichkeiten zur Auswahl der \<random > Header und einer von ihnen empfiehlt sich gegenüber der veralteten C-Laufzeitfunktion `rand()`. Informationen zu durch Schwachpunkte `rand()` und wie \<random > Nachteile finden Sie unter [dieses Video](http://go.microsoft.com/fwlink/p/?linkid=397615).
+Es gibt viele Optionen zur Auswahl der \<random > Header und einer von ihnen empfiehlt sich, den veralteten C-Laufzeitfunktion `rand()`. Informationen zu den neuerungen auszusetzen `rand()` und wie \<random > dieser Schwachpunkte finden Sie unter [in diesem Video](http://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Beispiele
 
@@ -230,7 +230,7 @@ URNGs werden oft anhand folgender Eigenschaften beschrieben:
 
 3. **Qualität**: Ähnlichkeit der generierten Sequenz mit wirklich zufälligen Zahlen. Dies wird häufig als „*Zufallscharakter*“ bezeichnet.
 
-Die folgenden Abschnitte Listen die uniform random Number-Generatoren (URNGs) gemäß der \<random > Header.
+Den folgenden Abschnitten werden die uniform random Number-Generators (URNGs) zur Verfügung gestellt, der \<random >-Header.
 
 ####  <a name="rd"></a> Nicht-deterministischen Generator
 
@@ -302,7 +302,7 @@ Engine-Adapter sind Vorlagen, die andere (Basis-)Engines anpassen. Diese werden 
 
 ###  <a name="distributions"></a> Zufallszahlverteilungen
 
-Die folgenden Abschnitte Listen die Verteilungen im die \<random > Header. Verteilungen sind ein Nachverarbeitungsmechanismus, der normalerweise URNS-Ausgaben als Eingaben verwendet und die Ausgabe mithilfe einer Funktion mit definierter statistischer Wahrscheinlichkeitsdichte verteilt. Weitere Informationen erhalten Sie im Abschnitt [Engines und Verteilungen](#engdist).
+Den folgenden Abschnitten werden der Verteilungen im der \<random >-Header. Verteilungen sind ein Nachverarbeitungsmechanismus, der normalerweise URNS-Ausgaben als Eingaben verwendet und die Ausgabe mithilfe einer Funktion mit definierter statistischer Wahrscheinlichkeitsdichte verteilt. Weitere Informationen erhalten Sie im Abschnitt [Engines und Verteilungen](#engdist).
 
 #### <a name="uniform-distributions"></a>Gleichförmige Verteilungen.
 
@@ -318,7 +318,7 @@ Die folgenden Abschnitte Listen die Verteilungen im die \<random > Header. Verte
 
 |||
 |-|-|
-|[bernoulli_distribution-Klasse](../standard-library/bernoulli-distribution-class.md)|Produziert eine Bernoulli-Verteilung von `bool`-Werten.|
+|[bernoulli_distribution-Klasse](../standard-library/bernoulli-distribution-class.md)|Produziert eine Bernoulli-Verteilung von **"bool"** Werte.|
 |[binomial_distribution-Klasse](../standard-library/binomial-distribution-class.md)|Produziert eine binomiale Verteilung von Ganzzahlwerten.|
 |[geometric_distribution-Klasse](../standard-library/geometric-distribution-class.md)|Produziert eine geometrische Verteilung von Ganzzahlwerten.|
 |[negative_binomial_distribution-Klasse](../standard-library/negative-binomial-distribution-class.md)|Produziert eine negative binomiale Verteilung von Ganzzahlwerten.|
@@ -331,7 +331,7 @@ Die folgenden Abschnitte Listen die Verteilungen im die \<random > Header. Verte
 |-|-|
 |[cauchy_distribution-Klasse](../standard-library/cauchy-distribution-class.md)|Produziert eine Couch-Verteilung von (Gleitkomma-)Echtwerten.|
 |[chi_squared_distribution-Klasse](../standard-library/chi-squared-distribution-class.md)|Produziert eine Chi-Quadrat-Verteilung von (Gleitkomma-)Echtwerten.|
-|[fisher_f_distribution-Klasse](../standard-library/fisher-f-distribution-class.md)|Produziert eine F-Verteilung (auch bekannt als Sender-F-Verteilung oder Fisher-Snedecor-Verteilung) von (Gleitkomma-) echtwerten.|
+|[fisher_f_distribution-Klasse](../standard-library/fisher-f-distribution-class.md)|Produziert eine F-Verteilung (auch bekannt als Sender F-Verteilung oder Fisher-Snedecor-Verteilung) von (Gleitkomma-) echtwerten.|
 |[lognormal_distribution-Klasse](../standard-library/lognormal-distribution-class.md)|Produziert eine Lognormalverteilung von (Gleitkomma-)Echtwerten.|
 |[normal_distribution-Klasse](../standard-library/normal-distribution-class.md)|Produziert eine (Gaußsche) Normalverteilung von (Gleitkomma-)Echtwerten.|
 |[student_t_distribution-Klasse](../standard-library/student-t-distribution-class.md)|Produziert die studentische *t*-Verteilung von (Gleitkomma-)Echtwerten.|
@@ -362,7 +362,7 @@ Die folgenden Abschnitte Listen die Verteilungen im die \<random > Header. Verte
 
 ### <a name="utility-functions"></a>Hilfsfunktionen
 
-Dieser Abschnitt listet die allgemeinen Hilfsfunktionen, die der \<random > Header.
+Dieser Abschnitt enthält die allgemeinen Hilfsfunktionen, die der \<random > Header.
 
 |||
 |-|-|
@@ -370,7 +370,7 @@ Dieser Abschnitt listet die allgemeinen Hilfsfunktionen, die der \<random > Head
 
 ### <a name="operators"></a>Operatoren
 
-Dieser Abschnitt listet die Operatoren der \<random > Header.
+Dieser Abschnitt enthält die Operation im der \<random >-Header.
 
 |||
 |-|-|
@@ -381,13 +381,13 @@ Dieser Abschnitt listet die Operatoren der \<random > Header.
 
 ## <a name="engdist"></a> Module und Verteilungen
 
-Finden Sie in den folgenden Abschnitten Weitere Informationen zu jeder dieser in definierten vorlagenklassenkategorien \<random >. Beide dieser Vorlagenklassenkategorien akzeptieren einen Typ als Argument und verwenden allgemeine Namen eines Vorlagenparameters, um die Eigenschaften des Typs, die als tatsächlicher Argumenttyp zulässig sind, wie folgt zu beschreiben:
+Finden Sie in den folgenden Abschnitten Informationen zu jedem dieser in definierten vorlagenklassenkategorien \<random >. Beide dieser Vorlagenklassenkategorien akzeptieren einen Typ als Argument und verwenden allgemeine Namen eines Vorlagenparameters, um die Eigenschaften des Typs, die als tatsächlicher Argumenttyp zulässig sind, wie folgt zu beschreiben:
 
-- `IntType` zeigt `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long` oder `unsigned long long` an.
+- `IntType` Gibt eine **kurze**, **Int**, **lange**, **long long**, **unsigned short**,  **ganze Zahl ohne Vorzeichen**, **unsigned long**, oder **long long ohne Vorzeichen**.
 
-- `UIntType` zeigt `unsigned short`, `unsigned int`, `unsigned long` oder `unsigned long long` an.
+- `UIntType` Gibt an **unsigned short**, **ganze Zahl ohne Vorzeichen**, **unsigned long**, oder **long long ohne Vorzeichen**.
 
-- `RealType` zeigt `float`, `double` oder `long double` an.
+- `RealType` Gibt eine **"float"**, **doppelte**, oder **long double**.
 
 ### <a name="engines"></a>Engines
 

@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbd4cf162ba16ac5c9ae9c6bf018be2988507bcb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b6c1c11a9c81123c518e3a0da3e56cc81d4cd5c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862626"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958928"
 ---
 # <a name="timeput-class"></a>time_put-Klasse
 
@@ -45,9 +45,11 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-`CharType` Der Typ, der innerhalb eines Programms zum Codieren von Zeichen verwendet wird.
+*CharType*  
+ Der Typ, der innerhalb eines Programms verwendet wird, um Zeichen zu codieren.
 
-`OutputIterator` Der Typ eines Iterators, in dem die Zeit-Funktionen PUT, ihre Ausgabe schreiben.
+*OutputIterator*  
+ Der Typ des Iterators, in den die Time-Put-Funktionen ihre Ausgabe schreiben.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -89,11 +91,11 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter **CharType** dar.
+Der Type stellt ein Synonym für den Vorlagenparameter `CharType` dar.
 
 ## <a name="do_put"></a> time_put::do_put
 
-Eine virtuelle Funktion, die Zeit- und Datumsinformationen als Sequenz von **CharType**-Objekten ausgibt.
+Eine virtuelle Funktion, die Zeit- und Datumsinformationen als Sequenz von `CharType`-Objekten ausgibt.
 
 ```cpp
 virtual iter_type do_put(
@@ -106,15 +108,20 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parameter
 
-`next` Ein Ausgabeiterator, in denen die Darstellung Datum und die Zeichenfolge, sind, die eingefügt werden soll.
+*next*  
+ Ein Ausgabeiterator, in den die Zeichensequenz für Zeit und Datum eingefügt werden soll.
 
-`_Iosbase` Wird nicht verwendet.
+*"_Iosbase"*  
+ Nicht verwendet.
 
-`_Pt` Die Uhrzeit und Datum Informationen, die Ausgabe.
+*_Pt*  
+ Die Zeit- und Datumsinformationen, die ausgegeben werden.
 
-`_Fmt` Das Format der Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
+*_Fmt*  
+ Das Format der Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
-`_Mod` Ein Modifizierer für das Format. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
+*Auf _Mod*  
+ Ein Modifizierer für das Format. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -122,9 +129,9 @@ Ein Iterator an die erste Position hinter dem letzten eingefügten Element.
 
 ### <a name="remarks"></a>Hinweise
 
-Die virtuelle geschützte Memberfunktion generiert sequenzielle Elemente vom Typ **tm** ab `next` aus im Objekt \* `_Pt` gespeicherten Zeitwerten. Die Funktion gibt einen Iterator zurück, der die nächste Stelle zum Einfügen eines Elements nach der generierten Ausgabe festlegt.
+Die geschützte virtuelle Memberfunktion generiert sequenzielle Elemente ab `next` aus Time-Werten, die im Objekt gespeicherten \* `_Pt`, des Typs `tm`. Die Funktion gibt einen Iterator zurück, der die nächste Stelle zum Einfügen eines Elements nach der generierten Ausgabe festlegt.
 
-Die Ausgabe wird durch die gleichen Regeln wie durch `strftime` generiert, mit einem letzten Argument aus `_Pt`, um eine Serie von `char`-Elementen in eine Reihe zu generieren. Jedes dieser `char`-Elemente soll einem äquivalenten Element vom Typ **CharType** durch eine einfache 1:1-Zuordnung zugeordnet werden. Wenn `_Mod` gleich null ist, ist das effektive Format „%F“, wobei F durch `_Fmt` ersetzt wird. Andernfalls ist das effektive Format „%MF“, wobei M durch `_Mod` ersetzt wird.
+Die Ausgabe wird von den gleichen Regeln generiert `strftime`, mit einem letzten Argument der *_Pt*, für das Generieren einer Reihe von **Char** Elemente in ein Array. Jedes dieser **Char** wird davon ausgegangen, dass Element soll einem äquivalenten Element vom Typ zuordnen `CharType` durch eine einfache 1: 1-Zuordnung zugeordnet. Wenn *auf _Mod* gleich 0 (null), ist das effektive Format "%F", die, wobei F durch ersetzt *_Fmt*. Andernfalls ist das effektive Format "% MF", wobei M durch ersetzt *auf _Mod*.
 
 ### <a name="example"></a>Beispiel
 
@@ -140,11 +147,11 @@ typedef OutputIterator iter_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für den Vorlagenparameter **OutputIterator**.
+Der Type stellt ein Synonym für den Vorlagenparameter `OutputIterator` dar.
 
 ## <a name="put"></a> time_put::put
 
-Gibt Zeit- und Datumsinformationen als Sequenz von **CharType**-Objekten aus.
+Gibt Zeit- und Datumsinformationen als Sequenz von `CharType`-Objekten aus.
 
 ```cpp
 iter_type put(iter_type next,
@@ -164,21 +171,29 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>Parameter
 
-`next` Ein Ausgabeiterator, in denen die Darstellung Datum und die Zeichenfolge, sind, die eingefügt werden soll.
+*next*  
+ Ein Ausgabeiterator, in den die Zeichensequenz für Zeit und Datum eingefügt werden soll.
 
-`_Iosbase` Wird nicht verwendet.
+*"_Iosbase"*  
+ Nicht verwendet.
 
-`_Fill` Das Zeichen vom Typ **CharType** für die Analyse verwendet.
+*_Fill*  
+ Das Zeichen vom Typ `CharType` für Abstand verwendet.
 
-`_Pt` Die Uhrzeit und Datum Informationen, die Ausgabe.
+*_Pt*  
+ Die Zeit- und Datumsinformationen, die ausgegeben werden.
 
-`_Fmt` Das Format der Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
+*_Fmt*  
+ Das Format der Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
-`_Mod` Ein Modifizierer für das Format. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
+*Auf _Mod*  
+ Ein Modifizierer für das Format. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
-`first` Der Anfang der Zeichenfolge für die Formatierung für die Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
+*Erste*  
+ Der Anfang der Formatierungszeichenfolge für die Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
-`last` Das Ende der Zeichenfolge für die Formatierung für die Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
+*last*  
+ Das Ende der Formatierungszeichenfolge für die Ausgabe. Siehe [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) für gültige Werte.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -186,7 +201,7 @@ Ein Iterator an die erste Position hinter dem letzten eingefügten Element.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Memberfunktion gibt [do_put](#do_put)( `next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`) zurück. Die zweite Memberfunktion kopiert jedes Element im Intervall [ `first`, `last`) außer Prozentzeichen (%) nach \* `next` ++. Für ein Prozentzeichen gefolgt von einem *C*-Zeichen im Intervall [ `first`, `last`) wertet die Funktion stattdessen `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) und überspringt *C*. Wenn *C* jedoch ein Qualifiziererzeichen aus dem Satz EOQ# gefolgt von einem `C2`-Zeichen im Intervall [ `first`, `last`) ist, wertet die Funktion stattdessen `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) und überspringt `C2`.
+Die erste Memberfunktion gibt [Do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). Die zweite Memberfunktion kopiert jedes Element im Intervall [ `first`, `last`) außer Prozentzeichen (%) nach \* `next` ++. Für ein Prozentzeichen gefolgt von einem *C*-Zeichen im Intervall [ `first`, `last`) wertet die Funktion stattdessen `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) und überspringt *C*. Wenn *C* jedoch ein Qualifiziererzeichen aus dem Satz EOQ# gefolgt von einem `C2`-Zeichen im Intervall [ `first`, `last`) ist, wertet die Funktion stattdessen `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) und überspringt `C2`.
 
 ### <a name="example"></a>Beispiel
 
@@ -242,11 +257,11 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-`_Refs` Integer-Wert verwendet, um den Typ der Verwaltung des Arbeitsspeichers für das Objekt angeben.
+*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:
+Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
 - 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
 
@@ -254,7 +269,7 @@ Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:
 
 - \> 1: Diese Werte sind nicht definiert.
 
-Der Konstruktor initialisiert seine Basisobjekt mit [locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
+Der Konstruktor initialisiert sein Basisobjekt mit [locale:: Facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonFontComboBox Klasse | Microsoft Docs
+title: CMFCRibbonFontComboBox-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857eb87caf42e39366e261ac92c3b2f289fb41d9
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2eb5fa8f56f242ce40f6be9c27bc1cbd9c5d61ff
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039374"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852522"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox-Klasse
 Implementiert ein Kombinationsfeld, das eine Liste von Schriftarten enthält. Das Kombinationsfeld kann in einem Menübandbereich platziert werden.  
@@ -72,12 +72,12 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 |[CMFCRibbonFontComboBox::GetFontDesc](#getfontdesc)||  
 |[CMFCRibbonFontComboBox::GetFontType](#getfonttype)|Gibt zurück, welche Schriftarttypen im Kombinationsfeld angezeigt werden. Gültige Optionen sind DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE oder jede bitweise Kombination davon.|  
 |[CMFCRibbonFontComboBox::GetPitchAndFamily](#getpitchandfamily)|Gibt die Schriftbreite und Schriftfamilie der Schriftarten zurück, die im Kombinationsfeld angezeigt werden.|  
-|`CMFCRibbonFontComboBox::GetThisClass`|Durch das Framework verwendet wird, um einen Zeiger auf die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
+|`CMFCRibbonFontComboBox::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
 |[CMFCRibbonFontComboBox::RebuildFonts](#rebuildfonts)|Füllt das Schriftartkombinationsfeld für das Menüband mit Schriftarten des zuvor angegebenen Schriftarttyps, Zeichensatzes, der Zeichenbreite und Schriftfamilie auf.|  
 |[CMFCRibbonFontComboBox::SetFont](#setfont)|Wählt die angegebene Schriftart im Kombinationsfeld aus.|  
   
 ## <a name="remarks"></a>Hinweise  
- Nach der Erstellung einer `CMFCRibbonFontComboBox` Objekt, das durch den Aufruf zu einem Menübandbereich hinzufügen [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+ Nach der Erstellung einer `CMFCRibbonFontComboBox` Objekt, das durch den Aufruf zum Menübandbereich hinzufügen [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -129,24 +129,24 @@ CMFCRibbonFontComboBox(
   
 ### <a name="parameters"></a>Parameter  
  [in] *nID*  
- Die Befehls-ID des Befehls, der ausgeführt wird, wenn der Benutzer ein Element im Kombinationsfeld auswählt.  
+ Die Befehls-ID des Befehls, der ausgeführt wird, wenn der Benutzer ein Element aus dem Kombinationsfeld auswählt.  
   
  [in] *nFontType*  
- Gibt an, welche Schriftart Typen im Kombinationsfeld angezeigt. Gültige Optionen sind **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, und **TRUETYPE_FONTTYPE**, oder jede bitweise Kombination davon.  
+ Gibt an, welche Schriftart zu Typen, für die im Kombinationsfeld angezeigt. Gültige Optionen sind DEVICE_FONTTYPE, RASTER_FONTTYPE, und TRUETYPE_FONTTYPE oder jede bitweise Kombination davon.  
   
  [in] *nCharSet*  
- Filtert die Schriftarten in das Kombinationsfeld auf solche, die dem angegebenen Zeichensatz gehören...  
+ Filtert die Schriftarten in das Kombinationsfeld, mit denen, die den angegebenen Zeichensatz angehören...  
   
  [in] *nPitchAndFamily*  
  Gibt die Schriftbreite und Schriftfamilie der Schriftarten, die im Kombinationsfeld angezeigt werden.  
   
  [in] *nWidth*  
- Gibt die Breite des im Kombinationsfeld in Pixel an.  
+ Die Breite angibt in Pixel des Kombinationsfelds.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen zu möglichen *nFontType* Parameterwerte, finden Sie unter [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) in das Windows SDK-Dokumentation.  
+ Weitere Informationen zu möglichen *nFontType* Parameterwerten finden Sie unter [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) in der Windows SDK-Dokumentation.  
   
- Weitere Informationen zu gültigen Zeichensätzen, die zugewiesen werden können *nCharSet*, gültige Werte, die zugewiesen werden können, und *nPitchAndFamily*, finden Sie unter [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) in der Windows SDK-Dokumentation.  
+ Weitere Informationen zu gültigen Zeichensätzen, die zugewiesen werden können *nCharSet*, und der gültigen Werte, die zugewiesen werden können *nPitchAndFamily*, finden Sie unter ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) in der Windows SDK-Dokumentation.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -163,14 +163,14 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="rebuildfonts"></a>  CMFCRibbonFontComboBox::RebuildFonts  
- Füllt das Kombinationsfeld im Menüband mit Schriftarten eines zuvor angegebenen Schriftarttyps, Zeichensatzes, und Tonhöhe und Familie an.  
+ Füllt das Kombinationsfeld im Menüband mit Schriftarten eines zuvor angegebenen Schriftarttyps, Zeichensatzes, und Pitch und Familie an.  
   
 ```  
 void RebuildFonts();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können die Schriftarttyps, Zeichensatzes, angeben und Schriftbreite und Schriftfamilie der Schriftarten einschließt, das Menüband-Kombinationsfeld Schriftart im Feld der [Konstruktor](#cmfcribbonfontcombobox) für diese Klasse oder durch Aufrufen von [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).  
+ Sie können die Schriftart, den Zeichensatz angeben und die Schriftbreite und Schriftfamilie der Schriftarten in das Menüband Schriftarten-Kombinationsfeld eingeschlossen werden sollen, die im Dialogfeld die [Konstruktor](#cmfcribbonfontcombobox) für diese Klasse oder durch Aufrufen von [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).  
   
 ##  <a name="setfont"></a>  CMFCRibbonFontComboBox::SetFont  
  Wählt die angegebene Schriftart im Kombinationsfeld aus.  
@@ -190,10 +190,10 @@ BOOL SetFont(
  Gibt den Zeichensatz für die ausgewählte Schriftart an.  
   
  *bExact*  
- `TRUE` um anzugeben, dass es sich bei der Zeichensatz übereinstimmen muss, wenn Sie eine Schriftart auswählen; `FALSE` um anzugeben, dass der Zeichensatz ignoriert werden kann, wenn Sie eine Schriftart auswählen.  
+ True, um anzugeben, dass der Zeichensatz übereinstimmen muss, wenn Sie eine Schriftart auswählen. "False", um anzugeben, dass der Zeichensatz kann ignoriert werden, wenn Sie eine Schriftart auswählen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die angegebene Schriftart und die ausgewählten gefunden wurde; andernfalls 0 (null).  
+ Ungleich NULL ist, wenn die angegebene Schriftart gefunden und aktiviert wurde; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -205,7 +205,7 @@ BYTE GetCharSet() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- -Zeichensatz angibt (Siehe LOGFONT in das Windows SDK-Dokumentation).  
+ Zeichensatz (siehe "LogFont" in der Windows SDK-Dokumentation).  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -217,7 +217,7 @@ int GetFontType() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Schriftarttypen (Siehe EnumFontFamProc in das Windows SDK-Dokumentation).  
+ Schriftarttypen (Siehe EnumFontFamProc in der Windows SDK-Dokumentation).  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -229,7 +229,7 @@ BYTE GetPitchAndFamily() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Schriftbreite und Schriftfamilie (in der Windows-SDK-Dokumentation finden Sie unter "LOGFONT").  
+ Schriftbreite und Schriftfamilie (siehe "LogFont" in der Windows SDK-Dokumentation).  
   
 ### <a name="remarks"></a>Hinweise  
   

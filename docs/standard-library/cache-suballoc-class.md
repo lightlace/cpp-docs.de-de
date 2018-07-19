@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28dc4e52e2f114600ad3a22697500ce9d8594113
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccc01372d08edb997ed6b0aaa70be69fde60a1e2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850306"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954322"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc-Klasse
 
@@ -42,13 +42,13 @@ class cache_suballoc
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Sz`|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*sz*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse cache_suballoc speichert freigegebene Speicherblöcke in einer Freiliste mit unbegrenzter Länge unter Verwendung von `freelist<sizeof(Type), max_unbounded>` und führt eine Unterzuweisung von Speicherblöcken aus einem größeren Block durch, die mit `operator new` zugeordnet werden, wenn die Freiliste leer ist.
+Die Vorlagenklasse Cache_suballoc speichert freigegebene Speicherblöcke in einer Freiliste mit unbegrenzter Länge unter Verwendung `freelist<sizeof(Type), max_unbounded>`, und führt eine unterzuweisung von Speicherblöcken aus einem größeren Block zugeordnet **new-Operator** bei der Freiliste hinzugefügt wird leer.
 
-Jeder Block enthält `Sz * Nelts` Bytes Speicherkapazität und die Daten, die `operator new` und `operator delete` benötigen. Zugeordnete Blöcke werden niemals freigegeben.
+Jeder Block enthält `Sz * Nelts` Bytes Speicherkapazität und die Daten, die **new-Operator** und **Delete-Operator** erfordern. Zugeordnete Blöcke werden niemals freigegeben.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`count`|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*count*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
-|`count`|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
+|*ptr*|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
+|*count*|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 

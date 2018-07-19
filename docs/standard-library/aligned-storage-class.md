@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4144eed22a3a16615d7fa79ecd4828835c6ebe0b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73a051eadaf06950e606f475b2bb418425e1b19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846479"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958873"
 ---
 # <a name="alignedstorage-class"></a>aligned_storage-Klasse
 
@@ -40,13 +40,13 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>Parameter
 
-`Len` Die Größe des Objekts.
+*Len* die Objektgröße.
 
-`Align` Die objektausrichtung.
+*Ausrichten* die Ausrichtung eines anmerkungsobjekts.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Vorlagenmember typedef-`type` ist ein Synonym für einen POD-Typ mit der Ausrichtung `Align` und der Größe `Len`. `Align` muss gleich sein mit `alignment_of<T>::value` für manche `T`-Typen oder mit der standardmäßigen Ausrichtung.
+Der TypeDef-Member von Vorlage `type` ist ein Synonym für einen POD-Typ, mit der Ausrichtung *ausrichten* und Größe *Len*. *Ausrichten* muss gleich sein `alignment_of<T>::value` für einen Typ `T`, oder klicken Sie mit der standardmäßigen Ausrichtung.
 
 ## <a name="example"></a>Beispiel
 

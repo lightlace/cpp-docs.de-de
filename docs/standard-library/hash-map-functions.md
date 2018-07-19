@@ -7,12 +7,12 @@ f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-ms.openlocfilehash: 4ae585c53fde68c580059532722ac5d0b019a3db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8ae3102091b9057f45f6b0072e0c272dfb27458
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845972"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958547"
 ---
 # <a name="lthashmapgt-functions"></a>&lt;Hash_map&gt; Funktionen
 
@@ -35,9 +35,9 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-`right` Das hash_map-Element, dessen Elemente sind mit denen der Karte spezifiziertes `left`.
+*richtige* das hash_map-Element, dessen Elemente sind mit denen der Zuordnung ausgetauscht werden sollen *linken*.
 
-`left` Das hash_map-Element, dessen Elemente sind mit denen der Karte spezifiziertes `right`.
+*linken* das hash_map-Element, dessen Elemente sind mit denen der Zuordnung ausgetauscht werden sollen *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -58,9 +58,9 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-`right` Das hash_multimap-Element, dessen Elemente sind mit denen der Karte spezifiziertes `left`.
+*richtige* die Hash_multimap, deren Elemente ausgetauscht werden, mit denen der Zuordnung *linken*.
 
-`left` Das hash_multimap-Element, dessen Elemente sind mit denen der Karte spezifiziertes `right`.
+*linken* die Hash_multimap, deren Elemente ausgetauscht werden, mit denen der Zuordnung *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 

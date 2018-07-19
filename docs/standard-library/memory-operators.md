@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fe61112e5b36c8341e4a3209a9bec335549736
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857190"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954234"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt;-Operatoren
 
@@ -56,13 +56,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eines der Objekte auf Ungleichheit geprüft werden soll.
+*linken* eines der Objekte auf Ungleichheit getestet werden soll.
 
-`right` Eines der Objekte auf Ungleichheit geprüft werden soll.
+*richtige* eines der Objekte auf Ungleichheit getestet werden soll.
 
-`Ty1` Der vom linken gemeinsamen Zeiger gesteuerte Typ.
+*Ty1* der Typ, der von der linken Seite gesteuert freigegebene Zeiger.
 
-`Ty2` Der vom rechten freigegebenen Zeiger gesteuerte Typ.
+*Ty2* vom rechts gesteuerte Typ freigegebene Zeiger.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -154,23 +154,23 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eines der Objekte auf Gleichheit geprüft werden soll.
+*linken* eines der Objekte auf Gleichheit getestet werden soll.
 
-`right` Eines der Objekte auf Gleichheit geprüft werden soll.
+*richtige* eines der Objekte auf Gleichheit getestet werden soll.
 
-`Ty1` Der vom linken gemeinsamen Zeiger gesteuerte Typ.
+*Ty1* der Typ, der von der linken Seite gesteuert freigegebene Zeiger.
 
-`Ty2` Der vom rechten freigegebenen Zeiger gesteuerte Typ.
+*Ty2* vom rechts gesteuerte Typ freigegebene Zeiger.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Objekte gleich sind, `false`, wenn die Objekte nicht gleich sind.
+**"true"** , wenn die Objekte gleich sind, **"false"** Wenn Objekte nicht gleich sind.
 
 ### <a name="remarks"></a>Hinweise
 
 Der erste Vorlagenoperator gibt "true" zurück. (Alle standardmäßigen allocator-Objekte sind gleich.)
 
-Der zweite und der dritte Vorlagenoperator geben ` left.get() ==  right.get()` zurück.
+Der zweite und der dritte Vorlagenoperator geben `left.get() ==  right.get()` zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -258,17 +258,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eines der Objekte, verglichen werden soll.
+*linken* eines der Objekte verglichen werden soll.
 
-`right` Eines der Objekte, verglichen werden soll.
+*richtige* eines der Objekte verglichen werden soll.
 
-`Ty1` Der vom linken gemeinsamen Zeiger gesteuerte Typ.
+*Ty1* der Typ, der von der linken Seite gesteuert freigegebene Zeiger.
 
-`Ty2` Der vom rechten freigegebenen Zeiger gesteuerte Typ.
+*Ty2* vom rechts gesteuerte Typ freigegebene Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die vorlagenoperatoren zurückgeben `left.get() >= right.get()`.
+Die vorlagenoperatoren geben zurück `left.get() >= right.get()`.
 
 ## <a name="op_lt"></a> operator&lt;
 
@@ -288,13 +288,13 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eines der Objekte, verglichen werden soll.
+*linken* eines der Objekte verglichen werden soll.
 
-`right` Eines der Objekte, verglichen werden soll.
+*richtige* eines der Objekte verglichen werden soll.
 
-`Ty1` Der vom linken Zeiger gesteuerte Typ.
+*Ty1* vom linken Zeiger gesteuerte Typ.
 
-`Ty2` Der vom rechten Zeiger gesteuerte Typ.
+*Ty2* vom rechten Zeiger gesteuerte Typ.
 
 ## <a name="op_lt_eq"></a> operator&lt;=
 
@@ -314,17 +314,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eines der Objekte, verglichen werden soll.
+*linken* eines der Objekte verglichen werden soll.
 
-`right` Eines der Objekte, verglichen werden soll.
+*richtige* eines der Objekte verglichen werden soll.
 
-`Ty1` Der vom linken gemeinsamen Zeiger gesteuerte Typ.
+*Ty1* der Typ, der von der linken Seite gesteuert freigegebene Zeiger.
 
-`Ty2` Der vom rechten freigegebenen Zeiger gesteuerte Typ.
+*Ty2* vom rechts gesteuerte Typ freigegebene Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
-Die vorlagenoperatoren zurückgeben `left.get() <= right.get()`
+Die vorlagenoperatoren geben zurück. `left.get() <= right.get()`
 
 ## <a name="op_gt"></a> operator&gt;
 
@@ -344,13 +344,13 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eines der Objekte, verglichen werden soll.
+*linken* eines der Objekte verglichen werden soll.
 
-`right` Eines der Objekte, verglichen werden soll.
+*richtige* eines der Objekte verglichen werden soll.
 
-`Ty1` Der vom linken gemeinsamen Zeiger gesteuerte Typ.
+*Ty1* der Typ, der von der linken Seite gesteuert freigegebene Zeiger.
 
-`Ty2` Der vom rechten freigegebenen Zeiger gesteuerte Typ.
+*Ty2* vom rechts gesteuerte Typ freigegebene Zeiger.
 
 ## <a name="op_lt_lt"></a> operator&lt;&lt;
 
@@ -364,15 +364,15 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parameter
 
-`Elem` Der Typ des Elements Stream.
+*Elem* den Typ des streamelements.
 
-`Tr` Der Typ die Merkmale der Stream-Element.
+*TR* den Typ des streamelements.
 
-`Ty` Der vom freigegebenen Zeiger gesteuerte Typ.
+*Ty* vom gemeinsamen Zeiger gesteuerte Typ.
 
-`out` Der Ausgabestream.
+*out* den Ausgabestream.
 
-`sp` Die gemeinsamen Zeiger.
+*SP* der freigegebene Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 

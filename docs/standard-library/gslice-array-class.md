@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff9718a98244379fccde78b18fa70ef46c7e7a76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff44a91b4916092e319c7acc0520c49aeb9a5fa4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845644"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953074"
 ---
 # <a name="gslicearray-class"></a>gslice_array-Klasse
 
@@ -76,15 +76,15 @@ public:
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse beschreibt ein Objekt, das einen Verweis auf ein Objekt **va** der Klasse [valarray](../standard-library/valarray-class.md)**\<Type>** zusammen mit einem Objekt **gs** der Klasse [gslice](../standard-library/gslice-class.md) speichert, das die Reihenfolge der Elemente beschreibt, die im **valarray\<Type>**-Objekt ausgewählt werden sollen.
+Die Klasse beschreibt ein Objekt, das einen Verweis auf ein Objekt speichert `va` Klasse [Valarray](../standard-library/valarray-class.md)**\<Typ >**, zusammen mit einem Objekt `gs` Klasse [ Gslice](../standard-library/gslice-class.md) beschreibt, die die Sequenz von Elementen aus der `valarray<Type>` Objekt.
 
-Sie erstellen ein **gslice_array\<Type>**-Objekt nur, indem Sie einen Ausdruck der Form [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at) schreiben. Die Memberfunktionen der gslice_array-Klasse verhalten sich danach wie die entsprechenden Funktionssignaturen, die für **valarray\<Type>** definiert sind, mit der Ausnahme, dass nur die Reihenfolge der ausgewählten Elemente betroffen ist.
+Sie erstellen eine `gslice_array<Type>` -Objekt nur, indem Sie das Schreiben eines Ausdrucks des Formulars [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Die Memberfunktionen der Gslice_array-Klasse Verhalten sich dann wie die entsprechenden Funktionssignaturen für definiert `valarray<Type>`, außer dass nur die Reihenfolge der ausgewählten Elemente betroffen ist.
 
 Die Vorlagenklasse wird indirekt durch bestimmte valarray-Operationen erstellt und kann nicht direkt in der Anwendung verwendet werden. Eine interne auxiliary-Vorlagenklasse wird stattdessen von dem Segment-Indexoperator verwendet:
 
 `gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` (**constgslice&**).
 
-Sie erstellen ein **gslice_array\<Type>**-Objekt für ein **gsl**-Segment des valarray **va** nur, indem Sie einen Ausdruck der Form **va[gsl]** schreiben. Die Memberfunktionen der gslice_array-Klasse verhalten sich danach wie die entsprechenden Funktionssignaturen, die für **valarray\<Type>** definiert sind, mit der Ausnahme, dass nur die Reihenfolge der ausgewählten Elemente betroffen ist. Die Sequenz, die vom gslice_array gesteuert wird, wird durch die drei Parameter des Segmentkonstruktors, den Index des ersten Elements im ersten Segment und die Anzahl der Elemente in jedem Segment und den Abstand zwischen den Elementen in jedem Segment definiert.
+Sie erstellen eine `gslice_array<Type>` -Objekt nur, indem Sie das Schreiben eines Ausdrucks des Formulars `va[gsl]`, für einen Slice `gsl` valarray-Objekts `va`. Die Memberfunktionen der Gslice_array-Klasse Verhalten sich dann wie die entsprechenden Funktionssignaturen für definiert `valarray<Type>`, außer dass nur die Reihenfolge der ausgewählten Elemente betroffen ist. Die Sequenz, die vom gslice_array gesteuert wird, wird durch die drei Parameter des Segmentkonstruktors, den Index des ersten Elements im ersten Segment und die Anzahl der Elemente in jedem Segment und den Abstand zwischen den Elementen in jedem Segment definiert.
 
 Im folgenden Beispiel:
 

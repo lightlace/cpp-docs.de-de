@@ -1,5 +1,5 @@
 ---
-title: CPtrArray Klasse | Microsoft Docs
+title: CPtrArray-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab3416c0c4e659ce94f7dc4376ea2d7a1fd4c32
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: c2325f95ebcd002c5a80c50316cbbf208052b78b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078025"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851290"
 ---
 # <a name="cptrarray-class"></a>CPtrArray-Klasse
 Unterstützt Arrays mit void-Zeigern.  
@@ -69,7 +69,7 @@ class CPtrArray : public CObject
 ```  
   
 ## <a name="members"></a>Member  
- Die Memberfunktionen von `CPtrArray` ähneln den Memberfunktionen der Klasse [CObArray](../../mfc/reference/cobarray-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CObArray`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo eine `CObject` -Zeiger als Funktionsparameter oder Rückgabewert, ersetzen Sie einen Zeiger auf **"void"**.  
+ Die Memberfunktionen der `CPtrArray` ähneln den Memberfunktionen der Klasse [CObArray](../../mfc/reference/cobarray-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CObArray`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo ein `CObject` Zeiger als Funktionsparameter oder Rückgabewert, ersetzen Sie durch einen Zeiger auf **"void"**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -112,7 +112,7 @@ class CPtrArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CPtrArray` enthält das `IMPLEMENT_DYNAMIC`-Makro zur Unterstützung von Laufzeittypenzugriff und zum Sichern in ein `CDumpContext`-Objekt. Wenn Sie eine Sicherung der einzelnen Zeiger Arrayelemente benötigen, müssen Sie die Tiefe des sicherungskontexts auf 1 oder größer festlegen.  
+ `CPtrArray` enthält das IMPLEMENT_DYNAMIC-Makro, um die Laufzeit laufzeittypenzugriff und zum unterstützen einer `CDumpContext` Objekt. Wenn Sie ein Speicherabbild des einzelnen Zeiger Arrayelemente benötigen, müssen Sie die Tiefe des sicherungskontexts auf 1 oder größer festlegen.  
   
 > [!NOTE]
 >  Vor dem Verwenden eines Arrays, verwenden Sie `SetSize`, um dessen Größe festzustellen, und weisen dafür Arbeitsspeicher zu. Wenn Sie `SetSize` nicht verwenden, kann das Hinzufügen von Elementen zu Ihrem Array dazu führen, dass es häufig neu zugeordnet und kopiert wird. Häufige Neuzuordnungen und Kopiervorgänge sind ineffizient und können zu einer Fragmentierung des Arbeitsspeichers führen.  

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b123144643fd50b019853d21e4140ba2d931f7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a14b2fe5a14eaf264377a1f818227d73e134b030
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844984"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957962"
 ---
 # <a name="isliteraltype-class"></a>is_literal_type-Klasse
 
@@ -37,11 +37,11 @@ struct is_literal_type;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Der abzufragende Typ.
+*T* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist TRUE, wenn der Typ `T` ein *Literaltyp* ist; andernfalls ist sie FALSE. Ein Literaltyp ist entweder `void`, ein skalarer Typ, ein Verweistyp, ein Array von Literaltypen oder ein Literalklassentyp. Ein Literalklassentyp ist ein Klassentyp, der einen trivialen Destruktor aufweist, entweder ein aggregierter Typ ist oder mindestens über einen non-move, non-copy `constexpr`-Konstruktor verfügt. Alle seine Basisklassen und nichtstatischen Datenmember sind nicht volatile Literaltypen. Während der Typ eines Literals immer ein literal-Typ ist, enthält das Konzept eines literal-Typ alles, was der Compiler zur Kompilierzeit als ein `constexpr` auswerten kann.
+Eine Instanz des typprädikats ist true, wenn der Typ *T* ist eine *Literaltyp*, andernfalls ist Sie false. Ein Literaltyp ist entweder **"void"**, ein skalarer Typ, ein Verweistyp, ein Array von Literaltypen oder ein literalklassentyp. Ein Literalklassentyp ist ein Klassentyp, der einen trivialen Destruktor aufweist, entweder ein aggregierter Typ ist oder mindestens über einen non-move, non-copy `constexpr`-Konstruktor verfügt. Alle seine Basisklassen und nichtstatischen Datenmember sind nicht volatile Literaltypen. Während der Typ eines Literals immer ein literal-Typ ist, enthält das Konzept eines literal-Typ alles, was der Compiler zur Kompilierzeit als ein `constexpr` auswerten kann.
 
 ## <a name="requirements"></a>Anforderungen
 

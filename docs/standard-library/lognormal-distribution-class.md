@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b42546f140dfd150676c8bc21b4b651815281f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c2f2351d55a4b4f868021bd0c44a0b942633c68
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864163"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958529"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution-Klasse
 
@@ -78,11 +78,11 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType* der gleitkommaergebnistyp standardmäßig `double`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der Lognormalverteilung verteilter Wert ausgeben wird, geben Sie `double` ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Vorlagenklasse beschreibt eine Verteilung, Werte eines benutzerdefinierten ganzzahligen produziert, Typs **doppelte** Wenn none angegeben ist, verteilt entsprechend der Lognormalverteilung. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -204,11 +204,11 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*m* der `m` -verteilungsparameter.
+*m* der `m` verteilungsparameter.
 
-*s* der `s` -verteilungsparameter.
+*s* der `s` verteilungsparameter.
 
-*Parm* der `param_type` Struktur für die Verteilung verwendete Parameterstruktur.
+*Parm* der `param_type` Struktur verwendet, um die Verteilung erstellen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -236,11 +236,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*m* der `m` -verteilungsparameter.
+*m* der `m` verteilungsparameter.
 
-*s* der `s` -verteilungsparameter.
+*s* der `s` verteilungsparameter.
 
-*Rechte* der `param_type` Struktur, die zum Vergleichen verwendet.
+*richtige* der `param_type` Struktur, mit der verglichen werden soll.
 
 ### <a name="remarks"></a>Hinweise
 

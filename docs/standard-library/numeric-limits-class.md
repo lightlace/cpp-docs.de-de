@@ -80,12 +80,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73c8d98157e81f087bf382c3733a2ade909349a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a14d5012e1db8dec0f1aa6c39d8764232169dec2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862779"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954876"
 ---
 # <a name="numericlimits-class"></a>numeric_limits-Klasse
 
@@ -100,13 +100,13 @@ class numeric_limits
 
 ### <a name="parameters"></a>Parameter
 
-`Type` Der grundlegende Elementdatentyp, dessen Eigenschaften, getestet, abgefragt oder festgelegt.
+*Typ* der grundlegende Elementdatentyp, dessen Eigenschaften, getestet, abgefragt oder festgelegt.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Header definiert explizite Spezialisierungen für die Typen `wchar_t`, `bool`, `char`, `signed char`, `unsigned char`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, `unsigned long`, `float`, `double`, `long double`**,** `long long`, `unsigned long long`, `char16_t`und `char32_t`. Für diese expliziten Spezialisierungen ist der Member [numeric_limits::is_specialized](#is_specialized) gleich `true`, und alle relevanten Elemente haben sinnvolle Werte. Das Programm kann zusätzliche explizite Spezialisierungen bereitstellen. Die meisten Memberfunktionen der Klasse beschreiben oder testen mögliche Implementierungen von `float`.
+Der Header definiert explizite spezialisierungen für die Typen **"wchar_t"**, **"bool"**, **Char**, **signiert Char**, **ohne Vorzeichen Char**, **kurze**, **unsigned short**, **Int**, **ganze Zahl ohne Vorzeichen**, **lang**, **unsigned long**, **"float"**, **doppelte**, **long Double ***,** **long Long**, **long long ohne Vorzeichen**, `char16_t`, und `char32_t`. Für diese expliziten spezialisierungen ist der Member [numeric_limits:: is_specialized](#is_specialized) ist **"true"**, und alle relevanten Elemente haben sinnvolle Werte. Das Programm kann zusätzliche explizite Spezialisierungen bereitstellen. Die meisten Memberfunktionen der Klasse beschreiben oder testen mögliche Implementierungen von **"float"**.
 
-Für eine beliebige Spezialisierung gibt es keine Member, die sinnvolle Werte haben. Ein Memberobjekt, das keinen sinnvollen Wert hat, speichert 0 (oder `false`), und eine Memberfunktion, die keinen sinnvollen Wert zurückgibt, gibt `Type(0)`zurück.
+Für eine beliebige Spezialisierung gibt es keine Member, die sinnvolle Werte haben. Ein Memberobjekt, das keinen sinnvollen Wert speichert 0 (null) (oder **"false"**) und gibt eine Memberfunktion, die keinen sinnvollen Wert zurückgibt `Type(0)`.
 
 ### <a name="static-functions-and-constants"></a>Statische Funktionen und Konstanten
 
@@ -165,9 +165,9 @@ Der kleinste denormalisierte Wert ungleich 0.
 
 ### <a name="remarks"></a>Hinweise
 
-`long double` entspricht dem **doppelten** für den C++-Compiler.
+**long double** ist identisch mit **doppelte** für die C++-Compiler.
 
-Die Funktion gibt den kleinsten Wert für den Typ zurück, der der gleiche ist wie [min](#min), wenn [has_denorm](#has_denorm) nicht gleich **denorm_present** ist.
+Die Funktion gibt den kleinsten Wert für den Typ an, die die gleiche ist als [min](#min) Wenn [Has_denorm](#has_denorm) ist nicht gleich `denorm_present`.
 
 ### <a name="example"></a>Beispiel
 
@@ -364,7 +364,7 @@ Ein Enumerationswert des Typs **const**`float_denorm_style`, wodurch angegeben w
 
 ### <a name="remarks"></a>Hinweise
 
-Der Member speichert **denorm_present** für einen Gleitkommatyp, der denormalisierte Werte hat, effektiv eine variable Anzahl von Exponentenbits.
+Der Member speichert `denorm_present` für ein Gleitkommatyp, der denormalisierte hat Werte effektiv eine Variable Anzahl von Exponentenbits.
 
 ### <a name="example"></a>Beispiel
 
@@ -1010,7 +1010,7 @@ Gibt den kleinsten negativen begrenzten Wert zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Gibt den kleinsten negativen begrenzten Wert für den Typ (Dies ist i. d. r. `min()` für ganzzahlige Typen und `-max()` für Gleitkommatypen). Der Rückgabewert ist aussagekräftig, wenn `is_bounded` `true` ist.
+Gibt den kleinsten negativen begrenzten Wert für den Typ (Dies ist in der Regel `min()` für ganzzahlige Typen und `-max()` für Gleitkomma-Datentypen). Der Rückgabewert ist aussagekräftig Wenn `is_bounded` ist **"true"**.
 
 ## <a name="max"></a> numeric_limits::max
 
@@ -1026,7 +1026,7 @@ Der größte endliche Wert für einen Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Der endliche Höchstwert ist INT_MAX für Typ `int` und FLT_MAX für Typ **Gleitkomma**. Der Rückgabewert ist aussagekräftig, wenn [is_bounded](#is_bounded) **wahr** ist.
+Der endliche Höchstwert ist INT_MAX für Typ **Int** und FLT_MAX für Typ **"float"**. Der Rückgabewert ist aussagekräftig, wenn [is_bounded](#is_bounded) **wahr** ist.
 
 ### <a name="example"></a>Beispiel
 
@@ -1176,7 +1176,7 @@ Der kleinste normalisierte Wert für einen Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Der normalisierte Mindestwert ist INT_MIN für Typ `int` und FLT_MIN für Typ `float`. Der Rückgabewert ist aussagekräftig, wenn [is_bounded](#is_bounded) `true` oder [is_signed](#is_signed) `false` ist.
+Der normalisierte Mindestwert ist INT_MIN für Typ **Int** und FLT_MIN für Typ **"float"**. Der Rückgabewert ist aussagekräftig Wenn [Is_bounded](#is_bounded) ist **"true"** oder, wenn [Is_signed](#is_signed) ist **"false"**.
 
 ### <a name="example"></a>Beispiel
 
@@ -1535,7 +1535,7 @@ static const bool tinyness_before = false;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn der Typ kleine Werte vor der Rundung erkennen kann; `false`, wenn dies nicht möglich ist.
+**"true"** Wenn der Typ kleine Werte vor dessen Rundung; erkennen kann **"false"** Wenn dies nicht möglich.
 
 ### <a name="remarks"></a>Hinweise
 

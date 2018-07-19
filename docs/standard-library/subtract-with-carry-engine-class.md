@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf17eb39d71d444db9154fb06991be42c34a70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857375"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955305"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine-Klasse
 
@@ -46,13 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parameter
 
-`UIntType` Der Ergebnistyp für die ganze Zahl ohne Vorzeichen. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*UIntType*  
+ Der unsigned integer-Ergebnistyp. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-`W` **Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**:`0 < W ≤ numeric_limits<UIntType>::digits`
+*W*  
+ **Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**:`0 < W ≤ numeric_limits<UIntType>::digits`
 
-`S` **Kurze Verzögerung**. Anzahl der Ganzzahlwerte. **Vorbedingung**:`0 < S < R`
+*S*  
+ **Kurze Verzögerung**. Anzahl der Ganzzahlwerte. **Vorbedingung**:`0 < S < R`
 
-`R` **Lange Verzögerung**. Bestimmt die Wiederholungsrate in der generierten Serie.
+*R*  
+ **Lange Verzögerung**. Bestimmt die Wiederholungsrate in der generierten Serie.
 
 ## <a name="members"></a>Mitglieder
 
@@ -68,7 +72,7 @@ Weitere Informationen über Engine-Member finden Sie unter [\<random&gt;](../sta
 
 Die Vorlagenklasse `substract_with_carry_engine` stellt eine Verbesserung gegenüber dem [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md) dar. Keines dieser Module ist so schnell oder gibt so hochqualitative Ergebnisse zurück wie das [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Die Engine produziert Werte eines benutzerspezifischen unsignierten Ganzzahltyps mithilfe der Wiederholungsrelation ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, wobei `cy(i)` den Wert `1` hat, wenn `x(i - S) - x(i - R) - cy(i - 1) < 0`, andernfalls `0`, und `M` den Wert `2`<sup>W</sup> hat. Der Zustand der Engine ist ein carry-Indikator plus `R` Werten. Diese Werte bestehen aus den letzten `R` Werten, die zurückgegeben werden, wenn `operator()` mindestens `R` Mal aufgerufen wurde, andernfalls aus den `N` Werten, die zurückgegeben wurden, und den letzten `R - N` Werten des Startwerts.
+Die Engine produziert Werte eines benutzerspezifischen unsignierten Ganzzahltyps mithilfe der Wiederholungsrelation ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, wobei `cy(i)` den Wert `1` hat, wenn `x(i - S) - x(i - R) - cy(i - 1) < 0`, andernfalls `0`, und `M` den Wert `2`<sup>W</sup> hat. Der Zustand der Engine ist ein Carry Indikator plus *R* Werte. Diese Werte bestehen aus den letzten *R* Werte zurückgegeben, wenn `operator()` mindestens aufgerufen wurde *R* Timeout, andernfalls die `N` , die zurückgegeben wurden und die letzten `R - N` -Werte des Startwerts.
 
 Das Vorlagenargument `UIntType` muss groß genug sein, um Werte bis zu `M - 1` zu enthalten.
 

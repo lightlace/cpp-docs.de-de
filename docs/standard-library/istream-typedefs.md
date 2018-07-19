@@ -9,12 +9,12 @@ f1_keywords:
 - istream/std::wiostream
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
-ms.openlocfilehash: 20d92a0bf759c9f8170464985bd2b8af4d2bec08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bea06c9799783feafaff1f68f4019463e452a4f2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852268"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958854"
 ---
 # <a name="ltistreamgt-typedefs"></a>&lt;iStream&gt;-Typedefs
 
@@ -25,7 +25,7 @@ ms.locfileid: "33852268"
 
 ## <a name="iostream"></a> iostream
 
-Ein `basic_iostream`-Typ, der auf `char` spezialisiert ist.
+Ein Typ `basic_iostream` auf **Char**.
 
 ```cpp
 typedef basic_iostream<char, char_traits<char>> iostream;
@@ -33,11 +33,11 @@ typedef basic_iostream<char, char_traits<char>> iostream;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse [basic_iostream](../standard-library/basic-iostream-class.md), die auf Elemente des Typs `char` mit Standardzeichenmerkmalen spezialisiert ist.
+Der Typ ist ein Synonym für die Vorlagenklasse [Basic_iostream](../standard-library/basic-iostream-class.md), die auf Elemente des Typs **Char** mit Standard-Zeichenmerkmale.
 
 ## <a name="istream"></a> istream
 
-Ein `basic_istream`-Typ, der auf `char` spezialisiert ist.
+Ein Typ `basic_istream` auf **Char**.
 
 ```cpp
 typedef basic_istream<char, char_traits<char>> istream;
@@ -45,11 +45,11 @@ typedef basic_istream<char, char_traits<char>> istream;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse [basic_istream](../standard-library/basic-istream-class.md), die auf Elemente des Typs `char` mit Standardzeichenmerkmalen spezialisiert ist.
+Der Typ ist ein Synonym für die Vorlagenklasse [Basic_istream](../standard-library/basic-istream-class.md), die auf Elemente des Typs **Char** mit Standard-Zeichenmerkmale.
 
 ## <a name="wiostream"></a> wiostream
 
-Ein `basic_iostream`-Typ, der auf `wchar_t` spezialisiert ist.
+Ein Typ `basic_iostream` auf **"wchar_t"**.
 
 ```cpp
 typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
@@ -57,11 +57,11 @@ typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse [basic_iostream](../standard-library/basic-iostream-class.md), die auf Elemente des Typs `wchar_t` mit Standardzeichenmerkmalen spezialisiert ist.
+Der Typ ist ein Synonym für die Vorlagenklasse [Basic_iostream](../standard-library/basic-iostream-class.md), die auf Elemente des Typs **"wchar_t"** mit Standard-Zeichenmerkmale.
 
 ## <a name="wistream"></a> wistream
 
-Ein `basic_istream`-Typ, der auf `wchar_t` spezialisiert ist.
+Ein Typ `basic_istream` auf **"wchar_t"**.
 
 ```cpp
 typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
@@ -69,7 +69,7 @@ typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse [basic_istream](../standard-library/basic-istream-class.md), die auf Elemente des Typs `wchar_t` mit Standardzeichenmerkmalen spezialisiert ist.
+Der Typ ist ein Synonym für die Vorlagenklasse [Basic_istream](../standard-library/basic-istream-class.md), die auf Elemente des Typs **"wchar_t"** mit Standard-Zeichenmerkmale.
 
 ## <a name="see-also"></a>Siehe auch
 

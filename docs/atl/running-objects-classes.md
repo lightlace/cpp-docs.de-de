@@ -1,5 +1,5 @@
 ---
-title: Ausführung Objekte Klassen (ATL) | Microsoft Docs
+title: Ausführung Objekte Klassen (ATL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8541d0732813ebd2b86e9a1941dc262b0ba1c20e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fcbc0820f98052ee29c489ca9cb556e1c913d07c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358937"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958571"
 ---
-# <a name="running-objects-classes"></a>Ausgeführte Objects-Ereignisklassen
+# <a name="running-objects-classes"></a>Klasse für auszuführende Objekte
 Die folgende Klasse bietet Unterstützung für die Ausführung von Objekten:  
   
--   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) bestimmt, wenn ein Objekt ausgeführt wird, erzwingt er ausgeführt wird, oder es in den Ausführungsstatus sperrt.  
+-   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md) bestimmt, wenn ein Objekt ausgeführt wird, erzwingt, dass er ausgeführt wird, oder sperrt diese, in den ausgeführten Status.  
   
 ## <a name="related-articles"></a>Verwandte Artikel  
  [ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../atl/atl-class-overview.md)
 

@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8b872d9aeb718c1e86d460d8ef60beac8f3632
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862441"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954811"
 ---
 # <a name="moneyput-class"></a>money_put-Klasse
 
@@ -47,9 +47,9 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-`CharType` Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
+*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet.
 
-`OutputIterator` Der Typ eines Iterators, in denen die monetären-Funktionen PUT, ihre Ausgabe schreiben.
+*OutputIterator* der Typ des Iterators, in den die monetären-Funktionen PUT, ihre Ausgabe schreiben.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -117,15 +117,15 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parameter
 
-`next` Ein Iterator, der das erste Element der eingefügten Zeichenfolge.
+*nächste* ein Iterator, der das erste Element des eingefügten Zeichenfolge adressiert.
 
-`_Intl` Ein boolescher Wert, der angibt, der des Typs der in der Sequenz erwartet Währungssymbol: **"true"** Wenn internationale **"false"** Wenn inländischen.
+*_Intl* ein boolescher Wert, der angibt, des Typs des Currency Symbols in der Sequenz erwartet: **"true"** Wenn international; **"false"** Wenn National.
 
-`_Iosbase` Ein Format Kennzeichen, das bei der Gruppe gibt an, dass das Währungssymbol optional. Andernfalls ist es erforderlich
+*"_Iosbase"* ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist; andernfalls ist es erforderlich
 
-`_Fill` Ein Zeichen, die für die Analyse verwendet wird.
+*_Fill* ein Zeichen das für Abstand verwendet wird.
 
-`val` Ein String-Objekt konvertiert werden.
+*Val* eine String-Objekt konvertiert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -133,9 +133,9 @@ Ein Ausgabeiterator, der auf die erste Position nach dem jeweils letzten Element
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste geschützte virtuelle Memberfunktion generiert sequenzielle Elemente ab `next`, um ein Ausgabefeld für monetäre Werte aus dem [string_type](#string_type)-Objekt `val` zu erzeugen. Die Sequenz von gesteuert `val` muss beginnen mit ein oder mehrere Dezimalstellen vorangestellt optional wird ein Minuszeichen (-), das die Menge darstellt. Die Funktion gibt einen Iterator zurück, der das erste Element nach dem generierten Ausgabefeld für monetäre Werte festlegt.
+Der erste virtuelle geschützte Memberfunktion generiert sequenzielle Elemente ab *Weiter* zum Erzeugen der Ausgabefelder für monetäre Werte aus der ["string_type"](#string_type) Objekt *Val*. Die gesteuerte Sequenz durch *Val* muss beginnen mit einem oder mehreren Dezimalstellen, optional mit vorangestelltem Minuszeichen (-), die den Betrag darstellen. Die Funktion gibt einen Iterator zurück, der das erste Element nach dem generierten Ausgabefeld für monetäre Werte festlegt.
 
-Die zweite geschützte virtuelle Memberfunktion verhält sich wie die erste. Anders als die erste Memberfunktion konvertiert sie jedoch zuerst `val` effektiv in eine Sequenz von Dezimalziffern, der optional ein Minuszeichen vorangestellt sein kann. Anschließend konvertiert sie diese Sequenz wie oben beschrieben.
+Der zweite virtuelle geschützte Memberfunktion verhält sich genauso wie die erste, außer, dass die It effektiv zuerst *Val* konvertiert Sie in eine Folge von Dezimalziffern, optional mit vorangestelltem ein Minuszeichen (-), klicken Sie dann diese Sequenz wie oben beschrieben.
 
 Das Format eines Eingabefelds für monetäre Werte richtet sich nach dem [Gebietsschemafacet](../standard-library/locale-class.md#facet_class) „fac“, das durch den (effektiven) Aufruf [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) zurückgegeben wird.
 
@@ -195,11 +195,11 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-`_Refs` Integer-Wert verwendet, um den Typ der Verwaltung des Arbeitsspeichers für das Objekt angeben.
+*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:
+Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
 - 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
 
@@ -234,15 +234,15 @@ iter_type put(
 
 ### <a name="parameters"></a>Parameter
 
-`next` Ein Iterator, der das erste Element der eingefügten Zeichenfolge.
+*nächste* ein Iterator, der das erste Element des eingefügten Zeichenfolge adressiert.
 
-`_Intl` Ein boolescher Wert, der angibt, der des Typs der in der Sequenz erwartet Währungssymbol: **"true"** Wenn internationale **"false"** Wenn inländischen.
+*_Intl* ein boolescher Wert, der angibt, des Typs des Currency Symbols in der Sequenz erwartet: **"true"** Wenn international; **"false"** Wenn National.
 
-`_Iosbase` Ein Format Kennzeichen, das bei der Gruppe gibt an, dass das Währungssymbol optional. Andernfalls ist es erforderlich
+*"_Iosbase"* ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist; andernfalls ist es erforderlich
 
-`_Fill` Ein Zeichen, die für die Analyse verwendet wird.
+*_Fill* ein Zeichen das für Abstand verwendet wird.
 
-`val` Ein String-Objekt konvertiert werden.
+*Val* eine String-Objekt konvertiert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -286,7 +286,7 @@ money_put( ) = "CAD1,000.12"
 
 ## <a name="string_type"></a> money_put::string_type
 
-Ein Typ, der eine Zeichenfolge beschreibt, die Zeichen des Typs **CharType** enthält.
+Ein Typ, der eine Zeichenfolge beschreibt, die Zeichen vom Typ `CharType` enthält.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;

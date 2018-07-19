@@ -1,5 +1,5 @@
 ---
-title: Vom MFC-DLL-Assistenten erstellte Klassen und Funktionen | Microsoft Docs
+title: Vom MFC-DLL-Assistenten erstellte Klassen und Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,23 +19,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda791b5b064ff40e0df0a411e0a4e90e7e2c91a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd1b1d65148a951ba78e0408ab590a2c979648f7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339578"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Vom MFC-DLL-Assistenten erstellte Klassen und Funktionen
-Der Code, den den MFC-DLL-Assistenten generiert hängt die Art der DLL, die Sie erstellen und die Optionen, die Sie ausgewählt haben. Die MFC-DLL-Assistenten generiert den gleichen Code für beide Formen des regulären MFC-DLLs.  
+Der Code, den den MFC-DLL-Assistenten generiert hängt von der Art der DLL, die Sie erstellen und die Optionen, die Sie ausgewählt haben. Die MFC-DLL-Assistenten generiert den gleichen Code für beide Formen des regulären MFC-DLLs.  
   
 |DLL-Typ|Option|Klassen|Funktionen|  
 |-----------------|------------|-------------|---------------|  
 |[Erweiterung](../../build/extension-dlls-overview.md)|Keiner|Keiner|`DllMain`|  
 |[Reguläre](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Keiner|Application-Klasse abgeleitet `CWinApp`|Keiner|  
-|[Reguläre](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automatisierung|Application-Klasse abgeleitet `CWinApp`|**DllGetClassObjectDllCanUnloadNowDllRegisterServer**|  
+|[Reguläre](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Automatisierung|Application-Klasse abgeleitet `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|  
 |[Erweiterung](../../build/extension-dlls-overview.md)|Fenster-Sockets|Keiner|`DllMain`|  
-|[Reguläre](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Fenster-Sockets|Application-Klasse abgeleitet `CWinApp`|`InitInstance` Aufruf enthält `AfxSocketInit`|  
+|[Reguläre](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Fenster-Sockets|Application-Klasse abgeleitet `CWinApp`|`InitInstance` enthält Aufruf `AfxSocketInit`|  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-DLL-Assistent](../../mfc/reference/mfc-dll-wizard.md)

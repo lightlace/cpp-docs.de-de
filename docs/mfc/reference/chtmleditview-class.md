@@ -1,5 +1,5 @@
 ---
-title: CHtmlEditView Klasse | Microsoft Docs
+title: CHtmlEditView-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0519373a46e1c25feda7a3130b420c565a96eece
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339542"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView-Klasse
 Stellt die Funktionalität der WebBrowser-Bearbeitungsplattform im Kontext der MFC-Dokument-/Ansichtarchitektur bereit.  
@@ -53,8 +53,8 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CHtmlEditView::Create](#create)|Erstellt ein neues Fensterobjekt.|  
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Gibt die **IHTMLDocument2** Schnittstelle für das aktuelle Dokument.|  
-|[CHtmlEditView::GetStartDocument](#getstartdocument)|Ruft den Namen der Standarddokument für diese Ansicht ab.|  
+|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Gibt die `IHTMLDocument2` Schnittstelle für das aktuelle Dokument.|  
+|[CHtmlEditView::GetStartDocument](#getstartdocument)|Ruft den Namen das Standarddokument für diese Ansicht ab.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -100,32 +100,32 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *lpszClassName*  
- Verweist auf eine Null-terminierte Zeichenfolge, die den Namen die Windows-Klasse. Der Klassenname kann einen beliebigen Namen registriert die [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) globale Funktion oder die **RegisterClass** Windows-Funktion. Wenn **NULL**, verwendet die vordefinierten Standardwerte [CFrameWnd](../../mfc/reference/cframewnd-class.md) Attribute.  
+ *"lpszclassname"*  
+ Verweist auf eine Null-terminierte Zeichenfolge, die Namen die Windows-Klasse. Der Klassenname kann einen beliebigen Namen registriert werden die [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) globale Funktion oder die `RegisterClass` Windows-Funktion. Wenn der Wert NULL ist, verwendet den vordefinierten Standardwert [CFrameWnd](../../mfc/reference/cframewnd-class.md) Attribute.  
   
  *lpszWindowName*  
  Verweist auf eine Null-terminierte Zeichenfolge, die den Fensternamen darstellt.  
   
  *dwStyle*  
- Gibt an, die Fenster-Stilattribute. Wird standardmäßig die **WS_VISIBLE** und **WS_CHILD** Fensterstile festgelegt sind.  
+ Gibt an, der die Stilattribute für Fenster. Standardmäßig werden die Stile WS_VISIBLE und WS_CHILD Windows festgelegt.  
   
  *Rect*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters angibt. Die *RectDefault* Wert ermöglicht es Windows, um die Größe und Position des neuen Fensters festzulegen.  
+ Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Größe und Position des Fensters angibt. Die *RectDefault* Wert ermöglicht Windows die Größe und Position des neuen Fensters an.  
   
  *pParentWnd*  
  Ein Zeiger auf das übergeordnete Fenster des Steuerelements.  
   
  *nID*  
- Die ID der Sicht. Standardmäßig festgelegt, um **AFX_IDW_PANE_FIRST**.  
+ Die ID der Sicht. Legen Sie in der Standardeinstellung auf AFX_IDW_PANE_FIRST.  
   
  *"pContext"*  
- Ein Zeiger auf eine [angegeben ist und](../../mfc/reference/ccreatecontext-structure.md). **NULL** standardmäßig.  
+ Ein Zeiger auf eine [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). Standardmäßig NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode wird auch die eigenständigen WebBrowser Aufrufen **navigieren** -Methode zum Laden von ein Standarddokument (finden Sie unter [CHtmlEditView::GetStartDocument](#getstartdocument)).  
+ Diese Methode wird auch die eigenständigen WebBrowser Aufrufen `Navigate` Methode, um ein Standarddokument laden (finden Sie unter [CHtmlEditView::GetStartDocument](#getstartdocument)).  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
- Gibt die **IHTMLDocument2** Schnittstelle für das aktuelle Dokument.  
+ Gibt die `IHTMLDocument2` Schnittstelle für das aktuelle Dokument.  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
@@ -136,7 +136,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  Die [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) Schnittstelle.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  
- Ruft den Namen der Standarddokument für diese Ansicht ab.  
+ Ruft den Namen das Standarddokument für diese Ansicht ab.  
   
 ```  
 virtual LPCTSTR GetStartDocument();

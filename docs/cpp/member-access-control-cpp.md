@@ -1,5 +1,5 @@
 ---
-title: Memberzugriffssteuerung (C++) | Microsoft Docs
+title: Memberzugriffssteuerung (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1f36b23ce76c4f4e639e824116f7f80063a8748
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6116baca2303807748a4d282acda81233ed32957
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957385"
 ---
 # <a name="member-access-control-c"></a>Memberzugriffssteuerung (C++)
-Zugriff auf Steuerelemente ermöglichen es Ihnen, trennen Sie die [öffentlichen](../cpp/public-cpp.md) Schnittstelle einer Klasse von der [private](../cpp/private-cpp.md) Implementierungsdetails und [geschützt](../cpp/protected-cpp.md) Elemente, die nur für sind verwenden, indem Sie abgeleitete Klassen. Der Zugriffsspezifizierer gilt für alle Member, die danach deklariert werden, bis der nächste Zugriffsspezifizierer ermittelt wird.  
+Zugriffssteuerungen können Sie zum Trennen der [öffentliche](../cpp/public-cpp.md) Schnittstelle eine Klasse von der [private](../cpp/private-cpp.md) Implementierungsdetails und [geschützt](../cpp/protected-cpp.md) Mitglieder, die nur für die Verwendung, indem Sie abgeleitete Klassen. Der Zugriffsspezifizierer gilt für alle Member, die danach deklariert werden, bis der nächste Zugriffsspezifizierer ermittelt wird.  
   
-```  
+```cpp 
 class Point  
 {  
 public:                   
@@ -42,17 +43,17 @@ protected:      // Declare protected function for derived classes only.
     Point ToWindowCoords();  
 };  
   
-```  
+``` 
   
- Der Standardzugriff ist `private` in einer Klasse und `public` in einer Struktur oder Union. Zugriffsspezifizierer in einer Klasse können beliebig oft in jeder Reihenfolge verwendet werden. Die Speicherbelegung für Objekte von Klassentypen ist implementierungsabhängig, aber Member werden garantiert immer höheren Speicheradressen zwischen Zugriffsspezifizierern zugewiesen.  
+ Der Standardzugriff ist **private** in einer Klasse und **öffentliche** in einer Struktur oder Union. Zugriffsspezifizierer in einer Klasse können beliebig oft in jeder Reihenfolge verwendet werden. Die Speicherbelegung für Objekte von Klassentypen ist implementierungsabhängig, aber Member werden garantiert immer höheren Speicheradressen zwischen Zugriffsspezifizierern zugewiesen.  
   
 ### <a name="member-access-control"></a>Memberzugriffssteuerung  
   
 |Zugriffstyp|Bedeutung|  
 |--------------------|-------------|  
-|[private](../cpp/private-cpp.md)|Klassenmember, die als `private` deklariert werden, können nur von Memberfunktionen und von Friends (Klassen oder Funktionen) der Klasse verwendet werden.|  
-|[protected](../cpp/protected-cpp.md)|Klassenmember, die als `protected` deklariert werden, können von Memberfunktionen und von Friends (Klassen oder Funktionen) der Klasse verwendet werden. Darüber hinaus können sie von Klassen verwendet werden, die aus der Klasse abgeleitet sind.|  
-|[public](../cpp/public-cpp.md)|Klassenmember als deklariert **öffentlichen** kann von jeder Funktion verwendet werden.|  
+|[private](../cpp/private-cpp.md)|Klassenmember deklariert als **private** kann nur von Memberfunktionen und Friends (Klassen oder Funktionen) der Klasse verwendet werden.|  
+|[protected](../cpp/protected-cpp.md)|Klassenmember deklariert als **geschützt** können von Memberfunktionen und Friends (Klassen oder Funktionen) der Klasse verwendet werden. Darüber hinaus können sie von Klassen verwendet werden, die aus der Klasse abgeleitet sind.|  
+|[public](../cpp/public-cpp.md)|Klassenmember deklariert als **öffentliche** kann von jeder Funktion verwendet werden.|  
   
  Mit der Zugriffssteuerung können Sie verhindern, dass Objekte auf andere, nicht zweckgemäße Art und Weise verwendet werden. Dieser Schutz geht verloren, wenn explizite Typkonvertierungen (Umwandlungen) ausgeführt werden.  
   
@@ -62,7 +63,7 @@ protected:      // Declare protected function for derived classes only.
 ## <a name="access-control-in-derived-classes"></a>Zugriffssteuerung in abgeleiteten Klassen  
  Zwei Faktoren steuern, auf welche Member einer Basisklasse in einer abgeleiteten Klasse zugegriffen werden kann. Dieselben Faktoren steuern den Zugriff auf geerbte Member in der abgeleiteten Klasse:  
   
--   Gibt an, ob die abgeleitete Klasse deklariert die Basisklasse mit dem **öffentlichen** Zugriffsspezifizierer in der *Klasse Head* (*Klasse Head* wird im Abschnitt zur Grammatik in beschrieben[ Definieren von Klassentypen](http://msdn.microsoft.com/en-us/e8c65425-0f3a-4dca-afc2-418c3b1e57da)).  
+-   Gibt an, ob die abgeleitete Klasse deklariert die Basisklasse mit dem **öffentliche** -Zugriffsspezifizierer.  
   
 -   Entspricht dem Zugriff auf den Member in der Basisklasse.  
   
@@ -78,7 +79,7 @@ protected:      // Declare protected function for derived classes only.
   
  Dies wird anhand des folgenden Beispiels veranschaulicht:  
   
-```  
+```cpp 
 // access_specifiers_for_base_classes.cpp  
 class BaseClass  
 {  
@@ -108,45 +109,45 @@ int main()
   
  In `DerivedClass2` werden die Funktionen `PublicFunc` und `ProtectedFunc` als private Member betrachtet, da `BaseClass` eine private Basisklasse ist. Auch hier ist `PrivateFunc` für `BaseClass` privat und für keine abgeleiteten Klassen zugänglich.  
   
- Sie können eine abgeleitete Klasse ohne einen Basisklassen-Zugriffsspezifizierer deklarieren. In diesem Fall die Ableitung als privat, wenn die Deklaration der abgeleiteten Klasse verwendet die **Klasse** Schlüsselwort. Die Ableitung gilt als öffentlich, wenn die abgeleitete Klassendeklaration das Schlüsselwort `struct` verwendet. Beispielsweise folgender Code:  
+ Sie können eine abgeleitete Klasse ohne einen Basisklassen-Zugriffsspezifizierer deklarieren. In diesem Fall die Ableitung als privat, wenn die Deklaration der abgeleiteten Klasse verwendet die **Klasse** Schlüsselwort. Die Ableitung gilt als öffentlich, wenn die Deklaration der abgeleiteten Klasse verwendet die **Struktur** Schlüsselwort. Beispielsweise folgender Code:  
   
-```  
+```cpp 
 class Derived : Base  
 ...  
 ```  
   
  identisch mit folgendem Ausdruck:  
   
-```  
+```cpp 
 class Derived : private Base  
 ...  
 ```  
   
  Ebenso folgender Code:  
   
-```  
+```cpp 
 struct Derived : Base  
 ...  
 ```  
   
  identisch mit folgendem Ausdruck:  
   
-```  
+```cpp 
 struct Derived : public Base  
 ...  
 ```  
   
- Beachten Sie, dass die Member, die deklariert werden, als hätten sie privaten Zugriff, für Funktionen oder abgeleitete Klassen nicht zugänglich sind, sofern diese Funktionen oder Klassen nicht unter Verwendung der `friend`-Deklaration in der Basisklasse deklariert werden.  
+ Beachten Sie, dass der Member deklariert wird, als hätten Sie privaten Zugriff nicht auf Funktionen zugegriffen werden kann oder abgeleiteten Klassen aus, es sei denn, diese Funktionen oder Klassen deklariert werden, mithilfe der **Friend** Deklaration in der Basisklasse.  
   
  Ein **Union** Typ kann nicht Basisklasse haben.  
   
 > [!NOTE]
->  Wenn Sie eine private Basisklasse angeben, ist es ratsam, das Schlüsselwort `private` explizit zu verwenden, sodass die Benutzer der abgeleiteten Klasse den Memberzugriff verstehen.  
+>  Wenn Sie eine private Basisklasse angeben, ist es ratsam, die explizit die **private** Schlüsselwort, damit Benutzer von der abgeleiteten Klasse den Memberzugriff verstehen.  
   
 ## <a name="access-control-and-static-members"></a>Zugriffssteuerung und statische Member  
- Wenn Sie eine Basisklasse als `private` angeben, wirkt sich dies nur auf nicht statische Member aus. Öffentliche statische Member sind in den abgeleiteten Klassen immer noch zugänglich. Zugriff auf Member der Basisklasse mithilfe von Zeigern, Verweisen oder Objekten kann jedoch eine Konvertierung erfordern, woraufhin die Zugriffssteuerung erneut übernommen wird. Betrachten Sie das folgende Beispiel:  
+ Wenn Sie eine Basisklasse als angeben **private**, sondern nur nicht statische Member. Öffentliche statische Member sind in den abgeleiteten Klassen immer noch zugänglich. Zugriff auf Member der Basisklasse mithilfe von Zeigern, Verweisen oder Objekten kann jedoch eine Konvertierung erfordern, woraufhin die Zugriffssteuerung erneut übernommen wird. Betrachten Sie das folgende Beispiel:  
   
-```  
+```cpp 
 // access_control.cpp  
 class Base  
 {  
@@ -178,7 +179,7 @@ int Derived2::ShowCount()
 }  
 ```  
   
- Im vorherigen Code verhindert die Zugriffssteuerung die Konvertierung von einem Zeiger auf `Derived2` in einen Zeiger auf `Base`. Die **dies** -Zeiger ist implizit vom Typ `Derived2 *`. Auswählen der `CountOf` Funktion **dies** Typ konvertiert werden müssen `Base *`. Eine solche Konvertierung ist nicht zulässig, da `Base` eine private indirekte Basisklasse für `Derived2` ist. Die Konvertierung in einen privaten Typ der Basisklasse ist nur für Zeiger auf direkte abgeleitete Klassen akzeptabel. Daher können Zeiger vom Typ `Derived1 *` in den Typ `Base *` konvertiert werden.  
+ Im vorherigen Code verhindert die Zugriffssteuerung die Konvertierung von einem Zeiger auf `Derived2` in einen Zeiger auf `Base`. Die **dies** -Zeiger ist implizit vom Typ `Derived2 *`. Auswählen der `CountOf` Funktion **dies** muss Typ konvertiert werden `Base *`. Eine solche Konvertierung ist nicht zulässig, da `Base` eine private indirekte Basisklasse für `Derived2` ist. Die Konvertierung in einen privaten Typ der Basisklasse ist nur für Zeiger auf direkte abgeleitete Klassen akzeptabel. Daher können Zeiger vom Typ `Derived1 *` in den Typ `Base *` konvertiert werden.  
   
  Beachten Sie, dass der explizite Aufruf der `CountOf`-Funktion, ohne Verwenden eines Zeigers, Verweises oder Objekts zum Auswählen keine Konvertierung impliziert. Daher wird der Aufruf zugelassen.  
   
@@ -187,7 +188,7 @@ int Derived2::ShowCount()
 ## <a name="access-to-virtual-functions"></a>Zugriff auf virtuelle Funktionen  
  Die Zugriffssteuerung auf angewendet [virtuellen](../cpp/virtual-cpp.md) Funktionen richtet sich nach den Typ verwendet, um den Funktionsaufruf ausführt. Überschreiben von Deklarationen der Funktion wirkt sich nicht auf die Zugriffssteuerung für einen angegebenen Typ aus. Zum Beispiel:  
   
-```  
+```cpp 
 // access_to_virtual_functions.cpp  
 class VFuncBase  
 {  

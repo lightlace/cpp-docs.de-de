@@ -1,5 +1,5 @@
 ---
-title: Bitmapstruktur | Microsoft Docs
+title: Bitmapstruktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339346"
 ---
 # <a name="bitmap-structure"></a>BITMAP-Struktur
-Die **BITMAP** Struktur definiert die Höhe, Breite, farbenformat und die Bitwerte einer logischen Bitmap **.**  
+Die **BITMAP** Struktur definiert die Höhe, Breite, Farbformat und die Bitwerte einer logischen Bitmap **.**  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  Gibt die Höhe der Bitmap in Rasterzeilen an. Die Höhe muss größer als 0 sein.  
   
  *bmWidthBytes*  
- Gibt die Anzahl von Bytes in jeder Rasterzeile an. Dieser Wert muss eine gerade Zahl sein, da die Graphics Device Interface (GDI) davon ausgeht, dass die Bitwerte einer Bitmap ein Array von ganzzahligen (2-Byte-)Werten bilden. Das heißt, *BmWidthBytes* \* 8 muss das nächste Vielfache von 16 größer oder gleich dem Wert, wenn die *BmWidth* Member multipliziert wird die *BmBitsPixel*  Member.  
+ Gibt die Anzahl von Bytes in jeder Rasterzeile an. Dieser Wert muss eine gerade Zahl sein, da die Graphics Device Interface (GDI) davon ausgeht, dass die Bitwerte einer Bitmap ein Array von ganzzahligen (2-Byte-)Werten bilden. Das heißt, *BmWidthBytes* \* 8 muss das nächste Vielfache von 16 größer oder gleich dem Wert abgerufen, wenn die *BmWidth* Member multipliziert wird die *BmBitsPixel*  Member.  
   
  *bmPlanes*  
  Gibt die Anzahl von Farbebenen in der Bitmap an.  
@@ -60,12 +60,12 @@ typedef struct tagBITMAP {  /* bm */
  Gibt die Anzahl der benachbarten Farbbits auf jeder Ebene an, die zur Definition eines Pixels erforderlich sind.  
   
  *bmBits*  
- Zeigt auf den Speicherort der Bitwerte für die Bitmap. Die *BmBits* angehören muss ein long-Zeiger auf ein Array von 1-Byte-Werten.  
+ Zeigt auf den Speicherort der Bitwerte für die Bitmap. Die *BmBits* Member muss ein long-Zeiger auf ein Array von 1-Byte-Werte sein.  
   
 ## <a name="remarks"></a>Hinweise  
  Die aktuell verwendeten Bitmapformate sind monochrom und Farbe. Die monochrome Bitmap verwendet ein 1-Bit-/1-Plane-Format. Jeder Scan ist ein Vielfaches von 16 Bits.  
   
- Scans werden für eine monochrome Bitmap der Höhe wie folgt aufgebaut *n*:  
+ Überprüfungen werden für eine monochrome Bitmap der Höhe wie folgt organisiert *n*:  
   
  `Scan 0`  
   
@@ -83,9 +83,9 @@ typedef struct tagBITMAP {  /* bm */
   
  Die Pixel auf einem monochromen Gerät sind entweder schwarz oder weiß. Wenn das entsprechende Bit in der Bitmap 1 ist, wird das Pixel aktiviert (weiß). Wenn das entsprechende Bit in der Bitmap 0 ist, wird das Pixel deaktiviert (schwarz).  
   
- Alle Geräte unterstützen Bitmaps, die **RC_BITBLT** -Bit im die **RASTERCAPS** Index, der die [GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) Memberfunktion.  
+ Alle Geräte unterstützen Bitmaps, den RC_BITBLT-bit-Satz in der RASTERCAPS-Index, der die [GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) Member-Funktion.  
   
- Jedes Gerät hat ein eigenes eindeutiges Farbformat. Um eine Bitmap von einem Gerät in einen anderen zu übertragen, verwenden Sie die [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) und [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows-Funktionen.  
+ Jedes Gerät hat ein eigenes eindeutiges Farbformat. Um eine Bitmap von einem Gerät in einen anderen übertragen möchten, verwenden Sie die [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) und [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows-Funktionen.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** wingdi.h  

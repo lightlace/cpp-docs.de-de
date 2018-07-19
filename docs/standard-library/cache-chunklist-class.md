@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71b6a45dbdb882cc666c72296938f970bba52ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 808340df89bb548fee57604f25409c117933cc4e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844945"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953259"
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist-Klasse
 
@@ -42,13 +42,13 @@ class cache_chunklist
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Sz`|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*sz*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse verwendet `operator new`, um Blöcke von unformatiertem Speicher zuzuordnen, indem sie eine Unterzuweisung von Blöcken durchführt, um bei Bedarf Speicher für einen Speicherblock zuzuordnen. Sie speichert freigegebene Speicherblöcke in einer separate Freiliste für jeden Block und verwendet `operator delete`, um einen Block freizugeben, wenn keiner seiner Speicherblöcke verwendet wird.
+Diese Vorlagenklasse verwendet **new-Operator** um Blöcke von unformatiertem Speicher zuzuordnen, eine unterzuweisung von Blöcken um Speicher für einen Speicherblock bei Bedarf zuzuordnen, speichert freigegebene Speicherblöcke in einer separate Freiliste für jeden Block und verwendet**Delete-Operator** um einen Block freizugeben, wenn keiner seiner Speicherblöcke verwendet wird.
 
-Jeder Speicherblock enthält `Sz` Bytes Speicherkapazität und einen Zeiger auf den Block, dem er angehört. Jeder Block enthält `Nelts` Speicherblöcke, drei Zeiger, eine ganze Zahl und die Daten, die `operator new` und `operator delete` benötigen.
+Jeder Speicherblock enthält *Sz* Bytes Speicherkapazität und einen Zeiger auf den Block, dem er angehört. Jeder Block enthält `Nelts` Speicherblöcke, drei Zeiger, eine ganze Zahl und die Daten, die **new-Operator** und **Delete-Operator** erfordern.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`count`|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*count*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
-|`count`|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
+|*ptr*|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
+|*count*|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 

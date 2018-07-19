@@ -1,5 +1,5 @@
 ---
-title: CComClassFactorySingleton Klasse | Microsoft Docs
+title: CComClassFactorySingleton-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 754a3abd02a4a09df3e36aa9aea75c400ef00761
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee594cb3cfef5ebc67b953b62d05b933b71f9f1d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360380"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884190"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton-Klasse
-Diese Klasse leitet sich von [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) und verwendet [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) So erstellen Sie ein einzelnes Objekt.  
+Diese Klasse wird von [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) und verwendet [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) um ein einzelnes Objekt zu erstellen.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,10 +38,10 @@ class CComClassFactorySingleton : public CComClassFactory
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
+ *T*  
  Die Klasse.  
   
- `CComClassFactorySingleton` leitet sich von [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) und verwendet [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) So erstellen Sie ein einzelnes Objekt. Bei jedem Aufruf der `CreateInstance` Methode fragt einfach dieses Objekts für einen Schnittstellenzeiger auf.  
+ `CComClassFactorySingleton` leitet sich von [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) und verwendet [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) um ein einzelnes Objekt zu erstellen. Jeder Aufruf der `CreateInstance` -Methode fragt einfach dieses Objekt für einen Schnittstellenzeiger auf.  
   
 ## <a name="members"></a>Member  
   
@@ -58,7 +58,7 @@ class CComClassFactorySingleton : public CComClassFactory
 |[CComClassFactorySingleton::m_spObj](#m_spobj)|Die [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) Objekt erstellt, indem `CComClassFactorySingleton`.|  
   
 ## <a name="remarks"></a>Hinweise  
- ATL-Objekte abrufen eine Klassenfactory normalerweise durch Ableiten von [CComCoClass](../../atl/reference/ccomcoclass-class.md). Diese Klasse enthält das Makro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), die deklariert wird, `CComClassFactory` als der standardfactory-Klasse. Mit `CComClassFactorySingleton`, geben Sie die [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) Makro in die Definition der Klasse des Objekts. Zum Beispiel:  
+ ATL-Objekte abrufen eine Klassenfactory normalerweise durch Ableiten von [CComCoClass](../../atl/reference/ccomcoclass-class.md). Diese Klasse enthält das Makro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), die deklariert wird, `CComClassFactory` als der Standardklassenfactory. Verwendung von `CComClassFactorySingleton`, geben Sie die [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) Makro in der Definition der Klasse des Objekts. Zum Beispiel:  
   
  [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]  
   
@@ -84,17 +84,17 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pUnkOuter`  
- [in] Wenn das Objekt als Teil einer Aggregatfunktion gehört, dann erstellt wird `pUnkOuter` muss die äußere unbekannte sein. Andernfalls `pUnkOuter` muss **NULL**.  
+ *pUnkOuter*  
+ [in] Wenn das Objekt dann als Teil eines Aggregats erstellt wird *pUnkOuter* muss die äußere unbekannte sein. Andernfalls *pUnkOuter* muss NULL sein.  
   
- `riid`  
- [in] Die IID der angeforderten Schnittstelle. Wenn `pUnkOuter` nicht **NULL**, `riid` muss **IID_IUnknown**.  
+ *riid*  
+ [in] Die IID der angeforderten Schnittstelle. Wenn *pUnkOuter* ungleich NULL, *Riid* muss `IID_IUnknown`.  
   
- `ppvObj`  
- [out] Ein Zeiger auf den Schnittstellenzeiger, der durch `riid`. Wenn das Objekt nicht über diese Schnittstelle unterstützt `ppvObj` festgelegt ist, um **NULL**.  
+ *ppvObj*  
+ [out] Ein Zeiger auf den Schnittstellenzeiger vom *Riid*. Wenn das Objekt nicht über diese Schnittstelle unterstützt *PpvObj* auf NULL festgelegt ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Standard `HRESULT` -Wert.  
+ Ein standard HRESULT-Wert.  
   
 ##  <a name="m_spobj"></a>  CComClassFactorySingleton::m_spObj  
  Die [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) Objekt erstellt, indem `CComClassFactorySingleton`.  
@@ -104,9 +104,9 @@ CComPtr<IUnknown> m_spObj;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Bei jedem Aufruf der [CreateInstance](#createinstance) Methode fragt einfach dieses Objekts für einen Schnittstellenzeiger auf.  
+ Jeder Aufruf der [CreateInstance](#createinstance) -Methode fragt einfach dieses Objekt für einen Schnittstellenzeiger auf.  
   
- Beachten Sie, dass das aktuelle Formular des `m_spObj` stellt eine wichtige Änderung gegenüber, `CComClassFactorySingleton` arbeitet in früheren Versionen von ATL In früheren Versionen der `CComClassFactorySingleton` Objekt gleichzeitig als Klassenfactory, bei der Initialisierung des erstellt wurde. In Visual C++ .NET 2003 wird das Objekt verzögert, bei der ersten Anforderung erstellt. Diese Änderung kann in Programmen, die früh während der Initialisierung beruhen, Fehler verursachen.  
+ Beachten Sie, dass das aktuelle Formular des `m_spObj` stellt eine bedeutende Änderung verglichen mit der Möglichkeit, `CComClassFactorySingleton` war in früheren Versionen von ATL In früheren Versionen der `CComClassFactorySingleton` Objekt zur gleichen Zeit wie die Klassenfactory, während der Initialisierung erstellt wurde. In Visual C++ .NET 2003 wird das Objekt verzögert, bei der ersten Anforderung erstellt. Diese Änderung kann in Programmen, die frühe Initialisierung abhängen, Fehler verursachen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
@@ -114,4 +114,4 @@ CComPtr<IUnknown> m_spObj;
  [CComClassFactoryAutoThread-Klasse](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [CComObjectRootEx-Klasse](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

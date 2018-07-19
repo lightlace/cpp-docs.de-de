@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f45af807b37294b87920b6fabac18647f170025
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b3f796d5039900b591c219c840d1aef94d23e8f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853221"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957580"
 ---
 # <a name="underlyingtype-class"></a>underlying_type-Klasse
 
@@ -37,11 +37,12 @@ struct underlying_type;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Die zu ändernde Typ.
+*T*  
+ Der zu ändernde Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Der typedef-Member `type` der Vorlagenklasse benennt den zugrunde liegenden ganzzahligen Typ von `T`, wenn `T` ein Enumerationstyp ist, andernfalls gibt es keinen typedef-Member `type`.
+Die `type` TypeDef-Member der Vorlagenklasse benennt den zugrunde liegenden ganzzahligen Typ *T*Wenn *T* ist ein Enumerationstyp, andernfalls gibt es keinen TypeDef-Member ist `type`.
 
 ## <a name="requirements"></a>Anforderungen
 

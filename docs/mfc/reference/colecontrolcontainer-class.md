@@ -1,5 +1,5 @@
 ---
-title: COleControlContainer Klasse | Microsoft Docs
+title: COleControlContainer-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b59a1ef4d1a70063c15b7de41963abc60dd341a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 7f33335e193997c0988cab0580c3eab612d0cc84
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041928"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852301"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer-Klasse
 Dient als Steuerelementcontainer für ActiveX-Steuerelemente.  
@@ -110,28 +110,28 @@ class COleControlContainer : public CCmdTarget
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[COleControlContainer::AttachControlSite](#attachcontrolsite)|Erstellt eine Steuerelement-Website, von dem Container gehostet wird.|  
-|[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|Informiert alle gehosteten Steuerelemente, die Ambiente-Eigenschaft geändert wurde.|  
+|[COleControlContainer::AttachControlSite](#attachcontrolsite)|Erstellt eine Steuerelement-Website, die vom Container gehostet.|  
+|[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|Dass alle gehostete Steuerelementen, die Ambiente-Eigenschaft geändert wurde.|  
 |[COleControlContainer::CheckDlgButton](#checkdlgbutton)|Ändert den angegebenen Schaltflächen-Steuerelement.|  
 |[COleControlContainer::CheckRadioButton](#checkradiobutton)|Wählt das angegebene Optionsfeld einer Gruppe an.|  
 |[COleControlContainer::CreateControl](#createcontrol)|Erstellt ein gehostetes ActiveX-Steuerelement.|  
 |[COleControlContainer::CreateOleFont](#createolefont)|Erstellt eine OLE-Schriftart.|  
 |[COleControlContainer::FindItem](#finditem)|Gibt die benutzerdefinierte Website des angegebenen Steuerelements zurück.|  
-|[COleControlContainer::FreezeAllEvents](#freezeallevents)|Bestimmt, ob die Steuerelementsite Ereignisse akzeptiert.|  
+|[COleControlContainer::FreezeAllEvents](#freezeallevents)|Bestimmt, ob die Website des Steuerelements Ereignisse akzeptiert.|  
 |[COleControlContainer::GetAmbientProp](#getambientprop)|Ruft die angegebene ambient-Eigenschaft ab.|  
-|[COleControlContainer::GetDlgItem](#getdlgitem)|Ruft das angegebene Dialogfeldsteuerelement ab.|  
-|[COleControlContainer::GetDlgItemInt](#getdlgitemint)|Ruft den Wert des Steuerelements angegebenen Dialogfeld ab.|  
+|[COleControlContainer::GetDlgItem](#getdlgitem)|Ruft das angegebene Dialogfeld-Steuerelement ab.|  
+|[COleControlContainer::GetDlgItemInt](#getdlgitemint)|Ruft den Wert der angegebenen Dialogfeld-Steuerelement ab.|  
 |[COleControlContainer::GetDlgItemText](#getdlgitemtext)|Ruft die Beschriftung des Steuerelements angegebenen Dialogfeld ab.|  
-|[COleControlContainer::HandleSetFocus](#handlesetfocus)|Bestimmt, ob der Container WM_SETFOCUS Nachrichten verarbeitet.|  
-|[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|Verarbeitet die Nachrichten an ein fensterloses Steuerelement gesendet.|  
-|[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|Bestimmt den Status der angegebenen Schaltfläche.|  
-|[COleControlContainer::OnPaint](#onpaint)|Wird aufgerufen, um einen Teil des Containers neu gezeichnet werden.|  
-|[COleControlContainer::OnUIActivate](#onuiactivate)|Wird aufgerufen, wenn ein Steuerelement handelt, direktes aktiviert werden soll.|  
-|[COleControlContainer::OnUIDeactivate](#onuideactivate)|Wird aufgerufen, wenn ein Steuerelement ist deaktiviert werden soll.|  
-|[COleControlContainer::ScrollChildren](#scrollchildren)|Vom Framework aufgerufen, wenn von einem untergeordneten Fenster Scroll Nachrichten empfangen werden.|  
+|[COleControlContainer::HandleSetFocus](#handlesetfocus)|Bestimmt, ob der Container WM_SETFOCUS-Nachrichten verarbeitet.|  
+|[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|Verarbeitet Nachrichten, die an einem fensterlosen Steuerelement gesendet.|  
+|[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|Bestimmt den Zustand der angegebenen Schaltfläche.|  
+|[COleControlContainer::OnPaint](#onpaint)|Wird aufgerufen, um einen Teil der Container neu zu zeichnen.|  
+|[COleControlContainer::OnUIActivate](#onuiactivate)|Wird aufgerufen, wenn ein Steuerelement, direkt aktiviert werden soll.|  
+|[COleControlContainer::OnUIDeactivate](#onuideactivate)|Wird aufgerufen, wenn ein Steuerelement deaktiviert wird.|  
+|[COleControlContainer::ScrollChildren](#scrollchildren)|Vom Framework aufgerufen, wenn in einem untergeordneten Fenster Scrollen Nachrichten empfangen werden.|  
 |[COleControlContainer::SendDlgItemMessage](#senddlgitemmessage)|Sendet eine Nachricht an das angegebene Steuerelement.|  
 |[COleControlContainer::SetDlgItemInt](#setdlgitemint)|Legt den Wert des angegebenen Steuerelements.|  
-|[COleControlContainer::SetDlgItemText](#setdlgitemtext)|Legt den Text des angegebenen Steuerelements fest.|  
+|[COleControlContainer::SetDlgItemText](#setdlgitemtext)|Legt den Text des angegebenen Steuerelements.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -139,19 +139,19 @@ class COleControlContainer : public CCmdTarget
 |----------|-----------------|  
 |[COleControlContainer::m_crBack](#m_crback)|Die Hintergrundfarbe des Containers.|  
 |[COleControlContainer::m_crFore](#m_crfore)|Die Vordergrundfarbe des Containers.|  
-|[COleControlContainer::m_listSitesOrWnds](#m_listsitesorwnds)|Eine Liste der unterstützten Steuerelement Standorte.|  
+|[COleControlContainer::m_listSitesOrWnds](#m_listsitesorwnds)|Eine Liste der unterstützten Steuerelement-Websites.|  
 |[COleControlContainer::m_nWindowlessControls](#m_nwindowlesscontrols)|Die Anzahl der gehosteten Fensterlose Steuerelemente.|  
 |[COleControlContainer::m_pOleFont](#m_polefont)|Ein Zeiger auf die OLE-Schriftart für die Website des benutzerdefinierten Steuerelements.|  
-|[COleControlContainer::m_pSiteCapture](#m_psitecapture)|Ein Zeiger auf die Website des Capture-Steuerelements.|  
-|[COleControlContainer::m_pSiteFocus](#m_psitefocus)|Ein Zeiger auf das Steuerelement, das aktuell den Eingabefokus besitzt.|  
-|[COleControlContainer::m_pSiteUIActive](#m_psiteuiactive)|Ein Zeiger auf das Steuerelement, das derzeit aktiviert ist.|  
-|[COleControlContainer::m_pWnd](#m_pwnd)|Ein Zeiger auf das Fenster, den Steuerelementcontainer implementieren.|  
-|[COleControlContainer::m_siteMap](#m_sitemap)|Der Siteübersicht.|  
+|[COleControlContainer::m_pSiteCapture](#m_psitecapture)|Zeiger auf die Website des Capture-Steuerelements.|  
+|[COleControlContainer::m_pSiteFocus](#m_psitefocus)|Zeiger auf das Steuerelement, das aktuell den Eingabefokus besitzt.|  
+|[COleControlContainer::m_pSiteUIActive](#m_psiteuiactive)|Zeiger auf das Steuerelement, das derzeit direkt aktiviert ist.|  
+|[COleControlContainer::m_pWnd](#m_pwnd)|Zeiger auf das Fenster, den Steuerelementcontainer implementieren.|  
+|[COleControlContainer::m_siteMap](#m_sitemap)|Die sitezuordnung.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dies erfolgt durch die Unterstützung für einen oder mehrere ActiveX-Steuerelement-Standorte (durch implementiert `COleControlSite`). `COleControlContainer` vollständig implementiert die [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) und [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) Schnittstellen, sodass enthaltenen ActiveX-Steuerelementen zur Erfüllung ihrer Qualifikationen als direktes Elemente.  
+ Dies erfolgt durch die Unterstützung für einen oder mehrere ActiveX-Steuerelement-Standorte (durch implementiert `COleControlSite`). `COleControlContainer` vollständig implementiert die [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) und [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) Schnittstellen, sodass die enthaltenen ActiveX-Steuerelemente, um die Qualifizierung jetzt als direktes Elemente zu erfüllen.  
   
- Diese Klasse dient in der Regel in Verbindung mit `COccManager` und `COleControlSite` zum Implementieren eines benutzerdefinierten ActiveX-Steuerelementcontainers mit benutzerdefinierten Websites für ein oder mehrere ActiveX-Steuerelemente.  
+ Diese Klasse wird normalerweise verwendet, in Verbindung mit `COccManager` und `COleControlSite` zum Implementieren eines benutzerdefinierten ActiveX-Steuerelementcontainers mit benutzerdefinierten Websites für eine oder mehrere ActiveX-Steuerelemente.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -164,7 +164,7 @@ class COleControlContainer : public CCmdTarget
  **Header:** afxocc.h  
   
 ##  <a name="attachcontrolsite"></a>  COleControlContainer::AttachControlSite  
- Wird aufgerufen, durch das Framework zum Erstellen und Anfügen von einer Website des Steuerelements.  
+ Wird aufgerufen, durch das Framework zum Erstellen und Anfügen einer Website des Steuerelements.  
   
 ```  
 virtual void AttachControlSite(
@@ -178,20 +178,20 @@ void AttachControlSite(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *pWnd*  
+ *Aufnehmen*  
  Ein Zeiger auf eine `CWnd` Objekt.  
   
  *nIDC*  
  Die ID des Steuerelements angefügt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Funktion, wenn Sie, um diesen Prozess anzupassen möchten.  
+ Überschreiben Sie diese Funktion, wenn Sie diesen Prozess anpassen möchten.  
   
 > [!NOTE]
->  Verwenden Sie die erste Form dieser Funktion, wenn Sie die MFC-Bibliothek statisch verknüpfen möchten. Verwenden Sie das zweite Format, wenn Sie dynamisch mit MFC-Bibliothek verknüpfen.  
+>  Verwenden Sie die erste Form dieser Funktion, wenn Sie die MFC-Bibliothek statisch verknüpfen möchten. Verwenden Sie das zweite Formular aus, wenn Sie dynamisch die MFC-Bibliothek verknüpfen möchten.  
   
 ##  <a name="broadcastambientpropertychange"></a>  COleControlContainer::BroadcastAmbientPropertyChange  
- Informiert alle gehosteten Steuerelemente, die Ambiente-Eigenschaft geändert wurde.  
+ Dass alle gehostete Steuerelementen, die Ambiente-Eigenschaft geändert wurde.  
   
 ```  
 virtual void BroadcastAmbientPropertyChange(DISPID dispid);
@@ -202,7 +202,7 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
  Die Dispatch-ID der ambient-Eigenschaft geändert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion wird vom Framework aufgerufen, wenn eine Ambiente-Eigenschaft den Wert geändert wurde. Überschreiben Sie diese Funktion, um dieses Verhalten anzupassen.  
+ Diese Funktion wird vom Framework aufgerufen, wenn eine Ambiente-Eigenschaft den Wert geändert wurde. Überschreiben Sie diese Funktion, um dieses Verhalten anpassen.  
   
 ##  <a name="checkdlgbutton"></a>  COleControlContainer::CheckDlgButton  
  Ändert den aktuellen Zustand der Schaltfläche.  
@@ -218,16 +218,16 @@ virtual void CheckDlgButton(
  Die ID der Schaltfläche geändert werden.  
   
  *nPrüfen*  
- Gibt den Status der Schaltfläche. Einer der folgenden Werte ist möglich:  
+ Gibt den Zustand der Schaltfläche. Einer der folgenden Werte ist möglich:  
   
-- **BST_CHECKED** legt den Zustand der Schaltfläche für die aktivierten auf.  
+- BST_CHECKED legt überprüft den Zustand der Schaltfläche auf.  
   
-- **BST_INDETERMINATE** legt den Zustand der Schaltfläche auf grau dargestellt, der angibt, eines unbestimmten Zustands fest. Verwenden Sie diesen Wert nur, wenn die Schaltfläche "" hat die **BS_3STATE** oder **BS_AUTO3STATE** Stil.  
+- BST_INDETERMINATE legt fest, um den Zustand der Schaltfläche abgeblendet, der angibt, in einem unbestimmten Zustand befindet. Verwenden Sie diesen Wert nur, wenn die Schaltfläche den BS_3STATE oder BS_AUTO3STATE-Stil.  
   
-- **BST_UNCHECKED** legt den Zustand der Schaltfläche auf geleerten fest.  
+- BST_UNCHECKED legt fest, die Schaltfläche mit der Zustand deaktiviert.  
   
 ##  <a name="checkradiobutton"></a>  COleControlContainer::CheckRadioButton  
- Wählt eine angegebene Optionsfeld in einer Gruppe aus, und löscht die verbleibenden Schaltflächen in der Gruppe.  
+ Wählt ein Optionsfeld für die angegebene in einer Gruppe aus, und löscht die übrigen Schaltflächen in der Gruppe.  
   
 ```  
 virtual void CheckRadioButton(
@@ -254,14 +254,14 @@ explicit COleControlContainer(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *pWnd*  
- Ein Zeiger auf das übergeordnete Fenster eines dem Steuerelementcontainer.  
+ *Aufnehmen*  
+ Ein Zeiger auf das übergeordnete Fenster des Steuerelementcontainers.  
   
 ### <a name="remarks"></a>Hinweise  
- Nachdem das Objekt erfolgreich erstellt wurde, fügen Sie einen benutzerdefiniertes Steuerelement Standort mit einem Aufruf von `AttachControlSite`.  
+ Sobald das Objekt wurde erfolgreich erstellt wurde, fügen Sie eine benutzerdefiniertes Steuerelement-Website mit einem Aufruf von `AttachControlSite`.  
   
 ##  <a name="createcontrol"></a>  COleControlContainer::CreateControl  
- Erstellt ein ActiveX-Steuerelement, durch das angegebene gehostete `COleControlSite` Objekt.  
+ Erstellt ein ActiveX-Steuerelement, mit dem angegebenen gehosteten `COleControlSite` Objekt.  
   
 ```  
 BOOL CreateControl(
@@ -296,53 +296,53 @@ BOOL CreateControl(
  Ein Zeiger auf das Window-Objekt, das das Steuerelement darstellt.  
   
  *clsid*  
- Die eindeutige Klassen-ID des Steuerelements.  
+ Die eindeutige Klasse-ID des Steuerelements.  
   
  *lpszWindowName*  
- Ein Zeiger auf den Text im Steuerelement angezeigt werden. Legt den Wert der Beschriftung oder Text-Eigenschaft des Steuerelements fest, (sofern vorhanden). Wenn **NULL**, Titel oder Text-Eigenschaft des Steuerelements wird nicht geändert.  
+ Ein Zeiger auf den Text im Steuerelement angezeigt werden. Legt den Wert der Beschriftung oder den Text-Eigenschaft des Steuerelements fest, (sofern vorhanden). Wenn der Wert NULL ist, wird die Beschriftung oder den Text-Eigenschaft des Steuerelements nicht geändert.  
   
  *dwStyle*  
- Windows-Formate. Die verfügbaren Formate sind aufgeführt, unter der **"Hinweise"** Abschnitt.  
+ Windows-Formate. Die verfügbaren Formate finden Sie unter den **"Hinweise"** Abschnitt.  
   
  *Rect*  
- Gibt die Größe und Position des Steuerelements. Es kann es sich um eine `CRect` Objekt oder eine `RECT` Struktur.  
+ Gibt an, die Größe und Position des Steuerelements. Es kann sein, entweder eine `CRect` Objekt oder ein `RECT` Struktur.  
   
  *nID*  
- Gibt an, das Steuerelement untergeordnete Fenster-ID.  
+ Gibt an, der ID des Steuerelements untergeordnete Fenster  
   
  *pPersist*  
- Ein Zeiger auf eine `CFile` , die den dauerhaften Status für das Steuerelement enthält. Der Standardwert ist **NULL**, gibt an, dass das Steuerelement selbst initialisiert, ohne den Zustand aus dem persistenten Speicher wiederherzustellen. Wenn dies nicht der **NULL**, es muss ein Zeiger auf eine `CFile`-abgeleitetes Objekt mit persistenten Daten des Steuerelements in Form von einem Stream oder einem Speicher. Diese Daten können in einer vorherigen Aktivierung des Clients gespeichert worden sein. Die `CFile` können andere Daten enthalten, aber benötigen die Lese-/ Schreibzugriff Zeiger auf das erste Byte der Daten festgelegt werden, zum Zeitpunkt des Aufrufs von `CreateControl`.  
+ Ein Zeiger auf eine `CFile` , die den dauerhaften Status für das Steuerelement enthält. Der Standardwert ist NULL, gibt an, dass das Steuerelement selbst ohne Wiederherstellung von seinen Zustand aus dem alle permanenten Speicher initialisiert. Wenn nicht NULL ist, wird ein Zeiger auf eine `CFile`-abgeleitetes Objekt, das persistente Daten des Steuerelements im Formular einen Stream oder ein Speicherkonto enthält. Diese Daten können in eine vorherige Aktivierung des Clients gespeichert wurden. Die `CFile` können weitere Daten enthalten, jedoch müssen der Lese-/ Schreibzugriff Zeiger auf das erste Byte von persistenten Daten festgelegt werden, zum Zeitpunkt des Aufrufs von `CreateControl`.  
   
  *bStorage*  
- Gibt an, ob die Daten in *pPersist* interpretiert werden soll, als `IStorage` oder `IStream` Daten. Wenn die Daten in *pPersist* ist ein Speicher *bStorage* muss **"true"**. Wenn die Daten in *pPersist* ist ein Datenstrom *bStorage* muss **"false"**. Der Standardwert ist **"false"**.  
+ Gibt an, ob die Daten in *pPersist* interpretiert werden soll, als `IStorage` oder `IStream` Daten. Wenn die Daten in *pPersist* ist ein Speicher, *bStorage* sollte "true" sein. Wenn die Daten in *pPersist* ist ein Datenstrom, *bStorage* sollte "false" sein. Der Standardwert ist "false".  
   
  *bstrLicKey*  
- Dies ist optional Lizenz Schlüsseldaten. Diese Daten ist erforderlich, nur für das Erstellen von Steuerelementen, die einen Laufzeit-Lizenzschlüssel erfordern. Wenn das Steuerelement Lizenzierung unterstützt, müssen Sie einen Lizenzschlüssel für die Erstellung des Steuerelements erfolgreich bereitstellen. Der Standardwert ist **NULL**.  
+ Lizenz-Schlüsseldaten ist optional. Diese Daten ist nur für das Erstellen von Steuerelementen, die erfordern einen Laufzeit-Lizenzschlüssel erforderlich. Wenn das Steuerelement unterstützt die Lizenzierung, müssen Sie einen Lizenzschlüssel für die Erstellung des Steuerelements erfolgreich bereitstellen. Der Standardwert ist NULL.  
   
  *ppNewSite*  
- Ein Zeiger auf die vorhandene Website des Steuerelements, die als host das Steuerelement erstellt wird. Der Standardwert ist **NULL**, gibt an, dass eine neue Website des Steuerelements automatisch erstellt und an das neue Steuerelement angefügt werden.  
+ Ein Zeiger auf die vorhandene Website des Steuerelements, die als host das Steuerelement erstellt wird. Der Standardwert ist NULL, gibt an, dass eine neue Website des Steuerelements automatisch erstellt und auf das neue Steuerelement angefügt werden.  
   
  *PPT*  
- Ein Zeiger auf eine **Punkt** Struktur, die der oberen linken Ecke des Steuerelements enthält. Die Größe des Steuerelements wird bestimmt durch den Wert des *Psize*. Die *ppt* und *Psize* Werte sind eine optionale Methode dar, die die Größe und Position des Steuerelements angibt.  
+ Ein Zeiger auf eine `POINT` Struktur, die die linke obere Ecke des Steuerelements enthält. Die Größe des Steuerelements richtet sich nach dem Wert der *Psize*. Die *ppt* und *Psize* Werte sind eine optionale Methode dar, die die Größe und Position des Steuerelements angibt.  
   
  *psize*  
- Ein Zeiger auf eine **Größe** Struktur, die die Größe des Steuerelements enthält. Die oberen linken Ecke richtet sich nach dem Wert der *ppt*. Die *ppt* und *Psize* Werte sind eine optionale Methode dar, die die Größe und Position des Steuerelements angibt.  
+ Ein Zeiger auf eine `SIZE` Struktur, die die Größe des Steuerelements enthält. Die linke obere Ecke richtet sich nach dem Wert der *ppt*. Die *ppt* und *Psize* Werte sind eine optionale Methode dar, die die Größe und Position des Steuerelements angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Nur eine Teilmenge der Windows *DwStyle* Flags werden unterstützt, indem Sie `CreateControl`:  
+ Nur ein Teil der Windows *DwStyle* Flags werden von unterstützt `CreateControl`:  
   
-- **WS_VISIBLE** erstellt ein Fenster, das anfänglich sichtbar ist. Erforderlich, wenn das Steuerelement sofort wie gewöhnliche Fenster sichtbar sein soll.  
+- WS_VISIBLE erstellt ein Fenster, das anfänglich sichtbar ist. Erforderlich, wenn das Steuerelement sofort wie gewöhnliche Fenster angezeigt werden soll.  
   
-- **WS_DISABLED** erstellt ein Fenster, das anfänglich deaktiviert ist. Ein deaktivierter Fenster kann nicht vom Benutzer Eingaben zu empfangen. Kann festgelegt werden, wenn das Steuerelement eine Enabled-Eigenschaft verfügt.  
+- WS_DISABLED erstellt ein Fenster, das anfänglich deaktiviert ist. Ein deaktiviertes Fensters kann keine Eingabe vom Benutzer empfangen. Kann festgelegt werden, wenn das Steuerelement eine Enabled-Eigenschaft verfügt.  
   
-- **WS_BORDER** erstellt ein Fenster mit einem Rahmen thin-Zeile. Kann festgelegt werden, wenn Steuerelement eine Rahmenart-Eigenschaft verfügt.  
+- WS_BORDER erstellt ein Fenster mit einem thin-Line-Rahmen. Kann festgelegt werden, wenn Steuerelement eine BorderStyle-Eigenschaft verfügt.  
   
-- **WS_GROUP** gibt das erste Steuerelement einer Gruppe von Steuerelementen. Die Benutzer kann den Tastaturfokus von einem Steuerelement in der Gruppe zur nächsten ändern, indem die Richtungstasten verwenden. Alle Steuerelemente, die definiert, mit der **WS_GROUP** formatieren, nachdem das erste Steuerelement zur selben Gruppe gehören. Das nächste Steuerelement mit der **WS_GROUP** Stil beendet die Gruppe und startet die nächste Gruppe.  
+- WS_GROUP gibt das erste Steuerelement einer Gruppe von Steuerelementen an. Der Benutzer kann den Tastaturfokus von einem Steuerelement in der Gruppe zur nächsten ändern mithilfe der Richtung. Alle Steuerelemente, die mit dem WS_GROUP-Stil definiert wird, nachdem das erste Steuerelement zur selben Gruppe gehören. Das nächste Steuerelement mit dem Stil WS_GROUP beendet die Gruppe und beginnt die nächste Gruppe.  
   
-- **WS_TABSTOP** gibt ein Steuerelement, das den Tastaturfokus erhalten kann, wenn der Benutzer die TAB-Taste drückt. Drücken die TAB-Taste den Tastaturfokus auf das nächste Steuerelement der ändert die **WS_TABSTOP** Stil.  
+- WS_TABSTOP gibt ein Steuerelement, das den Tastaturfokus erhalten kann, wenn der Benutzer die TAB-Taste drückt. Durch Drücken der TAB-Taste ändert den Tastaturfokus auf das nächste Steuerelement für den WS_TABSTOP-Stil.  
   
  Verwenden Sie die zweite Überladung, um die Standardgröße Steuerelemente zu erstellen.  
   
@@ -358,7 +358,7 @@ void CreateOleFont(CFont* pFont);
  Ein Zeiger auf die Schriftart, die von der Control-Container verwendet werden.  
   
 ##  <a name="finditem"></a>  COleControlContainer::FindItem  
- Sucht die benutzerdefinierte Website, die das angegebene Element hostet.  
+ Ermittelt die benutzerdefinierte Website, die das angegebene Element hostet.  
   
 ```  
 virtual COleControlSite* FindItem(UINT nID) const;  
@@ -372,7 +372,7 @@ virtual COleControlSite* FindItem(UINT nID) const;
  Ein Zeiger auf die benutzerdefinierte Website des angegebenen Elements.  
   
 ##  <a name="freezeallevents"></a>  COleControlContainer::FreezeAllEvents  
- Bestimmt, ob der Container wird Ereignisse von den Standorten angefügtes Steuerelement ignorieren oder haben akzeptiert.  
+ Bestimmt, ob der Container wird der angefügte Steuerelement Standorte von Ereignissen ignorieren, oder akzeptieren Sie diese.  
   
 ```  
 void FreezeAllEvents(BOOL bFreeze);
@@ -380,12 +380,12 @@ void FreezeAllEvents(BOOL bFreeze);
   
 ### <a name="parameters"></a>Parameter  
  *bFreeze*  
- Wert ungleich NULL, wenn Ereignisse verarbeitet werden; andernfalls 0.  
+ Ungleich NULL, wenn Ereignisse verarbeitet werden; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Das Steuerelement ist nicht erforderlich, um die Ereignisse auslösen, wenn von dem Steuerelementcontainer angefordert beendet. Auslösen von Ereignissen fortgesetzt werden kann, jedoch alle nachfolgenden Ereignisse werden von dem Steuerelementcontainer ignoriert.  
+>  Das Steuerelement ist nicht erforderlich, um das Auslösen von Ereignissen nach Aufforderung von der Control-Container zu beenden. Sie können das Ereignis weiterhin ausgelöst, aber alle nachfolgenden Ereignisse durch den Steuerelementcontainer ignoriert werden.  
   
 ##  <a name="getambientprop"></a>  COleControlContainer::GetAmbientProp  
  Ruft den Wert einer angegebenen ambient-Eigenschaft.  
@@ -399,10 +399,10 @@ virtual BOOL GetAmbientProp(
   
 ### <a name="parameters"></a>Parameter  
  *pSite*  
- Ein Zeiger auf eine Website des Steuerelements aus der die Ambiente-Eigenschaft abgerufen wird.  
+ Ein Zeiger auf eine Website des Steuerelements aus der die Ambiente-Eigenschaft abgerufen werden wird.  
   
  *DISPID*  
- Die Dispatch-ID der gewünschten ambient-Eigenschaft.  
+ Die Dispatch-ID der gewünschte ambient-Eigenschaft.  
   
  *pVarResult*  
  Ein Zeiger auf den Wert der ambient-Eigenschaft.  
@@ -411,7 +411,7 @@ virtual BOOL GetAmbientProp(
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ##  <a name="getdlgitem"></a>  COleControlContainer::GetDlgItem  
- Ruft einen Zeiger auf das angegebene Steuerelement oder ein untergeordnetes Fenster in einem Dialogfeld oder andere Fenster ab.  
+ Ruft einen Zeiger auf das angegebene Steuerelement oder ein untergeordnetes Fenster in einem Dialogfeld oder anderen Fenster ab.  
   
 ```  
 virtual CWnd* GetDlgItem(int nID) const;  
@@ -423,16 +423,16 @@ virtual void GetDlgItem(
   
 ### <a name="parameters"></a>Parameter  
  *nID*  
- Der Bezeichner des abzurufenden Elements Dialogfeld.  
+ Bezeichner des abzurufenden Elements Dialogfeld.  
   
  *phWnd*  
- Ein Zeiger auf das Handle für das angegebene Dialog-Element-Fensterobjekt.  
+ Ein Zeiger auf das Handle des Window-Objekt für das angegebene Dialogfeld-Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf das Dialogfeldelement Fenster.  
   
 ##  <a name="getdlgitemint"></a>  COleControlContainer::GetDlgItemInt  
- Ruft den Wert der übersetzte Text des Steuerelements ab.  
+ Ruft den Wert des übersetzten Texts in der das angegebene Steuerelement.  
   
 ```  
 virtual UINT GetDlgItemInt(
@@ -446,25 +446,25 @@ virtual UINT GetDlgItemInt(
  Der Bezeichner des Steuerelements.  
   
  *lpTrans*  
- Zeiger auf eine boolesche Variable, die einen Erfolg/Fehler Funktionswert empfängt ( **"true"** zeigt "Erfolg", " **" false "** weisen auf Fehler hin).  
+ Zeiger auf eine boolesche Variable, die Wert einer Funktion Erfolg/Fehler empfängt ("true" gibt an, Erfolg, "false" gibt an, Fehler).  
   
  *bSigned*  
- Gibt an, ob die Funktion sollte untersuchen Sie den Text für ein Minuszeichen (-) am Anfang und eine Ganzzahl mit Vorzeichen zurück, wenn ein solches gefunden. Wenn die *bSigned* Parameter ist **"true"**, angeben, dass der Wert abgerufen werden soll eine Ganzzahl mit Vorzeichen, umgewandelt den Rückgabewert in einer **Int** Typ. Um erweiterte Fehlerinformationen abzurufen, rufen [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Gibt an, ob die Funktion prüfen Sie den Text für ein Minuszeichen (-) am Anfang und eine Ganzzahl mit Vorzeichen zurück, wenn eine Datei gefunden werden soll. Wenn die *bSigned* Parameter ist "true", die angeben, dass der Wert abgerufen werden sollen eine Ganzzahl mit Vorzeichen, umgewandelt den Rückgabewert in einer **Int** Typ. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn erfolgreich, die Variable auf verweist *LpTrans* festgelegt ist, um **"true"**, und der Rückgabewert ist den übersetzten Wert, der den Steuerelementtext.  
+ Wenn erfolgreich, die Variable, zeigt *LpTrans* auf "true" festgelegt ist und der Rückgabewert ist der übersetzte Wert, der den Text des Steuerelements.  
   
- Wenn die Funktion fehlschlägt, die Variable verweist, zu *LpTrans* festgelegt ist, um **"false"**, und der Rückgabewert ist 0 (null). Beachten Sie, dass, da 0 (null) ein möglicher Wert für die übersetzten ist, ein Rückgabewert von 0 (null) nicht allein Fehler angegeben ist.  
+ Wenn die Funktion fehlschlägt, die Variable verweist *LpTrans* auf "FALSE" festgelegt ist und der Rückgabewert ist 0 (null). Beachten Sie, dass 0 (null) ein möglicher Wert für die übersetzten daher ein Rückgabewert von 0 (null) nicht selbst Fehler angibt.  
   
- Wenn *LpTrans* ist **NULL**, die Funktion gibt keine Informationen zum Erfolg oder Fehler zurück.  
+ Wenn *LpTrans* NULL ist, die Funktion gibt keine Informationen über den Erfolg oder Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Funktion übersetzt den abgerufenen Text durch zusätzlichen Leerzeichen am Anfang des Texts zu entfernen und anschließend der Typ der Dezimalstellen. Die Funktion beendet das Übersetzen von beim Erreichen des Endes des Texts oder einen nicht numerischen Zeichen auftritt.  
+ Die Funktion übersetzt den abgerufenen Text entfernt zusätzlichen Leerzeichen am Anfang des Texts, und konvertieren Sie dann die Dezimalstellen. Die Funktion beendet wird, übersetzen beim Erreichen des Endes des Texts oder ein nicht numerischer Zeichen erkennt.  
   
- Diese Funktion gibt 0 (null) zurück, wenn der übersetzte Wert übersteigt **INT_MAX** (für signierte Nummern) oder **UINT_MAX** (für unsignierte Zahlen).  
+ Diese Funktion gibt 0 (null) zurück, wenn der übersetzte Wert größer als INT_MAX (für Zahlen mit Vorzeichen) oder UINT_MAX (für unsignierte Zahlen) ist.  
   
 ##  <a name="getdlgitemtext"></a>  COleControlContainer::GetDlgItemText  
- Ruft den Text des Steuerelements ab.  
+ Ruft den Text des angegebenen Steuerelements ab.  
   
 ```  
 virtual int GetDlgItemText(
@@ -481,22 +481,22 @@ virtual int GetDlgItemText(
  Zeiger auf den Text des Steuerelements.  
   
  *nMaxCount*  
- Gibt die maximale Länge in Zeichen der Zeichenfolge, die in den Puffer verweist, zu kopierenden *LpStr*. Wenn die Länge der Zeichenfolge das Limit überschreitet, wird die Zeichenfolge abgeschnitten.  
+ Gibt die maximale Länge in Zeichen der Zeichenfolge, die in den Puffer, die auf zu kopierenden *LpStr*. Wenn die Länge der Zeichenfolge das Limit überschreitet, wird die Zeichenfolge abgeschnitten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn die Funktion erfolgreich ausgeführt wird, gibt der zurückgegebene Wert die Anzahl der Zeichen, die in den Puffer, nicht einschließlich des abschließenden Null-Zeichens kopiert.  
+ Wenn die Funktion erfolgreich ist, gibt der Rückgabewert die Anzahl der Zeichen kopiert werden, in den Puffer, der das abschließende Nullzeichen nicht eingeschlossen.  
   
- Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Um erweiterte Fehlerinformationen abzurufen, rufen [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Um erweiterte Fehlerinformationen abzurufen, rufen Sie [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
- Bestimmt, ob der Container WM_SETFOCUS Nachrichten verarbeitet.  
+ Bestimmt, ob der Container WM_SETFOCUS-Nachrichten verarbeitet.  
   
 ```  
 virtual BOOL HandleSetFocus();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn der Container WM_SETFOCUS Nachrichten behandelt; andernfalls 0 (null).  
+ Ungleich NULL, wenn der Container WM_SETFOCUS-Nachrichten verarbeitet werden; andernfalls 0 (null).  
   
 ##  <a name="handlewindowlessmessage"></a>  COleControlContainer::HandleWindowlessMessage  
  Verarbeitet Windows-Meldungen für fensterlose Steuerelemente.  
@@ -511,16 +511,16 @@ virtual BOOL HandleWindowlessMessage(
   
 ### <a name="parameters"></a>Parameter  
  *message*  
- Der Bezeichner für die fenstermeldung von Windows bereitgestellt.  
+ Der Bezeichner für die fenstermeldung, die von Windows bereitgestellt.  
   
- *wParam*  
- Die Parameter der Nachricht. von Windows bereitgestellt. Gibt zusätzliche Nachricht-spezifische Informationen. Der Inhalt dieses Parameters hängt von den Wert der *Nachricht* Parameter.  
+ *wParam-Parameter*  
+ Die Parameter der Nachricht. von Windows bereitgestellt. Gibt zusätzliche meldungsspezifische Informationen. Der Inhalt dieses Parameters ist hängt von den Wert des der *Nachricht* Parameter.  
   
  *lParam*  
- Die Parameter der Nachricht. von Windows bereitgestellt. Gibt zusätzliche Nachricht-spezifische Informationen. Der Inhalt dieses Parameters hängt von den Wert der *Nachricht* Parameter.  
+ Die Parameter der Nachricht. von Windows bereitgestellt. Gibt zusätzliche meldungsspezifische Informationen. Der Inhalt dieses Parameters ist hängt von den Wert des der *Nachricht* Parameter.  
   
  *plResult*  
- Windows-Ergebniscode. Gibt das Ergebnis der Verarbeitung der Nachricht und hängt von der gesendeten Nachricht.  
+ Windows-Ergebniscode. Gibt das Ergebnis der Nachrichtenverarbeitung und hängt von der gesendeten Nachricht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -529,7 +529,7 @@ virtual BOOL HandleWindowlessMessage(
  Überschreiben Sie diese Funktion, um die Behandlung von fensterloses Steuerelement Nachrichten anzupassen.  
   
 ##  <a name="isdlgbuttonchecked"></a>  COleControlContainer::IsDlgButtonChecked  
- Bestimmt den Status der angegebenen Schaltfläche.  
+ Bestimmt den Zustand der angegebenen Schaltfläche.  
   
 ```  
 virtual UINT IsDlgButtonChecked(int nIDButton) const;  
@@ -537,19 +537,19 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
   
 ### <a name="parameters"></a>Parameter  
  *nIDButton*  
- Der Bezeichner des Schaltflächen-Steuerelements.  
+ Der Bezeichner des Button-Steuerelements.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Rückgabewert eine Schaltfläche erstellt, mit der **BS_AUTOCHECKBOX**, **BS_AUTORADIOBUTTON**, **BS_AUTO3STATE**, **BS_CHECKBOX**, **BS_RADIOBUTTON**, oder **BS_3STATE** Stil. Einer der folgenden Werte ist möglich:  
+ Der Rückgabewert von der Schaltfläche mit den BS_AUTOCHECKBOX BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON oder BS_3STATE-Stil erstellt. Einer der folgenden Werte ist möglich:  
   
-- **BST_CHECKED** Schaltfläche aktiviert ist.  
+- Schaltfläche "BST_CHECKED" aktiviert ist.  
   
-- **BST_INDETERMINATE** Schaltfläche ist abgeblendet, der angibt, eines unbestimmten Zustands (gilt nur, wenn die Schaltfläche "" hat die **BS_3STATE** oder **BS_AUTO3STATE** Stil).  
+- BST_INDETERMINATE Schaltfläche ist grau unterlegt, der angibt, in einem unbestimmten Zustand befindet (gilt nur, wenn die Schaltfläche den BS_3STATE oder BS_AUTO3STATE-Stil).  
   
-- **BST_UNCHECKED** Schaltfläche deaktiviert ist.  
+- Schaltfläche "BST_UNCHECKED" wird gelöscht.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die Schaltfläche "" eines drei-Status-Steuerelements ist, die Memberfunktion bestimmt, ob sie dieses Kontrollkästchen aktiviert, abgeblendet ist, oder keines von beiden.  
+ Wenn die Schaltfläche "eines drei-Status-Steuerelements ist, die Memberfunktion bestimmt, ob sie die Option aktiviert ist, abgeblendet ist, oder keines von beiden.  
   
 ##  <a name="m_crback"></a>  COleControlContainer::m_crBack  
  Die Hintergrundfarbe des Containers.  
@@ -566,14 +566,14 @@ COLORREF m_crFore;
 ```  
   
 ##  <a name="m_listsitesorwnds"></a>  COleControlContainer::m_listSitesOrWnds  
- Eine Liste der Steuerelement Websites aufgeführt, die vom Container gehostet.  
+ Eine Liste der Steuerelement-Standorte, die vom Container gehostet werden soll.  
   
 ```  
 CTypedPtrList<CPtrList, COleControlSiteOrWnd*> m_listSitesOrWnds;  
 ```  
   
 ##  <a name="m_nwindowlesscontrols"></a>  COleControlContainer::m_nWindowlessControls  
- Die Anzahl der fensterlose Steuerelemente, die von dem Steuerelementcontainer gehostet wird.  
+ Die Anzahl der fensterlose Steuerelemente, die von der Control-Container gehostet wird.  
   
 ```  
 int m_nWindowlessControls;  
@@ -587,7 +587,7 @@ LPFONTDISP m_pOleFont;
 ```  
   
 ##  <a name="m_psitecapture"></a>  COleControlContainer::m_pSiteCapture  
- Ein Zeiger auf die Website des Capture-Steuerelements.  
+ Zeiger auf die Website des Capture-Steuerelements.  
   
 ```  
 COleControlSite* m_pSiteCapture;  
@@ -601,28 +601,28 @@ COleControlSite* m_pSiteFocus;
 ```  
   
 ##  <a name="m_psiteuiactive"></a>  COleControlContainer::m_pSiteUIActive  
- Ein Zeiger auf die Website des Steuerelements, die direkten aktiviert ist.  
+ Ein Zeiger auf die Website des Steuerelements, die direkt aktiviert ist.  
   
 ```  
 COleControlSite* m_pSiteUIActive;  
 ```  
   
 ##  <a name="m_pwnd"></a>  COleControlContainer::m_pWnd  
- Ein Zeiger auf die dem Container zugeordnete Fensterobjekt.  
+ Ein Zeiger auf das Window-Objekt, das dem Container zugeordnet.  
   
 ```  
 CWnd* m_pWnd;  
 ```  
   
 ##  <a name="m_sitemap"></a>  COleControlContainer::m_siteMap  
- Der Siteübersicht.  
+ Die sitezuordnung.  
   
 ```  
 CMapPtrToPtr m_siteMap;  
 ```  
   
 ##  <a name="onpaint"></a>  COleControlContainer::OnPaint  
- Vom Framework aufgerufen, WM_PAINT-Anforderungen zu verarbeiten.  
+ Wird aufgerufen, durch das Framework um WM_PAINT-Anforderungen zu verarbeiten.  
   
 ```  
 virtual BOOL OnPaint(CDC* pDC);
@@ -630,16 +630,16 @@ virtual BOOL OnPaint(CDC* pDC);
   
 ### <a name="parameters"></a>Parameter  
  *pDC*  
- Ein Zeiger auf den Gerätekontext, der vom Container verwendeten.  
+ Ein Zeiger auf den Gerätekontext, die vom Container verwendet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Meldung verarbeitet wurde; andernfalls 0 (null).  
+ Ungleich NULL, wenn die Meldung behandelt wurde; andernfalls 0 (null).  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Funktion zum Anpassen der Zeichenprozess.  
+ Überschreiben Sie diese Funktion, um den Prozess für die Darstellung anzupassen.  
   
 ##  <a name="onuiactivate"></a>  COleControlContainer::OnUIActivate  
- Vom Framework aufgerufen, wenn die Website des Steuerelements verweist *pSite*, werden direkte aktiviert.  
+ Vom Framework aufgerufen, wenn die Website des Steuerelements, verweist *pSite*, wird direkt aktiviert.  
   
 ```  
 virtual void OnUIActivate(COleControlSite* pSite);
@@ -647,13 +647,13 @@ virtual void OnUIActivate(COleControlSite* pSite);
   
 ### <a name="parameters"></a>Parameter  
  *pSite*  
- Ein Zeiger auf die Website des Steuerelements, direktes aktiviert werden soll.  
+ Ein Zeiger auf die Website des Steuerelements, direkt aktiviert werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Direkte Aktivierung bedeutet, dass der Container-Hauptmenü ein direktes zusammengesetzten Menü ersetzt wird.  
+ Direkte Aktivierung bedeutet, dass es sich bei Hauptmenü des Containers durch ein zusammengesetztes Menü ersetzt wird.  
   
 ##  <a name="onuideactivate"></a>  COleControlContainer::OnUIDeactivate  
- Vom Framework aufgerufen, wenn die Website des Steuerelements verweist *pSite*, deaktiviert werden soll.  
+ Vom Framework aufgerufen, wenn die Website des Steuerelements, verweist *pSite*, deaktiviert werden soll.  
   
 ```  
 virtual void OnUIDeactivate(COleControlSite* pSite);
@@ -661,13 +661,13 @@ virtual void OnUIDeactivate(COleControlSite* pSite);
   
 ### <a name="parameters"></a>Parameter  
  *pSite*  
- Ein Zeiger auf die Website des Steuerelements deaktiviert werden soll.  
+ Ein Zeiger auf die Site für das Steuerelement deaktiviert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Bei Empfang dieser Benachrichtigung ist, sollte der Container seine Benutzeroberfläche installieren und den Fokus.  
+ Beim Empfang dieser Benachrichtigung ist, sollte der Container die Benutzeroberfläche installieren und den Fokus erhalten.  
   
 ##  <a name="scrollchildren"></a>  COleControlContainer::ScrollChildren  
- Vom Framework aufgerufen, wenn von einem untergeordneten Fenster Scroll Nachrichten empfangen werden.  
+ Vom Framework aufgerufen, wenn in einem untergeordneten Fenster Scrollen Nachrichten empfangen werden.  
   
 ```  
 virtual void ScrollChildren(
@@ -677,10 +677,10 @@ virtual void ScrollChildren(
   
 ### <a name="parameters"></a>Parameter  
  *DX*  
- Die Menge des Bildlaufs entlang der x-Achse in Pixel.  
+ Das Ausmaß des Bildlaufs auf der x-Achse in Pixel.  
   
  *dy*  
- Die Menge des Bildlaufs entlang der y-Achse in Pixel.  
+ Das Ausmaß des Bildlaufs auf der y-Achse in Pixel.  
   
 ##  <a name="senddlgitemmessage"></a>  COleControlContainer::SendDlgItemMessage  
  Sendet eine Nachricht an das angegebene Steuerelement.  
@@ -700,14 +700,14 @@ virtual LRESULT SendDlgItemMessage(
  *message*  
  Gibt die Meldung gesendet werden.  
   
- *wParam*  
- Gibt zusätzliche Nachricht-spezifische Informationen.  
+ *wParam-Parameter*  
+ Gibt zusätzliche meldungsspezifische Informationen.  
   
  *lParam*  
- Gibt zusätzliche Nachricht-spezifische Informationen.  
+ Gibt zusätzliche meldungsspezifische Informationen.  
   
 ##  <a name="setdlgitemint"></a>  COleControlContainer::SetDlgItemInt  
- Legt den Text eines Steuerelements in einem Dialogfeld auf die angegebene Zeichenfolgendarstellung einer angegebenen ganzzahligen Wert fest.  
+ Legt den Text eines Steuerelements in einem Dialogfeld, um die angegebene Zeichenfolgendarstellung einer angegebenen ganzzahligen Wert fest.  
   
 ```  
 virtual void SetDlgItemInt(
@@ -724,7 +724,7 @@ virtual void SetDlgItemInt(
  Der ganzzahlige Wert, der angezeigt werden.  
   
  *bSigned*  
- Gibt an, ob die *nWert* Parameter ist mit oder ohne Vorzeichen. Wenn dieser Parameter ist **"true"**, *nWert* signiert ist. Wenn dieser Parameter ist **"true"** und *nWert* ist kleiner als 0 (null), ein Minuszeichen Anmeldung vor die erste Ziffer in der Zeichenfolge befindet. Wenn dieser Parameter ist **"false"**, *nWert* ist nicht signiert.  
+ Gibt an, ob die *nWert* Parameter mit oder ohne Vorzeichen ist. Wenn dieser Parameter auf "true" ist *nWert* signiert ist. Wenn dieser Parameter auf "true" ist und *nWert* ist kleiner als 0 (null), ein Minuszeichen anmelden werden vor der ersten Ziffer in der Zeichenfolge platziert. Wenn dieser Parameter auf "FALSE" ist *nWert* nicht signiert ist.  
   
 ##  <a name="setdlgitemtext"></a>  COleControlContainer::SetDlgItemText  
  Legt den Text des angegebenen Steuerelements, mit dem Text, der in enthaltenen *LpszString*.  

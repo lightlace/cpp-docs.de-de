@@ -1,5 +1,5 @@
 ---
-title: Meldungshandler | Microsoft Docs
+title: MessageHandler | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec0fd88def88f7d31fce078fec0c860f4f21f51c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dcd02396fa76e9e68fce628783fb17bc6adab36e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356366"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848401"
 ---
 # <a name="messagehandler"></a>Meldungshandler
-**Meldungshandler** ist der Name der Funktion identifiziert durch den zweiten Parameter von der `MESSAGE_HANDLER` Makro in Ihrer nachrichtenzuordnung.  
+`MessageHandler` ist der Name der Funktion durch den zweiten Parameter, der das Makro MESSAGE_HANDLER aus, in der meldungszuordnung identifiziert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,23 +40,23 @@ ms.locfileid: "32356366"
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `uMsg`  
+ *uMsg*  
  Gibt die Meldung.  
   
- `wParam`  
- Zusätzliche Meldung-spezifische Informationen.  
+ *wParam-Parameter*  
+ Zusätzliche meldungsspezifische Informationen.  
   
- `lParam`  
- Zusätzliche Meldung-spezifische Informationen.  
+ *lParam*  
+ Zusätzliche meldungsspezifische Informationen.  
   
- `bHandled`  
- Die Nachricht Zuordnung Mengen `bHandled` auf **"true"** vor `MessageHandler` aufgerufen wird. Wenn `MessageHandler` behandelt die Nachricht nicht vollständig sollte `bHandled` auf **"false"** an, dass die Nachricht noch weitere Verarbeitung erforderlich.  
+ *bHandled*  
+ Die Zuordnung Nachrichtensätze *bHandled* auf "true", bevor Sie `MessageHandler` aufgerufen wird. Wenn `MessageHandler` ist nicht vollständig verarbeitet die Nachricht sollte *bHandled* auf "false", um anzugeben, die Nachricht noch weitere Verarbeitung erforderlich.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Das Ergebnis der Nachrichtenverarbeitung. 0, wenn erfolgreich.  
+ Das Ergebnis der Nachrichtenverarbeitung. Bei Erfolg 0.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Beispiel zur Verwendung dieser Nachrichtenhandler in einer meldungszuordnung, finden Sie unter [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler).  
+ Ein Beispiel für die Verwendung dieser Nachrichtenhandler in einer meldungszuordnung, finden Sie unter [MESSAGE_HANDLER aus](reference/message-map-macros-atl.md#message_handler).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Implementieren eines Fensters](../atl/implementing-a-window.md)   

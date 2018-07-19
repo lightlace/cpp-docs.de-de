@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c36808d375dd774286c3663a02fdc308cc4b2790
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f7c4c748d7328f534aebfb2133c72635bbdc36f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857505"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953965"
 ---
 # <a name="istriviallycopyassignable-class"></a>is_trivially_copy_assignable-Klasse
 
@@ -36,13 +36,13 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Der abzufragende Typ.
+*T* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist TRUE, wenn der `T`-Typ eine Klasse ist, die einen Kopierzuweisungsoperator aufweist; andernfalls FALSE.
+Eine Instanz des typprädikats ist true, wenn der Typ *T* ist eine Klasse, die einen trivialen Kopierzuweisungsoperator, andernfalls er false enthält.
 
-Ein Zuweisungskonstruktor für eine Klasse `T` ist trivial, wenn er implizit angegeben ist. Die Klasse `T` verfügt über keine virtuellen Funktionen und die Klasse `T` hat keine virtuellen Basen. Die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Zuweisungsoperatoren und die Klassen aller nicht statischen Datenmember vom Typ „array“ der Klasse haben triviale Zuweisungsoperatoren.
+Ein Zuweisungskonstruktor für eine Klasse *T* ist trivial, wenn er implizit angegeben ist. die Klasse *T* verfügt über keine virtuellen Funktionen, die Klasse *T* hat keine virtuellen Basen, die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Zuweisungsoperatoren und die Klassen aller nicht statischen Datenmember vom Typarray der Klasse haben triviale Zuweisungsoperatoren.
 
 ## <a name="requirements"></a>Anforderungen
 

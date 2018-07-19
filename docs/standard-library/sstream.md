@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ee9beb54dd241c6987b79db238f033f3d169497
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8801c41b23ab2c33e4c4e2df9cde8155c1eefafb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861674"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957767"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
@@ -82,8 +82,8 @@ void swap (
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`left`|Ein Verweis auf ein `sstream`-Objekt.|
-|`right`|Ein Verweis auf ein `sstream`-Objekt.|
+|*left*|Ein Verweis auf ein `sstream`-Objekt.|
+|*right*|Ein Verweis auf ein `sstream`-Objekt.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -93,14 +93,14 @@ Objekte vom Typ `char *` können die Funktionalität in [\<strstream >](../stand
 
 |Typname|Beschreibung|
 |-|-|
-|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Erstellt einen `basic_istringstream`-Typ, der auf einen `char`-Vorlagenparameter spezialisiert ist.|
-|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Erstellt einen `basic_ostringstream`-Typ, der auf einen `char`-Vorlagenparameter spezialisiert ist.|
-|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|Erstellt einen `basic_stringbuf`-Typ, der auf einen `char`-Vorlagenparameter spezialisiert ist.|
-|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|Erstellt einen `basic_stringstream`-Typ, der auf einen `char`-Vorlagenparameter spezialisiert ist.|
-|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|Erstellt einen `basic_istringstream`-Typ, der auf einen `wchar_t`-Vorlagenparameter spezialisiert ist.|
-|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|Erstellt einen `basic_ostringstream`-Typ, der auf einen `wchar_t`-Vorlagenparameter spezialisiert ist.|
-|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|Erstellt einen `basic_stringbuf`-Typ, der auf einen `wchar_t`-Vorlagenparameter spezialisiert ist.|
-|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|Erstellt einen `basic_stringstream`-Typ, der auf einen `wchar_t`-Vorlagenparameter spezialisiert ist.|
+|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Erstellt einen Typ `basic_istringstream` auf eine **Char** Template-Parameter.|
+|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Erstellt einen Typ `basic_ostringstream` auf eine **Char** Template-Parameter.|
+|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|Erstellt einen Typ `basic_stringbuf` auf eine **Char** Template-Parameter.|
+|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|Erstellt einen Typ `basic_stringstream` auf eine **Char** Template-Parameter.|
+|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|Erstellt einen Typ `basic_istringstream` auf eine **"wchar_t"** Template-Parameter.|
+|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|Erstellt einen Typ `basic_ostringstream` auf eine **"wchar_t"** Template-Parameter.|
+|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|Erstellt einen Typ `basic_stringbuf` auf eine **"wchar_t"** Template-Parameter.|
+|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|Erstellt einen Typ `basic_stringstream` auf eine **"wchar_t"** Template-Parameter.|
 
 ### <a name="manipulators"></a>Manipulatoren
 
@@ -112,10 +112,10 @@ Objekte vom Typ `char *` können die Funktionalität in [\<strstream >](../stand
 
 |Klasse|Beschreibung|
 |-|-|
-|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Beschreibt einen die Übertragung zu und aus einer Sequenz von in einem Arrayobjekt gespeicherten Elementen von Elementen des Typs **Elem** steuernden Streampuffer, dessen Zeichenmerkmale durch die Klasse **Tr** ermittelt werden.|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das das Extrahieren von Elementen und codierten Objekten aus einem Streampuffer der Klasse [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`> mit Elementen des Typs **Elem** steuert, dessen Zeichenmerkmale durch die Klasse **Tr** bestimmt und dessen Elemente durch eine Zuweisung der `Alloc`-Klasse zugewiesen werden.|
-|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Beschreibt ein Objekt, das das Einfügen von Elementen und codierten Objekten in einen Streampuffer der Klasse [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`> mit Elementen des Typs **Elem** steuert, dessen Zeichenmerkmale durch die Klasse **Tr** bestimmt und dessen Elemente durch eine Zuweisung der `Alloc`-Klasse zugewiesen werden.|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Beschreibt ein Objekt, das das Einfügen und Extrahieren von Elementen und codierten Objekten mit einem Streampuffer der Klasse [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`> mit Elementen des Typs **Elem** steuert, dessen Zeichenmerkmale durch die Klasse **Tr** bestimmt und dessen Elemente durch eine Zuweisung der `Alloc`-Klasse zugewiesen werden.|
+|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Beschreibt einen die Übertragung zu und aus einer Sequenz von in einem Arrayobjekt gespeicherten Elementen von Elementen des Typs `Elem` steuernden Streampuffer, dessen Zeichenmerkmale durch die Klasse `Tr` ermittelt werden.|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Beschreibt ein Objekt, das steuert, Extrahieren von Elementen und codierten Objekten aus einem Streampuffer der Klasse [Basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, mit Elementen des Typs `Elem`, dessen Zeichenmerkmale von der Klasse ermittelt werden `Tr`, und es werden, dessen Elemente durch eine Zuweisung der Klasse zugeordnet `Alloc`.|
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Beschreibt ein Objekt, das steuert, Einfügen von Elementen und codierten Objekten in einen Streampuffer der Klasse [Basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, mit Elementen des Typs `Elem`, dessen Zeichenmerkmale von der Klasse ermittelt werden `Tr`, und es werden, dessen Elemente durch eine Zuweisung der Klasse zugeordnet `Alloc`.|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Beschreibt ein Objekt, das steuert, Einfügung und Extraktion von Elementen und codierten Objekten mit einem Streampuffer der Klasse [Basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, mit Elementen des Typs `Elem`, dessen Zeichenmerkmale von der Klasse ermittelt werden `Tr`, und es werden, dessen Elemente durch eine Zuweisung der Klasse zugeordnet `Alloc`.|
 
 ## <a name="requirements"></a>Anforderungen
 

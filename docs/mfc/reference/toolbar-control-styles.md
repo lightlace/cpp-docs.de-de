@@ -1,5 +1,5 @@
 ---
-title: Steuerelementtypen für die Symbolleiste | Microsoft Docs
+title: ToolBar-Steuerelement-Stile | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,57 +14,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1958c83ef5a0eec5f3c7f5873451edd3839146be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35b5b87944f2b0f9ce78adbe42b59d92b98a6e5a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373194"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885834"
 ---
 # <a name="toolbar-control-styles"></a>Steuerelementtypen für die Symbolleiste
-[CMFCToolBarButton Klasse](../../mfc/reference/cmfctoolbarbutton-class.md) verfügt über einen Satz von Style Flags, die bestimmen, die Darstellung und Verhalten der Schaltfläche. Sie können eine Kombination dieser Flags festlegen, durch den Aufruf [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). Dieses Thema enthält die Style-Flagwerte und ihre Bedeutungen.  
+[CMFCToolBarButton-Klasse](../../mfc/reference/cmfctoolbarbutton-class.md) verfügt über einen Satz von Style Flags, die bestimmen, die Darstellung und Verhalten der Schaltfläche. Sie können eine Kombination dieser Flags festlegen, durch den Aufruf [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). Dieses Thema enthält die Style-Flagwerte und ihre Bedeutung.  
   
 ## <a name="property-values"></a>Eigenschaftswerte  
- Die folgenden Werte bestimmen die Art der Schaltfläche, die das Steuerelement darstellt:  
+ Die folgenden Werte bestimmen den Typ der Schaltfläche, die das Steuerelement darstellt:  
   
  TBBS_BUTTON  
  Standardmäßige Pushbutton (Standard).  
   
  TBBS_CHECKBOX  
- das Kontrollkästchen.  
+ Das Kontrollkästchen.  
   
  TBBS_CHECKGROUP  
  Der Anfang einer Gruppe von Kontrollkästchen.  
   
  TBBS_GROUP  
- Der Anfang einer Gruppe von Optionsfeldern.  
+ Der Anfang einer Gruppe von Schaltflächen.  
   
  TBBS_SEPARATOR  
- Als Trennzeichen.  
+ Trennzeichen.  
   
  Die folgenden Werte stellen den aktuellen Status des Steuerelements dar:  
   
  TBBS_CHECKED  
- Das Kontrollkästchen aktiviert ist.  
+ Aktivieren Sie das Kontrollkästchen aktiviert ist.  
   
  TBBS_DISABLED  
  Das Steuerelement ist deaktiviert.  
   
  TBBS_INDETERMINATE  
- Das Kontrollkästchen ist in einem unbestimmten Zustand.  
+ Aktivieren Sie das Kontrollkästchen ist in einem unbestimmten Zustand.  
   
  TBBS_PRESSED  
- Gedrückt wird.  
+ Schaltfläche ist gedrückt.  
   
- Der folgende Wert ändert das Layout der Schaltfläche in der Symbolleiste:  
+ Der folgende Wert ändert das Layout der Schaltfläche auf der Symbolleiste:  
   
  TBBS_BREAK  
- Platziert das Element in einer neuen Zeile oder in einer neuen Spalte ohne Spalten aufteilen.  
+ Platziert das Element in einer neuen Zeile oder in einer neuen Spalte ohne Trennen von Spalten.  
   
 ## <a name="remarks"></a>Hinweise  
- Das aktuelle Format befindet sich in [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Legen Sie einen neuen Wert nicht `m_nStyle` direkt, da einige abgeleiteten Klassen zusätzliche Verarbeitungsschritte beim Aufrufen von `SetStyles`.  
+ Der aktuelle Stil befindet sich in [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Legen Sie einen neuen Wert nicht in `m_nStyle` direkt, da die abgeleiteten Klassen Durchführung weiterer Bearbeitungsvorgänge, wenn Sie aufrufen `SetStyles`.  
   
- Die visuelle Manager bestimmt die Darstellung der Schaltflächen in den einzelnen Zuständen. Finden Sie unter [Visualisierungs-Manager](../../mfc/visualization-manager.md) für Weitere Informationen.  
+ Visuelle Manager bestimmt die Darstellung der Schaltflächen in den einzelnen Zuständen. Finden Sie unter [Visualisierungs-Manager](../../mfc/visualization-manager.md) für Weitere Informationen.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxtoolbarbutton.h  

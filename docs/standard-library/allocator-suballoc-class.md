@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11d9d45a8bf9d2eff7f4fa8d006299045a21c116
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6238aeada530a8fc33fc98b79cba969353796ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843118"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953087"
 ---
 # <a name="allocatorsuballoc-class"></a>allocator_suballoc-Klasse
 
-Beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objekte des Typs `Type` verwaltet, die einen Cache des Typs [cache_suballoc](../standard-library/cache-suballoc-class.md) verwenden.
+Beschreibt ein Objekt, das speicherbelegung und-Freigabe für Objekte des Typs verwaltet *Typ* mithilfe eines Caches vom Typ [Cache_suballoc](../standard-library/cache-suballoc-class.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,11 +39,11 @@ class allocator_suballoc;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Type`|Der Elementtyp, die durch die Zuweisung zugeordnet wird.|
+|*Type*|Der Elementtyp, die durch die Zuweisung zugeordnet wird.|
 
 ## <a name="remarks"></a>Hinweise
 
-Das Makro [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) übergibt diese Klasse als Parameter `name` in der folgenden Anweisung: `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
+Die [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) Makro übergibt diese Klasse als die *Namen* Parameter in der folgenden Anweisung: `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
 
 ## <a name="requirements"></a>Anforderungen
 

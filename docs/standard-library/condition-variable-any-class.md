@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0fe38031dc215f537d82fe6e06f68acf6db8e0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847129"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959231"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any-Klasse
 
@@ -111,9 +111,9 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parameter
 
-`Lck` Ein `mutex` Objekt eines beliebigen Typs.
+*Lck* ein `mutex` Objekt eines beliebigen Typs.
 
-`Pred` Ein Ausdruck, der gibt `true` oder `false`.
+*Pred* ein Ausdruck, der gibt **"true"** oder **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -140,21 +140,21 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Parameter
 
-`Lck` Ein `mutex` Objekt eines beliebigen Typs.
+*Lck* ein `mutex` Objekt eines beliebigen Typs.
 
-`Rel_time` Ein `chrono::duration` reaktiviert Objekt, das die Zeitspanne, bevor der Thread angibt.
+*Rel_time* ein `chrono::duration` -Objekt, das gibt an, die Zeitspanne, bevor der Thread reaktiviert.
 
-`Pred` Ein Ausdruck, der gibt `true` oder `false`.
+*Pred* ein Ausdruck, der gibt **"true"** oder **"false"**.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die erste Methode gibt `cv_status::timeout` zurück, wenn der Wartevorgang beendet wird, sobald `Rel_time` verstrichen ist. Andernfalls gibt diese Methode `cv_status::no_timeout` zurück.
+Gibt die erste Methode `cv_status::timeout` , wenn der Wartevorgang wird, wenn beendet *Rel_time* ist abgelaufen. Andernfalls gibt diese Methode `cv_status::no_timeout` zurück.
 
-Die zweite Methode gibt den Wert von `Pred` zurück.
+Die zweite Methode gibt den Wert der *Pred*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Methode sperrt, bis das `condition_variable_any`-Objekt durch einen Aufruf von [notify_one](../standard-library/condition-variable-class.md#notify_one) oder [notify_all](../standard-library/condition-variable-class.md#notify_all) signalisiert wird, oder bis das Zeitintervall `Rel_time` abgelaufen ist. Sie kann auch falsch aktiviert werden.
+Die erste Methode blockiert, bis die `condition_variable_any` Objekt wird durch einen Aufruf von signalisiert [Notify_one](../standard-library/condition-variable-class.md#notify_one) oder [Notify_all](../standard-library/condition-variable-class.md#notify_all), oder bis das Zeitintervall *Rel_time* ist abgelaufen. Sie kann auch falsch aktiviert werden.
 
 Die zweite Methode führt tatsächlich den folgenden Code aus.
 
@@ -192,21 +192,21 @@ void wait_until(
 
 ### <a name="parameters"></a>Parameter
 
-`Lck` Ein Mutex-Objekt.
+*Lck* ein Mutex-Objekt.
 
-`Abs_time` Ein [chrono:: time_point](../standard-library/time-point-class.md) Objekt.
+*Abs_time* ein [chrono:: time_point](../standard-library/time-point-class.md) Objekt.
 
-`Pred` Ein Ausdruck, der gibt `true` oder `false`.
+*Pred* ein Ausdruck, der gibt **"true"** oder **"false"**.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Methoden, die eine `cv_status`-Typ zurückgeben, geben `cv_status::timeout` zurück, wenn der Wartevorgang beendet wird, sobald `Abs_time` verstrichen ist. Andernfalls geben diese Methoden `cv_status::no_timeout` zurück.
+Methoden, die Zurückgeben einer `cv_status` Retoure `cv_status::timeout` , wenn der Wartevorgang wird, wenn beendet *Abs_time* abgelaufen ist. Andernfalls geben diese Methoden `cv_status::no_timeout` zurück.
 
-Methoden, die `bool` zurückgeben, geben den Wert von `Pred` zurück.
+Methoden, die Zurückgeben einer `bool` Rückgabe des Werts der *Pred*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Methode sperrt, bis das `condition_variable`-Objekt durch einen Aufruf von [notify_one](../standard-library/condition-variable-class.md#notify_one) oder [notify_al](../standard-library/condition-variable-class.md#notify_all) signalisiert wurde, oder bis `Abs_time`. Sie kann auch falsch aktiviert werden.
+Die erste Methode blockiert, bis die `condition_variable` Objekt wird durch einen Aufruf von signalisiert [Notify_one](../standard-library/condition-variable-class.md#notify_one) oder [Notify_all](../standard-library/condition-variable-class.md#notify_all), oder bis *Abs_time*. Sie kann auch falsch aktiviert werden.
 
 Die zweite Methode führt tatsächlich den folgenden Code aus.
 

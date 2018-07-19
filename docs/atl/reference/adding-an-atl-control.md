@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen eines ATL-Steuerelements | Microsoft Docs
+title: Hinzufügen eines ATL-Steuerelements | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 136b0fe6fea5ef95bd1670457f472a1fcc292bf0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fab4e01cafa314f259c22ce61ca4e0c4754a874a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356934"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954681"
 ---
 # <a name="adding-an-atl-control"></a>Hinzufügen eines ATL-Steuerelements
-Verwenden Sie diesen Assistenten, um ein Benutzerobjekt für die Schnittstelle zu einem Projekt hinzufügen, die Schnittstellen für alle möglichen Container unterstützt. Um diese Schnittstellen unterstützen zu können, dass das Projekt als ATL-Anwendung oder als eine MFC-Anwendung, die ATL-Unterstützung enthält erstellt wurde. Können Sie die [ATL-Projektassistenten](../../atl/reference/atl-project-wizard.md) zum Erstellen einer Anwendung ATL oder [Hinzufügen eines ATL-Objekts zu der MFC-Anwendung](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL-Unterstützung für eine MFC-Anwendung zu implementieren.  
+Verwenden Sie diesen Assistenten, um ein Benutzerobjekt für die Schnittstelle zu einem Projekt hinzuzufügen, das Schnittstellen für alle möglichen Container unterstützt. Um diese Schnittstellen zu unterstützen, dass das Projekt als eine ATL-Anwendung oder einer MFC-Anwendung, die ATL-Unterstützung enthält erstellt wurde. Sie können den [ATL-Projekt-Assistenten](../../atl/reference/atl-project-wizard.md) zum Erstellen einer ATL-Anwendung verwenden, oder [Ihrer MFC-Anwendung ein ATL-Objekt hinzufügen](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), um die ATL-Unterstützung in einer MFC-Anwendung zu implementieren.  
   
-### <a name="to-add-an-atl-control-to-your-project"></a>ATL-Steuerelement zu Ihrem Projekt hinzufügen  
+### <a name="to-add-an-atl-control-to-your-project"></a>Um ein ATL-Steuerelement zu Ihrem Projekt hinzuzufügen.  
   
-1.  In beiden **Projektmappen-Explorer** oder [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), mit der rechten Maustaste in des Namens des Projekts, dem Sie das einfache ATL-Objekt hinzufügen möchten.  
+1.  In einem **Projektmappen-Explorer** oder [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code), mit der rechten Maustaste in des Namens des Projekts, dem Sie die einfache ATL-Objekt hinzufügen möchten.  
   
 2.  Klicken Sie auf **hinzufügen** aus dem Kontextmenü, und klicken Sie dann auf **Klasse hinzufügen**.  
   
-3.  In der [Klasse hinzufügen](../../ide/add-class-dialog-box.md) (Dialogfeld), klicken Sie im Bereich "Vorlagen" klicken Sie auf **ATL-Steuerelement**, und klicken Sie dann auf **hinzufügen** zum Anzeigen der [ATL-Steuerelement-Assistent](../../atl/reference/atl-control-wizard.md).  
+3.  In der [Klasse hinzufügen](../../ide/add-class-dialog-box.md) im Dialogfeld im Bereich "Vorlagen", klicken Sie auf **ATL-Steuerelement**, und klicken Sie dann auf **hinzufügen** zum Anzeigen der [ATL-Steuerelement-Assistent](../../atl/reference/atl-control-wizard.md).  
   
- Mithilfe der **ATL-Steuerelement-Assistent**, Sie können einen von drei Typen von Steuerelementen erstellen:  
+ Mithilfe der **ATL-Steuerelement-Assistent**, erstellen Sie einen von drei Arten von Steuerelementen:  
   
--   Ein standard-Steuerelement  
+-   Ein Standardsteuerelement  
   
 -   Ein zusammengesetztes Steuerelement  
   
--   DHTML-Steuerelemente  
+-   DHTML-Steuerelements  
   
- Darüber hinaus können Sie reduzieren Sie die Größe des Steuerelements und Schnittstellen, die nicht von den meisten Containern, durch Auswahl verwendet werden entfernen **nur minimale Kontrolle** auf die **Optionen** Seite des Assistenten.  
+ Darüber hinaus können Sie die Größe des Steuerelements zu reduzieren und Entfernen von Schnittstellen, die nicht von den meisten Containern dazu verwendet werden **nur minimale Kontrolle** auf die **Optionen** Seite des Assistenten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen von Funktionalität zu zusammengesetzten Steuerelementen](../../atl/adding-functionality-to-the-composite-control.md)   
- [Grundlagen von ATL-COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)   
- [ATLFire-Beispiel](http://msdn.microsoft.com/en-us/5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)
+ [Hinzufügen von Funktionen zum zusammengesetzten Steuerelement](../../atl/adding-functionality-to-the-composite-control.md)   
+ [Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)   
 

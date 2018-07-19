@@ -1,5 +1,5 @@
 ---
-title: Implementieren eine duale Schnittstelle (ATL) | Microsoft Docs
+title: Implementieren einer dualen Schnittstelle (ATL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,42 +15,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34cc55e4466dba094bf70e734340b40237207f3c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb28b1ce6d98ffd030bbeeca746847b57ed59bc9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356731"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957596"
 ---
-# <a name="implementing-a-dual-interface"></a>Eine duale Schnittstelle implementieren
-Implementieren Sie eine duale Schnittstelle verwenden die [IDispatchImpl](../atl/reference/idispatchimpl-class.md) Klasse, die eine standardmäßige Implementierung des bildet die `IDispatch` Methoden in eine duale Schnittstelle. Weitere Informationen finden Sie unter [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+# <a name="implementing-a-dual-interface"></a>Implementieren einer dualen Schnittstelle
+Sie implementieren können, eine duale Schnittstelle mit der [IDispatchImpl](../atl/reference/idispatchimpl-class.md) -Klasse, die in einer standardmäßigen Implementierung von bietet die `IDispatch` Methoden in eine duale Schnittstelle. Weitere Informationen finden Sie unter [Implementieren der IDispatch-Schnittstelle](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
  Diese Klasse verwenden zu können:  
   
--   Definieren Sie die duale Schnittstelle in einer Typbibliothek ein.  
+-   Definieren Sie die duale Schnittstelle in einer Typbibliothek.  
   
--   Leiten Sie eine Klasse aus einer Spezialisierung von `IDispatchImpl` (übergeben Sie Informationen über die Schnittstelle und die Typbibliothek als Vorlagenargumente).  
+-   Leiten Sie eine Klasse aus einer Spezialisierung von `IDispatchImpl` (übergeben von Informationen über die Schnittstelle und den Typ der Bibliothek als Vorlagenargumente).  
   
--   Fügen Sie einen Eintrag (oder Einträge) der COM-Zuordnung, die duale Schnittstelle über verfügbar zu machen `QueryInterface`.  
+-   Fügen Sie einen Eintrag (oder Einträge), der COM-Zuordnung, die duale Schnittstelle über verfügbar zu machen `QueryInterface`.  
   
--   Implementieren Sie die Vtable Teil der Schnittstelle in die Klasse.  
+-   Implementieren Sie die Vtable-Teil der Schnittstelle in Ihrer Klasse.  
   
--   Stellen Sie sicher, dass die Typbibliothek, die die Schnittstellendefinition enthält, die zur Laufzeit an Ihren Objekten verfügbar ist.  
+-   Stellen Sie sicher, dass die Typbibliothek, die mit der Schnittstellendefinition, die zur Laufzeit an Ihren Objekten verfügbar ist.  
   
 ## <a name="atl-simple-object-wizard"></a>ATL-Assistent für einfache Objekte  
- Wenn Sie eine neue Schnittstelle und eine neue Klasse zu implementieren, erstellen möchten, können Sie mithilfe der [ATL-Klasse hinzufügen (Dialogfeld)](../ide/add-class-dialog-box.md), und klicken Sie dann die [ATL-Assistent für einfache Objekte](../atl/reference/atl-simple-object-wizard.md).  
+ Wenn Sie eine neue Schnittstelle und eine neue Klasse für die Implementierung erstellen möchten, können Sie mithilfe der [Dialogfeld ATL-Klasse hinzufügen](../ide/add-class-dialog-box.md), und klicken Sie dann die [ATL-Assistent für einfache Objekte](../atl/reference/atl-simple-object-wizard.md).  
   
 ## <a name="implement-interface-wizard"></a>Assistent zum Implementieren von Schnittstellen  
- Wenn Sie eine vorhandene Schnittstelle haben, können Sie die [Assistent zum Implementieren von Schnittstelle](../atl/reference/adding-a-new-interface-in-an-atl-project.md) Hinzufügen der erforderlichen Basisklasse, COM-Zuordnungseinträge und das Gerüst eines methodenimplementierungen zu einer vorhandenen Klasse.  
+ Wenn Sie eine vorhandene Schnittstelle verfügen, können Sie die [Assistent zum Implementieren von Schnittstellen](../atl/reference/adding-a-new-interface-in-an-atl-project.md) die erforderlichen Basisklasse, COM-Zuordnungseinträgen und Skelett methodenimplementierungen zu einer vorhandenen Klasse hinzufügen.  
   
 > [!NOTE]
->  Möglicherweise müssen Sie die generierten Basisklasse anpassen, sodass die Haupt- und Nebenversionsnummern Versionsnummern der Typbibliothek als Vorlagenargumente, um übergeben werden Ihre `IDispatchImpl` Basisklasse. Der Assistent zum Implementieren von Schnittstelle überprüft nicht die Versionsnummer der Typbibliothek für Sie.  
+>  Müssen Sie möglicherweise die generierte Basisklasse so anpassen, dass die Versionsnummern der Haupt- und Nebenversionsnummer der Typbibliothek als Vorlagenargumente zu übergeben, werden Ihre `IDispatchImpl` Basisklasse. Der Assistent zum Implementieren von Schnittstellen prüft nicht die Versionsnummer der Typbibliothek für Sie.  
   
 ## <a name="implementing-idispatch"></a>Implementieren der IDispatch  
- Können Sie eine `IDispatchImpl` Basisklasse, um eine Implementierung einer Dispinterface bereitstellen, indem Sie einfach den entsprechenden Eintrag in der COM-Zuordnung angeben (mithilfe der [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) oder [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid) Makros) als stehen Ihnen eine Typbibliothek, die eine entsprechende duale Schnittstelle beschreibt. Es ist üblich, das zum Implementieren der `IDispatch` auf diese Weise z. B.-Schnittstelle. Die ATL-Assistent für einfache Objekte und implementieren Assistent Schnittstelle für beide wird davon ausgegangen, dass Sie beabsichtigen, implementieren `IDispatch` in auf diese Weise so sie fügen den entsprechenden Eintrag zur Zuordnung.  
+ Können Sie eine `IDispatchImpl` Basisklasse, um eine Implementierung eine Disp-Schnittstelle bereitstellen, indem Sie einfach den entsprechenden Eintrag in der COM-Zuordnung angeben (mithilfe der [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) oder [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid) Makro) solange man eine Typbibliothek, die eine entsprechende duale Schnittstelle beschreibt. Es ist durchaus üblich, implementieren die `IDispatch` auf diese Weise z. B. Schnittstelle. Die ATL-Assistent für einfache Objekte und implementieren Assistent Schnittstelle für beide wird davon ausgegangen, dass Sie implementieren möchten `IDispatch` auf diese Weise können also diese fügt des entsprechenden Eintrags zur Zuordnung.  
   
 > [!NOTE]
->  ATL bietet die [IDispEventImpl](../atl/reference/idispeventimpl-class.md) und [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) Klassen können Sie die Disp-Schnittstellen implementieren, ohne dass eine Typbibliothek, die die Definition eine duale Schnittstelle enthält.  
+>  ATL bietet die [IDispEventImpl](../atl/reference/idispeventimpl-class.md) und [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) Klassen, die Sie die Disp-Schnittstellen implementieren, ohne dass eine Typbibliothek, die mit der Definition der eine duale Schnittstelle unterstützen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Duale Schnittstellen und ATL](../atl/dual-interfaces-and-atl.md)

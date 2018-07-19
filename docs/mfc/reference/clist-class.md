@@ -1,5 +1,5 @@
 ---
-title: CList-Klasse | Microsoft Docs
+title: CList-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25337104da2f1ff397d3c61170ab6ad5a8817130
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f7079cf657d1be545f8ddb915815448a1d3b870f
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339331"
 ---
 # <a name="clist-class"></a>CList-Klasse
 Unterstützt sortierte Listen mit Objekten, die nicht eindeutig sein müssen, und auf die sequenziell oder über den Wert zugegriffen werden kann.  
@@ -83,51 +83,51 @@ class CList : public CObject
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CList::CList](#clist)|Erstellt eine leere sortierte Liste.|  
+|[CList::CList](#clist)|Erstellt eine leere sortierte Liste an.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CList::AddHead](#addhead)|Fügt ein Element (oder alle Elemente aus einer anderen Liste) an den Anfang der Liste (eines neuen kopfteils macht).|  
-|[CList::AddTail](#addtail)|Fügt ein Element (oder alle Elemente aus einer anderen Liste) auf das Ende der Liste (werden einem neuen Ende).|  
-|[CList::Find](#find)|Ruft die Position eines Elements vom Zeigerwert angegeben.|  
-|[CList::FindIndex](#findindex)|Ruft die Position eines Elements, das durch einen nullbasierten Index angegeben.|  
-|[CList::GetAt](#getat)|Ruft das Element an einer angegebenen Position ab.|  
-|[CList::GetCount](#getcount)|Gibt die Anzahl der Elemente in dieser Liste zurück.|  
-|[CList::GetHead](#gethead)|Gibt das Head-Element der Liste (darf nicht leer sein).|  
-|[CList::GetHeadPosition](#getheadposition)|Gibt die Position das Head-Element der Liste zurück.|  
-|[CList::GetNext](#getnext)|Ruft das nächste Element für die Iteration an.|  
-|[CList::GetPrev](#getprev)|Ruft das vorherige Element für die Iteration an.|  
-|[CList::GetSize](#getsize)|Gibt die Anzahl der Elemente in dieser Liste zurück.|  
-|[CList::GetTail](#gettail)|Gibt das Element Ende der Liste (darf nicht leer sein).|  
-|[CList::GetTailPosition](#gettailposition)|Gibt die Position des Elements Ende der Liste zurück.|  
+|[CList::AddHead](#addhead)|Fügt ein Element (oder alle Elemente in einer anderen Liste) an den Anfang der Liste (macht eines neuen kopfteils) an.|  
+|[CList::AddTail](#addtail)|Fügt ein Element (oder alle Elemente in einer anderen Liste) am Ende der Liste (wird einem neuen Ende) an.|  
+|[CList::Find](#find)|Ruft die Position eines Elements durch Zeigerwert angegeben werden.|  
+|[CList::FindIndex](#findindex)|Ruft die Position eines Elements durch einen nullbasierten Index angegeben.|  
+|[CList::GetAt](#getat)|Ruft das Element an einer bestimmten Position.|  
+|[CList::GetCount](#getcount)|Gibt die Anzahl der Elemente in der Liste zurück.|  
+|[CList::GetHead](#gethead)|Gibt zurück, das Head-Element der Liste (darf nicht leer sein).|  
+|[CList::GetHeadPosition](#getheadposition)|Gibt die Position der Head-Element der Liste zurück.|  
+|[CList::GetNext](#getnext)|Ruft das nächste Element durchlaufen werden können.|  
+|[CList::GetPrev](#getprev)|Ruft das vorherige Element durchlaufen werden können.|  
+|[CList::GetSize](#getsize)|Gibt die Anzahl der Elemente in der Liste zurück.|  
+|[CList::GetTail](#gettail)|Gibt das Ende-Element der Liste (darf nicht leer sein).|  
+|[CList::GetTailPosition](#gettailposition)|Gibt die Position des Elements das Ende der Liste zurück.|  
 |[CList::InsertAfter](#insertafter)|Fügt ein neues Element nach einer angegebenen Position ein.|  
-|[CList::InsertBefore](#insertbefore)|Fügt vor einer angegebenen Position ein neues Element an.|  
-|[CList::IsEmpty](#isempty)|Testet, ob die Bedingung der Liste ist leer (keine Elemente).|  
+|[CList::InsertBefore](#insertbefore)|Fügt ein neues Element vor einer angegebenen Position ein.|  
+|[CList::IsEmpty](#isempty)|Testet, ob die Bedingung der leeren Liste (keine Elemente).|  
 |[CList::RemoveAll](#removeall)|Entfernt alle Elemente aus dieser Liste.|  
 |[CList::RemoveAt](#removeat)|Entfernt ein Element aus dieser Liste anhand der Position angegeben.|  
-|[CList::RemoveHead](#removehead)|Entfernt das Element am Anfang der Liste.|  
-|[CList::RemoveTail](#removetail)|Entfernt das Element dem Ende der Liste aus.|  
+|[CList::RemoveHead](#removehead)|Entfernt das Element vom Anfang der Liste.|  
+|[CList::RemoveTail](#removetail)|Entfernt das Element vom Ende der Liste.|  
 |[CList::SetAt](#setat)|Legt das Element an einer bestimmten Position fest.|  
   
 #### <a name="parameters"></a>Parameter  
- `TYPE`  
+ *TYPE*  
  Typ des Objekts in der Liste gespeichert.  
   
- `ARG` *_* `TYPE`  
- Der Typ verwendet, um in der Liste gespeicherten Objekte zu verweisen. Ein Verweis kann sein.  
+ *ARG* *_* *TYP*  
+ Der Typ, der in der Liste gespeicherten Objekte zu verweisen. Dies kann ein Verweis sein.  
   
 ## <a name="remarks"></a>Hinweise  
  `CList` Listen Verhalten sich wie doppelt verknüpfte Listen.  
   
- Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste. Sie können eine **POSITION** Variable als ein Iterator um eine Liste sequenziell zu durchlaufen und einer Textmarke an einen Ort speichern. Eine Position ist identisch mit einem Index jedoch nicht.  
+ Eine Variable vom Typ POSITION ist ein Schlüssel für die Liste. Sie können eine positionsvariable als Iterator verwenden, eine Liste eines Lesezeichens zu einen Ort zu speichern und sequenziell zu durchlaufen. Eine Position ist identisch mit einem Index jedoch nicht.  
   
- Elementeinfügung ist sehr schnell an der vordersten Liste, an das Ende und an einem bekannten **POSITION**. Eine sequenzielle Suche ist erforderlich, um ein Element nach Wert oder Index nachzuschlagen. Diese Suche kann langsam, wenn die Liste lang ist.  
+ Element einfügen erfolgt sehr schnell, an der Spitze der Liste am Ende und an einer bekannten POSITION. Eine sequenzielle Suche ist erforderlich, um ein Element nach Wert oder Index zu suchen. Diese Suche möglich langsam, wenn die Liste lang ist.  
   
  Wenn Sie eine Sicherung der einzelnen Elemente in der Liste benötigen, müssen Sie die Tiefe des sicherungskontexts auf 1 oder größer festlegen.  
   
- Bestimmte Memberfunktionen der Klasse Aufruf globale Hilfsfunktionen, die angepasst werden müssen, für die meisten Verwendungen von der `CList` Klasse. Finden Sie unter [Auflistungsklasse](../../mfc/reference/collection-class-helpers.md) im Abschnitt "Makros und Globals".  
+ Bestimmte Memberfunktionen dieser Klasse rufen globale Hilfsfunktionen, die angepasst werden müssen, für die meisten Verwendungen von der `CList` Klasse. Finden Sie unter [Auflistungsklasse](../../mfc/reference/collection-class-helpers.md) im Abschnitt "Makros und Globals".  
   
  Weitere Informationen zur Verwendung von `CList`, finden Sie im Artikel [Sammlungen](../../mfc/collections.md).  
   
@@ -143,7 +143,7 @@ class CList : public CObject
  **Header:** afxtempl.h  
   
 ##  <a name="addhead"></a>  CList::AddHead  
- Fügt ein neues Element oder die Liste der Elemente an den Anfang der Liste an.  
+ Fügt ein neues Element oder eine Liste der Elemente an den Anfang der Liste hinzu.  
   
 ```  
 POSITION AddHead(ARG_TYPE newElement);  
@@ -158,10 +158,10 @@ void AddHead(CList* pNewList);
  Das neue Element.  
   
  *pNewList*  
- Ein Zeiger auf eine andere `CList` Liste. Die Elemente in *pNewList* wird zu dieser Liste hinzugefügt werden.  
+ Ein Zeiger auf einen anderen `CList` Liste. Die Elemente im *pNewList* wird zu dieser Liste hinzugefügt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die erste Version der **POSITION** Wert des neu eingefügten Element.  
+ Die erste Version gibt den Wert für die POSITION des neu eingefügten Elements zurück.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Liste kann leer ist, bevor der Vorgang sein.  
@@ -170,7 +170,7 @@ void AddHead(CList* pNewList);
  [!code-cpp[NVC_MFCCollections#36](../../mfc/codesnippet/cpp/clist-class_2.cpp)]  
   
 ##  <a name="addtail"></a>  CList::AddTail  
- Fügt ein neues Element oder die Liste der Elemente an das Ende dieser Liste.  
+ Fügt ein neues Element oder eine Liste von Elementen am Ende dieser Liste an.  
   
 ```  
 POSITION AddTail(ARG_TYPE newElement);  
@@ -185,10 +185,10 @@ void AddTail(CList* pNewList);
  Das Element, das der Liste hinzugefügt werden soll.  
   
  *pNewList*  
- Ein Zeiger auf eine andere `CList` Liste. Die Elemente in *pNewList* wird zu dieser Liste hinzugefügt werden.  
+ Ein Zeiger auf einen anderen `CList` Liste. Die Elemente im *pNewList* wird zu dieser Liste hinzugefügt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die erste Version der **POSITION** Wert des neu eingefügten Element.  
+ Die erste Version gibt den Wert für die POSITION des neu eingefügten Elements zurück.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Liste kann leer ist, bevor der Vorgang sein.  
@@ -197,7 +197,7 @@ void AddTail(CList* pNewList);
  [!code-cpp[NVC_MFCCollections#37](../../mfc/codesnippet/cpp/clist-class_3.cpp)]  
   
 ##  <a name="clist"></a>  CList::CList  
- Erstellt eine leere sortierte Liste.  
+ Erstellt eine leere sortierte Liste an.  
   
 ```  
 CList(INT_PTR nBlockSize = 10);
@@ -208,13 +208,13 @@ CList(INT_PTR nBlockSize = 10);
  Die Granularität der speicherbelegung zum Erweitern der Liste.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Liste wächst in Einheiten von Speicher belegt *nBlockSize* Einträge.  
+ Wenn die Liste wächst, wird in Einheiten von Arbeitsspeicher zugeordnet *nBlockSize* Einträge.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
 ##  <a name="find"></a>  CList::Find  
- Sucht die Liste sequenziell nach dem ersten Element mit dem angegebenen *Suchwert*.  
+ Sucht die Liste sequenziell nach dem ersten Element der angegebenen übereinstimmenden *Suchwert*.  
   
 ```  
 POSITION Find(
@@ -227,13 +227,13 @@ POSITION Find(
  Vorlagenparameter, der den Typ des Listenelements angibt (kann ein Verweis sein).  
   
  *Suchwert*  
- Der Wert in der Liste gefunden werden.  
+ Der Wert, der in der Liste gefunden werden.  
   
  *startAfter*  
- Die Startposition für die Suche. Wenn kein Wert angegeben wird, beginnt die Suche mit dem Head-Element.  
+ Die Startposition für die Suche. Wenn kein Wert angegeben wird, beginnt die Suche, mit dem Head-Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **POSITION** Wert, der für die Iteration oder Abrufen von Objekten Zeiger; verwendet werden kann **NULL** , wenn das Objekt nicht gefunden wird.  
+ Ein Positionswert, der für die Iteration oder Abrufen von Objekten Zeiger verwendet werden kann. NULL, wenn das Objekt nicht gefunden wird.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
@@ -250,16 +250,16 @@ POSITION FindIndex(INT_PTR nIndex) const;
  Der nullbasierte Index des Listenelements gefunden werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **POSITION** Wert, der für die Iteration oder Abrufen von Objekten Zeiger; verwendet werden kann **NULL** Wenn *nIndex* ist negativ oder zu groß.  
+ Ein Positionswert, der für die Iteration oder Abrufen von Objekten Zeiger verwendet werden kann. NULL, wenn *nIndex* ist negativ oder zu groß.  
   
 ### <a name="remarks"></a>Hinweise  
- Er startet einen sequenziellen Scan am Anfang der Liste, und beenden Sie alle in der *n*th-Element.  
+ Es startet eine sequenzielle Überprüfung vom Anfang der Liste aus, beenden Sie alle in der *n*th-Element.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#40](../../mfc/codesnippet/cpp/clist-class_6.cpp)]  
   
 ##  <a name="getat"></a>  CList::GetAt  
- Ruft das Listenelement an einer angegebenen Position ab.  
+ Ruft das List-Element an einer angegebenen Position ab.  
   
 ```  
 TYPE& GetAt(POSITION position);  
@@ -268,40 +268,40 @@ const TYPE& GetAt(POSITION position) const;
   
 ### <a name="parameters"></a>Parameter  
  *TYPE*  
- Template-Parameter, die den Typ des Objekts in der Liste angeben.  
+ Der Vorlagenparameter, den Typ des Objekts in der Liste angibt.  
   
  *Position*  
  Die Position in der Liste des abzurufenden Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Siehe die Beschreibung der Rückgabewert für `GetHead`.  
+ Finden Sie unter der Beschreibung des Rückgabewerts für `GetHead`.  
   
 ### <a name="remarks"></a>Hinweise  
- `GetAt` Gibt das Element (oder einen Verweis auf das Element) mit einer bestimmten Position zugeordnet. Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden, auf eine **POSITION** Wert selbst. Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste.  
+ `GetAt` Gibt das Element (oder einen Verweis auf das Element) mit einer bestimmten Position zugeordnet. Es ist nicht identisch mit einem Index, und Sie können nicht für ein Positionswert selbst. Eine Variable vom Typ POSITION ist ein Schlüssel für die Liste.  
   
- Sie müssen sicherstellen, dass Ihre **POSITION** Wert stellt eine gültige Position in der Liste dar. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
+ Sie müssen sicherstellen, dass Ihre POSITION-Wert eine gültige Position in der Liste darstellt. Wenn er ungültig ist, bestätigt Sie dann die Debugversion der Microsoft Foundation Class-Bibliothek.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CList::GetHeadPosition](#getheadposition).  
   
 ##  <a name="getcount"></a>  CList::GetCount  
- Ruft die Anzahl der Elemente in dieser Liste.  
+ Ruft die Anzahl der Elemente in dieser Liste ab.  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Ganzzahlwert, der die Anzahl der Elemente enthält.  
+ Ein ganzzahliger-Wert, der die Anzahl der Elemente enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Beim Aufrufen dieser Methode werden dieselben Ergebnisse wie beim Generieren der [CList::GetSize](#getsize) Methode.  
+ Das Aufrufen dieser Methode generiert das gleiche Ergebnis wie die [CList::GetSize](#getsize) Methode.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CList::RemoveHead](#removehead).  
   
 ##  <a name="gethead"></a>  CList::GetHead  
- Ruft das Head-Element (oder einen Verweis auf das Anfangselement) dieser Liste ab.  
+ Ruft ab, das Head-Element (oder einen Verweis auf das Anfangselement) dieser Liste.  
   
 ```  
 const TYPE& GetHead() const;  
@@ -311,34 +311,34 @@ TYPE& GetHead();
   
 ### <a name="parameters"></a>Parameter  
  *TYPE*  
- Template-Parameter, die den Typ des Objekts in der Liste angeben.  
+ Der Vorlagenparameter, den Typ des Objekts in der Liste angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn die Liste **const**, `GetHead` gibt eine Kopie des Elements am Anfang der Liste zurück. Dies kann die Funktion nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und die Liste vor Änderungen schützt.  
+ Wenn die Liste **const**, `GetHead` gibt eine Kopie des Elements am Anfang der Liste zurück. Dadurch können die Funktion, die nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und die Liste vor Änderungen schützt.  
   
- Wenn die Liste nicht **const**, `GetHead` gibt einen Verweis auf das Element am Anfang der Liste zurück. Dadurch können die Funktion, die auf beiden Seiten einer zuweisungsanweisung verwendet werden und somit Einträge in der Liste geändert werden kann.  
+ Wenn die Liste nicht **const**, `GetHead` gibt einen Verweis auf das Element am Anfang der Liste zurück. Dadurch können die Funktion, die auf beiden Seiten einer zuweisungsanweisung verwendet werden und dadurch die Einträge in der Liste geändert werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf ist `GetHead`. Wenn die Liste leer ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek. Verwendung [IsEmpty](#isempty) um sicherzustellen, dass die Liste Elemente enthält.  
+ Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf ist `GetHead`. Wenn die Liste leer ist, bestätigt Sie dann die Debugversion der Microsoft Foundation Class-Bibliothek. Verwendung ["isEmpty"](#isempty) um sicherzustellen, dass die Liste Elemente enthält.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#41](../../mfc/codesnippet/cpp/clist-class_7.cpp)]  
   
 ##  <a name="getheadposition"></a>  CList::GetHeadPosition  
- Ruft die Position der das Anfangselement dieser Liste ab.  
+ Ruft die Position der Head-Element dieser Liste ab.  
   
 ```  
 POSITION GetHeadPosition() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **POSITION** Wert, der für die Iteration oder Abrufen von Objekten Zeiger; verwendet werden kann **NULL** , wenn die Liste leer ist.  
+ Ein Positionswert, der für die Iteration oder Abrufen von Objekten Zeiger verwendet werden kann. NULL, wenn die Liste leer ist.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
 ##  <a name="getnext"></a>  CList::GetNext  
- Ruft das Listenelement identifizierten *rposition zurück*, legt dann *rposition zurück* auf die **POSITION** Wert, der den nächsten Eintrag in der Liste.  
+ Ruft das List-Element identifizierte *rposition zurück*, legt dann *rposition zurück* auf den Wert für die POSITION des nächsten Eintrag in der Liste.  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -350,25 +350,25 @@ const TYPE& GetNext(POSITION& rPosition) const;
  Der Vorlagenparameter, der Typ der Elemente in der Liste angibt.  
   
  *rposition zurück*  
- Ein Verweis auf eine **POSITION** von einem vorherigen zurückgegebene Wert `GetNext`, [GetHeadPosition](#getheadposition), oder andere Member-Funktionsaufruf.  
+ Ein Verweis auf eine Positionswert, der von einem vorherigen zurückgegebene `GetNext`, [GetHeadPosition](#getheadposition), oder anderer Aufruf der Memberfunktion.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn die Liste **const**, `GetNext` gibt eine Kopie eines Elements in der Liste zurück. Dies kann die Funktion nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und die Liste vor Änderungen schützt.  
+ Wenn die Liste **const**, `GetNext` gibt eine Kopie eines Elements der Liste zurück. Dadurch können die Funktion, die nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und die Liste vor Änderungen schützt.  
   
- Wenn die Liste nicht **const**, `GetNext` gibt einen Verweis auf ein Element der Liste zurück. Dadurch können die Funktion, die auf beiden Seiten einer zuweisungsanweisung verwendet werden und somit Einträge in der Liste geändert werden kann.  
+ Wenn die Liste nicht **const**, `GetNext` gibt einen Verweis auf ein Element der Liste zurück. Dadurch können die Funktion, die auf beiden Seiten einer zuweisungsanweisung verwendet werden und dadurch die Einträge in der Liste geändert werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können `GetNext` in einer Schleife vorwärts, wenn Sie die erste Position mit einem Aufruf von einrichten `GetHeadPosition` oder `Find`.  
+ Sie können `GetNext` in einer Schleife Vorwärtsiteration, wenn Sie die ursprüngliche Position mit einem Aufruf von einrichten `GetHeadPosition` oder `Find`.  
   
- Sie müssen sicherstellen, dass Ihre **POSITION** Wert stellt eine gültige Position in der Liste dar. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
+ Sie müssen sicherstellen, dass Ihre POSITION-Wert eine gültige Position in der Liste darstellt. Wenn er ungültig ist, bestätigt Sie dann die Debugversion der Microsoft Foundation Class-Bibliothek.  
   
- Wenn das abgerufene Element das letzte Element in der Liste klicken Sie dann der neue Wert des `rPosition` festgelegt ist, um **NULL**.  
+ Ist das abgerufene Element das letzte Element in der Liste aus, klicken Sie dann den neuen Wert des `rPosition` auf NULL festgelegt ist.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#43](../../mfc/codesnippet/cpp/clist-class_9.cpp)]  
   
 ##  <a name="getprev"></a>  CList::GetPrev  
- Ruft das Listenelement identifizierten `rPosition`, dann legt `rPosition` auf die **POSITION** Wert des vorherigen Eintrags in der Liste.  
+ Ruft das List-Element identifizierte `rPosition`, legt dann `rPosition` auf den Wert für die POSITION des vorherigen Eintrags in der Liste.  
   
 ```  
 TYPE& GetPrev(POSITION& rPosition);  
@@ -380,25 +380,25 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  Der Vorlagenparameter, der Typ der Elemente in der Liste angibt.  
   
  *rposition zurück*  
- Ein Verweis auf eine **POSITION** von einem vorherigen zurückgegebene Wert `GetPrev` oder andere Member-Funktionsaufruf.  
+ Ein Verweis auf eine Positionswert, der von einem vorherigen zurückgegebene `GetPrev` oder anderen Aufruf der Memberfunktion.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn die Liste **const**, `GetPrev` gibt eine Kopie des Elements am Anfang der Liste zurück. Dies kann die Funktion nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und die Liste vor Änderungen schützt.  
+ Wenn die Liste **const**, `GetPrev` gibt eine Kopie des Elements am Anfang der Liste zurück. Dadurch können die Funktion, die nur auf der rechten Seite einer zuweisungsanweisung verwendet werden, und die Liste vor Änderungen schützt.  
   
- Wenn die Liste nicht **const**, `GetPrev` gibt einen Verweis auf ein Element der Liste zurück. Dadurch können die Funktion, die auf beiden Seiten einer zuweisungsanweisung verwendet werden und somit Einträge in der Liste geändert werden kann.  
+ Wenn die Liste nicht **const**, `GetPrev` gibt einen Verweis auf ein Element der Liste zurück. Dadurch können die Funktion, die auf beiden Seiten einer zuweisungsanweisung verwendet werden und dadurch die Einträge in der Liste geändert werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können `GetPrev` in einer Schleife umgekehrte Iteration, wenn Sie die erste Position mit einem Aufruf von einrichten `GetTailPosition` oder `Find`.  
+ Sie können `GetPrev` in einer umgekehrte Iteration-Schleife, wenn Sie die ursprüngliche Position mit einem Aufruf von einrichten `GetTailPosition` oder `Find`.  
   
- Sie müssen sicherstellen, dass Ihre **POSITION** Wert stellt eine gültige Position in der Liste dar. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
+ Sie müssen sicherstellen, dass Ihre POSITION-Wert eine gültige Position in der Liste darstellt. Wenn er ungültig ist, bestätigt Sie dann die Debugversion der Microsoft Foundation Class-Bibliothek.  
   
- Wenn das abgerufene Element die erste Aufgabe in der Liste aus, klicken Sie dann der neue Wert des *rposition zurück* festgelegt ist, um **NULL**.  
+ Wenn das abgerufene Element der erste in der Liste aus, klicken Sie dann der neue Wert des ist *rposition zurück* auf NULL festgelegt ist.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
   
 ##  <a name="getsize"></a>  CList::GetSize  
- Gibt die Anzahl der Listenelemente an.  
+ Gibt die Anzahl der Listenelemente zurück.  
   
 ```  
 INT_PTR GetSize() const;  
@@ -408,13 +408,13 @@ INT_PTR GetSize() const;
  Die Anzahl der Elemente in der Liste.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode zum Abrufen der Anzahl von Elementen in der Liste.  Beim Aufrufen dieser Methode werden dieselben Ergebnisse wie beim Generieren der [CList::GetCount](#getcount) Methode.  
+ Rufen Sie diese Methode, um die Anzahl der Elemente in der Liste abzurufen.  Das Aufrufen dieser Methode generiert das gleiche Ergebnis wie die [CList::GetCount](#getcount) Methode.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#45](../../mfc/codesnippet/cpp/clist-class_11.cpp)]  
   
 ##  <a name="gettail"></a>  CList::GetTail  
- Ruft die `CObject` Zeiger, der das Element Ende dieser Liste darstellt.  
+ Ruft die `CObject` Zeiger, der das Ende Element dieser Liste darstellt.  
   
 ```  
 TYPE& GetTail();  
@@ -426,29 +426,29 @@ const TYPE& GetTail() const;
  Der Vorlagenparameter, den Typ der Elemente in der Liste angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Siehe die Beschreibung der Rückgabewert für [GetHead](../../mfc/reference/coblist-class.md#gethead).  
+ Finden Sie unter der Beschreibung des Rückgabewerts für [GetHead](../../mfc/reference/coblist-class.md#gethead).  
   
 ### <a name="remarks"></a>Hinweise  
- Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf ist `GetTail`. Wenn die Liste leer ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek. Verwendung [IsEmpty](../../mfc/reference/coblist-class.md#isempty) um sicherzustellen, dass die Liste Elemente enthält.  
+ Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf ist `GetTail`. Wenn die Liste leer ist, bestätigt Sie dann die Debugversion der Microsoft Foundation Class-Bibliothek. Verwendung ["isEmpty"](../../mfc/reference/coblist-class.md#isempty) um sicherzustellen, dass die Liste Elemente enthält.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#46](../../mfc/codesnippet/cpp/clist-class_12.cpp)]  
   
 ##  <a name="gettailposition"></a>  CList::GetTailPosition  
- Ruft die Position des Elements Ende dieser Liste. **NULL** , wenn die Liste leer ist.  
+ Ruft die Position des Elements Ende dieser Liste. NULL, wenn die Liste leer ist.  
   
 ```  
 POSITION GetTailPosition() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **POSITION** Wert, der für die Iteration oder Abrufen von Objekten Zeiger; verwendet werden kann **NULL** , wenn die Liste leer ist.  
+ Ein Positionswert, der für die Iteration oder Abrufen von Objekten Zeiger verwendet werden kann. NULL, wenn die Liste leer ist.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#47](../../mfc/codesnippet/cpp/clist-class_13.cpp)]  
   
 ##  <a name="insertafter"></a>  CList::InsertAfter  
- Fügt ein Element zu dieser Liste nach dem Element an der angegebenen Position.  
+ Fügt ein Element zu dieser Liste nach dem Element an der angegebenen Position an.  
   
 ```  
 POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
@@ -456,7 +456,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>Parameter  
  *Position*  
- Ein **POSITION** von einem vorherigen zurückgegebene Wert `GetNext`, `GetPrev`, oder `Find` Member-Funktionsaufruf.  
+ Eine Positionswert, der von einem vorherigen zurückgegebene `GetNext`, `GetPrev`, oder `Find` Aufruf der Memberfunktion.  
   
  *ARG_TYPE*  
  Der Vorlagenparameter, der den Typ des Listenelements angibt.  
@@ -465,7 +465,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
  Das Element, das der Liste hinzugefügt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **POSITION** -Wert, der zur Iteration oder zum Abruf von Listenelementen verwendet werden kann.  
+ Eine Positionswert, der zur Iteration oder ein Abruf von Listenelementen verwendet werden kann.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#48](../../mfc/codesnippet/cpp/clist-class_14.cpp)]  
@@ -479,7 +479,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>Parameter  
  *Position*  
- Ein **POSITION** von einem vorherigen zurückgegebene Wert `GetNext`, `GetPrev`, oder `Find` Member-Funktionsaufruf.  
+ Eine Positionswert, der von einem vorherigen zurückgegebene `GetNext`, `GetPrev`, oder `Find` Aufruf der Memberfunktion.  
   
  *ARG_TYPE*  
  Vorlagenparameter, der den Typ des Listenelements angibt (kann ein Verweis sein).  
@@ -488,36 +488,36 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
  Das Element, das der Liste hinzugefügt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **POSITION** -Wert, der zur Iteration oder zum Abruf von Listenelementen verwendet werden kann.  
+ Eine Positionswert, der zur Iteration oder ein Abruf von Listenelementen verwendet werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Bei einem *position* -Wert von **NULL**wird das Element am Anfang der Liste eingefügt.  
+ Wenn *Position* NULL ist, das Element am Anfang der Liste eingefügt wird.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#49](../../mfc/codesnippet/cpp/clist-class_15.cpp)]  
   
 ##  <a name="isempty"></a>  CList::IsEmpty  
- Gibt an, ob dieser Liste keine Elemente enthält.  
+ Gibt an, ob diese Liste keine Elemente enthält.  
   
 ```  
 BOOL IsEmpty() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn diese Liste leer ist; andernfalls 0.  
+ Ungleich NULL, wenn diese Liste ist leer. andernfalls 0.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#50](../../mfc/codesnippet/cpp/clist-class_16.cpp)]  
   
 ##  <a name="removeall"></a>  CList::RemoveAll  
- Entfernt alle Elemente aus dieser Liste aus, und gibt den zugeordneten Arbeitsspeicher frei.  
+ Entfernt alle Elemente aus dieser Liste, und den zugeordneten Arbeitsspeicher frei.  
   
 ```  
 void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie bereits die Liste leer ist, wird kein Fehler generiert.  
+ Es wird kein Fehler erzeugt, wenn die Liste noch leer ist.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#51](../../mfc/codesnippet/cpp/clist-class_17.cpp)]  
@@ -531,16 +531,16 @@ void RemoveAt(POSITION position);
   
 ### <a name="parameters"></a>Parameter  
  *Position*  
- Die Position des Elements aus der Liste entfernt werden soll.  
+ Die Position des Elements, das aus der Liste entfernt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie müssen sicherstellen, dass Ihre **POSITION** Wert stellt eine gültige Position in der Liste dar. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
+ Sie müssen sicherstellen, dass Ihre POSITION-Wert eine gültige Position in der Liste darstellt. Wenn er ungültig ist, bestätigt Sie dann die Debugversion der Microsoft Foundation Class-Bibliothek.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#52](../../mfc/codesnippet/cpp/clist-class_18.cpp)]  
   
 ##  <a name="removehead"></a>  CList::RemoveHead  
- Entfernt das Element am Anfang der Liste aus, und gibt einen Zeiger darauf zurück.  
+ Entfernt das Element vom Anfang der Liste aus, und gibt einen Zeiger darauf zurück.  
   
 ```  
 TYPE RemoveHead();
@@ -551,16 +551,16 @@ TYPE RemoveHead();
  Der Vorlagenparameter, den Typ der Elemente in der Liste angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Element bereits am Anfang der Liste.  
+ Das Element zuvor am Anfang der Liste.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf ist `RemoveHead`. Wenn die Liste leer ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek. Verwendung [IsEmpty](#isempty) um sicherzustellen, dass die Liste Elemente enthält.  
+ Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf ist `RemoveHead`. Wenn die Liste leer ist, bestätigt Sie dann die Debugversion der Microsoft Foundation Class-Bibliothek. Verwendung ["isEmpty"](#isempty) um sicherzustellen, dass die Liste Elemente enthält.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#53](../../mfc/codesnippet/cpp/clist-class_19.cpp)]  
   
 ##  <a name="removetail"></a>  CList::RemoveTail  
- Entfernt das Element, das Ende der Liste aus, und gibt einen Zeiger darauf zurück.  
+ Entfernt das Element aus das Ende der Liste aus, und gibt einen Zeiger darauf zurück.  
   
 ```  
 TYPE RemoveTail();
@@ -574,13 +574,13 @@ TYPE RemoveTail();
  Das Element, das am Ende der Liste wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf ist `RemoveTail`. Wenn die Liste leer ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek. Verwendung [IsEmpty](#isempty) um sicherzustellen, dass die Liste Elemente enthält.  
+ Sie müssen sicherstellen, dass die Liste nicht leer ist, bevor der Aufruf ist `RemoveTail`. Wenn die Liste leer ist, bestätigt Sie dann die Debugversion der Microsoft Foundation Class-Bibliothek. Verwendung ["isEmpty"](#isempty) um sicherzustellen, dass die Liste Elemente enthält.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#54](../../mfc/codesnippet/cpp/clist-class_20.cpp)]  
   
 ##  <a name="setat"></a>  CList::SetAt  
- Eine Variable vom Typ **POSITION** ist ein Schlüssel für die Liste.  
+ Eine Variable vom Typ POSITION ist ein Schlüssel für die Liste.  
   
 ```  
 void SetAt(POSITION pos, ARG_TYPE newElement);
@@ -588,7 +588,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>Parameter  
  *POS*  
- Die **POSITION** des Elements festgelegt werden.  
+ Die POSITION des Elements festgelegt werden.  
   
  *ARG_TYPE*  
  Vorlagenparameter, der den Typ des Listenelements angibt (kann ein Verweis sein).  
@@ -597,9 +597,9 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
  Das Element der Liste hinzugefügt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Es ist nicht identisch mit einem Index, und Sie können nicht ausgeführt werden, auf eine **POSITION** Wert selbst. `SetAt` Schreibt das Element an der angegebenen Position in der Liste an.  
+ Es ist nicht identisch mit einem Index, und Sie können nicht für ein Positionswert selbst. `SetAt` Schreibt das Element in der angegebenen Position in der Liste.  
   
- Sie müssen sicherstellen, dass Ihre **POSITION** Wert stellt eine gültige Position in der Liste dar. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
+ Sie müssen sicherstellen, dass Ihre POSITION-Wert eine gültige Position in der Liste darstellt. Wenn er ungültig ist, bestätigt Sie dann die Debugversion der Microsoft Foundation Class-Bibliothek.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#55](../../mfc/codesnippet/cpp/clist-class_21.cpp)]  

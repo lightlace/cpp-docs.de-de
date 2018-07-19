@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: e0ab9f6cf54393b5c1d58cb00ec9238015b5c5d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b65178b171b8717096eb19206877b033a52d1e44
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848137"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957697"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt;-Operatoren
 
@@ -58,9 +58,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eine komplexe Zahl oder ein Objekt dieses Typs Parameter auf Ungleichheit geprüft werden soll.
+*linken* eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps auf Ungleichheit getestet werden soll.
 
-`right` Eine komplexe Zahl oder ein Objekt dieses Typs Parameter auf Ungleichheit geprüft werden soll.
+*richtige* eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps auf Ungleichheit getestet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -196,9 +196,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste von zwei komplexe Zahlen oder eine Zahl, die den Parametertyp für eine komplexe Zahl ist, werden mit multipliziert, die * Vorgang.
+*linken* die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die multipliziert werden die * Vorgang.
 
-`right` Die zweite von zwei komplexe Zahlen oder eine Zahl, die den Parametertyp für eine komplexe Zahl ist, werden mit multipliziert, die * Vorgang.
+*richtige* die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die multipliziert werden die * Vorgang.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -295,9 +295,9 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste von zwei komplexe Zahlen oder eine Zahl, die den Parametertyp für eine komplexe Zahl ist, werden durch hinzuzufügende, der + -Vorgang.
+*linken* die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die hinzugefügt werden, durch die + -Vorgang.
 
-`right` Die zweite von zwei komplexe Zahlen oder eine Zahl, die den Parametertyp für eine komplexe Zahl ist, werden durch hinzuzufügende, der + -Vorgang.
+*richtige* die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die hinzugefügt werden, durch die + -Vorgang.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -305,7 +305,7 @@ Die komplexe Zahl, die sich aus der Addition der beiden Zahlen ergibt, deren Wer
 
 ### <a name="remarks"></a>Hinweise
 
-Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können. Der unäre Operator gibt `left`.
+Die Operation wird überladen, damit einfache arithmetische Operationen ohne Konvertierung der Daten in ein bestimmtes Format ausgeführt werden können. Der unäre Operator gibt *linken*.
 
 ### <a name="example"></a>Beispiel
 
@@ -433,13 +433,13 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste von zwei komplexe Zahlen oder eine Zahl, die den Parametertyp für eine komplexe Zahl ist, werden vom - Vorgang subtrahiert werden.
+*linken* die erste von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem --Operator subtrahiert werden soll.
 
-`right` Die zweite von zwei komplexe Zahlen oder eine Zahl, die den Parametertyp für eine komplexe Zahl ist, werden vom - Vorgang subtrahiert werden.
+*richtige* die zweite von zwei komplexen Zahlen oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die mit dem --Operator subtrahiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die komplexe Zahl, die sich aus der Subtraktion von `right` von `left`. Die Werte dieser beiden Zahlen werden durch die Parametereingaben festgelegt.
+Die komplexe Zahl, die sich aus der Subtraktion ergibt *rechten* aus *linken*, die zwei Zahlen, deren Werte durch die Parametereingaben angegeben werden.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -570,9 +570,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eine komplexe Zahl oder eine Zahl, die den Parametertyp für eine komplexe Zahl ist, werden der Zähler zu dividierende Nenner mit, der / Vorgang.
+*linken* eine komplexe Zahl oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die dem Zähler entspricht, durch den Nenner mit geteilt werden, ist die / Vorgang.
 
-`right` Eine komplexe Zahl oder eine Zahl, die den Parametertyp für eine komplexe Zahl ist, werden von den Nenner auf verwendet werden, um die Zähler mit Teilen, der / Vorgang.
+*richtige* eine komplexe Zahl oder eine Zahl mit dem Parametertyp einer komplexen Zahl, die den Nenner auf verwendet werden, um den Zähler mit Teilen der / Vorgang.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -678,13 +678,13 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parameter
 
-`Ostr` Der Ausgabestream, in dem die komplexe Zahl eingegeben wird.
+*Ostr* den Ausgabestream, in denen die komplexe Zahl eingegeben wird.
 
-`right` Die komplexe Zahl, die in den Ausgabestream eingegeben werden
+*richtige* die komplexe Zahl, die in den Ausgabestream eingegeben werden
 
 ### <a name="return-value"></a>Rückgabewert
 
-Schreibt den Wert der angegebenen komplexen Zahl `Ostr` in einem kartesischen Format: ( *reeller Teil, imaginärer Teil* ).
+Schreibt den Wert der angegebenen komplexen Zahl, die *Ostr* in einem kartesischen Format: ( *Realteil, Imaginärteil* ).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -749,9 +749,9 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eine komplexe Zahl oder ein Objekt dieses Typs Parameter auf Ungleichheit geprüft werden soll.
+*linken* eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps auf Ungleichheit getestet werden soll.
 
-`right` Eine komplexe Zahl oder ein Objekt dieses Typs Parameter auf Ungleichheit geprüft werden soll.
+*richtige* eine komplexe Zahl oder ein Objekt des zugehörigen Parametertyps auf Ungleichheit getestet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -877,13 +877,13 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parameter
 
-`Istr` Der Eingabedatenstrom, aus denen die komplexe Zahl extrahiert wird.
+*ISTR* den Eingabestream aus dem die komplexe Zahl extrahiert wird.
 
-`right` Die komplexe Zahl, die aus dem Eingabestream extrahiert wird.
+*richtige* die komplexe Zahl, die aus dem Eingabestream extrahiert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Liest den Wert der angegebenen komplexen Zahl von `Istr` und gibt ihn in `right`.
+Liest den Wert der angegebenen komplexen Zahl von *Istr* und gibt ihn in *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a20e9c1df241feb8dd7f16891f1e2a67068f772
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1150de3c94f8a656d46d54b673cb2d08dc05a7be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840393"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959325"
 ---
 # <a name="chartraitsltchargt-struct"></a>char_traits&lt;char&gt;-Struktur
 
-Eine Struktur, die eine Spezialisierung der Vorlagenstruktur **char_traits\<CharType>** für ein Element des Typs `char` ist.
+Eine Struktur, die eine Spezialisierung der Vorlagenstruktur **Char_traits\<CharType >** auf ein Element vom Typ **Char**.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ struct char_traits<char>;
 
 ## <a name="remarks"></a>Hinweise
 
-Dank der Spezialisierung kann die Struktur Bibliotheksfunktionen nutzen, die Objekte dieses Typs `char` bearbeiten.
+Dank der Spezialisierung kann die Struktur Bibliotheksfunktionen nutzen, die Objekte dieses Typs zu bearbeiten **Char**.
 
 ## <a name="example"></a>Beispiel
 

@@ -1,5 +1,5 @@
 ---
-title: CReBar-Klasse | Microsoft Docs
+title: CReBar-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ea2a1047864c19be3f5bbd6c303b4b00fb132dc
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 1acc2d5918bea040e1f004e8a1d11ceee3146f89
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078766"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848618"
 ---
 # <a name="crebar-class"></a>CReBar-Klasse
 Eine Steuerleiste, die Layout-, Persistenz- und Zustandsinformationen für Grundleisten-Steuerelemente bereitstellt.  
@@ -44,22 +44,22 @@ class CReBar : public CControlBar
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CReBar::AddBar](#addbar)|Eine grundleiste hinzugefügt ein Band.|  
+|[CReBar::AddBar](#addbar)|Eine grundleiste wird ein Band hinzugefügt.|  
 |[CReBar::Create](#create)|Erstellt das Grundleistensteuerelement, und fügt es der `CReBar` Objekt.|  
-|[CReBar:: GetReBarCtrl](#getrebarctrl)|Ermöglicht den direkten Zugriff auf die zugrunde liegenden Standardsteuerelements.|  
+|[CReBar:: GetReBarCtrl](#getrebarctrl)|Ermöglicht den direkten Zugriff auf die zugrunde liegende allgemeine-Steuerelement.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Grundleisten-Objekt kann eine Vielzahl von untergeordnete Fenster, in der Regel andere Steuerelemente, einschließlich Bearbeitungsfelder, Symbolleisten und Listenfelder enthalten. Ein Grundleisten-Objekt kann über eine angegebene Bitmap zugehöriges untergeordnetes Fenster anzuzeigen. Ihre Anwendung kann automatisch die Größe grundleiste oder des Benutzers kann manuell grundleiste durch Klicken oder ziehen die Ziehpunktleiste.  
+ Einem Grundleisten-Objekt kann es sich um eine Vielzahl untergeordneter Fenster, in der Regel andere Steuerelemente, einschließlich Bearbeitungsfelder, Symbolleisten und Listenfelder enthalten. Zugehöriges untergeordnetes Fenster kann von einem Grundleisten-Objekt über eine angegebene Bitmap anzeigen. Ihre Anwendung kann automatisch die Größe der Infoleiste oder des Benutzers kann manuell grundleiste durch Klicken oder ziehen die Ziehpunktleiste.  
   
  ![Beispiel eines grundleistenmenüs](../../mfc/reference/media/vc4sc61.gif "vc4sc61")  
   
 ## <a name="rebar-control"></a>Grundleisten-Steuerelement  
- Ein Grundleisten-Objekt verhält sich ähnlich wie ein Symbolleistenobjekt. Eine grundleiste mithilfe des Mechanismus klicken und ziehen die Bändern Größe. Einem Grundleisten-Steuerelement kann eine oder mehrere Bänder für jedes Band an, dass eine beliebige Kombination von ziehelements-Leiste, eine Bitmap, einer textbezeichnung und ein untergeordnetes Fenster enthalten. Allerdings darf keine Bänder mehr als ein untergeordnetes Fenster enthalten.  
+ Einem Grundleisten-Objekt verhält sich ähnlich wie ein Symbolleistenobjekt. Eine grundleiste verwendet den klicken und ziehen-Mechanismus zum Ändern der Größe der Bänder an. Einem Grundleisten-Steuerelement kann eine oder mehrere Bänder, die für jedes Band müssen eine beliebige Kombination von eine Ziehpunktleiste, eine Bitmap, einer textbezeichnung und einem untergeordneten Fenster enthalten. Allerdings darf keine Bänder mehr als ein untergeordnetes Fenster enthalten.  
   
- `CReBar` verwendet die [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) Klasse, um seine Implementierung bereitstellen. Sie erreichen das Grundleistensteuerelement über [GetReBarCtrl](#getrebarctrl) Anpassungsoptionen für das Steuerelement nutzen. Weitere Informationen zu Rebar-Steuerelemente, finden Sie unter `CReBarCtrl`. Weitere Informationen zur Verwendung von Rebar-Steuerelemente finden Sie unter [Verwenden von CReBarCtrl](../../mfc/using-crebarctrl.md).  
+ `CReBar` verwendet die [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) Klasse, um die Implementierung bereitzustellen. Sie können über das Grundleistensteuerelement zugreifen [GetReBarCtrl](#getrebarctrl) profitieren von Optionen zur Anpassung des Steuerelements. Weitere Informationen zu Grundleisten-Steuerelemente, finden Sie unter `CReBarCtrl`. Weitere Informationen zur Verwendung von Grundleisten-Steuerelemente finden Sie unter [Verwenden von CReBarCtrl](../../mfc/using-crebarctrl.md).  
   
 > [!CAUTION]
->  MFC-Steuerleiste Andocken unterstützt Grundleisten und Grundleisten-Steuerelement-Objekte nicht. Wenn `CRebar::EnableDocking` aufgerufen wird, wird die Anwendung implementiert.  
+>  Infoleiste und Grundleisten-Steuerelement-Objekte unterstützen keine MFC andockbare Steuerleiste. Wenn `CRebar::EnableDocking` aufgerufen wird, wird Ihre Anwendung bestätigt.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -96,22 +96,22 @@ BOOL AddBar(
   
 ### <a name="parameters"></a>Parameter  
  *pBar*  
- Ein Zeiger auf ein `CWnd` Objekt, das das untergeordnete Fenster in grundleiste eingefügt werden soll. Das referenzierte Objekt benötigen eine **WS_CHILD**.  
+ Ein Zeiger auf eine `CWnd` Objekt, das das untergeordnete Fenster in der Infoleiste eingefügt werden soll. Das referenzierte Objekt muss es sich um eine WS_CHILD verfügen.  
   
  *lpszText*  
- Ein Zeiger auf eine Zeichenfolge, enthält des Texts auf der grundleiste angezeigt werden. **NULL** standardmäßig. Der Text in *LpszText* ist nicht Teil des untergeordneten Fensters; er befindet sich auf die Infoleiste selbst.  
+ Ein Zeiger auf eine Zeichenfolge, die mit dem Text auf der grundleiste angezeigt werden. Standardmäßig NULL. Der Text im *LpszText* ist nicht Teil des untergeordneten Fensters; er befindet sich auf die Infoleiste selbst.  
   
  *pbmp*  
- Ein Zeiger auf eine `CBitmap` -Objekt, das Grundleisten-Hintergrund angezeigt werden. **NULL** standardmäßig.  
+ Ein Zeiger auf eine `CBitmap` Objekte über die Hintergründe grundleiste angezeigt werden. Standardmäßig NULL.  
   
  *dwStyle*  
- Ein `DWORD` , enthält die Formatvorlage, die für die Infoleiste gelten. Finden Sie unter der **fStyle** funktionsbeschreibung in der Win32-Struktur [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) für eine vollständige Liste der Stile Band.  
+ Ein DWORD, das den Stil enthält grundleiste zuweisen. Finden Sie unter den `fStyle` funktionsbeschreibung in der Struktur Win32 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) für eine vollständige Liste der Stile von Band.  
   
  *clrFore*  
- Ein **COLORREF** Wert, der die Vordergrundfarbe der Infoleiste darstellt.  
+ Eine COLORREF-Wert, der die Vordergrundfarbe der Infoleiste darstellt.  
   
  *clrBack*  
- Ein **COLORREF** Wert, der die Hintergrundfarbe der Infoleiste darstellt.  
+ Eine COLORREF-Wert, der die Hintergrundfarbe der Infoleiste darstellt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -135,10 +135,10 @@ virtual BOOL Create(
  Zeiger auf die `CWnd` -Objekt, dessen Windows-Fenster das übergeordnete Element der Statusleiste ist. Normalerweise Ihr Rahmenfenster.  
   
  *dwCtrlStyle*  
- Format des Grundleisten-Steuerelements. Standardmäßig **RBS_BANDBORDERS**, welche zeigt eingrenzen Zeilen ein, um benachbarte Bänder innerhalb der Grundleisten-Steuerelement zu trennen. Finden Sie unter [Grundleisten-Steuerelementtypen für die](http://msdn.microsoft.com/library/windows/desktop/bb774377) in das Windows SDK für eine Liste der Formate.  
+ Das Format des Grundleisten-Steuerelement. In der Standardeinstellung RBS_BANDBORDERS, die schmale Linien zum Trennen der benachbarte Bänder innerhalb des Infoleistensteuerelements anzeigt. Finden Sie unter [Stile für Grundleisten-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb774377) im Windows SDK für eine Liste der Formate.  
   
  *dwStyle*  
- Das Grundleisten-Fensterstile.  
+ Die Infoleiste Window-Stile.  
   
  *nID*  
  Die Infoleiste untergeordneten Fensters-ID.  
@@ -150,7 +150,7 @@ virtual BOOL Create(
   Siehe das Beispiel für [CReBar::AddBar](#addbar).  
   
 ##  <a name="getrebarctrl"></a>  CReBar:: GetReBarCtrl  
- Diese Memberfunktion ermöglicht den direkten Zugriff auf die zugrunde liegenden Standardsteuerelements.  
+ Diese Memberfunktion ermöglicht den direkten Zugriff auf die zugrunde liegende allgemeine-Steuerelement.  
   
 ```  
 CReBarCtrl& GetReBarCtrl() const;  
@@ -160,9 +160,9 @@ CReBarCtrl& GetReBarCtrl() const;
  Ein Verweis auf eine [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Memberfunktion, um die Funktionalität von der allgemeinen Windows Grundleisten-Steuerelement an der Anpassung von Ihrem Grundleisten nutzen. Beim Aufruf `GetReBarCtrl`, wird ein Verweis-Objekt, das `CReBarCtrl` Objekt, damit die beiden Satz von Memberfunktionen verwendet werden kann.  
+ Rufen Sie diese Memberfunktion, um die Funktionalität der allgemeinen Windows Grundleisten-Steuerelement bei der Anpassung Ihrer Infoleiste nutzen. Beim Aufruf `GetReBarCtrl`, wird ein Verweis-Objekt, das `CReBarCtrl` Objekt, damit Sie beide Sätze von Memberfunktionen verwenden können.  
   
- Weitere Informationen zur Verwendung von `CReBarCtrl` zum Anpassen Ihrer Grundleisten finden Sie unter [Verwenden von CReBarCtrl](../../mfc/using-crebarctrl.md).  
+ Weitere Informationen zur Verwendung von `CReBarCtrl` zum Anpassen Ihrer Infoleiste finden Sie unter [Verwenden von CReBarCtrl](../../mfc/using-crebarctrl.md).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CReBarCtrl#2](../../mfc/reference/codesnippet/cpp/crebar-class_2.cpp)]  

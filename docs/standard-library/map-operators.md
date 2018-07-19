@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 60813074eb112836295a72b1c11a24a8c9800313
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22d8d5d348dc4bf4bd50ee56db360e4490503b78
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861164"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959257"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt;-Operatoren
 
@@ -48,9 +48,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt des Typs **Zuordnung**.
+*linken* ein Objekt des Typs `map`.
 
-`right` Ein Objekt des Typs **Zuordnung**.
+*richtige* ein Objekt des Typs `map`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -110,9 +110,9 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt des Typs **Zuordnung**.
+*linken* ein Objekt des Typs `map`.
 
-`right` Ein Objekt des Typs **Zuordnung**.
+*richtige* ein Objekt des Typs `map`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -172,9 +172,9 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt des Typs **Zuordnung**.
+*linken* ein Objekt des Typs `map`.
 
-`right` Ein Objekt des Typs **Zuordnung**.
+*richtige* ein Objekt des Typs `map`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -237,9 +237,9 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt des Typs **Zuordnung**.
+*linken* ein Objekt des Typs `map`.
 
-`right` Ein Objekt des Typs **Zuordnung**.
+*richtige* ein Objekt des Typs `map`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -299,9 +299,9 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt des Typs **Zuordnung**.
+*linken* ein Objekt des Typs `map`.
 
-`right` Ein Objekt des Typs **Zuordnung**.
+*richtige* ein Objekt des Typs `map`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -361,9 +361,9 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt des Typs **Zuordnung**.
+*linken* ein Objekt des Typs `map`.
 
-`right` Ein Objekt des Typs **Zuordnung**.
+*richtige* ein Objekt des Typs `map`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -426,9 +426,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt vom Typ `multimap`.
+*linken* ein Objekt des Typs `multimap`.
 
-`right` Ein Objekt vom Typ `multimap`.
+*richtige* ein Objekt des Typs `multimap`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -488,9 +488,9 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt vom Typ `multimap`.
+*linken* ein Objekt des Typs `multimap`.
 
-`right` Ein Objekt vom Typ `multimap`.
+*richtige* ein Objekt des Typs `multimap`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -550,9 +550,9 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt vom Typ `multimap`.
+*linken* ein Objekt des Typs `multimap`.
 
-`right` Ein Objekt vom Typ `multimap`.
+*richtige* ein Objekt des Typs `multimap`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -615,9 +615,9 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt vom Typ `multimap`.
+*linken* ein Objekt des Typs `multimap`.
 
-`right` Ein Objekt vom Typ `multimap`.
+*richtige* ein Objekt des Typs `multimap`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -677,9 +677,9 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt vom Typ `multimap`.
+*linken* ein Objekt des Typs `multimap`.
 
-`right` Ein Objekt vom Typ `multimap`.
+*richtige* ein Objekt des Typs `multimap`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -739,9 +739,9 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt vom Typ `multimap`.
+*linken* ein Objekt des Typs `multimap`.
 
-`right` Ein Objekt vom Typ `multimap`.
+*richtige* ein Objekt des Typs `multimap`.
 
 ### <a name="return-value"></a>Rückgabewert
 

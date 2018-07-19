@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a410dae35771d89b9d9ae72c8221501f051d10e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f58622230541b0eedf4e7c73d12e81c36ea70fc9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846570"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953474"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-Enthalten die `iostreams` Standardheader \<Iomanip > um verschiedene Manipulatoren zu definieren, da jedes akzeptieren ein einzelnes Argument.
+Enthalten die `iostreams` Standardheader \<Iomanip > um verschiedene Manipulatoren zu definieren, die jeweils ein einzelnes Argument nutzen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ Enthalten die `iostreams` Standardheader \<Iomanip > um verschiedene Manipulator
 
 ## <a name="remarks"></a>Hinweise
 
-Jeder dieser Manipulatoren gibt einen nicht angegebenen Typ zurück, die **T1** bis **T10** genannt werden. Diese überladen `basic_istream`\<**Elem**, **Tr**>`::`[operator>>](../standard-library/istream-operators.md#op_gt_gt) und `basic_ostream`\<**Elem**, **Tr**>`::`[operator<<](../standard-library/ostream-operators.md#op_lt_lt).
+Jeder dieser Manipulatoren gibt einen nicht angegebenen Typ, der Namen `T1` über `T10`, methodenüberladungen, die beide `basic_istream` \< **Elem**, **Tr** > `::` [Operator >>](../standard-library/istream-operators.md#op_gt_gt) und `basic_ostream` \< **Elem**, **Tr** > `::` [Operator <<](../standard-library/ostream-operators.md#op_lt_lt).
 
 ### <a name="manipulators"></a>Manipulatoren
 

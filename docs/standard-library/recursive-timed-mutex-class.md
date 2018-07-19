@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b4a87cadedb11368d7803231b96d0f7a5acfb99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bfabbd938f2258f7e1a75fd77eaac7b2cd23b2b8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863711"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957622"
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex-Klasse
 
@@ -112,11 +112,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Methode den Besitz von `mutex` erfolgreich erhalten hat oder wenn der aufrufende Thread bereits im Besitz der `mutex` ist; andernfalls `false`.
+**"true"** , wenn die Methode erfolgreich Besitzrechte erhalten die `mutex` oder wenn der aufrufende Thread bereits im Besitz der `mutex`ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der aufrufende Thread bereits im Besitz von `mutex` ist, gibt die Funktion sofort `true` zurück, und die vorherige Sperre bleibt in Kraft.
+Wenn der aufrufende Thread bereits im Besitz der `mutex`, die Funktion sofort zurück **"true"**, und die vorherige Sperre bleibt in Kraft.
 
 ## <a name="try_lock_for"></a> try_lock_for
 
@@ -129,15 +129,15 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parameter
 
-`Rel_time` Ein [chrono](../standard-library/duration-class.md) Objekt, das die maximale Zeitdauer, die die Methode versucht angibt, den Besitz von gelangen die `mutex`.
+*Rel_time* ein [chrono:: Duration](../standard-library/duration-class.md) Objekt, das die maximale Zeitspanne, die die Methode versucht angibt, den Besitz von der `mutex`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Methode erfolgreich Besitzrechte von `mutex` erhält, oder wenn der aufrufende Thread bereits im Besitz der `mutex` ist; andernfalls `false`.
+**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex` oder wenn der aufrufende Thread bereits im Besitz der `mutex`ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der aufrufende Thread bereits im Besitz von `mutex` ist, gibt die Methode sofort `true` zurück, und die vorherige Sperre bleibt in Kraft.
+Wenn der aufrufende Thread bereits im Besitz der `mutex`, die Methode sofort zurückgegeben **"true"**, und die vorherige Sperre bleibt in Kraft.
 
 ## <a name="try_lock_until"></a> try_lock_until
 
@@ -152,15 +152,15 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parameter
 
-`Abs_time` Zeitpunkt, die den Schwellenwert angibt, nach dem die Methode nicht mehr versucht, den Besitz von gelangen, die `mutex`.
+*Abs_time* einem bestimmten Zeitpunkt an, die den Schwellenwert angibt, nach dem die Methode nicht mehr versucht, den Besitz von, der `mutex`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Methode erfolgreich Besitzrechte von `mutex` erhält, oder wenn der aufrufende Thread bereits im Besitz der `mutex` ist; andernfalls `false`.
+**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex` oder wenn der aufrufende Thread bereits im Besitz der `mutex`ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der aufrufende Thread bereits im Besitz von `mutex` ist, gibt die Methode sofort `true` zurück, und die vorherige Sperre bleibt in Kraft.
+Wenn der aufrufende Thread bereits im Besitz der `mutex`, die Methode sofort zurückgegeben **"true"**, und die vorherige Sperre bleibt in Kraft.
 
 ## <a name="unlock"></a> unlock
 

@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ffc59d3425f403fb1dca43f70876cfbfb5d3dd9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861960"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954889"
 ---
 # <a name="messages-class"></a>messages-Klasse
 
@@ -54,7 +54,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parameter
 
-`CharType` Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
+*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -114,7 +114,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parameter
 
-`_Catval` Der Katalog, die geschlossen werden.
+*_Catval* das zu schließende Katalog.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -130,11 +130,11 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parameter
 
-`_Catval` Der Katalog, die geschlossen werden.
+*_Catval* das zu schließende Katalog.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Memberfunktion schließt den Meldungskatalog `_Catval`, der durch einen früheren Aufruf an [do_open](#do_open) geöffnet worden sein muss.
+Die geschützte Memberfunktion schließt den meldungskatalog *_Catval*, die geöffnet worden sein muss durch einen früheren Aufruf von [Do_open](#do_open).
 
 *_Catval* muss aus einem vorher geöffneten Katalog abgerufen werden, der nicht geschlossen wurde.
 
@@ -156,21 +156,21 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parameter
 
-`_Catval` Die ID-Wert, den meldungskatalog zu durchsuchenden angeben.
+*_Catval* den ID-Wert, der den meldungskatalog zu durchsuchenden angeben.
 
-`_Set` Identifiziert die erste verwendet, um eine Nachricht in einem Katalog Nachricht gesucht werden soll.
+*_Nicht* der erste identifizierte zum finden einer Meldung in einem meldungskatalog verwendet.
 
-`_Message` Die zweite verwendet, um eine Nachricht in einem Katalog Nachricht gesucht werden soll.
+*_Nachricht* identifiziert die zweite zum finden einer Meldung in einem meldungskatalog verwendet.
 
-`_Dfault` Die Zeichenfolge, die bei einem Fehler zurückgegeben werden.
+*_Dfault* Zeichenfolge, die bei einem Fehler zurückgegeben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Er gibt bei einem Fehler eine Kopie von `_Dfault` zurück. Andernfalls gibt er eine Kopie einer angegebenen Meldungssequenz zurück.
+Es gibt eine Kopie des *_Dfault* bei einem Fehler. Andernfalls gibt er eine Kopie einer angegebenen Meldungssequenz zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Memberfunktion versucht eine Meldungssequenz auf dem Meldungskatalog `_Catval` abzurufen. Dabei verwendet sie möglicherweise `_Set`, `_Message` und `_Dfault`.
+Die geschützte Memberfunktion versucht eine meldungssequenz auf dem meldungskatalog abrufen *_Catval*. Umständen verwenden *fe_stgelegte*, *_nachricht*, und *_Dfault* auf diese Weise.
 
 ### <a name="example"></a>Beispiel
 
@@ -188,9 +188,9 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parameter
 
-`_Catname` Der Name des Katalogs ein, der gesucht werden soll.
+*_Catname* der Name des Katalogs ein, der gesucht werden soll.
 
-`_Loc` Das Gebietsschema, die im Katalog gesucht wird.
+*_Loc* das Gebietsschema, die im Katalog gesucht wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -198,7 +198,7 @@ Er gibt einen Wert zurück, der bei einem Fehler kleiner als null ist. Andernfal
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Memberfunktion versucht einen Meldungskatalog mit dem Namen `_Catname` aufzurufen. Dabei verwendet sie möglicherweise das Gebietsschema `_Loc`
+Die geschützte Memberfunktion versucht einen meldungskatalog, dessen Name *_Catname*. Möglicherweise erleichtern des Gebietsschemas verwenden *_Loc* auf diese Weise
 
 Der Rückgabewert sollte als Argument für einen späteren Aufruf an [close](#close) verwendet werden.
 
@@ -220,17 +220,17 @@ string_type get(
 
 ### <a name="parameters"></a>Parameter
 
-`_Catval` Die ID-Wert, den meldungskatalog zu durchsuchenden angeben.
+*_Catval* den ID-Wert, der den meldungskatalog zu durchsuchenden angeben.
 
-`_Set` Identifiziert die erste verwendet, um eine Nachricht in einem Katalog Nachricht gesucht werden soll.
+*_Nicht* der erste identifizierte zum finden einer Meldung in einem meldungskatalog verwendet.
 
-`_Message` Die zweite verwendet, um eine Nachricht in einem Katalog Nachricht gesucht werden soll.
+*_Nachricht* identifiziert die zweite zum finden einer Meldung in einem meldungskatalog verwendet.
 
-`_Dfault` Die Zeichenfolge, die bei einem Fehler zurückgegeben werden.
+*_Dfault* Zeichenfolge, die bei einem Fehler zurückgegeben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Er gibt bei einem Fehler eine Kopie von `_Dfault` zurück. Andernfalls gibt er eine Kopie einer angegebenen Meldungssequenz zurück.
+Es gibt eine Kopie des *_Dfault* bei einem Fehler. Andernfalls gibt er eine Kopie einer angegebenen Meldungssequenz zurück.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -251,13 +251,13 @@ protected: messages(
 
 ### <a name="parameters"></a>Parameter
 
-`_Refs` Integer-Wert verwendet, um den Typ der Verwaltung des Arbeitsspeichers für das Objekt angeben.
+*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
 
-`_Locname` Der Name des Gebietsschemas.
+*_Locname* den Namen des Gebietsschemas.
 
 ### <a name="remarks"></a>Hinweise
 
-Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:
+Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
 - 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
 
@@ -281,9 +281,9 @@ catalog open(
 
 ### <a name="parameters"></a>Parameter
 
-`_Catname` Der Name des Katalogs ein, der gesucht werden soll.
+*_Catname* der Name des Katalogs ein, der gesucht werden soll.
 
-`_Loc` Das Gebietsschema, die im Katalog gesucht wird.
+*_Loc* das Gebietsschema, die im Katalog gesucht wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -295,7 +295,7 @@ Die Memberfunktion gibt [do_open](#do_open)(`_Catname`,`_Loc`) zurück.
 
 ## <a name="string_type"></a> messages::string_type
 
-Ein Typ, der eine Zeichenfolge vom Typ `basic_string` beschreibt, die Zeichen vom Typ **CharType** enthält.
+Ein Typ, der eine Zeichenfolge vom Typ `basic_string` beschreibt, die Zeichen vom Typ `CharType` enthält.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;

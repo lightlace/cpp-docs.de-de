@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c63aa54675bd0b1d5a52a1c0a9d80a73f53290
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 65ac9dc44da5126673ee1f0699f5a5dd9dcb87e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842819"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960780"
 ---
 # <a name="iscopyassignable-class"></a>is_copy_assignable-Klasse
 
@@ -36,11 +36,11 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn der `Ty`-Typ eine Klasse ist, die einen Kopierzuweisungsoperator aufweist; andernfalls „false“. Entspricht is_assignable\<Ty&, const Ty&>.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist eine Klasse, die ein Kopierzuweisungsoperator verwendet, andernfalls er false enthält. Entspricht is_assignable\<Ty&, const Ty&>.
 
 ## <a name="requirements"></a>Anforderungen
 

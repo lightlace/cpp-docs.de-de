@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f470f07c59860118b682784dca6c83587ee87b04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ef542ea54c0fc570443fa07908968ffa3398232
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844106"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953783"
 ---
 # <a name="isfunction-class"></a>is_function-Klasse
 
@@ -37,11 +37,11 @@ struct is_function;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist "true", wenn der `Ty`-Typ ein Funktionstyp ist; andernfalls "false".
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ein Funktionstyp ist, andernfalls er false enthält.
 
 ## <a name="example"></a>Beispiel
 

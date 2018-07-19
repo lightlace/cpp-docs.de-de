@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5442888e8e370892add687c21132e397ae683ac8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861502"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954915"
 ---
 # <a name="queue-class"></a>queue-Klasse
 
@@ -52,17 +52,17 @@ class queue
 
 ### <a name="parameters"></a>Parameter
 
-*Typ* Elementdatentyp in der Warteschlange gespeichert werden
+*Typ* die Datentyp der Elemente in der Warteschlange gespeichert werden
 
-`Container` Der Typ des zugrunde liegenden Container verwendet, um die Warteschlange zu implementieren.
+*Container* den Typ des zugrunde liegenden Container verwendet, um die Warteschlange zu implementieren.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Elemente der Klasse **Typ**, die im ersten Vorlagenparameter eines Warteschlangenobjekts festgelegt sind, sind gleichbedeutend mit [value_type](#value_type) und müssen mit dem Elementtyp in der zugrunde liegenden Containerklasse **Container** übereinstimmen, der im zweiten Vorlagenparameter festgelegt ist. Der **Typ** muss zuweisbar sein, damit es möglich ist, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.
+Die Elemente der Klasse `Type` , die im ersten Vorlagenparameter eines Warteschlangenobjekts sind, sind gleichbedeutend mit [Value_type](#value_type) und muss mit dem Typ des Elements in der zugrunde liegenden Containerklasse `Container` vorgesehenen durch die zweiten Vorlagenparameter. Die `Type` muss zuweisbar sein, damit, dass es möglich, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.
 
-Geeignete zugrunde liegende Containerklassen für die Warteschlange sind [Doppelschlange](../standard-library/deque-class.md) und [Liste](../standard-library/list-class.md) oder ein beliebiger Sequenzcontainer, der die Vorgänge von `front`, **Rückseite**, `push_back` und `pop_front` unterstützt. Die zugrunde liegende Containerklasse wird im Containeradapter gekapselt, der nur den begrenzten Satz der Memberfunktionen des Sequenzcontainers als öffentliche Schnittstelle verfügbar macht.
+Geeignete zugrunde liegende Containerklassen für die Warteschlange sind [doppelschlange](../standard-library/deque-class.md) und [Liste](../standard-library/list-class.md), oder ein beliebiger sequenzcontainer, die den Betrieb unterstützt `front`, `back`, `push_back`, und `pop_front`. Die zugrunde liegende Containerklasse wird im Containeradapter gekapselt, der nur den begrenzten Satz der Memberfunktionen des Sequenzcontainers als öffentliche Schnittstelle verfügbar macht.
 
-Die Warteschlangenobjekte sind ausschließlich dann auf Gleichheit vergleichbar, wenn die Elemente der Klasse **Typ** auf Gleichheit vergleichbar sind, und sie sind ausschließlich dann auf kleiner-als vergleichbar, wenn die Elemente der Klasse **Typ** auf kleiner-als vergleichbar sind.
+Die Warteschlangenobjekte sind ausschließlich auf Gleichheit vergleichbar nur, wenn die Elemente der Klasse `Type` auf Gleichheit vergleichbar sind, und sind kleiner-als vergleichbar nur, wenn die Elemente der Klasse `Type` kleiner-als vergleichbar sind.
 
 Es gibt drei Arten von Containeradaptern, die von der C++-Standardbibliothek definiert werden: Stapel, Warteschlangen und Warteschlangen mit hoher Priorität. Jede schränkt die Funktionalität von einigen zugrunde liegenden Containerklassen ein, um eine präzise gesteuerte Oberfläche für eine Standarddatenstruktur anzubieten.
 
@@ -119,7 +119,7 @@ Das letzte Element der Warteschlange. Wenn die Warteschlange leer ist, ist der R
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Rückgabewert von **back** einem `const_reference` zugewiesen wird, kann das Warteschlangenobjekt nicht geändert werden. Wenn der Rückgabewert von **back** einer **Referenz** zugewiesen wird, kann das Warteschlangenobjekt geändert werden.
+Wenn der Rückgabewert von `back` einem `const_reference` zugewiesen wird, kann das Warteschlangenobjekt nicht geändert werden. Wenn der Rückgabewert von `back` zugewiesen ist eine `reference`, kann das Warteschlangenobjekt geändert werden.
 
 Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einer leeren Warteschlange ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) .
 
@@ -229,9 +229,9 @@ Das erste Element der Warteschlange. Wenn die Warteschlange leer ist, ist der R�
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Rückgabewert von `front` einem `const_reference` zugewiesen wird, kann das Warteschlangenobjekt nicht geändert werden. Wenn der Rückgabewert von `front` einer**Referenz** zugewiesen wird, kann das Warteschlangenobjekt geändert werden.
+Wenn der Rückgabewert von `front` einem `const_reference` zugewiesen wird, kann das Warteschlangenobjekt nicht geändert werden. Wenn der Rückgabewert von `front` zugewiesen ist eine `reference`, kann das Warteschlangenobjekt geändert werden.
 
-Die Memberfunktion gibt einen **Verweis** auf das erste Element der kontrollierten Sequenz zurück, das nicht leer sein darf.
+Die Memberfunktion gibt ein `reference` auf das erste Element der kontrollierten Sequenz, die nicht leer sein darf.
 
 Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element in einer leeren Warteschlange ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Überprüfte Iteratoren](../standard-library/checked-iterators.md) .
 
@@ -331,7 +331,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-`val` Das Element in den Hintergrund der Warteschlange hinzugefügt.
+*Val* am Ende der Warteschlange hinzugefügte Element.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -381,7 +381,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Die **const** Container, von denen die erstellte Warteschlange, die Kopie ist.
+*richtige* der **const** Container von denen die erstellte Warteschlange eine Kopie sein soll.
 
 ### <a name="remarks"></a>Hinweise
 

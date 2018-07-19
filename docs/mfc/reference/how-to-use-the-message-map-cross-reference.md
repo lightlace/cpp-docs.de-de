@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden des Meldungszuordnungs-Querverweises | Microsoft Docs'
+title: 'Vorgehensweise: Verwenden des Meldungszuordnungs-Querverweises | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d59d0bfc75f654cd9f8f15ff851ad42a619e271f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf76d8f7bb86bf3325a072df80a45e2f0a3ad985
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338897"
 ---
 # <a name="how-to-use-the-message-map-cross-reference"></a>Gewusst wie: Verwenden des Meldungszuordnungs-Querverweises
-In Einträge, die mit der Bezeichnung \<MemberFxn >, Schreiben Sie eine eigene Memberfunktion für eine abgeleitete [CWnd](../../mfc/reference/cwnd-class.md) Klasse. Geben Sie der Funktion einen beliebigen Namen, den Ihnen gefallen. Andere Funktionen wie `OnActivate`, werden die Memberfunktionen der Klasse `CWnd`. Wenn Sie aufgerufen wird, übergeben sie die Nachricht an die `DefWindowProc` Windows-Funktion. Um die Windows-benachrichtigungsmeldungen zu verarbeiten, überschreiben Sie die entsprechende `CWnd` Funktion in der abgeleiteten Klasse. Ihre Funktion sollte außer Kraft gesetzte-Funktion in Ihrer Basisklasse, mit der Basisklasse aufrufen, und Windows auf die Meldung reagieren.  
+Einträge, die mit der Bezeichnung \<MemberFxn >, Schreiben Sie Ihre eigenen Member-Funktion für eine abgeleitete [CWnd](../../mfc/reference/cwnd-class.md) Klasse. Benennen Sie der Funktion alle gewünschten. Andere Funktionen wie `OnActivate`, werden die Memberfunktionen der Klasse `CWnd`. Wenn Sie aufgerufen wird, übergeben sie die Nachricht an die `DefWindowProc` Windows-Funktion. Um Windows-benachrichtigungsmeldungen zu verarbeiten, überschreiben Sie die entsprechenden `CWnd` -Funktion in der abgeleiteten Klasse. Ihre Funktion sollte die überschriebene Funktion in Ihrer Basisklasse können Sie die Basisklasse aufrufen, und Windows, die auf die Nachricht reagieren.  
   
- Fügen Sie den Funktionsprototyp in allen Fällen, in der `CWnd`-Header der abgeleiteten Klasse, und Code Zuordnungseintrags Nachricht wie dargestellt.  
+ Fügen Sie in allen Fällen den Funktionsprototyp, in der `CWnd`-Header der abgeleiteten Klasse und Code Zuordnungseintrags Nachricht wie gezeigt.  
   
  Die folgenden Begriffe werden verwendet:  
   
 |Begriff|Definition|  
 |----------|----------------|  
-|ID|Alle benutzerdefinierten Menü-Element-ID (**WM_COMMAND** Nachrichten) oder die control-ID (untergeordnete fenstermeldungen Benachrichtigung).|  
-|"Nachricht" und "wNotifyCode schalten"|Der Windows-Meldung IDs gemäß Definition in WINDOWS. H.|  
-|nMessageVariable|Name einer Variablen, die den Rückgabewert enthält die **RegisterWindowMessage registriert** Windows-Funktion.|  
+|ID|Alle benutzerdefinierten Menü-Element-ID (WM_COMMAND-Meldungen) oder die Steuerelement-ID (untergeordnete fenstermeldungen Benachrichtigung).|  
+|"Message" und "wNotifyCode schalten"|Windows message IDs an, wie in WINDOWS definiert. H.|  
+|nMessageVariable|Name einer Variablen, die den Rückgabewert enthält die `RegisterWindowMessage` Windows-Funktion.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Meldungszuordnungen](../../mfc/reference/message-maps-mfc.md)

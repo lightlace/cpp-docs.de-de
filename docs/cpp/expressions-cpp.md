@@ -1,5 +1,5 @@
 ---
-title: Ausdrücke (C++) | Microsoft Docs
+title: Ausdrücke (C++) | Microsoft-Dokumentation
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ada34aae858d8e29b119fa08d363a0c26013567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51da4a44f99c83ba34ec035e77173946d2327fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414588"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953362"
 ---
 # <a name="expressions-c"></a>Ausdrücke (C++)
 In diesem Abschnitt werden C++-Ausdrücke beschrieben. Ausdrücke sind Sequenzen von Operanden und Operatoren, die für einen oder mehrere dieser Zwecke verwendet werden:  
@@ -45,8 +45,6 @@ In diesem Abschnitt werden C++-Ausdrücke beschrieben. Ausdrücke sind Sequenzen
 -   [Conditional operator (Bedingte Operatoren)](../cpp/conditional-operator-q.md)  
   
 -   [Constant expressions (Konstante Ausdrücke)](../cpp/cpp-constant-expressions.md)  
-  
--   [Ausdrücke mit expliziten typkonvertierungen](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)  
   
 -   [Umwandlungsoperatoren](../cpp/casting-operators.md)  
   

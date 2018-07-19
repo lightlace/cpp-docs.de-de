@@ -1,5 +1,5 @@
 ---
-title: Sicherheitsklassen (ATL) | Microsoft Docs
+title: Sicherheitsklassen (ATL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,37 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3ba3675196e0e6e3564beeca5bc76a57e8903a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5fecc4865d0138a08ba7dd264e95d3cc9809ff7b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362338"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848644"
 ---
 # <a name="security-classes"></a>Sicherheitsklassen
-Diese Klassen sind Wrapper für allgemeine Win32-Sicherheit-Klassen und Objekten.  
+Diese Klassen sind Wrapper für allgemeine Win32-Security-Klassen und Objekten.  
   
 -   [CAccessToken](../atl/reference/caccesstoken-class.md) diese Klasse ist ein Wrapper für ein Zugriffstoken.  
   
--   [CAcl](../atl/reference/cacl-class.md) diese Klasse ist ein Wrapper für ein **ACL** (Access Control List)-Struktur.  
+-   [CAcl](../atl/reference/cacl-class.md) diese Klasse ist ein Wrapper für ein `ACL` (Access Control List)-Struktur.  
   
--   [CDacl](../atl/reference/cdacl-class.md) diese Klasse ist ein Wrapper für eine **DACL** (discretionary Access Control List)-Struktur.  
+-   [CDacl](../atl/reference/cdacl-class.md) diese Klasse ist ein Wrapper für eine `DACL` (discretionary Access Control List)-Struktur.  
   
--   [CPrivateObjectSecurityDesc](../atl/reference/cprivateobjectsecuritydesc-class.md) diese Klasse stellt ein privates Objekt sicherheitsbeschreibungsobjekt dar.  
+-   [CPrivateObjectSecurityDesc](../atl/reference/cprivateobjectsecuritydesc-class.md) diese Klasse stellt ein privates Objekt sicherheitsbeschreibungs-Objekt.  
   
--   [CSacl](../atl/reference/csacl-class.md) diese Klasse ist ein Wrapper für eine **SACL** (System Access Control List)-Struktur.  
+-   [CSacl](../atl/reference/csacl-class.md) diese Klasse ist ein Wrapper für eine `SACL` (System Access Control List)-Struktur.  
   
--   [CSecurityAttributes](../atl/reference/csecurityattributes-class.md) diese Klasse ist ein schlanker Wrapper für die **SECURITY_ATTRIBUTES** Struktur.  
+-   [CSecurityAttributes](../atl/reference/csecurityattributes-class.md) diese Klasse ist ein einfacher Wrapper für die `SECURITY_ATTRIBUTES` Struktur.  
   
--   [CSecurityDesc](../atl/reference/csecuritydesc-class.md) diese Klasse ist ein Wrapper für die **SECURITY_DESCRIPTOR** Struktur.  
+-   [CSecurityDesc](../atl/reference/csecuritydesc-class.md) diese Klasse ist ein Wrapper für die `SECURITY_DESCRIPTOR` Struktur.  
   
--   [CSid](../atl/reference/csid-class.md) diese Klasse ist ein Wrapper für eine `SID` Struktur (Sicherheits-ID).  
+-   [CSid](../atl/reference/csid-class.md) diese Klasse ist ein Wrapper für eine `SID` -Struktur (Sicherheits-ID).  
   
--   [CTokenGroups](../atl/reference/ctokengroups-class.md) diese Klasse ist ein Wrapper für die **TOKEN_GROUPS** Struktur.  
+-   [CTokenGroups](../atl/reference/ctokengroups-class.md) diese Klasse ist ein Wrapper für die `TOKEN_GROUPS` Struktur.  
   
--   [CTokenPrivileges](../atl/reference/ctokenprivileges-class.md) diese Klasse ist ein Wrapper für die **TOKEN_PRIVILEGES** Struktur.  
+-   [CTokenPrivileges](../atl/reference/ctokenprivileges-class.md) diese Klasse ist ein Wrapper für die `TOKEN_PRIVILEGES` Struktur.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../atl/atl-class-overview.md)   
+ [Übersicht über die Klasse](../atl/atl-class-overview.md)   
  [Globale Sicherheitsfunktionen](../atl/reference/security-global-functions.md)
 

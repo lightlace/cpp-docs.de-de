@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9825b690336acc8e93b0d404cc8335e5b27404b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b138424f3394c940307b422f590648c661d037d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840588"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958142"
 ---
 # <a name="addcv-class"></a>add_cv-Klasse
 
-Wandelt einen Typ in einen konstanten volatil-Typ um.
+Macht **const Volatile** Typ vom Typ.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ using add_cv_t = typename add_cv<T>::type;
 
 ## <a name="remarks"></a>Hinweise
 
-Ein modifizierter `add_cv<T>`-Typ hat einen typedef-Member`type`, der *T*entspricht, das sowohl von [add_volatile](../standard-library/add-volatile-class.md) als auch von [add_const](../standard-library/add-const-class.md) modifiziert wird, es sei denn, *T* hat schon CV-Qualifizierer, ist ein Verweis oder eine Funktion.
+Eine Instanz von den geänderten Typ `add_cv<T>` verfügt über eine `type` Member **Typedef** entspricht *T* geändert, indem beide [Add_volatile](../standard-library/add-volatile-class.md) und [ Add_const](../standard-library/add-const-class.md), es sei denn, *T* bereits verfügt über die cv-Qualifizierer, ist ein Verweis oder eine Funktion.
 
 Das `add_cv_t<T>`-Hilfsprogramm ist eine Verknüpfung für den Zugriff auf den `add_cv<T>`typedef-Member`type`.
 

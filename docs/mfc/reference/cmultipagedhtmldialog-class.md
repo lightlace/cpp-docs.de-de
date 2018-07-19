@@ -1,5 +1,5 @@
 ---
-title: CMultiPageDHtmlDialog Klasse | Microsoft Docs
+title: CMultiPageDHtmlDialog-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 51e9b34252b2a3fa7d097914360b9ee24baa8301
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038005"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850864"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog-Klasse
 Ein mehrseitiges Dialogfeld zeigt mehrere HTML-Seiten sequenziell an und behandelt die Ereignisse jeder Seite.  
@@ -40,14 +40,14 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Erstellt ein mehrseitigen (Assistenten-Stil) DHTML-Dialogfeld-Objekt.|  
-|[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Zerstört ein mehrseitigen DHTML-Dialogfeldobjekt.|  
+|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Erstellt ein mehrseitigen (Assistenten-ähnlichen) DHTML-Dialogfeld-Objekt.|  
+|[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Zerstört ein mehrseitigen DHTML-Dialogfeld-Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Mechanismus für diese Vorgehensweise ist ein [DHTML- und URL-ereigniszuordnung](dhtml-event-maps.md), enthält die ereigniszuordnungen für jede Seite eingebettet.  
+ Der Mechanismus hierfür ist eine [DHTML und URL-ereigniszuordnung](dhtml-event-maps.md), enthält die ereigniszuordnungen für jede Seite eingebettet.  
   
 ## <a name="example"></a>Beispiel  
- Diese mehrseitige Dialogfeld geht davon aus drei HTML-Ressourcen, die von einfachen Assistenten-ähnliche Funktionalität zu definieren. Die erste Seite verfügt über eine `Next` Schaltfläche, die zweite eine **Prev** und `Next` Schaltfläche und das dritte einen **Prev** Schaltfläche. Wenn eine der Schaltflächen geklickt wird, eine Ereignishandlerfunktion aufruft [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) die entsprechende Seite neue zu laden.  
+ Dieses mehrseitige Dialogfeld wird davon ausgegangen, drei HTML-Ressourcen, die einfachen Assistenten-ähnlichen Funktionen zu definieren. Die erste Seite enthält eine **Weiter** Schaltfläche, die zweite eine **Prev** und **Weiter** Schaltfläche, und der dritte einer **Prev** Schaltfläche. Wenn eine der Schaltflächen geklickt wird, wird eine Handlerfunktion aufgerufen [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) zum Laden der entsprechenden neuen Seite.  
   
  Die wichtigen Teile der Klassendeklaration (in CMyMultiPageDlg.h):  
   
@@ -82,7 +82,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
  **Header:** afxdhtml.h  
   
 ##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
- Erstellt ein mehrseitigen (Assistenten-Stil) DHTML-Dialogfeld-Objekt.  
+ Erstellt ein mehrseitigen (Assistenten-ähnlichen) DHTML-Dialogfeld-Objekt.  
   
 ```  
 CMultiPageDHtmlDialog(
@@ -101,22 +101,22 @@ CMultiPageDHtmlDialog();
   
 ### <a name="parameters"></a>Parameter  
  *lpszTemplateName*  
- Die Null-terminierte Zeichenfolge, die eine Dialogfeldvorlagen-Ressource im Dialogfeld heißt.  
+ Die Null-terminierte Zeichenfolge mit dem Namen von einer Ressource im Dialogfeld.  
   
  *szHtmlResID*  
- Die Null-terminierte Zeichenfolge, die den Namen des HTML-Ressource ist.  
+ Die Null-terminierte Zeichenfolge, die den Namen der eine HTML-Ressource ist.  
   
  *pParentWnd*  
- Ein Zeiger auf den übergeordneten oder Besitzer-Fensterobjekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)), der das Dialogfeldobjekt angehört. Ist er **NULL**, dem Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt ist.  
+ Ein Zeiger auf das übergeordnete Element oder Besitzer Window-Objekt (des Typs [CWnd](../../mfc/reference/cwnd-class.md)) zu dem das Dialogfeldobjekt gehört. Wenn es NULL ist, wird das Dialogfeldobjekt übergeordnete Fenster auf das Hauptanwendungsfenster festgelegt.  
   
  *nIDTemplate*  
- Enthält die ID einer Dialogfeldvorlagen-Ressource im Dialogfeld an.  
+ Enthält die ID einer Ressource im Dialogfeld an.  
   
  *nHtmlResID*  
- Enthält die ID-Nummer, der eine HTML-Ressource an.  
+ Enthält die ID-Nummer, der eine HTML-Ressource.  
   
 ##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
- Zerstört ein mehrseitigen DHTML-Dialogfeldobjekt.  
+ Zerstört ein mehrseitigen DHTML-Dialogfeld-Objekt.  
   
 ```  
 virtual ~CMultiPageDHtmlDialog();

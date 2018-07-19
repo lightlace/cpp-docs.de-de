@@ -1,5 +1,5 @@
 ---
-title: IUnknown-Implementierungsklassen (ATL) | Microsoft Docs
+title: IUnknown-Implementierungsklassen (ATL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d67b2a7b9769acd7d6e596e4fcdf1aec30bbf74
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4cd2f2473249271285d6b8812dac1b924e5a172
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357215"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848534"
 ---
-# <a name="iunknown-implementation-classes"></a>IUnknown-Implementierungsklassen
-Die folgenden Klassen implementieren **IUnknown** und die zugehörigen Methoden:  
+# <a name="iunknown-implementation-classes"></a>IUnknown-Implementierung-Klassen
+Die folgenden Klassen implementieren `IUnknown` und verwandten Methoden:  
   
--   [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) verweiszählung für zusammengefasste und aggregierte Objekte verwaltet. Ermöglicht Ihnen die Angabe ein Threadingmodell.  
+-   [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) verweiszählung für aggregierte und zusammengesetzten Objekte verwaltet. Ermöglicht Ihnen die Angabe ein Threadingmodell.  
   
--   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) verweiszählung für zusammengefasste und aggregierte Objekte verwaltet. Verwendet den standardmäßigen Threadingmodell des Servers.  
+-   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) verweiszählung für aggregierte und zusammengesetzten Objekte verwaltet. Der Standardhost threading-Modell des Servers verwendet.  
   
--   [CComAggObject](../atl/reference/ccomaggobject-class.md) implementiert **IUnknown** für ein zusammengesetztes Objekt.  
+-   [CComAggObject](../atl/reference/ccomaggobject-class.md) implementiert `IUnknown` für ein zusammengesetztes Objekt.  
   
--   [CComObject](../atl/reference/ccomobject-class.md) implementiert **IUnknown** für eine aggregierte Objekt.  
+-   [CComObject](../atl/reference/ccomobject-class.md) implementiert `IUnknown` für einen zusammengesetzten Objekt.  
   
--   [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementiert **IUnknown** für zusammengefasste und aggregierte Objekte. Mit `CComPolyObject` vermeidet beide `CComAggObject` und `CComObject` innerhalb des Moduls. Ein einzelnes `CComPolyObject` Objekt verarbeitet die zusammengefasste und aggregierte Fälle.  
+-   [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementiert `IUnknown` für aggregierte Daten und zusammengesetzten Objekte. Mithilfe von `CComPolyObject` wird vermieden, dass beide `CComAggObject` und `CComObject` innerhalb des Moduls. Ein einzelnes `CComPolyObject` Objekt behandelt, aggregierte und zusammengesetzten Fälle.  
   
--   [CComObjectNoLock](../atl/reference/ccomobjectnolock-class.md) implementiert **IUnknown** für eine aggregierte Objekt ohne Änderung der Anzahl der Module Sperre.  
+-   [CComObjectNoLock](../atl/reference/ccomobjectnolock-class.md) implementiert `IUnknown` für eines zusammengesetzten Objekts, ohne die Sperrenanzahl des Moduls zu ändern.  
   
--   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementiert **IUnknown** für eine abtrennbare-Schnittstelle.  
+-   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementiert `IUnknown` für eine Tearoff Schnittstelle.  
   
--   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementiert **IUnknown** für eine "zwischengespeicherte" abtrennbare-Schnittstelle.  
+-   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementiert `IUnknown` für eine "zwischengespeicherten" abtrennbare-Schnittstelle.  
   
--   [CComContainedObject](../atl/reference/ccomcontainedobject-class.md) implementiert **IUnknown** für das innere Objekt des eine Aggregation oder eine abtrennbare-Schnittstelle.  
+-   [CComContainedObject](../atl/reference/ccomcontainedobject-class.md) implementiert `IUnknown` für das inneren Objekt eine Aggregation oder eine Tearoff Schnittstelle.  
   
--   [CComObjectGlobal](../atl/reference/ccomobjectglobal-class.md) Management ein Verweiszähler für das Modul, um sicherzustellen, dass das Objekt nicht gelöscht werden wird.  
+-   [CComObjectGlobal](../atl/reference/ccomobjectglobal-class.md) verwaltet ein Verweiszähler für das Modul, um sicherzustellen, dass das Objekt wird nicht gelöscht.  
   
--   [CComObjectStack](../atl/reference/ccomobjectstack-class.md) erstellt ein temporäres COM-Objekt, mit einem skeletal-Implementierung des **IUnknown**.  
+-   [CComObjectStack](../atl/reference/ccomobjectstack-class.md) erstellt ein temporäre COM-Objekt, mit eine skeletal-Implementierung des `IUnknown`.  
   
 ## <a name="related-articles"></a>Verwandte Artikel  
  [Grundlagen von ARL COM-Objekten](../atl/fundamentals-of-atl-com-objects.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../atl/atl-class-overview.md)   
- [Aggregation und Klasse Factory-Makros](../atl/reference/aggregation-and-class-factory-macros.md)   
- [COM-Zuordnungsmakros](../atl/reference/com-map-macros.md)   
+ [Übersicht über die Klasse](../atl/atl-class-overview.md)   
+ [Aggregation und Klassenfactory-Makros](../atl/reference/aggregation-and-class-factory-macros.md)   
+ [COM-Zuordnungs-Makros](../atl/reference/com-map-macros.md)   
  [Globale COM-Zuordnungs-Funktionen](../atl/reference/com-map-global-functions.md)
 

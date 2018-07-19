@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 810f565d85a923379a25f49c6fe1c7d7cc4efbc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f96fbe8525ee4eef44da70261bd62e079aa279a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859279"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960589"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator-Klasse
 
@@ -49,15 +49,15 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parameter
 
-`CharType` Der Typ, der den Zeichentyp für das istreambuf_iterator-Objekt darstellt.
+*CharType* der Typ, der den Zeichentyp für das istreambuf_iterator-Objekt darstellt.
 
-`Traits` Der Typ, der den Zeichentyp für das istreambuf_iterator-Objekt darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
+*"Traits"* der Typ, der den Zeichentyp für das istreambuf_iterator-Objekt darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Hinweise
 
 Die istreambuf_iterator-Klasse muss die Anforderungen für einen Eingabeiterator erfüllen.
 
-Nachdem ein Objekt der istreambuf_iterator-Klasse mit einem als nicht null gespeicherten Zeiger erstellt oder inkrementiert wurde, versucht das Objekt effektiv, ein Objekt vom Typ **CharType** aus dem zugeordneten Eingabestream zu extrahieren und zu speichern. Die Extraktion kann jedoch verzögert werden, bis das Objekt tatsächlich dereferenziert oder kopiert wurde. Wenn die Extraktion fehlschlägt, ersetzt das Objekt den gespeicherten Zeiger durch einen NULL-Zeiger und erstellt so einen Indikator für das Ende der Sequenz.
+Nachdem ein Objekt der istreambuf_iterator-Klasse mit einem als nicht null gespeicherten Zeiger erstellt oder inkrementiert wurde, versucht das Objekt effektiv, ein Objekt vom Typ *CharType* aus dem zugeordneten Eingabestream zu extrahieren und zu speichern. Die Extraktion kann jedoch verzögert werden, bis das Objekt tatsächlich dereferenziert oder kopiert wurde. Wenn die Extraktion fehlschlägt, ersetzt das Objekt den gespeicherten Zeiger durch einen NULL-Zeiger und erstellt so einen Indikator für das Ende der Sequenz.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -105,7 +105,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter **CharType** dar.
+Der Typ stellt ein Synonym für den Vorlagenparameter *CharType* dar.
 
 ### <a name="example"></a>Beispiel
 
@@ -150,7 +150,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-`right` Der Iterator für die auf Gleichheit überprüft werden soll.
+*richtige* der Iterator für die auf Gleichheit überprüft.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -158,7 +158,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Bereich wird durch den Iterator `istreambuf_iterator` auf der aktuellen Position und den End-of-Stream-Iterator definiert; da aber alle nicht-End-of-Stream-Iteratoren unter der **equal**-Memberfunktion gleichwertig sind, es ist nicht möglich, alle Unterbereiche mit den Iteratoren `istreambuf_iterator` zu definieren. Die `==`- und `!=`-Operatoren weisen die gleiche Semantik auf.
+Wird eine Reihe von definiert die `istreambuf_iterator` Iteratoren sind äquivalent, um die aktuelle Position und die End-of-Stream-Iterator; da aber alle nicht-End-of-Stream der `equal` Member-Funktion, es ist nicht möglich, alle Unterbereiche mit definieren `istreambuf_iterator`s. Die `==`- und `!=`-Operatoren weisen die gleiche Semantik auf.
 
 ### <a name="example"></a>Beispiel
 
@@ -198,7 +198,7 @@ typedef typename traits_type::int_type int_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für **Traits::int_type**.
+Der Typ ist ein Synonym für `Traits::int_type`.
 
 ### <a name="example"></a>Beispiel
 
@@ -246,13 +246,13 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parameter
 
-`strbuf` Der Eingabedatenstrom-Puffer, in dem die `istreambuf_iterator` angehängt wird.
+*Strbuf* der Eingabestreampuffer, dem die `istreambuf_iterator` angefügt wird.
 
-`_Istr` Der Eingabedatenstrom, der die `istreambuf_iterator` angehängt wird.
+*_Istr* der Eingabestream, der die `istreambuf_iterator` angefügt wird.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert den Eingabestream-Pufferzeiger mit `strbuf`. Der zweite Konstruktor initialisiert den Eingabestream-Pufferzeiger mit `_Istr`. `rdbuf`, und anschließend versucht es, ein Objekt vom Typ **CharType** zu extrahieren und speichern.
+Der erste Konstruktor initialisiert den Eingabestream-Pufferzeiger mit *Strbuf*. Der zweite Konstruktor initialisiert den Eingabestream-Pufferzeiger mit *_Istr*. `rdbuf`, und anschließend zum Extrahieren und speichern ein Objekt vom Typ versucht `CharType`.
 
 ### <a name="example"></a>Beispiel
 
@@ -341,7 +341,7 @@ Ein `istreambuf_iterator` oder ein Verweis auf `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Operator versucht schließlich ein Objekt vom Typ **CharType** aus dem zugeordneten Eingabestream zu extrahieren und zu speichern. Der zweite Operator erstellt eine Kopie des Objekts, inkrementiert das Objekt und gibt dann die Kopie zurück.
+Der erste Operator versucht schließlich zum Extrahieren und speichern ein Objekt des Typs `CharType` aus dem zugeordneten Eingabestream. Der zweite Operator erstellt eine Kopie des Objekts, inkrementiert das Objekt und gibt dann die Kopie zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -397,7 +397,7 @@ Der Typ ist ein Synonym für `basic_streambuf`\< **CharType**, **Traits**>.
 
 ### <a name="example"></a>Beispiel
 
-Unter [istreambuf_iterator](#istreambuf_iterator) finden Sie ein Beispiel für das Deklarieren und Verwenden von **istreambuf_type**.
+Unter [istreambuf_iterator](#istreambuf_iterator) finden Sie ein Beispiel für das Deklarieren und Verwenden von `istreambuf_type`.
 
 ## <a name="traits_type"></a> istreambuf_iterator::traits_type
 
@@ -409,7 +409,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter **Merkmale** dar.
+Der Typ stellt ein Synonym für den Vorlagenparameter *Merkmale* dar.
 
 ### <a name="example"></a>Beispiel
 

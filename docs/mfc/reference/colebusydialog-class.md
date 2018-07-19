@@ -1,5 +1,5 @@
 ---
-title: COleBusyDialog Klasse | Microsoft Docs
+title: COleBusyDialog-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4af90e9354e7d443cb50acbafaa1468c99c12c85
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 5f9ed49115a82f6e032404b862b8eca0ad922a34
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040911"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853068"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog-Klasse
 Wird für die OLE-Dialogfelder "Server antwortet nicht" oder "Server ausgelastet" verwendet.  
@@ -52,22 +52,22 @@ class COleBusyDialog : public COleDialog
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[COleBusyDialog::DoModal](#domodal)|Zeigt das Dialogfeld "OLE-Server ausgelastet" an.|  
+|[COleBusyDialog::DoModal](#domodal)|Zeigt das Dialogfeld "OLE Server ausgelastet" an.|  
 |[COleBusyDialog::GetSelectionType](#getselectiontype)|Bestimmt die Auswahl im Dialogfeld an.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[COleBusyDialog::m_bz](#m_bz)|Struktur des Typs **OLEUIBUSY** , steuert das Verhalten des Dialogfelds.|  
+|[COleBusyDialog::m_bz](#m_bz)|Die Struktur des Typs OLEUIBUSY, die das Verhalten des Dialogfelds steuert.|  
   
 ## <a name="remarks"></a>Hinweise  
- Erstellen Sie ein Objekt der Klasse `COleBusyDialog` sollen diese Dialogfelder aufzurufen. Nach einem `COleBusyDialog` -Objekts können Sie mithilfe der [M_bz](#m_bz) Struktur initialisiert werden, die Werte oder Zustände von Steuerelementen im Dialogfeld. Die `m_bz` Struktur ist vom Typ **OLEUIBUSY**. Weitere Informationen zur Verwendung dieser Dialogfeldklasse finden Sie unter der [DoModal](#domodal) Memberfunktion.  
+ Erstellen Sie ein Objekt der Klasse `COleBusyDialog` beim Aufrufen dieser Dialogfelder aufgerufen werden soll. Nach einer `COleBusyDialog` -Objekts wird, können Sie mit der [M_bz](#m_bz) Struktur zum Initialisieren der Werte oder Zustände von Steuerelementen im Dialogfeld. Die `m_bz` Struktur des Typs OLEUIBUSY ist. Weitere Informationen zur Verwendung dieser Dialogfeldklasse finden Sie unter den [DoModal](#domodal) Member-Funktion.  
   
 > [!NOTE]
 >  Vom Assistenten generierten Container-Anwendungscode verwendet diese Klasse.  
   
- Weitere Informationen finden Sie unter der [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Struktur im Windows SDK.  
   
  Weitere Informationen zu OLE-spezifische Dialogfelder, finden Sie im Artikel [Dialogfelder in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -90,7 +90,7 @@ class COleBusyDialog : public COleDialog
  **Header:** afxodlgs.h  
   
 ##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
- Diese Funktion nur bildet eine `COleBusyDialog` Objekt.  
+ Diese Funktion erstellt, nur eine `COleBusyDialog` Objekt.  
   
 ```  
 explicit COleBusyDialog(
@@ -102,30 +102,30 @@ explicit COleBusyDialog(
   
 ### <a name="parameters"></a>Parameter  
  *htaskBusy*  
- Handle für den Server-Aufgabe, die stark ausgelastet ist.  
+ Handle für die Serveraufgabe, die ausgelastet ist.  
   
  *bNotResponding*  
- Wenn **"true"**, rufen Sie das Dialogfeld nicht mehr reagiert anstatt das Dialogfeld Server ausgelastet. Klicken Sie im Dialogfeld reagiert nicht mit der Wortlaut weicht etwas mit dem Wortlaut in das Dialogfeld "Server ausgelastet" und die Schaltfläche "Abbrechen" ist deaktiviert.  
+ Bei "true", rufen Sie das Dialogfeld nicht mehr reagiert, anstatt das Dialogfeld "Server ausgelastet". Das Dialogfeld nicht antwortet mit der Wortlaut ist etwas anders als mit dem Wortlaut in das Dialogfeld "Server ausgelastet" und "Abbrechen"-Schaltfläche deaktiviert ist.  
   
  *dwFlags*  
- Erstellen Sie das Flag. Kann 0 (null) oder mehrere der folgenden Werte mit dem bitweisen OR-Operator kombiniert enthalten:  
+ Flag für die Erstellung. Kann 0 (null) oder mehrere der folgenden Werte mit dem bitweisen OR-Operator kombiniert enthalten:  
   
-- **BZ_DISABLECANCELBUTTON** deaktivieren Sie die Schaltfläche "Abbrechen", beim Aufrufen des Dialogfelds "".  
+- BZ_DISABLECANCELBUTTON Deaktivieren der Schaltfläche "Abbrechen" aus, wenn das Dialogfeld aufrufen.  
   
-- **BZ_DISABLESWITCHTOBUTTON** deaktivieren Sie die Schaltfläche "Wechseln zu" beim Aufrufen des Dialogfelds "".  
+- BZ_DISABLESWITCHTOBUTTON Deaktivieren der wechseln zu Schaltfläche beim Aufrufen des Dialogfelds.  
   
-- **BZ_DISABLERETRYBUTTON** deaktivieren Sie die Schaltfläche "Wiederholen", beim Aufrufen des Dialogfelds "".  
+- BZ_DISABLERETRYBUTTON deaktivieren Sie die Schaltfläche "Wiederholen", beim Aufrufen des Dialogfelds.  
   
  *pParentWnd*  
- Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs `CWnd`), der das Dialogfeldobjekt angehört. Ist er **NULL**, das übergeordnete Fenster eines jedoch stattdessen das Dialogfeld auf das Hauptanwendungsfenster festgelegt ist.  
+ Verweist auf das übergeordnete Element oder Besitzer Window-Objekt (des Typs `CWnd`) zu dem das Dialogfeldobjekt gehört. Wenn es NULL ist, wird das übergeordnete Fenster des Dialog-Objekts auf das Hauptanwendungsfenster festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  
  Um das Dialogfeld anzuzeigen, rufen [DoModal](#domodal).  
   
- Weitere Informationen finden Sie unter der [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Struktur im Windows SDK.  
   
 ##  <a name="domodal"></a>  COleBusyDialog::DoModal  
- Mit dieser Funktion wird zum Anzeigen des Dialogfelds OLE-Server ausgelastet "oder" Server antwortet nicht.  
+ Rufen Sie diese Funktion, um das Dialogfeld des OLE-Server ausgelastet "oder" Server antwortet nicht anzuzeigen.  
   
 ```  
 virtual INT_PTR DoModal();
@@ -134,29 +134,29 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Rückgabewert  
  Der Abschlussstatus für das Dialogfeld. Einer der folgenden Werte:  
   
-- **IDOK** wird das Dialogfeld erfolgreich angezeigt.  
+- IDOK, wenn das Dialogfeld erfolgreich angezeigt wurde.  
   
-- **IDCANCEL** , wenn der Benutzer das Dialogfeld abgebrochen hat.  
+- IDCANCEL, wenn der Benutzer das Dialogfeld abgebrochen hat.  
   
-- **IDABORT** Wenn ein Fehler aufgetreten. Wenn **IDABORT** wird zurückgegeben, rufen Sie die `COleDialog::GetLastError` Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Auflistung möglicher Fehler finden Sie die [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) Funktion im Windows SDK.  
+- IDABORT, wenn ein Fehler aufgetreten. Wenn IDABORT zurückgegeben wird, rufen Sie die `COleDialog::GetLastError` Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Liste der möglichen Fehler, finden Sie unter den [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) -Funktion in das Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie die verschiedenen Dialogfeldsteuerelemente zu initialisieren, indem Sie Mitglieder festlegen möchten die [M_bz](#m_bz) -Struktur, ergreifen Sie dies vor dem Aufruf `DoModal`, aber erst, nachdem das Dialogfeldobjekt erstellt wird.  
+ Wenn Sie die verschiedenen Dialogfeldsteuerelemente zu initialisieren, indem Sie Mitglieder festlegen möchten die [M_bz](#m_bz) Struktur, sollten Sie dies tun, vor dem Aufruf `DoModal`, allerdings nachdem das Dialogfeldobjekt erstellt wird.  
   
- Wenn `DoModal` gibt **IDOK**, Sie können andere Memberfunktionen aufrufen zum Abrufen der Einstellungen oder der Informationen, die in das Dialogfeld vom Benutzer eingegeben wurde.  
+ Wenn `DoModal` gibt IDOK, Sie können andere Memberfunktionen aufrufen zum Abrufen der Einstellungen oder die Informationen, die in das Dialogfeld vom Benutzer eingegeben wurde.  
   
 ##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
- Mit dieser Funktion wird zum Abrufen des Auswahltyps, der vom Benutzer im Dialogfeld "Server ausgelastet" ausgewählt wurde.  
+ Rufen Sie diese Funktion zum Abrufen des Auswahltyps, der vom Benutzer im Dialogfeld "Server ausgelastet" ausgewählt.  
   
 ```  
 UINT GetSelectionType() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Typ der Auswahl.  
+ Typ der Auswahl getroffen wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Rückgabetyp Werte werden angegeben, indem die **Auswahl** Enumerationstyp deklariert wird, der `COleBusyDialog` Klasse.  
+ Der Rückgabetyp Werte angegeben sind die `Selection` Enumerationstyp deklariert wird, der `COleBusyDialog` Klasse.  
   
 ```  
 enum Selection {
@@ -168,14 +168,14 @@ enum Selection {
   
  Führen Sie die kurze Beschreibungen der folgenden Werte:  
   
-- **COleBusyDialog::switchTo** wechseln zu gedrückt wurde.  
+- `COleBusyDialog::switchTo` Wechseln zu wurde gedrückt.  
   
-- **COleBusyDialog::retry** Wiederholung gedrückt wurde.  
+- `COleBusyDialog::retry` "Wiederholen"-Schaltfläche wurde gedrückt.  
   
-- **COleBusyDialog::callUnblocked** Aufruf zum Aktivieren des Servers ist jetzt entsperrt.  
+- `COleBusyDialog::callUnblocked` Aufruf zum Aktivieren des Servers ist jetzt aufgehoben wurde.  
   
 ##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
- Struktur des Typs **OLEUIBUSY** zum Steuern des Verhaltens im Dialogfeld "Server ausgelastet" verwendet.  
+ Struktur des Typs OLEUIBUSY verwendet zur Steuerung des Verhaltens im Dialogfeld "Server ausgelastet".  
   
 ```  
 OLEUIBUSY m_bz;  
@@ -184,7 +184,7 @@ OLEUIBUSY m_bz;
 ### <a name="remarks"></a>Hinweise  
  Mitglieder dieser Struktur können direkt oder über Memberfunktionen geändert werden.  
   
- Weitere Informationen finden Sie unter der [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Struktur im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [COleDialog-Klasse](../../mfc/reference/coledialog-class.md)   

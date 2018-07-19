@@ -1,5 +1,5 @@
 ---
-title: C++-Sprachreferenz | Microsoft Docs
+title: C++-Programmiersprachenreferenz | Microsoft-Dokumentation
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25315121d3004601914c5b8872b496e57acec99f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c3886e710d0262068848304d9f2419c835b67c2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417202"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954192"
 ---
 # <a name="c-language-reference"></a>C++-Programmiersprachenreferenz
-In dieser Referenz wird die Implementierung der Programmiersprache C++ in Microsoft Visual C++ erläutert. Die Organisation basiert auf *der Annotated C++ Reference Manual* von Margaret Ellis und Bjarne Stroustrup sowie auf dem Standard ANSI/ISO C++ International (ISO/IEC FDIS 14882). Microsoft-spezifische Implementierungen von Funktionen der Programmiersprache C++- sind enthalten.  
+In dieser Referenz wird die Implementierung der Programmiersprache C++ in Microsoft Visual C++ erläutert. Die Organisation basiert auf *The Annotated C++ Reference Manual* von Margaret Ellis und Bjarne Stroustrup sowie auf die ANSI/ISO C++ internationalen Standard (ISO/IEC FDIS 14882). Microsoft-spezifische Implementierungen von Funktionen der Programmiersprache C++- sind enthalten.  
 
-Einen Überblick über das moderne C++ Programmierstile finden Sie unter [Willkommen zurück bei C++](welcome-back-to-cpp-modern-cpp.md).
+Eine Übersicht über moderne C++-Programmiertechniken, finden Sie unter [Willkommen zurück bei C++](welcome-back-to-cpp-modern-cpp.md).
   
  Weitere Informationen dazu, wie Sie ein Schlüsselwort oder einen Operator schnell finden, erhalten Sie in den folgenden Tabellen:  
   
@@ -61,14 +61,11 @@ Einen Überblick über das moderne C++ Programmierstile finden Sie unter [Willko
  [Deklarationen und Definitionen](declarations-and-definitions-cpp.md)  
  Speicherklassenspezifizierer, Funktionsdefinitionen, Initialisierungen, Enumerationen, Klassen-, Struktur- und Union-Deklarationen sowie typedef-Deklarationen. Außerdem Inlinefunktionen, const-Schlüsselwort, Namespaces.  
   
- [Deklaratoren](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)  
- Der Teil einer Deklarationsanweisung, mit dem ein Objekt, ein Typ oder eine Funktion benannt werden. Abstrakte Deklaratoren, Typnamen, Initialisierer, Funktionsdeklarationen und Definitionen, Arrays, Verweise.  
-  
  [Klassen, Strukturen und Unions](../cpp/classes-and-structs-cpp.md)  
  Einführung in Klassen, Strukturen und Unions. Außerdem Memberfunktionen, spezielle Memberfunktionen, Datenmember, Bitfelder, diesen Zeiger, geschachtelte Klassen.  
   
  [Abgeleitete Klassen](../cpp/inheritance-cpp.md)  
- Einzel- und Mehrfachvererbung, virtuelle Funktionen, mehrere Basisklassen, abstrakte Klassen, Bereichsregeln. Darüber hinaus die Schlüsselwörter __super und \__interface Schlüsselwörter.  
+ Einzel- und Mehrfachvererbung, virtuelle Funktionen, mehrere Basisklassen, abstrakte Klassen, Bereichsregeln. Darüber hinaus die __super und \__schnittstelle Schlüsselwörter.  
   
  [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md)  
  Steuern des Zugriffs auf Klassenmember: öffentliche, private und geschützte Schlüsselwörter. Friend-Funktionen und -Klassen.  
@@ -80,7 +77,7 @@ Einen Überblick über das moderne C++ Programmierstile finden Sie unter [Willko
  C++-Ausnahmebehandlung, strukturierte Ausnahmebehandlung (SEH), Schlüsselwörter, die für das Schreiben von Ausnahmebehandlungsanweisungen verwendet werden.  
   
  [Assertionsanweisung und benutzerdefinierte Meldungen](../cpp/assertion-and-user-supplied-messages-cpp.md)  
- `#error`-Direktive, das `static_assert`-Schlüsselwort, das `assert`-Makro.  
+ `#error` Richtlinie, die **"static_assert"** -Schlüsselwort, das `assert` Makro.  
   
  [Vorlagen](../cpp/templates-cpp.md)  
  Vorlagenspezifikationen, Funktionsvorlagen, Klassenvorlagen, typname-Schlüsselwort, Vorlagen und Makros, Vorlagen und intelligente Zeiger.  
@@ -103,7 +100,7 @@ Einen Überblick über das moderne C++ Programmierstile finden Sie unter [Willko
  [Nicht dem Standard entsprechendes Verhalten](../cpp/nonstandard-behavior.md)  
  Informationen zu nicht dem Standard entsprechenden Verhaltensweisen des Visual C++-Compilers.  
 
- [Willkommen zurück bei C++](welcome-back-to-cpp-modern-cpp.md) ein Überblick über die modernen C++-Programmierung Methoden zum Schreiben von sicheren, richtigen und effizienten Programme.
+ [Willkommen zurück bei C++](welcome-back-to-cpp-modern-cpp.md) ein Überblick über die moderne C++-Programmierung Methoden zum Schreiben von sicheren, korrekte und effiziente Programme.
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)  

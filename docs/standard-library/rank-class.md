@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be250d2908522ac85902563d64bf57ca7cde88a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 615da57a092a9cbdc1933ed57adbbaed6afdcf65
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853153"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960602"
 ---
 # <a name="rank-class"></a>rank-Klasse
 
@@ -37,11 +37,11 @@ struct rank;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Typabfrage enthält den Wert der Anzahl der Dimensionen des Arraytyps `Ty` oder 0, wenn `Ty` kein Arraytyp ist.
+Die Typabfrage enthält den Wert, der die Anzahl der Dimensionen des Arraytyps *Ty*, oder 0, wenn *Ty* ist kein Arraytyp.
 
 ## <a name="example"></a>Beispiel
 

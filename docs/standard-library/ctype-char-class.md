@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edbc96419e68cf584222e4008f58fd96169b2fb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47ac9fa5431b5edfb4885dfdbf39be6c6b89cee6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845998"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960660"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt;-Klasse
 
-Die Klasse stellt eine explizite Spezialisierung der Vorlagenklasse **ctype\<CharType**> für den Typ `char` dar und beschreibt ein Objekt, das als Gebietsschemafacet dienen kann, um verschiedene Eigenschaften eines Zeichens vom Typ `char` zu kennzeichnen.
+Die Klasse ist eine explizite Spezialisierung der Vorlagenklasse `ctype\<CharType>` eingeben **Char**, beschreibt ein Objekt, das als gebietsschemafacet zur verschiedene Eigenschaften eines Zeichens vom Typ charakterisieren dienen kann **Char**.
 
 ## <a name="syntax"></a>Syntax
 
@@ -132,15 +132,15 @@ protected:
 
 Die explizite Spezialisierung unterscheidet sich von der Vorlagenklasse in verschiedenen Punkten:
 
-- Ein Objekt der Klasse ctype< `char`> speichert einen Zeiger auf das erste Element einer ctype-Maskentabelle. Hierbei handelt es sich um ein Array mit UCHAR_MAX + 1-Elementen vom Typ **ctype_base::mask**. Darüber hinaus speichert es ein boolesches Objekt, das angibt, ob das Array (mit `operator delete[]`) gelöscht werden soll, wenn das ctype\< **Elem**>-Objekt zerstört wird.
+- Ein Objekt der Klasse Ctype < `char`> speichert einen Zeiger auf das erste Element einer Ctype-maskentabelle, ein Array mit UCHAR_MAX + 1 Elementen des Typs `ctype_base::mask`. Darüber hinaus speichert es ein boolesches Objekt, das angibt, ob das Array (mit `operator delete[]`) gelöscht werden soll, wenn das ctype\< **Elem**>-Objekt zerstört wird.
 
-- Mit dem zugehörigen einzigen öffentlichen Konstruktor können Sie **tab**, die ctype-Maskentabelle, und **del**, das boolesche Objekt angeben, das wahr ist, wenn das Array beim Zerstören des ctype< `char`>-Objekts gelöscht werden soll. Zudem können Sie den Parameter „refs“ angeben, der als Referenzzähler dient.
+- Zugehörigen einzige öffentliche Konstruktor können Sie angeben, `tab`, die Ctype-maskentabelle, und `del`, das boolesche Objekt, das ist true, wenn das Array werden sollten gelöscht, wenn das Ctype < `char`> Objekt zerstört wird, sowie die verweiszählung Parameter-Verweise.
 
-- Die geschützte Memberfunktion **table** gibt die gespeicherte ctype-Maskentabelle zurück.
+- Die geschützte Memberfunktion `table` gibt die gespeicherte Ctype-maskentabelle zurück.
 
-- Das statische Memberobjekt **table_size** gibt die in einer ctype-Maskentabelle mindestens erforderliche Anzahl von Elementen an.
+- Das statische Memberobjekt `table_size` gibt die minimale Anzahl von Elementen in einer Ctype-maskentabelle.
 
-- Die geschützte statische Memberfunktion **classic_table** gibt die dem Gebietsschema „C“ entsprechende ctype-Maskentabelle zurück.
+- Die geschützte statische Memberfunktion `classic_table`(auf das Gebietsschema "C" entsprechende Ctype-maskentabelle zurückgibt.
 
 - Die geschützten virtuellen Memberfunktionen [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) bzw. [do_scan_not](../standard-library/ctype-class.md#do_scan_not) werden nicht verwendet. Die entsprechenden öffentlichen Memberfunktionen führen die jeweiligen Vorgänge selbst aus.
 

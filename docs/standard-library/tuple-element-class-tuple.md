@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71cdbfad883d1d9560ee88fde0338958240bd19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855824"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959068"
 ---
 # <a name="tupleelement-class"></a>tuple_element-Klasse
 
@@ -66,25 +66,31 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Parameter
 
-*Index* den Index des angegebenen Elements.
+*Index*  
+Der Index des angegebenen Elements.
 
-*Tupel* den Typ des Tupels.
+*Tuple*  
+Der Typ des Tupels.
 
-*Elem* den Typ eines Arrayelements.
+*Elem*  
+Der Typ eines Arrayelements.
 
-*Größe* die Größe des Arrays.
+*Size*  
+Die Größe des Arrays.
 
-*T1* Der Typ des ersten Elements in einem Paar.
+*T1*  
+Der Typ des ersten Elements in einem Paar.
 
-*T2* den Typ des zweiten Elements in einem Paar.
+*T2*  
+Der Typ des zweiten Elements in einem Paar.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse `tuple_element` verfügt über ein geschachteltes Typedef `type`, das ein Synonym für den Typ am Index `Index` des Tupeltyps `Tuple` ist.
+Die Vorlagenklasse `tuple_element` verfügt über ein geschachteltes Typedef `type` , ein Synonym für den Typ am Index *Index* des Tupeltyps *Tupel*.
 
 Das Typedef `tuple_element_t` ist ein zweckmäßiger Alias für `tuple_element<Index, Tuple>::type`.
 
-Die Vorlagenklassenspezialisierung für Arrays bietet eine Schnittstelle zu einem `array` als Tupel von `Size`-Elementen mit demselben Typ. Jede Spezialisierung verfügt über ein geschachteltes Typedef `type` , das ein Synonym für den Typ des `Index` -Elements des `array`ist, wobei alle Qualifikationen von „const-volatile“ beibehalten werden.
+Die Vorlagenklassenspezialisierung für Arrays bietet eine Schnittstelle zu einem `array` als Tupel von `Size`-Elementen mit demselben Typ. Jede Spezialisierung verfügt über ein geschachteltes Typedef `type` , das ein Synonym für den Typ des der *Index* Element der `array`, wobei alle Const-Volatile-Qualifikationen beibehalten.
 
 Die Vorlagenspezialisierungen für `pair`-Typen bieten eine einzelne Member-Typedef `type` an, die ein Synonym für den Typ des Elements an der angegebenen Position im Paar ist, wobei alle const- und/oder volatile-Qualifikationen beibehalten werden. Das Typedef `tuple_element_t` ist ein zweckmäßiger Alias für `tuple_element<N, pair<T1, T2>>::type`.
 
@@ -178,7 +184,7 @@ int main() {
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Tupel > **Header:** \<Array > (für Array Spezialisierung) **Header:** \<Utility > (für Paar spezialisierungen)  **Namespace:** std
+**Header:** \<Tupel > **Header:** \<Array > (für arrayspezialisierung) **Header:** \<Utility > (für paarspezialisierungen)  **Namespace:** std
 
 ## <a name="see-also"></a>Siehe auch
 

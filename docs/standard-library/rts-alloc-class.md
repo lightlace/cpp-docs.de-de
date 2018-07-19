@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8bd1ec1436b960a0637a79cb04982a953636a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4bff519ea12646e94e92cde219fa38e4009a767
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856299"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956454"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc-Klasse
 
@@ -44,7 +44,7 @@ class rts_alloc
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Cache`|Der Typ der Cache-Instanzen, die im Array enthalten sind. Dieser kann eine [cache_chunklist-Klasse](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) oder [cache_suballoc](../standard-library/cache-suballoc-class.md) sein.|
+|*Cache*|Der Typ der Cache-Instanzen, die im Array enthalten sind. Dieser kann eine [cache_chunklist-Klasse](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) oder [cache_suballoc](../standard-library/cache-suballoc-class.md) sein.|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -76,7 +76,7 @@ void *allocate(std::size_t count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`count`|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*count*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -84,7 +84,7 @@ Zeiger auf das zugewiesene Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt `caches[_IDX].allocate(count)` zurück, wobei der Index `_IDX` sich nach der Größe der angeforderten Blocks `count` richtet, oder wenn `count` zu groß ist, wird `operator new(count)` zurückgegeben. `cache`, das das Cache-Objekt darstellt.
+Die Memberfunktion gibt `caches[_IDX].allocate(count)`, wobei der Index `_IDX` richtet sich nach der Größe der angeforderten Blocks *Anzahl*, oder wenn *Anzahl* ist zu groß ist, gibt `operator new(count)`. `cache`, das das Cache-Objekt darstellt.
 
 ## <a name="deallocate"></a> rts_alloc::deallocate
 
@@ -98,12 +98,12 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
-|`count`|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
+|*ptr*|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
+|*count*|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt `caches[_IDX].deallocate(ptr, count)` zurück, wobei der Index `_IDX` sich nach der Größe der angeforderten Blocks `count` richtet, oder wenn `count` zu groß ist, wird `operator delete(ptr)` zurückgegeben.
+Die Memberfunktion ruft `caches[_IDX].deallocate(ptr, count)`, wobei der Index `_IDX` richtet sich nach der Größe der angeforderten Blocks *Anzahl*, oder wenn *Anzahl* ist zu groß ist, gibt `operator delete(ptr)`.
 
 ## <a name="equals"></a> rts_alloc::equals
 
@@ -117,12 +117,12 @@ bool equals(const sync<_Cache>& _Other) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`_Cache`|Das Cache-Objekt, das dem Filter zugeordnet ist.|
-|`_Other`|Das Cache-Objekt, das auf Gleichheit verglichen werden soll.|
+|*_Cache*|Das Cache-Objekt, das dem Filter zugeordnet ist.|
+|*_Sonstige*|Das Cache-Objekt, das auf Gleichheit verglichen werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 
-`true`, wenn das Ergebnis `caches[0].equals(other.caches[0])`, andernfalls `false`. `caches` stellt das Array von Cache-Objekten dar.
+**"true"** Wenn das Ergebnis des `caches[0].equals(other.caches[0])`ist, andernfalls **"false"**. `caches` stellt das Array von Cache-Objekten dar.
 
 ## <a name="see-also"></a>Siehe auch
 

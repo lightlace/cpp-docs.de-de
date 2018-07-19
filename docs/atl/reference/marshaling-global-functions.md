@@ -1,5 +1,5 @@
 ---
-title: Marshalling von globalen Funktionen | Microsoft Docs
+title: Globale Funktionen Marshalling | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d93839002ce5136d735e4740388109e855561fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44c5205416ff19eeb849b0532d015275e4eb166e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362826"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879333"
 ---
 # <a name="marshaling-global-functions"></a>Marshalling globale Funktionen
-Diese Funktionen unterstützen Marshalling und Marshallen von Daten in Schnittstellenzeiger zu konvertieren.  
+Diese Funktionen bieten Unterstützung für das Marshallen und konvertieren Marshallen von Daten in den Schnittstellenzeiger auf.  
   
 > [!IMPORTANT]
 >  In der folgenden Tabelle aufgeführten Funktionen können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 |||  
 |-|-|  
-|[AtlFreeMarshalStream](#atlfreemarshalstream)|Gibt die marschalldaten und die `IStream` Zeiger.|  
+|[AtlFreeMarshalStream](#atlfreemarshalstream)|Gibt die marschalldaten und `IStream` Zeiger.|  
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Erstellt ein neues Streamobjekt und marshallt den angegebenen Schnittstellenzeiger auf.|  
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Konvertiert einen Datenstrom Marshallen von Daten in einen Schnittstellenzeiger.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Konvertiert die Marshallingdaten des Streams in einen Schnittstellenzeiger auf.|  
 
 ## <a name="requirements"></a>Anforderungen:
 **Header:** atlbase.h
@@ -46,8 +46,8 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pStream`  
- [in] Ein Zeiger auf die `IStream` Schnittstelle für den Stream für das Marshalling verwendet.  
+ *pStream*  
+ [in] Ein Zeiger auf die `IStream` Schnittstelle für den Stream, der für das Marshalling verwendet.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [AtlMarshalPtrInProc](#atlmarshalptrinproc).  
@@ -66,21 +66,21 @@ HRESULT AtlMarshalPtrInProc(
  *pUnk*  
  [in] Ein Zeiger auf die Schnittstelle, die gemarshallt werden.  
   
- `iid`  
+ *IID*  
  [in] Die GUID der Schnittstelle, die gemarshallt werden.  
   
- `ppStream`  
+ *ppStream*  
  [out] Ein Zeiger auf die `IStream` Schnittstelle für das neue Streamobjekt, das für das Marshalling verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard HRESULT-Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die **MSHLFLAGS_TABLESTRONG** Flag wird festgelegt, sodass der Zeiger in mehrere Streams gemarshallt werden kann. Der Zeiger kann auch Marshalling mehrmals sein.  
+ Die MSHLFLAGS_TABLESTRONG-Flag wird festgelegt, sodass der Zeiger in mehrere Datenströme gemarshallt werden kann. Der Zeiger kann auch Marshalling mehrmals sein.  
   
- Wenn ein Fehler auftritt, wird der streamzeiger freigegeben.  
+ Wenn Marshalling ein Fehler auftritt, wird der streamzeiger freigegeben.  
   
- `AtlMarshalPtrInProc` kann nur auf einen Zeiger auf ein in-Process-Objekt verwendet werden.  
+ `AtlMarshalPtrInProc` kann nur für einen Zeiger auf ein in-Process-Objekt verwendet werden.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]  
@@ -96,13 +96,13 @@ HRESULT AtlUnmarshalPtr(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pStream`  
- [in] Ein Zeiger auf den Stream wird Marshalling.  
+ *pStream*  
+ [in] Ein Zeiger auf den Stream, werden Marshalling.  
   
- `iid`  
- [in] Die GUID der Schnittstelle wird Marshalling.  
+ *IID*  
+ [in] Die GUID der Schnittstelle werden Marshalling.  
   
- `ppUnk`  
+ *ppUnk*  
  [out] Ein Zeiger auf die Marshalling-Schnittstelle.  
   
 ### <a name="return-value"></a>Rückgabewert  

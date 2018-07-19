@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff0c41993a450e74b468b747776368bae6ad848
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862873"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957521"
 ---
 # <a name="sharedptr-class"></a>shared_ptr-Klasse
 
@@ -91,9 +91,9 @@ Ein `shared_ptr`-Objekt besitzt in diesen Fällen eine Ressource:
 
 - Es wurde von einem `shared_ptr`-Objekt erstellt, das diese Ressource besitzt.
 
-- Wenn es erstellt wurde, aus einer [Weak_ptr-Klasse](../standard-library/weak-ptr-class.md) Objekt, das auf die Ressource verweist oder
+- Wenn von der Erstellung einer [Weak_ptr-Klasse](../standard-library/weak-ptr-class.md) Objekt, das auf diese Ressource verweist oder
 
-- Wenn sie entweder mit Besitz dieser Ressource zugewiesen wurde [shared_ptr:: Operator =](#op_eq) oder durch Aufrufen der Memberfunktion [shared_ptr::reset](#reset).
+- Wenn sie entweder mit Besitz dieser Ressource zugewiesen wurde [shared_ptr:: Operator =](#op_eq) oder durch Aufrufen der Memberfunktion [shared_ptr:: Reset](#reset).
 
 Von den `shared_ptr`-Objekten, die eine Ressource besitzen, wird ein Kontrollblock gemeinsam verwendet. Der Kontrollblock enthält:
 
@@ -261,7 +261,7 @@ explicit operator bool() const noexcept;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Operator gibt einen Wert von `true` Wenn `get() != nullptr`, da andernfalls `false`.
+Der Operator gibt einen Wert zurück. **"true"** beim `get() != nullptr`, andernfalls **"false"**.
 
 ### <a name="example"></a>Beispiel
 
@@ -351,9 +351,9 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parameter
 
-`sp` Die für den gemeinsamen Zeiger zu kopieren.
+*SP* die zu kopierende gemeinsame Zeiger.
 
-`ap` Der zu kopierende Auto-Zeiger.
+*AP* der zu kopierende automatische Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -441,11 +441,11 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Ein `lvalue` Verweis auf eine `shared_ptr` oder ein `weak_ptr`.
+*PTR* ein `lvalue` -Verweis auf ein `shared_ptr` oder `weak_ptr`.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlage-Memberfunktion gibt "true" zurück, wenn `*this` ist `ordered before` `ptr`.
+Die vorlagenmemberfunktion gibt True zurück, wenn `*this` ist `ordered before` `ptr`.
 
 ## <a name="reset"></a> shared_ptr::reset
 
@@ -466,17 +466,17 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>Parameter
 
-`Other` Der vom argumentzeiger gesteuerte Typ.
+*Andere* vom argumentzeiger gesteuerte Typ.
 
-`D` Der Typ der Deleter.
+*D* den Typ der Deleter.
 
-`ptr` Der zu kopierende Zeiger.
+*PTR* der zu kopierende Zeiger.
 
-`dtor` Der Deleter kopiert werden soll.
+*DTOR* der zu kopierende Deleter.
 
-`A` Der Typ der Zuweisung.
+*Ein* den Typ der Zuweisung.
 
-`alloc` Die Zuweisung zu kopieren.
+*Alloc* der zu kopierende zuweiser.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -581,23 +581,23 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>Parameter
 
-`Other` Der vom argumentzeiger gesteuerte Typ.
+*Andere* vom argumentzeiger gesteuerte Typ.
 
-`ptr` Der zu kopierende Zeiger.
+*PTR* der zu kopierende Zeiger.
 
-`D` Der Typ der Deleter.
+*D* den Typ der Deleter.
 
-`A` Der Typ der Zuweisung.
+*Ein* den Typ der Zuweisung.
 
-`dtor` Der Deleter.
+*DTOR* die Deleter.
 
-`ator` Die Zuweisung.
+*Vergleichsoperators* die allocator-Klasse.
 
-`sp` Der intelligente Zeiger zu kopieren.
+*SP* der zu kopierende intelligente Zeiger.
 
-`wp` Der schwache Zeiger.
+*WP* der schwache Zeiger.
 
-`ap` Der zu kopierende Auto-Zeiger.
+*AP* der zu kopierende automatische Zeiger.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -722,11 +722,11 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parameter
 
-`sp` Die für den gemeinsamen Zeiger für den Tauschvorgang.
+*SP* der gemeinsame Zeiger, mit dem getauscht.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion belässt die Ressource, die ursprünglich im Besitz von `*this` und anschließend von `sp` war, und die Ressource, die ursprünglich im Besitz von `sp` und anschließend von `*this` war. Die Funktion ändert die Verweisanzahlen für die beiden Ressourcen nicht und löst auch keine Ausnahmen aus.
+Die Memberfunktion belässt die Ressource, die ursprünglich im Besitz `*this` anschließend Besitz *sp*, und die Ressource, die ursprünglich im Besitz *sp* anschließend Besitz `*this`. Die Funktion ändert die Verweisanzahlen für die beiden Ressourcen nicht und löst auch keine Ausnahmen aus.
 
 ### <a name="example"></a>Beispiel
 
@@ -792,7 +792,7 @@ bool unique() const;
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt `true` zurück, wenn kein anderes `shared_ptr`-Objekt die Ressource besitzt, die im Besitz von `*this`, andernfalls `false`.
+Die Memberfunktion gibt **"true"** Wenn kein weiterer `shared_ptr` -Objekt die Ressource besitzt, die im Besitz ist `*this`, andernfalls **"false"**.
 
 ### <a name="example"></a>Beispiel
 

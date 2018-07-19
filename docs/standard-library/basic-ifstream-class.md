@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b72b49f545b4ba04c92840cb4d15f2258f08680
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a2e641dbea0507c51987d67e78b3cd8ef8be0dc6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850612"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958503"
 ---
 # <a name="basicifstream-class"></a>basic_ifstream-Klasse
 
@@ -46,9 +46,9 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Parameter
 
-`Elem` Das grundlegende Element des Dateipuffers.
+*Elem* grundlegenden Elements des Dateipuffers.
 
-`Tr` Die Merkmale des grundlegenden Elements des Dateipuffers (in der Regel `char_traits` <  `Elem`>).
+*TR* die Merkmale des grundlegenden Elements des Dateipuffers (in der Regel `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -141,11 +141,11 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>Parameter
 
-`_Filename` Der Name der Datei zu öffnen.
+*_Filename* den Namen des zu öffnenden Datei.
 
-`_Mode` Eine der Aufzählungen in [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*_Modus* eine der Enumerationen in [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
 
-`_Prot` Die standardmäßige Datei öffnen Schutz, entspricht die `shflag` im Parameters [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot* den Standardwert der dateiöffnung, entspricht die `shflag` Parameter im [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -194,7 +194,7 @@ Die Memberfunktion ruft [Rdbuf](#rdbuf) **->** [schließen](../standard-library/
 
 ### <a name="example"></a>Beispiel
 
-Sie finden ein Beispiel, in dem **close** verwendet wird, unter [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).
+Sie finden ein Beispiel, in dem `close` verwendet wird, unter [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).
 
 ## <a name="is_open"></a> basic_ifstream::is_open
 
@@ -242,19 +242,19 @@ void open(
 
 ### <a name="parameters"></a>Parameter
 
-`_Filename` Der Name der Datei zu öffnen.
+*_Filename* den Namen des zu öffnenden Datei.
 
-`_Mode` Eine der Aufzählungen in [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*_Modus* eine der Enumerationen in [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
 
-`_Prot` Die standardmäßige Datei öffnen Schutz, entspricht die `shflag` im Parameters [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot* den Standardwert der dateiöffnung, entspricht die `shflag` Parameter im [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion ruft [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**) auf. Wenn bei „open“ ein Fehler auftritt, ruft die Funktion [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf, wodurch möglicherweise eine Ausnahme „ios_base::failure“ ausgelöst wird.
+Die Memberfunktion ruft [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**) auf. Wenn öffnen ein Fehler auftritt, ruft die Funktion [Setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`), die möglicherweise eine ios_base:: Failure-Ausnahme auslösen.
 
 ### <a name="example"></a>Beispiel
 
-Sie finden ein Beispiel, in dem **open** verwendet wird, unter [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open).
+Finden Sie unter [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) für ein Beispiel, verwendet `open`.
 
 ## <a name="op_eq"></a> basic_ifstream::operator=
 
@@ -266,7 +266,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Ein Rvalue-Verweis auf eine `basic_ifstream` Objekt.
+*richtige* ein Rvalue-Verweis auf eine `basic_ifstream` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -274,7 +274,7 @@ Gibt `*this`zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Member-Operator ersetzt den Inhalt des Objekts mithilfe des Inhalts von `right`, als Rvalue-Verweis behandelt. Weitere Informationen finden Sie unter [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md).
+Der Memberoperator ersetzt den Inhalt des Objekts anhand der Inhalte des *rechten*, als Rvalue-Verweis behandelt. Weitere Informationen finden Sie unter [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md).
 
 ## <a name="rdbuf"></a> basic_ifstream::rdbuf
 
@@ -302,11 +302,11 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Ein Verweis auf einen anderen Streampuffer.
+*richtige* einen Verweis auf einen anderen Streampuffer.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion tauscht den Inhalt dieses Objekts mit dem Inhalt von `right` aus.
+Die Memberfunktion tauscht den Inhalt dieses Objekts für den Inhalt des *rechten*.
 
 ## <a name="see-also"></a>Siehe auch
 

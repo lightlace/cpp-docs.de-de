@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d354e469b6b6a19d51ecedbc7f2106c21e82dab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 327fc58cdfdc21711b992891e6fabe7872c48d26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852363"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960829"
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t-Klasse
 
-Eine Adapterklasse, die einer **non_const**-Memberfunktion, die ein einzelnes Argument akzeptiert, ermöglicht, als binäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Verweisargument initialisiert wird.
+Eine Adapterklasse, die ermöglicht eine `non_const` Memberfunktion, die ein einzelnes Argument als ein binäres Funktionsobjekt, wenn Sie mit einem Verweisargument initialisiert aufgerufen werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ### <a name="parameters"></a>Parameter
 
-`_Pm` Ein Zeiger auf die Memberfunktion der Klasse **Typ** , um ein Funktionsobjekt konvertiert werden soll.
+*_Pm* ein Zeiger auf die Memberfunktion der Klasse `Type` in ein Funktionsobjekt konvertiert werden.
 
-`left` Das Objekt, das die `_Pm` für Memberfunktion aufgerufen wird.
+*linken* das Objekt, das die *_Pm* auf Memberfunktion aufgerufen wird.
 
-`right` Das Argument, das zum erhält `_Pm`.
+*richtige* das Argument, das zum übergeben wird *_Pm*.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -56,7 +56,7 @@ Eine anpassungsfähige binäre Funktion.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse speichert eine Kopie von `_Pm`, die ein Zeiger auf eine Memberfunktion der Klasse **Type** in einem privaten Memberobjekt sein muss. Es definiert seine Memberfunktion `operator()` als Rückgabe ( **linken**.\* `_Pm`) ( **rechten**).
+Die Vorlagenklasse speichert eine Kopie des *_Pm*, die einen Zeiger auf eine Memberfunktion der Klasse sein muss `Type`, in einem privaten Memberobjekt. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert ( **linken**.\* `_Pm`) ( **rechten**).
 
 ## <a name="example"></a>Beispiel
 

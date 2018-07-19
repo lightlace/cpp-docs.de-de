@@ -1,5 +1,5 @@
 ---
-title: CHeapPtrElementTraits Klasse | Microsoft Docs
+title: CHeapPtrElementTraits-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa4b29f5893a0b1536a087b0c516e6340eca8449
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1aa3921f79e8c368fe4a42c3b56ede27f436e25
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360076"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884099"
 ---
 # <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits-Klasse
-Diese Klasse enthält Methoden, statische Funktionen und Typdefinitionen hilfreich beim Erstellen von Sammlungen von Heap Zeigern.  
+Diese Klasse stellt die Methoden, statische Funktionen und Typdefinitionen hilfreich zum Erstellen von Sammlungen von Heap-Zeigern.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,11 +41,11 @@ class CHeapPtrElementTraits :
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Der Objekttyp in die Auflistungsklasse gespeichert werden.  
+ *T*  
+ Der Objekttyp in der Auflistungsklasse gespeichert werden.  
   
- `Allocator`  
- Die Arbeitsspeicher-Allocation-Klasse, verwendet. Die Standardeinstellung ist [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ *Zuweisung*  
+ Die Speicher-Allocation-Klasse verwenden. Der Standardwert ist [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
 ## <a name="members"></a>Member  
   
@@ -53,11 +53,11 @@ class CHeapPtrElementTraits :
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Der Datentyp zum Hinzufügen von Elementen auf das Klassenobjekt Auflistung verwendet werden soll.|  
-|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Der Datentyp zum Abrufen von Elementen aus der Auflistung-Klassenobjekt verwendet werden soll.|  
+|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Der Datentyp, zum Hinzufügen von Elementen für das Objekt der Sammlung-Klasse verwendet werden soll.|  
+|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Der Datentyp für das Abrufen von Elementen aus dem Auflistungsobjekt-Klasse.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse enthält Methoden, statische Funktionen und Typdefinitionen für die Erstellung von Auflistungsobjekten-Klasse mit Zeigern Heap Beihilfe. Die Klasse `CHeapPtrList` leitet sich von `CHeapPtrElementTraits`.  
+ Diese Klasse stellt die Methoden, statische Funktionen und Typedefs für dadurch die Erstellung von Auflistungsobjekten-Klasse, die Heap-Zeiger. Die Klasse `CHeapPtrList` leitet sich von `CHeapPtrElementTraits`.  
   
  Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
@@ -76,14 +76,14 @@ class CHeapPtrElementTraits :
  **Header:** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CHeapPtrElementTraits::INARGTYPE  
- Der Datentyp zum Hinzufügen von Elementen auf das Klassenobjekt Auflistung verwendet werden soll.  
+ Der Datentyp, zum Hinzufügen von Elementen für das Objekt der Sammlung-Klasse verwendet werden soll.  
   
 ```
 typedef CHeapPtr<T, Allocator>& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CHeapPtrElementTraits::OUTARGTYPE  
- Der Datentyp zum Abrufen von Elementen aus der Auflistung-Klassenobjekt verwendet werden soll.  
+ Der Datentyp für das Abrufen von Elementen aus dem Auflistungsobjekt-Klasse.  
   
 ```
 typedef T *& OUTARGTYPE;
@@ -92,4 +92,4 @@ typedef T *& OUTARGTYPE;
 ## <a name="see-also"></a>Siehe auch  
  [CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md)   
  [CComHeapPtr-Klasse](../../atl/reference/ccomheapptr-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

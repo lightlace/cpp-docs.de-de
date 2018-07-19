@@ -1,5 +1,5 @@
 ---
-title: 'Address-of-Operator: &amp; | Microsoft Docs'
+title: 'Address-of-Operator: &amp; | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df243cac3b48a120345760f814a97b77667c770f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 144e770a90427d12d79a18c346d74140d07c5c5c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958584"
 ---
 # <a name="address-of-operator-amp"></a>Address-of-Operator: &amp;
 ## <a name="syntax"></a>Syntax  
@@ -32,20 +33,20 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Unäre Address-of-Operators (**&**) nimmt die Adresse des Operanden. Der Operand des Address-of-Operators kann einen Funktionsbezeichner oder einen l-Wert, der ein Objekt festgelegt, das kein Bitfeld ist.  
+ Unäre Address-of-Operators (**&**) nimmt die Adresse seines Operanden. Der Operand des Address-of-Operators kann sein, entweder einen Funktionsbezeichner oder einen l-Wert, der ein Objekt festgelegt, das kein Bitfeld ist.  
   
  Der address-of-Operator kann nur auf Variablen vom Typ „Basis“, „Struktur“, „Klasse“ oder „Union“ angewendet werden, die auf Dateibereichsebene deklariert wurden, oder auf indizierte Arrayverweise. In diesen Ausdrücken kann ein konstanter Ausdruck, der nicht den address-of-Operator einschließt, dem address-of-Ausdruck hinzugefügt oder von diesem subtrahiert werden.  
   
- Bei Anwendung auf Funktionen oder L-Werte ist das Ergebnis des Ausdrucks ein Zeigertyp (ein R-Wert), der vom Typ des Operanden abgeleitet wird. Wenn beispielsweise der Operand vom Typ `char` ist, ist das Ergebnis des Ausdrucks ein Typzeiger auf `char`. Address-of-Operators, um angewendet **const** oder `volatile` Objekte, ergibt **const** `type` **\*** oder `volatile` `type` **\***, wobei `type` ist der Typ des ursprünglichen Objekts.  
+ Bei Anwendung auf Funktionen oder L-Werte ist das Ergebnis des Ausdrucks ein Zeigertyp (ein R-Wert), der vom Typ des Operanden abgeleitet wird. Wenn der Operand ist z. B. **Char**, das Ergebnis des Ausdrucks ist ein Zeiger auf **Char**. Der Address-of-Operator, auf angewendet **const** oder **flüchtige** -Objekte **const-Typ \***  oder **volatile-Typ \*** , wobei **Typ** ist der Typ des ursprünglichen Objekts.  
   
- Wenn die Address-of-Operator angewendet wird, um eine [qualifizierten Namen](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), das Ergebnis hängt davon ab, ob die *qualifizierten Namen* einen statischen Member angibt. Wenn dies der Fall ist, ist das Ergebnis ein Zeiger auf den Typ, der in der Deklaration des Members angegeben wird. Wenn der Member nicht statisch ist, wird das Ergebnis ist ein Zeiger auf den Member *Namen* der Klasse, indem *qualified-Class-Name*. (Siehe [Primärausdrücke](../cpp/primary-expressions.md) Weitere Informationen zu den *qualified-Class-Name*.) Das folgende Codefragment zeigt, wie sich das Ergebnis unterscheidet, abhängig davon, ob der Member statisch ist.  
+ Wenn die Address-of-Operator auf ein qualifizierter Name angewendet wird, hängt das Ergebnis an, ob die *qualifizierten Namen* einen statischen Member angibt. Wenn dies der Fall ist, ist das Ergebnis ein Zeiger auf den Typ, der in der Deklaration des Members angegeben wird. Wenn der Member nicht statisch ist, wird das Ergebnis ist ein Zeiger auf die Member *Namen* der Klasse erkennbar *qualified-Class-Name*. (Finden Sie unter [Primärausdrücke](../cpp/primary-expressions.md) für Weitere Informationen zu *qualified-Class-Name*.) Das folgende Codefragment zeigt, wie sich das Ergebnis unterscheidet, abhängig davon, ob der Member statisch ist.  
   
-```  
+```cpp 
 // expre_Address_Of_Operator.cpp  
 // C2440 expected  
 class PTM {  
 public:  
-           int   iValue;  
+    int iValue;  
     static float fValue;  
 };  
   
@@ -58,13 +59,13 @@ int main() {
   
  In diesem Beispiel ergibt der Ausdruck `&PTM::fValue` den Typ `float *` anstelle von Typ `float PTM::*`, da `fValue` ein statischer Member ist.  
   
- Die Adresse einer überladenen Funktion kann nur verwendet werden, wenn klar ist, auf welche Version der Funktion verwiesen wird. Finden Sie unter [Funktionsüberladung](function-overloading.md) Informationen zum Abrufen der Adresse eines bestimmten überladenen Funktion.  
+ Die Adresse einer überladenen Funktion kann nur verwendet werden, wenn klar ist, auf welche Version der Funktion verwiesen wird. Finden Sie unter [Funktionsüberladung](function-overloading.md) Informationen zum Abrufen der Adresse einer bestimmten überladenen Funktion.  
   
  Die Anwendung des address-of-Operators auf einen Referenztyp führt zum gleichen Ergebnis wie die Anwendung des Operators auf das Objekt, an das der Verweis gebunden ist. Zum Beispiel:  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // expre_Address_Of_Operator2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -87,7 +88,7 @@ int main() {
   
  Im folgenden Beispiel wird der address-of-Operator benutzt, um ein Zeigerargument an eine Funktion zu übergeben:  
   
-```  
+```cpp 
 // expre_Address_Of_Operator3.cpp  
 // compile with: /EHsc  
 // Demonstrate address-of operator &  
@@ -114,6 +115,6 @@ int main() {
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke mit Unäroperatoren](../cpp/expressions-with-unary-operators.md)   
- [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++-Built-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Lvalue-Verweisdeklarator: &](../cpp/lvalue-reference-declarator-amp.md)   
  [Dereferenzierungs- und Address-of-Operatoren](../c-language/indirection-and-address-of-operators.md)

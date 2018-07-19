@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 797bc6353bd7396d409de073cc412480a803117f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 95e2713f3c73a3dc35c11be8d245ede94b2c3bba
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844340"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953978"
 ---
 # <a name="inputiteratortag-struct"></a>input_iterator_tag-Struktur
 
-Eine Klasse, die einen Rückgabetyp für eine **iterator_category**-Funktion bereitstellt, die einen Eingabeiterator darstellt.
+Eine Klasse, die einen Rückgabetyp für eine `iterator_category` -Funktion, die einen eingabeiterator darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,13 +34,13 @@ Struktur Input_iterator_tag {};
 
 ## <a name="remarks"></a>Hinweise
 
-Die Kategorietagklassen werden als Kompiliertags für die Auswahl des Algorithmus verwendet. Die Vorlagenfunktion muss herausfinden, welche die spezifischste Kategorie ihres Iteratorarguments ist, um zur Kompilierzeit den effizientesten Algorithmus verwenden zu können. Für jeden Iterator des Typs `Iterator` muss `iterator_traits`< `Iterator`> **::iterator_category** definiert werden, um das spezifischste Kategorietag zu sein, das das Iteratorverhalten beschreibt.
+Die Kategorietagklassen werden als Kompiliertags für die Auswahl des Algorithmus verwendet. Die Vorlagenfunktion muss herausfinden, welche die spezifischste Kategorie ihres Iteratorarguments ist, um zur Kompilierzeit den effizientesten Algorithmus verwenden zu können. Für jeden Iterator des Typs `Iterator` muss `iterator_traits`< `Iterator`> **::iterator_category** definiert werden, um das spezifischste Kategorietag zu werden, das das Iteratorverhalten beschreibt.
 
-Der Typ entspricht dem **iterator**\< **Iter**> **::iterator_category**, wenn **Iter** ein Objekt beschreibt, das als Eingabeiterator verwendet werden kann.
+Der Typ ist identisch mit **Iterator** \< **Iter**> **:: Iterator_category** beim `Iter` beschreibt ein Objekt, das als dienen kann ein Eingabe-Iterator.
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel zur Verwendung der **iterator_tag**s finden Sie unter [iterator_traits](../standard-library/iterator-traits-struct.md) oder [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md).
+Finden Sie unter [Iterator_traits](../standard-library/iterator-traits-struct.md) oder [Random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) ein Beispiel zur Verwendung für `iterator_tag`s.
 
 ## <a name="requirements"></a>Anforderungen
 

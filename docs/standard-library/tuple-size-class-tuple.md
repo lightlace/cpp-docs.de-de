@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7249aad5e130e805aae73bdbfba7f9c4f78ad4fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853982"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958265"
 ---
 # <a name="tuplesize-class"></a>tuple_size-Klasse;
 
@@ -66,23 +66,29 @@ template <class Tuple>
 
 ### <a name="parameters"></a>Parameter
 
-*Tupel* den Typ des Tupels.
+*Tuple*  
+Der Typ des Tupels.
 
-*Elem* den Typ der Elemente des Arrays.
+*Elem*  
+Der Typ der Arrayelemente.
 
-*Größe* die Größe des Arrays.
+*Size*  
+Die Größe des Arrays.
 
-*T1* den Typ, der das erste Element des Paars.
+*T1*  
+Der Typ des ersten Members des Paares.
 
-*T2* den Typ des zweiten Elements des Paars.
+*T2*  
+Der Typ des zweiten Members des Paares.
 
-*Typen* die Typen der Tupelelemente.
+*Typen*  
+Die Typen der Elemente des Tupels.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse verfügt über einen Member `value` , der einem ganzzahligen konstanten Ausdruck entspricht, dessen Wert dem Wertebereich des Tupeltyps `Tuple`entspricht.
+Die Vorlagenklasse verfügt über einen Member `value` , ein ganzzahliger konstanter Ausdruck, dessen Wert dem Wertebereich des Tupeltyps *Tupel*.
 
-Die Vorlagenspezialisierung für Arrays verfügt über einen Member `value`, der ein ganzzahliger konstanter Ausdruck ist, dessen Wert `Size` und damit die Größe des Arrays ist.
+Der vorlagenspezialisierung für Arrays verfügt über einen Member `value` , ein ganzzahliger konstanter Ausdruck, dessen Wert *Größe*, d.h. die Größe des Arrays.
 
 Die Vorlagenspezialisierung für Paare verfügt über einen Member `value`, der ein ganzzahliger konstanter Ausdruck ist, dessen Wert 2 ist.
 
@@ -116,7 +122,7 @@ int main()
 
 ## <a name="requirements"></a>Anforderungen
 
-**Header:** \<Tupel > **Header:** \<Array > (für Array Spezialisierung) **Header:** \<Utility > (für Paar Spezialisierung)
+**Header:** \<Tupel > **Header:** \<Array > (für arrayspezialisierung) **Header:** \<Utility > (für paarspezialisierung)
 
 **Namespace:** std
 

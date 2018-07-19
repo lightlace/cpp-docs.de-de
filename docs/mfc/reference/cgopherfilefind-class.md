@@ -1,5 +1,5 @@
 ---
-title: CGopherFileFind Klasse | Microsoft Docs
+title: CGopherFileFind-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,18 +36,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae84c647f068e49136968e60bfd8bd51a528112
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 690c7bd36046161fb39a560b7aa2f7bf13c55828
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339620"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind-Klasse
 Unterstützt die Internetsuche nach Dateien auf Gopherservern.  
   
 > [!NOTE]
->  Die Klassen `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` und ihre Member sind veraltet, da sie nicht auf Windows XP-Plattform funktionieren, jedoch wird auf älteren Plattformen funktionieren weiterhin.  
+>  Die Klassen `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` und deren Member sind veraltet, da, nicht auf der Windows XP-Plattform funktionieren, während sie weiterhin auf frühere Plattformen funktionieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -67,23 +67,23 @@ class CGopherFileFind : public CFileFind
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CGopherFileFind:: FindFile](#findfile)|Sucht nach einer Datei auf einem Gopherserver.|  
-|[CGopherFileFind:: FindNextFile](#findnextfile)|Weiterhin eine Dateisuche aus einem vorherigen Aufruf von [FindFile](#findfile).|  
-|[CGopherFileFind::GetCreationTime](#getcreationtime)|Ruft den Zeitpunkt der Erstellung die angegebene Datei ab.|  
+|[CGopherFileFind:: FindFile](#findfile)|Sucht nach einer Datei auf einem Gopher-Server.|  
+|[CGopherFileFind:: FindNextFile](#findnextfile)|Weiterhin eine Dateisuche in einem vorherigen Aufruf von [FindFile](#findfile).|  
+|[CGopherFileFind::GetCreationTime](#getcreationtime)|Ruft den Zeitpunkt, an den die angegebene Datei erstellt wurde.|  
 |[CGopherFileFind::GetLastAccessTime](#getlastaccesstime)|Ruft den Zeitpunkt des letzten Zugriffs auf die angegebene Datei.|  
-|[CGopherFileFind::GetLastWriteTime](#getlastwritetime)|Ruft die Uhrzeit der letzten auf die angegebene Datei Schreibzugriffs ab.|  
-|[CGopherFileFind::GetLength](#getlength)|Ruft die Länge der gefundenen Datei, in Bytes ab.|  
+|[CGopherFileFind::GetLastWriteTime](#getlastwritetime)|Ruft den Zeitpunkt an, die, dem die angegebene Datei zuletzt in geschrieben wurde.|  
+|[CGopherFileFind::GetLength](#getlength)|Ruft die Länge der gefundenen Datei in Bytes ab.|  
 |[CGopherFileFind:: GetLocator](#getlocator)|Abrufen einer `CGopherLocator` Objekt.|  
-|[CGopherFileFind::GetScreenName](#getscreenname)|Ruft den Namen eines Bildschirms Gopher ab.|  
-|[CGopherFileFind::IsDots](#isdots)|Testet, ob die aktuelle Marker eines Verzeichnisses und übergeordnetes Verzeichnis beim Durchlaufen von Dateien.|  
+|[CGopherFileFind::GetScreenName](#getscreenname)|Ruft den Namen eines Bildschirms Gopher.|  
+|[CGopherFileFind::IsDots](#isdots)|Testet, ob die aktuelle Verzeichnis und das übergeordnete Verzeichnis-Marker, während des Durchlaufens der Dateien.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CGopherFileFind` enthält die Memberfunktionen, die eine Suche zu starten, suchen Sie nach einer Datei und Rückgabe-URL für eine Datei.  
+ `CGopherFileFind` enthält die Member-Funktionen, die eine Suche zu starten, suchen Sie nach einer Datei und Rückgabe-URL von einer Datei.  
   
- Andere MFC-Steuerelementklassen entwickelt für Internet und der lokalen Datei, die durchsucht werden [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) und [CFileFind](../../mfc/reference/cfilefind-class.md). Zusammen mit `CGopherFileFind`, diese Klassen bieten einen nahtlosen Mechanismus für den Benutzer zu bestimmten Dateien unabhängig von den Serverprotokoll, Dateityp oder Speicherort (einem lokalen Computer oder einem Remoteserver.) Beachten Sie, dass keine MFC-Klasse für die Suche auf HTTP-Servern, da HTTP die direkte Bearbeitung erforderlich, suchen nicht unterstützt.  
+ Andere MFC-Klassen für Internet und die lokale Datei durchsucht enthalten [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) und [CFileFind](../../mfc/reference/cfilefind-class.md). Zusammen mit `CGopherFileFind`, diese Klassen bieten einen nahtlose Mechanismus für den Benutzer zum Suchen von Dateien, die unabhängig von der Server-Protokoll, Dateityp oder Position (einem lokalen Computer oder einem Remoteserver.) Beachten Sie, dass es keine MFC-Klasse ist für die Suche auf HTTP-Servern, da HTTP nicht die direkten Bearbeitung erforderlich, die für Suchvorgänge unterstützt.  
   
 > [!NOTE]
-> `CGopherFileFind` unterstützt nicht die folgenden Memberfunktionen ihrer Basisklasse [CFileFind](../../mfc/reference/cfilefind-class.md):  
+> `CGopherFileFind` unterstützt nicht die folgenden Memberfunktionen der Basisklasse [CFileFind](../../mfc/reference/cfilefind-class.md):  
   
 - [GetRoot](../../mfc/reference/cfilefind-class.md#getroot)  
   
@@ -95,9 +95,9 @@ class CGopherFileFind : public CFileFind
   
 - [GetFileURL](../../mfc/reference/cfilefind-class.md#getfileurl)  
   
- Darüber hinaus bei Verwendung mit `CGopherFileFind`, `CFileFind` Memberfunktion [IsDots](../../mfc/reference/cfilefind-class.md#isdots) ist immer **"false"**.  
+ Darüber hinaus wird bei mit `CGopherFileFind`, `CFileFind` Memberfunktion [IsDots](../../mfc/reference/cfilefind-class.md#isdots) ist immer "false".  
   
- Weitere Informationen zur Verwendung von `CGopherFileFind` und die anderen WinInet-Klassen finden Sie im Artikel [Internet Programmieren mit WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ Weitere Informationen zur Verwendung von `CGopherFileFind` und die andere WinInet-Klassen finden Sie im Artikel [Internet zu programmieren, mit WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -123,10 +123,10 @@ explicit CGopherFileFind(
  Ein Zeiger auf eine [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) Objekt.  
   
  *dwContext*  
- Der Kontextbezeichner für den Vorgang. Finden Sie unter **"Hinweise"** Weitere Informationen zu *DwContext*.  
+ Der Kontextbezeichner für den Vorgang. Finden Sie unter **"Hinweise"** für Weitere Informationen zu *DwContext*.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Standardwert für *DwContext* wird gesendet, von MFC ermöglicht, die `CGopherFileFind` -Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) erstellte Objekt die `CGopherFileFind` Objekt. Bei der Erstellung einer `CGopherFileFind` -Objekt, Sie können angeben, überschreiben die Standardeinstellung, um den Kontextbezeichner auf einen Wert Ihrer Wahl festzulegen. Der Kontextbezeichner wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zum Status des Objekts bereitzustellen, mit denen es identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen über den Kontextbezeichner.  
+ Der Standardwert für *DwContext* wird gesendet, von MFC über die `CGopherFileFind` -Objekt aus der [CInternetSession](../../mfc/reference/cinternetsession-class.md) -Objekt, das erstellt die `CGopherFileFind` Objekt. Beim Erstellen einer `CGopherFileFind` Objekt, Sie können angeben, überschreiben die Standardeinstellung, um den Kontextbezeichner auf einen Wert Ihrer Wahl festgelegt. Der Kontextbezeichner wird zurückgegeben, um [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zu Status für das Objekt mit dem er identifiziert wird. Finden Sie im Artikel [Internetgrundlagen: WinInet](../../mfc/wininet-basics.md) für Weitere Informationen zu den Kontextbezeichner.  
   
 ##  <a name="findfile"></a>  CGopherFileFind:: FindFile  
  Rufen Sie diese Memberfunktion, um einen Gopherdatei zu suchen.  
@@ -151,31 +151,31 @@ virtual BOOL FindFile(
  Ein Zeiger auf eine Zeichenfolge, die den Dateinamen enthält.  
   
  *dwFlags*  
- Die Flags, die beschreiben, wie diese Sitzung zu behandeln. Die gültigen Flags sind:  
+ Die Flags, die beschreibt, wie diese Sitzung behandelt. Die gültigen Flags sind:  
   
--   INTERNET_FLAG_RELOAD rufen Sie Daten vom Remoteserver, auch wenn diese lokal zwischengespeichert wird.  
+-   INTERNET_FLAG_RELOAD Abrufen der Daten aus den Remoteserver, auch wenn es lokal zwischengespeichert werden.  
   
--   INTERNET_FLAG_DONT_CACHE sollten Sie die Daten nicht zwischengespeichert, entweder lokal oder in Gateways.  
+-   INTERNET_FLAG_DONT_CACHE Zwischenspeichern nicht der Daten, entweder lokal oder in der Gateways.  
   
--   Sichere Transaktionen bei der Übertragung mit Secure Sockets Layer "oder" Prozent INTERNET_FLAG_SECURE anfordern Dieses Flag gilt nur für HTTP-Anforderungen zur Verfügung.  
+-   Sichere Transaktionen bei der Übertragung mit Secure Sockets Layer "oder" Prozent INTERNET_FLAG_SECURE anfordern Dieses Flag gilt nur für HTTP-Anforderungen.  
   
--   Wiederverwenden, INTERNET_FLAG_USE_EXISTING Wenn möglich, alle bestehenden Verbindungen mit dem Server für das neue **FindFile** Anforderungen, anstatt eine neue Sitzung für jede Anforderung erstellen.  
+-   INTERNET_FLAG_USE_EXISTING Wenn möglich, alle bestehenden Verbindungen mit dem Server wiederverwenden, für den neuen `FindFile` Anforderungen, anstatt eine neue Sitzung für jede Anforderung erstellen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Hinweise  
- Nach dem Aufruf **FindFile** um das erste Gopher-Objekt abzurufen, rufen Sie [FindNextFile](#findnextfile) nachfolgende Gopher-Dateien abzurufen.  
+ Nach dem Aufruf `FindFile` um das erste Gopher-Objekt abzurufen, rufen Sie [FindNextFile](#findnextfile) zum Abrufen von nachfolgenden Gopher-Dateien.  
   
 ##  <a name="findnextfile"></a>  CGopherFileFind:: FindNextFile  
- Rufen Sie diese Memberfunktion zum Fortfahren einer Dateisuche begonnen, die mit einem Aufruf von [CGopherFileFind:: FindFile](#findfile).  
+ Rufen Sie diese Memberfunktion zum Fortsetzen einer der Dateisuche begonnen, die mit einem Aufruf von [CGopherFileFind:: FindFile](#findfile).  
   
 ```  
 virtual BOOL FindNextFile();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn mehrere Dateien vorhanden sind; 0 (null) ist die gefundene Datei das letzte Lesezeichen im Verzeichnis, oder wenn ein Fehler aufgetreten. Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Wenn der Dateiname der gefundenen Datei ist die letzte Datei im Verzeichnis, oder wenn keine übereinstimmenden Dateien gefunden werden können, die `GetLastError` -Funktion gibt ERROR_NO_MORE_FILES zurück.  
+ Ungleich NULL ist, wenn weitere Dateien vorhanden sind; NULL, wenn die Datei im Verzeichnis das letzte ist oder ein Fehler aufgetreten ist. Um erweiterte Fehlerinformationen abzurufen, rufen Sie die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). Wenn die Datei die letzte Datei im Verzeichnis ist, oder wenn keine übereinstimmenden Dateien gefunden werden können, die `GetLastError` Funktionsergebnis ERROR_NO_MORE_FILES.  
   
 ##  <a name="getcreationtime"></a>  CGopherFileFind::GetCreationTime  
  Ruft den Zeitpunkt der Erstellung für die aktuelle Datei ab.  
@@ -187,19 +187,19 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>Parameter  
  *pTimeStamp*  
- Ein Zeiger auf eine [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur, enthält die Uhrzeit der dateierstellung.  
+ Ein Zeiger auf eine [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) -Struktur, enthält die Zeit, die die Datei erstellt wurde.  
   
  *refTime*  
  Ein Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Wert ist ungleich NULL bei Erfolg; 0, wenn nicht erfolgreich. `GetCreationTime` Gibt 0 zurück, wenn nur [FindNextFile](#findnextfile) nie aufgerufen wurde für dieses `CGopherFileFind` Objekt.  
+ Ungleich NULL Wenn erfolgreich; 0, wenn der Vorgang fehlschlägt. `GetCreationTime` Gibt 0 zurück, wenn nur [FindNextFile](#findnextfile) noch nie aufgerufen wurde, dazu `CGopherFileFind` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `GetCreationTime`.  
   
 > [!NOTE]
->  Nicht alle Dateisysteme verwenden die gleiche Semantik, um den Zeitstempel, der von dieser Funktion zurückgegebenen implementieren. Diese Funktion kann von anderen Stempel Zeitfunktionen zurückgegeben werden, wenn der zugrunde liegenden Dateisystem oder dem Server nicht unterstützt wird das Attribut Zeit beibehalten denselben Wert zurückgeben. Finden Sie unter der [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur Informationen Zeitformate. Bei einigen Betriebssystemen ist die zurückgegebene Zeit in der Zeit, die Zone lokal auf dem Computer wurden, dass die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
+>  Nicht alle Dateisysteme verwenden die gleiche Semantik, um den Zeitstempel, der von dieser Funktion zurückgegebenen zu implementieren. Diese Funktion kann den gleichen Wert von anderen Time Stamp-Funktionen zurückgegeben werden, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das zeitattribut beibehalten zurückgeben. Finden Sie unter den [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur für Informationen zu Zeitformaten. Bei einigen Betriebssystemen ist die zurückgegebene Zeit, in der Zeit, die Zone lokal auf dem Computer wurden, wenn sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
   
 ##  <a name="getlastaccesstime"></a>  CGopherFileFind::GetLastAccessTime  
  Ruft den Zeitpunkt des letzten Zugriffs auf die angegebene Datei.  
@@ -214,19 +214,19 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
  Ein Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt.  
   
  *pTimeStamp*  
- Ein Zeiger auf eine [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur, enthält die Zeit, die auf die Datei zuletzt zugegriffen wurde.  
+ Ein Zeiger auf eine [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur, die beim Zugriff auf die Datei wurde zuletzt enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Wert ist ungleich NULL bei Erfolg; 0, wenn nicht erfolgreich. `GetLastAccessTime` Gibt 0 zurück, wenn nur [FindNextFile](#findnextfile) nie aufgerufen wurde für dieses `CGopherFileFind` Objekt.  
+ Ungleich NULL Wenn erfolgreich; 0, wenn der Vorgang fehlschlägt. `GetLastAccessTime` Gibt 0 zurück, wenn nur [FindNextFile](#findnextfile) noch nie aufgerufen wurde, dazu `CGopherFileFind` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `GetLastAccessTime`.  
   
 > [!NOTE]
->  Nicht alle Dateisysteme verwenden die gleiche Semantik, um den Zeitstempel, der von dieser Funktion zurückgegebenen implementieren. Diese Funktion kann von anderen Stempel Zeitfunktionen zurückgegeben werden, wenn der zugrunde liegenden Dateisystem oder dem Server nicht unterstützt wird das Attribut Zeit beibehalten denselben Wert zurückgeben. Finden Sie unter der [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur Informationen Zeitformate. Bei einigen Betriebssystemen ist die zurückgegebene Zeit in der Zeit, die Zone lokal auf dem Computer wurden, dass die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
+>  Nicht alle Dateisysteme verwenden die gleiche Semantik, um den Zeitstempel, der von dieser Funktion zurückgegebenen zu implementieren. Diese Funktion kann den gleichen Wert von anderen Time Stamp-Funktionen zurückgegeben werden, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das zeitattribut beibehalten zurückgeben. Finden Sie unter den [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur für Informationen zu Zeitformaten. Bei einigen Betriebssystemen ist die zurückgegebene Zeit, in der Zeit, die Zone lokal auf dem Computer wurden, wenn sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
   
 ##  <a name="getlastwritetime"></a>  CGopherFileFind::GetLastWriteTime  
- Ruft ab der letzten Ausführung der Datei geändert wurde.  
+ Ruft den letzten Zeitpunkt, die die Datei geändert wurde.  
   
 ```  
 virtual BOOL GetLastWriteTime(FILETIME* pTimeStamp) const;  
@@ -235,19 +235,19 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
   
 ### <a name="parameters"></a>Parameter  
  *pTimeStamp*  
- Ein Zeiger auf eine [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) Struktur, die die Zeit, die die Datei letzten in Schreibvorgangs enthält.  
+ Ein Zeiger auf eine [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) -Struktur, enthält die Datei zum letzten geschrieben wurde.  
   
  *refTime*  
  Ein Verweis auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Wert ist ungleich NULL bei Erfolg; 0, wenn nicht erfolgreich. `GetLastWriteTime` Gibt 0 zurück, wenn nur [FindNextFile](#findnextfile) nie aufgerufen wurde für dieses `CGopherFileFind` Objekt.  
+ Ungleich NULL Wenn erfolgreich; 0, wenn der Vorgang fehlschlägt. `GetLastWriteTime` Gibt 0 zurück, wenn nur [FindNextFile](#findnextfile) noch nie aufgerufen wurde, dazu `CGopherFileFind` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `GetLastWriteTime`.  
   
 > [!NOTE]
->  Nicht alle Dateisysteme verwenden die gleiche Semantik, um den Zeitstempel, der von dieser Funktion zurückgegebenen implementieren. Diese Funktion kann von anderen Stempel Zeitfunktionen zurückgegeben werden, wenn der zugrunde liegenden Dateisystem oder dem Server nicht unterstützt wird das Attribut Zeit beibehalten denselben Wert zurückgeben. Finden Sie unter der [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur Informationen Zeitformate. Bei einigen Betriebssystemen ist die zurückgegebene Zeit in der Zeit, die Zone lokal auf dem Computer wurden, dass die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
+>  Nicht alle Dateisysteme verwenden die gleiche Semantik, um den Zeitstempel, der von dieser Funktion zurückgegebenen zu implementieren. Diese Funktion kann den gleichen Wert von anderen Time Stamp-Funktionen zurückgegeben werden, wenn der zugrunde liegenden Dateisystem oder Server nicht unterstützt wird das zeitattribut beibehalten zurückgeben. Finden Sie unter den [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) Struktur für Informationen zu Zeitformaten. Bei einigen Betriebssystemen ist die zurückgegebene Zeit, in der Zeit, die Zone lokal auf dem Computer wurden, wenn sich die Datei befindet. Finden Sie unter Win32 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) -API für Weitere Informationen.  
   
 ##  <a name="getlength"></a>  CGopherFileFind::GetLength  
  Rufen Sie diese Memberfunktion, um die Länge in Bytes, die gefundene Datei abrufen.  
@@ -260,16 +260,16 @@ virtual ULONGLONG GetLength() const;
  Die Länge der gefundenen Datei in Bytes.  
   
 ### <a name="remarks"></a>Hinweise  
- `GetLength` verwendet die Win32-Struktur [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) auf den Wert der Dateigröße in Bytes abrufen.  
+ `GetLength` verwendet die Win32-Struktur [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) , den Wert der Dateigröße in Bytes abzurufen.  
   
 > [!NOTE]
->  Ab MFC 7.0 `GetLength` unterstützt 64-Bit-Ganzzahl-Typen. Abschneiden Warnungen möglicherweise zuvor vorhandenen Code mit dieser neueren Version der Bibliothek erstellt.  
+>  Ab MFC 7.0 `GetLength` 64-Bit-Integer-Typen unterstützt. Bereits vorhandene-Code, der durch diese neuere Version der Bibliothek kann Abschneiden Warnungen führen.  
   
 ### <a name="example"></a>Beispiel  
-  Siehe das Beispiel für [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) (Implementierung der Basisklasse).  
+  Siehe das Beispiel für [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) (der Implementierung der Basisklasse).  
   
 ##  <a name="getlocator"></a>  CGopherFileFind:: GetLocator  
- Rufen Sie diese Memberfunktion zum Abrufen der [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) Objekt, mit [FindFile](#findfile) verwendet, um die Gopherdatei zu suchen.  
+ Rufen Sie diese Memberfunktion zum Abrufen der [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) -Objekt, [FindFile](#findfile) verwendet, um die Gopherdatei zu suchen.  
   
 ```  
 CGopherLocator GetLocator() const;  
@@ -279,7 +279,7 @@ CGopherLocator GetLocator() const;
  Ein `CGopherLocator`-Objekt.  
   
 ##  <a name="getscreenname"></a>  CGopherFileFind::GetScreenName  
- Rufen Sie diese Memberfunktion zum Abrufen des Namens des Bildschirms Gopher.  
+ Rufen Sie diese Memberfunktion um den Namen des Bildschirms Gopher abzurufen.  
   
 ```  
 CString GetScreenName() const;  
@@ -289,14 +289,14 @@ CString GetScreenName() const;
  Der Name des Bildschirms Gopher.  
   
 ##  <a name="isdots"></a>  CGopherFileFind::IsDots  
- Testet, ob die aktuelle Marker eines Verzeichnisses und übergeordnetes Verzeichnis beim Durchlaufen von Dateien.  
+ Testet, ob die aktuelle Verzeichnis und das übergeordnete Verzeichnis-Marker, während des Durchlaufens der Dateien.  
   
 ```  
 virtual BOOL IsDots() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL ist, verfügt die gefundene Datei den Namen "."oder"..", was bedeutet, dass die gefundene Datei um ein Verzeichnis ist. Andernfalls 0.  
+ Ungleich NULL, wenn die gefundene Datei den Namen hat "."oder"..", was bedeutet, dass die gefundene Datei um ein Verzeichnis ist. Andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [FindNextFile](#findnextfile) mindestens einmal vor dem Aufruf `IsDots`.  

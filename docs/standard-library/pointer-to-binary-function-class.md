@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39549a277a203d9daa894f48437224caf50a0521
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b632fabe8f596d46a0423d670ff57bb12de93cd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853377"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953455"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function-Klasse
 
@@ -44,19 +44,19 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-`pfunc` Der binären Funktion konvertiert werden.
+*Pfunc* binären Funktion, die konvertiert werden.
 
-`left` Das linke Objekt, mit der  *\*Pfunc* für aufgerufen wird.
+*linken* das linke Objekt, das  *\*Pfunc* aufgerufen wird.
 
-`right` Das rechte Objekt, mit der  *\*Pfunc* für aufgerufen wird.
+*richtige* das rechte Objekt, das  *\*Pfunc* aufgerufen wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Vorlagenklasse speichert eine Kopie von **pfunc**. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert (\* **pfunc**)(_ *Left*, \_ *Right*).
+Die Vorlagenklasse speichert eine Kopie des `pfunc`. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert (\* **pfunc**)(_ *Left*, \_ *Right*).
 
 ## <a name="remarks"></a>Hinweise
 
-Ein binärer Funktionszeiger ist ein Funktionsobjekt und kann an alle C++-Standardbibliotheksalgorithmen übergeben werden, die eine binäre Funktion als Parameter erwarten, aber er kann nicht angepasst werden. Für die Verwendung mit einem Adapter, z.B. um einen Wert zuzuordnen oder ihn mit einer Negator zu verwenden, müssen die geschachtelten Typen **first_argument_type**, **second_argument_type** und **result_type** angegeben werden, die eine solche Anpassung möglich machen. Die Konvertierung durch `pointer_to_binary_function` ermöglicht den Funktionsadaptern mit binären Funktionszeigern zusammenzuarbeiten.
+Ein binärer Funktionszeiger ist ein Funktionsobjekt und kann an alle C++-Standardbibliotheksalgorithmen übergeben werden, die eine binäre Funktion als Parameter erwarten, aber er kann nicht angepasst werden. Für die Verwendung mit einem Adapter, z.B. einen Wert zuzuordnen oder ihn mit einer Negator zu verwenden müssen sie die geschachtelten Typen angegeben werden `first_argument_type`, `second_argument_type`, und `result_type` , die solche Anpassung möglich machen. Die Konvertierung durch `pointer_to_binary_function` ermöglicht den Funktionsadaptern mit binären Funktionszeigern zusammenzuarbeiten.
 
 ## <a name="example"></a>Beispiel
 

@@ -1,5 +1,5 @@
 ---
-title: Datentypen-Klassen (ATL) | Microsoft Docs
+title: Benutzertypenklassen (ATL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab8c9d6839fad12459e65b396878f719a60c6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae961d47f77b630eaff91e1c02e244454b12dc80
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353857"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851313"
 ---
-# <a name="data-types-classes"></a>Klassen für Datentypen
+# <a name="data-types-classes"></a>Benutzertypenklassen
 Die folgenden Klassen zu umschließen C++-Datentypen:  
   
 -   [CComBSTR](../atl/reference/ccombstr-class.md) dient als Wrapper für die `BSTR` -Datentyp.  
   
--   [CComVariant](../atl/reference/ccomvariant-class.md) dient als Wrapper für die **VARIANT** -Datentyp.  
+-   [CComVariant](../atl/reference/ccomvariant-class.md) dient als Wrapper für die `VARIANT` -Datentyp.  
   
 -   [CComCurrency](../atl/reference/ccomcurrency-class.md) enthält Methoden und Operatoren zum Erstellen und Verwalten einer `CURRENCY` Objekt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../atl/atl-class-overview.md)
 

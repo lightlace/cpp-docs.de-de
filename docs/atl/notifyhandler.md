@@ -1,5 +1,5 @@
 ---
-title: NotifyHandler | Microsoft Docs
+title: NotifyHandler | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74fbdd99c162b4362339d8c1b45ddc281d30eeee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 72c6c992f2ec92bc11d6dd009649d503d3c0bd02
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356452"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848336"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
-Der Name der Funktion identifiziert durch den dritten Parameter von der `NOTIFY_HANDLER` Makro in Ihrer nachrichtenzuordnung.  
+Der Name der Funktion durch den dritten Parameter des NOTIFY_HANDLER Makros in der meldungszuordnung identifiziert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,20 +39,20 @@ Der Name der Funktion identifiziert durch den dritten Parameter von der `NOTIFY_
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `idCtrl`  
- Der Bezeichner des Steuerelements, das Senden der Nachricht.  
+ *idCtrl*  
+ Der Bezeichner des Steuerelements, das Sie die Nachricht gesendet.  
   
  *pnmh*  
- Adresse der ein [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) -Struktur, die die Benachrichtigungscode sowie relevante Informationen enthält. Für einige Benachrichtigungen, zeigt dieser Parameter auf einen größeren-Struktur, die **NMHDR** Struktur als des ersten Elements.  
+ Adresse von einem [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) Struktur, die der Benachrichtigungscode und zusätzliche Informationen enthält. Für einige Benachrichtigungen, zeigt dieser Parameter auf einer größeren Struktur, die die `NMHDR` Struktur wie des ersten Elements.  
   
- `bHandled`  
- Die Nachricht Zuordnung Mengen `bHandled` auf **"true"** vor *NotifyHandler* aufgerufen wird. Wenn *NotifyHandler* behandelt die Nachricht nicht vollständig sollte `bHandled` auf **"false"** an, dass die Nachricht noch weitere Verarbeitung erforderlich.  
+ *bHandled*  
+ Die Zuordnung Nachrichtensätze *bHandled* auf "true", bevor Sie *NotifyHandler* aufgerufen wird. Wenn *NotifyHandler* ist nicht vollständig verarbeitet die Nachricht sollte *bHandled* zu **"false"** an, dass noch weitere Verarbeitung die Nachricht erforderlich.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Das Ergebnis der Nachrichtenverarbeitung. 0, wenn erfolgreich.  
+ Das Ergebnis der Nachrichtenverarbeitung. Bei Erfolg 0.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Beispiel zur Verwendung dieser Nachrichtenhandler in einer meldungszuordnung, finden Sie unter [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).  
+ Ein Beispiel für die Verwendung dieser Nachrichtenhandler in einer meldungszuordnung, finden Sie unter [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Implementieren eines Fensters](../atl/implementing-a-window.md)   

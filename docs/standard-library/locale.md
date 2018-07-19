@@ -1,5 +1,5 @@
 ---
-title: '&lt;Gebietsschema&gt; | Microsoft Docs'
+title: '&lt;Gebietsschema&gt; | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81483b21f42f17320cb6d7b636fe5dd1f4c5e73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ee98361507236744608145dde6e326964a71b82
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859292"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953576"
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 
@@ -61,32 +61,32 @@ Definiert Vorlagenklassen und Funktionen, die von C++-Programmen verwendet werde
 |Klasse|Beschreibung|
 |-|-|
 |[codecvt](../standard-library/codecvt-class.md)|Eine Vorlagenklasse, die ein Facet bereitstellt, das zum Konvertieren zwischen internen und externen Zeichencodierungen verwendet wird.|
-|[codecvt_base](../standard-library/codecvt-base-class.md)|Eine Basisklasse für die codecvt-Klasse, die verwendet wird, um einen Enumerationstyp zu definieren, der als **Ergebnis** gekennzeichnet ist. Dieser wird als Rückgabetyp für die Facetmemberfunktionen verwendet, um das Ergebnis einer Konvertierung anzugeben.|
+|[codecvt_base](../standard-library/codecvt-base-class.md)|Eine Basisklasse für die Codecvt-Klasse, die verwendet wird, um einen Enumerationstyp zu definieren, die als bezeichnet `result`wird als den Rückgabetyp für die facetmemberfunktionen um das Ergebnis einer Konvertierung anzugeben.|
 |[codecvt_byname](../standard-library/codecvt-byname-class.md)|Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als Sortierungsfacet eines angegebenen Gebietsschemas dienen kann, sodass für einen kulturellen Bereich spezifische Informationen über Konvertierungen abgerufen werden können.|
 |[collate](../standard-library/collate-class.md)|Eine Sortierungsvorlagenklasse, die ein Facet bereitstellt, das Konventionen zum Sortieren von Zeichenfolgen verarbeitet.|
 |[collate_byname](../standard-library/collate-byname-class.md)|Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als Sortierungsfacet eines angegebenen Gebietsschemas dienen kann, sodass für einen kulturellen Bereich spezifische Informationen über Konventionen zum Sortieren von Zeichenfolgen abgerufen werden können.|
 |[ctype](../standard-library/ctype-class.md)|Eine Vorlagenklasse, die ein Facet bereitstellt, das verwendet wird, um Zeichen zu klassifizieren, zwischen Groß- und Kleinbuchstaben zu wechseln und zwischen dem systemeigenen Zeichensatz und dem vom Gebietsschema verwendeten Zeichensatz zu konvertieren.|
-|[ctype\<char>](../standard-library/ctype-char-class.md)|Eine Klasse, ist eine explizite Spezialisierung der Vorlagenklasse **Ctype\<CharType**> eingeben `char`, beschreibt ein Objekt, das als gebietsschemafacet zur verschiedene Eigenschaften eines Zeichens vom Typ charakterisieren dienen kann `char`.|
+|[ctype\<char>](../standard-library/ctype-char-class.md)|Eine Klasse, die eine explizite Spezialisierung der Vorlagenklasse `ctype<CharType>` eingeben **Char**, beschreibt ein Objekt, das als gebietsschemafacet zur verschiedene Eigenschaften eines Zeichens vom Typ charakterisieren dienen kann **Char**.|
 |[ctype_base](../standard-library/ctype-base-class.md)|Eine Basisklasse für die ctype-Klasse, die verwendet wird, um die Enumerationstypen zu definieren, mit denen Zeichen entweder einzeln oder innerhalb eines gesamten Bereichs klassifiziert oder getestet werden.|
 |[ctype_byname](../standard-library/ctype-byname-class.md)|Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als ctype-Facet eines angegebenen Gebietsschemas dienen kann und die Klassifizierung von Zeichen sowie die Konvertierung von Zeichen zwischen Groß-/Kleinschreibung und zwischen systemeigenen und gebietsschemaspezifischen Zeichensätzen ermöglicht.|
 |[locale](../standard-library/locale-class.md)|Eine Klasse, die ein Gebietsschemaobjekt beschreibt, das kulturspezifische Informationen als einen Satz von Facets kapselt, die zusammen eine bestimmte lokalisierte Umgebung definieren.|
 |[messages](../standard-library/messages-class.md)|Eine Vorlagenklasse, die ein Objekt beschreibt, das als Gebietsschemafacet dienen kann, um lokalisierte Meldungen aus einem Katalog von internationalisierten Meldungen für ein bestimmtes Gebietsschema abzurufen.|
-|[messages_base](../standard-library/messages-base-class.md)|Eine Basisklasse, die einen `int`-Typ für den Katalog von Meldungen beschreibt.|
+|[messages_base](../standard-library/messages-base-class.md)|Eine Basisklasse, die beschreibt, ein **Int** -Typ für den Katalog von Meldungen.|
 |[messages_byname](../standard-library/messages-byname-class.md)|Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als Meldungsfacet eines angegebenen Gebietsschemas dienen kann und das Abrufen von lokalisierten Meldungen ermöglicht.|
 |[money_base](../standard-library/money-base-class.md)|Eine Basisklasse für die ctype-Klasse, die verwendet wird, um die Enumerationstypen zu definieren, mit denen Zeichen entweder einzeln oder innerhalb eines gesamten Bereichs klassifiziert oder getestet werden.|
-|[money_get](../standard-library/money-get-class.md)|Eine Vorlagenklasse, die ein Objekt beschreibt, das als gebietsschemafacet zur Steuerelement Konvertierungen von Sequenzen des Typs dienen können **CharType** in monetäre Werte.|
-|[money_put](../standard-library/money-put-class.md)|Eine Vorlagenklasse, die ein Objekt beschreibt, das als gebietsschemafacet zur Steuerelement Konvertierungen von monetären Werten in Sequenzen vom Typ dienen können **CharType**.|
-|[moneypunct](../standard-library/moneypunct-class.md)|Eine Vorlagenklasse, die ein Objekt beschreibt, das als gebietsschemafacet beschreiben die Sequenzen vom Typ dienen können **CharType** verwendet, um ein Monetäres Eingabefeld oder ein Monetäres Ausgabefeld darzustellen.|
+|[money_get](../standard-library/money-get-class.md)|Eine Adapterklasse, die ein Objekt beschreibt, das als gebietsschemafacet zur Kontrolle von Konvertierungen von Sequenzen des Typs fungieren können **CharType** in monetäre Werte.|
+|[money_put](../standard-library/money-put-class.md)|Eine Adapterklasse, die ein Objekt beschreibt, das als gebietsschemafacet zur Kontrolle von Konvertierungen von monetären Werten in Sequenzen vom Typ dienen können **CharType**.|
+|[moneypunct](../standard-library/moneypunct-class.md)|Eine Adapterklasse, die ein Objekt beschreibt, das als gebietsschemafacet zur beschrieben, der Sequenzen vom Typ dienen können **CharType** verwendet, um ein Monetäres Eingabefeld oder ein Monetäres Ausgabefeld darzustellen.|
 |[moneypunct_byname](../standard-library/moneypunct-byname-class.md)|Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als moneypunct-Facet eines angegebenen Gebietsschemas dienen kann und die Formatierung von monetären Ein- und Ausgabefeldern ermöglicht.|
-|[num_get](../standard-library/num-get-class.md)|Eine Vorlagenklasse, die ein Objekt beschreibt, das als gebietsschemafacet zur Steuerelement Konvertierungen von Sequenzen des Typs dienen können **CharType** in numerische Werte.|
-|[num_put](../standard-library/num-put-class.md)|Eine Vorlagenklasse, die ein Objekt beschreibt, das als gebietsschemafacet zur Steuerelement Konvertierungen von numerischen Werten in Sequenzen vom Typ dienen können **CharType**.|
-|[numpunct](../standard-library/numpunct-class.md)|Eine Vorlagenklasse, die ein Objekt beschreibt, das als lokales Facet beschreiben die Sequenzen vom Typ dienen können **CharType** verwendet, um Informationen zur Formatierung und Interpunktion von numerischen und booleschen Ausdrücken dargestellt.|
+|[num_get](../standard-library/num-get-class.md)|Eine Adapterklasse, die ein Objekt beschreibt, das als gebietsschemafacet zur Kontrolle von Konvertierungen von Sequenzen des Typs fungieren können **CharType** in numerische Werte.|
+|[num_put](../standard-library/num-put-class.md)|Eine Adapterklasse, die ein Objekt beschreibt, das als gebietsschemafacet zur Kontrolle von Konvertierungen von numerischen Werten in Sequenzen vom Typ dienen können **CharType**.|
+|[numpunct](../standard-library/numpunct-class.md)|Eine Adapterklasse, die ein Objekt beschreibt, das als lokales Facet beschreiben die Sequenzen vom Typ dienen kann **CharType** verwendet, um Informationen zur Formatierung und Interpunktion von numerischen und booleschen Ausdrücken dargestellt.|
 |[numpunct_byname](../standard-library/numpunct-byname-class.md)|Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als moneypunct-Facet eines angegebenen Gebietsschemas dienen kann und die Formatierung und Interpunktion von numerischen und booleschen Ausdrücken ermöglicht.|
 |[time_base](../standard-library/time-base-class.md)|Eine Klasse, die als Basisklasse für Facets der time_get-Vorlagenklasse dient und nur den Enumerationstyp "dateorder" und mehrere Konstanten dieses Typs definiert.|
-|[time_get](../standard-library/time-get-class.md)|Eine Vorlagenklasse, die ein Objekt beschreibt, das als gebietsschemafacet zur Steuerelement Konvertierungen von Sequenzen des Typs dienen können **CharType** in Zeitwerte.|
-|[time_get_byname](../standard-library/time-get-byname-class.md)|Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als gebietsschemafacet vom Typ Time_get dienen können\<**CharType**, **InputIterator**>.|
-|[time_put](../standard-library/time-put-class.md)|Eine Vorlagenklasse, die ein Objekt beschreibt, das als gebietsschemafacet zur Steuerelement Konvertierungen von Zeitwerten in Sequenzen vom Typ dienen können **CharType**.|
-|[time_put_byname](../standard-library/time-put-byname-class.md)|Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als gebietsschemafacet vom Typ dienen können `time_put` \< **CharType**, **OutputIterator**>.|
+|[time_get](../standard-library/time-get-class.md)|Eine Adapterklasse, die ein Objekt beschreibt, das als gebietsschemafacet zur Kontrolle von Konvertierungen von Sequenzen des Typs fungieren können **CharType** , das Time-Werten.|
+|[time_get_byname](../standard-library/time-get-byname-class.md)|Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als gebietsschemafacet vom Typ Time_get dienen kann\<**CharType**, **InputIterator**>.|
+|[time_put](../standard-library/time-put-class.md)|Eine Adapterklasse, die ein Objekt beschreibt, das als gebietsschemafacet zur Kontrolle von Konvertierungen von Zeitwerten in Sequenzen vom Typ dienen können **CharType**.|
+|[time_put_byname](../standard-library/time-put-byname-class.md)|Eine abgeleitete Vorlagenklasse, die ein Objekt beschreibt, das als gebietsschemafacet vom Typ dienen kann `time_put` \< **CharType**, **OutputIterator**>.|
 |[wbuffer_convert-Klasse](../standard-library/wbuffer-convert-class.md)|Beschreibt einen Streampuffer, der die Übertragung von Elementen in einen bzw. aus einem Streampuffer steuert.|
 |[wstring_convert-Klasse](../standard-library/wstring-convert-class.md)|Eine Vorlagenklasse, die Konvertierungen zwischen einer breiten Zeichenfolge und einer Bytezeichenfolge durchführt.|
 

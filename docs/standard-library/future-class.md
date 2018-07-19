@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31490578b1f1d9b6028b3fa2cdcc5769d3a53935
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847558"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956637"
 ---
 # <a name="future-class"></a>future-Klasse
 
@@ -94,13 +94,13 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-`Other` Ein `future` Objekt.
+*Andere* ein `future` Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
 Mit dem ersten Konstruktor wird ein `future`-Objekt erstellt, das über keinen zugeordneten asynchronen Zustand verfügt.
 
-Mit dem zweiten Konstruktor wird ein `future`-Objekt erstellt, und der zugeordnete asynchrone Zustand wird von `Other` übertragen. `Other` verfügt nicht mehr über einen asynchron zugeordneten Zustand.
+Der zweite Konstruktor erstellt ein `future` Objekt aus, und überträgt den zugeordneten asynchronen Zustand aus *andere*. *Andere* mehr verfügt über keinen zugeordneten asynchronen Zustand.
 
 ## <a name="get"></a> future::get
 
@@ -120,7 +120,7 @@ Bevor es das Ergebnis abruf, blockiert diese Methode den aktuellen Thread, bis d
 
 Für die Teilspezialisierung `future<Ty&>` ist der gespeicherte Wert praktisch ein Verweis auf das Objekt, das dem asynchronen Anbieter als Rückgabewert übergeben wurde.
 
-Weil für die Spezialisierung `future<void>` kein gespeicherten Wert existiert, gibt die Methode `void` zurück.
+Da kein gespeicherter Wert, für die Spezialisierung vorhanden `future<void>`, gibt die Methode zurück **"void"**.
 
 In anderen Spezialisierung verschiebt die Methode ihren Rückgabewert aus dem gespeicherten Wert. Deshalb sollten Sie diese Methode nur einmal aufrufen.
 
@@ -134,7 +134,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-`Right` Ein `future` Objekt.
+*Rechts* ein `future` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -142,7 +142,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="remarks"></a>Hinweise
 
-Nach der Übertragung verfügt `Right` über keinen asynchronen zugeordneten Zustand mehr.
+Nach der Übertragung *rechts* mehr verfügt über keinen zugeordneten asynchronen Zustand.
 
 ## <a name="share"></a> future::share
 
@@ -166,7 +166,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn das Objekt einen zugeordneten asynchronen Zustand hat; andernfalls `false`.
+**"true"** verfügt das Objekt einen zugeordneten asynchronen Zustand ist; andernfalls **"false"**.
 
 ## <a name="wait"></a> future::wait
 
@@ -191,7 +191,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>Parameter
 
-`Rel_time` Ein [chrono](../standard-library/duration-class.md) Objekt, das maximale Zeitintervall angibt, die der Thread blockiert.
+*Rel_time* ein [chrono:: Duration](../standard-library/duration-class.md) Objekt, das ein maximales Zeitintervall angibt, die der Thread blockiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -212,7 +212,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>Parameter
 
-`Abs_time` Ein [chrono:: time_point](../standard-library/time-point-class.md) -Objekt, das eine Uhrzeit angibt, nach dem der Thread entsperren kann.
+*Abs_time* ein [chrono:: time_point](../standard-library/time-point-class.md) -Objekt, das eine Uhrzeit angibt, nach dem der Thread die Blockierung aufheben kann.
 
 ### <a name="return-value"></a>Rückgabewert
 

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9a8bf702f4373040a6f7255d67f551b5dbfa60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05354361bd460f64daced16684e9f8b70de94898
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846960"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954111"
 ---
 # <a name="freelist-class"></a>freelist-Klasse
 
@@ -43,12 +43,12 @@ class freelist
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Sz`|Die Anzahl der zuzuweisenden Elemente im Array|
-|`Max`|Die max-Klasse, die die maximale Anzahl von Elementen darstellt, die in der freien Liste gespeichert werden. Die Klasse kann [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) oder [max_variable_size](../standard-library/max-variable-size-class.md) sein.|
+|*sz*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*Max*|Die max-Klasse, die die maximale Anzahl von Elementen darstellt, die in der freien Liste gespeichert werden. Die Klasse kann [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) oder [max_variable_size](../standard-library/max-variable-size-class.md) sein.|
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse verwaltet eine Liste von Speicherblöcken der Größe `Sz`, wobei die maximale, durch die max-Klasse festgelegte Länge der Liste an `Max` übergeben wird.
+Diese Vorlagenklasse verwaltet eine Liste von Speicherblöcken der Größe *Sz* mit die maximale Länge der Liste bestimmt, indem die max-Klasse übergeben *Max*.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -93,7 +93,7 @@ Gibt einen Zeiger auf den Speicherblock zurück, der aus der Liste entfernt wurd
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt `NULL` zurück, wenn die Liste leer ist. Andernfalls entfernt sie den ersten Speicherblock aus der Liste.
+Die Memberfunktion gibt NULL zurück, wenn die Liste leer ist. Andernfalls entfernt sie den ersten Speicherblock aus der Liste.
 
 ## <a name="push"></a> freelist::push
 
@@ -107,15 +107,15 @@ bool push(void* ptr);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger auf den Speicherblock, der der freien Liste hinzugefügt werden soll|
+|*ptr*|Ein Zeiger auf den Speicherblock, der der freien Liste hinzugefügt werden soll|
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Funktion `full` der max-Klasse `false` zurückgibt. Andernfalls gibt die Funktion `push` `false` zurück.
+**"true"** Wenn die `full` Funktionsergebnis ist eine der max-Klasse **"false"** ist, andernfalls die `push` -Funktion zurückgegeben **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die Funktion `full` der max-Klasse `false` zurückgibt, fügt diese Memberfunktion den Speicherblock, auf den `ptr` zeigt, zu dem Anfang der Liste hinzu.
+Wenn die `full` Funktionsergebnis ist eine der max-Klasse **"false"**, diese Memberfunktion fügt den Speicherblock verweist *Ptr* an den Anfang der Liste.
 
 ## <a name="see-also"></a>Siehe auch
 

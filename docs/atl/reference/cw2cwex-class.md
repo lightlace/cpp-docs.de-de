@@ -1,5 +1,5 @@
 ---
-title: CW2CWEX Klasse | Microsoft Docs
+title: CW2CWEX-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 671311b0788438d7b92dad9d9137e28cbb88df60
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f97ddd87194d9cf7cce0b5fcd898b6a9f391d908
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363281"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879380"
 ---
 # <a name="cw2cwex-class"></a>CW2CWEX-Klasse
-Diese Klasse wird verwendet, indem die Makros zur zeichenfolgenkonvertierung `CW2CTEX` und `CT2CWEX`, und die Typedef `CW2W`.  
+Diese Klasse wird von der Zeichenfolgen-konvertierungsmakros CW2CTEX und CT2CWEX und der Typedef CW2W verwendet.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,8 +40,8 @@ class CW2CWEX
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `t_nBufferLength`  
- Die Größe des Puffers, der bei der Übersetzung verwendet werden soll. Die Standardlänge beträgt 128 Bytes.  
+ *t_nBufferLength*  
+ Die Größe des Puffers, die in der Übersetzungsprozess verwendet werden soll. Die Standardeinstellung ist 128 Bytes.  
   
 ## <a name="members"></a>Member  
   
@@ -62,27 +62,27 @@ class CW2CWEX
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CW2CWEX::m_psz](#m_psz)|Das Datenelement, das die Quellzeichenfolge speichert.|  
+|[CW2CWEX::m_psz](#m_psz)|Der Datenmember, die die Quellzeichenfolge speichert.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn zusätzlicher Funktionalität erforderlich ist, verwenden Sie `CW2CTEX`, `CT2CWEX`, oder `CW2W` im Code.  
+ Wenn zusätzliche Funktionalität erforderlich ist, verwenden Sie in Ihrem Code CW2CTEX, CT2CWEX oder CW2W an.  
   
- Diese Klasse ist sicher in Schleifen verwendet und wird nicht zu einem Stapelüberlauf. Standardmäßig verwenden die ATL-konvertierungsklassen und-Makros ANSI-Codepage für den aktuellen Thread für die Konvertierung.  
+ Diese Klasse wird sicher in Schleifen verwendet, und es wird nicht zu einem Stapelüberlauf. Standardmäßig verwenden die ATL-konvertierungsklassen und-Makros ANSI-Codepage des aktuellen Threads für die Konvertierung.  
   
- Die folgenden Makros hängen von dieser Klasse:  
+ Die folgenden Makros basieren auf diese Klasse:  
   
-- `CW2CTEX`  
+- CW2CTEX  
   
-- `CT2CWEX`  
+- CT2CWEX  
   
- Die folgenden Typedef basiert auf diese Klasse:  
+ Die folgende Typedef basiert auf diese Klasse:  
   
-- `CW2W`  
+- CW2W  
   
- Eine Erläuterung der diese textkonvertierungsmakros, finden Sie unter [ATL- und MFC-Makros zur Zeichenfolgenkonvertierung](string-conversion-macros.md).  
+ Eine Erläuterung der diese textkonvertierungsmakros, finden Sie unter [ATL- und MFC-Zeichenfolgen-Konvertierungsmakros](string-conversion-macros.md).  
   
 ## <a name="example"></a>Beispiel  
- Finden Sie unter [ATL- und MFC-Makros zur Zeichenfolgenkonvertierung](string-conversion-macros.md) für ein Beispiel zur Verwendung dieser Makros zur zeichenfolgenkonvertierung.  
+ Finden Sie unter [ATL- und MFC-Zeichenfolgen-Konvertierungsmakros](string-conversion-macros.md) für ein Beispiel für diese Zeichenfolgen-konvertierungsmakros.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlconv.h  
@@ -96,14 +96,14 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `psz`  
+ *psz*  
  Die Textzeichenfolge, die konvertiert werden.  
   
- `nCodePage`  
+ *nCodePage*  
  Die Codepage. In dieser Klasse verwendet nicht.  
   
 ### <a name="remarks"></a>Hinweise  
- Ordnet den Puffer, der bei der Übersetzung verwendet.  
+ Weist den Puffer, in der Übersetzungsprozess verwendet.  
   
 ##  <a name="dtor"></a>  CW2CWEX:: ~ CW2CWEX  
  Der Destruktor.  
@@ -116,7 +116,7 @@ CW2CWEX(LPCWSTR psz) throw(...);
  Gibt den zugeordneten Puffer frei.  
   
 ##  <a name="m_psz"></a>  CW2CWEX::m_psz  
- Das Datenelement, das die Quellzeichenfolge speichert.  
+ Der Datenmember, die die Quellzeichenfolge speichert.  
   
 ```
 LPCWSTR m_psz;
@@ -130,7 +130,7 @@ operator LPCWSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Zeichenfolge als Typ **LPCWSTR.**  
+ Gibt die Zeichenfolge zurück, als Typ LPCWSTR.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CA2AEX-Klasse](../../atl/reference/ca2aex-class.md)   
@@ -138,4 +138,4 @@ operator LPCWSTR() const throw();
  [CA2WEX-Klasse](../../atl/reference/ca2wex-class.md)   
  [CW2AEX-Klasse](../../atl/reference/cw2aex-class.md)   
  [CW2WEX-Klasse](../../atl/reference/cw2wex-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)
