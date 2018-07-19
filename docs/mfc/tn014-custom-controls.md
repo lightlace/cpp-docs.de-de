@@ -1,5 +1,5 @@
 ---
-title: 'TN014: Benutzerdefinierte Steuerelemente | Microsoft Docs'
+title: 'TN014: Benutzerdefinierte Steuerelemente | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 377b754fd9e04cd88c5d1c6f71508ff8f431ee99
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: e7ab10a6c0c53bd9aba87ddea594e689b3142b4c
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121889"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027260"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Benutzerdefinierte Steuerelemente
 
-Dieser Hinweis beschreibt die MFC-Unterstützung für benutzerdefinierte und selbst zeichnen-Steuerelemente. Außerdem wird die dynamische Erstellung von Unterklassen von beschrieben, und beschreibt die Beziehung zwischen [CWnd](../mfc/reference/cwnd-class.md) Objekte und `HWND`s.
+In diesem Hinweis wird beschrieben, die MFC-Unterstützung für benutzerdefinierte und selbst zeichnen-Steuerelemente. Außerdem wird beschrieben, dynamische Unterklassen und beschreibt die Beziehung zwischen [CWnd](../mfc/reference/cwnd-class.md) Objekte und `HWND`s.
 
-Die MFC-beispielanwendung CTRLTEST wird veranschaulicht, wie viele benutzerdefinierte Steuerelemente verwenden. Finden Sie im Quellcode für den allgemeinen MFC-Beispiel [CTRLTEST](../visual-cpp-samples.md) und online-Hilfe.
+Die MFC-beispielanwendung CTRLTEST veranschaulicht, wie viele benutzerdefinierte Steuerelemente. Finden Sie unter den Quellcode für die allgemeinen MFC-Beispiel [CTRLTEST](../visual-cpp-samples.md) und online-Hilfe.
 
 ## <a name="owner-draw-controlsmenus"></a>Ownerdrawn-Steuerelemente /-Menüs
 
-Windows bietet Unterstützung für Ownerdrawn-Steuerelemente und Menüs, mit der Windows-Meldungen. Das übergeordnete Fenster eines Steuerelements oder im Menü empfängt diese Nachrichten und Anrufe-Funktionen in der Antwort. Sie können diese Funktionen zum Anpassen des visuelle Darstellung und Verhalten der Besitzer gezeichnetes Steuerelement oder Menü überschreiben.
+Windows bietet Unterstützung für Ownerdrawn-Steuerelemente und Menüs, mithilfe von Windows-Nachrichten. Das übergeordnete Fenster eines Steuerelements oder im Menü empfängt diese Nachrichten und Anrufe Funktionen als Antwort. Sie können diese Funktionen zum Anpassen des visuellen Darstellung und Verhalten der Ownerdrawn-Steuerelement oder im Menü überschreiben.
 
 MFC unterstützt direkt Ownerdrawn-mit den folgenden Funktionen:
 
@@ -44,24 +44,24 @@ MFC unterstützt direkt Ownerdrawn-mit den folgenden Funktionen:
 
 - [CWnd::OnDeleteItem](../mfc/reference/cwnd-class.md#ondeleteitem)
 
-Sie können diese Funktionen in überschreiben Ihre `CWnd` abgeleitete Klasse zum benutzerdefinierten Zeichnen Verhalten zu implementieren.
+Sie können angeben, überschreiben diese Funktionen in Ihre `CWnd` abgeleitete Klasse, um benutzerdefiniertes Zeichnen-Verhalten zu implementieren.
 
-Dieser Ansatz ist nicht zu wiederverwendbarem Code führen. Wenn sich zwei Steuerelemente mit ähnlichen Funktionen in zwei verschiedenen `CWnd` Klassen, müssen Sie das Verhalten des benutzerdefinierten Steuerelements an zwei Orten implementieren. Die MFC-Unterstützung selbst zeichnen Steuerarchitektur löst dieses Problem.
+Dieser Ansatz führt nicht zu wiederverwendbaren Code. Wenn Sie zwei Steuerelemente mit ähnlichen in zwei verschiedenen haben `CWnd` Klassen müssen Sie das Verhalten des benutzerdefinierten Steuerelements sich an zwei Standorten implementieren. Die MFC-Unterstützung selbst zeichnen Steuerarchitektur löst dieses Problem.
 
-## <a name="self-draw-controls-and-menus"></a>Self-zeichnen Sie Steuerelemente und Menüs
+## <a name="self-draw-controls-and-menus"></a>Selbst zu zeichnen, Steuerelemente und Menüs
 
-MFC stellt eine Standardimplementierung (in der `CWnd` und [CMenu](../mfc/reference/cmenu-class.md) Klassen) für die standard-Ownerdrawn-Nachrichten. Diese Standardimplementierung wird die Ownerdrawn-Parameter zu decodieren und die Ownerdrawn-Nachrichten an den Steuerelementen oder im Menü delegieren können. Dies wird selbst zeichnen bezeichnet, da der Code zum Zeichnen der Klasse des Steuerelements oder im Menü nicht in das besitzende Fenster wird.
+MFC stellt eine Standardimplementierung bereit (in der `CWnd` und [CMenu](../mfc/reference/cmenu-class.md) Klassen) für die standard-Ownerdrawn-Nachrichten. Diese Standardimplementierung wird decodiert die Ownerdrawn-Parameter und Delegieren von Ownerdrawn-Nachrichten an den Steuerelementen oder im Menü. Dies wird selbst zeichnen bezeichnet, da der Code zum Zeichnen in der Klasse des Steuerelements oder im Menü nicht in das besitzende Fenster ist.
 
-Mithilfe der Steuerelemente selbst zeichnen können Sie wiederverwendbare Klassen erstellen, die Ownerdrawn-Semantik verwendet wird, um das Steuerelement anzuzeigen. Der Code zum Zeichnen des Steuerelements wird in der Steuerelementklasse nicht seinem übergeordneten Element. Dies ist ein mit dem objektorientierten Ansatz für die benutzerdefinierte Steuerelement-Programmierung. Fügen Sie die folgende Liste von Funktionen in Ihren Klassen selbst zeichnen hinzu:
+Mithilfe der Steuerelemente selbst zeichnen können Sie wiederverwendbaren Klassen erstellen, die Ownerdrawn-Semantik zu verwenden, um das Steuerelement angezeigt werden. Der Code zum Zeichnen des Steuerelements ist in der Steuerelementklasse, nicht mit seinem übergeordneten Element. Dies ist ein objektorientierter Ansatz für die benutzerdefinierte Steuerelement-Programmierung. Fügen Sie die folgende Liste von Funktionen auf Ihre Klassen selbst zeichnen:
 
-- Für selbst zeichnen Schaltflächen:
+- Für Schaltflächen selbst zeichnen:
 
     ```cpp
     CButton:DrawItem(LPDRAWITEMSTRUCT);
     // insert code to draw this button
     ```
 
-- Für selbst zeichnen Menüs:
+- Für Menüs selbst zeichnen:
 
     ```cpp
     CMenu:MeasureItem(LPMEASUREITEMSTRUCT);
@@ -98,49 +98,49 @@ Mithilfe der Steuerelemente selbst zeichnen können Sie wiederverwendbare Klasse
     // insert code to delete an item from this combo box
     ```
 
-Ausführliche Informationen über die Ownerdrawn-Strukturen ([DRAWITEMSTRUCT](../mfc/reference/drawitemstruct-structure.md), [MEASUREITEMSTRUCT](../mfc/reference/measureitemstruct-structure.md), [COMPAREITEMSTRUCT](../mfc/reference/compareitemstruct-structure.md), und [DELETEITEMSTRUCT](../mfc/reference/deleteitemstruct-structure.md)) finden Sie in der MFC-Dokumentation für `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, und `CWnd::OnDeleteItem` bzw.
+Ausführliche Informationen über die Ownerdrawn-Strukturen ([DRAWITEMSTRUCT](../mfc/reference/drawitemstruct-structure.md), [MEASUREITEMSTRUCT](../mfc/reference/measureitemstruct-structure.md), [COMPAREITEMSTRUCT](../mfc/reference/compareitemstruct-structure.md), und [DELETEITEMSTRUCT](../mfc/reference/deleteitemstruct-structure.md)) finden Sie in der Dokumentation MFC `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, und `CWnd::OnDeleteItem` bzw.
 
-## <a name="using-self-draw-controls-and-menus"></a>Mit den Steuerelementen selbst zeichnen und Menüs
+## <a name="using-self-draw-controls-and-menus"></a>Verwenden von Steuerelementen selbst zeichnen und Menüs
 
-Für Menüs selbst zeichnen, müssen Sie beide überschreiben die `OnMeasureItem` und `OnDrawItem` Methoden.
+Für Menüs selbst zu zeichnen, müssen Sie beide überschreiben die `OnMeasureItem` und `OnDrawItem` Methoden.
 
-Für selbst zeichnen Listenfelder und Kombinationsfelder, müssen Sie überschreiben `OnMeasureItem` und `OnDrawItem`. Sie müssen den LBS_OWNERDRAWVARIABLE-Stil für Listenfelder oder CBS_OWNERDRAWVARIABLE-Stil für Kombinationsfelder in der Dialogfeldvorlage angeben. Das Format OWNERDRAWFIXED funktioniert nicht mit Elemente selbst zeichnen, da die Höhe des festen Elements bestimmt wird, bevor selbst zeichnen-Steuerelemente in das Listenfeld angefügt sind. (Sie können mithilfe der Methoden [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) und [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) , diese Einschränkung zu umgehen.)
+Sie müssen selbst zeichnen Listenfelder und Kombinationsfelder, überschreiben `OnMeasureItem` und `OnDrawItem`. Sie müssen den LBS_OWNERDRAWVARIABLE-Stil für Listenfelder oder CBS_OWNERDRAWVARIABLE-Stil für Kombinationsfelder in der Dialogfeldvorlage angeben. Styl OWNERDRAWFIXED funktioniert nicht mit der Elemente selbst zu zeichnen, da die Höhe des festen Elements bestimmt wird, bevor Steuerelemente selbst zeichnen in die Liste angefügt sind. (Sie können mithilfe der Methoden [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) und [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) , diese Einschränkung zu umgehen.)
 
-Wechsel zu einer Formatvorlage OWNERDRAWVARIABLE erzwingt, dass das System das NOINTEGRALHEIGHT-Format auf das Steuerelement anzuwenden. Da das Steuerelement eine Gesamthöhe mit variabler Größe Elemente berechnen kann, der Standardstil der INTEGRALHEIGHT wird ignoriert, und das Steuerelement ist immer NOINTEGRALHEIGHT. Wenn Ihre Elemente Höhe behoben sind, können Sie verhindern, dass Elemente abgeschnitten durch Angabe der Steuerelementgröße, um eine ganze Zahl Multiplikator der Elementgröße werden gezeichnet werden.
+Wechsel zu einer OWNERDRAWVARIABLE Stil erzwingt, dass das System den NOINTEGRALHEIGHT-Stil auf das Steuerelement angewendet wird. Da das Steuerelement eine ganzzahlige Höhe mit variabler Größe berechnet werden kann, der Standardstil der INTEGRALHEIGHT wird ignoriert, und das Steuerelement ist immer NOINTEGRALHEIGHT. Wenn Ihre Elemente Höhe behoben sind, können Sie verhindern, dass Elemente, die durch die Angabe der Steuerelementgröße um eine ganze Zahl Multiplikator der Elementgröße gezeichnet wird.
 
-Zum Self-Zeichnen von Listenfelder und Kombinationsfelder, mit der Formatvorlage LBS_SORT oder CBS_SORT, müssen Sie überschreiben die `OnCompareItem` Methode.
+Sie müssen für das Zeichnen Self, Listenfelder und Kombinationsfelder, die mit der Formatvorlage LBS_SORT oder CBS_SORT, überschreiben die `OnCompareItem` Methode.
 
-Für das Self-zeichnen, Listenfelder und Kombinationsfelder, `OnDeleteItem` normalerweise nicht überschrieben. Sie können außer Kraft setzen `OnDeleteItem` Wenn jegliche spezielle Verarbeitung ausgeführt werden sollen. Einen Fall, in dem anwendbar dies wäre, wird mit jeder Listenfeldelement oder Kombinationsfeld zusätzlichen Arbeitsspeicher oder andere Ressourcen gespeichert sind.
+Für das selbst zeichnen, Listenfelder und Kombinationsfelder, `OnDeleteItem` wird nicht in der Regel überschrieben. Sie können außer Kraft setzen `OnDeleteItem` , wenn Sie spezielle Verarbeitung ausführen möchten. Ein Fall, in denen diese anwendbar wäre, ist zusätzlichen Arbeitsspeicher oder andere Ressourcen zusammen mit jeder Listenfeldelement Listenfeld- oder Kombinationsfeld gespeichert werden.
 
-## <a name="examples-of-self-drawing-controls-and-menus"></a>Beispiele für Steuerelemente und Menüs selbst zeichnen
+## <a name="examples-of-self-drawing-controls-and-menus"></a>Beispiele für Steuerelemente und Menüs selbst zu zeichnen
 
-Im allgemeinen MFC-Beispiel [CTRLTEST](../visual-cpp-samples.md) bietet Beispiele für ein Menü selbst zeichnen und eines Listenfelds mit sich selbst zu zeichnen.
+Im allgemeinen MFC-Beispiel [CTRLTEST](../visual-cpp-samples.md) bietet Beispiele für ein Menü selbst zeichnen und ein Listenfeld mit selbst zeichnen.
 
-Das liegt meist daran Beispiel eine selbst zeichnen-Schaltfläche ist eine Bitmapschaltfläche. Eine Bitmapschaltfläche ist eine Schaltfläche, die einem, zwei oder drei Bitmap-Images für die verschiedenen Zustände angezeigt werden. Ein Beispiel hierfür finden Sie im MFC-Klasse [CBitmapButton](../mfc/reference/cbitmapbutton-class.md).
+Das häufigste Beispiel eine selbst zeichnen-Schaltfläche ist eine Bitmapschaltfläche. Eine Bitmapschaltfläche wird eine Schaltfläche, die einem, zwei oder drei Bitmap-Images für die unterschiedlichen Zustände angezeigt werden. Ein Beispiel hierfür finden Sie im MFC-Klasse [CBitmapButton](../mfc/reference/cbitmapbutton-class.md).
 
-## <a name="dynamic-subclassing"></a>Dynamische Erstellung von Unterklassen von
+## <a name="dynamic-subclassing"></a>Dynamische Unterklassen
 
-Gelegentlich möchten die Funktionalität eines Objekts ändern, die bereits vorhanden ist. In den vorherigen Beispielen erforderte die Steuerelemente anpassen, bevor sie erstellt wurden. Dynamische Erstellung von Unterklassen von ermöglicht es Ihnen, ein Steuerelement anzupassen, die bereits erstellt wurde.
+Gelegentlich möchten Sie die Funktionalität eines Objekts zu ändern, die bereits vorhanden ist. In den vorherigen Beispielen mussten Sie die Steuerelemente anpassen, bevor sie erstellt wurden. Dynamische Unterklassen können Sie einem Steuerelement anpassen, die bereits erstellt wurde.
 
-Unterklassen ist der Windows-Begriff zum Ersetzen der [WndProc](http://msdn.microsoft.com/en-us/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) eines Fensters mit einer benutzerdefinierten `WndProc` und Aufrufen der alte `WndProc` für Standardfunktionen.
+Unterklasse ist der Windows-Begriff für das Ersetzen der [WndProc](http://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) eines Fensters mit einer benutzerdefinierten `WndProc` und das Aufrufen der alten `WndProc` für Standardfunktionen.
 
-Dies sollte nicht mit C++ klassenableitung verwechselt werden. Um Informationen, die C++-Begriffe *Basisklasse* und *abgeleitete Klasse* sind analog zu den *übergeordneten* und *Unterklasse* in Windows Objektmodell. C++-Ableitung mit Erstellung von Unterklassen von MFC und Windows sind mit ähnlichen, außer C++ die dynamische Erstellung von Unterklassen von nicht unterstützt.
+Dies sollte nicht mit der Ableitung von C++-Klassen verwechselt werden. Um Informationen, die C++-Begriffe *Basisklasse* und *abgeleitete Klasse* sind analog zu den *übergeordnete Klasse* und *Unterklasse* in die Windows Das Objektmodell. C++-Ableitung mit Unterklassen von MFC und Windows sind mit ähnlichen, außer dynamische Unterklassen von C++ nicht unterstützt wird.
 
-Die `CWnd` -Klasse stellt die Verbindung zwischen einem C++-Objekt (abgeleitet `CWnd`) und einem Windows-Fensterobjekt (bekannt als ein `HWND`).
+Die `CWnd` -Klasse stellt die Verbindung zwischen einem C++-Objekt (abgeleitet `CWnd`) und ein Windows-Window-Objekt (bekannt als ein `HWND`).
 
-Es gibt drei Arten, die diese verknüpft sind:
+Es gibt drei Möglichkeiten, die diese verknüpft sind:
 
-- `CWnd` erstellt die `HWND`. Sie können das Verhalten in einer abgeleiteten Klasse durch Erstellen einer Klasse abgeleitet wurde. ändern `CWnd`. Die `HWND` wird erstellt, wenn die Anwendung aufruft [CWnd:: Create](../mfc/reference/cwnd-class.md#create).
+- `CWnd` erstellt die `HWND`. Sie können das Verhalten in einer abgeleiteten Klasse ändern, indem das Erstellen einer Klasse abgeleitet `CWnd`. Die `HWND` wird erstellt, wenn die Anwendung aufruft [CWnd:: Create](../mfc/reference/cwnd-class.md#create).
 
-- Die Anwendung fügt eine `CWnd` zu einem vorhandenen `HWND`. Das Verhalten des Fensters vorhandenen wird nicht geändert. Dies ist ein Fall der Delegierung und erfolgt durch Aufrufen von möglichen [CWnd::Attach](../mfc/reference/cwnd-class.md#attach) alias einer vorhandenen `HWND` zu einem `CWnd` Objekt.
+- Die Anwendung fügt eine `CWnd` zu einem vorhandenen `HWND`. Das Verhalten der vorhandenen Fenster wird nicht geändert werden. Dies ist ein Fall der Delegierung und erfolgt durch Aufrufen von möglichen [CWnd::Attach](../mfc/reference/cwnd-class.md#attach) alias einer vorhandenen `HWND` zu einem `CWnd` Objekt.
 
-- `CWnd` gehört zu einem vorhandenen `HWND` und Sie können das Verhalten in einer abgeleiteten Klasse ändern. Hierbei spricht dynamische Unterklasse erstellen, da wir das Verhalten und daher die Klasse eines Windows-Objekts zur Laufzeit geändert werden.
+- `CWnd` angefügt ist, zu einem vorhandenen `HWND` und Sie können das Verhalten in einer abgeleiteten Klasse ändern. Wird aufgerufen, dynamische Unterklassen, da wir das Verhalten, und daher die Klasse, eines Windows-Objekts zur Laufzeit ändern.
 
-Sie können dynamische Erstellung von Unterklassen von erzielen, indem Sie die Methoden [CWnd:: SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow) und[CWnd::SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem).
+Erreichen Sie mithilfe der Methoden dynamische Unterklassen [CWnd:: SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow) und[CWnd::SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem).
 
-Fügen Sie beide Routinen eine `CWnd` zu einem vorhandenen Objekt `HWND`. `SubclassWindow` nimmt die `HWND` direkt. `SubclassDlgItem` ist eine Hilfsfunktion, die eine Steuerelement-ID und das übergeordnete Fenster annimmt. `SubclassDlgItem` Dient zum Anfügen von C++-Objekte für Dialogfeld-Steuerelemente, die aus einer Dialogfeldvorlage erstellt.
+Fügen Sie beiden Routinen ein `CWnd` Objekt zu einem vorhandenen `HWND`. `SubclassWindow` nimmt die `HWND` direkt. `SubclassDlgItem` ist eine Hilfsfunktion, die eine Steuerelement-ID und das übergeordnete Fenster verwendet. `SubclassDlgItem` Dient zum Anfügen von C++-Objekten für Dialogfeld-Steuerelemente, die aus einer Dialogfeldvorlage erstellt.
 
-Finden Sie unter der [CTRLTEST](../visual-cpp-samples.md) Beispiel mehrere Beispiele für die Verwendung von `SubclassWindow` und `SubclassDlgItem`.
+Finden Sie unter den [CTRLTEST](../visual-cpp-samples.md) Beispiel für mehrere Beispiele dafür, wann mit `SubclassWindow` und `SubclassDlgItem`.
 
 ## <a name="see-also"></a>Siehe auch
 

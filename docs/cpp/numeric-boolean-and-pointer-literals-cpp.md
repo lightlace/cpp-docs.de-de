@@ -1,5 +1,5 @@
 ---
-title: Numerisch, Boolean und Zeigerliterale (C++) | Microsoft Docs
+title: Numerisch, Boolean und Zeigerliterale (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ce5f2c6703b18747dd4a2c51fe540d01370b38b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 178c75efa84ebc7d27c19feb81e81314dc4c5bd7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943585"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Numerisch, Boolean und Zeigerliterale (C++)
-Bei einem Literal handelt es sich um ein Programmelement, das direkt einen Wert darstellt. In diesem Artikel werden Literale der Typen Ganzzahl, Gleitkomma, Boolesch und Zeiger erläutert. Informationen über Zeichenfolgen- und Zeichenliterale finden Sie unter [Zeichenfolgen und Zeichen Literale (C++)](../cpp/string-and-character-literals-cpp.md). Sie können auch Ihre eigenen Literale auf Grundlage dieser Kategorien definieren; Weitere Informationen finden Sie unter [benutzerdefinierte Literale (C++)](../cpp/user-defined-literals-cpp.md)  
+Bei einem Literal handelt es sich um ein Programmelement, das direkt einen Wert darstellt. In diesem Artikel werden Literale der Typen Ganzzahl, Gleitkomma, Boolesch und Zeiger erläutert. Weitere Informationen über Zeichenfolgen- und Zeichenliterale finden Sie unter [Zeichenfolgen und Zeichen Literale (C++)](../cpp/string-and-character-literals-cpp.md). Sie können auch Ihre eigenen Literale auf Grundlage dieser Kategorien definieren; Weitere Informationen finden Sie unter [benutzerdefinierte Literale (C++)](../cpp/user-defined-literals-cpp.md)  
   
  sein. Sie können Literale in vielen Kontexten verwenden, aber am häufigsten zum Initialisieren von benannten Variablen und zum Weitergeben der Argumente an Funktionen:  
   
-```  
+```cpp 
 const int answer = 42; // integer literal  
 double d = sin(108.87);     //floating point literal passed to sin function  
 bool b = true;              // boolean literal  
@@ -35,18 +36,18 @@ MyClass* mc = nullptr;      // pointer literal
   
 ```  
   
- In manchen Fällen ist es wichtig, dem Compiler darüber zu informieren, wie er ein Literal interpretieren soll oder welcher bestimmte Typ ihm erteilt werden soll. Dies setzen Sie um, indem Sie Prä- und Suffixe an das Literal anfügen. Beispielsweise informiert das Präfix „0x“ den Compiler darüber, die darauffolgende Zahl als einen hexadezimalen Wert, beispielsweise „0x35“, zu interpretieren. Das ULL-Suffix informiert den Compiler darüber, den Wert als einen `unsigned long long`-Typ wie in 5894345ULL zu behandeln. In den folgenden Abschnitten finden Sie die vollständige Liste der Prä- und Suffixe für jeden Literaltyp.  
+ In manchen Fällen ist es wichtig, dem Compiler darüber zu informieren, wie er ein Literal interpretieren soll oder welcher bestimmte Typ ihm erteilt werden soll. Dies setzen Sie um, indem Sie Prä- und Suffixe an das Literal anfügen. Beispielsweise informiert das Präfix „0x“ den Compiler darüber, die darauffolgende Zahl als einen hexadezimalen Wert, beispielsweise „0x35“, zu interpretieren. Das ULL-Suffix informiert den Compiler an, den Wert zu behandeln, als ein **long long ohne Vorzeichen** -Typ wie in 5894345ull zu behandeln. In den folgenden Abschnitten finden Sie die vollständige Liste der Prä- und Suffixe für jeden Literaltyp.  
   
 ## <a name="syntax"></a>Syntax  
   
 ## <a name="integer-literals"></a>Ganzzahlenliteral  
  Ganzzahlenliterale beginnen mit einer Ziffer und weisen weder Bruchteile noch Exponenten auf. Sie können Integerliterale im Dezimal-, Oktal- oder Hexadezimalformat angeben. Sie können Typen mit oder ohne Vorzeichen und lange oder kurze Typen angeben.  
   
- Wenn weder ein Prä- noch ein Suffix vorhanden ist, weist der Compiler einen integralen `int`-Literalwerttyp (32 Bit) zu, wenn der Wert passt, ansonsten weist er einen `long long`-Typ (64 Bit) zu.  
+ Wenn kein Präfix oder Suffix vorhanden ist, wird der Compiler einen integralen Typ geben **Int** (32 Bit), wenn der Wert passt, andernfalls diese wird erhält er den Typ **long long** (64 Bit).  
   
  Starten Sie zum Angeben eines integralen Dezimalliterals die Spezifikation mit einer Ziffer ungleich 0. Zum Beispiel:  
   
-```  
+```cpp 
 int i = 157;   // Decimal literal  
 int j = 0198;       // Not a decimal number; erroneous octal literal  
 int k = 0365;       // Leading zero specifies octal literal, not decimal  
@@ -56,21 +57,21 @@ int
   
  Um ein oktales Integralliteral anzugeben, beginnen Sie die Angabe mit 0, gefolgt von einer Ziffernfolge im Bereich von 0 bis 7. Die Ziffern 8 und 9 sind Fehler, wenn sie ein oktales Literal angeben. Zum Beispiel:  
   
-```  
+```cpp 
 int i = 0377;   // Octal literal  
 int j = 0397;        // Error: 9 is not an octal digit  
 ```  
   
  Um eine integrale Hexadezimalliterale anzugeben, beginnen Sie die Angabe mit `0x` oder `0X` (die Groß-/Kleinschreibung von "x" ist nicht relevant), gefolgt von einer Ziffernfolge im Bereich `0` bis `9` und `a` (oder `A`) bis `f` (oder `F`). Hexadezimalzahlen `a` (oder `A`) bis `f` (oder `F`) stellen Werte im Bereich von 10 bis 15 dar. Zum Beispiel:  
   
-```  
+```cpp 
 int i = 0x3fff;   // Hexadecimal literal  
 int j = 0X3FFF;        // Equal to i  
 ```  
   
- Um einen Typ ohne Vorzeichen anzugeben, verwenden Sie entweder die **u** oder **U** Suffix. Um einen langen Typ anzugeben, verwenden Sie entweder die **l** oder **L** Suffix. Um einen integralen 64-Bit-Typ anzugeben, verwenden Sie das Suffix „LL“ oder „ll“. Das Suffix „i64“ wird weiterhin unterstützt, sollte jedoch vermieden werden, da es für Microsoft spezifisch und nicht übertragbar ist. Zum Beispiel:  
+ Um einen Typ ohne Vorzeichen anzugeben, verwenden Sie entweder die `u` oder `U` Suffix. Um einen langen Typ anzugeben, verwenden Sie entweder die `l` oder `L` Suffix. Um einen integralen 64-Bit-Typ anzugeben, verwenden Sie das Suffix „LL“ oder „ll“. Das Suffix „i64“ wird weiterhin unterstützt, sollte jedoch vermieden werden, da es für Microsoft spezifisch und nicht übertragbar ist. Zum Beispiel:  
   
-```  
+```cpp 
 unsigned val_1 = 328u;             // Unsigned value  
 long val_2 = 0x7FFFFFL;                 // Long value specified   
                                         //  as hex literal  
@@ -79,9 +80,9 @@ auto val_4 = 108LL;                           // signed long long
 auto val_4 = 0x8000000000000000ULL << 16;     // unsigned long long   
 ```  
   
- **Zahlentrennzeichen**: können Sie das einfache Anführungszeichen (Apostroph) zum Trennen der Werte in größere Zahlen zur besseren Lesbarkeit. Trennzeichen haben keine Auswirkungen auf die Kompilierung.  
+ **Trennzeichen für Ziffern**: Sie können das einfache Anführungszeichen (Apostroph) zum Trennen der-Werte in größerer Anzahl, um sie leichter lesbar zu machen. Trennzeichen haben keine Auswirkungen auf die Kompilierung.  
   
-```  
+```cpp 
 long long i = 24'847'458'121  
 ```  
   
@@ -90,44 +91,44 @@ long long i = 24'847'458'121
   
  Gleitkommaliterale haben eine „Mantisse“, die den Wert der Zahl angibt, einen „Exponenten“, der die Größe der Zahl angibt, und ein optionales Suffix, das den Literaltyp angibt. Die Mantisse wird wie folgt angegeben: eine Ziffernsequenz, gefolgt von einem Punkt, gefolgt von einer optionalen Ziffernsequenz, die die Nachkommastellen der Zahl darstellen. Beispiel:  
   
-```  
+```cpp 
 18.46  
 38.  
 ```  
   
  Sofern vorhanden, gibt der Exponent die Größe der Zahl als Zehnerpotenz an (siehe folgendes Beispiel):  
   
-```  
+```cpp 
 18.46e0      // 18.46  
 18.46e1           // 184.6  
 ```  
   
- Der Exponent kann angegeben werden, mithilfe von **e** oder **E**, haben dieselben Bedeutung, gefolgt von einem optionalen Vorzeichen (+ oder -) und einer Folge von Ziffern.  Wenn ein Exponent vorhanden ist, ist das nachfolgende Dezimaltrennzeichen in ganzen Zahlen wie `18E0` nicht erforderlich.  
+ Der Exponent kann angegeben werden, mithilfe von `e` oder `E`, die haben der gleichen Bedeutung, gefolgt von einem optionalen Vorzeichen (+ oder -) und einer Folge von Ziffern.  Wenn ein Exponent vorhanden ist, ist das nachfolgende Dezimaltrennzeichen in ganzen Zahlen wie `18E0` nicht erforderlich.  
   
- Gleitkommaliterale gehören standardmäßig dem Typ **doppelte**. Mit den Suffixen **f** oder **l** (oder **F** oder **L** – das Suffix ist nicht in der Groß-/Kleinschreibung unterschieden), das Literal kann angegeben werden, als  **"float"** oder `long double`zugeordnet.  
+ Gleitkommaliterale gehören standardmäßig zur Eingabe **doppelte**. Verwendung des Suffixes `f` oder `l` (oder `F` oder `L` , beim Suffix wird nicht in der Groß-/Kleinschreibung beachten), kann das Literal als angegeben werden **"float"** oder **long double**, bzw.  
   
- Obwohl `long double` und **doppelte** die gleiche Darstellung haben, sind sie nicht den gleichen Typ. Sie können beispielsweise überladene Funktionen haben:  
+ Obwohl **long double** und **doppelte** die gleiche Darstellung haben, sind sie nicht den gleichen Typ. Sie können beispielsweise überladene Funktionen haben:  
   
-```  
+```cpp 
 void func( double );  
 ```  
   
  und  
   
-```  
+```cpp 
 void func( long double );  
 ```  
   
 ## <a name="boolean-literals"></a>Boolesche Literale  
- `true` und `false` sind boolesche Literale.  
+ Die booleschen Literale werden **"true"** und **"false"**.  
   
 ## <a name="pointer-literal-c11"></a>Zeigerliteral (C++11)  
- C++ stellt die [Nullptr](../cpp/nullptr.md) literal zeigerindikator 0 (null) initialisiert. In übertragbarem Code sollte `nullptr` anstelle von Integraltypnullen oder -makros wie NULL verwendet werden.  
+ C++ stellt die ["nullptr"](../cpp/nullptr.md) literal und einen 0 (null) initialisierten Zeiger angeben möchten. In übertragbarem Code **"nullptr"** sollte anstelle von integraltypnullen oder-Makros wie NULL verwendet werden.  
   
 ## <a name="binary-literals-c14"></a>Binäre Literale (C++14)  
  Ein binäres Literale kann durch die Verwendung des Präfix `0B` oder `0b`, gefolgt durch eine Sequenz von mehreren 1 und 0 angegeben werden.  
   
-```  
+```cpp 
   
 auto x = 0B001101 ; // int  
 auto y = 0b000001 ; // int  
@@ -136,7 +137,7 @@ auto y = 0b000001 ; // int
 ## <a name="avoid-using-literals-as-magic-constants"></a>Vermeiden der Verwendung von Literalen als „magische Konstanten“  
  Auch wenn Sie Literale direkt in Ausdrücken und Anweisungen verwenden können, ist es nicht immer ein guter Programmierstil:  
   
-```  
+```cpp 
 if (num < 100)  
     return "Success";  
   

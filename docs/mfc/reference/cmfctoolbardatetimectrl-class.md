@@ -1,5 +1,5 @@
 ---
-title: CMFCToolBarDateTimeCtrl Klasse | Microsoft Docs
+title: CMFCToolBarDateTimeCtrl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,15 +58,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31bf2796d85dec335183b61a83ea5c675d5f4602
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 94f275ae65b8c3135a110e249b0521194083683c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038945"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854082"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl-Klasse
-Eine Symbolleisten-Schaltfläche, die ein Datums- und Zeitauswahl-Steuerelement enthält.  
+Eine Symbolleisten-Schaltfläche, die ein Datums- / Zeitauswahl-Steuerelement enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -87,38 +87,38 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCToolBarDateTimeCtrl::CanBeStretched](#canbestretched)|Gibt an, ob ein Benutzer die Schaltfläche mit den während der Anpassung gestreckt werden kann. (Überschreibt [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|  
-|[CMFCToolBarDateTimeCtrl::CopyFrom](#copyfrom)|Kopiert die Eigenschaften von einer anderen Symbolleistenschaltfläche auf die Schaltfläche mit den aktuellen. (Überschreibt [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
+|[CMFCToolBarDateTimeCtrl::CanBeStretched](#canbestretched)|Gibt an, ob ein Benutzer während der Anpassung die Schaltfläche gestreckt werden kann. (Überschreibt [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|  
+|[CMFCToolBarDateTimeCtrl::CopyFrom](#copyfrom)|Kopiert die Eigenschaften von einer anderen Symbolleistenschaltfläche, auf die Schaltfläche "aktuelle". (Überschreibt [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
 |`CMFCToolBarDateTimeCtrl::DuplicateData`|Für zukünftige Verwendung reserviert.|  
-|[CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)|Kopiert den Text aus der Symbolleiste auf die Schaltfläche zu einem Menü.|  
+|[CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)|Kopiert den Text aus der Symbolleisten-Schaltfläche zu einem Menü.|  
 |`CMFCToolBarDateTimeCtrl::CreateObject`|Wird vom Framework verwendet, um eine dynamische Instanz dieses Klassentyps zu erstellen.|  
-|[CMFCToolBarDateTimeCtrl::GetByCmd](#getbycmd)|Ruft das erste `CMFCToolBarDateTimeCtrl` Objekt in der Anwendung mit der angegebenen Befehls-ID.|  
-|[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|Gibt einen Zeiger auf die Datums- / Zeitauswahl-Steuerelement.|  
+|[CMFCToolBarDateTimeCtrl::GetByCmd](#getbycmd)|Ruft das erste `CMFCToolBarDateTimeCtrl` Objekt in der Anwendung, die die angegebene Befehls-ID|  
+|[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|Gibt einen Zeiger auf den Datums- / Zeitauswahl-Steuerelement.|  
 |[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|Ruft das Fensterhandle, das die Symbolleisten-Schaltfläche zugeordnet ist. (Überschreibt [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|  
-|`CMFCToolBarDateTimeCtrl::GetThisClass`|Durch das Framework verwendet wird, um einen Zeiger auf die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
-|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Ruft den ausgewählten Zeitpunkt über ein Datum und Uhrzeit Kontoauswahl-Steuerelement ab und fügt sie in einem angegebenen [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur.|  
-|[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|Gibt die ausgewählte Zeit über die Zeit Zeitauswahl-Steuerelement-Schaltfläche, die eine angegebenen Befehls-ID wurde|  
+|`CMFCToolBarDateTimeCtrl::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
+|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Ruft die ausgewählte Zeit aus einem Datums- / Zeitauswahl-Steuerelement ab und setzt es in einem angegebenen [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur.|  
+|[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|Gibt den ausgewählten Zeitraum über die Zeit Zeitauswahl-Steuerelement-Schaltfläche, die eine angegebenen Befehls-ID|  
 |[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|Bestimmt, ob ein Rahmen der Schaltfläche angezeigt wird, wenn ein Benutzer die Schaltfläche auswählt. (Überschreibt [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
-|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Gibt an, ob die Schaltfläche verarbeitet die [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht. (Überschreibt [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
-|[CMFCToolBarDateTimeCtrl::OnAddToCustomizePage](#onaddtocustomizepage)|Vom Framework aufgerufen, wenn die Schaltfläche "" hinzugefügt wird eine **anpassen** (Dialogfeld). (Überschreibt [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
-|`CMFCToolBarDateTimeCtrl::OnCalculateSize`|Wird aufgerufen, durch das Framework die Größe der Schaltfläche für den angegebenen Gerätekontext und andockzustand berechnet. (Überschreibt [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|[CMFCToolBarDateTimeCtrl::OnChangeParentWnd](#onchangeparentwnd)|Vom Framework aufgerufen, wenn die Schaltfläche "" in eine neue Symbolleiste eingefügt wird. (Überschreibt [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
+|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht. (Überschreibt [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
+|[CMFCToolBarDateTimeCtrl::OnAddToCustomizePage](#onaddtocustomizepage)|Vom Framework aufgerufen, wenn die Schaltfläche hinzugefügt wird eine **anpassen** Dialogfeld. (Überschreibt [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
+|`CMFCToolBarDateTimeCtrl::OnCalculateSize`|Wird aufgerufen, durch das Framework die Größe der Schaltfläche für den angegebenen Gerätekontext und Andockstatus berechnet. (Überschreibt [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
+|[CMFCToolBarDateTimeCtrl::OnChangeParentWnd](#onchangeparentwnd)|Vom Framework aufgerufen, wenn die Schaltfläche mit der in eine neue Symbolleiste eingefügt wird. (Überschreibt [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCToolBarDateTimeCtrl::OnClick](#onclick)|Vom Framework aufgerufen, wenn der Benutzer das Steuerelement klickt. (Überschreibt [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
 |[CMFCToolBarDateTimeCtrl::OnCtlColor](#onctlcolor)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste WM_CTLCOLOR-Meldung verarbeitet. (Überschreibt [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
-|`CMFCToolBarDateTimeCtrl::OnDraw`|Wird aufgerufen, durch das Framework der Schaltfläche gezeichnet werden soll, mithilfe des angegebenen Stile und Optionen. (Überschreibt [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
-|`CMFCToolBarDateTimeCtrl::OnDrawOnCustomizeList`|Wird aufgerufen, durch das Framework der Schaltfläche gezeichnet werden soll, der **Befehle** im Bereich der **anpassen** (Dialogfeld). (Überschreibt [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
+|`CMFCToolBarDateTimeCtrl::OnDraw`|Wird aufgerufen, durch das Framework zum Zeichnen der Schaltfläche mit der angegebenen Formate und -Optionen. (Überschreibt [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
+|`CMFCToolBarDateTimeCtrl::OnDrawOnCustomizeList`|Wird aufgerufen, durch das Framework zum Zeichnen der Schaltfläche der **Befehle** im Bereich der **anpassen** im Dialogfeld. (Überschreibt [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
 |[CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged](#onglobalfontschanged)|Vom Framework aufgerufen, wenn die globale Schriftart geändert hat. (Überschreibt [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged).)|  
-|[CMFCToolBarDateTimeCtrl::OnMove](#onmove)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste bewegt wird. (Überschreibt [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove).)|  
-|[CMFCToolBarDateTimeCtrl::OnShow](#onshow)|Vom Framework aufgerufen, wenn die Schaltfläche wird ein- oder ausgeblendet. (Überschreibt [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow).)|  
-|`CMFCToolBarDateTimeCtrl::OnSize`|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste seine Größe ändert oder Position und diese Änderung bewirkt, dass die Schaltfläche, um die Größe zu ändern. (Überschreibt [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize).)|  
-|[CMFCToolBarDateTimeCtrl::OnUpdateToolTip](#onupdatetooltip)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste die QuickInfo-Text aktualisiert. (Überschreibt [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip).)|  
-|`CMFCToolBarDateTimeCtrl::Serialize`|Dieses Objekt aus einem Archiv liest oder schreibt sie in ein Archiv (Außerkraftsetzungen [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
-|`CMFCToolBarDateTimeCtrl::SetStyle`|Legt den Stil der Symbolleisten-Schaltfläche. (Überschreibt [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle).)|  
+|[CMFCToolBarDateTimeCtrl::OnMove](#onmove)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste verschoben wird. (Überschreibt [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove).)|  
+|[CMFCToolBarDateTimeCtrl::OnShow](#onshow)|Vom Framework aufgerufen, wird die Schaltfläche mit der ein- oder ausgeblendet. (Überschreibt [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow).)|  
+|`CMFCToolBarDateTimeCtrl::OnSize`|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste die Größe ändert oder Position und diese Änderung führt dazu, dass die Schaltfläche, um die Größe zu ändern. (Überschreibt [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize).)|  
+|[CMFCToolBarDateTimeCtrl::OnUpdateToolTip](#onupdatetooltip)|Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste den QuickInfotext aktualisiert. (Überschreibt [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip).)|  
+|`CMFCToolBarDateTimeCtrl::Serialize`|Dieses Objekt aus einem Archiv liest oder schreibt dieses in ein Archiv, (überschreibt [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
+|`CMFCToolBarDateTimeCtrl::SetStyle`|Legt das Format der Symbolleisten-Schaltfläche. (Überschreibt [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle).)|  
 |[CMFCToolBarDateTimeCtrl::SetTime](#settime)|Legt das Datum und die in der / Zeitauswahl-Steuerelement fest.|  
-|[CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall)|Legt das Datum und die in allen Instanzen der / Zeitauswahl-Steuerelement mit einer angegebenen Befehls-ID.|  
+|[CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall)|Legt das Datum und die in der alle Instanzen der / Zeitauswahl-Steuerelement mit einer angegebenen Befehls-ID.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Beispiel zum Verwenden eines Datumsauswahl Datum und Uhrzeit finden Sie das Beispielprojekt ToolbarDateTimePicker. Informationen zur Vorgehensweise beim Hinzufügen von Schaltflächen in Symbolleisten finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf Symbolleisten](../../mfc/walkthrough-putting-controls-on-toolbars.md).  
+ Ein Beispiel dafür, wie ein Datums- / Zeitauswahl-Steuerelement verwenden finden Sie das Beispielprojekt ToolbarDateTimePicker. Informationen dazu, wie Sie die Steuerelementschaltflächen in Symbolleisten hinzufügen, finden Sie unter [Exemplarische Vorgehensweise: Einfügen von Steuerelementen auf Symbolleisten](../../mfc/walkthrough-putting-controls-on-toolbars.md).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -131,17 +131,17 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
  **Header:** afxtoolbardatetimectrl.h  
   
 ##  <a name="canbestretched"></a>  CMFCToolBarDateTimeCtrl::CanBeStretched  
- Gibt an, ob ein Benutzer die Schaltfläche mit den während der Anpassung gestreckt werden kann.  
+ Gibt an, ob ein Benutzer während der Anpassung die Schaltfläche gestreckt werden kann.  
   
 ```  
 virtual BOOL CanBeStretched() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt `TRUE` zurück.  
+ Diese Methode gibt "true" zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig lässt das Framework nicht den Benutzer, eine Symbolleisten-Schaltfläche während der Anpassung zu Strecken. Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) indem der Benutzer, eine Symbolleisten-Schaltfläche für Datum und Uhrzeit während der Anpassung zu Strecken.  
+ Standardmäßig lässt sich das Framework nicht auf den Benutzer eine Symbolleisten-Schaltfläche gestreckt wird, während der Anpassung aus. Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) von dem der Benutzer eine Symbolleisten-Schaltfläche für Datum und Uhrzeit gestreckt wird, während der Anpassung.  
   
 ##  <a name="cmfctoolbardatetimectrl"></a>  CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl  
  Erstellt und initialisiert ein [CMFCToolBarDateTimeCtrl](../../mfc/reference/cmfctoolbardatetimectrl-class.md) Objekt.  
@@ -159,24 +159,24 @@ CMFCToolBarDateTimeCtrl(
  Die Steuerelement-ID.  
   
  [in] *iImage*  
- Der Index des Bilds in der Symbolleiste `CMFCToolBarImages` Objekt.  
+ Der Index des Bilds in der Symbolleiste auf die `CMFCToolBarImages` Objekt.  
   
  [in] *DwStyle*  
- Die Art des der `CMFCToolBarDateTimeCtrlImpl` Fenster, das erstellt wird, wenn ein Benutzer auf die Schaltfläche klickt.  
+ Das Format des der `CMFCToolBarDateTimeCtrlImpl` Fenster, das erstellt wird, wenn ein Benutzer auf die Schaltfläche klickt.  
   
  [in] *iWidth*  
  Die Breite des Steuerelements in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieses Objekt wird mit dem Systemdatum und Systemzeit initialisiert. Der Fensterstil des internen `CMFCToolBarDateTimeCtrlImpl` Objekt enthält die *DwStyle* Parameter und die `WS_CHILD` und `WS_VISIBLE` Stile. Sie können mit dieser Stile ändern `CMFCToolBarDateTimeCtrl::SetStyle`. Verwendung `SetStyle` so ändern Sie den Stil der `CMFCToolBarDateTimeCtrl` Steuerelement.  
+ Dieses Objekt wird mit dem Systemdatum und Systemzeit initialisiert. Der Fensterstil des internen `CMFCToolBarDateTimeCtrlImpl` Objekt enthält die *DwStyle* Parameter und die Stile WS_CHILD und WS_VISIBLE. Sie können nicht mit dieser Stile ändern `CMFCToolBarDateTimeCtrl::SetStyle`. Verwendung `SetStyle` so ändern Sie den Stil der der `CMFCToolBarDateTimeCtrl` Steuerelement.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht das Erstellen von ein Objekt von der `CMFCToolBarDateTimeCtrl` Klasse. Dieser Codeausschnitt ist Teil der [Symbolleiste Datums-/Zeitauswahl-Beispiel](../../visual-cpp-samples.md).  
+ Im folgende Beispiel wird veranschaulicht, wie zum Erstellen eines Objekts von der `CMFCToolBarDateTimeCtrl` Klasse. Dieser Codeausschnitt ist Teil der [Symbolleiste Datums-/ Zeitauswahl Beispiel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_ToolbarDateTimePicker#1](../../mfc/reference/codesnippet/cpp/cmfctoolbardatetimectrl-class_1.cpp)]  
   
 ##  <a name="copyfrom"></a>  CMFCToolBarDateTimeCtrl::CopyFrom  
- Kopiert die Eigenschaften von einer anderen Symbolleistenschaltfläche auf die Schaltfläche mit den aktuellen.  
+ Kopiert die Eigenschaften von einer anderen Symbolleistenschaltfläche, auf die Schaltfläche "aktuelle".  
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -184,13 +184,13 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
   
 ### <a name="parameters"></a>Parameter  
  [in] *Src*  
- Ein Verweis auf die Schaltfläche "Quelle" aus dem kopiert werden soll.  
+ Ein Verweis auf die Schaltfläche "Quelle", aus dem kopiert werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode zum Kopieren von einer anderen Symbolleistenschaltfläche diese Symbolleisten-Schaltfläche. *Src* muss vom Typ `CMFCToolBarDateTimeCtrl`.  
+ Rufen Sie diese Methode zum Kopieren von einer anderen Symbolleistenschaltfläche diese Symbolleisten-Schaltfläche auf. *Src* muss vom Typ `CMFCToolBarDateTimeCtrl`.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarDateTimeCtrl::ExportToMenuButton  
- Kopiert den Text aus der Symbolleiste auf die Schaltfläche zu einem Menü.  
+ Kopiert den Text aus der Symbolleisten-Schaltfläche zu einem Menü.  
   
 ```  
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;  
@@ -201,13 +201,13 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
  Ein Verweis auf die Menüschaltfläche Ziel.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt `TRUE` zurück.  
+ Diese Methode gibt "true" zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode überschreibt die basisklassenimplementierung ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) durch das Laden der Zeichenfolgenressource, die die Befehls-ID des Steuerelements zugeordnet ist. Weitere Informationen zu den Zeichenfolgenressourcen, finden Sie unter [CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring).  
+ Diese Methode überschreibt die basisklassenimplementierung ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) durch Laden der Zeichenfolgenressource, die die Befehls-ID des Steuerelements zugeordnet ist. Weitere Informationen zu Ressourcen Zeichenfolgen sind, finden Sie unter [CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring).  
   
 ##  <a name="getbycmd"></a>  CMFCToolBarDateTimeCtrl::GetByCmd  
- Ruft das erste `CMFCToolBarDateTimeCtrl` Objekt in der Anwendung mit der angegebenen Befehls-ID.  
+ Ruft das erste `CMFCToolBarDateTimeCtrl` Objekt in der Anwendung, die die angegebene Befehls-ID  
   
 ```  
 static CMFCToolBarDateTimeCtrl* __stdcall GetByCmd(UINT uiCmd);
@@ -215,26 +215,26 @@ static CMFCToolBarDateTimeCtrl* __stdcall GetByCmd(UINT uiCmd);
   
 ### <a name="parameters"></a>Parameter  
  [in] *UiCmd*  
- Die Befehls-ID der Schaltfläche abgerufen.  
+ Die Befehls-ID der Schaltfläche zum Abrufen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die erste `CMFCToolBarDateTimeCtrl` Objekt in der Anwendung mit der angegebenen Befehls-ID oder `NULL` kein `CMFCToolBarDateTimeCtrl` Objekte verfügen über die angegebene Befehls-ID.  
+ Die erste `CMFCToolBarDateTimeCtrl` Objekt in der Anwendung, die der angegebenen Befehls-ID oder NULL, wenn kein `CMFCToolBarDateTimeCtrl` Objekte verfügen über die angegebene Befehls-ID  
   
 ### <a name="remarks"></a>Hinweise  
- Diese freigegebenen Utility-Methode wird von Methoden verwendet, z. B. [CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall) und [CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall) festgelegt oder abgerufen werden, das Datum und die Zeit aller Instanzen die Datumsauswahl denen eine angegebene Befehls-ID.  
+ Diese gemeinsam genutzte Dienstprogramme-Methode wird von Methoden verwendet, z. B. [CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall) und [CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall) festgelegt oder abgerufen, das Datum und die Zeit aller Instanzen Datumsauswahl-Steuerelement, die eine angegebenen Befehls-ID.  
   
 ##  <a name="getdatetimectrl"></a>  CMFCToolBarDateTimeCtrl::GetDateTimeCtrl  
- Gibt einen Zeiger auf die Datums- / Zeitauswahl-Steuerelement.  
+ Gibt einen Zeiger auf den Datums- / Zeitauswahl-Steuerelement.  
   
 ```  
 CDateTimeCtrl* GetDateTimeCtrl() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf Datums- und Zeitauswahl; oder `NULL` ist das Steuerelement ist nicht vorhanden.  
+ Ein Zeiger auf den Datums- / Zeitauswahl-Steuerelement; oder NULL, wenn das Steuerelement nicht vorhanden ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `CMFCToolBarDateTimeCtrl` -Klasse initialisiert die `m_pWndDateTime` Datenmember, die beim Einfügen einer `CMFCToolBarDateTimeCtrl` Objekt in eine Symbolleiste.  
+ Die `CMFCToolBarDateTimeCtrl` -Klasse initialisiert den `m_pWndDateTime` Datenmember, die beim Einfügen einer `CMFCToolBarDateTimeCtrl` Objekt in einer Symbolleiste.  
   
 ##  <a name="gethwnd"></a>  CMFCToolBarDateTimeCtrl::GetHwnd  
  Ruft das Fensterhandle, das die Symbolleisten-Schaltfläche zugeordnet ist.  
@@ -244,13 +244,13 @@ virtual HWND GetHwnd();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Fensterhandle, das das Datum und Uhrzeit Symbolleisten-Schaltfläche zugeordnet ist.  
+ Das Fensterhandle, das das Datum und Uhrzeit-Symbolleisten-Schaltfläche zugeordnet ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode überschreibt die [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) Methode.  
   
 ##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime  
- Ruft die ausgewählte Zeit aus der zugeordneten Datum und Zeit Kontoauswahl-Steuerelement ab und fügt sie in einem angegebenen [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur  
+ Ruft die ausgewählte Zeit aus das zugeordnete Datum und die / Zeitauswahl-Steuerelement und fügt es in einem angegebenen [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur  
   
 ```  
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -260,19 +260,19 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
   
 ### <a name="parameters"></a>Parameter  
  [out] *TimeDest*  
- In der ersten Überladung eine [COleDateTime Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das die Zeitinformationen System erhält. In der zweiten Überladung ist ein [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das die Zeitinformationen System erhält.  
+ In der ersten Überladung ist eine [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das die Zeitinformationen System erhält. In der zweiten Überladung ist eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das die Zeitinformationen System erhält.  
   
  [out] *pTimeDest*  
- Ein Zeiger auf die [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, um die Systeminformationen für die Zeit zu erhalten. Dieser Wert darf nicht `NULL` sein.  
+ Ein Zeiger auf die [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, um die Systeminformationen für die Zeit zu erhalten. Nicht darf NULL sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
- In der ersten Überladung, die ungleich NULL, wenn die Zeit in erfolgreich geschrieben werden die [COleDateTime Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, andernfalls 0. In der zweiten und dritten Überladungen der Rückgabewert ist eine `DWORD` , die gleich der DwFlag-Member, die festgelegt wurde, in der [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) Struktur.  
+ In der ersten Überladung, die ungleich NULL, wenn die Zeit erfolgreich, um geschrieben wurde die [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, andernfalls 0. In der zweiten und dritten-Überladungen, ist der Rückgabewert einen DWORD-Wert, der gleich dem dwFlags-Element, das festgelegt wurde, in der [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
- Die-Methode legt die [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) Struktur DwFlags Member, um anzugeben, ob die Datums- / Zeitauswahl auf einer Datums- und Uhrzeitangabe festgelegt ist. Wenn der Wert der GDT_NONE wird das Steuerelement festzulegen, um `no date` Status, und verwendet den DTS_SHOWNONE-Stil. Wenn der zurückgegebene Wert GDT_VALID entspricht, wird die Systemzeit wurde erfolgreich am Zielspeicherort gespeichert.  
+ Der Methode wird die [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) -Struktur Member DwFlags, um anzugeben, ob die Datums- / Zeitauswahl auf Datum und Uhrzeit festgelegt ist. Wenn der Wert GDT_NONE, auf das Steuerelement festgelegt `no date` Status und den Stil DTS_SHOWNONE verwendet. Wenn der zurückgegebene Wert GDT_VALID gleich ist, wird die Systemzeit am Zielspeicherort wurde erfolgreich gespeichert.  
   
 ##  <a name="gettimeall"></a>  CMFCToolBarDateTimeCtrl::GetTimeAll  
- Gibt die Zeit, die vom Benutzer über die Zeit Zeitauswahl-Steuerelement-Schaltfläche, die eine angegebenen Befehls-ID wurde aktiviert  
+ Gibt die Zeit, die vom Benutzer über die Zeit Zeitauswahl-Steuerelement-Schaltfläche, die eine angegebenen Befehls-ID ausgewählt  
   
 ```  
 static BOOL GetTimeAll(
@@ -293,16 +293,16 @@ static DWORD GetTimeAll(
  Gibt an, eine Symbolleisten-Befehlsschaltfläche-ID.  
   
  [out] *TimeDest*  
- In der ersten Überladung eine [COleDateTime Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das die Zeitinformationen System erhält. In der zweiten Überladung ist ein [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das die Zeitinformationen System erhält.  
+ In der ersten Überladung ist eine [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das die Zeitinformationen System erhält. In der zweiten Überladung ist eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das die Zeitinformationen System erhält.  
   
  [out] *pTimeDest*  
- Ein Zeiger auf die [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, um die Systeminformationen für die Zeit zu erhalten. Dieser Wert darf nicht `NULL` sein.  
+ Ein Zeiger auf die [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, um die Systeminformationen für die Zeit zu erhalten. Nicht darf NULL sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn das Framework eine Symbolleisten-Schaltfläche nicht finden kann, die die Befehls-ID entspricht *UiCmd*, der Rückgabewert ist 0 (null), in der ersten Überladung und GDT_NONE in der anderen Überladungen. Wenn die Symbolleistenschaltfläche gefunden wird, wird der Rückgabewert ist identisch mit der Rückgabewert eines Aufrufs [CMFCToolBarDateTimeCtrl::GetTime](#gettime) auf diese Schaltfläche. Ein Rückgabewert Wert 0 (null) oder GDT_NONE kann auftreten, wenn die Schaltfläche "" gefunden wird, der angibt, dass der Aufruf von `GetTime` hat ein gültiges Datum in einem anderen Grund nicht zurückgegeben.  
+ Wenn das Framework eine Symbolleisten-Schaltfläche nicht finden kann, die die Befehls-ID entspricht *UiCmd*, der Rückgabewert ist 0 (null), in der ersten Überladung und GDT_NONE in alle anderen Überladungen. Wenn die Symbolleisten-Schaltfläche gefunden wird, wird der Rückgabewert ist identisch mit der Rückgabewert von einem Aufruf von [CMFCToolBarDateTimeCtrl::GetTime](#gettime) auf diese Schaltfläche. Ein Rückgabewert Wert 0 (null) oder GDT_NONE kann auftreten, wenn die Schaltfläche mit der gefunden wird, der angibt, dass der Aufruf von `GetTime` hat ein gültiges Datum einem anderen Grund nicht zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sucht nach einer Symbolleisten-Schaltfläche mit dem angegebenen Befehls-ID und Aufrufe [CMFCToolBarDateTimeCtrl::GetTime](#gettime) Methode auf die Schaltfläche.  
+ Diese Methode sucht nach einer Symbolleisten-Schaltfläche, die die angegebene Befehls-ID und ruft [CMFCToolBarDateTimeCtrl::GetTime](#gettime) Methode, die auf diese Schaltfläche.  
   
 ##  <a name="havehotborder"></a>  CMFCToolBarDateTimeCtrl::HaveHotBorder  
  Bestimmt, ob ein Rahmen der Schaltfläche angezeigt wird, wenn ein Benutzer die Schaltfläche auswählt.  
@@ -312,13 +312,13 @@ virtual BOOL HaveHotBorder() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn eine Schaltfläche eine Rahmenlinie beim aktiviert angezeigt; andernfalls 0.  
+ Ungleich NULL, wenn eine Schaltfläche anzeigt, dessen Rahmen aus, wenn ausgewählt wird; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode gibt einen Wert ungleich NULL zurück, wenn das Steuerelement sichtbar ist.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarDateTimeCtrl::NotifyCommand  
- Gibt an, ob die Schaltfläche verarbeitet die [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht.  
+ Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -326,30 +326,30 @@ virtual BOOL NotifyCommand(int iNotifyCode);
   
 ### <a name="parameters"></a>Parameter  
  [in] *iNotifyCode*  
- Die Benachrichtigung, die dem Befehl zugeordnet ist.  
+ Die Benachrichtigung, die mit dem Befehl zugeordnet ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Schaltfläche "" die Nachricht WM_COMMAND verarbeitet oder `FALSE` um anzugeben, dass die Nachricht vom übergeordneten Symbolleiste behandelt werden sollen.  
+ TRUE, wenn die Schaltfläche mit der verarbeitet die WM_COMMAND-Meldung oder "false" um anzugeben, dass die Nachricht von der übergeordneten Symbolleiste behandelt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework ruft diese Methode aus, wenn es zu senden ist ein [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht an das übergeordnete Fenster.  
+ Das Framework ruft diese Methode aus, wenn es zu senden ist ein [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht für das übergeordnete Fenster.  
   
- Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) durch die Verarbeitung der [DTN_DATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761737) Benachrichtigung. Den interne Status aktualisiert und aktualisiert die Time-Eigenschaft aller `CMFCToolBarDateTimeCtrl` Objekte mit dem gleichen Befehl ID.  
+ Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) durch die Verarbeitung der [DTN_DATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761737) Benachrichtigung. Aktualisiert den Zeitstatus der internen und aktualisiert die Time-Eigenschaft aller `CMFCToolBarDateTimeCtrl` Objekte mit derselben Befehls-ID  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
- Vom Framework aufgerufen, wenn die Schaltfläche "" hinzugefügt wird eine **anpassen** (Dialogfeld).  
+ Vom Framework aufgerufen, wenn die Schaltfläche hinzugefügt wird eine **anpassen** Dialogfeld.  
   
 ```  
 virtual void OnAddToCustomizePage();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode erweitert die basisklassenimplementierung [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage), durch Kopieren Sie die Eigenschaften des ersten Datums und die Uhrzeit des Steuerelements in eine Symbolleiste, die derselben Befehls-ID wie dieses Objekt verfügt. Diese Methode bewirkt nichts, wenn keine Symbolleiste ein Steuerelements für Datum und Uhrzeit, das mit derselben Befehls-ID wie dieses Objekt besitzt.  
+ Diese Methode erweitert die basisklassenimplementierung [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage), durch Kopieren Sie die Eigenschaften aus das erste Datum und Uhrzeit-Steuerelement in die Symbolleisten, die derselben Befehls-ID wie dieses Objekt hat. Diese Methode bewirkt nichts, wenn keine Symbolleiste ein Steuerelements für Datum und Uhrzeit, das mit derselben Befehls-ID wie dieses Objekt besitzt.  
   
- Weitere Informationen zu den **anpassen** (Dialogfeld), finden Sie unter [CMFCToolBarsCustomizeDialog Klasse](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
+ Weitere Informationen zu den **anpassen** im Dialogfeld finden Sie unter [CMFCToolBarsCustomizeDialog-Klasse](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarDateTimeCtrl::OnChangeParentWnd  
- Vom Framework aufgerufen, wenn die Schaltfläche "" in eine neue Symbolleiste eingefügt wird.  
+ Vom Framework aufgerufen, wenn die Schaltfläche mit der in eine neue Symbolleiste eingefügt wird.  
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -360,7 +360,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
  Das neue übergeordnete Fenster.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode überschreibt die basisklassenimplementierung ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) durch das interne Neuerstellen `CMFCToolBarDateTimeCtrlImpl` Objekt.  
+ Diese Methode überschreibt die basisklassenimplementierung ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) durch Neuerstellen der internen `CMFCToolBarDateTimeCtrlImpl` Objekt.  
   
 ##  <a name="onclick"></a>  CMFCToolBarDateTimeCtrl::OnClick  
  Vom Framework aufgerufen, wenn der Benutzer das Steuerelement klickt.  
@@ -372,17 +372,17 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWnd*  
+ [in] *aufnehmen*  
  Nicht verwendet.  
   
  [in] *bDelay*  
  Nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Schaltfläche, die auf-Nachricht verarbeitet; andernfalls 0.  
+ Ungleich NULL ist, wenn die Schaltfläche, die auf-Nachricht verarbeitet; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode überschreibt die basisklassenimplementierung [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), durch einen Wert ungleich NULL zurückgeben, wenn das interne `CMFCToolBarDateTimeCtrlImpl` -Objekts sichtbar ist.  
+ Diese Methode überschreibt die basisklassenimplementierung [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), durch einen Wert ungleich NULL zurückgeben, wenn die interne `CMFCToolBarDateTimeCtrlImpl` Objekt sichtbar ist.  
   
 ##  <a name="onctlcolor"></a>  CMFCToolBarDateTimeCtrl::OnCtlColor  
  Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste WM_CTLCOLOR-Meldung verarbeitet.  
@@ -404,7 +404,7 @@ virtual HBRUSH OnCtlColor(
  Ein Handle für den globalen Pinsel, den das Framework verwendet, um den Hintergrund der Schaltfläche zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode überschreibt die basisklassenimplementierung [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)durch Festlegen des Texts und Hintergrundfarben des Gerätekontexts bereitgestellten auf den globalen Text und Hintergrundfarben, bzw.  
+ Diese Methode überschreibt die basisklassenimplementierung [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)durch Festlegen des Texts und Hintergrundfarben des Gerätekontexts auf den globalen Text bereitgestellten und Hintergrundfarben an, bzw.  
   
  Weitere Informationen zu globalen Optionen, die für Ihre Anwendung verfügbar sind, finden Sie unter [AFX_GLOBAL_DATA-Struktur](../../mfc/reference/afx-global-data-structure.md).  
   
@@ -421,17 +421,17 @@ virtual void OnGlobalFontsChanged();
  Weitere Informationen zu globalen Optionen, die für Ihre Anwendung verfügbar sind, finden Sie unter [AFX_GLOBAL_DATA-Struktur](../../mfc/reference/afx-global-data-structure.md).  
   
 ##  <a name="onmove"></a>  CMFCToolBarDateTimeCtrl::OnMove  
- Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste bewegt wird.  
+ Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste verschoben wird.  
   
 ```  
 virtual void OnMove();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode überschreibt die standardmäßige Klasse-Implementierung ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)) durch Aktualisieren die Position des internen `CMFCToolBarDateTimeCtrlImpl` Objekt.  
+ Diese Methode überschreibt die standardmäßige Klasse-Implementierung ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)) durch Aktualisieren der Position des internen `CMFCToolBarDateTimeCtrlImpl` Objekt.  
   
 ##  <a name="onshow"></a>  CMFCToolBarDateTimeCtrl::OnShow  
- Vom Framework aufgerufen, wenn die Schaltfläche wird ein- oder ausgeblendet.  
+ Vom Framework aufgerufen, wird die Schaltfläche mit der ein- oder ausgeblendet.  
   
 ```  
 virtual void OnShow(BOOL bShow);
@@ -439,13 +439,13 @@ virtual void OnShow(BOOL bShow);
   
 ### <a name="parameters"></a>Parameter  
  [in] *bShow*  
- Gibt an, ob die Schaltfläche sichtbar ist. Wenn dieser Parameter ist `TRUE`, die Schaltfläche sichtbar ist. Andernfalls ist die Schaltfläche nicht sichtbar.  
+ Gibt an, ob die Schaltfläche sichtbar ist. Wenn dieser Parameter TRUE ist, ist die Schaltfläche sichtbar. Andernfalls ist die Schaltfläche nicht sichtbar.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) durch die Schaltfläche anzeigen, wenn *bShow* ist `TRUE`. Diese Methode ist, andernfalls die Schaltfläche ausgeblendet.  
+ Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) durch Anzeigen der Schaltfläche aus, wenn *bShow* ist "true". Diese Methode ist, andernfalls die Schaltfläche ausgeblendet.  
   
 ##  <a name="onsize"></a>  CMFCToolBarDateTimeCtrl::OnSize  
- Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste seine Größe ändert oder Position und diese Änderung bewirkt, dass die Schaltfläche, um die Größe zu ändern.  
+ Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste die Größe ändert oder Position und diese Änderung führt dazu, dass die Schaltfläche, um die Größe zu ändern.  
   
 ```  
 virtual void OnSize(int iSize);
@@ -456,10 +456,10 @@ virtual void OnSize(int iSize);
  Die neue Breite der Schaltfläche in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode überschreibt die standardmäßige Klasse-Implementierung ( [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)) durch Aktualisieren der Größe und Position des internen `CMFCToolBarDateTimeCtrlImpl` Objekt.  
+ Diese Methode überschreibt die standardmäßige Klasse-Implementierung ( [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)) durch Aktualisieren die Größe und Position des internen `CMFCToolBarDateTimeCtrlImpl` Objekt.  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarDateTimeCtrl::OnUpdateToolTip  
- Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste die QuickInfo-Text aktualisiert.  
+ Vom Framework aufgerufen, wenn die übergeordneten Symbolleiste den QuickInfotext aktualisiert.  
   
 ```  
 virtual BOOL OnUpdateToolTip(
@@ -474,19 +474,19 @@ virtual BOOL OnUpdateToolTip(
  Das übergeordnete Fenster.  
   
  [in] *iButtonIndex*  
- Der nullbasierte Index der Schaltfläche in der übergeordneten Auflistung.  
+ Der nullbasierte Index der Schaltfläche in der Auflistung der Schaltflächen übergeordnete Element.  
   
  [in] *WndToolTip*  
  Das Steuerelement, das den QuickInfo-Text anzeigt.  
   
  [out] *str*  
- Ein `CString` Objekt, das die aktualisierten QuickInfo-Text empfängt.  
+ Ein `CString` Objekt, das den aktualisierten QuickInfo-Text empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Methode den QuickInfo-Text aktualisiert; andernfalls 0.  
+ Ungleich NULL, wenn die Methode den QuickInfo-Text aktualisiert; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)) durch Anzeigen des QuickInfo-Texts, der mit der Schaltfläche zugeordnet ist. Wenn die Schaltfläche nicht horizontal angedockt ist, wird diese Methode wird keine Aktion ausgeführt und gibt `FALSE`.  
+ Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)) durch Anzeigen des QuickInfo-Texts, der mit der Schaltfläche zugeordnet ist. Wenn die Schaltfläche nicht horizontal angedockt ist, wird diese Methode führt keine Aktion aus und gibt FALSE zurück.  
   
 ##  <a name="settime"></a>  CMFCToolBarDateTimeCtrl::SetTime  
  Legt das Datum und die in der / Zeitauswahl-Steuerelement fest.  
@@ -499,19 +499,19 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
   
 ### <a name="parameters"></a>Parameter  
  [in] *TimeNew*  
- In der ersten Version, die einen Verweis auf eine [COleDateTime Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden. In der zweiten Version, ein Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden.  
+ In der ersten Version, die einen Verweis auf eine [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden. In der zweiten Version, ein Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden.  
   
  [in] *pTimeNew*  
- Ein Zeiger auf die [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden.  
+ Ein Zeiger auf die [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die die Zeit enthält, auf den das Steuerelement festgelegt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Legt die Zeit in einem Datums- und Zeitauswahl-Steuerelement fest, durch den Aufruf [CDateTimeCtrl::SetTime](../../mfc/reference/cdatetimectrl-class.md#settime).  
+ Legt die Zeit in einem Datums- / Zeitauswahl-Steuerelement fest, durch den Aufruf [CDateTimeCtrl::SetTime](../../mfc/reference/cdatetimectrl-class.md#settime).  
   
 ##  <a name="settimeall"></a>  CMFCToolBarDateTimeCtrl::SetTimeAll  
- Legt das Datum und die in allen Instanzen der / Zeitauswahl-Steuerelement mit einer angegebenen Befehls-ID.  
+ Legt das Datum und die in der alle Instanzen der / Zeitauswahl-Steuerelement mit einer angegebenen Befehls-ID.  
   
 ```  
 static BOOL SetTimeAll(
@@ -532,16 +532,16 @@ static BOOL SetTimeAll(
  Gibt an, eine Symbolleisten-Befehlsschaltfläche-ID.  
   
  [in] *TimeNew*  
- In der ersten Version einer [COleDateTime Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden. In der zweiten Version, ein Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden.  
+ In der ersten Version einer [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden. In der zweiten Version, ein Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden.  
   
  [in] *pTimeNew*  
- Ein Zeiger auf die [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden.  
+ Ein Zeiger auf die [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die die Zeit enthält, auf den das Steuerelement festgelegt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Sucht nach einer Symbolleisten-Schaltfläche mit den angegebenen Befehls-ID und Festlegen der Zeit in einem Datums- und Zeitauswahl-Steuerelement, durch den Aufruf [CMFCToolBarDateTimeCtrl::SetTime](#settime).  
+ Sucht nach einer Symbolleisten-Schaltfläche, mit der angegebenen Befehls-ID, und legt die Zeit in einem Datums- / Zeitauswahl-Steuerelement fest, durch den Aufruf [CMFCToolBarDateTimeCtrl::SetTime](#settime).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

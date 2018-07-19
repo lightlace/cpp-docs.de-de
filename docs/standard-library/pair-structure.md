@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0be002676860acb4f55d989416114ec23ce809
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ad86773fdc78f3cb8d5219ce14919a035755f3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854430"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955331"
 ---
 # <a name="pair-structure"></a>pair-Struktur
 
@@ -54,25 +54,25 @@ struct pair
 
 ### <a name="parameters"></a>Parameter
 
-`Val1` Initialisieren das erste Element der Wert `pair`.
+*Wert1* Wert initialisiert das erste Element der `pair`.
 
-`Val2` Initialisieren das zweite Element der Wert `pair`.
+*Val2* Wert initialisieren das zweite Element der `pair`.
 
-`Right` Ein Paar, dessen Werte verwendet werden, um die Elemente eines anderen Paars zu initialisieren.
+*Rechts* ein Paar, dessen Werte verwendet werden, um die Elemente eines anderen Paars zu initialisieren.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der erste Konstruktor (Standardkonstruktor) initialisiert das erste Element des Paars auf den Standardwert des Typs **T1** und das zweite Element auf den Standardwert des Typs **T2**.
+Der erste Konstruktor (Standardkonstruktor) initialisiert das erste Element des Paars auf den Standardwert des Typs `T1` und zweite Element auf den Standardwert des Typs `T2`.
 
-Der zweite Konstruktor initialisiert das erste Element des Paars auf `Val1` und das zweite auf *Val2*.
+Der zweite Konstruktor initialisiert das erste Element des Paars auf *Val1* und das zweite auf *Val2.*
 
 Der dritte Konstruktor (Vorlagenkonstruktor) initialisiert das erste Element des Paars auf `Right`. **first** und das zweite auf `Right`. **second**.
 
-Der vierte Konstruktor initialisiert das erste Element des Paars auf `Val1` und das zweite auf *Val2*, wozu er [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md) verwendet.
+Der vierte Konstruktor initialisiert das erste Element des Paars auf *Val1* und das zweite auf *Val2* mit [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenstruktur speichert ein Objektpaar des Typs **T1** bzw. **T2**. Der Typ **first_type** ist mit dem Vorlagenparameter **T1** und der Typ **second_type** ist mit dem Vorlagenparameter **T2** identisch. **T1** und **T2** müssen jeweils nur einen Standardkonstruktor, einen Einzelargumentkonstruktor und einen Destruktor bereitstellen. Alle Member des Typs `pair` sind öffentlich, da der Typ als `struct` statt als **Klasse** deklariert ist. Die beiden häufigsten Einsatzfälle für ein Paar sind, es als Rückgabetyp für eine Funktion zu verwenden, die zwei Werte zurückgibt, oder es als Element für die assoziativen Containerklassen [map-Klasse](../standard-library/map-class.md) und [multimap-Klasse](../standard-library/multimap-class.md) zu verwenden, die beide einen Schlüssel und einen Werttyp haben, die jedem Element zugeordnet sind. Die zweite Verwendung erfüllt die Anforderungen für einen paarweise assoziativen Container und hat einen Werttyp der Form `pair`< **const**`key_type`, `mapped_type`>.
+Die Vorlagenstruktur speichert ein Paar von Objekten des Typs `T1` und `T2`bzw. Der Typ `first_type` ist identisch mit dem Vorlagenparameter `T1` und welche `second_type` ist identisch mit dem Vorlagenparameter `T2`. `T1` und `T2` müssen jeweils nur einen Standardkonstruktor, einen Einzelargumentkonstruktor und einen Destruktor bereitstellen. Alle Member des Typs `pair` sind öffentlich, da der Typ als `struct` statt als **Klasse** deklariert ist. Die beiden häufigsten Einsatzfälle für ein Paar sind, es als Rückgabetyp für eine Funktion zu verwenden, die zwei Werte zurückgibt, oder es als Element für die assoziativen Containerklassen [map-Klasse](../standard-library/map-class.md) und [multimap-Klasse](../standard-library/multimap-class.md) zu verwenden, die beide einen Schlüssel und einen Werttyp haben, die jedem Element zugeordnet sind. Die zweite Verwendung erfüllt die Anforderungen für einen paarweise assoziativen Container und hat einen Werttyp der Form `pair`< **const**`key_type`, `mapped_type`>.
 
 ## <a name="example"></a>Beispiel
 
