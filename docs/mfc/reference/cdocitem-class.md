@@ -1,5 +1,5 @@
 ---
-title: CDocItem Klasse | Microsoft Docs
+title: CDocItem-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 724e5017f51a3527e2ad81bcf707179053cc3e88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88c30418f886cd791a7119367c5ddbccc19003fa
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335580"
 ---
 # <a name="cdocitem-class"></a>CDocItem-Klasse
 Die Basisklasse für Dokumentelemente, die Komponenten der Daten eines Dokuments sind.  
@@ -42,7 +42,7 @@ class CDocItem : public CCmdTarget
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CDocItem::GetDocument](#getdocument)|Gibt das Dokument, das das Element enthält.|  
+|[CDocItem::GetDocument](#getdocument)|Gibt zurück, das Dokument, das das Element enthält.|  
 |[CDocItem::IsBlank](#isblank)|Bestimmt, ob das Element alle Informationen enthält.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -68,10 +68,10 @@ CDocument* GetDocument() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf das Dokument, das das Element enthält; **NULL**, sofern das Element nicht Teil eines Dokuments ist.  
+ Ein Zeiger auf das Dokument, das das Element enthält; NULL, wenn das Element nicht Teil eines Dokuments ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion wird in den abgeleiteten Klassen überschrieben [COleClientItem](../../mfc/reference/coleclientitem-class.md) und [COleServerItem](../../mfc/reference/coleserveritem-class.md), die Rückgabe eines Zeigers auf eine [COleDocument](../../mfc/reference/coledocument-class.md), [ COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), oder ein [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) Objekt.  
+ Diese Funktion wird in den abgeleiteten Klassen überschrieben [COleClientItem](../../mfc/reference/coleclientitem-class.md) und [COleServerItem](../../mfc/reference/coleserveritem-class.md), Rückgabe eines Zeigers auf eine [COleDocument](../../mfc/reference/coledocument-class.md), [ COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), oder ein [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) Objekt.  
   
 ##  <a name="isblank"></a>  CDocItem::IsBlank  
  Vom Framework aufgerufen, wenn Standardserialisierung auftritt.  
@@ -81,10 +81,10 @@ virtual BOOL IsBlank() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn das Element keine Informationen enthält; andernfalls 0.  
+ Ungleich NULL, wenn das Element keine Informationen enthält; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig `CDocItem` Objekte sind nicht leer. [COleClientItem](../../mfc/reference/coleclientitem-class.md) Objekte sind in einigen Fällen leer, da sie direkte ableiten `CDocItem`. Allerdings [COleServerItem](../../mfc/reference/coleserveritem-class.md) Objekte sind immer leer. In der Standardeinstellung werden OLE-serveranwendungen mit `COleClientItem` Objekte, die keine x- oder y verfügen Block serialisiert werden. Dies wird durch Zurückgeben von **"true"** von einer Überschreibung von `IsBlank` Wenn das Element besitzt, keine x- oder y Block.  
+ In der Standardeinstellung `CDocItem` Objekte sind nicht leer. [COleClientItem](../../mfc/reference/coleclientitem-class.md) Objekte sind manchmal leer, da sie direkt vom abgeleitet sind `CDocItem`. Allerdings [COleServerItem](../../mfc/reference/coleserveritem-class.md) Objekte sind immer leer. In der Standardeinstellung werden OLE-Anwendungen, die mit `COleClientItem` Objekte, die keine x- oder y Block werden serialisiert. Dies erfolgt durch "true" zurückgeben, von einer Überschreibung von `IsBlank` Wenn das Element aufweist, keine x- oder y Block.  
   
  Überschreiben Sie diese Funktion, wenn Sie andere Aktionen während der Serialisierung implementieren möchten.  
   

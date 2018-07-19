@@ -1,5 +1,5 @@
 ---
-title: CMFCAutoHideBar-Klasse | Microsoft Docs
+title: CMFCAutoHideBar-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3278824e565f34a61943b466ccc6ffef9c4f0be0
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337015"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar-Klasse
 Die `CMFCAutoHideBar`-Klasse ist eine besondere Symbolleistenklasse, die die Funktion „Automatisch im Hintergrund“ implementiert.  
@@ -96,7 +96,7 @@ class CMFCAutoHideBar : public CPane
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|Die Verzögerung zwischen dem Zeitpunkt, wenn der Benutzer den Mauszeiger über platziert, eine [CMFCAutoHideButton-Klasse](../../mfc/reference/cmfcautohidebutton-class.md) und dem Zeitpunkt, wenn das Framework das zugeordnete Fenster anzeigt.|  
+|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|Die zeitliche Verzögerung zwischen dem Zeitpunkt, wenn der Benutzer den Cursor über platziert, einem [CMFCAutoHideButton-Klasse](../../mfc/reference/cmfcautohidebutton-class.md) und dem Zeitpunkt, wenn das Framework das zugeordnete Fenster anzeigt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn der Benutzer für einen Dockbereich den Modus „Automatisches Ausblenden“ auswählt, erstellt das Framework automatisch ein `CMFCAutoHideBar`-Objekt. Es erstellt außerdem die erforderlichen [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) und [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) Objekte. Jedes `CAutoHideDockSite`-Objekt bezieht sich auf ein einzelne `CMFCAutoHideButton`.  
@@ -145,15 +145,15 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ### <a name="return-value"></a>Rückgabewert  
   
 ### <a name="remarks"></a>Hinweise  
- Die *DwAlignment* Parameter gibt an, in dem die Schaltfläche zum automatischen Ausblenden in der Anwendung befindet. Der Parameter kann auf einen der folgenden Werte festgelegt werden:  
+ Die *DwAlignment* Parameter gibt an, in dem die Schaltfläche "automatisch ausblenden" in der Anwendung befindet. Der Parameter kann auf einen der folgenden Werte festgelegt werden:  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
@@ -207,7 +207,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *LpszClassName*  
+ [in] *"lpszclassname"*  
  [in] *DwStyle*  
  [in] *Rect*  
  [in] *pParentWnd*  
@@ -244,14 +244,14 @@ int GetVisibleCount();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
- Die Verzögerung zwischen dem Zeitpunkt, wenn der Benutzer den Mauszeiger über platziert, eine [CMFCAutoHideButton-Klasse](../../mfc/reference/cmfcautohidebutton-class.md) und dem Zeitpunkt, wenn das Framework das zugeordnete Fenster anzeigt.  
+ Die zeitliche Verzögerung zwischen dem Zeitpunkt, wenn der Benutzer den Cursor über platziert, einem [CMFCAutoHideButton-Klasse](../../mfc/reference/cmfcautohidebutton-class.md) und dem Zeitpunkt, wenn das Framework das zugeordnete Fenster anzeigt.  
   
 ```  
 int CMFCAutoHideBar::m_nShowAHWndDelay = 400;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn der Benutzer den Mauszeiger über platziert eine `CMFCAutoHideButton`, besteht eine geringfügige Verzögerung kommen, bevor vom Framework das zugeordnete Fenster angezeigt wird. Dieser Parameter bestimmt die Länge der Verzögerung in Millisekunden an.  
+ Wenn der Benutzer platziert den Cursor über einem `CMFCAutoHideButton`, besteht eine geringfügige Verzögerung kommen, bevor das Framework das zugeordnete Fenster anzeigt. Dieser Parameter bestimmt die Länge der Verzögerung in Millisekunden.  
   
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
@@ -291,7 +291,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] BOOL *bActive*  
+ [in] "Bool" *bActive*  
  TRUE, um auf aktiv festzulegen; andernfalls FALSE.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -321,10 +321,10 @@ BOOL ShowAutoHideWindow(
   
 ### <a name="parameters"></a>Parameter  
  [in] CDockablePane * *pAutoHideWnd*  
- [in] BOOL *bShow*  
+ [in] "Bool" *bShow*  
  TRUE, um das Fenster anzuzeigen.  
   
- [in] BOOL *bDelay*  
+ [in] "Bool" *bDelay*  
  Dieser Parameter wird ignoriert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -346,7 +346,7 @@ virtual CSize StretchPane(
  Der Wert wird in der Basisimplementierung nicht verwendet. Verwenden Sie diesen Wert in abgeleiteten Implementierungen, um die Länge des Bereichs mit der geänderten Größe anzuzeigen.  
   
  [in] *bHoriz*  
- Der Wert wird in der Basisimplementierung nicht verwendet. Verwenden Sie in abgeleiteten Implementierungen `TRUE` um den Fall abzudecken, in dem die automatisch ausblendbare Leiste vertikal reduziert wird, und `FALSE` für den Fall, in dem die automatisch ausblendbare Leiste horizontal reduziert wird.  
+ Der Wert wird in der Basisimplementierung nicht verwendet. Verwenden Sie in abgeleiteten Implementierungen "true" Handle der Fall, in dem die automatisch ausblendbare Leiste vertikal reduziert wird, und "false" für den Fall, in dem die automatisch ausblendbare Leiste horizontal reduziert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die resultierende Größe des Bereichs, dessen Größe geändert wurde.  

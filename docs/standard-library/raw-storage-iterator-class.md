@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d6c93bfc6525840343c64b8cd804ddb65f68dd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d259040ec5f4d7f1148b9a782479b6db8617602
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860267"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954629"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator-Klasse
 
@@ -40,13 +40,13 @@ class raw_storage_iterator
 
 ### <a name="parameters"></a>Parameter
 
-`OutputIterator` Gibt den Ausgabeiterator für das Objekt gespeichert wird.
+*OutputIterator* gibt den Ausgabeiterator für das Objekt gespeichert wird.
 
-*Typ* den Typ des Objekts, die für den Speicher zugeordnet ist.
+*Typ* den Typ des Objekts, die für den Speicher belegt wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse beschreibt einen Ausgabeiterator, der Objekte des Typs **Typ** in der Sequenz erstellt, die von ihm generiert wird. Ein aus der Klasse `raw_storage_iterator`\< **ForwardIterator**, **Typ**> abgeleitetes Objekt greift über ein Forward-Iteratorobjekt der Klasse **ForwardIterator** das Sie beim Erstellen des Objekts angegeben haben, auf Speicher zu. Für ein Objekt der Klasse **ForwardIterator** muss der Ausdruck **&\*first** nicht erstellten Speicher für das nächste Objekt (des Typs **Typ**) in der generierten Sequenz bestimmen.
+Die Klasse beschreibt einen Ausgabeiterator, die Objekte des Typs erstellt `Type` in der Sequenz generiert. Ein Objekt der Klasse `raw_storage_iterator` \< **ForwardIterator**, **Typ**> auf Speicher zugreift, über ein forward-Iterator-Objekt der Klasse `ForwardIterator`, dass Sie, wenn angeben Sie Erstellen Sie das Objekt. Für ein Objekt der Klasse `ForwardIterator`, den Ausdruck  **& \*erste** müssen festlegen, nicht erstellten Speicher für das nächste Objekt (des Typs `Type`) in der generierten Sequenz.
 
 Diese Adapterklasse wird verwendet, wenn es erforderlich ist, Speicherbelegung und Objekterstellung zu trennen. `raw_storage_iterator` kann verwendet werden, um Objekte in nicht initialisierten Speicher zu kopieren, beispielsweise Arbeitsspeicher, der über die `malloc`-Funktion zugeordnet wurde.
 
@@ -89,7 +89,7 @@ typedef Type element_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für den raw_storage_iterator-Klassenvorlagenparameter **Typ**.
+Der Typ ist ein Synonym für den Raw_storage_iterator-Klassenvorlagenparameter `Type`.
 
 ## <a name="iter_type"></a> raw_storage_iterator::iter_type
 
@@ -101,7 +101,7 @@ typedef ForwardIterator iter_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für den Vorlagenparameter **ForwardIterator**.
+Der Type stellt ein Synonym für den Vorlagenparameter `ForwardIterator` dar.
 
 ## <a name="op_star"></a> raw_storage_iterator::operator*
 
@@ -117,7 +117,7 @@ Ein Verweis auf den unformatierten Speicheriterator.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Anforderungen für einen **ForwardIterator** sehen wie folgt aus: Der unformatierte Speicheriterator benötigt nur den gültigen Ausdruck \* *ii* = *t*, und er sagt nichts über den **operator** oder `operator=` selbst aus. Die Memberoperatoren in dieser Implementierung geben **\*this** zurück, sodass [operator =](#op_eq)( **constType**&) den tatsächlichen Speicher in einem Ausdruck, z.B. \* *ptr* = `val` ausführen kann.
+Die Anforderungen für eine `ForwardIterator` der unformatierte speicheriterator nur den Ausdruck erfordern \* *Ii* = *t* gültig sein und, die er sagt nichts über die **Operator** oder `operator=` selbst. Die memberoperatoren in dieser Implementierung gibt  **\*dies**, sodass [Operator =](#op_eq)(**ConstType**&) können den tatsächlichen Speicher in einem Ausdruck ausführen wie z. B. \* *Ptr* = `val`.
 
 ### <a name="example"></a>Beispiel
 
@@ -181,7 +181,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 ### <a name="parameters"></a>Parameter
 
-`val` Der Wert des Objekts vom Typ **Typ** in den Arbeitsspeicher eingefügt werden soll.
+`val` Der Wert des Objekts vom Typ `Type` in den Speicher eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -189,7 +189,7 @@ Der Operator fügt `val` in den Speicher ein, und gibt dann einen Verweis auf de
 
 ### <a name="remarks"></a>Hinweise
 
-Die Anforderungen für einen **ForwardIterator** geben an, dass der unformatierte Speicheriterator nur den gültigen Ausdruck \* *ii* = *t* benötigt, und dieser sagt nichts über den **operator** oder `operator=` selbst aus. Diese Memberoperatoren geben beide **\*this** zurück.
+Die Anforderungen für eine `ForwardIterator` Zustand, der der unformatierten speicheriterator erfüllt werden muss, benötigen Sie nur den Ausdruck \* *Ii* = *t* gültig sein, und er sagt nichts über die **Operator** oder `operator=` selbst. Diese Memberoperatoren geben beide **\*this** zurück.
 
 Der Zuweisungsoperator erstellt zuerst das nächste Objekt in der Ausgabesequenz, mithilfe des gespeicherten Iteratorwerts, indem die Platzierung des neuer Ausdrucks **new** (( `void` \*) &\* **first**) **Typ**( `val`) bewertet wird.
 
@@ -258,13 +258,13 @@ Ein unformatierten Speicheriterator oder ein Verweis auf einen unformatierten Sp
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Operator versucht schließlich ein Objekt vom Typ **CharType** aus dem zugeordneten Eingabestream zu extrahieren und zu speichern. Der zweite Operator erstellt eine Kopie des Objekts, inkrementiert das Objekt und gibt dann die Kopie zurück.
+Der erste Operator versucht schließlich zum Extrahieren und speichern ein Objekt des Typs `CharType` aus dem zugeordneten Eingabestream. Der zweite Operator erstellt eine Kopie des Objekts, inkrementiert das Objekt und gibt dann die Kopie zurück.
 
 Der erste Preincrement-Operator erhöht das gespeicherte Ausgabeiteratorobjekt schrittweise, und gibt anschließend **\*this** zurück.
 
 Der zweite Postinkrement-Operator erstellt eine Kopie von **\*this**, erhöht das gespeicherte Ausgabeiteratorobjekt und gibt dann die Kopie zurück.
 
-Der Konstruktor speichert **first** als Ausgabeiteratorobjekt.
+Der Konstruktor speichert `first` wie die Ausgabe-Iterator-Objekt.
 
 ### <a name="example"></a>Beispiel
 
@@ -308,7 +308,7 @@ explicit raw_storage_iterator(ForwardIterator first);
 
 ### <a name="parameters"></a>Parameter
 
-`first` Die forward-Iterator, der Normalfall der `raw_storage_iterator` -Objekt erstellt wird.
+*erste* der forward-Iterator, der mit der `raw_storage_iterator` -Objekt erstellt wird.
 
 ### <a name="example"></a>Beispiel
 
