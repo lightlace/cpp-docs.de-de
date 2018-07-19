@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373217"
 ---
 # <a name="error-handling-and-notification"></a>Fehlerbehandlung und Benachrichtigung
 Weitere Informationen zu Fehlerbehandlung und Benachrichtigung, finden Sie unter [die Hilfsfunktion](understanding-the-helper-function.md).  

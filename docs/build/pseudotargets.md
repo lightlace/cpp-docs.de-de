@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368407"
 ---
 # <a name="pseudotargets"></a>Pseudoziele
 Ein Pseudoziel handelt es sich um eine Bezeichnung, die anstelle der Dateinamen in einer Abhängigkeitszeile verwendet. Es wird als eine Datei interpretiert, die nicht vorhanden, und daher ist veraltet. NMAKE wird davon ausgegangen, dass ein Pseudoziel Zeitstempel der letzten alle abhängigen Elemente ist. Wenn es keine abhängigen Elemente verfügt, wird davon ausgegangen, dass die aktuelle Uhrzeit. Wenn ein Pseudoziel als Ziel verwendet wird, werden die zugehörigen Befehle immer ausgeführt. Ein Pseudoziel als abhängige verwendet, muss auch als Ziel in einer anderen Abhängigkeit angezeigt werden. Allerdings muss diese Abhängigkeit kein Befehlsblock haben.  

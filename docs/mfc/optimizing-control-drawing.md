@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351293"
 ---
 # <a name="optimizing-control-drawing"></a>Optimieren der Steuerelementdarstellung
 Wenn ein Steuerelement angewiesen wird, einen Container bereitgestellte Gerätekontext gezeichnet, in der Regel wählt GDI-Objekte (z. B. Stifte, Pinseln und Schriftarten) in den Gerätekontext, führt seine Zeichenvorgänge und die vorherigen GDI-Objekte wiederhergestellt. Wenn der Container verfügt über mehrere Steuerelemente, die den gleichen Gerätekontext gezeichnet werden soll, und jedes Steuerelement auswählt, GDI-Objekte, die erforderlich ist, kann Zeit gespeichert werden, wenn die Steuerelemente nicht zuvor ausgewählten Objekte einzeln wiederherstellen. Nachdem alle Steuerelemente gezeichnet wurden, kann die ursprünglichen Objekte automatisch der Container wiederhergestellt werden.  

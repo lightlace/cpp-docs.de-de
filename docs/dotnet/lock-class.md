@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129696"
 ---
 # <a name="lock-class"></a>lock-Klasse
 Diese Klasse automatisiert die Sperre für den Zugriff auf ein Objekt von mehreren Threads synchronisieren.  Wenn erstellt er die Sperre erhält und, wenn es sich um Releases zerstört die Sperre.  

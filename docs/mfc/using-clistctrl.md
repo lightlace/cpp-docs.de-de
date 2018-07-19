@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382985"
 ---
 # <a name="using-clistctrl"></a>Verwenden von CListCtrl
 Verwenden Sie ein Listenfeld-Steuerelement, um eine Anordnung von Symbolen mit Bezeichnungen, wie in der Datei-Explorer oder spaltenweise Listen von Text mit oder ohne Symbole anzuzeigen. Eine Beschreibung der vier möglichen "Ansichten" (nicht zu verwechseln mit MFC-Ansichten) können Sie in einem Listensteuerelement haben – Symbolansicht, Ansicht mit kleinen Symbolen, Listenansicht und Berichtsansicht – finden Sie unter Ansichten in der [CListCtrl](../mfc/reference/clistctrl-class.md) -Klassenübersicht.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689375"
 ---
 # <a name="2727-copyin"></a>2.7.2.7 copyin
 Die **Copyin** Klausel bietet einen Mechanismus zum Zuweisen des gleichen Werts **Threadprivate** Variablen für jeden Thread im Team, die Ausführung des parallelen Bereichs. Für jede Variable, die im angegebenen eine **Copyin** -Klausel, die den Wert der Variablen in der master-Thread der vom Team kopiert werden, als wäre durch eine Zuweisung der Threads privaten Kopien am Anfang des parallelen Bereichs. Die Syntax der **Copyin** -Klausel ist wie folgt:  

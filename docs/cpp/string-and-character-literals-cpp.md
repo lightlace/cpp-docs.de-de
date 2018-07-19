@@ -1,5 +1,5 @@
 ---
-title: Zeichenfolgen- und Zeichenliterale (C++) | Microsoft Docs
+title: Zeichenfolgen- und Zeichenliterale (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cede3ee6efb063141fc9ba7db58c6ec1dbcae845
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942093"
 ---
 # <a name="string-and-character-literals--c"></a>Zeichenfolgen- und Zeichenliterale (C++)
 C++ unterstützt verschiedene Zeichenfolgen- und Zeichentypen und bietet Möglichkeiten Literalwerte dieser einzelnen Typen auszudrücken. In Ihrem Quellcode stellen Sie die Inhalte Ihrer Zeichen- und Zeichenfolgenliterale mit einem Zeichensatz dar. Universelle Zeichennamen und Escapezeichen ermöglichen es Ihnen, eine beliebige Zeichenfolge darzustellen, indem Sie nur den grundlegenden Quellzeichensatz verwenden. Ein unformatiertes Zeichenfolgenliteral ermöglicht es Ihnen, die Verwendung von Escapezeichen zu vermeiden, und kann verwendet werden, um alle Typen von Zeichenfolgenliteralen auszudrücken. Sie können auch std::string-Literale erstellen, ohne zusätzliche Erstellungs- oder Konvertierungsschritte ausführen zu müssen.  
@@ -78,14 +79,14 @@ int main()
 }  
 ```  
   
- Ein Zeichenfolgenliteral kann kein Präfix, auch kein `u8`-, `L`-, `u`- und  `U` -Präfix haben, um Codierung für schmale Zeichen (Einzelbyte oder Multibyte), UTF-8, breite Zeichen (UCS-2- oder UTF-16), UTF-16 bzw. UTF-32 zu kennzeichnen. Ein unformatiertes Zeichenfolgenliteral kann ein `R`-, `u8R`-, `LR`, `uR` - oder `UR` -Präfix für die jeweils in unformatierter Version vorliegende Entsprechung dieser Codierungen haben.  Um temporäre oder statische std::string-Werte zu erstellen, können Sie Zeichenfolgenliterale oder unformatierte Zeichenfolgenliterale mit einem `s` -Suffix verwenden. Weitere Informationen finden Sie im Abschnitt „Zeichenfolgenliterale“ weiter unten. Weitere Informationen zum einfachen quellzeichensatz festgelegt, Universelle Zeichennamen und Zeichen aus erweiterten Codepages in Ihrem Quellcode, finden Sie unter [Zeichensätze](../cpp/character-sets.md).  
+ Ein Zeichenfolgenliteral kann kein Präfix, auch kein `u8`-, `L`-, `u`- und  `U` -Präfix haben, um Codierung für schmale Zeichen (Einzelbyte oder Multibyte), UTF-8, breite Zeichen (UCS-2- oder UTF-16), UTF-16 bzw. UTF-32 zu kennzeichnen. Ein unformatiertes Zeichenfolgenliteral kann ein `R`-, `u8R`-, `LR`, `uR` - oder `UR` -Präfix für die jeweils in unformatierter Version vorliegende Entsprechung dieser Codierungen haben.  Um temporäre oder statische std::string-Werte zu erstellen, können Sie Zeichenfolgenliterale oder unformatierte Zeichenfolgenliterale mit einem `s` -Suffix verwenden. Weitere Informationen finden Sie im Abschnitt „Zeichenfolgenliterale“ weiter unten. Weitere Informationen zu den grundlegenden quellzeichensätzen, zu universellen Zeichennamen sowie mithilfe von Zeichen aus erweiterten Codepages in Ihrem Quellcode finden Sie [Zeichensätze](../cpp/character-sets.md).  
   
 ## <a name="character-literals"></a>Zeichenliterale  
  Ein *Zeichenfolgenliteral* besteht aus einem konstanten Zeichen. Es wird durch das Zeichen dargestellt, das von einfachen Anführungszeichen eingeschlossen ist. Es gibt fünf Arten von Zeichenliteralen:  
   
--   Gewöhnliche Zeichenliterale vom Typ `char`, z. B. `'a'`  
+-   Normale Zeichenliterale vom Typ **Char**, z. B. `'a'`  
   
--   UTF-8-Zeichenliterale vom Typ `char`, z. B. `u8'a'`  
+-   UTF-8-Zeichenliterale vom Typ **Char**, z. B. `u8'a'`  
   
 -   Breite Zeichenliterale vom Typ `wchar_t`, beispielsweise `L'a'`  
   
@@ -93,20 +94,20 @@ int main()
   
 -   UTF-32-Zeichenliterale vom Typ `char32_t`, z. B. `U'a'`  
   
- Das Zeichen für ein Zeichenliteral verwendet möglicherweise ein beliebiges Zeichen, mit Ausnahme der reservierten Zeichen umgekehrter Schrägstrich ("\\"), einfaches Anführungszeichen (') oder eine neue Zeile. Reservierte Zeichen können mit einer Escapesequenz angegeben werden. Zeichen können mit universellen Zeichennamen angegeben werden, solange der Typ groß genug ist, das Zeichen zu enthalten.  
+ Das Zeichen für ein Zeichenliteral verwendet möglicherweise eine beliebige Zeichen mit Ausnahme der reservierten Zeichen umgekehrter Schrägstrich ("\\"), einfaches Anführungszeichen (') oder neue Zeile. Reservierte Zeichen können mit einer Escapesequenz angegeben werden. Zeichen können mit universellen Zeichennamen angegeben werden, solange der Typ groß genug ist, das Zeichen zu enthalten.  
   
 ### <a name="encoding"></a>Codierung  
- Zeichenliterale werden unterschiedlich codiert basierend Präfix.  
+ Zeichenliterale werden unterschiedlich codiert basierte Präfix.  
   
--   Ein Zeichenliteral ohne Präfix ist ein normales Zeichen literal. Der Wert, der ein normales Zeichen literal Escapesequenz, die ein einzelnes Zeichen enthält, oder universellen Zeichennamen, der in die ausführungszeichengruppe dargestellt werden kann hat einen Wert, der den numerischen Wert für die die Codierung im ausführungszeichensatz gleich. Ist ein normales Zeichen literal, das mehr als ein Zeichen, Escape-Zeichenfolge oder universellen Zeichennamen enthält eine *Multicharacter literal*. Ein Mehrfachzeichen Literal oder ein normales Zeichen Literal, das im ausführungszeichensatz dargestellt werden kann, ist bedingt unterstütztes, hat der Typ "Int", und sein Wert ist die Implementierung definiertes.  
+-   Ein Zeichenliteral ohne Präfix ist ein normales Zeichen literal. Der Wert, der ein normales Zeichen literal Escapesequenz, die ein einzelnes Zeichen enthält, oder universellen Zeichennamen, der in der ausführungszeichensatz dargestellt werden kann, hat den Wert der numerische Wert, der die Codierung im ausführungszeichensatz. Ist ein normales Zeichen literal, das mehr als ein Zeichen, die Escape-Sequenz oder universellen Zeichennamen enthält eine *literal mit mehreren Zeichen*. Ein Literal mit mehreren Zeichen oder ein normales Zeichenfolgenliteral, das im ausführungszeichensatz dargestellt werden kann, ist bedingt unterstütztes, hat der Typ "int", und sein Wert ist implementierungsdefiniert.  
   
--   Ein Zeichen Literal, das mit dem Präfix L beginnt handelt es sich um eine Breitzeichen-Literal. Der Wert eine Breitzeichen-Literal enthält ein einzelnes Zeichen, die Escape-Zeichenfolge oder den universellen Zeichennamen hat einen Wert gleich dem numerischen Wert von der Codierung in der Ausführung Breitzeichen festgelegt, es sei denn, der Zeichenliterale keine Darstellung der Breitzeichen für die Ausführung in diesem Fall der implementierungsdefinierte Wert festgelegt. Der Wert der Breitzeichen-Literal mit mehreren Zeichen, Escapesequenzen oder universelle Zeichennamen ist implementierungsdefiniert.  
+-   Ein Zeichenfolgenliteral, das mit dem Präfix L beginnt, ist eine Breitzeichen-Literal. Der Wert ein Breitzeichen-Literal enthält ein einzelnes Zeichen, die die Escape-Sequenz oder den universellen Zeichennamen hat den Wert der numerische Wert, der die Codierung in der Ausführung Breitzeichen festgelegt, wenn das Zeichenfolgenliteral verfügt über keine Entsprechung für die in der Breitzeichen für die Ausführung in diesem Fall der implementierungsdefinierte Wert festgelegt. Der Wert der Breitzeichen-Literal mit mehreren Zeichen, Escapesequenzen oder universelle Zeichennamen ist implementierungsdefiniert.  
   
--   Ein Zeichen Literal, das beginnt mit dem Präfix u8 ist ein Zeichenliteral UTF-8. Der Wert eines UTF-8 Zeichenliterals Escapesequenz, die ein einzelnes Zeichen enthält, oder universellen Zeichennamen verfügt über einen Wert, der seine ISO 10646-Codepunktwert gleich, wenn sie über eine einzelne UTF-8-Codeeinheit (Dies entspricht der C0-Steuerelemente und lateinischen dargestellt werden können Unicode-Block). Wenn der Wert durch eine einzelne UTF-8-Codeeinheit dargestellt werden kann, ist das Programm nicht ordnungsgemäß formatiert. Ein UTF-8 Zeichenliteral mit mehr als ein Zeichen, Escape-Zeichenfolge oder universellen Zeichennamen ist falsch formatiert.  
+-   Ein, die mit dem Präfix U8 versehenes Zeichenfolgenliteral ist ein Zeichenliteral UTF-8. Der Wert eines UTF-8 Zeichenliterals Escapesequenz, die ein einzelnes Zeichen enthält, oder universellen Zeichennamen hat den Wert der ISO 10646-Codepunktwert, wenn es über eine einzelne UTF-8-Codeeinheit (gemäß dem C0-Steuerelemente und grundlegenden lateinischen dargestellt werden können Unicode-Block). Wenn der Wert von einer einzelnen UTF-8-Codeeinheit dargestellt werden kann, ist das Programm nicht ordnungsgemäß formatiert. Ein UTF-8 Zeichenliteral mit mehr als ein Zeichen, die Escape-Sequenz oder universellen Zeichennamen ist falsch formatiert.  
   
--   Ein Zeichen Literal, das beginnt mit dem Präfix u ist ein Zeichenliteral UTF-16. Der Wert eines UTF-16-Zeichens, das literal Escapesequenz, die ein einzelnes Zeichen enthält, oder universellen Zeichennamen verfügt über einen Wert, der seine ISO 10646-Codepunktwert gleich, wenn sie über eine einzelne UTF-16-Codeeinheit (Dies entspricht der grundlegenden mehrsprachigen Ebene dargestellt werden können ). Wenn der Wert durch eine einzelne UTF-16-Codeeinheit dargestellt werden kann, ist das Programm nicht ordnungsgemäß formatiert. Ein literal mit mehr als ein Zeichen, Escape-Zeichenfolge oder universellen Zeichennamen UTF-16-Zeichen ist falsch formatiert.  
+-   Ein Zeichenfolgenliteral, das beginnt mit dem Präfix u ist ein literal UTF-16-Zeichen. Der Wert eines UTF-16-Zeichens, das literal Escapesequenz, die ein einzelnes Zeichen enthält, oder universellen Zeichennamen hat den Wert der ISO 10646-Codepunktwert, wenn es über eine einzelne UTF-16-Codeeinheit (entsprechend der grundlegenden mehrsprachigen Ebene dargestellt werden können ). Wenn der Wert von einer einzelnen UTF-16-Codeeinheit dargestellt werden kann, ist das Programm nicht ordnungsgemäß formatiert. Ein UTF-16-Zeichen, das literal mit mehr als ein Zeichen, die Escape-Sequenz oder universellen Zeichennamen ist falsch formatiert.  
   
--   Ein Zeichen Literal, das beginnt mit dem Präfix U ist ein Zeichenliteral UTF-32. Der Wert eines UTF-32 Zeichenliterals Escapesequenz, die ein einzelnes Zeichen enthält, oder universellen Zeichennamen hat einen Wert, der seine ISO 10646-Codepunktwert gleich. Ein UTF-8 Zeichenliteral mit mehr als ein Zeichen, Escape-Zeichenfolge oder universellen Zeichennamen ist falsch formatiert.  
+-   Ein Zeichenfolgenliteral, das beginnt mit dem Präfix U ist ein Zeichenliteral UTF-32. Der Wert eines UTF-32 Zeichenliterals Escapesequenz, die ein einzelnes Zeichen enthält, oder universellen Zeichennamen hat den Wert der ISO 10646-Codepunktwert. Ein UTF-8 Zeichenliteral mit mehr als ein Zeichen, die Escape-Sequenz oder universellen Zeichennamen ist falsch formatiert.  
   
 ###  <a name="bkmk_Escape"></a> Escapesequenzen  
  Es gibt drei Arten von Escapesequenzen: einfache, oktale und hexadezimale. Escapesequenzen können folgendermaßen aussehen:  
@@ -121,7 +122,7 @@ int main()
 |Seitenvorschub|\f|Oktal|\ooo|  
 |Warnung (Glocke)|\a|Hexadezimal|\xhhh|  
   
- Der folgende Code zeigt einige Beispiele für Escapezeichen mit normalen Zeichenliterale. Die gleichen escapesequenzsyntax ist für die anderen Zeichen Literaltypen gültig.  
+ Der folgende Code zeigt einige Beispiele für Escapezeichen von Literalen für normales Zeichen. Die gleichen Escape-Sequenz-Syntax ist gültig für die anderen Zeichen Literaltypen.  
   
 ```cpp  
 #include <iostream>  
@@ -145,7 +146,7 @@ int main() {
   
  **Microsoft-spezifisch**  
   
- Um einen Wert aus der ein normales Zeichen literal (diejenigen ohne Präfix) zu erstellen, konvertiert der Compiler das Zeichen oder die Zeichenfolge zwischen einfachen Anführungszeichen in 8-Bit-Werte in eine 32-Bit-Ganzzahl. Mehrere Zeichen im Literal belegen entsprechende Bytes nach Bedarf vom höherwertigen zum niederwertigen Byte. Um einen `char` -Wert zu erstellen, nimmt der Compiler das niederwertige Byte. Um einen `wchar_t` - oder einen `char16_t` -Wert zu erstellen, nimmt der Compiler das niederwertige Wort. Der Compiler warnt, dass das Ergebnis abgeschnitten wird, wenn irgendwelche Bits über dem zugewiesenen Byte oder Word Bits festgelegt sind.  
+ Um einen Wert in ein normales Zeichen literal (die ohne Präfix) zu erstellen, konvertiert der Compiler das Zeichen oder die Zeichenfolge zwischen einfachen Anführungszeichen in 8-Bit-Werte in eine 32-Bit-Ganzzahl. Mehrere Zeichen im Literal belegen entsprechende Bytes nach Bedarf vom höherwertigen zum niederwertigen Byte. Zum Erstellen einer **Char** Wert ist, nimmt der Compiler das niederwertige Byte. Um einen `wchar_t` - oder einen `char16_t` -Wert zu erstellen, nimmt der Compiler das niederwertige Wort. Der Compiler warnt, dass das Ergebnis abgeschnitten wird, wenn irgendwelche Bits über dem zugewiesenen Byte oder Word Bits festgelegt sind.  
   
 ```cpp  
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'  
@@ -174,7 +175,7 @@ char c6 = '\x0050'; // 'P'
 char c7 = '\x0pqr'; // C4305, C4309, truncates to 'r'  
 ```  
   
- Enthält ein Breitzeichenliteral mit dem Präfix `L` mehr als ein Zeichen, wird der Wert des ersten Zeichens übernommen. Nachfolgende Zeichen werden im Gegensatz zu das Verhalten des entsprechenden normales Zeichen literal ignoriert.  
+ Enthält ein Breitzeichenliteral mit dem Präfix `L` mehr als ein Zeichen, wird der Wert des ersten Zeichens übernommen. Nachfolgende Zeichen werden ignoriert, im Gegensatz zu das Verhalten von das entsprechende gewöhnliche Zeichenliteral.  
   
 ```cpp  
 wchar_t w1 = L'\100';   // L'@'  
@@ -188,7 +189,7 @@ wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
   
  **Ende Microsoft-spezifisch**  
   
- Der umgekehrte Schrägstrich (\\) ist ein Zeilenfortsetzungszeichen, wenn er am Ende einer Zeile platziert wird. Wenn ein umgekehrter Schrägstrich als Zeichenliteral angezeigt werden soll, müssen Sie zwei umgekehrte Schrägstriche in einer Zeile (`\\`) eingeben. Weitere Informationen zum Zeilenfortsetzungszeichen finden Sie unter [Phases of Translation](../preprocessor/phases-of-translation.md).  
+ Der umgekehrte Schrägstrich (\\) ist ein Zeilenfortsetzungszeichen, wenn sie am Ende einer Zeile platziert wird. Wenn ein umgekehrter Schrägstrich als Zeichenliteral angezeigt werden soll, müssen Sie zwei umgekehrte Schrägstriche in einer Zeile (`\\`) eingeben. Weitere Informationen zum Zeilenfortsetzungszeichen finden Sie unter [Phases of Translation](../preprocessor/phases-of-translation.md).  
   
 ###  <a name="bkmk_UCN"></a> Universelle Zeichennamen  
  In Zeichenliteralen und systemeigenen (nicht unformatierten) Zeichenfolgenliteralen kann jedes Zeichen durch einen universellen Zeichennamen dargestellt werden.  Ein universeller Zeichennamen wird wie folgt gebildet: durch das Präfix \U, auf das ein achtstelliger Unicode-Codepunkt folgt, oder durch das Präfix \u, auf das ein vierstellige Unicode-Codepunkt folgt. Alle acht bzw. vier Ziffern müssen vorhanden sein, damit sich ein wohlgeformter universeller Zeichenname ergibt.  
@@ -211,7 +212,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
  Ein Zeichenfolgenliteral stellt eine Folge von Zeichen dar, die zusammen eine auf NULL endende Zeichenfolge bilden. Die Zeichen müssen zwischen doppelten Anführungszeichen eingeschlossen werden. Es gibt die folgenden Arten von Zeichenfolgenliteralen:  
   
 ### <a name="narrow-string-literals"></a>Schmale Zeichenfolgenliterale  
- Ein schmalzeichenfolgenliteral ist ein präfixloses, durch doppelte Anführungszeichen getrenntes, nullterminiertes-Array des Typs `const char[n]`, wobei n die Länge des Arrays in Bytes ist. Ein Schmalzeichenfolgenliteral kann jedes Grafikzeichen außer einem doppelten Anführungszeichen (`"`), umgekehrten Schrägstrichen (`\`) oder Zeilenumbruchzeichen enthalten. Ein Schmalzeichenfolgenliteral kann auch die oben aufgelisteten Escapesequenzen sowie universelle Zeichennamen enthalten, die in ein Byte passen.  
+ Ein schmales Zeichenfolgenliteral ist ein präfixloses, durch doppelte Anführungszeichen getrenntes, nullterminiertes-Array des Typs `const char[n]`, wobei n die Länge des Arrays in Bytes ist. Ein Schmalzeichenfolgenliteral kann jedes Grafikzeichen außer einem doppelten Anführungszeichen (`"`), umgekehrten Schrägstrichen (`\`) oder Zeilenumbruchzeichen enthalten. Ein Schmalzeichenfolgenliteral kann auch die oben aufgelisteten Escapesequenzen sowie universelle Zeichennamen enthalten, die in ein Byte passen.  
   
 ```cpp  
 const char *narrow = "abcd";  
@@ -222,7 +223,7 @@ const char *escaped = "yes\\no";
   
 #### <a name="utf-8-encoded-strings"></a>UTF-8 codierte Zeichenfolgen  
   
- Eine UTF-8-codierte Zeichenfolge ist ein mit dem Präfix u8, durch doppelte Anführungszeichen getrenntes, nullterminiertes-Array des Typs `const char[n]`, wobei n die Länge des codierten Arrays in Bytes ist. Ein mit dem Präfix u8 versehenes Zeichenfolgenliteral kann jedes Grafikzeichen außer einem doppelten Anführungszeichen (`"`), umgekehrten Schrägstrichen (`\`) oder Zeilenumbruchzeichen enthalten. Ein mit dem Präfix u8 versehenes Zeichenfolgenliteral kann auch die Escapesequenzen, die oben aufgelistet sind, sowie jeden universellen Zeichennamen enthalten.  
+ Eine UTF-8 codierte Zeichenfolge ist ein mit dem Präfix U8 versehenes, durch doppelte Anführungszeichen getrenntes, nullterminiertes-Array des Typs `const char[n]`, wobei n die Länge des codierten Arrays in Bytes ist. Ein mit dem Präfix u8 versehenes Zeichenfolgenliteral kann jedes Grafikzeichen außer einem doppelten Anführungszeichen (`"`), umgekehrten Schrägstrichen (`\`) oder Zeilenumbruchzeichen enthalten. Ein mit dem Präfix u8 versehenes Zeichenfolgenliteral kann auch die Escapesequenzen, die oben aufgelistet sind, sowie jeden universellen Zeichennamen enthalten.  
   
 ```cpp  
 const char* str1 = u8"Hello World";  
@@ -230,7 +231,7 @@ const char* str2 = u8"\U0001F607 is O:-)";
 ```  
   
 ### <a name="wide-string-literals"></a>Breite Zeichenfolgenliterale  
- Ein breites Zeichenfolgenliteral ist eine Null endendes Array einer Konstanten `wchar_t` , vorangestellt ist "`L`" und das jedes Schriftzeichen außer das doppelte Anführungszeichen ("), umgekehrter Schrägstrich (\\), oder die Zeilenendemarke enthält. Ein Breitzeichenfolgenliteral kann die Escapesequenzen, die oben aufgelistet sind, sowie jeden universellen Zeichennamen enthalten.  
+ Ein breites Zeichenfolgenliteral ist ein Null-terminierte Array eines Konstanten `wchar_t` , die über das Präfix "`L`" und das jedes Schriftzeichen außer das doppelte Anführungszeichen ("), umgekehrter Schrägstrich (\\), oder die Zeilenendemarke enthält. Ein Breitzeichenfolgenliteral kann die Escapesequenzen, die oben aufgelistet sind, sowie jeden universellen Zeichennamen enthalten.  
   
 ```cpp  
 const wchar_t* wide = L"zyxw";  
@@ -247,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>Unformatierte Zeichenfolgenliterale (C++11)  
- Ein unformatiertes Zeichenfolgenliteral ist ein mit Null endendes Array – eines beliebigen Typs Zeichen –, das jedes Schriftzeichen, einschließlich der Anführungszeichen ("), umgekehrter Schrägstrich enthält (\\), oder die Zeilenendemarke enthält. Unformatierte Zeichenfolgenliterale werden häufig in regulären Ausdrücken, die Zeichenklassen verwenden, und in HTML-Zeichenfolgen und XML-Zeichenfolgen verwendet. Beispiele finden Sie im folgenden Artikel: [Bjarne Stroustrups FAQ zu C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
+ Ein unformatiertes Zeichenfolgenliteral ist ein mit Null endendes Array – eines beliebigen Zeichentyps –, das jedes Schriftzeichen, einschließlich der doppelte Anführungszeichen ("), umgekehrtem Schrägstrich enthält (\\), oder die Zeilenendemarke enthält. Unformatierte Zeichenfolgenliterale werden häufig in regulären Ausdrücken, die Zeichenklassen verwenden, und in HTML-Zeichenfolgen und XML-Zeichenfolgen verwendet. Beispiele finden Sie im folgenden Artikel: [Bjarne Stroustrups FAQ zu C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
   
 ```cpp  
 // represents the string: An unescaped \ character  
@@ -302,14 +303,14 @@ u32string str6{ UR"(She said "hello.")"s };
  Std:: Zeichenfolgenliterale sind im Namespace definierten `std::literals::string_literals` in die \<Zeichenfolge >-Headerdatei. Da `std::literals::string_literals`und `std::literals` beide als [inlinenamespaces](../cpp/namespaces-cpp.md)deklariert werden, wird `std::literals::string_literals` automatisch so behandelt, als ob sie direkt zum Namespace `std`gehören.  
   
 ### <a name="size-of-string-literals"></a>Größe von Zeichenfolgenliteralen  
- Für ANSI Char\* Zeichenfolgen und andere Einzelbyte-Codierungen (nicht UTF-8), die Größe (in Byte) eines Zeichenfolgenliterals ist die Anzahl der Zeichen plus 1 für das abschließende Nullzeichen. Für alle anderen Zeichenfolgentypen ist die Größe nicht streng mit der Anzahl der Zeichen verknüpft. UTF-8 verwendet bis zu vier char-Elemente zum Codieren von einigen *Codeeinheiten*und char16_t oder wchar_t, codiert als UTF-16, kann zwei Elemente (für insgesamt vier Bytes) verwenden, um eine einzelne *Codeeinheit*zu codieren.   In diesem Beispiel wird die Größe eines Breitzeichenfolgenliterals in Bytes gezeigt:  
+ Für ANSI Char\* Zeichenfolgen und andere Einzelbyte-Codierungen (nicht UTF-8), die Größe (in Bytes) eines Zeichenfolgenliterals ist die Anzahl der Zeichen plus 1 für das abschließende Nullzeichen. Für alle anderen Zeichenfolgentypen ist die Größe nicht streng mit der Anzahl der Zeichen verknüpft. UTF-8 verwendet bis zu vier char-Elemente zum Codieren von einigen *Codeeinheiten*und char16_t oder wchar_t, codiert als UTF-16, kann zwei Elemente (für insgesamt vier Bytes) verwenden, um eine einzelne *Codeeinheit*zu codieren.   In diesem Beispiel wird die Größe eines Breitzeichenfolgenliterals in Bytes gezeigt:  
   
 ```cpp  
 const wchar_t* str = L"Hello!";  
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- Beachten Sie, dass `strlen()` und `wcslen()` enthalten nicht die Größe des abschließenden Null-Zeichen, dessen Größe gleich der Elementgröße vom Zeichenfolgentyp ist: ein Byte für eine Zeichenfolge Char *, zwei Bytes für Wchar_t\* oder char16_t\* Zeichenfolgen und vier Bytes auf char32_t\* Zeichenfolgen.  
+ Beachten Sie, dass `strlen()` und `wcslen()` enthalten nicht die Größe des beendenden Null-Zeichens, dessen Größe gleich der Elementgröße vom Zeichenfolgentyp ist: ein Byte für eine Zeichenfolge Char *, zwei Bytes für Wchar_t\* oder char16_t\* Zeichenfolgen und vier Bytes auf char32_t\* Zeichenfolgen.  
   
  Die maximale Länge eines Zeichenfolgenliterals beträgt 65535 Bytes. Diese Begrenzung gilt sowohl für schmale Zeichenfolgenliterale als auch für breite Zeichenfolgenliterale.  
   
@@ -318,14 +319,14 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
   
  **Microsoft-spezifisch**  
   
- In Visual C++ können Sie ein Zeichenfolgenliteral verwenden, um einen Zeiger auf ein nicht konstantes `char` oder `wchar_t`zu initialisieren. Dies ist in C99-Code zulässig, in C++98 jedoch veraltet und wurde in C++11 entfernt. Ein Versuch, die Zeichenfolge zu ändern, verursacht eine Zugriffsverletzung, wie in diesem Beispiel:  
+ In Visual C++ können Sie ein Zeichenfolgenliteral verwenden, um einen Zeiger auf ein nicht konstantes initialisieren **Char** oder `wchar_t`. Dies ist in C99-Code zulässig, in C++98 jedoch veraltet und wurde in C++11 entfernt. Ein Versuch, die Zeichenfolge zu ändern, verursacht eine Zugriffsverletzung, wie in diesem Beispiel:  
   
 ```cpp  
 wchar_t* str = L"hello";  
 str[2] = L'a'; // run-time error: access violation  
 ```  
   
- Sie können dazu führen, dass den Compiler einen Fehler auszugeben, wenn ein Zeichenfolgenliteral in einen Non_const-Zeichenzeiger, beim Festlegen konvertiert wird der [/Zc: strictstrings (Zeichenfolgenliteral-typkonvertierung deaktivieren)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) -Compileroption. Dies empfiehlt sich für mit den Standards kompatiblen portablen Code. Es ist außerdem empfehlenswert, Zeiger, die mithilfe von Zeichenfolgenliteralen initialisiert werden, mit dem `auto` -Schlüsselwort zu deklarieren, da es in den richtigen (const) Typ auflöst. In diesem Codebeispiel wird ein Versuch abgefangen, zur Kompilierungszeit in ein Zeichenfolgenliteral zu schreiben:  
+ Sie können dazu führen, dass den Compiler einen Fehler auszugegeben, wenn ein Zeichenfolgenliteral in einen Non_const-Zeichenzeiger, beim Festlegen konvertiert wird der [/Zc: strictstrings (Zeichenfolgenliteral-typkonvertierung deaktivieren)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) -Compileroption. Dies empfiehlt sich für mit den Standards kompatiblen portablen Code. Es ist auch empfiehlt sich, verwenden Sie die **automatisch** Schlüsselwort String Literals initialisiert Zeiger deklariert werden, da es in den richtigen (const) Typ auflöst. In diesem Codebeispiel wird ein Versuch abgefangen, zur Kompilierungszeit in ein Zeichenfolgenliteral zu schreiben:  
   
 ```cpp  
 auto str = L"hello";  
@@ -379,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>Zeichenfolgenliterale mit universellen Zeichennamen  
- In systemeigenen (nicht unformatierten) Zeichenfolgenliteralen können universelle Zeichennamen verwendet werden, um jedes beliebige Zeichen darzustellen, solange der jeweilige universelle Zeichenname als ein oder mehrere Zeichen im string-Datentyp codiert werden kann.  Beispielsweise kann ein universeller Zeichenname, der ein erweitertes Zeichen darstellt, nicht in einer schmalen Zeichenfolge über die ANSI-Codepage codiert werden, er kann aber in schmalen Zeichenfolgen in einigen Multibyte-Codepages oder in UTF-8-Zeichenfolgen oder in einer breiten Zeichenfolge codiert werden. In C ++ 11-Unicode-Unterstützung wird erweitert, durch die char16_t * und char32_t\* Zeichenfolgentypen:  
+ In systemeigenen (nicht unformatierten) Zeichenfolgenliteralen können universelle Zeichennamen verwendet werden, um jedes beliebige Zeichen darzustellen, solange der jeweilige universelle Zeichenname als ein oder mehrere Zeichen im string-Datentyp codiert werden kann.  Beispielsweise kann ein universeller Zeichenname, der ein erweitertes Zeichen darstellt, nicht in einer schmalen Zeichenfolge über die ANSI-Codepage codiert werden, er kann aber in schmalen Zeichenfolgen in einigen Multibyte-Codepages oder in UTF-8-Zeichenfolgen oder in einer breiten Zeichenfolge codiert werden. In C ++ 11-Unicode-Unterstützung wird durch die char16_t * und char32_t erweitert\* Zeichenfolgentypen:  
   
 ```cpp  
 // ASCII smiling face  

@@ -1,5 +1,5 @@
 ---
-title: __event | Microsoft Docs
+title: __event | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 921ab0d8a18e8bb50f7ca5ea02002aa16244abcd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943555"
 ---
 # <a name="event"></a>__event
 Deklariert ein Ereignis.  
@@ -31,15 +32,13 @@ Deklariert ein Ereignis.
   
 ```  
   
-      __event   
-      method-declarator  
-      ;  
+__event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Das Schlüsselwort `__event` kann auf eine Methodendeklaration, eine Schnittstellendeklaration oder eine Datenmemberdeklaration angewendet werden. Sie können jedoch das `__event`-Schlüsselwort nicht verwenden, um einen Member einer geschachtelten Klasse zu qualifizieren.  
+ Das Schlüsselwort **__event** kann auf eine Methodendeklaration, eine Schnittstellendeklaration oder eine datenmemberdeklaration angewendet werden. Allerdings können keine der **__event** Schlüsselwort, um einen Member einer geschachtelten Klasse zu qualifizieren.  
   
  Je nachdem, ob Ereignisquelle und Empfänger systemeigenes C++, COM oder verwaltet (.NET Framework) sind, können Sie die folgenden Konstrukte als Ereignisse verwenden:  
   
@@ -49,17 +48,17 @@ __event member-declarator;
 |—|interface|—|  
 |—|—|Datenmember|  
   
- Verwendung [__hook](../cpp/hook.md) in einem Ereignisempfänger, um eine Handlermethode einer Ereignismethode zuzuordnen. Beachten Sie, dass nach dem Erstellen eines Ereignisses mit dem `__event`-Schlüsselwort alle Ereignishandler, die nacheinander in dieses Ereignis eingebunden werden, bei Aufruf des Ereignisses aufgerufen werden.  
+ Verwendung [__hook](../cpp/hook.md) in einem Ereignisempfänger, um eine Handlermethode einer Ereignismethode zuzuordnen. Beachten Sie, dass nach der Erstellung eines Ereignisses mit der **__event** -Schlüsselwort alle Ereignishandler, die anschließend zu diesem Ereignis verknüpft werden aufgerufen, wenn das Ereignis aufgerufen wird.  
   
- Eine `__event`-Methodendeklaration kann keine Definition enthalten. Eine Definition wird implizit generiert, sodass die Ereignismethode aufgerufen werden kann, als wenn sie eine normale Methode wäre.  
+ Ein **__event** Methodendeklaration kann keine Definition aufweisen. eine Definition wird implizit generiert, sodass die Ereignismethode aufgerufen werden kann, als handele es sich um eine normale Methode.  
   
 > [!NOTE]
 >  Eine von einer Vorlage gebildete Klasse oder Struktur kann keine Ereignisse enthalten.  
   
 ## <a name="native-events"></a>Systemeigene Ereignisse  
- Systemeigene Ereignisse sind Methoden. Der Rückgabetyp ist normalerweise `HRESULT` oder `void`, kann jedoch ein beliebiger ganzzahliger Typ sein, einschließlich `enum`. Wenn ein Ereignis einen ganzzahligen Rückgabetyp verwendet, ist für den Fall, dass ein Ereignishandler einen Wert ungleich 0 (null) zurückgibt, eine Fehlerbedingung definiert. In diesem Fall werden durch das ausgelöste Ereignis die anderen Delegaten aufgerufen.  
+ Systemeigene Ereignisse sind Methoden. Der Rückgabetyp ist in der Regel HRESULT oder **"void"**, jedoch können beliebiger ganzzahliger Typ sein, einschließlich einer **Enum**. Wenn ein Ereignis einen ganzzahligen Rückgabetyp verwendet, ist für den Fall, dass ein Ereignishandler einen Wert ungleich 0 (null) zurückgibt, eine Fehlerbedingung definiert. In diesem Fall werden durch das ausgelöste Ereignis die anderen Delegaten aufgerufen.  
   
-```  
+```cpp 
 // Examples of native C++ events:  
 __event void OnDblClick();  
 __event HRESULT OnClick(int* b, char* s);  
@@ -68,13 +67,13 @@ __event HRESULT OnClick(int* b, char* s);
  Finden Sie unter [Ereignisbehandlung in systemeigenem C++](../cpp/event-handling-in-native-cpp.md) Beispielcode.  
   
 ## <a name="com-events"></a>COM-Ereignisse  
- COM-Ereignisse sind Schnittstellen. Die Parameter einer Methode in eine Quellschnittstelle des Ereignisses muss **in** Parameter (Dies wird jedoch nicht streng erzwungen), da ein **out** Parameter ist nicht sinnvoll, beim Multicasting. Eine Warnung der Stufe 1 wird ausgegeben, wenn Sie verwenden ein **out** Parameter.  
+ COM-Ereignisse sind Schnittstellen. Die Parameter einer Methode in einer Quellschnittstelle des Ereignisses muss `in` Parameter (Dies wird jedoch nicht streng erzwungen), da ein `out` Parameter ist nicht hilfreich, wenn Sie Multicasting. Eine Warnung der Stufe 1 wird ausgegeben, wenn Sie verwenden eine `out` Parameter.  
   
- Der Rückgabetyp ist normalerweise `HRESULT` oder `void`, kann jedoch ein beliebiger ganzzahliger Typ sein, einschließlich `enum`. Wenn ein Ereignis einen ganzzahligen Rückgabetyp verwendet und ein Ereignishandler einen Wert ungleich 0 (null) zurückgibt, handelt es sich um eine Fehlerbedingung. In diesem Fall werden durch das ausgelöste Ereignis Aufrufe anderer Delegaten abgebrochen. Beachten Sie, dass der Compiler eine Quellschnittstelle des Ereignisses als automatisch markiert ein [Quelle](../windows/source-cpp.md) in der generierten IDL-Datei.  
+ Der Rückgabetyp ist in der Regel HRESULT oder **"void"**, jedoch können beliebiger ganzzahliger Typ sein, einschließlich **Enum**. Wenn ein Ereignis einen ganzzahligen Rückgabetyp verwendet und ein Ereignishandler einen Wert ungleich 0 (null) zurückgibt, handelt es sich um eine Fehlerbedingung. In diesem Fall werden durch das ausgelöste Ereignis Aufrufe anderer Delegaten abgebrochen. Beachten Sie, dass der Compiler eine Quellschnittstelle des Ereignisses als automatisch markiert einen [Quelle](../windows/source-cpp.md) in der generierten IDL-Datei.  
   
- Die [__interface](../cpp/interface.md) -Schlüsselwort ist immer erforderlich, nach dem `__event` für eine COM-Ereignisquelle.  
+ Die [__interface](../cpp/interface.md) -Schlüsselwort ist immer erforderlich ist, nach dem **__event** für eine COM-Ereignisquelle.  
   
-```  
+```cpp 
 // Example of a COM event:  
 __event __interface IEvent1;  
 ```  
@@ -82,13 +81,13 @@ __event __interface IEvent1;
  Finden Sie unter [Ereignisbehandlung in COM](../cpp/event-handling-in-com.md) Beispielcode.  
   
 ## <a name="managed-events"></a>Verwaltete Ereignisse  
- Informationen zum Programmieren der Ereignisse in der neuen Syntax, finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md).  
+ Weitere Informationen über die Codierung von Ereignissen in der neuen Syntax finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md).  
   
- Verwaltete Ereignisse sind Datenmember oder Methoden. Bei Verwendung mit einem Ereignis muss der Rückgabetyp eines Delegaten kompatibel mit werden die [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Der Rückgabetyp des Ereignishandlers muss dem Rückgabetyp des Delegaten entsprechen. Weitere Informationen zu Delegaten finden Sie unter [Delegaten und Ereignisse](../dotnet/delegates-and-events.md). Wenn ein verwaltetes Ereignis ein Datenmember ist, muss ihr Typ ein Zeiger auf einen Delegaten sein.  
+ Verwaltete Ereignisse sind Datenmember oder Methoden. Wenn mit einem Ereignis verwendet wird, muss der Rückgabetyp eines Delegaten kompatibel mit werden die [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Der Rückgabetyp des Ereignishandlers muss dem Rückgabetyp des Delegaten entsprechen. Weitere Informationen zu Delegaten finden Sie unter [Delegaten und Ereignissen](../dotnet/delegates-and-events.md). Wenn ein verwaltetes Ereignis ein Datenmember ist, muss ihr Typ ein Zeiger auf einen Delegaten sein.  
   
  In .NET Framework können Sie einen Datenmember behandeln, als wäre er eine Methode selbst (d. h. die `Invoke`-Methode des entsprechenden Delegaten). Sie müssen den Delegattyp vordefinieren, um einen verwalteten Ereignisdatenmember zu deklarieren. Im Gegensatz dazu definiert eine verwaltete Ereignismethode implizit den entsprechenden verwalteten Delegaten, sofern er noch nicht definiert ist. Sie können beispielsweise einen Ereigniswert wie `OnClick` als Ereignis wie folgt angeben:  
   
-```  
+```cpp 
 // Examples of managed events:  
 __event ClickEventHandler* OnClick;  // data member as event  
 __event void OnClick(String* s);  // method as event  
@@ -98,7 +97,7 @@ __event void OnClick(String* s);  // method as event
   
 ## <a name="example-native-events"></a>Beispiel: Systemeigene Ereignisse  
   
-```  
+```cpp 
 // EventHandling_Native_Event.cpp  
 // compile with: /c  
 [event_source(native)]  
@@ -110,7 +109,7 @@ public:
   
 ## <a name="example-com-events"></a>Beispiel: COM-Ereignisse  
   
-```  
+```cpp 
 // EventHandling_COM_Event.cpp  
 // compile with: /c  
 #define _ATL_ATTRIBUTES 1  
@@ -136,7 +135,7 @@ public:
   
 ## <a name="see-also"></a>Siehe auch  
  [Stichwörter](../cpp/keywords-cpp.md)   
- [Ereignisbehandlung](../cpp/event-handling.md)   
+ [Behandlung von Ereignissen](../cpp/event-handling.md)   
  [event_source](../windows/event-source.md)   
  [event_receiver](../windows/event-receiver.md)   
  [__hook](../cpp/hook.md)   

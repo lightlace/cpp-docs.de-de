@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Attach | Microsoft Docs
+title: _variant_t::Attach | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,32 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93c4ec0b4d25f1ca0ec03d9aae1dd9e1c16b79a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42c275d085434cc8077a0629429c7c0e1cbbfcc3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943791"
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
 **Microsoft-spezifisch**  
   
- Fügt eine **VARIANT** -Objekt in der `_variant_t` Objekt.  
+ Fügt eine `VARIANT` -Objekt in der `_variant_t` Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
   
-      void Attach(  
-   VARIANT& varSrc   
-);  
+void Attach(VARIANT& varSrc);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
  *varSrc*  
- Ein **VARIANT** Objekt an diese angefügt werden `_variant_t` Objekt.  
+ Ein `VARIANT` Objekt, das an diese angefügt werden `_variant_t` Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Übernimmt den Besitz der **VARIANT** durch Kapselung. Diese Memberfunktion gibt jedes vorhandene gekapselte **VARIANT**, kopiert dann das angegebene **VARIANT**, und legt seine **VARTYPE** zu `VT_EMPTY` um sicherzustellen, seine Ressourcen können nur freigegeben werden, indem die `_variant_t` Destruktor.  
+ Übernimmt den Besitz der `VARIANT` durch Kapselung. Diese Memberfunktion gibt jedes vorhandene gekapselte `VARIANT`, kopiert dann das angegebene `VARIANT`, und legt seine `VARTYPE` auf VT_EMPTY, um sicherzustellen, die Ressourcen nur freigegeben werden können, indem die `_variant_t` Destruktor.  
   
  **Ende Microsoft-spezifisch**  
   

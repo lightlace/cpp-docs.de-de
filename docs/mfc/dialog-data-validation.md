@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344879"
 ---
 # <a name="dialog-data-validation"></a>Validieren von Dialogfelddaten
 Sie können Überprüfung zusätzlich zu den Datenaustausch durch Aufrufen von DDV-Funktionen angeben, wie im Beispiel gezeigt [Dialogdatenaustausch](../mfc/dialog-data-exchange.md). Die `DDV_MaxChars` Aufruf im Beispiel wird überprüft, dass die in das Textfeld Steuerelement eingegebene Zeichenfolge nicht mehr als 20 Zeichen ist. DDV-Funktion Warnungen in der Regel den Benutzer ein Meldungsfeld an, wenn die Überprüfung schlägt fehl, und legt den Fokus auf dem betreffenden-Steuerelement, damit der Benutzer die Daten erneut eingeben kann. Eine DDV-Funktion für ein bestimmtes Steuerelement muss unmittelbar nach der DDX-Funktion für dasselbe Steuerelement aufgerufen werden.  

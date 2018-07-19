@@ -1,5 +1,5 @@
 ---
-title: CDefaultCompareTraits Klasse | Microsoft Docs
+title: CDefaultCompareTraits-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5b06bf475c60c0190fc6ab78f4357e1b247f1d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ed197cc1f18821b65c249ee15a7e75f54fc7a32
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884765"
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits-Klasse
-Diese Klasse stellt Vergleichsfunktionen Element.  
+Diese Klasse stellt die standardmäßige Element Vergleichsfunktionen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +37,7 @@ class CDefaultCompareTraits
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
+ *T*  
  Der Typ der Daten in der Auflistung gespeichert werden.  
   
 ## <a name="members"></a>Member  
@@ -45,11 +46,11 @@ class CDefaultCompareTraits
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CDefaultCompareTraits::CompareElements](#compareelements)|(Statisch) Mit dieser Funktion wird zum Vergleichen von zwei Elementen auf Gleichheit.|  
-|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Statisch) Rufen Sie diese Funktion, um das Element größere und kleinere zu bestimmen.|  
+|[CDefaultCompareTraits::CompareElements](#compareelements)|(Statisch) Mit dieser Funktion können Sie zwei Elementen auf Gleichheit verglichen werden soll.|  
+|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Statisch) Rufen Sie diese Funktion, um das Element größer und kleiner zu bestimmen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse enthält zwei statische Funktionen zum Vergleichen von Elementen in einem Auflistungsobjekt-Klasse gespeichert. Diese Klasse wird verwendet, durch die [CDefaultElementTraits Klasse](../../atl/reference/cdefaultelementtraits-class.md).  
+ Diese Klasse enthält zwei statische Funktionen zum Vergleichen von Elementen in einem Auflistungsobjekt-Klasse gespeichert. Diese Klasse wird verwendet, durch die [CDefaultElementTraits-Klasse](../../atl/reference/cdefaultelementtraits-class.md).  
   
  Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
@@ -57,50 +58,50 @@ class CDefaultCompareTraits
  **Header:** atlcoll.h  
   
 ##  <a name="compareelements"></a>  CDefaultCompareTraits::CompareElements  
- Mit dieser Funktion wird zum Vergleichen von zwei Elementen auf Gleichheit.  
+ Mit dieser Funktion können Sie zwei Elementen auf Gleichheit verglichen werden soll.  
   
 ```
 static bool CompareElements(const T& element1, const T& element2);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `element1`  
+ *Element1*  
  Das erste Element.  
   
- `element2`  
+ *Element2*  
  Das zweite Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" zurück, wenn die Elemente gleich "false", andernfalls sind.  
   
 ### <a name="remarks"></a>Hinweise  
- Die standardmäßige Implementierung dieser Funktion wird auf Gleichheit ( `==`) Operator. Diese Funktion müssen möglicherweise für andere Objekte als einfache Datentypen außer Kraft gesetzt werden.  
+ Die Standardimplementierung dieser Funktion wird die Gleichheit (**==**) Operator. Diese Funktion müssen möglicherweise für Objekte, ausgenommen einfachen Datentypen außer Kraft gesetzt werden.  
   
 ##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered  
- Rufen Sie diese Funktion, um das Element größere und kleinere zu bestimmen.  
+ Rufen Sie diese Funktion, um das Element größer und kleiner zu bestimmen.  
   
 ```
 static int CompareElementsOrdered(const T& element1, const T& element2);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `element1`  
+ *Element1*  
  Das erste Element.  
   
- `element2`  
+ *Element2*  
  Das zweite Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt eine ganze Zahl, die auf Grundlage der folgenden Tabelle:  
+ Gibt eine ganze Zahl, die anhand der folgenden Tabelle:  
   
 |Bedingung|Rückgabewert|  
 |---------------|------------------|  
-|`element1` < `element2`|<0|  
-|`element1` == `element2`|0|  
-|`element1` > `element2`|>0|  
+|*Element1* < *element2*|<0|  
+|*Element1* == *element2*|0|  
+|*Element1* > *element2*|>0|  
   
 ### <a name="remarks"></a>Hinweise  
- Die Standardimplementierung dieser Funktion verwendet die `==`, **\<**, und **>** Operatoren. Diese Funktion müssen möglicherweise für andere Objekte als einfache Datentypen außer Kraft gesetzt werden.  
+ Die Standardimplementierung dieser Funktion verwendet die **==**, **\<**, und **>** Operatoren. Diese Funktion müssen möglicherweise für Objekte, ausgenommen einfachen Datentypen außer Kraft gesetzt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

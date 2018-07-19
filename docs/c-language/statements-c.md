@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387777"
 ---
 # <a name="statements-c"></a>Anweisungen (C)
 Die Anweisungen des C-Programms steuern den Ablauf der Programmausführung. In C, wie in anderen Programmiersprachen, stehen mehrere Anweisungen zur Verfügung, um Schleifen auszuführen, andere Anweisungen, die ausgeführt werden sollen, auszuwählen und die Steuerung zu übertragen. Nach einer kurzen [Übersicht über die Syntax von Anweisungen](../c-language/overview-of-c-statements.md) beschreibt dieser Abschnitt die C-Anweisungen in alphabetischer Reihenfolge:  

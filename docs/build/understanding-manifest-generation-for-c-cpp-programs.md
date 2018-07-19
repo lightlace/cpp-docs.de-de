@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381627"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Manifestgenerierung für C/C++-Programme
 Ein [manifest](http://msdn.microsoft.com/library/aa375365) ist ein XML-Dokument, das eine externe XML-Datei oder eine Ressource sein kann, die in einer Anwendung oder Assembly eingebettet. Das Manifest einer [isolierte Anwendung](http://msdn.microsoft.com/library/aa375190) dient zum Verwalten der Namen und Versionen freigegebener Seite-an-Seite-Assemblys, die an die die Anwendung zur Laufzeit gebunden werden soll. Das Manifest einer Seite-an-Seite-Assembly gibt seine Abhängigkeiten auf den Namen, Versionen, Ressourcen und andere Assemblys an.  

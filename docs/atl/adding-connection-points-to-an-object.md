@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356591"
 ---
 # <a name="adding-connection-points-to-an-object"></a>Hinzufügen von Verbindungspunkten zu einem Objekt
 Die [ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md) veranschaulicht, wie ein Steuerelement mit Unterstützung für Verbindungspunkte erstellt, zum Hinzufügen von Ereignissen und klicken Sie dann zum Verbindungspunkt zu implementieren. ATL implementiert Verbindungspunkte mit der [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) Klasse.  

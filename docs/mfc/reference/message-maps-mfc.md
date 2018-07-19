@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371711"
 ---
 # <a name="message-maps-mfc"></a>Meldungszuordnungen (MFC)
 In diesem Abschnitt des Verweises Listet alle [Nachricht Zuordnungsmakros](../../mfc/reference/message-map-macros-mfc.md) und alle [CWnd](../../mfc/reference/cwnd-class.md) Meldungszuordnungseinträge zusammen mit den entsprechenden memberfunktionsprototypen:  

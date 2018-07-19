@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880687"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (Komponentenerweiterungen für C++)
 Die `nullptr` Schlüsselwort stellt einen *null-Zeigerwert*. Verwenden Sie einen null-Zeiger-Wert, um anzugeben, dass ein Objekthandle, innerer Zeiger oder ein systemeigener Zeiger nicht auf ein Objekt verweist.  

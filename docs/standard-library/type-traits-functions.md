@@ -26,11 +26,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: ff6d6066d90fe5049b89586ce657e62860c12f9f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3754af9a32ab1beeb4f3b9a783547bd081d57a46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955830"
 ---
 # <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt;-Funktionen
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="is_assignable"></a> is_assignable
 
-Testet, ob ein Wert des `From`-Typs einem `To`-Typ zugewiesen werden kann.
+Testet, ob der Wert *aus* Typ zugewiesen werden kann, um eine *zu* Typ.
 
 ```cpp
 template <class To, class From>
@@ -52,13 +53,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-In den Typ des Objekts, das die Zuweisung empfängt.
+*Aktion*  
+ Der Typ des Objekts, das die Zuweisung empfängt.
 
-Vom Typ des Objekts, das den Wert bereitstellt.
+*From*  
+ Der Typ des Objekts, das den Wert bereitstellt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der ausgewertete Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein. `From` und `To` müssen beide vollständige Typen sein, `void`, oder Arrays mit unbekannter Grenze.
+Der ausgewertete Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein. Beide *aus* und *zu* müssen vollständige Typen werden **"void"**, oder Arrays mit Unbekannter Grenze.
 
 ## <a name="is_copy_assignable"></a> is_copy_assignable
 
@@ -71,11 +74,12 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty*  
+ Der abzufragende Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn der `Ty`-Typ eine Klasse ist, die einen Kopierzuweisungsoperator aufweist; andernfalls „false“. Entsprechung zu is_assignable\<Ty&, const Ty&>.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist eine Klasse, die ein Kopierzuweisungsoperator verwendet, andernfalls er false enthält. Entspricht is_assignable\<Ty&, const Ty&>.
 
 ## <a name="is_copy_constructible"></a> is_copy_constructible
 
@@ -88,11 +92,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty*  
+ Der abzufragende Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn der `Ty`-Typ eine Klasse ist, die einen Kopierkonstruktor aufweist; andernfalls „false“.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist eine Klasse, die einen Kopierkonstruktor aufweist; andernfalls ist Sie false.
 
 ### <a name="example"></a>Beispiel
 
@@ -140,11 +145,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Der abzufragende Typ.
+*T*  
+ Der abzufragende Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn der Typ `T` ein Klassentyp ist, der einen trivialen Konstruktor aufweist; andernfalls „false“. Dies entspricht dem Prädikat `is_constructible<T>`. Typ `T` muss ein vollständiger Typ, `void`oder ein Array mit unbekannter Grenze sein.
+Eine Instanz des typprädikats ist true, wenn der Typ *T* ist ein Klassentyp, der einen standardmäßigen Konstruktor aufweist; andernfalls ist Sie false. Dies entspricht dem Prädikat `is_constructible<T>`. Typ *T* muss ein vollständiger Typ, **"void"**, oder ein Array mit Unbekannter Grenze.
 
 ### <a name="example"></a>Beispiel
 
@@ -192,7 +198,8 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Der abzufragende Typ.
+*T*  
+ Der abzufragende Typ.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -209,11 +216,12 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-T der Typ ausgewertet werden soll
+*T*  
+ Der auszuwertende Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein Typprädikat, das TRUE ausgewertet wird, wenn der Typ `T` mithilfe eines Verschiebevorgangs konstruiert werden kann. Dieses Prädikat entspricht `is_constructible<T, T&&>`.
+Ein typprädikat, der auf "true" den Typ ergibt *T* mithilfe eines Verschiebevorgangs konstruiert werden kann. Dieses Prädikat entspricht `is_constructible<T, T&&>`.
 
 ## <a name="is_nothrow_move_assignable"></a> is_nothrow_move_assignable
 
@@ -226,11 +234,12 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty*  
+ Der abzufragende Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn der `Ty`-Typ einen nothrow-Verschiebungszuweisungsoperator aufweist; andernfalls „false“.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* verfügt über einen Nothrow bewegungszuweisungsoperator, andernfalls er false enthält.
 
 ## <a name="is_trivially_copy_assignable"></a> is_trivially_copy_assignable
 
@@ -243,13 +252,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Der abzufragende Typ.
+*T*  
+ Der abzufragende Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist TRUE, wenn der `T`-Typ eine Klasse ist, die einen Kopierzuweisungsoperator aufweist; andernfalls FALSE.
+Eine Instanz des typprädikats ist true, wenn der Typ *T* ist eine Klasse, die einen trivialen Kopierzuweisungsoperator, andernfalls er false enthält.
 
-Ein Zuweisungskonstruktor für eine Klasse `T` ist trivial, wenn er implizit angegeben ist. Die Klasse `T` verfügt über keine virtuellen Funktionen und die Klasse `T` hat keine virtuellen Basen. Die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Zuweisungsoperatoren und die Klassen aller nicht statischen Datenmember vom Typarray der Klasse haben triviale Zuweisungsoperatoren.
+Ein Zuweisungskonstruktor für eine Klasse *T* ist trivial, wenn er implizit angegeben ist. die Klasse *T* verfügt über keine virtuellen Funktionen, die Klasse *T* hat keine virtuellen Basen, die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Zuweisungsoperatoren und die Klassen aller nicht statischen Datenmember vom Typarray der Klasse haben triviale Zuweisungsoperatoren.
 
 ## <a name="is_trivially_move_assignable"></a> is_trivially_move_assignable
 
@@ -262,19 +272,20 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty*  
+ Der abzufragende Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn der `Ty`-Typ eine Klasse ist, die einen Verschiebungszuweisungsoperator aufweist; andernfalls „false“.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist eine Klasse, die einen trivialen verschiebezuweisungsoperator, andernfalls er false enthält.
 
-Ein Verschiebungszuweisungsoperator für eine `Ty`-Klasse ist in den folgenden Fällen trivial:
+Ein bewegungszuweisungsoperator für eine Klasse *Ty* ist trivial wenn:
 
 Er wird impliziert bereitgestellt
 
-Die `Ty`-Klasse hat keine virtuellen Funktionen
+die Klasse *Ty* verfügt über keine virtuellen Funktionen
 
-Die `Ty`-Klasse hat keine virtuellen Basen
+die Klasse *Ty* hat keine virtuellen Basen
 
 Die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Verschiebungszuweisungsoperatoren
 
@@ -291,25 +302,26 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty*  
+ Der abzufragende Typ.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist TRUE, wenn der `Ty` Typ eine Klasse ist, die einen trivialen Bewegungskonstruktor aufweist; andernfalls FALSE.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist eine Klasse, die einen trivialen bewegungskonstruktor, andernfalls er false enthält.
 
-Ein Bewegungskonstruktor für eine `Ty`-Klasse ist trivial, wenn:
+Ein bewegungskonstruktor für eine Klasse *Ty* ist trivial wenn:
 
 Er wird implizit deklariert.
 
 die Parametertypen entsprechen den einer impliziten Deklaration
 
-die `Ty`-Klasse hat keine virtuellen Funktionen
+die Klasse *Ty* verfügt über keine virtuellen Funktionen
 
-die `Ty`-Klasse hat keine virtuellen Basen
+die Klasse *Ty* hat keine virtuellen Basen
 
 die Klasse verfügt über keine flüchtigen nicht statischen Datenmember
 
-alle direkten Basisklassen der `Ty`-Klasse weisen triviale Bewegungskonstruktoren auf
+alle direkten Basisklassen der Klasse *Ty* haben triviale bewegungskonstruktoren
 
 die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Bewegungskonstruktoren
 

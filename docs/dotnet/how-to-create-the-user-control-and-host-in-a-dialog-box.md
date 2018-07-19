@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136352"
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Gewusst wie: Erstellen des Benutzersteuerelements und des Hosts in einem Dialogfeld
 Die Schritte in diesem Artikel wird davon ausgegangen, dass Sie eine auf Dialogfeldern basierende erstellen ([CDialog-Klasse](../mfc/reference/cdialog-class.md)) Microsoft Foundation Classes (MFC)-Projekt, aber Sie Unterstützung für Windows Forms-Steuerelements auch zu einem vorhandenen MFC-Dialogfeld hinzufügen können.  

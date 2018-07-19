@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695417"
 ---
 # <a name="a-examples"></a>A. Beispiele
 Es folgen Beispiele für die Konstrukte, die in diesem Dokument definiert. Beachten Sie, dass eine Anweisung nach einer Direktive zusammengesetzten nur bei Bedarf, und eine nicht zusammengesetzte Anweisung ist in Bezug auf eine Direktive vorhergehenden eingerückt.

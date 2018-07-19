@@ -1,5 +1,5 @@
 ---
-title: CSimpleMapEqualHelperFalse Klasse | Microsoft Docs
+title: CSimpleMapEqualHelperFalse-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bebd9c6628924b5927fb48518925bdd665b0ee14
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70cea341e7f78032cdaca260e3c891f4c762e0b6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882623"
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse-Klasse
-Diese Klasse ist ein Hilfsprogramm für die [CSimpleMap](../../atl/reference/csimplemap-class.md) Klasse.  
+Diese Klasse ist eine Hilfsklasse für die [CSimpleMap](../../atl/reference/csimplemap-class.md) Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,9 +46,9 @@ class CSimpleMapEqualHelperFalse
 |[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|(Statisch) Gibt "false".|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Merkmalklasse ist eine Ergänzung zur der `CSimpleMap` Klasse. Es bietet eine Methode zum Vergleichen von zwei Elemente in der `CSimpleMap` Objekts, insbesondere zwei Wertelemente oder zwei wichtige Elemente.  
+ Diese "traits"-Klasse dient zur Ergänzung der `CSimpleMap` Klasse. Es bietet eine Methode zum Vergleichen von zwei Elementen in der `CSimpleMap` Objekts, insbesondere zwei Elemente mit dem Wert oder zwei Hauptelemente.  
   
- Der Wertevergleich immer "false" zurückgeben, und darüber hinaus ruft `ATLASSERT` mit dem Argument "false", wenn es jemals verwiesen wird. In Situationen, in dem der Gleichheitstest auf ist nicht ausreichend definiert, diese Klasse ermöglicht es eine Karte mit Schlüssel-Wert-Paaren für die meisten Methoden ordnungsgemäß ausgeführt werden, jedoch in einer klar definierten Weise für Methoden, die für Vergleiche, wie z. B. abhängen fehl [CSimpleMap:: FindVal](../../atl/reference/csimplemap-class.md#findval).  
+ Der Wertevergleich immer "false" zurück, und darüber hinaus ruft `ATLASSERT` mit einem Argument von "false", wenn sie jemals verwiesen wird. In Situationen, in dem der Gleichheitstest auf ist nicht ausreichend definiert, mit dieser Klasse können Sie eine Karte mit Schlüssel-Wert-Paare, um für die meisten Methoden ordnungsgemäß, jedoch nicht in einer klar definierten Weise für Methoden, die zu vergleichen, z.B. modellkompatibilitätsgrad [CSimpleMap:: FindVal](../../atl/reference/csimplemap-class.md#findval).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsimpcoll.h  
@@ -60,10 +61,10 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `k1`  
+ *k1*  
  Der erste Schlüssel.  
   
- `k2`  
+ *k2*  
  Der zweite Schlüssel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -83,8 +84,8 @@ static bool IsEqualValue(const TVal&, const TVal&);
  Gibt false zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode immer "false" zurückgegeben, und rufen `ATLASSERT` mit dem Argument "false", wenn es jemals verwiesen wird. Der Zweck der `CSimpleMapEqualHelperFalse::IsEqualValue` wird gezwungen Methoden mit, dass Vergleiche in einer klar definierten Weise fehl, wenn Gleichheitstests nicht adäquat definiert wurden.  
+ Diese Methode immer "false" zurück und ruft `ATLASSERT` mit einem Argument von "false", wenn sie jemals verwiesen wird. Der Zweck der `CSimpleMapEqualHelperFalse::IsEqualValue` besteht darin, erzwingen die Methoden, die mit, dass Vergleiche in einer klar definierten Weise fehl, wenn Gleichheitstests nicht ordnungsgemäß definiert wurden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CSimpleMapEqualHelper-Klasse](../../atl/reference/csimplemapequalhelper-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

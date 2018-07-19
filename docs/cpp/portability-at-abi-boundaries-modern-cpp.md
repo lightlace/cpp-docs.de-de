@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419660"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>Portabilität an ABI-Grenzen (Modern C++)
 Verwenden Sie ausreichend portable Typen und Konventionen anwendungsbinärschnittstelle Grenzen an. "portable Type" ist ein integrierter C-Typ oder eine Struktur, die nur die integrierte C-Typen enthält. Klassentypen können nur verwendet werden, wenn der Aufrufer und aufgerufenen Layout Einigkeit Konvention usw. aufrufen. Dies ist nur möglich, wenn beide mit dem gleichen Compiler und die compilereinstellungen kompiliert werden.  

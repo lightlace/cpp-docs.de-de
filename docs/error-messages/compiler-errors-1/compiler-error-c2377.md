@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195255"
 ---
 # <a name="compiler-error-c2377"></a>Compilerfehler C2377
 'Bezeichner': Neudefinition. Typdefinition kann nicht mit einem anderen Symbol überladen werden.  

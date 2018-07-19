@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1e6f2e8cc501f9a466e4970d27a2e6ecd9174ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d817ec62734b3646c4df0977daa8161601e5c592
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122691"
 ---
 |||  
 |-|-|  
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/04/2018
 |[END_DELEGATE_MAP](#end_delegate_map)|Eine Delegat-Zuordnung wird beendet.|
 |[END_INTERFACE_MAP](#end_interface_map)|Beendet die schnittstellenzuordnung in der Implementierungsdatei. |
 |[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|Erstellt einen Eintrag in der Zuordnung des Delegaten an.|
-|[INTERFACE_PART](#interface_part)|Wird zwischen der `BEGIN_INTERFACE_MAP` Makros und die `END_INTERFACE_MAP` -Makro für jede Schnittstelle, die dem Objekt unterstützt wird.|
+|[INTERFACE_PART](#interface_part)|Zwischen das Makro BEGIN_INTERFACE_MAP und END_INTERFACE_MAP-Makro verwendet, für jede Schnittstelle, die das Objekt unterstützt werden.|
 |[MAKE_DELEGATE](#make_delegate)|Fügt einen Ereignishandler zu einem verwalteten-Steuerelement.|
 
 
@@ -42,7 +43,7 @@ Startet eine Karte Delegaten an.
 BEGIN_DELEGATE_MAP(  CLASS );  
 ```
 ### <a name="parameters"></a>Parameter  
- `CLASS`  
+ *KLASSE*  
  Die Klasse, in der das verwaltete Steuerelement gehostet wird.  
    
 ### <a name="remarks"></a>Hinweise  
@@ -62,14 +63,14 @@ Beginn der Definition der interfaced Zuordnung, wenn Sie in der Implementierungs
 BEGIN_INTERFACE_MAP( theClass, baseClass )  
 ```
 ### <a name="parameters"></a>Parameter  
- `theClass`  
+ *theClass*  
  Die Klasse, in der die Schnittstellenzuordnung definiert werden soll  
   
- `baseClass`  
- Die Klasse, von der `theClass` abgeleitet wird.  
+ *baseClass*  
+ Die Klasse, von der *TheClass* abgeleitet.  
    
 ### <a name="remarks"></a>Hinweise  
- Für jede Schnittstelle, die implementiert wird, besteht eine oder mehrere `INTERFACE_PART` -Makroaufrufe. Für jedes Aggregat, das die Klasse verwendet wird, ist eine **INTERFACE_AGGREGATE** Makroaufruf.  
+ Für jede Schnittstelle, die implementiert wird, ist eine oder mehrere Aufrufe von INTERFACE_PART-Makro. Für jedes Aggregat, das die Klasse verwendet wird, ist eine INTERFACE_AGGREGATE-Makro-Aufruf.  
   
  Weitere Informationen zu schnittstellenzuordnungen, finden Sie unter [technischen Hinweis 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
@@ -84,7 +85,7 @@ Registriert eine Befehlsquelle Rückrufmethoden.
 delegate void CommandHandler(  UINT^ cmdID  );  
 ```
 ### <a name="parameters"></a>Parameter  
- `cmdID`  
+ *cmdID*  
  Die Befehls-ID.  
    
 ### <a name="remarks"></a>Hinweise  
@@ -108,10 +109,10 @@ Registriert Rückrufmethoden mit einer benutzermeldung Schnittstelle Update-Befe
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);  
 ```
 ### <a name="parameters"></a>Parameter  
- `cmdID`  
+ *cmdID*  
  Die Befehls-ID.  
   
- `cmdUI`  
+ *cmdUI*  
  Die Befehls-ID.  
    
 ### <a name="remarks"></a>Hinweise  
@@ -172,20 +173,20 @@ Erstellt einen Eintrag in der Zuordnung des Delegaten an.
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);  
 ```
 ### <a name="parameters"></a>Parameter  
- `MEMBER`  
+ *DATENMEMBER*  
  Die Ereignishandlermethode, die an das Steuerelement angefügt werden.  
   
- `ARG0`  
- Das erste Argument der verwalteten Ereignishandlermethode, z. B. **Object ^**.  
+ *ARG0*  
+ Das erste Argument der verwalteten Ereignishandlermethode, z. B. `Object^`.  
   
- `ARG1`  
- Das zweite Argument der verwalteten Ereignishandlermethode, z. B. **EventArgs ^**.  
+ *ARG1*  
+ Das zweite Argument der verwalteten Ereignishandlermethode, z. B. `EventArgs^`.  
    
 ### <a name="remarks"></a>Hinweise  
  Jeder Eintrag in der Zuordnung des Delegaten entspricht einem verwalteten Ereignishandlerdelegaten erstellt, indem [MAKE_DELEGATE](#make_delegate).  
    
 ### <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird veranschaulicht, wie `EVENT_DELEGATE_ENTRY` So erstellen einen Eintrag in der Zuordnung der Delegat für die `OnClick` Ereignishandler; Siehe auch das Codebeispiel in `MAKE_DELEGATE`. Weitere Informationen finden Sie unter [wie: Auffangen von Windows Forms-Ereignissen aus systemeigenen C++-Klassen](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
+ Im folgenden Codebeispiel wird veranschaulicht, wie EVENT_DELEGATE_ENTRY verwenden, erstellen Sie einen Eintrag in der Zuordnung Delegaten für die `OnClick` Ereignishandler; auch ausführliche Informationen finden Sie im Codebeispiel unter MAKE_DELEGATE. Weitere Informationen finden Sie unter [wie: Auffangen von Windows Forms-Ereignissen aus systemeigenen C++-Klassen](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
   
  ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -204,22 +205,22 @@ END_DELEGATE_MAP()
  
 
 ##  <a name="interface_part"></a>INTERFACE_PART
-Wird zwischen der `BEGIN_INTERFACE_MAP` Makros und die `END_INTERFACE_MAP` -Makro für jede Schnittstelle, die dem Objekt unterstützt wird.  
+Zwischen das Makro BEGIN_INTERFACE_MAP und END_INTERFACE_MAP-Makro verwendet, für jede Schnittstelle, die das Objekt unterstützt werden.  
    
 ### <a name="syntax"></a>Syntax    
 ```
 INTERFACE_PART( theClass, iid, localClass)  
 ```
 ### <a name="parameters"></a>Parameter  
- `theClass`  
+ *theClass*  
  Der Name der Klasse, die die Schnittstellenzuordnung enthält.    
- `iid`  
+ *IID*  
  Die IID, die der eingebetteten Klasse zugeordnet werden.    
  *localClass*  
  Der Name der lokalen Klasse.  
    
 ### <a name="remarks"></a>Hinweise  
- Sie können Sie eine IID auf einen Member der Klasse, die durch zuordnen `theClass` und *LocalClass*.  
+ Sie können Sie eine IID auf einen Member der Klasse, die durch zuordnen *TheClass* und *LocalClass*.  
   
  Weitere Informationen zu schnittstellenzuordnungen, finden Sie unter [technischen Hinweis 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
@@ -235,14 +236,14 @@ Fügt einen Ereignishandler zu einem verwalteten-Steuerelement.
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;  
 ```
 ### <a name="parameters"></a>Parameter  
- `DELEGATE`  
+ *DELEGATEN*  
  Der Typ des verwalteten-ereignishandlers zu delegieren, z. B. [EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True).  
   
- `MEMBER`  
+ *DATENMEMBER*  
  Der Name der Ereignishandlermethode an das Steuerelement angefügt werden.  
    
 ### <a name="remarks"></a>Hinweise  
- Dieses Makro erstellt einen verwaltetes Ereignishandlerdelegaten des Typs `DELEGATE` und des Namens `MEMBER`. Die verwalteten Ereignishandlerdelegaten ermöglicht eine systemeigene Klasse verwaltete Ereignisse zu behandeln.  
+ Dieses Makro erstellt einen verwaltetes Ereignishandlerdelegaten des Typs *DELEGIEREN* und des Namens *MEMBER*. Die verwalteten Ereignishandlerdelegaten ermöglicht eine systemeigene Klasse verwaltete Ereignisse zu behandeln.  
    
 ### <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird veranschaulicht, wie Aufrufen `MAKE_DELEGATE` Anfügen einer `OnClick` -Ereignishandler zu einem MFC-Steuerelement `MyControl`. Eine umfassendere Erläuterung zur Funktionsweise dieses Makro in einer MFC_Anwendung finden Sie unter [wie: Auffangen von Windows Forms-Ereignissen aus systemeigenen C++-Klassen](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  

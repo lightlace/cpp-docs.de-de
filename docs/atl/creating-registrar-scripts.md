@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354432"
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 Ein Skript für die Registrierungsstelle stellt eines datengesteuerten, anstatt API-driven, Zugriff auf die Registrierung bereit. Datengesteuerte Zugriff ist in der Regel effizienter, da nur ein oder zwei Zeilen in einem Skript dauert, einen Schlüssel zur Registrierung hinzuzufügen.  

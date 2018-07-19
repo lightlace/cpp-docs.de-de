@@ -26,14 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2a30f2ccf1963fe2985794a2bf8eca0c49474cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13a78c769a3c32f0293598ec6bd3c07788ea07b5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929219"
 ---
 # <a name="documents-views-and-the-framework"></a>Dokumente, Ansichten und das Framework
-Das Herzstück des MFC-Frameworks gelten die Konzepte von Dokument und Ansicht in. Ein Dokument ist ein Datenobjekt an, mit denen der Benutzer in einer bearbeitungssitzung interagiert. Wird erstellt, indem die `New` oder **öffnen** Befehl die **Datei** Menü und wird in der Regel in einer Datei gespeichert. (Standard-MFC-Dokumente, die von Klasse abgeleitet **CDocument**, unterscheiden sich von aktive Dokumente und OLE-Verbunddokumente.) Eine Sicht ist ein Fensterobjekt, das über die Interaktion des Benutzers mit einem Dokument.  
+Das Herzstück des MFC-Frameworks gelten die Konzepte von Dokument und Ansicht in. Ein Dokument ist ein Datenobjekt an, mit denen der Benutzer in einer bearbeitungssitzung interagiert. Wird erstellt, indem die **neu** oder **öffnen** Befehl die **Datei** Menü und wird in der Regel in einer Datei gespeichert. (Standard-MFC-Dokumente, die von Klasse abgeleitet `CDocument`, unterscheiden sich von aktive Dokumente und OLE-Verbunddokumente.) Eine Sicht ist ein Fensterobjekt, das über die Interaktion des Benutzers mit einem Dokument.  
   
  Die wichtigsten Objekte in einer ausgeführten Anwendung sind:  
   

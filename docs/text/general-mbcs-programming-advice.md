@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855798"
 ---
 # <a name="general-mbcs-programming-advice"></a>Allgemeine Ratschläge für die MBCS-Programmierung
 Verwenden Sie die folgenden Tipps:  

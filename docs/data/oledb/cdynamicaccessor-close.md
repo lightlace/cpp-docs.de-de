@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089310"
 ---
 # <a name="cdynamicaccessorclose"></a>CDynamicAccessor::Close
 Hebt die Bindung auf alle Spalten, die den zugeordneten Arbeitsspeicher frei und gibt die [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) Schnittstellenzeiger in der Klasse.  

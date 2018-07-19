@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382022"
 ---
 # <a name="unwind-procedure"></a>Entladeprozedur
 Das entladungscode-Array wird in absteigender Reihenfolge sortiert. Wenn eine Ausnahme auftritt, wird der vollständige Kontext vom Betriebssystem in einem Kontextdatensatz gespeichert. Die Ausnahme Dispatch-Logik wird dann aufgerufen, wird die wiederholt ausgeführt, die folgenden Schritte aus, um einen Ausnahmehandler gefunden.  

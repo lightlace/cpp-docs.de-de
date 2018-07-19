@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857726"
 ---
 # <a name="changing-the-properties-of-a-toolbar-button"></a>Ändern der Eigenschaften einer Symbolleisten-Schaltfläche
 ### <a name="to-change-the-properties-of-a-toolbar-button"></a>So ändern Sie die Eigenschaften einer Symbolleisten-Schaltfläche  

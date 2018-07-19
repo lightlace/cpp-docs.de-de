@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861544"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>Ändern der Aktivierreihenfolge von Steuerelementen
 Die Aktivierreihenfolge ist die Reihenfolge, in der die TAB-Taste den Eingabefokus von einem Steuerelement zum nächsten in einem Dialogfeld wird verschoben. In der Regel geht die Tab-Reihenfolge von links nach rechts und von oben nach unten in einem Dialogfeld. Jedes Steuerelement verfügt über eine **Tabstop** -Eigenschaft, die bestimmt, ob ein Steuerelement den Eingabefokus erhält.  

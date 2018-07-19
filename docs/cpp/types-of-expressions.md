@@ -1,5 +1,5 @@
 ---
-title: Typen von Ausdrücken | Microsoft Docs
+title: Typen von Ausdrücken | Microsoft-Dokumentation
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0904c5e503b60d5d9015e5102b1155016c78a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a053c837b0a2064a93a019d16856712553bd7a44
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026564"
 ---
 # <a name="types-of-expressions"></a>Ausdruckstypen
 C++-Ausdrücke werden in verschiedene Kategorien unterteilt:  
@@ -35,7 +36,7 @@ C++-Ausdrücke werden in verschiedene Kategorien unterteilt:
   
 -   [Konstante Ausdrücke](../cpp/cpp-constant-expressions.md). Konstante Ausdrücke werden vollständig aus konstanten Daten aufgebaut.  
   
--   [Ausdrücke mit expliziten typkonvertierungen](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae). Explizite Typkonvertierungen oder "Umwandlungen" können in Ausdrücken verwendet werden.  
+-   [Ausdrücke mit expliziten typkonvertierungen](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae). Explizite Typkonvertierungen oder "Umwandlungen" können in Ausdrücken verwendet werden.  
   
 -   [Ausdrücke mit Zeiger-auf-Member-Operatoren](../cpp/pointer-to-member-operators-dot-star-and-star.md).  
   

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879106"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 Ein *innerer Zeiger* deklariert einen Zeiger auf in einen Verweistyp handelt, aber nicht auf das Objekt selbst. Ein innerer Zeiger kann auf eine Verweis-Handle, der Werttyp, der mittels Boxing gepackter Typhandle, Member eines verwalteten Typs oder auf ein Element eines verwalteten Arrays zeigen.  

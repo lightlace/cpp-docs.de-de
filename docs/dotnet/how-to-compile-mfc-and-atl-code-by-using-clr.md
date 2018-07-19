@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136066"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Gewusst wie: Kompilieren von MFC-Code und ATL-Code mit /clr
 In diesem Thema wird erläutert, wie vorhandene MFC- und ATL-Programme, die Common Language Runtime kompiliert wird.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358084"
 ---
 # <a name="avoidance-of-heap-contention"></a>Vermeidung von Heapkonflikten
 Die Standardzeichenfolgen-Manager von MFC und ATL sind einfache Wrapper auf einem globalen Heap. Dieser globale Heap ist vollständig threadsicher, was bedeutet, dass mehrere Threads können reservieren und Freigeben von Arbeitsspeicher daraus gleichzeitig ohne Beschädigung im Heap an. Um Threadsicherheit zu gewährleisten, muss der Heap die Serialisierung des Zugriffs auf sich selbst. Dies wird normalerweise mit einem kritischen Abschnitt oder einer ähnlichen Sperrmechanismus erreicht. Wenn zwei Threads gleichzeitig versuchen, gleichzeitig auf den Heap zugreifen, wird ein Thread blockiert, bis der andere Thread-Anforderung abgeschlossen ist. Für viele Anwendungen diese Situation tritt selten auf und die Beeinträchtigung der Leistung des Heaps Sperrmechanismus sind zu vernachlässigen. Allerdings kann für Anwendungen, die den Heap aus mehreren Threads häufig zugreifen Konflikte auf dem Heap Sperre der Anwendung verursachen langsamer, als wenn es Singlethread (gilt auch für Computer mit mehreren CPUs) ausgeführt.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874732"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>Erstellen eines Symbols oder anderen Bilds (Bildbearbeitung für Symbole)
 Sie können ein neues Image (mithilfe einer Bitmap, Symbol, Cursor oder Symbolleiste) erstellen, verwenden Sie die Grafik-Editor, dessen Darstellung. Sie können auch eine neue Bitmapdatei Standardressource erstellen eine [Vorlage](../windows/how-to-use-resource-templates.md).  

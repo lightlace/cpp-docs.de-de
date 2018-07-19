@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5cf36722dd1ed6ea96dd839bd0935d78df0b32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b46dc8500543ce94b7d8d6a3415b22d019619d83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952592"
 ---
 # <a name="serialization-in-mfc"></a>Serialisierung in MFC
 In diesem Artikel erläutert der Serialisierungsmechanismus verwenden, die in der Microsoft Foundation Class-Bibliothek (MFC) damit Objekte zwischen beibehalten werden können bereitgestellt des Programms ausgeführt wird.  
@@ -40,7 +41,7 @@ In diesem Artikel erläutert der Serialisierungsmechanismus verwenden, die in de
 > [!NOTE]
 >  Verwechseln Sie nicht die `CArchive` Klasse mit allgemeinen Iostream-Klassen, die für sind formatierten Text nur. Die `CArchive` Klasse ist für Binärformat serialisierten Objekte.  
   
- Wenn Sie möchten, können Sie die MFC-Serialisierung, um einen eigenen Mechanismus für die persistente Speicherung erstellen umgehen. Sie müssen die Memberfunktionen der Klasse zu überschreiben, die Serialisierung an den Benutzer zu initiieren. Finden Sie unter den Ausführungen im [technischen Hinweis 22](../mfc/tn022-standard-commands-implementation.md) von der `ID_FILE_OPEN`, **ID_FILE_SAVE**, und **ID_FILE_SAVE_AS** Standardbefehle.  
+ Wenn Sie möchten, können Sie die MFC-Serialisierung, um einen eigenen Mechanismus für die persistente Speicherung erstellen umgehen. Sie müssen die Memberfunktionen der Klasse zu überschreiben, die Serialisierung an den Benutzer zu initiieren. Finden Sie unter den Ausführungen im [technischen Hinweis 22](../mfc/tn022-standard-commands-implementation.md) ID_FILE_OPEN ID_FILE_SAVE und ID_FILE_SAVE_AS Standardbefehle.  
   
  Die folgenden Artikel behandelt die zwei Hauptaufgaben, die für die Serialisierung erforderlich:  
   

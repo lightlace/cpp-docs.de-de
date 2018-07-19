@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266223"
 ---
 # <a name="compiler-error-c3741"></a>Compilerfehler C3741
 'Klasse': muss eine Co-Klasse werden bei der 'Layout_dependent'-Parameter des Event_receiver = "true"  

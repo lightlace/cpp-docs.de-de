@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374920"
 ---
 # <a name="setting-linker-options"></a>Festlegen von Linkeroptionen
 Optionen des Linkers können innerhalb oder außerhalb der Entwicklungsumgebung festgelegt werden. Dieser Artikel für jedes (Linkeroption) behandelt, wie sie in der Entwicklungsumgebung eingestellt werden kann. Finden Sie unter [Optionen des Linkers](../../build/reference/linker-options.md) für eine vollständige Liste.  

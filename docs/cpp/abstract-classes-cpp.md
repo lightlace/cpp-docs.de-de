@@ -1,5 +1,5 @@
 ---
-title: Abstrakte Klassen (C++) | Microsoft Docs
+title: Abstrakte Klassen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c35ea26bc5dda6c0dce27217cc75784034a77554
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 73c1d560f0e2adfbecb72fe9df96d981d0bb93af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705360"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957947"
 ---
 # <a name="abstract-classes-c"></a>Abstrakte Klassen (C++)
 
@@ -30,7 +30,7 @@ Abstrakte Klassen fungieren als Ausdrücke allgemeiner Konzepte, von denen spezi
 
 Eine Klasse, die mindestens eine rein virtuelle Funktion enthält, wird als abstrakte Klasse angesehen. Klassen, die von der abstrakten Klasse abgeleitet sind, müssen die rein virtuelle Funktion implementieren, um nicht selbst als abstrakte Klasse angesehen zu werden.
 
-Eine virtuelle Funktion wird als "rein" deklariert, mit der *pure-Specifier* Syntax (beschrieben [Klassenprotokollimplementierung](http://msdn.microsoft.com/en-us/a319f1b3-05e8-400e-950a-1ca6eb105ab5)). Betrachten Sie das Beispiel [virtuelle Funktionen](../cpp/virtual-functions.md). Mit der `Account`-Klasse soll eine allgemeine Funktionalität gewährleistet werden, aber Objekte vom Typ `Account` sind zu allgemein, um von Nutzen zu sein. Daher ist `Account` ein guter Kandidat für eine abstrakte Klasse:
+Betrachten Sie das Beispiel [virtuelle Funktionen](../cpp/virtual-functions.md). Mit der `Account`-Klasse soll eine allgemeine Funktionalität gewährleistet werden, aber Objekte vom Typ `Account` sind zu allgemein, um von Nutzen zu sein. Daher ist `Account` ein guter Kandidat für eine abstrakte Klasse:
 
 ```cpp
 // deriv_AbstractClasses.cpp
@@ -63,7 +63,7 @@ Eine weitere Einschränkung ist, dass, wenn der Konstruktor für eine abstrakte 
 
 Rein virtuelle Funktionen können für abstrakte Klassen definiert werden, sie können aber nur mithilfe folgender Syntax direkt aufgerufen werden:
 
-*abstrakte Klassenname*::*Funktionsnamen*)
+*Abstract-Klassennamen*::*Funktionsname-*)
 
 Dies ist hilfreich beim Entwerfen von Klassenhierarchien, deren Basisklasse()n rein virtuelle Destruktoren enthält/enthalten, da Basisklassendestruktoren immer beim Zerstören eines Objekts aufgerufen werden. Betrachten Sie das folgende Beispiel:
 

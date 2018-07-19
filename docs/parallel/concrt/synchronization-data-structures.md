@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693805"
 ---
 # <a name="synchronization-data-structures"></a>Synchronisierungsdatenstrukturen
 Die Concurrency Runtime bietet verschiedene Datenstrukturen, mit denen Sie Zugriff auf freigegebene Daten von mehreren Threads synchronisiert. Diese Datenstrukturen sind nützlich, wenn Sie Daten freigegeben haben, die selten geändert werden. Ein Synchronisierungsobjekt, z. B. einen kritischen Abschnitt führt dazu, dass andere Threads zu warten, bis die freigegebene Ressource verfügbar ist. Wenn Sie ein solches Objekt verwenden, um den Zugriff auf Daten zu synchronisieren, die häufig verwendet wird, können Sie Skalierbarkeit in Ihrer Anwendung verlieren. Die [Parallel Patterns Library (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) bietet die [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) Klasse, die Sie zum Freigeben einer Ressource auf mehrere Threads oder Aufgaben ohne die Notwendigkeit einer Synchronisierung ermöglicht. Weitere Informationen zu den `combinable` Klasse, finden Sie unter [parallele Container und Objekte](../../parallel/concrt/parallel-containers-and-objects.md).  

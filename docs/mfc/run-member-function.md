@@ -14,16 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be1d7d90b4c13a23e2e3456e7371abbae61be4e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a658af47723a9c19218b205a17cb46919d7abd59
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932285"
 ---
 # <a name="run-member-function"></a>Ausführen von Memberfunktion
-Framework-Anwendung verbringt die meiste Zeit in die [ausführen](../mfc/reference/cwinapp-class.md#run) Memberfunktion der Klasse [CWinApp](../mfc/reference/cwinapp-class.md). Nach der Initialisierung können `WinMain` Aufrufe **ausführen** die Nachrichtenschleife zu verarbeiten.  
+Framework-Anwendung verbringt die meiste Zeit in die [ausführen](../mfc/reference/cwinapp-class.md#run) Memberfunktion der Klasse [CWinApp](../mfc/reference/cwinapp-class.md). Nach der Initialisierung können `WinMain` Aufrufe `Run` die Nachrichtenschleife zu verarbeiten.  
   
- **Führen Sie** durchläuft eine Nachrichtenschleife, überprüfen die Nachrichtenwarteschlange für verfügbaren Nachrichten. Wenn eine Nachricht verfügbar ist, wird **ausführen** Behandlung für die Aktion. Wenn keine Nachrichten verfügbar sind, also häufig "true" **ausführen** Aufrufe `OnIdle` zu jeder Zeit im Leerlauf Verarbeitungsvorgänge ausführen, das Sie oder das Framework ggf. ausgeführt. Wenn keine Nachrichten und keine leerlaufverarbeitung Vorgehensweise vorhanden sind, wartet die Anwendung erst etwas passiert. Wenn die Anwendung beendet wird, **ausführen** Aufrufe `ExitInstance`. Die Abbildung im [OnIdle-Memberfunktion](../mfc/onidle-member-function.md) veranschaulicht die Abfolge von Aktionen in der Nachrichtenschleife.  
+ `Run` Navigieren durch eine Nachrichtenschleife, überprüfen die Nachrichtenwarteschlange für verfügbaren Nachrichten. Wenn eine Nachricht verfügbar ist, wird `Run` Behandlung für die Aktion. Wenn keine Nachrichten verfügbar sind, also häufig "true" `Run` Aufrufe `OnIdle` zu jeder Zeit im Leerlauf Verarbeitungsvorgänge ausführen, das Sie oder das Framework ggf. ausgeführt. Wenn keine Nachrichten und keine leerlaufverarbeitung Vorgehensweise vorhanden sind, wartet die Anwendung erst etwas passiert. Wenn die Anwendung beendet wird, `Run` Aufrufe `ExitInstance`. Die Abbildung im [OnIdle-Memberfunktion](../mfc/onidle-member-function.md) veranschaulicht die Abfolge von Aktionen in der Nachrichtenschleife.  
   
  Die nachrichtenverteilung, hängt von der Art der Nachricht ab. Weitere Informationen finden Sie unter [, Meldungen und Befehle im Framework](../mfc/messages-and-commands-in-the-framework.md).  
   

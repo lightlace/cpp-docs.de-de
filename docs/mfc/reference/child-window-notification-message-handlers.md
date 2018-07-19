@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367171"
 ---
 # <a name="child-window-notification-message-handlers"></a>Meldungshandler für Benachrichtigungen von untergeordneten Fenstern
 Es gibt fünf Kategorien von Benachrichtigungen von untergeordneten Fenster aus:  

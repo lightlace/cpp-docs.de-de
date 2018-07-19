@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860306"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>Attributparametertypen (Komponentenerweiterungen für C++)
 Der Compiler müssen Attributen übergebenen Werte zum Zeitpunkt der Kompilierung bekannt sein.  Attributparameter können die folgenden Typen entsprechen:  

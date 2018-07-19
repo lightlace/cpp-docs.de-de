@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c6f4a8779bcc92b48896fa016944df27c58903
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 366a0ec46b69567e9f03f1e0667555acd08f31be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960953"
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution-Klasse
 
@@ -79,14 +80,14 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType* der gleitkommaergebnistyp standardmäßig `double`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 
   *URNG* Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleitkommatyps produziert. Wenn kein entsprechend der Cauchy-Verteilung verteilter Wert ausgegeben wird, geben Sie `double` ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleitkommatyps produziert geben **doppelte** Wenn none angegeben wird, entsprechend der Cauchy-Verteilung verteilter Wert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -259,11 +260,11 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*eine* der `a` -verteilungsparameter.
+*eine* der `a` verteilungsparameter.
 
-*b* der `b` -verteilungsparameter.
+*b* der `b` verteilungsparameter.
 
-*Parm* der `param_type` Struktur für die Verteilung verwendete Parameterstruktur.
+*Parm* der `param_type` Struktur verwendet, um die Verteilung erstellen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -291,11 +292,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*eine* der `a` -verteilungsparameter.
+*eine* der `a` verteilungsparameter.
 
-*b* der `b` -verteilungsparameter.
+*b* der `b` verteilungsparameter.
 
-*Rechte* der `param_type` zu vergleichende Objekt.
+*richtige* der `param_type` zu zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 

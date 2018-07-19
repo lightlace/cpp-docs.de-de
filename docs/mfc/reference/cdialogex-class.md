@@ -1,5 +1,5 @@
 ---
-title: CDialogEx-Klasse | Microsoft Docs
+title: CDialogEx-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335957"
 ---
 # <a name="cdialogex-class"></a>CDialogEx-Klasse
 Die `CDialogEx`-Klasse gibt die Hintergrundfarbe und das Hintergrundbild eines Dialogfelds an.  
@@ -56,9 +57,9 @@ class CDialogEx : public CDialog
 ## <a name="remarks"></a>Hinweise  
  Zum Verwenden der `CDialogEx`-Klasse müssen Sie Ihre Dialogfeldklasse von der `CDialogEx`-Klasse statt der `CDialog`-Klasse ableiten.  
   
- Dialogfeldbilder werden in einer Ressourcendatei gespeichert. Das Framework löscht automatisch jedes Bild, das aus der Ressourcendatei geladen wird. Um das aktuelle Hintergrundbild programmgesteuert zu löschen, rufen die [CDialogEx::SetBackgroundImage](#setbackgroundimage) -Methode auf, oder Implementieren einer `OnDestroy` -Ereignishandler. Beim Aufrufen der [CDialogEx::SetBackgroundImage](#setbackgroundimage) -Methode übergeben Sie ein `HBITMAP` Parameter als Bild-Handle. Das `CDialogEx`-Objekt übernimmt den Besitz des Bilds und löscht es, wenn das `m_bAutoDestroyBmp` -Flag `TRUE` ist.  
+ Dialogfeldbilder werden in einer Ressourcendatei gespeichert. Das Framework löscht automatisch jedes Bild, das aus der Ressourcendatei geladen wird. Um das aktuelle Hintergrundbild programmgesteuert zu löschen, rufen die [CDialogEx::SetBackgroundImage](#setbackgroundimage) -Methode auf, oder Implementieren einer `OnDestroy` -Ereignishandler. Beim Aufrufen der [CDialogEx::SetBackgroundImage](#setbackgroundimage) -Methode, übergeben Sie ein `HBITMAP` -Parameter als Bild-Handle. Das `CDialogEx`-Objekt übernimmt den Besitz des Bilds und löscht es, wenn das `m_bAutoDestroyBmp` -Flag `TRUE` ist.  
   
- Ein `CDialogEx` Objekt kann es sich um ein übergeordnetes Element einer [CMFCPopupMenu Klasse](../../mfc/reference/cmfcpopupmenu-class.md) Objekt. Die [CMFCPopupMenu Klasse](../../mfc/reference/cmfcpopupmenu-class.md) -Objekt ruft die `CDialogEx::SetActiveMenu` Methode bei der [CMFCPopupMenu Klasse](../../mfc/reference/cmfcpopupmenu-class.md) -Objekt wird geöffnet. Danach die `CDialogEx` Objekt behandelt alle Menüereignisse, bis die [CMFCPopupMenu Klasse](../../mfc/reference/cmfcpopupmenu-class.md) -Objekt ist geschlossen.  
+ Ein `CDialogEx` Objekt kann es sich um ein übergeordnetes Element von einem [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md) Objekt. Die [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md) -Objekt ruft die `CDialogEx::SetActiveMenu` Methode bei der [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md) -Objekt geöffnet wird. Danach die `CDialogEx` Objekt verarbeitet alle Menüereignisse, bis die [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md) -Objekt ist geschlossen.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIDTemplate`  
- Die Ressourcen-ID von einer Dialogfeldvorlage.  
+ [in] *nIDTemplate*  
+ Die Ressourcen-ID, der eine Dialogfeldvorlage.  
   
- [in] `lpszTemplateName`  
- Der Ressourcenname von einer Dialogfeldvorlage.  
+ [in] *LpszTemplateName*  
+ Der Ressourcenname, der eine Dialogfeldvorlage.  
   
- [in] `pParent`  
- Ein Zeiger auf das übergeordnete Fenster. Der Standardwert ist `NULL`.  
+ [in] *pParent*  
+ Ein Zeiger auf das übergeordnete Fenster. Der Standardwert ist NULL.  
   
- [in] `pParentWnd`  
- Ein Zeiger auf das übergeordnete Fenster. Der Standardwert ist `NULL`.  
+ [in] *pParentWnd*  
+ Ein Zeiger auf das übergeordnete Fenster. Der Standardwert ist NULL.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -115,11 +116,11 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `color`  
- Ein Wert für den RGB-Farbe.  
+ [in] *Farbe*  
+ Ein RGB-Farbwert.  
   
- [in] `bRepaint`  
- `TRUE` um den Bildschirm sofort zu aktualisieren; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ [in] *bRepaint*  
+ "True", um den Bildschirm sofort zu aktualisieren; andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -141,26 +142,26 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Ein Handle für das Hintergrundbild.  
   
- [in] `uiBmpResId`  
+ [in] *UiBmpResId*  
  Die Ressourcen-ID des Hintergrundbilds.  
   
- [in] `location`  
- Eines der `CDialogEx::BackgroundLocation` Werte, die den Speicherort des Bilds angeben. Gültige Werte sind BACKGR_TILE, BACKGR_TOPLEFT BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT und BACKGR_BOTTOMRIGHT. Der Standardwert ist BACKGR_TILE.  
+ [in] *Speicherort*  
+ Eines der `CDialogEx::BackgroundLocation` Werte, die den Speicherort des Bilds angeben. Gültige Werte sind BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT und BACKGR_BOTTOMRIGHT. Der Standardwert ist BACKGR_TILE.  
   
- [in] `bAutoDestroy`  
- `TRUE` das Hintergrundbild automatisch zerstört; andernfalls `FALSE`.  
+ [in] *bAutoDestroy*  
+ True, um das Hintergrundbild automatisch zerstört. andernfalls "false".  
   
- [in] `bRepaint`  
- `TRUE` Das Dialogfeld sofort neu zeichnet; andernfalls `FALSE`.  
+ [in] *bRepaint*  
+ TRUE, um das Dialogfeld sofort neu zu zeichnen, andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
- Bei der zweiten Methode überladen Syntax `TRUE` , wenn die Methode erfolgreich ausgeführt, andernfalls wird `FALSE`.  
+ Überladen Sie bei der zweiten Methode Syntax "true", wenn die Methode erfolgreich ist; andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Das Bild, das Sie angeben, ist nicht gestreckt den Innenbereich des Dialogfelds.  
+ Das Bild, das Sie angeben, nicht gestreckt, um den Innenbereich des Dialogfelds zu passen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

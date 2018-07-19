@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380902"
 ---
 # <a name="tn050-mfcole-common-dialogs-mfcuix32"></a>TN050: MFC/OLE-Standarddialogfelder (MFCUIx32)
 Dieser Hinweis behandelt ursprünglich einige Probleme und die Zukunft von der OLE-Standarddialogfelder bereitgestellt und von MFC verwendet. Der OLE-Standarddialogfelder werden jetzt als eine Komponente, die an das System (OLEDLG. integrierte bereitgestellt. (DLL) und wird in der Produktdokumentation vollständig dokumentiert.  

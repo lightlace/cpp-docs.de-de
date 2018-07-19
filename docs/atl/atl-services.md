@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354791"
 ---
 # <a name="atl-services"></a>ATL-Dienste
 Um das ATL-COM-Objekt zu erstellen, damit es in einem Dienst ausgeführt wird, wählen Sie einfach Service (EXE) aus der Liste der Serveroptionen im ATL-Projekt-Assistenten. Der Assistent erstellt dann eine Klasse abgeleitet `CAtlServiceModuleT` Implementieren des Diensts.  

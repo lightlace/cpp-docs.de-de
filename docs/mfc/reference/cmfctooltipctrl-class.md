@@ -1,5 +1,5 @@
 ---
-title: CMFCToolTipCtrl Klasse | Microsoft Docs
+title: CMFCToolTipCtrl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,11 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09a701498b47957f64558fe42408ff64351c238b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 094aa35d985d51019254bd4478ffbc8c534854a9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849538"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl-Klasse
 Eine erweiterte QuickInfo-Implementierung auf Grundlage von [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md). Eine QuickInfo auf Grundlage der `CMFCToolTipCtrl` -Klasse kann ein Symbol, eine Bezeichnung und eine Beschreibung anzeigen. Sie können das Aussehen anpassen, indem Sie einen Farbverlauf, einen benutzerdefinierter Text, Rahmenfarben, fetten Text, abgerundete Ecken oder ein Sprechblasenformat verwenden.  
@@ -86,11 +87,11 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 |[CMFCToolTipCtrl::SetParams](#setparams)|Gibt die visuelle Darstellung einer QuickInfo mit einem `CMFCToolTipInfo`-Objekt an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwendung `CMFCToolTipCtrl`, `CMFCToolTipInfo`, und [CTooltipManager Klasse](../../mfc/reference/ctooltipmanager-class.md) Objekte zusammen, um benutzerdefinierte QuickInfos in Ihrer Anwendung zu implementieren.  
+ Verwendung `CMFCToolTipCtrl`, `CMFCToolTipInfo`, und [CTooltipManager-Klasse](../../mfc/reference/ctooltipmanager-class.md) Objekte zusammen, um benutzerdefinierte QuickInfos in Ihrer Anwendung zu implementieren.  
   
  Befolgen Sie die folgenden Schritte, wenn Sie beispielsweise QuickInfo-Sprechblasen verwenden möchten:  
   
- 1. Verwenden der [CWinAppEx Class](../../mfc/reference/cwinappex-class.md) Methode, um den QuickInfo-Manager in Ihrer Anwendung zu initialisieren.  
+ 1. Verwenden der [CWinAppEx-Klasse](../../mfc/reference/cwinappex-class.md) Methode, um den QuickInfo-Manager in Ihrer Anwendung zu initialisieren.  
   
  2. Erstellen Sie eine `CMFCToolTipInfo`-Struktur, um den gewünschten visuellen Stil anzugeben:  
   
@@ -121,7 +122,7 @@ CMFCToolTipInfo params;
 
  }  
 ```  
-3. Verwenden der [ctooltipmanager:: Settooltipparams](../../mfc/reference/ctooltipmanager-class.md#settooltipparams) Methode, um den visuellen Stil für alle QuickInfos in der Anwendung festgelegt werden, mithilfe der in definierten Formatvorlagen der `CMFCToolTipInfo` Objekt:  
+3. Verwenden der [ctooltipmanager:: Settooltipparams](../../mfc/reference/ctooltipmanager-class.md#settooltipparams) Methode, um den visuellen Stil für alle QuickInfos in der Anwendung festgelegt werden, mithilfe von definierten Stile der `CMFCToolTipInfo` Objekt:  
   
 ```  
 theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,  
@@ -168,7 +169,7 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParams`  
+ [in] *pParams*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -190,7 +191,7 @@ const CMFCToolTipInfo& GetParams() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der aktuelle QuickInfo-Anzeigeeinstellungen, und im rowsetcache eine [CMFCToolTipInfo Klasse](../../mfc/reference/cmfctooltipinfo-class.md) Objekt.  
+ Der aktuelle QuickInfo-Anzeigeeinstellungen, und im rowsetcache eine [CMFCToolTipInfo-Klasse](../../mfc/reference/cmfctooltipinfo-class.md) Objekt.  
   
 ##  <a name="ondrawborder"></a>  CMFCToolTipCtrl::OnDrawBorder  
  Zeichnet den QuickInfo-Rahmen.  
@@ -203,13 +204,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `[in] pDC`  
+ [in] *pDC*  
  Zeiger zu einem Gerätekontext.  
   
- `[in] rect`  
+ [in] *Rect*  
  Das umschließende Rechteck der QuickInfo.  
   
- `[in] clrLine`  
+ [in] *ClrLine*  
  Farbe des Rahmens.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -226,9 +227,9 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
- [in] `rect`  
- [in] `bCalcOnly`  
+ [in] *pDC*  
+ [in] *Rect*  
+ [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -244,17 +245,17 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `rectImage`  
- Koordinaten des Symbols.  
+ [in] *RectImage*  
+ Die Koordinaten des Symbols.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn das Symbol gezeichnet wurde. Andernfalls `FALSE`.  
+ TRUE, wenn das Symbol gezeichnet wurde. Andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode in einer abgeleiteten Klasse ein benutzerdefiniertes Symbol angezeigt. Sie müssen auch überschreiben [CMFCToolTipCtrl::GetIconSize](#geticonsize) So aktivieren Sie die QuickInfo ein, das Layout von Text und Beschreibung ordnungsgemäß berechnet.  
+ Überschreiben Sie diese Methode in einer abgeleiteten Klasse ein benutzerdefiniertes Symbol angezeigt. Sie müssen auch überschreiben, [CMFCToolTipCtrl::GetIconSize](#geticonsize) So aktivieren Sie die QuickInfo ein, das Layout von Text und Beschreibung ordnungsgemäß berechnet.  
   
 ##  <a name="ondrawlabel"></a>  CMFCToolTipCtrl::OnDrawLabel  
  Gibt die QuickInfo-Bezeichnung an oder berechnet die Bezeichnungsgröße.  
@@ -267,14 +268,14 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `[in] pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- `[in] rect`  
+ [in] *Rect*  
  Umschließende Rechteck des Beschriftungsbereichs.  
   
- `[in] bCalcOnly`  
- Wenn `TRUE`, die Bezeichnung nicht gezeichnet wird.  
+ [in] *bCalcOnly*  
+ Wenn TRUE, wird die Bezeichnung nicht gezeichnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Größe der Beschriftung in Pixel.  
@@ -294,20 +295,20 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `x1`  
+ [in] *X1*  
  Horizontale Koordinate der linken Ende des Trennzeichens.  
   
- [in] `x2`  
+ [in] *X2*  
  Horizontale Koordinate der rechten Ende des Trennzeichens.  
   
- [in] `Y`  
+ [in] *Y*  
  Vertikale Koordinate des Trennzeichens.  
   
 ### <a name="remarks"></a>Hinweise  
- Die standardmäßige Implementierung zeichnet eine verbindende Linie ab dem Punkt (X1, y) auf den Punkt (X2, y).  
+ Die standardmäßige Implementierung zieht eine Linie an der Stelle (X1, y) auf den Zeitpunkt (X2, y).  
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Anpassen der Darstellung des Trennzeichens.  
   
@@ -323,20 +324,20 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `[in] pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- `[in] rect`  
+ [in] *Rect*  
  Gibt das umschließende Rechteck der den auszufüllenden Bereich an.  
   
- `[in] clrText`  
+ [in] *ClrText*  
  QuickInfo-Vordergrundfarbe.  
   
- `[in] clrLine`  
- Die Farbe des Rahmens sowie die Trennzeichen-Zeile zwischen Bezeichnung und Beschreibung.  
+ [in] *ClrLine*  
+ Farbe des Rahmen und die Trennzeichen-Zeile wurde zwischen Label und Beschreibung.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Rechteck, das angegeben wird, füllt die standardmäßige Implementierung `rect` mit der Farbe oder einem Muster, die durch den letzten Aufruf angegeben [CMFCToolTipCtrl::SetParams](#setparams).  
+ Die standardmäßige Implementierung füllt das Rechteck mit dem angegebenen *Rect* mit der Farbe oder der vom letzten Aufruf von angegebenen Muster [CMFCToolTipCtrl::SetParams](#setparams).  
   
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie die Darstellung der QuickInfo anpassen möchten.  
   
@@ -348,11 +349,11 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `[in] strDesrciption`  
- Description-Text.  
+ [in] *StrDesrciption*  
+ Beschreibungstext.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Description-Text wird auf die QuickInfo unter der Trennlinie angezeigt.  
+ Der Beschreibungstext wird auf die QuickInfo unter der Trennzeichen angezeigt.  
   
 ##  <a name="setfixedwidth"></a>  CMFCToolTipCtrl::SetFixedWidth  
 
@@ -364,8 +365,8 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nWidthRegular`  
- [in] `nWidthLargeImage`  
+ [in] *nWidthRegular*  
+ [in] *nWidthLargeImage*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -377,7 +378,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pRibbonButton`  
+ [in] *pRibbonButton*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -389,23 +390,23 @@ void SetLocation(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pt`  
+ [in] *pt*  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setparams"></a>  CMFCToolTipCtrl::SetParams  
- Gibt die visuelle Darstellung einer QuickInfo mit einer [CMFCToolTipInfo Klasse](../../mfc/reference/cmfctooltipinfo-class.md) Objekt.  
+ Gibt die visuelle Darstellung einer QuickInfo mit einer [CMFCToolTipInfo-Klasse](../../mfc/reference/cmfctooltipinfo-class.md) Objekt.  
   
 ```  
 void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `[in] pParams`  
- Zeiger auf eine [CMFCToolTipInfo Klasse](../../mfc/reference/cmfctooltipinfo-class.md) Objekt, das die Parameter enthält.  
+ [in] *pParams*  
+ Zeiger auf eine [CMFCToolTipInfo-Klasse](../../mfc/reference/cmfctooltipinfo-class.md) Objekt, das die Parameter für die Anzeige enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die QuickInfo wird angezeigt, wird es mithilfe der Farben gezeichnet und visuelle, die Stile `pParams` angibt. Der Wert der `pParams` befindet sich in das geschützte Mitglied `m_Params`, zugegriffen werden kann, durch eine abgeleitete Klasse, die überschreibt [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl::OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), oder [CMFCToolTipCtrl::OnFillBackground](#onfillbackground) zum Verwalten der angegebene Darstellung.  
+ Wenn die QuickInfo wird angezeigt, mit die Farben zeichnen und visuelle, die Stile *pParams* angibt. Der Wert des *pParams* befindet sich in den geschützten Member `m_Params`, zugegriffen werden kann, durch eine abgeleitete Klasse, die überschreibt [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), oder [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)die angegebene Darstellung zu verwalten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

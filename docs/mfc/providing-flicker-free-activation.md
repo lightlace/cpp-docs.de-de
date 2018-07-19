@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356553"
 ---
 # <a name="providing-flicker-free-activation"></a>Bereitstellen flimmerfreier Aktivierung
 Wenn das Steuerelement sich selbst in die inaktiven und den aktiven Status identisch zeichnet (und nicht fensterlosen Aktivierung verwendet), können Sie vermeiden die Zeichenoperationen und die begleitende visual Flimmern, die normalerweise vorkommen, wenn Sie den Übergang zwischen den inaktiven vornehmen und aktiv. Um dies zu erreichen, fügen die **NoFlickerActivate** -Flag in der Gruppe von Flags, die zurückgegebene [COleControl:: GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Zum Beispiel:  

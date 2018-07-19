@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383681"
 ---
 # <a name="using-ctabctrl"></a>Verwenden von CTabCtrl
 Ein "Registerkarten-Steuerelement" ist analog den Trennblättern in einem Notizbuch oder die mit der Bezeichnung Ordner in eine CAB-Datei. Verwenden Sie das Registerkarten-Steuerelement, dargestellt durch die Klasse [CTabCtrl](../mfc/reference/ctabctrl-class.md), um mehrere Seiten oder Steuerelemente für einem Benutzer jeweils einzeln, in einem Format anzeigen, die eine Peer- oder eine logische Beziehung zwischen den einzelnen Seiten vorschlägt.  

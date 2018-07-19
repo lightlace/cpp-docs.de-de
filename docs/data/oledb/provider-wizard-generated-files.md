@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106007"
 ---
 # <a name="provider-wizard-generated-files"></a>Vom Anbieter-Assistenten generierte Dateien
 Der ATL-OLE DB-Anbieter-Assistent generiert die folgenden Dateien. Verwenden Sie in den folgenden Themen des kurzen Namens "MyProvider", aber die genauen Dateinamen hängt die Wahl, die Sie beim Erstellen des Anbieters vorgenommen.  

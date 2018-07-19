@@ -1,5 +1,5 @@
 ---
-title: CComAllocator Klasse | Microsoft Docs
+title: CComAllocator-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3606df325bfd41dabf99bb790ff154b383ab987f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881923"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator-Klasse
-Diese Klasse stellt Methoden zum Verwalten von Speicher mithilfe des COM-Arbeitsspeicher Routinen bereit.  
+Diese Klasse stellt Methoden zum Verwalten von Speicher mithilfe von COM-Arbeitsspeicher-Routinen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,11 +43,11 @@ class CComAllocator
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CComAllocator::Allocate](#allocate)|Rufen Sie diese statische Methode, um Arbeitsspeicher zuzuordnen.|  
-|[CComAllocator::Free](#free)|Rufen Sie diese statische Methode, um den belegten Arbeitsspeicher freizugeben.|  
+|[CComAllocator::Free](#free)|Rufen Sie diese statische Methode, um zugeordneten Arbeitsspeicher freizugeben.|  
 |[CComAllocator::Reallocate](#reallocate)|Rufen Sie diese statische Methode, um Arbeitsspeicher neu zuzuordnen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse wird verwendet, indem [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) der COM-Arbeitsspeicher Reservierungsroutinen bereitstellen kann. Die Klasse Gegenstück [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), bietet die gleichen Methoden, die mit der CRT-Routinen.  
+ Diese Klasse wird verwendet, indem [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) der COM-Arbeitsspeicher speicherbelegungsroutinen bereitstellen kann. Die Klasse als Gegenstück [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), bietet die gleichen Methoden, die mit der CRT-Routinen.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
@@ -59,7 +60,7 @@ static void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nBytes`  
+ *nBytes*  
  Die Anzahl der zu belegenden Bytes.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -69,18 +70,18 @@ static void* Allocate(size_t nBytes) throw();
  Belegt Arbeitsspeicher. Finden Sie unter [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) Weitere Details.  
   
 ##  <a name="free"></a>  CComAllocator::Free  
- Rufen Sie diese statischen Funktion um belegten Arbeitsspeicher freizugeben.  
+ Rufen Sie diese statischen Funktion um zugeordneten Arbeitsspeicher freizugeben.  
   
 ```
 static void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `p`  
+ *p*  
  Zeiger auf zugewiesenen Speicher.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt den belegten Arbeitsspeicher frei. Finden Sie unter [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) Weitere Details.  
+ Gibt den zugeordneten Arbeitsspeicher frei. Finden Sie unter [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) Weitere Details.  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  Rufen Sie diese statischen Funktion auf, um Arbeitsspeicher neu zuzuordnen.  
@@ -90,10 +91,10 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `p`  
+ *p*  
  Zeiger auf zugewiesenen Speicher.  
   
- `nBytes`  
+ *nBytes*  
  Die Anzahl der zuzuordnenden Bytes.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -105,4 +106,4 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 ## <a name="see-also"></a>Siehe auch  
  [CComHeapPtr-Klasse](../../atl/reference/ccomheapptr-class.md)   
  [CCRTAllocator-Klasse](../../atl/reference/ccrtallocator-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

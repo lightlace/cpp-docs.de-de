@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be596ea38a8d0a3919ed43d9c5478bb0127032d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896977da8ca57cc17a9fa3b7864e1744ee07f35d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930822"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Handler für Meldungszuordnungsbereiche
 In diesem Artikel wird erläutert, wie einen Bereich von Nachrichten an eine einzelne Nachricht Handler-Funktion (und nicht nur eine bestimmte Funktion eine Nachricht zuordnen) zugeordnet werden.  
@@ -95,7 +96,7 @@ In diesem Artikel wird erläutert, wie einen Bereich von Nachrichten an eine ein
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
   
- Handlerfunktionen für einzelne Befehle nehmen normalerweise keine Parameter an. Mit Ausnahme von Update Handlerfunktionen, Handlerfunktionen für Meldungszuordnungsbereiche erfordern einen zusätzlichen Parameter `nID`, des Typs **"uint"**. Dieser Parameter ist der erste Parameter. Die zusätzliche Parameter verfügt, die zusätzliche Befehls-ID, welcher Befehl anzugeben, der Benutzer tatsächlich ausgewählt haben.  
+ Handlerfunktionen für einzelne Befehle nehmen normalerweise keine Parameter an. Mit Ausnahme von Update Handlerfunktionen, Handlerfunktionen für Meldungszuordnungsbereiche erfordern einen zusätzlichen Parameter *nID*, des Typs **"uint"**. Dieser Parameter ist der erste Parameter. Die zusätzliche Parameter verfügt, die zusätzliche Befehls-ID, welcher Befehl anzugeben, der Benutzer tatsächlich ausgewählt haben.  
   
  Weitere Informationen zu den parameteranforderungen für die Aktualisierung von Handlerfunktionen finden Sie unter [Beispiel für einen Bereich der Befehls-IDs](#_core_example_for_a_range_of_command_ids).  
   
@@ -108,7 +109,7 @@ In diesem Artikel wird erläutert, wie einen Bereich von Nachrichten an eine ein
   
 -   Zwei Befehls-IDs, öffnend und schließend einen zusammenhängenden Bereich.  
   
-     Hier werden `ID_VIEW_ZOOM25` und `ID_VIEW_ZOOM300`.  
+     Hier werden **ID_VIEW_ZOOM25** und **ID_VIEW_ZOOM300**.  
   
 -   Der Name der Handlerfunktion für Befehle.  
   
@@ -118,9 +119,9 @@ In diesem Artikel wird erläutert, wie einen Bereich von Nachrichten an eine ein
   
  [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
   
- Im Fall von Update Handlerfunktionen ist ähnlich und wahrscheinlich breitere hilfreich sein. Es ist üblich, das zum Schreiben `ON_UPDATE_COMMAND_UI` Handler für eine Reihe von Befehlen und selbst schreiben oder kopieren, den gleichen Code immer wieder zu finden. Die Lösung besteht darin, ordnen Sie einen Bereich von Befehls-IDs auf einen aktualisieren Handler-Funktion verwendet die `ON_UPDATE_COMMAND_UI_RANGE` Makro. Die Befehls-IDs müssen einen zusammenhängenden Bereich bilden. Ein Beispiel finden Sie die **OnUpdateZoom** Handler und die zugehörige `ON_UPDATE_COMMAND_UI_RANGE` Meldungszuordnungseintrags in Ansichtsklasse HIERSVR-Beispiel.  
+ Im Fall von Update Handlerfunktionen ist ähnlich und wahrscheinlich breitere hilfreich sein. Es ist üblich, das zum Schreiben `ON_UPDATE_COMMAND_UI` Handler für eine Reihe von Befehlen und selbst schreiben oder kopieren, den gleichen Code immer wieder zu finden. Die Lösung besteht darin, ordnen Sie einen Bereich von Befehls-IDs auf einen aktualisieren Handler-Funktion verwendet die `ON_UPDATE_COMMAND_UI_RANGE` Makro. Die Befehls-IDs müssen einen zusammenhängenden Bereich bilden. Ein Beispiel finden Sie die `OnUpdateZoom` Handler und die zugehörige `ON_UPDATE_COMMAND_UI_RANGE` Meldungszuordnungseintrags in Ansichtsklasse HIERSVR-Beispiel.  
   
- Aktualisieren von Handlerfunktionen für die einzelnen Befehle normalerweise einen einzelnen Parameter verwenden `pCmdUI`, des Typs **CCmdUI\***. Im Gegensatz zu Handlerfunktionen, Update Handlerfunktionen für Meldungszuordnungsbereiche erfordern keine zusätzlichen Parameter `nID`, des Typs **"uint"**. Die Befehls-ID, die benötigt wird, um anzugeben, mit welchem Befehl der Benutzer tatsächlich ausgewählt haben, befindet sich der `CCmdUI` Objekt.  
+ Aktualisieren von Handlerfunktionen für die einzelnen Befehle normalerweise einen einzelnen Parameter verwenden *nämlich pCmdUI*, vom Typ `CCmdUI*`. Im Gegensatz zu Handlerfunktionen, Update Handlerfunktionen für Meldungszuordnungsbereiche erfordern keine zusätzlichen Parameter *nID*, des Typs **"uint"**. Die Befehls-ID, die benötigt wird, um anzugeben, mit welchem Befehl der Benutzer tatsächlich ausgewählt haben, befindet sich der `CCmdUI` Objekt.  
   
 ##  <a name="_core_example_for_a_range_of_control_ids"></a> Beispiel für einen Bereich von Steuerelement-IDs  
  Eine andere interessanter Fall Zuordnen der Steuerelemente-benachrichtigungsmeldungen für einen Bereich von Steuerelement-IDs an einen einzigen Handler. Nehmen Sie an, dass der Benutzer eine 10 Schaltflächen klicken kann. Um alle 10 Schaltflächen zu einem Handler zuzuordnen, Ihre Meldungszuordnungseintrags sieht dann folgendermaßen aus:  
@@ -135,7 +136,7 @@ In diesem Artikel wird erläutert, wie einen Bereich von Nachrichten an eine ein
   
 -   Die Steuerelement-ID-Werte der zusammenhängenden Bereich von Steuerelementen zugeordnet.  
   
-     Hier werden diese `IDC_BUTTON1` und `IDC_BUTTON10`.  
+     Hier werden diese **IDC_BUTTON1** und **IDC_BUTTON10**.  
   
 -   Der Name der Meldungshandlerfunktion.  
   

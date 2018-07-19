@@ -1,5 +1,5 @@
 ---
-title: align (C++) | Microsoft Docs
+title: align (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae88262724dfec5702e2769eb10e076502c09342
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54a83adda5acc51bd7e2d85e907d84e62a70d5cb
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940727"
 ---
 # <a name="align-c"></a>align (C++)
 
-In Visual Studio 2015 und höher, verwenden Sie die C ++ 11-Standard `alignas` Bezeichner für die Ausrichtung des Steuerelements. Weitere Informationen finden Sie unter [Ausrichtung](../cpp/alignment-cpp-declarations.md).
+In Visual Studio 2015 und höher, verwenden Sie die C ++ 11-Standard `alignas` Spezifizierer Ausrichtung der Steuerelemente. Weitere Informationen finden Sie unter [Ausrichtung](../cpp/alignment-cpp-declarations.md).
 
 **Microsoft-spezifisch**
 
@@ -41,15 +42,15 @@ Das Schreiben von Anwendungen, die die neuesten Prozessoranweisungen verwenden, 
 
 \# ist der Ausrichtungswert. Gültige Einträge sind ganzzahlige Potenzen von zwei von 1 bis 8192 (Bytes), z. B. 2, 4, 8, 16, 32 oder 64. `declarator` sind die Daten, die Sie als ausgerichtet deklarieren.
 
-Informationen dazu, wie einen Wert vom Typ zurückgegeben `size_t` , die die ausrichtungsanforderung des Typs ist, finden Sie unter [__alignof](../cpp/alignof-operator.md). Weitere Informationen dazu, wie nicht ausgerichtete Zeiger deklariert, wenn Sie 64-Bit-Prozessoren zu verwenden, finden Sie unter [__unaligned](../cpp/unaligned.md).
+Informationen dazu, wie Sie einen Wert vom Typ zurückgeben `size_t` , die die ausrichtungsanforderung des Typs ist, finden Sie unter [__alignof](../cpp/alignof-operator.md). Informationen dazu, wie nicht ausgerichtete Zeiger deklariert werden, wenn 64-Bit-Prozessoren verwendet, finden Sie unter [__unaligned](../cpp/unaligned.md).
 
-Sie können `__declspec(align(#))` verwenden, wenn Sie eine `struct`, `union` oder `class` definieren oder wenn Sie eine Variable deklarieren.
+Sie können `__declspec(align(#))` beim Definieren einer **Struktur**, **Union**, oder **Klasse**, oder wenn Sie eine Variable deklarieren.
 
-Der Compiler gewährleistet oder versucht nicht, das Ausrichtungsattribut der Daten während des Kopierens oder Transformierens von Daten beizubehalten. Beispielsweise [Memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) können eine Struktur mit deklariert kopieren `__declspec(align(#))` an einem beliebigen Speicherort. Beachten Sie, dass normale Zuweisungen – z. B. ["malloc"](../c-runtime-library/reference/malloc.md), C++ [new-Operator](new-operator-cpp.md), und die Win32-Zuweisungen – Arbeitsspeicher, die in der Regel nicht ausreichend für ausgerichtet ist zurückgeben `__declspec(align(#))` Strukturen bzw. von Arrays Strukturen. Um sicherzustellen, dass das Ziel einer Kopie oder der Datenumwandlung richtig ausgerichtet ist, verwenden [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), oder Schreiben Sie eine eigene Zuweisung.
+Der Compiler gewährleistet oder versucht nicht, das Ausrichtungsattribut der Daten während des Kopierens oder Transformierens von Daten beizubehalten. Z. B. [Memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) können eine Struktur mit deklariert kopieren `__declspec(align(#))` an einem beliebigen Speicherort. Beachten Sie, dass normale Zuweisungen – z. B. [Malloc](../c-runtime-library/reference/malloc.md), C++ [new-Operator](new-operator-cpp.md), und die Win32-Zuweisungen, Arbeitsspeicher, die in der Regel nicht ausreichend für ausgerichtet ist zurückgeben `__declspec(align(#))` Strukturen oder Arrays mit Strukturen sind. Um sicherzustellen, dass das Ziel des Kopierens oder Transformierens richtig ausgerichtet ist, verwenden Sie [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), oder Schreiben Sie eine eigene Zuweisung.
 
 Die Ausrichtung für Funktionsparameter können Sie nicht angeben. Wenn die Daten, die über ein Ausrichtungsattribut verfügen, als Wert auf dem Stapel übergeben werden, wird die Ausrichtung durch die Aufrufkonvention gesteuert. Falls die Datenausrichtung in der aufgerufenen Funktion wichtig ist, kopieren Sie vor der Verwendung den Parameter in den korrekt ausgerichteten Speicher.
 
-Ohne `__declspec(align(#))`, richtet der Compiler im allgemeinen Daten auf natürlichen Begrenzungen entsprechend dem Zielprozessor und der Größe der Daten, bis zu 4-Byte-Begrenzungen auf 32-Bit-Prozessoren und 8-Byte-Begrenzungen auf 64-Bit-Prozessoren. Daten in Klassen oder Strukturen werden in der Klasse oder Struktur am Minimum ihrer natürlichen Ausrichtung und der aktuellen verpackungseinstellung ausgerichtet (von #pragma `pack` oder **/Zp** (Compileroption)).
+Ohne `__declspec(align(#))`, der Compiler richtet in der Regel die Daten an natürlichen Begrenzungen entsprechend dem Zielprozessor und der Größe der Daten bis zu 4-Byte-Begrenzungen auf 32-Bit-Prozessoren und 8-Byte-Begrenzungen auf 64-Bit-Prozessoren. Daten in Klassen oder Strukturen werden in der Klasse oder Struktur am Minimum ihrer natürlichen Ausrichtung und der aktuellen verpackungseinstellung ausgerichtet (von #pragma **Pack** oder **/Zp** -Compileroption).
 
 In diesem Beispiel wird die Verwendung von `__declspec(align(#))` veranschaulicht:
 
@@ -59,9 +60,9 @@ __declspec(align(32)) struct Str1{
 };
 ```
 
-Dieser Typ verfügt nun über ein 32-Byte-Ausrichtungsattribut. Dies bedeutet, dass alle statischen und automatischen Instanzen auf einer 32-Byte-Begrenzung beginnen. Zusätzliche Strukturtypen, die mit diesem Typ als Member deklariert beibehalten Ausrichtungsattribut für diesen Typ, d. h. jede Struktur mit `Str1` als ein Element ein Ausrichtungsattribut von mindestens 32 verfügen.
+Dieser Typ verfügt nun über ein 32-Byte-Ausrichtungsattribut. Dies bedeutet, dass alle statischen und automatischen Instanzen auf einer 32-Byte-Begrenzung beginnen. Zusätzliche Strukturtypen, die mit diesem Typ als Member deklariert beibehalten dieses Typs Ausrichtungsattribut, d. h. jede Struktur mit `Str1` als ein Element ein Ausrichtungsattribut von mindestens 32 verfügen.
 
-Beachten Sie, dass `sizeof(struct Str1)` gleich 32 ist. Wenn ein Array von Str1-Objekten erstellt wird und die Basis des Arrays mit 32 Bytes ausgerichtet ist, ist demnach jeder Member des Arrays auch mit 32 Bytes ausgerichtet. Um ein Array, dessen Basis ordnungsgemäß ausgerichtet ist, im dynamischen Speicher zu erstellen, verwenden [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), oder Schreiben Sie eine eigene Zuweisung.
+Beachten Sie, dass `sizeof(struct Str1)` gleich 32 ist. Wenn ein Array von Str1-Objekten erstellt wird und die Basis des Arrays mit 32 Bytes ausgerichtet ist, ist demnach jeder Member des Arrays auch mit 32 Bytes ausgerichtet. Verwenden Sie zum Erstellen einer ordnungsgemäß Basis ausgerichteten Array im dynamischen Speicher [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md), oder Schreiben Sie eine eigene Zuweisung.
 
 Der `sizeof`-Wert für jede Struktur ist der Offset des letzten Members plus die Größe dieses Members, aufgerundet auf das nächste Vielfache des größten Memberausrichtungswerts oder den Ausrichtungswert der gesamten Struktur, je nachdem, welcher Wert größer ist.
 
@@ -98,7 +99,7 @@ Die folgenden Beispiele zeigen, wie sich `__declspec(align(#))` auf die Größe 
 #define CACHE_ALIGN __declspec(align(CACHE_LINE))
 ```
 
-In diesem Beispiel wird die `S1`-Struktur mit `__declspec(align(32))` definiert. Alle Verwendungen von `S1` für eine Variablendefinition oder andere Typdeklarationen sind mit 32 Bytes ausgerichtet. `sizeof(struct S1)` gibt 32 zurück, und `S1` weist 16 Auffüll-Bytes auf, die den 16 Bytes folgen, die für die Aufnahme der vier ganzen Zahlen erforderlich sind. Jeder `int`-Member erfordert die 4-Byte-Ausrichtung, aber die Ausrichtung der Struktur selbst wird als 32 deklariert. Daher ist die Gesamtausrichtung 32.
+In diesem Beispiel wird die `S1`-Struktur mit `__declspec(align(32))` definiert. Alle Verwendungen von `S1` für eine Variablendefinition oder andere Typdeklarationen sind mit 32 Bytes ausgerichtet. `sizeof(struct S1)` gibt 32 zurück, und `S1` weist 16 Auffüll-Bytes auf, die den 16 Bytes folgen, die für die Aufnahme der vier ganzen Zahlen erforderlich sind. Jede **Int** Member erfordert 4-Byte-Ausrichtung, aber die Ausrichtung der Struktur selbst wird als 32 deklariert. Daher ist die Gesamtausrichtung 32.
 
 ```cpp
 struct CACHE_ALIGN S1 { // cache align all instances of S1
@@ -178,20 +179,20 @@ void fn() {
 }
 ```
 
-Wenn der Speicher für Heaps zugewiesen wird, hängt die Ausrichtung davon ab, welche Speicherbelegungsfunktion aufgerufen wird.  Wenn Sie beispielsweise `malloc` verwenden, hängt das Ergebnis von der Größe des Operanden ab. Wenn *Arg* > = 8, der zurückgegebene Arbeitsspeicher mit 8-Byte-ausgerichtet ist. Wenn *Arg* < 8, der die Ausrichtung des zurückgegebenen Arbeitsspeichers ist die erste Potenz von 2 weniger als *Arg*. Wenn Sie beispielsweise "malloc(7)" verwenden, ist die Ausrichtung 4 Bytes.
+Wenn der Speicher für Heaps zugewiesen wird, hängt die Ausrichtung davon ab, welche Speicherbelegungsfunktion aufgerufen wird.  Wenn Sie verwenden, z. B. **Malloc**, das Ergebnis hängt von der Größe des Operanden. Wenn *Arg* > = 8, der zurückgegebene Arbeitsspeicher mit 8 Bytes ausgerichtet ist. Wenn *Arg* < 8, der die Ausrichtung des zurückgegebenen Arbeitsspeichers ist die erste Potenz von 2 weniger als *Arg*. Wenn Sie beispielsweise "malloc(7)" verwenden, ist die Ausrichtung 4 Bytes.
 
 ##  <a name="vclrf_declspecaligntypedef"></a> Definieren neuer Typen mit __declspec(align(#))
 
 Sie können einen Typ mit einem Ausrichtungsmerkmal definieren.
 
-Beispielsweise können Sie definieren eine `struct` mit einer Ausrichtung Wert auf diese Weise:
+Sie können z. B. definieren eine `struct` mit einer Ausrichtung Wert auf diese Weise:
 
 ```cpp
 struct aType {int a; int b;};
 typedef __declspec(align(32)) struct aType bType;
 ```
 
-Jetzt `aType` und `bType` werden dem dieselbe Größe (8 Byte), aber Variablen vom Typ `bType` 32 Bytes ausgerichtet sind.
+Jetzt `aType` und `bType` sind dem gleichen Größe (8 Bytes), aber Variablen vom Typ `bType` 32 Bytes ausgerichtet sind.
 
 ##  <a name="vclrfthreadlocalstorageallocation"></a> Ausrichten von Daten im threadlokalen Speicher
 
@@ -218,7 +219,7 @@ __declspec(thread) struct S9 a;
 
 ##  <a name="vclrfhowalignworkswithdatapacking"></a> Funktionsweise der Ausrichtung mit der Verpackung von Daten
 
-Die **/Zp** Compileroption und das `pack` Pragma wirken sich auf der Verpackung von Daten für Struktur-und Unionmember. Dieses Beispiel zeigt, wie **/Zp** und `__declspec(align(#))` arbeiten zusammen:
+Die **/Zp** Compileroption und das **Pack** Pragma wirken sich das Verpacken von Daten für Struktur-und Unionmember. Dieses Beispiel zeigt, wie **/Zp** und `__declspec(align(#))` zusammenarbeiten:
 
 ```c[[]]
 struct S {
@@ -231,7 +232,7 @@ struct S {
 };
 ```
 
-Die folgende Tabelle enthält den Offset eines jeden Members mit einer Vielzahl von **/Zp** (oder #pragma `pack`) Werte, die anzeigt, wie die beiden interagieren.
+Die folgende Tabelle enthält den Offset eines jeden Members mit einer Vielzahl von **/Zp** (oder #pragma **Pack**) Werten, wobei gezeigt, wie die beiden interagieren.
 
 |Variable|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|

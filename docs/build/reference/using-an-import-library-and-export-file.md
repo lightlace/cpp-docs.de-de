@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378596"
 ---
 # <a name="using-an-import-library-and-export-file"></a>Verwenden einer Importbibliothek und einer Exportdatei
 Wenn ein Programm (eine ausführbare Datei oder eine DLL-Datei) exportiert, in ein anderes Programm, dem es auch importiert, oder, wenn mehr als zwei Programme zu exportieren und von einander importieren, müssen die Befehle zum Verknüpfen dieser Programme zirkuläre Exporte berücksichtigen.  

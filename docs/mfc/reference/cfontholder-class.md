@@ -1,5 +1,5 @@
 ---
-title: CFontHolder Klasse | Microsoft Docs
+title: CFontHolder-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5cb28b738822b3e35aa840c731eb11bc2c2b83d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c110c0addfe14ed8ba9018345eb1f4e61fd5182
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338619"
 ---
 # <a name="cfontholder-class"></a>CFontHolder-Klasse
 Implementiert die vordefinierte Schriftarteigenschaft und kapselt die Funktionalität eines Windows-Schriftartobjekts und der `IFont` -Schnittstelle.  
@@ -63,13 +64,13 @@ class CFontHolder
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CFontHolder::GetDisplayString](#getdisplaystring)|Ruft die Zeichenfolge in einen Container Eigenschaftenbrowser angezeigt.|  
+|[CFontHolder::GetDisplayString](#getdisplaystring)|Ruft die Zeichenfolge, die im Eigenschaftenbrowser des Containers angezeigt.|  
 |[CFontHolder::GetFontDispatch](#getfontdispatch)|Gibt der Schriftart `IDispatch` Schnittstelle.|  
-|[CFontHolder::GetFontHandle](#getfonthandle)|Gibt ein Handle für eine Windows-Schriftart an.|  
-|[CFontHolder::InitializeFont](#initializefont)|Initialisiert ein `CFontHolder` Objekt.|  
-|[CFontHolder::QueryTextMetrics](#querytextmetrics)|Ruft Informationen für die zugehörige Schriftart ab.|  
-|[CFontHolder::ReleaseFont](#releasefont)|Trennt die `CFontHolder` -Objekt aus der `IFont` und `IFontNotification` Schnittstellen.|  
-|[CFontHolder::Select](#select)|Wählt eine Schriftartressource in einem Gerätekontext.|  
+|[CFontHolder::GetFontHandle](#getfonthandle)|Gibt ein Handle für eine Windows-Schriftart.|  
+|[CFontHolder::InitializeFont](#initializefont)|Initialisiert eine `CFontHolder` Objekt.|  
+|[CFontHolder::QueryTextMetrics](#querytextmetrics)|Ruft Informationen für die zugehörigen Schriftart ab.|  
+|[CFontHolder::ReleaseFont](#releasefont)|Trennt die Verbindung der `CFontHolder` -Objekt aus der `IFont` und `IFontNotification` Schnittstellen.|  
+|[CFontHolder::Select](#select)|Wählt eine Schriftartressource für einen Gerätekontext.|  
 |[CFontHolder::SetFont](#setfont)|Verbindet die `CFontHolder` -Objekt an eine `IFont` Schnittstelle.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
@@ -79,7 +80,7 @@ class CFontHolder
 |[CFontHolder::m_pFont](#m_pfont)|Ein Zeiger auf die `CFontHolder` des Objekts `IFont` Schnittstelle.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CFontHolder` eine Basisklasse verfügt nicht über.  
+ `CFontHolder` eine Basisklasse keinen.  
   
  Verwenden Sie diese Klasse, um benutzerdefinierte Schriftart-Eigenschaften für das Steuerelement zu implementieren. Informationen zum Erstellen von Eigenschaften finden Sie im Artikel [ActiveX-Steuerelemente: Verwenden von Schriftarten](../../mfc/mfc-activex-controls-using-fonts.md).  
   
@@ -111,21 +112,21 @@ BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `strValue`  
- Ein Verweis auf die [CString](../../atl-mfc-shared/reference/cstringt-class.md) , halten Sie die Anzeigezeichenfolge liegt.  
+ *strValue gespeichert*  
+ Ein Verweis auf die [CString](../../atl-mfc-shared/reference/cstringt-class.md) , die die Anzeigezeichenfolge enthalten ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Wert ist ungleich NULL, wenn die Zeichenfolge erfolgreich abgerufen wird; andernfalls 0.  
+ Ungleich NULL, wenn die Zeichenfolge erfolgreich abgerufen wird; andernfalls 0.  
   
 ##  <a name="getfontdispatch"></a>  CFontHolder::GetFontDispatch  
- Rufen Sie diese Funktion, um einen Zeiger auf die Schriftart Dispatch-Schnittstelle abzurufen.  
+ Rufen Sie diese Funktion, um einen Zeiger auf die Dispatchschnittstelle der Schriftart abzurufen.  
   
 ```  
 LPFONTDISP GetFontDispatch();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die `CFontHolder` des Objekts **IFontDisp** Schnittstelle. Beachten Sie, dass die Funktion aufruft `GetFontDispatch` müssen Aufrufen `IUnknown::Release` für diese Schnittstellenzeiger auf, wenn es nicht mehr benötigen.  
+ Ein Zeiger auf die `CFontHolder` des Objekts `IFontDisp` Schnittstelle. Beachten Sie, dass die Funktion aufruft, `GetFontDispatch` müssen Aufrufen `IUnknown::Release` auf diesen Schnittstellenzeiger, wenn es nicht mehr benötigen.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie `InitializeFont` vor dem Aufruf `GetFontDispatch`.  
@@ -143,24 +144,24 @@ HFONT GetFontHandle(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cyLogical`  
+ *cyLogical*  
  Höhe in logischen Einheiten, der das Rechteck, in dem das Steuerelement gezeichnet wird.  
   
- `cyHimetric`  
- Höhe im `MM_HIMETRIC` Einheiten des Steuerelements.  
+ *cyHimetric*  
+ Höhe in MM_HIMETRIC Einheiten des Steuerelements.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Handle für die Schriftart-Objekt; andernfalls **NULL**.  
+ Ein Handle auf das Objekt für die Schriftart andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Verhältnis von `cyLogical` und `cyHimetric` dient zum Berechnen der Größe ordnungsgemäße Anzeige in logischen Einheiten für die Punktgröße der Schriftart in ausgedrückt `MM_HIMETRIC` Einheiten:  
+ Das Verhältnis von *CyLogical* und *CyHimetric* wird verwendet, um die ordnungsgemäße Anzeigegröße in logischen Einheiten, die Schriftart, Schriftgrad, MM_HIMETRIC Einheiten ausgedrückt berechnen:  
   
- Anzeigegröße = ( `cyLogical`  /  `cyHimetric`) X Schriftgrad  
+ Anzeigegröße = ( *CyLogical* / *CyHimetric*) X Schriftgrad  
   
- Die Version ohne Parameter gibt ein Handle für eine Schriftart ordnungsgemäß dimensioniert wird, für den Bildschirm an.  
+ Die Version ohne Parameter gibt ein Handle für eine Schriftart für den Bildschirm ordnungsgemäß dimensioniert.  
   
 ##  <a name="initializefont"></a>  CFontHolder::InitializeFont  
- Initialisiert ein `CFontHolder` Objekt.  
+ Initialisiert eine `CFontHolder` Objekt.  
   
 ```  
 void InitializeFont(
@@ -169,16 +170,16 @@ void InitializeFont(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pFontDesc`  
- Zeiger auf eine Schriftart Beschreibung-Struktur ( [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)), der Schriftmerkmale angibt.  
+ *pFontDesc*  
+ Zeiger auf eine Schriftart Beschreibung ( [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)), der Schriftmerkmale angibt.  
   
- `pFontDispAmbient`  
- Ein Zeiger auf den Container ambient-Font-Eigenschaft.  
+ *pFontDispAmbient*  
+ Zeiger auf den Container ambient-Schriftart-Eigenschaft.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `pFontDispAmbient` ist nicht **NULL**, die `CFontHolder` -Objekt verbunden ist, um einen Klon der `IFont` Schnittstelle verwendet, die für den Container ambient-Font-Eigenschaft.  
+ Wenn *pFontDispAmbient* ist nicht NULL ist, die `CFontHolder` -Objekt verbunden ist, auf einen Klon der der `IFont` Schnittstelle, die durch den Container ambient-Schriftart-Eigenschaft verwendet.  
   
- Wenn `pFontDispAmbient` ist **NULL**, ein neues Schriftartobjekt wird erstellt, entweder von der Schriftart Beschreibung verweist `pFontDesc` oder, wenn der `pFontDesc` ist **NULL**, aus einer standardbeschreibung.  
+ Wenn *pFontDispAmbient* ist NULL, eine neue Schriftart-Objekt erstellt wird, entweder über die Schriftart Beschreibung verweist *pFontDesc* oder, wenn Sie *pFontDesc* NULL ist, eine Standardeinstellung aus die Beschreibung.  
   
  Mit dieser Funktion wird nach dem Erstellen einer `CFontHolder` Objekt.  
   
@@ -190,15 +191,15 @@ LPFONT m_pFont;
 ```  
   
 ##  <a name="querytextmetrics"></a>  CFontHolder::QueryTextMetrics  
- Ruft Informationen zu physischen Schriftart dargestellt durch die `CFontHolder` Objekt.  
+ Ruft Informationen auf der physischen Schriftart dargestellt durch die `CFontHolder` Objekt.  
   
 ```  
 void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lptm`  
- Ein Zeiger auf eine [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) -Struktur, die die Informationen erhält.  
+ *lptm*  
+ Ein Zeiger auf eine [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) -Struktur, die die Informationen zu erhalten.  
   
 ##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
  Diese Funktion trennt die `CFontHolder` -Objekt aus seiner `IFont` Schnittstelle.  
@@ -208,7 +209,7 @@ void ReleaseFont();
 ```  
   
 ##  <a name="select"></a>  CFontHolder::Select  
- Mit dieser Funktion wird zum Auswählen des Steuerelements Schriftart in den angegebenen Gerätekontext.  
+ Rufen Sie diese Funktion, um die Schriftart des Steuerelements im angegebenen Gerätekontext wählen.  
   
 ```  
 CFont* Select(
@@ -218,23 +219,23 @@ CFont* Select(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
- Gerätekontext, in dem die Schriftart ausgewählt ist.  
+ *pDC*  
+ Gerätekontext, die in die Schriftart ausgewählt ist.  
   
- `cyLogical`  
+ *cyLogical*  
  Höhe in logischen Einheiten, der das Rechteck, in dem das Steuerelement gezeichnet wird.  
   
- `cyHimetric`  
- Höhe im `MM_HIMETRIC` Einheiten des Steuerelements.  
+ *cyHimetric*  
+ Höhe in MM_HIMETRIC Einheiten des Steuerelements.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die Schriftart, die ersetzt wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [GetFontHandle](#getfonthandle) eine Erläuterung der `cyLogical` und `cyHimetric` Parameter.  
+ Finden Sie unter [GetFontHandle](#getfonthandle) eine Erläuterung der *CyLogical* und *CyHimetric* Parameter.  
   
 ##  <a name="setfont"></a>  CFontHolder::SetFont  
- Alle vorhandenen Schriftarten freigegeben und eine Verbindung der `CFontHolder` -Objekt an eine `IFont` Schnittstelle.  
+ Alle vorhandenen Schriftarten frei und verbindet die `CFontHolder` -Objekt an ein `IFont` Schnittstelle.  
   
 ```  
 void SetFont(LPFONT pNewFont);
@@ -242,7 +243,7 @@ void SetFont(LPFONT pNewFont);
   
 ### <a name="parameters"></a>Parameter  
  *pNewFont*  
- Zeiger auf die neue `IFont` Schnittstelle.  
+ Zeiger auf den neuen `IFont` Schnittstelle.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

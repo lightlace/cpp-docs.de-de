@@ -32,6 +32,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451952"
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Ordnet eine Zeichenfolge einer anderen zu, wobei eine angegebene Gebietsschema-abhängige Umwandlung durchgeführt wird. Mit dieser Funktion kann auch ein Sortierschlüssel für die Eingabezeichenfolge generiert werden.  

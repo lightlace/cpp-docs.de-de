@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368927"
 ---
 # <a name="binding-imports"></a>Binden von Importen
 Das Standardverhalten der Linker ist eine bindbare Importadresstabelle für die verzögert geladenen DLL zu erstellen. Wenn die DLL gebunden ist, versucht die Hilfsfunktion, die gebundene Informationen verwenden, statt **GetProcAddress** auf jedem der referenzierten Importe. Wenn der Zeitstempel oder die bevorzugte Adresse nicht den der geladenen DLL übereinstimmen, wird die Hilfsfunktion davon ausgegangen werden, die gebundenen Import Local Address Table ist veraltet und wird fortgesetzt, als wäre sie nicht vorhanden ist.  

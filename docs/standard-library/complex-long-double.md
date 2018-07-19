@@ -18,15 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 083ef4cea345e7b600782c09a7bdfdc09b4af3d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7bf1de055318f61c4d4322a2c9149c8c28b9afb9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962857"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-Beschreibt ein Objekt, das ein geordnetes Paar von Objekten speichert, die beide den Typ `long double` haben, wobei das erste Objekt dem reellen Teil einer komplexen Zahl und das zweite Objekt dem imaginären Teil entspricht.
+Beschreibt ein Objekt, das ein geordnetes Paar von Objekten des Typs speichert **long double**, wird das erste Objekt den reellen Teil einer komplexen Zahl und das zweite Objekt dem imaginären Teil.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,19 +47,19 @@ complex(
 
 ### <a name="parameters"></a>Parameter
 
-`_RealVal` Der Wert des Typs **long double** für den reellen Teil der zu erstellenden komplexen Zahl.
+*_RealVal* der Wert des Typs **long double** für den Realteil der komplexen Zahl, die erstellt wird.
 
-`_ImagVal` Der Wert des Typs `long double` für den imaginären Teil der zu erstellenden komplexen Zahl.
+*_ImagVal* der Wert des Typs **long double** für den imaginären Teil der komplexen Zahl, die erstellt wird.
 
-`complexNum` Die komplexe Zahl vom Typ **doppelte** oder vom Typ **"float"** , deren reellen und imaginären Teile werden verwendet, um eine komplexe Zahl des Typs initialisieren `long double` erstellt wird.
+*ComplexNum* die komplexe Zahl vom Typ **doppelte** oder eines Typs **"float"** , deren tatsächliche und imaginäre Teile werden verwendet, um eine komplexe Zahl des Typs initialisieren **long double**erstellt wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine komplexe Zahl des Typs `long double`.
+Eine komplexe Zahl vom Typ **long double**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die explizite Spezialisierung der complex-Vorlagenklasse in eine komplexe Klasse des Typs `long double` unterscheidet sich von der Vorlagenklasse nur in den Konstruktoren, die sie definiert. Die Konvertierung von `long double` in **float** darf implizit erfolgen, aber die Konvertierung von **double** in `long double` muss **explizit** erfolgen. Die Verwendung einer **expliziten** Konvertierung schließt die Initiierung mit Typkonvertierung über die Zuweisungssyntax aus.
+Die explizite Spezialisierung der Vorlagenklasse in eine komplexe Klasse des Typs komplexe **long double** unterscheidet sich von der Vorlagenklasse nur in den Konstruktoren, die sie definiert. Die Konvertierung von **long double** zu **"float"** darf implizit erfolgen, aber die Konvertierung von **doppelte** zu **long double** ist erforderlich sollen **explizite**. Die Verwendung einer **expliziten** Konvertierung schließt die Initiierung mit Typkonvertierung über die Zuweisungssyntax aus.
 
 Weitere Informationen zur Vorlagenklasse `complex` finden Sie unter [complex-Klasse](../standard-library/complex-class.md). Eine Liste der Member der `complex`-Vorlagenklasse finden Sie unter .
 

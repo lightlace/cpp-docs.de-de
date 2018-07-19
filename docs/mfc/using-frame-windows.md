@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381916"
 ---
 # <a name="using-frame-windows"></a>Verwenden von Rahmenfenstern
 Das MFC-Framework erstellt Dokument Rahmenfenster – sowie die Ansichten und die Dokumente – als Teil seiner Implementierung von neue und Befehlen im Menü Datei öffnen. Da der Großteil der Arbeit Rahmenfenster Frameworks, Rolle dabei spielen, Sie nur eine kleine erstellen, verwenden und diesen Fenstern zu zerstören. Sie können jedoch explizit eine eigene Rahmenfenster und untergeordnete Fenster für besondere Zwecke erstellen.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381807"
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>Zeichenkonstanten und bedingter Einschluss
 **ANSI 3.8.1** Ob der Wert einer Einzelzeichen-Zeichenkonstante in einem konstanten Ausdruck, der den bedingten Einschluss steuert, mit dem Wert derselben Zeichenkonstante im Ausführungszeichensatz übereinstimmt. Ob eine solche Zeichenkonstante einen negativen Wert haben kann  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135117"
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>Memberdeklarationen innerhalb einer Klasse oder Schnittstelle (C++/CLI)
 Die Deklaration von Eigenschaften und Operatoren wurde von Managed Extensions für C++ in Visual C++, Ausblenden von Details der zugrunde liegenden Implementierung, die in der Managed Extensions-Entwurf verfügbar gemacht wurden umfassend überarbeitet. Ereignisdeklarationen wurden ebenfalls geändert.  

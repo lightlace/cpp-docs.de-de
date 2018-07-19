@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357531"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM-Eigenschaftenseiten
 COM-Eigenschaftenseiten stellen eine Benutzeroberfläche bereit, zum Festlegen der Eigenschaften (oder die Methoden aufrufen) von einem oder mehreren COM-Objekten. Eigenschaftenseiten werden häufig von ActiveX-Steuerelementen verwendet, für das Bereitstellen von komplexe Benutzeroberflächen, mit die Steuerelementeigenschaften zur Entwurfszeit festgelegt werden können.  

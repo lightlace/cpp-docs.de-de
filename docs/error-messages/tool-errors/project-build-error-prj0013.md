@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318775"
 ---
 # <a name="project-build-error-prj0013"></a>Projektbuildfehler PRJ0013
 Möglicherweise sind nicht genügend Systemressourcen vorhanden. Ein Pipe, der zum Starten eines Builds erforderlich ist, konnte nicht erstellt werden.  

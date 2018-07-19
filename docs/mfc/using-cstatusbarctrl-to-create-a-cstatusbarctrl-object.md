@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f322003a36d89927930c0a57fd060078755f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb378bba1505f8bbc3739c070d52abe9ef4f8afc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953824"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>Verwenden von CStatusBarCtrl zum Erstellen eines CStatusBarCtrl-Objekts
 Hier ist ein Beispiel für eine typische Verwendung des [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md):  
@@ -36,7 +37,7 @@ Hier ist ein Beispiel für eine typische Verwendung des [CStatusBarCtrl](../mfc/
   
 4.  Rufen Sie [Sie SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) So legen Sie die Anzahl der Teile in einer Statusleisten-Steuerelement und dem rechten Rand der einzelnen Teile der Koordinate fest.  
   
-5.  Rufen Sie [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) auf den Text in einem bestimmten Teil des Statusleisten-Steuerelement festlegen. Die Meldung erklärt den geänderten Teil des Steuerelements für ungültig und veranlasst so, das beim nächsten Auftreten der `WM_PAINT`Meldung im Steuerelement der neue Text angezeigt wird.  
+5.  Rufen Sie [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) auf den Text in einem bestimmten Teil des Statusleisten-Steuerelement festlegen. Die Meldung erklärt den Teil des Steuerelements, das geändert wurde, aufgrund dessen der neue Text angezeigt, wenn das Steuerelement als Nächstes WM_PAINT-Meldung empfängt.  
   
  In einigen Fällen muss die Statusleiste nur eine Textzeile angezeigt. In diesem Fall stellen einen Aufruf von [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple). Mit dieser Option wird das StatusBar-Steuerelement in den "einfache" versetzt, das eine einzelne Textzeile anzeigt.  
   

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378232"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Debuginformationen in Objektdatei ablegen)
 Vollständige Debuginformationen in allen Objektdateien Leerzeichen aus einer vorkompilierten Headerdatei (PCH)-Datei bei Verwendung mit erstellt die ["/ Yc"](../../build/reference/yc-create-precompiled-header-file.md) und ["/ Z7"](../../build/reference/z7-zi-zi-debug-information-format.md) Optionen. Veraltet.  

@@ -1,5 +1,5 @@
 ---
-title: CInterfaceList Klasse | Microsoft Docs
+title: CInterfaceList-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fc523b1eccc88678cda48a0c7e429ea0fc09f9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 33cfcc072e000bc903cceb4ac5551071e35610d9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884375"
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList-Klasse
-Diese Klasse bietet Methoden, die hilfreich beim Erstellen einer Liste von COM-Schnittstellenzeigern.  
+Diese Klasse stellt nützliche Methoden aus, wenn Sie eine Liste der COM-Schnittstellenzeiger zu erstellen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,11 +38,11 @@ class CInterfaceList
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `I`  
- Eine COM-Schnittstelle, die Angabe des Typs der Zeiger gespeichert werden soll.  
+ *I*  
+ Eine COM-Schnittstelle, die den Typ des Zeigers gespeichert werden.  
   
- `piid`  
- Ein Zeiger auf die IID der `I`.  
+ *piid*  
+ Ein Zeiger auf die IID der *ich*.  
   
 ## <a name="members"></a>Member  
   
@@ -52,7 +53,7 @@ class CInterfaceList
 |[CInterfaceList::CInterfaceList](#cinterfacelist)|Der Konstruktor für die Schnittstellenliste.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse stellt einen Konstruktor und abgeleiteten Methoden zum Erstellen einer Liste von COM-Schnittstellenzeigern. Verwendung [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) Wenn ein Array erforderlich ist.  
+ Diese Klasse stellt einen Konstruktor und die abgeleiteten Methoden zum Erstellen einer Liste von COM-Schnittstellenzeiger. Verwendung [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) Wenn ein Array erforderlich ist.  
   
  Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
@@ -72,7 +73,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nBlockSize`  
+ *nBlockSize*  
  Die Blockgröße hat den Standardwert 10.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -82,4 +83,4 @@ CInterfaceList(UINT nBlockSize = 10) throw();
  [CAtlList-Klasse](../../atl/reference/catllist-class.md)   
  [CComQIPtr-Klasse](../../atl/reference/ccomqiptr-class.md)   
  [CComQIPtrElementTraits-Klasse](../../atl/reference/ccomqiptrelementtraits-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

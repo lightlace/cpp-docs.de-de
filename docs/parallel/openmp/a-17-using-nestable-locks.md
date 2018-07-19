@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689908"
 ---
 # <a name="a17---using-nestable-locks"></a>A.17   Verwenden von schachtelbaren Sperren
 Im folgenden Beispiel (für [Abschnitt 3.2](../../parallel/openmp/3-2-lock-functions.md) auf Seite 41) wird veranschaulicht, wie eine omp_nest_lock_t Sperre zum Synchronisieren von Updates sowohl für eine gesamte Struktur und eines seiner Elemente verwendet werden kann.  

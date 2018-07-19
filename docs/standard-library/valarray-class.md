@@ -38,31 +38,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7b0c0499b9dfbaf3cb1f19eba16fc684a229839
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0521d09f4f96c73c20022d88621671564e7ada78
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965525"
 ---
 # <a name="valarray-class"></a>valarray-Klasse
 
-Die Vorlagenklasse beschreibt ein Objekt, das eine Sequenz von Elementen des Typs **Type** steuert, die als Array gespeichert sind. Diese Klasse ist für das Ausführen von schnellen mathematischen Operationen vorgesehen und für rechnerische Leistung optimiert.
+Die Vorlagenklasse beschreibt ein Objekt, das eine Sequenz von Elementen des Typs steuert `Type` , die als Array gespeichert, für das Ausführen von schnellen mathematischer Operations vorgesehen und für rechenbetonte Leistung optimiert werden.
 
 ## <a name="remarks"></a>Hinweise
 
 Die Klasse ist eine Darstellung des mathematischen Konzepts einer sortierten Menge von Werten, und die Elemente werden fortlaufend ab null nummeriert. Die Klasse wird als Fastcontainer beschrieben, da sie einige, aber nicht alle Funktionen unterstützt, die von vollständigen Sequenzcontainern, wie etwa [vector](../standard-library/vector-class.md), unterstützt werden. Die Klasse unterscheidet sich in zwei wichtigen Aspekten von der vector-Vorlagenklasse:
 
-- Sie definiert zahlreiche arithmetische Operationen zwischen entsprechenden Elementen von **valarray\<Type>**-Objekten desselben Typs und derselben Länge, wie z.B. *xarr* = cos( *yarr*) + sin( *zarr*).
+- Sie definiert zahlreiche arithmetische Operationen zwischen entsprechenden Elementen von `valarray<Type>` Objekte desselben Typs und derselben Länge, wie z. B. *Xarr* = cos ( *Yarr*) + sin ( *Zarr*).
 
-- Sie definiert verschiedene interessante Möglichkeiten, ein **valarray\<Type>**-Objekt durch Überladen von [operator&#91;&#93;](#op_at) zu indizieren.
+- Sie definiert verschiedene interessante Möglichkeiten zu indizieren einer `valarray<Type>` -Objekt durch Überladen [Operator&#91;&#93;](#op_at).
 
-Für ein aus der **Type**-Klasse abgeleitetes Objekt gilt Folgendes:
+Ein Objekt der Klasse `Type`:
 
 - Es hat einen öffentlichen Standardkonstruktor, Destruktor, Kopierkonstruktor und Zuweisungsoperator mit üblichem Verhalten.
 
 - Es definiert nach Bedarf die arithmetischen Operatoren und mathematischen Funktionen, die für die Gleitkommatypen definiert sind (mit üblichem Verhalten).
 
-Insbesondere dürfen keine feinen Unterschiede zwischen einer Kopierkonstruktion und einer Standardkonstruktion bestehen, auf die eine Zuweisung folgt. Keiner der Vorgänge für Objekte, die aus der **Type**-Klasse abgeleitet wurden, darf Ausnahmen auslösen.
+Insbesondere dürfen keine feinen Unterschiede zwischen einer Kopierkonstruktion und einer Standardkonstruktion bestehen, auf die eine Zuweisung folgt. Keiner der Vorgänge für Objekte der Klasse `Type` möglicherweise Ausnahmen auslösen.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -130,9 +131,9 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>Parameter
 
-*_Func(Type)* das Funktionsobjekt auf jedes Element der operandenwertarray angewendet werden soll.
+*_Func(Type)* das Funktionsobjekt auf jedes Element des Valarray-Operanden angewendet werden.
 
-*_Func(const Type&)* Funktionsobjekts für Const auf jedes Element der operandenwertarray angewendet werden soll.
+*_Func(const Type&)* das Funktionsobjekt für Const, das auf die einzelnen Elemente des Valarray-Operanden angewendet werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -201,17 +202,18 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>Parameter
 
-`count` Die Anzahl der stellen die Elemente sind vorwärts verschoben werden sollen.
+*count*  
+ Die Anzahl der Stellen, um die die Elemente nach vorn verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein neues valarray-Objekt, in dem alle Elemente zyklisch um `count` Positionen in Richtung Anfang des valarray-Objekts bzw. in Bezug auf ihre Position im valarray-Operand nach links verschoben wurden.
+Ein neues valarray-Objekt in der alle Elemente verschoben wurden *Anzahl* Positionen zyklisch in Richtung Anfang des valarray-Objekts, in Bezug auf ihre Position im Valarray-Operand nach links.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein positiver Wert von `count` verschiebt die Elemente zyklisch um `count` Stellen nach links.
+Ein positiver Wert von *Anzahl* verschiebt die Elemente zyklisch Links *Anzahl* platziert.
 
-Ein negativer Wert von `count` verschiebt die Elemente zyklisch um `count` Stellen nach rechts.
+Ein negativer Wert von *Anzahl* verschiebt die Elemente zyklisch rechten *Anzahl* platziert.
 
 ### <a name="example"></a>Beispiel
 
@@ -300,7 +302,7 @@ Der maximale Wert der Elemente im valarray-Operand.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion vergleicht Werte durch Anwenden von **operator\<** oder **operator>** auf Elementpaare der Klasse **Type**, für die Operatoren für das Element **Type** bereitgestellt werden müssen.
+Die Memberfunktion vergleicht Werte durch Anwenden **Operator\<**  oder **Operator >** Elementpaare der Klasse `Type`, für die Operatoren für das Element angegeben werden muss `Type`.
 
 ### <a name="example"></a>Beispiel
 
@@ -352,7 +354,7 @@ Der Mindestwert der Elemente im valarray-Operand.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion vergleicht Werte durch Anwenden von **operator\<** oder **operator>** auf Elementpaare der Klasse **Type**, für die Operatoren für das Element **Type** bereitgestellt werden müssen.
+Die Memberfunktion vergleicht Werte durch Anwenden **Operator\<**  oder **Operator >** Elementpaare der Klasse `Type`, für die Operatoren für das Element angegeben werden muss `Type`.
 
 ### <a name="example"></a>Beispiel
 
@@ -406,7 +408,7 @@ Das valarray-Objekt von booleschen Werten, die die Negierung der Elementwerte de
 
 Die logische Operation **NOT** negiert die Elemente, da sie alle Nullen in Einsen umwandelt und alle Werte, die nicht null sind, als Einsen betrachtet und in Nullen umwandelt. Das zurückgegebene valarray-Objekt von booleschen Werten weist dieselbe Größe auf wie der valarray-Operand.
 
-Darüber hinaus gibt es auch einen bitweisen **NOT**[valarray::operator~](#op_dtor)-Operator, der die Negierung auf der Ebene von einzelnen Bits innerhalb der Binärdarstellung der Elemente `char` und `int` eines valarray-Objekts vornimmt.
+Es gibt auch einen bitweisen **nicht**[valarray:: Operator ~](#op_dtor) , der die Negierung auf der Ebene der einzelbits in die binäre Darstellung von **Char** und **Int**  Elemente eines valarray-Objekts.
 
 ### <a name="example"></a>Beispiel
 
@@ -459,11 +461,12 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Die valarray-Objekts oder der Wert eines Elementtyps, der das operandenwertarray, das ist das operandenwertarray elementweise, aufteilen.
+*right*  
+ Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Division des valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein valarray-Objekt, dessen Elemente den Rest aus der elementweisen Division des valarray-Operanden durch `right` darstellen.
+Ein valarray-Objekt, dessen Elemente den Rest aus der elementweisen Division des Valarray-Operanden durch *rechts*
 
 ### <a name="example"></a>Beispiel
 
@@ -523,17 +526,18 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Die valarray-Objekts oder der Wert eines Elementtyps identisch mit dem das operandenwertarray, die kombiniert werden, durch die logische elementweise **AND** mit operandenwertarray.
+*right*  
+ Das valarray-Objekts oder der Wert eines Elementtyps identisch mit dem des Valarray-Operanden, die kombiniert werden, durch den logischen elementweise `AND` mit dem Valarray-Operanden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein valarray-Objekt, dessen Elemente die elementweise logische **AND**-Operation des valarray-Operanden durch `right` darstellen.
+Ein valarray-Objekt, dessen Elemente die elementweise logische `AND` des Valarray-Operanden durch *rechts*
 
 ### <a name="remarks"></a>Hinweise
 
-Eine bitweise Operation kann nur verwendet werden, um Bits in `char`- und `int`-Datentypen und -Varianten und nicht in den Datentypen **float**, **double**, **longdouble**, `void`, `bool` oder in anderen komplexeren Datentypen bearbeitet werden.
+Eine bitweise Operation kann nur verwendet werden, um Bits in **Char** und **Int** -Datentypen und-Varianten und nicht in **"float"**, **doppelte**, **Longdouble**, **"void"**, **"bool"**, oder in anderen komplexeren Datentypen.
 
-Für die bitweise AND-Operation gilt dieselbe Wahrheitstabelle wie für die logische **AND**-Operation. Die bitweise AND-Operation wird jedoch nur auf den Datentyp auf der Ebene der Einzelbits angewendet. Wenn die Bits *b*1 und *b*2 gegeben sind, ist *b*1 **AND** *b*2 **TRUE**, wenn beide Bits TRUE sind; **FALSE**, wenn mindestens ein Bit FALSE ist.
+Der bitweise AND weist dieselbe Wahrheitstabelle wie für die logische `AND` jedoch nur auf den Datentyp auf der Ebene der einzelbits angewendet. Bits angegebenen *b*1 und *b*2, *b*1 `AND` *b*2 **"true"** Wenn beide Bits true sind; sind. **"false"** Wenn mindestens eine "false".
 
 ### <a name="example"></a>Beispiel
 
@@ -593,11 +597,12 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Der Wert, der angibt, des Betrag der Verschiebung nach rechts oder valarray-Objekt zurück, dessen Elemente die elementweisen Betrag der Verschiebung nach rechts an.
+*right*  
+ Der Wert, der den Betrag angibt, um den die Bits nach rechts verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach rechts verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein valarray-Objekt, dessen Elemente um den in `right` angegebenen Betrag nach rechts verschoben wurden.
+Ein valarray-Objekt, dessen Elemente wurden, nach rechts verschoben in angegebene Menge *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -661,11 +666,12 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Der Wert, der angibt, des Betrag der Verschiebung nach links oder valarray-Objekt zurück, dessen Elemente die elementweisen Betrag der Verschiebung nach links an.
+*right*  
+ Der Wert, der den Betrag angibt, um den die Bits nach links verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach links verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein valarray-Objekt, dessen Elemente um den in `right` angegebenen Betrag nach links verschoben wurden.
+Ein valarray-Objekt, dessen Elemente verschoben wurden, bleiben in angegebene Menge *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -730,11 +736,12 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Die valarray-Objekts oder der Wert eines Elementtyps, der das operandenwertarray, die das operandenwertarray elementweise, multiplizieren.
+*right*  
+ Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Multiplikation des valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente elementweisen Produkts von operandenwertarray wurden, und `right`.
+Ein valarray-Objekt, dessen Elemente das elementweise Produkt des Valarray-Operanden und *rechten*.
 
 ### <a name="example"></a>Beispiel
 
@@ -845,11 +852,12 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Die valarray-Objekts oder der Wert eines Elementtyps, der das operandenwertarray, das, elementweise, um das operandenwertarray hinzugefügt werden soll.
+*right*  
+ Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Addition mit dem valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente die elementweise Summe der operandenwertarray sind, und `right`.
+Ein valarray-Objekt, dessen Elemente die elementweise Summe des Valarray-Operanden und *rechten*.
 
 ### <a name="example"></a>Beispiel
 
@@ -960,11 +968,12 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Die valarray-Objekts oder der Wert eines Elementtyps, der das operandenwertarray, die, elementweise, aus der operandenwertarray subtrahiert werden soll.
+*right*  
+ Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Subtraktion vom valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente die elementweise Differenz zwischen der operandenwertarray sind, und `right`.
+Ein valarray-Objekt, dessen Elemente die elementweise Differenz des Valarray-Operanden und *rechten*.
 
 ### <a name="example"></a>Beispiel
 
@@ -1024,11 +1033,12 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Die valarray-Objekts oder der Wert eines Elementtyps, der das operandenwertarray, die, elementweise, das operandenwertarray geteilt werden soll.
+*right*  
+ Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem des valarray-Operanden für die elementweise Division durch den valarray-Operanden identisch ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente sind von den elementweise Quotienten operandenwertarray, geteilt durch `right`.
+Ein valarray-Objekt, dessen Elemente den elementweisen Quotienten des Valarray-Operanden dividiert durch *rechten*.
 
 ### <a name="example"></a>Beispiel
 
@@ -1098,25 +1108,31 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Valarray operandenwertarray kopiert werden soll.
+*right*  
+ Das valarray-Objekt, das in den valarray-Operanden kopiert wird.
 
-`val` Der Wert, der Elemente des Valarray-Operanden zugewiesen werden soll.
+*val*  
+ Der Wert, der den Elementen des valarray-Operanden zugewiesen wird.
 
-`_Slicearray` Die Slice_array operandenwertarray kopiert werden soll.
+*_Slicearray*  
+ Das slice_array-Element, das in den valarray-Operanden kopiert wird.
 
-`_Gslicearray` Die Gslice_array operandenwertarray kopiert werden soll.
+*_Gslicearray*  
+ Das gslice_array-Element, das in den valarray-Operanden kopiert wird.
 
-`_Maskarray` Die Mask_array operandenwertarray kopiert werden soll.
+*_Maskarray*  
+ Das mask_array-Element, das in den valarray-Operanden kopiert wird.
 
-`_Indarray` Die Indirect_array operandenwertarray kopiert werden soll.
+*_Indarray*  
+ Das indirect_array-Element, das in den valarray-Operanden kopiert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der erste Memberoperator ersetzt die gesteuerte Sequenz durch eine Kopie der von `right` gesteuerten Sequenz.
+Der erste Memberoperator ersetzt die kontrollierte Sequenz durch eine Kopie der gesteuerte Sequenz durch *rechten*.
 
 Der zweite Memberoperator ist identisch mit dem ersten, hat aber einen [Rvalue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-Der dritte Memberoperator ersetzt jedes Element der gesteuerten Sequenz mit einer Kopie von `val`.
+Der dritte Memberoperator ersetzt jedes Element der gesteuerten Sequenz eine Kopie des *Val*.
 
 Die restlichen Memberoperatoren ersetzen die Elemente der gesteuerten Sequenz, die anhand ihrer Argumente ausgewählt wurden und die nur von [operator&#91;&#93;](#op_at) generiert werden.
 
@@ -1210,15 +1226,20 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>Parameter
 
-`_Off` Der Index des Elements, das ein Wert zugewiesen werden.
+*_Off*  
+ Der Index des Elements, das einem Wert zugewiesen werden soll.
 
-`_Slicearray` Ein Slice_array eines valarray-Objekts, der angibt, eine Teilmenge ausgewählt oder an ein neues Valarray zurückgegeben werden sollen.
+*_Slicearray*  
+ Ein slice_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
 
-`_Gslicearray` Ein Gslice_array eines valarray-Objekts, der angibt, eine Teilmenge ausgewählt oder an ein neues Valarray zurückgegeben werden sollen.
+*_Gslicearray*  
+ Ein gslice_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
 
-*_Boolarray* eine Bool_array eines valarray-Objekts, der angibt, eine Teilmenge ausgewählt oder an ein neues Valarray zurückgegeben werden sollen.
+*_Boolarray*  
+ Ein bool_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
 
-`_Indarray` Ein Indirect_array eines valarray-Objekts, der angibt, eine Teilmenge ausgewählt oder an ein neues Valarray zurückgegeben werden sollen.
+*_Indarray*  
+ Ein indirect_array-Element eines valarray-Objekts, das eine Teilmenge angibt, die ausgewählt oder an ein neues valarray-Objekt zurückgegeben werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1226,7 +1247,7 @@ Ein Verweis auf ein Element oder auf den Wert, den es am angegebenen Index oder 
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberoperator ist überladen, sodass bieten mehrere Methoden zur Auswahl von Sequenzen von Elementen aus den Spalten von gesteuert *\****dies**. Die erste Gruppe von fünf Memberoperatoren werden zusammen mit verschiedenen Überladungen von [operator=](#op_eq) (und anderen zuweisenden Operatoren) verwendet, um ein selektives Ersetzen (Slicing) der gesteuerten Sequenz zu ermöglichen. Dabei müssen die ausgewählten Elemente vorhanden sein.
+Der Memberoperator wird überladen, um bieten verschiedene Möglichkeiten zum Auswählen von Sequenzen von Elementsequenzen aus denjenigen von gesteuert *\****dies**. Die erste Gruppe von fünf Memberoperatoren werden zusammen mit verschiedenen Überladungen von [operator=](#op_eq) (und anderen zuweisenden Operatoren) verwendet, um ein selektives Ersetzen (Slicing) der gesteuerten Sequenz zu ermöglichen. Dabei müssen die ausgewählten Elemente vorhanden sein.
 
 Wenn [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) beim Kompilieren als 1 oder 2 definiert ist, tritt beim Zugriff auf ein Element außerhalb des valarray-Objekts ein Laufzeitfehler auf.  Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
 
@@ -1246,11 +1267,12 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Die valarray-Objekts oder der Wert eines Elementtyps, der das operandenwertarray, die kombiniert werden, durch die logischen exklusiv elementweise **XOR** mit operandenwertarray.
+*right*  
+ Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem valarray-Operanden identisch ist, der durch den logischen **XOR**-Operator mit dem valarray-Operanden elementweise verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente die elementweise logischen exklusiv sind **XOR** des Valarray-Operanden und `right`.
+Ein valarray-Objekt, dessen Elemente die elementweise logische **XOR** des Valarray-Operanden und *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1318,15 +1340,16 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Die valarray-Objekts oder der Wert eines Elementtyps, der das operandenwertarray, die kombiniert werden, durch die bitweise elementweise `OR` mit operandenwertarray.
+*right*  
+ Das valarray-Objekt oder der Wert eines Elementtyps, der mit dem valarray-Operanden identisch ist, der durch den bitweisen `OR`-Operator mit dem valarray-Operanden elementweise verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente die elementweise bitweiser sind `OR` des Valarray-Operand vom `right`.
+Ein valarray-Objekt, dessen Elemente die elementweise bitweise `OR` des Valarray-Operanden durch *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine bitweise Operation kann nur verwendet werden, um Bits in `char`- und `int`-Datentypen und -Varianten und nicht in den Datentypen **float**, **double**, **longdouble**, `void`, `bool` oder in anderen komplexeren Datentypen bearbeitet werden.
+Eine bitweise Operation kann nur verwendet werden, um Bits in **Char** und **Int** -Datentypen und-Varianten und nicht in **"float"**, **doppelte**, **Longdouble**, **"void"**, **"bool"**, oder in anderen komplexeren Datentypen.
 
 Für die bitweise `OR`-Operation gilt dieselbe Wahrheitstabelle wie für die logische `OR`-Operation. Die bitweise OR-Operation wird jedoch nur auf den Datentyp auf der Ebene der Einzelbits angewendet. Wenn die Bits *b*1 und *b*2 gegeben sind, ist *b*1 `OR` *b*2 **TRUE**, wenn mindestens eines der Bits TRUE ist; **FALSE**, wenn beide Bits FALSE sind.
 
@@ -1385,7 +1408,7 @@ The element-by-element result of the logical OR
 
 ## <a name="op_dtor"></a> valarray::operator~
 
-Ein unärer Operator, der die bitweisen **NOT**-Werte jedes Elements eines valarray-Objekts abruft.
+Ein unäroperator, der den bitweisen abruft, `NOT` -Werte jedes Elements eines valarray-Objekts.
 
 ```cpp
 valarray<Type> operator~() const;
@@ -1393,13 +1416,13 @@ valarray<Type> operator~() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Das valarray-Objekt von booleschen Werten, die die bitweise **NOT**-Operation der Elementwerte des valarray-Operanden darstellen.
+Das valarray-Objekt mit booleschen Werten, die die bitweise `NOT` der Elementwerte des Valarray-Operanden.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine bitweise Operation kann nur verwendet werden, um Bits in `char`- und `int`-Datentypen und -Varianten und nicht in den Datentypen **float**, **double**, **longdouble**, `void`, `bool` oder in anderen komplexeren Datentypen bearbeitet werden.
+Eine bitweise Operation kann nur verwendet werden, um Bits in **Char** und **Int** -Datentypen und-Varianten und nicht in **"float"**, **doppelte**, **Longdouble**, **"void"**, **"bool"** oder in anderen komplexeren Datentypen.
 
-Für die bitweise **NOT**-Operation gilt dieselbe Wahrheitstabelle wie für die logische **NOT**-Operation. Die bitweise NOT-Operation wird jedoch nur auf den Datentyp auf der Ebene der Einzelbits angewendet. Wenn das Bit *b* gegeben ist, ist ~ *b* TRUE, wenn *b* FALSE ist und FALSE, wenn *b* TRUE ist. Der logische **NOT**[operator!](#op_not) wird auf Elementebene angewendet, wobei alle Werte, die nicht null sind, als **TRUE** zählen, und das Ergebnis ein valarray-Objekt mit booleschen Werten ist. Der bitweise **NOToperator~** kann dagegen je nach dem Ergebnis der bitweisen Operation ein valarray-Objekt mit anderen Werten als 0 und 1 ergeben.
+Für die bitweise `NOT`-Operation gilt dieselbe Wahrheitstabelle wie für die logische `NOT`-Operation. Die bitweise OR-Operation wird jedoch nur auf den Datentyp auf der Ebene der Einzelbits angewendet. Wenn das Bit *b* gegeben ist, ist ~ *b* TRUE, wenn *b* FALSE ist und FALSE, wenn *b* TRUE ist. Der logische **NOT**[operator!](#op_not) wird auf Elementebene angewendet, wobei alle Werte, die nicht null sind, als **TRUE** zählen, und das Ergebnis ein valarray-Objekt mit booleschen Werten ist. Der bitweise `NOToperator~`, im Gegensatz dazu kann dazu führen, mit anderen Werten als 0 oder 1 ist, je nach Ergebnis der bitweisen Operation ein valarray-Objekt.
 
 ### <a name="example"></a>Beispiel
 
@@ -1492,9 +1515,11 @@ void resize(
 
 ### <a name="parameters"></a>Parameter
 
-`_Newsize` Die Anzahl der Elemente im "Valarray" dessen Größe geändert wurde.
+*_Newsize*  
+ Die Anzahl der Elemente im „valarray“, dessen Größe angepasst wird.
 
-`val` Der Wert für die Elemente des Valarray-Größe gewährt werden.
+*val*  
+ Der Wert, der an die Elemente des „valarray“ übergeben wird, dessen Größe angepasst wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1561,17 +1586,18 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>Parameter
 
-`count` Die Anzahl der stellen die Elemente sind vorwärts verschoben werden sollen.
+*count*  
+ Die Anzahl der Stellen, um die die Elemente nach vorn verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein neues valarray-Objekt, in dem alle Elemente um `count` Positionen in Richtung Anfang des valarray-Objekts bzw. in Bezug auf ihre Position im valarray-Operand nach links verschoben wurden.
+Ein neues valarray-Objekt in der alle Elemente verschoben wurden *Anzahl* Positionen in Richtung Anfang des valarray-Objekts, in Bezug auf ihre Position im Valarray-Operand nach links.
 
 ### <a name="remarks"></a>Hinweise
 
-Ein positiver Wert von `count` verschiebt die Elemente um `count` Stellen nach links und füllt mit Nullen auf.
+Ein positiver Wert von *Anzahl* verschiebt die Elemente werden Links *Anzahl* platziert werden, füllt mit Nullen.
 
-Ein negativer Wert von `count` verschiebt die Elemente um `count` Stellen nach rechts und füllt mit Nullen auf.
+Ein negativer Wert von *Anzahl* verschiebt die Elemente nach rechts *Anzahl* platziert werden, füllt mit Nullen.
 
 ### <a name="example"></a>Beispiel
 
@@ -1715,7 +1741,7 @@ Die Summe der Elemente des valarray-Operanden.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn die Länge mehr als Eins beträgt, addiert die Memberfunktion Werte zur Summe durch Anwenden von `operator+=` auf Elementpaare der Klasse **Type**, für die folglich Operatoren für Elemente vom Typ **Type** bereitgestellt werden müssen.
+Wenn die Länge größer als eins ist, addiert die Memberfunktion Werte zur Summe durch Anwenden von `operator+=` Elementpaare der Klasse `Type`, welcher Operator, daher muss angegeben werden für Elemente des Typs `Type`.
 
 ### <a name="example"></a>Beispiel
 
@@ -1762,11 +1788,11 @@ void swap(valarray& right);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`right`|Ein `valarray`-Objekt, das die auszutauschenden Elemente bereitgestellt.|
+|*right*|Ein `valarray`-Objekt, das die auszutauschenden Elemente bereitgestellt.|
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `*this` und `right`aus. Sie führt dies in einer konstanten Zeit aus, sie löst keine Ausnahmen aus, und sie macht keine Verweise, Zeiger oder Iteratoren ungültig, die Elemente in den beiden kontrollierten Sequenzen bestimmen.
+Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `*this` und *rechten*. Sie führt dies in einer konstanten Zeit aus, sie löst keine Ausnahmen aus, und sie macht keine Verweise, Zeiger oder Iteratoren ungültig, die Elemente in den beiden kontrollierten Sequenzen bestimmen.
 
 ## <a name="valarray"></a> valarray::valarray
 
@@ -1810,31 +1836,40 @@ valarray(
 
 ### <a name="parameters"></a>Parameter
 
-`Count` Die Anzahl der Elemente im "Valarray" sein.
+*Anzahl*  
+ Die Anzahl von Elementen im Wertarray.
 
-`Val` Der Wert, der beim Initialisieren der Elemente im "Valarray" verwendet werden.
+*val*  
+ Der beim Initialisieren der Elemente im Wertarray zu verwendende Wert.
 
-`Ptr` Ein Zeiger auf die Werte, die zum Initialisieren der Elemente im "Valarray" verwendet werden.
+*PTR*  
+ Zeiger auf die beim Initialisieren der Elemente im Wertarray zu verwendenden Werte.
 
-`Right` Ein vorhandenes Wertarray, mit der neue Wertarray initialisiert werden soll.
+*Rechts*  
+ Ein vorhandenes Wertarray, mit dem das neue Wertarray initialisiert wird.
 
-`SliceArray` Ein Slice_array, dessen Elementwerte werden zur Initialisierung der Elemente des Wertarrays verwendet werden soll.
+*SliceArray*  
+ Ein slice_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
 
-`GsliceArray` Ein Gslice_array, dessen Elementwerte werden zur Initialisierung der Elemente des Wertarrays verwendet werden soll.
+*GsliceArray*  
+ Ein gslice_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
 
-`MaskArray` Ein Mask_array, dessen Elementwerte werden zur Initialisierung der Elemente des Wertarrays verwendet werden soll.
+*MaskArray*  
+ Ein mask_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
 
-`IndArray` Ein Indirect_array, dessen Elementwerte werden zur Initialisierung der Elemente des Wertarrays verwendet werden soll.
+*IndArray*  
+ Ein indirect_array-Element, dessen Elementwerte beim Initialisieren der Elemente des zu erstellenden Wertarrays verwendet werden sollen.
 
-`IList` Das initializer_list-Element, das die zu kopierenden Elemente enthält.
+*IList*  
+ Das initializer_list-Element, in dem die zu kopierenden Elemente enthalten sind.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste (standardmäßige) Konstruktor initialisiert das Objekt in ein leeres Array. Mit den folgenden drei Konstruktoren wird jeweils wie folgt das Objekt in einem Array von `Count`-Elementen initialisiert:
+Der erste (standardmäßige) Konstruktor initialisiert das Objekt in ein leeres Array. Die nächsten drei Konstruktoren wird jeweils initialisieren Sie das Objekt in ein Array von *Anzahl* Elemente wie folgt:
 
 - Bei expliziten `valarray(size_t Count)` wird jedes Element mit dem Standardkonstruktor initialisiert.
 
-- Bei `valarray(const Type& Val, Count)` wird jedes Element mit `Val` initialisiert.
+- Für `valarray(const Type& Val, Count)`, jedes Element wird mit initialisiert *Val*.
 
 - Bei `valarray(const Type* Ptr, Count)` wird das Element an Position `I` mit `Ptr`[ `I`] initialisiert.
 
@@ -1902,7 +1937,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter **Type** dar.
+Der Type stellt ein Synonym für den Vorlagenparameter `Type` dar.
 
 ### <a name="example"></a>Beispiel
 

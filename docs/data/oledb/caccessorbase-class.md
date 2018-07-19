@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090795"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase-Klasse
 Alle Accessoren in den OLE DB-Vorlagen, die von dieser Klasse abgeleitet werden. `CAccessorBase` ermöglicht ein Rowset, um mehrere Accessoren zu verwalten. Darüber hinaus Bindung für Parameter und Ausgabespalten.  

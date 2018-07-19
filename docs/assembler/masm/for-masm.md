@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051942"
 ---
 # <a name="for-masm"></a>FOR (MASM)
 Einen Block, der einmal für jede wiederholt wird, kennzeichnet `argument`, mit dem aktuellen `argument` ersetzen `parameter` bei jeder Wiederholung.  

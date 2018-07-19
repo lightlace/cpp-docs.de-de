@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83180020c20f78c16af0b1b33bada91936b6af9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f065f7c00d3853d00c1063cd5b2838ec6d1d27b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952996"
 ---
 # <a name="identity-structure"></a>identity-Struktur
 
@@ -39,13 +40,13 @@ struct identity {
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`left`|Der zu identifizierende Wert.|
+|*left*|Der zu identifizierende Wert.|
 
 ## <a name="remarks"></a>Hinweise
 
 Die Klasse enthält die öffentliche Typdefinition `type`, was dem Vorlagenparametertyp entspricht. Es wird in Verbindung mit der Vorlagenfunktion [forward](../standard-library/utility-functions.md#forward) verwendet, um sicherzustellen, dass ein Funktionsparameter den gewünschten Typ aufweist.
 
-Aufgrund der Kompatibilität mit älteren Codes definiert die Klasse auch die identity-Funktion `operator()`, welche deren Argument `left` zurückgibt.
+Für die Kompatibilität mit älteren Codes, definiert die Klasse auch die Identity-Funktion `operator()` Arguments zurückgegeben *linken*.
 
 ## <a name="requirements"></a>Anforderungen
 

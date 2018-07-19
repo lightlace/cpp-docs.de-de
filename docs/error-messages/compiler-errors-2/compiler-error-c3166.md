@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247705"
 ---
 # <a name="compiler-error-c3166"></a>Compilerfehler Fehler C3166
 "Zeiger": einen Zeiger auf einen internen __gc-Zeiger als Member von "Type" kann nicht deklariert werden  

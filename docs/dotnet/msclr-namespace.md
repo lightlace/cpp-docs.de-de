@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132907"
 ---
 # <a name="msclr-namespace"></a>msclr-Namespace
 Die `msclr` -Namespace enthält alle Klassen, die von der C++-Unterstützungsbibliothek. Weitere Informationen zu diesen Klassen finden Sie unter [C++-Unterstützungsbibliothek](../dotnet/cpp-support-library.md).  

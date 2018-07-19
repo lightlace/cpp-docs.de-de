@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392574"
 ---
 # <a name="ismbc-routines"></a>_ismbc-Routinen
 Jede **_ismbc**-Routine prüft ein angegebenes Multibytezeichen `c` auf eine bestimmte Bedingung.  

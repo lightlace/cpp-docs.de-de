@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385625"
 ---
 # <a name="using-ctooltipctrl"></a>Verwenden von CToolTipCtrl
 Die [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) -Klasse kapselt die Funktionalität eines ein QuickInfo-Steuerelement, ein kleines Popupfenster, in dem eine einzelne Textzeile, beschreibt den Zweck eines Tools in einer Anwendung angezeigt. Eine QuickInfo wird in den meisten Fällen, erscheint nur, wenn der Benutzer fügt den Cursor auf einem Tool und bleibt es zumeist Zweitens ausgeblendet. Die QuickInfo wird angezeigt, in der Nähe des Cursors und verschwindet, wenn der Benutzer eine Maustaste klickt oder den Cursor aus dem Tool verschiebt.  

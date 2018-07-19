@@ -1,5 +1,5 @@
 ---
-title: Win32ThreadTraits Klasse | Microsoft Docs
+title: Win32ThreadTraits-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b863808a2367cae8878728403dbf11265b9e819
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c61ba91fe29610f4b313cf31c65f514ef8e46f96
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883673"
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits-Klasse
-Diese Klasse stellt die Funktion für einen Windows-Thread. Verwenden Sie diese Klasse, wenn der Thread CRT-Funktionen nicht verwenden.  
+Diese Klasse stellt die Erstellungsfunktion für einen Windows-Thread. Verwenden Sie diese Klasse aus, wenn der Thread nicht CRT-Funktionen nutzen.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,12 +45,12 @@ class Win32ThreadTraits
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Win32ThreadTraits::CreateThread](#createthread)|(Statisch) Mit dieser Funktion wird zur Erstellung eines Threads, das CRT-Funktionen nicht verwendet werden soll.|  
+|[Win32ThreadTraits::CreateThread](#createthread)|(Statisch) Rufen Sie diese Funktion zur Erstellung eines Threads, das keine CRT-Funktionen verwenden sollten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Thread-Merkmale sind Klassen, die eine Funktion für einen bestimmten Typ des Threads zu ermöglichen. Die Erstellungsfunktion weist die gleiche Signatur und die Semantik wie die Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Funktion.  
+ Thread "traits" sind Klassen, die eine Funktion für einen bestimmten Typ des Threads zu ermöglichen. Die Erstellungsfunktion weist die gleiche Signatur und die gleiche Semantik wie die Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Funktion.  
   
- Thread-Merkmale werden durch die folgenden Klassen verwendet:  
+ Thread "traits" werden die folgenden Klassen verwendet:  
   
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)  
   
@@ -61,7 +62,7 @@ class Win32ThreadTraits
  **Header:** atlbase.h  
   
 ##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread  
- Mit dieser Funktion wird zur Erstellung eines Threads, das CRT-Funktionen nicht verwendet werden soll.  
+ Rufen Sie diese Funktion zur Erstellung eines Threads, das keine CRT-Funktionen verwenden sollten.  
   
 ```
 static HANDLE CreateThread(
@@ -74,26 +75,26 @@ static HANDLE CreateThread(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpsa`  
+ *lpsa*  
  Die Sicherheitsattribute für den neuen Thread.  
   
- `dwStackSize`  
+ *dwStackSize*  
  Die Stapelgröße für den neuen Thread.  
   
- `pfnThreadProc`  
+ *pfnThreadProc*  
  Die Threadprozedur des neuen Threads.  
   
- `pvParam`  
+ *pvParam*  
  Der Parameter an die Threadprozedur übergeben werden.  
   
- `dwCreationFlags`  
- Die Erstellung flags (0 oder CREATE_SUSPENDED).  
+ *"dwCreationFlags"*  
+ Die Erstellung flags ("0" oder "CREATE_SUSPENDED").  
   
- `pdwThreadId`  
- [out] Die Adresse der DWORD-Variablen, die bei Erfolg, die Thread-ID des neu erstellten Threads empfängt.  
+ *pdwThreadId*  
+ [out] Adresse der DWORD-Variable, die bei Erfolg die Thread-ID des neu erstellten Threads empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt das Handle an den neu erstellten Thread oder NULL bei einem Fehler zurück. Rufen Sie [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) um erweiterte Fehlerinformationen abzurufen.  
+ Gibt das Handle auf das neu erstellte Thread oder NULL bei einem Fehler zurück. Rufen Sie [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) um erweiterte Fehlerinformationen abzurufen.  
   
 ### <a name="remarks"></a>Hinweise  
  Finden Sie unter [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) für Weitere Informationen zu den Parametern für diese Funktion.  
@@ -101,4 +102,4 @@ static HANDLE CreateThread(
  Diese Funktion ruft `CreateThread` um den Thread erstellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

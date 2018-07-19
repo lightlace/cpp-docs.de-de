@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343511"
 ---
 # <a name="ole-classes"></a>OLE-Klassen
 Die OLE-Klassen arbeiten Sie mit der anderen Anwendung Framework-Klassen zum einfachen Zugriff auf das ActiveX-API, erteilen Ihre Programme eine einfache Möglichkeit, die Leistungsfähigkeit von ActiveX-Steuerelementen für Ihre Benutzer bereitzustellen. Mithilfe von ActiveX-, können Sie die folgenden Schritte ausführen:  

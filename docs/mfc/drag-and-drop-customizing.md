@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344242"
 ---
 # <a name="drag-and-drop-customizing"></a>Drag & Drop: Anpassen
 Die standardmäßige Implementierung des Drag-and-Drop-Features reicht für die meisten Anwendungen zur Verfügung. Einige Anwendungen erfordern jedoch, dass dieses Standardverhalten geändert werden. Dieser Artikel beschreibt die erforderlichen Schritte zum Ändern dieser Standardeinstellungen. Darüber hinaus können Sie diese Technik verwenden, Anwendungen her, die Verbunddokumente als Drop-Quellen nicht unterstützen.  

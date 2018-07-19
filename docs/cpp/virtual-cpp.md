@@ -1,5 +1,5 @@
 ---
-title: virtuelle (C++) | Microsoft Docs
+title: virtuelle (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 909fd3fde92479b2e5407608026cb01ec17fced2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9eba5462caf739d78236e10df018fc07421ea876
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939119"
 ---
 # <a name="virtual-c"></a>virtual (C++)
-Das `virtual`-Schlüsselwort deklariert eine virtuelle Funktion oder eine virtuelle Basisklasse.  
+Die **virtuellen** -Schlüsselwort deklariert eine virtuelle Funktion oder eine virtuelle Basisklasse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,22 +38,22 @@ virtual [access-specifier] base-class-name
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `type-specifiers`  
+ *Typspezifizierer*  
  Gibt den Rückgabetyp der virtuellen Memberfunktion an.  
   
- `member-function-declarator`  
+ *Member der funktionsdeklarator*  
  Deklariert eine Memberfunktion.  
   
- `access-specifier`  
- Definiert die Ebene des Zugriffs auf die Basisklasse, `public`, `protected` oder `private`. Kann vor oder nach dem `virtual`-Schlüsselwort angezeigt werden.  
+ *Zugriffsspezifizierer*  
+ Definiert die Ebene des Zugriffs auf die Basisklasse, **öffentliche**, **geschützt** oder **private**. Kann vor oder nach dem Auftreten der **virtuellen** Schlüsselwort.  
   
- `base-class-name`  
+ *Basis-Class-name*  
  Identifiziert einen zuvor deklarierten Klassentyp.  
   
 ## <a name="remarks"></a>Hinweise  
  Finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md) für Weitere Informationen.  
   
- Siehe auch die folgenden Schlüsselwörter: [Klasse](../cpp/class-cpp.md), [private](../cpp/private-cpp.md), [öffentlichen](../cpp/public-cpp.md), und [geschützt](../cpp/protected-cpp.md).  
+ Siehe auch die folgenden Schlüsselwörter: [Klasse](../cpp/class-cpp.md), [private](../cpp/private-cpp.md), [öffentliche](../cpp/public-cpp.md), und [geschützt](../cpp/protected-cpp.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Schlüsselwörter](../cpp/keywords-cpp.md)

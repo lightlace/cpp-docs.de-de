@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379379"
 ---
 # <a name="decorated-names"></a>Ergänzte Namen
 Funktionen, Daten und Objekte werden in C- und C++-Programmen intern durch ihre ergänzten Namen dargestellt. Ein *ergänzten Namens* ist eine codierte Zeichenfolge, die vom Compiler während der Kompilierung eines Objekts, Daten oder Funktionsdefinition erstellt. Er zeichnet Aufrufkonventionen, Typen, Funktionsparameter und sonstige Informationen zusammen mit dem Namen auf. Diese namensergänzung, auch bekannt als *namenszerlegung*, hilft den Linker suchen die richtigen Funktionen und-Objekte beim Verknüpfen einer ausführbaren Datei.  

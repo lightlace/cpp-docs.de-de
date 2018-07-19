@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360148"
 ---
 # <a name="building-cc-isolated-applications"></a>Erstellen isolierter C/C++-Anwendungen
 Eine isolierte Anwendung hängt Side-by-Side Assemblys und bindet an seiner Abhängigkeiten, die über ein Manifest. Es ist nicht erforderlich, für die Anwendung vollständig isoliert, um ordnungsgemäß auf dem Windows ausgeführt werden müssen. Sie können jedoch von investieren in dem Sie die Anwendung vollständig isoliert, Zeit sparen, wenn Sie Ihre Anwendung in der Zukunft service müssen. Weitere Informationen zu den Vorteilen von dem Sie die Anwendung vollständig isoliert, finden Sie unter [isolierte Anwendungen](http://msdn.microsoft.com/library/aa375190).  

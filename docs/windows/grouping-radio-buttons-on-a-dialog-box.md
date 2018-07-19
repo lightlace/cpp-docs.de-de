@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879327"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Gruppieren von Optionsfeldern in einem Dialogfeld
 Wenn Sie einem Dialogfeld Optionsschaltflächen hinzufügen, behandeln Sie sie als Gruppe, indem Sie im Eigenschaftenfenster für die erste Schaltfläche der Gruppe die Eigenschaft „Gruppe“ festlegen. Eine Steuerelement-ID für das betreffende Optionsfeld wird dann im [Assistent zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md)angezeigt und ermöglicht das Hinzufügen einer Membervariablen zur Gruppe der Optionsfelder.  

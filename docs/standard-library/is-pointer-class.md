@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9f05b77adc7d989d37afcbce040405ccbfdf03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30234c932aad28d16830b80fd19e4ad334ba407c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962815"
 ---
 # <a name="ispointer-class"></a>is_pointer-Klasse
 
@@ -36,11 +37,11 @@ struct is_pointer;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn der Typ `Ty` ein Zeiger auf `void`, ein Zeiger auf ein Objekt oder ein Zeiger auf eine Funktion oder ein `cv-qualified`-Formular von einem davon ist, andernfalls „false“. Beachten Sie, dass `is_pointer` „false“ ist, wenn `Ty` ein Zeiger auf ein Member oder ein Zeiger auf eine Memberfunktion ist.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein Zeiger auf **"void"**, ein Zeiger auf ein Objekt oder ein Zeiger auf eine Funktion oder einen `cv-qualified` -Formular von einem davon ist, andernfalls er false enthält. Beachten Sie, dass `is_pointer` false enthält, wenn *Ty* ist ein Zeiger auf Member oder ein Zeiger auf eine Memberfunktion.
 
 ## <a name="example"></a>Beispiel
 

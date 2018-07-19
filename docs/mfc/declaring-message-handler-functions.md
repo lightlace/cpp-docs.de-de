@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341709"
 ---
 # <a name="declaring-message-handler-functions"></a>Deklarieren von Meldungshandlerfunktionen
 Bestimmte Regeln und Konventionen steuern die Namen der Nachrichtenhandler Funktionen. Diese richten sich nach der Kategorie angezeigt, wie in den folgenden Themen beschrieben:  

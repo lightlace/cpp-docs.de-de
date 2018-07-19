@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1fac5f83f19fab37604a14e239cf505891c737f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae83c3e41ebabf62ad98211f3943af2b535c806
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929506"
 ---
 # <a name="rebar-controls-and-bands"></a>Grundleisten-Steuerelemente und Bänder
 Der Hauptzweck eines Grundleisten-Steuerelements ist, fungiert als Container für untergeordnete Fenster, allgemeine Dialogfeldsteuerelemente, Menüs, Symbolleisten und So weiter. Diese Beschränkung wird durch das Konzept der "Band." unterstützt. Jedes Band Grundleisten kann eine beliebige Kombination von ziehelements-Leiste, eine Bitmap, einer textbezeichnung und ein untergeordnetes Fenster enthalten.  
@@ -42,7 +43,7 @@ Der Hauptzweck eines Grundleisten-Steuerelements ist, fungiert als Container fü
   
  [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) und [DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband) hinzufügen und Entfernen von rebarbereichen. [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband) und [MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband) Auswirkungen auf die aktuelle Größe der einer bestimmten Grundleisten Band. [MoveBand](../mfc/reference/crebarctrl-class.md#moveband) ändert sich der Index eines bestimmten Grundleisten Bandes. [ShowBand](../mfc/reference/crebarctrl-class.md#showband) Blendet oder ein Band Grundleisten des Benutzers.  
   
- Das folgende Beispiel zeigt eine Symbolleistenband hinzufügen (`m_wndToolBar`) eines vorhandenen Grundleisten-Steuerelements (`m_wndReBar`). Das Band wird beschrieben, durch die Initialisierung der `rbi` Struktur und dem anschließenden Aufrufen der `InsertBand` Memberfunktion:  
+ Das folgende Beispiel zeigt eine Symbolleistenband hinzufügen (*M_wndToolBar*) eines vorhandenen Grundleisten-Steuerelements (*M_wndReBar*). Das Band wird beschrieben, durch die Initialisierung der `rbi` Struktur und dem anschließenden Aufrufen der `InsertBand` Memberfunktion:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
   

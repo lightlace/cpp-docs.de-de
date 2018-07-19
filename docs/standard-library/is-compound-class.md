@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d062912a441f16e9eb26415287fbbb574b829e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91132492ab6173d9d462eeb74d6393dce41f6833
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961590"
 ---
 # <a name="iscompound-class"></a>is_compound-Klasse
 
@@ -36,11 +37,11 @@ struct is_compound;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typs Prädikat enthält `false` Wenn der Typ des `Ty` ist ein grundlegender Typ ist (d. h., wenn [Is_fundamental](../standard-library/is-fundamental-class.md)\<"ty" > enthält `true`) ist, andernfalls enthält er `true`. Daher enthält das Prädikat `true`, wenn `Ty` ein Arraytyp, ein Funktionstyp, ein Zeiger auf `void` oder auf ein Objekt oder eine Funktion, ein Verweis, eine Klasse, eine Vereinigung, eine Enumeration oder ein Zeiger auf ein nicht-statisches Klassenmember oder eine *cv-qualified*-Form eines dieser Elemente ist.
+Eine Instanz des typprädikats enthält **"false"** Wenn der Typ des *Ty* ein grundlegender Typ ist (d. h., wenn [Is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > enthält  **"true"**); Andernfalls ist es **"true"**. Daher enthält das Prädikat **"true"** Wenn *Ty* ist ein Arraytyp, ein Funktionstyp, ein Zeiger auf **"void"** oder ein Objekt oder eine Funktion, einen Verweis, eine Klasse, eine Union, eine Enumeration oder Zeiger auf nicht statische Klassenmember, oder ein *cv-qualifizierte* Form eines dieser Elemente.
 
 ## <a name="example"></a>Beispiel
 

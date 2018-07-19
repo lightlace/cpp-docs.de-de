@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381208"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>Reihenfolge der Operationen zur Erstellung von OLE-Anwendungen
 Die folgende Tabelle zeigt Ihre Rolle und das Framework OLE verlinken und Einbetten von Anwendungen erstellen. Diese repräsentieren die verfügbaren Optionen statt einer Sequenz von Schritten ausführen.  

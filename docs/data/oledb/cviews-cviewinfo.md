@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101002"
 ---
 # <a name="cviews-cviewinfo"></a>CViews, CViewInfo
 Rufen Sie die-typedefklasse **CViews** zum Implementieren der Parameterklasse **CViewInfo**.  

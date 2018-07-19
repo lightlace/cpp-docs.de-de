@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacb6fda870f698bef23184912fc3becfd6c7e2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964384"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator-Klasse
 
@@ -39,7 +40,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Parameter
 
-`Container` Der Typ des Containers an dessen Anfang der sind Elemente von einzufügenden eine `front_insert_iterator`.
+*Container* der Typ des Containers, an dessen Anfang der Elemente, die zum Einfügen, sind ein `front_insert_iterator`.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -82,7 +83,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist synonym mit dem Vorlagenparameter **Container**.
+Der Typ ist synonym mit dem Vorlagenparameter *Container*.
 
 ### <a name="example"></a>Beispiel
 
@@ -124,7 +125,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Parameter
 
-`_Cont` Die Container-Objekt, in dem die `front_insert_iterator` zum Einfügen von Elementen verwendet wird.
+*_Cont* das Container-Objekt, in dem die `front_insert_iterator` Elemente einfügen soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -190,7 +191,7 @@ Die Memberfunktion gibt den Wert des adressierten Elements zurück
 
 ### <a name="remarks"></a>Hinweise
 
-Wird zum Implementieren des Ausgabeiteratorausdrucks **\*Iter** = **value** verwendet. Wenn **Iter** ein Iterator ist, der ein Element in einer Sequenz adressiert, dann ersetzt **\*Iter** = **value** das Element mit Wert, ohne dass die Gesamtzahl von Elementen in der Zeichenfolge geändert wird.
+Wird zum Implementieren des Ausgabeiteratorausdrucks **\*Iter** = **value** verwendet. Wenn `Iter` wird ein Iterator, der ein Element in einer Sequenz, klicken Sie dann  **\*Iter** = **Wert** ersetzt das Element mit dem Wert und die Gesamtzahl der nicht ändert Elemente in der Sequenz.
 
 ### <a name="example"></a>Beispiel
 
@@ -300,7 +301,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Parameter
 
-`val` Der Wert für den Container zugewiesen werden soll.
+*Val* den Wert in den Container zugewiesen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 

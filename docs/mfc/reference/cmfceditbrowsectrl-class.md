@@ -1,5 +1,5 @@
 ---
-title: CMFCEditBrowseCtrl Klasse | Microsoft Docs
+title: CMFCEditBrowseCtrl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,14 +36,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d00488a7e9a87116317aec35c82b73b40077d8c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854007"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl-Klasse
-Die `CMFCEditBrowseCtrl` Klasse unterstützt das Bearbeitungssteuerelement durchsuchen, also ein Bearbeitungsfeld, das eine Schaltfläche zum Durchsuchen optional enthält. Wenn der Benutzer auf die Schaltfläche zum Durchsuchen klicken, führt das Steuerelement eine benutzerdefinierte Aktion aus oder zeigt ein Standarddialogfeld an, das einen Dateibrowser oder einen Ordnerbrowser enthält.  
+Die `CMFCEditBrowseCtrl` Klasse unterstützt das Bearbeitungssteuerelement durchsuchen, als editierbares Textfeld, das optional eine Schaltfläche zum Durchsuchen enthält. Wenn der Benutzer auf die Schaltfläche zum Durchsuchen klicken, führt das Steuerelement eine benutzerdefinierte Aktion aus oder zeigt ein Standarddialogfeld an, das einen Dateibrowser oder einen Ordnerbrowser enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -64,50 +65,50 @@ class CMFCEditBrowseCtrl : public CEdit
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Aktiviert oder deaktiviert (ausgeblendet) die Schaltfläche zum Durchsuchen.|  
-|[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Aktiviert die Schaltfläche zum Durchsuchen und setzt das Durchsuchen Bearbeitungssteuerelement in *Datei durchsuchen* Modus.|  
-|[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|Aktiviert die Schaltfläche zum Durchsuchen und setzt das Durchsuchen Bearbeitungssteuerelement in *Ordner durchsuchen* Modus.|  
+|[Cmfceditbrowsectrl:: enablebrowsebutton wurde](#enablebrowsebutton)|Aktiviert oder deaktiviert (ausgeblendet) die Schaltfläche zum Durchsuchen.|  
+|[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Aktiviert die Schaltfläche zum Durchsuchen und fügt Sie in das Bearbeitungssteuerelement und Durchsuchen *Durchsuchen* Modus.|  
+|[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|Aktiviert die Schaltfläche zum Durchsuchen und fügt Sie in das Bearbeitungssteuerelement und Durchsuchen *Ordnersuche* Modus.|  
 |[CMFCEditBrowseCtrl::GetMode](#getmode)|Gibt den aktuellen Durchsuchenmodus zurück.|  
-|[CMFCEditBrowseCtrl::OnAfterUpdate](#onafterupdate)|Vom Framework aufgerufen, nachdem das Steuerelement zum Bearbeiten von Durchsuchen mit dem Ergebnis einer Aktion "Durchsuchen" aktualisiert wird.|  
-|[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)|Vom Framework aufgerufen, nachdem der Benutzer die Schaltfläche zum Durchsuchen klicken.|  
-|[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Zeichnet die aktuelle Bearbeitungssteuerelement durchsuchen.|  
+|[CMFCEditBrowseCtrl::OnAfterUpdate](#onafterupdate)|Vom Framework aufgerufen, nachdem das Bearbeitungssteuerelement und Durchsuchen, mit dem Ergebnis einer Aktion "Durchsuchen" aktualisiert wurde.|  
+|[CMFCEditBrowseCtrl::OnBrowse](#onbrowse)|Vom Framework aufgerufen, nachdem der Benutzer die Schaltfläche zum Durchsuchen klickt.|  
+|[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|Zeichnet das aktuelle Steuerelement zum Bearbeiten durchsuchen.|  
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|Wird aufgerufen, durch das Framework die Durchsuchen-Schaltfläche gezeichnet werden soll.|  
-|[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Wird vom Framework aufgerufen, wenn ein ungültiger Dateiname in das Bearbeitungssteuerelement eingegeben wurde.|  
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie an verteilt wurden die [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. Syntax und Weitere Informationen finden Sie unter [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
-|[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Legt ein benutzerdefiniertes Bild für die Schaltfläche zum Durchsuchen.|  
+|[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|Vom Framework aufgerufen, wenn Sie ein ungültigen Dateinamen in das Bearbeitungssteuerelement eingegeben wurde.|  
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. Syntax und Weitere Informationen finden Sie unter [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
+|[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|Legt ein benutzerdefiniertes Image für die Schaltfläche zum Durchsuchen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie ein Bearbeitungssteuerelement für das Durchsuchen, wählen Sie einen Datei- oder Ordnernamen ein. Verwenden Sie optional das Steuerelement, z. B. eine benutzerdefinierte Aktion ausführen, um ein Dialogfeld anzuzeigen. Können Sie anzeigen oder die Schaltfläche zum Durchsuchen angezeigt, und Sie können eine benutzerdefinierte Bezeichnung oder ein Bild anwenden, auf die Schaltfläche.  
+ Verwenden Sie ein Bearbeitungssteuerelement für das Durchsuchen, um eine Datei oder einen Ordner namens auszuwählen. Verwenden Sie optional das Steuerelement, z. B. eine benutzerdefinierte Aktion ausführen, um ein Dialogfeld angezeigt. Können Sie anzeigen oder nicht die Schaltfläche zum Durchsuchen angezeigt, und Sie können eine benutzerdefinierte Bezeichnung oder ein Bild auf die Schaltfläche anwenden.  
   
- Die *Durchsuchenmodus* der Bearbeiten Suchen Steuerelement bestimmt, ob eine Schaltfläche zum Durchsuchen angezeigt und welche Aktion tritt auf, wenn die Schaltfläche geklickt wird. Weitere Informationen finden Sie unter der [GetMode](#getmode) Methode.  
+ Die *Durchsuchenmodus* von dem Durchsuchen bearbeiten-Steuerelements bestimmt, ob eine Schaltfläche zum Durchsuchen angezeigt und welche Aktion tritt auf, wenn die Schaltfläche geklickt wird. Weitere Informationen finden Sie unter den [GetMode](#getmode) Methode.  
   
  Die `CMFCEditBrowseCtrl` Klasse unterstützt die folgenden Modi.  
   
- `custom mode`  
+ **Benutzerdefinierter Modus**  
  Eine benutzerdefinierte Aktion wird ausgeführt, wenn der Benutzer die Schaltfläche zum Durchsuchen klickt. Sie können z. B. eine anwendungsspezifische-Dialogfeld angezeigt.  
   
- `file mode`  
- Eine standardmäßige Dialogfeld zur Dateiauswahl wird angezeigt, wenn der Benutzer die Schaltfläche zum Durchsuchen klickt.  
+ **Datei-Modus**  
+ Ein Dialogfeld zur standard-Datei wird angezeigt, wenn der Benutzer die Schaltfläche zum Durchsuchen klickt.  
   
- `folder mode`  
- Eine standardmäßige Auswahl (Dialogfeld) wird angezeigt, wenn der Benutzer die Schaltfläche zum Durchsuchen klicken.  
+ **Folder-Modus**  
+ Klickt der Benutzer die Schaltfläche zum Durchsuchen, wird ein Dialogfeld zur Standardordner angezeigt.  
   
-## <a name="how-to-specify-an-edit-browse-control"></a>Gewusst wie: Geben Sie ein Bearbeitungssteuerelement für Durchsuchen  
- Führen Sie die folgenden Schritte aus, um ein Bearbeitungssteuerelement zum Durchsuchen, in der Anwendung zu integrieren:  
+## <a name="how-to-specify-an-edit-browse-control"></a>Gewusst wie: Angeben eines durchsuchen-Bearbeitungssteuerelements  
+ Führen Sie die folgenden Schritte aus, um ein Bearbeitungssteuerelement durchsuchen, in Ihrer Anwendung zu integrieren:  
   
-1.  Wenn Sie einen benutzerdefinierten Durchsuchenmodus implementieren möchten, leiten Sie eine eigene Klasse von der `CMFCEditBrowseCtrl` Klasse, und klicken Sie dann überschreiben die [CMFCEditBrowseCtrl::OnBrowse](#onbrowse) Methode. Führen Sie in der überschriebenen Methode eine benutzerdefinierte Aktion durchsuchen, und aktualisieren Sie das Steuerelement zum Bearbeiten von Durchsuchen mit dem Ergebnis.  
+1.  Wenn Sie einen benutzerdefinierte Durchsuchen-Modus implementieren möchten, leiten Sie eine eigene Klasse von der `CMFCEditBrowseCtrl` Klasse und überschreiben Sie dann die [CMFCEditBrowseCtrl::OnBrowse](#onbrowse) Methode. Klicken Sie in der überschriebenen Methode führen Sie eine benutzerdefinierte durchsuchungsaktion, und aktualisieren Sie das Bearbeitungssteuerelement und Durchsuchen, mit dem Ergebnis.  
   
-2.  Betten Sie entweder die `CMFCEditBrowseCtrl` Objekt oder abgeleiteten bearbeiten durchsuchen-Control-Objekt in das übergeordnete Fenster-Objekt.  
+2.  Betten Sie entweder die `CMFCEditBrowseCtrl` Objekt oder das Bearbeiten von abgeleiteten durchsuchen-Steuerelement-Objekt in das übergeordnete Fenster-Objekt.  
   
-3.  Bei Verwendung der **Klassen-Assistent** um ein Dialogfeld zu erstellen, fügen Sie ein Bearbeitungssteuerelement ( `CEdit`) auf dem Formular des Dialogfelds. Darüber hinaus fügt eine Variable für den Zugriff auf das Steuerelement in der Headerdatei. Ändern Sie in der Headerdatei den Typ der Variablen aus `CEdit` auf `CMFCEditBrowseCtrl`. Das Steuerelement zum Bearbeiten von Durchsuchen wird automatisch erstellt werden. Wenn Sie nicht verwenden die **Klassen-Assistent**, Hinzufügen einer `CMFCEditBrowseCtrl` Variable auf die Headerdatei und rufen Sie dann seine `Create` Methode.  
+3.  Bei Verwendung der **-Klassen-Assistent** um ein Dialogfeld zu erstellen, fügen Sie einem Bearbeitungssteuerelement ( `CEdit`) auf dem Formular des Dialogfelds. Darüber hinaus fügen Sie eine Variable für den Zugriff auf das Steuerelement in der Headerdatei hinzu. Ändern Sie in der Headerdatei, den Typ der Variablen vom `CEdit` zu `CMFCEditBrowseCtrl`. Das Bearbeitungssteuerelement und Durchsuchen, wird automatisch erstellt werden. Wenn Sie nicht verwenden die **-Klassen-Assistent**, Hinzufügen einer `CMFCEditBrowseCtrl` Variablen zu Ihrer Headerdatei, und rufen Sie dann die `Create` Methode.  
   
-4.  Wenn Sie ein Bearbeitungssteuerelement für das Navigieren zu einem Dialogfeld hinzufügen, verwenden Sie die **ClassWizard** Tool zum Datenaustausch einrichten.  
+4.  Wenn Sie ein Dialogfeld, das ein Bearbeitungssteuerelement für das Durchsuchen hinzugefügt haben, verwenden Sie die **ClassWizard** Tool, um den Datenaustausch einzurichten.  
   
-5.  Rufen Sie die [EnableFolderBrowseButton](#enablefolderbrowsebutton), [EnableFileBrowseButton](#enablefilebrowsebutton), oder [EnableBrowseButton](#enablebrowsebutton) Methode, um den Durchsuchenmodus festgelegt und die Schaltfläche zum Durchsuchen angezeigt. Rufen Sie die [GetMode](#getmode) Methode, um den aktuellen Durchsuchenmodus abzurufen.  
+5.  Rufen Sie die [EnableFolderBrowseButton](#enablefolderbrowsebutton), [EnableFileBrowseButton](#enablefilebrowsebutton), oder [EnableBrowseButton](#enablebrowsebutton) Methode legen Sie den Durchsuchenmodus und die Schaltfläche zum Durchsuchen angezeigt. Rufen Sie die [GetMode](#getmode) Methode zum Abrufen der aktuellen Durchsuchen-Modus.  
   
-6.  Rufen Sie zum Bereitstellen eines benutzerdefinierten Abbilds für die Schaltfläche zum Durchsuchen der [SetBrowseButtonImage](#setbrowsebuttonimage) -Methode oder Überschreibung der [OnDrawBrowseButton](#ondrawbrowsebutton) Methode.  
+6.  Um ein benutzerdefiniertes Image für die Schaltfläche "Durchsuchen" bereitzustellen, rufen die [SetBrowseButtonImage](#setbrowsebuttonimage) Methode oder außer Kraft setzen der [OnDrawBrowseButton](#ondrawbrowsebutton) Methode.  
   
-7.  Rufen Sie zum Entfernen der Schaltfläche zum Durchsuchen von Bearbeitungssteuerelements zum Durchsuchen der [EnableBrowseButton](#enablebrowsebutton) Methode mit der `bEnable` Parametersatz auf `FALSE`.  
+7.  Rufen Sie zum Entfernen der Schaltfläche zum Durchsuchen von das Bearbeitungssteuerelement und Durchsuchen der [EnableBrowseButton](#enablebrowsebutton) -Methode mit dem *bAktivieren* Parameter auf "false" festgelegt.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -121,7 +122,7 @@ class CMFCEditBrowseCtrl : public CEdit
  [CMFCEditBrowseCtrl](../../mfc/reference/cmfceditbrowsectrl-class.md)  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie zwei Methoden in der `CMFCEditBrowseCtrl` Klasse: `EnableFolderBrowseButton` und `EnableFileBrowseButton`. In diesem Beispiel ist Teil der [neues Steuerelement-Beispiel](../../visual-cpp-samples.md).  
+ Im folgende Beispiel wird veranschaulicht, wie zwei Methoden in der `CMFCEditBrowseCtrl` Klasse: `EnableFolderBrowseButton` und `EnableFileBrowseButton`. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]  
@@ -129,8 +130,8 @@ class CMFCEditBrowseCtrl : public CEdit
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxeditbrowsectrl.h  
   
-##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton  
- Zeigt an, oder die Schaltfläche zum Durchsuchen nicht auf das aktuelle Steuerelement zum Bearbeiten zum Durchsuchen angezeigt.  
+##  <a name="enablebrowsebutton"></a>  Cmfceditbrowsectrl:: enablebrowsebutton wurde  
+ Zeigt an, oder zeigt nicht die Schaltfläche zum Durchsuchen auf das aktuelle Steuerelement zum Bearbeiten durchsuchen.  
   
 ```  
 void EnableBrowseButton(
@@ -139,19 +140,19 @@ void EnableBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bEnable`  
- `TRUE` auf die Schaltfläche zum Durchsuchen angezeigt. `FALSE` nicht auf die Schaltfläche zum Durchsuchen angezeigt. Der Standardwert ist `TRUE`.  
+ *bAktivieren*  
+ True, um die Schaltfläche "Durchsuchen" angezeigt. "False" nicht auf die Schaltfläche zum Durchsuchen angezeigt werden. Der Standardwert ist "true".  
   
- `szLabel`  
+ *szLabel*  
  Die Bezeichnung, die auf die Schaltfläche zum Durchsuchen angezeigt wird. Der Standardwert ist " **...** ".  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die `bEnable` Parameter ist `TRUE`, implementieren Sie eine benutzerdefinierte Aktion ausführen, wenn die Durchsuchen-Schaltfläche geklickt wird. Um eine benutzerdefinierte Aktion zu implementieren, leiten Sie eine Klasse von der `CMFCEditBrowseCtrl` Klasse, und klicken Sie dann überschreiben die [OnBrowse](#onbrowse) Methode.  
+ Wenn die *bAktivieren* Parameter TRUE ist, implementieren Sie eine benutzerdefinierte Aktion ausführen, wenn die Schaltfläche zum Durchsuchen geklickt wird. Um eine benutzerdefinierte Aktion zu implementieren, leiten Sie eine Klasse von der `CMFCEditBrowseCtrl` Klasse und überschreiben Sie dann die [OnBrowse](#onbrowse) Methode.  
   
- Wenn die `bEnable` Parameter ist `TRUE`, ist die Durchsuchen-Modus des Steuerelements `BrowseMode_Default`ist, andernfalls der Durchsuchenmodus ist `BrowseMode_None`. Weitere Informationen zum von Durchsuchenmodi finden Sie unter der [GetMode](#getmode) Methode.  
+ Wenn die *bAktivieren* Parameter TRUE ist, wird die Durchsuchen-Modus des Steuerelements `BrowseMode_Default`ist, andernfalls ist der Durchsuchen-Modus `BrowseMode_None`. Weitere Informationen zu den Durchsuchen-Modus, finden Sie unter den [GetMode](#getmode) Methode.  
   
 ##  <a name="enablefilebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFileBrowseButton  
- Zeigt die Schaltfläche zum Durchsuchen für das aktuelle Steuerelement zum Bearbeiten durchsuchen und versetzt das Steuerelement in *Datei durchsuchen* Modus.  
+ Zeigt die Schaltfläche zum Durchsuchen auf das aktuelle Steuerelement zum Bearbeiten durchsuchen und versetzt das Steuerelement in *Durchsuchen* Modus.  
   
 ```  
 void EnableFileBrowseButton(
@@ -161,13 +162,13 @@ void EnableFileBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszDefExt`  
- Gibt die Standard-Dateierweiterung an, die im Dialogfeld zur Dateiauswahl verwendet wird. Der Standardwert ist `NULL`.  
+ *lpszDefExt*  
+ Gibt die Standard-Dateierweiterung an, die im Dialogfeld zur Dateiauswahl verwendet wird. Der Standardwert ist NULL.  
   
- `lpszFilter`  
- Gibt die Standardfilterzeichenfolge an, die im Dialogfeld zur Dateiauswahl verwendet wird. Der Standardwert ist `NULL`.  
+ *lpszFilter*  
+ Gibt die Standardfilterzeichenfolge an, die im Dialogfeld zur Dateiauswahl verwendet wird. Der Standardwert ist NULL.  
   
- `dwFlags`  
+ *dwFlags*  
  Dialogfeldflags. Der Standardwert ist eine bitweise Kombination (OR) von OFN_HIDEREADONLY und OFN_OVERWRITEPROMPT.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -176,69 +177,69 @@ void EnableFileBrowseButton(
  Eine vollständige Liste der verfügbaren Flags finden Sie unter [OPENFILENAME-Struktur](https://msdn.microsoft.com/library/ms646839.aspx).  
   
 ##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
- Zeigt die Schaltfläche zum Durchsuchen für das aktuelle Steuerelement zum Bearbeiten durchsuchen und versetzt das Steuerelement in *Ordner durchsuchen* Modus.  
+ Zeigt die Schaltfläche zum Durchsuchen auf das aktuelle Steuerelement zum Bearbeiten durchsuchen und versetzt das Steuerelement in *Ordnersuche* Modus.  
   
 ```  
 void EnableFolderBrowseButton();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn das Steuerelement zum Bearbeiten von Durchsuchen im Ordner Durchsuchen-Modus und der Benutzer klickt auf die Schaltfläche zum Durchsuchen, zeigt das Steuerelement im Standardordner-Auswahldialogfeld.  
+ Wenn das Bearbeitungssteuerelement und Durchsuchen im Ordner Durchsuchen-Modus und der Benutzer auf die Schaltfläche zum Durchsuchen klickt, zeigt das Steuerelement das standardmäßige Dialogfeld zur Ordnerauswahl an.  
   
 ##  <a name="getmode"></a>  CMFCEditBrowseCtrl::GetMode  
- Ruft ab den Durchsuchenmodus des aktuellen Edit-Steuerelements zum Durchsuchen.  
+ Ruft die Durchsuchen-Modus des aktuellen durchsuchen Edit-Steuerelements ab.  
   
 ```  
 CMFCEditBrowseCtrl::BrowseMode GetMode() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Einer der Enumerationswerte, der angibt, die der aktuelle Modus der Bearbeitung durchsuchen Steuerelement. Die Durchsuchen-Modus bestimmt, ob das Framework die Schaltfläche zum Durchsuchen angezeigt wird und welche Aktion tritt auf, wenn ein Benutzer die Schaltfläche klickt.  
+ Einer der Enumerationswerte, der angibt, den aktuellen Modus der Bearbeitung durchsuchen Steuerelement. Die Durchsuchen-Modus bestimmt, ob das Framework für die Schaltfläche zum Durchsuchen angezeigt und welche Aktion tritt auf, wenn ein Benutzer diese Schaltfläche klickt.  
   
  In der folgenden Tabelle sind die möglichen Rückgabewerte aufgelistet:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`BrowseMode_Default`|`custom mode` Eine Programmierer definierte Aktion ausgeführt wird.|  
-|`BrowseMode_File`|`file mode` Das standard-Datei-Browser-Dialogfeld wird angezeigt.|  
-|`BrowseMode_Folder`|`folder mode` Der Standardordner-Browser-Dialogfeld wird angezeigt.|  
-|`BrowseMode_None`|Die Schaltfläche zum Durchsuchen, wird nicht angezeigt.|  
+|`BrowseMode_Default`|**benutzerdefinierten Modus**. Eine vom Programmierer definierte Aktion wird ausgeführt.|  
+|`BrowseMode_File`|**Dateimodus**. Dialogfeld für die standard-Datei wird angezeigt.|  
+|`BrowseMode_Folder`|**Folder-Modus**. Dialogfeld für die Ordner "standard" wird angezeigt.|  
+|`BrowseMode_None`|Schaltfläche "Durchsuchen" wird nicht angezeigt.|  
   
 ### <a name="remarks"></a>Hinweise  
- Wird standardmäßig ein `CMFCEditBrowseCtrl` -Objekt initialisiert wird, um `BrowseMode_None` Modus. Ändern Sie den Durchsuchenmodus mit der [CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton), und [CMFCEditBrowseCtrl::EnableFolderBrowseButton ](#enablefolderbrowsebutton) Methoden.  
+ Standardmäßig eine `CMFCEditBrowseCtrl` Objekt wird initialisiert, um `BrowseMode_None` Modus. Ändern Sie den Durchsuchenmodus mit der [cmfceditbrowsectrl:: enablebrowsebutton wurde](#enablebrowsebutton), [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton), und [CMFCEditBrowseCtrl::EnableFolderBrowseButton ](#enablefolderbrowsebutton) Methoden.  
   
 ##  <a name="onafterupdate"></a>  CMFCEditBrowseCtrl::OnAfterUpdate  
- Vom Framework aufgerufen, nachdem das Steuerelement zum Bearbeiten von Durchsuchen mit dem Ergebnis einer Aktion "Durchsuchen" aktualisiert wird.  
+ Vom Framework aufgerufen, nachdem das Bearbeitungssteuerelement und Durchsuchen, mit dem Ergebnis einer Aktion "Durchsuchen" aktualisiert wurde.  
   
 ```  
 virtual void OnAfterUpdate();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode in einer abgeleiteten Klasse zum Implementieren einer benutzerdefinierten Aktion.  
+ Überschreiben Sie diese Methode in einer abgeleiteten Klasse eine benutzerdefinierte Aktion implementiert.  
   
 ##  <a name="onbrowse"></a>  CMFCEditBrowseCtrl::OnBrowse  
- Vom Framework aufgerufen, nachdem der Benutzer die Schaltfläche zum Durchsuchen des Bearbeitungssteuerelements zum Durchsuchen klickt.  
+ Vom Framework aufgerufen, nachdem der Benutzer die Schaltfläche zum Durchsuchen des Bearbeitungssteuerelements durchsuchen klickt.  
   
 ```  
 virtual void OnBrowse();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode, um benutzerdefinierten Code ausführen, wenn der Benutzer die Schaltfläche zum Durchsuchen des Bearbeitungssteuerelements zum Durchsuchen klickt. Leiten Sie eine eigene Klasse von der `CMFCEditBrowseCtrl` Klasse, und überschreiben die `OnBrowse` Methode. Implementieren Sie in dieser Methode eine benutzerdefinierte Aktion durchsuchen, und aktualisieren Sie optional im Textfeld des Bearbeitungssteuerelements zum Durchsuchen. Verwenden Sie in der Anwendung die [EnableBrowseButton](#enablebrowsebutton) Methode, um das Steuerelement zum Bearbeiten von Durchsuchen gelagerte *benutzerdefinierte Durchsuchen* Modus.  
+ Verwenden Sie diese Methode, um benutzerdefinierten Code ausführen, wenn der Benutzer die Schaltfläche zum Durchsuchen des Bearbeitungssteuerelements durchsuchen klickt. Leiten Sie eine eigene Klasse von der `CMFCEditBrowseCtrl` Klasse, und überschreiben seine `OnBrowse` Methode. Implementieren Sie in dieser Methode eine benutzerdefinierte durchsuchungsaktion, und aktualisieren Sie optional im Textfeld des Bearbeitungssteuerelements durchsuchen. Verwenden Sie in Ihrer Anwendung die [EnableBrowseButton](#enablebrowsebutton) Methode zum Platzieren des Bearbeiten-Suchen-Steuerelements in *benutzerdefinierte Suche* Modus.  
   
 ##  <a name="onchangelayout"></a>  CMFCEditBrowseCtrl::OnChangeLayout  
- Zeichnet die aktuelle Bearbeitungssteuerelement durchsuchen.  
+ Zeichnet das aktuelle Steuerelement zum Bearbeiten durchsuchen.  
   
 ```  
 virtual void OnChangeLayout();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework ruft diese Methode auf, wenn Änderungen Einfluss auf die Durchsuchen-Modus die Durchsuchen-bearbeiten. Weitere Informationen finden Sie unter [CMFCEditBrowseCtrl::GetMode](#getmode).  
+ Das Framework ruft diese Methode auf, wenn der Durchsuchenmodus, der dem Durchsuchen bearbeiten-Steuerelements geändert wird. Weitere Informationen finden Sie unter [CMFCEditBrowseCtrl::GetMode](#getmode).  
   
 ##  <a name="ondrawbrowsebutton"></a>  CMFCEditBrowseCtrl::OnDrawBrowseButton  
- Wird aufgerufen, durch das Framework die Schaltfläche zum Durchsuchen für das Steuerelement zum Bearbeiten von Durchsuchen gezeichnet werden soll.  
+ Wird aufgerufen, durch das Framework, um die Schaltfläche zum Durchsuchen auf das Bearbeitungssteuerelement und durchsuchen zu zeichnen.  
   
 ```  
 virtual void OnDrawBrowseButton(
@@ -249,23 +250,23 @@ virtual void OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDC`  
+ *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- `Rect`  
- Das Begrenzungsrechteck der Schaltfläche zum Durchsuchen.  
+ *Rect*  
+ Das umschließende Rechteck der Schaltfläche "Durchsuchen".  
   
- `bIsButtonPressed`  
- `TRUE` Wenn die Schaltfläche aufgerufen werden; andernfalls `FALSE`.  
+ *bIsButtonPressed*  
+ True, wenn die Schaltfläche gedrückt wird. andernfalls "false".  
   
- `bIsButtonHot`  
- `TRUE` Wenn die Schaltfläche hervorgehoben ist. andernfalls `FALSE`.  
+ *bIsButtonHot*  
+ True, wenn die Schaltfläche markiert wird. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Funktion in einer abgeleiteten Klasse zum Anpassen der Darstellung der Schaltfläche zum Durchsuchen.  
+ Überschreiben Sie diese Funktion in einer abgeleiteten Klasse zum Anpassen der Darstellung der Schaltfläche "Durchsuchen".  
   
 ##  <a name="setbrowsebuttonimage"></a>  CMFCEditBrowseCtrl::SetBrowseButtonImage  
- Legt ein benutzerdefiniertes Image auf die Schaltfläche zum Durchsuchen des Bearbeitungssteuerelements zum Durchsuchen.  
+ Legt ein benutzerdefiniertes Image auf die Schaltfläche zum Durchsuchen des Bearbeitungssteuerelements durchsuchen fest.  
   
 ```  
 void SetBrowseButtonImage(
@@ -281,34 +282,34 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hIcon`  
+ *hIcon*  
  Das Handle eines Symbols.  
   
- `hBitmap`  
+ *hBitmap*  
  Das Handle einer Bitmap.  
   
- `uiBmpResId`  
+ *uiBmpResId*  
  Die Ressourcen-ID einer Bitmap.  
   
- `bAutoDestroy`  
- `TRUE` So löschen Sie das angegebene Symbol oder eine Bitmap, wenn diese Methode beendet wird; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ *bAutoDestroy*  
+ True, um das angegebene Symbol oder eine Bitmap zu löschen, wenn diese Methode beendet wird. andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode, um ein benutzerdefiniertes Image auf die Schaltfläche zum Durchsuchen anzuwenden. Standardmäßig erhält das Framework ein Standardimage, wenn das Steuerelement zum Bearbeiten von Durchsuchen wird *Datei durchsuchen* oder *Ordner durchsuchen* Modus.  
+ Verwenden Sie diese Methode, um ein benutzerdefiniertes Image auf die Schaltfläche zum Durchsuchen anzuwenden. Standardmäßig erhält das Framework ein Standardabbilds, wenn das Bearbeitungssteuerelement und Durchsuchen im befindet *Durchsuchen* oder *Ordnersuche* Modus.  
   
 ##  <a name="onillegalfilename"></a>  CMFCEditBrowseCtrl::OnIllegalFileName  
- Wird vom Framework aufgerufen, wenn ein ungültiger Dateiname in das Bearbeitungssteuerelement eingegeben wurde.  
+ Vom Framework aufgerufen, wenn Sie ein ungültigen Dateinamen in das Bearbeitungssteuerelement eingegeben wurde.  
   
 ```  
 virtual BOOL OnIllegalFileName(CString& strFileName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `strFileName`  
- Gibt den Dateinamen nicht zulässig.  
+ *strFileName*  
+ Gibt den ungültigen Dateinamen an.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Sollte zurückgeben `FALSE` , wenn der Dateiname nicht verbindungsmöglichkeiten mit dem Dialogfeld "Datei" übergeben werden kann. In diesem Fall den Fokus wieder auf das Bearbeitungssteuerelement festgelegt ist, und der Benutzer sollte weiterhin bearbeiten. Die standardmäßige Implementierung zeigt ein Meldungsfeld darüber informiert, dass hinsichtlich des Dateinamens nicht zulässig, und gibt `FALSE`. Sie können überschreiben Sie diese Methode, korrigieren Sie den Dateinamen, und `TRUE` zur weiteren Verarbeitung.  
+ Sollte "false" zurückgeben, wenn der Dateiname nicht weiter auf das Dialogfeld "Datei" übergeben werden kann. In diesem Fall den Fokus wieder auf das Steuerelement zum Bearbeiten festgelegt ist, und der Benutzer muss weiterhin bearbeiten. Die Standardimplementierung zeigt ein Meldungsfeld, die darüber informiert, dass Informationen zu den ungültigen Dateinamen an und gibt FALSE zurück. Sie können diese Methode überschreiben, korrigieren Sie den Dateinamen und gibt TRUE zurück, für die weitere Verarbeitung.  
   
 ### <a name="remarks"></a>Hinweise  
   

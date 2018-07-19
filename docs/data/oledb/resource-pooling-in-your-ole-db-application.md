@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107486"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>Ressourcenpooling in OLE DB-Anwendungen
 Um in Ihrer Anwendung nutzen zu können, stellen Sie sicher, OLE DB-Dienste werden aufgerufen, durch Abrufen der Datenquelle über **IDataInitialize** oder **IDBPromptInitialize**. Wenn Sie direkt `CoCreateInstance` zum Aufrufen des Anbieters basierend auf den Anbieter CLSID keine OLE DB-Dienste aufgerufen werden.  

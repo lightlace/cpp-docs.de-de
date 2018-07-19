@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268330"
 ---
 # <a name="compiler-error-c3815"></a>Compilerfehler C3815
 Rückgabetyp der Methode 'Get_accessor' auf Typ des letzten Parameters des Setter übereinstimmen  

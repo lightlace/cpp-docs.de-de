@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295794"
 ---
 # <a name="compiler-warning-level-4-c4339"></a>Compilerwarnung (Stufe 4) C4339
 'Typ' : Die Verwendung eines undefinierten Typs wurde in WinRT oder CLR-Metadaten entdeckt. Das Verwenden dieses Typs führt möglicherweise zu einer Laufzeitausnahme.  

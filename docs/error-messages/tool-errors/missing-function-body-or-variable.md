@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316724"
 ---
 # <a name="missing-function-body-or-variable"></a>Fehlender Funktionsrumpf oder fehlende Variable
 Klicken Sie mit nur einem Funktionsprototyp der Compiler ohne Fehler fortgesetzt, obwohl der Linker kann keinen Aufruf an eine Adresse nicht aufgelöst werden, da keine Funktionscode oder die Variable reservierte Speicherplatz vorhanden ist. Dieser Fehler wird nicht angezeigt werden, bis Sie einen Aufruf der Funktion erstellen, die der Linker auflösen müssen.  

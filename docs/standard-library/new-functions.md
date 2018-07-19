@@ -7,11 +7,12 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: c52376f504e526c03d4f2c2afd39c029761f3c99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f930fb43ea554e1dd445dabb382adecc6f67e35f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964963"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt;-Funktionen
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="nothrow"></a> nothrow
 
-Stellt ein Objekt bereit, das als Argument für die `nothrow`-Versionen von **new** und **delete** verwendet werden muss.
+Stellt ein Objekt als Argument für die **Nothrow** Versionen von **neue** und **löschen**.
 
 ```cpp
 extern const std::nothrow_t nothrow;
@@ -37,7 +38,7 @@ Beispiele zur Verwendung von `std::nothrow_t` als Funktionsparameter finden Sie 
 
 ## <a name="set_new_handler"></a> set_new_handler
 
-Installiert eine Benutzerfunktion, die aufgerufen werden muss, wenn `operator new` nicht in der Lage ist, Arbeitsspeicher zu belegen.
+Installiert eine Benutzerfunktion, die aufgerufen werden soll **new-Operator** nicht in der Lage, um Speicher zu belegen.
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -45,7 +46,8 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>Parameter
 
-`Pnew` Die New_handler installiert werden.
+*PDAs*  
+Die `new_handler` installiert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -53,7 +55,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion speichert `Pnew` in einem von ihr verwalteten statischen [new handler](../standard-library/new-typedefs.md#new_handler)-Zeiger und gibt anschließend den Wert zurück, der zuvor im Zeiger gespeichert war. Der neue Handler wird von [operator new](../standard-library/new-operators.md#op_new)( **size_t**) verwendet.
+Die Funktion speichert *PDAs* in einer statischen [neuen Handler](../standard-library/new-typedefs.md#new_handler) Zeiger, die er verwaltet, gibt anschließend den Wert, der zuvor im Zeiger gespeichert. Der neue Handler wird verwendet, indem [new-Operator](../standard-library/new-operators.md#op_new)(**"size_t"**).
 
 ### <a name="example"></a>Beispiel
 

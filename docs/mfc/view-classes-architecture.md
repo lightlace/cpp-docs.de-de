@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383746"
 ---
 # <a name="view-classes-architecture"></a>Ansichtsklassen (Architektur)
 `CView` und die abgeleiteten Klassen sind untergeordnete Fenster, die den Clientbereich eines Rahmenfensters darstellen. Ansichten anzeigen von Daten und Eingaben für ein Dokument.  

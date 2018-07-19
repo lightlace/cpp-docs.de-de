@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3695d2795fa324051b76cf012aae7e1b1f275fa1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928021"
 ---
 # <a name="document-template-creation"></a>Erstellen von Dokumentvorlagen
-Beim Erstellen eines neuen Dokuments als Antwort auf eine `New` oder **öffnen** Befehl die **Datei** im Menü die Dokumentvorlage auch über die zum Anzeigen des Dokuments ein neues Rahmenfenster erstellt.  
+Beim Erstellen eines neuen Dokuments als Antwort auf eine **neu** oder **öffnen** Befehl die **Datei** im Menü erstellt die Dokumentvorlage auch ein neues Rahmenfenster, zeigen Sie an der die Dokument.  
   
  Dokumentvorlagen-Konstruktor gibt an, welche Arten von Dokumenten, Fenster und Ansichten von die Vorlage erstellt werden. Dies wird von den Argumenten bestimmt, die Sie an den Dokumentvorlagen-Konstruktor übergeben. Das folgende Codebeispiel veranschaulicht die Erstellung einer [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) eine beispielanwendung:  
   

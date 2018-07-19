@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130424"
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Gewusst wie: Auffangen von Windows Forms-Ereignissen aus systemeigenen C++-Klassen
 Sie können systemeigene C++-Klassen um verwaltete Ereignisse ausgelöst, die von Windows Forms-Steuerelementen oder anderen Formularen mit dem MFC-Rückrufe zu empfangen. Auffangen von Ereignissen in Ansichten und Dialogfelder ist ähnlich wie die gleiche Aufgabe für Steuerelemente.  

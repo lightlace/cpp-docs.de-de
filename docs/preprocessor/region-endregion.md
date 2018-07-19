@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839446"
 ---
 # <a name="region-endregion"></a>region, endregion
 **#pragma Region** können Sie angeben, dass einen Codeblock, die Sie erweitern oder reduzieren bei Verwendung der [Gliederungsfunktion](/visualstudio/ide/outlining) des Code-Editors von Visual Studio.  

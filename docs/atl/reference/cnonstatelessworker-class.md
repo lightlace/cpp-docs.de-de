@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359606"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker-Klasse
 Empfang von Anforderungen von einem Threadpool und übergibt sie bei jeder Anforderung an einen Worker-Objekt, das erstellt und zerstört wird.  

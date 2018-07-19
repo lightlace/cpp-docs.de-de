@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874719"
 ---
 # <a name="moduleterminate-method"></a>Module::Terminate-Methode
 Bewirkt, dass alle Factorys instanziiert, indem das Modul heruntergefahren.  

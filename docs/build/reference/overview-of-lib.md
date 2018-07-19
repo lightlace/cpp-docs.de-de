@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379197"
 ---
 # <a name="overview-of-lib"></a>Übersicht über LIB
 LIB erstellt Standardbibliotheken, Importbibliotheken und Exportdateien können Sie mit [LINK](../../build/reference/linker-options.md) beim Erstellen eines Programms. LIB, die über eine Eingabeaufforderung ausgeführt wird.  

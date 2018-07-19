@@ -26,11 +26,12 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 4aab46fa771b88d1baad311aa631a57afce4911e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5734c745f19d22c562f68aa2b518c9b4315ba12e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962272"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt;-Funktionen
 
@@ -57,9 +58,9 @@ Ein [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)-Obj
 
 Rufen Sie die `current_exception`-Funktion in einem catch-Block auf. Wenn eine Ausnahme aktiv ist und die Ausnahme vom catch-Block nicht abgefangen werden kann, gibt die `current_exception`-Funktion ein `exception_ptr`-Objekt zurück, das auf die Ausnahme verweist. Andernfalls gibt die Funktion ein NULL-`exception_ptr`-Objekt zurück.
 
-Die `current_exception`-Funktion erfasst die Ausnahme, die aktiv ist, unabhängig davon, ob die `catch`-Anweisung eine [exception-declaration](../cpp/try-throw-and-catch-statements-cpp.md)-Anweisung angibt.
+Die `current_exception` -Funktion erfasst die Ausnahme, die aktiv ist, unabhängig davon, ob die **catch** -Anweisung gibt ein [Ausnahmedeklaration](../cpp/try-throw-and-catch-statements-cpp.md) Anweisung.
 
-Der Destruktor für die aktuelle Ausnahme wird am Ende des `catch`-Blocks aufgerufen, wenn die Ausnahme nicht erneut ausgelöst wird. Auch wenn Sie die `current_exception`-Funktion im Destruktor aufrufen, gibt die Funktion ein `exception_ptr`-Objekt zurück, das auf die aktuelle Ausnahme verweist.
+Der Destruktor für die aktuelle Ausnahme aufgerufen wird, am Ende der **catch** blockieren, wenn Sie die Ausnahme erneut ausgelöst werden. Auch wenn Sie die `current_exception`-Funktion im Destruktor aufrufen, gibt die Funktion ein `exception_ptr`-Objekt zurück, das auf die aktuelle Ausnahme verweist.
 
 Aufeinander folgende Aufrufe der `current_exception`-Funktion geben `exception_ptr`-Objekte zurück, die sich auf unterschiedliche Kopien der aktuellen Ausnahme beziehen. Folglich sind die Objekte bei einem Vergleich ungleich, da sie auf unterschiedliche Kopien verweisen, auch wenn die Kopien den gleichen Binärwert aufweisen.
 
@@ -74,11 +75,11 @@ exception_ptr make_exception_ptr(E Except);
 
 ### <a name="parameters"></a>Parameter
 
-`Except` Die Klasse mit der zu kopierenden Ausnahme. Normalerweise geben Sie ein [exception class](../standard-library/exception-class.md)-Objekt als Argument für die `make_exception_ptr`-Funktion an, obwohl jedes Klassenobjekt als Argument zulässig ist.
+*Mit Ausnahme von* der Klasse mit der zu kopierenden Ausnahme. Normalerweise geben Sie ein [exception class](../standard-library/exception-class.md)-Objekt als Argument für die `make_exception_ptr`-Funktion an, obwohl jedes Klassenobjekt als Argument zulässig ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)-Objekt, das auf eine Kopie der aktuellen Ausnahme für `Except` zeigt.
+Ein ["exception_ptr"](../standard-library/exception-typedefs.md#exception_ptr) Objekts verweist auf eine Kopie der aktuellen Ausnahme für *außer*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -96,7 +97,7 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>Parameter
 
-`P` Die abgefangene Ausnahme erneut ausgelöst. Wenn `P` ein [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)-Element mit dem Wert NULL ist, wird von der Funktion [std::bad_exception](../standard-library/bad-exception-class.md) ausgelöst.
+*P* die abgefangene Ausnahme erneut auszulösen. Wenn *P* ist ein NULL-Wert ["exception_ptr"](../standard-library/exception-typedefs.md#exception_ptr), löst die Funktion [Std:: bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Hinweise
 
@@ -120,7 +121,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>Parameter
 
-`fnew` Die Funktion, die bei Beendigung aufgerufen wurde.
+*Fnew* die Funktion, die bei Beendigung aufgerufen wurde.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -128,7 +129,7 @@ Die Adresse der vorherigen Funktion, die von bei Beendigung aufgerufen wurde.
 
 ### <a name="remarks"></a>Hinweise
 
-Von der Funktion wird ein neues [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)-Element als die Funktion * `fnew` eingeführt. Daher darf `fnew` kein NULL-Zeiger sein. Die Funktion gibt die Adresse des vorherigen terminate-Handlers zurück.
+Die Funktion wird ein neues [Terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) wie die Funktion * *Fnew*. Daher *Fnew* darf nicht null-Zeiger sein. Die Funktion gibt die Adresse des vorherigen terminate-Handlers zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -177,7 +178,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>Parameter
 
-`fnew` Die Funktion, die aufgerufen werden, wenn eine unerwartete Ausnahme aufgetreten ist.
+*Fnew* die Funktion, die aufgerufen werden, wenn eine unerwartete Ausnahme festgestellt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -185,7 +186,7 @@ Die Adresse des vorherigen `unexpected_handler`-Elements.
 
 ### <a name="remarks"></a>Hinweise
 
-`fnew` darf kein NULL-Zeiger sein.
+*Fnew* darf nicht null-Zeiger sein.
 
 Für den C++-Standard ist es erforderlich, dass `unexpected` aufgerufen wird, wenn eine Funktion eine Ausnahme auslöst, die nicht auf der Auslöseliste aufgeführt wird. Die augenblickliche Implementierung unterstützt das nicht. Im folgenden Beispiel ruft `unexpected` direkt auf, woraufhin `unexpected_handler` aufgerufen wird.
 
@@ -225,17 +226,17 @@ void terminate();
 
 ### <a name="remarks"></a>Hinweise
 
-Die Funktion ruft einen terminate-Handler auf, eine Funktion vom Typ `void`. Wenn **terminate** direkt vom Programm aufgerufen wird, ist der terminate-Handler durch einen Aufruf von [set_terminate](../standard-library/exception-functions.md#set_terminate) der zuletzt festgelegte Handler. Wenn **terminate** aus einem von vielen weiteren Gründen während der Auswertung eines Throw-Ausdrucks aufgerufen wird, ist der terminate-Handler, der der direkt nach der Auswertung des Throw-Ausdrucks in Kraft ist.
+Die Funktion ruft einen Terminate-Handler eine Funktion vom Typ **"void"**. Wenn `terminate` direkt von der Anwendung, die Terminate-Handler wird aufgerufen, wird der zuletzt festgelegte durch einen Aufruf von [Set_terminate](../standard-library/exception-functions.md#set_terminate). Wenn `terminate` wird aufgerufen, wenn eine von vielen weiteren Gründen während der Auswertung eines Throw-Ausdrucks, der Terminate-Handler gilt die direkt nach der Auswertung des Throw-Ausdrucks.
 
-Ein terminate-Handler kehrt möglicherweise nicht zum Aufrufer zurück. Bei Programmstart ist der terminate-Handler eine Funktion, die **abort** aufruft.
+Ein terminate-Handler kehrt möglicherweise nicht zum Aufrufer zurück. Bei Programmstart ist der Terminate-Handler eine Funktion aufgerufen, `abort`.
 
 ### <a name="example"></a>Beispiel
 
-Ein Beispiel zur Verwendung von **terminate** finden Sie unter [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
+Ein Beispiel zur Verwendung von `terminate` finden Sie unter [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
 
 ## <a name="uncaught_exception"></a> uncaught_exception
 
-Gibt nur dann `true` zurück, wenn augenblicklich eine Ausnahme verarbeitet wird.
+Gibt nur dann **TRUE** zurück, wenn augenblicklich eine Ausnahme verarbeitet wird.
 
 ```cpp
 bool uncaught_exception();
@@ -243,7 +244,7 @@ bool uncaught_exception();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt `true` nach Abschluss der Auswertung eines Throw-Ausdrucks und vor Abschluss der Initialisierung der Ausnahmedeklaration an den entsprechenden Handler oder durch Aufruf von [unexpected](../standard-library/exception-functions.md#unexpected) als Ergebnis des Throw-Ausdrucks zurück. Insbesondere gibt `uncaught_exception` `true` zurück, wenn die Funktion von einem Destruktor aufgerufen wird, der während des Entladevorgangs für die Ausnahme aufgerufen wird. Auf Geräten wird `uncaught_exception` nur auf Windows CE 5.00 und höheren Versionen, darunter Windows Mobile 2005-Plattformen unterstützt.
+Gibt **"true"** nach Abschluss der Auswertung eines Throw-Ausdrucks und vor Abschluss der Initialisierung der Ausnahmedeklaration an den entsprechenden Handler oder Aufrufen [unerwartete](../standard-library/exception-functions.md#unexpected) aufgrund der Throw-Ausdrucks. Insbesondere `uncaught_exception` zurück **"true"** Wenn von einem Destruktor aufgerufen wird, das bei der eine Entladung Ausnahme aufgerufen wird. Auf Geräten wird `uncaught_exception` nur auf Windows CE 5.00 und höheren Versionen, darunter Windows Mobile 2005-Plattformen unterstützt.
 
 ### <a name="example"></a>Beispiel
 
@@ -310,7 +311,7 @@ void unexpected();
 
 Für den C++-Standard ist es erforderlich, dass `unexpected` aufgerufen wird, wenn eine Funktion eine Ausnahme auslöst, die nicht auf der Auslöseliste aufgeführt wird. Die augenblickliche Implementierung unterstützt das nicht. Das Beispiel ruft `unexpected` direkt auf, wodurch der unerwartete Handler aufgerufen wird.
 
-Die Funktion ruft einen unerwarteten Handler auf, eine Funktion vom Typ `void`. Wenn `unexpected` direkt vom Programm aufgerufen wird, ist der unerwartete Handler durch einen Aufruf von [set_unexpected](../standard-library/exception-functions.md#set_unexpected) der zuletzt festgelegte Handler.
+Die Funktion ruft einen unerwarteten Handler auf, eine Funktion vom Typ **"void"**. Wenn `unexpected` direkt vom Programm aufgerufen wird, ist der unerwartete Handler durch einen Aufruf von [set_unexpected](../standard-library/exception-functions.md#set_unexpected) der zuletzt festgelegte Handler.
 
 Ein unerwarteter Handler kehrt möglicherweise nicht zum Aufrufer zurück. Die Ausführung kann hierdurch beendet werden:
 
@@ -318,13 +319,13 @@ Ein unerwarteter Handler kehrt möglicherweise nicht zum Aufrufer zurück. Die A
 
 - Auslösen eines Objekt des Typs [bad_exception](../standard-library/bad-exception-class.md).
 
-- Aufrufen von [terminate](../standard-library/exception-functions.md#terminate), **abort** oder **exit** (`int`).
+- Aufrufen von [beenden](../standard-library/exception-functions.md#terminate), `abort` oder **beenden**(`int`).
 
 Bei Programmstart ist der unerwartete Handler eine Funktion, die [erminate](../standard-library/exception-functions.md#terminate) aufruft.
 
 ### <a name="example"></a>Beispiel
 
-Ein Beispiel zur Verwendung von **unexpected** finden Sie unter [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
+Ein Beispiel zur Verwendung von `unexpected` finden Sie unter [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
 
 ## <a name="see-also"></a>Siehe auch
 

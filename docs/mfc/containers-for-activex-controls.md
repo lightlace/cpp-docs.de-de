@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341445"
 ---
 # <a name="containers-for-activex-controls"></a>Container für ActiveX-Steuerelemente
 Sie können ActiveX-Steuerelemente in anderen Anwendungen in Visual C++ entwickelt verwenden, solange sie ActiveX-Steuerelementcontainern unterstützen. Eine Anzahl von Microsoft-Anwendungen, beginnend mit den Versionen aufgeführt, unterstützen ActiveX-Steuerelementcontainern.  

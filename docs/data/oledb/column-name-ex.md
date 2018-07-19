@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098692"
 ---
 # <a name="columnnameex"></a>COLUMN_NAME_EX
 Stellt eine Bindung für das Rowset für die spezifische Spalte des Rowsets dar. Ähnlich wie [COLUMN_NAME](../../data/oledb/column-name.md), außer dass dieses Makro auch Datentyp, Größe, Genauigkeit, Dezimalstellen, Spaltenlänge und Status in der Spalte verwendet.  

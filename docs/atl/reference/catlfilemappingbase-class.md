@@ -1,5 +1,5 @@
 ---
-title: CAtlFileMappingBase Klasse | Microsoft Docs
+title: CAtlFileMappingBase-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e315a29f72c887b5bff2e8177e7a47aed18c3fd4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883244"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase-Klasse
-Diese Klasse stellt eine Speicherabbilddatei dar.  
+Diese Klasse stellt eine Datei mit zugewiesenem Speicher.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,12 +58,12 @@ class CAtlFileMappingBase
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAtlFileMappingBase::CopyFrom](#copyfrom)|Rufen Sie diese Methode zum Kopieren aus einem Dateizuordnungsobjekt.|  
+|[CAtlFileMappingBase::CopyFrom](#copyfrom)|Rufen Sie diese Methode zum Kopieren aus einem Dateizuordnungsobjekt auf.|  
 |[CAtlFileMappingBase::GetData](#getdata)|Rufen Sie diese Methode, um die Daten aus einer Dateizuordnungsobjekt abzurufen.|  
 |[CAtlFileMappingBase::GetHandle](#gethandle)|Rufen Sie diese Methode, um das Dateihandle zurückgeben.|  
-|[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|Rufen Sie diese Methode, um die Zuordnung von einem Dateizuordnungsobjekt abzurufen.|  
-|[CAtlFileMappingBase::MapFile](#mapfile)|Rufen Sie diese Methode zum Erstellen eines dateizuordnung Objekts.|  
-|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|Rufen Sie diese Methode, um eine Dateizuordnungsobjekt erstellen, die Vollzugriff auf alle Vorgänge ermöglicht.|  
+|[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|Rufen Sie diese Methode, um die Zuordnung von einem dateizuordnung Objekt abzurufen.|  
+|[CAtlFileMappingBase::MapFile](#mapfile)|Rufen Sie diese Methode zum Erstellen eines Datei-Zuordnungs-Objekts.|  
+|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|Rufen Sie diese Methode zum Erstellen eines Datei-Zuordnungs-Objekts, das Vollzugriff auf alle Prozesse ermöglicht.|  
 |[CAtlFileMappingBase::OpenMapping](#openmapping)|Rufen Sie diese Methode, um ein Handle für das Dateizuordnungsobjekt zurückzugeben.|  
 |[CAtlFileMappingBase::Unmap](#unmap)|Rufen Sie diese Methode, um eine Dateizuordnungsobjekt aufheben.|  
   
@@ -70,12 +71,12 @@ class CAtlFileMappingBase
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAtlFileMappingBase::operator =](#operator_eq)|Legt die aktuelle Dateizuordnungsobjekt auf einen anderen Dateizuordnungsobjekt fest.|  
+|[CAtlFileMappingBase::operator =](#operator_eq)|Legt das aktuelle dateizuordnung Objekt in ein anderes dateizuordnung Objekt fest.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dateizuordnung ist die Zuordnung des Inhalts einer Datei zu einem Teil des virtuellen Adressraums eines Prozesses. Diese Klasse stellt Methoden zum Erstellen von dateizuordnung Objekten, mit denen Programme auf einfache Weise zugreifen und Freigeben von Daten bereit.  
+ -Dateizuordnung die Datei ist die Zuordnung des Inhalts einer Datei zu einem Teil des virtuellen Adressraums eines Prozesses. Diese Klasse stellt Methoden zum Erstellen von dateizuordnung Objekten, mit denen Programme auf einfache Weise zugreifen und Freigeben von Daten bereit.  
   
- Weitere Informationen finden Sie unter [Datei zuordnen](http://msdn.microsoft.com/library/windows/desktop/aa366556) im Windows SDK.  
+ Weitere Informationen finden Sie unter [Dateizuordnung](http://msdn.microsoft.com/library/windows/desktop/aa366556) im Windows SDK.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlfile.h  
@@ -89,11 +90,11 @@ CAtlFileMappingBase() throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `orig`  
- Die ursprüngliche Dateizuordnungsobjekt zu kopieren, um das neue Objekt zu erstellen.  
+ *orig*  
+ Das ursprüngliche dateizuordnung Objekt zum Erstellen des neuen Objekts kopiert.  
   
 ### <a name="remarks"></a>Hinweise  
- Erstellt eine neue Dateizuordnungsobjekt, optional mit einem vorhandenen Objekt. Es ist dennoch erforderlich, rufen Sie [CAtlFileMappingBase::MapFile](#mapfile) öffnen oder erstellen das Dateizuordnungsobjekt für eine bestimmte Datei.  
+ Erstellt eine neue Dateizuordnungsobjekt, optional mithilfe eines vorhandenen Objekts. Es ist immer noch notwendig, [CAtlFileMappingBase::MapFile](#mapfile) öffnen oder erstellen das Dateizuordnungsobjekt für eine bestimmte Datei.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
@@ -106,21 +107,21 @@ CAtlFileMappingBase() throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt alle von der Klasse und die Aufrufe reservierten Ressourcen frei der [CAtlFileMappingBase::Unmap](#unmap) Methode.  
+ Gibt alle von der Klasse und ruft zugeordneten Ressourcen frei der [CAtlFileMappingBase::Unmap](#unmap) Methode.  
   
 ##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom  
- Rufen Sie diese Methode zum Kopieren aus einem Dateizuordnungsobjekt.  
+ Rufen Sie diese Methode zum Kopieren aus einem Dateizuordnungsobjekt auf.  
   
 ```
 HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `orig`  
+ *orig*  
  Die ursprüngliche Dateizuordnungsobjekt zum Kopieren aus.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
+ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ##  <a name="getdata"></a>  CAtlFileMappingBase::GetData  
  Rufen Sie diese Methode, um die Daten aus einer Dateizuordnungsobjekt abzurufen.  
@@ -143,7 +144,7 @@ HANDLE GetHandle() throw ();
  Gibt ein Handle für das Dateizuordnungsobjekt zurück.  
   
 ##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize  
- Rufen Sie diese Methode, um die Zuordnung von einem Dateizuordnungsobjekt abzurufen.  
+ Rufen Sie diese Methode, um die Zuordnung von einem dateizuordnung Objekt abzurufen.  
   
 ```
 SIZE_T GetMappingSize() throw();
@@ -168,32 +169,32 @@ HRESULT MapFile(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hFile`  
- Handle für die Datei aus dem ein Zuordnungsobjekt zu erstellen. `hFile` muss gültig sein und kann nicht auf INVALID_HANDLE_VALUE festgelegt werden.  
+ *hFile*  
+ Handle für die Datei aus dem ein Zuordnungsobjekt zu erstellen. *hFile* muss gültig sein und kann nicht festgelegt werden, um INVALID_HANDLE_VALUE.  
   
- `nMappingSize`  
- Die Größe der Zuordnung. Bei 0 ist die maximale Größe der dateizuordnung Objekts gleich der aktuellen Größe der identifizierten Datei *hFile.*  
+ *nMappingSize*  
+ Die Größe für Zuordnung. Wenn 0, ist die maximale Größe der dateizuordnung Objekts gleich der aktuellen Größe der Datei identifizierte *hFile.*  
   
- `nOffset`  
- Die Dateioffset, in denen Zuordnung begonnen werden soll. Der Offset-Wert muss ein Vielfaches des Systems Arbeitsspeicher Zuordnung Granularität sein.  
+ *nOffset*  
+ Die Dateioffset, in dem Zuordnung ist, um zu beginnen. Der Offset-Wert muss es sich um ein Vielfaches von Speicher-zuordnungsgranularität des Systems sein.  
   
- `dwMappingProtection`  
- Der Schutz für die Dateiansicht gewünscht wird, wenn die Datei zugeordnet ist. Finden Sie unter `flProtect` in [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) im Windows SDK.  
+ *dwMappingProtection*  
+ Der Schutz für die Dateiansicht gewünscht wird, wenn die Datei zugeordnet ist. Finden Sie unter *FlProtect* in [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) im Windows SDK.  
   
- `dwViewDesiredAccess`  
- Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz der Seiten, die von der Datei zugeordnet. Finden Sie unter `dwDesiredAccess` in [Fehler bei MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
+ *dwViewDesiredAccess*  
+ Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
+ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Nachdem eine Dateizuordnungsobjekt erstellt wurde, darf die Größe der Datei nicht die Größe der dateizuordnung Objekts; Wenn dies der Fall ist, werden nicht alle der Inhalt der Datei zur Freigabe sein. Weitere Informationen finden Sie unter [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) und [Fehler bei MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
+ Nachdem eine Dateizuordnungsobjekt erstellt wurde, darf die Größe der dateizuordnung Objekts von der Größe der Datei nicht überschreiten. Wenn dies der Fall ist, werden nicht alle der Inhalt der Datei für die Freigabe zur Verfügung. Weitere Informationen finden Sie unter [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) und [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
 ##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem  
- Rufen Sie diese Methode, um eine Dateizuordnungsobjekt erstellen, die Vollzugriff auf alle Vorgänge ermöglicht.  
+ Rufen Sie diese Methode zum Erstellen eines Datei-Zuordnungs-Objekts, das Vollzugriff auf alle Prozesse ermöglicht.  
   
 ```
 HRESULT MapSharedMem(
@@ -206,29 +207,29 @@ HRESULT MapSharedMem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nMappingSize`  
- Die Größe der Zuordnung. Bei 0 ist die maximale Größe der dateizuordnung Objekts gleich der aktuellen Größe des Dateizuordnungsobjekt, identifiziert durch `szName.`  
+ *nMappingSize*  
+ Die Größe für Zuordnung. Bei 0 wird die maximale Größe der dateizuordnung Objekts gleich der aktuellen Größe des der identifizierte Dateizuordnungsobjekt *SzName*.  
   
- `szName`  
+ *szName*  
  Der Name des Objekts Zuordnung.  
   
  *pbAlreadyExisted*  
- Verweist auf ein BOOL-Wert, der auf "true" das Zuordnungsobjekt bereits festgelegt ist vorhanden waren.  
+ Verweist auf ein BOOL-Wert, der auf "true" fest, wenn das Zuordnungsobjekt bereits festgelegt ist vorhanden.  
   
- `lpsa`  
- Der Zeiger auf eine **SECURITY_ATTRIBUTES** -Struktur, die bestimmt, ob das zurückgegebene Handle von untergeordneten Prozessen geerbt werden kann. Finden Sie unter *LpAttributes* in [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) im Windows SDK.  
+ *lpsa*  
+ Der Zeiger auf eine `SECURITY_ATTRIBUTES` -Struktur, die bestimmt, ob das zurückgegebene Handle von untergeordneten Prozessen geerbt werden kann. Finden Sie unter *LpAttributes* in [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) im Windows SDK.  
   
- `dwMappingProtection`  
- Der Schutz für die Dateiansicht gewünscht wird, wenn die Datei zugeordnet ist. Finden Sie unter `flProtect` in **CreateFileMapping** im Windows SDK.  
+ *dwMappingProtection*  
+ Der Schutz für die Dateiansicht, gewünscht wird, wenn die Datei zugeordnet ist. Finden Sie unter *FlProtect* in `CreateFileMapping` im Windows SDK.  
   
- `dwViewDesiredAccess`  
- Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz der Seiten, die von der Datei zugeordnet. Finden Sie unter `dwDesiredAccess` in [Fehler bei MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
+ *dwViewDesiredAccess*  
+ Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
+ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- **MapShareMem** können Sie ein vorhandenes dateizuordnung Objekt erstellt, indem [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), um zwischen Prozessen gemeinsam genutzt werden.  
+ `MapShareMem` können Sie ein vorhandenes dateizuordnung Objekt erstellt, indem [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), um zwischen Prozessen gemeinsam genutzt werden.  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Rufen Sie diese Methode, um eine benannte Dateizuordnungsobjekt für die angegebene Datei zu öffnen.  
@@ -242,34 +243,34 @@ HRESULT OpenMapping(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `szName`  
- Der Name des Objekts Zuordnung. Wenn ein offenes Handle zu einem Dateizuordnungsobjekt mit diesem Namen vorhanden ist und die Sicherheitsbeschreibung für das Zuordnungsobjekt nicht zu Konflikten mit den `dwViewDesiredAccess` -Parameter, der Öffnungsvorgang erfolgreich war.  
+ *szName*  
+ Der Name des Objekts Zuordnung. Wenn ein offenes Handle zu einem Dateizuordnungsobjekt mit diesem Namen vorhanden ist und die Sicherheitsbeschreibung für das Zuordnungsobjekt nicht zu Konflikten mit der *DwViewDesiredAccess* Parameter, der geöffnete Vorgang erfolgreich ist.  
   
- `nMappingSize`  
- Die Größe der Zuordnung. Bei 0 ist die maximale Größe der dateizuordnung Objekts gleich der aktuellen Größe des Dateizuordnungsobjekt, identifiziert durch `szName.`  
+ *nMappingSize*  
+ Die Größe für Zuordnung. Bei 0 wird die maximale Größe der dateizuordnung Objekts gleich der aktuellen Größe des der identifizierte Dateizuordnungsobjekt *SzName*.  
   
- `nOffset`  
- Die Dateioffset, in denen Zuordnung begonnen werden soll. Der Offset-Wert muss ein Vielfaches des Systems Arbeitsspeicher Zuordnung Granularität sein.  
+ *nOffset*  
+ Die Dateioffset, in dem Zuordnung ist, um zu beginnen. Der Offset-Wert muss es sich um ein Vielfaches von Speicher-zuordnungsgranularität des Systems sein.  
   
- `dwViewDesiredAccess`  
- Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz der Seiten, die von der Datei zugeordnet. Finden Sie unter `dwDesiredAccess` in [Fehler bei MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
+ *dwViewDesiredAccess*  
+ Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
+ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- In Debugbuilds tritt ein Assertionsfehler, wenn die Eingabeparameter ungültig sind.  
+ In Debugbuilds tritt ein Assertionsfehler, wenn der Eingabeparameter ungültig sind.  
   
 ##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =  
- Legt die aktuelle Dateizuordnungsobjekt auf einen anderen Dateizuordnungsobjekt fest.  
+ Legt das aktuelle dateizuordnung Objekt in ein anderes dateizuordnung Objekt fest.  
   
 ```
 CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `orig`  
- Die aktuelle Dateizuordnungsobjekt.  
+ *orig*  
+ Das aktuelle dateizuordnung Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Verweis auf das aktuelle Objekt zurück.  
@@ -282,11 +283,11 @@ HRESULT Unmap() throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt `S_OK` auf Erfolg oder Fehler `HRESULT` bei einem Fehler.  
+ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) in das Windows SDK für weitere Details.  
+ Finden Sie unter [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) im Windows SDK für weitere Details.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CAtlFileMapping-Klasse](../../atl/reference/catlfilemapping-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

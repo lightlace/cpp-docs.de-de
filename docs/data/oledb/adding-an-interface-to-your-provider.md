@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093545"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Hinzufügen einer Schnittstelle zum Anbieter
 Bestimmen Sie, welches Objekt, das die Schnittstelle für (in der Regel Data Source, Rowsets, Befehls- oder Sitzung erstellten Objekte vom OLE DB-Anbieter-Assistenten) hinzufügen möchten. Es ist möglich, dass das Objekt, dem Sie die Schnittstelle zum hinzufügen müssen, die Ihr Anbieter derzeit nicht unterstützt. In diesem Fall führen Sie den ATL OLE DB-Anbieter-Assistenten aus, um das Objekt zu erstellen. Mit der rechten Maustaste des Projekts in der Klassenansicht, klicken Sie auf **Klasse hinzufügen** aus der **hinzufügen** Menü, und klicken Sie dann auf **ATL-OLE DB-Anbieter**. Möglicherweise möchten den Code für die Benutzeroberfläche in einem separaten Verzeichnis abgelegt, und kopieren Sie die Dateien zu Ihrem Anbieterprojekt.  

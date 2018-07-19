@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236078"
 ---
 # <a name="compiler-error-c2811"></a>Compilerfehler C2811
 "Typ1": kann nicht von "Typ2", eine Verweisklasse erben Klasse kann nur von einer Verweisklasse oder Schnittstellenklasse erben  

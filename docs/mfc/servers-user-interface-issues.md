@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379670"
 ---
 # <a name="servers-user-interface-issues"></a>Server: Probleme mit der Benutzeroberfläche
 Eine Server-Anwendung verfügt über eine Reihe von Funktionen, die die Benutzeroberfläche für die OLE-containeranwendungen Elemente angeben hinzugefügt werden müssen. Weitere Informationen über die Menüs und weitere Ressourcen, die an eine Serveranwendung hinzugefügt werden müssen, finden Sie unter [Menüs und Ressourcen: Servererweiterungen](../mfc/menus-and-resources-server-additions.md).  

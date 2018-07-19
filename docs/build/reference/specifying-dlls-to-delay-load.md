@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373721"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Festlegen von DLLs für verzögertes Laden
 Sie können angeben, welche die DLLs für verzögertes Laden, mit der [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md):`dllname` (Linkeroption). Wenn Sie nicht beabsichtigen, Ihre eigene Version einer Hilfsfunktion zu verwenden, müssen Sie auch das Programm mit "delayimp.lib" (für Desktopanwendungen) oder "dloadhelper.lib" (für Store-Apps) verknüpfen.  

@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69302202059914217e066eb0389bb14e7c5190c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4979b75a7644ab747d1a32c14826a25678e276b6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929759"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>Bearbeiten von Menüs während der Programmausführung
-Verwenden Sie die Klasse `CMenu` zum Bearbeiten von Menüs und Menüelemente im Handumdrehen. `CMenu` Kapselt eine Windows `HMENU` behandeln und stellt Memberfunktionen zum Arbeiten mit Menüs.  
+Verwenden Sie die Klasse `CMenu` zum Bearbeiten von Menüs und Menüelemente im Handumdrehen. `CMenu` ein Windows-HMENU-Handle kapselt, und stellt Memberfunktionen zum Arbeiten mit Menüs.  
   
  Finden Sie unter der Übersicht zur Klasse [CMenu](../mfc/reference/cmenu-class.md) Details.  
   

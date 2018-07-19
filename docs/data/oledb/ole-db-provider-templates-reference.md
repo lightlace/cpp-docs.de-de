@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112419"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referenz der OLE DB-Anbietervorlagen
 Die Klassen und Schnittstellen für OLE DB-Anbietervorlagen können in folgenden Kategorien gruppiert werden. Das Referenzmaterial enthält auch Informationen zu den [Makros für OLE DB-Anbietervorlagen](../../data/oledb/macros-for-ole-db-provider-templates.md).  

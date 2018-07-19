@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418838"
 ---
 # <a name="indirection-on-array-types"></a>Dereferenzierung auf Arraytypen
 Verwendung des Dereferenzierungsoperators (**\***) auf eine *n*--dimensionalem Arraytyp ergibt ein *n*-1-dimensionales Array. Wenn *n* 1 ist, ein Skalar (oder Arrayelement) zurückgegeben wird.  

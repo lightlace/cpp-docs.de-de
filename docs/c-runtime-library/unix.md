@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409318"
 ---
 # <a name="unix"></a>UNIX
 Wenn Sie Ihre Programme nach UNIX portieren möchten, befolgen Sie folgende Richtlinien:  

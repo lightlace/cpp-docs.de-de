@@ -1,5 +1,5 @@
 ---
-title: Unions | Microsoft Docs
+title: Unions | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066f7c50940e6c68bb0fca554bb3bc56fc20b93c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939208"
 ---
 # <a name="unions"></a>Unions
-Bei einer `union` handelt es sich um einen benutzerdefinierten Typ, in dem alle Member denselben Speicherbereich verwenden. Das heißt, eine Union kann niemals mehr als ein Objekt aus seiner Liste der Member enthalten. Es heißt zudem, unabhängig davon, über wie viele Member eine Union verfügt, sie immer nur so viel Arbeitsspeicher verwendet, um das größte Member zu speichern.  
+Ein **Union** ist ein benutzerdefinierten Typ, in dem alle Member denselben Speicherbereich gemeinsam nutzen. Das heißt, eine Union kann niemals mehr als ein Objekt aus seiner Liste der Member enthalten. Es heißt zudem, unabhängig davon, über wie viele Member eine Union verfügt, sie immer nur so viel Arbeitsspeicher verwendet, um das größte Member zu speichern.  
   
  Unions können für das Einsparen von Arbeitsspeicher hilfreich sein, wenn Sie über viele Objekte bzw. begrenzten Arbeitsspeicher verfügen. Für ihre Verwendung ist jedoch besondere Vorsicht geboten, da Sie dafür verantwortlich sind, dass Sie immer auf das letzte Member zugreifen, in das geschrieben wurde. Wenn Membertypen über einen nicht trivialen Konstruktor verfügen, müssen Sie zusätzlichen Code schreiben, um dieses Member explizit zu erstellen und zu zerstören. Ziehen Sie vor dem Verwenden einer Union in Erwägung, ob das zu lösende Problem nicht durch die Verwendung einer Basisklasse und abgeleiteten Klasse ausgedrückt werden könnte.   
   
@@ -35,16 +36,16 @@ union [name]  { member-list };
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `name`  
+ *name*  
  Der Typname, der für die Union angegeben wurde.  
   
- `member-list`  
+ *Memberliste*  
  Elemente, die die Union enthalten kann. Siehe Hinweise.  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="declaring-a-union"></a>Deklarieren einer Union  
- Beginnen Sie die Deklaration einer Union mit dem `union`-Schlüsselwort und schließen Sie die Memberliste in geschweifte Klammern ein:  
+ Beginnen Sie die Deklaration einer Union mit den **Union** -Schlüsselwort, und schließen Sie die Memberliste in geschweifte Klammern:  
   
 ```cpp  
 // declaring_a_union.cpp  
@@ -66,7 +67,7 @@ int main()
 ```  
   
 ## <a name="using-unions"></a>Verwenden von Unions  
- Im vorherigen Beispiel muss der Code wissen, der auf die Union zugreift, welches Member welche Daten hält. Die gängigste Lösung für dieses Problem besteht darin, die Union in einer Struktur zusammen mit einem zusätzlichen Enumerationsmember einzuschließen, das den Typ der zurzeit in der Union gespeicherten Daten angibt. Hierbei spricht einen *unterscheidungsunion* und im folgende Beispiel wird das Basismuster gezeigt.  
+ Im vorherigen Beispiel muss der Code wissen, der auf die Union zugreift, welches Member welche Daten hält. Die gängigste Lösung für dieses Problem besteht darin, die Union in einer Struktur zusammen mit einem zusätzlichen Enumerationsmember einzuschließen, das den Typ der zurzeit in der Union gespeicherten Daten angibt. Dies wird als bezeichnet ein *Unterscheidungs-Union* und das folgende Beispiel zeigt das grundlegende Muster.  
   
 ```cpp  
 #include "stdafx.h"  
@@ -641,7 +642,7 @@ int main()
 Speicherung von Daten in einer Union numerischer Typen  
   
 ## <a name="anonymous_unions"></a> Anonyme unions  
- Anonyme Unions sind Unions, die ohne deklariert sind eine *Klassenname* oder *Declarator-List*.  
+ Anonyme Unions sind Unions, die ohne deklariert sind eine *Klassennamen* oder *Declarator-List*.  
   
 ```cpp  
 union  {  member-list  }    
@@ -651,7 +652,7 @@ Die in einer anonymen Union deklarierten Namen werden, wie Nichtmembervariablen,
   
 Zusätzlich zu den Einschränkungen für benannte Unions unterliegen diesen zusätzlichen Einschränkungen anonyme Unions:  
   
--   Sie müssen auch als deklariert werden **statische** , wenn im Datei- oder Namespacebereich deklariert.  
+-   Sie müssen auch als deklariert werden **statische** Wenn Sie im Datei- oder Namespacebereich deklariert.  
   
 -   Sie dürfen nur öffentliche Member besitzen; private und geschützte Member in anonymen Unions generieren Fehler.  
   

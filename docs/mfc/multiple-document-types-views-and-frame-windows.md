@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352157"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Mehrere Dokumenttypen, Ansichten und Rahmenfenster
 Die Standardbeziehung zwischen einem Dokument, der zugehörigen Ansicht und dem zugehörigen Rahmenfenster wird in [Document/View Creation](../mfc/document-view-creation.md)(Erstellen von Dokumenten/Ansichten) beschrieben. Viele Anwendungen unterstützen einen einzelnen Dokumenttyp (jedoch möglicherweise mehrere offene Dokumente dieses Typs) mit einer einzelnen Ansicht des Dokuments und nur einem Rahmenfenster pro Dokument. Bei einigen Anwendungen muss jedoch einer oder mehrere dieser Standardwerte geändert werden.  

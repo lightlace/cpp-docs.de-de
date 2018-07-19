@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103449"
 ---
 # <a name="record-mfc-data-access"></a>Datensatz (MFC-Datenzugriff)
 Ein Datensatz ist eine Sammlung von Daten über eine einzige Entität, z. B. ein Konto oder ein Kunde, die in einer Tabelle (in einer Zeile der Tabelle) gespeichert ist. Ein Datensatz besteht aus einer Gruppe angrenzender Spalten (auch als Felder bezeichnet), die verschiedene Datentypen enthalten. Eine Gruppe von Datensätzen, ausgewählt aus einer Datenquelle – in der Datenbankterminologie häufig als Resultset bezeichnet – wird in MFC als Recordset bezeichnet. Weitere Informationen finden Sie unter [Recordset (ODBC)](../data/odbc/recordset-odbc.md).  

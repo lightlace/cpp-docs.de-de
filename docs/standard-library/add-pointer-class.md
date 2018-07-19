@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a80ffbfbcfb8c350eecc54e87c4cadaaab0295
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 85efc646daf6ddb55f37c1f46157671eda2f13a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963575"
 ---
 # <a name="addpointer-class"></a>add_pointer-Klasse
 
@@ -43,7 +44,7 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ## <a name="remarks"></a>Hinweise
 
-Der typedef-Member `type` benennt den gleichen Typ mit `remove_reference<T>::type*`. Das Alias `add_pointer_t` ist eine Verknüpfung für den Zugriff auf den typedef-Member `type`.
+Das Element **Typedef** `type` benennt den gleichen Typ wie `remove_reference<T>::type*`. Der Alias `add_pointer_t` ist eine Verknüpfung für den Zugriff auf die Member **Typedef** `type`.
 
 Da es unzulässig ist, einen Zeiger aus einem Verweis zu erstellen, wird der Verweis durch `add_pointer` ggf. vom angegebenen Typ entfernt, bevor der Zeiger auf den Typ erstellt wird. Daher können Sie einen Typ mit `add_pointer` verwenden, ohne sich überlegen zu müssen, ob der Typ ein Verweis ist.
 

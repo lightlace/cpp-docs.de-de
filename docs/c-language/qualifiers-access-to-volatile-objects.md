@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384679"
 ---
 # <a name="qualifiers-access-to-volatile-objects"></a>Qualifizierer: Zugriff auf flüchtige Objekte
 **ANSI 3.5.5.3** Was stellt einen Zugriff auf ein Objekt vom Typ „volatile-qualified“ dar  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368625"
 ---
 # <a name="mxcsr"></a>MxCsr
 Dem registrierungszustand hinaus MxCsr. Die Aufrufkonvention unterteilt eine flüchtige Teil und einen nicht flüchtigen Teil dieses Register. Der flüchtige Teil besteht aus den 6 Statusflags MXCSR [0:5], während der Rest des Registers, MXCSR [6:15] flüchtig ist.  

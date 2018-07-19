@@ -1,5 +1,5 @@
 ---
-title: Behandlung von Klassen (ATL) Datei | Microsoft Docs
+title: Dateibehandlungsklassen (ATL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99430bc26754023bf7f23511546328e31b6be265
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: adff92e4b5c849c7fab151e716561e163cd59fff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962344"
 ---
-# <a name="file-handling-classes"></a>Datei, die Behandlung von Klassen
-Diese Klassen bieten Methoden zum Behandeln von Dateien, temporäre Dateien und Speicherabbilddateien.  
+# <a name="file-handling-classes"></a>Dateibehandlungsklassen
+Diese Klassen stellen Methoden zur Behandlung von Dateien, Speicherabbilddateien und temporäre Dateien.  
   
--   [CAtlFile](../atl/reference/catlfile-class.md) diese Klasse bietet einen funktionsarmen Wrapper um die Windows-API-Datei-Behandlung.  
+-   [CAtlFile](../atl/reference/catlfile-class.md) diese Klasse stellt einen einfachen Wrapper für die Windows-Datei zur Behandlung von API bereit.  
   
--   [CAtlFileMapping](../atl/reference/catlfilemapping-class.md) diese Klasse stellt eine Speicherabbilddatei, die Methoden der Umwandlungsoperatoren hinzugefügt [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md).  
+-   [CAtlFileMapping](../atl/reference/catlfilemapping-class.md) diese Klasse stellt eine Speicherabbilddatei, die Methoden der Cast-Operator hinzugefügt [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md).  
   
 -   [CAtlFileMappingBase](../atl/reference/catlfilemappingbase-class.md) diese Klasse stellt eine Speicherabbilddatei dar.  
   
 -   [CAtlTemporaryFile](../atl/reference/catltemporaryfile-class.md) diese Klasse stellt Methoden für die Erstellung und Verwendung einer temporären Datei.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../atl/atl-class-overview.md)
 

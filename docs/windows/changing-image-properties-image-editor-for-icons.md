@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863326"
 ---
 # <a name="changing-image-properties-image-editor-for-icons"></a>Ändern von Bildeigenschaften (Bildbearbeitung für Symbole)
 Sie können festlegen oder Ändern der Eigenschaften eines Bilds mithilfe der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).  

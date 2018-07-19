@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392587"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Exemplarische Vorgehensweise: Erstellen Sie und verwenden Sie eine eigene Dynamic Link Library (C++)
 
@@ -124,7 +125,7 @@ Rechts jetzt diese DLL kaum erfolgt jedoch nicht. Als Nächstes erstellen Sie ei
 
 1. In der **neues Element hinzufügen** (Dialogfeld), in den linken Bereich die Option **Visual C++**. Wählen Sie im mittleren Bereich die Option **Headerdatei (.h)**. Geben Sie `MathLibrary.h` als Namen für die Headerdatei.
 
-   ![Header hinzufügen im Dialogfeld "Neues Element hinzufügen"](media/mathlibrary-add-new-item-header-file.png "-Header-Datei im Dialogfeld "Neues Element hinzufügen" hinzufügen")
+   ![Header hinzufügen im Dialogfeld "Neues Element hinzufügen"](media/mathlibrary-add-new-item-header-file.png "-Header-Datei im Dialogfeld \"Neues Element hinzufügen\" hinzufügen")
 
 1. Wählen Sie die **hinzufügen** Schaltfläche, um eine leere Headerdatei zu generieren, die in ein neues Editor-Fenster angezeigt wird.
 

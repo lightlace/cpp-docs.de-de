@@ -44,11 +44,12 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 040104eeb43ccfe6225821b7318346bc1fe60f92
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6fd1712cb5d6c565b5ccea90050d2d4be6a1f7b0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959991"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt;-Funktionen
 
@@ -72,7 +73,7 @@ Type abs(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, deren Modulo bestimmt werden soll.
+*ComplexNum* die komplexe Zahl, deren Betrag bestimmt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -158,7 +159,7 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, deren Argument bestimmt werden soll.
+*ComplexNum* die komplexe Zahl, deren Argument bestimmt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -166,7 +167,7 @@ Das Argument der komplexen Zahl
 
 ### <a name="remarks"></a>Hinweise
 
-Die *Argument* ist der Winkel, die der komplexen Vektor mit positiven real-Achse in der komplexen Ebene ermöglicht. Für eine komplexe Zahl *a + Bi*, entspricht das Argument Arctan (*b / a*). Der Winkel ist positiv, wenn er von der positiven realen Achse im Uhrzeigersinn gemessen wird. Er ist negativ, wenn er entgegen dem Uhrzeigersinn gemessen wird. Der Prinzipal Werte sind größer als --Pi und kleiner als oder gleich + pi ist.
+Die *Argument* ist der Winkel, der der komplexe Vektor mit der positiven reellen Achse in der komplexen Ebene ermöglicht. Für eine komplexe Zahl *a + Bi*, das Argument ist die Funktion "ARCTAN" (*b / a*). Der Winkel ist positiv, wenn er von der positiven realen Achse im Uhrzeigersinn gemessen wird. Er ist negativ, wenn er entgegen dem Uhrzeigersinn gemessen wird. Die Hauptwerte sind größer als – Pi und kleiner als oder gleich + pi.
 
 ### <a name="example"></a>Beispiel
 
@@ -244,7 +245,7 @@ complex<Type> conj(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, deren konjugierte Zahl zurückgegeben wird.
+*ComplexNum* die komplexe Zahl, deren konjugierte Zahl zurückgegeben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -252,7 +253,7 @@ Die konjugierte Zahl einer komplexen Eingabezahl
 
 ### <a name="remarks"></a>Hinweise
 
-Die konjugierte Zahl einer komplexen Zahl *a + Bi* ist *a - Bi*. Das Produkt einer komplexen Zahl und ihrer konjugierten Zahl entspricht der Norm der Zahl *a*2 + *b*2.
+Die konjugierte Zahl einer komplexen Zahl *a + Bi* ist *einer: Bi*. Das Produkt einer komplexen Zahl und ihrer konjugierten Zahl entspricht der Norm der Zahl *a*2 + *b*2.
 
 ### <a name="example"></a>Beispiel
 
@@ -318,7 +319,7 @@ complex<Type> cos(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, dessen Kosinus der zielwiederherstellung bestimmt wird.
+*ComplexNum* die komplexe Zahl, deren Kosinus bestimmt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -408,7 +409,7 @@ complex<Type> cosh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, dessen hyperbolischer Kosinus der zielwiederherstellung bestimmt wird.
+*ComplexNum* die komplexe Zahl, dessen hyperbolischer Kosinus bestimmt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -498,7 +499,7 @@ complex<Type> exp(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, deren exponentielle wird bestimmt werden kann.
+*ComplexNum* die komplexe Zahl, deren Exponentialfunktion bestimmt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -568,7 +569,7 @@ Type imag(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, deren reelle Teil extrahiert werden soll.
+*ComplexNum* die komplexe Zahl, deren reeller Teil extrahiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -619,7 +620,7 @@ complex<Type> log(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, deren natürlicher Logarithmus bestimmt wird.
+*ComplexNum* die komplexe Zahl, deren natürlicher Logarithmus bestimmt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -688,7 +689,7 @@ complex<Type> log10(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, deren Logarithmus zur Basis 10 der zielwiederherstellung bestimmt wird.
+*ComplexNum* die komplexe Zahl, deren Logarithmus zur Basis 10 bestimmt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -757,7 +758,7 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, deren Norm bestimmt werden soll.
+*ComplexNum* die komplexe Zahl, deren Norm bestimmt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -839,9 +840,9 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Modulus* der Teilungsrest von der komplexen Zahl eingegeben wird.
+*_Modulus* der Betrag der komplexen Zahl, die eingegeben wird.
 
-*_Argument* das Argument für die komplexe Zahl eingegeben wird.
+*_Argument* das Argument der komplexen Zahl, die eingegeben wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -849,7 +850,7 @@ Kartesische Form der komplexen Zahl, die in Polarform dargestellt wird
 
 ### <a name="remarks"></a>Hinweise
 
-Polare Form einer komplexen Zahl stellt den Modulo *r* und dem Argument *p*, wenn diese Parameter für die reellen und imaginären kartesischen Komponenten verknüpft werden *eine* und *b* von Formeln *eine* = R \* cos *p* und *b* = *r* \* sin *p*.
+Die polarform einer komplexen Zahl enthält den Betrag *r* und das Argument *p*, wo diese Parameter für die reellen und imaginären kartesischen Komponenten verknüpft sind *eine* und *b* über die Formeln *eine* = R \* cos *p* und *b* = *r* \* sin *p*.
 
 ### <a name="example"></a>Beispiel
 
@@ -923,9 +924,9 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>Parameter
 
-`_Base` Die komplexe Zahl oder eine Zahl, die den Parametertyp für die komplexe Zahl ist, werden die Basis, die von der Memberfunktion mit einem Exponenten potenziert werden.
+*_Base* die komplexe Zahl oder Zahl, die den Parametertyp für die komplexe Zahl ist, werden die Basis, die von der Memberfunktion mit einem Exponenten potenziert werden.
 
-*_Power* die Ganzzahl oder komplexe Zahl oder die Zahl, die den Parametertyp für die komplexe Zahl ist, der den Exponenten darstellt, die die Basis, indem die Memberfunktion ausgelöst werden.
+*_Umgebung* die ganze Zahl oder eine komplexe Zahl oder eine Zahl mit dem Parametertyp für die komplexe Zahl, der den Exponenten darstellt, die die Basis, von der Memberfunktion ausgelöst werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1057,7 +1058,7 @@ Type real(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, deren reelle Teil extrahiert werden soll.
+*ComplexNum* die komplexe Zahl, deren reeller Teil extrahiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1108,7 +1109,7 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, dessen Sinus der zielwiederherstellung bestimmt wird.
+*ComplexNum* die komplexe Zahl, deren Sinus bestimmt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1118,7 +1119,7 @@ Die komplexe Zahl, die dem Sinus der eingegebenen komplexen Zahl entspricht
 
 Identitäten, die komplexe Sinus definieren:
 
-sin ( *z*) = (1/2 *ich*)\*(exp ( *Iz*)-exp (- *Iz*))
+sin ( *z*) = (1/2 *ich*)\*(exp ( *Iz*) – "exp" (- *Iz*))
 
 sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)
 
@@ -1198,7 +1199,7 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, dessen hyperbolischer Sinus bestimmt wird.
+*ComplexNum* die komplexe Zahl, dessen hyperbolischer Sinus bestimmt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1208,7 +1209,7 @@ Die komplexe Zahl, die dem Sinus Hyperbolicus der eingegebenen komplexen Zahl en
 
 Identitäten, die die komplexen Sinus Hyperbolicus definieren:
 
-Sinh ( *z*) = (1/2)\*(exp ( *z*)-exp (- *z*))
+Sinh ( *z*) (1/2) =\*(exp ( *z*) – "exp" (- *z*))
 
 sinh ( *z*) = sinh ( *a + bi*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)
 
@@ -1288,7 +1289,7 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, deren Quadratwurzel gesucht wird.
+*ComplexNum* die komplexe Zahl, deren Quadratwurzel gesucht wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1364,7 +1365,7 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, dessen Tangens der zielwiederherstellung bestimmt wird.
+*ComplexNum* die komplexe Zahl, deren Tangens bestimmt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1374,7 +1375,7 @@ Die komplexe Zahl, die dem Tangens der eingegebenen komplexen Zahl entspricht
 
 Identitäten, die den komplexen Tangens definieren:
 
-tan ( *z*) = sin ( *z*) / cos ( *z*) = (exp ( *Iz*)-exp (- *Iz*)) / *i*(exp ( *Iz*) + exp (- *Iz*))
+tan ( *z*) = sin ( *z*) / cos ( *z*) = (exp ( *Iz*) – "exp" (- *Iz*)) / *i*(exp ( *Iz*) und "exp" (- *Iz*))
 
 ### <a name="example"></a>Beispiel
 
@@ -1452,7 +1453,7 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Die komplexe Zahl, dessen hyperbolischer Tangens bestimmt wird.
+*ComplexNum* die komplexe Zahl, dessen hyperbolischer Tangens bestimmt wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1462,7 +1463,7 @@ Die komplexe Zahl, die dem Tangens Hyperbolicus der eingegebenen komplexen Zahl 
 
 Identitäten, die komplexe Kotangens Hyperbolicus definieren:
 
-Tanh ( *z*) = Sinh ( *z*) / cosh ( *z*) = (exp ( *z*)-exp (- *z*)) / (exp ( *z*) + exp (- *z*))
+Tanh ( *z*) = Sinh ( *z*) / cosh ( *z*) = (exp ( *z*) – "exp" (- *z*)) / (exp ( *z*) + exp (- *z*))
 
 ### <a name="example"></a>Beispiel
 

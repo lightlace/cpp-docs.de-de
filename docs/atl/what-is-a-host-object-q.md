@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357733"
 ---
 # <a name="what-is-a-host-object"></a>Was ist ein Hostobjekt?
 Ein Hostobjekt ist ein COM-Objekt, das dem ActiveX-Steuerelementcontainer vom ATL für ein bestimmtes Fenster darstellt. Der Host Objekt Unterklassen Containerfenster, damit Nachrichten an das Steuerelement widerspiegeln, er bietet die notwendigen Containerschnittstellen, die vom Steuerelement verwendet werden und macht die [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) und [ IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) Schnittstellen, die Ihnen ermöglichen, konfigurieren Sie die Umgebung des Steuerelements.  

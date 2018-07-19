@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041259"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton-Klasse
 Implementiert eine Menüband-Menüschaltfläche, die Menübandkataloge enthält.  
@@ -107,7 +108,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `src`  
+ [in] *Src*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -131,22 +132,22 @@ CMFCRibbonGalleryMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `uiID`  
- Die Befehls-ID der Schaltfläche. Dies ist der Wert gesendet wird, der **WM_COMMAND** Meldung, wenn der Benutzer auf diese Schaltfläche klickt.  
+ *uiID*  
+ Die Befehls-ID der Schaltfläche. Dies ist der Wert in der WM_COMMAND-Nachricht gesendet wird, wenn der Benutzer auf diese Schaltfläche klickt.  
   
- `iImage`  
- Der Index des Bilds, das mit der katalogmenüschaltfläche angezeigt. Die Bilder befinden sich der `imagesPalette` Parameter.  
+ *iImage*  
+ Der Index des Bilds, das mit der katalogmenüschaltfläche angezeigt. Die Bilder befinden sich der *ImagesPalette* Parameter.  
   
- `lpszText`  
+ *lpszText*  
  Der Text auf die Menüschaltfläche angezeigt werden sollen.  
   
- `imagesPalette`  
+ *imagesPalette*  
  Enthält die Liste der Images auf dem Katalog angezeigt werden sollen.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  Die Ressourcen-ID für die Bildliste für die Bilder auf den Katalog angezeigt werden sollen.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  Gibt die Breite in Pixel des Bilds auf dem Katalog angezeigt werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  

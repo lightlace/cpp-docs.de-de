@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089911"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Entwerfen und Erstellen einer Datensatzansicht (MFC-Datenzugriff)
 Sie können die datensatzansichtsklasse mit Erstellen der [MFC-Anwendung-Assistent](../mfc/reference/database-support-mfc-application-wizard.md). Wenn Sie einen Anwendungs-Assistenten verwenden, erstellt er die Datensatzansichtsklasse und eine Dialogfeldvorlagen-Ressource (ohne Steuerelemente). Sie müssen den Visual C++-Dialog-Editor verwenden, um der Dialogfeldvorlagen-Ressource Steuerelemente hinzuzufügen. Andererseits, bei Verwendung von **Klasse hinzufügen**, müssen Sie zunächst die Dialogfeldvorlagen-Ressource im Dialogfeld Editor erstellen und dann die datensatzansichtsklasse erstellen.  

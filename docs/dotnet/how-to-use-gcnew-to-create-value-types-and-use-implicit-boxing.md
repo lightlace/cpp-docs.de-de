@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128796"
 ---
 # <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>Gewusst wie: Verwenden von gcnew zum Erstellen von Werttypen und für implizites Boxing
 Mit [Gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) Typ erstellt auf einen Wert einen geschachtelter Werttyp, der dann für den verwalteten Heap mit Garbage collection platziert werden kann.  

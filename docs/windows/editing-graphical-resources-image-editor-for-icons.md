@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882497"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>Bearbeiten von grafischen Ressourcen (Bildbearbeitung für Symbole)
 Grafische Ressourcen sind Bilder, die Sie für Ihre Anwendung definieren. Sie können die Freihand zeichnen oder Formen gezeichnet. Auszuwählender Bestandteilen eines Bilds für die Bearbeitung, spiegeln oder Ändern der Größe oder können Sie einen benutzerdefinierten Pinsel aus einem ausgewählten Teil eines Images erstellen und mit den Pinsel zeichnen. Sie können Bildeigenschaften definieren, speichern Sie die Bilder in verschiedenen Formaten und Konvertieren von Bildern aus einem Format in eine andere.  

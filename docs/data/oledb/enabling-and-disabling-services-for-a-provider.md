@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099731"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Aktivieren und Deaktivieren von Diensten für einen Anbieter
 Einzelne OLE DB-Dienste können aktiviert oder deaktiviert wird, wird standardmäßig für alle Anwendungen, die einen einzelnen Anbieter zugreifen. Dies erfolgt durch Hinzufügen von einer **OLEDB_SERVICES** Registrierungseintrag unter der Anbieter die CLSID, mit einer `DWORD` Wert, der die Dienste zum Aktivieren oder deaktivieren, angibt, wie in der folgenden Tabelle gezeigt.  

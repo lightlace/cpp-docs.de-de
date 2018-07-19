@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374894"
 ---
 # <a name="dumpbin-options"></a>DUMPBIN-Optionen
 Eine Option besteht aus einem Optionsbezeichner, entweder einem Bindestrich (-) oder einem Schrägstrich (/), gefolgt vom Namen der Option. Optionsnamen können nicht abgekürzt werden. Einige Optionen haben Argumente, die nach einem Doppelpunkt (:) angegeben werden. Innerhalb einer Optionsangabe sind keine Leerzeichen oder Tabstopps zulässig. Verwenden Sie eines oder mehrere Leerzeichen bzw. Tabstopps, um Optionsangaben in der Befehlszeile voneinander zu trennen. Bei Optionsnamen und ihren aus Schlüsselwörtern oder Dateinamen bestehenden Argumenten wird keine Groß-/Kleinschreibung berücksichtigt. Die meisten Optionen sind auf alle Binärdateien anwendbar; einige wenige können nur auf bestimmte Dateitypen angewendet werden. Standardmäßig sendet DUMPBIN die Informationen an die Standardausgabe. Verwenden der [/OUT](../../build/reference/out-dumpbin.md) Option zum Senden der Ausgabe in eine Datei.  

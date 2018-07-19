@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167202"
 ---
 # <a name="compiler-error-c2238"></a>Compilerfehler C2238
 Unerwartete(s) Token vor "token"  

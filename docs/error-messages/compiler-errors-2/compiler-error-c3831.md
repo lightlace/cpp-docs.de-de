@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268054"
 ---
 # <a name="compiler-error-c3831"></a>Compilerfehler C3831
 'Member': 'Class' sind keine festen Datenmember oder eine Memberfunktion, die einen festen Zeiger zurückgibt  

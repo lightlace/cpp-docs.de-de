@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873000"
 ---
 # <a name="ftmbasedisconnectobject-method"></a>FtmBase::DisconnectObject-Methode
 Zwangsweise frei alle externen Verbindungen zu einem Objekt. Die Objekt-Server Ruft das Objekt Implementierung dieser Methode vor dem Herunterfahren.  

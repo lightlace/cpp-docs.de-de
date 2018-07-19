@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420966"
 ---
 # <a name="using-atexit"></a>Verwenden von "atexit"
 Mit der [Atexit](../c-runtime-library/reference/atexit.md) -Funktion, geben Sie eine Beendigung der Verarbeitung-Funktion, die vor der Beendigung des Programms ausgeführt wird. Es werden keine globalen statischen Objekte, die vor dem Aufruf von `atexit` initialisiert werden, vor Ausführung der Funktion zur Beendigung der Verarbeitung zerstört.  

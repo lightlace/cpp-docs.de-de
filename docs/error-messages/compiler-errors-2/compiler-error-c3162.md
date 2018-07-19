@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253799"
 ---
 # <a name="compiler-error-c3162"></a>Compilerfehler C3162
 'Typ': ein Verweistyp mit einem Destruktor kann nicht als Typ des statischen Datenmembers 'Member' verwendet werden  

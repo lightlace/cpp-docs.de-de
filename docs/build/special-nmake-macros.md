@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380013"
 ---
 # <a name="special-nmake-macros"></a>Besondere NMAKE-Makros
 NMAKE bietet mehrere besondere Makros, die verschiedene Dateinamen und Befehle darstellen. Eine Verwendung für einige dieser Makros ist in der vordefinierten Rückschlussregeln. Wie alle Makros sind die Makros, die von NMAKE bereitgestellten Groß-/Kleinschreibung beachtet.  

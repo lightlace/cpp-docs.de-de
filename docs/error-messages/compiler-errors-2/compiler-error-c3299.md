@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249900"
 ---
 # <a name="compiler-error-c3299"></a>Compilerfehler C3299
 "Member_Funktion": Einschränkungen können nicht angegeben werden, sie werden von der Basismethode geerbt.  

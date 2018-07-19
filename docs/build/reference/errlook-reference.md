@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371355"
 ---
 # <a name="errlook-reference"></a>ERRLOOK-Referenz
 ERRLOOK-Dienstprogramm im Menü "Extras" als **Fehlersuche**, ruft eine System- oder Modulfehlermeldung auf des Werts eingegeben haben Grundlage. ERRLOOK Ruft den Fehlermeldungstext automatisch ab, wenn Sie Drag & einen hexadezimalen oder dezimalen Wert aus dem Visual Studio-Debugger in Drop der **Wert** edit-Steuerelement. Sie können auch einen Wert eingeben entweder durch Eingabe in die **Wert** edit-Steuerelement oder durch Einfügen aus der Zwischenablage und auf **Nachschlagen**.  

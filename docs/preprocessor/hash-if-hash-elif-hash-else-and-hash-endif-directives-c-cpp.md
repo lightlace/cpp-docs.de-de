@@ -36,6 +36,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846648"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if-, #elif-, #else- und #endif-Anweisungen (C/C++)
 Die `#if`-Direktive steuert mit den Direktiven `#elif`, `#else` und `#endif` die Kompilierung von Teilen einer Quelldatei. Wenn der Ausdruck, den Sie schreiben (nach `#if`), einen Wert ungleich 0 (null) aufweist, wird die Zeilengruppe, die unmittelbar auf die `#if`-Direktive folgt, in der Übersetzungseinheit beibehalten.  

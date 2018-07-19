@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256613"
 ---
 # <a name="compiler-error-c3391"></a>Compilerfehler C3391
 'Type_arg': Ungültiges Typargument für generischen Parameter 'Param' von 'Generic_type (generisch) muss ein NULL-Wert-Handletyp sein  

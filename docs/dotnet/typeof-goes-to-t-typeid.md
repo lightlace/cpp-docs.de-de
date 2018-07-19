@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164517"
 ---
 # <a name="typeof-goes-to-ttypeid"></a>typeof wird zu T::typeid
 Die `typeof` Operator wird in Managed Extensions für C++ durch Ersetzen der `typeid` -Schlüsselwort in Visual C++.  

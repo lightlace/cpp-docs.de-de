@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67004ac43193d47720626da241a8030ba396abdf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932017"
 ---
 # <a name="clipboard-adding-other-formats"></a>Zwischenablage: Hinzufügen anderer Formate
-In diesem Thema wird erläutert, wie Sie die Liste der unterstützten Formate, insbesondere für OLE-Unterstützung zu erweitern. Das Thema [Zwischenablage: Daten kopieren und Einfügen](../mfc/clipboard-copying-and-pasting-data.md) beschreibt die minimale Implementierung, die erforderlich ist, kopieren und Einfügen aus der Zwischenablage zu unterstützen. Ist dies alle Sie implementieren, sind die einzigen Formate, die in der Zwischenablage platziert `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, und möglicherweise `CF_LINKSOURCE`. Die meisten Anwendungen benötigen mehr Formate in der Zwischenablage als dieser drei.  
+In diesem Thema wird erläutert, wie Sie die Liste der unterstützten Formate, insbesondere für OLE-Unterstützung zu erweitern. Das Thema [Zwischenablage: Daten kopieren und Einfügen](../mfc/clipboard-copying-and-pasting-data.md) beschreibt die minimale Implementierung, die erforderlich ist, kopieren und Einfügen aus der Zwischenablage zu unterstützen. Ist dies alle Sie implementieren, sind die einzigen Formate, die in der Zwischenablage platziert **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, und möglicherweise **CF_LINKSOURCE**. Die meisten Anwendungen benötigen mehr Formate in der Zwischenablage als dieser drei.  
   
 ##  <a name="_core_registering_custom_formats"></a> Registrieren benutzerdefinierter Datenformate  
  Um eine eigene benutzerdefinierte Formate zu erstellen, halten Sie die gleiche Prozedur, die Sie verwenden, wenn alle benutzerdefiniertes Format der Zwischenablage zu registrieren: übergeben Sie den Namen des Formats, das die **RegisterClipboardFormat** Funktion, und verwenden Sie den Rückgabewert als Format-ID.  

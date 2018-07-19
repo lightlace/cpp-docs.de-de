@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b604a4c9a2fc11a9c7274d0e29ab98acfd260907
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47fabb7120cc13eeca38bc9d06428f686fc9f1b9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955565"
 ---
 # <a name="istriviallyassignable-class"></a>is_trivially_assignable-Klasse
 
@@ -38,11 +39,11 @@ struct is_trivially_assignable;
 
 In den Typ des Objekts, das die Zuweisung empfängt.
 
-Vom Typ des Objekts, das den Wert bereitstellt.
+Aus dem Typ des Objekts, das den Wert bereitstellt.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein, und es muss für den Compiler bekannt sein, dass er keine nicht trivialen Vorgänge benötigt. Sowohl `From` als auch `To` müssen vollständige Typen `void` sein oder Arrays mit unbekannter Grenze.
+Der Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein, und es muss für den Compiler bekannt sein, dass er keine nicht trivialen Vorgänge benötigt. Beide `From` und `To` müssen vollständige Typen werden **"void"**, oder Arrays mit Unbekannter Grenze.
 
 ## <a name="requirements"></a>Anforderungen
 

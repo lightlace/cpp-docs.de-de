@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374504"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (_pexit-Hookfunktion aktivieren)
 Ruft die `_pexit` Funktion am Ende jeder Methode oder Funktion.  

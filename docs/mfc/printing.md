@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348229"
 ---
 # <a name="printing"></a>Drucken
 Microsoft Windows implementiert geräteunabhängige anzeigen. In MFC, dies bedeutet, dass die gleichen zeichnen-Aufrufe die `OnDraw` Memberfunktion von Ihrer Ansichtsklasse sind verantwortlich für das Zeichnen für die Anzeige und auf anderen Geräten, z. B. Drucker. Für die Seitenansicht ist das Zielgerät eine simulierte Druckerausgabe auf dem Bildschirm.  

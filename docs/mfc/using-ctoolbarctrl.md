@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385910"
 ---
 # <a name="using-ctoolbarctrl"></a>Verwenden von CToolBarCtrl
 Können Sie die Symbolleisten-Steuerelement ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) beim Erstellen eines Steuerelementfensters, Schaltflächen und optionale Leerzeichen enthält. Jede Schaltfläche im Fenster Symbolleisten-Steuerelements sendet eine befehlsmeldung an das übergeordnete Fenster, wie der Benutzer sie auswählt. In der Regel entsprechen die Schaltflächen in einer Symbolleiste Elemente in der Anwendung im Menü zusätzliche und eine direktere lässt sich das für den Benutzer auf die Befehle einer Anwendung zugreifen.  

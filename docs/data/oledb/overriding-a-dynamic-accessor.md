@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107856"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Überschreiben einer dynamischen Zugriffsmethode
 Bei Verwendung ein dynamisches Accessors wie z. B. `CDynamicAccessor`, den Befehl **öffnen** Methode erstellt einen Accessor für automatisch der Informationen in der Spalte des Rowsets bereits geöffnet anhand. Sie können den dynamischen Accessor, um zu steuern, wie genau die Spalten gebunden sind, überschreiben.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341309"
 ---
 # <a name="application-and-thread-support-classes"></a>Klassen zur Anwendungs- und Threadunterstützung
 Jede Anwendung hat nur eine Application-Objekt. Dieses Objekt andere Objekte in der ausgeführten Anwendung koordiniert und stammt aus `CWinApp`.  

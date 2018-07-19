@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096219"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults-Klasse
 Wenn Sie einen Befehl aus, um mehrere Resultsets verarbeiten möchten, verwenden `CMultipleResults` für die `CCommand` Vorlagenargument *TMultiple*.  

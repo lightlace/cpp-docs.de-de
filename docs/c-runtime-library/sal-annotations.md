@@ -62,6 +62,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409383"
 ---
 # <a name="sal-annotations"></a>SAL-Anmerkungen
 Wenn Sie die Headerdateien der Bibliothek untersuchen, fallen Ihnen unter Umständen einige ungewöhnliche Anmerkungen auf, z. B. `_In_z` und `_Out_z_cap_(_Size)`. Dies sind Beispiele für die Microsoft-Quellcodeanmerkungssprache (Source-Code Annotation Language, SAL). Mit den darin verfügbaren Anmerkungen kann beschrieben werden, wie eine Funktion ihre Parameter verwendet, z. B. die getroffenen Annahmen und die Garantien für den Abschluss. In der Headerdatei \<sal.h> sind die Anmerkungen definiert.  

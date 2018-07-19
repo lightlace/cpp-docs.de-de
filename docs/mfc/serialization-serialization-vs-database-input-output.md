@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379576"
 ---
 # <a name="serialization-serialization-vs-database-inputoutput"></a>Serialisierung: Serialisierung im Vergleich zu Datenbank-e/a
 In diesem Artikel wird erläutert, wann verwenden Document-Objekte und die Serialisierung für dateibasierte Eingabe/Ausgabe (e/a) und wenn andere e/a-Techniken geeignet sind, da die Anwendung liest und Daten auf der Grundlage einer pro Transaktion in datenbankanwendungen schreibt. Wenn Sie keine Serialisierung verwenden, Sie auch keine benötigen die Datei öffnen, speichern, und speichern als Befehle ein. Zu den behandelten Themen gehören:  

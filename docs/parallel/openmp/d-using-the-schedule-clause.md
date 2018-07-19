@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694939"
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Unter Berücksichtigung des Zeitplans-Klausel
 Ein paralleler Bereich verfügt über mindestens eine Grenze, auf das Ende und möglicherweise zusätzliche Barrieren darin. Bei jeder Grenze müssen der letzte Thread auf das Eintreffen der anderen Mitgliedern des Teams warten. Um diese Wartezeit zu minimieren, sollten gemeinsam genutzte verteilt werden, damit alle Threads mit der Barriere auf etwa zur gleichen Zeit ankommen. Wenn ein Teil, freigegeben in Arbeit enthaltenen **für** erstellt, die `schedule` -Klausel kann für diesen Zweck verwendet werden.  

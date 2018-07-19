@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391947"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Formatangabefelder: scanf- und wscanf-Funktionen
 Die hier aufgeführten Informationen gelten für die gesamte `scanf`-Funktionsfamilie, einschließlich der sicheren Versionen. Sie beschreiben die Symbole, mithilfe derer `scanf`-Funktionen angewiesen werden, wie sie Eingabedatenströme in Werten analysieren, die in Programmvariablen eingefügt werden sollen; so z.B der Eingabestrom `stdin` für `scanf`.  

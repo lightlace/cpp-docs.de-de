@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354899"
 ---
 # <a name="atl-registry-component-registrar"></a>ATL-Registrierungskomponente (Registrar)
 ATL-Registrierung stellt die optimierten Zugriff auf die Registrierung über eine benutzerdefinierte Schnittstelle bereit. Die Registrierungsstelle ist Freethread- und statische Verknüpfung von Code für C++-Clients ermöglichen.  

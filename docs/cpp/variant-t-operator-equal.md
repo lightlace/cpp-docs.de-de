@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Operator = | Microsoft Docs
+title: _variant_t::Operator = | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0db0ea95fe3f5491780cd0297e8d3f56b6800e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4772c62db1443beaf6a5fff962a52a71823674bc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943743"
 ---
 # <a name="varianttoperator-"></a>_variant_t::operator =
 **Microsoft-spezifisch**  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _variant_t& operator=(  
+_variant_t& operator=(  
    const VARIANT& varSrc   
 );  
   
@@ -127,37 +128,37 @@ _variant_t& operator=(
 ## <a name="remarks"></a>Hinweise  
  Der Operator weist dem `_variant_t`-Objekt einen neuen Wert zu:  
   
--   **Operator = (***VarSrc***)** weist ein vorhandenes **VARIANT** zu einem `_variant_t` Objekt.      
+-   **Operator = (***VarSrc***)** weist ein vorhandenes `VARIANT` zu einem `_variant_t` Objekt.      
   
--   **Operator = (***pvarSrc zeigt, stimmen***)** weist ein vorhandenes **VARIANT** zu einem `_variant_t` Objekt.      
+-   **Operator = (***pVarSrc***)** weist ein vorhandenes `VARIANT` zu einem `_variant_t` Objekt.      
   
 -   **Operator = (***Var_t_Src***)** weist ein vorhandenes `_variant_t` -Objekt an eine `_variant_t` Objekt.      
   
--   **Operator = (***sSrc***)** weist eine **kurze** Integer-Wert, eine `_variant_t` Objekt.      
+-   **Operator = (***sSrc***)** weist eine **kurze** ganzzahliger Wert und einem `_variant_t` Objekt.      
   
--   **Operator = (**`lSrc`**)** weist eine **lange** Integer-Wert, eine `_variant_t` Objekt.      
+-   **Operator = (**`lSrc`**)** weist eine **lange** ganzzahliger Wert und einem `_variant_t` Objekt.      
   
--   **Operator = (***FltSrc***)** weist eine **"float"** numerischen Wert ein `_variant_t` Objekt.      
+-   **Operator = (***FltSrc***)** weist eine **"float"** numerischer Wert für eine `_variant_t` Objekt.      
   
--   **Operator = (***DblSrc***)** weist eine **doppelte** numerischen Wert ein `_variant_t` Objekt.      
+-   **Operator = (***DblSrc***)** weist eine **doppelte** numerischer Wert für eine `_variant_t` Objekt.      
   
--   **Operator = (***CySrc***)** weist eine **CY** -Objekt an eine `_variant_t` Objekt.      
+-   **Operator = (***CySrc***)** weist eine `CY` -Objekt an eine `_variant_t` Objekt.      
   
 -   **Operator = (***BstrSrc***)** weist eine `BSTR` -Objekt an eine `_variant_t` Objekt.      
   
--   **Operator = (***WstrSrc***)** weist eine Unicode-Zeichenfolge auf ein `_variant_t` Objekt.      
+-   **Operator = (***WstrSrc***)** weist eine Unicodezeichenfolge einem `_variant_t` Objekt.      
   
--   **Operator = (**`strSrc`**)** eine multibyte-Zeichenfolge weist ein `_variant_t` Objekt.      
+-   **Operator = (**`strSrc`**)** weist eine Multibytezeichenfolge einem `_variant_t` Objekt.      
   
--   **Operator = (** `bSrc` **)** weist eine `bool` -Wert an ein `_variant_t` Objekt.    
+-   **Operator = (** `bSrc` **)** weist eine **"bool"** -Werts in einen `_variant_t` Objekt.    
   
--   **Operator = (***pDispSrc***)** weist eine **VT_DISPATCH** -Objekt an eine `_variant_t` Objekt.      
+-   **Operator = (***pDispSrc***)** weist eine `VT_DISPATCH` -Objekt an eine `_variant_t` Objekt.      
   
--   **Operator = (***pIUnknownSrc***)** weist eine **VT_UNKNOWN** -Objekt an eine `_variant_t` Objekt.      
+-   **Operator = (***pIUnknownSrc***)** weist eine `VT_UNKNOWN` -Objekt an eine `_variant_t` Objekt.      
   
--   **Operator = (***DecSrc***)** weist eine **DECIMAL** -Wert an ein `_variant_t` Objekt.      
+-   **Operator = (***DecSrc***)** weist eine `DECIMAL` -Werts in einen `_variant_t` Objekt.      
   
--   **Operator = (** `bSrc` **)** weist eine **BYTE** -Wert an ein `_variant_t` Objekt.    
+-   **Operator = (** `bSrc` **)** weist eine `BYTE` -Werts in einen `_variant_t` Objekt.    
   
  **Ende Microsoft-spezifisch**  
   

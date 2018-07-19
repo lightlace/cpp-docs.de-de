@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845608"
 ---
 # <a name="porting-guide-com-spy"></a>Leitfaden zum Portieren: COM Spy
 Dieses Thema ist das zweite aus einer Reihe von Artikeln, die die Aktualisierung älterer Visual C++-Projekte auf die neueste Version von Visual Studio veranschaulichen. Der Beispielcode in diesem Thema wurde zuletzt mit Visual Studio 2005 kompiliert.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858486"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Anordnung von Steuerelementen in Dialogfeldern
 Dialog-Editor bietet Layouttools, die ausrichten und Größe von Steuerelementen automatisch an. Für die meisten Aufgaben können Sie die [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Alle Dialog-Editor-Symbolleistenbefehle stehen auch im Format und die meisten besitzen [Tastenkombinationen](../windows/accelerator-keys-for-the-dialog-editor.md).  

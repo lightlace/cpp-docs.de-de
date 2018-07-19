@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380320"
 ---
 # <a name="return-values-c"></a>Rückgabewerte (C++)
 Ein skalarer Rückgabewert, der in 64 Bits passt, wird durch RAX zurückgegeben, dazu gehören auch __m64-Typen. Nicht skalare Typen, darunter Gleitkommazahlen, Doubles und vektortypen, wie z. B. [__m128](../cpp/m128.md), [__m128i](../cpp/m128i.md), [__m128d](../cpp/m128d.md) werden in XMM0 zurückgegeben. Der Status von nicht verwendeten Bits in dem in RAX oder XMM0 zurückgegebenen Wert ist nicht definiert.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875733"
 ---
 # <a name="finding-a-string"></a>Suchen von Zeichenfolgen
 Sie können eine oder mehrere Zeichenfolgen in der Zeichenfolgentabelle suchen und [reguläre Ausdrücke](/visualstudio/ide/using-regular-expressions-in-visual-studio) mit der **in Dateien suchen** Befehl (**bearbeiten** im Menü), suchen Sie alle Instanzen von Zeichenfolgen die einem Muster entsprechen.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345077"
 ---
 # <a name="memory-management"></a>Speicherverwaltung
 Diese Gruppe von Artikeln wird beschrieben, wie die allgemeinen Dienste von der Microsoft Foundation Class-Bibliothek (MFC) im Zusammenhang mit der Verwaltung des Arbeitsspeichers nutzen wird. Speicherbelegung kann in zwei Hauptkategorien unterteilt werden: Zuordnungen und Heapzuordnungen frame.  

@@ -1,5 +1,5 @@
 ---
-title: CMFCAutoHideBar-Klasse | Microsoft Docs
+title: CMFCAutoHideBar-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3278824e565f34a61943b466ccc6ffef9c4f0be0
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337015"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar-Klasse
 Die `CMFCAutoHideBar`-Klasse ist eine besondere Symbolleistenklasse, die die Funktion „Automatisch im Hintergrund“ implementiert.  
@@ -95,7 +96,7 @@ class CMFCAutoHideBar : public CPane
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|Die Verzögerung zwischen dem Zeitpunkt, wenn der Benutzer den Mauszeiger über platziert, eine [CMFCAutoHideButton-Klasse](../../mfc/reference/cmfcautohidebutton-class.md) und dem Zeitpunkt, wenn das Framework das zugeordnete Fenster anzeigt.|  
+|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|Die zeitliche Verzögerung zwischen dem Zeitpunkt, wenn der Benutzer den Cursor über platziert, einem [CMFCAutoHideButton-Klasse](../../mfc/reference/cmfcautohidebutton-class.md) und dem Zeitpunkt, wenn das Framework das zugeordnete Fenster anzeigt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn der Benutzer für einen Dockbereich den Modus „Automatisches Ausblenden“ auswählt, erstellt das Framework automatisch ein `CMFCAutoHideBar`-Objekt. Es erstellt außerdem die erforderlichen [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) und [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) Objekte. Jedes `CAutoHideDockSite`-Objekt bezieht sich auf ein einzelne `CMFCAutoHideButton`.  
@@ -135,24 +136,24 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pAutoHideWnd`  
+ [in] *pAutoHideWnd*  
  Das Fenster, das Sie ausblenden möchten.  
   
- [in] `dwAlignment`  
+ [in] *DwAlignment*  
  Ein Wert, der die Ausrichtung der Automatisch-im-Hintergrund-Schaltfläche zum Anwendungsfenster angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
   
 ### <a name="remarks"></a>Hinweise  
- Der `dwAlignment` -Parameter gibt an, wo sich die Automatisch-im-Hintergrund-Schaltfläche in der Anwendung befindet. Der Parameter kann auf einen der folgenden Werte festgelegt werden:  
+ Die *DwAlignment* Parameter gibt an, in dem die Schaltfläche "automatisch ausblenden" in der Anwendung befindet. Der Parameter kann auf einen der folgenden Werte festgelegt werden:  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
@@ -175,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -206,13 +207,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszClassName`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `nID`  
- [in] `dwControlBarStyle`  
- [in] `pContext`  
+ [in] *"lpszclassname"*  
+ [in] *DwStyle*  
+ [in] *Rect*  
+ [in] *pParentWnd*  
+ [in] *nID*  
+ [in] *DwControlBarStyle*  
+ [in] *"pContext"*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -243,14 +244,14 @@ int GetVisibleCount();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
- Die Verzögerung zwischen dem Zeitpunkt, wenn der Benutzer den Mauszeiger über platziert, eine [CMFCAutoHideButton-Klasse](../../mfc/reference/cmfcautohidebutton-class.md) und dem Zeitpunkt, wenn das Framework das zugeordnete Fenster anzeigt.  
+ Die zeitliche Verzögerung zwischen dem Zeitpunkt, wenn der Benutzer den Cursor über platziert, einem [CMFCAutoHideButton-Klasse](../../mfc/reference/cmfcautohidebutton-class.md) und dem Zeitpunkt, wenn das Framework das zugeordnete Fenster anzeigt.  
   
 ```  
 int CMFCAutoHideBar::m_nShowAHWndDelay = 400;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn der Benutzer den Mauszeiger über platziert eine `CMFCAutoHideButton`, besteht eine geringfügige Verzögerung kommen, bevor vom Framework das zugeordnete Fenster angezeigt wird. Dieser Parameter bestimmt die Länge der Verzögerung in Millisekunden an.  
+ Wenn der Benutzer platziert den Cursor über einem `CMFCAutoHideButton`, besteht eine geringfügige Verzögerung kommen, bevor das Framework das zugeordnete Fenster anzeigt. Dieser Parameter bestimmt die Länge der Verzögerung in Millisekunden.  
   
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
@@ -260,7 +261,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -274,7 +275,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- CDockablePane * `pAutoHideWnd`  
+ CDockablePane * *pAutoHideWnd*  
  Das Automatisch-im-Hintergrund-Fenster, das entfernt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -290,7 +291,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] BOOL `bActive`  
+ [in] "Bool" *bActive*  
  TRUE, um auf aktiv festzulegen; andernfalls FALSE.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -304,7 +305,7 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bState`  
+ [in] *bState*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -319,11 +320,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] CDockablePane * `pAutoHideWnd`  
- [in] BOOL `bShow`  
+ [in] CDockablePane * *pAutoHideWnd*  
+ [in] "Bool" *bShow*  
  TRUE, um das Fenster anzuzeigen.  
   
- [in] BOOL `bDelay`  
+ [in] "Bool" *bDelay*  
  Dieser Parameter wird ignoriert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -341,11 +342,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nLength`  
+ [in] *nLength*  
  Der Wert wird in der Basisimplementierung nicht verwendet. Verwenden Sie diesen Wert in abgeleiteten Implementierungen, um die Länge des Bereichs mit der geänderten Größe anzuzeigen.  
   
- [in] `bVert`  
- Der Wert wird in der Basisimplementierung nicht verwendet. Verwenden Sie in abgeleiteten Implementierungen `TRUE` um den Fall abzudecken, in dem die automatisch ausblendbare Leiste vertikal reduziert wird, und `FALSE` für den Fall, in dem die automatisch ausblendbare Leiste horizontal reduziert wird.  
+ [in] *bHoriz*  
+ Der Wert wird in der Basisimplementierung nicht verwendet. Verwenden Sie in abgeleiteten Implementierungen "true" Handle der Fall, in dem die automatisch ausblendbare Leiste vertikal reduziert wird, und "false" für den Fall, in dem die automatisch ausblendbare Leiste horizontal reduziert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die resultierende Größe des Bereichs, dessen Größe geändert wurde.  

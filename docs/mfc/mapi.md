@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19615aabce489049d38539b48300311504fbbbfe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1df0d00aa6356fa1741e7f4fc34d8063782da859
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930673"
 ---
 # <a name="mapi"></a>MAPI
-Dieser Artikel beschreibt die Microsoft MAPI Messaging Application Programming Interface () für Entwickler von Clientanwendungen Nachricht. MFC bietet Unterstützung für eine Teilmenge der MAPI in Klasse **CDocument** jedoch nicht die gesamte API kapselt. Weitere Informationen finden Sie unter [MAPI-Unterstützung in MFC](../mfc/mapi-support-in-mfc.md).  
+Dieser Artikel beschreibt die Microsoft MAPI Messaging Application Programming Interface () für Entwickler von Clientanwendungen Nachricht. MFC bietet Unterstützung für eine Teilmenge der MAPI in Klasse `CDocument` jedoch nicht die gesamte API kapselt. Weitere Informationen finden Sie unter [MAPI-Unterstützung in MFC](../mfc/mapi-support-in-mfc.md).  
   
  MAPI wird eine Reihe von Funktionen, die e-Mail-fähige und e-Mail-fähige Anwendungen zu erstellen, bearbeiten, übertragen und Speichern von e-Mail-Nachrichten verwenden. Es bietet Anwendungsentwicklern die Tools zum Definieren der Zweck und den Inhalt der e-Mail-Nachrichten und weist ihnen Flexibilität in deren Verwaltung gespeicherte e-Mail-Nachrichten. MAPI bietet auch eine gemeinsame Schnittstelle, die Anwendungsentwickler verwenden können, um e-Mail-aktivierte zu erstellen und e-Mail-fähige Anwendungen, die unabhängig von der zugrunde liegenden Nachrichtensystem.  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873120"
 ---
 # <a name="controls-in-dialog-boxes"></a>Steuerelemente in Dialogfeldern
 Sie können Steuerelemente hinzufügen, um ein Dialogfeld mithilfe der [Registerkarte "Dialog-Editor"](../windows/dialog-editor-tab-toolbox.md) in der [Fenster "Toolbox"](/visualstudio/ide/reference/toolbox), können Sie wählen das Steuerelement, Sie möchten, und ziehen sie das Dialogfeld. Standardmäßig wird das Fenster "Toolbox" auf automatisch im Hintergrund festgelegt. Es wird auf den linken Rand der Projektmappe als Registerkarte angezeigt, wenn der Dialog-Editor geöffnet ist. Sie können jedoch das Fenster "Toolbox" an Position anheften, indem Sie auf die **automatisch im Hintergrund** Schaltfläche in der oberen rechten Ecke des Fensters. Weitere Informationen zum Steuern des Verhaltens von diesem Fenster finden Sie unter [Fensterverwaltung](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  

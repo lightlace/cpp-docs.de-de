@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292983"
 ---
 # <a name="compiler-warning-level-3-c4359"></a>Compilerwarnung (Stufe 3) C4359
 'Typ': tatsächliche Ausrichtung (8) ist größer als der Wert in __declspec(align()) angegebene  

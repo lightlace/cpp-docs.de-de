@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385364"
 ---
 # <a name="tree-control-item-information"></a>Informationen über die Elemente im Struktursteuerelement
 Struktursteuerelemente ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) eine Reihe von Memberfunktionen, die Informationen zu den Elementen im Steuerelement abzurufen. Die [GetItem](../mfc/reference/ctreectrl-class.md#getitem) Memberfunktion ruft einiger oder aller Daten, die einem Element zugeordnet. Diese Daten können es sich um den Text des Elements, Status, Bilder, Anzahl der untergeordneten Elemente und einem anwendungsdefinierten 32-Bit-Datenwert enthalten. Es gibt auch eine [SetItem](../mfc/reference/ctreectrl-class.md#setitem) -Funktion, die einige oder alle Daten, die einem Element zugeordneten festlegen kann.  

@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerWindows7 Klasse | Microsoft Docs
+title: CMFCVisualManagerWindows7-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849948"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7-Klasse
 Die `CMFCVisualManagerWindows7` ermöglicht es einer Anwendung die Darstellung einer [!INCLUDE[win7](../../build/includes/win7_md.md)] Anwendung.  
@@ -48,11 +49,11 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`CMFCVisualManagerWindows7::CleanStyle`|Löscht den aktuellen visuellen Stil, und setzt den visuellen Stil der Standardwert.|  
-|`CMFCVisualManagerWindows7::CleanUp`|Löscht alle Objekte in der Benutzeroberfläche, und setzt die Menüs.|  
-|`CMFCVisualManagerWindows7::DrawNcBtn`|Zeichnet eine Schaltfläche in der nicht-Clientbereichs auf den Frame. Das Framework verwendet diese Methode zum Zeichnen zu minimieren, maximieren, schließen und Schaltflächen in der oberen rechten Ecke des Fensterrahmens wiederherstellen. Diese Methode wird nicht aufgerufen, wenn das Programm nicht Aero Design verwendet.|  
-|`CMFCVisualManagerWindows7::DrawNcText`|Zeichnet Text in den nicht-Clientbereichs auf den Frame. Das Framework verwendet diese Methode der Titel der Anwendung in der Titelleiste oben auf der das Rahmenfenster gezeichnet werden soll.|  
-|`CMFCVisualManagerWindows7::DrawSeparator`|Zeichnet eine Trennzeichen für die [CMFCToolBar Klasse](../../mfc/reference/cmfctoolbar-class.md).|  
+|`CMFCVisualManagerWindows7::CleanStyle`|Löscht den aktuellen visuellen Stil, und setzt den standardmäßigen visuellen Stil.|  
+|`CMFCVisualManagerWindows7::CleanUp`|Löscht alle Objekte in der Benutzeroberfläche aus, und setzt die Menüs.|  
+|`CMFCVisualManagerWindows7::DrawNcBtn`|Zeichnet eine Schaltfläche im nicht-Clientbereich im Frame. Das Framework verwendet diese Methode zum Zeichnen zu minimieren, maximieren, schließen und Wiederherstellen von Schaltflächen in der oberen rechten Ecke des Fensterrahmens. Diese Methode wird nicht aufgerufen, wenn die Anwendung eine nicht-Aero-Design verwendet.|  
+|`CMFCVisualManagerWindows7::DrawNcText`|Zeichnet Text in der nicht-Clientbereich im Frame. Das Framework verwendet diese Methode in der Titelleiste oben auf der das Rahmenfenster der Anwendungstitel gezeichnet werden soll.|  
+|`CMFCVisualManagerWindows7::DrawSeparator`|Zeichnet eine Trennzeichen auf der [CMFCToolBar-Klasse](../../mfc/reference/cmfctoolbar-class.md).|  
 |`CMFCVisualManagerWindows7::GetRibbonBar`|Ruft die [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) der Benutzeroberfläche zugeordnet.|  
 |[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|Ruft die Hintergrundfarbe eines Menübands bearbeiten.|  
 |`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|Überschreibt [CMFCVisualManager::GetRibbonPopupBorderSize](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)|  
@@ -68,7 +69,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::OnDrawMenuBorder`|Überschreibt [CMFCVisualManagerWindows::OnDrawMenuBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)|  
 |`CMFCVisualManagerWindows7::OnDrawMenuCheck`|Überschreibt [CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)|  
 |`CMFCVisualManagerWindows7::OnDrawMenuLabel`|Überschreibt [CMFCVisualManager::OnDrawMenuLabel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenulabel)|  
-|`CMFCVisualManagerWindows7::OnDrawRadioButton`|Überschreibt `CMFCVisualManager::OnDrawRadioButton`|  
+|`CMFCVisualManagerWindows7::OnDrawRadioButton`|Außerkraftsetzungen `CMFCVisualManager::OnDrawRadioButton`|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonApplicationButton`|Überschreibt [CMFCVisualManager::OnDrawRibbonApplicationButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonapplicationbutton)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonButtonBorder`|Überschreibt [CMFCVisualManager::OnDrawRibbonButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonborder)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonCaption`|Überschreibt [CMFCVisualManager::OnDrawRibbonCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaption)|  
@@ -77,7 +78,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::OnDrawRibbonCategoryTab`|Überschreibt [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonDefaultPaneButton`|Überschreibt [CMFCVisualManager::OnDrawRibbonDefaultPaneButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbondefaultpanebutton)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonGalleryButton`|Überschreibt [CMFCVisualManager::OnDrawRibbonGalleryButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbongallerybutton)|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|Überschreibt `CMFCVisualManager::OnDrawRibbonLaunchButton`|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|Außerkraftsetzungen `CMFCVisualManager::OnDrawRibbonLaunchButton`|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonMenuCheckFrame`|Überschreibt [CMFCVisualManager::OnDrawRibbonMenuCheckFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonmenucheckframe)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonPanel`|Überschreibt [CMFCVisualManager::OnDrawRibbonPanel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanel)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonPanelCaption`|Überschreibt [CMFCVisualManager::OnDrawRibbonPanelCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanelcaption)|  
@@ -91,20 +92,20 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|Überschreibt [CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|  
 |`CMFCVisualManagerWindows7::OnFillBarBackground`|Überschreibt [CMFCVisualManagerWindows::OnFillBarBackground](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)|  
 |`CMFCVisualManagerWindows7::OnFillButtonInterior`|Überschreibt [CMFCVisualManagerWindows::OnFillButtonInterior](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|  
-|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|Das Framework ruft diese Methode auf, wenn sie die Fläche um menüelementbilder voll ist.|  
+|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|Das Framework ruft diese Methode auf, wenn er den Bereich um menüelementbilder ausfüllt.|  
 |`CMFCVisualManagerWindows7::OnFillRibbonButton`|Überschreibt [CMFCVisualManager::OnFillRibbonButton](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)|  
 |`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|Überschreibt [CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|  
 |`CMFCVisualManagerWindows7::OnHighlightMenuItem`|Überschreibt [CMFCVisualManagerWindows::OnHighlightMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|  
 |`CMFCVisualManagerWindows7::OnNcActivate`|Überschreibt [CMFCVisualManager::OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|  
 |`CMFCVisualManagerWindows7::OnNcPaint`|Überschreibt [CMFCVisualManager::OnNcPaint](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|  
 |`CMFCVisualManagerWindows7::OnUpdateSystemColors`|Überschreibt [CMFCVisualManagerWindows::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|  
-|`CMFCVisualManagerWindows7::SetResourceHandle`|Legt das Ressourcenhandle, das die Attribute eines visuellen Manager beschreibt.|  
-|`CMFCVisualManagerWindows7::SetStyle`|Legt das Farbschema für die `CMFCVisualManagerWindows7` GUI.|  
+|`CMFCVisualManagerWindows7::SetResourceHandle`|Legt fest, das die Attribute des visuellen Manager beschreibt Ressourcenhandle.|  
+|`CMFCVisualManagerWindows7::SetStyle`|Legt das Farbschema der `CMFCVisualManagerWindows7` GUI.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `CMFCVisualManagerWindows7` Klasse so ändern Sie die Darstellung der Anwendung, um den Standardwert zu imitieren [!INCLUDE[win7](../../build/includes/win7_md.md)] Anwendung. Diese Klasse ist möglicherweise nicht gültig, wenn Ihre Anwendung auf eine Version von Windows ausgeführt wird als frühere [!INCLUDE[win7](../../build/includes/win7_md.md)]. In diesem Szenario verwendet die Anwendung den standardmäßigen visuellen Manager im definierten [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Verwenden der `CMFCVisualManagerWindows7` Klasse, um das Erscheinungsbild Ihrer Anwendung auf den Standardwert zu imitieren [!INCLUDE[win7](../../build/includes/win7_md.md)] Anwendung. Diese Klasse ist möglicherweise nicht gültig, wenn Ihre Anwendung, auf eine Version von Windows ausgeführt wird vor [!INCLUDE[win7](../../build/includes/win7_md.md)]. In diesem Szenario verwendet die Anwendung den standardmäßigen visuellen Manager in definierten [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
   
- Die CMFCVisualManagerWindows7 erbt mehrere Methoden aufgeteilt, von der [CMFCVisualManagerWindows Klasse](../../mfc/reference/cmfcvisualmanagerwindows-class.md) und die `CMFCVisualManager` Klasse. Im vorherigen Abschnitt aufgeführten Methoden sind Methoden, die noch nicht mit der `CMFCVisualManagerWindows7` Klasse.  
+ Die CMFCVisualManagerWindows7 erbt mehrere Methoden, von der [CMFCVisualManagerWindows-Klasse](../../mfc/reference/cmfcvisualmanagerwindows-class.md) und `CMFCVisualManager` Klasse. Im vorherigen Abschnitt aufgeführten Methoden sind Methoden, die noch nicht mit der `CMFCVisualManagerWindows7` Klasse.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -137,7 +138,7 @@ CMFCVisualManagerWindows7();
 ```  
   
 ##  <a name="getribboneditbackgroundcolor"></a>  CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor  
- Ruft die Farbe des Hintergrunds eines Menübands bearbeiten Felds ab.  
+ Ruft die Farbe des Hintergrunds einer Menüband-Bearbeitungsfeld.  
   
 ```  
 virtual COLORREF GetRibbonEditBackgroundColor (
@@ -148,25 +149,25 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pEdit`  
- Ein Zeiger auf das Steuerelement zum Bearbeiten. Dieser Wert darf nicht `NULL` sein.  
+ [in] *pEdit*  
+ Ein Zeiger auf das Steuerelement zum Bearbeiten. Dieser Wert darf nicht NULL sein.  
   
- [out] `bIsHighlighted`  
- Gibt zurück, ob das Menüband Feld hervorgehoben ist.  
+ [out] *bIsHighlighted*  
+ Gibt zurück, ob das Menübandfeld hervorgehoben ist.  
   
- [out] `bIsPaneHighlighted`  
- Gibt `TRUE` , wenn das Menüband, der Bereich enthält `pEdit` wird hervorgehoben.  
+ [out] *bIsPaneHighlighted*  
+ Gibt true zurück, wenn das Menüband, die im Bereich enthält *pEdit* wird hervorgehoben.  
   
- [out] `bIsDisabled`  
- Gibt zurück, ob `pEdit` ist deaktiviert.  
+ [out] *bIsDisabled*  
+ Gibt zurück, ob *pEdit* ist deaktiviert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Farbe des Hintergrunds neben dem Bearbeitungsfeld `pEdit`.  
+ Die Hintergrundfarbe des Bearbeitungsfelds *pEdit*.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="onfillmenuimagerect"></a>  CMFCVisualManagerWindows7::OnFillMenuImageRect  
- Das Framework ruft diese Methode auf, wenn sie die Fläche um ein Menü Elementbild voll ist.  
+ Das Framework ruft diese Methode auf, wenn er den Bereich um eine Menüelementbild ausfüllt.  
   
 ```  
 virtual void OnFillMenuImageRect(
@@ -177,17 +178,17 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger auf den Gerätekontext einer Menüschaltfläche.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Ein Zeiger auf eine `CMFCToolBarButton`. Das Framework füllt den Hintergrund für diese Schaltfläche.  
   
- [in] `rect`  
- Ein Rechteck, das die Grenzen des Bilds im Menübereich-Schaltfläche angibt.  
+ [in] *Rect*  
+ Ein Rechteck, das die Begrenzungen des Image im Menübereich-Schaltfläche angibt.  
   
- [in] `state`  
- Der Zustand der Schaltfläche.  
+ [in] *Zustand*  
+ Den Zustand der Schaltfläche.  
   
 ### <a name="remarks"></a>Hinweise  
   

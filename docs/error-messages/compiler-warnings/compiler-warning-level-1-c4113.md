@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275794"
 ---
 # <a name="compiler-warning-level-1-c4113"></a>Compilerwarnung (Stufe 1) C4113
 "Bezeichner1" unterscheidet sich in Parameterlisten von "Bezeichner2"  

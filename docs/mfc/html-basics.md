@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c4ebbc8e792e36461f7c52c17fa23815239e323
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929089"
 ---
 # <a name="html-basics"></a>Grundlagen zu HTML
 Die meisten Browser haben die Möglichkeit die HTML-Quelle der Seiten, die Sie durchsuchen zu untersuchen. Bei der Anzeige der Quelle, sehen Sie eine Anzahl von Tags für HTML (Hypertext Markup Language), umgeben von spitzen Klammern (<>), kombiniert mit Text.  
@@ -29,7 +30,7 @@ Die meisten Browser haben die Möglichkeit die HTML-Quelle der Seiten, die Sie d
   
 1.  Öffnen Sie Editor oder einem nur-Text-Editor.  
   
-2.  Aus der **Datei** Menü Wählen Sie `New`.  
+2.  Aus der **Datei** Menü wählen **neu**.  
   
 3.  Geben Sie die folgenden Zeilen ein:  
   
@@ -43,7 +44,7 @@ Die meisten Browser haben die Möglichkeit die HTML-Quelle der Seiten, die Sie d
   
 4.  Aus der **Datei** Menü wählen **speichern**, und speichern Sie die Datei als c:\webpages\First.htm. Lassen Sie die Datei im Editor geöffnet.  
   
-5.  Wechseln Sie in den Browser, und aus der **Datei** Menü Wählen Sie **öffnen**, oder Typ `file://C:/webpages/first.htm` im Eingabefeld für den Browser-URL. Eine leere Seite mit der Beschriftung "Top HTML-Tags" sollte angezeigt werden.  
+5.  Wechseln Sie in den Browser, und aus der **Datei** Menü Wählen Sie **öffnen**, oder Typ *file://C:/webpages/first.htm* im Eingabefeld für den Browser-URL. Eine leere Seite mit der Beschriftung "Top HTML-Tags" sollte angezeigt werden.  
   
      Beachten Sie die Tags gekoppelt sind und in spitzen Klammern eingeschlossen werden. Tags sind nicht in der Groß-/Kleinschreibung beachtet, aber die Großschreibung wird häufig verwendet, um die Tags optisch hervorzuheben.  
   

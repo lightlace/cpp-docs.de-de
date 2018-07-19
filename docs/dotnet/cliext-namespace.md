@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104151"
 ---
 # <a name="cliext-namespace"></a>cliext-Namespace
 Die `cliext` -Namespace enthält alle Typen der STL/CLR-Bibliothek. Eine Übersicht über alle diese Typen und Links zu weiteren Informationen zu den STL/CLR-Typen finden Sie unter [STL/CLR-Bibliotheksverweis](../dotnet/stl-clr-library-reference.md).  

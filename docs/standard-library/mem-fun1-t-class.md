@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c90838bf4ae49e372b35ca2e9a2f0feede4eb9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d73beb5b935a729eb5e304eb03cbc37536c4d0e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963153"
 ---
 # <a name="memfun1t-class"></a>mem_fun1_t-Klasse
 
-Eine Adapterklasse, die einer **non_const**-Memberfunktion, die ein einzelnes Argument akzeptiert, ermöglicht, als binäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Zeigerargument initialisiert wird.
+Eine Adapterklasse, die ermöglicht eine `non_const` Memberfunktion, die ein einzelnes Argument als ein binäres Funktionsobjekt, wenn Sie mit einem Zeigerargument initialisiert aufgerufen werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,11 +44,11 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
 
 ### <a name="parameters"></a>Parameter
 
-`_Pm` Ein Zeiger auf die Memberfunktion der Klasse **Typ** , um ein Funktionsobjekt konvertiert werden soll.
+*_Pm* ein Zeiger auf die Memberfunktion der Klasse `Type` in ein Funktionsobjekt konvertiert werden.
 
-`_Pleft` Das Objekt, das die `_Pm` für Memberfunktion aufgerufen wird.
+*_Pleft* das Objekt, das die *_Pm* auf Memberfunktion aufgerufen wird.
 
-`right` Das Argument, das zum erhält `_Pm`.
+*richtige* das Argument, das zum übergeben wird *_Pm*.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -55,7 +56,7 @@ Eine anpassungsfähige binäre Funktion.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse speichert eine Kopie von `_Pm`, die ein Zeiger auf eine Memberfunktion der Klasse **Type** in einem privaten Memberobjekt sein muss. Für seine Memberfunktion `operator()` definiert sie als Rückgabewert (**_Pleft**->\* `_Pm`)(**right**).
+Die Vorlagenklasse speichert eine Kopie des *_Pm*, die einen Zeiger auf eine Memberfunktion der Klasse sein muss `Type`, in einem privaten Memberobjekt. Für seine Memberfunktion `operator()` definiert sie als Rückgabewert (**_Pleft**->\* `_Pm`)(**right**).
 
 ## <a name="example"></a>Beispiel
 

@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 332f84346e6445fdf0550c3ddb142d9582722f0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b99d8fb82b014fc2221f1ec1c0e6ad08ee75b4c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930286"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativen zur Dokument-/Ansichtarchitektur
 MFC-Anwendungen verwenden die Dokument-/Ansichtarchitektur normalerweise Informationen, die Dateiformate und die visuelle Darstellung der Daten für Benutzer zu verwalten. Für die meisten desktopanwendungen ist die Dokument-/Ansichtarchitektur Anwendungsarchitektur mit entsprechenden und effizient. Diese Architektur unterteilt die Daten anzeigen und in den meisten Fällen, die Anwendung vereinfacht und redundanten Code reduziert.  
@@ -40,11 +41,11 @@ MFC-Anwendungen verwenden die Dokument-/Ansichtarchitektur normalerweise Informa
   
  Visual C++-Assistenten als auch die Quelle und das Dialogfeld-Editoren, arbeiten mit der generierten Anwendung genauso wie jede andere Assistenten generierte Anwendung. Die Anwendung unterstützen können, Symbolleisten, Bildlaufleisten und eine Statusleiste und verfügt über eine **zu** Feld. Registrieren Ihrer Anwendung keine Dokumentvorlagen, und es wird keine Dokumentklasse enthalten.  
   
- Beachten Sie, dass die generierte Anwendung eine Ansichtsklasse **CChildView**, abgeleitet von `CWnd`. MFC erstellt ein und platziert eine Instanz der Ansichtsklasse innerhalb der Rahmenfenster, die von der Anwendung erstellt. MFC erzwingt nach wie vor im Fenster Orchestrierungsansicht, da er vereinfacht das Positionieren und Verwalten von Inhalt für die Anwendung. Können Sie Zeichnungscode zum Hinzufügen der `OnPaint` Member dieser Klasse. Code sollte Bildlaufleisten in der Sicht anstelle des Frames, hinzufügen.  
+ Beachten Sie, dass die generierte Anwendung eine Ansichtsklasse `CChildView`, abgeleitet von `CWnd`. MFC erstellt ein und platziert eine Instanz der Ansichtsklasse innerhalb der Rahmenfenster, die von der Anwendung erstellt. MFC erzwingt nach wie vor im Fenster Orchestrierungsansicht, da er vereinfacht das Positionieren und Verwalten von Inhalt für die Anwendung. Können Sie Zeichnungscode zum Hinzufügen der `OnPaint` Member dieser Klasse. Code sollte Bildlaufleisten in der Sicht anstelle des Frames, hinzufügen.  
   
  Da die Dokument-/Ansichtarchitektur von MFC bereitgestellten zur Implementierung zahlreicher grundlegenden Funktionen einer Anwendung zuständig ist, bedeutet seine Abwesenheit im Projekt an, dass Sie zum Implementieren von viele wichtiger Funktionen Ihrer Anwendung verantwortlich sind:  
   
--   Vom MFC-Anwendungs-Assistenten bereitgestellt wird, enthält das Menü für Ihre Anwendung nur `New` und `Exit` Befehle auf den **Datei** Menü. (Die `New` -Befehl wird nur für MDI-Anwendungen unterstützt, nicht SDI-Anwendungen ohne Dokument-/Ansichtarchitektur unterstützt.) Die generierten Menüressource wird eine Liste der zuletzt verwendeten Objekte (die zuletzt verwendet) nicht unterstützt.  
+-   Vom MFC-Anwendungs-Assistenten bereitgestellt wird, enthält das Menü für Ihre Anwendung nur **neu** und **beenden** Befehle auf den **Datei** Menü. (Die **neu** -Befehl wird nur für MDI-Anwendungen unterstützt, nicht SDI-Anwendungen ohne Dokument-/Ansichtarchitektur unterstützt.) Die generierten Menüressource wird eine Liste der zuletzt verwendeten Objekte (die zuletzt verwendet) nicht unterstützt.  
   
 -   Sie müssen Handlerfunktionen und Implementierungen für alle Befehle, die die Anwendung unterstützt wird, einschließlich hinzufügen **öffnen** und **speichern** auf die **Datei** im Menü. MFC enthält normalerweise Code, um diese Funktionen unterstützen, aber diese Unterstützung eng an die Dokument-/Ansichtarchitektur gebunden ist.  
   
@@ -52,9 +53,9 @@ MFC-Anwendungen verwenden die Dokument-/Ansichtarchitektur normalerweise Informa
   
  Es wird dringend empfohlen, dass MFC-Anwendung des Assistenten zum Erstellen von Anwendungen ohne die Dokument-/Ansichtarchitektur, Verwendung da der Assistent eine korrekte MFC-Architektur sicherstellt. Wenn Sie vermeiden müssen, mit dem Assistenten gibt hier jedoch mehrere Ansätze zur Umgehung der Dokument-/Ansichtarchitektur in Ihrem Code:  
   
--   Behandeln Sie das Dokument als eine nicht verwendete Erweiterung, und implementieren Sie Ihre Datenverwaltungscode in Ansichtsklasse, wie oben beschrieben. Mehraufwand für das Dokument ist relativ niedrig. Ein einzelnes [CDocument](../mfc/reference/cdocument-class.md) Objekt verursacht eine kleine Menge an Mehraufwand selbst sowie kleine Mehraufwand **CDocument**des Basisklassen, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) und [ CObject](../mfc/reference/cobject-class.md). Beide Klassen sind klein.  
+-   Behandeln Sie das Dokument als eine nicht verwendete Erweiterung, und implementieren Sie Ihre Datenverwaltungscode in Ansichtsklasse, wie oben beschrieben. Mehraufwand für das Dokument ist relativ niedrig. Ein einzelnes [CDocument](../mfc/reference/cdocument-class.md) Objekt verursacht eine kleine Menge an Mehraufwand selbst sowie kleine Mehraufwand `CDocument`des Basisklassen, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) und [CObject](../mfc/reference/cobject-class.md). Beide Klassen sind klein.  
   
-     Deklariert **CDocument**:  
+     Deklariert `CDocument`:  
   
     -   Zwei `CString` Objekte.  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104486"
 ---
 # <a name="using-bookmarks"></a>Verwenden von Lesezeichen
 Bevor Sie das Rowset zu öffnen, muss dem Anbieter Aufschluss darüber, dass Sie Lesezeichen verwenden möchten. Legen Sie hierzu die **DBPROP_BOOKMARKS** Eigenschaft **"true"** in Ihrer Eigenschaft festgelegt. Der Anbieter Lesezeichen als Spalte 0 (null), abruft, daher müssen Sie das spezielle Makro verwenden `BOOKMARK_ENTRY` und die `CBookmark` Klasse, wenn Sie einen statischen Accessor verwenden. `CBookmark` ist eine Vorlagenklasse, in dem das Argument die Länge in Bytes des Lesezeichenpuffers ist. Die Länge des Puffers für ein Lesezeichen benötigte hängt vom Anbieter ab. Wenn Sie den ODBC-OLE DB-Anbieter verwenden, wie im folgenden Beispiel gezeigt, muss der Puffer 4 Bytes.  

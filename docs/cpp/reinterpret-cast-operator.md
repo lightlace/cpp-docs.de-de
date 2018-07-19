@@ -1,5 +1,5 @@
 ---
-title: Reinterpret_cast-Operator | Microsoft Docs
+title: Reinterpret_cast-Operator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd64960469c9c4ca069611f6ebeefeaac8b29ba0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18a7cdd80c1d7b6b17a988d8f3581c7757f69823
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943526"
 ---
 # <a name="reinterpretcast-operator"></a>reinterpret_cast-Operator
 Ermöglicht, dass ein beliebiger Zeiger in einen anderen Zeigertyp konvertiert wird. Ermöglicht es außerdem, einen beliebigen ganzzahligen Typ in einen beliebigen Zeigertyp und umgekehrt zu konvertieren.  
@@ -32,19 +33,19 @@ reinterpret_cast < type-id > ( expression )
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Eine falsche Verwendung des Operators `reinterpret_cast` kann schnell zu einem erhöhten Sicherheitsrisiko führen. Sofern nicht die gewünschte Konvertierung grundsätzlich auf niedriger Ebene stattfindet, sollten Sie einen der anderen Umwandlungsoperatoren verwenden.  
+ Falsche Verwendung der **"reinterpret_cast"** Operator kann ganz einfach unsicheren sein. Sofern nicht die gewünschte Konvertierung grundsätzlich auf niedriger Ebene stattfindet, sollten Sie einen der anderen Umwandlungsoperatoren verwenden.  
   
- Der Operator `reinterpret_cast` kann z. B. für Konvertierungen von `char*` in `int*` oder `One_class*` in `Unrelated_class*` verwendet werden, die grundsätzlich unsicher sind.  
+ Die **"reinterpret_cast"** -Operator kann z. B. für Konvertierungen verwendet werden `char*` zu `int*`, oder `One_class*` zu `Unrelated_class*`, die grundsätzlich unsicher sind.  
   
- Das Ergebnis von `reinterpret_cast` kann nur für die Umwandlung zurück in den ursprünglichen Typ sicher verwendet werden. Andere Verwendungsmöglichkeiten sind bestenfalls nicht portierbar.  
+ Das Ergebnis einer **"reinterpret_cast"** nicht für etwas anderes als die Umwandlung zurück in den ursprünglichen Typ sicher verwendet werden. Andere Verwendungsmöglichkeiten sind bestenfalls nicht portierbar.  
   
- Die `reinterpret_cast` Operator nicht umwandeln der **const**, `volatile`, oder **__unaligned** Attribute. Finden Sie unter [Const_cast-Operator](../cpp/const-cast-operator.md) Informationen zum Entfernen dieser Attribute.  
+ Die **"reinterpret_cast"** Operator nicht umwandeln der **const**, **flüchtige**, oder **__unaligned** Attribute. Finden Sie unter [Const_cast-Operator](../cpp/const-cast-operator.md) Informationen zum Entfernen dieser Attribute.  
   
- Der `reinterpret_cast`-Operator konvertiert einen NULL-Zeigerwert in den NULL-Zeigerwert des Zieltyps.  
+ Die **"reinterpret_cast"** -Operator konvertiert einen null-Zeiger-Wert, der null-Zeigerwert des Zieltyps.  
   
- Eine praktische Verwendung von `reinterpret_cast` besteht in einer Hashfunktion, die einen Wert einem Index so zuordnet, dass zwei verschiedene Werte am Ende selten den gleichen Index aufweisen.  
+ Eine praktische Verwendung von **"reinterpret_cast"** befindet sich in eine Hash-Funktion, welche Karten einen Wert in einen Index in einer Weise, dass zwei verschiedene Werte am Ende selten sich mit demselben Index.  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -84,7 +85,7 @@ Output:
 64829  
 ```  
   
- Mit `reinterpret_cast` kann der Zeiger als ganzzahliger Typ behandelt werden. Das Ergebnis ist dann eine Bitverschiebung oder ein XOR-Vorgang, um einen eindeutigen Index zu erstellen (eindeutig mit hoher Wahrscheinlichkeit). Der Index wird dann von einer standardmäßigen Umwandlung im C-Format in den Rückgabetyp der Funktion abgeschnitten.  
+ Die **"reinterpret_cast"** kann der Zeiger als ganzzahliger Typ behandelt werden. Das Ergebnis ist dann eine Bitverschiebung oder ein XOR-Vorgang, um einen eindeutigen Index zu erstellen (eindeutig mit hoher Wahrscheinlichkeit). Der Index wird dann von einer standardmäßigen Umwandlung im C-Format in den Rückgabetyp der Funktion abgeschnitten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Umwandlungsoperatoren](../cpp/casting-operators.md)   

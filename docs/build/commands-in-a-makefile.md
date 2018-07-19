@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366873"
 ---
 # <a name="commands-in-a-makefile"></a>Befehle in einem Makefile
 Eine Beschreibung Block oder mithilfe eines Rückschlusses Regel gibt einen Block von Befehlen, die ausgeführt werden, wenn die Abhängigkeit nicht mehr aktuell ist. NMAKE jeder Befehl vor der Ausführung angezeigt, es sei denn, / s, **. AUTOMATISCHE**, **! CMDSWITCHES**, oder @ verwendet wird. NMAKE sucht nach einer übereinstimmenden Rückschlussregel auf, wenn ein Beschreibungsblock von einem Befehlsblock nicht befolgt werden.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370175"
 ---
 # <a name="pdb-files-as-linker-input"></a>PDB-Dateien als Eingabe für den Linker
 Objektdateien Sie (.obj)-Dateien, die Kompilierung mit/ZI-Option den Namen des eine Programmdatenbank (PDB) enthalten. Sie nicht den Namen des Objekts PDB-Datei an den Linker angeben; LINK verwendet den eingebetteten Namen die PDB-Datei zu finden, wenn er benötigt wird. Dies gilt auch für Debugfähige Objekte in einer Bibliothek; die PDB-Datei für eine debugfähigen Bibliothek muss an den Linker zusammen mit der Bibliothek verfügbar sein.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302447"
 ---
 # <a name="compiler-warning-level-3-c4281"></a>Compilerwarnung (Stufe 3) C4281
 Rekursion "Operator ->" durch den Typ 'Typ' aufgetreten  

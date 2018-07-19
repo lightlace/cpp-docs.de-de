@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384541"
 ---
 # <a name="declarations-and-types"></a>Deklarationen und Typen
 In diesem Abschnitt werden die Deklaration und die Initialisierung der Variablen, Funktionen und Typen beschrieben. Die Programmiersprache C umfasst einen Standardsatz elementarer Datentypen. Sie können auch eigene Datentypen hinzufügen, die als "abgeleitete Typen" bezeichnet werden, indem Sie neue auf Grundlage bereits definierter Typen deklarieren. Die folgenden Themen werden erörtert:  

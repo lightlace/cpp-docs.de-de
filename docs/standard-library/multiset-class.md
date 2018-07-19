@@ -96,11 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 994e97f126796db9725cdccb629f01a0f22dc962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07e38d11ef25ebc2f1da888594ab84fe2261c53a
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028332"
 ---
 # <a name="multiset-class"></a>multiset-Klasse
 
@@ -115,13 +116,13 @@ class multiset
 
 ### <a name="parameters"></a>Parameter
 
-*Schlüssel* Elementdatentyp um in die Multimenge zu speichernde Elementdatentyp.
+*Schlüssel* die Datentyp der Elemente in der Multimenge gespeichert werden.
 
 *Vergleichen Sie* der Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel, um deren relative Reihenfolge in der Multimenge zu bestimmen, vergleichen können. Das binäre Prädikat **less**\<Key> ist der Standardwert.
 
 In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des `std::less<>` oder `std::greater<>` Prädikats, das keine Typparameter aufweist, aktivieren. Weitere Informationen finden Sie unter [Heterogenes Nachschlagen in assoziativen Containern](../standard-library/stl-containers.md#sequence_containers)
 
-`Allocator` Der Typ, der das gespeicherte Zuordnungsobjekt darstellt, das Details zum Belegen und Freigeben des Arbeitsspeichers der Multimenge gekapselt. Der Standardwert ist **Allocator ***\<Key >.*
+*Allocator* der Typ, der das gespeicherte Zuordnungsobjekt darstellt, die Details zum Belegen und Freigeben des Arbeitsspeichers der Multimenge gekapselt. Der Standardwert ist **Allocator ***\<Key >.*
 
 ## <a name="remarks"></a>Hinweise
 
@@ -145,7 +146,7 @@ Die Auswahl des Containertyps sollte im Allgemeinen auf Grundlage des für die A
 
 Die Multimenge sollte der ausgewählte assoziative Container sein, wenn die Bedingungen, mit denen die Werte von der Anwendung den Schlüsseln zugeordnet werden, erfüllt werden. Die Elemente einer Multimenge können Mehrfache sein und als eigene Sortierschlüssel dienen, sodass Schlüssel nicht eindeutig sind. Ein Modell für diesen Typ der Struktur ist eine geordnete Liste von z. B. Wörtern, in denen die Wörter möglicherweise mehrmals auftreten. Wenn mehrfaches Vorkommen der Wörter nicht zugelassen wurde, ist eine Menge die geeignete Containerstruktur. Wenn eindeutige Definitionen als Werte zur Liste von eindeutigen Schlüsselwörtern angefügt wurden, ist eine Zuordnung eine äquivalente Struktur, um diese Daten zu enthalten. Wenn stattdessen die Definitionen nicht eindeutig sind, ist eine Mehrfachzuordnung der geeignete Container.
 
-Die Multimenge sortiert die von ihr gesteuerten Elemente, indem ein gespeichertes Funktionsobjekt vom Typ `Compare` aufgerufen wird. Bei diesem gespeicherten Objekt handelt es sich um eine Vergleichsfunktion, auf die durch Aufrufen der Memberfunktion [key_comp](#key_comp) zugegriffen werden kann. Im Allgemeinen müssen die Elemente der Vorwärtsiteratoren etwas weniger als vergleichbar sein, um diese Sortierung zu erstellen, sodass beliebige zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Etwas technischer betrachtet ist die Vergleichsfunktion ein binäres Prädikat, das eine strenge schwache Sortierung im mathematischen Sinn verursacht. Bei einem binären *f*( *x*, *y*)-Prädikat handelt es sich um ein Funktionsobjekt mit den beiden Argumentobjekten *x* und *y* sowie dem Rückgabewert **TRUE** oder **FALSE**. Eine Sortierung, die auf eine Multimenge angewendet wird, ist eine strenge schwache Sortierung, wenn das binäre Prädikat irreflexiv, antisymmetrisch sowie transitiv ist und wenn die Äquivalenz bei zwei Objekten „x“ und „y“ transitiv ist, die als äquivalent definiert werden, wenn sowohl *f*( *x,y*) als auch *f*( *y,x*) FALSE sind. Wenn der stärkere Gleichheitszustand zwischen Schlüsseln die Äquivalenz ersetzt, erfolgt die Sortierung total (d. h., alle Elemente werden zueinander sortiert), und die verglichenen Schlüssel sind von den einander nicht mehr zu unterscheiden.
+Die Multimenge sortiert die Sequenz, die es steuert, indem ein gespeichertes Funktionsobjekt vom Typ *vergleichen*. Bei diesem gespeicherten Objekt handelt es sich um eine Vergleichsfunktion, auf die zugegriffen werden kann, indem die [key_comp](#key_comp)-Memberfunktion aufgerufen wird. Im Allgemeinen müssen die Elemente der Vorwärtsiteratoren etwas weniger als vergleichbar sein, um diese Sortierung zu erstellen, sodass beliebige zwei Elemente möglicherweise als gleichwertig bestimmt werden (in dem Sinne, dass keins geringer als das Andere ist), oder dass eins geringer als das Andere ist. Dies führt zu einer Sortierung zwischen den nicht gleichwertigen Elementen. Etwas technischer betrachtet ist die Vergleichsfunktion ein binäres Prädikat, das eine strenge schwache Sortierung im mathematischen Sinn verursacht. Bei einem binären *f*( *x*, *y*)-Prädikat handelt es sich um ein Funktionsobjekt mit den beiden Argumentobjekten *x* und *y* sowie dem Rückgabewert **TRUE** oder **FALSE**. Eine Sortierung, die auf eine Multimenge angewendet wird, ist eine strenge schwache Sortierung, wenn das binäre Prädikat irreflexiv, antisymmetrisch sowie transitiv ist und wenn die Äquivalenz bei zwei Objekten „x“ und „y“ transitiv ist, die als äquivalent definiert werden, wenn sowohl *f*( *x,y*) als auch *f*( *y,x*) FALSE sind. Wenn der stärkere Gleichheitszustand zwischen Schlüsseln die Äquivalenz ersetzt, erfolgt die Sortierung total (d. h., alle Elemente werden zueinander sortiert), und die verglichenen Schlüssel sind von den einander nicht mehr zu unterscheiden.
 
 In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des `std::less<>` oder `std::greater<>` Prädikats, das keine Typparameter aufweist, aktivieren. Weitere Informationen finden Sie unter [Heterogenes Nachschlagen in assoziativen Containern](../standard-library/stl-containers.md#sequence_containers)
 
@@ -160,10 +161,10 @@ In C ++ 14 können Sie heterogenes Nachschlagen durch Angabe des `std::less<>` o
 |Typname|Beschreibung|
 |-|-|
 |[allocator_type](#allocator_type)|Eine Typedef für die `allocator`-Klasse für das `multiset`-Objekt.|
-|[const_iterator](#const_iterator)|Eine Typedef für einen bidirektionalen Iterator, der ein `const`-Element in der `multiset` lesen kann.|
-|[const_pointer](#const_pointer)|Eine Typedef für einen Zeiger auf ein `const`-Element in einer `multiset`.|
-|[const_reference](#const_reference)|Eine Typedef für einen Verweis auf ein `const`-Element, das in einer `multiset` zum Lesen und Ausführen von `const`-Vorgängen gespeichert ist.|
-|[const_reverse_iterator](#const_reverse_iterator)|Eine Typedef für einen bidirektionalen Iterator, der ein beliebiges `const`-Element in der `multiset` lesen kann.|
+|[const_iterator](#const_iterator)|Eine Typedef für einen bidirektionalen Iterator, der gelesen wird, kann ein **const** Element in der `multiset`.|
+|[const_pointer](#const_pointer)|Eine Typedef für einen Zeiger auf eine **const** Element in einem `multiset`.|
+|[const_reference](#const_reference)|Eine Typedef für einen Verweis auf eine **const** Element gespeichert wird, einem `multiset` zum Lesen und ausführen **const** Vorgänge.|
+|[const_reverse_iterator](#const_reverse_iterator)|Eine Typedef für einen bidirektionalen Iterator, mit denen alle machen kann **const** Element in der `multiset`.|
 |[difference_type](#difference_type)|Ein Ganzzahltyp mit Vorzeichen für die Anzahl von Elementen einer `multiset` in einem Bereich zwischen Elementen, auf die von Iteratoren gezeigt wird.|
 |[Iterator](#iterator)|Eine Typedef für einen bidirektionalen Iterator, der ein beliebiges Element in einer `multiset` lesen oder ändern kann.|
 |[key_compare](#key_compare)|Eine Typedef für ein Funktionsobjekt, das zwei Sortierschlüssel vergleichen kann, um die relative Position von zwei Elementen in der `multiset` zu bestimmen.|
@@ -290,7 +291,7 @@ The first element of ms1 is now 2
 
 ## <a name="cbegin"></a> multiset::cbegin
 
-Gibt einen `const`-Iterator zurück, mit dem das erste Element im Bereich behandelt wird.
+Gibt eine **const** -Iterator, der das erste Element im Bereich adressiert.
 
 ```cpp
 const_iterator cbegin() const;
@@ -298,13 +299,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein bidirektionaler `const`-Access-Iterator, der auf das erste Element des Bereichs zeigt oder auf die Position direkt hinter dem Ende eines leeren Bereichs (für einen leeren Bereich gilt `cbegin() == cend()`).
+Ein **const** bidirektionale-Access-Iterator, der zeigt auf das erste Element des Bereichs, oder die Position direkt hinter das Ende eines leeren Bereichs (für einen leeren Bereich gilt `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Hinweise
 
 Bei dem Rückgabewert `cbegin` können die Elemente im Bereich nicht geändert werden.
 
-Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger änderbarer Container (ohne `const`), der `begin()` und `cbegin()` unterstützt.
+Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel können Sie auch `Container` ein beliebiger änderbarer (nicht- **const**) Container jeder Art, die unterstützt `begin()` und `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -316,7 +317,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a> multiset::cend
 
-Gibt einen `const`-Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines Bereichs unmittelbar nachfolgt.
+Gibt eine **const** Iterator, der die Position direkt hinter dem letzten Element in einem Bereich.
 
 ```cpp
 const_iterator cend() const;
@@ -324,13 +325,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein bidirektionaler `const`-Access-Iterator, der auf eine Position unmittelbar nach dem Ende des Bereichs verweist.
+Ein **const** bidirektionaler eingabeiterator, der direkt hinter das Ende des Bereichs verweist.
 
 ### <a name="remarks"></a>Hinweise
 
 `cend` wird verwendet, um zu testen, ob ein Iterator das Ende seines Bereichs übergeben hat.
 
-Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger änderbarer (Nicht-`const`-)Container, der `end()` und `cend()` unterstützt.
+Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel können Sie auch `Container` ein beliebiger änderbarer (nicht- **const**) Container jeder Art, die unterstützt `end()` und `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -477,7 +478,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-`key` Der Schlüssel der Elemente, die von der Multimenge abgeglichen werden.
+*Schlüssel* der Schlüssel der Elemente, die von der Multimenge abgeglichen werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -710,7 +711,7 @@ iterator emplace(Args&&... args);
 
 |Parameter|Beschreibung|
 |-|-|
-|`args`|Die weitergeleiteten Argumente zur Konstruktion eines Elements, dass in die Multimenge eingefügt werden soll.|
+|*args*|Die weitergeleiteten Argumente zur Konstruktion eines Elements, dass in die Multimenge eingefügt werden soll.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -779,8 +780,8 @@ iterator emplace_hint(
 
 |Parameter|Beschreibung|
 |-|-|
-|`args`|Die weitergeleiteten Argumente zur Konstruktion eines Elements, dass in die Multimenge eingefügt werden soll.|
-|`where`|Die Position, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird. (Wenn dieser Punkt `where` direkt vorausgeht, kann die Einfügung in amortisierter konstanter Zeit anstelle von logarithmischer Zeit eintreten.)|
+|*args*|Die weitergeleiteten Argumente zur Konstruktion eines Elements, dass in die Multimenge eingefügt werden soll.|
+|*where*|Die Position, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird. (Wenn Sie diesen Punkt unmittelbar vorangestellt *, in denen*, einfügen kann in amortisierter konstanter Zeit anstelle von logarithmischer Zeit erfolgen.)|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -872,7 +873,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-`key` Der Argumentschlüssel mit dem Sortierschlüssel eines Elements aus dem durchsuchten Multiset verglichen werden soll.
+*Schlüssel* der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem durchsuchten Multiset verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -956,13 +957,13 @@ size_type erase(
 
 ### <a name="parameters"></a>Parameter
 
-`Where` Die Position des zu entfernenden Elements.
+*Wo* Position des Elements entfernt werden soll.
 
-`First` Die Position des ersten Elements entfernt werden soll.
+*Erste* Position des ersten Elements entfernt werden soll.
 
-`Last` Die Position direkt hinter dem letzten Element entfernt werden soll.
+*Letzte* die Position direkt hinter dem letzten Element entfernt werden soll.
 
-`Key` Der Schlüsselwert der zu entfernenden Elemente.
+*Schlüssel* den Schlüsselwert der zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -987,7 +988,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parameter
 
-`key` Der Schlüsselwert mit dem Sortierschlüssel eines Elements aus dem durchsuchten Multiset verglichen werden.
+*Schlüssel* den Schlüsselwert mit dem Sortierschlüssel eines Elements aus dem durchsuchten Multiset verglichen werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -995,9 +996,9 @@ Ein Iterator, der entweder auf den Speicherort eines Elements mit einem benutzer
 
 ### <a name="remarks"></a>Hinweise
 
-Die Mitgliedsfunktion gibt ein Iterator zurück, der sich auf ein Element im Multiset bezieht, dessen Schlüssel dem Argument `key` unter einem binären Prädikat entspricht, das eine Sortierung basierend auf einer kleiner-als-Vergleichbarkeitsbeziehung einleitet.
+Die Memberfunktion gibt ein Iterator, der auf ein Element im Multiset, dessen Schlüssel bezieht dem Argument entspricht *Schlüssel* unter einem binären Prädikat, das eine Reihenfolge basierend auf einer kleiner-als-vergleichbarkeitsbeziehung.
 
-Wird der Rückgabewert von **find** einem **const_iterator** zugewiesen, kann das Multiset-Objekt nicht geändert werden. Wird der Rückgabewert von **find** einem **Iterator** zugewiesen, kann das Multiset-Objekt geändert werden.
+Wenn der Rückgabewert von `find` zugewiesen ist eine `const_iterator`, kann das multiset-Objekt kann nicht geändert werden. Wenn der Rückgabewert von `find` zugewiesen ist ein `iterator`, kann das multiset-Objekt geändert werden
 
 ### <a name="example"></a>Beispiel
 
@@ -1175,13 +1176,13 @@ IList);
 
 |Parameter|Beschreibung|
 |-|-|
-|`Val`|Der Wert eines in die Multimenge einzufügenden Elements.|
-|`Where`|Die Position, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird. (Wenn dieser Punkt `Where` direkt vorausgeht, kann die Einfügung in amortisierter konstanter Zeit anstelle von logarithmischer Zeit eintreten.)|
-|`ValTy`|Der Vorlagenparameter, mit dem der Argumenttyp angegeben wird, der von der Multimenge verwendet werden kann, um ein Element von [value_type](../standard-library/map-class.md#value_type) zu erstellen und `Val` perfekt als Argument weiterzuleiten.|
-|`First`|Die Position des ersten zu kopierenden Elements.|
-|`Last`|Die Position direkt über den letzten zu kopierenden Elements.|
-|`InputIterator`|Das Vorlagenfunktionsargument, das den Anforderungen eines [Eingabeiterators](../standard-library/input-iterator-tag-struct.md) erfüllt, der auf Elemente eines Typs zeigt, der zum Erstellen von [value_type](../standard-library/map-class.md#value_type)-Objekten verwendet werden kann.|
-|`IList`|Das [initializer_list](../standard-library/initializer-list.md)-Element, aus dem die Elemente kopiert werden sollen.|
+|*val*|Der Wert eines in die Multimenge einzufügenden Elements.|
+|*Where*|Die Position, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird. (Wenn Sie diesen Punkt unmittelbar vorangestellt *, in denen*, einfügen kann in amortisierter konstanter Zeit anstelle von logarithmischer Zeit erfolgen.)|
+|*ValTy*|Vorlagenparameter, der der Argumenttyp angegeben wird, die von der Multimenge verwendet werden kann, um die Konstruktion eines Elements der [Value_type](../standard-library/map-class.md#value_type), und perfekt *Val* als Argument.|
+|*Erste*|Die Position des ersten zu kopierenden Elements.|
+|*letzte*|Die Position direkt über den letzten zu kopierenden Elements.|
+|*InputIterator*|Das Vorlagenfunktionsargument, das den Anforderungen eines [Eingabeiterators](../standard-library/input-iterator-tag-struct.md) erfüllt, der auf Elemente eines Typs zeigt, der zum Erstellen von [value_type](../standard-library/map-class.md#value_type)-Objekten verwendet werden kann.|
+|*IList*|Das [initializer_list](../standard-library/initializer-list.md)-Element, aus dem die Elemente kopiert werden sollen.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1304,7 +1305,7 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>Beispiel
 
-Im Beispiel für [begin](#begin) wird verdeutlicht, wie ein **iterator**-Element deklariert und verwendet wird.
+Siehe das Beispiel für [beginnen](#begin) ein Beispiel für das Deklarieren und Verwenden einer `iterator`.
 
 ## <a name="key_comp"></a> multiset::key_comp
 
@@ -1391,7 +1392,7 @@ typedef Compare key_compare;
 
 ### <a name="remarks"></a>Hinweise
 
-**key_compare** ist ein Synonym für den Vorlagenparameter `Compare`.
+`key_compare` ist ein Synonym für den Vorlagenparameter `Compare`.
 
 Weitere Informationen zu `Compare` finden Sie im Abschnitt „Hinweise“ unter [multiset-Klasse](../standard-library/multiset-class.md).
 
@@ -1429,11 +1430,11 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-`key` Der Argumentschlüssel mit dem Sortierschlüssel eines Elements aus dem durchsuchten Multiset verglichen werden soll.
+*Schlüssel* der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem durchsuchten Multiset verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein **Iterator** oder ein `const_iterator`, der entweder den Speicherort eines Elements in einer Multimenge mit einem Schlüssel adressiert, der mindestens so groß ist wie der Argumentschlüssel, oder der, wenn für den Schlüssel keine Übereinstimmung gefunden wird, den Speicherort adressiert, der dem letzten Element in der Multimenge folgt.
+Ein `iterator` oder `const_iterator` , der der Speicherort eines Elements in einer Multimenge mit einem Schlüssel, gleich oder größer als der Argumentschlüssel, oder der das letzte Element in der Multimenge adressiert werden, wenn kein Speicherort adressiert, entspricht für den Schlüssel gefunden wird.
 
 ### <a name="example"></a>Beispiel
 
@@ -1572,12 +1573,12 @@ multiset (
 
 |Parameter|Beschreibung|
 |-|-|
-|`Al`|Die für dieses multiset-Objekt zu verwendende Speicherzuweisungsklasse, dessen Standard `Allocator` ist.|
-|`Comp`|Die Vergleichsfunktion des Typs `const Compare`, die verwendet wird, um die Elemente in der Multimenge, deren Standard `Compare` ist, zu sortieren.|
-|`Right`|Die Multimenge, deren Kopie die erstellte Multimenge ist.|
-|`First`|Die Position des ersten Elements in dem zu kopierenden Elementbereich.|
-|`Last`|Die Position des ersten Elements nach dem zu kopierenden Elementbereich.|
-|`IList`|Das initializer_list-Element, aus dem die Elemente kopiert werden sollen.|
+|*Al*|Die für dieses multiset-Objekt zu verwendende Speicherzuweisungsklasse, dessen Standard `Allocator` ist.|
+|*Comp*|Die Vergleichsfunktion des Typs `const Compare`, die verwendet wird, um die Elemente in der Multimenge, deren Standard `Compare` ist, zu sortieren.|
+|*Rechts*|Die Multimenge, deren Kopie die erstellte Multimenge ist.|
+|*Erste*|Die Position des ersten Elements in dem zu kopierenden Elementbereich.|
+|*letzte*|Die Position des ersten Elements nach dem zu kopierenden Elementbereich.|
+|*IList*|Das initializer_list-Element, aus dem die Elemente kopiert werden sollen.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1587,11 +1588,11 @@ Alle Konstruktoren initialisieren ihre Multimenge.
 
 Alle Konstruktoren speichern ein Funktionsobjekt des Typs „Compare“, mit dem sich die Schlüssel der Multimenge sortieren lassen und das später zurückgegeben werden kann, indem [key_comp](#key_comp) aufgerufen wird.
 
-Die ersten drei Konstruktoren geben eine leere ursprüngliche Multimenge an. Der zweite Konstruktor gibt den Typ der Vergleichsfunktion ( `Comp`) an, die zum Festlegen der Reihenfolge der Elemente verwendet werden soll, und der dritte Konstruktor gibt explizit den zu verwendenden Zuweisungstyp ( `Al`) an. Mit dem Schlüsselwort `explicit` werden bestimmte Arten automatischer Typumwandlung unterdrückt.
+Die ersten drei Konstruktoren geben eine leere ursprüngliche Multimenge, der zweite Angabe des Typs der Vergleichsfunktion (*Comp*) verwendet werden, die Reihenfolge der Elemente und die dritte explizit angeben der Zuweisungstyp (*Al*) verwendet werden. Mit dem Schlüsselwort **explicit** werden bestimmte Arten automatischer Typumwandlungen unterdrückt.
 
-Der vierte Konstruktor gibt eine Kopie der Multimenge `Right` an.
+Der vierte Konstruktor gibt eine Kopie der Multimenge *rechts*.
 
-Der fünfte Konstruktor gibt eine Kopie der Multimenge an, indem `Right` verschoben wird.
+Der fünfte Konstruktor gibt eine Kopie der Multimenge durch Verschieben *rechts*.
 
 Die sechsten, siebten und achten Konstruktoren geben ein initializer_list-Element an, aus dem die Elemente kopiert werden.
 
@@ -1712,11 +1713,11 @@ multiset& operator=(multiset&& right);
 
 |Parameter|Beschreibung|
 |-|-|
-|`right`|Das `multiset`-Element, aus dem Elemente kopiert oder verschoben werden.|
+|*right*|Das `multiset`-Element, aus dem Elemente kopiert oder verschoben werden.|
 
 ### <a name="remarks"></a>Hinweise
 
-`operator=` kopiert oder verschiebt die Elemente in `right` je nach Referenztyp (l-Wert oder r-Wert) in dieses `multiset`. Elemente, die sich vor dem Ausführen von `operator=` in diesem `multiset` befinden, werden verworfen.
+`operator=` kopiert oder verschiebt die Elemente in *rechten* in diese `multiset`, je nachdem, für den Referenztyp (l-Wert oder r-Wert) verwendet. Elemente, die sich vor dem Ausführen von `operator=` in diesem `multiset` befinden, werden verworfen.
 
 ### <a name="example"></a>Beispiel
 
@@ -2035,7 +2036,7 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-`right` Die Argument-Multimenge Elemente mit dem Ziel Multiset ausgetauscht werden sollen.
+*richtige* das multimengenargument, der die Elemente bereitstellt, mit der zielmultimenge getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2103,7 +2104,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parameter
 
-`key` Der Argumentschlüssel mit dem Sortierschlüssel eines Elements aus dem durchsuchten Multiset verglichen werden soll.
+*Schlüssel* der Argumentschlüssel, der mit dem Sortierschlüssel eines Elements aus dem durchsuchten Multiset verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -2245,7 +2246,7 @@ typedef key_compare value_compare;
 
 `value_compare` ist ein Synonym für den Vorlagenparameter `Compare`.
 
-[key_compare](#key_compare) und **value_compare** sind Synonyme für den Vorlagenparameter `Compare`. Beide Typen werden für die Klassen „set“ und „multiset“ bereitgestellt, in denen sie identisch sind. Dies geschieht zum Zweck der Kompatibilität mit den Klassen „map“ und „multimap“, in denen sie sich unterscheiden.
+Beachten Sie, dass beide [Key_compare](#key_compare) und `value_compare` sind Synonyme für den Vorlagenparameter `Compare`. Beide Typen werden für die Klassen „set“ und „multiset“ bereitgestellt, in denen sie identisch sind. Dies geschieht zum Zweck der Kompatibilität mit den Klassen „map“ und „multimap“, in denen sie sich unterscheiden.
 
 Weitere Informationen zu `Compare` finden Sie im Abschnitt „Hinweise“ unter [multiset-Klasse](../standard-library/multiset-class.md).
 
@@ -2265,7 +2266,7 @@ typedef Key value_type;
 
 `value_type` ist ein Synonym für den Vorlagenparameter `Key`.
 
-[key_type](#key_type) und `value_type` sind Synonyme für den Vorlagenparameter **Key**. Beide Typen werden für die Klassen „set“ und „multiset“ bereitgestellt, in denen sie identisch sind. Dies geschieht zum Zweck der Kompatibilität mit den Klassen „map“ und „multimap“, in denen sie sich unterscheiden.
+Beachten Sie, dass beide [Key_type](#key_type) und `value_type` sind Synonyme für den Vorlagenparameter `Key`. Beide Typen werden für die Klassen „set“ und „multiset“ bereitgestellt, in denen sie identisch sind. Dies geschieht zum Zweck der Kompatibilität mit den Klassen „map“ und „multimap“, in denen sie sich unterscheiden.
 
 Weitere Informationen zu `Key` finden Sie im Abschnitt „Hinweise“.
 
@@ -2306,7 +2307,7 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>Siehe auch
 
-[\<Legen Sie > Elemente](http://msdn.microsoft.com/en-us/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
+[\<Legen Sie > Elemente](http://msdn.microsoft.com/0c2d57c0-173f-4204-b579-c5f06aad8b95)<br/>
 [Container](../cpp/containers-modern-cpp.md)<br/>
 [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382378"
 ---
 # <a name="using-cmonthcalctrl"></a>Verwenden von CMonthCalCtrl
 Im Monatskalender-Steuerelement ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) eine Kalender-ähnliche Benutzeroberfläche implementiert. Dies ermöglicht dem Benutzer eine sehr intuitive und erkennbaren Methode eingeben oder Auswählen eines Datums. Das Steuerelement bietet auch die Anwendung die Möglichkeit zum Abrufen und festlegen, die Datumsinformationen in das Steuerelement mit vorhandenen Datentypen. Standardmäßig zeigt im Monatskalender-Steuerelement an den aktuellen Tag und Monat. Allerdings kann der Benutzer einen Bildlauf zu den vorherigen und nächsten Monaten, und wählen Sie einen bestimmten Monat und/oder Jahr.  

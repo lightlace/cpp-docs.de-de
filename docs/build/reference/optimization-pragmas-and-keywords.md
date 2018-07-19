@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374751"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Pragmas und Schlüsselwörter für die Optimierung
 Mehrere Schlüsselwörter und Pragmas, die Sie in Ihrem C- oder C++-Code verwenden, Auswirkungen auf die Optimierung:  

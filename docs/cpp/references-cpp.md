@@ -1,5 +1,5 @@
 ---
-title: Verweise (C++) | Microsoft Docs
+title: Verweise (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe60a849cb1b14420ab83af77362ddda433884a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956592"
 ---
 # <a name="references-c"></a>Verweise (C++)
-Ein Verweis, z. B. ein Zeiger ist, speichert die Adresse eines Objekts, das sich an anderer Stelle im Speicher befindet. Im Gegensatz zu einem Zeiger kann sich ein Verweis nach der Initialisierung nicht auf ein anderes Objekt beziehen oder auf null gesetzt werden. Es gibt zwei Arten von verweisen: Lvalue-Verweise, die auf einer benannten Variablen und Rvalue-Verweise, die zum beziehen verweisen einer [temporäres Objekt](../cpp/temporary-objects.md). Der &-Operator gibt einen Lvalue-Verweis und der & &-Operator gibt einen Rvalue-Verweis oder einen universellen Verweis (Rvalue oder Lvalue) je nach Kontext.  
+Ein Verweis, z. B. ein Zeiger ist, speichert die Adresse eines Objekts, das sich an anderer Stelle im Speicher befindet. Im Gegensatz zu einem Zeiger kann sich ein Verweis nach der Initialisierung nicht auf ein anderes Objekt beziehen oder auf null gesetzt werden. Es gibt zwei Arten von verweisen: Lvalue-Verweise, die auf einer benannten Variable und Rvalue-Verweise, die verweisen beziehen auf eine [temporäres Objekt](../cpp/temporary-objects.md). Der &-Operator gibt einen Lvalue-Verweis und der & &-Operator gibt einen Rvalue-Verweis oder einen universellen Verweis (Rvalue oder Lvalue) je nach Kontext.  
   
  Verweise können mit der folgenden Syntax deklariert werden:  
   
@@ -48,7 +49,7 @@ Ein Verweis, z. B. ein Zeiger ist, speichert die Adresse eines Objekts, das sich
   
 -   Ein optionaler Speicherklassenbezeichner.  
   
--   Optionale **const** und/oder `volatile` Qualifizierer.  
+-   Optionale **const** und/oder **flüchtige** Qualifizierer.  
   
 -   Der Typspezifizierer: der Name eines Typs  
   
@@ -58,24 +59,24 @@ Ein Verweis, z. B. ein Zeiger ist, speichert die Adresse eines Objekts, das sich
   
 -   Der &-Operator oder & &-Operator.  
   
--   Optionale **const** und/oder `volatile` Qualifizierer.  
+-   Optionale **const** und/oder **flüchtige** Qualifizierer.  
   
 -   Der Bezeichner.  
   
  3. Ein optionaler Initialisierer.  
   
- Die komplexeren deklaratorformen für Zeiger auf Arrays und Funktionen auch für Verweise auf Arrays und Funktionen gelten finden Sie unter [Zeiger](../cpp/pointers-cpp.md) und [Deklaratoren](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
+ Die komplexeren deklaratorformen für Zeiger auf Arrays und Funktionen auch für Verweise auf Arrays und Funktionen gelten finden Sie unter [Zeiger](../cpp/pointers-cpp.md).  
   
  Mehrere Deklaratoren und Initialisierer erscheinen möglicherweise in einer durch Trennzeichen getrennten Liste, die einem einzelnen Deklarationsspezifizierer folgt. Zum Beispiel:  
   
-```  
+```cpp 
 int &i;   
 int &i, &j;   
 ```  
   
  Verweise, Zeiger und Objekte können zusammen deklariert werden:  
   
-```  
+```cpp 
 int &ref, *ptr, k;   
 ```  
   
@@ -85,7 +86,7 @@ int &ref, *ptr, k;
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // references.cpp  
 #include <stdio.h>  
 struct S {  

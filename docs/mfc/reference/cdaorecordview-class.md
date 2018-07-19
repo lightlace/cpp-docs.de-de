@@ -1,5 +1,5 @@
 ---
-title: CDaoRecordView-Klasse | Microsoft Docs
+title: CDaoRecordView-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dc58332bc99cb01e9b6567eafe2cb5b96f1b9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dff05ca5ca07a5a41aa0ceaacf4161d09ab032f1
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336701"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView-Klasse
 Eine Sicht, die Datenbankdatensätze in Steuerelementen anzeigt.  
@@ -53,28 +54,28 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CDaoRecordView::IsOnFirstRecord](#isonfirstrecord)|Gibt einen Wert ungleich NULL, wenn der aktuelle Datensatz der erste Datensatz im zugehörigen Recordset ist.|  
-|[CDaoRecordView::IsOnLastRecord](#isonlastrecord)|Gibt einen Wert ungleich NULL, wenn der aktuelle Datensatz der letzte Datensatz in der zugehörigen Recordset ist.|  
+|[CDaoRecordView::IsOnFirstRecord](#isonfirstrecord)|Gibt, die ungleich NULL, wenn der aktuelle Datensatz den ersten Datensatz im Recordset-Objekt zugeordnet ist.|  
+|[CDaoRecordView::IsOnLastRecord](#isonlastrecord)|Gibt, die ungleich NULL, wenn der aktuelle Datensatz den letzten Datensatz im Recordset-Objekt zugeordnet ist.|  
 |[CDaoRecordView::OnGetRecordset](#ongetrecordset)|Gibt einen Zeiger auf ein Objekt einer Klasse abgeleitet `CDaoRecordset`. Klassen-Assistent überschreibt diese Funktion für Sie und erstellt das Recordset, bei Bedarf.|  
-|[CDaoRecordView::OnMove](#onmove)|Wenn der aktuelle Datensatz geändert hat, wird für die Datenquelle aktualisiert, und klicken Sie dann wechselt zum angegebenen Datensatz (nächsten, vorherigen, ersten oder letzten).|  
+|[CDaoRecordView::OnMove](#onmove)|Wenn der aktuelle Datensatz geändert wurde, wird für die Datenquelle aktualisiert, und klicken Sie dann wechselt zum angegebenen Datensatz (nächsten, vorherigen, ersten oder letzten).|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Ansicht ist eine Formularansicht können Sie eine direkte Verbindung zum ein `CDaoRecordset` Objekt. Die Sicht aus einer Dialogfeldvorlagen-Ressource erstellt wird, und zeigt die Felder der `CDaoRecordset` Objekt in der Dialogfeldvorlage-Steuerelementen. Die `CDaoRecordView` Objekt verwendet Dialogdatenaustausch (DDX) und DAO-Datensatzfeldaustausch (DFX), um die Verschiebung von Daten zwischen den Steuerelementen im Formular und die Felder des Recordsets zu automatisieren. `CDaoRecordView` Außerdem stellt eine Standardimplementierung für das Verschieben von mit dem ersten nächsten, vorherigen oder letzten Datensatz und eine Schnittstelle zum Aktualisieren des Datensatzes in der Ansicht.  
+ Die Ansicht ist eine Formularansicht können Sie direkt mit verbundenen eine `CDaoRecordset` Objekt. Die Ansicht aus einer Dialogfeldvorlagen-Ressource erstellt wird, und zeigt die Felder an die `CDaoRecordset` Objekt in der Dialogfeldvorlage-Steuerelementen. Die `CDaoRecordView` Objekt verwendet Dialogdatenaustausch (DDX) und DAO-Datensatzfeldaustausch (DFX), um die Verschiebung von Daten zwischen den Steuerelementen im Formular und die Felder des Recordset-Objekts zu automatisieren. `CDaoRecordView` Außerdem stellt eine Standardimplementierung für das Verschieben von mit dem ersten, nächsten, vorherigen oder letzten Datensatz und eine Schnittstelle zum Aktualisieren des Datensatzes in der Ansicht.  
   
 > [!NOTE]
->  DAO-Datenbankklassen unterscheiden sich von den MFC-Datenbankklassen basierend auf der Open Database Connectivity (ODBC). Alle DAO-Datenbank-Klassennamen haben das Präfix "CDao". Sie können dennoch den Zugriff auf ODBC-Datenquellen mit den DAO-Klassen; DAO-Klassen bieten im Allgemeinen überlegene Funktionen auf, da sie das Microsoft Jet-Datenbankmodul verwenden.  
+>  Die DAO-Datenbankklassen unterscheiden sich von der MFC-Datenbankklassen in Bezug auf Open Database Connectivity (ODBC). Alle DAO-Datenbank-Klassennamen haben das Präfix "CDao". Sie können weiterhin den Zugriff auf ODBC-Datenquellen mit den DAO-Klassen; die DAO-Klassen bieten im Allgemeinen bessere Funktionen, da sie auf die Microsoft Jet-Datenbank-Engine verwenden.  
   
- Die gängigste Methode zum Erstellen der Datensatzansicht ist mit dem Anwendungs-Assistenten. Die Anwendungs-Assistent erstellt die datensatzansichtsklasse und seiner zugehörigen Recordset-Klasse als Teil Ihrer Anwendung das Gerüst eines Starter.  
+ Die gängigste Methode zum Erstellen der Datensatzansicht ist mit der Anwendungs-Assistenten. Die Anwendungs-Assistent erstellt sowohl die datensatzansichtsklasse und ihrer zugehörigen Recordset-Klasse als Teil Ihrer Skelett Starter-Anwendung.  
   
- Wenn Sie einfach ein einzelnes Formular benötigen, ist der Anwendungs-Assistent-Ansatz vereinfacht. Klassen-Assistenten können Sie die eine Datensatzansicht später im Entwicklungsprozess verwenden möchten. Wenn Sie die datensatzansichtsklasse mit dem Assistenten zum Erstellen, können Sie es später mit ClassWizard erstellen. Die flexibelste Herangehensweise wird mithilfe der Klassen-Assistent zum Erstellen einer Datensatzansicht und ein Recordset getrennt und dann eine Verbindung herstellen, denn es Ihnen mehr Kontrolle ermöglicht bei der Benennung der Recordset-Klasse und ihre. H /. CPP-Dateien. Dieser Ansatz können auch mehrere Datensatzansichten in der gleichen Recordsetklasse verfügen.  
+ Der Anwendungs-Assistent-Ansatz ist einfacher, wenn lediglich ein einzelnes Formular. Klassen-Assistenten können Sie die eine Datensatzansicht später im Entwicklungsprozess verwenden möchten. Wenn Sie mit der Anwendungs-Assistent die datensatzansichtsklasse erstellen, können Sie es später noch Mal mit Klassen-Assistenten erstellen. Mithilfe der Klassen-Assistent zum Erstellen einer Datensatzansicht und ein Recordset getrennt, und verbinden Sie sie dann die flexibelste Herangehensweise ist, denn es Ihnen mehr Kontrolle ermöglicht bei der Benennung der Recordset-Klasse und die zugehörige. H /. CPP-Dateien. Dadurch können auch mehrere Datensatzansichten für die gleiche Recordsetklasse zu haben.  
   
- Um Möglichkeit zum Verschieben von Datensatz zu Datensatz in der Datensatzansicht zu erleichtern, erstellt der Assistent Anwendung Menü-(und optional) zum Verschieben von Ressourcen mit dem ersten nächsten, vorherigen oder letzten Datensatz. Wenn Sie eine datensatzansichtsklasse mit ClassWizard erstellen, müssen Sie diese Ressourcen selbst mit dem Menü und Bitmap-Editor erstellen.  
+ Um für Endbenutzer zum Verschieben von Datensatz zu Datensatz in der Datensatzansicht erleichtern, die Anwendungs-Assistent erstellt, Menü (und optional einer Symbolleiste) Ressourcen für den Umstieg auf das erste, nächsten, vorherigen oder letzten Datensatz. Wenn Sie eine datensatzansichtsklasse mit Klassen-Assistenten erstellen, müssen Sie diese Ressourcen sich selbst mit dem Menü und die Bitmap Editoren zu erstellen.  
   
- Informationen über die standardmäßige Implementierung für das Verschieben von Datensatz zu Datensatz finden Sie unter `IsOnFirstRecord` und `IsOnLastRecord` und im Artikel [Verwenden einer Datensatzansicht](../../data/using-a-record-view-mfc-data-access.md), die gelten für beide `CRecordView` und `CDaoRecordView`.  
+ Informationen über die standardmäßige Implementierung für das Verschieben von Datensatz zu Datensatz, finden Sie unter `IsOnFirstRecord` und `IsOnLastRecord` und im Artikel [Verwenden einer Datensatzansicht](../../data/using-a-record-view-mfc-data-access.md), die für beide gilt `CRecordView` und `CDaoRecordView`.  
   
- `CDaoRecordView` behält den Überblick über die Position des Benutzers im Recordset, damit die Datensatzansicht die Benutzeroberfläche aktualisieren kann. Wenn der Benutzer an beiden Enden des Recordsets verschoben wird, deaktiviert die Datensatzansicht Benutzeroberflächenobjekte – z. B. Menüelemente und Symbolleisten-Schaltflächen – zum Verschieben in die gleiche Richtung weiter.  
+ `CDaoRecordView` behält den Überblick Position des Benutzers im Recordset, damit der Datensatzansicht angezeigt, die Benutzeroberfläche aktualisieren kann. Wenn der Benutzer an beiden Enden des Recordsets verschiebt, deaktiviert die Datensatzansicht Benutzeroberflächenobjekte – z. B. Menüelemente und Symbolleisten-Schaltflächen, für das Verschieben von weiter in die gleiche Richtung.  
   
- Weitere Informationen zu deklarieren und Verwenden der Datensatzansicht und Recordset-Klassen, finden Sie unter "Entwerfen und Erstellen einer Datensatzansicht" im Artikel [Datensatzansichten](../../data/record-views-mfc-data-access.md). Weitere Informationen wie von Datensatzansichten und deren Verwendung finden Sie im Artikel [Verwenden einer Datensatzansicht](../../data/using-a-record-view-mfc-data-access.md). Alle Artikel, die oben genannten gelten für beide `CRecordView` und `CDaoRecordView`.  
+ Weitere Informationen zu deklarieren und verwenden Ihre Datensätze anzeigen und das Recordset-Klassen finden Sie unter "Entwerfen und Erstellen einer Datensatzansicht" in diesem Artikel [Datensatzansichten](../../data/record-views-mfc-data-access.md). Weitere Informationen zu wie von Datensatzansichten und deren Verwendung finden Sie im Artikel [Verwenden einer Datensatzansicht](../../data/using-a-record-view-mfc-data-access.md). Alle oben genannten Artikel gelten für beide `CRecordView` und `CDaoRecordView`.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -95,7 +96,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
  **Header:** afxdao.h  
   
 ##  <a name="cdaorecordview"></a>  CDaoRecordView::CDaoRecordView  
- Wenn Sie ein Objekt eines Typs erstellen von abgeleiteten `CDaoRecordView`, rufen Sie eine der Formen des Konstruktors initialisieren das Ansichtsobjekt und identifizieren die Dialogressource, auf denen die Sicht basiert.  
+ Wenn Sie ein Objekt eines Typs erstellen von abgeleiteten `CDaoRecordView`, rufen Sie entweder Form des Konstruktors initialisiert das Objekt, und identifizieren die Ressource auf dem die Sicht basiert.  
   
 ```  
 explicit CDaoRecordView(LPCTSTR lpszTemplateName);  
@@ -103,104 +104,104 @@ explicit CDaoRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpszTemplateName`  
- Enthält eine Null-terminierte Zeichenfolge, die den Namen des einer Dialogfeldvorlagen-Ressource ist.  
+ *lpszTemplateName*  
+ Enthält eine Null-terminierte Zeichenfolge, die den Namen der einer Dialogfeldvorlagen-Ressource ist.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Enthält die ID einer Dialogfeldvorlagen-Ressource.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können entweder die Ressource anhand des Namens (übergeben Sie eine Zeichenfolge als Argument an den Konstruktor) oder nach seiner ID (übergeben Sie eine Ganzzahl ohne Vorzeichen als Argument) identifizieren. Eine Ressource wird ID empfohlen.  
+ Sie können entweder die Ressource anhand des Namens (übergeben Sie eine Zeichenfolge als Argument an den Konstruktor) oder nach seiner ID (übergeben Sie eine Ganzzahl ohne Vorzeichen als Argument) identifizieren. Eine Ressource ist die ID empfohlen.  
   
 > [!NOTE]
->  Die abgeleitete Klasse muss einen eigenen Konstruktor angeben. Rufen Sie im Konstruktor der abgeleiteten Klasse den Konstruktor `CDaoRecordView::CDaoRecordView` mit dem Ressourcennamen oder die ID als Argument.  
+>  Die abgeleitete Klasse muss seinen eigenen Konstruktor angeben. Rufen Sie im Konstruktor einer abgeleiteten Klasse den Konstruktor `CDaoRecordView::CDaoRecordView` mit Ressourcenname oder ID als Argument.  
   
- **CDaoRecordView::OnInitialUpdate** Aufrufe `CWnd::UpdateData`, welche Aufrufe `CWnd::DoDataExchange`. Diese ersten Aufruf der `DoDataExchange` verbindet `CDaoRecordView` steuert (indirekt) zu `CDaoRecordset` Felddatenmember von ClassWizard erstellt. Diese Datenmember können nicht erst verwendet werden, nach dem Aufruf der Basisklasse **CFormView::OnInitialUpdate** Memberfunktion.  
+ `CDaoRecordView::OnInitialUpdate` Aufrufe `CWnd::UpdateData`, welche Aufrufe `CWnd::DoDataExchange`. Dieser anfänglichen Aufruf `DoDataExchange` verbindet `CDaoRecordView` steuert (indirekt) zu `CDaoRecordset` Feld Datenmember von Klassen-Assistent erstellt. Diese Datenelemente nicht erst verwendet werden, nach dem Aufruf der Basisklasse `CFormView::OnInitialUpdate` Member-Funktion.  
   
 > [!NOTE]
->  Bei Verwendung von ClassWizard definiert der Assistent eine `enum` Wert `CDaoRecordView::IDD` in der Deklaration der Klasse und verwendet, die sie bei der Memberinitialisierung auflisten, für den Konstruktor.  
+>  Wenn Sie die Klassen-Assistenten verwenden, wird der Assistent definiert eine **Enum** Wert `CDaoRecordView::IDD` in der Deklaration der Klasse und verwendet, die sie bei der Memberinitialisierung auflisten, für den Konstruktor.  
   
  [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
 ##  <a name="isonfirstrecord"></a>  CDaoRecordView::IsOnFirstRecord  
- Rufen Sie diese Memberfunktion, um festzustellen, ob der aktuelle Datensatz des ersten Datensatzes im Recordset-Objekt, das diese Datensatzansicht zugeordnet ist.  
+ Rufen Sie diese Memberfunktion, um festzustellen, ob der aktuelle Datensatz den ersten Datensatz im Recordset-Objekt, das dieser Datensatzansicht zugeordnet ist.  
   
 ```  
 BOOL IsOnFirstRecord();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn der aktuelle Datensatz der erste Datensatz im Recordset ist; andernfalls 0.  
+ Ungleich NULL, wenn der aktuelle Datensatz den ersten Datensatz im Recordset ist; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion ist nützlich für das Schreiben von Ihren eigenen Implementierungen der standardmäßigen befehlsupdatehandler von ClassWizard geschrieben.  
+ Diese Funktion ist nützlich für das Schreiben eigener Implementierungen der Standard-Update-Befehlshandler von Datensatzfeldern von ClassWizard geschrieben.  
   
- Wenn der Benutzer auf den ersten Eintrag verschoben werden, haben mit der Benutzeroberfläche (z. B. Menüelemente oder Symbolleisten-Schaltflächen)-Objekte Framework deaktiviert für die Umstellung auf das erste oder der vorherige Datensatz.  
+ Wenn der Benutzer zum ersten Datensatz verschoben wird, müssen die Framework-deaktiviert, die Objekte der Benutzeroberfläche (z. B. Menüelemente oder Symbolleisten-Schaltflächen) für das Verschieben in das erste oder der vorherige Datensatz.  
   
 ##  <a name="isonlastrecord"></a>  CDaoRecordView::IsOnLastRecord  
- Rufen Sie diese Memberfunktion, um festzustellen, ob der aktuelle Datensatz der letzte Datensatz in das Recordset-Objekt, das diese Datensatzansicht zugeordnet ist.  
+ Rufen Sie diese Memberfunktion, um festzustellen, ob der aktuelle Datensatz der letzte Eintrag in das Recordset-Objekt, das dieser Datensatzansicht zugeordnet ist.  
   
 ```  
 BOOL IsOnLastRecord();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn der aktuelle Datensatz der letzte Datensatz in das Recordset ist; andernfalls 0.  
+ Ungleich NULL, wenn der aktuelle Datensatz den letzten Datensatz im Recordset ist; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion ist nützlich für das Schreiben von Ihren eigenen Implementierungen der standardmäßigen befehlsupdatehandler, die ClassWizard schreibt, um eine Benutzeroberfläche zum Navigieren zwischen Datensätzen zu unterstützen.  
+ Diese Funktion ist nützlich für das Schreiben eigener Implementierungen der Standard-Update-Befehlshandler, die Klassen-Assistent schreibt, um eine Benutzeroberfläche für das Verschieben von Datensatz zu Datensatz zu unterstützen.  
   
 > [!CAUTION]
->  Das Ergebnis dieser Funktion ist zuverlässig, mit dem Unterschied, dass die Ansicht möglicherweise nicht erkennen Sie das Ende des Recordset-Objekts, bis der Benutzer hinaus verschoben wurde. Der Benutzer möglicherweise hinter dem letzten Datensatz zu verschieben, bevor die Datensatzansicht erkennen kann, müssen sie jede Benutzeroberflächenobjekte für das Verschieben in den nächsten oder letzten Datensatz deaktivieren. Wenn der Benutzer wird hinter dem letzten Datensatz verschoben, und klicken Sie dann zurück zum letzten Datensatz wechselt (oder davor), kann die Datensatzansicht Position des Benutzers im Recordset nachverfolgen und Benutzeroberflächenobjekte ordnungsgemäß deaktiviert.  
+>  Das Ergebnis dieser Funktion ist zuverlässig, mit dem Unterschied, dass die Ansicht möglicherweise nicht erkennen Sie das Ende des Recordset-Objekts, bis der Benutzer, fügen Sie ihn verschoben wurde. Der Benutzer möglicherweise hinter dem letzten Datensatz zu verschieben, bevor die Datensatzansicht erkennen kann, müssen sie alle Benutzeroberflächenobjekte für das Verschieben in den nächsten oder letzten Datensatz deaktivieren. Wenn der Benutzer hinter dem letzten Datensatz verschoben wird, und klicken Sie dann zurück zum letzten Datensatz wechselt (oder davor), kann die Datensatzansicht verfolgen die Position des Benutzers im Recordset und Benutzeroberflächenobjekte ordnungsgemäß deaktiviert.  
   
 ##  <a name="ongetrecordset"></a>  CDaoRecordView::OnGetRecordset  
- Gibt einen Zeiger auf die `CDaoRecordset`-abgeleitetes Objekt der Datensatzansicht zugeordnet.  
+ Gibt einen Zeiger auf die `CDaoRecordset`-abgeleitete Objekt, mit der Datensatzansicht verknüpft ist.  
   
 ```  
 virtual CDaoRecordset* OnGetRecordset() = 0;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine `CDaoRecordset`-abgeleitetes Objekt aus, wenn das Objekt erfolgreich erstellt; andernfalls wurde eine **NULL** Zeiger.  
+ Ein Zeiger auf eine `CDaoRecordset`-abgeleitetes Objekt aus, wenn das Objekt erfolgreich erstellt wurde, andernfalls wurde ein NULL-Zeiger.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Memberfunktion zum Erstellen oder einem Recordset-Objekt abrufen und einen Zeiger darauf zurückgeben. Wenn Sie die datensatzansichtsklasse mit ClassWizard deklarieren, schreibt der Assistent eine Standard-Außerkraftsetzung für Sie. ClassWizard die Standardimplementierung gibt den Recordsets Zeiger in der Datensatzansicht gespeichert werden, sofern vorhanden. Wenn nicht, die es einem Recordset-Objekt des Typs erstellt angegebenen mit ClassWizard und ruft seine **öffnen** Member Funktion, um öffnen Sie die Tabelle, oder führen Sie die Abfrage, und klicken Sie dann einen Zeiger auf das Objekt zurückgibt.  
+ Sie müssen diese Member-Funktion zum Erstellen oder einem Recordset-Objekt zu erhalten, und geben einen Zeiger auf die sie überschreiben. Wenn Sie die datensatzansichtsklasse mit Klassen-Assistent deklarieren, schreibt der Assistent eine standardmäßigen Außerkraftsetzung für Sie. ClassWizard die Standardimplementierung gibt den Recordset-Zeiger, die in der Datensatzansicht gespeichert werden, sofern vorhanden. Wenn nicht, einem Recordset-Objekt des Typs erstellt angegebenen mit Klassen-Assistent und ruft seine `Open` Member Funktion, um öffnen Sie die Tabelle, oder führen Sie die Abfrage, und klicken Sie dann einen Zeiger auf das Objekt zurück.  
   
  Weitere Informationen und Beispiele finden Sie im Artikel [Datensatzansichten: Verwenden einer Datensatzansicht](../../data/using-a-record-view-mfc-data-access.md).  
   
 ##  <a name="onmove"></a>  CDaoRecordView::OnMove  
- Rufen Sie diese Memberfunktion zum Wechseln zu einem anderen Datensatz des Recordsets und ihre Felder in die Steuerelemente der Datensatzansicht angezeigt.  
+ Rufen Sie diese Memberfunktion zum Verschieben in einen anderen Datensatz im Recordset, und die Felder in die Steuerelemente der Datensatzansicht angezeigt.  
   
 ```  
 virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDMoveCommand`  
- Einer der folgenden Werte Standardbefehls-ID:  
+ *nIDMoveCommand*  
+ Einer der folgenden Standardbefehle-ID-Werte:  
   
-- `ID_RECORD_FIRST` Verschieben Sie auf den ersten Eintrag in das Recordset.  
+- ID_RECORD_FIRST verschieben in den ersten Datensatz im Recordset.  
   
-- `ID_RECORD_LAST` Wechselt zur letzten Datensatz des Recordsets.  
+- ID_RECORD_LAST verschieben in den letzten Datensatz im Recordset.  
   
-- `ID_RECORD_NEXT` Verschieben Sie in den nächsten Datensatz in das Recordset.  
+- ID_RECORD_NEXT verschieben in den nächsten Datensatz im Recordset.  
   
-- `ID_RECORD_PREV` Wechseln Sie zum vorherigen Datensatz im Recordset.  
+- ID_RECORD_PREV verschieben in den vorherigen Datensatz im Recordset.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Verschiebung erfolgreich war; andernfalls 0, wenn die Anforderung zum Verschieben von verweigert wurde.  
+ Ungleich NULL, wenn die Verschiebung erfolgreich war; andernfalls 0, wenn die verschiebungsanforderung abgelehnt wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Standardimplementierung Ruft die entsprechenden Move-Memberfunktion von der `CDaoRecordset` Objekt, das mit der Datensatzansicht zugeordnet.  
+ Die Standardimplementierung Ruft die entsprechenden Move-Memberfunktion auf, der die `CDaoRecordset` Objekt, mit der Datensatzansicht verknüpft ist.  
   
- Standardmäßig `OnMove` den aktuellen Datensatz in der Datenquelle aktualisiert, wenn der Benutzer in der Datensatzansicht geändert hat.  
+ In der Standardeinstellung `OnMove` des aktuellen Datensatzes in der Datenquelle aktualisiert, wenn der Benutzer es in der Datensatzansicht geändert hat.  
   
- Der Anwendungs-Assistent erstellt eine Menüressource mit ersten, letzten Datensatzes, nächsten Datensatz, und vorherigen Datensatz Menüelemente an. Wenn Sie die erste Symbolleiste-Option auswählen, erstellt der Anwendungs-Assistent auch eine Symbolleiste mit Schaltflächen, die auf diese Befehle entspricht.  
+ Die Anwendungs-Assistent erstellt eine Menüressource ersten, letzten Datensatz, nächsten Datensatz, und vorherigen Datensatz von Menüelementen an. Wenn Sie die erste Symbolleiste-Option auswählen, erstellt der Anwendungs-Assistent auch eine Symbolleiste mit Schaltflächen, die auf diese Befehle entspricht.  
   
- Wenn Sie hinter dem letzten Datensatz im Recordset verschieben, weiterhin die Datensatzansicht den letzten Datensatz anzuzeigen. Wenn Sie nach dem ersten Datensatz rückwärts verschieben, können Sie weiterhin die Datensatzansicht des ersten Datensatzes angezeigt.  
+ Wenn Sie hinter dem letzten Datensatz im Recordset verschieben, wird die Datensatzansicht weiterhin den letzten Datensatz angezeigt. Wenn Sie nach den ersten Datensatz rückwärts verschieben, wird die Datensatzansicht weiterhin den ersten Datensatz angezeigt.  
   
 > [!CAUTION]
->  Aufrufen von `OnMove` löst eine Ausnahme aus, wenn das Recordset keine Datensätze enthält. Rufen Sie die entsprechende Schnittstelle Update Handlerfunktion – **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, oder  **OnUpdateRecordPrev** – vor den entsprechenden Verschiebevorgang, um zu bestimmen, ob das Recordset alle Datensätze aufweist.  
+>  Aufrufen von `OnMove` löst eine Ausnahme aus, wenn das Recordset keine Einträge besitzt. Rufen Sie die entsprechende Schnittstelle Update-Handler-Funktion – `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, oder `OnUpdateRecordPrev` , verschieben Sie vor der entsprechenden Vorgang bestimmt, ob das Recordset alle Datensätze ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CFormView-Klasse](../../mfc/reference/cformview-class.md)   

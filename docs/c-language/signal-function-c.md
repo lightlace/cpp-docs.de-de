@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385837"
 ---
 # <a name="signal-function-c"></a>signal-Funktion (C)
 **ANSI 4.7.1.1** Der Signalsatz für die **signal**-Funktion  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57387af452ff4a127eec6b669cec6e02863b8fd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959637"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits-Struktur
 
@@ -44,17 +45,17 @@ struct iterator_traits {
 
 Die Vorlagenstruktur definiert die Membertypen.
 
-- **iterator_category**: ein Synonym für **iterator::iterator_category**.
+- `iterator_category`: ein Synonym für `Iterator::iterator_category`.
 
-- `value_type`: ein Synonym für **Iterator::value_type**.
+- `value_type`: ein Synonym für `Iterator::value_type`.
 
-- `difference_type`: ein Synonym für **Iterator::difference_type**.
+- `difference_type`: ein Synonym für `Iterator::difference_type`.
 
-- `distance_type`: ein Synonym für **Iterator::difference_type.**
+- `distance_type`: ein Synonym für `Iterator::difference_type.`
 
-- **Zeiger**: ein Synonym für **Iterator::pointer**.
+- `pointer`: ein Synonym für `Iterator::pointer`.
 
-- **Verweis**: ein Synonym für **Iterator::reference**.
+- `reference`: ein Synonym für `Iterator::reference`.
 
 Die Teilspezialisierungen bestimmen die kritischen Typen mit einem Zeiger vom Typ **Type \*** oder const **Type \***.
 

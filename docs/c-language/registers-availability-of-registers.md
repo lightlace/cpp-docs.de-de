@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383942"
 ---
 # <a name="registers-availability-of-registers"></a>Register: Verfügbarkeit von Registern
 **ANSI 3.5.1** Das Ausmaß, in dem Objekte mit dem Speicherklassenspezifizierer „register“ tatsächlich in Registern eingefügt werden können  

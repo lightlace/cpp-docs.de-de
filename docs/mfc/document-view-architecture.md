@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350054"
 ---
 # <a name="documentview-architecture"></a>Dokument-/Ansichtsarchitektur
 Die MFC-Anwendung-Assistent erstellt standardmäßig eine Skeleton Anwendung mit einer Dokumentklasse und View-Klasse. MFC trennt die datenverwaltung von in diese beiden Klassen. Das Dokument speichert die Daten und Drucken der Daten und koordiniert mehrere Sichten der Daten aktualisieren. Die Sicht werden die Daten angezeigt und verwaltet die Benutzerinteraktion mit der Anwendung, einschließlich Auswahl und bearbeiten.  

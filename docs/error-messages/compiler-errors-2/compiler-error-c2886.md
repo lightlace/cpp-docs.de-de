@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243462"
 ---
 # <a name="compiler-error-c2886"></a>Compilerfehler C2886
 'class:: Identifier': Symbol kann nicht in der using-Deklaration eines Elements verwendet werden  

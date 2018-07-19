@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344336"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Initialisieren der Teile eines CStatusBarCtrl-Objekts
 Standardmäßig wird eine Statusleiste Statusinformationen über separate Bereiche angezeigt: Diese Bereiche (auch als Komponenten bezeichnet) können entweder eine Textzeichenfolge, ein Symbol oder beides enthalten.  

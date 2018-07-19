@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f32b9502d2e8bd1c1483d817b759ca204f5c9c1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 425cbf2f9c769dbbb6cd054b9af6b7f6f5fc9d52
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954464"
 ---
 # <a name="specifying-levels-of-functionality"></a>Festlegen von Funktionalitätsebenen
 In diesem Artikel wird beschrieben, wie die folgenden Grade an Funktionalität zum Hinzufügen Ihrer [CObject](../mfc/reference/cobject-class.md)-Klasse abgeleitet:  
@@ -42,26 +43,26 @@ In diesem Artikel wird beschrieben, wie die folgenden Grade an Funktionalität z
   
 1.  Leiten Sie eine Klasse von `CObject`gemäß der Beschreibung in der [Ableiten einer Klasse von CObject](../mfc/deriving-a-class-from-cobject.md) Artikel.  
   
-2.  Verwenden der `DECLARE_DYNAMIC` Makros in der Klassendeklaration, wie hier gezeigt:  
+2.  Verwenden Sie das DECLARE_DYNAMIC-Makro in der Klassendeklaration, wie hier gezeigt:  
   
      [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]  
   
-3.  Verwenden der `IMPLEMENT_DYNAMIC` Makro in der Implementierungsdatei (. CPP) der Klasse. Dieses Makro akzeptiert als Argumente den Namen der Klasse und ihre Basisklasse wie folgt:  
+3.  Verwenden Sie das IMPLEMENT_DYNAMIC-Makro in der Implementierungsdatei (. CPP) der Klasse. Dieses Makro akzeptiert als Argumente den Namen der Klasse und ihre Basisklasse wie folgt:  
   
      [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]  
   
 > [!NOTE]
->  Immer put `IMPLEMENT_DYNAMIC` in der Implementierungsdatei (. CPP) für die Klasse. Die `IMPLEMENT_DYNAMIC` Makro nur einmal während der Kompilierung ausgewertet werden und sollte daher nicht in einer Schnittstellendatei verwendet werden (. H), konnte möglicherweise in mehr als eine Datei enthalten sein.  
+>  Fügen Sie IMPLEMENT_DYNAMIC immer in der Implementierungsdatei (. CPP) für die Klasse. IMPLEMENT_DYNAMIC-Makro nur einmal während der Kompilierung ausgewertet werden und sollte daher nicht in einer Schnittstellendatei verwendet werden (. H), konnte möglicherweise in mehr als eine Datei enthalten sein.  
   
 #### <a name="_core_to_add_dynamic_creation_support"></a> So fügen Sie Unterstützung für dynamische Erstellung hinzu  
   
 1.  Leiten Sie eine Klasse von `CObject`.  
   
-2.  Verwenden der `DECLARE_DYNCREATE` Makros in der Klassendeklaration.  
+2.  Verwenden Sie das DECLARE_DYNCREATE-Makro in der Klassendeklaration.  
   
 3.  Definieren Sie einen Konstruktor ohne Argumente (Standardkonstruktor).  
   
-4.  Verwenden der `IMPLEMENT_DYNCREATE` Makro in der Implementierungsdatei der Klasse.  
+4.  Verwenden Sie das IMPLEMENT_DYNCREATE-Makro in der Implementierungsdatei der Klasse.  
   
 #### <a name="_core_to_add_serialization_support"></a> Zum Hinzufügen der Serialisierungsunterstützung  
   
@@ -72,11 +73,11 @@ In diesem Artikel wird beschrieben, wie die folgenden Grade an Funktionalität z
     > [!NOTE]
     >  Beim Aufrufen `Serialize` direkt, d. h., Sie sollten keine serialisiert das Objekt über einen polymorphen Zeiger, überspringen Sie die Schritte 3 bis 5.  
   
-3.  Verwenden der `DECLARE_SERIAL` Makros in der Klassendeklaration.  
+3.  Verwenden Sie in der Klassendeklaration DECLARE_SERIAL-Makro.  
   
 4.  Definieren Sie einen Konstruktor ohne Argumente (Standardkonstruktor).  
   
-5.  Verwenden der `IMPLEMENT_SERIAL` Makro in der Implementierungsdatei der Klasse.  
+5.  Verwenden Sie das IMPLEMENT_SERIAL-Makro in der Implementierungsdatei der Klasse.  
   
 > [!NOTE]
 >  Ein "polymorpher Zeiger" verweist auf ein Objekt einer Klasse (rufen sie ein) oder auf ein Objekt einer beliebigen Klasse abgeleitet wurde. ein (z. B. B). Um einen polymorphen Zeiger zu serialisieren, muss das Framework die Laufzeitklasse des Objekts bestimmen, es (B) serialisiert, da es ein Objekt einer Klasse, die von einer Basisklasse (A) abgeleitet werden kann.  

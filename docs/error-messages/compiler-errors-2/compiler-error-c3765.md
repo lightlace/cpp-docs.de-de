@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274767"
 ---
 # <a name="compiler-error-c3765"></a>Compilerfehler C3765
 'Ereignis': Definieren Sie ein Ereignis kann nicht in einer Klasse/Struktur 'Typ' als ein Event_receiver gekennzeichnet  

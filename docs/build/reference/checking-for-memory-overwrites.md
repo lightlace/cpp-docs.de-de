@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369850"
 ---
 # <a name="checking-for-memory-overwrites"></a>Suchen nach Speicherüberschreibungen
 Wenn Sie eine zugriffsverletzung bei einem Aufruf an eine Funktion der Heap Manipulation erhalten, ist es möglich, dass das Programm auf den Heap beschädigt ist. Ein häufig auftretendes Problem diese Situation würde folgendermaßen lauten:  

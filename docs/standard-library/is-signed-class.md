@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8452c106c5a4d0d005ec61278c8e0d7cb75723ec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b9b58235d404b523629a0e9d24121182d1119c3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960329"
 ---
 # <a name="issigned-class"></a>is_signed-Klasse
 
@@ -36,11 +37,11 @@ struct is_signed;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn es sich beim Typ `Ty` um einen Typ für eine ganze Zahl mit Vorzeichen oder um einen `cv-qualified`-Typ für eine ganze Zahl mit Vorzeichen handelt, andernfalls „false“.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein ganzzahliger Typ mit Vorzeichen oder einen `cv-qualified` ganzzahligen Typ mit Vorzeichen, andernfalls er false enthält.
 
 ## <a name="example"></a>Beispiel
 

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372481"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Erstellen eines MFC-ActiveX-Steuerelementcontainers
 Ein ActiveX-Steuerelementcontainer ist ein übergeordneten-Programm, das die Umgebung für ein Steuerelement (früher OLE) auszuführende bereitstellt. Können Sie eine Anwendung kann mit ActiveX-Steuerelemente mit oder ohne MFC erstellen, aber es ist viel leichter mit MFC zu tun.  

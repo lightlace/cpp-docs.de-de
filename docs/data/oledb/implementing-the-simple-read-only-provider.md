@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100615"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>Implementieren des einfachen schreibgeschützten Anbieters
 Im erweiterten Beispiel in diesem Thema zeigt, wie Sie die vom Assistenten erstellten Dateien um einen einfachen schreibgeschützten Anbieters zu erstellen, die einen Satz von zwei Zeichenfolgen aus einer Textdatei liest bearbeiten. Um diesen Anbieter aus dem Assistentendateien zu erstellen, fügen Sie Code aus, um die folgenden Aufgaben ausführen:  

@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 224a0c9b837763574c53e8464885f02ec5413971
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8a888cfdf8d83f3628bf4ad80b26db6ac51ad72
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123096"
 ---
 # <a name="dhtml-event-maps"></a>DHTML-Ereigniszuordnungen
 DHTML-Ereignis zu behandeln, können die folgenden Makros verwendet werden.  
@@ -41,32 +42,32 @@ DHTML-Ereignis zu behandeln, können die folgenden Makros verwendet werden.
 |[DHTML_EVENT_AXCONTROL](#dhtml_event_axcontrol)|Zum Behandeln eines Ereignisses, das ausgelöst wird, indem Sie ein ActiveX-Steuerelement verwendet.|  
 |[DHTML_EVENT_CLASS](#dhtml_event_class)|Verwendet für die Ereignisbehandlung auf Dokumentenebene für alle HTML-Elemente mit einer bestimmten CSS-Klasse.|  
 |[DHTML_EVENT_ELEMENT](#dhtml_event_element)|Zum Behandeln eines Ereignisses auf Elementebene verwendet.|  
-|[DHTML_EVENT_ONAFTERUPDATE](#dhtml_event_onafterupdate)|Zum Behandeln der **Onafterupdate** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONBEFOREUPDATE](#dhtml_event_onbeforeupdate)|Zum Behandeln der **Onbeforeupdate** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONBLUR](#dhtml_event_onblur)|Zum Behandeln der **Onblur** Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONAFTERUPDATE](#dhtml_event_onafterupdate)|Zum Behandeln der `onafterupdate` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONBEFOREUPDATE](#dhtml_event_onbeforeupdate)|Zum Behandeln der `onbeforeupdate` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONBLUR](#dhtml_event_onblur)|Zum Behandeln der `onblur` Ereignis von einem HTML-Element.|  
 |[DHTML_EVENT_ONCHANGE](#dhtml_event_onchange)|Zum Behandeln der `onchange` Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONCLICK](#dhtml_event_onclick)|Zum Behandeln der **Onclick** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONDATAAVAILABLE](#dhtml_event_ondataavailable)|Zum Behandeln der **Ondataavailable** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONDATASETCHANGED](#dhtml_event_ondatasetchanged)|Zum Behandeln der **Ondatasetchanged** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONDATASETCOMPLETE](#dhtml_event_ondatasetcomplete)|Zum Behandeln der **Ondatasetcomplete** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONDBLCLICK](#dhtml_event_ondblclick)|Zum Behandeln der **Ondblclick** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONDRAGSTART](#dhtml_event_ondragstart)|Zum Behandeln der **Ondragstart** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONERRORUPDATE](#dhtml_event_onerrorupdate)|Zum Behandeln der **Onerrorupdate** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONFILTERCHANGE](#dhtml_event_onfilterchange)|Zum Behandeln der **Onfilterchange** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONFOCUS](#dhtml_event_onfocus)|Zum Behandeln der **Onfocus** Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONCLICK](#dhtml_event_onclick)|Zum Behandeln der `onclick` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONDATAAVAILABLE](#dhtml_event_ondataavailable)|Zum Behandeln der `ondataavailable` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONDATASETCHANGED](#dhtml_event_ondatasetchanged)|Zum Behandeln der `ondatasetchanged` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONDATASETCOMPLETE](#dhtml_event_ondatasetcomplete)|Zum Behandeln der `ondatasetcomplete` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONDBLCLICK](#dhtml_event_ondblclick)|Zum Behandeln der `ondblclick` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONDRAGSTART](#dhtml_event_ondragstart)|Zum Behandeln der `ondragstart` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONERRORUPDATE](#dhtml_event_onerrorupdate)|Zum Behandeln der `onerrorupdate` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONFILTERCHANGE](#dhtml_event_onfilterchange)|Zum Behandeln der `onfilterchange` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONFOCUS](#dhtml_event_onfocus)|Zum Behandeln der `onfocus` Ereignis von einem HTML-Element.|  
 |[DHTML_EVENT_ONHELP](#dhtml_event_onhelp)|Zum Behandeln der `onhelp` Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONKEYDOWN](#dhtml_event_onkeydown)|Zum Behandeln der **Onkeydown** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONKEYPRESS](#dhtml_event_onkeypress)|Zum Behandeln der **Onkeypress** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONKEYUP](#dhtml_event_onkeyup)|Zum Behandeln der **Onkeyup** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONMOUSEDOWN](#dhtml_event_onmousedown)|Zum Behandeln der **Onmousedown** Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONKEYDOWN](#dhtml_event_onkeydown)|Zum Behandeln der `onkeydown` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONKEYPRESS](#dhtml_event_onkeypress)|Zum Behandeln der `onkeypress` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONKEYUP](#dhtml_event_onkeyup)|Zum Behandeln der `onkeyup` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONMOUSEDOWN](#dhtml_event_onmousedown)|Zum Behandeln der `onmousedown` Ereignis von einem HTML-Element.|  
 |[DHTML_EVENT_ONMOUSEMOVE](#dhtml_event_onmousemove)|Zum Behandeln der `onmousemove` Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONMOUSEOUT](#dhtml_event_onmouseout)|Zum Behandeln der **Onmouseout** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONMOUSEOVER](#dhtml_event_onmouseover)|Zum Behandeln der **Onmouseover** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONMOUSEUP](#dhtml_event_onmouseup)|Zum Behandeln der **Onmouseup** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONRESIZE](#dhtml_event_onresize)|Zum Behandeln der **Onresize** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONROWENTER](#dhtml_event_onrowenter)|Zum Behandeln der **Onrowenter** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONROWEXIT](#dhtml_event_onrowexit)|Zum Behandeln der **Onrowexit** Ereignis von einem HTML-Element.|  
-|[DHTML_EVENT_ONSELECTSTART](#dhtml_event_onselectstart)|Zum Behandeln der **Onselectstart** Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONMOUSEOUT](#dhtml_event_onmouseout)|Zum Behandeln der `onmouseout` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONMOUSEOVER](#dhtml_event_onmouseover)|Zum Behandeln der `onmouseover` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONMOUSEUP](#dhtml_event_onmouseup)|Zum Behandeln der `onmouseup` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONRESIZE](#dhtml_event_onresize)|Zum Behandeln der `onresize` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONROWENTER](#dhtml_event_onrowenter)|Zum Behandeln der `onrowenter` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONROWEXIT](#dhtml_event_onrowexit)|Zum Behandeln der `onrowexit` Ereignis von einem HTML-Element.|  
+|[DHTML_EVENT_ONSELECTSTART](#dhtml_event_onselectstart)|Zum Behandeln der `onselectstart` Ereignis von einem HTML-Element.|  
 |[DHTML_EVENT_TAG](#dhtml_event_tag)|Zum Behandeln eines Ereignisses auf Dokumentenebene für alle Elemente mit einem bestimmten HTML-Tag verwendet.|  
 |[END_DHTML_EVENT_MAP](#end_dhtml_event_map)|Markiert das Ende der Zuordnung DHTML-Ereignis.|  
 |[END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline)|Markiert das Ende der Zuordnung DHTML-Ereignis. |
@@ -96,13 +97,13 @@ BEGIN_DHTML_EVENT_MAP(className)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `className`  
+ *Klassenname*  
  Der Name der Klasse, die die DHTML-ereigniszuordnung enthält. Diese Klasse sollte direkt oder indirekt aus ableiten [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) und enthalten die [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) Makro innerhalb der Klassendefinition.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Klasse, um Informationen zum Bereitstellen einer DHTML-ereigniszuordnung hinzufügen **CDHtmlDialog** , die verwendet werden kann, um Ereignisse weiterzuleiten, die von HTML-Elementen oder ActiveX-Steuerelemente auf einer Webseite mit Handlerfunktionen in Ihrer Klasse ausgelöst werden.  
+ Die Klasse, um Informationen zum Bereitstellen einer DHTML-ereigniszuordnung hinzufügen `CDHtmlDialog` , die verwendet werden kann, um Ereignisse weiterzuleiten, die von HTML-Elementen oder ActiveX-Steuerelemente auf einer Webseite mit Handlerfunktionen in Ihrer Klasse ausgelöst werden.  
   
- Ort der `BEGIN_DHTML_EVENT_MAP` Makros in der Klasse Implementierungsdatei (.cpp), gefolgt von `DHTML_EVENT` Makros für die Ereignisse die Klasse behandelt wird (z. B. `DHTML_EVENT_ONMOUSEOVER` für Mouseover-Ereignisse). Verwenden der [END_DHTML_EVENT_MAP](#end_dhtml_event_map) Makro auf das Ende der ereigniszuordnung zu markieren. Diese Makros implementieren Sie die folgende Funktion:  
+ Platzieren Sie das BEGIN_DHTML_EVENT_MAP-Makro in der Klasse Implementierungsdatei (.cpp) gefolgt von DHTML_EVENT-Makros für die Ereignisse an, die die Klasse behandeln (z. B. DHTML_EVENT_ONMOUSEOVER für Mouseover-Ereignisse). Verwenden der [END_DHTML_EVENT_MAP](#end_dhtml_event_map) Makro auf das Ende der ereigniszuordnung zu markieren. Diese Makros implementieren Sie die folgende Funktion:  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
@@ -110,20 +111,20 @@ BEGIN_DHTML_EVENT_MAP(className)
   **Header** afxdhtml.h  
   
 ##  <a name="begin_dhtml_event_map_inline"></a>  BEGIN_DHTML_EVENT_MAP_INLINE  
- Kennzeichnet den Anfang der DHTML-ereigniszuordnung innerhalb der Klassendefinition für `className`.  
+ Kennzeichnet den Anfang der DHTML-ereigniszuordnung innerhalb der Klassendefinition für *ClassName*.  
   
 ```   
 BEGIN_DHTML_EVENT_MAP_INLINE(className)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `className`  
+ *Klassenname*  
  Der Name der Klasse, die die DHTML-ereigniszuordnung enthält. Diese Klasse sollte direkt oder indirekt aus ableiten [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) und enthalten die [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) Makro innerhalb der Klassendefinition.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Klasse, um Informationen zum Bereitstellen einer DHTML-ereigniszuordnung hinzufügen **CDHtmlDialog** , die verwendet werden kann, um Ereignisse weiterzuleiten, die von HTML-Elementen oder ActiveX-Steuerelemente auf einer Webseite mit Handlerfunktionen in Ihrer Klasse ausgelöst werden.  
+ Die Klasse, um Informationen zum Bereitstellen einer DHTML-ereigniszuordnung hinzufügen `CDHtmlDialog` , die verwendet werden kann, um Ereignisse weiterzuleiten, die von HTML-Elementen oder ActiveX-Steuerelemente auf einer Webseite mit Handlerfunktionen in Ihrer Klasse ausgelöst werden.  
   
- Ort der `BEGIN_DHTML_EVENT_MAP` Makros in der Klasse-Definitionsdatei (. h), gefolgt von `DHTML_EVENT` Makros für die Ereignisse die Klasse behandelt wird (z. B. `DHTML_EVENT_ONMOUSEOVER` für Mouseover-Ereignisse). Verwenden der [END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline) Makro auf das Ende der ereigniszuordnung zu markieren. Diese Makros implementieren Sie die folgende Funktion:  
+ BEGIN_DHTML_EVENT_MAP-Makro wird in der Klasse Definition (. h)-Datei gefolgt von DHTML_EVENT-Makros für die Ereignisse an, die die Klasse behandeln (z. B. DHTML_EVENT_ONMOUSEOVER für Mouseover-Ereignisse) platzieren. Verwenden der [END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline) Makro auf das Ende der ereigniszuordnung zu markieren. Diese Makros implementieren Sie die folgende Funktion:  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
@@ -151,20 +152,20 @@ DECLARE_DHTML_EVENT_MAP()
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event"></a>  DHTML_EVENT  
- (Auf Dokumentebene) ein identifizierte Ereignis behandelt `dispid` stammt vom HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) ein identifizierte Ereignis behandelt *Dispid* stammt vom HTML-Element identifizierte *ElemName*.  
   
 ```   
 DHTML_EVENT(dispid, elemName,  memberFxn)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dispid`  
+ *DISPID*  
  Die DISPID des Ereignisses behandelt werden.  
   
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses oder **NULL** Dokumentereignisse behandeln.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses oder NULL, wenn Dokumentereignisse behandeln.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -174,20 +175,20 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_axcontrol"></a>  DHTML_EVENT_AXCONTROL  
- Behandelt das Ereignis identifizierten `dispid` ausgelöst wird, vom ActiveX-Steuerelement identifizierten `controlName`.  
+ Behandelt das Ereignis identifizierten *Dispid* ausgelöst wird, vom ActiveX-Steuerelement identifizierten *Steuerelementname*.  
   
 ```   
 DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dispid`  
+ *DISPID*  
  Die Dispatch-ID des Ereignisses behandelt werden.  
   
- `controlName`  
- Ein `LPCWSTR` halten die HTML-ID des Steuerelements, das das Ereignis ausgelöst.  
+ *Steuerelementname*  
+ Ein LPCWSTR halten die HTML-ID des Steuerelements, das das Ereignis ausgelöst wird.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -197,20 +198,20 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_class"></a>  DHTML_EVENT_CLASS  
- (Auf Dokumentebene) ein identifizierte Ereignis behandelt `dispid` stammt von HTML-Element mit der CSS-Klasse, die identifizierte `elemName`.  
+ (Auf Dokumentebene) ein identifizierte Ereignis behandelt *Dispid* stammt von HTML-Element mit der CSS-Klasse, die identifizierte *ElemName*.  
   
 ```   
 DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dispid`  
+ *DISPID*  
  Die Dispatch-ID des Ereignisses behandelt werden.  
   
- `elemName`  
- Ein `LPCWSTR` halten die CSS-Klasse, die HTML-Elemente, die als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die CSS-Klasse, die HTML-Elemente, die als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -220,44 +221,44 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_element"></a>  DHTML_EVENT_ELEMENT  
- Verarbeitet (bei dem Element identifizierte `elemName`) ein identifizierte Ereignis `dispid`.  
+ Verarbeitet (bei dem Element identifizierte *ElemName*) ein identifizierte Ereignis *Dispid*.  
   
 ```   
 DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn) 
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dispid`  
+ *DISPID*  
  Die Dispatch-ID des Ereignisses behandelt werden.  
   
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie dieses Makro zum Hinzufügen eines Eintrags auf dem [DHTML-ereigniszuordnung](#begin_dhtml_event_map_inline) in Ihrer Klasse.  
   
- Wenn dieses Makro zum nonbubbling aufgeladenen verwendet wird, werden die Quelle des Ereignisses durch identifizierte `elemName`.  
+ Wenn dieses Makro zum nonbubbling aufgeladenen verwendet wird, werden die Quelle des Ereignisses durch identifizierte *ElemName*.  
   
- Wenn Sie dieses Makro zum Behandeln von bubbling-Ereignisse verwendet wird, wird das Element durch identifiziert `elemName` möglicherweise nicht die Quelle des Ereignisses (die Quelle ist möglicherweise ein Element enthaltenen `elemName`).  
+ Wenn Sie dieses Makro zum Behandeln von bubbling-Ereignisse verwendet wird, wird das Element durch identifiziert *ElemName* möglicherweise nicht die Quelle des Ereignisses (die Quelle ist möglicherweise ein Element enthaltenen *ElemName*).  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onafterupdate"></a>  DHTML_EVENT_ONAFTERUPDATE  
- (Auf Dokumentebene) behandelt die **Onafterupdate** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onafterupdate` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```   
 DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -267,17 +268,17 @@ DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onbeforeupdate"></a>  DHTML_EVENT_ONBEFOREUPDATE  
- (Auf Dokumentebene) behandelt die **Onbeforeupdate** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onbeforeupdate` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```   
 DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -287,17 +288,17 @@ DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onblur"></a>  DHTML_EVENT_ONBLUR  
- (Auf der Elementebene) behandelt die **Onblur** Ereignis. Dies ist ein nonbubbling-Ereignis.  
+ (Auf der Elementebene) behandelt die `onblur` Ereignis. Dies ist ein nonbubbling-Ereignis.  
   
 ```   
 DHTML_EVENT_ONBLUR(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -314,10 +315,10 @@ DHTML_EVENT_ONCHANGE(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -327,17 +328,17 @@ DHTML_EVENT_ONCHANGE(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onclick"></a>  DHTML_EVENT_ONCLICK  
- (Auf Dokumentebene) behandelt die **Onclick** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onclick` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```   
 DHTML_EVENT_ONCLICK(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -347,17 +348,17 @@ DHTML_EVENT_ONCLICK(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_ondataavailable"></a>  DHTML_EVENT_ONDATAAVAILABLE  
- (Auf Dokumentebene) behandelt die **Ondataavailable** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `ondataavailable` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```   
 DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -367,17 +368,17 @@ DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_ondatasetchanged"></a>  DHTML_EVENT_ONDATASETCHANGED  
- (Auf Dokumentebene) behandelt die **Ondatasetchanged** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `ondatasetchanged` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```   
 DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -387,7 +388,7 @@ DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_ondatasetcomplete"></a>  DHTML_EVENT_ONDATASETCOMPLETE  
- (Auf Dokumentebene) behandelt die **Ondatasetcomplete** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `ondatasetcomplete` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
   
 ```   
 DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn) 
@@ -395,10 +396,10 @@ DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -408,17 +409,17 @@ DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_ondblclick"></a>  DHTML_EVENT_ONDBLCLICK  
- (Auf Dokumentebene) behandelt die **Ondblclick** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `ondblclick` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```   
 DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -428,17 +429,17 @@ DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_ondragstart"></a>  DHTML_EVENT_ONDRAGSTART  
- (Auf Dokumentebene) behandelt die **Ondragstart** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `ondragstart` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```   
 DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -448,7 +449,7 @@ DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onerrorupdate"></a>  DHTML_EVENT_ONERRORUPDATE  
- (Auf Dokumentebene) behandelt die **Onerrorupdate** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onerrorupdate` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```   
 DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)  
@@ -456,10 +457,10 @@ DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -469,7 +470,7 @@ DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onfilterchange"></a>  DHTML_EVENT_ONFILTERCHANGE  
- (Auf Dokumentebene) behandelt die **Onfilterchange** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onfilterchange` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```  
  
@@ -478,10 +479,10 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -491,7 +492,7 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onfocus"></a>  DHTML_EVENT_ONFOCUS  
- (Auf der Elementebene) behandelt die **Onfocus** Ereignis. Dies ist ein nonbubbling-Ereignis.  
+ (Auf der Elementebene) behandelt die `onfocus` Ereignis. Dies ist ein nonbubbling-Ereignis.  
   
 ```  
  
@@ -500,10 +501,10 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -513,7 +514,7 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onhelp"></a>  DHTML_EVENT_ONHELP  
- (Auf Dokumentebene) behandelt die `onhelp` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onhelp` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```  
  
@@ -522,10 +523,10 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -535,7 +536,7 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onkeydown"></a>  DHTML_EVENT_ONKEYDOWN  
- (Auf Dokumentebene) behandelt die **Onkeydown** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onkeydown` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```  
  
@@ -544,10 +545,10 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -557,7 +558,7 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onkeypress"></a>  DHTML_EVENT_ONKEYPRESS  
- (Auf Dokumentebene) behandelt die **Onkeypress** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onkeypress` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```  
  
@@ -566,10 +567,10 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -579,7 +580,7 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onkeyup"></a>  DHTML_EVENT_ONKEYUP  
- (Auf Dokumentebene) behandelt die **Onkeyup** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onkeyup` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```  
  
@@ -588,10 +589,10 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -601,7 +602,7 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onmousedown"></a>  DHTML_EVENT_ONMOUSEDOWN  
- (Auf Dokumentebene) behandelt die **Onmousedown** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onmousedown` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```  
  
@@ -610,10 +611,10 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -623,7 +624,7 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onmousemove"></a>  DHTML_EVENT_ONMOUSEMOVE  
- (Auf Dokumentebene) behandelt die `onmousemove` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onmousemove` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```  
  
@@ -632,10 +633,10 @@ DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -645,7 +646,7 @@ DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onmouseout"></a>  DHTML_EVENT_ONMOUSEOUT  
- (Auf Dokumentebene) behandelt die **Onmouseout** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onmouseout` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```  
  
@@ -654,10 +655,10 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -667,7 +668,7 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onmouseover"></a>  DHTML_EVENT_ONMOUSEOVER  
- (Auf Dokumentebene) behandelt die **Onmouseover** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onmouseover` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```  
  
@@ -676,10 +677,10 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -689,7 +690,7 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onmouseup"></a>  DHTML_EVENT_ONMOUSEUP  
- (Auf Dokumentebene) behandelt die **Onmouseup** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onmouseup` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```  
  
@@ -698,10 +699,10 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -711,7 +712,7 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onresize"></a>  DHTML_EVENT_ONRESIZE  
- (Auf der Elementebene) behandelt die **Onresize** Ereignis. Dies ist ein nonbubbling-Ereignis.  
+ (Auf der Elementebene) behandelt die `onresize` Ereignis. Dies ist ein nonbubbling-Ereignis.  
   
 ```  
  
@@ -720,10 +721,10 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -733,7 +734,7 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onrowenter"></a>  DHTML_EVENT_ONROWENTER  
- (Auf Dokumentebene) behandelt die **Onrowenter** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onrowenter` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```  
  
@@ -742,10 +743,10 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -755,7 +756,7 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onrowexit"></a>  DHTML_EVENT_ONROWEXIT  
- (Auf Dokumentebene) behandelt die **Onrowexit** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onrowexit` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```  
  
@@ -764,10 +765,10 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -777,7 +778,7 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_onselectstart"></a>  DHTML_EVENT_ONSELECTSTART  
- (Auf Dokumentebene) behandelt die **Onselectstart** Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte `elemName`.  
+ (Auf Dokumentebene) behandelt die `onselectstart` Ereignis ausgelöst wurde, indem Sie das HTML-Element identifizierte *ElemName*.  
   
 ```  
  
@@ -786,10 +787,10 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `elemName`  
- Ein `LPCWSTR` halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
+ *elemName*  
+ Ein LPCWSTR, halten die ID des HTML-Elements, das als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -799,20 +800,20 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
   **Header** afxdhtml.h  
   
 ##  <a name="dhtml_event_tag"></a>  DHTML_EVENT_TAG  
- (Auf Dokumentebene) ein identifizierte Ereignis behandelt `dispid` stammt von HTML-Element mit dem HTML-Tag identifizierte `elemName`.  
+ (Auf Dokumentebene) ein identifizierte Ereignis behandelt `dispid` stammt von HTML-Element mit dem HTML-Tag identifizierte *ElemName*.  
   
 ```   
 DHTML_EVENT_TAG(dispid, elemName,  memberFxn)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dispid`  
+ *DISPID*  
  Die Dispatch-ID des Ereignisses behandelt werden.  
   
- `elemName`  
+ *elemName*  
  Die HTML-Tags, HTML-Elemente, die als Quelle des Ereignisses.  
   
- `memberFxn`  
+ *memberFxn*  
  Die Handlerfunktion für das Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -843,7 +844,7 @@ BEGIN_DHTML_URL_EVENT_MAP()
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Put `BEGIN_DHTML_URL_EVENT_MAP` in der Implementierungsdatei des Ihrer [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-Klasse. Führen Sie ihn mit [eingebettet DHTML-ereigniszuordnungen](#begin_embed_dhtml_event_map) und [URL-Einträgen](#begin_url_entries), und schließen Sie sie mit [END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map). Enthalten die [DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map) Makro innerhalb der Klassendefinition.  
+ Versetzen in der Implementierungsdatei des BEGIN_DHTML_URL_EVENT_MAP Ihrer [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-abgeleitete Klasse. Führen Sie ihn mit [eingebettet DHTML-ereigniszuordnungen](#begin_embed_dhtml_event_map) und [URL-Einträgen](#begin_url_entries), und schließen Sie sie mit [END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map). Enthalten die [DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map) Makro innerhalb der Klassendefinition.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#196](../../mfc/codesnippet/cpp/dhtml-event-maps_1.cpp)]  
@@ -860,7 +861,7 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `className`  
+ *Klassenname*  
  Der Name der Klasse, die die ereigniszuordnung enthält. Diese Klasse sollte direkt oder indirekt aus ableiten [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Die eingebettete DHTML-ereigniszuordnung muss innerhalb einer [DHTML- und URL-ereigniszuordnung](#begin_dhtml_url_event_map)).  
   
  *mapName*  
@@ -869,9 +870,9 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 ### <a name="remarks"></a>Hinweise  
  Weil ein mehrseitiges DHTML-Dialogfeld mehrere HTML-Seiten besteht, von denen jede DHTML-Ereignis auslösen kann, werden eingebettete ereigniszuordnungen verwendet, um Handler pro Seite Ereignisse zuzuordnen.  
   
- Eingebettete ereigniszuordnungen innerhalb einer DHTML- und URL-ereigniszuordnung bestehen aus einem `BEGIN_EMBED_DHTML_EVENT_MAP` Makro gefolgt von [DHTML_EVENT](#dhtml_event) Makros und ein [END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map) Makro.  
+ Eingebettete ereigniszuordnungen innerhalb einer DHTML- und URL-ereigniszuordnung bestehen aus einem BEGIN_EMBED_DHTML_EVENT_MAP-Makro, gefolgt von [DHTML_EVENT](#dhtml_event) Makros und ein [END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map) Makro.  
   
- Jedes eingebettete ereigniszuordnung erfordert eine entsprechende [URL Ereigniseintrag](#url_event_entry) abzubildenden *MapName* (im angegebenen `BEGIN_EMBED_DHTML_EVENT_MAP`) auf eine URL oder HTML-Ressource.  
+ Jedes eingebettete ereigniszuordnung erfordert eine entsprechende [URL Ereigniseintrag](#url_event_entry) abzubildenden *MapName* (angegeben in BEGIN_EMBED_DHTML_EVENT_MAP) auf eine URL oder HTML-Ressource.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel in [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
@@ -888,11 +889,11 @@ BEGIN_URL_ENTRIES(className)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `className`  
+ *Klassenname*  
  Der Name der Klasse, die die URL-ereigniszuordnung Eintrag enthält. Diese Klasse sollte direkt oder indirekt aus ableiten [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Die URL-ereigniszuordnung Eintrag muss innerhalb einer [DHTML- und URL-ereigniszuordnung](#begin_dhtml_url_event_map)).  
   
 ### <a name="remarks"></a>Hinweise  
- Da mehrere HTML-Seiten ein mehrseitiges DHTML-Dialogfeld umfasst, werden Einträge für URL-Ereignis verwendet, um das Zuordnen von URLs oder HTML-Ressourcen, um die entsprechenden [eingebettet DHTML-ereigniszuordnungen](#begin_embed_dhtml_event_map). Put `URL_EVENT_ENTRY` Makros zwischen `BEGIN_URL_ENTRIES` und [END_URL_ENTRIES](#end_url_entries) Makros.  
+ Da mehrere HTML-Seiten ein mehrseitiges DHTML-Dialogfeld umfasst, werden Einträge für URL-Ereignis verwendet, um das Zuordnen von URLs oder HTML-Ressourcen, um die entsprechenden [eingebettet DHTML-ereigniszuordnungen](#begin_embed_dhtml_event_map). URL_EVENT_ENTRY-Makros zwischen BEGIN_URL_ENTRIES abgelegt und [END_URL_ENTRIES](#end_url_entries) Makros.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel in [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
@@ -925,8 +926,8 @@ END_DHTML_URL_EVENT_MAP(className)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `className`  
- Der Name der Klasse, die die ereigniszuordnung enthält. Diese Klasse sollte direkt oder indirekt aus ableiten [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Dies sollte übereinstimmen `className` im entsprechenden [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map) Makro.  
+ *Klassenname*  
+ Der Name der Klasse, die die ereigniszuordnung enthält. Diese Klasse sollte direkt oder indirekt aus ableiten [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Dies sollte übereinstimmen *ClassName* im entsprechenden [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map) Makro.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel in [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).  
@@ -970,7 +971,7 @@ URL_EVENT_ENTRY(className, url,  mapName)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `className`  
+ *Klassenname*  
  Der Name der Klasse, die die URL-ereigniszuordnung Eintrag enthält. Diese Klasse sollte direkt oder indirekt aus ableiten [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Die URL-ereigniszuordnung Eintrag muss innerhalb einer [DHTML- und URL-ereigniszuordnung](#begin_dhtml_url_event_map)).  
   
  *URL*  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346899"
 ---
 # <a name="class-library-overview"></a>Übersicht über die Klassenbibliothek
 Diese Übersicht kategorisiert und beschreibt die Klassen in Version 9.0 der Microsoft Foundation Class-Bibliothek (MFC). Die Klassen in MFC bilden zusammen ein Anwendungsframework – das Framework einer Anwendung, die für die Windows-API geschrieben wurde. Ihre Aufgabe als Programmierer besteht darin, den speziellen Code für Ihre Anwendung einzufügen.  

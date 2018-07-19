@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c13cd76f5d353cf91997406c8e7f74b5383cf8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e1111ede44edc36e5399d82b3c4e088b20cc1c9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957297"
 ---
 # <a name="timebase-class"></a>time_base-Klasse
 
-Die Klasse dient als Basisklasse für Facets der Vorlagenklasse time_get und definiert nur den Aufzählungstyp **dateorder** und mehrere Konstanten dieses Typs.
+Die Klasse fungiert als Basisklasse für Facets der Time_get-Vorlagenklasse, definieren nur den Aufzählungstyp `dateorder` und mehrere Konstanten dieses Typs.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,15 +48,15 @@ public:
 
 Jede Konstante kennzeichnet eine andere Möglichkeit, die Komponenten eines Datums zu ordnen. Es gibt folgende Konstanten:
 
-- **no_order** kennzeichnet keine bestimmte Reihenfolge.
+- `no_order` Gibt ohne bestimmte Reihenfolge.
 
-- **dmy** kennzeichnet die Reihenfolge Tag, Monat, Jahr wie in 2. Dezember 1979.
+- `dmy` kennzeichnet die Reihenfolge Tag, Monat, Jahr wie in 2. Dezember 1979.
 
-- **mdy** kennzeichnet die Reihenfolge Monat, Tag, Jahr wie in Dezember 2, 1979.
+- `mdy` kennzeichnet die Reihenfolge Monat, Tag, Jahr wie in Dezember 2, 1979.
 
-- **ymd** kennzeichnet die Reihenfolge Jahr, Monat, Tag wie in 1979/12/2.
+- `ymd` kennzeichnet die Reihenfolge Jahr, Monat, Tag wie in 1979/12/2.
 
-- **ydm** kennzeichnet die Reihenfolge Jahr, Tag, Monat wie in 1979: 2 Dez.
+- `ydm` kennzeichnet die Reihenfolge Jahr, Tag, Monat wie in 1979:2 Dez.
 
 ## <a name="requirements"></a>Anforderungen
 

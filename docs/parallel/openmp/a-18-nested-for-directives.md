@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690867"
 ---
 # <a name="a18---nested-for-directives"></a>A.18   Geschachtelte for-Direktiven
 Im folgenden Beispiel `for` Richtlinie Schachtelung ([Abschnitt 2.9](../../parallel/openmp/2-9-directive-nesting.md) auf der Seite "33") kompatibel ist da inneren und äußeren `for` Direktiven für verschiedene parallele Regionen binden:  

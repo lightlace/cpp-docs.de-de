@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376032"
 ---
 # <a name="structure-and-constant-definitions"></a>Struktur- und Konstantendefinitionen
 Die Standard-Hilfsroutine verwendet mehrere Strukturen für die Kommunikation mit den Hookfunktionen sowie während der Ausnahmen an. Hier sind die Werte für Benachrichtigung und Fehler, Informationsstrukturen und der Zeiger auf Hookfunktion-Typ, der an die Hooks übergeben:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695836"
 ---
 # <a name="ompgetmaxthreads"></a>omp_get_max_threads
 Gibt eine ganze Zahl, die gleich oder größer als die Anzahl der Threads, die verfügbar sind, wenn einem parallelen Bereich ohne [Num_threads](../../../parallel/openmp/reference/num-threads.md) an diesem Punkt im Code definiert wurden.  

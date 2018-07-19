@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358898"
 ---
 # <a name="stock-properties-atl-control-wizard"></a>Basiseigenschaften, ATL-Steuerelement-Assistent
 Auf dieser Seite des Assistenten identifiziert die Basiseigenschaften, die für das Steuerelement unterstützt. Standardmäßig sind keine Eigenschaften festgelegt.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255537"
 ---
 # <a name="platformtype-class"></a>Platform::Type-Klasse
 Enthält Laufzeitinformationen über einen Typ, insbesondere einen Zeichenfolgennamen und einen Typecode. Durch den Aufruf von [GetType](../cppcx/platform-object-class.md#gettype) für ein Objekt oder oder über die [Typeid](../windows/typeid-cpp-component-extensions.md) Operator auf eine Klassen- oder Strukturnamen.  

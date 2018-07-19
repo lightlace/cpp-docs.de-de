@@ -12,11 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5068c0bd540b1c44d2cdc484c2e511276bd12666
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961112"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;iStream&gt;-Operatoren
 
@@ -63,13 +64,13 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Parameter
 
-`Ch` Ein Zeichen.
+*CH* ein Zeichen.
 
-`Istr` Ein Datenstrom.
+*ISTR* einen Stream.
 
-`str` Eine Zeichenfolge.
+*Str* eine Zeichenfolge.
 
-`val` Ein Typ.
+*Val* eines Typs.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -87,9 +88,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-extrahiert bis zu *N*-1-Elemente und speichert sie in das Array, beginnend mit _*Str*. Wenn `Istr`. [Breite](../standard-library/ios-base-class.md#width) ist größer als 0 (null), *N* ist `Istr`. **Breite**ist, andernfalls ist die Größe des größten Arrays mit **Elem** , deklariert werden. Die Funktion speichert immer den Wert **Elem()** nach beliebigen extrahierten Elementen, die gespeichert werden. Die Extraktion hält früh am Ende der Datei, an einem Zeichen mit dem Wert **Elem**(0) (das nicht extrahiert wurde), oder an einem beliebigen Element (das nicht extrahiert wurde), welches von [ws](../standard-library/istream-functions.md#ws) verworfen werden würde. Wenn die Funktion keine Elemente extrahiert, ruft es `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf. In jedem Fall ruft `Istr`. **Breite**(0) und gibt `Istr`.
+extrahiert bis zu *N*-1-Elemente und speichert sie in das Array, beginnend mit _*Str*. Wenn `Istr`. [Breite](../standard-library/ios-base-class.md#width) ist größer als 0 (null), *N* ist `Istr`. **Breite**ist, andernfalls ist die Größe des größten Arrays von `Elem` , deklariert werden. Die Funktion speichert immer den Wert `Elem()` nach beliebigen extrahierten-Elementen speichert. Die Extraktion hält früh am Ende der Datei, an einem Zeichen mit dem Wert **Elem**(0) (das nicht extrahiert wurde), oder an einem beliebigen Element (das nicht extrahiert wurde), welches von [ws](../standard-library/istream-functions.md#ws) verworfen werden würde. Wenn die Funktion keine Elemente extrahiert, ruft es `Istr`. [SetState](../standard-library/basic-ios-class.md#setstate)(**Failbit**). In jedem Fall ruft `Istr`. **Breite**(0) und gibt *Istr*.
 
-**Sicherheitshinweis** Die null-terminierte Zeichenfolge, die aus dem Eingabestream extrahiert wird, darf nicht die Größe des Zielpuffers `str` überschreiten. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Sicherheitshinweis** die Null-terminierte Zeichenfolge, die aus dem Eingabestream extrahiert wird darf die Größe des Zielpuffers nicht überschreiten *str*. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
 
 Die Vorlagenfunktion:
 
@@ -99,7 +100,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-extrahiert ein Element, wenn möglich, und speichert es in `Ch`. Andernfalls ruft **ist**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf. In jedem Fall gibt sie `Istr` zurück.
+extrahiert ein Element, sofern dies möglich ist, und ihn in speichert *Ch*. Andernfalls ruft sie **ist**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf. In jedem Fall gibt *Istr*.
 
 Die Vorlagenfunktion:
 

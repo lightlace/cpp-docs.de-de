@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382127"
 ---
 # <a name="windows-sockets-classes"></a>Windows Sockets-Klassen
 Windows Sockets geben eine Netzwerk-protokollunabhängige-Methode für die Kommunikation zwischen zwei Computern. Diese Sockets können synchrone werden (das Programm wartet, bis die Kommunikation erfolgt) oder asynchron (das Programm weiterhin ausgeführt, während die Kommunikation passiert).  

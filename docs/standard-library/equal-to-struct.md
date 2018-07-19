@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e1ef431fdba40ef9e8fd46b8c0e5d9cf7b32eda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68ca39b459b0d0e60305105986d3e76aa86a5bed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961651"
 ---
 # <a name="equalto-struct"></a>equal_to-Struktur
 
@@ -48,11 +49,11 @@ struct equal_to<void>
 
 ### <a name="parameters"></a>Parameter
 
-`Type`, `T`, `U` Jeder Typ, der unterstützt ein `operator==` , das Operanden angegebenen oder abgeleiteten Typen akzeptiert.
+*Typ*, *T*, *U* jeder Typ, unterstützt eine `operator==` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-`Left` Der linke Operand des gleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `T`.
+*Links* der linke Operand des gleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-`Right` Der Rechte Operand des gleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `U`.
+*Rechts* der Rechte Operand des gleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -60,7 +61,7 @@ Das Ergebnis von `Left == Right`. Die spezialisierte Vorlage vervollkommnet die 
 
 ## <a name="remarks"></a>Hinweise
 
-Die Objekte vom Typ `Type` müssen auf Gleichheit vergleichbar sein. Das erfordert, dass das mit dem `operator==`-Element, das im Satz von Objekten definiert wird, die Eigenschaften einer mathematischen Äquivalenzrelation erfüllt werden. Alle integrierten numerischen Typen und Zeigertypen erfüllen diese Anforderung.
+Die Objekte vom Typ *Typ* müssen auf Gleichheit vergleichbar sein. Das erfordert, dass das mit dem `operator==`-Element, das im Satz von Objekten definiert wird, die Eigenschaften einer mathematischen Äquivalenzrelation erfüllt werden. Alle integrierten numerischen Typen und Zeigertypen erfüllen diese Anforderung.
 
 ## <a name="example"></a>Beispiel
 

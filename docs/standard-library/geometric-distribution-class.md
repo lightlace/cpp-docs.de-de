@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d68723573d3a11565ae32f07bf8899661097c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8468cb290b6845050943159aaa69b9cd000d2bc7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960293"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution-Klasse
 
@@ -75,7 +76,7 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*IntType* der Integer-Ergebnistyp standardmäßig `int`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*IntType* standardmäßig der ganzzahligen Ergebnistyp **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 
   *URNG* Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
@@ -228,9 +229,9 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*p* der `p` -verteilungsparameter.
+*p* der `p` verteilungsparameter.
 
-*Parm* Parameterstruktur, die für die Verteilung verwendete Parameterstruktur.
+*Parm* die Parameterstruktur verwendet, um die Verteilung erstellen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -257,9 +258,9 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*p* der `p` -verteilungsparameter.
+*p* der `p` verteilungsparameter.
 
-*Rechte* der `param_type` Instanz, die diese Option, um verglichen.
+*richtige* der `param_type` Instanz, um diese Option, um zu vergleichen.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347245"
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC-Internetprogrammierungsaufgaben
 Dieser Abschnitt enthält detaillierte Schritte für Ihre Anwendungen internetunterstützung hinzugefügt. Folgende Themen werden behandelt wie den MFC-Klassen für die Internet-Aktivierung Ihre vorhandenen Anwendungen verwenden und wie Ihre vorhandenen COM-Komponente Active Document-Unterstützung hinzugefügt. Möchten Sie ein Dokument mit minutengenaue Aktienkurse des Frankfurt Football Bewertungen zu erstellen und die neueste Temperatur im Antarktis Microsoft bietet eine Reihe von Technologien helfen, die über das Internet möglich ist.  

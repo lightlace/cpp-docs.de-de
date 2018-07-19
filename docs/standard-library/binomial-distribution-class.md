@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46e2d7f6fd7337965d0b5dcf5b5cfe8d7a53688
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957684"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution-Klasse
 
@@ -80,21 +81,21 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*IntType* der Integer-Ergebnistyp standardmäßig `int`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*IntType* standardmäßig der ganzzahligen Ergebnistyp **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 
   *URNG* Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der diskreten Wahrscheinlichkeitsfunktion zur binomialen Verteilung verteilter Wert ausgeben wird, geben Sie `int` ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Vorlagenklasse beschreibt eine Verteilung, Werte eines benutzerdefinierten ganzzahligen produziert, Typs **Int** Wenn none angegeben wird, entsprechend der diskreten Wahrscheinlichkeitsfunktion binomiale Verteilung verteilter Wert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-Die Eigenschaftsmember `t()` und `p()` geben die aktuell gespeicherten Verteilungsparameterwerte `t` bzw. `p` zurück.
+Die Eigenschaftenmember `t()` und `p()` Parameterwerte für die aktuell gespeicherten verteilungsparameterwerte zurückzugeben *t* und *p* bzw.
 
 Das Eigenschaftsmember `param()` gibt das aktuell gespeicherte Verteilungspaket `param_type` zurück oder legt es fest.
 
@@ -250,19 +251,19 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*t* der `t` -verteilungsparameter.
+*t* der `t` verteilungsparameter.
 
-*p* der `p` -verteilungsparameter.
+*p* der `p` verteilungsparameter.
 
-*Parm* der `param_type` Struktur für die Verteilung verwendete Parameterstruktur.
+*Parm* der `param_type` Struktur verwendet, um die Verteilung erstellen.
 
 ### <a name="remarks"></a>Hinweise
 
 **Vorbedingung:** `0 ≤ t` und `0.0 ≤ p ≤ 1.0`
 
-Mit dem ersten Konstruktor wird ein Objekt erstellt, in dessen gespeichertem `p`-Wert der Wert *p* enthalten ist und dessen gespeicherter `t`-Wert den Wert *t* enthält.
+Der erste Konstruktor konstruiert ein Objekt, dessen gespeicherte *p* Wert enthält den Wert *p* und dessen gespeicherter *t* Wert enthält den Wert *t*.
 
-Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter von *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.
+Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter aus *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.
 
 ## <a name="param_type"></a> binomial_distribution::param_type
 
@@ -282,11 +283,11 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*t* der `t` -verteilungsparameter.
+*t* der `t` verteilungsparameter.
 
-*p* der `p` -verteilungsparameter.
+*p* der `p` verteilungsparameter.
 
-*Rechte* der `param_type` zu vergleichende Objekt.
+*richtige* der `param_type` zu zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 

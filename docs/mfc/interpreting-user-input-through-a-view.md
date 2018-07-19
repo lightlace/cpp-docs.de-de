@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e3ade658046ad789a92bce044d12e5a6e76f7ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f62d64ed9479f1d1003536f8c4944b53d04d696f
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931989"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretieren der Benutzereingaben in einer Ansicht
 Andere Memberfunktionen der Ansicht zu behandeln und interpretieren alle Benutzereingaben. Definieren Sie Meldungshandler Memberfunktionen in der Regel in Ihrer Ansichtsklasse verarbeiten:  
@@ -43,7 +44,7 @@ Andere Memberfunktionen der Ansicht zu behandeln und interpretieren alle Benutze
   
  [Behandlung und Themen Zuordnen von Meldungen](../mfc/message-handling-and-mapping.md) wird erläutert, wie Befehle Menüelemente und andere Objekte der Benutzeroberfläche zugewiesen und wie die Befehle mit Handlerfunktionen gebunden. [Behandlung und Themen Zuordnen von Meldungen](../mfc/message-handling-and-mapping.md) auch erläutert, wie MFC Befehle weiterleitet und sendet Sie standardmäßige Windows-Meldungen an den Objekten, die Handler für diese enthalten.  
   
- Beispielsweise müssen Ihre Anwendung möglicherweise direkte Maus zeichnen in der Ansicht zu implementieren. Das Scribble-Beispiel veranschaulicht die Behandlung der `WM_LBUTTONDOWN`, `WM_MOUSEMOVE`, und `WM_LBUTTONUP` Nachrichten bzw. um zu beginnen, fortsetzen und Beenden des Zeichnens des Liniensegment. Andererseits, müssen Sie manchmal einen Mausklick in der Ansicht als eine Auswahl zu interpretieren. Der Ansicht `OnLButtonDown` Handlerfunktion würde zu bestimmen, ob der Benutzer auswählen oder wurde zeichnen. Wenn auswählen, würde der Handler bestimmen, ob der auf innerhalb der Grenzen eines Objekts in der Sicht wurde und wenn dies der Fall ist, ändern die Anzeige auf das Objekt als ausgewählt.  
+ Beispielsweise müssen Ihre Anwendung möglicherweise direkte Maus zeichnen in der Ansicht zu implementieren. Das Scribble-Beispiel wird gezeigt, wie die WM_LBUTTONDOWN WM_MOUSEMOVE und WM_LBUTTONUP Nachrichten bzw. zu starten, den Vorgang fortsetzen und Beenden des Zeichnens des Liniensegment behandelt. Andererseits, müssen Sie manchmal einen Mausklick in der Ansicht als eine Auswahl zu interpretieren. Der Ansicht `OnLButtonDown` Handlerfunktion würde zu bestimmen, ob der Benutzer auswählen oder wurde zeichnen. Wenn auswählen, würde der Handler bestimmen, ob der auf innerhalb der Grenzen eines Objekts in der Sicht wurde und wenn dies der Fall ist, ändern die Anzeige auf das Objekt als ausgewählt.  
   
  Die Ansicht möglicherweise auch bestimmte Menübefehlen, z. B. solche aus dem Menü "Bearbeiten" zum Ausschneiden, kopieren, einfügen oder löschen die ausgewählten Daten über die Zwischenablage behandeln. Ein Handler aufrufen würde einige des Elements Zwischenablage-bezogenen Funktionen der Klasse `CWnd` zu oder aus der Zwischenablage in ein ausgewählte Datenelement zu übertragen.  
   

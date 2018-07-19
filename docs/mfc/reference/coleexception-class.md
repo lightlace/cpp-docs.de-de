@@ -1,5 +1,5 @@
 ---
-title: COleException Klasse | Microsoft Docs
+title: COleException-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f554e375e8c0185e8c2b75c81eeae5ee615c51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 731ec7b359995fc8ecbfdeae89595442d8186eeb
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851391"
 ---
 # <a name="coleexception-class"></a>COleException-Klasse
 Stellt eine Ausnahmebedingung dar, die sich auf einen OLE-Vorgang bezieht.  
@@ -52,7 +53,7 @@ class COleException : public CException
 ## <a name="remarks"></a>Hinweise  
  Die `COleException` Klasse enthält einen öffentlichen Datenmember, die den Statuscode, der angibt, der die Ursache der Ausnahme enthält.  
   
- Im Allgemeinen sollten Sie keine erstellen eine `COleException` Objekt direkt; stattdessen rufen Sie [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
+ Im Allgemeinen sollten Sie keine erstellen eine `COleException` Objekt direkt, sondern, rufen Sie [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
   
  Weitere Informationen zu Ausnahmen finden Sie in den Artikeln [Ausnahmebehandlung (MFC)](../../mfc/exception-handling-in-mfc.md) und [Ausnahmen: OLE-Ausnahmen](../../mfc/exceptions-ole-exceptions.md).  
   
@@ -67,22 +68,22 @@ class COleException : public CException
  **Header:** afxdisp.h  
   
 ##  <a name="m_sc"></a>  COleException::m_sc  
- Dieses Datenelement enthält den OLE-Statuscode, der die Ursache der Ausnahme angibt.  
+ Dieses Datenelement enthält die OLE-Statuscode, der den Grund für die Ausnahme angibt.  
   
 ```  
 SCODE m_sc;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Wert dieser Variablen wird festgelegt durch [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
+ Der Wert dieser Variablen wird festgelegt, indem [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
   
- Weitere Informationen zu `SCODE`, finden Sie unter [Struktur von COM-Fehlercodes](http://msdn.microsoft.com/library/windows/desktop/ms690088) im Windows SDK.  
+ Weitere Informationen zu SCODE, finden Sie unter [Struktur von COM-Fehlercodes](http://msdn.microsoft.com/library/windows/desktop/ms690088) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
   
 ##  <a name="process"></a>  COleException::Process  
- Rufen Sie die **Prozess** Memberfunktion übersetzt eine abgefangene Ausnahme in ein OLE-Statuscode.  
+ Rufen Sie die **Prozess** Memberfunktion versucht, eine abgefangene Ausnahme in eine OLE-Status-Code zu übersetzen.  
   
 ```  
 static SCODE PASCAL Process(const CException* pAnyException);
@@ -90,7 +91,7 @@ static SCODE PASCAL Process(const CException* pAnyException);
   
 ### <a name="parameters"></a>Parameter  
  *pAnyException*  
- Ein Zeiger auf eine abgefangene Ausnahme.  
+ Zeiger auf eine abgefangene Ausnahme.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein OLE-Statuscode.  
@@ -100,7 +101,7 @@ static SCODE PASCAL Process(const CException* pAnyException);
 > [!NOTE]
 >  Diese Funktion ist **statische**.  
   
- Weitere Informationen zu `SCODE`, finden Sie unter [Struktur von COM-Fehlercodes](http://msdn.microsoft.com/library/windows/desktop/ms690088) im Windows SDK.  
+ Weitere Informationen zu SCODE, finden Sie unter [Struktur von COM-Fehlercodes](http://msdn.microsoft.com/library/windows/desktop/ms690088) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [COleDispatchDriver:: CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  

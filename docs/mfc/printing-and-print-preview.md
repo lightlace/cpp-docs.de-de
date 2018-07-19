@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346255"
 ---
 # <a name="printing-and-print-preview"></a>Drucken und Druckvorschau
 MFC unterstützt drucken und Druckvorschau für das Programm Dokumente über die Klasse [CView](../mfc/reference/cview-class.md). Für grundlegende drucken und Druckvorschau, überschreiben Sie einfach Ihrer Ansichtsklasse [OnDraw](../mfc/reference/cview-class.md#ondraw) Memberfunktion, wozu Sie dennoch verwenden müssen. Diese Funktion kann auf die Ansicht auf dem Bildschirm zu einem Drucker-Gerätekontext für einen Drucker, zeichnen, oder für einen Gerätekontext simuliert, die Ihre Drucker auf dem Bildschirm.  

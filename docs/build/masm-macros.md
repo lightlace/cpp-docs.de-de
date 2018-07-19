@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368693"
 ---
 # <a name="masm-macros"></a>MASM-Makros
 Um die Verwendung zu vereinfachen die [unformatierte Pseudooperationen](../build/raw-pseudo-operations.md), es gibt ein Satz von Makros, definiert in ksamd64.inc, bei der Erstellung der übliche Verfahren Prologe und Epiloge verwendet werden kann.  

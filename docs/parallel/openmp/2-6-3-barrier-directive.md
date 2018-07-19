@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689791"
 ---
 # <a name="263-barrier-directive"></a>2.6.3 barrier-Anweisung
 Die **Barriere** Richtlinie synchronisiert alle Threads in einem Team. Wenn festgestellt wird, wartet auf jeder Thread in das Team alle von den anderen diesen Punkt erreicht haben. Die Syntax der **Barriere** Richtlinie lautet wie folgt:  

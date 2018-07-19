@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872405"
 ---
 # <a name="comptroperatoramp-operator"></a>Comptr::&amp; Operator
 Gibt die Schnittstelle frei zugeordnete `ComPtr` -Objekt und ruft dann die Adresse der `ComPtr` Objekt.  

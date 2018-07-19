@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880204"
 ---
 # <a name="interface-attributes"></a>Schnittstellenattribut
 Die folgenden Attribute gelten für die [-Schnittstelle (oder __interface)](../cpp/interface.md) C++-Schlüsselwort.  

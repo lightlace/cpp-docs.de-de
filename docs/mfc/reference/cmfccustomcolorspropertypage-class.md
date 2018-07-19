@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02c2590e4143460a2cd89bb2b7e7e167c92c0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8123db8e4a8dfba94e469881af8fbb2ecb40e2a0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041980"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage-Klasse
 Stellt eine Eigenschaft dar, die benutzerdefinierte Farben in einem Farbendialogfeld auswählen können.  
@@ -90,9 +91,9 @@ void Setup(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `R`|Die roten Komponente RGB-Wertes.|  
-|[in] `G`|Die grünen Komponente RGB-Wertes.|  
-|[in] `B`|Die blaue Komponente RGB-Wertes.|  
+|[in] *R*|Die roten Komponente RGB-Wertes.|  
+|[in] *G*|Die grünen Komponente RGB-Wertes.|  
+|[in] *B*|Die blaue Komponente RGB-Wertes.|  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode aktualisiert die aktuellen RGB- und die zugehörigen HLS (Farbton, Helligkeit und Sättigung) Farbwerte der Eigenschaftenseite. Die [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) Methode ruft diese Methode auf, wenn das Framework die Farbe (Dialogfeld initialisiert), oder der Benutzer die linke Maustaste drückt. Weitere Informationen zu `CMFCColorDialog`, finden Sie unter [CMFCColorDialog Klasse](../../mfc/reference/cmfccolordialog-class.md).  

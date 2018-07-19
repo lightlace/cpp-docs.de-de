@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265823"
 ---
 # <a name="compiler-error-c3812"></a>Compilerfehler C3812
 "Property" muss das erste Token in einer Eigenschaftendeklaration sein.  

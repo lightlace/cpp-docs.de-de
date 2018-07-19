@@ -1,5 +1,5 @@
 ---
-title: Funktionsüberladung | Microsoft Docs
+title: Funktionsüberladung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 1/25/2018
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b7209c890ce3eeadb2db346445802576674bfd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1506870ff0b5bb2aea55874d32f62b1da63c7302
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943315"
 ---
 # <a name="function-overloading"></a>Funktionsüberladung
-C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gültigkeitsbereich zu. Diese heißen *überladen* Funktionen. Überladene Funktionen ermöglichen Ihnen das Bereitstellen anderer Semantiken für eine Funktion in Abhängigkeit von den Typen und Anzahl von Argumenten. 
+C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gültigkeitsbereich zu. Diese heißen *überladen* Funktionen. Überladene Funktionen ermöglichen Ihnen das Bereitstellen anderer Semantiken für eine Funktion in Abhängigkeit von die Art und Anzahl von Argumenten. 
   
- Z. B. eine **Drucken** -Funktion, akzeptiert eine **Std:: String** Argument adäquat sehr unterschiedliche Aufgaben einer, die ein Argument des Typs **doppelte**. Überladen von erspart Ihnen von Namen verwenden, z. B. `print_string` oder `print_double`. Zum Zeitpunkt der Kompilierung wählt der Compiler an, welche Überladung verwendet auf den Typ der Argumente, die von der aufrufenden Funktion übergebene basieren.  Beim Aufrufen **print(42.0)** die **"void" Print (double-d)** -Funktion wird aufgerufen werden. Beim Aufrufen **drucken ("hello World")** die **"void" print(std::string)** Überladung aufgerufen wird.
+ Z. B. eine `print` -Funktion, akzeptiert eine `std::string` Argument möglicherweise sehr unterschiedliche Aufgaben als eines, das ein des Typs Argument durchführen **doppelte**. Überladen von erspart Ihnen, Namen zu verwenden, z. B. `print_string` oder `print_double`. Zum Zeitpunkt der Kompilierung wählt der Compiler an, welche Überladung verwendet abhängig von den Typ der Argumente, die durch den Aufrufer übergeben.  Wenn Sie aufrufen `print(42.0)` die `void print(double d)` -Funktion wird aufgerufen werden. Wenn Sie aufrufen `print("hello world")` die `void print(std::string)` Überladung aufgerufen werden.
 
-Sie können Memberfunktionen und nicht-Memberfunktionen überladen. Die folgende Tabelle zeigt, welche Teile einer Funktionsdeklaration von C++ verwendet werden, um zwischen Gruppen von Funktionen mit dem gleichen Namen und dem gleichen Gültigkeitsbereich zu differenzieren.  
+Sie können sowohl Memberfunktionen und nicht-Memberfunktionen überladen. Die folgende Tabelle zeigt, welche Teile einer Funktionsdeklaration von C++ verwendet werden, um zwischen Gruppen von Funktionen mit dem gleichen Namen und dem gleichen Gültigkeitsbereich zu differenzieren.  
   
 ### <a name="overloading-considerations"></a>Überlegungen zur Überladung  
   
@@ -37,15 +38,15 @@ Sie können Memberfunktionen und nicht-Memberfunktionen überladen. Die folgende
 |Anzahl der Argumente|Ja|  
 |Typ der Argumente|Ja|  
 |Vorhandensein oder Abwesenheit von Auslassungszeichen|Ja|  
-|Verwendung von `typedef`-Namen|Nein|  
+|Verwenden von **Typedef** Namen|Nein|  
 |Nicht angegebene Arraygrenzen|Nein|  
-|**const** oder `volatile`|Ja, wenn auf die gesamte Funktion angewendet|
+|**const** oder **volatile**|Ja, wenn auf den gesamten Funktion angewendet|
 |[ref-qualifier](#ref-qualifier)|Ja|  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht, wie das Überladen verwendet werden kann.  
   
-```  
+```cpp 
 // function_overloading.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -146,17 +147,17 @@ int print(double dvalue, int prec)
   
  Berücksichtigen Sie die folgenden Deklarationen (Funktionen sind zur Identifikation der folgenden Erläuterung als `Variant 1`, `Variant 2` und `Variant 3` gekennzeichnet):  
   
-```  
+```cpp 
 Fraction &Add( Fraction &f, long l );       // Variant 1  
 Fraction &Add( long l, Fraction &f );       // Variant 2  
 Fraction &Add( Fraction &f, Fraction &f );  // Variant 3  
   
 Fraction F1, F2;  
-```  
+```
   
  Betrachten Sie folgende Anweisung:  
   
-```  
+```cpp 
 F1 = Add( F2, 23 );  
 ```  
   
@@ -164,14 +165,14 @@ F1 = Add( F2, 23 );
   
 |Satz 1: Kandidatenfunktionen, deren erstes Argument vom Typ "fraction" ist|Satz 2: Kandidatenfunktionen, deren zweites Argument in den Typ "int" konvertiert werden kann|  
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
-|Variant 1|Variant 1 (`int` kann in `long` mithilfe einer Standardkonvertierung konvertiert werden)|  
+|Variant 1|Variant 1 (**Int** konvertiert werden kann, um **lange** mithilfe einer standardkonvertierung)|  
 |Variant 3||  
   
  Funktionen in Satz 2 sind Funktionen, für die es implizite Konvertierungen vom tatsächlichen Parametertyp in den formalen Parametertyp gibt. Unter diesen Funktionen gibt es eine Funktion mit den geringsten "Kosten" für die Konvertierung des tatsächlichen Parametertyps in den formalen Parametertyp.  
   
  Die Schnittmenge dieser beiden Sätze ist "Variant 1". Ein Beispiel für einen mehrdeutigen Funktionsaufruf ist:  
   
-```  
+```cpp 
 F1 = Add( 3, 6 );  
 ```  
   
@@ -179,11 +180,11 @@ F1 = Add( 3, 6 );
   
 |Satz 1: Kandidatenfunktionen, deren erstes Argument vom Typ „int“ ist|Satz 2: Kandidatenfunktionen, deren zweites Argument vom Typ „int“ ist|  
 |---------------------------------------------------------------------|----------------------------------------------------------------------|  
-|Variant 2 (`int` kann in `long` mithilfe einer Standardkonvertierung konvertiert werden)|Variant 1 (`int` kann in `long` mithilfe einer Standardkonvertierung konvertiert werden)|  
+|Variant 2 (**Int** konvertiert werden kann, um **lange** mithilfe einer standardkonvertierung)|Variant 1 (**Int** konvertiert werden kann, um **lange** mithilfe einer standardkonvertierung)|  
   
  Beachten Sie, dass die Schnittmenge zwischen diesen beiden Sätzen leer ist. Aus diesem Grund generiert der Compiler eine Fehlermeldung.  
   
- Für die argumentübereinstimmung wird eine Funktion mit *n* Standardargumente so behandelt, als *n*+ 1 unterschiedliche Funktionen, jeweils mit einer anderen Anzahl von Argumenten.  
+ Für die argumentübereinstimmung wird eine Funktion mit *n* Standardargumente behandelt, als *n*+ 1 unterschiedliche Funktionen, jeweils eine unterschiedliche Anzahl von Argumenten.  
   
  Die Ellipse (...) dient als Platzhalter; sie stimmt mit jedem tatsächlichen Argument überein. Dies kann zu vielen mehrdeutigen Gruppen führen, wenn Sie die überladene Funktion nicht mit größter Sorgfalt entwerfen.  
   
@@ -193,11 +194,11 @@ F1 = Add( 3, 6 );
 ## <a name="argument-type-differences"></a>Unterschiede bei Argumenttypen  
  Überladene Funktionen unterscheiden zwischen Argumenttypen, die verschiedene Initialisierer erfordern. Daher gelten ein Argument eines angegebenen Typs und ein Verweis auf diesen Typ für den Zweck des Überladens als identisch. Sie gelten als identisch, weil sie die gleichen Initialisierer erfordern. `max( double, double )` wird beispielsweise identisch mit `max( double &, double & )` betrachtet. Das Deklarieren von zwei solcher Funktionen verursacht einen Fehler.  
   
- Aus demselben Grund Funktionsargumente eines Typs, die geändert, indem **const** oder `volatile` sind nicht anders behandelt als der Basistyp für den Zweck des Überladens.  
+ Aus demselben Grund Funktionsargumente eines Typs geändert, indem **const** oder **flüchtige** nicht anders als der Basistyp für den Zweck des Überladens behandelt.  
   
- Allerdings kann die Funktion überladen Mechanismus zwischen verweisen, die durch qualifiziert sind unterscheiden **const** und `volatile` und Verweise auf den Basistyp. Dies ermöglicht Code wie den folgenden:  
+ Allerdings kann die Funktion überladen Mechanismus zwischen verweisen, die von qualifiziert sind unterscheiden **const** und **flüchtige** und Verweise auf den Basistyp. Dies ermöglicht Code wie den folgenden:  
   
-```  
+```cpp 
 // argument_type_differences.cpp  
 // compile with: /EHsc /W3  
 // C4521 expected  
@@ -224,7 +225,7 @@ int main() {
   
 ### <a name="output"></a>Ausgabe  
   
-```  
+```Output  
 Over default constructor  
 Over&  
 Over default constructor  
@@ -233,7 +234,7 @@ Over default constructor
 volatile Over&  
 ```  
   
- Zeiger auf **const** und `volatile` -Objekte gelten auch als Zeiger auf den Basistyp unterscheiden für den Zweck des Überladens.  
+ Zeiger auf **const** und **flüchtige** -Objekte gelten auch als sich von Zeigern auf den Basistyp für den Zweck des Überladens.  
   
 ## <a name="argument-matching-and-conversions"></a>Argumentübereinstimmung und Konvertierungen  
  Wenn der Compiler versucht, die tatsächlichen Argumente mit den Argumenten in Funktionsdeklarationen abzugleichen, kann er Standardkonvertierungen oder benutzerdefinierte Konvertierungen bereitstellen, um den korrekten Typ zu erhalten, wenn keine genaue Übereinstimmung gefunden wird. Die Anwendung von Konvertierungen unterliegt diesen Regeln:  
@@ -242,11 +243,11 @@ volatile Over&
   
 -   Sequenzen von Konvertierungen, die gekürzt werden können, indem Konvertierungen im Zwischenformat entfernt werden, werden nicht berücksichtigt.  
   
- Das Ergebnis der Konvertierungssequenz, falls vorhanden, ist die am besten passende Sequenz. Es gibt mehrere Möglichkeiten, ein Objekt vom Typ konvertieren `int` Eingabe `unsigned long` mithilfe von standardkonvertierungen (beschrieben [Standardkonvertierungen](../cpp/standard-conversions.md)):  
+ Das Ergebnis der Konvertierungssequenz, falls vorhanden, ist die am besten passende Sequenz. Es gibt mehrere Möglichkeiten, um ein Objekt vom Typ konvertieren **Int** eingeben **unsigned long** mithilfe von standardkonvertierungen (beschrieben [Standardkonvertierungen](../cpp/standard-conversions.md)):  
   
--   Konvertieren von `int` in `long` und dann von `long` in `unsigned long`.  
+-   Konvertieren von **Int** zu **lange** und klicken Sie dann **lange** zu **unsigned long**.  
   
--   Konvertieren von `int` in `unsigned long`.  
+-   Konvertieren von **Int** zu **unsigned long**.  
   
  Auch wenn die erste Sequenz das erwünschte Ziel erreicht, ist sie nicht die Sequenz mit der stärksten Übereinstimmung – es gibt eine kürzere Sequenz.  
   
@@ -261,27 +262,27 @@ volatile Over&
 |*Typname* **]**|*Typname\**|  
 |*Typname* **(** *Argumentliste* **)**|**(**  *\*Typname* **) (** *Argumentliste* **)**|  
 |*Typname*|**const** *Typname*|  
-|*Typname*|`volatile` *Typname*|  
+|*Typname*|**flüchtige** *Typname*|  
 |*Typname\**|**const** *Typname\**|  
-|*Typname\**|`volatile` *Typname\**|  
+|*Typname\**|**flüchtige** *Typname\**|  
   
  Die Reihenfolge für Konvertierungen lautet wie folgt:  
   
 1.  Genaue Übereinstimmung. Ein genaue Übereinstimmung zwischen den Typen, mit denen die Funktion aufgerufen wird und den Typen, die im Funktionsprototyp deklariert werden, ist immer die beste Übereinstimmung. Sequenzen von trivialen Konvertierungen werden als exakte Übereinstimmungen klassifiziert. Allerdings sind Sequenzen, die keine dieser Konvertierungen ausführen, besser als Sequenzen, die konvertieren:  
   
-    -   Von Zeiger in Zeiger auf **const** (`type` **\*** auf **const** `type` **\*** ).  
+    -   Von Zeiger in Zeiger auf **const** (`type` **\*** zu **const** `type` **\*** ).  
   
-    -   Von Zeiger in Zeiger auf `volatile` (`type` **\*** auf `volatile` `type` **\***).  
+    -   Von Zeiger in Zeiger auf **flüchtige** (`type` **\*** zu **flüchtige** `type` **\***).  
   
-    -   Von Verweis in Verweis auf **const** (`type` **&** auf **const** `type` **&**).  
+    -   Von Verweis in Verweis auf **const** (`type` **&** zu **const** `type` **&**).  
   
-    -   Von Verweis in Verweis auf `volatile` (`type` **&** auf `volatile` `type` **&**).  
+    -   Von Verweis in Verweis auf **flüchtige** (`type` **&** zu **flüchtige** `type` **&**).  
   
-2.  Übereinstimmung mithilfe von Erweiterungen. Jede beliebige Sequenz nicht als genaue Übereinstimmung, die nur ganzzahlige Erweiterungen, Konvertierungen von enthält klassifiziert **"float"** auf **doppelte**, und triviale Konvertierungen wird als Übereinstimmung mithilfe von Erweiterungen klassifiziert. Obwohl eine Übereinstimmung mit Erweiterungen besser ist als eine Übereinstimmung, die Standardkonvertierungen verwendet, ist sie nicht so gut wie eine genaue Übereinstimmung.  
+2.  Übereinstimmung mithilfe von Erweiterungen. Eine beliebige Sequenz, die nicht als genaue Übereinstimmung, die nur ganzzahlige Erweiterungen, Konvertierungen von enthält klassifiziert **"float"** zu **doppelte**, und triviale Konvertierungen wird als Übereinstimmung mithilfe von Erweiterungen klassifiziert. Obwohl eine Übereinstimmung mit Erweiterungen besser ist als eine Übereinstimmung, die Standardkonvertierungen verwendet, ist sie nicht so gut wie eine genaue Übereinstimmung.  
   
 3.  Übereinstimmung mithilfe von Standardkonvertierungen. Jede beliebige Sequenz, die nicht als genaue Übereinstimmung klassifiziert wird, oder eine Übereinstimmung mithilfe von Erweiterungen, die nur Standardkonvertierungen und triviale Konvertierungen enthält, wird als Übereinstimmung mithilfe von Standardkonvertierungen klassifiziert. In dieser Kategorie gelten die folgenden Regeln:  
   
-    -   Konvertierung von einem Zeiger auf eine abgeleitete Klasse, um einen Zeiger auf eine direkte oder indirekte Basisklasse ist für die Konvertierung zu vorzuziehen **"void" \***  oder **const "void" \*** .  
+    -   Konvertierung von einem Zeiger auf eine abgeleitete Klasse, in einen Zeiger auf eine direkte oder indirekte Basisklasse empfiehlt sich, die zum Konvertieren von **"void" \***  oder **const Void \*** .  
   
     -   Die Konvertierung von einem Zeiger auf eine abgeleitete Klasse in einen Zeiger auf eine Basisklasse erzeugt eine bessere Übereinstimmung, je näher die Basisklasse der direkten Basisklasse ist. Angenommen, die Klassenhierarchie folgt der in der folgenden Abbildung dargestellten Klassenhierarchie.  
   
@@ -296,7 +297,7 @@ Diagramm zur Veranschaulichung bevorzugter Konvertierungen
   
  Die vorhergehende Regel gilt nur für einen bestimmten Ableitungspfad. Betrachten Sie das Diagramm, das in der folgenden Abbildung dargestellt wird.  
   
- ![Mehrere&#45;Vererbung mit bevorzugten Konvertierungen](../cpp/media/vc391t2.gif "vc391T2")  
+ ![Mit mehreren&#45;Vererbung, die bevorzugten Konvertierungen](../cpp/media/vc391t2.gif "vc391T2")  
 Mehrfachvererbungsdiagramm zur Veranschaulichung bevorzugter Konvertierungen  
   
  Die Konvertierung von Typ `C*` in Typ `B*` ist der Konvertierung von Typ `C*` in Typ `A*` vorzuziehen. Der Grund liegt darin, dass sie sich auf dem gleichen Pfad befinden, und `B*` näher liegt. Allerdings ist die Konvertierung von Typ `C*` in Typ `D*` der Konvertierung in Typ `A*` nicht vorzuziehen. Keiner der Typen hat Vorrang gegenüber dem anderen, da die Konvertierungen verschiedenen Pfaden folgen.  
@@ -307,7 +308,7 @@ Mehrfachvererbungsdiagramm zur Veranschaulichung bevorzugter Konvertierungen
   
  Benutzerdefinierte Konvertierungen werden angewendet, wenn keine integrierte Erweiterung oder Konvertierung vorhanden ist. Diese Konvertierungen werden auf der Grundlage des Typs des Arguments ausgewählt, das abgeglichen wird. Betrachten Sie folgenden Code:  
   
-```  
+```cpp 
 // argument_matching1.cpp  
 class UDC  
 {  
@@ -331,22 +332,22 @@ int main()
 }  
 ```  
   
- Die verfügbaren benutzerdefinierten Konvertierungen für die Klasse `UDC` sind vom Typ `int` und Typ **lang**. Deshalb berücksichtigt der Compiler Konvertierungen für den Typ des Objekts, das abgeglichen wird: `UDC`. Eine Konvertierung in `int` ist vorhanden, und sie ist ausgewählt.  
+ Die verfügbaren benutzerdefinierten Konvertierungen für die Klasse `UDC` sind vom Typ **Int** und **lange**. Deshalb berücksichtigt der Compiler Konvertierungen für den Typ des Objekts, das abgeglichen wird: `UDC`. Eine Konvertierung in **Int** vorhanden ist, und diese Option ausgewählt ist.  
   
  Während des Prozesseses zum Zuordnen von Argumenten können Standardkonvertierungen sowohl auf das Argument als auch auf das Ergebnis einer benutzerdefinierten Konvertierung angewendet werden. Daher funktioniert der folgende Code:  
   
-```  
+```cpp 
 void LogToFile( long l );  
 ...  
 UDC udc;  
 LogToFile( udc );  
 ```  
   
- Im vorherigen Beispiel, die benutzerdefinierte Konvertierung **Operator long**, wird aufgerufen, um konvertieren `udc` Eingabe **lang**. Wenn keine benutzerdefinierte Konvertierung in Typ **lange** wurde definiert, die Konvertierung würde wie folgt fortgesetzt: Typ `UDC` würde Typ konvertiert wurden `int` mit der eine benutzerdefinierte Konvertierung. Klicken Sie dann die standardkonvertierung vom Typ `int` Eingabe **lange** würden angewendet wurde, um das Argument in der Deklaration entspricht.  
+ Im vorherigen Beispiel, die eine benutzerdefinierte Konvertierung **Operator long**, wird aufgerufen, um die Konvertierung `udc` eingeben **lange**. Wenn keine benutzerdefinierte Konvertierung in den Typ **lange** war definiert, die Konvertierung würde wie folgt fortgesetzt: Typ `UDC` würde wurden so konvertiert, geben Sie **Int** mit der benutzerdefinierten die Konvertierung. Klicken Sie dann die standardkonvertierung vom Typ **Int** eingeben **lange** würde angewendet wurde, um das Argument in der Deklaration übereinstimmen.  
   
  Wenn für die Übereinstimmung mit einem Argument eine benutzerdefinierte Konvertierung erforderlich ist, werden die Standardkonvertierungen bei der Suche nach der besten Übereinstimmung nicht verwendet. Dies gilt auch dann, wenn mehr als eine Kandidatenfunktion eine benutzerdefinierte Konvertierung erfordert. In so einem Fall werden die Funktionen als gleich betrachtet. Zum Beispiel:  
   
-```  
+```cpp 
 // argument_matching2.cpp  
 // C2668 expected  
 class UDC1  
@@ -370,11 +371,11 @@ int main()
 }  
 ```  
   
- Beide Versionen von `Func` erfordern eine benutzerdefinierte Konvertierung zum Konvertieren des `int`-Typs in das Argument des Klassentyps. Mögliche Konversionen sind:  
+ Beide Versionen der `Func` erfordern eine benutzerdefinierte Konvertierung Typen konvertiert **Int** dem Typargument der Klasse. Mögliche Konversionen sind:  
   
--   Konvertieren vom Typ `int` in den Typ `UDC1` (eine benutzerdefinierte Konvertierung).  
+-   Konvertieren vom Typ **Int** eingeben `UDC1` (benutzerdefinierte Konversion).  
   
--   Konvertieren vom Typ `int` Eingabe **lange**; anschließende Konvertierung in den Typ `UDC2` (in zwei Schritten-Konvertierung).  
+-   Konvertieren vom Typ **Int** eingeben **lange**; anschließende Konvertierung in den Typ `UDC2` (zweistufige-Konvertierung).  
   
  Obwohl es die zweite dieser Konvertierungen eine Standardkonvertierung sowie die benutzerdefinierte Konvertierung erfordert, gelten die zwei Konvertierungen noch immer als gleich.  
   
@@ -382,17 +383,17 @@ int main()
 >  Benutzerdefinierte Konvertierungen gelten als Konvertierung durch Konstruktion oder als Konvertierung durch Initialisierung (Konvertierungsfunktion). Beide Methoden werden als gleich betrachtet, wenn die beste Übereinstimmung berücksichtigt wird.  
   
 ## <a name="argument-matching-and-the-this-pointer"></a>Argumentübereinstimmung und der this-Zeiger  
- Klassenmemberfunktionen werden unterschiedlich behandelt, je nachdem, ob sie als `static` deklariert werden. Da nicht statische Funktionen über ein implizites Argument verfügen, das den `this`-Zeiger bereitstellt, gelten nicht statische Funktionen als mit einem weiterem Argument ausgestattet als statische Funktionen; andernfalls werden sie genauso deklariert.  
+ Klassenmemberfunktionen werden unterschiedlich behandelt, je nachdem, ob sie, als deklariert werden **statische**. Da nicht statische Funktionen über ein implizites Argument verfügen, die bereitstellt der **dies** -Zeiger ist, nicht statische Funktionen als mit einem weiterem Argument als statische Funktionen haben; andernfalls werden sie genauso deklariert.  
   
- Diese nicht statischen Memberfunktionen erfordern, dass der implizite `this`-Zeiger dem Objekttyp entspricht, über den die Funktion aufgerufen wurde, oder für überladene Operatoren, dass das erste Argument dem Objekt entspricht, auf das der Operator angewendet wird. (Weitere Informationen zu überladenen Operatoren finden Sie unter [überladene Operatoren](../cpp/operator-overloading.md).)  
+ Diese nicht statischen Memberfunktionen erfordern, dass der implizite **dies** Zeiger überein, die den Objekttyp, der über die die Funktion aufgerufen wird, oder für überladene Operatoren, sie erfordern, dass das erste Argument das Objekt, für das übereinstimmen der Operator wird angewendet. (Weitere Informationen zu überladenen Operatoren finden Sie unter [überladene Operatoren](../cpp/operator-overloading.md).)  
   
- Im Gegensatz zu anderen Argumenten in überladenen Funktionen werden keine temporären Objekte eingeführt und keine Konvertierungen angestrebt, wenn versucht wird, mit dem `this`-Zeigerargument übereinzustimmen.  
+ Im Gegensatz zu anderen Argumenten in überladenen Funktionen, werden keine temporären Objekte eingeführt und keine Konvertierungen angestrebt, wenn versucht wird, entsprechend der **dies** -Zeigerargument übereinzustimmen.  
   
- Wenn die `->` Memberauswahloperator wird verwendet, um eine Memberfunktion der Klasse zuzugreifen `class_name`, `this` Zeigerargument weist den `class_name * const`. Wenn die Member, als deklariert werden `const` oder `volatile`, sind die Typen `const class_name * const` und `volatile class_name * const`zugeordnet.  
+ Wenn die `->` Objektmember-auswahloperators greift auf eine Memberfunktion der Klasse `class_name`, **dies** -Zeigerargument eine Art von `class_name * const`. Wenn die Member, als deklariert werden **const** oder **flüchtige**, die Typen sind `const class_name * const` und `volatile class_name * const`bzw.  
   
  Der Memberauswahloperator `.` funktioniert genau auf die gleiche Weise, außer dass ein impliziter `&`-Operator (address-of) dem Objektnamen vorangestellt ist. Im folgenden Beispiel wird gezeigt, wie dies funktioniert:  
   
-```  
+```cpp 
 // Expression encountered in code  
 obj.name  
   
@@ -402,8 +403,8 @@ obj.name
   
  Der linke Operand der Operatoren `->*` und `.*` (Zeiger auf Member) wird hinsichtlich der Argumentübereinstimmung genauso wie der `.`-Operator und der `->`-Operator (Memberauswahl) behandelt.  
 
-## <a name="ref-qualifiers"></a> REF-Qualifizierer auf Memberfunktionen  
-REF-Qualifizierer stellen das Überladen auf Grundlage, ob das Objekt, zeigt einer Memberfunktion `this` Rvalue oder Lvalue ist.  Diese Funktion kann verwendet werden, vermeiden Sie unnötige Kopiervorgänge in Szenarien, in denen gewählte nicht, die Zeiger auf die Daten zugegriffen. Nehmen wir beispielsweise an Klasse **C** einige Daten in seinem Konstruktor initialisiert, und gibt eine Kopie der Daten in der Memberfunktion **get_data()**. Wenn ein Objekt des Typs **C** ist ein Rvalue-Wert, der zerstört werden, und klicken Sie dann wählt der Compiler die **get_data() & &** überladen, wodurch die Daten verschoben werden, anstatt Sie zu kopieren. 
+## <a name="ref-qualifiers"></a> REF-Qualifizierer für Memberfunktionen  
+REF-Qualifizierer können sie eine Memberfunktion gibt an, ob das Objekt, zeigt auf der Grundlage überladen **dies** ist ein Rvalue-Wert oder einen l-Wert.  Dieses Feature kann verwendet werden, zu vermeiden unnötiger Kopiervorgänge in Szenarien, in denen Sie wählen nicht Zeiger auf die Daten zugegriffen. Nehmen wir beispielsweise an die Klasse `C` einige Daten in seinem Konstruktor initialisiert und gibt eine Kopie der Daten in Memberfunktion `get_data()`. Wenn ein Objekt des Typs `C` ist ein Rvalue-Wert, der gelöscht werden soll, der Compiler wählen, wird die `get_data() &&` überladen, wodurch die Daten verschoben werden, anstatt Sie zu kopieren. 
 
 ```cpp
 #include <iostream>
@@ -450,15 +451,15 @@ int main()
   
      **Microsoft-spezifisch**  
   
- Sie können überladen **new-Operator** einzig auf basis des Rückgabetyp – für Speichermodelle dem Speichermodell Modifizierer angegeben.  
+ Sie können überladen **new-Operator** ausschließlich auf Grundlage der Rückgabetyp – insbesondere auf der Grundlage der angegebenen Modifizierers.  
   
 **Ende Microsoft-spezifisch**  
   
 -   Memberfunktionen können nicht allein auf der Grundlage, dass eine statisch und die andere nicht statisch ist, überladen werden.  
   
--   `typedef`-Deklarationen definieren keine neue Typen. Sie führen Synonyme für vorhandene Typen ein. Sie wirken sich nicht auf den Mechanismus zum Überladen aus. Betrachten Sie folgenden Code:  
+-   **TypeDef** -Deklarationen definieren keine neue Typen; sie führen Synonyme für vorhandene Typen. Sie wirken sich nicht auf den Mechanismus zum Überladen aus. Betrachten Sie folgenden Code:  
   
-    ```  
+    ```cpp 
     typedef char * PSTR;  
   
     void Print( char *szToPrint );  
@@ -471,14 +472,14 @@ int main()
   
 -   Die Typen "Array von" und "Zeiger auf" gelten als identisch, damit zwischen überladenen Funktionen unterschieden werden kann. Dies gilt nur für eindimensionale Arrays. Daher verursachen die folgenden überladenen Funktionen einen Konflikt und generieren eine Fehlermeldung:  
   
-    ```  
+    ```cpp 
     void Print( char *szToPrint );  
     void Print( char szToPrint[] );  
     ```  
   
      Für mehrdimensionale Arrays gelten die zweite und alle nachfolgenden Dimensionen als Teil des Typs. Deshalb werden sie beim Unterscheiden zwischen überladenen Funktionen verwendet:  
   
-    ```  
+    ```cpp 
     void Print( char szToPrint[] );  
     void Print( char szToPrint[][7] );  
     void Print( char szToPrint[][9][42] );  
@@ -488,13 +489,13 @@ int main()
   
  Zwei beliebige Funktionsdeklarationen des gleichen Namens im gleichen Bereich können auf die gleiche Funktion oder zwei einzelne Funktionen, die überladen werden, verweisen. Wenn die Argumentlisten der Deklarationen Argumente äquivalenter Typen enthalten (wie im vorherigen Abschnitt beschrieben), beziehen sich die Funktionsdeklarationen auf die gleiche Funktion. Andernfalls beziehen sie sich auf zwei separate Funktionen, die mithilfe des Überladens ausgewählt werden.  
   
- Der Klassenbereich wird strikt beachtet. Deshalb befindet sich eine Funktion, die in einer Basisklasse deklariert wurde, nicht im selben Bereich wie eine Funktion, die in einer abgeleiteten Klasse deklariert wurde. Wenn eine Funktion in einer abgeleiteten Klasse, mit dem gleichen Namen wie eine virtuelle Funktion in der Basisklasse abgeleitete Klassenfunktion deklariert wird *überschreibt* die Basisklassenfunktion. Weitere Informationen finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md).
+ Der Klassenbereich wird strikt beachtet. Deshalb befindet sich eine Funktion, die in einer Basisklasse deklariert wurde, nicht im selben Bereich wie eine Funktion, die in einer abgeleiteten Klasse deklariert wurde. Wenn eine Funktion in einer abgeleiteten Klasse, mit dem gleichen Namen wie eine virtuelle Funktion in der Basisklasse, die abgeleitete Klassenfunktion deklariert wird *überschreibt* die Funktion der Basisklasse. Weitere Informationen finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md).
 
 Wenn die Funktion der Basisklasse ist nicht als "virtual" deklariert, und klicken Sie dann die Funktion der abgeleiteten Klasse gilt als *ausblenden* es. Sowohl überschreiben und Ausblenden von unterscheiden sich von überladen.  
   
  Der Blockbereich wird strikt beachtet. Deshalb befindet sich eine Funktion, die im Dateibereich deklariert ist, nicht im selben Bereich wie eine lokal deklarierte Funktion. Wenn eine lokal deklarierte Funktion den gleichen Namen wie eine Funktion besitzt, die im Dateibereich deklariert wird, blendet die lokal deklarierte Funktion die Funktion im Dateibereich aus, und es erfolgt keine Überladung. Zum Beispiel:  
   
-```  
+```cpp 
 // declaration_matching1.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -520,7 +521,7 @@ int main()
 }  
 ```  
   
- Der vorhergehende Code zeigt zwei Definitionen der Funktion `func`. Die Definition, die ein Argument vom Typ `char *` akzeptiert, ist gegenüber `main` aufgrund der `extern`-Anweisung lokal vorhanden. Daher wird die Definition, die ein Argument vom Typ `int` akzeptiert, ausgeblendet, und der erste Aufruf von `func` ist fehlerhaft.  
+ Der vorhergehende Code zeigt zwei Definitionen der Funktion `func`. Die Definition, die ein des Typs Argument `char *` lediglich auf `main` aufgrund der **"extern"** Anweisung. Daher wird die Definition, die ein Argument des Typs akzeptiert **Int** ausgeblendet, und der erste Aufruf von `func` ist fehlerhaft.  
   
  Für überladene Memberfunktionen können verschiedenen Versionen der Funktion unterschiedliche Zugriffsrechte zugewiesen werden. Sie werden weiterhin als im Gültigkeitsbereich der einschließenden Klasse betrachtet und sind somit überladene Funktionen. Betrachten Sie den folgenden Code, in dem die Memberfunktion `Deposit` überladen wird. Eine Version ist öffentlich, die andere privat.  
   
@@ -528,7 +529,7 @@ int main()
   
  Beachten Sie, dass der Aufruf von `Deposit` in `Account::Deposit` die private Memberfunktion aufruft. Dieser Aufruf ist korrekt, da `Account::Deposit` eine Memberfunktion ist und daher Zugriff auf private Member der Klasse hat.  
   
-```  
+```cpp 
 // declaration_matching2.cpp  
 class Account  
 {  

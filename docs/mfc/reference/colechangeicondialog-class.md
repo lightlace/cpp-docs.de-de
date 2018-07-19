@@ -1,5 +1,5 @@
 ---
-title: COleChangeIconDialog Klasse | Microsoft Docs
+title: COleChangeIconDialog-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40907720965647e076c6b516f1c2de9f1d3f9edb
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850565"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog-Klasse
 Wird für das OLE-Dialogfeld "Symbol ändern" verwendet.  
@@ -54,8 +55,8 @@ class COleChangeIconDialog : public COleDialog
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[COleChangeIconDialog::DoChangeIcon](#dochangeicon)|Führt die Änderung, die Sie im Dialogfeld angegeben.|  
-|[COleChangeIconDialog::DoModal](#domodal)|Zeigt das Dialogfeld OLE 2 "Symbol ändern".|  
-|[COleChangeIconDialog::GetIconicMetafile](#geticonicmetafile)|Ruft ein Handle für die Metadatei Elementsymbol Form dieses Elements zugeordnet.|  
+|[COleChangeIconDialog::DoModal](#domodal)|Zeigt das Dialogfeld OLE 2 Symbol ändern.|  
+|[COleChangeIconDialog::GetIconicMetafile](#geticonicmetafile)|Ruft ein Handle der Metadatei zugeordnete Symbol Form dieses Elements ab.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -64,9 +65,9 @@ class COleChangeIconDialog : public COleDialog
 |[COleChangeIconDialog::m_ci](#m_ci)|Eine Struktur, die das Verhalten des Dialogfelds steuert.|  
   
 ## <a name="remarks"></a>Hinweise  
- Erstellen Sie ein Objekt der Klasse `COleChangeIconDialog` Wenn Sie das Dialogfeld aufgerufen werden soll. Nach einem `COleChangeIconDialog` -Objekts können Sie mithilfe der [M_ci](#m_ci) Struktur initialisiert werden, die Werte oder Zustände von Steuerelementen im Dialogfeld. Die `m_ci` Struktur ist vom Typ **OLEUICHANGEICON**. Weitere Informationen zur Verwendung dieser Dialogfeldklasse finden Sie unter der [DoModal](#domodal) Memberfunktion.  
+ Erstellen Sie ein Objekt der Klasse `COleChangeIconDialog` Wenn das Dialogfeld aufgerufen werden soll. Nach einer `COleChangeIconDialog` -Objekts wird, können Sie mit der [M_ci](#m_ci) Struktur zum Initialisieren der Werte oder Zustände von Steuerelementen im Dialogfeld. Die `m_ci` Struktur des Typs OLEUICHANGEICON ist. Weitere Informationen zur Verwendung dieser Dialogfeldklasse finden Sie unter den [DoModal](#domodal) Member-Funktion.  
   
- Weitere Informationen finden Sie unter der [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Struktur im Windows SDK.  
   
  Weitere Informationen zu OLE-spezifische Dialogfelder, finden Sie im Artikel [Dialogfelder in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -89,7 +90,7 @@ class COleChangeIconDialog : public COleDialog
  **Header:** afxodlgs.h  
   
 ##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog  
- Diese Funktion nur bildet eine `COleChangeIconDialog` Objekt.  
+ Diese Funktion erstellt nur eine `COleChangeIconDialog` Objekt.  
   
 ```  
 explicit COleChangeIconDialog(
@@ -99,46 +100,46 @@ explicit COleChangeIconDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
+ *pItem*  
  Verweist auf das Element, das konvertiert werden.  
   
- `dwFlags`  
- Erstellung-Flag, das eine beliebige Anzahl von die folgenden Werte enthält kombiniert mit dem bitweisen- or -Operator:  
+ *dwFlags*  
+ Flag der Erstellung, die eine beliebige Anzahl von die folgenden Werte enthält, kombiniert mit dem bitweisen- or -Operator:  
   
-- **CIF_SELECTCURRENT** gibt an, dass das aktuelle Optionsfeld anfänglich ausgewählt wird, wenn das Dialogfeld aufgerufen wird. Dies ist die Standardeinstellung.  
+- CIF_SELECTCURRENT gibt an, die das aktuelle Optionsfeld ausgewählt anfänglich Wenn das Dialogfeld aufgerufen wird. Dies ist die Standardeinstellung.  
   
-- **CIF_SELECTDEFAULT** gibt an, dass das Standard-Optionsfeld anfänglich ausgewählt wird, wenn das Dialogfeld aufgerufen wird.  
+- CIF_SELECTDEFAULT gibt an, die die Standardschaltfläche für das Optionsfeld ausgewählt anfänglich Wenn das Dialogfeld aufgerufen wird.  
   
-- **CIF_SELECTFROMFILE** gibt an, dass das Optionsfeld aus Datei zunächst ausgewählt wird, wenn das Dialogfeld aufgerufen wird.  
+- CIF_SELECTFROMFILE angibt, das Optionsfeld aus der Datei ist ausgewählt, anfänglich Wenn das Dialogfeld aufgerufen wird.  
   
-- **CIF_SHOWHELP** gibt an, dass die Schaltfläche "Hilfe" angezeigt wird, wenn das Dialogfeld aufgerufen wird.  
+- CIF_SHOWHELP gibt an, dass die Schaltfläche "Hilfe" angezeigt wird, wenn das Dialogfeld aufgerufen wird.  
   
-- **CIF_USEICONEXE** gibt an, dass das Symbol aus der ausführbaren Datei im angegebenen extrahiert werden sollen die **SzIconExe** Feld [M_ci](#m_ci) anstelle von abgerufen, von dem Typ. Dies ist hilfreich beim Einbetten von und Verknüpfen von nicht-OLE-Dateien.  
+- CIF_USEICONEXE gibt an, dass das Symbol aus der ausführbaren Datei im angegebenen extrahiert werden sollen die `szIconExe` Feld [M_ci](#m_ci) nicht abgerufen werden soll, aus dem Typ. Dies ist nützlich zum Einbetten oder Verknüpfen von nicht-OLE-Dateien.  
   
- `pParentWnd`  
- Verweist auf das übergeordnete oder Besitzer Fenster-Objekt (des Typs `CWnd`), der das Dialogfeldobjekt angehört. Ist er **NULL**, das übergeordnete Fenster des Dialogfelds auf das Hauptanwendungsfenster festgelegt.  
+ *pParentWnd*  
+ Verweist auf das übergeordnete Element oder Besitzer Window-Objekt (des Typs `CWnd`) zu dem das Dialogfeldobjekt gehört. Wenn es NULL ist, wird das übergeordnete Fenster des Dialogfelds auf das Hauptanwendungsfenster festgelegt werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Um das Dialogfeld anzuzeigen, rufen die [DoModal](#domodal) Funktion.  
   
- Weitere Informationen finden Sie unter der [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Struktur im Windows SDK.  
   
 ##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
- Mit dieser Funktion können Sie das Symbol für das Element, nach dem im Dialogfeld ausgewählte ändern [DoModal](#domodal) gibt **IDOK**.  
+ Mit dieser Funktion können Sie das Symbol für das Element, nachdem Sie im Dialogfeld ausgewählte ändern [DoModal](#domodal) IDOK zurückgibt.  
   
 ```  
 BOOL DoChangeIcon(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
+ *pItem*  
  Verweist auf das Element, dessen Symbol geändert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Änderung erfolgreich ist; andernfalls 0.  
+ Ungleich NULL ist, wenn die Änderung erfolgreich ist; andernfalls 0.  
   
 ##  <a name="domodal"></a>  COleChangeIconDialog::DoModal  
- Rufen Sie diese Funktion, um das Dialogfeld OLE "Symbol ändern" anzuzeigen.  
+ Rufen Sie diese Funktion, um das Dialogfeld "Symbol für das OLE-ändern" anzuzeigen.  
   
 ```  
 virtual INT_PTR DoModal();
@@ -147,38 +148,38 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Rückgabewert  
  Der Abschlussstatus für das Dialogfeld. Einer der folgenden Werte:  
   
-- **IDOK** wird das Dialogfeld erfolgreich angezeigt.  
+- IDOK, wenn das Dialogfeld erfolgreich angezeigt wurde.  
   
-- **IDCANCEL** , wenn der Benutzer das Dialogfeld abgebrochen hat.  
+- IDCANCEL, wenn der Benutzer das Dialogfeld abgebrochen hat.  
   
-- **IDABORT** Wenn ein Fehler aufgetreten. Wenn **IDABORT** wird zurückgegeben, rufen Sie die `COleDialog::GetLastError` Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Auflistung möglicher Fehler finden Sie die [OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) Funktion im Windows SDK.  
+- IDABORT, wenn ein Fehler aufgetreten. Wenn IDABORT zurückgegeben wird, rufen Sie die `COleDialog::GetLastError` Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Liste der möglichen Fehler, finden Sie unter den [OleUIChangeIcon](http://msdn.microsoft.com/library/windows/desktop/ms688307) -Funktion in das Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie die verschiedenen Dialogfeldsteuerelemente zu initialisieren, indem Sie Mitglieder festlegen möchten die [M_ci](#m_ci) -Struktur, ergreifen Sie dies vor dem Aufruf `DoModal`, aber erst, nachdem das Dialogfeldobjekt erstellt wird.  
+ Wenn Sie die verschiedenen Dialogfeldsteuerelemente zu initialisieren, indem Sie Mitglieder festlegen möchten die [M_ci](#m_ci) Struktur, sollten Sie dies tun, vor dem Aufruf `DoModal`, allerdings nachdem das Dialogfeldobjekt erstellt wird.  
   
- Wenn `DoModal` gibt **IDOK**, Sie können andere Memberfunktionen aufrufen zum Abrufen der Einstellungen oder der Informationen, die in das Dialogfeld vom Benutzer eingegeben wurde.  
+ Wenn `DoModal` gibt IDOK, Sie können andere Memberfunktionen aufrufen zum Abrufen der Einstellungen oder die Informationen, die in das Dialogfeld vom Benutzer eingegeben wurde.  
   
 ##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile  
- Mit dieser Funktion können Sie ein Handle für die Metadatei abzurufen, die das Elementsymbol Aspekt des ausgewählten Elements enthält.  
+ Rufen Sie diese Funktion, um ein Handle der Metadatei zu erhalten, den Symbol Aspekt des ausgewählten Elements enthält.  
   
 ```  
 HGLOBAL GetIconicMetafile() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Handle der Metadatei, enthält das Elementsymbol Aspekt, der das Symbol "Neu", wenn das Dialogfeld, durch Auswahl geschlossen wurde **OK**ist, andernfalls das Symbol ", wie sie war, bevor das Dialogfeld angezeigt wurde.  
+ Das Handle der Metadatei, die den iconic Aspekt, der das Symbol "Neu" enthält, wenn das Dialogfeld, dazu geschlossen wurde **OK**ist, andernfalls das Symbol an, wie sie war, bevor das Dialogfeld angezeigt wurde.  
   
 ##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci  
- Struktur des Typs **OLEUICHANGEICON** zum Steuern des Verhaltens im Dialogfeld "Symbol ändern" verwendet.  
+ Struktur des Typs OLEUICHANGEICON verwendet zur Steuerung des Verhaltens im Dialogfeld "Symbol ändern".  
   
 ```  
 OLEUICHANGEICON m_ci;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Mitglieder dieser Struktur können weder direkt noch über Memberfunktionen geändert werden.  
+ Mitglieder dieser Struktur können entweder direkt oder über Memberfunktionen geändert werden.  
   
- Weitere Informationen finden Sie unter der [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Struktur im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [COleDialog-Klasse](../../mfc/reference/coledialog-class.md)   

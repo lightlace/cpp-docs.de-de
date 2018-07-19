@@ -32,11 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08e2505a77643053c60c4ce1a164dc89cc1e0952
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 554b6a1c405060c975e914340b5e4b312d9b25b7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961554"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr-Klasse
 
@@ -103,13 +104,17 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-`Right` EIN `unique_ptr`.
+*Rechts*  
+ Ein `unique_ptr`.
 
-`Nptr` Ein `rvalue` vom Typ `std::nullptr_t`.
+*Nptr*  
+ Ein `rvalue` vom Typ `std::nullptr_t`.
 
-`Ptr` EIN `pointer`.
+*PTR*  
+ Ein `pointer`.
 
-`Deleter` Ein `deleter` -Funktion, die an gebunden ist eine `unique_ptr`.
+*Deleter*  
+ Eine `deleter`-Funktion, die an `unique_ptr` gebunden ist.
 
 ## <a name="exceptions"></a>Ausnahmen
 
@@ -123,7 +128,7 @@ Verwenden Sie die [make_unique](../standard-library/memory-functions.md#make_uni
 
 `unique_ptr` verwaltet eine Ressource eindeutig. Jedes `unique_ptr`-Objekt speichert einen Zeiger auf das Objekt, das es besitzt, oder speichert einen NULL-Zeiger. Es kann höchstens ein `unique_ptr`-Objekt eine Ressource besitzen. Wird ein `unique_ptr`-Objekt, das eine bestimmte Ressource besitzt, zerstört, wird die Ressource freigegeben. Ein `unique_ptr`-Objekt kann verschoben, aber nicht kopiert werden. Weitere Informationen finden Sie unter [Rvalue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-Die Ressource wird freigegeben, indem ein gespeichertes `deleter`-Objekt vom Typ `Del` aufgerufen wird, dem bekannt ist, wie Ressourcen für ein bestimmtes `unique_ptr`-Objekt zugeordnet werden. Die Standardeinstellung `deleter` `default_delete<T>` wird davon ausgegangen, dass die Ressource auf verweist `ptr` zugeordnet wird `new`, und, die sie freigegeben werden kann, durch den Aufruf `delete _Ptr`. (Eine partielle `unique_ptr<T[]>`-Spezialisierung verwaltet Arrayobjekte, die `new[]` zugeordnet sind, und verfügt über den Standardwert `deleter` `default_delete<T[]>`, der auf den Aufruf von delete[] `ptr` spezialisiert ist.)
+Die Ressource wird freigegeben, indem ein gespeichertes `deleter`-Objekt vom Typ `Del` aufgerufen wird, dem bekannt ist, wie Ressourcen für ein bestimmtes `unique_ptr`-Objekt zugeordnet werden. Der Standardwert `deleter` `default_delete<T>` wird davon ausgegangen, dass die Ressource, zeigt `ptr` zugeordnet wird `new`, und dass sie die freigegeben werden kann, durch Aufrufen `delete _Ptr`. (Eine partielle `unique_ptr<T[]>`-Spezialisierung verwaltet Arrayobjekte, die `new[]` zugeordnet sind, und verfügt über den Standardwert `deleter` `default_delete<T[]>`, der auf den Aufruf von delete[] `ptr` spezialisiert ist.)
 
 Der gespeicherte Zeiger auf eine zugehörige Ressource `stored_ptr` ist vom Typ `pointer`. Er lautet `Del::pointer`, wenn er definiert ist, und `T *`, wenn er nicht definiert ist. Das gespeicherte `deleter`-Objekt `stored_deleter` belegt keinen Speicherplatz im Objekt, wenn `deleter` zustandslos ist. Beachten Sie, dass `Del` ein Verweistyp sein kann.
 
@@ -157,7 +162,7 @@ Der gespeicherte Zeiger auf eine zugehörige Ressource `stored_ptr` ist vom Typ 
 
 |Operator|Beschreibung|
 |-|-|
-|`operator bool`|Der Operator gibt einen Wert eines Typs zurück, der in `bool` konvertiert werden kann. Das Ergebnis der Konvertierung in `bool` ist `true`, wenn `get() != pointer()`, andernfalls `false`.|
+|**operator bool**|Der Operator gibt einen Wert eines Typs, der konvertiert werden kann, zurück **"bool"**. Das Ergebnis der Konvertierung in **"bool"** ist **"true"** beim `get() != pointer()`, andernfalls **"false"**.|
 |`operator->`|Die Memberfunktion gibt `stored_ptr`zurück.|
 |`operator*`|Die Memberfunktion gibt `*stored_ptr`zurück.|
 |[unique_ptr operator=](#unique_ptr_operator_eq)|Weist den Wert eines `unique_ptr` (oder eines `pointer-type`) dem aktuellen `unique_ptr` zu.|
@@ -251,7 +256,7 @@ Der Typ ist ein Synonym für `Del::pointer`, sofern dieser definiert ist; andern
 
 ## <a name="release"></a> unique_ptr::release
 
-Gibt den Besitz des zurückgegebenen gespeicherten Zeigers für den Aufrufer frei und legt den Wert des gespeicherten Zeigers auf `nullptr` fest.
+Gibt den Besitz des zurückgegebenen gespeicherten Zeigers an den Aufrufer frei und legt den Wert des gespeicherten Zeigers auf **"nullptr"**.
 
 ```cpp
 pointer release();
@@ -314,7 +319,7 @@ Deleting Sample(3)
 
 ## <a name="reset"></a> unique_ptr::reset
 
-Übernimmt den Besitz des Zeigerparameters und löscht dann den ursprünglich gespeicherten Zeiger. Wenn der neue Zeiger mit dem ursprünglich gespeicherten Zeiger identisch ist, löscht `reset` den Zeiger und legt den gespeicherten Zeiger auf `nullptr` fest.
+Übernimmt den Besitz des Zeigerparameters und löscht dann den ursprünglich gespeicherten Zeiger. Wenn der neue Zeiger mit dem ursprünglich gespeicherten Zeiger identisch ist `reset` löscht den Zeiger und legt den gespeicherten Zeiger auf **"nullptr"**.
 
 ```cpp
 void reset(pointer ptr = pointer());
@@ -325,13 +330,13 @@ void reset(nullptr_t ptr);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger auf die Ressource, deren Besitz übernommen werden soll.|
+|*ptr*|Ein Zeiger auf die Ressource, deren Besitz übernommen werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 
-Verwenden Sie `reset`, um den gespeicherten [Zeiger](#pointer) im Besitz von `unique_ptr` in `ptr` zu ändern, und löschen Sie dann den ursprünglich gespeicherten Zeiger. Wenn `unique_ptr` nicht leer war, ruft `reset` die Deleter-Funktion, die von [get_deleter](#get_deleter) zurückgegeben wurde, auf dem ursprünglich gespeicherten Zeiger auf.
+Verwendung `reset` so ändern Sie den gespeicherten [Zeiger](#pointer) im Besitz der `unique_ptr` zu *Ptr* und löschen Sie dann den ursprünglichen gespeicherten Zeiger. Wenn `unique_ptr` nicht leer war, ruft `reset` die Deleter-Funktion, die von [get_deleter](#get_deleter) zurückgegeben wurde, auf dem ursprünglich gespeicherten Zeiger auf.
 
-Da `reset` zuerst den neuen Zeiger `ptr` speichert und dann den ursprünglich gespeicherten Zeiger löscht, kann `reset` sofort `ptr` löschen, wenn er mit dem ursprünglich gespeicherten Zeiger identisch ist.
+Da `reset` zuerst speichert den neuen Zeiger *Ptr*, und löscht dann den ursprünglichen gespeicherten Zeiger, es ist möglich, dass `reset` zum sofortigen Löschen der *Ptr* ist er identisch mit der ursprünglichen gespeicherte Zeiger.
 
 ## <a name="swap"></a> unique_ptr::swap
 
@@ -343,7 +348,8 @@ void swap(unique_ptr& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Ein `unique_ptr` zum Tauschen von Zeigern verwendet.
+*right*  
+ Ein `unique_ptr`-Objekt, das zum Tauschen von Zeigern verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -376,15 +382,15 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger auf die Ressource, die einem `unique_ptr.`-Objekt zugewiesen werden soll.|
-|`_Deleter`|Eine `deleter`-Funktion, die einem `unique_ptr`-Objekt zugewiesen werden soll.|
-|`right`|Eine `rvalue reference` auf ein `unique_ptr`-Objekt, aus dem `unique_ptr`-Felder dem neu erstellten `unique_ptr`-Objekt zugewiesen werden.|
+|*ptr*|Ein Zeiger auf die Ressource, die einem `unique_ptr.`-Objekt zugewiesen werden soll.|
+|*_Deleter*|Eine `deleter`-Funktion, die einem `unique_ptr`-Objekt zugewiesen werden soll.|
+|*right*|Eine `rvalue reference` auf ein `unique_ptr`-Objekt, aus dem `unique_ptr`-Felder dem neu erstellten `unique_ptr`-Objekt zugewiesen werden.|
 
 ### <a name="remarks"></a>Hinweise
 
-Die ersten beiden Konstruktoren erstellen ein Objekt, das keine Ressource verwaltet. Der dritte Konstruktor speichert `ptr` in `stored_ptr`. Der vierte Konstruktor speichert `ptr` in `stored_ptr` und `deleter` in `stored_deleter`.
+Die ersten beiden Konstruktoren erstellen ein Objekt, das keine Ressource verwaltet. Der dritte Konstruktor speichert *Ptr* in `stored_ptr`. Der vierte Konstruktor speichert *Ptr* in `stored_ptr` und `deleter` in `stored_deleter`.
 
-Der fünfte Konstruktor speichert `ptr` in `stored_ptr` und verschiebt `deleter` in `stored_deleter`. Der sechste und der siebte Konstruktor speichern `right.release()` in `stored_ptr` und verschieben `right.get_deleter()` in `stored_deleter`.
+Der fünfte Konstruktor speichert *Ptr* in `stored_ptr` und verschiebt `deleter` in `stored_deleter`. Der sechste und der siebte Konstruktor speichern `right.release()` in `stored_ptr` und verschieben `right.get_deleter()` in `stored_deleter`.
 
 ## <a name="dtorunique_ptr"></a> unique_ptr ~unique_ptr
 

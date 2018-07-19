@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Entwurf für die Ausnahmesicherheit | Microsoft Docs'
+title: 'Vorgehensweise: Entwurf für die Ausnahmesicherheit | Microsoft-Dokumentation'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbad81c5014c2aa3bcf10b083fa974615e4669e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3dd7448d50debc54cde075b8a6879af8b1be62c9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940319"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Gewusst wie: Entwurfsrichtlinien für sichere Ausnahmebehandlung
 Einer der Vorteile des Ausnahmemechanismus ist, dass die Ausführung – zusammen mit Daten zur Ausnahme – direkt von der Anweisung, die die Ausnahme auslöst, zur ersten catch-Anweisung springt, die sie behandelt. Der Handler kann sich in der Aufrufliste auf einer beliebig höheren Ebene befinden. Funktionen, die zwischen der try- und der throw-Anweisung aufgerufen werden, müssen nicht über Informationen über die ausgelöste Ausnahme verfügen.  Sie müssen jedoch so gestaltet werden, dass sie an jedem Punkt, an dem eine Ausnahme von unten nach oben verteilt wird, den Gültigkeitsbereich "unerwartet" verlassen können. Dabei dürfen sie keine teilweise erstellten Objekte, Speicherverluste oder Datenstrukturen, die in unbrauchbarem Zustand sind, hinterlassen.  
@@ -27,7 +28,7 @@ Einer der Vorteile des Ausnahmemechanismus ist, dass die Ausführung – zusamme
  Egal wie eine Funktion eine Ausnahme behandelt, sie muss nach den folgenden grundlegenden Regeln entworfen werden, um wirklich "ausnahmesicher" zu sein.  
   
 ### <a name="keep-resource-classes-simple"></a>Halten Sie Ressourcenklassen einfach  
- Wenn Sie eine manuelle Ressourcenverwaltung in Klassen kapseln, verwenden Sie zur Verwaltung jeder Ressource eine Klasse, die keine anderen Aufgaben hat. Andernfalls könnten Verluste verursacht werden. Verwendung [intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md) nach Möglichkeit, wie im folgenden Beispiel gezeigt. Dieses Beispiel ist bewusst künstlich und vereinfacht, um die Unterschiede bei der Verwendung von `shared_ptr` hervorzuheben.  
+ Wenn Sie eine manuelle Ressourcenverwaltung in Klassen kapseln, verwenden Sie zur Verwaltung jeder Ressource eine Klasse, die keine anderen Aufgaben hat. Andernfalls könnten Verluste verursacht werden. Verwendung [intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md) Wenn möglich, wie im folgenden Beispiel gezeigt. Dieses Beispiel ist bewusst künstlich und vereinfacht, um die Unterschiede bei der Verwendung von `shared_ptr` hervorzuheben.  
   
 ```cpp  
 // old-style new/delete version  
@@ -89,10 +90,10 @@ public:
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>Verwalten von Ressourcen mit der RAII-Technik  
- Um ausnahmesicher zu sein, muss eine Funktion sicherstellen, dass die Objekte, die sie mit `malloc` oder `new` zugeordnet hat, zerstört werden. Zudem müssen alle Ressourcen – wie beispielsweise Dateihandles – geschlossen oder freigegeben werden, auch wenn eine Ausnahme ausgelöst wird. Die *Resource Acquisition Is Initialization* (RAII)-Technik bindet die Verwaltung solcher Ressourcen an die Lebensdauer von automatischen Variablen. Wenn eine Funktion den Bereich verlässt, indem sie normal oder aufgrund einer Ausnahme zurückgegeben wird, werden die Destruktoren für alle vollständig konstruierten automatischen Variablen aufgerufen. Ein RAII-Wrapperobjekt wie beispielsweise ein intelligenter Zeiger ruft die entsprechende delete- oder close-Funktion in seinem Destruktor auf. In ausnahmesicherem Code ist es sehr wichtig, den Besitz von jeder Ressource sofort an eine Art von RAII-Objekt zu übergeben. Beachten Sie, dass die `vector`, `string`, `make_shared`, `fstream`, und ähnliche Klassen behandeln Übernahme der Ressource für Sie.  Allerdings `unique_ptr` und traditionelle `shared_ptr` Konstruktionen sind speziell, da Resource Acquisition vom Benutzer anstelle des Objekts ausgeführt wird; daher werden sie als gewertet *Ressource Release ist Zerstörung* sind jedoch fragwürdige RAII.  
+ Um ausnahmesicher zu sein, eine Funktion muss sicherstellen, dass die Objekte, mit der es reserviert wurde `malloc` oder **neue** werden zerstört, und alle Ressourcen wie Dateihandles – geschlossen oder freigegeben wird, auch wenn eine Ausnahme ausgelöst wird. Die *Resource Acquisition Is Initialization* (RAII)-Technik bindet die Verwaltung solcher Ressourcen an die Lebensdauer von automatischen Variablen. Wenn eine Funktion den Bereich verlässt, indem sie normal oder aufgrund einer Ausnahme zurückgegeben wird, werden die Destruktoren für alle vollständig konstruierten automatischen Variablen aufgerufen. Ein RAII-Wrapperobjekt wie beispielsweise ein intelligenter Zeiger ruft die entsprechende delete- oder close-Funktion in seinem Destruktor auf. In ausnahmesicherem Code ist es sehr wichtig, den Besitz von jeder Ressource sofort an eine Art von RAII-Objekt zu übergeben. Beachten Sie, dass die `vector`, `string`, `make_shared`, `fstream`, und ähnliche Klassen behandeln die Ressource für Sie.  Allerdings `unique_ptr` und herkömmliche `shared_ptr` Konstruktionen sind speziell, da die ressourcenbelegung vom Benutzer anstelle des Objekts ausgeführt wird; daher werden sie als gewertet *Ressourcenfreigabe ist die Zerstörung* sind jedoch fragwürdige, als RAII.  
   
 ## <a name="the-three-exception-guarantees"></a>Die drei Ausnahmegarantien  
- In der Regel wird ausnahmesicherheit im Hinblick auf die drei ausnahmegarantien, das eine Funktion bereitstellen kann: der *No-Fail-Garantie*, *starke Garantie*, und die *grundlegende Garantie* .  
+ In der Regel wird ausnahmesicherheit im Hinblick auf die drei ausnahmegarantien, die eine Funktion bereitstellen kann erläutert: das *No-Fail-Garantie*, *starke Garantie*, und die *grundlegende Garantie* .  
   
 ### <a name="no-fail-guarantee"></a>NO-FAIL-Garantie  
  Die NO-FAIL-Garantie (oder "NO-THROW") ist die stärkste Garantie, die eine Funktion bereitstellen kann. Sie gibt an, dass die Funktion keine Ausnahme auslöst oder keine Weitergabe einer Ausnahme zulässt. Sie können jedoch eine solche Garantie nur dann zuverlässig bereitstellen, wenn folgende Voraussetzungen zutreffen: (a) Sie wissen, dass alle von dieser Funktion aufgerufenen Funktionen ebenfalls NO-FAIL sind, oder (b) Sie wissen, dass alle ausgelösten Ausnahmen abgefangen werden, bevor sie diese Funktion erreichen, oder (c) Sie wissen, wie Sie alle Ausnahmen abfangen und ordnungsgemäß behandeln, die möglicherweise diese Funktion erreichen.  

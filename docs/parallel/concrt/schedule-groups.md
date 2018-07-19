@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688790"
 ---
 # <a name="schedule-groups"></a>Planungsgruppen
 Dieses Dokument beschreibt die Rolle von Planungsgruppen in der Concurrency Runtime. Ein *Planungsgruppe* Verfügung oder werden verwandte Aufgaben gruppiert. Jedes Zeitplanungsmodul verfügt über eine oder mehrere Planungsgruppen. Verwenden Sie Planungsgruppen, wenn Sie ein hohes Maß an Lokalität zwischen den Aufgaben benötigen. Dies ist zum Beispiel dann der Fall, wenn es für eine Gruppe verwandter Aufgaben vorteilhaft ist, auf dem gleichen Prozessorknoten ausgeführt zu werden. Im Gegensatz dazu verwenden Sie Planerinstanzen, wenn Ihre Anwendung bestimmte Qualitätsprobleme Anforderungen, z. B. besitzt, wenn die Menge von Verarbeitungsressourcen zu beschränken, die eine Reihe von Tasks zugeordnet werden, sollen. Weitere Informationen zu Planerinstanzen, finden Sie unter [Planerinstanzen](../../parallel/concrt/scheduler-instances.md).  

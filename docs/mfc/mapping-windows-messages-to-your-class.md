@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346268"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Zuordnen von Windows-Meldungen zu einer Klasse
 Wenn Sie das Dialogfeld Windows-Nachrichten zu verarbeiten möchten, überschreiben Sie die entsprechenden Handler-Funktionen. Verwenden Sie hierzu im Eigenschaftenfenster [ordnen Sie die Nachrichten](../mfc/reference/mapping-messages-to-functions.md) der Dialogfeld-Klasse. Schreibt einen Eintrag für die Nachricht-Zuordnung für jede Nachricht, und fügt die Meldungshandler Memberfunktionen der Klasse. Verwenden Sie die Visual C++ Quellcode-Editors zum Schreiben von Code in die Meldungshandler.  

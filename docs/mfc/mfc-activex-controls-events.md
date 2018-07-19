@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348389"
 ---
 # <a name="mfc-activex-controls-events"></a>MFC-ActiveX-Steuerelemente: Ereignisse
 ActiveX-Steuerelemente verwenden Ereignisse, um einen Container zu informieren, den an das Steuerelement dem ein Fehler aufgetreten ist. Typische Beispiele für Ereignisse sind auf das Steuerelement, Daten mithilfe der Tastatur und die Änderungen in den Zustand des Steuerelements klickt. Wenn diese Aktionen auftreten, löst das Steuerelement eine Ereignis, um den Container zu benachrichtigen.  

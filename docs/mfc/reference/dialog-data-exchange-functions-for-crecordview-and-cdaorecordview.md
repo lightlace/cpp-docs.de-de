@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 538acbf4e12c1d18e8d07337c6f428a0a0dc4b1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faa94f14461ed41229d11857125a317b00c27abd
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123031"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Dialogdatenaustausch-Funktionen für CRecordView und CDaoRecordView
 Dieses Thema listet die DDX_Field-Funktionen, die zum Austausch von Daten zwischen einer [CRecordset](../../mfc/reference/crecordset-class.md) und ein [CRecordView](../../mfc/reference/crecordview-class.md) Formular oder ein [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) und ein [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Formular.  
@@ -76,16 +77,16 @@ void AFXAPI DDX_FieldCBIndex(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines Steuerelements in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.  
   
  *index*  
  Ein Verweis auf einen Feldmember für die Daten in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.  
   
- `pRecordset`  
+ *pRecordset*  
  Ein Zeiger auf die [CRecordset](../../mfc/reference/crecordset-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) Objekt mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -119,16 +120,16 @@ void AFXAPI DDX_FieldCBString(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines Steuerelements in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.  
   
  *Wert*  
  Ein Verweis auf einen Feldmember für die Daten in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.  
   
- `pRecordset`  
+ *pRecordset*  
  Ein Zeiger auf die [CRecordset](../../mfc/reference/crecordset-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) Objekt mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -162,16 +163,16 @@ void AFXAPI DDX_FieldCBStringExact(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines Steuerelements in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.  
   
  *Wert*  
  Ein Verweis auf einen Feldmember für die Daten in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.  
   
- `pRecordset`  
+ *pRecordset*  
  Ein Zeiger auf die [CRecordset](../../mfc/reference/crecordset-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) Objekt mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -188,7 +189,7 @@ void AFXAPI DDX_FieldCBStringExact(
   **Header** afxdao.h  
   
 ##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck  
- Die `DDX_FieldCheck` -Funktion verwaltet die Übertragung von `int` Daten zwischen einem Kontrollkästchen-Steuerelement in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem `int` -Datenmember des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekt.  
+ Die `DDX_FieldCheck` -Funktion verwaltet die Übertragung von **Int** Daten zwischen einem Kontrollkästchen-Steuerelement in einem Dialogfeld, einem Formularansichts- oder steuerungsansichtsobjekts und einem **Int** -Datenmember des (Dialogfeld), in der Formularansicht oder Steuerelement View-Objekt.  
   
 ```  
 void AFXAPI DDX_FieldCheck(
@@ -205,16 +206,16 @@ void AFXAPI DDX_FieldCheck(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die Ressourcen-ID, der das Kontrollkästchensteuerelement die Steuerelementeigenschaft zugeordnet werden soll.  
   
  *Wert*  
  Ein Verweis auf eine Membervariable des (Dialogfeld), in der Formularansicht oder steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
- `pRecordset`  
+ *pRecordset*  
  Ein Zeiger auf die [CRecordset](../../mfc/reference/crecordset-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) Objekt mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -226,7 +227,7 @@ void AFXAPI DDX_FieldCheck(
   **Header** afxdao.h  
   
 ##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex  
- Die `DDX_FieldLBIndex` Funktion wird den Index des ausgewählten Elements in einem Listenfeld-Steuerelement in einer Datensatzansicht synchronisiert und ein `int` Felddatenmember eines Recordsets der Datensatzansicht zugeordnet.  
+ Die `DDX_FieldLBIndex` Funktion wird den Index des ausgewählten Elements in einem Listenfeld-Steuerelement in einer Datensatzansicht synchronisiert und ein **Int** Felddatenmember eines Recordsets der Datensatzansicht zugeordnet.  
   
 ```  
 void AFXAPI DDX_FieldLBIndex(
@@ -243,16 +244,16 @@ void AFXAPI DDX_FieldLBIndex(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines Steuerelements in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.  
   
  *index*  
  Ein Verweis auf einen Feldmember für die Daten in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.  
   
- `pRecordset`  
+ *pRecordset*  
  Ein Zeiger auf die [CRecordset](../../mfc/reference/crecordset-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) Objekt mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -286,16 +287,16 @@ void AFXAPI DDX_FieldLBString(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines Steuerelements in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.  
   
  *Wert*  
  Ein Verweis auf einen Feldmember für die Daten in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.  
   
- `pRecordset`  
+ *pRecordset*  
  Ein Zeiger auf die [CRecordset](../../mfc/reference/crecordset-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) Objekt mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -329,16 +330,16 @@ void AFXAPI DDX_FieldLBStringExact(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines Steuerelements in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.  
   
  *Wert*  
  Ein Verweis auf einen Feldmember für die Daten in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.  
   
- `pRecordset`  
+ *pRecordset*  
  Ein Zeiger auf die [CRecordset](../../mfc/reference/crecordset-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) Objekt mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -355,7 +356,7 @@ void AFXAPI DDX_FieldLBStringExact(
   **Header** afxdao.h  
   
 ##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio  
- Die `DDX_FieldRadio` Funktion ordnet eine nullbasierte `int` Membervariable der einer Datensatzansicht Recordset mit den derzeit ausgewählten Optionsfelds in einer Gruppe von Optionsfeldern in der Datensatzansicht angezeigt.  
+ Die `DDX_FieldRadio` Funktion ordnet eine nullbasierte **Int** Membervariable der einer Datensatzansicht Recordset mit den derzeit ausgewählten Optionsfelds in einer Gruppe von Optionsfeldern in der Datensatzansicht angezeigt.  
   
 ```  
 void AFXAPI DDX_FieldRadio(
@@ -372,16 +373,16 @@ void AFXAPI DDX_FieldRadio(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
- Die ID des ersten in einer Gruppe (mit Format **WS_GROUP**) von benachbarten Optionsfeld-Steuerelementen in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.  
+ *nIDC*  
+ Die ID des ersten in einer Gruppe (mit Stil WS_GROUP) von benachbarten Optionsfeld-Steuerelementen in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.  
   
  *Wert*  
  Ein Verweis auf einen Feldmember für die Daten in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.  
   
- `pRecordset`  
+ *pRecordset*  
  Ein Zeiger auf die [CRecordset](../../mfc/reference/crecordset-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) Objekt mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -398,7 +399,7 @@ void AFXAPI DDX_FieldRadio(
   **Header** afxdao.h  
   
 ##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll  
- Die `DDX_FieldScroll` Funktion synchronisiert die Bildlaufposition des ein Bildlaufleisten-Steuerelement in einer Datensatzansicht und ein `int` Felddatenmember der Recordset der Datensatzansicht (oder die ganzzahlige Variable, die Sie auswählen, für die Zuordnung) zugeordnet ist.  
+ Die `DDX_FieldScroll` Funktion synchronisiert die Bildlaufposition des ein Bildlaufleisten-Steuerelement in einer Datensatzansicht und ein **Int** Felddatenmember der Recordset der Datensatzansicht (oder die ganzzahlige Variable, die Sie auswählen, für die Zuordnung) zugeordnet ist .  
   
 ```  
 void AFXAPI DDX_FieldScroll(
@@ -415,16 +416,16 @@ void AFXAPI DDX_FieldScroll(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
- Die ID des ersten in einer Gruppe (mit Format **WS_GROUP**) von benachbarten Optionsfeld-Steuerelementen in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.  
+ *nIDC*  
+ Die ID des ersten in einer Gruppe (mit Stil WS_GROUP) von benachbarten Optionsfeld-Steuerelementen in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.  
   
  *Wert*  
  Ein Verweis auf einen Feldmember für die Daten in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt.  
   
- `pRecordset`  
+ *pRecordset*  
  Ein Zeiger auf die [CRecordset](../../mfc/reference/crecordset-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) Objekt mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -441,7 +442,7 @@ void AFXAPI DDX_FieldScroll(
   **Header** afxdao.h  
 
   ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
-Die `DDX_FieldSlider` Funktion synchronisiert die Thumb-Position des Schieberegler-Steuerelements in einer Datensatzansicht und ein `int` Felddatenmember der Recordset der Datensatzansicht (oder die ganzzahlige Variable, die Sie auswählen, für die Zuordnung) zugeordnet ist.  
+Die `DDX_FieldSlider` Funktion synchronisiert die Thumb-Position des Schieberegler-Steuerelements in einer Datensatzansicht und ein **Int** Felddatenmember der Recordset der Datensatzansicht (oder die ganzzahlige Variable, die Sie auswählen, für die Zuordnung) zugeordnet ist.  
    
 ### <a name="syntax"></a>Syntax  
   ```
@@ -458,16 +459,16 @@ void AFXAPI DDX_FieldSlider(
      CDaoRecordset* pRecordset );  
 ```
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf eine [CDataExchange](cdataexchange-class.md) Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die Ressourcen-ID des Schieberegler-Steuerelements.  
   
  *Wert*  
  Ein Verweis auf den Wert ausgetauscht werden sollen. Dieser Parameter enthält oder wird verwendet, um das Schieberegler-Steuerelement aktuelle Thumb-Position festgelegt.  
   
- `pRecordset`  
+ *pRecordset*  
  Ein Zeiger auf die zugeordnete `CRecordset` oder `CDaoRecordset` Objekt mit dem Daten ausgetauscht werden.  
    
 ### <a name="remarks"></a>Hinweise  
@@ -489,7 +490,7 @@ void AFXAPI DDX_FieldSlider(
  [Makros und globale Variablen](mfc-macros-and-globals.md)   
   
 ##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
- Die `DDX_FieldText` -Funktion verwaltet die Übertragung von `int`, **kurze**, **lange**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **"float"**, **doppelte**, **BOOL**, oder **BYTE** Daten zwischen einem Bearbeitungssteuerelement und den Felddatenmembern eines Recordset-Objekts.  
+ Die `DDX_FieldText` -Funktion verwaltet die Übertragung von **Int**, **kurze**, **lange**, DWORD, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **"float"**, **doppelte**, **BOOL**, oder **BYTE** Daten zwischen einem Bearbeitungssteuerelement und den Felddatenmembern eines Recordset-Objekts.  
   
 ```  
 void AFXAPI DDX_FieldText(
@@ -602,16 +603,16 @@ void AFXAPI DDX_FieldText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDX`  
+ *pDX*  
  Ein Zeiger auf eine [CDataExchange](../../mfc/reference/cdataexchange-class.md) Objekt. Das Framework stellt dieses Objekt bereit, um den Kontext des Datenaustauschs herzustellen, darunter seine Richtung.  
   
- `nIDC`  
+ *nIDC*  
  Die ID eines Steuerelements in der [CRecordView](../../mfc/reference/crecordview-class.md) oder [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) Objekt.  
   
  *Wert*  
  Ein Verweis auf einen Feldmember für die Daten in der zugeordneten `CRecordset` oder `CDaoRecordset` Objekt. Der Datentyp des Werts abhängt, auf dem der überladenen Versionen der `DDX_FieldText` Sie verwenden.  
   
- `pRecordset`  
+ *pRecordset*  
  Ein Zeiger auf die [CRecordset](../../mfc/reference/crecordset-class.md) oder [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) Objekt mit dem Daten ausgetauscht werden. This-Zeiger kann `DDX_FieldText` zu erkennen und Null-Werte festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  

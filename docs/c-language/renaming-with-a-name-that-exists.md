@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386523"
 ---
 # <a name="renaming-with-a-name-that-exists"></a>Umbenennen mit einem bereits vorhandenen Namen
 **ANSI 4.9.4.2** Der Effekt, wenn eine Datei mit dem neuen Namen vor einem Aufruf der **rename**-Funktion bereits vorhanden ist  

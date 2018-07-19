@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383869"
 ---
 # <a name="technical-notes-by-category"></a>Technische Hinweise – nach Kategorien geordnet
 Technische Hinweise sind in folgenden Kategorien unterteilt. Eine numerische Auflistung Technische Hinweise, finden Sie unter [Technische Hinweise – nach Anzahl](../mfc/technical-notes-by-number.md).  

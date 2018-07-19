@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89f82f03a4c6a9faf2ddf3e8c3f2a0b7b3fd1d2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042364"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout-Klasse
 Gibt an, wie Steuerelemente in einem Fenster verschoben und verkleinert oder vergrößert werden, wenn Benutzer die Größe des Fensters ändern.  
@@ -104,16 +105,16 @@ BOOL AddItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hwnd`  
+ *HWND*  
  Das Handle zum hinzuzufügenden Fenster.  
   
- `nID`  
+ *nID*  
  Die ID des hinzuzufügenden untergeordneten Steuerelements.  
   
- `moveSettings`  
+ *moveSettings*  
  Eine Struktur, die beschreibt, wie das Steuerelement verschoben werden soll, wenn sich die Fenstergröße ändert.  
   
- `sizeSettings`  
+ *sizeSettings*  
  Eine Struktur, die beschreibt, wie die Größe des Steuerelements geändert werden soll, wenn sich die Fenstergröße ändert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -140,7 +141,7 @@ BOOL Create(CWnd* pHostWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- pHostWnd  
+ *pHostWnd*  
  Ein Zeiger zum Hostfenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -182,7 +183,7 @@ void GetHostWndRect(CRect& rect,);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rect`  
+ *Rect*  
  Nach Rückgabe der Funktion enthält dieser Parameter das umschließende Rechteck für den Layoutbereich. Dies ist ein out-Parameter; der Eingabewert wird überschrieben.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -195,7 +196,7 @@ BOOL HasItem(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hwnd`  
+ *HWND*  
  Erstellt ein Handle für das Steuerelement-Fenster.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -225,13 +226,13 @@ static BOOL LoadResource(CWnd* pHostWnd,
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pHostWnd`  
+ *pHostWnd*  
  Ein Zeiger zum Hostfenster.  
   
- `lpResource`  
+ *lpResource*  
  Ein Zeiger zum Puffer, der die AFX_DIALOG_LAYOUT-Ressource enthält.  
   
- `dwSize`  
+ *dwSize*  
  Die Puffergröße in Byte.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -247,7 +248,7 @@ static MoveSettings MoveHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nRatio`  
+ *nRatio*  
  Definiert einen Prozentwert, der angibt, wie weit ein untergeordnetes Steuerelement horizontal verschoben wird, wenn der Benutzer die Größe des Hostfensters ändert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -263,10 +264,10 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nXRatio`  
+ *nXRatio*  
  Definiert einen Prozentwert, der angibt, wie weit ein untergeordnetes Steuerelement horizontal verschoben wird, wenn der Benutzer die Größe des Hostfensters ändert.  
   
- `nYRatio`  
+ *nYRatio*  
  Definiert einen Prozentwert, der angibt, wie weit ein untergeordnetes Steuerelement vertikal verschoben wird, wenn der Benutzer die Größe des Hostfensters ändert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -335,7 +336,7 @@ static MoveSettings MoveVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nRatio`  
+ *nRatio*  
  Definiert einen Prozentwert, der angibt, wie weit ein untergeordnetes Steuerelement vertikal verschoben wird, wenn der Benutzer die Größe des Hostfensters ändert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -351,7 +352,7 @@ void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `size`  
+ *size*  
  Die gewünschte Fenstergröße, unterhalb derer das Layout nicht angepasst wird.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -365,7 +366,7 @@ static SizeSettings SizeHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nRatio`  
+ *nRatio*  
  Definiert einen Prozentwert, der angibt, inwieweit die Größe eines untergeordneten Steuerelements horizontal angepasst wird, wenn der Benutzer die Größe des Hostfensters ändert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -381,10 +382,10 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nXRatio`  
+ *nXRatio*  
  Definiert einen Prozentwert, der angibt, inwieweit die Größe eines untergeordneten Steuerelements horizontal angepasst wird, wenn der Benutzer die Größe des Hostfensters ändert.  
   
- `nYRatio`  
+ *nYRatio*  
  Definiert einen Prozentwert, der angibt, inwieweit die Größe eines untergeordneten Steuerelements vertikal angepasst wird, wenn der Benutzer die Größe des Hostfensters ändert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -452,7 +453,7 @@ static SizeSettings SizeVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nRatio`  
+ *nRatio*  
  Definiert einen Prozentwert, der angibt, inwieweit die Größe eines untergeordneten Steuerelements vertikal angepasst wird, wenn der Benutzer die Größe des Hostfensters ändert.  
   
 ### <a name="return-value"></a>Rückgabewert  

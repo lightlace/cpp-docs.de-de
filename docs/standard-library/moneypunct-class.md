@@ -56,15 +56,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28acc1eb2f2ed265d20507d2b47efa657c2d1bb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957508"
 ---
 # <a name="moneypunct-class"></a>moneypunct-Klasse
 
-Die Vorlagenklasse beschreibt ein Objekt, das als Gebietsschemafacet dienen kann, um die Sequenzen vom Typ `CharType` zu beschreiben, die verwendet werden, um ein monetäres Eingabefeld oder ein monetäres Ausgabefeld darzustellen. Wenn der Vorlagenparameter `Intl` `true` ist, werden internationale Konventionen beachtet.
+Die Vorlagenklasse beschreibt ein Objekt, das als gebietsschemafacet zur beschrieben, der Sequenzen vom Typ dienen kann *CharType* verwendet, um ein Monetäres Eingabefeld oder ein Monetäres Ausgabefeld darzustellen. Wenn der Vorlagenparameter *Intl* ist *"true"*, internationale Konventionen beachtet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -75,15 +76,15 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parameter
 
-`CharType` Der Typ, der innerhalb eines Programms zum Codieren von Zeichen verwendet wird.
+*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen verwendet.
 
-`Intl` Ein Kennzeichen, das angibt, ob internationale Konventionen beachtet werden.
+*Intl* ein Flag, das angibt, ob internationale Konventionen beachtet werden soll.
 
 ## <a name="remarks"></a>Hinweise
 
 Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird in **id** ein eindeutiger positiver Wert gespeichert.
 
-Das konstante statische Objekt „intl“ speichert den Wert des Vorlagenparameters **Intl**.
+Das konstante statische Objekt „intl“ speichert den Wert des Vorlagenparameters *Intl*.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -284,7 +285,7 @@ Eine gebietsschemaspezifische Regel, die festlegt, wie Ziffern auf der linken Se
 
 ### <a name="example"></a>Beispiel
 
-Informationen hierzu finden Sie im Beispiel für [grouping](#grouping), bei dem die virtuelle Memberfunktion durch **grouping** aufgerufen wird.
+Siehe das Beispiel für [gruppieren](#grouping), bei dem die virtuelle Memberfunktion, indem aufgerufen wird `grouping`.
 
 ## <a name="do_neg_format"></a> moneypunct::do_neg_format
 
@@ -296,19 +297,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die geschützte virtuelle Memberfunktion gibt eine gebietsschemaspezifische Regel zurück, mit der festgelegt wird, wie für einen negativen Betrag Ausgabefelder für monetäre Werte generiert werden. Alle vier Elemente von **pattern::field** können die folgenden Werte aufweisen:
+Die geschützte virtuelle Memberfunktion gibt eine gebietsschemaspezifische Regel zurück, mit der festgelegt wird, wie für einen negativen Betrag Ausgabefelder für monetäre Werte generiert werden. Jede der vier Elemente von `pattern::field` können die Werte aufweisen:
 
-- **none**, um auf null oder mehr Leerzeichen abzustimmen bzw. nichts zu generieren.
+- `none` auf NULL oder mehr Leerzeichen abzustimmen bzw. nichts zu generieren.
 
-- **sign**, um auf ein positives bzw. negatives Vorzeichen abzustimmen oder um ein positives bzw. negatives Vorzeichen zu generieren.
+- `sign` übereinstimmen oder ein positiven oder negativen Vorzeichen zu generieren.
 
-- **space**, um auf null oder mehr Leerzeichen abzustimmen bzw. um ein Leerzeichen zu generieren.
+- `space` NULL oder mehr Leerzeichen abzustimmen, oder ein Leerzeichen zu generieren.
 
-- **symbol**, um auf ein Währungssymbol abzustimmen bzw. um ein Währungssymbol zu generieren.
+- `symbol` übereinstimmen oder ein Währungssymbol zu generieren.
 
-- **value**, um auf einen monetären Wert abzustimmen bzw. um einen monetären Wert zu generieren.
+- `value` Um abzustimmen bzw. einen monetären Wert zu generieren.
 
-Die Komponenten eines Ausgabefelds für monetäre Werte werden generiert, und die Komponenten eines Eingabefelds für monetäre Werte werden in der Reihenfolge zugeordnet, in der diese Elemente in **pattern::field** angezeigt werden. Die einzelnen Werte **sign**, **symbol**, **value** und **none** bzw. **space** müssen jeweils einmal angezeigt werden. Der Wert **none** darf nicht an erster Stelle angezeigt werden. Der Wert **space** darf weder an erster noch an letzter Stelle angezeigt werden. Wenn **Intl** TRUE ist, lautet die Reihenfolge: **symbol**, **sign**, **none**, **value**.
+Komponenten des Ausgabefelder für monetäre Werte generiert werden und die Komponenten eines Eingabefelds abgeglichen werden, in der Reihenfolge, in dem diese Elemente im werden `pattern::field`. Alle Werte des `sign`, `symbol`, `value`, und entweder `none` oder `space` muss genau einmal angezeigt werden. Der Wert `none` muss nicht zuerst angezeigt. Der Wert **space** darf weder an erster noch an letzter Stelle angezeigt werden. Wenn `Intl` ist "true", die Reihenfolge ist `symbol`, `sign`, `none`, klicken Sie dann `value`.
 
 Die Vorlagenversion von `moneypunct`\< **CharType**, **Intl**> returns `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -530,11 +531,11 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-`_Refs` Integer-Wert verwendet, um den Typ der Verwaltung des Arbeitsspeichers für das Objekt angeben.
+*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:
+Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
 - 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
 

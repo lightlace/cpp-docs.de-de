@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc34a0a176e39a30e6cdb5d4c2cdeeebc94b5b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46e5b0b0c55c5a5dd0a48d2437fc83fa43226f5a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956139"
 ---
 # <a name="enablesharedfromthis-class"></a>enable_shared_from_this-Klasse
 
@@ -45,13 +46,13 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der vom freigegebenen Zeiger gesteuerte Typ.
+*Ty* vom gemeinsamen Zeiger gesteuerte Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Aus `enable_shared_from_this` abgeleitete Objekte können mithilfe der `shared_from_this`-Methoden in Memberfunktionen [shared_ptr](../standard-library/shared-ptr-class.md)-Besitzer der Instanz erstellen, die sich den Besitz mit vorhandenen `shared_ptr`-Besitzern teilen. Wenn Sie jedoch mithilfe von `this` einen neuen `shared_ptr`-Besitzer erstellen, unterscheidet dieser sich von vorhandenen `shared_ptr`-Besitzern. Dies kann zu ungültigen Verweisen oder dazu führen, dass das Objekt mehrmals gelöscht wird.
+Aus `enable_shared_from_this` abgeleitete Objekte können mithilfe der `shared_from_this`-Methoden in Memberfunktionen [shared_ptr](../standard-library/shared-ptr-class.md)-Besitzer der Instanz erstellen, die sich den Besitz mit vorhandenen `shared_ptr`-Besitzern teilen. Andernfalls, wenn Sie ein neues erstellen `shared_ptr` mit **dies**, es unterscheidet sich von vorhandenen `shared_ptr` -Besitzer Dies können zu ungültigen verweisen oder dazu führen, dass das Objekt mehrmals gelöscht werden.
 
-Die Konstruktoren, der Destruktor und der Zuweisungsoperator sind geschützt, um eine versehentliche falsche Verwendung zu verhindern. Der Vorlagenargumenttyp `Ty` muss dem Typ der abgeleiteten Klasse entsprechen.
+Die Konstruktoren, der Destruktor und der Zuweisungsoperator sind geschützt, um eine versehentliche falsche Verwendung zu verhindern. Der Vorlagenargumenttyp *Ty* muss der Typ der abgeleiteten Klasse sein.
 
 Ein Beispiel für die Verwendung finden Sie unter [enable_shared_from_this::shared_from_this](#shared_from_this).
 
@@ -72,7 +73,7 @@ shared_ptr<const T> shared_from_this() const;
 
 ### <a name="remarks"></a>Hinweise
 
-Beim Ableiten von Objekten von der `enable_shared_from_this`-Basisklasse geben die `shared_from_this`-Vorlagenmemberfunktionen ein [shared_ptr Class](../standard-library/shared-ptr-class.md)-Objekt zurück, das sich den Besitz dieser Instanz mit vorhandenen `shared_ptr`-Besitzern teilt. Wenn Sie jedoch aus `this` einen neuen `shared_ptr`-Besitzer erstellen, unterscheidet dieser sich von vorhandenen `shared_ptr`-Besitzern. Dies kann zu ungültigen Verweisen oder dazu führen, dass das Objekt mehrmals gelöscht wird. Dieses Verhalten ist bei einem Aufruf von `shared_from_this` für eine Instanz, die sich noch nicht im Besitz von einem `shared_ptr`-Objekt befindet, nicht definiert.
+Beim Ableiten von Objekten von der `enable_shared_from_this`-Basisklasse geben die `shared_from_this`-Vorlagenmemberfunktionen ein [shared_ptr Class](../standard-library/shared-ptr-class.md)-Objekt zurück, das sich den Besitz dieser Instanz mit vorhandenen `shared_ptr`-Besitzern teilt. Andernfalls, wenn Sie ein neues erstellen `shared_ptr` aus **dies**, es unterscheidet sich von vorhandenen `shared_ptr` -Besitzer Dies können zu ungültigen verweisen oder dazu führen, dass das Objekt mehrmals gelöscht werden. Dieses Verhalten ist bei einem Aufruf von `shared_from_this` für eine Instanz, die sich noch nicht im Besitz von einem `shared_ptr`-Objekt befindet, nicht definiert.
 
 ### <a name="example"></a>Beispiel
 
@@ -110,5 +111,5 @@ sp2->val == 3
 
 ## <a name="see-also"></a>Siehe auch
 
-[enable_shared_from_this::shared_from_this](#shared_from_this)<br/>
+[enable_shared_from_this:: shared_from_this](#shared_from_this)<br/>
 [shared_ptr-Klasse](../standard-library/shared-ptr-class.md)<br/>

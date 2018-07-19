@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244946"
 ---
 # <a name="compiler-error-c2883"></a>Compilerfehler C2883
 'Name': Funktionsdeklaration steht in Konflikt mit 'Bezeichner' durch eine using-Deklaration eingeführt  

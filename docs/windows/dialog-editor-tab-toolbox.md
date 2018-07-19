@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882575"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Registerkarte "Dialog-Editor", "Toolbox"
 Die Registerkarte "Dialog-Editor" wird angezeigt, der [Fenster "Toolbox"](/visualstudio/ide/reference/toolbox) beim Arbeiten im Dialog-Editor. Um dem neuen Dialogfeld Steuerelemente hinzuzufügen, ziehen Sie Steuerelemente aus der Toolbox auf die Sie erstellen (Dialogfeld) (Weitere Informationen finden Sie unter [Hinzufügen eines Steuerelements zu einem Dialogfeld](adding-a-control-to-a-dialog-box.md)). Sie können Sie die Steuerelemente beliebig verschieben oder ihre Größe und Form ändern.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109137"
 ---
 # <a name="general-language-changes-ccli"></a>Allgemeine Sprachänderungen (C++/CLI)
 Eine Anzahl von CLR-Sprachfunktionen, die von Managed Extensions for C++ auf Visual C++ geändert.  

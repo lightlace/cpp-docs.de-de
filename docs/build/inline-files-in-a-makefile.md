@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368121"
 ---
 # <a name="inline-files-in-a-makefile"></a>Inlinedateien in einem Makefile
 Eine Inlinedatei enthält Text, den Sie in der Makefile angeben. Seinen Namen kann als Eingabe (z. B. eine LINK-Befehlsdatei) in Befehlen verwendet werden, oder sie können Befehle an das Betriebssystem übergeben. Die Datei wird auf dem Datenträger erstellt, beim Ausführen eines Befehls, das die Datei erstellt.  

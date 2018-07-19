@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688283"
 ---
 # <a name="242-sections-construct"></a>2.4.2 sections-Konstrukt
 Die **Abschnitte** Richtlinie identifiziert ein noniterative Arbeit sharing-Konstrukt, das einen Satz von Konstrukte angibt, die zwischen Threads in einem Team unterteilt werden. Jeder Abschnitt wird von einem Thread im Team einmal ausgeführt. Die Syntax der **Abschnitte** Richtlinie lautet wie folgt:  

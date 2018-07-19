@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375213"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Entladen einer verzögert geladenen DLL
 Das Hilfsobjekt standardmäßig bereitgestellten verzögerte Laden überprüft, ob die Deskriptoren für verzögertes Laden ein Zeiger und eine Kopie der ursprünglichen Importadresstabelle (IAT) im Feld "Name" aufweisen. Wenn dies der Fall ist, speichert es einen Zeiger in einer Liste auf den Import Verzögerungsdeskriptor. Dadurch wird die Hilfsfunktion, die anhand des Namens zur Unterstützung dieser DLL explizit Entladen der DLL zu suchen.  

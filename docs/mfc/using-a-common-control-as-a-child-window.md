@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382823"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>Verwenden eines Standardsteuerelements als untergeordnetes Fenster
 Alle allgemeinen Windows-Steuerelemente können als untergeordnetes Fenster von einem anderen Fenster verwendet werden. Das folgende Verfahren beschreibt, wie ein allgemeines Steuerelement dynamisch zu erstellen, und klicken Sie dann mit ihm gearbeitet wird.  

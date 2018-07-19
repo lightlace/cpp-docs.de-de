@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881152"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Gewusst wie: Behandeln von Ereignissen mit WRL
 Dieses Dokument zeigt, wie die Windows Runtime C++ Template Library (WRL) zu abonnieren und Behandeln der Ereignisse von einem Windows-Runtime-Objekt.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882926"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Ein- oder Ausblenden des Pixelrasters (Bildbearbeitung für Symbole)
 Für alle Bereiche Grafik-Editor mit einer Vergrößerungsfaktor von 4 oder höher können Sie ein Raster anzeigen, die die einzelnen Pixel in der Abbildung begrenzt.  

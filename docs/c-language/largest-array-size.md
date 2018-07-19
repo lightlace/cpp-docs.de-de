@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384479"
 ---
 # <a name="largest-array-size"></a>Größte Array-Größe
 **ANSI 3.3.3.4, 4.1.1** Der Typ einer ganzen Zahl, die zum Speichern der maximalen Größe eines Arrays erforderlich ist, d.h. die Größe von **size_t**  

@@ -1,5 +1,5 @@
 ---
-title: Arrays (C++) | Microsoft Docs
+title: Arrays (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60c7baaaf20158c29c34aea364e70c0d040a42e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943549"
 ---
 # <a name="arrays-c"></a>Arrays (C++)
 Ein Array ist eine Auflistung von gleichen Objekten. Der einfachste Fall eines Arrays ist ein Vektor, der mit der folgenden Sequenz deklariert werden kann:  
   
 ```  
   
-      decl-specifier identifier [ constant-expression ]  
+decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
 decl-specifier identifier [ constant-expression ]  
@@ -38,7 +39,7 @@ decl-specifier identifier [ constant-expression ]
   
 -   Ein optionaler Speicherklassenbezeichner.  
   
--   Optionale **const** und/oder `volatile` Spezifizierer.  
+-   Optionale **const** und/oder **flüchtige** Spezifizierer.  
   
 -   Der Typname der Elemente des Arrays.  
   
@@ -46,17 +47,17 @@ decl-specifier identifier [ constant-expression ]
   
 -   Der Bezeichner.  
   
--   Ein Konstantenausdruck des ganzzahligen Typs, eingeschlossen in Klammern **[].** Wenn mehrere Dimensionen mit zusätzlichen Klammern deklariert wurden, kann der Konstante Ausdruck für den ersten Satz von Klammern weggelassen werden.  
+-   Ein Konstantenausdruck des ganzzahligen Typs, eingeschlossen in Klammern **[]**. Wenn mehrere Dimensionen mit zusätzlichen Klammern deklariert wurden, kann der Konstantenausdruck im ersten Satz von Klammern weggelassen werden.  
   
 -   Optionale zusätzliche Klammern, die Konstantenausdrücke einschließen.  
   
  3. Ein optionaler Initialisierer.  Finden Sie unter [Initialisierer](../cpp/initializers.md).  
   
- Die Anzahl von Elementen im Array wird durch den Konstantenausdruck angegeben. Das erste Element im Array ist 0. Element und das letzte Element ist das (*n*-1) Element, in dem *n* ist die Anzahl der Elemente, die das Array enthalten kann. Die *Konstantenausdruck* muss ein ganzzahliger Typ sein und muss größer als 0 sein. Ein Array der Größe 0 (null) ist gültig, nur, wenn das Array das letzte Feld in ist eine `struct` oder **Union** und wenn die Microsoft-Erweiterungen (/ Ze) aktiviert sind.  
+ Die Anzahl von Elementen im Array wird durch den Konstantenausdruck angegeben. Das erste Element im Array ist 0. das-Element, und das letzte Element ist das (*n*-1) Element, in denen *n* ist die Anzahl der Elemente, die das Array enthalten kann. Die *Konstantenausdruck* muss ein ganzzahliger Typ sein und muss größer als 0 sein. Ein Array der Größe 0 (null) ist zulässig, nur, wenn das Array das letzte Feld ist ein **Struktur** oder **Union** und wenn die Microsoft-Erweiterungen (/ Ze) aktiviert sind.  
   
  Die folgenden Beispiele zeigen, wie ein Array zur Laufzeit definiert wird:  
   
-```  
+```cpp 
 // arrays.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -77,22 +78,22 @@ int main() {
 }  
 ```  
   
- Arrays sind abgeleitete Typen und können daher von jedem anderen abgeleiteten oder grundlegenden Typ erstellt werden, außer von Funktionen, Verweisen und `void`.  
+ Arrays sind abgeleitete Typen und von anderen abgeleiteten oder grundlegenden Typen mit Ausnahme von Funktionen, verweisen daher konstruiert werden kann und **"void"**.  
   
  Bei Arrays, die von anderen Arrays erstellt werden, handelt es sich um mehrdimensionale Arrays. Diese mehrdimensionalen Arrays werden angegeben, indem nacheinander mehrere Konstantenausdrücke in Klammern gesetzt werden. Ein Beispiel ist diese Deklaration:  
   
-```  
+```cpp 
 int i2[5][7];  
 ```  
   
- Sie gibt ein Array vom Typ `int` an, das konzeptionell in einer zweidimensionalen Matrix von fünf Zeilen und sieben Spalten angeordnet ist, wie in der folgenden Abbildung gezeigt:  
+ Es gibt ein Array vom Typ **Int**, konzeptionell in einer zweidimensionalen Matrix von fünf Zeilen und sieben Spalten angeordnet, wie in der folgenden Abbildung gezeigt:  
   
- ![Konzeptionelles Layout eines mehrere&#45;-dimensionales Array](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![Konzeptionelles Layout eines mehreren&#45;-dimensionales Array](../cpp/media/vc38rc1.gif "vc38RC1")  
 Konzeptionelles Layout eines mehrdimensionalen Arrays  
   
- In Deklarationen mehrdimensionaler Arrays mit einer Initialisiererliste (wie in beschrieben [Initialisierer](../cpp/initializers.md)), der Konstante Ausdruck, der angibt, das die Begrenzung für die erste Dimension kann ausgelassen werden. Zum Beispiel:  
+ In Deklarationen mehrdimensionaler Arrays mit einer Initialisiererliste (wie in beschrieben [Initialisierer](../cpp/initializers.md)), kann der Konstantenausdruck, der angibt, die Grenzen für die erste Dimension ausgelassen werden. Zum Beispiel:  
   
-```  
+```cpp 
 // arrays2.cpp  
 // compile with: /c  
 const int cMarkets = 4;  
@@ -121,7 +122,7 @@ double TransportCosts[][cMarkets] = {
 ## <a name="example"></a>Beispiel  
  Die Möglichkeit des Umgehens von Begrenzungsspezifikationen für die erste Dimension eines mehrdimensionalen Arrays kann auch in Funktionsdeklarationen verwendet werden:  
   
-```  
+```cpp 
 // multidimensional_arrays.cpp  
 // compile with: /EHsc  
 // arguments: 3  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375661"
 ---
 # <a name="specifying-the-pathname"></a>Festlegen des Pfadnamens
 Akzeptiert jede Option Ausgabedateioptionen eine *Pathname* Argument, das einen Speicherort und einen Namen für die Ausgabedatei angeben kann. Das Argument kann einen Laufwerksnamen Verzeichnis und Dateinamen enthalten. Es darf kein Leerzeichen zwischen der Option und dem Argument.  

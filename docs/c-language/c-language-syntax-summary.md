@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381928"
 ---
 # <a name="c-language-syntax-summary"></a>Zusammenfassung der C-Sprachsyntax
 In diesem Abschnitt finden Sie eine vollständige Beschreibung der C-Programmiersprache und der Microsoft-spezifischen C-Sprachfunktionen. Sie können die Syntaxschreibweise in diesem Abschnitt verwenden, um die genaue Syntax für alle Sprachkomponenten zu bestimmen. Die Erklärung für die Syntax finden Sie im jeweiligen Abschnitt dieses Handbuchs, in dem das Thema behandelt wird.  

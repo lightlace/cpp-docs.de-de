@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7a4d6dc6edf122b5d9b5301768dea8389e771e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5879082ddc23630e5ee497d8abf6b65873a2b6d4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931963"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Behandeln der TTN_NEEDTEXT-Benachrichtigung für QuickInfos
 Im Rahmen des [von QuickInfos](../mfc/enabling-tool-tips.md), behandeln Sie das **TTN_NEEDTEXT** Nachricht, indem Sie den folgenden Eintrag meldungszuordnung Ihres Besitzerfensters hinzufügen:  
@@ -47,7 +48,7 @@ Im Rahmen des [von QuickInfos](../mfc/enabling-tool-tips.md), behandeln Sie das 
  Ein Zeiger auf die [NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258) Struktur. Diese Struktur wird ebenfalls erläutert in weiteren [der TOOLTIPTEXT-Struktur](../mfc/tooltiptext-structure.md).  
   
  `pResult`  
- Ein Zeiger auf den Ergebniscode können Sie festlegen, bevor Sie zurückkehren. **TTN_NEEDTEXT** Handler können ignorieren die `pResult` Parameter.  
+ Ein Zeiger auf den Ergebniscode können Sie festlegen, bevor Sie zurückkehren. **TTN_NEEDTEXT** Handler können ignorieren die *pResult* Parameter.  
   
  Als Beispiel für eine Formularansicht Benachrichtigungshandler:  
   

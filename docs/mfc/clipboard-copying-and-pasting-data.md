@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4756da7459f3e584dd02b882f5c790412c095561
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929467"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Zwischenablage: Daten kopieren und einfügen
 Dieses Thema beschreibt die Arbeitsschritte, die mindestens erforderlich, kopieren und Einfügen aus der Zwischenablage in der OLE-Anwendung zu implementieren. Es wird empfohlen, Sie lesen die [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md) Themen, bevor Sie fortfahren.  
@@ -40,16 +41,16 @@ Dieses Thema beschreibt die Arbeitsschritte, die mindestens erforderlich, kopier
   
 3.  Wenn der Benutzer einen Vorgang Ausschneiden anstelle eines Kopiervorgangs ausgewählt haben, löschen Sie die ausgewählten Daten aus Ihrer Anwendung.  
   
- Ein Beispiel für diese Sequenz finden Sie unter der **OnEditCut** und **OnEditCopy** Funktionen in der MFC-OLE-Beispielprogramme [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md). Beachten Sie, dass diese Beispiele verwaltet einen Zeiger auf die Daten aktuell ausgewählten Schritt 1 bereits abgeschlossen ist.  
+ Ein Beispiel für diese Sequenz finden Sie unter der `OnEditCut` und `OnEditCopy` Funktionen in der MFC-OLE-Beispielprogramme [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md). Beachten Sie, dass diese Beispiele verwaltet einen Zeiger auf die Daten aktuell ausgewählten Schritt 1 bereits abgeschlossen ist.  
   
 ##  <a name="_core_pasting_data"></a> Einfügen von Daten  
  Einfügen von Daten ist komplizierter als das Kopieren, da das Format in das Einfügen von Daten in Ihrer Anwendung verwenden auswählen müssen.  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>Daten aus der Zwischenablage einfügen  
   
-1.  Implementieren Sie in Ihrer Ansichtsklasse **OnEditPaste** zum Auswählen der Option "Einfügen" aus dem Menü Bearbeiten-Benutzer zu verarbeiten.  
+1.  Implementieren Sie in Ihrer Ansichtsklasse `OnEditPaste` zum Auswählen der Option "Einfügen" aus dem Menü Bearbeiten-Benutzer zu verarbeiten.  
   
-2.  In der **OnEditPaste** funktionieren, erstellen Sie eine `COleDataObject` Objekt, und rufen die `AttachClipboard` Memberfunktion versucht, dieses Objekt an den Daten in die Zwischenablage zu verknüpfen.  
+2.  In der `OnEditPaste` funktionieren, erstellen Sie eine `COleDataObject` Objekt, und rufen die `AttachClipboard` Memberfunktion versucht, dieses Objekt an den Daten in die Zwischenablage zu verknüpfen.  
   
 3.  Rufen Sie `COleDataObject::IsDataAvailable` zu überprüfen, ob ein bestimmtes Format verfügbar ist.  
   
@@ -57,10 +58,10 @@ Dieses Thema beschreibt die Arbeitsschritte, die mindestens erforderlich, kopier
   
 4.  Führen Sie das Einfügen des Formats.  
   
- Ein Beispiel dafür, wie dies funktioniert, finden Sie in der Implementierung von der **OnEditPaste** Memberfunktionen in der Ansichtsklassen in MFC OLE Beispielprogramme [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md).  
+ Ein Beispiel dafür, wie dies funktioniert, finden Sie in der Implementierung von der `OnEditPaste` Memberfunktionen in der Ansichtsklassen in MFC OLE Beispielprogramme [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md).  
   
 > [!TIP]
->  Der Hauptvorteil der Trennung der Einfügevorgang in eine eigene Funktion ist, dass der gleiche einfügen-Code verwendet werden kann, wenn Daten in der Anwendung während eines Drag & Drop-Vorgangs gelöscht werden. Wie bei OCLIENT und HIERSVR Ihre `OnDrop` Funktionsaufruf kann auch **DoPasteItem**, Einfügevorgänge implementieren geschriebenen Codes wiederverwenden.  
+>  Der Hauptvorteil der Trennung der Einfügevorgang in eine eigene Funktion ist, dass der gleiche einfügen-Code verwendet werden kann, wenn Daten in der Anwendung während eines Drag & Drop-Vorgangs gelöscht werden. Wie bei OCLIENT und HIERSVR Ihre `OnDrop` Funktionsaufruf kann auch `DoPasteItem`, Einfügevorgänge implementieren geschriebenen Codes wiederverwenden.  
   
  Um die Option "Inhalte einfügen" im Menü Bearbeiten behandeln zu können, finden Sie im Thema [Dialogfelder in OLE](../mfc/dialog-boxes-in-ole.md).  
   

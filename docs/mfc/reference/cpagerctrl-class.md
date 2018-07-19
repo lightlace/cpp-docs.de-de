@@ -1,5 +1,5 @@
 ---
-title: CPagerCtrl Klasse | Microsoft Docs
+title: CPagerCtrl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,11 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22aa408fe2933803083adc784c2dbf3a85dd4df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56b00604f57c67ba2555f667e41501451d06fed4
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853822"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl-Klasse
 Die Klasse `CPagerCtrl` kapselt das Windows-Pagersteuerelement, in dem der Benutzer einen Bildlauf durchführen kann, um ein Fenster innerhalb eines anderen Fensters in den sichtbaren Bereich zu verschieben, sofern es größer ist als das umgebende Fenster.  
@@ -85,33 +86,33 @@ class CPagerCtrl : public CWnd
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CPagerCtrl::Create](#create)|Erstellt eine Pagersteuerelement mit der angegebenen Formate und fügt ihn der aktuellen `CPagerCtrl` Objekt.|  
-|[CPagerCtrl::CreateEx](#createex)|Erstellt eine Pagersteuerelement mit dem angegebenen erweiterten Stile und fügt ihn der aktuellen `CPagerCtrl` Objekt.|  
-|[CPagerCtrl::ForwardMouse](#forwardmouse)|Aktiviert oder deaktiviert die Weiterleitung [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) Nachrichten an das Fenster, das in der aktuellen Pagersteuerelement enthalten ist.|  
+|[CPagerCtrl::Create](#create)|Ein Pager-Steuerelement erstellt, mit der angegebenen Formate und hängt es an der aktuellen `CPagerCtrl` Objekt.|  
+|[CPagerCtrl::CreateEx](#createex)|Erstellt ein Pagersteuerelement mit angegebenen Erweiterte Stile und hängt es an der aktuellen `CPagerCtrl` Objekt.|  
+|[CPagerCtrl::ForwardMouse](#forwardmouse)|Aktiviert oder deaktiviert die Weiterleitung [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) Nachrichten an das Fenster, das in der aktuellen Pager-Steuerelement enthalten ist.|  
 |[CPagerCtrl::GetBkColor](#getbkcolor)|Ruft die Hintergrundfarbe des aktuellen Pager-Steuerelements ab.|  
 |[CPagerCtrl::GetBorder](#getborder)|Ruft die Rahmengröße des aktuellen Pager-Steuerelements ab.|  
 |[CPagerCtrl::GetButtonSize](#getbuttonsize)|Ruft die Größe der Schaltfläche des aktuellen Pager-Steuerelements ab.|  
-|[CPagerCtrl::GetButtonState](#getbuttonstate)|Ruft den Zustand der angegebenen Schaltfläche in der aktuellen Pagersteuerelement.|  
+|[CPagerCtrl::GetButtonState](#getbuttonstate)|Ruft den Zustand der angegebenen Schaltfläche in der aktuellen Pager-Steuerelement.|  
 |[CPagerCtrl::GetDropTarget](#getdroptarget)|Ruft die [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) Schnittstelle für das aktuelle Pagersteuerelement.|  
-|[CPagerCtrl::GetScrollPos](#getscrollpos)|Ruft die Bildlaufposition des aktuellen Pager-Steuerelements ab.|  
-|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Gibt an, ob die angegebene Schaltfläche des aktuellen Pager-Steuerelements in `pressed` Zustand.|  
-|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Gibt an, ob die angegebene Schaltfläche des aktuellen Pager-Steuerelements in `grayed` Zustand.|  
-|[CPagerCtrl::IsButtonHot](#isbuttonhot)|Gibt an, ob die angegebene Schaltfläche des aktuellen Pager-Steuerelements in `hot` Zustand.|  
-|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|Gibt an, ob die angegebene Schaltfläche des aktuellen Pager-Steuerelements in `invisible` Zustand.|  
-|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|Gibt an, ob die angegebene Schaltfläche des aktuellen Pager-Steuerelements in `normal` Zustand.|  
-|[CPagerCtrl::RecalcSize](#recalcsize)|Bewirkt, dass der aktuelle Pagersteuerelement, die Größe des Fensters enthaltenen neu zu berechnen.|  
+|[CPagerCtrl::GetScrollPos](#getscrollpos)|Ruft ab, das die Bildlaufposition des die aktuelle Pager-Steuerelement.|  
+|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Gibt an, ob die angegebene Schaltfläche aus, der das aktuelle Pagersteuerelement in `pressed` Zustand.|  
+|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Gibt an, ob die angegebene Schaltfläche aus, der das aktuelle Pagersteuerelement in `grayed` Zustand.|  
+|[CPagerCtrl::IsButtonHot](#isbuttonhot)|Gibt an, ob die angegebene Schaltfläche aus, der das aktuelle Pagersteuerelement in `hot` Zustand.|  
+|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|Gibt an, ob die angegebene Schaltfläche aus, der das aktuelle Pagersteuerelement in `invisible` Zustand.|  
+|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|Gibt an, ob die angegebene Schaltfläche aus, der das aktuelle Pagersteuerelement in `normal` Zustand.|  
+|[CPagerCtrl::RecalcSize](#recalcsize)|Bewirkt, dass das aktuelle Pagersteuerelement, um die Größe des Fensters enthaltenen neu zu berechnen.|  
 |[CPagerCtrl::SetBkColor](#setbkcolor)|Legt die Hintergrundfarbe des aktuellen Pager-Steuerelements fest.|  
-|[CPagerCtrl::SetBorder](#setborder)|Legt die Rahmengröße des aktuellen Pager-Steuerelements.|  
+|[CPagerCtrl::SetBorder](#setborder)|Legt fest, die Rahmengröße des aktuellen Pager-Steuerelements.|  
 |[CPagerCtrl::SetButtonSize](#setbuttonsize)|Legt die Größe der Schaltfläche des aktuellen Pager-Steuerelements fest.|  
 |[CPagerCtrl::SetChild](#setchild)|Legt den im Fenster für das aktuelle Pagersteuerelement fest.|  
-|[CPagerCtrl::SetScrollPos](#setscrollpos)|Legt die Bildlaufposition des aktuellen Pager-Steuerelements fest.|  
+|[CPagerCtrl::SetScrollPos](#setscrollpos)|Legt fest, das die Bildlaufposition des die aktuelle Pager-Steuerelement.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Pagersteuerelement ist ein Fenster, das ein anderes Fenster enthält ist linear und größer als das Fenster, und ermöglicht es Ihnen, Fenster enthaltenen Bildlauf. Das Pagersteuerelement zeigt zwei Bildlaufschaltflächen, die automatisch aufgehoben, wenn Fenster enthaltenen Bildlauf durchgeführt wird, die am weitesten entfernten Block und erneut angezeigt, andernfalls. Sie können einem Pagersteuerelement erstellen, die horizontal oder vertikal ein Bildlauf durchgeführt.  
+ Ein Pager-Steuerelement ist ein Fenster, das ein anderes Fenster enthält ist linear und größer als der enthaltenden Fensters, und ermöglicht es Ihnen, den im Fenster: Bildlauf. Das Pagersteuerelement zeigt zwei Bildlaufleisten-Schaltflächen, die automatisch aufgehoben, wenn es sich bei der im Fenster ein Bildlauf durchgeführt wird, den am weitesten entfernten Umfang, und andernfalls wieder. Sie können in einem Pagersteuerelement erstellen, die entweder horizontal oder vertikal gescrollt.  
   
- Beispielsweise verfügt Ihre Anwendung eine Symbolleiste, die nicht breit genug, um alle Elemente angezeigt wird, können Sie einem Pagersteuerelement die Symbolleiste zuweisen, und Benutzer werden in der Lage, die Symbolleiste, um Links oder rechts den Zugriff auf alle Elemente zu blättern. Microsoft Internet Explorer Version 4.0 (commctrl.dll Version 4.71) führt das Pagersteuerelement.  
+ Beispielsweise verfügt Ihre Anwendung eine Symbolleiste, die nicht breit genug ist, um sämtliche Elemente anzuzeigen, können Sie die Symbolleiste in einem Pagersteuerelement zuweisen, und Benutzer werden in der Lage, scrollen Sie die Symbolleiste, um Links oder rechts, um alle Elemente zugreifen. Microsoft Internet Explorer Version 4.0 (commctrl.dll Version 4.71) führt das Pagersteuerelement.  
   
- Die `CPagerCtrl` abgeleitete Klasse wird von der [CWnd](../../mfc/reference/cwnd-class.md) Klasse. Weitere Informationen und einem Pagersteuerelement veranschaulicht, finden Sie unter [Pager-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb760855).  
+ Die `CPagerCtrl` abgeleitete Klasse wird die [CWnd](../../mfc/reference/cwnd-class.md) Klasse. Weitere Informationen und eine Abbildung in einem Pagersteuerelement, finden Sie unter [Paginierungssteuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb760855).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -133,10 +134,10 @@ CPagerCtrl();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden der [CPagerCtrl::Create](#create) oder [CPagerCtrl::CreateEx](#createex) Methode zum Erstellen von einem Pagersteuerelement, und fügen Sie es auf die `CPagerCtrl` Objekt.  
+ Verwenden der [CPagerCtrl::Create](#create) oder [CPagerCtrl::CreateEx](#createex) Methode zum Erstellen eines Auslagerungssteuerelements und fügen Sie ihn auf die `CPagerCtrl` Objekt.  
   
 ##  <a name="create"></a>  CPagerCtrl::Create  
- Erstellt eine Pagersteuerelement mit der angegebenen Formate und fügt ihn der aktuellen `CPagerCtrl` Objekt.  
+ Ein Pager-Steuerelement erstellt, mit der angegebenen Formate und hängt es an der aktuellen `CPagerCtrl` Objekt.  
   
 ```  
 virtual BOOL Create(
@@ -150,24 +151,24 @@ virtual BOOL Create(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `dwStyle`|Eine bitweise Kombination (OR) [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles) und [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859) auf das Steuerelement angewendet werden soll.|  
-|[in] `rect`|Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements in Clientkoordinaten enthält.|  
-|[in] `pParentWnd`|Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das das übergeordnete Fenster des Steuerelements darstellt. Dieser Parameter darf nicht sein `NULL`.|  
-|[in] `nID`|Die ID des Steuerelements.|  
+|[in] *DwStyle*|Eine bitweise Kombination (OR) von [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles) und [Stile von Listensteuerelementen Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) auf das Steuerelement angewendet werden.|  
+|[in] *Rect*|Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements in Clientkoordinaten enthält.|  
+|[in] *pParentWnd*|Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das übergeordnete Fenster des Steuerelements ist. Dieser Parameter darf nicht NULL sein.|  
+|[in] *nID*|Die ID des Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Um einem Pagersteuerelement zu erstellen, deklarieren einen `CPagerCtrl` Variable, rufen Sie anschließend die [CPagerCtrl::Create](#create) oder [CPagerCtrl::CreateEx](#createex) Methode mit dieser Variable.  
+ Um ein Pager-Steuerelement zu erstellen, deklarieren einen `CPagerCtrl` Variable, rufen Sie dann die [CPagerCtrl::Create](#create) oder [CPagerCtrl::CreateEx](#createex) Methode für diese Variable.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine Pager-Steuerelement, und verwendet dann die [CPagerCtrl::SetChild](#setchild) Methode, um eine sehr lange Button-Steuerelement mit dem Pagersteuerelement zuzuordnen. Anschließend wird die [CPagerCtrl::SetButtonSize](#setbuttonsize) Methode, um die Höhe des Steuerelements Pager auf 20 Pixel festgelegt und die [CPagerCtrl::SetBorder](#setborder) Methode, um die Stärke des Rahmens um 1 Pixel festgelegt.  
+ Das folgende Beispiel erstellt ein Pager-Steuerelement, und verwendet dann die [CPagerCtrl::SetChild](#setchild) Methode, die Pager-Steuerelement ein sehr lange Schaltflächen-Steuerelement zugeordnet werden soll. Anschließend wird die [CPagerCtrl::SetButtonSize](#setbuttonsize) Methode, um die Höhe der Pager-Steuerelement und 20 Pixel, festzulegen und die [CPagerCtrl::SetBorder](#setborder) Methode, um die Stärke des Rahmens um 1-Pixel festgelegt.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
 ##  <a name="createex"></a>  CPagerCtrl::CreateEx  
- Erstellt eine Pagersteuerelement mit dem angegebenen erweiterten Stile und fügt ihn der aktuellen `CPagerCtrl` Objekt.  
+ Erstellt ein Pagersteuerelement mit angegebenen Erweiterte Stile und hängt es an der aktuellen `CPagerCtrl` Objekt.  
   
 ```  
 virtual BOOL CreateEx(
@@ -182,20 +183,20 @@ virtual BOOL CreateEx(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `dwExStyle`|Eine bitweise Kombination der erweiterten Stile, die auf das Steuerelement angewendet werden soll. Weitere Informationen finden Sie unter der `dwExStyle` Parameter von der [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Funktion.|  
-|[in] `dwStyle`|Eine bitweise Kombination (OR) [Fensterstile](../../mfc/reference/styles-used-by-mfc.md#window-styles) und [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859) auf das Steuerelement angewendet werden soll.|  
-|[in] `rect`|Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements in Clientkoordinaten enthält.|  
-|[in] `pParentWnd`|Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das das übergeordnete Fenster des Steuerelements darstellt. Dieser Parameter darf nicht sein `NULL`.|  
-|[in] `nID`|Die ID des Steuerelements.|  
+|[in] *DwExStyle*|Eine bitweise Kombination von erweiterten Stile, die auf das Steuerelement angewendet werden. Weitere Informationen finden Sie unter den *DwExStyle* Parameter, der die [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Funktion.|  
+|[in] *DwStyle*|Eine bitweise Kombination (OR) von [Window-Stile](../../mfc/reference/styles-used-by-mfc.md#window-styles) und [Stile von Listensteuerelementen Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859) auf das Steuerelement angewendet werden.|  
+|[in] *Rect*|Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Position und Größe des Steuerelements in Clientkoordinaten enthält.|  
+|[in] *pParentWnd*|Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das übergeordnete Fenster des Steuerelements ist. Dieser Parameter darf nicht NULL sein.|  
+|[in] *nID*|Die ID des Steuerelements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Um einem Pagersteuerelement zu erstellen, deklarieren einen `CPagerCtrl` Variable, rufen Sie anschließend die [CPagerCtrl::Create](#create) oder [CPagerCtrl::CreateEx](#createex) Methode mit dieser Variable.  
+ Um ein Pager-Steuerelement zu erstellen, deklarieren einen `CPagerCtrl` Variable, rufen Sie dann die [CPagerCtrl::Create](#create) oder [CPagerCtrl::CreateEx](#createex) Methode für diese Variable.  
   
 ##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
- Aktiviert oder deaktiviert die Weiterleitung [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) Nachrichten an das Fenster, das in der aktuellen Pagersteuerelement enthalten ist.  
+ Aktiviert oder deaktiviert die Weiterleitung [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) Nachrichten an das Fenster, das in der aktuellen Pager-Steuerelement enthalten ist.  
   
 ```  
 void ForwardMouse(BOOL bForward);
@@ -205,10 +206,10 @@ void ForwardMouse(BOOL bForward);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `bForward`|`true` zum Weiterleiten von Nachrichten von Maus, oder `false` keine Maus Nachrichten weiterleiten.|  
+|[in] *bForward*|True, um vorwärts mausmeldungen, oder "false", nicht mausmeldungen weiterleiten.|  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
  Ruft die Rahmengröße des aktuellen Pager-Steuerelements ab.  
@@ -221,10 +222,10 @@ int GetBorder() const;
  Die aktuelle Rahmengröße, gemessen in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die [CPagerCtrl::GetBorder](#getborder) Methode, um die Stärke des Rahmens für den des Pagersteuerelements abzurufen.  
+ Im folgenden Beispiel wird die [CPagerCtrl::GetBorder](#getborder) Methode, um die Stärke des Rahmens des Pagersteuerelements abzurufen.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
   
@@ -236,13 +237,13 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die aktuelle Hintergrundfarbe des Steuerelements Pager enthält.  
+ Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die aktuelle Hintergrundfarbe des Pager-Steuerelement enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die [CPagerCtrl::SetBkColor](#setbkcolor) Methode, um die Hintergrundfarbe des Steuerelements Pager sich in Rot, einzurichten und die [CPagerCtrl::GetBkColor](#getbkcolor) Methode, um sicherzustellen, dass die Änderung vorgenommen wurde.  
+ Im folgenden Beispiel wird die [CPagerCtrl::SetBkColor](#setbkcolor) Methode, um die Hintergrundfarbe der Pager-Steuerelement sich in Rot, festzulegen und die [CPagerCtrl::GetBkColor](#getbkcolor) Methode, um sicherzustellen, dass die Änderung vorgenommen wurde.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
@@ -257,12 +258,12 @@ int GetButtonSize() const;
  Die aktuelle Schaltflächengröße, gemessen in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) -Nachricht, die im Windows SDK beschrieben wird.  
   
- Wenn das Pagersteuerelement verfügt der `PGS_HORZ` Stil, die Größe der Schaltfläche bestimmt die Breite der Pagerschaltflächen, und wenn die Pagersteuerelement verfügt der `PGS_VERT` Stil, die Größe der Schaltfläche bestimmt die Höhe der Pagerschaltflächen. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
+ Wenn das Pagersteuerelement styl PGS_HORZ verfügt, wird die Größe der Schaltfläche bestimmt die Breite der Pagerschaltflächen, und wenn das Pagersteuerelement styl PGS_VERT verfügt, wird die Größe der Schaltfläche bestimmt die Höhe der Pagerschaltflächen. Weitere Informationen finden Sie unter [Stile von Listensteuerelementen Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
 ##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState  
- Ruft den Zustand der angegebenen Bildlaufschaltfläche in der aktuellen Pagersteuerelement.  
+ Ruft den Status der die angegebene Bildlaufschaltfläche in das aktuelle Pagersteuerelement ab.  
   
 ```  
 DWORD GetButtonState(int iButton) const;  
@@ -272,13 +273,13 @@ DWORD GetButtonState(int iButton) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButton`|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Gibt die Schaltfläche für die der Status abgerufen wird. Wenn das Format des Steuerelements Pager PGS_HORZ ist, geben Sie PGB_TOPORLEFT für die linke Maustaste und PGB_BOTTOMORRIGHT, für die Rechte Taste. Wenn das Steuerelement Pagerformat PGS_VERT ist, geben Sie PGB_TOPORLEFT für die oberste Schaltfläche und PGB_BOTTOMORRIGHT, für die Schaltfläche unten. Weitere Informationen finden Sie unter [Stile von Listensteuerelementen Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Zustand der Schaltfläche gemäß der `iButton` Parameter. Der Status ist entweder `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, oder `PGF_HOT`. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
+ Der Zustand der Schaltfläche angegeben wird, indem die *iButton* Parameter. Der Zustand ist einem PGF_INVISIBLE PGF_NORMAL, PGF_GRAYED, PGF_DEPRESSED oder PGF_HOT. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
  Ruft die [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) Schnittstelle für das aktuelle Pagersteuerelement.  
@@ -291,30 +292,30 @@ IDropTarget* GetDropTarget() const;
  Ein Zeiger auf die `IDropTarget` Schnittstelle für das aktuelle Pagersteuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
- `IDropTarget` ist eine der Schnittstellen, die Sie, um implementieren Drag & Drop-Operationen in Ihrer Anwendung zu unterstützen.  
+ `IDropTarget` ist eine der Schnittstellen Sie, um implementieren Drag & Drop-Vorgänge in Ihrer Anwendung zu unterstützen.  
   
- Diese Methode sendet die [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) Nachricht, die im Windows SDK beschrieben wird. Der Aufrufer dieser Methode ist verantwortlich für das Aufrufen der `Release` Mitglied der [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) Schnittstelle, wenn die Schnittstelle nicht mehr benötigt wird.  
+ Diese Methode sendet die [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) -Nachricht, die im Windows SDK beschrieben wird. Der Aufrufer dieser Methode ist verantwortlich für das Aufrufen der `Release` Mitglied der [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) -Schnittstelle auf, wenn die Schnittstelle nicht mehr benötigt wird.  
   
 ##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos  
- Ruft die Bildlaufposition des aktuellen Pager-Steuerelements ab.  
+ Ruft ab, das die Bildlaufposition des die aktuelle Pager-Steuerelement.  
   
 ```  
 int GetScrollPos() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die aktuelle Bildlaufposition in Pixel gemessen.  
+ Die aktuelle Bildlaufposition, gemessen in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die [CPagerCtrl::GetScrollPos](#getscrollpos) Methode, um die aktuelle Bildlaufposition des Steuerelements Pager abzurufen. Wenn die Pagersteuerelement nicht bereits auf 0 (null), die am weitesten links stehende Position Bildlauf durchgeführt wird im Beispiel wird die [CPagerCtrl::SetScrollPos](#setscrollpos) Methode, um die Bildlaufposition auf 0 (null) festgelegt.  
+ Im folgenden Beispiel wird die [CPagerCtrl::GetScrollPos](#getscrollpos) Methode zum Abrufen der aktuellen Position des Pager-Steuerelement. Wenn das Pagersteuerelement nicht bereits 0 (null), die am weitesten links stehende Position gescrollt wird im Beispiel wird die [CPagerCtrl::SetScrollPos](#setscrollpos) Methode, um die Bildlaufposition auf 0 (null) festgelegt.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
   
 ##  <a name="isbuttondepressed"></a>  CPagerCtrl::IsButtonDepressed  
- Gibt an, ob der angegebene Bildlaufschaltfläche des aktuellen Pager-Steuerelements im Zustand "gedrückt" ist.  
+ Gibt an, ob die angegebene Bildlaufschaltfläche der aktuellen Pagersteuerelement im gedrückten Zustand ist.  
   
 ```  
 BOOL IsButtonDepressed(int iButton) const;  
@@ -324,16 +325,16 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButton`|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Gibt die Schaltfläche für die der Status abgerufen wird. Wenn das Format des Steuerelements Pager PGS_HORZ ist, geben Sie PGB_TOPORLEFT für die linke Maustaste und PGB_BOTTOMORRIGHT, für die Rechte Taste. Wenn das Steuerelement Pagerformat PGS_VERT ist, geben Sie PGB_TOPORLEFT für die oberste Schaltfläche und PGB_BOTTOMORRIGHT, für die Schaltfläche unten. Weitere Informationen finden Sie unter [Stile von Listensteuerelementen Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn die angegebene Schaltfläche im Zustand "gedrückt" ist. andernfalls `false`.  
+ True, wenn die angegebene Schaltfläche im gedrückten Zustand befindet. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht, die im Windows SDK beschrieben wird. Anschließend wird geprüft, ob der Status, der zurückgegeben wird `PGF_DEPRESSED`. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
+ Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) -Nachricht, die im Windows SDK beschrieben wird. Dann wird getestet, ob der Zustand, der zurückgegeben wird PGF_DEPRESSED ist. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
   
 ##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
- Gibt an, ob der angegebene Bildlaufschaltfläche des aktuellen Pager-Steuerelements in Grau Zustand befindet.  
+ Gibt an, ob die angegebene Bildlaufschaltfläche des aktuellen Steuerelements Pager abgeblendet ist.  
   
 ```  
 BOOL IsButtonGrayed(int iButton) const;  
@@ -343,16 +344,16 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButton`|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Gibt die Schaltfläche für die der Status abgerufen wird. Wenn das Format des Steuerelements Pager PGS_HORZ ist, geben Sie PGB_TOPORLEFT für die linke Maustaste und PGB_BOTTOMORRIGHT, für die Rechte Taste. Wenn das Steuerelement Pagerformat PGS_VERT ist, geben Sie PGB_TOPORLEFT für die oberste Schaltfläche und PGB_BOTTOMORRIGHT, für die Schaltfläche unten. Weitere Informationen finden Sie unter [Stile von Listensteuerelementen Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn die angegebene Schaltfläche abgeblendet ist; andernfalls `false`.  
+ True, wenn die angegebene Schaltfläche abgeblendet ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht, die im Windows SDK beschrieben wird. Anschließend wird geprüft, ob der Status, der zurückgegeben wird `PGF_GRAYED`. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
+ Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) -Nachricht, die im Windows SDK beschrieben wird. Dann wird getestet, ob der Zustand, der zurückgegeben wird PGF_GRAYED ist. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
   
 ##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
- Gibt an, ob der angegebene Bildlaufschaltfläche des aktuellen Pager-Steuerelements im aktiven Zustand ist.  
+ Gibt an, ob die angegebene Bildlaufschaltfläche der aktuellen Pagersteuerelement im aktiven Zustand ist.  
   
 ```  
 BOOL IsButtonHot(int iButton) const;  
@@ -362,16 +363,16 @@ BOOL IsButtonHot(int iButton) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButton`|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Gibt die Schaltfläche für die der Status abgerufen wird. Wenn das Format des Steuerelements Pager PGS_HORZ ist, geben Sie PGB_TOPORLEFT für die linke Maustaste und PGB_BOTTOMORRIGHT, für die Rechte Taste. Wenn das Steuerelement Pagerformat PGS_VERT ist, geben Sie PGB_TOPORLEFT für die oberste Schaltfläche und PGB_BOTTOMORRIGHT, für die Schaltfläche unten. Weitere Informationen finden Sie unter [Stile von Listensteuerelementen Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn die angegebene Schaltfläche im aktiven Zustand ist. andernfalls `false`.  
+ True, wenn die angegebene Schaltfläche im aktiven Zustand. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht, die im Windows SDK beschrieben wird. Anschließend wird geprüft, ob der Status, der zurückgegeben wird `PGF_HOT`. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
+ Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) -Nachricht, die im Windows SDK beschrieben wird. Dann wird getestet, ob der Zustand, der zurückgegeben wird PGF_HOT ist. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
   
 ##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
- Gibt an, ob die angegebenen Bildlaufschaltfläche des aktuellen Steuerelements Pager nicht sichtbar ist.  
+ Gibt an, ob die angegebene Bildlaufschaltfläche, der das aktuelle Pagersteuerelement nicht sichtbar ist.  
   
 ```  
 BOOL IsButtonInvisible(int iButton) const;  
@@ -381,23 +382,23 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButton`|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Gibt die Schaltfläche für die der Status abgerufen wird. Wenn das Format des Steuerelements Pager PGS_HORZ ist, geben Sie PGB_TOPORLEFT für die linke Maustaste und PGB_BOTTOMORRIGHT, für die Rechte Taste. Wenn das Steuerelement Pagerformat PGS_VERT ist, geben Sie PGB_TOPORLEFT für die oberste Schaltfläche und PGB_BOTTOMORRIGHT, für die Schaltfläche unten. Weitere Informationen finden Sie unter [Stile von Listensteuerelementen Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn die angegebene Schaltfläche nicht sichtbar ist; andernfalls `false`.  
+ True, wenn die angegebene Schaltfläche nicht sichtbar ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Windows unsichtbar Bildlaufschaltfläche in eine bestimmte Richtung bei der im Fenster auf die am weitesten entfernten Block Bildlauf durchgeführt wird, da Sie auf die Schaltfläche Weiter mehrere Fenster enthaltene Ansicht einbinden kann nicht.  
+ Windows wird die Bildlaufschaltfläche auf eine bestimmte Richtung unsichtbar bei der im Fenster auf den am weitesten entfernten Umfang Bildlauf durchgeführt wird, da Sie auf die Schaltfläche Weiter mehr von den im Fenster in der Ansicht erscheinen kann nicht.  
   
- Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht, die im Windows SDK beschrieben wird. Anschließend wird geprüft, ob der Status, der zurückgegeben wird `PGF_INVISIBLE`. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
+ Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) -Nachricht, die im Windows SDK beschrieben wird. Dann wird getestet, ob der Zustand, der zurückgegeben wird PGF_INVISIBLE ist. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) Methode, um zu bestimmen, ob das Pagersteuerelement linken und rechten Bildlaufschaltflächen sichtbar sind.  
+ Im folgenden Beispiel wird die [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) Methode, um zu bestimmen, ob das Pagersteuerelement dem linken und rechten scrollschaltflächen sichtbar sind.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
   
 ##  <a name="isbuttonnormal"></a>  CPagerCtrl::IsButtonNormal  
- Gibt an, ob der angegebene Bildlaufschaltfläche des aktuellen Pager-Steuerelements im Zustand "normal" ist.  
+ Gibt an, ob die angegebene Bildlaufschaltfläche, der das aktuelle Pagersteuerelement im normalen Zustand befindet.  
   
 ```  
 BOOL IsButtonNormal(int iButton) const;  
@@ -407,31 +408,31 @@ BOOL IsButtonNormal(int iButton) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButton`|Gibt die Schaltfläche für die der Status abgerufen werden. Wenn das Steuerelement Pagerformat ist `PGS_HORZ`, geben Sie `PGB_TOPORLEFT` für die linke Maustaste und `PGB_BOTTOMORRIGHT` für mit der rechten Maustaste. Ist das Format des Steuerelements Pager `PGS_VERT`, geben Sie `PGB_TOPORLEFT` für die oberste Schaltfläche und `PGB_BOTTOMORRIGHT` für die Schaltfläche unten. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Gibt die Schaltfläche für die der Status abgerufen wird. Wenn das Format des Steuerelements Pager PGS_HORZ ist, geben Sie PGB_TOPORLEFT für die linke Maustaste und PGB_BOTTOMORRIGHT, für die Rechte Taste. Wenn das Steuerelement Pagerformat PGS_VERT ist, geben Sie PGB_TOPORLEFT für die oberste Schaltfläche und PGB_BOTTOMORRIGHT, für die Schaltfläche unten. Weitere Informationen finden Sie unter [Stile von Listensteuerelementen Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn die angegebene Schaltfläche im Zustand "normal" ist. andernfalls `false`.  
+ True, wenn die angegebene Schaltfläche im normalen Zustand befindet. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht, die im Windows SDK beschrieben wird. Anschließend wird geprüft, ob der Status, der zurückgegeben wird `PGF_NORMAL`. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
+ Diese Methode sendet die [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) -Nachricht, die im Windows SDK beschrieben wird. Dann wird getestet, ob der Zustand, der zurückgegeben wird PGF_NORMAL ist. Weitere Informationen finden Sie im Abschnitt Rückgabewert der [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Nachricht.  
   
 ##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
- Bewirkt, dass der aktuelle Pagersteuerelement, die Größe des Fensters enthaltenen neu zu berechnen.  
+ Bewirkt, dass das aktuelle Pagersteuerelement, um die Größe des Fensters enthaltenen neu zu berechnen.  
   
 ```  
 void RecalcSize();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) Nachricht, die im Windows SDK beschrieben wird. Das Pagersteuerelement daher sendet die [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) Benachrichtigung an die bildlauffähigen Dimensionen von den im Fenster zu erhalten.  
+ Diese Methode sendet die [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) -Nachricht, die im Windows SDK beschrieben wird. Das Pagersteuerelement daher sendet die [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) Benachrichtigung, um die bildlauffähigen Dimensionen von den im Fenster zu erhalten.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die [CPagerCtrl::RecalcSize](#recalcsize) Methode zum Anfordern der aktuellen Pagersteuerelement, seine Größe neu zu berechnen.  
+ Im folgenden Beispiel wird die [CPagerCtrl::RecalcSize](#recalcsize) Methode, um das aktuelle Pagersteuerelement seine Größe neu berechnen anfordern.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird [Nachricht Reflektion](../../mfc/tn062-message-reflection-for-windows-controls.md) So aktivieren Sie das Pagersteuerelement, seine eigene Größe anstatt des Steuerelements übergeordneten Dialogfeld auf die Berechnung neu zu berechnen. Im Beispiel leitet der `MyPagerCtrl` -Klasse aus der [CPagerCtrl-Klasse](../../mfc/reference/cpagerctrl-class.md), klicken Sie dann zum Zuordnen eine meldungszuordnung verwendet der [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) Benachrichtigung mit der `OnCalcsize` Benachrichtigungshandler. In diesem Beispiel legt die Benachrichtigungshandler die Breite und Höhe des Steuerelements Pager auf feste Werte fest.  
+ Im folgenden Beispiel wird [Nachricht Reflektion](../../mfc/tn062-message-reflection-for-windows-controls.md) So aktivieren Sie das Pagersteuerelement, seine eigene Größe statt übergeordneten-Dialogfeld zum Durchführen der Berechnung des Steuerelements neu zu berechnen. Im Beispiel wird abgeleitet der `MyPagerCtrl` -Klasse aus der [CPagerCtrl-Klasse](../../mfc/reference/cpagerctrl-class.md), klicken Sie dann zum Zuordnen eine meldungszuordnung verwendet die [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) Benachrichtigung mit der `OnCalcsize` Benachrichtigungshandler. In diesem Beispiel legt die Benachrichtigungshandler die Breite und Höhe des Steuerelements Pager festen Werten fest.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
@@ -446,21 +447,21 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `clrBk`|Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die neue Hintergrundfarbe des Steuerelements Pager enthält.|  
+|[in] *ClrBk*|Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) -Wert, der der Pager-Steuerelement die neue Hintergrundfarbe enthält.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die vorherige Hintergrundfarbe des Steuerelements Pager enthält.  
+ Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die vorherige Hintergrundfarbe der Pager-Steuerelement enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die [CPagerCtrl::SetBkColor](#setbkcolor) Methode, um die Hintergrundfarbe des Steuerelements Pager sich in Rot, einzurichten und die [CPagerCtrl::GetBkColor](#getbkcolor) Methode, um sicherzustellen, dass die Änderung vorgenommen wurde.  
+ Im folgenden Beispiel wird die [CPagerCtrl::SetBkColor](#setbkcolor) Methode, um die Hintergrundfarbe der Pager-Steuerelement sich in Rot, festzulegen und die [CPagerCtrl::GetBkColor](#getbkcolor) Methode, um sicherzustellen, dass die Änderung vorgenommen wurde.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
 ##  <a name="setborder"></a>  CPagerCtrl::SetBorder  
- Legt die Rahmengröße des aktuellen Pager-Steuerelements.  
+ Legt fest, die Rahmengröße des aktuellen Pager-Steuerelements.  
   
 ```  
 int SetBorder(int iBorder);
@@ -470,16 +471,16 @@ int SetBorder(int iBorder);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iBorder`|Die neue Rahmengröße, gemessen in Pixel. Wenn die `iBorder` Parameter ist ein negativer Wert, der Border Size auf 0 festgelegt ist.|  
+|[in] *iBorder*|Die neue Rahmengröße, gemessen in Pixel. Wenn die *iBorder* -Parameter ist negativ, die Rahmengröße auf 0 (null) festgelegt ist.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die vorherige Rahmengröße, gemessen in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine Pager-Steuerelement, und verwendet dann die [CPagerCtrl::SetChild](#setchild) Methode, um eine sehr lange Button-Steuerelement mit dem Pagersteuerelement zuzuordnen. Anschließend wird die [CPagerCtrl::SetButtonSize](#setbuttonsize) Methode, um die Höhe des Steuerelements Pager auf 20 Pixel festgelegt und die [CPagerCtrl::SetBorder](#setborder) Methode, um die Stärke des Rahmens um 1 Pixel festgelegt.  
+ Das folgende Beispiel erstellt ein Pager-Steuerelement, und verwendet dann die [CPagerCtrl::SetChild](#setchild) Methode, die Pager-Steuerelement ein sehr lange Schaltflächen-Steuerelement zugeordnet werden soll. Anschließend wird die [CPagerCtrl::SetButtonSize](#setbuttonsize) Methode, um die Höhe der Pager-Steuerelement und 20 Pixel, festzulegen und die [CPagerCtrl::SetBorder](#setborder) Methode, um die Stärke des Rahmens um 1-Pixel festgelegt.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
@@ -494,18 +495,18 @@ int SetButtonSize(int iButtonSize);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iButtonSize`|Die neue Schaltflächengröße in Pixel gemessen.|  
+|[in] *iButtonSize*|Die Größe der neuen Schaltfläche, gemessen in Pixel.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die vorherige Schaltflächengröße in Pixel gemessen.  
+ Die vorherige Schaltflächengröße, gemessen in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) -Nachricht, die im Windows SDK beschrieben wird.  
   
- Wenn das Pagersteuerelement verfügt der `PGS_HORZ` Stil, die Größe der Schaltfläche bestimmt die Breite der Pagerschaltflächen, und wenn die Pagersteuerelement verfügt der `PGS_VERT` Stil, die Größe der Schaltfläche bestimmt die Höhe der Pagerschaltflächen. Die Schaltfläche Standardgröße liegt bei drei Viertel der Breite der Schiebeleiste, und die minimale Schaltflächengröße beträgt 12 Pixel. Weitere Informationen finden Sie unter [Pager-Steuerelementtypen](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
+ Wenn das Pagersteuerelement styl PGS_HORZ verfügt, wird die Größe der Schaltfläche bestimmt die Breite der Pagerschaltflächen, und wenn das Pagersteuerelement styl PGS_VERT verfügt, wird die Größe der Schaltfläche bestimmt die Höhe der Pagerschaltflächen. Die Standardgröße der Schaltfläche ist drei Viertel der Breite der Schiebeleiste und die minimale Schaltfläche beträgt 12 Pixel. Weitere Informationen finden Sie unter [Stile von Listensteuerelementen Pager](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine Pager-Steuerelement, und verwendet dann die [CPagerCtrl::SetChild](#setchild) Methode, um eine sehr lange Button-Steuerelement mit dem Pagersteuerelement zuzuordnen. Anschließend wird die [CPagerCtrl::SetButtonSize](#setbuttonsize) Methode, um die Höhe des Steuerelements Pager auf 20 Pixel festgelegt und die [CPagerCtrl::SetBorder](#setborder) Methode, um die Stärke des Rahmens um 1 Pixel festgelegt.  
+ Das folgende Beispiel erstellt ein Pager-Steuerelement, und verwendet dann die [CPagerCtrl::SetChild](#setchild) Methode, die Pager-Steuerelement ein sehr lange Schaltflächen-Steuerelement zugeordnet werden soll. Anschließend wird die [CPagerCtrl::SetButtonSize](#setbuttonsize) Methode, um die Höhe der Pager-Steuerelement und 20 Pixel, festzulegen und die [CPagerCtrl::SetBorder](#setborder) Methode, um die Stärke des Rahmens um 1-Pixel festgelegt.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
@@ -520,20 +521,20 @@ void SetChild(HWND hwndChild);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `hwndChild`|Handle für das Fenster enthalten sein soll.|  
+|[in] *HwndChild*|Handle für das Fenster enthalten sein soll.|  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) -Nachricht, die im Windows SDK beschrieben wird.  
   
- Diese Methode ändert nicht das übergeordnete Element des enthaltenen Fensters; Es weist nur ein Fensterhandle an das Pagersteuerelement Durchführen eines Bildlaufs. In den meisten Fällen werden die Fenster enthaltenen ein untergeordnetes Fenster den Pagersteuerelement.  
+ Diese Methode ändert nicht das übergeordnete Element des Fensters enthalten. Es weist nur ein Fensterhandle der Pager-Steuerelement für den Bildlauf. In den meisten Fällen werden die im Fenster eines untergeordneten Fensters, das Pagersteuerelement.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine Pager-Steuerelement, und verwendet dann die [CPagerCtrl::SetChild](#setchild) Methode, um eine sehr lange Button-Steuerelement mit dem Pagersteuerelement zuzuordnen. Anschließend wird die [CPagerCtrl::SetButtonSize](#setbuttonsize) Methode, um die Höhe des Steuerelements Pager auf 20 Pixel festgelegt und die [CPagerCtrl::SetBorder](#setborder) Methode, um die Stärke des Rahmens um 1 Pixel festgelegt.  
+ Das folgende Beispiel erstellt ein Pager-Steuerelement, und verwendet dann die [CPagerCtrl::SetChild](#setchild) Methode, die Pager-Steuerelement ein sehr lange Schaltflächen-Steuerelement zugeordnet werden soll. Anschließend wird die [CPagerCtrl::SetButtonSize](#setbuttonsize) Methode, um die Höhe der Pager-Steuerelement und 20 Pixel, festzulegen und die [CPagerCtrl::SetBorder](#setborder) Methode, um die Stärke des Rahmens um 1-Pixel festgelegt.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
 ##  <a name="setscrollpos"></a>  CPagerCtrl::SetScrollPos  
- Legt die Bildlaufposition des aktuellen Pager-Steuerelements fest.  
+ Legt fest, das die Bildlaufposition des die aktuelle Pager-Steuerelement.  
   
 ```  
 void SetScrollPos(int iPos);
@@ -543,10 +544,10 @@ void SetScrollPos(int iPos);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iPos`|Die neue Position der Bildlaufleiste, gemessen in Pixel.|  
+|[in] *iPos*|Der neue Bildlaufposition, gemessen in Pixel.|  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CPagerCtrl-Klasse](../../mfc/reference/cpagerctrl-class.md)   

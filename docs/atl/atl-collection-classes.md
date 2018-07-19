@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359829"
 ---
 # <a name="atl-collection-classes"></a>ATL-Auflistungsklassen
 ATL stellt zahlreiche Klassen zum Speichern und Zugreifen auf Daten bereit. Welche Klasse, die Sie verwenden möchten, hängt von mehreren Faktoren ab, einschließlich ab:  

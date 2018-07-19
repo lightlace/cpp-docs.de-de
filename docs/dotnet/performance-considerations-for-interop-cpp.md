@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164049"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Überlegungen zur Leistung von Interop (C++)
 Dieses Thema enthält Richtlinien für verwaltete/nicht verwaltete Interop-Übergänge auf die Leistung zur Laufzeit zu reduzieren.  

@@ -1,5 +1,5 @@
 ---
-title: _com_error::_com_error | Microsoft Docs
+title: _com_error::_com_error | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d26239f6edf98e90f9d4d773d654025da410a97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ec16faa9881fc1c69dca5f8f39b8797cf0fcff0d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943508"
 ---
 # <a name="comerrorcomerror"></a>_com_error::_com_error
 **Microsoft-spezifisch**  
@@ -31,41 +32,39 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _com_error(  
+_com_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = NULL,  
-   bool fAddRef=false  
-) throw( );  
-_com_error(  
-   const _com_error& that   
-) throw( );  
+   bool fAddRef=false) throw( );  
+
+_com_error( const _com_error& that ) throw( );  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `hr`  
- `HRESULT`-Informationen.  
+ *HR*  
+ HRESULT-Informationen.  
   
- `perrinfo`  
- **IErrorInfo** Objekt.  
+ *perrinfo*  
+ `IErrorInfo`-Objekt  
   
- **Bool fAddRef = "false"**  
- Veranlasst den Konstruktor, AddRef auf einer nicht-Null Aufrufen **IErrorInfo** Schnittstelle. Dies ermöglicht eine richtige Verweiszählung im typischen Fall, in dem Besitz der Schnittstelle in das `_com_error`-Objekt übergeben wird, wie z. B.:  
+ `bool fAddRef=false`  
+ Veranlasst den Konstruktor, AddRef auf einer nicht-Null Aufrufen `IErrorInfo` Schnittstelle. Dies ermöglicht eine richtige Verweiszählung im typischen Fall, in dem Besitz der Schnittstelle in das `_com_error`-Objekt übergeben wird, wie z. B.:  
   
-```  
+```cpp 
 throw _com_error(hr, perrinfo);  
 ```  
   
- Wenn Sie nicht möchten, dass Ihr Code zum Übertragen des Besitzes auf die `_com_error` -Objekt, und die `AddRef` ist erforderlich, um den offset der **Version** in der `_com_error` Destruktor, erstellen Sie das Objekt wie folgt:  
+ Wenn Sie nicht möchten, dass Ihr Code zum Übertragen des Besitzes zu der `_com_error` -Objekt, und die `AddRef` ist erforderlich, um den offset der `Release` in die `_com_error` Destruktor, erstellen Sie wie folgt auf das Objekt:  
   
-```  
+```cpp 
 _com_error err(hr, perrinfo, true);  
 ```  
   
- `that`  
+ *,*  
  Ein vorhandenes `_com_error`-Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Der erste Konstruktor erstellt ein neues Objekt erhält eine `HRESULT` und optionale **IErrorInfo** Objekt. Der zweite Konstruktor erstellt eine Kopie eines vorhandenen `_com_error`-Objekts.  
+ Der erste Konstruktor erstellt ein neues Objekt angegeben wird, ein HRESULT und optionalen `IErrorInfo` Objekt. Der zweite Konstruktor erstellt eine Kopie eines vorhandenen `_com_error`-Objekts.  
   
  **Ende Microsoft-spezifisch**  
   

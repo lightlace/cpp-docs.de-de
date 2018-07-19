@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345998"
 ---
 # <a name="list-control-and-list-view"></a>Listensteuerelement und Listenansichtsteuerelement
 Der Einfachheit halber kapselt MFC das Strukturelement-Steuerelement auf zwei Arten. Sie können den List-Steuerelemente verwenden:  

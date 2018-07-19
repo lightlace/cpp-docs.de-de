@@ -1,5 +1,5 @@
 ---
-title: WSADATA-Struktur | Microsoft Docs
+title: WSADATA-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93c98f792e1d72d3e6d4a8e15b8347c653b32f46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dadc502900285d879f2fd77af69b1fcf08a4ba1e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880930"
 ---
 # <a name="wsadata-structure"></a>WSADATA-Struktur
-Die `WSADATA` Struktur dient zum Speichern von Initialisierungsinformationen für die Windows-Sockets zurückgegeben, die durch einen Aufruf der `AfxSocketInit` globale Funktion.  
+Die `WSADATA` Struktur dient zum Speichern von Windows Sockets-Initialisierungsinformationen zurückgegeben, die durch einen Aufruf der `AfxSocketInit` globale Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,28 +42,28 @@ struct WSAData {
   
 #### <a name="parameters"></a>Parameter  
  *wVersion*  
- Die Version der Windows Sockets-Spezifikation, die die Windows-Sockets-DLL den Aufrufer erwartet.  
+ Die Version der Windows Sockets-Spezifikation, die die Windows Sockets-DLL den Aufrufer erwartet.  
   
  *wHighVersion*  
- Die höchste Version der Windows Sockets-Spezifikation, die diese DLL unterstützen kann (wie oben beschrieben ebenfalls codiert). In der Regel wird dies entspricht dem **wVersion**.  
+ Die höchste Version der Windows Sockets-Spezifikation, die diese DLL-Datei unterstützen (wie oben beschrieben auch codiert). Normalerweise ist dies entspricht dem *wVersion*.  
   
  *szDescription*  
- Eine Null-terminierte ASCII-Zeichenfolge in die Windows-Sockets-DLL eine Beschreibung der Windows Sockets-Implementierung, einschließlich Hersteller-ID kopiert. Der Text (bis zu 256 Zeichen lang) kann alle Zeichen enthalten, aber Lieferanten sind cautioned gegen einschließlich Steuerelements und Formatieren von Zeichen: die am wahrscheinlichsten Verwendung, die eine Anwendung dies gestellt wird, ist zum Anzeigen dieser (möglicherweise abgeschnitten) in eine Statusmeldung.  
+ Eine Null-terminierte ASCII-Zeichenfolge in der die Windows Sockets-DLL eine Beschreibung der Windows Sockets-Implementierung, einschließlich Hersteller-ID kopiert. Der Text (bis zu 256 Zeichen lang) kann beliebige Zeichen enthalten, aber Anbietern einschließlich-Steuerelements und Formatieren von Zeichen hingewiesen werden: die am wahrscheinlichsten Verwendung, die eine Anwendung dies eingefügt wird, wird angezeigt (möglicherweise gekürzt) in eine Statusmeldung.  
   
  *szSystemStatus*  
- Eine Null-terminierte ASCII-Zeichenfolge in die Windows Sockets-DLL relevante Status oder Konfiguration Informationen kopiert. Windows Sockets-DLL sollte dieses Feld verwenden, nur, wenn die Informationen kann nützlich sein, um den Benutzer oder Supportpersonal; Es sollte nicht als eine Erweiterung der berücksichtigt werden die **SzDescription** Feld.  
+ Eine Null-terminierte ASCII-Zeichenfolge in der die Windows Sockets-DLL relevante Informationen ein Status oder Konfiguration kopiert. Die Windows Sockets-DLL sollte dieses Feld verwenden, nur, wenn die Informationen kann hilfreich sein, den Benutzer oder Supportpersonal; Es sollte nicht als eine Erweiterung der betrachtet die *SzDescription* Feld.  
   
  *iMaxSockets*  
- Die maximale Anzahl von Sockets, die ein einzelnen Prozess potenziell öffnen können. Windows Sockets-Implementierung bieten einen globalen Pool von Sockets für die Zuordnung zu einem Prozess; Alternativ können sie Ressourcen pro Prozess für Sockets zugewiesen werden. Die Anzahl reflektiert auch die Möglichkeit, in der die Windows-Sockets-DLL oder der Clientnetzwerksoftware konfiguriert wurde. Anwendungsentwickler können anhand dieser Zahl als einfach gehalten Angabe der gibt an, ob die Windows-Sockets-Implementierung von der Anwendung verwendet werden kann. Z. B. X Windows-Server überprüfen **iMaxSockets** beim ersten Start: Wenn es weniger als 8 ist, würde die Anwendung eine Fehlermeldung Informieren der Benutzer die Clientnetzwerksoftware neu konfigurieren angezeigt. (Dies ist eine Situation, in der die **SzSystemStatus** Text verwendet werden kann.) Selbstverständlich besteht keine Garantie, die eine bestimmte Anwendung tatsächlich zuordnen können **iMaxSockets** sockets, da andere Windows-Sockets-Anwendungen verwendet werden können.  
+ Die maximale Anzahl von Sockets, die ein einzelnen Prozess möglicherweise öffnen können. Eine Windows Sockets-Implementierung bietet einen globalen Pool von Sockets für die Zuordnung zu einem beliebigen Prozess; Alternativ können sie pro-Prozess-Ressourcen für Sockets zuordnen. Die Anzahl kann auch die Art wider, in der die Windows Sockets-DLL oder der Clientnetzwerksoftware konfiguriert wurde. Anwendungsentwickler können diese Zahl als Angabe, ob die Windows Sockets-Implementierung verwendet werden, von der Anwendung ist einfach gehalten. Ein X-Windows-Server möglicherweise sehen Sie z. B. *iMaxSockets* beim ersten Start: Wenn es kleiner als 8 ist, würde die Anwendung eine Fehlermeldung angezeigt, den Benutzer anweisen, zum Konfigurieren der Clientnetzwerksoftware angezeigt. (Dies ist eine Situation, in dem die *SzSystemStatus* Text verwendet werden kann.) Offensichtlich besteht keine Garantie, die eine bestimmte Anwendung tatsächlich zuordnen können *iMaxSockets* sockets, weil andere Windows Sockets-Anwendungen verwendet werden kann.  
   
  *iMaxUdpDg*  
- Die Größe in Bytes des größten Datagramms, User Datagram Protocol (UDP), die gesendet oder von einer Windows-Sockets-Anwendung empfangen werden können. Wenn die Implementierung keine Beschränkung erzwingt **iMaxUdpDg** 0 (null). In den verschiedensten Implementierungen dieses Berkeley-Sockets ist eine implizite kann maximal 8192 Bytes auf UDP-Datagramme (die ggf. fragmentiert sind). Windows Sockets-Implementierung können Sie eine Grenze basieren, z. B. auf die Zuordnung von Fragment Reassemblierung Puffer festlegen. Der Minimalwert der **iMaxUdpDg** für eine kompatible Windows Sockets-Implementierung ist 512. Beachten Sie, dass unabhängig vom Wert der **iMaxUdpDg**, es wird davon abgeraten, bei dem Versuch, einen broadcast Datagramm gesendet werden, die größer als das Maximum Transmission Unit (MTU) für das Netzwerk ist. (Der Windows Sockets-API bietet einen Mechanismus, um die maximale Übertragungseinheit zu ermitteln, aber muss nicht weniger als 512 Byte sein.)  
+ Die Größe in Bytes des größten Datagramms User Datagram Protocol (UDP), die gesendet oder von einer Windows-Sockets-Anwendung empfangen werden können. Wenn die Implementierung keine Beschränkung, erzwingt *iMaxUdpDg* ist 0 (null). In vielen Implementierungen der Berkeley-Sockets gibt es eine implizite Beschränkung der 8192 Bytes auf UDP-Datagramme (die ggf. fragmentiert sind). Eine Windows Sockets-Implementierung kann gilt einen Grenzwert basierend, z. B. über die Zuordnung von Fragment objekteinkapselung Puffer festlegen. Der minimale Wert der *iMaxUdpDg* für eine konforme Windows Sockets-Implementierung ist 512. Beachten Sie, dass unabhängig vom Wert der *iMaxUdpDg*, es wird davon abgeraten, die versuchen, ein broadcast-Datagramm zu senden, die größer als das Maximum Transmission Unit (MTU) für das Netzwerk ist. (Der Windows Sockets-API bietet einen Mechanismus, um die MTU erkennen nicht, aber er muss nicht weniger als 512 Byte sein.)  
   
  *lpVendorInfo*  
- Ein ferner Zeiger auf eine Struktur herstellerspezifische Daten. Die Definition dieser Struktur (falls angegeben) ist Bestandteil der Windows Sockets-Spezifikation.  
+ Ein weit Zeiger auf eine Struktur herstellerspezifischen Daten. Die Definition dieser Struktur (falls angegeben) ist über den Rahmen der Windows Sockets-Spezifikation hinaus.  
   
 > [!NOTE]
->  In MFC können die `WSADATA` Struktur wird zurückgegeben, durch die `AfxSocketInit` -Funktion, die Sie in Aufrufen Ihrer `InitInstance` Funktion. Sie können die Struktur abrufen und im Programm zu speichern, wenn Sie Informationen aus einem späteren Zeitpunkt verwenden müssen.  
+>  In MFC können die `WSADATA` Struktur wird zurückgegeben, durch die `AfxSocketInit` -Funktion, die Sie in Aufrufen Ihrer `InitInstance` Funktion. Sie können die Struktur abrufen und in Ihrem Programm zu speichern, wenn Sie die Informationen später verwenden möchten.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** winsock2.h  

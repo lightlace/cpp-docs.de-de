@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421272"
 ---
 # <a name="selection-statements-c"></a>Auswahlanweisungen (C++)
 Die C++-auswahlanweisungen [Wenn](../cpp/if-else-statement-cpp.md) und [wechseln](../cpp/switch-statement-cpp.md), bieten eine Möglichkeit, Codeabschnitte bedingt auszuführen.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092945"
 ---
 # <a name="working-with-documents-and-views"></a>Arbeiten mit Dokumenten und Ansichten
 Die Microsoft Foundation Classes (MFC)-Bibliothek basiert auf einer Dokument-/Ansichtarchitektur für viele Features. In der Regel ein Dokument speichert Ihre Daten und eine Ansicht im Clientbereich eines Rahmenfensters angezeigt und verwaltet eine Benutzerinteraktion mit den Daten. Die Ansicht kommuniziert mit dem Dokument zum Abrufen und aktualisieren die Daten. Sie können die Datenbankklassen mit Framework oder ohne verwenden.  

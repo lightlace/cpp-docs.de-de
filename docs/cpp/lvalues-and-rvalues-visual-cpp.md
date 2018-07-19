@@ -1,5 +1,5 @@
 ---
-title: 'Wert Kategorien: Lvalues und Rvalues (Visual C++) | Microsoft Docs'
+title: 'Wert Kategorien: Lvalues und Rvalues (Visual C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
@@ -15,33 +15,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bbe048ee6667aaf71b2a3cf52e82993f90ab1c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ed6f9a11b6cf2a0045729acbc79d8e45103064ea
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940185"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues und Rvalues (Visual C++)
 
-Jeder C++-Ausdruck weist einen Typ auf und gehört zu einem *Wert Kategorie*. Der Wert Kategorien sind die Grundlage für Regeln, die Compiler befolgen müssen, wenn erstellen, kopieren und Verschieben von temporären Objekten während der Auswertung von Ausdrücken.
+Jeder C++-Ausdruck weist einen Typ, und gehört zu einer *Wertkategorie*. Die Wert-Kategorien sind die Grundlage für die Regeln, die Compiler befolgen müssen, wenn erstellen, kopieren und verschieben Sie temporäre Objekte beim Auswerten des Ausdrucks.
 
- Die C ++ 17-standard definiert Ausdruck Wert Kategorien wie folgt aus:
+ C ++ 17-standard definiert Ausdruck Wert Kategorien wie folgt aus:
 
-- Ein *Glvalue* ist ein Ausdruck, dessen Auswertung die Identität des Objekts, eines Bitfeld oder einer Funktion bestimmt.
-- Ein *Prvalue* ist ein Ausdruck, dessen Auswertung Initialisiert ein Objekt oder ein Bitfeld, oder den Wert des Operanden eines Operators berechnet, wie vom Kontext angegeben, in dem sie erscheint.
-- Ein *Xvalue* einen Glvalue, die ein Objekt oder ein Bitfeld, deren Ressourcen wiederverwendet werden können, (in der Regel, da er befindet sich am Ende ihrer Lebensdauer) bezeichnet wird. [Beispiel: bestimmte Arten von Ausdrücken, die im Zusammenhang mit Rvalue-Verweise (8.3.2) ergeben Xvalues, z. B. einen Aufruf an eine Funktion, deren Rückgabetyp ein Rvalue-Verweis ist, oder eine Umwandlung in einen Rvalue-Verweistyp. ]
-- Ein *Lvalue* ist eine Glvalue, die keine Xvalue ist.
-- Ein *Rvalue* ist eine Prvalue oder ein Xvalue.
+- Ein *Glvalue* ist ein Ausdruck, dessen Auswertung die Identität eines Objekts, die Bit-Feld oder die Funktion bestimmt.
+- Ein *Prvalue* ist ein Ausdruck, dessen Auswertung Initialisiert ein Objekt oder ein Bit-Feld oder den Wert des Operanden der Bediener wird berechnet, wie vom Kontext angegeben, in dem sie erscheint.
+- Ein *Xvalue* einen Glvalue, die kennzeichnet ein Objekt oder ein Bitfeld, dessen Ressourcen wiederverwendet werden können, (in der Regel, da es am Ende ihrer Lebensdauer ist) ist. [Beispiel: bestimmte Arten von Ausdrücken, die im Zusammenhang mit Rvalue-Referenzen (8.3.2) ergibt "XValues", z. B. einen Aufruf einer Funktion, deren Rückgabetyp ein Rvalue-Verweis ist, oder eine Umwandlung in einen Rvalue-Verweistyp. ]
+- Ein *Lvalue* einen Glvalue, die keine Xvalue ist.
+- Ein *Rvalue* ist ein Prvalue oder ein Xvalue.
 
 Das folgende Diagramm veranschaulicht die Beziehungen zwischen den Kategorien:
 
- ![C++-Ausdruck Wert Kategorien](media/value_categories.png "C++ Ausdruck Wert Kategorien")
+ ![C++-Ausdruck Wert Kategorien](media/value_categories.png "C++-Ausdruck-Wert-Kategorien")
 
- Ein Lvalue verfügt über eine Adresse, die Ihre Anwendung zugreifen kann. Beispiele für Lvalue-Ausdrücke sind Namen von Variable, einschließlich `const` Variablen, Arrayelemente, Funktionsaufrufe, die einen Lvalue-Verweis, Bitfelder Unions und Klassenmember zurückgeben.
+ Ein Lvalue verfügt über eine Adresse, die das Programm zugreifen kann. Beispiele für l-Wert-Ausdrücke sind Namen von Variable, einschließlich **const** Variablen, die Elemente des Arrays, Funktionsaufrufe, die einen Lvalue-Verweis, Bitfelder, Unions und -Klasse, Elemente zurückgeben.
 
- Ein Prvalue Ausdruck hat keine Adresse, die von Ihrer Anwendung zugegriffen werden kann. Beispiele für Ausdrücke Prvalue sind Literale, Funktionsaufrufe, die einen Verweistyp zurückzugeben und temporäre Objekte, die während der Evaluierung von Ausdruck jedoch zugegriffen werden kann nur vom Compiler erstellt werden.
+ Ein Prvalue Ausdruck hat keine Adresse, die von Ihrem Programm zugänglich ist. Beispiele für Prvalue Ausdrücken sind Literale, Funktionsaufrufe, die einen Typ ohne Verweis zurückgeben und temporäre Objekte, die während der Auswertung des Ausdrucks aber zugegriffen werden kann nur vom Compiler erstellt werden.
 
- Ein Ausdruck Xvalue hat eine andere Adresse, die nicht mehr zugegriffen werden kann, indem Sie das Programm aber kann verwendet werden, um einen Rvalue-Verweis zu initialisieren, die Zugriff auf den Ausdruck enthält. Beispiele für sind Funktionsaufrufe, die einen Rvalue-Verweis, und die Arrayfeldindex, Member und Zeiger auf Member-Ausdrücke zurückgeben, in dem das Array oder Objekt einen Rvalue-Verweis ist.
+ Ein Xvalue Ausdruck verfügt über eine Adresse, die nicht mehr zugegriffen werden kann, durch das Programm jedoch um einen Rvalue-Verweis zu initialisieren, dadurch erhalten Sie Zugriff auf den Ausdruck verwendet werden können. Beispiele für sind die Funktionsaufrufe, die zurückgegeben werden Rvalue-Verweis, und der Arrayindex, Member und Zeiger auf Member-Ausdrücke, in dem das Array oder Objekt einen Rvalue-Verweis.
 
 ## <a name="example"></a>Beispiel
 
@@ -75,7 +76,7 @@ int main()
 > [!NOTE]
 > Die Beispiele zu diesem Thema veranschaulichen die korrekte und falsche Verwendung, wenn Operatoren nicht überladen werden. Indem Sie Operatoren überladen, können Sie aus einem Ausdruck wie `j * 4` einen lvalue machen.
 
-Die Begriffe *Lvalue* und *Rvalue* werden häufig verwendet werden, wenn Sie in auf Objektverweise Bezug. Weitere Informationen zu verweisen finden Sie unter [Lvalue-Verweisdeklarator: &](../cpp/lvalue-reference-declarator-amp.md) und [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Die Begriffe *Lvalue* und *Rvalue* werden häufig verwendet werden, wenn Sie auf Objektverweise beziehen. Weitere Informationen über Verweise finden Sie unter [Lvalue-Verweisdeklarator: &](../cpp/lvalue-reference-declarator-amp.md) und [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Siehe auch
 

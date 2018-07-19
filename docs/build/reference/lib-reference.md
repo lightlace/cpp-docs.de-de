@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371940"
 ---
 # <a name="lib-reference"></a>LIB-Referenz
 Die Microsoft-Bibliotheks-Manager (LIB.exe) erstellt und verwaltet eine Bibliothek mit Objektdateien Common Object File Format (COFF). LIB kann auch zum Erstellen von Exportdateien und Importbibliotheken Verweise auf exportierte Definitionen verwendet werden.  

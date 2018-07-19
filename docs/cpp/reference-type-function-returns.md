@@ -1,5 +1,5 @@
 ---
-title: Verweistyp-Funktionsrückgaben | Microsoft Docs
+title: Verweistyp-Funktionsrückgaben | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867313625ccc90924eed0c0c9405970f2cb90f8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12b86ee4505792fbc3a90d34ece8e714eb3565ff
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943216"
 ---
 # <a name="reference-type-function-returns"></a>Verweistyp-Funktionsrückgaben
 Funktionen können deklariert werden, um einen Verweistyp zurückzugeben. Es gibt zwei Gründe, eine solche Deklaration vorzunehmen:  
@@ -31,14 +32,14 @@ Funktionen können deklariert werden, um einen Verweistyp zurückzugeben. Es gib
   
 -   Das verwiesene Objekt geht bei Rückgabe der Funktion nicht außerhalb des gültigen Bereichs.  
   
- So fest, wie es effizienter, große Objekte übergeben werden kann *auf* Funktionen als Verweis es auch kann effizienter sein, große Objekte zurückgeben *aus* Funktionen als Verweis. Durch das Verweisrückgabeprotokoll entfällt die Notwendigkeit, das Objekt vor der Rückgabe in einen temporären Speicherort zu kopieren.  
+ Genauso wie es effizienter, große Objekte übergeben werden kann *zu* Funktionen als Verweis es auch kann effizienter sein, große Objekte zurückgeben *aus* Funktionen als Verweis. Durch das Verweisrückgabeprotokoll entfällt die Notwendigkeit, das Objekt vor der Rückgabe in einen temporären Speicherort zu kopieren.  
   
- Verweisrückgabetypen können auch nützlich sein, wenn die Funktion als l-Wert ausgewertet werden muss. Die meisten überladenen Operatoren fallen in diese Kategorie, vor allem der Zuweisungsoperator. Überladene Operatoren werden in behandelt [überladene Operatoren](../cpp/operator-overloading.md).  
+ Verweisrückgabetypen können auch nützlich sein, wenn die Funktion als l-Wert ausgewertet werden muss. Die meisten überladenen Operatoren fallen in diese Kategorie, vor allem der Zuweisungsoperator. Überladene Operatoren finden Sie im [überladene Operatoren](../cpp/operator-overloading.md).  
   
 ## <a name="example"></a>Beispiel  
  Betrachten Sie das `Point`-Beispiel:  
   
-```  
+```cpp 
 // refType_function_returns.cpp  
 // compile with: /EHsc  
   
@@ -82,7 +83,7 @@ cout << "x = " << ThePoint.x() << "\n"
   
 ## <a name="output"></a>Ausgabe  
   
-```  
+```Output  
 x = 7  
 y = 9  
 ```  
@@ -93,7 +94,7 @@ y = 9
   
  Deklarationen von Verweistypen müssen Initialisierer enthalten, ausgenommen in den folgenden Fällen:  
   
--   Explizite `extern`-Deklaration  
+-   Explizite **"extern"** Deklaration  
   
 -   Deklaration eines Klassenmembers  
   
@@ -104,7 +105,7 @@ y = 9
 ## <a name="caution-returning-address-of-local"></a>Vorsicht, Rückgabe einer Adresse einer lokalen  
  Wenn Sie ein Objekt im lokalen Gültigkeitsbereich deklarieren, wird das Objekt bei Rückgabe der Funktion zerstört. Gibt die Funktion einen Verweis auf das Objekt zurück, verursacht dieser Verweis wahrscheinlich eine Zugriffsverletzung zur Laufzeit, wenn der Aufrufer versucht, den NULL-Verweis zu verwenden.  
   
-```  
+```cpp 
 // C4172 means Don’t do this!!!  
 Foo& GetFoo()  
 {  
@@ -114,7 +115,7 @@ Foo& GetFoo()
 } // f is destroyed here  
 ```  
   
- Der Compiler einer Warnung in diesem Fall: `warning C4172: returning address of local variable or temporary`. In einfachen Programmen ist es möglich, dass gelegentlich keine Zugriffsverletzung auftritt, wenn der Verweis vom Aufrufer erfolgt, bevor die Speicheradresse überschrieben wird. Dies ist einfach auf Glück zurückzuführen. Warnung beachten.  
+ Der Compiler gibt eine Warnung in diesem Fall: `warning C4172: returning address of local variable or temporary`. In einfachen Programmen ist es möglich, dass gelegentlich keine Zugriffsverletzung auftritt, wenn der Verweis vom Aufrufer erfolgt, bevor die Speicheradresse überschrieben wird. Dies ist einfach auf Glück zurückzuführen. Warnung beachten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verweise](../cpp/references-cpp.md)

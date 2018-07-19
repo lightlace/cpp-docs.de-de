@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8983fd8cb51a9f305ef4b0fad4d546fc8091f5a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8bee847d1121a6d5da1679c29a9107c8a447ab1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930224"
 ---
 # <a name="containers-compound-files"></a>Container: Verbunddateien
 Dieser Artikel beschreibt die Komponenten und die Implementierung der Verbunddateien sowie die vor- und Nachteile der Verwendung von Verbunddateien in den OLE-Anwendungen.  
@@ -45,7 +46,7 @@ Dieser Artikel beschreibt die Komponenten und die Implementierung der Verbunddat
   
 -   Speicherobjekte wie Verzeichnisse, können andere Speicherkonto und Stream-Objekte enthalten.  
   
--   **LockBytes** Objekte darstellen, die Schnittstelle zwischen den Speicherobjekten und die physische Hardware. Sie bestimmen, wie die tatsächlichen Bytes auf beliebigen Geräten Speicher geschrieben werden die **LockBytes** Objekt zugegriffen wird, z. B. ein Festplattenlaufwerk oder ein Bereich des globalen Arbeitsspeicher. Weitere Informationen zu **LockBytes** Objekte und die `ILockBytes` Schnittstelle, finden Sie unter der *OLE Programmer's Reference*.  
+-   `LockBytes` -Objekte stellen die Schnittstelle zwischen den Speicherobjekten und die physische Hardware dar. Sie bestimmen, wie die tatsächlichen Bytes auf beliebigen Geräten Speicher geschrieben werden die `LockBytes` Objekt zugegriffen wird, z. B. ein Festplattenlaufwerk oder ein Bereich des globalen Arbeitsspeicher. Weitere Informationen zu `LockBytes` Objekte und die `ILockBytes` Schnittstelle, finden Sie unter der *OLE Programmer's Reference*.  
   
 ##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Vor- und Nachteile der Verbunddateien  
  Verbunddateien bieten Vorteile, die nicht verfügbar, mit früheren Methoden der Dateispeicher. Dazu zählen:  

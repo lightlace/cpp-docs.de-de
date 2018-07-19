@@ -7,11 +7,12 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 083d928198d8d83d8a56d8a74a6204e94c86aa67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad8041ff6a4abab84272d2bbbdee290bfce4eff6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961876"
 ---
 # <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; Funktionen
 
@@ -34,13 +35,13 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-`right` Hash_set-Objekt die auszutauschenden Elemente bereitgestellt oder hash_set-Objekt, dessen Elemente sind mit denen der Hash_set ausgetauscht werden sollen `left`.
+*richtige* hash_set-Objekt, in dem Elemente ausgetauscht werden sollen, oder das Hash_set, dessen Elemente ausgetauscht werden, mit denen des Hash_set *linken*.
 
-`left` Hash_set-Objekt, dessen Elemente sind mit denen der Hash_set ausgetauscht werden sollen `right`.
+*linken* das Hash_set, dessen Elemente ausgetauscht werden, mit denen des Hash_set *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion `swap` ist ein Algorithmus, der auf die Containerklasse „hash_set“ spezialisiert ist, um die Memberfunktion `left.`[swap](../standard-library/hash-set-class.md#swap)( `right`) auszuführen. Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion aus. Die allgemeine Version der Vorlagenfunktion
+Die `swap` Vorlagenfunktion ist ein Algorithmus, spezialisiert auf die Hash_set-Containerklasse für die Ausführung der Memberfunktion `left.` [Swap](../standard-library/hash-set-class.md#swap)(`right`). Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion aus. Die allgemeine Version der Vorlagenfunktion
 
 **template \<class T> void swap(T&, T&),**
 
@@ -63,13 +64,13 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>Parameter
 
-`right` Hash_multiset-Objekt die auszutauschenden Elemente bereitgestellt oder hash_multiset-Objekt, dessen Elemente sind mit denen der Hash_multiset ausgetauscht werden sollen `left`.
+*richtige* hash_multiset-Objekt, in dem Elemente ausgetauscht werden sollen, oder das Hash_multiset, dessen Elemente ausgetauscht werden, mit denen des Hash_multiset *linken*.
 
-`left` Hash_multiset-Objekt, dessen Elemente sind mit denen der Hash_multiset ausgetauscht werden sollen `right`.
+*linken* das Hash_multiset, dessen Elemente ausgetauscht werden, mit denen des Hash_multiset *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion `swap` ist ein Algorithmus, der auf die Containerklasse „hash_multiset“ spezialisiert ist, um die Memberfunktion `left.`[swap](../standard-library/hash-multiset-class.md#swap)( `right`) auszuführen. Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion aus. Die allgemeine Version der Vorlagenfunktion
+Die `swap` Vorlagenfunktion ist ein Algorithmus, spezialisiert auf die Hash_multiset-Containerklasse für die Ausführung der Memberfunktion `left.` [Swap](../standard-library/hash-multiset-class.md#swap)(`right`). Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die spezialisierteste Version der Vorlagenfunktion aus. Die allgemeine Version der Vorlagenfunktion
 
 **template \<class T> void swap(T&, T&),**
 

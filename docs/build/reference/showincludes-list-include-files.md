@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378339"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (Includedateien auflisten)
 Weist den Compiler, eine Liste der Includedateien auszugeben. Geschachtelte enthalten Dateien sind ebenfalls angezeigt (Dateien ist, aus den Dateien, die Sie einschließen).  

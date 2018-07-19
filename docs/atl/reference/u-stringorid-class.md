@@ -1,5 +1,5 @@
 ---
-title: _U_STRINGorID Klasse | Microsoft Docs
+title: _U_STRINGorID-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a601b1c64b28681c13a0b9e8f42156d8820cb4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 611fecad210b9297b6c7cd16c83dbd0c6c3e41a8
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886166"
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID-Klasse
-Dieses Argument-Adapterklasse ermöglicht entweder Ressourcennamen ( `LPCTSTR`s) oder Ressourcen-IDs ( **"uint"** s) an eine Funktion übergeben werden, ohne dass des Aufrufers in eine Zeichenfolge mit der ID konvertieren die **MAKEINTRESOURCE** Makro.  
+Dieses Argument-Adapterklasse ermöglicht entweder Ressourcennamen (LPCTSTRs) oder Ressourcen-IDs (jenem) an eine Funktion übergeben werden, ohne dass des Aufrufers die ID in eine Zeichenfolge, die mit dem Makro MAKEINTRESOURCE zu konvertieren.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,22 +53,22 @@ class _U_STRINGorID
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|Der Ressourcenbezeichner.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse dient zur Implementierung der Windows-Ressource-Verwaltungs-API-Wrapper, z. B. die [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), und [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) -Funktionen, die akzeptieren ein `LPCTSTR` Argument, das möglicherweise entweder den Namen einer Ressource oder ihre-ID  
+ Diese Klasse dient zum Implementieren von der Windows-Ressourcenverwaltungs-API-Wrapper wie z. B. die [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), und [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) -Funktionen, die akzeptieren ein LPCTSTR-Argument, das möglicherweise entweder den Namen einer Ressource oder der-ID.  
   
- Die Klasse definiert zwei Konstruktorüberladungen: einer akzeptiert eine `LPCTSTR` Argument und die andere akzeptiert einen **"uint"** Argument. Die **"uint"** Argument in einen Ressourcentyp kompatibel mit Windows-Ressource-Management-Funktionen mit konvertiert die **MAKEINTRESOURCE** -Makro und das Ergebnis in die Klasse der einzelnen Datenmember, gespeicherten [M_lpstr](#_u_stringorid__m_lpstr). Das Argument für die `LPCTSTR` Konstruktor direkt ohne Konvertierung gespeichert ist.  
+ Die Klasse definiert zwei Konstruktorüberladungen: eine akzeptiert ein Argument LPCTSTR und die andere ein UINT-Argument akzeptiert. Konvertiert das Argument "uint" für einen Ressourcentyp, die kompatibel mit Windows Resource-Manager-Funktionen, die mithilfe der MAKEINTRESOURCE-Makro und das Ergebnis gespeichert werden, in der Klasse der einzelnen Datenmember, [M_lpstr](#_u_stringorid__m_lpstr). Das Argument an den Konstruktor LPCTSTR wird direkt ohne Konvertierung gespeichert.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
   
 ##  <a name="_u_stringorid__m_lpstr"></a>  _U_STRINGorID::m_lpstr  
- Die Klasse enthält den Wert, der entweder seiner Konstruktoren übergeben, als öffentliche `LPCTSTR` -Datenmember.  
+ Die Klasse enthält den Wert als einen öffentlichen Datenmember von LPCTSTR an eines ihrer Konstruktoren übergeben.  
   
 ```
 LPCTSTR m_lpstr;
 ```  
   
 ##  <a name="_u_stringorid___u_stringorid"></a>  _U_STRINGorID::_U_STRINGorID  
- Die **"uint"** Konstruktor konvertiert das Argument in einen Ressourcentyp kompatibel mit Windows-Ressource-Management-Funktionen mithilfe der **MAKEINTRESOURCE** -Makro und das Ergebnis wird in der Klasse einzelnen gespeichert Datenmember, [M_lpstr](#_u_stringorid__m_lpstr).  
+ Der Konstruktor "uint" konvertiert das Argument für einen Ressourcentyp, die kompatibel mit Windows-Resource-Manager-Funktionen mit dem Makro MAKEINTRESOURCE und das Ergebnis wird gespeichert, in der Klasse der einzelnen Datenmember, [M_lpstr](#_u_stringorid__m_lpstr).  
   
 ```
 _U_STRINGorID(UINT nID);  
@@ -75,14 +76,14 @@ _U_STRINGorID(LPCTSTR lpString);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nID`  
- Ein Ressourcen-ID.  
+ *nID*  
+ Eine Ressourcen-ID  
   
- `lpString`  
- Der Name einer Ressource.  
+ *lpString*  
+ Ein Ressourcenname.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Argument für die `LPCTSTR` Konstruktor direkt ohne Konvertierung gespeichert ist.  
+ Das Argument an den Konstruktor LPCTSTR wird direkt ohne Konvertierung gespeichert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

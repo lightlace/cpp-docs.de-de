@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164595"
 ---
 # <a name="sealing-a-virtual-function"></a>Versiegeln einer virtuellen Funktion
 Die Syntax für das Versiegeln einer virtuellen Funktion hat gegenüber Managed Extensions für C++ in Visual C++ geändert.  

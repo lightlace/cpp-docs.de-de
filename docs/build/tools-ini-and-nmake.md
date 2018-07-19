@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380549"
 ---
 # <a name="toolsini-and-nmake"></a>Tools.ini und NMAKE
 NMAKE liest Tools.ini, bevor sie Makefiles, gelesen, wenn/r verwendet wird. Sucht nach Tools.ini zuerst im aktuellen Verzeichnis, und klicken Sie dann in das Verzeichnis, das von der INIT-Umgebungsvariablen angegeben. NMAKE-Einstellungen in der Initialisierungsdatei im Abschnitt beginnt mit `[NMAKE]` und Makefile Informationen enthalten können. Geben Sie einen Kommentar auf einer separaten Zeile Anfang mit einem Nummernzeichen (#).  

@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931976"
 ---
 # <a name="activex-controls-on-the-internet"></a>ActiveX-Steuerelemente für das Internet
 ActiveX-Steuerelemente sind die aktualisierte Version der OLE-Steuerelement-Spezifikation. Steuerelemente sind eine primäre Architektur für die Entwicklung von programmierbaren Softwarekomponenten, die in einer Vielzahl von unterschiedlichen Containern, einschließlich COM+-fähigen Webbrowser auf das Internet verwendet werden können. Jedes ActiveX-Steuerelement kann ein Internet-Steuerelement sein und können die Funktionalität eines aktiven Dokuments hinzufügen oder Teil einer Webseite. Steuerelemente auf einer Webseite können mithilfe von Skripts miteinander kommunizieren.  
@@ -38,7 +39,7 @@ ActiveX-Steuerelemente sind die aktualisierte Version der OLE-Steuerelement-Spez
   
  **Damit ein ActiveX-Steuerelement werden zu können, müssen ein Steuerelement:**  
   
--   Unterstützung der **IUnknown** Schnittstelle.  
+-   Unterstützung der `IUnknown` Schnittstelle.  
   
 -   Werden Sie ein COM-Objekt.  
   
@@ -84,7 +85,7 @@ ActiveX-Steuerelemente sind die aktualisierte Version der OLE-Steuerelement-Spez
   
 #### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>Zum Erstellen Ihres Projekts mithilfe von MFC-ActiveX-Steuerelement-Assistenten  
   
-1.  Klicken Sie auf `New` auf die **Datei** Menü.  
+1.  Klicken Sie auf **neu** auf die **Datei** Menü.  
   
 2.  Wählen Sie **MFC-ActiveX-Steuerelement-Assistent** aus der Visual C++-Projekte, und nennen Sie das Projekt.  
   
@@ -128,7 +129,7 @@ ActiveX-Steuerelemente sind die aktualisierte Version der OLE-Steuerelement-Spez
   
      [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  Implementieren der **Get/Set** Methoden. Für **abrufen**, die Zeichenfolge zurück. Für `Set`, laden Sie die Eigenschaft und der Aufruf `SetModifiedFlag`.  
+5.  Implementieren Sie die `Get/Set`-Methoden. Für `Get`, die Zeichenfolge zurück. Für `Set`, laden Sie die Eigenschaft und der Aufruf `SetModifiedFlag`.  
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   

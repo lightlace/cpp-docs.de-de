@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379236"
 ---
 # <a name="understanding-the-helper-function"></a>Die Hilfsfunktion
 Die Hilfsfunktion für das verzögerte Laden Linker unterstützt wird, was tatsächlich die DLL zur Laufzeit geladen wird. Sie können die Hilfsfunktion, um das Verhalten anpassen, indem Sie eine eigene Funktion schreiben, und verknüpfen es mit Ihrer Anwendung anstelle der angegebenen Hilfsfunktion in "delayimp.lib" ändern. Eine Hilfsfunktion ist für alle verzögert geladene DLLs.  

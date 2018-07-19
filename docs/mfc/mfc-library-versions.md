@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92568f61bb1ea219ab3ddc96f4c4687dec157c9a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931764"
 ---
 # <a name="mfc-library-versions"></a>MFC-Bibliotheksversionen
 
@@ -88,7 +89,7 @@ Die MFC-ANSI-/MBCS-Bibliotheksversionen unterstützen beide Einzelbyte-Zeichens�
 
 Um die Projektkonfiguration Einzelbyte-Multibytezeichen oder Breitzeichen-Unicode-Zeichenfolgen und Unterstützung für in der IDE festzulegen, verwenden die **Projekteigenschaften** Dialogfeld. In der **Konfigurationseigenschaften** > **allgemeine** Seite der **Zeichensatz** Eigenschaft **nicht festgelegt** verwenden eine Einzelbyte-Zeichensatz. Legen Sie die Eigenschaft auf **verwenden Multi-Byte Character Set** Mehrbyte-Zeichensatz verwenden oder **Unicode-Zeichensatz verwenden** Unicode codiert als UTF-16 verwendet.
 
-MFC-Projekten verwenden das Präprozessorsymbol  **\_UNICODE** an, dass UTF-16 Breitzeichen-Unicode-Unterstützung und  **\_MBCS** an, dass MBCS-Unterstützung. Diese Optionen sind sich gegenseitig ausschließende in einem Projekt.
+MFC-Projekten verwenden das Präprozessorsymbol \_UNICODE UTF-16 Breitzeichen-Unicode-Unterstützung an und \_MBCS an, dass MBCS-Unterstützung. Diese Optionen sind sich gegenseitig ausschließende in einem Projekt.
 
 ## <a name="mfc-static-library-naming-conventions"></a>Namenskonventionen für MFC-statische Bibliothek
 

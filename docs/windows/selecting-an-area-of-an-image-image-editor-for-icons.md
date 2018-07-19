@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890107"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Markieren eines Bildbereichs (Bildbearbeitung für Symbole)
 Sie können Auswahlwerkzeuge verwenden, um einen Bereich eines Bilds zu definieren, den Sie Ausschneiden, kopieren, löschen, ändern Sie die Größe, umkehren oder verschieben möchten. Mit der **Rechteckauswahl** Tool können Sie definieren, und wählen Sie einen rechteckigen Bereich des Bilds. Mit der **Unregelmäßige Auswahl** Tool können Sie einen Überblick über den Bereich, die Sie auswählen, für das Ausschneiden, kopieren, oder einen anderen Vorgang möchten Freihandlinie zeichnen.  

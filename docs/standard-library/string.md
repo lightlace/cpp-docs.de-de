@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d335c684ab46846e9d3c49ef45522cf7288d916a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e341b15baa54b57148582c92beb9d231da8c96bb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954570"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -41,14 +42,14 @@ Die Programmiersprache C++ und die C++-Standardbibliothek unterstützen zwei Art
 
 - Auf NULL endende Zeichenarrays werden häufig als C-Zeichenfolgen bezeichnet.
 
-- Vorlagenklassenobjekte des Typs `basic_string`, die alle `char`-ähnlichen Vorlagenargumente verarbeiten.
+- Vorlagenklassenobjekte des Typs `basic_string`, verarbeiten alle **Char**--ähnlichen Vorlagenargumente.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Typname|Beschreibung|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Ein Typ, der eine Spezialisierung der Vorlagenklasse `basic_string` mit Elementen des Typs `char` als `string` beschreibt.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Ein Typ, der eine Spezialisierung der Vorlagenklasse `basic_string` mit Elementen des Typs `wchar_t` als `wstring` beschreibt.|
+|[string](../standard-library/string-typedefs.md#string)|Ein Typ, der eine Spezialisierung der Vorlagenklasse beschreibt `basic_string` mit Elementen des Typs **Char** als eine `string`.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Ein Typ, der eine Spezialisierung der Vorlagenklasse beschreibt `basic_string` mit Elementen des Typs **"wchar_t"** als eine `wstring`.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Ein Typ, der eine Spezialisierung der Vorlagenklasse `basic_string` basierend auf Elementen des Typs `char16_t` beschreibt.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Ein Typ, der eine Spezialisierung der Vorlagenklasse `basic_string` basierend auf Elementen des Typs `char32_t` beschreibt.|
 
@@ -71,13 +72,13 @@ Die Programmiersprache C++ und die C++-Standardbibliothek unterstützen zwei Art
 |||
 |-|-|
 |[swap](../standard-library/string-functions.md#swap)|Tauscht die Arrays von Zeichen für zwei Zeichenfolgen aus.|
-|[stod](../standard-library/string-functions.md#stod)|Konvertiert eine Zeichenfolge in ein `double.`.|
-|[stof](../standard-library/string-functions.md#stof)|Konvertiert eine Zeichenfolge in ein `float`.|
+|[stod](../standard-library/string-functions.md#stod)|Konvertiert eine Zeichenfolge in eine **doppelte**.|
+|[stof](../standard-library/string-functions.md#stof)|Konvertiert eine Zeichenfolge in eine **"float"**.|
 |[stoi](../standard-library/string-functions.md#stoi)|Konvertiert eine Zeichenfolge in eine Ganzzahl.|
-|[stold](../standard-library/string-functions.md#stold)|Konvertiert eine Zeichenfolge in ein `long double`.|
-|[stoll](../standard-library/string-functions.md#stoll)|Konvertiert eine Zeichenfolge in ein `long long`.|
-|[stoul](../standard-library/string-functions.md#stoul)|Konvertiert eine Zeichenfolge in ein `unsigned long`.|
-|[stoull](../standard-library/string-functions.md#stoull)|Konvertiert eine Zeichenfolge in ein `unsigned long long`.|
+|[stold](../standard-library/string-functions.md#stold)|Konvertiert eine Zeichenfolge in eine **long double**.|
+|[stoll](../standard-library/string-functions.md#stoll)|Konvertiert eine Zeichenfolge in eine **long long**.|
+|[stoul](../standard-library/string-functions.md#stoul)|Konvertiert eine Zeichenfolge in eine **unsigned long**.|
+|[stoull](../standard-library/string-functions.md#stoull)|Konvertiert eine Zeichenfolge in eine **long long ohne Vorzeichen**.|
 |[to_string](../standard-library/string-functions.md#to_string)|Konvertiert einen Wert in einen `string`-Wert.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Konvertiert einen Wert in eine breite `string`.|
 

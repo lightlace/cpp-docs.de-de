@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373152"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (_penter-Hookfunktion aktivieren)
 Bewirkt, dass einen Aufruf der `_penter` Funktion am Anfang jeder Methode oder Funktion.  

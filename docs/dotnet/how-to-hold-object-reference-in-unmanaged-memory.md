@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128731"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Gewusst wie: Objektverweis in nicht verwaltetem Arbeitsspeicher
 Sie können gcroot.h verwenden, das umschließt <xref:System.Runtime.InteropServices.GCHandle>zur Aufnahme eines CLR-Objektverweis in nicht verwalteten Speicher. Alternativ können Sie `GCHandle` direkt.  

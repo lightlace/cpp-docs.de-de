@@ -1,5 +1,5 @@
 ---
-title: Initialisierer | Microsoft Docs
+title: Initialisierer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939862"
 ---
 # <a name="initializers"></a>Initialisierer
 Ein Initialisierer gibt den Anfangswert einer Variablen an. Sie können Variablen in diesen Kontexten initialisieren:  
@@ -90,11 +91,11 @@ Ein Initialisierer gibt den Anfangswert einer Variablen an. Sie können Variable
   
 -   Numerische Variablen werden mit 0 initialisiert (oder 0,0 oder 0,0000000000 usw.).  
   
--   Char-Variablen werden mit initialisiert `'\0'`.  
+-   Char-Variablen werden initialisiert, um `'\0'`.  
   
 -   Zeiger werden mit `nullptr` initialisiert.  
   
--   Arrays, [POD](../standard-library/is-pod-class.md) Klassen, Strukturen und Unions haben Mitglieder, die mit einem Wert von 0 (null) initialisiert.  
+-   Arrays, [POD](../standard-library/is-pod-class.md) Klassen, Strukturen und Unions, haben Sie ihre Member mit einem Wert von 0 (null) initialisiert.  
   
  Die Initialisierung mit 0 (NULL) wird zu unterschiedlichen Zeiten ausgeführt:  
   
@@ -124,7 +125,7 @@ int main() {
 ```  
   
 ### <a name="default_initialization"></a> Standardinitialisierung  
- Die Standardinitialisierung für Klassen, Strukturen und Unions ist die Initialisierung mit einem Standardkonstruktor. Der Standardkonstruktor kann aufgerufen werden, indem kein Initialisierungsausdruck verwendet wird oder mithilfe des `new`-Schlüsselworts:  
+ Die Standardinitialisierung für Klassen, Strukturen und Unions ist die Initialisierung mit einem Standardkonstruktor. Der Standardkonstruktor kann aufgerufen werden, indem kein Initialisierungsausdruck oder mit der **neue** Schlüsselwort:  
   
 ```cpp  
 MyClass mc1;  
@@ -179,7 +180,7 @@ int main() {
 }  
 ```  
   
- Weitere Informationen zur Initialisierung von globalen statischen Objekten finden Sie unter [zusätzliche Überlegungen zum Starten](../cpp/additional-startup-considerations.md).  
+ Weitere Informationen zur Initialisierung von globalen statischen Objekten finden Sie unter [zusätzliche Überlegungen zur Startseite](../cpp/additional-startup-considerations.md).  
   
 ### <a name="value-initialization"></a>Wertinitialisierung  
  Wertinitialisierung findet in den folgenden Fällen statt:  
@@ -188,7 +189,7 @@ int main() {
   
 -   Ein anonymes temporäres Objekt wird mithilfe von leeren runden oder geschweiften Klammern initialisiert.  
   
--   Ein Objekt wird initialisiert, indem das Schlüsselwort `new` sowie leere runde oder geschweifte Klammern verwendet werden.  
+-   ein Objekt wird initialisiert, mit der **neue** Schlüsselwort sowie leere runde oder geschweifte Klammern  
   
  Eine Wertinitialisierung führt Folgendes aus:  
   
@@ -278,9 +279,9 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
   
 -   Eine Variable wird mithilfe von nicht leeren geschweiften oder runden Klammern initialisiert.  
   
--   Eine Variable wird initialisiert, indem das Schlüsselwort `new` sowie nicht leere geschweifte oder runde Klammern verwendet werden.  
+-   eine Variable wird initialisiert, mit der **neue** Schlüsselwort sowie nicht leere geschweifte oder runde Klammern  
   
--   Eine Variable wird mit `static_cast` initialisiert.  
+-   eine Variable wird initialisiert, mit **"static_cast"**  
   
 -   In einem Konstruktor werden Basisklassen und nicht statische Member mithilfe einer Initialisierungsliste initialisiert.  
   
@@ -320,7 +321,7 @@ int main(){
   
 -   Eine Variable wird initialisiert.  
   
--   Eine Klasse wird mithilfe des Schlüsselworts `new` initialisiert.  
+-   eine Klasse initialisiert wird, mit der **neue** Schlüsselwort  
   
 -   Ein Objekt wird von einer Funktion zurückgegeben.  
   
@@ -377,7 +378,7 @@ int main() {
 -   Keine virtuellen Memberfunktionen  
   
 > [!NOTE]
->  <!--conformance note-->In Visual Studio 2015 and earlier, an aggregate is not allowed to have  brace-or-equal initializers for non-static members. This restriction was removed in the C++14 standard and implemented in Visual Studio 2017. 
+>  <!--conformance note-->In Visual Studio 2015 und früher wird ein Aggregat ist nicht zulässig, Klammern oder-gleich-Initialisierer für nicht statische Member haben. Diese Einschränkung wurde in der C ++ 14-Standard entfernt und in Visual Studio 2017 implementiert. 
   
  Aggregatinitialisierer bestehen wie im folgenden Beispiel aus einer Initialisierungsliste in geschweiften Klammern mit oder ohne Gleichheitszeichen:  
   
@@ -424,7 +425,7 @@ myArr3: 8 9 10 0 0
 ```  
   
 > [!IMPORTANT]
->  Array-Elemente, die deklariert, aber während der aggregatinitialisierung nicht explizit initialisiert werden, 0 (null) initialisiert, wie in `myArr3` oben.  
+>  Arraymember, die deklariert, aber während der aggregatinitialisierung nicht explizit initialisiert werden, werden 0 (null) initialisiert wie in `myArr3` oben.  
   
 #### <a name="initializing-unions-and-structs"></a>Initialisieren von Unions und Strukturen  
  Wenn eine Union über keinen Konstruktor verfügt, können Sie sie mithilfe eines einzelnen Werts initialisieren (oder mithilfe einer anderen Instanz einer Union). Der Wert wird verwendet, um das erste nicht statische Feld zu initialisieren. Dies unterscheidet sich von der Strukturinitialisierung, in der mithilfe des ersten Werts im Initialisierer das erste Feld initialisiert wird, mithilfe des zweiten Werts das zweite Feld initialisiert wird usw. Vergleichen Sie die Initialisierung von Unions und Strukturen im folgenden Beispiel:  
@@ -515,7 +516,7 @@ int main()
     class c {public:   int& i;};  
     ```  
   
--   Deklaration einer Variable, die explizit als `extern` deklariert wird. Zum Beispiel:  
+-   Deklaration einer Variablen, die explizit **"extern"**. Zum Beispiel:  
   
     ```  
     extern int& iVal;  
@@ -526,10 +527,10 @@ int main()
  ![Entscheidungsdiagramm zur Initialisierung von Verweistypen](../cpp/media/vc38s71.gif "vc38S71")  
 Entscheidungsdiagramm zur Initialisierung von Verweistypen  
   
- Verweise auf `volatile` Typen (deklariert als `volatile` *Typename *** &** *Bezeichner*) initialisiert werden kann, mit `volatile` Objekte desselben Typs oder mit Objekte, die nicht als deklariert worden sein `volatile`. Sie können jedoch nicht, initialisiert werden, mit **const** Objekte dieses Typs. Auf ähnliche Weise Verweise auf **const** Typen (deklariert als **const** *Typename *** &** *Bezeichner*) werden können Initialisiert mit **const** Objekte desselben Typs (oder, das eine Konvertierung in diesen Typ oder mit Objekten, die nicht als deklariert worden sein **const**). Sie können jedoch nicht mit `volatile`-Objekten dieses Typs initialisiert werden.  
+ Verweise auf **flüchtige** Typen (deklariert als **flüchtige** *Typename *** &** *Bezeichner*) initialisiert werden kann mit **flüchtige** Objekte desselben Typs oder mit Objekten, die nicht als deklarierten **flüchtige**. Sie können jedoch nicht, initialisiert werden, mit **const** Objekte dieses Typs. Auf ähnliche Weise Verweise auf **const** Typen (deklariert als **const** *Typename *** &** *Bezeichner*) werden können Initialisiert mit **const** Objekte des gleichen Typs (oder ein beliebiges Element, das ist eine Konvertierung auf diesen Typ oder mit Objekten, die nicht als deklarierten **const**). Sie können jedoch nicht, initialisiert werden, mit **flüchtige** Objekte dieses Typs.  
   
- Verweise, die entweder mit nicht qualifiziert sind die **const** oder `volatile` Schlüsselwort kann nur mit Objekten, die als weder deklariert initialisiert werden **const** noch `volatile`.  
+ Verweise, die nicht mit einem qualifiziert sind die **const** oder **flüchtige** Schlüsselwort kann nur mit Objekten, die deklariert werden, weil keiner initialisiert werden **const** noch  **flüchtige**.  
   
 ### <a name="initialization-of-external-variables"></a>Initialisierung von externen Variablen  
- Deklarationen von automatischen, statischen und externen Variablen können Initialisierer enthalten. Allerdings können Deklarationen von externen Variablen nur dann Initialisierer enthalten, wenn die Variablen nicht als `extern` deklariert werden.
+ Deklarationen von automatischen, statischen und externen Variablen können Initialisierer enthalten. Allerdings können Deklarationen von externen Variablen Initialisierer enthalten, nur dann, wenn die Variablen nicht, als deklariert werden **"extern"**.
   

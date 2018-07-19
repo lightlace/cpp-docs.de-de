@@ -17,11 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: d6f921f85ffc6ef6d7985d66fe8637f044965176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966406"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt;-Funktionen
 
@@ -63,17 +64,21 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Parameter
 
-`Index` Der Index des abzurufenden Elements.
+*Index*  
+ Der Index des abzurufenden Elements.
 
-`Types` Die Sequenz von Typen, die in das Tupel, in der Reihenfolge der Deklaration deklariert werden.
+*Typen*  
+ Die Sequenz der im Tupel deklarierten Typen in der Deklarationsreihenfolge.
 
-`T` Der Typ des abzurufenden Elements.
+*T*  
+ Der Typ des abzurufenden Elements.
 
-`Tuple` Std:: Tuple, die eine beliebige Anzahl von Elementen enthält.
+*Tuple*  
+ std::tuple mit einer beliebigen Anzahl von Elementen.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktionen geben einen Verweis auf den Wert am Index `Index`oder vom Typ `T` im `tuple` -Objekt zurück.
+Die Vorlagenfunktionen geben einen Verweis auf den Wert am Index zurück *Index*, oder vom Typ *T* in die `tuple` Objekt.
 
 Das Aufrufen von `get<T>(Tuple)` führt zu einem Compilerfehler, wenn das Tupel mehr oder weniger als ein Element vom Typ T enthält.
 
@@ -117,9 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parameter
 
-`TN` Der Typ des Parameters Nth-Funktion.
+*TN*  
+ Der Typ des Parameters der Nth-Funktion.
 
-`tN` Der Wert des Parameters Nth-Funktion.
+*TN*  
+ Der Wert des Parameters der Nth-Funktion.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -162,7 +169,7 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="tie"></a>  Tie
+## <a name="tie"></a>  Verknüpfen
 
 Erstellt eine `tuple` aus Elementverweisen.
 
@@ -173,7 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parameter
 
-`TN` Der Basistyp des n-ten Tupelelements.
+*TN*  
+ Der Basistyp des N-ten Tupelelements.
 
 ### <a name="remarks"></a>Hinweise
 

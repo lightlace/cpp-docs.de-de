@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283061"
 ---
 # <a name="compiler-warning-level-1-c4540"></a>Compilerwarnung (Stufe 1) C4540
 Dynamic_cast zum Konvertieren in nicht zugegriffen werden kann oder mehrdeutige Basisklasse; Laufzeittest fehl ("Typ1" in "Typ2")  

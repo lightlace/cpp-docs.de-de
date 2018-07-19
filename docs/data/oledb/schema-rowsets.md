@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104281"
 ---
 # <a name="schema-rowsets"></a>Schemarowsets
 Schema (oder Metadaten) ist keine Informationen über Struktur oder Organisation, z. B. Informationen über Anbieter, Rowsets, Tabelle, Spalten, einer Datenbank oder andere Informationen, abgesehen von den tatsächlichen Inhalt der Datenbank. OLE DB können Sie solche Informationen zu erhalten, ohne Öffnen des Rowsets mithilfe von Schemarowsets.  

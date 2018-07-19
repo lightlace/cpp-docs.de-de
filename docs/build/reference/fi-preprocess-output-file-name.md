@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371511"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (Ausgabedateiname vorverarbeiten)
 Gibt den Namen der Ausgabedatei an, in dem die [/p (Vorverarbeitung in eine Datei)](../../build/reference/p-preprocess-to-a-file.md) Compileroption schreibt vorverarbeiteten Ausgabedatei.  

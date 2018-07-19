@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d64d503c4bad0d452be174064e2932ed100d7de
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121756"
 ---
 # <a name="ctabview-class"></a>CTabView-Klasse
 Die `CTabView` Klasse vereinfacht die Verwendung der Registerkarte "-Steuerelementklasse ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) in Anwendungen, die MFC Dokument-/ Ansichtarchitektur verwenden.  
@@ -94,16 +95,16 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pViewClass`  
+ [in] *pViewClass*  
  Ein Zeiger auf eine Laufzeitklasse der eingefügten Ansicht.  
   
- [in] `strViewLabel`  
+ [in] *StrViewLabel*  
  Gibt den Registerkartentext ein.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Gibt die nullbasierte Position, an dem die Sicht eingefügt. Die Position ist-1 wird die neue Registerkarte am Ende eingefügt.  
   
- [in] `pContext`  
+ [in] *"pContext"*  
  Ein Zeiger auf die `CCreateContext` der Ansicht.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -120,7 +121,7 @@ int FindTab(HWND hWndView) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hWndView`  
+ [in] *hWndView*  
  Das Handle der Sicht.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -137,7 +138,7 @@ CView* GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein gültiger Zeiger auf die aktive Ansicht oder `NULL` , wenn keine aktive Ansicht vorhanden ist.  
+ Ein gültiger Zeiger auf die aktive Ansicht oder NULL, wenn keine aktive Ansicht vorhanden ist.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -159,12 +160,12 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Registerkartenansicht zusammen mit einer freigegebenen Bildlaufleiste erstellt werden soll. Andernfalls `FALSE`.  
+ "True", wenn die Registerkartenansicht zusammen mit einer freigegebenen Bildlaufleiste erstellt werden soll. Andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework ruft diese Methode bei einem `CTabView` Objekt erstellt wird.  
+ Das Framework ruft diese Methode bei einem *CTabView* Objekt erstellt wird.  
   
- Überschreiben der `IsScrollBar` Methode in einer `CTabView`-abgeleitete Klasse und der Rückgabewert `TRUE` Wenn Sie eine Sicht erstellen, die einen gemeinsamen horizontalen Bildlaufleiste möchten.  
+ Überschreiben der *IsScrollBar* Methode in einer *CTabView*-abgeleiteten Klasse und gibt "true", wenn Sie eine Sicht erstellen, die einen gemeinsamen horizontalen Bildlaufleiste möchten.  
   
 ##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  Vom Framework aufgerufen, wenn die Registerkartenansicht aktiv oder inaktiv erfolgt.  
@@ -174,7 +175,7 @@ virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `view`  
+ [in] *anzeigen*  
  Ein Zeiger auf die Ansicht.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -188,7 +189,7 @@ BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  Der Index des zu entfernenden Sicht.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -204,11 +205,11 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  Der nullbasierte Index der Registerkartenansicht.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die angegebene Ansicht aktiv ist, erfolgte `FALSE` , wenn die Sicht Index ungültig ist.  
+ "True", wenn die angegebene Ansicht aktiv ist, "false" erfolgte, wenn die Sicht Index ungültig ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Weitere Informationen finden Sie unter [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391469"
 ---
 # <a name="global-constants"></a>Globale Konstanten
 Die Microsoft-Laufzeitbibliothek enthält Definitionen für globale Konstanten, die von Bibliotheksroutinen verwendet werden. Um diese Konstanten zu verwenden, schließen Sie die entsprechenden Headerdateien ein, wie in der Beschreibung für die jeweilige Konstante angegeben. Die globalen Konstanten sind in der folgenden Tabelle aufgelistet.  

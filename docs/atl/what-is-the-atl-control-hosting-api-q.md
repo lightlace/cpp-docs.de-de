@@ -16,35 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30b104e21259006da41c236c168431d85b43e0d4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2cc85c7ca47d5d1226ffc3089e01c0755ef6c6ac
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850552"
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>Was ist die ATL-Steuerelement-Hosting-API?
-ATL des Steuerelements hosting-API ist der Satz von Funktionen, die einem beliebigen Fenster fungieren als ActiveX-Steuerelement-Container ermöglicht. Diese Funktionen können statisch oder dynamisch in das Projekt eingebunden werden, da sie als Quellcode verfügbar sind und von ATL90.dll verfügbar gemacht werden. Das Hosten von Steuerelementen Funktionen werden in der folgenden Tabelle aufgeführt.  
+ATL des Steuerelement-hosting-API ist der Satz von Funktionen, die einem beliebigen Fenster, das als ein ActiveX-Steuerelementcontainer fungiert ermöglicht. Diese Funktionen können statisch oder dynamisch in Ihr Projekt verknüpft werden, da sie als Quellcode zur Verfügung stehen und von ATL90.dll verfügbar gemacht werden. Die Steuerelement-hosting-Funktionen sind in der folgenden Tabelle aufgeführt.  
   
 |Funktion|Beschreibung|  
 |--------------|-----------------|  
-|[AtlAxAttachControl](reference/composite-control-global-functions.md#atlaxattachcontrol)|Erstellt ein Hostobjekt, verbindet ihn mit dem bereitgestellten Fenster, und fügt ein vorhandenes Steuerelement.|  
-|[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)|Ein Objekt erstellt, wird eine Verbindung mit dem bereitgestellten Fenster und lädt dann ein Steuerelement.|  
-|[AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)|Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster, ähnlich wie [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol).|  
-|[AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)|Erstellt ein Objekt, stellt eine Verbindung mit dem bereitgestellten Fenster her und lädt dann ein Steuerelement (auch Ereignissenken um eingerichtet werden können).|  
-|[AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrollicex)|Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster, ähnlich wie [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic).|  
-|[AtlAxCreateDialog](reference/composite-control-global-functions.md#atlaxcreatedialog)|Erstellt ein nicht modales Dialogfeld aus einer Ressource, und gibt das Fensterhandle.|  
+|[AtlAxAttachControl](reference/composite-control-global-functions.md#atlaxattachcontrol)|Erstellt ein Objekt, mit dem bereitgestellten Fenster verbunden, und fügt ein vorhandenes Steuerelement.|  
+|[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)|Erstellt ein Objekt, mit dem bereitgestellten Fenster verbunden, und lädt dann ein Steuerelement.|  
+|[AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)|Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster ähnelt [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol).|  
+|[AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)|Erstellt ein Objekt, mit dem bereitgestellten Fenster verbunden und lädt dann ein Steuerelement (auch Ereignissenken um eingerichtet werden können).|  
+|[AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrollicex)|Erstellt ein lizenziertes ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster ähnelt [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic).|  
+|[AtlAxCreateDialog](reference/composite-control-global-functions.md#atlaxcreatedialog)|Erstellt ein nicht modales Dialogfeld aus einer Ressource, und gibt das Fensterhandle zurück.|  
 |[AtlAxDialogBox](reference/composite-control-global-functions.md#atlaxdialogbox)|Erstellt ein modales Dialogfeld aus einer Ressource an.|  
-|[AtlAxGetControl](reference/composite-control-global-functions.md#atlaxgetcontrol)|Gibt die **IUnknown** Schnittstellenzeiger des Steuerelements in einem Fenster gehostet.|  
-|[AtlAxGetHost](reference/composite-control-global-functions.md#atlaxgethost)|Gibt die **IUnknown** Schnittstellenzeiger, der das Hostobjekt in einem Fenster verbunden.|  
-|[AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit)|Initialisiert den Code zum Hosten von Steuerelementen an.|  
-|[AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm)|Hebt die Initialisierung des Codes zum Hosten von Steuerelementen.|  
+|[AtlAxGetControl](reference/composite-control-global-functions.md#atlaxgetcontrol)|Gibt die `IUnknown` Schnittstellenzeiger des Steuerelements in einem Fenster gehostet.|  
+|[AtlAxGetHost](reference/composite-control-global-functions.md#atlaxgethost)|Gibt die `IUnknown` Schnittstellenzeiger des Hostobjekts an ein Fenster verbunden.|  
+|[AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit)|Initialisiert den Steuerelement-hosting-Code.|  
+|[AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm)|Hebt die Initialisierung des Steuerelement-hosting-Codes.|  
   
- Die `HWND` Parameter in den ersten drei Funktionen müssen ein vorhandenes Fenster (fast) in einen beliebigen Typ sein. Wenn Sie jede dieser drei Funktionen explizit aufrufen (in der Regel wird nicht müssen), übergeben Sie ein Handle nicht an ein Fenster, das bereits als Host fungiert (Wenn Sie dies tun, das vorhandene Hostobjekt wird nicht freigegeben).  
+ Die `HWND` Parameter in der ersten drei Funktionen müssen ein vorhandenes Fenster (nahezu) in einen beliebigen Typ sein. Wenn Sie eine dieser drei Funktionen explizit aufrufen (in der Regel müssen Sie keine), übergeben Sie ein Handle nicht an ein Fenster, das bereits als Host fungiert (Wenn Sie dies tun, das vorhandene Hostobjekt wird nicht freigegeben werden).  
   
- Die ersten sieben Funktionen aufrufen [AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) implizit.  
+ Rufen Sie die ersten sieben Funktionen [AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) implizit.  
   
 > [!NOTE]
->  Die Steuerelement-hosting-API bildet die Grundlage für ATLs-Unterstützung für ActiveX-Steuerelementcontainern. Es ist jedoch in der Regel kaum Bedarf, die diese Funktionen direkt aufzurufen, wenn Sie nutzen oder ATL Wrapperklassen voll nutzen. Weitere Informationen finden Sie unter [die ATL-Klassen vereinfachen ActiveX-Steuerelementcontainern](which-atl-classes-facilitate-activex-control-containment-q.md).  
+>  Die Steuerelement-hosting-API bildet die Grundlage für ATLs-Unterstützung für ActiveX-Steuerelementcontainern. Es besteht jedoch in der Regel kaum Bedarf, diese Funktionen direkt aufzurufen, wenn Sie nutzen, oder ATLs-Wrapperklassen nutzen. Weitere Informationen finden Sie unter [der ATL-Klassen vereinfachen ActiveX-Steuerelementcontainern](which-atl-classes-facilitate-activex-control-containment-q.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zur steuerelementkapselung](which-atl-classes-facilitate-activex-control-containment-q.md)
+ [Steuerelementkapselung – häufig gestellte Fragen](which-atl-classes-facilitate-activex-control-containment-q.md)

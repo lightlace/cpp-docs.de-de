@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687451"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Verwenden von Lambdas, Function-Objekten und eingeschränkten Funktionen
 Der C++ AMP-Code, den Sie im Beschleuniger ausführen möchten wurde, als Argument in einem Aufruf der [Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) Methode. Als Argument können Sie einen Lambda-Ausdruck oder ein Funktionsobjekt (Funktionselement) verwenden. Zudem kann mit dem Lambdaausdruck oder dem Funktionsobjekt eine eingeschränkte C++ AMP-Funktion aufgerufen werden. In diesem Thema werden Lambdas, Funktionsobjekte und eingeschränkte Funktionen anhand eines Algorithmus zum Hinzufügen von Arrays veranschaulicht. Im folgenden Beispiel ist der Algorithmus ohne C++ AMP-Code dargestellt. Es werden zwei eindimensionale Arrays derselben Länge erstellt. Die entsprechenden ganzzahligen Elemente werden hinzugefügt und in einem dritten eindimensionalen Array gespeichert. C++ AMP wird nicht verwendet.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375062"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC-ActiveX-Steuerelement-Assistent
 Ein ActiveX-Steuerelement ist ein spezieller Typ einer [Automatisierungsservers](../../mfc/automation-servers.md); es ist eine wiederverwendbare Komponente sein. Die Anwendung, die ActiveX-Steuerelement ist die [Automatisierungsclient](../../mfc/automation-clients.md) dieses Steuerelements. Wenn Ihr Ziel ist eine solche wiederverwendbare Komponente zu erstellen, verwenden Sie diesen Assistenten, um das Steuerelement zu erstellen. Finden Sie unter [MFC-ActiveX-Steuerelemente](../../mfc/mfc-activex-controls.md) für Weitere Informationen.  

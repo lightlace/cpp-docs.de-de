@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a45779034534ce87bd6bd4f55dfda4985a36f01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9252e08fe672f111dcf2b289b1b12891022a318d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931086"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Umgehen des Serialisierungsmechanismus
 Wie Sie gesehen haben, bietet das Framework eine Standardmethode zum Lesen und Schreiben von Daten in und aus Dateien. Über ein Archivobjekt serialisieren passt die Anforderungen eine hervorragende vieler Anwendungen. Eine solche Anwendung liest eine Datei vollständig in den Arbeitsspeicher, ermöglicht dem Benutzer die Datei zu aktualisieren und dann die aktualisierte Version erneut auf den Datenträger schreibt.  
@@ -33,7 +34,7 @@ Wie Sie gesehen haben, bietet das Framework eine Standardmethode zum Lesen und S
   
  In diesen Fällen können Sie überschreiben die [Serialize](../mfc/reference/cobject-class.md#serialize) -Funktion in eine andere Möglichkeit, zu vermitteln, Dateiaktionen über einen [CFile](../mfc/reference/cfile-class.md) Objekt anstelle eines [CArchive](../mfc/reference/carchive-class.md) Objekt.  
   
- Können Sie die **öffnen**, **lesen**, **schreiben**, **schließen**, und `Seek` Memberfunktionen der Klasse `CFile` öffnen eine Datei , bewegen Sie den Dateizeiger (seek) zu einem bestimmten Zeitpunkt in der Datei liest einen Datensatz (eine angegebene Anzahl von Bytes) an diesem Punkt, den Datensatz aktualisieren zu lassen klicken Sie dann zu suchen, die denselben Zeitpunkt erneut aus und schreiben, die der Datensatz in die Datei zu sichern. Das Framework wird die Datei für Sie geöffnet, und können Sie die `GetFile` Memberfunktion der Klasse `CArchive` um einen Zeiger auf die `CFile` Objekt. Für anspruchsvollere, flexible verwenden, können Sie überschreiben die [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) und [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) Memberfunktionen der Klasse `CWinApp`. Weitere Informationen finden Sie in der Klasse [CFile](../mfc/reference/cfile-class.md) in der *MFC-Referenz*.  
+ Können Sie die `Open`, `Read`, `Write`, `Close`, und `Seek` Memberfunktionen der Klasse `CFile` um eine Datei zu öffnen, verschieben Sie den Dateizeiger (seek) zu einem bestimmten Zeitpunkt in der Datei ein Datensatz (eine angegebene Anzahl von Bytes lesen ) an diesem Punkt kann der Benutzer den Datensatz aktualisieren und dann erneut mit demselben Zeitpunkt seek und des Datensatzes zurück in die Datei schreiben. Das Framework wird die Datei für Sie geöffnet, und können Sie die `GetFile` Memberfunktion der Klasse `CArchive` um einen Zeiger auf die `CFile` Objekt. Für anspruchsvollere, flexible verwenden, können Sie überschreiben die [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) und [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) Memberfunktionen der Klasse `CWinApp`. Weitere Informationen finden Sie in der Klasse [CFile](../mfc/reference/cfile-class.md) in der *MFC-Referenz*.  
   
  In diesem Szenario die `Serialize` Außerkraftsetzung wird keine Aktion ausgeführt werden, es sei denn, Sie z. B., damit diese lesen und Schreiben eines Datei Headers an, um es auf dem neuesten Stand zu halten, wenn das Dokument geschlossen wird.  
   

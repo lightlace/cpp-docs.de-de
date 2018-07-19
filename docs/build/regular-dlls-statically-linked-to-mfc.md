@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383747"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Statisch mit MFC verknüpfte reguläre MFC-DLLs
 Eine reguläre MFC-DLL statisch mit MFC verknüpft wird, eine DLL, die MFC intern verwendet und von ausführbaren MFC oder MFC-Dateien können in der DLL exportierten Funktionen aufgerufen werden. Wie der Name beschrieben wird, wird diese Art von DLL erstellt mithilfe der static Link Library-Version von MFC. Funktionen sind in der Regel über reguläre MFC-DLL über die standard-C-Schnittstelle exportiert. Ein Beispiel zu schreiben, erstellen und eine reguläre MFC-DLL verwenden, finden Sie im Beispiel [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  

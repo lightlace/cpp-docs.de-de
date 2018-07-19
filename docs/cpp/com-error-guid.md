@@ -1,5 +1,5 @@
 ---
-title: _com_error::GUID | Microsoft Docs
+title: _com_error::GUID | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee1952e50251cfac7563357c7626ab8603589e4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e324a84a16874a7e33f8687943b1302fbdd73a7a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939025"
 ---
 # <a name="comerrorguid"></a>_com_error::GUID
 **Microsoft-spezifisch**  
   
- Aufrufe **IErrorInfo:: GetGuid** Funktion.  
+ Ruft die `IErrorInfo::GetGUID`-Funktion auf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,10 +37,10 @@ GUID GUID( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt das Ergebnis der **IErrorInfo:: GetGuid** für die **IErrorInfo** -Objekt erfasst wird, innerhalb der `_com_error` Objekt. Wenn kein **IErrorInfo** -Objekt erfasst wird, gibt es `GUID_NULL`.  
+ Gibt das Ergebnis des `IErrorInfo::GetGUID` für die `IErrorInfo` -Objekt erfasst wird, innerhalb der `_com_error` Objekt. Wenn kein `IErrorInfo` -Objekt erfasst wird, gibt Sie GUID_NULL zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Jeder Fehler beim Aufrufen der **IErrorInfo:: GetGuid** -Methode wird ignoriert.  
+ Jeder Fehler beim Aufrufen der `IErrorInfo::GetGUID` -Methode wird ignoriert.  
   
  **Ende Microsoft-spezifisch**  
   

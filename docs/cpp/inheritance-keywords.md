@@ -1,5 +1,5 @@
 ---
-title: Vererbungsschlüsselwörter | Microsoft Docs
+title: Vererbungsschlüsselwörter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1088a920e5d023e4dea78e55610bebc0f20c2bac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44cdb2b8149d2e8faf09ed715f96bc069620076b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943484"
 ---
 # <a name="inheritance-keywords"></a>Vererbungsschlüsselwörter
 **Microsoft-spezifisch**  
@@ -45,12 +46,12 @@ class [__virtual_inheritance] class-name;
   
  Dabei gilt:  
   
- *Klassenname*  
+ *Klassennamen*  
  Der Name der zu deklarierenden Klasse.  
   
  C++ ermöglicht es Ihnen, vor der Definition der Klasse einen Zeiger auf einen Klassenmember zu deklarieren. Zum Beispiel:  
   
-```  
+```cpp 
 class S;  
 int S::*p;  
 ```  
@@ -63,7 +64,7 @@ int S::*p;
   
 -   Mithilfe der [Pointers_to_members](../preprocessor/pointers-to-members.md) Pragma  
   
--   Mithilfe der Vererbungs-Schlüsselwörter `__single_inheritance`, `__multiple_inheritance` und `__virtual_inheritance`. Dieses Verfahren steuert das Vererbungsmodell auf Basis einer einzelnen Klasse.  
+-   Mithilfe der vererbungs-Schlüsselwörter **__single_inheritance**, **__multiple_inheritance**, und **__virtual_inheritance**. Dieses Verfahren steuert das Vererbungsmodell auf Basis einer einzelnen Klasse.  
   
     > [!NOTE]
     >  Wenn Sie stets einen Zeiger auf einen Member einer Klasse deklarieren, nachdem Sie die Klasse definiert haben, ist es nicht erforderlich, eine dieser Optionen zu verwenden.  
@@ -72,7 +73,7 @@ int S::*p;
   
  Wenn das obige Beispiel so geändert wird:  
   
-```  
+```cpp 
 class __single_inheritance S;  
 int S::*p;  
 ```  

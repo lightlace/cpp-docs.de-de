@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095114"
 ---
 # <a name="work-with-odbc-and-drivers"></a>Arbeiten mit ODBC und Treibern
 ODBC können Sie Anwendungen schreiben, die nicht nur eine Datenbank-Managementsystem (DBMS) abhängig sind. Sie können einer Anwendung, die ausgeführt werden, kann auf mehrere DBMS schreiben, für die Ihre Benutzer die richtigen DBMS-spezifische ODBC-Treiber besitzen.  

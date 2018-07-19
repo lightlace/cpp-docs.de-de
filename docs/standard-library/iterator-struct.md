@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd414e2e6f23cb2fe44e6de4b5f53b33ef3555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a399fa8a9f8fc9a73d75605f31245e42a2154b7c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963627"
 ---
 # <a name="iterator-struct"></a>iterator-Struktur
 
-Eine leere Basisstruktur wird verwendet, um sicherzustellen, dass eine benutzerdefinierte Iteratorklasse ordnungsgemäß mit **iterator_trait**s funktioniert.
+Eine leere Basisstruktur verwendet, um sicherzustellen, dass eine benutzerdefinierte iteratorklasse ordnungsgemäß mit funktioniert `iterator_trait`s.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +47,7 @@ Die Vorlagenstruktur wird als Basistyp für alle Iteratoren verwendet. Definiert
 
 - `iterator_category` (ein Synonym für den Vorlagenparameter `Category`).
 
-- `value_type` ( ein Synonym für den Vorlagenparameter **Type**).
+- `value_type` (ein Synonym für den Vorlagenparameter `Type`).
 
 - `difference_type` (ein Synonym für den Vorlagenparameter `Distance`).
 
@@ -56,7 +57,7 @@ Die Vorlagenstruktur wird als Basistyp für alle Iteratoren verwendet. Definiert
 
 - `reference` (ein Synonym für den Vorlagenparameter `Reference`).
 
-Beachten Sie, dass `value_type` kein konstanter Typ sein darf, auch wenn der **Zeiger** auf ein Objekt vom const-**Type** verweist und der Verweis ein Objekt vom const-**Type** kennzeichnet.
+Beachten Sie, dass `value_type` sollte sich nicht auf eine Konstanten Typs selbst wenn `pointer` verweist auf ein Objekt vom **const** `Type` und Verweis bezieht sich auf ein Objekt des **const** `Type`.
 
 ## <a name="example"></a>Beispiel
 

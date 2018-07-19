@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110440"
 ---
 # <a name="explicit-override-of-an-interface-member"></a>Explizites Überschreiben eines Schnittstellenmembers
 Die Syntax zum Deklarieren eines expliziten Überschreiben eines Schnittstellenmembers innerhalb einer Klasse wurde von Managed Extensions für C++ in Visual C++ geändert.  

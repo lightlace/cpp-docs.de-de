@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381760"
 ---
 # <a name="using-ccomboboxex"></a>Verwenden von CComboBoxEx
 Die erweiterten Kombinationsfeld-Steuerelement ist eine Erweiterung der standardmäßigen ein Kombinationsfeld-Steuerelement, das systemeigene Unterstützung für Elementbilder bereitstellt. Diese Images können verwendet werden, um den Status der einzelnen Elemente im Kombinationsfeld, z. B. die derzeit ausgewählte und nicht ausgewählte Elemente anzugeben. Damit Elementbilder leicht zugegriffen werden kann, enthält das Steuerelement Bildlisten unterstützt.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372866"
 ---
 # <a name="dumping-delay-loaded-imports"></a>Sichern von verzögert geladenen Importen
 Verzögert geladene Importe können mit gesicherte [Dumpbin/Imports](../../build/reference/imports-dumpbin.md) und als Standard importiert mit leicht unterschiedliche Informationen angezeigt. Sie werden in einem eigenen Bereich der-Sicherung getrennt und explizit als verzögert geladene Importe gekennzeichnet sind. Wenn Entladen von Informationen in das Bild vorhanden ist, wird dies vermerkt. Bindungsinformationen vorhanden ist, wird der Datums-/Zeitstempel der Ziel-DLL zusammen mit den gebundenen Adressen des Imports vermerkt.  

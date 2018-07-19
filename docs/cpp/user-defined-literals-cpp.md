@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Literale (C++) | Microsoft Docs
+title: Benutzerdefinierte Literale (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbbe3819d2271db85696825d82ba26335e380163
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 835f56498d3bc19f0b31ea9047f2e76d955183f4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943279"
 ---
 # <a name="user-defined-literals--c"></a>Benutzerdefinierte Literale (C++)
 Es gibt fünf Hauptkategorien von Literalen: Integer, Zeichendaten, Gleitkommazahlen, Zeichenfolge, boolescher Wert und Zeiger.  Ab C++ 11 können Sie eigene Literale basierend auf diesen Kategorien definieren, um syntaktische Verknüpfungen für allgemeine Idiome und eine höhere Typsicherheit bereitzustellen. Beispielsweise angenommen, Sie verfügen über eine Distanz-Klasse. Sie könnten ein Literal für Kilometer und ein anderes für Meilen definieren und den Benutzern empfehlen, die Maßeinheiten explizit anzugeben: Auto d = 42.0_km oder Auto d = 42.0_mi. Es gibt keine Leistungsvorteile oder Nachteile durch benutzerdefinierte Literale. Sie werden in erster Linie zur Vereinfachung oder für die Typableitung bei der Kompilierung genutzt. Die Standardbibliothek hat benutzerdefinierte Literale für Std: String, Std:: Complex und Einheiten in der Zeit und Dauer von Vorgängen in der \<Chrono >-Header:  
   
-```  
+```cpp 
 Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)  
     std::string str = "hello"s + "World"s;  // Standard Library <string> UDL  
     complex<double> num =   
@@ -32,7 +33,7 @@ Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
 ## <a name="user-defined-literal-operator-signatures"></a>Benutzerdefinierte Literaloperatorsignaturen  
  Sie implementieren ein benutzerdefiniertes Literal durch Definieren von `operator""` im Namespacebereich mit einem der folgenden Formate:  
   
-```  
+```cpp 
 ReturnType operator "" _a(unsigned long long int);   // Literal operator for user-defined INTEGRAL literal  
 ReturnType operator "" _b(long double);              // Literal operator for user-defined FLOATING literal  
 ReturnType operator "" _c(char);                     // Literal operator for user-defined CHARACTER literal  
@@ -50,11 +51,11 @@ template<char...> ReturnType operator "" _t();       // Literal operator templat
  Die Operatornamen im vorherigen Beispiel sind Platzhalter für die von Ihnen bereitgestellten Namen. Der führende Unterstrich ist jedoch erforderlich. (Nur die Standardbibliothek darf Literale ohne Unterstrich definieren.) Im Rückgabetyp passen Sie die Konvertierung oder einen anderen Vorgang an, der vom Literal ausgeführt wird. Alle diese Operatoren können auch `constexpr` definiert werden.  
   
 ## <a name="cooked-literals"></a>Verarbeitete Literale  
- Im Quellcode ist jedes Literal, ob benutzerdefiniert oder nicht, im Grunde eine Sequenz von alphanumerischen Zeichen, z. B. `101` oder `54.7` oder `"hello"` oder `true`. Der Compiler interpretiert die Sequenz eine ganze Zahl, "Float" const Char\* Zeichenfolge ein, und So weiter. Ein benutzerdefiniertes Literal, das als Eingabe akzeptiert, was geben, dass den Compiler dem Literalwert zugewiesen wird informell als bezeichnet eine *verarbeitete Literal*. Alle ober aufgeführten Operatoren außer `_r` und `_t` sind verarbeitete Literale. Beispielsweise würde ein Literal `42.0_km` an einen Operator mit dem Namen _km gebunden, der eine Signatur ähnlich _b hat, und das Literal `42_km` an einen Operator mit einer Signatur ähnlich _a gebunden.  
+ Im Quellcode ist jedes Literal, ob benutzerdefiniert oder nicht, im Grunde eine Sequenz von alphanumerischen Zeichen, z. B. `101` oder `54.7` oder `"hello"` oder `true`. Der Compiler interpretiert die Sequenz als ein Integer, Float, const Char\* Zeichenfolge usw. Ein benutzerdefiniertes Literal, das als Eingabe akzeptiert, was den Compiler dem Literalwert zugewiesen geben wird informell als bezeichnet ein *verarbeitete Literal*. Alle ober aufgeführten Operatoren außer `_r` und `_t` sind verarbeitete Literale. Beispielsweise würde ein Literal `42.0_km` an einen Operator mit dem Namen _km gebunden, der eine Signatur ähnlich _b hat, und das Literal `42_km` an einen Operator mit einer Signatur ähnlich _a gebunden.  
   
  Das folgende Beispiel zeigt, wie benutzerdefinierte Literale Aufrufer zu einer expliziten Eingabe auffordern können. Zum Erstellen der `Distance` muss der Benutzer explizit Kilometer oder Meilen mit den entsprechenden benutzerdefinierten Literalzeichen angeben. Natürlich können Sie das gleiche Ergebnis auch auf andere Weise erreichen, aber benutzerdefinierte Literale sind weniger aufwändig als die Alternativen.  
   
-```  
+```cpp 
 struct Distance  
 {  
 private:  
@@ -102,12 +103,12 @@ int main(int argc, char* argv[])
 }  
 ```  
   
- Beachten Sie, dass die Literalzahl eine Dezimalstelle enthalten muss, da andernfalls die Zahl als Ganzzahl interpretiert werden würde, was mit dem Operator nicht kompatibel wäre. Beachten Sie außerdem, dass bei der Eingabe von Gleitkommazahlen der Typ `long double` und bei Ganzzahlen `long long` sein muss.  
+ Beachten Sie, dass die Literalzahl eine Dezimalstelle enthalten muss, da andernfalls die Zahl als Ganzzahl interpretiert werden würde, was mit dem Operator nicht kompatibel wäre. Beachten Sie außerdem, dass für die Eingabe von Gleitkommazahlen der Typ muss **long double**, und für ganzzahlige Typen muss **long long**.  
   
 ## <a name="raw-literals"></a>Unformatierte Literale  
  Bei unformatierten benutzerdefinierte Literalen akzeptiert der von Ihnen definierte Operator das Literal als Sequenz von Char-Werten. Es liegt bei Ihnen diese Sequenz als eine Zahl, Zeichenfolge oder einen anderen Typ zu interpretieren. Aus der zuvor auf dieser Seite aufgeführten Liste von Operatoren können `_r` und `_t` zum Definieren von unformatierten Literalen verwendet werden:  
   
-```  
+```cpp 
 ReturnType operator "" _r(const char*);              // Raw literal operator  
 template<char...> ReturnType operator "" _t();       // Literal operator template  
 ```  
@@ -119,7 +120,7 @@ template<char...> ReturnType operator "" _t();       // Literal operator templat
 ### <a name="limitations-of-raw-literals"></a>Einschränkungen von unformatierten Literalen  
  Der unformatierte Literaloperator und die Vorlage für den Literaloperator funktionieren nur für Ganzzahl- und Gleitkommatypen benutzerdefinierter Literale, wie im folgenden Beispiel gezeigt:  
   
-```  
+```cpp 
 #include <cstddef>  
 #include <cstdio>  
   

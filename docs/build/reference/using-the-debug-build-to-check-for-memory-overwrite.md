@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376692"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Verwenden des Debugbuilds zur Suche nach Speicherüberschreibungen
 Sie müssen Ihr Projekt für das Debuggen neu, um das Debugbuild verwenden, um nach speicherüberschreibungen zu überprüfen, erstellen. Wechseln Sie anschließend an den Anfang Ihrer Anwendung `InitInstance` Funktion, und fügen Sie die folgende Zeile hinzu:  

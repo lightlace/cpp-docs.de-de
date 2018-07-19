@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381692"
 ---
 # <a name="servers-implementing-a-server"></a>Server: Implementieren eines Servers
 Dieser Artikel beschreibt den Code, den die MFC-Anwendungs-Assistent für eine visuelle Bearbeitung Server erstellt. Wenn Sie den Anwendungsassistenten nicht verwenden, führt in diesem Artikel die Bereiche, in dem Sie Code zum Implementieren einer Serveranwendung schreiben müssen.  

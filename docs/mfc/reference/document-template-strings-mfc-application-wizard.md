@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d6039459eed097af5e927c4bd2f30d3e7c3c4bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32d684d7b9b5f8057893d79b864be7b6d9b512fc
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122195"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Zeichenfolgen für Dokumentvorlagen, MFC-Anwendungs-Assistent
 Bereitstellen Sie auf dieser Seite des Assistenten für MFC-Anwendung, oder verfeinern Sie die folgenden Optionen zum Dokumentverwaltungsfunktionen und Lokalisierung zu verbessern. Zeichenfolgen für Dokumentvorlagen stehen für Anwendungen mit **Unterstützung der Dokument-/Ansichtarchitektur-Architektur** in der [Anwendungstyp](../../mfc/reference/application-type-mfc-application-wizard.md). Sie sind nicht verfügbar für Dialogfelder. Da die meisten Zeichenfolgen für Dokumentvorlagen sichtbar sind und von den Benutzern der Anwendung verwendet werden, sind sie in lokalisiert die **Ressourcensprache** gemäß der **"Anwendung"** Seite des Assistenten.  
@@ -42,7 +43,7 @@ Bereitstellen Sie auf dieser Seite des Assistenten für MFC-Anwendung, oder verf
 |**Hauptrahmens**|Legt den Text am oberen Rand der Hauptanwendungsrahmen angezeigt. Standardmäßig den Namen des Projekts.|  
 |**Name des Dokumenttyps**|Identifiziert den Typ des Dokuments unter dem ein Dokument von der Anwendung gruppiert werden kann. Standardmäßig den Namen des Projekts. Ändern Sie die Standardeinstellung ändert sich nicht auf alle anderen Optionen in diesem Dialogfeld.|  
 |**Name des Filters**|Legt den Namen, den Ihre Benutzer zum Suchen von Dateien mit dem Dateityp angeben können. Diese Option ist verfügbar, von der **Dateityp** und **Dateityp** Optionen in den standardmäßigen Windows **öffnen** und **Dateityp** Dialogfelder. Vom Standardwert, der Projektname plus Dateien, gefolgt von der Erweiterung in **Dateierweiterung**. Wenn Ihr Projekt Widget Namen und die Erweiterung der Ausgabedatei lautet .wgt, z. B. die **Filtername** Widget-Dateien (*.wgt) in der Standardeinstellung ist.|  
-|**Neue kurze Dateinamen**|Legt den Namen in das Windows-Standarddialogfeld `New` (Dialogfeld), wenn mehr als ein neues Dokumentvorlage vorhanden ist. Wenn Ihre Anwendung ist ein [Automatisierungsservers](../../mfc/automation-servers.md), dieser Name wird verwendet, als den Kurznamen der Ihr Automation-Objekt. Standardmäßig den Namen des Projekts.|  
+|**Neue kurze Dateinamen**|Legt den Namen in das Windows-Standarddialogfeld **neu** (Dialogfeld), wenn mehr als ein neues Dokumentvorlage vorhanden ist. Wenn Ihre Anwendung ist ein [Automatisierungsservers](../../mfc/automation-servers.md), dieser Name wird verwendet, als den Kurznamen der Ihr Automation-Objekt. Standardmäßig den Namen des Projekts.|  
 |**Lange Dateinamen für Typ**|Legt den Dateinamen für den Typ in der systemregistrierung fest. Wenn Ihre Anwendung eines Automatisierungsservers ist, wird dieser Name als den langen Namen für das Automatisierungsobjekt verwendet. Standardmäßig den Namen des Projekts plus. Dokument.|  
   
 ## <a name="see-also"></a>Siehe auch  

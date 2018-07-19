@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383549"
 ---
 # <a name="using-cstatusbarctrl"></a>Verwenden von CStatusBarCtrl
 Sie können das StatusBar-Steuerelement ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) beim Erstellen eines Steuerelementfensters, die verschiedene Arten von Statusinformationen zur Anwendung wiedergibt. Das Statusfenster kann in Teile aufgeteilt werden, in denen mehr als eine Art von Informationen angezeigt.  

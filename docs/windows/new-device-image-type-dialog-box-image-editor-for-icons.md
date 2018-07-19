@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879619"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Neue &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (Bildbearbeitung für Symbole)
 Ermöglicht Ihnen die Erstellung ein neuen Gerätebildes eines angegebenen Typs. So öffnen die **neu \<Gerät > Image** (Dialogfeld), klicken Sie auf **Neuer Bildtyp** auf der **Image** im Menü.  

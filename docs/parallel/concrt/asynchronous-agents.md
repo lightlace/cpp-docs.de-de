@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687978"
 ---
 # <a name="asynchronous-agents"></a>Asynchrone Agents
 Ein *asynchronen Agents* (oder einfach *Agent*) ist eine Anwendungskomponente, die asynchron mit anderen Agents, um größere Rechenaufgaben zu lösen. Denken Sie als eine Aufgabe, die einen festgelegten Lebenszyklus eines Agents. Ein Agent kann beispielsweise lesen, Daten aus einer Eingabe-/Ausgabegerät (z. B. der Tastatur, eine Datei auf dem Datenträger oder eine Netzwerkverbindung) und einen weiteren Agent Aktion für diese Daten ausführen können, sobald sie verfügbar sind. Der erste Agent verwendet Meldungsübergabe, um dem zweiten Agent zu informieren, dass mehr Daten verfügbar ist. Taskplaners der Concurrency Runtime stellt einen effizienten Mechanismus zum Aktivieren des Agents blockieren und Zurückhalten kooperativ ohne Unterbrechung weniger effizient.  

@@ -1,5 +1,5 @@
 ---
-title: Willkommen zurück bei C++ (Modern C++) | Microsoft Docs
+title: Willkommen zurück bei C++ (Modern C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939376"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Willkommen zurück bei C++ (Modern C++)
 C++ ist eine der am häufigsten verwendeten Programmiersprachen der Welt. Gut geschriebene C++-Programme sind schnell und effizient. Die Sprache ist flexibler als andere Sprachen, da sie verwendet werden kann, um eine breite Palette von Apps zu erstellen: lustige und aufregende Spiele, leistungsstarke wissenschaftliche Software, Gerätetreiber, eingebettete Programme und Windows-Clientapps. Seit mehr als 20 Jahren wird C++ zum Lösen von Problemen wie dieser und vieler anderer. Ihnen ist möglicherweise nicht bekannt, dass eine zunehmende Anzahl von C++-Programmierern sich von der uneleganten Programmierung im C-Stil von einst abgewandt haben, hin zu einem modernen C++.  
@@ -31,19 +32,19 @@ C++ ist eine der am häufigsten verwendeten Programmiersprachen der Welt. Gut ge
   
 -   Intelligente Zeiger anstelle von unformatierten Zeigern.  
   
--   `std::string` und `std::wstring` Typen (siehe [ \<Zeichenfolge >](../standard-library/string.md)) anstelle von unformatierten `char[]` Arrays.  
+-   `std::string` und `std::wstring` Typen (finden Sie unter [ \<Zeichenfolge >](../standard-library/string.md)) anstelle von unformatierten `char[]` Arrays.  
   
--   [C++-Standardbibliothek](../standard-library/cpp-standard-library-header-files.md) -Container wie `vector`, `list`, und `map` anstelle von unformatierten Arrays oder benutzerdefinierten Containern. Finden Sie unter [ \<Vektor >](../standard-library/vector.md), [ \<Liste >](../standard-library/list.md), und [ \<Zuordnung >](../standard-library/map.md).  
+-   [C++-Standardbibliothek](../standard-library/cpp-standard-library-header-files.md) -Container wie `vector`, `list`, und `map` anstelle von unformatierten Arrays oder benutzerdefinierten Containern. Finden Sie unter [ \<Vektor >](../standard-library/vector.md), [ \<Liste >](../standard-library/list.md), und [ \<Map >](../standard-library/map.md).  
   
--   C++-Standardbibliothek [Algorithmen](../standard-library/algorithm.md) anstelle von manuell codierten verfügen.  
+-   C++-Standardbibliothek [Algorithmen](../standard-library/algorithm.md) anstelle von manuell codierten solche.  
   
 -   Ausnahmen zum Melden und Behandeln von Fehlerzuständen.  
   
--   Sperrenfreie Kommunikation zwischen Threads, die mit C++-Standardbibliothek `std::atomic<>` (finden Sie unter [ \<atomic >](../standard-library/atomic.md)) anstelle von anderen Mechanismen für die Kommunikation zwischen Threads.  
+-   Sperrenfreie Kommunikation zwischen Threads mithilfe C++-Standardbibliothek `std::atomic<>` (finden Sie unter [ \<atomic >](../standard-library/atomic.md)) anstelle von anderen Mechanismen für die Kommunikation zwischen Threads.  
   
 -   Inline [Lambda-Funktionen](../cpp/lambda-expressions-in-cpp.md) anstelle von kleinen separat implementierten Funktionen.  
   
--   Bereichsbasierte for-Schleifen, unter Umständen stabiler Schleifen zu schreiben, die Auflistungen in der Form mit Arrays, C++-Standardbibliothek Containern und Windows-Runtime arbeiten `for ( for-range-declaration : expression )`. Dies ist ein Bestandteil der Kernsprachunterstützung. Weitere Informationen finden Sie unter [bereichsbasiert für Anweisung (C++)](../cpp/range-based-for-statement-cpp.md).  
+-   Bereichsbasierte for-Schleifen robustere Schleifen schreiben, die Arbeit mit Arrays, C++-Standardbibliothek-Containern und Windows-Runtime-Auflistungen in der Form `for ( for-range-declaration : expression )`. Dies ist ein Bestandteil der Kernsprachunterstützung. Weitere Informationen finden Sie unter [bereichsbasiert für Anweisung (C++)](../cpp/range-based-for-statement-cpp.md).  
   
  Die Programmiersprache C++ selbst hat sich auch entwickelt. Vergleichen Sie die folgenden Codeausschnitte. In diesem Ausschnitt wird ursprünglicher C++-Code verwendet:  
   
@@ -101,9 +102,9 @@ void f()
 
 ```
 
- In modernem C++ ist die Verwendung der Ausnahmebehandlung "neu/löschen" oder "explizit" nicht erforderlich, da Sie statt dessen intelligente Zeiger nutzen können. Bei Verwendung der `auto` typableitung und [Lambda-Funktion](../cpp/lambda-expressions-in-cpp.md), können Sie Code schneller, schreiben, kompakter und ihn besser verstehen. Und eine bereichsbasierte `for` Schleife ist, Bereinigung, einfacher zu verwenden und weniger anfällig für unbeabsichtigte Fehler als eine C-Stil `for` Schleife. Sie können Bausteine mit minimalen Codezeilen verbinden, um die App zu schreiben. Außerdem können Sie diesen Code ausnahme- und arbeitsspeichersicher erstellen und haben keinen Zuordnungs-/Freigabe- oder Fehlercodes zu verarbeiten.  
+ In modernem C++ ist die Verwendung der Ausnahmebehandlung "neu/löschen" oder "explizit" nicht erforderlich, da Sie statt dessen intelligente Zeiger nutzen können. Bei Verwendung der **automatisch** typableitung und [Lambda-Funktion](../cpp/lambda-expressions-in-cpp.md), Sie können Code schneller und schreiben. soll sie festgezogen und ihn besser verstehen. Und eine bereichsbasierte **für** Schleife ist sauberer, einfacher zu verwenden und weniger anfällig für unbeabsichtigte Fehler als eine C-Stil **für** Schleife. Sie können Bausteine mit minimalen Codezeilen verbinden, um die App zu schreiben. Außerdem können Sie diesen Code ausnahme- und arbeitsspeichersicher erstellen und haben keinen Zuordnungs-/Freigabe- oder Fehlercodes zu verarbeiten.  
   
- Modernes C++ enthält zwei Arten von Polymorphie: Kompilierzeit, durch Vorlagen, und Laufzeit, durch Vererbung und Virtualisierung. Sie können die beiden Polymorphiearten mit großer Wirkungen kombinieren. Die C++-Standardbibliothek Vorlage `shared_ptr` interne virtuelle Methoden zum Erreichen der anscheinend mühelosen typlöschung verwendet. Doch überbeanspruchen Sie die Virtualisierung für Polymorphie nicht, wenn eine Vorlage die bessere Wahl ist. Vorlagen können sehr leistungsstark sein.  
+ Modernes C++ enthält zwei Arten von Polymorphie: Kompilierzeit, durch Vorlagen, und Laufzeit, durch Vererbung und Virtualisierung. Sie können die beiden Polymorphiearten mit großer Wirkungen kombinieren. Die C++-Standardbibliothek-Vorlage `shared_ptr` interne virtuelle Methoden zum Erreichen der anscheinend mühelosen typlöschung verwendet. Doch überbeanspruchen Sie die Virtualisierung für Polymorphie nicht, wenn eine Vorlage die bessere Wahl ist. Vorlagen können sehr leistungsstark sein.  
   
  Wenn Sie von einer anderen Sprache her zu C++ kommen, insbesondere bei einer verwalteten Sprache mit größtenteils Verweistypen und nur wenigen Werttypen, wissen Sie, dass C++-Klassen standardmäßig Werttypen sind. Sie können sie allerdings als Verweistypen angeben, um polymorphes Verhalten zu ermöglichen, das objektorientierte Programmierung unterstützt. Eine hilfreiche Sichtweise: Bei Werttypen geht es mehr um Arbeitsspeicher und Layoutsteuerung, bei Verweistypen geht es dagegen mehr um Basisklassen und virtuelle Funktionen zur Unterstützung von Polymorphie. Standardmäßig können Werttypen kopiert werden. Sie verfügen jeweils über einen Kopierkonstruktor und ein Kopierzuweisungsoperator. Bei der Angabe eines Verweistyps darf die Klasse nicht kopiert werden können. Deaktivieren Sie den Kopierkonstruktor und den Kopierzuweisungsoperator und verwenden Sie einen virtuellen Destruktor, der Polymorphie unterstützt. Bei Werttypen geht es außerdem um die Inhalte, von denen, wenn sie kopiert werden, zwei unabhängige Werte zugewiesen werden, die getrennt geändert werden können. Bei Referenztypen geht es allerdings um Identität (welche Art von Objekt es ist). Aus diesem Grund werden sie manchmal als polymorphe Typen bezeichnet.  
   
@@ -135,10 +136,10 @@ void f()
   
 -   [Portabilität an ABI-Grenzen](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- Weitere Informationen finden Sie im StackOverflow-Artikel [welche C++-Idiome in C ++ 11 veraltet sind](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ Weitere Informationen finden Sie im StackOverflow-Artikel [welche C++-Idiome in C ++ 11 als veraltet markiert werden](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
 ## <a name="see-also"></a>Siehe auch  
- [C++-Sprachreferenz](../cpp/cpp-language-reference.md)   
+ [C++ Language Reference (C++-Programmiersprachenreferenz)](../cpp/cpp-language-reference.md)   
  [Lambda-Ausdrücke](../cpp/lambda-expressions-in-cpp.md)   
  [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)  
  [Visual C++-Sprachkonformität](../visual-cpp-language-conformance.md)  

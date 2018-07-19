@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369051"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Gewusst wie: Einbetten eines Manifests in eine C/C++-Anwendung
 Es wird empfohlen, dass eine C/C++-Anwendung (oder eine Bibliothek) ist das Manifest in die endgültige Binärdatei eingebettet werden, da so gewährleistet ist richtig Laufzeitverhalten in den meisten Szenarien. Standardmäßig [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] versucht, die das Manifest einbetten, wenn sie ein Projekt aus Quelldateien erstellt; finden Sie unter [Manifesten in Visual Studio](../build/manifest-generation-in-visual-studio.md) für Weitere Informationen. Wenn eine Anwendung mithilfe von Nmake erstellt wird, sind jedoch einige Änderungen an vorhandenen Makefile erforderlich. Dieser Abschnitt veranschaulicht das Ändern von vorhandenen Makefiles um automatisch das Manifest in die endgültige Binärdatei eingebettet.  

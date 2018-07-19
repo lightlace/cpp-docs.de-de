@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169685"
 ---
 # <a name="compiler-error-c2140"></a>Compilerfehler C2140
 'Typ': ein Typ, der einen generischen Typparameter abhängig ist, ist nicht als Argument für das systeminterne Typmerkmal 'Merkmal' des Compilers zulässig  

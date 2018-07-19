@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33867102"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Zuordnungen für generischen Text in Tchar.h
 Um die Codeübertragung für internationale Anwendungen zu vereinfachen, stellt die [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-Laufzeitbibliothek [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-spezifische Zuordnungen für generischen Text für viele Datentypen, Routinen und andere Objekte zur Verfügung. Mit diesen Zuordnungen, die in Tchar.h definiert sind, können Sie generischen Code schreiben, der für Einzelbyte-, Mehrbyte- oder [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]-Zeichensätze kompiliert werden kann, abhängig von einer eindeutigen Konstante, die Sie mithilfe einer `#define`-Anweisung definieren. Zuordnungen für generischen Text sind [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-Erweiterungen, die nicht [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]-kompatibel sind.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358689"
 ---
 # <a name="inserting-a-composite-control"></a>Einfügen eines zusammengesetzten Steuerelements
 Die **Klasse hinzufügen** Dialogfeld können Sie ein ATL-Objekt in ein Projekt einfügen. Auf dieses Dialogfeld zugreifen, indem Sie mit der rechten Maustaste im Projektmappen-Explorer auf des Projektnamen **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.  

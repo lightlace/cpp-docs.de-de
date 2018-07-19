@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093895"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Verwenden von Datenbankklassen ohne Dokumente und Ansichten
 In einigen Fällen können Sie nicht das Framework Dokument-/Ansichtarchitektur in datenbankanwendungen verwenden möchten. In diesem Thema wird Folgendes erläutert:  

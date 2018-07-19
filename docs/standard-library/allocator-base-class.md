@@ -48,11 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c078933ad35cff1a52de433b1ae5d321db1985c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f27cb2bc1a711b77006fa496cc080f546e539ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962454"
 ---
 # <a name="allocatorbase-class"></a>allocator_base-Klasse
 
@@ -69,8 +70,8 @@ class allocator_base
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Type`|Der Elementtyp, die durch die Zuweisung zugeordnet wird.|
-|`Sync`|Die Synchronisierungsrichtlinie für die Zuweisung: [sync_none-Klasse](../standard-library/sync-none-class.md), [sync_per_container-Klasse](../standard-library/sync-per-container-class.md), [sync_per_thread-Klasse](../standard-library/sync-per-thread-class.md) oder [sync_shared-Klasse](../standard-library/sync-shared-class.md).|
+|*Type*|Der Elementtyp, die durch die Zuweisung zugeordnet wird.|
+|*Synchronisierung*|Die Synchronisierungsrichtlinie für die Zuweisung: [sync_none-Klasse](../standard-library/sync-none-class.md), [sync_per_container-Klasse](../standard-library/sync-per-container-class.md), [sync_per_thread-Klasse](../standard-library/sync-per-thread-class.md) oder [sync_shared-Klasse](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -94,14 +95,14 @@ class allocator_base
 
 |Member-Funktion|Beschreibung|
 |-|-|
-|[_Charalloc](#charalloc)|Ordnet einem Array des Typs `char` Speicherplatz zu.|
-|[_Chardealloc](#chardealloc)|Gibt für das Array mit Elementen vom Typ `char` Speicherplatz frei.|
+|[_Charalloc](#charalloc)|Belegt Speicher für ein Array vom Typ **Char**.|
+|[_Chardealloc](#chardealloc)|Speicherplatz für das Array mit Elementen des Typs frei **Char**.|
 |[address](#address)|Sucht die Adresse eines Objekts, dessen Wert angegeben wird.|
 |[allocate](#allocate)|Ordnet einen Speicherblock zu, der groß genug ist, um mindestens eine angegebene Anzahl von Elementen zu speichern.|
 |[construct](#construct)|Erstellt eine bestimmte Art von Objekt an einer bestimmten Adresse, die mit einem angegebenen Wert initialisiert wird.|
 |[deallocate](#deallocate)|Gibt eine angegebene Anzahl von Objekten im Speicher frei, beginnend an einer angegebenen Position.|
 |[destroy](#destroy)|Ruft einen Objektdestruktor auf, ohne die Zuordnung des Speicherplatzes aufzuheben, an dem Objekt gespeichert wurde.|
-|[max_size](#max_size)|Gibt die Anzahl der Elemente vom Typ `Type` zurück, die von einem Objekt der Klassenzuweisung zugeordnet werden konnten, bevor der freie Speicherplatz verbraucht ist.|
+|[max_size](#max_size)|Gibt die Anzahl der Elemente vom Typ *Type* zurück, die von einem Objekt der Klassenzuweisung zugeordnet werden konnten, bevor der freie Speicherplatz verbraucht ist.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -111,7 +112,7 @@ class allocator_base
 
 ## <a name="charalloc"></a> allocator_base::_Charalloc
 
-Ordnet einem Array des Typs `char` Speicherplatz zu.
+Belegt Speicher für ein Array vom Typ **Char**.
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -121,7 +122,7 @@ char *_Charalloc(size_type count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`count`|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*count*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -133,7 +134,7 @@ Diese Memberfunktion wird von Containers verwendet, wenn sie mit einem Compiler 
 
 ## <a name="chardealloc"></a> allocator_base::_Chardealloc
 
-Gibt für das Array mit Elementen vom Typ `char` Speicherplatz frei.
+Speicherplatz für das Array mit Elementen des Typs frei **Char**.
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -143,8 +144,8 @@ void _Chardealloc(void* ptr, size_type count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
-|`count`|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
+|*ptr*|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
+|*count*|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -162,7 +163,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parameter
 
-`val` Der Konstante oder nonconst Wert des Objekts, dessen Adresse gesucht wird.
+*Val* der Konstante oder nicht konstante Wert des Objekts, dessen Adresse gesucht wird ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -187,8 +188,8 @@ pointer allocate(size_type _Nx);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`_Nx`|Die Anzahl der zuzuweisenden Elemente des Arrays.|
-|`_Hint`|Dieser Parameter wird ignoriert.|
+|*_Nx*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*_Hint*|Dieser Parameter wird ignoriert.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -213,7 +214,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`right`|Das zu kopierende Zuweisungsobjekt.|
+|*right*|Das zu kopierende Zuweisungsobjekt.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -247,8 +248,8 @@ void construct(pointer ptr, const Type& val);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger auf den Speicherort, in dem das Objekt erstellt werden soll.|
-|`val`|Der Wert, mit dem das zu erstellende Objekt initialisiert werden soll.|
+|*ptr*|Ein Zeiger auf den Speicherort, in dem das Objekt erstellt werden soll.|
+|*val*|Der Wert, mit dem das zu erstellende Objekt initialisiert werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -266,8 +267,8 @@ void deallocate(pointer ptr, size_type _Nx);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
-|`_Nx`|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
+|*ptr*|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
+|*_Nx*|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -285,7 +286,7 @@ void destroy(pointer ptr);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger, der die Adresse des zu zerstörenden Objekts angibt.|
+|*ptr*|Ein Zeiger, der die Adresse des zu zerstörenden Objekts angibt.|
 
 ### <a name="remarks"></a>Hinweise
 

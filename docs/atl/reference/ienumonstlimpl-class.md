@@ -1,5 +1,5 @@
 ---
-title: IEnumOnSTLImpl Klasse | Microsoft Docs
+title: IEnumOnSTLImpl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1de4bdd0d07e694303f850d6298d77afe3322214
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b70e8012d6126b39129cff6fc86366f72459dc02
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883007"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl-Klasse
 Diese Klasse definiert eine Enumeratorschnittstelle, die auf Grundlage einer C++-Standardbibliothek-Auflistung.  
@@ -43,20 +44,20 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `Base`  
- Eine COM-Enumerator ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) Schnittstelle.  
+ *Basis*  
+ Eine COM-Enumerators ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) Schnittstelle.  
   
- `piid`  
+ *piid*  
  Ein Zeiger auf die Schnittstellen-ID der Enumeratorschnittstelle.  
   
- `T`  
+ *T*  
  Der Typ des Elements, die von der Enumeratorschnittstelle verfügbar gemacht werden.  
   
- `Copy`  
+ *Kopieren*  
  Ein [kopieren Richtlinienklasse](../../atl/atl-copy-policy-classes.md).  
   
- `CollType`  
- Eine C++-Standardbibliothek Container-Klasse.  
+ *CollType*  
+ Eine C++-Standardbibliothek-Container-Klasse.  
   
 ## <a name="members"></a>Member  
   
@@ -74,19 +75,19 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IEnumOnSTLImpl::m_iter](#m_iter)|Der Iterator, der aktuellen Position des Enumerators, in der Auflistung darstellt.|  
-|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|Ein Zeiger auf die C++-Standardbibliothek Container enthalten die Elemente aufgelistet werden sollen.|  
-|[IEnumOnSTLImpl::m_spUnk](#m_spunk)|Die **IUnknown** Zeiger, der das Objekt die Auflistung bereitstellen.|  
+|[IEnumOnSTLImpl::m_iter](#m_iter)|Der Iterator, der die Position des Enumerators aktuelle in der Auflistung darstellt.|  
+|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|Ein Zeiger auf den C++-Standardbibliothek-Container enthält die Elemente aufgelistet werden sollen.|  
+|[IEnumOnSTLImpl::m_spUnk](#m_spunk)|Die `IUnknown` Zeiger, der das Objekt, das die Sammlung angeben.|  
   
 ## <a name="remarks"></a>Hinweise  
- `IEnumOnSTLImpl` Stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem C++-Standard-Bibliothek-kompatiblen Container gespeichert werden. Diese Klasse ist analog zu den [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) Klasse, die eine Implementierung für eine Enumeratorschnittstelle bereitstellt, basierend auf einem Array.  
+ `IEnumOnSTLImpl` Stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem C++-Standard-Bibliothek-kompatible Container gespeichert werden. Diese Klasse ist analog zu den [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) -Klasse, die eine Implementierung für eine Enumeratorschnittstelle bereitstellt, basierend auf einem Wertearray.  
   
 > [!NOTE]
 >  Finden Sie unter [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init) Weitere Informationen zu weiteren Unterschieden zwischen `CComEnumImpl` und `IEnumOnSTLImpl`.  
   
- Sehen Sie in der Regel *nicht* müssen eigene Enumeratorklasse durch Ableiten von dieser Implementierung zu erstellen. Wenn Sie einen ATL bereitgestellte Enumerator basierend auf einem C++-Standardbibliothek Container verwenden möchten, ist eher üblich, dass das Erstellen einer Instanz des [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md), oder erstellen eine Auflistungsklasse, die einen Enumerator durch Ableiten von zurückgibt[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md).  
+ Sehen Sie in der Regel *nicht* müssen Ihren eigenen Enumerator-Klasse durch Ableiten von dieser Implementierung der Schnittstelle zu erstellen. Wenn Sie einen ATL bereitgestellten Enumerator, der basierend auf einem C++-Standardbibliothek-Container verwenden möchten, ist es eher üblich, zum Erstellen einer Instanz von [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md), oder erstellen eine Auflistungsklasse, die einen Enumerator durch Ableiten von zurückgibt[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md).  
   
- Sie benötigen, geben Sie einen benutzerdefinierten Enumerator (z. B. eine, die Schnittstellen, die zusätzlich zu den Enumeratorschnittstelle verfügbar macht), können Sie von dieser Klasse ableiten. In diesem Fall ist es wahrscheinlich, dass Sie außer Kraft setzen müssen die [Klon](#clone) Methode, um Ihre eigene Implementierung bereitzustellen.  
+ Sie benötigen, geben Sie einen benutzerdefinierten Enumerator (z. B. eine, die Schnittstellen, die zusätzlich zu den Enumerator-Schnittstelle verfügbar macht), können Sie von dieser Klasse ableiten. In diesem Fall ist es wahrscheinlich, dass Sie außer Kraft setzen müssen die [Klon](#clone) Methode, um Ihre eigene Implementierung bereitzustellen.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `Base`  
@@ -106,63 +107,63 @@ HRESULT Init(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pUnkForRelease`  
- [in] Die **IUnknown** Zeiger eines Objekts, das während der Lebensdauer des Enumerators beibehalten werden muss. Übergeben Sie **NULL** Wenn kein solches Objekt vorhanden ist.  
+ *pUnkForRelease*  
+ [in] Die `IUnknown` Zeiger, der ein Objekt, das während der Lebensdauer des Enumerators beibehalten werden muss. Übergeben Sie NULL, wenn kein entsprechendes Objekt vorhanden ist.  
   
- `collection`  
- Ein Verweis auf den C++-Standardbibliothek Container, die Elemente aufgelistet werden sollen.  
+ *Auflistung*  
+ Ein Verweis auf den C++-Standardbibliothek-Container, der aufzulistenden Elemente enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Standard `HRESULT` -Wert.  
+ Ein standard HRESULT-Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie übergeben `Init` ein Verweis auf eine Auflistung in ein anderes Objekt gespeicherten können Sie die `pUnkForRelease` Parameter, um sicherzustellen, dass das Objekt, und der Auflistung, die es enthält, ist für verfügbar, solange der Enumerator notwendig.  
+ Wenn Sie übergeben `Init` frei, die ein Verweis auf eine Auflistung in ein anderes Objekt können Sie die *pUnkForRelease* Parameter, um sicherzustellen, dass das Objekt und der Auflistung, die er hält, ist für verfügbar, solange der Enumerator benötigt.  
   
- Sie müssen diese Methode aufrufen, bevor die Übergabe eines Zeigers auf die Enumeratorschnittstelle an alle Clients.  
+ Sie müssen diese Methode aufrufen, bevor Sie die Übergabe eines Zeigers auf die Enumeratorschnittstelle an alle Clients.  
   
 ##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
- Diese Methode stellt die Implementierung des der [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) Methode durch das Erstellen eines Objekts vom Typ `CComEnumOnSTL`, initialisieren es mit dem gleichen Auflistung und Iterator vom aktuellen Objekt verwendet, und Zurückgeben der Benutzeroberfläche für das neu erstellte Objekt.  
+ Diese Methode bietet die Implementierung der [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) Methode erstellen Sie ein Objekt des Typs `CComEnumOnSTL`, initialisieren mit der gleichen Auflistung und Iterator vom aktuellen Objekt verwendet, und der Schnittstelle bei das neu erstellte Objekt.  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ppEnum`  
- [out] Der Enumeratorschnittstelle in einem neu erstellten Objekt aus dem aktuellen Enumerator geklont werden soll.  
+ *ppEnum*  
+ [out] Die Enumeratorschnittstelle für ein neu erstelltes Objekt, das von der aktuelle Enumerator geklont werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Standard `HRESULT` -Wert.  
+ Ein standard HRESULT-Wert.  
   
 ##  <a name="m_spunk"></a>  IEnumOnSTLImpl::m_spUnk  
- Die **IUnknown** Zeiger, der das Objekt die Auflistung bereitstellen.  
+ Die `IUnknown` Zeiger, der das Objekt, das die Sammlung angeben.  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese intelligente Zeiger behält einen Verweis auf das übergebene Objekt [IEnumOnSTLImpl::Init](#init), um sicherzustellen, dass es während der Lebensdauer des Enumerators aktiv bleibt.  
+ Dieses intelligenten Zeigers behält einen Verweis auf das Objekt, übergeben [IEnumOnSTLImpl::Init](#init), um sicherzustellen, dass es während der Lebensdauer des Enumerators aktiv bleibt.  
   
 ##  <a name="m_pcollection"></a>  IEnumOnSTLImpl::m_pcollection  
- Bei diesem Member verweist auf die Auflistung, die die Daten, die die Implementierung der Enumeratorschnittstelle driving bereitstellt.  
+ Dieses Element verweist auf die Auflistung, die die Daten, die für die Implementierung der Enumeratorschnittstelle bereitstellt.  
   
 ```
 CollType* m_pcollection;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Bei diesem Member wird durch einen Aufruf von initialisiert [IEnumOnSTLImpl::Init](#init).  
+ Dieser Member wird initialisiert, durch einen Aufruf von [IEnumOnSTLImpl::Init](#init).  
   
 ##  <a name="m_iter"></a>  IEnumOnSTLImpl::m_iter  
- Bei diesem Member enthält den Iterator zum Markieren der aktuellen Position innerhalb der Auflistung, und navigieren zu nachfolgenden Elemente.  
+ Dieser Member enthält den Iterator verwendet, um die aktuelle Position in der Auflistung zu markieren, und navigieren zu nachfolgenden Elemente.  
   
 ```
 CollType::iterator m_iter;
 ```  
   
 ##  <a name="next"></a>  IEnumOnSTLImpl::Next  
- Diese Methode stellt die Implementierung der [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) Methode.  
+ Diese Methode bietet die Implementierung der [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) Methode.  
   
 ```
 STDMETHOD(Next)(
@@ -172,41 +173,41 @@ STDMETHOD(Next)(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `celt`  
+ *"celt"*  
  [in] Die Anzahl der angeforderten Elemente.  
   
- `rgelt`  
- [out] Das Array mit den Elementen gefüllt werden soll.  
+ *rgelt*  
+ [out] Das Array, das mit den Elementen gefüllt werden.  
   
- `pceltFetched`  
- [out] Die Anzahl der Elemente, die tatsächlich im zurückgegebenen `rgelt`. Dies kann weniger als `celt` Wenn weniger als `celt` Elemente bleiben in der Liste.  
+ *pceltFetched*  
+ [out] Die Anzahl der Elemente im tatsächlich zurückgegebenen *Rgelt*. Dies liegt möglicherweise weniger als *"celt"* Wenn weniger als *"celt"* Elemente bleiben in der Liste.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Standard `HRESULT` -Wert.  
+ Ein standard HRESULT-Wert.  
   
 ##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
- Diese Methode stellt die Implementierung der [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) Methode.  
+ Diese Methode bietet die Implementierung der [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) Methode.  
   
 ```
 STDMETHOD(Reset)(void);
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Standard `HRESULT` -Wert.  
+ Ein standard HRESULT-Wert.  
   
 ##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
- Diese Methode stellt die Implementierung der [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) Methode.  
+ Diese Methode bietet die Implementierung der [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) Methode.  
   
 ```
 STDMETHOD(Skip)(ULONG celt);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `celt`  
+ *"celt"*  
  [in] Die Anzahl der zu überspringenden Elemente.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Standard `HRESULT` -Wert.  
+ Ein standard HRESULT-Wert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111054"
 ---
 # <a name="user-record"></a>Benutzerdatensatz
 Benutzerdatensatz enthält den Code und die Struktur, die die Spaltendaten für ein Rowset darstellt. Ein Benutzerdatensatz kann zur Kompilierzeit oder zur Laufzeit erstellt werden. Wenn Sie einen Anbieter mithilfe der ATL-OLE DB-Anbieter-Assistenten erstellen, erstellt der Assistent einen Standard-Benutzerdatensatz, der wie folgt aussieht (vorausgesetzt, dass Sie einen Anbieternamen [kurzer Name] "MyProvider" angegeben):  

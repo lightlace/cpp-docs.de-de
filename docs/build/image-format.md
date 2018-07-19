@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367939"
 ---
 # <a name="image-format"></a>Bildformat
 Das ausführbare Image-Format ist PE32 +. Ausführbare Images (DLLs und EXEs) sind auf eine Maximalgröße von 2 GB beschränkt, die relativen Adressierung mit einer 32-Bit-Verschiebung verwendet werden kann um statische Image-Daten zu behandeln. Diese Daten enthalten den Import Local Address Table, Zeichenfolgenkonstanten, statischen globalen Daten und usw. an.  

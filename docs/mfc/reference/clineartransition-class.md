@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d342fdd903de610c0676d7a9e0b6e58ef15f41f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1412a65ce7afaab5421d49c22a9cd8ece5b283b1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040885"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition-Klasse
 Kapselt einen linearen Übergang.  
@@ -83,10 +84,10 @@ CLinearTransition(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `duration`  
+ *Dauer*  
  Die Dauer des Übergangs.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  Der Wert der Animationsvariablen am Ende des Übergangs.  
   
 ##  <a name="create"></a>  CLinearTransition::Create  
@@ -99,7 +100,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
-`pLibrary`  
+*pLibrary*  
  Ein Zeiger auf ein [IUIAnimationTransitionLibrary-Schnittstelle](https://msdn.microsoft.com/library/windows/desktop/dd371897), die eine Bibliothek mit standard-Übergänge definiert.  
   
 ### <a name="return-value"></a>Rückgabewert  

@@ -30,11 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c162f6092c127277e2af992eda1e47c00c7cb43
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963224"
 ---
 # <a name="stack-class"></a>stack-Klasse
 
@@ -49,17 +50,17 @@ class stack
 
 ### <a name="parameters"></a>Parameter
 
-*Typ* Elementdatentyp im Stapel gespeichert werden.
+*Typ* die Datentyp der Elemente im Stapel gespeichert werden.
 
-`Container` Der Typ des zugrunde liegenden Container verwendet, um den Stapel zu implementieren. Der Standardwert ist die Klasse `deque`*\<Type>*.
+*Container* den Typ des zugrunde liegenden Container verwendet, um den Stapel zu implementieren. Der Standardwert ist die Klasse `deque`*\<Type>*.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Elemente der Klasse **Type**, die im ersten Vorlagenparameter eines stack-Objekts festgelegt sind, sind gleichbedeutend mit [value_type](#value_type) und müssen mit dem Typ des Elements in der zugrunde liegenden Containerklasse **Container** übereinstimmen, die im zweiten Vorlagenparameter festgelegt ist. Der in **Type** angegebene Typ muss zuweisbar sein, damit es möglich ist, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.
+Die Elemente der Klasse `Type` , die im ersten Vorlagenparameter eines Stack-Objekts sind, sind gleichbedeutend mit [Value_type](#value_type) und muss mit dem Typ des Elements in der zugrunde liegenden Containerklasse `Container` vorgesehenen durch die zweiten Vorlagenparameter. Die `Type` muss zuweisbar sein, damit, dass es möglich, Objekte dieses Typs zu kopieren und Variablen dieses Typs Werte zuzuweisen.
 
-Geeignete zugrunde liegende Containerklassen für die stack-Klasse sind [deque](../standard-library/deque-class.md), [list class](../standard-library/list-class.md) und [vector class](../standard-library/vector-class.md) oder ein beliebiger Sequenzcontainer, der die Vorgänge von **back**, `push_back` und `pop_back` unterstützt. Die zugrunde liegende Containerklasse wird im Containeradapter gekapselt, der nur den begrenzten Satz der Memberfunktionen des Sequenzcontainers als öffentliche Schnittstelle verfügbar macht.
+Geeignete zugrunde liegende Containerklassen für Stack sind [doppelschlange](../standard-library/deque-class.md), [list-Klasse](../standard-library/list-class.md), und [vector-Klasse](../standard-library/vector-class.md), oder ein beliebiger sequenzcontainer, der die Vorgänge unterstützt `back`, `push_back`, und `pop_back`. Die zugrunde liegende Containerklasse wird im Containeradapter gekapselt, der nur den begrenzten Satz der Memberfunktionen des Sequenzcontainers als öffentliche Schnittstelle verfügbar macht.
 
-Die stack-Objekte sind ausschließlich dann auf Gleichheit vergleichbar, wenn die Elemente der Klasse **Type** auf Gleichheit vergleichbar sind, und sie sind ausschließlich dann auf kleiner-als vergleichbar, wenn die Elemente der Klasse **Type** auf kleiner-als vergleichbar sind.
+Die Stack-Objekte sind auf Gleichheit vergleichbar nur, wenn die Elemente der Klasse `Type` auf Gleichheit vergleichbar sind, und sind kleiner-als vergleichbar nur, wenn die Elemente der Klasse `Type` kleiner-als vergleichbar sind.
 
 - Die stack-Klasse unterstützt eine LIFO-Datenstruktur (Last In – First Out). Eine gute Analogie, um sich dies zu merken, ist ein Stapel von Tellern. Elemente (Teller) können eingefügt, überprüft oder nur vom Anfang des Stapels entnommen werden, was dem letzten Element am Ende des Basiscontainers entspricht. Die Beschränkung, nur auf das oberste Element zuzugreifen, ist der Grund für die Verwendung der stack-Klasse.
 
@@ -226,7 +227,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-`val` Das Element am Anfang des Stapels hinzugefügt.
+*Val* das am Anfang des Stacks hinzugefügte Element.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -333,7 +334,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Der Container, der der konstruierte Stapel, die Kopie ist.
+*richtige* den Container dem der erstellte Stack ist eine Kopie.
 
 ### <a name="example"></a>Beispiel
 
@@ -392,7 +393,7 @@ Ein Verweis auf das letzte Element im Container am Anfang des Stacks.
 
 Der Stack darf nicht leer sein, damit die Memberfunktion angewendet wird. Der Anfang des Stacks ist die Position des zuletzt hinzugefügten Elements und ist das letzte Element am Ende des Containers.
 
-Wenn der Rückgabewert von **top** einem `const_reference` zugewiesen wird, kann das Stack-Objekt nicht geändert werden. Wenn der Rückgabewert von **top** einer **Referenz** zugewiesen wird, kann das Stack-Objekt geändert werden.
+Wenn der Rückgabewert von `top` zugewiesen ist eine `const_reference`, das Stack-Objekt kann nicht geändert werden. Wenn der Rückgabewert von `top` zugewiesen ist eine `reference`, kann das Stack-Objekt geändert werden.
 
 ### <a name="example"></a>Beispiel
 

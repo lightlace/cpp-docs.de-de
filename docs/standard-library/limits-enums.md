@@ -7,11 +7,12 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 356c98ce5c93d1e05a583fc30c4758c5d15d7529
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5795d146714c6eb00902518347138a98574679a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960647"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt;-Enumerationen
 
@@ -34,11 +35,11 @@ enum float_denorm_style {
 
 Die Enumeration gibt Folgendes zurück:
 
-- **denorm_indeterminate**, wenn das Vorhandensein oder Fehlen von denormalisierten Formularen bei der Übersetzung nicht bestimmt werden kann.
+- `denorm_indeterminate` Wenn das Vorhandensein oder fehlen von denormalisierten Formularen bei der Übersetzung nicht bestimmt werden kann.
 
-- **denorm_absent**, wenn denormalisierte Formulare fehlen.
+- `denorm_absent` Wenn denormalisierte Formulare fehlen.
 
-- **denorm_present**, wenn denormalisierte Formulare vorhanden sind.
+- `denorm_present` Wenn denormalisierte Formulare vorhanden sind.
 
 ### <a name="example"></a>Beispiel
 
@@ -61,15 +62,15 @@ enum float_round_style {
 
 Die Enumeration gibt Folgendes zurück:
 
-- **round_indeterminate**, wenn die Rundungsmethode nicht bestimmt werden kann.
+- `round_indeterminate` Wenn die Rundungsmethode nicht bestimmt werden kann.
 
-- **round_toward_zero**, wenn in Richtung null gerundet wird.
+- `round_toward_zero` Wenn in Richtung 0 (null).
 
-- **round_to_nearest**, wenn auf die nächste ganze Zahl gerundet wird.
+- `round_to_nearest` Wenn die Rundung auf nächste ganze Zahl.
 
-- **round_toward_infinity**, wenn von der null weg gerundet wird.
+- `round_toward_infinity` Wenn die Runde von Null weg.
 
-- **round_toward_neg_infinity**, wenn in Richtung negativerer ganzer Zahl gerundet wird.
+- `round_toward_neg_infinity` Wenn die Runde negativerer ganzer.
 
 ### <a name="example"></a>Beispiel
 

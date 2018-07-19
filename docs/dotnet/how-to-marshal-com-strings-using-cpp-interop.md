@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133328"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Gewusst wie: Marshallen von COM-Zeichenfolgen mit C++-Interop
 In diesem Thema wird veranschaulicht, wie BSTR (das grundlegende Zeichenfolgenformat bevorzugt wird in COM-Programmierung) werden kann von einer verwalteten an eine nicht verwaltete Funktion (und umgekehrt) übergeben. Zusammenarbeit mit anderen Zeichenfolgen-Datentypen, finden Sie unter den folgenden Themen:  

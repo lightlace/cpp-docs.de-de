@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112055"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Referenz der OLE DB-Consumervorlagen
 Der OLE DB-Consumervorlagen enthalten die folgenden Klassen. Das Referenzmaterial enthält außerdem Themen auf der [Makros für OLE DB-Consumervorlagen](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  

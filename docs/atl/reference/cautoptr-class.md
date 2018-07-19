@@ -1,5 +1,5 @@
 ---
-title: CAutoPtr Klasse | Microsoft Docs
+title: CAutoPtr-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edf1baff50541dd5f16c27205f300558558d6f92
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 118e303fe176684ea837861ef3855dd6c03fb04e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881135"
 ---
 # <a name="cautoptr-class"></a>CAutoPtr-Klasse
 Diese Klasse stellt einen intelligenten Zeiger-Objekt.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +43,7 @@ class CAutoPtr
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
+ *T*  
  Der Zeigertyp.  
   
 ## <a name="members"></a>Member  
@@ -58,9 +59,9 @@ class CAutoPtr
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAutoPtr::Attach](#attach)|Rufen Sie diese Methode, um einem vorhandenen Zeiger Besitz zu nehmen.|  
-|[CAutoPtr::Detach](#detach)|Rufen Sie diese Methode, um den Besitz eines Zeigers freigibt.|  
-|[CAutoPtr::Free](#free)|Rufen Sie diese Methode zum Löschen eines Objekts verweist, zu einem `CAutoPtr`.|  
+|[CAutoPtr::Attach](#attach)|Rufen Sie diese Methode, um den Besitz eines bestehenden Zeigers zu übernehmen.|  
+|[CAutoPtr::Detach](#detach)|Rufen Sie diese Methode, um den Besitz eines Zeigers freizugeben.|  
+|[CAutoPtr::Free](#free)|Rufen Sie diese Methode zum Löschen eines Objekts verweist eine `CAutoPtr`.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
@@ -68,7 +69,7 @@ class CAutoPtr
 |----------|-----------------|  
 |[CAutoPtr::operator T *](#operator_t_star)|Der Cast-Operator.|  
 |[CAutoPtr::operator =](#operator_eq)|Der Zuweisungsoperator.|  
-|[CAutoPtr::operator ->](#operator_ptr)|Der Pointer-to-Member-Operator.|  
+|[CAutoPtr::operator ->](#operator_ptr)|Der Zeiger-auf-Member-Operator.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -77,13 +78,13 @@ class CAutoPtr
 |[CAutoPtr::m_p](#m_p)|Die Zeiger-Membervariable.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse stellt Methoden zum Erstellen und verwalten einen intelligenten Zeiger, die geschützt werden anhand von Arbeitsspeicherverlusten Ressourcen automatisch freigegeben werden, wenn sie außerhalb des gültigen Bereichs liegt.  
+ Diese Klasse stellt Methoden zum Erstellen und verwalten einen intelligenten Zeiger, dadurch wird Schutz vor Speicherverluste durch Ressourcen automatisch freigegeben, wenn sie außerhalb des gültigen Bereichs liegt.  
   
- Zudem `CAutoPtr`Kopierkonstruktor und der Zuweisung Operator übertragen den Besitz des Zeigers, kopieren Sie den Zeiger Quelle zum Ziel Zeiger und den Quelle Zeiger auf NULL festlegen. Daher ist es unmöglich, zwei `CAutoPtr` -Objekte jeweils die gleichen Zeiger speichern, und dies reduziert die Möglichkeit, dass derselben Zeiger zweimal zu löschen.  
+ Zudem `CAutoPtr`Kopierkonstruktor und der Zuweisung Operator übertragen den Besitz des Zeigers, kopieren Sie den Zeiger für die Quelle an den Ziel-Zeiger und den Zeiger für die Quelle auf NULL festlegen. Daher ist es unmöglich, zwei `CAutoPtr` Objekten jeweils den gleichen Zeiger speichern und dadurch die Möglichkeit, den gleichen Zeiger zweimal zu löschen.  
   
- `CAutoPtr` Außerdem vereinfacht die Erstellung von Auflistungen von Zeigern. Statt eine Auflistungsklasse ableiten und überschreiben den Destruktor, ist es einfacher, die eine Auflistung von `CAutoPtr` Objekte. Wenn die Sammlung gelöscht wird, die `CAutoPtr` Objekte verlassen den Gültigkeitsbereich und selbst automatisch gelöscht werden.  
+ `CAutoPtr` Außerdem vereinfacht die Erstellung von Sammlungen von Zeigern. Anstatt eine Auflistungsklasse ableiten und der Destruktor für die Außerkraftsetzung, es ist einfacher, stellen eine Auflistung von `CAutoPtr` Objekte. Wenn die Auflistung gelöscht wird, die `CAutoPtr` Objekte außerhalb des gültigen Bereichs wechseln und sich selbst automatisch zu löschen.  
   
- [CHeapPtr](../../atl/reference/cheapptr-class.md) und Varianten arbeiten, auf die gleiche Weise wie `CAutoPtr`, außer dass sie reservieren und Freigeben von Arbeitsspeicher, die mit verschiedenen Heapfunktionen anstelle der C++ **neue** und **löschen** Operatoren. [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) ähnelt `CAutoPtr`, der einzige Unterschied wird, verwendet jedoch **new []-Vektor** und **Vektor delete []** zu reservieren und Freigeben von Arbeitsspeicher.  
+ [CHeapPtr](../../atl/reference/cheapptr-class.md) und Varianten in die gleiche Weise wie `CAutoPtr`, außer dass sie die Belegung und Freigabe von Arbeitsspeicher mit verschiedenen Heapfunktionen anstelle der C++ **neue** und **löschen** Operatoren. [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) ähnelt `CAutoPtr`, der einzige Unterschied, dass er verwendet **new []-Vektor** und **Vektor delete []** zum Zuordnen und Freigeben von Arbeitsspeicher.  
   
  Siehe auch [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) und [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) Wenn Arrays oder Listen von intelligenten Zeigern erforderlich sind.  
   
@@ -94,23 +95,23 @@ class CAutoPtr
  [!code-cpp[NVC_ATL_Utilities#74](../../atl/codesnippet/cpp/cautoptr-class_1.cpp)]  
   
 ##  <a name="attach"></a>  CAutoPtr::Attach  
- Rufen Sie diese Methode, um einem vorhandenen Zeiger Besitz zu nehmen.  
+ Rufen Sie diese Methode, um den Besitz eines bestehenden Zeigers zu übernehmen.  
   
 ```
 void Attach(T* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `p`  
- Die `CAutoPtr` Objekt wird die Besitzrechte des this-Zeigers.  
+ *p*  
+ Die `CAutoPtr` Objekt übernimmt dann den Besitz des this-Zeigers.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn ein `CAutoPtr` Objekt übernimmt den Besitz eines Zeigers, wird es automatisch löschen den Zeiger und alle zugeordneten Daten, wenn sie den Gültigkeitsbereich verlässt. Wenn [CAutoPtr::Detach](#detach) wird aufgerufen, der Programmierer ist erneut angegebene Verantwortung für die Freigabe einer zugeordneten Ressourcen.  
+ Wenn eine `CAutoPtr` Objekt übernimmt den Besitz eines Zeigers, wird es automatisch löschen den Zeiger und alle zugeordneten Daten, wenn sie den Gültigkeitsbereich verlässt. Wenn [CAutoPtr::Detach](#detach) wird aufgerufen, der Programmierer ist erneut bei Verantwortung für die Freigabe alle zugeordneten Ressourcen.  
   
- Debug-Builds wird ein Assertionsfehler auftreten, wenn die [CAutoPtr::m_p](#m_p) -Datenmember ist derzeit auf einen vorhandenen Wert zeigt; es ist also nicht gleich NULL.  
+ Debug-Builds wird ein Assertionsfehler auftreten, wenn die [CAutoPtr::m_p](#m_p) derzeit Datenmember verweist, zu einem vorhandenen Wert; das heißt, ist es nicht gleich NULL.  
   
 ### <a name="example"></a>Beispiel  
- Siehe das Beispiel in der [CAutoPtr Übersicht](../../atl/reference/cautoptr-class.md).  
+ Siehe das Beispiel in der [CAutoPtr-Übersicht](../../atl/reference/cautoptr-class.md).  
   
 ##  <a name="cautoptr"></a>  CAutoPtr::CAutoPtr  
  Der Konstruktor.  
@@ -127,17 +128,17 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `p`  
+ *p*  
  Einem vorhandenen Zeiger.  
   
- `TSrc`  
- Der Typ von einem anderen verwalteten `CAutoPtr`, die zum Initialisieren des aktuellen Objekts verwendet.  
+ *TSrc*  
+ Der Typ, der von einem anderen verwalteten `CAutoPtr`verwendet, um das aktuelle Objekt zu initialisieren.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `CAutoPtr` Objekt kann mit einem vorhandenen Zeiger erstellt werden, in diesem Fall, die es überträgt den Besitz des Zeigers.  
+ Die `CAutoPtr` Objekt mit einem vorhandenen Zeiger erstellt werden kann, die in diesem Fall erfolgt die Übertragung des Besitzes des Zeigers.  
   
 ### <a name="example"></a>Beispiel  
- Siehe das Beispiel in der [CAutoPtr Übersicht](../../atl/reference/cautoptr-class.md).  
+ Siehe das Beispiel in der [CAutoPtr-Übersicht](../../atl/reference/cautoptr-class.md).  
   
 ##  <a name="dtor"></a>  CAutoPtr:: ~ CAutoPtr  
  Der Destruktor.  
@@ -150,30 +151,30 @@ CAutoPtr(CAutoPtr<T>& p) throw();
  Gibt alle zugeordneten Ressourcen frei. Aufrufe [CAutoPtr::Free](#free).  
   
 ##  <a name="detach"></a>  CAutoPtr::Detach  
- Rufen Sie diese Methode, um den Besitz eines Zeigers freigibt.  
+ Rufen Sie diese Methode, um den Besitz eines Zeigers freizugeben.  
   
 ```
 T* Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt eine Kopie des Zeigers zurück.  
+ Gibt eine Kopie des Zeigers.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt den Besitz eines Zeigers frei wird, wird dadurch die [CAutoPtr::m_p](#m_p) Data-Member-Variable auf NULL, und gibt eine Kopie des Zeigers zurück. Nach dem Aufruf **trennen**, es wird bis zu dem Programmierer, die freizugeben zugeordneten Ressourcen über den die `CAutoPtr` Objekt möglicherweise zuvor Reponsibility angenommen haben.  
+ Gibt den Besitz eines Zeigers, legt die [CAutoPtr::m_p](#m_p) Data-Member-Variable auf NULL, und gibt eine Kopie des Zeigers zurück. Nach dem Aufruf `Detach`, es wird bis zu dem Programmierer, die eine kostenlose zugeordneten Ressourcen über den die `CAutoPtr` Objekt möglicherweise bereits Reponsibility angenommen haben.  
   
 ### <a name="example"></a>Beispiel  
- Siehe das Beispiel in der [CAutoPtr Übersicht](../../atl/reference/cautoptr-class.md).  
+ Siehe das Beispiel in der [CAutoPtr-Übersicht](../../atl/reference/cautoptr-class.md).  
   
 ##  <a name="free"></a>  CAutoPtr::Free  
- Rufen Sie diese Methode zum Löschen eines Objekts verweist, zu einem `CAutoPtr`.  
+ Rufen Sie diese Methode zum Löschen eines Objekts verweist eine `CAutoPtr`.  
   
 ```
 void Free() throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Das Objekt verweist die `CAutoPtr` wird freigegeben, und die [CAutoPtr::m_p](#m_p) Data-Member-Variable auf NULL gesetzt wird.  
+ Das Objekt verweist die `CAutoPtr` wird freigegeben, und die [CAutoPtr::m_p](#m_p) Data-Member-Variable auf NULL festgelegt ist.  
   
 ##  <a name="m_p"></a>  CAutoPtr::m_p  
  Die Zeiger-Membervariable.  
@@ -183,7 +184,7 @@ T* m_p;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Membervariable enthält die Zeigerinformationen zur.  
+ Diese Membervariable enthält Zeigerinformationen.  
   
 ##  <a name="operator_eq"></a>  CAutoPtr::operator =  
  Der Zuweisungsoperator.  
@@ -197,36 +198,36 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `p`  
+ *p*  
  Ein Zeiger.  
   
- `TSrc`  
- Einen Klassentyp.  
+ *TSrc*  
+ Ein Klassentyp.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Verweis auf eine **CAutoPtr\< T >**.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Zuweisungsoperator trennt die `CAutoPtr` Objekt aus einem aktuellen Zeiger und fügt Sie den neuen Zeiger `p`, an deren Stelle.  
+ Der Zuweisungsoperator trennt die `CAutoPtr` Objekt aus einem aktuellen Zeiger und fügt den neuen Zeiger *p*, an seiner Stelle.  
   
 ### <a name="example"></a>Beispiel  
- Siehe das Beispiel in der [CAutoPtr Übersicht](../../atl/reference/cautoptr-class.md).  
+ Siehe das Beispiel in der [CAutoPtr-Übersicht](../../atl/reference/cautoptr-class.md).  
   
 ##  <a name="operator_ptr"></a>  CAutoPtr::operator-&gt;  
- Der Pointer-to-Member-Operator.  
+ Der Zeiger-auf-Member-Operator.  
   
 ```
 T* operator->() const throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den Wert der [CAutoPtr::m_p](#m_p) Daten Membervariablen gespeichert.  
+ Gibt den Wert des der [CAutoPtr::m_p](#m_p) Daten Membervariablen gespeichert.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diesen Operator zum Aufrufen einer Methode in einer Klasse, die durch die `CAutoPtr` Objekt. Debug-Builds wird ein Assertionsfehler auftreten, wenn die `CAutoPtr` verweist auf NULL.  
+ Verwenden Sie diesen Operator zum Aufrufen einer Methode in einer Klasse verweist die `CAutoPtr` Objekt. Debug-Builds wird ein Assertionsfehler auftreten, wenn die `CAutoPtr` verweist auf NULL.  
   
 ### <a name="example"></a>Beispiel  
- Siehe das Beispiel in der [CAutoPtr Übersicht](../../atl/reference/cautoptr-class.md).  
+ Siehe das Beispiel in der [CAutoPtr-Übersicht](../../atl/reference/cautoptr-class.md).  
   
 ##  <a name="operator_t_star"></a>  CAutoPtr::operator T *  
  Der Cast-Operator.  
@@ -239,9 +240,9 @@ operator T* () const throw();
  Gibt einen Zeiger auf den Object-Datentyp in der Klassenvorlage definiert.  
   
 ### <a name="example"></a>Beispiel  
- Siehe das Beispiel in der [CAutoPtr Übersicht](../../atl/reference/cautoptr-class.md).  
+ Siehe das Beispiel in der [CAutoPtr-Übersicht](../../atl/reference/cautoptr-class.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [CHeapPtr-Klasse](../../atl/reference/cheapptr-class.md)   
  [CAutoVectorPtr-Klasse](../../atl/reference/cautovectorptr-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

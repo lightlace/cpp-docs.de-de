@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372242"
 ---
 # <a name="modules-button"></a>Module (Schaltfläche)
 Klicken Sie auf die **Module** Schaltfläche, um die **zusätzliche Module zur Fehlersuche** Dialogfeld. Geben Sie den Namen der gewünschten exe- oder DLL in das Eingabefeld ein, und klicken Sie auf **hinzufügen** die Module in der Suche nach Fehlermeldungen eingeschlossen. Ein Modul aus der Liste entfernen, indem Sie ihn markieren und auf die **entfernen** Schaltfläche.  

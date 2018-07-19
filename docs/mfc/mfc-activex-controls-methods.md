@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348308"
 ---
 # <a name="mfc-activex-controls-methods"></a>MFC-ActiveX-Steuerelemente: Methoden
 Ein ActiveX-Steuerelement löst Ereignisse für die Kommunikation zwischen sich selbst und seine Steuerelementcontainer. Ein Container kann auch mithilfe von Methoden und Eigenschaften mit einem Steuerelement kommunizieren. Methoden werden auch als Funktionen bezeichnet.  

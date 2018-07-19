@@ -1,5 +1,5 @@
 ---
-title: Legen Sie Unicode- und Multibyte-Zeichensätze (MBCS)-Support | Microsoft Docs
+title: Legen Sie Unicode- und Multibyte-Zeichensätze (MBCS)-Unterstützung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 1/09/2017
 ms.technology:
@@ -20,27 +20,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8492e4a6777e4d609e3b457cfc77d1b8a691eed3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6e9d212e74f77d21efa1b2ed030f8a1446d111fc
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882948"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unterstützung für Unicode- und Multibyte-Zeichensätze (MBCS)
 
 Einige Sprachen wie Japanisch und Chinesisch haben große Zeichensätze. Um Programmierung für diese Märkte zu unterstützen, können die Microsoft Foundation Class-Bibliothek (MFC) zwei unterschiedliche Ansätze zum Behandeln von umfangreichen Zeichensätzen:
 
-- [Unicode](#mfc-support-for-unicode-strings), `wchar_t` basierten Wide-Zeichen und Zeichenfolgen, die als UTF-16 codiert sind.
+- [Unicode](#mfc-support-for-unicode-strings), `wchar_t` -basierte Breitzeichen und Zeichenfolgen, die als UTF-16 codiert sind.
 
-- [Multibyte-Zeichen-Sätze (MBCS)](#mfc-support-for-mbcs-strings), `char` basierten einfache oder Doppelbyte-Zeichen und Zeichenfolgen, die in einem gebietsschemaspezifischen Zeichensatz codiert.
+- [Multibyte-Zeichensatz-Sätze (MBCS)](#mfc-support-for-mbcs-strings), **Char** Grundlage von einzelnen oder Double-Byte-Zeichen und Zeichenfolgen, die in einem Gebietsschema-spezifische Zeichensatz codiert.
 
-Microsoft hat die Unicode-MFC-Bibliotheken für alle Neuentwicklungen empfohlen, und die MBCS-Bibliotheken in Visual Studio 2013 und Visual Studio 2015 als veraltet markiert wurden. Dies ist nun nicht mehr der Fall. Die MBCS-veraltungswarnungen wurden in Visual Studio 2017 entfernt.
+Microsoft empfiehlt sich die Unicode-MFC-Bibliotheken für alle Neuentwicklungen, und die MBCS-Bibliotheken in Visual Studio 2013 und Visual Studio 2015 als veraltet markiert wurden. Dies ist nun nicht mehr der Fall. Die MBCS-Warnungen für veraltete Befehle wurden in Visual Studio 2017 entfernt.
 
 ## <a name="mfc-support-for-unicode-strings"></a>MFC-Unterstützung für Unicode-Zeichenfolgen
 
-Die gesamte MFC-Klassenbibliothek wird bedingt für Unicode-Zeichen und Zeichenfolgen in Breitzeichen als UTF-16 gespeichert aktiviert. Insbesondere ist Klasse [CString](../atl-mfc-shared/reference/cstringt-class.md) Unicode aktiviert ist.
+Die gesamte MFC-Klassenbibliothek wird bedingt für Unicode-Zeichen und Zeichenfolgen in Breitzeichen, die als UTF-16 aktiviert. Insbesondere ist Klasse [CString](../atl-mfc-shared/reference/cstringt-class.md) Unicode-aktiviert.
 
-Diese Bibliothek, Debugger und DLL-Dateien werden zur Unterstützung von Unicode in MFC verwendet:
+Diese Bibliothek, Debugger und DLL-Dateien werden verwendet, um Unicode in MFC zu unterstützen:
 
 |||||
 |-|-|-|-|
@@ -52,11 +53,11 @@ Diese Bibliothek, Debugger und DLL-Dateien werden zur Unterstützung von Unicode
 
 (*Version* stellt die Versionsnummer der Datei ein, z. B. "140" bedeutet, dass Version 14.0.)
 
-`CString` basiert auf dem Datentyp `TCHAR`. Wenn das Symbol `_UNICODE` für einen Build des Programms definiert ist, wird `TCHAR` als `wchar_t`-Typ, ein 16-Bit-Zeichencodierungstyp, definiert. Andernfalls wird `TCHAR` als `char`, die normale 8-Bit-Zeichencodierung, definiert. Daher setzt sich ein `CString` unter Unicode aus 16-Bit-Zeichen zusammen. Ohne Unicode wird es aus Zeichen vom Typ `char` zusammengesetzt.
+`CString` basiert auf dem TCHAR-Datentyp. Wenn _UNICODE-Symbol für einen Build des Programms definiert ist, wird als Typ TCHAR definiert `wchar_t`, eine 16-Bit-Zeichencodierungstyp. Andernfalls TCHAR ist definiert als **Char**, die normale 8-Bit-zeichencodierung. Daher setzt sich ein `CString` unter Unicode aus 16-Bit-Zeichen zusammen. Ohne Unicode wird es besteht aus Zeichen vom Typ **Char**.
 
 Um Unicode-Programmierung der Anwendung durchzuführen, benötigen Sie auch Folgendes:
 
-- Verwenden Sie das `_T`-Makro, um Zeichenfolgen bedingt so zu kodieren, dass sie in Unicode übertragbar sind.
+- Verwenden Sie die _T-Makro, um bedingt codieren Sie Zeichenfolgenliterale, um in Unicode übertragbar sind.
 
 - Wenn Sie Zeichenfolgen übergeben, achten Sie darauf, ob für Funktionsargumente eine bestimmte Länge in Zeichen oder in Bytes erforderlich. Der Unterschied ist wichtig, wenn Sie Unicode-Zeichenfolgen verwenden.
 
@@ -64,15 +65,15 @@ Um Unicode-Programmierung der Anwendung durchzuführen, benötigen Sie auch Folg
 
 - Verwenden Sie die folgenden Datentypen für Zeichen und Zeichenzeiger:
 
-   - Verwenden Sie `TCHAR` hier verwenden Sie `char`.
+   - Verwenden Sie hier Sie verwenden TCHAR **Char**.
 
-   - Verwenden Sie `LPTSTR` hier verwenden Sie `char*`.
+   - Verwenden Sie hier Sie verwenden LPTSTR **Char\***.
 
-   - Verwenden Sie `LPCTSTR` hier verwenden Sie `const char*`. `CString` stellt den Operator `LPCTSTR` zum Konvertieren zwischen `CString` und `LPCTSTR` bereit.
+   - Verwenden Sie hier Sie verwenden LPCTSTR **const Char\***. `CString` Stellt den Operator LPCTSTR zum Konvertieren zwischen `CString` und LPCTSTR.
 
 `CString` stellt außerdem Unicode-kompatible Konstruktoren, Zuweisungsoperatoren und Vergleichsoperatoren bereit.
 
-Die [Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md) definiert portable Versionen aller Funktionen für die Behandlung von Zeichenfolgen. Weitere Informationen finden Sie unter der Kategorie [Internationalisierung](../c-runtime-library/internationalization.md).
+Die [Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md) definiert portable Versionen aller seiner Funktionen zur Zeichenfolgenbehandlung. Weitere Informationen finden Sie unter der Kategorie [Internationalisierung](../c-runtime-library/internationalization.md).
 
 ## <a name="mfc-support-for-mbcs-strings"></a>MFC-Unterstützung für MBCS-Zeichenfolgen
 
@@ -80,27 +81,27 @@ Die Klassenbibliothek wird auch für Multibyte-Zeichensätze, jedoch nur für Do
 
 In einem Multibyte-Zeichensatz kann ein Zeichen ein oder zwei Bytes breit sein. Wenn es zwei Bytes breit ist, ist sein erstes Byte ein spezielles "führendes Byte", das je nach verwendeter Codepage aus einem bestimmten Bereich ausgewählt wird. Zusammen angewendet, geben die führenden und die "nachfolgenden Bytes" eine eindeutige Zeichencodierung an.
 
-Wenn das Symbol `_MBCS` für einen Build des Programms definiert ist, wird der Typ `TCHAR`, auf dem `CString` basiert, `char` zugeordnet. Sie bestimmen, welche Bytes in einer `CString` führende Bytes und welche nachfolgende Bytes sind. Die Zubehörfunktionen der C-Laufzeitbibliothek unterstützen Sie dabei.
+Wenn das Symbol _MBCS für einen Build des Programms definiert ist, geben Sie TCHAR, auf dem `CString` basiert, wird dem **Char**. Sie bestimmen, welche Bytes in einer `CString` führende Bytes und welche nachfolgende Bytes sind. Die Zubehörfunktionen der C-Laufzeitbibliothek unterstützen Sie dabei.
 
 Unter DBCS kann eine angegebene Zeichenfolge alle Einzelbyte-ANSI-Zeichen, alle Doppelbytezeichen oder eine Kombination der beiden enthalten. Diese Methoden erfordern besondere Sorgfalt beim Parsen von Zeichenfolgen. Hierzu gehören `CString`-Objekte.
 
 > [!NOTE]
 > Mit der Serialisierung von Unicode-Zeichenfolgen in MFC können sowohl Unicode als auch MBCS-Zeichenfolgen unabhängig von der Version der Anwendung, die Sie ausführen, gelesen werden. Die Datendateien sind zwischen Unicode- und MBCS-Versionen des Programms übertragbar.
 
-`CString`-Memberfunktionen verwenden spezielle Versionen der C-Laufzeitfunktionen mit "generischem Text", die aufgerufen werden, oder sie verwenden Unicode-kompatible Funktionen. Wenn daher eine `CString`-Funktion normalerweise `strcmp` aufrufen würde, ruft sie stattdessen die entsprechende Funktion `_tcscmp` für generischen Text auf. Je nachdem, wie die Symbole `_MBCS` und `_UNICODE` definiert werden, wird `_tcscmp` wie folgt zugeordnet:
+`CString`-Memberfunktionen verwenden spezielle Versionen der C-Laufzeitfunktionen mit "generischem Text", die aufgerufen werden, oder sie verwenden Unicode-kompatible Funktionen. Wenn daher eine `CString`-Funktion normalerweise `strcmp` aufrufen würde, ruft sie stattdessen die entsprechende Funktion `_tcscmp` für generischen Text auf. Je nachdem, wie die Symbole _MBCS und _UNICODE definiert sind `_tcscmp` folgendermaßen zugeordnet:
 
 |||
 |-|-|
-|`_MBCS` ist defined|`_mbscmp`|
-|`_UNICODE` ist defined|`wcscmp`|
+|_MBCS definiert|`_mbscmp`|
+|_UNICODE definiert|`wcscmp`|
 |Kein Symbol definiert|`strcmp`|
 
 > [!NOTE]
-> Die Symbole `_MBCS` und `_UNICODE` schließen sich gegenseitig aus.
+> Die Symbole _MBCS und _UNICODE schließen sich gegenseitig aus.
 
-Allgemeintext-funktionszuordnungen für alle von der Laufzeitroutinen für die Behandlung von Zeichenfolgen werden in erläutert [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md). Eine Liste finden Sie unter [Internationalisierung](../c-runtime-library/internationalization.md).
+Funktionszuordnungen für generischen Text für alle zur Behandlung von Zeichenfolgen-Laufzeitroutinen finden Sie im [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md). Eine Liste finden Sie unter [Internationalisierung](../c-runtime-library/internationalization.md).
 
-Auf ähnliche Weise `CString` Methoden mithilfe von generischen textzuordnungen von Datentypen implementiert werden. Zur Ermöglichung von MBCS und Unicode-verwendet MFC `TCHAR` für `char` oder `wchar_t`, `LPTSTR` für `char*` oder `wchar_t*`, und `LPCTSTR` für `const char*` oder `const wchar_t*`. Diese stellen die richtigen Zuordnungen für Unicode oder MBCS sicher.
+Auf ähnliche Weise `CString` Methoden mit generischen datentypzuordnungen implementiert werden. Um sowohl Unicode als auch MBCS zu aktivieren, verwendet MFC TCHAR für **Char** oder `wchar_t`, LPTSTR für **Char\***  oder `wchar_t*`, und LPCTSTR für **const Char\***  oder `const wchar_t*`. Diese stellen die richtigen Zuordnungen für Unicode oder MBCS sicher.
 
 ## <a name="see-also"></a>Siehe auch
 

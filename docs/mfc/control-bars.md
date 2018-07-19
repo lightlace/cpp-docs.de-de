@@ -24,14 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 179e959ce4d6a516f51576712e50408ef41d5c7e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931790"
 ---
 # <a name="control-bars"></a>Steuerleisten
-"Steuerleiste" ist der allgemeine Name für Symbolleisten, Statusleisten und Dialogleisten. MFC-Klassen `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, und **CReBar** Klasse ableiten [CControlBar](../mfc/reference/ccontrolbar-class.md), der ihre allgemeine Funktionen implementiert.  
+"Steuerleiste" ist der allgemeine Name für Symbolleisten, Statusleisten und Dialogleisten. MFC-Klassen `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, und `CReBar` Klasse ableiten [CControlBar](../mfc/reference/ccontrolbar-class.md), der ihre allgemeine Funktionen implementiert.  
   
  Steuerleisten sind Fenster, die Zeilen der Steuerelemente angezeigt, mit dem Benutzer können Optionen auswählen, Ausführen von Befehlen oder Programminformationen zu erhalten. Steuerleisten Anweisungstypen Dialogleisten, Symbolleisten und Statusleisten.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
 -   Infoleisten in der Klasse [CReBar](../mfc/reference/crebar-class.md)  
   
 > [!IMPORTANT]
->  Ab MFC 4.0 werden Symbolleisten, Statusleisten und QuickInfos mit implementiert Systemfunktionen, die in der comctl32.dll anstelle der vorherigen, MFC-spezifischen Implementierung implementiert. MFC-Version 6.0 **CReBar**, die auch comctl32.dll-Funktionalität umschließt hinzugefügt wurde.  
+>  Ab MFC-Version 4.0, Symbolleisten, Statusleisten und Tools werden Tipps implementiert, mit der Systemfunktionalität implementiert die *comctl32.dll* anstelle der vorherigen, MFC-spezifischen Implementierung. MFC-Version 6.0 `CReBar`, die auch comctl32.dll-Funktionalität umschließt hinzugefügt wurde.  
   
  Führen Sie die kurze Einführungen in die Steuerleiste Typen. Weitere Informationen finden Sie unter den Links unten.  
   

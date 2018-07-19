@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfa84326286b03f3ed0154138ed7f847440df284
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aac3c9ba284abc634af2fbeb25633b812e07f926
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928569"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Anordnen von Elementen im Headersteuerelement
 Sobald Sie haben [hinzugefügten Elemente zu einem Headersteuerelement](../mfc/adding-items-to-the-header-control.md), können Sie bearbeiten oder Abrufen von Informationen zu deren Reihenfolge mit den folgenden Funktionen:  
@@ -39,7 +40,7 @@ Sobald Sie haben [hinzugefügten Elemente zu einem Headersteuerelement](../mfc/a
   
      Ruft den Indexwert für ein bestimmtes Headerelement ab.  
   
- Zusätzlich zu den vorherigen Memberfunktionen der `HDS_DRAGDROP` Stil ermöglicht dem Benutzer, die Drag & drop innerhalb des Headersteuerelements Headerelemente. Weitere Informationen finden Sie unter [Bereitstellen von Drag-and-Drop-Unterstützung für Headerelemente](../mfc/providing-drag-and-drop-support-for-header-items.md).  
+ Zusätzlich zu den vorherigen Memberfunktionen kann HDS_DRAGDROP-Stil den Benutzer per Drag & drop innerhalb des Headersteuerelements Headerelemente. Weitere Informationen finden Sie unter [Bereitstellen von Drag-and-Drop-Unterstützung für Headerelemente](../mfc/providing-drag-and-drop-support-for-header-items.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385816"
 ---
 # <a name="using-csliderctrl"></a>Verwenden von CSliderCtrl
 Die [CSliderCtrl](../mfc/reference/csliderctrl-class.md) Klasse stellt ein Schieberegler-Steuerelement, das auch eine Trackbar bezeichnet wird. Ein "Schieberegler-Steuerelement" ist ein Fenster mit einem Schieberegler und optionale Teilstriche markiert. Wenn der Benutzer mit der Maus oder die Pfeiltasten des Schiebereglers verschoben wird, sendet das Schieberegler-Steuerelement benachrichtigungsmeldungen, um die Änderung anzuzeigen.  

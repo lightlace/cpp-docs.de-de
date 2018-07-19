@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891658"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>Arbeiten mit Farben (Bildbearbeitung für Symbole)
 Grafik-Editor enthält viele Funktionen, die speziell behandelt und Anpassen von Farben an. Sie können eine Vorder- oder Hintergrund Farbe festlegen, füllen von begrenzten Bereichen mit Farbe oder wählen Sie eine Farbe auf ein Bild, als die aktuelle Vorder- oder Hintergrund Farbe verwendet werden. Können Sie Tools auf die [Grafik-Editor-Symbolleiste](../windows/toolbar-image-editor-for-icons.md) zusammen mit Farben (Palette) in der [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md) um Images zu erstellen.  

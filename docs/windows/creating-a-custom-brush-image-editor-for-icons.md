@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873146"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>Erstellen von benutzerdefinierten Pinseln (Bildbearbeitung für Symbole)
 Benutzerdefinierte Pinsel ist eine rechteckige Teil eines Bildes, das Sie übernehmen, und wie eine vorgefertigte Pinsel für den Grafik-Editor verwenden. Alle Vorgänge auf einer Auswahl von ausgeführt werden können, können Sie für einen benutzerdefinierten Pinsel ebenfalls ausführen.  

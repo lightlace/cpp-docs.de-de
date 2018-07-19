@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318453"
 ---
 # <a name="project-build-error-prj0009"></a>Projektbuildfehler PRJ0009
 Erstellen Sie Protokoll konnte nicht zum Schreiben geöffnet werden.  

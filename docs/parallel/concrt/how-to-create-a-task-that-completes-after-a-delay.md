@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688410"
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Gewusst wie: Erstellen einer Aufgabe, die nach einer Verzögerung abgeschlossen wird
 Dieses Beispiel zeigt, wie die [Concurrency:: Task](../../parallel/concrt/reference/task-class.md), [cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [Concurrency:: Timer](../../parallel/concrt/reference/timer-class.md), und [Call](../../parallel/concrt/reference/call-class.md) Klassen, die eine Aufgabe zu erstellen, die nach einer Verzögerung abgeschlossen wird. Sie können diese Methode verwenden, Schleifen zu erstellen, die gelegentlich Daten abrufen, Timeouts einführen, die Verarbeitung von Benutzereingaben für einen zuvor festgelegten Zeitraum verzögern und so weiter.  

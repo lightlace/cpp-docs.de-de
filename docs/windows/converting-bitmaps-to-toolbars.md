@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872626"
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>Konvertieren von Bitmaps in Symbolleisten
 Sie können eine neue Symbolleiste erstellen, durch die Konvertierung einer Bitmap. Die Grafik aus der Bitmap, die in der Schaltflächenbilder für eine Symbolleiste konvertiert werden. Die Bitmap wird in der Regel mehrere Bilder in einer einzigen Bitmap mit einem Bild für jede Schaltfläche enthält. Bilder können eine beliebige Größe sein; Der Standardwert ist 16 Pixel breit und die Höhe des Bilds. Können Sie angeben, die Größe der Schaltflächenbilder in der [neue Symbolleistenressource (Dialogfeld)](../windows/new-toolbar-resource-dialog-box.md) bei Auswahl von Symbolleisten-Editor aus der **Image** in der Grafik-Editor im Menü.  

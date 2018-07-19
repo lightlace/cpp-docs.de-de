@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256518"
 ---
 # <a name="compiler-error-c3210"></a>Compilerfehler C3210
 'Typ': Zugriffsdeklaration kann nur auf einen Member der Basisklasse angewendet werden  

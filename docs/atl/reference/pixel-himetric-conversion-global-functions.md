@@ -1,5 +1,5 @@
 ---
-title: Globale Pixel HIMETRIC-Konvertierungsfunktionen | Microsoft Docs
+title: Globale Pixel HIMETRIC-Konvertierungsfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d84204bdf02e75f1baf64bd52d96eab0b3d271
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14b28ec031cf4570ec98e9ab2cebfa3954a88754
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881161"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>Globale Pixel/HIMETRIC-Konvertierungsfunktionen
-Diese Funktionen bieten Unterstützung für das Konvertieren von Pixel- und HIMETRIC-Einheiten.  
+Diese Funktionen bieten Unterstützung für die Konvertierung zu und von Pixel- und den HIMETRIC-Einheiten.  
   
 > [!IMPORTANT]
 >  In der folgenden Tabelle aufgeführten Funktionen können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 |||  
 |-|-|  
-|[AtlHiMetricToPixel](#atlhimetrictopixel)|HIMETRIC-Einheiten (à 0,01 Millimeter) konvertiert in Pixel.|  
-|[AtlPixelToHiMetric](#atlpixeltohimetric)|Konvertiert von Pixel in HIMETRIC-Einheiten (à ist 0,01 Millimeter).|  
+|[AtlHiMetricToPixel](#atlhimetrictopixel)|HIMETRIC-Einheiten (jede Einheit ist 0,01 Millimeter) konvertiert in Pixel.|  
+|[AtlPixelToHiMetric](#atlpixeltohimetric)|Konvertiert Pixel HIMETRIC-Einheiten (jede Einheit ist 0,01 Millimeter).|  
   
 ##  <a name="atlhimetrictopixel"></a>  AtlHiMetricToPixel  
  Konvertiert die Größe eines Objekts von HIMETRIC-Einheiten (à 0,01 Millimeter) in Pixel auf dem Bildschirmgerät.  
@@ -43,10 +44,10 @@ extern void AtlHiMetricToPixel(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpSizeInHiMetric`  
+ *lpSizeInHiMetric*  
  [in] Zeiger auf die Größe des Objekts in HIMETRIC-Einheiten.  
   
- `lpSizeInPix`  
+ *lpSizeInPix*  
  [out] Zeiger, in dem sich die Größe des Objekts in Pixel, die zurückgegeben werden.  
   
 ### <a name="example"></a>Beispiel  
@@ -65,10 +66,10 @@ extern void AtlPixelToHiMetric(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpSizeInPix`  
- [in] Ein Zeiger auf die Größe des Objekts in Pixel.  
+ *lpSizeInPix*  
+ [in] Zeiger auf die Größe des Objekts in Pixel.  
   
- `lpSizeInHiMetric`  
+ *lpSizeInHiMetric*  
  [out] Zeiger, in dem sich die Größe des Objekts in HIMETRIC-Einheiten, die zurückgegeben werden.  
   
 ### <a name="example"></a>Beispiel  

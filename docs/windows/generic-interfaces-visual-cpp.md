@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878696"
 ---
 # <a name="generic-interfaces-visual-c"></a>Generische Schnittstellen (Visual C++)
 Die Einschränkungen, um die Typparameter für Klassen gelten, sind identisch mit denen, die für Typparameter für Schnittstellen gelten (siehe [generische Klassen (C + c++ / CLI)](../windows/generic-classes-cpp-cli.md)).  

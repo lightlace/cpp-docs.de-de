@@ -1,5 +1,5 @@
 ---
-title: CMFCColorButton Klasse | Microsoft Docs
+title: CMFCColorButton-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,14 +54,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cea6fc2a543a528a0838479b2c47bea99f21cf96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac1b2c7f078acaa929cbfec0ac85456e6d72ee20
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850107"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton-Klasse
-Die `CMFCColorButton` und [CMFCColorBar Klasse](../../mfc/reference/cmfccolorbar-class.md) Klassen werden zusammen verwendet, um ein Farben-Auswahlsteuerelement zu implementieren.  
+Die `CMFCColorButton` und [CMFCColorBar-Klasse](../../mfc/reference/cmfccolorbar-class.md) Klassen werden zusammen verwendet, um ein Farben-Auswahlsteuerelement zu implementieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -81,58 +82,58 @@ class CMFCColorButton : public CMFCButton
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|Aktiviert und deaktiviert eine "Automatische"-Schaltfläche, die über die normale Schaltflächen positioniert ist. (Die Schaltfläche "automatisch Standardbetriebssystem" ist mit der Bezeichnung **automatische**.)|  
-|[CMFCColorButton::EnableOtherButton](#enableotherbutton)|Aktiviert und deaktiviert eine "other" Schaltfläche, die unter den regulären Farbe Schaltflächen positioniert ist. (Das Standardbetriebssystem "other" Schaltfläche ist mit der Bezeichnung **Weitere Farben**.)|  
+|[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|Aktiviert und deaktiviert eine "Automatische"-Schaltfläche, die über den regulären Farbe Schaltflächen positioniert ist. (Die standardmäßige automatische Schaltfläche ist mit der Bezeichnung **automatische**.)|  
+|[CMFCColorButton::EnableOtherButton](#enableotherbutton)|Aktiviert und deaktiviert eine "other"-Schaltfläche, die unter den regulären Farbe Schaltflächen positioniert ist. (Das Standardbetriebssystem "other" Schaltfläche ist mit **Weitere Farben**.)|  
 |[CMFCColorButton::GetAutomaticColor](#getautomaticcolor)|Ruft die aktuelle Farbe ab.|  
-|[CMFCColorButton::GetColor](#getcolor)|Ruft die Farbe einer Schaltfläche ab.|  
-|[CMFCColorButton::SetColor](#setcolor)|Legt die Farbe einer Schaltfläche fest.|  
+|[CMFCColorButton::GetColor](#getcolor)|Ruft ab, der Farbe einer Schaltfläche.|  
+|[CMFCColorButton::SetColor](#setcolor)|Legt fest, der Farbe einer Schaltfläche.|  
 |[CMFCColorButton::SetColorName](#setcolorname)|Legt einen Namen für die Farbe fest.|  
 |[CMFCColorButton::SetColumnsNumber](#setcolumnsnumber)|Legt die Anzahl der Spalten im Dialogfeld die Farbe fest.|  
-|[CMFCColorButton::SetDocumentColors](#setdocumentcolors)|Gibt eine Liste der dokumentspezifische Farben, die auf das Dialogfeld Auswahl einer Farbe angezeigt werden.|  
-|[CMFCColorButton::SetPalette](#setpalette)|Gibt eine Palette von Standardanzeige Farben an.|  
-|[CMFCColorButton::SizeToContent](#sizetocontent)|Ändert die Größe des Schaltflächen-Steuerelements, abhängig von der Größe von Text- und Bilddateien.|  
+|[CMFCColorButton::SetDocumentColors](#setdocumentcolors)|Gibt eine Liste der für die spezifischen-Farben, die auf das Dialogfeld Farbe Auswahl angezeigt werden.|  
+|[CMFCColorButton::SetPalette](#setpalette)|Gibt eine Palette von Farben für standardmäßige Anzeige an.|  
+|[CMFCColorButton::SizeToContent](#sizetocontent)|Ändert die Größe des Schaltflächen-Steuerelements, je nach Größe Text- und Bilddateien.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Gibt an, ob die Schaltfläche für die aktuelle Farbe in den visuellen Stil von Windows XP angezeigt wird.|  
-|[CMFCColorButton::OnDraw](#ondraw)|Wird aufgerufen, durch das Framework um ein Bild der Schaltfläche anzuzeigen.|  
-|[CMFCColorButton::OnDrawBorder](#ondrawborder)|Wird aufgerufen, durch das Framework die Schaltfläche Rahmen angezeigt.|  
-|[CMFCColorButton::OnDrawFocusRect](#ondrawfocusrect)|Wird aufgerufen, durch das Framework ein Fokusrechteck an, wenn die Schaltfläche einen den Fokus besitzt.|  
-|[CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)|Vom Framework aufgerufen, wird die Farbe-Auswahldialogfeld angezeigt wird.|  
-|[CMFCColorButton::RebuildPalette](#rebuildpalette)|Initialisiert die `m_pPalette` Datenmember der angegebenen Palette oder das System Standardpalette geschützt.|  
-|[CMFCColorButton::UpdateColor](#updatecolor)|Wird vom Framework aufgerufen, wenn der Benutzer eine Farbe aus der Palette der Farben-Auswahldialogfeld auswählt.|  
+|[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Gibt an, ob die Schaltfläche für die aktuelle Farbe im Stil von Windows XP angezeigt wird.|  
+|[CMFCColorButton::OnDraw](#ondraw)|Vom Framework aufgerufen, um ein Bild der Schaltfläche anzuzeigen.|  
+|[CMFCColorButton::OnDrawBorder](#ondrawborder)|Wird aufgerufen, durch das Framework der Rahmen der Schaltfläche angezeigt.|  
+|[CMFCColorButton::OnDrawFocusRect](#ondrawfocusrect)|Wird aufgerufen, durch das Framework um ein Fokusrechteck anzuzeigen, wenn die Schaltfläche mit den Schwerpunkt besitzt.|  
+|[CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)|Vom Framework aufgerufen, wenn das Dialogfeld Farbe Auswahl ist, angezeigt wird.|  
+|[CMFCColorButton::RebuildPalette](#rebuildpalette)|Initialisiert die `m_pPalette` Datenmember der angegebenen Palette oder der Systempalette standardmäßig geschützt.|  
+|[CMFCColorButton::UpdateColor](#updatecolor)|Vom Framework aufgerufen, wenn der Benutzer eine Farbe aus der Palette der Color-Auswahldialogfeld auswählt.|  
   
 ### <a name="data-members"></a>Datenmember  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|`m_bAltColorDlg`|Ein boolescher Wert. Wenn `TRUE`, zeigt das Framework der [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) Farbe Dialogfeld bei der *andere* Schaltfläche geklickt wird, oder, wenn `FALSE`, das System Farbe (Dialogfeld). Der Standardwert ist `TRUE`. Weitere Informationen finden Sie unter [CMFCColorButton::EnableOtherButton](#enableotherbutton).|  
-|`m_bAutoSetFocus`|Ein boolescher Wert. Wenn `TRUE`, das Framework legt den Fokus auf das Menü Farbe fest, wenn das Menü angezeigt wird, oder wenn `FALSE`, ändert sich nicht auf den Fokus. Der Standardwert ist `TRUE`.|  
-|[CMFCColorButton::m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|Gibt an, ob für die Farbschaltfläche Anpassungsmodus aktiviert ist.|  
+|`m_bAltColorDlg`|Ein boolescher Wert. Bei "true", zeigt das Framework die [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) Farbe Dialogfeld bei der *andere* Schaltfläche geklickt wird, oder False gibt an, das System color-Dialogfeld. Der Standardwert ist "true". Weitere Informationen finden Sie unter [CMFCColorButton::EnableOtherButton](#enableotherbutton).|  
+|`m_bAutoSetFocus`|Ein boolescher Wert. Bei "true", wird das Framework der Fokus auf das Menü "Farbe", wenn Sie im Menü angezeigt wird oder wenn "FALSE" den Fokus nicht ändert. Der Standardwert ist "true".|  
+|[CMFCColorButton::m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|Gibt an, ob für die Schaltfläche "Farbe" Anpassungsmodus aktiviert ist.|  
 |`m_Color`|Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert. Enthält die zurzeit ausgewählte Farbe an.|  
-|`m_ColorAutomatic`|Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert. Enthält die aktuell ausgewählte Standardfarbe.|  
+|`m_ColorAutomatic`|Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert. Enthält die derzeit ausgewählten Standardfarbe.|  
 |`m_Colors`|Ein [CArray](../../mfc/reference/carray-class.md) von [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Werte. Enthält die derzeit verfügbaren Farben an.|  
 |`m_lstDocColors`|Ein [CList](../../mfc/reference/clist-class.md) von [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Werte. Enthält die Farben des aktuellen Dokuments.|  
-|`m_nColumns`|Eine ganze Zahl. Enthält die Anzahl der Spalten im Raster der Farben in der Menübefehl für die Auswahl einer Farbe angezeigt.|  
+|`m_nColumns`|Eine ganze Zahl. Enthält die Anzahl der Spalten im Raster der Farben in einer Farbe Auswahlmenü angezeigt werden sollen.|  
 |`m_pPalette`|Ein Zeiger auf eine [CPalette](../../mfc/reference/cpalette-class.md). Enthält die Farben, die in der aktuellen Farbe Auswahlmenü verfügbar sind.|  
-|`m_pPopup`|Ein Zeiger auf eine [CMFCColorPopupMenu Klasse](../../mfc/reference/cmfccolorpopupmenu-class.md) Objekt. Die Farbe Auswahlmenü, das angezeigt wird, wenn Sie auf die Farbschaltfläche klicken.|  
-|`m_strAutoColorText`|Eine Zeichenfolge. Die Bezeichnung der Schaltfläche "automatisch" in der Menübefehl für die Auswahl einer Farbe.|  
-|`m_strDocColorsText`|Eine Zeichenfolge. Die Bezeichnung der Schaltfläche in einer Farbe Auswahlmenü, in dem die Farben angezeigt.|  
-|`m_strOtherText`|Eine Zeichenfolge. Die Bezeichnung der "other"-Schaltfläche in der Menübefehl für die Auswahl einer Farbe.|  
+|`m_pPopup`|Ein Zeiger auf eine [CMFCColorPopupMenu-Klasse](../../mfc/reference/cmfccolorpopupmenu-class.md) Objekt. Klicken Sie im Menü der Color-Auswahl, das angezeigt wird, wenn Sie auf die Schaltfläche "Farbe" klicken.|  
+|`m_strAutoColorText`|Eine Zeichenfolge. Die Bezeichnung der Schaltfläche in einem Farbe Auswahlmenü "automatisch".|  
+|`m_strDocColorsText`|Eine Zeichenfolge. Die Bezeichnung der Schaltfläche in einem Menü der Color-Auswahl, die die Farben anzeigt.|  
+|`m_strOtherText`|Eine Zeichenfolge. Die Bezeichnung der "other"-Schaltfläche in einem Auswahlmenü Farbe.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wird standardmäßig die `CMFCColorButton` Klasse verhält sich wie eine Schaltfläche, die ein Farben-Auswahldialogfeld wird geöffnet. Farben-Auswahldialogfeld enthält ein Array von kleine Schaltflächen und ein "other" Schaltfläche, die eine benutzerdefinierte Farbauswahl angezeigt. (Das Standardbetriebssystem "other" Schaltfläche ist mit der Bezeichnung **Weitere Farben**.) Wenn ein Benutzer eine neue Farbe wählt die `CMFCColorButton` Objekt die Änderung wiedergibt, und zeigt die ausgewählte Farbe.  
+ In der Standardeinstellung die `CMFCColorButton` -Klasse verhält sich wie eine Schaltfläche, die ein Farben-Auswahldialogfeld wird geöffnet. Das Dialogfeld Farbe Auswahl enthält ein Array von kleinen Farbe Schaltflächen und ein "other"-Schaltfläche, die eine benutzerdefinierte Farbauswahl angezeigt. (Das Standardbetriebssystem "other" Schaltfläche ist mit **Weitere Farben**.) Wenn ein Benutzer eine neue Farbe, wählt die `CMFCColorButton` Objekt gibt die Änderung wieder und zeigt die ausgewählte Farbe.  
   
- Erstellen Sie eine Farbe Button-Steuerelement aus, entweder direkt im Code oder mithilfe der **ClassWizard** Tool und einer Dialogfeldvorlage. Wenn Sie direkt zu einer Farbe Button-Steuerelement erstellen, fügen Sie eine `CMFCColorButton` Variablen auf Ihre Anwendung, und rufen Sie dann den Konstruktor und `Create` Methoden die `CMFCColorButton` Objekt. Bei Verwendung der **ClassWizard**, Hinzufügen einer `CButton` -Variablen an die Anwendung, und ändern Sie den Typ der Variablen aus `CButton` auf `CMFCColorButton`.  
+ Erstellen Sie ein Schaltflächen-Steuerelement von Farbe, entweder direkt im Code oder mithilfe der **ClassWizard** Tool und eine Dialogfeldvorlage. Wenn Sie ein Schaltflächen-Steuerelement Farbe direkt erstellen, fügen Sie eine `CMFCColorButton` Variablen zu Ihrer Anwendung, und rufen Sie dann den Konstruktor und `Create` Methoden der `CMFCColorButton` Objekt. Bei Verwendung der **ClassWizard**, Hinzufügen einer `CButton` Variablen Ihrer Anwendung und ändern Sie dann auf den Typ der Variablen vom `CButton` zu `CMFCColorButton`.  
   
- Farben-Auswahldialogfeld ( [CMFCColorBar Klasse](../../mfc/reference/cmfccolorbar-class.md)) wird angezeigt, die [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup) Methode, wenn das Framework Ruft die `OnLButtonDown` -Ereignishandler. Die [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup) Methode kann überschrieben werden, um benutzerdefinierte Farbauswahl zu unterstützen.  
+ Die Farben-Auswahldialogfeld ( [CMFCColorBar-Klasse](../../mfc/reference/cmfccolorbar-class.md)) wird angezeigt, die [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup) Methode, wenn das Framework Ruft die `OnLButtonDown` -Ereignishandler. Die [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup) Methode kann überschrieben werden, um benutzerdefinierte Farbauswahl zu unterstützen.  
   
- Die `CMFCColorButton` Objekt benachrichtigt, die das übergeordnete Element, die eine Farbe geändert wird, indem er sendet eine `WM_COMMAND | BN_CLICKED` Benachrichtigung. Das übergeordnete Element verwendet die [CMFCColorButton::GetColor](#getcolor) Methode, um die aktuelle Farbe abzurufen.  
+ Die `CMFCColorButton` Objekt benachrichtigt das übergeordnete Element, die eine Farbe geändert wird, durch Senden einer WM_COMMAND | BN_CLICKED-Benachrichtigung. Das übergeordnete Element verwendet die [CMFCColorButton::GetColor](#getcolor) Methode, um die aktuelle Farbe abzurufen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie eine farbenschaltfläche konfigurieren mithilfe verschiedener Methoden in der `CMFCColorButton` Klasse. Die Methoden legen Sie die Farbe der Schaltfläche für die Farbe und die Anzahl der Spalten, und aktivieren Sie die automatische und die anderen Schaltflächen. In diesem Beispiel ist Teil der [Status Leiste Demobeispiel](../../visual-cpp-samples.md).  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Schaltfläche "Farbe" zu konfigurieren, indem Sie mithilfe verschiedener Methoden in der `CMFCColorButton` Klasse. Die Methoden legen Sie die Farbe der Schaltfläche für die Farbe und die Anzahl der Spalten, und aktivieren Sie die automatische und die anderen Schaltflächen. In diesem Beispiel ist Teil der [Status Leiste Demobeispiel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]  
@@ -148,7 +149,7 @@ CMFCColorButton();
 ```  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCColorButton::EnableAutomaticButton  
- Aktivieren Sie oder deaktivieren Sie die Schaltfläche "Automatische", der ein Farben-Auswahlsteuerelement, und legen Sie die automatisch (Standard)-Farbe.  
+ Aktivieren Sie oder deaktivieren Sie die Schaltfläche "Automatische", der ein Farben-Auswahlsteuerelement, und legen Sie die Farbe automatisch (Standard).  
   
 ```  
 void EnableAutomaticButton(
@@ -158,19 +159,19 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLabel`  
- Gibt die automatische Schaltflächentext an.  
+ [in] *LpszLabel*  
+ Gibt die automatische Schaltfläche Text an.  
   
- [in] `colorAutomatic`  
- Ein RGB-Wert, der Schaltfläche "automatisch" die Standardfarbe angibt.  
+ [in] *ColorAutomatic*  
+ Ein RGB-Wert, der angibt, die automatische Schaltfläche Standardfarbe.  
   
- [in] `bEnable`  
- Gibt an, ob die Schaltfläche "Automatische" aktiviert oder deaktiviert ist.  
+ [in] *bAktivieren*  
+ Gibt an, ob die automatische Schaltfläche aktiviert oder deaktiviert ist.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="enableotherbutton"></a>  CMFCColorButton::EnableOtherButton  
- Aktivieren Sie oder deaktivieren Sie die Schaltfläche "other", die unterhalb der regulären Farbe Schaltflächen angezeigt wird.  
+ Aktivieren Sie oder deaktivieren Sie die Schaltfläche "other", in die folgenden regulären Farbe Schaltflächen angezeigt wird.  
   
 ```  
 void EnableOtherButton(
@@ -180,52 +181,52 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLabel`  
+ [in] *LpszLabel*  
  Gibt an, der Text der Schaltfläche.  
   
- [in] `bAltColorDlg`  
- Gibt an, ob die [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) Dialogfeld oder im Dialogfeld Farbe System wird geöffnet, wenn der Benutzer auf die Schaltfläche klickt.  
+ [in] *bAltColorDlg*  
+ Gibt an, ob die [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) im Dialogfeld bzw. im Dialogfeld Farbe System wird geöffnet, wenn der Benutzer auf die Schaltfläche klickt.  
   
- [in] `bEnable`  
- Gibt an, ob die Schaltfläche "Sonstige" aktiviert oder deaktiviert ist.  
+ [in] *bAktivieren*  
+ Gibt an, ob die Schaltfläche "other" aktiviert oder deaktiviert ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Klicken Sie auf die "other" Schaltfläche, um ein Dialogfeld anzuzeigen. Wenn die *bAltColorDlg* Parameter ist `TRUE`, die [CMFCColorDialog Klasse](../../mfc/reference/cmfccolordialog-class.md) wird angezeigt; andernfalls wird das Dialogfeld Farbe angezeigt.  
+ Klicken Sie auf der "other" Schaltfläche, um ein Dialogfeld anzuzeigen. Wenn die *bAltColorDlg* Parameter TRUE ist, die [CMFCColorDialog-Klasse](../../mfc/reference/cmfccolordialog-class.md) angezeigt wird; andernfalls wird das Dialogfeld Farbe angezeigt.  
   
 ##  <a name="getautomaticcolor"></a>  CMFCColorButton::GetAutomaticColor  
- Ruft die aktuelle automatisch (Standard)-Farbe ab.  
+ Ruft die aktuelle Farbe für die automatisch (Standard) ab.  
   
 ```  
 COLORREF GetAutomaticColor() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- RGB-Wert, der die aktuelle Farbe darstellt.  
+ Ein RGB-Wert, der die aktuelle Farbe darstellt.  
   
 ### <a name="remarks"></a>Hinweise  
- Die aktuelle Farbe wird festgelegt, indem die [CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton) Methode.  
+ Die aktuelle Farbe festgelegt ist, indem die [CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton) Methode.  
   
 ##  <a name="getcolor"></a>  CMFCColorButton::GetColor  
- Ruft die zurzeit ausgewählte Farbe ab.  
+ Ruft ab, die zurzeit ausgewählte Farbe.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- RGB-Wert.  
+ Ein RGB-Wert.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="isdrawxptheme"></a>  CMFCColorButton::IsDrawXPTheme  
- Gibt an, ob die Schaltfläche für die aktuelle Farbe in den visuellen Stil von Windows XP angezeigt wird.  
+ Gibt an, ob die Schaltfläche für die aktuelle Farbe im Stil von Windows XP angezeigt wird.  
   
 ```  
 BOOL IsDrawXPTheme() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn visuelle Stile werden unterstützt, und die Schaltfläche für die aktuelle Farbe, in den visuellen Stil von Windows XP angezeigt wird; andernfalls `FALSE`.  
+ True, wenn visuelle Stile werden unterstützt, und die Schaltfläche für die aktuelle Farbe, in den visuellen Stil von Windows XP angezeigt wird. andernfalls "false".  
   
 ##  <a name="m_benabledincustomizemode"></a>  CMFCColorButton::m_bEnabledInCustomizeMode  
  Legt eine farbenschaltfläche auf Anpassungsmodus fest.  
@@ -235,10 +236,10 @@ BOOL m_bEnabledInCustomizeMode;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie eine Anpassung Dialogseite eine farbenschaltfläche hinzu (oder ermöglicht dem Benutzer eine andere Farbe Auswahl während der Anpassung) möchten, aktivieren Sie die Schaltfläche mit den durch Festlegen der `m_bEnabledInCustomizeMode` Element `TRUE`. Standardmäßig wird bei diesem Member festgelegt `FALSE`.  
+ Wenn Sie eine Schaltfläche "Farbe" auf der Seite eine Anpassung hinzufügen (oder dem Benutzer ermöglichen, stellen eine andere Auswahl während der Anpassung) möchten, aktivieren Sie die Schaltfläche mit den durch Festlegen der `m_bEnabledInCustomizeMode` Member auf "true". Standardmäßig ist dieser Member auf "false" festgelegt.  
   
 ##  <a name="ondraw"></a>  CMFCColorButton::OnDraw  
- Wird aufgerufen, durch das Framework um ein Bild der Schaltfläche zu rendern.  
+ Wird aufgerufen, durch das Framework ein Bild auf der Schaltfläche gerendert.  
   
 ```  
 virtual void OnDraw(
@@ -248,20 +249,20 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Verweist auf den Gerätekontext, der verwendet wird, um das Bild der Schaltfläche zu rendern.  
   
- [in] `rect`  
- Ein Rechteck, das die Schaltfläche "" umschließt.  
+ [in] *Rect*  
+ Ein Rechteck, das die Schaltfläche mit den umschließt.  
   
- [in] `uiState`  
- Gibt den visuellen Status der Schaltfläche.  
+ [in] *UiState*  
+ Gibt den visuellen Zustand der Schaltfläche an.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode, um das Rendern zu passen.  
+ Überschreiben Sie diese Methode, um den Renderingprozess anpassen.  
   
 ##  <a name="ondrawborder"></a>  CMFCColorButton::OnDrawBorder  
- Wird aufgerufen, durch das Framework den Rahmen der Schaltfläche angezeigt.  
+ Wird aufgerufen, durch das Framework die Rahmen der Schaltfläche angezeigt.  
   
 ```  
 virtual void OnDrawBorder(
@@ -271,20 +272,20 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
- Verweist auf den Gerätekontext, der zum Zeichnen des Rahmens.  
+ [in] *pDC*  
+ Verweist auf den Gerätekontext zum Zeichnen des Rahmens.  
   
- [in] `rectClient`  
- Ein Rechteck in den Gerätekontext, der durch angegeben ist das der `pDC` Parameter, der die Begrenzungen der Schaltfläche gezeichnet werden definiert.  
+ [in] *RectClient*  
+ Ein Rechteck, in den Gerätekontext, die von angegeben ist das der *pDC* Parameter, der definiert, die Grenzen der Schaltfläche gezeichnet werden soll.  
   
- [in] `uiState`  
- Gibt den visuellen Status der Schaltfläche.  
+ [in] *UiState*  
+ Gibt den visuellen Zustand der Schaltfläche an.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Funktion, um die Farbschaltfläche Rahmen Darstellung anpassen.  
+ Überschreiben Sie diese Funktion zum Anpassen der Darstellung der Schaltfläche für die Farbe an.  
   
 ##  <a name="ondrawfocusrect"></a>  CMFCColorButton::OnDrawFocusRect  
- Wird aufgerufen, durch das Framework ein Fokusrechteck an, wenn die Schaltfläche "" den Fokus besitzt.  
+ Wird aufgerufen, durch das Framework um ein Fokusrechteck anzuzeigen, wenn die Schaltfläche den Fokus besitzt.  
   
 ```  
 virtual void OnDrawFocusRect(
@@ -293,17 +294,17 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
- Verweist auf den Gerätekontext, der zum Zeichnen des Fokusrechtecks verwendet.  
+ [in] *pDC*  
+ Verweist auf den Gerätekontext verwendet, um das Fokusrechteck gezeichnet werden soll.  
   
- [in] `rectClient`  
- Ein Rechteck in den Gerätekontext, der gemäß der `pDC` Parameter, der die Begrenzungen der Schaltfläche definiert.  
+ [in] *RectClient*  
+ Ein Rechteck, in den Gerätekontext, die gemäß der *pDC* Parameter, der die Grenzen der Schaltfläche definiert.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode, um die Darstellung des Systemfokusrechtecks anpassen.  
+ Überschreiben Sie diese Methode, um die Darstellung des Fokusrechtecks anpassen.  
   
 ##  <a name="onshowcolorpopup"></a>  CMFCColorButton::OnShowColorPopup  
- Wird aufgerufen, bevor der Farbleiste Popupfenster angezeigt wird.  
+ Wird aufgerufen, bevor die popupfarbleiste angezeigt wird.  
   
 ```  
 virtual void OnShowColorPopup();
@@ -312,7 +313,7 @@ virtual void OnShowColorPopup();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="rebuildpalette"></a>  CMFCColorButton::RebuildPalette  
- Initialisiert die `m_pPalette` Datenmember der angegebenen Palette oder das System Standardpalette geschützt.  
+ Initialisiert die `m_pPalette` Datenmember der angegebenen Palette oder der Systempalette standardmäßig geschützt.  
   
 ```  
 void RebuildPalette(CPalette* pPal);
@@ -322,7 +323,7 @@ void RebuildPalette(CPalette* pPal);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pPal`|Ein Zeiger auf eine logische Palette oder `NULL`. Wenn `NULL`, die Standardpalette-System verwendet wird.|  
+|[in] *pPal*|Ein Zeiger auf eine logische Palette, oder NULL. Wenn der Wert NULL ist, wird die Standardpalette-System verwendet.|  
   
 ##  <a name="setcolor"></a>  CMFCColorButton::SetColor  
  Gibt die Farbe der Schaltfläche.  
@@ -332,8 +333,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `color`  
- RGB-Wert.  
+ [in] *Farbe*  
+ Ein RGB-Wert.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -347,31 +348,31 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `color`  
- Die Farbe RGB-Wert.  
+ [in] *Farbe*  
+ Die Farbe der RGB-Wert.  
   
- [in] `strName`  
+ [in] *StrName*  
  Der Name der Farbe.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Liste der Farbnamen ist global pro Anwendung. Diese Methode überträgt folglich die Parameter an [CMFCColorBar::SetColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname).  
+ Die Liste der Farben ist global pro Anwendung. Diese Methode überträgt daher Parameter [CMFCColorBar::SetColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname).  
   
 ##  <a name="setcolumnsnumber"></a>  CMFCColorButton::SetColumnsNumber  
- Definiert die Anzahl der Spalten, die in der Tabelle der Farben angezeigt werden, die dem Benutzer, während der Benutzer Farbe Auswahlprozesses verwendet werden angezeigt werden.  
+ Definiert die Anzahl der Spalten, die in der Tabelle der Farben angezeigt werden, die dem Benutzer beim Auswahlprozess für den Benutzer Farbe angezeigt werden.  
   
 ```  
 void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nColumns`  
+ [in] *nColumns*  
  Gibt die Anzahl der Spalten an.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Benutzer kann eine Farbe aus einer Popup-Farbleiste auszuwählen, in dem eine Tabelle mit vordefinierter Farben angezeigt. Verwenden Sie diese Methode, um die Anzahl der Spalten in der Tabelle zu definieren.  
+ Der Benutzer kann eine Farbe aus einer popupfarbleiste auswählen, die eine Tabelle mit vordefinierter Farben anzeigt. Verwenden Sie diese Methode, um die Anzahl der Spalten in der Tabelle zu definieren.  
   
 ##  <a name="setdocumentcolors"></a>  CMFCColorButton::SetDocumentColors  
- Gibt einen Satz von Farben und den Namen des Satzes an. Der Satz von Farben wird angezeigt, mit einem [CMFCColorBar Klasse](../../mfc/reference/cmfccolorbar-class.md) Objekt.  
+ Gibt einen Satz von Farben und den Namen des Satzes. Der Satz von Farben wird angezeigt, mit einem [CMFCColorBar-Klasse](../../mfc/reference/cmfccolorbar-class.md) Objekt.  
   
 ```  
 void SetDocumentColors(
@@ -380,57 +381,57 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLabel`  
+ [in] *LpszLabel*  
  Gibt die Bezeichnung, die mit dem Satz von Dokumentfarben angezeigt werden.  
   
- [in] `lstColors`  
+ [in] *LstColors*  
  Ein Verweis auf eine Liste mit RGB-Werten.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein `CMFCColorButton` Objekt verwaltet eine Liste mit RGB-Werten, die zum Übertragen einer [CMFCColorBar Klasse](../../mfc/reference/cmfccolorbar-class.md) Objekt. Wenn der Farbleiste angezeigt wird, werden diese Farben angezeigt, in einem speziellen Abschnitt, dessen Bezeichnung, indem angegeben wird, die `lpszLabel` Parameter.  
+ Ein `CMFCColorButton` Objekt verwaltet eine Liste mit RGB-Werte, die zum übertragen werden eine [CMFCColorBar-Klasse](../../mfc/reference/cmfccolorbar-class.md) Objekt. Wenn der Farbleiste angezeigt wird, werden diese Farben angezeigt, in einen speziellen Bereich, dessen Bezeichnung, indem angegeben wird, die *LpszLabel* Parameter.  
   
 ##  <a name="setpalette"></a>  CMFCColorButton::SetPalette  
- Gibt die standardmäßigen Farben auf die Farbleiste Popupfenster angezeigt werden sollen.  
+ Gibt die standardmäßigen Farben, die auf die popupfarbleiste angezeigt.  
   
 ```  
 void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pPalette`  
+ [in] *pPalette*  
  Ein Zeiger auf eine Farbpalette.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="sizetocontent"></a>  CMFCColorButton::SizeToContent  
- Das Schaltflächen-Steuerelement, um Text und Bild passt die Größe ändert.  
+ Ändert die Größe der Schaltflächen-Steuerelement, entsprechend der Text- und Bilddateien.  
   
 ```  
 virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bCalcOnly`  
- Wert ungleich NULL ist, wird die neue Größe des Schaltflächensteuerelements jedoch die tatsächliche Größe wird nicht geändert.  
+ [in] *bCalcOnly*  
+ Wert ungleich NULL wird die neue Größe des Button-Steuerelements wird berechnet, aber die tatsächliche Größe wird nicht geändert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `CSize` Objekt, das eine neue Größe für Schaltfläche Steuerelement angibt.  
+ Ein `CSize` Objekt, das eine neue Größe der Schaltfläche Steuerelement angibt.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="updatecolor"></a>  CMFCColorButton::UpdateColor  
- Vom Framework aufgerufen, wenn der Benutzer eine Farbe aus der Farbleiste, die angezeigt wird auswählt, wenn der Benutzer eine Farbe klickt.  
+ Vom Framework aufgerufen, wenn der Benutzer eine Farbe aus der Farbleiste, die anzeigt auswählt, wenn der Benutzer die Schaltfläche "Farbe" klickt.  
   
 ```  
 virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `color`  
- Ein vom Benutzer ausgewählten Farbe.  
+ [in] *Farbe*  
+ Eine Farbe, die vom Benutzer ausgewählt wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `UpdateColor` Funktion ändert den aktuell ausgewählten Schaltflächenfarbe und benachrichtigt von seinem übergeordneten Element durch Senden einer `WM_COMMAND` -Nachricht mit einer `BN_CLICKED` standard Notification. Verwenden der [CMFCColorButton::GetColor](#getcolor) Methode, um die ausgewählte Farbe abzurufen.  
+ Die `UpdateColor` -Funktion ändert sich der aktuell ausgewählten Schaltfläche die Farbe und benachrichtigt das übergeordnete Element durch Senden einer WM_COMMAND-Meldung mit einer standardmäßigen BN_CLICKED-Benachrichtigung. Verwenden der [CMFCColorButton::GetColor](#getcolor) Methode, um die ausgewählte Farbe abzurufen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

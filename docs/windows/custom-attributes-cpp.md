@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33887025"
 ---
 # <a name="custom-attributes-c"></a>Benutzerdefinierte Attribute (C++)
 Ein benutzerdefiniertes Attribut ist eine stark typisierte Technik, die dem Benutzer ermöglicht, die Metadaten zu erweitern. In diesem Thema befasst sich mit der Verwendung von Attributen: Angeben von Parametern und Ziele.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860631"
 ---
 # <a name="attributes-by-usage"></a>Attribute nach Verwendung
 Dieses Thema enthält Attribute gemäß dem C++-Sprachelemente, die für die sie gelten.  

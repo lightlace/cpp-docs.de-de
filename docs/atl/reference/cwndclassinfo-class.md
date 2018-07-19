@@ -1,5 +1,5 @@
 ---
-title: CWndClassInfo Klasse | Microsoft Docs
+title: CWndClassInfo-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,17 +25,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878d6065f3a158ac4404620205ef9c60912d89ca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b328cb869f971afb0251750d7847d6850688731
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879834"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo-Klasse
 Diese Klasse stellt Methoden zum Erfassen von Informationen für eine Fensterklasse.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,30 +56,30 @@ class CWndClassInfo
   
 |||  
 |-|-|  
-|[m_atom](#m_atom)|Zur eindeutigen Identifizierung der registrierten Fensterklasse.|  
-|[m_bSystemCursor](#m_bsystemcursor)|Gibt an, ob der Cursor-Ressource auf einen Systemcursor oder ein Cursor in einem Modul Ressource verweist.|  
-|[m_lpszCursorID](#m_lpszcursorid)|Gibt den Namen der Cursorressource.|  
+|[m_atom](#m_atom)|Zur eindeutigen Identifizierung die registrierten Fensterklasse.|  
+|[m_bSystemCursor](#m_bsystemcursor)|Gibt an, ob der Cursor-Ressource auf einen Systemcursor oder ein Cursor in eine Modulressource bezieht.|  
+|[m_lpszCursorID](#m_lpszcursorid)|Gibt den Namen der Cursorressource an.|  
 |[m_lpszOrigName](#m_lpszorigname)|Enthält den Namen einer vorhandenen Fenster-Klasse.|  
-|[m_szAutoName](#m_szautoname)|Enthält eine ATL generierter Name der Fensterklasse.|  
-|[m_wc](#m_wc)|Verwaltet die fensterklasseninformationen in einem **WNDCLASSEX** Struktur.|  
-|[pWndProc](#pwndproc)|Verweist auf die Fensterprozedur für eine vorhandene Fensterklasse überordnen.|  
+|[m_szAutoName](#m_szautoname)|Enthält den Namen einer ATL generierte der Fensterklasse.|  
+|[m_wc](#m_wc)|Verwaltet die fensterklasseninformationen in einem `WNDCLASSEX` Struktur.|  
+|[pWndProc](#pwndproc)|Zeigt auf die Fensterprozedur des eine vorhandene Fensterklasse.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CWndClassInfo` verwaltet die Informationen des eine Fensterklasse. In der Regel `CWndClassInfo` über einen der drei Makros `DECLARE_WND_CLASS`, `DECLARE_WND_CLASS_EX`, oder `DECLARE_WND_SUPERCLASS`, wie in der folgenden Tabelle beschrieben:  
+ `CWndClassInfo` verwaltet die Informationen des eine Fensterklasse. In der Regel `CWndClassInfo` über eine der drei Makros, DECLARE_WND_CLASS, DECLARE_WND_CLASS_EX oder DECLARE_WND_SUPERCLASS, wie in der folgenden Tabelle beschrieben:  
   
 |Makro|Beschreibung|  
 |-----------|-----------------|  
-|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo` Informationen für eine neue Fensterklasse registriert.|  
-|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` Informationen für eine neue Windows-Klasse, einschließlich der Parameter für die Klasse registriert.|  
-|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo` Informationen für eine Fensterklasse, die auf einer vorhandenen Klasse basiert, aber verwendet eine anderes Zeitfenster Prozedur registriert. Diese Technik wird das Erstellen von übergeordneten Klassen bezeichnet.|  
+|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo` registriert Informationen für eine neue Windows-Klasse.|  
+|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` registriert Informationen für eine neue Windows-Klasse, einschließlich der Parameter für die Klasse.|  
+|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo` registriert Informationen für eine Fensterklasse, die auf einer vorhandenen Klasse basiert, aber verwendet eine andere Fensterprozedur. Dieses Verfahren wird die Erstellung einer übergeordneten Klasse bezeichnet.|  
   
- Standardmäßig [CWindowImpl](../../atl/reference/cwindowimpl-class.md) enthält die `DECLARE_WND_CLASS` Makro beim Erstellen eines Fensters basierend auf einem neuen Fensterklasse. DECLARE_WND_CLASS bietet Standardstile und Hintergrundfarbe für das Steuerelement. Wenn Sie gibt den Stil und Hintergrundfarbe selbst festlegen möchten, leiten Sie eine Klasse von `CWindowImpl` und enthalten die `DECLARE_WND_CLASS_EX` Makros in der Klasse.  
+ In der Standardeinstellung [CWindowImpl](../../atl/reference/cwindowimpl-class.md) enthält die `DECLARE_WND_CLASS` Makro beim Erstellen eines Fensters auf der Grundlage von einer neue Windows-Klasse. DECLARE_WND_CLASS werden die Standardstile und Hintergrundfarbe für das Steuerelement bereitstellt. Wenn Sie geben das Format an und Hintergrundfarbe selbst festlegen möchten, leiten Sie eine Klasse von `CWindowImpl` und das DECLARE_WND_CLASS_EX-Makro in der Klassendefinition enthalten.  
   
- Wenn Sie beim Erstellen eines Fensters basierend auf eine vorhandene Fensterklasse überordnen möchten, leiten Sie eine Klasse von `CWindowImpl` und enthalten die `DECLARE_WND_SUPERCLASS` Makros in der Klasse. Zum Beispiel:  
+ Wenn Sie ein Fenster, die basierend auf eine vorhandene Fensterklasse erstellen möchten, leiten Sie Ihre Klasse von `CWindowImpl` und das DECLARE_WND_SUPERCLASS-Makro in der Klassendefinition enthalten. Zum Beispiel:  
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
- Weitere Informationen zu Fensterklassen, finden Sie unter [Fensterklassen](http://msdn.microsoft.com/library/windows/desktop/ms632596) im Windows SDK.  
+ Weitere Informationen zu Klassen, finden Sie unter [Fensterklassen](http://msdn.microsoft.com/library/windows/desktop/ms632596) im Windows SDK.  
   
  Weitere Informationen zum Verwenden von Fenstern in ATL finden Sie im Artikel [ATL-Fensterklassen](../../atl/atl-window-classes.md).  
   
@@ -93,28 +94,28 @@ ATOM m_atom;
 ```  
   
 ##  <a name="m_bsystemcursor"></a>  CWndClassInfo::m_bSystemCursor  
- Wenn **"true"**, die Systemressource Cursor wird geladen werden, wenn die Fensterklasse registriert ist.  
+ Bei "true", wird die Cursor Systemressource geladen werden, wenn die Fensterklasse registriert ist.  
   
 ```
 BOOL m_bSystemCursor;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Andernfalls wird die Cursorressource, die in Ihrem Modul enthalten geladen werden.  
+ Andernfalls wird der Cursor-Ressource, die im Modul enthalten geladen werden.  
   
- `CWndClassInfo` verwendet `m_bSystemCursor` nur, wenn die [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (die Standardeinstellung in [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) oder die [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) Makro angegeben ist. In diesem Fall `m_bSystemCursor` wird mit initialisiert **"true"**. Weitere Informationen finden Sie unter der [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) (Übersicht).  
+ `CWndClassInfo` verwendet `m_bSystemCursor` nur, wenn die [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (die Standardeinstellung in [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) oder die [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) Makro angegeben ist. In diesem Fall `m_bSystemCursor` auf "true" initialisiert wird. Weitere Informationen finden Sie unter den [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Übersicht.  
   
 ##  <a name="m_lpszcursorid"></a>  CWndClassInfo::m_lpszCursorID  
- Gibt entweder den Namen der Cursorressource oder den Ressourcenbezeichner in das niederwertige Wort und 0 (null), in das höherwertige Wort an.  
+ Gibt an, entweder der Name der Cursorressource oder den Ressourcenbezeichner in das niederwertige Wort und 0 (null), das höherwertige Wort.  
   
 ```
 LPCTSTR m_lpszCursorID;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wann die Fensterklasse registriert wird, das Handle für die identifizierte Cursor `m_lpszCursorID` abgerufen und gespeichert werden, indem [M_wc](#m_wc).  
+ Bei der Registrierung der Fensterklasse, das Handle für das identifizierte Cursor `m_lpszCursorID` abgerufen und gespeichert werden, indem [M_wc](#m_wc).  
   
- `CWndClassInfo` verwendet `m_lpszCursorID` nur, wenn die [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (die Standardeinstellung in [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) oder die [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) Makro angegeben ist. In diesem Fall `m_lpszCursorID` wird mit initialisiert **IDC_ARROW**. Weitere Informationen finden Sie unter der [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) (Übersicht).  
+ `CWndClassInfo` verwendet `m_lpszCursorID` nur, wenn die [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (die Standardeinstellung in [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) oder die [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) Makro angegeben ist. In diesem Fall `m_lpszCursorID` mit IDC_ARROW initialisiert wird. Weitere Informationen finden Sie unter den [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Übersicht.  
   
 ##  <a name="m_lpszorigname"></a>  CWndClassInfo::m_lpszOrigName  
  Enthält den Namen einer vorhandenen Fenster-Klasse.  
@@ -124,7 +125,7 @@ LPCTSTR m_lpszOrigName;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `CWndClassInfo` verwendet `m_lpszOrigName` nur beim Schließen der [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) Makros in der Klasse. In diesem Fall `CWndClassInfo` eine Fensterklasse auf der Klasse mit dem Namen basierend von Registern `m_lpszOrigName`. Weitere Informationen finden Sie unter der [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) (Übersicht).  
+ `CWndClassInfo` verwendet `m_lpszOrigName` nur wenn enthalten die [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) Makro in der Klassendefinition. In diesem Fall `CWndClassInfo` eine Fensterklasse auf der Grundlage von der Klasse, die mit dem Namen von Registern `m_lpszOrigName`. Weitere Informationen finden Sie unter den [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Übersicht.  
   
 ##  <a name="m_szautoname"></a>  CWndClassInfo::m_szAutoName  
  Enthält den Namen der Fensterklasse.  
@@ -134,7 +135,7 @@ TCHAR m_szAutoName[13];
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `CWndClassInfo` verwendet `m_szAutoName` nur, wenn **NULL** übergeben wird, für die `WndClassName` Parameter [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) oder [ DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ATL wird ein Name erstellt, bei der die Fensterklasse registriert ist.  
+ `CWndClassInfo` verwendet `m_szAutoName` nur dann, wenn NULL, um übergeben wird die `WndClassName` Parameter [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) oder [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) . ATL wird einen Namen zu erstellen, wenn die Fensterklasse registriert ist.  
   
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc  
  Verwaltet die fensterklasseninformationen in einem [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) Struktur.  
@@ -144,39 +145,39 @@ WNDCLASSEX m_wc;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie angegeben haben der [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (die Standardeinstellung in [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) oder die [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) -Makro, `m_wc` enthält Informationen zu einer neue Windows-Klasse.  
+ Wenn Sie angegeben haben die [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (die Standardeinstellung in [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) oder die [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) -Makro, `m_wc` enthält Informationen zu einer neue Windows-Klasse.  
   
- Wenn Sie angegeben haben die [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) Makro `m_wc` enthält Informationen zu einer übergeordneten Klasse – eine Fensterklasse, die auf einer vorhandenen Klasse basiert, aber verwendet eine anderes Zeitfenster-Prozedur. [M_lpszOrigName](#m_lpszorigname) und [pWndProc](#pwndproc) speichern Sie die vorhandene Fensterklasse überordnen Name und Fensterprozedur,.  
+ Wenn Sie angegeben haben die [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) Makro `m_wc` enthält Informationen zu einer übergeordneten Klasse – eine Fensterklasse, die auf einer vorhandenen Klasse basiert, aber verwendet eine andere Fensterprozedur. [M_lpszOrigName](#m_lpszorigname) und [pWndProc](#pwndproc) speichern Sie die vorhandene Fensterklasse-Namen und die Fensterprozedur.  
   
 ##  <a name="pwndproc"></a>  CWndClassInfo::pWndProc  
- Verweist auf die Fensterprozedur für eine vorhandene Fensterklasse überordnen.  
+ Zeigt auf die Fensterprozedur des eine vorhandene Fensterklasse.  
   
 ```
 WNDPROC pWndProc;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `CWndClassInfo` verwendet `pWndProc` nur beim Schließen der [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) Makros in der Klasse. In diesem Fall `CWndClassInfo` eine Fensterklasse, die auf einer vorhandenen Klasse basiert, aber verwendet eine anderes Zeitfenster Prozedur registriert. Die vorhandene Fensterklasse überordnen Fensterprozedur wird gespeichert, `pWndProc`. Weitere Informationen finden Sie unter der [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) (Übersicht).  
+ `CWndClassInfo` verwendet `pWndProc` nur wenn enthalten die [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) Makro in der Klassendefinition. In diesem Fall `CWndClassInfo` eine Fensterklasse, die auf einer vorhandenen Klasse basiert, aber verwendet eine anderes Fensterprozedur registriert. Die vorhandene Fensterklasse Fensterprozedur wird gespeichert, `pWndProc`. Weitere Informationen finden Sie unter den [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Übersicht.  
   
 ##  <a name="register"></a>  CWndClassInfo::Register  
- Wird aufgerufen, indem [CWindowImpl:: Create](../../atl/reference/cwindowimpl-class.md#create) Fensterklasse zu registrieren, wenn er noch nicht registriert wurde.  
+ Wird aufgerufen, indem [CWindowImpl:: Create](../../atl/reference/cwindowimpl-class.md#create) Fensterklasse registrieren, wenn er noch nicht registriert wurde.  
   
 ```
 ATOM Register(WNDPROC* pProc);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pProc`  
- [out] Gibt die ursprüngliche Fensterprozedur der eine vorhandene Fensterklasse überordnen an.  
+ *pProc*  
+ [out] Gibt die ursprüngliche Fensterprozedur der eine vorhandene Fensterklasse an.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Bei Erfolg ein Atom, identifiziert eindeutig die Fensterklasse registriert wird. Andernfalls 0.  
+ Bei Erfolg wird ein Atom, die eindeutig identifiziert die Fensterklasse registriert wird. Andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie angegeben haben die [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (die Standardeinstellung in [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) oder die [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) -Makro, `Register` eine neue Fensterklasse registriert. In diesem Fall die `pProc` Parameter wird nicht verwendet.  
+ Wenn Sie angegeben haben die [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (die Standardeinstellung für [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) oder die [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) Makro `Register` registriert eine neue Windows-Klasse. In diesem Fall die *pProc* Parameter wird nicht verwendet.  
   
- Wenn Sie angegeben haben die [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) -Makro, `Register` eine übergeordneten Klasse registriert – eine Fensterklasse, die auf einer vorhandenen Klasse basiert, aber verwendet eine anderes Zeitfenster-Prozedur. Die vorhandene Fensterklasse überordnen Fensterprozedur wird zurückgegeben, `pProc`.  
+ Wenn Sie angegeben haben die [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) Makro `Register` registriert eine übergeordnete Klasse – eine Fensterklasse, die auf einer vorhandenen Klasse basiert, aber verwendet eine andere Fensterprozedur. In die vorhandene Fensterklasse Fensterprozedur zurückgegeben *pProc*.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

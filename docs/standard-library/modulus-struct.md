@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226e9895d7ddc199e2f15c3721228f59c0e5a0ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5b9ae4ae3b7d741624d220ba00006d51a61fd20
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962161"
 ---
 # <a name="modulus-struct"></a>modulus-Struktur
 
-Ein vordefiniertes Funktionsobjekt, das den Divisionsvorgang ( `operator%`) auf den jeweiligen Argumenten ausführt.
+Ein vordefiniertes Funktionsobjekt, das den Modulusdivisionsvorgang (`operator%`) auf den Argumenten ausführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,11 +49,11 @@ struct modulus<void>
 
 ### <a name="parameters"></a>Parameter
 
-`Type`, `T`, `U` Jeder Typ, der unterstützt ein `operator%` , das Operanden angegebenen oder abgeleiteten Typen akzeptiert.
+*Typ*, *T*, *U* jeder Typ, unterstützt eine `operator%` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-`Left` Der linke Operand des modulusvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `T`.
+*Links* der linke Operand des modulusvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-`Right` Der Rechte Operand des modulusvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `U`.
+*Rechts* der Rechte Operand des modulusvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
 

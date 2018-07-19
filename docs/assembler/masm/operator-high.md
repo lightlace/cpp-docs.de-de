@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055715"
 ---
 # <a name="operator-high"></a>Operator HIGH
 Gibt die oberen 8 Bits, der die unteren 16 Bits des *Ausdruck*. MASM-Ausdrücke sind 64-Bit-Werte.  

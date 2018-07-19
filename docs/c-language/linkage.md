@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383523"
 ---
 # <a name="linkage"></a>Bindung
 Bezeichnernamen können sich auf verschiedene Bezeichner in unterschiedlichen Bereichen beziehen. Ein Bezeichner, der in verschiedenen Bereichen oder im gleichen Bereich mehrmals deklariert wird, kann durch einen Prozess mit der Bezeichnung "Bindung" auf denselben Bezeichner oder auf dieselben Funktion verweisen. Die Bindung bestimmt die Teile des Programms, in denen ein Bezeichner referenziert werden kann (seine "Sichtbarkeit"). Es gibt drei Arten von Verknüpfungen: [intern](../c-language/internal-linkage.md), [extern](../c-language/external-linkage.md) und [keine Verknüpfung](../c-language/no-linkage.md).  

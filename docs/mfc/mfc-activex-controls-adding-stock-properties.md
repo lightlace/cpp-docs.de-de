@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c51a2efba3c89b4e216fec96459b14c3d0c637d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 791694bfa1bcd7472be4691d9aef133b80ccace4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930129"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von vordefinierten Eigenschaften
-Basiseigenschaften unterscheiden sich von benutzerdefinierten Eigenschaften, insofern, dass sie bereits von der Klasse implementiert sind `COleControl`. `COleControl` enthält vordefinierte Memberfunktionen, die allgemeine Eigenschaften für das Steuerelement zu unterstützen. Einige allgemeinen Eigenschaften enthalten die Beschriftung des Steuerelements und die Farben für Vordergrund und Hintergrund. Informationen über weitere vordefinierten Eigenschaften finden Sie unter [Stock Eigenschaften unterstützt, indem Sie den Assistenten zum Hinzufügen einer Eigenschaft](#_core_stock_properties_supported_by_classwizard) weiter unten in diesem Artikel. Die Dispatch-Zuordnungseinträge für vordefinierte Eigenschaften werden immer vorangestellt **DISP_STOCKPROP**.  
+Basiseigenschaften unterscheiden sich von benutzerdefinierten Eigenschaften, insofern, dass sie bereits von der Klasse implementiert sind `COleControl`. `COleControl` enthält vordefinierte Memberfunktionen, die allgemeine Eigenschaften für das Steuerelement zu unterstützen. Einige allgemeinen Eigenschaften enthalten die Beschriftung des Steuerelements und die Farben für Vordergrund und Hintergrund. Informationen über weitere vordefinierten Eigenschaften finden Sie unter [Stock Eigenschaften unterstützt, indem Sie den Assistenten zum Hinzufügen einer Eigenschaft](#_core_stock_properties_supported_by_classwizard) weiter unten in diesem Artikel. Die Dispatch-Zuordnungseinträge für vordefinierte Eigenschaften immer DISP_STOCKPROP vorangestellt.  
   
  In diesem Artikel wird beschrieben, wie eine Systemeigenschaft (in diesem Fall Beschriftung) ein ActiveX-Steuerelement mithilfe des Assistenten zum Hinzufügen von Eigenschaften hinzufügen und die resultierende codeänderungen erläutert. Folgende Themen werden behandelt:  
   
@@ -80,16 +81,16 @@ Basiseigenschaften unterscheiden sich von benutzerdefinierten Eigenschaften, ins
   
 |Eigenschaft|Dispatch-Zuordnungseintrag|Wie Zugriffswert|  
 |--------------|------------------------|-------------------------|  
-|**Darstellung**|**DISP_STOCKPROP_APPEARANCE)**|Als Wert **m_sAppearance abrufbar**.|  
-|`BackColor`|**DISP_STOCKPROP_BACKCOLOR)**|Wert zugegriffen werden kann, durch den Aufruf `GetBackColor`.|  
-|`BorderStyle`|**DISP_STOCKPROP_BORDERSTYLE)**|Als Wert **M_sBorderStyle**.|  
-|**Beschriftung**|**DISP_STOCKPROP_CAPTION)**|Wert zugegriffen werden kann, durch den Aufruf `InternalGetText`.|  
-|**Aktiviert**|**DISP_STOCKPROP_ENABLED)**|Als Wert **m_bEnabled abrufbar**.|  
-|**Schriftart**|**DISP_STOCKPROP_FONT)**|Finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten](../mfc/mfc-activex-controls-using-fonts.md) für die Verwendung.|  
-|`ForeColor`|**DISP_STOCKPROP_FORECOLOR)**|Wert zugegriffen werden kann, durch den Aufruf `GetForeColor`.|  
-|**hWnd**|**DISP_STOCKPROP_HWND)**|Als Wert `m_hWnd`.|  
-|**Text**|**DISP_STOCKPROP_TEXT)**|Wert zugegriffen werden kann, durch den Aufruf `InternalGetText`. Diese Eigenschaft ist identisch mit **Beschriftung**, mit Ausnahme der Eigenschaftenname.|  
-|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|Wert als M_lReadyState zugegriffen werden kann oder `GetReadyState`|  
+|`Appearance`|DISP_STOCKPROP_APPEARANCE)|Als Wert `m_sAppearance`.|  
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR)|Wert zugegriffen werden kann, durch den Aufruf `GetBackColor`.|  
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE)|Als Wert `m_sBorderStyle`.|  
+|`Caption`|DISP_STOCKPROP_CAPTION)|Wert zugegriffen werden kann, durch den Aufruf `InternalGetText`.|  
+|`Enabled`|DISP_STOCKPROP_ENABLED)|Als Wert `m_bEnabled`.|  
+|`Font`|DISP_STOCKPROP_FONT)|Finden Sie im Artikel [MFC-ActiveX-Steuerelemente: Verwenden von Schriftarten](../mfc/mfc-activex-controls-using-fonts.md) für die Verwendung.|  
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR)|Wert zugegriffen werden kann, durch den Aufruf `GetForeColor`.|  
+|`hWnd`|DISP_STOCKPROP_HWND)|Als Wert `m_hWnd`.|  
+|`Text`|DISP_STOCKPROP_TEXT)|Wert zugegriffen werden kann, durch den Aufruf `InternalGetText`. Diese Eigenschaft ist identisch mit `Caption`, mit Ausnahme der Eigenschaftenname.|  
+|`ReadyState`|DISP_STOCKPROP_READYSTATE()|Als Wert `m_lReadyState` oder `GetReadyState`|  
   
 ##  <a name="_core_stock_properties_and_notification"></a> Vordefinierte Eigenschaften und Benachrichtigung  
  Die meisten Basiseigenschaften haben Benachrichtigungsfunktionen, die überschrieben werden können. Z. B. immer dann, wenn die `BackColor` Eigenschaft geändert wird, die `OnBackColorChanged` Funktion (eine Memberfunktion der Steuerelementklasse) aufgerufen wird. Die standardmäßige Implementierung (in `COleControl`) Aufrufe `InvalidateControl`. Überschreiben Sie diese Funktion, wenn Sie zusätzliche Aktionen als Reaktion auf diese Situation möchten.  
@@ -104,7 +105,7 @@ Basiseigenschaften unterscheiden sich von benutzerdefinierten Eigenschaften, ins
  [!code-cpp[NVC_MFC_AxUI#24](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls (MFC-ActiveX-Steuerelemente)](../mfc/mfc-activex-controls.md)   
  [MFC-ActiveX-Steuerelemente: Eigenschaften](../mfc/mfc-activex-controls-properties.md)   
  [MFC-ActiveX-Steuerelemente: Methoden](../mfc/mfc-activex-controls-methods.md)   
  [COleControl-Klasse](../mfc/reference/colecontrol-class.md)

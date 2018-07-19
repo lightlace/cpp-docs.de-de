@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ab496a5de8062f6888b92b318788ff72345bc7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e76bd39477c92d075f1dba8cf14b912c0f616e0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955909"
 ---
 # <a name="badalloc-class"></a>bad_alloc-Klasse
 
@@ -38,7 +39,7 @@ virtual ~bad_alloc();
 
 ## <a name="remarks"></a>Hinweise
 
-Der von **what** zurückgegebene Wert ist eine durch die Implementierung definierte C-Zeichenfolge. Keine der Memberfunktionen löst irgendeine Ausnahme aus.
+Der Rückgabewert von `what` ist eine implementierungsdefinierte C-Zeichenfolge. Keine der Memberfunktionen löst irgendeine Ausnahme aus.
 
 ## <a name="requirements"></a>Anforderungen
 

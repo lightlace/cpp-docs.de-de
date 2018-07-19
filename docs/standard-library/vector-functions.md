@@ -8,11 +8,12 @@ f1_keywords:
 ms.assetid: 6cdcf043-eef6-4330-83f0-4596fb9f968a
 helpviewer_keywords:
 - std::swap [vector]
-ms.openlocfilehash: dbcb2524736bcb99693f3a4b27790c3447d58fe3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 29b23ec4afe32d1aa383afd4fdaf3ca280d49161
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955259"
 ---
 # <a name="ltvectorgt-functions"></a>&lt;vector&gt;-Funktionen
 
@@ -28,13 +29,15 @@ void swap(vector<Type, Allocator>& left, vector<Type, Allocator>& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Der Vektor, der die auszutauschenden Elemente bereitgestellt, oder der Vektor, dessen Elemente mit denen des Vektors spezifiziertes `left`.
+*right*  
+ Der Vektor Elemente ausgetauscht werden sollen, oder der Vektor, dessen Elemente ausgetauscht werden, mit denen des Vektors *linken*.
 
-`left` Der Vektor, dessen Elemente mit denen des Vektors spezifiziertes `right`.
+*left*  
+ Der Vektor, dessen Elemente ausgetauscht werden, mit denen des Vektors *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion ist ein Algorithmus für die Container-Klasse zu führen Sie die Memberfunktion Vektor spezialisierten `left`. [Vector:: Swap](../standard-library/vector-class.md) *(rechts*). Hierbei handelt es sich um Instanzen der partiellen Sortierung von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die am meisten spezialisierte Version der Vorlagenfunktion. Die allgemeine Version der Vorlagenfunktion, **template** \< **class T**> **void swap**( **T&**, **T&**), in der Algorithmusklasse funktioniert per Zuweisung und ist ein langsamer Vorgang. Die spezialisierte Version in jedem Container ist viel schneller, da sie mit der internen Darstellung der Containerklasse verwendet werden kann.
+Die Vorlagenfunktion ist ein Algorithmus, spezialisiert auf Container-Klasse Vector, führen Sie die Memberfunktion `left`. [Vector:: Swap](../standard-library/vector-class.md) *(rechts*). Hierbei handelt es sich um Instanzen der partiellen Sortierung von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die am meisten spezialisierte Version der Vorlagenfunktion. Die allgemeine Version der Vorlagenfunktion, **template** \< **class T**> **void swap**( **T&**, **T&**), in der Algorithmusklasse funktioniert per Zuweisung und ist ein langsamer Vorgang. Die spezialisierte Version in jedem Container ist viel schneller, da sie mit der internen Darstellung der Containerklasse verwendet werden kann.
 
 ### <a name="example"></a>Beispiel
 

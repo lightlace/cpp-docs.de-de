@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99480a8d77aef1822034be100a03f73cfa9d1be0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930003"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC-ActiveX-Steuerelemente: Weiterführende Themen
 Dieser Artikel umfasst erweiterte Themen im Zusammenhang mit der Entwicklung von ActiveX-Steuerelemente. Dazu gehören:  
@@ -78,9 +79,9 @@ Dieser Artikel umfasst erweiterte Themen im Zusammenhang mit der Entwicklung von
   
 8.  In der **Get-Funktion** und **Set-Funktion** Felder, geben Sie eindeutige Namen für die Get- und Set-Funktion, oder übernehmen Sie den Standardnamen.  
   
-9. Fügen Sie einen Parameter namens `row` (Typ `short`) unter Verwendung der **Parametername** und **Parametertyp** Steuerelemente.  
+9. Fügen Sie einen Parameter namens *Zeile* (Typ *kurze*) unter Verwendung der **Parametername** und **Parametertyp** Steuerelemente.  
   
-10. Fügen Sie einen zweiten Parameter namens `column` (Typ `short`).  
+10. Fügen Sie einen zweiten Parameter namens *Spalte* (Typ *kurze*).  
   
 11. Klicken Sie auf **Fertig stellen**.  
   
@@ -110,48 +111,48 @@ Dieser Artikel umfasst erweiterte Themen im Zusammenhang mit der Entwicklung von
   
 |Fehler|Beschreibung|  
 |-----------|-----------------|  
-|**CTL_E_ILLEGALFUNCTIONCALL**|Ungültiger Funktionsaufruf|  
-|**CTL_E_OVERFLOW**|Überlauf|  
-|**CTL_E_OUTOFMEMORY**|Nicht genügend Arbeitsspeicher|  
-|**CTL_E_DIVISIONBYZERO**|Division durch 0 (null)|  
-|**CTL_E_OUTOFSTRINGSPACE**|Nicht genügend Zeichenfolgenspeicher|  
-|**CTL_E_OUTOFSTACKSPACE**|Nicht genügend Stapelspeicher|  
-|**CTL_E_BADFILENAMEORNUMBER**|Der Dateiname oder die Zahl ist ungültig.|  
-|**CTL_E_FILENOTFOUND**|Datei wurde nicht gefunden.|  
-|**CTL_E_BADFILEMODE**|Fehlerhafter Dateimodus.|  
-|**CTL_E_FILEALREADYOPEN**|Die Datei ist bereits geöffnet.|  
-|**CTL_E_DEVICEIOERROR**|Geräte-E/A-Fehler|  
-|**CTL_E_FILEALREADYEXISTS**|Datei bereits vorhanden|  
-|**CTL_E_BADRECORDLENGTH**|Ungültige Datensatzlänge.|  
-|**CTL_E_DISKFULL**|Der Datenträger ist voll|  
-|**CTL_E_BADRECORDNUMBER**|Ungültige Datensatznummer|  
-|**CTL_E_BADFILENAME**|Ungültiger Dateiname|  
-|**CTL_E_TOOMANYFILES**|Zu viele Dateien|  
-|**CTL_E_DEVICEUNAVAILABLE**|Das Gerät ist nicht verfügbar|  
-|**CTL_E_PERMISSIONDENIED**|Berechtigung verweigert|  
-|**CTL_E_DISKNOTREADY**|Das Laufwerk ist nicht bereit|  
-|**CTL_E_PATHFILEACCESSERROR**|Pfad-/Dateizugriffsfehler|  
-|**CTL_E_PATHNOTFOUND**|Der Pfad wurde nicht gefunden|  
-|**CTL_E_INVALIDPATTERNSTRING**|Ungültige Musterzeichenfolge|  
-|**CTL_E_INVALIDUSEOFNULL**|Ungültige Verwendung von NULL|  
-|**CTL_E_INVALIDFILEFORMAT**|Ungültiges Dateiformat|  
-|**CTL_E_INVALIDPROPERTYVALUE**|Ungültiger Eigenschaftswert|  
-|**CTL_E_INVALIDPROPERTYARRAYINDEX**|Ungültiger Eigenschaftenarrayindex.|  
-|**CTL_E_SETNOTSUPPORTEDATRUNTIME**|"Set" wird zur Laufzeit nicht unterstützt|  
-|**CTL_E_SETNOTSUPPORTED**|"Set" wird nicht unterstützt (schreibgeschützte Eigenschaft)|  
-|**CTL_E_NEEDPROPERTYARRAYINDEX**|Ein Eigenschaftenarrayindex wird benötigt|  
-|**CTL_E_SETNOTPERMITTED**|"Set" ist unzulässig.|  
-|**CTL_E_GETNOTSUPPORTEDATRUNTIME**|'Get' wird zur Laufzeit nicht unterstützt.|  
-|**CTL_E_GETNOTSUPPORTED**|'Get' wird nicht unterstützt (lesegeschützte Eigenschaft).|  
-|**CTL_E_PROPERTYNOTFOUND**|Die Eigenschaft wurde nicht gefunden|  
-|**CTL_E_INVALIDCLIPBOARDFORMAT**|Ungültige Zwischenablageformat|  
-|**CTL_E_INVALIDPICTURE**|Ungültiges Bild|  
-|**CTL_E_PRINTERERROR**|Druckerfehler|  
-|**CTL_E_CANTSAVEFILETOTEMP**|Datei kann nicht in TEMP gespeichert werden.|  
-|**CTL_E_SEARCHTEXTNOTFOUND**|Suchtext wurde nicht gefunden|  
-|**CTL_E_REPLACEMENTSTOOLONG**|Die Ersetzungen sind zu lang|  
+|CTL_E_ILLEGALFUNCTIONCALL|Ungültiger Funktionsaufruf|  
+|CTL_E_OVERFLOW|Überlauf|  
+|CTL_E_OUTOFMEMORY|Nicht genügend Arbeitsspeicher|  
+|CTL_E_DIVISIONBYZERO|Division durch 0 (null)|  
+|CTL_E_OUTOFSTRINGSPACE|Nicht genügend Zeichenfolgenspeicher|  
+|CTL_E_OUTOFSTACKSPACE|Nicht genügend Stapelspeicher|  
+|CTL_E_BADFILENAMEORNUMBER|Der Dateiname oder die Zahl ist ungültig.|  
+|CTL_E_FILENOTFOUND|Datei wurde nicht gefunden.|  
+|CTL_E_BADFILEMODE|Fehlerhafter Dateimodus.|  
+|CTL_E_FILEALREADYOPEN|Die Datei ist bereits geöffnet.|  
+|CTL_E_DEVICEIOERROR|Geräte-E/A-Fehler|  
+|CTL_E_FILEALREADYEXISTS|Datei bereits vorhanden|  
+|CTL_E_BADRECORDLENGTH|Ungültige Datensatzlänge.|  
+|CTL_E_DISKFULL|Der Datenträger ist voll|  
+|CTL_E_BADRECORDNUMBER|Ungültige Datensatznummer|  
+|CTL_E_BADFILENAME|Ungültiger Dateiname|  
+|CTL_E_TOOMANYFILES|Zu viele Dateien|  
+|CTL_E_DEVICEUNAVAILABLE|Das Gerät ist nicht verfügbar|  
+|CTL_E_PERMISSIONDENIED|Berechtigung verweigert|  
+|CTL_E_DISKNOTREADY|Das Laufwerk ist nicht bereit|  
+|CTL_E_PATHFILEACCESSERROR|Pfad-/Dateizugriffsfehler|  
+|CTL_E_PATHNOTFOUND|Der Pfad wurde nicht gefunden|  
+|CTL_E_INVALIDPATTERNSTRING|Ungültige Musterzeichenfolge|  
+|CTL_E_INVALIDUSEOFNULL|Ungültige Verwendung von NULL|  
+|CTL_E_INVALIDFILEFORMAT|Ungültiges Dateiformat|  
+|CTL_E_INVALIDPROPERTYVALUE|Ungültiger Eigenschaftswert|  
+|CTL_E_INVALIDPROPERTYARRAYINDEX|Ungültiger Eigenschaftenarrayindex.|  
+|CTL_E_SETNOTSUPPORTEDATRUNTIME|"Set" wird zur Laufzeit nicht unterstützt|  
+|CTL_E_SETNOTSUPPORTED|"Set" wird nicht unterstützt (schreibgeschützte Eigenschaft)|  
+|CTL_E_NEEDPROPERTYARRAYINDEX|Ein Eigenschaftenarrayindex wird benötigt|  
+|CTL_E_SETNOTPERMITTED|"Set" ist unzulässig.|  
+|CTL_E_GETNOTSUPPORTEDATRUNTIME|'Get' wird zur Laufzeit nicht unterstützt.|  
+|CTL_E_GETNOTSUPPORTED|'Get' wird nicht unterstützt (lesegeschützte Eigenschaft).|  
+|CTL_E_PROPERTYNOTFOUND|Die Eigenschaft wurde nicht gefunden|  
+|CTL_E_INVALIDCLIPBOARDFORMAT|Ungültige Zwischenablageformat|  
+|CTL_E_INVALIDPICTURE|Ungültiges Bild|  
+|CTL_E_PRINTERERROR|Druckerfehler|  
+|CTL_E_CANTSAVEFILETOTEMP|Datei kann nicht in TEMP gespeichert werden.|  
+|CTL_E_SEARCHTEXTNOTFOUND|Suchtext wurde nicht gefunden|  
+|CTL_E_REPLACEMENTSTOOLONG|Die Ersetzungen sind zu lang|  
   
- Verwenden Sie bei Bedarf die **CUSTOM_CTL_SCODE** Makro, um eine benutzerdefinierte Fehlercode für eine Bedingung, die nicht behandelt wird von einer der standard-Codes zu definieren. Der Parameter für dieses Makro muss eine ganze Zahl zwischen 1000 und 32767 liegen. Zum Beispiel:  
+ Verwenden Sie bei Bedarf das CUSTOM_CTL_SCODE-Makro, um eine benutzerdefinierte Fehlercode für eine Bedingung, die nicht behandelt wird von einer der standard-Codes zu definieren. Der Parameter für dieses Makro muss eine ganze Zahl zwischen 1000 und 32767 liegen. Zum Beispiel:  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
@@ -175,7 +176,7 @@ Dieser Artikel umfasst erweiterte Themen im Zusammenhang mit der Entwicklung von
   
      - oder -   
   
--   Deklarieren einer lokalen Variablen und die Unterklasse wie das Dialogfeldelement. Fügen Sie Code, der die folgenden ähnelt (`CMyCtrl` ist die Wrapperklasse `IDC_MYCTRL1` ist das Steuerelement-ID):  
+-   Deklarieren einer lokalen Variablen und die Unterklasse wie das Dialogfeldelement. Fügen Sie Code, der die folgenden ähnelt (`CMyCtrl` ist die Wrapperklasse IDC_MYCTRL1 ist die ID des Steuerelements):  
   
      [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   

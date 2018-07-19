@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860332"
 ---
 # <a name="attribute-contexts"></a>Attributkontexte
 C++-Attribute können mit vier grundlegenden Felder beschrieben werden: das Ziel auf angewendet werden können kann (**gilt für**), wenn sie wiederholbar oder nicht sind (**Repeatable**), wird die Vorhandenseins anderer Attribute (erforderlich **Erforderliche Attribute**), und die Inkompatibilitäten mit anderen Attributen (**ungültige Attribute**). Diese Felder werden in einer zugehörigen Tabelle im Referenzthema für jedes Attribut aufgeführt. Jedes dieser Felder wird im folgenden beschrieben.  

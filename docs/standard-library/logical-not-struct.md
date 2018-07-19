@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d654c526e5c856431d69c045c5018d77a6fed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961638"
 ---
 # <a name="logicalnot-struct"></a>logical_not-Struktur
 
@@ -48,9 +49,9 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>Parameter
 
-`Type` Jeder Typ, der unterstützt eine `operator!` , die einen Operanden des angegebenen oder abgeleiteten Typs akzeptiert.
+*Typ* jeder Typ, unterstützt eine `operator!` , die einen Operanden des Typs angegebener oder abgeleiteter akzeptiert.
 
-`Left` Der Operand des logischen not-Operation. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `Type`.
+*Links* der Operand des logischen not-Operation. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *Typ*.
 
 ## <a name="return-value"></a>Rückgabewert
 

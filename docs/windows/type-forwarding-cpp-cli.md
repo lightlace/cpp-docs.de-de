@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891093"
 ---
 # <a name="type-forwarding-ccli"></a>Typweiterleitung (C++/CLI)
 *Typweiterleitung* können Sie einen Typ aus einer Assembly (Assembly A) in einer anderen Assembly (Assembly B) verschieben, so, dass es nicht erforderlich ist, Clients neu kompiliert, die Assembly a zu verarbeiten  

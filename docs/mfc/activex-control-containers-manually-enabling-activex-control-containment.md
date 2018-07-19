@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339890"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX-Steuerelementcontainer: Manuelles Aktivieren von ActiveX-Steuerelementcontainern
 Wenn Sie die ActiveX-Steuerelemente unterstützen nicht aktiviert haben, wenn Sie die MFC-Anwendung-Assistent verwendet, um Ihre Anwendung zu generieren, müssen Sie diese Unterstützung manuell hinzufügen. Dieser Artikel beschreibt das Verfahren zum manuellen Hinzufügen von ActiveX-Steuerelementcontainern für eine vorhandene OLE-Container-Anwendung. Wenn Sie im Voraus wissen, dass Sie in der OLE-Container ActiveX-Steuerelemente unterstützen möchten, finden Sie im Artikel [Erstellen eines MFC-ActiveX-Steuerelementcontainers](../mfc/reference/creating-an-mfc-activex-control-container.md).  

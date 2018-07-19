@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93fe2221e25951a53340d5da97f7d5c48ce477cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c27856b2bb6b843ce60404ea389c28082bf1dc5a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953944"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Reihenfolge der Operationen
 Dieser Artikel veranschaulicht parallel verwendet werden, die Abfolge der Vorgänge für einen Serversocket und ein Clientsocket. Da die Sockets verwenden `CArchive` Objekte sind notwendigerweise [streamen Sockets](../mfc/windows-sockets-stream-sockets.md).  
@@ -43,22 +44,22 @@ Dieser Artikel veranschaulicht parallel verwendet werden, die Abfolge der Vorgä
 |`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> - oder - <br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> – oder beide –|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> - oder - <br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> – oder beide –|  
 |`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> - oder - <br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> - oder - <br /><br /> `arOut << dwValue;`6|  
   
- 1. Wobei `nPort` ist eine Portnummer. Finden Sie unter [Windows Sockets: Ports und Socketadressen](../mfc/windows-sockets-ports-and-socket-addresses.md) ausführliche Informationen zu Ports.  
+ 1. Wobei *%nPort* ist eine Portnummer. Finden Sie unter [Windows Sockets: Ports und Socketadressen](../mfc/windows-sockets-ports-and-socket-addresses.md) ausführliche Informationen zu Ports.  
   
- 2. Der Server muss immer einen Port angeben, damit Clients eine Verbindung herstellen können. Die **erstellen** Aufruf gibt in manchen Fällen auch eine Adresse. Verwenden Sie auf der Clientseite der Standardparameter, die MFC ermöglicht, verwenden Sie einen beliebigen verfügbaren Port zu bitten.  
+ 2. Der Server muss immer einen Port angeben, damit Clients eine Verbindung herstellen können. Die `Create` Aufruf gibt in manchen Fällen auch eine Adresse. Verwenden Sie auf der Clientseite der Standardparameter, die MFC ermöglicht, verwenden Sie einen beliebigen verfügbaren Port zu bitten.  
   
- 3. Wobei `nPort` ist eine Portnummer und *StrAddr* ist eine Adresse des Computers oder einer Adresse Internetprotokoll (IP).  
+ 3. Wobei *%nPort* ist eine Portnummer und *StrAddr* ist eine Adresse des Computers oder einer Adresse Internetprotokoll (IP).  
   
- 4. Adressen der Computer können verschiedene Formen annehmen: "ftp.microsoft.com", "microsoft.com". IP-Adressen verwenden Sie das Formular "gepunktet Anzahl" "127.54.67.32". Die **verbinden** Funktion überprüft, um festzustellen, ob die Adresse einer gepunkteten Anzahl (obwohl es nicht überprüft, um sicherzustellen, dass die Anzahl gültiger Computer im Netzwerk). Wenn dies nicht der Fall ist, **verbinden** einen Computernamen einer der anderen Formen annimmt.  
+ 4. Adressen der Computer können verschiedene Formen annehmen: "ftp.microsoft.com", "microsoft.com". IP-Adressen verwenden Sie das Formular "gepunktet Anzahl" "127.54.67.32". Die `Connect` Funktion überprüft, um festzustellen, ob die Adresse einer gepunkteten Anzahl (obwohl es nicht überprüft, um sicherzustellen, dass die Anzahl gültiger Computer im Netzwerk). Wenn dies nicht der Fall ist, `Connect` einen Computernamen einer der anderen Formen annimmt.  
   
- 5. Beim Aufruf **Accept** auf Serverseite, übergeben Sie einen Verweis auf ein neues Socketobjekt. Sie müssen dieses Objekt zunächst erstellen, rufen Sie jedoch nicht **erstellen** dafür. Beachten Sie, dass wenn dieser Socketobjekt des Bereichs, die Verbindung geschlossen wird. MFC stellt eine Verbindung her, das neue Objekt ein **SOCKET** behandeln. Sie können den Socket auf dem Stapel, wie dargestellt, oder klicken Sie auf dem Heap erstellen.  
+ 5. Beim Aufruf `Accept` auf Serverseite, übergeben Sie einen Verweis auf ein neues Socketobjekt. Sie müssen dieses Objekt zunächst erstellen, rufen Sie jedoch nicht `Create` dafür. Beachten Sie, dass wenn dieser Socketobjekt des Bereichs, die Verbindung geschlossen wird. MFC stellt eine Verbindung her, das neue Objekt ein **SOCKET** behandeln. Sie können den Socket auf dem Stapel, wie dargestellt, oder klicken Sie auf dem Heap erstellen.  
   
  6. Die Archivierungs- und die Socketdatei geschlossen werden, wenn sie außerhalb des Gültigkeitsbereichs liegen. Das Socketobjekt-Destruktor ruft auch die [schließen](../mfc/reference/casyncsocket-class.md#close) Memberfunktion für die Socketobjekt, wenn das Objekt den Gültigkeitsbereich verlässt oder gelöscht wird.  
   
 ## <a name="additional-notes-about-the-sequence"></a>Weitere Hinweise zum der Sequenz  
- Die Reihenfolge der Aufrufe, die in der obigen Tabelle aufgeführten ist für einen Datenstrom-Socket. Datagrammsockets, die verbindungslose sind, erfordern keine der [CAsyncSocket:: Connect](../mfc/reference/casyncsocket-class.md#connect), [Lauschen](../mfc/reference/casyncsocket-class.md#listen), und [Accept](../mfc/reference/casyncsocket-class.md#accept) Aufrufe (obwohl Sie optional können**Verbinden**). Stattdessen bei Verwendung der Klasse `CAsyncSocket`, Datagramm-sockets verwendet den `CAsyncSocket::SendTo` und `ReceiveFrom` Memberfunktionen. (Bei Verwendung von **verbinden** mit einen Datagrammsocket verwenden Sie **senden** und **Receive**.) Da `CArchive` funktioniert nicht mit Datagramme, verwenden Sie keine `CSocket` mit einem Archiv, wenn der Socket ein Datagramm ist.  
+ Die Reihenfolge der Aufrufe, die in der obigen Tabelle aufgeführten ist für einen Datenstrom-Socket. Datagrammsockets, die verbindungslose sind, erfordern keine der [CAsyncSocket:: Connect](../mfc/reference/casyncsocket-class.md#connect), [Lauschen](../mfc/reference/casyncsocket-class.md#listen), und [Accept](../mfc/reference/casyncsocket-class.md#accept) Aufrufe (obwohl Sie optional können`Connect`). Stattdessen bei Verwendung der Klasse `CAsyncSocket`, Datagramm-sockets verwendet den `CAsyncSocket::SendTo` und `ReceiveFrom` Memberfunktionen. (Bei Verwendung von `Connect` mit einen Datagrammsocket verwenden Sie `Send` und `Receive`.) Da `CArchive` funktioniert nicht mit Datagramme, verwenden Sie keine `CSocket` mit einem Archiv, wenn der Socket ein Datagramm ist.  
   
- [CSocketFile](../mfc/reference/csocketfile-class.md) unterstützen nicht alle `CFile`Funktionalität. `CFile` Elemente wie z. B. `Seek`, die für die Socketkommunikation keine sinnvoll sind nicht verfügbar. Aus diesem Grund standardmäßig einige MFC `Serialize` Funktionen sind nicht kompatibel mit `CSocketFile`. Dies gilt insbesondere für die `CEditView` Klasse. Sie sollten nicht versuchen, serialisieren `CEditView` Daten über eine `CArchive` Objekt angefügt, um eine `CSocketFile` -Objekt unter Verwendung `CEditView::SerializeRaw`; verwenden **CEditView:: Serialize** stattdessen (nicht dokumentiert). Die [SerializeRaw](../mfc/reference/ceditview-class.md#serializeraw) erwartet das Objekt "Datei", haben die Funktionen, z. B. `Seek`, `CSocketFile` nicht unterstützt.  
+ [CSocketFile](../mfc/reference/csocketfile-class.md) unterstützen nicht alle `CFile`Funktionalität. `CFile` Elemente wie z. B. `Seek`, die für die Socketkommunikation keine sinnvoll sind nicht verfügbar. Aus diesem Grund standardmäßig einige MFC `Serialize` Funktionen sind nicht kompatibel mit `CSocketFile`. Dies gilt insbesondere für die `CEditView` Klasse. Sie sollten nicht versuchen, serialisieren `CEditView` Daten über eine `CArchive` Objekt angefügt, um eine `CSocketFile` -Objekt unter Verwendung `CEditView::SerializeRaw`; verwenden `CEditView::Serialize` stattdessen (nicht dokumentiert). Die [SerializeRaw](../mfc/reference/ceditview-class.md#serializeraw) erwartet das Objekt "Datei", haben die Funktionen, z. B. `Seek`, `CSocketFile` nicht unterstützt.  
   
  Weitere Informationen finden Sie unter:  
   

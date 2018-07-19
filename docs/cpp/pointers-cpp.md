@@ -1,5 +1,5 @@
 ---
-title: Zeiger (C++) | Microsoft Docs
+title: Zeiger (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d794041df385a9e18a8a4b25460d961a340cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943525"
 ---
 # <a name="pointers-c"></a>Zeiger (C++)
 Zeiger werden mithilfe der folgenden Sequenz deklariert.  
@@ -39,25 +40,25 @@ Zeiger werden mithilfe der folgenden Sequenz deklariert.
   
  1. Die Deklarationsspezifizierer:  
   
--   Ein optionaler Speicherklassenbezeichner. Weitere Informationen finden Sie unter [Spezifizierer](../cpp/specifiers.md).  
+    - Ein optionaler Speicherklassenbezeichner. Weitere Informationen finden Sie unter [Spezifizierer](../cpp/specifiers.md).  
   
--   Ein optionales `const`- oder `volatile`-Schlüsselwort, das auf den Typ des Objekts angewendet wird, auf das gezeigt werden soll.  
+    - Eine optionale **const** oder **flüchtige** Schlüsselwort, das in den Typ des Objekts, auf das gezeigt werden angewendet.  
   
--   Der Typspezifizierer: der Name eines Typs, der den Typ des Objekts dargestellt, auf das gezeigt wird.  
+    - Der Typspezifizierer: der Name eines Typs, der den Typ des Objekts dargestellt, auf das gezeigt wird.  
   
  2. Der Deklarator:  
   
--   Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).  
+    - Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).  
   
--   Der Operator `*`.  
+    - Der Operator `*`.  
   
--   Ein optionales `const`- oder `volatile`-Schlüsselwort, das auf den Zeiger selbst angewendet wird.  
+    - Eine optionale **const** oder **flüchtige** Schlüsselwort, das auf den Zeiger selbst angewendet.  
   
--   Der Bezeichner.  
+    - Der Bezeichner.  
   
--   Ein optionaler Initialisierer.  
+    - Ein optionaler Initialisierer.  
   
- Der Deklarator für einen Zeiger auf eine Funktion sieht wie folgt aus:  
+     Der Deklarator für einen Zeiger auf eine Funktion sieht wie folgt aus:  
   
 ```  
 (* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]  
@@ -74,31 +75,31 @@ Zeiger werden mithilfe der folgenden Sequenz deklariert.
   
  Ein einfaches Beispiel für eine Zeigerdeklaration ist:  
   
-```  
+```cpp 
 char *pch;  
 ```  
   
- Die vorhergehende Deklaration gibt an, dass `pch` auf ein Objekt vom Typ `char` zeigt.  
+ Die vorhergehende Deklaration gibt an, dass `pch` verweist auf ein Objekt des Typs **Char**.  
   
  Ein komplexeres Beispiel ist  
   
-```  
+```cpp 
 static unsigned int * const ptr;  
 ```  
   
- Die vorhergehende Deklaration gibt an, dass `ptr` ist ein konstanter Zeiger auf ein Objekt des Typs `unsigned` `int` mit statischer Speicherdauer.  
+ Die vorhergehende Deklaration gibt an, dass `ptr` ein konstanter Zeiger auf ein Objekt des Typs **ohne Vorzeichen** **Int** mit statischer Speicherdauer.  
   
  Das folgende Beispiel zeigt, wie mehrere Zeiger deklariert und initialisiert werden:  
   
-```  
+```cpp 
 static int *p = &i, *q = &j;  
 ```  
   
- Im vorhergehenden Beispiel, zeigen die Zeiger p und q auf Objekte vom Typ `int` und werden entsprechend mit den Adressen von i und j initialisiert.  Der Speicherklassenspezifizierer `static` gilt für beide Zeiger.  
+ Im vorherigen Beispiel Zeiger p und q zeigen Sie auf Objekte des Typs **Int** und werden in die Adressen von i und j initialisiert.  Der Speicherklassenspezifizierer **statische** gilt für beide Zeiger.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // pointer.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -189,7 +190,7 @@ dog dog
 ## <a name="example"></a>Beispiel  
  Ein weiteres Beispiel illustriert die Verwendung von Zeigern in Datenstrukturen; in diesem Fall eine verknüpfte Liste.  
   
-```  
+```cpp 
 // pointer_linkedlist.cpp  
 // compile with: /EHsc  
 #include <iostream>  

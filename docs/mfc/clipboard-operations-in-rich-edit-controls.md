@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341283"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Zwischenablageoperationen in RichEdit-Steuerelementen
 Ihre Anwendung kann den Inhalt der Zwischenablage in ein rich-Edit-Steuerelement einfügen ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) mit den am besten verfügbaren Zwischenablageformat oder einem bestimmten Zwischenablageformat. Sie können auch bestimmen, ob ein rich-Edit-Steuerelement kann ein Format der Zwischenablage einfügen.  

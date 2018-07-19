@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e50e613885215cf13504f8c9b72e0e48d5a6447
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e02a48fddfb2e5ff8f85b59b1ff241492461e521
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966354"
 ---
 # <a name="notequalto-struct"></a>not_equal_to-Struktur
 
-Ein binäres Prädikat, mit dem der Ungleichheitsvorgang ( `operator!=`) auf den jeweiligen Argumenten ausgeführt wird.
+Ein binäres Prädikat, mit dem der Ungleichheitsvorgang (`operator!=`) auf den Argumenten ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,11 +49,11 @@ struct not_equal_to<void>
 
 ### <a name="parameters"></a>Parameter
 
-`Type`, `T`, `U` Jeder Typ, der unterstützt ein `operator!=` , das Operanden angegebenen oder abgeleiteten Typen akzeptiert.
+*Typ*, *T*, *U* jeder Typ, unterstützt eine `operator!=` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-`Left` Der linke Operand des ungleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `T`.
+*Links* der linke Operand des ungleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-`Right` Der Rechte Operand des ungleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `U`.
+*Rechts* der Rechte Operand des ungleichheitsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -60,7 +61,7 @@ Das Ergebnis von `Left != Right`. Die spezialisierte Vorlage vervollkommnet die 
 
 ## <a name="remarks"></a>Hinweise
 
-Die Objekte vom Typ `Type` müssen auf Gleichheit vergleichbar sein. Das erfordert, dass das mit dem `operator!=`-Element, das im Satz von Objekten definiert wird, die Eigenschaften einer mathematischen Äquivalenzrelation erfüllt werden. Alle integrierten numerischen Typen und Zeigertypen erfüllen diese Anforderung.
+Die Objekte vom Typ *Typ* müssen auf Gleichheit vergleichbar sein. Das erfordert, dass das mit dem `operator!=`-Element, das im Satz von Objekten definiert wird, die Eigenschaften einer mathematischen Äquivalenzrelation erfüllt werden. Alle integrierten numerischen Typen und Zeigertypen erfüllen diese Anforderung.
 
 ## <a name="example"></a>Beispiel
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374725"
 ---
 # <a name="module-definition-def-files"></a>Moduldefinitionsdateien (.Def)
 Moduldefinitionsdateien (.def) Geben Sie den Linker mit Informationen über Exporte, Attribute und andere Informationen über das Programm zu verknüpfenden. Eine DEF-Datei ist besonders hilfreich, wenn Sie eine DLL erstellen. Da sind [Optionen des Linkers](../../build/reference/linker-options.md) verwendet werden können statt moduldefinitionsanweisungen, DEF-Dateien sind im Allgemeinen nicht erforderlich. Sie können auch [__declspec(dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) als eine Möglichkeit, geben Sie die exportierten Funktionen.  

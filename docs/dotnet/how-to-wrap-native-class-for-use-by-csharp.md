@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128692"
 ---
 # <a name="how-to-wrap-native-class-for-use-by-c"></a>Gewusst wie: Kapseln einer systemeigenen Klasse zur Verwendung in C#
 Dieses Beispiel zeigt, wie eine systemeigene C++-Klasse umschlossen wird, damit er von Code in c# oder anderen genutzt werden kann.  

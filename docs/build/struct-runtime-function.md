@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379925"
 ---
 # <a name="struct-runtimefunction"></a>struct RUNTIME_FUNCTION
 Tabellenbasierte Ausnahmebehandlung erfordert einen Eintrag für alle Funktionen, die Stapelspeicher reservieren, oder rufen Sie eine andere Funktion (z. B. Nonleaf Funktionen). Funktionstabelleneinträge aufweisen Format:  

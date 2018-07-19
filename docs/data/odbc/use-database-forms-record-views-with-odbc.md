@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089816"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>Verwenden von Datenbankformularen (Datensatzansichten) mit ODBC
 Einige Anwendungen, z. B. der Dateneingabe oder Daten anzeigen, erfordern ein Formular, eine Sicht mit dem Dialogfeld-Steuerelemente.  

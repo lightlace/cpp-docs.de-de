@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d5fb04d31451ac4c49a0a2c11a3699b8a670a6c4
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704749"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322331"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Compilerfehler Warnungen C4800 über C5999
 
@@ -250,3 +250,4 @@ Die Artikel in diesem Abschnitt der Dokumentation wird erläutert, eine Teilmeng
 |Compilerwarnung (Stufe 3) C5042|"*Deklaration*": Funktionsdeklarationen im Gültigkeitsbereich der-Block nicht "Inline" angegeben sein, in standardmäßigem C++ – "Inlinespezifizierer" entfernen|
 |Compilerwarnung (Stufe 2) C5043|"*Spezifikation*': Ausnahmespezifikation stimmt nicht mit der vorherigen Deklaration überein|
 |Compilerwarnung (Stufe 4) C5044|Ein Argument an die Befehlszeilenoption *Option* verweist auf einen Pfad "*Pfad*", nicht vorhanden|
+|[Compilerwarnung C5045](c5045.md)|Compilerfehler wird Absorptionsspektrum Entschärfung einfügen, Arbeitsspeicherlast angegeben, wenn /Qspectre wechseln|

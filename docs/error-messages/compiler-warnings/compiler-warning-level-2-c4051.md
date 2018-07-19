@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296655"
 ---
 # <a name="compiler-warning-level-2-c4051"></a>Compilerwarnung (Stufe 2) C4051
 Typkonvertierung; möglicher Datenverlust  

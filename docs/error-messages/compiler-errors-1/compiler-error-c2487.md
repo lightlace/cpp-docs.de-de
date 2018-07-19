@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225462"
 ---
 # <a name="compiler-error-c2487"></a>Compilerfehler C2487
 'Bezeichner': Member der Klasse kann nicht mit der Dll-Schnittstelle deklariert werden  

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1e42bf61c1fa70ee74063cd6857d842ee87de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92dce97754eccc8cd4f618db3ac3e23574fb54ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956577"
 ---
 # <a name="hashcompare-class"></a>hash_compare-Klasse
 
@@ -32,15 +33,15 @@ Klasse hash_compare { Traits comp; public: const size_t bucket_size = 4; const s
 
 ## <a name="remarks"></a>Hinweise
 
-Jeder hashassoziative Container speichert ein Hashmerkmalobjekt des Typs **Traits** (ein Vorlagenparameter). Sie können eine Klasse aus einer Spezialisierung von „hash_compare“ ableiten, um gezielt bestimmte Funktionen und Objekte zu überschreiben, oder Sie können eine eigene Version dieser Klasse angeben, wenn Sie bestimmte Mindestanforderungen einhalten. Insbesondere für ein Objekt mit dem Namen „hash_comp“ des Typs **hash_compare\<Key, Traits>** müssen die oben genannten Container folgendes Verhalten haben:
+Jeder hashassoziative Container speichert ein hashmerkmaleobjekt des Typs `Traits` (ein Vorlagenparameter). Sie können eine Klasse aus einer Spezialisierung von „hash_compare“ ableiten, um gezielt bestimmte Funktionen und Objekte zu überschreiben, oder Sie können eine eigene Version dieser Klasse angeben, wenn Sie bestimmte Mindestanforderungen einhalten. Insbesondere für ein Objekt "hash_comp" des Typs `hash_compare<Key, Traits>`, die oben genannten Container folgende Verhalten erforderlich ist:
 
-- Für alle `key`-Werte des Typs **Key** fungiert der Aufruf **hash_comp**(`key`) als eine Hashfunktion, die eine Verteilung von Werten des Typs **size_t** ergibt. Die von „hash_compare“ bereitgestellte Funktion gibt `key` zurück.
+- Für alle Werte `key` des Typs `Key`, den Aufruf **"hash_comp"**(`key`) dient als eine Hashfunktion, die ergibt eine Verteilung von Werten des Typs `size_t`. Die von „hash_compare“ bereitgestellte Funktion gibt `key` zurück.
 
-- Für jeden `key1`-Wert des Typs **Key**, der `key2` in der Sequenz vorausgeht und denselben Hashwert hat (der Wert, den die Hashfunktion zurückgegeben hat), ist **hash_compare**(`key2`, `key1`) gleich „FALSE“. Die Funktion muss eine vollständige Ordnung für Werte des Typs **Key** erzwingen. Die von „hash_compare“ bereitgestellte Funktion gibt *comp*(`key2`, `key1`) `,` zurück, wobei *comp* ein gespeichertes Objekt des Typs **Traits** ist, das Sie angeben können, wenn Sie das Objekt „hash_comp“ erstellen. Für den standardmäßigen **Traits**-Parametertyp **less**Key>\< werden die Werte für Sortierschlüssel nie verringert.
+- Für jeden Wert `key1` des Typs `Key` vorausgeht, die `key2` in der Sequenz und hat die gleiche Hashwert (der Wert, den die Hashfunktion zurückgegeben), **"hash_comp"**(`key2`, `key1`) ist "false". Die Funktion muss eine vollständige Ordnung für Werte vom Typ vorgeben `Key`. Gibt zurück, die von "hash_compare" bereitgestellte Funktion *Comp*(`key2`, `key1`) `,` , in denen *Comp* ein gespeichertes Objekt des Typs `Traits` , dass Sie, wenn angeben können Sie Erstellen Sie das Objekt "hash_comp". Für den standardmäßigen `Traits` Parametertyp `less<Key>`, Sortierschlüssel nie verringert.
 
-- Die ganzzahlige Konstante **bucket_size** gibt die durchschnittliche Anzahl von Elementen pro „Bucket“ (Hashtabelleneintrag) an, die in den Containern nicht überschritten werden sollte. Der Wert der Konstanten muss größer als 0 sein. „hash_compare“ stellt den Wert „4“ bereit.
+- Die ganzzahlige Konstante `bucket_size` gibt die durchschnittliche Anzahl von Elementen pro "Bucket" (hashtabelleneintrag), der Container sollte, nicht zu überschreiten. Der Wert der Konstanten muss größer als 0 sein. „hash_compare“ stellt den Wert „4“ bereit.
 
-- Die ganzzahlige Konstante **min_buckets** gibt die Mindestanzahl von Buckets an, die in der Hashtabelle verwaltet werden sollen. Der Wert der Konstanten muss eine Potenz von zwei und größer als 0 sein. „hash_compare“ stellt den Wert „8“ bereit.
+- Die ganzzahlige Konstante `min_buckets` gibt an, die minimale Anzahl von Buckets an, in der Hashtabelle verwaltet. Der Wert der Konstanten muss eine Potenz von zwei und größer als 0 sein. „hash_compare“ stellt den Wert „8“ bereit.
 
 ## <a name="example"></a>Beispiel
 

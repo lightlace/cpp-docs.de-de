@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385763"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>Speicherklassenspezifizierer für Deklarationen der internen Ebene
 Sie können jedes der vier *storage-class-specifier*-Terminals für Variablendeklarationen auf der internen Ebene verwenden. Wenn Sie den *storage-class-specifier* einer solchen Deklaration weglassen, ist die Standardspeicherklasse **auto**. Daher kommt das Schlüsselwort **auto** in einem C-Programm selten vor.  

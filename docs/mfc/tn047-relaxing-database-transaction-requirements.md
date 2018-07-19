@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380932"
 ---
 # <a name="tn047-relaxing-database-transaction-requirements"></a>TN047: Abschwächen der Anforderungen für eine Datenbanktransaktion
 Dieser Hinweis an den technischen, die die Anforderungen für Transaktionen in den MFC-ODBC-Datenbankklassen erläutert wird, ist mittlerweile veraltet. Bevor MFC-4.2 Datenbankklassen erforderlich, dass Cursor bei Recordsets nach beibehalten werden eine **CommitTrans** oder **Rollback** Vorgang. Wenn die ODBC-Treiber und DBMS dieses Maß an Beibehaltung der Cursor nicht unterstützt, haben die Datenbankklassen Transaktionen nicht aktiviert.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057759"
 ---
 # <a name="operator-zero"></a>Operator ZERO?
 Status der NULL-Flag. Verwendet nur in [. IF](../../assembler/masm/dot-if.md), [. WÄHREND](../../assembler/masm/dot-while.md), oder [. Wiederholen Sie die](../../assembler/masm/dot-repeat.md) blockiert und zur Laufzeit nicht zum Zeitpunkt der Assembly ausgewertet.  

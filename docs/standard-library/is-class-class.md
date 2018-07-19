@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d344beea880bb576a681a4797c7bdd8ff8d88e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ada95adb2d82bfccf05f3b9141a1b940feaed50
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966445"
 ---
 # <a name="isclass-class"></a>is_class-Klasse
 
@@ -36,11 +37,11 @@ struct is_class;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typs Prädikats ist „true“, wenn der Typ `Ty` ein Typ ist, der als `class` oder `struct` oder `cv-qualified`-Formular eines der Typen definiert ist; andernfalls ist sie „false“.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein Typ definiert als eine **Klasse** oder ein **Struktur**, oder ein `cv-qualified` -Formular von einem davon ist, andernfalls er false enthält.
 
 ## <a name="example"></a>Beispiel
 

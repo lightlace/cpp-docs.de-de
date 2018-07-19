@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361283"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Erstellen von isolierten Anwendungen und parallelen Assemblys (C/C++)
 Visual C++ unterstützt ein Bereitstellungsmodell für Windows-Clientanwendungen, das auf der Idee von [isolierten Anwendungen](http://msdn.microsoft.com/library/aa375190) und [parallelen Assemblys](http://msdn.microsoft.com/library/ff951640)basiert. Standardmäßig erstellt Visual C++ alle nativen C/C++-Anwendungen als isolierte Anwendungen, die [Manifeste](http://msdn.microsoft.com/library/aa375365) verwenden, um ihre Abhängigkeiten von Visual C++-Bibliotheken zu beschreiben.  

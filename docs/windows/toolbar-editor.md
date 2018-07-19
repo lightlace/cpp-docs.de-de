@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891310"
 ---
 # <a name="toolbar-editor"></a>Symbolleisten-Editor
 Mithilfe des Symbolleisten-Editors können Sie Symbolleistenressourcen erstellen und Bitmaps in Symbolleistenressourcen konvertieren. Der Symbolleisten-Editor verwendet eine grafische Anzeige, um eine Symbolleiste und Schaltflächen anzuzeigen, die der Darstellung in einer fertig gestellten Anwendung sehr ähnlich sehen.  

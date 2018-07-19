@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 562e522d695b20795d59f90dc1f166b4dfe44874
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5092107cc1af6327c5ab7d6e08f373f88dd56711
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959244"
 ---
 # <a name="chisquareddistribution-class"></a>chi_squared_distribution-Klasse
 
@@ -75,14 +76,14 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType* der gleitkommaergebnistyp standardmäßig `double`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 
   *URNG* Die einheitliche Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleitkommatyps produziert. Wenn kein entsprechend der Chi-Quadrat-Verteilung verteilter Wert ausgegeben wird, geben Sie `double` ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleitkommatyps produziert geben **doppelte** Wenn none angegeben wird, entsprechend der Chi-Squared Distribution verteilter Wert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -243,9 +244,9 @@ explicit chi_squared_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*n* der `n` -verteilungsparameter.
+*n* der `n` verteilungsparameter.
 
-*Parm* Parameterstruktur, die für die Verteilung verwendete Parameterstruktur.
+*Parm* die Parameterstruktur verwendet, um die Verteilung erstellen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -272,9 +273,9 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*n* der `n` -verteilungsparameter.
+*n* der `n` verteilungsparameter.
 
-*Rechte* der `param_type` zu vergleichende Objekt.
+*richtige* der `param_type` zu zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 

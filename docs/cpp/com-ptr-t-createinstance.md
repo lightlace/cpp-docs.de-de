@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::CreateInstance | Microsoft Docs
+title: _com_ptr_t::CreateInstance | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ccd73980295bdda67a4c49d034b6d185d2d93c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8aca9422c4798cd798d048ce42443c4f38bd170
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943501"
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
 **Microsoft-spezifisch**  
   
- Erstellt eine neue Instanz eines Objekts mit einem **CLSID** oder **ProgID**.  
+ Erstellt eine neue Instanz eines angegebenen Objekts an eine `CLSID` oder `ProgID`.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
   
-      HRESULT CreateInstance(  
+HRESULT CreateInstance(  
    const CLSID& rclsid,  
    IUnknown* pOuter=NULL,  
    DWORD dwClsContext = CLSCTX_ALL   
@@ -49,29 +50,29 @@ HRESULT CreateInstance(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `rclsid`  
- Die **CLSID** eines Objekts.  
+ *rclsid*  
+ Die `CLSID` eines Objekts.  
   
- `clsidString`  
- Eine Unicodezeichenfolge, die entweder eine **CLSID** (beginnend mit "**{**") oder ein **ProgID**.  
+ *clsidString*  
+ Eine Unicode-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.  
   
- `clsidStringA`  
- Eine mehrbytezeichenfolge mit der ANSI-Codepage, die entweder eine **CLSID** (beginnend mit "**{**") oder ein **ProgID**.  
+ *clsidStringA*  
+ Eine mehrbytezeichenfolge mit der ANSI-Codepage, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.  
   
- `dwClsContext`  
+ *dwClsContext*  
  Kontext für die Ausführung von ausführbarem Code.  
   
- `pOuter`  
+ *pOuter*  
  Die äußere unbekannte für [Aggregation](../atl/aggregation.md).  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Memberfunktionen rufen `CoCreateInstance` auf, um ein neues COM-Objekt zu erstellen, und fragen dann den Schnittstellentyp dieses intelligenten Zeigers ab. Das Zeigerergebnis wird dann innerhalb dieses `_com_ptr_t`-Objekts gekapselt. **Version** wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern. Diese Routine gibt `HRESULT` zurück, um einen Erfolg oder Fehler anzuzeigen.  
+ Diese Memberfunktionen rufen `CoCreateInstance` auf, um ein neues COM-Objekt zu erstellen, und fragen dann den Schnittstellentyp dieses intelligenten Zeigers ab. Das Zeigerergebnis wird dann innerhalb dieses `_com_ptr_t`-Objekts gekapselt. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern. Diese Routine gibt zurück, das HRESULT, um den Erfolg oder Fehler anzuzeigen.  
   
--   **CreateInstance (** `rclsid` **,**`dwClsContext`**)** erstellt eine neue ausgeführte Instanz eines Objekts mit einem **CLSID**.        
+-   **CreateInstance (***Rclsid* **,***DwClsContext***)** erstellt eine neue ausgeführte Instanz eines Objekts, dem ein `CLSID`.        
   
--   **CreateInstance (** `clsidString` **,**`dwClsContext`**)** erstellt eine neue ausgeführte Instanz eines Objekts mit der eine Unicodezeichenfolge, die entweder eine **CLSID**(beginnend mit "**{**") oder ein **ProgID**.        
+-   **CreateInstance (***ClsidString* **,***DwClsContext***)** erstellt eine neue ausgeführte Instanz eines angegebenen Objekts an eine Unicode-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.        
   
--   **CreateInstance (** `clsidStringA` **,**`dwClsContext`**)** erstellt eine neue ausgeführte Instanz eines Objekts mit einer Multibyte-Zeichenfolge, die entweder eine **CLSID**  (beginnend mit "**{**") oder ein **ProgID**.       Aufrufe [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), die davon ausgeht, dass die Zeichenfolge in die ANSI-Codepage anstatt eine OEM-Codepage.  
+-   **CreateInstance (***ClsidStringA* **,***DwClsContext***)** erstellt eine neue ausgeführte Instanz eines angegebenen Objekts an eine Multibyte-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.       Aufrufe [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), dem wird davon ausgegangen, dass die Zeichenfolge in die ANSI-Codepage anstatt eine OEM-Codepage.  
   
  **Ende Microsoft-spezifisch**  
   

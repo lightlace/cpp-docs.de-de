@@ -1,5 +1,5 @@
 ---
-title: Connection Point Makros | Microsoft Docs
+title: Verbindungspunkt-Makros | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50a868dd87628873b2a43f0ace55690b0583fd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 88789bef4bbcce3df99d90d736974377c9bca5fd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882935"
 ---
-# <a name="connection-point-macros"></a>Connection Point-Makros
+# <a name="connection-point-macros"></a>Verbindungspunkt-Makros
 Diese Makros definieren Punkt verbindungszuordnungen und Einträge.  
   
 |||  
 |-|-|  
-|[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|Markiert den Beginn der Connection Point-Zuordnungseinträge.|  
-|[CONNECTION_POINT_ENTRY](#connection_point_entry)|Verbindungspunkte in der Zuordnung gelangt.|  
-|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017) Ähnlich wie CONNECTION_POINT_ENTRY verwendet jedoch einen Zeiger auf die Iid.|
-|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Markiert das Ende der Verbindung Point-Zuordnungseinträge.|  
+|[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|Markiert den Beginn der Zuordnungseintrags Punkt-Verbindung.|  
+|[CONNECTION_POINT_ENTRY](#connection_point_entry)|Gibt ein Verbindungspunkte in der Zuordnung.|  
+|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017) Ähnlich wie CONNECTION_POINT_ENTRY hat jedoch einen Zeiger auf die Iid.|
+|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Markiert das Ende der Zuordnungseintrags Punkt-Verbindung.|  
 
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h 
    
 ##  <a name="begin_connection_point_map"></a>  BEGIN_CONNECTION_POINT_MAP  
- Markiert den Beginn der Connection Point-Zuordnungseinträge.  
+ Markiert den Beginn der Zuordnungseintrags Punkt-Verbindung.  
   
 ```
 BEGIN_CONNECTION_POINT_MAP(x)
@@ -48,9 +49,9 @@ BEGIN_CONNECTION_POINT_MAP(x)
  [in] Der Name der Klasse, die die Verbindungspunkte enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Starten Sie Ihre Verbindung Point-Zuordnung mit der `BEGIN_CONNECTION_POINT_MAP` -Makro, fügen Sie Einträge für jede Ihrer Verbindungspunkte mit der [CONNECTION_POINT_ENTRY](#connection_point_entry) -Makro, und führen Sie die Zuordnung mit der [END_CONNECTION_POINT_MAP](#end_connection_point_map) Makro.  
+ Starten Sie Ihre Verbindung Point-Zuordnung mit dem Makro BEGIN_CONNECTION_POINT_MAP, fügen Sie Einträge für jede Ihrer Verbindungspunkte mit der [CONNECTION_POINT_ENTRY](#connection_point_entry) -Makro, und führen Sie die Zuordnung mit der [END_CONNECTION_ POINT_MAP](#end_connection_point_map) Makro.  
   
- Weitere Informationen zu im ATL-Verbindungspunkte, finden Sie im Artikel [Verbindungspunkte](../../atl/atl-connection-points.md).  
+ Weitere Informationen zu in ATL-Verbindungspunkte, finden Sie im Artikel [Verbindungspunkte](../../atl/atl-connection-points.md).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#101](../../atl/codesnippet/cpp/connection-point-macros_1.h)]  
@@ -64,33 +65,33 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iid`  
- [in] Die GUID der Schnittstelle, die zur Verbindung Punkt Zuordnung hinzugefügt wird. 
+ *IID*  
+ [in] Die GUID der Schnittstelle, die zur Verbindung Punkt Karte hinzugefügt wird. 
  
- `piid`  
- [in] Ein Zeiger auf die GUID der Schnittstelle Adde wird.   
+ *piid*  
+ [in] Zeiger auf die GUID der Schnittstelle Adde wird.   
   
 ### <a name="remarks"></a>Hinweise  
- Connection Point Einträge in der Zuordnung werden verwendet, indem [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md). Die Klasse, die mit der Verbindung Punkt Zuordnung erben muss `IConnectionPointContainerImpl`.  
+ Connection Point-Einträge in der Zuordnung werden verwendet, indem [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md). Die Klasse, die mit der Verbindung Punkt Zuordnung erben muss `IConnectionPointContainerImpl`.  
   
- Starten Sie Ihre Verbindung Point-Zuordnung mit der [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) -Makro, fügen Sie Einträge für jede Ihrer Verbindungspunkte mit der `CONNECTION_POINT_ENTRY` -Makro, und führen Sie die Zuordnung mit der [END_CONNECTION_POINT_MAP ](#end_connection_point_map) Makro.  
+ Starten Sie Ihre Verbindung Point-Karte mit den [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) Makro verwenden, fügen Sie Einträge für jede Ihrer Verbindungspunkte, mit dem Makro CONNECTION_POINT_ENTRY hinzu, und schließen Sie die Zuordnung mit der [END_CONNECTION_ POINT_MAP](#end_connection_point_map) Makro.  
   
- Weitere Informationen zu im ATL-Verbindungspunkte, finden Sie im Artikel [Verbindungspunkte](../../atl/atl-connection-points.md).  
+ Weitere Informationen zu in ATL-Verbindungspunkte, finden Sie im Artikel [Verbindungspunkte](../../atl/atl-connection-points.md).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#120](../../atl/codesnippet/cpp/connection-point-macros_2.h)]  
   
 ##  <a name="end_connection_point_map"></a>  END_CONNECTION_POINT_MAP  
- Markiert das Ende der Verbindung Point-Zuordnungseinträge.  
+ Markiert das Ende der Zuordnungseintrags Punkt-Verbindung.  
   
 ```
 END_CONNECTION_POINT_MAP()
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Starten Sie Ihre Verbindung Point-Zuordnung mit der [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) -Makro, fügen Sie Einträge für jede Ihrer Verbindungspunkte mit der [CONNECTION_POINT_ENTRY](#connection_point_entry) -Makro, und führen Sie die Zuordnung mit der `END_CONNECTION_POINT_MAP` Makro.  
+ Starten Sie Ihre Verbindung Point-Karte mit der [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) Makro verwenden, fügen Sie Einträge für jede Ihrer Verbindungspunkte mit der [CONNECTION_POINT_ENTRY](#connection_point_entry) -Makro, und führen Sie die Zuordnung mit der END_ CONNECTION_POINT_MAP-Makro.  
   
- Weitere Informationen zu im ATL-Verbindungspunkte, finden Sie im Artikel [Verbindungspunkte](../../atl/atl-connection-points.md).  
+ Weitere Informationen zu in ATL-Verbindungspunkte, finden Sie im Artikel [Verbindungspunkte](../../atl/atl-connection-points.md).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#128](../../atl/codesnippet/cpp/connection-point-macros_3.h)]  

@@ -1,5 +1,5 @@
 ---
-title: Übertragung der Steuerung | Microsoft Docs
+title: Übertragung der Steuerung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ee906061c7b51ade818b164c1d371a88ef3d462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bec66d25be2cb56c75f42f60af2ccd5e3f759ad
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943896"
 ---
 # <a name="transfers-of-control"></a>Übertragung der Steuerung
-Können Sie die `goto` Anweisung oder eine **Fall** -Bezeichnung in einer `switch` Anweisung, um ein Programm anzugeben, die hinter einem Initialisierer verzweigt. Solcher Code ist nicht zulässig, es sei denn, die Deklaration, die den Initialisierer enthält, befindet sich in einem Block, der von dem Block eingeschlossen wird, in dem die Sprunganweisung auftritt.  
+Können Sie die **Goto** Anweisung oder ein **Fall** -Bezeichnung in einer **wechseln** Anweisung, um ein Programm angeben, die hinter einem Initialisierer brancht. Solcher Code ist nicht zulässig, es sei denn, die Deklaration, die den Initialisierer enthält, befindet sich in einem Block, der von dem Block eingeschlossen wird, in dem die Sprunganweisung auftritt.  
   
- Das folgende Beispiel zeigt eine Schleife, welche die Objekte `total`, `ch` und `i` deklariert und initialisiert. Es gibt auch eine fehlerhafte `goto`-Anweisung, die die Steuerung jenseits eines Initialisierers überträgt.  
+ Das folgende Beispiel zeigt eine Schleife, welche die Objekte `total`, `ch` und `i` deklariert und initialisiert. Es gibt auch eine fehlerhafte **Goto** Anweisung, die Steuerung jenseits eines Initialisierers überträgt.  
   
-```  
+```cpp 
 // transfers_of_control.cpp  
 // compile with: /W1  
 // Read input until a nonnumeric character is entered.  
@@ -56,7 +57,7 @@ int main()
 }  
 ```  
   
- Im vorherigen Beispiel versucht die `goto`-Anweisung, die Steuerung an der Initialisierung von `i` vorbei zu übergeben. Wenn jedoch `i` zwar deklariert, aber nicht initialisiert ist, wäre die Übertragung gültig.  
+ Im vorherigen Beispiel das **Goto** -Anweisung versucht, die Kontrolle über die Initialisierung der zu übertragenden `i`. Wenn jedoch `i` zwar deklariert, aber nicht initialisiert ist, wäre die Übertragung gültig.  
   
- Die Objekte `total` und `ch`, deklariert im-Block, der als dient der *Anweisung* von der `while` -Anweisung werden zerstört, wenn dieser Block beendet wird, mit der `break` Anweisung.  
+ Die Objekte `total` und `ch`, deklariert im-Block, der als dient der *Anweisung* von der **während** -Anweisung werden zerstört, wenn es sich bei diesen Block beendet wird, mit der  **Break** Anweisung.  
   

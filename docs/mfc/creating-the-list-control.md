@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342045"
 ---
 # <a name="creating-the-list-control"></a>Erstellen des Listensteuerelements
 Wie das Listensteuerelement ([CListCtrl](../mfc/reference/clistctrl-class.md)) erstellt wird, ob Sie das Steuerelement direkt verwenden oder mithilfe der Klasse hängt [CListView](../mfc/reference/clistview-class.md) stattdessen. Bei Verwendung von `CListView`, das Framework erstellt die Sicht als Teil seiner Dokument-/Ansichtarchitektur Erstellung Sequenz. Beim Erstellen der Listenansicht erstellt das Strukturelement-Steuerelement auch (beide sind identisch). Das Steuerelement wird in der Ansicht erstellt [OnCreate](../mfc/reference/cwnd-class.md#oncreate) Handlerfunktion. In diesem Fall wird das Steuerelement anschließend bereit für das Hinzufügen von Elementen, die über einen Aufruf an [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).  

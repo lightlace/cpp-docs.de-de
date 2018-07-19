@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877565"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>Gewusst wie: Verbessern der Leistung mit Generika (Visual C++)
 Mit Generika können Sie wiederverwendbaren Code, die auf einem Typparameter basierenden erstellen. Der tatsächliche Typ des Typparameters wird verzögert, bis von Clientcode aufgerufen. Weitere Informationen zu Generika finden Sie unter [Generika](../windows/generics-cpp-component-extensions.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285914"
 ---
 # <a name="compiler-warning-level-1-c4258"></a>Compilerwarnung (Stufe 1) C4258
 'Variable': Definition von der for-Schleife ignoriert. die Definition des einschließenden Bereichs verwendet"  

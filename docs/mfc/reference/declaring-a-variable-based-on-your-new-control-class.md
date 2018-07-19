@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370613"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Deklarieren einer auf der neuen Steuerelementklasse basierenden Variablen
 Nachdem Sie eine MFC-Steuerelementklasse erstellt haben, können Sie eine Variable, die darauf basieren deklarieren. Um einen Kontext für die neue Variable zu gewährleisten, müssen Sie den Dialog-Editor zu öffnen und bearbeiten das Dialogfeld, in dem Sie Ihre wiederverwendbare Steuerelement verwenden möchten. Darüber hinaus muss das Dialogfeld bereits eine Klasse zugeordnet sein. Informationen zum Verwenden des Dialog-Editors finden Sie unter [Dialog-Editor](../../windows/dialog-editor.md).  

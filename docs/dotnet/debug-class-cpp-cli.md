@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106205"
 ---
 # <a name="debug-class-ccli"></a>Debug-Klasse (C++/CLI)
 Bei Verwendung <xref:System.Diagnostics.Debug> in einer Visual C++-Anwendung, das Verhalten ändert sich nicht zwischen einem Debugbuild und ein Releasebuild erstellt werden.  

@@ -1,5 +1,5 @@
 ---
-title: CAtlAutoThreadModuleT Klasse | Microsoft Docs
+title: CAtlAutoThreadModuleT-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a012494365745d40d98c0f65ee9eff6b5e9502da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a54818b839f13ad9114274248cfdbfc74efa033a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883072"
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT-Klasse
-Diese Klasse stellt Methoden zum Implementieren eines COM‑Servers in einem Thread-Pool, Apartmentmodell bereit.  
+Diese Klasse stellt Methoden zum Implementieren eines COM-Servers in einem Thread-Pool, Apartment-Modell.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,14 +41,14 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Die Klasse, die COM-Server implementiert werden.  
+ *T*  
+ Die Klasse, die die COM-Server implementiert werden.  
   
- `ThreadAllocator`  
- Die Verwaltung von Threads Auswahl-Klasse. Der Standardwert ist [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
+ *ThreadAllocator*  
+ Die Verwaltung von threadauswahl-Klasse. Der Standardwert ist [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
- `dwWait`  
- Gibt das Timeoutintervall in Millisekunden an. Der Standardwert ist UNBEGRENZT, womit Timeoutintervall der Methode nie ablaufen.  
+ *dwWait*  
+ Gibt das Timeoutintervall in Millisekunden an. Der Standardwert ist INFINITE, der Timeoutintervall der Methode nie bedeutet, abgelaufen ist dass.  
   
 ## <a name="members"></a>Member  
   
@@ -55,13 +56,13 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Diese statische Funktion dynamisch berechnet und gibt die maximale Anzahl von Threads für die EXE-Modul, basierend auf der Anzahl der Prozessoren.|  
+|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Diese statischen Funktion wird dynamisch berechnet, und gibt die maximale Anzahl von Threads für die EXE-Modul, das basierend auf der Anzahl der Prozessoren.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Klasse [CComModule](../../atl/reference/catlautothreadmodule-class.md) leitet sich von `CAtlAutoThreadModuleT` um einen Thread Pool, Apartmentmodell COM-Server zu implementieren. Er ersetzt die veraltete Klasse [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+ Die Klasse [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) leitet sich von `CAtlAutoThreadModuleT` um ein COM-Server in einem Thread-Pool, Apartment-Modell zu implementieren. Er ersetzt die veraltete Klasse [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
 > [!NOTE]
->  Diese Klasse sollte nicht in einer DLL verwendet werden, als Standard `dwWait` Wert INFINITE wird einen Deadlock verursachen, wenn die DLL entladen wird.  
+>  Diese Klasse sollte nicht in eine DLL verwendet werden, als Standard *DwWait* Wert INFINITE wird einen Deadlock verursachen, wenn die DLL entladen wird.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `IAtlAutoThreadModule`  
@@ -72,20 +73,20 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
  **Header:** atlbase.h  
   
 ##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads  
- Diese statische Funktion dynamisch berechnet und gibt die maximale Anzahl von Threads für die EXE-Modul, basierend auf der Anzahl der Prozessoren.  
+ Diese statischen Funktion wird dynamisch berechnet, und gibt die maximale Anzahl von Threads für die EXE-Modul, das basierend auf der Anzahl der Prozessoren.  
   
 ```
 static int GetDefaultThreads();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Threads an, die im Modul exe-Datei erstellt werden.  
+ Die Anzahl der Threads im Modul exe-Datei erstellt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode, wenn Sie eine andere Methode für die Berechnung der Anzahl der Threads verwenden möchten. Standardmäßig basiert die Anzahl der Threads auf die Anzahl der Prozessoren.  
+ Überschreiben Sie diese Methode, wenn Sie eine andere Methode verwenden, für die Anzahl der Threads berechnen möchten. Standardmäßig ist die Anzahl der Prozessoren die Anzahl der Threads abhängig.  
   
 ## <a name="see-also"></a>Siehe auch  
  [IAtlAutoThreadModule-Klasse](../../atl/reference/iatlautothreadmodule-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)   
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
  [IAtlAutoThreadModule-Klasse](../../atl/reference/iatlautothreadmodule-class.md)   
  [Modulklassen](../../atl/atl-module-classes.md)

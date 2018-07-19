@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880692"
 ---
 # <a name="implements-c"></a>implements (C++)
 Gibt die Dispatchschnittstellen, die Mitglieder der IDL-Co-Klasse werden erzwungen werden.  

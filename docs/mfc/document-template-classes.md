@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343540"
 ---
 # <a name="document-template-classes"></a>Dokumentvorlagenklassen
 Dokumentvorlagen Objekte koordinieren die Erstellung des Dokuments, Ansicht und Fensterobjekte Frame, wenn ein neues Dokument oder Sicht erstellt wird.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690581"
 ---
 # <a name="243-single-construct"></a>2.4.3 single-Konstrukt
 Die **einzelne** Richtlinie identifiziert ein Konstrukt, das angibt, dass die zugeordneten strukturierte Block nur einem Thread im Team (nicht unbedingt der master-Thread) ausgeführt wird. Die Syntax der **einzelne** Richtlinie lautet wie folgt:  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382714"
 ---
 # <a name="expressions-and-assignments"></a>Ausdrücke und Zuweisungen
 In diesem Abschnitt wird beschrieben, wie in der Programmiersprache C Ausdrücke gebildet und Werte zugewiesen werden. Konstanten, Bezeichner, Zeichenfolgen und Funktionsaufrufe sind alles Operanden, die in Ausdrücken bearbeitet werden. Die Programmiersprache C verfügt über alle üblichen Sprachoperatoren. Dieser Abschnitt behandelt diese Operatoren sowie Operatoren, die nur in C bzw. Microsoft C vorkommen. Die behandelten Themen umfassen:  

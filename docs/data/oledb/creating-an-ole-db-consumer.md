@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096690"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Erstellen eines OLE DB-Consumers
 Sie können einen Consumer des OLE DB-Vorlagen mit oder ohne die ATL-OLE DB-Consumer-Assistenten erstellen, wenn mithilfe des Assistenten die empfohlene Methode ist. Ein Consumer kann in jeder Anwendung arbeiten, die ATL unterstützt.  

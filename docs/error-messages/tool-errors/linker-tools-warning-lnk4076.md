@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301930"
 ---
 # <a name="linker-tools-warning-lnk4076"></a>Linkertoolwarnung LNK4076
 Ungültige inkrementelle Statusdatei 'Dateiname'; ILK-Datei  

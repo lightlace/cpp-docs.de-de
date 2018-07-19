@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101200"
 ---
 # <a name="fetching-data"></a>Abrufen von Daten
 Nachdem Sie die Datenquelle, die Sitzung und die Rowset-Objekte geöffnet haben, können Sie Daten abrufen. Je nach Art der Zugriffsmethode, die Sie verwenden, müssen Sie die Spalten zu binden.  

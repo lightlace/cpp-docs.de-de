@@ -1,5 +1,5 @@
 ---
-title: MSG Structure1 | Microsoft Docs
+title: MSG-Struktur 1 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41dbbcdd3404705a9ac7c6c7969a9ebeeb0238f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fe629c2f279b6b258f4824229490f7b72b4ce4d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338811"
 ---
-# <a name="msg-structure1"></a>MSG Structure1
-Die `MSG` Struktur enthält Informationen aus der Nachrichtenwarteschlange eines Threads.  
+# <a name="msg-structure1"></a>MSG-Struktur 1
+Die `MSG` Struktur enthält Meldungsinformationen aus der Nachrichtenwarteschlange eines Threads.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,22 +41,22 @@ typedef struct tagMSG {     // msg
   
 #### <a name="parameters"></a>Parameter  
  *HWND*  
- Identifiziert das Fenster, dessen Fensterprozedur die Nachricht empfängt.  
+ Gibt das Fenster, dessen Fensterprozedur die Meldung empfängt.  
   
- `message`  
+ *message*  
  Gibt die Nummer der Meldung an.  
   
- `wParam`  
- Gibt zusätzliche Informationen über die Meldung an. Die genaue Bedeutung hängt vom Wert von der **Nachricht** Member.  
+ *wParam-Parameter*  
+ Gibt zusätzliche Informationen über die Meldung an. Die genaue Bedeutung hängt von den Wert des der `message` Member.  
   
- `lParam`  
- Gibt zusätzliche Informationen über die Meldung an. Die genaue Bedeutung hängt vom Wert von der **Nachricht** Member.  
+ *lParam*  
+ Gibt zusätzliche Informationen über die Meldung an. Die genaue Bedeutung hängt von den Wert des der `message` Member.  
   
- `time`  
- Gibt die Uhrzeit, an der die Nachricht gesendet wurde.  
+ *time*  
+ Gibt die Uhrzeit, zu der die Nachricht gepostet wurde.  
   
- `pt`  
- Gibt die Cursorposition in Bildschirmkoordinaten an, wenn die Nachricht bereitgestellt wurde.  
+ *pt*  
+ Gibt an der Cursorposition ein, in Bildschirmkoordinaten, wenn die Nachricht gepostet wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** winuser.h  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372434"
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads (Codegenerierungsthreads)
 Legt die Anzahl der cl.exe-Threads fest, die für Optimierung und Codegenerierung verwendet werden.  

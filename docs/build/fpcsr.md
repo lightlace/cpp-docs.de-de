@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367445"
 ---
 # <a name="fpcsr"></a>FpCsr
 Dem registrierungszustand enthält auch die X87 FPU-Steuerwort. Die Aufrufkonvention bestimmt diese registrieren, um die nicht veränderlich zu sein.  

@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b27b4cfc1b624c9c12138154a660951a0f2a13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca1e78ab4b94d9055b8f0c7cc14bde12506695b8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951366"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: ID-Benennungs- und Nummerierungskonventionen
 In diesem Hinweis werden die Benennungs- und -Nummerierungskonventionen für IDs erläutert, die in MFC 2.0 für Ressourcen, Befehle, Zeichenfolgen, Steuerelemente und untergeordnete Fenster verwendet werden.  
@@ -67,7 +68,7 @@ In diesem Hinweis werden die Benennungs- und -Nummerierungskonventionen für IDs
 |IDM_|Für Menüelemente, in denen nicht die MFC-Befehlsarchitektur verwendet wird.|  
 |ID_|Für Menübefehle, in denen MFC-Befehlsarchitektur verwendet wird.|  
   
- Befehle, die der MFC-Befehlsarchitektur folgen, müssen einen `ON_COMMAND`-Befehlshandler haben und können über einen `ON_UPDATE_COMMAND_UI`-Handler verfügen. Wenn diese Befehlshandler der MFC-Befehlsarchitektur folgen, funktionieren sie unabhängig davon ordnungsgemäß, ob sie an einen Menübefehl, an eine Symbolleisten-Schaltfläche oder an eine Dialogleisten-Schaltfläche gebunden sind. Das gleiche "ID_"-Präfix wird auch für eine Zeichenfolge in einer Menüeingabeaufforderung verwendet, die auf der Statusleiste des Programms angezeigt wird. Die meisten Menüelemente in der Anwendung sollten den MFC-Befehlskonventionen folgen. Alle IDs für Standardbefehle (z. B. `ID_FILE_NEW`) entsprechen dieser Konvention.  
+ Befehle, die der MFC-befehlsarchitektur folgen müssen ein ON_COMMAND-Befehlshandler haben und können damit einen ON_UPDATE_COMMAND_UI-Handler. Wenn diese Befehlshandler der MFC-Befehlsarchitektur folgen, funktionieren sie unabhängig davon ordnungsgemäß, ob sie an einen Menübefehl, an eine Symbolleisten-Schaltfläche oder an eine Dialogleisten-Schaltfläche gebunden sind. Das gleiche "ID_"-Präfix wird auch für eine Zeichenfolge in einer Menüeingabeaufforderung verwendet, die auf der Statusleiste des Programms angezeigt wird. Die meisten Menüelemente in der Anwendung sollten den MFC-Befehlskonventionen folgen. Alle Standardbefehls-IDs (z. B. ID_FILE_NEW) entsprechen dieser Konvention.  
   
  MFC verwendet auch "IDP_" als eine spezielle Form von Zeichenfolgen (anstelle von "IDS_"). Zeichenfolgen mit dem Präfix "IDP_" sind Eingabeaufforderungen, d. h. Zeichenfolgen, die in Meldungsfeldern verwendet werden. "IDP_"-Zeichenfolgen können "%1" "und "%2" als Platzhalter für Zeichenfolgen enthalten, die vom Programm bestimmt werden. "IDP_"-Zeichenfolgen sind in der Regel Hilfethemen zugeordnet, während "IDS_"-Zeichenfolgen keine Hilfethemen zugeordnet sind. "IDP_"-Zeichenfolgen werden immer lokalisiert, und "IDS_"-Zeichenfolgen können nicht lokalisiert werden.  
   

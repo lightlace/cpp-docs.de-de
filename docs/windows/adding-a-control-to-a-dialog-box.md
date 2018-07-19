@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858717"
 ---
 # <a name="adding-a-control-to-a-dialog-box"></a>Hinzufügen eines Steuerelements zu einem Dialogfeld
 ### <a name="to-add-a-control-to-a-dialog-box"></a>So fügen Sie ein Steuerelement zu einem Dialogfeld hinzu  

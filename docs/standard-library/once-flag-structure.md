@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a8d28f19e32988bfa179642a87e880413bb0ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4275b99ada0dbfe1c974446d21862f7fa73aab38
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964495"
 ---
 # <a name="onceflag-structure"></a>once_flag-Struktur
 
-Stellt eine `struct` dar, die mit der Vorlagenfunktion [call_once](../standard-library/mutex-functions.md#call_once) verwendet wird, damit der Initialisierungscode auch bei mehreren Ausführungsthreads nur einmal aufgerufen wird.
+Stellt eine **Struktur** wird, mit der Vorlagenfunktion [Call_once](../standard-library/mutex-functions.md#call_once) um sicherzustellen, dass die Initialisierung ist Code auch bei mehreren Ausführungsthreads nur einmal aufgerufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,7 +31,7 @@ Struktur once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&)
 
 ## <a name="remarks"></a>Hinweise
 
-Die `once_flag` `struct` verfügt über nur einen Standardkonstruktor.
+Die `once_flag` **Struktur** verfügt über nur einen Standardkonstruktor.
 
 Objekte vom Typ `once_flag` können erstellt, aber nicht kopiert werden.
 

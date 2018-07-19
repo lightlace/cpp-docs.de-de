@@ -1,5 +1,5 @@
 ---
-title: CMFCStatusBar-Klasse | Microsoft Docs
+title: CMFCStatusBar-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -82,14 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b622ca84ca73090d609cbb557096fb75802a023
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0f97eb2bce0bb39641aeceeaaa57d73dd45994e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854030"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar-Klasse
-Die `CMFCStatusBar` Klasse implementiert eine Statusleiste ähnelt der `CStatusBar` Klasse. Die `CMFCStatusBar` -Klasse verfügt jedoch über Funktionen, die von der `CStatusBar` -Klasse nicht bereitgestellt werden. Beispielsweise kann die Klasse Bilder, Animationen und Statusanzeigen anzeigen und auf einen Mausdoppelklick reagieren. 
+Die `CMFCStatusBar` -Klasse implementiert eine Statusleiste ähnelt der `CStatusBar` Klasse. Die `CMFCStatusBar` -Klasse verfügt jedoch über Funktionen, die von der `CStatusBar` -Klasse nicht bereitgestellt werden. Beispielsweise kann die Klasse Bilder, Animationen und Statusanzeigen anzeigen und auf einen Mausdoppelklick reagieren. 
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
   
@@ -110,58 +111,58 @@ class CMFCStatusBar : public CPane
 |[CMFCStatusBar::Create](#create)|Erstellt eine Steuerleiste und fügt es der [CPane](../../mfc/reference/cpane-class.md) Objekt. (Überschreibt [cpane:: Create](../../mfc/reference/cpane-class.md#create).)|  
 |[CMFCStatusBar::CreateEx](#createex)|Erstellt eine Steuerleiste und fügt es der [CPane](../../mfc/reference/cpane-class.md) Objekt. (Überschreibt [cpane:: CreateEx](../../mfc/reference/cpane-class.md#createex).)|  
 |[CMFCStatusBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Bestimmt, ob ein weiterer Bereich dynamisch zwischen diesem Bereich und den übergeordneten Frame eingefügt werden kann. (Überschreibt [cbasepane:: Doesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
-|[CMFCStatusBar::EnablePaneDoubleClick](#enablepanedoubleclick)|Die Behandlung von Maus werden auf der Statusleiste doppelklickt, aktiviert oder deaktiviert.|  
+|[CMFCStatusBar::EnablePaneDoubleClick](#enablepanedoubleclick)|Aktiviert oder deaktiviert, die der Umgang mit der Maus auf der Statusleiste doppelklickt.|  
 |[CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar)|Zeigt eine Statusanzeige im angegebenen Bereich.|  
-|[CMFCStatusBar::GetCount](#getcount)|Gibt die Anzahl der Bereiche auf der Statusleiste an.|  
+|[CMFCStatusBar::GetCount](#getcount)|Gibt die Anzahl der Bereiche auf der Statusleiste zurück.|  
 |[CMFCStatusBar::GetDrawExtendedArea](#getdrawextendedarea)||  
 |[CMFCStatusBar::GetExtendedArea](#getextendedarea)||  
 |[CMFCStatusBar::GetItemID](#getitemid)||  
 |[CMFCStatusBar::GetItemRect](#getitemrect)||  
 |[CMFCStatusBar::GetPaneInfo](#getpaneinfo)||  
 |[CMFCStatusBar::GetPaneProgress](#getpaneprogress)||  
-|[CMFCStatusBar::GetPaneStyle](#getpanestyle)|Gibt den Schriftschnitt Bereich. (Überschreibt [CBasePane::GetPaneStyle](../../mfc/reference/cbasepane-class.md#getpanestyle).)|  
+|[CMFCStatusBar::GetPaneStyle](#getpanestyle)|Gibt den Bereichsformat zurück. (Überschreibt [CBasePane::GetPaneStyle](../../mfc/reference/cbasepane-class.md#getpanestyle).)|  
 |[CMFCStatusBar::GetPaneText](#getpanetext)||  
-|[CMFCStatusBar::GetPaneWidth](#getpanewidth)|Gibt die Breite in Pixel der Statusleiste im angegebenen Bereich zurück.|  
-|[CMFCStatusBar::GetTipText](#gettiptext)|Gibt den QuickInfo-Text für den angegebenen Bereich der Statusleiste an.|  
-|[CMFCStatusBar::InvalidatePaneContent](#invalidatepanecontent)|Erklärt den angegebenen Bereich, und zeichnet ihre Inhalte neu.|  
-|[CMFCStatusBar::PreCreateWindow](#precreatewindow)|Wird aufgerufen, durch das Framework vor der Erstellung des Windows-Fenster, die an diese angefügt `CWnd` Objekt. (Überschreibt [CWnd::PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow).)|  
+|[CMFCStatusBar::GetPaneWidth](#getpanewidth)|Gibt die Breite in Pixel im angegebenen Bereich der Statusleiste zurück.|  
+|[CMFCStatusBar::GetTipText](#gettiptext)|Gibt den QuickInfo-Text für den angegebenen Bereich der Statusleiste zurück.|  
+|[CMFCStatusBar::InvalidatePaneContent](#invalidatepanecontent)|Erklärt den angegebenen Bereich und zeichnet den Inhalt.|  
+|[CMFCStatusBar::PreCreateWindow](#precreatewindow)|Wird aufgerufen, durch das Framework vor dem Erstellen des Fensters Windows angefügte `CWnd` Objekt. (Überschreibt [CWnd::PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow).)|  
 |[CMFCStatusBar::SetDrawExtendedArea](#setdrawextendedarea)||  
 |[CMFCStatusBar::SetIndicators](#setindicators)||  
-|[CMFCStatusBar::SetPaneAnimation](#setpaneanimation)|Weist eine Animation in den angegebenen Bereich.|  
-|[CMFCStatusBar::SetPaneBackgroundColor](#setpanebackgroundcolor)|Legt die Hintergrundfarbe für den angegebenen Bereich der Statusleiste an.|  
-|[CMFCStatusBar::SetPaneIcon](#setpaneicon)|Legt das Indikatorsymbol für den angegebenen Bereich der Statusleiste an.|  
+|[CMFCStatusBar::SetPaneAnimation](#setpaneanimation)|Weist eine Animation im angegebenen Bereich.|  
+|[CMFCStatusBar::SetPaneBackgroundColor](#setpanebackgroundcolor)|Legt die Hintergrundfarbe für den angegebenen Bereich der Statusleiste fest.|  
+|[CMFCStatusBar::SetPaneIcon](#setpaneicon)|Legt das Indikatorsymbol für den angegebenen Bereich der Statusleiste fest.|  
 |[CMFCStatusBar::SetPaneInfo](#setpaneinfo)||  
-|[CMFCStatusBar::SetPaneProgress](#setpaneprogress)|Legt den aktuellen Status der Statusanzeige für den angegebenen Bereich der Statusleiste an.|  
-|[CMFCStatusBar::SetPaneStyle](#setpanestyle)|Legt das Format des Bereichs. (Überschreibt [CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle).)|  
+|[CMFCStatusBar::SetPaneProgress](#setpaneprogress)|Legt den aktuellen Fortschritt der Statusanzeige für den angegebenen Bereich der Statusleiste fest.|  
+|[CMFCStatusBar::SetPaneStyle](#setpanestyle)|Legt den Stil des Bereichs. (Überschreibt [CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle).)|  
 |[CMFCStatusBar::SetPaneText](#setpanetext)||  
-|[CMFCStatusBar::SetPaneTextColor](#setpanetextcolor)|Legt die Textfarbe für den angegebenen Bereich der Statusleiste an.|  
-|[CMFCStatusBar::SetPaneWidth](#setpanewidth)|Legt die Breite in Pixel der Statusleiste im angegebenen Bereich fest.|  
-|[CMFCStatusBar::SetTipText](#settiptext)|Legt den QuickInfo-Text für den angegebenen Bereich der Statusleiste an.|  
+|[CMFCStatusBar::SetPaneTextColor](#setpanetextcolor)|Legt die Textfarbe für den angegebenen Bereich der Statusleiste fest.|  
+|[CMFCStatusBar::SetPaneWidth](#setpanewidth)|Legt die Breite in Pixel im angegebenen Bereich der Statusleiste fest.|  
+|[CMFCStatusBar::SetTipText](#settiptext)|Legt den QuickInfo-Text für den angegebenen Bereich der Statusleiste fest.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCStatusBar::OnDrawPane](#ondrawpane)|Vom Framework aufgerufen, wenn sie den Bereich der Statusleiste zeichnet.|  
+|[CMFCStatusBar::OnDrawPane](#ondrawpane)|Vom Framework aufgerufen, wenn sie im Bereich der Statusleiste zeichnet.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das folgende Diagramm zeigt eine Abbildung der Statusleiste aus [Status Leiste Demobeispiel](../../visual-cpp-samples.md) Anwendung.  
+ Das folgende Diagramm zeigt eine Abbildung der Statusleiste von [Status Leiste Demobeispiel](../../visual-cpp-samples.md) Anwendung.  
   
  ![Beispiel für CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "Cmfcstatusbar")  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht die lokalen Variablen, die die Anwendung in verschiedenen Methoden aufrufen, verwendet die `CMFCStatusBar` Klasse. Diese Variablen werden im StatusBarDemoView.h deklariert. Der Hauptframe in "MainFrm.h" deklariert ist, wird das Dokument in StatusBarDemoDoc.h deklariert und die Ansicht in StatusBarDemoView.h deklariert ist. Dieser Codeausschnitt ist Teil der [Status Leiste Demobeispiel](../../visual-cpp-samples.md).  
+ Das folgende Beispiel zeigt die lokalen Variablen, die die Anwendung verwendet, um die verschiedenen Methoden rufen Sie in der `CMFCStatusBar` Klasse. Diese Variablen werden in StatusBarDemoView.h deklariert. Der Hauptframe in "MainFrm.h" deklariert ist, das Dokument in StatusBarDemoDoc.h deklariert wird und die Ansicht in StatusBarDemoView.h deklariert ist. Dieser Codeausschnitt ist Teil der [Status Leiste Demobeispiel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht das Abrufen eines Verweises auf `CMFCStatusBar` Objekt durch die Einführung der `GetStatusBar` Methode in "MainFrm.h" und dem anschließenden Aufrufen dieser Methode aus der `GetStatusBar` Methode in StatusBarDemoView.h. Dieser Codeausschnitt ist Teil der [Status Leiste Demobeispiel](../../visual-cpp-samples.md).  
+ Im folgende Beispiel wird veranschaulicht, wie zum Abrufen eines Verweises auf `CMFCStatusBar` Objekt durch die Einführung der `GetStatusBar` -Methode in der "MainFrm.h", und klicken Sie dann das Aufrufen dieser Methode aus der `GetStatusBar` -Methode in der StatusBarDemoView.h. Dieser Codeausschnitt ist Teil der [Status Leiste Demobeispiel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]  
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie verschiedene Methoden aufzurufen, der `CMFCStatusBar` Klasse in StatusBarDemoView.cpp. Die Konstanten sind in "MainFrm.h" deklariert. Im Beispiel wird gezeigt, wie auf das Symbol, legen Sie den QuickInfo-Text, der der Status-Leistenbereich, eine Statusleiste angezeigt, auf den angegebenen Bereich, weisen Sie eine Animation in den angegebenen Bereich, legen Sie den Text und die Breite der Balken Statusbereich, und Festlegen der aktuellen Statusanzeige die progr für die Status-Leistenbereich ESS-Leiste. Dieser Codeausschnitt ist Teil der [Status Leiste Demobeispiel](../../visual-cpp-samples.md).  
+ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden aufrufen, der `CMFCStatusBar` Klasse in StatusBarDemoView.cpp. Die Konstanten sind in "MainFrm.h" deklariert. Das Beispiel zeigt, wie Sie auf das Symbol, legen Sie den QuickInfo-Text, der dem Statusleistenbereich, eine Statusanzeige im angegebenen Bereich anzuzeigen, weisen Sie eine Animation in den angegebenen Bereich, legen Sie den Text und die Breite der dem Statusleistenbereich und legen Sie die Bearbeitung die aktuellen Statusanzeige für den Statusleistenbereich ESS-Leiste. Dieser Codeausschnitt ist Teil der [Status Leiste Demobeispiel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]  
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]  
@@ -196,8 +197,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -211,7 +212,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIDFind`  
+ [in] *nIDFind*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -228,9 +229,9 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParentWnd`  
- [in] `dwStyle`  
- [in] `nID`  
+ [in] *pParentWnd*  
+ [in] *DwStyle*  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -248,10 +249,10 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pParentWnd`  
- [in] `dwCtrlStyle`  
- [in] `dwStyle`  
- [in] `nID`  
+ [in] *pParentWnd*  
+ [in] *DwCtrlStyle*  
+ [in] *DwStyle*  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -269,21 +270,21 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="enablepanedoubleclick"></a>  CMFCStatusBar::EnablePaneDoubleClick  
- Die Behandlung von Maus werden auf der Statusleiste doppelklickt, aktiviert oder deaktiviert.  
+ Aktiviert oder deaktiviert, die der Umgang mit der Maus auf der Statusleiste doppelklickt.  
   
 ```  
 void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
- Wenn `TRUE`, doppelklicken Sie die Verarbeitung der Maus auf, aktivieren. Andernfalls deaktivieren Sie die Verarbeitung von der Maus Doppelklick.  
+ [in] *bAktivieren*  
+ True gibt an, aktivieren Sie die Verarbeitung der Doppelklick mit der Maus. Andernfalls deaktivieren Sie die Verarbeitung der Doppelklick mit der Maus.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die Statusleiste Doppelklicks verarbeiten aktiviert ist, sendet Windows die `WM_COMMAND` Benachrichtigung zusammen mit einer Ressourcen-ID an den Besitzer der Statusleiste an jedes Mal, die der Benutzer auf die Status-Leistenbereich doppelklickt.  
+ Wenn die Statusleiste Doppelklicks verarbeiten aktiviert ist, sendet Windows die WM_COMMAND-Benachrichtigung zusammen mit einer Ressourcen-ID an den Besitzer der Statusleiste an jedes Mal, die der Benutzer auf den Statusleistenbereich doppelklickt.  
   
 ##  <a name="enablepaneprogressbar"></a>  CMFCStatusBar::EnablePaneProgressBar  
- Eine Statusleiste angezeigt, auf den angegebenen Bereich.  
+ Zeigt eine Statusanzeige im angegebenen Bereich.  
   
 ```  
 void EnablePaneProgressBar(
@@ -296,40 +297,40 @@ void EnablePaneProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
+ [in] *nIndex*  
  Gibt dem Index des Bereichs, dessen Statusanzeige zu aktivieren.  
   
- [in] `nTotal`  
- Gibt den Maximalwert für die Statusanzeige an.  
+ [in] *nGesamte*  
+ Gibt den maximalen Wert für die Statusanzeige an.  
   
- [in] `bDisplayText`  
- Gibt an, ob den aktuelle Wert für die Bearbeitung die Statusanzeige angezeigt werden soll.  
+ [in] *bDisplayText*  
+ Gibt an, ob den aktuelle Fortschrittswert die Statusanzeige angezeigt werden soll.  
   
- [in] `clrBar`  
+ [in] *ClrBar*  
  Gibt die Hintergrundfarbe der Statusleiste an.  
   
- [in] `clrBarDest`  
- Gibt die Sekundärfarbe der Fortschritt Befehlsleisten-Hintergrund an. Verwenden Sie die anderen Wert als `clrBar` Ausfüllen durch eine Farbe in einem Farbverlauf gemischt.  
+ [in] *ClrBarDest*  
+ Gibt die sekundäre Farbe des Befehlsleisten-Hintergrund den Fortschritt an. Verwenden Sie die anderen Wert als *ClrBar* zum Ausfüllen von einer Farbe in einem Farbverlauf gemischt.  
   
- [in] `clrProgressText`  
+ [in] *ClrProgressText*  
  Gibt die Farbe des Texts der Statusanzeige.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie den Fortschritt Leiste Aufruf deaktivieren möchten `EnablePaneProgressBar` mit `nTotal` auf-1 festgelegt. Standardmäßig `nTotal` auf 100 festgelegt ist. Aus diesem Grund benötigen Sie keine zusätzlichen Berechnungen zur Anzeige des Fortschritts als Prozentsatz.  
+ Wenn Sie den Fortschritt Leiste Aufruf deaktivieren möchten `EnablePaneProgressBar` mit *nGesamte* auf-1 festgelegt. Standardmäßig *nGesamte* auf 100 festgelegt ist. Aus diesem Grund benötigen Sie keine weiteren Berechnungen durch, um den Status als Prozentsatz angezeigt werden soll.  
   
- Übergeben Sie unterschiedliche Werte für `clrBar` und `clrBarDest` so, dass die Hintergrundfarbe der Statusleiste eine Farbe in einem Farbverlauf gemischt anzeigt. sein.  
+ Übergeben Sie unterschiedliche Werte für *ClrBar* und *ClrBarDest* , damit die Hintergrundfarbe der Statusleiste eine Farbe, die in einem Farbverlauf gemischt angezeigt. sein.  
   
  Rufen Sie zum Festlegen des aktuellen Status der [CMFCStatusBar::SetPaneProgress](#setpaneprogress) Methode.  
   
 ##  <a name="getcount"></a>  CMFCStatusBar::GetCount  
- Ruft die Anzahl der Bereiche in der Statusleiste an.  
+ Ruft die Anzahl der Bereiche in der Statusleiste ab.  
   
 ```  
 int GetCount() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Bereiche in der Statusleiste.  
+ Die Anzahl der Bereiche in der Statusleiste angezeigt.  
   
 ##  <a name="getdrawextendedarea"></a>  CMFCStatusBar::GetDrawExtendedArea  
 
@@ -350,7 +351,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rect`  
+ [in] *Rect*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -364,7 +365,7 @@ UINT GetItemID(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -380,8 +381,8 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- [in] `lpRect`  
+ [in] *nIndex*  
+ [in] *LpRect*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -397,10 +398,10 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- [in] `nID`  
- [in] `nStyle`  
- [in] `cxWidth`  
+ [in] *nIndex*  
+ [in] *nID*  
+ [in] *nStyle*  
+ [in] *CxWidth*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -412,7 +413,7 @@ long GetPaneProgress(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -426,7 +427,7 @@ UINT GetPaneStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -444,8 +445,8 @@ CString GetPaneText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- [in] `s`  
+ [in] *nIndex*  
+ [in] *s*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -459,42 +460,42 @@ int GetPaneWidth(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- Gibt den Index des Status-Leistenbereich an.  
+ [in] *nIndex*  
+ Gibt den Index, der dem Statusleistenbereich.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Breite der Balken Statusbereich, `nIndex` angibt; andernfalls, die 0 (null) ist eine Statusleiste ist nicht vorhanden.  
+ Die Breite der dem Statusleistenbereich, *nIndex* gibt; andernfalls NULL, wenn eine Statusleiste nicht vorhanden ist.  
   
 ##  <a name="gettiptext"></a>  CMFCStatusBar::GetTipText  
- Abgerufen Sie den QuickInfo-Text des Bereichs "eine Statusleiste" werden.  
+ Rufen Sie den QuickInfo-Text der Statusleiste im Bereich "".  
   
 ```  
 CString GetTipText(int nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- Gibt den Index des Bereichs für die QuickInfo-Text abzurufen.  
+ [in] *nIndex*  
+ Gibt den Index des Bereichs für das QuickInfo-Text abzurufen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der QuickInfo-Text der Statusleiste, `nIndex` angibt. Wenn eine Status-Leistenbereich für das angegebene nicht vorhanden ist, andernfalls auf die leere Zeichenfolge `nIndex` oder wenn die QuickInfo-Text leer ist.  
+ Der QuickInfo-Text im Bereich mit der Statusleiste, *nIndex* angibt. Andernfalls der leeren Zeichenfolge, wenn Sie ein Statusleistenbereich nicht vorhanden ist, für den angegebenen *nIndex* oder wenn die QuickInfo-Text leer ist.  
   
 ##  <a name="invalidatepanecontent"></a>  CMFCStatusBar::InvalidatePaneContent  
- Für ungültig zu erklären die Status-Leistenbereich und seinen Inhalt neu gezeichnet werden.  
+ Für ungültig erklären Sie die Statusleistenbereich und zeichnen Sie seinen Inhalt neu zu.  
   
 ```  
 void InvalidatePaneContent(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- Gibt den Index des Bereichs zurück, deren Inhalt neu gezeichnet und werden für ungültig erklärt wird.  
+ [in] *nIndex*  
+ Gibt den Index des Bereichs, dessen Inhalt neu gezeichnet und werden für ungültig erklärt wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die Statusleiste ungültig ist, wird er zum Neuzeichnen gekennzeichnet. Windows zeichnet es neu bei der `UpdateWindow` -Methode sendet eine `WM_PAINT` -Meldung an das `OnPaint` Methode.  
+ Wenn die Statusleiste ungültig ist, wird er für das Neuzeichnen markiert. Windows zeichnet es neu, wenn die `UpdateWindow` Methode sendet eine WM_PAINT-Nachricht an die `OnPaint` Methode.  
   
 ##  <a name="ondrawpane"></a>  CMFCStatusBar::OnDrawPane  
- Zeichnen Sie den Bereich der Statusleiste neu.  
+ Neu gezeichnet werden im Bereich der Statusleiste.  
   
 ```  
 virtual void OnDrawPane(
@@ -503,14 +504,14 @@ virtual void OnDrawPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
- Ein Zeiger zu einem Gerätekontext für das Zeichnen.  
+ [in] *pDC*  
+ Ein Zeiger auf einen Gerätekontext zum Zeichnen.  
   
- [in] `pPane`  
- Ein Zeiger auf eine `CMFCStatusBarPaneInfo` -Struktur, die die Informationen zum zu zeichnenden Bereich enthält.  
+ [in] *pPane*  
+ Ein Zeiger auf eine `CMFCStatusBarPaneInfo` -Struktur, die die Informationen über den Bereich zu zeichnenden enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig `OnDrawPane` zeichnet den Bereich mit den Gerätekontext `pDC` gemäß der Formatvorlage und den Inhalt des Bereichs.  
+ In der Standardeinstellung `OnDrawPane` zeichnet im Bereich mit den Gerätekontext *pDC* gemäß der Formatvorlage und den Inhalt des Bereichs.  
   
  Überschreiben Sie diese Methode in einer `CMFCStatusBar`-abgeleitete Klasse, um die Darstellung eines Bereichs anzupassen.  
   
@@ -522,7 +523,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `cs`  
+ [in] *Cs*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -536,7 +537,7 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bSet`  
+ [in] *bSet*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -550,15 +551,15 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpIDArray`  
- [in] `nIDCount`  
+ [in] *LpIDArray*  
+ [in] *nIDCount*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setpaneanimation"></a>  CMFCStatusBar::SetPaneAnimation  
- Weist eine Animation in den angegebenen Bereich.  
+ Weist eine Animation im angegebenen Bereich.  
   
 ```  
 void SetPaneAnimation(
@@ -569,23 +570,23 @@ void SetPaneAnimation(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- Gibt den Index des Bereichs eine Animation zugewiesen werden soll.  
+ [in] *nIndex*  
+ Gibt den Index des Bereichs, der Sie eine Animation zuweisen möchten.  
   
- [in] `hImageList`  
- Gibt ein Handle für die Bildliste, die die Animationsframes enthält.  
+ [in] *hImageList*  
+ Gibt ein Handle der Bildliste an, die die Frame-Animationen enthält.  
   
- [in] `nFrameRate`  
- Gibt die Framerate in Millisekunden, für die Animation an.  
+ [in] *nFrameRate*  
+ Gibt die Framerate für die Animation in Millisekunden an.  
   
- [in] `bUpdate`  
- Wenn `TRUE`, eine unverzügliche Aktualisierung des Inhalts im Bereich. Andernfalls wird der Inhalt im Bereich aktualisiert, wenn für ungültig erklärt wird.  
+ [in] *bUpdate*  
+ True gibt an, aktualisieren Sie den im Bereich Inhalt sofort. Andernfalls wird der Inhalt im Bereich aktualisiert, wenn sie ungültig wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie die aktuelle Animation deaktivieren möchten, rufen Sie `SetPaneAnimation` mit `hImageList` festgelegt `NULL`.  
+ Wenn Sie die aktuelle Animation deaktivieren möchten, rufen Sie `SetPaneAnimation` mit `hImageList` auf NULL festgelegt.  
   
 ##  <a name="setpanebackgroundcolor"></a>  CMFCStatusBar::SetPaneBackgroundColor  
- Legt die Hintergrundfarbe des Status-Leistenbereich fest.  
+ Legt die Hintergrundfarbe der dem Statusleistenbereich fest.  
   
 ```  
 void SetPaneBackgroundColor(
@@ -595,17 +596,17 @@ void SetPaneBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- Gibt den Index des Bereichs für die neue Hintergrundfarbe festzulegen.  
+ [in] *nIndex*  
+ Gibt den Index des Bereichs für die eine neue Hintergrundfarbe festzulegen.  
   
- [in] `clrBackground`  
+ [in] *ClrBackground*  
  Die neue Hintergrundfarbe angibt.  
   
- [in] `bUpdate`  
- Wenn `TRUE`, eine unverzügliche Aktualisierung des Inhalts im Bereich. Andernfalls werden erst aktualisiert, den Inhalt im Bereich im Bereich durch eine andere Methode ungültig ist.  
+ [in] *bUpdate*  
+ True gibt an, aktualisieren Sie den im Bereich Inhalt sofort. Andernfalls werden erst aktualisiert, den im Bereich Inhalt im Bereich von einer anderen Methode ungültig ist.  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
- Legen Sie das Symbol des Status-Leistenbereich.  
+ Legen Sie das Symbol für den Statusleistenbereich.  
   
 ```  
 void SetPaneIcon(
@@ -622,25 +623,25 @@ void SetPaneIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- Gibt den Index des Bereichs für das Bild festgelegt.  
+ [in] *nIndex*  
+ Gibt den Index des Bereichs für die das Bild festgelegt.  
   
- [in] `hIcon`  
- Gibt ein Handle für das Symbol als Image Bereich festgelegt werden.  
+ [in] *hIcon*  
+ Gibt ein Handle auf das Symbol wie das Bild im Bereich festgelegt werden.  
   
- [in] `bUpdate`  
+ [in] *bUpdate*  
  Gibt an, ob den Bereich Inhalt sofort zu aktualisieren.  
   
- [in] `hBmp`  
- Gibt ein Handle für die Bitmap als Image Bereich festgelegt werden.  
+ [in] *hBmp*  
+ Gibt ein Handle auf die Bitmap als Bild Bereich festgelegt werden.  
   
- [in] `clrTransparent`  
- Gibt die transparente Farbe der Bitmap, die die `hBmp` angibt.  
+ [in] *ClrTransparent*  
+ Gibt die transparente Farbe der Bitmap, die die *hBmp* angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Übergeben Sie entweder `HICON` oder `HBITMAP` sowie die transparente Farbe des Bereichs Image festgelegt. Wenn Sie nicht möchten, um das Bild nicht mehr angezeigt wird, übergeben die `NULL` Wert als Bild-Handle.  
+ Sie können entweder HICON oder HBITMAP sowie die transparente Farbe des Bereichs Image festlegen übergeben. Wenn Sie nicht, um das Bild nicht mehr anzuzeigen möchten, übergeben Sie den NULL-Wert als Bild-Handle.  
   
- Es ist eine laufende Animation, [CMFCStatusBar::SetPaneAnimation](#setpaneanimation) wurde festgelegt, wird die Animation beendet.  
+ Es ist Animation ausgeführte, die [CMFCStatusBar::SetPaneAnimation](#setpaneanimation) hat festgelegt, wird die Animation beendet werden.  
   
 ##  <a name="setpaneinfo"></a>  CMFCStatusBar::SetPaneInfo  
 
@@ -654,15 +655,15 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- [in] `nID`  
- [in] `nStyle`  
- [in] `cxWidth`  
+ [in] *nIndex*  
+ [in] *nID*  
+ [in] *nStyle*  
+ [in] *CxWidth*  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setpaneprogress"></a>  CMFCStatusBar::SetPaneProgress  
- Legen Sie die aktuellen Statusanzeige der Statusanzeige für den angegebenen Bereich.  
+ Legen Sie die aktuelle Statusanzeige der Statusanzeige für den angegebenen Bereich.  
   
 ```  
 void SetPaneProgress(
@@ -672,17 +673,17 @@ void SetPaneProgress(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- Gibt den Index des Bereichs für die Aktualisierung der Statusanzeige.  
+ [in] *nIndex*  
+ Gibt den Index des Bereichs für den die Statusanzeige zu aktualisieren.  
   
- [in] `nCurr`  
- Gibt den aktuellen Wert der Statusanzeige.  
+ [in] *nCurr*  
+ Gibt den aktuellen Wert der Statusanzeige an.  
   
- [in] `bUpdate`  
+ [in] *bUpdate*  
  Gibt an, ob der Bereich sofort aktualisiert werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, wenn die Statusanzeige für die Statusanzeige im angegebenen Bereich aktualisiert werden soll.  
+ Rufen Sie diese Methode auf, wenn die Statusanzeige für die Statusanzeige im angegebenen Bereich aktualisiert werden soll.  
   
  Um diese Funktion für den angegebenen Bereich zu verwenden, rufen Sie [CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar) erste.  
   
@@ -696,8 +697,8 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- [in] `nStyle`  
+ [in] *nIndex*  
+ [in] *nStyle*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -712,16 +713,16 @@ virtual BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- [in] `lpszNewText`  
- [in] `bUpdate`  
+ [in] *nIndex*  
+ [in] *LpszNewText*  
+ [in] *bUpdate*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setpanetextcolor"></a>  CMFCStatusBar::SetPaneTextColor  
- Legt die Textfarbe des angegebenen Bereichs fest.  
+ Legt die Textfarbe im angegebenen Bereich fest.  
   
 ```  
 void SetPaneTextColor(
@@ -731,17 +732,17 @@ void SetPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- Gibt den Index des Bereichs, dem Sie eine neue Farbe zuweisen möchten.  
+ [in] *nIndex*  
+ Gibt den Index des Bereichs, der Sie eine neue Farbe zuweisen möchten.  
   
- [in] `clrText`  
- Gibt die Textfarbe.  
+ [in] *ClrText*  
+ Gibt die Farbe des Textes an.  
   
- [in] `bUpdate`  
- Wenn `TRUE`, eine unverzügliche Aktualisierung des Inhalts im Bereich. Andernfalls werden erst aktualisiert, den Inhalt im Bereich im Bereich durch eine andere Methode ungültig ist.  
+ [in] *bUpdate*  
+ True gibt an, aktualisieren Sie den im Bereich Inhalt sofort. Andernfalls werden erst aktualisiert, den im Bereich Inhalt im Bereich von einer anderen Methode ungültig ist.  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
- Legen Sie die Breite der Balken Statusbereich an.  
+ Festlegen Sie die Breite der dem Statusleistenbereich.  
   
 ```  
 void SetPaneWidth(
@@ -750,14 +751,14 @@ void SetPaneWidth(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- Der Index des Status-Leistenbereich für die neue Breite festgelegt.  
+ [in] *nIndex*  
+ Der Index, der dem Statusleistenbereich für die neue Breite festgelegt werden soll.  
   
- [in] `cx`  
- Die neue Breite des Status-Leistenbereich in Pixel.  
+ [in] *Cx*  
+ Die neue Breite der dem Statusleistenbereich in Pixel.  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
- Legen Sie den QuickInfo-Text, der eine Status-Leistenbereich.  
+ Legen Sie den QuickInfo-Text, der einen Statusleistenbereich.  
   
 ```  
 void SetTipText(
@@ -766,10 +767,10 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nIndex`  
- Der Index des Bereichs, dem Sie den QuickInfo-Text zuweisen möchten.  
+ [in] *nIndex*  
+ Der Index des Bereichs, der den QuickInfo-Text zugewiesen werden sollen.  
   
- [in] `pszTipText`  
+ [in] *PszTipText*  
  Der neue QuickInfo-Text.  
   
 ## <a name="see-also"></a>Siehe auch  

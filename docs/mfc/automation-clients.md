@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a29b11028df84a7e5e67adb7588386f77adcff06
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929038"
 ---
 # <a name="automation-clients"></a>Automatisierungsclients
 Automatisierung ermöglicht es, für die Anwendung in einer anderen Anwendung implementierten Objekte zu bearbeiten oder Objekte verfügbar zu machen, damit sie bearbeitet werden können. Ein Automatisierungsclient ist eine Anwendung, die verfügbar gemachten Objekten gehören zu einer anderen Anwendung bearbeitet werden kann. Die Anwendung, die die Objekte verfügbar macht, wird den Automation-Server aufgerufen. Der Client bearbeitet die Serveranwendung Objekte durch den Zugriff auf diese Objekte Eigenschaften und Funktionen.  
@@ -37,7 +38,7 @@ Automatisierung ermöglicht es, für die Anwendung in einer anderen Anwendung im
   
  Statisch gebundene Clients verwenden eine Proxyklasse, die statisch ist, mit der Clientanwendung. Diese Klasse bietet eine typsichere C++ Kapselung von Eigenschaften und Vorgänge der Server-Anwendungsverzeichnis.  
   
- Die Klasse `COleDispatchDriver` bietet Unterstützung für die Clientseite der Automatisierung Prinzipale. Mithilfe der `Add New Item` (Dialogfeld), erstellen Sie eine Klasse, die von abgeleiteten `COleDispatchDriver`.  
+ Die Klasse `COleDispatchDriver` bietet Unterstützung für die Clientseite der Automatisierung Prinzipale. Mithilfe der **neues Element hinzufügen** (Dialogfeld), erstellen Sie eine Klasse, die von abgeleiteten `COleDispatchDriver`.  
   
  Geben Sie dann die Typbibliothek-Datei, die die Eigenschaften und Funktionen des Objekts die Serveranwendung beschrieben. Das Element hinzufügen-Dialogfeld liest diese Datei und erstellt die `COleDispatchDriver`-abgeleitete Klasse, mit Memberfunktionen, die Ihre Anwendung aufrufen kann, um die Serveranwendung-Objekten in C++ in einer typsicheren Weise zugreifen. Zusätzliche Funktionen von geerbten `COleDispatchDriver` vereinfacht den Prozess den richtigen Automatisierungsserver aufrufen.  
   

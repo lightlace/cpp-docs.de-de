@@ -1,5 +1,5 @@
 ---
-title: COMPAREITEMSTRUCT-Struktur | Microsoft Docs
+title: COMPAREITEMSTRUCT-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94d39c6b6c256444cd2850f7e55a7e4b87f6d7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c42f356cb323bb7690b6c39b1fc7bd9ce0485f3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850588"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT-Struktur
-Die `COMPAREITEMSTRUCT` Struktur bereitstellt, die Bezeichner und die Anwendung bereitgestellte Daten für zwei Elemente in einer sortierten, Besitzer gezeichnetes Listenfeld oder Kombinationsfeld.  
+Die `COMPAREITEMSTRUCT` Struktur bereitstellt, die Bezeichner und der Anwendung bereitgestellte Daten für zwei Elemente in einem sortierten, vom Besitzer gezeichnetes Listenfeld oder Kombinationsfeld.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,29 +41,29 @@ typedef struct tagCOMPAREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `CtlType`  
- **Odt_combobox** (dem gibt einen Besitzer gezeichnetes Listenfeld) oder **ODT_COMBOBOX** (dem gibt ein Ownerdrawn-Kombinationsfeld an).  
+ *CtlType*  
+ Odt_combobox (womit eine Ownerdrawn-Listenfeld angegeben wird) oder ODT_COMBOBOX (die ein Ownerdrawn-Kombinationsfeld angibt).  
   
- `CtlID`  
+ *CtlID*  
  Die Steuerelement-ID für das Listenfeld oder Kombinationsfeld.  
   
- `hwndItem`  
+ *hwndItem*  
  Das Fensterhandle des Steuerelements.  
   
  *itemID1*  
- Der Index des ersten Elements in das Listenfeld oder Kombinationsfeld verglichen wird.  
+ Der Index des ersten Elements in das Listenfeld oder Kombinationsfeld, die mit dem verglichen wird.  
   
  *itemData1*  
- Von der Anwendung bereitgestellten Daten für das erste Element verglichen wird. Dieser Wert wurde im Aufruf übergeben, die das Element im Kombinationsfeld oder Liste hinzugefügt.  
+ Von der Anwendung bereitgestellten Daten für das erste Element mit dem verglichen wird. Dieser Wert wurde im Aufruf übergeben, die das Element im Kombinationsfeld oder Liste hinzugefügt.  
   
  *itemID2*  
- Der Index des zweiten Elements in das Listenfeld oder Kombinationsfeld verglichen wird.  
+ Der Index des zweiten Elements in das Listenfeld oder Kombinationsfeld, die mit dem verglichen wird.  
   
  *itemData2*  
  Von der Anwendung bereitgestellten Daten für das zweite Element verglichen wird. Dieser Wert wurde im Aufruf übergeben, die das Element im Kombinationsfeld oder Liste hinzugefügt.  
   
 ## <a name="remarks"></a>Hinweise  
- Bei jedem eine Anwendung fügt ein neues Element auf ein vom Besitzer gezeichnetes Listenfeld oder Kombinationsfeld erstellt, mit der **CBS_SORT** oder **LBS_SORT** Stil, sendet Windows den Besitzer einer `WM_COMPAREITEM` Nachricht. Die `lParam` -Parameter der Nachricht enthält einen long-Zeiger auf eine `COMPAREITEMSTRUCT` Struktur. Nach dem Empfang der Nachrichteninhalts wird der Besitzer vergleicht die beiden Elemente und gibt einen Wert, der angibt, welches Element zuerst sortiert zurück.  
+ Wenn eine Anwendung ein neues Element mit einem Ownerdrawn-Listenfeld oder Kombinationsfeld erstellt, mit der Formatvorlage CBS_SORT oder LBS_SORT hinzufügt, sendet Windows eine WM_COMPAREITEM-Nachricht an dem Besitzer. Die *lParam* -Parameter der Nachricht enthält einen long-Zeiger auf eine `COMPAREITEMSTRUCT` Struktur. Bei Empfang der Nachricht an, der Besitzer vergleicht die beiden Elemente und gibt einen Wert, der angibt, welches Element vor den anderen sortiert zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** winuser.h  

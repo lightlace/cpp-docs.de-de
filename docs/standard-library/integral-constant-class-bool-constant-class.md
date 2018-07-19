@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d59c994cba47cf609c13a1d35fbc7fed60fc531f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8bff57549307eeaa9245c0bb4083b206471fe726
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962532"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant Class, bool_constant-Klasse
 
@@ -47,13 +48,13 @@ struct integral_constant {
 
 *T* den Typ der Konstante.
 
-*V* den Wert der Konstante.
+*V* den Wert der Konstanten.
 
 ## <a name="remarks"></a>Hinweise
 
 Die `integral_constant`-Vorlagenklasse, sofern mit einem integralen Typ *T* und einem Wert *v* dieses Typs definiert, stellt ein Objekt dar, das eine Konstante dieses integralen Typs mit dem angegebenen Wert hält. Beim Member `type` handelt es sich um ein Alias des erstellten Vorlagenspezialisierungstypen, und der Member `value` hält den Wert *v*, der beim Erstellen der Spezialisierung verwendet wurde.
 
-Die Vorlagenklasse `bool_constant` ist eine explizite Teilspezialisierung von `integral_constant`, die `bool` als *T*-Argument verwendet.
+Die `bool_constant` Vorlagenklasse ist eine explizite teilspezialisierung von `integral_constant` verwendet **"bool"** als die *T* Argument.
 
 ## <a name="example"></a>Beispiel
 

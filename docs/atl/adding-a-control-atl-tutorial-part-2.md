@@ -1,7 +1,7 @@
 ---
 title: Hinzufügen eines Steuerelements (ATL-Lernprogramm, Teil 2) | Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1547d48b5b5914d9b32ff8b476b0c007f972067
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238707"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Hinzufügen eines Steuerelements (ATL-Lernprogramm, Teil 2)
 In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es und testen es auf einer Webseite.  
@@ -25,7 +26,7 @@ In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es
   
 #### <a name="to-add-an-object-to-an-atl-project"></a>So fügen Sie einem ATL-Projekt ein Objekt hinzu  
   
-1.  Klicken Sie in der Klassenansicht mit der rechten Maustaste auf das Projekt "Polygon".  
+1.  In **Projektmappen-Explorer**, mit der rechten Maustaste des Polygon-Projekts.  
   
 2.  Zeigen Sie auf **hinzufügen** auf das Kontextmenü, und klicken Sie auf **neues Element** im Untermenü.  
   
@@ -43,7 +44,7 @@ In diesem Schritt fügen Sie Ihrem Projekt ein Steuerelement hinzu, erstellen es
 |-----------|--------------|  
 |**Kurzname**|Der Name, den Sie für das Steuerelement eingegeben haben.|  
 |**Klasse**|Der C++-Klassenname, der erstellt wurde, um das Steuerelement zu implementieren.|  
-|**.h-Datei**|Die Datei, die erstellt wurde, um die Definition der C++-Klasse zu enthalten.|  
+|**H-Datei**|Die Datei, die erstellt wurde, um die Definition der C++-Klasse zu enthalten.|  
 |**CPP-Datei**|Die Datei, die erstellt wurde, um die Implementierung der C++-Klasse zu enthalten.|  
 |**Co-Klasse**|Der Name der Komponentenklasse für dieses Steuerelement.|  
 |**Interface**|Der Name der Schnittstelle, auf der das Steuerelement die benutzerdefinierten Methoden und Eigenschaften implementiert.|  

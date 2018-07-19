@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266310"
 ---
 # <a name="compiler-error-c3669"></a>Compilerfehler C3669
 'Member': Der Überschreibungsspezifizierer 'Überschreiben' für statische Memberfunktionen oder Konstruktoren nicht zulässig  

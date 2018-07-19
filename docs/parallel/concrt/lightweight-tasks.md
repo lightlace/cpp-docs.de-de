@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687412"
 ---
 # <a name="lightweight-tasks"></a>Einfache Aufgaben
 Dieses Dokument beschreibt die Rolle einfacher Aufgaben in der Concurrency Runtime. Ein *einfache Aufgabe* ist eine Aufgabe, die Sie direkt aus Planen einer `concurrency::Scheduler` oder `concurrency::ScheduleGroup` Objekt. Eine einfache Aufgabe ähnelt der Funktion, die Sie für die Windows-API bereitstellen [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Funktion. Aus diesem Grund sind einfache Aufgaben hilfreich beim Anpassen von vorhandenen Codes, um die Planungsfunktionalität der Concurrency Runtime verwenden. Die Concurrency Runtime selbst verwendet einfache Aufgaben, Planen asynchrone Agents und Senden von Nachrichten zwischen asynchrone Meldungsblöcke.  

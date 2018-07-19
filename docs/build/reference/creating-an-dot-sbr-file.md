@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371082"
 ---
 # <a name="creating-an-sbr-file"></a>Erstellen einer SBR-Datei
 Die Eingabedateien für BSCMAKE sind SBR-Dateien. Der Compiler erstellt eine SBR-Datei für die einzelnen Objektdateien (.obj) kompiliert. Beim Erstellen oder aktualisieren Ihre Browseinformationsdatei müssen alle SBR-Dateien für Ihr Projekt auf dem Datenträger verfügbar sein.  

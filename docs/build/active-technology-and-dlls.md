@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360112"
 ---
 # <a name="active-technology-and-dlls"></a>Active Technology und DLLs
 Active Technology ermöglicht Objektserver vollständig innerhalb einer DLL implementiert werden. Diese Art des Servers ist einen in-Process-Server bezeichnet. MFC unterstützt vollständig in-Process-Server für alle Funktionen der visuellen Bearbeitung nicht hauptsächlich da Active-Technologie eine Möglichkeit für einen Server zu verbinden, in die Hauptnachrichtenschleife des Containers nicht bietet. MFC erfordert Zugriff auf die containeranwendung Nachrichtenschleife, Zugriffstasten und leerlaufzeitverarbeitung zu behandeln.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294748"
 ---
 # <a name="command-line-warning-d9043"></a>Befehlszeilenwarnung D9043
 Es wurde ein ungültiger Wert 'Warning_level' für 'Compiler_option'; Wenn '4999'; Codeanalysewarnungen sind nicht mit Warnstufen verknüpft.  

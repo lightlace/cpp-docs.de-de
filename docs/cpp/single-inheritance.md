@@ -1,5 +1,5 @@
 ---
-title: Einzelne Vererbung | Microsoft Docs
+title: Einzelne Vererbung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cab540d36f322bbe571a04046ff876d5425a317
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b06bceadf9a274253693dc8f33f3d04e6500115
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028620"
 ---
 # <a name="single-inheritance"></a>Einfache Vererbung
 In der einfachen Vererbung, eine häufige Art der Vererbung, haben Klassen nur eine Basisklasse. Betrachten Sie die Beziehung, wie in der folgenden Abbildung veranschaulicht.  
@@ -36,7 +37,7 @@ Einfaches Diagramm für einzelne Vererbung
   
  Ein weiteres relevantes Element in der Abbildung: `Book` ist eine abgeleitete Klasse (von `PrintedDocument`) und eine Basisklasse (`PaperbackBook` ist von `Book` abgeleitet). Eine Skeletal-Deklaration einer solchen Klassenhierarchie wird im folgenden Beispiel gezeigt:  
   
-```  
+```cpp 
 // deriv_SingleInheritance.cpp  
 // compile with: /LD  
 class PrintedDocument {};  
@@ -52,7 +53,7 @@ class PaperbackBook : public Book {};
   
  Die Basisklasse, von der jeder Klasse abgeleitet ist, wird vor der Deklaration der abgeleiteten Klasse deklariert. Es genügt nicht, eine Vorwärtsverweis-Deklaration für eine Basisklasse bereitzustellen, es muss eine vollständige Deklaration sein.  
   
- Im vorherigen Beispiel der Zugriffsspezifizierer **öffentlichen** verwendet wird. Die Bedeutung öffentlicher, geschützter und privater Vererbung wird im beschrieben [Memberzugriffssteuerung.](../cpp/member-access-control-cpp.md)  
+ Im vorherigen Beispiel, dem Zugriffsspezifizierer **öffentliche** verwendet wird. Die Bedeutung von öffentlichen, geschützten und privater Vererbung wird im beschrieben [Memberzugriffssteuerung.](../cpp/member-access-control-cpp.md)  
   
  Eine Klasse kann als Basisklasse für viele bestimmte Klassen dienen, wie in der folgenden Abbildung veranschaulicht.  
   
@@ -62,11 +63,11 @@ Beispiel für gerichtetes azyklisches Diagramm
  Im oben gezeigten Diagramm, das "gerichtetes azyklisches Diagramm" (oder "DAG") genannt wird, sind einige der Klassen Basisklassen für mehrere abgeleitete Klassen. Umgekehrt ist dies jedoch nicht wahr: Es gibt nur eine direkte Basisklasse für jede abgeleitete Klasse. Das Diagramm in der Abbildung stellt eine Struktur mit einfacher Vererbung dar.  
   
 > [!NOTE]
->  Gerichtete azyklische Diagramme sind nicht eindeutig für die einfache Vererbung. Sie werden auch verwendet, um Mehrfachvererbungsdiagramme darzustellen. In diesem Thema wird behandelt, [Mehrfachvererbung](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  Gerichtete azyklische Diagramme sind nicht eindeutig für die einfache Vererbung. Sie werden auch verwendet, um Mehrfachvererbungsdiagramme darzustellen. In diesem Thema finden Sie im [Mehrfachvererbung](http://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
   
  Bei der Vererbung enthält die abgeleitete Klasse die Member der Basisklasse plus alle neuen Member, die Sie hinzufügen. Daher kann eine abgeleitete Klasse auf Member der Basisklasse verweisen (es sei denn, diese Member werden in der abgeleiteten Klasse neu definiert). Der Bereichsauflösungsoperator (`::`) kann verwendet werden, um auf Member von direkten oder indirekten Basisklassen zu verweisen, wenn diese Member in der abgeleiteten Klasse neu definiert wurden. Betrachten Sie das folgende Beispiel:  
   
-```  
+```cpp 
 // deriv_SingleInheritance2.cpp  
 // compile with: /EHsc /c  
 #include <iostream>  
@@ -99,7 +100,7 @@ Book::Book( char *name, long pagecount ) {
   
  Beachten Sie, dass der Konstruktor für `Book`, (`Book::Book`), Zugriff auf Datenmember, `Name` hat. In einem Programm kann ein Objekt vom Typ `Book` erstellt und wie folgt verwendet werden:  
   
-```  
+```cpp 
 //  Create a new object of type Book. This invokes the  
 //   constructor Book::Book.  
 Book LibraryBook( "Programming Windows, 2nd Ed", 944 );  
@@ -112,7 +113,7 @@ LibraryBook.PrintNameOf();
   
  Wie das obige Beispiel zeigt, werden Klassenmember und geerbte Daten und Funktionen identisch verwendet. Wenn die Implementierung für die Klasse `Book` eine Neuimplementierung der Funktion `PrintNameOf` aufruft, kann die Funktion, die der `Document`-Klasse angehört, nur durch den Bereichsauflösungsoperator (`::`) aufgerufen werden:  
   
-```  
+```cpp 
 // deriv_SingleInheritance3.cpp  
 // compile with: /EHsc /LD  
 #include <iostream>  
@@ -138,7 +139,7 @@ void Book::PrintNameOf() {
   
  Zeiger und Verweise auf abgeleitete Klassen können implizit in Zeiger und Verweise auf ihre Basisklassen konvertiert werden, wenn es eine erreichbare, eindeutige Basisklasse gibt. Der folgende Code veranschaulicht dieses Konzept unter Verwendung von Zeigern (das gleiche Prinzip gilt für Verweise):  
   
-```  
+```cpp 
 // deriv_SingleInheritance4.cpp  
 // compile with: /W3  
 struct Document {  

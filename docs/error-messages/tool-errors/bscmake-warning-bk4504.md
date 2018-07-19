@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295183"
 ---
 # <a name="bscmake-warning-bk4504"></a>BSCMAKE-Warnung BK4504
 Datei enthält zu viele Verweise. Weitere Verweise von dieser Quelle ignoriert  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247540"
 ---
 # <a name="compiler-error-c2843"></a>Compilerfehler C2843
 „Member“: Die Adresse eines nicht statischen Datenmembers oder einer Methode eines verwalteten oder WinRT-Typs kann nicht übernommen werden.  

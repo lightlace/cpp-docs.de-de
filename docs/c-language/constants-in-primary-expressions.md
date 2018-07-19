@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382272"
 ---
 # <a name="constants-in-primary-expressions"></a>Konstanten in primären Ausdrücken
 Ein konstanter Operand besitzt den Wert und Typ des konstanten Werts, den er darstellt. Eine Zeichenkonstante enthält den `int`-Typ. Eine Ganzzahlkonstante hat einen `int`, **long**, `unsigned int` oder `unsigned long`-Typ, abhängig von der Größe der ganzen Zahl und von der Art, wie der Wert angegeben wird. Weitere Informationen finden Sie unter [Konstanten](../c-language/c-constants.md).  

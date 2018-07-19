@@ -1,5 +1,5 @@
 ---
-title: -Klasse Informationsklassen (ATL) | Microsoft Docs
+title: -Klasse Informationsklassen (ATL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5df4f70d069c2d77cf828665986c892281ba27cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956682"
 ---
-# <a name="class-information-classes"></a>Klasse Informationsklassen
-Die folgende Klasse bietet Unterstützung für das Abrufen von Informationen über die connectorklasse:  
+# <a name="class-information-classes"></a>Klasseninformationsklassen
+Die folgende Klasse bietet Unterstützung für das Abrufen von Informationen an:  
   
--   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) bietet Zugriff auf Informationen zu geben. Ruft die ausgehende IID für das Objekt standardmäßig Ereignissatz ab.  
+-   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) bietet Zugriff auf Typinformationen. Ruft die ausgehende IID für Standardereignissatz des Objekts ab.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../atl/atl-class-overview.md)
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691409"
 ---
 # <a name="a20---binding-of-barrier-directives"></a>A.20   Bindung von barrier-Direktiven
 Die direktivenbindung Regeln Aufruf für eine **Barriere** Richtlinie zum Binden an der nächsten einschließenden `parallel` Richtlinie. Weitere Informationen für direktivenbindung finden Sie unter [Abschnitt 2.8](../../parallel/openmp/2-8-directive-binding.md) auf Seite "32".  

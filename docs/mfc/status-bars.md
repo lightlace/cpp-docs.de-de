@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379631"
 ---
 # <a name="status-bars"></a>Statusleisten
 Statusleisten, kann Ihre Anwendung einen Ort, an die Nachrichten und nützliche Informationen für den Benutzer anzuzeigen, ohne den Benutzer Arbeit zu unterbrechen. In der Regel am unteren Rand eines Fensters angezeigt wird, haben Statusleisten "Bereiche", die z. b. "Indikatoren" und "Meldungszeile." Die Indikatoren geben den Status der u. a. die Rollen, ob die makroaufzeichnung aktiviert ist und so weiter. Die Message-Zeile auf der Statusleiste kann Informationen zum Programmstatus oder einer Symbolleiste oder ein Menüelement, die der Benutzer mit der Maus verweist angezeigt werden.  

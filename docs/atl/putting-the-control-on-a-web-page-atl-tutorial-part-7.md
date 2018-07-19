@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362583"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Platzieren des Steuerelements auf einer Webseite (ATL-Lernprogramm, Teil 7)
 Das Steuerelement ist jetzt fertig. Um zu sehen, wie das Steuerelement in einer realen Situation funktioniert, platzieren Sie es auf einer Webseite. Eine HTML-Datei, die das Steuerelement enthält, wurde erstellt, als Sie das Steuerelement definiert haben. Öffnen Sie die Datei PolyCtl.htm aus **Projektmappen-Explorer**, sehen Sie das Steuerelement auf einer Webseite.  

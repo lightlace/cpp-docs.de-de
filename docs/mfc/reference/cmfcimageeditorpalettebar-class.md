@@ -1,5 +1,5 @@
 ---
-title: CMFCImageEditorPaletteBar Klasse | Microsoft Docs
+title: CMFCImageEditorPaletteBar-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e377a465dd55d8940e74617130216220d03f1218
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3b10e18e12b5a2f27c0b83562ef16321da67422
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851456"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar-Klasse
-Stellt Palette Leiste Funktionalität um ein Bild-Editor (Dialogfeld) bereit.  
+Der Funktionsumfang Palette Balken zu einer Bild-Editor (Dialogfeld).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,13 +43,13 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 |||  
 |-|-|  
 |Name|Beschreibung|  
-|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Gibt die Höhe des Symbolleistenschaltflächen zurück. (Überschreibt [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Bestimmt, ob die Symbolleiste Schaltflächen angezeigt werden kann, die Ränder erweitert haben. (Überschreibt [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
+|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Gibt die Höhe von Symbolleisten-Schaltflächen. (Überschreibt [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
+|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Bestimmt, ob die Symbolleiste Schaltflächen angezeigt werden kann, die Rahmen erweitert haben. (Überschreibt [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Klasse kann nicht direkt aus Ihrem Code verwendet werden.  
+ Diese Klasse ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden.  
   
- Das Framework verwendet diese Klasse eine Palette Leiste in einem Bild-Editor (Dialogfeld) angezeigt. Weitere Informationen zu den Bild-Editor (Dialogfeld), finden Sie unter [CMFCImageEditorDialog-Klasse](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ Das Framework verwendet diese Klasse, um eine Palette-Leiste in einem Bild-Editor-Dialogfeld angezeigt wird. Weitere Informationen zu diesem Bild-Editor-Dialogfeld finden Sie unter [CMFCImageEditorDialog-Klasse](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -71,7 +72,7 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
  **Header:** afximageeditordialog.h  
   
 ##  <a name="getrowheight"></a>  CMFCImageEditorPaletteBar::GetRowHeight  
- Gibt die Höhe des Symbolleistenschaltflächen zurück.  
+ Gibt die Höhe von Symbolleisten-Schaltflächen.  
   
 ```  
 virtual int GetRowHeight() const;  
@@ -81,14 +82,14 @@ virtual int GetRowHeight() const;
  Die Höhe der einzelnen Schaltflächen auf der Symbolleiste.  
   
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
- Bestimmt, ob die Symbolleiste Schaltflächen angezeigt werden kann, die Ränder erweitert haben.  
+ Bestimmt, ob die Symbolleiste Schaltflächen angezeigt werden kann, die Rahmen erweitert haben.  
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt `FALSE` zurück.  
+ Diese Methode gibt FALSE zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

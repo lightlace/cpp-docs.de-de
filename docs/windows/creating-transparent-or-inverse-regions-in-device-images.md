@@ -35,6 +35,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882549"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Erstellen transparenter oder invertierter Bereiche in Gerätebildern (Bildbearbeitung für Symbole)
 In der [bildbearbeitung](../windows/image-editor-for-icons.md), das erste Symbol oder Cursor Abbild verfügt über eine transparent-Attribut. Obwohl Symbol-als auch Cursor rechteckig sind, werden viele nicht in dieser Form angezeigt, da Teile des Bilds transparent sind; das zugrunde liegende Bild auf dem Bildschirm zeigt über dem Symbol oder Cursor. Wenn Sie ein Symbol ziehen, können Teile des Bilds invertierten Farben angezeigt werden. Sie erstellen diese Auswirkungen durch Festlegen der Bildschirmfarbe und invertierte Farbe in der [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md).  

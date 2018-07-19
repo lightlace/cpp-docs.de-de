@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383877"
 ---
 # <a name="null-characters"></a>Nullzeichen
 **ANSI 4.9.2** Die Anzahl von NULL-Zeichen, die an Daten angehängt werden können, die in einen Binärstream geschrieben werden  

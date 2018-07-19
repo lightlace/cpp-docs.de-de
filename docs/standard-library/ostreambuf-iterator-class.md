@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71ea63fbb0fa11f470061ea5ee141d0c3b2bfb3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958252"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator Class
 
@@ -44,9 +45,9 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>Parameter
 
-`CharType` Der Typ, der den Zeichentyp für das ostreambuf_iterator-Objekt darstellt. Dieses Argument ist optional, und der Standardwert ist `char`.
+*CharType* der Typ, der den Zeichentyp für das Ostreambuf_iterator darstellt. Dieses Argument ist optional, und der Standardwert ist **Char**.
 
-`Traits` Der Typ, der den Zeichentyp für das ostreambuf_iterator-Objekt darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
+*"Traits"* der Typ, der den Zeichentyp für das Ostreambuf_iterator darstellt. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Hinweise
 
@@ -97,7 +98,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter **CharType** dar.
+Der Type stellt ein Synonym für den Vorlagenparameter `CharType` dar.
 
 ### <a name="example"></a>Beispiel
 
@@ -293,7 +294,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>Parameter
 
-`_Char` Das Zeichen in den Streampuffer eingefügt werden soll.
+*_Char* das Zeichen, das in den Streampuffer eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -345,13 +346,13 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>Parameter
 
-`strbuf` Streambuf Ausgabeobjekts verwendet, um die Ausgabe Streampuffer Zeiger zu initialisieren.
+*Strbuf* das Streambuf-Ausgabeobjekt verwendet, um den Zeiger auf den ausgabestreampuffer zu initialisieren.
 
-`Ostr` Die Ausgabe-Stream-Objekt verwendet, um die Ausgabe Streampuffer Zeiger zu initialisieren.
+*Ostr* das ausgabestreamobjekt verwendet, um den Zeiger auf den ausgabestreampuffer zu initialisieren.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert den Zeiger auf den Ausgabestreampuffer mit `strbuf`.
+Der erste Konstruktor initialisiert den Zeiger auf den ausgabestreampuffer mit *Strbuf*.
 
 Der zweite Konstruktor initialisiert den Zeiger auf den Ausgabestreampuffer mit `Ostr`. `rdbuf` Der gespeicherte Zeiger darf kein NULL-Zeiger sein.
 
@@ -414,7 +415,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für `basic_streambuf`\< **CharType**, **Merkmale**>, eine Stream-Klasse für die E/A-Puffer, die beim Spezialisieren auf den Zeichentyp `char` zu `streambuf` wird.
+Der Typ ist ein Synonym für `basic_streambuf` \< **CharType**, **"traits"**>, eine Stream-Klasse für die e/a-Puffer, der wird `streambuf` beim auf Zeichentyp spezialisierte**Char**.
 
 ### <a name="example"></a>Beispiel
 
@@ -430,7 +431,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter **Merkmale** dar.
+Der Type stellt ein Synonym für den Vorlagenparameter `Traits` dar.
 
 ### <a name="example"></a>Beispiel
 

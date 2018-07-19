@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce6e3a51cb63a448568f3cf31525f6f153637ec7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1fb0027ba6afbceed8cc5f1daafef8cb183759ce
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955233"
 ---
 # <a name="basicostringstream-class"></a>basic_ostringstream-Klasse
 
@@ -41,15 +42,15 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parameter
 
-`Alloc` Die Allocator-Klasse.
+*Alloc* Allocator-Klasse.
 
-`Elem` Der Typ des grundlegenden Elements der Zeichenfolge.
+*Elem* den Typ des grundlegenden Elements der Zeichenfolge.
 
-*TR* für das grundlegende Element der Zeichenfolge spezialisierten Zeichenmerkmale.
+*TR* spezialisierten Zeichenmerkmale für das grundlegende Element der Zeichenfolge.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse beschreibt ein Objekt, das das Einfügen von Elementen und codierten Objekten in einen Streampuffer steuert, der Elemente des Typs **Elem** enthält, dessen Zeichenmerkmale durch die Klasse **Tr** bestimmt sind, und dessen Elemente durch eine Zuweisung der Klasse `Alloc` zugeordnet werden. Das Objekt speichert ein Objekt der Klasse basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
+Die Klasse beschreibt ein Objekt, das steuert, Einfügen von Elementen und codierten Objekten in einen Streampuffer mit Elementen des Typs `Elem`, dessen Zeichenmerkmale von der Klasse ermittelt werden `Tr`, und, dessen Elemente durch eine Zuweisung der zugeordnet werden Klasse `Alloc`. Das Objekt speichert ein Objekt der Klasse basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -61,7 +62,7 @@ Die Klasse beschreibt ein Objekt, das das Einfügen von Elementen und codierten 
 
 |Typname|Beschreibung|
 |-|-|
-|[allocator_type](#allocator_type)|Der Type stellt ein Synonym für den Vorlagenparameter `Alloc` dar.|
+|[allocator_type](#allocator_type)|Der Typ ist ein Synonym für den Vorlagenparameter *Alloc*.|
 
 ### <a name="member-functions"></a>Memberfunktionen
 
@@ -78,7 +79,7 @@ Die Klasse beschreibt ein Objekt, das das Einfügen von Elementen und codierten 
 
 ## <a name="allocator_type"></a> basic_ostringstream::allocator_type
 
-Der Type stellt ein Synonym für den Vorlagenparameter `Alloc` dar.
+Der Typ ist ein Synonym für den Vorlagenparameter *Alloc*.
 
 ```cpp
 typedef Alloc allocator_type;
@@ -96,19 +97,19 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
 
 ### <a name="parameters"></a>Parameter
 
-`_Mode` Eine der Aufzählungen in [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*_Modus* eine der Enumerationen in [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
 
-`str` Ein Objekt vom Typ `basic_string`.
+*Str* ein Objekt des Typs `basic_string`.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert die Basisklasse durch Aufruf von [basic_ostream](../standard-library/basic-ostream-class.md)( **sb**), bei der **sb** das gespeicherte Objekt der Klasse [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> ist. Er initialisiert außerdem **sb** durch Aufruf von basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`).
+Der erste Konstruktor initialisiert die Basisklasse durch Aufrufen von [Basic_ostream](../standard-library/basic-ostream-class.md)( **Sb**), wobei `sb` das gespeicherte Objekt der Klasse [Basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**, **Tr**, `Alloc`>. Er initialisiert außerdem **sb** durch Aufruf von basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`).
 
-Der zweite Konstruktor initialisiert die Basisklasse durch Aufrufen von basic_ostream( **sb**). Er initialisiert außerdem **sb** durch Aufrufen von basic_stringbuf< **Elem**, **Tr**, `Alloc`>(_ *Str*, `_Mode` &#124; `ios_base::out`).
+Der zweite Konstruktor initialisiert die Basisklasse durch Aufrufen von basic_ostream( **sb**). Er initialisiert zudem `sb` durch Aufruf von Basic_stringbuf < **Elem**, **Tr**, `Alloc`> (_ *Str*, `_Mode` &#124; `ios_base::out`).
 
 ## <a name="rdbuf"></a> basic_ostringstream::rdbuf
 
-Gibt die Adresse des gespeicherten Streampuffers des Typs **pointer** zurück, die ein Zeiger auf [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> ist.
+Gibt die Adresse des gespeicherten Streampuffers des Typs `pointer` zu [Basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -116,11 +117,11 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Adresse des gespeicherten Streampuffers des Typs **pointer**, die ein Zeiger auf basic_stringbuf< **Elem**, **Tr**, `Alloc`> ist.
+Die Adresse des gespeicherten Streampuffers des Typs `pointer` basic_stringbuf < **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt die Adresse des gespeicherten Streampuffers des Typs **pointer** an basic_stringbuf< **Elem**, **Tr**, `Alloc`> zurück.
+Die Memberfunktion gibt die Adresse des gespeicherten Streampuffers des Typs `pointer` basic_stringbuf < **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="example"></a>Beispiel
 
@@ -140,7 +141,7 @@ void str(
 
 ### <a name="parameters"></a>Parameter
 
-`_Newstr` Die neue Zeichenfolge.
+*_Newstr* die neue Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -152,7 +153,7 @@ Die erste Memberfunktion gibt [rdbuf](#rdbuf) -> [str](../standard-library/basic
 
 ### <a name="example"></a>Beispiel
 
-Unter [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str) finden Sie ein Beispiel, in dem **str** verwendet wird.
+Finden Sie unter [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) für ein Beispiel, verwendet `str`.
 
 ## <a name="see-also"></a>Siehe auch
 

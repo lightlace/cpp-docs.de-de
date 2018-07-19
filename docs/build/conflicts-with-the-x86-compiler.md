@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366912"
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>Konflikt mit dem x86-Compiler
 Datentypen, die größer als 4 Bytes auf dem Stapel nicht automatisch ausgerichtet sind, bei der Verwendung der X86 Compiler zum Kompilieren einer Anwendung. Da die Architektur für die X86 Compiler kann ein ausgerichteten 4-Byte-Stapel, etwas größer als 4 Bytes, z. B. eine 64-Bit-Ganzzahl, kann nicht automatisch in eine 8-Byte-Adresse ausgerichtet sein.  

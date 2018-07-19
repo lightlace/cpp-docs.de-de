@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870301"
 ---
 # <a name="console-applications-in-visual-c"></a>Konsolenanwendungen für Visual C++
 Eine Konsolenanwendung akzeptiert Eingaben und sendet die Ausgabe an die Konsole, die auch als "Eingabeaufforderung" bezeichnet wird. Sie können Konsolen-Apps erstellen, um Standardarbeiten zu erledigen oder sehr anspruchsvolle Aufgaben auszuführen. Sie können eine Konsolen-App auch als Machbarkeitsstudiendemonstration der Funktionen verwenden, die Sie später in eine Windows-Desktopanwendung oder eine UWP-App (universelle Windows-Plattform) integrieren möchten. Konsolen-Apps können mithilfe von Pipes oder anderen Remoteprozeduraufrufen (RPC) mit anderen Desktop-Apps kommunizieren.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391404"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Verwenden von Datenbank-, OLE- und Sockets-MFC-Erweiterungs-DLLs in regulären MFC-DLLs
 Bei eine MFC-Erweiterungs-DLL von einem regulären MFC-DLL zu verwenden, wenn die MFC-Erweiterungs-DLL nicht in einer drahtgebundenen der **CDynLinkLibrary** -Objekt Kette der regulären MFC-DLL, die Sie in mindestens einer Gruppe von verwandten Problemen ausführen können. Da die Debugversionen der MFC-Datenbank-, OLE- und Sockets unterstützt DLLs als MFC-Erweiterungs-DLLs implementiert sind, möglicherweise ähnliche Probleme bei der Verwendung dieser MFC-Funktionen, auch wenn Sie nicht explizit eine eigene MFC-Erweiterungs-DLLs verwenden. Einige Symptome sind:  

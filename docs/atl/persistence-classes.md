@@ -1,5 +1,5 @@
 ---
-title: Persistenz-Klassen (ATL) | Microsoft Docs
+title: Dauerhaftigkeitsklassen (ATL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16490105f0ec2ded73f45e54d0f8a6700264893c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85c085e6e5a8f0bbddba5be2905b437425d9a5c3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963653"
 ---
-# <a name="persistence-classes"></a>Persistenz-Klassen
-Die folgenden Klassen implementieren die Objektpersistenz:  
+# <a name="persistence-classes"></a>Dauerhaftigkeitsklassen
+Die folgenden Klassen implementieren Objektpersistenz:  
   
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) ermöglicht einem Client zu laden und speichern die Eigenschaften eines Objekts auf eine Eigenschaftensammlung.  
+-   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) ermöglicht es einem Client zum Laden und speichern die Eigenschaften eines Objekts auf eine Eigenschaftensammlung.  
   
--   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) ermöglicht einem Client zu laden und Speichern von Daten ein Objekt in einen Stream.  
+-   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) ermöglicht einem Client zu laden und Speichern von persistenten Daten eines Objekts in einen Stream.  
   
--   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) ermöglicht einem Client zum Laden und Speichern von Daten des Objekts in einem Speicher.  
+-   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) ermöglicht einem Client zu laden und Speichern von persistenten Daten eines Objekts in einem Speicher.  
   
 ## <a name="related-articles"></a>Verwandte Artikel  
  [ATL-Lernprogramm](../atl/active-template-library-atl-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../atl/atl-class-overview.md)   
+ [Übersicht über die Klasse](../atl/atl-class-overview.md)   
  [Eigenschaftenzuordnungs-Makros](../atl/reference/property-map-macros.md)
 

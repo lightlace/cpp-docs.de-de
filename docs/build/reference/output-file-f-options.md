@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373022"
 ---
 # <a name="output-file-f-options"></a>/F-Optionen (Ausgabedateioptionen)
 Die Optionen für die Ausgabedatei erstellen oder Umbenennen von Ausgabedateien. Sie wirken sich auf alle C- oder C++ Quelldateien in der CL-Umgebungsvariablen in der Befehlszeile oder in einer Befehlsdatei angegeben.  

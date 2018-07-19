@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348139"
 ---
 # <a name="odbc-classes"></a>ODBC-Klassen
 Diese Klassen können mit der anderen Anwendung Framework-Klassen einfachen Zugriff auf eine Vielzahl von Datenbanken gewähren für die Open Database Connectivity (ODBC)-Treiber zur Verfügung stehen.  

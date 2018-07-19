@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f5085d1f2ab3b641e023654d05f1e9e66bae2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fe7672a925105bff3b63032a709353388143c0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953009"
 ---
 # <a name="syncnone-class"></a>sync_none-Klasse
 
@@ -71,7 +72,7 @@ void *allocate(std::size_t count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`count`|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*count*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -89,8 +90,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
-|`count`|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
+|*ptr*|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
+|*count*|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -108,12 +109,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Cache`|Das Cache-Objekt des Synchronisierungsfilters.|
-|`Other`|Das Cache-Objekt, das auf Gleichheit verglichen werden soll.|
+|*Cache*|Das Cache-Objekt des Synchronisierungsfilters.|
+|*Andere*|Das Cache-Objekt, das auf Gleichheit verglichen werden soll.|
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Memberfunktion gibt immer `true` zurück.
+Die Memberfunktion gibt immer zurück **"true"**.
 
 ### <a name="remarks"></a>Hinweise
 

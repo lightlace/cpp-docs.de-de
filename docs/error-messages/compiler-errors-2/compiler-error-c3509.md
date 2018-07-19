@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257414"
 ---
 # <a name="compiler-error-c3509"></a>Compilerfehler C3509
 'Typ': Ungültiger Automation-Rückgabetyp; Wenn ein Parameter 'Retval' gekennzeichnet, der Rückgabetyp ist 'void', 'HRESULT' oder 'SCODE' sein muss  

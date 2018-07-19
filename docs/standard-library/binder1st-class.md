@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55f000ea8458925f8ea3faa4896943e045de127d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8191b572595b8ada96f59357af095baf5d846bc4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961720"
 ---
 # <a name="binder1st-class"></a>binder1st-Klasse
 
@@ -52,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-`Func` Der binäres Funktionsobjekt in ein unäres Funktionsobjekt konvertiert werden.
+*Func* die binäres Funktionsobjekt in ein unäres Funktionsobjekt konvertiert werden.
 
-`left` Der Wert, der das erste Argument der binären Funktion-Objekts gebunden werden.
+*linken* den Wert, ist das erste Argument des binären Funktionsobjekts gebunden werden soll.
 
-`right` Der Wert des Arguments, das angepasste binary Object mit der feste Wert des zweiten Arguments verglichen werden soll.
+*richtige* den Wert des Arguments, das das angepasste binäre Objekt mit dem festen Wert des zweiten Arguments vergleicht.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das unäre Funktionsobjekt, das aus dem Binden des ersten Arguments des binären Funktionsobjekts an den Wert `left.` resultiert
+Das unäre Funktionsobjekt, das Binden des ersten Arguments des binären Funktionsobjekts an den Wert ergibt *linken*.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse speichert eine Kopie eines binären Funktionsobjekts `Func` in **op** und eine Kopie von `left` in **value**. Für seine Memberfunktion `operator()` definiert sie den Rückgabewert **op**( **value**, `right`).
+Die Vorlagenklasse speichert eine Kopie eines binären Funktionsobjekts *Func* in `op`, sowie eine Kopie der *linken* in `value`. Für seine Memberfunktion `operator()` definiert sie den Rückgabewert **op**( **value**, `right`).
 
-Wenn `Func` ein Objekt vom Typ **Operation** und `c` eine Konstante ist, dann entspricht [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) dem `binder1st`-Klassenkonstruktor `binder1st`\< **Operation**> ( `Func`, `c` ) und ist komfortabler.
+Wenn *Func* ist ein Objekt des Typs `Operation` und `c` ist eine Konstante ist, dann [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) entspricht der `binder1st` Klassenkonstruktor `binder1st` \< **Vorgang**> ( `Func`, `c` ) und Benutzerfreundlicher.
 
 ## <a name="example"></a>Beispiel
 

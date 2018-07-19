@@ -1,5 +1,5 @@
 ---
-title: Regeln und Einschränkungen für Naked-Funktionen | Microsoft Docs
+title: Regeln und Einschränkungen für Naked-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb18f3e75bb7d912cbafbde01893d6283a4c61f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1a6f88717b8fb371c343d17a9b38608876cd900
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943304"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Regeln und Einschränkungen für Naked-Funktionen
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
  Die folgenden Regeln und Einschränkungen treffen auf naked-Funktionen zu:  
   
--   Die `return`-Anweisung ist nicht zulässig.  
+-   Die **zurückgeben** Anweisung ist nicht zulässig.  
   
 -   Konstrukte für die strukturierte Ausnahmebehandlung und C++-Ausnahmebehandlung sind nicht zulässig, da sie über den Stapelrahmen entladen werden müssen.  
   
@@ -38,11 +39,11 @@ ms.lasthandoff: 05/03/2018
   
 -   Sie können C++-Klassenobjekte nicht im lexikalischen Bereich der Funktion deklarieren. Sie können jedoch Objekte in einem geschachtelten Block deklarieren.  
   
--   Die `naked` Schlüsselwort wird ignoriert, bei der Kompilierung mit ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md).  
+-   Die **naked** Schlüsselwort wird ignoriert, beim Kompilieren mit ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md).  
   
--   Für [__fastcall](../cpp/fastcall.md) naked-Funktionen, wenn ein Verweis in C-/C++-Code auf eines der Registerargumente vorhanden ist, sollte der Prologcode die Werte dieses Registers in den Stapelspeicherort für diese Variable speichern. Zum Beispiel:  
+-   Für [__fastcall](../cpp/fastcall.md) naked-Funktionen, wenn Sie ein Verweis in C-/C++-Code auf eines der Registerargumente vorhanden ist, sollte der Prologcode die Werte dieses Registers in den Stapelspeicherort für diese Variable speichern. Zum Beispiel:  
   
-```  
+```cpp 
 // nkdfastcl.cpp  
 // compile with: /c  
 // processor: x86  

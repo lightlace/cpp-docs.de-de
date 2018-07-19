@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248395"
 ---
 # <a name="compiler-error-c3204"></a>Compilerfehler C3204
 "_alloca" kann nicht innerhalb eines catch-Blocks aufgerufen werden  

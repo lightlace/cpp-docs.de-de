@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414675"
 ---
 # <a name="expressions-with-binary-operators"></a>Ausdrücke mit binären Operatoren
 Binäre Operatoren agieren in zwei Operanden in einem Ausdruck. Die binären Operatoren sind:  

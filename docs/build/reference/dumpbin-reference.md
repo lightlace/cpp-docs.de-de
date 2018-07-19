@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372655"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN-Referenz
 Die Microsoft COFF-Binärdateidumper (DUMPBIN. EXE-Datei) zeigt Informationen zu den Binärdateien Common Object File Format (COFF). Verwenden von DUMPBIN COFF-Objektdateien, Standardbibliotheken von COFF-Objekten, ausführbaren Dateien und Dynamic Link Libraries (DLLs) untersuchen.  

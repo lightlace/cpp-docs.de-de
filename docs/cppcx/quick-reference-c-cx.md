@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092557"
 ---
 # <a name="quick-reference-ccx"></a>Kurzreferenz (C++/CX)
 Windows-Runtime unterstützt apps für universelle Windows-Plattform (UWP), die nur in einer vertrauenswürdigen betriebssystemumgebung ausgeführt und verwenden autorisierte Funktionen, Datentypen und Geräte über Microsoft Store verteilt werden. Die C + c++ / CX vereinfachen die Verfassung von apps für Windows-Runtime. Dieser Artikel ist eine Kurzübersicht; umfassendere Dokumentation finden Sie unter [Typsystem](../cppcx/type-system-c-cx.md) und [Komponentenerweiterungen für Laufzeitplattformen](http://go.microsoft.com/fwlink/p/?linkid=228720).  

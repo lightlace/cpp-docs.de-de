@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354967"
 ---
 # <a name="elapsed-time-automation-classes"></a>Verstrichene Zeit: Automatisierungsklassen
 Dieses Verfahren wird gezeigt, wie zur Berechnung der Differenz zwischen zwei `CTime` Objekte und Abrufen einer `CTimeSpan` Ergebnis.  

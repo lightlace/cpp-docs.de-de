@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341188"
 ---
 # <a name="containers-user-interface-issues"></a>Container: Probleme mit der Benutzeroberfläche
 Sie müssen eine Reihe von Funktionen Benutzeroberfläche adäquat verknüpfte oder eingebettete Elemente verwalten eine Steuerelementcontainer-Anwendung hinzufügen. Diese Funktionen umfassen Änderungen an die Menüstruktur und an die Ereignisse, die die Anwendung behandelt. Detaillierte Informationen dazu finden Sie unter den folgenden Artikeln:  

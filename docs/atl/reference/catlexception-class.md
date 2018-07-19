@@ -1,5 +1,5 @@
 ---
-title: CAtlException Klasse | Microsoft Docs
+title: CAtlException-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaafdf42d218e2c3bca1e8ee28c27898f80bcf40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fed15dc2348fa540c1f33e7742c5cbcda96b5846
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882532"
 ---
 # <a name="catlexception-class"></a>CAtlException-Klasse
 Diese Klasse definiert eine ATL-Ausnahme.  
@@ -46,7 +47,7 @@ class CAtlException
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAtlException::operator HRESULT](#operator_hresult)|Wandelt das aktuelle Objekt, das einen HRESULT-Wert.|  
+|[CAtlException::operator HRESULT](#operator_hresult)|Wandelt das aktuelle Objekt in ein HRESULT-Wert.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -55,9 +56,9 @@ class CAtlException
 |[CAtlException::m_hr](#m_hr)|Die Variable vom Typ HRESULT vom Objekt erstellt und verwendet, um den Fehlerzustand zu speichern.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein `CAtlException` -Objekt stellt eine Ausnahmebedingung bezieht sich auf eine ATL-Vorgang dar. Die `CAtlException` Klasse enthält einen öffentlichen Datenmember, die den Statuscode, der angibt, des Grund für die Ausnahme und Umwandlungsoperatoren, mit dem Sie die Ausnahme zu behandeln, als handele es sich um ein HRESULT speichert.  
+ Ein `CAtlException` Objekt stellt eine Ausnahmebedingung, die im Zusammenhang mit einem ATL-Vorgang dar. Die `CAtlException` Klasse enthält einen öffentlichen Datenmember, die den Statuscode, der angibt, des Grund für die Ausnahme, und ein Cast-Operator, der Ihnen die Möglichkeit, die Ausnahme zu behandeln, als handele es sich um ein HRESULT speichert.  
   
- Rufen Sie im allgemeinen `AtlThrow` anstatt zu erstellen eine `CAtlException` -Objekts direkt.  
+ Rufen Sie in der Regel `AtlThrow` anstatt zu erstellen einen `CAtlException` direkt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlexcept.h  
@@ -71,26 +72,26 @@ CAtlException() throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hr`  
- Die `HRESULT` Fehlercode.  
+ *HR*  
+ Der HRESULT-Fehlercode.  
   
 ##  <a name="operator_hresult"></a>  CAtlException::operator HRESULT 
- Wandelt das aktuelle Objekt, das einen HRESULT-Wert.  
+ Wandelt das aktuelle Objekt in ein HRESULT-Wert.  
   
 ```  
 operator HRESULT() const throw ();
 ```  
   
 ##  <a name="m_hr"></a>  CAtlException::m_hr  
- Die `HRESULT` -Datenmember.  
+ Der HRESULT-Datenmember.  
   
 ```
 HRESULT m_hr;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Datenmember, die die fehlerbedingung speichert. Der HRESULT-Wert wird durch den Konstruktor festgelegte [CAtlException::CAtlException](#catlexception).  
+ Der Datenmember, die die fehlerbedingung speichert. Der HRESULT-Wert wird festgelegt, durch den Konstruktor [CAtlException::CAtlException](#catlexception).  
   
 ## <a name="see-also"></a>Siehe auch  
  ["Atlthrow"](debugging-and-error-reporting-global-functions.md#atlthrow)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

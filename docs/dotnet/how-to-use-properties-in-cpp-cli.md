@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134338"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>Gewusst wie: Verwenden von Eigenschaften in C++/CLI
 Dieser Artikel zeigt, wie Eigenschaften in C + c++ / CLI.  

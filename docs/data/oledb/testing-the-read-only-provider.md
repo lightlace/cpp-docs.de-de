@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112679"
 ---
 # <a name="testing-the-read-only-provider"></a>Testen des schreibgeschützten Anbieters
 Um einen Anbieter zu testen, benötigen Sie einen Consumer. Es ist hilfreich, wenn der Consumer mit dem Anbieter übereinstimmen kann. Der OLE DB-Consumervorlagen werden ein schlanker Wrapper für OLE DB und übereinstimmen, mit dem Anbieter-COM-Objekten. Da die Quelle mit den Consumervorlagen ausgeliefert wird, ist es einfach, einen Anbieter mit dem sie debuggen. Die Consumervorlagen werden auch sehr klein und schnelle Möglichkeit, Consumer-Anwendungen zu entwickeln.  

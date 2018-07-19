@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347662"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Drucken mit RichEdit-Steuerelementen
 Sie können feststellen, ein Rich-edit-Steuerelement ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) Rendern die Ausgabe für ein angegebenes Gerät, z. B. ein Drucker. Sie können auch angeben, dass das Ausgabegerät für das ein Rich-Steuerelement Edit seinen Text formatiert.  

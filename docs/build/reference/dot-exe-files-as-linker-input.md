@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372402"
 ---
 # <a name="exe-files-as-linker-input"></a>EXE-Dateien als Eingabe für den Linker
 Die [MS-DOS-Stub-Dateiname](../../build/reference/stub-ms-dos-stub-file-name.md) (/ STUB) Option gibt den Namen des eine .exe-Datei, die mit MS-DOS-ausgeführt wird. LINK untersucht die angegebene Datei, um sicherzustellen, dass es sich um ein gültiges MS-DOS-Programm handelt.  

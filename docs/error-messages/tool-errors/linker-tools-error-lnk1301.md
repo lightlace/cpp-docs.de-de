@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299704"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Linkertoolfehler LNK1301
 Clr-Module für LTCG gefunden, die nicht kompatibel mit /LTCG:parameter  

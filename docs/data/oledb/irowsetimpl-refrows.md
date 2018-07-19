@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101551"
 ---
 # <a name="irowsetimplrefrows"></a>IRowsetImpl::RefRows
 Wird aufgerufen, indem [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) und [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) erhöhen, oder einen Verweiszähler für eine vorhandene Zeilenhandle freigeben.  

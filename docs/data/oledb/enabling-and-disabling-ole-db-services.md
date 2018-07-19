@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099471"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>Aktivieren und Deaktivieren von OLE DB-Diensten
 Komponenten-Manager für OLE DB-Dienst vergleicht die Eigenschaften, die vom Consumer vom Anbieter, um festzustellen, ob einzelne Dienstkomponenten aufgerufen werden können, um erweiterte Funktionalität, die vom Consumer angeforderte erfüllen unterstützten angegeben werden. Wenn eine Anwendung, welches einen bildlauffähigen Cursor anfordert, und der Anbieter nur einen Vorwärtscursor unterstützt, ruft die Dienst-Standortkomponenten-Manager die Client-Cursormoduls-Dienstkomponente um bildlauffähigen Funktionalität bereitzustellen. Wenn die Anwendung ist auf die erweiterten Funktionen, die standardmäßig für den Anbieter-Rowset unterstützt zurückzugreifen, und die Anwendung nicht explizit die Eigenschaften, um anzufordern, dass Funktionen, die Funktionalität für das vom Client zurückgegebenen Rowset nicht angezeigt wird ggf. Cursor-Modul. Um interoperable werden Anwendungen sollten immer Eigenschaften festlegen, um erweiterte Funktionalität explizit anfordern, falls erforderlich.  

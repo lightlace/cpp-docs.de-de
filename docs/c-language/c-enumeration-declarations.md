@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389740"
 ---
 # <a name="c-enumeration-declarations"></a>C-Enumerationsdeklarationen
 Eine Enumeration besteht aus einem Satz von benannten ganzzahligen Konstanten. Die Deklaration eines Enumerationstyps gibt den Namen des (optionalen) Enumerationstags an und definiert den Satz benannter ganzzahliger Bezeichner (bezeichnet als "Enumerationssatz", "Enumeratorkonstanten", "Enumeratoren" oder "Member"). Eine Variable mit Enumerationstyp speichert einen der Werte des Enumerationssatzes, der durch diesen Typ definiert ist.  

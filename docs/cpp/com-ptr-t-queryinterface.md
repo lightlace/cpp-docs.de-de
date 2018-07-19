@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::QueryInterface | Microsoft Docs
+title: _com_ptr_t::QueryInterface | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c046f1b1d14b7e7dbd44ca9f5f012e632efef6e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c455ce81a869d64b3a9019088028e384c6a06217
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943151"
 ---
 # <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
 **Microsoft-spezifisch**  
   
- Ruft die `QueryInterface` Memberfunktion von **IUnknown** für den gekapselten Schnittstellenzeiger auf.  
+ Ruft die `QueryInterface` Memberfunktion `IUnknown` für den gekapselten Schnittstellenzeiger auf.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
   
-      template<typename _InterfaceType> HRESULT QueryInterface (  
+template<typename _InterfaceType> HRESULT QueryInterface (  
    const IID& iid,  
    _InterfaceType*& p   
 ) throw ( );  
@@ -43,14 +44,14 @@ template<typename _InterfaceType> HRESULT QueryInterface (
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `iid`  
- **IID** eines Schnittstellenzeigers.  
+ *IID*  
+ `IID` eines Schnittstellenzeigers.  
   
- `p`  
+ *p*  
  Nicht formatierter Schnittstellenzeiger.  
   
 ## <a name="remarks"></a>Hinweise  
- Aufrufe **IUnknown:: QueryInterface** für den gekapselten Schnittstellenzeiger mit dem angegebenen **IID** und gibt den resultierenden unformatierten Schnittstellenzeiger in `p`. Diese Routine gibt `HRESULT` zurück, um einen Erfolg oder Fehler anzuzeigen.  
+ Aufrufe `IUnknown::QueryInterface` für den gekapselten Schnittstellenzeiger mit dem angegebenen `IID` und gibt den resultierenden unformatierten Schnittstellenzeiger in *p*. Diese Routine gibt zurück, das HRESULT, um den Erfolg oder Fehler anzuzeigen.  
   
  **Ende Microsoft-spezifisch**  
   

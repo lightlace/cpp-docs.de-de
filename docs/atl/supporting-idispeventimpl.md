@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362218"
 ---
 # <a name="supporting-idispeventimpl"></a>Unterstützung von IDispEventImpl
 Die Vorlagenklasse [IDispEventImpl](../atl/reference/idispeventimpl-class.md) können verwendet werden, um zur Verbindung Punkt senken in Ihrer Klasse ATL-Unterstützung bereit. Connection Point Senke ermöglicht, Ihre Klasse zum Behandeln von Ereignissen aus externen COM-Objekten, das ausgelöst wird. Diese Verbindung Punkt senken werden mit einer Senke ereigniszuordnung bereitgestellt, die von Ihrer Klasse zugeordnet.  

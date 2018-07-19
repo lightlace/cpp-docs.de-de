@@ -16,11 +16,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: a26a4a0cab0bdea8a7a642cc760da0f3fc79b471
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c7f053466e8c6297b7ccd9a2a40c5980e23ccba
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960306"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt;-Funktionen
 
@@ -40,9 +41,11 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>Parameter
 
-`val` Das Objekt, das den Wert von "new_val" erhält.
+*val*  
+ Das Objekt, das den Wert von „new_val“ erhält.
 
-`new_val` Das Objekt, dessen Wert kopiert oder val verschoben wird.
+*"new_val"*  
+ Das Objekt, dessen Wert nach „val“ kopiert oder verschoben wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -98,12 +101,12 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Type`|Der Typ des Werts, der an `Arg` übergeben wurde. Dieser kann sich vom Typ `Arg` unterscheiden. In der Regel bestimmt durch ein Vorlagenargument der Weiterleitungsfunktion.|
-|`Arg`|Das umzuwandelnde Argument.|
+|*Type*|Der Typ des übergebenen Werts *Arg*, die möglicherweise nicht den Typ des *Arg*. In der Regel bestimmt durch ein Vorlagenargument der Weiterleitungsfunktion.|
+|*arg*|Das umzuwandelnde Argument.|
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen rvalue-Verweis auf `Arg` zurück, wenn der Wert, der an `Arg` übergeben wurde, ursprünglich ein rvalue-Wert oder ein Verweis auf einen rvalue-Wert war; gibt andernfalls `Arg` zurück, ohne den Typ zu ändern.
+Gibt einen Rvalue-Verweis auf *Arg* der Wert im übergebenen *Arg* war ursprünglich ein Rvalue-Wert oder ein Verweis auf ein Rvalue-Wert zurückgegeben; andernfalls *Arg* ohne dessen Typ zu ändern.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -160,21 +163,25 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-`Index` Der 0-basierten Index des angegebenen Elements.
+*Index*  
+ Der 0-basierte Index des angegebenen Elements.
 
-`T1` Der Typ des ersten paarelements.
+*T1*  
+ Der Typ des ersten Paarelements.
 
-`T2` Der Typ des zweiten paarelements.
+*T2*  
+ Der Typ des zweiten Paarelements.
 
-`pr` Das Paar aus.
+*Pull Request*  
+ Das Paar, für das die Auswahl durchgeführt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
 Die Vorlagenfunktionen geben jeweils einen Verweis auf ein Element des `pair` -Arguments zurück.
 
-Wenn für die indizierten Überladungen der Wert von `Index` „0“ lautet, geben die Funktionen `pr.first` zurück, und wenn der Wert von `Index` „1“ lautet, geben die Funktionen `pr.second`zurück. Der Typ `RI` ist der Typ des zurückgegebenen Elements.
+Für die indizierten Überladungen Wenn der Wert des *Index* ist 0, die die Funktionen geben `pr.first` und, wenn der Wert des *Index* ist 1, die die Funktionen geben `pr.second`. Der Typ `RI` ist der Typ des zurückgegebenen Elements.
 
-Für die Überladung, die keine Indexparameter aufweisen, wird das zurückzugebende Element durch das Typargument abgeleitet. Das Aufrufen von `get<T>(Tuple)` führt zu einem Compilerfehler, wenn `pr` mehr oder weniger als ein Element vom Typ „T“ enthält.
+Für die Überladung, die keine Indexparameter aufweisen, wird das zurückzugebende Element durch das Typargument abgeleitet. Aufrufen von `get<T>(Tuple)` erzeugt einen Compilerfehler aus, wenn *Pr* enthält mehr oder weniger als ein Element vom Typ "t".
 
 ### <a name="example"></a>Beispiel
 
@@ -227,9 +234,11 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>Parameter
 
-`Val1` Wert, der das erste Element des initialisiert `pair`.
+*Wert1*  
+ Ein Wert, der das erste Element aus `pair` initialisiert.
 
-`Val2` Wert, der das zweite Element der initialisiert `pair`.
+*Wert2*  
+ Ein Wert, der das zweite Element aus `pair` initialisiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -268,8 +277,8 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Type`|Ein Typ, der von dem Typ des Arguments abgeleitet wurde, das in `Arg` zusammen mit den Verweisreduzierungsregeln übergeben wurde.|
-|`Arg`|Das umzuwandelnde Argument. Obwohl der Typ `Arg` scheinbar als rvalue-Verweis angegeben ist, akzeptiert `move` auch lvalue-Argumente, da lavalue-Verweise an rvalue-Verweise gebunden werden können.|
+|*Type*|Ein Typ, abgeleitet aus dem Typ des Arguments übergeben *Arg*zusammen mit den verweisreduzierungsregeln.|
+|*arg*|Das umzuwandelnde Argument. Auch wenn der Typ des *Arg* scheinbar als Rvalue-Verweis, angegeben werden `move` auch Lvalue-Argumente akzeptiert, da Lvalue-Verweise an Rvalue-Verweise gebunden werden können.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -277,11 +286,11 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 ### <a name="remarks"></a>Hinweise
 
-Das Vorlagenargument `Type` soll nicht explizit angegeben, sondern anhand des Werts abgeleitet werden, der an `Arg` übergeben wird. Der Typ von `Type` wird den Verweisreduzierungsregeln entsprechend angepasst.
+Das Vorlagenargument *Typ* dient nicht explizit angegeben werden, sondern vom Typ des der übergebene Wert abgeleitet werden *Arg*. Der Typ des *Typ* entsprechend den verweisreduzierungsregeln angepasst wird.
 
-Mit `move` wird das zugehörige Argument nicht verschoben. Durch unbedingtes Umwandeln des zugehörigen Arguments, bei dem es sich um ein lvalue-Objekt handeln kann, in einen rvalue-Verweis wird der Compiler stattdessen in die Lage versetzt, den in `Arg` übergebenen Wert zu verschieben, statt zu kopieren, wenn das Verschieben für den entsprechende Typ aktiviert ist. Wenn das Verschieben für den Typ nicht aktiviert ist, wird er stattdessen kopiert.
+Mit `move` wird das zugehörige Argument nicht verschoben. Durch unbedingtes Umwandeln des zugehörigen Arguments, einen l-Wert sein kann – einen Rvalue-Verweis ermöglicht es den Compiler zu verschieben, anstatt Sie zu kopieren, der Wert übergeben *Arg* Wenn der Typ der verschieben aktiviert ist. Wenn das Verschieben für den Typ nicht aktiviert ist, wird er stattdessen kopiert.
 
-Wenn der in `Arg` übergebene Wert ein lvalue ist – d. h., er besitzt einen Namen oder seine Adresse kann akzeptiert werden – wird er ungültig, wenn die Verschiebung erfolgt. Verweisen Sie nicht auf den in `Arg` übergebenen Wert mit seinem Namen oder seiner Adresse, nachdem er verschoben wurde.
+Wenn der Wert übergeben *Arg* ein Lvalue ist – d. h. er besitzt einen Namen oder die Adresse kann akzeptiert werden – er ungültig, wenn die Verschiebung erfolgt. Verweisen Sie nicht auf den übergebenen Wert *Arg* mit seinem Namen oder die Adresse, nachdem er verschoben wurde.
 
 ## <a name="swap"></a>  swap
 
@@ -296,8 +305,8 @@ void swap(pair<T, U>& left, pair<T, U>& right);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`left`|Ein Objekt vom Typ `pair`.|
-|`right`|Ein Objekt vom Typ `pair`.|
+|*left*|Ein Objekt vom Typ `pair`.|
+|*right*|Ein Objekt vom Typ `pair`.|
 
 ### <a name="remarks"></a>Hinweise
 

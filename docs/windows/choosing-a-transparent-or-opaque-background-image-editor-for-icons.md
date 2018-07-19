@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857911"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Auswählen eines transparenten oder deckenden Hintergrunds (Bildbearbeitung für Symbole)
 Wenn Sie verschieben oder kopieren eine Auswahl aus einem Image, sind alle Pixel in der Auswahl, die mit die aktuellen Hintergrundfarbe übereinstimmen, standardmäßig transparent; Sie nicht Pixel am Zielspeicherort verdeckt.  

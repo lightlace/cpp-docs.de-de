@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088466"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC und die Datenbankklassen
 Die MFC-ODBC-Datenbankklassen zu kapseln, die Sie normalerweise selbst im Member-Funktionen von machen würden ODBC-API-Funktionsaufrufe der [CDatabase](../../mfc/reference/cdatabase-class.md) und [CRecordset](../../mfc/reference/crecordset-class.md) Klassen. Beispielsweise sind die komplexen ODBC Call-Sequenzen, die Bindung der zurückgegebenen Datensätze auf Speicherorte, Behandeln von Fehlerzuständen und andere Vorgänge für Sie von den Datenbankklassen verwaltet. Daher verwenden Sie eine wesentlich einfachere Klassenschnittstelle zum Bearbeiten von Datensätzen über einem Recordset-Objekt.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293168"
 ---
 # <a name="compiler-warning-level-4-c4189"></a>Compilerwarnung (Stufe 4) C4189
 "Bezeichner": Lokale Variable ist initialisiert, aber nicht referenziert  

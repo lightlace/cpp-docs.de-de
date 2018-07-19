@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690441"
 ---
 # <a name="a31---thread-safe-lock-functions"></a>A.31   Threadsichere Lock-Funktionen
 Im folgende C++-Beispiel veranschaulicht, wie ein Array von Sperren in einem parallelen Bereich initialisiert werden, mithilfe von `omp_init_lock` ([Abschnitt 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) auf Seite "42").  

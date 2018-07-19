@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244985"
 ---
 # <a name="compiler-error-c3035"></a>Compilerfehler C3035
 Die ordered-Direktive von OpenMP muss mit der ordered-Klausel direkt an eine For-Direktive oder eine Parallel For-Direktive gebunden werden.  

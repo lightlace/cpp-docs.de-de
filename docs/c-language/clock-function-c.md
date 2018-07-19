@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381680"
 ---
 # <a name="clock-function-c"></a>clock-Funktion (C)
 **ANSI 4.12.2.1** Der Zeitraum der `clock`-Funktion  

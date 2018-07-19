@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355353"
 ---
 # <a name="ole-control-classes"></a>OLE-Steuerelementklassen
 Dies sind die primären Klassen, die Sie beim Schreiben von OLE-Steuerelemente verwenden. Die `COleControlModule` Klasse in einem Modul der OLE-Steuerelements ist vergleichbar mit der [CWinApp](../mfc/reference/cwinapp-class.md) Klassen in einer Anwendung. Jedes Modul implementiert ein oder mehrere OLE-Steuerelemente. Diese Steuerelemente werden durch dargestellt `COleControl` Objekte. Diese Steuerelemente mit ihren Container mit kommunizieren `CConnectionPoint` Objekte.  

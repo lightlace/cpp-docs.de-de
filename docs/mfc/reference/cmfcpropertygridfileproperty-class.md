@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridFileProperty Klasse | Microsoft Docs
+title: CMFCPropertyGridFileProperty-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b123b5c473c834e958263edb926ef25103d788
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dd70e67769d35bf50e52b7be4b2c8848c089cb0
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851599"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty-Klasse
-Die `CMFCPropertyGridFileProperty` Klasse unterstützt einem Eigenschaftenlisten-Steuerelement ein Element, das ein Dialogfeld zur Dateiauswahl öffnet.  
+Die `CMFCPropertyGridFileProperty` Klasse unterstützt, einem Eigenschaftenlisten-Steuerelement ein Element, das ein Dialogfeld zur Dateiauswahl geöffnet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +47,7 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`CMFCPropertyGridFileProperty::GetThisClass`|Durch das Framework verwendet wird, um einen Zeiger auf die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
+|`CMFCPropertyGridFileProperty::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
 |`CMFCPropertyGridFileProperty::OnClickButton`|(Überschreibt [cmfcpropertygridproperty:: Onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
   
 ### <a name="remarks"></a>Hinweise  
@@ -77,28 +78,28 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `strName`  
+ [in] *StrName*  
  Der Eigenschaftenname.  
   
- [in] `bOpenFileDialog`  
- `TRUE` So öffnen ein **Datei öffnen** Dialogfeld; `FALSE` zum Öffnen einer **Datei speichern** (Dialogfeld).  
+ [in] *bOpenFileDialog*  
+ "True" Öffnen Sie eine **Datei öffnen** Dialogfeld "False" zum Öffnen einer **Datei speichern** Dialogfeld.  
   
- [in] `strFileName`  
+ [in] *StrFileName*  
  Der ursprüngliche Dateiname.  
   
- [in] `lpszDefExt`  
- Eine Zeichenfolge mit einer oder mehreren Dateinamenerweiterungen. Der Standardwert ist `NULL`.  
+ [in] *LpszDefExt*  
+ Eine Zeichenfolge mit einer oder mehreren Dateierweiterungen. Der Standardwert ist NULL.  
   
- [in] `dwFlags`  
- Dialogfeldflags. Der Standardwert ist eine bitweise Kombination (OR) von `OFN_HIDEREADONLY` und `OFN_OVERWRITEPROMPT`.  
+ [in] *DwFlags*  
+ Dialogfeldflags. Der Standardwert ist eine bitweise Kombination (OR) von OFN_HIDEREADONLY und OFN_OVERWRITEPROMPT.  
   
- [in] `lpszFilter`  
- Eine Zeichenfolge mit einer oder mehreren Dateinfiltern. Der Standardwert ist `NULL`.  
+ [in] *LpszFilter*  
+ Eine Zeichenfolge mit einer oder mehreren Dateinfiltern. Der Standardwert ist NULL.  
   
- [in] `lpszDescr`  
- Die Beschreibung des Eigenschaftenelements. Der Standardwert ist `NULL`.  
+ [in] *LpszDescr*  
+ Die Beschreibung des Eigenschaftenelements. Der Standardwert ist NULL.  
   
- [in] `dwData`  
+ [in] *DwData*  
  Anwendungsspezifische Daten, die dem Eigenschaftenelement zugeordnet sind. Zum Beispiel eine 32-Bit-Ganzzahl oder ein Zeiger auf andere Daten. Der Standardwert ist 0.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -114,5 +115,5 @@ CMFCPropertyGridFileProperty(
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
  [Klassen](../../mfc/reference/mfc-classes.md)   
- [CMFCPropertyGridCtrl Klasse](../../mfc/reference/cmfcpropertygridctrl-class.md)   
+ [CMFCPropertyGridCtrl-Klasse](../../mfc/reference/cmfcpropertygridctrl-class.md)   
  [CMFCPropertyGridProperty-Klasse](../../mfc/reference/cmfcpropertygridproperty-class.md)

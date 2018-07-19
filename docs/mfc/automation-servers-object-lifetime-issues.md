@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341799"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Automatisierungsserver: Probleme mit der Objektlebensdauer
 Wenn ein Automatisierungsclient erstellt oder ein OLE-Element aktiviert, übergibt der Server, der diesem Objekt einen Zeiger an dem Client. Der Client stellt einen Verweis auf das Objekt durch einen Aufruf an die OLE-Funktion her [IUnknown:: AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). Dieser Verweis gültig ist, bis der Client ruft [IUnknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). (Clientanwendungen, die geschrieben werden, mit der Microsoft Foundation Class Library-OLE-Klassen müssen diese Aufrufe nicht; das Framework ermöglicht dies.) Das OLE-System und der Server selbst möglicherweise Verweise auf das Objekt festlegen. Ein Server sollte kein Objekt zu zerstören als externe Verweise auf das Objekt gültig bleiben.  

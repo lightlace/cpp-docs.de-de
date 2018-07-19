@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346674"
 ---
 # <a name="dialog-boxes"></a>Dialogfelder
 Anwendungen für Windows an, die häufig mit dem Benutzer in Dialogfeldern kommuniziert. Klasse [CDialog](../mfc/reference/cdialog-class.md) stellt eine Schnittstelle bereit, Verwalten von Dialogfeldern, die Visual C++-Dialog-Editor vereinfacht Dialogfelder entwerfen und erstellen ihre Dialogfeld-Vorlagenressourcen und Code-Assistenten vereinfachen den Prozess zu initialisieren und Überprüfen die Steuerelemente in einem Dialogfeld und die vom Benutzer eingegebenen Werte zu sammeln.  

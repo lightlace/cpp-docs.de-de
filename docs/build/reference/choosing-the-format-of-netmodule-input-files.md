@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372720"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Auswählen des Formats von .netmodule-Eingabedateien
 Eine MSIL-OBJ-Datei (kompiliert mit ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md)) kann auch als eine NETMODULE-Datei verwendet werden.  OBJ-Dateien werden Metadaten und systemeigene Symbole enthalten.  NETMODULE-Dateien enthalten nur Metadaten.  

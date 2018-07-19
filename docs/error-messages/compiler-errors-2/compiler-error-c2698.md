@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233816"
 ---
 # <a name="compiler-error-c2698"></a>Compiler-Fehler C2698 generiert
 Die using-Deklaration für "Deklaration 1" kann nicht gleichzeitig mit den vorhandenen using-Deklaration für "Deklaration 2"  

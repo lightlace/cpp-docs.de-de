@@ -1,5 +1,5 @@
 ---
-title: HSE_VERSION_INFO-Struktur | Microsoft Docs
+title: HSE_VERSION_INFO-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acdf63e062aab1407daee461e22f00f5d3c59cee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf1565c2fe2d7a4620f83b765671fea80502102
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335814"
 ---
 # <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO-Struktur
-Diese Struktur verweist die `pVer` Parameter in der `CHttpServer::GetExtensionVersion` Memberfunktion. Er bietet eine ISA-Versionsnummer und eine textbeschreibung der ISA  
+Diese Struktur verweist die *pVer* Parameter in der `CHttpServer::GetExtensionVersion` Member-Funktion. Es bietet der ISA-Versionsnummer und eine textbeschreibung der Anweisungssequenz  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,10 +37,10 @@ typedef struct _HSE_VERSION_INFO {
   
 #### <a name="parameters"></a>Parameter  
  *dwExtensionVersion*  
- Die Versionsnummer der ISA  
+ Die Versionsnummer der Anweisungssequenz  
   
  *lpszExtensionDesc*  
- Die textbeschreibung der ISA Die standardmäßige Implementierung bietet Platzhaltertext; Überschreiben Sie `CHttpServer::GetExtensionVersion` um eine eigene Beschreibung bereitzustellen.  
+ Die textbeschreibung des der Anweisungssequenz Die Standardimplementierung stellt Platzhaltertext bereit; außer Kraft setzen `CHttpServer::GetExtensionVersion` eigene Beschreibung angeben.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** httpext.h  

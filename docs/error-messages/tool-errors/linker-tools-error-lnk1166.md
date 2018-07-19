@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298151"
 ---
 # <a name="linker-tools-error-lnk1166"></a>Linkertoolfehler LNK1166
 Passen Sie Code am Offset kann nicht "VA" ist einem festen Offset = = Wert  

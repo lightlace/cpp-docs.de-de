@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382246"
 ---
 # <a name="deleting-open-files"></a>Löschen von offenen Dateien
 **ANSI 4.9.4.1** Der Effekt der remove-Funktion auf eine offene Datei  

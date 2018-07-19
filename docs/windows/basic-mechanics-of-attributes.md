@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864933"
 ---
 # <a name="basic-mechanics-of-attributes"></a>Grundlegende Funktionsweise der Attribute
 Es gibt drei Möglichkeiten zum Einfügen von Attributen in Ihrem Projekt ein. Erstens können Sie diese manuell in Ihren Quellcode einfügen. Zweitens können Sie sie mithilfe des Eigenschaftenrasters eines Objekts in Ihrem Projekt einfügen. Schließlich können Sie sie mithilfe der verschiedenen Assistenten einfügen. Weitere Informationen zur Verwendung im Eigenschaftenfenster und den verschiedenen Assistenten finden Sie unter [erstellen und Verwalten von Visual C++-Projekte](../ide/creating-and-managing-visual-cpp-projects.md).  

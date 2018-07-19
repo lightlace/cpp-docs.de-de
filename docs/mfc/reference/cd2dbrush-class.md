@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324e6411673a509bdf75954634ff9c6dffc5ce1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95fdd973d94c0d60e5e3177260740c5d62f1ea5b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078555"
 ---
 # <a name="cd2dbrush-class"></a>CD2DBrush-Klasse
 Ein Wrapper für ID2D1Brush.  
@@ -109,15 +110,15 @@ virtual ~CD2DBrush();
 ```  
   
 ##  <a name="attach"></a>  CD2DBrush::Attach  
- Hängt die vorhandene Ressourcenschnittstelle, um das Objekt  
+ Fügt die vorhandene Ressourcenschnittstelle, um das Objekt.  
   
 ```  
 void Attach(ID2D1Brush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pResource`  
- Vorhandene Ressourcenschnittstelle. NULL darf nicht sein  
+ *pResource*  
+ Vorhandene Ressourcenschnittstelle. Darf nicht NULL sein.  
   
 ##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
  Erstellt ein CD2DBrush-Objekt.  
@@ -130,13 +131,13 @@ CD2DBrush(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentTarget`  
+ *pParentTarget*  
  Ein Zeiger auf das Renderziel.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Ein Zeiger auf die Deckkraft- und Transformation eines Pinsels.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
 ##  <a name="destroy"></a>  CD2DBrush:: Destroy  
@@ -147,7 +148,7 @@ virtual void Destroy();
 ```  
   
 ##  <a name="detach"></a>  CD2DBrush::Detach  
- Trennt Ressourcenschnittstelle aus dem Objekt  
+ Trennt die Resource-Schnittstelle aus dem Objekt.  
   
 ```  
 ID2D1Brush* Detach();
@@ -174,7 +175,7 @@ FLOAT GetOpacity() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Wert zwischen 0 und 1, der die Deckkraft des Pinsels angibt. Dieser Wert ist ein konstanter Multiplikator, der den Alphawert alle Pixel, die durch den Pinsel gefüllt linear skaliert. Die Deckkraftwerte werden im Bereich von 0 bis 1 gebunden ist, bevor sie zusammen multipliziert werden  
+ Ein Wert zwischen 0 und 1, der die Deckkraft des Pinsels angibt. Dieser Wert ist ein konstanter Multiplikator, der den Alphawert alle Pixel, die durch den Pinsel gefüllt linear skaliert. Die Deckkraftwerte werden im Bereich von 0 bis 1 gebunden ist, bevor sie zusammen multipliziert werden.  
   
 ##  <a name="gettransform"></a>  CD2DBrush::GetTransform  
  Ruft die aktuelle Transformation des Renderziels  
@@ -184,7 +185,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `transform`  
+ *transform*  
  Wenn dieser Wert zurückgibt, enthält die aktuelle Transformation des Renderziels. Dieser Parameter wird nicht initialisiert übergeben.  
   
 ##  <a name="isvalid"></a>  CD2DBrush::IsValid  
@@ -229,18 +230,18 @@ void SetOpacity(FLOAT opacity);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `opacity`  
- Ein Wert zwischen 0 und 1, der die Deckkraft des Pinsels angibt. Dieser Wert ist ein konstanter Multiplikator, der den Alphawert alle Pixel, die durch den Pinsel gefüllt linear skaliert. Die Deckkraftwerte werden im Bereich von 0 bis 1 gebunden ist, bevor sie zusammen multipliziert werden  
+ *Deckkraft*  
+ Ein Wert zwischen 0 und 1, der die Deckkraft des Pinsels angibt. Dieser Wert ist ein konstanter Multiplikator, der den Alphawert alle Pixel, die durch den Pinsel gefüllt linear skaliert. Die Deckkraftwerte werden im Bereich von 0 bis 1 gebunden ist, bevor sie zusammen multipliziert werden.  
   
 ##  <a name="settransform"></a>  CD2DBrush::setTransform  
- Wendet die angegebene Transformation auf das Renderingziel ersetzt die vorhandene Transformation an. Alle nachfolgenden Zeichenvorgänge treten in den transformierten Speicherplatz  
+ Wendet die angegebene Transformation auf das Renderingziel ersetzt die vorhandene Transformation an. Alle nachfolgenden Zeichenvorgänge treten in den transformierten Speicherplatz.  
   
 ```  
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `transform`  
+ *transform*  
  Die Transformation, die auf das Renderziel anwenden  
   
 ## <a name="see-also"></a>Siehe auch  

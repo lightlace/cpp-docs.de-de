@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111942"
 ---
 # <a name="for-each-in"></a>for each, in
 Durchläuft ein Array oder eine Auflistung. Dieses nicht standardmäßige Schlüsselwort ist sowohl in C++/CLI und nativen C++-Projekten verfügbar. Seine Verwendung wird jedoch nicht empfohlen. Betrachten Sie mithilfe eines Standarddialogfelds [bereichsbasiert für Anweisung (C++)](../cpp/range-based-for-statement-cpp.md) stattdessen.  

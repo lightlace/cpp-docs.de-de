@@ -1,5 +1,5 @@
 ---
-title: __ptr32, __ptr64 | Microsoft Docs
+title: __ptr32, __ptr64 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5746c8f54a51e24bad23dcb66f6648266e2e4b56
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 39078cfef6b327aee60d98fce6cccc0b69c5953b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704814"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941703"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
 
 **Microsoft-spezifisch**
 
-`__ptr32` stellt einen systemeigenen Zeiger auf einem 32-Bit-System dar, während `__ptr64` einen systemeigenen Zeiger auf einem 64-Bit-System darstellt.
+**__ptr32** stellt einen systemeigenen Zeiger auf einem 32-Bit-System, während **__ptr64** einen systemeigenen Zeiger auf einem 64-Bit-System darstellt.
 
 Das folgende Beispiel zeigt, wie die einzelnen Zeigertypen deklariert werden:
 
@@ -42,14 +42,14 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
- Bei einem 32-Bit-System wird ein Zeiger, der mit `__ptr64` deklariert wird, auf einen 32-Bit-Zeiger gekürzt. Bei einem 64-Bit-System wird ein Zeiger, der mit `__ptr32` deklariert wird, in einen 64-Bit-Zeiger umgewandelt.
+ Auf einem 32-Bit-System, ein Zeiger deklariert, mit **__ptr64** ist auf einen 32-Bit-Zeiger gekürzt. Auf einem 64-Bit-System, ein Zeiger deklariert, mit **__ptr32** in einen 64-Bit-Zeiger umgewandelt wird.
 
 > [!NOTE]
-> Sie können keine `__ptr32` oder `__ptr64` beim Kompilieren mit **/CLR: pure**. Andernfalls werden Compilerfehler C2472 generiert werden. Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
+> Sie können keine **__ptr32** oder **__ptr64** beim Kompilieren mit **/CLR: pure**. Andernfalls werden Compilerfehler C2472 generiert. Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Zeiger mit den Schlüsselwörtern `__ptr32` und `__ptr64` deklariert und zugewiesen werden.
+Das folgende Beispiel zeigt, wie Sie deklarieren und Zuweisen von Zeigern mit dem **__ptr32** und **__ptr64** Schlüsselwörter.
 
 ```cpp
 #include <cstdlib>

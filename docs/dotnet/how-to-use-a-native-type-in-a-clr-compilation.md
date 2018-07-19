@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128406"
 ---
 # <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Gewusst wie: Verwenden eines systemeigenen Typs in einer /clr-Kompilierung
 Sie können in einen systemeigenen Typ definieren eine **"/ CLR"** Kompilierung und jede Verwendung des systemeigenen Typs von innerhalb der Assembly ist ungültig. Systemeigene Typen können allerdings nicht für die Verwendung von Metadaten verwiesen wird, verfügbar sein.  

@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b53228b6983c0293eb288cd0f38669d1b5db928
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c09234cbf41201df14aec4993174e6313c6a7d1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040833"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate-Klasse
 Definiert eine Dokumentvorlage, welche die Multiple Document Interface (MDI) implementiert.  
@@ -84,7 +85,7 @@ CMultiDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDResource`  
+ *nIDResource*  
  Gibt die ID der Ressourcen, mit dem Dokument verwendet. Dies kann im Menü, Symbol Zugriffstastentabelle und Zeichenfolgenressourcen umfassen.  
   
  Eine Zeichenfolgenressource besteht aus bis zu sieben Teilzeichenfolgen, getrennt durch das Zeichen "\n" (das Zeichen "\n" ist als Platzhalter erforderlich, wenn eine Teilzeichenfolge nicht angegeben wird; nachfolgende "\n"-Zeichen sind jedoch nicht erforderlich) Diese Teilzeichenfolgen beschreiben den "Document". Informationen zu den Teilzeichenfolgen, finden Sie unter [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Diese Zeichenfolgenressource in der Ressourcendatei für die Anwendung gefunden. Zum Beispiel:  
@@ -103,13 +104,13 @@ CMultiDocTemplate(
   
  Weitere Informationen zu diesen Ressourcen finden Sie unter [Ressourcen-Editoren](../../windows/resource-editors.md).  
   
- `pDocClass`  
- Verweist auf die `CRuntimeClass` Objekt der Dokumentklasse. Diese Klasse ist eine **CDocument**-abgeleitete Klasse, die Sie definieren, um Ihre Dokumente darzustellen.  
+ *pDocClass*  
+ Verweist auf die `CRuntimeClass` Objekt der Dokumentklasse. Diese Klasse ist eine `CDocument`-abgeleitete Klasse, die Sie definieren, um Ihre Dokumente darzustellen.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Verweist auf die `CRuntimeClass` Objekt der Klasse Rahmenfenster. Diese Klasse kann eine `CMDIChildWnd`-abgeleitete Klasse, oder es kann `CMDIChildWnd` selbst, wenn Sie für Ihre Dokumentrahmenfenster Standardverhalten verwenden möchten.  
   
- `pViewClass`  
+ *pViewClass*  
  Verweist auf die `CRuntimeClass` Objekt der Ansichtsklasse. Diese Klasse ist eine `CView`-abgeleitete Klasse, die Sie definieren, um Ihre Dokumente anzuzeigen.  
   
 ### <a name="remarks"></a>Hinweise  

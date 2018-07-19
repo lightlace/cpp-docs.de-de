@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fffa778854519bff6f947aec779e36b77fd4e202
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6f45f8a445420d85c539de2f5ba485c0a47127b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962555"
 ---
 # <a name="regexiterator-class"></a>regex_iterator-Klasse
 
@@ -74,11 +75,11 @@ private:
 
 ### <a name="parameters"></a>Parameter
 
-`BidIt` Der itertatortyp für teilübereinstimmungen.
+*BidIt* der itertatortyp für teilübereinstimmungen.
 
-`Elem` Der Typ der Elemente, die übereinstimmen.
+*Elem* den Typ der Elemente übereinstimmen.
 
-`RXtraits` Merkmalklasse für Elemente.
+*RXtraits* "traits"-Klasse für Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -222,7 +223,7 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Der Iterator für den Vergleich.
+*richtige* der Iterator verglichen werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -394,11 +395,11 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Der Iterator für den Vergleich.
+*richtige* der Iterator verglichen werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt „true“ zurück, wenn `*this` und `right` Sequenzende-Iteratoren sind oder wenn keins von beiden ein Sequenzende-Iterator ist und Folgendes zutrifft: `begin == right.begin`, `end == right.end`, `pregex == right.pregex`und `flags == right.flags`. Andernfalls wird „false“ zurückgegeben.
+Die Memberfunktion gibt "true" zurück, wenn `*this` und *rechten* sind Sequenzende Iteratoren oder wenn weder ein Sequenzende Iterator ist und `begin == right.begin`, `end == right.end`, `pregex == right.pregex`, und `flags == right.flags`. Andernfalls wird „false“ zurückgegeben.
 
 ### <a name="example"></a>Beispiel
 
@@ -624,17 +625,17 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>Parameter
 
-`first` Anfang der Sequenz, die übereinstimmen soll.
+*erste* Anfang der Sequenz, die übereinstimmen.
 
-`last` Ende der Sequenz, die übereinstimmen.
+*letzte* Ende der Sequenz übereinstimmen.
 
-`re` Regulärer Ausdruck für Übereinstimmungen.
+*Re* regulärer Ausdruck für Übereinstimmungen.
 
-`f` Flags für Übereinstimmungen.
+*f* Flags für Übereinstimmungen.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor erstellt einen Sequenzende-Iterator. Der zweite Konstruktor initialisiert den gespeicherten Wert `begin` mit `first`, den gespeicherten Wert `end` mit `last`, den gespeicherten Wert `pregex` mit `&re`und den gespeicherten Wert `flags` mit `f`. Anschließend wird `regex_search(begin, end, match, *pregex, flags)`aufgerufen. Wenn bei der Suche ein Fehler auftritt, legt der Konstruktor für das Objekt einen Sequenzende-Iterator fest.
+Der erste Konstruktor erstellt einen Sequenzende-Iterator. Der zweite Konstruktor initialisiert den gespeicherten Wert `begin` mit *erste*, die gespeicherten Wert `end` mit *letzten*, die gespeicherten Wert `pregex` mit `&re`, und die gespeicherten Wert `flags` mit *f*. Anschließend wird `regex_search(begin, end, match, *pregex, flags)`aufgerufen. Wenn bei der Suche ein Fehler auftritt, legt der Konstruktor für das Objekt einen Sequenzende-Iterator fest.
 
 ### <a name="example"></a>Beispiel
 

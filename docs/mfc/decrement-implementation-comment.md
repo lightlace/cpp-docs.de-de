@@ -17,18 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1556c690478b242d929b8a5558264218ddf0b63e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89f87c33abfec7b9d055b589726639fcd741e59d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930273"
 ---
 # <a name="-implementation-comment"></a>// Implementierungskommentar
 Die `// Implementation` Abschnitt ist der wichtigste Teil der Deklaration einer MFC-Klasse.  
   
  Dieser Abschnitt enthält alle Implementierungsdetails. Membervariablen und Memberfunktionen können in diesem Abschnitt angezeigt. Alles unterhalb dieser Zeile konnte in einer zukünftigen Version von MFC geändert werden. Wenn Sie es nicht vermeiden lassen, Sie sollten auf "Details" unten nicht zu verlassen der `// Implementation` Zeile. Member, die unterhalb der Linie Implementierung deklariert sind darüber hinaus nicht dokumentiert, obwohl einige Implementierung in technische Hinweise erläutert wird. Überschreibungen virtueller Funktionen in der Basisklasse befinden sich in diesem Abschnitt, unabhängig davon, welcher Abschnitt Funktion der Basisklasse in definiert ist, da die Tatsache, dass eine Funktion Implementierung der Basisklasse überschreibt Implementierungsdetail betrachtet wird. In der Regel werden diese Elemente geschützt, aber nicht immer.  
   
- Beachten Sie, aus der `CStdioFile` unter auflisten [ein Beispiel für die Kommentare](../mfc/an-example-of-the-comments.md) unten Member deklariert, der die `// Implementation` Kommentar kann deklariert werden, als **öffentlichen**, `protected`, oder `private`. Da sich diese in der Zukunft ändern können, sollten Sie nur diese Member mit Vorsicht zu verwenden. Deklarieren eine Gruppe von Elementen als **öffentlichen** möglicherweise erforderlich, für die Implementierung der Klassenbibliothek ordnungsgemäß funktioniert. Dies bedeutet jedoch nicht, dass Sie problemlos so deklarierten Member verwenden können.  
+ Beachten Sie, aus der `CStdioFile` unter auflisten [ein Beispiel für die Kommentare](../mfc/an-example-of-the-comments.md) unten Member deklariert, der die `// Implementation` Kommentar kann deklariert werden, als **öffentlichen**, **geschützt**, oder **private**. Da sich diese in der Zukunft ändern können, sollten Sie nur diese Member mit Vorsicht zu verwenden. Deklarieren eine Gruppe von Elementen als **öffentlichen** möglicherweise erforderlich, für die Implementierung der Klassenbibliothek ordnungsgemäß funktioniert. Dies bedeutet jedoch nicht, dass Sie problemlos so deklarierten Member verwenden können.  
   
 > [!NOTE]
 >  Kommentare zu den übrigen Typen oberhalb oder unterhalb der `// Implementation` Kommentar. In beiden Fällen beschreiben sie die Arten von Membern unter ihnen liegenden deklariert. Wenn sie unten auftreten der `// Implementation` kommentieren Sie davon ausgehen, dass die Elemente in künftigen Versionen der MFC ändern können.  

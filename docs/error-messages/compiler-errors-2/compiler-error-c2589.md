@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230752"
 ---
 # <a name="compiler-error-c2589"></a>Compilerfehler C2589
 'Bezeichner': Ungültiges Token auf der rechten Seite des '::'  

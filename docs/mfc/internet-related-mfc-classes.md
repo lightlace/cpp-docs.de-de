@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344908"
 ---
 # <a name="internet-related-mfc-classes"></a>Internetbezogene MFC-Klassen
 Informationen zu Internet-bezogene Klassen und Funktionen finden Sie unter:  

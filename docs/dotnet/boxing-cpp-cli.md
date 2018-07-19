@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105890"
 ---
 # <a name="boxing-ccli"></a>Boxing (C++/CLI)
 Boxing ist der Prozess der Konvertierung von eines Werttyp in den Typ `object` oder auf einen beliebigen anderen Schnittstellentyp, der durch den Werttyp implementiert wird. Wenn die common Language Runtime (CLR) einen Werttyp, umschließt er den Wert in einer `System.Object` und auf dem verwalteten Heap gespeichert. Durch Unboxing wird der Werttyp aus dem Objekt extrahiert. Boxing ist implizit, Unboxing ist explizit.  

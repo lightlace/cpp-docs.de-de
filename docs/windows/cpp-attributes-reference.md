@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870844"
 ---
 # <a name="c-attributes-reference"></a>C++-Attributreferenz
 Microsoft definiert einen Satz von Attributen, die die Programmierung von COM und .NET Framework common Language Runtime-Entwicklung zu vereinfachen. Wenn Sie Attribute in Ihre Quelldateien einschließen, arbeitet der Compiler mit Anbieter-DLLs zum Einfügen von Code oder ändern Sie den Code in der generierten Objektdateien.  

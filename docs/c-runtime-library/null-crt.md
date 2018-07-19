@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387608"
 ---
 # <a name="null-crt"></a>NULL (CRT)
 **NULL** ist der Wert für den NULL-Zeiger, der mit vielen Zeigeroperationen und -funktionen verwendet wird. Er entspricht 0. **NULL** wird in den folgenden Headerdateien definiert: CRTDBG.H, LOCALE.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H, TCHAR.H, TIME.H und WCHAR.H.  

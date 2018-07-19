@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342978"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Datenobjekte und Datenquellen (OLE)
 Beim Ausführen einer Datenübertragung, entweder über die Zwischenablage oder Drag & Drop, enthalten die Daten an eine Quelle und ein Ziel. Eine Anwendung gibt die Daten für das Kopieren und eine andere Anwendung akzeptiert das Element zum Einfügen. Jede Seite der Übertragung muss zum Durchführen verschiedener Vorgänge auf den gleichen Daten für die Übertragung erfolgreich ausgeführt werden kann. Die Microsoft Foundation Class (MFC)-Bibliothek bietet zwei Klassen, die beiden Seiten des diese Übertragung darstellen:  

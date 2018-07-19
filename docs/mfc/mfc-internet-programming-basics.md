@@ -31,6 +31,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255608"
 ---
 # <a name="mfc-internet-programming-basics"></a>Grundlagen der MFC-Internetprogrammierung
 Microsoft bietet viele APIs zur Programmierung von Client- und serveranwendungen. Viele neue Anwendungen für das Internet geschrieben werden, und als Technologien, Browserfunktionen und Optionen sicherheitsänderung, neue Typen von Anwendungen geschrieben werden. Webbrowsertypen auf Clientcomputern Bereitstellen des Zugriffs auf das World Wide Web und Anzeigen von HTML-Seiten, die Text, Grafiken, ActiveX-Steuerelemente und Dokumente enthalten. Server FTP, HTTP und Gopher-Dienste bereitstellen und Ausführen von CGI-Erweiterung serveranwendungen. Die benutzerdefinierte Anwendung kann Abrufen von Informationen und Daten im Internet angeben.  

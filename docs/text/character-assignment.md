@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856696"
 ---
 # <a name="character-assignment"></a>Zeichenzuweisungen
 Betrachten Sie das folgende Beispiel, in dem die `while` Schleife durchsucht eine Zeichenfolge, die alle Zeichen mit Ausnahme von "X" in eine andere Zeichenfolge kopiert:  

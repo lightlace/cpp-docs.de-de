@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245577"
 ---
 # <a name="compiler-error-c3038"></a>Compilerfehler C3038
 "Var": Die Variable in der private-Klausel kann im umschließenden Kontext keine reduction-Variable sein.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380471"
 ---
 # <a name="unprototyped-functions"></a>Funktionen ohne Prototyp
 Für Funktionen, die nicht vollständig Prototyp wird der Aufrufer ganzzahlige Werte als ganze Zahlen und Gleitkommawerte mit doppelter Genauigkeit übergeben. Nur Gleitkommawerte werden ganzzahligen Register und die Gleitkommaregister enthalten, wenn von der aufgerufenen Instanz den Wert in der Ganzzahlregister erwartet.  

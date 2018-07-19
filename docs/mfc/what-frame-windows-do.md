@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382566"
 ---
 # <a name="what-frame-windows-do"></a>Funktionsweise von Rahmenfenstern
 Neben dem einfachen Einrahmen eine Sicht, sind Rahmenfenster für zahlreiche Aufgaben, die beim Koordinieren von des Frames mit seinen Ansichtszustand und die Anwendung verantwortlich. [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) und [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) Vererben [CFrameWnd](../mfc/reference/cframewnd-class.md), also sie müssen `CFrameWnd` Funktionen sowie neue Funktionen, die sie hinzufügen. Beispiele für untergeordnete Fenster sind Ansichten, Steuerelemente, z. B. Steuerleisten, einschließlich Symbolleisten, Statusleisten und Dialogleisten und Listenfelder und Schaltflächen.  

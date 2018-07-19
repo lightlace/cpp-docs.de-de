@@ -1,5 +1,5 @@
 ---
-title: 'Bedingter Operator:? : | Microsoft Docs'
+title: 'Bedingter Operator:? : | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 807754bb13f8302fe9583b6f4a8219e3aea81086
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 273572fd6ad79ba45ae2aabbf91296afd6e8308e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943531"
 ---
 # <a name="conditional-operator--"></a>Bedingter Operator:? :
 ## <a name="syntax"></a>Syntax  
   
-```  
+``` 
   
 expression ? expression : expression  
-```  
+``` 
   
 ## <a name="remarks"></a>Hinweise  
  Der bedingte Operator (**?:**) ist ein dreifacher Operator (er übernimmt drei Operanden). Der bedingte Operator funktioniert wie folgt:  
   
--   Der erste Operand wird implizit in `bool` konvertiert. Er wird ausgewertet, und alle Nebeneffekte werden vor dem nächsten Schritt abgeschlossen.  
+-   Der erste Operand wird implizit in konvertiert **"bool"**. Er wird ausgewertet, und alle Nebeneffekte werden vor dem nächsten Schritt abgeschlossen.  
   
--   Wenn der erste Operand als **"true"** (1), der zweite Operand ausgewertet.  
+-   Wenn der erste Operand als **"true"** (1), der zweite Operand ausgewertet wird.  
   
--   Wenn der erste Operand als **"false"** (0), der dritte Operand ausgewertet wird.  
+-   Wenn der erste Operand als **"false"** (0), der dritte Operanden ausgewertet wird.  
   
  Das Ergebnis des bedingten Operators ist das Ergebnis des ausgewerteten Operanden – der zweite oder dritte. Nur einer der letzten zwei Operanden wird in einem bedingten Ausdruck ausgewertet.  
   
@@ -66,7 +67,7 @@ expression ? expression : expression
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // expre_Expressions_with_the_Conditional_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate conditional operator  
@@ -79,5 +80,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++-Built-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Bedingter Ausdrucksoperator](../c-language/conditional-expression-operator.md)

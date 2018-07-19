@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098380"
 ---
 # <a name="crowsetcrowset"></a>CRowset::CRowset
 Erstellt ein neues `CRowset` Objekt, und ordnet sie (optional) eine [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx) Schnittstelle als Parameter angegeben.  

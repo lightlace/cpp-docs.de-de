@@ -16,11 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 413b7b4a7cf11ff7e83596ecc61423d4bc4f0358
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079064"
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate-Klasse
 Definiert eine Dokumentvorlage, welche die Single Document Interface (SDI) implementiert.  
@@ -44,7 +45,7 @@ class CSingleDocTemplate : public CDocTemplate
   
  Eine Dokumentvorlage definiert die Beziehung zwischen drei Typen von Klassen:  
   
--   Eine Dokumentenklasse, die Ableitung von **CDocument**.  
+-   Eine Dokumentenklasse, die Ableitung von `CDocument`.  
   
 -   Eine View-Klasse, die Daten aus den oben aufgeführten Dokumentklasse anzeigt. Sie können diese Klasse von ableiten `CView`, `CScrollView`, `CFormView`, oder `CEditView`. (Sie können auch `CEditView` direkt.)  
   
@@ -80,7 +81,7 @@ CSingleDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIDResource`  
+ *nIDResource*  
  Gibt die ID der Ressourcen, mit dem Dokument verwendet. Dies kann im Menü, Symbol Zugriffstastentabelle und Zeichenfolgenressourcen umfassen.  
   
  Eine Zeichenfolgenressource besteht aus bis zu sieben Teilzeichenfolgen, getrennt durch das Zeichen "\n" (das Zeichen "\n" ist als Platzhalter erforderlich, wenn eine Teilzeichenfolge nicht angegeben wird; nachfolgende "\n"-Zeichen sind jedoch nicht erforderlich) Diese Teilzeichenfolgen beschreiben den "Document". Informationen zu den Teilzeichenfolgen finden Sie unter [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Diese Zeichenfolgenressource in der Ressourcendatei für die Anwendung gefunden. Zum Beispiel:  
@@ -99,13 +100,13 @@ CSingleDocTemplate(
   
  Weitere Informationen zu diesen Ressourcen finden Sie unter der [Zeichenfolgen-Editor](../../windows/string-editor.md).  
   
- `pDocClass`  
- Verweist auf die `CRuntimeClass` Objekt der Dokumentklasse. Diese Klasse ist eine **CDocument**-abgeleitete Klasse, die Sie definieren, um Ihre Dokumente darzustellen.  
+ *pDocClass*  
+ Verweist auf die `CRuntimeClass` Objekt der Dokumentklasse. Diese Klasse ist eine `CDocument`-abgeleitete Klasse, die Sie definieren, um Ihre Dokumente darzustellen.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Verweist auf die `CRuntimeClass` Objekt von der Rahmenfenster (Klasse). Diese Klasse kann eine `CFrameWnd`-abgeleitete Klasse, oder es kann `CFrameWnd` selbst, wenn Sie Standardverhalten für das Hauptrahmenfenster verwenden möchten.  
   
- `pViewClass`  
+ *pViewClass*  
  Verweist auf die `CRuntimeClass` Objekt der Ansichtsklasse. Diese Klasse ist eine `CView`-abgeleitete Klasse, die Sie definieren, um Ihre Dokumente anzuzeigen.  
   
 ### <a name="remarks"></a>Hinweise  

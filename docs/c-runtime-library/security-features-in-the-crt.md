@@ -39,6 +39,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451809"
 ---
 # <a name="security-features-in-the-crt"></a>Sicherheitsfunktionen in der CRT
 Viele alte CRT-Funktionen liegen in neueren, sichereren Versionen vor. Wenn eine sichere Funktion vorhanden ist, wird die ältere, weniger sichere Version als veraltet markiert, und die neue Version hat das `_s`-Suffix („sicher“).  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092430"
 ---
 # <a name="platformagile-class"></a>Platform::Agile-Klasse
 Stellt ein Objekt dar, das über „MashalingBehavior=Standard“ als Agile-Objekt verfügt, das die Chancen für Threadingausnahmen zur Laufzeit erheblich verringert. `Agile<T>` ermöglicht es dem Nicht-Agile-Objekt, denselben oder einen anderen Thread aufzurufen oder von diesem aufgerufen zu werden. Weitere Informationen finden Sie unter [Threading und Marshalling](../cppcx/threading-and-marshaling-c-cx.md).  

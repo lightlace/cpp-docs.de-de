@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390560"
 ---
 # <a name="function-prototypes"></a>Funktionsprototypen
 Eine Funktionsdeklaration ist der Funktionsdefinition vorangestellt und gibt den Namen, Rückgabetyp, die Speicherklasse und andere Attribute einer Funktion an. Um als Prototyp zu fungieren, muss die Funktionsdeklaration auch Typen und Bezeichner für die Argumente der Funktion festlegen.  

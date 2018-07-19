@@ -1,5 +1,5 @@
 ---
-title: using-Deklaration | Microsoft Docs
+title: using-Deklaration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4cb07e2d56527ad4907b7b144ba5f3bc04196a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c40a69e9c8d584d91a1b6401ec0da57368641975
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941524"
 ---
 # <a name="using-declaration"></a>using-Deklaration
-Die using-Deklaration führt einen Namen im deklarativen Bereich, in denen die using-Deklaration wird angezeigt.  
+Die using-Deklaration führt einen Namen im deklarativen Bereich, in denen die using-Deklaration angezeigt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +38,17 @@ using declarator-list ;
   
 ### <a name="parameters"></a>Parameter
   
-*geschachtelten namenspezifizierer*  
-    Eine Sequenz von Namespace, Klasse, oder Enumeration Namen und bereichsauflösungsoperatoren (:), die durch ein Bereichsauflösungsoperator beendet. Ein einzelnes Bereichsauflösungsoperator kann verwendet werden, um einen Namen aus dem globalen Namespace einzuführen. Das Schlüsselwort `typename` ist optional und kann verwendet werden, um abhängige Namen, wenn von einer Basisklasse in einer Klassenvorlage eingeleitet zu beheben.  
+*geschachtelten namesspezifizierer*  
+    Eine Sequenz von Namespace, Klasse, oder Namen der Enumeration und bereichsauflösungsoperatoren (:), die durch ein Bereichsauflösungsoperator beendet. Ein einzelnes Bereichsauflösungsoperator kann verwendet werden, um einen Namen aus dem globalen Namespace einzuführen. Das Schlüsselwort **Typename** ist optional und kann verwendet werden, zum Auflösen von abhängigen Namen, wenn von einer Basisklasse in einer Klassenvorlage eingeführt.  
   
-*nicht qualifizierte id*  
-    Ein nicht qualifizierte Id-Ausdruck, der einen Bezeichner, Name eines überladenen Operators, ein benutzerdefiniertes literal Operator oder Konvertierung Funktionsname, einen Destruktor Klassennamen oder eine Liste der Namen und die Argumentliste sein kann.  
+*nicht qualifizierte-id*  
+    Ein nicht qualifizierte Id-Ausdruck, der möglicherweise einen Bezeichner, Name eines überladenen Operators, einen benutzerdefinierten Literale Operator oder Konvertierung Funktionsnamen, einen Destruktor Klassennamen oder eine Vorlage namens und einer Argumentliste aus.  
   
-*Deklaratorliste*  
-    Eine durch Trennzeichen getrennte Liste von [`typename`] *geschachtelten namenspezifizierer* *nicht qualifizierte Id* Deklaratoren, optional gefolgt von einem Auslassungszeichen.
+*Declarator-list*  
+    Eine durch Trennzeichen getrennte Liste von [**Typename**] *geschachtelten namesspezifizierer* *nicht qualifizierte Id* Deklaratoren verwenden, optional gefolgt von einem Auslassungszeichen.
     
 ## <a name="remarks"></a>Hinweise  
-Eine using-Deklaration einen nicht qualifizierten Namen führt, als ein Synonym für eine Entität an anderer Stelle deklariert. Sie können einen einzelnen Namen aus einem bestimmten Namespace ohne explizite Qualifizierung in der Deklaration Region verwendet werden, in dem er angezeigt wird. Dies steht im Gegensatz zur der [using-Direktive](../cpp/namespaces-cpp.md#using_directives), womit *alle* die Namen in einem Namespace ohne Qualifikation verwendet werden. Die `using` Schlüsselwort dient außerdem zum [Geben Sie Aliase](../cpp/aliases-and-typedefs-cpp.md).  
+Ein using-Deklaration führt Sie einen nicht qualifizierten Name als Synonym für eine Entität einer anderen Stelle deklariert. Sie können einen eindeutigen Namen aus einem bestimmten Namespace ohne explizite Qualifizierung in der Region für die Deklaration verwendet werden, in dem er angezeigt wird. Dies ist im Gegensatz zu den [using-Direktive](../cpp/namespaces-cpp.md#using_directives), wodurch *alle* die Namen in einem Namespace ohne Qualifikation verwendet werden. Die **mit** -Schlüsselwort dient außerdem zum [Geben Sie Aliase](../cpp/aliases-and-typedefs-cpp.md).  
   
 ## <a name="example"></a>Beispiel  
  Eine using-Deklaration kann in einer Klassendefinition verwendet werden.  
@@ -134,7 +135,7 @@ In B::f()
 ```  
   
 ## <a name="example"></a>Beispiel  
-Member deklariert hat, mithilfe einer Deklaration, explizite Qualifizierung mit verwiesen werden kann. Das Präfix `::` verweist auf den globalen Namespace.  
+Member deklariert wird, mithilfe einer mit Deklaration kann mithilfe der expliziten Qualifikation verweisen. Das Präfix `::` verweist auf den globalen Namespace.  
   
 ```cpp  
 // using_declaration3.cpp  
@@ -175,7 +176,7 @@ In A::g
 ## <a name="example"></a>Beispiel  
 Wenn eine using-Deklaration erfolgt, verweist das von der Deklaration erstellte Synonym nur auf Definitionen, die zum Zeitpunkt der using-Deklaration gültig waren. Definitionen, die nach der using-Deklaration einem Namespace hinzugefügt werden, sind ungültige Synonyme.  
   
-Ein Name, der definiert, indem Sie eine `using` Deklaration ist ein Alias für den ursprünglichen Namen. Er wirkt sich nicht auf den Typ, die Verknüpfung oder andere Attribute der ursprünglichen Deklaration aus.  
+Ein Name definiert, die von einem **mit** Deklaration ist ein Alias für den ursprünglichen Namen. Er wirkt sich nicht auf den Typ, die Verknüpfung oder andere Attribute der ursprünglichen Deklaration aus.  
   
 ```cpp  
 // post_declaration_namespace_additions.cpp  
@@ -308,7 +309,7 @@ In D::g(char)
 ## <a name="example"></a>Beispiel  
 Alle in einer using-Deklaration erwähnten Instanzen eines Namens müssen verfügbar sein. Insbesondere muss der Membername zugänglich sein, wenn eine abgeleitete Klasse eine using-Deklaration verwendet, um auf einen Member einer Basisklasse zuzugreifen. Wenn der Name der einer überladenen Memberfunktion ist, muss auf alle genannten Funktionen zugegriffen werden können.  
   
-Weitere Informationen über Barrierefreiheitsfeatures von Elementen finden Sie unter [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md).  
+Weitere Informationen über die Barrierefreiheit von Elementen finden Sie unter [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md).  
   
 ```cpp  
 // using_declaration_inheritance2.cpp  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881704"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>Open &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (Bildbearbeitung für Symbole)
 Verwenden Sie dieses Dialogfeld, um Gerätebildern zu öffnen. Vorhandene Gerätebildern in die aktuelle Ressource (Bilder, die die aktuelle Ressource gehören) aufgeführt.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131354"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Gewusst wie: Aufrufen von Ereignissen und Methoden des Windows Forms-Steuerelements
 Da [CWinFormsView::](../mfc/reference/cwinformsview-class.md#getcontrol) gibt einen Zeiger auf <xref:System.Windows.Forms.Control?displayProperty=fullName>, und nicht um einen Zeiger auf `WindowsControlLibrary1::UserControl1`, ist es ratsam, Hinzufügen eines Mitglieds des Steuerelementtyps für Benutzer und ihre Initialisierung in [iView:: OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). Nachdem Sie aufrufen können, Methoden und Eigenschaften, die mit `m_ViewControl`.  

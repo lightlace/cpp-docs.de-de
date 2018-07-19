@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054002"
 ---
 # <a name="if-masm"></a>IF (MASM)
 Gewährt der Assembly *Ifstatements* Wenn *expression1* ist "true" (ungleich null) oder *Elseifstatements* Wenn *expression1* lautet "false" (0) und *expression2* ist "true".  

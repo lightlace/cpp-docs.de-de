@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367991"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Gewusst wie: Hinzufügen eines benutzerdefinierten Buildschritts zu MSBuild-Projekten
 Ein benutzerdefinierten Buildschritt abmeldeanforderungen einen benutzerdefinierten Schritt in einem build Ein benutzerdefinierter Buildschritt verhält sich wie jeder andere *Befehlstool* Schritt, wie z. B. der standard Kompilier- oder Tool Schritt.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690406"
 ---
 # <a name="scheduler-policies"></a>Planerrichtlinien
 Dieses Dokument beschreibt die Rolle von Planerrichtlinien in der Concurrency Runtime. Ein *Planerrichtlinie* steuert die Strategie, die der Planer zum Verwalten von Aufgaben verwendet. Betrachten Sie beispielsweise eine Anwendung, müssen einige Aufgaben an auszuführende `THREAD_PRIORITY_NORMAL` und andere Aufgaben an auszuführende `THREAD_PRIORITY_HIGHEST`.  Sie können zwei Planerinstanzen erstellen: einen, der angibt, die `ContextPriority` -Richtlinie mit `THREAD_PRIORITY_NORMAL` und ein anderes, der angibt, die gleiche Richtlinie, um `THREAD_PRIORITY_HIGHEST`.  

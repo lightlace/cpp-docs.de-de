@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1151464d4f2d863f8cdc30191199c0606d58b8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956933"
 ---
 # <a name="negate-struct"></a>negate-Struktur
 
@@ -48,9 +49,9 @@ struct negate<void>
 
 ### <a name="parameters"></a>Parameter
 
-`Type` Jeder Typ, der unterstützt eine `operator-` , die einen Operanden des angegebenen oder abgeleiteten Typs akzeptiert.
+*Typ* jeder Typ, unterstützt eine `operator-` , die einen Operanden des Typs angegebener oder abgeleiteter akzeptiert.
 
-`Left` Der zu negierende Operand. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `Type`.
+*Links* der zu negierende Operand. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *Typ*.
 
 ## <a name="return-value"></a>Rückgabewert
 

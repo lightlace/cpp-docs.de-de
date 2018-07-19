@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38506d0b25918bbc9d70ec1801971b070d620bf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7061c3203436197eb1bd03ae56058e0bd0f26f9d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955582"
 ---
 # <a name="wininet-basics"></a>WinInet-Grundlagen
-WinInet können Sie FTP-Unterstützung zum Herunterladen und Hochladen von Dateien von innerhalb der Anwendung hinzufügen. Sie können außer Kraft setzen [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) und Verwenden der `dwContext` Parameter zum Bereitstellen von Statusinformationen für Benutzer, wie Sie suchen und Herunterladen von Dateien.  
+WinInet können Sie FTP-Unterstützung zum Herunterladen und Hochladen von Dateien von innerhalb der Anwendung hinzufügen. Sie können außer Kraft setzen [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) und Verwenden der *DwContext* Parameter zum Bereitstellen von Statusinformationen für Benutzer, wie Sie suchen und Herunterladen von Dateien.  
   
  Dieser Artikel enthält die folgenden Themen:  
   
@@ -56,14 +57,14 @@ WinInet können Sie FTP-Unterstützung zum Herunterladen und Hochladen von Datei
 ## <a name="use-onstatuscallback"></a>OnStatusCallback verwenden  
  Wenn Sie die WinInet-Klassen verwenden, können Sie die [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) Mitglied Ihrer Anwendungsverzeichnis [CInternetSession](../mfc/reference/cinternetsession-class.md) Objekt zum Abrufen von Statusinformationen. Wenn Sie eine eigene ableiten `CInternetSession` Objekt außer Kraft, indem `OnStatusCallback`, und aktivieren Sie die Status-Rückrufe MFC aufgerufen wird Ihrer `OnStatusCallback` -Funktion mit Statusinformationen zu allen Aktivitäten in dieser Sitzung Internet.  
   
- Da es sich bei eine einzelne Sitzung möglicherweise mehrere Verbindungen (d. h. über ihre Lebensdauer viele verschiedene unterschiedliche Vorgänge ausführen können), unterstützt `OnStatusCallback` benötigt einen Mechanismus zum Identifizieren jeder statusänderung mit einer bestimmten Verbindung oder Transaktion. Dieser Mechanismus wird durch den Kontext-ID-Parameter übergeben, um viele der Memberfunktionen in der WinInet-Unterstützungsklassen bereitgestellt. Dieser Parameter ist immer vom Typ `DWORD` und immer mit dem Namen `dwContext`.  
+ Da es sich bei eine einzelne Sitzung möglicherweise mehrere Verbindungen (d. h. über ihre Lebensdauer viele verschiedene unterschiedliche Vorgänge ausführen können), unterstützt `OnStatusCallback` benötigt einen Mechanismus zum Identifizieren jeder statusänderung mit einer bestimmten Verbindung oder Transaktion. Dieser Mechanismus wird durch den Kontext-ID-Parameter übergeben, um viele der Memberfunktionen in der WinInet-Unterstützungsklassen bereitgestellt. Dieser Parameter ist immer vom Typ **DWORD** und immer mit dem Namen *DwContext*.  
   
  Der Kontext auf ein bestimmtes Internetobjekt zugewiesen dient nur zur Identifizierung der Aktivitäts, führt dazu, das Objekt in dass, der `OnStatusCallback` Mitglied der `CInternetSession` Objekt. Der Aufruf von `OnStatusCallback` empfängt mehrere Parameter; diese Parameter arbeiten zusammen, um Ihre Anwendung informieren, welche Bearbeitung für die Transaktion und die Verbindung hergestellt wurde.  
   
- Beim Erstellen einer `CInternetSession` -Objekt können Sie angeben einer `dwContext` Parameter an den Konstruktor übergibt. `CInternetSession` selbst verwenden nicht die Kontext-ID. Stattdessen wird die Kontext-ID an alle **InternetConnection**-abgeleitete Objekte, die nicht explizit eine Kontext-ID, Ihren eigenen erhalten. Im Gegenzug wird die `CInternetConnection` Objekte übergibt die Kontext-ID zusammen, `CInternetFile` Objekte, sofern Sie nicht explizit eine anderen Kontext-ID angeben Wenn andererseits, Sie angeben, dass eine bestimmte Kontext-ID Ihrer Wahl, das Objekt und jede Arbeit, die dies der Fall ist dieser Kontext-ID zugeordnet werden soll Können Sie identifizieren, welche Statusinformationen Ihnen in angegeben wird, wird den Kontext-IDs Ihrer `OnStatusCallback` Funktion.  
+ Beim Erstellen einer `CInternetSession` -Objekt können Sie angeben einer *DwContext* Parameter an den Konstruktor übergibt. `CInternetSession` selbst verwenden nicht die Kontext-ID. Stattdessen wird die Kontext-ID an alle **InternetConnection**-abgeleitete Objekte, die nicht explizit eine Kontext-ID, Ihren eigenen erhalten. Im Gegenzug wird die `CInternetConnection` Objekte übergibt die Kontext-ID zusammen, `CInternetFile` Objekte, sofern Sie nicht explizit eine anderen Kontext-ID angeben Wenn andererseits, Sie angeben, dass eine bestimmte Kontext-ID Ihrer Wahl, das Objekt und jede Arbeit, die dies der Fall ist dieser Kontext-ID zugeordnet werden soll Können Sie identifizieren, welche Statusinformationen Ihnen in angegeben wird, wird den Kontext-IDs Ihrer `OnStatusCallback` Funktion.  
   
 ##  <a name="_core_display_progress_information_while_transferring_files"></a> Anzeigen von Statusinformationen bei der Übertragung von Dateien  
- Beispielsweise, wenn Sie eine Anwendung, die eine Verbindung mit einem FTP-Server zum Lesen einer Datei erstellt und auch eine Verbindung mit einem HTTP-Server Schreiben auf eine Webseite zu erhalten, stehen Ihnen eine `CInternetSession` -Objekt, das zwei `CInternetConnection` Objekte (eine wäre eine **einerseits** und der andere würde eine **CHttpSession**), und zwei `CInternetFile` Objekte (eine für jede Verbindung). Bei Verwendung der Standardwerte für die `dwContext` Parameter, Sie wären nicht unterscheiden, zwischen den `OnStatusCallback` Aufrufe, die angeben, für die FTP-Verbindung und die Aufrufe, die angeben, den Fortschritt der HTTP-Verbindung ausgeführt. Bei Angabe einer `dwContext` -ID, die Sie später in testen `OnStatusCallback`, wissen Sie, welcher Vorgang den Rückruf generiert.  
+ Z. B. Wenn Sie eine Anwendung, die eine Verbindung mit einem FTP-Server zum Lesen einer Datei erstellt und auch eine Verbindung mit einem HTTP-Server Schreiben auf eine Webseite zu erhalten, stehen Ihnen eine `CInternetSession` -Objekt, das zwei `CInternetConnection` Objekte (eine wäre eine `CFtpSession` und die andere eine `CHttpSession`), und zwei `CInternetFile` Objekte (eine für jede Verbindung). Bei Verwendung der Standardwerte für die *DwContext* Parameter, Sie wären nicht zwischen unterscheiden, die `OnStatusCallback` Aufrufe, die Status für die FTP-Verbindung und die Aufrufe, die angeben, den Fortschritt der HTTP-Verbindung. Bei Angabe einer *DwContext* -ID, die Sie später in testen `OnStatusCallback`, wissen Sie, welcher Vorgang den Rückruf generiert.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Internetprogrammiergrundlagen](../mfc/mfc-internet-programming-basics.md)   

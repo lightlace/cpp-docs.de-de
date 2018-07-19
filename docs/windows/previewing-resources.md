@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878670"
 ---
 # <a name="previewing-resources"></a>Anzeigen von Ressourcen in der Vorschau
 Ausführen einer Vorschau für Ihre Ressourcen können Sie grafische Ressourcen anzeigen, ohne sie zu öffnen. Anzeigen einer Vorschau ist auch nützlich für ausführbare Dateien, nachdem Sie sie kompiliert haben, da der Ressourcen-IDs in Zahlen zu ändern. Da diese numerischen Bezeichnern nicht oft genug Informationen bereitstellen, hilft der Ressourcenvorschau schnell identifizieren.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250927"
 ---
 # <a name="compiler-error-c3192"></a>Compiler-Fehler C3192 generiert
 Syntaxfehler: "^" ist kein Präfixoperator (meinten Sie ' *'?)  

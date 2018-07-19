@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364020"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Erstellen von parallelen C/C++-Assemblys
 Ein [Side-by-Side Assembly](http://msdn.microsoft.com/library/windows/desktop/ff951640) ist eine Sammlung von Ressourcen – eine Gruppe von DLLs, Windows-Klassen, COM-Servern, Typbibliotheken oder Schnittstellen – eine Anwendung zur Verwendung zur Laufzeit zur Verfügung. Der wichtigste Vorteil von erneutes Packen DLLs in Assemblys ist, dass mehrere Versionen der Assemblys von Anwendungen gleichzeitig verwendet werden können, und es möglich, Service, die zurzeit installierte Assemblys im Falle einer Update-Version ist.  

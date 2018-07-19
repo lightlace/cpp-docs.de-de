@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eea701c33001ffa3585c2d5847f3056454b7850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dde1f005e53aff7ebe505d1ce619bf5c94410f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955455"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Einstellungen für CStatusBarCtrl
-Die Standardposition des eine [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) Statusfenster wird am unteren Rand des übergeordneten Fensters, aber Sie können angeben, die `CCS_TOP` Stil, damit diese am oberen Rand der Clientbereich des übergeordneten Fensters angezeigt.  
+Die Standardposition des eine [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) Statusfenster wird am unteren Rand des übergeordneten Fensters, aber Sie können angeben, dass das Format CCS_TOP-Format, damit diese am oberen Rand der Clientbereich des übergeordneten Fensters angezeigt.  
   
- Sie können angeben, die **SBARS_SIZEGRIP** Formatvorlage enthalten einen Größenziehpunkt am rechten Ende der `CStatusBarCtrl` Statusfenster. Ein Größenziehpunkt ist vergleichbar mit einem Rahmen; Es ist ein rechteckigen Bereichs, der der Benutzer kann klicken und ziehen Sie zum Ändern der Größe des übergeordneten Fensters.  
+ Sie können angeben, dass das SBARS_SIZEGRIP-Format Einbeziehung einen Größenziehpunkt am rechten Ende der `CStatusBarCtrl` Statusfenster. Ein Größenziehpunkt ist vergleichbar mit einem Rahmen; Es ist ein rechteckigen Bereichs, der der Benutzer kann klicken und ziehen Sie zum Ändern der Größe des übergeordneten Fensters.  
   
 > [!NOTE]
->  Wenn Sie kombinieren der `CCS_TOP` und **SBARS_SIZEGRIP** Formatvorlagen, die sich ergebende Größenziehpunkt ist nicht funktionsfähig, obwohl das System im Statusfenster zeichnet.  
+>  Wenn Sie die Stile CCS_TOP-Format und SBARS_SIZEGRIP kombinieren, ist der resultierende Größenziehpunkt nicht funktionsfähig, obwohl das System im Statusfenster zeichnet.  
   
  Die Fensterprozedur für das Statusfenster legt automatisch die anfängliche Größe und Position des Steuerelements. Die Breite entspricht den Clientbereich des übergeordneten Fensters. Die Höhe basiert auf den Metriken der Schriftart, die derzeit dem Statusfenster Gerätekontext ausgewählt ist und die Breite des Fensterrahmens.  
   
- Die Fensterprozedur automatisch die Größe des Fensters der anpasst, wenn er empfängt eine `WM_SIZE` Nachricht. In der Regel, wenn die Größe des übergeordneten Fensters ändert, sendet das übergeordnete Element einer `WM_SIZE` Nachricht im Statusfenster.  
+ Die Fensterprozedur passt automatisch die Größe des Fensters Status an, nach Empfang einer Nachricht WM_SIZE. Wenn die Größe des übergeordneten Fensters ändert, sendet das übergeordnete Element in der Regel eine WM_SIZE-Nachricht im Statusfenster.  
   
  Sie können die minimale Höhe der Zeichnungsbereich einer Statusfenster festlegen, durch den Aufruf [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), die minimale Höhe in Pixel angibt. Der Zeichnungsbereich umfasst keine des Fensterrahmens.  
   

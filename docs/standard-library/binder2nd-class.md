@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de37ee92805d35b25e73e0682ce8abe79822a8b5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbd2f2c652c619a954b789a3b765fc636a03c33e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962723"
 ---
 # <a name="binder2nd-class"></a>binder2nd-Klasse
 
@@ -52,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-`Func` Der binäres Funktionsobjekt in ein unäres Funktionsobjekt konvertiert werden.
+*Func* die binäres Funktionsobjekt in ein unäres Funktionsobjekt konvertiert werden.
 
-`right` Der Wert, der das zweite Argument der binären Function-Objekt gebunden werden.
+*richtige* den Wert, ist das zweite Argument des binären Funktionsobjekts gebunden werden soll.
 
-`left` Der Wert des Arguments, das angepasste binary Object mit der feste Wert des zweiten Arguments verglichen werden soll.
+*linken* den Wert des Arguments, das das angepasste binäre Objekt mit dem festen Wert des zweiten Arguments vergleicht.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das unäre Funktionsobjekt, das aus dem Binden des zweiten Arguments des binären Funktionsobjekts an den Wert `right.` resultiert
+Das unäre Funktionsobjekt, das Binden des zweiten Arguments des binären Funktionsobjekts an den Wert ergibt *rechten*.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse speichert eine Kopie eines binären Funktionsobjekts _ *Func* in **op** und eine Kopie von `right` in **value**. Für seine Memberfunktion `operator()` definiert sie die Rückgabe **op**( `left`, **value**).
+Die Vorlagenklasse speichert eine Kopie eines binären Funktionsobjekts _ *Func* in `op`, sowie eine Kopie der *rechten* in `value`. Für seine Memberfunktion `operator()` definiert sie die Rückgabe **op**( `left`, **value**).
 
-Wenn `Func` ein Objekt vom Typ **Operation** und c eine Konstante ist, dann entspricht [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) dem `binder2nd`-Klassenkonstruktor `binder2nd`\< **Operation**> ( `Func`, `c` ) und ist komfortabler.
+Wenn `Func` ist ein Objekt des Typs `Operation` und c eine Konstante ist, klicken Sie dann [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) entspricht der `binder2nd` Klassenkonstruktor `binder2nd` \<  **Vorgang**> ( `Func`, `c` ) und Benutzerfreundlicher.
 
 ## <a name="example"></a>Beispiel
 

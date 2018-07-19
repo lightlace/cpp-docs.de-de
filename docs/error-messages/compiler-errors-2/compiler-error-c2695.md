@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231216"
 ---
 # <a name="compiler-error-c2695"></a>Compiler-Fehler C2695 generiert
 "Funktion1": Überschreiben der virtuellen Funktion unterscheidet sich von "Funktion2" nur durch die Aufrufkonvention  

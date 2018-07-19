@@ -24,11 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58700d1f52189afb1d8baf3456bac4ed84920fab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be1d3c6d583783c391321555ae52077fba4bee3a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960738"
 ---
 # <a name="integersequence-class"></a>integer_sequence-Klasse
 
@@ -43,9 +44,9 @@ struct integer_sequence
 
 ### <a name="parameters"></a>Parameter
 
-T der Typ der Werte; muss ein ganzzahliger Typ: Bool, char "," char16_t "," char32_t "," Wchar_t "oder signierte oder nicht signierte Ganzzahltypen.
+*T* den Typ von Werten; muss ein ganzzahliger Typ sein: "bool", "char", "char16_t, char32_t," Wchar_t "oder signierte oder nicht signierte Ganzzahltypen.
 
-Vals ein typenloses parameterpaket, das eine Sequenz von Werten des integralen Typs t darstellt.
+*Vals* ein typenloses parameterpaket, das eine Sequenz von Werten des integralen Typs t darstellt
 
 ## <a name="members"></a>Member
 

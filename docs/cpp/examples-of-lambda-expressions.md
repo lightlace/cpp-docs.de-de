@@ -1,5 +1,5 @@
 ---
-title: Beispiele für Lambdaausdrücke | Microsoft Docs
+title: Beispiele für Lambda-Ausdrücke | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83802dcc7382040d3b9f40bd0bbc2fe13d076f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d294eef323d96ddbfecad8f740826a5a038d7b4c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943309"
 ---
 # <a name="examples-of-lambda-expressions"></a>Beispiele für Lambdaausdrücke
-Dieser Artikel zeigt, wie Lambdaausdrücke in Ihren Programmen zu verwenden sind. Einen Überblick über Lambda-Ausdrücken finden Sie unter [Lambda-Ausdrücke](../cpp/lambda-expressions-in-cpp.md). Weitere Informationen zur Struktur eines Lambda-Ausdrucks finden Sie unter [Lambda-Ausdruckssyntax](../cpp/lambda-expression-syntax.md).  
+Dieser Artikel zeigt, wie Lambdaausdrücke in Ihren Programmen zu verwenden sind. Eine Übersicht über Lambda-Ausdrücke, finden Sie unter [Lambda-Ausdrücke](../cpp/lambda-expressions-in-cpp.md). Weitere Informationen zur Struktur eines Lambda-Ausdrucks finden Sie unter [Lambda-Ausdruckssyntax](../cpp/lambda-expression-syntax.md).  
   
-##  <a name="declaringLambdaExpressions"></a> Deklarieren von Lambdaausdrücken  
+##  <a name="declaringLambdaExpressions"></a> Deklarieren von Lambda-Ausdrücke  
   
 ### <a name="example-1"></a>Beispiel 1  
- Da ein Lambda-Ausdruck typisiert ist, können Sie sie zum Zuweisen einer `auto` Variable oder ein [Funktion](../standard-library/function-class.md) -Objekts, wie hier gezeigt:  
+ Da ein Lambda-Ausdruck typisiert ist, können Sie sie zum Zuweisen einer **automatisch** Variable oder ein [Funktion](../standard-library/function-class.md) -Objekts, wie hier gezeigt:  
   
 ### <a name="code"></a>Code  
   
@@ -61,7 +62,7 @@ int main()
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [Auto](../cpp/auto-cpp.md), [Funktion Klasse](../standard-library/function-class.md), und [Funktionsaufruf](../cpp/function-call-cpp.md).  
+ Weitere Informationen finden Sie unter [automatisch](../cpp/auto-cpp.md), [function-Klasse](../standard-library/function-class.md), und [Funktionsaufruf](../cpp/function-call-cpp.md).  
   
  Obwohl Lambdaausdrücke am häufigsten im Text einer Funktion deklariert werden, können Sie sie überall da deklarieren, wo Sie eine Variable initialisieren können.  
   
@@ -104,8 +105,8 @@ int main()
   
  [[In diesem Artikel](#top)]  
   
-##  <a name="callingLambdaExpressions"></a> Aufrufen von Lambdaausdrücken  
- Sie können einen Lambdaausdruck sofort aufrufen, wie im nächsten Codeausschnitt gezeigt wird. Der zweite Ausschnitt zeigt, wie einen Lambda als Argument für C++-Standardbibliothek Algorithmen wie z. B. übergeben `find_if`.  
+##  <a name="callingLambdaExpressions"></a> Aufrufen von Lambda-Ausdrücken  
+ Sie können einen Lambdaausdruck sofort aufrufen, wie im nächsten Codeausschnitt gezeigt wird. Der zweite Ausschnitt zeigt, wie einen Lambda-Ausdruck als Argument z. B. an C++-standardbibliotheksalgorithmen übergeben `find_if`.  
   
 ### <a name="example-1"></a>Beispiel 1  
  Im folgenden Beispiel wird ein Lambda-Ausdruck deklariert, der die Summe von zwei ganze Zahlen zurückgibt und den Ausdruck sofort mit den Argumenten `5` und `4` aufruft:  
@@ -132,7 +133,7 @@ int main()
 ```  
   
 ### <a name="example-2"></a>Beispiel 2  
- Im folgenden Beispiel wird ein Lambda-Ausdruck als Argument an die `find_if`-Funktion übergeben. Der Lambda-Ausdruck gibt `true` zurück, wenn sein Parameter eine gerade Zahl ist.  
+ Im folgenden Beispiel wird ein Lambda-Ausdruck als Argument an die `find_if`-Funktion übergeben. Der Lambda-Ausdruck zurückgibt **"true"** Wenn der Parameter eine gerade Zahl ist.  
   
 ### <a name="code"></a>Code  
   
@@ -176,11 +177,11 @@ The first even number in the list is 42.
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den `find_if` funktionieren, finden Sie unter [für "find_if"](../standard-library/algorithm-functions.md#find_if). Weitere Informationen zu den Funktionen von C++-Standardbibliothek, die allgemeine Algorithmen ausführen, finden Sie unter [ \<Algorithmus >](../standard-library/algorithm.md).  
+ Weitere Informationen zu den `find_if` funktionieren, finden Sie unter [Find_if](../standard-library/algorithm-functions.md#find_if). Weitere Informationen zu den C++-Standardbibliothek-Funktionen, die allgemeine Algorithmen ausführen, finden Sie unter [ \<Algorithmus >](../standard-library/algorithm.md).  
   
  [[In diesem Artikel](#top)]  
   
-##  <a name="nestingLambdaExpressions"></a> Schachteln von Lambdaausdrücken  
+##  <a name="nestingLambdaExpressions"></a> Schachteln von Lambda-Ausdrücke  
   
 ### <a name="example"></a>Beispiel  
  Sie können einen Lambda-Ausdruck innerhalb eines anderen schachteln, wie in diesem Beispiel gezeigt wird. Der innere Lambda-Ausdruck multipliziert sein Argument mit 2 und gibt das Ergebnis zurück. Der äußere Lambda-Ausdruck ruft den inneren Lambda-Ausdruck mit seinem Argument auf und fügt dem Ergebnis 3 hinzu.  
@@ -217,10 +218,10 @@ int main()
   
  [[In diesem Artikel](#top)]  
   
-##  <a name="higherOrderLambdaExpressions"></a> Höherer Ordnung Lambda-Funktionen  
+##  <a name="higherOrderLambdaExpressions"></a> Lambda-Funktionen höherer Ordnung  
   
 ### <a name="example"></a>Beispiel  
- Viele Programmiersprachen unterstützen das Konzept einer *Funktion höherer Ordnung.* Eine Funktion höherer Ordnung ist ein Lambda-Ausdruck, der einen anderen Lambda-Ausdruck als Argument akzeptiert oder einen Lambda-Ausdruck zurückgibt. Sie können die [Funktion](../standard-library/function-class.md) -Klasse verwenden, um einen C++-Lambda-Ausdruck Verhalten zu aktivieren, wie eine Funktion höherer Ordnung. Das folgende Beispiel zeigt einen Lambda-Ausdruck, der ein `function`-Objekt zurückgibt, und einen Lambda-Ausdruck, der ein `function`-Objekt als sein Argument akzeptiert.  
+ Viele Programmiersprachen unterstützen das Konzept einer *Funktion höherer Ordnung.* Eine Funktion höherer Ordnung ist ein Lambda-Ausdruck, der einen anderen Lambda-Ausdruck als Argument akzeptiert oder einen Lambda-Ausdruck zurückgibt. Sie können die [Funktion](../standard-library/function-class.md) -Klasse zur Aktivierung eines C++-Lambda-Ausdrucks, verhalten sich wie eine Funktion höherer Ordnung. Das folgende Beispiel zeigt einen Lambda-Ausdruck, der ein `function`-Objekt zurückgibt, und einen Lambda-Ausdruck, der ein `function`-Objekt als sein Argument akzeptiert.  
   
 ### <a name="code"></a>Code  
   
@@ -269,10 +270,10 @@ int main()
 ##  <a name="methodLambdaExpressions"></a> Verwenden eines Lambda-Ausdrucks in einer Funktion  
   
 ### <a name="example"></a>Beispiel  
- Sie können Lambda-Ausdrücke im Text einer Funktion verwenden. Der Lambda-Ausdruck kann auf alle Funktionen oder Datenmember zugreifen, auf die die einschließende Funktion zugreifen kann. Sie können den `this`-Zeiger explizit oder implizit erfassen, um den Zugriff auf die Funktionen und Datenmember der einschließenden Klasse bereitzustellen.  
-**Visual Studio 2017 15,3 und höher** (verfügbar mit [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): erfassen `this` nach Wert (`[*this]`) Wenn der Lambda-Ausdruck verwendet werden in asynchronen oder parallelen Vorgängen, in denen möglicherweise des Codes ausgeführt werden, nachdem das ursprüngliche Objekt den Gültigkeitsbereich verlässt.
+ Sie können Lambda-Ausdrücke im Text einer Funktion verwenden. Der Lambdaausdruck kann auf alle Funktionen oder Datenmember zugreifen, auf die die einschließende Funktion zugreifen kann. Sie können explizit oder implizit erfassen, die **dies** Zeiger, um Zugriff auf die Funktionen und Datenmember der einschließenden Klasse bereitzustellen.  
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): erfassen **dies** nach Wert (`[*this]`) Wenn der Lambda-Ausdruck wird in asynchronen oder parallelen Vorgängen verwendet werden kann Gültigkeitsbereich verlässt das Originalobjekt, wo nach den Code ausführen kann.
   
- Sie können den `this`-Zeiger explizit in einer Funktion verwenden, wie hier gezeigt:  
+ Sie können die **dies** -Zeiger explizit in eine Funktion, wie hier gezeigt:  
   
 ```cpp  
 
@@ -292,9 +293,9 @@ void ApplyScale2(const vector<int>& v) const
 
 ```  
   
- Sie können den `this`-Zeiger auch implizit erfassen:  
+ Sie können auch Erfassen der **dies** Zeiger implizit:  
   
-```  
+```cpp 
 void ApplyScale(const vector<int>& v) const  
 {  
    for_each(v.begin(), v.end(),   
@@ -357,7 +358,7 @@ int main()
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die `ApplyScale`-Funktion verwendet einen Lambda-Ausdruck, um das Produkt des Skalierungswerts und eines jeden Elements in einem `vector`-Objekt auszugeben. Der Lambda-Ausdruck erfasst implizit den `this`-Zeiger, sodass er auf den `_scale`-Member zugreifen kann.  
+ Die `ApplyScale`-Funktion verwendet einen Lambda-Ausdruck, um das Produkt des Skalierungswerts und eines jeden Elements in einem `vector`-Objekt auszugeben. Der Lambdaausdruck erfasst implizit **dies** , damit darauf zugreifen, kann die `_scale` Member.  
   
  [[In diesem Artikel](#top)]  
   
@@ -428,7 +429,7 @@ After negate_all():
 ##  <a name="ehLambdaExpressions"></a> Behandeln von Ausnahmen  
   
 ### <a name="example"></a>Beispiel  
- Der Text eines Lambda-Ausdrucks folgt den Regeln für die strukturierte Ausnahmebehandlung (SEH) und die C++-Ausnahmebehandlung. Sie können eine ausgelöste Ausnahme im Text eines Lambda-Ausdrucks behandeln oder die Ausnahmebehandlung auf den umschließenden Gültigkeitsbereich verzögern. Im folgenden Beispiel wird die `for_each`-Funktion und ein Lambda-Ausdruck verwendet, um ein `vector`-Objekt mit den Werten eines anderen Objekts zu füllen. Er verwendet ein `try` / `catch` Block, um ungültigen Zugriff auf den ersten Vektor zu behandeln.  
+ Der Text eines Lambda-Ausdrucks folgt den Regeln für die strukturierte Ausnahmebehandlung (SEH) und die C++-Ausnahmebehandlung. Sie können eine ausgelöste Ausnahme im Text eines Lambdaausdrucks behandeln oder die Ausnahmebehandlung auf den umschließenden Gültigkeitsbereich verzögern. Im folgenden Beispiel wird die **For_each** -Funktion und ein Lambda-Ausdruck zum Füllen einer `vector` -Objekt mit den Werten eines anderen. Er verwendet eine **versuchen**/**catch** Block, um ungültigen Zugriff auf den ersten Vektor zu behandeln.  
   
 ### <a name="code"></a>Code  
   
@@ -479,7 +480,7 @@ Caught 'invalid vector<T> subscript'.
   
  [[In diesem Artikel](#top)]  
   
-##  <a name="managedLambdaExpressions"></a> Verwenden von Lambda-Ausdrücken mit verwalteten Typen (C + c++ / CLI)  
+##  <a name="managedLambdaExpressions"></a> Verwenden von Lambdaausdrücken mit verwalteten Typen (C++ / CLI)  
   
 ### <a name="example"></a>Beispiel  
  Die Erfassungsklausel eines Lambda-Ausdrucks darf keine Variable mit einem verwalteten Typ enthalten. Sie können jedoch ein Argument mit einem verwalteten Typ an die Parameterliste eines Lambda-Ausdrucks übergeben. Das folgende Beispiel enthält einen Lambda-Ausdruck, der die lokale nicht verwaltete `ch`-Variable nach ihrem Wert erfasst und ein <xref:System.String?displayProperty=fullName>-Objekt als Parameter akzeptiert.  
@@ -511,19 +512,19 @@ Hello!
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können Lambdaausdrücke auch mit der STL/CLR-Bibliothek verwenden. Weitere Informationen finden Sie unter [STL/CLR-Bibliotheksverweis](../dotnet/stl-clr-library-reference.md).  
+ Sie können Lambdaausdrücke auch mit der STL/CLR-Bibliothek verwenden. Weitere Informationen finden Sie unter [Referenz zur STL/CLR-Bibliothek](../dotnet/stl-clr-library-reference.md).  
   
 > [!IMPORTANT]
->  Lambdas werden in diesen verwalteten Entitäten der Common Language Runtime (CLR) nicht unterstützt: `ref class`, `ref struct`, `value class` und `value struct`.  
+>  Lambdas werden in diese Entitäten der common Language Runtime (CLR) verwaltet werden nicht unterstützt: **Verweisklasse**, **Referenzstruktur**, **Wertklasse**, und **wertstruktur**.  
   
  [[In diesem Artikel](#top)]  
   
 ## <a name="see-also"></a>Siehe auch  
  [Lambda-Ausdrücke](../cpp/lambda-expressions-in-cpp.md)   
- [Lambda-Ausdruckssyntax](../cpp/lambda-expression-syntax.md)   
+ [Lambdaausdruckssyntax](../cpp/lambda-expression-syntax.md)   
  [Auto](../cpp/auto-cpp.md)   
  [Function-Klasse](../standard-library/function-class.md)   
- [für "find_if"](../standard-library/algorithm-functions.md#find_if)   
+ [find_if](../standard-library/algorithm-functions.md#find_if)   
  [\<Algorithmus >](../standard-library/algorithm.md)   
  [Funktionsaufruf](../cpp/function-call-cpp.md)   
  [Vorlagen](../cpp/templates-cpp.md)   

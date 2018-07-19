@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098575"
 ---
 # <a name="crowset-class"></a>CRowset-Klasse
 Kapselt eine OLE DB-Rowset-Objekte sowie einige weitere im Zusammenhang-Hostingschnittstellen und bietet Methoden für Rowsetdaten bearbeiten.  

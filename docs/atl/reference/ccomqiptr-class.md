@@ -1,5 +1,5 @@
 ---
-title: CComQIPtr Klasse | Microsoft Docs
+title: CComQIPtr-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66c6cc1484ef84ce53ffaf5529575eea43431869
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e480fe81f8a6181aa8543710d050f0f20f288681
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884830"
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr-Klasse
-Ein intelligenter Zeiger-Klasse für die Verwaltung von COM-Schnittstellenzeiger auf.  
+Eine intelligente Zeiger-Klasse für die Verwaltung von COM-Schnittstellenzeiger.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,11 +36,11 @@ class CComQIPtr: public CComPtr<T>
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Eine COM-Schnittstelle, die Angabe des Typs der Zeiger gespeichert werden soll.  
+ *T*  
+ Eine COM-Schnittstelle, die den Typ des Zeigers gespeichert werden.  
   
- `piid`  
- Ein Zeiger auf die IID der `T`.  
+ *piid*  
+ Ein Zeiger auf die IID der *T*.  
   
 ## <a name="members"></a>Member  
   
@@ -56,7 +57,7 @@ class CComQIPtr: public CComPtr<T>
 |[CComQIPtr::operator =](#operator_eq)|Weist einen Zeiger auf den Member-Zeiger.|  
   
 ## <a name="remarks"></a>Hinweise  
- ATL verwendet `CComQIPtr` und [CComPtr](../../atl/reference/ccomptr-class.md) zum Verwalten von COM-Schnittstellenzeiger auf beide abgeleitet [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Beide Klassen ausführen automatische verweiszählung über Aufrufe von `AddRef` und **Version**. Überladene Operatoren zeigervorgängen zu behandeln.  
+ ATL verwendet `CComQIPtr` und [CComPtr](../../atl/reference/ccomptr-class.md) zum Verwalten von COM-Schnittstellenzeiger auf beide abgeleitet [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Beide Klassen führen Sie automatische verweiszählung, die durch Aufrufe von `AddRef` und `Release`. Überladene Operatoren Zeigeroperationen zu behandeln.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -79,14 +80,14 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lp`  
+ *LP*  
  Wird verwendet, um den Schnittstellenzeiger zu initialisieren.  
   
- `T`  
+ *T*  
  Eine COM-Schnittstelle.  
   
- `piid`  
- Ein Zeiger auf die IID der `T`.  
+ *piid*  
+ Ein Zeiger auf die IID der *T*.  
   
 ##  <a name="operator_eq"></a>  CComQIPtr::operator =  
  Der Zuweisungsoperator.  
@@ -98,14 +99,14 @@ T* operator= (IUnknown* lp) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lp`  
+ *LP*  
  Wird verwendet, um den Schnittstellenzeiger zu initialisieren.  
   
- `T`  
+ *T*  
  Eine COM-Schnittstelle.  
   
- `piid`  
- Ein Zeiger auf die IID der `T`.  
+ *piid*  
+ Ein Zeiger auf die IID der *T*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Zeiger auf die aktualisierte `CComQIPtr` Objekt.  
@@ -114,5 +115,5 @@ T* operator= (IUnknown* lp) throw();
  [CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
  [CComQIPtr::CComQIPtr](#ccomqiptr)   
  [CComPtrBase-Klasse](../../atl/reference/ccomptrbase-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)   
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
  [CComQIPtrElementTraits-Klasse](../../atl/reference/ccomqiptrelementtraits-class.md)

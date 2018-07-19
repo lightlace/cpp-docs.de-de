@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856712"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Hinzufügen, Bearbeiten oder Löschen von Steuerelementen
 Mit dem Dialog-Editor, können Sie hinzufügen, ändern Sie die Größe, bearbeiten und Löschen von Steuerelementen in Dialogfeldern. Sie können auch die Eigenschaften eines Steuerelements, z. B. seine ID, bearbeiten oder ob es sichtbare zur Laufzeit handelt.  

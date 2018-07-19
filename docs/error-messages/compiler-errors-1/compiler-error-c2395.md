@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225429"
 ---
 # <a name="compiler-error-c2395"></a>Compilerfehler C2395
 'your_type::operator'op'': CLR oder WinRT-Operator ist ungültig. Mindestens ein Parameter muss einer der folgenden Typen sein: 'T', 'T%', 'T&', 'T^', 'T^%', 'T^&', wobei T = 'your_type' ist  

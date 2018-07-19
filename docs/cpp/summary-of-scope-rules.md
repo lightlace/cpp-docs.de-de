@@ -1,5 +1,5 @@
 ---
-title: Zusammenfassung der Bereichsregeln | Microsoft Docs
+title: Zusammenfassung der Bereichsregeln | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d901103f36493e74f73b2edb18faa1188e704ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ce7c57688fae22c3bba844cff480ae3aec03785
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028137"
 ---
 # <a name="summary-of-scope-rules"></a>Zusammenfassung der Bereichsregeln
 Die Verwendung eines Name muss innerhalb seines Bereichs eindeutig sein (bis zu dem Punkt, an dem das Überladen bestimmt wird). Wenn der Name eine Funktion kennzeichnet, muss die Funktion im Hinblick auf Anzahl und Typ der Parameter eindeutig sein. Wenn der Name eindeutig bleibt [Memberzugriff](../cpp/member-access-control-cpp.md) Regeln angewendet werden.  
   
 ## <a name="constructor-initializers"></a>Konstruktorinitialisierer  
- Konstruktorinitialisierer (beschrieben [Initialisieren von Basen und Membern](http://msdn.microsoft.com/en-us/2f71377e-2b6b-49da-9a26-18e9b40226a1)) im Gültigkeitsbereich des äußersten Blocks des Konstruktors für den angegebenen ausgewertet werden. Daher können sie die Parameternamen des Konstruktors verwenden.  
+ Konstruktorinitialisierer (beschrieben [Initialisieren von Basen und Membern](http://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) werden ausgewertet, im Gültigkeitsbereich des äußersten Blocks des Konstruktors für die sie angegeben sind. Daher können sie die Parameternamen des Konstruktors verwenden.  
   
 ## <a name="global-names"></a>Globale Namen  
  Ein Name eines Objekts, einer Funktion oder eines Enumerators ist global, wenn er außerhalb einer Funktion oder Klasse eingefügt oder ihm der globale unäre Bereichsoperator (`::`) vorangestellt wird und er nicht in Verbindung mit einem dieser binären Operatoren verwendet wird:  
@@ -42,7 +43,7 @@ Die Verwendung eines Name muss innerhalb seines Bereichs eindeutig sein (bis zu 
 ## <a name="qualified-names"></a>Qualifizierte Namen  
  Namen, die mit dem binären Bereichsauflösungsoperator (`::`) verwendet werden, werden als "qualifizierte Namen" bezeichnet. Der Name, der nach dem binären Bereichsauflösungsoperator angegeben wird, muss einem Member der Klasse entsprechen, der auf der linken Seite des Operators angegeben oder ein Member der Basisklasse(n) ist.  
   
- Namen angegeben, nach dem Memberauswahloperator (**.** oder **->**) müssen Mitglieder des Klassentyps des Objekts, auf der linken Seite des Operators oder Member der Basisklasse(n) angegeben sein. Auf der rechten Seite des Operators Memberauswahl festgelegten Namen (**->**) kann auch Objekte eines anderen Klassentyps sein bereitgestellt, die auf die linke Seite des **->** ein Klassenobjekt ist und die Klasse einen überladenen Memberauswahloperator definiert (**->**), die in einen Zeiger auf einen anderen Klassentyp ausgewertet wird. (Diese Bereitstellung wird ausführlicher im [Klassenmemberzugriff](../cpp/member-access.md).)  
+ Nach dem Memberauswahloperator angegebenen Namen (**.** oder **->**) müssen Mitglieder des Klassentyps des Objekts auf der linken Seite des Operators oder Member der Basisklasse(n) angegeben sein. Auf der rechten Seite des Operators Memberauswahl angegebenen Namen (**->**) kann auch sein, Objekte des Klassentyps einer anderen bereitgestellt, die die linke Seite des **->** ist ein Objekt der Klasse und dass die Klasse einen überladenen Memberauswahloperator definiert (**->**), die auf einen Zeiger auf einen anderen Klassentyp ausgewertet wird. (Diese Bereitstellung wird ausführlicher erläutert [Klassenmemberzugriff](../cpp/member-access.md).)  
   
  Der Compiler sucht nach Namen in der folgenden Reihenfolge und hört auf, wenn der Name gefunden wird:  
   
@@ -62,11 +63,11 @@ Die Verwendung eines Name muss innerhalb seines Bereichs eindeutig sein (bis zu 
   
 1.  Namen, denen `::` vorangestellt wird, zwingen die Suche, im globalen Gültigkeitsbereich zu starten.  
   
-2.  Vor dem Namen der **Klasse**, `struct`, und **Union** Schlüsselwörter zwingen den Compiler, die nur für Suchen **Klasse**, `struct`, oder **Union**  Namen.  
+2.  Vor dem Namen der **Klasse**, **Struktur**, und **Union** Schlüsselwörter erzwingen, dass der Compiler nur für die Suche nach **Klasse**,  **Struktur**, oder **Union** Namen.  
   
-3.  Namen auf der linken Seite des Operators Bereichsauflösungsoperator (`::`) kann nur **Klasse**, `struct`, **Namespace**, oder **Union** Namen.  
+3.  Namen auf der linken Seite des Operators Bereichsauflösungsoperator (`::`) möglich. **Klasse**, **Struktur**, **Namespace**, oder **Union**Namen.  
   
- Wenn der Name auf einen nicht statischen Member verweist, aber in einer statischen Memberfunktion verwendet wird, wird eine Fehlermeldung generiert. Auf ähnliche Weise, wenn der Name auf einen nicht statischen Member in einer einschließenden Klasse verweist, eine Fehlermeldung generiert, da eingeschlossene Klassen keinen einschließenden Klasse **dies** Zeiger.  
+ Wenn der Name auf einen nicht statischen Member verweist, aber in einer statischen Memberfunktion verwendet wird, wird eine Fehlermeldung generiert. Auf ähnliche Weise, wenn der Name auf einen nicht statischen Member in einer einschließenden Klasse verweist, eine Fehlermeldung wird generiert, da eingeschlossene Klassen keine einschließende Klassen **dies** Zeiger.  
   
 ## <a name="function-parameter-names"></a>Funktionsparameternamen  
  Funktionsparameternamen in Funktionsdefinitionen werden als Bestandteil des Gültigkeitsbereichs des äußersten Blocks der Funktion angesehen. Daher sind sie lokale Namen und verlassen den Gültigkeitsbereich, wenn die Funktion beendet wird.  

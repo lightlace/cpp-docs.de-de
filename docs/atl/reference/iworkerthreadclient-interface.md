@@ -1,5 +1,5 @@
 ---
-title: IWorkerThreadClient Schnittstelle | Microsoft Docs
+title: IWorkerThreadClient-Schnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8336edb07d02bbbcd5775eaf3ef8fe0f735d3adb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86e35910469128ecaf38751d6db73094adf3422e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884723"
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient-Schnittstelle
 `IWorkerThreadClient` ist die Schnittstelle implementiert, die von Clients von der [CWorkerThread](../../atl/reference/cworkerthread-class.md) Klasse.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,17 +44,17 @@ __interface IWorkerThreadClient
   
 |||  
 |-|-|  
-|[CloseHandle](#closehandle)|Implementieren Sie diese Methode, um das diesem Objekt zugeordnete Handle nicht geschlossen.|  
-|[Führen Sie](#execute)|Implementieren Sie diese Methode, um Code auszuführen, wenn das Handle, das diesem Objekt zugeordneten signalisiert wird.|  
+|["CloseHandle"](#closehandle)|Implementieren Sie diese Methode, um das Handle, das diesem Objekt zugeordneten zu schließen.|  
+|[Führen Sie](#execute)|Implementieren Sie diese Methode, um Code auszuführen, wenn das diesem Objekt zugeordnete Handle signalisiert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Implementieren Sie diese Schnittstelle, wenn Sie über Code verfügen, die in Reaktion auf ein Handle signalisiert einem Arbeitsthread ausgeführt werden muss.  
+ Implementieren Sie diese Schnittstelle, wenn Sie über Code verfügen, die auf einem Arbeitsthread als Reaktion auf ein Handle signalisiert ausführen muss.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** atlutil.h  
+ **Header:** "atlutil.h"  
   
 ##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle  
- Implementieren Sie diese Methode, um das diesem Objekt zugeordnete Handle nicht geschlossen.  
+ Implementieren Sie diese Methode, um das Handle, das diesem Objekt zugeordneten zu schließen.  
   
 ```
 HRESULT CloseHandle(HANDLE  hHandle);
@@ -64,10 +65,10 @@ HRESULT CloseHandle(HANDLE  hHandle);
  Das Handle geschlossen werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Geben Sie S_OK zurück, auf Erfolg oder einen HRESULT-Fehler bei einem Fehler.  
+ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Handle übergeben an diese Methode wurde zuvor mit diesem Objekt verknüpften durch einen Aufruf von [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ Das Handle, das an diese Methode übergeben wurde bereits zugeordnet. dieses Objekt durch einen Aufruf von [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ### <a name="example"></a>Beispiel  
  Der folgende Code zeigt eine einfache Implementierung der `IWorkerThreadClient::CloseHandle`.  
@@ -75,24 +76,24 @@ HRESULT CloseHandle(HANDLE  hHandle);
  [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]  
   
 ##  <a name="execute"></a>  IWorkerThreadClient::Execute  
- Implementieren Sie diese Methode, um Code auszuführen, wenn das Handle, das diesem Objekt zugeordneten signalisiert wird.  
+ Implementieren Sie diese Methode, um Code auszuführen, wenn das diesem Objekt zugeordnete Handle signalisiert wird.  
   
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwParam`  
+ *dwParam*  
  Der Benutzerparameter.  
   
- `hObject`  
- Das Handle, das signalisiert wird.  
+ *hObject*  
+ Das Handle, das signalisiert wurde.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Geben Sie S_OK zurück, auf Erfolg oder einen HRESULT-Fehler bei einem Fehler.  
+ Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Handle und die DWORD/Zeiger an diese Methode übergebenen wurden zuvor mit diesem Objekt durch einen Aufruf von verknüpften [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ Das Handle und die DWORD/Zeiger an diese Methode übergeben wurden zuvor mit diesem Objekt durch einen Aufruf von verknüpften [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ### <a name="example"></a>Beispiel  
  Der folgende Code zeigt eine einfache Implementierung der `IWorkerThreadClient::Execute`.  

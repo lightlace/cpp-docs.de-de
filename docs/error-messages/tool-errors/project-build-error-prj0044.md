@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324537"
 ---
 # <a name="project-build-error-prj0044"></a>Projektbuildfehler PRJ0044
 Die 'Zusätzliche Abhängigkeiten'-Eigenschaft für benutzerdefinierte Buildregel 'Rule' Datei 'File' zugewiesen ist ungültig. Die Eigenschaft enthält „string“, die zu „value“ ausgewertet wird.  

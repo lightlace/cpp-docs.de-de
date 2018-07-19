@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383960"
 ---
 # <a name="win32-internet-extensions-wininet"></a>Win32-Interneterweiterungen (WinInet)
 Eine Internetclientanwendung ist ein Programm, das Informationen aus einer Netzwerk-Datenquelle (Server) über Internet-Protokolle wie Gopher, FTP oder HTTP-zugreift. Eine Internetclientanwendung kann es sich um einen Server zum Abrufen von Daten, z. B. Weather Maps, Aktienkurse oder "Zeitung" Schlagzeilen, z. B. zugreifen. Der Internet-Client kann den Server über ein externes Netzwerk (Internet) oder eines internen Netzwerks (Intranet bezeichnet) zugreifen.  

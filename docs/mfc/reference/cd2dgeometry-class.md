@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05bfd912d3c4b6ee8b462775f6919c5fe81cc936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51e3c24464ff74ab262cd241dcdce68037d530f9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955101"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry-Klasse
 Ein Wrapper für ID2D1Geometry.  
@@ -140,7 +141,7 @@ void Attach(ID2D1Geometry* pResource);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pResource`  
+ *pResource*  
  Vorhandene Ressourcenschnittstelle. NULL darf nicht sein  
   
 ##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
@@ -153,10 +154,10 @@ CD2DGeometry(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentTarget`  
+ *pParentTarget*  
  Ein Zeiger auf das Renderziel.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
 ##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
@@ -172,19 +173,19 @@ BOOL CombineWithGeometry(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `inputGeometry`  
+ *inputGeometry*  
  Die Geometrie, die mit dieser Instanz.  
   
- `combineMode`  
+ *combineMode*  
  Der Typ des auszuführenden kombinieren-Vorgangs.  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  Die Transformation auf InputGeometry vor dem vereinen angewendet werden soll.  
   
- `geometrySink`  
+ *geometrySink*  
  Das Ergebnis des Vorgangs kombinieren.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometrien. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -201,13 +202,13 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `inputGeometry`  
+ *inputGeometry*  
  Die Geometrie zu testen.  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  Die Transformation auf InputGeometry angewendet werden soll.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometrien. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -224,13 +225,13 @@ BOOL ComputeArea(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `worldTransform`  
+ *worldTransform*  
  Die Transformation, die auf diese Geometrie anwenden, bevor das Berechnen der Fläche.  
   
- `area`  
+ *Bereich*  
  Bei der Rückgabe dieser Methode enthält einen Zeiger auf den Bereich der transformierten, vereinfachte Version dieser Geometry-Instanz. Sie müssen das Zuweisen von Speicher für diesen Parameter.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -247,13 +248,13 @@ BOOL ComputeLength(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `worldTransform`  
+ *worldTransform*  
  Die Transformation auf die Geometrie anwenden, bevor seine Länge berechnet werden soll.  
   
- `length`  
+ *length*  
  Bei der Rückgabe dieser Methode enthält einen Zeiger auf die Länge der Geometry-Instanz. Für geschlossene Geometrien schließt die Länge ein impliziten schließende-Segments. Sie müssen das Zuweisen von Speicher für diesen Parameter.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -272,19 +273,19 @@ BOOL ComputePointAtLength(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `length`  
+ *length*  
  Die Entfernung entlang der Geometrie des Punkt und Tangens gefunden. Wenn dieser Wert kleiner 0 ist, wird diese Methode den ersten Punkt in der Geometrie berechnet. Wenn dieser Abstand größer als die Länge der Geometry-Instanz ist, wird diese Methode den letzten Punkt in der Geometrie berechnet.  
   
- `worldTransform`  
+ *worldTransform*  
  Die Transformation vor dem Berechnen des angegebenen Punkt und Tangens auf die Geometrie angewendet werden soll.  
   
- `point`  
+ *Punkt*  
  Die Position, an der angegebenen Entfernung entlang der Geometrie werden soll. Wenn die Geometrie leer ist, enthält dieser Punkt "NaN" als x und y Werte.  
   
- `unitTangentVector`  
+ *unitTangentVector*  
  Bei der Rückgabe dieser Methode enthält einen Zeiger auf den Tangens Vektor im angegebenen Abstand entlang der Geometrie. Wenn die Geometrie leer ist, enthält dieser Vektor "NaN" als x und y Werte. Sie müssen das Zuweisen von Speicher für diesen Parameter.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -319,16 +320,16 @@ BOOL FillContainsPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `point`  
+ *Punkt*  
  Der Punkt zu testen.  
   
- `worldTransform`  
+ *worldTransform*  
  Die Transformation auf die Geometrie vor für die Kapselung testen anwenden.  
   
- `contains`  
+ *Enthält*  
  Rückkehr dieser Methode enthält einen Bool-Wert, der TRUE ist, wenn die Fläche, die durch die Geometrie ausgefüllt Punkt enthält. andernfalls "false". Sie müssen das Zuweisen von Speicher für diesen Parameter.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Die numerische Genauigkeit, mit denen die präzise geometrische Pfad und den Pfadschnittmenge berechnet wird. Fehlende Füllung kleiner als die Anzahl der Punkte gelten weiterhin in. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -353,8 +354,8 @@ CD2DRectF& bounds) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `worldTransform`  
- `bounds`  
+ *worldTransform*  
+ *Grenzen*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -371,19 +372,19 @@ BOOL GetWidenedBounds(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `strokeWidth`  
+ *strokeWidth*  
  Der Betrag, um die Geometrie, die durch seine Kontur Verlauf erweitert werden.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Der Stil der Kontur, die die Geometrie erweitert wird.  
   
- `worldTransform`  
+ *worldTransform*  
  Eine Transformation, die auf die Geometrie angewendet werden soll, nachdem die Geometrie transformiert und die Geometrie gezeichnet wurde.  
   
- `bounds`  
+ *Grenzen*  
  Wenn diese Methode zurückgibt, enthält die Grenzen der erweiterten Geometrie. Sie müssen das Zuweisen von Speicher für diesen Parameter.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometrien. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -427,13 +428,13 @@ BOOL Outline(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `worldTransform`  
+ *worldTransform*  
  Die Transformation für die Geometrie Gliederung gelten.  
   
- `geometrySink`  
+ *geometrySink*  
  Die ID2D1SimplifiedGeometrySink, an das die transformierten Geometry-Gliederung angefügt wird.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -451,16 +452,16 @@ BOOL Simplify(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `simplificationOption`  
+ *simplificationOption*  
  Ein Wert, der angibt, ob die vereinfachte Geometrie Kurven enthalten soll.  
   
- `worldTransform`  
+ *worldTransform*  
  Die Transformation an, auf die vereinfachte Geometrie angewendet werden soll.  
   
- `geometrySink`  
+ *geometrySink*  
  Die ID2D1SimplifiedGeometrySink, an das die vereinfachte Geometrie angefügt wird.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -480,22 +481,22 @@ BOOL StrokeContainsPoint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `point`  
+ *Punkt*  
  Der zu überprüfende Punkt.  
   
- `strokeWidth`  
+ *strokeWidth*  
  Die Stärke des Strichs angewendet werden soll.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Der Stil der Kontur anwenden.  
   
- `worldTransform`  
+ *worldTransform*  
  Die Transformation an, auf die gestrichelte Geometrie angewendet werden soll.  
   
- `contains`  
+ *Enthält*  
  Bei der Rückgabe dieser Methode enthält einen booleschen Wert auf "true" festgelegt werden, wenn die Geometrie Strich angegebenen Punkt enthält. andernfalls "false". Sie müssen das Zuweisen von Speicher für diesen Parameter.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Die numerische Genauigkeit, mit denen die präzise geometrische Pfad und den Pfadschnittmenge berechnet wird. Fehlende Strichs kleiner als die Anzahl der Punkte gelten weiterhin in. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -512,13 +513,13 @@ BOOL Tessellate(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `worldTransform`  
+ *worldTransform*  
  Die Transformation für dieses Geometry, oder NULL.  
   
- `tessellationSink`  
+ *tessellationSink*  
  Die ID2D1TessellationSink an das der Mosaikprozess angefügt wird.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -537,19 +538,19 @@ BOOL Widen(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `strokeWidth`  
+ *strokeWidth*  
  Der Betrag, um die Geometrie erweitert werden.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Der Stil der Kontur für die Geometrie, oder NULL.  
   
- `worldTransform`  
+ *worldTransform*  
  Die Transformation für die Geometrie gelten, nach dem erweitern.  
   
- `geometrySink`  
+ *geometrySink*  
  Die ID2D1SimplifiedGeometrySink an das vergrößerte Geometrie angefügt wird.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Die maximale Grenzen für die Entfernung zwischen Punkten in die polygonale Näherung der Geometry-Instanz. Bei kleineren Werten genauere Ergebnisse erzeugen jedoch dazu führen, dass Ausführung verlangsamt.  
   
 ### <a name="return-value"></a>Rückgabewert  

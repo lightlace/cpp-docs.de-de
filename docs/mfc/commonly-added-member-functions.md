@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341247"
 ---
 # <a name="commonly-added-member-functions"></a>Häufig hinzugefügte Memberfunktionen
 Wenn das Dialogfeld Pushbuttons als OK oder "Abbrechen" enthält, müssen Sie Meldungshandler Memberfunktionen in eigener Dialogfeldklassen So reagieren Sie auf die Steuerelemente-benachrichtigungsmeldungen, sie generieren, schreiben. Ein Beispiel finden Sie die [Scribble](../visual-cpp-samples.md) Beispielprogramm. Sie können auch Steuerelemente-benachrichtigungsmeldungen von anderen Steuerelementen in einem Dialogfeld behandeln.  

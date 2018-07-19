@@ -1,5 +1,5 @@
 ---
-title: Nicht dem Standard entsprechendes Verhalten | Microsoft Docs
+title: Nicht dem Standard entsprechendes Verhalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d421f00839d21236741e8d33f1415fe129b18c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941797"
 ---
 # <a name="nonstandard-behavior"></a>Nicht dem Standard entsprechendes Verhalten
 Die folgenden Abschnitte listen einige Bereiche auf, wo die Visual C++-Implementierung von C++ nicht mit dem C++-Standard übereinstimmt. Die unten angegebenen Abschnittszahlen beziehen sich auf die Abschnittszahlen im C++ 11-Standard (ISO/IEC 14882:2011(E)).  
   
- Die Liste von compilerlimits, die von den in der C++-Standard definierten abweichen Situation, in der [Compilerlimits](../cpp/compiler-limits.md).  
+ Die Liste der Compiler-Grenzen, die von den in der C++-Standard definierten abweichen erhält [Compiler-Grenzen](../cpp/compiler-limits.md).  
   
 ## <a name="covariant-return-types"></a>Kovariante Rückgabetypen  
- Virtuelle Basisklassen werden nicht als Covariant-Rückgabetypen unterstützt, wenn die virtuelle Funktion eine variable Anzahl von Argumenten hat. Dies entspricht nicht Abschnitt 10.3, Absatz 7 der C++ ISO-Spezifikation. Im folgende Beispiel wird nicht kompiliert, wodurch Compilerfehler [C2688 generiert](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
+ Virtuelle Basisklassen werden nicht als Covariant-Rückgabetypen unterstützt, wenn die virtuelle Funktion eine variable Anzahl von Argumenten hat. Dies entspricht nicht Abschnitt 10.3, Absatz 7 der C++ ISO-Spezifikation. Im folgende Beispiel wird nicht kompiliert, sodass Compilerfehler [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
   
 ```cpp  
 // CovariantReturn.cpp  
@@ -80,7 +81,7 @@ void g() throw();    // parsed and used
  Weitere Informationen zu Ausnahmespezifikationen finden Sie unter [Ausnahmespezifikationen](../cpp/exception-specifications-throw-cpp.md).  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- Der C++-Standard gibt an, dass [char_traits](../standard-library/char-traits-struct.md#eof) muss nicht entsprechen, die eine gültige `char_type` Wert. Der Visual C++-Compiler erzwingt diese Einschränkung für Typ `char`, jedoch nicht für Typ `wchar_t`. Dies entspricht nicht der Anforderung in Tabelle 62, in Abschnitt 12.1.1 der C++ ISO-Spezifikation. Das unten gezeigte Beispiel veranschaulicht dies.  
+ Der C++-Standard gibt an, dass [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) muss nicht entsprechen, die eine gültige `char_type` Wert. Visual C++-Compiler erzwingt diese Einschränkung für Typ **Char**, jedoch nicht für Typ `wchar_t`. Dies entspricht nicht der Anforderung in Tabelle 62, in Abschnitt 12.1.1 der C++ ISO-Spezifikation. Das unten gezeigte Beispiel veranschaulicht dies.  
   
 ```cpp  
 #include <iostream>  

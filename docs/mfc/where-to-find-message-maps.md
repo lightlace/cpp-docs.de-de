@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383392"
 ---
 # <a name="where-to-find-message-maps"></a>Wo sich Meldungszuordnungen befinden
 Wenn Sie eine neue skelettanwendung mit dem Assistenten zum Erstellen, schreibt der Anwendungs-Assistent eine meldungszuordnung für jede Befehlsziel Klasse, die es erstellt für Sie. Dies schließt die abgeleiteten Anwendung, Dokument anzeigen und Rahmenfensterklassen. Einige dieser meldungszuordnungen wurde bereits die Einträge, die vom Anwendungs-Assistenten für bestimmte Nachrichten und die vordefinierten Befehle bereitgestellt, und einige sind einfach Platzhalter für Handler, die hinzugefügt wird.  

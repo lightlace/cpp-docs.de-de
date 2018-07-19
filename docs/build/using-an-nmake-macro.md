@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380575"
 ---
 # <a name="using-an-nmake-macro"></a>Verwenden eines NMAKE-Makros
 Wenn ein Makro verwenden möchten, schließen Sie seinen Namen in Klammern, die ein Dollarzeichen ($) vorangestellt sind, wie folgt.  

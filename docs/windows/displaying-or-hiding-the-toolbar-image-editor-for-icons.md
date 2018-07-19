@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872987"
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Ein- oder Ausblenden der Symbolleiste (Bildbearbeitung für Symbole)
 Da viele der Zeichenwerkzeuge verfügbar sind, die die [Tastatur](../windows/accelerator-keys-image-editor-for-icons.md), es ist manchmal hilfreich, die Grafik-Editor-Symbolleiste ausblenden.  

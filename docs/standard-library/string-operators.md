@@ -24,11 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: b0ca7da732786c2f0ff6087052b5867150702a5e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966620"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt;-Operatoren
 
@@ -106,9 +107,9 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` , verkettet werden soll.
+*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` , verkettet werden soll.
 
-`right` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` , verkettet werden soll.
+*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` , verkettet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -116,7 +117,7 @@ Die Zeichenfolge, die die Verkettung der Eingabezeichenfolgen ist.
 
 ### <a name="remarks"></a>Hinweise
 
-Jede der Funktionen überlädt `operator+`, um zwei Objekte der Vorlagenklasse [basic_string-Klasse](../standard-library/basic-string-class.md) zu verketten. Alle effektiv return `basic_string` \< **CharType**, **Traits**, **Allocator**> (_ *Links*). [append](../standard-library/basic-string-class.md#append)(\_ *rechts*).
+Jede der Funktionen überlädt `operator+`, um zwei Objekte der Vorlagenklasse [basic_string-Klasse](../standard-library/basic-string-class.md) zu verketten. Alle zurück `basic_string` \< **CharType**, **"traits"**, **Allocator**> (_ *Links*). [Fügen Sie](../standard-library/basic-string-class.md#append)(\_ *rechts*).
 
 ### <a name="example"></a>Beispiel
 
@@ -193,9 +194,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
 
-`right` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -282,9 +283,9 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
 
-`right` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -371,9 +372,9 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
 
-`right` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -465,9 +466,9 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
 
-`right` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -556,13 +557,13 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parameter
 
-_Ostr den Ausgabestream geschrieben wird.
+*_Ostr* den Ausgabestream geschrieben wird.
 
-`str` Die Zeichenfolge, die in den Ausgabestream eingegeben werden.
+*Str* die Zeichenfolge, die in den Ausgabestream eingegeben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Schreibt den Wert der angegebenen Zeichenfolge in den Ausgabestream `_Ostr`.
+Schreibt den Wert der angegebenen Zeichenfolge in den Ausgabestream *_Ostr*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -591,9 +592,9 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
 
-`right` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -692,9 +693,9 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*linken* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
 
-`right` Eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
+*richtige* eine Zeichenfolge im C-Format oder ein Objekt des Typs `basic_string` verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -783,19 +784,19 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parameter
 
-`_Istr` Der Eingabedatenstrom verwendet, um die Sequenz zu extrahieren.
+*_Istr* der Eingabestream, um die Sequenz zu extrahieren.
 
-`right` Die Zeichenfolge, die aus dem Eingabestream extrahiert wird.
+*richtige* die Zeichenfolge, die aus dem Eingabestream extrahiert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Liest den Wert der angegebenen Zeichenfolge aus `_Istr` und gibt ihn in `right`.
+Liest den Wert der angegebenen Zeichenfolge aus *_Istr* und gibt ihn in *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
 Der Operator überspringt die führenden Leerzeichen, sofern das `skipws`-Flag nicht festgelegt ist. Es liest alle folgenden Zeichen, bis das nächste Zeichen ein Leerzeichen ist oder das Ende der Datei erreicht wird.
 
-Die Vorlagenfunktion überlädt **operator>>**, um die von `right` gesteuerte Sequenz durch eine Sequenz von Elementen zu ersetzen, die aus dem Stream `_Istr` extrahiert wurden. Die Extraktion stoppt:
+Die Vorlagenfunktion überlädt **Operator >>** ersetzt die gesteuerte Sequenz durch *rechten* mit einer Sequenz von Elementen aus dem Datenstrom extrahiert *_Istr*. Die Extraktion stoppt:
 
 - Am Ende der Datei.
 
@@ -803,9 +804,9 @@ Die Vorlagenfunktion überlädt **operator>>**, um die von `right` gesteuerte Se
 
 Nachdem die Funktion `_Istr` extrahiert hat. [max_size](../standard-library/basic-string-class.md#max_size) Elemente.
 
-- Nachdem die Funktion ein Element extrahiert *ch* für die [Use_facet](../standard-library/basic-filebuf-class.md#open)< **Ctype** \< **CharType**> > ( `getloc`). **ist**( **Ctype** \< **CharType**>:: **Speicherplatz**, *ch*) ist "true" in diesem Fall das Zeichen wird zurückgesetzt .
+- Nachdem die Funktion ein Element extrahiert *ch* für die [Use_facet](../standard-library/basic-filebuf-class.md#open)< **Ctype** \< **CharType**> > ( `getloc`). **ist**( **Ctype** \< **CharType**>:: **Speicherplatz**, *ch*) ist "true" in diesem Fall wird das Zeichen zurückgestellt .
 
-Wenn die Funktion keine Elemente extrahiert, ruft sie [setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`) auf. In jedem Fall ruft **Istr**. **Breite**(0) und gibt \* **dies**.
+Wenn die Funktion keine Elemente extrahiert, ruft es [Setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). In jedem Fall ruft **Istr**. **Breite**(0) und gibt \* **dies**.
 
 ### <a name="example"></a>Beispiel
 

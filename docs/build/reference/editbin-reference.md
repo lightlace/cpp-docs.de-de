@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372307"
 ---
 # <a name="editbin-reference"></a>EDITBIN-Referenz
 Der Microsoft COFF-Binär-Editor (EDITBIN. EXE-Datei) ändert die Binärdateien Common Object File Format (COFF). EDITBIN können um Objektdateien, ausführbaren Dateien und Dynamic Link Libraries (DLL) zu ändern.  

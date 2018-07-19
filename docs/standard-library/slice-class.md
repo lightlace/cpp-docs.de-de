@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17dc3e53504add2507617c95439fa7d32565a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d0f45f1b8eac09ae28f8a289a59d8a16a709295
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965876"
 ---
 # <a name="slice-class"></a>slice-Klasse
 
@@ -145,15 +146,15 @@ slice(
 
 ### <a name="parameters"></a>Parameter
 
-`_StartIndex` Der Valarray Index des ersten Elements in der Teilmenge.
+*_StartIndex* der Valarray-Index des ersten Elements in der Teilmenge.
 
-`_Len` Die Anzahl der Elemente in der Teilmenge.
+*_Len* die Anzahl der Elemente in der Teilmenge.
 
-`stride` Der Abstand zwischen Elementen in der Teilmenge.
+*STRIDE* den Abstand zwischen Elementen in der Teilmenge.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Standardkonstruktor speichert Nullen für Startindex, Gesamtlänge und Segment. Der zweite Konstruktor speichert `_StartIndex` für den Startindex, `_Len` für die Gesamtlänge und `stride` für das Segment.
+Der Standardkonstruktor speichert Nullen für Startindex, Gesamtlänge und Segment. Der zweite Konstruktor speichert *_StartIndex* für den Startindex, *_Len* für die Gesamtlänge und *stride* für das Segment.
 
 ### <a name="remarks"></a>Hinweise
 

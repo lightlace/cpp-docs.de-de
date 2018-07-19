@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354066"
 ---
 # <a name="dual-interfaces-and-events"></a>Duale Schnittstellen und Ereignisse
 Es ist, zwar möglich, eine Ereignisschnittstelle als Dual entwerfen stehen eine Reihe von guten Entwurfsgründen nicht zu tun. Die grundlegende Ursache ist, dass die Quelle des Ereignisses nur, das Ereignis Vtable oder über ausgelöst werden `Invoke`, aber nicht beides. Wenn die Ereignisquelle des Ereignisses als eine direkte Vtable-Methodenaufruf Auslösung, der `IDispatch` Methoden werden nie verwendet werden, und es ist klar, dass die Schnittstelle sollte eine reine Vtable-Schnittstelle wurde. Wenn die Ereignisquelle des Ereignisses als Aufruf Auslösung `Invoke`werden nie die Vtable-Methoden verwendet werden, und es ist klar, dass die Schnittstelle einer Dispinterface hätten verwendet werden soll. Wenn Sie Ihre Ereignisschnittstellen als duale Schnittstellen definieren, müssen Sie erfordern werden Clients, die Teil einer Schnittstelle zu implementieren, die nie verwendet wird.  

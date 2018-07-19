@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687464"
 ---
 # <a name="2721-private"></a>2.7.2.1 private
 Die `private` -Klausel deklariert die Variablen in der Variablenliste für jeden Thread in einem Team privat sein. Die Syntax der `private` -Klausel ist wie folgt:  

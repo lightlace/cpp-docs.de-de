@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf5553904c859e38f42423408c0b7bddd9237fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1209353f10e52b13202a91ae120057ba85dfa805
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930096"
 ---
 # <a name="mfc-activex-controls"></a>MFC-ActiveX-Steuerelemente
 Ein ActiveX-Steuerelement ist eine wiederverwendbare Softwarekomponente, die auf dem Component Object Model (COM) basiert. Dieses Modell unterstützt zahlreiche OLE-Funktionen und kann an die unterschiedlichsten Softwareanforderungen angepasst werden. ActiveX-Steuerelemente sind sowohl für den herkömmlichen Einsatz in ActiveX-Steuerelementcontainern als auch für die Verwendung in World Wide Web-Seiten im Internet geeignet. Sie können ActiveX-Steuerelemente erstellen, entweder mit MFC beschrieben hier oder mit der [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
@@ -76,7 +77,7 @@ Kommunikation zwischen einem ActiveX-Steuerelement-Container und einem ActiveX-S
   
  Die vorherige Abbildung zeigt auch, wie andere OLE-Schnittstellen (mit Ausnahme von Automatisierung und Ereignisse) von Steuerelementen behandelt werden.  
   
- Die gesamte Kommunikation eines Steuerelements mit dem Container wird durch `COleControl` ausgeführt. Einige der Anforderungen für den Container, behandeln **COleControl** wird Memberfunktionen aufrufen, die in der Control-Klasse implementiert werden. Alle Methoden und einige Eigenschaften werden auf diese Weise behandelt. Die Klasse des Steuerelements kann die Kommunikation mit dem Container durch Aufrufen von Memberfunktionen von `COleControl` auch initiieren. Ereignisse werden auf diese Weise ausgelöst.  
+ Die gesamte Kommunikation eines Steuerelements mit dem Container wird durch `COleControl` ausgeführt. Einige der Anforderungen für den Container, behandeln `COleControl` wird Memberfunktionen aufrufen, die in der Control-Klasse implementiert werden. Alle Methoden und einige Eigenschaften werden auf diese Weise behandelt. Die Klasse des Steuerelements kann die Kommunikation mit dem Container durch Aufrufen von Memberfunktionen von `COleControl` auch initiieren. Ereignisse werden auf diese Weise ausgelöst.  
   
 ##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Aktive und inaktive Zustände eines ActiveX-Steuerelements  
  Ein Steuerelement verfügt über zwei grundlegende Zustände: aktiv und inaktiv. In der Vergangenheit unterschieden sich diese Zustände dadurch, ob das Steuerelement ein Fenster hatte oder nicht. Ein aktives Steuerelement wies ein Fenster auf, ein inaktives Steuerelement wies kein Fenster auf. Mit der Einführung der fensterlose Aktivierung, ist diese Unterscheidung nicht mehr universell, gilt aber weiterhin für viele Steuerelemente.  

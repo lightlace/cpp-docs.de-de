@@ -1,5 +1,5 @@
 ---
-title: Ereignissenke Zuordnungen | Microsoft Docs
+title: Ereignissenke Zuordnungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,60 +16,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ababaab7324d712457f6411ed731274ea361084b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0322d6b304366e598fc3db206d4c2e4b9b9d6315
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336604"
 ---
 # <a name="event-sink-maps"></a>Ereignissenkenzuordnungen
-Bei einem eingebetteten OLE-Steuerelements ein Ereignis ausgelöst wird, erhält der Container des Steuerelements das Ereignis mit einem Mechanismus, der eine "Senke ereigniszuordnung," von MFC bereitgestellten aufgerufen. Dieses Ereignissenke Zuordnung kennzeichnet Handlerfunktionen für jedes Ereignis als auch Parameter dieser Ereignisse. Weitere Informationen zu ereignissenkenzuordnungen, finden Sie im Artikel [ActiveX-Steuerelementcontainer](../../mfc/activex-control-containers.md).  
+Wenn eingebettete OLE-Steuerelements ein Ereignis ausgelöst wird, erhält der Container des Steuerelements das Ereignis mithilfe von sogenannten, eine "Event-Senke-Zuordnung," von MFC bereitgestellten. Diese Senke ereigniszuordnung kennzeichnet Handlerfunktionen für jedes Ereignis als auch die Parameter dieser Ereignisse. Weitere Informationen zu ereignissenkenzuordnungen, finden Sie im Artikel [ActiveX-Steuerelementcontainer](../../mfc/activex-control-containers.md).  
   
 ### <a name="event-sink-maps"></a>Ereignissenkenzuordnungen  
   
 |||  
 |-|-|  
-|[BEGIN_EVENTSINK_MAP](#begin_eventsink_map)|Startet die Definition einer Senke ereigniszuordnung an.|  
-|[DECLARE_EVENTSINK_MAP](#declare_eventsink_map)|Deklariert eine Ereignis Sink-Zuordnung.|  
-|[END_EVENTSINK_MAP](#end_eventsink_map)|Beendet die Definition einer Senke ereigniszuordnung an.|  
+|[BEGIN_EVENTSINK_MAP](#begin_eventsink_map)|Startet die Definition eine Senke-Event-Zuordnung.|  
+|[DECLARE_EVENTSINK_MAP](#declare_eventsink_map)|Deklariert eine Zuordnung der Ereignis-Senke.|  
+|[END_EVENTSINK_MAP](#end_eventsink_map)|Beendet die Definition eine Senke-Event-Zuordnung.|  
 |[ON_EVENT](#on_event)|Definiert einen Ereignishandler für ein bestimmtes Ereignis.|  
-|[ON_EVENT_RANGE](#on_event_range)|Definiert einen Ereignishandler für ein bestimmtes Ereignis ausgelöst wird, aus einem Satz von OLE-Steuerelemente.|  
-|[ON_EVENT_REFLECT](#on_event_reflect)|Empfängt Ereignisse vom Steuerelement ausgelöst werden, bevor sie von der Container des Steuerelements behandelt werden.|  
-|[ON_PROPNOTIFY](#on_propnotify)|Definiert einen Handler für handlingbenachrichtigungen-Eigenschaft eines OLE-Steuerelements an.|  
-|[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|Definiert einen Handler für die Eigenschaft handlingbenachrichtigungen aus einem Satz von OLE-Steuerelemente.|  
-|[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|Empfängt Eigenschaft Benachrichtigungen, die vom Steuerelement gesendet wird, bevor sie von der Container des Steuerelements behandelt werden.|  
+|[ON_EVENT_RANGE](#on_event_range)|Definiert einen Ereignishandler für ein bestimmtes Ereignis ausgelöst wird, aus einer Reihe von OLE-Steuerelemente.|  
+|[ON_EVENT_REFLECT](#on_event_reflect)|Empfängt Ereignisse vom Steuerelement ausgelöst wird, bevor sie vom Container des Steuerelements verarbeitet werden.|  
+|[ON_PROPNOTIFY](#on_propnotify)|Definiert einen Handler für das Behandeln von eigenschaftsbenachrichtigungen eines OLE-Steuerelements.|  
+|[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|Definiert einen Handler für die Behandlung von eigenschaftsbenachrichtigungen aus einer Reihe von OLE-Steuerelemente.|  
+|[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|Empfängt eigenschaftsbenachrichtigungen vom Steuerelement gesendet werden, bevor sie vom Container des Steuerelements verarbeitet werden.|  
   
 ##  <a name="begin_eventsink_map"></a>  BEGIN_EVENTSINK_MAP  
- Die Definition von der Senke ereigniszuordnung beginnt.  
+ Der Beginn der Definition der Zuordnung Ereignissenke.  
   
 ```   
 BEGIN_EVENTSINK_MAP(theClass, baseClass)  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theClass`  
- Gibt an, dass der Name der Steuerelementklasse, deren-Ereignissenke ordnen.  
+ *theClass*  
+ Gibt an, dass der Name der Steuerelement-Klasse, deren Ereignissenke eine Zuordnung, ist.  
   
- `baseClass`  
- Gibt den Namen der Basisklasse der `theClass`.  
+ *Basisklasse*  
+ Gibt den Namen der Basisklasse der *TheClass*.  
   
 ### <a name="remarks"></a>Hinweise  
- Starten Sie in der Implementierungsdatei (.cpp), die die Memberfunktionen für die Klasse definiert, die Senke ereigniszuordnung mit der `BEGIN_EVENTSINK_MAP` -Makro, dann fügen Sie Makroeinträge für jedes Ereignis benachrichtigt zu werden, und schließen Sie die Senke ereigniszuordnung mit der `END_EVENTSINK_MAP` Makro.  
+ Starten Sie in der Implementierungsdatei (.cpp), die die Member-Funktionen für die Klasse definiert die Senke ereigniszuordnung mit dem BEGIN_EVENTSINK_MAP-Makro, und klicken Sie dann hinzufügen Makroeinträge für jedes Ereignis benachrichtigt werden sollen, und dem Abschließen der Ereignis-Sink-Zuordnung mit dem END_EVENTSINK_MAP-Makro.  
   
- Weitere Informationen zu ereignissenkenzuordnungen und OLE-Steuerelement-Container, finden Sie im Artikel [ActiveX-Steuerelementcontainer](../../mfc/activex-control-containers.md).  
+ Weitere Informationen zu ereignissenkenzuordnungen und OLE-Control-Container, finden Sie im Artikel [ActiveX-Steuerelementcontainer](../../mfc/activex-control-containers.md).  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
 ##  <a name="declare_eventsink_map"></a>  DECLARE_EVENTSINK_MAP  
- Ein OLE-Container bieten eine ereigniszuordnung Senke, um die Ereignisse anzugeben, denen der Container der benachrichtigt wird.  
+ Ein OLE-Container bieten eine Senke ereigniszuordnung zum Angeben von Ereignissen, die, denen der Container, der benachrichtigt werden soll.  
   
 ```   
 DECLARE_EVENTSINK_MAP()   
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden der `DECLARE_EVENTSINK_MAP` Makro am Ende der Klassendeklaration. Klicken Sie auf die. CPP-Datei, die das Element definiert Funktionen für die Klasse, verwenden Sie die `BEGIN_EVENTSINK_MAP` -Makro, Makroeinträge für jedes der Ereignisse, benachrichtigt zu werden und die `END_EVENTSINK_MAP` Makro, um das Ende der Senke Ereignisliste zu deklarieren.  
+ Verwenden Sie das DECLARE_EVENTSINK_MAP-Makro, am Ende der Klassendeklaration. Klicken Sie auf der. CPP-Datei, die die Member-Funktionen für die Klasse definiert verwenden die BEGIN_EVENTSINK_MAP-Makro, das Makroeinträge für jedes der Ereignisse benachrichtigt werden sollen, und die END_EVENTSINK_MAP-Makro, um das Ende der Liste der Ereignissenke zu deklarieren.  
   
  Weitere Informationen zu ereignissenkenzuordnungen, finden Sie im Artikel [ActiveX-Steuerelementcontainer](../../mfc/activex-control-containers.md).  
   
@@ -87,81 +88,81 @@ END_EVENTSINK_MAP()
   **Header** afxdisp.h  
   
 ##  <a name="on_event"></a>  ON_EVENT  
- Verwenden der `ON_EVENT` Makro eine Ereignishandlerfunktion für ein Ereignis definieren, die von einer OLE-Steuerelements ausgelöst werden.  
+ Verwenden Sie die ON_EVENT-Makro, um eine Ereignishandlerfunktion für ein Ereignis ausgelöst wird, von einem OLE-Steuerelement zu definieren.  
   
 ```   
 ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams) 
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theClass`  
- Die Klasse, zu der dieses Ereignissenke Zuordnung gehört.  
+ *theClass*  
+ Die Klasse, zu der diese Senke ereigniszuordnung gehört.  
   
- `id`  
+ *ID*  
  Die Steuerelement-ID des OLE-Steuerelements.  
   
- `dispid`  
- Die Dispatch-ID des Ereignisses, die vom Steuerelement ausgelöst werden soll.  
+ *DISPID*  
+ Die Dispatch-ID des Ereignisses vom Steuerelement ausgelöst werden soll.  
   
- `pfnHandler`  
- Ein Zeiger auf eine Memberfunktion, die das Ereignis behandelt. Diese Funktion müssen ein **BOOL** zurückgeben, Typ und die Parametertypen, die die Parameter des Ereignisses entsprechen (finden Sie unter `vtsParams`). Die Funktion zurückgeben sollte **"true"** an, dass das Ereignis behandelt wurde andernfalls **"false"**.  
+ *pfnHandler*  
+ Zeiger auf eine Memberfunktion, die das Ereignis behandelt. Diese Funktion müssen einen booleschen Wert zurückgeben, Typ und die Parametertypen, die die Parameter des Ereignisses entsprechen (siehe *VtsParams*). Die Funktion sollte "true", um anzugeben, dass das Ereignis behandelt wurde zurückgegeben wird. andernfalls "false".  
   
- `vtsParams`  
- Eine Sequenz von **VTS_** Konstanten, die die Typen der Parameter für das Ereignis angibt. Dies sind die gleichen Konstanten, die in Dispatch-Zuordnungseinträge, z. B. verwendet werden `DISP_FUNCTION`.  
+ *vtsParams*  
+ Eine Sequenz von **VTS_** Konstanten, die die Typen der Parameter für das Ereignis angibt. Hierbei handelt es sich um die gleichen Konstanten, die in die Dispatch-Zuordnungseinträge wie z. B. DISP_FUNCTION verwendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `vtsParams` Argument ist eine durch Leerzeichen getrennte Liste von Werten aus der **VTS_** Konstanten. Eine oder mehrere dieser Werte getrennt durch Leerzeichen (nicht Kommas) gibt die Parameterliste der Funktion an. Zum Beispiel:  
+ Die *VtsParams* Argument ist eine durch Leerzeichen getrennte Liste von Werten aus der **VTS_** Konstanten. Eine oder mehrere dieser Werte getrennt durch Leerzeichen (nicht Kommas) gibt die Parameterliste der Funktion an. Zum Beispiel:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- Gibt eine Liste mit einer kurzen ganzen Zahl, gefolgt von einem **BOOL**.  
+ Gibt eine Liste, die eine kurze ganze Zahl, gefolgt von "bool" enthält.  
   
- Eine Liste der **VTS_** -Konstanten finden Sie [EVENT_CUSTOM](event-maps.md#event_custom).  
+ Eine Liste mit den **VTS_** -Konstanten finden Sie [EVENT_CUSTOM](event-maps.md#event_custom).  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
 ##  <a name="on_event_range"></a>  ON_EVENT_RANGE  
- Verwenden der `ON_EVENT_RANGE` Makro eine Ereignishandlerfunktion für ein Ereignis definieren, die von jeder OLE-Steuerelements müssen eine Steuerelement-ID in einem zusammenhängenden Bereich von IDs ausgelöst werden.  
+ Verwenden Sie die ON_EVENT_RANGE-Makro, um eine Ereignishandlerfunktion für ein Ereignis wird ausgelöst, durch alle OLE-Steuerelements mit einer Steuerelement-ID in einen zusammenhängenden Bereich von-IDs zu definieren.  
   
 ```   
 ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)   
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theClass`  
- Die Klasse, zu der dieses Ereignissenke Zuordnung gehört.  
+ *theClass*  
+ Die Klasse, zu der diese Senke ereigniszuordnung gehört.  
   
- `idFirst`  
+ *idFirst*  
  Die Steuerelement-ID des ersten OLE-Steuerelements im Bereich.  
   
- `idLast`  
+ *idLast*  
  Die Steuerelement-ID des letzten OLE-Steuerelements im Bereich.  
   
- `dispid`  
- Die Dispatch-ID des Ereignisses, die vom Steuerelement ausgelöst werden soll.  
+ *DISPID*  
+ Die Dispatch-ID des Ereignisses vom Steuerelement ausgelöst werden soll.  
   
- `pfnHandler`  
- Ein Zeiger auf eine Memberfunktion, die das Ereignis behandelt. Diese Funktion müssen eine **BOOL** Rückgabetyp, die einen ersten Parameter vom Typ **"uint"** (für die Steuerelement-ID), und zusätzliche Parametertypen, die die Parameter des Ereignisses entsprechen (finden Sie unter `vtsParams`). Die Funktion zurückgeben sollte **"true"** an, dass das Ereignis behandelt wurde andernfalls **"false"**.  
+ *pfnHandler*  
+ Zeiger auf eine Memberfunktion, die das Ereignis behandelt. Diese Funktion müssen Rückgabetyp und einen ersten Parameter vom Typ "uint" (für die Steuerelement-ID) und zusätzliche Parametertypen, die die Parameter des Ereignisses entsprechen "bool" (siehe *VtsParams*). Die Funktion sollte "true", um anzugeben, dass das Ereignis behandelt wurde zurückgegeben wird. andernfalls "false".  
   
- `vtsParams`  
- Eine Sequenz von **VTS_** Konstanten, die die Typen der Parameter für das Ereignis angibt. Das erste Konstante muss vom Typ **VTS_I4**, für die Steuerelement-ID. Dies sind die gleichen Konstanten, die in Dispatch-Zuordnungseinträge, z. B. verwendet werden `DISP_FUNCTION`.  
+ *vtsParams*  
+ Eine Sequenz von **VTS_** Konstanten, die die Typen der Parameter für das Ereignis angibt. Das erste Konstante muss vom Typ VTS_I4, für die Steuerelement-ID. Hierbei handelt es sich um die gleichen Konstanten, die in die Dispatch-Zuordnungseinträge wie z. B. DISP_FUNCTION verwendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `vtsParams` Argument ist eine durch Leerzeichen getrennte Liste von Werten aus der **VTS_** Konstanten. Eine oder mehrere dieser Werte getrennt durch Leerzeichen (nicht Kommas) gibt die Parameterliste der Funktion an. Zum Beispiel:  
+ Die *VtsParams* Argument ist eine durch Leerzeichen getrennte Liste von Werten aus der **VTS_** Konstanten. Eine oder mehrere dieser Werte getrennt durch Leerzeichen (nicht Kommas) gibt die Parameterliste der Funktion an. Zum Beispiel:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- Gibt eine Liste mit einer kurzen ganzen Zahl, gefolgt von einem **BOOL**.  
+ Gibt eine Liste, die eine kurze ganze Zahl, gefolgt von "bool" enthält.  
   
- Eine Liste der **VTS_** -Konstanten finden Sie [EVENT_CUSTOM](event-maps.md#event_custom).  
+ Eine Liste mit den **VTS_** -Konstanten finden Sie [EVENT_CUSTOM](event-maps.md#event_custom).  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht einen Ereignishandler für das MouseDown-Ereignis, das für die drei Steuerelemente implementiert ( `IDC_MYCTRL1` über `IDC_MYCTRL3`). Die Ereignishandlerfunktion `OnRangeMouseDown`, wird in der Headerdatei der Dialogklasse deklariert ( `CMyDlg`) als:  
+ Im folgenden Beispiel wird einen Ereignishandler für das MouseDown-Ereignis, für die drei Steuerelemente implementiert (IDC_MYCTRL1 über IDC_MYCTRL3). Die Ereignishandlerfunktion, `OnRangeMouseDown`, wird in der Headerdatei der Dialogfeldklasse deklariert ( `CMyDlg`) als:  
   
  [!code-cpp[NVC_MFCAutomation#12](../../mfc/codesnippet/cpp/event-sink-maps_2.h)]  
   
- Der folgende Code ist in der Implementierungsdatei der Dialogklasse definiert.  
+ Der folgende Code ist in der Implementierungsdatei der Dialogfeldklasse definiert.  
   
  [!code-cpp[NVC_MFCAutomation#13](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]  
   
@@ -169,41 +170,41 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
   **Header** afxdisp.h  
   
 ##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT  
- Die `ON_EVENT_REFLECT` -Makro, bei Verwendung der Sink-Zuordnung ein OLE-Steuerelement-Wrapperklasse, empfängt die Ereignisse, die vom Steuerelement ausgelöst werden, bevor sie von der Container des Steuerelements behandelt werden.  
+ Die ON_EVENT_REFLECT-Makro, das bei der Verwendung in der ereignismeldung Sink-Zuordnung ein OLE-Steuerelement-Wrapperklasse, empfängt Ereignisse vom Steuerelement ausgelöst wird, bevor sie vom Container des Steuerelements verarbeitet werden.  
   
 ```   
 ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams) 
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theClass`  
- Die Klasse, zu der dieses Ereignissenke Zuordnung gehört.  
+ *theClass*  
+ Die Klasse, zu der diese Senke ereigniszuordnung gehört.  
   
  DISPID  
- Die Dispatch-ID des Ereignisses, die vom Steuerelement ausgelöst werden soll.  
+ Die Dispatch-ID des Ereignisses vom Steuerelement ausgelöst werden soll.  
   
- `pfnHandler`  
- Ein Zeiger auf eine Memberfunktion, die das Ereignis behandelt. Diese Funktion müssen ein **BOOL** -Rückgabetyp und Parametertypen, die die Parameter des Ereignisses entsprechen (finden Sie unter `vtsParams`). Die Funktion zurückgeben sollte **"true"** an, dass das Ereignis behandelt wurde andernfalls **"false"**.  
+ *pfnHandler*  
+ Zeiger auf eine Memberfunktion, die das Ereignis behandelt. Diese Funktion müssen einen booleschen Wert zurückgeben, Typ und die Parametertypen, die die Parameter des Ereignisses entsprechen (siehe *VtsParams*). Die Funktion sollte "true", um anzugeben, dass das Ereignis behandelt wurde zurückgegeben wird. andernfalls "false".  
   
- `vtsParams`  
- Eine Sequenz von **VTS_** Konstanten, die die Typen der Parameter für das Ereignis angibt. Dies sind die gleichen Konstanten, die in Dispatch-Zuordnungseinträge, z. B. verwendet werden `DISP_FUNCTION`.  
+ *vtsParams*  
+ Eine Sequenz von **VTS_** Konstanten, die die Typen der Parameter für das Ereignis angibt. Hierbei handelt es sich um die gleichen Konstanten, die in die Dispatch-Zuordnungseinträge wie z. B. DISP_FUNCTION verwendet werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `vtsParams` Argument ist eine durch Leerzeichen getrennte Liste von Werten aus der **VTS_** Konstanten.  
+ Die *VtsParams* Argument ist eine durch Leerzeichen getrennte Liste von Werten aus der **VTS_** Konstanten.  
   
  Eine oder mehrere dieser Werte getrennt durch Leerzeichen (nicht Kommas) gibt die Parameterliste der Funktion an. Zum Beispiel:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- Gibt eine Liste mit einer kurzen ganzen Zahl, gefolgt von einem **BOOL**.  
+ Gibt eine Liste, die eine kurze ganze Zahl, gefolgt von "bool" enthält.  
   
- Eine Liste der **VTS_** -Konstanten finden Sie [EVENT_CUSTOM](event-maps.md#event_custom).  
+ Eine Liste mit den **VTS_** -Konstanten finden Sie [EVENT_CUSTOM](event-maps.md#event_custom).  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
 ##  <a name="on_propnotify"></a>  ON_PROPNOTIFY  
- Verwenden der `ON_PROPNOTIFY` Makro, um ein Ereignissenke-Zuordnungseintrag für handlingbenachrichtigungen Eigenschaft eines OLE-Steuerelements zu definieren.  
+ Verwenden Sie die on_propnotifymakro, um einen Eintrag zur Zuordnung von Ereignis-Senke für die Behandlung von eigenschaftsbenachrichtigungen eines OLE-Steuerelements zu definieren.  
   
 ```   
 ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)  
@@ -211,32 +212,32 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theClass`  
- Die Klasse, zu der dieses Ereignissenke Zuordnung gehört.  
+ *theClass*  
+ Die Klasse, zu der diese Senke ereigniszuordnung gehört.  
   
- `id`  
+ *ID*  
  Die Steuerelement-ID des OLE-Steuerelements.  
   
- `dispid`  
- Die Dispatch-ID der Eigenschaft, die die Benachrichtigung beteiligt.  
+ *DISPID*  
+ Die Dispatch-ID von der Eigenschaft, die in der Benachrichtigung zum.  
   
- `pfnRequest`  
- Zeiger auf eine Memberfunktion, die behandelt die **OnRequestEdit** Benachrichtigung für diese Eigenschaft. Diese Funktion müssen ein **BOOL** Rückgabetyp und ein **BOOL\***  Parameter. Diese Funktion sollte den Parameter auf festgelegt **"true"** zum Zulassen der zu ändernden Eigenschaft und **"false"** , zu unterbinden. Die Funktion zurückgeben sollte **"true"** an, dass die Benachrichtigung wurde verarbeitet andernfalls **"false"**.  
+ *pfnRequest*  
+ Zeiger auf eine Memberfunktion, die behandelt die `OnRequestEdit` Benachrichtigung für diese Eigenschaft. Diese Funktion müssen Rückgabetyp "bool" und ein **"bool"\***  Parameter. Diese Funktion sollte der Parameter auf "true", sodass die Eigenschaft geändert und "false", um keine zuzulassen festgelegt. Die Funktion sollte "true", um anzugeben, dass die Benachrichtigung behandelt wurde zurückgegeben wird. andernfalls "false".  
   
- `pfnChanged`  
- Zeiger auf eine Memberfunktion, die behandelt die **OnChanged** Benachrichtigung für diese Eigenschaft. Die Funktion müssen ein **BOOL** Rückgabetyp und ein **"uint"** Parameter. Die Funktion zurückgeben sollte **"true"** um anzugeben, dass die Benachrichtigung wurde verarbeitet andernfalls **"false"**.  
+ *pfnChanged*  
+ Zeiger auf eine Memberfunktion, die behandelt die `OnChanged` Benachrichtigung für diese Eigenschaft. Die Funktion muss "bool", Typ und ein UINT-Parameter zurückgegeben haben. Die Funktion sollte "true", um anzugeben, dass Benachrichtigungen behandelt wurde zurückgegeben wird. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Die `vtsParams` Argument ist eine durch Leerzeichen getrennte Liste von Werten aus der **VTS_** Konstanten. Eine oder mehrere dieser Werte getrennt durch Leerzeichen (nicht Kommas) gibt die Parameterliste der Funktion an. Zum Beispiel:  
+ Die *VtsParams* Argument ist eine durch Leerzeichen getrennte Liste von Werten aus der **VTS_** Konstanten. Eine oder mehrere dieser Werte getrennt durch Leerzeichen (nicht Kommas) gibt die Parameterliste der Funktion an. Zum Beispiel:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- Gibt eine Liste mit einer kurzen ganzen Zahl, gefolgt von einem **BOOL**.  
+ Gibt eine Liste, die eine kurze ganze Zahl, gefolgt von "bool" enthält.  
   
- Eine Liste der **VTS_** -Konstanten finden Sie [EVENT_CUSTOM](event-maps.md#event_custom).  
+ Eine Liste mit den **VTS_** -Konstanten finden Sie [EVENT_CUSTOM](event-maps.md#event_custom).  
   
 ##  <a name="on_propnotify_range"></a>  ON_PROPNOTIFY_RANGE  
- Verwenden der `ON_PROPNOTIFY_RANGE` Makro auf einen Ereignissenke Map-Eintrag für die Eigenschaft handlingbenachrichtigungen aus jedem OLE-Steuerelement mit einem Steuerelement-ID in einem zusammenhängenden Bereich von-IDs zu definieren.  
+ Verwenden Sie die ON_PROPNOTIFY_RANGE-Makro, um einen Eintrag im Ereignissenke-Zuordnung, für die Behandlung von eigenschaftsbenachrichtigungen aus eine Steuerelement-ID in einen zusammenhängenden Bereich von IDs müssen alle OLE-Steuerelements zu definieren.  
   
 ```  
  
@@ -245,29 +246,29 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theClass`  
- Die Klasse, zu der dieses Ereignissenke Zuordnung gehört.  
+ *theClass*  
+ Die Klasse, zu der diese Senke ereigniszuordnung gehört.  
   
- `idFirst`  
+ *idFirst*  
  Die Steuerelement-ID des ersten OLE-Steuerelements im Bereich.  
   
- `idLast`  
+ *idLast*  
  Die Steuerelement-ID des letzten OLE-Steuerelements im Bereich.  
   
- `dispid`  
- Die Dispatch-ID der Eigenschaft, die die Benachrichtigung beteiligt.  
+ *DISPID*  
+ Die Dispatch-ID von der Eigenschaft, die in der Benachrichtigung zum.  
   
- `pfnRequest`  
- Zeiger auf eine Memberfunktion, die behandelt die **OnRequestEdit** Benachrichtigung für diese Eigenschaft. Diese Funktion müssen ein **BOOL** Rückgabetyp und **"uint"** und **BOOL\***  Parameter. Die Funktion sollte den Parameter auf festgelegt **"true"** zum Zulassen der zu ändernden Eigenschaft und **"false"** , zu unterbinden. Die Funktion zurückgeben sollte **"true"** um anzugeben, dass die Benachrichtigung wurde verarbeitet andernfalls **"false"**.  
+ *pfnRequest*  
+ Zeiger auf eine Memberfunktion, die behandelt die `OnRequestEdit` Benachrichtigung für diese Eigenschaft. Diese Funktion müssen Rückgabetyp "bool" und "uint", und **"bool"\***  Parameter. Die Funktion sollte der Parameter auf "true", sodass die Eigenschaft geändert und "false", um keine zuzulassen festgelegt. Die Funktion sollte "true", um anzugeben, dass Benachrichtigungen behandelt wurde zurückgegeben wird. andernfalls "false".  
   
- `pfnChanged`  
- Zeiger auf eine Memberfunktion, die behandelt die **OnChanged** Benachrichtigung für diese Eigenschaft. Die Funktion müssen ein **BOOL** Rückgabetyp und ein **"uint"** Parameter. Die Funktion zurückgeben sollte **"true"** um anzugeben, dass die Benachrichtigung wurde verarbeitet andernfalls **"false"**.  
+ *pfnChanged*  
+ Zeiger auf eine Memberfunktion, die behandelt die `OnChanged` Benachrichtigung für diese Eigenschaft. Die Funktion muss "bool", Typ und ein UINT-Parameter zurückgegeben haben. Die Funktion sollte "true", um anzugeben, dass Benachrichtigungen behandelt wurde zurückgegeben wird. andernfalls "false".  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  
   
 ##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT  
- Die `ON_PROPNOTIFY_REFLECT` -Makro, bei Verwendung der Sink-Zuordnung ein OLE-Steuerelement-Wrapperklasse, empfängt Eigenschaft Benachrichtigungen, die vom Steuerelement gesendet wird, bevor sie von der Container des Steuerelements behandelt werden.  
+ Die ON_PROPNOTIFY_REFLECT-Makro, das bei der Verwendung in der ereignismeldung Sink-Zuordnung ein OLE-Steuerelement-Wrapperklasse, empfängt eigenschaftsbenachrichtigungen für das Steuerelement gesendet werden, bevor sie vom Container des Steuerelements verarbeitet werden.  
   
 ```  
  
@@ -276,17 +277,17 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theClass`  
- Die Klasse, zu der dieses Ereignissenke Zuordnung gehört.  
+ *theClass*  
+ Die Klasse, zu der diese Senke ereigniszuordnung gehört.  
   
- `dispid`  
- Die Dispatch-ID der Eigenschaft, die die Benachrichtigung beteiligt.  
+ *DISPID*  
+ Die Dispatch-ID von der Eigenschaft, die in der Benachrichtigung zum.  
   
- `pfnRequest`  
- Zeiger auf eine Memberfunktion, die behandelt die **OnRequestEdit** Benachrichtigung für diese Eigenschaft. Diese Funktion müssen ein **BOOL** Rückgabetyp und ein **BOOL\***  Parameter. Diese Funktion sollte den Parameter auf festgelegt **"true"** zum Zulassen der zu ändernden Eigenschaft und **"false"** , zu unterbinden. Die Funktion zurückgeben sollte **"true"** an, dass die Benachrichtigung wurde verarbeitet andernfalls **"false"**.  
+ *pfnRequest*  
+ Zeiger auf eine Memberfunktion, die behandelt die `OnRequestEdit` Benachrichtigung für diese Eigenschaft. Diese Funktion müssen Rückgabetyp "bool" und ein **"bool"\***  Parameter. Diese Funktion sollte der Parameter auf "true", sodass die Eigenschaft geändert und "false", um keine zuzulassen festgelegt. Die Funktion sollte "true", um anzugeben, dass die Benachrichtigung behandelt wurde zurückgegeben wird. andernfalls "false".  
   
- `pfnChanged`  
- Zeiger auf eine Memberfunktion, die behandelt die **OnChanged** Benachrichtigung für diese Eigenschaft. Die Funktion müssen ein **BOOL** -Rückgabetyp und keine Parameter. Die Funktion zurückgeben sollte **"true"** an, dass die Benachrichtigung wurde verarbeitet andernfalls **"false"**.  
+ *pfnChanged*  
+ Zeiger auf eine Memberfunktion, die behandelt die `OnChanged` Benachrichtigung für diese Eigenschaft. Die Funktion sollte einen boolescher Wert, der Typ und keine Parameter haben. Die Funktion sollte "true", um anzugeben, dass die Benachrichtigung behandelt wurde zurückgegeben wird. andernfalls "false".  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdisp.h  

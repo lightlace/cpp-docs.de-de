@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373841"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (Startbanner unterdrücken) (C/C++)
 Unterdrückt die Anzeige der die Copyrightinformationen beim Start des Compilers und die Anzeige von informationsmeldungen während der Kompilierung.  

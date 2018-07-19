@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379202"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>Antworten auf DDE-Anforderungen
 Das Rahmenfenster kann auf dynamischen Datenaustausch (DDE) den Anforderungen von Dateien aus dem Datei-Manager öffnen (falls die Erweiterung registriert oder der Anwendung zugeordnet ist) reagieren. Finden Sie unter [Shell-Registrierung](../mfc/special-cwinapp-services.md).  

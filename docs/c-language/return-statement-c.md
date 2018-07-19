@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391206"
 ---
 # <a name="return-statement-c"></a>return-Anweisung (C)
 Mithilfe der `return`-Anweisung wird die Ausführung einer Funktion beendet, und die Steuerung wird an die aufrufende Funktion zurückgegeben. Die Ausführung wird in der aufrufenden Funktion an dem Punkt fortgesetzt, der dem Aufruf unmittelbar folgt. Eine `return`-Anweisung kann den Wert auch an die aufrufende Funktion zurückgeben. Weitere Informationen finden Sie unter [Rückgabetyp](../c-language/return-type.md).  

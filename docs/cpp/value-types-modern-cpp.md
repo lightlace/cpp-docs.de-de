@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423417"
 ---
 # <a name="value-types-modern-c"></a>Werttypen (Modern C++)
 C++-Klassen sind standardmäßig Werttypen. Dieses Thema enthält einführenden Überblick Werttypen und Probleme im Zusammenhang mit Verwendungsbeispielen.  

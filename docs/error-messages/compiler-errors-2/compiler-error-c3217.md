@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251293"
 ---
 # <a name="compiler-error-c3217"></a>Compilerfehler C3217
 "param": Der generische Parameter kann in dieser Deklaration nicht eingeschränkt werden.  

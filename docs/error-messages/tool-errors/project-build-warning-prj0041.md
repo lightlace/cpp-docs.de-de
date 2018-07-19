@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318060"
 ---
 # <a name="project-build-warning-prj0041"></a>Projektbuildwarnung PRJ0041
 Kann nicht gefunden werden fehlende Abhängigkeit 'Abhängigkeit' für Datei "File". Das Projekt kann zwar erstellt, aber unter Umständen nicht mehr aktuell angezeigt werden, bis diese Datei gefunden wird.  

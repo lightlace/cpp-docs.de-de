@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385415"
 ---
 # <a name="functions-c"></a>Funktionen (C)
 Die Funktion ist die fundamentale modulare Einheit in C. Eine Funktion ist normalerweise für die Ausführung einer bestimmten Aufgabe konzipiert, und ihr Name gibt diese Aufgabe oft wieder. Eine Funktion enthält Deklarationen und Anweisungen. Dieser Abschnitt beschreibt, wie C-Funktionen deklariert, definiert und aufgerufen werden. Andere erläuterte Themen sind:  

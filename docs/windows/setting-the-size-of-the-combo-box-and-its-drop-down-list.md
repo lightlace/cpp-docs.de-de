@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889344"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste
 Sie können ein Kombinationsfeld Größe, wenn Sie ihn zum Dialogfeld hinzufügen. Sie können auch die Größe des im Dropdown-Listenfeld angeben.  

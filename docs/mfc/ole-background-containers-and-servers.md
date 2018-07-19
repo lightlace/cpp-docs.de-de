@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348546"
 ---
 # <a name="ole-background-containers-and-servers"></a>OLE-Hintergrund: Container und Server
 Eine Steuerelementcontainer-Anwendung ist eine Anwendung, die eingebettete oder verknüpfte Elemente in einem eigenen Dokumente integrieren kann. Die Dokumente, die von einem Steuerelementcontainer-Anwendung verwaltet müssen speichern und Anzeigen von Komponenten der OLE-Dokumente als auch die Daten, die von der Anwendung selbst erstellt werden. Eine Steuerelementcontainer-Anwendung muss auch Benutzern neue Elemente eingefügt oder Bearbeiten von vorhandenen Elementen von serveranwendungen, die bei Bedarf zu aktivieren. Die Benutzeroberfläche Anforderungen eine Steuerelementcontainer-Anwendung im Artikel aufgelisteten [Container: Probleme mit der Benutzeroberfläche](../mfc/containers-user-interface-issues.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252640"
 ---
 # <a name="compiler-error-c3285"></a>Compilerfehler C3285
 Die For Each-Anweisung kann nicht bei Variablen vom Typ "Typ" verwendet werden.  

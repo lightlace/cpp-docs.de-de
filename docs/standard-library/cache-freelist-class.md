@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8478490914a6f9049cd54ec78c8de8a1e519f36f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3d3902d900e0dad5ec3e335e9c3424d58ee2674
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960416"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist-Klasse
 
@@ -41,14 +42,14 @@ class cache_freelist
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Sz`|Die Anzahl der zuzuordnenden Elemente des Arrays.|
-|`Max`|Die max-Klasse, die die maximale Größe der Freiliste angibt. Dies kann [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) oder [max_variable_size](../standard-library/max-variable-size-class.md) sein.|
+|*sz*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*Max*|Die max-Klasse, die die maximale Größe der Freiliste angibt. Dies kann [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) oder [max_variable_size](../standard-library/max-variable-size-class.md) sein.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse cache_freelist verwaltet eine Freiliste von Speicherblöcken der Größe `Sz`. Wenn die Freiliste voll ist, verwendet sie `operator delete`, um Speicherblöcke freizugeben. Wenn die Freiliste leer ist, verwendet sie `operator new`, um neue Speicherblöcke zuzuordnen. Die maximale Größe der Freiliste richtet sich nach der max-Klasse der Klasse, die im `Max`-Parameter übergeben wird.
+Die Vorlagenklasse Cache_freelist verwaltet eine Freiliste von Speicherblöcken der Größe *Sz*. Wenn die Freiliste voll ist, die sie verwendet **Delete-Operator** um Speicherblöcke freizugeben. Wenn die Freiliste leer ist, verwendet **new-Operator** um neue Speicherblöcke zuzuordnen. Die maximale Größe der Freiliste richtet sich nach der Klasse, die max-Klasse übergeben wird, in der *Max* Parameter.
 
-Jeder Speicherblock enthält `Sz` Bytes Speicherkapazität und die Daten, die `operator new` und `operator delete` benötigen.
+Jeder Speicherblock enthält *Sz* Bytes Speicherkapazität und die Daten, die **new-Operator** und **Delete-Operator** erfordern.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -81,7 +82,7 @@ void *allocate(std::size_t count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`count`|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*count*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -111,8 +112,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
-|`count`|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
+|*ptr*|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
+|*count*|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 

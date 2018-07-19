@@ -1,5 +1,5 @@
 ---
-title: ICommandUI Schnittstelle | Microsoft Docs
+title: ICommandUI-Schnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70e6f1eb8848c5ee93063877ae036f66584b69c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 244853c3e0e8e16e3de59017b04fb17e64b8efac
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338356"
 ---
 # <a name="icommandui-interface"></a>ICommandUI-Schnittstelle
 Verwaltet von Befehlen der Benutzeroberfläche.  
@@ -45,83 +46,83 @@ interface class ICommandUI
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[icommandui__Check](#check)|Legt die Benutzer-Schnittstelle-Element für diesen Befehl auf den entsprechenden Aktivierungszustand fest.|  
-|[ICommandUI::ContinueRouting](#continuerouting)|Weist den Mechanismus Befehlsrouting Weiterleiten der aktuellen Nachricht unten die Kette der Handler fortgesetzt.|  
-|[ICommandUI::Enabled](#enabled)|Aktiviert oder deaktiviert die Benutzer-Schnittstelle-Element für diesen Befehl.|  
-|[ICommandUI::ID](#id)|Ruft die ID des Benutzerobjekts für die Schnittstelle dargestellt, die durch die `ICommandUI` Objekt.|  
-|[ICommandUI::Index](#index)|Ruft den Index des dem Benutzer-Schnittstellenobjekt, dargestellt durch die `ICommandUI` Objekt.|  
-|[ICommandUI::Radio](#radio)|Legt die Benutzer-Schnittstelle-Element für diesen Befehl auf den entsprechenden Aktivierungszustand fest.|  
-|[ICommandUI::Text](#text)|Legt den Text des Elements Schnittstelle Benutzer für diesen Befehl fest.|  
+|[icommandui__Check](#check)|Legt die Benutzeroberflächenelemente für diesen Befehl auf den entsprechenden Aktivierungszustand fest.|  
+|[ICommandUI::ContinueRouting](#continuerouting)|Teilt den Befehlsrouting Mechanismus weiterhin Weiterleitung der aktuellen Nachricht der Vererbungskette von Handlern.|  
+|[ICommandUI::Enabled](#enabled)|Aktiviert oder deaktiviert die Benutzeroberflächenelemente für diesen Befehl.|  
+|[ICommandUI::ID](#id)|Ruft die ID des Benutzerobjekts für die Schnittstelle dargestellt, durch die `ICommandUI` Objekt.|  
+|[ICommandUI::Index](#index)|Ruft den Index des das Benutzeroberflächenobjekt, dargestellt durch die `ICommandUI` Objekt.|  
+|[ICommandUI::Radio](#radio)|Legt die Benutzeroberflächenelemente für diesen Befehl auf den entsprechenden Aktivierungszustand fest.|  
+|[ICommandUI::Text](#text)|Legt den Text der Benutzeroberflächenelemente für diesen Befehl fest.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Schnittstelle bietet Methoden und Eigenschaften, die Befehlen der Benutzeroberfläche verwalten. `ICommandUI` ähnelt dem [CCmdUI-Klasse](../../mfc/reference/ccmdui-class.md), außer dass `ICommandUI` für MFC-Anwendungen, die mit Visual Studio .NET Komponenten Zusammenwirken verwendet.  
+ Diese Schnittstelle bietet Methoden und Eigenschaften, die Befehlen der Benutzeroberfläche zu verwalten. `ICommandUI` ist vergleichbar mit [CCmdUI-Klasse](../../mfc/reference/ccmdui-class.md), außer dass `ICommandUI` dient für MFC-Anwendungen, die mit .NET Komponenten zusammenwirken.  
   
- `ICommandUI` wird verwendet, in ein `ON_UPDATE_COMMAND_UI` Ereignishandler in einem [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-abgeleitete Klasse. Wenn ein Benutzer einer Anwendung (SELECT-Anweisungen oder Klicks) aktiviert wird ein Menü, jede Menüelement angezeigt, als aktiviert oder deaktiviert. Das Ziel jeder Menübefehl stellt diese Informationen durch die Implementierung einer `ON_UPDATE_COMMAND_UI` Handler. Verwenden Sie für jeden Befehl Schnittstelle Benutzerobjekte in der Anwendung des Eigenschaftenfensters zum Erstellen einer Meldungszuordnungseintrags und Funktionsprototyp für jeden Handler.  
+ `ICommandUI` wird verwendet, in einen ON_UPDATE_COMMAND_UI-Handler in einer [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-abgeleitete Klasse. Wenn ein Benutzer einer Anwendung (SELECT-Anweisungen oder Klicks) aktiviert wird ein Menü, das jedes Menüelement im angezeigt, als aktiviert oder deaktiviert. Das Ziel der einzelnen Menübefehle im enthält diese Informationen durch einen ON_UPDATE_COMMAND_UI-Handler implementieren. Verwenden Sie das Fenster "Eigenschaften" für jeden Befehl Schnittstelle Benutzerobjekte in Ihrer Anwendung zum Erstellen eines Meldungszuordnungseintrags und Funktionsprototyp für jeden Handler.  
   
- Weitere Informationen darüber, wie der `ICommandUI` Schnittstelle in Befehlsrouting verwendet wird, finden Sie unter [wie: Hinzufügen Befehlsrouting zum Windows Forms-Steuerelements](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).  
+ Weitere Informationen darüber, wie der `ICommandUI` Schnittstelle wird verwendet, in das Befehlsrouting, finden Sie unter [Vorgehensweise: Hinzufügen Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).  
   
- Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [Verwenden eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [verwenden ein Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
- Weitere Informationen wie Benutzeroberflächenbefehlen in MFC verwaltet werden, finden Sie unter [CCmdUI-Klasse](../../mfc/reference/ccmdui-class.md).  
+ Weitere Informationen dazu, wie Befehlen der Benutzeroberfläche in MFC verwaltet werden, finden Sie unter [CCmdUI-Klasse](../../mfc/reference/ccmdui-class.md).  
   
 ## <a name="check"></a> ICommandUI::Check  
-Legt die Benutzer-Schnittstelle-Element für diesen Befehl auf den entsprechenden Aktivierungszustand fest.
+Legt die Benutzeroberflächenelemente für diesen Befehl auf den entsprechenden Aktivierungszustand fest.
 ```
 property UICheckState Check;
 ```
 ## <a name="remarks"></a>Hinweise  
-Diese Eigenschaft legt die Benutzer-Schnittstelle-Element für diesen Befehl auf den entsprechenden Aktivierungszustand an. Überprüfen Sie auf die folgenden Werte festgelegt:  
-- 0 deaktivieren Sie  
+Diese Eigenschaft legt die Benutzeroberflächenelemente für diesen Befehl auf den entsprechenden Aktivierungszustand an. Überprüfen Sie auf die folgenden Werte festgelegt:  
+- 0 deaktivieren  
 - 1 Überprüfen  
 - Legen Sie unbestimmt 2  
 
 ## <a name="continuerouting"></a> ICommandUI::ContinueRouting   
-Weist den Befehl Routingmechanismus dar, um den Vorgang fortzusetzen, routing von der aktuellen Nachricht unten die Kette der Handler.
+Weist den Befehl Routingmechanismus dar, um den Vorgang fortzusetzen, routing von der aktuellen Nachricht der Vererbungskette von Handlern.
 ```
 void ContinueRouting();
 ```
 ## <a name="remarks"></a>Hinweise
-Dies ist eine erweiterte Memberfunktion, die in Verbindung mit einer ON_COMMAND_EX-Handler verwendet werden soll, die "false" zurückgibt. Weitere Informationen finden Sie im technischen Hinweis TN006: Meldungszuordnungen.
+Dies ist eine erweiterte Memberfunktion, die in Verbindung mit einer ON_COMMAND_EX-Handler verwendet werden soll, die FALSE zurückgibt. Weitere Informationen finden Sie im technischen Hinweis TN006: Meldungszuordnungen.
 
 ## <a name="enabled"></a> ICommandUI::Enabled 
-Aktiviert oder deaktiviert die Benutzer-Schnittstelle-Element für diesen Befehl.
+Aktiviert oder deaktiviert die Benutzeroberflächenelemente für diesen Befehl.
 ```
 property bool Enabled;
 ```
 ## <a name="remarks"></a>Hinweise
-Diese Eigenschaft aktiviert oder deaktiviert die Benutzer-Schnittstelle-Element für diesen Befehl. Legen Sie aktiviert, um "true" aktiviert das Element "false", um ihn zu deaktivieren.
+Diese Eigenschaft aktiviert oder deaktiviert die Benutzeroberflächenelemente für diesen Befehl. Legen Sie aktiviert auf "true" aktiviert das Element "false", um ihn zu deaktivieren.
 
 ## <a name="id"></a> ICommandUI::ID  
-Ruft die ID des Benutzerobjekts für die Schnittstelle vom ICommandUI Objekt dargestellt wird.
+Ruft die ID des Benutzerobjekts für die Schnittstelle durch die ICommandUI-Objekt dargestellt wird.
 ```
 property unsigned int ID;
 ```
 ## <a name="remarks"></a>Hinweise
-Diese Eigenschaft ruft die ID (ein Handle) des Menüelements, Symbolleisten-Schaltfläche oder andere Benutzeroberflächen-Objekt, das vom ICommandUI-Objekt dargestellt wird.
+Diese Eigenschaft ruft die ID (ein Handle) das Menüelement, Symbolleisten-Schaltfläche oder anderen Benutzeroberflächen-Objekt, das vom ICommandUI-Objekt dargestellt.
 
 ## <a name="index"></a> ICommandUI::Index   
-Ruft den Index des Benutzerobjekts für die Schnittstelle vom ICommandUI Objekt dargestellt wird.
+Ruft den Index des User Interface-Objekts, das vom ICommandUI-Objekt dargestellt.
 ```
 property unsigned int Index;
 ```
 ## <a name="remarks"></a>Hinweise
-Diese Eigenschaft ruft den Index (ein Handle) des Menüelements, Symbolleisten-Schaltfläche oder andere Benutzeroberflächen-Objekt, das vom ICommandUI-Objekt dargestellt wird.
+Diese Eigenschaft ruft den Index (ein Handle) das Menüelement, Symbolleisten-Schaltfläche oder anderen Benutzeroberflächen-Objekt, das vom ICommandUI-Objekt dargestellt.
 
 ## <a name="radio"></a> ICommandUI::Radio 
-Legt die Benutzer-Schnittstelle-Element für diesen Befehl auf den entsprechenden Aktivierungszustand fest.
+Legt die Benutzeroberflächenelemente für diesen Befehl auf den entsprechenden Aktivierungszustand fest.
 ```
 property bool Radio;
 ```
 ## <a name="remarks"></a>Hinweise
-Diese Eigenschaft legt die Benutzer-Schnittstelle-Element für diesen Befehl auf den entsprechenden Aktivierungszustand an. Festlegen der Sender auf "true" aktiviert das Element; andernfalls "false".
+Diese Eigenschaft legt die Benutzeroberflächenelemente für diesen Befehl auf den entsprechenden Aktivierungszustand an. Festlegen der Sender, um "true" aktiviert das Element; andernfalls "false".
 
 ## <a name="text"></a> ICommandUI::Text 
-Legt den Text des Elements Schnittstelle Benutzer für diesen Befehl fest.
+Legt den Text der Benutzeroberflächenelemente für diesen Befehl fest.
 ```
 property String^ Text;
 ```
 ## <a name="remarks"></a>Hinweise
-Diese Eigenschaft legt den Text des Elements Schnittstelle Benutzer für diesen Befehl fest. Legen Sie Text an ein Text-Zeichenfolge-Handle.
+Diese Eigenschaft legt den Text der Benutzeroberflächenelemente für diesen Befehl. Legen Sie Text auf ein Text-Zeichenfolge-Handle.
 
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwinforms.h (definiert in der Assembly atlmfc\lib\mfcmifc80.dll)  

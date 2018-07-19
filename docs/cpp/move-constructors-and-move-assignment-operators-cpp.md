@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Definieren von bewegungskonstruktoren und bewegungszuweisungsoperatoren (C++) | Microsoft Docs'
+title: 'Gewusst wie: Definieren von bewegungskonstruktoren und bewegungszuweisungsoperatoren (C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad5f54bc0366b0da9286631294a10f4904b7cb30
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028150"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++)
-In diesem Thema wird beschrieben, wie zum Schreiben einer *bewegungskonstruktor* und ein bewegungszuweisungsoperator für eine C++-Klasse. Ein bewegungskonstruktor ermöglicht die Ressourcen, die im Besitz von ein Rvalue-Objekt, das in einen Lvalue verschoben werden, ohne zu kopieren. Weitere Informationen zur bewegungssemantik finden Sie unter [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+In diesem Thema wird beschrieben, wie zum Schreiben einer *bewegungskonstruktor* und ein bewegungszuweisungsoperator für eine C++-Klasse. Ein bewegungskonstruktor ermöglicht die Ressourcen, die im Besitz von einem Rvalue-Objekt, das in einen l-Wert ohne kopieren verschoben werden. Weitere Informationen zur bewegungssemantik finden Sie unter [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
  Dieses Thema baut auf der C++-Klasse `MemoryBlock` auf, mit der ein Arbeitsspeicherpuffer verwaltet wird.  
   
@@ -225,7 +226,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine Verbesserung der Leistung Ihrer Anwendungen mithilfe von Bewegungssemantik veranschaulicht. Im Beispiel werden einem Vektorobjekt zwei Elemente hinzugefügt, daraufhin wird ein neues Element zwischen den beiden bestehenden Elementen eingefügt. Die `vector` Klasse verwendet die move-Semantik des Einfügevorgangs effizient ausführen, indem verschieben die Elemente des Vektors anstatt kopiert werden.  
+ Im folgenden Beispiel wird eine Verbesserung der Leistung Ihrer Anwendungen mithilfe von Bewegungssemantik veranschaulicht. Im Beispiel werden einem Vektorobjekt zwei Elemente hinzugefügt, daraufhin wird ein neues Element zwischen den beiden bestehenden Elementen eingefügt. Die `vector` Klasse verwendet die move-Semantik des Einfügevorgangs effizient ausführt, durch das Verschieben der Elemente des Vektors anstatt kopiert werden.  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -270,7 +271,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- Vor Visual Studio 2010 erzeugt dieses Beispiel die folgende Ausgabe:  
+ Bevor Sie Visual Studio 2010 erzeugt in diesem Beispiel wird die folgende Ausgabe:  
   
 ```  
 In MemoryBlock(size_t). length = 25.  
@@ -302,7 +303,8 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  Werden sowohl ein Bewegungskonstruktor als auch ein Bewegungszuweisungsoperator für die Klasse bereitgestellt, kann redundanter Code vermeiden werden, indem der Bewegungskonstruktor für den Aufruf des Bewegungszuweisungsoperators geschrieben wird. Im folgenden Beispiel wird eine überarbeitete Version des Bewegungskonstruktors, der den Bewegungszuweisungsoperator aufruft, veranschaulicht:  
   
-```  
+```cpp
+  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  
@@ -312,8 +314,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- Die [Move](../standard-library/utility-functions.md#move) -Funktion bewahrt die Rvalue-Eigenschaft von der `other` Parameter.  
+ Die [Std:: Move](../standard-library/utility-functions.md#move) -Funktion bewahrt die Rvalue-Eigenschaft von der *andere* Parameter.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<Hilfsprogramm > verschieben](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [\<Hilfsprogramm > verschieben](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

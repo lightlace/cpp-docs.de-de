@@ -16,6 +16,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088377"
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference-Klasse
 Stellt einen schwachen Verweis auf eine Instanz einer Verweisklasse dar.  

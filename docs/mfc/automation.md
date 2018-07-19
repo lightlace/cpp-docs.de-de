@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce325073d8a1585ffa9e520cebdfc372280306d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdd62c73c099cbae8a21c82cca55cb8430d7fd04
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930601"
 ---
 # <a name="automation"></a>Automatisierung
 Automation (früher: OLE-Automatisierung) ermöglicht es einer Anwendung, die in einer anderen Anwendung implementierten Objekte zu bearbeiten oder Objekte verfügbar zu machen, damit sie bearbeitet werden können.  
@@ -56,7 +57,7 @@ Automation (früher: OLE-Automatisierung) ermöglicht es einer Anwendung, die in
  Viele kommerzielle Anwendungen, wie Microsoft Excel und Microsoft Visual C++, ermöglichen es Ihnen, viele ihrer Funktionen zu automatisieren. Beispielsweise können in Visual C++ können Sie schreiben VBScript-Makros zum Automatisieren von builds, Aspekte der codebearbeitung oder von Debuggingaufgaben.  
   
 ##  <a name="_core_passing_parameters_in_automation"></a> Übergeben von Parametern in Automation  
- Eine Schwierigkeit bei der Erstellung von Automatisierungsmethoden besteht darin, einen einheitlichen „sicheren“ Mechanismus zum Übergeben von Daten zwischen Automatisierungsservern und -clients bereitzustellen. Automation verwendet den **VARIANT** -Typ, um Daten zu übergeben. Der **VARIANT** -Typ ist eine Union mit Tags. Sie verfügt über ein Datenelement für den Wert (wobei es sich um eine anonyme C++-Union handelt) und ein Datenelement, das den in der Union gespeicherten Informationstyp angibt. Der **VARIANT** -Typ unterstützt eine Reihe von Standarddatentypen: 2- und 4-Byte-Ganzzahlen, 4 und 8-Byte-Gleitkommazahlen, Zeichenfolgen und boolesche Werte. Darüber hinaus unterstützt er die `HRESULT` - (OLE-Fehlercodes), **CURRENCY** - (ein numerischer fester Punkttyp) und **DATE** - (absolutes Datum und absolute Uhrzeit) Typen, sowie Zeiger auf **IUnknown** und `IDispatch` -Schnittstellen.  
+ Eine Schwierigkeit bei der Erstellung von Automatisierungsmethoden besteht darin, einen einheitlichen „sicheren“ Mechanismus zum Übergeben von Daten zwischen Automatisierungsservern und -clients bereitzustellen. Automation verwendet den **VARIANT** -Typ, um Daten zu übergeben. Der **VARIANT** -Typ ist eine Union mit Tags. Sie verfügt über ein Datenelement für den Wert (wobei es sich um eine anonyme C++-Union handelt) und ein Datenelement, das den in der Union gespeicherten Informationstyp angibt. Der **VARIANT** -Typ unterstützt eine Reihe von Standarddatentypen: 2- und 4-Byte-Ganzzahlen, 4 und 8-Byte-Gleitkommazahlen, Zeichenfolgen und boolesche Werte. Darüber hinaus unterstützt er die **HRESULT** (OLE-Fehlercodes) **Währung** (ein Festkommanotation in jedem Fall numerischen Typ), und **Datum** (absolutes Datum und Uhrzeit) Typen sowie Zeiger auf `IUnknown` und `IDispatch` Schnittstellen.  
   
  Der **VARIANT** -Typ ist in der [COleVariant](../mfc/reference/colevariant-class.md) -Klasse gekapselt. Die unterstützenden **CURRENCY** - und **DATE** -Klassen sind in den [COleCurrency](../mfc/reference/colecurrency-class.md) - und [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) -Klassen gekapselt.  
   

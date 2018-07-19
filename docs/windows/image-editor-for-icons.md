@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879281"
 ---
 # <a name="image-editor-for-icons"></a>Bildbearbeitung für Symbole
 Die Bildbearbeitung verfügt über zahlreiche Tools zum Erstellen und Bearbeiten von Bildern sowie über Funktionen, die Sie beim Erstellen von Bitmaps für Symbolleisten unterstützen. Zusätzlich zu Bitmaps, Symbolen und Cursorn können Sie Bilder im GIF- oder JPEG-Format bearbeiten. Zu diesem Zweck verwenden Sie die Befehle aus dem Menü **Bild** und die Tools auf der Symbolleiste der **Bildbearbeitung** .  

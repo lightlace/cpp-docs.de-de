@@ -1,5 +1,5 @@
 ---
-title: Datentypbereiche | Microsoft Docs
+title: Datentypbereiche | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,11 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c809249bbe7513e5a1e439ebaf5e4e44a2f758
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 93a399f922d79c073cc6471ebe702d8ef7fcd842
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940640"
 ---
 # <a name="data-type-ranges"></a>Datentypbereiche
 Von den Visual C++-32-Bit-- und 64-Bit-Compilern werden die Typen in der Tabelle weiter unten in diesem Artikel erkannt.  
@@ -104,9 +105,9 @@ Von den Visual C++-32-Bit-- und 64-Bit-Compilern werden die Typen in der Tabelle
   
  Abhängig von der Verwendung wird durch die Variable `__wchar_t` entweder ein Breitzeichen oder ein Mehrbytezeichen angegeben. Verwenden Sie das Präfix `L` vor einem Zeichen oder einer Zeichenfolgenkonstante, um eine Breitzeichenkonstante festzulegen.  
   
- `signed` und `unsigned` sind Modifizierer, die mit jedem ganzzahligen Typ mit Ausnahme von `bool`verwendet werden können. Beachten Sie, dass `char`, `signed char`und `unsigned char` drei verschiedene Typen für Mechanismen wie Überladen und Vorlagen sind.  
+ **signiert** und **ohne Vorzeichen** sind Modifizierer, mit denen Sie mit jedem ganzzahligen Typ außer **"bool"**. Beachten Sie, dass **Char**, **signiert Char**, und **unsigned Char** sind drei separate Typen für Mechanismen wie überladen und Vorlagen.  
   
- Die Typen `int` und `unsigned int` haben eine Größe von vier Bytes. Der übertragbare Code sollte jedoch nicht von der Größe von `int` abhängen, da der Standard der Sprache implementierungsspezifische Werte ermöglicht.  
+ Die **Int** und **ganze Zahl ohne Vorzeichen** Typen haben eine Größe von 4 Bytes. Übertragbarem Code sollte jedoch nicht abhängig, auf die Größe des **Int** da standard die Sprache implementierungsspezifische sein kann.  
   
  C/C++ in Visual Studio bietet Unterstützung für ganzzahlige Typen mit angegebener Größe. Weitere Informationen finden Sie unter [__int8, \___int16, \___int32, \___int64](../cpp/int8-int16-int32-int64.md) und [Integer Limits (Integer Grenzen)](../cpp/integer-limits.md).  
   

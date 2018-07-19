@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b3d2c37b73d79619aeb16e7b1b81ad71819b09b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 101d987574ca789ce674c7ed01726847a66a4747
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962012"
 ---
 # <a name="isfinal-class"></a>is_final-Klasse
 
@@ -36,11 +37,11 @@ struct is_final;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Der abzufragende Typ.
+*T* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist TRUE, wenn der Typ `T` ein als `final` markierter Klassentyp ist; andernfalls ist sie FALSE. Wenn `T` ein Klassentyp ist, muss es ein vollständiger Typ sein.
+Eine Instanz des typprädikats ist true, wenn der Typ *T* ist ein Klassentyp gekennzeichnet `final`, andernfalls ist Sie false. Wenn *T* ist ein Klassentyp, es muss ein vollständiger Typ sein.
 
 ## <a name="requirements"></a>Anforderungen
 

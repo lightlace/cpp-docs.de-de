@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374907"
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Übersicht über x64-Aufrufkonventionen
 Zwei wichtige Unterschiede zwischen X86 und [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] werden die 64-Bit-Adressierung-Funktion und eine flache Reihe von 16 64-Bit-registriert wird, zur allgemeinen Verwendung. Registrieren Sie aufgrund des erweiterten Menge [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] verwendet die [__fastcall](../cpp/fastcall.md) Aufrufkonvention und ein Ausnahmebehandlungsmodell RISC-basierten. Die `__fastcall` Konvention verwendet Register für die ersten vier Argumente und den Stapelrahmen, um zusätzliche Argumente zu übergeben.  

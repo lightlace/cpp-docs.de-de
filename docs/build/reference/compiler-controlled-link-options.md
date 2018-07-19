@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371995"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 CL-Compiler ruft automatisch LINK, es sei denn, Sie die Option/c angeben. CL stellt eine gewisse Kontrolle über den Linker über Befehlszeilenoptionen und Argumenten bereit. In der folgenden Tabelle werden die Funktionen in der Berechnungsliste, die verknüpfen beeinflussen, zusammengefasst.  

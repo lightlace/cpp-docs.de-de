@@ -1,5 +1,5 @@
 ---
-title: Objektlebensdauer und Ressourcenverwaltung (Modern C++) | Microsoft Docs
+title: Objektlebensdauer und Ressourcenverwaltung (Modern C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 634bef1bf9d2d3128497a1321631ca8665fed144
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941550"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Objektlebenszeit und Ressourcenverwaltung (Modern C++)
-Im Gegensatz zu anderen verwalteten Sprachen keinen C++ Garbagecollection (GC) an, der nicht-mehr-used Speicherressourcen automatisch freigibt, während ein Programm ausgeführt wird. In C++ ressourcenverwaltung direkt Lebensdauer eines Objekts bezieht sich auf. Dieses Dokument beschreibt die Faktoren, die Lebensdauer eines Objekts in C++ und Verwaltung zu beeinflussen.  
+Im Gegensatz zu verwalteten Sprachen keine C++ Garbagecollection (GC), die keine länger-verwendete Arbeitsspeicher automatisch freigibt, während ein Programm ausgeführt wird. In C++ bezieht ressourcenverwaltung direkt auf die Lebensdauer eines Objekts. Dieses Dokument beschreibt die Faktoren, die Objektlebensdauer in C++ für die Verwaltung auswirken.  
   
- C++ hat keinen GC in erster Linie verwendet werden, da es nicht Arbeitsspeicherressourcen nicht behandelt. Deterministische Destruktoren ähnlich denen im C++ können Arbeitsspeicher-und nicht nur gleichermaßen behandeln. GC verfügt auch über andere Probleme, z. B. höherer Aufwand in Arbeitsspeicher und CPU-Auslastung und Ort. Aber Universalität ist ein grundlegendes Problem, das über cleveren Optimierungen gemindert werden kann.  
+ C++ keinen GC, hauptsächlich, weil es nicht Arbeitsspeicherressourcen nicht behandelt. Deterministische Destruktoren wie in C++ können Arbeitsspeicher-und nicht nur gleichermaßen behandeln. GC verfügt auch über andere Probleme, wie die höheren Verarbeitungsaufwand im Arbeitsspeicher und CPU-Auslastung und Ort. Aber Universalität ist ein grundlegendes Problem, das nicht durch intelligente Optimierungen beseitigen lassen.  
   
 ## <a name="concepts"></a>Konzepte  
- Eine wichtige Sache ist in der Verwaltung der Lebensdauer eines Objekts ist die Kapselung – wissen, welche Ressourcen das Objekt besitzt, oder wie sie zu entfernen oder sogar gibt an, ob sie alle Ressourcen überhaupt besitzt keinen wem auch immer ein Objekt verwendet wird. Er muss lediglich das Objekt zu zerstören. Die C++-Kernsprache wurde entwickelt, um sicherzustellen, dass Objekte über die richtigen Zeitangaben, d. h. zerstört werden, wie Blöcke, in umgekehrter Reihenfolge der Konstruktion beendet werden. Wenn ein Objekt zerstört wird, werden seine Basen und Membern in einer bestimmten Reihenfolge zerstört.  Die Sprache zerstört automatisch Objekte, es sei denn, Sie spezielle Aktionen wie Heapzuordnung oder neue Platzierung ausgeführt werden.  Beispielsweise [intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md) wie `unique_ptr` und `shared_ptr`, und C++-Standardbibliothek-Container wie `vector`, kapseln `new` / `delete` und `new[]` / `delete[]` in Objekten, die Destruktoren besitzen. Deshalb ist es ist daher wichtig, intelligente Zeiger und die C++-Standardbibliothek Container verwenden.  
+ Wichtig: in der Verwaltung der Objektlebensdauer ist die Kapselung, wissen, welche Ressourcen für das Objekt besitzt, oder wie Sie sie zu entfernen oder sogar gibt an, ob sie alle Ressourcen überhaupt besitzt keine Personen ein Objekt verwendet wird. Er muss lediglich das Objekt zu zerstören. Die C++-Kernsprache stellen Sie sicher, dass Objekte, also zu den richtigen Zeitpunkten, zerstört werden soll, wie Blöcke, in umgekehrter Reihenfolge der Konstruktion beendet werden. Wenn ein Objekt zerstört wird, werden seine Basen und Membern in einer bestimmten Reihenfolge zerstört.  Die Sprache zerstört Objekte automatisch, wenn Sie besondere Dinge wie Heapzuordnung oder ein neues Platzierung ausführen.  Z. B. [intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md) wie `unique_ptr` und `shared_ptr`, und wie Sie C++-standardbibliothekscontainer `vector`, kapseln **neue** /  **Löschen Sie** und `new[]` / `delete[]` in Objekte, die Destruktoren haben. Deshalb so wichtig für intelligente Zeiger und C++-Standardbibliothek-Container verwenden kann.  
   
- Ein weiteres wichtiges Konzept in Prozesslebensdauer-Verwaltung: Destruktoren. Destruktoren kapseln Version der Ressource.  (Die häufig verwendete mnemonische Zeichen ist RRID Ressource Release ist Zerstörung.)  Eine Ressource ist etwas, das Sie von "System" abrufen und später wieder zu erteilen.  Arbeitsspeicher ist die am häufigsten verwendete Ressource, aber es gibt auch Dateien, Sockets, Texturen und andere Speicherressourcen. "Besitzer" einer Ressource bedeutet, dass Sie es verwenden können, wenn Sie ihn benötigen, haben Sie aber auch, diese freizugeben, wenn Sie damit fertig sind.  Wenn ein Objekt zerstört wird, gibt der Destruktor die Ressourcen, die es beim Besitzer um frei.  
+ Ein weiteres wichtiges Konzept in Prozesslebensdauer-Verwaltung: Destruktoren. Destruktoren kapseln die Version der Ressource.  (Das häufig verwendete mnemonische Zeichen ist RRID, Ressourcenfreigabe ist die Zerstörung).  Eine Ressource ist etwas, das Sie aus "System" und später wieder gewähren zu müssen.  Arbeitsspeicher ist die am häufigsten verwendeten Ressource, aber es gibt auch Dateien, Sockets, Texturen und andere Ressourcen ohne Speicher. "Besitzer" einer Ressource bedeutet, dass Sie sie verwenden können, wenn Sie ihn benötigen aber außerdem müssen Sie es freigeben, wenn Sie damit fertig sind.  Wenn ein Objekt zerstört wird, gibt der Destruktor die Ressourcen, die sie im Besitz frei.  
   
- Das letzte Konzept ist die DAG (gerichtetes azyklisches Diagramm).  Die Struktur des Besitzes in einem Programm bildet eine DAG. Kein Objekt kann selbst besitzen –, die sich nicht nur unmöglich, aber grundsätzlich auch ohne Bedeutung. Jedoch zwei Objekte können den Besitz Teilen eines dritten-Objekts.  Verschiedene Arten von Links sind in einer DAG, wie dies möglich: A ist Mitglied von B (B besitzt ein), C speichert eine `vector<D>` (C, besitzt jedes Element D), E speichert eine `shared_ptr<F>` (E freigegeben hat den Besitz von F, möglicherweise mit anderen Objekten), usw.  Solange keine Schleifen vorhanden sind und in die DAG standortbezogene wird durch ein Objekt dargestellt, die einen Destruktor (statt einen unformatierten Zeiger, Handle oder anderen Mechanismen) hat, und klicken Sie dann Ressourcenverluste sind nicht möglich, da die Sprache verhindert, sie dass. Ressourcen werden freigegeben, sobald sie nicht mehr benötigt werden, ohne eine Garbage Collection ausgeführt wird. Die Lebensdauer nachverfolgen ist Mehraufwand für die Stack-Bereich, Basen, Mitglieder und ähnlichen Fällen frei, und für kostengünstig `shared_ptr`.  
+ Das endgültige Konzept ist der DAG (gerichtetes azyklisches Diagramm).  Die Struktur des Besitzes in einem Programm bildet eine DAG an. Kein Objekt kann selbst betreiben – das ist nicht nur möglich, aber grundsätzlich auch ohne Bedeutung. Aber zwei Objekte können den Besitz der ein drittes Objekt freigeben.  Verschiedene Arten von Links sind in einem gerichteten azyklischen Graph wie folgt möglich: A ist Mitglied der B (B ist ein Besitzer), C speichert eine `vector<D>` (C, besitzt jedes Element D), E speichert eine `shared_ptr<F>` (E freigegeben hat den Besitz von F, möglicherweise mit anderen Objekten), und so weiter.  Solange es sich um keine Zyklen und jede Verbindung in der DAG wird durch ein Objekt dargestellt, bei dem einen Destruktor (statt ein unformatierter Zeiger, Handle oder anderen Mechanismus), und klicken Sie dann Ressourcenverluste sind nicht möglich, da die Sprache, die sie nicht. Ressourcen werden freigegeben, sobald sie nicht mehr benötigt werden, ohne einen Garbage Collector ausgeführt wird. Die Lebensdauer, die nachverfolgung ist für Stack-Bereich, Basen, Mitglieder und ähnlichen Fällen Mehraufwand – kostenlos und für kostengünstig `shared_ptr`.  
   
-### <a name="heap-based-lifetime"></a>Heap-basierte Lebensdauer  
- Verwenden Sie für die Lebensdauer eines Objekts des Heaps, [intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md). Verwendung `shared_ptr` und `make_shared` als der Standardzeiger und der Zuweisung. Verwendung `weak_ptr` Zyklen unterbrechen, führen Sie das Zwischenspeichern und beobachten von Objekten ohne Auswirkung auf oder nichts über deren Lebensdauer vorausgesetzt.  
+### <a name="heap-based-lifetime"></a>Heapbasierte Lebensdauer  
+ Verwenden Sie für die Lebensdauer der Heap-Objekts, [intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md). Verwendung `shared_ptr` und `make_shared` als der Standardzeiger und der Zuweisung. Verwendung `weak_ptr` Zyklen unterbrechen, führen die Zwischenspeicherung und beobachten von Objekten ohne Auswirkungen auf oder Wenn irgendetwas über ihre Lebensdauer.  
   
 ```cpp  
 void func() {  
@@ -44,13 +45,13 @@ p->draw();
   
 ```  
   
- Verwendung `unique_ptr` für eindeutigen Besitz, z. B. in der *"pimpl"* Idiom. (Siehe [Pimpl für Compilierungszeitkapselung](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Stellen Sie eine `unique_ptr` die primäre Zielgruppe für alle expliziten `new` Ausdrücke.  
+ Verwendung `unique_ptr` für eindeutigen Besitz, z. B. in der *"pimpl"* Idiom. (Finden Sie unter [Pimpl für Kompilierzeitkapselung](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Stellen Sie eine `unique_ptr` die primäre Zielgruppe für alle expliziten **neue** Ausdrücke.  
   
 ```cpp  
 unique_ptr<widget> p(new widget());  
 ```  
   
- Sie können die unformatierte Zeiger für nicht-Objektbesitz und Beobachtung verwenden. Ein Zeiger nicht besitzt möglicherweise dangle, aber es kann nicht zur Offenlegung von.  
+ Sie können unformatierte Zeiger für nichtbesitz und Beobachtung verwenden. Ein Zeiger nicht besitzt möglicherweise Leinwand, erlangt, aber es nicht möglich.  
   
 ```cpp  
 class node {  
@@ -63,10 +64,10 @@ node::node() : parent(...) { children.emplace_back(new node(...) ); }
   
 ```  
   
- Bei der Optimierung der Leistung erforderlich ist, müssen Sie möglicherweise verwenden *gut gekapselten* Zeiger und der explizite Aufrufe zu löschen. Ein Beispiel ist, wenn Sie eigene auf niedriger Ebene Datenstruktur implementieren.  
+ Bei der Optimierung der Leistung erforderlich ist, müssen Sie möglicherweise mit *gut gekapseltes* zuständige Zeiger und explizite Aufrufe zu löschen. Ein Beispiel ist, wenn Sie Ihre eigenen Low-Level-Datenstruktur implementieren.  
   
 ### <a name="stack-based-lifetime"></a>Stapelbasierte Lebensdauer  
- In modernem C++ *stapelbasierte Bereiche* ist eine leistungsfähige Möglichkeit zur stabilen Code geschrieben werden, da sie automatische kombiniert *Stapel Lebensdauer* und *Datenmember Lebensdauer* mit hohe Effizienz: Nachverfolgen von Lebensdauer ist im Wesentlichen Mehraufwand. Objektlebensdauer Heap kann sorgfältiger manuelle Verwaltung erfordert und die Quelle der Ressource prüfen auf Speicherverluste und ineffiziente, insbesondere bei der Arbeit mit unformatierte Zeiger. Betrachten Sie diesen Code, der stapelbasierte Bereiche veranschaulicht:  
+ In modernem C++ *stapelbasierte Bereiche* ist eine leistungsstarke Möglichkeit, robusten Code schreiben, da sie automatische kombiniert *Stack Lebensdauer* und *Data Member Lebensdauer* mit hohe Effizienz: Lebensdauer, die nachverfolgung ist im Wesentlichen der Mehraufwand. Heap-Objektlebensdauer kann gewissenhaft manuelle Verwaltung erfordert und die Quelle der Ressourcenverluste und Ineffizienz, insbesondere dann, wenn Sie mit reinen Zeigern arbeiten. Betrachten Sie diesen Code, der stapelbasierte Bereiche veranschaulicht:  
   
 ```cpp  
 class widget {  
@@ -87,9 +88,9 @@ void functionUsingWidget () {
   // as if "finally { w.dispose(); w.g.dispose(); }"  
 ```  
   
- Verwenden Sie statische Lebensdauer sparsam (globale statische, lokale statische Funktion), da Probleme auftreten können. Was geschieht, wenn der Konstruktor eines globalen Objekts löst eine Ausnahme aus? In der Regel wird die app Fehler in einer Weise, die schwer zu debuggen sind. Konstruktion Reihenfolge für die Lebensdauer der statischen Objekte problematisch ist, und ist nicht nebenläufigkeitssicher. Objekterstellung ist nicht nur ein Problem Zerstörungsreihenfolge kann kompliziert sein, insbesondere bei der Polymorphie beteiligt ist. Selbst wenn Ihr Objekt oder die Variable ist nicht polymorph und keine komplexen Erstellung/Zerstörung Sortierung, ist immer noch das Problem der Thread-sichere Parallelität. Eine Multithread-app kann nicht die Daten in statische Objekte ohne lokalen Threadspeicher, Ressourcensperren und andere besonderen Vorsichtsmaßnahmen sicher ändern.  
+ Verwenden Sie die statische Lebensdauer nur selten (globale statische, lokale statische Funktion), da Probleme auftreten können. Was geschieht, wenn der Konstruktor eines globalen Objekts eine Ausnahme auslöst? In der Regel der app-Fehlern in eine Möglichkeit, die schwer zu debuggen sein können. Reihenfolge der Konstruktion ist für die Lebensdauer der statischen Objekte problematisch, und es ist nicht nebenläufigkeitssicher. Objekterstellung ist nicht nur ein Problem, Zerstörungsreihenfolge kann kompliziert sein, insbesondere bei der Polymorphismus beteiligt ist. Auch wenn Ihr Objekt oder die Variable nicht polymorph ist und keine komplexen-Erstellung/Zerstörung, Sortierung, besteht weiterhin die Ausgabe des Thread-sichere Parallelität. Eine Multithread-app kann nicht sicher auf die Daten in statische Objekte ändern, ohne lokalen Thread-Speicher, Ressourcensperren und andere besonderen Vorsichtsmaßnahmen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C++-Sprachreferenz](../cpp/cpp-language-reference.md)   
+ [C++ Language Reference (C++-Programmiersprachenreferenz)](../cpp/cpp-language-reference.md)   
  [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

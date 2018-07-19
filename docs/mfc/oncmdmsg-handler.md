@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347028"
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg-Handler
 Um das routing von Befehlen zu erreichen, jede Befehlsziel Ruft die `OnCmdMsg` Memberfunktion, der das Ziel des Befehls in der Sequenz. Befehl zielt auf die Verwendung `OnCmdMsg` um zu bestimmen, ob sie einen Befehl verarbeiten können und auf einem anderen Befehlsziel weiterzuleiten, wenn sie nicht behandeln können.  

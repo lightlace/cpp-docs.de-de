@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383240"
 ---
 # <a name="struct-unwindinfo"></a>struct UNWIND_INFO
 Die Entladung Info Datenstruktur wird verwendet, um die Auswirkungen aufzeichnet, die eine Funktion weist auf den Stack-Pointer und, in dem die nicht flüchtigen Register auf dem Stapel gespeichert werden:  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377231"
 ---
 # <a name="v-version-number"></a>/V (Versionsnummer)
 Veraltet. Eine Textzeichenfolge in der OBJ-Datei eingebettet.  

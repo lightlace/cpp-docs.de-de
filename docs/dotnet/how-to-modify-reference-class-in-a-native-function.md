@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128351"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>Gewusst wie: Ändern der Verweisklasse in einer systemeigenen Funktion
 Sie können eine Verweisklasse mit einem CLR-Array an eine systemeigene Funktion übergeben, und ändern Sie die Klasse auf die Verwendung von PInvoke-Dienste.  

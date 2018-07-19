@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258074"
 ---
 # <a name="compiler-error-c3386"></a>Compilerfehler C3386
 'Typ': __declspec(dllexport) /\__declspec(dllimport) kann nicht auf einen verwalteten oder WinRTtype angewendet werden  

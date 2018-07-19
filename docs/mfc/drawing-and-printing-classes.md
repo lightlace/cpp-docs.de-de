@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344779"
 ---
 # <a name="drawing-and-printing-classes"></a>Klassen zum Zeichnen und Drucken
 Alle grafische Ausgabe wird in Windows auf einem virtuellen Zeichenbereich bezeichnet einen Gerätekontext (DC) gezeichnet. MFC enthält Klassen, um die verschiedenen Typen von Domänencontrollern als auch Encapsulations für Windows-Zeichenwerkzeuge wie Bitmaps, Pinsel, Paletten und Stifte zu kapseln.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344332"
 ---
 # <a name="drag-and-drop-ole"></a>Drag & Drop (OLE)
 Die Drag-and-Drop-Funktion von OLE ist in erster Linie eine Verknüpfung zum Kopieren und Einfügen von Daten. Wenn Sie die Zwischenablage kopieren oder Einfügen von Daten verwenden, sind eine Reihe von Schritten erforderlich. Wählen Sie die Daten, klicken Sie auf **Ausschneiden** oder **Kopie** aus der **bearbeiten** Menü, wechseln Sie zu der Zieldatei, die im Fenster oder die Anwendung, platzieren Sie den Cursor in den gewünschten Speicherort ein, und klicken Sie auf **Einfügen** aus der **bearbeiten** Menü.  

@@ -27,11 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 202add45c335adea086087aed9ce3374e56a7e39
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7305ff80c50c65e4b03a9879d39960e8c47786df
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027338"
 ---
 # <a name="errorcondition-class"></a>error_condition-Klasse
 
@@ -96,12 +97,12 @@ void assign(value_type val, const error_category& _Cat);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`val`|Der Fehlercodewert, der in `error_code` gespeichert werden soll.|
-|`_Cat`|Die Fehlerkategorie, die in `error_code` gespeichert werden soll.|
+|*val*|Der Fehlercodewert, der in `error_code` gespeichert werden soll.|
+|*_Cat*|Die Fehlerkategorie, die in `error_code` gespeichert werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 
-Die Member-Funktion speichert `val` als Fehlercodewert und einen Zeiger auf `_Cat`.
+Die Memberfunktion speichert *Val* als Fehlercodewert und einen Zeiger auf *_Cat*.
 
 ## <a name="category"></a> error_condition::category
 
@@ -148,17 +149,17 @@ error_condition(_Enum _Errcode,
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`val`|Der Fehlercodewert, der in `error_condition` gespeichert werden soll.|
-|`_Cat`|Die Fehlerkategorie, die in `error_condition` gespeichert werden soll.|
-|`_Errcode`|Der Enumerationswert, der in `error_condition` gespeichert werden soll.|
+|*val*|Der Fehlercodewert, der in `error_condition` gespeichert werden soll.|
+|*_Cat*|Die Fehlerkategorie, die in `error_condition` gespeichert werden soll.|
+|*_Errcode*|Der Enumerationswert, der in `error_condition` gespeichert werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 
 Der erste Konstruktor speichert einen Fehlercodewert „Null“ und einen Zeiger auf [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Der zweite Konstruktor speichert `val` als Fehlercodewert und einen Zeiger auf [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Der zweite Konstruktor speichert *Val* als Fehlercodewert und einen Zeiger auf [Error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
 
-Im dritten Konstruktor wird `(value_type)_Errcode` als Fehlercodewert und ein Zeiger auf [generic_category](../standard-library/system-error-functions.md#generic_category) gespeichert.
+Der dritte Konstruktor speichert `(value_type)_Errcode` als Fehlercodewert und einen Zeiger auf [generic_category](../standard-library/system-error-functions.md#generic_category).
 
 ## <a name="message"></a> error_condition::message
 
@@ -188,7 +189,7 @@ bool operator==(const error_condition& right) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`right`|Die Objekte, die auf Gleichheit getestet werden sollen.|
+|*right*|Die Objekte, die auf Gleichheit getestet werden sollen.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -210,11 +211,11 @@ bool operator!=(const error_condition& right) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`right`|Das Objekt, das auf Ungleichheit geprüft werden soll.|
+|*right*|Das Objekt, das auf Ungleichheit geprüft werden soll.|
 
 ### <a name="return-value"></a>Rückgabewert
 
-**TRUE**, wenn das Objekt `error_condition` nicht dem Objekt `error_condition` entspricht, das an `right` übergeben wird; andernfalls **FALSE**.
+**"true"** Wenn die `error_condition` Objekt ist nicht gleich der `error_condition` Objekt übergebenen *rechten*; andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -232,7 +233,7 @@ bool operator<(const error_condition& right) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`right`|Das zu vergleichende `error_condition`-Objekt.|
+|*right*|Das zu vergleichende `error_condition`-Objekt.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -258,7 +259,7 @@ error_condition(_Enum error,
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`_Errcode`|Der Enumerationswert, der dem `error_condition`-Objekt zugewiesen wird.|
+|*_Errcode*|Der Enumerationswert, der dem `error_condition`-Objekt zugewiesen wird.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -282,7 +283,7 @@ Der boolesche Wert des Objekts `error_condition`.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Operator gibt einen Wert zurück, der zu `true` konvertiert werden kann, allerdings nur wenn [value](#value) nicht null entspricht. Der Rückgabetyp kann nur zu `bool` konvertiert werden, nicht zu `void *` oder zu anderen bekannten skalaren Typen.
+Der Operator gibt einen Wert konvertiert werden kann, um **"true"** nur, wenn [Wert](#value) ist nicht gleich 0 (null). Der Rückgabetyp ist in nur **"bool"**, nicht zu `void *` oder anderen bekannten skalaren Typen.
 
 ## <a name="value"></a> error_condition::value
 
@@ -308,7 +309,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Die Typdefinition ist ein Synonym für `int`.
+Die Typdefinition ist ein Synonym für **Int**.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097925"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
 Der Assistent erstellt eine Klasse, um eine Zeile mit Daten enthalten. In diesem Fall heißt es `CMyProviderWindowsFile`. Der folgende code für `CMyProviderWindowsFile` Assistenten generiert wird, und listet alle Dateien in einem Verzeichnis mithilfe der **WIN32_FIND_DATA** Struktur. `CMyProviderWindowsFile` erbt von der **WIN32_FIND_DATA** Struktur:  

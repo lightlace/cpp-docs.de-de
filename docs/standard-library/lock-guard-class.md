@@ -15,11 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcbd0f17392c69b09d6f9f3c8123dfcf8b543fa4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f53732fee62906da19a5771c8598cce51fc6331
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953757"
 ---
 # <a name="lockguard-class"></a>lock_guard-Klasse
 
@@ -69,13 +70,13 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>Parameter
 
-`Mtx` Ein *Mutex-Typ* Objekt.
+*Mtx* ein *Mutex-Typ* Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor erstellt ein Objekt des Typs `lock_guard` und sperrt `Mtx`. Wenn `Mtx` keinem rekursiven Mutex entspricht, muss dieses entsperrt werden, wenn dieser Konstruktor aufgerufen wird.
+Der erste Konstruktor konstruiert ein Objekt des Typs `lock_guard` und Sperren *Mtx*. Wenn *Mtx* ist keiner rekursiven Mutex entspricht, muss dieses entsperrt werden, wenn dieser Konstruktor aufgerufen wird.
 
-Der zweite Konstruktor sperrt nicht `Mtx`. `Mtx` muss gesperrt werden, wenn dieser Konstruktor aufgerufen wird. Der Konstruktor löst keine Ausnahmen aus.
+Der zweite Konstruktor sperrt nicht *Mtx*. *Mtx* muss gesperrt werden, wenn dieser Konstruktor aufgerufen wird. Der Konstruktor löst keine Ausnahmen aus.
 
 ## <a name="dtorlock_guard_destructor"></a> lock_guard::~lock_guard-Destruktor
 

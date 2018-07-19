@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3b755fc35c98652ab87231e9d8f58cde748bfc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b78e9a4fefad884f4ac683cd0c7f18688a5bdfe
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950813"
 ---
 # <a name="user-defined-tools"></a>Benutzerdefinierte Tools
 MFC unterstützt benutzerdefinierte Tools. Ein benutzerdefiniertes Tool ist eine spezielle Befehl, der eine externe, benutzerdefinierte Anwendung ausgeführt wird. Anpassungsvorgangs können Sie benutzerdefinierte Tools verwalten. Allerdings können Sie diesen Prozess verwenden, wenn Anwendungsobjekts nicht abgeleitet ist [CWinAppEx Class](../mfc/reference/cwinappex-class.md). Weitere Informationen zur Anpassung finden Sie unter [Anpassung für MFC](../mfc/customization-for-mfc.md).  
@@ -31,11 +32,11 @@ Registerkarte "Extras" Anpassung Dialogfeld-Feld
 ## <a name="enabling-user-defined-tools-support"></a>Aktivieren von benutzerdefinierten tools unterstützen  
  Um eine benutzerdefinierte Tools in einer Anwendung zu aktivieren, rufen [CWinAppEx::EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools). Allerdings müssen Sie zunächst einige Konstanten in den Ressourcendateien Ihrer Anwendung zur Verwendung als Parameter für diesen Aufruf definieren.  
   
- Erstellen Sie im Ressourcen-Editor einen dummy-Befehl, der eine entsprechenden Befehl-ID verwendet. Im folgenden Beispiel verwenden wir **ID_TOOLS_ENTRY** als die Befehls-ID. Dieses Befehls-ID kennzeichnet eine Position in einen oder mehrere Menüs, in dem das Framework für die benutzerdefinierte Tools eingefügt wird.  
+ Erstellen Sie im Ressourcen-Editor einen dummy-Befehl, der eine entsprechenden Befehl-ID verwendet. Im folgenden Beispiel verwenden wir `ID_TOOLS_ENTRY` als die Befehls-ID. Dieses Befehls-ID kennzeichnet eine Position in einen oder mehrere Menüs, in dem das Framework für die benutzerdefinierte Tools eingefügt wird.  
   
- In der Zeichenfolgentabelle zur Darstellung der benutzerdefinierten Tools müssen Sie einige aufeinander folgende IDs reserviert. Die Anzahl von Zeichenfolgen, die Sie zur Seite gedrängt festlegen, entspricht die maximale Anzahl von Benutzertools, mit denen die Benutzer definieren können. Im folgenden Beispiel werden diese benannt **ID_USER_TOOL1** über **ID_USER_TOOL10**.  
+ In der Zeichenfolgentabelle zur Darstellung der benutzerdefinierten Tools müssen Sie einige aufeinander folgende IDs reserviert. Die Anzahl von Zeichenfolgen, die Sie zur Seite gedrängt festlegen, entspricht die maximale Anzahl von Benutzertools, mit denen die Benutzer definieren können. Im folgenden Beispiel werden diese benannt `ID_USER_TOOL1` über `ID_USER_TOOL10`.  
   
- Sie können Vorschläge für die Benutzer, die Ihnen helfen, die Verzeichnisse und Argumente für externe Programme, die aufgerufen werden, wie Verwaltungstools auswählen. Zu diesem Zweck erstellen Sie zwei Popupmenüs im Ressourcen-Editor. Im folgenden Beispiel wird diese mit dem Namen **IDR_MENU_ARGS** und **IDR_MENU_DIRS**. Definieren Sie für jeden Befehl in diesen Menüs eine Zeichenfolge in der Zeichenfolgentabelle Ihrer Anwendung ein. Die Ressourcen-ID der Zeichenfolge muss die Befehls-ID. gleich sein.  
+ Sie können Vorschläge für die Benutzer, die Ihnen helfen, die Verzeichnisse und Argumente für externe Programme, die aufgerufen werden, wie Verwaltungstools auswählen. Zu diesem Zweck erstellen Sie zwei Popupmenüs im Ressourcen-Editor. Im folgenden Beispiel wird diese mit dem Namen `IDR_MENU_ARGS` und `IDR_MENU_DIRS`. Definieren Sie für jeden Befehl in diesen Menüs eine Zeichenfolge in der Zeichenfolgentabelle Ihrer Anwendung ein. Die Ressourcen-ID der Zeichenfolge muss die Befehls-ID. gleich sein.  
   
  Sie können auch eine abgeleitete Klasse von erstellen [CUserTool Klasse](../mfc/reference/cusertool-class.md) die standardmäßige Implementierung ersetzen. Übergeben Sie zu diesem Zweck die Laufzeitinformationen für die abgeleitete Klasse als vierten Parameter in CWinAppEx::EnableUserTools, anstatt RUNTIME_CLASS ([CUserTool Klasse](../mfc/reference/cusertool-class.md)).  
   
@@ -45,7 +46,7 @@ Registerkarte "Extras" Anpassung Dialogfeld-Feld
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#1](../mfc/codesnippet/cpp/user-defined-tools_1.cpp)]  
   
- In diesem Beispiel wird die Registerkarte "Extras" auf enthalten die **Anpassung** (Dialogfeld). Das Framework werden solche Befehle, die die Befehls-ID entspricht ersetzt **ID_TOOLS_ENTRY** in keinem Menü mit den aktuell definierten Benutzertools, sobald ein Benutzer das Menü geöffnet wird. Die Befehls-IDs **ID_USER_TOOL1** über **ID_USER_TOOL10** sind für die Verwendung von benutzerdefinierten Tools reserviert. Die Klasse [CUserTool Klasse](../mfc/reference/cusertool-class.md) Aufrufe an die Benutzertools verarbeitet. Der Registerkarte "Tools" der **Anpassung** Dialogfeld stellt Schaltflächen rechts neben die Argument- und Directory Felder auf die Menüs **IDR_MENU_ARGS** und **IDR_MENU_DIRS**. Wenn ein Benutzer einen Befehl von einem mithilfe dieser Menüs auswählt, fügt das Framework an das entsprechende Textfeld die Zeichenfolge, die die Ressourcen-ID gleich die Befehls-ID.  
+ In diesem Beispiel wird die Registerkarte "Extras" auf enthalten die **Anpassung** (Dialogfeld). Das Framework ersetzt solche Befehle, die die Befehls-ID entspricht `ID_TOOLS_ENTRY` in keinem Menü mit den aktuell definierten Benutzertools, sobald ein Benutzer das Menü geöffnet wird. Die Befehls-IDs `ID_USER_TOOL1` über `ID_USER_TOOL10` sind für die Verwendung von benutzerdefinierten Tools reserviert. Die Klasse [CUserTool Klasse](../mfc/reference/cusertool-class.md) Aufrufe an die Benutzertools verarbeitet. Der Registerkarte "Tools" der **Anpassung** Dialogfeld stellt Schaltflächen rechts neben die Argument- und Directory Felder auf die Menüs **IDR_MENU_ARGS** und **IDR_MENU_DIRS**. Wenn ein Benutzer einen Befehl von einem mithilfe dieser Menüs auswählt, fügt das Framework an das entsprechende Textfeld die Zeichenfolge, die die Ressourcen-ID gleich die Befehls-ID.  
   
 ### <a name="including-predefined-tools"></a>Vordefinierten Tools einschließlich  
  Einige Tools auf den Start der Anwendung vordefinieren werden sollen, müssen Sie überschreiben die [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) Methode des Hauptfensters der Anwendung. In dieser Methode müssen Sie die folgenden Schritte ausführen.  

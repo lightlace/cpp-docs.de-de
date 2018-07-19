@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093099"
 ---
 # <a name="beginpropertysetex"></a>BEGIN_PROPERTY_SET_EX
 Legen Sie der Anfang einer Eigenschaft in einer Eigenschaft markiert Zuordnung festgelegt.  

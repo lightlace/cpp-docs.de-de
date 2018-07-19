@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420836"
 ---
 # <a name="startup-and-termination-c"></a>Starten und Beenden (C++)
 Programmstart und-Beendigung werden mithilfe von zwei Funktionen erleichtert: [main](../cpp/main-program-startup.md) und [beenden](../cpp/program-termination.md). Es kann auch ein anderer Start- und Beendigungscode ausgeführt werden.  

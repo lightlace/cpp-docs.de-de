@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383344"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Verwenden von Bildlisten in einem erweiterten Kombinationsfeld-Steuerelement
 Die Hauptfunktion des erweiterten Kombinationsfeld-Steuerelementen ist die Möglichkeit, einzelne Elemente in einem Kombinationsfeld-Steuerelement von Bildern aus einer Bildliste zugeordnet werden soll. Jedes Element wird auf drei verschiedene Bilder anzeigen: eine für den ausgewählten Zustand, für die nicht ausgewählten Zustand und ein drittes Bild überlagert.  

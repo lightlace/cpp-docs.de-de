@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419127"
 ---
 # <a name="lexical-conventions"></a>Lexikalische Konventionen
 In diesem Abschnitt werden die grundlegenden Elemente eines C++-Programms vorgestellt. Sie verwenden diese sogenannten "lexikalischen Elemente" oder "Token", um Anweisungen, Definitionen, Deklarationen usw. zu erstellen, die zum Aufbau vollständiger Programme verwendet werden. Die folgenden lexikalischen Elemente werden in diesem Abschnitt behandelt:

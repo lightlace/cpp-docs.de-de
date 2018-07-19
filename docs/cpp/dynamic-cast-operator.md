@@ -1,5 +1,5 @@
 ---
-title: Dynamic_cast-Operator | Microsoft Docs
+title: Dynamic_cast-Operator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87105ad2d52ebbb7749deafadedcd510314038f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 697f4a83cb0b5f9aabb7ce477c4664cb39fb7f97
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943999"
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast-Operator
 Konvertiert den Operanden `expression` in ein Objekt vom Typ `type-id`.  
@@ -35,17 +36,17 @@ dynamic_cast < type-id > ( expression )
 ## <a name="remarks"></a>Hinweise  
  `type-id` muss ein Zeiger oder ein Verweis auf einen zuvor definierten Klassentyp oder ein "Zeiger auf void" sein. Der `expression`-Typ muss ein Zeiger sein, wenn `type-id` ein Zeiger ist, oder ein lvalue, wenn `type-id` ein Verweis ist.  
   
- Finden Sie unter [Static_cast](../cpp/static-cast-operator.md) eine Erläuterung des Unterschieds zwischen statischen und dynamischen umwandlungskonvertierungen und wann sie jeweils zu verwenden sind.  
+ Finden Sie unter ["static_cast"](../cpp/static-cast-operator.md) eine Erläuterung des Unterschieds zwischen statischen und dynamischen umwandlungskonvertierungen erklärt, und wann sie jeweils zu verwenden sind.  
   
- Es gibt zwei wichtige Änderungen im Verhalten von `dynamic_cast` in verwaltetem Code:  
+ Es gibt zwei wichtige Änderungen im Verhalten von **Dynamic_cast** in verwaltetem Code:  
   
--   `dynamic_cast` in einen Zeiger auf den zugrunde liegenden Typ einer geschachtelten Enumeration führt zu einem Laufzeitfehler, und anstelle des konvertierten Zeigers wird 0 (null) zurückgeben.  
+-   **Dynamic_cast** in einen Zeiger auf den zugrunde liegenden Typ einer geschachtelten Enumeration wird zur Laufzeit einen Fehler, 0, anstelle des konvertierten Zeigers zurückgeben.  
   
--   `dynamic_cast` löst keine Ausnahme mehr aus, wenn `type-id` ein innerer Zeiger auf einen Werttyp ist, die Umwandlung führt zu einem Laufzeitfehler.  Die Umwandlung gibt jetzt den 0-Zeigerwert zurück, statt auszulösen.  
+-   **Dynamic_cast** löst eine Ausnahme nicht mehr bei `type-id` wird ein innerer Zeiger auf einen Werttyp handelt, die Umwandlung führt zu einem Laufzeitfehler.  Die Umwandlung gibt jetzt den 0-Zeigerwert zurück, statt auszulösen.  
   
  Wenn `type-id` ein Zeiger auf eine eindeutig zugreifbare direkte oder indirekte Basisklasse von `expression` ist, ist ein Zeiger auf das eindeutige Unterobjekt vom Typ `type-id` das Ergebnis. Zum Beispiel:  
   
-```  
+```cpp 
 // dynamic_cast_1.cpp  
 // compile with: /c  
 class B { };  
@@ -64,7 +65,7 @@ void f(D* pd) {
   
  Wenn `type-id` "void*" ist, wird eine Laufzeitüberprüfung durchgeführt, um den tatsächlichen Typ von `expression` zu bestimmen. Das Ergebnis ist ein Zeiger auf das vollständige Objekt, auf das durch `expression` gezeigt wird. Zum Beispiel:  
   
-```  
+```cpp 
 // dynamic_cast_2.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -85,7 +86,7 @@ void f() {
   
  Wenn der Typ von `expression` eine Basisklasse vom Typ `type-id` ist, wird eine Laufzeitüberprüfung durchgeführt, um festzustellen, ob `expression` tatsächlich auf ein vollständiges Objekt vom Typ `type-id` zeigt. Wenn dies der Fall ist, ist das Ergebnis ein Zeiger auf ein vollständiges Objekt vom Typ `type-id`. Zum Beispiel:  
   
-```  
+```cpp 
 // dynamic_cast_3.cpp  
 // compile with: /c /GR  
 class B {virtual void f();};  
@@ -104,11 +105,11 @@ void f() {
   
  Im Fall der Mehrfachvererbung werden Möglichkeiten für Mehrdeutigkeit eingeführt. Betrachten Sie die Klassenhierarchie, die in der folgenden Abbildung gezeigt wird.  
   
- Für CLR-Typen ergibt `dynamic_cast` entweder kein Ergebnis, wenn die Konvertierung implizit durchgeführt werden kann, oder eine `isinst`-MSIL-Anweisung, die eine dynamische Prüfung ausführt und `nullptr` zurückgibt, wenn bei der Konvertierung ein Fehler auftritt.  
+ Bei CLR-Typen **Dynamic_cast** führt keine Aktion, wenn die Konvertierung implizit durchgeführt werden kann, oder einer MSIL- `isinst` -Anweisung, die eine dynamische Prüfung ausführt, und gibt **"nullptr"** Wenn die Konvertierung schlägt fehl.  
   
- Das folgende Beispiel verwendet `dynamic_cast`, um zu bestimmen, ob eine Klasse eine Instanz von einem bestimmten Typ ist:  
+ Das folgende Beispiel verwendet **Dynamic_cast** zu bestimmen, ob eine Klasse eine Instanz eines bestimmten Typs ist:  
   
-```  
+```cpp 
 // dynamic_cast_clr.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -134,7 +135,7 @@ Klassenhierarchie mit mehrfacher Vererbung
   
  Ein Zeiger auf ein Objekt vom Typ `D` kann sicher in `B` oder `C` umgewandelt werden. Wenn jedoch `D` umgewandelt wird, um auf ein `A`-Objekt zu zeigen, welche Instanz von `A` würde daraus resultieren? Dies führt zu einem Fehler aufgrund mehrdeutiger Umwandlung. Um dieses Problem zu umgehen, können Sie zwei eindeutige Umwandlungen ausführen. Zum Beispiel:  
   
-```  
+```cpp 
 // dynamic_cast_4.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -153,16 +154,16 @@ void f() {
  ![Klassenhierarchie, die von virtuellen Basisklassen](../cpp/media/vc39012.gif "vc39012")  
 Klassenhierarchie mit virtuellen Basisklassen  
   
- In dieser Hierarchie ist `A` eine virtuelle Basisklasse. Bei einer Instanz der `E`-Klasse und einem Zeiger auf das `A`-Unterobjekt wird ein `dynamic_cast` in einen Zeiger auf `B` zu einem Mehrdeutigkeitsfehler führen. Sie müssen in das vollständige `E`-Objekt zurückumwandeln und anschließend auf eine eindeutige Weise entlang die Hierarchie arbeiten, um zu dem richtigen `B`-Objekt zu gelangen.  
+ In dieser Hierarchie ist `A` eine virtuelle Basisklasse. Bei einer Instanz der Klasse `E` und einen Zeiger auf die `A` -Unterobjekt wird ein **Dynamic_cast** in einen Zeiger auf `B` Mehrdeutigkeitsfehler. Sie müssen in das vollständige `E`-Objekt zurückumwandeln und anschließend auf eine eindeutige Weise entlang die Hierarchie arbeiten, um zu dem richtigen `B`-Objekt zu gelangen.  
   
  Betrachten Sie die Klassenhierarchie, die in der folgenden Abbildung gezeigt wird.  
   
  ![Klassenhierarchie, die doppelten Basisklassen](../cpp/media/vc39013.gif "vc39013")  
 Klassenhierarchie mit doppelten Basisklassen  
   
- Bei einem Objekt vom Typ `E` und einem Zeiger auf das `D`-Unterobjekt können drei Konvertierungen vorgenommen werden, um vom `D`-Unterobjekt auf das `A`-Unterobjekt zu navigieren, das sich am weitesten links befindet. Sie können eine `dynamic_cast`-Konvertierung des `D`-Zeigers in einen `E`-Zeiger, dann eine Konvertierung (entweder `dynamic_cast` oder eine implizite Konvertierung) von `E` in `B` und schließlich eine implizite Konvertierung von `B` in `A` ausführen. Zum Beispiel:  
+ Bei einem Objekt vom Typ `E` und einem Zeiger auf das `D`-Unterobjekt können drei Konvertierungen vorgenommen werden, um vom `D`-Unterobjekt auf das `A`-Unterobjekt zu navigieren, das sich am weitesten links befindet. Durchführen können eine **Dynamic_cast** Konvertierung von der `D` Zeiger auf ein `E` Zeiger, dann eine Konvertierung (entweder **Dynamic_cast** oder eine implizite Konvertierung) von `E`zu `B`, und schließlich eine implizite Konvertierung von `B` zu `A`. Zum Beispiel:  
   
-```  
+```cpp 
 // dynamic_cast_5.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -178,11 +179,11 @@ void f(D* pd) {
 }  
 ```  
   
- Der `dynamic_cast`-Operator kann auch dazu verwendet werden, eine "übergreifende Umwandlung" auszuführen. Bei Verwenden der gleichen Klassenhierarchie ist es beispielsweise möglich, einen Zeiger aus dem `B`-Unterobjekt in das `D`-Unterobjekt umzuwandeln, solange das vollständige Objekt vom Typ `E` ist.  
+ Die **Dynamic_cast** Operator kann auch verwendet werden, um eine "übergreifende Umwandlung" auszuführen. Bei Verwenden der gleichen Klassenhierarchie ist es beispielsweise möglich, einen Zeiger aus dem `B`-Unterobjekt in das `D`-Unterobjekt umzuwandeln, solange das vollständige Objekt vom Typ `E` ist.  
   
  Im Fall von übergreifenden Umwandlungen ist es tatsächlich möglich, in nur zwei Schritten die Konvertierung von einem Zeiger auf `D` in einen Zeiger auf das `A`-Unterobjekt, das am weitesten links steht, durchzuführen. Sie können eine übergreifende Umwandlung von `D` in `B` und dann eine implizite Konvertierung von `B` in `A` ausführen. Zum Beispiel:  
   
-```  
+```cpp 
 // dynamic_cast_6.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -197,11 +198,11 @@ void f(D* pd) {
 }  
 ```  
   
- Ein NULL-Zeigerwert wird durch `dynamic_cast` in den NULL-Zeigerwert des Zieltyps konvertiert.  
+ Ein null-Zeiger-Wert wird in der null-Zeigerwert des Zieltyps von konvertiert **Dynamic_cast**.  
   
  Wenn Sie `dynamic_cast < type-id > ( expression )` verwenden, wenn `expression` nicht sicher in den Typ `type-id` konvertiert werden kann, führt die Laufzeitüberprüfung zu einem Umwandlungsfehler. Zum Beispiel:  
   
-```  
+```cpp 
 // dynamic_cast_7.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -214,7 +215,7 @@ void f() {
 }  
 ```  
   
- Der Wert eines Fehlers bei einer Umwandlung in einen Zeigertyp ist der NULL-Zeiger. Eine fehlerhafte Umwandlung zum Typ löst verweisen eine [Bad_cast-Ausnahme](../cpp/bad-cast-exception.md).   Wenn `expression` nicht zeigen, oder verweisen auf ein gültiges Objekt eine `__non_rtti_object` Ausnahme wird ausgelöst.  
+ Der Wert eines Fehlers bei einer Umwandlung in einen Zeigertyp ist der NULL-Zeiger. Eine fehlgeschlagene Umwandlung in den Referenztyp löst eine [Bad_cast-Ausnahme](../cpp/bad-cast-exception.md).   Wenn `expression` nicht zeigen bzw. verweisen auf ein gültiges Objekt, ein `__non_rtti_object` Ausnahme ausgelöst.  
   
  Finden Sie unter [Typeid](../cpp/typeid-operator.md) eine Erläuterung der `__non_rtti_object` Ausnahme.  
   
@@ -223,7 +224,7 @@ void f() {
   
  In dem Beispiel wird außerdem eine nicht virtuelle Funktion in der Hierarchie aufgerufen.  
   
-```  
+```cpp 
 // dynamic_cast_8.cpp  
 // compile with: /GR /EHsc  
 #include <stdio.h>  

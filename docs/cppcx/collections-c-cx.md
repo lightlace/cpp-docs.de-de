@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094256"
 ---
 # <a name="collections-ccx"></a>Auflistungen (C++/CX)
 In C + c++ / CX-Programm möglich der Container der Standardvorlagenbibliothek (STL) oder eines anderen benutzerdefinierten Auflistungstyps frei verwenden. Wenn Sie jedoch übergeben Sammlungen hin-und über die Windows-Runtime-anwendungsbinärdateischnittstelle (ABI) – beispielsweise an ein XAML-Steuerelement oder einen JavaScript-Client – müssen Sie Windows-Runtime-Auflistungstypen verwenden.  

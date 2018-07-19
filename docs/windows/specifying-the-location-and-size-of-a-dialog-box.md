@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890576"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Festlegen der Position und Größe eines Dialogfelds
 Der Speicherort und ein Dialogfeld, als auch die Position und Größe von Steuerelementen in ihr werden in Dialogeinheiten gemessen. In der unteren rechten Ecke der Visual Studio-Statusleiste angezeigt, wenn Sie sie auswählen, werden die Werte für einzelne Steuerelemente und das Dialogfeld angezeigt.  

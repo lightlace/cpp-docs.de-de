@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890430"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Schriftart für Texttool (Dialogfeld) (Bildbearbeitung für Symbole)
 Gibt die schriftarteinstellungen bei Verwendung der [Text-Dialogfeld "Texttool"](../windows/text-tool-dialog-box-image-editor-for-icons.md) von der [Grafik-Editor](../windows/image-editor-for-icons.md).  

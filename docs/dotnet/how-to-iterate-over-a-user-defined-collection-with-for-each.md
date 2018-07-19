@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128653"
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>Gewusst wie: Durchlaufen einer benutzerdefinierten Auflistung mit der for-each-Klausel
 Bei einer Klasse eine verwaltete Auflistung ist, muss sein Status eine nicht privaten GetEnumerator-Funktion, die ein Handle auf eine Enumeratorklasse oder eine Schnittstelle zurückgibt.  Eine Enumerator-Klasse muss die Deklaration für nicht statische MoveNext-Funktion und Current-Eigenschaft enthalten.  

@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3238ffcbd03f40c6eac0423d0212a65719fb33d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f569b064d2ee5de5bd1aa39c9d443c8a49ca2677
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961850"
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>Ausgabestreammanipulatoren mit einem Argument (int oder long)
 
-Die iostream-Klassenbibliothek enthält eine Reihe von Makros zum Erstellen von parametrisierter Manipulatoren. Manipulatoren mit einem einzigen `int`- oder `long`-Argument sind ein Sonderfall. Um einen Ausgabestreammanipulator zu erstellen, der ein einzelnes `int`- oder `long`-Argument akzeptiert (z.B. `setw`), müssen Sie das Makro _Smanip verwenden, das in \<iomanip> definiert ist. Dieses Beispiel definiert einen `fillblank`-Manipulator, der eine angegebene Anzahl von Leerzeichen in den Datenstrom eingefügt:
+Die iostream-Klassenbibliothek enthält eine Reihe von Makros zum Erstellen von parametrisierter Manipulatoren. Manipulatoren mit einem einzigen **Int** oder **lange** Argument sind ein Sonderfall. Um einen ausgabestreammanipulator zu erstellen, eine einzelne akzeptiert **Int** oder **lange** Argument (z. B. `setw`), müssen Sie das Makro _Smanip, definiert in den verwenden \<Iomanip >. Dieses Beispiel definiert einen `fillblank`-Manipulator, der eine angegebene Anzahl von Leerzeichen in den Datenstrom eingefügt:
 
 ## <a name="example"></a>Beispiel
 

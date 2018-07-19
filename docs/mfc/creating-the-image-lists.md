@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341524"
 ---
 # <a name="creating-the-image-lists"></a>Erstellen der Bildliste
 Erstellen von Bildlisten identisch ist, sowohl bei Verwendung [CListView](../mfc/reference/clistview-class.md) oder [CListCtrl](../mfc/reference/clistctrl-class.md).  

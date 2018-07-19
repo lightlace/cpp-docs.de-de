@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874206"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase-Funktion
 Ruft eine [ModuleBase](../windows/modulebase-class.md) Zeiger, der zum Inkrementieren und Dekrementieren den Verweiszähler des ermöglicht eine [RuntimeClass](../windows/runtimeclass-class.md) Objekt.  

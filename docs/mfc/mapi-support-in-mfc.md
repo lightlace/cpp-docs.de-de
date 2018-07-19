@@ -19,19 +19,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5d6498d1ecb20b47070cb26bf1a9d732340e266
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 301e15b11b05f9ccbeaee63aead486f1cc6c405c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931901"
 ---
 # <a name="mapi-support-in-mfc"></a>MAPI-Unterstützung in MFC
-MFC bietet Unterstützung für eine Teilmenge von der Microsoft Programm Schnittstelle MAPI (Messaging Application) in Klasse **CDocument**. Insbesondere **CDocument** verfügt über Memberfunktionen, die bestimmen, ob e-Mail-Unterstützung auf dem Computer des Endbenutzers vorhanden ist und wenn dies der Fall ist, einen Befehl "Mail senden, deren standard Befehls-ID ist, aktivieren" **ID_FILE_SEND_MAIL**. Die MFC-Handlerfunktion für diesen Befehl ermöglicht dem Benutzer ein Dokument per e-Mail senden.  
+MFC bietet Unterstützung für eine Teilmenge von der Microsoft Programm Schnittstelle MAPI (Messaging Application) in Klasse `CDocument`. Insbesondere `CDocument` verfügt über Memberfunktionen, die bestimmen, ob e-Mail-Unterstützung auf dem Computer des Endbenutzers vorhanden ist und wenn dies der Fall ist, einen Befehl "Mail senden, deren standard Befehls-ID ID_FILE_SEND_MAIL ist, aktivieren". Die MFC-Handlerfunktion für diesen Befehl ermöglicht dem Benutzer ein Dokument per e-Mail senden.  
   
 > [!TIP]
 >  Obwohl MFC nicht den gesamten Satz der MAPI-Funktion kapseln, können Sie weiterhin MAPI-Funktionen aufrufen direkt, genau wie Win32 API-Funktionen direkt aus MFC-Programmen aufgerufen werden können.  
   
- Bereitstellen der Mail senden ist Befehl in der Anwendung sehr einfach. MFC stellt die Implementierung zum Packen von einem Dokument (d. h. eine **CDocument**-abgeleitetes Objekt) als Anlage und als e-Mail-Nachrichten zu senden. Diese Anlage ist gleichbedeutend mit einer Datei speichern-Befehl, der speichert (serialisiert) den Dokumentinhalt in der e-Mail-Nachricht. Diese Implementierung ruft die e-Mail-Client auf dem Computer des Benutzers, Benutzern die Möglichkeit, um die e-Mail-Adresse und Betreff und den Nachrichtentext der e-Mail-Nachricht hinzufügen. Benutzer finden Sie unter der Benutzeroberfläche ihre vertraut Mail-Anwendung aus. Diese Funktionalität wird durch zwei bereitgestellt **CDocument** Memberfunktionen: `OnFileSendMail` und `OnUpdateFileSendMail`.  
+ Bereitstellen der Mail senden ist Befehl in der Anwendung sehr einfach. MFC stellt die Implementierung zum Packen von einem Dokument (d. h. eine `CDocument`-abgeleitetes Objekt) als Anlage und als e-Mail-Nachrichten zu senden. Diese Anlage ist gleichbedeutend mit einer Datei speichern-Befehl, der speichert (serialisiert) den Dokumentinhalt in der e-Mail-Nachricht. Diese Implementierung ruft die e-Mail-Client auf dem Computer des Benutzers, Benutzern die Möglichkeit, um die e-Mail-Adresse und Betreff und den Nachrichtentext der e-Mail-Nachricht hinzufügen. Benutzer finden Sie unter der Benutzeroberfläche ihre vertraut Mail-Anwendung aus. Diese Funktionalität wird durch zwei bereitgestellt `CDocument` Memberfunktionen: `OnFileSendMail` und `OnUpdateFileSendMail`.  
   
  MAPI muss zum Lesen der Datei, um die Anlage zu senden. Wenn die Anwendung beim Öffnen der Datendatei beibehält ein `OnFileSendMail` Funktionsaufruf, die Datei muss mit einem Share Modus geöffnet werden, die mehrere Prozesse auf die Datei zugreifen können.  
   
@@ -40,7 +41,7 @@ MFC bietet Unterstützung für eine Teilmenge von der Microsoft Programm Schnitt
   
 #### <a name="to-implement-a-send-mail-command-with-mfc"></a>So implementieren Sie einen E-Mail senden-Befehl mit MFC  
   
-1.  Verwenden Sie im Menü-Editor von Visual C++ So fügen Sie ein Menüelement hinzu, deren Befehls-ID ist **ID_FILE_SEND_MAIL**.  
+1.  Verwenden Sie im Menü-Editor von Visual C++, um ein Menüelement hinzufügen, dessen ID ID_FILE_SEND_MAIL lautet.  
   
      Dieses Befehls-ID wird vom Framework in AFXRES bereitgestellt. H. Der Befehl kann in keinem Menü hinzugefügt werden, aber es wird in der Regel hinzugefügt der **Datei** Menü.  
   
@@ -49,7 +50,7 @@ MFC bietet Unterstützung für eine Teilmenge von der Microsoft Programm Schnitt
      [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]  
   
     > [!NOTE]
-    >  Diese meldungszuordnung eignet sich für ein Dokument, das entweder abgeleitet **CDocument** oder **COleDocument** – er der richtigen Basisklasse in beiden Fällen übernimmt, obwohl die meldungszuordnung in Ihrer Dokumentklasse abgeleiteten ist.  
+    >  Diese meldungszuordnung eignet sich für ein Dokument, das entweder abgeleitet `CDocument` oder `COleDocument` – er der richtigen Basisklasse in beiden Fällen übernimmt, obwohl die meldungszuordnung in Ihrer Dokumentklasse abgeleiteten ist.  
   
 3.  Erstellen Sie die Anwendung.  
   
@@ -60,7 +61,7 @@ MFC bietet Unterstützung für eine Teilmenge von der Microsoft Programm Schnitt
   
  Weitere Informationen finden Sie unter der [MAPI](../mfc/mapi.md) (Übersicht).  
   
- Weitere Informationen zu den **CDocument** Memberfunktionen, mit denen MAPI, finden Sie unter:  
+ Weitere Informationen zu den `CDocument` Memberfunktionen, mit denen MAPI, finden Sie unter:  
   
 -   [CDocument:: OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)  
   

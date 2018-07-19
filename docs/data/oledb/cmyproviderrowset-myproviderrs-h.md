@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097340"
 ---
 # <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
 Der Assistent generiert einen Eintrag für die Rowset-Objekte. In diesem Fall wird der Name `CMyProviderRowset` zugewiesen Die `CMyProviderRowset` Klasse erbt von einer OLE DB-Anbieter-Klasse namens `CRowsetImpl`, die alle erforderlichen Schnittstellen für Rowset-Objekte implementiert. Der folgende Code zeigt die Vererbungskette für `CRowsetImpl`:  

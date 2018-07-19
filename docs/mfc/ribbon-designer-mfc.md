@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbde67e61a38190a2e26884659d273b55a63f89e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07131c64097457bd6a8035b5fe100ba376d49fbd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931156"
 ---
 # <a name="ribbon-designer-mfc"></a>Menüband-Designer (MFC)
 Mit dem Menüband-Designer können Sie Menübänder in MFC-Anwendungen erstellen und anpassen. Ein Menüband ist ein Element der Benutzeroberfläche (UI), auf dem Befehle in logischen Gruppen organisiert werden. Diese Gruppen werden auf separaten Registerkarten in einem Streifen entlang des oberen Fensterrahmens angezeigt. Das Menüband ersetzt die Menü- und Symbolleisten. Mit einem Menüband kann die Benutzerfreundlichkeit von Anwendungen erheblich verbessert werden. Weitere Informationen finden Sie unter [Menübänder](http://go.microsoft.com/fwlink/p/?linkid=129233). Die folgende Abbildung zeigt ein Menüband.  
@@ -33,7 +34,7 @@ Mit dem Menüband-Designer können Sie Menübänder in MFC-Anwendungen erstellen
 ## <a name="understanding-the-ribbon-designer"></a>Der Menüband-Designer  
  Mit dem Menüband-Designer wird das Menüband als Ressource erstellt und gespeichert. Wenn Sie eine Menübandressource erstellen, werden vom Menüband-Designer die folgenden drei Aktionen ausgeführt:  
   
--   Hinzufügen eines Eintrags im Projektressourcen-Definitionsskript (*.rc) Im folgenden Beispiel ist `IDR_RIBBON` der eindeutige Name zum Identifizieren der Menübandressource, `RT_RIBBON_XML` ist der Ressourcentyp und `ribbon.mfcribbon-ms` ist der Name der Ressourcendatei.  
+-   Hinzufügen eines Eintrags im Projektressourcen-Definitionsskript (*.rc) Im folgenden Beispiel IDR_RIBBON ist der eindeutige Name, der zum Identifizieren der menübandressource RT_RIBBON_XML ist der Ressourcentyp und ribbon.mfcribbon-ms-ist der Name der Ressourcendatei.  
   
  ```  
     IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  

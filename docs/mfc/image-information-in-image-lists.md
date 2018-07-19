@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343712"
 ---
 # <a name="image-information-in-image-lists"></a>Bildinformationen in Bildlisten
 [CImageList](../mfc/reference/cimagelist-class.md) umfasst eine Reihe von Funktionen, die Informationen aus einer Bildliste abrufen. Die [GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo) Member-Funktion füllt eine `IMAGEINFO` Struktur mit Informationen über ein einzelnes Bild, einschließlich der Ziehpunkte des Bitmaps Bild und die Maske, die Anzahl von Farbebenen und Bits pro Pixel und das umschließende Rechteck des Bilds in der Image-Bitmap. Diese Informationen können Sie um die Bitmaps für das Bild direkt zu bearbeiten.  

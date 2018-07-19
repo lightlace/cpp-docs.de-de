@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347330"
 ---
 # <a name="property-sheets-as-wizards"></a>Eigenschaftenblätter als Assistenten
 Ein wichtiges Merkmal eines Eigenschaftenblatts Assistenten ist, dass Navigation weiter oder "Fertig stellen", zurück, und "Abbrechen" Schaltflächen anstelle von Registerkarten zur Verfügung steht. Aufrufen, müssen Sie [CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) vor dem Aufruf [CPropertySheet:: DoModal](../mfc/reference/cpropertysheet-class.md#domodal) auf das Blatt Eigenschaftenobjekt dieses Feature nutzen.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374790"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (Erzwingen synchroner PDB-Schreibvorgänge)
 Erzwingt, dass Schreibvorgänge an die Programmdatenbankdatei (PDB) – erstellt durch [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) oder [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)– über MSPDBSRV serialisiert werden soll. EXE-DATEI.  

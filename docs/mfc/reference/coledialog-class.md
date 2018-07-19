@@ -1,5 +1,5 @@
 ---
-title: COleDialog Klasse | Microsoft Docs
+title: COleDialog-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c13b5d0a3bb30e08eaaeb0250da7deef692a66d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a41aa479fd87c76dbf167d728ad2dbb830f6a24b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853620"
 ---
 # <a name="coledialog-class"></a>COleDialog-Klasse
 Stellt die Funktionalität allgemeiner Dialogfelder für OLE bereit.  
@@ -42,7 +43,7 @@ class COleDialog : public CCommonDialog
 |[COleDialog::GetLastError](#getlasterror)|Ruft den vom Dialogfeld zurückgegebenen Fehlercode ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Microsoft Foundation Class Library stellt mehrere Klassen abgeleitet `COleDialog`:  
+ Die Microsoft Foundation Class Library stellt mehrere Klassen, die von `COleDialog`:  
   
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)  
   
@@ -81,17 +82,17 @@ class COleDialog : public CCommonDialog
  **Header:** afxodlgs.h  
   
 ##  <a name="getlasterror"></a>  COleDialog::GetLastError  
- Rufen Sie die `GetLastError` Memberfunktion zusätzlichen Fehlerinformationen abgerufen beim `DoModal` gibt **IDABORT**.  
+ Rufen Sie die `GetLastError` Memberfunktion versucht, zusätzlichen Fehlerinformationen abgerufen werden beim `DoModal` IDABORT zurückgibt.  
   
 ```  
 UINT GetLastError() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die zurückgegebene Fehlercodes `GetLastError` richten sich nach den spezifischen Dialogfeld angezeigt.  
+ Der vom zurückgegebenen Fehlercodes `GetLastError` richten sich nach der bestimmten Dialogfeld angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter der `DoModal` Memberfunktion in den abgeleiteten Klassen Informationen zu bestimmten Fehlermeldungen.  
+ Finden Sie unter den `DoModal` Member-Funktion in den abgeleiteten Klassen Informationen zu bestimmten Fehlermeldungen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CCommonDialog-Klasse](../../mfc/reference/ccommondialog-class.md)   

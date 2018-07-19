@@ -1,5 +1,5 @@
 ---
-title: XFORM-Struktur | Microsoft Docs
+title: XFORM-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1c3a8abd39f7f190f36a18e7691475d951cab8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6084882bed6690269fbb926f394159491d22978a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885883"
 ---
 # <a name="xform-structure"></a>XFORM-Struktur
 Die `XFORM` Struktur weist folgende Form:  
@@ -39,14 +40,14 @@ typedef struct  tagXFORM {  /* xfrm */
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die `XFORM` Struktur gibt an, ein World-Leerzeichen zur Seite "+ LEERTASTE-Transformation. Die **eDx** und **eDy** Mitglieder die horizontalen und vertikalen Übersetzung Komponenten bzw. angeben. Die folgende Tabelle zeigt, wie die anderen Member abhängig vom Vorgang verwendet werden:  
+ Die `XFORM` Struktur gibt an, einen Raum, um die Seite-Space-Transformation. Die `eDx` und `eDy` Member geben die horizontalen und vertikalen Translation-Komponenten. Die folgende Tabelle zeigt, wie die anderen Mitglieder abhängig vom Vorgang verwendet werden:  
   
 |Vorgang|eM11|eM12|eM21|eM22|  
 |---------------|----------|----------|----------|----------|  
-|`Rotation`|Kosinus von Drehwinkel für Bezeichnungen|Sinus von Drehwinkel für Bezeichnungen|Negative Sinus Drehwinkel für Bezeichnungen|Kosinus von Drehwinkel für Bezeichnungen|  
-|**Skalierung**|Horizontale Skalierung-Komponente|Nothing|Nothing|Vertikale Skalierung-Komponente|  
-|**Scheren von**|Nothing|Horizontale Verhältnismäßigkeit-Konstante|Vertikale Verhältnismäßigkeit-Konstante|Nothing|  
-|**Reflexion**|Horizontale Reflektion-Komponente|Nothing|Nothing|Vertikale Reflektion-Komponente|  
+|`Rotation`|Kosinus der Drehwinkel für Bezeichnungen|Sinus von Drehwinkel für Bezeichnungen|Negative Sinus der Drehwinkel für Bezeichnungen|Kosinus der Drehwinkel für Bezeichnungen|  
+|`Scaling`|Horizontale Skalierung-Komponente|Nothing|Nothing|Vertikale Skalierung-Komponente|  
+|`Shear`|Nothing|Horizontale Verhältnismäßigkeit-Konstante|Vertikale Verhältnismäßigkeit-Konstante|Nothing|  
+|`Reflection`|Horizontale Reflektion-Komponente|Nothing|Nothing|Vertikale Reflektion-Komponente|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** wingdi.h  

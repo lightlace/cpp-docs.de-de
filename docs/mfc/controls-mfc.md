@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353677"
 ---
 # <a name="controls-mfc"></a>Steuerelemente (MFC)
 Steuerelemente stellen Objekte dar, mit denen Benutzer arbeiten können, um Daten einzugeben oder zu ändern. Sie werden im Allgemeinen in Dialogfeldern oder auf Symbolleisten angezeigt. Diese Themenfamilie umfasst drei grundlegende Arten von Steuerelementen:  

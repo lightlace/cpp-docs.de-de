@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845907"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Leitfaden zum Portieren: MFC Scribble
 Dieses Thema ist das erste von mehreren Themen, in denen der Aktualisierungsvorgang für Visual C++-Projekte vorgestellt wird, die in älteren Versionen von Visual Studio erstellt wurden, auf Visual Studio 2017. Diese Themen stellen den Aktualisierungsvorgang durch Beispiele vor, beginnend mit einem sehr einfachen Projekt, um danach mit etwas komplexeren fortzufahren. In diesem Abschnitt arbeiten wir uns durch den Aktualisierungsvorgang für ein bestimmtes Projekt, MFC Scribble. Es eignet sich als grundlegende Einführung in den Aktualisierungsvorgang für C++-Projekte.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378716"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (Vorkompilierte Headerdatei verwenden)
 Weist den Compiler an, eine vorhandene Datei der vorkompilierten Headerdatei (PCH) in der aktuellen Kompilierung verwenden.  
