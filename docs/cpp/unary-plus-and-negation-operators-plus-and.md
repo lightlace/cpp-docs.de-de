@@ -1,5 +1,5 @@
 ---
-title: 'Unärer Plus- und Negationsoperatoren: + und - | Microsoft Docs'
+title: 'Unärer Plus- und Negationsoperatoren: + und - | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1441337275ac07b0d1ba39e8bfa34e7165f87f82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa500288ec4982ca4e1d304fac2cd577d58f4207
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943920"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>Unärer Plus- und Negationsoperatoren: + und -
 ## <a name="syntax"></a>Syntax  
@@ -33,20 +34,16 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 + cast-expression  
-```  
-  
-```  
-  
 - cast-expression  
 ```  
   
 ## <a name="-operator"></a>+-Operator  
- Das Ergebnis des unären plus -Operators (**+**) ist der Wert seines Operanden. Der Operand für den unären Plus-Operator muss ein arithmetischer Typ sein.  
+ Das Ergebnis des unären plus -Operators (**+**) ist der Wert des Operanden. Der Operand für den unären Plus-Operator muss ein arithmetischer Typ sein.  
   
- Ganzzahlige Erweiterung wird für ganzzahlige Operanden ausgeführt. Der resultierende Typ ist der Typ, in den der Operand heraufgestuft wird. Daher resultiert der Ausdruck `+ch`, in dem `ch` vom Typ `char` ist, im Typ `int`. Der Wert bleibt unverändert. Finden Sie unter [Standardkonvertierungen](standard-conversions.md) für Weitere Informationen zur Durchführung der heraufstufung.  
+ Ganzzahlige Erweiterung wird für ganzzahlige Operanden ausgeführt. Der resultierende Typ ist der Typ, in den der Operand heraufgestuft wird. Daher, ist der Ausdruck `+ch`, wobei `ch` ist vom Typ **Char**, führt zu Typ **Int**; der Wert bleibt unverändert. Finden Sie unter [Standardkonvertierungen](standard-conversions.md) für Weitere Informationen zur Durchführung der heraufstufung.  
   
 ## <a name="--operator"></a>--Operator  
- Der unäre Negationsoperator (**-**) erzeugt den negativen Wert seines Operanden. Der Operand für den unären Negationsoperator muss ein arithmetischer Typ sein.  
+ Der unäre Negationsoperator (**-**) erzeugt den negativen Wert des Operanden. Der Operand für den unären Negationsoperator muss ein arithmetischer Typ sein.  
   
  Ganzzahlige Erweiterung wird für ganzzahlige Operanden durchgeführt, und der resultierende Typ ist der Typ, auf den der Operand erweitert wird. Finden Sie unter [Standardkonvertierungen](standard-conversions.md) für Weitere Informationen zur Ausführung der heraufstufung.  
   

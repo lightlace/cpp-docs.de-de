@@ -1,5 +1,5 @@
 ---
-title: Ausdrücke mit Unäroperatoren | Microsoft Docs
+title: Ausdrücke mit Unäroperatoren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9301d4fdb09c63b7dc8e875e2b03a4990acec054
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416170"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941157"
 ---
 # <a name="expressions-with-unary-operators"></a>Ausdrücke mit unären Operatoren
 Unäre Operatoren werden nur auf einen Operanden in einem Ausdruck angewendet. Die unären Operatoren lauten wie folgt:  
@@ -64,9 +64,9 @@ Unäre Operatoren werden nur auf einen Operanden in einem Ausdruck angewendet. D
   
 -   `--` *Unary-expression*  
   
--   *unärer Operator* *Umwandlungsausdruck*  
+-   *Unary-Operator* *Cast-Ausdruck*  
   
--   `sizeof` *Unary-expression*  
+-   **"sizeof"** *Unary-Expression*  
   
 -   `sizeof(` *Typname* `)`  
   
@@ -76,15 +76,15 @@ Unäre Operatoren werden nur auf einen Operanden in einem Ausdruck angewendet. D
   
 -   *Aufhebung der Zuordnung-Ausdruck*  
   
- Alle *Postfix-Expression* gilt eine *Unary-Expression*, und da jeder primärer Ausdruck ist ein *Postfix-Expression*, ist primäre Ausdrücke berücksichtigt eine *Unary-Expression* auch. Weitere Informationen finden Sie unter [Postfixausdrücke](../cpp/postfix-expressions.md) und [Primärausdrücke](../cpp/primary-expressions.md).  
+ Alle *Postfix-Expression* gilt eine *Unary-Expression*, und da jeder primärer Ausdruck gilt eine *Postfix-Expression*, ist primäre Ausdrücke betrachtet ein *Unary-Expression* auch. Weitere Informationen finden Sie unter [Postfixausdrücke](../cpp/postfix-expressions.md) und [Primärausdrücke](../cpp/primary-expressions.md).  
   
- Ein *unäroperator* besteht aus mindestens einer der folgenden Symbole: `* & + - ! ~`  
+ Ein *unäroperator* besteht aus einem oder mehreren der folgenden Symbole: `* & + - ! ~`  
   
- Die *Umwandlungsausdruck* ist ein unärer Ausdruck mit einer optionalen Umwandlung so ändern Sie den Typ. Weitere Informationen finden Sie unter [Umwandlungsoperator: ()](../cpp/cast-operator-parens.md).  
+ Die *Cast-Expression* ist ein unärer Ausdruck mit einer optionalen Umwandlung, den Typ ändern. Weitere Informationen finden Sie unter [Umwandlungsoperator: ()](../cpp/cast-operator-parens.md).  
   
  Ein *Ausdruck* kann ein beliebiger Ausdruck sein. Weitere Informationen finden Sie unter [Ausdrücke](../cpp/expressions-cpp.md).  
   
- Die *Zuweisungsausdruck* bezieht sich auf die `new` Operator. Die *Aufhebung Ausdruck* bezieht sich auf die `delete` Operator. Weitere Informationen finden Sie unter den Links weiter oben in diesem Thema.  
+ Die *Zuweisungsausdruck* bezieht sich auf die **neue** Operator. Die *Aufhebung der Zuordnung-Expression* bezieht sich auf die **löschen** Operator. Weitere Informationen finden Sie unter den Links weiter oben in diesem Thema.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdruckstypen](../cpp/types-of-expressions.md)

@@ -1,5 +1,5 @@
 ---
-title: Einheitliche Initialisierung und Delegierung von Konstruktoren | Microsoft Docs
+title: Symbole mit einheitlicher Initialisierung und Delegierung von Konstruktoren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423521"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939831"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Einheitliche Initialisierung und Delegierung von Konstruktoren
-In modernem C++ können Sie *geschweifter Klammern Initialisierung* für jeden Typ ohne das Gleichheitszeichen. Außerdem können Sie delegierende Konstruktoren verwenden, um den Code zu vereinfachen, wenn mehrere Konstruktoren ähnliche Aufgaben ausführen.  
+In modernem C++ können Sie *geschweifter Klammern Initialisierung* für den beliebigen Typs, ohne das Gleichheitszeichen. Außerdem können Sie delegierende Konstruktoren verwenden, um den Code zu vereinfachen, wenn mehrere Konstruktoren ähnliche Aufgaben ausführen.  
   
 ## <a name="brace-initialization"></a>Initialisierung mit geschweiften Klammern  
  Sie können die Initialisierung mit geschweiften Klammern für jede Klasse, Struktur oder Union verwenden. Wenn ein Typ einen Standardkonstruktor hat, der entweder implizit oder explizit deklariert wurde, können Sie die Standardinitialisierung mit geschweiften klammern verwenden (mit leeren Klammern). Beispielsweise kann die folgende Klasse durch Verwenden der standardmäßigen und nicht standardmäßigen Initialisierung mit geschweiften Klammern initialisiert werden:  
@@ -91,7 +91,7 @@ int main()
 }  
 ```  
   
- Sie können die Initialisierung mit geschweiften Klammern an beliebigen Stellen anwenden, an denen Sie normalerweise eine Initialisierung durchführen würden, beispielsweise als Funktionsparameter oder Rückgabewert oder mit dem `new`-Schlüsselwort:  
+ Sie können die Initialisierung mit geschweiften Klammern an einer beliebigen Stelle Sie würden normalerweise eine Initialisierung durchführen – beispielsweise als Funktionsparameter oder Rückgabewert oder mit der **neue** Schlüsselwort:  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
@@ -101,14 +101,14 @@ return { 4.5 };
 ```  
   
 ## <a name="initializerlist-constructors"></a>initializer_list-Konstruktoren  
- Die [Initializer_list-Klasse](../standard-library/initializer-list-class.md) stellt eine Liste von Objekten eines angegebenen Typs, die in einem Konstruktor, und in anderen Kontexten verwendet werden kann. Sie können ein initializer_list-Objekt durch Verwenden der Initialisierung mit geschweiften Klammern erstellen:  
+ Die [Initializer_list-Klasse](../standard-library/initializer-list-class.md) stellt eine Liste von Objekten eines angegebenen Typs, die in einem Konstruktor und in anderen Kontexten verwendet werden können. Sie können ein initializer_list-Objekt durch Verwenden der Initialisierung mit geschweiften Klammern erstellen:  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  
 ```  
   
 > [!IMPORTANT]
->  Um diese Klasse verwenden zu können, müssen Sie auch die [< initializer_list-Element >](../standard-library/initializer-list.md) Header.  
+>  Um diese Klasse verwenden zu können, müssen Sie enthalten die [< Initializer_list >](../standard-library/initializer-list.md) Header.  
   
  Ein `initializer_list`-Objekt kann kopiert werden. In diesem Fall sind die Member der neuen Liste Verweise auf die Member der ursprünglichen Liste:  
   

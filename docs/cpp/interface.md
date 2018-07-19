@@ -1,5 +1,5 @@
 ---
-title: __interface | Microsoft Docs
+title: __interface | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea8f2585a1e385795a42c745aa95e180c6bb352
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03964b224603d86064290aa68344c828c2630a17
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943537"
 ---
 # <a name="interface"></a>__interface
 **Microsoft-spezifisch**  
@@ -43,36 +44,35 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-modifier  
- __interface interface-name {interface-definition};  
+modifier __interface interface-name {interface-definition};  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- C++ [Klasse](../cpp/class-cpp.md) oder [Struktur](../cpp/struct-cpp.md) mit diesen Regeln implementiert werden kann, aber `__interface` erzwingt diese.  
+ C++ [Klasse](../cpp/class-cpp.md) oder [Struktur](../cpp/struct-cpp.md) könnte mit diesen Regeln implementiert werden, aber **__interface** setzt sie durch.  
   
  Im Folgenden ist eine Beispiel-Schnittstellendefinition angegeben:  
   
-```  
+```cpp 
 __interface IMyInterface {  
    HRESULT CommitX();  
    HRESULT get_X(BSTR* pbstrName);  
 };  
 ```  
   
- Informationen zu verwalteten Schnittstellen finden Sie unter [Schnittstellenklasse](../windows/interface-class-cpp-component-extensions.md).  
+ Weitere Informationen zu verwalteten Schnittstellen finden Sie unter [Schnittstellenklasse](../windows/interface-class-cpp-component-extensions.md).  
   
  Sie müssen nicht explizit angeben, dass die `CommitX`- und `get_X`-Funktionen rein virtuell sind. Eine entsprechende Deklaration für die erste Funktion wäre:  
   
-```  
+```cpp 
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` impliziert den [Novtable](../cpp/novtable.md) `__declspec` Modifizierer.  
+ **__interface** impliziert die [Novtable](../cpp/novtable.md) **__declspec** Modifizierer.  
   
 ## <a name="example"></a>Beispiel  
  Die folgenden Beispiele zeigen, wie die in einer Schnittstelle deklarierten Eigenschaften verwendet werden.  
   
-```  
+```cpp 
 // deriv_interface.cpp  
 #define _ATL_ATTRIBUTES 1  
 #include <atlbase.h>  

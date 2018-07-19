@@ -1,5 +1,5 @@
 ---
-title: Type_info-Klasse | Microsoft Docs
+title: Type_info-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e3138c9028f72327c9d4bf2c2f2e82c942dbde
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422435"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941040"
 ---
 # <a name="typeinfo-class"></a>type_info-Klasse
-Die **Type_info** Klasse beschreibt die Typinformationen, die innerhalb des Programms vom Compiler generiert. Objekte dieser Klasse speichern effektiv einen Zeiger auf einen Namen für den Typ. Die **Type_info** Klasse speichert auch einen codierten Wert für das Vergleichen von zwei Typen für Gleichheit oder Sortierreihenfolge. Die Codierungsregeln und die Sortierreihenfolge für Typen sind nicht spezifiziert und können je nach Programm unterschiedlich sein.  
+Die `type_info` Klasse beschreibt die Typinformationen, die innerhalb des Programms vom Compiler generiert werden. Objekte dieser Klasse speichern effektiv einen Zeiger auf einen Namen für den Typ. Die `type_info` Klasse speichert auch einen codierten Wert für das Vergleichen von zwei Typen für Gleichheit oder Sortierreihenfolge. Die Codierungsregeln und die Sortierreihenfolge für Typen sind nicht spezifiziert und können je nach Programm unterschiedlich sein.  
   
- Die `<typeinfo>` Headerdatei um verwenden eingeschlossen werden muss die **Type_info** Klasse. Die Schnittstelle für die **Type_info** Klasse ist:  
+ Die `<typeinfo>` Headerdatei-Druckertreiber eingeschlossen werden muss die `type_info` Klasse. Die Schnittstelle für die `type_info` -Klasse ist:  
   
 ```cpp
 class type_info {  
@@ -42,17 +42,17 @@ public:
 };  
 ```  
   
- Kann nicht instanziiert werden Objekte von der **Type_info** -Klasse direkt verwendet, da die Klasse nur einen privaten Kopierkonstruktor aufweist. Die einzige Möglichkeit, ein (temporäres) **Type_info** Objekt ist die Verwendung der [Typeid](../cpp/typeid-operator.md) Operator. Da der Zuweisungsoperator auch privat ist, können nicht kopiert oder weisen Sie Objekte der Klasse **Type_info**.  
+ Objekte können nicht instanziiert werden die `type_info` -Klasse direkt verwenden, da die Klasse nur einen privaten Kopierkonstruktor aufweist. Die einzige Möglichkeit, ein (temporäres) `type_info` Objekt ist die Verwendung der [Typeid](../cpp/typeid-operator.md) Operator. Da der Zuweisungsoperator auch privat ist, Sie nicht kopieren oder zuweisen können Objekte der Klasse `type_info`.  
   
- **hash_code** definiert eine Hashfunktion, die zum Zuordnen von Werten des Typs geeignet **Typeinfo** auf eine Verteilung von Indexwerten.  
+ `type_info::hash_code` definiert eine Hashfunktion, die geeignet ist, Werte des Typs `typeinfo` einer Verteilung von Indexwerten.  
   
- Die Operatoren `==` und `!=` kann verwendet werden, um auf Gleichheit und Ungleichheit mit anderen **Type_info** -Objekt zugeordnet.  
+ Die Operatoren `==` und `!=` können verwendet werden, um auf Gleichheit und Ungleichheit verglichen werden soll, mit anderen `type_info` -Objekten.  
   
- Es gibt keine Verbindung zwischen der Sortierreihenfolge von Typen und Vererbungsbeziehungen. Verwenden der **type_info:: before** Member-Funktion, um die Sortierreihenfolge von Typen zu ermitteln. Es gibt keine Garantie, **type_info:: before** wird die gleiche erzielt in verschiedenen Programmen oder sogar bei unterschiedlichen Ausführungen desselben Programms. Auf diese Weise **type_info:: before** ähnelt der Adresse des **(&)** Operator.  
+ Es gibt keine Verbindung zwischen der Sortierreihenfolge von Typen und Vererbungsbeziehungen. Verwenden der `type_info::before` Member-Funktion, um die Sortierreihenfolge von Typen zu ermitteln. Es gibt keine Garantie, `type_info::before` ergibt das gleiche Ergebnis in verschiedenen Programmen oder sogar von verschiedenen Ausführungen desselben Programms. Auf diese Weise `type_info::before` ist vergleichbar mit dem Address-of `(&)` Operator.  
   
- Die **type_info:: Name** Memberfunktion gibt eine **const Char\***  auf eine Null-terminierte Zeichenfolge, die den lesbaren Namen des Typs darstellt. Der Speicher, auf den gezeigt wird, wird zwischengespeichert und sollte nie direkt freigegeben werden.  
+ Die `type_info::name` Memberfunktion gibt ein `const char*` auf eine Null-terminierte Zeichenfolge, die den lesbaren Namen des Typs darstellt. Der Speicher, auf den gezeigt wird, wird zwischengespeichert und sollte nie direkt freigegeben werden.  
   
- Die **type_info:: raw_name** Memberfunktion gibt eine **const Char\***  auf eine Null-terminierte Zeichenfolge, die den ergänzten Namen des Objekttyps darstellt. Der Name wird tatsächlich in seiner ergänzten Form gespeichert, um Platz zu sparen. Daher ist diese Funktion schneller als **type_info:: Name** , da sie nicht die namensergänzung benötigt. Die zurückgegebene Zeichenfolge den **type_info:: raw_name** Funktion eignet sich für Vergleichsvorgänge, aber ist nicht lesbar. Wenn Sie eine lesbare Zeichenfolge benötigen, verwenden Sie die **type_info:: Name** stattdessen-Funktion.  
+ Die `type_info::raw_name` Memberfunktion gibt ein `const char*` auf eine Null-terminierte Zeichenfolge, die den ergänzten Namen des Objekttyps darstellt. Der Name wird tatsächlich in seiner ergänzten Form gespeichert, um Platz zu sparen. Daher ist diese Funktion schneller als `type_info::name` , da es die namensergänzung nicht benötigt wird. Die zurückgegebene Zeichenfolge den `type_info::raw_name` Funktion eignet sich für Vergleichsvorgänge, aber ist nicht lesbar. Wenn Sie eine lesbare Zeichenfolge benötigen, verwenden Sie die `type_info::name` stattdessen funktionieren.  
   
  Typinformationen für polymorphe Klassen nur, wenn generiert die [/GR (Laufzeit-Typinformationen aktivieren)](../build/reference/gr-enable-run-time-type-information.md) -Compileroption angegeben ist.  
   

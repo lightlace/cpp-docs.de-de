@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::AddRef | Microsoft Docs
+title: _com_ptr_t::AddRef | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a1b629f254bae2b72790546bcbb00185f2c44c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40ed48b54a3862f7ac5804e7652d98b661bb071d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409773"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940991"
 ---
 # <a name="comptrtaddref"></a>_com_ptr_t::AddRef
 **Microsoft-spezifisch**  
   
- Ruft die `AddRef` Memberfunktion von **IUnknown** für den gekapselten Schnittstellenzeiger auf.  
+ Ruft die `AddRef` Memberfunktion `IUnknown` für den gekapselten Schnittstellenzeiger auf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +37,7 @@ void AddRef( );
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Aufrufe `IUnknown::AddRef` für den gekapselten Schnittstellenzeiger auf, durch das Auslösen einer `E_POINTER` Fehler, wenn der Zeiger **NULL**.  
+ Aufrufe `IUnknown::AddRef` für den gekapselten Schnittstellenzeiger auf, das Auslösen eines E_POINTER-Fehlers, wenn der Zeiger NULL ist.  
   
  **Ende Microsoft-spezifisch**  
   

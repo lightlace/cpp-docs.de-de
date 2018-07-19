@@ -1,5 +1,5 @@
 ---
-title: __based-Grammatik | Microsoft Docs
+title: __based-Grammatik | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,22 +14,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e1c14cd7add01f8583c24541987b2980da794a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad00244be53a2eebe4a02b99c6368333f3daf23
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409536"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939363"
 ---
 # <a name="based-grammar"></a>__based-Grammatik
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
  Die basierende Adressierung ist nützlich, wenn eine genaue Kontrolle über das Segment erforderlich ist, in dem Objekte zugeordnet sind (statische und dynamische basierende Daten).  
   
- Die einzige Form der basierenden Adressierung, die in 32-Bit- und 64-Bit-Kompilierungen zulässig ist "basiert auf einem Zeiger". Dieser gibt einen Typ an, der eine 32-Bit- oder 64-Bit-Verschiebung auf eine 32-Bit- oder 64-Bit-Basis enthält oder auf `void` basiert.  
+ Die einzige Form der basierenden Adressierung in 32-Bit- und 64-Bit-Kompilierungen zulässig ist "basiert auf einem Zeiger" definiert, die einen Typ, der eine 32-Bit oder 64-Bit-Verschiebung auf einen 32-Bit oder 64-Bit-Basis enthält oder basierend auf **"void"**.  
   
 ## <a name="grammar"></a>Grammatik  
- *Basis-Range-Modifizierer*:  
- **__based (***Base Ausdruck***)**   
+ *Basis-Range-Modifier*:  
+ **__based (***Basis-Expression***)**   
   
  *Basis-Expression*:  
  *based-variablebased-abstract-declaratorsegment-namesegment-CAST*  

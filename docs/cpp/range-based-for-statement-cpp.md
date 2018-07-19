@@ -1,5 +1,5 @@
 ---
-title: Range-based for-Anweisung (C++) | Microsoft Docs
+title: Bereichsbasiert für Anweisung (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc60c1efc307f30c06accdd7404cb35c135dae5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1284e4f6e096ab8021c597b841a8e983673561bd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943592"
 ---
 # <a name="range-based-for-statement-c"></a>Bereichsbasiert für Anweisung (C++)
 Führt `statement` für jedes Element in `expression` wiederholt und nacheinander aus.  
@@ -25,16 +26,16 @@ Führt `statement` für jedes Element in `expression` wiederholt und nacheinande
   
 ```  
   
-      for ( for-range-declaration : expression )  
+for ( for-range-declaration : expression )  
    statement   
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie die bereichsbasierte `for` Anweisung zum Erstellen von Schleifen, die ausführen müssen, einem "Bereich", der als nichts definiert ist, die durchlaufen werden kann – z. B. `std::vector`, oder eine andere C++-Standardbibliothek Sequenz, deren Gültigkeitsbereich durch eine definiertist,`begin()` und `end()`. Der im `for-range-declaration`-Teil deklarierte Name ist zur `for`-Anweisung lokal und kann in `expression` oder `statement` nicht neu deklariert werden. Beachten Sie, dass die [Auto](../cpp/auto-cpp.md) Schlüsselwort wird bevorzugt, der `for-range-declaration` Teil der Anweisung. 
+ Verwenden Sie die bereichsbasierte **für** Anweisung zum Erstellen von Schleifen, die einem "Bereich", die als nichts definiert ist, die Sie durchlaufen können ausführen müssen, z. B. `std::vector`, oder eine beliebige andere C++-Standard-Bibliothek Sequenz, deren Bereich wird definiert, indem eine `begin()` und `end()`. Der Name, der in deklariert wird die `for-range-declaration` Teil ist bezogen auf die **für** Anweisung und kann nicht neu deklariert in `expression` oder `statement`. Beachten Sie, dass die [automatisch](../cpp/auto-cpp.md) Schlüsselwort wird bevorzugt, der `for-range-declaration` Teil der Anweisung. 
 
- **Neues in Visual Studio 2017:** bereichsbasierte für Schleifen nicht mehr benötigt wird, dass begin() und end() Objekte vom gleichen Typ zurückgeben. Dadurch kann end() ein Sentinelobjekt zurückgeben, das von Bereichen verwendet wird, die im Ranges-V3-Vorschlag definiert sind. Weitere Informationen finden Sie unter [Generalizing the Range-Based For Loop (Bereichsbasierte for-Schleife generalisieren)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) und [range-v3 library on GitHub (Range-v3-Bibliothek auf GitHub)](https://github.com/ericniebler/range-v3).
+ **Neues in Visual Studio 2017:** bereichsbasierte for-Schleifen erfordern nicht mehr, dass begin() und end() Objekte des gleichen Typs zurückgeben. Dadurch kann end() ein Sentinelobjekt zurückgeben, das von Bereichen verwendet wird, die im Ranges-V3-Vorschlag definiert sind. Weitere Informationen finden Sie unter [Generalizing the Range-Based For Loop (Bereichsbasierte for-Schleife generalisieren)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) und [range-v3 library on GitHub (Range-v3-Bibliothek auf GitHub)](https://github.com/ericniebler/range-v3).
   
- Dieser Code zeigt, wie bereichsbasierte `for` Schleifen ein Array und einen Vektor durchlaufen:  
+ Dieser Code zeigt, wie Sie mit bereichsbasierten **für** Schleifen auf, um ein Array und einen Vektor durchlaufen:  
   
 ```cpp  
 // range-based-for.cpp  
@@ -93,24 +94,26 @@ int main()
 ```  
   
  Es folgt die Ausgabe:  
+
+```Output
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
- `1 2 3 4 5 6 7 8 9 10`  
-  
- `1 2 3 4 5 6 7 8 9 10`  
+ 1 2 3 4 5 6 7 8 9 10  
   
  `end of integer array test`  
   
  `0.14159 1.14159 2.14159 3.14159 4.14159 5.14159 6.14159 7.14159 8.14159 9.14159`  
   
  `end of vector test`  
+```
+
+ Eine bereichsbasierte **für** Schleife wird beendet, wenn eines der folgenden in `statement` ausgeführt wird: ein [Break](../cpp/break-statement-cpp.md), [zurückgeben](../cpp/return-statement-cpp.md), oder [Goto](../cpp/goto-statement-cpp.md) auf eine bezeichnete Anweisung außerhalb der bereichsbasierten **für** Schleife. Ein [weiterhin](../cpp/continue-statement-cpp.md) -Anweisung in einer bereichsbasierten **für** -Schleife wird nur die aktuelle Iteration beendet.  
   
- Eine bereichsbasierte `for` Schleife beendet, wenn eines der folgenden in `statement` ausgeführt wird: ein [Break](../cpp/break-statement-cpp.md), [zurückgeben](../cpp/return-statement-cpp.md), oder [Goto](../cpp/goto-statement-cpp.md) eine Anweisung mit Bezeichnung außerhalb der bereichsbasierte **für** Schleife. Ein [weiterhin](../cpp/continue-statement-cpp.md) -Anweisung in einer bereichsbasierten `for` -Schleife wird nur die aktuelle Iteration beendet.  
-  
- Beachten Sie diese Punkte zu bereichsbasierten `for`-Schleifen:  
+ Bedenken Sie diese Fakten zu bereichsbasierten **für**:  
   
 -   Erkennt Arrays automatisch.  
   

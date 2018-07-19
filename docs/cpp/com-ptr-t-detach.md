@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::Detach | Microsoft Docs
+title: _com_ptr_t::Detach | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fbe8fd203c3fda75e83aee623254676dacaf1da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c07a9ce1d315c6738472850b987ccb397feda267
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410579"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941352"
 ---
 # <a name="comptrtdetach"></a>_com_ptr_t::Detach
 **Microsoft-spezifisch**  
@@ -37,7 +37,7 @@ Interface* Detach( ) throw( );
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Gibt den gekapselten Schnittstellenzeiger zurück, extrahiert und löscht dann den Speicher des gekapselten Zeigers auf **NULL**. Dadurch wird der Schnittstellenzeiger aus der Kapselung entfernt. Es liegt bei Ihnen Aufrufen **Version** für den zurückgegebenen Schnittstellenzeiger auf.  
+ Extrahiert und gibt den gekapselten Schnittstellenzeiger zurück, und löscht dann den Speicher des gekapselten Zeigers auf NULL. Dadurch wird der Schnittstellenzeiger aus der Kapselung entfernt. Es liegt bei Ihnen Aufrufen `Release` für den zurückgegebenen Schnittstellenzeiger auf.  
   
  **Ende Microsoft-spezifisch**  
   

@@ -1,5 +1,5 @@
 ---
-title: While-Anweisung (C++) | Microsoft Docs
+title: While-Anweisung (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc826b588f133abb93c9942e7907dd8b0fce9574
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943280"
 ---
 # <a name="while-statement-c"></a>while-Anweisung (C++)
-Führt *Anweisung* solange wiederholt, bis *Ausdruck* wird zu NULL ausgewertet.  
+Führt *Anweisung* solange wiederholt, bis *Ausdruck* zu NULL ausgewertet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
   
-      while ( expression )  
+while ( expression )  
    statement  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der Test von *Ausdruck* erfolgt vor jeder Ausführung der Schleife aus diesem Grund eine `while` Schleife 0 (null) oder mehrmals ausgeführt. *Ausdruck* muss ein ganzzahliger Typ, ein Zeigertyp oder ein Klassentyp mit einer eindeutigen Konvertierung in einen Ganzzahl- oder Zeigertyp sein.  
+ Der Test des *Ausdruck* erfolgt vor jeder Ausführung der Schleife; aus diesem Grund eine **während** Schleife NULL oder mehrmals ausgeführt. *Ausdruck* muss ein ganzzahliger Typ, ein Zeigertyp oder ein Klassentyp mit einer eindeutigen Konvertierung in einen Ganzzahl- oder Zeigertyp sein.  
   
- Ein `while` Schleife kann auch beendet werden, wenn eine [Break](../cpp/break-statement-cpp.md), [Goto](../cpp/goto-statement-cpp.md), oder [zurückgeben](../cpp/return-statement-cpp.md) Text wird in der Anweisung ausgeführt. Verwendung [weiterhin](../cpp/continue-statement-cpp.md) ohne beendet die aktuelle Iteration beendet die `while` Schleife. **weiterhin** übergibt die Steuerung an die nächste Iteration der der `while` Schleife.  
+ Ein **während** -Schleife kann auch beendet, wenn eine [Break](../cpp/break-statement-cpp.md), [Goto](../cpp/goto-statement-cpp.md), oder [zurückgeben](../cpp/return-statement-cpp.md) Text wird in der Anweisung ausgeführt. Verwendung [weiterhin](../cpp/continue-statement-cpp.md) beendet die aktuelle Iteration ohne Beenden der **während** Schleife. **weiterhin** übergibt die Steuerung an die nächste Iteration der **während** Schleife.  
   
- Im folgenden Code wird eine `while`-Schleife verwendet, um nachstehende Unterstriche von einer Zeichenfolge abzuschneiden:  
+ Der folgende code verwendet ein **während** Schleife gekürzt Unterstriche von einer Zeichenfolge:  
   
-```  
+```cpp 
 // while_statement.cpp  
   
 #include <string.h>  

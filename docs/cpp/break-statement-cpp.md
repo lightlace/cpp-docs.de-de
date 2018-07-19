@@ -1,5 +1,5 @@
 ---
-title: break-Anweisung (C++) | Microsoft Docs
+title: break-Anweisung (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3679ad27683e5f7ff9a13f5b5021710f7894c04
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00a1122dffac0bdb61ba3799ce78ed3403e6d478
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943532"
 ---
 # <a name="break-statement-c"></a>break-Anweisung (C++)
-Die `break`-Anweisung beendet die Ausführung der nächsten einschließenden Schleife oder Bedingungsanweisung, in der sie angezeigt wird. Das Steuerelement wird an die Anweisung übergeben, die auf das Ende der Anweisung folgt, falls vorhanden.  
+Die **Break** -Anweisung beendet die Ausführung der nächsten einschließenden Schleife oder bedingungsanweisung, in dem er angezeigt wird. Das Steuerelement wird an die Anweisung übergeben, die auf das Ende der Anweisung folgt, falls vorhanden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,16 +33,16 @@ break;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die `break` Anweisung wird verwendet, mit der bedingten [wechseln](../cpp/switch-statement-cpp.md) Anweisung und mit der [führen](../cpp/do-while-statement-cpp.md), [für](../cpp/for-statement-cpp.md), und [während](../cpp/while-statement-cpp.md) Schleife -Anweisungen.  
+ Die **Break** Anweisung wird verwendet, mit der bedingten [wechseln](../cpp/switch-statement-cpp.md) Anweisung und die [führen](../cpp/do-while-statement-cpp.md), [für](../cpp/for-statement-cpp.md), und [beim](../cpp/while-statement-cpp.md) schleifenanweisungen.  
   
- In einer `switch`-Anweisung bewirkt die `break`-Anweisung, dass das Programm die nächste Anweisung außerhalb der `switch`-Anweisung ausführt. Ohne eine `break`-Anweisung wird jede Anweisung von der entsprechenden `case`-Bezeichnung bis zum Ende der `switch`-Anweisung ausgeführt (einschließlich der `default`-Klausel).  
+ In einem **wechseln** -Anweisung, die **Break** Anweisung bewirkt, dass das Programm zum Ausführen der nächsten Anweisung außerhalb der **wechseln** Anweisung. Ohne eine **Break** -Anweisung wird jede Anweisung von der entsprechenden **Fall** -Bezeichnung bis zum Ende des der **wechseln** -Anweisung, einschließlich der **Standard**-Klausel ausgeführt wird.  
   
- In Schleifen beendet die `break`-Anweisung die Ausführung der nächsten einschließenden Anweisung `do`, `for` oder `while`. Das Steuerelement wird an die Anweisung übergeben, die auf die beendete Anweisung folgt, falls vorhanden.  
+ In Schleifen die **Break** -Anweisung beendet die Ausführung der nächsten einschließenden **führen**, **für**, oder **während** Anweisung. Das Steuerelement wird an die Anweisung übergeben, die auf die beendete Anweisung folgt, falls vorhanden.  
   
- Innerhalb von geschachtelten Anweisungen beendet die `break`-Anweisung lediglich die Anweisung `do`, `for`, `switch` oder `while`, von der sie direkt eingeschlossen ist. Sie können eine `return`-Anweisung oder eine `goto`-Anweisung verwenden, um das Steuerelement von tiefer geschachtelten Strukturen zu übergeben.  
+ Innerhalb von geschachtelten Anweisungen der **Break** -Anweisung beendet nur die **führen**, **für**, **wechseln**, oder **beim**-Anweisung, die direkt eingeschlossen. Sie können eine **zurückgeben** oder **"GoTo"** Anweisung, um das Steuerelement von tiefer geschachtelten Strukturen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Code wird die Verwendung der Anweisung `break` in einer `for`-Schleife veranschaulicht.  
+ Der folgende Code zeigt, wie Sie mit der **Break** -Anweisung in einem **für** Schleife.  
   
 ```cpp  
 #include <iostream>  
@@ -52,9 +53,10 @@ int main()
     // An example of a standard for loop  
     for (int i = 1; i < 10; i++)  
     {  
-        cout << i << '\n';  
-        if (i == 4)  
+        if (i == 4) {  
             break;  
+        }  
+        cout << i << '\n';  
     }  
   
     // An example of a range-based for loop  
@@ -76,7 +78,7 @@ In each case:
 3  
 ```  
   
- Im folgenden Code wird die Verwendung von `break` in einer `while`-Schleife und einer `do`-Schleife veranschaulicht.  
+ Der folgende Code zeigt, wie Sie mit **Break** in einer **während** Schleife und einem **führen** Schleife.  
   
 ```cpp  
 #include <iostream>  
@@ -109,7 +111,7 @@ In each case:
 0123  
 ```  
   
- Im folgenden Code wird die Verwendung von `break` in einer switch-Anweisung veranschaulicht. In jedem Fall muss `break` verwendet werden, wenn Sie jeden Fall getrennt behandeln möchten. Wenn Sie `break` nicht verwenden, fällt die Codeausführung auf den nächsten Fall.  
+ Der folgende Code zeigt, wie Sie mit **Break** in einer Switch-Anweisung. Verwenden Sie **Break** in jedem Fall, wenn Sie jeden Fall getrennt behandeln möchten, wenn Sie nicht verwenden **Break**, mit dem nächsten Fall fällt die codeausführung.  
   
 ```cpp  
 #include <iostream>  

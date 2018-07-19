@@ -1,5 +1,5 @@
 ---
-title: '_com_error:: wcode | Microsoft Docs'
+title: '_com_error:: wcode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1354d490446795e55b41fa0c548e8dd8aa38c71b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 810a5c16df1027aba976bea3c165b19f765d15a6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411535"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941839"
 ---
 # <a name="comerrorwcode"></a>_com_error::WCode
 **Microsoft-spezifisch**  
   
- Ruft den 16-Bit-Fehlercode ab, der dem gekapselten `HRESULT` zugeordnet ist.  
+ Ruft ab, der 16-Bit-Fehlercode in der gekapselten HRESULT zugeordnet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +37,10 @@ WORD WCode ( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn die `HRESULT` innerhalb des Bereichs 0 x 80040200 bis 0x8004ffff liegt, wird die **WCode** Methode gibt die `HRESULT` minus 0 x 80040200; zurückgegeben, andernfalls 0 (null).  
+ Falls das HRESULT innerhalb des Bereichs 0 x 80040200 bis 0x8004ffff liegt, ist die `WCode` Methode gibt das HRESULT minus 0 x 80040200 zurück; andernfalls wird 0 (null) zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **WCode** Methode wird verwendet, um eine Zuordnung rückgängig zu machen, die in der COM-Unterstützungscode vorgenommen wird. Der Wrapper für eine **Dispinterface** -Eigenschaft oder-Methode ruft eine unterstützungsroutine auf, die die Argumente und Aufrufe verpackt **IDispatch:: Invoke**. Nach der Rückgabe bei einem Fehler `HRESULT` von `DISP_E_EXCEPTION` zurückgegeben wird, wird die Fehlerinformationen abgerufen, von der **EXCEPINFO** Struktur übergeben, um **IDispatch:: Invoke**. Der Fehlercode kann entweder einem 16-Bit-Wert in der `wCode` Mitglied der **EXCEPINFO** Struktur- oder einen 32-Bit-Wert in der **Scode** Mitglied der **EXCEPINFO**Struktur. Wenn ein 16-Bit-`wCode` zurückgegeben wird, muss er zuerst einem 32-Bit-Fehler-`HRESULT` zugeordnet werden.  
+ Die `WCode` Methode wird verwendet, um eine Zuordnung rückgängig zu machen, die in COM-Unterstützungscode vorgenommen wird. Der Wrapper für eine `dispinterface` Eigenschaft oder Methode ruft eine unterstützungsroutine auf, die die Argumente und Aufrufe verpackt `IDispatch::Invoke`. Bei der Rückgabe, wenn ein Fehler HRESULT von DISP_E_EXCEPTION zurückgegeben wird, die Fehlerinformationen abgerufen aus der `EXCEPINFO` Zeitstruktur `IDispatch::Invoke`. Der Fehlercode kann entweder ein 16-Bit-Wert, der in gespeicherten der `wCode` Mitglied der `EXCEPINFO` Struktur oder ein vollständiger 32-Bit-Wert in der `scode` Mitglied der `EXCEPINFO` Struktur. Wenn ein 16-Bit `wCode` zurückgegeben wird, müssen Sie zuerst auf einem 32-Bit-Fehler-HRESULT zugeordnet werden.  
   
  **Ende Microsoft-spezifisch**  
   

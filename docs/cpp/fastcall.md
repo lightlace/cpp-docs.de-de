@@ -1,5 +1,5 @@
 ---
-title: __fastcall | Microsoft Docs
+title: __fastcall | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
-ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
+ms.openlocfilehash: f50239d42c164e2f9c6876e26389eb60e710ed34
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "34153118"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940094"
 ---
 # <a name="fastcall"></a>__fastcall
 **Microsoft-spezifisch**  
   
- Die `__fastcall`-Aufrufkonvention gibt an, dass Argumente für Funktionen in Registern zu übergeben sind, sofern dies möglich ist. Diese Aufrufkonvention gilt nur für die x86-Architektur. Die folgende Liste zeigt die Implementierung dieser Aufrufkonvention.  
+ Die **__fastcall** -Aufrufkonvention gibt an, dass Argumente für Funktionen, konventionsgerecht möglichst in Registern übergeben werden. Diese Aufrufkonvention gilt nur für die x86-Architektur. Die folgende Liste zeigt die Implementierung dieser Aufrufkonvention.  
   
 |Element|Implementierung|  
 |-------------|--------------------|  
 |Reihenfolge der Argumentübergabe|Die ersten beiden in der Argumentliste von links nach rechts gefundenen DWORD oder kleineren Argumente werden in ECX- und EDX-Registern übergeben. Alle anderen Argumente werden von rechts nach links an den Stapel übergeben.|  
 |Stapelwartungszuständigkeit|Aufgerufene Funktion ruft die Argumente vom Stapel auf.|  
-|Namensergänzungskonvention|At-Zeichen (\@)-Namen vorangestellt wird ein at-Zeichen, gefolgt von der Anzahl von Bytes (dezimal) im Parameters Dezimalangabe Namen.|  
+|Namensergänzungskonvention|At-Zeichen (\@) Namen; vorangestellt ist ein at-Zeichen, gefolgt von der Anzahl von Bytes (als Dezimalzahl) in den Parameter Dezimalangabe Namen.|  
 |Konvention zur Umwandlung von Groß- in Kleinbuchstaben und umgekehrt|Groß-/Kleinbuchstaben werden nicht umgewandelt.|  
   
 > [!NOTE]
 >  In zukünftigen Versionen werden von Compilern möglicherweise andere Register zum Speichern von Parametern verwendet werden.  
   
- Mithilfe der [/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md) -Compileroption bewirkt, dass jede Funktion im Modul als Kompilieren `__fastcall` , wenn die Funktion mit einem in Konflikt stehenden Attribut deklariert ist, oder der Name der Funktion ist `main`.  
+ Mithilfe der [/Gr](../build/reference/gd-gr-gv-gz-calling-convention.md) -Compileroption werden die einzelnen Funktionen im Modul als Kompilieren **__fastcall** ausgeführt, wenn die Funktion wurde mit einem in Konflikt stehenden Attribut deklariert oder der Name der Funktion ist `main` .  
   
- Das Schlüsselwort `__fastcall` wird von Compilern angenommen und ignoriert, die auf ARM und x64-Architekturen abzielen. Auf einem x64-Chip werden konventionell die ersten vier Argumente, wenn möglich, in Registern übergeben, und zusätzliche Argumente werden auf den Stapel übergeben. Weitere Informationen finden Sie unter [Überblick X64 Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md). Auf einem ARM-Chip werden bis zu vier Ganzzahl- und acht Gleitkommaargumente in Registern übergeben, und zusätzliche Argumente werden auf den Stapel übergeben.  
+ Die **__fastcall** Schlüsselwort akzeptiert und ignoriert der Compiler, die auf ARM und X64 abzielen Architekturen; auf x X64 chip, gemäß der Konvention werden die ersten vier Argumente konventionsgerecht möglichst in Registern übergeben und es werden zusätzliche Argumente übergeben. auf dem Stapel. Weitere Informationen finden Sie unter [Überblick X64 Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md). Auf einem ARM-Chip werden bis zu vier Ganzzahl- und acht Gleitkommaargumente in Registern übergeben, und zusätzliche Argumente werden auf den Stapel übergeben.  
   
  Wenn die Funktion bei nicht statischen Klassenfunktionen abweichend definiert ist, muss der Aufrufkonventionsmodifizierer nicht in der abweichenden Definition angegeben werden. Das bedeutet, dass für nicht statische Membermethoden der Klasse zum Zeitpunkt der Definition die während der Deklaration angegebene Aufrufkonvention angenommen wird. Bei dieser Klassendefinition:  
   

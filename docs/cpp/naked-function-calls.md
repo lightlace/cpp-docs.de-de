@@ -1,5 +1,5 @@
 ---
-title: Naked-Funktionsaufrufe | Microsoft Docs
+title: Naked-Funktionsaufrufe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9d7b42f08d68af9838bf908efdbcc59a0540b91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 161d47601423b84b0847186e1c5aed8aec8a631b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419793"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942002"
 ---
 # <a name="naked-function-calls"></a>Naked-Funktionsaufrufe
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Funktionen deklariert, mit der `naked` Attribut ausgegeben werden, ohne Prolog- oder Epilogcode-Code, sodass Sie eigene benutzerdefinierte Prolog-/epilogsequenzen mit Schreiben der [Inlineassembler](../assembler/inline/inline-assembler.md). Naked-Funktionen werden als erweiterte Funktion bereitgestellt. Sie ermöglichen es Ihnen, eine Funktion zu deklarieren, die von einem anderen Kontext als C/C++ aufgerufen wird, und somit andere Annahmen darüber trifft, wo die Parameter sind oder welche Register beibehalten werden. Zu den Beispielen zählen Routinen wie Interrupthandler. Diese Funktion ist für Writer von virtuellen Gerätetreibern (VxDs) besonders nützlich.  
+ Funktionen deklariert, mit der **naked** Attribut ausgegeben werden, ohne Prolog- oder Epilogcode Code, sodass Sie eigene benutzerdefinierte Prolog-/epilogsequenzen mit schreiben die [Inlineassembler](../assembler/inline/inline-assembler.md). Naked-Funktionen werden als erweiterte Funktion bereitgestellt. Sie ermöglichen es Ihnen, eine Funktion zu deklarieren, die von einem anderen Kontext als C/C++ aufgerufen wird, und somit andere Annahmen darüber trifft, wo die Parameter sind oder welche Register beibehalten werden. Zu den Beispielen zählen Routinen wie Interrupthandler. Diese Funktion ist für Writer von virtuellen Gerätetreibern (VxDs) besonders nützlich.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
   

@@ -1,5 +1,5 @@
 ---
-title: Temporäre Objekte | Microsoft Docs
+title: Temporäre Objekte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5523abd0142b8b6dc3a25beb8ca8d113cf5463bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943208"
 ---
 # <a name="temporary-objects"></a>Temporäre Objekte
 In einigen Fällen muss der Compiler temporäre Objekte erstellen. Diese temporären Objekte können aus folgenden Gründen erstellt werden:  
   
--   Um einen `const`-Verweis mit dem Initialisierer eines anderen Typs als dem zugrunde liegenden des initialisierten Verweises zu initialisieren.  
+-   Initialisiert eine **const** Verweis mit einem Initialisierer eines Typs, die sich von den zugrunde liegenden Typ des initialisierten Verweises zu initialisieren.  
   
 -   Um den Rückgabewert einer Funktion zu speichern, die einen benutzerdefinierten Typ zurückgibt. Diese temporären Objekte werden nur erstellt, wenn das Programm den Rückgabewert nicht in ein Objekt kopiert. Zum Beispiel:  
   
-    ```  
+    ```cpp 
     UDT Func1();    //  Declare a function that returns a user-defined  
                     //   type.  
   
@@ -41,7 +42,7 @@ In einigen Fällen muss der Compiler temporäre Objekte erstellen. Diese tempor�
   
      Da der Rückgabewert nicht in ein anderes Objekt kopiert wird, wird ein temporäres Objekt erstellt. Ein allgemeinerer Fall, in dem temporäre Dateien erstellt werden, ist während der Auswertung eines Ausdrucks, wobei überladene Operator-Funktionen aufgerufen werden müssen. Diese überladenen Operatorfunktionen geben einen benutzerdefinierten Typ zurück, der häufig nicht in ein anderes Objekt kopiert wird.  
   
-     Betrachten Sie den Ausdruck `ComplexResult = Complex1 + Complex2 + Complex3`. Der Ausdruck `Complex1 + Complex2` wird ausgewertet und das Ergebnis wird in einem temporären Objekt gespeichert. Anschließend wird der Ausdruck *temporäre* `+ Complex3` ausgewertet wird, und das Ergebnis kopiert `ComplexResult` (vorausgesetzt, des Zuweisungsoperators ist nicht überlastet).  
+     Betrachten Sie den Ausdruck `ComplexResult = Complex1 + Complex2 + Complex3`. Der Ausdruck `Complex1 + Complex2` wird ausgewertet und das Ergebnis wird in einem temporären Objekt gespeichert. Anschließend wird der Ausdruck *temporäre* `+ Complex3` ausgewertet wird, wird das Ergebnis wird dann in kopiert `ComplexResult` (vorausgesetzt, des Zuweisungsoperators nicht überladen ist).  
   
 -   Um das Ergebnis einer Typumwandlung in einem benutzerdefinierten Typ zu speichern. Wenn ein Objekt eines angegebenen Typs explizit in einen benutzerdefinierten Typ konvertiert wird, wird das neue Objekt als temporäres Objekt erstellt.  
   
@@ -51,6 +52,6 @@ In einigen Fällen muss der Compiler temporäre Objekte erstellen. Diese tempor�
   
 |Grund "temporär" erstellt|Zerstörungspunkt|  
 |------------------------------|-----------------------|  
-|Ergebnis der Ausdrucksauswertung|Alle temporären Dateien, die als Ergebnis der Ausdrucksauswertung erstellt werden, werden am Ende der Ausdrucksanweisung (d. h. das Semikolon) oder am Ende der steuernden Ausdrücke für die Anweisungen `for`, `if`, `while`, `do` und `switch` zerstört.|  
-|Initialisieren von `const`-Verweisen|Wenn ein Initialisierer kein l-Wert desselben Typs wie der initialisierte Verweis ist, wird ein temporäres Objekt des zugrunde liegenden Objekttyps erstellt und mit dem Initialisierungsausdruck initialisiert. Dieses temporäre Objekt wird zerstört, sobald das Verweisobjekt, an das es gebunden ist, zerstört wurde.|  
+|Ergebnis der Ausdrucksauswertung|Alle temporären Dateien, die als Ergebnis der Auswertung von Ausdrücken erstellt werden zerstört, am Ende der Ausdrucksanweisung (d. h. das Semikolon), oder am Ende der steuernden Ausdrücke für **für**, **Wenn**, **während**, **führen**, und **wechseln** Anweisungen.|  
+|Initialisieren von **const** Verweise|Wenn ein Initialisierer kein l-Wert desselben Typs wie der initialisierte Verweis ist, wird ein temporäres Objekt des zugrunde liegenden Objekttyps erstellt und mit dem Initialisierungsausdruck initialisiert. Dieses temporäre Objekt wird zerstört, sobald das Verweisobjekt, an das es gebunden ist, zerstört wurde.|  
   

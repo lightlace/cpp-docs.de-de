@@ -1,5 +1,5 @@
 ---
-title: Überladen von Unäroperatoren | Microsoft Docs
+title: Überladen von Unäroperatoren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,23 +21,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f242fac0d81c6d46c2d810bf07459fde2fb2ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f20268e9d67ed59e52f3716e9203dadd2a2715d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421057"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941690"
 ---
 # <a name="overloading-unary-operators"></a>Überladen von unären Operatoren
 Die unären Operatoren, die überladen werden können, sind Folgende:  
   
 1.  `!` ([Logisches NOT](../cpp/logical-negation-operator-exclpt.md))  
   
-2.  `&` ([Adresse des](../cpp/address-of-operator-amp.md))  
+2.  `&` ([Adresse der](../cpp/address-of-operator-amp.md))  
   
 3.  `~` ([Einerkomplement](../cpp/one-s-complement-operator-tilde.md))  
   
-4.  `*` ([zeigerdereferenzierungen](../cpp/indirection-operator-star.md))  
+4.  `*` ([Zeiger-Dereferenzierung](../cpp/indirection-operator-star.md))  
   
 5.  `+` ([unäres plus](../cpp/additive-operators-plus-and.md))  
   
@@ -49,9 +49,9 @@ Die unären Operatoren, die überladen werden können, sind Folgende:
   
 9. Konvertierungsoperatoren  
   
- Die Postfix-Inkrementoperatoren und Dekrementoperatoren (`++` und **--**) werden separat in behandelt [Inkrementieren und Dekrementieren](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
+ Das Postfixinkrement und Dekrement-Operatoren (`++` und `--`) werden separat in behandelt [Inkrement- und Dekrement](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
   
- Konvertierungsoperatoren sind auch in einem separaten Thema erörtert. finden Sie unter [benutzerdefinierte Typkonvertierungen](../cpp/user-defined-type-conversions-cpp.md).  
+ Konvertierungsoperatoren werden auch in einem separaten Thema behandelt; finden Sie unter [User-Defined Type Conversions](../cpp/user-defined-type-conversions-cpp.md).  
   
  Die folgenden Regeln sind für alle anderen unären Operatoren erfüllt. Um eine Funktion für einen unären Operator als nicht statischen Member zu deklarieren, müssen Sie sie im folgenden Format deklarieren:  
   

@@ -1,5 +1,5 @@
 ---
-title: Ereignisbehandlung in COM | Microsoft Docs
+title: Ereignisbehandlung in COM | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,34 +26,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf5ad83afe2151ac9ceb90029780989ca33487
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943285"
 ---
 # <a name="event-handling-in-com"></a>Ereignisbehandlung in COM
-In COM-Ereignisbehandlung richten Sie ein Ereignis und einen Ereignisempfänger mithilfe der [Event_source](../windows/event-source.md) und [Event_receiver](../windows/event-receiver.md) -Attribute angeben `type` = **com**. Diese Attribute fügen den geeigneten Code für benutzerdefinierte Schnittstellen, Dispatchschnittstellen und duale Schnittstellen ein, damit die Klassen, auf die sie angewendet werden, Ereignisse über COM-Verbindungspunkte auslösen und behandeln können.  
+In COM-Ereignisbehandlung richten Sie eine Ereignisquelle und einen Ereignisempfänger mithilfe der [Event_source](../windows/event-source.md) und [Event_receiver](../windows/event-receiver.md) -Attribute angeben `type` = `com`. Diese Attribute fügen den geeigneten Code für benutzerdefinierte Schnittstellen, Dispatchschnittstellen und duale Schnittstellen ein, damit die Klassen, auf die sie angewendet werden, Ereignisse über COM-Verbindungspunkte auslösen und behandeln können.  
   
 ## <a name="declaring-events"></a>Deklarieren von Ereignissen  
- In einer Ereignisquellenklasse verwenden die [__event](../cpp/event.md) Schlüsselwort für eine Schnittstellendeklaration, um die Methoden dieser Schnittstelle als Ereignisse zu deklarieren. Die Ereignisse der Schnittstelle werden ausgelöst, wenn Sie die Ereignisse als Schnittstellenmethoden aufrufen. Methoden für Ereignisschnittstellen können NULL oder mehr Parameter haben (die sind **in** Parameter). Der Rückgabetyp kann „void“ oder ein ganzzahliger Typ sein.  
+ In einer ereignisquellklasse verwenden die [__event](../cpp/event.md) -Schlüsselwort in einer Schnittstellendeklaration, um die Methoden dieser Schnittstelle als Ereignisse zu deklarieren. Die Ereignisse der Schnittstelle werden ausgelöst, wenn Sie die Ereignisse als Schnittstellenmethoden aufrufen. Methoden für Ereignisschnittstellen können NULL oder mehr Parameter haben (die muss alle `in` Parameter). Der Rückgabetyp kann „void“ oder ein ganzzahliger Typ sein.  
   
 ## <a name="defining-event-handlers"></a>Definieren von Ereignishandlern  
- In einer Ereignisempfängerklasse definieren Sie Ereignishandler, die Methoden mit Signaturen sind (Rückgabetypen, Argumente und Aufrufkonventionen), die mit dem Ereignis übereinstimmen, das sie behandeln. Für COM-Ereignisse müssen Aufrufkonventionen nicht übereinstimmen; finden Sie unter [Layoutabhängige COM-Ereignisse](#vcconeventhandlingincomanchorlayoutdependentcomevents) unten für Details.  
+ In einer Ereignisempfängerklasse definieren Sie Ereignishandler, die Methoden mit Signaturen sind (Rückgabetypen, Argumente und Aufrufkonventionen), die mit dem Ereignis übereinstimmen, das sie behandeln. Für COM-Ereignisse müssen Aufrufkonventionen nicht übereinstimmen; finden Sie unter [Layoutabhängige COM-Ereignisse](#vcconeventhandlingincomanchorlayoutdependentcomevents) unten Weitere Informationen.  
   
 ## <a name="hooking-event-handlers-to-events"></a>Verknüpfen von Ereignishandlern mit Ereignissen  
- In einer Ereignisempfängerklasse verwenden Sie auch die systeminterne Funktion [__hook](../cpp/hook.md) um Ereignisse Ereignishandlern zuzuordnen und [__unhook](../cpp/unhook.md) um Ereignisse von den Ereignishandlern zu trennen. Sie können mehrere Ereignisse mit einem Ereignishandler oder mehrere Ereignishandler mit einem Ereignis verknüpfen.  
+ In einer Ereignisempfängerklasse, verwenden Sie auch die intrinsische Funktion [__hook](../cpp/hook.md) um Ereignisse Ereignishandlern zuzuordnen und [__unhook](../cpp/unhook.md) um Ereignisse von Ereignishandlern zu trennen. Sie können mehrere Ereignisse mit einem Ereignishandler oder mehrere Ereignishandler mit einem Ereignis verknüpfen.  
   
 > [!NOTE]
->  Normalerweise gibt es zwei Möglichkeiten, um es einem COM-Ereignisempfänger zu ermöglichen, auf Schnittstellendefinitionen von Ereignisquellen zuzugreifen. Die erste Möglichkeit besteht in einer gemeinsamen Headerdatei, wie unten gezeigt. Die zweite ist die Verwendung [#import](../preprocessor/hash-import-directive-cpp.md) mit der `embedded_idl` Importqualifizierer, sodass die Ereignisquellen-Typbibliothek in die TLH-Datei geschrieben wird, und vom Attribut generierte Code beibehalten wird.  
+>  Normalerweise gibt es zwei Möglichkeiten, um es einem COM-Ereignisempfänger zu ermöglichen, auf Schnittstellendefinitionen von Ereignisquellen zuzugreifen. Die erste Möglichkeit besteht in einer gemeinsamen Headerdatei, wie unten gezeigt. Die zweite ist die Verwendung [#import](../preprocessor/hash-import-directive-cpp.md) mit der `embedded_idl` Importqualifizierer, damit die Ereignisquellen-Typbibliothek in die TLH-Datei mit der attributgenerierte Code beibehalten geschrieben wird.  
   
 ## <a name="firing-events"></a>Auslösen von Ereignissen  
- Um ein Ereignis auszulösen, rufen Sie einfach eine Methode in der Schnittstelle auf, die mit dem `__event`-Schlüsselwort in der Ereignisquellklasse deklariert wurde. Wenn Handler an das Ereignis geknüpft wurden, werden die Handler aufgerufen.  
+ Um ein Ereignis auszulösen, rufen Sie einfach eine Methode in der Schnittstelle deklariert mit dem **__event** Schlüsselwort in der ereignisquellklasse. Wenn Handler an das Ereignis geknüpft wurden, werden die Handler aufgerufen.  
   
 ### <a name="com-event-code"></a>COM-Ereigniscode  
  Das folgende Beispiel zeigt, wie ein Ereignis in einer COM-Klasse ausgelöst wird. Informationen zum Kompilieren und Ausführen des Beispiels finden Sie in den Kommentaren im Code.  
   
-```  
+```cpp 
 // evh_server.h  
 #pragma once  
   
@@ -72,7 +73,7 @@ class DECLSPEC_UUID("530DF3AD-6936-3214-A83B-27B63C7997C4") CSource;
   
  Anschließend der Server:  
   
-```  
+```cpp 
 // evh_server.cpp  
 // compile with: /LD  
 // post-build command: Regsvr32.exe /s evh_server.dll  
@@ -97,7 +98,7 @@ public:
   
  Und im Anschluss der Client:  
   
-```  
+```cpp 
 // evh_client.cpp  
 // compile with: /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES 1  
@@ -155,7 +156,7 @@ int main() {
   
 ### <a name="output"></a>Ausgabe  
   
-```  
+```Output  
 MyHandler1 was called with value 123.  
 MyHandler2 was called with value 123.  
 ```  
@@ -163,20 +164,20 @@ MyHandler2 was called with value 123.
 ##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> Layoutabhängige COM-Ereignisse  
  Layoutabhängigkeit ist nur bei der COM-Programmierung ein Problem. Bei nativer und verwalteter Ereignisbehandlung müssen die Signaturen (Rückgabetyp, Aufrufkonvention und Argumente) der Handler ihren Ereignissen entsprechen, aber die Handlernamen müssen nicht mit ihren Ereignissen übereinstimmen.  
   
- Allerdings in COM-Ereignisbehandlung beim Festlegen der *Layout_dependent* Parameter **Event_receiver** auf **"true"**, die Übereinstimmung von Name und Signatur erzwungen wird. Dies bedeutet, dass die Namen und Signaturen der Handler im Ereignisempfänger exakt mit den Namen und Signaturen der Ereignisse übereinstimmen müssen, mit denen sie verknüpft sind.  
+ In COM-Ereignisbehandlung, beim Festlegen der *Layout_dependent* Parameter der `event_receiver` zu **"true"**, die Übereinstimmung von Name und Signatur erzwungen wird. Dies bedeutet, dass die Namen und Signaturen der Handler im Ereignisempfänger exakt mit den Namen und Signaturen der Ereignisse übereinstimmen müssen, mit denen sie verknüpft sind.  
   
- Wenn *Layout_dependent* auf festgelegt ist **"false"**, die aufrufende Aufrufkonvention und die Speicherklasse-Klasse (virtuellen, statisch usw.) kann gemischt sein und zwischen der auslösenden Ereignismethode und den hookmethoden (die Delegaten). Es ist etwas effizienter, *Layout_dependent*=**"true"**.  
+ Bei *Layout_dependent* nastaven NA hodnotu **"false"**, die aufrufende Konvention und Speicher-Klasse (virtuellen, statisch usw.) kann gemischt und zwischen der auslösenden Ereignismethode und den hookmethoden (die Delegaten). Es ist etwas effizienter, *Layout_dependent*=**"true"**.  
   
  Nehmen Sie z. B. an, `IEventSource` wird definiert, um über die folgenden Methoden zu verfügen:  
   
-```  
+```cpp 
 [id(1)] HRESULT MyEvent1([in] int value);  
 [id(2)] HRESULT MyEvent2([in] int value);  
 ```  
   
  Angenommen, die Ereignisquelle weist das folgende Format auf:  
   
-```  
+```cpp 
 [coclass, event_source(com)]  
 class CSource : public IEventSource {  
 public:  
@@ -192,7 +193,7 @@ public:
   
  Im Ereignisempfänger muss dann jeder Handler, der an eine Methode `IEventSource` gebunden ist, dem zugehörigen Namen und der zugehörigen Signatur entsprechen, wie hier gezeigt:  
   
-```  
+```cpp 
 [coclass, event_receiver(com, true)]  
 class CReceiver {  
 public:  

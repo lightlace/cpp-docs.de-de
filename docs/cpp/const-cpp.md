@@ -1,5 +1,5 @@
 ---
-title: Const (C++) | Microsoft Docs
+title: Const (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882181bd3ac69257b69a79f42e12c2573f2f1da4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b6fea501724b24c07ab8b2199410a369d62dc9d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943628"
 ---
 # <a name="const-c"></a>const (C++)
-Wenn eine Datendeklaration der **const** -Schlüsselwort Gibt an, dass das Objekt oder die Variable nicht änderbar ist.  
+Wenn eine Datendeklaration der **const** -Schlüsselwort Gibt an, dass das Objekt oder die Variable nicht geändert werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
   
-      const declaration ;  
+const declaration ;  
 member-function const ;  
 ```  
   
 ## <a name="const-values"></a>Konstante Werte  
- Die **const** -Schlüsselwort Gibt an, dass der Wert einer Variablen konstant ist und dem Compiler teilt, um zu verhindern, dass den Programmierer diese zu ändern.  
+ Die **const** -Schlüsselwort Gibt an, dass der Wert einer Variablen konstant ist und weist den Compiler an, um zu verhindern, dass den Programmierer diese zu ändern.  
   
-```  
+```cpp 
 // constant_values1.cpp  
 int main() {  
    const int i = 5;  
@@ -45,9 +46,9 @@ int main() {
 }  
 ```  
   
- In C++ können Sie die **const** -Schlüsselwort anstelle der [#define](../preprocessor/hash-define-directive-c-cpp.md) -Präprozessordirektive zum Definieren von konstanter Werten. Werte, die mit definierten **const** unterliegen der typüberprüfung und können anstelle von Konstanten Ausdrücken verwendet werden. In C++ können Sie angeben, die Größe eines Arrays mit einem **const** Variablen wie folgt:  
+ In C++ können Sie die **const** -Schlüsselwort anstelle von der [#define](../preprocessor/hash-define-directive-c-cpp.md) Präprozessordirektive zum Definieren von konstanter Werten. Mit definierten Werte **const** unterliegen der typüberprüfung und können anstelle von Konstanten Ausdrücken verwendet werden. In C++ können Sie angeben, die Größe eines Arrays mit einem **const** Variable wie folgt:  
   
-```  
+```cpp 
 // constant_values2.cpp  
 // compile with: /c  
 const int maxarray = 255;  
@@ -58,7 +59,7 @@ char store_char[maxarray];  // allowed in C++; not allowed in C
   
  Die **const** -Schlüsselwort kann auch in Zeigerdeklarationen verwendet werden.  
   
-```  
+```cpp 
 // constant_values3.cpp  
 int main() {  
    char *mybuf = 0, *yourbuf;  
@@ -68,9 +69,9 @@ int main() {
 }  
 ```  
   
- Ein Zeiger auf eine Variable als **const** zugewiesen werden können, nur in einen Zeiger, der auch als deklariert ist **const**.  
+ Ein Zeiger auf eine Variable, die als **const** zugewiesen werden können, nur auf einen Zeiger, der auch als deklariert wird **const**.  
   
-```  
+```cpp 
 // constant_values4.cpp  
 #include <stdio.h>  
 int main() {  
@@ -87,21 +88,21 @@ int main() {
   
  Sie können Zeiger auf konstante Daten als Funktionsparameter verwenden, um zu verhindern, dass die Funktion einen Parameter ändert, der über einen Zeiger übergeben wird.  
   
- Für Objekte, die als deklariert werden **const**, Sie können nur Konstante Memberfunktionen aufrufen. Dadurch wird sichergestellt, dass das konstante Objekt nie geändert wird.  
+ Für Objekte, die als deklariert sind **const**, Sie können nur Konstante Memberfunktionen aufrufen. Dadurch wird sichergestellt, dass das konstante Objekt nie geändert wird.  
   
-```  
+```cpp 
 birthday.getMonth();    // Okay  
 birthday.setMonth( 4 ); // Error  
 ```  
   
- Sie können für ein nicht konstantes Objekt konstante oder nicht konstante Memberfunktionen aufrufen. Sie können auch überladen, eine Memberfunktion mit der **const** Schlüsselwort; Dadurch wird eine andere Version der Funktion für Konstante und nicht Konstante Objekte aufgerufen werden.  
+ Sie können für ein nicht konstantes Objekt konstante oder nicht konstante Memberfunktionen aufrufen. Sie können auch überladen, eine Memberfunktion mit der **const** Schlüsselwort; Dadurch wird eine andere Version der Funktion, die für Konstanten und nicht Konstante Objekte aufgerufen werden.  
   
  Sie können keine Konstruktoren oder Destruktoren mit deklarieren die **const** Schlüsselwort.  
   
 ## <a name="const-member-functions"></a>Konstante Memberfunktionen  
- Deklaration einer Memberfunktion mit dem **const** Schlüsselwort Gibt an, dass die Funktion "schreibgeschützt"-Funktion, die nicht das Objekt verändert wird für den sie aufgerufen wird. Eine Konstante Memberfunktion kann nicht keine nicht statischen Datenmember ändern oder Memberfunktionen, die Konstanten werden nicht aufrufen. Um eine Konstante Memberfunktion zu deklarieren, setzen die **const** -Schlüsselwort hinter die schließende Klammer der Argumentliste. Die **const** Schlüsselwort ist in der Deklaration und Definition erforderlich.  
+ Deklariert eine Memberfunktion mit dem **const** Schlüsselwort Gibt an, dass die Funktion eine Funktion "Read-only", die nicht mit das Objekt ändert, für das es aufgerufen wird. Eine Konstante Memberfunktion kann nicht keine nicht statischen Datenmember ändern oder Memberfunktionen aufrufen, die nicht konstant sind. Um eine Konstante Memberfunktion zu deklarieren, platzieren Sie die **const** Schlüsselwort nach der schließenden Klammer der Argumentliste. Die **const** Schlüsselwort ist in der Deklaration und Definition erforderlich.  
   
-```  
+```cpp 
 // constant_member_function.cpp  
 class Date  
 {  
@@ -132,34 +133,34 @@ int main()
 ```  
   
 ## <a name="c-and-c-const-differences"></a>Unterschiede bei const in C und C++  
- Wenn Sie eine Variable als deklarieren **const** in einer C#-Quellcodedatei, gehen Sie wie:  
+ Wenn Sie eine Variable deklarieren **const** in einem C-Quellcodedatei Sie dies als:  
   
-```  
+```cpp 
 const int i = 2;  
 ```  
   
  Sie können diese Variable dann in einem anderen Modul wie folgt verwenden:  
   
-```  
+```cpp 
 extern const int i;  
 ```  
   
- Um das gleiche Verhalten in C++ abzurufen, müssen Sie deklarieren, aber Ihre **const** -Variable als:  
+ Um das gleiche Verhalten in C++ zu erhalten, müssen Sie deklarieren, aber Ihre **const** als Variable:  
   
-```  
+```cpp 
 extern const int i = 2;  
 ```  
   
- Wenn Sie eine `extern`-Variable in einer C++-Quellcodedatei für die Verwendung in einer C-Quellcodedatei deklarieren möchten, verwenden Sie:  
+ Wenn Sie, deklarieren möchten einen **"extern"** -Variable in eine C++-Quellcodedatei für die Verwendung in einer C Quellcodedatei verwenden:  
   
-```  
+```cpp 
 extern "C" const int x=10;  
 ```  
   
  um die Namenszerlegung durch den C++-Compiler zu verhindern.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Parameterliste einer Memberfunktion, befolgen die **const** -Schlüsselwort Gibt an, dass die Funktion nicht das Objekt ändert, für die er aufgerufen wird.  
+ Beim Befolgen der Parameterliste einer Memberfunktion, die **const** -Schlüsselwort Gibt an, dass die Funktion nicht das Objekt ändert, für das es aufgerufen wird.  
   
  Weitere Informationen zu **const**, finden Sie unter den folgenden Themen:  
     

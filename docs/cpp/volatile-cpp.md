@@ -1,5 +1,5 @@
 ---
-title: Volatile (C++) | Microsoft Docs
+title: Volatile (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295654586a3fe251526a4764d54f80f3a70c7014
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae3419cc7df0b9ed436981d5e845764a762c8ee8
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423953"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940966"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 Ein Typqualifizierer, den Sie verwenden können, um zu deklarieren, dass ein Objekt im Programm von der Hardware geändert werden kann.  
@@ -39,31 +39,31 @@ volatile declarator ;
 ## <a name="remarks"></a>Hinweise  
  Sie können die [/volatile](../build/reference/volatile-volatile-keyword-interpretation.md) Compilerschalter ändern, wie der Compiler dieses Schlüsselwort interpretiert.  
   
- Visual Studio interpretiert das `volatile`-Schlüsselwort je nach Zielarchitektur unterschiedlich. Für ARM, wenn keine **/volatile** -Compileroption angegeben ist, führt der Compiler als **/volatile:iso** angegeben wurden. Für andere Architekturen als ARM, wenn keine **/volatile** -Compileroption angegeben ist, führt der Compiler als **/volatile:ms** angegeben wurden; daher für Architekturen als ARM dringend Es wird empfohlen, die Sie angeben, **/volatile:iso**, und explizite Synchronisierungsprimitiven und systeminterne Compilerfunktionen zu verwenden, wenn Sie mit Arbeitsspeicher arbeiten, der über Threads freigegeben wird.  
+ Visual Studio interpretiert das **flüchtige** Schlüsselwort je nach der Zielarchitektur unterschiedlich. Für ARM, wenn kein **/volatile** -Compileroption angegeben ist, führt der Compiler wie **/volatile:iso** wurden angegeben. Architekturen als ARM, wenn kein **/volatile** -Compileroption angegeben ist, führt der Compiler wie **angegebenem** angegeben wurden; aus diesem Grund für Architekturen außer ARM wir stark Es wird empfohlen, die Sie angeben **/volatile:iso**, und explizite Synchronisierungsprimitiven und systeminterne Compilerfunktionen verwenden, wenn Sie mit Arbeitsspeicher arbeiten, der threadübergreifend bereitgestellt wird.  
   
- Sie können den `volatile`-Qualifizierer verwenden, um den Zugriff auf die Speicherbereiche zu ermöglichen, die von asynchronen Prozessen wie Interrupthandlern verwendet werden.  
+ Sie können die **flüchtige** Qualifizierer, der Zugriff auf Speicheradressen zu ermöglichen, die von asynchronen Prozessen wie interrupthandlern verwendet werden.  
   
- Wenn `volatile` wird verwendet, auf eine Variable, die verfügt auch über die [__restrict](../cpp/extension-restrict.md) -Schlüsselwort, `volatile` hat Vorrang vor.  
+ Wenn **flüchtige** wird verwendet, auf eine Variable, die auch die ["__restrict"](../cpp/extension-restrict.md) -Schlüsselwort, **flüchtige** hat Vorrang vor.  
   
- Wenn ein `struct`-Member als `volatile` gekennzeichnet ist, dann wird `volatile` an die gesamte Struktur weitergegeben. Wenn eine Struktur nicht über eine Länge verfügt, die mithilfe einer Anweisung in der aktuellen Architektur kopiert werden kann, geht `volatile` in dieser Struktur möglicherweise vollständig verloren.  
+ Wenn eine **Struktur** Member wird als markiert **flüchtige**, klicken Sie dann **flüchtige** wird an die gesamte Struktur weitergegeben. Wenn eine Struktur keine Länge, die kopiert werden kann, in der aktuellen Architektur mithilfe einer Anweisung **flüchtige** möglicherweise vollständig verloren gehen, auf dieser Struktur.  
   
- Das `volatile`-Schlüsselwort hat möglicherweise keine Auswirkungen auf ein Feld, wenn eine der folgenden Bedingungen zutrifft:  
+ Die **flüchtige** Schlüsselwort möglicherweise keine Auswirkungen auf ein Feld, wenn eine der folgenden Bedingungen zutrifft:  
   
 -   Die Länge des flüchtigen Felds überschreitet die maximale Größe, die in der aktuellen Architektur mithilfe einer Anweisung kopiert werden kann.  
   
--   Die Länge der äußersten enthaltenen `struct` – oder wenn es sich um einen Member einer möglicherweise geschachtelten `struct` handelt – überschreitet die maximale Größe, die in der aktuellen Architektur mithilfe einer Anwendung kopiert werden kann.  
+-   Die Länge der äußersten enthaltenen **Struktur**– oder wenn sie ein Mitglied einer möglicherweise geschachtelten ist **Struktur**– überschreitet die maximale Größe, die in der aktuellen Architektur mithilfe einer Anweisung kopiert werden kann.  
   
- Obwohl der Prozessor Speicherzugriffe, die nicht zwischengespeichert werden können, nicht neu anordnet, müssen Variablen, die nicht zwischengespeichert werden können, als `volatile` gekennzeichnet werden, um sicherzustellen, dass der Compiler die Speicherzugriffe nicht neu anordnet.  
+ Obwohl der Prozessor nicht anordnet Speicherzugriffe neu anzuordnen, müssen anordnet Variablen als gekennzeichnet sein **flüchtige** um sicherzustellen, dass der Compiler nicht den Arbeitsspeicher neu zugreift.  
   
- Objekte, die als `volatile` deklariert werden, werden in bestimmten Optimierungen nicht verwendet, da sich ihre Werte jederzeit ändern können.  Das System liest bei jeder Anforderung den aktuellen Wert eines flüchtigen Objekts, selbst wenn eine vorherige Anweisung bereits den Wert des gleichen Objekts abgefragt hatte.  Außerdem wird der Wert des Objekts sofort durch Zuweisung geschrieben.  
+ Objekte, die als deklariert sind **flüchtige** werden in bestimmten Optimierungen nicht verwendet, da ihre Werte jederzeit ändern können.  Das System liest bei jeder Anforderung den aktuellen Wert eines flüchtigen Objekts, selbst wenn eine vorherige Anweisung bereits den Wert des gleichen Objekts abgefragt hatte.  Außerdem wird der Wert des Objekts sofort durch Zuweisung geschrieben.  
   
 ## <a name="iso-compliant"></a>ISO-Kompatibilität  
- Wenn Sie vertraut sind, mit der C#-volatile-Schlüsselwort oder mit dem Verhalten von vertraut sind `volatile` in früheren Versionen von Visual C++, Bedenken Sie, dem C ++ 11 ISO-Standard `volatile` Schlüsselwort unterscheidet sich und wird in Visual Studio unterstützt beim der [/ Volatile: Iso](../build/reference/volatile-volatile-keyword-interpretation.md) -Compileroption angegeben ist. (In ARM ist es standardmäßig festgelegt). Das `volatile`-Schlüsselwort im ISO-Standardcode C++11 wird nur für Hardwarezugriffe verwendet. Verwenden Sie es nicht für die Kommunikation zwischen Threads. Verwenden Sie für die Kommunikation zwischen Threads Mechanismen wie [Std:: Atomic\<T >](../standard-library/atomic.md) aus der [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md).  
+ Wenn Sie mit der C#-Schlüsselwort "volatile" vertraut sind oder mit dem Verhalten von vertraut sind **flüchtige** in früheren Versionen von Visual C++, denken Sie daran, die der C ++ 11 ISO-Standard **flüchtige** -Schlüsselwort ist anders und wird in Visual Studio unterstützt bei der [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) -Compileroption angegeben ist. (In ARM ist es standardmäßig festgelegt). Die **flüchtige** -Schlüsselwort in C ++ 11 ISO-Standardcode ist nur für Hardwarezugriffe verwendet werden nicht für die Kommunikation zwischen Threads verwenden. Verwenden Sie für die Kommunikation zwischen Threads Mechanismen wie [Std:: Atomic\<T >](../standard-library/atomic.md) aus der [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md).  
   
 ## <a name="end-of-iso-compliant"></a>Ende ISO-Kompatibilität  
   
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Wenn die **/volatile:ms** -Compileroption verwendet wird – Standard, wenn andere Architekturen als ARM adressiert werden, generiert der Compiler zusätzlichen Code, um die Reihenfolge der Verweise auf flüchtige Objekte zusätzlich zum Erhalt zu verwalten Reihenfolge von Verweisen auf andere globale Objekte. Insbesondere:  
+ Wenn die **angegebenem** -Compileroption verwendet wird – standardmäßig, wenn Architekturen als ARM adressiert werden, generiert der Compiler zusätzlichen Code, um die Reihenfolge der Verweise auf flüchtige Objekte zusätzlich zum Erhalt Reihenfolge für Verweise auf andere globale Objekte. Insbesondere:  
   
 -   Das Schreiben in ein flüchtiges Objekt (auch als flüchtiger Schreibvorgang bezeichnet) weist Release-Semantik auf. Das heißt, dass ein Verweis auf ein globales oder statisches Objekt, das vor einem Schreibvorgang in ein flüchtiges Objekt in der Anweisungsabfolge auftritt, vor diesem flüchtigen Schreibvorgang in der kompilierten Binärdatei auftritt.  
   
@@ -72,7 +72,7 @@ volatile declarator ;
  Dadurch können flüchtige Objekte für Arbeitsspeichersperren und -freigaben in Multithreadanwendungen verwendet werden.  
   
 > [!NOTE]
->  Wenn sie abhängig von der erweiterten Garantie, die beim bereitgestellt hat die **/volatile:ms** -Compileroption verwendet wird, der Code ist nicht portabel.  
+>  Wenn das Prinzip basiert auf der erweiterten Garantie, die beim bereitgestellt hat die **angegebenem** -Compileroption verwendet wird, der Code ist nicht portabel.  
   
 **Ende Microsoft-spezifisch**  
   

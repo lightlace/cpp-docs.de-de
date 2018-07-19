@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Clear | Microsoft Docs
+title: _variant_t::Clear | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce2a8f423c7c1ff4ce975e13b216442825c6d65c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f3249408a63b873e4eea9d6b1ec741fc1471ac9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420979"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939402"
 ---
 # <a name="varianttclear"></a>_variant_t::Clear
 **Microsoft-spezifisch**  
   
- Löscht das gekapselte **VARIANT** Objekt.  
+ Löscht das gekapselte `VARIANT` Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +40,7 @@ void Clear( );
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Aufrufe **VariantClear** für das gekapselte **VARIANT** Objekt.  
+ Aufrufe `VariantClear` für das gekapselte `VARIANT` Objekt.  
   
  **Ende Microsoft-spezifisch**  
   

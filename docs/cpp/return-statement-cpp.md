@@ -1,5 +1,5 @@
 ---
-title: return-Anweisung (C++) | Microsoft Docs
+title: return-Anweisung (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1252e6833dae0f04e1cb148c5703d04d42cee353
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aea9999adc7089499028850017a32245bba97db6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943507"
 ---
 # <a name="return-statement-c"></a>return-Anweisung (C++)
 Beendet die Ausführung einer Funktion und gibt die Steuerung an die aufrufende Funktion zurück (oder an das Betriebssystem, wenn Sie die Steuerung von der `main`-Funktion übertragen). Die Ausführung wird in der aufrufenden Funktion an dem Punkt fortgesetzt, der dem Aufruf unmittelbar folgt.  
@@ -33,19 +34,19 @@ return [expression];
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die Klausel `expression` wird, sofern vorhanden, in den Typ konvertiert, der in der Funktionsdeklaration angegeben wird, als ob eine Initialisierung durchgeführt würde. Eine Konvertierung vom Typ des Ausdrucks in den `return`-Typ der Funktion kann temporäre Objekte erstellen. Weitere Informationen dazu, wie und wann temporäre Objekte erstellt werden, finden Sie unter [temporäre Objekte](../cpp/temporary-objects.md).  
+ Die Klausel `expression` wird, sofern vorhanden, in den Typ konvertiert, der in der Funktionsdeklaration angegeben wird, als ob eine Initialisierung durchgeführt würde. Konvertierung vom Typ des Ausdrucks, der die **zurückgeben** Typ der Funktion kann temporäre Objekte erstellen. Weitere Informationen dazu, wie und wann temporäre Objekte erstellt werden, finden Sie unter [temporäre Objekte](../cpp/temporary-objects.md).  
   
- Der Wert der `expression`-Klausel wird an die aufrufende Funktion zurückgegeben. Wenn der Ausdruck ausgelassen wird, wird der Rückgabewert der Funktion nicht definiert. Konstruktoren und Destruktoren und Funktionen des Typs `void`, geben Sie einen Ausdruck in kann nicht der `return` Anweisung. Funktionen aller anderen Typen müssen einen Ausdruck in der `return`-Anweisung angeben.  
+ Der Wert der `expression`-Klausel wird an die aufrufende Funktion zurückgegeben. Wenn der Ausdruck ausgelassen wird, wird der Rückgabewert der Funktion nicht definiert. Konstruktoren und Destruktoren sowie Funktionen des Typs **"void"**, keinen Ausdruck im Angeben der **zurückgeben** Anweisung. Funktionen aller anderen Typen müssen Geben Sie einen Ausdruck in der **zurückgeben** Anweisung.  
   
- Wenn die Ablaufsteuerung den Block verlässt, der die Funktionsdefinition einschließt, ist das Ergebnis das gleiche wie beim Ausführen der `return`-Anweisung ohne einen Ausdruck. Dies ist ungültig bei Funktionen, die mit Rückgabewert deklariert werden.  
+ Wenn die ablaufsteuerung den Block mit der Definition der Funktion beendet wird, werden Sie das Ergebnis ist dasselbe wie wenn eine **zurückgeben** -Anweisung ohne einen Ausdruck musste ausgeführt wurde. Dies ist ungültig bei Funktionen, die mit Rückgabewert deklariert werden.  
   
- Eine Funktion kann eine beliebige Anzahl von `return`-Anweisungen aufweisen.  
+ Eine Funktion kann eine beliebige Anzahl von haben **zurückgeben** Anweisungen.  
   
- Im folgenden Beispiel wird ein Ausdruck mit einer `return`-Anweisung verwendet, um die größte von zwei ganzen Zahlen zu erhalten.  
+ Im folgenden Beispiel wird einen Ausdruck mit einem **zurückgeben** Anweisung, um die größte von zwei ganzen Zahlen zu erhalten.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // return_statement2.cpp  
 #include <stdio.h>  
   

@@ -1,5 +1,5 @@
 ---
-title: _com_error::Description | Microsoft Docs
+title: _com_error::Description | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7df1fb3a8ca600b888e5d6f2c51fc44fda17dd27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4be038bff05ce7a37b09ec3b3c61572635747864
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414258"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939896"
 ---
 # <a name="comerrordescription"></a>_com_error::Description
 **Microsoft-spezifisch**  
   
- Aufrufe **IErrorInfo:: GetDescription** Funktion.  
+ Ruft die `IErrorInfo::GetDescription`-Funktion auf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +37,10 @@ _bstr_t Description( ) const;
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt das Ergebnis der **IErrorInfo:: GetDescription** für die **IErrorInfo** -Objekt erfasst wird, innerhalb der `_com_error` Objekt. Das resultierende `BSTR` wird in einem `_bstr_t`-Objekt gekapselt. Wenn kein **IErrorInfo** wird aufgezeichnet, es gibt ein leeres `_bstr_t`.  
+ Gibt das Ergebnis des `IErrorInfo::GetDescription` für die `IErrorInfo` -Objekt erfasst wird, innerhalb der `_com_error` Objekt. Das resultierende `BSTR` wird in einem `_bstr_t`-Objekt gekapselt. Wenn kein `IErrorInfo` wird aufgezeichnet, es gibt eine leere `_bstr_t`.  
   
 ## <a name="remarks"></a>Hinweise  
- Ruft die **IErrorInfo:: GetDescription** -Funktion und ruft **IErrorInfo** aufgezeichnet, die innerhalb der `_com_error` Objekt. Jeder Fehler beim Aufrufen der **IErrorInfo:: GetDescription** -Methode wird ignoriert.  
+ Ruft die `IErrorInfo::GetDescription` -Funktion und ruft `IErrorInfo` aufgezeichnet, die innerhalb der `_com_error` Objekt. Jeder Fehler beim Aufrufen der `IErrorInfo::GetDescription` -Methode wird ignoriert.  
   
  **Ende Microsoft-spezifisch**  
   

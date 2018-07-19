@@ -1,5 +1,5 @@
 ---
-title: Beenden oder zurückgeben mit | Microsoft Docs
+title: Beenden oder zurückgeben mit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45885cc6dbac50a693bb84abb797469d8aff93a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 41c5d00efa0f827b9e1c3cd7f3647c966eed67e4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943223"
 ---
 # <a name="using-exit-or-return"></a>Verwenden von "exit" oder "return"
-Beim Aufruf **beenden** oder führen Sie eine `return` -Anweisung vom **main**, statische Objekte werden in umgekehrter Reihenfolge ihrer Initialisierung zerstört. Das folgende Beispiel zeigt, wie so eine Initialisierung und Bereinigung funktionieren.  
+Beim Aufruf **beenden** oder führen Sie eine **zurückgeben** -Anweisung vom `main`, statische Objekte werden in umgekehrter Reihenfolge ihrer Initialisierung zerstört. Das folgende Beispiel zeigt, wie so eine Initialisierung und Bereinigung funktionieren.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // using_exit_or_return1.cpp  
 #include <stdio.h>  
 class ShowData {  
@@ -64,11 +65,11 @@ int main() {
 }  
 ```  
   
- Im vorherigen Beispiel werden die statischen Objekte `sd1` und `sd2` vor der Eingabe in `main` erstellt und initialisiert. Nachdem das Programm mithilfe der `return`-Anweisung beendet ist, wird zuerst `sd2` und danach `sd1` gelöscht. Der Destruktor für die Klasse `ShowData` schließt die Dateien, die diesen statischen Objekten zugeordnet sind.   
+ Im vorherigen Beispiel werden die statischen Objekte `sd1` und `sd2` vor der Eingabe in `main` erstellt und initialisiert. Nachdem das Programm beendet mit der **zurückgeben** -Anweisung, die erste `sd2` zerstört wird und dann `sd1`. Der Destruktor für die Klasse `ShowData` schließt die Dateien, die diesen statischen Objekten zugeordnet sind.   
   
  Eine andere Möglichkeit zum Schreiben des Codes besteht darin, die `ShowData`-Objekte mit dem Blockbereich zu deklarieren, sodass sie gelöscht werden, wenn sie den Gültigkeitsbereich verlassen:  
   
-```  
+```cpp 
 int main() {  
    ShowData sd1, sd2( "hello.dat" );  
   

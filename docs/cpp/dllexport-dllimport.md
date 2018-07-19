@@ -1,5 +1,5 @@
 ---
-title: Dllexport, Dllimport | Microsoft Docs
+title: Dllexport, Dllimport | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d57287723da1bb7fbe7f75dece05674142bd417
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a330ecf221d210134425c4bf39c17bac0f5006dc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414203"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940533"
 ---
 # <a name="dllexport-dllimport"></a>dllexport, dllimport
 **Microsoft-spezifisch**  
   
- Die `dllexport` und **Dllimport** Speicherklassen-Attribute sind Microsoft-spezifische Erweiterungen der Programmiersprachen C und C++. Sie können sie verwenden, um Funktionen, Daten und Objekte in eine DLL zu exportieren oder von einer DLL zu importieren.  
+ Die **Dllexport** und **Dllimport** Speicherklassen-Attribute sind Microsoft-spezifische Erweiterungen der Programmiersprachen C und C++. Sie können sie verwenden, um Funktionen, Daten und Objekte in eine DLL zu exportieren oder von einer DLL zu importieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,15 +41,15 @@ ms.locfileid: "32414203"
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Attribute definieren explizit die Schnittstelle der DLL zu dem Client, der die ausführbare Datei oder eine andere DLL sein kann. Das Deklarieren funktioniert, da durch `dllexport` keine Moduldefinitionsdatei (.def) erforderlich ist, zumindest in Bezug auf die Angabe von exportierten Funktionen. Das `dllexport`-Attribut ersetzt das `__export`-Schlüsselwort.  
+ Diese Attribute definieren explizit die Schnittstelle der DLL zu dem Client, der die ausführbare Datei oder eine andere DLL sein kann. Deklarieren von Funktionen als **Dllexport** überflüssig eine Moduldefinitionsdatei (.def)-Datei, zumindest in Bezug auf die Angabe von exportierten Funktionen. Die **Dllexport** -Attribut ersetzt das **__export** Schlüsselwort.  
   
  Wenn eine Klasse als "declspec(dllexport)" gekennzeichnet ist, werden alle Spezialisierungen von Klassenvorlagen in der Klassenhierarchie implizit als "declspec (dllexport)" gekennzeichnet. Das bedeutet, dass Klassenvorlagen explizit instanziiert werden und die Member der Klasse definiert werden müssen.  
   
- `dllexport` einer Funktion macht die Funktion mit dem ergänzten Namen verfügbar. Bei C++-Funktionen schließt dies Namenszerlegung mit ein. Bei C-Funktionen oder Funktionen, die als `extern "C"` deklariert werden, schließt dies plattfomspezifische Ergänzungen, die auf der Aufrufkonvention basieren, mit ein. Informationen zur namenserweiterung in C/C++-Code finden Sie unter [ergänzte Namen](../build/reference/decorated-names.md). Keine Namensergänzung gilt für exportierte C-Funktionen oder C++-`extern "C"`-Funktionen, die die `__cdecl`-Aufrufkonvention verwenden.  
+ **Dllexport** einer Funktion macht die Funktion mit dem ergänzten Namen. Bei C++-Funktionen schließt dies Namenszerlegung mit ein. Bei C-Funktionen oder Funktionen, die als `extern "C"` deklariert werden, schließt dies plattfomspezifische Ergänzungen, die auf der Aufrufkonvention basieren, mit ein. Weitere Informationen zur namenserweiterung in C/C++-Code finden Sie unter [ergänzte Namen](../build/reference/decorated-names.md). Keine Namensergänzung gilt für exportierte C-Funktionen oder C++-`extern "C"`-Funktionen, die die `__cdecl`-Aufrufkonvention verwenden.  
   
- Um einen nicht ergänzten Namen zu exportieren, können Sie bei der Verknüpfung eine Moduldefinitionsdatei (.def) verwenden, die den nicht ergänzten Namen in einem EXPORTS-Abschnitt definiert. Weitere Informationen finden Sie unter [EXPORTE](../build/reference/exports.md). Eine weitere Möglichkeit zum Exportieren eines nicht ergänzten Namens ist die Verwendung einer `#pragma comment(linker, "/export:alias=decorated_name")` -Direktive im Quellcode.  
+ Um einen nicht ergänzten Namen zu exportieren, können Sie bei der Verknüpfung eine Moduldefinitionsdatei (.def) verwenden, die den nicht ergänzten Namen in einem EXPORTS-Abschnitt definiert. Weitere Informationen finden Sie unter [EXPORTE](../build/reference/exports.md). Eine weitere Möglichkeit zum Exportieren eines nicht ergänzten Namens ist die Verwendung einer `#pragma comment(linker, "/export:alias=decorated_name")` -Anweisung im Quellcode.  
   
- Wenn Sie deklarieren `dllexport` oder **Dllimport**, verwenden Sie [erweiterte Attributsyntax](../cpp/declspec.md) und die `__declspec` Schlüsselwort.  
+ Wenn Sie deklarieren **Dllexport** oder **Dllimport**, verwenden Sie [erweiterte Attributsyntax](../cpp/declspec.md) und **__declspec** Schlüsselwort.  
   
 ## <a name="example"></a>Beispiel  
   

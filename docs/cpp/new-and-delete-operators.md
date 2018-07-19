@@ -1,5 +1,5 @@
 ---
-title: neue "und" delete | Microsoft Docs
+title: neue "und" delete | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,47 +19,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7f411d05491294421202ae6d8a1b7cbbb4e1d47
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb8f04962593dff13559f49f7f7c23014968c266
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423950"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940759"
 ---
 # <a name="new-and-delete-operators"></a>Operatoren "new" und "delete"
 
-C++ unterstützt die dynamische Zuordnung und Freigabe von Objekten mit dem [neue](../cpp/new-operator-cpp.md) und [löschen](../cpp/delete-operator-cpp.md) Operatoren. Diese Operatoren belegen Speicher für Objekte aus einem Pool, der als freier Speicher bezeichnet wird. Die `new` Operator Ruft die Spezialfunktion [new-Operator](../cpp/new-operator-cpp.md), und die `delete` Operator Ruft die Spezialfunktion [Delete-Operator](../cpp/delete-operator-cpp.md).  
+C++ unterstützt die dynamische Zuordnung und Freigabe von Objekten mit den [neue](../cpp/new-operator-cpp.md) und [löschen](../cpp/delete-operator-cpp.md) Operatoren. Diese Operatoren belegen Speicher für Objekte aus einem Pool, der als freier Speicher bezeichnet wird. Die **neue** Operator Ruft die Spezialfunktion [new-Operator](../cpp/new-operator-cpp.md), und die **löschen** Operator Ruft die Spezialfunktion [Delete-Operator](../cpp/delete-operator-cpp.md).  
   
- Die `new` -Funktion in der C++-Standardbibliothek unterstützt das Verhalten in der C++-Standard, d. eine Std:: bad_alloc-Ausnahme auslösen h., wenn die speicherbelegung fehlschlägt. Falls Sie weiterhin die nicht auslösende Version von benötigen `new`, das Programm mit nothrownew.obj verknüpfen. Jedoch, wenn Sie mit nothrownew.obj verknüpfen, die Standardeinstellung `operator new` in der C++-Standardbibliothek nicht mehr funktioniert.  
+ Die **neue** -Funktion in der C++-Standardbibliothek unterstützt das Verhalten in der C++-Standard, handelt es sich um eine Std:: bad_alloc-Ausnahme auslösen, wenn die speicherbelegung fehlschlägt. Falls Sie weiterhin die nicht auslösende Version von benötigen **neue**, Ihr Programm mit nothrownew.obj verknüpfen. Aber wenn Sie mit nothrownew.obj verknüpfen, die Standardeinstellung **new-Operator** in der C++-Standardbibliothek nicht mehr funktioniert.  
   
- Eine Liste der Bibliotheksdateien, die die C-Laufzeitbibliothek und C++-Standardbibliothek umfassen, finden Sie unter [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md).  
+ Eine Liste der Bibliotheksdateien, die die C-Laufzeitbibliothek und C++-Standardbibliothek enthalten, finden Sie unter [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md).  
   
 ##  <a id="new_operator"> </a> Das new-operator  
- Wenn eine Anweisung ähnlich der folgenden in einem Programm gefunden wird, wird sie in einen Aufruf der Funktion `operator new` übersetzt:  
+ Wenn eine Anweisung ähnlich der folgenden in einem Programm gefunden wird, ist er in einen Aufruf der Funktion übersetzt **new-Operator**:  
   
 ```cpp  
 char *pch = new char[BUFFER_SIZE];  
 ```  
   
-Wenn keine Speicherbytes, angefordert wird **new-Operator** gibt einen Zeiger auf ein bestimmtes Objekt (d. h. wiederholte Aufrufe von **new-Operator** geben also unterschiedliche Zeiger zurück). Wenn nicht genügend für die zuordnungsanforderung Arbeitsspeicher **new-Operator** löst eine Std:: bad_alloc-Ausnahme aus, oder gibt **Nullptr** Wenn Sie nicht auslösend verknüpft haben `operator new` unterstützen.  
+Wenn keine Speicherbytes, die Anforderung ist **new-Operator** gibt einen Zeiger auf ein bestimmtes Objekt (d. h. wiederholte Aufrufe von **new-Operator** liefern also unterschiedliche Zeiger). Es ist nicht genügend Arbeitsspeicher für die zuordnungsanforderung **new-Operator** löst eine Std:: bad_alloc-Ausnahme aus, oder gibt **"nullptr"** bei Links in nicht auslösend **new-Operator** unterstützen.  
   
-Sie können eine Routine schreiben, die versucht, nur dann Arbeitsspeicher freigeben, und wiederholen die Zuordnung. finden Sie unter [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) für Weitere Informationen. Weitere Details wiederherstellungsschema finden Sie unter der Behandlung von unzureichendem Arbeitsspeicher Abschnitt dieses Themas.  
+Sie können eine Routine schreiben, die versucht, den Speicher frei, und wiederholen die Zuordnung. finden Sie unter [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) für Weitere Informationen. Weitere Informationen wiederherstellungsschema finden Sie im Abschnitt behandeln nicht genügend Arbeitsspeicher in diesem Thema.  
 
   
-Die beiden Bereiche für `operator new`-Funktionen werden in der folgenden Tabelle beschrieben.  
+Die beiden Bereiche für **new-Operator** Funktionen werden in der folgenden Tabelle beschrieben.  
   
 ### <a name="scope-for-operator-new-functions"></a>Bereich für "operator new"-Funktionen  
   
 |Operator|Bereich|  
 |--------------|-----------|  
 |**:: new-Operator**|Global|  
-|*Klassenname* **:: new-Operator**|Klasse|  
+|*Klassennamen* **:: new-Operator**|Klasse|  
   
- Das erste Argument für **new-Operator** muss vom Typ **Size_t** (einen Typ in \<stddef.h >), und der Rückgabetyp ist immer **"void" \***  .  
+ Das erste Argument für **new-Operator** muss vom Typ `size_t` (in definierten Typs \<stddef.h >), und der Rückgabetyp ist immer **"void" \*** .  
   
- Die globale **new-Operator** Funktion wird aufgerufen, wenn die **neue** Operator wird verwendet, um Objekte des integrierten Typs zuweisen, Objekte des Klassentyps, die keine enthalten benutzerdefinierte **new-Operator** Funktionen und Arrays eines beliebigen Typs. Wenn die **neue** Operator wird verwendet, um Objekte eines Klassentyps zuzuweisen, in denen ein **new-Operator** definiert ist, dieser Klasse **new-Operator** aufgerufen wird.  
+ Die globale **new-Operator** Funktion wird aufgerufen, wenn die **neue** Operator wird verwendet, um Objekte von integrierten Typen zuordnen, Objekte des Klassentyps, die keine enthalten benutzerdefinierte **new-Operator** Funktionen sowie Arrays jeglichen Typs. Wenn die **neue** Operator wird verwendet, um Objekte eines Klassentyps zuzuweisen, in denen ein **new-Operator** definiert ist, dieser Klasse **new-Operator** aufgerufen wird.  
   
- Ein **new-Operator** für eine Klasse mit einer statischen Memberfunktion (die daher nicht virtuell sein kann) ist, die die globale ausblendet definierte Funktion **new-Operator** -Funktion für Objekte dieses Klassentyps. Betrachten Sie den Fall, in dem **neue** dient zum Zuordnen und Arbeitsspeicher auf einem angegebenen Wert festgelegt:  
+ Ein **new-Operator** Funktion, die für eine Klasse mit einer statischen Memberfunktion (die daher nicht virtuell sein kann) ist, die die globale verbirgt definiert **new-Operator** -Funktion für Objekte dieses Klassentyps. Betrachten Sie den Fall, in denen **neue** dient zum Zuordnen und Speicher auf einem angegebenen Wert festgelegt:  
   
 ```cpp  
 // spec1_the_operator_new_function1.cpp  
@@ -89,15 +89,15 @@ int main()
 }  
 ```  
   
- Das Argument in Klammern einschließen, um **neue** übergeben `Blanks::operator new` als die `chInit` Argument. Allerdings die globale **new-Operator** Funktion wird ausgeblendet, Code wie der folgende einen Fehler verursacht:  
+ Das Argument in Klammern angegeben **neue** übergeben wird, um `Blanks::operator new` als die `chInit` Argument. Allerdings die globale **new-Operator** Funktion wird ausgeblendet, wodurch Code wie der folgende Fehler generiert:  
   
 ```cpp  
 Blanks *SomeBlanks = new Blanks;  
 ```  
   
- In Visual C++ 5.0 und früher verwendeten nichtklassentypen und alle Arrays (unabhängig davon, ob sie von wären **Klasse** Typ) zugeordnet, mit der **neue** -Operator verwendet immer die globale **new-Operator** Funktion.  
+ In Visual C++ 5.0 und früher verwendeten nichtklassentypen und alle Arrays (unabhängig davon, ob sie von Waren **Klasse** Typ) zugeordnet, mit der **neue** -Operator verwendet immer die globale **new-Operator** Funktion.  
   
- Ab Visual C++ 5.0, unterstützt der Compiler memberarray- **neue** und **löschen** Operatoren in einer Klassendeklaration. Zum Beispiel:  
+ Ab Visual C++ 5.0 unterstützt der Compiler memberarray **neue** und **löschen** Operatoren in einer Klassendeklaration. Zum Beispiel:  
   
 ```cpp  
 // spec1_the_operator_new_function2.cpp  
@@ -138,27 +138,27 @@ int main() {
 }  
 ```  
   
- Es wird eine andere Möglichkeit, Fehler bei speicherbelegungsanforderungen zu behandeln: Schreiben Sie eine benutzerdefinierte wiederherstellungsroutine, um solche Fehler zu behandeln, und registrieren Sie Ihre Funktion durch Aufrufen der [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) Laufzeitfunktion.  
+ Es gibt eine andere Möglichkeit, Fehler bei speicherbelegungsanforderungen zu behandeln: Schreiben Sie eine benutzerdefinierte wiederherstellungsroutine, um solche Fehler zu behandeln, und registrieren Sie Ihre Funktion durch Aufrufen der [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) Run-Time-Funktion.  
   
 ##  <a id="delete_operator"> </a> Der Delete-operator  
- Arbeitsspeicher, der dynamisch zugeordnet wird mithilfe der **neue** Operator kann freigegeben werden, mithilfe der **löschen** Operator. Die Delete-Operator Ruft die **Delete-Operator** -Funktion, die Arbeitsspeicher für den verfügbaren Pool wieder frei. Mithilfe der **löschen** Operator auch der Klassendestruktor (sofern vorhanden), die aufgerufen wird.  
+ Arbeitsspeicher, die dynamisch zugewiesen wird, mit der **neue** Operator kann freigegeben werden, mithilfe der **löschen** Operator. Die Delete-Operator Ruft die **Delete-Operator** -Funktion, die Speicherplatz für den verfügbaren Pool frei macht. Mithilfe der **löschen** auch bewirkt, dass den Destruktor einer Klasse (sofern vorhanden) aufgerufen werden.  
   
- Es gibt globale und klassenspezifische **Delete-Operator** Funktionen. Nur ein **Delete-Operator** -Funktion kann für eine angegebene Klasse definiert werden; Wenn definiert, blendet die globale **Delete-Operator** Funktion. Die globale **Delete-Operator** Funktion immer für Arrays jeglichen Typs aufgerufen wird.  
+ Es gibt globale und klassenspezifische **Delete-Operator** Funktionen. Nur ein **Delete-Operator** -Funktion für eine angegebene Klasse definiert werden kann; sofern definiert, blendet die globale **Delete-Operator** Funktion. Die globale **Delete-Operator** Funktion wird immer für Arrays jeglichen Typs aufgerufen.  
   
- Die globale **Delete-Operator** Funktion. Es gibt zwei Formen der globalen **Delete-Operator** und Klassenmember- **Delete-Operator** Funktionen:  
+ Die globale **Delete-Operator** Funktion. Es gibt zwei Formen für die globale **Delete-Operator** und Klassenmember- **Delete-Operator** Funktionen:  
   
 ```cpp  
 void operator delete( void * );  
 void operator delete( void *, size_t );  
 ```  
   
- Nur einer der vorangehenden zwei Formen kann für eine bestimmte Klasse vorhanden sein. Die erste Form akzeptiert ein einzelnes Argument vom Typ **"void" \*** , das einen Zeiger auf das Objekt, das Aufheben der Zuordnung enthält. Die zweite Form – Zuordnung mit Größeninformationen – akzeptiert zwei Argumente: das erste ist ein Zeiger auf den freizugebenden Speicherblock und das zweite ist die Anzahl der freizugebenden Bytes. Ist der Rückgabetyp der beiden Formen `void` (**Delete-Operator** kann keinen Wert zurückgeben).  
+ Nur eine der beiden oben beschriebenen Formen kann für eine bestimmte Klasse vorhanden sein. Die erste Form akzeptiert ein einzelnes Argument vom Typ **"void" \*** , das einen Zeiger auf das Objekt beim Aufheben der Zuordnung enthält. Die zweite Form – Größeninformationen – akzeptiert zwei Argumente: das erste Argument ist ein Zeiger auf den Speicherblock beim Aufheben der Zuordnung und die zweite ist die Anzahl der freizugebenden Bytes. Der Rückgabetyp der beiden Formen **"void"** (**Delete-Operator** kann keinen Wert zurückgeben).  
   
- Zur Beschleunigung Suche für die richtige Größenkategorie des Objekts, das gelöscht werden, die häufig nicht in der Nähe der Zuordnung selbst gespeichert und wahrscheinlich nicht zwischengespeichert wird ist die zweite Form; die zweite Form ist besonders nützlich, wenn ein **Delete-Operator** Funktion von einer Basisklasse wird verwendet, um ein Objekt einer abgeleiteten Klasse zu löschen.  
+ Um eine schnellere suchen, die für die Kategorie der richtigen Größe des Objekts, das gelöscht werden, der oft nicht in der Nähe der Zuordnung selbst gespeichert und wahrscheinlich nicht zwischengespeichert, die zweite Form ist; die zweite Form ist besonders nützlich, wenn ein **Delete-Operator** Funktion von einer Basisklasse wird verwendet, um ein Objekt einer abgeleiteten Klasse zu löschen.  
   
- Die **Delete-Operator** -Funktion ist statisch und nicht aus diesem Grund virtuell sein. Die `operator delete` Funktion folgt der Zugriffssteuerung wie unter [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md).  
+ Die **Delete-Operator** -Funktion ist statisch und nicht aus diesem Grund virtuell sein. Die `operator delete` Funktion folgt der Zugriffssteuerung wie beschrieben in [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md).  
   
- Das folgende Beispiel zeigt eine benutzerdefinierte **new-Operator** und **Delete-Operator** Funktionen entwickelt, um speicherbelegungen und Aufhebungen von speicherzuordnungen zu protokollieren:  
+ Das folgende Beispiel zeigt eine benutzerdefinierte **new-Operator** und **Delete-Operator** Funktionen, die dazu dienen, speicherzuordnungen und Aufhebungen von speicherzuordnungen zu protokollieren:  
   
 ```cpp  
 // spec1_the_operator_delete_function1.cpp  
@@ -209,9 +209,9 @@ int main( int argc, char *argv[] ) {
 }  
 ```  
   
- Mit dem vorangehenden Code kann "Arbeitsspeicherverlust" erkannt werden, also Arbeitsspeicher, der im freien Speicher zugeordnet, jedoch nicht freigegeben wurde. Diese Erkennung, die die globale auszuführenden **neue** und **löschen** Operatoren zum Belegen und Freigeben des Arbeitsspeichers Anzahl neu definiert.  
+ Mit dem vorangehenden Code kann "Arbeitsspeicherverlust" erkannt werden, also Arbeitsspeicher, der im freien Speicher zugeordnet, jedoch nicht freigegeben wurde. Zum Ausführen dieser Erkennung wird die globale **neue** und **löschen** Operatoren zum Belegen und Freigeben des Arbeitsspeichers Anzahl neu definiert.  
   
- Ab Visual C++ 5.0, unterstützt der Compiler memberarray- **neue** und **löschen** Operatoren in einer Klassendeklaration. Zum Beispiel:  
+ Ab Visual C++ 5.0 unterstützt der Compiler memberarray **neue** und **löschen** Operatoren in einer Klassendeklaration. Zum Beispiel:  
   
 ```cpp  
 // spec1_the_operator_delete_function2.cpp  

@@ -1,5 +1,5 @@
 ---
-title: Überlegungen zum Schreiben von Code Prolog-Epilog | Microsoft Docs
+title: Überlegungen zum Schreiben von Prolog-und Epilogcode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd87d4af4c797d324e6f882cc5c2e139a784543
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b7f4e2c25d7ead3399020221c1e0e9633557d24
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414769"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942106"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Überlegungen für das Schreiben des Prolog-/Epilogcodes
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Vor dem Schreiben eigener Prolog- und Epilogcodesequenzen ist es wichtig, zu verstehen, wie der Stapelrahmen festgelegt ist. Es ist auch hilfreich zu wissen, wie Sie die **__LOCAL_SIZE** Symbol.  
+ Vor dem Schreiben eigener Prolog- und Epilogcodesequenzen ist es wichtig, zu verstehen, wie der Stapelrahmen festgelegt ist. Es ist auch hilfreich zu wissen, wie Sie die __LOCAL_SIZE-Symbol verwenden.  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Stapelrahmenlayout  
  In diesem Beispiel wird der Standardprologcode veranschaulicht, der in einer 32-Bit-Funktion enthalten sein kann:  
@@ -51,16 +51,16 @@ ret                       ; Return from function
  Der Stapel wächst immer nach unten (von hohen zu niedrigen Speicheradressen). Der Basiszeiger (`ebp`) zeigt auf den abgelegten `ebp`-Wert. Der Gültigkeitsbereich der lokalen Variablen beginnt bei `ebp-4`. Um auf lokale Variablen zuzugreifen, berechnen Sie einen Offset von `ebp`, indem Sie den entsprechenden Wert von `ebp` subtrahieren.  
   
 ##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE  
- Der Compiler stellt ein Symbol **__LOCAL_SIZE**, für die Verwendung im inlineassemblerblock des funktionsprologcodes. Mit diesem Symbol wird Speicherplatz für lokale Variablen im Stapelrahmen im benutzerdefinierten Prologcode zugeordnet.  
+ Der Compiler stellt ein Symbol, __LOCAL_SIZE, für die Verwendung im inlineassemblerblock des funktionsprologcodes bereit. Mit diesem Symbol wird Speicherplatz für lokale Variablen im Stapelrahmen im benutzerdefinierten Prologcode zugeordnet.  
   
- Der Compiler bestimmt den Wert von **__LOCAL_SIZE**. Sein Wert ist die Gesamtzahl von Bytes aller benutzerdefinierten lokalen Variablen und der vom Compiler generierten temporären Variablen. **__LOCAL_SIZE** kann nur als unmittelbarer Operand verwendet werden. Er kann nicht in einem Ausdruck verwendet werden. Sie dürfen den Wert dieses Symbols nicht ändern oder neu definieren. Zum Beispiel:  
+ Der Compiler bestimmt den Wert der __LOCAL_SIZE. Sein Wert ist die Gesamtzahl von Bytes aller benutzerdefinierten lokalen Variablen und der vom Compiler generierten temporären Variablen. __LOCAL_SIZE kann nur als unmittelbarer Operand verwendet werden; Es kann nicht in einem Ausdruck verwendet werden. Sie dürfen den Wert dieses Symbols nicht ändern oder neu definieren. Zum Beispiel:  
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- Im folgende Beispiel einer bloßen Funktion, die benutzerdefinierte Prolog- und epilogsequenzen enthält Sequenzen verwendet die **__LOCAL_SIZE** Symbol in der prologsequenz:  
+ Das folgende Beispiel einer bloßen Funktion, die benutzerdefinierte Prolog- und epilogsequenzen enthält verwendet die __LOCAL_SIZE-Symbol in der prologsequenz:  
   
 ```  
 // the__local_size_symbol.cpp  

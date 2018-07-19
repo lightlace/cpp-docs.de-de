@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::Attach | Microsoft Docs
+title: _com_ptr_t::Attach | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7341695ad0cbc8384da859b80a72a63d8d52215f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8e982ebd9a09d4dfcb5e4b5e150b42a1e8d5c75
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943792"
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
 **Microsoft-spezifisch**  
@@ -32,27 +33,22 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      void Attach(  
-   Interface* pInterface   
-) throw( );  
-void Attach(  
-   Interface* pInterface,  
-   bool fAddRef   
-) throw( );  
+void Attach( Interface* pInterface ) throw( );  
+void Attach( Interface* pInterface, bool fAddRef ) throw( );  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `pInterface`  
+ *pInterface*  
  Ein unformatierter Schnittstellenzeiger.  
   
- `fAddRef`  
- Ist er **"true"**, klicken Sie dann `AddRef` aufgerufen wird. Ist er **"false"**, `_com_ptr_t` Objekt übernimmt den Besitz des unformatierten Schnittstellenzeigers ohne Aufruf `AddRef`.  
+ *fAddRef*  
+ Wenn "true", dann ist `AddRef` aufgerufen wird. Wenn es auf "FALSE" ist die `_com_ptr_t` Objekt übernimmt den Besitz des unformatierten Schnittstellenzeigers, ohne `AddRef`.  
   
 ## <a name="remarks"></a>Hinweise  
   
--   **Fügen Sie (**`pInterface`**)** `AddRef` wird nicht aufgerufen.     Der Besitz der Schnittstelle wird an dieses `_com_ptr_t`-Objekt übergeben. **Version** wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern.  
+-   **Anfügen (***pInterface***)** `AddRef` wird nicht aufgerufen.     Der Besitz der Schnittstelle wird an dieses `_com_ptr_t`-Objekt übergeben. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern.  
   
--   **Fügen Sie (** `pInterface` **,**`fAddRef`**)** Wenn `fAddRef` ist **"true"**, `AddRef` wird aufgerufen, um den Verweis zu erhöhen. Anzahl der für den gekapselten Schnittstellenzeiger auf.       Wenn `fAddRef` ist **"false"**, gibt diese `_com_ptr_t` Objekt übernimmt den Besitz des unformatierten Schnittstellenzeigers ohne Aufruf `AddRef`. **Version** wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern.  
+-   **Anfügen (***pInterface* **,***fAddRef***)** Wenn *fAddRef* ist "true", `AddRef`aufgerufen, um den Verweiszähler für den gekapselten Schnittstellenzeiger zu inkrementieren.       Wenn *fAddRef* ist "false", dies `_com_ptr_t` Objekt übernimmt den Besitz des unformatierten Schnittstellenzeigers, ohne `AddRef`. `Release` wird aufgerufen, um den Verweiszähler für den zuvor gekapselten Zeiger zu verringern.  
   
  **Ende Microsoft-spezifisch**  
   

@@ -1,5 +1,5 @@
 ---
-title: Konstruktoren (C++) | Microsoft Docs
+title: Konstruktoren (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d34dff9c04491c25b2babfd4e7f0574bf7c6c609
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 53a05467a876a8b305aba64e49e0763cf5690a56
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418120"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940884"
 ---
 # <a name="constructors-c"></a>Konstruktoren (C++)
 
-Anpassen, wie Klasse, Elemente initialisiert werden, oder zum Aufrufen von Funktionen, wenn ein Objekt der Klasse erstellt wird, definieren eine *Konstruktor*. Ein Konstruktor hat den gleichen Namen wie die Klasse und weist keinen Rückgabewert auf. Sie können beliebig viele überladene Konstruktoren nach Bedarf, um die Initialisierung auf verschiedene Arten anpassen definieren. Konstruktoren in der Regel besitzen öffentliche zugreifbarkeit, damit Code außerhalb der Klassenhierarchie Definition oder Vererbung Objekte der Klasse erstellen kann. Sie können auch einen Konstruktor als deklariert jedoch **geschützt** oder **private**.
+Zum Anpassen, wie die Klasse, Elemente initialisiert werden, oder zum Aufrufen von Funktionen, wenn ein Objekt der Klasse erstellt wird, definieren eine *Konstruktor*. Ein Konstruktor hat den gleichen Namen wie die Klasse und weist keinen Rückgabewert auf. Sie können beliebig viele überladene Konstruktoren, die nach Bedarf, um die Initialisierung auf verschiedene Weise anzupassen definieren. Konstruktoren ist in der Regel öffentliche zugreifbarkeit besitzen, sodass Code außerhalb der Klassenhierarchie Definition oder Vererbung Objekte der Klasse erstellen kann. Aber Sie können auch einen Konstruktor als deklarieren **geschützt** oder **private**.
 
-Optional können Mitglied Liste mit Init Konstruktoren. Dies ist eine effizientere Methode zum Initialisieren von Klassenmembern als Zuweisen von Werten im Konstruktortext. Das folgende Beispiel zeigt eine Klasse `Box` mit drei überladene Konstruktoren. Verwenden Sie die letzten beiden Init Memberlisten:
+Konstruktoren können optional ein Element Init Liste übernehmen. Dies ist eine effizientere Methode zum Initialisieren von Klassenmembern als Zuweisen von Werten in den Text des Konstruktors. Das folgende Beispiel zeigt eine Klasse `Box` mit drei überladene Konstruktoren. Verwenden Sie die letzten zwei Init Memberlisten:
 
 ```cpp
 
@@ -58,7 +58,7 @@ private:
 
 ```
 
-Wenn Sie eine Instanz einer Klasse deklarieren, wählt der Compiler an, welcher Konstruktor aufrufen auf den Regeln der Auflösung von funktionsüberladungen basieren:
+Wenn Sie eine Instanz einer Klasse deklarieren, wählt der Compiler an, welcher Konstruktor aufrufen abhängig von den Regeln der überladungsauflösung:
 
 ```cpp
 
@@ -76,15 +76,15 @@ int main()
 
 ```
 
-- Konstruktoren können deklariert werden, als **Inline**, [explizite](#explicit_constructors), **"Friend"** oder [Constexpr](#constexpr_constructors).
-- Ein Konstruktor kann ein Objekt, das als deklariert wurde initialisieren **const**, **volatile** oder **const Volatile**. Das Objekt nicht mehr **const** nach Abschluss der Konstruktor.
-- Um einen Konstruktor in einer Implementierungsdatei definieren, geben Sie ihm einen qualifizierten Name wie bei jeder anderen Memberfunktion: `Box::Box(){...}`.
+- Konstruktoren können deklariert werden, als **Inline**, [explizite](#explicit_constructors), **Friend** oder ["constexpr"](#constexpr_constructors).
+- Ein Konstruktor kann ein Objekt, das als deklariert wurde initialisiert **const**, **flüchtige** oder **const Volatile**. Das Objekt nicht mehr **const** nach dem Abschluss des Konstruktors.
+- Um einen Konstruktor in einer Implementierungsdatei zu definieren, geben sie einen vollqualifizierten Namen wie bei anderen Member-Funktion: `Box::Box(){...}`.
 
 ## <a name="member_init_list"></a> Memberlisten-Initialisierer
 
-Ein Konstruktor kann optional eine Memberinitialisiererliste haben vor der Ausführung von Konstruktortext-Klasse, Elemente initialisiert. (Beachten Sie, dass eine Memberinitialisiererliste nicht dasselbe wie eine *Initialisiererliste* des Typs [Std:: initializer_list\<T >](../standard-library/initializer-list-class.md).)
+Ein Konstruktor kann optional eine Member-Initialisiererliste werden, die Klassenmember vor der Ausführung von den Text des Konstruktors initialisiert. (Beachten Sie, dass eine Memberinitialisiererliste nicht dasselbe wie ein *Initialisiererliste* des Typs [Std:: initializer_list\<T >](../standard-library/initializer-list-class.md).)
 
-Mithilfe einer Initialisiererliste Member wird über das Zuweisen von Werten in den Text des Konstruktors, da es direkt auf das Element initialisiert bevorzugt. Im folgenden Beispiel wird der Memberinitialisierer besteht aus der Liste aller der **identifier(argument)** hinter dem Doppelpunkt stehenden Ausdrücke:
+Ein Member-Initialisiererliste ist die Verwendung bevorzugter Zuweisen von Werten in den Text des Konstruktors aus, da er direkt auf das Element initialisiert. Im folgenden Beispiel wird der Memberinitialisierer Liste enthält alle der **identifier(argument)** Ausdrücke nach dem Doppelpunkt:
 
 ```cpp
   
@@ -93,15 +93,15 @@ Mithilfe einer Initialisiererliste Member wird über das Zuweisen von Werten in 
     {}
 ```
 
-Der Bezeichner muss auf einen Klassenmember beziehen. Es wird mit dem Wert des Arguments initialisiert. Das Argument kann eine der Konstruktorparameter auftreten, ein Funktionsaufruf oder eine [Std:: initializer_list\<T >](../standard-library/initializer-list-class.md). 
+Der Bezeichner muss auf einen Klassenmember beziehen. Es wird mit dem Wert des Arguments initialisiert. Das Argument kann eine der Parameter des Konstruktors, eines Funktionsaufrufs oder [Std:: initializer_list\<T >](../standard-library/initializer-list-class.md). 
 
-**const** Member und Member der Verweistyp müssen in der Member-Initialisierungsliste initialisiert werden.
+**const** Mitglieder sowie Mitglieder der Verweistyp müssen in der Member-Initialisiererliste initialisiert werden.
 
-Aufrufe von parametrisierten Konstruktoren sollten in der Initialisiererliste vorgenommen werden, um sicherzustellen, dass die Basisklasse vollständig vor der Ausführung von der abgeleitete Konstruktor initialisiert wurde.
+Parametrisierte Konstruktoren Aufrufe sollten in der Initialisiererliste vorgenommen werden, um sicherzustellen, dass die Basisklasse vor der Ausführung von den abgeleiteten Konstruktor vollständig initialisiert wurde.
 
 ## <a name="default_constructors"></a> Standardkonstruktoren
 
- *Standardkonstruktoren* in der Regel keine Parameter besitzen, aber können Parameter mit Standardwerten.
+ *Standardkonstruktoren* in der Regel keine Parameter, aber sie können Parameter mit Standardwerten.
 
 ```cpp
 class Box {
@@ -114,7 +114,7 @@ public:
 }
 ```
 
-Standardkonstruktoren zählen zu der die [spezielle Memberfunktionen](special-member-functions.md). Wenn keine Konstruktoren in einer Klasse deklariert werden, stellt der Compiler einen impliziten **Inline** Standardkonstruktor.
+Standardkonstruktoren zählen zu der die [spezielle Memberfunktionen](special-member-functions.md). Wenn keine Konstruktoren in einer Klasse deklariert sind, stellt der Compiler einen impliziten **Inline** Standardkonstruktor.
 
 ```cpp
 #include <iostream>
@@ -136,7 +136,7 @@ int main() {
 
 ```
 
-Wenn Sie einen impliziten Standardkonstruktor benötigen, müssen Sie Initialisieren von Membern in der Klassendefinition, wie im vorherigen Beispiel gezeigt. Ohne diese Initialisierer wäre der Member nicht initialisiert und Volume() Aufruf wäre einen Garbage-Wert. Im Allgemeinen ist es empfiehlt sich zum Initialisieren von Membern auf diese Weise auch, wenn nicht auf einen impliziten Standardkonstruktor verlassen.
+Wenn Sie einen impliziten Standardkonstruktor verwenden, müssen Sie Elemente in der Klassendefinition initialisiert werden, wie im vorherigen Beispiel gezeigt. Ohne diese Initialisierer Elemente werden nicht initialisiert werden, und der Aufruf Volume() ergibt einen Wert für die Garbage. Im Allgemeinen ist es empfehlenswert, die zum Initialisieren von Membern, die auf diese Weise, auch wenn nicht auf einen impliziten Standardkonstruktor verlassen.
 
 Sie können verhindern, dass den Compiler generiert einen impliziten Standardkonstruktor definieren ihn als [gelöscht](#explicitly_defaulted_and_deleted_constructors):
 
@@ -147,9 +147,9 @@ Sie können verhindern, dass den Compiler generiert einen impliziten Standardkon
 
 ```
 
-Ein vom Compiler generierter Standardkonstruktor wird definiert als gelöscht, wenn keine Klassenmember standardmäßig erstellt werden. Beispielsweise müssen alle Member des Klassentyps und ihre klassentypmember haben, einen Standardkonstruktor und Destruktoren die zugegriffen werden kann. Geben Sie alle Datenmember des Verweistyps, auch als **const** Member müssen eine Standard-Memberinitialisierer aufweisen.
+Ein vom Compiler generierten Standardkonstruktor wird als gelöscht, wenn alle Klassenmember nicht standardmäßig konstruierbar sind definiert. Beispielsweise müssen alle Member des Klassentyps und deren Member Klassentyp haben, einen Standardkonstruktor und -Destruktoren führen, die zugegriffen werden kann. Geben Sie alle Datenmember des Verweistyps, auch als **const** Member müssen ein standardmemberinitialisierer aufweisen.
 
-Wenn Sie einen Compiler generierter Standardkonstruktor aufrufen und versuchen Sie Klammern verwenden, wird eine Warnung ausgegeben:
+Wenn Sie einen vom Compiler generierten Standardkonstruktor aufrufen und versuchen, mithilfe von Klammern, wird eine Warnung ausgegeben:
 
 ```cpp
 class myclass{};
@@ -190,7 +190,7 @@ Box boxes[3]; // C2512: no appropriate default constructor available
 
 ```
 
-Sie können jedoch einen Satz von Initialisiererlisten verwenden, zum Initialisieren eines Arrays von Objekten im Feld:
+Allerdings können Sie einen Satz von Initialisiererlisten verwenden, um ein Array von Objekten von Feld zu initialisieren:
 
 ```cpp
 Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
@@ -200,7 +200,7 @@ Weitere Informationen finden Sie unter [Initialisierer](initializers.md).
 
 ## <a name="copy_and_move_constructors"></a> Kopierkonstruktoren
 
-Ein *Kopierkonstruktor* Initialisiert ein Objekt durch Kopieren der Werte der Elemente aus einem Objekt des gleichen Typs. Wenn die Klassenmember alle einfachen Typen z. B. Skalare Werte sind, vom Compiler generierte Kopierkonstruktor ist ausreichend, und Sie müssen nicht Definieren eigener. Wenn Ihre Klasse komplexere Initialisierung erforderlich ist, müssen Sie einen benutzerdefinierten Kopierkonstruktor zu implementieren. Z. B. wenn ein Klassenmember ein Zeiger ist müssen Sie einen Kopierkonstruktor, um neue Arbeitsspeicher belegen, und kopieren Sie die Werte aus der anderen auf Objekt definieren. Vom Compiler generierte Kopierkonstruktor kopiert einfach den Zeiger, damit der neue Zeiger weiterhin auf die andere Speicheradresse verweist.
+Ein *Kopierkonstruktor* Initialisiert ein Objekt durch die Werte aus einem Objekt des gleichen Typs kopieren. Wenn Ihre Klasse, Elemente alle einfache Typen wie Skalare Werte sind, der vom Compiler generierte Kopierkonstruktor ist ausreichend, und Sie müssen nicht definieren Ihre eigenen. Wenn Ihre Klasse komplexere Initialisierung erfordert, müssen Sie zum Implementieren eines benutzerdefinierten Kopierkonstruktors. Z. B. wenn ein Klassenmember ein Zeiger ist müssen Sie definieren einen Kopierkonstruktor zum neuen Speicher zuordnen, und kopieren Sie die Werte aus der anderen Person auf Objekt. Der vom Compiler generierte Kopierkonstruktor kopiert einfach den Zeiger, damit der neue Zeiger immer noch auf den anderen Speicherort verweist.
 
 Ein Kopierkonstruktor möglicherweise eine der folgenden Signaturen:
 
@@ -217,22 +217,22 @@ Ein Kopierkonstruktor möglicherweise eine der folgenden Signaturen:
 
 Wenn Sie einen Kopierkonstruktor definieren, sollten Sie auch einen Kopie-Zuweisungsoperator (=) definieren. Weitere Informationen finden Sie unter [Zuweisung](assignment.md) und [Kopierkonstruktoren und Kopierzuweisungsoperatoren](copy-constructors-and-copy-assignment-operators-cpp.md).
 
-Sie können verhindern, dass das Objekt kopiert werden, indem der Kopierkonstruktor als gelöscht definiert:
+Sie können verhindern, dass das Objekt kopiert wird, durch die Definition des Kopierkonstruktor gelöscht:
 
 ```cpp
     Box (const Box& other) = delete;
 ```
 
-Fehler beim Kopieren der des Objekts erzeugt *C2280: Versuch, auf eine gelöschte Funktion verweisen*.
+Versuch, das Objekt zu kopieren, wird Fehler *C2280: Es wird versucht, eine gelöschte Funktion zu verweisen*.
 
-## <a name="move_constructors"></a> Bewegungskonstruktoren
-Ein *bewegungskonstruktor* ist eine spezielle Memberfunktion, die Daten für ein vorhandenes Objekt in eine neue Variable verschiebt, ohne den ursprünglichen Daten zu kopieren. Er akzeptiert einen Rvalue-Verweis als ersten Parameter, und alle weiteren Parameter müssen Standardwerte haben. Bewegungskonstruktoren können die Effizienz des Programms erheblich steigern, bei der Übergabe großer Objekte. Ein Move-Konstruktor akzeptiert einen Rvalue-Verweis als erster Parameter an. Alle anderen Parameter müssen Standardwerte haben.
+## <a name="move_constructors"></a> Move-Konstruktoren
+Ein *bewegungskonstruktor* ist eine spezielle Memberfunktion, die Besitz der Daten in einem vorhandenen Objekt einer neuen Variable verschiebt, ohne die ursprünglichen Daten kopiert. Es akzeptiert einen Rvalue-Verweis als ersten Parameter, und alle zusätzlichen Parameter müssen Standardwerte. Move-Konstruktoren können erheblich Ihres Programms Effizienz erhöhen, wenn große Objekte übergeben. Verschieben-Konstruktor akzeptiert einen Rvalue-Verweis als ersten Parameter. Alle anderen Parameter müssen Standardwerte besitzen.
 
 ```cpp
 Box(Box&& other);
 ```
 
-Der Compiler entscheidet Ressourcen ein bewegungskonstruktor in bestimmten Situationen, in dem das Objekt von einem anderen Objekt desselben Typs initialisiert wird, die zerstört werden soll und nicht mehr benötigt wird. Das folgende Beispiel zeigt einen Fall, wenn ein bewegungskonstruktor von überladungsauflösung ausgewählt ist. Die Variable *Feld* get_Box() zurückgegebenes ist ein *Xvalue* (ablaufenden Wert) also außerhalb des Gültigkeitsbereichs liegen. Zum Bereitstellen von Motivation für dieses Beispiel geben wir Feld einen großen Vektor von Zeichenfolgen, die den Inhalt darstellen. Anstatt das Kopieren des Vektors und Zeichenfolgen, stiehlt"der Verschiebungskonstruktor" es aus dem ablaufenden Wert "Box", damit der Vektor jetzt mit dem neuen Objekt gehört. Der Aufruf von `std::move` ist die einzige erforderliche da beide `vector` und `string` Klassen implementieren ihre eigenen bewegungskonstruktoren.
+Der Compiler wählt ein bewegungskonstruktor in bestimmten Situationen, in dem das Objekt von einem anderen Objekt desselben Typs initialisiert wird, die zerstört werden soll, und es nicht mehr benötigt, Ressourcen. Das folgende Beispiel zeigt einen Fall, wenn ein bewegungskonstruktor vom Auflösung von funktionsüberladungen ausgewählt wird. Die Variable *Feld* get_Box() zurückgegebenes wird einer *Xvalue* (ablaufenden Wert) der wird außerhalb des gültigen Bereichs. Um die Motivation für dieses Beispiel zu ermöglichen, geben wir Feld einen großen Vektor von Zeichenfolgen, die dessen Inhalt darstellen. Anstatt Kopieren der Vektor und die Zeichenfolgen stiehlt"der bewegungskonstruktor" es vom ablaufenden Wert "Box", damit der Vektor jetzt auf das neue Objekt gehört. Der Aufruf von `std::move` ist alles, was erforderlich ist, da beide `vector` und `string` Klassen implementieren ihre eigenen Move-Konstruktoren.
 
 ```cpp
 #include <iostream>
@@ -302,11 +302,11 @@ int main()
 
 ```
 
-Wenn eine Klasse, die nicht über einen bewegungskonstruktor definiert, generiert der Compiler eine implizite aus, wenn es keine benutzerdeklarierten Kopierkonstruktor, Kopierzuweisungsoperator, bewegungszuweisungsoperator oder Destruktor ist. Wenn keine explizite oder implizite bewegungskonstruktor definiert ist, verwenden Sie stattdessen auszuführen, die andernfalls einen bewegungskonstruktor verwendet, würde, den Kopierkonstruktor. Wenn ein bewegungskonstruktor oder bewegungszuweisungsoperator eine Klasse deklariert wird, wird der implizit deklarierten Kopierkonstruktor definiert, als gelöscht.
+Wenn eine Klasse, die nicht über einen bewegungskonstruktor definiert, generiert der Compiler eine implizite, liegt keine benutzerdeklarierten Kopierkonstruktor, Kopierzuweisungsoperator, bewegungszuweisungsoperator oder Destruktor. Wenn keine explizite oder implizite bewegungskonstruktor definiert ist, verwenden Sie stattdessen Vorgänge, die andernfalls einen bewegungskonstruktor verwenden würde den Copy-Konstruktor. Wenn ein bewegungskonstruktor oder bewegungszuweisungsoperator eine Klasse deklariert wird, wird der implizit deklarierten Kopierkonstruktor als gelöscht definiert.
 
-Eine implizit deklarierte bewegungskonstruktor wird als gelöscht definiert, wenn alle Elemente, die Klassentypen sind einen Destruktor fehlender oder der Compiler kann nicht feststellen, welcher Konstruktor für den Verschiebevorgang verwendet.
+Ein implizit deklarierte Verschiebungskonstruktor definiert ist, als gelöscht, wenn alle Elemente, die Klassentypen sind nicht über einen Destruktor oder der Compiler nicht, welcher Konstruktor feststellen kann, der für den Vorgang verwendet.
 
-Weitere Informationen dazu, wie Sie einen nicht trivialen bewegungskonstruktor schreiben, finden Sie unter [Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
+Weitere Informationen, wie Sie einen nicht trivialen bewegungskonstruktor schreiben können, finden Sie unter [Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
 ## <a name="explicitly_defaulted_and_deleted_constructors"></a> Explizit vorgegebene und gelöschte Konstruktoren
 
@@ -329,20 +329,20 @@ Weitere Informationen finden Sie unter [explizit vorgegebene und gelöschte Funk
 
 ## <a name="constexpr_constructors"></a> Constexpr-Konstruktoren
 
-Ein Konstruktor kann deklariert werden, als [Constexpr](constexpr-cpp.md) Wenn
+Ein Konstruktor kann deklariert werden, als ["constexpr"](constexpr-cpp.md) Wenn
 
-- Es ist entweder deklariert werden, da übernommen, da sonst es erfüllt die Bedingungen für [Constexpr-Funktionen](constexpr-cpp.md#constexpr_functions) im Allgemeinen;
+- Es ist es für alle Bedingungen erfüllt, sonst entweder deklariert werden, wie auf den Standardwert festgelegte [Constexpr-Funktionen](constexpr-cpp.md#constexpr_functions) im Allgemeinen;
 - die Klasse verfügt über keine virtuellen Basisklassen;
-- jede der Parameter ist ein [Literaltyp](trivial-standard-layout-and-pod-types.md#literal_types);
-- der Text ist keine Funktion Try-Block.
-- alle nicht statischen Datenmember und untergeordnete Basisklassenobjekte initialisiert;
-- Wenn die Klasse ist "(a) eine Union mit variant-Member" oder (b) verfügt über anonyme Unions, ist nur eine union-Member initialisiert.
-- alle nicht statischen Datenmember des Klassentyps und alle untergeordneten Objekte von Basisklasse haben einen Constexpr-Konstruktor
+- Jeder Parameter ist ein [Literaltyp](trivial-standard-layout-and-pod-types.md#literal_types);
+- der Text ist kein Try-Block einer Funktion;
+- alle nicht statischen Datenmember und untergeordnete Objekte der Klasse initialisiert werden;
+- Wenn die Klasse (a) einer Vereinigung mit variant Mitglieder oder (b) verfügt über anonyme Unions, wird nur einer der union-Member initialisiert;
+- alle nicht statischen Datenmember des Klassentyps und alle untergeordneten Objekte von Basisklasse vorhanden Constexpr-Konstruktor.
 
 
 ## <a name="init_list_constructors"></a> Initialisierer Liste Konstruktoren
 
-Wenn ein Konstruktor akzeptiert ein [Std:: initializer_list\<T\> ](../standard-library/initializer-list-class.md) wie Parameter und alle anderen Parameter Standardargumente haben, diesen Konstruktor ausgewählt werden an der überladungsauflösung, wenn die Klasse ist durch direkte Initialisierung instanziiert. Das initializer_list-Element können Sie um einen beliebigen Member zu initialisieren, der sie akzeptieren können. Nehmen wir beispielsweise an die Box-Klasse, die (zuvor gezeigt) verfügt über eine `std::vector<string>` Member **M_contents**. Sie können einen Konstruktor wie folgt angeben:
+Wenn ein Konstruktor akzeptiert ein [Std:: initializer_list\<T\> ](../standard-library/initializer-list-class.md) als Parameter, und alle anderen Parameter Standardargumente haben, diesen Konstruktor ausgewählt werden, an der überladungsauflösung sobald die Klasse ist durch die direkte Initialisierung instanziiert. Sie können das initializer_list-Element verwenden, um jedes Element zu initialisieren, die sie akzeptieren kann. Nehmen wir beispielsweise an, die Box-Klasse, die (zuvor gezeigt) verfügt über eine `std::vector<string>` Member `m_contents`. Sie können einen Konstruktor wie folgt angeben:
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -350,7 +350,7 @@ Wenn ein Konstruktor akzeptiert ein [Std:: initializer_list\<T\> ](../standard-l
 {}
 ```
 
-Und erstellen Sie im Feld Objekte wie folgt:
+Und erstellen Sie im Feld-Objekte, wie diese:
 
 ```cpp
     Box b{ "apples", "oranges", "pears" }; // or ...
@@ -388,16 +388,16 @@ private:
 
 ```
 
-Derartige Konvertierungen können in einigen Fällen hilfreich sein. Häufiger führen sie jedoch möglicherweise zu feinen, aber schwerwiegenden Fehlern in Ihrem Code. Als allgemeine Regel, sollten Sie verwenden die **explizite** Schlüsselwort auf einen Konstruktor (und benutzerdefinierten Operatoren), um diese Art der impliziten typkonvertierung zu verhindern:
+Derartige Konvertierungen können in einigen Fällen hilfreich sein. Häufiger führen sie jedoch möglicherweise zu feinen, aber schwerwiegenden Fehlern in Ihrem Code. Als allgemeine Regel sollten Sie verwenden die **explizite** das Schlüsselwort für einen Konstruktor (und benutzerdefinierten Operatoren), um diese Art der impliziten typkonvertierung zu verhindern:
 
 ```cpp
 
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
-Wenn der Konstruktor explizit ist, verursacht diese Zeile einen Compilerfehler: `ShippingOrder so(42, 10.8);`.  Weitere Informationen finden Sie unter [benutzerdefinierte Typkonvertierungen](../cpp/user-defined-type-conversions-cpp.md).
+Wenn der Konstruktor explizit ist, verursacht diese Zeile einen Compilerfehler: `ShippingOrder so(42, 10.8);`.  Weitere Informationen finden Sie unter [User-Defined Type Conversions](../cpp/user-defined-type-conversions-cpp.md).
 
-## <a name="order_of_construction"></a> Reihenfolge der Erstellung
+## <a name="order_of_construction"></a> Reihenfolge der Konstruktion
 
 Ein Konstruktor führt die Arbeit in folgender Reihenfolge aus:
 
@@ -594,7 +594,7 @@ Derived Class print_it
 
 ## <a name="delegating_constructors"></a> Delegierende Konstruktoren
 
-Ein *delegierender Konstruktor* einen anderen Konstruktor in der gleichen Klasse dazu Teil der Arbeit der Initialisierung aufgerufen. Dies ist hilfreich, wenn Sie mehrere Konstruktoren haben, dass alle ähnliche Aufgaben ausführen müssen. Sie können die Hauptlogik in einen Konstruktor schreiben und rufen Sie sie von anderen. Im folgenden Beispiel triviale delegiert Box(int) ihre Arbeit Box(int,int,int):
+Ein *delegierender Konstruktor* ruft Sie einen anderen Konstruktor in derselben Klasse Teil der Arbeit der Initialisierung zu tun. Dies ist nützlich, wenn Sie über mehrere Konstruktoren verfügen, die alle ähnliche Aufgaben ausführen müssen. Sie können die Haupt-Logik in einem Konstruktor schreiben und ihn von anderen aufrufen. Die folgende einfache Beispiel delegiert Box(int) seiner Arbeit, die Box(int,int,int):
 
 ```cpp
 class Box {

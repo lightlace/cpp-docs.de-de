@@ -1,5 +1,5 @@
 ---
-title: Hardwareausnahmen | Microsoft Docs
+title: Hardwareausnahmen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57a7e7127135837a426436c15e8ae8aff60227da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50cdb9899582b3e398909e4fcb7ad571025dbcf0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413959"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941573"
 ---
 # <a name="hardware-exceptions"></a>Hardwareausnahmen
 Die meisten Standardausnahmen, die vom Betriebssystem erkannt werden, sind Hardware-definierte Ausnahmen. Windows erkennt einige Softwareausnahmen auf niedriger Ebene, doch diese werden normalerweise am besten vom Betriebssystem selbst behandelt.  
@@ -34,20 +34,20 @@ Die meisten Standardausnahmen, die vom Betriebssystem erkannt werden, sind Hardw
   
 |Ausnahmecode|Ursache der Ausnahme|  
 |--------------------|------------------------|  
-|**STATUS_ACCESS_VIOLATION**|Lesen oder Schreiben in einer Speicheradresse, auf die nicht zugegriffen werden kann.|  
-|**STATUS_BREAKPOINT**|Auftreten eines Hardware-definierten Haltepunkts. Nur von Debuggern verwendet.|  
-|**STATUS_DATATYPE_MISALIGNMENT**|Lesen oder Schreiben in Daten unter einer Adresse, die nicht ordnungsgemäß ausgerichtet ist. Beispielsweise müssen 16-Bit-Entitäten auf 2-Byte-Begrenzungen ausgerichtet sein. (Nicht anwendbar auf Intel 80*x*86-Prozessoren.)|  
-|**STATUS_FLOAT_DIVIDE_BY_ZERO**|Teilen des Gleitkommatyps durch 0,0.|  
-|**STATUS_FLOAT_OVERFLOW**|Überschreiten des maximalen positiven Exponenten eines Gleitkommatyps.|  
-|**STATUS_FLOAT_UNDERFLOW**|Überschreiten der Größe des niedrigsten negativen Exponenten eines Gleitkommatyps.|  
-|**STATUS_FLOATING_RESEVERED_OPERAND**|Verwenden eines reservierten Gleitkommaformats (ungültige Verwendung von Format).|  
-|**STATUS_ILLEGAL_INSTRUCTION**|Versuch, einen Anweisungscode auszuführen, der nicht vom Prozessor definiert ist.|  
-|**STATUS_PRIVILEGED_INSTRUCTION**|Ausführen einer Anweisung, die nicht im aktuellen Computermodus zulässig ist.|  
-|**STATUS_INTEGER_DIVIDE_BY_ZERO**|Teilen eines ganzzahligen Typs durch 0.|  
-|**STATUS_INTEGER_OVERFLOW**|Versuch, einen Vorgang auszuführen, der den Ganzzahlbereich übersteigt.|  
-|**STATUS_SINGLE_STEP**|Ausführen einer Anweisung im einschrittigen Modus. Nur von Debuggern verwendet.|  
+|STATUS_ACCESS_VIOLATION|Lesen oder Schreiben in einer Speicheradresse, auf die nicht zugegriffen werden kann.|  
+|STATUS_BREAKPOINT|Auftreten eines Hardware-definierten Haltepunkts. Nur von Debuggern verwendet.|  
+|STATUS_DATATYPE_MISALIGNMENT|Lesen oder Schreiben in Daten unter einer Adresse, die nicht ordnungsgemäß ausgerichtet ist. Beispielsweise müssen 16-Bit-Entitäten auf 2-Byte-Begrenzungen ausgerichtet sein. (Nicht anwendbar auf Intel 80*x*86-Prozessoren.)|  
+|STATUS_FLOAT_DIVIDE_BY_ZERO|Teilen des Gleitkommatyps durch 0,0.|  
+|STATUS_FLOAT_OVERFLOW|Überschreiten des maximalen positiven Exponenten eines Gleitkommatyps.|  
+|STATUS_FLOAT_UNDERFLOW|Überschreiten der Größe des niedrigsten negativen Exponenten eines Gleitkommatyps.|  
+|STATUS_FLOATING_RESEVERED_OPERAND|Verwenden eines reservierten Gleitkommaformats (ungültige Verwendung von Format).|  
+|STATUS_ILLEGAL_INSTRUCTION|Versuch, einen Anweisungscode auszuführen, der nicht vom Prozessor definiert ist.|  
+|STATUS_PRIVILEGED_INSTRUCTION|Ausführen einer Anweisung, die nicht im aktuellen Computermodus zulässig ist.|  
+|STATUS_INTEGER_DIVIDE_BY_ZERO|Teilen eines ganzzahligen Typs durch 0.|  
+|STATUS_INTEGER_OVERFLOW|Versuch, einen Vorgang auszuführen, der den Ganzzahlbereich übersteigt.|  
+|STATUS_SINGLE_STEP|Ausführen einer Anweisung im einschrittigen Modus. Nur von Debuggern verwendet.|  
   
- Viele der Ausnahmen, die in der vorherigen Tabelle aufgelistet sind, sollen von Debuggern, dem Betriebssystem oder einem anderen Code auf niedriger Ebene behandelt werden. Mit Ausnahme von Ganzzahl- und Gleitkommafehlern sollte der Code diese Fehler nicht verarbeiten. Daher sollten Sie normalerweise den Ausnahmebehandlungsfilter verwenden, um Ausnahmen zu ignorieren (ergibt 0). Andernfalls hindern Sie Mechanismen auf niedrigerer Ebene möglicherweise daran, entsprechend zu reagieren. Sie können, jedoch muss die entsprechenden Vorsichtsmaßnahmen gegen die möglichen Auswirkungen dieser Fehler auf niedriger Ebene, durch [Beendigungshandler schreiben](../cpp/writing-a-termination-handler.md).  
+ Viele der Ausnahmen, die in der vorherigen Tabelle aufgelistet sind, sollen von Debuggern, dem Betriebssystem oder einem anderen Code auf niedriger Ebene behandelt werden. Mit Ausnahme von Ganzzahl- und Gleitkommafehlern sollte der Code diese Fehler nicht verarbeiten. Daher sollten Sie normalerweise den Ausnahmebehandlungsfilter verwenden, um Ausnahmen zu ignorieren (ergibt 0). Andernfalls hindern Sie Mechanismen auf niedrigerer Ebene möglicherweise daran, entsprechend zu reagieren. Sie können jedoch geeignete vorkehrungen gegen die möglichen Auswirkungen dieser Fehler auf niedriger Ebene, durch dauern [Beendigungshandler schreiben](../cpp/writing-a-termination-handler.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Schreiben eines Ausnahmehandlers](../cpp/writing-an-exception-handler.md)   

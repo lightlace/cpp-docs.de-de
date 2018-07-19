@@ -1,5 +1,5 @@
 ---
-title: "\"decltype\" (C++) | Microsoft Docs"
+title: Decltype (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7fceb9ce3433a4255619a6c7bac4e952b15ac04d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418038"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941287"
 ---
-# <a name="decltype--c"></a>"decltype" (C++)
-Der `decltype`-Typspezifizierer ergibt den Typ eines angegebenen Ausdrucks. Die `decltype` Typspezifizierer verwenden, zusammen mit den [auto-Schlüsselwort](../cpp/auto-cpp.md), eignet sich vor allem für Entwickler, die Vorlagenbibliotheken schreiben. Verwenden Sie `auto` und `decltype`, um eine Vorlagenfunktion zu deklarieren, deren Rückgabetyp von den Typen seiner Vorlagenargumente abhängt. Oder Sie verwenden `auto` und `decltype`, um eine Vorlagenfunktion zu deklarieren, die einen Aufruf einer anderen Funktion umschließt und anschließend den Rückgabetyp der umschlossenen Funktion zurückgibt.  
+# <a name="decltype--c"></a>Decltype (C++)
+Der `decltype`-Typspezifizierer ergibt den Typ eines angegebenen Ausdrucks. Die `decltype` Typspezifizierer verwenden, zusammen mit den [auto-Schlüsselwort](../cpp/auto-cpp.md), eignet sich vor allem für Entwickler, die Vorlagenbibliotheken schreiben. Verwendung **automatisch** und `decltype` um eine Vorlagenfunktion deklarieren, deren Rückgabetyp Typ hängt von den Typen seiner Vorlagenargumente. Oder verwenden Sie **automatisch** und `decltype` um eine Vorlagenfunktion zu deklarieren, die einen Aufruf einer anderen Funktion umschließt, und klicken Sie dann den Rückgabetyp der umschlossenen Funktion zurückgibt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,21 +39,21 @@ decltype( expression )
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|`expression`|Ein Ausdruck. Weitere Informationen finden Sie unter [Ausdrücke](../cpp/expressions-cpp.md).|  
+|*Ausdruck*|Ein Ausdruck. Weitere Informationen finden Sie unter [Ausdrücke](../cpp/expressions-cpp.md).|  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der Typ des `expression`-Parameters.  
+ Der Typ des der *Ausdruck* Parameter.  
   
 ## <a name="remarks"></a>Hinweise  
  Der Typspezifizierer `decltype` wird in Visual C++ 2010 oder höher unterstützt und kann mit systemeigenem oder verwaltetem Code verwendet werden. `decltype(auto)` (C++14) wird in Visual Studio 2015 und höher unterstützt.  
   
- Der Compiler bestimmt mithilfe der folgenden Regeln den Typ des `expression`-Parameters.  
+ Der Compiler verwendet die folgenden Regeln, um zu bestimmen, welche die *Ausdruck* Parameter.  
   
--   Wenn die `expression` -Parameter ist ein Bezeichner oder ein [-Klasse Memberzugriff](../cpp/member-access-operators-dot-and.md), `decltype(expression)` ist der Typ der Entität mit dem Namen von `expression`. Wenn keine solche Entität vorhanden ist oder der `expression`-Parameter einen Satz überladener Funktionen bezeichnet, erzeugt der Compiler eine Fehlermeldung.  
+-   Wenn die *Ausdruck* Parameter ist ein Bezeichner oder ein [Klasse Memberzugriff](../cpp/member-access-operators-dot-and.md), `decltype(expression)` ist der Typ der Entität mit Namen von *Ausdruck*. Wenn keine solche Entität vorhanden ist oder die *Ausdruck* Parameternamen für einen Satz von überladenen Funktionen, erzeugt der Compiler eine Fehlermeldung angezeigt.  
   
--   Wenn die `expression` Parameter ist ein Aufruf einer Funktion oder überladenen Operatorfunktion ist, `decltype(expression)` ist der Rückgabetyp der Funktion. Klammern um einen überladenen Operator werden ignoriert.  
+-   Wenn die *Ausdruck* -Parameter ist ein Aufruf an eine Funktion oder überladenen Operatorfunktion ist, `decltype(expression)` ist der Rückgabetyp der Funktion. Klammern um einen überladenen Operator werden ignoriert.  
   
--   Wenn die `expression` Parameter ist ein [Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` ist der Typ des `expression`. Wenn die `expression` Parameter ist ein [Lvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` ist ein [Lvalue-Verweis](../cpp/lvalue-reference-declarator-amp.md) in den Typ des `expression`.  
+-   Wenn die *Ausdruck* -Parameter ist ein [Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` ist der Typ des *Ausdruck*. Wenn die *Ausdruck* -Parameter ist ein [Lvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` ist ein [Lvalue-Verweis](../cpp/lvalue-reference-declarator-amp.md) in den Typ des *Ausdruck*.  
   
  Im folgenden Codebeispiel werden einige Verwendungsmöglichkeiten des `decltype`-Typspezifizierers veranschaulicht. Angenommen, Sie haben die folgenden Anweisungen codiert.  
   
@@ -68,28 +68,28 @@ const A* a = new A();
   
 |Anweisung|Typ|Hinweise|  
 |---------------|----------|-----------|  
-|`decltype(fx());`|`const int&&`|Ein [Rvalue-Verweis](../cpp/rvalue-reference-declarator-amp-amp.md) zu einem `const int`.|  
-|`decltype(var);`|`int`|Der Typ der `var`-Variablen.|  
-|`decltype(a->x);`|`double`|Der Typ des Memberzugriffs.|  
-|`decltype((a->x));`|`const double&`|Die innere Klammer bewirkt, dass die Anweisung als Ausdruck anstatt als Memberzugriff ausgewertet wird. Und da `a` als `const`-Zeiger deklariert ist, ist der Typ ein Verweis auf `const double`.|  
+|`decltype(fx());`|`const int&&`|Ein [Rvalue-Verweis](../cpp/rvalue-reference-declarator-amp-amp.md) zu einem **const Int**.|  
+|`decltype(var);`|**int**|Der Typ der `var`-Variablen.|  
+|`decltype(a->x);`|**double**|Der Typ des Memberzugriffs.|  
+|`decltype((a->x));`|`const double&`|Die innere Klammer bewirkt, dass die Anweisung als Ausdruck anstatt als Memberzugriff ausgewertet wird. Und da `a` ist als deklariert eine `const` -Zeiger ist, der Typ ist ein Verweis auf **const Double**.|  
   
 ## <a name="decltype-and-auto"></a>"decltype" und "auto"  
  In C ++ 14 können Sie `decltype(auto)` ohne nachstehenden Rückgabetyp um eine Vorlagenfunktion zu deklarieren, deren Rückgabetyp hängt von den Typen seiner Vorlagenargumente.  
   
- In C++11 können Sie den `decltype`-Typspezifizierer für einen nachstehenden Rückgabetyp in Kombination mit dem `auto`-Schlüsselwort verwenden, um eine Vorlagenfunktion zu deklarieren, deren Rückgabetyp von den Typen der dazugehörigen Vorlagenargumente abhängt. Betrachten Sie das folgende Codebeispiel, in dem der Rückgabetyp der Vorlagenfunktion von den Typen der Vorlagenargumente abhängt. Im Codebeispiel wird die *unbekannte* Platzhalter gibt an, dass der Rückgabetyp angegeben werden kann.  
+ In C ++ 11 können Sie mithilfe der `decltype` Typspezifizierer für einen nachstehenden Rückgabetyp, zusammen mit den **automatisch** -Schlüsselwort verwenden, um eine Vorlagenfunktion zu deklarieren, deren Rückgabetyp von den Typen seiner Vorlagenargumente abhängt. Betrachten Sie das folgende Codebeispiel, in dem der Rückgabetyp der Vorlagenfunktion von den Typen der Vorlagenargumente abhängt. Im Codebeispiel das *unbekannte* Platzhalter gibt an, dass der Rückgabetyp kann nicht angegeben werden.  
   
 ```cpp  
 template<typename T, typename U>  
 UNKNOWN func(T&& t, U&& u){ return t + u; };   
 ```  
   
- Die Einführung des `decltype`-Typspezifizierers ermöglicht es den Entwicklern, den Typ des Ausdrucks zu erhalten, den die Vorlagenfunktion zurückgibt. Verwenden der *alternative funktionsdeklarationssyntax* , die später angezeigt wird, die `auto` -Schlüsselwort, und die `decltype` Typspezifizierer deklariert eine *spät angegebenen* Typ zurückgeben. Der spät angegebene Rückgabetyp wird bestimmt, wenn die Deklaration kompiliert wird, anstatt wenn sie codiert wird.  
+ Die Einführung des `decltype`-Typspezifizierers ermöglicht es den Entwicklern, den Typ des Ausdrucks zu erhalten, den die Vorlagenfunktion zurückgibt. Verwenden der *alternative funktionsdeklarationssyntax* , die später angezeigt wird, die **automatisch** -Schlüsselwort, und die `decltype` Typspezifizierer deklariert eine *spät angegebenen* der Rückgabetyp. Der spät angegebene Rückgabetyp wird bestimmt, wenn die Deklaration kompiliert wird, anstatt wenn sie codiert wird.  
   
- Der folgende Prototyp veranschaulicht die Syntax einer alternativen Funktionsdeklaration. Beachten Sie, dass die `const` und `volatile` Qualifizierer, und die `throw` [Ausnahmespezifikation](../cpp/exception-specifications-throw-cpp.md) sind optional. Die *Function_body* Platzhalter darstellt, eine verbundanweisung, der Wirkungsweise der Funktion angibt. Als empfohlene Vorgehensweise bei der Codierung der *Ausdruck* Platzhalter in der `decltype` Anweisung übereinstimmen, indem der angegebene Ausdruck der `return` -Anweisung, falls vorhanden, in der *Function_body*.  
+ Der folgende Prototyp veranschaulicht die Syntax einer alternativen Funktionsdeklaration. Beachten Sie, dass die **const** und **flüchtige** Qualifizierer und die **auslösen** [Ausnahmespezifikation](../cpp/exception-specifications-throw-cpp.md) sind optional. Die *Function_body* -Platzhalter stellt eine verbundanweisung, der angibt, Wirkungsweise der Funktion dar. Als empfohlene Vorgehensweise bei der Codierung der *Ausdruck* Platzhalter in der `decltype` Anweisung sollte die vom angegebenen Ausdruck übereinstimmen der **zurückgeben** -Anweisung, sofern vorhanden, in der *Function_body* .  
   
- **automatische** *Function_name* **(** *Parameter*<sub>opt</sub> **)**  **const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **"decltype" (** *Ausdruck* **)** **auslösen**<sub>opt</sub> **{** *Function_body* **};**  
+ **automatische** *Function_name* **(** *Parameter*<sub>opt</sub> **)**  **const**<sub>opt</sub> **flüchtige**<sub>opt</sub> **->** **"decltype" (** *Ausdruck* **)** **auslösen**<sub>opt</sub> **{** *Function_body* **};**  
   
- Im folgenden Codebeispiel wird der spät angegebene Rückgabetyp der `myFunc`-Vorlagenfunktion von den Typen der `t`- und `u`-Vorlagenargumente bestimmt. Als empfohlene Vorgehensweise bei der Codierung, verwendet das Codebeispiel auch Rvalue-Verweise und die `forward` -Funktionsvorlage, die Unterstützung von *eine perfekte Weiterleitung*. Weitere Informationen finden Sie unter [RValue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Im folgenden Codebeispiel wird der spät angegebene Rückgabetyp der `myFunc`-Vorlagenfunktion von den Typen der `t`- und `u`-Vorlagenargumente bestimmt. Als empfohlene Vorgehensweise bei der Codierung, verwendet das Codebeispiel auch Rvalue-Referenzen und `forward` -Funktionsvorlage, die Unterstützung von *eine perfekte Weiterleitung*. Weitere Informationen finden Sie unter [RValue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ```cpp  
 //C++11  
@@ -183,7 +183,7 @@ x3.Dump() = 42
 ```
   
 ## <a name="example"></a>Beispiel
-**Visual Studio 2017 und höher:** der Compiler analysiert "decltype" Argumente auf, wenn die Vorlagen deklariert, aber nicht instanziiert. Wenn eine unabhängige Spezialisierung im decltype-Argument gefunden wird, wird sie nicht zum Zeitpunkt der Instanziierung zurückgestellt werden. Sie wird sofort verarbeitet, und alle resultierenden Fehler können zu diesem Zeitpunkt untersucht werden.
+**Visual Studio 2017 und höher:** der Compiler analysiert Decltype-Argumente aus, wenn die Vorlagen deklariert, aber nicht instanziiert. Wenn eine unabhängige Spezialisierung im decltype-Argument gefunden wird, wird sie nicht zum Zeitpunkt der Instanziierung zurückgestellt werden. Sie wird sofort verarbeitet, und alle resultierenden Fehler können zu diesem Zeitpunkt untersucht werden.
 
 Das folgende Beispiel zeigt einen solchen Compilerfehler, der zum Zeitpunkt der Deklaration ausgelöst wird:
 

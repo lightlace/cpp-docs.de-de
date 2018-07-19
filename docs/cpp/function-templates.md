@@ -1,5 +1,5 @@
 ---
-title: Vorlagen funktionieren | Microsoft Docs
+title: Vorlagen funktionieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d5ed1bae5f4571cad6b942af9d6e9b4ff646ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71bb3985fe870b29d06ebc01d0b7dab4712f1797
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414539"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941066"
 ---
 # <a name="function-templates"></a>Funktionsvorlagen
 Klassenvorlagen definieren eine Gruppe von verwandten Klassen, die auf den Typargumenten basieren, die der Klasse nach der Instanziierung übergeben werden. Funktionsvorlagen sind den Klassenvorlagen ähnlich, definieren jedoch eine Funktionsreihe. Mit Funktionsvorlagen können Sie eine Gruppe von Funktionen angeben, die auf demselben Code basieren, jedoch auf unterschiedliche Typen oder Klassen reagieren. Die folgende Funktionsvorlage tauscht zwei Elemente aus:  
@@ -37,9 +37,9 @@ int main() {
 }  
 ```  
   
- Dieser Code definiert eine Gruppe von Funktionen, die die Werte der Argumente auslagern. Aus dieser Vorlage können Sie Funktionen, die Auslagern generieren **Int** und **lange** Typen und benutzerdefinierte Typen. `MySwap` tauscht sogar Klassen aus, wenn der Kopierkonstruktor und der Zuweisungsoperator der Klasse ordnungsgemäß definiert sind.  
+ Dieser Code definiert eine Gruppe von Funktionen, die die Werte der Argumente auslagern. Aus dieser Vorlage können Sie Funktionen, die Auslagern generieren **Int** und **lange** -Typen sowie benutzerdefinierte Typen. `MySwap` tauscht sogar Klassen aus, wenn der Kopierkonstruktor und der Zuweisungsoperator der Klasse ordnungsgemäß definiert sind.  
   
- Darüber hinaus wird durch die Funktionsvorlage verhindert, dass Objekte unterschiedlicher Typen ausgetauscht werden, da der Compiler die Typen der `a` und `b`-Parameter zur Kompilierungszeit nicht kennt.  
+ Darüber hinaus die Funktionsvorlage verhindert, dass Objekte unterschiedlicher Typen austauschen, da der Compiler, welche weiß die *eine* und *b* Parameter zum Zeitpunkt der Kompilierung.  
   
  Obwohl diese Aufgabe durch eine nicht auf Vorlagen basierende Funktion mithilfe von void-Zeigern ausgeführt werden kann, ist die Vorlagenversion typsicher. Betrachten Sie folgenden Aufruf:  
   
@@ -64,10 +64,10 @@ int main(int j) {
 }  
 ```  
   
- Wenn das Vorlagenargument explizit angegeben wird, werden normale implizite Konvertierungen durchgeführt, um das Funktionsargument in den Typ der entsprechenden Funktionsvorlagenparametern zu konvertieren. Im obigen Beispiel konvertiert der Compiler `char j` Eingabe `int`.  
+ Wenn das Vorlagenargument explizit angegeben wird, werden normale implizite Konvertierungen durchgeführt, um das Funktionsargument in den Typ der entsprechenden Funktionsvorlagenparametern zu konvertieren. Im obigen Beispiel konvertiert der Compiler `char j` eingeben **Int**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Vorlagen](../cpp/templates-cpp.md)   
  [Funktionsvorlageninstanziierung](../cpp/function-template-instantiation.md)   
- [Explizite Instantiierung](../cpp/explicit-instantiation.md)   
+ [Explizite Instanziierung](../cpp/explicit-instantiation.md)   
  [Explizite Spezialisierung von Funktionsvorlagen](../cpp/explicit-specialization-of-function-templates.md)

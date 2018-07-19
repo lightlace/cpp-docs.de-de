@@ -1,5 +1,5 @@
 ---
-title: Änderbare Datenmember (C++) | Microsoft Docs
+title: Änderbare Datenmember (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7dd639cbf1ef076dee6e447f317533bf12dae10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65d2fc42021a01a1260b57f9516e53c439c8e604
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943880"
 ---
 # <a name="mutable-data-members-c"></a>Änderbare Datenmember (C++)
-Dieses Schlüsselwort kann nur auf nicht statische und nicht konstante Datenmember einer Klasse angewendet werden. Wenn ein Datenmember deklariert wird `mutable`, ist es zulässig, die dieses Datenelement aus einen Wert zuweisen einer **const** Memberfunktion.  
+Dieses Schlüsselwort kann nur auf nicht statische und nicht konstante Datenmember einer Klasse angewendet werden. Wenn ein Datenmember deklariert wird **änderbare**, ist es zulässig, die dieses Datenelement aus einen Wert zuweisen einer **const** Member-Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,9 +34,9 @@ mutable member-variable-declaration;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Beispielsweise wird der folgende Code ohne Fehler kompiliert, da `m_accessCount` als `mutable` deklariert wurde und daher von `GetFlag` geändert werden kann, obwohl `GetFlag` eine const-Memberfunktion ist.  
+ Beispielsweise wird der folgende Code ohne Fehler kompiliert, da `m_accessCount` deklariert wurde, werden **änderbare**, und kann daher geändert werden, indem `GetFlag` , obwohl `GetFlag` eine const-Memberfunktion ist.  
   
-```  
+```cpp 
 // mutable.cpp  
 class X  
 {  

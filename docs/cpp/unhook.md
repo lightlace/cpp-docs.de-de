@@ -1,5 +1,5 @@
 ---
-title: __unhook | Microsoft Docs
+title: __unhook | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b95ff49c9b1f088ac38ffb0791f18f249b211e72
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 069d206418fd392e28114d977b3448f8306a3119
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943879"
 ---
 # <a name="unhook"></a>__unhook
 Trennt eine Handlermethode von einem Ereignis.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp 
   
       long  __unhook(  
    &SourceClass::EventMethod,  
@@ -50,17 +51,17 @@ long  __unhook(
  **&** *SourceClass* `::` *EventMethod*  
  Ein Zeiger auf die Ereignismethode, von der Sie die Ereignishandlermethode lösen:  
   
--   Systemeigene C++-Ereignisse: *SourceClass* ist die Ereignisquellenklasse und *EventMethod* ist das Ereignis.  
+-   Systemeigene C++-Ereignisse: *SourceClass* ist die Ereignisquellenklasse, und *EventMethod* ist das Ereignis.  
   
 -   COM-Ereignisse: *SourceClass* ist die Quellschnittstelle des Ereignisses und *EventMethod* ist einer der Methoden.  
   
--   Verwaltete Ereignisse: *SourceClass* ist die Ereignisquellenklasse und *EventMethod* ist das Ereignis.  
+-   Verwaltete Ereignisse: *SourceClass* ist die Ereignisquellenklasse, und *EventMethod* ist das Ereignis.  
   
- `interface`  
- Der Schnittstellenname aus entfernt wird `receiver`, nur für COM-Ereignisempfänger, in dem die *Layout_dependent* Parameter von der [Event_receiver](../windows/event-receiver.md) -Attribut ist **"true"**.  
+ *interface*  
+ Der Name der Schnittstelle von verknüpft wird *Empfänger*, nur für COM-Ereignisempfängern, bei denen die *Layout_dependent* Parameter der [Event_receiver](../windows/event-receiver.md) -Attribut ist **"true"**.  
   
- *Datenquelle*  
- Ein Zeiger auf eine Instanz der Ereignisquelle. Abhängig vom Code `type` im angegebenen **Event_receiver**, *Quelle* kann eines der folgenden sein:  
+ *source*  
+ Ein Zeiger auf eine Instanz der Ereignisquelle. Je nach Code `type` im angegebenen **Event_receiver**, *Quelle* kann einen der folgenden sein:  
   
 -   Ein systemeigener Ereignisquellen-Objektzeiger.  
   
@@ -69,7 +70,7 @@ long  __unhook(
 -   Ein Zeiger des verwalteten Objekts (für verwaltete Ereignisse).  
   
  **&** *ReceiverClass* `::` `HandlerMethod`  
- Ein Zeiger auf die Ereignishandlermethode, die von einem Ereignis gelöst werden soll. Der Handler wird als eine Methode einer Klasse oder als Verweis auf selbige angegeben; wenn Sie den Klassennamen nicht angeben, geht `__unhook` davon aus, dass die Klasse diejenige ist, in welcher er aufgerufen wird.  
+ Ein Zeiger auf die Ereignishandlermethode, die von einem Ereignis gelöst werden soll. Der Handler, die als eine Methode einer Klasse oder einen Verweis auf die gleiche angegeben ist. Wenn Sie nicht den Klassennamen angeben **__unhook** geht davon aus der Klasse, in dem sie aufgerufen wird.  
   
 -   Systemeigene C++-Ereignisse: *ReceiverClass* ist die Ereignisempfängerklasse und `HandlerMethod` ist der Handler.  
   
@@ -77,34 +78,34 @@ long  __unhook(
   
 -   Verwaltete Ereignisse: *ReceiverClass* ist die Ereignisempfängerklasse und `HandlerMethod` ist der Handler.  
   
- `receiver`(optional)  
- Ein Zeiger auf eine Instanz der Ereignisempfängerklasse. Wenn Sie keinen Empfänger angeben, wird standardmäßig die Empfängerklasse oder Struktur verwendet, in der `__unhook` aufgerufen wird.  
+ *Empfänger*(optional)  
+ Ein Zeiger auf eine Instanz der Ereignisempfängerklasse. Wenn Sie keinen Empfänger angeben, wird standardmäßig die Empfängerklasse oder Struktur, in der **__unhook** aufgerufen wird.  
   
 ## <a name="usage"></a>Verwendung  
  Kann in jedem Gültigkeitsbereich der Funktion verwendet werden, einschließlich Main, außerhalb der Ereignisempfängerklasse.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie die systeminterne Funktion `__unhook` in einem Ereignisempfänger, um eine Handlermethode von einer Ereignismethode zu lösen bzw. die Zuordnung aufzuheben.  
+ Die intrinsische Funktion **__unhook** in einem Ereignisempfänger, um die Zuordnung aufheben, oder "lösen" eine Handlermethode von einer Ereignismethode.  
   
- Es gibt drei Formen von `__unhook`. Sie können in den meisten Fällen das erste (four-argument) Formular verwenden. Sie können das zweite (two-argument) Formular von `__unhook` nur für einen COM-Ereignisempfänger verwenden. Dadurch wird die gesamte Ereignisschnittstelle gelöst. Sie können das dritte (one-argument) Formular verwenden, um bei allen Delegaten aus der angegebenen Quelle die Bindung zu lösen.  
+ Es gibt drei Arten von **__unhook**. Sie können in den meisten Fällen das erste (four-argument) Formular verwenden. Sie können das zweite (Two-Argument) Formular von **__unhook** nur für einen COM-Ereignisempfänger verwenden; hebt dies die gesamte-Schnittstelle. Sie können das dritte (one-argument) Formular verwenden, um bei allen Delegaten aus der angegebenen Quelle die Bindung zu lösen.  
   
  Ein Wert ungleich null gibt an, dass ein Fehler aufgetreten ist (verwaltete Ereignisse lösen eine Ausnahme aus).  
   
- Wenn Sie `__unhook` für ein Ereignis und einen Ereignishandler aufrufen, die nicht bereits verknüpft sind, hat dies keine Auswirkungen.  
+ Wenn Sie aufrufen **__unhook** für ein Ereignis und Ereignishandler, der nicht bereits verknüpft sind, hat er keine Auswirkungen.  
   
  Zur Kompilierzeit überprüft der Compiler, dass das Ereignis vorhanden ist und führt eine Parametertypüberprüfung mit dem angegebenen Handler aus.  
   
- Mit Ausnahme von COM-Ereignissen können `__hook` und `__unhook` außerhalb des Ereignisempfängers aufgerufen werden.  
+ Mit Ausnahme von COM-Ereignisse **__hook** und **__unhook** außerhalb des Ereignisempfängers aufgerufen werden kann.  
   
- Eine Alternative zur Verwendung von `__unhook` ist die Verwendung des Operators "-=".  
+ Eine Alternative zur Verwendung **__unhook** den =-Operator verwendet wird.  
   
- Informationen zu codieren verwaltete Ereignisse in der neuen Syntax finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md).  
+ Weitere Informationen über die Codierung von verwalteter Ereignissen in der neuen Syntax finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md).  
   
 > [!NOTE]
 >  Eine von einer Vorlage gebildete Klasse oder Struktur kann keine Ereignisse enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Finden Sie unter [Ereignisbehandlung in systemeigenem C++](../cpp/event-handling-in-native-cpp.md) und [Ereignisbehandlung in COM](../cpp/event-handling-in-com.md) Beispiele.  
+ Finden Sie unter [Ereignisbehandlung in systemeigenem C++](../cpp/event-handling-in-native-cpp.md) und [Ereignisbehandlung in COM](../cpp/event-handling-in-com.md) für Beispiele.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Stichwörter](../cpp/keywords-cpp.md)   

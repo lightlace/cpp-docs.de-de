@@ -1,5 +1,5 @@
 ---
-title: Geschachtelte Klassendeklarationen | Microsoft Docs
+title: Geschachtelte Klassendeklarationen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe55a1f67ff3c6ac06f1d6431e6e1a2fb8052d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943322"
 ---
 # <a name="nested-class-declarations"></a>Geschachtelte Klassendeklarationen
 Eine Klasse kann im Bereich einer anderen Klasse deklariert werden. Eine solche Klasse wird als "geschachtelte Klasse" bezeichnet. Geschachtelte Klassen gelten als innerhalb des Bereichs der einschließenden Klasse befindlich und sind für die Verwendung innerhalb dieses Bereichs verfügbar. Um auf eine geschachtelte Klasse aus einem anderen als dem unmittelbar einschließenden Bereich zu verweisen, müssen Sie einen vollqualifizierten Namen angeben.  
   
  Im folgenden Beispiel wird das Deklarieren geschachtelter Klassen veranschaulicht:  
   
-```  
+```cpp 
 // nested_class_declarations.cpp  
 class BufferedIO  
 {  
@@ -73,7 +74,7 @@ int main()
   
  Eine Ausnahme von der Bereichssichtbarkeit einer Deklaration der geschachtelten Klasse ist, wenn ein Typname zusammen mit einer Vorwärtsdeklaration deklariert ist.  In diesem Fall ist der Klassenname, der von der Vorwärtsdeklaration deklariert wird, außerhalb der einschließenden Klasse sichtbar, wobei sein Bereich als kleinster einschließender Nichtklassenbereich definiert wird.  Zum Beispiel:  
   
-```  
+```cpp 
 // nested_class_declarations_2.cpp  
 class C  
 {  
@@ -104,7 +105,7 @@ int main()
 ## <a name="member-functions-in-nested-classes"></a>Memberfunktionen in geschachtelten Klassen  
  Die Memberfunktionen, die in den geschachtelten Klassen deklariert werden, können im Dateibereich definiert werden. Das vorhergehende Beispiel könnte so aussehen:  
   
-```  
+```cpp 
 // member_functions_in_nested_classes.cpp  
 class BufferedIO  
 {  
@@ -140,26 +141,26 @@ int main()
 }  
 ```  
   
- Im vorherigen Beispiel der *qualified-Type-Name* Syntax wird verwendet, um den Namen der Funktion zu deklarieren. Die Deklaration:  
+ Im vorherigen Beispiel das *qualified-Type-Name* Syntax wird verwendet, um den Namen der Funktion zu deklarieren. Die Deklaration:  
   
-```  
+```cpp 
 BufferedIO::BufferedInput::read()  
 ```  
   
  bedeutet "die `read`-Funktion, die ein Member der `BufferedInput`-Klasse ist, die im Bereich der `BufferedIO`-Klasse liegt". Da diese Deklaration verwendet die *qualified-Type-Name* Syntax Konstrukte der folgenden Form sind möglich:  
   
-```  
+```cpp 
 typedef BufferedIO::BufferedInput BIO_INPUT;  
   
 int BIO_INPUT::read()  
 ```  
   
- Die vorhergehende Deklaration entspricht der vorherigen, aber sie verwendet einen `typedef`-Namen anstelle von Klassennamen.  
+ Die vorhergehende Deklaration entspricht dem vorherigen Beispiel, verwendet jedoch eine **Typedef** Namen anstelle von Klassennamen.  
   
 ## <a name="friend-functions-in-nested-classes"></a>Friend-Funktionen in geschachtelten Klassen  
  Die friend-Funktionen, die in einer geschachtelten Klasse deklariert werden, gelten als zum Bereich der geschachtelten Klasse zugehörig, nicht der einschließenden Klasse. Daher erhalten die friend-Funktionen keine besonderen Zugriffsrechte auf Member oder Memberfunktionen der einschließenden Klasse. Wenn Sie einen Namen verwenden möchten, der in einer geschachtelten Klasse in einer friend-Funktion deklariert ist, und diese friend-Funktion im Dateibereich definiert ist, verwenden Sie qualifizierte Typnamen wie folgt:  
   
-```  
+```cpp 
 // friend_functions_and_nested_classes.cpp  
   
 #include <string.h>  
@@ -205,7 +206,7 @@ int main()
   
  Der folgende Code zeigt die Funktion `GetExtendedErrorStatus` als friend-Funktion deklariert. In der Funktion, die im Dateibereich definiert ist, wird eine Nachricht von einem statischen Array in einen Klassenmember kopiert. Beachten Sie, dass eine bessere Implementierung von `GetExtendedErrorStatus` erfolgt, wenn dies wie folgt deklariert wird:  
   
-```  
+```cpp 
 int GetExtendedErrorStatus( char *message )  
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: __uuidof-Operator | Microsoft Docs
+title: __uuidof-Operator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70731665ca2a2eba739f139678e0f7eaface2b85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92f7e0f3652a1142c97f878784edba6229fb19cd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943514"
 ---
 # <a name="uuidof-operator"></a>__uuidof-Operator
 **Microsoft-spezifisch**  
@@ -33,29 +34,27 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      __uuidof (  
-   expression   
-)  
+__uuidof (expression)  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die *Ausdruck* einen Typnamen, Zeiger, Verweis oder Array dieses Typs ist möglich, eine Vorlage, die auf diese Typen oder eine Variable dieser Typen spezialisiert. Das Argument ist gültig, solange der Compiler es verwenden kann, um das angefügte GUID zu suchen.  
+ Die *Ausdruck* kann ein Typname, Zeiger, Verweis oder Array dieses Typs aufweisen, eine Vorlage, die auf diese Typen oder eine Variable dieser Typen spezialisiert. Das Argument ist gültig, solange der Compiler es verwenden kann, um das angefügte GUID zu suchen.  
   
- Ist ein Sonderfall dieser systeminternen Funktion, wenn entweder **0** oder **NULL** als Argument angegeben ist. In diesem Fall gibt `__uuidof` eine GUID zurück, die aus Nullen besteht.  
+ Ist ein Sonderfall dieser systeminternen Funktion, wenn entweder **0** oder NULL als Argument angegeben wird. In diesem Fall **__uuidof** gibt eine GUID, die Nullen besteht.  
   
  Verwenden Sie dieses Schlüsselwort, um die an folgende Elemente angefügte GUID zu extrahieren:  
   
--   Ein Objekt durch die [Uuid](../cpp/uuid-cpp.md) erweiterten Attribute.  
+-   Ein Objekt durch die [Uuid](../cpp/uuid-cpp.md) erweitertes Attribut.  
   
 -   Ein bibliotheksblock erstellt, mit der [Modul](../windows/module-cpp.md) Attribut.  
   
 > [!NOTE]
->  In einem Debugbuild initialisiert `__uuidof` ein Objekt immer dynamisch (zur Laufzeit). In einem Releasebuild kann `__uuidof` ein Objekt statistisch initialisieren (zur Kompilierzeit).  
+>  In einem Debugbuild **__uuidof** immer Initialisiert ein Objekt dynamisch (zur Laufzeit). In einem Releasebuild **__uuidof** können statisch (zur Kompilierzeit) initialisieren ein Objekts.  
   
 ## <a name="example"></a>Beispiel  
  Mit dem folgenden Code (kompiliert mit "ole32.lib") wird das "uuid" eines Bibliotheksblocks angezeigt, der mit dem Modulattribut erstellt wird:  
   
-```  
+```cpp 
 // expre_uuidof.cpp  
 // compile with: ole32.lib  
 #include "stdio.h"  
@@ -77,9 +76,9 @@ int main() {
 ```  
   
 ## <a name="comments"></a>Kommentare  
- In Fällen, in denen der Bibliotheksname nicht mehr im Gültigkeitsbereich, können Sie __LIBID\_ anstelle von `__uuidof`. Zum Beispiel:  
+ In Fällen, die den Namen der Bibliothek nicht mehr in deren Bereich ist, können Sie `__LIBID_` anstelle von **__uuidof**. Zum Beispiel:  
   
-```  
+```cpp 
 StringFromCLSID(__LIBID_, &lpolestr);  
 ```  
   

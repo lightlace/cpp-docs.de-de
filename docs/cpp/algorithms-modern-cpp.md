@@ -1,5 +1,5 @@
 ---
-title: Algorithmen (Modern C++) | Microsoft Docs
+title: Algorithmen (Modern C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,23 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdd5742bb86992ce20f5a52f587c8557d46a97eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7ce233b4ffa33873b752ebc409fb8570856acbff
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412295"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940198"
 ---
 # <a name="algorithms-modern-c"></a>Algorithmen (Modern C++)
 Für moderne C++-Programmierung empfehlen wir die Verwendung von der Algorithmen in der [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md). Im Folgenden sind einige wichtige Beispiele aufgeführt:  
   
--   `for_each`. Dies ist der Standarddurchlaufalgorithmus. (Auch `transform` für Not-in-Place-Semantik.)  
+-   **For_each**, dies ist der standarddurchlaufalgorithmus. (Auch **transformieren** für nicht-in-Place-Semantik.)  
   
--   `find_if`. Dies ist der Standardsuchalgorithmus.  
+-   **Find_if**, dies ist der standardsuchalgorithmus.  
   
--   `sort`, `lower_bound` und weitere Standardsortier- und -suchalgorithmen.  
+-   **Sortierung**, **Lower_bound**, und weitere sortieren und Durchsuchen von Algorithmen.  
   
- Verwenden Sie zum Schreiben eines Vergleichsoperators strict `<` und *benannte Lambdas* falls möglich.  
+ Verwenden Sie zum Schreiben eines Vergleichsoperators strict **<** und *benannte Lambdas* nach Möglichkeit.  
   
 ```cpp  
 auto comp = [](const widget& w1, const widget& w2)  
@@ -40,7 +40,7 @@ auto i = lower_bound( v.begin(), v.end(), comp );
 ```  
   
 ## <a name="loops"></a>Schleifen  
- Verwenden Sie nach Möglichkeit bereichsbasierte `for` -Schleifen oder algorithmusaufrufe oder beides statt von Hand geschriebene Schleifen.`copy`, `transform`, `count_if`, `remove_if`, usw. eignen sich wesentlich besser als von Hand geschriebene Schleifen, und da ihre Absicht offensichtlich ist und sie es einfacher machen, fehlerfreien Code zu schreiben. Viele C++-Standardbibliothek Algorithmen haben außerdem implementierungsoptimierungen, die effizienter zu gestalten.  
+ Verwenden Sie nach Möglichkeit bereichsbasierte **für** -Schleifen oder algorithmusaufrufe oder beides statt von Hand geschriebener Schleifen. **Kopie**, **transformieren**, **Count_if**, **Remove_if**, und usw. sind wesentlich besser als Hand geschriebene Schleifen, da ihre Absicht offensichtlich ist und sie erleichtern Sie, fehlerfreien Code zu schreiben. Relativ viele Algorithmen für C++-Standardbibliothek haben außerdem implementierungsoptimierungen, die sie effizienter machen.  
   
  Anstelle des alten C++ wie:  
   
@@ -67,18 +67,18 @@ auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ```  
   
 ### <a name="range-based-for-loops"></a>Bereichsbasierte For-Schleifen  
- Die bereichsbasierte `for` Schleife ist eine C ++ 11-Sprachfunktion, keine C++-Standardbibliothek-Algorithmus. Sie verdient jedoch im Rahmen dieser Diskussion über Schleifen Erwähnung. Bereichsbasierte `for`-Schleifen sind eine Erweiterung des `for`-Schlüsselworts und bieten eine komfortable und effiziente Möglichkeit, Schleifen zu schreiben, die einen Wertebereich durchlaufen. C++-Standardbibliothek Container, Zeichenfolgen und Arrays sind vordefinierte für bereichsbasierte `for` Schleifen. Um diese neue Iterationssyntax für den benutzerdefinierten Typ zu aktivieren, fügen Sie die folgende Unterstützung hinzu:  
+ Die bereichsbasierte **für** Schleife ist eine C ++ 11-Sprachfunktion, nicht auf ein C++-Standardbibliothek-Algorithmus. Sie verdient jedoch im Rahmen dieser Diskussion über Schleifen Erwähnung. Bereichsbasierte **für** -Schleifen sind eine Erweiterung von der **für** Schlüsselwort und bieten eine komfortable und effiziente Möglichkeit, Schleifen schreiben, die einen Wertebereich durchlaufen. C++-Standardbibliothek-Container, Zeichenfolgen und Arrays sind vorgefertigte für bereichsbasierte **für** Schleifen. Um diese neue Iterationssyntax für den benutzerdefinierten Typ zu aktivieren, fügen Sie die folgende Unterstützung hinzu:  
   
--   Eine `begin`-Methode, die einen Iterator zum Anfang der Struktur zurückgibt und eine `end`-Methode, die einen Iterator an das Ende der Struktur zurückgibt.  
+-   Ein **beginnen** -Methode, die einen Iterator zum Anfang der Struktur zurückgibt und ein **End** -Methode, die einen Iterator an das Ende der Struktur zurückgibt.  
   
--   Unterstützung im Iterator für diese Methoden: `operator*`, `operator!=` und `operator++` (Präfixversion).  
+-   Unterstützung im Iterator für diese Methoden: **-Operator *** **Operator! =**, und **"Operator++"** (präfixversion).  
   
  Diese Methoden können entweder Member oder eigenständige Funktionen sein.  
   
 ## <a name="random-numbers"></a>Zufallszahlen  
- Es ist bekannt, dass die alte Funktion CRT `rand()`-Funktion viele Fehler enthält, die ausführlich in der C++-Community erläutert wurden. In modernem C++, haben Sie keinen für den Umgang mit diesen Mängel – ebenso wenig müssen Sie eigene gleichmäßig verteilten Zufallszahlen-Generator auswählen – da die Tools zum schnell und einfach erstellen sie in der C++-Standardbibliothek verfügbar sind, entsprechend [ \<random >](../standard-library/random.md).  
+ Es ist kein Geheimnis, die die alte CRT **rand()** Funktion verfügt über viele Fehler enthält, die zu der C++-Community erläutert wurden. In modernem C++, die Sie für den Umgang mit diese Schwachpunkt haben keine – ebenso wenig müssen Sie Ihre eigenen gleichmäßig verteilten Zufallszahlen-Generator zu erfinden, da die Tools zum schnellen und einfachen Erstellen sie in der C++-Standardbibliothek, verfügbar sind, siehe [ \<random >](../standard-library/random.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C++-Sprachreferenz](../cpp/cpp-language-reference.md)   
+ [C++ Language Reference (C++-Programmiersprachenreferenz)](../cpp/cpp-language-reference.md)   
  [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)
