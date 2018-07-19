@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cceec4e7d954e07e1d776042f311dfa1a386300
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba90002bc16dee6def7f8de69314668204ff5466
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966616"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference-Klasse
 
@@ -38,13 +39,13 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parameter
 
-T der zu ändernde Typ.
+*T* der zu ändernde Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Die `add_rvalue_reference`-Klasse hat einen Member mit dem Namen `type`, der ein Alias für einen rvalue-Referenztyp des Vorlagenparameter `T` ist. Die Semantik der Verweisreduzierung impliziert, dass `T&&` für Nicht-Objekt- und Nicht-Funktion-`T`-Typen `T` ist. Zum Beispiel wenn `T` ist ein Lvalue-Verweistyp `add_rvalue_reference<T>::type` Lvalue-Verweistyp, nicht in einen Rvalue-Verweis ist.
+Die `add_rvalue_reference` -Klasse verfügt über ein Element mit dem Namen `type`, d.h. ein Alias für den Typ des Rvalue-Verweis auf die Template-Parameter *T*. Die Semantik der verweisreduzierung impliziert, dass für nicht-Objekt und nicht-Funktion *T*, `T&&` ist eine *T*. Zum Beispiel wenn *T* ist ein Lvalue-Verweistyp, `add_rvalue_reference<T>::type` Lvalue-Verweistyp nicht in einen Rvalue-Verweis ist.
 
-Der Einfachheit halber \<Type_traits > definiert eine Vorlage Helper `add_rvalue_reference_t`, die Aliase der `type` Mitglied `add_rvalue_reference`.
+Der Einfachheit halber \<Type_traits > eine hilfsprogrammvorlage definiert `add_rvalue_reference_t`, die Aliase der `type` Mitglied `add_rvalue_reference`.
 
 ## <a name="example"></a>Beispiel
 

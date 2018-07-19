@@ -1,5 +1,5 @@
 ---
-title: Mithilfe von ersetzbaren Parametern (ATL-Registrierung) | Microsoft Docs
+title: Verwenden von ersetzbaren Parametern (ATL-Registrierung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,41 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91deabfd14d89c4a26384a14445fc51edbb3ac94
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd07a96feae192bd2235b5621da6fe42666280bd
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849496"
 ---
-# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Mithilfe von ersetzbaren Parametern (die Registrierungsstelle&#39;Präprozessor s)
-Ersetzbare Parameter ermöglichen einer Registrierungsstelle Client zur Laufzeit Daten anzugeben. Zu diesem Zweck verwaltet die Registrierungsstelle eine Ersatz-Zuordnung in die er die Werte der ersetzbare Parameter in Ihrem Skript zugeordnet wird. Die Registrierungsstelle stellt diese Einträge zur Laufzeit.  
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Verwenden von ersetzbaren Parametern (die Registrierungsstelle&#39;s Präprozessor)
+Ersetzbare Parameter ermöglichen eine Registrierungsstelle Client Laufzeitdaten angeben. Zu diesem Zweck verwaltet die Registrierungsstelle eine Ersatz-Zuordnung, die in das die ersetzbaren Parametern in Ihrem Skript zugeordneten Werte wechselt Sie in. Die Registrierungsstelle wird diese Einträge zur Laufzeit.  
   
-##  <a name="_atl_using_.25.module.25"></a> Mithilfe von "%-Modul"  
- Die [ATL-Steuerelement-Assistent](../atl/reference/atl-control-wizard.md) generiert automatisch ein Skript, das verwendet `%MODULE%`. ATL verwendet diesen ersetzbaren Parameter für den tatsächlichen Speicherort der DLL oder EXE-Datei des Servers an.  
+##  <a name="_atl_using_.25.module.25"></a> Verwenden %-Modul  
+ Die [ATL-Steuerelement-Assistent](../atl/reference/atl-control-wizard.md) generiert automatisch ein Skript, das verwendet `%MODULE%`. ATL verwendet diesen ersetzbaren Parameter für den tatsächlichen Speicherort der DLL oder EXE-Datei Ihres Servers.  
   
 ## <a name="concatenating-run-time-data-with-script-data"></a>Verketten von Laufzeitdaten mit Skriptdaten  
- Eine weitere Verwendungsmöglichkeit der der Präprozessor ist Laufzeitdaten mit Skriptdaten verketten. Nehmen wir beispielsweise an, die ein Eintrag ist erforderlich, die einen vollständigen Pfad zu einem Modul mit der Zeichenfolge enthält "`, 1`" am Ende angefügt. Zuerst definieren Sie die Erweiterung die folgenden:  
+ Eine weitere Verwendungsmöglichkeit der Präprozessor ist zur Laufzeit Daten mit Skriptdaten verketten. Nehmen wir beispielsweise an, die ein Eintrag ist erforderlich, die einen vollständigen Pfad zu einem Modul mit der Zeichenfolge enthält "`, 1`" am Ende angefügt. Definieren Sie zuerst die folgenden Erweiterungen:  
   
 ```  
 'MySampleKey' = s '%MODULE%, 1'  
 ```  
   
- Klicken Sie dann vor dem Aufrufen einer der das Skript aufgeführten Methoden verarbeiten [Skripts aufrufen](../atl/invoking-scripts.md), Ersatz zur Zuordnung hinzufügen:  
+ Klicken Sie dann vor dem Aufrufen eines der aufgeführten Methoden für die skriptverarbeitung [Aufrufen von Skripts](../atl/invoking-scripts.md), Ersatz der Zuordnung hinzuzufügen:  
   
  [!code-cpp[NVC_ATL_Utilities#113](../atl/codesnippet/cpp/using-replaceable-parameters-the-registrar-s-preprocessor_1.cpp)]  
   
- Beim Analysieren des Skripts, die Registrierungsstelle erweitert `'%MODULE%, 1'` auf `c:\mycode\mydll.dll, 1`.  
+ Während der Analyse des Skripts, die Registrierungsstelle erweitert `'%MODULE%, 1'` zu `c:\mycode\mydll.dll, 1`.  
   
 > [!NOTE]
->  In einem Skript Registrierungsstelle beträgt 4 KB maximale Tokengröße. (Ein Token ist jedes erkennbare Element in der Syntax.) Dies schließt ein Token, die erstellt oder vom Präprozessor erweitert wurden.  
+>  In einem Skript Registrierungsstelle beträgt 4 KB für die maximale Größe des Tokens. (Ein Token ist erkennbare Element in der Syntax.) Dies schließt die Token, die erstellt oder vom Präprozessor erweitert wurden.  
   
 > [!NOTE]
->  Um Ersatzwerte zur Laufzeit ersetzen möchten, entfernen Sie den Aufruf in das Skript, um die [DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) oder [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) Makro. Ersetzen Sie es stattdessen mit Ihren eigenen `UpdateRegistry` -Methode, die Aufrufe [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) oder [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources), und übergeben Sie das Array von **_ATL_REGMAP_ENTRY** Strukturen. Das Array von **_ATL_REGMAP_ENTRY** benötigen Sie mindestens einen Eintrag, der festgelegt wird, um {**NULL**,**NULL**}, und diesen Eintrag sollte immer der letzte Eintrag sein. Andernfalls kann auf einem Zugriffsverletzungsfehler werden generiert, wenn **UpdateRegistryFromResource** aufgerufen wird.  
+>  Um Ersatzwerte zur Laufzeit zu ersetzen, entfernen Sie den Aufruf in das Skript die [DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) oder [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) Makro. Ersetzen Sie ihn stattdessen durch Ihre eigenen `UpdateRegistry` -Methode, die Aufrufe [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) oder [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources), und übergeben Sie Ihr Array mit _ATL_REGMAP_ Eintrag-Strukturen. Das Array von _ATL_REGMAP_ENTRY müssen mindestens einen Eintrag, der auf {NULL, NULL} festgelegt ist, und diesen Eintrag sollte immer der letzte Eintrag sein. Andernfalls kann ein Zugriffsverletzungsfehler werden generiert, wenn `UpdateRegistryFromResource` aufgerufen wird.  
   
 > [!NOTE]
->  Beim Erstellen eines Projekts, die eine ausführbare Datei ausgibt, fügt ATL automatisch Anführungszeichen um den Pfadnamen erstellt zur Laufzeit mit der **-Modul %** Registrierungsstelle Skriptparameter. Wenn Sie nicht den Pfadnamen an, die Anführungszeichen ebenfalls angeben möchten, verwenden Sie die neue **%MODULE_RAW%** Parameter stattdessen.  
+>  Beim Erstellen eines Projekts, der eine ausführbare Datei ausgibt, fügt ATL automatisch Anführungszeichen um den Pfadnamen erstellt zur Laufzeit mit der **Modul %** Registrierungsstelle Script-Parameter. Wenn Sie nicht über den Pfadnamen an, die Anführungszeichen ebenfalls angeben möchten, verwenden Sie die neue **%MODULE_RAW%** Parameter stattdessen.  
 >   
->  Wenn ein Projekt erstellen, eine DLL ausgibt, ATL wird nicht hinzufügen, Anführungszeichen der Pfadname Wenn **-Modul %** oder **%MODULE_RAW%** verwendet wird.  
+>  Beim Erstellen eines Projekts, das eine DLL-Datei ausgibt, ATL wird nicht hinzufügen, Anführungszeichen im Pfadnamen Wenn **Modul %** oder **%MODULE_RAW%** verwendet wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Registrierungsskripts](../atl/creating-registrar-scripts.md)

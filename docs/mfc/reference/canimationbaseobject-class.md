@@ -60,11 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9f7a66b60d70231628ded5dc096bad702bf088
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 135bb279daf4c000c025ac6f8fa51a6b023e2d1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952543"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject-Klasse
 Die Basisklasse für alle Animationsobjekte.  
@@ -148,10 +149,10 @@ virtual BOOL ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pStoryboard`  
+ *pStoryboard*  
  Ein Zeiger auf ein Storyboard.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  Mit "false" fügt diese Methode nur die Übergänge, die nicht von Keyframes abhängen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -174,13 +175,13 @@ CAnimationBaseObject(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nGroupID`  
+ *nGroupID*  
  Gibt Gruppen-ID.  
   
- `nObjectID`  
+ *nObjectID*  
  Gibt die Objekt-ID.  
   
- `dwUserData`  
+ *dwUserData*  
  Benutzerdefinierte Daten, die Animationsobjekt zugeordnet und später zur Laufzeit abgerufen werden können.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -194,7 +195,7 @@ virtual void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bAutodestroy`  
+ *bAutodestroy*  
  Gibt an, ob automatisch, Objekte zu zerstören oder entfernen Sie diese einfach aus der verknüpften Liste.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -208,7 +209,7 @@ virtual BOOL ContainsVariable(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pVariable`  
+ *pVariable*  
  Ein Zeiger auf Animationsvariablen.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -250,10 +251,10 @@ virtual void EnableIntegerValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pController`  
+ *pController*  
  Ein Zeiger auf einen übergeordneten Controller.  
   
- `bEnable`  
+ *bAktivieren*  
  Gibt an, ob aktivieren oder Deaktivieren der ganzzahlige Wert ausgelöstes Ereignis.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -269,10 +270,10 @@ virtual void EnableValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pController`  
+ *pController*  
  Ein Zeiger auf einen übergeordneten Controller.  
   
- `bEnable`  
+ *bAktivieren*  
  Gibt an, ob aktivieren oder Deaktivieren von Ereignis Wert geändert werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -288,7 +289,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lst`  
+ *lst*  
  Eine Liste, die mit in einem Animationsobjekt enthaltenen Animationsvariablen gefüllt werden muss.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -389,7 +390,7 @@ void SetAutodestroyTransitions(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bValue`  
+ *bValue*  
  Gibt an, die automatische zerstören Flag.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -405,10 +406,10 @@ void SetID(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nObjectID`  
+ *nObjectID*  
  Gibt das neue Objekt-ID an  
   
- `nGroupID`  
+ *nGroupID*  
  Gibt die neuen Gruppen-ID.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -432,7 +433,7 @@ void SetUserData (DWORD dwUserData);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwUserData`  
+ *dwUserData*  
  Gibt die benutzerdefinierten Daten.  
   
 ### <a name="remarks"></a>Hinweise  

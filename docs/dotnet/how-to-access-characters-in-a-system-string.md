@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129748"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Gewusst wie: Zugriff auf Zeichen in einem System::String
 Sie erreichen die Zeichen einer <xref:System.String> Objekt für hohe Leistung Aufrufe nicht verwalteten Funktionen, `wchar_t*` Zeichenfolgen. Die Methode wird ein innerer Zeiger auf das erste Zeichen von der <xref:System.String> Objekt. This-Zeiger kann direkt bearbeitet oder fixiert und übergeben werden an eine Funktion erwartet eine gewöhnliche `wchar_t` Zeichenfolge.  

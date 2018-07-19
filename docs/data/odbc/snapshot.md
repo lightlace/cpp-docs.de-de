@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094763"
 ---
 # <a name="snapshot"></a>Momentaufnahme
 Eine Momentaufnahme ist ein Recordset, eine statische Ansicht der Daten enthält, wie sie zu dem Zeitpunkt vorhanden waren, die die Momentaufnahme erstellt wurde. Beim Öffnen der Momentaufnahme und verschieben Sie alle Datensätze, der Satz von Datensätzen, die es enthält, und ändern Sie deren Werte nicht, bis Sie die Momentaufnahme durch Aufrufen von neu erstellen **Requery**.  

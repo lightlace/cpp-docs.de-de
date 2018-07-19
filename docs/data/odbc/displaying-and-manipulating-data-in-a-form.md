@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089365"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>Anzeigen und Verändern von Daten in einem Formular
 Viele formularbasierten datenzugriffsanwendungen Daten auswählen und in den Feldern in einem Formular angezeigt wird. Die Datenbankklasse [CRecordView](../../mfc/reference/crecordview-class.md) bietet Ihnen eine [CFormView](../../mfc/reference/cformview-class.md) Objekt direkt mit einem Recordset-Objekt verbunden. Verwendet die Datensatzansicht [Dialogdatenaustausch (DDX)](../../mfc/dialog-data-exchange-and-validation.md) so verschieben Sie die Werte der Felder des aktuellen Datensatzes vom Recordset für die Steuerelemente im Formular und aktualisierte Informationen wieder auf das Recordset zu verschieben. Das Recordset verwendet wiederum Datensatzfeldaustausch (RFX) zum Verschieben von Daten zwischen der Felddatenmember und den entsprechenden Spalten in einer Tabelle in der Datenquelle.  

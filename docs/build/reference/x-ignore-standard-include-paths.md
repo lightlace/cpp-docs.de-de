@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376467"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (Standardincludepfade ignorieren)
 Verhindert, dass den Compiler nach Includedateien in in der PATH und INCLUDE-Umgebungsvariablen angegebenen Verzeichnisse durchsucht.  

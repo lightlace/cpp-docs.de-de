@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372808"
 ---
 # <a name="order-of-cl-options"></a>Reihenfolge von CL-Optionen
 Optionen können an einer beliebigen Stelle in der CL-Befehlszeile, mit Ausnahme der Option/Link angezeigt, die zuletzt auftreten muss. Der Compiler beginnt mit den Optionen, die im angegebenen der [CL-Umgebungsvariablen](../../build/reference/cl-environment-variables.md) und liest dann die Befehlszeile von links nach rechts – Befehlsdateien in der Reihenfolge, die er erkennt diese verarbeiten. Jede Option gilt für alle Dateien in der Befehlszeile angegeben. Wenn CL in Konflikt stehenden Optionen auftritt, wird die äußersten rechten-Option verwendet.  

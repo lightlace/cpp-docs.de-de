@@ -1,5 +1,5 @@
 ---
-title: Container (Modern C++) | Microsoft Docs
+title: Container (Modern C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 1/18/2018
 ms.technology:
@@ -11,15 +11,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49a77234b679fd61d801bb78d751891467d6b4e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2eb9419562382d3494e64dd7fb0472882fe73c13
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939038"
 ---
 # <a name="containers-modern-c"></a>Container (Modern C++)
 
-Standardmäßig verwenden [Vektor](../standard-library/vector-class.md) als der bevorzugte sequenziellen Container in C++. Dies entspricht dem `List<T>` in .NET-Sprachen.
+Standardmäßig verwenden [Vektor](../standard-library/vector-class.md) als bevorzugte sequenziellen Container in C++. Dies entspricht dem `List<T>` in .NET-Sprachen.
 
 ```cpp
 vector<string> apples;
@@ -36,15 +37,15 @@ apple_color["Granny Smith"] = "Green";
 
 Wenn eine Leistungsoptimierung erforderlich ist, erwägen Sie folgende Verwendungen:
 
-- Die [Array](../standard-library/array-class-stl.md) eingeben, wenn das Einbetten wichtig ist, z. B. einen Klassenmember ist.
+- Die [Array](../standard-library/array-class-stl.md) eingeben, wenn das Einbetten wichtig ist, z. B. ein Klassenmember ist.
 
-- Ungeordnete assoziative Container wie z. B. ["unordered_map"](../standard-library/unordered-map-class.md). Diese weisen Mehraufwand pro Element niedriger und Konstante zeitsuche, aber sie können schwieriger zu ordnungsgemäß und effizient zu verwenden.
+- Ungeordnete assoziative Container wie z. B. ["unordered_map"](../standard-library/unordered-map-class.md). Diese weisen Mehraufwand pro Element niedriger und Konstante zeitsuche, aber sie können schwieriger, korrekt und effizient zu verwenden.
 
-- Sortiert **Vektor**. Weitere Informationen finden Sie unter [Algorithmen](../cpp/algorithms-modern-cpp.md).
+- Sortiert `vector`. Weitere Informationen finden Sie unter [Algorithmen](../cpp/algorithms-modern-cpp.md).
 
-Verwenden Sie keine Arrays im C-Stil. Verwenden Sie für ältere APIs, die Zugriff auf die Daten weiterleiten müssen, z. B. Methoden des Eigenschaftenaccessors `f(vec.data(), vec.size());` stattdessen.
+Verwenden Sie keine Arrays im C-Stil. Für ältere APIs, die Zugriff auf die Daten weiterleiten müssen Accessormethoden verwenden, z. B. `f(vec.data(), vec.size());` stattdessen.
 
-Weitere Informationen zu Containern finden Sie unter [Standard C++-Bibliothek-Container](../standard-library/stl-containers.md).
+Weitere Informationen zu Containern finden Sie unter [C++-Standardbibliothekcontainer](../standard-library/stl-containers.md).
 
 ## <a name="see-also"></a>Siehe auch
 

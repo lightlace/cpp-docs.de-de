@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379899"
 ---
 # <a name="reusing-inline-files"></a>Wiederverwenden von Inlinedateien
 Angeben eine Inlinedatei zum Wiederverwenden <<*Filename* die Datei definiert und zuerst verwendet wird, wiederverwenden *Filename* ohne << weiter unten in der gleichen oder einem anderen Befehl. Der Befehl zum Erstellen der Inlinedatei muss vor allen anderen Befehlen ausgeführt, die die Datei zu verwenden.  

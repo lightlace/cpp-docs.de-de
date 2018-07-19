@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388668"
 ---
 # <a name="c-identifiers"></a>C-Bezeichner
 "Bezeichner" oder "Symbole" sind die Namen, die Sie für Variablen, Typen, Funktionen und Beschriftungen im Programm angeben. Bezeichnernamen müssen sich bezüglich der Schreibweise und der Groß-/Kleinschreibung von allen Schlüsselwörtern unterscheiden. Sie können Schlüsselwörter (entweder C oder Microsoft) nicht als Bezeichner verwenden. Sie sind zur besonderen Verwendung reserviert. Sie erstellen einen Bezeichner, indem Sie ihn in der Deklaration einer Variablen, eines Typs oder einer Funktion festlegen. In diesem Beispiel ist `result` ein Bezeichner für eine ganzzahlige Variable. `main` und `printf` sind Bezeichnernamen für Funktionen.  

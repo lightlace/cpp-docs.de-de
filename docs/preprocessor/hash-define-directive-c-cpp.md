@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846154"
 ---
 # <a name="define-directive-cc"></a>#define-Anweisung (C/C++)
 Die `#define` erstellt eine *Makro*, dies ist die Zuordnung eines Bezeichners oder parametrisierten Bezeichners zu einer tokenzeichenkette darstellt. Nachdem das Makro definiert wurde, kann der Compiler die Tokenzeichenkette für jedes Vorkommen des Bezeichners in der Quelldatei ersetzen.  

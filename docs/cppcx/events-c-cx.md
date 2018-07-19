@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089637"
 ---
 # <a name="events-ccx"></a>Ereignisse (C++/CX)
 Ein Windows-Runtime Typ deklarieren, kann (die veröffentlichen, hat) Ereignisse, und Clientcode in der gleichen Komponente oder in anderen Komponenten kann diese Ereignisse abonnieren, indem Sie die Zuordnung von Methoden, die aufgerufen *Ereignishandler* mit dem Ereignis. Mehrere Ereignishandler können einem einzelnen Ereignis zugeordnet werden. Wenn das Veröffentlichungsobjekt das Ereignis auslöst, werden alle Ereignishandler aufgerufen. Auf diese Weise kann eine abonnierende Klasse eine beliebige geeignete benutzerdefinierte Aktion durchführen, wenn der Herausgeber das Ereignis auslöst. Ein Ereignis hat einen Delegattyp, der die Signatur angibt, die alle Ereignishandler verwenden, um das Ereignis zu abonnieren.  

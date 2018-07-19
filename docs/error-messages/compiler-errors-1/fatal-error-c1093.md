@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226343"
 ---
 # <a name="fatal-error-c1093"></a>Schwerwiegender Fehler C1093
 API-Aufruf "Funktionsname" Fehler 'Speicherort des Aufrufs': 'Text aus der Run-Time'  

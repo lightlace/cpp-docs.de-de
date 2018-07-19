@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873510"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Erstellen und Festlegen von Führungslinien und Rändern
 Ob Sie Steuerelemente verschieben, Hinzufügen von Steuerelementen oder das aktuelle Layout neu anordnen, Anleitungen helfen ausrichten Sie Steuerelemente in einem Dialogfeld genau. Führungslinien, die über das Dialogfeld angezeigt, die im Editor, und entsprechende Pfeile in der Lineale (oben und entlang der linken Seite des Dialog-Editor) als blaue gepunktete Linien angezeigt werden.  

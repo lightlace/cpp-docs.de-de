@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087063"
 ---
 # <a name="platformdetailsheapentryhandler-delegate"></a>Platform::Details::HeapEntryHandler-Delegat
 Dieser Delegat ist nur für den internen Gebrauch vorgesehen und nicht zur Verwendung bei der Entwicklung bestimmt.  

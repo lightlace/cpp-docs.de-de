@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873588"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Gewusst wie: Anheften von Zeigern und Arrays
 Anheften eines untergeordneten Objekts in ein verwaltetes Objekt definierten wirkt sich das anheften des gesamten Objekts aus.  Wenn jedes Element eines Arrays fixiert ist, wird der gesamte Array einen auch angeheftet. Es sind keine Erweiterungen der Programmiersprache für das Deklarieren eines angehefteten Arrays. Um ein Array anzuheften, deklarieren Sie einen festen Zeiger auf ihre Elementtyp, und die Pin eines seiner Elemente.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198845"
 ---
 # <a name="fatal-error-c1353"></a>Schwerwiegender Fehler C1353
 Fehler beim Metadatenvorgang: Die Laufzeit ist nicht installiert, oder die Versionen stimmt nicht überein.  

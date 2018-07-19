@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351965"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menüs und Ressourcen: Menüs schachteln
 In diesem Artikel erläutert die erforderlichen Schritte für OLE-dokumentanwendungen zu behandeln, die visuelle Bearbeitung und direkte Aktivierung ordnungsgemäß. Direkte Aktivierung stellt eine Herausforderung für Container und Server-Anwendungen (Komponente). Der Benutzer in der gleichen Rahmenfenster (im Kontext des Containerdokuments) bleibt jedoch tatsächlich einer anderen Anwendung (Server) ausgeführt wird. Dies erfordert die Koordination zwischen dem Container und Server-Anwendung.  

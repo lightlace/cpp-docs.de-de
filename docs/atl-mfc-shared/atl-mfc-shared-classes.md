@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357199"
 ---
 # <a name="atlmfc-shared-classes"></a>Freigegebene ATL-/MFC-Klassen
 Diese Hilfsklassen können ohne MFC-DLL in systemeigenem C++-Projekte verwendet werden.  

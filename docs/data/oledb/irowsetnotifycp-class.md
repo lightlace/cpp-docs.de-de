@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109234"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP-Klasse
 Die Anbieter-Website für die Verbindungspunkt-Schnittstelle implementiert [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx).  

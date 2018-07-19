@@ -1,5 +1,5 @@
 ---
-title: Trennzeichen für Visual C++-Dokumentationstags | Microsoft Docs
+title: Trennzeichen für Visual C++-Dokumentationstags | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33337573"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Trennzeichen für Visual C++-Dokumentationstags
-Die Verwendung von Dokumentationstags erfordert Trennzeichen, das für den Compiler angibt, in dem kein Dokumentationskommentar beginnt und endet.  
+Die Verwendung von Dokumentationstags erfordert Trennzeichen, die dem Compiler angeben, wo ein Dokumentationskommentar beginnt und endet.  
   
  Sie können die folgenden Arten von Trennzeichen mit den XML-Dokumentationstags verwenden:  
   
  `///`  
- Dies ist das Formular, das im Dokumentation verwendeten Beispiele und von der Visual C++-Projektvorlagen verwendet wird.  
+ Dies ist die Form, die in den Dokumentationsbeispielen und von den Visual C++-Projektvorlagen verwendet wird.  
   
  `/** */`  
- Hierbei handelt es sich um mehrzeilige Trennzeichen.  
+ Dies sind mehrzeilige Trennzeichen.  
   
- Es gibt einige Formatierungsregeln bei Verwendung der `/** */` Trennzeichen:  
+ Für die Verwendung von `/** */`-Trennzeichen gibt es einige Formatierungsregeln:  
   
--   Für die Zeile, enthält die `/**` Trennzeichen, wenn der Rest der Zeile Leerzeichen, die Zeile ist nicht für Kommentare verarbeitet wird. Wenn das erste Zeichen ist als Leerzeichen, die Leerzeichen ignoriert und der Rest der Zeile verarbeitet. Andernfalls wird de gesamte Text der Zeile nach dem `/**`-Trennzeichen als Teil des Kommentars verarbeitet.  
+-   Wenn der Rest der Zeile, die das `/**`-Trennzeichen enthält, Leerraum ist, wird die Zeile nicht für Kommentare verarbeitet. Wenn das erste Zeichen ein Leerzeichen ist, wird dieses Leerzeichen ignoriert und der Rest der Zeile verarbeitet. Andernfalls wird de gesamte Text der Zeile nach dem `/**`-Trennzeichen als Teil des Kommentars verarbeitet.  
   
--   Für die Zeile, enthält die `*/` Trennzeichen, wenn es bis zu nur aus Leerzeichen besteht die `*/` Trennzeichen, Zeile wird ignoriert. Andernfalls wird der Text in der Zeile bis zum `*/`-Trennzeichen als Teil des Kommentars verarbeitet, gemäß den Mustervergleichsregeln, die im folgenden Aufzählungszeichen beschriebenen werden.  
+-   Wenn die Zeile mit dem `*/`-Trennzeichen bis zum `*/`-Trennzeichen nur Leerzeichen enthält, wird die Zeile ignoriert. Andernfalls wird der Text in der Zeile bis zum `*/`-Trennzeichen als Teil des Kommentars verarbeitet, gemäß den Mustervergleichsregeln, die im folgenden Aufzählungszeichen beschriebenen werden.  
   
--   Für die Zeilen im Anschluss an das Projekt, das mit beginnt die `/**` Trennzeichen, sucht der Compiler für ein allgemeines Muster am Anfang jeder Zeile, der optional Leerraum und ein Sternchen besteht (`*`), gefolgt von weitere optionale Leerzeichen. Wenn der Compiler einen gemeinsamen Satz von Zeichen am Anfang jeder Zeile findet, ignorieren Sie dieses Muster für alle Zeilen im Anschluss an die `/**` Trennzeichen, bis zur und ggf. einschließlich der Zeile mit der `*/` Trennzeichen.  
+-   Bei Zeilen nach der Zeile mit dem `/**`-Trennzeichen sucht der Compiler zu Beginn jeder Zeile nach einem gemeinsamen Muster, das aus optionalen Leerzeichen und einem Sternchen (`*`) gefolgt von weiteren optionalen Leerzeichen besteht. Wenn der Compiler mehrere übereinstimmende Zeichen am Anfang jeder Zeile findet, wird das Muster für alle Zeilen nach dem `/**`-Trennzeichen ignoriert, bis zu und ggf. einschließlich der Zeile, die das `*/`-Trennzeichen enthält.  
   
  Einige Beispiele:  
   
--   Der einzige Teil des folgenden Kommentars, der verarbeitet wird, ist die Zeile, die mit `<summary>` beginnt. Die folgenden beiden RFID-Formate liefert die gleichen Kommentare:  
+-   Der einzige Teil des folgenden Kommentars, der verarbeitet wird, ist die Zeile, die mit `<summary>` beginnt. Die folgenden zwei Tagformate erzeugen die gleichen Kommentare:  
   
     ```  
     /**  
@@ -50,7 +51,7 @@ Die Verwendung von Dokumentationstags erfordert Trennzeichen, das für den Compi
     /** <summary>text</summary> */  
     ```  
   
--   Der Compiler wendet das Muster "*", um am Anfang der zweiten und dritten Zeile zu ignorieren.  
+-   Der Compiler wendet ein Muster von „*“ an, um den Anfang der zweiten und dritten Zeile zu ignorieren.  
   
     ```  
     /**  
@@ -58,7 +59,7 @@ Die Verwendung von Dokumentationstags erfordert Trennzeichen, das für den Compi
      *  text </summary>*/  
     ```  
   
--   Der Compiler findet kein Muster in diesem Kommentar, da kein Sternchen auf der zweiten Zeile vorhanden ist. Aus diesem Grund alle Text auf der zweiten und dritten Zeile bis zum der `*/`, verarbeitet werden als Teil des Kommentars.  
+-   Der Compiler findet in diesem Kommentar kein Muster, da sich in der zweiten Zeile kein Sternchen befindet. Daher wird der gesamte Text in der zweiten und dritten Zeile bis zum `*/` als Teil des Kommentars verarbeitet.  
   
     ```  
     /**  
@@ -66,7 +67,7 @@ Die Verwendung von Dokumentationstags erfordert Trennzeichen, das für den Compi
        text </summary>*/  
     ```  
   
--   Der Compiler findet kein Muster in diesem Kommentar für gibt es zwei Gründe. Erstens sind keine Linie, die mit einer festen Anzahl von Leerzeichen vor dem Sternchen beginnt. Zweitens beginnt die fünfte Zeile mit einem Tab, der mit Leerzeichen nicht übereinstimmt. Aus diesem Grund alle Text aus der zweiten Zeile bis der `*/` verarbeitet werden als Teil des Kommentars.  
+-   Der Compiler findet aus zwei Gründen kein Muster in diesem Kommentar. Erstens gibt es keine Zeile, die mit einer konsistenten Anzahl von Leerzeichen vor dem Sternchen beginnt. Zweitens beginnt die fünfte Zeile mit einem Tab, der mit Leerzeichen nicht übereinstimmt. Daher wird der gesamte Text ab der zweiten Zeile bis zum `*/` als Teil des Kommentar verarbeitet.  
   
     ```  
     /**  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340883"
 ---
 # <a name="an-example-of-the-comments"></a>Ein Beispiel für die Kommentare
 Die folgende partielle Liste der Klasse `CChildFrame` verwendet die standard-Kommentare, die MFC in seinen Klassen verwendet, um Klassenmember durch die Möglichkeiten zu unterteilen, sie verwendet werden, die meisten:  

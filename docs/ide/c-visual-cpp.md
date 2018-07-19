@@ -1,5 +1,5 @@
 ---
-title: '&lt;c&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;c&gt; (Visual C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,13 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f17d56601f49056144433155e0d898f56c42bdab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33329257"
 ---
 # <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
-Die \<c >-Tag gibt an, dass Text in einer Beschreibung als Code markiert werden soll. Zum Angeben mehrerer Zeilen als Code wird [\<code>](../ide/code-visual-cpp.md) verwendet.  
+Das Tag \<c> gibt an, dass der Text in einer Beschreibung als Code gekennzeichnet werden soll. Zum Angeben mehrerer Zeilen als Code wird [\<code>](../ide/code-visual-cpp.md) verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +35,7 @@ Die \<c >-Tag gibt an, dass Text in einer Beschreibung als Code markiert werden 
   
 #### <a name="parameters"></a>Parameter  
  `text`  
- Der Text, den Sie als Code angeben möchten.  
+ Der Text, der als Code angeben werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  

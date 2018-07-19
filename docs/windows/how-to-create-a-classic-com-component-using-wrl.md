@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880084"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Gewusst wie: Erstellen einer klassischen COM-Komponente mit WRL
 Sie können Windows Runtime C++ Template Library (WRL) verwenden, um grundlegende klassische COM-Komponenten für die Verwendung in desktop-apps, zusätzlich zur Verwendung für apps der universellen Windows-Plattform (UWP) zu erstellen. Für die Erstellung von COM-Komponenten möglicherweise die Windows Runtime C++ Template Library weniger Code als das ATL. Weitere Informationen über die Teilmenge von COM, die die Windows Runtime C++ Template Library unterstützt, finden Sie unter [Windows Runtime C++ Template Library (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  

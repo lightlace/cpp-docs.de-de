@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421259"
 ---
 # <a name="virtual-specifier"></a>virtual-Spezifizierer
 Die [virtuellen](../cpp/virtual-cpp.md) Schlüsselwort kann nur auf nicht statische Memberfunktionen angewendet werden. Es gibt an, dass die Bindung von Aufrufen der Funktion bis zur Laufzeit verzögert wird. Weitere Informationen finden Sie unter [virtuelle Funktionen](../cpp/virtual-functions.md).  

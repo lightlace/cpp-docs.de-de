@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138439"
 ---
 # <a name="how-to-migrate-to-clr"></a>Gewusst wie: Migrieren zu /clr
 Dieses Thema behandelt Probleme, die beim Kompilieren von systemeigenem Code mit auftreten **"/ CLR"** (siehe [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md) für Weitere Informationen). **"/ CLR"** Visual C++-Module aufgerufen und gleichzeitig die Kompatibilität mit nicht verwalteten Modulen beibehalten von .NET-Assemblys aus aufgerufen werden können. Finden Sie unter [gemischte (systemeigene und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md) und [einheitlichen als auch .NET Interoperabilität](../dotnet/native-and-dotnet-interoperability.md) Weitere Informationen zu den Vorteilen der Kompilierung mit **"/ CLR"**.  

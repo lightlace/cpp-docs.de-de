@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd8b757ab46d462bd5d6a596f7dbbfdd18061a8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5666aca2d6a855b64af26d38a1ae834fecec5d6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958464"
 ---
 # <a name="isassignable-class"></a>is_assignable-Klasse
 
@@ -37,11 +38,11 @@ struct is_assignable;
 
 In den Typ des Objekts, das die Zuweisung empfängt.
 
-Vom Typ des Objekts, das den Wert bereitstellt.
+Aus dem Typ des Objekts, das den Wert bereitstellt.
 
 ## <a name="remarks"></a>Hinweise
 
-Der ausgewertete Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein. Beide `From` und `To` müssen vollständige Typen `void` sein, oder Arrays mit unbekannter Grenze.
+Der ausgewertete Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein. Beide `From` und `To` müssen vollständige Typen werden **"void"**, oder Arrays mit Unbekannter Grenze.
 
 ## <a name="requirements"></a>Anforderungen
 

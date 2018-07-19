@@ -29,14 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2385efcef9949eab60b1542b2039e3ff2ac80e38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930858"
 ---
 # <a name="dialog-data-exchange"></a>Dialogdatenaustausch
-Wenn Sie den DDX-Mechanismus verwenden, Sie legen die Anfangswerte fest des Dialogs objektspezifischen Membervariablen in der Regel in Ihre `OnInitDialog` Ereignishandler oder der Dialogfeldkonstruktor. Sofort das Framework DDX-Mechanismus, bevor das Dialogfeld angezeigt wird, die Werte der Membervariablen an die Steuerelemente im Dialogfeld übertragen, wo sie angezeigt werden, wenn das Dialogfeld angezeigt wird als Antwort auf `DoModal` oder **erstellen** . Die standardmäßige Implementierung des `OnInitDialog` in `CDialog` Aufrufe der `UpdateData` Memberfunktion der Klasse `CWnd` , die Steuerelemente im Dialogfeld zu initialisieren.  
+Wenn Sie den DDX-Mechanismus verwenden, Sie legen die Anfangswerte fest des Dialogs objektspezifischen Membervariablen in der Regel in Ihre `OnInitDialog` Ereignishandler oder der Dialogfeldkonstruktor. Sofort das Framework DDX-Mechanismus, bevor das Dialogfeld angezeigt wird, die Werte der Membervariablen an die Steuerelemente im Dialogfeld übertragen, wo sie angezeigt werden, wenn das Dialogfeld angezeigt wird als Antwort auf `DoModal` oder `Create`. Die standardmäßige Implementierung des `OnInitDialog` in `CDialog` Aufrufe der `UpdateData` Memberfunktion der Klasse `CWnd` , die Steuerelemente im Dialogfeld zu initialisieren.  
   
  Derselbe Mechanismus überträgt Werte aus den Steuerelementen an die Membervariablen klickt der Benutzer die Schaltfläche "OK" (oder bei jedem Aufruf der `UpdateData` Memberfunktion mit dem Argument **"true"**). Das Dialogfeld Daten Validierungsmechanismus überprüft alle Datenelemente, die für die Sie Validierungsregeln angegeben.  
   

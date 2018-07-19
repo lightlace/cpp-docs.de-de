@@ -21,11 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe02890ce8d8dcde099f4b91b23c770b2e36c96d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956865"
 ---
 # <a name="duration-class"></a>duration-Klasse
 
@@ -119,25 +120,25 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-`Rep2` Ein arithmetischer Typ zum Darstellen der Anzahl von Ticks ist.
+*Rep2* ein arithmetischer Typ, der die Anzahl von Zeiteinheiten darstellt.
 
-`Period2` Ein `std::ratio` Spezialisierung einer Klassenvorlage zum Darstellen der teilstrichperiode in Einheiten von Sekunden.
+*Period2* ein `std::ratio` der vorlagenspezialisierung zum Darstellen der teilstrichperiode in Einheiten von Sekunden.
 
-`R` Die Anzahl der Ticks der Standardzeitraum.
+*R* die Anzahl der Zeiteinheiten der Standardperiode.
 
-`Dur` Die Anzahl der Ticks, der vom festgelegten Zeitraum `Period2`.
+*Dur* die Anzahl von Zeiteinheiten des Zeitraums, der von *Period2*.
 
 ### <a name="remarks"></a>Hinweise
 
 Vom Standardkonstruktor wird ein nicht initialisiertes Objekt erstellt. Durch die Wertinitialisierung mithilfe von leeren Klammern wird ein Objekt initialisiert, das ein Zeitintervall mit null Zeiteinheiten darstellt.
 
-Der zweite Konstruktor, der ein template-Argument akzeptiert, erzeugt ein Objekt, das unter Verwendung einer Standardperiode von `std::ratio<1>` ein Zeitintervall mit `R` Zeiteinheiten darstellt. Um das Abrunden der Taktanzahl zu vermeiden, ist das Erstellen eines Dauerobjekts des Darstellungstyps `Rep2`, das als Gleitkommatyp behandelt werden kann, wenn `duration::rep` nicht als Gleitkommatyp behandelt werden kann, ein Fehler.
+Die zweite Datei, ein Template-Argument-Konstruktor erstellt ein Objekt, das ein Zeitintervall von darstellt *R* unter Verwendung einer Standardperiode von Teilstrichen `std::ratio<1>`. Runden von taktanzahlen zu vermeiden, ist es Fehler beim Erstellen eines dauerobjekts aus einem Darstellungstyp *Rep2* , das als Gleitkommatyp behandelt werden können eingeben, wenn `duration::rep` nicht als Gleitkommatyp behandelt werden.
 
-Der dritte Konstruktor, der zwei template-Argumente akzeptiert, erzeugt ein Objekt, das ein Zeitintervall darstellt, dessen Länge dem von `Dur` angegebenen Zeitintervall entspricht. Um die Verkürzung von Taktanzahlen zu vermeiden, ist das Erstellen eines Dauerobjekts aus einem anderen Dauerobjekt, dessen Typ mit dem Zieltyp *unvereinbar* ist, ein Fehler.
+Die dritte, zwei Vorlage-Argument-Konstruktor erstellt ein Objekt, das ein Zeitintervall darstellt, dessen Länge ist das Zeitintervall, das angegeben wird *Dur*. Um die Verkürzung von Taktanzahlen zu vermeiden, ist das Erstellen eines Dauerobjekts aus einem anderen Dauerobjekt, dessen Typ mit dem Zieltyp *unvereinbar* ist, ein Fehler.
 
 Ein `D1`-Dauertyp ist mit einem anderen Dauertyp `D2` *unvereinbar*, wenn `D2` nicht als Gleitkommatyp behandelt werden kann und [ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md) nicht 1 ist.
 
-Sofern `Rep2` nicht implizit in `rep` konvertiert werden kann und `treat_as_floating_point<rep>` nicht *TRUE* oder `treat_as_floating_point<Rep2>` nicht *FALSE* ist, wird der zweite Konstruktor nicht an der Überladungsauflösung beteiligt. Weitere Informationen finden Sie unter [<type_traits>](../standard-library/type-traits.md).
+Es sei denn, *Rep2* wird implizit in `rep` und entweder `treat_as_floating_point<rep>` *gilt* oder `treat_as_floating_point<Rep2>` *ist Sie false*, der zweite Konstruktor nimmt an der überladungsauflösung nicht Teil. Weitere Informationen finden Sie unter [<type_traits>](../standard-library/type-traits.md).
 
 Sofern kein Überlauf in die Konvertierung induziert wurde und `treat_as_floating_point<rep>` nicht *TRUE* ist bzw. beide `ratio_divide<Period2, period>::den` nicht 1 entsprechen und `treat_as_floating_point<Rep2>` nicht *FALSE* ist, wird der dritte Konstruktor nicht an der Überladungsauflösung beteiligt. Weitere Informationen finden Sie unter [<type_traits>](../standard-library/type-traits.md).
 
@@ -201,7 +202,7 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parameter
 
-`Div` Für die erste Methode `Div` eine Taktanzahl dar. Für die zweite Methode ist `Div` ein `duration`-Objekt, das eine Taktanzahl enthält.
+*Div* für die erste Methode, *Div* eine Taktanzahl dar. Für die zweite Methode *Div* ist eine `duration` -Objekt, das eine Taktanzahl enthält.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -217,7 +218,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parameter
 
-`Mult` Ein Wert des Typs, der angegebenen `duration::rep`.
+*Mult* einen Wert des Typs, der angegebenen `duration::rep`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -233,7 +234,7 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parameter
 
-`Div` Ein Wert des Typs, der angegebenen `duration::rep`.
+*Div* einen Wert des Typs, der angegebenen `duration::rep`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -273,7 +274,7 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-`Dur` Ein `duration` Objekt.
+*Dur* ein `duration` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -289,7 +290,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parameter
 
-`Dur` Ein `duration` Objekt.
+*Dur* ein `duration` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -313,7 +314,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parameter
 
-`Div` Der Divisor, der ein Duration-Objekt oder ein Wert, der taktanzahlen darstellt.
+*Div* der Divisor, der entweder ein Duration-Objekt oder ein Wert, der taktanzahlen darstellt.
 
 ### <a name="remarks"></a>Hinweise
 

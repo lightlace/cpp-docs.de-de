@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 560cad54e315aa1304e26456392b2b82404d4933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 875df2d76f10b1d8319df0e82541ddf73e9d8c2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963536"
 ---
 # <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution-Klasse
 
@@ -89,7 +90,7 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType* der gleitkommaergebnistyp, der Standardwert ist `double`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* der gleitkommaergebnistyp, der Standardwert ist **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -257,23 +258,23 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-`firstI` Ein eingabeiterator für das erste Element im Verteilungsbereich.
+*FirstI* einen eingabeiterator des ersten Elements im Verteilungsbereich.
 
-`lastI` Ein eingabeiterator für das letzte Element im Verteilungsbereich.
+*LastI* ein eingabeiterator für das letzte Element im Verteilungsbereich.
 
-`firstW` Ein eingabeiterator für das erste Element im gewichtsbereich.
+*FirstW* ein eingabeiterator für das erste Element im gewichtsbereich.
 
-`intervals` Ein [Initializer_list](../cpp/initializers.md) mit den Intervallen der Verteilung.
+*Intervalle* ein [initializer_list-Element](../cpp/initializers.md) mit den Intervallen der Verteilung.
 
-`count` Die Anzahl von Elementen im Verteilungsbereich.
+*Anzahl* die Anzahl von Elementen im Verteilungsbereich.
 
-`xmin` Der niedrigste Wert im Verteilungsbereich.
+*"xmin"* den niedrigsten Wert im Verteilungsbereich.
 
-`xmax` Der höchste Wert im Verteilungsbereich. Muss größer sein als `xmin`.
+*"xmax"* der höchste Wert im Verteilungsbereich. Muss größer als *xmin* sein.
 
-`weightfunc` Das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Sowohl der Parameter als auch der Rückgabewert müssen in `double` konvertierbar sein.
+*Weightfunc* das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Die Parameter und der Rückgabewert müssen konvertierbar sein **doppelte**.
 
-`parm` Die Parameterstruktur, die für die Verteilung verwendete Parameterstruktur.
+*Parm* die Parameterstruktur verwendet, um die Verteilung erstellen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -296,7 +297,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-erstellt ein Verteilungsobjekt mit Intervallen aus der Initialisiererliste `intervals` und aus der Funktion `weightfunc` erzeugten Gewichten.
+erstellt ein Verteilungsobjekt mit Intervallen aus der Initialisiererliste *Intervallen* und Gewichtungen, die von der Funktion generiert *Weightfunc*.
 
 Der als
 ```cpp
@@ -305,14 +306,14 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-definierte Konstruktor erstellt ein Verteilungsobjekt mit gleichmäßig über [`xmin,xmax`] verteilten `count`-Intervallen und weist jedem Intervall Gewichte entsprechend der Funktion `weightfunc` zu. `weightfunc` muss einen Parameter übernehmen und einen Rückgabewert haben, beide davon müssen in `double` konvertierbar sein. **Vorbedingung:** `xmin < xmax`
+erstellt ein Verteilungsobjekt mit *Anzahl* verteilten Intervallen gleichmäßig über [ `xmin,xmax`], weist jedem Intervall Gewichte entsprechend der Funktion *Weightfunc*, und  *Weightfunc* muss einen Parameter übernehmen und einen Rückgabewert haben, beide davon konvertierbar müssen `double`. **Vorbedingung:** `xmin < xmax`
 
 Der als
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-definierte Konstruktor erstellt ein Verteilungsobjekt mit `parm` als gespeicherte Parameterstruktur.
+erstellt ein Verteilungsobjekt mit *Parm* als gespeicherte Parameterstruktur.
 
 ## <a name="param_type"></a> piecewise_constant_distribution::param_type
 

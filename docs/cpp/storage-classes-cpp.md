@@ -1,5 +1,5 @@
 ---
-title: Speicherklassen (C++) | Microsoft Docs
+title: Speicherklassen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,21 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a56d456564dc171292e8a58b6cb486ce2dfbaf31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f89651ba671bf66d7d27edb047db6d1b6b15ee06
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940923"
 ---
 # <a name="storage-classes-c"></a>Speicherklassen (C++)  
   
-Ein *Speicherklasse* im Kontext von C++-Variablendeklarationen ist ein Typbezeichner, die die Lebensdauer, Bindung und Speicherort von Objekten steuert. Ein angegebenes Objekt kann nur eine Speicherklasse haben. Variablen, die innerhalb eines Blocks definiert sind, haben automatischen Speicher, wenn nicht anders mithilfe der Bezeichner `extern`, `static` oder `thread_local` angegeben. Automatische Objekte und Variablen haben keine Bindung; sie sind für Code außerhalb des Blocks nicht sichtbar.  
+Ein *Speicherklasse* im Kontext von C++-Variablendeklarationen ist ein Typbezeichner, der die Lebensdauer, Bindung und Speicherort von Objekten steuert. Ein angegebenes Objekt kann nur eine Speicherklasse haben. Variablen, die innerhalb eines Blocks definiert haben automatischen Speicher, sofern nicht anders angegeben, mit der **"extern"**, **statische**, oder `thread_local` Spezifizierer. Automatische Objekte und Variablen haben keine Bindung; sie sind für Code außerhalb des Blocks nicht sichtbar.  
   
 **Notizen**  
   
-1.  Die [änderbare](../cpp/mutable-data-members-cpp.md) Schlüsselwort kann als Speicherklassenspezifizierer angesehen werden. Es ist jedoch nur in der Memberliste einer Klassendefinition verfügbar.  
+1.  Die [änderbare](../cpp/mutable-data-members-cpp.md) Schlüsselwort als Speicherklassenspezifizierer angesehen werden kann. Es ist jedoch nur in der Memberliste einer Klassendefinition verfügbar.  
   
-2.  **Visual C++ 2010 und höher:** der `auto` Schlüsselwort ist nicht mehr als eine C++-Speicherklassenspezifizierer, und die `register` Schlüsselwort ist veraltet. **Visual Studio 2017 15.7 und höher:** (verfügbar mit [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): die `register` Schlüsselwort aus der Programmiersprache C++ entfernt.
+2.  **Visual C++ 2010 und höher:** der **automatisch** Schlüsselwort ist nicht mehr eine C++-Speicherklassenspezifizierer, und die **registrieren** Schlüsselwort ist veraltet. **Visual Studio 2017 Version 15.7 und höher:** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): die **registrieren** Schlüsselwort aus der Programmiersprache C++ entfernt.
 
 
 ```cpp
@@ -48,21 +49,21 @@ Ein *Speicherklasse* im Kontext von C++-Variablendeklarationen ist ein Typbezeic
 
 ## <a name="static"></a> Statische
 
-Das `static`-Schlüsselwort kann zum Deklarieren von Variablen und Funktionen im globalen Gültigkeitsbereich, Namespace-Gültigkeitsbereich und Klassengültigkeitsbereich verwendet werden. Statische Variablen können auch im lokalen Gültigkeitsbereich deklariert werden.
+Die **statische** -Schlüsselwort zum Deklarieren von Variablen und Funktionen im globalen Gültigkeitsbereich, Namespace-Gültigkeitsbereich und Klassengültigkeitsbereich verwendet werden kann. Statische Variablen können auch im lokalen Gültigkeitsbereich deklariert werden.
 
-Statische Dauer bedeutet, dass das Objekt oder die Variable zugewiesen wird, wenn das Programm gestartet wird. Die Zuweisung wird wieder aufgehoben, wenn das Programm beendet wird. Externe Verknüpfung bedeutet, dass der Name der Variablen von außerhalb der Datei sichtbar ist, in der die Variable deklariert wird. Umgekehrt bedeutet interne Verknüpfung, dass der Name nicht außerhalb der Datei sichtbar ist, in der die Variable deklariert wird. Standardmäßig verfügt ein Objekt oder eine Variable, das bzw. die im globalen Namespace definiert wird, über eine statische Dauer und externe Verknüpfung. Das `static`-Schlüsselwort kann in folgenden Situationen verwendet werden:
+Statische Dauer bedeutet, dass das Objekt oder die Variable zugewiesen wird, wenn das Programm gestartet wird. Die Zuweisung wird wieder aufgehoben, wenn das Programm beendet wird. Externe Verknüpfung bedeutet, dass der Name der Variablen von außerhalb der Datei sichtbar ist, in der die Variable deklariert wird. Umgekehrt bedeutet interne Verknüpfung, dass der Name nicht außerhalb der Datei sichtbar ist, in der die Variable deklariert wird. Standardmäßig verfügt ein Objekt oder eine Variable, das bzw. die im globalen Namespace definiert wird, über eine statische Dauer und externe Verknüpfung. Die **statische** -Schlüsselwort kann in den folgenden Situationen verwendet werden.
 
-1. Wenn Sie eine Variable oder eine Funktion im Dateibereich (globaler und/oder Namespacebereich) deklarieren, gibt das `static`-Schlüsselwort die Variable oder Funktion mit interner Verknüpfung an. Wenn Sie eine Variable deklarieren, hat die Variable eine statische Dauer und wird vom Compiler mit dem Wert 0 initialisiert, solange Sie keinen anderen Wert angeben.
+1. Wenn Sie deklarieren eine Variable oder Funktion im Dateibereich (globaler und/oder Namespacebereich), wird die **statische** -Schlüsselwort Gibt an, dass die Variable oder Funktion intern verknüpft ist. Wenn Sie eine Variable deklarieren, hat die Variable eine statische Dauer und wird vom Compiler mit dem Wert 0 initialisiert, solange Sie keinen anderen Wert angeben.
 
-1. Wenn Sie eine Variable in einer Funktion deklarieren, gibt das `static`-Schlüsselwort an, dass die Variable ihren Status zwischen den Aufrufen der Funktion beibehält.
+1. Wenn Sie eine Variable in einer Funktion deklarieren die **statische** -Schlüsselwort Gibt an, dass die Variable ihren Status zwischen den Aufrufen der Funktion beibehält.
 
-1. Wenn Sie einen Datenmember in einer Klassendeklaration deklarieren, gibt das `static`-Schlüsselwort an, dass eine Kopie des Members für alle Instanzen der Klasse freigegeben wird. Ein statischer Datenmember muss im Dateibereich definiert sein. Ein ganzzahliger Datenmember, die Sie als deklarieren `const static` kann einen Initialisierer haben.
+1. Wenn Sie einen Datenmember in einer Klassendeklaration deklarieren die **statische** -Schlüsselwort Gibt an, dass alle Instanzen der Klasse eine Kopie des Elements freigegeben wird. Ein statischer Datenmember muss im Dateibereich definiert sein. Ein ganzzahliger Datenmember, die Sie als deklarieren **const statische** kann einen Initialisierer haben.
 
-1. Wenn Sie eine Memberfunktion in einer Klassendeklaration deklarieren, gibt das `static`-Schlüsselwort an, dass die Funktion für alle Instanzen der Klasse freigegeben wird. Eine statische Memberfunktion kann nicht auf einen Instanzmember zugreifen, weil die Funktion keinen impliziten `this` Zeiger aufweist. Um auf einen Instanzmember zuzugreifen, deklarieren Sie die Funktion mit einem Parameter, der ein Instanzzeiger oder -verweis ist.
+1. Wenn Sie eine Memberfunktion in einer Klassendeklaration deklarieren die **statische** -Schlüsselwort Gibt an, dass die Funktion alle Instanzen der Klasse freigegeben wird. Eine statische Memberfunktion kann nicht auf einen Instanzmember zugreifen, da die Funktion einen impliziten keine **dies** Zeiger. Um auf einen Instanzmember zuzugreifen, deklarieren Sie die Funktion mit einem Parameter, der ein Instanzzeiger oder -verweis ist.
 
-1. Sie können die Member einer Union nicht als statisch deklarieren. Allerdings muss eine global deklarierte anonyme Union explizit als `static` deklariert werden.
+1. Sie können die Member einer Union nicht als statisch deklarieren. Allerdings eine global deklarierte anonyme Union explizit deklariert werden muss **statische**.
 
-In diesem Beispiel wird gezeigt, wie eine Variable deklariert `static` in einer Funktion behält ihren Status zwischen den Aufrufen der Funktion.
+Dieses Beispiel zeigt, wie eine Variable deklariert **statische** in einer Funktion behält den Zustand zwischen Aufrufen der Funktion.
 
 ```cpp
 // static1.cpp
@@ -91,7 +92,7 @@ nStatic is 6
 nStatic is 10
 ```
 
-Dieses Beispiel zeigt die Verwendung von `static` in einer Klasse.
+Dieses Beispiel zeigt die Verwendung von **statische** in einer Klasse.
 
 ```cpp
 // static2.cpp
@@ -137,7 +138,7 @@ int main() {
 3
 ```
 
-Dieses Beispiel zeigt eine lokale Variable deklariert `static` in einer Memberfunktion. Die statische Variable ist im gesamten Programm verfügbar. Alle Instanzen des Typs verwenden dieselbe Kopie der statischen Variable.
+Dieses Beispiel zeigt eine lokale Variable deklariert **statische** in einer Memberfunktion. Die statische Variable ist im gesamten Programm verfügbar. Alle Instanzen des Typs verwenden dieselbe Kopie der statischen Variable.
 
 ```cpp
 // static3.cpp
@@ -169,17 +170,17 @@ var != value
 var == value
 ```
 
-Ab C++11 ist eine statische lokale Variableninitialisierung auf jeden Fall threadsicher. Dieses Feature wird manchmal bezeichnet *"magische" static-Objekte*. Allerdings müssen alle nachfolgende Zuweisungen in einer Multithreadanwendung synchronisiert werden. Die Thread-sichere statischen Initialisierung-Feature kann deaktiviert werden, mithilfe der [/Zc:threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) zu vermeiden, erstellen eine Abhängigkeit vom CRT-Flag.
+Ab C++11 ist eine statische lokale Variableninitialisierung auf jeden Fall threadsicher. Dieses Feature wird manchmal genannt *magic Statics*. Allerdings müssen alle nachfolgende Zuweisungen in einer Multithreadanwendung synchronisiert werden. Die Funktion für threadsichere statische Initialisierung kann deaktiviert werden, mithilfe der [/Zc:threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) Flag, um zu vermeiden, erstellen eine Abhängigkeit vom CRT.
 
 ## <a name="extern"></a> "extern"
 
-Objekte und Variablen, die als `extern` deklariert werden, deklarieren ein Objekt, das in einer anderen Übersetzungseinheit oder in einem einschließenden Bereich mit externer Verknüpfung definiert ist.
+Objekte und Variablen, die als **"extern"** deklarieren ein Objekt, das in einer anderen Übersetzungseinheit oder in einem einschließenden Bereich mit externer Verknüpfung definiert ist.
 
-Deklaration von `const` Variablen mit der `extern` -Speicherklasse erzwingt, dass die Variable an eine externe Bindung aufweisen. Eine Initialisierung einer `extern const` Variable ist in der definierenden Übersetzungseinheit zulässig. Initialisierungen in Übersetzungseinheiten, die keine definierenden Übersetzungseinheiten sind, erzeugen nicht definierte Ergebnisse. Weitere Informationen finden Sie unter [mithilfe von "extern" zur Angabe der Verknüpfung](../cpp/using-extern-to-specify-linkage.md)
+Deklaration von **const** Variablen mit dem **"extern"** -Speicherklasse erzwingt, dass die Variable an eine externe Bindung verfügen. Eine Initialisierung einer **Extern const** Variable ist in der definierenden Übersetzungseinheit zulässig. Initialisierungen in Übersetzungseinheiten, die keine definierenden Übersetzungseinheiten sind, erzeugen nicht definierte Ergebnisse. Weitere Informationen finden Sie unter [mithilfe von "extern" zur Angabe der Verknüpfung](../cpp/using-extern-to-specify-linkage.md)
 
-Die [/Zc:externConstexpr](../build/reference/zc-externconstexpr.md) -Compileroption bewirkt, dass den Compiler anzuwendende [externe Verknüpfung]() Variablen deklariert, indem **"extern" Constexpr**. In früheren Versionen von Visual Studio, und standardmäßig oder wenn **/Zc:externConstexpr-** angegeben ist, wird Visual Studio wendet interne Verknüpfung zu **Constexpr** Variablen erstellen, selbst wenn die **"extern"** Schlüsselwort verwendet wird. Die **/Zc:externConstexpr** Option ist verfügbar in Visual Studio 2017 Update 15,6 ab. und ist standardmäßig deaktiviert. Die /permissive-option aktiviert /Zc:externConstexpr nicht.
+Die [/Zc: externconstexpr](../build/reference/zc-externconstexpr.md) Compileroption veranlasst den Compiler anzuwendende [externe Verknüpfung]() Variablen deklariert, indem `extern constexpr`. In früheren Versionen von Visual Studio, und standardmäßig oder wenn **/Zc:externConstexpr-** angegeben ist, wird Visual Studio wendet internen Verknüpfung, **"constexpr"** Variablen auch dann, wenn die **"extern"** -Schlüsselwort wird verwendet. Die **/Zc: externconstexpr** Option ist verfügbar in Visual Studio 2017 Update 15.6 ab. und ist standardmäßig deaktiviert. / Zc: externconstexpr aktiviert der PERMISSIVE nicht.
 
-Der folgende Code zeigt zwei `extern`-Deklarationen, `DefinedElsewhere` (die sich auf einen Namen bezieht, der in einer anderen Übersetzungseinheit definiert wurde) und `DefinedHere` (die sich auf einen Namen bezieht, der in einem einschließenden Bereich definiert wurde):
+Der folgende Code zeigt zwei **"extern"** Deklarationen `DefinedElsewhere` (die bezieht sich auf einen Namen, die in einer anderen Übersetzungseinheit definiert) und `DefinedHere` (die bezieht sich auf einen Namen in einem einschließenden Bereich definiert):
 
 ```cpp
 // external.cpp
@@ -196,7 +197,7 @@ int main() {
 
 ## <a name="thread_local"></a> Thread_local (C ++ 11)
 
-Auf eine Variable, die mit dem `thread_local`-Bezeichner deklariert wird, kann nur in dem Thread, in dem sie erstellt wird, zugegriffen werden. Die Variable wird erstellt, wenn der Thread erstellt, und gelöscht, wenn der Thread gelöscht wird. Jeder Thread verfügt über eine eigene Kopie der Variable. Unter Windows `thread_local` ist funktionell gleichwertig mit der Microsoft-spezifische [__declspec (Thread)](../cpp/thread.md) Attribut.
+Auf eine Variable, die mit dem `thread_local`-Bezeichner deklariert wird, kann nur in dem Thread, in dem sie erstellt wird, zugegriffen werden. Die Variable wird erstellt, wenn der Thread erstellt, und gelöscht, wenn der Thread gelöscht wird. Jeder Thread verfügt über eine eigene Kopie der Variable. Auf Windows `thread_local` ist funktionell gleichwertig mit der Microsoft-spezifische [__declspec (Thread)](../cpp/thread.md) Attribut.
 
 ```cpp
 thread_local float f = 42.0; // Global namespace. Not implicitly static.
@@ -215,23 +216,23 @@ void DoSomething()
 }
 ```
 
-Dinge zu beachten Sie die `thread_local` Bezeichner:
+Punkte zu beachten die `thread_local` Bezeichner:
 
 - Dynamisch initialisierte Thread-lokalen Variablen in DLLs können für alle aufrufenden Threads nicht ordnungsgemäß initialisiert werden. Weitere Informationen finden Sie unter [Thread](thread.md).
 
--  Die `thread_local` Bezeichner kann mit kombiniert werden `static` oder `extern`.
+-  Die `thread_local` Bezeichner kann mit kombiniert werden **statische** oder **"extern"**.
 
 -  Sie können anwenden `thread_local` nur auf Datendeklarationen und-Definitionen; `thread_local` kann nicht für Funktionsdeklarationen oder-Definitionen verwendet werden.
 
--  Sie können `thread_local` nur für Datenelemente mit statischer Speicherdauer angeben. Hierzu zählen globale Datenobjekte (sowohl `static` und `extern`), lokale statische Objekte sowie statische Datenmember von Klassen. Jede lokale Variable deklariert `thread_local` ist implizit statisch, wenn keine anderen Speicherklasse angegeben wird; also am Blockbereich `thread_local` entspricht `thread_local static`. 
+-  Sie können `thread_local` nur für Datenelemente mit statischer Speicherdauer angeben. Hierzu zählen globale Datenobjekte (sowohl **statische** und **"extern"**), lokale statische Objekte sowie statische Datenmember von Klassen. Jede lokale Variable deklariert `thread_local` ist implizit statisch, wenn keine anderen Speicherklasse angegeben wird; das heißt, im Blockbereich `thread_local` entspricht `thread_local static`. 
 
 -  Sie müssen das `thread_local` für die Deklaration und Definition eines lokalen Threadobjekts angeben, egal ob die Deklaration und Definition in der gleichen Datei oder in separaten Dateien auftreten.
 
-Unter Windows `thread_local` ist funktionell gleichwertig mit [__declspec(thread)](../cpp/thread.md) mit dem Unterschied, dass `__declspec(thread)` kann auf eine Typdefinition angewendet werden und in C-Code gültig ist. Verwenden Sie nach Möglichkeit `thread_local`, da dies ein Teil des C++-Standards ist und daher besser zu potieren ist.
+Auf Windows `thread_local` ist funktionell gleichwertig mit [__declspec(thread)](../cpp/thread.md) mit dem Unterschied, dass `__declspec(thread)` kann auf eine Typdefinition angewendet werden und in C-Code gültig ist. Verwenden Sie nach Möglichkeit `thread_local`, da dies ein Teil des C++-Standards ist und daher besser zu potieren ist.
 
 ##  <a name="register"></a>  Registrieren
 
-**Visual Studio 2017 15,3 und höher** (verfügbar mit [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): die `register` Schlüsselwort ist nicht mehr unterstützte Speicherklasse. Das Schlüsselwort ist immer noch in der Standard für zukünftige Verwendung reserviert. 
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): die **registrieren** Schlüsselwort ist nicht mehr unterstützte Speicherklasse. Das Schlüsselwort ist immer noch in der Standard für die zukünftige Verwendung reserviert. 
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

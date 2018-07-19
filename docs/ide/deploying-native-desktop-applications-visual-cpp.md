@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von systemeigenen Desktopanwendungen (Visual C++) | Microsoft Docs
+title: Bereitstellen von nativen Desktopanwendungen (Visual C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/11/2018
 ms.technology:
@@ -20,18 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f4aa355c132b4c94f085cbdf7aa73785357d0f0
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34259243"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Bereitstellen von systemeigenen Desktopanwendungen (Visual C++)
 
 Die Verteilung einer fertigen Anwendung oder Komponente zur Installation auf anderen Computern wird als Bereitstellung bezeichnet. Die Bereitstellungsplanung beginnt, wenn eine Anwendung auf dem Computer eines Entwicklers erstellt wird. Die Bereitstellung endet, wenn die Anwendung installiert wurde und auf dem Computer eines Benutzers ausgeführt werden kann.
 
-Visual Studio bietet verschiedene Technologien für die Bereitstellung von Windows-Anwendungen. Dazu gehören die ClickOnce-Bereitstellung und Windows Installer-Bereitstellung.
+Visual Studio bietet verschiedene Technologien für die Bereitstellung von Windows-Anwendungen. Dazu zählen die Bereitstellung mit ClickOnce und dem Windows Installer.
 
-- ClickOnce kann verwendet werden, um C++-Anwendungen bereitgestellt, die die common Language Runtime (CLR) ausgerichtet – gemischte, reine und überprüfbare Assemblys. Obwohl Sie mit Windows Installer eine verwaltete Anwendung bereitstellen können, wird empfohlen, dass Sie ClickOnce verwenden, da es .NET Framework-Sicherheitsfeatures wie das manifest Signieren von Manifesten. ClickOnce unterstützt keine Bereitstellung von systemeigenen C++-Anwendungen. Weitere Informationen finden Sie unter [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md).
+- ClickOnce kann zum Bereitstellen von C++-Anwendungen für die Common Language Runtime (CLR) verwendet werden (gemischte, reine und überprüfbare Assemblys). Obwohl Sie mit Windows Installer eine verwaltete Anwendung bereitstellen können, wird empfohlen, dass Sie ClickOnce verwenden, da es .NET Framework-Sicherheitsfeatures wie das Signieren von Manifesten verwendet. ClickOnce unterstützt die Bereitstellung von nativen C++-Anwendungen nicht. Weitere Informationen finden Sie unter [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md).
 
 - Mithilfe der Windows Installer-Technologie können systemeigene C++-Anwendungen oder C++-Anwendungen bereitgestellt werden, die auf die Common Language Runtime (CLR) ausgerichtet sind.
 
@@ -49,7 +50,7 @@ In den Artikeln dieses Abschnitts der Dokumentation wird erläutert, wie sicherg
 
 - [Auswählen einer Bereitstellungsmethode](../ide/choosing-a-deployment-method.md)
 
-- [Universal CRT-Bereitstellung](universal-crt-deployment.md).
+- [Universal CRT deployment (Universelle CRT-Bereitstellung)](universal-crt-deployment.md)
 
 - [Verteilen von Visual C++-Dateien](../ide/redistributing-visual-cpp-files.md)
 
@@ -59,7 +60,7 @@ In den Artikeln dieses Abschnitts der Dokumentation wird erläutert, wie sicherg
 
 - [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)
 
-- [C++/CLR-Anwendung auf einer früheren Version der Common Language Runtime ausgeführt wird.](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [Running a C++ /clr Application on a Previous Runtime Version (Ausführen einer C++- oder CLR-Anwendung auf einer früheren Laufzeitversion)](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 

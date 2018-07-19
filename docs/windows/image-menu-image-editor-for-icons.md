@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880529"
 ---
 # <a name="image-menu-image-editor-for-icons"></a>Bild (Menü) (Bildbearbeitung für Symbole)
 Menü "Bild", die angezeigt wird, nur, wenn die Grafik-Editor aktiv ist, hat die Befehle zum Bearbeiten von Bildern, Verwalten von Farbpaletten und Festlegen der Grafik-Editor-Optionen. Außerdem stehen Befehle für die Verwendung von Gerätebildern beim Arbeiten mit Symbolen und Cursorn.  

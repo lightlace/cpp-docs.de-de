@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111249"
 ---
 # <a name="record-views--mfc-data-access"></a>Datensatzansichten (MFC-Datenzugriff)
 Dieser Abschnitt gilt nur für die MFC-ODBC-Klassen. Informationen zu OLE DB-Datensatzansichten finden Sie unter [COleDBRecordView](../mfc/reference/coledbrecordview-class.md) und [mithilfe von OLE DB-Datensatzansichten](../data/oledb/using-ole-db-record-views.md).  

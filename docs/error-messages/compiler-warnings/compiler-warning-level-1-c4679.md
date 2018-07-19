@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281547"
 ---
 # <a name="compiler-warning-level-1-c4679"></a>Compilerwarnung (Stufe 1) C4679
 Der Compiler hat ein Konstrukt, das er nicht unterstützen kann, die aus den Metadaten importiert werden, kann nicht gefunden.  

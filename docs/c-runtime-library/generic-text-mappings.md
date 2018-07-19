@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388574"
 ---
 # <a name="generic-text-mappings"></a>Zuordnungen für generischen Text
 Um das Schreiben von Codes für internationale Märkte zu vereinfachen, werden Zuordnungen für generischen Text in TCHAR.H für Folgendes definiert:  

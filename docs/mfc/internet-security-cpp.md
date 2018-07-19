@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348849"
 ---
 # <a name="internet-security-c"></a>Internetsicherheit (C++)
 Code-Sicherheit ist ein ernstes Problem für Entwickler und für Benutzer von Internet-Anwendungen. Es sind Risiken: bösartigem Code, Code, der manipulierten und Code von unbekannten Sites oder Autoren.  

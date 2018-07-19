@@ -16,11 +16,12 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: 85ed95250b5563cd8a7c1ef9cfc0ee048cb3bc60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df52b5bdf9b7054fd838b1892c4e641cdf9d4dcc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962187"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt;-Funktionen und -Variablen
 
@@ -49,15 +50,15 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>Parameter
 
-`Flag` Ein [Once_flag](../standard-library/once-flag-structure.md) Objekt, der sicherstellt, dass das aufrufbare Objekt nur einmal aufgerufen wird.
+*Flag* ein [Once_flag](../standard-library/once-flag-structure.md) -Objekt, das wird sichergestellt, dass das aufrufbare Objekt nur einmal aufgerufen wird.
 
-`F` Ein aufrufbares Objekt.
+*F* ein aufrufbares Objekt.
 
-`A` Eine Argumentliste.
+*Ein* Argumentliste enthalten.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `Flag` ungültig ist, löst die Funktion ein [system_error](../standard-library/system-error-class.md) mit dem Fehlercode `invalid_argument` aus. Andernfalls verwendet die Vorlagenfunktion ihr `Flag`-Argument, um zu gewährleisten, dass `F(A...)` genau einmal erfolgreich aufgerufen wird, und zwar unabhängig davon, wie oft die Vorlagenfunktion aufgerufen wird. Wenn `F(A...)` durch Auslösen einer Ausnahme beendet wird, war der Aufruf nicht erfolgreich.
+Wenn *Flag* ist nicht gültig ist, löst die Funktion eine [System_error](../standard-library/system-error-class.md) Listenfeldsteuerelement mit den Fehlercode `invalid_argument`. Andernfalls verwendet die Vorlagenfunktion seine *Flag* Argument, um sicherzustellen, dass sie ruft `F(A...)` genau einmal erfolgreich, unabhängig davon, wie oft die Vorlagenfunktion aufgerufen wird. Wenn `F(A...)` durch Auslösen einer Ausnahme beendet wird, war der Aufruf nicht erfolgreich.
 
 ## <a name="defer_lock"></a> defer_lock-Variable
 

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091679"
 ---
 # <a name="platformbox-class"></a>Platform::Box-Klasse
 Aktiviert einen Werttyp wie `Windows::Foundation::DateTime` oder einen skalaren Typ wie `int` , der in einem `Platform::Object` -Typ gespeichert wird. Es ist normalerweise nicht erforderlich, `Box` explizit zu verwenden, da das Boxing implizit geschieht, wenn Sie einen Werttyp in `Object^`umwandeln.  

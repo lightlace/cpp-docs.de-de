@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891362"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows-Laufzeit und verwaltete Vorlagen (Komponentenerweiterungen für C++)
 Vorlagen ermöglichen es Ihnen, einen Prototyp eines Windows-Runtime oder der common Language Runtime-Typ definieren und dann mithilfe von verschiedenen Vorlagentypparameter instanziieren Variationen dieses Typs.  

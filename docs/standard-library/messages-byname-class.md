@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eab07f19f9d5025eba1ffe82c7e23066683b6267
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1de239e408adf4f66e7868ce9b91d7da574fffde
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958034"
 ---
 # <a name="messagesbyname-class"></a>messages_byname-Klasse
 
@@ -48,13 +49,13 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-`_Locname` Eine benannte Gebietsschema.
+*_Locname* ein benanntes Gebietsschema.
 
-`_Refs` Ein Verweiszähler.
+*_Refs* eine Initiale Verweisanzahl.
 
 ## <a name="remarks"></a>Hinweise
 
-Das Verhalten wird durch das benannte Gebietsschema `_Locname` bestimmt. Jeder Konstruktor initialisiert sein Basisobjekt mit [messages](../standard-library/messages-class.md#messages)\<CharType>(`_Refs`).
+Das Verhalten wird durch das benannte Gebietsschema bestimmt *_Locname*. Jeder Konstruktor initialisiert sein Basisobjekt mit [messages](../standard-library/messages-class.md#messages)\<CharType>(`_Refs`).
 
 ## <a name="requirements"></a>Anforderungen
 

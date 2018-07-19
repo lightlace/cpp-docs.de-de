@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342942"
 ---
 # <a name="creating-document-frame-windows"></a>Erstellen von Dokumentrahmenfenstern
 [Dokument-/Ansichtarchitektur Erstellung](../mfc/document-view-creation.md) wird gezeigt, wie die [CDocTemplate](../mfc/reference/cdoctemplate-class.md) Objekt orchestriert, das Rahmenfenster, Dokument und Ansicht erstellen und sie alle miteinander zu verbinden. Drei [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) Argumente für die `CDocTemplate` Konstruktor angeben, das Rahmenfenster, Dokument und Ansichtsklassen, die die Dokumentvorlage dynamisch in Reaktion auf Benutzerbefehle wie z. B. den neuen Befehl für die Datei erstellt Menüs oder Befehls neues Fenster eine MDI-Fensters im Menü auf. Die Dokumentvorlage speichert diese Informationen für die spätere Verwendung an, bei der Erstellung eines Rahmenfensters für eine Sicht und das Dokument.  

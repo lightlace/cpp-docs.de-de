@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347041"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>OLE-Drag & Drop- und Datenübertragungs-Klassen
 Diese Klassen werden in der OLE-Datenübertragungen verwendet. Sie können Daten zwischen Anwendungen mithilfe der Zwischenablage oder durch Drag und Drop übertragen werden.  

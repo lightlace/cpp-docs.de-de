@@ -1,5 +1,5 @@
 ---
-title: '&lt;Wert&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;value&gt; (Visual C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33325395"
 ---
-# <a name="ltvaluegt-visual-c"></a>&lt;Wert&gt; (Visual C++)
-Die \<Wert >-Tag kann eine Eigenschaft und Methoden des Eigenschaftenaccessors beschreiben. Beachten Sie, dass beim Hinzufügen einer Eigenschaft mit einem Code-Assistenten in der integrierten Entwicklungsumgebung von Visual Studio hinzufügen wird ein [ \<Zusammenfassung >](../ide/summary-visual-cpp.md) Tag für die neue Eigenschaft. Sie sollten dann manuell ein \<value>-Tag hinzufügen, um den Wert zu beschreiben, den die Eigenschaft darstellt.  
+# <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
+Mit dem Tag \<value> können Sie Eigenschaften und Eigenschaftenaccessormethoden beschreiben. Beachten Sie, dass beim Hinzufügen einer Eigenschaft mithilfe eines Code-Assistenten in der Visual Studio-IDE der neuen Eigenschaft ein [\<summary>](../ide/summary-visual-cpp.md)-Tag hinzugefügt wird. Sie sollten dann manuell ein \<value>-Tag hinzufügen, um den Wert zu beschreiben, den die Eigenschaft darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   

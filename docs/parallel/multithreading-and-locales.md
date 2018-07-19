@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692853"
 ---
 # <a name="multithreading-and-locales"></a>Multithreading und Gebietsschemas
 C-Laufzeitbibliothek und C++-Standardbibliothek bieten Unterstützung für das Gebietsschema des Programms ändern. Dieses Thema behandelt Probleme, die auftreten, wenn die Gebietsschema-Funktionen der beiden Bibliotheken in einer Multithreadanwendung zu verwenden.  

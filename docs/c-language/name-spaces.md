@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390059"
 ---
 # <a name="name-spaces"></a>Namespaces
 Der Compiler richtet "Namespaces" ein, um zwischen den Bezeichnern zu unterscheiden, die für verschiedene Arten von Elementen verwendet werden. Die Namen innerhalb eines Namespace müssen einmalig sein, um Konflikte zu vermeiden, aber ein identischer Name kann in mehreren Namespaces vorhanden sein. Dies bedeutet, dass Sie den gleichen Bezeichner für zwei oder mehr unterschiedliche Elemente verwenden können, vorausgesetzt, dass sich die Elemente in unterschiedlichen Namespaces befinden. Der Compiler kann Verweise auf Grundlage des syntaktischen Kontexts des Bezeichners im Programm auflösen.  

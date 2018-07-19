@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226973"
 ---
 # <a name="fatal-error-c1383"></a>Schwerwiegender Fehler C1383
 Die Compileroption /GL ist nicht mit der installierten Version der Common Language Runtime kompatibel.  

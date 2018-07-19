@@ -70,6 +70,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098329"
 ---
 # <a name="cforeignkeys-cforeignkeysinfo"></a>CForeignKeys, CForeignKeysInfo
 Rufen Sie die-typedefklasse **CForeignKeys** zum Implementieren der Parameterklasse **CForeignKeysInfo**.  

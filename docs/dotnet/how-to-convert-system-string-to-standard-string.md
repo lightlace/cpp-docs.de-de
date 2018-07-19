@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135238"
 ---
 # <a name="how-to-convert-systemstring-to-standard-string"></a>Gewusst wie: Konvertieren von System::String zu Standardzeichenfolge
 Sie können einen <xref:System.String> in `std::string` oder `std::wstring` konvertieren, ohne `PtrToStringChars` in Vcclr.h zu verwenden.  

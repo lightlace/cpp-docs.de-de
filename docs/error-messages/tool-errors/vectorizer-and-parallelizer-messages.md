@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336598"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Vectorizer- and Parallelizer-Meldungen
 Können Sie die Visual C++-Compileroptionen [/qpar-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) und [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) festzulegende der [automatische Parallelisierung und automatische Vektorisierung](../../parallel/auto-parallelization-and-auto-vectorization.md) auf Ausgabe Ursachencodes und informationsmeldungen über ihre Aktivität. Dieser Artikel beschreibt die Ursachencodes und Nachrichten.  

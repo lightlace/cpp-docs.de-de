@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385121"
 ---
 # <a name="using-your-old-toolbars"></a>Verwenden der bisherigen Symbolleisten
 Wenn Sie frühere Versionen von Visual C++ verwendet haben, erstellen Sie benutzerdefinierte Symbolleisten, die neue Implementierung der Klasse [CToolBar](../mfc/reference/ctoolbar-class.md) Fehler verursachen könnten. Damit Sie nicht von der bisherigen Symbolleisten erteilen, um die neuen Funktionen nutzen müssen, wird die alte Implementierung weiterhin unterstützt.  

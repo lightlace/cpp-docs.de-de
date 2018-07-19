@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138300"
 ---
 # <a name="outline-of-changes-ccli"></a>Gliederung der Änderungen (C++/CLI)
 Dieser Umriss zeigt Sie Beispiele für einige der Änderungen in der Sprache von Managed Extensions for C++ zu Visual C++. Führen Sie den Link, der jedes Element Informationen begleitet.  

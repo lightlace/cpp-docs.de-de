@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f312d7e829657f2cc9c7c41c65afad8d8f8b343
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121863"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap-Klasse
 Stellt einen typsicheren Wrapper für Objekte der Zeigerzuordnungsklassen `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`und `CMapStringToPtr`bereit.  
@@ -41,13 +42,13 @@ class CTypedPtrMap : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `BASE_CLASS`  
+ *BASIS_KLASSE*  
  Die Basisklasse der typisierten Zeiger Map-Klasse; muss eine Zeiger Map-Klasse ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, oder `CMapStringToPtr`).  
   
- `KEY`  
+ *KEY*  
  Die Klasse des Objekts, das als Schlüssel für die Zuordnung verwendet.  
   
- `VALUE`  
+ *WERT*  
  Die Klasse des Objekts in der Zuordnung gespeichert.  
   
 ## <a name="members"></a>Member  
@@ -93,25 +94,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rPosition`  
- Gibt einen Verweis auf eine **POSITION** von einem vorherigen zurückgegebene Wert `GetNextAssoc` oder `BASE_CLASS` **:: GetStartPosition** aufrufen.  
+ *rposition zurück*  
+ Gibt einen Verweis auf eine Positionswert, der von einem vorherigen zurückgegebene `GetNextAssoc` oder `BASE_CLASS` **:: GetStartPosition** aufrufen.  
   
  *KEY*  
  Der Vorlagenparameter, den Typ der Schlüssel der Zuordnung angibt.  
   
- `rKey`  
+ *rKey*  
  Gibt an, der zurückgegebene Schlüssel des Elements abgerufen.  
   
  *WERT*  
  Vorlagenparameter, den Typ der Werte der Zuordnung angibt.  
   
- `rValue`  
+ *rValue*  
  Gibt den zurückgegebenen Wert des abgerufenen Elements.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ist besonders hilfreich für die Iteration durch alle Elemente in der Zuordnung. Beachten Sie, dass die Sequenz Position nicht notwendigerweise die Sequenz von Schlüssel-Wert identisch ist.  
   
- Wenn das abgerufene Element das letzte Element in der Zuordnung klicken Sie dann der neue Wert des `rNextPosition` festgelegt ist, um **NULL**.  
+ Wenn das abgerufene Element das letzte Element in der Zuordnung klicken Sie dann der neue Wert des `rNextPosition` auf NULL festgelegt ist.  
   
  Diese Inlinefunktion ruft `BASE_CLASS` **:: GetNextAssoc**.  
   
@@ -123,16 +124,16 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `BASE_CLASS`  
+ *BASIS_KLASSE*  
  Der Vorlagenparameter ist die Basisklasse der Klasse für diese Zuordnung angeben.  
   
- `key`  
+ *key*  
  Der Schlüssel des Elements, das gesucht werden sollen.  
   
  *WERT*  
  Der Vorlagenparameter Angabe des Typs der Werte in dieser Zuordnung gespeichert.  
   
- `rValue`  
+ *rValue*  
  Gibt den zurückgegebenen Wert des abgerufenen Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -152,10 +153,10 @@ VALUE& operator[ ](base_class ::base_arg_key key);
  *WERT*  
  Der Vorlagenparameter Angabe des Typs der Werte in dieser Zuordnung gespeichert.  
   
- `BASE_CLASS`  
+ *BASIS_KLASSE*  
  Der Vorlagenparameter ist die Basisklasse der Klasse für diese Zuordnung angeben.  
   
- `key`  
+ *key*  
  Der Schlüssel des Elements, das gesucht werden oder in der Zuordnung erstellt werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -172,7 +173,7 @@ BOOL RemoveKey(KEY key);
  *KEY*  
  Der Vorlagenparameter, den Typ der Schlüssel der Zuordnung angibt.  
   
- `key`  
+ *key*  
  Schlüssel für das Element entfernt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -192,10 +193,10 @@ void SetAt(KEY key, VALUE newValue);
  *KEY*  
  Der Vorlagenparameter, den Typ der Schlüssel der Zuordnung angibt.  
   
- `key`  
+ *key*  
  Gibt den Schlüsselwert, der die NewValue an.  
   
- `newValue`  
+ *newValue*  
  Gibt die Objektzeiger, der den Wert des neuen Elements ist.  
   
 ### <a name="remarks"></a>Hinweise  

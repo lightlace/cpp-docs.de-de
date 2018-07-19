@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129787"
 ---
 # <a name="how-to-hold-reference-to-value-type-in-native-type"></a>Gewusst wie: Verweis auf Werttyp in systemeigenem Typ
 Verwendung `gcroot` auf den geschachtelten Typ um einen Verweis auf einen Werttyp in einen systemeigenen Typ enthalten.  

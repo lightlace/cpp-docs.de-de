@@ -1,5 +1,5 @@
 ---
-title: Geben Sie Bibliothekszugriff | Microsoft Docs
+title: Geben Sie Zugriff auf die Medienbibliothek | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb81a8aa7d9262992da29a2d93cf770fad754316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afba5d2c2d0cd0b84e12cbd13cedba473b535587
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885896"
 ---
 # <a name="type-library-access"></a>Zugreifen auf die Typbibliothek
-Typbibliotheken verfügbar machen, die Schnittstellen eines OLE-Steuerelements an andere OLE-fähigen Anwendungen. Jeder OLE-Steuerelements benötigen eine Typbibliothek aus, wenn eine oder mehrere Schnittstellen verfügbar gemacht werden sollen.  
+Typbibliotheken verfügbar Schnittstellen, die der OLE-Steuerelements für andere OLE-fähigen Anwendungen. Jeder OLE-Steuerelements benötigen eine Typbibliothek aus, wenn eine oder mehrere Schnittstellen sind verfügbar gemacht werden.  
   
- Die folgenden Makros zulassen ein OLE-Steuerelements für den Zugriff auf eine eigene Typbibliothek:  
+ Die folgenden Makros zulassen ein OLE-Steuerelements, um Zugriff auf eine eigene Typbibliothek bereitzustellen:  
   
 ### <a name="type-library-access"></a>Zugreifen auf die Typbibliothek  
   
@@ -35,7 +36,7 @@ Typbibliotheken verfügbar machen, die Schnittstellen eines OLE-Steuerelements a
 |[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementiert eine `GetTypeLib` Memberfunktion eines OLE-Steuerelements (muss in der klassenimplementierung verwendet werden).|  
   
 ##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB  
- Deklariert die `GetTypeLib` Memberfunktion der Control-Klasse.  
+ Deklariert die `GetTypeLib` Memberfunktion der Steuerelementklasse.  
   
 ```   
 DECLARE_OLETYPELIB(class_name)   
@@ -46,13 +47,13 @@ DECLARE_OLETYPELIB(class_name)
  Der Name des der Control-Klasse, die im Zusammenhang mit der Typbibliothek.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie dieses Makro in der Headerdatei des Steuerelements-Klasse.  
+ Verwenden Sie dieses Makro in der Headerdatei des Steuerelement-Klasse.  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h  
 
 ##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB  
- Des Steuerelements implementiert `GetTypeLib` Memberfunktion.  
+ Das Steuerelement implementiert die `GetTypeLib` Member-Funktion.  
   
 ```   
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)   
@@ -65,14 +66,14 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
  *tlid*  
  Die ID der Typbibliothek.  
   
- `wVerMajor`  
+ *wVerMajor*  
  Die Typ-Bibliothek Hauptversionsnummer.  
   
- `wVerMinor`  
+ *wVerMinor*  
  Die Typ-Bibliothek Nebenversionsnummer.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieses Makro muss angezeigt werden, in der Implementierungsdatei für alle Control-Klasse, verwendet die `DECLARE_OLETYPELIB` Makro.  
+ Dieses Makro muss in der Implementierungsdatei für jede Steuerelementklasse angezeigt werden, die die DECLARE_OLETYPELIB-Makro verwendet.  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxdisp.h  

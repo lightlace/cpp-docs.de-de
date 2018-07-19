@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367510"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>"FreeLibrary" und "AfxFreeLibrary"
 Prozesse, die die explizite mit einer DLL-Aufruf Verknüpfung die [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) ausgeführt werden, wenn die DLL-Modul nicht mehr benötigt wird. Diese Funktion verringert Verweiszähler für das Modul, und, wenn der Verweiszähler NULL ist, herab aus dem Adressraum des Prozesses.  

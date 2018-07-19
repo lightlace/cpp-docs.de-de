@@ -1,5 +1,5 @@
 ---
-title: CommandHandler | Microsoft Docs
+title: CommandHandler | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27f5585ec334a4179b76579c5216c8c30013ca97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 784551b090f7c0c73b96b846fcc8d74017cc1e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850640"
 ---
 # <a name="commandhandler"></a>CommandHandler
-`CommandHandler` ist die Funktion, die durch den dritten Parameter von der `COMMAND_HANDLER` Makro in Ihrer nachrichtenzuordnung.  
+`CommandHandler` die Funktion wird durch den dritten Parameter des COMMAND_HANDLER Makros in der meldungszuordnung identifiziert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,23 +40,23 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `wNotifyCode`  
- Benachrichtigungscode.  
+ *wNotifyCode schalten*  
+ Der Benachrichtigungscode.  
   
  *wID*  
- Der Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.  
+ Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.  
   
  *hWndCtl*  
  Ein Handle für ein Window-Steuerelement.  
   
- `bHandled`  
- Die Nachricht Zuordnung Mengen `bHandled` auf **"true"** vor `CommandHandler` aufgerufen wird. Wenn `CommandHandler` behandelt die Nachricht nicht vollständig sollte `bHandled` auf **"false"** an, dass die Nachricht noch weitere Verarbeitung erforderlich.  
+ *bHandled*  
+ Die Zuordnung Nachrichtensätze *bHandled* auf "true", bevor Sie `CommandHandler` aufgerufen wird. Wenn `CommandHandler` ist nicht vollständig verarbeitet die Nachricht sollte *bHandled* auf "false", um anzugeben, die Nachricht noch weitere Verarbeitung erforderlich.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Das Ergebnis der Nachrichtenverarbeitung. 0, wenn erfolgreich.  
+ Das Ergebnis der Nachrichtenverarbeitung. Bei Erfolg 0.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Beispiel zur Verwendung dieser Nachrichtenhandler in einer meldungszuordnung, finden Sie unter [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
+ Ein Beispiel für die Verwendung dieser Nachrichtenhandler in einer meldungszuordnung, finden Sie unter [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Implementieren eines Fensters](../atl/implementing-a-window.md)   

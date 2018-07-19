@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcbd5ea33b50e66d1c9e858669a3174042a19e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041012"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager-Klasse
 Verwaltet abtrennbare Menüs. Ein abtrennbares Menü ist ein Menü in der Menüleiste. Der Benutzer kann ein solches Menü von der Menüleiste abtrennen, wodurch das Menü beliebig positionierbar wird.  
@@ -98,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiTearOffBarID`  
- [in] `strText`  
+ [in] *UiTearOffBarID*  
+ [in] *StrText*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -135,20 +136,20 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszRegEntry`  
+ [in] *LpszRegEntry*  
  Eine Zeichenfolge, die den Pfad eines Registrierungseintrags enthält. Ihre Anwendungen speichert die Einstellungen für abtrennbare Balken in diesen Registrierungseintrag an.  
   
- [in] `uiTearOffMenuFirst`  
+ [in] *UiTearOffMenuFirst*  
  Das erste Menü-ID für ein abtrennbares Menü.  
   
- [in] `uiTearOffMenuLast`  
+ [in] *UiTearOffMenuLast*  
  Die letzte Menü-ID für ein abtrennbares Menü.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Der Bereich der Menü-IDs aus `uiTearOffMenuFirst` auf `uiTearOffMenuLast` muss eine fortlaufende Intervall. Das Intervall definiert die Anzahl der abtrennbare Menüs, die gleichzeitig in der Anwendung angezeigt werden können.  
+ Der Bereich der Menü-IDs aus *UiTearOffMenuFirst* auf *UiTearOffMenuLast* muss eine fortlaufende Intervall. Das Intervall definiert die Anzahl der abtrennbare Menüs, die gleichzeitig in der Anwendung angezeigt werden können.  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
@@ -158,7 +159,7 @@ BOOL IsDynamicID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiID`  
+ [in] *UiID*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -172,7 +173,7 @@ UINT Parse(CString& str);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `str`  
+ [in] *str*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -186,7 +187,7 @@ void Reset(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hmenu`  
+ [in] *Hmenu*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -200,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdId`  
- [in] `bUse`  
+ [in] *UiCmdId*  
+ [in] *bVerwenden*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -213,7 +214,7 @@ void SetupTearOffMenus(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `hMenu`  
+ [in] *hMenu*  
   
 ### <a name="remarks"></a>Hinweise  
   

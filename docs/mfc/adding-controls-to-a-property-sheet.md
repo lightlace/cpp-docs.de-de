@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341090"
 ---
 # <a name="adding-controls-to-a-property-sheet"></a>Hinzufügen von Steuerelementen zu einem Eigenschaftenblatt
 Standardmäßig weist ein Eigenschaftenblatt Fensterbereich, für die Eigenschaftenseiten der Registerkartenindex und die Schaltflächen "OK", "Abbrechen", und "übernehmen. (Ein nicht modalen Eigenschaftenblatts verfügt nicht über die "OK". "Abbrechen", und wenden Sie die Schaltflächen.) Sie können andere Steuerelemente auf dem Eigenschaftenblatt hinzufügen. Beispielsweise können Sie ein Vorschaufenster hinzufügen, um rechts neben den Bereich der Eigenschaft, um dem Benutzer anzuzeigen, was die aktuellen Einstellungen aussehen würde, wenn auf ein externes Objekt angewendet.  

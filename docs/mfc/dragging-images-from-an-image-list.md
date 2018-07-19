@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347164"
 ---
 # <a name="dragging-images-from-an-image-list"></a>Herausziehen von Bildern aus einer Bildliste
 [CImageList](../mfc/reference/cimagelist-class.md) beinhaltet Funktionen für ein Bild auf dem Bildschirm ziehen. Die Funktionen zum Ziehen Verschieben eines Bildes reibungslos, Farbe und ohne Blinken des Cursors. Maskierte und Aufheben der Maskierung Bilder können gezogen werden.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689804"
 ---
 # <a name="a4---using-the-nowait-clause"></a>A.4   Verwenden der nowait-Klausel
 Wenn mehrere unabhängige Schleifen innerhalb eines parallelen Bereichs vorhanden sind, können Sie mithilfe der `nowait` -Klausel ([Abschnitt 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) auf der Seite "11"), vermeiden Sie die implizite Grenze am Ende der `for` -Direktive wie folgt:  

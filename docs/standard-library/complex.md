@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a29dfc976ca29405814bbae81f42a02a74300d74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965668"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-Definiert die containervorlagenklasse **komplexe** und deren unterstützende Vorlagen.
+Definiert die containervorlagenklasse `complex` und deren unterstützende Vorlagen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,9 +38,9 @@ Definiert die containervorlagenklasse **komplexe** und deren unterstützende Vor
 
 Eine komplexe Zahl ist ein geordnetes Paar aus reellen Zahlen. Rein geometrisch ausgedrückt ist die komplexe Ebene die reelle zweidimensionale Ebene. Die speziellen Merkmale der komplexen Ebene, durch die sie sich von der reellen Ebene unterscheidet, sind darin begründet, dass sie eine zusätzliche algebraische Struktur hat. Diese algebraische Struktur hat zwei grundlegende Vorgänge:
 
-- Hinzufügen, die als definiert (*eine*, *b*) + (*c*, *d*) = (*eine* + *c* , *b* + *d*)
+- Außerdem definiert als (*eine*, *b*) + (*c*, *d*) = (*eine* + *c* , *b* + *d*)
 
-- Definiert als Multiplikation (*eine*, *b*) \* (*c*, *d*) = (*Ac*  -  *bd*, *Ad* + *bc*)
+- Multiplikation, die als definiert (*eine*, *b*) \* (*c*, *d*) = (*Ac*  -  *bd*, *Ad* + *bc*)
 
 Die Menge der komplexen Zahlen mit den Operationen für komplexe Addition und komplexe Multiplikation ist im standardmäßigen algebraischen Sinn ein Körper:
 
@@ -47,11 +48,11 @@ Die Menge der komplexen Zahlen mit den Operationen für komplexe Addition und ko
 
 - Die komplexe Zahl (0, 0) ist die Additive Identität und (1, 0) ist die multiplikative Identität.
 
-- Die gegenzahl für eine komplexe Zahl (*eine*, *b*) ist (-*eine*, -*b*), und de Kehrwert für alle komplexe Zahlen mit Ausnahme (0, 0) ist
+- Die gegenzahl für eine komplexe Zahl (*eine*, *b*) ist (-*eine*, -*b*), und der Kehrwert für alle komplexe Zahlen mit Ausnahme von (0, 0) ist
 
    (*eine*/ (*eine*<sup>2</sup> + *b*<sup>2</sup>), -*b*/ (*eine*<sup>2</sup> + *b*<sup>2</sup>))
 
-Durch die Darstellung einer komplexen Zahl *z* = (*eine*, *b*) in der Form *z* = *eine*  +  *Bi*, wobei *ich*<sup>2</sup> =-1, die Regeln für die Algebra der Menge der reellen Zahlen, die an die Menge der komplexen Zahlen und deren Komponenten angewendet werden kann. Zum Beispiel:
+Durch die Darstellung einer komplexen Zahl *z* = (*eine*, *b*) in der Form *z* = *eine*  +  *Bi*, wobei *ich*<sup>2</sup> =-1, die Regeln für die Algebra der Menge der reellen Zahlen auf die Menge der komplexen Zahlen und deren Komponenten angewendet werden kann. Zum Beispiel:
 
    (1 + 2*ich*) \* (2 + 3*ich*)  
    = 1 \* (2 + 3*ich*) + 2*ich* \* (2 + 3*ich*)  
@@ -59,7 +60,7 @@ Durch die Darstellung einer komplexen Zahl *z* = (*eine*, *b*) in der Form *z* =
    = (2 – 6) + (3 + 4)*ich*  
    =-4 + 7*ich*
 
-Das System der komplexen Zahlen ist ein Körper, jedoch kein geordneter Körper. Es gibt keine Reihenfolge der komplexen Zahlen ist für das Feld der reellen Zahlen und deren Teilmengen vorhanden. daher können ungleichheiten nicht auf komplexe Zahlen angewendet werden können, wie sie in reelle Zahlen sind.
+Das System der komplexen Zahlen ist ein Körper, jedoch kein geordneter Körper. Es gibt keine Reihenfolge der komplexen Zahlen, wie es für das Feld der reellen Zahlen und deren Teilmengen gibt, daher ungleichheiten findet auf komplexe Zahlen angewendet werden können, wie sie in reelle Zahlen sind.
 
 Es gibt drei allgemeine Formen der Darstellung einer komplexen Zahl *z*:
 
@@ -77,9 +78,9 @@ Die Ausdrücke, die in diesen Standarddarstellungen einer komplexen Zahl verwend
 
 - Der Betrag oder Absolute Wert einer komplexen Zahl *r*.
 
-- Der Argument- oder Phasenwinkel *p* im Bogenmaß.
+- Der Argument- oder Phasenwinkel *p* im Bogenmaß zurück.
 
-Sofern nicht anders angegeben, sind Funktionen, die mehrere Werte zurückgeben können, einen Hauptwert für ihre Argumente zurückgeben,-π größer oder kleiner als oder gleich + π aus, um sie einwertig bleiben. Alle Winkel im Bogenmaß ausgedrückt werden müssen, wobei 2π Radiant (360 Grad) in einem Kreis.
+Sofern nicht anders angegeben, Funktionen, die mehrere Werte zurückgeben können, sind erforderlich, um einen Hauptwert für ihre Argumente zurückgeben,-π größer und kleiner als oder gleich + π aus, um sie einwertig bleiben. Alle Winkel müssen angegeben werden, im Bogenmaß im Bereich 2π Radiant (360 Grad) vorhanden sind, im Kreis.
 
 ### <a name="functions"></a>Funktionen
 
@@ -121,9 +122,9 @@ Sofern nicht anders angegeben, sind Funktionen, die mehrere Werte zurückgeben k
 
 |Klasse|Beschreibung|
 |-|-|
-|[complex\<double>](../standard-library/complex-double.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **doppelte**, wobei das erste den reellen Teil einer komplexen Zahl und die Sekunde, den imaginären Teil entspricht darstellt.|
-|[complex\<float>](../standard-library/complex-float.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **"float"**, wobei das erste den reellen Teil einer komplexen Zahl und die Sekunde, den imaginären Teil entspricht darstellt.|
-|[complex\<long double>](../standard-library/complex-long-double.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **long double**, wobei das erste den reellen Teil einer komplexen Zahl und die Sekunde, den imaginären Teil entspricht darstellt.|
+|[complex\<double>](../standard-library/complex-double.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **doppelte**, wobei die erste dem Realteil einer komplexen Zahl entspricht und die Sekunde, den imaginären Teil entspricht darstellt.|
+|[complex\<float>](../standard-library/complex-float.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **"float"**, wobei die erste dem Realteil einer komplexen Zahl entspricht und die Sekunde, den imaginären Teil entspricht darstellt.|
+|[complex\<long double>](../standard-library/complex-long-double.md)|Die explizit spezialisierte Vorlagenklasse beschreibt ein Objekt, das ein geordnetes Paar von Objekten, beide vom Typ speichert **long double**, wobei die erste dem Realteil einer komplexen Zahl entspricht und die Sekunde, den imaginären Teil entspricht darstellt.|
 |[complex](../standard-library/complex-class.md)|Die Vorlagenklasse beschreibt ein Objekt, mit dem das System komplexer Zahlen dargestellt wird und komplexe arithmetische Operationen ausgeführt werden.|
 
 ### <a name="literals"></a>Literale

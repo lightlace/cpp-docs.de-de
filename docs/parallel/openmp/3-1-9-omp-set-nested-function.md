@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687282"
 ---
 # <a name="319-ompsetnested-function"></a>3.1.9 omp_set_nested-Funktion
 Die **Omp_set_nested** Funktion aktiviert oder deaktiviert die geschachtelten Parallelität. Es wird folgendes Format verwendet:  

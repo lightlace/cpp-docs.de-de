@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385764"
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>Typsicherer Zugriff auf Steuerelemente ohne Code-Assistenten
 Der erste Ansatz zum Erstellen Typsicherer Zugriff auf Steuerelemente verwendet eine Inline-Memberfunktion um den Rückgabetyp der Klasse umgewandelt `CWnd`des `GetDlgItem` Memberfunktion versucht, den entsprechenden C++-Steuerelementtyp, wie in diesem Beispiel:  

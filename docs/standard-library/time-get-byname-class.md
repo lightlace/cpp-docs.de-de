@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c1e7c0992822f8f0a47011a873f99a17b2095d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 43bce47084065e10da418ff652f070f41bb79278
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955619"
 ---
 # <a name="timegetbyname-class"></a>time_get_byname-Klasse
 
@@ -49,13 +50,15 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-`_Locname` Eine benannte Gebietsschema.
+*_Locname*  
+ Ein benanntes Gebietsschema.
 
-`_Refs` Ein Verweiszähler.
+*_Refs*  
+ Eine initiale Verweisanzahl.
 
 ## <a name="requirements"></a>Anforderungen
 
-Das Verhalten wird durch das benannte Gebietsschema `_Locname` bestimmt. Alle Konstruktoren initialisieren ihr jeweiliges Basisobjekt mit [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).
+Das Verhalten wird durch das benannte Gebietsschema bestimmt *_Locname*. Alle Konstruktoren initialisieren ihr jeweiliges Basisobjekt mit [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).
 
 ## <a name="requirements"></a>Anforderungen
 

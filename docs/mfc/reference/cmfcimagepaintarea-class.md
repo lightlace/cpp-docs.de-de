@@ -1,5 +1,5 @@
 ---
-title: CMFCImagePaintArea Klasse | Microsoft Docs
+title: CMFCImagePaintArea-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,14 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 449d79119b15e814485f3b7e0c3eb7472d314d19
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852476"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea-Klasse
-Stellt den Bildbereich, mit denen Sie ein Bild in einem Bild-Editor (Dialogfeld) ändern.  
+Die Bildbereich, mit denen Sie so ändern Sie ein Bild in einem Bild-Editor-Dialogfeld zur Verfügung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,18 +57,18 @@ class CMFCImagePaintArea : public CButton
 |||  
 |-|-|  
 |Name|Beschreibung|  
-|[CMFCImagePaintArea::GetMode](#getmode)|Ruft den aktuellen Zeichnungsmodus ab.|  
-|[CMFCImagePaintArea::SetBitmap](#setbitmap)|Legt das Bitmap-Bild zum Bereich "Bild" fest.|  
+|[CMFCImagePaintArea::GetMode](#getmode)|Ruft den Zeichnungsmodus des aktuellen ab.|  
+|[CMFCImagePaintArea::SetBitmap](#setbitmap)|Legt das Bitmap-Bild für den Bildbereich fest.|  
 |[CMFCImagePaintArea::SetColor](#setcolor)|Legt die aktuelle zeichnen Farbe fest.|  
 |[CMFCImagePaintArea::SetMode](#setmode)|Legt den aktuellen Zeichnungsmodus fest.|  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Klasse kann nicht direkt aus Ihrem Code verwendet werden.  
+ Diese Klasse ist nicht vorgesehen, direkt aus Ihrem Code verwendet werden.  
   
- Das Framework verwendet diese Klasse die Bildbereich in einem Bild-Editor (Dialogfeld) angezeigt. Weitere Informationen zu den Bild-Editor (Dialogfeld), finden Sie unter [CMFCImageEditorDialog-Klasse](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ Das Framework verwendet diese Klasse, die im Bild in einem Bild-Editor-Dialogfeld angezeigt werden kann. Weitere Informationen zu diesem Bild-Editor-Dialogfeld finden Sie unter [CMFCImageEditorDialog-Klasse](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht das Erstellen von ein Objekt von der `CMFCImagePaintArea` Klasse, legen Sie die aktuelle zeichnen Farbe an, den aktuellen Zeichnungsmodus festgelegt, und legen Sie das Bitmap-Bild zum Bereich "Bild".  
+ Im folgende Beispiel wird veranschaulicht, wie zum Erstellen eines Objekts von der `CMFCImagePaintArea` Klasse, legen Sie die aktuelle, zeichnen die Farbe, den aktuellen Zeichnungsmodus festgelegt, und legen Sie das Bitmap-Bild zum Bereich "Bild".  
   
  [!code-cpp[NVC_MFC_RibbonApp#37](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]  
   
@@ -97,20 +98,20 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `pParentDlg`|Ein Zeiger auf das Dialogfeld, das das übergeordnete Element des Grafik-Editor ist.|  
+|[in] *pParentDlg*|Ein Zeiger auf das Dialogfeld, das das übergeordnete Element des Grafik-Editor.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
- Ruft den aktuellen Zeichnungsmodus ab.  
+ Ruft den Zeichnungsmodus des aktuellen ab.  
   
 ```  
 IMAGE_EDIT_MODE GetMode() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) Wert, der den aktuellen Zeichnungsmodus angibt.  
+ Ein [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) Wert, der den Zeichnungsmodus des aktuellen angibt.  
   
 ##  <a name="setbitmap"></a>  CMFCImagePaintArea::SetBitmap  
- Legt das Bitmap-Bild zum Bereich "Bild" fest.  
+ Legt das Bitmap-Bild für den Bildbereich fest.  
   
 ```  
 void SetBitmap(CBitmap* pBitmap);
@@ -121,10 +122,10 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `pBitmap`|Die neue Bitmap-Bild angezeigt.|  
+|[in] *pBitmap*|Die neue Bitmap-Bild angezeigt.|  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `pBitmap` ist `NULL`, diese Methode legt die Größe des Bereichs änderbaren Paint auf 0 (null). Andernfalls wird die Größe des Bereichs änderbaren Paint auf die Größe des bereitgestellten Bitmapbilds.  
+ Wenn *pBitmap* NULL ist, diese Methode legt die Größe des änderbar Paint Bereichs auf 0 (null). Andernfalls wird die Größe des änderbar Paint Bereichs auf die Größe des bereitgestellten Bitmapbilds.  
   
 ##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  Legt die aktuelle zeichnen Farbe fest.  
@@ -138,12 +139,12 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `color`|Die neue zeichnen Farbe.|  
+|[in] *Farbe*|Die neue Zeichnung Farbe.|  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie wählen eine Farbe aus der Bild-Editor Palette Leiste oder Farbauswahl, das Framework ruft diese Methode zum Aktualisieren der aktuellen zeichnen Farbe. Ist "Schwarz der Zeichnung Ausgangsfarbe" (ein `COLORREF` Wert 0).  
+ Wenn Sie eine Farbe aus der Palette-Leiste von Bild-Editor auswählen oder Farbauswahl angezeigt, das Framework ruft diese Methode, um die aktuelle zeichnen Farbe zu aktualisieren. Die Ausgangsfarbe zeichnen ist Schwarz (COLORREF Wert 0).  
   
- Die Zeichnung Farbe wird durch die Bild-Editor (Dialogfeld) verwendet, für alle Modi, Zeichnen mit Ausnahme von `IMAGE_EDIT_MODE_COLOR`. Weitere Informationen zu Modi zu zeichnen, finden Sie unter [CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
+ Die Farbe Zeichnen wird von der Bild-Editor-Dialogfeld für alle Zeichnen mit Ausnahme von IMAGE_EDIT_MODE_COLOR verwendet. Weitere Informationen zu den Modi zu zeichnen, finden Sie unter [cmfcimagepaintarea:: Image_edit_mode-Enumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
   
 ##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode  
  Legt den aktuellen Zeichnungsmodus fest.  
@@ -157,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `mode`|Ein [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) Wert, der den aktuellen Zeichnungsmodus angibt.|  
+|[in] *Modus*|Ein [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) Wert, der den Zeichnungsmodus des aktuellen angibt.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

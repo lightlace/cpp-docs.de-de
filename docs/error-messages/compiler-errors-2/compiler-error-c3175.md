@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246402"
 ---
 # <a name="compiler-error-c3175"></a>Compiler-Fehler C3175 generiert
 "Funktion1": Rufen Sie eine Methode eines verwalteten Typs kann nicht von nicht verwalteten Funktion "Funktion2"  

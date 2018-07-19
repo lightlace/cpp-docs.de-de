@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849664"
 ---
 # <a name="noregistry"></a>no_registry
 `no_registry` weist den Compiler an, nicht die Registrierung für Typbibliotheken zu suchen, die mit `#import` importiert werden.  

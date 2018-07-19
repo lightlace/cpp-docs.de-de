@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359917"
 ---
 # <a name="threading-models-and-critical-sections-classes"></a>Threading, Modelle und kritische Abschnitte-Klassen
 Die folgenden Klassen definieren eine threading Modell- und kritischen Abschnitt:  

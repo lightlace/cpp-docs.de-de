@@ -1,5 +1,5 @@
 ---
-title: Mit Benutzeroberflächenobjekten verknüpfte Meldungstypen | Microsoft Docs
+title: Mit Benutzeroberflächenobjekten verknüpfte Meldungstypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14a2309556ca6c5204247ccbe916aebe472a1da1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7ecc948910dd618f343134b0e9e3133539d9e1f
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335479"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>Mit Benutzeroberflächenobjekten verknüpfte Meldungstypen
-Die folgende Tabelle zeigt die Typen von Objekten, mit denen Sie arbeiten, und den Nachrichtentypen zugeordnet.  
+Die folgende Tabelle zeigt die Typen von Objekten, die mit denen Sie arbeiten, und die Typen von Nachrichten, die zugeordnet werden.  
   
-### <a name="user-interface-objects-and-associated-messages"></a>Benutzeroberflächenobjekte und zugeordneten Nachrichten  
+### <a name="user-interface-objects-and-associated-messages"></a>Benutzeroberflächenobjekte und die zugehörigen Meldungen  
   
 |Objekt-ID|Mitteilungen|  
 |---------------|--------------|  
-|Klassennamen, die des enthaltenden Fensters darstellt.|Windows-Meldungen gemäß einer [CWnd](../../mfc/reference/cwnd-class.md)-abgeleitete Klasse: ein Dialogfeld, Fenster, untergeordnetes Fenster, untergeordnetes MDI-Fenster oder Rahmenfenster der obersten Ebene.|  
-|Menü oder die Tastenkombination Bezeichner|-   **Befehl** Nachricht (die Programmfunktion ausgeführt).<br />-   **UPDATE_COMMAND_UI** Nachricht (dynamisch aktualisiert das Menüelement).|  
-|Steuerelement-ID|Benachrichtigungsmeldungen des Registersteuerelements für den ausgewählten Steuerelementtyp.|  
+|Klassennamen, die Darstellung des enthaltenden Fensters|Windows-Nachrichten geeignet, um eine [CWnd](../../mfc/reference/cwnd-class.md)-Klasse: ein Dialogfeld, Fenster, untergeordnetes Fenster, untergeordneten MDI-Fensters oder Rahmenfenster der obersten Ebene.|  
+|Menü oder die Tastenkombination-Bezeichner|-COMMAND-Nachricht (die Programmfunktion ausgeführt).<br />-Wähle ich UPDATE_COMMAND_UI Nachricht (aktualisiert das Menüelement dynamisch).|  
+|Steuerelement-ID|Benachrichtigungsmeldungen des Registersteuerelements für den Typ des ausgewählten Steuerelements.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zuordnen von Meldungen zu Funktionen](../../mfc/reference/mapping-messages-to-functions.md)   
- [Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class (Hinzufügen einer Klasse)](../../ide/adding-a-class-visual-cpp.md)   
  [Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)   
- [Hinzufügen einer Membervariablen](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Überschreiben einer virtuellen Funktion](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC-Meldungshandler](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navigieren in der Klassenstruktur](../../ide/navigating-the-class-structure-visual-cpp.md)
+ [Adding a Member Variable (Hinzufügen einer Membervariablen)](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function (Überschreiben einer virtuellen Funktion)](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler (MFC-Meldungshandler)](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure (Navigieren in der Klassenstruktur)](../../ide/navigating-the-class-structure-visual-cpp.md)

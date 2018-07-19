@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 127e1d4d39a79350dc050e1b9fb7636bce63c156
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c5c47f91a3e029175d40bd1a762fb6e6ff527ee7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955813"
 ---
 # <a name="gslice-class"></a>gslice-Klasse
 
@@ -38,9 +39,9 @@ Die Klasse speichert die Parameter, die ein Objekt des Typs [gslice_array](../st
 
 - Einen Startindex.
 
-- Ein Längenvektor der Klasse **valarray<size_t>**.
+- Ein Längenvektor der Klasse `valarray<size_t>`.
 
-- Ein Sprungvektor der Klasse **valarray<size_t>**.
+- Ein sprungvektor der Klasse `valarray<size_t>`.
 
 Die beiden Vektoren müssen dieselbe Länge haben.
 
@@ -83,19 +84,19 @@ gslice(
 
 ### <a name="parameters"></a>Parameter
 
-`_StartIndex` Der Valarray Index des ersten Elements in der Teilmenge.
+*_StartIndex* der Valarray-Index des ersten Elements in der Teilmenge.
 
-`_LenArray` Ein Array, das die Anzahl der Elemente in jedem Slice angeben.
+*_LenArray* ein Array, die Anzahl der Elemente in jedem Segment angibt.
 
-`_IncArray` Ein Array der Stride in jedem Slice angeben.
+*_IncArray* ein Array, das Segment in jedem Segment angibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Standardkonstruktor speichert 0 (null) für den Startindex und leere Vektoren für die Längen- und Sprungvektoren. Der zweite Konstruktor speichert `_StartIndex` für den Startindex, `_LenArray` für das Längenarray und `_IncArray` für das Sprungarray.
+Der Standardkonstruktor speichert 0 (null) für den Startindex und leere Vektoren für die Längen- und Sprungvektoren. Der zweite Konstruktor speichert *_StartIndex* für den Startindex, *_LenArray* für das Längenarray und *_IncArray* für das sprungarray.
 
 ### <a name="remarks"></a>Hinweise
 
-**gslice** definiert eine Teilmenge eines valarray, die aus mehreren Segmenten des valarray besteht, und die jeweils am gleichen angegebenen Element beginnen. Die Möglichkeit, Arrays zu verwenden, um mehrere Segmente zu definieren, ist der einzige Unterschied zwischen `gslice` und [slice:: slice](../standard-library/slice-class.md#slice). Das erste Segment verfügt über ein erstes Element mit einem Index `_StartIndex`, eine Anzahl an Elementen, die vom ersten Element `_LenArray` aufgeführt wurden, und ein Sprung vom ersten Element `_IncArray`. Der erste Satz der orthogonalen Segmente hat erste Elemente, die durch das erste Segment angegeben wurden. Das zweite Element `_LenArray` gibt die Anzahl der Elemente an. Der Sprung wird durch das zweite Element `_IncArray` angegeben. Eine dritte Dimension der Segmente würde die Elemente des zweidimensionalen Arrays als Startelemente nehmen und analog verfahren.
+**gslice** definiert eine Teilmenge eines valarray, die aus mehreren Segmenten des valarray besteht, und die jeweils am gleichen angegebenen Element beginnen. Die Möglichkeit, Arrays zu verwenden, um mehrere Segmente zu definieren, ist der einzige Unterschied zwischen `gslice` und [slice:: slice](../standard-library/slice-class.md#slice). Das erste Segment verfügt über ein erstes Element mit dem Index *_StartIndex*, eine angegebene Anzahl von Elementen durch das erste Element der *_LenArray*, und ein Sprung durch das erste Element der *_IncArray* . Der erste Satz der orthogonalen Segmente hat erste Elemente, die durch das erste Segment angegeben wurden. Das zweite Element der *_LenArray* gibt die Anzahl der Elemente. Der Sprung wird durch das zweite Element der *_IncArray*. Eine dritte Dimension der Segmente würde die Elemente des zweidimensionalen Arrays als Startelemente nehmen und analog verfahren.
 
 ### <a name="example"></a>Beispiel
 

@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841659"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Ausführen als Mitglied der Gruppe Benutzer
 Dieses Thema zeigt, wie Sie durch Konfigurieren von Windows-Benutzerkonten als ein Mitglied der Gruppe Benutzer (im Gegensatz zur Gruppe Administratoren) die Sicherheit erhöhen und die Wahrscheinlichkeit einer Infektion mit bösartigem Code verringern.  

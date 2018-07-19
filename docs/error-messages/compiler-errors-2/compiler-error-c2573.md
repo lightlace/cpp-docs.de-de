@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232286"
 ---
 # <a name="compiler-error-c2573"></a>Compilerfehler C2573
 'Klasse': Zeiger auf diesen Objekttyp können nicht gelöscht werden. Die Klasse besitzt keine nicht positionierte Überladung für den Operator 'delete'.  

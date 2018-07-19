@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878904"
 ---
 # <a name="generics-and-templates-visual-c"></a>Generika und Vorlagen (Visual C++)
 Generika und Vorlagen sind beide Sprachfunktionen, die parametrisierte Typen unterstützen. Allerdings unterscheiden sich und andere verwendet haben. Dieses Thema enthält eine Übersicht über die viele Unterschiede.  

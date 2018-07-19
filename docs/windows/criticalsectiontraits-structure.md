@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870550"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits-Struktur
 Spezialisiert ein CriticalSection-Objekt, um einen ungültigen kritischen Abschnitt oder eine Funktion zum Freigeben eines kritischen Abschnitts zu unterstützen.  

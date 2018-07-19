@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890429"
 ---
 # <a name="stand-alone-attributes"></a>Eigenständige Attribute
 Ein eigenständiges Attribut kann nicht ausgeführt werden, auf ein C++-Schlüsselwort jedoch eher wie eine Codezeile ist. Eigenständiges Attribut-Anweisungen erfordern ein Semikolon am Ende der Zeile.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100144"
 ---
 # <a name="ctable-class"></a>CTable-Klasse
 Bietet eine Möglichkeit, direkt ein einfaches Rowsets (eine ohne Parameter) zuzugreifen.  

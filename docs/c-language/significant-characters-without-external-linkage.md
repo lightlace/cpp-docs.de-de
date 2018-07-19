@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385233"
 ---
 # <a name="significant-characters-without-external-linkage"></a>Signifikante Zeichen ohne externe Bindung
 **ANSI 3.1.2** Die Anzahl von signifikanten Zeichen ohne externe Verknüpfung  

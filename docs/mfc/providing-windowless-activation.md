@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a42d952ade479c4eb117d21921c9b0feafb81cea
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931950"
 ---
 # <a name="providing-windowless-activation"></a>Bereitstellung von fensterloser Aktivierung
-Fenster Erstellung Code (d. h. alle beim Aufruf von **CreateWindow**) beeinträchtigen ausführen. Ein Steuerelement, das verwaltet ein Fenster auf dem Bildschirm hat, um Nachrichten für das Fenster zu verwalten. Fensterlose Steuerelemente sind deshalb schneller als Steuerelemente in Windows.  
+Fenster Erstellung Code (d. h. alle beim Aufruf von `CreateWindow`) beeinträchtigen ausführen. Ein Steuerelement, das verwaltet ein Fenster auf dem Bildschirm hat, um Nachrichten für das Fenster zu verwalten. Fensterlose Steuerelemente sind deshalb schneller als Steuerelemente in Windows.  
   
  Ein weiterer Vorteil der fensterlose Steuerelemente ist, dass im Gegensatz zu Fensterfunktionen Steuerelemente Fensterlose Steuerelemente transparent zeichnen und nicht rechteckige Bildschirmbereiche unterstützt. Ein allgemeines Beispiel für ein Steuerelement transparent ist ein Text-Steuerelement mit einem transparenten Hintergrund. Die Steuerelemente zeichnet den Text, jedoch nicht auf den Hintergrund, damit zeigt, was unter dem Text ist durch. Neuere Forms stellen häufig nicht rechteckige Steuerelemente, z. B. Pfeilen verwenden und runde Schaltflächen.  
   
@@ -40,7 +41,7 @@ Fenster Erstellung Code (d. h. alle beim Aufruf von **CreateWindow**) beeinträc
   
  Der Code auf dieses Flag einschließen, wird automatisch generiert, wenn Sie die Option der **fensterlose Aktivierung** auf die option der [Steuerelementeinstellungen](../mfc/reference/control-settings-mfc-activex-control-wizard.md) Seite des MFC-ActiveX-Steuerelement-Assistenten.  
   
- Wenn fensterloser Aktivierung aktiviert ist, wird der Container eingehende Nachrichten an des Steuerelements Delegieren `IOleInPlaceObjectWindowless` Schnittstelle. `COleControl`die Implementierung dieser Schnittstelle übermittelt die Nachrichten über das Steuerelement meldungszuordnung, nach dem Anpassen der Maus entsprechend koordiniert. Sie können die Nachrichten wie gewöhnliche fenstermeldungen, verarbeiten, durch Hinzufügen der entsprechenden Einträge in die meldungszuordnung. Vermeiden Sie in Ihrer Handler für diese Nachrichten, die Verwendung der `m_hWnd` Membervariablen gespeichert (oder eine Memberfunktion leiten, der verwendet wird) ohne zunächst geprüft wird, die ihr Wert nicht ist **NULL**.  
+ Wenn fensterloser Aktivierung aktiviert ist, wird der Container eingehende Nachrichten an des Steuerelements Delegieren `IOleInPlaceObjectWindowless` Schnittstelle. `COleControl`die Implementierung dieser Schnittstelle übermittelt die Nachrichten über das Steuerelement meldungszuordnung, nach dem Anpassen der Maus entsprechend koordiniert. Sie können die Nachrichten wie gewöhnliche fenstermeldungen, verarbeiten, durch Hinzufügen der entsprechenden Einträge in die meldungszuordnung. Vermeiden Sie in Ihrer Handler für diese Nachrichten, die Verwendung der *M_hWnd* Membervariablen gespeichert (oder eine Memberfunktion leiten, der verwendet wird) ohne zunächst geprüft wird, die ihr Wert nicht ist **NULL**.  
   
  `COleControl` bietet Memberfunktionen, die Mausauswahl, den Tastaturfokus, Durchführen eines Bildlaufs und andere Fensterdienste aus dem Container nach Bedarf, einschließlich aufrufen:  
   

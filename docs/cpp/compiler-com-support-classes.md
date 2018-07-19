@@ -1,5 +1,5 @@
 ---
-title: Compilerunterstützung für COM-Klassen | Microsoft Docs
+title: Compilerunterstützung für die COM-Klassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4fe4e7c26d1b32f16d524407279e5e71534d00c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eba4ae92f9db67dfff58ec111b294b6cd26eff5a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939818"
 ---
 # <a name="compiler-com-support-classes"></a>Compilerklassen für COM-Unterstützung
 **Microsoft-spezifisch**  
   
- Standardklassen werden verwendet, um einige der COM-Typen zu unterstützen. Die Klassen sind in definiert \<comdef.h > und den Headerdateien, die aus der Typbibliothek generiert.  
+ Standardklassen werden verwendet, um einige der COM-Typen zu unterstützen. Die Klassen definiert sind, im \<comdef.h > und den Headerdateien, die aus der Typbibliothek generiert.  
   
 |Klasse|Zweck|  
 |-----------|-------------|  
 |[_bstr_t](../cpp/bstr-t-class.md)|Umschließt den `BSTR`-Typ, um hilfreiche Operatoren und Methoden bereitzustellen.|  
-|[_com_error](../cpp/com-error-class.md)|Definiert das Fehlerobjekt ausgelöste [_com_raise_error](../cpp/com-raise-error.md) bei den meisten Fehlern.|  
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Kapselt COM-Schnittstellenzeiger und automatisiert die erforderlichen Aufrufe von `AddRef`, **Release**, und `QueryInterface`.|  
-|[_variant_t](../cpp/variant-t-class.md)|Dient als Wrapper für die **VARIANT** Typ, um hilfreiche Operatoren und Methoden bereitzustellen.|  
+|[_com_error](../cpp/com-error-class.md)|Definiert das Fehlerobjekt, das ausgelöst wird, indem [_com_raise_error](../cpp/com-raise-error.md) bei den meisten Fehlern.|  
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Kapselt COM-Schnittstellenzeiger und automatisiert die erforderlichen Aufrufe von `AddRef`, `Release`, und `QueryInterface`.|  
+|[_variant_t](../cpp/variant-t-class.md)|Umschließt den `VARIANT`-Typ, um hilfreiche Operatoren und Methoden bereitzustellen.|  
   
 **Ende Microsoft-spezifisch**  
   

@@ -1,5 +1,5 @@
 ---
-title: Ändern der Signatur | Microsoft Docs
+title: Ändern der Signatur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -11,68 +11,69 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33335090"
 ---
 # <a name="change-signature"></a>Signatur ändern
-**Was:** können Sie die Parameter einer Funktion zu ändern.
+**Zweck:** Ändern der Parameter einer Funktion.
 
-**Wann:** Sie verwenden möchten, neu anordnen, hinzufügen, entfernen oder ändern Sie die Parameter für eine Funktion, die zurzeit in einer Vielzahl von Standorten verwendet wird.  
+**Wann:** Wenn Sie die Parameter einer Funktion neu anordnen, hinzufügen, entfernen oder ändern möchten, die derzeit an vielen Stellen verwendet wird.  
 
-**Grund:** Sie konnte manuell ändern diese Parameter selbst, und klicken Sie dann Suchen aller Aufrufe dieser Funktion und geändert werden, indem nacheinander, aber, die zu Fehlern führen.  Bei diesem Refactoringtool wird der Task automatisch ausgeführt.
+**Grund:** Sie können diese Parameter eigenhändig manuell ändern und dann alle Aufrufe dieser Funktion suchen und nacheinander ändern, was jedoch zu Fehlern führen kann.  Bei diesem Refactoringtool wird der Task automatisch ausgeführt.
 
 **Vorgehensweise**:
 
-1. Platzieren Sie den Text oder mit dem Mauszeiger Cursor innerhalb der Name der die Methode zum Ändern oder eines seiner Verwendungen:
+1. Platzieren Sie Ihren Text oder Mauszeiger auf dem Namen der zu ändernden Methode oder auf einer deren Verwendungen:
 
    ![Markierter Code](images/changesignature_highlight.png)
 
 1. Führen Sie dann eine der folgenden Aktionen aus:
    * **Tastatur**
-     * Drücken Sie **STRG + R**, klicken Sie dann **STRG + O**.  (Beachten Sie, dass Ihre Tastenkombination je nach dem gewählten Profil möglicherweise abweicht.)
-     * Drücken Sie **STRG+.**, Trigger die **Schnellaktionen und Refactorings** Menü **Signatur ändern** aus dem Kontextmenü.
+     * Drücken Sie **STRG+R** und dann **STRG+O**.  (Beachten Sie, dass Ihre Tastenkombination je nach dem gewählten Profil möglicherweise abweicht.)
+     * Drücken Sie **STRG+.**, um das Menü **Schnellaktionen und Refactorings** aufzurufen, und klicken Sie im Kontextmenü auf **Signatur ändern**.
    * **Maus**
      * Wählen Sie **Bearbeiten > Umgestalten > Parameter neu anordnen** aus.
-     * Mit der rechten Maustaste in des Codes, wählen Sie die **Schnellaktionen und Refactorings** Menü **Signatur ändern** aus dem Kontextmenü.
+     * Klicken Sie mit der rechten Maustaste auf den Code, und klicken Sie auf das Menü **Schnellaktionen und Refactorings**, klicken Sie dann im Kontextmenü auf **Signatur ändern**.
 
 1. Mit den Schaltflächen auf der rechten Seite im angezeigten Dialogfeld **Signatur ändern** können Sie die Methodensignatur ändern:
 
    ![Dialogfeld „Signatur ändern“](images/changesignature_dialog.png)
 
-   | Schaltfläche | Beschreibung
+   | Schaltfläche | description
    | ------ | ---
    | **Nach oben/unten**    | Den ausgewählten Parameter in der Liste nach oben oder nach unten verschieben
-   | **Add**        | Fügen Sie der Liste einen neuen Parameter hinzu
+   | **Add**        | Hinzufügen eines neuen Parameters zur Liste
    | **Entfernen**     | Den ausgewählten Parameter aus der Liste entfernen
-   | **Ändern Sie**     | Ändern Sie den ausgewählten Parameter durch Ändern seines Typs für Namen und optional, und was mit der eingefügte Wert wäre
-   | **Wiederherstellen**     | Wiederherstellen der ausgewählten Parameters den ursprünglichen Zustand
-   | **Alle zurücksetzen** | Alle Parameter in ihren ursprünglichen Zustand wiederherstellen
+   | **Ändern**     | Ändern Sie den Typ und Namen des ausgewählten Parameters, und geben Sie an, ob er optional ist und was sein eingefügter Wert wäre
+   | **Zurücksetzen**     | Den ursprünglichen Zustand des ausgewählten Parameters wiederherstellen
+   | **Alle zurücksetzen** | Den ursprünglichen Zustand aller Parameter wiederherstellen
 
    > [!TIP]
-   > Verwenden der **Skip Preview Verweis ändert, wenn alle Verweise bestätigt werden** Kontrollkästchen, um die Änderungen sofort ohne zuerst das herunternehmen Vorschaufenster vornehmen.
+   > Verwenden Sie das Kontrollkästchen **Vorschau der Verweisänderungen überspringen, wenn alle Verweise bestätigt sind**, um die Änderungen sofort anzuwenden, ohne dass erst das Vorschaufenster angezeigt wird.
 
-   Beim Hinzufügen oder Ändern eines Parameters, sehen Sie die **Parameter hinzufügen** oder **Parameter bearbeiten** Fenster.
+   Beim Hinzufügen oder Ändern eines Parameters wird das Fenster **Parameter hinzufügen** oder das Fenster **Parameter bearbeiten** angezeigt.
 
    ![Parameter hinzufügen/ändern](images/changesignature_addmodify.png)
 
-   Hier können Sie Folgendes tun:
+   Hier stehen Ihnen folgende Optionen zur Verfügung:
 
-   | Eingabe | Beschreibung
+   | Eingabe | description
    | ----- | ---
-   | **Type**               | Der Typ des Parameters (Int, double, float usw..)
+   | **Type**               | Der Typ des Parameters (int, double, float usw.)
    | **Name**               | Der Name des Parameters
-   | **Optionale Parameter** | Stellt die Parameter, die optional angegeben werden
-   | **Eingefügten Wert**     | Der Wert eingefügt alle Aufrufe an die Funktion, in dem der Parameter wurde nicht angegeben (nur gültig für **hinzufügen**)
-   | **Standardwert**      | Der Wert, der von der Funktion verwendet werden, wenn der Aufrufer nicht angeben (nur gültig für **optionale Parameter**)
+   | **Optionaler Parameter** | Legt fest, dass der Parameter optional angegeben wird
+   | **Eingefügter Wert**     | Der Wert, der in alle Aufrufe der Funktion eingefügt wird, für die der Parameter nicht angegeben wird (nur für **Hinzufügen** gültig)
+   | **Standardwert**      | Der Wert, den die Funktion verwendet, wenn der Aufrufer keinen angibt (nur für **optionale Parameter** gültig)
 
-1. Verwenden der **Suchbereich** Dropdown-Liste auswählen, wenn die Änderungen auf das Projekt oder die gesamte Lösung angewendet werden.
+1. Verwenden Sie die Dropdownliste **Suchbereich**, um auszuwählen, ob Änderungen auf das Projekt oder auf die gesamte Projektmappe angewendet werden.
 
-1. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **OK**, um die Änderungen zu übernehmen.  Stellen Sie sicher, dass die Änderungen auf die angeforderte entsprechend durchgeführt werden.  Verwenden Sie die Kontrollkästchen aktivieren oder deaktivieren das Umbenennen eines Elements in der oberen Hälfte des Fensters.
+1. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **OK**, um die Änderungen zu übernehmen.  Stellen Sie sicher, dass die von Ihnen angeforderten Änderungen ordnungsgemäß durchgeführt werden.  Verwenden Sie die Kontrollkästchen in der oberen Hälfte des Fensters, um das Umbenennen von Elementen zu aktivieren oder zu deaktivieren.
 
-   ![Ändern der Signatur-Vorschau](images/changesignature_preview.png)
+   ![Vorschau der Änderung einer Signatur](images/changesignature_preview.png)
 
-1. Wenn alles gut aussieht, klicken Sie auf die **übernehmen** Schaltfläche und die Funktion werden in Ihrem Quellcode geändert werden.
+1. Klicken Sie auf die Schaltfläche **Anwenden**, wenn Sie fertig sind, um die Funktion in Ihrem Quellcode zu ändern.
 
    ![Ergebnis der Aktion zum Ändern einer Signatur](images/changesignature_result.png)

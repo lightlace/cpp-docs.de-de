@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348890"
 ---
 # <a name="processing-header-control-notifications"></a>Verarbeiten von Benachrichtigungen des Headersteuerelements
 Verwenden Sie in Ihrer Klasse Ansichts- oder Dialogfeldobjekt des Eigenschaftenfensters zum Erstellen einer [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) Handlerfunktion mit einer Switch-Anweisung für eine beliebige Headersteuerelement ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) benachrichtigungsmeldungen werden sollen verarbeiten (siehe [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md)). Benachrichtigungen werden an das übergeordnete Fenster gesendet, wenn der Benutzer klickt oder ein Headerelement zieht ein Unterteiler zwischen Elementen und So weiter doppelklickt.  

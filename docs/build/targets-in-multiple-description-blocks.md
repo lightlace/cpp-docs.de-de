@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380287"
 ---
 # <a name="targets-in-multiple-description-blocks"></a>Ziele in mehreren Beschreibungsblöcken
 Um ein Ziel in mehr als eine Beschreibungsblock mit anderen Befehlen zu aktualisieren, geben Sie zwei aufeinander folgende Doppelpunkte (:)) zwischen Zielen und abhängigen Elemente.  

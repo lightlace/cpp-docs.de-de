@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b19ac68f1d1db9ac73e0519b566f68443775db11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1dc03a9d8f5f11b08ab2d5cb9d21190ac0a75925
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962672"
 ---
 # <a name="maskarray-class"></a>mask_array-Klasse
 
@@ -30,11 +31,11 @@ Eine interne zusätzliche Vorlagenklasse, die Objekte, die Teilmengen von überg
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse beschreibt ein Objekt, das einen Verweis auf ein Objekt **va** der Klasse [valarray](../standard-library/valarray-class.md)**\<Type>** zusammen mit einem Objekt **ba** der Klasse [valarray\<bool>](../standard-library/valarray-bool-class.md) speichert, das die Reihenfolge der Elemente beschreibt, die im **valarray\<Type>**-Objekt ausgewählt werden sollen.
+Die Klasse beschreibt ein Objekt, das einen Verweis auf ein Objekt speichert `va` Klasse [Valarray](../standard-library/valarray-class.md)**\<Typ >**, zusammen mit einem Objekt `ba` Klasse [ valarray-Objekt\<Bool >](../standard-library/valarray-bool-class.md), die beschreibt, der Reihenfolge der Elemente aus der `valarray<Type>` Objekt.
 
-Sie erstellen ein **mask_array\<Type>**-Objekt nur, indem Sie einen Ausdruck der Form [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at) schreiben. Die Memberfunktionen der Klasse „mask_array“ verhalten sich dann wie die entsprechenden Funktionssignaturen, die für **valarray\<Type>** definiert sind, mit der Ausnahme, dass nur die Reihenfolge der ausgewählten Elemente betroffen ist.
+Sie erstellen eine `mask_array<Type>` -Objekt nur, indem Sie das Schreiben eines Ausdrucks des Formulars [va&#91;Ba&#93;](../standard-library/valarray-class.md#op_at). Die Memberfunktionen der Mask_array-Klasse Verhalten sich dann wie die entsprechenden Funktionssignaturen für definiert `valarray<Type>`, außer dass nur die Reihenfolge der ausgewählten Elemente betroffen ist.
 
-Die Reihenfolge besteht aus höchstens **ba.size** -Elementen. Ein Element *J* ist nur enthalten, wenn **ba**[ *J*] gleich „true“ ist. Daher gibt es in der Reihenfolge so viele Elemente, wie es „true“-Elemente in **ba**gibt. Wenn `I` der Index des kleinsten „true“-Elements in **ba**ist, dann ist **va**[ `I`] das Element 0 (null) in der ausgewählten Reihenfolge.
+Die Sequenz besteht aus höchstens `ba.size` Elemente. Ein Element *J* ist nur enthalten, wenn **ba**[ *J*] gleich „true“ ist. Es gibt also beliebig viele Elemente in der Sequenz vorhanden sind "true"-Elemente in `ba`. Wenn `I` ist der Index des kleinsten "true"-Elements in `ba`, klicken Sie dann **va**[ `I`] ist Element 0 (null) in der ausgewählten Reihenfolge.
 
 ## <a name="example"></a>Beispiel
 

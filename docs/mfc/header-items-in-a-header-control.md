@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344921"
 ---
 # <a name="header-items-in-a-header-control"></a>Headerelemente in einem Headersteuerelement
 Sie haben erhebliche Kontrolle über das Aussehen und Verhalten des Header-Elemente, die dem Headersteuerelement bilden ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). Jeder Headerelement kann verfügen, eine Zeichenfolge, eine Bitmap, ein Bild aus einer Bildliste verknüpft oder eine anwendungsdefinierte 32-Bit-Wert zugeordnet. Die Zeichenfolge, Bitmap oder Bild wird im Headerelement angezeigt.  

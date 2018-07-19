@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383435"
 ---
 # <a name="implementation-defined-behavior"></a>Von der Implementierung abhängiges Verhalten
 ANSI X3.159-1989 (*American National Standard for Information Systems* - *Programming Language* - *C*) enthält einen Abschnitt zu „Portabilitätsproblemen“. Der ANSI-Abschnitt führt die Bereiche der Programmiersprache C auf, die ANSI für bestimmte Implementierungen offen lässt. In diesem Abschnitt wird beschrieben, wie in Microsoft C diese durch die Implementierung definierten Bereiche der Programmiersprache C behandelt werden.  

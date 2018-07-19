@@ -1,5 +1,5 @@
 ---
-title: COM-Module-Klassen (ATL) | Microsoft Docs
+title: COM-Modulklassen (ATL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abf5449135bd0220f82400aed5e1c0aba0b90591
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8485f9565c75796cdb7a10f303469c1393b9f55f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958217"
 ---
-# <a name="com-modules-classes"></a>Klassen für COM-Module
+# <a name="com-modules-classes"></a>COM-Modulklassen
 Die folgenden Klassen bieten Unterstützung für ein COM-Modul:  
   
 -   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) in jedem ATL-Projekt wird diese Klasse instanziiert.  
   
--   [CAtlComModule](../atl/reference/catlcommodule-class.md) diese Klasse implementiert eine COM-Server-Modul.  
+-   [CAtlComModule](../atl/reference/catlcommodule-class.md) diese Klasse implementiert, ein COM-Server-Modul.  
   
--   [Von CAtlModule](../atl/reference/catlmodule-class.md) diese Klasse enthält Methoden, die von mehreren ATL-Modulklassen verwendet.  
+-   [CAtlModule](../atl/reference/catlmodule-class.md) diese Klasse stellt Methoden, die von mehreren ATL-Modulklassen verwendet.  
   
--   [CAtlModuleT](../atl/reference/catlmodulet-class.md) diese Klasse implementiert eine ATL-Modul.  
+-   [CAtlModuleT](../atl/reference/catlmodulet-class.md) diese Klasse implementiert ein ATL-Modul.  
   
 -   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) diese Klasse stellt das Modul für eine Anwendung dar.  
   
--   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) einen Dienst für diese Klasse implementieren.  
+-   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) diese Klasse implementiert, einen Dienst.  
   
--   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) diese Klasse bietet Unterstützung für ATL Windowing-Komponenten.  
+-   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) diese Klasse bietet Unterstützung für ATL-Windowing-Komponenten.  
   
--   [CComModule](../atl/reference/ccommodule-class.md) diese Klasse implementiert, ein Modul-DLL oder EXE-Datei. Veraltet in ATL 7.0.  
+-   [CComModule](../atl/reference/ccommodule-class.md) diese Klasse implementiert, ein Modul DLL oder EXE-Datei. Veraltet in ATL 7.0.  
   
--   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) diese Klasse implementiert eine EXE-Modul mit Unterstützung für mehrere in einem Thread-Pool Apartments. Veraltet in ATL 7.0.  
+-   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) diese Klasse implementiert eine EXE-Modul, mit Unterstützung für mehrere Thread Pooling-Apartments. Veraltet in ATL 7.0.  
   
 ## <a name="related-articles"></a>Verwandte Artikel  
  [ATL-Modulklassen](../atl/atl-module-classes.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../atl/atl-class-overview.md)   
+ [Übersicht über die Klasse](../atl/atl-class-overview.md)   
  [Modulklassen](../atl/atl-module-classes.md)
 

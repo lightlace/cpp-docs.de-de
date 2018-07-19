@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110167"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Einlesen von Zeichenfolgen in den OLE DB-Anbieter
 Die `RMyProviderRowset::Execute` -Funktion öffnet eine Datei und liest Zeichenfolgen. Der Consumer übergibt den Dateinamen an dem Anbieter durch Aufrufen von [ICommandText:: SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). Der Anbieter empfängt den Dateinamen und speichert ihn in die Membervariable `m_szCommandText`. `Execute` liest den Dateinamen aus `m_szCommandText`. Wenn der Dateiname ungültig ist oder die Datei nicht verfügbar ist, `Execute` gibt einen Fehler zurück. Andernfalls die Datei und ruft Eröffnung `fgets` Zeichenfolgen abgerufen. Für jede von Zeichenfolgen er liest, legen Sie `Execute` erstellt eine Instanz des Benutzerdatensatzes (`CAgentMan`) und platziert es in ein Array.  

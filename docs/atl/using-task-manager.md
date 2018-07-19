@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361029"
 ---
 # <a name="using-task-manager"></a>Mit dem Task-Manager
 Einer der einfachsten Methoden zum Debuggen eines Diensts wird durch die Verwendung von Task-Manager. Während der Dienst ausgeführt wird, starten Sie den Task-Manager, und klicken Sie auf die **Prozesse** Registerkarte. Mit der rechten Maustaste in des Namens der EXE-Datei, und klicken Sie dann auf **Debuggen**. Dadurch wird die Visual C++, die für den jeweiligen ausgeführten Prozess angefügt. Klicken Sie nun auf **unterbrechen** auf die **Debuggen** Menü, sodass Sie Haltepunkte im Code festgelegt werden können. Klicken Sie auf **ausführen** zum ausgewählten Haltepunkte ausführen.  

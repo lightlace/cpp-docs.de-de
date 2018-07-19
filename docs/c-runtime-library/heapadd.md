@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390046"
 ---
 # <a name="heapadd"></a>_heapadd
 Fügt dem Heap Arbeitsspeicher hinzu.  

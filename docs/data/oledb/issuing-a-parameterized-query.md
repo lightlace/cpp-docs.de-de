@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104574"
 ---
 # <a name="issuing-a-parameterized-query"></a>Ausgeben einer parametrisierten Abfrage
 Im folgende Beispiel stellt eine einfache parametrisierte Abfrage, die Datensätze mit einer Altersfeld (, das größer als 30 ist) aus einer Tabelle in einer Microsoft Access-Datenbank abruft. Um den Parameter zu unterstützen, muss der Benutzerdatensatz eine weitere Zuordnung haben. Der folgende Code in einem ATL-Projekt verwendet die `CCommand` -Klasse statt der `CTable` im vorherigen Beispiel verwendete Klasse [Durchlaufen eines einfachen Rowsets](../../data/oledb/traversing-a-simple-rowset.md).  

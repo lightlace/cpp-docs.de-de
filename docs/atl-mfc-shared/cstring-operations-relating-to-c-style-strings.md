@@ -1,5 +1,5 @@
 ---
-title: CString-Vorgänge im Zusammenhang mit Zeichenfolgen im C-Stil | Microsoft Docs
+title: CString-Vorgänge im Zusammenhang mit Zeichenfolgen im C-Stil | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,20 +25,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d0683f82204b11d06b1952913d4dbdb1e4a468d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58e4d0b4bf9626d41aa14ff2350ea5132d1637df
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884505"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>CString-Vorgänge bei Zeichenfolgen im C-Format
-Ein [CString](../atl-mfc-shared/using-cstring.md) -Objekt enthält Zeichenfolgendaten. `CString` erbt den Berechtigungssatz der [Methoden und Operatoren](../atl-mfc-shared/reference/cstringt-class.md) , die in der Klassenvorlage definiert [CStringT](../atl-mfc-shared/reference/cstringt-class.md) zur Bearbeitung von Zeichenfolgendaten. (`CString` ist eine `typedef`, die `CStringT` spezialisiert, damit sie mit den Zeichendaten genutzt werden kann, die `CString` unterstützt.)  
+Ein [CString](../atl-mfc-shared/using-cstring.md) -Objekt enthält Zeichenfolgendaten. `CString` übernimmt den Satz an die [Methoden und Operatoren](../atl-mfc-shared/reference/cstringt-class.md) , die in der Klassenvorlage definiert [CStringT](../atl-mfc-shared/reference/cstringt-class.md) zum Arbeiten mit Zeichenfolgendaten. (`CString` ist eine **Typedef** spezialisiert, die `CStringT` für die Art von Zeichendaten, `CString` unterstützt.)  
   
  `CString` werden keine Zeichendaten intern als Null-terminierte Zeichenfolge im C-Format gespeichert. Stattdessen zeichnet `CString` die Länge der Zeichendaten auf, sodass die Daten und der benötigte Speicherplatz besser überwacht werden können.  
   
- `CString` akzeptiert die Zeichenfolgen im C-Stil, und bietet Methoden zum Zugreifen auf Zeichendaten als Zeichenfolge im C-Format. Dieses Thema enthält die folgenden Abschnitte, in denen Sie erfahren, wie Sie ein `CString`-Objekt als auf NULL abschließende Zeichenfolge im C-Format verwenden können.  
+ `CString` akzeptiert Zeichenfolgen im C-Stil, und bietet Möglichkeiten, um auf Zeichendaten als Zeichenfolge im C-Stil. Dieses Thema enthält die folgenden Abschnitte, in denen Sie erfahren, wie Sie ein `CString`-Objekt als auf NULL abschließende Zeichenfolge im C-Format verwenden können.  
   
-- [Konvertieren von auf Null endende Zeichenfolgen im C-Stil](#_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string)  
+- [In C-Stil-Null-terminierte Zeichenfolgen konvertiert werden](#_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string)  
   
 - [Arbeiten mit Funktionen der standard-Laufzeitbibliothek-Zeichenfolgen](#_core_working_with_standard_run.2d.time_library_string_functions)  
   
@@ -48,8 +49,8 @@ Ein [CString](../atl-mfc-shared/using-cstring.md) -Objekt enthält Zeichenfolgen
   
 - [Angeben von formalen CString-Parametern](#_core_specifying_cstring_formal_parameters)  
   
-##  <a name="_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string"></a> Verwenden von CString als Null-terminierte Zeichenfolge im C-Format  
- Um ein `CString`-Objekt als Zeichenfolge im C-Format zu verwenden, wandeln Sie das Objekt in `LPCTSTR` um. Im folgenden Beispiel gibt `CString` einen Zeiger auf eine schreibgeschützte auf NULL abschließende Zeichenfolge im C-Format zurück. Die `strcpy`-Funktion fügt eine Kopie der Zeichenfolge im C-Format in der Variablen `myString` ein.  
+##  <a name="_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string"></a> Verwenden von CString als Null-terminierte Zeichenfolge im C-Stil  
+ Verwenden einer `CString` -Objekt als Zeichenfolge im C-Format, das Objekt, das LPCTSTR umgewandelt. Im folgenden Beispiel gibt `CString` einen Zeiger auf eine schreibgeschützte auf NULL abschließende Zeichenfolge im C-Format zurück. Die `strcpy`-Funktion fügt eine Kopie der Zeichenfolge im C-Format in der Variablen `myString` ein.  
   
 ```  
 CString aCString = "A string";  
@@ -57,19 +58,19 @@ char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```  
   
- Sie können `CString`-Methoden, z. B. `SetAt`, verwenden, um einzelne Zeichen im Zeichenfolgenobjekt zu ändern. Der `LPCTSTR`-Zeiger ist jedoch nur temporär und wird ungültig, wenn Änderungen an `CString` vorgenommen werden. `CString` kann auch den gültigen Bereich verlassen und automatisch gelöscht werden. Wir empfehlen nach jeder Nutzung einen aktuellen `LPCTSTR`-Zeiger eines `CString`-Objekts abzurufen.  
+ Sie können `CString`-Methoden, z. B. `SetAt`, verwenden, um einzelne Zeichen im Zeichenfolgenobjekt zu ändern. Allerdings der LPCTSTR-Zeiger ist temporär und wird ungültig, wenn eine Änderung, um vorgenommen wird `CString`. `CString` kann auch den gültigen Bereich verlassen und automatisch gelöscht werden. Es wird empfohlen, Sie einen neuen LPCTSTR Zeiger von erhalten einem `CString` Objekt jedes Mal, mit dem Sie eine.  
   
  Gelegentlich benötigen Sie eine Kopie der `CString`-Daten, um direkte Änderungen vorzunehmen. Verwenden Sie die sicherere Funktion `strcpy_s` (oder die Unicode/MBCS-portable Funktion `_tcscpy_s`), um das `CString`-Objekt in einen eigenen Puffer zu kopieren. Dort können die Zeichen sicher geändert werden, wie im folgenden Beispiel gezeigt.  
   
  [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]  
   
 > [!NOTE]
->  Das dritte Argument `strcpy_s` (oder das Unicode/MBCS-Portable `_tcscpy_s`) handelt es sich um eine `const wchar_t*` (Unicode) oder ein `const char*` (ANSI). Das oben stehende Beispiel übergibt einen `CString` für dieses Argument. Der C++-Compiler wendet automatisch die Konvertierungsfunktion an, die für die `CString`-Klasse definiert wurde, mit der ein `CString` in einen `LPCTSTR` konvertiert wird. Die Fähigkeit, Umwandlungsvorgänge von einem Typ in einen anderen zu definieren, ist eine der nützlichsten Funktionen von C++.  
+>  Das dritte Argument `strcpy_s` (oder das Unicode/MBCS-Portable `_tcscpy_s`) ist entweder ein `const wchar_t*` (Unicode) oder ein `const char*` (ANSI). Das oben stehende Beispiel übergibt einen `CString` für dieses Argument. Der C++-Compiler wendet automatisch die Konvertierungsfunktion an, die für die `CString`-Klasse definiert wurde, mit der ein `CString` in einen `LPCTSTR` konvertiert wird. Die Fähigkeit, Umwandlungsvorgänge von einem Typ in einen anderen zu definieren, ist eine der nützlichsten Funktionen von C++.  
   
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> Arbeiten mit Funktionen der Standard-Laufzeitbibliothek-Zeichenfolgen  
  Sie sollten eine `CString`-Methode finden können, um einen beliebigen Zeichenfolgenvorgang durchzuführen, für den Sie die standardmäßigen Funktionen fürC-Laufzeit-Bibliothekszeichenfolgen wie `strcmp` (oder das Unicode/MBCS-portable `_tcscmp`) in Betracht ziehen könnten.  
   
- Wenn Sie die C-Laufzeit-Zeichenfolgenfunktionen verwenden müssen, können Sie im _core_using_cstring_as_a_c.2d.style_null.2d.terminated_string beschriebenen Techniken verwenden. Sie können das `CString`-Objekt in einen entsprechenden Zeichenfolgenpuffer im C-Format kopieren, die Vorgänge durchführen und dann die resultierende Zeichenfolge im C-Format wieder einem `CString`-Objekt zuweisen.  
+ Wenn Sie die C-Laufzeit-Zeichenfolgenfunktionen verwenden müssen, können Sie die in _core_using_cstring_as_a_c.2d.style_null.2d.terminated_string beschriebenen Methoden verwenden. Sie können das `CString`-Objekt in einen entsprechenden Zeichenfolgenpuffer im C-Format kopieren, die Vorgänge durchführen und dann die resultierende Zeichenfolge im C-Format wieder einem `CString`-Objekt zuweisen.  
   
 ##  <a name="_core_modifying_cstring_contents_directly"></a> Direktes Ändern von CString-Inhalten  
  In den meisten Situationen sollten Sie `CString`-Memberfunktionen verwenden, um die Inhalte eines `CString`-Objekts zu ändern oder um den `CString` in eine Zeichenfolge im C-Format zu konvertieren.  
@@ -89,14 +90,14 @@ strcpy(myString, (LPCTSTR)aCString);
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> Verwenden von CString-Objekten mit Variablen Argumentsfunktionen  
  Einige C-Funktionen haben eine variable Anzahl an Argumenten. Ein bedeutsames Beispiel ist `printf_s`. Aufgrund der Art und Weise, in der diese Funktion deklariert wird, kann der Compiler sich nicht über den Typ der Argumente sicher sein, und er kann nicht bestimmen, welcher Konvertierungsvorgang für jedes Argument durchgeführt werden muss. Daher ist es sehr wichtig, dass Sie eine explizite Typumwandlung verwenden, wenn Sie ein `CString`-Objekt an eine Funktion übergeben, die eine variable Anzahl an Argumenten haben kann.  
   
- Um ein `CString`-Objekt in einer variablen Argumentsfunktion zu verwenden, wandeln Sie `CString` explizit in eine `LPCTSTR`-Zeichenfolge um, wie im folgenden Beispiel gezeigt.  
+ Verwenden einer `CString` Objekt in einer Variablen argumentsfunktion, wandeln Sie explizit die `CString` auf eine Zeichenfolge ist LPCTSTR, wie im folgenden Beispiel gezeigt.  
   
  [!code-cpp[NVC_ATLMFC_Utilities#190](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_2.cpp)]  
   
 ##  <a name="_core_specifying_cstring_formal_parameters"></a> Angeben von formalen CString-Parametern  
- Bei den meisten Funktionen, die ein Zeichenfolgenargument benötigen, ist es am besten, den formalen Parameter im Funktionsprototypen als einen `const`-Zeiger auf ein Zeichen (`LPCTSTR`) anstelle eines `CString` anzugeben. Wenn ein formaler Parameter als `const`-Zeiger auf ein Zeichen angegeben wird, können Sie entweder einen Zeiger auf ein `TCHAR`-Array, eine Literalzeichenfolge [`"hi there"`], oder ein `CString`-Objekt übergeben. Das `CString`-Objekt wird automatisch in `LPCTSTR` konvertiert. Überall dort, wo Sie einen `LPCTSTR` verwenden können, können Sie auch ein `CString`-Objekt verwenden.  
+ Bei den meisten Funktionen, die ein Zeichenfolgenargument benötigen, ist es am besten, den formalen Parameter im Funktionsprototypen als einen `const`-Zeiger auf ein Zeichen (`LPCTSTR`) anstelle eines `CString` anzugeben. Wenn ein formaler Parameter angegeben wird, als eine `const` Zeiger auf ein Zeichen, können Sie entweder einen Zeiger übergeben, in ein TCHAR-Array, eine Literalzeichenfolge [`"hi there"`], oder ein `CString` Objekt. Die `CString` Objekt wird automatisch in LPCTSTR konvertiert werden. Eine beliebige Stelle, LPCTSTR können, können Sie auch eine `CString` Objekt.  
   
- Sie können auch einen formalen Parameter als einen konstantenzeichenfolgenverweis angeben (d. h. `const CString&`) Wenn das Argument nicht geändert wird. Legen Sie den `const`-Modifizierer ab, wenn die Zeichenfolge mit der Funktion geändert wird. Wenn ein standardmäßiger NULL-Wert gewünscht ist, initialisieren Sie es mit der NULL-Zeichenfolge [`""`], wie nachfolgend beschrieben:  
+ Sie können auch einen formalen Parameter als einen konstantenzeichenfolgenverweis angeben (d. h. `const CString&`) Wenn das Argument nicht geändert wird. Löschen der **const** Modifizierer ab, wenn die Zeichenfolge von der Funktion geändert wird. Wenn ein standardmäßiger NULL-Wert gewünscht ist, initialisieren Sie es mit der NULL-Zeichenfolge [`""`], wie nachfolgend beschrieben:  
   
  [!code-cpp[NVC_ATLMFC_Utilities#191](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_3.cpp)]  
   

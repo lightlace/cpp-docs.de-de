@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686070"
 ---
 # <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num-Funktion
 Die `omp_get_thread_num` Funktion gibt die Thread-Anzahl, innerhalb der Teams des Threads, die Ausführung der Funktion. Die Thread-Anzahl liegt zwischen 0 und **omp_get_num_threads()**-1 (einschließlich). Die master-Thread des Teams ist 0.  

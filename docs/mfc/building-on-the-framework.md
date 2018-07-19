@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341553"
 ---
 # <a name="building-on-the-framework"></a>Erstellen im Framework
 Aufgaben bei der Konfiguration einer Anwendung mit dem MFC-Framework besteht darin, den anwendungsspezifischen Quellcode angeben und zum Verbinden der Komponenten definieren, welche Meldungen und Befehle, die auf die sie reagieren. Sie verwenden die C++-Sprache und die C++-Standardtechniken von von der Klassenbibliothek bereitgestellten eigene anwendungsspezifische Klassen abgeleitet werden, außer Kraft setzen und das Verhalten der Basisklasse erweitern.  

@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60e42aedd406e7478db83ecddca7d8b82230abc5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951993"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: Benutzereigene DFX-Routinen für DAO-Datenbankklassen
 > [!NOTE]
@@ -133,19 +134,19 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 |Vorgang|Beschreibung|  
 |---------------|-----------------|  
-|**AddToParameterList**|Parameter-Klausel erstellt|  
-|**AddToSelectList**|Builds SELECT-Klausel|  
-|**BindField**|Richtet Bindungsstruktur|  
-|**BindParam**|Legt Parameterwerte|  
-|**Fixup**|Legt die NULL-status|  
-|**AllocCache**|Ordnet der Cache für fehlerhafte Überprüfung|  
-|**StoreField**|Speichert aktuellen Datensatz cache|  
-|**LoadField**|Wiederherstellungen Cache Elementwerten|  
-|**FreeCache**|Cache frei|  
+|`AddToParameterList`|Parameter-Klausel erstellt|  
+|`AddToSelectList`|Builds SELECT-Klausel|  
+|`BindField`|Richtet Bindungsstruktur|  
+|`BindParam`|Legt Parameterwerte|  
+|`Fixup`|Legt die NULL-status|  
+|`AllocCache`|Ordnet der Cache für fehlerhafte Überprüfung|  
+|`StoreField`|Speichert aktuellen Datensatz cache|  
+|`LoadField`|Wiederherstellungen Cache Elementwerten|  
+|`FreeCache`|Cache frei|  
 |`SetFieldNull`|Legt das Feld Status & Wert auf NULL|  
-|**MarkForAddNew**|Kennzeichnet Felder dirty anderenfalls PSEUDO-NULL|  
-|**MarkForEdit**|Markierungen Felder dirty If stimmen nicht überein. cache|  
-|**SetDirtyField**|Legt Feldwerte als geändert markiert|  
+|`MarkForAddNew`|Kennzeichnet Felder dirty anderenfalls PSEUDO-NULL|  
+|`MarkForEdit`|Markierungen Felder dirty If stimmen nicht überein. cache|  
+|`SetDirtyField`|Legt Feldwerte als geändert markiert|  
   
  Im nächsten Abschnitt wird jeder Vorgang werden werden ausführlicher für `DFX_Text`.  
   
@@ -167,45 +168,45 @@ PopUpEmployeeData(emp.m_strFirstName,
 ##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> Details der DFX_Text  
  Wie bereits erwähnt, ist die beste Möglichkeit zur Erläuterung der Funktionsweise von DFX über ein Beispiel zu arbeiten. Zu diesem Zweck im Rahmen der durchlaufen `DFX_Text` sollte sehr gut funktionieren, so mindestens ein grundlegendes Verständnis der DFX bereitzustellen.  
   
- **AddToParameterList**  
- Dieser Vorgang erstellt die SQL **Parameter** -Klausel ("`Parameters <param name>, <param type> ... ;`") von Jet erforderlich. Jeder Parameter ist mit dem Namen und eingegeben haben (gemäß der RFX-Aufruf). Finden Sie im Funktion **CDaoFieldExchange::AppendParamType** Funktion, um die Namen der einzelnen Typen finden Sie unter. Im Fall von `DFX_Text`, ist der verwendete Typ `text`.  
+ `AddToParameterList`  
+ Dieser Vorgang erstellt die SQL **Parameter** -Klausel ("`Parameters <param name>, <param type> ... ;`") von Jet erforderlich. Jeder Parameter ist mit dem Namen und eingegeben haben (gemäß der RFX-Aufruf). Finden Sie im Funktion `CDaoFieldExchange::AppendParamType` Funktion, um die Namen der einzelnen Typen finden Sie unter. Im Fall von `DFX_Text`, ist der verwendete Typ **Text**.  
   
- **AddToSelectList**  
+ `AddToSelectList`  
  Erstellt die SQL **wählen** Klausel. Dies ist ziemlich unkompliziert entspricht der durch den Aufruf DFX angegebene Spaltennamen einfach angefügt ("`SELECT <column name>, ...`").  
   
- **BindField**  
+ `BindField`  
  Die komplexeste der Vorgänge. Wie bereits erwähnt, in dem der Bindungsstruktur DAO verwendeten sieht `GetRows` eingerichtet ist. Wie Sie vom Code im sehen `DFX_Text` die Arten von Informationen in der Struktur enthalten den DAO-Typ verwendet (**DAO_CHAR** oder **DAO_WCHAR aus** im Fall von `DFX_Text`). Darüber hinaus wird der Typ der Bindung verwendet auch eingerichtet. In einem Abschnitt weiter oben `GetRows` nur kurz beschrieben wurde, aber es wurde erläutert, dass der Typ der Bindung, die von MFC verwendete immer direkt Adressbindung ist ausreichend (**DAOBINDING_DIRECT**). Darüber hinaus für Spalten variabler Länge Bindung (z. B. `DFX_Text`) Rückruf Bindung wird verwendet, sodass MFC können Sie, die speicherbelegung steuern und geben Sie eine Adresse, die richtige Länge. Dies bedeutet, MFC ersichtlich immer DAO "where", um die Daten, wodurch die direkte Bindung an Membervariablen versetzen wird. Der Rest der Bindungsstruktur ist mit z. B. die Adresse des Rückruffunktion Arbeitsspeicher Zuweisung und den Typ der spaltenbindung (Binden von Spaltennamen) ausgefüllt.  
   
- **BindParam**  
+ `BindParam`  
  Dies ist ein einfacher Vorgang, der Aufrufe `SetParamValue` mit dem Parameterwert in Ihre Parameterelements angegeben.  
   
- **Fixup**  
+ `Fixup`  
  Füllt die **NULL** Status für jedes Feld.  
   
  `SetFieldNull`  
  Dieser Vorgang nur kennzeichnet jede Feldstatus als **NULL** und legt das Element des Variablenwerts auf **PSEUDO_NULL**.  
   
- **SetDirtyField**  
+ `SetDirtyField`  
  Aufrufe `SetFieldValue` für jedes Feld, das als geändert gekennzeichnet wurden.  
   
  Die verbleibenden Vorgänge betreffen nur mithilfe des Daten-Caches. Der Datencache ist ein zusätzlicher Puffer von Daten in den aktuellen Datensatz, der verwendet wird, um bestimmte Aspekte zu vereinfachen. Beispielsweise werden "unsaubere" Felder können automatisch erkannt. Wie in der Onlinedokumentation beschrieben kann es vollständig oder auf Feldebene deaktiviert werden. Die Implementierung des Puffers nutzt eine Karte. Diese Zuordnung wird verwendet, um dynamisch zugewiesene Kopien der Daten mit der Adresse des Felds "gebunden" entsprechen (oder `CDaoRecordset` Datenmember abgeleitet).  
   
- **AllocCache**  
+ `AllocCache`  
  Dynamisch ordnet den zwischengespeicherten Feldwert aus, und die Zuordnung hinzugefügt.  
   
- **FreeCache**  
+ `FreeCache`  
  Löscht die zwischengespeicherten Feldwert und entfernt es aus der Zuordnung.  
   
- **StoreField**  
+ `StoreField`  
  Den aktuelle Wert des Felds kopiert in den Datencache.  
   
- **LoadField**  
+ `LoadField`  
  Kopiert den zwischengespeicherten Wert in das Feld Element an.  
   
- **MarkForAddNew**  
+ `MarkForAddNew`  
  Überprüft, ob der aktuelle Wert des Felds ungleich ist**NULL** und kennzeichnet es fehlerhaft, falls erforderlich.  
   
- **MarkForEdit**  
+ `MarkForEdit`  
  Vergleicht die aktuellen Feldwert mit Datencache aus, und bei Bedarf geändert markiert.  
   
 > [!TIP]

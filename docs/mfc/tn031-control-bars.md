@@ -24,21 +24,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1d5cc113177a9653e709c14f66682959276e7ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6744b4c5ea2da1f572ad721f980f719bb9b25af8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953001"
 ---
 # <a name="tn031-control-bars"></a>TN031: Schiebeleisten-Steuerelemente
 > [!NOTE]
 >  Der folgende technische Hinweis wurde seit dem ersten Erscheinen in der Onlinedokumentation nicht aktualisiert. Daher können einige Verfahren und Themen veraltet oder falsch sein. Um aktuelle Informationen zu erhalten, wird empfohlen, das gewünschte Thema im Index der Onlinedokumentation zu suchen.  
   
- In diesem Hinweis werden die Steuerleistenklassen in MFC beschrieben: die allgemeine [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar)und **CDockBar**.  
+ In diesem Hinweis werden die Steuerleistenklassen in MFC: die allgemeine [CControlBar](#_mfcnotes_ccontrolbar), [CStatusBar](#_mfcnotes_cstatusbar), [CToolBar](#_mfcnotes_ctoolbar), [CDialogBar](#_mfcnotes_cdialogbar), und `CDockBar`.  
   
 ## <a name="_mfcnotes_ccontrolbar"></a> CControlBar 
   
- Eine **Steuerleiste** ist eine `CWnd`-abgeleitete Klasse, die:  
+ Ein `ControlBar` ist eine `CWnd`-abgeleitete Klasse, die:  
   
 -   am oberen oder unteren Rand eines Rahmenfensters ausgerichtet ist.  
   
@@ -46,11 +47,11 @@ ms.lasthandoff: 05/04/2018
   
  Steuerleisten unterstützen die zusätzlichen Formatvorlagen:  
   
-- `CBRS_TOP` (Standard) Steuerleiste am oberen Rand anheften.  
+- CBRS_TOP (Standard) Steuerleiste im oberen Bereich der Pin.  
   
-- `CBRS_BOTTOM` Steuerleiste am unteren Rand anheften.  
+- CBRS_BOTTOM Pin Steuerleiste im unteren Bereich.  
   
-- `CBRS_NOALIGN` Steuerleiste nicht neu positionieren, wenn die Größe des übergeordneten Element sich ändert.  
+- CBRS_NOALIGN nicht neu positionieren, die Steuerleiste Wenn die Größe des übergeordneten Elements ändert.  
   
  Von `CControlBar` abgeleitete Klassen bieten interessantere Implementierungen:  
   
@@ -60,9 +61,9 @@ ms.lasthandoff: 05/04/2018
   
 - `CDialogBar` Ein symbolleistenähnlicher Frame mit standardmäßigen Windows-Steuerelementen (erstellt aus einer Dialogfeldvorlagen-Ressource).  
   
-- **CDockBar** Ein verallgemeinerter Andockbereich für andere `CControlBar` -abgeleitete Objekte. Die spezifischen in dieser Klasse verfügbaren Memberfunktionen und -variablen werden wahrscheinlich in zukünftigen Versionen geändert.  
+- `CDockBar` Ein verallgemeinerter Andockbereich für andere `CControlBar` abgeleiteten Objekten. Die spezifischen in dieser Klasse verfügbaren Memberfunktionen und -variablen werden wahrscheinlich in zukünftigen Versionen geändert.  
   
- Alle Steuerleistenobjekte/Fenster werden untergeordnete Fenster eines übergeordneten Rahmenfensters sein. Sie werden normalerweise als gleichgeordnete Elemente dem Clientbereich des Frames (z.B. einem MDI-Client oder einer Ansicht) hinzugefügt. Die ID einer Steuerleiste als untergeordnetes Fenster ist wichtig. Das Standardlayout der Steuerleiste funktioniert nur bei Steuerleisten mit IDs im Bereich von **AFX_IDW_CONTROLBAR_FIRST** bis **AFX_IDW_CONTROLBAR_LAST**. Beachten Sie: Es sind zwar 256 Steuerleisten-IDs verfügbar, doch die ersten 32 davon sind für spezielle Zwecke bestimmt, da sie direkt von der Seitenansichtarchitektur unterstützt werden.  
+ Alle Steuerleistenobjekte/Fenster werden untergeordnete Fenster eines übergeordneten Rahmenfensters sein. Sie werden normalerweise als gleichgeordnete Elemente dem Clientbereich des Frames (z.B. einem MDI-Client oder einer Ansicht) hinzugefügt. Die ID einer Steuerleiste als untergeordnetes Fenster ist wichtig. Das Standardlayout der Steuerleiste funktioniert nur bei Steuerleisten mit IDs im Bereich von AFX_IDW_CONTROLBAR_FIRST zu AFX_IDW_CONTROLBAR_LAST. Beachten Sie: Es sind zwar 256 Steuerleisten-IDs verfügbar, doch die ersten 32 davon sind für spezielle Zwecke bestimmt, da sie direkt von der Seitenansichtarchitektur unterstützt werden.  
   
  Die `CControlBar` -Klasse bietet die Standardimplementierung für:  
   
@@ -72,10 +73,10 @@ ms.lasthandoff: 05/04/2018
   
 -   Unterstützung der Implementierung abgeleiteter Klassen.  
   
- C++-Steuerleistenobjekte werden in der Regel als Mitglieder einer `CFrameWnd` -abgeleiteten Klasse eingebettet und bereinigt, wenn übergeordneter `HWND` und übergeordnetes Objekt zerstört werden. Wenn Sie ein Steuerleistenobjekt auf dem Heap belegen müssen, legen Sie für den Member **m_bAutoDestruct** einfach **TRUE** fest, damit die Steuerleiste „**dieses löscht**“, wenn der `HWND` zerstört wird.  
+ C++-Steuerleistenobjekte werden in der Regel als Mitglieder einer `CFrameWnd` -abgeleiteten Klasse eingebettet und bereinigt, wenn übergeordneter `HWND` und übergeordnetes Objekt zerstört werden. Wenn Sie ein Steuerleistenobjekt auf dem Heap belegen müssen, legen Sie einfach die *M_bAutoDestruct* Element **"true"** damit die Steuerleiste "**löscht**" bei der `HWND` zerstört wird.  
   
 > [!NOTE]
->  Wenn Sie Ihre eigene `CControlBar`-abgeleitete Klasse erstellen, statt eine der abgeleiteten Klassen in MFC zu verwenden, z.B. `CStatusBar`, `CToolBar`oder `CDialogBar`, müssen Sie das `m_dwStyle` -Datenelement festlegen. Hierzu können Sie **Erstellen**überschreiben:  
+>  Wenn Sie Ihre eigenen erstellen `CControlBar`-Klasse abgeleitet, anstatt mit einer der MFC Klassen, z. B. abgeleitet `CStatusBar`, `CToolBar`, oder `CDialogBar`, müssen Sie festlegen der *M_dwStyle* -Datenmember. Dies kann erfolgen, in der Überschreibung der `Create`:  
   
 ```  
 // CMyControlBar is derived from CControlBar  
@@ -93,11 +94,11 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  **Steuerleistenlayout-Algorithmus**  
   
- Der Steuerleistenlayout-Algorithmus ist sehr einfach. Das Rahmenfenster sendet eine Meldung **WM_SIZEPARENT** an alle untergeordneten Elemente im Steuerleistenbereich. Zusammen mit dieser Meldung wird ein Zeiger auf das Clientrechteck des übergeordneten Elements übergeben. Diese Meldung wird in Z-Reihenfolge an die untergeordneten Elemente gesendet. Die untergeordneten Elemente der Steuerleiste verwenden diese Informationen, um sich selbst zu positionieren und den Clientbereich des übergeordneten Elements zu reduzieren. Das finale Rechteck, das für den normalen Clientbereich übrig bleibt (weniger Steuerleisten), wird zum Positionieren des Hauptclientfensters verwendet (normalerweise ein MDI-Client-, Ansichts- oder Splitterfenster).  
+ Der Steuerleistenlayout-Algorithmus ist sehr einfach. Das Rahmenfenster sendet eine Nachricht WM_SIZEPARENT an alle untergeordneten Elemente im steuerleistenbereich. Zusammen mit dieser Meldung wird ein Zeiger auf das Clientrechteck des übergeordneten Elements übergeben. Diese Meldung wird in Z-Reihenfolge an die untergeordneten Elemente gesendet. Die untergeordneten Elemente der Steuerleiste verwenden diese Informationen, um sich selbst zu positionieren und den Clientbereich des übergeordneten Elements zu reduzieren. Das finale Rechteck, das für den normalen Clientbereich übrig bleibt (weniger Steuerleisten), wird zum Positionieren des Hauptclientfensters verwendet (normalerweise ein MDI-Client-, Ansichts- oder Splitterfenster).  
   
  Ausführliche Informationen finden Sie unter `CWnd::RepositionBars` und `CFrameWnd::RecalcLayout` .  
   
- Private Windows-MFC-Meldungen, einschließlich **WM_SIZEPARENT**, sind im [Technischen Hinweis 24](../mfc/tn024-mfc-defined-messages-and-resources.md)dokumentiert.  
+ MFC-private-Windows-Meldungen, darunter WM_SIZEPARENT, sind im dokumentiert [technischen Hinweis 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
   
 ## <a name="_mfcnotes_cstatusbar"></a>  CStatusBar  
   
@@ -117,20 +118,20 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
 |Element|Windows-COLOR-Wert|RGB-Standard|  
 |----------|-------------------------|-----------------|  
-|Statusleisten-Hintergrund|**COLOR_BTNFACE**|RGB(192, 192, 192)|  
-|Statusleistentext|**COLOR_BTNTEXT**|RGB(000, 000, 000)|  
-|Statusleistenränder oben/links|**COLOR_BTNHIGHLIGHT**|RGB(255, 255, 255)|  
-|Statusleistenränder unten/links|**COLOR_BTNSHADOW**|RGB(128, 128, 128)|  
+|Statusleisten-Hintergrund|COLOR_BTNFACE|RGB(192, 192, 192)|  
+|Statusleistentext|COLOR_BTNTEXT|RGB(000, 000, 000)|  
+|Statusleistenränder oben/links|COLOR_BTNHIGHLIGHT|RGB(255, 255, 255)|  
+|Statusleistenränder unten/links|COLOR_BTNSHADOW|RGB(128, 128, 128)|  
   
  **CCmdUI-Unterstützung für CStatusBar**  
   
- Indikatoren werden normalerweise über den `ON_UPDATE_COMMAND_UI` -Mechanismus aktualisiert. Während der Leerlaufzeit ruft die Statusleiste den `ON_UPDATE_COMMAND_UI` -Handler mit der Zeichenfolgen-ID des Indikatorbereichs auf.  
+ ON_UPDATE_COMMAND_UI-Mechanismus ist die Möglichkeit Indikatoren in der Regel aktualisiert werden. Leerlaufzeit wird die Statusleiste die ON_UPDATE_COMMAND_UI-Handler mit der Zeichenfolgen-ID des Indikatorbereichs aufgerufen.  
   
- Der `ON_UPDATE_COMMAND_UI` -Handler kann Folgendes aufrufen:  
+ ON_UPDATE_COMMAND_UI-Handler kann aufrufen:  
   
-- **Enable**: Zum Aktivieren oder Deaktivieren des Bereichs. Ein deaktivierter Bereich sieht genau so aus wie ein aktivierter Bereich, doch der Text ist nicht sichtbar (d. h. der Textindikator ist deaktiviert).  
+- `Enable`: Zum Aktivieren oder Deaktivieren des Bereichs. Ein deaktivierter Bereich sieht genau so aus wie ein aktivierter Bereich, doch der Text ist nicht sichtbar (d. h. der Textindikator ist deaktiviert).  
   
-- **SetText**: Zum Ändern des Texts. Wenden Sie dies mit Vorsicht an, da der Bereich nicht automatisch angepasst wird.  
+- `SetText`: Zum Ändern des Texts. Wenden Sie dies mit Vorsicht an, da der Bereich nicht automatisch angepasst wird.  
   
  Unter Klasse [CStatusBar](../mfc/reference/cstatusbar-class.md) in der *Klassenbibliotheksreferenz* finden Sie weitere Informationen zur `CStatusBar` -Erstellung und Anpassung von APIs. Die Anpassung der Statusleisten sollte im Wesentlichen erfolgen, bevor die Statusleiste zuerst angezeigt wird.  
   
@@ -138,7 +139,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
 ## <a name="_mfcnotes_ctoolbar"></a>  CToolBar  
   
- Eine Symbolleiste ist eine Steuerleiste mit einer Reihe von Bitmapschaltflächen, die Trennlinien enthalten können. Zwei Schaltflächenformatvorlagen werden unterstützt: PushButtons und Kontrollkästchen. Optionsfeldgruppen-Funktionalität kann mit Kontrollkästchen und `ON_UPDATE_COMMAND_UI`hergestellt werden.  
+ Eine Symbolleiste ist eine Steuerleiste mit einer Reihe von Bitmapschaltflächen, die Trennlinien enthalten können. Zwei Schaltflächenformatvorlagen werden unterstützt: PushButtons und Kontrollkästchen. Radio Funktionalität kann mit Kontrollkästchen Schaltflächen und ON_UPDATE_COMMAND_UI erstellt werden.  
   
  Alle Bitmapschaltflächen der Symbolleiste stammen aus einer einzigen Bitmap. Die Bitmap muss für jede Schaltfläche ein Bild oder eine Glyphe enthalten. In der Regel entspricht die Reihenfolge der Bilder/Glyphen in der Bitmap der Reihenfolge, in der sie auf dem Bildschirm dargestellt werden. (Dies können Sie mit den Anpassungs-APIs ändern.)  
   
@@ -150,9 +151,9 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
 |Element|Windows-COLOR-Wert|RGB-Standard|  
 |----------|-------------------------|-----------------|  
-|Symbolleistenhintergrund|**COLOR_BTNFACE**|RGB(192,192,192)|  
-|Symbolleisten-Schaltflächen oben/links|**COLOR_BTNHIGHLIGHT**|RGB(255,255,255)|  
-|Symbolleisten-Schaltflächen unten/rechts|**COLOR_BTNSHADOW**|RGB(128,128,128)|  
+|Symbolleistenhintergrund|COLOR_BTNFACE|RGB(192,192,192)|  
+|Symbolleisten-Schaltflächen oben/links|COLOR_BTNHIGHLIGHT|RGB(255,255,255)|  
+|Symbolleisten-Schaltflächen unten/rechts|COLOR_BTNSHADOW|RGB(128,128,128)|  
   
  Darüber hinaus werden die Symbolleistenbitmap-Schaltflächen neu eingefäbt, als wären sie standardmäßige Windows-Schaltflächen-Steuerelemente. Diese Neueinfärbung tritt auf, wenn die Bitmap aus der Ressource geladen wird, und als Reaktion auf eine Änderung der Systemfarben infolge der Benutzeranpassung in der Systemsteuerung. Die folgenden Farben in einer Bitmap für die Symbolleiste werden automatisch geändert werden, sodass sie mit Vorsicht verwendet werden sollten. Wenn Sie nicht wünschen, dass ein Teil der Bitmap neu gefärbt wird, verwenden Sie eine Farbe, die am ehesten einem der zugeordneten RGB-Werte entspricht. Die Zuordnung erfolgt basierend auf genauen RGB-Werte.  
   
@@ -168,11 +169,11 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
  Mit den Anpassungs-APIs können Sie Schaltflächen-IDs, Formatvorlagen sowie Abstandhalterbreite anpassen, und mit ihnen können Sie auch festlegen, welches Bild/welche Glyphe für welche Schaltfläche verwendet wird. Standardmäßig müssen Sie diese APIs nicht verwenden.  
   
 ## <a name="ccmdui-support-for-ctoolbar"></a>CCmdUI-Unterstützung für CToolBar  
- Symbolleistenschaltflächen werden immer über den `ON_UPDATE_COMMAND_UI` -Mechanismus aktualisiert. Während der Leerlaufzeit ruft die Symbolleiste den `ON_UPDATE_COMMAND_UI` Handler mit der Befehls-ID der Schaltfläche auf. `ON_UPDATE_COMMAND_UI` wird nicht für Trennlinien aufgerufen, jedoch für PushButtons und Kontrollkästchen.  
+ Die Möglichkeit, die Symbolleistenschaltflächen immer aktualisiert werden, wird über den Mechanismus der ON_UPDATE_COMMAND_UI. Leerlaufzeit wird die Symbolleiste den ON_UPDATE_COMMAND_UI-Handler mit der Befehls-ID der Schaltfläche aufrufen. ON_UPDATE_COMMAND_UI ist nicht für Trennlinien aufgerufen, jedoch für Pushbuttons und Kontrollkästchen aufgerufen wird.  
   
- Der `ON_UPDATE_COMMAND_UI` -Handler kann Folgendes aufrufen:  
+ ON_UPDATE_COMMAND_UI-Handler kann aufrufen:  
   
-- **Enable**: Zum Aktivieren oder Deaktivieren der Schaltfläche. Dies funktioniert gleichermaßen für PushButtons und Kontrollkästchen.  
+- `Enable`: Zum Aktivieren oder deaktivieren die Schaltfläche "". Dies funktioniert gleichermaßen für PushButtons und Kontrollkästchen.  
   
 - `SetCheck`: Um den Aktivierungszustand einer Schaltfläche festzulegen. Wenn dies für eine Symbolleisten-Schaltfläche aufgerufen wird, wird sie in ein Kontrollkästchen umgewandelt. `SetCheck` nimmt einen Parameter entgegen, der den Wert 0 (nicht aktiviert), 1 (aktiviert) oder 2 (unbestimmt) haben kann.  
   
@@ -180,9 +181,9 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  Die Kontrollkästchen sind „AUTO“-Kontrollkästchen; wenn der Benutzer sie drückt, wechseln sie sofort den Status. „Aktiviert“ ist der „Unten“- bzw. heruntergedrückte Status. Es ist keine Möglichkeit in die Benutzeroberfläche integriert, eine Schaltfläche in den Status „Unbestimmt“ zu setzen; dies muss durch Code erfolgen.  
   
- Die Anpassung-APIs ermöglichen Ihnen, den Status einer bestimmten Symbolleisten-Schaltfläche zu ändern. Vorzugsweise sollten Sie diese Status im `ON_UPDATE_COMMAND_UI` -Handler für den Befehl ändern, den die Symbolleisten-Schaltfläche darstellt. Beachten Sie, dass die Leerlaufverarbeitung den Status der Symbolleistenschaltflächen mit dem `ON_UPDATE_COMMAND_UI` -Handler ändert, damit jegliche Änderung dieser Status, die über SetButtonStyle vorgenommenen wird, nach dem nächsten Leerlauf verloren gehen kann.  
+ Die Anpassung-APIs ermöglichen Ihnen, den Status einer bestimmten Symbolleisten-Schaltfläche ändern, vorzugsweise sollten Sie diese Zustände im ON_UPDATE_COMMAND_UI-Handler für den Befehl, den die Symbolleisten-Schaltfläche darstellt. Beachten Sie, dass die leerlaufverarbeitung ändert den Status des Symbolleistenschaltflächen mit dem ON_UPDATE_COMMAND_UI-Handler, damit dieser Status, die über setbuttonstyle vorgenommenen Änderungen verloren gehen nach dem nächsten erhalten im Leerlauf.  
   
- Symbolleisten-Schaltflächen senden **WM_COMMAND** -Meldungen wie normale Schaltflächen oder Menüelemente, und werden normalerweise von einem `ON_COMMAND` -Handler in der gleichen Klasse, die den `ON_UPDATE_COMMAND_UI` -Handler bereitstellt, behandelt.  
+ Symbolleisten-Schaltflächen senden WM_COMMAND-Meldungen wie normale Schaltflächen oder Menüelemente und normalerweise von einem ON_COMMAND-Ereignishandler in der gleichen Klasse, die den ON_UPDATE_COMMAND_UI-Handler bereitstellt behandelt werden.  
   
  Es gibt vier Formatvorlagen für Symbolleistenschaltflächen (TBBS_ Werte), die für Anzeigestatus verwendet werden:  
   
@@ -213,14 +214,14 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  Eine `CDialogBar` wird für die Seitenansicht-Symbolleiste verwendet, die standardmäßige PushButton-Steuerelemente enthält.  
   
- Die Verwendung einer `CDialogBar` ist vergleichbar mit der Verwendung einer `CFormView`. Sie müssen eine Dialogfeldvorlage für die Dialogleiste definieren und alle Formatvorlagen außer **WS_CHILD**entfernen. Beachten Sie, dass das Dialogfeld nicht sichtbar sein muss.  
+ Die Verwendung einer `CDialogBar` ist vergleichbar mit der Verwendung einer `CFormView`. Sie müssen eine Dialogfeldvorlage für die Dialogleiste definieren und entfernen alle Formatvorlagen außer WS_CHILD. Beachten Sie, dass das Dialogfeld nicht sichtbar sein muss.  
   
  Die Steuerelementbenachrichtigungen für eine `CDialogBar` werden an das übergeordnete Element der Steuerleiste gesendet (wie Symbolleisten-Schaltflächen).  
   
 ## <a name="ccmdui-support-for-cdialogbar"></a>CCmdUI-Unterstützung für CDialogBar  
- Dialogleisten-Schaltflächen sollten über den `ON_UPDATE_COMMAND_UI` -Handlermechanismus aktualisiert werden. Während der Leerlaufzeit Ruft die Dialogleiste den `ON_UPDATE_COMMAND_UI` Handler mit der Befehls-ID aller Schaltflächen, die eine ID verfügen, > = 0 x 8000 (d. h. in den Bereich der Befehls-IDs).  
+ Dialogleisten-Schaltflächen sollten über die ON_UPDATE_COMMAND_UI-handlermechanismus aktualisiert werden. Während der Leerlaufzeit Ruft die Dialogleiste den ON_UPDATE_COMMAND_UI-Handler mit der Befehls-ID aller Schaltflächen, die eine ID verfügen, > = 0 x 8000 (d. h. in den Bereich der Befehls-IDs).  
   
- Der `ON_UPDATE_COMMAND_UI` -Handler kann Folgendes aufrufen:  
+ ON_UPDATE_COMMAND_UI-Handler kann aufrufen:  
   
 -   Enable: Zum Aktivieren oder Deaktivieren der Schaltfläche.  
   

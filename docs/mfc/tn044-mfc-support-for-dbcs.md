@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380304"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044: MFC-Unterstützung für DBCS
 In diesem technischen Hinweis beschrieben die MFC-Unterstützung für "Double-Byte-Zeichensätzen" oder DBCS. Diese Informationen sowie die Informationen auf MFC Unterstützung für UNICODE jetzt verfügbar in ist der *Klassenbibliotheksreferenz*.  

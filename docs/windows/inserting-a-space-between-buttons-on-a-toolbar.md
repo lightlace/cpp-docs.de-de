@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879834"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Einfügen eines Abstands zwischen den Schaltflächen einer Symbolleiste
 Im Allgemeinen um ein Leerzeichen zwischen den Schaltflächen einzufügen, einfach ziehen Sie sie von anderen auf der Symbolleiste. Um Speicherplatz zu entfernen, ziehen Sie sie zueinander.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222266"
 ---
 # <a name="compiler-error-c2349"></a>Compilerfehler C2349
 'Funktion' kann nicht als verwaltet kompiliert werden: 'Grund'; Verwenden Sie nicht verwaltete #pragma  

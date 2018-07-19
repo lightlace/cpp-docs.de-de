@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 437b80a0766a07b181a60743e79bdbaf32347de4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930544"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menüs und Ressourcen: Containererweiterungen
 Dieser Artikel beschreibt die Änderungen, die mit den Menüs und anderen Ressourcen in eine visuelle Bearbeitung Steuerelementcontainer-Anwendung vorgenommen werden müssen.  
@@ -66,27 +67,27 @@ Dieser Artikel beschreibt die Änderungen, die mit den Menüs und anderen Ressou
   
 |Id|Key|Typ|  
 |--------|---------|----------|  
-|**ID_CANCEL_EDIT_CNTR**|"VK_ESCAPE" BEZEICHNET|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|"VK_ESCAPE" BEZEICHNET|**VIRTKEY**|  
   
- Die zweite Änderung ist zum Erstellen einer neuen Accelerator-Tabelle, die die neue Menüressource erstellt haben, für die direkte Aktivierung entspricht. Diese Tabelle enthält Einträge für die Datei und Fenster Menüs zusätzlich zu den **"VK_ESCAPE" bezeichnet** Eintrag. Im folgende Beispiel wird die Zugriffstastentabelle, die für die direkte Aktivierung im MFC-Beispiel erstellt [CONTAINER](../visual-cpp-samples.md):  
+ Die zweite Änderung ist zum Erstellen einer neuen Accelerator-Tabelle, die die neue Menüressource erstellt haben, für die direkte Aktivierung entspricht. Die Tabelle enthält Einträge für die Datei und Fenster Menüs neben dem Eintrag "VK_ESCAPE" bezeichnet. Im folgende Beispiel wird die Zugriffstastentabelle, die für die direkte Aktivierung im MFC-Beispiel erstellt [CONTAINER](../visual-cpp-samples.md):  
   
 |Id|Key|Typ|  
 |--------|---------|----------|  
-|`ID_FILE_NEW`|STRG+N|**VIRTKEY**|  
-|`ID_FILE_OPEN`|STRG+O|**VIRTKEY**|  
-|**ID_FILE_SAVE**|STRG+S|**VIRTKEY**|  
-|**ID_FILE_PRINT**|STRG+P|**VIRTKEY**|  
-|**ID_NEXT_PANE**|VK_F6|**VIRTKEY**|  
-|**ID_PREV_PANE**|UMSCHALT + VK_F6|**VIRTKEY**|  
-|**ID_CANCEL_EDIT_CNTR**|"VK_ESCAPE" BEZEICHNET|**VIRTKEY**|  
+|ID_FILE_NEW|STRG+N|**VIRTKEY**|  
+|ID_FILE_OPEN|STRG+O|**VIRTKEY**|  
+|ID_FILE_SAVE|STRG+S|**VIRTKEY**|  
+|ID_FILE_PRINT|STRG+P|**VIRTKEY**|  
+|ID_NEXT_PANE|VK_F6|**VIRTKEY**|  
+|ID_PREV_PANE|UMSCHALT + VK_F6|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|"VK_ESCAPE" BEZEICHNET|**VIRTKEY**|  
   
 ##  <a name="_core_string_table_additions_for_container_applications"></a> Zeichenfolge Tabelle Ergänzungen für Containeranwendungen  
  Die meisten der Änderungen zu Zeichenfolgentabellen für containeranwendungen entsprechen die zusätzliche Menüelemente im erwähnten [Container Menüerweiterungen](#_core_container_menu_additions). Sie geben den Text in der Statusleiste angezeigt, wenn jedes Menüelement im angezeigt wird. Beispielsweise werden hier die Zeichenfolgentabelle Einträge, die bei die der Anwendungs-Assistent generiert:  
   
 |Id|Zeichenfolge|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED**|Fehler bei der OLE-Initialisierung. Stellen Sie sicher, dass die OLE-Bibliotheken der richtigen Version vorliegen.|  
-|**IDP_FAILED_TO_CREATE**|Fehler beim Erstellen des Objekts. Stellen Sie sicher, dass das Objekt in der systemregistrierung eingegeben wurde.|  
+|IDP_OLE_INIT_FAILED|Fehler bei der OLE-Initialisierung. Stellen Sie sicher, dass die OLE-Bibliotheken der richtigen Version vorliegen.|  
+|IDP_FAILED_TO_CREATE|Fehler beim Erstellen des Objekts. Stellen Sie sicher, dass das Objekt in der systemregistrierung eingegeben wurde.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Menüs und Ressourcen (OLE)](../mfc/menus-and-resources-ole.md)   

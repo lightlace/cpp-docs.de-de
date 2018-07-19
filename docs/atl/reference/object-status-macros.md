@@ -1,5 +1,5 @@
 ---
-title: Objekt-Status-Makros | Microsoft Docs
+title: Objekt-Objektstatus-Makros | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddfc28c659d0c1eb54794d8fc76a9f3a4f9e73b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e3657e7076bf67a5a3870d7d127cc150f976ecde
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883657"
 ---
-# <a name="object-status-macros"></a>Status-Makros
-Dieses Makro legt Flags, die für ActiveX-Steuerelemente gehören.  
+# <a name="object-status-macros"></a>Objektstatus-Makros
+Dieses Makro legt die Flags, die für ActiveX-Steuerelemente gehören.  
   
 |||  
 |-|-|  
-|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|In ATL-ActiveX-Steuerelemente verwendet, um das Festlegen der **OLEMISC** Flags.|  
+|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|In ATL-ActiveX-Steuerelementen verwendet, werden die OLEMISC-Flags festgelegt.|  
 
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
 
 ##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS  
- Bei ATL-ActiveX-Steuerelemente verwendet, die OLEMISC Flags festgelegt.  
+ In ATL-ActiveX-Steuerelementen verwendet, werden die OLEMISC-Flags festgelegt.  
   
 ```
 DECLARE_OLEMISC_STATUS( miscstatus )
@@ -42,7 +43,7 @@ DECLARE_OLEMISC_STATUS( miscstatus )
  Alle geltenden OLEMISC-Flags.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieses Makro wird verwendet, die OLEMISC-Flags für ein ActiveX-Steuerelement festlegen. Verweisen auf [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) Weitere Details.  
+ Dieses Makro wird verwendet, werden die OLEMISC-Flags für ein ActiveX-Steuerelement festgelegt. Finden Sie unter [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) Weitere Details.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]  

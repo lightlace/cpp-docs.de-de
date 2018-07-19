@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb40b356b5601e19c33083c7b731a1dc411de3c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c48f4525c01149840ca74eee249263eac27c24cf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928700"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Hinzufügen mehrerer Ansichten zu einem Dokument
 In einer Single Document Interface (SDI)-Anwendung mit der Microsoft Foundation Class (MFC)-Bibliothek erstellt ist eine einzelne Ansichtstyp zugeordnet jeder Dokumenttyp. In einigen Fällen ist es wünschenswert sein, Sie haben die Möglichkeit, die aktuelle Ansicht eines Dokuments mit einer neuen Ansicht wechseln.  
@@ -45,14 +46,14 @@ In einer Single Document Interface (SDI)-Anwendung mit der Microsoft Foundation 
   
  Im weiteren Verlauf dieses Themas wird Folgendes vorausgesetzt:  
   
--   Der Name des der `CWinApp`-abgeleitete Objekt `CMyWinApp`, und `CMyWinApp` deklariert und in MYWINAPP definiert ist. H und MYWINAPP. CPP.  
+-   Der Name des der `CWinApp`-abgeleitete Objekt `CMyWinApp`, und `CMyWinApp` deklariert und definiert *MYWINAPP. H* und *MYWINAPP. CPP*.  
   
--   `CNewView` Der Name der neuen `CView`-abgeleitetes Objekt, und `CNewView` deklariert und in NEWVIEW definiert ist. H und NEWVIEW. CPP.  
+-   `CNewView` Der Name der neuen `CView`-abgeleitetes Objekt, und `CNewView` deklariert und definiert *NEWVIEW. H* und *NEWVIEW. CPP*.  
   
 ##  <a name="vcconmodifyexistingapplicationa1"></a> Ändern Sie die vorhandene Anwendungsklasse  
  Für die Anwendung zwischen Ansichten wechseln müssen Sie die Anwendungsklasse durch Hinzufügen von Membervariablen zum Speichern von Ansichten und eine Methode zum Wechseln zu ändern.  
   
- Fügen Sie den folgenden Code zur Deklaration von `CMyWinApp` in MYWINAPP. H  
+ Fügen Sie den folgenden Code zur Deklaration der `CMyWinApp` in *MYWINAPP. H*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]  
   
@@ -60,7 +61,7 @@ In einer Single Document Interface (SDI)-Anwendung mit der Microsoft Foundation 
   
  Die letzte Änderung an der Anwendungsklasse erfordert z. B. eine neue Headerdatei, die eine Windows-Meldung definiert (**WM_INITIALUPDATE**), die in der wechseln-Funktion verwendet wird.  
   
- Fügen Sie die folgende Zeile im Includeabschnitt "MYWINAPP. CPP:  
+ Fügen Sie die folgende Zeile im Includeabschnitt "der *MYWINAPP. CPP*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]  
   
@@ -71,7 +72,7 @@ In einer Single Document Interface (SDI)-Anwendung mit der Microsoft Foundation 
   
  Nachdem Sie die Klasse dem Projekt hinzugefügt haben, müssen Sie den Zugriff auf einige Klassenmember Ansicht ändern.  
   
- Ändern Sie NEWVIEW. H durch Ändern der Zugriffsspezifizierer aus `protected` auf **öffentlichen** für den Konstruktor und Destruktor. Dadurch wird die Klasse erstellt und zerstört dynamisch sein und das Erscheinungsbild der Ansicht zu ändern, bevor es angezeigt wird.  
+ Ändern Sie *NEWVIEW. H* durch Ändern der Zugriffsspezifizierer aus **geschützt** auf **öffentlichen** für den Konstruktor und Destruktor. Dadurch wird die Klasse erstellt und zerstört dynamisch sein und das Erscheinungsbild der Ansicht zu ändern, bevor es angezeigt wird.  
   
  Die Änderungen zu speichern und mit dem nächsten Schritt fortfahren.  
   
@@ -89,7 +90,7 @@ In einer Single Document Interface (SDI)-Anwendung mit der Microsoft Foundation 
 ##  <a name="vcconswitchingfunctiona4"></a> Implementieren der Funktion zum Wechseln  
  Im vorherigen Schritt haben Sie Code, der erstellt und initialisiert ein neues Ansichtsobjekt hinzugefügt. Die letzte Aufgabe wird zur Implementierung der switching Methode `SwitchView`.  
   
- Am Ende der Implementierungsdatei für die Anwendungsklasse (MYWINAPP. CPP), fügen Sie die folgende Methodendefinition hinzu:  
+ Am Ende der Implementierungsdatei für die Anwendungsklasse (*MYWINAPP. CPP*), fügen Sie die folgende Methodendefinition hinzu:  
   
  [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]  
   

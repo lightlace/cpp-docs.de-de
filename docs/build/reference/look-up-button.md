@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371446"
 ---
 # <a name="look-up-button"></a>Suchen (Schaltfläche)
 Klicken Sie auf **Nachschlagen** um die Fehlermeldung abzurufen, die dem System oder ein Modul eingegebenen Wert entspricht. Werte können im Hexadezimal- oder Dezimalformat Formular (einschließlich negative Dezimalwerte) eingegeben werden. Module der **zusätzliche Module zur Fehlersuche** Dialogfeld werden ebenfalls durchsucht.  

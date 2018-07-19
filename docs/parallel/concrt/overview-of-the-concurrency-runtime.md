@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692427"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Übersicht über die Concurrency Runtime
 Dieses Dokument enthält eine Übersicht über die Concurrency Runtime. Es beschreibt die Vorteile der Concurrency Runtime, wann sie verwendet wird und wie ihre Komponenten miteinander und mit dem Betriebssystem und den Anwendungen interagieren.  

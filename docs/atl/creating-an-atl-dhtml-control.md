@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354168"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>Erstellen eines ATL-DHTML-Steuerelements
 ATL-Steuerelement-Assistent automatisiert den Erstellungsprozess beim Erstellen eines DHTML-Steuerelements. Es generiert erforderlichen Ressourcendateien, einschließlich einer HTML-Datei, die Beispielcode enthält.  

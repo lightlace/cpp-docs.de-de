@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344947"
 ---
 # <a name="file-and-database-classes"></a>Klassen für Dateien und Datenbanken
 Diese Klassen können Sie zum Speichern von Informationen in eine Datenbank oder eine Datenträgerdatei. Es gibt drei Gruppen von Datenbankklassen – OLE DB, ODBC und DAO –, die ähnliche Funktionalität bereitstellen. Die OLE DB-Gruppe wird mithilfe von OLE DB-implementiert und arbeitet mit der OLE DB-Consumervorlagen, die DAO-Gruppe wird mithilfe des Datenobjekts für den Zugriff implementiert und der Gruppe "ODBC" mithilfe von Open Database Connectivity implementiert wird. Es gibt auch eine Reihe von Klassen für die Bearbeitung von standard-Dateien, aktive Streams und HTML-Streams.  

@@ -1,5 +1,5 @@
 ---
-title: 'Bitweiser AND-Operator: &amp; | Microsoft Docs'
+title: 'Bitweiser AND-Operator: &amp; | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeacac8afb7a8195642ebbfb6aac7c697544cd16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 428e3634898f50e7737c5fc5dae2ce7d0445572e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943183"
 ---
 # <a name="bitwise-and-operator-amp"></a>Bitweiser AND-Operator: &amp;
+
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
-expression   
-&  
- expression  
-  
-```  
+```
+
+expression & expression  
+
+```
   
 ## <a name="remarks"></a>Hinweise  
  Die Ausdrücke können andere und-Ausdrücke sein oder (unter Berücksichtigung der Typeinschränkungen, die unten genannt werden) Gleichheitsausdrücke, relationale Ausdrücke, additive Ausdrücke, multiplikative Ausdrücke, Zeiger-zu-Member-Ausdrücke, Umwandlungsausdrücke, unäre Ausdrücke, Postfix-Ausdrücke oder primäre Ausdrücke.  
@@ -43,11 +43,11 @@ expression
  Beide Operanden im bitweisen AND-Operator müssen vom Ganzzahltyp sein. Die üblichen arithmetischen Konvertierungen finden Sie im [Standardkonvertierungen](standard-conversions.md), auf die Operanden angewendet werden.  
   
 ## <a name="operator-keyword-for-"></a>Operator-Schlüsselwort für &  
- Die `bitand` Operator ist die textentsprechung von **&**. Es gibt zwei Möglichkeiten, den Zugriff auf die `bitand` -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit der ["/ Za"](../build/reference/za-ze-disable-language-extensions.md) -Compileroption (spracherweiterungen deaktivieren).  
+ Die **Bitand** -Operator ist die ausgeschriebene Variante von **&**. Es gibt zwei Möglichkeiten, den Zugriff auf die **Bitand** -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit der [/Za](../build/reference/za-ze-disable-language-extensions.md) -Compileroption (spracherweiterungen deaktivieren).  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // expre_Bitwise_AND_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate bitwise AND  
@@ -63,5 +63,5 @@ int main() {
   
 ## <a name="see-also"></a>Siehe auch  
  [C++-Built-in-Operatoren, Rangfolge und Assoziativität](cpp-built-in-operators-precedence-and-associativity.md)  
- [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++-Built-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C-Operatoren zur Bitmanipulation](../c-language/c-bitwise-operators.md)

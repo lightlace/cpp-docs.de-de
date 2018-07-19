@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874667"
 ---
 # <a name="hstringgetaddressof-method"></a>HString::GetAddressOf-Methode
 Ruft einen Zeiger auf das zugrunde liegende HSTRING-Handle ab.  

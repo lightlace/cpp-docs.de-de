@@ -1,5 +1,5 @@
 ---
-title: CCachedDataPathProperty Klasse | Microsoft Docs
+title: CCachedDataPathProperty-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e46f7e65d6c2f9b5c0d29007cd31f660754957
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0a3f632f2da327dea698722177ba6a3b3ebe42d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339786"
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty-Klasse
 Implementiert eine asynchron übertragene und in einer Arbeitsspeicherdatei zwischengespeicherte OLE-Steuerelementeigenschaft.  
@@ -47,16 +48,16 @@ class CCachedDataPathProperty : public CDataPathProperty
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` Objekt in der zum Zwischenspeichern von Daten.|  
+|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` Objekt, in dem Daten zwischengespeichert werden sollen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Arbeitsspeicherdatei wird im Arbeitsspeicher und nicht auf dem Datenträger gespeichert und eignet sich für schnelle temporäre Übertragungen.  
+ Eine Arbeitsspeicherdatei im Arbeitsspeicher und nicht auf dem Datenträger gespeichert und eignet sich zur schnellen temporären Übertragungen.  
   
- Zusammen mit **CAysncMonikerFile** und `CDataPathProperty`, `CCachedDataPathProperty` bietet Funktionen für die Verwendung von asynchronen Monikern in OLE-Steuerelemente. Mit `CCachedDataPathProperty` Objekte können Sie Daten aus einer Quelle URL- oder asynchron übertragen und speichern Sie sie in einer Arbeitsspeicherdatei über die `m_Cache` öffentliche Variable. Alle Daten in der Speicherdatei gespeichert ist, und besteht keine Notwendigkeit, überschreiben [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) es sei denn, Sie verwenden möchten, sehen Sie sich für Benachrichtigungen und reagieren. Beispielsweise, wenn Sie eine große übertragen werden. GIF-Datei und möchten dem Steuerelement zu benachrichtigen, dass mehr Daten empfangen wurden, und es sollte, die selbst neu zeichnet überschreiben `OnDataAvailable` die Benachrichtigung vornehmen.  
+ Zusammen mit `CAysncMonikerFile` und `CDataPathProperty`, `CCachedDataPathProperty` stellt Funktionen für die Verwendung von asynchronen Monikern in OLE-Steuerelemente bereit. Mit `CCachedDataPathProperty` Objekte, können Sie asynchron übertragen von Daten aus einer URL-Zeichenfolge oder Quelle aus, und speichern es in einer Arbeitsspeicherdatei über die `m_Cache` öffentliche Variable. Alle Daten in der Speicherdatei gespeichert ist, und besteht keine Notwendigkeit zum Überschreiben [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) es sei denn, Sie möchten, sehen Sie sich für Benachrichtigungen und darauf reagieren. Beispielsweise wenn Sie eine große übertragen werden. GIF-Datei und möchten dem Steuerelement zu benachrichtigen, dass mehr Daten empfangen wurden, und es neu gezeichnet werden soll, überschreiben `OnDataAvailable` auf die Benachrichtigung gesendet haben.  
   
- Die Klasse `CCachedDataPathProperty` stammt aus `CDataPathProperty`.  
+ Die Klasse `CCachedDataPathProperty` ergibt sich aus `CDataPathProperty`.  
   
- Weitere Informationen zum Verwenden von asynchronen Monikern und ActiveX-Steuerelemente im Internet-Anwendungen finden Sie unter den folgenden Themen:  
+ Weitere Informationen zur Verwendung von asynchronen Monikern und ActiveX-Steuerelementen in Internet-Anwendungen finden Sie unter den folgenden Themen:  
   
 - [Internetgrundlagen: ActiveX-Steuerelemente](../../mfc/activex-controls-on-the-internet.md)  
   
@@ -93,24 +94,24 @@ CCachedDataPathProperty(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pControl`  
- Ein Zeiger auf das ActiveX-Steuerelementobjekt mit diesem verbunden sein, `CCachedDataPathProperty` Objekt.  
+ *pControl*  
+ Ein Zeiger auf das ActiveX-Steuerelement-Objekt zugeordnet sein `CCachedDataPathProperty` Objekt.  
   
- `lpszPath`  
- Der Pfad absolut oder relativ sein kann, verwendet, um eine asynchrone Moniker zu erstellen, die die eigentliche absolute Position der Eigenschaft verweist. `CCachedDataPathProperty` URLs, keine Dateinamen verwendet. Wenn Sie möchten eine `CCachedDataPathProperty` -Objekt für eine Datei, file:// auf den Pfad voranstellen.  
+ *lpszPath*  
+ Der Pfad, der absolut oder relativ sein kann, verwendet, um die ein asynchrones Monikers zu erstellen, das die tatsächlichen absolute Position der Eigenschaft verweist. `CCachedDataPathProperty` verwendet nicht die Dateinamen-URLs. Wenn Sie möchten eine `CCachedDataPathProperty` Objekt für eine Datei, file:// auf den Pfad voranstellen.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `COleControl` Objekt verweist `pControl` dient der [öffnen](../../mfc/reference/cdatapathproperty-class.md#open) und abgeleitete Klassen abgerufen. Wenn `pControl` ist **NULL**, das Steuerelement mit verwendet **öffnen** sollte festgelegt werden, mit [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Wenn `lpszPath` ist **NULL**, können Sie den Pfad durch übergeben **öffnen** oder legen Sie sie mit [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
+ Die `COleControl` Objekt verweist *pControl* dient der [öffnen](../../mfc/reference/cdatapathproperty-class.md#open) und von abgeleiteten Klassen abgerufen. Wenn *pControl* NULL ist, das Steuerelement ab, mit `Open` sollten nastavit mit [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Wenn *LpszPath* NULL ist, können Sie den Pfad durch übergeben `Open` oder legen Sie sie mit [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
   
 ##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
- Enthält den Klassennamen die Arbeitsspeicher-Datei in die Daten zwischengespeichert werden.  
+ Enthält den Namen der Datei für den Speicher, die Sie in den Daten zwischengespeichert werden.  
   
 ```  
 CMemFile m_Cache;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Datei wird im Arbeitsspeicher und nicht auf dem Datenträger gespeichert.  
+ Eine Arbeitsspeicherdatei wird im Arbeitsspeicher und nicht auf dem Datenträger gespeichert.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CDataPathProperty-Klasse](../../mfc/reference/cdatapathproperty-class.md)   

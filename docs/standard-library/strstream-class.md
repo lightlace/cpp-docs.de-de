@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245391a0625d94fee0a4457f87e7b633ba3d03ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ba0d46f567232c36eb3dcd7845792bdbe8b6eac
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955734"
 ---
 # <a name="strstream-class"></a>strstream-Klasse
 
@@ -76,7 +77,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parameter
 
-`_Freezeit` Ein `bool` , der angibt, ob den Stream, fixiert werden soll.
+*_Freezeit*  
+ Ein **"bool"** , der angibt, ob den Stream fixiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -84,7 +86,7 @@ Die Memberfunktion ruft [rdbuf](#rdbuf) -> [freeze](../standard-library/strstrea
 
 ### <a name="example"></a>Beispiel
 
-Unter [strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze) finden Sie ein Beispiel, das **freeze** verwendet.
+Finden Sie unter [strstreambuf:: Freeze](../standard-library/strstreambuf-class.md#freeze) für ein Beispiel, verwendet `freeze`.
 
 ## <a name="pcount"></a> strstream::pcount
 
@@ -120,7 +122,7 @@ Ein Zeiger auf das dem Stream zugeordnete strstreambuf-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt die Adresse des gespeicherten Streampuffers des Typs **pointer** auf [strstreambuf](../standard-library/strstreambuf-class.md) zurück.
+Die Memberfunktion gibt die Adresse des gespeicherten Streampuffers des Typs `pointer` zu [Strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -144,7 +146,7 @@ Die Memberfunktion gibt [rdbuf](#rdbuf) -> [str](../standard-library/strstreambu
 
 ### <a name="example"></a>Beispiel
 
-Unter [strstream::str](../standard-library/strstreambuf-class.md#str) finden Sie ein Beispiel, das **str** verwendet.
+Finden Sie unter [strstream:: str](../standard-library/strstreambuf-class.md#str) für ein Beispiel, verwendet `str`.
 
 ## <a name="strstream"></a> strstream::strstream
 
@@ -160,19 +162,22 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>Parameter
 
-`count` Die Größe des Puffers.
+*count*  
+ Die Größe des Puffers.
 
-`_Mode` Der Eingabe- und der Modus des Puffers. Weitere Informationen finden Sie unter [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Modus*  
+ Der Eingabe- und Ausgabemodus des Puffers. Weitere Informationen finden Sie unter [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-`ptr` Der Puffer.
+*ptr*  
+ Der Puffer.
 
 ### <a name="remarks"></a>Hinweise
 
-Beide Konstruktoren initialisieren die Basisklasse durch Aufrufen von [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**), wobei **sb** das gespeicherte Objekt der Klasse [strstreambuf](../standard-library/strstreambuf-class.md) ist. Der erste Konstruktor initialisiert zudem **sb** durch Aufrufen von [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). Der zweite Konstruktor initialisiert die Basisklasse auf eine von zwei Arten:
+Beide Konstruktoren initialisieren die Basisklasse durch Aufrufen von [Streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **Sb**), wobei `sb` das gespeicherte Objekt der Klasse [Strstreambuf](../standard-library/strstreambuf-class.md). Der erste Konstruktor initialisiert zudem `sb` durch Aufrufen von [Strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). Der zweite Konstruktor initialisiert die Basisklasse auf eine von zwei Arten:
 
-- Wenn `_Mode` & **ios_base::app**== 0, dann muss `ptr` das erste Element eines Arrays von `count`-Elementen festlegen, und der Konstruktor ruft `strstreambuf`( `ptr`, `count`, `ptr`) auf.
+- Wenn `_Mode`  &  **ios_base:: trunc**== 0, dann *Ptr* müssen festlegen, das erste Element eines Arrays von `count` Elemente und der Konstruktor ruft `strstreambuf`( `ptr`, `count`, `ptr`).
 
-- Andernfalls muss `ptr` das erste Element eines Arrays an count-Elementen bezeichnen, die eine C-Zeichenfolge enthält, deren erstes Element von `ptr` bezeichnet wird, und der Konstruktor ruft `strstreambuf`( `ptr`, `count`, `ptr`  +  `strlen`( `ptr`)) auf.
+- Andernfalls *Ptr* müssen festlegen, das erste Element eines Arrays an Count-Elementen, die eine C-Zeichenfolge enthält, deren erstes Element erhalten Sie, *Ptr*, und der Konstruktor ruft `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="see-also"></a>Siehe auch
 

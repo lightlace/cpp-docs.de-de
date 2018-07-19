@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7facc4c712d070cffe9be5f07a236b2b04b972e9
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931914"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC-ActiveX-Steuerelemente: Hinzufügen von benutzerdefinierten Eigenschaften
 Benutzerdefinierte Eigenschaften unterscheiden sich von Basiseigenschaften, benutzerdefinierte Eigenschaften von noch nicht implementiert werden, die `COleControl` Klasse. Eine benutzerdefinierte Eigenschaft wird verwendet, um einen bestimmten Zustand oder die Darstellung eines ActiveX-Steuerelements an ein Programmierer, die mithilfe des Steuerelements verfügbar zu machen.  
@@ -46,7 +47,7 @@ Benutzerdefinierte Eigenschaften unterscheiden sich von Basiseigenschaften, benu
   
 -   Parametrisierte Implementierung  
   
-     Parametrisierte Implementierung wird von den Assistenten zum Hinzufügen einer Eigenschaft unterstützt. Eine parametrisierte Eigenschaft (manchmal eine Array-Eigenschaft genannt) kann verwendet werden, um einen Satz von Werten über eine einzelne Eigenschaft des Steuerelements zugreifen. Die Dispatch-Zuordnungsmakros Eintrag für diese Implementierung ist `DISP_PROPERTY_PARAM`. Weitere Informationen zum Implementieren dieses Typs finden Sie unter [Implementieren einer parametrisierten Eigenschaft](../mfc/mfc-activex-controls-advanced-topics.md) Artikel ActiveX-Steuerelemente: Weiterführende Themen.  
+     Parametrisierte Implementierung wird von den Assistenten zum Hinzufügen einer Eigenschaft unterstützt. Eine parametrisierte Eigenschaft (manchmal eine Array-Eigenschaft genannt) kann verwendet werden, um einen Satz von Werten über eine einzelne Eigenschaft des Steuerelements zugreifen. Die Dispatch-Zuordnungsmakros Eintrag für diese Implementierung ist DISP_PROPERTY_PARAM. Weitere Informationen zum Implementieren dieses Typs finden Sie unter [Implementieren einer parametrisierten Eigenschaft](../mfc/mfc-activex-controls-advanced-topics.md) Artikel ActiveX-Steuerelemente: Weiterführende Themen.  
   
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Mithilfe der Eigenschaft Assistenten zum Hinzufügen zum Hinzufügen einer benutzerdefinierten Eigenschaft  
  Das folgende Verfahren veranschaulicht das Hinzufügen einer benutzerdefinierten Eigenschaft, CircleOffset, die die Implementierung der Get/Set-Methoden verwendet. Die benutzerdefinierte CircleOffset-Eigenschaft kann Benutzer für den Kreis vom Mittelpunkt des umschließenden Rechtecks des Steuerelements den offset des Steuerelements. Das Verfahren zum Hinzufügen von benutzerdefinierten Eigenschaften mit einer Implementierung als Get/Set-Methoden ist sehr ähnlich.  
@@ -65,7 +66,7 @@ Benutzerdefinierte Eigenschaften unterscheiden sich von Basiseigenschaften, benu
   
      Daraufhin wird die [Assistent zum Hinzufügen von Eigenschaften](../ide/names-add-property-wizard.md).  
   
-5.  In der **Eigenschaftsname** geben `CircleOffset`.  
+5.  In der **Eigenschaftsname** geben *CircleOffset*.  
   
 6.  Klicken Sie unter **Implementierungstyp**auf **Get/Set-Methoden**.  
   
@@ -99,7 +100,7 @@ Benutzerdefinierte Eigenschaften unterscheiden sich von Basiseigenschaften, benu
  Beachten Sie, dass den Assistenten zum Hinzufügen einer Eigenschaft automatisch zu einen Aufruf fügt [SetModifiedFlag](../mfc/reference/colecontrol-class.md#setmodifiedflag), in den Text der Set-Funktion. Das Aufrufen dieser Funktion kennzeichnet das Steuerelement geändert wurde. Wenn ein Steuerelement geändert wurde, wird der neue Zustand gespeichert werden, wenn der Container gespeichert wird. Diese Funktion sollte aufgerufen werden, wenn eine Eigenschaft, die als Teil des persistenten Status des Steuerelements gespeichert Wert ändert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls (MFC-ActiveX-Steuerelemente)](../mfc/mfc-activex-controls.md)   
  [MFC-ActiveX-Steuerelemente: Eigenschaften](../mfc/mfc-activex-controls-properties.md)   
  [MFC-ActiveX-Steuerelemente: Methoden](../mfc/mfc-activex-controls-methods.md)   
  [COleControl-Klasse](../mfc/reference/colecontrol-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Klasse von CComPtr-| Microsoft Docs
+title: CComPtr-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5254e463050d685840ff90334ecbdb94372f27ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8513a3de54f8a99191936dfff5b894962c597381
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881590"
 ---
-# <a name="ccomptr-class"></a>Von CComPtr--Klasse
-Ein intelligenter Zeiger-Klasse für die Verwaltung von COM-Schnittstellenzeiger auf.  
+# <a name="ccomptr-class"></a>CComPtr-Klasse
+Eine intelligente Zeiger-Klasse für die Verwaltung von COM-Schnittstellenzeiger.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,8 +36,8 @@ class CComPtr
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Eine COM-Schnittstelle, die Angabe des Typs der Zeiger gespeichert werden soll.  
+ *T*  
+ Eine COM-Schnittstelle, die den Typ des Zeigers gespeichert werden.  
   
 ## <a name="members"></a>Member  
   
@@ -53,15 +54,15 @@ class CComPtr
 |[CComPtr::operator =](#operator_eq)|Weist einen Zeiger auf den Member-Zeiger.|  
   
 ## <a name="remarks"></a>Hinweise  
- ATL verwendet `CComPtr` und [CComQIPtr](../../atl/reference/ccomqiptr-class.md) zum Verwalten von COM-Schnittstellenzeiger auf. Beide abgeleitet [CComPtrBase](../../atl/reference/ccomptrbase-class.md), und führen Sie sowohl automatische verweiszählung.  
+ ATL verwendet `CComPtr` und [CComQIPtr](../../atl/reference/ccomqiptr-class.md) zum Verwalten von COM-Schnittstellenzeiger. Beide basieren auf [CComPtrBase](../../atl/reference/ccomptrbase-class.md), und führen Sie sowohl automatische verweiszählung.  
   
- Die **CComPtr** und [CComQIPtr](../../atl/reference/ccomqiptr-class.md) Klassen können helfen, Speicherverluste zu beseitigen, durch automatische verweiszählung ausführen.  Die folgenden Funktionen ausführen derselben logischen Operationen; Beachten Sie jedoch, wie die zweite Version weniger fehleranfällig mit möglicherweise die **CComPtr** Klasse:  
+ Die `CComPtr` und [CComQIPtr](../../atl/reference/ccomqiptr-class.md) Klassen können helfen, Speicherverluste zu vermeiden, indem Sie Ausführung automatische verweiszählung.  Die folgenden Funktionen ausführen, die gleichen logischen Vorgängen; Beachten Sie jedoch, wie die zweite Version weniger fehleranfällige mit möglicherweise die `CComPtr` Klasse:  
   
  [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
   
  [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
   
- Verknüpfen Sie atlsd.lib für codeablaufverfolgung Debug-Builds.  
+ Verknüpfen Sie in Debugbuilds atlsd.lib für die codeablaufverfolgung ein.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -81,10 +82,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lp`  
+ *LP*  
  Wird verwendet, um den Schnittstellenzeiger zu initialisieren.  
   
- `T`  
+ *T*  
  Eine COM-Schnittstelle.  
   
 ##  <a name="operator_eq"></a>  CComPtr::operator =  
@@ -99,9 +100,9 @@ T* operator= (const CComPtr<T>& lp) throw ();
  Gibt einen Zeiger auf die aktualisierte `CComPtr` Objekt  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Vorgang AddRefs das neue Objekt und Versionen, die das vorhandene Objekt, sofern vorhanden ist.  
+ Dieser Vorgang AddRefs das neue Objekt und Versionen, die im vorhandene Objekt, wenn eine vorhanden ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CComPtr::CComPtr](#ccomptr)   
  [CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

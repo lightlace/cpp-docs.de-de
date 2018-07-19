@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33885151"
 ---
 # <a name="editing-properties-for-an-activex-control"></a>Bearbeiten von Eigenschaften für ein ActiveX-Steuerelement
 ActiveX-Steuerelemente von unabhängigen Anbietern stammen möglicherweise über eigene Eigenschaften und Merkmale ausgestattet. Eigenschaften für ActiveX-Steuerelemente werden im Eigenschaftenfenster angezeigt. Darüber hinaus werden alle Eigenschaftenseiten erstellt, indem die Autoren des ActiveX-Steuerelement angezeigt, der **Eigenschaftenseiten** (Dialogfeld) (um die Eigenschaftenseite für ein bestimmtes ActiveX-Steuerelement anzuzeigen, klicken Sie auf die Schaltfläche in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window)).  

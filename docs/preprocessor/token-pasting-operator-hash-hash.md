@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842230"
 ---
 # <a name="token-pasting-operator-"></a>Tokeneinfügender Operator (##)
 Die doppelten Nummernzeichen oder "Token-Pasting"-Operator (**##**), die den "Zusammenführen" Operator bezeichnet wird, wird in objektähnlichen und funktionsähnlichen Makros verwendet. Er ermöglicht die Verknüpfung separater Token zu einem Token und kann daher nicht der erste oder letzte Token in der Makrodefinition sein.  

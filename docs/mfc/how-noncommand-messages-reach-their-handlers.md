@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343881"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>Wie nicht befehlsbasierte Meldungen ihre Handler erreichen
 Im Gegensatz zu den Befehlen standard-Windows-Meldungen werden nicht durch eine Kette von Befehlsziele weitergeleitet jedoch werden in der Regel vom Fenster, Windows die Nachricht sendet, verarbeitet. Das Fenster möglicherweise einem Hauptrahmenfenster, ein untergeordnetes MDI-Fenster, ein Standardsteuerelement, ein Dialogfeld, eine Sicht oder eine andere Art von untergeordnetes Fenster.  

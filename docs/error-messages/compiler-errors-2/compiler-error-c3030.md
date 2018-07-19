@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245695"
 ---
 # <a name="compiler-error-c3030"></a>Compilerfehler C3030
 'var': Die Variable in der reduction-Klausel/-Direktive kann keinen Verweistyp aufweisen  

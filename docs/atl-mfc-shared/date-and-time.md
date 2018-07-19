@@ -1,5 +1,5 @@
 ---
-title: Datum und Uhrzeit | Microsoft Docs
+title: Datum und Uhrzeit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79af7c468da642f44cc01229da304ab33e1ea1e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 643347915e97f1c803047f91b72311c5642e6eef
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879558"
 ---
 # <a name="date-and-time"></a>Datum und Uhrzeit
-MFC unterstützt mehrere Methoden zum Arbeiten mit Datums- und Uhrzeitangaben. Dazu gehören:  
+MFC unterstützt mehrere verschiedene Möglichkeiten zum Arbeiten mit Datums- und Uhrzeitangaben. Dazu gehören:  
   
--   Allgemeine Zeitklassen. Die [CTime](../atl-mfc-shared/reference/ctime-class.md) und [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) Klassen kapseln die meisten der Funktionen in Zusammenhang mit der ANSI-Standard Time-Bibliothek, die zeitlich deklariert wird. H.  
+-   Allgemeine Zeit-Klassen. Die [CTime](../atl-mfc-shared/reference/ctime-class.md) und [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) Klassen kapseln die meisten der Funktionen im Zusammenhang mit der ANSI-Standard-Zeit-Bibliothek, die in-TIME deklariert ist. H.  
   
--   Unterstützung für die Systemuhr. Mit MFC, Version 3.0, Unterstützung hinzugefügt wurde, um `CTime` für die Win32- `SYSTEMTIME` und `FILETIME` -Datentypen.  
+-   Unterstützung für die Systemuhr. Mit MFC, Version 3.0,-Unterstützung wurde hinzugefügt, um `CTime` für die Win32- `SYSTEMTIME` und `FILETIME` -Datentypen.  
   
--   Unterstützung für die Automatisierung [DATE-Datentyp](../atl-mfc-shared/date-type.md). **Datum** unterstützt das Datum, Uhrzeit und Datum/Uhrzeit-Werte. Die [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) und [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) Klassen kapseln dieser Funktionalität. Sie arbeiten mit der [COleVariant](../mfc/reference/colevariant-class.md) -Klasse mithilfe der Automation-Unterstützung.  
+-   Unterstützung für die Automatisierung [DATE-Datentyps](../atl-mfc-shared/date-type.md). Datum unterstützt das Datum, Uhrzeit und Datum/Uhrzeit-Werten. Die [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) und [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) Klassen kapseln, diese Funktionalität. Sie funktionieren mit der [COleVariant](../mfc/reference/colevariant-class.md) -Klasse unter Verwendung von-Unterstützung.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   

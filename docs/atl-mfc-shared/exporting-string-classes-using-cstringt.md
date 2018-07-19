@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356395"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>CStringT mit Zeichenfolgenklassen exportieren
 In der Vergangenheit MFC-Entwickler abgeleitet haben `CString` eigene Zeichenfolgenklassen spezialisiert werden kann. In Microsoft Visual C++ .NET (MFC 8.0) die [CString](../atl-mfc-shared/using-cstring.md) Klasse wurde ersetzt durch eine Vorlagenklasse, die aufgerufen [CStringT](../atl-mfc-shared/reference/cstringt-class.md). Diese Option angegeben mehrere Vorteile:  

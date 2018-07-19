@@ -1,5 +1,5 @@
 ---
-title: Ereignishandler-Assistent | Microsoft Docs
+title: Ereignishandler-Assistent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 544ce4cd0f4ed9a7f3592e5ec1691fb3734b8772
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33340007"
 ---
 # <a name="event-handler-wizard"></a>Ereignishandler-Assistent
-Dieser Assistent fügt einen Ereignishandler für ein Dialogfeld-Steuerelement auf die Klasse Ihrer Wahl. Wenn Sie einen Ereignishandler hinzufügen der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), Sie können nur für das Dialogfeld zu implementierenden Klasse hinzufügen. Finden Sie unter [Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md) für Weitere Informationen.  
+Dieser Assistent fügt einer beliebigen Klasse einen Ereignishandler für ein Dialogfeld-Steuerelement hinzu. Wenn Sie einen Ereignishandler über das [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window) hinzufügen, können Sie ihn nur der Klasse hinzufügen, die das Dialogfeld implementiert. Weitere Informationen finden Sie unter [Adding Event Handlers for Dialog Box Controls (Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente)](../windows/adding-event-handlers-for-dialog-box-controls.md).  
   
  **Befehlsname**  
- Bezeichnet das ausgewählte Steuerelement, für das der Ereignishandler hinzugefügt wird. Dieses Feld ist nicht verfügbar.  
+ Identifiziert das ausgewählte Steuerelement, für das der Ereignishandler hinzugefügt wird. Dieses Feld ist nicht verfügbar.  
   
  **Nachrichtentyp**  
- Zeigt die Liste der aktuellen möglich Meldungshandler für das ausgewählte Steuerelement.  
+ Zeigt die Liste der aktuell verfügbaren Meldungshandler für das ausgewählte Steuerelement an.  
   
- **Handler-Funktionsnamen**  
- Zeigt den Namen der Funktion, die hinzugefügt wird, für die Ereignisbehandlung. Wird standardmäßig der Name des Nachrichtentyps und der Befehl, durch "On" vorangestellt basiert. Angenommen, für die Schaltfläche namens `IDC_BUTTON1`, den Nachrichtentyp `BN_CLICKED` zeigt den Namen der Funktion Handler `OnBnClickedButton1`.  
+ **Handlerfunktionsname**  
+ Zeigt den Namen der Funktion an, die zur Behandlung des Ereignisses hinzugefügt wird. Der Name basiert standardmäßig auf dem Nachrichtentyp und dem Befehl, und „On“ wird vorangestellt. Beispielsweise zeigt der Nachrichtentyp `BN_CLICKED` für die Schaltfläche namens `IDC_BUTTON1` den Handlerfunktionsnamen `OnBnClickedButton1` an.  
   
  **Klassenliste**  
- Zeigt die verfügbare Klassen, die Sie einen Ereignishandler hinzufügen können. Die Klasse für das ausgewählte Dialogfeld wird rot angezeigt.  
+ Zeigt die verfügbaren Klassen an, denen Sie einen Ereignishandler hinzufügen können. Die Klasse für das ausgewählte Dialogfeld wird rot angezeigt.  
   
- **Handler-Beschreibung**  
- Enthält eine Beschreibung für das ausgewählte Element im die **Nachrichtentyp** Feld. Dieses Feld ist nicht verfügbar.  
+ **Handlerbeschreibung**  
+ Gibt eine Beschreibung für das im Feld **Nachrichtentyp** ausgewählte Element an. Dieses Feld ist nicht verfügbar.  
   
- **Hinzufügen und bearbeiten**  
- Die ausgewählte Klasse oder das Objekt den Message-Handler hinzugefügt, und öffnet dann die Text-Editor an die neue Funktion, damit Sie das Steuerelement Benachrichtigung Ereignishandler Code hinzufügen können.  
+ **Hinzufügen und Bearbeiten**  
+ Fügt der ausgewählten Klasse oder dem Objekt den Meldungshandler hinzu, und öffnet dann den Text-Editor bei der neuen Funktion, damit Sie den Handlercode für Benachrichtigungen des Steuerelements hinzufügen können.  
   
- **Bearbeiten von code**  
- Öffnet den Text-Editor der ausgewählten vorhandenen Funktion hinzufügen oder Code des Steuerelements Benachrichtigung bearbeiten zu können.  
+ **Code bearbeiten**  
+ Öffnet den Text-Editor bei der ausgewählten vorhandenen Funktion, damit Sie den Handlercode für Benachrichtigungen des Steuerelements hinzufügen oder bearbeiten können.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen eines Ereignishandlers](../ide/adding-an-event-handler-visual-cpp.md)
+ [Adding an Event Handler (Hinzufügen eines Ereignishandlers)](../ide/adding-an-event-handler-visual-cpp.md)

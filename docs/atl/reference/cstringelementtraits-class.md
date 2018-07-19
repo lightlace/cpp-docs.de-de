@@ -1,5 +1,5 @@
 ---
-title: CStringElementTraits Klasse | Microsoft Docs
+title: CStringElementTraits-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,14 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddce07ed7f79c167d4cf819b85de1484346bba93
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f0c6ed9fb68e685a7b8a59b049277e61f41fd2ce
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885724"
 ---
 # <a name="cstringelementtraits-class"></a>CStringElementTraits-Klasse
-Diese Klasse enthält statische Funktionen, die durch das Speichern von Auflistungsklassen verwendet `CString` Objekte.  
+Diese Klasse stellt statische Funktionen, die durch das Speichern von Auflistungsklassen verwendet `CString` Objekte.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +42,7 @@ class CStringElementTraits
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
+ *T*  
  Der Typ der Daten in der Auflistung gespeichert werden.  
   
 ## <a name="members"></a>Member  
@@ -50,21 +51,21 @@ class CStringElementTraits
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CStringElementTraits::INARGTYPE](#inargtype)|Der Datentyp zum Hinzufügen von Elementen auf das Klassenobjekt Auflistung verwendet werden soll.|  
-|[CStringElementTraits::OUTARGTYPE](#outargtype)|Der Datentyp zum Abrufen von Elementen aus der Auflistung-Klassenobjekt verwendet werden soll.|  
+|[CStringElementTraits::INARGTYPE](#inargtype)|Der Datentyp, zum Hinzufügen von Elementen für das Objekt der Sammlung-Klasse verwendet werden soll.|  
+|[CStringElementTraits::OUTARGTYPE](#outargtype)|Der Datentyp für das Abrufen von Elementen aus dem Auflistungsobjekt-Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CStringElementTraits::CompareElements](#compareelements)|(Statisch) Mit dieser Funktion können Sie zwei Zeichenfolgenelementen auf Gleichheit verglichen werden soll.|  
-|[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|(Statisch) Mit dieser Funktion wird zum Vergleichen von zwei Zeichenfolgenelementen.|  
-|[CStringElementTraits::CopyElements](#copyelements)|(Statisch) Mit dieser Funktion wird auf Kopieren `CString` ein Klassenobjekt Auflistung gespeicherten Elemente.|  
-|[CStringElementTraits::Hash](#hash)|(Statisch) Mit dieser Funktion wird zum Berechnen der eines Hashwert für das Element der angegebenen Zeichenfolge.|  
-|[CStringElementTraits::RelocateElements](#relocateelements)|(Statisch) Mit dieser Funktion werden zum Verschieben `CString` ein Klassenobjekt Auflistung gespeicherten Elemente.|  
+|[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|(Statisch) Rufen Sie diese Funktion zum Vergleichen von zwei Zeichenfolgenelementen.|  
+|[CStringElementTraits::CopyElements](#copyelements)|(Statisch) Rufen Sie diese Funktion kopiert `CString` in ein Klassenobjekt Auflistung gespeicherten Elemente.|  
+|[CStringElementTraits::Hash](#hash)|(Statisch) Rufen Sie diese Funktion, um einen Hashwert für das Element der angegebenen Zeichenfolge zu berechnen.|  
+|[CStringElementTraits::RelocateElements](#relocateelements)|(Statisch) Mit dieser Funktion wird zum Verschieben `CString` in ein Klassenobjekt Auflistung gespeicherten Elemente.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse enthält statische Funktionen zum Kopieren, verschieben und Vergleichen von Zeichenfolgen und zum Erstellen eines Hashwerts. Diese Funktionen sind hilfreich, wenn Sie eine Auflistungsklasse verwenden zum Speichern von Daten zeichenfolgenbasierten. Verwendung [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) wenn Groß-/Kleinschreibung Vergleiche erforderlich sind. Verwendung [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) Wenn die Zeichenfolgeobjekte sind als Verweise mit behandelt werden.  
+ Diese Klasse stellt statische Funktionen zum Kopieren, verschieben und Vergleichen von Zeichenfolgen und zum Erstellen eines Hashwerts. Diese Funktionen sind hilfreich, wenn eine Auflistungsklasse verwenden, um zeichenfolgenbasierter Daten zu speichern. Verwendung [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) wenn Groß-/Kleinschreibung Vergleiche erforderlich sind. Verwendung [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) bei der String-Objekte werden als Verweise überwunden werden müssen.  
   
  Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
@@ -79,11 +80,11 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `str1`  
- Das erste string-Element.  
+ *str1*  
+ Die erste Zeichenfolge Element.  
   
- `str2`  
- Das zweite string-Element.  
+ *str2*  
+ Die zweite Zeichenfolge Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" zurück, wenn die Elemente gleich "false", andernfalls sind.  
@@ -96,18 +97,18 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `str1`  
- Das erste string-Element.  
+ *str1*  
+ Die erste Zeichenfolge Element.  
   
- `str2`  
- Das zweite string-Element.  
+ *str2*  
+ Die zweite Zeichenfolge Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
- 0 (null), wenn die Zeichenfolgen identisch sind, < 0 Wenn `str1` ist kleiner als `str2`, oder 0 > Wenn `str1` ist größer als `str2`. Die [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) Methode wird verwendet, um die Qualität der Vergleiche ausführen.  
+ 0 (null), wenn die Zeichenfolgen identisch sind, < 0 Wenn *str1* ist kleiner als *str2*, oder > 0, wenn *str1* ist größer als *str2*. Die [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) Methode wird verwendet, um die Vergleiche durchzuführen.  
 
   
 ##  <a name="copyelements"></a>  CStringElementTraits::CopyElements  
- Rufen Sie diese statische Funktion zum Kopieren `CString` ein Klassenobjekt Auflistung gespeicherten Elemente.  
+ Rufen Sie diese statische Funktion zum Kopieren `CString` in ein Klassenobjekt Auflistung gespeicherten Elemente.  
   
 ```
 static void CopyElements(
@@ -117,17 +118,17 @@ static void CopyElements(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDest`  
+ *pDest*  
  Zeiger auf das erste Element, das die kopierten Daten erhält.  
   
- `pSrc`  
+ *pSrc*  
  Zeiger auf das erste Element zu kopieren.  
   
- `nElements`  
+ *nElements*  
  Die Anzahl der zu kopierenden Elemente.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Quell- und Zielschemas Elemente sollten sich nicht überschneiden.  
+ Die Quelle und Ziel-Elemente sollten sich nicht überschneiden.  
   
 ##  <a name="hash"></a>  CStringElementTraits::Hash  
  Rufen Sie diese statischen Funktion um einen Hashwert für das Element der angegebenen Zeichenfolge zu berechnen.  
@@ -137,28 +138,28 @@ static ULONG Hash(INARGTYPE str);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `str`  
+ *str*  
  Das String-Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt einen Hashwert berechnet wird, verwenden den Inhalt der Zeichenfolge zurück.  
+ Gibt einen Hashwert berechnet mithilfe des Inhalts der Zeichenfolge zurück.  
   
 ##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE  
- Der Datentyp zum Hinzufügen von Elementen auf das Klassenobjekt Auflistung verwendet werden soll.  
+ Der Datentyp, zum Hinzufügen von Elementen für das Objekt der Sammlung-Klasse verwendet werden soll.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CStringElementTraits::OUTARGTYPE  
- Der Datentyp zum Abrufen von Elementen aus der Auflistung-Klassenobjekt verwendet werden soll.  
+ Der Datentyp für das Abrufen von Elementen aus dem Auflistungsobjekt-Klasse.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
 ##  <a name="relocateelements"></a>  CStringElementTraits::RelocateElements  
- Rufen Sie diese statische Funktion verschieben `CString` ein Klassenobjekt Auflistung gespeicherten Elemente.  
+ Rufen Sie diese statische Funktion verschieben `CString` in ein Klassenobjekt Auflistung gespeicherten Elemente.  
   
 ```
 static void RelocateElements(
@@ -168,19 +169,19 @@ static void RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDest`  
+ *pDest*  
  Zeiger auf das erste Element, das die verschobenen Daten erhält.  
   
- `pSrc`  
- Zeiger auf das erste Element zu verschieben.  
+ *pSrc*  
+ Zeiger auf das erste Element, zu verschieben.  
   
- `nElements`  
+ *nElements*  
  Die Anzahl der Elemente zu verschieben.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese statische Funktion ruft [Memmove](../../c-runtime-library/reference/memmove-wmemmove.md), dies ist ausreichend für die meisten Datentypen. Wenn die Objekte, die verschobene Zeiger auf ihre eigenen Member enthalten, müssen diese statischen Funktion außer Kraft gesetzt werden.  
+ Diese statischen Funktion ruft [Memmove](../../c-runtime-library/reference/memmove-wmemmove.md), dies ist ausreichend für die meisten Datentypen. Wenn die Objekte, die verschoben werden Zeiger auf ihre eigenen Member enthalten, müssen diese statischen Funktion außer Kraft gesetzt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CElementTraitsBase-Klasse](../../atl/reference/celementtraitsbase-class.md)   
  [CStringElementTraitsI-Klasse](../../atl/reference/cstringelementtraitsi-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

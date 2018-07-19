@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111756"
 ---
 # <a name="supporting-schema-rowsets"></a>Supporting Schema Rowsets
 Schemarowsets ermöglichen es Consumern, Informationen zu einem Datenspeicher abrufen, ohne die zugrunde liegende Struktur bzw. das Schema. Beispielsweise ggf. ein Datenspeicher Tabellen in einer benutzerdefinierten Hierarchie organisiert, damit gäbe es keine Möglichkeit, die Kenntnis des Schemas mit Ausnahme von sichergestellt werden, lesen. (Ein weiteres Beispiel beachten Sie, dass die Visual C++-Assistenten-Schemarowsets verwenden, um die Zugriffsmethoden für den Consumer zu generieren.) Damit wird den Consumer dazu, macht der Anbieter-Sitzungsobjekt Methoden auf die [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) Schnittstelle. In Visual C++-Anwendungen verwenden Sie die [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) Klasse implementieren **IDBSchemaRowset**.  

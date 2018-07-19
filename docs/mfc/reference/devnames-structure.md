@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3234df2f0430ea75399791f4fd88a636a63b67e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c13167c42c6acbfcc5f3af500205eed6ab884d9
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121574"
 ---
 # <a name="devnames-structure"></a>DEVNAMES-Struktur
 Die `DEVNAMES` Struktur enthält die Zeichenfolgen, die die Treiber, Geräte und Ausgabe-Anschlussnamen für einen Drucker zu identifizieren.  
@@ -43,16 +44,16 @@ typedef struct tagDEVNAMES { /* dvnm */
  (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die eine auf Null endende Zeichenfolge, die den Dateinamen (ohne Erweiterung) für den Gerätetreiber enthält. Bei der Eingabe wird diese Zeichenfolge verwendet, um zu bestimmen, den Drucker anfänglich im Dialogfeld angezeigt.  
   
  *wDeviceOffset*  
- (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die Null-terminierte Zeichenfolge (maximal 32 Byte, einschließlich der Null) mit dem Namen des Geräts an. Diese Zeichenfolge muss identisch mit der **DmDeviceName** Mitglied der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Struktur.  
+ (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die Null-terminierte Zeichenfolge (maximal 32 Byte, einschließlich der Null) mit dem Namen des Geräts an. Diese Zeichenfolge muss identisch mit der `dmDeviceName` Mitglied der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Struktur.  
   
  *wOutputOffset*  
  (Eingabe/Ausgabe) Gibt den Offset in Zeichen, die auf Null endende Zeichenfolge, die der DOS-Gerätename für das physikalische Ausgabemedium (Ausgabeport) enthält.  
   
  *wDefault*  
- Gibt an, ob die Zeichenfolgen in enthalten die `DEVNAMES` Struktur als Standarddrucker zu identifizieren. Diese Zeichenfolge wird verwendet, um sicherzustellen, dass seit der letzten Druckvorgang nicht als Standarddrucker geändert hat. Auf Eingabe-, If der **DN_DEFAULTPRN** Flag festgelegt ist, die anderen Werte der `DEVNAMES` Struktur anhand der aktuellen Standarddrucker überprüft. Wenn eine der Zeichenfolgen nicht übereinstimmen, wird eine Warnmeldung angezeigt informiert den Benutzer, den das Dokument neu formatiert werden muss. Bei der Ausgabe der **wDefault** Element geändert wird, nur, wenn das Dialogfeld Drucken Setup angezeigt wurde und der Benutzer die Schaltfläche "OK hat". Die **DN_DEFAULTPRN** Flag wird festgelegt, wenn als Standarddrucker ausgewählt wurde. Wenn Sie ein bestimmter Drucker ausgewählt ist, wird das Flag nicht festgelegt. Alle anderen Bits in diesem Element sind durch die Print-Standarddialogfelder für die interne Verwendung reserviert.  
+ Gibt an, ob die Zeichenfolgen in enthalten die `DEVNAMES` Struktur als Standarddrucker zu identifizieren. Diese Zeichenfolge wird verwendet, um sicherzustellen, dass seit der letzten Druckvorgang nicht als Standarddrucker geändert hat. Bei der Eingabe, wenn das DN_DEFAULTPRN-Flag festgelegt ist, die andere Werte der `DEVNAMES` Struktur anhand der aktuellen Standarddrucker überprüft. Wenn eine der Zeichenfolgen nicht übereinstimmen, wird eine Warnmeldung angezeigt informiert den Benutzer, den das Dokument neu formatiert werden muss. Bei der Ausgabe der `wDefault` Element geändert wird, nur, wenn das Dialogfeld Drucken Setup angezeigt wurde und der Benutzer die Schaltfläche "OK hat". Das DN_DEFAULTPRN-Flag wird festgelegt, wenn als Standarddrucker ausgewählt wurde. Wenn Sie ein bestimmter Drucker ausgewählt ist, wird das Flag nicht festgelegt. Alle anderen Bits in diesem Element sind durch die Print-Standarddialogfelder für die interne Verwendung reserviert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **PrintDlg** Funktion verwendet diese Zeichenfolgen zum Initialisieren von Membern im System definierte Drucken-Dialogfeld. Wenn der Benutzer das Dialogfeld wird geschlossen, werden Informationen über den ausgewählten Drucker in dieser Struktur zurückgegeben.  
+ Die `PrintDlg` Funktion verwendet diese Zeichenfolgen zum Initialisieren von Membern im System definierte Drucken-Dialogfeld. Wenn der Benutzer das Dialogfeld wird geschlossen, werden Informationen über den ausgewählten Drucker in dieser Struktur zurückgegeben.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** commdlg.h  

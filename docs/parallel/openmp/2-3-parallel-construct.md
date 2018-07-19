@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692746"
 ---
 # <a name="23-parallel-construct"></a>2.3 parallel-Konstrukt
 Die folgende Direktive definiert ein paralleles Bereichs, das einer Region des Programms ist, die durch mehrere Threads parallel ausgeführt werden soll. Dies ist das grundlegende Konstrukt, das mit der parallelen Ausführung beginnt.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33305307"
 ---
 # <a name="linker-tools-warning-lnk4220"></a>Linkertoolwarnung LNK4220
 Ungültiger 'Linkeroption' Wert 'Wert'; Standard wird angenommen  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360779"
 ---
 # <a name="bitfields"></a>Bitfelder
 Struktur-Bitfelder sind auf 64 Bits beschränkt und kann vom Typ Int, Int ohne Vorzeichen, int64 oder ohne Vorzeichen int64 signiert. Bitfelder, die Typ-Anwendungsgrenze überschreiten, überspringt Bits das Bitfeld in die nächste Typ Ausrichtung ausrichten. Beispielsweise kann ganze Zahl Bitfelder keine 32-Bit-überschreiten.  

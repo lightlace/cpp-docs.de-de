@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883980"
 ---
 # <a name="copying-a-device-image-image-editor-for-icons"></a>Kopieren eines Gerätebilds (Bildbearbeitung für Symbole)
 ### <a name="to-copy-a-device-image"></a>Kopieren ein Gerätebildes  

@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ace36eef483d8385d718e14e1fc4c5f4e9ea1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956472"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Schreiben einer Internetclientanwendung mithilfe von MFC-WinInet-Klassen
 Die Basis für jede Internetclientanwendung ist die Internet-Sitzung. MFC implementiert internetsitzungen als Objekte der Klasse [CInternetSession](../mfc/reference/cinternetsession-class.md). Diese Klasse können Sie eine Internet-Sitzung oder mehrere gleichzeitige Sitzungen erstellen.  
@@ -42,9 +43,9 @@ Die Basis für jede Internetclientanwendung ist die Internet-Sitzung. MFC implem
   
 -   Bei Verwendung von `CInternetSession::OpenURL` zum Herstellen der Serververbindung, den Aufruf von `OpenURL` gibt eine `CStdioFile`.  
   
--   Wenn verwenden **CInternetSession:: GetFTPConnection**, `GetGopherConnection`, oder `GetHttpConnection` um die Serververbindung hergestellt haben, rufen Sie `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, oder **CHttpConnection::**  bzw. zum Zurückgeben einer `CInternetFile`, `CGopherFile`, oder `CHttpFile`bzw.  
+-   Wenn verwenden `CInternetSession::GetFtpConnection`, `GetGopherConnection`, oder `GetHttpConnection` um die Serververbindung hergestellt haben, rufen Sie `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, oder `CHttpConnection::OpenRequest`nahezu zurückzugebenden eine `CInternetFile`, `CGopherFile`, oder `CHttpFile`, bzw.  
   
- Die Schritte bei der Implementierung einer Internetclientanwendung variieren, je nachdem, ob Sie eine generische Internetclient basierend auf Erstellen **OpenURL** oder mit einer der protokollspezifische-Clients die **GetConnection** Funktionen.  
+ Die Schritte bei der Implementierung einer Internetclientanwendung variieren, je nachdem, ob Sie eine generische Internetclient basierend auf Erstellen `OpenURL` oder mit einer der protokollspezifische-Clients die `GetConnection` Funktionen.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383366"
 ---
 # <a name="working-with-window-objects"></a>Arbeiten mit Fensterobjekten
 Arbeiten mit Windows-Aufrufe für zwei Arten von Aktivitäten:  

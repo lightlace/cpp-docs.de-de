@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fb9a3ff1c27aade9f74a8ed95a8016829874ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76ccb2ec126ae57e39b1a4fab3a0bff82a353d71
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953761"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: Ableiten von Socket-Classen
 Dieser Artikel beschreibt einige der Funktionen, die Sie erhalten durch eine eigene Klasse von einer der Socketklassen ableiten.  
@@ -29,7 +30,7 @@ Dieser Artikel beschreibt einige der Funktionen, die Sie erhalten durch eine eig
   
  Darüber hinaus-Klasse `CSocket` liefert die [OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending) Memberfunktion (eine erweiterte überschreibbaren). MFC ruft diese Funktion auf, während der Socket Windows-basierten Meldungen weiterleitet. Sie können außer Kraft setzen `OnMessagePending` , die von Windows für bestimmte Nachrichten suchen, und reagieren Sie darauf.  
   
- Die Standardversion von `OnMessagePending` in Klasse bereitgestellten `CSocket` untersucht die Nachrichtenwarteschlange für `WM_PAINT` Nachrichten beim Warten auf eines blockierenden Aufrufs abgeschlossen. Er sendet Paint-Meldungen, um die Anzeige zu verbessern. Abgesehen von etwas Sinnvolles Weise veranschaulicht dies eine Möglichkeit, die Sie die Funktion überschreibt möglicherweise selbst. Erwägen Sie ein weiteres Beispiel `OnMessagePending` für die nachfolgend aufgeführte Aufgabe. Angenommen Sie, Sie ein nicht modales Dialogfeld anzeigen, während des Wartens auf den Abschluss einer Netzwerk-Transaktions. Das Dialogfeld enthält eine Schaltfläche "Abbrechen", mit denen Benutzer blockierende Transaktionen "Abbrechen", die zu lange dauert. Ihre `OnMessagePending` Außerkraftsetzung möglicherweise Fehlermeldungen im Zusammenhang mit diesem nicht modalen Dialogfeld Datapump.  
+ Die Standardversion von `OnMessagePending` in Klasse bereitgestellten `CSocket` untersucht die Nachrichtenwarteschlange für WM_PAINT-Nachrichten beim Warten auf eines blockierenden Aufrufs abgeschlossen. Er sendet Paint-Meldungen, um die Anzeige zu verbessern. Abgesehen von etwas Sinnvolles Weise veranschaulicht dies eine Möglichkeit, die Sie die Funktion überschreibt möglicherweise selbst. Erwägen Sie ein weiteres Beispiel `OnMessagePending` für die nachfolgend aufgeführte Aufgabe. Angenommen Sie, Sie ein nicht modales Dialogfeld anzeigen, während des Wartens auf den Abschluss einer Netzwerk-Transaktions. Das Dialogfeld enthält eine Schaltfläche "Abbrechen", mit denen Benutzer blockierende Transaktionen "Abbrechen", die zu lange dauert. Ihre `OnMessagePending` Außerkraftsetzung möglicherweise Fehlermeldungen im Zusammenhang mit diesem nicht modalen Dialogfeld Datapump.  
   
  In Ihrem `OnMessagePending` außer Kraft setzen, zurückgeben **"true"** oder die Rückgabe von einem Aufruf der Basisklassenversion von `OnMessagePending`. Rufen Sie die Basisklassenversion, wenn es Aufgaben ausführt, die Sie trotzdem ausgeführt.  
   

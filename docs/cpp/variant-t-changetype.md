@@ -1,5 +1,5 @@
 ---
-title: _variant_t::ChangeType | Microsoft Docs
+title: _variant_t::ChangeType | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53fd73fc9606053dda6f8c143618373ad9bb7e4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f87d9e4d7193755f70e3463f4da60d88a7bd832c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943483"
 ---
 # <a name="varianttchangetype"></a>_variant_t::ChangeType
 **Microsoft-spezifisch**  
   
- Ändert den Typ des der `_variant_t` Objekt für das angezeigte **VARTYPE**.  
+ Ändert den Typ des der `_variant_t` -Objekts in den angegebenen `VARTYPE`.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
   
-      void ChangeType(  
+void ChangeType(  
    VARTYPE vartype,  
    const _variant_t* pSrc = NULL   
 );  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `vartype`  
- Die **VARTYPE** dafür `_variant_t` Objekt.  
+ *VarType*  
+ Die `VARTYPE` für diesen `_variant_t` Objekt.  
   
- `pSrc`  
- Ein Zeiger auf das `_variant_t`-Objekt, das umgewandelt werden soll. Wenn dieser Wert ist **NULL**, Konvertierung direkt ausgeführt.  
+ *pSrc*  
+ Ein Zeiger auf das `_variant_t`-Objekt, das umgewandelt werden soll. Wenn dieser Wert NULL ist, erfolgt die Konvertierung vorhanden.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Memberfunktion konvertiert ein `_variant_t` in das angegebene Objekt **VARTYPE**. Wenn `pSrc` ist **NULL**, die Konvertierung erfolgt eingerichtet ist, andernfalls das `_variant_t` Objekt wird von kopiert `pSrc` und anschließend konvertiert.  
+ Diese Memberfunktion konvertiert ein `_variant_t` Objekt in das angegebene `VARTYPE`. Wenn *pSrc* NULL ist, die Konvertierung erfolgt in vorhanden, andernfalls diese `_variant_t` Objekt wird aus kopiert *pSrc* und anschließend konvertiert.  
   
  **Ende Microsoft-spezifisch**  
   

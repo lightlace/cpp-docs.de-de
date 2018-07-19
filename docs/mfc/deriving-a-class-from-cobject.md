@@ -1,5 +1,5 @@
 ---
-title: Ableiten einer Klasse von CObject | Microsoft Docs
+title: Ableiten einer Klasse von CObject | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,53 +23,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d0b629617c1592387f3f959996fd3e9837242ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 05828283f560e73d4c5d2ddf2cbc05963cbb217f
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026116"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Ableiten einer Klasse von CObject
-Dieser Artikel beschreibt die erforderlichen Schritte zum Ableiten einer Klasse von [CObject](../mfc/reference/cobject-class.md). Andere `CObject` Klasse Artikel beschreiben die erforderlichen Schritte zum Nutzen von bestimmten `CObject` Funktionen, z. B. Serialisierung und Unterstützung bei der Diagnose Debuggen.  
+In diesem Artikel wird beschrieben, die mindestens erforderlichen Schritte zum Ableiten einer Klasse von [CObject](../mfc/reference/cobject-class.md). Andere `CObject` Klasse Artikeln wird beschrieben, die erforderlichen Schritte zum Nutzen von bestimmten `CObject` Funktionen wie die Serialisierung und Unterstützung bei der Diagnose Debuggen.  
   
- In den Diskussionen `CObject`, die Begriffe "Schnittstellendatei" und "Implementierungsdatei" häufig verwendet werden. Die Schnittstellendatei (häufig aufgerufen, die Headerdatei oder. H-Datei) enthält die Klassendeklaration und andere Informationen zum Verwenden der Klasse erforderlich sind. Der Implementierungsdatei (oder). CPP-Datei) enthält die Definition der Klasse als auch den Code, der die Memberfunktionen von Klassen implementiert. Z. B. für eine Klasse namens `CPerson`, würden Sie in der Regel eine Schnittstellendatei mit dem Namen PERSON erstellen. H und einer Implementierungsdatei mit dem Namen "PERSON". CPP. Für einige kleineren Klassen, die nicht für mehrere Anwendungen freigegeben werden, ist es jedoch in einigen Fällen einfacher, die Schnittstelle und die Implementierung in einer einzelnen kombinieren. CPP-Datei.  
+ In den erläuterungen zu `CObject`, die Begriffe "Schnittstellendatei" und "Implementierungsdatei" häufig verwendet werden. Die Schnittstellendatei (häufig dem Namen der Headerdatei oder. H-Datei) enthält die Klassendeklaration und andere Informationen zum Verwenden der Klasse erforderlich sind. Die Implementierungsdatei (oder). CPP-Datei) enthält die Definition der Klasse als auch der Code, der die Memberfunktionen von Klassen implementiert. Z. B. für eine Klasse namens `CPerson`, würden Sie in der Regel eine Schnittstellendatei, die mit dem Namen PERSON erstellen. H und eine Implementierungsdatei mit dem Namen "PERSON". CPP. Für einige kleinen Klassen, die nicht zwischen Anwendungen freigegeben werden, ist es jedoch manchmal einfacher, die die Schnittstelle und die Implementierung in einer einzelnen kombinieren. CPP-Datei.  
   
- Ihnen stehen vier Grade an Funktionalität beim Ableiten einer Klasse von `CObject`:  
+ Sie können aus vier Ebenen der Funktionalität beim Ableiten einer Klasse von `CObject`:  
   
--   Grundlegende Funktionalität: keine Unterstützung für Laufzeit Klasseninformationen oder der Serialisierung umfasst jedoch diagnostische Speicherverwaltung.  
+-   Grundlegende Funktionalität: keine Unterstützung für die Laufzeit Klasseninformationen oder Serialisierung enthält jedoch die Diagnose Speicherverwaltung.  
   
--   Grundlegende Funktionen sowie Unterstützung für Laufzeit Klasseninformationen.  
+-   Grundlegende Funktionen sowie Unterstützung für die Laufzeit Klasseninformationen.  
   
--   Grundlegende Funktionen sowie Unterstützung für Laufzeit Klasseninformationen und dynamische Erstellung.  
+-   Grundlegende Funktionen sowie Unterstützung für die Laufzeit Klasseninformationen und die dynamische Erstellung.  
   
--   Grundlegende Funktionen sowie Unterstützung für Laufzeit Klasseninformationen, dynamische Erstellung und Serialisierung.  
+-   Grundlegende Funktionen sowie Unterstützung für die Laufzeit Klasseninformationen, dynamische Erstellung und Serialisierung.  
   
- Klassen für die Wiederverwendung (diejenigen, die später als Basisklassen verwendet werden) sollten mindestens Run-Time-Klasse und Serialisierung unterstützt, einschließen, wenn jede benötigte zukünftige Serialisierung erwartet wird.  
+ Klassen für die Wiederverwendung (diejenigen, die später als Basisklassen verwendet wird) sollten mindestens Laufzeitklasse und Serialisierung unterstützt, einschließen, wenn es sich bei zukünftigen Serialisierungs müssen erwartet wird.  
   
- Sie wählen das Maß an Funktionalität mithilfe von bestimmten Deklaration und Implementierung Makros in die Deklaration und Implementierung der Klassen von ableiten `CObject`.  
+ Sie wählen den Umfang der Funktionalität mithilfe von bestimmten Deklaration und Implementierung Makros in der Deklaration und Implementierung der Klassen, die Sie eine von Ableitung `CObject`.  
   
  Die folgende Tabelle zeigt die Beziehung zwischen den Makros verwendet, um Serialisierung und Laufzeitinformationen zu unterstützen.  
   
-### <a name="macros-used-for-serialization-and-run-time-information"></a>Makros, die für die Serialisierung und Laufzeitinformationen verwendet  
+### <a name="macros-used-for-serialization-and-run-time-information"></a>Makros für die Serialisierung und Laufzeitinformationen verwendet  
   
-|-Makro verwendet|CObject:: IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|  
+|Makro verwendet|CObject:: IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|  
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|  
-|Grundlegende `CObject` Funktionalität|Nein|Nein|Nein|  
+|Grundlegende `CObject` Funktionen|Nein|Nein|Nein|  
 |`DECLARE_DYNAMIC`|Ja|Nein|Nein|  
 |`DECLARE_DYNCREATE`|Ja|Ja|Nein|  
 |`DECLARE_SERIAL`|Ja|Ja|Ja|  
   
-#### <a name="to-use-basic-cobject-functionality"></a>Zum Verwenden von CObject Grundfunktionen  
+#### <a name="to-use-basic-cobject-functionality"></a>Zum Verwenden von CObject-Grundfunktionen  
   
-1.  Verwenden Sie die normale C++-Syntax, leiten Sie eine Klasse von `CObject` (oder von einer Klasse abgeleitet `CObject`).  
+1.  Verwenden Sie die normale C++-Syntax, leiten Sie eine Klasse von `CObject` (oder aus einer Klasse abgeleitet `CObject`).  
   
      Das folgende Beispiel zeigt den einfachsten Fall die Ableitung einer Klasse von `CObject`:  
   
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]  
   
- In der Regel wird, möchten Sie jedoch möglicherweise einige der überschreiben `CObject`Memberfunktionen, die Einzelheiten für die neue Klasse zu behandeln. Angenommen, Sie können in der Regel überschreiben möchten die `Dump` Funktion `CObject` Debugausgabe für den Inhalt der Klasse angeben. Weitere Informationen zum Außerkraftsetzen `Dump`, finden Sie im Artikel [Diagnose: Objektdumps](http://msdn.microsoft.com/en-us/727855b1-5a83-44bd-9fe3-f1d535584b59). Möchten Sie möglicherweise auch überschreiben die `AssertValid` Funktion der `CObject` um angepasste testen, um zu überprüfen, ob die Konsistenz der Datenmember von Klassenobjekten bereitzustellen. Eine Beschreibung zum Überschreiben von `AssertValid`, finden Sie unter [MFC ASSERT_VALID und CObject:: AssertValid](http://msdn.microsoft.com/en-us/7654fb75-9e9a-499a-8165-0a96faf2d5e6).  
+ In der Regel, möchten Sie jedoch möglicherweise einige der überschreiben `CObject`Member-Funktionen, die Einzelheiten der neuen Klasse behandeln. Angenommen, Sie können in der Regel überschreiben möchten die `Dump` Funktion `CObject` Debugausgabe für den Inhalt der Klasse bereitstellen. Weitere Informationen zum Außerkraftsetzen `Dump`, finden Sie im Artikel [Diagnose: Objektdumps](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59). Sie sollten auch außer Kraft setzen der `AssertValid` Funktion `CObject` bereitstellen, angepasste testen, um die Konsistenz der Datenmember der Klassenobjekte zu überprüfen. Eine Beschreibung der Außerkraftsetzen `AssertValid`, finden Sie unter [MFC ASSERT_VALID und CObject:: AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6).  
   
- Der Artikel [Ebenen von Funktionen angeben](../mfc/specifying-levels-of-functionality.md) wird beschrieben, wie auf anderen Ebenen von Funktionen, einschließlich der Laufzeit Klasseninformationen, dynamische objekterstellung und Serialisierung angeben.  
+ Der Artikel [Ebenen von Funktionen angeben](../mfc/specifying-levels-of-functionality.md) beschreibt, wie andere Stufen der Funktionalität, einschließlich der Laufzeit Klasseninformationen, dynamische objekterstellung und Serialisierung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CObject](../mfc/using-cobject.md)

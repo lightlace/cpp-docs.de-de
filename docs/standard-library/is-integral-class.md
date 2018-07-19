@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 531ee45aed64daa19f818bc5c8480a9c1b032d30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58f3245e430ba1c74ea88f6262f14a4d38c1ca2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954030"
 ---
 # <a name="isintegral-class"></a>is_integral-Klasse
 
@@ -36,13 +37,13 @@ struct is_integral;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn der Typ `Ty` ein ganzzahliger Typ oder ein `cv-qualified`-Formular eines der ganzzahligen Typen ist, andernfalls ist sie „false“.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist eines der ganzzahligen Typen oder ein `cv-qualified` -Form eines dieser die ganzzahligen Typen ist, andernfalls er false enthält.
 
-Ein ganzzahliger Typ ist entweder `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long` oder `unsigned long`. Mit Compilern kann der ganzzahlige Typ darüber hinaus `long long`, `unsigned long long`, `__int64` und `unsigned __int64` sein.
+Ein ganzzahliger Typ ist eine der **"bool"**, **Char**, **unsigned Char**, **signiert Char**, **"wchar_t"**, **kurze**, **unsigned short**, **Int**, **ganze Zahl ohne Vorzeichen**, **lange**, und **unsigned long**. Darüber hinaus mit Compilern, die sie bereitstellen, ein ganzzahliger Typ kann eine der **long long**, **long long ohne Vorzeichen**, **__int64**, und **__int64 ohne Vorzeichen**.
 
 ## <a name="example"></a>Beispiel
 

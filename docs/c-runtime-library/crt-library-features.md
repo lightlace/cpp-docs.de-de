@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b20fa6862a835ca913a2865a651112584966af3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
+ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799193"
 ---
 # <a name="crt-library-features"></a>CRT-Bibliotheksfunktionen
 
@@ -85,7 +86,7 @@ Die Verwendung der statisch verknüpften CRT bedeutet, dass alle von der C-Laufz
 
 Da eine durch das Verknüpfen mit einer statischen CRT erstellten DLL ihren eigenen CRT-Zustand besitzt, wird in einer DLL das statische Verknüpfen mit einer CRT nicht empfohlen, es sei denn, dass die daraus resultierenden Konsequenzen verstanden werden und erwünscht sind. Wenn Sie z. B. [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) in einer ausführbaren Datei aufrufen, die die DLL lädt, die mit ihrer eigenen statischen CRT verknüpft ist, werden alle vom Code in der DLL generierten Hardwareausnahmen vom Konvertierungsprogramm nicht erfasst, wohingegen die vom Code in der Hauptausführungsdatei generierten Hardwareausnahmen erfasst werden.
 
-Wenn Sie den **/clr** -Compilerschalter verwenden, wird der Code mit der statischen Bibliothek msvcmrt.lib verknüpft. Die statische Bibliothek stellt einen Proxy zwischen dem verwalteten Code und der systemeigenen CRT bereit. Die statisch verknüpfte CRT (Option **/MT** oder Option **/MTd** ) können Sie nicht mit **/clr**verwenden. Verwenden Sie stattdessen die dynamisch verknüpften Bibliotheken (**/MD** oder **/MDd**).
+Wenn Sie den **/clr** -Compilerschalter verwenden, wird der Code mit der statischen Bibliothek msvcmrt.lib verknüpft. Die statische Bibliothek stellt einen Proxy zwischen dem verwalteten Code und der systemeigenen CRT bereit. Die statisch verknüpfte CRT (Option **/MT** oder Option **/MTd** ) können Sie nicht mit **/clr**verwenden. Verwenden Sie stattdessen die dynamisch verknüpften Bibliotheken (**/MD** oder **/MDd**). Die reinen verwalteten CRT-Bibliotheken sind in Visual Studio 2015 als veraltet markiert und werden in Visual Studio 2017 nicht unterstützt.
 
 Weitere Informationen zur Verwendung der CRT mit **/clr** finden Sie unter [Gemischte (native und verwaltete) Assemblys](../dotnet/mixed-native-and-managed-assemblies.md).
 
@@ -112,10 +113,15 @@ Für die binäre Kompatibilität kann mehr als eine DLL-Datei von einer einzelne
 
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>Welche Probleme gibt es, wenn in einer Anwendung mehrere CRT-Version verwendet werden?
 
-Wenn Sie mehrere DLL- oder EXE-Dateien besitzen, dann verfügen Sie möglicherweise auch über mehr als eine CRT-Instanz, unabhängig davon, ob Sie verschiedene Versionen von Visual C++ verwenden. Das statische Verknüpfen der CRT mit mehreren DLLs kann das gleiche Problem darstellen. Entwickler, bei denen dieses Problem mit statischen CRTs auftritt, sollen mit **/MD** kompilieren, um die CRT-DLL zu verwenden. Wenn Ihre DLLs CRT-Ressourcen über die DLL-Grenze hinaus übergeben, treten möglicherweise Probleme mit nicht übereinstimmenden CRTs auf, und Sie müssen Ihr Projekt mit Visual C++ neu kompilieren.
+Jedes ausführbare Image (EXE oder DLL) kann mit einer eigenen statisch verknüpften CRT versehen sein oder dynamisch mit einer CRT verknüpft werden. Ob die Version der CRT statisch enthalten ist oder dynamisch von einem bestimmten Image geladen wird, hängt von der Version der Tools und Bibliotheken ab, mit denen es erstellt wurde. In einem einzelnen Prozess können mehrere EXE- und DLL-Images geladen werden, die jeweils mit einer eigenen CRT ausgestattet sind. Jede dieser CRTs kann unterschiedliche Zuweisungen, interne Strukturlayouts und Speicherverhältnisse aufweisen. Dies bedeutet, dass der belegte Arbeitsspeicher, CRT-Ressourcen oder Klassen, die über eine DLL-Grenze übergeben werden, Probleme bei der Verwaltung des Arbeitsspeichers, der internen statischen Verwendung oder der Layoutinterpretation verursachen kann bzw. können. Welcher CRT-Deallokator wird beispielsweise verwendet, wenn eine Klasse in einer DLL zugewiesen ist, jedoch an eine andere DLL übergeben und von dieser gelöscht wird? Die verursachten Fehler können von geringfügigen bis hin zu unmittelbar schwerwiegenden Fehlern reichen, weshalb von einer direkten Übertragung solcher Ressourcen strengstens abgeraten wird.
 
-Wenn das Programm mehr als eine CRT-Version verwendet, muss beim Übergeben bestimmter CRT-Objekte (wie z. B. Dateihandles, Gebietsschemas und Umgebungsvariablen) über DLL-Grenzen hinweg sorgfältig vorgegangen werden. Weitere Informationen zu diesen Problemen und den jeweiligen Lösungsmöglichkeiten finden Sie unter [Potenzielle Fehler bei der Übergabe von CRT-Objekten über DLL-Grenzen](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+Eine Vielzahl dieser Probleme kann vermieden werden, wenn Sie stattdessen ABI-Technologien (Application Binary Interface) verwenden, da diese als stabil und versionierbar gelten. Entwerfen Sie Ihre DLL-Exportschnittstellen so, dass Informationen nach Wert übergeben werden oder der Arbeitsspeicher optimiert wird, der von der aufrufenden Funktion übergeben und nicht lokal zugewiesen und an den Aufrufer zurückgegeben wird. Verwenden Sie die Marshallingmethoden, um strukturierte Daten zwischen ausführbaren Images zu kopieren. Kapseln Sie Ressourcen lokal, und lassen Sie nur die Bearbeitung über Handles oder Funktionen zu, die Sie Clients verfügbar machen.
+
+Einige dieser Probleme können auch vermieden werden, wenn alle Images in Ihrem Prozess die gleiche dynamisch geladene CRT-Version verwenden. Um sicherzustellen, dass alle Komponenten dieselbe DLL-Version der CRT verwenden, erstellen sie diese mithilfe der **/MD**-Option, und verwenden Sie die gleichen Compilertoolset- und Eigenschaftseinstellungen.
+
+Beim Übergeben bestimmter CRT-Ressourcen (z.B. Dateihandles, Gebietsschemas und Umgebungsvariablen) über DLL-Grenzen hinweg muss sorgfältig vorgegangen werden, selbst wenn das Programm dieselbe CRT-Version verwendet. Weitere Informationen zu diesen Problemen und den jeweiligen Lösungsmöglichkeiten finden Sie unter [Potenzielle Fehler bei der Übergabe von CRT-Objekten über DLL-Grenzen](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+
 
 ## <a name="see-also"></a>Siehe auch
 
-[C-Laufzeitbibliotheksreferenz](../c-runtime-library/c-run-time-library-reference.md)
+- [C-Laufzeitbibliotheksreferenz](../c-runtime-library/c-run-time-library-reference.md)

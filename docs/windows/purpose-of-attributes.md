@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877835"
 ---
 # <a name="purpose-of-attributes"></a>Attributzwecke
 Attribute Erweiterung von C++ Richtungen derzeit nicht möglich ohne Unterbrechung der klassischen Struktur der Sprache. Attribute können Provider (separate DLLs) Sprachfunktionalität dynamisch zu erweitern. Das Hauptziel der Attribute ist zum Vereinfachen der Erstellung von COM-Komponenten, zusätzlich zu erhöhen die Produktivität Maß der Komponentenentwickler. Attribute können angewendet werden, nahezu alle C++-Konstrukt, z. B. Klassen, Datenmember oder Memberfunktionen. Im folgenden finden eine Hervorhebung der Vorteile dieser neuen Technologie:  

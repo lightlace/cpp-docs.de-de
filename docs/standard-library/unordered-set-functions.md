@@ -7,11 +7,12 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: 515d16cf8b9f11f5e9eb0b9699a0f72a19a64053
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f832c31ca1659a9275c6c424ca4fb143574672f0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956669"
 ---
 # <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt;-Funktionen
 
@@ -33,17 +34,23 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-`Key` Der Schlüsseltyp.
+*Key*  
+ Der Schlüsseltyp.
 
-`Hash` Der hashfunktionsobjekttyp.
+*Hash*  
+ Der Hashfunktionsobjekttyp.
 
-`Pred` Die Gleichheit-funktionsobjekttyp.
+*Pred*  
+ Der Gleichheitsvergleich-Funktionsobjekttyp.
 
-`Alloc` Die Allocator-Klasse.
+*Alloc*  
+ Die Zuweisungsklasse.
 
-`left` Der erste zu tauschende Container.
+*left*  
+ Der erste zu tauschende Container.
 
-`right` Der zweite zu tauschende Container.
+*right*  
+ Der zweite zu tauschende Container.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -119,17 +126,23 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-`Key` Der Schlüsseltyp.
+*Key*  
+ Der Schlüsseltyp.
 
-`Hash` Der hashfunktionsobjekttyp.
+*Hash*  
+ Der Hashfunktionsobjekttyp.
 
-`Pred` Die Gleichheit-funktionsobjekttyp.
+*Pred*  
+ Der Gleichheitsvergleich-Funktionsobjekttyp.
 
-`Alloc` Die Allocator-Klasse.
+*Alloc*  
+ Die Zuweisungsklasse.
 
-`left` Der erste zu tauschende Container.
+*left*  
+ Der erste zu tauschende Container.
 
-`right` Der zweite zu tauschende Container.
+*right*  
+ Der zweite zu tauschende Container.
 
 ### <a name="remarks"></a>Hinweise
 

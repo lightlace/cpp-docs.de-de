@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256554"
 ---
 # <a name="compiler-error-c3068"></a>Compilerfehler C3068
 'Funktion': eine naked-Funktion kann keine Objekte enthalten, die Entladung erforderlich wäre, wenn eine C++-Ausnahme aufgetreten ist.  

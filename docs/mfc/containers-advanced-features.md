@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2999e82bd05d75cb8637ba7404c36cdc2be047a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932171"
 ---
 # <a name="containers-advanced-features"></a>Container: Erweiterte Funktionen
 Dieser Artikel beschreibt die erforderlichen Schritte zum optionale erweiterte Funktionen in vorhandenen Container-Anwendungen zu integrieren. Diese Funktionen sind:  
@@ -69,13 +70,13 @@ Dieser Artikel beschreibt die erforderlichen Schritte zum optionale erweiterte F
   
     -   Verbinden der `COleTemplateServer` Objekt, das die Dokumentvorlagen durch Aufrufen des Objekts `ConnectTemplate` Memberfunktion.  
   
-    -   Rufen Sie die **COleTemplateServer::RegisterAll** Memberfunktion versucht, alle Objekte der Klasse mit dem OLE-System zu registrieren.  
+    -   Rufen Sie die `COleTemplateServer::RegisterAll` Memberfunktion versucht, alle Objekte der Klasse mit dem OLE-System zu registrieren.  
   
-    -   Rufen Sie `COleTemplateServer::UpdateRegistry` auf. Der einzige Parameter `UpdateRegistry` muss `OAT_CONTAINER` , wenn die Anwendung nicht mit dem Schalter "/ eingebettete" gestartet wird. Dies registriert die Anwendung als Container, der Links auf eingebettete Objekte unterstützen kann.  
+    -   Rufen Sie `COleTemplateServer::UpdateRegistry` auf. Der einzige Parameter `UpdateRegistry` muss *OAT_CONTAINER* , wenn die Anwendung nicht mit dem Schalter "/ eingebettete" gestartet wird. Dies registriert die Anwendung als Container, der Links auf eingebettete Objekte unterstützen kann.  
   
          Wenn die Anwendung mit dem Schalter "/ eingebettete" gestartet wird, sollte nicht das Hauptfenster ähnelt einer Serveranwendung angezeigt werden.  
   
- Das MFC-OLE-Beispiel [OCLIENT](../visual-cpp-samples.md) dieser Funktion implementiert. Ein Beispiel dafür, wie dies funktioniert, finden Sie unter der `InitInstance` -Funktion in der OCLIENT. Diese beispielanwendung CPP-Datei.  
+ Das MFC-OLE-Beispiel [OCLIENT](../visual-cpp-samples.md) dieser Funktion implementiert. Ein Beispiel dafür, wie dies funktioniert, finden Sie unter der `InitInstance` -Funktion in der *OCLIENT. CPP* Datei dieser Beispiel-Anwendung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Containers](../mfc/containers.md)   

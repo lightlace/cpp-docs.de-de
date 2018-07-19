@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368511"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>Importieren von Daten mithilfe von "__declspec(dllimport)"
 Im Fall von Daten mithilfe von **von "__declspec(dllimport)" "** bietet eine bequeme Möglichkeit, die eine Dereferenzierungsschicht entfernt werden. Beim Importieren von Daten aus einer DLL müssen Sie die Import Local Address Table durchlaufen. Vor dem **von "__declspec(dllimport)" "**, hierzu mussten wir mussten Sie denken Sie daran, eine zusätzliche Dereferenzierungsebene beim Zugreifen auf Daten, die von der DLL exportiert:  

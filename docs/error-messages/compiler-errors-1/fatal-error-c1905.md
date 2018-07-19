@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199430"
 ---
 # <a name="fatal-error-c1905"></a>Schwerwiegender Fehler C1905
 Front-End und Back-End sind nicht kompatibel (müssen auf denselben Prozessor ausgerichtet sein).  

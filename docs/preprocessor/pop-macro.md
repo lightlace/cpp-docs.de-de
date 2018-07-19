@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849638"
 ---
 # <a name="popmacro"></a>pop_macro
 Legt den Wert für die *Macro_name* -Makros auf den Wert oben im Stapel für dieses Makro.  

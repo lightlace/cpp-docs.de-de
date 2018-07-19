@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367523"
 ---
 # <a name="dependency-side-effects"></a>Seiteneffekte bei Abhängigkeiten
 Wenn ein Ziel mit einem Doppelpunkt (:) in beiden Abhängigkeitszeilen an verschiedenen Standorten angegeben ist, und Befehle nach nur eine der Zeilen angezeigt werden, interpretiert NMAKE Abhängigkeiten wie bei angrenzende oder kombiniert. Es keine Rückschlussregel für die Abhängigkeit aufgerufen werden, die keine Befehle, aber stattdessen wird davon ausgegangen, dass die Abhängigkeiten einer Beschreibung Block gehören, und führt die Befehle, die mit den anderen Abhängigkeit angegeben. Legen Sie beispielsweise diese Regeln:  

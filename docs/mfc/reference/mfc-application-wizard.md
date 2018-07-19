@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372002"
 ---
 # <a name="mfc-application-wizard"></a>MFC-Anwendungs-Assistent
 Der MFC-Anwendungs-Assistent erstellt eine Anwendung, die beim Kompilieren die grundlegenden Funktionen einer ausführbaren Windows-Anwendung (.exe) implementiert. Die MFC-Startanwendung umfasst C++-Quelldateien (.cpp), Ressourcendateien (.rc), Headerdateien (.h) sowie eine Projektdatei (.vcxproj). Der in diesen Startdateien generierte Code basiert auf MFC.  

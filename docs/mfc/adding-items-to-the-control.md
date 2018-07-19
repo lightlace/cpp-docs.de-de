@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341364"
 ---
 # <a name="adding-items-to-the-control"></a>Hinzufügen von Elementen zum Steuerelement
 Hinzufügen von Elementen auf das Strukturelement-Steuerelement ([CListCtrl](../mfc/reference/clistctrl-class.md)), rufen Sie eine der verschiedenen Versionen von der [InsertItem](../mfc/reference/clistctrl-class.md#insertitem) Memberfunktion ist, je nachdem welche Informationen Sie. Eine Version übernimmt einen [LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) -Struktur, die Sie vorbereiten. Da die `LV_ITEM` Struktur enthält zahlreiche Elemente, stehen Ihnen mehr Kontrolle über die Attribute des Listenelements-Steuerelement.  

@@ -1,5 +1,5 @@
 ---
-title: CListCtrl-Klasse | Microsoft Docs
+title: CListCtrl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -274,11 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b44878f5b860a05029f31492a7ca8ae06d83b607
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d668d99c8fa2b9001b0693a5e38e8e6941d087b6
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337628"
 ---
 # <a name="clistctrl-class"></a>CListCtrl-Klasse
 Kapselt die Funktionalität eines Listenansichtsteuerelements, das eine Auflistung von Elementen anzeigt, von denen jedes aus einem Symbol (aus einer Bildliste) und einer Bezeichnung besteht.  
@@ -301,218 +302,218 @@ class CListCtrl : public CWnd
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CListCtrl::ApproximateViewRect](#approximateviewrect)|Bestimmt die Breite und Höhe erforderlich, um die Elemente einer Listenansicht-Steuerelement angezeigt.|  
-|[CListCtrl::Arrange](#arrange)|Richtet die Elemente in einem Raster.|  
-|[CListCtrl::CancelEditLabel](#canceleditlabel)|Bricht die Bearbeitung Elementtext ab.|  
-|[CListCtrl::Create](#create)|Erstellt ein Listenfeld-Steuerelement, und fügt es einer `CListCtrl` Objekt.|  
-|[CListCtrl::CreateDragImage](#createdragimage)|Erstellt eine Bildliste ziehen Sie für ein angegebenes Element an.|  
-|[CListCtrl::CreateEx](#createex)|Erstellt ein Listenfeld-Steuerelement mit der angegebenen erweiterten Fensterstile und fügt es einer `CListCtrl` Objekt.|  
+|[CListCtrl::ApproximateViewRect](#approximateviewrect)|Bestimmt die Breite und Höhe erforderlich, um die Elemente von einem Listenansicht-Steuerelement angezeigt.|  
+|[CListCtrl::Arrange](#arrange)|Richtet die Elemente in einem Raster an.|  
+|[CListCtrl::CancelEditLabel](#canceleditlabel)|Bricht die Element-Textbearbeitung Vorgang ab.|  
+|[CListCtrl::Create](#create)|Ein Listensteuerelement erstellt und fügt sie an einer `CListCtrl` Objekt.|  
+|[CListCtrl::CreateDragImage](#createdragimage)|Erstellt eine Drag-Bildliste für ein angegebenes Element an.|  
+|[CListCtrl::CreateEx](#createex)|Erstellt ein Listensteuerelement mit der angegebenen erweiterten Windows-Stile und fügt sie an einer `CListCtrl` Objekt.|  
 |[CListCtrl::DeleteAllItems](#deleteallitems)|Löscht alle Elemente im Steuerelement.|  
 |[CListCtrl::DeleteColumn](#deletecolumn)|Löscht eine Spalte aus der Listenansicht-Steuerelement.|  
 |[CListCtrl::DeleteItem](#deleteitem)|Löscht ein Element aus dem Steuerelement.|  
 |[CListCtrl::DrawItem](#drawitem)|Wird aufgerufen, wenn sich ein Darstellungsaspekt eines Ownerdrawn-Steuerelements ändert.|  
-|[CListCtrl::EditLabel](#editlabel)|Startet die direkte Bearbeitung der Text des Elements.|  
+|[CListCtrl::EditLabel](#editlabel)|Beginnt die direkte Bearbeitung von Text eines Elements.|  
 |[CListCtrl::EnableGroupView](#enablegroupview)|Aktiviert oder deaktiviert wird, ob die Elemente in einem Listenansicht-Steuerelement als Gruppe anzeigen.|  
 |[CListCtrl::EnsureVisible](#ensurevisible)|Stellt sicher, dass ein Element sichtbar ist.|  
-|[CListCtrl::FindItem](#finditem)|Sucht nach einer Listenansichtselements. nachdem Sie Eigenschaften angegeben.|  
-|[CListCtrl::GetBkColor](#getbkcolor)|Ruft die Farbe des Hintergrunds einer Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetBkImage](#getbkimage)|Ruft das aktuelle Hintergrundbild des ein Listenansicht-Steuerelement ab.|  
+|[CListCtrl::FindItem](#finditem)|Sucht ein Listenansichtselement müssen Eigenschaften angegeben.|  
+|[CListCtrl::GetBkColor](#getbkcolor)|Ruft die Hintergrundfarbe des einem Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetBkImage](#getbkimage)|Ruft das aktuelle Hintergrundbild von einem Listenansicht-Steuerelement ab.|  
 |[CListCtrl:: GetCallbackMask](#getcallbackmask)|Ruft die Rückrufmaske für eine Listenansicht-Steuerelement ab.|  
 |[CListCtrl::GetCheck](#getcheck)|Ruft den aktuellen Anzeigestatus von einem Element zugeordneten statusbilds ab.|  
-|[CListCtrl::GetColumn](#getcolumn)|Ruft die Attribute der Spalte des Steuerelements ab.|  
+|[CListCtrl::GetColumn](#getcolumn)|Ruft die Attribute eines Steuerelements Spalte ab.|  
 |[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)|Ruft die Reihenfolge der Spalten (von links nach rechts) ein Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetColumnWidth](#getcolumnwidth)|Ruft die Breite einer Spalte in der Berichtsansicht oder Datenansicht Liste ab.|  
-|[CListCtrl::GetCountPerPage](#getcountperpage)|Berechnet die Anzahl von Elementen, die vertikal in einem Listenansicht-Steuerelement passen.|  
-|[CListCtrl::GetEditControl](#geteditcontrol)|Ruft das Handle des Bearbeitungssteuerelements verwendet, um das Bearbeiten von Text des Elements ab.|  
-|[CListCtrl::GetEmptyText](#getemptytext)|Ruft die Zeichenfolge angezeigt, wenn das aktuelle Listenansicht Steuerelement leer ist.|  
+|[CListCtrl::GetColumnWidth](#getcolumnwidth)|Ruft die Breite einer Spalte in der Berichtsansicht oder Datenansicht der Liste ab.|  
+|[CListCtrl::GetCountPerPage](#getcountperpage)|Berechnet die Anzahl von Elementen, die vertikal in einem Listenansicht-Steuerelement anpassen können.|  
+|[CListCtrl::GetEditControl](#geteditcontrol)|Ruft das Handle des Bearbeitungssteuerelements verwendet, um den Text eines Elements zu bearbeiten.|  
+|[CListCtrl::GetEmptyText](#getemptytext)|Ruft die Zeichenfolge, die angezeigt wird, wenn das aktuelle Listenansicht-Steuerelement leer ist.|  
 |[CListCtrl::GetExtendedStyle](#getextendedstyle)|Ruft die aktuellen erweiterten Stile von einem Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetFirstSelectedItemPosition](#getfirstselecteditemposition)|Ruft die Position des ersten Elements der ausgewählten Liste Ansicht in einem Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetFocusedGroup](#getfocusedgroup)|Ruft die Gruppe, die im aktuellen Listenansicht Steuerelement den Tastaturfokus hat.|  
-|[CListCtrl::GetGroupCount](#getgroupcount)|Ruft die Anzahl der Gruppen in der aktuellen Listenansicht Steuerelement ab.|  
-|[CListCtrl::GetGroupInfo](#getgroupinfo)|Ruft die Informationen für eine bestimmte Gruppe von Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetGroupInfoByIndex](#getgroupinfobyindex)|Ruft Informationen zu einer angegebenen Gruppe im aktuellen Listenansicht Steuerelement ab.|  
+|[CListCtrl::GetFirstSelectedItemPosition](#getfirstselecteditemposition)|Ruft die Position des ersten ausgewähltes Listenansichtselement in einem Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetFocusedGroup](#getfocusedgroup)|Ruft ab, die Gruppe, die im aktuellen Listenansicht-Steuerelement den Tastaturfokus besitzt.|  
+|[CListCtrl::GetGroupCount](#getgroupcount)|Ruft die Anzahl der Gruppen in der aktuellen Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetGroupInfo](#getgroupinfo)|Ruft die Informationen für eine bestimmte Gruppe von das Listenansicht-Steuerelement.|  
+|[CListCtrl::GetGroupInfoByIndex](#getgroupinfobyindex)|Ruft Informationen zu einer angegebenen Gruppe im aktuellen Listenansicht-Steuerelement ab.|  
 |[CListCtrl::GetGroupMetrics](#getgroupmetrics)|Ruft die Metriken für eine Gruppe ab.|  
-|[CListCtrl::GetGroupRect](#getgrouprect)|Ruft das umschließende Rechteck für eine angegebene Gruppe in der aktuellen Listenansicht Steuerelement ab.|  
-|[CListCtrl::GetGroupState](#getgroupstate)|Ruft den Zustand für eine bestimmte Gruppe im aktuellen Listenansicht Steuerelement ab.|  
-|[CListCtrl::GetHeaderCtrl](#getheaderctrl)|Ruft die Headersteuerelement von einem Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetHotCursor](#gethotcursor)|Ruft den Cursor verwendet, wenn hot Track, für eine Listenansicht-Steuerelement aktiviert ist ab.|  
-|[CListCtrl::GetHotItem](#gethotitem)|Ruft die Listenansichtselements derzeit unter dem Cursor ab.|  
-|[CListCtrl::GetHoverTime](#gethovertime)|Ruft den aktuellen bestimmte Zeit zeigen muss von einem Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetImageList](#getimagelist)|Ruft das Handle des einer Bildliste zum Zeichnen verwendeten Listenansichtselemente ab.|  
+|[CListCtrl::GetGroupRect](#getgrouprect)|Ruft das umschließende Rechteck für eine angegebene Gruppe in der aktuellen Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetGroupState](#getgroupstate)|Ruft den Zustand für eine angegebene Gruppe in der aktuellen Listenansicht-Steuerelement.|  
+|[CListCtrl::GetHeaderCtrl](#getheaderctrl)|Ruft das Kopfzeilen-Steuerelement von einem Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetHotCursor](#gethotcursor)|Ruft ab, der Cursor, wenn hot Track für ein Listenansicht-Steuerelement aktiviert ist.|  
+|[CListCtrl::GetHotItem](#gethotitem)|Ruft das Listenelement für die Ansicht derzeit unter dem Cursor ab.|  
+|[CListCtrl::GetHoverTime](#gethovertime)|Ruft ab, der die aktuelle Uhrzeit zeigen ein Listenansicht-Steuerelement.|  
+|[CListCtrl::GetImageList](#getimagelist)|Ruft das Handle einer Bildliste, die zum Zeichnen verwendeten Elemente in der Listenansicht ab.|  
 |[CListCtrl::GetInsertMark](#getinsertmark)|Ruft die aktuelle Position der Einfügemarke ab.|  
 |[CListCtrl::GetInsertMarkColor](#getinsertmarkcolor)|Ruft die aktuelle Farbe der Einfügemarke ab.|  
-|[CListCtrl::GetInsertMarkRect](#getinsertmarkrect)|Ruft das Rechteck, das die Einfügemarke umschließt ab.|  
-|[CListCtrl:: GetItem](#getitem)|Ruft eine Listenansichtselement Attribute ab.|  
-|[CListCtrl::GetItemCount](#getitemcount)|Ruft die Anzahl der Elemente in einem Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetInsertMarkRect](#getinsertmarkrect)|Ruft das Rechteck, das die Einfügemarke umschließt.|  
+|[CListCtrl:: GetItem](#getitem)|Ruft ein Listenansichtselement Attribute ab.|  
+|[CListCtrl::GetItemCount](#getitemcount)|Ruft die Anzahl der Elemente in einem Listenansicht-Steuerelement.|  
 |[CListCtrl::GetItemData](#getitemdata)|Ruft den anwendungsspezifischen-Wert, der einem Element zugeordnet.|  
-|[CListCtrl::GetItemIndexRect](#getitemindexrect)|Ruft das umschließende Rechteck für ganz oder teilweise ein Unterelement im aktuellen Listenansicht Steuerelement ab.|  
-|[CListCtrl::GetItemPosition](#getitemposition)|Ruft die Position des Listenansichtselements ab.|  
+|[CListCtrl::GetItemIndexRect](#getitemindexrect)|Ruft das umschließende Rechteck für ganz oder teilweise ein Unterelement im aktuellen Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetItemPosition](#getitemposition)|Ruft die Position des ein Listenansichtselement ab.|  
 |[CListCtrl::GetItemRect](#getitemrect)|Ruft das umschließende Rechteck für ein Element ab.|  
-|[CListCtrl::GetItemSpacing](#getitemspacing)|Berechnet den Abstand zwischen Elementen im aktuellen Listenansicht Steuerelement.|  
-|[CListCtrl::GetItemState](#getitemstate)|Ruft den Zustand des Listenansichtselements.|  
-|[CListCtrl::GetItemText](#getitemtext)|Ruft den Text einer Listenansichtselements oder Unterelements ab.|  
-|[CListCtrl::GetNextItem](#getnextitem)|Sucht nach einem Listenansichtselements mit angegebenen Eigenschaften und der angegebenen Beziehung zu einem bestimmten Element.|  
-|[CListCtrl::GetNextItemIndex](#getnextitemindex)|Ruft den Index des Elements im aktuellen Listenansicht Steuerelement, das einen angegebenen Satz von Eigenschaften verfügt.|  
-|[CListCtrl::GetNextSelectedItem](#getnextselecteditem)|Ruft den Index der Position einer Liste Ansicht eines Elements und die Position des nächsten ausgewählten Ansicht Listenelements für die Iteration ab.|  
-|[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)|Ruft die aktuelle Anzahl der Arbeitsbereiche für eine Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetOrigin](#getorigin)|Ruft die aktuelle Ansichtsursprung für eine Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetOutlineColor](#getoutlinecolor)|Ruft die Farbe des Rahmens, der einem Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetItemSpacing](#getitemspacing)|Berechnet den Abstand zwischen Elementen im aktuellen Listenansicht-Steuerelement.|  
+|[CListCtrl::GetItemState](#getitemstate)|Ruft den Zustand eines Elements der Liste anzeigen.|  
+|[CListCtrl::GetItemText](#getitemtext)|Ruft den Text ein Element der Listenansicht oder Unterelements ab.|  
+|[CListCtrl::GetNextItem](#getnextitem)|Sucht ein Element der Listenansicht mit den angegebenen Eigenschaften und mit angegebenen Beziehung mit einem bestimmten Element.|  
+|[CListCtrl::GetNextItemIndex](#getnextitemindex)|Ruft den Index des Elements in der aktuellen Listenansicht-Steuerelement, das einen angegebenen Satz von Eigenschaften verfügt.|  
+|[CListCtrl::GetNextSelectedItem](#getnextselecteditem)|Ruft den Index einer Liste anzeigen-Element-Position und die Position des nächsten ausgewähltes Listenansichtselement durchlaufen werden können.|  
+|[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)|Ruft die aktuelle Anzahl von Arbeitsbereichen für ein Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetOrigin](#getorigin)|Ruft den aktuellen Ansichtsursprung für ein Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetOutlineColor](#getoutlinecolor)|Ruft die Farbe des Rahmens eines Listenansicht-Steuerelements ab.|  
 |[CListCtrl::GetSelectedColumn](#getselectedcolumn)|Ruft den Index der aktuell ausgewählten Spalte im Listensteuerelement ab.|  
-|[CListCtrl::GetSelectedCount](#getselectedcount)|Ruft die Anzahl der ausgewählten Elemente in der Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetSelectionMark](#getselectionmark)|Ruft die Markierung von einem Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetStringWidth](#getstringwidth)|Bestimmt die minimale Spaltenbreite für die Anzeige aller einer bestimmten Zeichenfolge erforderlich.|  
-|[CListCtrl::GetSubItemRect](#getsubitemrect)|Ruft das umschließende Rechteck ein Element in einem Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetTextBkColor](#gettextbkcolor)|Ruft die Farbe des Texthintergrunds von einem Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetTextColor](#gettextcolor)|Ruft die Textfarbe der einem Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetSelectedCount](#getselectedcount)|Ruft die Anzahl der ausgewählten Elemente in der Listenansicht-Steuerelement.|  
+|[CListCtrl::GetSelectionMark](#getselectionmark)|Ruft die Auswahlmarke von einem Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetStringWidth](#getstringwidth)|Bestimmt die minimale Spaltenbreite, die zum Anzeigen aller einer bestimmten Zeichenfolge.|  
+|[CListCtrl::GetSubItemRect](#getsubitemrect)|Ruft das umschließende Rechteck eines Elements in einem Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetTextBkColor](#gettextbkcolor)|Ruft die Hintergrundfarbe des Texts von einem Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetTextColor](#gettextcolor)|Ruft die Textfarbe eines Listenansicht-Steuerelements ab.|  
 |[CListCtrl::GetTileInfo](#gettileinfo)|Ruft Informationen zu einer Kachel in einem Listenansicht-Steuerelement ab.|  
 |[CListCtrl::GetTileViewInfo](#gettileviewinfo)|Ruft Informationen zu einem Listenansicht-Steuerelement in der Ansicht "Nebeneinander" ab.|  
-|[CListCtrl::GetToolTips](#gettooltips)|Ruft den QuickInfo-Steuerelement, das Listenansicht-Steuerelement verwendet, um QuickInfos anzuzeigen.|  
-|[CListCtrl::GetTopIndex](#gettopindex)|Ruft den Index des ersten sichtbaren Elements ab.|  
-|[CListCtrl::GetView](#getview)|Ruft die Ansicht der Listenansicht-Steuerelement ab.|  
+|[CListCtrl::GetToolTips](#gettooltips)|Ruft das QuickInfo-Steuerelement, das das Listenansicht-Steuerelement verwendet wird, um QuickInfos anzuzeigen.|  
+|[CListCtrl::GetTopIndex](#gettopindex)|Ruft den Index des obersten sichtbaren Elements ab.|  
+|[CListCtrl::GetView](#getview)|Ruft die Ansicht des Listenansicht-Steuerelement.|  
 |[CListCtrl::GetViewRect](#getviewrect)|Ruft das umschließende Rechteck aller Elemente in der Listenansicht-Steuerelement ab.|  
-|[CListCtrl::GetWorkAreas](#getworkareas)|Ruft die aktuellen Arbeitsbereiche von einem Listenansicht-Steuerelement ab.|  
-|[CListCtrl::HasGroup](#hasgroup)|Bestimmt, ob ein Listenansicht-Steuerelement mit die angegebene Gruppe ist.|  
-|[CListCtrl::HitTest](#hittest)|Bestimmt, welche Liste Ansichtselement ist an einer angegebenen Position.|  
+|[CListCtrl::GetWorkAreas](#getworkareas)|Ruft die aktuelle Arbeitsbereiche von einem Listenansicht-Steuerelement ab.|  
+|[CListCtrl::HasGroup](#hasgroup)|Bestimmt, ob das Listenansicht-Steuerelement mit die angegebene Gruppe ist.|  
+|[CListCtrl::HitTest](#hittest)|Bestimmt, welcher Liste Ansichtselement ist an der angegebenen Position.|  
 |[CListCtrl::InsertColumn](#insertcolumn)|Fügt eine neue Spalte in einem Listenansicht-Steuerelement.|  
 |[CListCtrl::InsertGroup](#insertgroup)|Fügt einer Gruppe in der Listenansicht-Steuerelement ein.|  
-|[CListCtrl::InsertGroupSorted](#insertgroupsorted)|Fügt die angegebene Gruppe in eine geordnete Liste der Gruppen ein.|  
+|[CListCtrl::InsertGroupSorted](#insertgroupsorted)|Fügt die angegebene Gruppe in eine geordnete Liste von Gruppen.|  
 |[CListCtrl::InsertItem](#insertitem)|Fügt ein neues Element in einem Listenansicht-Steuerelement.|  
-|[CListCtrl::InsertMarkHitTest](#insertmarkhittest)|Ruft die Einfügemarke an einem bestimmten Punkt am nächsten gelegenen ab.|  
-|[CListCtrl::IsGroupViewEnabled](#isgroupviewenabled)|Bestimmt, ob die Ansicht "" für eine Listenansicht-Steuerelement aktiviert ist.|  
-|[CListCtrl::IsItemVisible](#isitemvisible)|Gibt an, ob ein angegebenes Element in der aktuellen Listenansicht Steuerelement angezeigt wird.|  
-|[CListCtrl::MapIDToIndex](#mapidtoindex)|Ordnet die eindeutige ID eines Elements im aktuellen Listenansicht Steuerelement auf einen Index an.|  
-|[CListCtrl::MapIndexToID](#mapindextoid)|Ordnet den Index eines Elements im aktuellen Listenansicht Steuerelement eine eindeutige ID.|  
+|[CListCtrl::InsertMarkHitTest](#insertmarkhittest)|Ruft die einem bestimmten Zeitpunkt nächstliegende Einfügemarke ab.|  
+|[CListCtrl::IsGroupViewEnabled](#isgroupviewenabled)|Bestimmt, ob die Ansicht für ein Listenansicht-Steuerelement aktiviert ist.|  
+|[CListCtrl::IsItemVisible](#isitemvisible)|Gibt an, ob ein angegebenes Element in der aktuellen Listenansicht-Steuerelement sichtbar ist.|  
+|[CListCtrl::MapIDToIndex](#mapidtoindex)|Ordnet die eindeutige ID eines Elements in der aktuellen Listenansicht-Steuerelement in einen Index an.|  
+|[CListCtrl::MapIndexToID](#mapindextoid)|Ordnet den Index eines Elements in der aktuellen Listenansicht-Steuerelement eine eindeutige ID.|  
 |[CListCtrl::MoveGroup](#movegroup)|Verschiebt die angegebene Gruppe.|  
-|[CListCtrl::MoveItemToGroup](#moveitemtogroup)|Der nullbasierte Index des Listenansicht-Steuerelement das angegebene in der angegebenen Gruppe verschoben wird.|  
-|[CListCtrl::RedrawItems](#redrawitems)|Erzwingt ein Listenansicht-Steuerelement zum erneuten zeichnen einen Bereich von Elementen verwendet.|  
+|[CListCtrl::MoveItemToGroup](#moveitemtogroup)|Der nullbasierte Index des Listenansicht-Steuerelement die angegebenen mit dem angegebenen Gruppe verschiebt.|  
+|[CListCtrl::RedrawItems](#redrawitems)|Erzwingt ein Listenansicht-Steuerelement, das einen Bereich von Elementen neu zu zeichnen.|  
 |[CListCtrl::RemoveAllGroups](#removeallgroups)|Entfernt alle Gruppen aus einem Listenansicht-Steuerelement.|  
 |[CListCtrl::RemoveGroup](#removegroup)|Entfernt die angegebene Gruppe aus der Listenansicht-Steuerelement.|  
-|[CListCtrl::Scroll](#scroll)|Scrollt den Inhalt von einem Listenansicht-Steuerelement.|  
-|[CListCtrl::SetBkColor](#setbkcolor)|Legt die Hintergrundfarbe der Listenansicht-Steuerelement fest.|  
-|[CListCtrl::SetBkImage](#setbkimage)|Legt das aktuelle Hintergrundbild des ein Listenansicht-Steuerelement fest.|  
-|[CListCtrl::SetCallbackMask](#setcallbackmask)|Legt die Rückrufmaske für eine Listenansicht-Steuerelement fest.|  
-|[CListCtrl::SetCheck](#setcheck)|Legt das aktuelle der Status des statusbilds einem Element zugeordnet.|  
-|[CListCtrl::SetColumn](#setcolumn)|Legt die Attribute einer Spalte der Liste anzeigen.|  
+|[CListCtrl::Scroll](#scroll)|Führt einen Bildlauf durch den Inhalt von einem Listenansicht-Steuerelement.|  
+|[CListCtrl::SetBkColor](#setbkcolor)|Legt die Hintergrundfarbe des Listenansicht-Steuerelement fest.|  
+|[CListCtrl::SetBkImage](#setbkimage)|Legt das aktuelle Hintergrundbild von einem Listenansicht-Steuerelement fest.|  
+|[CListCtrl::SetCallbackMask](#setcallbackmask)|Legt die Rückrufmaske für ein Listenansicht-Steuerelement fest.|  
+|[CListCtrl::SetCheck](#setcheck)|Legt die Anzeige der aktuellen Status des statusbilds einem Element zugeordnet.|  
+|[CListCtrl::SetColumn](#setcolumn)|Legt fest, die Attribute der Spalte in eine Liste der Sicht.|  
 |[CListCtrl::SetColumnOrderArray](#setcolumnorderarray)|Legt die Reihenfolge der Spalten (von links nach rechts) ein Listenansicht-Steuerelement fest.|  
 |[CListCtrl::SetColumnWidth](#setcolumnwidth)|Ändert die Breite einer Spalte in der Berichtsansicht oder der Listenansicht angezeigt.|  
-|[Wird CListCtrl:: SetExtendedStyle](#setextendedstyle)|Legt die aktuelle erweiterte Formate von einem Listenansicht-Steuerelement fest.|  
-|[CListCtrl::SetGroupInfo](#setgroupinfo)|Legt die Informationen für die angegebene Gruppe von einem Listenansicht-Steuerelement fest.|  
-|[CListCtrl::SetGroupMetrics](#setgroupmetrics)|Legt die Gruppe Metriken für eine Listenansicht-Steuerelement fest.|  
-|[CListCtrl::SetHotCursor](#sethotcursor)|Setzt den Cursor verwendet, wenn hot Track für eine Listenansicht-Steuerelement aktiviert ist.|  
-|[CListCtrl::SetHotItem](#sethotitem)|Legt das aktuelle Element von einem Listenansicht-Steuerelement fest.|  
-|[CListCtrl::SetHoverTime](#sethovertime)|Legt fest, wenn darauf gezeigt wird derzeit von einem Listenansicht-Steuerelement.|  
-|[CListCtrl::SetIconSpacing](#seticonspacing)|Legt den Abstand zwischen den Symbolen in einem Listenansicht-Steuerelement fest.|  
+|[Wird CListCtrl:: SetExtendedStyle](#setextendedstyle)|Legt die aktuellen erweiterten Stile von einem Listenansicht-Steuerelement fest.|  
+|[CListCtrl::SetGroupInfo](#setgroupinfo)|Legt fest, die Informationen für die angegebene Gruppe von einem Listenansicht-Steuerelement.|  
+|[CListCtrl::SetGroupMetrics](#setgroupmetrics)|Legt fest, die Gruppe Metriken von einem Listenansicht-Steuerelement.|  
+|[CListCtrl::SetHotCursor](#sethotcursor)|Legt fest, den Cursor, wenn hot Track für ein Listenansicht-Steuerelement aktiviert ist.|  
+|[CListCtrl::SetHotItem](#sethotitem)|Legt das Element der aktuelle "Hot" von einem Listenansicht-Steuerelement.|  
+|[CListCtrl::SetHoverTime](#sethovertime)|Legt fest, der die aktuelle Uhrzeit zeigen ein Listenansicht-Steuerelement.|  
+|[CListCtrl::SetIconSpacing](#seticonspacing)|Legt den Abstand zwischen Symbolen in einem Listenansicht-Steuerelement fest.|  
 |[CListCtrl::SetImageList](#setimagelist)|Weist eine Bildliste einem Listenansicht-Steuerelement.|  
-|[CListCtrl::SetInfoTip](#setinfotip)|Legt den QuickInfotext fest.|  
-|[CListCtrl::SetInsertMark](#setinsertmark)|Legt die Einfügemarke an der definierten Position fest.|  
-|[CListCtrl::SetInsertMarkColor](#setinsertmarkcolor)|Legt die Farbe von der Einfügemarke an.|  
-|[CListCtrl:: SetItem](#setitem)|Legt einiger oder aller eine Listenansicht Attribute des Elements fest.|  
+|[CListCtrl::SetInfoTip](#setinfotip)|Legt den QuickInfo-Text fest.|  
+|[CListCtrl::SetInsertMark](#setinsertmark)|Legt die Einfügemarke auf die definierte Position fest.|  
+|[CListCtrl::SetInsertMarkColor](#setinsertmarkcolor)|Legt die Farbe der Einfügemarke.|  
+|[CListCtrl:: SetItem](#setitem)|Legt einige oder alle eine Listenansicht Attribute des Elements fest.|  
 |[CListCtrl::SetItemCount](#setitemcount)|Bereitet ein Listenansicht-Steuerelement für eine große Anzahl von Elementen hinzufügen.|  
 |[CListCtrl::SetItemCountEx](#setitemcountex)|Legt die Anzahl der Elemente für eine virtuelle Listenansicht-Steuerelement fest.|  
 |[CListCtrl::SetItemData](#setitemdata)|Legt den Wert des Elements anwendungsspezifische fest.|  
-|[CListCtrl::SetItemIndexState](#setitemindexstate)|Legt den Zustand eines Elements im aktuellen Listenansicht Steuerelement fest.|  
+|[CListCtrl::SetItemIndexState](#setitemindexstate)|Legt den Zustand eines Elements in der aktuellen Listenansicht-Steuerelement fest.|  
 |[CListCtrl::SetItemPosition](#setitemposition)|Verschiebt ein Element an einer angegebenen Position in einem Listenansicht-Steuerelement.|  
-|[CListCtrl::SetItemState](#setitemstate)|Ändert den Status eines Elements in einem Listenansicht-Steuerelement.|  
-|[CListCtrl::SetItemText](#setitemtext)|Ändert den Text einer Listenansichtselements oder Unterelements.|  
-|[CListCtrl::SetOutlineColor](#setoutlinecolor)|Legt die Farbe des Rahmens, der einem Listenansicht-Steuerelement fest.|  
+|[CListCtrl::SetItemState](#setitemstate)|Ändert den Zustand eines Elements in einem Listenansicht-Steuerelement.|  
+|[CListCtrl::SetItemText](#setitemtext)|Ändert den Text ein Element der Listenansicht oder Unterelements.|  
+|[CListCtrl::SetOutlineColor](#setoutlinecolor)|Legt die Farbe des Rahmens eines Listenansicht-Steuerelements fest.|  
 |[CListCtrl::SetSelectedColumn](#setselectedcolumn)|Setzt die ausgewählte Spalte der Listenansicht-Steuerelement.|  
-|[CListCtrl::SetSelectionMark](#setselectionmark)|Legt die Markierung von einem Listenansicht-Steuerelement fest.|  
+|[CListCtrl::SetSelectionMark](#setselectionmark)|Legt die Auswahlmarke von einem Listenansicht-Steuerelement fest.|  
 |[CListCtrl::SetTextBkColor](#settextbkcolor)|Legt die Hintergrundfarbe des Texts in einem Listenansicht-Steuerelement fest.|  
-|[CListCtrl::SetTextColor](#settextcolor)|Legt die Textfarbe für eine Listenansicht-Steuerelement fest.|  
-|[CListCtrl::SetTileInfo](#settileinfo)|Legt die Informationen für eine Kachel von Listenansicht-Steuerelement fest.|  
+|[CListCtrl::SetTextColor](#settextcolor)|Legt die Textfarbe eines Listenansicht-Steuerelements fest.|  
+|[CListCtrl::SetTileInfo](#settileinfo)|Legt fest, die Informationen für eine Kachel, des Listenansicht-Steuerelement.|  
 |[CListCtrl::SetTileViewInfo](#settileviewinfo)|Legt die Informationen, mit einem Listenansicht-Steuerelement in der Ansicht "Nebeneinander" fest.|  
-|[CListCtrl::SetToolTips](#settooltips)|Legt das QuickInfo-Steuerelement, das Listenansicht-Steuerelement zum Anzeigen von QuickInfos verwendet.|  
-|[CListCtrl::SetView](#setview)|Legt die Ansicht der Listenansicht-Steuerelement.|  
-|[CListCtrl::SetWorkAreas](#setworkareas)|Legt den Bereich, in dem Symbole in einem Listenansicht-Steuerelement angezeigt werden können.|  
-|[CListCtrl::SortGroups](#sortgroups)|Sortiert die Gruppen aus einer Liste anzeigen Steuerelement mit einer benutzerdefinierten Funktion.|  
-|[CListCtrl::SortItems](#sortitems)|Sortiert Elemente in der Listenansicht mit einem anwendungsdefinierten Vergleichsfunktion.|  
-|[CListCtrl::SortItemsEx](#sortitemsex)|Sortiert Elemente in der Listenansicht mit einem anwendungsdefinierten Vergleichsfunktion.|  
-|[CListCtrl::SubItemHitTest](#subitemhittest)|Bestimmt, welche Listenansichtselements ist ggf. an einer angegebenen Position.|  
-|[CListCtrl::Update](#update)|Erzwingt, dass das Steuerelement ein angegebenes Element neu gezeichnet werden.|  
+|[CListCtrl::SetToolTips](#settooltips)|Legt das QuickInfo-Steuerelement, das das Listenansicht-Steuerelement verwendet, um QuickInfos anzuzeigen.|  
+|[CListCtrl::SetView](#setview)|Legt die Ansicht des Listenansicht-Steuerelement.|  
+|[CListCtrl::SetWorkAreas](#setworkareas)|Legt den Bereich, in dem Symbole in einem Listenansicht-Steuerelement angezeigt werden kann.|  
+|[CListCtrl::SortGroups](#sortgroups)|Sortiert die Gruppen aus einer Liste anzeigen, Steuerelement mit einer benutzerdefinierten Funktion.|  
+|[CListCtrl::SortItems](#sortitems)|Sortiert die Elemente in der Listenansicht mit einem anwendungsdefinierten Vergleichsfunktion.|  
+|[CListCtrl::SortItemsEx](#sortitemsex)|Sortiert die Elemente in der Listenansicht mit einem anwendungsdefinierten Vergleichsfunktion.|  
+|[CListCtrl::SubItemHitTest](#subitemhittest)|Bestimmt, welches Element der Listenansicht, ist ggf. an einer bestimmten Position.|  
+|[CListCtrl::Update](#update)|Erzwingt, dass das Steuerelement, das ein angegebenes Element neu zu zeichnen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Zusätzlich zu den ein Symbol und eine Bezeichnung kann jedes Element in Spalten rechts neben dem Symbol und die Bezeichnung angezeigten Informationen verfügen. Dieses Steuerelement (und somit die `CListCtrl` Klasse) und höher verfügbar nur für Programme, die unter Windows 95-und Windows 98 und Windows NT, Version 3.51 ausgeführt wird.  
+ Zusätzlich zu der ein Symbol und eine Bezeichnung kann jedes Element in Spalten, die rechts neben dem Symbol und die Bezeichnung angezeigten Informationen verfügen. Dieses Steuerelement (und somit die `CListCtrl` Klasse) ist nur für Programme, die unter Windows 95/98 und Windows NT, Version 3.51 und höher.  
   
- Im folgenden finden Sie eine kurze Übersicht über die `CListCtrl` Klasse. Ein ausführlicher und konzeptionelle Erläuterung finden Sie unter [Verwenden von CListCtrl](../../mfc/using-clistctrl.md) und [Steuerelemente](../../mfc/controls-mfc.md).  
+ Im folgenden finden Sie eine kurze Übersicht über die `CListCtrl` Klasse. Eine Erläuterung der ausführliche und konzeptionelle Ebene, finden Sie unter [Verwenden von CListCtrl](../../mfc/using-clistctrl.md) und [Steuerelemente](../../mfc/controls-mfc.md).  
   
 ## <a name="views"></a>Ansichten  
- Listenansicht-Steuerelemente können in vier verschiedene Arten, so genannten "Ansichten". ihre Inhalte angezeigt.  
+ Listenansicht-Steuerelemente können in vier verschiedene Arten, namens "Views". ihr Inhalt angezeigt.  
   
--   Symbol "anzeigen  
+-   Für Symbolansicht  
   
-     Jedes Element wird als ein großes Symbol (32 x 32 Pixel) mit einer Bezeichnung darunter angezeigt. Benutzer können die Elemente an einem beliebigen Speicherort im Ansichtsfenster Liste ziehen.  
+     Jedes Element wird als ein Symbol in voller Größe (32 x 32 Pixel) mit einer Bezeichnung darunter angezeigt. Der Benutzer kann die Elemente an einem beliebigen Speicherort in der Liste an ziehen.  
   
--   Ansicht mit kleinen Symbolen  
+-   Kleine Symbole angezeigt  
   
-     Jedes Element wird als ein kleines Symbol (16 x 16 Pixel), mit der Bezeichnung rechts davon. Benutzer können die Elemente an einem beliebigen Speicherort im Ansichtsfenster Liste ziehen.  
+     Jedes Element wird als kleines Symbol (16 x 16 Pixel) mit der Bezeichnung rechts davon. Der Benutzer kann die Elemente an einem beliebigen Speicherort in der Liste an ziehen.  
   
 -   Listenansicht  
   
-     Jedes Element wird als ein kleines Symbol mit einer Bezeichnung rechts davon. Elemente werden in Spalten angeordnet und nicht in einem beliebigen Speicherort in der Liste Ansichtsfenster gezogen werden.  
+     Jedes Element wird als kleines Symbol mit einer Bezeichnung rechts daneben. Elemente werden in Spalten angeordnet und nicht in einem beliebigen Speicherort in der Liste an gezogen werden.  
   
--   Berichtsansicht  
+-   Ansicht "Bericht"  
   
-     Jedes Element wird in einer eigenen Zeile angezeigt, mit zusätzlichen Informationen, die in Spalten nach rechts angeordnet sind. Die äußerste linke Spalte enthält, das kleine Symbol und die Bezeichnung, und nachfolgende Spalten enthalten die Unterelemente entsprechend den Angaben von der Anwendung. Eine eingebettete Headersteuerelement (Klasse [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementiert diese Spalten. Weitere Informationen zu den Headersteuerelement und die Spalten in einem Bericht anzeigen, finden Sie unter [Verwenden von CListCtrl: Hinzufügen von Spalten zum Steuerelement (Berichtsansicht)](../../mfc/adding-columns-to-the-control-report-view.md).  
+     Jedes Element wird in einer eigenen Zeile, mit zusätzlichen Informationen, die in Spalten nach rechts angeordnet. Die am weitesten links stehende Spalte enthält, das kleine Symbol und die Bezeichnung, und nachfolgende Spalten enthalten die Unterelemente darstellen, wie von der Anwendung angegeben. Eine eingebettete Kopfzeilen-Steuerelement (Klasse [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementiert diese Spalten. Weitere Informationen auf dem Kopfzeilen-Steuerelement und die Spalten in einer Berichtsansicht finden Sie unter [Verwenden von CListCtrl: Hinzufügen von Spalten zum Steuerelement (Berichtsansicht)](../../mfc/adding-columns-to-the-control-report-view.md).  
   
  Siehe auch:  
   
 -   Knowledge Base-Artikel Q250614: So wird's gemacht: Sortieren von Elementen in einem CListCtrl in der Berichtsansicht  
   
--   Knowledge Base-Artikel Q200054: PRB: OnTimer() wird nicht aufgerufen, wiederholt für ein Listenfeld-Steuerelement  
+-   Knowledge Base-Artikel Q200054: PRB: OnTimer() wird nicht aufgerufen, wiederholt für ein Listensteuerelement  
   
- Die Art des aktuellen Listenansicht des Steuerelements hängt von der aktuellen Sicht. Weitere Informationen zu diesen Formaten und deren Verwendung, finden Sie unter [Verwenden von CListCtrl: Ändern der Stile von Listensteuerelementen](../../mfc/changing-list-control-styles.md).  
+ Das Format der aktuellen Liste-Ansicht des Steuerelements bestimmt die aktuelle Ansicht. Weitere Informationen zu dieser Stile und deren Verwendung, finden Sie unter [Verwenden von CListCtrl: Ändern der Stile von Listensteuerelementen](../../mfc/changing-list-control-styles.md).  
   
-## <a name="extended-styles"></a>Erweiterte Formate  
- Zusätzlich zu die Stile Standardliste-Klasse `CListCtrl` unterstützt eine Reihe von erweiterten Stile, erweiterte Funktionalität bereitstellt. Einige Beispiele für diese Funktionalität:  
+## <a name="extended-styles"></a>Erweiterte Stile  
+ Zusätzlich zu die Stile, die Standardliste Klasse `CListCtrl` unterstützt zahlreiche erweiterte Stile, erweiterte Funktionalität bereitstellt. Einige Beispiele für diese Funktion sind:  
   
 -   Zeigen Sie die Auswahl  
   
-     Ermöglicht bei Aktivierung automatischen Auswahl eines Elements, wenn der Cursor über dem Element für einen bestimmten Zeitraum bleibt.  
+     Wenn aktiviert, können automatische Auswahl eines Elements, wenn der Cursor über dem Element für einen bestimmten Zeitraum bleibt.  
   
 -   Virtuelle Listenansichten  
   
-     Wenn aktiviert, kann das Steuerelement unterstützt bis zu `DWORD` Elemente. Dies ist möglich, indem Sie den Mehraufwand des Verwaltens von Elementdaten für die Anwendung platzieren. Mit Ausnahme der Auswahl und Fokus Informationen muss alle von der Anwendung verwaltet werden. Weitere Informationen finden Sie unter [Verwenden von CListCtrl: Virtuelle Listensteuerelemente](../../mfc/virtual-list-controls.md).  
+     Wenn aktiviert, können das Steuerelement, um bis zu DWORD-Elemente zu unterstützen. Dies ist möglich, platzieren Sie den Mehraufwand der Verwaltung von Daten in der Anwendung. Mit Ausnahme von der Auswahl von Listenelementen und den Fokus muss alle Informationen über die Elemente von der Anwendung verwaltet werden. Weitere Informationen finden Sie unter [Verwenden von CListCtrl: Virtuelle Listensteuerelemente](../../mfc/virtual-list-controls.md).  
   
 -   Und zwei-einmalklick - Aktivierung  
   
-     Ermöglicht bei Aktivierung hot Track (automatisch hervorheben von Text des Elements) und auf einem oder zwei aktiviert das markierte Element.  
+     Wenn aktiviert, können hot Track (automatisch hervorheben des Elementtextes) und einem oder beiden-Klick-Aktivierung des markierten Elements an.  
   
--   Drag & drop Spaltenreihenfolge  
+-   Drag & drop spaltensortierung  
   
-     Wenn aktiviert, ermöglicht das Ziehen und Ablegen Anordnen von Spalten in einem Listenansicht-Steuerelement. Nur verfügbar in der Berichtsansicht.  
+     Wenn aktiviert, können die Drag & Drop neuanordnung von Spalten in einem Listenansicht-Steuerelement. Nur in der Ansicht "Bericht" verfügbar.  
   
- Informationen zum Verwenden dieser neue Stile erweitert wird, finden Sie unter [Verwenden von CListCtrl: Ändern der Stile von Listensteuerelementen](../../mfc/changing-list-control-styles.md).  
+ Weitere Informationen zum Verwenden dieser neue Stile erweitert werden, finden Sie unter [Verwenden von CListCtrl: Ändern der Stile von Listensteuerelementen](../../mfc/changing-list-control-styles.md).  
   
 ## <a name="items-and-subitems"></a>Elemente und Unterelemente  
- Jedes Element in einem Listenansicht-Steuerelement besteht aus einem Symbol (aus einer Bildliste), eine Bezeichnung, einen aktuellen Status und einem anwendungsdefinierten Wert (als "Daten" bezeichnet). Eine oder mehrere Unterelemente können auch jedes Element zugeordnet werden. Ein "Unterelement" ist eine Zeichenfolge, die in einer Spalte rechts neben dem Symbol und die Bezeichnung eines Elements in der Berichtsansicht, angezeigt werden kann. Alle Elemente in einem Listenansicht-Steuerelement müssen die gleiche Anzahl von Unterelemente aufweisen.  
+ Jedes Element in einem Listenansicht-Steuerelement besteht aus einem Symbol (aus einer Bildliste), eine Bezeichnung, aktuellen Status und eine der Anwendung definierter Wert (bezeichnet als "Daten"). Mit jedem Element können auch eine oder mehrere Unterelemente zugeordnet werden. Ein "Unterelement" ist eine Zeichenfolge, die in einer Spalte rechts neben dem Symbol und eine Bezeichnung eines Elements in der Berichtsansicht angezeigt werden kann. Alle Elemente in einem Listenansicht-Steuerelement aufweisen die gleiche Anzahl von Unterelemente.  
   
- Klasse **CListCtrl** stellt mehrere Funktionen zum Einfügen, löschen, suchen und ändern diese Elemente bereit. Weitere Informationen finden Sie unter [CListCtrl:: GetItem](#getitem), [CListCtrl::InsertItem](#insertitem), und [CListCtrl::FindItem](#finditem), [Hinzufügen von Elementen zum Steuerelement](../adding-items-to-the-control.md), und [für Bildlauf, Anordnung, Sortierung und Suche in Listensteuerelementen](../scrolling-arranging-sorting-and-finding-in-list-controls.md).  
+ Klasse `CListCtrl` stellt mehrere Funktionen für das Einfügen, löschen, suchen und ändern diese Elemente bereit. Weitere Informationen finden Sie unter [CListCtrl:: GetItem](#getitem), [CListCtrl::InsertItem](#insertitem), und [CListCtrl::FindItem](#finditem), [Hinzufügen von Elementen zum Steuerelement](../adding-items-to-the-control.md), und [für Bildlauf, Anordnung, Sortierung und Suche in Listensteuerelementen](../scrolling-arranging-sorting-and-finding-in-list-controls.md).  
   
- Standardmäßig wird ein Listenansicht-Steuerelement verantwortlich für das Speichern von Symbol und Text-Attribute des Elements. Jedoch zusätzlich zu diesen Artikel-Klasse `CListCtrl` unterstützt "Rückrufelemente". "Rückruf Item" wird ein Listenelement anzeigen, für die die Anwendung – anstatt des Steuerelements – speichert den Text, Symbol oder beides. Eine Rückrufmaske wird verwendet, um anzugeben, welche Attribute (Text und/oder Symbol ") von der Anwendung bereitgestellt werden. Wenn eine Anwendung Rückrufelemente verwendet, muss die Text und Symbol Attribute bei Bedarf bereitstellen können, werden. Rückrufelemente sind hilfreich, wenn die Anwendung bereits einige dieser Informationen verwaltet. Weitere Informationen finden Sie unter [Verwenden von CListCtrl: Rückrufelemente und Rückrufmaske](../callback-items-and-the-callback-mask.md).  
+ Standardmäßig dient das Listenansicht-Steuerelement für die Attribute eines Elements Symbol und Text zu speichern. Zusätzlich zu diesen Element jedoch Klasse `CListCtrl` unterstützt "Rückrufelemente." "Rückrufelement" ist ein Listenansichtselement für die die Anwendung, anstatt das Steuerelement – speichert den Text, Symbol oder beides. Eine Rückrufmaske wird verwendet, um anzugeben, welche Attribute des Elements (Text und/oder ein Symbol), die von der Anwendung bereitgestellt werden. Wenn eine Anwendung Rückrufelemente verwendet, muss die Text und/oder ein Symbol Attribute nach Bedarf bereitstellen können, sein. Rückrufelemente sind hilfreich, wenn die Anwendung bereits einige dieser Informationen verwaltet. Weitere Informationen finden Sie unter [Verwenden von CListCtrl: Rückrufelemente und Rückrufmaske](../callback-items-and-the-callback-mask.md).  
   
 ## <a name="image-lists"></a>Bilderliste für das  
- Die Symbole, Bilder der Header-Element und Anwendung - Zustände für definiert Listenansichtselemente in mehrere Bildlisten enthalten sind (von der Klasse implementiert [CImageList](cimagelist-class.md)), die Sie erstellen und Zuweisen der Listenansicht-Steuerelement. Jede Listenansicht-Steuerelement kann bis zu vier verschiedene Typen von Bildlisten aufweisen:  
+ Die Symbole, Bilder der Header-Element und -Anwendung – definiert Zustände für Elemente in der Listenansicht in mehrere Bildlisten enthalten sind (von Klasse implementierten [CImageList](cimagelist-class.md)), die Sie erstellen und Zuweisen der Listenansicht-Steuerelement. Jede Listenansicht-Steuerelement kann bis zu vier verschiedene Typen von Bildlisten aufweisen:  
   
--   "Große Symbole"  
+-   Großes Symbol  
   
-     In der Ansicht mit Symbolen verwendet für Symbole in voller Größe.  
+     Für die Symbole in voller Größe können Sie in der Symbolansicht verwendet.  
   
--   Symbol "Small"  
+-   Kleines Symbol  
   
-     Verwendet in kleine Symbole, Liste und Berichtsansichten für kleinere Versionen der Symbole in der Symbolansicht verwendet.  
+     In der kleinen Symbols an, die Liste, und die Berichtsansichten verwendet für kleinere Versionen der Symbole für in der Symbolansicht.  
   
--   Anwendungsdefinierte Zustand  
+-   Anwendung definierte Zustand  
   
-     Enthält die Status-Bilder, die neben einem Element Symbol anwendungsdefinierte Zustand angezeigt werden.  
+     Enthält die Status-Images, die neben des Symbols an, dass eine Anwendung definierte Zustand angezeigt werden.  
   
 -   Headerelement  
   
      Verwendet in der Berichtsansicht für kleine Bilder, die in jedem Headerelement-Steuerelement angezeigt werden.  
   
- Standardmäßig zerstört ein Listenansicht-Steuerelement der Bildliste zugewiesen, wenn es zerstört wird; Allerdings kann Entwickler dieses Verhalten anpassen, indem Zerstören von jeder Bildliste wenn er nicht mehr verwendet wird, wie von der Anwendung bestimmt. Weitere Informationen finden Sie unter [Verwenden von CListCtrl: Listenelemente und Bilderlisten](../list-items-and-image-lists.md).  
+ Standardmäßig Löscht ein Listenansicht-Steuerelement der Bildliste zugewiesen, wenn es zerstört wird; Allerdings kann Entwickler dieses Verhalten anpassen, indem Sie jede Bildliste Wenn es nicht mehr verwendet wird, zerstören, wie von der Anwendung bestimmt. Weitere Informationen finden Sie unter [Verwenden von CListCtrl: Auflisten von Elementen und Bilderlisten](../list-items-and-image-lists.md).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- [CObject](cobject-class.md)  
+ [Von CObject](cobject-class.md)  
   
  [CCmdTarget](ccmdtarget-class.md)  
   
@@ -524,7 +525,7 @@ class CListCtrl : public CWnd
  **Header:** afxcmn.h  
   
 ##  <a name="approximateviewrect"></a>  CListCtrl::ApproximateViewRect  
- Bestimmt die Breite und Höhe erforderlich, um die Elemente einer Listenansicht-Steuerelement angezeigt.  
+ Bestimmt die Breite und Höhe erforderlich, um die Elemente von einem Listenansicht-Steuerelement angezeigt.  
   
 ```  
 CSize ApproximateViewRect(
@@ -534,42 +535,42 @@ CSize ApproximateViewRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `sz`  
- Die vorgeschlagenen Dimensionen des Steuerelements in Pixel. Wenn keine Dimensionen angegeben werden, verwendet das Framework die aktuellen Werte für Breite oder Höhe des Steuerelements.  
+ *sz*  
+ Die vorgeschlagenen Abmessungen des Steuerelements in Pixel. Wenn Dimensionen nicht angegeben werden, verwendet das Framework die aktuellen Werte Breite oder Höhe des Steuerelements an.  
   
- `iCount`  
- Die Anzahl der Elemente im Steuerelement angezeigt werden. Wenn dieser Parameter-1 ist, verwendet das Framework die Gesamtanzahl der Elemente im Steuerelement derzeit.  
+ *iCount*  
+ Anzahl der Elemente im Steuerelement angezeigt werden. Wenn dieser Parameter-1 ist, verwendet das Framework die Gesamtzahl der Elemente derzeit im Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CSize` Objekt, das die ungefähre Breite und Höhe, die zum Anzeigen von Elementen, in Pixel enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_ApproximateViewRect](http://msdn.microsoft.com/library/windows/desktop/bb761231)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_ApproximateViewRect](http://msdn.microsoft.com/library/windows/desktop/bb761231), wie im Windows SDK beschrieben.  
   
 ##  <a name="arrange"></a>  CListCtrl::Arrange  
- Verschiebt Elemente in einer Ansicht mit Symbolen, damit sie in einem Raster ausgerichtet.  
+ So, dass sie in einem Raster ausgerichtet sind, automatisch neu positioniert und Elemente in einer Symbolansicht.  
   
 ```  
 BOOL Arrange(UINT nCode);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCode`  
- Gibt die Ausrichtungsstil für die Elemente an. Die folgenden Werte sind möglich:  
+ *nCode*  
+ Gibt die Ausrichtungsart für die Elemente an. Es kann eine der folgenden Werte sein:  
   
-- `LVA_ALIGNLEFT` Richtet die Elemente am linken Rand des Fensters.  
+- LVA_ALIGNLEFT richtet Sie Elemente am linken Rand des Fensters.  
   
-- `LVA_ALIGNTOP` Richtet die Elemente am oberen Rand des Fensters.  
+- LVA_ALIGNTOP richtet Sie Elemente am oberen Rand des Fensters.  
   
-- `LVA_DEFAULT` Richtet die Elemente entsprechend der Listenansicht aktuellen Ausrichtung Stile (Standardwert).  
+- LVA_DEFAULT richtet Elemente entsprechend in der Listenansicht des aktuellen Ausrichtungsformate (Standardwert).  
   
-- `LVA_SNAPTOGRID` Richtet alle Symbole auf die nächste Rasterposition an.  
+- LVA_SNAPTOGRID fängt alle Symbole für die nächste Rasterposition.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `nCode` Parameter gibt den Ausrichtungsstil an.  
+ Die *nCode* Parameter gibt an, die Ausrichtungsart.  
   
 ### <a name="example"></a>Beispiel    
 ```cpp  
@@ -581,7 +582,7 @@ BOOL Arrange(UINT nCode);
 
   
 ##  <a name="canceleditlabel"></a>  CListCtrl::CancelEditLabel  
- Bricht die Bearbeitung Elementtext ab.  
+ Bricht die Element-Textbearbeitung Vorgang ab.  
   
 ```  
 void CancelEditLabel();
@@ -598,7 +599,7 @@ CListCtrl();
 ```  
   
 ##  <a name="create"></a>  CListCtrl::Create  
- Erstellt ein Listenfeld-Steuerelement, und fügt es einer `CListCtrl` Objekt.  
+ Ein Listensteuerelement erstellt und fügt sie an einer `CListCtrl` Objekt.  
   
 ```  
 virtual BOOL Create(
@@ -609,25 +610,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwStyle`  
- Gibt das Strukturelement-Steuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen auf das Steuerelement. Finden Sie unter [Liste Ansicht Fensterstile](http://msdn.microsoft.com/library/windows/desktop/bb774739) in das Windows SDK für eine vollständige Liste dieser Stile. Erweiterte Formate, die spezifisch für ein Steuerelement mit Set [SetExtendedStyle](#setextendedstyle).  
+ *dwStyle*  
+ Gibt an, die Listensteuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen, an das Steuerelement. Finden Sie unter [Liste View Window-Stile](http://msdn.microsoft.com/library/windows/desktop/bb774739) im Windows SDK für eine vollständige Liste dieser Stile. Erweiterte Stile, die spezifisch für ein Steuerelement mithilfe Satz [SetExtendedStyle](#setextendedstyle).  
   
- `rect`  
- Gibt des Strukturelement-Steuerelements Größe und Position. Es kann es sich um eine `CRect` Objekt oder eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
+ *Rect*  
+ Gibt an, die des Listensteuerelements Größe und Position. Es kann sein, entweder eine `CRect` Objekt oder ein [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
   
- `pParentWnd`  
- Gibt an, das Strukturelement-Steuerelement übergeordnetes Fenster, in der Regel eine `CDialog`. Es muss nicht **NULL**.  
+ *pParentWnd*  
+ Gibt an, das Listensteuerelement übergeordnete Fenster, in der Regel eine `CDialog`. Es darf nicht NULL sein.  
   
- `nID`  
- Gibt das Strukturelement-Steuerelement-ID an.  
+ *nID*  
+ Gibt an, die Listensteuerelement-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie erstellen eine `CListCtrl` in zwei Schritten. Zuerst wird den Konstruktor aufrufen und dann **erstellen**, der Listenansicht-Steuerelement erstellt, und fügt es der `CListCtrl` Objekt.  
+ Sie erstellen eine `CListCtrl` in zwei Schritten. Zunächst rufen Sie den Konstruktor, und rufen Sie anschließend `Create`, dem Listenansicht-Steuerelement erstellt, und fügt es der `CListCtrl` Objekt.  
   
- Rufen Sie zum Anwenden von erweiterten Fensterstile an das Steuerelement Listenobjekt [CreateEx](#createex) anstelle von **erstellen**.  
+ Rufen Sie zum Anwenden erweiterter Windows-Stile für das Steuerelementobjekt Liste [CreateEx](#createex) anstelle von `Create`.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -639,7 +640,7 @@ virtual BOOL Create(
 
   
 ##  <a name="createex"></a>  CListCtrl::CreateEx  
- Erstellt ein Steuerelement (ein untergeordnetes Fenster) und ordnet sie der `CListCtrl` Objekt.  
+ Erstellt ein Steuerelement (ein untergeordnetes Fenster) und ordnet ihn dem `CListCtrl` Objekt.  
   
 ```  
 virtual BOOL CreateEx(
@@ -651,31 +652,31 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwExStyle`  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der `dwExStyle` -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ *dwExStyle*  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
- `dwStyle`  
- Gibt das Strukturelement-Steuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen auf das Steuerelement. Eine vollständige Liste dieser Stile, finden Sie unter [Liste Ansicht Fensterstile](http://msdn.microsoft.com/library/windows/desktop/bb774739) im Windows SDK.  
+ *dwStyle*  
+ Gibt an, die Listensteuerelement-Stil. Wenden Sie eine beliebige Kombination der Stile von Listensteuerelementen, an das Steuerelement. Eine vollständige Liste dieser Stile, finden Sie unter [Liste View Window-Stile](http://msdn.microsoft.com/library/windows/desktop/bb774739) im Windows SDK.  
   
- `rect`  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der `pParentWnd`.  
+ *Rect*  
+ Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  
   
- `pParentWnd`  
- Ein Zeiger auf das Fenster, das das Steuerelement übergeordnet ist.  
+ *pParentWnd*  
+ Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.  
   
- `nID`  
- Das Steuerelement untergeordnete Fenster-ID.  
+ *nID*  
+ Der ID des Steuerelements untergeordneten Fensters mit.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende erweiterten Fensterstile, angegeben durch die Windows-erweiterten Stil ihm etwas voranzustellen **WS_EX_**.  
+ Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_**.  
   
- `CreateEx` das Steuerelement erstellt, mit der erweiterten Fensterstile gemäß `dwExStyle`. Aufrufen, um die erweiterten Stile, die speziell für ein Steuerelement festgelegt, [SetExtendedStyle](#setextendedstyle). Verwenden Sie z. B. `CreateEx` festzulegende Stile als **WS_EX_CONTEXTHELP**, verwenden jedoch `SetExtendedStyle` festzulegende Stile als **LVS_EX_FULLROWSELECT**. Weitere Informationen finden Sie unter die Stile, die in diesem Thema beschriebenen [Listenansicht-Formatvorlagen erweiterte](http://msdn.microsoft.com/library/windows/desktop/bb774732) im Windows SDK.  
+ `CreateEx` erstellt das Steuerelement mit den erweiterten Windows-Formatvorlagen, die anhand des *DwExStyle*. Um erweiterte Stile bestimmten auf ein Steuerelement festzulegen, rufen [SetExtendedStyle](#setextendedstyle). Verwenden Sie z. B. `CreateEx` solche Stile als WS_EX_CONTEXTHELP festgelegt, aber verwenden Sie `SetExtendedStyle` solche Stile als LVS_EX_FULLROWSELECT festgelegt. Weitere Informationen finden Sie die Stile, die in diesem Thema beschriebenen [erweiterte Listenansicht-Formatvorlagen](http://msdn.microsoft.com/library/windows/desktop/bb774732) im Windows SDK.  
   
 ##  <a name="createdragimage"></a>  CListCtrl::CreateDragImage  
- Erstellt eine Bildliste ziehen Sie für das Element vom angegebenen `nItem`.  
+ Erstellt eine Bildliste ziehen, für das Element vom angegebenen *nItem*.  
   
 ```  
 CImageList* CreateDragImage(
@@ -684,17 +685,17 @@ CImageList* CreateDragImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
- Der Index des Elements, dessen Bildliste ziehen erstellt werden soll.  
+ *nItem*  
+ Der Index des Elements, dessen Drag-Bildliste erstellt werden.  
   
- `lpPoint`  
- Adresse der einen [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, empfängt die ursprüngliche Position der linken oberen Ecke des Bilds, in der Sicht koordiniert.  
+ *lpPoint*  
+ Adresse von einem [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) koordiniert die Struktur, empfängt die ursprüngliche Position von der linken oberen Ecke des Bilds, in der Ansicht.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die Bildliste ziehen, wenn erfolgreich; andernfalls **NULL**.  
+ Ein Zeiger auf die Bildliste ziehen Sie bei erfolgreicher Ausführung; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `CImageList` Objekt kann nicht rückgängig gemacht, und müssen Sie ihn nach Abschluss löschen. Zum Beispiel:  
+ Die `CImageList` Objekt wird dauerhaft ausgeführt, und Sie müssen es löschen, Abschluss. Zum Beispiel:  
   
 
 ```cpp  
@@ -733,7 +734,7 @@ BOOL DeleteColumn(int nCol);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCol`  
+ *"ncol"*  
  Der Index der Spalte gelöscht werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -760,8 +761,8 @@ BOOL DeleteItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
- Gibt den Index des Elements gelöscht werden soll.  
+ *nItem*  
+ Gibt den Index des Elements, das gelöscht werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -779,41 +780,41 @@ BOOL DeleteItem(int nItem);
 
   
 ##  <a name="drawitem"></a>  CListCtrl::DrawItem  
- Wird aufgerufen, durch das Framework, wenn sich ein Darstellungsaspekt eines Ownerdrawn-Liste Ansicht Steuerelements ändert.  
+ Wird aufgerufen, durch das Framework, wenn sich ein Darstellungsaspekt eines Ownerdrawn-Liste anzeigen-Steuerelements ändert.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpDrawItemStruct`  
- Eine long-Zeiger auf eine `DRAWITEMSTRUCT` -Struktur, die Informationen über den Typ der Zeichnung erforderlich.  
+ *lpDrawItemStruct*  
+ Ein long-Zeiger auf eine `DRAWITEMSTRUCT` -Struktur, Informationen über den Typ der Zeichnung, die erforderlich sind enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Die **ItemAction** Mitglied der [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) Struktur definiert die Zeichnen-Aktion, die ausgeführt werden soll.  
+ Die `itemAction` Mitglied der [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) Struktur definiert die Zeichnen-Aktion, die ausgeführt werden soll.  
   
- Standardmäßig wird diese Memberfunktion keine Aktion ausgeführt. Überschreiben Sie diese Memberfunktion zum Implementieren der Zeichnung für ein Ownerdrawn- `CListCtrl` Objekt.  
+ Standardmäßig ist diese Member-Funktion mit "nothing". Überschreiben Sie diese Memberfunktion zum Implementieren der Zeichnung für eine Ownerdrawn- `CListCtrl` Objekt.  
   
- Die Anwendung muss alle Device Interface (GDI) Grafikobjekten ausgewählt, für der Anzeigekontext in bereitgestellten wiederherstellen `lpDrawItemStruct` vor diesem Element Funktion beendet wird.  
+ Die Anwendung sollte alle Grafiken Device Interface (GDI) Objekte ausgewählt, für der Anzeigekontext in angegeben wiederherstellen *LpDrawItemStruct* vor diesem Member Funktion beendet wird.  
   
 ##  <a name="editlabel"></a>  CListCtrl::EditLabel  
- Startet die direkte Bearbeitung der Text des Elements.  
+ Beginnt die direkte Bearbeitung von Text eines Elements.  
   
 ```  
 CEdit* EditLabel(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
- Der Index des Listenansichtselements an, die bearbeitet werden.  
+ *nItem*  
+ Der Index des Listenansichtselements an, die bearbeitet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Bei Erfolg, ein Zeiger auf die `CEdit` -Objekt, das so bearbeiten Sie den Elementtext verwendet wird; andernfalls **NULL**.  
+ Bei Erfolg einen Zeiger auf die `CEdit` -Objekt, das zum Bearbeiten von Text des Elements verwendet wird, andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Listenansicht-Steuerelement, das verfügt die `LVS_EDITLABELS` Fensterstil ermöglicht einem Benutzer, elementbezeichnungen direktes Bearbeiten. Der Benutzer beginnt, bearbeiten, indem Sie auf die Bezeichnung eines Elements, das Fokus besitzt.  
+ Ein Listenansicht-Steuerelement, die den Fensterstil LVS_EDITLABELS ermöglicht Benutzern elementbezeichnungen direktes Bearbeiten. Der Benutzer beginnt, bearbeiten, indem Sie auf die Bezeichnung eines Elements, den Fokus besitzt.  
   
- Verwenden Sie diese Funktion, um direkte Bearbeitung der angegebenen Liste Ansicht der Text des Elements begonnen werden soll.  
+ Verwenden Sie diese Funktion, um zu beginnen, ein direktes Bearbeiten der angegebenen Liste Ansicht der Text des Elements.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -835,23 +836,23 @@ LRESULT EnableGroupView(BOOL fEnable);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `fEnable`  
- Gibt an, ob in einem Listview-Steuerelement Gruppe aktivieren Elemente angezeigt. **"True"** Gruppierung; aktiviert **"False"** zu deaktivieren.  
+ *fEnable*  
+ Gibt an, ob ein Listview-Steuerelement Gruppe aktivieren, die Elemente angezeigt. True, um die Gruppierung zu aktivieren. "False", um ihn zu deaktivieren.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen der folgenden Werte zurück:  
   
-- **0** Elemente die Fähigkeit, Listenansicht anzeigen, wie eine Gruppe bereits aktiviert oder deaktiviert ist.  
+- **0** Elemente die Möglichkeit, Listenansicht anzuzeigen, wie eine Gruppe bereits aktiviert oder deaktiviert ist.  
   
 - **1** der Zustand des Steuerelements erfolgreich geändert wurde.  
   
-- **-1** der Vorgang ist fehlgeschlagen.  
+- **-1** der Vorgang fehlgeschlagen ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_ENABLEGROUPVIEW](http://msdn.microsoft.com/library/windows/desktop/bb774900) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="ensurevisible"></a>  CListCtrl::EnsureVisible  
- Wird sichergestellt, dass mindestens ein Listenansichtselements teilweise sichtbar ist.  
+ Stellt sicher, dass ein Element der Listenansicht mindestens teilweise sichtbar ist.  
   
 ```  
 BOOL EnsureVisible(
@@ -860,17 +861,17 @@ BOOL EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
- Der Index des Listenansichtselements an, die angezeigt werden soll.  
+ *nItem*  
+ Der Index des des Listenansichtselements an, der sichtbar gemacht wird.  
   
- `bPartialOK`  
- Gibt an, ob teilweise Sichtbarkeit akzeptabel ist.  
+ *bPartialOK*  
+ Gibt an, ob es sich bei partieller Sichtbarkeit zulässig ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Listenansicht-Steuerelement wird ggf. ein Bildlauf durchgeführt. Wenn die `bPartialOK` -Parameter ungleich NULL ist, kein Bildlauf tritt auf, wenn das Element nur teilweise sichtbar ist.  
+ Das Listenansicht-Steuerelement bei Bedarf ein Bildlauf durchgeführt wird. Wenn die *bPartialOK* Parameter ungleich NULL ist, kein Bildlauf erfolgt, wenn das Element nur teilweise sichtbar ist.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -882,7 +883,7 @@ BOOL EnsureVisible(
 
   
 ##  <a name="finditem"></a>  CListCtrl::FindItem  
- Sucht nach einer Listenansichtselements. nachdem Sie Eigenschaften angegeben.  
+ Sucht ein Listenansichtselement müssen Eigenschaften angegeben.  
   
 ```  
 int FindItem(
@@ -891,17 +892,17 @@ int FindItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pFindInfo`  
- Ein Zeiger auf ein [LVFINDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774745) Struktur mit Informationen über das Element, nach dem gesucht werden.  
+ *pFindInfo*  
+ Ein Zeiger auf ein [LVFINDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774745) Struktur mit Informationen über das Element, das gesucht werden sollen.  
   
- `nStart`  
- Index, der das Element, das mit der Suche zu starten, oder -1, um von vorn beginnen. Das Element am `nStart` wird von der Suche ausgeschlossen, wenn `nStart` ist nicht gleich-1.  
+ *nmit*  
+ Der Index des Elements beginnt die Suche mit oder -1, um von vorn zu beginnen. Das Element am *nmit* wird von der Suche ausgeschlossen, wenn *nmit* ist nicht gleich-1.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Index des Elements, wenn erfolgreich, oder andernfalls ' -1.  
+ Der Index des Elements im Erfolgsfall oder andernfalls -1.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `pFindInfo` Parameter verweist auf ein **LVFINDINFO** Struktur enthält Informationen zum Suchen nach einem Listenansichtselements verwendet.  
+ Die *pFindInfo* Parameter verweist auf eine `LVFINDINFO` -Struktur, die Informationen zum Suchen nach einem Element der Listenansicht verwendet enthält.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -921,7 +922,7 @@ int FindItem(
 
   
 ##  <a name="getbkcolor"></a>  CListCtrl::GetBkColor  
- Ruft die Farbe des Hintergrunds einer Listenansicht-Steuerelement ab.  
+ Ruft die Hintergrundfarbe des einem Listenansicht-Steuerelement ab.  
   
 ```  
 COLORREF GetBkColor() const;  
@@ -934,21 +935,21 @@ COLORREF GetBkColor() const;
   Siehe das Beispiel für [CListCtrl::SetBkColor](#setbkcolor).  
   
 ##  <a name="getbkimage"></a>  CListCtrl::GetBkImage  
- Ruft das aktuelle Hintergrundbild des ein Listenansicht-Steuerelement ab.  
+ Ruft das aktuelle Hintergrundbild von einem Listenansicht-Steuerelement ab.  
   
 ```  
 BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `plvbkImage`  
- Ein Zeiger auf ein **LVBKIMAGE** Struktur, die das aktuelle Hintergrundbild der Listenansicht enthält.  
+ *plvbkImage*  
+ Ein Zeiger auf ein `LVBKIMAGE` Struktur, die das aktuelle Hintergrundbild der Listenansicht enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL bei Erfolg gibt, oder andernfalls 0 (null).  
+ Gibt, die ungleich NULL, wenn erfolgreich, oder andernfalls 0 (null) zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode implementiert, das Verhalten des Makros Win32 [ListView_GetBkImage](http://msdn.microsoft.com/library/windows/desktop/bb761246)gemäß der Beschreibung im Windows SDK.  
+ Diese Methode implementiert, das Verhalten des Win32-Makros und [ListView_GetBkImage](http://msdn.microsoft.com/library/windows/desktop/bb761246), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -974,36 +975,36 @@ UINT GetCallbackMask() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Listenansicht-Steuerelement des Rückrufmaske.  
+ Das Listenansicht-Steuerelement die Rückrufmaske.  
   
 ### <a name="remarks"></a>Hinweise  
- "Rückruf Item" wird ein Listenelement anzeigen, für die die Anwendung – anstatt des Steuerelements – speichert den Text, Symbol oder beides. Obwohl ein Listenansicht-Steuerelement für Sie diese Attribute gespeichert werden kann, empfiehlt es sich, Rückrufelemente verwenden, wenn die Anwendung bereits einige dieser Informationen beibehält. Die Rückrufmaske gibt an, welches Element Statusbits, die von der Anwendung verwaltet werden, und klicken Sie auf das gesamte Steuerelement und nicht für ein bestimmtes Element gilt. Die Rückrufmaske ist 0 (null), wird standardmäßig, was bedeutet, dass das Steuerelement alle-Element-Zustände verfolgt. Wenn eine Anwendung Rückrufelemente verwendet oder einen Wert ungleich NULL Rückrufmaske gibt, muss es Attribute der anzeigen-Element nach Bedarf bereitstellen können.  
+ "Rückrufelement" ist ein Listenansichtselement für die die Anwendung, anstatt das Steuerelement – speichert den Text, Symbol oder beides. Obwohl diese Attribute für Sie ein Listenansicht-Steuerelement gespeichert werden kann, sollten Sie Rückrufelemente verwenden, wenn die Anwendung bereits einige dieser Informationen verwaltet. Die Rückrufmaske gibt an, welche Zustandsbits Element von der Anwendung verwaltet werden, und klicken Sie auf das gesamte Steuerelement und nicht auf ein bestimmtes Element gilt. Die Rückrufmaske ist 0 (null), wird standardmäßig, was bedeutet, dass das Steuerelement alle Element-Zustände verfolgt. Wenn eine Anwendung Rückrufelemente verwendet oder eine ungleich NULL Rückrufmaske gibt, muss die Liste anzeigen-Elementattribute bedarfsgesteuert bereitstellen können, sein.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::SetCallbackMask](#setcallbackmask).  
   
 ##  <a name="getcheck"></a>  CListCtrl::GetCheck  
- Ruft ab den aktuellen Anzeigestatus des statusbilds, die ein Element zugeordnet ist.  
+ Ruft den aktuellen Anzeigestatus des statusbilds, die einem Element zugeordnet ist.  
   
 ```  
 BOOL GetCheck(int nItem) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
- Der nullbasierte Index des ein Listenelement-Steuerelement.  
+ *nItem*  
+ Der nullbasierte Index von einem Steuerelement ein Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn das Element ausgewählt ist, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_GetCheckState](http://msdn.microsoft.com/library/windows/desktop/bb761250)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_GetCheckState](http://msdn.microsoft.com/library/windows/desktop/bb761250), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::SetCheck](#setcheck).  
   
 ##  <a name="getcolumn"></a>  CListCtrl::GetColumn  
- Ruft die Attribute von einem Listenansicht-Steuerelement der Spalte ab.  
+ Ruft die Attribute von einem Listenansicht-Steuerelement die Spalte ab.  
   
 ```  
 BOOL GetColumn(
@@ -1012,17 +1013,17 @@ BOOL GetColumn(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCol`  
- Der Index der Spalte, deren Attribute werden abgerufen werden sollen.  
+ *"ncol"*  
+ Der Index der Spalte, deren Attribute sind, abgerufen werden sollen.  
   
- `pColumn`  
- Adresse der ein [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) -Struktur, die die abzurufenden Informationen angibt und empfängt Informationen über die Spalte. Die **Maske** -Member gibt an, welche Spalte Attribute abgerufen. Wenn die **Maske** Member gibt an, die `LVCF_TEXT` Wert, der **PszText** Member muss die Adresse des Puffers, der den Elementtext empfängt enthalten und die **CchTextMax** die Größe des Puffers muss Element angegeben werden.  
+ *pColumn*  
+ Adresse von einem [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) -Struktur, gibt die Informationen zum Abrufen und Empfangen von Informationen über die Spalte. Die `mask` -Member gibt an, welche Spalte Attribute abgerufen werden. Wenn die `mask` -Member gibt an, den LVCF_TEXT-Wert, der `pszText` Member darf die Adresse des Puffers, der den Elementtext empfängt und die `cchTextMax` Member muss die Größe des Puffers angeben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Die **LVCOLUMN** Struktur enthält Informationen über eine Spalte in der Berichtsansicht.  
+ Die `LVCOLUMN` Struktur enthält Informationen über eine Spalte in der Berichtsansicht.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -1050,17 +1051,17 @@ BOOL GetColumnOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `piArray`  
- Ein Zeiger auf einen Puffer, der die Indexwerte der Spalten in der Listenansicht-Steuerelement enthält. Der Puffer muss groß genug für die Gesamtanzahl der Spalten in der Listenansicht-Steuerelement enthalten sein.  
+ *piArray*  
+ Ein Zeiger auf einen Puffer, der die Indexwerte der Spalten in der Listenansicht-Steuerelement enthält. Der Puffer muss groß genug, um die Gesamtanzahl der Spalten in der Listenansicht-Steuerelement enthalten sein.  
   
- `iCount`  
- Die Anzahl der Spalten in der Listenansicht-Steuerelement. Wenn dieser Parameter-1 ist, wird die Anzahl der Spalten durch das Framework automatisch abgerufen.  
+ *iCount*  
+ Anzahl der Spalten in der Listenansicht-Steuerelement. Wenn dieser Parameter-1 ist, wird die Anzahl der Spalten durch das Framework automatisch abgerufen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_GetColumnOrderArray](http://msdn.microsoft.com/library/windows/desktop/bb761254)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_GetColumnOrderArray](http://msdn.microsoft.com/library/windows/desktop/bb761254), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -1092,18 +1093,18 @@ m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
 
   
 ##  <a name="getcolumnwidth"></a>  CListCtrl::GetColumnWidth  
- Ruft die Breite einer Spalte in der Berichtsansicht oder Datenansicht Liste ab.  
+ Ruft die Breite einer Spalte in der Berichtsansicht oder Datenansicht der Liste ab.  
   
 ```  
 int GetColumnWidth(int nCol) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCol`  
- Gibt den Index der Spalte, deren Breite ist abgerufen werden sollen.  
+ *"ncol"*  
+ Gibt den Index der Spalte, deren Breite ist, abgerufen werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Breite in Pixel, der vom angegebenen Spalte `nCol`.  
+ Die Breite in Pixel, der vom angegebenen Spalte *"ncol"*.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -1115,27 +1116,27 @@ int GetColumnWidth(int nCol) const;
 
   
 ##  <a name="getcountperpage"></a>  CListCtrl::GetCountPerPage  
- Berechnet die Anzahl von Elementen, die vertikal in den sichtbaren Bereich des ein Listenansicht-Steuerelement im Listenansicht "oder" Berichtsansicht passen.  
+ Berechnet die Anzahl der Elemente, die vertikal in den sichtbaren Bereich von einem Listenansicht-Steuerelement in der Listenansicht oder Berichtsansicht passen.  
   
 ```  
 int GetCountPerPage() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Elemente, die vertikal in den sichtbaren Bereich des ein Listenansicht-Steuerelement im Listenansicht "oder" Berichtsansicht passen.  
+ Die Anzahl der Elemente, die vertikal in den sichtbaren Bereich von einem Listenansicht-Steuerelement in der Listenansicht oder Berichtsansicht passen.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::GetTopIndex](#gettopindex).  
   
 ##  <a name="geteditcontrol"></a>  CListCtrl::GetEditControl  
- Ruft das Handle des Bearbeitungssteuerelements verwendet, um eine Listenansichtselement Text zu bearbeiten.  
+ Ruft das Handle des Bearbeitungssteuerelements verwendet, um ein Listenansichtselement Text zu bearbeiten.  
   
 ```  
 CEdit* GetEditControl() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Bei Erfolg, ein Zeiger auf die [CEdit](cedit-class.md) -Objekt, das so bearbeiten Sie den Elementtext verwendet wird; andernfalls **NULL**.  
+ Bei Erfolg einen Zeiger auf die [CEdit](cedit-class.md) -Objekt, das zum Bearbeiten von Text des Elements verwendet wird, andernfalls NULL.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -1154,17 +1155,17 @@ CEdit* GetEditControl() const;
 
   
 ##  <a name="getemptytext"></a>  CListCtrl::GetEmptyText  
- Ruft die Zeichenfolge angezeigt, wenn das aktuelle Listenansicht Steuerelement leer ist.  
+ Ruft die Zeichenfolge, die angezeigt wird, wenn das aktuelle Listenansicht-Steuerelement leer ist.  
   
 ```  
 CString GetEmptyText() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) den Text enthält, um anzuzeigen, wenn das Steuerelement leer ist.  
+ Ein [CString](../../atl-mfc-shared/reference/cstringt-class.md) , enthält den Text, der angezeigt wird, wenn das Steuerelement leer ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [LVM_GETEMPTYTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774921) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [LVM_GETEMPTYTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774921) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getextendedstyle"></a>  CListCtrl::GetExtendedStyle  
  Ruft die aktuellen erweiterten Stile von einem Listenansicht-Steuerelement ab.  
@@ -1174,10 +1175,10 @@ DWORD GetExtendedStyle();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine Kombination von derzeit in Verwendung durch die Liste der erweiterten Stile anzeigen Steuerelement. Eine beschreibende Liste dieser erweiterten Stile, finden Sie unter der [erweiterte Listenansicht-Formatvorlagen](http://msdn.microsoft.com/library/windows/desktop/bb774732) Thema im Windows SDK.  
+ Eine Kombination aus die erweiterten Stile aktuell in Verwendung durch die Liste anzeigen Steuerelement. Eine Liste dieser erweiterten Stile, finden Sie unter den [erweiterte Listenansicht-Formatvorlagen](http://msdn.microsoft.com/library/windows/desktop/bb774732) Thema in der Windows-SDK.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_GetExtendedListViewStyle](http://msdn.microsoft.com/library/windows/desktop/bb761264)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_GetExtendedListViewStyle](http://msdn.microsoft.com/library/windows/desktop/bb761264), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [wird CListCtrl:: SetExtendedStyle](#setextendedstyle).  
@@ -1190,7 +1191,7 @@ POSITION GetFirstSelectedItemPosition() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **POSITION** Wert, der für die Iteration oder Abrufen von Objekten Zeiger; verwendet werden kann **NULL** , wenn kein Element ausgewählt ist.  
+ Ein Positionswert, der für die Iteration oder Abrufen von Objekten Zeiger verwendet werden kann. NULL, wenn keine Elemente ausgewählt sind.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel veranschaulicht die Verwendung dieser Funktion.  
@@ -1215,33 +1216,33 @@ POSITION GetFirstSelectedItemPosition() const;
 
   
 ##  <a name="getfocusedgroup"></a>  CListCtrl::GetFocusedGroup  
- Ruft die Gruppe, die im aktuellen Listenansicht Steuerelement den Tastaturfokus hat.  
+ Ruft ab, die Gruppe, die im aktuellen Listenansicht-Steuerelement den Tastaturfokus besitzt.  
   
 ```  
 int GetFocusedGroup() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Index der Gruppe, deren Zustand ist `LVGS_FOCUSED`, wenn eine Gruppe; vorhanden ist, andernfalls -1.  
+ Der Index der Gruppe, deren Zustand LVGS_FOCUSED, ist, wenn eine solche Gruppe vorhanden ist, andernfalls andernfalls -1.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [LVM_GETFOCUSEDGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774925) Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter der `LVGS_FOCUSED` Wert, der die `state` Mitglied der [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) Struktur.  
+ Diese Methode sendet die [LVM_GETFOCUSEDGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774925) -Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter den LVGS_FOCUSED-Wert, der die `state` Mitglied der [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) Struktur.  
   
 ##  <a name="getgroupcount"></a>  CListCtrl::GetGroupCount  
- Ruft die Anzahl der Gruppen in der aktuellen Listenansicht Steuerelement ab.  
+ Ruft die Anzahl der Gruppen in der aktuellen Listenansicht-Steuerelement ab.  
   
 ```  
 int GetGroupCount()const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Gruppen im Listenansicht Steuerelement.  
+ Die Anzahl der Gruppen in der Listenansicht-Steuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [LVM_GETGROUPCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774931) Nachricht, die im Windows SDK beschrieben ist-->.  
+ Diese Methode sendet die [LVM_GETGROUPCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774931) -Nachricht, die im Windows SDK beschriebene-->.  
   
 ##  <a name="getgroupinfo"></a>  CListCtrl::GetGroupInfo  
- Ruft die Informationen für eine bestimmte Gruppe von Listenansicht-Steuerelement ab.  
+ Ruft die Informationen für eine bestimmte Gruppe von das Listenansicht-Steuerelement.  
   
 ```  
 int GetGroupInfo(
@@ -1250,20 +1251,20 @@ int GetGroupInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iGroupId`  
- Der Bezeichner für die Gruppe, deren Informationen abgerufen werden sollen.  
+ *iGroupId*  
+ Der Bezeichner der die Gruppe, zu der Informationen abgerufen werden sollen.  
   
- `pgrp`  
- Ein Zeiger auf die [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) , die Informationen für die angegebene Gruppe enthält.  
+ *PGRP*  
+ Ein Zeiger auf die [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) mit Informationen über die angegebene Gruppe.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die ID der Gruppe, der im Erfolgsfall oder-1 zurück, andernfalls.  
+ Andernfalls wird die ID der Gruppe, der im Erfolgsfall oder-1 zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_GETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb774932) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="getgroupinfobyindex"></a>  CListCtrl::GetGroupInfoByIndex  
- Ruft Informationen zu einer angegebenen Gruppe im aktuellen Listenansicht Steuerelement ab.  
+ Ruft Informationen zu einer angegebenen Gruppe im aktuellen Listenansicht-Steuerelement ab.  
   
 ```  
 BOOL GetGroupInfoByIndex(
@@ -1275,17 +1276,17 @@ BOOL GetGroupInfoByIndex(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iIndex`|Nullbasierter Index einer Gruppe.|  
-|[out] `pGroup`|Zeiger auf eine [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) -Struktur, die Informationen zur angegebenen Gruppe erhält die `iIndex` Parameter.<br /><br /> Der Aufrufer ist verantwortlich für die Initialisierung der Member der [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) Struktur. Festlegen der `cbSize` Member, um die Größe der Struktur und die Flags der `mask` Elements der abzurufenden Informationen angeben.|  
+|[in] *iIndex*|Nullbasierte Index der einer Gruppe.|  
+|[out] *pGroup*|Zeiger auf ein [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) -Struktur, die Informationen zur angegebenen Gruppe erhält die *iIndex* Parameter.<br /><br /> Der Aufrufer ist verantwortlich für die die Elemente der Initialisierung der [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) Struktur. Festlegen der `cbSize` Element die Größe der Struktur und die Flags der der `mask` Member an der abzurufenden Informationen.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [LVM_GETGROUPINFOBYINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774933) Nachricht, die im Windows SDK beschrieben ist-->.  
+ Diese Methode sendet die [LVM_GETGROUPINFOBYINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774933) -Nachricht, die im Windows SDK beschriebene-->.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine Variable `m_listCtrl`, d. h. auf das aktuelle Listenansicht Steuerelement verwendet. Diese Variable wird im nächsten Beispiel verwendet.  
+ Das folgende Codebeispiel definiert eine Variable, `m_listCtrl`, d. h. für den Zugriff auf das aktuelle Listenansicht-Steuerelement. Diese Variable wird im nächsten Beispiel verwendet.  
 
 ```cpp  
 public:
@@ -1295,7 +1296,7 @@ public:
 
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht die `GetGroupInfoByIndex` Methode. In einem früheren Abschnitt dieses Codes zeigt Beispiel, dass wir ein Listenansicht Steuerelement erstellt zwei Spalten mit dem Titel "ClientID" und "Grade" in einem Bericht anzeigen. Im folgenden Codebeispiel ruft Informationen zu der Gruppe, deren Index 0 (null) ist, ab, wenn eine solche Gruppe vorhanden ist.    
+ Im folgenden Codebeispiel wird veranschaulicht, die `GetGroupInfoByIndex` Methode. Beispiel, dass wir ein Listenansicht-Steuerelement erstellt zwei Spalten, die mit dem Titel "ClientID" und "Grade" in einer Berichtsansicht angezeigt werden in einem früheren Abschnitt dieses Codes. Im folgenden Codebeispiel ruft Informationen über die Gruppe, deren Index 0 (null) ist, ab, wenn eine solche Gruppe vorhanden ist.    
 ```cpp  
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1332,14 +1333,14 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pGroupMetrics`  
- Ein Zeiger auf eine [LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752) mit Informationen über das Gruppe Metriken.  
+ *pGroupMetrics*  
+ Ein Zeiger auf eine [LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752) , enthält die Informationen zu Metriken.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_GETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774934) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="getgrouprect"></a>  CListCtrl::GetGroupRect  
- Ruft das umschließende Rechteck für eine angegebene Gruppe in der aktuellen Listenansicht Steuerelement ab.  
+ Ruft das umschließende Rechteck für eine angegebene Gruppe in der aktuellen Listenansicht-Steuerelement ab.  
   
 ```  
 BOOL GetGroupRect(
@@ -1352,20 +1353,20 @@ BOOL GetGroupRect(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iGroupId`|Gibt eine Gruppe.|  
-|[in, out] `lpRect`|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Wenn diese Methode erfolgreich ist, erhält die Struktur der Koordinaten für das Rechteck der Gruppe, die von angegeben wird `iGroupId`.|  
-|[in] `iCoords`|Gibt das Rechteckkoordinaten abrufen. Verwenden Sie einen der folgenden Werte:<br /><br /> - `LVGGR_GROUP` -(Standard)-Koordinaten der gesamten Gruppe "Erweitert".<br />- `LVGGR_HEADER` -Koordinaten der nur den Header (reduzierten Gruppe).<br />- `LVGGR_SUBSETLINK` -Koordinaten der nur die Teilmenge Link (Markup Teilmenge).|  
+|[in] *iGroupId*|Gibt eine Gruppe.|  
+|[in, out] *LpRect*|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Wenn diese Methode erfolgreich ist, erhält die Struktur die Rechteck-Koordinaten der Gruppe, die angegebenen *iGroupId*.|  
+|[in] *iCoords*|Gibt die Koordinaten für das Rechteck abgerufen. Verwenden Sie eine der folgenden Werte:<br /><br /> -LVGGR_GROUP - (Standard)-Koordinaten der gesamten Gruppe "Erweitert".<br />-LVGGR_HEADER - Koordinaten der nur den Header (reduzierten Gruppe).<br />-LVGGR_SUBSETLINK - Koordinaten der nur die Teilmenge Hyperlink (Markup Teilmenge).|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Der Aufrufer ist verantwortlich für die Zuordnung von der [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur an, die durch die `pRect` Parameter.  
+ Der Aufrufer ist verantwortlich für die Zuordnung der [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, um die durch die *pRect* Parameter.  
   
- Diese Methode sendet die [LVM_GETGROUPRECT](http://msdn.microsoft.com/library/windows/desktop/bb774935) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [LVM_GETGROUPRECT](http://msdn.microsoft.com/library/windows/desktop/bb774935) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine Variable `m_listCtrl`, d. h. auf das aktuelle Listenansicht Steuerelement verwendet. Diese Variable wird im nächsten Beispiel verwendet.    
+ Das folgende Codebeispiel definiert eine Variable, `m_listCtrl`, d. h. für den Zugriff auf das aktuelle Listenansicht-Steuerelement. Diese Variable wird im nächsten Beispiel verwendet.    
 ```cpp  
 public:
     // Variable used to access the list control.
@@ -1374,7 +1375,7 @@ public:
 
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht die `GetGroupRect` Methode. In einem früheren Abschnitt dieses Codebeispiels erstellt es ein Listenansicht-Steuerelement, zwei Spalten mit dem Titel "ClientID" und "Grade" in einer Berichtsansicht anzeigt. Im folgenden Codebeispiel wird zeichnet ein 3D Rechteck, um die Gruppe, deren Index 0 (null) ist, wenn eine solche Gruppe vorhanden ist.    
+ Im folgenden Codebeispiel wird veranschaulicht, die `GetGroupRect` Methode. In einem vorherigen Abschnitt dieses Codebeispiels haben wir ein Listenansicht-Steuerelement, zwei Spalten, die mit dem Titel "ClientID" und "Grade" in einer Berichtsansicht anzeigt. Im folgenden Codebeispiel wird zeichnet ein 3D-Rechteck, um die Gruppe, deren Index 0 (null) ist, wenn eine solche Gruppe vorhanden ist.    
   
 ```cpp  
     // GetGroupRect
@@ -1393,7 +1394,7 @@ public:
 
   
 ##  <a name="getgroupstate"></a>  CListCtrl::GetGroupState  
- Ruft den Zustand für eine bestimmte Gruppe im aktuellen Listenansicht Steuerelement ab.  
+ Ruft den Zustand für eine angegebene Gruppe in der aktuellen Listenansicht-Steuerelement.  
   
 ```  
 UINT GetGroupState(
@@ -1405,45 +1406,45 @@ UINT GetGroupState(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `iGroupId`|Nullbasierter Index einer Gruppe.|  
-|[in] `dwMask`|Maske, die den Statuswert abzurufenden für die angegebene Gruppe angibt. Weitere Informationen finden Sie unter der `mask` Mitglied der [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) Struktur.|  
+|[in] *iGroupId*|Nullbasierte Index der einer Gruppe.|  
+|[in] *DwMask*|Eine Maske, der angibt, den Statuswert, für die angegebene Gruppe abgerufen. Weitere Informationen finden Sie unter den `mask` Mitglied der [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) Struktur.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der angeforderte Status für die angegebene Gruppe oder 0, wenn die Gruppe nicht gefunden werden kann.  
+ Der angeforderte Zustand für die angegebene Gruppe oder 0, wenn die Gruppe nicht gefunden werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Rückgabewert ist das Ergebnis einer bitweisen AND-Operation auf die `dwMask` -Parameter und den Wert der `state` Mitglied ein [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) Struktur, die das aktuelle Listenansicht Steuerelement darstellt.  
+ Der Rückgabewert ist das Ergebnis der bitweisen AND-Operation für die *DwMask* -Parameter und den Wert des der `state` Mitglied einer [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) Struktur, die das aktuelle Listenansicht-Steuerelement darstellt.  
   
- Diese Methode sendet die [LVM_GETGROUPSTATE](http://msdn.microsoft.com/library/windows/desktop/bb774936) Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter der [ListView_GetGroupState](http://msdn.microsoft.com/library/windows/desktop/bb761288) Makro.  
+ Diese Methode sendet die [LVM_GETGROUPSTATE](http://msdn.microsoft.com/library/windows/desktop/bb774936) -Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter den [ListView_GetGroupState](http://msdn.microsoft.com/library/windows/desktop/bb761288) Makro.  
   
 ##  <a name="getheaderctrl"></a>  CListCtrl::GetHeaderCtrl  
- Ruft die Headersteuerelement von einem Listenansicht-Steuerelement ab.  
+ Ruft das Kopfzeilen-Steuerelement von einem Listenansicht-Steuerelement ab.  
   
 ```  
 CHeaderCtrl* GetHeaderCtrl();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf das Headersteuerelement von Listenansicht-Steuerelement verwendet.  
+ Ein Zeiger auf das Kopfzeilen-Steuerelement, von dem Listenansicht-Steuerelement verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_GetHeader](http://msdn.microsoft.com/library/windows/desktop/bb761290)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_GetHeader](http://msdn.microsoft.com/library/windows/desktop/bb761290), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).  
   
 ##  <a name="gethotcursor"></a>  CListCtrl::GetHotCursor  
- Ruft den Cursor verwendet, wenn hot Track, für eine Listenansicht-Steuerelement aktiviert ist ab.  
+ Ruft ab, der Cursor, wenn hot Track für ein Listenansicht-Steuerelement aktiviert ist.  
   
 ```  
 HCURSOR GetHotCursor();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Handle für die aktuelle hot Cursorressource, die von der Listenansicht-Steuerelement verwendet wird.  
+ Das Handle für die aktuelle "Hot" Cursorressource, die von der Listenansicht-Steuerelement verwendet wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_GetHotCursor](http://msdn.microsoft.com/library/windows/desktop/bb761292)gemäß der Beschreibung im Windows SDK. Der aktiven Cursor, die nur sichtbar, wenn der Mauszeiger Auswahl aktiviert ist, wird angezeigt, wenn der Cursor über alle Listenansichtselements bewegt. Hover Auswahl wird aktiviert, indem die **LVS_EX_TRACKSELECT** erweiterter Stil.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_GetHotCursor](http://msdn.microsoft.com/library/windows/desktop/bb761292), wie im Windows SDK beschrieben. Der aktive Cursor, die nur sichtbar, wenn der Hover-Auswahl aktiviert ist, wird angezeigt, wenn der Cursor alle Listenansichtselement bewegt. Zeigen Sie Auswahl wird durch Festlegen von den erweiterten Stil LVS_EX_TRACKSELECT aktiviert.  
   
 ### <a name="example"></a>Beispiel    
   
@@ -1456,19 +1457,19 @@ HCURSOR GetHotCursor();
 
   
 ##  <a name="gethotitem"></a>  CListCtrl::GetHotItem  
- Ruft die Listenansichtselements derzeit unter dem Cursor ab.  
+ Ruft das Listenelement für die Ansicht derzeit unter dem Cursor ab.  
   
 ```  
 int GetHotItem();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Index des aktuellen hot Elements in der Listenansicht-Steuerelement.  
+ Der Index des aktuellen hot Elements des Listenansicht-Steuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_GetHotItem](http://msdn.microsoft.com/library/windows/desktop/bb761294)gemäß der Beschreibung im Windows SDK. Das Element wird definiert, wie das aktuell ausgewählte Element im laufenden Systembetrieb nachverfolgen (und zeigen Sie die Auswahl) aktiviert ist.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_GetHotItem](http://msdn.microsoft.com/library/windows/desktop/bb761294), wie im Windows SDK beschrieben. Das Element wird definiert, wie das aktuell ausgewählte Element, wenn "Hot" tracking (zeigen Sie die Auswahl) aktiviert ist.  
   
- Wenn hot Track aktiviert ist, wenn ein Benutzer über eine Listenansichtselements hält, wird die Bezeichnung des Elements automatisch ohne Verwendung einer Maus Schaltfläche hervorgehoben.  
+ Wenn hot Track, aktiviert ist wenn ein Benutzer über ein Listenansichtselement angehalten wird, wird die elementbezeichnung automatisch ohne Verwendung der zweite Mausklick hervorgehoben.  
   
 ### <a name="example"></a>Beispiel    
   
@@ -1481,17 +1482,17 @@ int GetHotItem();
 
   
 ##  <a name="gethovertime"></a>  CListCtrl::GetHoverTime  
- Ruft den aktuellen bestimmte Zeit zeigen muss von einem Listenansicht-Steuerelement ab.  
+ Ruft ab, der die aktuelle Uhrzeit zeigen ein Listenansicht-Steuerelement.  
   
 ```  
 DWORD GetHoverTime() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Verzögerung in Millisekunden, die mit der Mauszeiger auf ein Element zeigen muss, bevor es aktiviert ist. Wenn der Rückgabewert-1 ist, ist die bestimmte Zeit zeigen muss die Standardzeit für die gezeigt wird.  
+ Gibt die Verzögerung in Millisekunden, die mit dem Mauszeiger auf ein Element zeigen muss, bevor Sie diese Option ausgewählt ist. Wenn der Rückgabewert-1 ist, ist die für eine bestimmte Zeit die Standardzeit für die gezeigt wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_GetHoverTime](http://msdn.microsoft.com/library/windows/desktop/bb761296)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_GetHoverTime](http://msdn.microsoft.com/library/windows/desktop/bb761296), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel    
   
@@ -1504,24 +1505,24 @@ DWORD GetHoverTime() const;
 
   
 ##  <a name="getimagelist"></a>  CListCtrl::GetImageList  
- Ruft das Handle des einer Bildliste zum Zeichnen verwendeten Listenansichtselemente ab.  
+ Ruft das Handle einer Bildliste, die zum Zeichnen verwendeten Elemente in der Listenansicht ab.  
   
 ```  
 CImageList* GetImageList(int nImageList) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nImageList`  
- Wert, der die Bildliste abzurufenden angibt. Einen der folgenden Werte sind möglich:  
+ *nImageList*  
+ Wert, der die Bildliste abgerufen angibt. Sie können einen der folgenden Werte sein:  
   
-- `LVSIL_NORMAL` Die Bildliste mit großen Symbolen.  
+- LVSIL_NORMAL Bildliste mit großen Symbolen.  
   
-- `LVSIL_SMALL` Die Bildliste mit kleinen Symbolen.  
+- LVSIL_SMALL Bildliste mit kleinen Symbolen.  
   
-- `LVSIL_STATE` Die Bildliste mit Zustandsbildern.  
+- LVSIL_STATE Bildliste mit Zustandsgrafiken.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die Bildliste Listenansichtselemente gezeichnet werden soll.  
+ Ein Zeiger auf die Liste der Bilder für das Zeichnen der Elemente in der Listenansicht verwendet.  
   
 ### <a name="example"></a>Beispiel    
   
@@ -1540,11 +1541,11 @@ BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lvim`  
+ *lvim*  
  Ein Zeiger auf ein [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) Struktur, die die Informationen für die Insert-Markierung enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt **"true"** im Erfolgsfall oder **"false"** andernfalls. **"False"** wird zurückgegeben, wenn die Größe in der `cbSize` Mitglied der **LVINSERTMARK** Struktur stimmt nicht mit der tatsächlichen Größe der Struktur.  
+ Gibt true zurück, wenn erfolgreich, oder "false" andernfalls. Es wird "false" zurückgegeben, wenn die Größe in der `cbSize` Mitglied der `LVINSERTMARK` Struktur entspricht nicht der tatsächlichen Größe der Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774945) Nachricht, wie im Windows SDK beschrieben.  
@@ -1557,26 +1558,26 @@ COLORREF GetInsertMarkColor() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Struktur, die die Farbe von der Einfügemarke enthält.  
+ Gibt eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Struktur, die die Farbe der Einfügemarke enthält.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774947) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="getinsertmarkrect"></a>  CListCtrl::GetInsertMarkRect  
- Ruft das Rechteck, das die Einfügemarke umschließt ab.  
+ Ruft das Rechteck, das die Einfügemarke umschließt.  
   
 ```  
 int GetInsertMarkRect(LPRECT pRect) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pRect`  
- Zeiger auf eine `RECT` Struktur mit den Koordinaten eines Rechtecks, das die Einfügemarke umschließt.  
+ *pRect*  
+ Zeiger auf eine `RECT` -Struktur, die die Koordinaten eines Rechtecks enthält, die die Einfügemarke umschließt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen der folgenden Werte zurück:  
   
-- **0** keine Einfügemarke gefunden.  
+- **0** kein Einfügemarke gefunden.  
   
 - **1** Einfügemarke gefunden.  
   
@@ -1584,24 +1585,24 @@ int GetInsertMarkRect(LPRECT pRect) const;
  Diese Memberfunktion emuliert die Funktionen des die [LVM_GETINSERTMARKRECT](http://msdn.microsoft.com/library/windows/desktop/bb774949) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="getitem"></a>  CListCtrl:: GetItem  
- Ruft ab, einige oder alle Attribute des Listenansichtselements.  
+ Ruft einige oder alle Attribute für ein Listenansichtselement ab.  
   
 ```  
 BOOL GetItem(LVITEM* pItem) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
- Zeiger auf eine [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) -Struktur, die das Element Attribute empfängt.  
+ *pItem*  
+ Zeiger auf ein [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) -Struktur, die Attribute für das Element empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Die **LVITEM** Struktur gibt an, oder empfängt die Attribute des Listenansichtselements.  
+ Die `LVITEM` Struktur gibt an, oder die Attribute des Listenansichtselements empfängt.  
   
 ##  <a name="getitemcount"></a>  CListCtrl::GetItemCount  
- Ruft die Anzahl der Elemente in einem Listenansicht-Steuerelement ab.  
+ Ruft die Anzahl der Elemente in einem Listenansicht-Steuerelement.  
   
 ```  
 int GetItemCount() const; 
@@ -1614,21 +1615,21 @@ int GetItemCount() const;
   Siehe das Beispiel für [CListCtrl::DeleteItem](#deleteitem).  
   
 ##  <a name="getitemdata"></a>  CListCtrl::GetItemData  
- Ruft den 32-Bit-anwendungsspezifische-Wert, die Verbindung mit den Elementen gemäß `nItem`.  
+ Ruft den 32-Bit-anwendungsspezifische Wert dem Element anhand des zugeordneten `nItem`.  
   
 ```  
 DWORD_PTR GetItemData(int nItem) const; 
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
- Der Index des Listenelements, deren Daten abgerufen werden sollen.  
+ *nItem*  
+ Der Index des Listenelements, deren Daten sind, abgerufen werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein 32-Bit-anwendungsspezifische Wert dem angegebenen Element zugeordnet sind.  
+ 32-Bit-anwendungsspezifische-Wert, das dem angegebenen Element zugeordnet ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Wert ist die **lParam** Mitglied der [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) strukturieren, wie beschrieben im Windows SDK  
+ Dieser Wert ist die `lParam` Mitglied der [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur, siehe das Windows SDK  
   
 ### <a name="example"></a>Beispiel  
 
@@ -1645,7 +1646,7 @@ DWORD_PTR GetItemData(int nItem) const;
 
   
 ##  <a name="getitemindexrect"></a>  CListCtrl::GetItemIndexRect  
- Ruft das umschließende Rechteck für ganz oder teilweise ein Unterelement im aktuellen Listenansicht Steuerelement ab.  
+ Ruft das umschließende Rechteck für ganz oder teilweise ein Unterelement im aktuellen Listenansicht-Steuerelement ab.  
   
 ```  
 BOOL GetItemIndexRect(
@@ -1659,19 +1660,19 @@ BOOL GetItemIndexRect(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pItemIndex`|Zeiger auf eine [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur für das übergeordnete Element des Unterelements ab.<br /><br /> Der Aufrufer ist verantwortlich für das zuordnen und Festlegen der Mitglieder der [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur. Dieser Parameter darf nicht sein `NULL`.|  
-|[in] `iColumn`|Nullbasierte Index der Spalte im Steuerelement.|  
-|[in] `rectType`|Der Teil der Listenansicht Unterelement für das das umschließende Rechteck abgerufen wird. Geben Sie einen der folgenden Werte an:<br /><br /> `LVIR_BOUNDS` -Gibt das umschließende Rechteck des gesamten Unterelements, einschließlich dem Symbol und eine Bezeichnung.<br /><br /> `LVIR_ICON` -Gibt das umschließende Rechteck des Symbols oder kleinen Symbols des Unterelements ab.<br /><br /> `LVIR_LABEL` -Gibt das umschließende Rechteck des Texts des Unterelements.|  
-|[out] `pRect`|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die Informationen über das umschließende Rechteck des Unterelements empfängt.<br /><br /> Der Aufrufer ist verantwortlich für die Zuordnung von der [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Dieser Parameter darf nicht sein `NULL`.|  
+|[in] *pItemIndex*|Zeiger auf ein [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur für das übergeordnete Element des Unterelements ab.<br /><br /> Der Aufrufer ist verantwortlich für das zuordnen und Festlegen der Member, der die [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur. Dieser Parameter darf nicht NULL sein.|  
+|[in] *der iColumn*|Nullbasierte Index der einer Spalte im Steuerelement.|  
+|[in] *RectType*|Der Teil des Listenansicht-Unterelements für die das umschließende Rechteck abgerufen wird. Geben Sie einen der folgenden Werte an:<br /><br /> LVIR_BOUNDS - gibt das umschließende Rechteck des gesamten Unterelements, einschließlich das Symbol und die Bezeichnung zurück.<br /><br /> LVIR_ICON - gibt das umschließende Rechteck des Symbols oder des Minisymbols des Unterelements ab.<br /><br /> LVIR_LABEL - gibt das umschließende Rechteck für den Text des Unterelements.|  
+|[out] *pRect*|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die Informationen über das umschließende Rechteck des Unterelements empfängt.<br /><br /> Der Aufrufer ist verantwortlich für die Zuordnung der [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Dieser Parameter darf nicht NULL sein.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [LVM_GETITEMINDEXRECT](http://msdn.microsoft.com/library/windows/desktop/bb761046) Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter [ListView_GetItemIndexRect-Makro](http://msdn.microsoft.com/library/windows/desktop/bb774959).  
+ Diese Methode sendet die [LVM_GETITEMINDEXRECT](http://msdn.microsoft.com/library/windows/desktop/bb761046) -Nachricht, die im Windows SDK beschrieben wird. Weitere Informationen finden Sie unter [ListView_GetItemIndexRect Makro](http://msdn.microsoft.com/library/windows/desktop/bb774959).  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine Variable `m_listCtrl`, d. h. auf das aktuelle Listenansicht Steuerelement verwendet. Diese Variable wird im nächsten Beispiel verwendet.    
+ Das folgende Codebeispiel definiert eine Variable, `m_listCtrl`, d. h. für den Zugriff auf das aktuelle Listenansicht-Steuerelement. Diese Variable wird im nächsten Beispiel verwendet.    
   
 ```cpp  
 public:
@@ -1681,7 +1682,7 @@ public:
 
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht die `GetGroupRect` Methode. Vor dem Eintreten in dieser Code zeigt Beispiel, dass wir ein Listenansicht Steuerelement erstellt zwei Spalten mit dem Titel "ClientID" und "Grade" in einem Bericht anzeigen. Im folgenden Codebeispiel wird zeichnet ein 3D Rechteck, um die zweite Unterkomponente in beiden Spalten an.    
+ Im folgenden Codebeispiel wird veranschaulicht, die `GetGroupRect` Methode. Vor dem Eintreten in diesen Code wird in Beispiel, dass wir ein Listenansicht-Steuerelement erstellt zwei Spalten, die mit dem Titel "ClientID" und "Grade" in einer Berichtsansicht. Im folgenden Codebeispiel wird zeichnet ein 3D-Rechteck, um das zweite Unterelement in beide Spalten.    
   
 ```cpp  
     // GetItemIndexRect
@@ -1699,7 +1700,7 @@ public:
 
   
 ##  <a name="getitemposition"></a>  CListCtrl::GetItemPosition  
- Ruft die Position des Listenansichtselements ab.  
+ Ruft die Position des ein Listenansichtselement ab.  
   
 ```  
 BOOL GetItemPosition(
@@ -1708,11 +1709,11 @@ BOOL GetItemPosition(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
+ *nItem*  
  Der Index des Elements, dessen Position abgerufen werden sollen.  
   
- `lpPoint`  
- Adresse der einen [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, empfängt die Position der linken oberen Ecke das Element, in der Sicht koordiniert.  
+ *lpPoint*  
+ Adresse von einem [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) in der Ansicht koordiniert die Struktur, die die Position der linken oberen Ecke des Elements, empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -1735,7 +1736,7 @@ BOOL GetItemPosition(
 
   
 ##  <a name="getitemrect"></a>  CListCtrl::GetItemRect  
- Ruft das umschließende Rechteck für den gesamten oder einen Teil eines Elements in der aktuellen Ansicht ab.  
+ Ruft das umschließende Rechteck für alle oder einen Teil eines Elements in der aktuellen Ansicht ab.  
   
 ```  
 BOOL GetItemRect(
@@ -1745,20 +1746,20 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
+ *nItem*  
  Der Index des Elements, dessen Position abgerufen werden sollen.  
   
- `lpRect`  
- Adresse der einen [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die das umschließende Rechteck empfängt.  
+ *lpRect*  
+ Adresse von einem [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die das umschließende Rechteck empfängt.  
   
- `nCode`  
- Der Teil der Listenansichtselements. für die das umschließende Rechteck abzurufen. Einen der folgenden Werte sind möglich:  
+ *nCode*  
+ Teil des Listenansichtselements für das das umschließende Rechteck abgerufen werden. Sie können einen der folgenden Werte sein:  
   
-- `LVIR_BOUNDS` Gibt das umschließende Rechteck für das gesamte Element einschließlich der Symbol und eine Bezeichnung.  
+- LVIR_BOUNDS gibt das umschließende Rechteck des gesamten Elements, einschließlich das Symbol und die Bezeichnung zurück.  
   
-- `LVIR_ICON` Gibt das umschließende Rechteck des Symbols oder kleinen Symbols an.  
+- LVIR_ICON gibt das umschließende Rechteck des Symbols oder des Minisymbols zurück.  
   
-- `LVIR_LABEL` Gibt das umschließende Rechteck für den Elementtext.  
+- LVIR_LABEL gibt das umschließende Rechteck des Elementtextes zurück.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -1807,7 +1808,7 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 
   
 ##  <a name="getitemspacing"></a>  CListCtrl::GetItemSpacing  
- Berechnet den Abstand zwischen Elementen im aktuellen Listenansicht Steuerelement.  
+ Berechnet den Abstand zwischen Elementen im aktuellen Listenansicht-Steuerelement.  
   
 ```  
 BOOL GetItemSpacing(
@@ -1820,18 +1821,18 @@ BOOL GetItemSpacing(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `fSmall`|Ansicht für die der Abstand des Elements abzurufen. Geben Sie `true` für kleinen Symbols an, oder `false` für Symbolansicht.|  
-|[out] `pnHorzSpacing`|Enthält den horizontalen Abstand zwischen Elementen an.|  
-|[out] `pnVertSpacing`|Enthält den vertikalen Abstand zwischen Elementen an.|  
+|[in] *fSmall*|Ansicht für die der den Abstand des Elements abgerufen werden soll. Geben Sie "true", für kleine Symbole angezeigt, oder "false" für Symbole angezeigt.|  
+|[out] *PnHorzSpacing*|Enthält den horizontalen Abstand zwischen Elementen an.|  
+|[out] *PnVertSpacing*|Enthält den vertikalen Abstand zwischen Elementen an.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [LVM_GETITEMSPACING](http://msdn.microsoft.com/library/windows/desktop/bb761051) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [LVM_GETITEMSPACING](http://msdn.microsoft.com/library/windows/desktop/bb761051) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getitemstate"></a>  CListCtrl::GetItemState  
- Ruft den Zustand des Listenansichtselements.  
+ Ruft den Zustand eines Elements der Liste anzeigen.  
   
 ```  
 UINT GetItemState(
@@ -1840,23 +1841,23 @@ UINT GetItemState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
- Der Index des Elements, dessen Status wird abgerufen werden sollen.  
+ *nItem*  
+ Der Index des Elements, dessen Status abgerufen werden sollen.  
   
- `nMask`  
- Maske, die angeben, welche der Zustand des Elements zurückgeben flags.  
+ *nMask*  
+ Maske, die angeben, welche von der Zustand des Elements flags zurück.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Statusflags für die angegebene Liste anzeigen.  
+ Die Statusflags für die angegebene Liste Element anzeigen.  
   
 ### <a name="remarks"></a>Hinweise  
- Zustand eines Elements wird angegeben, indem die **Status** Mitglied der [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) strukturieren, wie im Windows SDK beschrieben. Wenn Sie angeben, oder ändern den Zustand eines Elements, das **StateMask** Element angibt, welche Statusbits, die Sie ändern möchten.  
+ Der Zustand eines Elements wird angegeben, indem die `state` Mitglied der [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur, wie im Windows SDK beschrieben. Wenn Sie festlegen oder ändern den Zustand eines Elements, das `stateMask` -Member gibt an, welche Statusbits, die Sie ändern möchten.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::GetTopIndex](#gettopindex).  
   
 ##  <a name="getitemtext"></a>  CListCtrl::GetItemText  
- Ruft den Text einer Listenansichtselements oder Unterelements ab.  
+ Ruft den Text ein Element der Listenansicht oder Unterelements ab.  
   
 ```  
 int GetItemText(
@@ -1871,28 +1872,28 @@ CString GetItemText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
+ *nItem*  
  Der Index des Elements, dessen Text abgerufen werden sollen.  
   
- `nSubItem`  
- Gibt das Unterelement ab, dessen Text ist, abgerufen werden sollen.  
+ *nSubItem*  
+ Gibt an, das Unterelement ab, dessen Text befindet, abgerufen werden sollen.  
   
- `lpszText`  
- Ein Zeiger auf eine Zeichenfolge, die den Elementtext zu empfangen.  
+ *lpszText*  
+ Zeiger auf eine Zeichenfolge, die den Elementtext zu empfangen.  
   
- `nLen`  
- Länge des Puffers verweist `lpszText`.  
+ *nLen*  
+ Länge des Puffers verweist *LpszText*.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Version zurückgeben `int` gibt die Länge der abgerufenen Zeichenfolge zurück.  
+ Die Version, die Rückgabe **Int** gibt die Länge der abgerufenen Zeichenfolge zurück.  
   
- Die Version, die Rückgabe einer `CString` gibt den Elementtext.  
+ Die Version, die Rückgabe einer `CString` gibt den Elementtext zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `nSubItem` NULL ist, wird diese Funktion ruft die Bezeichnung Element; ab, wenn `nSubItem` ist ungleich NULL ist, ruft den Text des Unterelements ab. Weitere Informationen für das Unterelement-Argument, finden Sie in den Ausführungen der [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur im Windows SDK.  
+ Wenn *nSubItem* NULL ist, diese Funktion ruft die elementbezeichnung; ab, wenn *nSubItem* ist ungleich NULL ist, ruft den Text des Unterelements ab. Weitere Informationen für das Unterelement Argument finden Sie unter der Erläuterung der [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur im Windows SDK.  
   
 ##  <a name="getnextitem"></a>  CListCtrl::GetNextItem  
- Sucht nach einer Liste anzeigen Element, das die angegebenen Eigenschaften aufweist und die angegebene Beziehung mit einem gegebenen Element zweitaktuellste.  
+ Sucht nach einer Liste anzeigen, die die angegebenen Eigenschaften aufweist und die angegebene Beziehung mit einem bestimmten Element zweitaktuellste.  
   
 ```  
 int GetNextItem(
@@ -1901,37 +1902,37 @@ int GetNextItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
- Index des Elements, beginnen Suchvorgänge mit oder -1, um das erste Element zu suchen, das die angegebenen Flags entspricht. Das angegebene Element selbst wird von der Suche ausgeschlossen.  
+ *nItem*  
+ Der Index des Elements, beginnen Suchvorgänge mit oder -1, um das erste Element finden, das die angegebenen Flags entspricht. Das angegebene Element selbst wird von der Suche ausgeschlossen.  
   
- `nFlags`  
- Geometrische Beziehung des angeforderten Elements dem angegebenen Element und der Status des angeforderten Elements. Die geometrische Beziehung kann einen der folgenden Werte sein:  
+ *nFlags*  
+ Geometrische Beziehung des angeforderten Elements, das das angegebene Element, und der Status des angeforderten Elements. Die geometrische Beziehung kann einen der folgenden Werte sein:  
   
-- `LVNI_ABOVE` Sucht ein Element, das über das angegebene Element befindet.  
+- LVNI_ABOVE sucht ein Element, das über das angegebene Element befindet.  
   
-- `LVNI_ALL` Sucht ein nachfolgendes Element über einen Index (Standardwert).  
+- LVNI_ALL sucht ein nachfolgendes Element anhand des Indexes (Standardwert).  
   
-- `LVNI_BELOW` Sucht ein Element, das unterhalb des angegebenen Elements ist.  
+- LVNI_BELOW sucht ein Element, das unterhalb des angegebenen Elements ist.  
   
-- `LVNI_TOLEFT` Sucht ein Element auf der linken Seite des angegebenen Elements.  
+- LVNI_TOLEFT sucht ein Element auf der linken Seite des angegebenen Elements.  
   
-- `LVNI_TORIGHT` Sucht ein Element auf der rechten Seite des angegebenen Elements.  
+- LVNI_TORIGHT sucht ein Element in der rechten Seite des angegebenen Elements.  
   
  Der Zustand kann 0 (null) sein, oder es kann eine oder mehrere der folgenden Werte sein:  
   
-- `LVNI_DROPHILITED` Das Element hat den `LVIS_DROPHILITED` Status-Flag festgelegt.  
+- LVNI_DROPHILITED hat das Element, das LVIS_DROPHILITED-Statusflag festgelegt.  
   
-- `LVNI_FOCUSED` Das Element hat den `LVIS_FOCUSED` Status-Flag festgelegt.  
+- LVNI_FOCUSED hat das Element, das LVIS_FOCUSED-Statusflag festgelegt.  
   
-- `LVNI_SELECTED` Das Element hat den `LVIS_SELECTED` Status-Flag festgelegt.  
+- LVNI_SELECTED hat das Element, das LVIS_SELECTED-Statusflag festgelegt.  
   
- Wenn ein Element nicht mit allen festgelegten Flags angegebenen Zustand verfügt, können Sie die Suche mit dem nächsten Element fortgesetzt.  
+ Wenn ein Element nicht mit allen festgelegten Flags angegebenen Zustand verfügt, wird die Suche mit dem nächsten Element fortgesetzt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Index des nächsten Element im Erfolgsfall oder andernfalls -1.  
+ Der Index des nächsten Element im Erfolgsfall oder -1, andernfalls.  
   
 ##  <a name="getnextitemindex"></a>  CListCtrl::GetNextItemIndex  
- Ruft den Index des Elements im aktuellen Listenansicht Steuerelement, das einen angegebenen Satz von Eigenschaften verfügt.  
+ Ruft den Index des Elements in der aktuellen Listenansicht-Steuerelement, das einen angegebenen Satz von Eigenschaften verfügt.  
   
 ```  
 BOOL GetNextItemIndex(
@@ -1943,35 +1944,35 @@ BOOL GetNextItemIndex(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in, out] `pItemIndex`|Zeiger auf die [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur, die das Element beschreibt, in dem die Suche beginnt, oder -1, um das erste Element zu suchen, die Flags in entspricht, der `nFlags` Parameter.<br /><br /> Wenn diese Methode erfolgreich ist, ist die `LVITEMINDEX` Struktur beschreibt die im Suchvorgang gefundenen Elements.|  
-|[in] `nFlags`|Eine bitweise Kombination (OR) von Flags, die angeben, wie die Suche auszuführen.<br /><br /> Die Suche von abhängen, auf den Index, den Status oder die Darstellung des Zielelements oder des Zielelements physische Position relativ zu das Element angegeben wird, durch die `pItemIndex` Parameter. Weitere Informationen finden Sie unter der `flags` Parameter in der [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) Nachricht.|  
+|[in, out] *pItemIndex*|Zeiger auf die [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur, die das Element beschreibt, an dem die Suche beginnt, oder -1, um das erste Element zu suchen, die Flags in entspricht, der *nFlags* Parameter.<br /><br /> Wenn diese Methode erfolgreich ist, ist die `LVITEMINDEX` Struktur beschreibt die von der Suche gefundenen Elements.|  
+|[in] *nFlags*|Eine bitweise Kombination (OR) von Flags, die angeben, wie die Suche auszuführen.<br /><br /> Die Suche kann sich je nach dem Index, den Zustand oder die Darstellung das Zielelement oder das Zielelement physische Position relativ zu das Element angegeben wird, durch die *pItemIndex* Parameter. Weitere Informationen finden Sie unter den *Flags* Parameter in der [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) Nachricht.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Der Aufrufer ist verantwortlich für das zuordnen und Festlegen der Mitglieder der `LVITEMINDEX` Struktur an, die durch die `pItemIndex` Parameter.  
+ Der Aufrufer ist verantwortlich für das zuordnen und Festlegen der Member der der `LVITEMINDEX` Struktur, um die durch die *pItemIndex* Parameter.  
   
- Diese Methode sendet die [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem  
- Ruft den Index des Listenelements identifizierte `pos`, dann legt *pos* auf der **POSITION** Wert.  
+ Ruft den Index des Listenelements identifizierte *pos*, legt dann *pos* auf den Wert der POSITION.  
   
 ```  
 int GetNextSelectedItem(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pos`  
- Ein Verweis auf eine **POSITION** durch einen vorherigen Aufruf zurückgegebene Wert `GetNextSelectedItem` oder `GetFirstSelectedItemPosition`. Der Wert wird auf der nächsten Position durch diesen Aufruf aktualisiert.  
+ *POS*  
+ Ein Verweis auf eine Positionswert, der von einem vorherigen Aufruf zurückgegebene `GetNextSelectedItem` oder `GetFirstSelectedItemPosition`. Der Wert wird durch diesen Aufruf an die nächste Position aktualisiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Index des Listenelements identifizierten `pos`.  
+ Der Index des Listenelements identifizierte *pos*.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können `GetNextSelectedItem` in einer Schleife vorwärts, wenn Sie die erste Position mit einem Aufruf von einrichten `GetFirstSelectedItemPosition`.  
+ Sie können `GetNextSelectedItem` in einer Schleife Vorwärtsiteration, wenn Sie die ursprüngliche Position mit einem Aufruf von einrichten `GetFirstSelectedItemPosition`.  
   
- Sie müssen sicherstellen, dass Ihre **POSITION** Wert ist ungültig. Wenn er ungültig ist, bestätigt Sie dann die Debugversion von der Microsoft Foundation Class-Bibliothek.  
+ Sie müssen sicherstellen, dass Ihre Positionswert gültig ist. Wenn er ungültig ist, bestätigt Sie dann die Debugversion der Microsoft Foundation Class-Bibliothek.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel veranschaulicht die Verwendung dieser Funktion.    
@@ -1995,7 +1996,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 
   
 ##  <a name="getnumberofworkareas"></a>  CListCtrl::GetNumberOfWorkAreas  
- Ruft die aktuelle Anzahl der Arbeitsbereiche für eine Listenansicht-Steuerelement ab.  
+ Ruft die aktuelle Anzahl von Arbeitsbereichen für ein Listenansicht-Steuerelement ab.  
   
 ```  
 UINT GetNumberOfWorkAreas() const;  
@@ -2005,7 +2006,7 @@ UINT GetNumberOfWorkAreas() const;
  Zu diesem Zeitpunkt verwendet nicht.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_GetNumberOfWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb774988)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_GetNumberOfWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb774988), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel    
   
@@ -2037,7 +2038,7 @@ UINT GetNumberOfWorkAreas() const;
 
   
 ##  <a name="getoutlinecolor"></a>  CListCtrl::GetOutlineColor  
- Ruft die Farbe des Rahmens, der einem Listenansicht-Steuerelement ab.  
+ Ruft die Farbe des Rahmens eines Listenansicht-Steuerelements ab.  
   
 ```  
 COLORREF GetOutlineColor() const;  
@@ -2050,21 +2051,21 @@ COLORREF GetOutlineColor() const;
  Diese Memberfunktion emuliert die Funktionen des die [LVM_GETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761065) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="getorigin"></a>  CListCtrl::GetOrigin  
- Ruft die aktuelle Ansichtsursprung für eine Listenansicht-Steuerelement ab.  
+ Ruft den aktuellen Ansichtsursprung für ein Listenansicht-Steuerelement ab.  
   
 ```  
 BOOL GetOrigin(LPPOINT lpPoint) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpPoint`  
- Adresse der einen [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) -Struktur, die den Ursprung empfängt.  
+ *lpPoint*  
+ Adresse von einem [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die den Ursprung empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0. Allerdings ist das Steuerelement in der Berichtsansicht, ist der Rückgabewert immer 0 (null).  
   
 ##  <a name="getselectedcolumn"></a>  CListCtrl::GetSelectedColumn  
- Ruft den Index der aktuell ausgewählten Spalte im Listensteuerelement ab.  
+ Ruft den Index der derzeit ausgewählte Spalte im Listensteuerelement ab.  
   
 ```  
 UINT GetSelectedColumn() const;  
@@ -2077,14 +2078,14 @@ UINT GetSelectedColumn() const;
  Diese Memberfunktion emuliert die Funktionen des die [LVM_GETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761067) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="getselectedcount"></a>  CListCtrl::GetSelectedCount  
- Ruft die Anzahl der ausgewählten Elemente in der Listenansicht-Steuerelement ab.  
+ Ruft die Anzahl der ausgewählten Elemente in der Listenansicht-Steuerelement.  
   
 ```  
 UINT GetSelectedCount() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der aktivierten Elemente in der Listenansicht-Steuerelement.  
+ Die Anzahl der ausgewählten Elemente in der Listenansicht-Steuerelement.  
   
 ### <a name="example"></a>Beispiel    
   
@@ -2106,17 +2107,17 @@ UINT GetSelectedCount() const;
 
   
 ##  <a name="getselectionmark"></a>  CListCtrl::GetSelectionMark  
- Ruft die Markierung von einem Listenansicht-Steuerelement ab.  
+ Ruft die Auswahlmarke von einem Listenansicht-Steuerelement ab.  
   
 ```  
 int GetSelectionMark();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die nullbasierte Markierung oder -1, wenn keine Markierung vorhanden ist.  
+ Die nullbasierte Auswahlmarke darstellen, oder -1, wenn keine Auswahl versehen ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_GetSelectionMark](http://msdn.microsoft.com/library/windows/desktop/bb774998)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_GetSelectionMark](http://msdn.microsoft.com/library/windows/desktop/bb774998), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -2129,21 +2130,21 @@ int GetSelectionMark();
 
   
 ##  <a name="getstringwidth"></a>  CListCtrl::GetStringWidth  
- Bestimmt die minimale Spaltenbreite für die Anzeige aller einer bestimmten Zeichenfolge erforderlich.  
+ Bestimmt die minimale Spaltenbreite, die zum Anzeigen aller einer bestimmten Zeichenfolge.  
   
 ```  
 int GetStringWidth(LPCTSTR lpsz) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpsz`  
- Die Adresse einer Null-terminierte Zeichenfolge, deren Breite bestimmt wird.  
+ *lpsz*  
+ Die Adresse einer Null-terminierte Zeichenfolge, deren Breite ist, bestimmt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Breite in Pixel der Zeichenfolge verweist `lpsz`.  
+ Die Breite in Pixel der Zeichenfolge verweist *Lpsz*.  
   
 ### <a name="remarks"></a>Hinweise  
- Die zurückgegebene Breite berücksichtigt aktuelle Schriftart für das Steuerelement und Spaltenränder, jedoch nicht die Breite eines kleinen Symbols.  
+ Die zurückgegebene Breite berücksichtigt die Schriftart des Steuerelements aktuelle und Spaltenränder, aber nicht für die Breite eines kleinen Symbols.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -2163,7 +2164,7 @@ int GetStringWidth(LPCTSTR lpsz) const;
 
   
 ##  <a name="getsubitemrect"></a>  CListCtrl::GetSubItemRect  
- Ruft das umschließende Rechteck ein Element in einem Listenansicht-Steuerelement ab.  
+ Ruft das umschließende Rechteck eines Elements in einem Listenansicht-Steuerelement ab.  
   
 ```  
 BOOL GetSubItemRect(
@@ -2178,28 +2179,28 @@ BOOL GetSubItemRect(
  Der Index des Unterelements übergeordneten Elements.  
   
  *iSubItem*  
- Der einsbasierte Index des Unterelements ab.  
+ Der 1-basierte Index des Unterelements ab.  
   
  *nArea*  
- Bestimmt den Teil des umschließenden Rechtecks (des Unterelements Liste anzeigen) abgerufen werden sollen. Der Teil des umschließenden Rechtecks (Symbol, Bezeichnung oder beides) wird angegeben, durch Anwenden von bitweisen OR-Operator auf eine oder mehrere der folgenden Werte:  
+ Bestimmt, den Teil des umschließenden Rechtecks (des Unterelements Ansicht Liste) abgerufen werden sollen. Der Teil des umschließenden Rechtecks (Symbol, Label oder beides) ist festgelegt werden, indem der bitweise OR-Operator auf eine oder mehrere der folgenden Werte:  
   
-- `LVIR_BOUNDS` Gibt das umschließende Rechteck für das gesamte Element einschließlich der Symbol und eine Bezeichnung.  
+- LVIR_BOUNDS gibt das umschließende Rechteck des gesamten Elements, einschließlich das Symbol und die Bezeichnung zurück.  
   
-- `LVIR_ICON` Gibt das umschließende Rechteck des Symbols oder kleinen Symbols an.  
+- LVIR_ICON gibt das umschließende Rechteck des Symbols oder des Minisymbols zurück.  
   
-- `LVIR_LABEL` Gibt das umschließende Rechteck für das gesamte Element einschließlich der Symbol und eine Bezeichnung. Dies ist identisch mit `LVIR_BOUNDS`.  
+- LVIR_LABEL gibt das umschließende Rechteck des gesamten Elements, einschließlich das Symbol und die Bezeichnung zurück. Dies ist identisch mit LVIR_BOUNDS.  
   
- `ref`  
- Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das die Koordinaten des Unterelements enthält umschließenden Rechtecks.  
+ *ref*  
+ Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) -Objekt, das die Koordinaten des Unterelements enthält umschließenden Rechtecks.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_GetSubItemRect](http://msdn.microsoft.com/library/windows/desktop/bb775004)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_GetSubItemRect](http://msdn.microsoft.com/library/windows/desktop/bb775004), wie im Windows SDK beschrieben.  
   
 ##  <a name="gettextbkcolor"></a>  CListCtrl::GetTextBkColor  
- Ruft die Farbe des Texthintergrunds von einem Listenansicht-Steuerelement ab.  
+ Ruft die Hintergrundfarbe des Texts von einem Listenansicht-Steuerelement ab.  
   
 ```  
 COLORREF GetTextBkColor() const;  
@@ -2212,7 +2213,7 @@ COLORREF GetTextBkColor() const;
   Siehe das Beispiel für [CListCtrl::SetTextBkColor](#settextbkcolor).  
   
 ##  <a name="gettextcolor"></a>  CListCtrl::GetTextColor  
- Ruft die Textfarbe der einem Listenansicht-Steuerelement ab.  
+ Ruft die Textfarbe eines Listenansicht-Steuerelements ab.  
   
 ```  
 COLORREF GetTextColor() const;  
@@ -2233,7 +2234,7 @@ BOOL GetTileInfo(PLVTILEINFO pti) const;
   
 ### <a name="parameters"></a>Parameter  
  *pti*  
- Ein Zeiger auf ein [LVTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb774766) -Struktur, die die kachelinformationen erhält.  
+ Ein Zeiger auf ein [LVTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb774766) -Struktur, die über die Kachel "-Informationen verfügt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert wird nicht verwendet.  
@@ -2249,8 +2250,8 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ptvi`  
- Ein Zeiger auf ein [LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768) -Struktur, die die abgerufene Informationen empfängt.  
+ *ptvi*  
+ Ein Zeiger auf ein [LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768) Struktur, die die abgerufene Informationen empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert wird nicht verwendet.  
@@ -2259,17 +2260,17 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
  Diese Memberfunktion emuliert die Funktionen des die [LVM_GETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761083) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="gettooltips"></a>  CListCtrl::GetToolTips  
- Ruft den QuickInfo-Steuerelement, das Listenansicht-Steuerelement verwendet, um QuickInfos anzuzeigen.  
+ Ruft das QuickInfo-Steuerelement, das das Listenansicht-Steuerelement verwendet wird, um QuickInfos anzuzeigen.  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine [CToolTipCtrl](ctooltipctrl-class.md) Objekt durch das Strukturelement-Steuerelement verwendet werden soll. Wenn die [erstellen](#create) Memberfunktion verwendet die Formatvorlage **LVS_NOTOOLTIPS**, keine QuickInfos verwendet wird, und **NULL** zurückgegeben wird.  
+ Ein Zeiger auf eine [CToolTipCtrl](ctooltipctrl-class.md) Objekt, das durch das Strukturelement-Steuerelement verwendet werden. Wenn die [erstellen](#create) Memberfunktion verwendet das Format LVS_NOTOOLTIPS und keine QuickInfos werden verwendet, wird NULL zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LVM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb761085)gemäß der Beschreibung im Windows SDK. Die MFC-Implementierung von `GetToolTips` gibt eine `CToolTipCtrl` -Objekt, das durch das Strukturelement-Steuerelement, statt ein Handle für ein QuickInfo-Steuerelement verwendet wird.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LVM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb761085), wie im Windows SDK beschrieben. Die MFC-Implementierung von `GetToolTips` gibt eine `CToolTipCtrl` -Objekt, das ein Handle für ein QuickInfo-Steuerelement, anstatt das Strukturelement-Steuerelement verwendet wird.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -2284,14 +2285,14 @@ CToolTipCtrl* GetToolTips() const;
 
   
 ##  <a name="gettopindex"></a>  CListCtrl::GetTopIndex  
- Ruft den Index des ersten sichtbaren Elements im Listenansicht "oder" Berichtsansicht ab.  
+ Ruft den Index des obersten sichtbaren Elements in der Listenansicht oder Berichtsansicht ab.  
   
 ```  
 int GetTopIndex() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Index des ersten sichtbaren Elements.  
+ Der Index des obersten sichtbaren Elements.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -2313,14 +2314,14 @@ int GetTopIndex() const;
 
   
 ##  <a name="getview"></a>  CListCtrl::GetView  
- Ruft die Ansicht der Listenansicht-Steuerelement ab.  
+ Ruft die Ansicht des Listenansicht-Steuerelement.  
   
 ```  
 DWORD GetView() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die aktuelle Ansicht der Listenansicht-Steuerelement.  
+ Die aktuelle Ansicht des Listenansicht-Steuerelement.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_GETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761091) Nachricht, wie im Windows SDK beschrieben.  
@@ -2333,17 +2334,17 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpRect`  
- Adresse der einen [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
+ *lpRect*  
+ Adresse von einem [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Listenansicht muss im Symbolansicht oder kleine Symbole angezeigt.  
+ Die Listenansicht muss in der Symbolansicht oder kleine Symbole angezeigt.  
   
 ##  <a name="getworkareas"></a>  CListCtrl::GetWorkAreas  
- Ruft die aktuellen Arbeitsbereiche von einem Listenansicht-Steuerelement ab.  
+ Ruft die aktuelle Arbeitsbereiche von einem Listenansicht-Steuerelement ab.  
   
 ```  
 void GetWorkAreas(
@@ -2352,37 +2353,37 @@ void GetWorkAreas(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nWorkAreas`  
- Die Anzahl der `RECT` Strukturen enthalten sind, der *VRC* Array.  
+ *nWorkAreas*  
+ Die Anzahl der `RECT` Strukturen, die innerhalb der *Prc* Array.  
   
- `prc`  
- Ein Zeiger auf ein Array von `RECT` Strukturen (oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekte), erhalten die Arbeitsbereiche der Listenansicht-Steuerelement. Werte in diesen Strukturen sind in Clientkoordinaten.  
+ *Volksrepublik China*  
+ Ein Zeiger auf ein Array von `RECT` Strukturen (oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekte), die die Arbeitsbereiche des Listenansicht-Steuerelement zu empfangen. Werte in diesen Strukturen sind in Clientkoordinaten.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_GetWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb775024)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_GetWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb775024), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas).  
   
 ##  <a name="hasgroup"></a>  CListCtrl::HasGroup  
- Bestimmt, ob ein Listenansicht-Steuerelement mit die angegebene Gruppe ist.  
+ Bestimmt, ob das Listenansicht-Steuerelement mit die angegebene Gruppe ist.  
   
 ```  
 BOOL HasGroup(int iGroupId) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iGroupId`  
- Der Bezeichner der Gruppe "" angefordert wird.  
+ *iGroupId*  
+ Der Bezeichner der Gruppe, der angefordert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt **"true"** bei Erfolg **"false"** bei einem Fehler.  
+ Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_HASGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761097) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="hittest"></a>  CListCtrl::HitTest  
- Bestimmt, welche Listenansichtselements ist ggf. an einer angegebenen Position.  
+ Bestimmt, welche Listenansichtselement, ob vorhanden, an der angegebenen Position.  
   
 ```  
 int HitTest(LVHITTESTINFO* pHitTestInfo) const;  
@@ -2393,22 +2394,22 @@ int HitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pHitTestInfo`  
- Adresse der ein **LVHITTESTINFO** -Struktur, die die Position zum Testen und die Treffer enthält Informationen zu den Ergebnissen des Treffertests empfängt.  
+ *pHitTestInfo*  
+ Adresse von einem `LVHITTESTINFO` Struktur, die die Position zum Testen und die Treffer enthält Informationen über die Ergebnisse des Treffertests empfängt.  
   
- `pt`  
- Zeigen Sie auf die getestet werden.  
+ *pt*  
+ Zu überprüfende Punkt.  
   
- `pFlags`  
- Ein Zeiger auf eine ganze Zahl, die Informationen zu den Ergebnissen des Tests empfängt. Siehe die Erläuterung der **Flags** Mitglied der [LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754) Struktur im Windows SDK.  
+ *pFlags*  
+ Zeiger auf eine ganze Zahl, die Informationen über die Ergebnisse des Tests empfängt. Finden Sie unter der Erläuterung der `flags` Mitglied der [LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754) Struktur im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Index des Elements an der angegebenen Position `pHitTestInfo`, sofern vorhanden, oder andernfalls -1.  
+ Der Index des Elements an der angegebenen Position *pHitTestInfo*, sofern vorhanden, oder andernfalls -1.  
   
 ### <a name="remarks"></a>Hinweise  
- Können Sie die `LVHT_ABOVE`, `LVHT_BELOW`, `LVHT_TOLEFT`, und `LVHT_TORIGHT` Werte von der Struktur **Flag** Member zu bestimmen, ob der Bildlauf ein Listenansicht-Steuerelement. Zwei Flags können z. B. kombiniert werden, wenn die Position oben und auf der linken Seite des Clientbereichs ist.  
+ Können Sie die Werte der Struktur LVHT_ABOVE, LVHT_BELOW, LVHT_TOLEFT und LVHT_TORIGHT `flag` Member zu bestimmen, ob der Inhalt von einem Listenansicht-Steuerelement verschoben werden soll. Zwei dieser Flags können z. B. kombiniert werden, wenn die Position über und auf der linken Seite des Clientbereichs.  
   
- Können Sie testen, für die **LVHT_ONITEM** Wert, der der Struktur **Flag** Member zu bestimmen, ob eine angegebene Position über eine des Listenansichtselements. Dieser Wert ist eine bitweise OR-Operation für die `LVHT_ONITEMICON`, `LVHT_ONITEMLABEL`, und `LVHT_ONITEMSTATEICON` Werte von der Struktur **Flag** Member.  
+ Sie können testen, für den LVHT_ONITEM-Wert, der der Struktur des `flag` Member zu bestimmen, ob ein Listenansichtselement eine angegebene Position befindet. Dieser Wert ist eine bitweise OR-Operation für die LVHT_ONITEMICON LVHT_ONITEMLABEL und LVHT_ONITEMSTATEICON Werte von der Struktur `flag` Member.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -2451,22 +2452,22 @@ int InsertColumn(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCol`  
+ *"ncol"*  
  Der Index der neuen Spalte.  
   
- `pColumn`  
- Adresse der ein **LVCOLUMN** Struktur, die die Attribute der neuen Spalte enthält.  
+ *pColumn*  
+ Adresse von einem `LVCOLUMN` Struktur, die die Attribute der neuen Spalte enthält.  
   
  *lpszColumnHeading*  
- Die Adresse einer Zeichenfolge, die die Überschrift der Spalte enthält.  
+ Adresse einer Zeichenfolge, die der Spalte Überschrift enthält.  
   
- `nFormat`  
- Ganze Zahl, die Ausrichtung der Spalte angibt. Es kann einen der folgenden Werte sein: **LVCFMT_LEFT**, **LVCFMT_RIGHT**, oder **LVCFMT_CENTER**.  
+ *nFormat*  
+ Ganze Zahl, die Ausrichtung der Spalte angibt. Es kann eine der folgenden Werte: LVCFMT_LEFT LVCFMT_RIGHT oder LVCFMT_CENTER.  
   
- `nWidth`  
- Die Breite der Spalte in Pixel. Wenn dieser Parameter-1 ist, wird die Spaltenbreite nicht festgelegt.  
+ *nWidth*  
+ Die Breite der Spalte in Pixel. Wenn dieser Parameter-1 ist, wird die Spaltenbreite ist nicht festgelegt.  
   
- `nSubItem`  
+ *nSubItem*  
  Der Index des Unterelements ab, die der Spalte zugeordnet. Wenn dieser Parameter-1 ist, ist keine Unterelement der Spalte zugeordnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -2475,7 +2476,7 @@ int InsertColumn(
 ### <a name="remarks"></a>Hinweise  
  Die am weitesten links stehende Spalte in einem Listenansicht-Steuerelement muss linksbündig ausgerichtet sein.  
   
- Die [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) Struktur enthält die Attribute einer Spalte in der Berichtsansicht. Es dient auch zum Empfangen von Informationen über eine Spalte. Diese Struktur wird im Windows SDK beschrieben.  
+ Die [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) Struktur enthält die Attribute einer Spalte in der Berichtsansicht. Es wird auch verwendet, um Informationen über eine Spalte zu erhalten. Diese Struktur wird im Windows SDK beschrieben.  
   
 ##  <a name="insertgroup"></a>  CListCtrl::InsertGroup  
  Fügt einer Gruppe in der Listenansicht-Steuerelement ein.  
@@ -2490,7 +2491,7 @@ LRESULT InsertGroup(
  *index*  
  Der Index des Elements, in die Gruppe eingefügt werden soll.  
   
- `pgrp`  
+ *PGRP*  
  Ein Zeiger auf ein [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) Struktur, die mit der Gruppe hinzugefügt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -2500,7 +2501,7 @@ LRESULT InsertGroup(
  Diese Memberfunktion emuliert die Funktionen des die [LVM_INSERTGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761103) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="insertgroupsorted"></a>  CListCtrl::InsertGroupSorted  
- Fügt die angegebene Gruppe in eine geordnete Liste der Gruppen ein.  
+ Fügt die angegebene Gruppe in eine geordnete Liste von Gruppen.  
   
 ```  
 LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
@@ -2545,35 +2546,35 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
- Zeiger auf eine [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) -Struktur, die Attribute für das Element, gibt an, wie im Windows SDK beschrieben.  
+ *pItem*  
+ Zeiger auf ein [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur, die Attribute des Elements angibt, wie im Windows SDK beschrieben.  
   
- `nItem`  
- Der Index des Elements eingefügt werden.  
+ *nItem*  
+ Der Index des Elements eingefügt werden soll.  
   
- `lpszItem`  
- Adresse einer Zeichenfolge, enthält die Elementnamen oder `LPSTR_TEXTCALLBACK` , wenn das Element ein Rückrufelement ist. Informationen zu Rückrufelemente, finden Sie unter [CListCtrl:: GetCallbackMask](#getcallbackmask).  
+ *lpszItem*  
+ Die Adresse einer Zeichenfolge, enthält die Beschriftung des Elements oder -LPSTR_TEXTCALLBACK, wenn das Element ein Rückrufelement ist. Informationen zu Elementen der Rückruf finden Sie unter [CListCtrl:: GetCallbackMask](#getcallbackmask).  
   
- `nImage`  
- Der Index des Images für das Element, oder `I_IMAGECALLBACK` , wenn das Element ein Rückrufelement ist. Informationen zu Rückrufelemente, finden Sie unter [CListCtrl:: GetCallbackMask](#getcallbackmask).  
+ *Nbild*  
+ Der Index des Image des Elements oder -I_IMAGECALLBACK, wenn das Element ein Rückrufelement ist. Informationen zu Elementen der Rückruf finden Sie unter [CListCtrl:: GetCallbackMask](#getcallbackmask).  
   
- `nMask`  
- Die `nMask` Parameter gibt an, welches Element als Parameter übergebene-Attribute sind gültig. Kann es sich um eine oder mehrere der Maskenwerte in der beschriebenen [LVITEM Struktur](http://msdn.microsoft.com/library/windows/desktop/bb774760) im Windows SDK. Die gültigen Werte können mit dem bitweisen OR-Operator kombiniert werden.  
+ *nMask*  
+ Die *nMask* Parameter gibt an, welches Element Attribute, die als Parameter übergeben werden, sind gültig. Kann es sich um einen oder mehrere der Maskenwerte beschrieben, [LVITEM Struktur](http://msdn.microsoft.com/library/windows/desktop/bb774760) im Windows SDK. Die gültigen Werte können mit dem bitweisen OR-Operator kombiniert werden.  
   
- `nState`  
- Gibt an, Zustand, statusbilds und Overlay-Image des Elements. Finden Sie in der Windows SDK-Themen [LVITEM Struktur](http://msdn.microsoft.com/library/windows/desktop/bb774760) für Weitere Informationen und [Listenansicht Element-Zustände](http://msdn.microsoft.com/library/windows/desktop/bb774733) eine Liste der gültigen Flags.  
+ *nState*  
+ Gibt an, Status, statusbilds und Überlagerungsbild des Elements. Finden Sie in das Windows SDK-Themen [LVITEM Struktur](http://msdn.microsoft.com/library/windows/desktop/bb774760) für Weitere Informationen und [Listenansicht-Element-Zustände](http://msdn.microsoft.com/library/windows/desktop/bb774733) eine Liste der gültigen Flags.  
   
- `nStateMask`  
- Gibt an, welche Bits die Status-Elements abgerufen oder geändert werden. Finden Sie unter [LVITEM Struktur](http://msdn.microsoft.com/library/windows/desktop/bb774760) in das Windows SDK für Weitere Informationen.  
+ *nStateMask*  
+ Gibt an, welche Teile im statusmember der abgerufen oder geändert werden. Finden Sie unter [LVITEM Struktur](http://msdn.microsoft.com/library/windows/desktop/bb774760) im Windows SDK für Weitere Informationen.  
   
- `lParam`  
- Ein 32-Bit-anwendungsspezifische Wert dem Element zugeordnet. Wenn dieser Parameter angegeben wird, müssen Sie festlegen der `nMask` Attribut `LVIF_PARAM`.  
+ *lParam*  
+ 32-Bit-anwendungsspezifische-Wert, das dem Element zugeordnet ist. Wenn dieser Parameter angegeben wird, müssen Sie festlegen der *nMask* LVIF_PARAM Attribut.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Index des neuen Elements im Erfolgsfall oder andernfalls ' -1.  
+ Der Index des neuen Elements im Erfolgsfall oder andernfalls -1.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufen dieser Methode kann dazu führen, dass die **LVM_INSERTITEM** Nachricht an das Steuerelementfenster gesendet werden. Der zugeordnete Message-Handler für das Steuerelement möglicherweise nicht mehr den Elementtext unter bestimmten Umständen festlegen (z. B. mit Fensterstile wie **LVS_OWNERDRAW**). Weitere Informationen zu diesen Bedingungen, finden Sie unter [LVM_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb761107) im Windows SDK.  
+ Das Aufrufen dieser Methode kann dazu führen, dass die LVM_INSERTITEM-Nachricht an das Steuerelementfenster gesendet werden. Der zugehörigen Message-Handler für das Steuerelement kann nicht den Text des Elements unter bestimmten Bedingungen (z. B. mithilfe von Window-Stile, z. B. LVS_OWNERDRAW) festgelegt. Weitere Informationen unter diesen Bedingungen finden Sie unter [LVM_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb761107) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -2601,7 +2602,7 @@ int InsertItem(
 
   
 ##  <a name="insertmarkhittest"></a>  CListCtrl::InsertMarkHitTest  
- Ruft die Einfügemarke an einem bestimmten Punkt am nächsten gelegenen ab.  
+ Ruft die einem bestimmten Zeitpunkt nächstliegende Einfügemarke ab.  
   
 ```  
 int InsertMarkHitTest(
@@ -2610,33 +2611,33 @@ int InsertMarkHitTest(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pPoint`  
+ *pPoint*  
  Ein Zeiger auf eine [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die den Treffertest enthält Koordinaten relativ zum Clientbereich des Steuerelements.  
   
- `lvim`  
- Ein Zeiger auf ein [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) -Struktur, die Einfügemarke an, die durch den Punktparameter definierten Koordinaten am nächsten angibt.  
+ *lvim*  
+ Ein Zeiger auf ein [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) -Struktur, die durch den Punktparameter definierten Koordinaten nächstliegende Einfügemarke angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Zeigen Sie die Einfügemarke am nächsten gelegenen in den angegebenen.  
+ Zeigen Sie die Einfügemarke am nächsten gelegenen mit dem angegebenen.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb761131) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="isgroupviewenabled"></a>  CListCtrl::IsGroupViewEnabled  
- Bestimmt, ob die Ansicht "" für eine Listenansicht-Steuerelement aktiviert ist.  
+ Bestimmt, ob die Ansicht für ein Listenansicht-Steuerelement aktiviert ist.  
   
 ```  
 BOOL IsGroupViewEnabled() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt **"true"** Wenn Ansicht "" aktiviert ist, oder **"false"** andernfalls.  
+ Andernfalls gibt "true", wenn die Ansicht aktiviert ist, oder "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_ISGROUPVIEWENABLED](http://msdn.microsoft.com/library/windows/desktop/bb761133) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="isitemvisible"></a>  CListCtrl::IsItemVisible  
- Gibt an, ob ein angegebenes Element in der aktuellen Listenansicht Steuerelement angezeigt wird.  
+ Gibt an, ob ein angegebenes Element in der aktuellen Listenansicht-Steuerelement sichtbar ist.  
   
 ```  
 BOOL IsItemVisible(int index) const;  
@@ -2646,16 +2647,16 @@ BOOL IsItemVisible(int index) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `index`|Nullbasierten Index eines Elements im aktuellen Listenansicht Steuerelement.|  
+|[in] *Index*|Nullbasierte Index eines Elements in der aktuellen Listenansicht-Steuerelement.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn das angegebene Element sichtbar ist, andernfalls `false`.  
+ TRUE, wenn das angegebene Element sichtbar ist, andernfalls "false" ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [LVM_ISITEMVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb761135) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [LVM_ISITEMVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb761135) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="mapidtoindex"></a>  CListCtrl::MapIDToIndex  
- Ordnet die eindeutige ID eines Elements im aktuellen Listenansicht Steuerelement auf einen Index an.  
+ Ordnet die eindeutige ID eines Elements in der aktuellen Listenansicht-Steuerelement in einen Index an.  
   
 ```  
 UINT MapIDToIndex(UINT id) const;  
@@ -2665,20 +2666,20 @@ UINT MapIDToIndex(UINT id) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `id`|Die eindeutige ID eines Elements.|  
+|[in] *Id*|Die eindeutige ID eines Elements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Den aktuellen Index auf der angegebenen ID.  
+ Der aktuelle Index für die angegebene ID.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Listenansicht Steuerelement verfolgt intern Elemente nach Index. Dies kann Probleme darstellen, da die Indizes während der Lebensdauer des Steuerelements ändern können. Das Listenansicht Steuerelement kann ein Element mit ID kennzeichnen, wenn das Element erstellt wird, können Sie diese ID Eindeutigkeit gewährleistet werden, während der Lebensdauer des Listenansicht Steuerelements.  
+ Ein Listenansicht-Steuerelement überwacht intern Elementen nach Index. Dies kann Probleme darstellen, da Indizes während der Lebensdauer des Steuerelements ändern können. Das Listenansicht-Steuerelement kann ein Element mit ID kennzeichnen, wenn das Element erstellt wird, und Sie diese ID verwenden können, um Eindeutigkeit zu gewährleisten, während der Lebensdauer des Listenansicht-Steuerelements.  
   
- Beachten Sie, dass in einer Multithreadumgebung der Index nur in dem Thread garantiert wird, die das Listenansicht Steuerelement, nicht in Hintergrundthreads hostet.  
+ Beachten Sie, dass in einer Multithreadumgebung der Index nur in dem Thread garantiert ist, die das Listenansicht-Steuerelement, nicht in Hintergrundthreads hostet.  
   
- Diese Methode sendet die [LVM_MAPIDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761137) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [LVM_MAPIDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761137) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="mapindextoid"></a>  CListCtrl::MapIndexToID  
- Ordnet den Index eines Elements im aktuellen Listenansicht Steuerelement eine eindeutige ID.  
+ Ordnet den Index eines Elements in der aktuellen Listenansicht-Steuerelement eine eindeutige ID.  
   
 ```  
 UINT MapIndexToID(UINT index) const;  
@@ -2688,20 +2689,20 @@ UINT MapIndexToID(UINT index) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `index`|Der nullbasierte Index eines Elements.|  
+|[in] *Index*|Der nullbasierte Index eines Elements.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine eindeutige ID für das angegebene Element.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Listenansicht Steuerelement verfolgt intern Elemente nach Index. Dies kann Probleme darstellen, da die Indizes während der Lebensdauer des Steuerelements ändern können. Das Listenansicht Steuerelement kann ein Element mit ID kennzeichnen, wenn das Element erstellt wird. Sie können diese ID verwenden, auf ein bestimmtes Element für die Lebensdauer des Listenansicht Steuerelements zuzugreifen.  
+ Ein Listenansicht-Steuerelement überwacht intern Elementen nach Index. Dies kann Probleme darstellen, da Indizes während der Lebensdauer des Steuerelements ändern können. Wenn das Element erstellt wird, kann die Listenansicht-Steuerelement ein Element mit der ID markieren. Sie können diese ID verwenden, auf ein bestimmtes Element für die Lebensdauer des Listenansicht-Steuerelements.  
   
- Beachten Sie, dass in einer Multithreadumgebung der Index nur in dem Thread garantiert wird, die das Listenansicht Steuerelement, nicht in Hintergrundthreads hostet.  
+ Beachten Sie, dass in einer Multithreadumgebung der Index nur in dem Thread garantiert ist, die das Listenansicht-Steuerelement, nicht in Hintergrundthreads hostet.  
   
- Diese Methode sendet die [LVM_MAPINDEXTOID](http://msdn.microsoft.com/library/windows/desktop/bb761139) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [LVM_MAPINDEXTOID](http://msdn.microsoft.com/library/windows/desktop/bb761139) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine Variable `m_listCtrl`, d. h. auf das aktuelle Listenansicht Steuerelement verwendet. Diese Variable wird im nächsten Beispiel verwendet.    
+ Das folgende Codebeispiel definiert eine Variable, `m_listCtrl`, d. h. für den Zugriff auf das aktuelle Listenansicht-Steuerelement. Diese Variable wird im nächsten Beispiel verwendet.    
   
 ```cpp  
 public:
@@ -2711,7 +2712,7 @@ public:
 
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht die `MapIndexToID` Methode. In einem früheren Abschnitt dieses Codebeispiels erstellt es ein Listenansicht-Steuerelement, zwei Spalten mit dem Titel "ClientID" und "Grade" in einer Berichtsansicht anzeigt. Im folgende Beispiel wird den Index jedes Elements in der Listenansicht eine ID zugeordnet, und ruft dann den Index für jede ID ab. Schließlich meldet das Beispiel an, ob die ursprünglichen Indizes abgerufen wurden.    
+ Im folgenden Codebeispiel wird veranschaulicht, die `MapIndexToID` Methode. In einem vorherigen Abschnitt dieses Codebeispiels haben wir ein Listenansicht-Steuerelement, zwei Spalten, die mit dem Titel "ClientID" und "Grade" in einer Berichtsansicht anzeigt. Im folgende Beispiel wird den Index jedes Elements des Listenansicht-eine ID zugeordnet, und ruft dann den Index für jede ID ab. Schließlich meldet das Beispiel an, ob die ursprüngliche Indizes abgerufen wurden.    
   
 ```cpp  
     // MapIndexToID
@@ -2741,7 +2742,7 @@ public:
 
   
 ##  <a name="movegroup"></a>  CListCtrl::MoveGroup  
- Der nullbasierte Index des Listenansicht-Steuerelement das angegebene in der angegebenen Gruppe verschoben wird.  
+ Der nullbasierte Index des Listenansicht-Steuerelement die angegebenen mit dem angegebenen Gruppe verschiebt.  
   
 ```  
 LRESULT MoveGroup(
@@ -2750,11 +2751,11 @@ LRESULT MoveGroup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iGroupId`  
+ *iGroupId*  
  Der Bezeichner der Gruppe verschoben werden soll.  
   
- `toIndex`  
- Der nullbasierte Index, in dem die Gruppe verschoben werden soll.  
+ *toIndex*  
+ Der nullbasierte Index, in dem die Gruppe ist, verschoben werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Rückgabewert wird nicht verwendet.  
@@ -2763,7 +2764,7 @@ LRESULT MoveGroup(
  Diese Memberfunktion emuliert die Funktionen des die [LVM_MOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761141) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="moveitemtogroup"></a>  CListCtrl::MoveItemToGroup  
- Das angegebene Element verschoben in der angegebenen Gruppe.  
+ Verschiebt das angegebene Element in der angegebenen Gruppe.  
   
 ```  
 void MoveItemToGroup(
@@ -2772,10 +2773,10 @@ void MoveItemToGroup(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `idItemFrom`  
- Der Index des Elements verschoben werden soll.  
+ [in] *IdItemFrom*  
+ Der Index des Elements, das verschoben werden.  
   
- [in] `idGroupTo`  
+ [in] *IdGroupTo*  
  Der Bezeichner der Gruppe wird auf das Element verschoben werden.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -2786,7 +2787,7 @@ void MoveItemToGroup(
  Diese Methode emuliert die Funktionen des die [LVM_MOVEITEMTOGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761143) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="redrawitems"></a>  CListCtrl::RedrawItems  
- Erzwingt ein Listenansicht-Steuerelement zum erneuten zeichnen einen Bereich von Elementen verwendet.  
+ Erzwingt ein Listenansicht-Steuerelement, das einen Bereich von Elementen neu zu zeichnen.  
   
 ```  
 BOOL RedrawItems(
@@ -2795,17 +2796,17 @@ BOOL RedrawItems(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nFirst`  
+ *. Nerster*  
  Der Index des ersten Elements neu gezeichnet wird.  
   
- `nLast`  
+ *Nletzter*  
  Der Index des letzten Elements neu gezeichnet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Die angegebenen Elemente werden nicht tatsächlich aktualisiert, bis die Liste Ansichtsfenster empfängt eine `WM_PAINT` Nachricht. Um sofort zu aktualisieren, rufen Sie die Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167) Funktion nach der Verwendung dieser Funktion.  
+ Die angegebenen Elemente werden nicht tatsächlich neu gezeichnet, bis das Ansichtsfenster Liste eine WM_PAINT-Meldung empfängt. Um sofort neu zu zeichnen, rufen Sie die Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167) -Funktion, nachdem Sie mit dieser Funktion.  
   
 ##  <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups  
  Entfernt alle Gruppen aus einem Listenansicht-Steuerelement.  
@@ -2825,7 +2826,7 @@ LRESULT RemoveGroup(int iGroupId);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iGroupId`  
+ *iGroupId*  
  Der Bezeichner der Gruppe entfernt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -2835,29 +2836,29 @@ LRESULT RemoveGroup(int iGroupId);
  Diese Memberfunktion emuliert die Funktionen des die [LVM_REMOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761149) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="scroll"></a>  CListCtrl::Scroll  
- Scrollt den Inhalt von einem Listenansicht-Steuerelement.  
+ Führt einen Bildlauf durch den Inhalt von einem Listenansicht-Steuerelement.  
   
 ```  
 BOOL Scroll(CSize size);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `size`  
- Ein `CSize` Objekt, das die Menge des horizontalen und vertikalen Bildlauf in Pixel angibt. Die **y** Mitglied `size` wird geteilt durch die Höhe in Pixel, der Listenansicht-Steuerelement der Zeile, und das Steuerelement wird ein Bildlauf durchgeführt, um die resultierende Anzahl von Zeilen.  
+ *size*  
+ Ein `CSize` Objekt, das den Betrag des horizontalen und vertikalen Bildlauf in Pixel angibt. Die `y` Mitglied *Größe* wird geteilt durch die Höhe in Pixel des Listenansicht-Steuerelement die Zeile, und das Steuerelement ein Bildlauf durch die sich ergebende Anzahl von Zeilen durchgeführt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ##  <a name="setbkcolor"></a>  CListCtrl::SetBkColor  
- Legt die Hintergrundfarbe der Listenansicht-Steuerelement fest.  
+ Legt die Hintergrundfarbe des Listenansicht-Steuerelement fest.  
   
 ```  
 BOOL SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cr`  
- Hintergrundfarbe festlegen, oder die `CLR_NONE` Wert für die keine Hintergrundfarbe. Listenansicht-Steuerelemente mit Hintergrundfarben Neuzeichnen selbst erheblich schneller als die ohne Hintergrundfarben. Informationen finden Sie unter [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) im Windows SDK.  
+ *CR*  
+ Hintergrundfarbe festlegen, oder der CLR_NONE führt dazu-Wert für die keine Hintergrundfarbe. Listenansicht-Steuerelemente mit Hintergrundfarben neu zu zeichnen sich erheblich schneller als die ohne Hintergrundfarben. Weitere Informationen finden Sie unter [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -2874,7 +2875,7 @@ BOOL SetBkColor(COLORREF cr);
 
   
 ##  <a name="setbkimage"></a>  CListCtrl::SetBkImage  
- Legt das Hintergrundbild des ein Listenansicht-Steuerelement fest.  
+ Legt das Hintergrundbild des einem Listenansicht-Steuerelement fest.  
   
 ```  
 BOOL SetBkImage(LVBKIMAGE* plvbkImage);
@@ -2893,44 +2894,44 @@ BOOL SetBkImage(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `plvbkImage`  
- Adresse der ein **LVBKIMAGE** Struktur, die die neuen Background-Image-Informationen enthält.  
+ *plvbkImage*  
+ Adresse von einem `LVBKIMAGE` Struktur mit Informationen über das neue Background-Image.  
   
- `hbm`  
+ *hbm*  
  Handle für eine Bitmap.  
   
- `pszUrl`  
- Ein **NULL**-Zeichenfolge, die URL des Hintergrundbilds enthält, beendet.  
+ *pszUrl*  
+ Ein NULL-terminierte Zeichenfolge, die die URL des Hintergrundbilds enthält.  
   
  *fTile*  
- Wert ungleich NULL, wenn das Bild im Listenansicht-Steuerelement Hintergrund angeordnet werden; andernfalls 0.  
+ Ungleich NULL ist, wenn das Bild wird im Hintergrund des Listenansicht-Steuerelement nebeneinander angeordnet werden; andernfalls 0.  
   
  *xOffsetPercent*  
- Der Offset des linken Rand des Bilds vom Ursprung der Listenansicht-Steuerelement in Pixel.  
+ Der Offset des linken Rand des Bilds aus dem Ursprung des Listenansicht-Steuerelement in Pixel.  
   
  *yOffsetPercent*  
- Der Offset des oberen Rand des Bilds vom Ursprung der Listenansicht-Steuerelement in Pixel.  
+ Der Offset des oberen Rand des Bilds aus dem Ursprung des Listenansicht-Steuerelement in Pixel.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL bei Erfolg gibt, oder andernfalls 0 (null).  
+ Gibt, die ungleich NULL, wenn erfolgreich, oder andernfalls 0 (null) zurück.  
   
 ### <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Da `CListCtrl::SetBkImage` macht COM-OLE-Funktionalität nutzen möchten, die OLE-Bibliotheken müssen vor der Verwendung initialisiert werden `SetBkImage`. Es wird empfohlen, die COM-Bibliotheken zu initialisieren, wenn die Anwendung initialisiert wird und die Bibliotheken deinitialisieren, wenn die Anwendung beendet wird. Dies erfolgt automatisch in MFC verwenden, Anwendungen, die Stellen des ActiveX-Technologie, OLE-Automatisierung, OLE verknüpfen/einbetten oder ODBC/DAO-Vorgänge.  
+>  Da `CListCtrl::SetBkImage` OLE-COM-Funktionen verwendet, die OLE-Bibliotheken müssen vor der Verwendung initialisiert werden `SetBkImage`. Es wird empfohlen, die COM-Bibliotheken zu initialisieren, wenn die Anwendung initialisiert wird und die Bibliotheken Initialisierung aufheben, wenn die Anwendung beendet wird. Dies geschieht automatisch in MFC Anwendungen nutzen von ActiveX-Technologie, OLE-Automatisierung, OLE verknüpfen/Embedding oder ODBC/DAO-Vorgänge.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::GetBkImage](#getbkimage).  
   
 ##  <a name="setcallbackmask"></a>  CListCtrl::SetCallbackMask  
- Legt die Rückrufmaske für eine Listenansicht-Steuerelement fest.  
+ Legt die Rückrufmaske für ein Listenansicht-Steuerelement fest.  
   
 ```  
 BOOL SetCallbackMask(UINT nMask);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nMask`  
+ *nMask*  
  Neue Wert, der die Rückrufmaske.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -2949,7 +2950,7 @@ BOOL SetCallbackMask(UINT nMask);
 
 
 ##  <a name="setcheck"></a>  CListCtrl::SetCheck  
- Bestimmt, ob das Statusbild eines Listenelement-Steuerelement angezeigt wird.  
+ Bestimmt, ob das Zustandsbild von einem Steuerelement ein Element sichtbar ist.  
   
 ```  
 BOOL SetCheck(
@@ -2958,11 +2959,11 @@ BOOL SetCheck(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
- Der nullbasierte Index des ein Listenelement-Steuerelement.  
+ *nItem*  
+ Der nullbasierte Index von einem Steuerelement ein Element.  
   
- `fCheck`  
- Gibt an, ob das Statusbild des Elements oder nicht sichtbar sein soll. Standardmäßig *Weitere Informationen finden Sie* ist **"true"** und das Statusbild sichtbar ist. Wenn `fCheck` ist **"false"**, es ist nicht sichtbar.  
+ *Weitere Informationen finden*  
+ Gibt an, ob das Zustandsbild des Elements oder nicht sichtbar sein soll. In der Standardeinstellung *besuchen* ist "true" und das Zustandsbild sichtbar. Wenn *besuchen* ist "false", es ist nicht sichtbar.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn das Element aktiviert ist, andernfalls 0.  
@@ -2987,7 +2988,7 @@ BOOL SetCheck(
 
   
 ##  <a name="setcolumn"></a>  CListCtrl::SetColumn  
- Legt die Attribute einer Spalte der Liste anzeigen.  
+ Legt fest, die Attribute der Spalte in eine Liste der Sicht.  
   
 ```  
 BOOL SetColumn(
@@ -2996,11 +2997,11 @@ BOOL SetColumn(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCol`  
- Der Index der Spalte, deren Attribute festgelegt werden sollen.  
+ *"ncol"*  
+ Der Index der Spalte, deren Attribute werden festgelegt werden.  
   
- `pColumn`  
- Adresse der ein [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) -Struktur, die die neue Spalte enthält Attribute, wie im Windows SDK beschrieben. Der Struktur **Maske** -Member gibt an, welche Spalte Attribute festlegen. Wenn die **Maske** Element gibt an, die `LVCF_TEXT` -Wert, der Struktur **PszText** Member ist die Adresse des eine Null-terminierte Zeichenfolge und der Struktur **CchTextMax**Element wird ignoriert.  
+ *pColumn*  
+ Adresse von einem [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) -Struktur, die die neue Spalte enthält Attribute, wie im Windows SDK beschrieben. Der Struktur des `mask` -Member gibt an, welche Spalte Attribute festlegen. Wenn die `mask` Member LVCF_TEXT gibt den Wert an, die Struktur des `pszText` Member ist die Adresse des eine Null-terminierte Zeichenfolge und der Struktur `cchTextMax` Member wird ignoriert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -3018,17 +3019,17 @@ BOOL SetColumnOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `piArray`  
- Ein Zeiger auf einen Puffer, der die Indexwerte der Spalten in der Listenansicht-Steuerelement (von links nach rechts) enthält. Der Puffer muss groß genug für die Gesamtanzahl der Spalten in der Listenansicht-Steuerelement enthalten sein.  
+ *piArray*  
+ Ein Zeiger auf einen Puffer, der die Indexwerte der Spalten in der Listenansicht-Steuerelement (von links nach rechts) enthält. Der Puffer muss groß genug, um die Gesamtanzahl der Spalten in der Listenansicht-Steuerelement enthalten sein.  
   
- `iCount`  
- Die Anzahl der Spalten in der Listenansicht-Steuerelement.  
+ *iCount*  
+ Anzahl der Spalten in der Listenansicht-Steuerelement.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_SetColumnOrderArray](http://msdn.microsoft.com/library/windows/desktop/bb775072)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_SetColumnOrderArray](http://msdn.microsoft.com/library/windows/desktop/bb775072), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).  
@@ -3043,31 +3044,31 @@ BOOL SetColumnWidth(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nCol`  
- Der Index der Spalte für die ist die Breite festgelegt werden. Dieser Parameter muss 0 sein, in der Listenansicht.  
+ *"ncol"*  
+ Der Index der Spalte für die die Breite ist, festgelegt werden. In der Listenansicht muss dieser Parameter 0 sein.  
   
- `cx`  
- Die neue Breite der Spalte. Kann es sich um **LVSCW_AUTOSIZE** oder **LVSCW_AUTOSIZE_USEHEADER**, wie in beschrieben [LVM_SETCOLUMNWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb761163) im Windows SDK.  
+ *CX*  
+ Die neue Breite der Spalte. Kann entweder LVSCW_AUTOSIZE oder LVSCW_AUTOSIZE_USEHEADER, siehe [LVM_SETCOLUMNWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb761163) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ##  <a name="setextendedstyle"></a>  Wird CListCtrl:: SetExtendedStyle  
- Legt die aktuelle erweiterte Formate von einem Listenansicht-Steuerelement fest.  
+ Legt die aktuellen erweiterten Stile von einem Listenansicht-Steuerelement fest.  
   
 ```  
 DWORD SetExtendedStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `dwNewStyle`  
- Eine Kombination von erweiterten Stile, die von der Listenansicht-Steuerelement verwendet werden. Eine beschreibende Liste dieser Stile, finden Sie unter der [Listenansicht-Formatvorlagen erweiterte](http://msdn.microsoft.com/library/windows/desktop/bb774732) Thema im Windows SDK.  
+ *dwNewStyle*  
+ Eine Kombination von erweiterten Stile, die von der Listenansicht-Steuerelement verwendet werden. Eine Liste dieser Stile, finden Sie unter den [erweiterte Listenansicht-Formatvorlagen](http://msdn.microsoft.com/library/windows/desktop/bb774732) Thema in der Windows-SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine Kombination aus dem vorherigen erweiterte Formate, die von der Listenansicht-Steuerelement verwendet.  
+ Eine Kombination aus dem vorherigen Erweiterte Stile, die von der Listenansicht-Steuerelement verwendet.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_SetExtendedListViewStyle](http://msdn.microsoft.com/library/windows/desktop/bb775076)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_SetExtendedListViewStyle](http://msdn.microsoft.com/library/windows/desktop/bb775076), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -3080,7 +3081,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
 
   
 ##  <a name="setgroupinfo"></a>  CListCtrl::SetGroupInfo  
- Legt die Informationen, die angegebene Gruppe des aktuellen Listenansicht Steuerelements zu beschreiben.  
+ Legt fest, die Informationen, die die angegebene Gruppe von der aktuellen Listenansicht-Steuerelement beschreibt.  
   
 ```  
 int SetGroupInfo(
@@ -3089,76 +3090,76 @@ int SetGroupInfo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iGroupId`  
+ *iGroupId*  
  Der Bezeichner der Gruppe, deren Informationen festgelegt ist.  
   
- `pgrp`  
- Zeiger auf eine [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) Struktur mit den Informationen festlegen. Der Aufrufer ist verantwortlich für das Zuordnen von dieser Struktur und ihre Member festlegen.  
+ *PGRP*  
+ Zeiger auf ein [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) -Struktur, die Informationen zum Festlegen enthält. Der Aufrufer ist für diese Struktur zuordnen und Festlegen von Membern verantwortlich.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die ID der Gruppe "" Wenn die Methode erfolgreich ist; andernfalls -1.  
+ Die ID der Gruppe, wenn die Methode erfolgreich ist; andernfalls -1.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [LVM_SETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb761167) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [LVM_SETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb761167) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="setgroupmetrics"></a>  CListCtrl::SetGroupMetrics  
- Legt die Gruppe Metriken für eine Listenansicht-Steuerelement fest.  
+ Legt fest, die Gruppe Metriken von einem Listenansicht-Steuerelement.  
   
 ```  
 void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pGroupMetrics`  
+ *pGroupMetrics*  
  Ein Zeiger auf ein [LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752) Struktur mit Informationen über das Metriken Gruppe festgelegt werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_SETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb761168) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="sethotcursor"></a>  CListCtrl::SetHotCursor  
- Setzt den Cursor verwendet, wenn hot Track für eine Listenansicht-Steuerelement aktiviert ist.  
+ Legt fest, den Cursor, wenn hot Track für ein Listenansicht-Steuerelement aktiviert ist.  
   
 ```  
 HCURSOR SetHotCursor(HCURSOR hc);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *HC*  
- Ein Handle auf eine Cursorressource verwendet, um den Cursor im laufenden Systembetrieb darzustellen.  
+ *hybridverbindung*  
+ Ein Handle für eine Cursorressource verwendet, um den aktiven Cursor darzustellen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Handle für die vorherige hot Cursorressource, die von der Listenansicht-Steuerelement verwendet wird.  
+ Das Handle für die vorherige "Hot" Cursorressource, die von der Listenansicht-Steuerelement verwendet wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_SetHotCursor](http://msdn.microsoft.com/library/windows/desktop/bb775082)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_SetHotCursor](http://msdn.microsoft.com/library/windows/desktop/bb775082), wie im Windows SDK beschrieben.  
   
- Der aktiven Cursor, die nur sichtbar, wenn der Mauszeiger Auswahl aktiviert ist, wird angezeigt, wenn der Cursor über alle Listenansichtselements bewegt. Hover Auswahl wird aktiviert, indem die **LVS_EX_TRACKSELECT** erweiterter Stil.  
+ Der aktive Cursor, die nur sichtbar, wenn der Hover-Auswahl aktiviert ist, wird angezeigt, wenn der Cursor über alle Listenansichtselement bewegt. Zeigen Sie Auswahl wird durch Festlegen von den erweiterten Stil LVS_EX_TRACKSELECT aktiviert.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::GetHotCursor](#gethotcursor).  
   
 ##  <a name="sethotitem"></a>  CListCtrl::SetHotItem  
- Legt das aktuelle Element von einem Listenansicht-Steuerelement fest.  
+ Legt das Element der aktuelle "Hot" von einem Listenansicht-Steuerelement.  
   
 ```  
 int SetHotItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iIndex`  
+ *iIndex*  
  Nullbasierte Index des Elements, das als das Element festgelegt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index des zuvor hot Elements.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_SetHotItem](http://msdn.microsoft.com/library/windows/desktop/bb775083)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_SetHotItem](http://msdn.microsoft.com/library/windows/desktop/bb775083), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::GetHotItem](#gethotitem).  
   
 ##  <a name="sethovertime"></a>  CListCtrl::SetHoverTime  
- Legt fest, wenn darauf gezeigt wird derzeit von einem Listenansicht-Steuerelement.  
+ Legt fest, der die aktuelle Uhrzeit zeigen ein Listenansicht-Steuerelement.  
   
 ```  
 DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
@@ -3166,19 +3167,19 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
   
 ### <a name="parameters"></a>Parameter  
  *dwHoverTime*  
- Die neue Verzögerung in Millisekunden, die mit der Mauszeiger auf ein Element zeigen muss, bevor es aktiviert ist. Wenn der Standardwert übergeben wird, wird die Zeit auf den Standardwert bestimmte Zeit zeigen muss festgelegt.  
+ Die neue Zeitspanne in Millisekunden, die mit dem Mauszeiger auf ein Element zeigen muss, bevor Sie diese Option ausgewählt ist. Wenn der Standardwert übergeben wird, wird die Zeit auf eine bestimmte Zeit zeigen den Standardwert festgelegt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die vorherigen Hover Zeit in Millisekunden.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_SetHoverTime](http://msdn.microsoft.com/library/windows/desktop/bb775084)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_SetHoverTime](http://msdn.microsoft.com/library/windows/desktop/bb775084), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::GetHoverTime](#gethovertime).  
   
 ##  <a name="seticonspacing"></a>  CListCtrl::SetIconSpacing  
- Legt den Abstand zwischen den Symbolen in einem Listenansicht-Steuerelement fest.  
+ Legt den Abstand zwischen Symbolen in einem Listenansicht-Steuerelement fest.  
   
 ```  
 CSize SetIconSpacing(
@@ -3189,20 +3190,20 @@ CSize SetIconSpacing(CSize size);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cx`  
- Der Abstand (in Pixel) zwischen Symbole auf der x-Achse.  
+ *CX*  
+ Der Abstand (in Pixel) zwischen der Symbole auf der x-Achse.  
   
- `cy`  
- Der Abstand (in Pixel) zwischen Symbole auf der y-Achse.  
+ *CY*  
+ Der Abstand (in Pixel) zwischen der Symbole auf der y-Achse.  
   
- `size`  
- Ein `CSize` Objekt, das den Abstand (in Pixel) zwischen Symbole auf der x- und y-Achse zu angibt.  
+ *size*  
+ Ein `CSize` Objekt, das den Abstand (in Pixel) zwischen der Symbole auf der x- und y-Achse angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt, das die vorherigen Werte für den Symbolabstand enthält.  
+ Ein [CSize](../../atl-mfc-shared/reference/csize-class.md) -Objekt, das die vorherigen Werte für Symbolabstand enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_SetIconSpacing](http://msdn.microsoft.com/library/windows/desktop/bb775085)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_SetIconSpacing](http://msdn.microsoft.com/library/windows/desktop/bb775085), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -3223,17 +3224,17 @@ CImageList* SetImageList(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pImageList`  
- Zeiger auf die Bildliste zuweisen.  
+ *pImageList*  
+ Zeiger auf die Liste der Bilder zuweisen.  
   
- `nImageListType`  
- Typ der Bildliste. Einen der folgenden Werte sind möglich:  
+ *nImageListType*  
+ Typ der Bildliste. Sie können einen der folgenden Werte sein:  
   
-- `LVSIL_NORMAL` Die Bildliste mit großen Symbolen.  
+- LVSIL_NORMAL Bildliste mit großen Symbolen.  
   
-- `LVSIL_SMALL` Die Bildliste mit kleinen Symbolen.  
+- LVSIL_SMALL Bildliste mit kleinen Symbolen.  
   
-- `LVSIL_STATE` Die Bildliste mit Zustandsbildern.  
+- LVSIL_STATE Bildliste mit Zustandsgrafiken.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf die vorherige Bildliste.  
@@ -3242,7 +3243,7 @@ CImageList* SetImageList(
   Siehe das Beispiel für [CListCtrl::GetImageList](#getimagelist).  
   
 ##  <a name="setinfotip"></a>  CListCtrl::SetInfoTip  
- Legt den QuickInfotext fest.  
+ Legt den QuickInfo-Text fest.  
   
 ```  
 BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
@@ -3250,50 +3251,50 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
   
 ### <a name="parameters"></a>Parameter  
  *plvInfoTip*  
- Ein Zeiger auf ein [LVFSETINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb774764) Struktur mit Informationen über das festgelegt werden.  
+ Ein Zeiger auf ein [LVFSETINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb774764) Struktur, die mit den Informationen festgelegt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt **"true"** bei Erfolg **"false"** bei einem Fehler.  
+ Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_SETINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb761180) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="setinsertmark"></a>  CListCtrl::SetInsertMark  
- Legt die Einfügemarke an der definierten Position fest.  
+ Legt die Einfügemarke auf die definierte Position fest.  
   
 ```  
 BOOL SetInsertMark(LPLVINSERTMARK lvim);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lvim`  
- Ein Zeiger auf ein [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) Struktur, die angeben, wo die Einfügemarke festlegen.  
+ *lvim*  
+ Ein Zeiger auf ein [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) Struktur, die angibt, wo die Einfügemarke festgelegt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt **"true"** im Erfolgsfall oder **"false"** andernfalls. **"False"** wird zurückgegeben, wenn die Größe in der `cbSize` Mitglied der **LVINSERTMARK** Struktur stimmt nicht mit der tatsächlichen Größe der Struktur, oder wenn eine Einfügemarke gilt nicht in der aktuellen Ansicht.  
+ Gibt true zurück, wenn erfolgreich, oder "false" andernfalls. "False" wird zurückgegeben, wenn die Größe in der `cbSize` Mitglied der `LVINSERTMARK` Struktur entspricht nicht der tatsächlichen Größe der Struktur aus, oder wenn sich eine Einfügemarke in der aktuellen Ansicht nicht relevant.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb761182) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="setinsertmarkcolor"></a>  CListCtrl::SetInsertMarkColor  
- Legt die Farbe von der Einfügemarke an.  
+ Legt die Farbe der Einfügemarke.  
   
 ```  
 COLORREF SetInsertMarkColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `color`  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Struktur, die die Farbe, um die Einfügemarke angibt.  
+ *Farbe*  
+ Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) -Struktur, die die Farbe zum Festlegen der Einfügemarke angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt eine **COLORREF** Struktur, die die frühere Farbe enthält.  
+ Gibt eine `COLORREF` Struktur, die die vorherige Farbe enthält.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761184) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="setitem"></a>  CListCtrl:: SetItem  
- Legt einiger oder aller eine Listenansicht Attribute des Elements fest.  
+ Legt einige oder alle eine Listenansicht Attribute des Elements fest.  
   
 ```  
 BOOL SetItem(const LVITEM* pItem);
@@ -3323,47 +3324,47 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pItem`  
- Adresse der ein [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) -Struktur, die das neue Element enthält Attribute, wie im Windows SDK beschrieben. Der Struktur **iItem** und **iSubItem** Mitglieder identifizieren des Elements oder Unterelements und die Struktur **Maske** Element gibt an, welche Attribute festgelegt. Weitere Informationen zu den **Maske** Member finden Sie unter der **"Hinweise"**.  
+ *pItem*  
+ Adresse von einem [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur, die das neue Element enthält Attribute, wie im Windows SDK beschrieben. Der Struktur des `iItem` und `iSubItem` Mitglieder zu identifizieren, das Element oder Unterelement und der Struktur `mask` -Member gibt an, welche Attribute festlegen. Weitere Informationen zu den `mask` Member finden Sie unter den **"Hinweise"**.  
   
- `nItem`  
+ *nItem*  
  Der Index des Elements, dessen Attribute werden festgelegt werden.  
   
- `nSubItem`  
- Der Index des Unterelements ab, deren Attribute festgelegt werden sollen.  
+ *nSubItem*  
+ Der Index des Unterelements ab, deren Attribute werden festgelegt werden.  
   
- `nMask`  
- Gibt an, welche Attribute festgelegt werden (siehe Hinweise).  
+ *nMask*  
+ Gibt an, welche Attribute festgelegt werden (siehe die Hinweise).  
   
- `lpszItem`  
- Die Adresse einer Null-terminierte Zeichenfolge, die Beschriftung des Elements angeben.  
+ *lpszItem*  
+ Die Adresse einer Null-terminierte Zeichenfolge, die das Element dort angeben.  
   
- `nImage`  
- Index, der das Bild des Elements in der Bildliste.  
+ *Nbild*  
+ Index des Elements Bildes in der Bildliste.  
   
- `nState`  
- Gibt Werte für Zustände geändert werden (siehe Hinweise).  
+ *nState*  
+ Gibt Werte für Zustände geändert werden (siehe die Hinweise).  
   
- `nStateMask`  
- Gibt an, welche Zustände geändert werden (siehe Hinweise).  
+ *nStateMask*  
+ Gibt an, welche Zustände geändert werden (siehe die Hinweise).  
   
- `lParam`  
- Ein 32-Bit-anwendungsspezifische-Wert mit dem Element zugeordnet werden soll.  
+ *lParam*  
+ Der Wert einer 32-Bit-anwendungsspezifische mit dem Element zugeordnet werden soll.  
   
- `nIndent`  
- Breite in Pixel, der den Einzug. Wenn `nIndent` ist kleiner als die Mindestbreite systemdefinierte, die neue Breite auf ein Minimum systemdefinierte festgelegt ist  
+ *nIndent*  
+ Breite des Einzugs in Pixel. Wenn *nIndent* ist kleiner als die Mindestbreite systemdefinierte, die neue Breite auf den vom System definierten Minimalwert festgelegt ist  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Die **iItem** und **iSubItem** Mitglied der **LVITEM** Struktur und die `nItem` und `nSubItem` Parameter identifiziert das Element und dessen subitem Attribute sind festgelegt werden.  
+ Die `iItem` und `iSubItem` Mitglied der `LVITEM` Struktur und die *nItem* und *nSubItem* Parameter identifiziert das Element und Unterelement sind, deren Attribute festgelegt werden.  
   
- Die **Maske** Mitglied der **LVITEM** Struktur und die `nMask` -Parameter angeben, welches Element Attribute sind festgelegt werden:  
+ Die `mask` Mitglied der `LVITEM` Struktur und die *nMask* -Parameter angeben, welches Element Attribute sind festgelegt werden:  
   
-- `LVIF_TEXT` Die **PszText** Member oder die `lpszItem` Parameter ist die Adresse einer Null-terminierte Zeichenfolge; das **CchTextMax** Element wird ignoriert.  
+- LVIF_TEXT der `pszText` Member oder die *LpszItem* Parameter ist die Adresse einer Null-terminierte Zeichenfolge, die `cchTextMax` Member wird ignoriert.  
   
-- `LVIF_STATE`Die **StateMask** Member oder `nStateMask` Parameter gibt an, welches Element angegeben wird, ändern und die **Status** Member oder `nState` Parameter enthält die Werte für die Länder/Regionen.  
+- LVIF_STATE der `stateMask` Member oder *nStateMask* Parameter gibt an, welches Element angegeben wird, ändern und die `state` Member oder *nState* Parameter enthält die Werte für diese Zustände.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::HitTest](#hittest).  
@@ -3376,14 +3377,14 @@ void SetItemCount(int nItems);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItems`  
- Anzahl der Elemente, die das Steuerelement letztlich enthalten soll.  
+ *nItems*  
+ Anzahl der Elemente, die letztendlich das Steuerelement enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Um die Anzahl der Elemente für eine virtuelle Listenansicht-Steuerelement festzulegen, finden Sie unter [CListCtrl::SetItemCountEx](#setitemcountex).  
+ Wenn die Anzahl der Elemente für eine virtuelle Listenansicht-Steuerelement festlegen möchten, finden Sie unter [CListCtrl::SetItemCountEx](#setitemcountex).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_SetItemCount](http://msdn.microsoft.com/library/windows/desktop/bb775093)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_SetItemCount](http://msdn.microsoft.com/library/windows/desktop/bb775093), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -3412,21 +3413,21 @@ BOOL SetItemCountEx(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iCount`  
- Anzahl der Elemente, die das Steuerelement letztlich enthalten soll.  
+ *iCount*  
+ Anzahl der Elemente, die letztendlich das Steuerelement enthält.  
   
- `dwFlags`  
- Gibt das Verhalten der Listenansicht-Steuerelement nach dem Zurücksetzen der Anzahl der Elemente an. Dieser Wert kann eine Kombination der folgenden sein:  
+ *dwFlags*  
+ Gibt das Verhalten des Listenansicht-Steuerelement nach dem Zurücksetzen der Anzahl der Elemente an. Dieser Wert kann eine Kombination der folgenden sein:  
   
-- **LVSICF_NOINVALIDATEALL** Listenansicht-Steuerelement wird nicht aktualisiert, es sei denn, betroffene Elemente derzeit in der Ansicht. Dies ist der Standardwert.  
+- LVSICF_NOINVALIDATEALL das Listenansicht-Steuerelement nicht neu aufgebaut, es sei denn, die betroffene Elemente derzeit angezeigt werden. Dies ist der Standardwert.  
   
-- **LVSICF_NOSCROLL** Listenansicht-Steuerelement ändert nicht die Bildlaufposition, wenn das Element zählen Änderungen.  
+- LVSICF_NOSCROLL das Listenansicht-Steuerelement ändert die Bildlaufposition sich nicht, wenn das Element zählen Änderungen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_SetItemCountEx](http://msdn.microsoft.com/library/windows/desktop/bb775095), wie beschrieben in der Windows-SDKand sollte nur aufgerufen werden für virtuelle Listenansichten.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_SetItemCountEx](http://msdn.microsoft.com/library/windows/desktop/bb775095), wie beschrieben in der Windows-SDKand sollte nur aufgerufen werden für virtuelle Listenansichten.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -3450,24 +3451,24 @@ BOOL SetItemCountEx(
 
   
 ##  <a name="setitemdata"></a>  CListCtrl::SetItemData  
- Legt den 32-Bit-anwendungsspezifische-Wert, die Verbindung mit den Elementen gemäß `nItem`.  
+ Legt den 32-Bit-anwendungsspezifische Wert dem Element anhand des zugeordneten *nItem*.  
   
 ```  
 BOOL SetItemData(int nItem, DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
- Der Index des Listenelements, deren Daten festgelegt werden.  
+ *nItem*  
+ Der Index des Listenelements, deren Daten ist, festgelegt werden.  
   
- `dwData`  
- Ein 32-Bit-Wert mit dem Element zugeordnet werden soll.  
+ *dwData*  
+ Ein 32-Bit-Wert, mit dem Element zugeordnet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Wert ist die **lParam** Mitglied der [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) strukturieren, wie im Windows SDK beschrieben.  
+ Dieser Wert ist die `lParam` Mitglied der [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur, wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -3482,7 +3483,7 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
 
   
 ##  <a name="setitemindexstate"></a>  CListCtrl::SetItemIndexState  
- Legt den Zustand eines Elements im aktuellen Listenansicht Steuerelement fest.  
+ Legt den Zustand eines Elements in der aktuellen Listenansicht-Steuerelement fest.  
   
 ```  
 BOOL SetItemIndexState(
@@ -3495,19 +3496,19 @@ BOOL SetItemIndexState(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pItemIndex`|Zeiger auf eine [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur, die ein Element beschreibt. Der Aufrufer ist verantwortlich für das Zuordnen von dieser Struktur und ihre Member festlegen.|  
-|[in] `dwState`|Der Zustand, legen Sie das Element ist eine bitweise Kombination von [Liste Ansicht Elementzustände](http://msdn.microsoft.com/library/windows/desktop/bb774733). Geben Sie 0 (null), zurücksetzen, oder legen Sie einen Status an.|  
-|[in] `dwMask`|Eine Maske, der die gültigen Bits des vom angegebenen Zustand der `dwState` Parameter. Geben Sie eine bitweise Kombination (OR) [Liste Ansicht Elementzustände](http://msdn.microsoft.com/library/windows/desktop/bb774733).|  
+|[in] *pItemIndex*|Zeiger auf ein [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) Struktur, die ein Element beschreibt. Der Aufrufer ist für diese Struktur zuordnen und Festlegen von Membern verantwortlich.|  
+|[in] *dwState-Datenmember*|Der Zustand, der das Element festgelegt. Dies ist eine bitweise Kombination von [Liste anzeigen-Element-Zustände](http://msdn.microsoft.com/library/windows/desktop/bb774733). Geben Sie 0 (null), zum Zurücksetzen oder dem einen legen, einen Status.|  
+|[in] *DwMask*|Eine Maske, der die gültigen Bits der vom angegebenen Zustand der *dwState-Datenmember* Parameter. Geben Sie eine bitweise Kombination (OR) von [Liste anzeigen-Element-Zustände](http://msdn.microsoft.com/library/windows/desktop/bb774733).|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den `dwState` Parameter, finden Sie unter [Liste Ansicht Elementzustände](http://msdn.microsoft.com/library/windows/desktop/bb774733).  
+ Weitere Informationen zu den *dwState-Datenmember* Parameter finden Sie unter [Liste anzeigen-Element-Zustände](http://msdn.microsoft.com/library/windows/desktop/bb774733).  
   
- Weitere Informationen zu den `dwMask` Parameter, finden Sie unter der `stateMask` Mitglied der [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur.  
+ Weitere Informationen zu den *DwMask* Parameter finden Sie unter der *StateMask* Mitglied der [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur.  
   
- Diese Methode sendet die [LVM_SETITEMINDEXSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761190) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [LVM_SETITEMINDEXSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761190) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="setitemposition"></a>  CListCtrl::SetItemPosition  
  Verschiebt ein Element an einer angegebenen Position in einem Listenansicht-Steuerelement.  
@@ -3519,25 +3520,25 @@ BOOL SetItemPosition(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
+ *nItem*  
  Der Index des Elements, dessen Position festgelegt werden.  
   
- `pt`  
- Ein [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Koordinaten vorliegen Struktur, die die neue Position in der Sicht angibt, der linke obere Ecke des Elements.  
+ *pt*  
+ Ein [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Koordinaten vorliegen-Struktur, die die neue Position in der Sicht angibt, der linke obere Ecke des Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Steuerelement muss im Symbol oder kleine Symbole angezeigt.  
+ Das Steuerelement muss in das Symbol "oder" kleine Symbole angezeigt.  
   
- Wenn Listenansicht-Steuerelement verfügt über die `LVS_AUTOARRANGE` Formatvorlage, der Listenansicht wird angeordnet, nachdem die Position des Elements festgelegt wurde.  
+ Wenn das Listenansicht-Steuerelement den LVS_AUTOARRANGE Stil verfügt, wird die Listenansicht neu angeordnet werden, nachdem die Position des Elements festgelegt ist.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::GetItemPosition](#getitemposition).  
   
 ##  <a name="setitemstate"></a>  CListCtrl::SetItemState  
- Ändert den Status eines Elements in einem Listenansicht-Steuerelement.  
+ Ändert den Zustand eines Elements in einem Listenansicht-Steuerelement.  
   
 ```  
 BOOL SetItemState(
@@ -3552,29 +3553,29 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
- Der Index des Elements, dessen Status festgelegt werden.  
+ *nItem*  
+ Der Index des Elements, dessen Zustand festgelegt werden.  
   
- `pItem`  
- Adresse der ein [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) strukturieren, wie im Windows SDK beschrieben. Der Struktur **StateMask** Element angibt, welcher Status zu ändern und die Struktur der bits- **Zustand** Element enthält die neuen Werte für jene Bits. Die anderen Elemente werden ignoriert.  
+ *pItem*  
+ Adresse von einem [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur, wie im Windows SDK beschrieben. Der Struktur des `stateMask` -Member gibt an, welcher Status zu ändern und die Struktur des bits `state` Member enthält, die neuen Werte für diese Komponenten. Die anderen Elemente werden ignoriert.  
   
- `nState`  
- Neue Werte für die Statusbits. Eine Liste der möglichen Werte finden Sie unter [CListCtrl::GetNextItem](#getnextitem) und [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Status-Element.  
+ *nState*  
+ Neue Werte für das Zustandsbits. Eine Liste der möglichen Werte, finden Sie unter [CListCtrl::GetNextItem](#getnextitem) und [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) statusmember.  
   
- `nMask`  
- Maske, die angeben, welcher Status bits um zu ändern. Dieser Wert entspricht dem StateMask Mitglied der [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur.  
+ *nMask*  
+ Maske, die angeben, welcher Status bits um zu ändern. Dieser Wert entspricht der StateMask Member der [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Element "State" ist ein Wert, der die Verfügbarkeit des Artikels angibt, Benutzeraktionen angibt, oder gibt andernfalls der Element-Status wieder. Ein Listenansicht-Steuerelement ändert einige Statusbits, z. B. wenn der Benutzer ein Element auswählt. Eine Anwendung kann andere Statusbits zu deaktivieren oder das Element auszublenden, oder die Angabe von Overlay Bild- oder statusbilds ändern.  
+ Ein Element des "State" ist ein Wert, der gibt an, die Verfügbarkeit des Artikels, der Benutzeraktionen angibt, oder andernfalls gibt der Status des Artikels. Ein Listenansicht-Steuerelement ändert einige Zustandsbits, wie z. B. wenn der Benutzer ein Element auswählt. Eine Anwendung kann andere Zustandsbits zu deaktivieren oder das Element auszublenden, oder die Angabe ein Overlaybild oder das Zustandsbild ändern.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::GetTopIndex](#gettopindex).  
   
 ##  <a name="setitemtext"></a>  CListCtrl::SetItemText  
- Ändert den Text einer Listenansichtselements oder Unterelements.  
+ Ändert den Text ein Element der Listenansicht oder Unterelements.  
   
 ```  
 BOOL SetItemText(
@@ -3584,37 +3585,37 @@ BOOL SetItemText(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
- Der Index des Elements, dessen Text ist, festgelegt werden.  
+ *nItem*  
+ Der Index des Elements, dessen Text festgelegt werden.  
   
- `nSubItem`  
- Index des Unterelements ab, oder 0 (null), die die Bezeichnung des Elements festgelegt.  
+ *nSubItem*  
+ Index des Unterelements ab, oder 0 (null), die elementbezeichnung festgelegt.  
   
- `lpszText`  
- Zeiger auf eine Zeichenfolge, die das neue Elementtext enthält.  
+ *lpszText*  
+ Zeiger auf eine Zeichenfolge, die den neuen Elementtext enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode dient nicht zur Verwendung mit Steuerelementen, die den Fensterstil LVS_OWNERDATA enthält (in der Tat Dadurch wird eine Assertion im Debug-Builds). Weitere Informationen zu dieser Liste Steuerelementformats, finden Sie unter [Übersicht über die Listenansicht Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb774735).  
+ Diese Methode ist nicht für die Verwendung mit Steuerelementen, die mit den Fensterstil LVS_OWNERDATA vorgesehen (in der Tat, dadurch wird eine Assertion in Debugbuilds). Weitere Informationen zu dieser Liste Steuerelementstil, finden Sie unter [Übersicht über die Listenansicht-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb774735).  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::InsertItem](#insertitem).  
   
 ##  <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor  
- Legt die Farbe des Rahmens eines Listenansicht Steuerelements, wenn die [LVS_EX_BORDERSELECT](http://msdn.microsoft.com/library/windows/desktop/bb774739) erweiterten Fensterstil festgelegt ist.  
+ Legt die Farbe des Rahmens eines Listenansicht-Steuerelements, wenn die [LVS_EX_BORDERSELECT](http://msdn.microsoft.com/library/windows/desktop/bb774739) erweiterten Fensterstil festgelegt ist.  
   
 ```  
 COLORREF SetOutlineColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `color`  
+ *Farbe*  
  Die neue [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Struktur, die die Konturfarbe enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der vorherige **COLORREF** Struktur, die die Konturfarbe enthält.  
+ Die vorherige `COLORREF` Struktur, die die Konturfarbe enthält.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_SETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761200) Nachricht, wie im Windows SDK beschrieben.  
@@ -3637,21 +3638,21 @@ LRESULT SetSelectedColumn(int iCol);
  Diese Memberfunktion emuliert die Funktionen des die [LVM_SETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761202) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="setselectionmark"></a>  CListCtrl::SetSelectionMark  
- Legt die Markierung von einem Listenansicht-Steuerelement fest.  
+ Legt die Auswahlmarke von einem Listenansicht-Steuerelement fest.  
   
 ```  
 int SetSelectionMark(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `iIndex`  
+ *iIndex*  
  Der nullbasierte Index des ersten Elements in einer Mehrfachauswahl.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Vorherigen Markierung oder -1, wenn es wurde keine Markierung.  
+ Vorherigen Markierung oder -1, wenn es wurde keine Auswahlmarke darstellen.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_SetSelectionMark](http://msdn.microsoft.com/library/windows/desktop/bb775112)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_SetSelectionMark](http://msdn.microsoft.com/library/windows/desktop/bb775112), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::GetSelectionMark](#getselectionmark).  
@@ -3664,8 +3665,8 @@ BOOL SetTextBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cr`  
- Ein **COLORREF** die neue Hintergrundfarbe des Texts angeben. Informationen finden Sie unter [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) im Windows SDK.  
+ *CR*  
+ Eine COLORREF, die die neue Hintergrundfarbe des Texts angibt. Weitere Informationen finden Sie unter [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -3682,15 +3683,15 @@ BOOL SetTextBkColor(COLORREF cr);
 
   
 ##  <a name="settextcolor"></a>  CListCtrl::SetTextColor  
- Legt die Textfarbe für eine Listenansicht-Steuerelement fest.  
+ Legt die Textfarbe eines Listenansicht-Steuerelements fest.  
   
 ```  
 BOOL SetTextColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cr`  
- Ein **COLORREF** neue Textfarbe angeben. Informationen finden Sie unter [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) im Windows SDK.  
+ *CR*  
+ Eine COLORREF, die die neue Farbe des Textes angibt. Weitere Informationen finden Sie unter [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -3708,7 +3709,7 @@ BOOL SetTextColor(COLORREF cr);
 
   
 ##  <a name="settileinfo"></a>  CListCtrl::SetTileInfo  
- Legt die Informationen für eine Kachel von Listenansicht-Steuerelement fest.  
+ Legt fest, die Informationen für eine Kachel, des Listenansicht-Steuerelement.  
   
 ```  
 BOOL SetTileInfo(PLVTILEINFO pti);
@@ -3716,10 +3717,10 @@ BOOL SetTileInfo(PLVTILEINFO pti);
   
 ### <a name="parameters"></a>Parameter  
  *pti*  
- Ein Zeiger auf ein [LVTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb774766) Struktur mit Informationen über das festgelegt werden.  
+ Ein Zeiger auf ein [LVTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb774766) Struktur, die mit den Informationen festgelegt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt **"true"** bei Erfolg **"false"** bei einem Fehler.  
+ Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_SETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761210) Nachricht, wie im Windows SDK beschrieben.  
@@ -3732,43 +3733,43 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ptvi`  
+ *ptvi*  
  Ein Zeiger auf ein [LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768) Struktur mit Informationen über das festlegen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt **"true"** bei Erfolg **"false"** bei einem Fehler.  
+ Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_SETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761212) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="settooltips"></a>  CListCtrl::SetToolTips  
- Legt das QuickInfo-Steuerelement, das Listenansicht-Steuerelement zum Anzeigen von QuickInfos verwendet.  
+ Legt das QuickInfo-Steuerelement, das das Listenansicht-Steuerelement verwendet, um QuickInfos anzuzeigen.  
   
 ```  
 CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWndTip`  
+ *pWndTip*  
  Ein Zeiger auf eine `CToolTipCtrl` -Objekt, das das Strukturelement-Steuerelement verwendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine [CToolTipCtrl](ctooltipctrl-class.md) Objekt, das die QuickInfo, die zuvor vom Steuerelement verwendeten enthält oder `NULL` Wenn keine QuickInfos zuvor verwendet wurden.  
+ Ein Zeiger auf eine [CToolTipCtrl](ctooltipctrl-class.md) -Objekt, enthält die QuickInfo, die zuvor vom Steuerelement oder NULL verwendet werden, wenn keine QuickInfos zuvor verwendet wurden.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LVM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb761216)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [LVM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb761216), wie im Windows SDK beschrieben.  
   
- Wenn QuickInfos nicht verwenden möchten, geben die `LVS_NOTOOLTIPS` formatieren, bei der Erstellung der `CListCtrl` Objekt.  
+ Geben Sie styl LVS_NOTOOLTIPS um QuickInfos nicht zu verwenden, bei der Erstellung der `CListCtrl` Objekt.  
   
 ##  <a name="setview"></a>  CListCtrl::SetView  
- Legt die Ansicht der Listenansicht-Steuerelement.  
+ Legt die Ansicht des Listenansicht-Steuerelement.  
   
 ```  
 DWORD SetView(int iView);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *IView*  
+ *iView*  
  Die Ansicht ausgewählt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -3778,7 +3779,7 @@ DWORD SetView(int iView);
  Diese Memberfunktion emuliert die Funktionen des die [LVM_SETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761220) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="setworkareas"></a>  CListCtrl::SetWorkAreas  
- Legt den Bereich, in dem Symbole in einem Listenansicht-Steuerelement angezeigt werden können.  
+ Legt den Bereich, in dem Symbole in einem Listenansicht-Steuerelement angezeigt werden kann.  
   
 ```  
 void SetWorkAreas(
@@ -3787,14 +3788,14 @@ void SetWorkAreas(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nWorkAreas`  
- Die Anzahl der `RECT` Strukturen (oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekte) im Array verweist `lpRect`.  
+ *nWorkAreas*  
+ Die Anzahl der `RECT` Strukturen (oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekte) in das Array verweist *LpRect*.  
   
- `lpRect`  
- Die Adresse eines Arrays von `RECT` Strukturen (oder `CRect` Objekte) angeben, dass der neue Arbeitsbereiche der Listenansicht-Steuerelement. Diese Bereiche müssen in Clientkoordinaten angegeben werden. Wenn dieser Parameter ist **NULL**, wird der Arbeitsbereich, das den Clientbereich des Steuerelements festgelegt werden.  
+ *lpRect*  
+ Die Adresse eines Arrays von `RECT` Strukturen (oder `CRect` Objekte) angeben, dass die neuen Bereiche des Listenansicht-Steuerelement. Diese Bereiche müssen angegeben werden, in Clientkoordinaten. Wenn dieser Parameter NULL ist, wird der Arbeitsbereich auf den Clientbereich des Steuerelements festgelegt werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_SetWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb775128)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_SetWorkAreas](http://msdn.microsoft.com/library/windows/desktop/bb775128), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -3806,7 +3807,7 @@ void SetWorkAreas(
 
   
 ##  <a name="sortgroups"></a>  CListCtrl::SortGroups  
- Verwendet eine anwendungsdefinierte Vergleichsfunktion um Gruppen von ID in einem Listenansicht-Steuerelement zu sortieren.  
+ Verwendet eine anwendungsdefinierte Vergleichsfunktion zum Sortieren der Gruppen nach ID in einem Listenansicht-Steuerelement.  
   
 ```  
 BOOL SortGroups(
@@ -3815,14 +3816,14 @@ BOOL SortGroups(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_pfnGroupCompare`  
+ *_pfnGroupCompare*  
  Ein Zeiger auf die Gruppe Vergleichsfunktion.  
   
- `_plv`  
+ *_plv*  
  Ein void-Zeiger.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt `true` bei Erfolg bzw. `false` bei einem Fehler zurück.  
+ Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [LVM_SORTGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761225) Nachricht, wie im Windows SDK beschrieben.  
@@ -3837,35 +3838,35 @@ BOOL SortItems(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pfnCompare`  
- Die Adresse der Anwendung definiertes Vergleichsfunktion.  
+ [in] *PfnCompare*  
+ Die Adresse der Anwendung definierte Vergleichsfunktion.  
   
- Der Sortiervorgang Ruft die Vergleichsfunktion jedes Mal, wenn die relative Position von zwei Listenelemente ermittelt werden soll. Die Vergleichsfunktion muss entweder ein statischer Member einer Klasse oder eine eigenständige Funktion, die nicht Mitglied einer beliebigen Klasse ist.  
+ Sort-Vorgangs ruft die Vergleichsfunktion auf jedes Mal, wenn die relative Position von zwei Listenelementen ermittelt werden soll. Die Vergleichsfunktion muss entweder ein statischer Member einer Klasse oder eine eigenständige Funktion, die nicht Mitglied einer beliebigen Klasse ist.  
   
- [in] `dwData`  
- Anwendungsdefinierten Wert, der an die Funktion zum Zeichenfolgenvergleich übergeben wird.  
+ [in] *DwData*  
+ Der Anwendung definierter Wert, der der Vergleich-Funktion übergeben wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn die Methode erfolgreich ist; andernfalls `false`.  
+ TRUE, wenn die Methode erfolgreich ist; andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ändert sich den Index der jedes Element, um die neue Reihenfolge widerzuspiegeln.  
+ Diese Methode ändert sich den Index der jedes Element entsprechend die neue Sequenz.  
   
- Die Vergleichsfunktion `pfnCompare`, hat das folgende Format:  
+ Die Vergleichsfunktion *PfnCompare*, weist das folgende Format:  
   
 ```  
 int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```  
-Die Vergleichsfunktion muss einen negativen Wert zurück, wenn das erste Element der zweiten vorausgehen sollen, einen positiven Wert, wenn das erste Element, der zweite oder NULL, wenn folgen soll die beiden Objekte gleich sind.  
+Die Vergleichsfunktion muss einen negativen Wert zurück, wenn das erste Element die zweite vorangehen soll, ein positiver Wert, wenn das erste Element, das zweite oder NULL, wenn folgen soll die zwei Elemente gleich sind.  
   
- Die `lParam1` Parameter ist der 32-Bit-Wert, der das erste Element, das verglichen wird, zugeordnet und die `lParam2` Parameter ist der Wert, der dem zweiten Element zugeordnet sind. Dies sind die Werte, die in angegeben wurden die `lParam` Mitglied die Elemente [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur, wenn sie in der Liste eingefügt wurden. Die `lParamSort` Parameter entspricht der `dwData` Wert.  
+ Die *lParam1* Parameter ist der 32-Bit-Wert, der das erste Element, das verglichen wird, zugeordnet und die *lParam2* Parameter ist der Wert, der das zweite Element zugeordnet. Dies sind die Werte, die in angegeben wurden die *lParam* Member der Elemente in [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Struktur, wenn sie in der Liste eingefügt wurden. Die *lParamSort* Parameter entspricht der *DwData* Wert.  
   
- Diese Methode sendet die [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Folgender Ausdruck ist eine einfache Vergleichsfunktion, auf die Elemente, die zu sortierenden von führt ihre `lParam` Werte.  
+ Im folgenden finden Sie eine einfache Vergleichsfunktion, auf die Elemente sortiert werden führt ihre *lParam* Werte.  
   
 ```cpp  
 // Sort items by associated lParam
@@ -3886,7 +3887,7 @@ void CListCtrlDlg::Sort()
 ```
   
 ##  <a name="sortitemsex"></a>  CListCtrl::SortItemsEx  
- Sortiert die Elemente des aktuellen Listenansicht Steuerelements mit einem anwendungsdefinierten Vergleichsfunktion.  
+ Sortiert die Elemente des aktuellen Listenansicht-Steuerelements mit einem anwendungsdefinierten Vergleichsfunktion.  
   
 ```  
 BOOL SortItemsEx(
@@ -3898,33 +3899,33 @@ BOOL SortItemsEx(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `pfnCompare`|Die Adresse der Anwendung definiertes Vergleichsfunktion.<br /><br /> Der Sortiervorgang Ruft die Vergleichsfunktion jedes Mal, wenn die relative Position von zwei Listenelemente ermittelt werden soll. Die Vergleichsfunktion muss entweder ein statischer Member einer Klasse oder eine eigenständige Funktion, die nicht Mitglied einer beliebigen Klasse ist.|  
-|[in] `dwData`|An die Funktion zum Zeichenfolgenvergleich anwendungsdefinierten Wert übergeben.|  
+|[in] *PfnCompare*|Die Adresse der Anwendung definierte Vergleichsfunktion.<br /><br /> Sort-Vorgangs ruft die Vergleichsfunktion auf jedes Mal, wenn die relative Position von zwei Listenelementen ermittelt werden soll. Die Vergleichsfunktion muss entweder ein statischer Member einer Klasse oder eine eigenständige Funktion, die nicht Mitglied einer beliebigen Klasse ist.|  
+|[in] *DwData*|Der Anwendung definierter Wert, die an die Vergleichsfunktion übergeben werden.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn diese Methode erfolgreich ist; andernfalls `false`.  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ändert sich den Index der jedes Element, um die neue Reihenfolge widerzuspiegeln.  
+ Diese Methode ändert sich den Index der jedes Element entsprechend die neue Sequenz.  
   
- Die Vergleichsfunktion `pfnCompare`, hat das folgende Format:  
+ Die Vergleichsfunktion *PfnCompare*, weist das folgende Format:  
   
 ```  
 int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```  
-Diese Meldung ist z. B. [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), mit Ausnahme des Datentyps von Informationen an die Vergleichsfunktion übergeben. In [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), `lParam1` und `lParam2` sind die Werte der Elemente, die verglichen werden soll. In [LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228), `lParam1` ist der aktuelle Index des ersten Elements zu vergleichende und `lParam2` ist der aktuelle Index des zweiten Elements. Sie können senden ein [LVM_GETITEMTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761055) Nachricht, um weitere Informationen zu einem Element abzurufen.  
+Diese Nachricht ist, z. B. [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), mit Ausnahme des Datentyps von Informationen, die an die Vergleichsfunktion. In [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), *lParam1* und *lParam2* sind die Werte der Elemente, die verglichen werden soll. In [LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228), *lParam1* ist der aktuelle Index des ersten Elements zum Vergleichen und *lParam2* der aktuelle Index, der das zweite Element ist. Sie können senden ein [LVM_GETITEMTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761055) Nachricht, um weitere Informationen zu einem Element abzurufen.  
   
- Die Vergleichsfunktion muss einen negativen Wert zurück, wenn das erste Element der zweiten vorausgehen sollen, einen positiven Wert, wenn das erste Element, der zweite oder NULL, wenn folgen soll die beiden Objekte gleich sind.  
+ Die Vergleichsfunktion muss einen negativen Wert zurück, wenn das erste Element die zweite vorangehen soll, ein positiver Wert, wenn das erste Element, das zweite oder NULL, wenn folgen soll die zwei Elemente gleich sind.  
   
 > [!NOTE]
->  Die Listenansicht-Inhalte sind während der Sortierung werden instabil ist. Wenn die Rückruffunktion alle Nachrichten an das Listenansicht Steuerelement außer sendet [LVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb774953), die Ergebnisse sind unvorhersehbar.  
+>  Der Inhalt der Listenansicht sind instabil, bei der Sortierung. Wenn die Callback-Funktion von Nachrichten an das Listenansicht-Steuerelement außer sendet [LVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb774953), sind die Ergebnisse unvorhersehbar.  
   
- Diese Methode sendet die [LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert eine Variable `m_listCtrl`, d. h. auf das aktuelle Listenansicht Steuerelement verwendet. Diese Variable wird im nächsten Beispiel verwendet.  
+ Das folgende Codebeispiel definiert eine Variable, `m_listCtrl`, d. h. für den Zugriff auf das aktuelle Listenansicht-Steuerelement. Diese Variable wird im nächsten Beispiel verwendet.  
   
 ```cpp  
 public:
@@ -3934,7 +3935,7 @@ public:
 
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht die `SortItemEx` Methode. In einem früheren Abschnitt dieses Codebeispiels erstellt es ein Listenansicht-Steuerelement, zwei Spalten mit dem Titel "ClientID" und "Grade" in einer Berichtsansicht anzeigt. Im folgenden Codebeispiel wird die Tabelle mit den Werten in der Spalte "Grade" sortiert.  
+ Im folgenden Codebeispiel wird veranschaulicht, die `SortItemEx` Methode. In einem vorherigen Abschnitt dieses Codebeispiels haben wir ein Listenansicht-Steuerelement, zwei Spalten, die mit dem Titel "ClientID" und "Grade" in einer Berichtsansicht anzeigt. Im folgenden Codebeispiel wird die Tabelle mit den Werten in der Spalte "Grade" sortiert.  
   
 
 ```cpp  
@@ -3969,21 +3970,21 @@ void CCListCtrl_s2Dlg::OnBnClickedButton1()
 
   
 ##  <a name="subitemhittest"></a>  CListCtrl::SubItemHitTest  
- Bestimmt, welche Listenansichtselements ist ggf. an einer angegebenen Position.  
+ Bestimmt, welches Element der Listenansicht, ist ggf. an einer bestimmten Position.  
   
 ```  
 int SubItemHitTest(LPLVHITTESTINFO pInfo);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pInfo`  
+ *"pInfo"*  
  Ein Zeiger auf die [LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der einsbasierte Index des Elements oder Unterelements, getestete (sofern vorhanden) oder andernfalls ' -1.  
+ Der 1-basierte Index des Elements oder Unterelements, getesteten (sofern vorhanden) oder andernfalls -1.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Makros Win32 [ListView_SubItemHitTest](http://msdn.microsoft.com/library/windows/desktop/bb775135)gemäß der Beschreibung im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros und [ListView_SubItemHitTest](http://msdn.microsoft.com/library/windows/desktop/bb775135), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
 
@@ -4007,21 +4008,21 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 
   
 ##  <a name="update"></a>  CListCtrl::Update  
- Erzwingt die Listenansicht-Steuerelement, das über angegebene Element neu gezeichnet werden `nItem`.  
+ Erzwingt das Listenansicht-Steuerelement, das durch angegebene Element neu zeichnen *nItem*.  
   
 ```  
 BOOL Update(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nItem`  
+ *nItem*  
  Der Index des Elements aktualisiert werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion ordnet auch Listenansicht-Steuerelement ist die `LVS_AUTOARRANGE` Stil.  
+ Diese Funktion ordnet den LVS_AUTOARRANGE Stil verfügt auch das Listenansicht-Steuerelement an.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CListCtrl::GetSelectedCount](#getselectedcount).  

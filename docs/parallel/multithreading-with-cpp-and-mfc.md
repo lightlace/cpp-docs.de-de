@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688569"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Multithreading mit C++ und MFC
 Die MFC-Bibliothek (Microsoft Foundation Class) bietet Unterstützung für Multithreadanwendungen. In diesem Thema werden Prozesse und Threads sowie das MFC-Multithreading beschrieben.  

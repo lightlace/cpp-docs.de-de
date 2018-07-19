@@ -1,5 +1,5 @@
 ---
-title: Intelligente Zeiger (Modern C++) | Microsoft Docs
+title: Intelligente Zeiger (Modern C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,17 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d532a693414fee7845c45fd548b7513ed99b38d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a604ee36bf7d410f9e176278cc98a934874fbac
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939883"
 ---
 # <a name="smart-pointers-modern-c"></a>Intelligente Zeiger (Modern C++)
-In modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zeiger*, die verwendet werden, um sicherzustellen, dass Programme sind frei von Speicher- und Ressource von Speicherverlusten und ausnahmesicher sind.  
+Im modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zeiger*, die verwendet werden, um sicherzustellen, dass Programme sind frei von Speicher- und Ressourcen von Speicherverlusten und sind.  
   
 ## <a name="uses-for-smart-pointers"></a>Anwendungsmöglichkeiten für intelligente Zeiger  
- Intelligente Zeiger werden definiert, der `std` Namespace in der [ \<Arbeitsspeicher >](../standard-library/memory.md) Headerdatei. Sie sind entscheidend für die [RAII](../cpp/objects-own-resources-raii.md) oder *Resource Acquisition Is Initialization* Programmierung Idiom. Das wichtigste Ziel dieses Technik ist sicherzustellen, dass die Ressourcenerfassung zur gleichen Zeit erfolgt wie die Initialisierung des Objekts, damit alle Ressourcen für das Objekt in einer Codezeile erstellt und vorbereitet werden können. Praktisch ist es das Hauptprinzip von RAII, die Verfügung über jede auf dem Heap zugeordnete Ressource (beispielsweise dynamisch zugeordneter Arbeitsspeicher oder Systemobjekthandles) einem auf dem Stapel zugeordneten Objekt zu übertragen, dessen Destruktor sowohl den Code enthält, um die Ressource zu löschen oder freizugeben, als auch jeden zugehörigen Bereinigungscode.  
+ Intelligente Zeiger werden definiert, der `std` -Namespace in der [ \<Arbeitsspeicher >](../standard-library/memory.md) Headerdatei. Sie sind entscheidend, um die [RAII](../cpp/objects-own-resources-raii.md) oder *Resource Acquisition Is Initialization* Programmierung Idiom. Das wichtigste Ziel dieses Technik ist sicherzustellen, dass die Ressourcenerfassung zur gleichen Zeit erfolgt wie die Initialisierung des Objekts, damit alle Ressourcen für das Objekt in einer Codezeile erstellt und vorbereitet werden können. Praktisch ist es das Hauptprinzip von RAII, die Verfügung über jede auf dem Heap zugeordnete Ressource (beispielsweise dynamisch zugeordneter Arbeitsspeicher oder Systemobjekthandles) einem auf dem Stapel zugeordneten Objekt zu übertragen, dessen Destruktor sowohl den Code enthält, um die Ressource zu löschen oder freizugeben, als auch jeden zugehörigen Bereinigungscode.  
   
  Wenn Sie einen Rohzeiger oder ein Ressourcenhandle für eine aktuelle Ressource initialisieren, sollten Sie den Zeiger in den meisten Fällen sofort einem intelligenten Zeiger zuweisen. In modernem C++ werden Rohzeiger nur in kleinen Codeblöcken mit begrenztem Gültigkeitsbereich, in Schleifen oder Hilfsfunktionen verwendet, in denen Leistung ausschlaggebend ist und keine Verwirrung über den Besitzer entstehen kann.  
   
@@ -39,17 +40,17 @@ In modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zei
 > [!IMPORTANT]
 >  Erstellen Sie intelligente Zeiger immer in einer eigenen Codezeile und nie in einer Parameterliste, damit aufgrund bestimmter Speicherbelegungsregeln für Parameterlisten kein kleines Ressourcenleck auftritt.  
   
- Das folgende Beispiel zeigt wie eine `unique_ptr` intelligenten Zeiger vom Typ aus der C++-Standardbibliothek verwendet werden konnte, um einen Zeiger auf ein großes Objekt zu kapseln.  
+ Das folgende Beispiel zeigt wie eine `unique_ptr` intelligenten Zeigertyp aus der C++-Standardbibliothek verwendet werden, um einen Zeiger auf ein großes Objekt zu kapseln.  
   
  [!code-cpp[smart_pointers_intro#2](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_2.cpp)]  
   
  Dieses Beispiel verdeutlicht die folgenden wesentlichen Schritte für die Verwendung von intelligenten Zeigern.  
   
-1.  Deklarieren Sie den intelligenten Zeiger als automatische (lokale) Variable. (Verwenden Sie für den intelligenten Zeiger selbst nicht den Ausdruck `new` oder `malloc`.)  
+1.  Deklarieren Sie den intelligenten Zeiger als automatische (lokale) Variable. (Verwenden Sie nicht die **neue** oder `malloc` Ausdruck, für den intelligenten Zeiger selbst.)  
   
 2.  Als Typparameter geben Sie den Typ an, auf den der gekapselte Zeiger zeigt.  
   
-3.  Übergeben Sie einen Rohzeiger auf ein als `new` deklariertes Objekt im Konstruktor des intelligenten Zeigers. (Einige Hilfsfunktionen oder Konstruktoren für intelligente Zeiger übernehmen das für Sie.)  
+3.  Übergeben Sie einen unformatierten Zeiger auf eine **neue**-deklariertes Objekt im Konstruktor intelligenten Zeigers. (Einige Hilfsfunktionen oder Konstruktoren für intelligente Zeiger übernehmen das für Sie.)  
   
 4.  Verwenden Sie die überladenen Operatoren `->` und `*` für den Zugriff auf das Objekt.  
   
@@ -61,7 +62,7 @@ In modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zei
   
  [!code-cpp[smart_pointers_intro#3](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_3.cpp)]  
   
- Intelligente Zeiger stellen normalerweise eine Möglichkeit für den direkten Zugriff auf ihre Rohzeiger bereit. Intelligente Zeiger der C++-Standardbibliothek haben eine `get` Memberfunktion für diesen Zweck und `CComPtr` besitzt einen öffentlichen `p` Klassenmember. Wenn Sie direkten Zugriff auf den zugrunde liegende Zeiger bereitstellen, können Sie den intelligenten Zeiger verwenden, um Arbeitsspeicher in Ihrem eigenen Code zu verwalten, und Sie können den Rohzeiger weiterhin an Code übergeben, der keine intelligenten Zeiger unterstützt.  
+ Intelligente Zeiger stellen normalerweise eine Möglichkeit für den direkten Zugriff auf ihre Rohzeiger bereit. Intelligente Zeiger der C++-Standardbibliothek haben eine `get` Memberfunktion zu diesem Zweck und `CComPtr` verfügt über eine öffentliche `p` Klassenmember. Wenn Sie direkten Zugriff auf den zugrunde liegende Zeiger bereitstellen, können Sie den intelligenten Zeiger verwenden, um Arbeitsspeicher in Ihrem eigenen Code zu verwalten, und Sie können den Rohzeiger weiterhin an Code übergeben, der keine intelligenten Zeiger unterstützt.  
   
  [!code-cpp[smart_pointers_intro#4](../cpp/codesnippet/CPP/smart-pointers-modern-cpp_4.cpp)]  
   
@@ -72,7 +73,7 @@ In modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zei
  Verwenden Sie vorrangig diese intelligenten Zeiger zum Kapseln von Zeigern auf einfache alte C++-Objekte (Plain Old CLR Objects, POCOs).  
   
 -   `unique_ptr`   
-     Ermöglicht genau einen Besitzer für den zugrunde liegenden Zeiger. Verwenden Sie diesen Zeiger als Standardwahl für POCOs, es sei denn, Sie sind sicher, dass Sie einen `shared_ptr` benötigen. Kann zu einem neuen Besitzer verschoben werden, kann aber nicht kopiert oder freigegeben werden. Ersetzt `auto_ptr`, der veraltet ist. Ist vergleichbar mit `boost::scoped_ptr`. `unique_ptr` ist klein und effizient; die Größe ist ein Zeiger und Rvalue-Referenzen für schnelles Einfügen und Abrufen von C++-Standardbibliothek Auflistungen unterstützt. Headerdatei: `<memory>`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Unique_ptr-Instanzen](../cpp/how-to-create-and-use-unique-ptr-instances.md) und [Unique_ptr-Klasse](../standard-library/unique-ptr-class.md).  
+     Ermöglicht genau einen Besitzer für den zugrunde liegenden Zeiger. Verwenden Sie diesen Zeiger als Standardwahl für POCOs, es sei denn, Sie sind sicher, dass Sie einen `shared_ptr` benötigen. Kann zu einem neuen Besitzer verschoben werden, kann aber nicht kopiert oder freigegeben werden. Ersetzt `auto_ptr`, der veraltet ist. Ist vergleichbar mit `boost::scoped_ptr`. `unique_ptr` ist klein und effizient. die Größe ist ein Zeiger, und Rvalue-Referenzen für schnelles Einfügen und Abrufen von C++-standardbibliotheksauflistungen unterstützt. Headerdatei: `<memory>`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Unique_ptr-Instanzen](../cpp/how-to-create-and-use-unique-ptr-instances.md) und [Unique_ptr-Klasse](../standard-library/unique-ptr-class.md).  
   
 -   `shared_ptr`   
      Intelligenter Zeiger mit Referenzzählung. Verwenden Sie diesen Zeiger, wenn Sie mehreren Besitzern einen Rohzeiger zuweisen möchten. Beispiel: Sie geben eine Kopie eines Zeigers von einem Container zurück, möchten aber das Original behalten. Der Rohzeiger wird erst gelöscht, wenn alle `shared_ptr`-Besitzer den Gültigkeitsbereich verlassen haben oder auf andere Weise nicht mehr Besitzer sind. Die Größe beträgt zwei Zeiger; einen für das Objekt und einen für den freigegebenen Kontrollblock, der den Referenzzähler enthält. Headerdatei: `<memory>`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Shared_ptr-Instanzen](../cpp/how-to-create-and-use-shared-ptr-instances.md) und [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md).  
@@ -99,13 +100,13 @@ In modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zei
  Ähnelt `CComQIPtr` bezüglich der Funktionalität, ist jedoch nicht von ATL-Headern abhängig.  
   
  **Intelligente Zeiger der ATL für POCO-Objekte**  
- Zusätzlich zu den intelligenten Zeigern für COM-Objekte definiert ATL auch intelligente Zeiger sowie Auflistungen von intelligenten Zeigern für einfache alte C++-Objekte. In der klassischen Windows-Programmierung werden diese Typen nützliche Alternativen für C++-Standardbibliothek Sammlungen, insbesondere wenn Codeportabilität nicht erforderlich ist, oder wenn Sie nicht die Programmiermodelle von der C++-Standardbibliothek und die ATL kombinieren möchten  
+ Zusätzlich zu den intelligenten Zeigern für COM-Objekte definiert ATL auch intelligente Zeiger sowie Auflistungen von intelligenten Zeigern für einfache alte C++-Objekte. In der klassischen Windows-Programmierung werden diese Typen nützliche Alternativen zu den C++-Standardbibliothek-Auflistungen, insbesondere wenn Codeportabilität nicht erforderlich ist, oder wenn Sie nicht, kombinieren Sie die Programmiermodelle von der C++-Standardbibliothek und ATL möchten  
   
  [CAutoPtr-Klasse](../atl/reference/cautoptr-class.md)  
  Intelligenter Zeiger, der eindeutigen Besitz erzwingt, indem er den Besitz auf die Kopie überträgt. Vergleichbar mit der veralteten `std::auto_ptr`-Klasse.  
   
  [CHeapPtr-Klasse](../atl/reference/cheapptr-class.md)  
- Intelligenter Zeiger für Objekte, die zugewiesen werden, mit dem C ["malloc"](../c-runtime-library/reference/malloc.md) Funktion.  
+ Intelligenter Zeiger für Objekte, die zugewiesen werden, mit der C [Malloc](../c-runtime-library/reference/malloc.md) Funktion.  
   
  [CAutoVectorPtr-Klasse](../atl/reference/cautovectorptr-class.md)  
  Intelligenter Zeiger für Arrays, die mit `new[]` zugeordnet werden.  
@@ -118,5 +119,5 @@ In modernen C++-Programmierung enthält die Standardbibliothek *intelligente Zei
   
 ## <a name="see-also"></a>Siehe auch  
  [Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C++-Sprachreferenz](../cpp/cpp-language-reference.md)   
+ [C++ Language Reference (C++-Programmiersprachenreferenz)](../cpp/cpp-language-reference.md)   
  [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)   

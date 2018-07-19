@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383828"
 ---
 # <a name="what-is-a-carchive-object"></a>Was ist ein CArchive-Objekt?
 Ein `CArchive` Objekt als typsicherer Pufferung stellt einen Mechanismus bereit Schreib- und Lesezugriffe auf serialisierbare Objekte zu oder von einem `CFile` Objekt. In der Regel die `CFile` -Objekt stellt eine Datenträgerdatei dar; es kann jedoch auch sein einer Arbeitsspeicherdatei (`CSharedFile` Objekt), die Zwischenablage möglicherweise repräsentiert.  

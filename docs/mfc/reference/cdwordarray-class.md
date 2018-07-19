@@ -1,5 +1,5 @@
 ---
-title: CDWordArray Klasse | Microsoft Docs
+title: CDWordArray-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,11 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd3f38a5bd54a2a79d002ff8c533d17c2426b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b06364aeb75ef57d02946a6799e80cf44c21c733
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335704"
 ---
 # <a name="cdwordarray-class"></a>CDWordArray-Klasse
 Unterstützt 32-Bit-Doppelwortarrays.  
@@ -68,7 +69,7 @@ class CDWordArray : public CObject
 ```  
   
 ## <a name="members"></a>Member  
- Die Memberfunktionen von `CDWordArray` ähneln den Memberfunktionen der Klasse [CObArray](../../mfc/reference/cobarray-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CObArray`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo eine `CObject` Zeiger als Funktionsparameter oder Rückgabewert, ersetzen Sie durch eine `DWORD`.  
+ Die Memberfunktionen der `CDWordArray` ähneln den Memberfunktionen der Klasse [CObArray](../../mfc/reference/cobarray-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CObArray`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo ein `CObject` Zeiger als Funktionsparameter oder Rückgabewert, ersetzen Sie durch eine `DWORD`.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -89,11 +90,11 @@ class CDWordArray : public CObject
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Fügt am Ende des Arrays ein Element hinzu; vergrößert das Array bei Bedarf.|  
 |[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Hängt ein anderes Array an das Array an; vergrößert das Array bei Bedarf.|  
 |[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Kopiert ein anderes Array in das Array; vergrößert das Array bei Bedarf.|  
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Gibt einen temporären Verweis auf das Byte innerhalb des Arrays zurück.|  
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Gibt einen temporären Verweis auf das Byte im Array zurück.|  
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Gibt den gesamten nicht verwendeten Arbeitsspeicher über der aktuellen Obergrenze frei.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Gibt den Wert an einem bestimmten Index zurück.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Ruft die Anzahl der Elemente im Array ab.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Ermöglicht den Zugriff auf Elemente im Array. Kann **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Ermöglicht den Zugriff auf Elemente im Array. NULL kann sein.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Ruft die Anzahl der Elemente im Array ab.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Gibt den größten gültigen Index zurück.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Fügt ein Element (oder alle Elemente in einem anderen Array) am angegebenen Index ein.|  
@@ -111,12 +112,12 @@ class CDWordArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CDWordArray` enthält die `IMPLEMENT_SERIAL` -Makro für die Unterstützung von Serialisierung laufzeittypenzugriff und zum Sichern der Elemente. Wenn ein Array von Doppelwort in ein Archiv, entweder mit den überladenen einfügen gespeichert ist ( **<<**) Operator oder mit der `Serialize` Memberfunktion jedes Element ist, was wiederum serialisiert.  
+ `CDWordArray` enthält die `IMPLEMENT_SERIAL` Makro, um Serialisierung und die Sicherung der Elemente zu unterstützen. Wenn ein Array von Doppelwort in ein Archiv, entweder mit den überladenen einfügen gespeichert ist ( **<<**) Operator oder mit der `Serialize` Memberfunktion wird jedes Element ist, was wiederum serialisiert.  
   
 > [!NOTE]
 >  Vor dem Verwenden eines Arrays, verwenden Sie `SetSize`, um dessen Größe festzustellen, und weisen dafür Arbeitsspeicher zu. Wenn Sie `SetSize` nicht verwenden, kann das Hinzufügen von Elementen zu Ihrem Array dazu führen, dass es häufig neu zugeordnet und kopiert wird. Häufige Neuzuordnungen und Kopiervorgänge sind ineffizient und können zu einer Fragmentierung des Arbeitsspeichers führen.  
   
- Wenn Sie einzelne Elemente im Array Ausgabe debuggen müssen, müssen Sie festlegen, dass die Tiefe des der `CDumpContext` Objekt auf 1 oder größer.  
+ Wenn Sie die Ausgabe von einzelnen Elementen im Array debuggen müssen, müssen Sie die Tiefe der Festlegen der `CDumpContext` Objekt auf 1 oder größer.  
   
  Weitere Informationen zur Verwendung von `CDWordArray`, finden Sie im Artikel [Sammlungen](../../mfc/collections.md).  
   

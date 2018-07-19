@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonMiniToolBar Klasse | Microsoft Docs
+title: CMFCRibbonMiniToolBar-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852886"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar-Klasse
 Implementiert eine kontextbezogene Popup-Symbolleiste.  
@@ -55,7 +56,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |Name|Beschreibung|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CreateObject`|Wird vom Framework verwendet, um eine dynamische Instanz dieses Klassentyps zu erstellen.|  
-|`CMFCRibbonMiniToolBar::GetThisClass`|Durch das Framework verwendet wird, um einen Zeiger auf die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
+|`CMFCRibbonMiniToolBar::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||  
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Überschreibt `CMFCPopupMenu::IsRibbonMiniToolBar`.)|  
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Legt die Liste der auf der Symbolleiste anzuzeigenden Befehle fest.|  
@@ -97,17 +98,17 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pRibbonBar`  
- Die menübandleiste, die für die anzuzeigenden Schaltflächen die Minisymbolleiste sucht.  
+ [in] *pRibbonBar*  
+ Die menübandleiste, die die Minisymbolleiste für die anzuzeigenden Schaltflächen sucht.  
   
- [in] `lstCommands`  
- Die Liste der Befehle, die auf die Minisymbolleiste angezeigt werden. Alle menübandkategorien werden durchsucht, um die zugehörigen Schaltflächen zu suchen.  
+ [in] *LstCommands*  
+ Die Liste der Befehle aus, um auf die Minisymbolleiste angezeigt werden. Alle menübandkategorien werden durchsucht, um die zugeordneten Schaltflächen zu suchen.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Funktion Festlegen der Liste der Befehle in die Minisymbolleiste angezeigt werden.  
+ Verwenden Sie diese Funktion, Festlegen der Liste der Befehle in die Minisymbolleiste angezeigt werden.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die `SetCommands` Methode der `CMFCRibbonMiniToolBar` Klasse. Dieser Codeausschnitt ist Teil der [MS Office 2007 Demobeispiel für](../../visual-cpp-samples.md).  
+ Im folgenden Beispiel wird veranschaulicht, wie die `SetCommands` Methode der `CMFCRibbonMiniToolBar` Klasse. Dieser Codeausschnitt ist Teil der [MS Office 2007-Demo-Beispiel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
@@ -121,14 +122,14 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `x`  
+ [in] *x*  
  Gibt die horizontale Position der Minisymbolleiste in Bildschirmkoordinaten.  
   
- [in] `y`  
+ [in] *y*  
  Gibt die vertikale Position der Minisymbolleiste in Bildschirmkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Minisymbolleiste erfolgreich angezeigt wurde. andernfalls `FALSE`.  
+ True, wenn die Minisymbolleiste erfolgreich angezeigt wurde. andernfalls "false".  
   
 ##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
  Zeigt die Minisymbolleiste zusammen mit einem Kontextmenü an.  
@@ -142,23 +143,23 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `x`  
+ [in] *x*  
  Gibt die horizontale Position des Kontextmenüs in Bildschirmkoordinaten.  
   
- [in] `y`  
+ [in] *y*  
  Gibt die vertikale Position des Kontextmenüs in Bildschirmkoordinaten.  
   
- [in] `uiMenuResID`  
- Gibt die Ressourcen-ID des Kontextmenüs angezeigt.  
+ [in] *UiMenuResID*  
+ Gibt an, die Ressourcen-ID des Kontextmenüs angezeigt.  
   
- [in] `pWndOwner`  
- Identifiziert das Fenster, das Nachrichten aus dem Kontextmenü empfängt.  
+ [in] *pWndOwner*  
+ Gibt das Fenster, das Nachrichten, aus dem Kontextmenü empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn im Kontextmenü den Befehl erfolgreich angezeigt wurde. andernfalls `FALSE`.  
+ True, wenn das Kontextmenü erfolgreich angezeigt wurde. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Funktion, um eine Minisymbolleiste anzuzeigen, die ein Kontextmenü enthält. Das Kontextmenü ist positionierte 15 Pixel unterhalb der Minisymbolleiste an.  
+ Verwenden Sie diese Funktion, um eine Minisymbolleiste anzuzeigen, die ein Kontextmenü angezeigt hat. Im Kontextmenü ist positionierte 15 Pixel unterhalb der Minisymbolleiste.  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  

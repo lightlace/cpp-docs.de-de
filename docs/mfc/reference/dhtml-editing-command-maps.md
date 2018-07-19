@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69630d00b09534d97d5e46a8400b73f0e9d85b24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1d040f3cb4c9bf8e1f3afc0e8213cd4513fc8571
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123369"
 ---
 # <a name="dhtml-editing-command-maps"></a>Befehlszuordnungen für DHTML-Bearbeitungsbefehle
 Die folgenden Makros können verwendet werden, um DHTML-Bearbeitungsbefehle in zuordnen [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-abgeleitete Klassen. Ein Beispiel ihrer Verwendung finden Sie unter [HTMLEdit-Beispiel](../../visual-cpp-samples.md).  
@@ -41,7 +42,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `className`  
+ *Klassenname*  
  Der Name der Klasse.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -63,13 +64,13 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `className`  
+ *Klassenname*  
  Der Name der Klasse mit der Bearbeitung DHTML-Befehl-Zuordnung. Diese Klasse sollte direkt oder indirekt aus ableiten [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) und enthalten die [DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap) Makro innerhalb der Klassendefinition.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Klasse, um die Befehle zum Bearbeiten von HTML-Benutzeroberflächenbefehlen zuordnen eine Bearbeitung DHTML-Befehl-Karte hinzugefügt.  
   
- Ort der `BEGIN_DHTMLEDITING_CMDMAP` Makros in der Klasse Implementierungsdatei (.cpp), gefolgt von [DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry) Makros für die Befehle, die die Klasse zugeordnet ist (z. B. von **ID_EDIT_CUT** zu  **IDM_CUT**). Verwenden der [begin_dhtmlediting_cmdmap](#end_dhtmlediting_cmdmap) Makro auf das Ende der ereigniszuordnung zu markieren.  
+ Die Klasse Implementierungsdatei (.cpp) gefolgt von der BEGIN_DHTMLEDITING_CMDMAP-Makro versehen [DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry) Makros für die Befehle, die die Klasse ist (z. B. von ID_EDIT_CUT zu IDM_CUT) zuordnen. Verwenden der [begin_dhtmlediting_cmdmap](#end_dhtmlediting_cmdmap) Makro auf das Ende der ereigniszuordnung zu markieren.  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxhtml.h  
@@ -98,11 +99,11 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdID`  
- Die Befehls-ID (z. B. **ID_EDIT_COPY**).  
+ *cmdID*  
+ Die Befehls-ID (z. B. ID_EDIT_COPY).  
   
- `dhtmlcmdID`  
- Die HTML-Befehl aus, um die Bearbeitung `cmdID` zugeordnet (z. B. **IDM_COPY**).  
+ *dhtmlcmdID*  
+ Die HTML-Befehl aus, um die Bearbeitung *CmdID* (z. B. IDM_COPY) zugeordnet.  
   
 ### <a name="example"></a>Beispiel  
  Finden Sie unter [HTMLEdit-Beispiel](../../visual-cpp-samples.md).  
@@ -118,13 +119,13 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdID`  
- Die Befehls-ID (z. B. **ID_EDIT_COPY**).  
+ *cmdID*  
+ Die Befehls-ID (z. B. ID_EDIT_COPY).  
   
- `dhtmlcmdID`  
- Die HTML-Befehl aus, um die Bearbeitung `cmdID` zugeordnet (z. B. **IDM_COPY**).  
+ *dhtmlcmdID*  
+ Die HTML-Befehl aus, um die Bearbeitung *CmdID* (z. B. IDM_COPY) zugeordnet.  
   
- `member_func_name`  
+ *member_func_name*  
  Der Name der Nachrichtenhandler Funktion, die der Befehl zugeordnet ist.  
   
 ### <a name="example"></a>Beispiel  
@@ -141,14 +142,14 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdID`  
- Die Befehls-ID (z. B. **ID_EDIT_COPY**).  
+ *cmdID*  
+ Die Befehls-ID (z. B. ID_EDIT_COPY).  
   
- `dhtmlcmdID`  
- Die HTML-Befehl aus, um die Bearbeitung `cmdID` zugeordnet (z. B. **IDM_COPY**).  
+ *dhtmlcmdID*  
+ Die HTML-Befehl aus, um die Bearbeitung *CmdID* (z. B. IDM_COPY) zugeordnet.  
   
- `elemType`  
- Der Elementtyp der Schnittstelle an; einer der **AFX_UI_ELEMTYPE_NORMAL**, **AFX_UI_ELEMTYPE_CHECKBOX**, oder **AFX_UI_ELEMTYPE_RADIO**.  
+ *elemType*  
+ Der Elementtyp der Schnittstelle an; einer der AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX oder AFX_UI_ELEMTYPE_RADIO.  
   
 ### <a name="example"></a>Beispiel  
  Finden Sie unter [HTMLEdit-Beispiel](../../visual-cpp-samples.md).  
@@ -164,17 +165,17 @@ DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cmdID`  
- Die Befehls-ID (z. B. **ID_EDIT_COPY**).  
+ *cmdID*  
+ Die Befehls-ID (z. B. ID_EDIT_COPY).  
   
- `dhtmlcmdID`  
- Die HTML-Befehl aus, um die Bearbeitung `cmdID` zugeordnet (z. B. **IDM_COPY**).  
+ *dhtmlcmdID*  
+ Die HTML-Befehl aus, um die Bearbeitung *CmdID* (z. B. IDM_COPY) zugeordnet.  
   
- `member_func_name`  
+ *member_func_name*  
  Der Name der Nachrichtenhandler Funktion, die der Befehl zugeordnet ist.  
   
- `elemType`  
- Der Elementtyp der Schnittstelle an; einer der **AFX_UI_ELEMTYPE_NORMAL**, **AFX_UI_ELEMTYPE_CHECKBOX**, oder **AFX_UI_ELEMTYPE_RADIO**.  
+ *elemType*  
+ Der Elementtyp der Schnittstelle an; einer der AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX oder AFX_UI_ELEMTYPE_RADIO.  
   
 ### <a name="example"></a>Beispiel  
  Finden Sie unter [HTMLEdit-Beispiel](../../visual-cpp-samples.md).  

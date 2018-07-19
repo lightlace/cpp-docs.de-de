@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d2d68aedaf1d5560c39971e9dd5f74b4492ac6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3bde85e64fe8593ec2637e767e8c3c70d3b8200
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038076"
 ---
 # <a name="cmutex-class"></a>CMutex-Klasse
 Stellt einen "Mutex" dar – ein Synchronisierungsobjekt, das Threads den einander ausschließenden Zugriff auf eine Ressource ermöglicht.  
@@ -73,13 +74,13 @@ CMutex(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bInitiallyOwn`  
+ *bInitiallyOwn*  
  Gibt an, ob der Thread erstellen die `CMutex` Objekt ursprünglich hat Zugriff auf die Ressource, die vom Mutex gesteuert.  
   
- `lpszName`  
- Name des `CMutex`-Objekts. Wenn eine andere Mutex mit dem gleichen Namen vorhanden ist, `lpszName` muss angegeben werden, wenn das Objekt über Prozessgrenzen hinweg verwendet werden soll. Wenn **NULL**, wird der Mutex unbenannte sein. Der Name ein vorhandenes Mutex übereinstimmt, der Konstruktor erstellt ein neues `CMutex` Objekt das Mutex mit diesem Namen verweist. Wenn der Name einer vorhandenen Synchronisierungsobjekt, die nicht auf ein Mutex ist übereinstimmt, schlägt die Erstellung fehl.  
+ *Wert*  
+ Name des `CMutex`-Objekts. Wenn eine andere Mutex mit dem gleichen Namen vorhanden ist, *Wert* muss angegeben werden, wenn das Objekt über Prozessgrenzen hinweg verwendet werden soll. Wenn **NULL**, wird der Mutex unbenannte sein. Der Name ein vorhandenes Mutex übereinstimmt, der Konstruktor erstellt ein neues `CMutex` Objekt das Mutex mit diesem Namen verweist. Wenn der Name einer vorhandenen Synchronisierungsobjekt, die nicht auf ein Mutex ist übereinstimmt, schlägt die Erstellung fehl.  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  Die Sicherheitsattribute für den Mutex-Objekt. Eine vollständige Beschreibung dieser Struktur finden Sie unter [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) im Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  

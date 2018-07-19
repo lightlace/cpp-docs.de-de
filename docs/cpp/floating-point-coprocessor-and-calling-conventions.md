@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410800"
 ---
 # <a name="floating-point-coprocessor-and-calling-conventions"></a>Gleitkomma-Coprozessor und Aufrufkonventionen
 Wenn Sie Assemblyroutinen für den Fließkomma-Koprozessor Assembly schreiben sind, Sie müssen beibehalten fließkommasteuerwort und den koprozessorstapel bereinigen, es sei denn, die Sie zurückgeben einer **"float"** oder **doppelte** Wert (die die Funktion in St(0) zurückgeben sollte.  

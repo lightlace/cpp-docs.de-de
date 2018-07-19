@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366808"
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>Konfigurieren von Visual C++ für die 64-Bit-X64 Ziele
 

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090724"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset-Klasse
 Abruft, und Bearbeiten von Zeilen, die auf Daten in einer Massenoperation zu arbeiten, indem mehrere Zeilenhandles mit einem einzigen Aufruf abgerufen.  

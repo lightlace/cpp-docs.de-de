@@ -1,5 +1,5 @@
 ---
-title: Entwerfen von Auflistung und Enumerator-Schnittstellen (ATL) | Microsoft Docs
+title: Entwerfen von Auflistungs- und Enumeratorschnittstellen (ATL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05649cce0e80af6f54327545cef7b663d69babf9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab8b42804ca892c80971928b869e09ccdf479d68
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851326"
 ---
-# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Entwurfsprinzipien für Sammlung und den Enumerator-Schnittstellen
-Es gibt verschiedene Entwurfsprinzipien für jeden Typ der Schnittstelle:  
+# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Entwurfsprinzipien für Auflistungs- und Enumeratorschnittstellen
+Es gibt verschiedene Entwurfsprinzipien für jede Art von Schnittstelle:  
   
--   Stellt eine sammlungsschnittstelle *zufällige* Zugriff auf eine *einzelne* Element in der Auflistung über die **Element** -Methode, können Sie ermitteln, wie viele Elemente in der Auflistung werden Clients über die **Anzahl** -Eigenschaft, und oft ermöglicht es Clients, hinzufügen und Entfernen von Elementen.  
+-   Stellt eine sammlungsschnittstelle *zufällige* Zugriff auf eine *einzelne* Element in der Auflistung über die `Item` -Methode, sie können Clients zu ermitteln, wie viele Elemente in der Auflistung über sind die `Count` Eigenschaft, und häufig ermöglicht Clients, Elemente hinzufügen und entfernen.  
   
--   Stellt eine Enumeratorschnittstelle *serielle* Zugriff auf *mehrere* Elemente in einer Auflistung, es kann keine des Clients zu ermitteln, wie viele Elemente in der Sammlung befinden (bis der Enumerator zurückgeben beendet Elemente), und es bietet keine Möglichkeit zum Hinzufügen oder Entfernen von Elementen.  
+-   Eine Enumeratorschnittstelle bereitstellt, *seriellen* Zugriff auf *mehrere* Elemente in einer Auflistung, es keine ermöglichen dem Client zu ermitteln, wie viele Elemente in der Auflistung sind (bis der Enumerator zurückgeben wird beendet. Elemente), und es bietet keine Möglichkeit zum Hinzufügen oder Entfernen von Elementen.  
   
- Jeder Typ der Schnittstelle spielt eine andere Rolle Zugriff auf die Elemente in einer Sammlung bereitstellen.  
+ Jede Art von Schnittstelle spielt eine andere Rolle bei der Bereitstellung Zugriff auf die Elemente in einer Auflistung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Auflistungen und-Enumerationen](../atl/atl-collections-and-enumerators.md)

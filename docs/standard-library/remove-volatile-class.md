@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1cd2b4882c4b5e62a2f6574b3011b74747e412b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e9a46294156c1f7beffecb997569221a388b3394
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957310"
 ---
 # <a name="removevolatile-class"></a>remove_volatile-Klasse
 
@@ -39,11 +40,11 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Die zu ändernde Typ.
+*T* der zu ändernde Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz von `remove_volatile<T>` enthält einen geänderten Typ, der `T1` ist, wenn `T` das Format `volatile T1` hat; andernfalls `T`.
+Eine Instanz von `remove_volatile<T>` enthält einen geänderten Typ, der `T1` beim *T* hat das Format `volatile T1`, andernfalls *T*.
 
 ## <a name="example"></a>Beispiel
 

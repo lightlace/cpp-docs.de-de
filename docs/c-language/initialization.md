@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382847"
 ---
 # <a name="initialization"></a>Initialisierung
 Ein "Initialisierer" ist ein Wert oder eine Sequenz von den Werten, die der Variable zugewiesen werden, die deklariert wird. Sie können eine Variable auf einen Anfangswert festlegen, indem Sie einen Initialisierer auf den Deklarator in der Variablendeklaration anwenden. Der Wert oder die Werte des Initialisierers werden der Variable zugewiesen.  

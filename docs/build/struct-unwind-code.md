@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390098"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 Das entladungscode-Array wird verwendet, um die Abfolge der Vorgänge im Prolog, die Einfluss auf die nicht flüchtigen Register und RSP aufzuzeichnen. Jedes Codeelement weist das folgende Format:  

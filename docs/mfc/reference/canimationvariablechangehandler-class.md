@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e35fc33b26fa6bead73458a46d7c4edee1cf136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58646efaaa0087be2bd73e45acd8ade4a16e9767
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957090"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler-Klasse
 Implementiert einen Rückruf, der von der Animations-API aufgerufen wird, wenn sich der Wert einer Animationsvariablen ändert.  
@@ -76,16 +77,16 @@ IFACEMETHOD(OnValueChanged) (
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `storyboard`  
+ *Storyboard*  
  Das Storyboard, das die Variable animiert.  
   
- `variable`  
+ *Variable*  
  Die Animationsvariable, die aktualisiert wurde.  
   
- `newValue`  
+ *newValue*  
  Der neue Wert.  
   
- `previousValue`  
+ *previousValue*  
  Der vorherige Wert.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -99,7 +100,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pAnimationController`  
+ *pAnimationController*  
  Ein Zeiger auf den Animationscontroller, der Ereignisse empfängt.  
   
 ## <a name="see-also"></a>Siehe auch  

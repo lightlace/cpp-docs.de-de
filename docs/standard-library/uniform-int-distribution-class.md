@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f59e7f6595d89b0078e650ab1ce8a36139f03486
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d982aee3f5542e8bfcff1da96ce3e70775ead5fe
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961577"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution-Klasse
 
@@ -80,7 +81,7 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*IntType* der Integer-Ergebnistyp standardmäßig `int`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*IntType* standardmäßig der ganzzahligen Ergebnistyp **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -199,17 +200,20 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*eine* die untere Grenze für den zufälligen Werten (einschließlich).
+*a*  
+Die Untergrenze (einschließend) für Zufallswerte.
 
-*b* die obere Grenze für den zufälligen Werten (einschließlich).
+*b*  
+Die Obergrenze (ausschließend) für Zufallswerte.
 
-*Parm* der `param_type` Struktur für die Verteilung verwendete Parameterstruktur.
+*parm*  
+Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
 
 **Vorbedingung:** `a ≤ b`
 
-Mit dem ersten Konstruktor wird ein Objekt erstellt, in dessen gespeichertem `a`-Wert der Wert *a* enthalten ist und dessen gespeicherter `b`-Wert den Wert *b* enthält.
+Der erste Konstruktor konstruiert ein Objekt, dessen gespeicherte *eine* Wert enthält den Wert *eine* und dessen gespeicherter *b* Wert enthält den Wert *b*.
 
 Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parameter aus *parm* initialisiert werden. Sie können die aktuellen Parameter einer vorhandenen Verteilung abrufen und festlegen, indem Sie die Memberfunktion `param()` aufrufen.
 
@@ -232,11 +236,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*eine* die untere Grenze für den zufälligen Werten (einschließlich).
+*a*  
+Die Untergrenze (einschließend) für Zufallswerte.
 
-*b* die obere Grenze für den zufälligen Werten (einschließlich).
+*b*  
+Die Obergrenze (ausschließend) für Zufallswerte.
 
-*Rechte* der `param_type` zu vergleichende Objekt.
+*right*  
+Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 

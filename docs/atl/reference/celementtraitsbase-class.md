@@ -1,5 +1,5 @@
 ---
-title: CElementTraitsBase Klasse | Microsoft Docs
+title: CElementTraitsBase-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,14 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a0b9f3945d9bcfa0c77855c94ec7247cb9804cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b70ae03c15fcdee4510e25815e516c3e17eb1a2a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879418"
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase-Klasse
-Diese Klasse bietet standardmäßig kopieren und Verschieben von Methoden für eine Auflistungsklasse.  
+Diese Klasse bietet standardmäßige kopieren und verschieben die Methoden, damit eine Auflistungsklasse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +39,7 @@ class CElementTraitsBase
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
+ *T*  
  Der Typ der Daten in der Auflistung gespeichert werden.  
   
 ## <a name="members"></a>Member  
@@ -47,18 +48,18 @@ class CElementTraitsBase
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CElementTraitsBase::INARGTYPE](#inargtype)|Der Datentyp zum Hinzufügen von Elementen auf das Klassenobjekt Auflistung verwendet werden soll.|  
-|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Der Datentyp zum Abrufen von Elementen aus der Auflistung-Klassenobjekt verwendet werden soll.|  
+|[CElementTraitsBase::INARGTYPE](#inargtype)|Der Datentyp, zum Hinzufügen von Elementen für das Objekt der Sammlung-Klasse verwendet werden soll.|  
+|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Der Datentyp für das Abrufen von Elementen aus dem Auflistungsobjekt-Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CElementTraitsBase::CopyElements](#copyelements)|Rufen Sie diese Methode, um ein Klassenobjekt Auflistung gespeicherten Elemente kopieren.|  
-|[CElementTraitsBase::RelocateElements](#relocateelements)|Rufen Sie diese Methode, um ein Klassenobjekt Auflistung gespeicherten Elemente zu verschieben.|  
+|[CElementTraitsBase::CopyElements](#copyelements)|Rufen Sie diese Methode zum Kopieren von Elementen in einem Auflistungsobjekt-Klasse gespeichert.|  
+|[CElementTraitsBase::RelocateElements](#relocateelements)|Rufen Sie diese Methode, um in einem Objekt der Klasse Auflistung gespeicherten Elemente zu verschieben.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Basisklasse definiert Methoden zum Kopieren und Verschieben von Elementen in einer Auflistungsklasse. Es wird verwendet, durch die Klassen [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), und [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
+ Diese Basisklasse definiert Methoden zum Kopieren und Verschieben von Elementen in eine Auflistungsklasse. Es wird verwendet, durch die Klassen [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), und [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
   
  Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
@@ -66,7 +67,7 @@ class CElementTraitsBase
  **Header:** atlcoll.h  
   
 ##  <a name="copyelements"></a>  CElementTraitsBase::CopyElements  
- Rufen Sie diese Methode, um ein Klassenobjekt Auflistung gespeicherten Elemente kopieren.  
+ Rufen Sie diese Methode zum Kopieren von Elementen in einem Auflistungsobjekt-Klasse gespeichert.  
   
 ```
 static void CopyElements(
@@ -76,17 +77,17 @@ static void CopyElements(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDest`  
+ *pDest*  
  Zeiger auf das erste Element, das die kopierten Daten erhält.  
   
- `pSrc`  
+ *pSrc*  
  Zeiger auf das erste Element zu kopieren.  
   
- `nElements`  
+ *nElements*  
  Die Anzahl der zu kopierenden Elemente.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Quell- und Zielschemas Elemente sollten sich nicht überschneiden.  
+ Die Quelle und Ziel-Elemente sollten sich nicht überschneiden.  
   
 ##  <a name="inargtype"></a>  CElementTraitsBase::INARGTYPE  
  Der Datentyp für Elemente der Auflistung hinzugefügt werden soll.  
@@ -96,14 +97,14 @@ typedef const T& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CElementTraitsBase::OUTARGTYPE  
- Der Datentyp zum Abrufen von Elementen aus der Auflistung verwendet werden soll.  
+ Der Datentyp, zum Abrufen von Elementen aus der Auflistung verwendet werden soll.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
 ##  <a name="relocateelements"></a>  CElementTraitsBase::RelocateElements  
- Rufen Sie diese Methode, um ein Klassenobjekt Auflistung gespeicherten Elemente zu verschieben.  
+ Rufen Sie diese Methode, um in einem Objekt der Klasse Auflistung gespeicherten Elemente zu verschieben.  
   
 ```
 static void RelocateElements(
@@ -113,17 +114,17 @@ static void RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pDest`  
+ *pDest*  
  Zeiger auf das erste Element, das die verschobenen Daten erhält.  
   
- `pSrc`  
- Zeiger auf das erste Element zu verschieben.  
+ *pSrc*  
+ Zeiger auf das erste Element, zu verschieben.  
   
- `nElements`  
+ *nElements*  
  Die Anzahl der Elemente zu verschieben.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ruft [Memmove](../../c-runtime-library/reference/memmove-wmemmove.md), dies ist ausreichend für die meisten Datentypen. Wenn die Objekte, die verschobene Zeiger auf ihre eigenen Member enthalten, müssen diese Methode außer Kraft gesetzt werden.  
+ Diese Methode ruft [Memmove](../../c-runtime-library/reference/memmove-wmemmove.md), dies ist ausreichend für die meisten Datentypen. Wenn die Objekte, die verschoben werden Zeiger auf ihre eigenen Member enthalten, müssen diese Methode außer Kraft gesetzt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

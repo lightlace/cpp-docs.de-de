@@ -1,5 +1,5 @@
 ---
-title: Argumentdefinitionen | Microsoft Docs
+title: Argumentdefinitionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca012d7b391e011d9658b0b74e0f4433d5dc9fd4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a401caad212978372bcb02b412fa8a9648b7170
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943968"
 ---
 # <a name="argument-definitions"></a>Argumentdefinitionen
 Argumente im Prototyp:  
   
-```  
+```cpp 
   
 int main( int argc, char* argv[], char* envp[]);
 int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);  
@@ -35,27 +36,27 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
   
  Mit den genannten Argumenten können Sie einfache Befehlszeilenanalysen von Argumenten ausführen und optional auf Umgebungsvariablen zugreifen. Die Argumentdefinitionen sind wie folgt:  
   
- `argc`  
- Eine ganze Zahl, die die Anzahl von Argumenten enthält, die in `argv` folgen. Der `argc`-Parameter ist immer größer als oder gleich 1.  
+ *argc*  
+ Eine ganze Zahl, die die Anzahl der Argumente, die enthält in folgen *Argv*. Die *Argc* Parameter ist immer größer als oder gleich 1.  
   
- `argv`  
- Ein Array von Zeigern auf Zeichenfolgen, die auf NULL enden und von den Benutzern des Programms eingegebene Befehlszeilenargumente darstellen. Gemäß der Konvention `argv` **[0]** ist der Befehl, mit denen das Programm aufgerufen wird, `argv` **[1]** ist die erste Befehlszeilenargument usw., bis `argv`  **[**`argc`**]**, also immer **NULL**. Finden Sie unter [Anpassen der Befehlszeilenverarbeitung](../cpp/customizing-cpp-command-line-processing.md) Informationen zum Unterdrücken der befehlszeilenverarbeitung.  
+ *argv*  
+ Ein Array von Zeigern auf Zeichenfolgen, die auf NULL enden und von den Benutzern des Programms eingegebene Befehlszeilenargumente darstellen. Gemäß der Konvention `argv` **[0]** ist der Befehl, mit denen das Programm aufgerufen wird, `argv` **[1]** ist das erste Befehlszeilenargument, und So weiter, bis `argv`  **[**`argc`**]**, die immer NULL ist. Finden Sie unter [Anpassen der Befehlszeilenverarbeitung](../cpp/customizing-cpp-command-line-processing.md) Informationen zum Unterdrücken der befehlszeilenverarbeitung.  
   
- Das erste Befehlszeilenargument ist immer `argv` **[1]** und der letzte ist `argv` **[** `argc` - 1 **]**.  
+ Das erste Befehlszeilenargument ist immer `argv` **[1]** und das letzte ist `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
->  Gemäß der Konvention ist `argv`**[0]** der Befehl, mit dem das Programm aufgerufen wird.  Allerdings ist es möglich, einen Prozess mithilfe erzeugen [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) und bei Verwendung der ersten und zweiten Arguments (`lpApplicationName` und `lpCommandLine`), `argv` **[0]** möglicherweise nicht die Namen der ausführbaren Datei; Verwenden Sie [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) Namen der ausführbaren Datei und den vollqualifizierten Pfad abrufen.  
+>  Gemäß der Konvention ist `argv`**[0]** der Befehl, mit dem das Programm aufgerufen wird.  Es ist jedoch möglich, einen Prozess mit [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) und bei der Verwendung der ersten und zweiten Argument (`lpApplicationName` und `lpCommandLine`), `argv` **[0]** möglicherweise nicht die Name der ausführbaren Datei; Verwenden Sie [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) Name der ausführbaren Datei und den vollständig qualifizierten Pfad abrufen.  
   
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- `envp`  
- In Microsoft C++ wird das `envp`-Array verwendet, das eine verbreitete Erweiterung in vielen UNIX-Systemen ist. Es ist ein Zeichenfolgenarray, das die Variablen darstellt, die in der Benutzerumgebung festgelegt werden. Dieses Array wird beendet, indem eine **NULL** Eintrag. Sie können deklariert werden, als ein Array von Zeigern auf **Char (Char** \*Envp []**)** oder als Zeiger auf Zeiger **Char (Char** \* \* Envp **)**. Wenn das Programm **"wmain"** anstelle von **main**, verwenden Sie die `wchar_t` -Datentyp anstelle von `char`. Der Umgebungsblock übergeben **main** und **"wmain"** ist eine "fixierte" Kopie der aktuellen Umgebung. Wenn Sie anschließend die Umgebung durch einen Aufruf von ändern **Putenv** oder `_wputenv`, der aktuellen Umgebung (wie vom `getenv` / `_wgetenv` und die `_environ` /  `_wenviron` Variable) ändern, aber der verweist Envp Block wird nicht ändert. Finden Sie unter [Anpassen der Befehlszeilenverarbeitung](../cpp/customizing-cpp-command-line-processing.md) Informationen zum Unterdrücken der umgebungsverarbeitung. Dieses Argument ist in C ANSI-kompatibel, aber nicht in C++.  
+ *envp*  
+ Die *Envp* Array, das eine verbreitete Erweiterung in vielen UNIX-Systemen ist, wird in Microsoft C++ verwendet. Es ist ein Zeichenfolgenarray, das die Variablen darstellt, die in der Benutzerumgebung festgelegt werden. Das Array wird mit einem NULL-Eintrag beendet. Sie können deklariert werden, als ein Array von Zeigern auf **Char (Char** \*Envp []**)** oder als Zeiger auf Zeiger **Char (Char** \* \* Envp **)**. Wenn das Programm **"wmain"** anstelle von **main**, verwenden Sie die **"wchar_t"** -Datentyp anstelle von **Char**. Der Umgebungsblock, die an **main** und **Wmain** ist eine "fixierte" Kopie der aktuellen Umgebung. Wenn Sie später, die Umgebung durch einen Aufruf von ändern **Putenv** oder `_wputenv`, der aktuellen Umgebung (wie vom `getenv` / `_wgetenv` und `_environ` /  `_wenviron` Variablen) wird die Änderung, aber der Block verweist Envp wird nicht geändert. Finden Sie unter [Anpassen der Befehlszeilenverarbeitung](../cpp/customizing-cpp-command-line-processing.md) Informationen zum Unterdrücken der umgebungsverarbeitung. Dieses Argument ist in C ANSI-kompatibel, aber nicht in C++.  
   
 **Ende Microsoft-spezifisch**  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die `argc`, `argv`, und `envp` Argumente **main**:  
+ Das folgende Beispiel zeigt, wie Sie mit der *Argc*, *Argv*, und *Envp* Argumente **main**:  
   
-```  
+```cpp 
 // argument_definitions.cpp  
 // compile with: /EHsc  
 #include <iostream>  

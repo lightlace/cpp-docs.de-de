@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8df4b584a4e8b0ef940d5934a5968037427c607d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931813"
 ---
 # <a name="handling-tool-tip-notifications"></a>Behandeln von QuickInfo-Benachrichtigungen
-Geben Sie bei der `TBSTYLE_TOOLTIPS` Stil, die Symbolleiste erstellt und verwaltet ein QuickInfo-Steuerelement. Eine QuickInfo ist ein kleines Popupfenster, das eine Textzeile, beschreibt eine Symbolleisten-Schaltfläche enthält. Die QuickInfo wird ausgeblendet, erscheint nur, wenn der Benutzer fügt den Cursor auf einer Symbolleisten-Schaltfläche und bleibt es zumeist Sekunde. Die QuickInfo wird angezeigt, in der Nähe des Cursors.  
+Geben Sie bei der **TBSTYLE_TOOLTIPS** Stil, die Symbolleiste erstellt und verwaltet ein QuickInfo-Steuerelement. Eine QuickInfo ist ein kleines Popupfenster, das eine Textzeile, beschreibt eine Symbolleisten-Schaltfläche enthält. Die QuickInfo wird ausgeblendet, erscheint nur, wenn der Benutzer fügt den Cursor auf einer Symbolleisten-Schaltfläche und bleibt es zumeist Sekunde. Die QuickInfo wird angezeigt, in der Nähe des Cursors.  
   
  Bevor die QuickInfo angezeigt wird, die **TTN_NEEDTEXT** Benachrichtigung auf der Symbolleiste Besitzerfenster gesendet, um den beschreibenden Text für die Schaltfläche abzurufen. Wenn die Symbolleiste Besitzerfenster ist eine `CFrameWnd` Fenster Tool Tipps ohne zusätzlichen Aufwand, angezeigt werden, da `CFrameWnd` verfügt über einen Standardhandler für die **TTN_NEEDTEXT** Benachrichtigung. Wenn die Symbolleiste Besitzerfenster nicht abgeleitet ist `CFrameWnd`, z. B. ein Dialogfeld oder Formular anzeigen, müssen Sie Hinzufügen eines Eintrags zur meldungszuordnung Ihres Besitzerfensters und geben Sie eine Benachrichtigung-Ereignishandler in der meldungszuordnung. Der Eintrag meldungszuordnung Ihres Besitzerfensters lautet wie folgt:  
   

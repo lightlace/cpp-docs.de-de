@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877409"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Übertragen einer Farbe eines Bilds auf andere Elemente (Bildbearbeitung für Symbole)
 Die **Farbe auswählen**, oder der Farbe-Pickup Tool wird jede Farbe auf das Bild der aktuellen Vordergrund- oder Hintergrundfarbe, je nachdem, ob Sie links oder auf der rechten Maustaste drücken. Zum Abbrechen der **Farbe auswählen** -tool, und wählen Sie ein anderes Tool.  

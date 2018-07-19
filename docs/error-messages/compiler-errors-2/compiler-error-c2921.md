@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249051"
 ---
 # <a name="compiler-error-c2921"></a>Compilerfehler C2921
 Neudefinition: 'class': Klassenvorlage oder generisch wird als 'type' neu deklariert  

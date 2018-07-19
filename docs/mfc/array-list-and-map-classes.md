@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345292"
 ---
 # <a name="array-list-and-map-classes"></a>Klassen für Arrays, Listen und Zuordnungen
 Für die Behandlung von Aggregaten von Daten, die Klassenbibliothek bietet eine Gruppe von Auflistungsklassen, arrays, Listen und Zuordnungen –, die eine Vielzahl von Objekt und die vordefinierten Typen aufnehmen kann. Die Sammlungen werden dynamisch angepasst. Diese Klassen können in jedem Programm verwendet werden, ob für Windows oder nicht geschrieben. Allerdings sind sie besonders hilfreich für die Implementierung der Datenstrukturen, die Document-Klassen in das Anwendungsframework definieren. Sie können spezielle Auflistungsklassen unmittelbar von diesen ableiten, oder Sie können basierend auf der Vorlagenklassen erstellen. Weitere Informationen zu diesen Vorgehensweisen finden Sie im Artikel [Sammlungen](../mfc/collections.md). Eine Liste der Auflistung Vorlagenklassen, finden Sie im Artikel [Vorlagenklassen für Arrays, Listen und Zuordnungen](../mfc/template-classes-for-arrays-lists-and-maps.md).  

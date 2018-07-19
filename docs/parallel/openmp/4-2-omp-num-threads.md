@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687646"
 ---
 # <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 Die **OMP_NUM_THREADS** -Umgebungsvariablen angegeben wird die Standardanzahl von Threads zur Verwendung während der Ausführung, sofern diese Anzahl durch den Aufruf nicht explizit geändert wird die **Omp_set_num_threads** Bibliotheksroutine oder ein expliziter **Num_threads** -Klausel für eine **parallele** Richtlinie.  

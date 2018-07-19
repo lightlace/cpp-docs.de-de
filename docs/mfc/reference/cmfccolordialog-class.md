@@ -1,5 +1,5 @@
 ---
-title: CMFCColorDialog Klasse | Microsoft Docs
+title: CMFCColorDialog-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,14 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb3a2bce257717c695c1458b12f3e6d4f11b9d7a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849736"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog-Klasse
-Die `CMFCColorDialog` Klasse stellt ein Farbauswahl-Dialogfeld.  
+Die `CMFCColorDialog` Klasse stellt ein Dialogfeld zur Farbauswahl dar.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,36 +61,36 @@ class CMFCColorDialog : public CDialogEx
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCColorDialog::GetColor](#getcolor)|Gibt den aktuellen ausgewählten Farbe zurück.|  
-|[CMFCColorDialog::GetPalette](#getpalette)|Gibt die Farben-Palette zurück.|  
-|`CMFCColorDialog::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie an verteilt wurden die [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. Syntax und Weitere Informationen finden Sie unter [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Überschreibt `CDialogEx::PreTranslateMessage`.)|  
+|[CMFCColorDialog::GetColor](#getcolor)|Gibt die aktuelle ausgewählte Farbe zurück.|  
+|[CMFCColorDialog::GetPalette](#getpalette)|Gibt die Farbe der Palette zurück.|  
+|`CMFCColorDialog::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. Syntax und Weitere Informationen finden Sie unter [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Überschreibt `CDialogEx::PreTranslateMessage`.)|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Leitet eine Palette aus der Systempalette an.|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Legt die aktuelle ausgewählte Farbe fest.|  
-|[CMFCColorDialog::SetNewColor](#setnewcolor)|Legt die Farbe fest, das am häufigsten gleichbedeutend mit einem angegebenen RGB-Wert.|  
+|[CMFCColorDialog::SetNewColor](#setnewcolor)|Legt die Farbe am gleich einem angegebenen RGB-Wert fest.|  
 |[CMFCColorDialog::SetPageOne](#setpageone)|Wählt einen RGB-Wert für die erste Eigenschaftenseite an.|  
-|[CMFCColorDialog::SetPageTwo](#setpagetwo)|Wählt einen RGB-Wert für die zweite Eigenschaftenseite an.|  
+|[CMFCColorDialog::SetPageTwo](#setpagetwo)|Wählt einen RGB-Wert für die zweite Eigenschaftenseite.|  
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|`m_bIsMyPalette`|`TRUE` Wenn das Dialogfeld zur Farbauswahl eigene Farben-Palette verwendet oder `FALSE` Wenn im Dialogfeld eine Palette, die im angegebenen verwendet der `CMFCColorDialog` Konstruktor.|  
-|`m_bPickerMode`|`TRUE` während der Benutzer eine Farbe aus dem Auswahldialogfeld auswählt; andernfalls `FALSE`.|  
-|`m_btnColorSelect`|Schaltfläche für die Farbe, die der Benutzer ausgewählt hat.|  
+|`m_bIsMyPalette`|True, wenn das Dialogfeld zur Farbauswahl eine eigene Farben-Palette verwendet bzw. FALSE, wenn das Dialogfeld eine Palette verwendet, die im angegebenen die `CMFCColorDialog` Konstruktor.|  
+|`m_bPickerMode`|True, während der Benutzer eine Farbe im Dialogfeld "Auswahl" auswählen. andernfalls "false".|  
+|`m_btnColorSelect`|Die farbenschaltfläche, die der Benutzer ausgewählt hat.|  
 |`m_CurrentColor`|Die zurzeit ausgewählte Farbe.|  
-|`m_hcurPicker`|Der Cursor, der verwendet wird, um eine Farbe auswählen.|  
-|`m_NewColor`|Die potenziellen ausgewählte Farbe, die dauerhaft ausgewählt oder die ursprüngliche Farbe wiederhergestellt werden kann.|  
-|`m_pColourSheetOne`|Ein Zeiger auf die erste Seite Farbe Auswahl Eigenschaftenblatt.|  
-|`m_pColourSheetTwo`|Ein Zeiger auf die zweite Seite Farbe Auswahl Eigenschaftenblatt.|  
+|`m_hcurPicker`|Der Cursor, der verwendet wird, um eine Farbe auszuwählen.|  
+|`m_NewColor`|Die potenzielle ausgewählte Farbe, die dauerhaft ausgewählt oder auf die ursprüngliche Farbe wiederhergestellt werden kann.|  
+|`m_pColourSheetOne`|Ein Zeiger auf die erste Seite das Eigenschaftenblatt der Color-Auswahl.|  
+|`m_pColourSheetTwo`|Ein Zeiger auf die zweite Seite das Eigenschaftenblatt der Color-Auswahl.|  
 |`m_pPalette`|Die aktuelle logische Palette.|  
-|`m_pPropSheet`|Ein Zeiger auf die Eigenschaftenseite für das Dialogfeld zur Farbauswahl.|  
-|`m_wndColors`|Eine Farbe Datumsauswahl Control-Objekt.|  
-|`m_wndStaticPlaceHolder`|Ein statisches Steuerelement, das ein Platzhalter für das Eigenschaftenblatt für Farbe Auswahl ist.|  
+|`m_pPropSheet`|Ein Zeiger auf das Eigenschaftenfenster für das Dialogfeld zur Farbauswahl.|  
+|`m_wndColors`|Ein Objekt der Farbe Zeitauswahl-Steuerelement.|  
+|`m_wndStaticPlaceHolder`|Ein statisches Steuerelement, das ist ein Platzhalter für das Eigenschaftenblatt der Color-Auswahl.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Dialogfeld zur Farbauswahl wird als ein Eigenschaftenblatt mit zwei Seiten angezeigt. Auf der ersten Seite Wählen Sie eine standardmäßige Farbe aus der Systempalette; auf der zweiten Seite Wählen Sie eine benutzerdefinierte Farbe aus.  
+ Das Dialogfeld zur Farbauswahl wird als ein Eigenschaftenblatt mit zwei Seiten angezeigt. Auf der ersten Seite Wählen Sie eine Standardfarbe aus der Systempalette an; Klicken Sie auf der zweiten Seite Wählen Sie eine benutzerdefinierte Farbe aus.  
   
- Für das Konstruieren einer `CMFCColorDialog` Objekt auf dem Stapel, und rufen Sie dann `DoModal`, übergeben die Ausgangsfarbe als Parameter an die `CMFCColorDialog` Konstruktor. Das Dialogfeld zur Farbauswahl erstellt dann mehrere [CMFCColorPickerCtrl-Klasse](../../mfc/reference/cmfccolorpickerctrl-class.md) Objekte behandelt jede Farbpalette.  
+ Kann eine `CMFCColorDialog` -Objekt auf dem Stapel, und rufen dann `DoModal`, übergeben die Ausgangsfarbe, als Parameter an die `CMFCColorDialog` Konstruktor. Das Dialogfeld zur Farbauswahl erstellt dann mehrere [CMFCColorPickerCtrl-Klasse](../../mfc/reference/cmfccolorpickerctrl-class.md) Objekte jedes Farben-Palette zu behandeln.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -105,7 +106,7 @@ class CMFCColorDialog : public CDialogEx
  [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie ein Dialogfeld Farbe konfigurieren mithilfe verschiedener Methoden in der `CMFCColorDialog` Klasse. Im Beispiel wird gezeigt, wie die aktuelle und die neue Farben im Dialogfeld festgelegt, und wie die Rot-, Grün- und blauen-Komponenten einer ausgewählten Farbe auf den zwei Eigenschaftenseiten für das Dialogfeld "Farbe" festgelegt. In diesem Beispiel ist Teil der [neues Steuerelement-Beispiel](../../visual-cpp-samples.md).  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Dialogfeld "Farbe" konfigurieren "mithilfe verschiedener Methoden in der `CMFCColorDialog` Klasse. Das Beispiel zeigt, wie die aktuelle und die neuen Farben im Dialogfeld festgelegt, und wie Sie die Komponenten roten, grünen und blauen einer ausgewählten Farbe für die zwei Eigenschaftenseiten das Dialogfeld "Farbe" festlegen. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]  
   
@@ -124,16 +125,16 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `clrInit`  
+ [in] *ClrInit*  
  Die Standardauswahl für die Farbe. Wenn kein Wert angegeben wird, ist die Standardeinstellung RGB(0,0,0) (Schwarz).  
   
- [in] `dwFlags`  
+ [in] *DwFlags*  
  (Reserviert).  
   
- [in] `pParentWnd`  
- Ein Zeiger auf das Dialogfeld über- oder Besitzer Fenster.  
+ [in] *pParentWnd*  
+ Ein Zeiger auf das übergeordnete Element oder Besitzer des Dialogfelds-Fenster.  
   
- [in] `hPal`  
+ [in] *hPal*  
  Ein Handle für eine Farbpalette.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -141,17 +142,17 @@ CMFCColorDialog(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getcolor"></a>  CMFCColorDialog::GetColor  
- Ruft die Farbe, die der Benutzer über das Dialogfeld "Farbe" auswählt.  
+ Ruft die Farbe, die der Benutzer das Dialogfeld "Farbe" auswählt.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die RGB-Informationen für die Farbe ausgewählt, die im Dialogfeld "Farbe" enthält.  
+ Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) -Wert, der den RGB-Informationen für das Dialogfeld "Farbe" ausgewählte Farbe an.  
   
 ### <a name="remarks"></a>Hinweise  
- Mit dieser Funktion wird nach dem Aufruf der `DoModal` Methode.  
+ Rufen Sie diese Funktion aufzurufen, nachdem Sie die `DoModal` Methode.  
   
 ##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette  
  Ruft die Farbpalette, die im aktuellen Dialogfeld "Farbe" verfügbar ist.  
@@ -161,10 +162,10 @@ CPalette* GetPalette() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die `CPalette` -Objekt, das im angegebenen der `CMFCColorDialog` Konstruktor.  
+ Ein Zeiger auf die `CPalette` -Objekt, das im angegebenen die `CMFCColorDialog` Konstruktor.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Farbpalette gibt die Farben, die der Benutzer auswählen können.  
+ Die Farbpalette gibt an, die Farben, die der Benutzer auswählen kann.  
   
 ##  <a name="rebuildpalette"></a>  CMFCColorDialog::RebuildPalette  
  Leitet eine Palette aus der Systempalette an.  
@@ -181,8 +182,8 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rgb`  
- Ein RGB-Wert  
+ [in] *Rgb*  
+ Ein RGB-Farbwert  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -194,13 +195,13 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `rgb`  
+ [in] *Rgb*  
  Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , die eine RGB-Farbe angibt.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne  
- Explizit gibt die roten, grünen und blauen Komponenten einer ausgewählten Farbe auf der ersten Eigenschaftenseite ein Dialogfeld "Farbe" ein.  
+ Gibt explizit an die Komponenten roten, grünen und blauen einer ausgewählten Farbe, auf die erste Seite ein Dialogfeld Farbe.  
   
 ```  
 void SetPageOne(
@@ -210,19 +211,19 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `R`  
- Gibt die rote Komponente RGB-Wertes.  
+ [in] *R*  
+ Gibt an, der roten Anteil der RGB-Wert.  
   
- [in] `G`  
- Gibt die grünen Komponente RGB-Wertes.  
+ [in] *G*  
+ Gibt an, der grünen Anteil der RGB-Wert.  
   
- [in] `B`  
- Gibt die blaue Komponente RGB-Wertes.  
+ [in] *B*  
+ Gibt die blaue Komponente den RGB-Wert.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo  
- Gibt explizit den Rot-, Grün- und blauen-Komponenten einer ausgewählten Farbe, auf der zweiten Eigenschaftenseite ein Dialogfeld "Farbe".  
+ Gibt explizit an die Komponenten roten, grünen und blauen einer ausgewählten Farbe, auf die zweite Seite ein Dialogfeld Farbe.  
   
 ```  
 void SetPageTwo(
@@ -232,14 +233,14 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `R`  
- Gibt eine rote Komponente RGB-Wertes  
+ [in] *R*  
+ Gibt eine rote den RGB-Wert-Komponente  
   
- [in] `G`  
- Gibt eine grüne Komponente RGB-Wertes  
+ [in] *G*  
+ Gibt eine grüne RGB-Wert-Komponente  
   
- [in] `B`  
- Gibt eine blaue Komponente RGB-Wertes  
+ [in] *B*  
+ Gibt an, eine blaue Komponente des RGB-Wert  
   
 ### <a name="remarks"></a>Hinweise  
   

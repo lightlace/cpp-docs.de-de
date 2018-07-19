@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873224"
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>Erstellen eines Gerätebilds (Bildbearbeitung für Symbole)
 Wenn Sie eine neue Symbols oder Cursors mit Ressource, das Bild-Editor erstellen erstellt zunächst ein Bild in einem bestimmten Format (32 x 32, 16 Farben für Symbole und 32 x 32, Monochrom für Cursor). Sie können Bilder in verschiedenen Größen und Formate auf das erste Symbol oder Cursor hinzufügen und jede zusätzliche Bild nach Bedarf für die verschiedenen Anzeigegeräte bearbeiten. Sie können ein Bild auch durch Ausschneiden und Einfügen aus einem vorhandenen Image-Typ oder von einer Bitmap in einem Graphics-Programm erstellt bearbeiten.  

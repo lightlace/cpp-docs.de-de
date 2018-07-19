@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374173"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Explizites Entladen einer verzögert geladenen DLL
 Die [/delay](../../build/reference/delay-delay-load-import-settings.md): Unload (Linkeroption) können Sie eine DLL entladen, die verzögert geladen wurde. Wenn Ihr Code die DLL entladen wird standardmäßig (mithilfe von/delay: Unload und **__FUnloadDelayLoadedDLL2**), die verzögert geladene Importe in die Importadresstabelle (IAT) bleiben. Allerdings bei Verwendung von/delay: unload in der Linker-Befehlszeile wird die Hilfsfunktion unterstützen das explizite Entladen der DLL, die IAT in ihr ursprüngliches Format zurückgesetzt; der Zeiger für das jetzt ungültig werden überschrieben. Die IAT ist ein Feld in der [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) , enthält die Adresse einer Kopie der ursprünglichen IAT (falls vorhanden).  

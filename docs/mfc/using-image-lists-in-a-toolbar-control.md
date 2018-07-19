@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76325d2b078f51860cad7fa3fab61ed7c518a41c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50e7cb936c55ced1f16a325a031dccd1edde7d06
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951906"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Verwenden von Bildlisten in einem Symbolleisten-Steuerelement
 Standardmäßig werden die von den Schaltflächen in einem Symbolleisten-Steuerelement verwendet Bilder als eine einzelne Bitmap gespeichert. Allerdings können Sie Bilder in einem Satz von Bildlisten speichern. Das Steuerelementobjekt Symbolleiste kann bis zu drei separate Bildlisten verwenden:  
@@ -29,7 +30,7 @@ Standardmäßig werden die von den Schaltflächen in einem Symbolleisten-Steuere
   
 -   Deaktiviert die Bildliste enthält Bilder für Symbolleisten-Schaltflächen, die derzeit deaktiviert sind.  
   
--   Hervorgehoben Bildliste enthält Bilder für Symbolleisten-Schaltflächen, die aktuell hervorgehoben sind. Diese Bildliste wird verwendet, nur, wenn die Symbolleiste verwendet die **TBSTYLE_FLAT** Stil.  
+-   Hervorgehoben Bildliste enthält Bilder für Symbolleisten-Schaltflächen, die aktuell hervorgehoben sind. Diese Bildliste wird verwendet, nur, wenn die Symbolleiste die Formatvorlage TBSTYLE_FLAT verwendet.  
   
  Diese Bildlisten werden von dem Symbolleisten-Steuerelement verwendet, wenn Sie diese mit Zuordnen der `CToolBarCtrl` Objekt. Diese Zuordnung erfolgt durch Aufrufe von [CToolBarCtrl:: SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist), [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist), und [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist).  
   

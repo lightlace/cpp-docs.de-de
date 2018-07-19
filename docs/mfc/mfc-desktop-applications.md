@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350234"
 ---
 # <a name="mfc-desktop-applications"></a>MFC-Desktopanwendungen
 Die MFC-Bibliothek (Microsoft Foundation Class) stellt einen objektorientierten Wrapper für den Großteil der Win32 und COM APIs bereit. Obwohl sie zum Erstellen sehr einfacher Desktopanwendungen verwendet werden kann, ist sie besonders hilfreich, wenn Sie komplexere Benutzeroberflächen mit mehreren Steuerelementen entwickeln müssen. Sie können MFC zum Erstellen von Anwendungen mit Benutzeroberflächen im Stil von Office verwenden.  

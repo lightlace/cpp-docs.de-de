@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373399"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (Minimale Neuerstellung in der IDE)
 **/ Fd** ist nicht verfügbar gemacht, für Benutzer mit Ausnahme der [Befehlszeile](../../ide/command-line-property-pages.md) Eigenschaftenseite eines C++-Projekts **Eigenschaftenseiten** Dialogfeld, wenn und nur wenn  [ /GM (minimale Neuerstellung aktivieren)](../../build/reference/gm-enable-minimal-rebuild.md) nicht ebenfalls ausgewählt. **/ Fd** wirkt sich nicht nur in der Entwicklungsumgebung. **/ Fd** ist nicht verfügbar gemacht, in der Ausgabe von **cl /?**.  

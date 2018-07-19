@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872360"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Erstellen eines Symbols oder Cursors mit 256 Farben (Bildbearbeitung für Symbole)
 Mit der bildbearbeitung können Symbole und Cursor mit einer 256-Farben-Palette auswählbarer groß (64 × 64) mit angegebener Größe sein. Nach dem Erstellen der Ressource ist ein Gerät Image-Format aktiviert.  

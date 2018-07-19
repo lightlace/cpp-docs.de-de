@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355032"
 ---
 # <a name="modifying-the-atl-project"></a>Ändern des ATL-Projekts
 An diesem Punkt implementiert zusammengesetzte Steuerelementprojekt die notwendigen Objekte für Ihrer zusammengesetzten Steuerelements. Der nächste Schritt ist zum Hinzufügen der Steuerelemente, die zusammengesetzten Steuerelements enthalten soll, und alle notwendigen Ereignisse verarbeiten.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880741"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Platform-, default- und cli-Namespaces (Komponentenerweiterungen für C++)
 Ein Namespace qualifiziert die Namen von Sprachelementen, sodass sie keinen Konflikt mit ansonsten identischen Namen an anderer Stelle im Quellcode verursachen. Angenommen, ein Konflikt von geschachteltem Klassennamen könnten verhindern, dass den Compiler erkennen [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md). Namespaces werden vom Compiler verwendet, jedoch nicht in der kompilierten Assembly beibehalten.  

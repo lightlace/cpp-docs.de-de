@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368641"
 ---
 # <a name="non-mfc-dlls-overview"></a>MFC-fremde DLLs: Übersicht
 Eine MFC - fremde DLL ist eine DLL, die nicht MFC intern verwendet und in der DLL exportierten Funktionen von MFC oder MFC-fremde ausführbare Dateien aufgerufen werden können. Funktionen sind in der Regel aus einer MFC - fremde DLL über die standard-C-Schnittstelle exportiert.  

@@ -1,5 +1,5 @@
 ---
-title: Basierte Zeiger (C++) | Microsoft Docs
+title: Basierte Zeiger (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cc2e45574d30ae1a544da78a4f7a75321a1156
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f24c2ad56f91be3ed413f6967e6e40749693fe1b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943298"
 ---
 # <a name="based-pointers-c"></a>Basierte Zeiger (C++)
 **Microsoft-spezifisch**  
   
- Das `__based`-Schlüsselwort ermöglicht das Deklarieren von Zeigern basierend auf Zeigern (Zeiger, die Offsets von vorhandenen Zeigern sind).  
+ Die **__based** Schlüsselwort können Sie zum Deklarieren von Zeigern basierend auf Zeigern (Zeiger, die Offsets von vorhandenen Zeigern sind).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,11 +39,11 @@ type __based( base ) declarator
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Zeiger, die auf Zeigeradressen basieren, sind die einzige Form des `__based`-Schlüsselworts, das in 32-Bit- oder 64-Bit-Kompilierungen gültig ist. Für den 32-Bit-C/C++Compiler von Microsoft ist ein basierter Zeiger ein 32-Bit-Offset von einer 32-Bit-Zeigerbasis. Eine ähnliche Einschränkung besteht für 64-Bit-Umgebungen, in denen ein basierter Zeiger ein 64-Bit-Offset von der 64-Bit-Basis ist.  
+ Zeiger, die auf Zeigeradressen basieren, sind die einzige Form des der **__based** Schlüsselworts, das in 32-Bit oder 64-Bit-Kompilierungen gültig. Für den 32-Bit-C/C++Compiler von Microsoft ist ein basierter Zeiger ein 32-Bit-Offset von einer 32-Bit-Zeigerbasis. Eine ähnliche Einschränkung besteht für 64-Bit-Umgebungen, in denen ein basierter Zeiger ein 64-Bit-Offset von der 64-Bit-Basis ist.  
   
  Eine Verwendung von Zeigern, die auf Zeigern basieren, ist für dauerhafte Bezeichner, die Zeiger enthalten. Eine verknüpfte Liste, die aus Zeigern auf Grundlage eines Zeigers besteht, kann auf Datenträger gespeichert werden, dann an eine andere Stelle im Arbeitsspeicher neu geladen werden, wobei die Zeiger weiterhin gültig bleiben. Zum Beispiel:  
   
-```  
+```cpp 
 // based_pointers1.cpp  
 // compile with: /c  
 void *vpBuffer;  
@@ -55,16 +56,16 @@ struct llist_t {
  Dem Zeiger `vpBuffer` wird die Adresse des später im Programm zugewiesenen Arbeitsspeichers zugeteilt. Die verknüpfte Liste wird relativ zum Wert von `vpBuffer` verschoben.  
   
 > [!NOTE]
->  Beibehalten von Bezeichnern, die Zeiger können auch vorgenommen werden, indem Sie mit [Speicherabbilddateien](http://msdn.microsoft.com/library/windows/desktop/aa366556).  
+>  Beibehalten von Bezeichnern, die Zeiger können auch vorgenommen werden, indem Sie mithilfe von [Speicherabbilddateien](http://msdn.microsoft.com/library/windows/desktop/aa366556).  
   
  Beim Dereferenzieren eines basierten Zeigers muss die Basis explizit angegeben werden oder implizit durch die Deklaration bekannt sein.  
   
- Um die Kompatibilität mit früheren Versionen **_based** ist ein Synonym für `__based`.  
+ Für die Kompatibilität mit früheren Versionen **_basierend** ist ein Synonym für **__based**.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Code wird gezeigt, wie ein Basiszeiger verändert wird, indem seine Basis geändert wird.  
   
-```  
+```cpp 
 // based_pointers2.cpp  
 // compile with: /EHsc  
 #include <iostream>  

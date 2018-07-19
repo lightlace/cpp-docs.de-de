@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090052"
 ---
 # <a name="catalog-information--mfc-data-access"></a>Kataloginformationen (MFC-Datenzugriff)
 Informationen zu den Tabellen in einer Datenquelle können die Namen der Tabellen und die darin enthaltenen Spalten, Tabellenberechtigungen, Namen von Primär- und Fremdschlüsseln, Informationen zu vordefinierten Abfragen oder gespeicherten Prozeduren, Informationen zu Indizes in Tabellen sowie statistische Angaben zu Tabellen umfassen.  

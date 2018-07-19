@@ -1,5 +1,5 @@
 ---
-title: this-Zeiger | Microsoft Docs
+title: this-Zeiger | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,39 +18,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6a1df3bb262a814c641f5bfbcee070ec5de344
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d150d2419885c2f0273e376fd58750417ced6756
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943496"
 ---
 # <a name="this-pointer"></a>this-Zeiger
-Die **dies** ist ein Zeiger zugegriffen werden kann, nur in nicht statischen Memberfunktionen von einer **Klasse**, `struct`, oder **Union** Typ. Er zeigt auf das Objekt, für das die Memberfunktion aufgerufen wird. Statische Member-Funktionen verfügen nicht über eine **dies** Zeiger.  
+Die **dies** ist ein Zeiger kann nur innerhalb der nicht statischen Memberfunktionen des zugegriffen eine **Klasse**, **Struktur**, oder **Union** Typ. Er zeigt auf das Objekt, für das die Memberfunktion aufgerufen wird. Statische Memberfunktionen haben keine **dies** Zeiger.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
   
-      this   
+this   
 this->member-identifier  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Objekt **dies** Zeiger ist nicht Teil des Objekts selbst nicht im Ergebnis vorgenommen eine `sizeof` -Anweisung für das Objekt. Wenn stattdessen eine nicht statische Memberfunktion für ein Objekt aufgerufen wird, wird die Adresse des Objekts vom Compiler als ausgeblendetes Argument an die Funktion übergeben. Folgender Funktionsaufruf kann beispielsweise:  
+ Eines Objekts **dies** Zeiger ist nicht Teil des Objekts selbst nicht im Ergebnis übernommen wird eine **"sizeof"** -Anweisung für das Objekt. Wenn stattdessen eine nicht statische Memberfunktion für ein Objekt aufgerufen wird, wird die Adresse des Objekts vom Compiler als ausgeblendetes Argument an die Funktion übergeben. Folgender Funktionsaufruf kann beispielsweise:  
   
-```  
+```cpp 
 myDate.setMonth( 3 );  
 ```  
   
  auf diese Weise interpretiert werden:  
   
-```  
+```cpp 
 setMonth( &myDate, 3 );  
 ```  
   
- Die Adresse des Objekts steht aus innerhalb der Memberfunktion als die **dies** Zeiger. Die meisten Verwendungen von **dies** sind implizit. Es ist zulässig, obwohl nicht erforderlich, unbedingt verwenden **dies** beim Verweisen auf Member der Klasse. Zum Beispiel:  
+ Die Adresse des Objekts in der Memberfunktion als verfügbar ist die **dies** Zeiger. Die meisten Verwendungen von **dies** sind implizit. Es ist zulässig, jedoch nicht erforderlich, explizit **dies** beim Verweisen auf Member der Klasse. Zum Beispiel:  
   
-```  
+```cpp 
 void Date::setMonth( int mn )  
 {  
    month = mn;            // These three statements  
@@ -61,13 +62,13 @@ void Date::setMonth( int mn )
   
  Der Ausdruck `*this` wird häufig verwendet, um das aktuelle Objekt aus einer Memberfunktion zurückzugeben:  
   
-```  
+```cpp 
 return *this;  
 ```  
   
- Die **dies** -Zeiger wird auch verwendet, um zu erraten, Verweis auf sich selbst:  
+ Die **dies** -Zeiger wird auch verwendet, um vor Selbstverweisen zu schützen:  
   
-```  
+```cpp 
 if (&Object != this) {  
 // do not execute in cases of self-reference  
 ```  
@@ -79,7 +80,7 @@ if (&Object != this) {
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // this_pointer.cpp  
 // compile with: /EHsc  
   
@@ -148,11 +149,11 @@ your buffer
 ```  
   
 ## <a name="type-of-the-this-pointer"></a>Typ des this-Zeigers.  
- Die **dies** Typ des Zeigers kann geändert werden, in der Funktionsdeklaration durch die **const** und `volatile` Schlüsselwörter. Um eine Funktion so zu deklarieren, dass sie die Attribute von mindestens einem dieser Schlüsselwörter hat, fügen Sie die Schlüsselwörter nach der Funktionsargumentliste hinzu.  
+ Die **dies** Typ des Zeigers kann geändert werden, in der Funktionsdeklaration durch die **const** und **flüchtige** Schlüsselwörter. Um eine Funktion so zu deklarieren, dass sie die Attribute von mindestens einem dieser Schlüsselwörter hat, fügen Sie die Schlüsselwörter nach der Funktionsargumentliste hinzu.  
   
  Betrachten Sie das folgende Beispiel:  
   
-```  
+```cpp 
 // type_of_this_pointer1.cpp  
 class Point  
 {  
@@ -163,9 +164,9 @@ int main()
 }  
 ```  
   
- Der vorangehende Code deklariert eine Memberfunktion `X`, in dem die **dies** -Zeiger wird als behandelt eine **const** Zeiger auf eine **const** Objekt. Kombinationen von *cv-mod-List* -Optionen können verwendet werden, sie ändern jedoch immer das Objekt verweist, zu **dies**und nicht die **dies** Zeiger selbst. Aus diesem Grund wird die folgende Deklaration einer Funktion deklariert `X`; das **dies** Zeiger ist ein **const** Zeiger auf eine **const** Objekt:  
+ Der vorangehende Code deklariert eine Memberfunktion `X`, in dem der **dies** Zeiger behandelt, als eine **const** Zeiger auf eine **const** Objekt. Kombinationen von *cv-mod-List* Optionen können verwendet werden, sie ändern jedoch immer das Objekt verweist **dies**, nicht die **dies** Zeiger selbst. Aus diesem Grund wird die folgende Deklaration Funktion deklariert `X`; die **dies** -Zeiger ist ein **const** Zeiger auf eine **const** Objekt:  
   
-```  
+```cpp 
 // type_of_this_pointer2.cpp  
 class Point  
 {  
@@ -176,11 +177,11 @@ int main()
 }  
 ```  
   
- Der Typ des **dies** eines Mitglieds-Funktion wird durch die folgende Syntax beschrieben, in denen *cv-Qualifier-List* wird vom Deklarator Funktionen Element bestimmt und kann **Const**oder **volatile** (oder beides), und *Klassentyp* ist der Name der Klasse:  
+ Der Typ des **dies** in einen Member-Funktion wird durch die folgende Syntax, beschrieben, in denen *cv-Qualifier-List* wird vom Deklarator Funktionen Element bestimmt und kann **Const**oder **flüchtige** (oder beides), und *Klassentyp* ist der Name der Klasse:  
   
  *[cv-Qualifier-List] Klassentyp* **\* const dies**  
   
- Das heißt, **dies** ist immer ein konstanter Zeiger, kann nicht zugewiesen werden.  Die **const** oder `volatile` Qualifizierer, die in der memberfunktionsdeklaration verwendet anwenden, um die Klasseninstanz verweist **dies** im Rahmen dieser Funktion.  
+ Das heißt, **dies** ist immer ein konstanter Zeiger, sie kann nicht zugewiesen werden.  Die **const** oder **flüchtige** Qualifizierer, die in der memberfunktionsdeklaration verwendet, gelten für die Instanz der Klasse verweist **dies** im Rahmen dieser Funktion.  
   
  In der folgenden Tabelle wird näher erläutert, wie diese Modifizierer funktionieren.  
   
@@ -189,14 +190,14 @@ int main()
 |Modifizierer|Bedeutung|  
 |--------------|-------------|  
 |**const**|Kann Memberdaten nicht ändern. kann nicht aufgerufen werden, die nicht-Memberfunktionen **const**.|  
-|`volatile`|Memberdaten werden vom Arbeitsspeicher geladen, wenn darauf zugegriffen wird; deaktiviert bestimmte Optimierungen.|  
+|**volatile**|Memberdaten werden vom Arbeitsspeicher geladen, wenn darauf zugegriffen wird; deaktiviert bestimmte Optimierungen.|  
   
- Es ist ein Fehler auf, übergeben Sie eine **const** Objekt auf eine Memberfunktion, die nicht **const**. Außerdem ist es nicht zulässig, ein `volatile`-Objekt an eine Memberfunktion zu übergeben, die nicht `volatile` ist.  
+ Es ist ein Fehler zum Übergeben einer **const** Objekt auf eine Memberfunktion, die nicht **const**. Es ist auch zu übergeben eine **flüchtige** Objekt auf eine Memberfunktion, die nicht **flüchtige**.  
   
- Als Memberfunktionen deklariert **const** Memberdaten nicht ändern – in solchen Funktionen ist die **dies** ist ein Zeiger auf eine **const** Objekt.  
+ Memberfunktionen deklariert als **const** Memberdaten nicht ändern – in solchen Funktionen ist die **dies** ist ein Zeiger auf eine **const** Objekt.  
   
 > [!NOTE]
->  Konstruktoren und Destruktoren können nicht als deklariert **const** oder `volatile`. Sie können jedoch werden aufgerufenen **const** oder `volatile` Objekte.  
+>  Konstruktoren und Destruktoren können nicht als deklariert werden **const** oder **flüchtige**. Sie können jedoch werden aufgerufen **const** oder **flüchtige** Objekte.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Schlüsselwörter](../cpp/keywords-cpp.md)   

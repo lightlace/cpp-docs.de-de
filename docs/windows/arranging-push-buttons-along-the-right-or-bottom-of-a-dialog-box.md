@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860241"
 ---
 # <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Ausrichten von Schaltflächen am rechten oder unteren Rand eines Dialogfelds
 ### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Anordnen von Schaltflächen am rechten oder unteren Rand eines Dialogfelds  

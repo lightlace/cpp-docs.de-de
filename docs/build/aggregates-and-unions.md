@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363258"
 ---
 # <a name="aggregates-and-unions"></a>Aggregate und Unions
 Andere Typen, z. B. Arrays, Strukturen und Unions, gelten strengere Ausrichtung, die konsistent aggregieren und union-Speicher und zum Datenabruf zu gewährleisten. Hier werden die Definitionen für Arrays, Struktur und Union:  

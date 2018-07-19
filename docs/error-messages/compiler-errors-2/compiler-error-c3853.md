@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270076"
 ---
 # <a name="compiler-error-c3853"></a>Compilerfehler C3853
 '=': Unzulässige wird erneut initialisiert werden, ein Verweis oder die Zuweisung über eine Reference-Funktion  

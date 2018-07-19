@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382925"
 ---
 # <a name="interactive-devices"></a>Interaktive Geräte
 **ANSI 2.1.2.3** Bestandteile eines interaktiven Geräts  

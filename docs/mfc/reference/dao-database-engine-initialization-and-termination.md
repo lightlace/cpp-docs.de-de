@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369901"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Initialisieren und Beenden des DAO-Datenbankmoduls
 Verwendung von MFC-DAO-Objekten, muss zunächst die DAO-Datenbankmoduls werden initialisiert, und klicken Sie dann beendet, bevor Ihre Anwendung oder DLL beendet. Zwei Funktionen `AfxDaoInit` und `AfxDaoTerm`, diese Aufgaben ausführen.  

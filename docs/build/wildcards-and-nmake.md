@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380450"
 ---
 # <a name="wildcards-and-nmake"></a>Platzhalter und NMAKE
 NMAKE erweitert Filename-Platzhalter (* und?) in von Abhängigkeitszeilen. Ein Platzhalter in einem Befehl angegeben, wird an den Befehl übergeben. NMAKE wird nicht erweitert.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369227"
 ---
 # <a name="bscmake-exit-codes"></a>BSCMAKE-Exitcodes
 BSCMAKE gibt einen Exitcode (auch als einen Rückgabecode oder Fehlercode bezeichnet) auf dem Betriebssystem oder das aufrufende Programm zurück.  

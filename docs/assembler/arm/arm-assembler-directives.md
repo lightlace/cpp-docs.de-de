@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053300"
 ---
 # <a name="arm-assembler-directives"></a>ARM-Assemblyanweisungen
 Meistens, verwendet der Microsoft-ARM-Assembler die ARM-Assemblysprache, die in Kapitel 7 dokumentiert ist die [ARM Assembler Tools Guide](http://go.microsoft.com/fwlink/p/?linkid=246102). Allerdings unterscheiden sich die Microsoft-Implementierungen von einigen Assemblydirektiven aus ARM-Assemblydirektiven ein. In diesem Artikel werden die Unterschiede erläutert.  

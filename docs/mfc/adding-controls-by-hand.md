@@ -20,22 +20,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efe510c4376255c24470a799b5dde17021894bf0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c39f2d7803630aaaef6e803e90bf332c74937a71
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930614"
 ---
 # <a name="adding-controls-by-hand"></a>Manuelles Hinzufügen von Steuerelementen
 Sie können entweder [Hinzufügen von Steuerelementen zu einem Dialogfeld mit dem Dialog-Editor](../mfc/using-the-dialog-editor-to-add-controls.md) oder fügen Sie sie selbst, mit dem Code.  
   
  Um ein Steuerelementobjekt selbst erstellen, werden Sie in der Regel die C++-Control-Objekt in einem C++-Dialog oder Rahmenfensterobjekt einbetten. Wie viele andere Objekte im Framework erfordern Steuerelemente zweistufige Konstruktion. Rufen Sie des Steuerelements **erstellen** Memberfunktion als Teil der Erstellung des übergeordneten Dialogfeld Feld oder den Frame-Fensters. Für Dialogfelder, dies erfolgt normalerweise [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), und für den Rahmenfenstern werden in [OnCreate](../mfc/reference/cwnd-class.md#oncreate).  
   
- Das folgende Beispiel zeigt, wie Sie deklarieren, können eine `CEdit` Objekt in der Klassendeklaration von einer abgeleiteten Dialogfeldklasse, und rufen Sie anschließend die **erstellen** Memberfunktion in `OnInitDialog`. Da die `CEdit` Objekt als eingebettetes Objekt deklariert wird, es wird automatisch erstellt, wenn das Dialogfeldobjekt erstellt wird, jedoch mit einem eigenen noch initialisiert werden muss **erstellen** Memberfunktion.  
+ Das folgende Beispiel zeigt, wie Sie deklarieren, können eine `CEdit` Objekt in der Klassendeklaration von einer abgeleiteten Dialogfeldklasse, und rufen Sie anschließend die `Create` Memberfunktion in `OnInitDialog`. Da die `CEdit` Objekt als eingebettetes Objekt deklariert wird, es wird automatisch erstellt, wenn das Dialogfeldobjekt erstellt wird, jedoch mit einem eigenen noch initialisiert werden muss `Create` Memberfunktion.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/cpp/adding-controls-by-hand_1.h)]  
   
- Die folgenden `OnInitDialog` Funktion richtet ein Rechteck ruft dann **erstellen** zum Erstellen von Windows-Bearbeitungssteuerelements und fügen Sie es an den nicht initialisierten `CEdit` Objekt.  
+ Die folgenden `OnInitDialog` Funktion richtet ein Rechteck ruft dann `Create` zum Erstellen von Windows-Bearbeitungssteuerelements und fügen Sie es an den nicht initialisierten `CEdit` Objekt.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/cpp/adding-controls-by-hand_2.cpp)]  
   

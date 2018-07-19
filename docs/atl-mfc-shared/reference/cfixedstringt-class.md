@@ -1,5 +1,5 @@
 ---
-title: CFixedStringT Klasse | Microsoft Docs
+title: CFixedStringT-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93125d15be32a95d71c763f476fad700dab65a3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e6b47642965b73662e63a839796425be855a6523
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879526"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT-Klasse
-Diese Klasse stellt ein Zeichenfolgenobjekt mit einer festen Zeichenpuffer.  
+Diese Klasse stellt einen String-Objekt mit einem festen Zeichenpuffer.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,8 +37,8 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `StringType`  
- Für die feste String-Objekt als Basisklasse verwendet und kann `CStringT`-basiertem Typ. Einige Beispiele für `CString`, `CStringA`, und `CStringW`.  
+ *StringType*  
+ Als die Basisklasse für das feste String-Objekt verwendet und kann `CStringT`-basiertem Typ. Beispiele hierfür sind `CString`, `CStringA`, und `CStringW`.  
   
  *t_nChars*  
  Die Anzahl der Zeichen im Puffer gespeichert.  
@@ -48,24 +49,24 @@ class CFixedStringT : private CFixedStringMgr, public StringType
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CFixedStringT::CFixedStringT](#cfixedstringt)|Der Konstruktor für den String-Objekt.|  
+|[CFixedStringT::CFixedStringT](#cfixedstringt)|Der Konstruktor für die String-Objekt.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CFixedStringT::operator =](#eq)|Weist einen neuen Wert zu einem `CFixedStringT` Objekt.|  
+|[CFixedStringT::operator =](#eq)|Weist einen neuen Wert ein `CFixedStringT` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Klasse ist ein Beispiel für eine benutzerdefinierte Zeichenfolge-Klasse, die basierend auf `CStringT`. Zwar sehr ähnlich, unterscheiden sich die beiden Klassen in der Implementierung ein. Die wichtigsten Unterschiede zwischen `CFixedStringT` und `CStringT` sind:  
   
--   Das Anfangszeichen Puffer wird als Teil des Objekts zugeordnet und Größe hat *T_nChars*. Dies ermöglicht die **CFixedString** Objekt, das ein Block zusammenhängender Arbeitsspeicher zur leistungsverbesserung belegen. Jedoch wenn den Inhalt einer `CFixedStringT` Objekt hinausgeht *T_nChars*, der Puffer wird dynamisch zugewiesen.  
+-   Der Zeichenpuffer für die ersten, die als Teil des Objekts zugeordnet ist und Größe *T_nChars*. Dadurch wird die `CFixedString` Objekt, das ein Block zusammenhängender Arbeitsspeicher zu belegen. Jedoch, wenn der Inhalt des eine `CFixedStringT` Objekt hinausgeht *T_nChars*, der Puffer wird dynamisch zugewiesen.  
   
--   Der Zeichenpuffer für eine `CFixedStringT` Objekt weist immer dieselbe Länge ( *T_nChars*). Es gibt keine Einschränkung hinsichtlich der Puffergröße für `CStringT` Objekte.  
+-   Den Zeichenpuffer für einen `CFixedStringT` Objekt ist immer die gleiche Länge ( *T_nChars*). Es gibt keine Einschränkung hinsichtlich der Größe des Puffers für `CStringT` Objekte.  
   
--   Der Speicher-Manager für `CFixedStringT` wird angepasst, dass der Freigabe einer [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) Objekt zwischen mindestens zwei `CFixedStringT` Objectsis nicht zulässig. `CStringT` -Objekte verfügen über diese Einschränkung nicht.  
+-   Der Speicher-Manager für `CFixedStringT` wird angepasst, dass der Freigabe einer [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) Objekt zwischen zwei oder mehr `CFixedStringT` Objectsis nicht zulässig. `CStringT` Objekte müssen diese Einschränkung nicht.  
   
- Informationen über die Anpassung der `CFixedStringT` und Verwaltung des Arbeitsspeichers für Zeichenfolgenobjekten im Allgemeinen finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+ Um mehr über die Anpassung der `CFixedStringT` und Speicherverwaltung für String-Objekte im Allgemeinen finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `IAtlStringMgr`  
@@ -93,17 +94,17 @@ explicit CFixedStringT(const unsigned char* psz);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `psz`  
- Eine auf Null endende Zeichenfolge, die in diese kopiert werden `CFixedStringT` Objekt.  
+ *psz*  
+ Eine mit Null endende Zeichenfolge, die in diese kopiert werden `CFixedStringT` Objekt.  
   
- `str`  
- Eine vorhandene `CFixedStringT` Objekt in diese kopiert werden `CFixedStringT` Objekt.  
+ *str*  
+ Eine vorhandene `CFixedStringT` Objekt, das in diese kopiert werden `CFixedStringT` Objekt.  
   
- `pStringMgr`  
- Ein Zeiger auf Speicher-Manager, der die `CFixedStringT` Objekt. Weitere Informationen zu `IAtlStringMgr` und Verwaltung des Arbeitsspeichers für `CFixedStringT`, finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+ *pStringMgr*  
+ Ein Zeiger auf den Speicher-Manager, der die `CFixedStringT` Objekt. Weitere Informationen zu `IAtlStringMgr` und Speicherverwaltung für `CFixedStringT`, finden Sie unter [Speicherverwaltung und CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ### <a name="remarks"></a>Hinweise  
- Da die Konstruktoren die Eingabedaten in den neuen belegten Speicher kopieren, sollten Sie bedenken, dass der Arbeitsspeicher Ausnahmen führen können. Beachten Sie, dass einige dieser Konstruktoren als Konvertierungsfunktionen fungieren.  
+ Da die Konstruktoren der Eingabedaten in den neuen zugeordneten Speicher kopieren, sollten Sie bedenken, dass der Speicher Ausnahmen führen können. Beachten Sie, dass einige dieser Konstruktoren als Funktionen für die typkonvertierung fungieren.  
   
 ##  <a name="operator__eq"></a>  CFixedStringT::operator =  
  Initialisiert eine vorhandene `CFixedStringT` Objekt mit neuen Daten.  
@@ -118,14 +119,14 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `str`  
- Eine auf Null endende Zeichenfolge, die in diese kopiert werden `CFixedStringT` Objekt.  
+ *str*  
+ Eine mit Null endende Zeichenfolge, die in diese kopiert werden `CFixedStringT` Objekt.  
   
- `psz`  
+ *psz*  
  Eine vorhandene `CFixedStringT` in diese kopiert werden `CFixedStringT` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie sollten sich bewusst sein, dass der Arbeitsspeicher Ausnahmen auftreten, jedes Mal, wenn Sie den Zuweisungsoperator da häufig neue Speicher, zum Speichern der resultierenden reserviert wird `CFixedStringT` Objekt.  
+ Sie sollten bedenken, dass der Speicher Ausnahmen auftreten, wenn Sie den Zuweisungsoperator verwenden, da häufig mit neuer Speicher, zum Speichern der resultierenden zugeordnet wird `CFixedStringT` Objekt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CStringT-Klasse](../../atl-mfc-shared/reference/cstringt-class.md)   

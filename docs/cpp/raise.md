@@ -1,5 +1,5 @@
 ---
-title: __raise | Microsoft Docs
+title: __raise | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93bd00c89df69d655f42c06509ef0360eff0c092
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a95f012b36e30c171fde1cbc8d28a21a074e281
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943262"
 ---
 # <a name="raise"></a>__raise
 Hebt die Aufrufsite eines Ereignisses hervor.  
@@ -30,23 +31,21 @@ Hebt die Aufrufsite eines Ereignisses hervor.
   
 ```  
   
-__raise   
-method-declarator  
-;  
+__raise method-declarator;  
   
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Aus verwaltetem Code kann ein Ereignis nur innerhalb der Klasse ausgelöst werden, in der es definiert ist. Finden Sie unter [Ereignis](../windows/event-cpp-component-extensions.md) für Weitere Informationen.  
   
- Das Schlüsselwort `__raise` bewirkt die Ausgabe eines Fehlers bei einem nicht ereignisgebundenen Aufruf.  
+ Das Schlüsselwort **__raise** verursacht einen Fehler, wenn Sie einem nicht ereignisgebundenen Aufruf ausgegeben werden soll.  
   
 > [!NOTE]
 >  Eine von einer Vorlage gebildete Klasse oder Struktur kann keine Ereignisse enthalten.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // EventHandlingRef_raise.cpp  
 struct E {  
    __event void func1();  
@@ -72,5 +71,5 @@ int main() {
   
 ## <a name="see-also"></a>Siehe auch  
  [Stichwörter](../cpp/keywords-cpp.md)   
- [Ereignisbehandlung](../cpp/event-handling.md)   
+ [Behandlung von Ereignissen](../cpp/event-handling.md)   
  [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

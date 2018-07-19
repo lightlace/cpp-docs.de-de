@@ -1,5 +1,5 @@
 ---
-title: CMFCKeyMapDialog Klasse | Microsoft Docs
+title: CMFCKeyMapDialog-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af6e9ce4c252e2d798615292291dcd3e21cbd72a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853669"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog-Klasse
 Die `CMFCKeyMapDialog` Klasse unterstützt ein Steuerelement, das Befehlen Tastaturtasten zuordnet.  
@@ -69,19 +70,19 @@ class CMFCKeyMapDialog : public CDialogEx
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCKeyMapDialog::FormatItem](#formatitem)|Wird aufgerufen, durch das Framework eine Zeichenfolge zu erstellen, die eine wichtige Zuordnung beschreibt. Standardmäßig enthält die Zeichenfolge den Namen des Befehls, verwendeten Tastenkombinationen und die Beschreibung der Verknüpfung-Schlüssels.|  
-|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Ruft eine Zeichenfolge, die eine Liste der Tastenkombinationen, die den angegebenen Befehl zugeordnet enthält.|  
-|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|Vom Framework aufgerufen, bevor ein neues Element in das interne Strukturelement-Steuerelement eingefügt wird, die das Steuerelement der Tastatur Zuordnung unterstützt.|  
-|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|Wird aufgerufen, durch das Framework den Header für das Tastaturlayout auf einer neuen Seite gedruckt.|  
-|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|Wird aufgerufen, durch das Framework So drucken Sie eine Tastatur Mapping-Element.|  
-|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|Wird aufgerufen, durch das Framework Beschriftungen für die Spalten in das interne Strukturelement-Steuerelement festlegen, die das Steuerelement der Tastatur Zuordnung unterstützt.|  
-|[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|Vom Framework aufgerufen, wenn ein Benutzer klickt auf die **Drucken** Schaltfläche.|  
-|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|Wird aufgerufen, durch das Framework die Breite der Spalten in das interne Strukturelement-Steuerelement festlegen, die das Steuerelement der Tastatur Zuordnung unterstützt.|  
+|[CMFCKeyMapDialog::FormatItem](#formatitem)|Wird aufgerufen, durch das Framework eine Zeichenfolge zu erstellen, die eine wichtige Zuordnung beschreibt. Standardmäßig enthält die Zeichenfolge an den Namen des Befehls, der Tastaturkombinationen und Beschreibung der Verknüpfung des Schlüssels.|  
+|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Ruft eine Zeichenfolge, die eine Liste mit Tastenkombinationen, die den angegebenen Befehl zugeordnet enthält.|  
+|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|Wird vom Framework aufgerufen, bevor ein neues Element in das Steuerelement für die interne Liste eingefügt wird, die Karten-Steuerelement auf der Tastatur unterstützt.|  
+|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|Wird aufgerufen, durch das Framework den Header für das Tastaturlayout auf einer neuen Seite zu drucken.|  
+|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|Wird aufgerufen, durch das Framework eine tastaturelement für die Zuordnung zu drucken.|  
+|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|Wird aufgerufen, durch das Framework Beschriftungen für die Spalten in der internen Steuerelement festlegen, die Karten-Steuerelement auf der Tastatur unterstützt.|  
+|[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|Vom Framework aufgerufen, wenn ein Benutzer klickt der **Drucken** Schaltfläche.|  
+|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|Wird aufgerufen, durch das Framework die Breite der Spalten in der internen Steuerelement festlegen, die Karten-Steuerelement auf der Tastatur unterstützt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `CMFCKeyMapDialog` Klasse, um ein Dialogfeld in der Größe veränderbaren Tastatur Zuordnung zu implementieren. Das Dialogfeld verwendet ein Listenansicht-Steuerelement zum Anzeigen von Tastenkombinationen und ihre zugeordneten Befehle.  
+ Verwenden der `CMFCKeyMapDialog` Klasse, um ein Dialogfeld mit veränderbarer Größe Tastatur Zuordnung zu implementieren. Das Dialogfeld verwendet ein Listenansicht-Steuerelement zum Anzeigen von Tastenkombinationen in Visual Studio und die entsprechenden Befehle.  
   
- Verwenden der `CMFCKeyMapDialog` -Klasse in einer Anwendung, übergeben Sie einen Zeiger an das Hauptrahmenfenster als Parameter an die `CMFCKeyMapDialog` Konstruktor. Rufen Sie anschließend die `DoModal` Methode, um ein modales Dialogfeld starten.  
+ Verwenden der `CMFCKeyMapDialog` Klasse in einer Anwendung, übergeben eines Zeigers an das Hauptrahmenfenster als Parameter an die `CMFCKeyMapDialog` Konstruktor. Rufen Sie dann die `DoModal` Methode, um ein modales Dialogfeld starten.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -109,16 +110,16 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pWndParentFrame`  
- Ein Zeiger auf das übergeordnete Fenster eines der `CMFCKeyMapDialog` Objekt.  
+ [in] *pWndParentFrame*  
+ Ein Zeiger auf das übergeordnete Fenster der `CMFCKeyMapDialog` Objekt.  
   
- [in] `bEnablePrint`  
- `TRUE` Wenn die Liste mit Zugriffstasten gedruckt werden kann; andernfalls `FALSE`. Die Standardeinstellung ist `FALSE`.  
+ [in] *bEnablePrint*  
+ True, wenn die Liste der Tastenkombinationen gedruckt werden kann. andernfalls "false". Der Standardwert ist "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht das Erstellen von ein Objekt von der `CMFCKeyMapDialog` Klasse. In diesem Beispiel ist Teil der [Visual Studio-Demobeispiel](../../visual-cpp-samples.md).  
+ Im folgende Beispiel wird veranschaulicht, wie zum Erstellen eines Objekts von der `CMFCKeyMapDialog` Klasse. In diesem Beispiel ist Teil der [Visual Studio-Demobeispiel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
   
@@ -130,21 +131,21 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine Ganzzahl mit Vorzeichen, z. B. `IDOK` oder `IDCANCEL`, d. h. zum Übergeben der [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog) Methode. Die Methode wird wiederum das Dialogfeld geschlossen. Weitere Informationen finden Sie unter [Methode CDialog:: DoModal](../../mfc/reference/cdialog-class.md#domodal).  
+ Eine Ganzzahl mit Vorzeichen wie IDOK oder IDCANCEL, der an übergebene der [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog) Methode. Die Methode wird wiederum das Dialogfeld geschlossen. Weitere Informationen finden Sie unter [Methode CDialog:: DoModal](../../mfc/reference/cdialog-class.md#domodal).  
   
 ### <a name="remarks"></a>Hinweise  
- Das Dialogfeld Zuordnung ermöglicht es Ihnen zu wählen und verschiedene Kategorien von Befehlen Zugriffstasten zuzuweisen. Darüber hinaus können Sie die ausgewählten Zugriffstasten sowie die Beschreibung in die Zwischenablage kopieren.  
+ Im Dialogfeld für die Zuordnung der Tastatur können Sie auswählen und Zuordnen von Tastenkombinationen auf verschiedene Kategorien von Befehlen. Darüber hinaus können Sie die ausgewählten Zugriffstasten und die entsprechenden Beschreibungen in die Zwischenablage kopieren.  
   
 ##  <a name="formatitem"></a>  CMFCKeyMapDialog::FormatItem  
- Wird aufgerufen, durch das Framework eine Zeichenfolge zu erstellen, die eine wichtige Zuordnung beschreibt. Standardmäßig enthält die Zeichenfolge den Namen des Befehls, verwendeten Tastenkombinationen und die Beschreibung der Verknüpfung-Schlüssels.  
+ Wird aufgerufen, durch das Framework eine Zeichenfolge zu erstellen, die eine wichtige Zuordnung beschreibt. Standardmäßig enthält die Zeichenfolge an den Namen des Befehls, der Tastaturkombinationen und Beschreibung der Verknüpfung des Schlüssels.  
   
 ```  
 virtual CString FormatItem(int nItem) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nItem`  
- Der nullbasierte Index eines Elements in der internen Liste von Schlüssel-Zuordnungen.  
+ [in] *nItem*  
+ Der nullbasierte Index eines Elements in der internen Liste der wichtigsten Zuordnungen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein `CString` Objekt, das den formatierten Text enthält.  
@@ -152,14 +153,14 @@ virtual CString FormatItem(int nItem) const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getcommandkeys"></a>  CMFCKeyMapDialog::GetCommandKeys  
- Ruft einen Zeichenfolgenwert ab. Die Zeichenfolge enthält eine Liste der Tastenkombinationen, die einen bestimmten Befehl zugeordnet sind.  
+ Ruft einen Zeichenfolgenwert ab. Die Zeichenfolge enthält eine Liste mit Tastenkombinationen, die einen bestimmten Befehl zugeordnet sind.  
   
 ```  
 virtual CString GetCommandKeys(UINT uiCmdID) const;  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmdID`  
+ [in] *UiCmdID*  
  Eine Befehls-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -168,7 +169,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="oninsertitem"></a>  CMFCKeyMapDialog::OnInsertItem  
- Vom Framework aufgerufen, bevor ein neues Element in einer internen Strukturelement-Steuerelement eingefügt wird, die das Steuerelement der Tastatur Zuordnung unterstützt.  
+ Wird vom Framework aufgerufen, bevor ein neues Element in ein Steuerelement für die interne Liste eingefügt wird, die Karten-Steuerelement auf der Tastatur unterstützt.  
   
 ```  
 virtual void OnInsertItem(
@@ -177,16 +178,16 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pButton`  
- Ein Zeiger auf eine Symbolleisten-Schaltfläche, die verwendet wird, um einen Befehlsnamen und eine Beschreibung eine Tastatur Tastenkombination zuordnen. Das schlüsselzuordnung-Element wird in einem Steuerelement für die interne Liste gespeichert.  
+ [in] *pButton*  
+ Ein Zeiger auf eine Symbolleisten-Schaltfläche, die verwendet wird, um einen Befehlsnamen und eine Beschreibung eine Tastenkombination für den Schlüssel zuzuordnen. Das Key-Map-Element wird in einem Steuerelement für die interne Liste gespeichert.  
   
- [in] `nItem`  
- Ein nullbasierter Index, der angibt, wo der neue Schlüssel Zuordnungselement in das interne Strukturelement-Steuerelement eingefügt werden soll.  
+ [in] *nItem*  
+ Ein nullbasierter Index, der angibt, wo der neue Schlüssel Map-Element im Listensteuerelement interne eingefügt.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="onprintheader"></a>  CMFCKeyMapDialog::OnPrintHeader  
- Wird aufgerufen, durch das Framework den Header für das Tastaturlayout auf einer neuen Seite gedruckt.  
+ Wird aufgerufen, durch das Framework den Header für das Tastaturlayout auf einer neuen Seite zu drucken.  
   
 ```  
 virtual int OnPrintHeader(
@@ -196,23 +197,23 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dc`  
+ [in] *dc*  
  Der Gerätekontext für den Drucker.  
   
- [in] `nPage`  
- Die Seitenzahl der Seite zu drucken.  
+ [in] *. nSeite*  
+ Die Seitenzahl der Seite gedruckt werden soll.  
   
- [in] `cx`  
+ [in] *Cx*  
  Der horizontale Offset des Headers, in Pixel.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Im Erfolgsfall die Höhe des gedruckten Texts. Weitere Informationen finden Sie im Abschnitt Rückgabewert [CDC:: DrawText](../../mfc/reference/cdc-class.md#drawtext).  
+ Bei erfolgreicher Ausführung die Höhe der gedruckten Text. Weitere Informationen finden Sie im Abschnitt Rückgabewert [CDC:: DrawText](../../mfc/reference/cdc-class.md#drawtext).  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework verwendet diese Methode, um das Tastaturlayout drucken. Standardmäßig gibt diese Methode die Seitenzahl, Anwendungsname und Titel des Dateidialogfelds.  
+ Das Framework verwendet diese Methode so drucken Sie das Tastaturlayout. Standardmäßig gibt diese Methode, die Seitenzahl, Anwendungsname und Titel des Dateidialogfelds.  
   
 ##  <a name="onprintitem"></a>  CMFCKeyMapDialog::OnPrintItem  
- Wird aufgerufen, durch das Framework So drucken Sie eine Tastatur Mapping-Element.  
+ Wird aufgerufen, durch das Framework eine tastaturelement für die Zuordnung zu drucken.  
   
 ```  
 virtual int OnPrintItem(
@@ -224,56 +225,56 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dc`  
+ [in] *dc*  
  Der Gerätekontext des Druckers.  
   
- [in] `nItem`  
+ [in] *nItem*  
  Der nullbasierte Index des Elements, das gedruckt werden soll.  
   
- [in] `y`  
+ [in] *y*  
  Der vertikale Offset zwischen dem oberen Rand der Seite und die Position des Elements.  
   
- [in] `cx`  
+ [in] *Cx*  
  Der horizontale Offset zwischen dem linken Rand der Seite und die Position des Elements.  
   
- [in] `bCalcHeight`  
- `TRUE` um die optimale Höhe für das Drucken Element zu berechnen; `FALSE` drucken Element abgeschnitten, damit er den Standardzwischenraum passt.  
+ [in] *bCalcHeight*  
+ True, um die optimale Höhe für das Drucken-Element zu berechnen. FALSE, wenn das Element Drucken abgeschnitten, damit er den Standardzwischenraum passt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Höhe des Elements gedruckt.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework ruft diese Methode, um eine schlüsselzuordnung-Element im Dialogfeld Drucken. Standardmäßig gibt diese Methode des Elements Befehlsnamen, Tastenkombinationen und Beschreibung der Befehl.  
+ Das Framework ruft diese Methode, um eine schlüsselzuordnung-Element im Dialogfeld Drucken. Standardmäßig gibt diese Methode Befehlsnamen, Tastenkombinationen und Befehls-Beschreibung des Elements.  
   
 ##  <a name="onsetcolumns"></a>  CMFCKeyMapDialog::OnSetColumns  
- Wird aufgerufen, durch das Framework Beschriftungen für die Spalten in das interne Strukturelement-Steuerelement festlegen, die das Steuerelement der Tastatur Zuordnung unterstützt.  
+ Wird aufgerufen, durch das Framework Beschriftungen für die Spalten in der internen Steuerelement festlegen, die Karten-Steuerelement auf der Tastatur unterstützt.  
   
 ```  
 virtual void OnSetColumns();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig ruft diese Methode die Beschriftungen für die Spalten aus drei Ressourcen ab. Die Befehl Spalte Beschriftung aus IDS_AFXBARRES_COMMAND ist, ist die Schlüsselspalte Beschriftung IDS_AFXBARRES_KEYS und die Beschriftung der Description-Spalte aus IDS_AFXBARRES_DESCRIPTION ist.  
+ Standardmäßig ruft diese Methode die Beschriftungen für die Spalten aus drei Ressourcen ab. Die Beschriftung der Befehl-Spalte wird von IDS_AFXBARRES_COMMAND, die Schlüsselspalte Beschriftung von IDS_AFXBARRES_KEYS ist und die Beschriftung der Description-Spalte wird von IDS_AFXBARRES_DESCRIPTION.  
   
 ##  <a name="printkeymap"></a>  CMFCKeyMapDialog::PrintKeyMap  
- Vom Framework aufgerufen, wenn ein Benutzer klickt auf die **Drucken** Schaltfläche.  
+ Vom Framework aufgerufen, wenn ein Benutzer klickt der **Drucken** Schaltfläche.  
   
 ```  
 virtual void PrintKeyMap();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die `PrintKeyMap` Methode druckt die schlüsselzuordnung. Es wird einen neuen Druckauftrag initiiert und ruft dann wiederholt die [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) und [CMFCKeyMapDialog::OnPrintItem](#onprintitem) Methoden erst die Key Zuordnungen gedruckt werden.  
+ Die `PrintKeyMap` Methode gibt den zugeordnet. Er startet einen neuen Druckauftrag und ruft dann wiederholt die [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) und [CMFCKeyMapDialog::OnPrintItem](#onprintitem) Methoden, bis alle Schlüssel Zuordnungen gedruckt werden.  
   
 ##  <a name="setcolumnswidth"></a>  CMFCKeyMapDialog::SetColumnsWidth  
- Wird aufgerufen, durch das Framework die Breite der Spalten in das interne Strukturelement-Steuerelement festlegen, die das Steuerelement der Tastatur Zuordnung unterstützt.  
+ Wird aufgerufen, durch das Framework die Breite der Spalten in der internen Steuerelement festlegen, die Karten-Steuerelement auf der Tastatur unterstützt.  
   
 ```  
 virtual void SetColumnsWidth();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode legt die interne Liste an Standardeinstellung breiten Spalten des Steuerelements fest. Zunächst wird die Breite der Spalte Schlüssel Verknüpfung berechnet. Klicken Sie dann ein Drittel der verbleibenden Breite der Spalte zugeordnet ist, und die restlichen zwei Drittel der Description-Spalte zugeordnet ist.  
+ Diese Methode wird die interne Liste des Steuerelements Spalten auf eine standardmäßige Breite. Zunächst wird die Breite der Verknüpfung Spalte berechnet. Klicken Sie dann ein Drittel der verbleibenden Breite der Spalte zugeordnet, und die restlichen zwei Drittel der Spalte "Beschreibung" zugeordnet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

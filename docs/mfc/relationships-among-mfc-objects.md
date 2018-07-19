@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0cdc4ebeab81a0eb69b96b161350f75ebc8b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef6a9e605948fac4f31338f87b4d00bbaa8712f4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931651"
 ---
 # <a name="relationships-among-mfc-objects"></a>Beziehungen zwischen MFC-Objekten
 Dokument-/Ansichtarchitektur-Erstellungsprozess in Perspektive zu versetzen, beachten Sie, um ein aktives Programm: ein Dokument, das Rahmenfenster verwendet, um die Ansicht enthält und die Ansicht, die dem Dokument zugeordnet.  
@@ -52,7 +53,7 @@ Dokument-/Ansichtarchitektur-Erstellungsprozess in Perspektive zu versetzen, bea
  In der Regel ein Framefenster verfügt eine Ansicht, aber in manchen Fällen enthält das gleiche Rahmenfenster wie Splitterfenster, mehrere Ansichten. Das Rahmenfenster und dabei einen Zeiger auf die momentan aktiven Ansicht; der Zeiger wird jedes Mal aktualisiert, an einer anderen Ansicht aktiviert wird.  
   
 > [!NOTE]
->  Ein Zeiger auf das Hauptrahmenfenster befindet sich in der [M_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) Membervariable des Anwendungsobjekts. Einen Aufruf von `OnFileNew` in Ihre Überschreibung der `InitInstance` Memberfunktion von `CWinApp` legt `m_pMainWnd` für Sie. Wenn Sie nicht aufrufen `OnFileNew`, müssen Sie den Wert der Variablen in festlegen `InitInstance` selbst. (SDI-COM-Komponente (Server)-Anwendungen möglicherweise nicht die Variable festgelegt, wenn Embedding in der Befehlszeile angegeben ist.) Beachten Sie, dass `m_pMainWnd` ist jetzt ein Member der Klasse `CWinThread` statt `CWinApp`.  
+>  Ein Zeiger auf das Hauptrahmenfenster befindet sich in der [M_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) Membervariable des Anwendungsobjekts. Einen Aufruf von `OnFileNew` in Ihre Überschreibung der `InitInstance` Memberfunktion von `CWinApp` legt *M_pMainWnd* für Sie. Wenn Sie nicht aufrufen `OnFileNew`, müssen Sie den Wert der Variablen in festlegen `InitInstance` selbst. (SDI-COM-Komponente (Server)-Anwendungen möglicherweise nicht die Variable festgelegt, wenn Embedding in der Befehlszeile angegeben ist.) Beachten Sie, dass *M_pMainWnd* ist jetzt ein Member der Klasse `CWinThread` statt `CWinApp`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dokumentvorlagen und der Erstellungsvorgang für die Dokument-/Ansichtarchitektur](../mfc/document-templates-and-the-document-view-creation-process.md)   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343310"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Unbeschränkte Rich-Edit-Steuerelemente
 Ihre Anwendung kann ein rich-Edit-Steuerelement die Größe ändern ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) nach Bedarf, sodass sie immer die gleiche Größe wie der Inhalt ist. Ein rich-Edit-Steuerelement unterstützt diese so genannten "Unbeschränkte" Funktionalität durch das übergeordnete Fenster sendet eine [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) Benachrichtigung bei jeder Änderung der Größe ihrer Inhalte.  

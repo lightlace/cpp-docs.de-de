@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345538"
 ---
 # <a name="exceptions-ole-exceptions"></a>Ausnahmen: OLE-Ausnahmen
 Die Techniken und Funktionen zum Behandeln von Ausnahmen in OLE entsprechen denen für andere Ausnahmebehandlung. Weitere Informationen zur Ausnahmebehandlung finden Sie im Artikel [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md).  

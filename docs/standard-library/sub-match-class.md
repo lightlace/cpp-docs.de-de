@@ -30,11 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740ebe26dd36dd89786806c3960e6184b117daeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 607a200230e1dfb167707e785f7f8fbbde118587
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964781"
 ---
 # <a name="submatch-class"></a>sub_match-Klasse
 
@@ -64,7 +65,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-`BidIt` Der itertatortyp für teilübereinstimmungen.
+*BidIt*  
+ Der Itertatortyp für Teilübereinstimmungen.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -96,11 +98,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parameter
 
-`right` Die teilübereinstimmung verglichen werden soll.
+*right*  
+ Die Teilübereinstimmung, mit der verglichen werden soll.
 
-`str` Das zu vergleichende Zeichenfolge.
+*str*  
+ Die Zeichenfolge, mit der verglichen wird.
 
-`ptr` Die nullterminierte Sequenz verglichen werden soll.
+*ptr*  
+ Die mit NULL endende Sequenz, mit der verglichen werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -372,7 +377,7 @@ bool matched;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Member nimmt `true` nur auf, wenn die `*this` zugeordnete Erfassungsgruppe Teil der Übereinstimmung des regulären Ausdrucks war.
+Der Member nimmt **"true"** nur dann, wenn die Erfassungsgruppe zugeordnete `*this` war Bestandteil der Übereinstimmung des regulären Ausdrucks.
 
 ### <a name="example"></a>Beispiel
 

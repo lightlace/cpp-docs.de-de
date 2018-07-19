@@ -1,5 +1,5 @@
 ---
-title: Ressourcendateien (C++) | Microsoft Docs
+title: Ressourcendateien (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0c295b9a3aa4996cdcd2afb17b5a4ff4c90c1159
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33334996"
 ---
 # <a name="resource-files-c"></a>Ressourcendateien (C++)
-Ressourcen sind Benutzeroberflächenelemente, die Informationen für den Benutzer bereitstellen. Bitmaps, Symbole, Symbolleisten und Cursor sind alle Ressourcen auf. Einige Ressourcen können bearbeitet werden, um eine Aktion, z. B. in einem Menü auswählen oder Eingeben von Daten in das Dialogfeld Ausführen.  
+Ressourcen sind Schnittstellenelemente, die dem Benutzer Informationen bereitstellen. Bitmaps, Symbole, Symbolleisten und Cursor sind Ressourcen. Einige Ressourcen können bearbeitet werden, sodass sie eine Aktion ausführen, z.B. das Auswählen aus einem Menü oder Eingeben von Daten in einem Dialogfeld.  
   
- Finden Sie unter [arbeiten mit Ressourcen](../windows/working-with-resource-files.md) für Weitere Informationen.  
+ Weitere Informationen finden Sie unter [Working with Resources (Arbeiten mit Ressourcen)](../windows/working-with-resource-files.md).  
   
-|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|Beschreibung|  
+|Dateiname|Speicherort für das Verzeichnis|Speicherort für den Projektmappen-Explorer|description|  
 |---------------|------------------------|--------------------------------|-----------------|  
-|*Projektname*RC|*Projektname*|Quelldateien|Die Ressourcenskriptdatei für das Projekt. Die Ressourcenskriptdatei enthält die folgenden, je nach Art des Projekts, und die Unterstützung für das Projekt (z. B. Symbolleisten, Dialogfelder oder HTML) ausgewählt:<br /><br /> -Standard menüdefinition.<br />-Tabellen Accelerator und Zeichenfolge.<br />-Standard **zu** (Dialogfeld).<br />– Andere Dialogfelder.<br />– Die Symboldatei (Res\\*Projname*ICO).<br />-Versionsinformationen.<br />-Bitmaps.<br />-Symbolleiste.<br />-HTML Dateien.<br /><br /> Die Ressourcendatei enthält die Datei Afxres.rc für Microsoft Foundation Class-Standardressourcen.|  
-|Resource.h|*Projektname*|Headerdateien|Die Ressource-Header-Datei, die Definitionen für die vom Projekt verwendeten Ressourcen enthält.|  
-|*Projektname*RC2|*Projektname*\res|Quelldateien|Die Skriptdatei enthält zusätzliche Ressourcen, die vom Projekt verwendet. Sie können die RC2-Datei am Anfang des Projekts RC-Datei einschließen.<br /><br /> RC2-Dateien ist nützlich für das Einschließen von Ressourcen durch mehrere unterschiedliche Projekte verwendet. Anstatt die gleichen Ressourcen mehrere Male für verschiedene Projekte erstellen, können sie in einer RC2-Datei abgelegt werden und enthalten die RC2-Datei in die Datei RC-Hauptdatei abweicht.|  
-|*Projektname*DEF|*Projektname*|Quelldateien|Die Moduldefinitionsdatei für eine DLL-Projekt. Für ein Steuerelement stellt er den Namen und die Beschreibung des Steuerelements sowie die Größe des Heaps zur Laufzeit bereit.|  
-|*Projektname*ICO|*Projektname*\res|Ressourcendateien|Die Symboldatei für das Projekt oder das Steuerelement. Dieses Symbol wird angezeigt, wenn die Anwendung minimiert wird. Sie dient auch in der Anwendungsverzeichnis **zu** Feld. Standardmäßig MFC enthält das Symbol "MFC" und ATL stellt das Symbol "ATL".|  
-|*Projektname*doc.ico vorhanden sind|*Projektname*\res|Ressourcendateien|Die Symboldatei für ein MFC-Projekt, das Unterstützung für die Dokument-/Ansichtarchitektur umfasst.|  
-|ToolBar.bmp|*Projektname*\res|Ressourcendateien|Die Bitmapdatei, die die Anwendung bzw. eines Steuerelements in einer Symbolleiste oder Palette darstellt. Diese Bitmap ist in der Ressourcendatei des Projekts enthalten. Die erste Symbolleiste und Statusleiste werden erstellt, der **CMainFrame** Klasse.|  
-|Ribbon.mfcribbon ms|*Projektname*\res|Ressourcendateien|Die Ressourcendatei mit dem XML-Code, der die Schaltflächen, Steuerelemente und Attribute im Menüband definiert. Weitere Informationen finden Sie unter [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md).|  
+|*Projname*.rc|*Projname*|Quelldateien|Die Ressourcenskriptdatei für das Projekt. Die Ressourcenskriptdatei enthält abhängig von der Art des Projekts und der ausgewählten Unterstützung für das Projekt (z.B. Symbolleisten, Dialogfelder oder HTML) Folgendes:<br /><br /> – Standardmenüdefinition<br />– Beschleuniger und Zeichenfolgentabellen<br />– Standarddialogfeld **Info**<br />– Weitere Dialogfelder<br />– Symboldatei (res\\*Projname*.ico)<br />– Versionsinformationen<br />– Bitmaps<br />– Symbolleiste<br />– HTML-Dateien<br /><br /> Die Ressourcendatei enthält die Datei „Afxres.rc“ für MFC-Standardressourcen.|  
+|Resource.h|*Projname*|Headerdateien|Die Headerdatei für Ressourcen, die Definitionen für die vom Projekt verwendeten Ressourcen enthält.|  
+|*Projname*.rc2|*Projname*\res|Quelldateien|Die Skriptdatei, die zusätzliche vom Projekt verwendete Ressourcen enthält. Sie können die RC2-Datei am Anfang der RC-Datei des Projekts einfügen.<br /><br /> Eine RC2-Datei ist nützlich, um Ressourcen einzufügen, die von mehreren verschiedenen Projekten verwendet werden. Anstatt die gleichen Ressourcen mehrmals für verschiedene Projekte zu erstellen, können Sie sie in eine RC2-Datei einfügen und diese dann in die RC-Hauptdatei einfügen.|  
+|*Projname*.def|*Projname*|Quelldateien|Die Moduldefinitionsdatei für ein DLL-Projekt. Sie stellt einem Steuerelement den Namen und die Beschreibung des Steuerelements bereit. Außerdem gibt Sie die Größe des Heaps der Runtime an.|  
+|*Projname*.ico|*Projname*\res|Ressourcendateien|Die Symboldatei für das Projekt oder Steuerelement. Dieses Symbol wird angezeigt, wenn die Anwendung minimiert wird. Es wird in der Anwendung auch im Feld **Info** verwendet. MFC stellt standardmäßig das MFC-Symbol bereit, und ATL stellt das ATL-Symbol bereit.|  
+|*Projname*Doc.ico|*Projname*\res|Ressourcendateien|Die Symboldatei für ein MFC-Projekt, das Unterstützung für die Dokument- oder Ansichtsarchitektur enthält.|  
+|Toolbar.bmp|*Projname*\res|Ressourcendateien|Die Bitmapdatei, die die Anwendung oder das Steuerelement in einer Symbolleiste oder Palette darstellt. Diese Bitmap ist in der Ressourcendatei des Projekts enthalten. Die erste Symbolleiste und Statusleiste werden in der Klasse **CMainFrame** erstellt.|  
+|ribbon.mfcribbon-ms|*Projname*\res|Ressourcendateien|Die Ressourcendatei, die den XML-Code enthält, der die Schaltflächen, Steuerelemente und Attribute im Menüband definiert. Weitere Informationen finden Sie unter [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md).|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Für Visual C++-Projekte erstellte Dateitypen](../ide/file-types-created-for-visual-cpp-projects.md)

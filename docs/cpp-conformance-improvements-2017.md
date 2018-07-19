@@ -10,13 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd640b838c10e010cf2ea028d5f693cd2e5ba14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ed2165f75103f5e2aecd3d73dfe9518341d926e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042328"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>C++-Konformitätsverbesserungen in Visual Studio 2017, Versionen 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) und [15.7](#improvements_157)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>C++-Konformitätsverbesserungen in Visual Studio 2017, Versionen 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) und [15.7](#improvements_157)
 
 Der Microsoft Visual C++-Compiler ist jetzt vollständig mit Unterstützung für generalisierte contextpr und NSDMI für Aggregate für Funktionen, die im C++14-Standard hinzugefügt wurden. Beachten Sie, dass dem Compiler noch einige Funktionen der C++11- und C++98-Standards fehlen. Eine Tabelle mit dem aktuellen Compilerstatus finden Sie unter [Visual C++-Sprachkonformität](visual-cpp-language-conformance.md).
 
@@ -338,7 +339,7 @@ void bar(A<0> *p)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) Änderungen an den `std::traits_type`-Memberfunktionen `length`, `compare` und `find`, damit `std::string_view` in konstanten Ausdrücken verfügbar wird. (In Visual Studio 2017 Version 15.6 wird dies nur für Clang/LLVM unterstützt. In Version 15.7 Preview 2 ist die Unterstützung für CIXX ebenso fast vollständig.)
 
-## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-and-157update157"></a>Fehlerbehebungen in Visual Studio, Versionen 15.0, [15.3](#update_153), [15.5](#update_155) und [15.7](#update_157)
+## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Fehlerbehebungen in Visual Studio, Versionen 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157) und [15.8](#update_158)
 
 ### <a name="copy-list-initialization"></a>copy-list-Initialisierung
 
@@ -492,12 +493,12 @@ oder Sie führen eine statische Umwandlung aus, um das Objekt zu konvertieren, b
     printf("%i\n", static_cast<int>(s))
 ```
 
-Für mit CStringW erstellte und verwaltete Zeichenfolgen sollte der bereitgestellte `operator LPCWSTR()` verwendet werden, um ein CStringW-Objekt in einen C-Zeiger umzuwandeln, der von der Formatzeichenfolge erwartet wird.
+Für mit CString erstellte und verwaltete Zeichenfolgen sollte der bereitgestellte `operator LPCTSTR()` verwendet werden, um ein CString-Objekt in einen C-Zeiger umzuwandeln, der von der Formatzeichenfolge erwartet wird.
 
 ```cpp
-CStringW str1;
-CStringW str2;
-str1.Format(L"%s", static_cast<LPCWSTR>(str2));
+CString str1;
+CString str2 = _T("hello!");
+str1.Format(_T("%s"), static_cast<LPCTSTR>(str2));
 ```
 
 ### <a name="cv-qualifiers-in-class-construction"></a>CV-Qualifizierer in der Klassenkonstruktion
@@ -1581,6 +1582,251 @@ D<int> d;
 ```
 
 Um den Fehler zu beheben, ändern Sie den B()-Ausdruck zu „B\<T>()“.
+
+### <a name="constexpr-aggregate-initialization"></a>constexpr-Aggregatinitialisierung
+
+In den Vorgängerversionen des C++-Compilers wurde die constexpr-Aggregatinitialisierung falsch verarbeitet. So wurde ungültiger Code akzeptiert, bei dem „aggregate-init-list“ zu viele Elemente enthielt und eine fehlerhafte Codegenerierung für diesen erstellte. Ein Beispiel für einen solchen Code wird im Folgenden gezeigt: 
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {
+        { 1, 2 },
+        { 3, 4 }
+    };
+    return 0;
+}
+
+```
+
+Bei Visual Studio 2017 Version 15.7 Update 3 und höher löst das vorherige Beispiel jetzt den Fehler *C2078 zu viele Initialisierungen* aus. Im unten stehenden Codebeispiel wird veranschaulicht, wie der Code behoben wird. Beim Initialisieren eines `std::array` mit geschachtelten „brace-init-list“-Objekten weisen Sie dem inneren Array selbst ein „braced-list“ zu:
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {{ // note double braces
+        { 1, 2 },
+        { 3, 4 }
+    }}; // note double braces
+    return 0;
+}
+
+```
+
+## <a name="update_158"></a>Fehlerkorrekturen und Verhaltensänderungen in Visual Studio 2017 Version 15.8
+
+### <a name="typename-on-unqualified-identifiers"></a>typename für nicht qualifizierte Bezeichner
+
+Im Modus [/permissive-](build/reference/permissive-standards-conformance.md) werden falsche `typename`-Schlüsselwörter für nicht qualifizierte Bezeichner in Definitionen von Aliasvorlagen nicht mehr vom Compiler akzeptiert. Der folgende Code erzeugt nun die Fehlermeldung C7511 *'T': 'typename' keyword must be followed by a qualified name* („T“: Dem Schlüsselwort „typename“ muss ein qualifizierter Name folgen):
+
+```cpp
+template <typename T>
+using  X = typename T;
+```
+
+Ändern Sie die zweite Zeile einfach in `using  X = T;`, um den Fehler zu beheben.
+
+### <a name="declspec-on-right-side-of-alias-template-definitions"></a>__declspec() auf der rechten Seite der Definitionen von Aliasvorlagen
+
+[__declspec](cpp/declspec.md) ist auf der rechten Seite einer Aliasvorlagendefinition nicht mehr zulässig. Dies wurde zuvor vom Compiler akzeptiert, wurde jedoch vollständig ignoriert und resultierte nie in einer Veraltungswarnung, wenn der Alias verwendet wurde.
+
+Das C++-Standardattribut [\[\[deprecated\]\]](cpp/attributes.md) kann stattdessen verwendet werden und wird ab Visual Studio 2017 Version 15.6 eingehalten. Der folgende Code erzeugt nun die Fehlermeldung C2760 *syntax error: unexpected token '__declspec', expected 'type specifier'* (Syntaxfehler: unerwartetes Token „__declspec“, erwartet wurde „type specifier“):
+
+```cpp
+template <typename T>
+using X = __declspec(deprecated("msg")) T;
+```
+
+Ersetzen Sie den Code mit dem Folgenden (mit den Attributen vor dem „=“ der Aliasdefinition), um den Fehler zu beheben:
+
+```cpp
+template <typename T>
+using  X [[deprecated("msg")]] = T;
+```
+
+### <a name="two-phase-name-lookup-diagnostics"></a>Diagnose der Zweiphasennamenssuche
+
+Die Zweiphasennamenssuche erfordert, dass nicht abhängige Namen in Vorlagentexten zum Zeitpunkt der Definition für die Vorlage sichtbar sind. Zuvor hätte der Microsoft C++-Compiler einen nicht gefundenen Namen bis zu den Instanziierungszeitpunkten nicht gesucht. Nun müssen nicht abhängige Namen im Vorlagentext gebunden sein.
+
+Dies kann sich beispielsweise ergeben, wenn in abhängigen Basisklassen gesucht wird. Zuvor war die Verwendung von Namen im Compiler zulässig, die in abhängigen Basisklassen definiert werden, da zum Instanziierungszeitpunkt nach ihnen gesucht wurde, wenn alle Typen aufgelöst werden. Nun wird dieser Code als Fehler behandelt. In diesen Fällen können Sie erzwingen, dass nach der Variable zum Instanziierungszeitpunkt gesucht wird, indem Sie sie mit dem Basisklassentyp qualifizieren oder anderweitig abhängig machen, indem Sie beispielsweise einen `this->`-Pointer hinzufügen.
+
+Im Modus **/permissive-** erzeugt der folgende Code nun die Fehlermeldung C3861: *'base_value': identifier not found* („base_value“: Bezeichner wurde nicht gefunden.):
+
+```cpp
+template <class T>
+struct Base {
+    int base_value = 42;
+};
+
+template <class T>
+struct S : Base<T> {
+    int f() {
+        return base_value;
+    }
+};
+
+```
+
+Ändern Sie die Anweisung `return` in `return this->base_value;`, um den Fehler zu beheben.
+
+### <a name="forward-declarations-and-definitions-in-namespace-std"></a>Vorwärtsdeklarationen und -definitionen im Namespace „std“
+
+Standardmäßig ist es in C++ nicht zulässig, dem Namespace `std` Vorwärtsdeklarationen oder -definitionen hinzuzufügen. Das Hinzufügen von Deklarationen oder Definitionen in den Namespace `std` oder einen Namespace im Namespace „std“ resultiert nun in nicht definiertem Verhalten.
+
+Der Ort, an dem einige STL-Typen definiert werden, soll zu einem zukünftigen Zeitpunkt verschoben werden. Wenn dies geschieht, wird vorhandener Code, der dem Namespace `std` Vorwärtsdeklarationen hinzufügt ungültig. Eine neue Warnung (C4643) hilft beim Identifizieren solcher Probleme mit der Quelle. Die Warnung ist standardmäßig deaktiviert, im Modus **/default** ist sie aktiviert. Dies wirkt sich auf die Programme aus, die mit **/Wall** oder **/WX** kompiliert werden. 
+
+Der folgende Code löst nun die Fehlermeldung C4643: *Forward declaring 'vector' in namespace std is not permitted by the C++ Standard* (Die Weiterleitung mit Deklaration von „Vektor“ im Namespace „std“ ist gemäß C++-Standard nicht zulässig) aus. 
+
+
+```cpp
+namespace std { 
+    template<typename T> class vector; 
+} 
+```
+
+Verwenden Sie anstelle einer Vorwärtsdeklaration eine **include**-Anweisung, um den Fehler zu beheben:
+
+```cpp
+#include <vector>
+```
+
+### <a name="constructors-that-delegate-to-themselves"></a>Auf sich selbst verweisende Konstruktoren
+
+Der C++-Standard schlägt vor, dass ein Compiler eine Diagnose ausgeben soll, wenn ein delegierender Konstruktor an sich selbst delegiert. Der Microsoft C++-Compiler löst in den Modi [/std:c++17](build/reference/std-specify-language-standard-version.md) und [/std:c++latest](build/reference/std-specify-language-standard-version.md) nun die Fehlermeldung C7535: *'X::X': delegating constructor calls itself* („X::X“: Delegierender Konstruktor ruft sich selbst auf).
+
+Ohne diese Fehlermeldung wird das folgende Programm kompiliert, jedoch wird eine Endlosschleife erstellt:
+
+```cpp
+class X { 
+public: 
+    X(int, int); 
+    X(int v) : X(v){}
+}; 
+```
+
+Delegieren Sie an einen anderen Konstruktor, um die Endlosschleife zu vermeiden:
+
+```cpp
+class X { 
+public: 
+
+    X(int, int); 
+    X(int v) : X(v, 0) {} 
+}; 
+```
+
+### <a name="offsetof-with-constant-expressions"></a>offsetof mit konstanten Ausdrücken
+
+[offsetof](c-runtime-library/reference/offsetof-macro.md) wurde bisher mithilfe eines Makros implementiert, das [reinterpret_cast](cpp/reinterpret-cast-operator.md) erfordert. Dies ist in Kontexten nicht zulässig, die einen konstanten Ausdruck erfordern, jedoch war es bisher im Microsoft C++-Compiler gültig. Das offsetof-Makro, das im Rahmen von STL enthalten ist, verwendet eine intrinsische Compiler-Funktion (**__builtin_offsetof**), jedoch haben viele Personen den Makro-Trick verwendet, um **offsetof** selbst zu definieren.  
+
+In Visual Studio 2017 Version 15.8 beschränkt der Compiler die Bereiche, in denen „reinterpret_casts“ im Standardmodus auftreten kann, damit der Code einfacher dem Standardverhalten von C++ entspricht. Im Modus [/permissive-](build/reference/permissive-standards-conformance.md) sind die Einschränkungen sogar strenger. Das Verwenden des Ergebnisses von offsetof an Orten, die konstante Ausdrücke erfordern, kann in Code resultieren, der die Warnung C4644 *usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead* (Die Verwendung des makrobasierten offsetof-Musters in konstanten Ausdrücken ist kein Standardvorgehen. Verwenden Sie stattdessen das in der C++-Standardbibliothek definierte offsetof-Muster.) oder die Warnung C2975 *invalid template argument, expected compile-time constant expression* (Ungültiges Vorlagenargument, konstanter Kompilierzeitausdruck erwartet) auslöst.
+
+Der folgende Code löst in den Modi **/default** und **/std:c++17** die Warnung C4644 und im Modus **/permissive-** die Warnung C2975 aus: 
+
+```cpp
+struct Data { 
+    int x; 
+}; 
+
+// Common pattern of user-defined offsetof 
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+
+int main() 
+
+{ 
+    switch (0) { 
+    case MY_OFFSET(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+Verwenden Sie **offsetof** wie über \<cstddef>: definiert, um den Fehler zu beheben.
+
+```cpp
+#include <cstddef>  
+
+struct Data { 
+    int x; 
+};  
+
+int main() 
+{ 
+    switch (0) { 
+    case offsetof(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+
+### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>CV-Qualifizierer auf Basisklassen, die einer Paketerweiterung unterliegen
+
+Vorherige Versionen des Microsoft C++-Compilers haben nicht erkannt, dass Basisklassen über CV-Qualifizierer verfügen, wenn sie ebenfalls Paketerweiterungen unterliegen. 
+
+In Visual Studio 2017 Version 15.8 löst der folgende Code im Modus **/permissive-** die Warnung C3770 *'const S': is not a valid base class* („const S“: ist keine gültige Basisklasse) aus: 
+
+```cpp
+template<typename... T> 
+class X : public T... { };  
+
+class S { };  
+
+int main() 
+{ 
+    X<const S> x; 
+} 
+```
+### <a name="template-keyword-and-nested-name-specifiers"></a>template-Schlüsselwort und geschachtelte Namensspezifizierer
+
+Im Modus **/permissive-** erfordert der Compiler nun das Schlüsselwort `template`, der einem Vorlagennamen vorangestellt wird, wenn dieser hinter einem abhängigen geschachtelten Namensspezifizierer steht. 
+
+Der folgende Code löst im Modus **/permissive-** nun die Fehlermeldung C7510: *'foo': use of dependent template name must be prefixed with 'template'. note: see reference to class template instantiation 'X<T>' being compiled* („foo“: Bei Verwendung eines abhängigen Vorlagennamens muss das Präfix „template“ vorangestellt werden. Hinweis: Siehe Verweis auf die kompilierte Klassenvorlageninstanziierung „X“) aus:
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {} 
+}; 
+
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        Base<T>::foo<int>(); 
+    } 
+}; 
+```
+
+Fügen Sie der Anweisung `Base<T>::foo<int>();` das Schlüsselwort `template` wie im folgenden Beispiel gezeigt hinzu, um den Fehler zu beheben:
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {}
+};
+ 
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        // Add template keyword here:
+        Base<T>::template foo<int>(); 
+    } 
+}; 
+```
 
 ## <a name="see-also"></a>Siehe auch
 

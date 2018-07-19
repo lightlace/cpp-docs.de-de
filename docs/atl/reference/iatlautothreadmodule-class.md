@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358781"
 ---
 # <a name="iatlautothreadmodule-class"></a>IAtlAutoThreadModule-Klasse
 Diese Klasse stellt eine Schnittstelle zu einem `CreateInstance` Methode.  

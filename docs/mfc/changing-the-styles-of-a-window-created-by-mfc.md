@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345728"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Ändern der Stile eines mit MFC erstellten Fensters
 In der Version von den `WinMain` MFC-Funktion mehrere Standardfenster-Klassen für Sie registriert. Da Sie normalerweise die MFC bearbeiten nicht `WinMain`, dass die Funktion keine Möglichkeit bestand, ändern Sie die MFC-Fenster Standardstile werden ermittelt. In diesem Artikel wird erläutert, wie Sie einen der Stile eines solchen einen vorab registrierten Fensterklasse in einer vorhandenen Anwendung ändern können.  

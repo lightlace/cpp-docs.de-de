@@ -41,6 +41,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391534"
 ---
 # <a name="obsolete-functions"></a>Veraltete Funktionen
 Bestimmte Bibliotheksfunktionen sind veraltet, und es stehen äquivalente neuere Funktionen zur Verfügung. Wir empfehlen, die aktualisierten Versionen zu verwenden. Andere veraltete Versionen wurden aus der CRT entfernt. In diesem Thema werden die als veraltet eingestuften und die in einer bestimmten Version von Visual Studio entfernten Funktionen aufgelistet.  

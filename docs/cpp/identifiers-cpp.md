@@ -1,5 +1,5 @@
 ---
-title: Bezeichner (C++) | Microsoft Docs
+title: Bezeichner (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb25713ad4f4a8ab1821eac4f7bf05d671bb101
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ef6bf658cd290e23be59eb7d26a6b0d353b52c6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941771"
 ---
 # <a name="identifiers-c"></a>Bezeichner (C++)
 Ein Bezeichner ist eine Folge von Zeichen zur Angabe folgender Elemente:  
@@ -70,7 +71,7 @@ N O P Q R S T U V W X Y Z
   
  **Microsoft-spezifisch**  
   
- Nur die ersten 2048 Zeichen aus Microsoft C++-Bezeichnern sind signifikant. Namen für benutzerdefinierte Typen werden vom Compiler "ergänzt", damit die Typinformationen beibehalten werden. Der resultierende Name, einschließlich der Typinformationen, darf nicht länger als 2048 Zeichen sein. (Siehe [ergänzte Namen](../build/reference/decorated-names.md) für Weitere Informationen.) Folgende Faktoren können die Länge eines ergänzten Bezeichners beeinflussen:  
+ Nur die ersten 2048 Zeichen aus Microsoft C++-Bezeichnern sind signifikant. Namen für benutzerdefinierte Typen werden vom Compiler "ergänzt", damit die Typinformationen beibehalten werden. Der resultierende Name, einschließlich der Typinformationen, darf nicht länger als 2048 Zeichen sein. (Finden Sie unter [ergänzte Namen](../build/reference/decorated-names.md) für Weitere Informationen.) Folgende Faktoren können die Länge eines ergänzten Bezeichners beeinflussen:  
   
 -   Gibt an, ob der Bezeichner ein Objekt eines benutzerdefinierten Typs angibt oder einen von einem benutzerdefinierten Typ abgeleiteten Typ.  
   
@@ -101,7 +102,7 @@ int main() {
   
  Das erste Zeichen eines Bezeichners muss ein Buchstabe des Alphabets (Großbuchstabe oder Kleinbuchstabe) oder ein Unterstrich ( **_** ) sein. Da bei C++-Bezeichnern die Groß- und Kleinschreibung berücksichtigt wird, unterscheidet sich `fileName` von `FileName`.  
   
- Für Bezeichner muss eine andere Schreibweise gewählt werden als für Schlüsselwörter. Bezeichner, die Schlüsselwörter enthalten, sind gültig. Beispielsweise ist `Pint` ein gültiger Bezeichner, obwohl das Schlüsselwort `int`enthalten ist.  
+ Für Bezeichner muss eine andere Schreibweise gewählt werden als für Schlüsselwörter. Bezeichner, die Schlüsselwörter enthalten, sind gültig. Z. B. `Pint` ist ein gültiger Bezeichner, obwohl er enthält **Int**, dies ist ein Schlüsselwort.  
   
  Die Verwendung von zwei aufeinander folgenden Unterstrichen ( **__** )  am Anfang eines Bezeichners oder eines einzelnen vorangestellten Unterstrichs, gefolgt von einem Großbuchstaben, ist C++-Implementierungen in allen Bereichen vorbehalten. Sie sollten es vermeiden, einen einzelnen vorangestellten Unterstrich gefolgt von einem Kleinbuchstaben für Dateibereiche zu verwenden, da Konflikte mit aktuellen oder zukünftigen reservierten Bezeichnern auftreten können.  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291901"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>Compilerwarnung (Stufe 1) C4965
 Implizites Feld der Ganzzahl 0; Nullptr oder explizite Typumwandlung verwenden  

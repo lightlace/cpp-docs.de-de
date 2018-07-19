@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273990"
 ---
 # <a name="compiler-error-c3890"></a>Compilerfehler C3890
 "Var": Sie können die Adresse von einem literal-Datenmember nicht übernehmen  

@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e528ea7901518112c255eefbfb1e674fddee04e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d03966cb61e1ccab3f8f3886638efdf95a534a73
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930312"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optimieren von Persistenz und Initialisierung
 Standardmäßig Persistenz und Initialisierung in einem Steuerelement vom gehandhabt werden die `DoPropExchange` Memberfunktion. In einem typischen Steuerelement diese Funktion enthält mehrere Aufrufe **PX_** Funktionen (`PX_Color`, `PX_Font`usw.), eine für jede Eigenschaft.  
@@ -44,7 +45,7 @@ Standardmäßig Persistenz und Initialisierung in einem Steuerelement vom gehand
   
  [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]  
   
- Beachten Sie, dass im Fall laden eine temporäre Variable wird verwendet, und klicken Sie dann deren Wert zugewiesen wird, anstatt die Umwandlung `m_boolProp` zu einem **BYTE** Verweis. Das Umwandlungsverfahren würde nur ein Byte des `m_boolProp` geändert wird, lassen Sie die restlichen Bytes nicht initialisiert.  
+ Beachten Sie, dass im Fall laden eine temporäre Variable wird verwendet, und klicken Sie dann deren Wert zugewiesen wird, anstatt die Umwandlung *M_boolProp* zu einem **BYTE** Verweis. Das Umwandlungsverfahren würde nur ein Byte des *M_boolProp* geändert wird, lassen Sie die restlichen Bytes nicht initialisiert.  
   
  Für das Steuerelement, können Sie das Steuerelement Initialisierung optimieren, indem Sie überschreiben [COleControl:: OnResetState ein](../mfc/reference/colecontrol-class.md#onresetstate) wie folgt:  
   

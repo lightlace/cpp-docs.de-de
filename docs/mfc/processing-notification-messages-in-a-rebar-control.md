@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a06df0bdfe8d1b81b4285fc86378f3da99882698
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1d42d129ab7b7d2e98ae1126b8f32f68b1f356
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931826"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Verarbeiten von Benachrichtigungsmeldungen in einem Grundleisten-Steuerelement
 Erstellen Sie in der übergeordneten Klasse Grundleisten-Steuerelement, ein `OnChildNotify` Handlerfunktion mit einer Switch-Anweisung für jedes Grundleisten-Steuerelement (`CReBarCtrl`) benachrichtigungsmeldungen, die Sie behandeln möchten. Benachrichtigungen werden an das übergeordnete Fenster gesendet, wenn der Benutzer Objekte über die Grundleisten-Steuerelement Änderungen das Layout der rebarbereichen, löscht Lieblingsbands zieht, aus dem Grundleistensteuerelement, und so weiter.  
   
  Die folgenden benachrichtigungsmeldungen können durch das Grundleisten-Steuerelementobjekt gesendet werden:  
   
--   **RBN_AUTOSIZE** gesendet, die von einem Grundleistensteuerelement (erstellt mit der **RBS_AUTOSIZE** Stil) Wenn Infoleiste automatisch angepasst.  
+-   RBN_AUTOSIZE gesendet, von einem Grundleistensteuerelement (erstellt mit dem Format RBS_AUTOSIZE) Wenn die Infoleiste automatisch angepasst.  
   
--   **RBN_BEGINDRAG** von einem Grundleisten-Steuerelement gesendet wird, wenn der Benutzer beginnt, ziehen ein Band.  
+-   RBN_BEGINDRAG, die von einem Grundleisten-Steuerelement, wenn der Benutzer beginnt, ziehen ein Band gesendet werden.  
   
--   **RBN_CHILDSIZE** von einem Grundleistensteuerelement gesendet wird, wenn ein Band untergeordnetes Fenster angepasst wird.  
+-   RBN_CHILDSIZE, die von einem Grundleisten-Steuerelement beim Ändern der Größe des Bands untergeordnetes Fenster gesendet werden.  
   
--   **RBN_DELETEDBAND wird** von einem Grundleisten-Steuerelement gesendet wird, nachdem ein Band gelöscht wurde.  
+-   RBN_DELETEDBAND wird gesendet, von einem Grundleistensteuerelement, nachdem ein Band gelöscht wurde.  
   
--   **RBN_DELETINGBAND wird** von einem Grundleisten-Steuerelement gesendet wird, wenn ein Band gelöscht werden sollen.  
+-   RBN_DELETINGBAND wird gesendet, von einem Grundleisten-Steuerelement, wenn ein Band gelöscht werden sollen.  
   
--   **RBN_ENDDRAG** von einem Grundleisten-Steuerelement gesendet wird, wenn der Benutzer den Ziehvorgang für ein Band.  
+-   RBN_ENDDRAG, die von einem Grundleisten-Steuerelement, wenn der Benutzer den Ziehvorgang für ein Band gesendet werden.  
   
--   **RBN_GETOBJECT wird** von einem Grundleisten-Steuerelement gesendet (erstellt mit dem **RBS_REGISTERDROP** Stil) Wenn ein Objekt über ein Band in das Steuerelement gezogen wird.  
+-   RBN_GETOBJECT wird gesendet, von einem Grundleistensteuerelement (erstellt mit dem Format RBS_REGISTERDROP) Wenn ein Objekt über ein Band in das Steuerelement gezogen wird.  
   
--   **RBN_HEIGHTCHANGE wird** von einem Grundleisten-Steuerelement gesendet wird, wenn seine Höhe geändert wurde.  
+-   RBN_HEIGHTCHANGE wird gesendet, von einem Grundleisten-Steuerelement, wenn seine Höhe geändert wurde.  
   
--   **RBN_LAYOUTCHANGED wird** von einem Grundleisten-Steuerelement gesendet wird, wenn der Benutzer das Layout der Bänder des Steuerelements ändert.  
+-   RBN_LAYOUTCHANGED wird gesendet, von einem Grundleisten-Steuerelement, wenn der Benutzer das Layout der Bänder des Steuerelements ändert.  
   
  Weitere Informationen zu dieser Benachrichtigungen, finden Sie unter [Grundleisten-Steuerelementverweis](http://msdn.microsoft.com/library/windows/desktop/bb774375) im Windows SDK.  
   

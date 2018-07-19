@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375674"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Name der expliziten #using-Datei)
 Eine Compileroption, mit denen Sie als Alternative zum Übergeben eines Dateinamens, [#using-Direktive](../../preprocessor/hash-using-directive-cpp.md) im Quellcode.  

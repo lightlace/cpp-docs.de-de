@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359744"
 ---
 # <a name="celementtraits-class"></a>CElementTraits-Klasse
 Diese Klasse wird von Auflistungsklassen verschieben, kopieren, Vergleichsoperatoren und Hashvorgängen Methoden und Funktionen bereit.  

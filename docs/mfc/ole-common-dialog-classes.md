@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348103"
 ---
 # <a name="ole-common-dialog-classes"></a>OLE-Common-Dialogfeldklassen
 Diese Klassen Behandeln allgemeiner OLE durch Implementieren einer Reihe von OLE-Standarddialogfelder. Sie bieten auch eine einheitliche Benutzeroberfläche für OLE-Funktionen.  

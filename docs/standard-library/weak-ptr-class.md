@@ -38,11 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03cd10d3efac16521cf826f3d9081ec533b9abec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954863"
 ---
 # <a name="weakptr-class"></a>weak_ptr-Klasse
 
@@ -76,7 +77,8 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der vom schwachen Zeiger gesteuerte Typ.
+*Ty*  
+ Der vom schwachen Zeiger gesteuerte Typ.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -103,7 +105,7 @@ Ein Zyklus tritt auf, wenn es für zwei oder mehr Ressourcen, die von `shared_pt
 |[element_type](#element_type)|Der Typ des Elements.|
 |[expired](#expired)|Überprüft, ob der Besitz abgelaufen ist.|
 |[lock](#lock)|Bedingt exklusiven Besitz einer Ressource.|
-|[owner_before](#owner_before)|Gibt `true` zurück, wenn dieses `weak_ptr`-Objekt vor dem bereitgestellten Zeiger angeordnet (oder kleiner als dieser) ist.|
+|[owner_before](#owner_before)|Gibt **"true"** Wenn diese `weak_ptr` sortiert ist, bevor Sie (oder kleiner als) des bereitgestellten Zeigers.|
 |[reset](#reset)|Gibt eine in Besitz befindliche Ressource frei.|
 |[swap](#swap)|Tauscht zwei `weak_ptr`-Objekte.|
 |[use_count](#use_count)|Ermittelt die Anzahl von festgelegten `shared_ptr`-Objekten.|
@@ -167,7 +169,7 @@ bool expired() const;
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt `true` zurück, wenn `*this` abgelaufen ist, andernfalls `false`.
+Die Memberfunktion gibt **"true"** Wenn `*this` abgelaufen ist, andernfalls **"false"**.
 
 ### <a name="example"></a>Beispiel
 
@@ -225,7 +227,7 @@ shared_ptr<Ty> lock() const;
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt ein leeres Shared_ptr-Objekt zurück, wenn `*this` ist abgelaufen; andernfalls wird eine [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md)\<"ty" > Objekt, das die Ressource, die besitzt `*this` verweist auf.
+Die Memberfunktion gibt ein leeres Shared_ptr-Objekt zurück, wenn `*this` abgelaufen ist; andernfalls wird eine [Shared_ptr-Klasse](../standard-library/shared-ptr-class.md)\<Ty >-Objekt, das die Ressource besitzt `*this` verweist auf.
 
 ### <a name="example"></a>Beispiel
 
@@ -288,11 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parameter
 
-`Other` Durch das Argument gemeinsamen/schwachen Zeiger gesteuerte Typ.
+*Andere*  
+ Der Typ, der vom Argument für den gemeinsamen/schwachen Zeiger gesteuert wird.
 
-`wp` Der zu kopierende schwache Zeiger.
+*WP*  
+ Der zu kopierende schwache Zeiger.
 
-`sp` Die für den gemeinsamen Zeiger zu kopieren.
+*SP*  
+ Der zu kopierende gemeinsame Zeiger
 
 ### <a name="remarks"></a>Hinweise
 
@@ -332,7 +337,7 @@ int main()
 
 ## <a name="owner_before"></a> owner_before
 
-Gibt `true` zurück, wenn dieses `weak_ptr`-Objekt vor dem bereitgestellten Zeiger angeordnet (oder kleiner als dieser) ist.
+Gibt **"true"** Wenn diese `weak_ptr` sortiert ist, bevor Sie (oder kleiner als) des bereitgestellten Zeigers.
 
 ```cpp
 template <class Other>
@@ -344,11 +349,12 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Ein `lvalue` Verweis auf eine `shared_ptr` oder ein `weak_ptr`.
+*ptr*  
+ Ein `lvalue`-Verweis auf `shared_ptr` oder `weak_ptr`.
 
 ### <a name="remarks"></a>Hinweise
 
-Gibt die Memberfunktion Vorlage `true` Wenn `*this` ist `ordered before` `ptr`.
+Die vorlagenmemberfunktion gibt **"true"** Wenn `*this` ist `ordered before` `ptr`.
 
 ## <a name="reset"></a> reset
 
@@ -403,11 +409,12 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Parameter
 
-`wp` Der schwache Zeiger für den Tauschvorgang.
+*WP*  
+ Der schwache Zeiger, mit dem getauscht werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion bewirkt, dass auf die Ressource, auf die ursprünglich von `*this` gezeigt wird, anschließend von `wp` gezeigt wird und dass auf die Ressource, auf die ursprünglich von `wp` gezeigt wird, anschließend von `*this` gezeigt wird. Die Funktion ändert nicht die Verweiszähler für die beiden Ressourcen und löst keine Ausnahmen aus.
+Die Memberfunktion belässt die Ressource, die ursprünglich verweist `*this` anschließend verweist *wp*, und die Ressource, die ursprünglich verweist *wp* anschließend verweist`*this`. Die Funktion ändert die Verweisanzahlen für die beiden Ressourcen nicht und löst auch keine Ausnahmen aus.
 
 ### <a name="example"></a>Beispiel
 
@@ -522,11 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parameter
 
-`Other` Durch das Argument gemeinsamen/schwachen Zeiger gesteuerte Typ.
+*Andere*  
+ Der Typ, der vom Argument für den gemeinsamen/schwachen Zeiger gesteuert wird.
 
-`wp` Der zu kopierende schwache Zeiger.
+*WP*  
+ Der zu kopierende schwache Zeiger.
 
-`sp` Die für den gemeinsamen Zeiger zu kopieren.
+*SP*  
+ Der zu kopierende gemeinsame Zeiger
 
 ### <a name="remarks"></a>Hinweise
 

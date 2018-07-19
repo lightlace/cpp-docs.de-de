@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247308"
 ---
 # <a name="compiler-error-c2844"></a>Compilerfehler C2844
 'Member': ein Member der Schnittstelle "Schnittstelle" nicht möglich  

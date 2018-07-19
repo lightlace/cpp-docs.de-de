@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392360"
 ---
 # <a name="initializing-scalar-types"></a>Initialisieren von skalaren Typen
 Beim Initialisieren von skalaren Typen wird der Wert von *assignment-expression* der Variablen zugewiesen. Die Konvertierungsregeln für Zuweisungen gelten. (Weitere Informationen zu Konvertierungsregeln finden Sie unter [Typkonvertierungen](../c-language/type-conversions-c.md).)  

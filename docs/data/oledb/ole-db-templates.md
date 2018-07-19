@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109572"
 ---
 # <a name="ole-db-templates"></a>OLE DB-Vorlagen
 Der OLE DB-Vorlagen erleichtern das OLE DB-Datenzugriff. Visual C++ bietet Vorlagenklassen, die viele häufig verwendeten OLE DB-Schnittstellen implementieren. Sie können die Visual C++-Consumervorlagen eine OLE DB-Clientanwendung (Consumer) zu schreiben und die Anbietervorlagen, eine Serveranwendung (Provider) zu schreiben.  

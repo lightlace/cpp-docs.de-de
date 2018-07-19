@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384936"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: Hintergrund
 In diesem Artikel werden die Eigenschaften und der Zweck von Windows Sockets erläutert. Der Artikel enthalt auch folgende Informationen:  

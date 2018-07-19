@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen einer Visual C++-Anwendung in eine App lokalen Anwendungsordner | Microsoft Docs
+title: Bereitstellen einer Visual C++-Anwendung in einem lokalen Anwendungsordner | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,34 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 9a02e585dc2b82c8b8ad675907e4205db6ad7279
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33337908"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung in einem lokalen Anwendungsordner
-Beschreibt das Bereitstellen einer Visual C++-Anwendung durch Kopieren von Dateien in den Ordner.  
+In diesem Artikel wird beschrieben, wie eine Visual C++-Anwendung durch Kopieren von Dateien in den Ordner bereitgestellt wird.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
   
--   Ein Computer, der Visual Studio installiert ist.  
+-   Einen Computer, auf dem Visual Studio installiert ist.  
   
--   Einem anderen Computer, die über keinen Visual C++-Bibliotheken.  
+-   Einen zusätzlichen Computer, auf dem keine Visual C++-Bibliotheken vorhanden sind.  
   
-### <a name="to-deploy-an-application-to-an-application-local-folder"></a>Zum Bereitstellen einer Anwendung auf einem lokalen Anwendungsordner  
+### <a name="to-deploy-an-application-to-an-application-local-folder"></a>So stellen Sie eine Anwendung in einem lokalen Anwendungsordner bereit  
   
-1.  Erstellen Sie eine MFC-Anwendung mithilfe der Schritte in [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setup-Projekts](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).  
+1.  Erstellen Sie eine MFC-Anwendung, indem Sie die folgenden Schritte unter [Exemplarische Vorgehensweise: Bereitstellen einer Visual C++-Anwendung mithilfe eines Setup-Projekts](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md) befolgen.  
   
-2.  Kopieren Sie die entsprechenden Dateien für MFC- und C-Laufzeit (CRT)-Bibliothek – z. B. für x X86 Plattform und Unicode-Unterstützung, kopieren "mfc100u.dll" und "Msvcr100.dll" aus \Programme\Microsoft Visual Studio 10.0\VC\redist\x86\—and fügen Sie sie im Ordner "\Release\" von Das MFC-Projekt. Weitere Informationen zu anderen Dateien, die Sie kopieren können, finden Sie unter [Ermitteln der neu zu verteilenden DLLs](../ide/determining-which-dlls-to-redistribute.md).  
+2.  Kopieren Sie die entsprechende MFC- und C-Laufzeitbibliotheksdateien (CRT), und fügen Sie diese in den Ordner „\Release\“ Ihres MFC-Projekts ein. Kopieren Sie beispielsweise „mfc100u.dll“ und „msvcr100.dll“ aus \Programme\Microsoft Visual Studio 10.0\VC\redist\x86\ für eine x86-Plattform- und Unicode-Unterstützung. Weitere Informationen über andere Dateien, die Sie möglicherweise kopieren müssen, finden Sie unter [Determining Which DLLs to Redistribute (Ermitteln der zu verteilenden DLLs)](../ide/determining-which-dlls-to-redistribute.md).  
   
-3.  Führen Sie die MFC-Anwendung auf einem zweiten Computer, die über keinen Visual C++-Bibliotheken.  
+3.  Führen Sie die MFC-Anwendung auf einem zweiten Computer aus, der über keine der Visual C++-Bibliotheken verfügt.  
   
-    1.  Kopieren Sie den Inhalt des Ordners \Release\, und fügen Sie sie in den Ordner der Anwendung auf dem zweiten Computer.  
+    1.  Kopieren Sie die Inhalte des Ordners „\Release\“, und fügen Sie sie in den Anwendungsordner auf dem zweiten Computer ein.  
   
-    2.  Führen Sie die Anwendung auf dem zweiten Computer.  
+    2.  Führen Sie die Anwendung auf dem zweiten Computer aus.  
   
-     Die Anwendung wird erfolgreich ausgeführt, da Visual C++-Bibliotheken in der lokalen Anwendungsordner verfügbar sind.  
+     Die Anwendung wird erfolgreich ausgeführt, da die Visual C++-Bibliotheken im lokalen Anwendungsordner verfügbar sind.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Bereitstellungsbeispiele](../ide/deployment-examples.md)

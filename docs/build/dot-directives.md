@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367663"
 ---
 # <a name="dot-directives"></a>Punktanweisungen
 Punktdirektiven Sie außerhalb eines Blocks von Beschreibung, am Anfang einer Zeile. Punktdirektiven beginnen mit einem Punkt (. ), gefolgt von einem Doppelpunkt (:). Registerkarten "und" Leerzeichen sind zulässig. Punkt-Direktivennamen sind Groß-/Kleinschreibung beachtet und Großbuchstaben.  

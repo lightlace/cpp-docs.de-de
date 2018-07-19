@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299993"
 ---
 # <a name="c-runtime-error-r6033"></a>C-Laufzeitfehler R6033
 Versucht, MSIL-Code aus dieser Assembly während der Initialisierung von systemeigenem Code zu verwenden. Hiermit wird einen Fehler in der Anwendung. Es ist sehr wahrscheinlich das Ergebnis des Aufrufs einer MSIL-kompilierten (/ Clr)-Funktion aus einem systemeigenen Konstruktor oder aus DllMain.  

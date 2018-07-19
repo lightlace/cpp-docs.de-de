@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458861"
 ---
 # <a name="filename-macros"></a>Dateinamenmakros
 Dateinamenmakros sind als der Abhängigkeit (nicht der vollständige Dateiname Spezifikationen auf dem Datenträger) angegebene Dateinamen vordefiniert. Diese Makros müssen nicht in Klammern, die beim Aufrufen eingeschlossen werden. Geben Sie nur ein $ wie gezeigt.  

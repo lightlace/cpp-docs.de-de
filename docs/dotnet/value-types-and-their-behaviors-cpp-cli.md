@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169542"
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>Werttypen und ihr Verhalten (C++/CLI)
 Werttypen sind für Visual C++ auf verschiedene Arten von Managed Extensions for C++ geändert. In diesem Abschnitt untersuchen wir die CLR-Enumerationstyp und die Klasse Werttyp ist, zusammen mit einem Blick auf Boxing und den Zugriff auf die geschachtelte Instanz auf dem CLR-Heap sowie einen Blick auf innerer und fester Zeiger. Es wurden umfassende sprachänderungen in diesem Bereich.  

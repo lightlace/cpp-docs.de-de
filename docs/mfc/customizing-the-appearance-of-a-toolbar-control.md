@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48825a264b7d82152f47e70c5911bea400c313db
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932116"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Anpassen der Darstellung eines Symbolleisten-Steuerelements
 Klasse `CToolBarCtrl` bietet viele Formate, die die Darstellung (und in einigen Fällen Verhalten) des Symbolleistenobjekts beeinflussen. Ändern Sie die Symbolleistenobjekt durch Festlegen der `dwCtrlStyle` Parameter von der `CToolBarCtrl::Create` (oder `CToolBar::CreateEx`) Memberfunktion, die bei der Erstellung von Toolbar-Steuerelement.  
@@ -46,17 +47,17 @@ Klasse `CToolBarCtrl` bietet viele Formate, die die Darstellung (und in einigen 
 -   **TBSTYLE_ALTDRAG** ermöglicht es Benutzern, eine Symbolleisten-Schaltfläche Position ändern, indem Sie ALT gedrückt, ziehen. Wenn dieser Stil nicht angegeben wird, muss der Benutzer eine Schaltfläche zu ziehen gedrückter UMSCHALTTASTE.  
   
     > [!NOTE]
-    >  Die `CCS_ADJUSTABLE` Stil muss angegeben werden, zum Aktivieren des Symbolleistenschaltflächen gezogen wird.  
+    >  Die **CCS_ADJUSTABLE** Stil muss angegeben werden, zum Aktivieren des Symbolleistenschaltflächen gezogen wird.  
   
 -   **TBSTYLE_REGISTERDROP** generiert **TBN_GETOBJECT** Benachrichtigung Nachrichten anfordern Zielobjekte löschen, wenn der Mauszeiger über die Schaltflächen der Symbolleiste bewegt.  
   
  Die übrigen Formate beeinflussen visuelle und nicht sichtbare Aspekte des Symbolleistenobjekts:  
   
--   `TBSTYLE_WRAPABLE` Erstellt eine Symbolleiste, die mehrere Zeilen mit Schaltflächen aufweisen können. Schaltflächen der Symbolleiste können zur nächsten Zeile "umschließen" werden, wenn die Symbolleiste nicht breit genug ist, alle Schaltflächen in der gleichen Zeile eingeschlossen wird. Einbindung erfolgt nach Trennung und nongroup Grenzen.  
+-   **TBSTYLE_WRAPABLE** erstellt eine Symbolleiste, die mehrere Zeilen mit Schaltflächen aufweisen können. Schaltflächen der Symbolleiste können zur nächsten Zeile "umschließen" werden, wenn die Symbolleiste nicht breit genug ist, alle Schaltflächen in der gleichen Zeile eingeschlossen wird. Einbindung erfolgt nach Trennung und nongroup Grenzen.  
   
--   **TBSTYLE_CUSTOMERASE** generiert **NM_CUSTOMDRAW** Benachrichtigung bei der Verarbeitung von Nachrichten `WM_ERASEBKGND` Nachrichten.  
+-   **TBSTYLE_CUSTOMERASE** generiert **NM_CUSTOMDRAW** Benachrichtigung bei der Verarbeitung von Nachrichten **WM_ERASEBKGND** Nachrichten.  
   
--   `TBSTYLE_TOOLTIPS` Erstellt ein QuickInfo-Steuerelement, mit dem eine Anwendung beschreibenden Text für die Schaltflächen auf der Symbolleiste angezeigt.  
+-   **TBSTYLE_TOOLTIPS** erstellt ein QuickInfo-Steuerelement, mit dem eine Anwendung beschreibenden Text für die Schaltflächen auf der Symbolleiste angezeigt.  
   
  Eine vollständige Liste der Symbolleiste Formatvorlagen und erweiterte Formate, finden Sie unter [Toolbar-Steuerelement und Schaltflächenstile](http://msdn.microsoft.com/library/windows/desktop/bb760439) und [erweiterten Stile, die Symbolleiste](http://msdn.microsoft.com/library/windows/desktop/bb760430) im Windows SDK.  
   

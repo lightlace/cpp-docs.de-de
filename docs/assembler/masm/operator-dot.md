@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32058162"
 ---
 # <a name="operator-"></a>Operator .
 Der erste Operator gibt *Ausdruck* plus den Offset des *Feld* innerhalb der Struktur oder Union. Der zweite Operator gibt den Wert an der Speicherstelle *registrieren* plus den Offset des *Feld* innerhalb der Struktur oder Union.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379254"
 ---
 # <a name="role-of-the-view-in-printing"></a>Die Rolle der Ansicht beim Drucken
 Die Ansicht spielt auch zwei wichtige Funktionen in seiner zugeordnete Dokument zu drucken.  

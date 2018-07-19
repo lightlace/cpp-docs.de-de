@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888645"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Auswählen von Vordergrund- oder Hintergrundfarben (Bildbearbeitung für Symbole)
 Mit Ausnahme der **Radierer**, tools für die **Grafik-Editor** Symbolleiste Zeichnen-Befehl in der aktuellen Vordergrund- oder Hintergrundfarbe, wenn Sie die linke oder rechte Maustaste drücken.  

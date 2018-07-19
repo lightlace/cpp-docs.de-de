@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386559"
 ---
 # <a name="cifmod"></a>_CIfmod
 Berechnet den Gleitkommarest für die beiden obersten Werte im Stapel.  

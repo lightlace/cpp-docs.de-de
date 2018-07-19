@@ -1,5 +1,5 @@
 ---
-title: Auslassungszeichen- und Variadic-Vorlagen | Microsoft Docs
+title: Auslassungszeichen- und Variadic-Vorlagen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,19 +12,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eddd87660d996e0d726c4453e0eb732a5553b99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b37df4146b23404463ec869e00a8cf5298b7acf5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941004"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Auslassungszeichen- und Variadic-Vorlagen
-In diesem Artikel wird gezeigt, wie die Auslassungspunkte (`...`) mit variadic Vorlagen von C++ verwendet werden. Das Auslassungszeichen hatte vielseitig in C und C++. Hierzu gehören Variablenargumentlisten für Funktionen. Die `printf()`-Funktion der C-Laufzeitbibliothek ist eines der bekanntesten Beispiele.  
+In diesem Artikel wird gezeigt, wie die Auslassungspunkte (`...`) mit variadic Vorlagen von C++ verwendet werden. Das Auslassungszeichen hatte wird häufig in C und C++ verwendet. Hierzu gehören Variablenargumentlisten für Funktionen. Die `printf()`-Funktion der C-Laufzeitbibliothek ist eines der bekanntesten Beispiele.  
   
  Ein *Variadic-Vorlage* ist eine Klassen- oder Funktionsvorlage, die eine beliebige Anzahl von Argumenten unterstützt. Dieser Mechanismus ist für C++-Bibliotheksentwickler besonders nützlich, da Sie ihn auf Klassen- und Funktionsvorlagen anwenden können, und dadurch eine große Bandbreite typsicherer und nicht trivialer Funktionalität und Flexibilität bereitstellen können.  
   
 ## <a name="syntax"></a>Syntax  
- Ein Auslassungszeichen wird auf zwei Arten von variadic-Vorlagen verwendet. Auf der linken Seite des Parameternamens zeigt es ein *parameterpaket*, und klicken Sie auf der rechten Seite des Parameternamens erweitert es die parameterpakete in separaten Namen.  
+ Ein Auslassungszeichen wird auf zwei Arten von variadic-Vorlagen verwendet. Auf der linken Seite des Parameternamens, gibt es eine *parameterpaket*, und klicken Sie auf der rechten Seite des Parameternamens erweitert es die parameterpakete in separaten Namen.  
   
  Hier ist ein einfaches Beispiel *Variadic-Vorlagenklassen* definitionssyntax:  
   
@@ -71,7 +72,7 @@ template <typename First, typename... Rest> class classname;
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- Die `Arguments` -parameterpaket wird dann für die Verwendung erweitert, wie im nächsten Abschnitt gezeigt **Verständnis von Variadic-Vorlagen**.  
+ Die `Arguments` parameterpaket wird erweitert für die Verwendung, wie im nächsten Abschnitt gezeigt **Variadic-Vorlagen**.  
   
  Andere Formen der variadic-Vorlagenfunktionssyntax sind möglich, darunter diese Beispiele:  
   
@@ -81,7 +82,7 @@ template <typename... Arguments> returntype functionname(Arguments&&... args);
 template <typename... Arguments> returntype functionname(Arguments*... args);  
 ```  
   
- Bezeichner wie `const` sind ebenfalls zulässig:  
+ Bezeichner wie **const** sind ebenfalls zulässig:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
@@ -113,9 +114,9 @@ void tfunc(const Arguments&... args)
 ## <a name="more-about-ellipsis-placement"></a>Weitere Informationen zur Platzierung von Auslassungszeichen  
  In diesem Artikel wurde bereits die Platzierung des Auslassungszeichens, mit der Parameterpakete und Erweiterungen definiert werden, wie folgt beschrieben: "Auf der linken Seite des Parameternamens zeigt es ein Parameterpaket an, und auf der rechten Seite des Parameternamens erweitert es die Parameterpakete in separaten Namen". Dies ist technisch gesehen richtig, kann jedoch bei der Übersetzung in Code verwirrend sein. Betrachten Sie das folgende Beispiel:  
   
--   In einer Vorlage-Parameterliste (`template <parameter-list>`), `typename...` führt ein parameterpaket Vorlage.  
+-   In einer Vorlagen-Parameterliste (`template <parameter-list>`), `typename...` ein vorlagenparameterpaket führt.  
   
--   In einer Parameter-Deklaration-Klausel (`func(parameter-list)`), eine "auf oberster Ebene" mit den Auslassungspunkten führt ein parameterpaket Funktion und die Auslassungszeichen Positionierung ist wichtig:  
+-   In einer Parameter-Declaration-Clause (`func(parameter-list)`), ein Auslassungszeichen "der obersten Ebene" führt ein funktionsparameterpaket und des Auslassungszeichens wichtig ist:  
   
     ```cpp  
     // v1 is NOT a function parameter pack:  
@@ -173,5 +174,5 @@ first, 2, third, 3.14159
 ```  
   
 > [!NOTE]
->  Die meisten Implementierungen, in denen Funktionen für Variadic-Vorlage integriert Rekursion eine Form, aber es ist etwas anders als herkömmliche Rekursion.  Herkömmliche-Rekursion beinhaltet eine Funktion, die sich selbst aufruft, mit der gleichen Signatur. (Sie ist überladen oder vorlagenbasiert, aber dieselbe Signatur wird jedes Mal ausgewählt.) Variadic-Rekursion beinhaltet den Aufruf einer variadic-Funktionsvorlage, indem eine unterschiedliche (fast immer abnehmende) Anzahl von Argumenten verwendet und somit verhindert wird, dass sich die Signatur jedes Mal ändert. Eine "Basisfall" ist dennoch erforderlich, aber die Art der Rekursion ist anders.  
+>  Die meisten Implementierungen, die Variadic-Vorlagenfunktionen enthalten verwenden, Rekursion irgendeiner Art, aber es ist etwas anders als herkömmliche Rekursion.  Herkömmliche Rekursion umfasst eine Funktion, die selbst mithilfe der gleichen Signatur aufruft. (Sie ist überladen oder vorlagenbasiert, aber dieselbe Signatur wird jedes Mal ausgewählt.) Variadic-Rekursion beinhaltet den Aufruf einer variadic-Funktionsvorlage, indem eine unterschiedliche (fast immer abnehmende) Anzahl von Argumenten verwendet und somit verhindert wird, dass sich die Signatur jedes Mal ändert. Eine "Basisfall" ist dennoch erforderlich, aber die Art der Rekursion ist anders.  
   

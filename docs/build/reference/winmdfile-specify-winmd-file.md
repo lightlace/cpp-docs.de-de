@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375596"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (winmd-Datei angeben)
 Gibt den Dateinamen für die Windows-Runtime-Metadatendatei (.winmd)-Ausgabedatei, die von generiert die [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) (Linkeroption).  

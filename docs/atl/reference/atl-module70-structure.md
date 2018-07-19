@@ -1,5 +1,5 @@
 ---
-title: _ATL_MODULE70 Struktur | Microsoft Docs
+title: _ATL_MODULE70-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a374ee01387c576a5d1a727857badc7ef7139ad
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9666d73eec770ff8231e5730e01520b0bee68012
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886218"
 ---
 # <a name="atlmodule70-structure"></a>_ATL_MODULE70-Struktur
 Enthält Daten, die von jedem ATL-Modul verwendet.  
@@ -41,15 +42,15 @@ struct _ATL_MODULE70 {
   
 ## <a name="members"></a>Member  
  `cbSize`  
- Die Größe der Struktur, die für die versionsverwaltung verwendet.  
+ Die Größe der Struktur, die für die versionsverwaltung verwendet werden soll.  
   
  `m_nLockCnt`  
- Verweiszähler um zu bestimmen, wie lange das Modul aktiv bleiben sollen.  
+ Um zu bestimmen, wie lange das Modul aktiv bleiben soll, Verweiszähler dieser Planergruppe.  
   
- **m_pTermFuncs**  
+ `m_pTermFuncs`  
  Verfolgt-Funktionen, die aufgerufen werden, wenn Sie ATL fährt registriert wurden.  
   
- **m_csStaticDataInitAndTypeInfo**  
+ `m_csStaticDataInitAndTypeInfo`  
  Verwendet, um den Zugriff auf interne Daten in mehreren Threads Situationen zu koordinieren.  
   
 ## <a name="remarks"></a>Hinweise  

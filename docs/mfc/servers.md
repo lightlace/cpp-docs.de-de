@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381777"
 ---
 # <a name="servers"></a>Server
 Eine Serveranwendung (oder Component-Anwendung) erstellt OLE Elemente (oder Komponenten) für die Verwendung von containeranwendungen. Eine visuelle Bearbeitung Serveranwendung unterstützt auch die visuelle Bearbeitung oder direkte Aktivierung. Eine andere Form der OLE-Server ist ein [Automatisierungsservers](../mfc/automation-servers.md). Für einige serveranwendungen unterstützt nur die Erstellung der eingebetteten Elemente. andere Anbieter unterstützen die Erstellung von eingebettete und verknüpfte Ressourcen. Einige unterstützen nur das verknüpfen, obwohl dies nur selten auftritt. Alle serveranwendungen müssen Aktivierung von containeranwendungen unterstützen, wenn der Benutzer ein Element bearbeiten möchte. Eine Anwendung kann es sich um einen Container und einem Server sein. Das heißt, kann Daten, die als Elemente in anderen Dokumenten integriert werden können sie beide Integrieren von Daten in ihre Dokumente und erstellen zu.  

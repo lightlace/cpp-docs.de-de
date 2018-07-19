@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363822"
 ---
 # <a name="atl-utilities-reference"></a>Referenz zu ATL-Hilfsprogrammen
 ATL stellt Code zum Bearbeiten von Pfaden und URLs in Form von [CPathT](../atl/reference/cpatht-class.md) und [CUrl](../atl/reference/curl-class.md). Ein Threadpool [CThreadPool](../atl/reference/cthreadpool-class.md), können in Anwendungen verwendet werden. Dieser Code kann in atlpath.h und atlutil.h gefunden werden.  

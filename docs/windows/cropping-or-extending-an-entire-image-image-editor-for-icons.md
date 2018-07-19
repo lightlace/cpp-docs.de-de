@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871613"
 ---
 # <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>Abschneiden oder Erweitern eines ganzen Bilds (Bildbearbeitung für Symbole)
 Die folgenden Verfahren wird gezeigt, wie Abschneiden oder Erweitern eines ganzen Bildes.  

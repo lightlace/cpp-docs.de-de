@@ -1,5 +1,5 @@
 ---
-title: Einschränkungen der Main-Funktion | Microsoft Docs
+title: Einschränkungen der Main-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5be2df6e152b26bcade1970b35ad33655e8e02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3114f1ef379495f36f4231dbad6fd41ac145bcfe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941745"
 ---
 # <a name="main-function-restrictions"></a>Einschränkungen der main-Funktion
-Mehrere Einschränkungen gelten für die **main** -Funktion, die auf andere C++-Funktionen nicht anwendbar sind. Die **main** Funktion:  
+Mehrere Einschränkungen gelten für die `main` -Funktion, die nicht für andere C++-Funktionen gelten. Die `main` Funktion:  
   
 -   Kann nicht überladen werden (siehe [Funktionsüberladung](function-overloading.md)).  
   

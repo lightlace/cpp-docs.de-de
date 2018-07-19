@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694328"
 ---
 # <a name="a14---using-the-flush-directive-without-a-list"></a>A.13   Verwenden der flush-Direktive ohne eine Liste
 Im folgenden Beispiel (für [Abschnitt 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) auf der Seite "20") unterscheidet die gemeinsam genutzten Objekte betroffen eine `flush` -Direktive mit keine Liste der freigegebenen Objekte, die nicht betroffen sind:  

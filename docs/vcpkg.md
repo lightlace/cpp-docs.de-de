@@ -14,11 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: af51ee7c6fa4e1243b400be58ac22ba833cfae80
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705437"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Ein C++-Paket-Manager für Windows, Linux und macOS
 
@@ -120,7 +121,7 @@ Führen Sie **vcpkg integrate install** aus, um Visual Studio so zu konfiguriere
 
 Nun können Sie auf Header einfach die #include-Anweisung ausführen, indem Sie den Ordner/Header eingeben und automatisch vervollständigen lassen. Es sind keine weiteren Schritte erforderlich, um Verknüpfungen mit Bibliotheken zu erstellen oder Projektverweise hinzuzufügen. Die folgende Abbildung zeigt, wie der Visual Studio die azure-storage-cpp-Header sucht. Vcpkg platziert seine Header im Unterordner **/installed**, partitioniert nach Zielplattform. Das folgende Diagramm zeigt die Liste der Includedateien im Unterordner **/was** für die Bibliothek:
 
-![vcpkg-IntelliSense-Integration](media/vcpkg-intellisense.png "vcpkg und IntelliSense")
+![vcpkg-IntelliSense-Integration](media/vcpkg-intellisense.png "vcpkg and IntelliSense")
 
 ### <a name="per-project"></a>Pro Projekt
 

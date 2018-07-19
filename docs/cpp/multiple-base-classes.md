@@ -1,5 +1,5 @@
 ---
-title: Mehrere Basisklassen | Microsoft Docs
+title: Mehrere Basisklassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 813c90db941f2eb760c4e3a36d15eca64a293bec
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955464"
 ---
 # <a name="multiple-base-classes"></a>Mehrere Basisklassen
-Wie in beschrieben [Mehrfachvererbung](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), eine Klasse kann von mehr als einer Basisklasse abgeleitet werden. In einem mehrfachvererbungsmodell (Klassen sind, in denen von mehr als einer Basisklasse abgeleitet), mit der Basisklassen angegeben die *Base-List* Grammatik-Element. Beispielsweise kann die Klassendeklaration für `CollectionOfBook`, abgeleitet von `Collection` und `Book`, angegeben werden:  
+Eine Klasse kann von mehr als einer Basisklasse abgeleitet werden. In einem mehrfachvererbungsmodell (, in denen Klassen aus mehr als einer Basisklasse abgeleitet werden), die Basisklassen angegeben sind, mit der *Base-List* grammatikelement. Beispielsweise kann die Klassendeklaration für `CollectionOfBook`, abgeleitet von `Collection` und `Book`, angegeben werden:  
   
-```  
+```cpp 
 // deriv_MultipleBaseClasses.cpp  
 // compile with: /LD  
 class Collection {  
@@ -39,9 +40,9 @@ class CollectionOfBook : public Book, public Collection {
   
  Die Reihenfolge, in der Basisklassen angegeben werden, ist nicht signifikant, außer in Fällen, in denen die Konstruktoren und Destruktoren aufgerufen werden. In diesen Fällen wirkt sich die Reihenfolge, in der Basisklassen angegeben werden, auf Folgendes aus:  
   
--   Die Reihenfolge, in der die Initialisierung durch Konstruktoren stattfindet. Wenn Ihr Code darauf basiert, dass der `Book`-Teil von `CollectionOfBook` vor dem `Collection`-Teil initialisiert wird, ist die Reihenfolge der Spezifikation signifikant. Initialisierung findet in der die Klassen werden im angegebenen Reihenfolge der *Base-List*.  
+-   Die Reihenfolge, in der die Initialisierung durch Konstruktoren stattfindet. Wenn Ihr Code darauf basiert, dass der `Book`-Teil von `CollectionOfBook` vor dem `Collection`-Teil initialisiert wird, ist die Reihenfolge der Spezifikation signifikant. Initialisierung wird in der Reihenfolge, in die Klassen angegeben sind, die *Base-List*.  
   
--   Die Reihenfolge, in der Destruktoren zur Bereinigung aufgerufen werden. Auch wenn ein bestimmter „Teil“ der Klasse vorhanden sein muss, wenn der andere Teil zerstört wird, ist die Reihenfolge relevant. Destruktoren werden aufgerufen, in der umgekehrten Reihenfolge der Klassen angegeben, der *Base-List*.  
+-   Die Reihenfolge, in der Destruktoren zur Bereinigung aufgerufen werden. Auch wenn ein bestimmter „Teil“ der Klasse vorhanden sein muss, wenn der andere Teil zerstört wird, ist die Reihenfolge relevant. Destruktoren werden in umgekehrter Reihenfolge der im angegebenen Klassen aufgerufen, wenn die *Base-List*.  
   
     > [!NOTE]
     >  Die Reihenfolge der Spezifikation der Basisklassen kann das Speicherlayout der Klasse beeinflussen. Treffen Sie keine Programmierentscheidungen, die auf der Reihenfolge der Basismember im Arbeitsspeicher basieren.  
@@ -55,7 +56,7 @@ class CollectionOfBook : public Book, public Collection {
   
  Wenn eine Basisklasse als virtuelle Basisklasse angegeben ist, kann sie, ohne Verdoppelung der Datenmember, mehrmals als indirekte Basisklasse fungieren. Eine einzelne Kopie der Datenmember wird von allen Basisklassen, die diese als virtuelle Basis verwenden, gemeinsam genutzt.  
   
- Wenn Sie eine virtuelle Basisklasse deklarieren die **virtuellen** -Schlüsselworts in den Basislisten der abgeleiteten Klassen.  
+ Wenn Sie eine virtuelle Basisklasse deklarieren die **virtuellen** -Schlüsselwort wird in den Basislisten der abgeleiteten Klassen.  
   
  Betrachten Sie die Klassenhierarchie in der folgenden Abbildung, die eine simulierte Warteschlange veranschaulicht.  
   
@@ -64,12 +65,12 @@ Diagramm mit Warteschlangensimulation
   
  In der Abbildung ist `Queue` die Basisklasse für `CashierQueue` und `LunchQueue`. Wenn jedoch beide Klassen kombiniert werden, um `LunchCashierQueue` zu bilden, tritt folgendes Problem auf: Die neue Klasse enthält zwei Unterobjekte des Typs `Queue`, eines von `CashierQueue` und das andere von `LunchQueue`. Die folgende Abbildung zeigt das konzeptuelle Speicherlayout (das tatsächliche Speicherlayout kann unter Umständen optimiert werden).  
   
- ![Simulierte Essen&#45;Line-Objekt](../cpp/media/vc38xp2.gif "vc38XP2")  
+ ![Simulierte Mittagessen&#45;Line-Objekt](../cpp/media/vc38xp2.gif "vc38XP2")  
 Simuliertes Warteschlangenobjekt  
   
  Beachten Sie, dass es zwei `Queue`-Unterobjekte im `LunchCashierQueue`-Objekt gibt. Der folgende Code deklariert `Queue` als virtuelle Basisklasse:  
   
-```  
+```cpp 
 // deriv_VirtualBaseClasses.cpp  
 // compile with: /LD  
 class Queue {};  
@@ -78,9 +79,9 @@ class LunchQueue : virtual public Queue {};
 class LunchCashierQueue : public LunchQueue, public CashierQueue {};  
 ```  
   
- Das `virtual`-Schlüsselwort stellt sicher, dass nur eine Kopie des Unterobjekts `Queue` enthalten ist (siehe folgende Abbildung).  
+ Die **virtuellen** -Schlüsselwort stellt sicher, nur eine Kopie des Unterobjekts `Queue` enthalten ist (siehe die folgende Abbildung).  
   
- ![Simulierte Essen&#45;Line-Objekt, virtuelle Basisklassen](../cpp/media/vc38xp3.gif "vc38XP3")  
+ ![Simulierte Mittagessen&#45;Line-Objekt, das virtuelle Basisklassen](../cpp/media/vc38xp3.gif "vc38XP3")  
 Simuliertes Warteschlangenobjekt mit virtuellen Basisklassen  
   
  Eine Klasse kann eine virtuelle Komponente und eine nicht virtuelle Komponente eines bestimmten Typs haben. Dies geschieht unter den Bedingungen, die in der folgenden Abbildung veranschaulicht werden.  
@@ -98,12 +99,12 @@ Objektlayout mit virtueller und nicht virtueller Vererbung
   
  Wenn eine abgeleitete Klasse eine virtuelle Funktion überschreibt, die sie von einer virtuellen Basisklasse erbt, und wenn ein Konstruktor oder Destruktor der abgeleiteten Basisklasse die Funktion mithilfe eines Zeigers auf die virtuelle Basisklasse aufruft, führt der Compiler möglicherweise zusätzliche ausgeblendete "vtordisp"-Felder in die Klassen mit virtuellen Basen ein. Die /vd0-Compileroption unterdrückt das Hinzufügen des ausgeblendeten vtordisp-Destruktor-/Destruktorverschiebungsmember. Die /vd1-Compileroption, der Standard, ermöglicht diese, wo notwendig. Deaktivieren Sie vtordisps nur dann, wenn Sie sicher sind, dass alle Klassenkonstruktoren und -destruktoren virtuelle Funktionen virtuell aufrufen.  
   
- Die /vd- Compileroption wirkt sich auf das gesamte Kompilierungsmodul aus. Verwenden der **Vtordisp** Pragma verwenden, um zu unterdrücken, und klicken Sie dann erneut aktivieren Vtordisp-Felder auf Basis einer Klasse von Klasse:  
+ Die /vd- Compileroption wirkt sich auf das gesamte Kompilierungsmodul aus. Verwenden der **Vtordisp** Pragma, um zu unterdrücken und anschließend wieder aktivieren Vtordisp-Felder auf Basis einer Klasse-von-Klasse:  
   
-```  
+```cpp 
 #pragma vtordisp( off )  
 class GetReal : virtual public { ... };  
-#pragma vtordisp( on )  
+\#pragma vtordisp( on )  
 ```  
   
 ## <a name="name-ambiguities"></a>Mehrdeutigkeiten bei Namen  
@@ -111,7 +112,7 @@ class GetReal : virtual public { ... };
   
  Jeder Ausdruck, der auf einen Klassenmember verweist, muss einen eindeutigen Verweis darstellen. Das folgende Beispiel zeigt, wie Mehrdeutigkeiten entstehen:  
   
-```  
+```cpp 
 // deriv_NameAmbiguities.cpp  
 // compile with: /LD  
 // Declare two base classes, A and B.  
@@ -134,7 +135,7 @@ class C : public A, public B {};
   
  Bei vorangehenden Klassendeklarationen ist Code wie der folgende mehrdeutig, da unklar ist, ob `b` auf das `b` in `A` oder in `B` verweist:  
   
-```  
+```cpp 
 C *pc = new C;  
   
 pc->b();  
@@ -152,7 +153,7 @@ pc->b();
   
  Wenn ein Ausdruck durch Vererbung eine Mehrdeutigkeit erzeugt, können Sie dies manuell korrigieren, indem Sie den betreffenden Namen mit dem Klassennamen qualifizieren. Um das vorherige Beispiel ordnungsgemäß ohne Mehrdeutigkeiten kompilieren zu können, verwenden Sie beispielsweise folgenden Code:  
   
-```  
+```cpp 
 C *pc = new C;  
   
 pc->B::a();  
@@ -166,7 +167,7 @@ pc->B::a();
   
  Ein Name dominiert einen anderen Namen, wenn er in beiden Klassen definiert ist und eine Klasse von der anderen abgeleitet ist. Der dominante Name ist der Name der abgeleiteten Klasse; dieser Name wird verwendet, wenn sich anderenfalls eine Doppeldeutigkeit ergeben hätte, wie im folgenden Beispielen veranschaulicht wird:  
   
-```  
+```cpp 
 // deriv_Dominance.cpp  
 // compile with: /LD  
 class A {  
@@ -192,7 +193,7 @@ public:
   
 -   Die Deklaration eines Objekts vom Typ `D`.  
   
--   Die Auswirkungen der Anwendung des Address-of-Operators (**&**) auf dieses Objekt. Beachten Sie, dass der address-of-Operator immer die Basisadresse des Objekts bereitstellt.  
+-   Der Effekt der Anwendung des Address-of-Operators (**&**) auf dieses Objekt. Beachten Sie, dass der address-of-Operator immer die Basisadresse des Objekts bereitstellt.  
   
 -   Der Effekt der expliziten Konvertierung des Zeigers, der unter Verwendung des address-of-Operators für den Basisklassentyp `A` abgerufen wurde. Beachten Sie, dass dem Compiler mit der Koersion der Adresse des Objekts in Typ `A*` nicht immer genügend Informationen darüber bereitgestellt werden, welches Unterobjekt vom Typ `A` auszuwählen ist. In diesem Fall gibt es zwei Unterobjekte.  
   
@@ -201,7 +202,7 @@ Mehrdeutige Konvertierung der Zeiger auf Basisklassen
   
  Die Konvertierung in Typ `A*` (Zeiger auf `A`) ist mehrdeutig, da nicht erkannt werden kann, welches Unterobjekt des Typs `A` das richtige ist. Sie können Mehrdeutigkeiten vermeiden, indem Sie wie folgt explizit angeben, welches Unterobjekt verwendet werden soll:  
   
-```  
+```cpp 
 (A *)(B *)&d       // Use B subobject.  
 (A *)(C *)&d       // Use C subobject.  
 ```  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054054"
 ---
 # <a name="ml-nonfatal-error-a2064"></a>Nicht schwerwiegender ML-Fehler A2064
 **strukturausrichtung muss 1, 2, 4, 8 oder 16 sein.**  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230583"
 ---
 # <a name="compiler-error-c2555"></a>Compilerfehler C2555
 "Class1:: function1": Überschreiben der virtuellen Funktion-Rückgabetyp unterscheidet sich und ist nicht von "Class2:: function2" kovariant  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347885"
 ---
 # <a name="frame-window-classes"></a>Rahmenfensterklassen
 Jede Anwendung hat eine "Hauptrahmenfenster," einem Desktopfenster aus, die in der Regel den Namen der Anwendung in die Beschriftung besitzt. Jedes Dokument ist normalerweise auf eine "Dokumentrahmenfenster." Einem Dokumentrahmenfenster enthält mindestens eine Sicht, die Daten des Dokuments dargestellt.  

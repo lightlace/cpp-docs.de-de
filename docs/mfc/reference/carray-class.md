@@ -1,5 +1,5 @@
 ---
-title: CArray-Klasse | Microsoft Docs
+title: CArray-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,11 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4e4fd0106687927706b0ba303035258de7e651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53089439c3857dd947a263a80f3330aad3f03f7b
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339435"
 ---
 # <a name="carray-class"></a>CArray-Klasse
 Unterstützt Arrays, die C-Arrays ähneln, jedoch können dynamisch verkleinern oder Vergrößern nach Bedarf.  
@@ -69,11 +70,11 @@ class CArray : public CObject
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `TYPE`  
- Ein Vorlagenparameter, der den Typ der im Array gespeicherten Objekte angibt. `TYPE` ist ein Parameter, die zurückgegebene `CArray`.  
+ *TYPE*  
+ Ein Vorlagenparameter, der den Typ der im Array gespeicherten Objekte angibt. *Typ* ist ein Parameter, der von zurückgegebene `CArray`.  
   
- `ARG` *_* `TYPE`  
- Ein Vorlagenparameter, der den Argumenttyp, der verwendet wird angibt, um den Zugriff auf Objekte im Array gespeichert. Häufig einen Verweis auf `TYPE`. `ARG_TYPE` ist ein Parameter, der an übergebene `CArray`.  
+ *ARG* *_* *TYP*  
+ Ein Vorlagenparameter, der der Argumenttyp angegeben wird, der Zugriff auf Objekte im Array gespeicherten verwendet wird. Häufig einen Verweis auf *Typ*. *ARG_TYPE* ist ein Parameter, die übergeben werden `CArray`.  
   
 ## <a name="members"></a>Member  
   
@@ -88,13 +89,13 @@ class CArray : public CObject
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CArray::Add](#add)|Fügt am Ende des Arrays ein Element hinzu; vergrößert das Array bei Bedarf.|  
-|[CArray::Append](#append)|Fügt ein anderes Array in das Array; Vergrößert das Array bei Bedarf|  
+|[CArray::Append](#append)|Ein anderes Array an das Array angefügt. Vergrößert das Array bei Bedarf|  
 |[CArray::Copy](#copy)|Kopiert ein anderes Array in das Array; vergrößert das Array bei Bedarf.|  
 |[CArray::ElementAt](#elementat)|Gibt einen temporären Verweis auf den Elementzeiger innerhalb des Arrays zurück.|  
 |[CArray::FreeExtra](#freeextra)|Gibt den gesamten nicht verwendeten Arbeitsspeicher über der aktuellen Obergrenze frei.|  
 |[CArray::GetAt](#getat)|Gibt den Wert an einem bestimmten Index zurück.|  
 |[CArray::GetCount](#getcount)|Ruft die Anzahl der Elemente im Array ab.|  
-|[CArray::GetData](#getdata)|Ermöglicht den Zugriff auf Elemente im Array. Kann **NULL**.|  
+|[CArray::GetData](#getdata)|Ermöglicht den Zugriff auf Elemente im Array. NULL kann sein.|  
 |[CArray::GetSize](#getsize)|Ruft die Anzahl der Elemente im Array ab.|  
 |[CArray::GetUpperBound](#getupperbound)|Gibt den größten gültigen Index zurück.|  
 |[CArray::InsertAt](#insertat)|Fügt ein Element (oder alle Elemente in einem anderen Array) am angegebenen Index ein.|  
@@ -112,21 +113,21 @@ class CArray : public CObject
 |[operator&#91;&#93;](#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- Arrayindizes starten immer an Position 0. Sie können entscheiden, ob die obere Grenze beheben oder aktivieren das Array zu erweitern, wenn Sie Elemente nach der aktuellen gebunden hinzufügen. Speicher ist zusammenhängend die Obergrenze belegt, auch wenn einige Elemente null sind.  
+ Arrayindizes starten immer an Position 0. Sie können entscheiden, ob die obere Grenze beheben oder aktivieren das Array, das erweitert, wenn Sie Elemente nach der aktuellen gebunden hinzufügen. Arbeitsspeicher wird mit dem oberen Grenzwert, zusammenhängend zugeordnet, selbst wenn einige Elemente null sind.  
   
 > [!NOTE]
->  Die meisten Methoden, die die Größe einer `CArray` Objekt oder Elemente zu verwenden, fügen [Memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md) Elemente verschoben. Dies ist ein Problem aufgetreten, da `memcpy_s` ist nicht kompatibel mit der alle Objekte, die den Konstruktor aufgerufen werden müssen. Wenn die Elemente in der `CArray` sind nicht kompatibel mit `memcpy_s`, müssen Sie ein neues erstellen `CArray` der entsprechenden Größe. Sie müssen dann verwenden, [CArray::Copy](#copy) und [CArray::SetAt](#setat) zum Füllen des neuen Arrays, da diese Methoden anstelle der Zuweisungsoperator verwendet `memcpy_s`.  
+>  Die meisten Methoden, die die Größe einer `CArray` Objekt oder zum Hinzufügen von Elementen, die sie verwenden [Memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md) Elemente zu verschieben. Dies ist ein Problem, da `memcpy_s` ist nicht kompatibel mit der alle Objekte, die den Konstruktor aufgerufen werden müssen. Wenn die Elemente in der `CArray` sind nicht kompatibel mit `memcpy_s`, müssen Sie ein neues erstellen `CArray` von geeigneter Größe. Sie müssen dann verwenden, [CArray::Copy](#copy) und [CArray::SetAt](#setat) das neue Array aufgefüllt, da diese Methoden, einen Zuweisungsoperator, anstelle von verwenden `memcpy_s`.  
   
- Wie bei einem C-Array, die Uhrzeit des Zugriffs für einen `CArray` indizierte Element ist konstant und ist unabhängig von der Größe des Arrays.  
+ Wie bei einer C-Array, die Zugriffszeit für eine `CArray` indizierte Element ist konstant und ist unabhängig von der Größe des Arrays.  
   
 > [!TIP]
->  Vor dem Verwenden eines Arrays, verwenden [SetSize](#setsize) , dessen Größe festzustellen, und weisen dafür Arbeitsspeicher. Wenn Sie `SetSize` nicht verwenden, kann das Hinzufügen von Elementen zu Ihrem Array dazu führen, dass es häufig neu zugeordnet und kopiert wird. Häufige Neuzuordnungen und Kopiervorgänge sind ineffizient und können zu einer Fragmentierung des Arbeitsspeichers führen.  
+>  Verwenden Sie vor dem Verwenden eines Arrays, [SetSize](#setsize) , dessen Größe festzustellen, und weisen dafür Arbeitsspeicher. Wenn Sie `SetSize` nicht verwenden, kann das Hinzufügen von Elementen zu Ihrem Array dazu führen, dass es häufig neu zugeordnet und kopiert wird. Häufige Neuzuordnungen und Kopiervorgänge sind ineffizient und können zu einer Fragmentierung des Arbeitsspeichers führen.  
   
- Wenn Sie eine Sicherung einzelner Elemente in einem Array benötigen, müssen Sie die Tiefe der Festlegen der [CDumpContext](../../mfc/reference/cdumpcontext-class.md) Objekt auf 1 oder größer.  
+ Wenn Sie eine Sicherung der einzelnen Elemente in einem Array benötigen, müssen Sie die Tiefe der Festlegen der [CDumpContext](../../mfc/reference/cdumpcontext-class.md) -Objekts, 1 oder größer.  
   
- Bestimmte Memberfunktionen der Klasse Aufruf globale Hilfsfunktionen, die angepasst werden müssen, für die meisten Verwendungen von der `CArray` Klasse. Finden Sie im Thema [Auflistungsklasse](../../mfc/reference/collection-class-helpers.md) im Abschnitt MFC-Makros und Globals.  
+ Bestimmte Memberfunktionen dieser Klasse rufen globale Hilfsfunktionen, die angepasst werden müssen, für die meisten Verwendungen von der `CArray` Klasse. Finden Sie im Thema [Auflistungsklasse](../../mfc/reference/collection-class-helpers.md) in der MFC-Makros und Globals-Abschnitt.  
   
- Array-klassenableitung gleicht Liste Ableitung ab.  
+ Array-klassenableitung ähnelt Ableitung der Liste aus.  
   
  Weitere Informationen zur Verwendung von `CArray`, finden Sie im Artikel [Sammlungen](../../mfc/collections.md).  
   
@@ -139,30 +140,30 @@ class CArray : public CObject
  `Header:` afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
- Fügt ein neues Element am Ende eines Arrays, Arrays um 1 vergrößert.  
+ Fügt ein neues Element am Ende eines Arrays, wachsenden Arrays um 1.  
   
 ```  
 INT_PTR Add(ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `ARG_TYPE`  
- Template-Parameter, die den Typ der Argumente verweisen auf Elemente in diesem Array angeben.  
+ *ARG_TYPE*  
+ Der Vorlagenparameter, der den Typ der Argumente, die Verweise auf Elemente im Array angibt.  
   
- `newElement`  
- Das Element mit diesem Array hinzugefügt werden.  
+ *newElement*  
+ Das Element, das in diesem Array hinzugefügt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Index des hinzugefügten Elements.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn [SetSize](#setsize) wurde mit verwendet ein `nGrowBy` Wert größer als 1, und klicken Sie dann auf zusätzlichen Arbeitsspeicher zugeordnet werden kann. Allerdings wird die obere Grenze nur 1 erhöhen.  
+ Wenn [SetSize](#setsize) verwendet wurde mit einer `nGrowBy` Wert größer als 1, und klicken Sie dann auf zusätzlichen Arbeitsspeicher zugewiesen werden kann. Allerdings erhöht sich die obere Grenze nur 1.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
   
 ##  <a name="append"></a>  CArray::Append  
- Rufen Sie diese Memberfunktion um den Inhalt eines Arrays an das Ende einer anderen hinzuzufügen.  
+ Rufen Sie diese Memberfunktion um den Inhalt eines Arrays am Ende eines anderen hinzufügen.  
   
 ```  
 INT_PTR Append(const CArray& src);
@@ -173,12 +174,12 @@ INT_PTR Append(const CArray& src);
  Die Quelle der Elemente, die ein Array angefügt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Index des ersten Elements angefügt.  
+ Der Index des ersten Elements angefügt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Arrays sein des gleichen Typs.  
+ Die Arrays müssen vom gleichen Typ sein.  
   
- Bei Bedarf **Append** möglicherweise belegen zusätzlichen Speicherplatz, um die Elemente, die angefügt werden, auf das Array aufnehmen.  
+ Bei Bedarf `Append` auch zusätzlichen Speicher zur Aufnahme der Elemente, die an das Array angefügt reservieren.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
@@ -197,7 +198,7 @@ CArray();
  [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
   
 ##  <a name="copy"></a>  CArray::Copy  
- Verwenden Sie diese Memberfunktion auf, die Elemente eines Arrays in ein anderes kopiert.  
+ Verwenden Sie diese Memberfunktion auf, um die Elemente eines Arrays in ein anderes kopieren.  
   
 ```  
 void Copy(const CArray& src);
@@ -205,18 +206,18 @@ void Copy(const CArray& src);
   
 ### <a name="parameters"></a>Parameter  
  *src*  
- Die Quelle der Elemente in ein Array kopiert werden soll.  
+ Die Quelle der Elemente in ein Array kopiert werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Memberfunktion, um die Elemente eines Arrays mit den Elementen von einem anderen Array zu überschreiben.  
+ Rufen Sie diese Memberfunktion, um die Elemente eines Arrays mit den Elementen eines anderen Arrays zu überschreiben.  
   
- **Kopie** keinen Speicherplatz frei, aber bei Bedarf **Kopie** möglicherweise belegen zusätzlichen Speicherplatz, um die in das Array kopierten Elemente aufzunehmen.  
+ `Copy` Gibt Arbeitsspeicher frei, jedoch, falls erforderlich, `Copy` auch zusätzlichen Speicher zur Aufnahme der in das Array kopierten Elemente reservieren.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
   
 ##  <a name="elementat"></a>  CArray::ElementAt  
- Gibt einen temporären Verweis auf das angegebene Element innerhalb des Arrays zurück.  
+ Gibt einen temporären Verweis auf das angegebene Element im Array zurück.  
   
 ```  
 TYPE& ElementAt(INT_PTR nIndex);  
@@ -224,20 +225,20 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
- Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von [GetUpperBound](#getupperbound).  
+ *nIndex*  
+ Eine ganzzahlige Index, der größer als oder gleich 0 und kleiner als oder gleich den Rückgabewert von [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf ein Arrayelement.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie wird verwendet, um den linken Zuweisungsoperator für Arrays zu implementieren.  
+ Es wird zum Implementieren von des linken Seite Zuweisungsoperators für Arrays verwendet.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [GetSize](#getsize).  
   
 ##  <a name="freeextra"></a>  CArray::FreeExtra  
- Gibt alle zusätzlichen Speicherplatz, der belegt wurde, während das Array vergrößert wurde.  
+ Zusätzlichen Speicher, der belegt wurde, während das Array geworden war frei.  
   
 ```  
 void FreeExtra();
@@ -259,16 +260,16 @@ const TYPE& GetAt(INT_PTR nIndex) const;
   
 ### <a name="parameters"></a>Parameter  
  *TYPE*  
- Der Vorlagenparameter, der den Typ der Elemente des Arrays angibt.  
+ Template-Parameter, die den Typ der Elemente des Arrays angeben.  
   
- `nIndex`  
- Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von [GetUpperBound](#getupperbound).  
+ *nIndex*  
+ Eine ganzzahlige Index, der größer als oder gleich 0 und kleiner als oder gleich den Rückgabewert von [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Arrayelement zurzeit für diesen Index.  
+ Das Arrayelement derzeit an diesem Index.  
   
 ### <a name="remarks"></a>Hinweise  
- Übergeben einen negativen Wert oder einen Wert größer als der Rückgabewert von `GetUpperBound` führt zu einem fehlgeschlagenen Assertion.  
+ Übergeben einen negativen Wert oder einen Wert größer als der Wert, der vom `GetUpperBound` führt dazu, eine fehlgeschlagene Assertion.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
@@ -284,7 +285,7 @@ INT_PTR GetCount() const;
  Die Anzahl der Elemente im Array.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode zum Abrufen der Anzahl der Elemente im Array. Da die Indizes nullbasiert sind, ist die Größe größer als der größte Index 1. Beim Aufrufen dieser Methode werden dieselben Ergebnisse wie beim Generieren der [CArray::GetSize](#getsize) Methode.  
+ Rufen Sie diese Methode, um die Anzahl der Elemente im Array abzurufen. Da Indizes nullbasiert sind, ist die Größe 1 größer als der größte Index. Das Aufrufen dieser Methode generiert das gleiche Ergebnis wie die [CArray::GetSize](#getsize) Methode.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
@@ -299,15 +300,15 @@ TYPE* GetData();
   
 ### <a name="parameters"></a>Parameter  
  *TYPE*  
- Der Vorlagenparameter, der den Typ der Elemente des Arrays angibt.  
+ Template-Parameter, die den Typ der Elemente des Arrays angeben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf ein Arrayelement.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn keine Elemente verfügbar ist, enthält `GetData` gibt einen null-Wert zurück.  
+ Wenn keine Elemente verfügbar sind, `GetData` gibt einen null-Wert zurück.  
   
- Beim direkter Zugriff auf die Elemente eines Arrays mit schneller Arbeit helfen, seien Sie vorsichtig beim Aufrufen von `GetData`; alle Fehler, die Sie direkt vornehmen Auswirkungen auf die Elemente des Arrays.  
+ Zwar die direkter Zugriff auf die Elemente eines Arrays Sie schneller arbeiten kann, seien Sie vorsichtig, beim Aufrufen von `GetData`; alle Fehler, die Sie, direkt vornehmen Auswirkungen auf die Elemente des Arrays.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
@@ -320,13 +321,13 @@ INT_PTR GetSize() const;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Da die Indizes nullbasiert sind, ist die Größe größer als der größte Index 1. Beim Aufrufen dieser Methode werden dieselben Ergebnisse wie beim Generieren der [CArray::GetCount](#getcount) Methode.  
+ Da Indizes nullbasiert sind, ist die Größe 1 größer als der größte Index. Das Aufrufen dieser Methode generiert das gleiche Ergebnis wie die [CArray::GetCount](#getcount) Methode.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
   
 ##  <a name="getupperbound"></a>  CArray::GetUpperBound  
- Gibt die aktuellen Obergrenze für dieses Array zurück.  
+ Gibt die aktuellen Obergrenze dieses Arrays zurück.  
   
 ```  
 INT_PTR GetUpperBound() const;  
@@ -335,7 +336,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="remarks"></a>Hinweise  
  Da Arrayindizes nullbasiert sind, gibt diese Funktion einen Wert von 1 kleiner als `GetSize`.  
   
- Die Bedingung **GetUpperBound ()** =-1 bedeutet, dass das Array keine Elemente enthält.  
+ Die Bedingung `GetUpperBound( )` =-1 bedeutet, dass das Array ohne Elemente enthält.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CArray::GetAt](#getat).  
@@ -355,30 +356,30 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
- Eine ganzzahlige Index, die größer als der zurückgegebene Wert möglicherweise `GetUpperBound`.  
+ *nIndex*  
+ Eine ganzzahlige Index, die größer als der von zurückgegebene Wert möglicherweise `GetUpperBound`.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Der Vorlagenparameter, den Typ der Elemente im Array angibt.  
   
- `newElement`  
- Das Element im Array abgelegt werden soll.  
+ *newElement*  
+ Das Element, das in diesem Array platziert werden.  
   
- `nCount`  
- Die Anzahl der Häufigkeit, mit die dieses Element liegen eingefügt (Standardwert: 1).  
+ *nCount*  
+ Die Anzahl der Male, die dieses Element eingefügt (Standardwert: 1).  
   
- `nStartIndex`  
- Eine ganzzahlige Index, die größer als der zurückgegebene Wert möglicherweise [GetUpperBound](#getupperbound).  
+ *nStartIndex*  
+ Eine ganzzahlige Index, die größer als der von zurückgegebene Wert möglicherweise [GetUpperBound](#getupperbound).  
   
- `pNewArray`  
- Ein anderes Array mit Elementen mit diesem Array hinzugefügt werden.  
+ *pNewArray*  
+ Ein anderes Array mit Elementen in diesem Array hinzugefügt werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
- Im Prozess, werden Sie verschoben (durch erhöhen den Index) Verschiebt das vorhandene Element in dieser Index, und es werden alle Elemente davor.  
+ In den Prozess nach oben verschoben (durch Erhöhen des Indexes) das vorhandene Element an diesem Index und verschiebt, um alle übergeordneten Elemente.  
   
- Die zweite Version fügt alle Elemente aus einer anderen `CArray` -Auflistung, beginnend ab dem `nStartIndex` Position.  
+ Die zweite Version fügt alle Elemente aus einer anderen `CArray` -Auflistung, beginnend ab der *nStartIndex* Position.  
   
- Die `SetAt` -Funktion im Gegensatz dazu ersetzt ein angegebenes Array-Element und alle Elemente werden nicht verschoben.  
+ Die `SetAt` -Funktion, im Gegensatz dazu ersetzt ein angegebenes Array-Element und alle Elemente werden nicht verschoben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
@@ -391,10 +392,10 @@ BOOL IsEmpty() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn das Array keine Elemente enthält; andernfalls 0.  
+ Ungleich NULL ist, wenn das Array ohne Elemente enthält; andernfalls 0.  
   
 ##  <a name="operator_at"></a>  CArray::operator \[\]  
- Diese-Indexoperatoren werden praktische Ersatz für die [SetAt](#setat) und [GetAt](#getat) Funktionen.  
+ Diese-Indexoperatoren sind eine praktische Ersatz für die ["SetAt"](#setat) und [GetAt](#getat) Funktionen.  
   
 ```  
 TYPE& operator[](int_ptr nindex);  
@@ -405,13 +406,13 @@ const TYPE& operator[](int_ptr nindex) const;
  *TYPE*  
  Der Vorlagenparameter, den Typ der Elemente im Array angibt.  
   
- `nIndex`  
- Der Index des Elements zugegriffen werden.  
+ *nIndex*  
+ Der Index des Elements auf die zugegriffen werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Der erste Operator aufgerufen für Arrays, die nicht **const**, auf der rechten Seite (r) oder linken (l-Wert) einer zuweisungsanweisung verwendet werden kann. Die zweite für aufgerufen **const** Arrays dürfen nur auf der rechten Seite verwendet werden.  
+ Der erste Operator aufgerufen wird, für Arrays, die nicht **const**, kann auf der rechten Seite (r) oder der linken Seite (l-Wert) einer zuweisungsanweisung verwendet werden. Das zweite für aufgerufen **const** Arrays kann nur auf der rechten Seite verwendet werden.  
   
- Die Debugversion der Bibliothek wird bestätigt, wenn der Index (entweder auf der linken oder rechten Seite einer zuweisungsanweisung) außerhalb des gültigen Bereichs ist.  
+ Die Debugversion der Bibliothek wird bestätigt, den der Feldindex (entweder auf der linken oder rechten Seite einer zuweisungsanweisung) liegt außerhalb des gültigen Bereichs.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
@@ -428,21 +429,21 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pNewData`  
- Ein neuer Puffer für das Array von Elementen.  
+ *pNewData*  
+ Einen neuen Puffer für das Array von Elementen.  
   
- `pData`  
+ *pData*  
  Das alte Array von Elementen.  
   
- `nCount`  
- Anzahl der Elemente im alten Array.  
+ *nCount*  
+ Die Anzahl der Elemente in der alten Array.  
   
 ### <a name="remarks"></a>Hinweise  
- `pNewData` ist immer groß genug für alle der `pData` Elemente.  
+ *pNewData* ist immer groß genug für alle der *pData* Elemente.  
   
- Die [CArray](../../mfc/reference/carray-class.md) Implementierung verwendet diese Methode, um die alten Daten in einen neuen Puffer kopieren, wenn das Array vergrößert oder verkleinert werden soll (Wenn [SetSize](#setsize) oder [FreeExtra](#freeextra) heißen). Die standardmäßige Implementierung kopiert nur die Daten.  
+ Die [CArray](../../mfc/reference/carray-class.md) Implementierung, die diese Methode verwendet, um die alten Daten in einen neuen Puffer zu kopieren, wenn das Array vergrößert oder verkleinert werden soll (Wenn [SetSize](#setsize) oder [FreeExtra](#freeextra) bezeichnet werden). Die standardmäßige Implementierung werden nur die Daten kopiert.  
   
- Für Arrays, in dem ein Element enthält einen Zeiger auf einen Member oder eine andere Struktur enthält einen Zeiger auf eine der Elemente des Arrays werden die Zeiger in plain Kopie nicht aktualisiert. In diesem Fall können Sie Zeiger korrigieren, indem Sie implementieren eine Spezialisierung der `RelocateElements` mit den relevanten Typen. Sie sind auch für das Kopieren von Daten verantwortlich.  
+ Für Arrays, in dem ein Element enthält einen Zeiger auf einen Member oder eine andere Struktur enthält einen Zeiger auf eine der Elemente des Arrays werden die Zeiger nicht in einfache Kopie aktualisiert. In diesem Fall können Sie Zeiger beheben, indem Sie implementieren eine Spezialisierung der `RelocateElements` mit den entsprechenden Typen. Sie sind auch zuständig für das Kopieren von Daten.  
   
 ##  <a name="removeall"></a>  CArray::RemoveAll  
  Entfernt alle Elemente aus diesem Array.  
@@ -452,13 +453,13 @@ void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie bereits das Array leer ist, funktioniert die Funktion weiterhin.  
+ Wenn bereits das Array leer ist, wird die Funktion weiterhin funktioniert.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
   
 ##  <a name="removeat"></a>  CArray::RemoveAt  
- Entfernt eine oder mehrere Elemente, beginnend am angegebenen Index in ein Array.  
+ Entfernt eine oder mehrere Elemente, die an einem angegebenen Index in einem Array ab.  
   
 ```  
 void RemoveAt(
@@ -467,16 +468,16 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
- Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von [GetUpperBound](#getupperbound).  
+ *nIndex*  
+ Eine ganzzahlige Index, der größer als oder gleich 0 und kleiner als oder gleich den Rückgabewert von [GetUpperBound](#getupperbound).  
   
- `nCount`  
+ *nCount*  
  Die Anzahl der zu entfernenden Elemente.  
   
 ### <a name="remarks"></a>Hinweise  
- Im Prozess verschoben unten alle Elemente, die sich über die entfernten Elemente. Es verringert die obere Grenze des Arrays, aber keinen Speicherplatz frei.  
+ In den Prozess wechselt es alle Elemente über die entfernten Elemente. Es verringert die obere Grenze des Arrays, jedoch keinen Speicherplatz frei.  
   
- Wenn Sie versuchen, entfernen Sie weitere Elemente im Array oberhalb der Entfernung Punkt enthalten sind, überprüft dann die Debugversion der Bibliothek.  
+ Wenn Sie versuchen, entfernen Sie mehr Elemente als im oberhalb der entfernen-Punkt-Array enthalten sind, bestätigt Sie dann die Debugversion der Bibliothek.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
@@ -489,19 +490,19 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
- Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von [GetUpperBound](#getupperbound).  
+ *nIndex*  
+ Eine ganzzahlige Index, der größer als oder gleich 0 und kleiner als oder gleich den Rückgabewert von [GetUpperBound](#getupperbound).  
   
- `ARG_TYPE`  
- Der Vorlagenparameter Angabe des Typs der Argumente, die für Verweise auf Elemente des Arrays verwendet.  
+ *ARG_TYPE*  
+ Der Vorlagenparameter, die den Typ der Argumente, die für Verweise auf Elemente des Arrays verwendet.  
   
- `newElement`  
- Der neue Elementwert an der angegebenen Position gespeichert werden soll.  
+ *newElement*  
+ Der neue Elementwert an der angegebenen Position gespeichert werden.  
   
 ### <a name="remarks"></a>Hinweise  
- `SetAt` Vergrößert das Array wird nicht verursacht werden. Verwendung [SetAtGrow](#setatgrow) , wenn das Array die automatische Vergrößerung aktiviert werden soll.  
+ `SetAt` das Array, wachsen verursacht nicht. Verwendung [SetAtGrow](#setatgrow) , wenn Sie das Array, das automatisch vergrößert werden soll.  
   
- Sie müssen sicherstellen, dass Ihre Indexwert eine gültige Position im Array darstellt. Wenn es außerhalb des gültigen Bereichs handelt, bestätigt klicken Sie dann die Debugversion der Bibliothek.  
+ Sie müssen sicherstellen, dass Ihr Indexwert eine gültige Position im Array darstellt. Wenn es außerhalb des gültigen Bereichs ist, bestätigt Sie dann die Debugversion der Bibliothek.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [GetAt](#getat).  
@@ -514,23 +515,23 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
- Ein Integer-Index, der größer als oder gleich 0 ist.  
+ *nIndex*  
+ Eine ganze Zahl-Index, der größer als oder gleich 0 ist.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Der Vorlagenparameter, den Typ der Elemente im Array angibt.  
   
- `newElement`  
- Das Element mit diesem Array hinzugefügt werden. Ein **NULL** Wert ist zulässig.  
+ *newElement*  
+ Das Element, das in diesem Array hinzugefügt werden. Es ist ein NULL-Wert zulässig.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Array vergrößert automatisch bei Bedarf (d. h. die obere Grenze wird angepasst, dass das neue Element).  
+ Das Array automatisch vergrößert, bei Bedarf (d. h. die obere Grenze wird angepasst, um das neue Element).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
   
 ##  <a name="setsize"></a>  SetSize  
- Legt die Größe eines Arrays leer oder vorhandene; belegt Speicher aus, falls erforderlich.  
+ Legt die Größe eines Arrays von leeren oder vorhandenen; belegt Speicher aus, falls erforderlich.  
   
 ```  
 void SetSize(
@@ -539,18 +540,18 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nNewSize`  
- Das neue Arraygröße (Anzahl der Elemente). Muss größer als oder gleich 0 sein.  
+ *nNewSize*  
+ Die neue Arraygröße (Anzahl von Elementen). Muss größer als oder gleich 0 sein.  
   
- `nGrowBy`  
- Die minimale Anzahl der Element-Slots zugewiesen werden, wenn eine Größenzuwachs erforderlich ist.  
+ *nGrowBy*  
+ Die minimale Anzahl der Element-Slots zugewiesen werden, wenn eine Vergrößerung erforderlich ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die neue Größe kleiner als die alte Größe ist, wird das Array abgeschnitten, und alle nicht verwendeter Arbeitsspeicher freigegeben wird.  
+ Wenn die neue Größe kleiner als die alte Größe ist, klicken Sie dann das Array abgeschnitten, und alle nicht verwendeten Arbeitsspeicher wird freigegeben.  
   
- Verwenden Sie diese Funktion, um die Größe des Arrays festgelegt, bevor Sie beginnen mit dem Array. Wenn Sie `SetSize` nicht verwenden, kann das Hinzufügen von Elementen zu Ihrem Array dazu führen, dass es häufig neu zugeordnet und kopiert wird. Häufige Neuzuordnungen und Kopiervorgänge sind ineffizient und können zu einer Fragmentierung des Arbeitsspeichers führen.  
+ Verwenden Sie diese Funktion, die Größe eines Arrays festlegen, bevor Sie beginnen mit dem Array. Wenn Sie `SetSize` nicht verwenden, kann das Hinzufügen von Elementen zu Ihrem Array dazu führen, dass es häufig neu zugeordnet und kopiert wird. Häufige Neuzuordnungen und Kopiervorgänge sind ineffizient und können zu einer Fragmentierung des Arbeitsspeichers führen.  
   
- Die `nGrowBy` Parameter wirkt sich auf interne speicherbelegung, während das Array zunimmt. Verwendungsmöglichkeiten nie wirkt sich auf die Arraygröße von gemeldeten [GetSize](#getsize) und [GetUpperBound](#getupperbound). Wenn der Standardwert verwendet wird, reserviert MFC in eine Möglichkeit zur Vermeidung von Fragmentierung des Arbeitsspeichers und erhöht die Effizienz in den meisten Fällen berechnet.  
+ Die *nGrowBy* Parameter wirkt sich auf interne speicherbelegung während das Array vergrößert. Die Verwendung nie wirkt sich auf die Größe des Arrays von gemeldeten [GetSize](#getsize) und [GetUpperBound](#getupperbound). Wenn der Standardwert verwendet wird, weist MFC Speicher auf eine Weise vermeiden die Fragmentierung des Arbeitsspeichers und optimiert die Effizienz in den meisten Fällen berechnet.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [GetData](#getdata).  

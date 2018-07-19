@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169191"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Assemblys mit starken Namen (Assemblysignierung) (C++/CLI)
 In diesem Thema wird erläutert, wie Sie die Assembly, die genannte erteilen der Assembly einen starken Namen signieren können.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382314"
 ---
 # <a name="filenames"></a>Dateinamen
 **ANSI 4.9.3** Die Regeln für das Verfassen von gültigen Dateinamen  

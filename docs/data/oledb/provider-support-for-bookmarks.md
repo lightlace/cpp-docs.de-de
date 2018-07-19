@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112507"
 ---
 # <a name="provider-support-for-bookmarks"></a>Anbieterunterstützung für Lesezeichen
 Im Beispiel in diesem Thema wird die `IRowsetLocate` Schnittstelle für die `CMyProviderRowset` Klasse. In fast allen Fällen starten Sie durch Hinzufügen einer Schnittstelle zu einem vorhandenen COM-Objekt. Anschließend können Sie sie testen, indem mehr Aufrufe über die Consumervorlagen hinzufügen. Im Beispiel wird veranschaulicht, wie Sie:  

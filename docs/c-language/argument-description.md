@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385083"
 ---
 # <a name="argument-description"></a>Argumentbeschreibung
 Der `argc`-Parameter in den **main**- und **wmain**-Funktionen ist eine ganze Zahl, die angibt, wie viele Argumente über die Befehlszeile an das Programm übergeben werden. Da der Programmname als ein Argument gilt, ist der Wert von `argc` mindestens 1.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127967"
 ---
 # <a name="how-to-obtain-a-pointer-to-byte-array"></a>Gewusst wie: Abrufen eines Zeigers auf ein Byte-Array
 Sie erhalten einen Zeiger auf den Array-Block in ein <xref:System.Byte> Array nach Übernahme der Adresse des ersten Elements und einem Zeiger zuzuweisen.  

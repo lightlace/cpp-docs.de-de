@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353438"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Anwendungstyp, MFC-Anwendungs-Assistent
 Mithilfe dieser Seite des der [MFC-Anwendung-Assistent](../../mfc/reference/mfc-application-wizard.md) zu entwerfen und grundlegende Funktionen zu einer neuen MFC-Anwendung hinzuzufügen.  

@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonSlider Klasse | Microsoft Docs
+title: CMFCRibbonSlider-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,14 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 307b7f769035a9ddb84a3d0e51e0ff6d8a016472
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850851"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider-Klasse
-Die `CMFCRibbonSlider` Klasse implementiert ein Schieberegler-Steuerelement, das einer menübandleiste oder einer Menüband-Statusleiste hinzugefügt werden können. Das Schieberegler-Steuerelement im Menüband ähnelt den Zoomschiebereglern, die in Office 2007-Anwendungen verwendet werden.  
+Die `CMFCRibbonSlider` -Klasse implementiert ein Schieberegler-Steuerelement, das einer menübandleiste oder einer Menüband-Statusleiste hinzugefügt werden können. Das Schieberegler-Steuerelement im Menüband ähnelt den Zoomschiebereglern, die in Office 2007-Anwendungen verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,33 +62,33 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|Erstellt und initialisiert ein Schieberegler-Steuerelement für Menüband.|  
+|[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|Erstellt und initialisiert ein Menüband-Schieberegler-Steuerelement.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CMFCRibbonSlider::GetPos](#getpos)|Gibt die aktuelle Position des Schieberegler-Steuerelements zurück.|  
-|[CMFCRibbonSlider::GetRangeMax](#getrangemax)|Gibt den maximalen Wert des Schiebereglers an.|  
-|[CMFCRibbonSlider::GetRangeMin](#getrangemin)|Gibt den minimalen Wert des Schiebereglers an.|  
+|[CMFCRibbonSlider::GetRangeMax](#getrangemax)|Gibt zurück, den maximalen Wert des Schiebereglers.|  
+|[CMFCRibbonSlider::GetRangeMin](#getrangemin)|Gibt den minimalen Wert des Slider-Elements zurück.|  
 |[CMFCRibbonSlider::GetRegularSize](#getregularsize)|Gibt die reguläre Größe des Menübandelements zurück. (Überschreibt [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|  
-|[CMFCRibbonSlider::GetZoomIncrement](#getzoomincrement)|Gibt die Größe des Inkrements Zoom für das Schieberegler-Steuerelement zurück.|  
-|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|Gibt an, ob der Schieberegler Zoom-Schaltflächen hat.|  
+|[CMFCRibbonSlider::GetZoomIncrement](#getzoomincrement)|Gibt die Größe der Zoomschritt für das Schieberegler-Steuerelement zurück.|  
+|[CMFCRibbonSlider::HasZoomButtons](#haszoombuttons)|Gibt an, ob der Schieberegler Zoomschaltflächen verfügt.|  
 |[CMFCRibbonSlider::OnDraw](#ondraw)|Wird vom Framework aufgerufen, um das Menübandelement zu zeichnen. (Überschreibt [cmfcribbonbaseelement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|  
 |[CMFCRibbonSlider::SetPos](#setpos)|Legt die aktuelle Position des Schieberegler-Steuerelements fest.|  
 |[CMFCRibbonSlider::SetRange](#setrange)|Gibt den Bereich des Schieberegler-Steuerelements durch Festlegen der minimalen und maximalen Werte an.|  
-|[CMFCRibbonSlider::SetZoomButtons](#setzoombuttons)|Anzeigen oder Ausblenden der Zoom-Schaltflächen.|  
-|[CMFCRibbonSlider::SetZoomIncrement](#setzoomincrement)|Legt die Größe des Inkrements Zoom für das Schieberegler-Steuerelement fest.|  
+|[CMFCRibbonSlider::SetZoomButtons](#setzoombuttons)|Anzeigen oder Ausblenden der Zoomschaltflächen.|  
+|[CMFCRibbonSlider::SetZoomIncrement](#setzoomincrement)|Legt die Größe der Zoomschritt für das Schieberegler-Steuerelement fest.|  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können die `SetRange` Methode, um den Bereich des Zoom-Inkremente für den Schieberegler zu konfigurieren. Sie können die aktuelle Position des Schiebereglers festlegen, mit der `SetPos` Methode.  
+ Sie können die `SetRange` Methode zum Konfigurieren des Bereichs von einer Zoomschritte für den Schieberegler. Sie können die aktuelle Position des Schiebereglers festlegen, mit der `SetPos` Methode.  
   
- Sie können zirkuläre Zoom-Schaltflächen auf der linken und rechten Seite des Schieberegler-Steuerelements anzeigen, indem Sie mit der `SetZoomButtons` Methode. Wird standardmäßig der Schieberegler ist horizontal, die Schaltfläche "linken Zoom" zeigt ein Minuszeichen (-), und die Schaltfläche "rechts Zoom" zeigt ein Pluszeichen (+).  
+ Sie können auch zirkuläre Zoomschaltflächen auf der linken und rechten Seite des Schieberegler-Steuerelements anzeigen, mit der `SetZoomButtons` Methode. Standardmäßig der Schieberegler ist horizontal, die linken Zoom-Schaltfläche wird ein Minuszeichen (-) angezeigt, und die richtigen zoomschaltfläche zeigt ein Pluszeichen (+).  
   
- Die `SetZoomIncrement` Methode definiert das Inkrement um hinzuzufügen oder von der aktuellen Position subtrahiert werden soll, wenn ein Benutzer die Zoom-Schaltflächen klickt.  
+ Die `SetZoomIncrement` Methode definiert den inkrementellen Wert hinzufügen oder von der aktuellen Position subtrahiert werden soll, wenn ein Benutzer die Zoom-Schaltflächen klickt.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCRibbonSlider` Klasse zum Festlegen der Eigenschaften des Schiebereglers. Im Beispiel wird gezeigt, wie zum Erstellen einer `CMFCRibbonSlider` -Objekt, Zoomschaltflächen anzuzeigen, legen Sie die aktuelle Position des Schieberegler-Steuerelements und legen Sie den Bereich der Werte für das Schieberegler-Steuerelement.  
+ Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCRibbonSlider` Klasse zum Festlegen der Eigenschaften des Schiebereglers. Das Beispiel zeigt, wie zum Erstellen einer `CMFCRibbonSlider` Objekt Zoomschaltflächen anzuzeigen, legen Sie die aktuelle Position des Schieberegler-Steuerelements und Festlegen des Bereichs der Werte für das Schieberegler-Steuerelement.  
   
  [!code-cpp[NVC_MFC_RibbonApp#12](../../mfc/reference/codesnippet/cpp/cmfcribbonslider-class_1.cpp)]  
   
@@ -102,7 +103,7 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
  **Header:** afxribbonslider.h  
   
 ##  <a name="cmfcribbonslider"></a>  CMFCRibbonSlider::CMFCRibbonSlider  
- Erstellen Sie einen Menüband Schieberegler.  
+ Erstellen Sie einen Schieberegler Menüband.  
   
 ```  
 CMFCRibbonSlider(
@@ -111,14 +112,14 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nID`  
+ [in] *nID*  
  Schieberegler-ID.  
   
- [in]. `nWidth`  
- Schieberegler-Breite in Pixel.  
+ [in]. *nWidth*  
+ Schieberegler Breite in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Erstellt einen Menüband-Schieberegler, die `nWidth` Pixel breit ist, in der Systemsteuerung Kategorie, wo der Schieberegler hinzugefügt wird. Standardmäßig ist der Schieberegler horizontal.  
+ Erstellt einen Menüband-Schieberegler, der *nWidth* Pixel breit ist, in der Kategorie "Bereich", in dem der Schieberegler wird hinzugefügt. Standardmäßig ist der Schieberegler horizontal.  
   
 ##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  Gibt die aktuelle Position des Schieberegler-Steuerelements zurück.  
@@ -128,17 +129,17 @@ int GetPos() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die aktuelle Position des Schieberegler-Steuerelements, das eine Position relativ zum Anfang des Schiebereglers ist.  
+ Die aktuelle Position des Schieberegler-Steuerelements, das eine Position relativ zum Anfang des Slider-Elements ist.  
   
 ##  <a name="getrangemax"></a>  CMFCRibbonSlider::GetRangeMax  
- Ruft das maximale Inkrement des Schiebereglers, die der Schieberegler auf das Schieberegler-Steuerelement übertragen werden kann.  
+ Ruft das maximale Inkrement des Slider-Elements, das der Schieberegler auf das Schieberegler-Steuerelement übertragen werden kann.  
   
 ```  
 int GetRangeMax() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das maximale Inkrement des Schiebereglers, die der Schieberegler auf das Schieberegler-Steuerelement übertragen werden kann.  
+ Das maximale Inkrement des Slider-Elements, das der Schieberegler auf das Schieberegler-Steuerelement übertragen werden kann.  
   
 ##  <a name="getrangemin"></a>  CMFCRibbonSlider::GetRangeMin  
  Gibt das minimale Inkrement, das der Schieberegler auf das Schieberegler-Steuerelement übertragen werden kann.  
@@ -158,31 +159,31 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getzoomincrement"></a>  CMFCRibbonSlider::GetZoomIncrement  
- Rufen Sie den Zoom-Inkrement für das Schieberegler-Steuerelement.  
+ Rufen Sie den Zoomschritt für das Schieberegler-Steuerelement.  
   
 ```  
 int GetZoomIncrement() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Inkrement der Zoom für das Schieberegler-Steuerelement.  
+ Der Zoomschritt für das Schieberegler-Steuerelement.  
   
 ##  <a name="haszoombuttons"></a>  CMFCRibbonSlider::HasZoomButtons  
- Gibt an, ob der Schieberegler Zoom-Schaltflächen hat.  
+ Gibt an, ob der Schieberegler Zoomschaltflächen verfügt.  
   
 ```  
 BOOL HasZoomButtons() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn der Schieberegler Zoom-Schaltflächen enthält. `FALSE` andernfalls.  
+ True, wenn der Schieberegler Zoomschaltflächen hat. "False" andernfalls.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -192,7 +193,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -206,11 +207,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nPos`  
+ [in] *nPos*  
  Gibt die Position, die für den Schieberegler festgelegt. Die Position ist relativ zum Anfang des Schiebereglers.  
   
- [in] `bRedraw`  
- Wenn `TRUE`, der Schieberegler wird neu gezeichnet werden.  
+ [in] *bRedraw*  
+ Wenn TRUE, wird der Schieberegler neu gezeichnet werden.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  Legen Sie den Bereich der Werte für das Schieberegler-Steuerelement.  
@@ -222,36 +223,36 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nMin`  
- Gibt die minimale Wert des Schieberegler-Steuerelements an.  
+ [in] *nmin.*  
+ Gibt die minimalen Wert des Slider-Steuerelements an.  
   
- [in] `nMax`  
- Gibt die maximale Wert des Schieberegler-Steuerelements an.  
+ [in] *nmax.*  
+ Gibt die maximale Wert des Slider-Steuerelements an.  
   
 ### <a name="remarks"></a>Hinweise  
  Gibt den Bereich der Werte für das Schieberegler-Steuerelement durch Festlegen der minimalen und maximalen Werte an.  
   
 ##  <a name="setzoombuttons"></a>  CMFCRibbonSlider::SetZoomButtons  
- Zoom-Schaltflächen anzeigen oder ausblenden.  
+ Ein- oder Ausblenden von Zoom-Schaltflächen.  
   
 ```  
 void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in]. `bSet`  
- `TRUE` Zoom-Schaltflächen angezeigt; `FALSE` zum Ausblenden.  
+ [in]. *bSet*  
+ TRUE, Zoomschaltflächen angezeigt werden soll. "False", um sie auszublenden.  
   
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
- Legen Sie den Zoom-Inkrement für das Schieberegler-Steuerelement.  
+ Legen Sie den Zoomschritt für das Schieberegler-Steuerelement.  
   
 ```  
 void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nZoomIncrement`  
- Gibt das Inkrement Zoom des Schieberegler-Steuerelements an.  
+ [in] *nZoomIncrement*  
+ Gibt den Zoomschritt des Schieberegler-Steuerelements an.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

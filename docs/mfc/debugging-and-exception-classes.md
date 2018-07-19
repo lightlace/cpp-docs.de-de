@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341760"
 ---
 # <a name="debugging-and-exception-classes"></a>Klassen für Debugging und Ausnahmen
 Diese Klassen bieten Unterstützung für das Debuggen der dynamischen speicherbelegung und für die Weitergabe von Informationen über die Ausnahme von der Funktion, in dem die Ausnahme ausgelöst, in dem abgefangen wird, an die Funktion.  

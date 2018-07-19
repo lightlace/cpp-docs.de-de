@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687867"
 ---
 # <a name="317-ompsetdynamic-function"></a>3.1.7 omp_set_dynamic-Funktion
 Die **Omp_set_dynamic** Funktion aktiviert oder deaktiviert die dynamische Anpassung der Anzahl der Threads, die für die Ausführung von parallelen Regionen verfügbar. Es wird folgendes Format verwendet:  

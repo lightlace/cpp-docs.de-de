@@ -22,6 +22,7 @@ ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34463091"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Exemplarische Vorgehensweise: Debuggen einer C++ AMP-Anwendung
 In diesem Thema veranschaulicht, wie eine Anwendung zu debuggen, die C++ Accelerated Massive Parallelism (C++-AMP) verwendet wird, um die grafikverarbeitungseinheit (GPU) nutzen. Er verwendet ein paralleler Reduction-Programm, das sich ein großes Array von ganzen Zahlen addiert. In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschaulicht:  

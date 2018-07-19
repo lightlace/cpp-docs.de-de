@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892773"
 ---
 # <a name="selecting-controls"></a>Markieren von Steuerelementen
 Wählen Sie Steuerelemente auf Größe, richten Sie aus, verschieben Sie, kopieren Sie, oder löschen Sie, und führen Sie dann den gewünschten Vorgang. In den meisten Fällen müssen Sie zu verwenden, die Größe und Ausrichtung Tools auf mehr als ein Steuerelement auswählen, die [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380577"
 ---
 # <a name="tool-tips"></a>QuickInfos
 Die Verfahren unterscheiden sich für das Hinzufügen von QuickInfos für Steuerelemente, die in Windows enthaltenen MFC-Klasse abgeleitet [CFrameWnd](../mfc/reference/cframewnd-class.md) und Windows ist nicht von abgeleiteten `CFrameWnd`.  

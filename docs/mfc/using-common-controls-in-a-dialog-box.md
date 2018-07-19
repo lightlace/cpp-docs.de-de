@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382690"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Verwenden von Standardsteuerelementen in einem Dialogfeld
 Die allgemeine Windows-Steuerelemente können verwendet werden, [Dialogfelder](../mfc/dialog-boxes.md), Ansichten, Datensatzansichten und ein anderes Fenster, die basierend auf einer Dialogfeldvorlage bilden. Die folgende Prozedur, mit nur geringfügigen Änderungen funktioniert für Formulare ebenfalls.  

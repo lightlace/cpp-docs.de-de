@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367884"
 ---
 # <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Gewusst wie: Erstellen von isolierten Anwendungen zur Verwendung von COM-Komponenten
 Isolierte Anwendungen sind Anwendungen, die Manifeste, die das Programm integriert haben. Sie können isolierte Anwendungen, die COM-Komponenten erstellen.  

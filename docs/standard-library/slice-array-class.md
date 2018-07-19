@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67ffb39df8f02df233a31cfffeea5ab5ddcdf933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7cb34fd44214ac503c8b9e201d07dbe1a6eb85de
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965765"
 ---
 # <a name="slicearray-class"></a>slice_array-Klasse
 
@@ -57,7 +58,7 @@ Die Vorlagenklasse wird indirekt durch bestimmte valarray-Operationen erstellt u
 
 `slice_array`\<**Type**> `valarray`< **Type**:: `operator[]` ( `slice`).
 
-Sie erstellen ein **slice_array\<Type>**-Objekt für ein **sl**-Segment des valarray **va** nur, indem Sie einen Ausdruck der Form [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at) schreiben. Die Memberfunktionen der slice_array-Klasse verhalten sich dann wie die entsprechenden Funktionssignaturen, die für **valarray\<Type>** definiert sind, mit der Ausnahme, dass nur die Reihenfolge der ausgewählten Elemente betroffen ist. Die Sequenz, die vom slice_array gesteuert wird, wird durch die drei Parameter des Segmentkonstruktors, den Index des ersten Elements im Segment und die Anzahl von Elementen und den Abstand zwischen den Elementen definiert. Ein von valarray **va** ausgeschnittenes und von **va**[ `slice`(2, 5, 3)] deklariertes slice_arry wählt Elemente mit Indizes, 2, 5, 8, 11 und 14 von **va** aus. Die Indizes müssen für die Prozedur gültig sein, um gültig zu sein.
+Sie erstellen eine `slice_array<Type>` -Objekt nur, indem Sie das Schreiben eines Ausdrucks des Formulars [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at), für einen Slice `sl` valarray-Objekts `va`. Die Memberfunktionen der Slice_array-Klasse Verhalten sich dann wie die entsprechenden Funktionssignaturen für definiert `valarray<Type>`, außer dass nur die Reihenfolge der ausgewählten Elemente betroffen ist. Die Sequenz, die vom slice_array gesteuert wird, wird durch die drei Parameter des Segmentkonstruktors, den Index des ersten Elements im Segment und die Anzahl von Elementen und den Abstand zwischen den Elementen definiert. Ein slice_array-Element, das aus valarray-Objekt ausgeschnitten `va` deklariert, indem **va**[ `slice`(2, 3, 5)] wählt Elemente mit Indizes, 2, 5, 8, 11 und 14 von `va`. Die Indizes müssen für die Prozedur gültig sein, um gültig zu sein.
 
 ## <a name="example"></a>Beispiel
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685904"
 ---
 # <a name="22-conditional-compilation"></a>2.2 Bedingte Kompilierung
 Die _**OPENMP** Makroname wird durch OpenMP-kompatible Implementierung definiert, als der dezimalen Konstante *Yyyymm*, der Jahr und Monat der genehmigten Spezifikation ist. Dieses Makro muss das Subjekt einer **#define** oder ein **#undef** -präprozessanweisung.  

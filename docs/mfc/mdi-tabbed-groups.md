@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350353"
 ---
 # <a name="mdi-tabbed-groups"></a>MDI-Gruppen im Registerkartenformat
 Die Gruppen im Registerkartenformat Funktion für mehrere Document Interface (MDI) kann mehrere Interface (MDI) dokumentanwendungen eine oder mehrere Fenster im Registerkartenformat anzeigen (oder Gruppen von Fenstern im Registerkartenformat, bekannt als *Gruppen im Registerkartenformat*) in den Bereich des MDI-Client. Fenster im Registerkartenformat können vertikal oder horizontal ausgerichtet werden. Wenn eine Anwendung mehrere im Registerkartenformat MDI-Gruppen hostet, werden die Gruppen durch Splitterfenstern getrennt.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348249"
 ---
 # <a name="headers-and-footers"></a>Kopf- und Fußzeilen
 In diesem Artikel wird das Hinzufügen von Kopf- und Fußzeilen in einem gedruckten Dokument erläutert.  

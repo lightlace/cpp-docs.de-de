@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096167"
 ---
 # <a name="cdataconnectioncopy"></a>CDataConnection::Copy
 Erstellt eine Kopie einer vorhandenen Verbindung mit Daten.  

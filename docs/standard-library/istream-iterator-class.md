@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74c62c1d6d80f21054f03f78e0151c2cddf00e2c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959860"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator-Klasse
 
@@ -45,13 +46,13 @@ class istream_iterator
 
 ### <a name="parameters"></a>Parameter
 
-`Type` Der Typ des Objekts aus dem Eingabestream extrahiert werden soll.
+*Typ* den Typ des Objekts aus dem Eingabestream extrahiert werden soll.
 
-`CharType` Der Typ, der den Zeichentyp für das `istream_iterator`. Dieses Argument ist optional, und der Standardwert ist `char`.
+*CharType* der Typ, der den Zeichentyp für das `istream_iterator`. Dieses Argument ist optional, und der Standardwert ist **Char**.
 
-`Traits` Der Typ, der den Zeichentyp für das `istream_iterator`. Dieses Argument ist optional, und der Standardwert ist `char_traits`< `CharType`.
+*"Traits"* der Typ, der den Zeichentyp für das `istream_iterator`. Dieses Argument ist optional, und der Standardwert ist `char_traits`< `CharType`.
 
-`Distance` Ein mit Vorzeichen handelt, der den Differenztyp für den `istream_iterator`. Dieses Argument ist optional, und der Standardwert ist `ptrdiff_t`.
+*Abstand* ein ganzzahligen Typ mit Vorzeichen, die den Differenztyp für stellt die `istream_iterator`. Dieses Argument ist optional, und der Standardwert ist `ptrdiff_t`.
 
 Nachdem ein Objekt der Klasse istream_iterator mit einem ungleich NULL gespeicherten Zeiger erstellt oder erhöht wurde, versucht das Objekt, ein Objekt vom Typ `Type` aus dem zugewiesenen Eingabestream zu extrahieren und zu speichern. Wenn die Extraktion fehlschlägt, ersetzt das Objekt den gespeicherten Zeiger durch einen NULL-Zeiger und erstellt so einen Indikator für das Ende der Sequenz.
 
@@ -93,7 +94,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter **Chartype** dar.
+Der Type stellt ein Synonym für den Vorlagenparameter `Chartype` dar.
 
 ### <a name="example"></a>Beispiel
 
@@ -143,11 +144,11 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Parameter
 
-`_Istr` Der Eingabestream zu lesende verwenden zum Initialisieren der `istream_iterator`.
+*_Istr* den Eingabedatenstrom zu lesenden verwenden zum Initialisieren der `istream_iterator`.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert den Eingabestreamzeiger mit einem NULL-Zeiger und erstellt einen End-of-Stream-Iterator. Der zweite Konstruktor initialisiert den Eingabestreamzeiger mit *& _Istr*, anschließend versucht er ein Objekt vom Typ **Type** zu extrahieren und zu speichern.
+Der erste Konstruktor initialisiert den Eingabestreamzeiger mit einem NULL-Zeiger und erstellt einen End-of-Stream-Iterator. Der zweite Konstruktor initialisiert den Eingabestreamzeiger mit *& _Istr*, anschließend versucht, extrahieren und speichern ein Objekt des Typs `Type`.
 
 Der End-of-Stream-Iterator kann verwendet werden, um zu testen, ob ein `istream_iterator` das Ende eines Streams erreicht hat.
 
@@ -203,7 +204,7 @@ Unter [istream_iterator](#istream_iterator) finden Sie ein Beispiel für das Dek
 
 ## <a name="op_star"></a> istream_iterator::Operator*
 
-Der Dereferenzierungsoperator gibt das gespeicherte Objekt vom Typ **Type** zurück, das vom `istream_iterator` adressiert wird.
+Der Dereferenzierungsoperator gibt das gespeicherte Objekt vom Typ `Type` zurück, das vom `istream_iterator` adressiert wird.
 
 ```cpp
 const Type& operator*() const;
@@ -211,7 +212,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Das gespeicherte Objekt vom Typ **Type**.
+Das gespeicherte Objekt vom Typ `Type`.
 
 ### <a name="example"></a>Beispiel
 
@@ -307,7 +308,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der erste Memberoperator gibt einen Verweis auf das inkrementierte Objekt des Typs **Type** zurück, das aus dem Eingabestream extrahiert wurde, und die zweite Memberfunktion gibt eine Kopie des Objekts zurück.
+Der erste Memberoperator gibt einen Verweis auf das inkrementierte Objekt des Typs `Type` extrahierten aus dem Eingabestream und die zweite Member-Funktion zurückgibt, die eine Kopie des Objekts.
 
 ### <a name="example"></a>Beispiel
 
@@ -351,7 +352,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter **Merkmale** dar.
+Der Typ stellt ein Synonym für den Vorlagenparameter *Merkmale* dar.
 
 ### <a name="example"></a>Beispiel
 

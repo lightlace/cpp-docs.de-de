@@ -1,5 +1,5 @@
 ---
-title: COleStreamFile Klasse | Microsoft Docs
+title: COleStreamFile-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,14 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9304c4e3dfd559b296c69b274c1462f2f973a04d
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852757"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile-Klasse
-Stellt einen Datenstream ( `IStream`) in einer Verbunddatei als Teil des OLE Structured Storage.  
+Stellt einen Datenstream (`IStream`) in einer Verbunddatei als Teil einer strukturierten Speicherung (OLE Structured Storage) dar.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,12 +63,12 @@ class COleStreamFile : public CFile
 |[COleStreamFile::CreateStream](#createstream)|Erstellt einen Datenstrom und ordnet es dem Objekt.|  
 |[COleStreamFile::Detach](#detach)|Hebt die Zuordnung des Streams, aus dem Objekt.|  
 |[COleStreamFile::GetStream](#getstream)|Gibt den aktuellen Stream zurück.|  
-|[COleStreamFile::OpenStream](#openstream)|Öffnet einen Datenstrom zum sicheren und ordnet es dem Objekt.|  
+|[COleStreamFile::OpenStream](#openstream)|Sicher öffnet einen Datenstrom und ordnet es dem Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
  Ein `IStorage` Objekt muss vorhanden sein, bevor der Stream geöffnet oder erstellt, wenn es sich um einen Speicherstream ist werden kann.  
   
- `COleStreamFile` Objekte bearbeitet werden, genau so wie [CFile](../../mfc/reference/cfile-class.md) Objekte.  
+ `COleStreamFile` Objekte bearbeitet werden, genau wie [CFile](../../mfc/reference/cfile-class.md) Objekte.  
   
  Weitere Informationen zum Bearbeiten von Datenströmen und speichern können, finden Sie im Artikel [Container: Verbunddateien](../../mfc/containers-compound-files.md)...  
   
@@ -84,15 +85,15 @@ class COleStreamFile : public CFile
  **Header:** afxole.h  
   
 ##  <a name="attach"></a>  COleStreamFile::Attach  
- Ordnet die angegebene OLE-Stream mit der `COleStreamFile` Objekt.  
+ Ordnet den angegebenen OLE-Stream mit der `COleStreamFile` Objekt.  
   
 ```  
 void Attach(LPSTREAM lpStream);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpStream`  
- Verweist auf die OLE-Streams ( `IStream`) mit dem Objekt zugeordnet werden soll. Nicht mit **NULL**.  
+ *lpStream*  
+ Verweist auf die OLE-Datenstrom (`IStream`) mit dem Objekt zugeordnet werden soll. Darf nicht NULL sein.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Objekt darf nicht bereits ein OLE-Datenstrom zugeordnet sein.  
@@ -107,35 +108,35 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpStream`  
- Zeiger auf den OLE-Stream mit dem Objekt zugeordnet werden soll.  
+ *lpStream*  
+ Zeiger auf die OLE-Stream mit dem Objekt zugeordnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `lpStream` ist **NULL**, das Objekt ist nicht mit einem OLE-Datenstrom verknüpft, das Objekt ist, andernfalls das angegebene OLE-Datenstrom zugeordnet.  
+ Wenn *LpStream* NULL ist, das Objekt ist nicht verknüpft mit einem OLE-Stream, andernfalls das Objekt den angegebenen OLE-Stream zugeordnet ist.  
   
  Weitere Informationen finden Sie unter [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) im Windows SDK.  
   
 ##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
- Sicher erstellt einen neuen Stream nicht genügend globale, freigegebenen Arbeitsspeicher, in dem ein Fehler für eine normale, erwartete Bedingung ist.  
+ Sichere erstellt einen neuen Datenstrom aus dem globalen, freigegebenen Arbeitsspeicher, in denen ein Fehler für eine normale, erwartete Bedingung ist.  
   
 ```  
 BOOL CreateMemoryStream(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pError`  
- Verweist auf eine [CFileException](../../mfc/reference/cfileexception-class.md) Objekt oder **NULL** , der den Abschlussstatus des Vorgangs erstellen angibt. Geben Sie diesen Parameter, wenn Sie mögliche Ausnahmen generiert, wird versucht, den Datenstrom erstellen überwachen möchten.  
+ *pError*  
+ Verweist auf eine [CFileException](../../mfc/reference/cfileexception-class.md) Objekt oder NULL, der den Abschlussstatus des Vorgangs erstellen angibt. Geben Sie diesen Parameter, wenn zum Überwachen von möglicher Ausnahmen, die generiert werden, indem versucht wird, den Stream erstellt werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn der Datenstrom erfolgreich erstellt wurde; andernfalls 0.  
+ Ungleich NULL ist, wenn der Stream erfolgreich erstellt wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Arbeitsspeicher wird vom OLE-Subsystem zugeordnet.  
+ Der Speicher wird vom OLE-Subsystem zugeordnet.  
   
  Weitere Informationen finden Sie unter [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) im Windows SDK.  
   
 ##  <a name="createstream"></a>  COleStreamFile::CreateStream  
- Sicher erstellt einen neuen Stream in dem bereitgestellten Speicher-Objekt, in dem ein Fehler für eine normale, erwartete Bedingung ist.  
+ Sichere erstellt einen neuen Stream im bereitgestellten Speicher-Objekt, in denen ein Fehler für eine normale, erwartete Bedingung ist, ein.  
   
 ```  
 BOOL CreateStream(
@@ -146,23 +147,23 @@ BOOL CreateStream(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpStorage`  
- Verweist auf das OLE-Speicherobjekt, das den zu erstellenden Datenstroms enthält. Nicht mit **NULL**.  
+ *lpStorage*  
+ Verweist auf das OLE-Speicher-Objekt, das den zu erstellenden Datenstroms enthält. Darf nicht NULL sein.  
   
- `lpszStreamName`  
- Der Name des zu erstellenden Datenstroms. Nicht mit **NULL**.  
+ *lpszStreamName*  
+ Der Name des Datenstroms erstellt werden. Darf nicht NULL sein.  
   
- `nOpenFlags`  
- Der Zugriffsmodus zu verwenden, wenn der Stream geöffnet. Exklusive, Lese-/Schreibzugriff und erstellen Sie die Modi werden standardmäßig verwendet. Eine vollständige Liste der verfügbaren Modi finden Sie unter [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
+ *nOpenFlags*  
+ Der Zugriffsmodus verwenden, wenn Sie den Stream zu öffnen. Exklusive, Lese-/Schreibzugriff, und erstellen Sie die Modi als Standard verwendet wird. Eine vollständige Liste der verfügbaren Modi, finden Sie unter [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
- Verweist auf eine [CFileException](../../mfc/reference/cfileexception-class.md) Objekt oder **NULL**. Geben Sie diesen Parameter, wenn Sie mögliche Ausnahmen generiert, wird versucht, den Datenstrom erstellen überwachen möchten.  
+ *pError*  
+ Verweist auf eine [CFileException](../../mfc/reference/cfileexception-class.md) Objekt oder NULL. Geben Sie diesen Parameter, wenn zum Überwachen von möglicher Ausnahmen, die generiert werden, indem versucht wird, den Stream erstellt werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn der Datenstrom erfolgreich erstellt wurde; andernfalls 0.  
+ Ungleich NULL ist, wenn der Stream erfolgreich erstellt wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Datei-Ausnahme wird ausgelöst, wenn die Open schlägt fehl und `pError` nicht **NULL**.  
+ Eine Datei Ausnahme wird ausgelöst, wenn die Open schlägt fehl, und *pError* nicht NULL ist.  
   
  Weitere Informationen finden Sie unter [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) im Windows SDK.  
   
@@ -174,10 +175,10 @@ LPSTREAM Detach();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf den Datenstrom ( `IStream`), die dem Objekt zugeordnet wurde.  
+ Ein Zeiger auf den Datenstrom (`IStream`), die dem Objekt zugeordnet wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Stream muss auf irgendeine andere geschlossen werden, bevor das Programm beendet wird.  
+ Der Datenstrom muss auf eine andere Art geschlossen werden, bevor das Programm beendet wird.  
   
  Weitere Informationen finden Sie unter [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) im Windows SDK.  
   
@@ -203,23 +204,23 @@ BOOL OpenStream(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpStorage`  
- Verweist auf das OLE-Speicherobjekt, das den Datenstrom geöffnet werden. Nicht mit **NULL**.  
+ *lpStorage*  
+ Verweist auf das OLE-Speicher-Objekt mit den Stream geöffnet werden. Darf nicht NULL sein.  
   
- `lpszStreamName`  
- Der Name des Datenstroms geöffnet werden. Nicht mit **NULL**.  
+ *lpszStreamName*  
+ Der Name des Datenstroms geöffnet werden. Darf nicht NULL sein.  
   
- `nOpenFlags`  
- Der Zugriffsmodus zu verwenden, wenn der Stream geöffnet. Exklusive und Lese-/Schreibzugriff Modi werden standardmäßig verwendet. Die vollständige Liste der verfügbaren Modi, finden Sie unter [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
+ *nOpenFlags*  
+ Der Zugriffsmodus verwenden, wenn Sie den Stream zu öffnen. Exklusive und Lese-/Schreibzugriff-Modus als Standard verwendet wird. Eine vollständige Liste der verfügbaren Modi finden Sie unter [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
- Verweist auf eine [CFileException](../../mfc/reference/cfileexception-class.md) Objekt oder **NULL**. Geben Sie diesen Parameter, wenn mögliche, wird versucht, den Stream geöffnet generierte Ausnahmen überwacht werden soll.  
+ *pError*  
+ Verweist auf eine [CFileException](../../mfc/reference/cfileexception-class.md) Objekt oder NULL. Geben Sie diesen Parameter, wenn zum Überwachen von möglicher Ausnahmen generiert, indem Sie versuchen, den Stream geöffnet werden sollen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn der Stream wurde erfolgreich geöffnet ist; andernfalls 0.  
+ Ungleich NULL, wenn der Stream erfolgreich geöffnet wird; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Datei-Ausnahme wird ausgelöst, wenn die Open schlägt fehl und `pError` nicht **NULL**.  
+ Eine Datei Ausnahme wird ausgelöst, wenn die Open schlägt fehl, und *pError* nicht NULL ist.  
   
  Weitere Informationen finden Sie unter [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) im Windows SDK.  
   

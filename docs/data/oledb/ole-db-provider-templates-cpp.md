@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112744"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB-Anbietervorlagen (C++)
 OLE DB ist ein wichtiger Teil der Microsoft Universal Data Access-Strategie. Das OLE DB-Design ermöglicht es, hohe Leistung Datenzugriff aus einer beliebigen Datenquelle. Keine Tabellendaten können über OLE DB angezeigt werden, unabhängig davon, ob sie aus einer Datenbank stammt. Die Flexibilität bietet Ihnen eine enorme Power.  

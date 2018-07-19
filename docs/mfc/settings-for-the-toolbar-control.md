@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379706"
 ---
 # <a name="settings-for-the-toolbar-control"></a>Einstellungen für das Symbolleisten-Steuerelement
 Die Schaltflächen einer Symbolleiste können eine Bitmap, eine Zeichenfolge oder beides anzeigen. Die Bildgröße ist standardmäßig auf die Dimensionen der 16 x 15 Pixel festgelegt. Alle Schaltflächen sind der gleichen Breite, um standardmäßig 24 x 22 Pixel. Eine Symbolleiste Höhe wird durch die Höhe der Schaltflächen bestimmt, und eine Symbolleiste Breite ist identisch mit der Breite des Clientbereichs des übergeordneten Fensters auch standardmäßig.  

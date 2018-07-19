@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247275"
 ---
 # <a name="compiler-error-c3060"></a>Compilerfehler C3060
 'Member': Eine Friend-Funktion kann nicht mit einem qualifizierten Namen innerhalb einer Klasse definiert werden (sie kann nur deklariert werden).  

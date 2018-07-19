@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890111"
 ---
 # <a name="sizing-individual-controls"></a>Festlegen der Größe von individuellen Steuerelementen
 Verwenden Sie den Ziehpunkt, um die Größe eines Steuerelements. Wenn der Zeiger an einem Ziehpunkt befindet, ändert er Form an, dass die Anweisungen in denen Größe des Steuerelements geändert werden kann. Aktive Ziehpunkte sind gefüllt. Wenn Sie ein Ziehpunkt leer ist, kann nicht entlang dieser Achse Größe des Steuerelements geändert werden.  

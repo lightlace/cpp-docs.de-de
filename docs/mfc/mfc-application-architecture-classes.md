@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351429"
 ---
 # <a name="mfc-application-architecture-classes"></a>Klassen der MFC-Anwendungsarchitektur
 Klassen in dieser Kategorie beitragen, die Architektur der Framework-Anwendung. Sie geben die Funktionen, die meisten Anwendungen. Füllen Sie das Framework anwendungsspezifische Funktionen hinzufügen. In der Regel führen Sie dies durch den Architektur-Klassen neue Klassen ableiten und dann neue Elemente hinzufügen oder vorhandene Memberfunktionen überschreiben.  

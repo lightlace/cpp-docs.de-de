@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420085"
 ---
 # <a name="punctuators-c"></a>Markierungszeichen (C++)
 Markierungszeichen in C++ haben eine syntaktische und semantische Bedeutung für den Compiler, geben aber nicht von selbst einen Vorgang an, der einen Wert ergibt. Einige Markierungszeichen, entweder alleine oder in Kombination, können auch C++-Operatoren oder wichtig für den Präprozessor sein.  

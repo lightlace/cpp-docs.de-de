@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099640"
 ---
 # <a name="icolumnsinfoimplmapcolumnids"></a>IColumnsInfoImpl::MapColumnIDs
 Gibt ein Array von Ordinalzahlen der Spalten in einem Rowset, das durch die angegebenen Spalten-IDs gekennzeichnet sind.  

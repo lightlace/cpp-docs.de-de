@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341996"
 ---
 # <a name="communicating-with-a-tree-control"></a>Kommunizieren mit dem Struktursteuerelement
 Sie verwenden verschiedene Methoden zum Aufrufen von Memberfunktionen einem [CTreeCtrl](../mfc/reference/ctreectrl-class.md) Objekt je nachdem, wie das Objekt erstellt wurde:  

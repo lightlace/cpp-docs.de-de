@@ -26,16 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a85ba03089a9536c8c6512bccd09f1eb34c0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cadb06076ff7a3dd481a1bcedc9cd0afe4989f28
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950447"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementieren der Statusleiste mit MFC
 Ein [CStatusBar](../mfc/reference/cstatusbar-class.md) Objekt ist eine Steuerleiste mit einer Zeile von Textausgabebereichen. Die Ausgabebereiche werden häufig als Nachricht Linien und als Statusindikatoren verwendet. Beispiele sind im Menü Hilfe-Nachricht Zeilen, die den ausgewählten Menübefehl kurz und die Indikatoren, die den Status von Rollen, NUM- und andere Schlüssel anzuzeigen.  
   
- Ab MFC 4.0 werden Statusleisten implementiert, mit der Klasse [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), die eine Statusleiste Standardsteuerelements kapselt. Für die Abwärtskompatibilität behält MFC die ältere Status Befehlsleisten-Standardimplementierung in Klasse **COldStatusBar**. Die Dokumentation für frühere Versionen von MFC beschreibt **COldStatusBar** unter `CStatusBar`.  
+ Ab MFC 4.0 werden Statusleisten implementiert, mit der Klasse [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), die eine Statusleiste Standardsteuerelements kapselt. Für die Abwärtskompatibilität behält MFC die ältere Status Befehlsleisten-Standardimplementierung in Klasse `COldStatusBar`. Die Dokumentation für frühere Versionen von MFC beschreibt `COldStatusBar` unter `CStatusBar`.  
   
  [GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), eine Memberfunktion neue MFC 4.0, können Sie das allgemeine Windows-Steuerelement-Unterstützung für Statusleiste Anpassung und zusätzliche Funktionen nutzen. `CStatusBar` Memberfunktionen geben Ihnen die meisten Funktionen des allgemeinen Windows-Steuerelemente; allerdings beim Aufruf `GetStatusBarCtrl`, Ihre Statusleisten noch länger die Merkmale einer Statusleiste erteilen. Beim Aufruf `GetStatusBarCtrl`, er wird zurückgegeben, einen Verweis auf ein `CStatusBarCtrl` Objekt. Dieser Verweis können Sie um das StatusBar-Steuerelement zu bearbeiten.  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342734"
 ---
 # <a name="adding-items-to-the-header-control"></a>Hinzufügen von Elementen zum Headersteuerelement
 Nach dem Erstellen der Headersteuerelement ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) in das übergeordnete Fenster, wie viele Headerelemente hinzufügen, "" wie erforderlich: in der Regel eine pro Spalte.  

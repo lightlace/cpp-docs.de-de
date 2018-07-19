@@ -1,5 +1,5 @@
 ---
-title: Überschreibungsspezifizierer | Microsoft Docs
+title: override-Bezeichner | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d43620ceeb0404c3ad8b10cee3d0a00e7b2f467
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940653"
 ---
 # <a name="override-specifier"></a>override-Bezeichner
-Sie können das Schlüsselwort `override` verwenden, um Memberfunktionen festzulegen, die eine virtuelle Funktion in einer Basisklasse überschreiben.  
+Sie können die **außer Kraft setzen** Schlüsselwort, um Memberfunktionen festzulegen, die eine virtuelle Funktion in einer Basisklasse überschreiben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,10 +32,10 @@ function-declaration override;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- `override` ist kontextbezogen und hat eine besondere Bedeutung, wenn es nach der Deklaration einer Memberfunktion verwendet wird; andernfalls ist es kein reserviertes Schlüsselwort.  
+ **außer Kraft setzen** ist kontextbezogen und hat eine besondere Bedeutung, wenn sie nach einer memberfunktionsdeklaration verwendet wird; andernfalls wird Sie kein reserviertes Schlüsselwort.  
   
 ## <a name="example"></a>Beispiel  
- Verwenden Sie `override`, um unbeabsichtigtes Vererbungsverhalten im Code zu verhindern. Das folgende Beispiel zeigt, ohne `override`, wo das Memberfunktionsverhalten der abgeleiteten Klasse möglicherweise nicht vorgesehen wurde. Der Compiler gibt keinen Fehler für diesen Code aus.  
+ Verwendung **überschreiben** um Vererbungsverhalten im Code zu verhindern. Das folgende Beispiel zeigt, wo, ohne **überschreiben**, das memberfunktionsverhalten der abgeleiteten Klasse möglicherweise nicht vorgesehen wurde. Der Compiler gibt keinen Fehler für diesen Code aus.  
   
 ```cpp  
 class BaseClass  
@@ -60,7 +61,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Wenn Sie `override` verwenden, generiert der Compiler Fehler, anstatt neue Memberfunktionen automatisch zu erstellen.  
+ Bei Verwendung von **überschreiben**, generiert der Compiler Fehler, anstatt im Hintergrund Erstellen von neuen Member-Funktionen.  
   
 ```cpp  
 class BaseClass  
@@ -88,7 +89,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Verwenden, um anzugeben, dass Funktionen nicht überschrieben werden können und Klassen geerbt werden können, die [endgültigen](../cpp/final-specifier.md) Schlüsselwort.  
+ Um anzugeben, dass Funktionen nicht überschrieben werden können und Klassen nicht geerbt werden können, verwenden die [endgültige](../cpp/final-specifier.md) Schlüsselwort.  
   
 ## <a name="see-also"></a>Siehe auch  
  [final-Bezeichner](../cpp/final-specifier.md)   

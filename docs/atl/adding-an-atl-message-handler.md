@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354155"
 ---
 # <a name="adding-an-atl-message-handler"></a>Hinzufügen einer ATL-Meldungshandlers
 Um ein Steuerelement einen Meldungshandler (eine Memberfunktion, die Windows-Meldungen behandelt) hinzuzufügen, müssen Sie zuerst wählen Sie das Steuerelement in der Klassenansicht aus. Öffnen Sie dann die **Eigenschaften** wählen die **Nachrichten** Symbol, und klicken Sie auf die Dropdownliste zu steuern, in das Feld gegenüber der Nachricht erforderlich. Dadurch wird eine Deklaration für die Message-Handler in der Headerdatei des Steuerelements und eine Skeleton-Implementierung des Handlers in cpp-Datei für das Steuerelement hinzugefügt. Außerdem werden die meldungszuordnung hinzufügen und fügen Sie einen Eintrag für den Handler.  

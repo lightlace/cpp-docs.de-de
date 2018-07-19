@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689609"
 ---
 # <a name="a30---use-of-reprivatization"></a>A.30   Verwenden der erneuten Privatisierung
 Das folgende Beispiel zeigt die Reprivatization von Variablen. Private Variablen können gekennzeichnet werden, `private` erneut in einer geschachtelten-Direktive. Sie müssen nicht in den einschließenden parallelen Bereich gemeinsam genutzt werden.  

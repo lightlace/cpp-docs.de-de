@@ -22,11 +22,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 1f5f523b19581fe11f01266c90e6b8612da125fc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac9a436637f9acf5f3818454706eb146d814b3bc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964813"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt;-Operatoren
 
@@ -48,9 +49,11 @@ bool operator>= (
 
 ### <a name="parameters"></a>Parameter
 
-`Left` Links `thread::id` Objekt.
+*Links*  
+ Das linke `thread::id`-Objekt.
 
-`Right` Das Recht `thread::id` Objekt.
+*Rechts*  
+ Das rechte `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -72,9 +75,11 @@ bool operator> (
 
 ### <a name="parameters"></a>Parameter
 
-`Left` Links `thread::id` Objekt.
+*Links*  
+ Das linke `thread::id`-Objekt.
 
-`Right` Das Recht `thread::id` Objekt.
+*Rechts*  
+ Das rechte `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -96,9 +101,11 @@ bool operator<= (
 
 ### <a name="parameters"></a>Parameter
 
-`Left` Links `thread::id` Objekt.
+*Links*  
+ Das linke `thread::id`-Objekt.
 
-`Right` Das Recht `thread::id` Objekt.
+*Rechts*  
+ Das rechte `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -120,13 +127,15 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-`Left` Links `thread::id` Objekt.
+*Links*  
+ Das linke `thread::id`-Objekt.
 
-`Right` Das Recht `thread::id` Objekt.
+*Rechts*  
+ Das rechte `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` wenn `Left` `Right` in der gesamten Sortierung vorausgeht, andernfalls `false`.
+**"true"** Wenn *Links* vorausgeht *rechts* in der gesamten Sortierung hingegen **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -146,9 +155,11 @@ bool operator!= (
 
 ### <a name="parameters"></a>Parameter
 
-`Left` Links `thread::id` Objekt.
+*Links*  
+ Das linke `thread::id`-Objekt.
 
-`Right` Das Recht `thread::id` Objekt.
+*Rechts*  
+ Das rechte `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -169,14 +180,16 @@ bool operator== (
 ```
 
 ### <a name="parameters"></a>Parameter
+ 
+*Links*  
+ Das linke `thread::id`-Objekt.
 
-`Left` Links `thread::id` Objekt.
-
-`Right` Das Recht `thread::id` Objekt.
+*Rechts*  
+ Das rechte `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` wenn beide Objekte den gleichen Ausführungsthread darstellen oder wenn kein Objekt einen Ausführungsthread darstellt, andernfalls `false`.
+**"true"** aus, wenn die beiden Objekte den gleichen Ausführungsthread darstellen oder wenn kein Objekt einen Ausführungsthread darstellt, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -194,17 +207,19 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Parameter
 
-`Ostr` Ein [Basic_ostream](../standard-library/basic-ostream-class.md) Objekt.
+*Ostr*  
+ Ein [basic_ostream](../standard-library/basic-ostream-class.md)-Objekt.
 
-`Id` Ein `thread::id` Objekt.
+*Id*  
+ Ein `thread::id`-Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`Ostr`
+*Ostr*.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Funktion fügt `Id` in `Ostr` ein.
+Diese Funktion fügt *Id* in *Ostr*.
 
 Wenn zwei `thread::id`-Objekte gleich sind, sind die eingefügten Text-Darstellungen dieser Objekte gleich.
 

@@ -1,5 +1,5 @@
 ---
-title: __int8, __int16, __int32, __int64 | Microsoft Docs
+title: __int8, __int16, __int32, __int64 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,31 +24,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8083d37d2526820ccd75104f9ee8a748eb5d33bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 409197ec99a8df9ad1999b20edd1537f10ced085
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943291"
 ---
 # <a name="int8-int16-int32-int64"></a>__int8, __int16, __int32, __int64
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Microsoft C/C++ bietet Unterstützung für ganzzahlige Typen mit angegebener Größe. Sie können die 8, 16, 32 oder 64-Bit-Ganzzahl-Variablen deklarieren, indem die **__int *** n* Typspezifizierer verwenden, wobei *n* ist 8, 16, 32 oder 64.  
+ Microsoft C/C++ bietet Unterstützung für ganzzahlige Typen mit angegebener Größe. 8, 16-, 32- oder 64-Bit-Ganzzahl-Variablen deklarieren Sie mithilfe der **__int *** n* Typspezifizierer verwenden, wobei *n* ist 8, 16, 32 oder 64.  
   
  Im folgenden Beispiel wird eine Variable für jeden dieser Typen von ganzen Zahlen mit angegebener Größe deklariert:  
   
-```  
+```cpp 
 __int8 nSmall;      // Declares 8-bit integer  
 __int16 nMedium;    // Declares 16-bit integer  
 __int32 nLarge;     // Declares 32-bit integer  
 __int64 nHuge;      // Declares 64-bit integer  
 ```  
   
- Die Typen `__int8`, `__int16` und `__int32` sind Synonyme für die ANSI-Typen, die die gleiche Größe aufweisen, und sind beim Schreiben von portablem Code nützlich, der sich plattformübergreifend identisch verhält. Die `__int8` -Datentyp ist mit dem Typ `char`, `__int16` ist mit dem Typ **kurze**, und `__int32` ist mit dem Typ `int`. Die `__int64` Typ wird mit dem Typ `long long`.  
+ Die Typen **__int8**, **__int16**, und **__int32** sind Synonyme für die ANSI-Typen mit der gleichen Größe, und eignen sich für das Schreiben von übertragbarem Code, der identisch verhält. auf mehreren Plattformen. Die **__int8** -Datentyp ist mit dem Typ **Char**, **__int16** ist mit dem Typ **kurze**, und **__int32**  ist mit dem Typ **Int**. Die **__int64** Typ ist mit dem Typ **long long**.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, dass ein __int*Xx* Parameter höhergestuft, `int`:  
+ Das folgende Beispiel zeigt, dass ein __int*Xx* Parameter wird höher gestuft werden, um **Int**:  
   
-```  
+```cpp 
 // sized_int_types.cpp  
   
 #include <stdio.h>  

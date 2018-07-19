@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385069"
 ---
 # <a name="root-class-cobject"></a>Stammklasse: CObject
 Die meisten Klassen in der Bibliothek der Microsoft Foundation Class (MFC) werden von einer einzigen Basisklasse auf der Stammebene der Hierarchie von Klassen abgeleitet. `CObject` bietet eine Reihe von nützliche Funktionen, die alle Klassen, die davon abgeleitet, mit sehr geringem Mehraufwand verbunden. Weitere Informationen zu `CObject` und seine Funktionen finden Sie unter [Verwenden von CObject](../mfc/using-cobject.md).  

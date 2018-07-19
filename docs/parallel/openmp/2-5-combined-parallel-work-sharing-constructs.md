@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689297"
 ---
 # <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 Kombinierte parallele Arbeitsteilungskonstrukte
 Kombinierte parallele Arbeitsteilungskonstrukte sind die Tastenkombinationen für die Angabe eines parallelen Bereichs, das nur eine Arbeit sharing-Konstrukt enthält. Die Semantik dieser Direktiven sind identisch mit der explizites Angeben einer **parallele** -Direktive gefolgt von einem single-Konstrukt, der auf der Arbeit Freigabe.  

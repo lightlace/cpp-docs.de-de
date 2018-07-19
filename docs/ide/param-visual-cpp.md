@@ -1,5 +1,5 @@
 ---
-title: '&lt;Param&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;param&gt; (Visual C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 01add77f68ac35b4c669391504461dd516b55d3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33325382"
 ---
-# <a name="ltparamgt-visual-c"></a>&lt;Param&gt; (Visual C++)
+# <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 Das \<param>-Tag sollte im Kommentar für eine Methodendeklaration verwendet werden, um einen der Methodenparameter zu beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,7 +42,7 @@ Das \<param>-Tag sollte im Kommentar für eine Methodendeklaration verwendet wer
  Eine Beschreibung für den Parameter  
   
 ## <a name="remarks"></a>Hinweise  
- Der Text für die \<Param > Tag wird in IntelliSense angezeigt werden die [Objektkatalog](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470), und in der Webbericht.  
+ Der Text für das \<param>-Tag wird in IntelliSense, dem [Objektkatalog](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470), und im Webbericht für Codekommentare angezeigt.  
   
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   

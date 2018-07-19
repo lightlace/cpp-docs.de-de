@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089713"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: Direktes Aufrufen von ODBC-API-Funktionen
 Die Datenbankklassen stellen eine einfachere Schnittstelle zu einer [Datenquelle](../../data/odbc/data-source-odbc.md) als ODBC verfügt. Daher werden die Klassen nicht alle ODBC-API kapseln. Für alle Funktionen, die die Fähigkeiten der Klassen verlassen hat, müssen Sie ODBC-API-Funktionen direkt aufrufen. Beispielsweise müssen Sie die ODBC-Katalogfunktionen aufrufen (**:: SQLColumns**, **:: SQLProcedures**, **:: SQLTables**, usw.) direkt.  

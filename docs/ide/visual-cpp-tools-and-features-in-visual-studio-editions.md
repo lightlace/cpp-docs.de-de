@@ -1,5 +1,5 @@
 ---
-title: Visual C++-Tools und Funktionen in Visual Studio-Editionen | Microsoft Docs
+title: Visual C++-Tools und -Features in Visual Studio-Editionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
@@ -17,12 +17,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33337248"
 ---
-# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual C++-Tools und Funktionen in Visual Studio-Editionen
+# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual C++-Tools und -Features in Visual Studio-Editionen
 
 Die folgenden Tabellen zeigen die Visual C++-Funktionen, die in Visual Studio verfügbar sind. Ein „X“ in einer Zelle gibt an, dass die Funktion verfügbar ist. Eine leere Zelle gibt an, dass die Funktion nicht verfügbar ist. Hinweise in Klammern geben an, dass eine Funktion eingeschränkt verfügbar ist.
 
@@ -65,10 +66,10 @@ Die folgenden Tabellen zeigen die Visual C++-Funktionen, die in Visual Studio ve
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |XAML-Vorlagen für UWP, Windows 8.1, Windows Phone 8.0|X||X|X|
 |Direct3D-App|X||X|X|
-|DLL (Universal Windows)|X||X|X|
-|Statische Bibliothek (Universal Windows)|X||X|X|
+|DLL (Universelles Windows)|X||X|X|
+|Statische Bibliothek (Universelles Windows)|X||X|X|
 |Komponente für Windows-Runtime|X||X|X|
-|Unit Test-App (universelle Windows)|X||X|X|
+|Komponententest-App (Universelles Windows)|X||X|X|
 |ATL-Projekt|||X|X|
 |Klassenbibliothek (CLR)||X|X|X|
 |CLR-Konsolenanwendung||X|X|X|
@@ -184,6 +185,6 @@ Die folgenden Tabellen zeigen die Visual C++-Funktionen, die in Visual Studio ve
 ## <a name="see-also"></a>Siehe auch
 
 [Installieren von Visual Studio](/visualstudio/install/install-visual-studio)<br/>
-[Was ist neu in Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
+[Neues in Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Visual C++-Projekttypen](../ide/visual-cpp-project-types.md)<br/>
 [SQL Server-Datentools](https://msdn.microsoft.com/library/hh272686)<br/>

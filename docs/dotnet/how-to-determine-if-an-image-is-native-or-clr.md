@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128224"
 ---
 # <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Gewusst wie: Ermitteln, ob ein Bild systemeigen oder CLR ist
 Eine Möglichkeit, um zu bestimmen, ob ein Image erstellt wurde, für die common Language Runtime ist die Verwendung **Dumpbin**[CLRHEADER](../build/reference/clrheader.md).  

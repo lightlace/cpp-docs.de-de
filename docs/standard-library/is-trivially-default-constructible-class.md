@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2bd65fa7145325fd4c5c2f1a2483851d0738b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aa7b831790804005f0649dbae0dbb98df5121106
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954733"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible-Klasse
 
@@ -35,21 +36,21 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn der `Ty` Typ eine Klasse ist, die einen trivialen Konstruktor aufweist; andernfalls „false“.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist eine Klasse, die einen trivialen Konstruktor aufweist; andernfalls ist Sie false.
 
-Einen Standardkonstruktor für eine Klasse `Ty` ist trivial, wenn:
+Einen Standardkonstruktor für eine Klasse *Ty* ist trivial wenn:
 
 - es ist eine implizit deklarierte Standardkonstruktor
 
-- die Klasse `Ty` hat keine virtuellen Funktionen
+- die Klasse *Ty* verfügt über keine virtuellen Funktionen
 
-- die Klasse `Ty` hat keine virtuellen Basen
+- die Klasse *Ty* hat keine virtuellen Basen
 
-- alle direkten Basisklassen der Klasse `Ty` weisen triviale Konstruktoren auf
+- alle direkten Basisklassen der Klasse *Ty* haben triviale Konstruktoren
 
 - die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Konstruktoren
 

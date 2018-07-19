@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420154"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl für Kompilierzeitkapselung (Modern C++)
 Die *"pimpl" Idiom* eine moderne C++-Technik, um die Kopplung verringert, und trennen Sie die Schnittstellen-Implementierung ausgeblendet wird. "Pimpl" ist die Kurzform für "Zeiger auf Implementierung." Sie können bereits mit dem Konzept vertraut sein, aber wissen, dass sie von anderen Namen an, wie sich zu mir Cat oder Compiler Firewall Idiom.  

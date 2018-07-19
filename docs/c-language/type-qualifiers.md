@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389984"
 ---
 # <a name="type-qualifiers"></a>Typqualifizierer
 Typqualifizierer verleihen einem Bezeichner eine von zwei Eigenschaften. Der Typqualifizierer **const** deklariert ein Objekt als nicht änderbar. Der Typqualifizierer `volatile` deklariert ein Element, bei dem eine Wertänderung von außerhalb des Programms, in dem es vorhanden ist, zulässig ist (z. B. durch einen gleichzeitig ausgeführten Thread).  

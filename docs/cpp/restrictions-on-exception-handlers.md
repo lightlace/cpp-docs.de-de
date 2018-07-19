@@ -1,5 +1,5 @@
 ---
-title: Einschränkungen bei Ereignishandlern | Microsoft Docs
+title: Einschränkungen bei Ereignishandlern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f739152b502a156dc62dfab279e5ad044cfff99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13971ede3aef6d223b1c631c4a28f8bf190e7174
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938782"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Einschränkungen bei Ereignishandlern
-Die Haupteinschränkung bei der Verwendung von Ausnahmehandlern im Code besteht darin, dass Sie keine `goto`-Anweisung verwenden können, um in einen `__try`-Anweisungsblock zu wechseln. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. Sie können aus einem `__try`-Anweisungsblock herausspringen und Ausnahmehandler nach Belieben schachteln.  
+Die haupteinschränkung bei Verwendung von ausnahmehandlern im Code ist, dass keine **Goto** gesprungen-Anweisung eine **__try** Anweisungsblock. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. Können Sie direkt von einem **__try** Anweisung blockieren und Ausnahmehandler schachteln, wie Sie auswählen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Schreiben eines Ausnahmehandlers](../cpp/writing-an-exception-handler.md)   

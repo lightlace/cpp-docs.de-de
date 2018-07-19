@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695758"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Erstellen von asynchronen Vorgängen in C++ für uwp-Apps
 Dieses Dokument beschreibt einige der wichtigsten Punkte zu bedenken, wenn Sie die Task-Klasse verwenden, um Windows-ThreadPool-basierte asynchrone Vorgänge in einer app (Universelle Windows Runtime) zu erzeugen.  

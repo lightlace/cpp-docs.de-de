@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381237"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Verwenden einer Dialogvorlage im Speicher
 Anstatt die Methoden, die im angegebenen der [Dialogfeld Erstellung Tabelle](../mfc/creating-a-dialog-class-with-code-wizards.md), können Sie beide Arten der im Dialogfeld aus einer Dialogvorlage im Speicher indirekt erstellen. Weitere Informationen finden Sie in der Klasse [CDialog](../mfc/reference/cdialog-class.md) in der *MFC-Referenz*.  

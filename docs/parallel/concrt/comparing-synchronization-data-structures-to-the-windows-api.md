@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687373"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Vergleich der Synchronisierungsdatenstrukturen mit der Windows-API
 In diesem Thema wird das Verhalten der von der Concurrency Runtime bereitgestellten Synchronisierungsdatenstrukturen mit den von der Windows-API bereitgestellten Synchronisierungsdatenstrukturen verglichen.  

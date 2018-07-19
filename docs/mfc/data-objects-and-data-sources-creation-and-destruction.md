@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90143b919fde02a95df81d41845d8ecc671ced0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931875"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Datenobjekte und Datenquellen: Erstellen und Zerstören
 Wie im Artikel erläutert [Datenobjekte und Datenquellen (OLE)](../mfc/data-objects-and-data-sources-ole.md), Datenobjekte und Datenquellen darstellen beide Seiten der Datenübertragung. In diesem Artikel wird erläutert, wann diese Objekte und Quellen erstellt und zerstört werden, um die Datenübertragungen ordnungsgemäß durchführen zu können, einschließlich:  
@@ -71,14 +72,14 @@ Wie im Artikel erläutert [Datenobjekte und Datenquellen (OLE)](../mfc/data-obje
   
 5.  Die Anwendung ruft die `SetClipboard`-Memberfunktion auf (bzw. die `DoDragDrop`-Memberfunktion, wenn es sich um einen Drag-and-Drop-Vorgang handelt), die zu dem in Schritt 3 erstellten Objekt gehört.  
   
-6.  Ist dies ein **Ausschneiden** Vorgang oder `DoDragDrop` gibt `DROPEFFECT_MOVE`, die in Schritt 1 ausgewählten Daten aus dem Dokument gelöscht werden.  
+6.  Ist dies ein **Ausschneiden** Vorgang oder `DoDragDrop` gibt **den Wert DROPEFFECT_MOVE**, die in Schritt 1 ausgewählten Daten aus dem Dokument gelöscht werden.  
   
  Dieses Szenario wird von den MFC-OLE-Beispielen implementiert [OCLIENT](../visual-cpp-samples.md) und [HIERSVR](../visual-cpp-samples.md). Suchen Sie in der Quelle nach der von `CView` abgeleiteten Klasse der einzelnen Anwendungen, außer nach den Funktionen `GetClipboardData` und `OnGetClipboardData`. Diese beiden Funktionen befinden sich in den Implementierungen der von `COleClientItem` oder `COleServerItem` abgeleiteten Klassen. Diese Programme sind ein gutes Beispiel dafür, wie diese Konzepte implementiert werden können.  
   
  Eine andere Situation, in der Sie möglicherweise ein `COleDataSource`-Objekt erstellen möchten, besteht dann, wenn Sie das Standardverhalten eines Drag-and-Drop-Vorgangs ändern. Weitere Informationen finden Sie unter der [Drag & Drop: Anpassen von](../mfc/drag-and-drop-customizing.md) Artikel.  
   
 ##  <a name="_core_destroying_data_sources"></a> Zerstören von Datenquellen  
- Datenquellen müssen von der Anwendung zerstört werden, die derzeit für sie verantwortlich ist. In Situationen, in dem Sie die Datenquelle an OLE übergeben, z. B. Aufrufen [Oledatasource](../mfc/reference/coledatasource-class.md#dodragdrop), müssen Sie rufen **pDataSrc -> InternalRelease**. Zum Beispiel:  
+ Datenquellen müssen von der Anwendung zerstört werden, die derzeit für sie verantwortlich ist. In Situationen, in dem Sie die Datenquelle an OLE übergeben, z. B. Aufrufen [Oledatasource](../mfc/reference/coledatasource-class.md#dodragdrop), müssen Sie rufen `pDataSrc->InternalRelease`. Zum Beispiel:  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   

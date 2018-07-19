@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880568"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Füllen von begrenzten Bereichen eines Bilds mit einer Farbe (Bildbearbeitung für Symbole)
 Grafik-Editor bietet die **füllen** Tool zum Füllen alle Bildbereiche mit der aktuellen Zeichnung oder die aktuelle Hintergrundfarbe.  

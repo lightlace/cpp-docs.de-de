@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379509"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Tipps zum Verbessern von zeitkritischem Code
 Für das Schreiben von schnellem Code müssen Sie alle Aspekte Ihrer Anwendung und der Interaktion mit dem System verstehen. In den folgenden Themen finden Sie Alternativen zu einigen der offensichtlicheren Codierungstechniken, damit Sie sicherstellen können, dass die zeitkritischen Teile Ihres Codes eine zufriedenstellende Leistung erbringen.  

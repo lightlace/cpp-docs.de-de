@@ -1,5 +1,5 @@
 ---
-title: CREATESTRUCT-Struktur | Microsoft Docs
+title: CREATESTRUCT-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e51aed1eb7f74c721a5a4da092f205a2492ba5f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6036490b21ccbd86dfed56ea90226cbb2db8d596
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848469"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT-Struktur
 Die `CREATESTRUCT` Struktur definiert die Initialisierungsparameter an die Fensterprozedur einer Anwendung übergeben.  
@@ -45,41 +46,41 @@ typedef struct tagCREATESTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `lpCreateParams`  
- Zeigt auf Daten verwendet werden, um das Fenster zu erstellen.  
+ *lpCreateParams*  
+ Verweist auf Daten, die zum Erstellen des Fensters verwendet werden.  
   
- `hInstance`  
- Identifiziert das Modul Instanzhandle des Moduls, das das neue Fenster besitzt.  
+ *hInstance*  
+ Gibt das Modul Instanzhandle des Moduls, das das neue Fenster besitzt.  
   
- `hMenu`  
- Identifiziert das Menü im neuen Fenster verwendet werden. Wenn ein untergeordnetes Fenster enthält die Integer-ID.  
+ *hMenu*  
+ Identifiziert das Menü im neuen Fenster verwendet werden. Wenn ein untergeordnetes Fenster, enthält die ganzzahlige ID  
   
- `hwndParent`  
- Identifiziert das Fenster, das das neue Fenster besitzt. Bei diesem Member handelt **NULL** , wenn das neue Fenster der obersten Ebene ist.  
+ *hwndParent*  
+ Gibt das Fenster, das das neue Fenster besitzt. Dieser Member ist NULL, wenn das neue Fenster der obersten Ebene ist.  
   
- `cy`  
- Gibt die Höhe des neuen Fensters an.  
+ *CY*  
+ Gibt die Höhe des neuen Fensters.  
   
- `cx`  
- Gibt die Breite des neuen Fensters an.  
+ *CX*  
+ Gibt die Breite des neuen Fensters.  
   
- `y`  
- Gibt die y-Koordinate der oberen linken Ecke des neuen Fensters an. Koordinaten sind relativ zum übergeordneten Fensters angezeigt, wenn das neue Fenster ein untergeordnetes Fenster ist; Andernfalls sind Koordinaten relativ zum Bildschirmursprung ein.  
+ *y*  
+ Gibt die y-Koordinate der oberen linken Ecke des neuen Fensters an. Koordinaten sind relativ zum übergeordneten Fenster, wenn das neue Fenster eines untergeordneten Fensters ist; Andernfalls sind Koordinaten relativ zum Bildschirmursprung ein.  
   
- `x`  
- Gibt die X-Koordinate der oberen linken Ecke des neuen Fensters an. Koordinaten sind relativ zum übergeordneten Fensters angezeigt, wenn das neue Fenster ein untergeordnetes Fenster ist; Andernfalls sind Koordinaten relativ zum Bildschirmursprung ein.  
+ *w*  
+ Gibt die X-Koordinate der oberen linken Ecke des neuen Fensters an. Koordinaten sind relativ zum übergeordneten Fenster, wenn das neue Fenster eines untergeordneten Fensters ist; Andernfalls sind Koordinaten relativ zum Bildschirmursprung ein.  
   
- `style`  
- Gibt an, des neuen Fensters [Stil](../../mfc/reference/styles-used-by-mfc.md).  
+ *Stil*  
+ Gibt an, die im neuen Fensters [Stil](../../mfc/reference/styles-used-by-mfc.md).  
   
- `lpszName`  
- Zeigt auf eine auf Null endende Zeichenfolge, die das neue Fenster Namen angibt.  
+ *Wert*  
+ Verweist auf eine auf Null endende Zeichenfolge, die das neue Fenster Namen angibt.  
   
- `lpszClass`  
- Verweist auf eine auf Null endende Zeichenfolge, die das neue Fenster Windows-Klassennamen angibt (eine [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur; Weitere Informationen finden Sie im Windows SDK).  
+ *lpszClass*  
+ Verweist auf eine auf Null endende Zeichenfolge, die Windows-Klassennamen des neuen Fensters angibt (eine [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Struktur; Weitere Informationen finden Sie im Windows SDK).  
   
- `dwExStyle`  
- Gibt an, die [erweiterter Stil](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) für das neue Fenster.  
+ *dwExStyle*  
+ Gibt an, die [erweiterten Stil](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) für das neue Fenster.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** winuser.h  

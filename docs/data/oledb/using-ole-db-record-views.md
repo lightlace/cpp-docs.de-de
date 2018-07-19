@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111272"
 ---
 # <a name="using-ole-db-record-views"></a>Verwenden von OLE DB-Datensatzansichten
 Wenn Sie OLE DB-Rowset-Daten in einer MFC-Anwendung anzeigen möchten, verwenden Sie die MFC-Klasse [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Ein Datensatzansichts-Objekt erstellt, von `COleDBRecordView` ermöglicht es Ihnen, die Datenbankdatensätze in Steuerelementen mit MFC anzuzeigen. Die Datensatzansicht ist ein Dialogfeld Formularansicht können Sie direkt zu einem OLE DB-Rowset-Objekt, das aus erstellten verbunden die `CRowset` Vorlagenklasse. Ein Handle für das Rowsetobjekt, das Abrufen ist einfach:  

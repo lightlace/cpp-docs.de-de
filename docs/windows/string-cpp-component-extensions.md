@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889240"
 ---
 # <a name="string--c-component-extensions"></a>Zeichenfolge (Komponentenerweiterungen für C++)
 Der Visual C++-Compiler unterstützt *Zeichenfolgen*, sind Objekte, die Text als eine Folge von Zeichen darstellen. Visual C++ unterstützt Zeichenfolgenvariablen, deren Wert implizit ist, und Literale, deren Wert eine explizite Zeichenfolge in Anführungszeichen ist.  

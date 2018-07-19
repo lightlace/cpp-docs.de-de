@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055169"
 ---
 # <a name="invoke"></a>INVOKE
 Die Prozedur aufruft, bei der Adresse, die vom *Ausdruck*, wobei die Argumente übergeben werden, auf dem Stapel oder in Registern gemäß dem standard Aufrufkonventionen des Typs Language.  

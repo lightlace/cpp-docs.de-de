@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385598"
 ---
 # <a name="user-interface-objects-and-command-ids"></a>Benutzeroberflächenobjekte und Befehls-IDs
 Menüelemente, Symbolleistenschaltflächen und Tastenkombinationen sind "Benutzeroberflächenobjekten" kann beim Generieren von Befehlen. Jedes dieser Objekte der Benutzeroberfläche verfügt über eine ID. Sie ordnen ein Benutzeroberflächen-Objekt mit einem Befehl durch Zuweisen der gleichen ID des Objekts und der Befehl. Wie in beschrieben [Nachrichten](../mfc/messages.md), Befehle als spezielle Nachrichten implementiert werden. Die Abbildung "Befehle im Framework" unten zeigt, wie das Framework Befehle verwaltet. Wenn ein Objekt der Benutzeroberfläche generiert einen Befehl wie z. B. `ID_EDIT_CLEAR_ALL`, eines der Objekte in der Anwendung behandelt den Befehl – in der folgenden Abbildung dargestellt, des Document-Objekts `OnEditClearAll` Funktion wird über die Dokumentstruktur Nachricht aufgerufen.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342721"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>Erstellen eines nicht modalen Eigenschaftenblatts
 Normalerweise werden der Eigenschaftenblätter, die Sie erstellen gebunden sein. Wenn Sie ein modales Eigenschaftenblatt verwenden, muss der Benutzer Eigenschaftenblatt schließen, bevor mit einem beliebigen anderen Teil der Anwendung. Dieser Artikel beschreibt die Methoden beschrieben, die Sie verwenden können, um eines nicht modalen Eigenschaftenblatts zu erstellen, das dem Benutzer ermöglicht, das Eigenschaftenfenster geöffnet bleibt, andere Teile der Anwendung.  

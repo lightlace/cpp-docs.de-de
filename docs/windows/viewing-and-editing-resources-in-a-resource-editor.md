@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891817"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Anzeigen und Bearbeiten von Ressourcen in einem Ressourcen-Editor
 Jeder Ressource verfügt über einen Ressourcen-Editor für diesen Ressourcentyp spezifisch. Sie können neu anordnen, Größe, Steuerelemente und Features hinzufügen oder ändern andernfalls Aspekte einer Ressource mit dem Editor zugeordnet. Sie können auch in eine Ressource bearbeiten [Textformat](../windows/how-to-open-a-resource-script-file-in-text-format.md) und [Binärformat](../windows/opening-a-resource-for-binary-editing.md).  

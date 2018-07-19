@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286083"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>Compilerwarnung (Stufe 1) C4383
 'Instanzendereferenzierungsoperator': die Bedeutung der Dereferenzieren eines Handles kann sich ändern, wenn ein benutzerdefinierte "Operator" Operator vorhanden ist. Schreiben Sie den Operator als eine statische Funktion der Operand explizit sein.  

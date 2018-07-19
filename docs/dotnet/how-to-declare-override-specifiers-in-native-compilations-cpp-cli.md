@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130398"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Gewusst wie: Deklarieren von Überschreibungsbezeichnern in nativen Kompilierungen (C++/CLI)
 [versiegelte](../windows/sealed-cpp-component-extensions.md), [abstrakte](../windows/abstract-cpp-component-extensions.md), und [überschreiben](../windows/override-cpp-component-extensions.md) stehen zur Verfügung, in denen keine Kompilierungen **/Zw** oder ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md).  

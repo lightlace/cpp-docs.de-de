@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381676"
 ---
 # <a name="what-does-it-cost-me-to-derive-a-class-from-cobject"></a>Welcher Overhead entsteht beim Ableiten einer Klasse von CObject?
 Der Aufwand beim Ableiten einer Klasse [CObject](../mfc/reference/cobject-class.md) ist minimal. Die abgeleitete Klasse erbt nur vier virtuelle Funktionen und eine einzelne [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) Objekt.  

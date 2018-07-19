@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355386"
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Vorteile und Nachteile der Methode zum Verknüpfen mit der CRT verwendet
 Das Projekt kann statisch oder dynamisch mit der CRT verknüpfen. In der folgenden Tabelle werden die vor- und Nachteile bei der Auswahl der zu verwendenden Methode.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881730"
 ---
 # <a name="public-c-attributes"></a>public (C++-Attribute)
 Stellt sicher, dass eine Typdefinition in der Typbibliothek aufgenommen werden, auch wenn es nicht von innerhalb der IDL-Datei verwiesen wird.  

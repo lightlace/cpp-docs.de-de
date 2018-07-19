@@ -1,5 +1,5 @@
 ---
-title: Enumerationen (C++) | Microsoft Docs
+title: Enumerationen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c02a7670456dff9c7e5a3dfd1583892d918d268
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75344e8fef933b493177f812b06edd3c187046f6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943927"
 ---
 # <a name="enumerations-c"></a>Enumerationen (C++)
 Eine Enumeration ist ein benutzerdefinierter Typ, der aus einem Satz von benannten ganzzahligen Konstanten besteht, die als Enumeratoren bezeichnet werden.  
   
 > [!NOTE]
->  Dieser Artikel umfasst den `enum`-Typ der ISO-Standardsprache C++ und den bewerteten (oder stark typisierten) `enum class`-Typ, der in C++11 eingeführt wird. Informationen zu den `public enum class` oder `private enum class` Typen in C + c++ / CLI und c++ / CX, finden Sie unter [Enumerationsklasse](../windows/enum-class-cpp-component-extensions.md).  
+>  Dieser Artikel behandelt die ISO-Standardsprache C++ **Enum** Typ und die Bereichsbezogene (oder stark typisierten) **Enumerationsklasse** Typ, der in C ++ 11 eingeführt wird. Informationen zu den **öffentliche Enumerationsklasse** oder **private Enumerationsklasse** Typen in C++ / CLI und C++ / CX, finden Sie unter [Enumerationsklasse](../windows/enum-class-cpp-component-extensions.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +46,7 @@ enum [class|struct]
 {enum-list};  
 ```  
   
-```  
+```cpp 
 // Forward declaration of enumerations  (C++11):  
 enum A : int; // non-scoped enum must have type specified
 enum class B; // scoped enum defaults to int but ...
@@ -53,17 +54,17 @@ enum class C : short;  // ... may have any integral underlying type
 ```  
   
 ## <a name="parameters"></a>Parameter  
- `identifier`  
+ *identifier*  
  Der Typname, der für die Enumeration angegeben wurde.  
   
- `type`  
+ *Typ*  
  Der zugrunde liegende Typ der Enumeratoren. Alle Enumeratoren weisen den gleichen zugrunde liegenden Typ auf. Kann ein beliebiger ganzzahliger Typ sein.  
   
- `enum-list`  
- Eine durch Trennzeichen getrennte Liste mit Enumeratoren in der Enumeration. Jeder Enumerator oder Variablenname im Bereich muss eindeutig sein. Allerdings können die Werte doppelt vorkommen. In einer Enumeration ohne Bereichseinschränkung ist der Gültigkeitsbereich der umschließende Bereich. In einer bereichsbezogenen Enumeration ist der Bereich selbst die `enum-list`.  In einer bereichsbezogenen Enumeration kann die Liste der wirksamen einen neuen integralen Typ definiert leer sein.
+ *Enum-Liste*  
+ Eine durch Trennzeichen getrennte Liste mit Enumeratoren in der Enumeration. Jeder Enumerator oder Variablenname im Bereich muss eindeutig sein. Allerdings können die Werte doppelt vorkommen. In einer Enumeration ohne bereichseinschränkung ist der Gültigkeitsbereich der umschließende Bereich; in einer bereichsbezogenen Enumeration ist der Bereich ist die *Enumeration-List* selbst.  In einer bereichsbezogenen Enumeration ist kann die Liste leer sein aktiviert einen neuen integralen Typ definiert.
   
- `class`  
- Mit diesem Schlüsselwort in der Deklaration geben Sie an, dass für die Enumeration eine Bereichsbeschränkung gilt, und ein `identifier` muss angegeben werden. Sie können auch das `struct`-Schlüsselwort anstelle von `class` verwenden, da beide in diesem Kontext gleichwertig sind.  
+ *class*  
+ Mithilfe dieses Schlüsselwort in der Deklaration können Sie angeben, die Enumeration eine bereichsbeschränkung gilt, und ein *Bezeichner* muss angegeben werden. Sie können auch die **Struktur** -Schlüsselwort anstelle von **Klasse**, wie sie in diesem Kontext semantisch gleichwertig sind.  
   
 ## <a name="enumerator-scope"></a>Enumerator-Bereich  
  Eine Enumeration stellt Kontext zum Beschreiben eines Bereichs von Werten bereit, die als benannte Konstanten dargestellt und auch als Enumeratoren bezeichnet werden. In den ursprünglichen C- und C++-Enumerationstypen sind die nicht qualifizierten Enumeratoren überall in dem Bereich sichtbar, in dem die Enumeration deklariert wird. In bereichsbezogenen Enumerationen muss der Enumeratorname durch den Enumerationstypnamen qualifiziert werden. Das folgende Beispiel veranschaulicht diesen grundlegenden Unterschied zwischen den beiden Arten von Enumerationen:  
@@ -112,7 +113,7 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
   
  ## <a name="casting-rules"></a>Umwandlungsregeln  
   
- Enumerationskonstanten ohne Bereichseinschränkung können implizit in `int` konvertiert werden, aber ein `int` kann niemals implizit in einen Enumerationswert konvertiert werden. Das folgende Beispiel veranschaulicht, was geschieht, wenn Sie versuchen, `hand` einen Wert zuzuweisen, der nicht `Suit` ist:  
+ Enumerationskonstanten ohne bereichseinschränkung können implizit konvertiert werden, um **Int**, aber ein **Int** kann niemals implizit in einen Enumerationswert. Das folgende Beispiel veranschaulicht, was geschieht, wenn Sie versuchen, `hand` einen Wert zuzuweisen, der nicht `Suit` ist:  
   
 ```cpp  
 int account_num = 135692;  
@@ -121,7 +122,7 @@ hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
   
 ```  
   
- Eine Umwandlung ist erforderlich, um `int` in einen bereichsbezogenen Enumerator oder einen Enumerator ohne Bereichseinschränkung zu konvertieren. Sie können jedoch einen Enumerator ohne Bereichseinschränkung auch ohne Umwandlung auf einen Ganzzahlwert heraufstufen.  
+ Eine Umwandlung ist erforderlich, um das Konvertieren einer **Int** auf eine Bereichsbezogene oder ohne bereichseinschränkung Enumerator. Sie können jedoch einen Enumerator ohne Bereichseinschränkung auch ohne Umwandlung auf einen Ganzzahlwert heraufstufen.  
   
 ```cpp  
 int account_num = Hearts; //OK if Hearts is in a unscoped enum  
@@ -152,14 +153,14 @@ namespace ScopedEnumConversions
  Beachten Sie, dass die Zeile `hand = account_num;` noch den Fehler verursacht, der bei Enumerationen ohne Bereichsbeschränkung auftritt, wie oben beschrieben. Sie ist mit einer expliziten Umwandlung zulässig. Bei bereichsbezogenen Enumerationen ist der Versuch einer Konvertierung in der nächsten Anweisung, `account_num = Suit::Hearts;`, nicht mehr ohne eine explizite Umwandlung zulässig. 
 
 ## <a name="enums-with-no-enumerators"></a>Enumerationen mit keine Enumeratoren
-**Visual Studio 2017 15,3 und höher** (verfügbar mit [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): durch die Definition einer Enumeration (regulären oder Bereichsbezogene) mit einem expliziten zugrunde liegenden Typ und keine Enumeratoren, Sie können faktisch einführen einer neuen integrale eingeben, verfügt über keine implizite Konvertierung in einen anderen Typ aus. Mithilfe dieses Typs statt dessen integrierte zugrunde liegendem Typ kann potenzielle geringfügige Fehler hervorgerufen wurden durch das unbeabsichtigten implizite Konvertierungen ausgelagert wird.  
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): durch Definieren einer Enumeration (reguläre oder Bereichsbezogene) mit einem expliziten zugrunde liegenden Typ und kein Enumeratoren, Sie können in Kraft einführen einer neuen integraler Typ, der verfügt über keine implizite Konvertierung in einen anderen Typ. Dieser Typ wird als integrierte zugrunde liegenden Typs verwenden, können Sie das Fehlerpotenzial feine zurückzuführen, dass unbeabsichtigte impliziten Konvertierungen vermeiden.  
 
 
 ```cpp
 enum class byte : unsigned char { };
 ```
 
-Der neue Typ ist eine genaue Kopie des zugrunde liegenden Typs und hat daher die gleiche Aufrufkonvention, was bedeutet, dass sie über ABIs ohne Leistungseinbußen verwendet werden kann. Variablen des Typs initialisiert werden, mithilfe von direkten-Listen-Initialisierung ist keine Typumwandlung erforderlich. Das folgende Beispiel zeigt, wie Enumerationen mit keine Enumeratoren in verschiedenen Kontexten initialisieren:
+Der neue Typ ist eine exakte Kopie des zugrunde liegenden Typs und hat daher dieselbe Aufrufkonvention, was bedeutet, dass sie über ABIs ohne Leistungseinbußen verwendet werden kann. Variablen des Typs initialisiert werden, mithilfe der Direct-List-Initialisierung ist keine Umwandlung erforderlich. Im folgende Beispiel wird veranschaulicht, wie Enumerationen mit keine Enumeratoren in verschiedenen Kontexten initialisiert wird:
 
 ```cpp
 enum class byte : unsigned char { };

@@ -1,5 +1,5 @@
 ---
-title: Spezialisierung einer Klassenvorlage (C++) | Microsoft Docs
+title: Der Vorlagenspezialisierung (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,13 +14,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cc25bab72532e1bfb425646d76b69aaf07f5d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edef104cafc4b56b5f785537db1c836da4e427dc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941170"
 ---
-# <a name="template-specialization-c"></a>Spezialisierung einer Klassenvorlage (C++)
+# <a name="template-specialization-c"></a>Der Vorlagenspezialisierung (C++)
 
 Klassenvorlagen können teilweise spezialisiert werden, und die resultierende Klasse ist immer noch eine Vorlage. Durch die teilweise Spezialisierung kann Vorlagencode für bestimmte Typen teilweise angepasst werden, in bestimmten Situationen wie:  
   
@@ -79,7 +80,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>Beispiel
 
- Wenn Sie eine vorlagenauflistungsklasse verfügen, die jeden Typ akzeptiert **T**, können Sie eine teilweise Spezialisierung, der einen Zeigertyp akzeptiert erstellen ** T ***. Der folgende Code zeigt die Auflistung von Klassenvorlagen `Bag` und eine teilweise Spezialisierung für Zeigertypen, wobei die Auflistung die Zeigertypen dereferenziert, bevor sie diese ins Array kopiert. Die Auflistung speichert dann die Werte, auf die gezeigt wird. Bei der ursprünglichen Vorlage wären nur die Zeiger selbst in der Auflistung gespeichert worden, sodass sich Löschungen und Änderungen auf die Daten auswirken können. In dieser speziellen Zeigerversion der Auflistung wird ein Code zur Suche eines NULL-Zeigers in der `add`-Methode hinzugefügt.  
+ Wenn Sie über eine vorlagenauflistungsklasse verfügen, die einen beliebigen Typ akzeptiert `T`, können Sie eine teilweise Spezialisierung, die jeden beliebigen Zeigertyp akzeptiert erstellen `T*`. Der folgende Code zeigt die Auflistung von Klassenvorlagen `Bag` und eine teilweise Spezialisierung für Zeigertypen, wobei die Auflistung die Zeigertypen dereferenziert, bevor sie diese ins Array kopiert. Die Auflistung speichert dann die Werte, auf die gezeigt wird. Bei der ursprünglichen Vorlage wären nur die Zeiger selbst in der Auflistung gespeichert worden, sodass sich Löschungen und Änderungen auf die Daten auswirken können. In dieser speziellen Zeigerversion der Auflistung wird ein Code zur Suche eines NULL-Zeigers in der `add`-Methode hinzugefügt.  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  
@@ -191,7 +192,7 @@ Null pointer!
   
 ## <a name="example"></a>Beispiel
 
- Im folgenden Beispiel wird eine Vorlagenklasse definiert, die Paare von beliebigen zwei Typen nimmt und dann eine teilweise Spezialisierung dieser spezialisierten Vorlagenklasse definiert, sodass einer der Typen `int` ist. Die Spezialisierung definiert eine zusätzliche Sortiermethode, die eine einfache Bubble Sort auf Grundlage der Ganzzahl implementiert.  
+ Das folgende Beispiel definiert eine Vorlage Klasse, die Paare von beliebigen zwei Typen nimmt und definiert dann eine teilweise Spezialisierung der Vorlagenklasse spezialisiert, sodass einer der Typen **Int**. Die Spezialisierung definiert eine zusätzliche Sortiermethode, die eine einfache Bubble Sort auf Grundlage der Ganzzahl implementiert.  
   
 ```cpp
 // partial_specialization_of_class_templates3.cpp  

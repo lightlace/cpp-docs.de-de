@@ -1,5 +1,5 @@
 ---
-title: Multiplikationsoperatoren und der Modulus-Operator | Microsoft Docs
+title: Multiplikationsoperatoren und der Modulus-Operator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 129dce32dfe0ba50a07b71d2fcfaf72bdade090e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de826b1ac86656b9225560bfd9003ce0b03c1111
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943863"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Multiplikationsoperatoren und der Modulus-Operator
 ## <a name="syntax"></a>Syntax  
@@ -51,17 +52,17 @@ expression % expression
   
  Diese binären Operatoren weisen eine Assoziativität von links nach rechts auf.  
   
- Die Multiplikationsoperatoren akzeptieren Operanden arithmetischer Typen. Der Moduloperator (`%`) verlangt, dass die Operanden ganzzahlig sind. (Um den Rest einer Gleitkommadivision abzurufen, verwenden Sie die Funktion zur Laufzeit [Fmod](../c-runtime-library/reference/fmod-fmodf.md).) Die Konvertierungen finden Sie im [Standardkonvertierungen](standard-conversions.md) sind auf die Operanden angewendet, und das Ergebnis entspricht dem konvertierten Typ.  
+ Die Multiplikationsoperatoren akzeptieren Operanden arithmetischer Typen. Der Moduloperator (`%`) verlangt, dass die Operanden ganzzahlig sind. (Um den Rest einer Gleitkommadivision abzurufen, verwenden Sie die Funktion zur Laufzeit [Fmod](../c-runtime-library/reference/fmod-fmodf.md).) Die Konvertierungen finden Sie im [Standardkonvertierungen](standard-conversions.md) sind auf die Operanden angewendet, und das Ergebnis ist, der den konvertierten Typ.  
   
  Der Multiplikationsoperator ergibt das Ergebnis der Multiplikation des ersten Operanden mit dem zweiten.  
   
  Der Divisionsoperator ergibt das Ergebnis der Division des ersten Operanden durch den zweiten.  
   
- Der Modulo-Operator liefert den Rest des folgenden Ausdrucks, in denen *e1* ist der erste Operand und *e2* ist die zweite: *e1* -(*e1*  /  *e2*) \* *e2*, dabei sind beide Operanden Ganzzahltypen.  
+ Der Modulo-Operator liefert den Rest durch den folgenden Ausdruck, in denen *e1* ist der erste Operand und *e2* ist die zweite: *e1* -(*e1*  /  *e2*) \* *e2*, wobei beide Operanden von ganzzahligen Typen sind.  
   
  Division durch 0 (null) entweder in einer Division oder in einem Modulo-Ausdruck ist nicht definiert und verursacht einen Laufzeitfehler. Daher generieren die folgenden Begriffe nicht definierte, fehlerhafte Resultate:  
   
-```  
+```cpp 
 i % 0  
 f / 0.0  
 ```  
@@ -77,12 +78,12 @@ f / 0.0
 **Ende Microsoft-spezifisch**  
  Wenn die berechnete Division von zwei ganzen Zahlen ungenau ist und nur ein Operand negativ ist, ist das Ergebnis der Betrags (Wert ohne Vorzeichen) der größten Ganzzahl, die kleiner ist als der exakte Wert, den die Division ergeben würde. Angenommen, der berechnete Wert des-11 / 3 ist-3.666666666. Das Ergebnis dieser ganzzahligen Division ist-3.  
   
- Die Beziehung zwischen den Multiplikationsoperatoren ist gegeben, durch die Identität (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
+ Die Beziehung zwischen den Multiplikationsoperatoren ist von der Identität angegeben (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Programm demonstriert die multiplikativen Operatoren. Beachten Sie, dass jeder Operand von `10 / 3` muss explizit in Typ umgewandelt werden `float` abgeschnitten, sodass beide Operanden vom Typ sind `float` vor Division.  
+ Das folgende Programm demonstriert die multiplikativen Operatoren. Beachten Sie, dass jeder Operand von `10 / 3` muss explizit in Typ umgewandelt werden **"float"** um das Abschneiden vermeiden, sodass beide Operanden vom Typ sind **"float"** vor Division.  
   
-```  
+```cpp 
 // expre_Multiplicative_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -98,5 +99,5 @@ int main() {
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke mit binären Operatoren](../cpp/expressions-with-binary-operators.md)   
- [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++-Built-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C-Multiplikationsoperatoren](../c-language/c-multiplicative-operators.md)

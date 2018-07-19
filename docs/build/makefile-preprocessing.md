@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368225"
 ---
 # <a name="makefile-preprocessing"></a>Präprozessorlauf eines Makefiles
 Sie können die NMAKE-Sitzung mithilfe von Präprozessordirektiven und Ausdrücke steuern. Vorverarbeiten von Anweisungen kann im Makefile oder in Tools.ini platziert werden. Using-Direktiven, können Sie bedingt Makefile zu verarbeiten, Fehlermeldungen anzeigen anderer Makefiles enthalten, heben Sie die Definition eines Makros und aktivieren oder deaktivieren Sie bestimmte Optionen.  

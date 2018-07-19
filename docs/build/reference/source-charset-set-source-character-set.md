@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379223"
 ---
 # <a name="source-charset-set-source-character-set"></a>/Source-CharSet (Festlegen der Quell-Zeichensatz)
 Ermöglicht die Angabe den quellzeichensatz für die ausführbare Datei.  

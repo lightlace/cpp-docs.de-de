@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5445379597c4fefcd657303a05c33b6509d54d2e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 53f4deb0bfe9439011f75cd22d0d52b74dae9c1f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569897"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959724"
 ---
 # <a name="steadyclock-struct"></a>steady_clock-Struktur
 
@@ -33,19 +33,19 @@ struct steady_clock;
 
 ## <a name="remarks"></a>Hinweise
 
-Unter Windows `steady_clock` dient als Wrapper für die `QueryPerformanceCounter` Funktion.
+Auf Windows `steady_clock` dient als Wrapper für die `QueryPerformanceCounter` Funktion.
 
 Eine Uhr ist *monoton*, wenn der von einem ersten Aufruf von `now` zurückgegebene Wert immer kleiner oder gleich dem Wert ist, der über einen nachfolgenden Aufruf von `now` zurückgegeben wird. Eine Uhr ist *gleichmäßig*, wenn sie *monoton* und die Zeit zwischen den Teilstrichen konstant ist.
 
-`high_resolution_clock` ist eine Typedef für `steady_clock`.
+`high_resolution_clock` eine typedef für `steady_clock`.
 
 ### <a name="public-typedefs"></a>Öffentliche typedefs
 
 |name|Beschreibung|
 |----------|-----------------|
-|`steady_clock::duration`|Ein Synonym für `nanoseconds`in definierte \<Chrono >.|
-|`steady_clock::period`|Ein Synonym für `nano`in definierte \<Verhältnis >.|
-|`steady_clock::rep`|Ein Synonym für **lange** **lange**, der Typ, der verwendet wird, um die Anzahl von Zeiteinheiten in der enthaltenden Instanziierung von darstellen `duration`.|
+|`steady_clock::duration`|Ein Synonym für `nanoseconds`, definiert in \<Chrono >.|
+|`steady_clock::period`|Ein Synonym für `nano`, definiert in \<Ratio >.|
+|`steady_clock::rep`|Ein Synonym für **lange** **lange**, der Typ, der verwendet wird, zum Darstellen der Anzahl von Zeiteinheiten in der enthaltenden Instanziierung von `duration`.|
 |`steady_clock::time_point`|Ein Synonym für `chrono::time_point<steady_clock>`.|
 
 ## <a name="public-functions"></a>Öffentliche Funktionen
@@ -58,7 +58,7 @@ Eine Uhr ist *monoton*, wenn der von einem ersten Aufruf von `now` zurückgegebe
 
 |name|Beschreibung|
 |----------|-----------------|
-|`steady_clock::is_steady`|Ist `true`. Eine `steady_clock` ist *gleichmäßig*.|
+|`steady_clock::is_steady`|Enthält **"true"**. Eine `steady_clock` ist *gleichmäßig*.|
 
 ## <a name="requirements"></a>Anforderungen
 

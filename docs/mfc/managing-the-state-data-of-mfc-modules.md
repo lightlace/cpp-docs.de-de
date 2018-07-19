@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d87b2a601e6e25d61de6ca6ad639ac6a62861ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5c2bced4f7f04cf75c72e68db0f99e0f89d2566
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930515"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Verwalten der Statusdaten von MFC-Modulen
-Dieser Artikel beschreibt die Statusdaten von MFC-Modulen und wie dieser Status aktualisiert wird, wenn Sie der Fluss der Ausführung (im Path-Code findet sich durch eine Anwendung, für die Ausführung) erreicht oder verlässt ein Modul. Modulzustände mit Wechsel der `AFX_MANAGE_STATE` und `METHOD_PROLOGUE` Makros wird ebenfalls erläutert.  
+Dieser Artikel beschreibt die Statusdaten von MFC-Modulen und wie dieser Status aktualisiert wird, wenn Sie der Fluss der Ausführung (im Path-Code findet sich durch eine Anwendung, für die Ausführung) erreicht oder verlässt ein Modul. Wechseln mit den Makros AFX_MANAGE_STATE und METHOD_PROLOGUE Modulzustände wird ebenfalls erläutert.  
   
 > [!NOTE]
 >  Das Begriff "Modul" Hier bezieht sich auf ein ausführbares Programm oder eine DLL (oder einen Satz von DLLs) an, die unabhängig von der Rest der Anwendung ausgeführt werden, verwendet jedoch eine gemeinsame Kopie der MFC-DLL. Ein ActiveX-Steuerelement ist ein typisches Beispiel für ein Modul.  

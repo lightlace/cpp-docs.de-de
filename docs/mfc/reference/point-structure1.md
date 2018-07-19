@@ -1,5 +1,5 @@
 ---
-title: Zeigen Sie Structure1 | Microsoft Docs
+title: POINT-Struktur 1 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a31af23b336e5a911b62d23d0cce2795aa66f0f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de172814db04ab8d057f84a29ce505896f89adc9
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335333"
 ---
-# <a name="point-structure1"></a>Zeigen Sie Structure1
-Die **zeigen** Struktur definiert das "X"*-* und y-Koordinaten eines Punkts.  
+# <a name="point-structure1"></a>POINT-Struktur 1
+Die `POINT` Struktur definiert, das "X"*-* und y-Koordinaten eines Punkts.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e3059a4291d21e11304fdf571d2e12828df26fb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7b6043da3945b36bd756714049b2bb6c91a32bd4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966549"
 ---
 # <a name="moneyget-class"></a>money_get-Klasse
 
@@ -45,9 +46,9 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-`CharType` Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
+*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet.
 
-`InputIterator` Der Typ des Iterators, von dem die Get-Funktionen ihre Eingabe lesen.
+*InputIterator* der Typ des Iterators, von dem die Get-Funktionen ihre Eingabe lesen.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -90,7 +91,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter **CharType** dar.
+Der Typ stellt ein Synonym für den Vorlagenparameter *CharType* dar.
 
 ## <a name="do_get"></a> money_get::do_get
 
@@ -112,17 +113,17 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-`first` Eingabeiterator, der den Anfang der Sequenz, die konvertiert werden.
+*erste* Eingabe-Iterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-`last` Eingabeiterator, der das Ende der Sequenz, die konvertiert werden.
+*letzte* Eingabe-Iterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-`Intl` Ein boolescher Wert, der angibt, der des Typs der in der Sequenz erwartet Währungssymbol: **"true"** Wenn internationale **"false"** Wenn inländischen.
+*Intl* ein boolescher Wert, der angibt, des Typs des Currency Symbols in der Sequenz erwartet: **"true"** Wenn international; **"false"** Wenn National.
 
-`Iosbase` Ein Format Kennzeichen, das bei der Gruppe gibt an, dass das Währungssymbol optional. Andernfalls ist es erforderlich.
+*Iosbase* ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist; andernfalls ist es erforderlich.
 
-`State` Legt die entsprechenden bitmaskenelemente für den streamzustand entsprechend gibt an, ob die Vorgänge oder nicht erfolgreich war.
+*Status* legt die entsprechenden bitmaskenelemente für den Streamstatus, je nachdem, ob die Vorgänge oder nicht erfolgreich waren.
 
-`val` Eine Zeichenfolge, die die konvertierte Sequenz speichern.
+*Val* eine Zeichenfolge, die zum Speichern der konvertierten Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -130,9 +131,9 @@ Ein Eingabeiterator,der das erste Element nach dem Eingabefeld für den monetär
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen. Sie beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Eingabefeld für monetäre Werte erkannt hat. Ist dies erfolgreich, konvertiert sie dieses Feld zur Darstellung der Menge in eine Sequenz aus einer oder mehreren Dezimalstellen (optional mit vorangestelltem `-`) und speichert das Ergebnis im [string_type](#string_type)-Objekt `val`. Sie gibt einen Iterator zurück, der das erste Element nach dem Eingabefeld für monetäre Werte festlegt. Andernfalls speichert die Funktion eine leere Sequenz in `val` und legt `State` für `ios_base::failbit` fest. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Eingabefelds für monetäre Werte festlegt. In beiden Fällen legt die Funktion `State` für `ios_base::eofbit` fest, wenn der Rückgabewert `last` entspricht.
+Die erste virtuelle geschützte Memberfunktion versucht, sequenzielle Elemente zuzuordnen. Sie beginnt zuerst in der Sequenz [ `first`, `last`), bis sie ein vollständiges, nicht leeres Eingabefeld für monetäre Werte erkannt hat. Wenn erfolgreich, sie dieses Feld in eine Sequenz von ein oder mehrere Dezimalstellen sind konvertiert, optional mit vorangestelltem Minuszeichen ( `-`), um den Betrag darstellen und speichert das Ergebnis in der ["string_type"](#string_type) Objekt *Val*. Sie gibt einen Iterator zurück, der das erste Element nach dem Eingabefeld für monetäre Werte festlegt. Die Funktion speichert, andernfalls eine leere Sequenz in *Val* und `ios_base::failbit` in *Zustand*. Sie gibt einen Iterator zurück, der das erste Element nach jedem Präfix eines gültigen Eingabefelds für monetäre Werte festlegt. In beiden Fällen legt die Funktion `State` für `ios_base::eofbit` fest, wenn der Rückgabewert `last` entspricht.
 
-Die zweite geschützte virtuelle Memberfunktion verhält sich wie die erste. Gelingt dies, konvertiert sie die Zahlenfolge mit optionalem Vorzeichen allerdings in einen Wert des Typs `long double` und speichert diesen Wert in `val`.
+Der zweite virtuelle geschützte Memberfunktion verhält sich genauso wie die erste, außer dass bei erfolgreicher Ausführung der Tasksequenz optionalem Vorzeichen allerdings sie in einen Wert vom Typ konvertiert **long double** und speichert diesen Wert in *Val*.
 
 Das Format eines Eingabefelds für monetäre Werte richtet sich nach dem [Gebietsschemafacet](../standard-library/locale-class.md#facet_class) **fac**, das durch den effektiven Aufruf [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
@@ -188,17 +189,17 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>Parameter
 
-`first` Eingabeiterator, der den Anfang der Sequenz, die konvertiert werden.
+*erste* Eingabe-Iterator, der den Anfang der zu konvertierenden Sequenz adressiert.
 
-`last` Eingabeiterator, der das Ende der Sequenz, die konvertiert werden.
+*letzte* Eingabe-Iterator, der das Ende der zu konvertierenden Sequenz adressiert.
 
-`Intl` Ein boolescher Wert, der angibt, der des Typs der in der Sequenz erwartet Währungssymbol: **"true"** Wenn internationale **"false"** Wenn inländischen.
+*Intl* ein boolescher Wert, der angibt, des Typs des Currency Symbols in der Sequenz erwartet: **"true"** Wenn international; **"false"** Wenn National.
 
-`Iosbase` Ein Format Kennzeichen, das bei der Gruppe gibt an, dass das Währungssymbol optional. Andernfalls ist es erforderlich
+*Iosbase* ein Formatkennzeichen, das bei Verwendung angibt, dass das Währungssymbol optional ist; andernfalls ist es erforderlich
 
-`State` Legt die entsprechenden bitmaskenelemente für den streamzustand entsprechend gibt an, ob die Vorgänge erfolgreich ausgeführt wurde.
+*Status* legt die entsprechenden bitmaskenelemente für den Streamstatus, je nachdem, ob die Vorgänge erfolgreich waren.
 
-`val` Eine Zeichenfolge, die die konvertierte Sequenz speichern.
+*Val* eine Zeichenfolge, die zum Speichern der konvertierten Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -279,11 +280,11 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-`_Refs` Integer-Wert verwendet, um den Typ der Verwaltung des Arbeitsspeichers für das Objekt angeben.
+*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:
+Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
 - 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
 
@@ -293,7 +294,7 @@ Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:
 
 Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert seine Basisobjekt mit **Gebietsschema::**[Facet](../standard-library/locale-class.md#facet_class)(**_ *** Refs*).
+Der Konstruktor initialisiert sein Basisobjekt mit **Locale::**[Facet](../standard-library/locale-class.md#facet_class)(**_ *** Refs*).
 
 ## <a name="string_type"></a> money_get::string_type
 

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388993"
 ---
 # <a name="global-variables-and-standard-types"></a>Globale Variablen und Standardtypen
 Die Microsoft-Laufzeitbibliothek enthält Definitionen für [globale Variablen](../c-runtime-library/global-variables.md), [Steuerungsflags](../c-runtime-library/control-flags.md) und [Standardtypen](../c-runtime-library/standard-types.md) die von Bibliotheksroutinen verwendet werden. Greifen Sie auf diese Variablen, Flags und Typen zu, indem Sie sie in Ihrem Programm deklarieren oder die entsprechenden Headerdateien einschließen.  

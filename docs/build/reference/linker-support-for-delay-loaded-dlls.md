@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375583"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Linkerunterstützung für verzögertes Laden von DLLs
 Der Visual C++-Linker unterstützt jetzt das verzögerte Laden von DLLs. Dies entlastet Sie das Windows SDK-Funktionen verwenden, müssen **LoadLibrary** und **GetProcAddress** implementieren verzögertes Laden von DLLs.  

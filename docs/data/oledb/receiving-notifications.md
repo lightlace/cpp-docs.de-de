@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112315"
 ---
 # <a name="receiving-notifications"></a>Empfangen von Benachrichtigungen
 OLE DB stellt Schnittstellen bereit, für den Empfang von Benachrichtigungen, wenn Ereignisse auftreten. Diese Angaben werden in [OLE DB-Objekt Benachrichtigungen](https://msdn.microsoft.com/en-us/library/ms725406.aspx) in der *OLE DB Programmer's Reference*. Setup dieser Ereignisse verwendet, die COM-Verbindungspunkte Standardmechanismus. Z. B. ein ATL-Objekt, das Ereignisse über abrufen möchte `IRowsetNotify` implementiert die `IRowsetNotify` -Schnittstelle durch Hinzufügen von `IRowsetNotify` auf der Liste abgeleitete Klasse und das Verfügbarmachen von über eine **COM_INTERFACE_ENTRY** Makro.  

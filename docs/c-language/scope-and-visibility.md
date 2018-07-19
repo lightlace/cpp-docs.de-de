@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389188"
 ---
 # <a name="scope-and-visibility"></a>Bereich und Sichtbarkeit
 Die Sichtbarkeit eines Bezeichners bestimmt die Teile des Programms, in denen ein Bezeichner auf seinen "Bereich" verweisen kann. Ein Bezeichner ist nur in Teilen eines Programms sichtbar (d. h., er kann dort verwendet werden), die von seinem "Bereich" umgeben sind, der (in der Reihenfolge der zunehmenden Beschränkung) auf die Datei, die Funktion, den Block oder den Funktionsprototyp, in der er angezeigt wird, beschränkt sein kann. Der Bereich eines Bezeichners ist der Teil des Programms, in dem der Name verwendet werden kann. Dieser wird manchmal als "lexikalischer Gültigkeitsbereich" bezeichnet. Es gibt vier Arten von Bereichen: Funktion, Datei, Block und Funktionsprototyp.  

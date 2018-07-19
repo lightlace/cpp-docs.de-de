@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360653"
 ---
 # <a name="automation-in-a-dll"></a>Automatisierung in einer DLL
 Wenn Sie die Automatisierungsoption im MFC-DLL-Assistenten auswählen, bietet der Assistent Sie wie folgt:  

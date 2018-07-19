@@ -1,5 +1,5 @@
 ---
-title: ATL-Assistent für einfache Objekte | Microsoft Docs
+title: Einfaches ATL-Objektassistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,51 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ff9648cfc350f724a333e38622d082d8d399b3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d2af751a136416934f378b41bed11b1aa74ad80
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883491"
 ---
 # <a name="atl-simple-object-wizard"></a>ATL-Assistent für einfache Objekte
-Dieser Assistent fügt dem Projekt ein minimales COM-Objekt. Mithilfe dieser Seite des Assistenten geben Sie die Namen, die die C++-Klasse und die Dateien für das Objekt und seine COM-Funktionalität zu identifizieren.  
+Dieser Assistent fügt dem Projekt ein minimales COM-Objekt. Verwenden Sie auf dieser Seite des Assistenten, um die Namen anzugeben, die die C++-Klasse und die Dateien für das Objekt und seine COM-Funktionen zu identifizieren.  
   
- Verwenden der [Optionen](../../atl/reference/options-atl-simple-object-wizard.md) dieser Assistentenseite geben Sie das Objekt Threadingmodell und seine Aggregation zu unterstützen, und gibt an, ob duale Schnittstellen und die Automatisierung unterstützt. Sie können auch Unterstützung für die Informationen fehlerschnittstelle, Verbindungspunkte, Internet Explorer-Unterstützung und Freethread-Marshalling angeben.  
+ Verwenden der [Optionen](../../atl/reference/options-atl-simple-object-wizard.md) Seiten des Assistenten angeben des Objekts Threadingmodell und der Aggregation unterstützt und gibt an, ob duale Schnittstellen und die Automatisierung unterstützt. Sie können auch Unterstützung für den Fehler Informationen der Schnittstelle, Verbindungspunkte, Internet Explorer-Support und Marshalling von Freethreadobjekten angeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Ab Visual Studio 2008 können von diesem Assistenten erstellte Registrierungsskript registriert die COM-Komponenten unter **HKEY_CURRENT_USER** anstelle von **HKEY_LOCAL_MACHINE**. Um dieses Verhalten zu ändern, legen Sie die **Register-Komponente für alle Benutzer** des ATL-Assistenten die Option.  
+ Ab Visual Studio 2008 wird von diesem Assistenten erstellte Registrierungsskript seine COM-Komponenten unter registriert **HKEY_CURRENT_USER** anstelle von **HKEY_LOCAL_MACHINE**. Um dieses Verhalten zu ändern, legen Sie die **registerkomponenten für alle Benutzer** des ATL-Assistenten die Option.  
   
 ## <a name="names"></a>Namen  
- Geben Sie die Namen für das Objekt, Schnittstelle und Klassen, die dem Projekt hinzugefügt werden. Mit Ausnahme von **Kurzname**, alle anderen Felder können unabhängig von den anderen bearbeitet werden. Wenn Sie den Text für ändern **Kurzname**, in den Namen von allen anderen Feldern auf dieser Seite wird die Änderung übernommen. Wenn Sie ändern die **Co-Klasse** Verzeichnisnamens COM-Abschnitt, die Änderung wirkt sich die **Typ** und **ProgID** Dialogfelder, aber die **Schnittstelle** Name wird nicht geändert. Dieses naming Verhalten wurde entworfen, um alle Namen leicht erkennbaren für Sie bereitzustellen bei der Entwicklung Ihrer Kontrolle.  
+ Geben Sie die Namen für das Objekt, die Schnittstelle und die Klassen, die dem Projekt hinzugefügt werden. Mit Ausnahme von **Kurznamen**, alle anderen Felder bearbeitet werden können, unabhängig von den anderen. Wenn Sie den Text für ändern **Kurznamen**, in den Namen von allen anderen Feldern auf dieser Seite wird die Änderung übernommen. Wenn Sie ändern die **Co-Klasse** Name in der COM-Abschnitt die Änderung wirkt sich die **Typ** und **ProgID** Dialogfelder, aber die **Schnittstelle** Name wird nicht geändert. Diese Namenssystem ist so ausgelegt, alle Namen leicht identifizierbaren für Sie, wie Sie das Steuerelement entwickeln.  
   
 > [!NOTE]
->  **Coclass** kann nur bei nicht attributierten Projekten bearbeitet werden. Wenn Ihr Projekt attributiert, können nicht bearbeitet **Coclass**.  
+>  **Co-Klasse** kann nur nicht attributierte Projekten bearbeitet werden. Wenn Ihr Projekt zugeordnet sind, können nicht bearbeitet **Co-Klasse**.  
   
 ## <a name="c"></a>C++  
  Enthält Informationen für die C++-Klasse, die für das Objekt erstellt wurde.  
   
  **Kurzname**  
- Legt den abgekürzten Namen für das Objekt. Der Name, den Sie angeben, bestimmt die `Class` und **Co-Klasse** Namen, die **cpp-Datei** und **.h-Datei** Namen, die **Schnittstelle**Name, der **Typ** Namen, und die **ProgID**, es sei denn, diese Felder einzeln zu ändern.  
+ Legt den abgekürzten Namen für das Objekt fest. Der Name, den Sie angeben, bestimmt die `Class` und `Coclass` Namen, die **cpp-Datei** und **.h-Datei** Namen, die **Schnittstelle** Namen verwenden, die **Typ** Namen, und die **ProgID**, es sei denn, Sie diese Felder einzeln ändern.  
   
- **.h-Datei**  
- Legt den Namen der Headerdatei für die neue Klasse des Objekts. Standardmäßig basiert auf den Namen, die Sie gewähren dieser Name **Kurzname**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen an den Speicherort Ihrer Wahl speichern oder die Klassendeklaration an eine vorhandene Datei anfügen. Wenn Sie eine vorhandene Datei auswählen, der Assistent wird nicht zum Speichern an den ausgewählten Speicherort bis auf **Fertig stellen** im Assistenten.  
+ **H-Datei**  
+ Legt den Namen der Headerdatei für die neue Klasse des Objekts fest. Standardmäßig basiert auf den Namen, den Sie, in bereitstellen diesen Namen **Kurznamen**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am gewünschten Speicherort zu speichern oder um die Klassendeklaration an eine vorhandene Datei anzufügen. Wenn Sie eine vorhandene Datei auswählen, der Assistent wird speichern Sie es nicht in den ausgewählten Speicherort bis auf **Fertig stellen** im Assistenten.  
   
- Der Assistent überschreibt eine Datei nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, wenn Sie auf **Fertig stellen**, werden vom Assistenten aufgefordert, um anzugeben, ob die Klassendeklaration an den Inhalt der Datei angefügt werden sollen. Klicken Sie auf **Ja** anzufügende Datei ein, klicken Sie auf **keine** zum Assistenten zurückzukehren, und geben Sie einen anderen Dateinamen an.  
+ Der Assistent überschreibt Dateien nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, fordert der Assistent Sie dazu auf, anzugeben, ob die Klassendeklaration an die Inhalte der Datei angefügt werden sollen, wenn Sie auf **Fertig stellen** klicken. Klicken Sie auf **Ja**, um die Datei anzufügen. Klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.  
   
  **Klasse**  
- Legt den Namen der Klasse erstellt werden soll. Dieser Name wird auf Grundlage des Namens, die Sie gewähren **Kurzname**, "C", das Standard-Präfix für einen Klassennamen vorangestellt.  
+ Legt den Namen der Klasse erstellt werden. Dieser Name basiert auf den Namen, den Sie in bereitstellen **Kurznamen**ist 'C', das typische Präfix für einen Klassennamen vorangestellt.  
   
  **CPP-Datei**  
- Legt den Namen der Implementierungsdatei für das neue Objekt-Klasse. Standardmäßig basiert auf den Namen, die Sie gewähren dieser Name **Kurzname**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am Speicherort Ihrer Wahl zu speichern. Die Datei wird nicht an den ausgewählten Speicherort gespeichert, bis Sie auf **Fertig stellen** im Assistenten.  
+ Legt den Namen der Implementierungsdatei für die neue Klasse des Objekts fest. Standardmäßig basiert auf den Namen, den Sie, in bereitstellen diesen Namen **Kurznamen**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen am gewünschten Speicherort zu speichern. Die Datei wird nicht am ausgewählten Speicherort gespeichert, bis Sie im Assistenten auf **Fertig stellen** klicken.  
   
- Der Assistent überschreibt eine Datei nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, wenn Sie auf **Fertig stellen**, werden vom Assistenten aufgefordert, um anzugeben, ob die Implementierung der Klasse mit dem Inhalt der Datei angefügt werden sollen. Klicken Sie auf **Ja** anzufügende Datei ein, klicken Sie auf **keine** zum Assistenten zurückzukehren, und geben Sie einen anderen Dateinamen an.  
+ Der Assistent überschreibt Dateien nicht. Wenn Sie den Namen einer vorhandenen Datei auswählen, fordert der Assistent Sie dazu auf, anzugeben, ob die Klassenimplementierung an die Inhalte der Datei angefügt werden sollen, wenn Sie auf **Fertig stellen** klicken. Klicken Sie auf **Ja**, um die Datei anzufügen. Klicken Sie auf **Nein**, um zum Assistenten zurückzukehren und einen anderen Dateinamen anzugeben.  
   
- **Mit Attributen versehen**  
- Gibt an, ob das Objekt Attribute verwendet. Wenn Sie ein Objekt zu einem attributierten ATL-Projekt hinzufügen, ist diese Option ausgewählt und nicht verfügbar, um zu ändern. D. h. können Sie nur attributierte Objekte zu einem Projekt mit Attribut-Unterstützung hinzufügen.  
+ **Zugeordnet sind**  
+ Gibt an, ob das Objekt Attribute verwendet. Wenn Sie ein Objekt eine attributierten ATL-Projekt hinzufügen, ist diese Option ausgewählt und nicht verfügbar, um zu ändern. Also können Sie ein Projekt erstellt wurde, mit Attribut-Unterstützung nur attributierter Objekte hinzufügen.  
   
- Sie können ein attributiertes Objekt nur ein ATL-Projekt hinzufügen, die Attribute verwendet. Wenn Sie diese Option für eine ATL-Projekt, die über keinen Attribut unterstützen auswählen, werden Sie vom Assistenten aufgefordert, anzugeben, ob die Attribut-Unterstützung zum Projekt hinzufügen möchten.  
+ Sie können ein attributiertes Objekt nur ein ATL-Projekt hinzufügen, die Attribute verwendet. Wenn Sie diese Option für ein ATL-Projekt, die nicht unterstützen Attribut verfügt auswählen, fordert der Assistent Sie angeben, ob die Attribut-Unterstützung zum Projekt hinzufügen möchten.  
   
- Standardmäßig werden alle Objekte, die Sie hinzufügen, nachdem Sie diese Option festlegen als attributiert festgelegt (das Kontrollkästchen ist aktiviert). Sie können deaktivieren Sie dieses Kontrollkästchen, um ein Objekt hinzuzufügen, das keine Attribute verwendet.  
+ Standardmäßig werden alle Objekte, die Sie hinzufügen, nachdem Sie diese Option festlegen als attributierten festgelegt (das Kontrollkästchen ist aktiviert). Sie können festlegen, löschen Sie dieses Kontrollkästchen, um ein Objekt hinzuzufügen, die keine Attribute verwendet.  
   
  Finden Sie unter [Anwendungseinstellungen, ATL-Projektassistenten](../../atl/reference/application-settings-atl-project-wizard.md) und [grundlegende Funktionsweise von Attributen](../../windows/basic-mechanics-of-attributes.md) für Weitere Informationen.  
   
@@ -69,10 +70,10 @@ Dieser Assistent fügt dem Projekt ein minimales COM-Objekt. Mithilfe dieser Sei
  Enthält Informationen über die COM-Funktionalität für das Objekt.  
   
  **Co-Klasse**  
- Legt den Namen der Komponentenklasse, die eine Liste von Schnittstellen, die vom Objekt unterstützten enthält.  
+ Legt den Namen der Komponentenklasse, die eine Liste der Schnittstellen, die vom Objekt unterstützten enthält.  
   
 > [!NOTE]
->  Wenn Sie das Projekt, das Verwenden von Attributen erstellen oder auf dieser Seite des Assistenten angeben, dass das Objekt Attribute verwendet, können Sie diese Option nicht ändern, da ATL nicht enthält die `coclass` Attribut.  
+>  Wenn Sie das Projekt mithilfe von Attributen erstellen, oder auf dieser Seite des Assistenten angeben, dass das Objekt Attribute verwendet, können Sie diese Option nicht ändern, da ATL nicht enthalten ist das `coclass` Attribut.  
   
  **Type**  
  Legt die Beschreibung des Objekts, die in der Registrierung angezeigt wird  
@@ -81,8 +82,8 @@ Dieser Assistent fügt dem Projekt ein minimales COM-Objekt. Mithilfe dieser Sei
  Legt die Schnittstelle, die Sie für Ihr Objekt zu erstellen. Diese Schnittstelle enthält die benutzerdefinierten Methoden.  
   
  **ProgID**  
- Legt den Namen, den Container, anstatt die CLSID des Objekts verwenden können.  
+ Legt den Namen, den Container anstatt der CLSID des Objekts verwenden können.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Einfaches ATL-Objekt](../../atl/reference/adding-an-atl-simple-object.md)
+ [ATL Simple Object (Einfaches ATL-Objekt)](../../atl/reference/adding-an-atl-simple-object.md)
 

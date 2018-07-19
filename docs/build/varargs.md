@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380507"
 ---
 # <a name="varargs"></a>VarArgs
 Wenn Parameter über Varargs (z. B. mit den Auslassungspunkten Argumente) übergeben werden, gilt im Wesentlichen die normale Parameter übergeben, einschließlich Überlaufs die fünfte und nachfolgende Argumente. Es wird erneut die aufgerufene Dump-Argumenten, deren Adresse akzeptiert haben. Nur Gleitkommawerte werden die ganze Zahl und die Gleitkommaregister enthalten, wenn von der aufgerufene den Wert in der Ganzzahlregister erwartet.  

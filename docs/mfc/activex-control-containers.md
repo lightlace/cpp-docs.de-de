@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338974"
 ---
 # <a name="activex-control-containers"></a>ActiveX-Steuerelementcontainer
 Ein ActiveX-Steuerelementcontainer ist ein Container, der vollständig ActiveX-Steuerelemente unterstützt und kann in einem eigenen Fenster und Dialogfelder integrieren. Ein ActiveX-Steuerelement ist eine wiederverwendbare Softwarekomponente, die Sie in vielen Entwicklungsprojekte verwenden können. Steuerelemente können Ihre Anwendung Benutzer Zugriff auf Datenbanken, überwacht werden, und stellen verschiedene Auswahlen in Ihre Anwendungen. Weitere Informationen zu ActiveX-Steuerelemente, finden Sie im Artikel [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md).  

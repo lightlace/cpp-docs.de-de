@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3527dabab96fe8f2832430f928a922941178ea97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29dea08d778ba91c5b8ab3a10aaff998095e7123
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928768"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Ausnahmen: Abfangen und Löschen von Ausnahmen
-Die folgenden Anweisungen und Beispiele zeigen, wie auf Ausnahmen abfangen und löschen. Weitere Informationen zu den **versuchen**, **catch**, und `throw` Schlüsselwörter finden Sie unter [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md).  
+Die folgenden Anweisungen und Beispiele zeigen, wie auf Ausnahmen abfangen und löschen. Weitere Informationen zu den **versuchen**, **catch**, und **auslösen** Schlüsselwörter finden Sie unter [C++-Ausnahmebehandlung](../cpp/cpp-exception-handling.md).  
   
  Fehler beim Löschen der Ausnahme einen Speicherverlust verursacht, wenn der Code eine Ausnahme abgefangen, müssen Ihre Ausnahmehandler Ausnahmeobjekte, die sie behandeln möchten, die löschen.  
   
@@ -41,7 +42,7 @@ Die folgenden Anweisungen und Beispiele zeigen, wie auf Ausnahmen abfangen und l
 -   Ausführung zurückgegeben wird, innerhalb der **catch** Block.  
   
 > [!NOTE]
->  Beim Löschen einer `CException`, verwenden die **löschen** Memberfunktion zum Löschen der Ausnahme. Verwenden Sie nicht die **löschen** -Schlüsselwort, da es auftreten kann, wenn die Ausnahme nicht auf dem Heap befindet.  
+>  Beim Löschen einer `CException`, verwenden die `Delete` Memberfunktion zum Löschen der Ausnahme. Verwenden Sie nicht die **löschen** -Schlüsselwort, da es auftreten kann, wenn die Ausnahme nicht auf dem Heap befindet.  
   
 #### <a name="to-catch-and-delete-exceptions"></a>Abfangen und Löschen von Ausnahmen  
   

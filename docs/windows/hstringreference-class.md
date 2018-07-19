@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879554"
 ---
 # <a name="hstringreference-class"></a>HStringReference-Klasse
 Stellt ein HSTRING dar, das aus einer vorhandenen Zeichenfolge erstellt wird.  

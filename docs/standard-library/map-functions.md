@@ -7,11 +7,12 @@ f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: d6f62868d17cec9215b18451527c3a2e4e22b7f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c6cb7d0308e4bafc531fe0baf0c5d666228c3ec
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966367"
 ---
 # <a name="ltmapgt-functions"></a>&lt;map&gt;-Funktionen
 
@@ -32,13 +33,13 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-`right` Die Zuordnung, die die auszutauschenden Elemente bereitgestellt oder die Zuordnung, deren Elemente sind mit denen der Karte ausgetauscht werden sollen `left`.
+*richtige* der Karte, in dem Elemente ausgetauscht werden sollen, oder die Zuordnung, deren Elemente ausgetauscht werden, mit denen der Zuordnung *linken*.
 
-`left` Die Zuordnung, deren Elemente sind mit denen der Karte ausgetauscht werden sollen `right`.
+*linken* die Zuordnung, deren Elemente ausgetauscht werden, mit denen der Zuordnung *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion ist ein Algorithmus für die Container-Klasse-Zuordnung, führen Sie die Memberfunktion spezialisierten `left`.[ Swap](../standard-library/map-class.md#swap)( `right`). Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die meist spezialisierte Version der Vorlagenfunktion. Die allgemeine Version der Vorlagenfunktion, **template** \< **class T**> **void swap**( **T&**, **T&**), in der Algorithmusklasse funktioniert per Zuweisung und ist ein langsamer Vorgang. Die spezialisierte Version in jedem Container ist viel schneller, da sie mit der internen Darstellung der Containerklasse verwendet werden kann.
+Die Vorlagenfunktion ist ein Algorithmus, spezialisiert auf die Container-Klasse-Karte, um die Ausführung der Memberfunktion `left`.[ Swap](../standard-library/map-class.md#swap)( `right`). Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die meist spezialisierte Version der Vorlagenfunktion. Die allgemeine Version der Vorlagenfunktion, **template** \< **class T**> **void swap**( **T&**, **T&**), in der Algorithmusklasse funktioniert per Zuweisung und ist ein langsamer Vorgang. Die spezialisierte Version in jedem Container ist viel schneller, da sie mit der internen Darstellung der Containerklasse verwendet werden kann.
 
 ### <a name="example"></a>Beispiel
 
@@ -57,13 +58,13 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-`right` Der mehrfachzuordnung Elemente ausgetauscht werden sollen, oder der mehrfachzuordnung zurück, dessen Elemente sind mit denen der mehrfachzuordnung ausgetauscht werden sollen `left`.
+*richtige* das multimap-Klasse, die Elemente ausgetauscht werden sollen, oder die multimap-Klasse, deren Elemente mit denen der mehrfachzuordnung ausgetauscht werden *linken*.
 
-`left` Die mehrfachzuordnung zurück, dessen Elemente sind mit denen der mehrfachzuordnung spezifiziertes `right`.
+*linken* das multimap-Klasse, deren Elemente ausgetauscht werden, mit denen der mehrfachzuordnung *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion ist ein Algorithmus für die Container-Klasse-Zuordnung, führen Sie auf die Container-Klasse mehrfachzuordnung, führen Sie die Memberfunktion spezialisierten `left`.[ Swap](../standard-library/multimap-class.md#swap) ( `right`). Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die meist spezialisierte Version der Vorlagenfunktion. Die allgemeine Version der Vorlagenfunktion, **template** \< **class T**> **void swap**( **T&**, **T&**), in der Algorithmusklasse funktioniert per Zuweisung und ist ein langsamer Vorgang. Die spezialisierte Version in jedem Container ist viel schneller, da sie mit der internen Darstellung der Containerklasse verwendet werden kann.
+Die Vorlagenfunktion ist ein Algorithmus, spezialisiert auf die Container, auf die Containerklasse "Multimap" zum Ausführen von der Memberfunktion auszuführen Map `left`.[ Swap](../standard-library/multimap-class.md#swap) (`right`). Dies ist eine Instanz der partiellen Reihenfolge von Funktionsvorlagen durch den Compiler. Wenn Vorlagenfunktionen so überladen werden, dass die Übereinstimmung der Vorlage mit dem Funktionsaufruf nicht eindeutig ist, wählt der Compiler die meist spezialisierte Version der Vorlagenfunktion. Die allgemeine Version der Vorlagenfunktion, **template** \< **class T**> **void swap**( **T&**, **T&**), in der Algorithmusklasse funktioniert per Zuweisung und ist ein langsamer Vorgang. Die spezialisierte Version in jedem Container ist viel schneller, da sie mit der internen Darstellung der Containerklasse verwendet werden kann.
 
 ### <a name="example"></a>Beispiel
 

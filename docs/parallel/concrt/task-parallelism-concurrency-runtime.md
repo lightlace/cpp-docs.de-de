@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695323"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Aufgabenparallelität (Concurrency Runtime)
 In der Concurrency Runtime wird eine *Aufgabe* ist eine Arbeitseinheit, die einen bestimmten Auftrag ausführt und normalerweise parallel zu anderen Aufgaben ausgeführt wird. Eine Aufgabe kann in weitere, differenziertere Aufgaben, die in organisiert sind zerlegt werden eine *Aufgabengruppe*.  

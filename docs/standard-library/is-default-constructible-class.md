@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267f0d83ee8f92eb73bddfbcd383f59db83c8a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23a361362d574910d21b0031d5687331f8c11dda
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964254"
 ---
 # <a name="isdefaultconstructible-class"></a>is_default_constructible-Klasse
 
@@ -35,11 +36,11 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Der abzufragende Typ.
+*T* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn der Typ `T` ein Klassentyp ist, der einen trivialen Konstruktor aufweist; andernfalls „false“. Dies entspricht dem Prädikat `is_constructible<T>`. Typ `T` muss ein vollständiger Typ, `void`oder ein Array mit unbekannter Grenze sein.
+Eine Instanz des typprädikats ist true, wenn der Typ *T* ist ein Klassentyp, der einen standardmäßigen Konstruktor aufweist; andernfalls ist Sie false. Dies entspricht dem Prädikat `is_constructible<T>`. Typ *T* muss ein vollständiger Typ, **"void"**, oder ein Array mit Unbekannter Grenze.
 
 ## <a name="example"></a>Beispiel
 

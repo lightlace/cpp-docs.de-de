@@ -1,5 +1,5 @@
 ---
-title: CSettingsStoreSP Klasse | Microsoft Docs
+title: CSettingsStoreSP-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cf84e2e7db6f829cb7afcd1831521b4f94535bd
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850779"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP-Klasse
-Die `CSettingsStoreSP` Klasse ist eine Hilfsklasse, die Sie, zum Erstellen von Instanzen verwenden können der [CSettingsStore-Klasse](../../mfc/reference/csettingsstore-class.md).  
+Die `CSettingsStoreSP` Klasse ist eine Hilfsklasse, die Sie, zum Erstellen von Instanzen von verwenden können der [CSettingsStore-Klasse](../../mfc/reference/csettingsstore-class.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,30 +50,30 @@ class CSettingsStoreSP
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CSettingsStoreSP::Create](#create)|Erstellt eine Instanz einer Klasse, die abgeleitet ist `CSettingsStore`.|  
-|[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|Legt die Common Language Runtime-Klasse. Die `Create` Methode verwendet die Common Language Runtime-Klasse, um zu bestimmen, welche Klasse von Objekten zu erstellen.|  
+|[CSettingsStoreSP::Create](#create)|Erstellt eine Instanz einer Klasse, die von abgeleitet ist `CSettingsStore`.|  
+|[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|Festlegen der Common Language Runtime-Klasse. Die `Create` Methode verwendet die Common Language Runtime-Klasse, um zu bestimmen, welche Klasse von Objekten zu erstellen.|  
   
 ### <a name="data-members"></a>Datenmember  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|`m_dwUserData`|Benutzerdefinierte Daten, die in gespeichert ist die `CSettingsStoreSP` Objekt. Geben Sie diese Daten im Konstruktor der der `CSettingsStoreSP` Objekt.|  
-|`m_pRegistry`|Die `CSettingsStore`-abgeleitete Objekt, mit der `Create` Methode erstellt.|  
+|`m_dwUserData`|Benutzerdefinierte Daten, die in gespeichert ist die `CSettingsStoreSP` Objekt. Diese Daten in den Konstruktor der Angabe der `CSettingsStoreSP` Objekt.|  
+|`m_pRegistry`|Die `CSettingsStore`-abgeleitete Objekt, das `Create` -Methode erstellt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können die `CSettingsStoreSP` Klasse, um alle MFC-Registrierungsvorgänge an anderen Speicherorten, z. B. eine XML-Datei oder einer Datenbank umleiten. Führen Sie dazu folgende Schritte aus:  
+ Sie können die `CSettingsStoreSP` Klasse, um alle MFC-Registrierungsvorgängen an andere Speicherorte, z. B. eine XML-Datei oder einer Datenbank umleiten. Führen Sie dazu folgende Schritte aus:  
   
 1.  Erstellen Sie eine Klasse (z. B. `CMyStore`) und leiten sie von `CSettingsStore`.  
   
-2.  Verwendung [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) und [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate) Makros mit Ihrer benutzerdefinierten `CSettingsStore` Klasse, um die dynamische Erstellung zu ermöglichen.  
+2.  Verwendung [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) und [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate) Makros mit Ihrer benutzerdefinierten `CSettingsStore` -Klasse zur Aktivierung der dynamischen Erstellung.  
   
-3.  Virtuellen Funktionen überschreiben und Implementieren der `Read` und `Write` Funktionen in Ihre benutzerdefinierte Klasse. Implementieren Sie eine beliebige andere Funktionen zum Lesen und Schreiben von Daten an die gewünschte Position.  
+3.  Die virtuellen Funktionen überschreiben und Implementieren der `Read` und `Write` Funktionen in Ihre benutzerdefinierte Klasse. Implementieren Sie alle sonstigen Funktionen, die zum Lesen und Schreiben von Daten in den gewünschten Speicherort.  
   
-4.  Rufen Sie in der Anwendung `CSettingsStoreSP::SetRuntimeClass` und übergeben Sie einen Zeiger auf die [CRuntimeClass Struktur](../../mfc/reference/cruntimeclass-structure.md) von Ihrer Klasse abgerufen.  
+4.  Rufen Sie in Ihrer Anwendung `CSettingsStoreSP::SetRuntimeClass` und übergeben Sie einen Zeiger auf die [CRuntimeClass-Struktur](../../mfc/reference/cruntimeclass-structure.md) von Ihrer Klasse abgerufen.  
   
- Wenn das Framework in der Regel auf die Registrierung zugreifen würden, werden jetzt dynamisch Ihre benutzerdefinierte Klasse zu instanziieren und verwenden, um die Daten lesen oder schreiben.  
+ Wenn das Framework in der Regel die Registrierung zugreifen würden, es jetzt dynamisch Ihre benutzerdefinierte Klasse zu instanziieren und verwenden, um die Daten lesen oder schreiben.  
   
- `CSettingsStoreSP::SetRuntimeClass` verwendet eine globale statische Variable. Deshalb steht nur einen benutzerdefinierten Speicher zu einem Zeitpunkt zur Verfügung.  
+ `CSettingsStoreSP::SetRuntimeClass` verwendet eine globale statische Variable. Daher ist nur einen benutzerdefinierten Speicher zu einem Zeitpunkt zur Verfügung.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxsettingsstore.h  
@@ -87,21 +88,21 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bAdmin`  
- Ein boolescher Parameter, der bestimmt, ob ein `CSettingsStore` Objekt wird erstellt, im Administratormodus.  
+ [in] *bAdminpfad*  
+ Ein boolescher Parameter, der bestimmt, ob eine `CSettingsStore` Objekt erstellt wird, im Administratormodus.  
   
- [in] `bReadOnly`  
- Ein boolescher Parameter, der bestimmt, ob eine `CSettingsStore` Objekt wird für nur-Lese-Zugriff erstellt.  
+ [in] *bReadOnly*  
+ Ein boolescher Parameter, der bestimmt, ob eine `CSettingsStore` Objekt wird für nur-Lese Zugriff erstellt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf das neu erstellte `CSettingsStore` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können mithilfe der Methode [CSettingsStoreSP::SetRuntimeClass](#setruntimeclass) um zu bestimmen, welche Art von Objekt `CSettingsStoreSP::Create` wird erstellt. Diese Methode erstellt standardmäßig eine `CSettingsStore` Objekt.  
+ Sie können die Methode [CSettingsStoreSP::SetRuntimeClass](#setruntimeclass) um zu bestimmen, welche Art von Objekt `CSettingsStoreSP::Create` erstellt. Diese Methode erstellt standardmäßig eine `CSettingsStore` Objekt.  
   
- Wenn Sie erstellen ein `CSettingsStore` -Objekt im Administratormodus, der Standardspeicherort für alle Registrierungszugriff HKEY_LOCAL_MACHINE. Andernfalls ist der Standardspeicherort für alle Registrierungszugriff HKEY_CURRENT_USER.  
+ Bei der Erstellung einer `CSettingsStore` Objekt im Administratormodus der Standardspeicherort für alle Zugriff auf die Registrierung ist HKEY_LOCAL_MACHINE. Andernfalls ist der Standardspeicherort für alle Registrierungszugriff HKEY_CURRENT_USER.  
   
- Wenn `bAdmin` ist `TRUE`, die Anwendung muss über Administratorrechte verfügen. Andernfalls schlägt er fehl, wenn er versucht, auf die Registrierung zugreifen.  
+ Wenn *bAdminpfad* ist "true", die Anwendung muss über Administratorrechte verfügen. Andernfalls schlägt sie fehl, wenn er versucht, auf die Registrierung zugreifen.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die `Create` Methode der `CSettingsStoreSP` Klasse.  
@@ -109,35 +110,35 @@ CSettingsStore& CSettingsStoreSP Create(
  [!code-cpp[NVC_MFC_RibbonApp#33](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
   
 ##  <a name="csettingsstoresp"></a>  CSettingsStoreSP::CSettingsStoreSP  
- Erstellt eine [CSettingsStoreSP Klasse](../../mfc/reference/csettingsstoresp-class.md) Objekt.  
+ Erstellt eine [CSettingsStoreSP-Klasse](../../mfc/reference/csettingsstoresp-class.md) Objekt.  
   
 ```  
 CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `dwUserData`  
+ [in] *DwUserData*  
  Benutzerdefinierte Daten, die die `CSettingsStoreSP` -Objekt speichert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `CSettingsStoreSP` Objekt speichert die Daten aus `dwUserData` in der geschützten Membervariablen `m_dwUserData`.  
+ Die `CSettingsStoreSP` Objekt speichert die Daten aus *DwUserData* in der geschützten Membervariablen `m_dwUserData`.  
   
 ##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
- Legt die Common Language Runtime-Klasse. Die Methode [CSettingsStoreSP::Create](#create) verwendet die Common Language Runtime-Klasse, um zu bestimmen, welche Art des zu erstellenden Objekts.  
+ Festlegen der Common Language Runtime-Klasse. Die Methode [CSettingsStoreSP::Create](#create) verwendet die Common Language Runtime-Klasse, um zu bestimmen, welche Art des zu erstellenden Objekts.  
   
 ```  
 static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pRTI`  
- Ein Zeiger auf die laufzeitklasseninformationen für eine Klasse abgeleitet wurde. die [CSettingsStore-Klasse](../../mfc/reference/csettingsstore-class.md).  
+ [in] *pRTI*  
+ Ein Zeiger auf die laufzeitklasseninformationen für eine Klasse abgeleitet wird, aus der [CSettingsStore-Klasse](../../mfc/reference/csettingsstore-class.md).  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Bei Erfolg; `FALSE` Wenn von die Klasse identifiziert `pRTI` stammt nicht aus `CSettingsStore`.  
+ True, wenn erfolgreich; FALSE, wenn die Klasse durch identifiziert *pRTI* stammt nicht aus `CSettingsStore`.  
   
 ### <a name="remarks"></a>Hinweise  
- Können Sie die [CSettingsStoreSP Klasse](../../mfc/reference/csettingsstoresp-class.md) zum Ableiten von Klassen `CSettingsStore`. Verwenden Sie die Methode `SetRuntimeClass` Wunsch Objekte einer benutzerdefinierten Klasse erstellen, die abgeleitet ist `CSettingsStore`.  
+ Sie können die [CSettingsStoreSP-Klasse](../../mfc/reference/csettingsstoresp-class.md) zum Ableiten von Klassen aus `CSettingsStore`. Verwenden Sie die Methode `SetRuntimeClass` sollten Sie Objekte einer benutzerdefinierten Klasse erstellen, die abgeleitet wird `CSettingsStore`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassen](../../mfc/reference/mfc-classes.md)   

@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9a6495c23695f8cdedf45fbdd7cbc915b96873e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929607"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC-ActiveX-Steuerelemente: Lokalisieren eines ActiveX-Steuerelements
 Dieser Artikel beschreibt Verfahren zum Lokalisieren von ActiveX-Steuerelement-Schnittstellen.  
@@ -40,7 +41,7 @@ Dieser Artikel beschreibt Verfahren zum Lokalisieren von ActiveX-Steuerelement-S
     > [!NOTE]
     >  Dies ist nicht in einigen Fällen funktionsfähig, wenn weitere Instanzen mit unterschiedlichen Gebietsschemas enthält.  
   
--   Verwenden der **OnAmbientChanged** Benachrichtigungsfunktion, um die richtigen Ressourcen für das Gebietsschema des Containers dynamisch zu laden.  
+-   Verwenden der `OnAmbientChanged` Benachrichtigungsfunktion, um die richtigen Ressourcen für das Gebietsschema des Containers dynamisch zu laden.  
   
     > [!NOTE]
     >  Diese Methode kann für das Steuerelement verwendet, aber die DLL zur Laufzeit werden nicht dynamisch aktualisiert ihre eigenen Ressourcen bei Änderung die LocaleID-Ambiente-Eigenschaft. Laufzeit-DLLs für ActiveX-Steuerelemente verwenden darüber hinaus das Gebietsschema des Threads, um das Gebietsschema für die Ressourcen zu ermitteln.  
@@ -97,7 +98,7 @@ Dieser Artikel beschreibt Verfahren zum Lokalisieren von ActiveX-Steuerelement-S
   
  [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
   
- Versetzen Sie das Codebeispiel oben in einer Memberfunktion des Steuerelements, wie z. B. eine Überschreibung der [COleControl:: OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite). Darüber hinaus `m_hResDLL` sollte eine Membervariable der Steuerelementklasse sein.  
+ Versetzen Sie das Codebeispiel oben in einer Memberfunktion des Steuerelements, wie z. B. eine Überschreibung der [COleControl:: OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite). Darüber hinaus *M_hResDLL* sollte eine Membervariable der Steuerelementklasse sein.  
   
  Ähnlichen Logik können Sie zum Lokalisieren von Eigenschaftenseite des Steuerelements. Um die Eigenschaftenseite zu lokalisieren, fügen Sie Code ähnlich dem folgenden Beispiel Implementierungsdatei der Eigenschaftenseite (in einer Überschreibung von [COlePropertyPage:: OnSetPageSite](../mfc/reference/colepropertypage-class.md#onsetpagesite)):  
   

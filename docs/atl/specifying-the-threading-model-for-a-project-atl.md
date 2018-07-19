@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359635"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>Angeben des Threadingmodells für ein Projekt (ATL)
 Die folgenden Makros sind zum Angeben des Threadingmodells der ATL-Projekt verfügbar:  

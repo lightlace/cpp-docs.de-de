@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346502"
 ---
 # <a name="making-owner-drawn-tabs"></a>Erstellen von Ownerdrawn-Registerkarten
 Sie können einzelne Elemente des Registerkarten-Steuerelements definieren ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) ownerdrawn-Elemente sein. Weitere Informationen finden Sie unter [Drawn Registerkarten](http://msdn.microsoft.com/library/windows/desktop/bb760550) im Windows SDK.  

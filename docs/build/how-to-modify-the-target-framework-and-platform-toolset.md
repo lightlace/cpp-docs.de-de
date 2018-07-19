@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371901"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Gewusst wie: Ändern des Zielframeworks und des Plattformtoolsets
 Sie können Visual C++-projekteinstellungen, um andere Versionen von .NET Framework abzielen und verschiedene Plattformtoolsets verwendet ändern. Standardmäßig wird vom Projektsystem die .NET Framework-Version und die Toolsetversion verwendet, die der von Ihnen zum Erstellen des Projekts verwendeten Version von Visual Studio entsprechen. Sie können das Toolset der Zielplattform ändern, indem Sie die Projekteigenschaften ändern. Das Zielframework kann durch Bearbeiten der Projektdatei (.vcxproj) geändert werden. Sie müssen keine separate CodeBase für jedes Kompilierungsziel verwenden.  

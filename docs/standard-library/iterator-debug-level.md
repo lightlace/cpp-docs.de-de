@@ -16,19 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7219ed039e77d0857151c54e73a03a0d1f6a3f5e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4163542d0ba741e6f0a123cbdcdc44dbbec470d1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957790"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
-Das `_ITERATOR_DEBUG_LEVEL`-Makro steuert, ob [überprüfte Iteratoren](../standard-library/checked-iterators.md) und [Unterstützung für Iteratordebugging](../standard-library/debug-iterator-support.md) aktiviert sind. Dieses Makro hat Vorrang und kombiniert die Funktionalität der älteren `_SECURE_SCL`- und `_HAS_ITERATOR_DEBUGGING`-Makros.
+Die _ITERATOR_DEBUG_LEVEL-Makro steuert, ob [überprüfte Iteratoren](../standard-library/checked-iterators.md) und [Unterstützung für iteratordebugging](../standard-library/debug-iterator-support.md) aktiviert sind. Dieses Makro hat Vorrang und kombiniert die Funktionalität der älteren Makros "_SECURE_SCL" und "_HAS_ITERATOR_DEBUGGING".
 
 ## <a name="macro-values"></a>Makrowerte
 
-In der folgenden Tabelle werden die möglichen Werte für das `_ITERATOR_DEBUG_LEVEL`-Makro angezeigt.
+In der folgende Tabelle sind die möglichen Werte für das Makro _ITERATOR_DEBUG_LEVEL zusammengefasst.
 
 |Kompilierungsmodus|Makrowert|Beschreibung|
 |----------------------|----------------|-----------------|
@@ -40,13 +41,13 @@ In der folgenden Tabelle werden die möglichen Werte für das `_ITERATOR_DEBUG_L
 ||0 (Standard)|Deaktivierte überprüfte Iteratoren.|
 ||1|Aktiviert überprüfte Iteratoren; das Iteratordebugging ist nicht relevant.|
 
-Im Releasemodus generiert der Compiler einen Fehler, wenn Sie `_ITERATOR_DEBUG_LEVEL` als 2 angeben.
+Im Releasemodus generiert der Compiler einen Fehler aus, bei der Angabe von _ITERATOR_DEBUG_LEVEL als 2.
 
 ## <a name="remarks"></a>Hinweise
 
-Das `_ITERATOR_DEBUG_LEVEL`-Makro steuert, ob [überprüfte Iteratoren](../standard-library/checked-iterators.md) aktiviert ist, und im Debugmodus, ob die [Unterstützung für Iteratordebugging](../standard-library/debug-iterator-support.md) aktiviert ist. Wenn `_ITERATOR_DEBUG_LEVEL` als 1 oder 2 definiert ist, stellen aktivierte Iteratoren sicher, dass die Grenzen des Containers nicht überschrieben werden. Wenn `_ITERATOR_DEBUG_LEVEL` gleich 0 ist, werden Iteratoren nicht überprüft. Wenn `_ITERATOR_DEBUG_LEVEL` als 1 definiert ist, verursacht die unsichere Verwendung von Iteratoren einen Laufzeitfehler und das Programm wird beendet. Wenn `_ITERATOR_DEBUG_LEVEL` als 2 definiert ist, verursacht die unsichere Verwendung von Iteratoren eine Assert-Anweisung und ein Laufzeitfehler-Dialogfeld, dass Sie den Debugger unterbrechen lässt.
+Die _ITERATOR_DEBUG_LEVEL-Makro steuert, ob [überprüfte Iteratoren](../standard-library/checked-iterators.md) aktiviert ist, und im Debugmodus befindet, gibt an, ob [Unterstützung für iteratordebugging](../standard-library/debug-iterator-support.md) aktiviert ist. Wenn _ITERATOR_DEBUG_LEVEL als 1 oder 2 definiert ist, stellen Sie überprüfte Iteratoren sicher, dass die Grenzen des Containers nicht überschrieben werden. Wenn _ITERATOR_DEBUG_LEVEL 0 ist, werden Iteratoren nicht überprüft werden. Wenn _ITERATOR_DEBUG_LEVEL als 1 definiert ist, bewirkt, dass alle unsichere Verwendung einen Laufzeitfehler und das Programm wird beendet. Wenn _ITERATOR_DEBUG_LEVEL 2 definiert ist, verwenden unsicherer Iterator Ursachen, die eine Assert-Anweisung und ein Laufzeitfehler-Dialogfeld, in dem Sie können den Debugger zu unterbrechen.
 
-Da das `_ITERATOR_DEBUG_LEVEL`-Makro ähnliche Funktionalitäten wie die `_SECURE_SCL` und `_HAS_ITERATOR_DEBUGGING`-Makros unterstützt, sind Sie möglicherweise unsicher, welche Makros und Makrowerte Sie in einer bestimmten Situation verwenden sollten. Um Verwirrung zu vermeiden, wird empfohlen, nur das `_ITERATOR_DEBUG_LEVEL`-Makro zu verwenden. Diese Tabelle beschreibt den entsprechenden `_ITERATOR_DEBUG_LEVEL`-Makrowert für die Verwendung verschiedener Werte von `_SECURE_SCL` und `_HAS_ITERATOR_DEBUGGING` in vorhandenem Code.
+Da das Makro _ITERATOR_DEBUG_LEVEL ähnliche Funktionalität wie die Makros "_SECURE_SCL" und "_HAS_ITERATOR_DEBUGGING" unterstützt, können Sie nicht sicher sind möglicherweise welche Makros und Makrowerte Wert in einer bestimmten Situation verwendet. Um Verwirrung zu vermeiden, empfehlen wir, dass Sie nur das _ITERATOR_DEBUG_LEVEL-Makro verwenden. Diese Tabelle beschreibt die entsprechende _ITERATOR_DEBUG_LEVEL Makrowert für verschiedene Werte von "_SECURE_SCL" und "_HAS_ITERATOR_DEBUGGING" in das vorhandenem Code.
 
 |**_ITERATOR_DEBUG_LEVEL** |**_SECURE_SCL** |**_HAS_ITERATOR_DEBUGGING**|
 |---|---|---|
@@ -58,7 +59,7 @@ Informationen über das Deaktivieren der Warnungen für überprüfte Iteratoren 
 
 ### <a name="example"></a>Beispiel
 
-Verwenden Sie für die Angabe eines Werts für das `_ITERATOR_DEBUG_LEVEL`-Makro eine [/D](../build/reference/d-preprocessor-definitions.md)-Compileroption, um es in der Befehlszeile zu definieren, oder verwenden Sie `#define`, bevor die Kopfzeilen der C++-Standardbibliothek in Ihren Quelldateien enthalten sind. Um beispielsweise in der Befehlszeile *sample.cpp* im Debugmodus zu kompilieren und die Unterstützung für Iteratordebugging zu verwenden, können Sie die `_ITERATOR_DEBUG_LEVEL`-Makrodefinition angeben:
+Verwenden Sie zum Angeben eines Werts für das Makro _ITERATOR_DEBUG_LEVEL eine [/d](../build/reference/d-preprocessor-definitions.md) -Compileroption verwenden, um es in der Befehlszeile definieren, oder verwenden Sie `#define` Header sind vor der C++-Standardbibliothek in Ihren Quelldateien enthalten. Z. B. auf der Befehlszeile kompilieren *sample.cpp* im Debugmodus befindet und Unterstützung für das iteratordebugging zu verwenden, können Sie die Makrodefinition _ITERATOR_DEBUG_LEVEL angeben:
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842767"
 ---
 # <a name="phases-of-translation"></a>Phasen der Übersetzung
 C- und C++-Programme bestehen aus mindestens einer Quelldatei, von denen jede einen Teil des Texts des Programms enthält. Eine Quelldatei wird zusammen mit ihren Includedateien (Dateien, die mithilfe der Präprozessordirektive `#include` eingeschlossen werden), aber ohne die Codeabschnitte, die von bedingten Kompilierungsdirektiven entfernt werden, wie beispielsweise `#if`, als "Übersetzungseinheit" bezeichnet.  

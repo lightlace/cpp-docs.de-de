@@ -1,5 +1,5 @@
 ---
-title: _variant_t-extraktoren | Microsoft Docs
+title: _variant_t-extraktoren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -58,16 +58,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65049a473f62e728fcb4d74b581a08c0f1723fc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a8480a645728808ef4eae7a42c5080313d9fc6f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940344"
 ---
 # <a name="variantt-extractors"></a>_variant_t-Extraktoren
 **Microsoft-spezifisch**  
   
- Extrahieren von Daten aus dem gekapselten **VARIANT** Objekt.  
+ Extrahieren von Daten aus dem gekapselten `VARIANT` Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -94,29 +95,29 @@ operator unsigned __int64() const;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Extrahiert Rohdaten aus einem gekapselten **VARIANT**. Wenn die **VARIANT** ist bereits nicht der richtige Typ **VariantChangeType** wird verwendet, um eine Konvertierung zu versuchen und bei einem Fehler wird ein Fehler generiert:  
+ Extrahiert Rohdaten aus einem gekapselten `VARIANT`. Wenn die `VARIANT` ist noch nicht der richtige Typ, `VariantChangeType` wird verwendet, um eine Konvertierung zu versuchen und bei einem Fehler wird ein Fehler generiert:  
   
 -   **Operator short ()** extrahiert eine **kurze** Integer-Wert.  
   
 -   **Operator long ()** extrahiert eine **lange** Integer-Wert.  
   
--   **Operator float ()** extrahiert eine **"float"** numerischen Wert.  
+-   **Operator float ()** extrahiert eine **"float"** numerischer Wert.  
   
 -   **Operator double ()** extrahiert eine **doppelte** Integer-Wert.  
   
--   **Operator CY ()** extrahiert eine **CY** Objekt.  
+-   **Operator CY ()** extrahiert eine `CY` Objekt.  
   
--   **Operator Bool ()** extrahiert eine `bool` Wert.  
+-   **Operator Bool ()** extrahiert eine **"bool"** Wert.  
   
--   **Operator DECIMAL ()** extrahiert eine **DECIMAL** Wert.  
+-   **Operator DECIMAL ()** extrahiert eine `DECIMAL` Wert.  
   
--   **Operator BYTE ()** extrahiert eine **BYTE** Wert.  
+-   **Operator BYTE ()** extrahiert eine `BYTE` Wert.  
   
--   **Operator _bstr_t ()** extrahiert eine Zeichenfolge, die in einem gekapselt ist ein `_bstr_t` Objekt.  
+-   **Operator _bstr_t ()** extrahiert eine Zeichenfolge, die in einem gekapselt ist eine `_bstr_t` Objekt.  
   
--   **Operator IDispatch\*()** extrahiert einen Disp-Schnittstellenzeiger aus einem gekapselten **VARIANT**. `AddRef` wird auf dem resultierenden Zeiger aufgerufen, also entscheiden, ob Sie rufen **Version** um ihn freizugeben.  
+-   **Operator IDispatch\*()** extrahiert einen Disp-Schnittstellenzeiger aus einem gekapselten `VARIANT`. `AddRef` für den resultierenden Zeiger aufgerufen wird, daher ist es Ihre Aufgabe, rufen Sie `Release` Freigabe.  
   
--   **Operator IUnknown\*()** extrahiert einen COM-Schnittstellenzeiger aus einem gekapselten **VARIANT**. `AddRef` wird auf dem resultierenden Zeiger aufgerufen, also entscheiden, ob Sie rufen **Version** um ihn freizugeben.  
+-   **Operator IUnknown\*()** extrahiert einen COM-Schnittstellenzeiger aus einem gekapselten `VARIANT`. `AddRef` für den resultierenden Zeiger aufgerufen wird, daher ist es Ihre Aufgabe, rufen Sie `Release` Freigabe.  
   
  **Ende Microsoft-spezifisch**  
   

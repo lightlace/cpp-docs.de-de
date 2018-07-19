@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348876"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>Meldungen und Befehle im Framework
 Anwendungen für Microsoft Windows sind "driven Meldung". Reaktion auf Ereignisse wie Mausklicks, Tastatureingaben, Fenster-Bewegungen und So weiter sendet Windows Nachrichten an das richtige Fenster. Framework-Anwendungen verarbeiten die Windows-Meldungen wie jede andere Anwendung für Windows. Das Framework bietet auch einige Verbesserungen, die Verarbeitung von Nachrichten sind besser verwaltbar, einfacher und besser gekapselten stellen jedoch.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33174149"
 ---
 # <a name="user-defined-operators-ccli"></a>Benutzerdefinierte Operatoren (C++/CLI)
 Benutzerdefinierte Operatoren für verwaltete Typen sind als statische Member oder Instanzmember oder im globalen Gültigkeitsbereich zulässig. Allerdings werden nur statische Operatoren über Metadaten für Clients, die in einer anderen Sprache als Visual C++ geschrieben sind.  

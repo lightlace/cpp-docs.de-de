@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322379"
 ---
 # <a name="nmake-fatal-error-u1007"></a>NMAKE: Schwerwiegender Fehler U1007
 Doppeltes Anführungszeichen, die nicht im Namen zulässig.  

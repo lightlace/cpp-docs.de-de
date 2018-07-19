@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344229"
 ---
 # <a name="global-hot-keys"></a>Globale Abkürzungstasten
 Eine globale Abkürzungstaste ist einem bestimmten, nicht untergeordneten Fenster zugeordnet. Er ermöglicht es dem Benutzer das Fenster von einem beliebigen Teil des Systems zu aktivieren. Eine Anwendung wird eine globale Abkürzungstaste für ein bestimmtes Fenster durch Senden der [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) Nachricht zu diesem Fenster. Z. B. wenn `m_HotKeyCtrl` ist die [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) Objekt und `pMainWnd` ist ein Zeiger auf das Fenster aktiviert werden, wenn die Zugriffstaste gedrückt wird, können Sie den folgenden Code den hot in Steuerelement mit dem angegebenen Schlüssel zugeordnet Das Fenster verweist `pMainWnd`.  

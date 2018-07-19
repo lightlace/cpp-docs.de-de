@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882692"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Symbole für die Windows-Programmierung mit MFC
 Diese Symbole sind auch Teil der MFC-Unterstützungsdateien, aber sie Standardfunktionen für Windows-Anwendung und Aktionen unterstützen. Hauptsächlich Sie werden mit Menüs verwendet. Bei der Arbeit mit Menüs im Menü-Editor werden diese Symbole zugeordnete allgemeine Menübefehle im Eigenschaftenfenster angezeigt. Für die Instanz, wenn die Anwendung ein Dateimenü mit dem Befehl "Beenden", dieses Befehls zugeordnet werden das Symbol ID_APP_EXIT in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).  

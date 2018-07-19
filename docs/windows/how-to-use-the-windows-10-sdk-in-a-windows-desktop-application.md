@@ -1,7 +1,7 @@
 ---
-title: 'Vorgehensweise: Verwenden des Windows 10 SDK in einer Windows-Desktopanwendung | Microsoft Docs'
+title: 'Vorgehensweise: Verwenden des Windows 10 SDK in einer Windows-Desktopanwendung | Microsoft-Dokumentation'
 ms.custom: get-started-article
-ms.date: 04/19/2018
+ms.date: 07/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -13,31 +13,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dae6f31082176c94cdf12cf0cdb42ba13aa93fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034779"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Gewusst wie: Verwenden des Windows 10-SDKs in einer Windows-Desktopanwendung
-Beim Erstellen einer klassischen Windows-Desktopprojekt in Visual Studio 2017 ist es sich standardmäßig einrichten, erstellen Sie mit der Version des Windows 10-SDKS, die installiert wurde, wenn die C++-Desktop-arbeitsauslastung installiert oder zuletzt aktualisiert wurde. Diese Version des Windows SDK ist mit alle neueren Windows-Versionen kompatibel. Wenn Sie eine frühere Version des SDK abzielen möchten, können Sie Projekt öffnen | Eigenschaften, und wählen Sie die anderen SDK-Versionen in der Dropdownliste für das Windows SDK-Version verfügbar.  
+Wenn Sie ein klassisches Windows-desktop-Projekt in Visual Studio 2017 erstellen, ist es wird standardmäßig eingerichtet, mit der Version von Windows 10 SDK zu erstellen, die installiert wurde, wenn die C++-Desktop-Workload installiert oder zuletzt aktualisiert wurde. Diese Version des Windows SDK ist kompatibel, mit Windows 7 und höher. Finden Sie unter [verwenden der Windows-Header](/windows/desktop/WinProg/using-the-windows-headers) Informationen für bestimmte Versionen von Windows.
+
+Wenn Sie eine frühere Version des SDK abzielen möchten, können Sie öffnen **Projekt | Eigenschaften** , und wählen Sie die anderen SDK-Versionen in der Dropdownliste für die Windows SDK-Version verfügbar.
   
- Beginnend mit Visual Studio 2015 und Windows 10-SDK, wurde die CRT-Bibliothek getrennt, in zwei Teile: eine (Bibliothek Ucrtbase), die Funktionen enthält, die in universellen Windows-Apps verwendet werden, und eine, die alles andere (vcruntime140) enthält. Da das Windows 10-SDK neue Funktionen enthält, z. B. zahlreiche C99-Funktionen, müssen Sie die folgenden Schritte ausführen, um diese Funktionen verwenden zu können. Siehe [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md).  
+ Ab Visual Studio 2015 und Windows 10-SDKS, wurde die CRT-Bibliothek getrennt, in zwei Teile, eine (Bibliothek Ucrtbase), die Funktionen enthält, die in universellen Windows-Apps verwendet werden, und alles andere (vcruntime140) enthält. Da das Windows 10-SDK neue Funktionen enthält, z. B. zahlreiche C99-Funktionen, müssen Sie die folgenden Schritte ausführen, um diese Funktionen verwenden zu können. Siehe [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md).  
   
 ### <a name="to-target-the-windows-10-sdk"></a>Ausrichten auf das Windows 10-SDK  
   
-1.  Stellen Sie sicher, dass das Windows 10-SDK installiert ist. Das Windows 10-SDK installiert ist, als Teil der **Desktopentwicklung mit C++** arbeitsauslastung. Eine eigenständige Version finden Sie unter [heruntergeladen und tools für Windows 10](https://developer.microsoft.com/windows/downloads).
+1.  Stellen Sie sicher, dass das Windows 10-SDK installiert ist. Das Windows 10 SDK installiert ist, als Teil der **Desktopentwicklung mit C++** arbeitsauslastung. Eine eigenständige Version finden Sie unter [Downloads und tools für Windows 10](https://developer.microsoft.com/windows/downloads).
 
   
 2.  Öffnen Sie das Kontextmenü für den Projektknoten, und wählen Sie **SDK-Version neu zuweisen**aus.  
   
-     ![Ändern Sie die SDK-Version Zielversion](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
+     ![Neuzuweisen von SDK-Version](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
   
      Das Dialogfeld **Projektmappenaktionen überprüfen** wird angezeigt.  
   
-     ![Überprüfen Sie die Projektmappe Aktionen](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")  
+     ![Lösungsaktionen](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")  
   
-3.  In der **Version der Zielplattform** Dropdown Liste, wählen Sie die Version des Windows-10-SDKS, die verwendet werden soll. Klicken Sie auf „OK“, um die Änderung zu übernehmen.  
+3.  In der **Zielplattformversion** Dropdown Liste, wählen Sie die Version des Windows 10 SDK ausgerichtet werden sollen. Klicken Sie auf „OK“, um die Änderung zu übernehmen.  
   
      Beachten Sie, dass „8.1“ sich in diesem Zusammenhang auf die Version des Windows-SDKs bezieht, die ebenfalls abwärtskompatibel mit Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 und Windows Vista ist.  
   
@@ -47,13 +50,13 @@ Beim Erstellen einer klassischen Windows-Desktopprojekt in Visual Studio 2017 is
   
 4.  Öffnen Sie die Projekteigenschaften, und achten Sie im Abschnitt **Konfigurationseigenschaften, Allgemein** auf die Werte für **Version der Windows-Zielplattform**. Wenn Sie den Wert hier ändern, hat dies die gleichen Auswirkungen wie dieses Verfahren. Siehe [General Property Page (Project)](../ide/general-property-page-project.md).  
   
-     ![Plattformversion als Ziel](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
+     ![Version der Zielplattform](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     Diese Aktion ändert die Werte der Projektmakros, die Pfade zu den Headerdateien und Bibliotheksdateien enthalten. Um festzustellen, was sich geändert, im Abschnitt Visual C++-Verzeichnissen des Projekteigenschaften-Dialogfelds eine der Eigenschaften wie z. B. den Includeverzeichnissen, wählen Sie, öffnen Sie die Dropdownliste, und wählen \<Bearbeiten >. Das Dialogfeld **Includeverzeichnisse** wird angezeigt.  
+     Diese Aktion ändert die Werte der Projektmakros, die Pfade zu den Headerdateien und Bibliotheksdateien enthalten. Um herauszufinden, was geändert haben, im Abschnitt "Visual C++-Verzeichnisse" des Dialogfeld "Projekteigenschaften", wählen Sie eine der Eigenschaften wie z. B. den Includeverzeichnissen aus, wählen Sie zum Öffnen der Dropdownliste aus, und wählen \<Bearbeiten >. Das Dialogfeld **Includeverzeichnisse** wird angezeigt.  
   
      ![Dialogfeld für die Verzeichnisse enthalten](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
-     Wählen Sie die **Makros >>** Schaltfläche, und blättern Sie in der Liste mit den Makros zu den Windows SDK-Makros, um die neuen Werte anzuzeigen.  
+     Wählen Sie die **Makros >>** Schaltfläche, und blättern Sie in der Liste der Makros, die Windows SDK-Makros, um alle neuen Werte anzuzeigen.  
   
      ![Windows SDK-Makros](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")  
   

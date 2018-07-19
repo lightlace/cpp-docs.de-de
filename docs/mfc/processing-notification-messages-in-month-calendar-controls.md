@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26b4d73284b0cff362ba16248e0906b76c7f52a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9906a738ed6c577f46d2919a5cdac80b877110
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930988"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>Verarbeiten von Benachrichtigungsmeldungen in Monatskalender-Steuerelementen
 Als Benutzer mit der im Monatskalender-Steuerelement (Auswahl von Datumsangaben und/oder einen anderen Monat anzeigen), das Steuerelement interagieren (`CMonthCalCtrl`) sendet benachrichtigungsmeldungen an das übergeordnete Fenster, normalerweise ein Ansichts- oder Dialogfeldobjekt-Objekt. Behandeln Sie diese Nachrichten, wenn Sie darauf reagieren möchten. Wenn der Benutzer einen neuen Monat anzeigen auswählt, können Sie z. B. einen Satz mit Datumsangaben bereitstellen, die hervorgehoben werden sollen.  
@@ -31,11 +32,11 @@ Als Benutzer mit der im Monatskalender-Steuerelement (Auswahl von Datumsangaben 
   
  Die folgende Liste beschreibt die verschiedenen Benachrichtigungen per im Monatskalender-Steuerelement.  
   
--   **MCN_GETDAYSTATE** fordert Informationen darüber, welche Tage in Fettschrift angezeigt werden soll. Informationen zur Behandlung dieser benachrichtigungs finden Sie unter [Einstellen des Tagesstatus für ein Monatskalender-Steuerelement](../mfc/setting-the-day-state-of-a-month-calendar-control.md).  
+-   MCN_GETDAYSTATE fordert Informationen darüber, welche Tage in Fettschrift angezeigt werden soll. Informationen zur Behandlung dieser benachrichtigungs finden Sie unter [Einstellen des Tagesstatus für ein Monatskalender-Steuerelement](../mfc/setting-the-day-state-of-a-month-calendar-control.md).  
   
--   **MCN_SELCHANGE** benachrichtigt das übergeordnete Element, das das ausgewählte Datum oder der Datumsbereich geändert wurde.  
+-   MCN_SELCHANGE benachrichtigt das übergeordnete Element, das das ausgewählte Datum oder der Datumsbereich geändert wurde.  
   
--   **MCN_SELECT** benachrichtigt das übergeordnete Element, das eine explizite Datumsauswahl festgelegt wurde.  
+-   MCN_SELECT benachrichtigt das übergeordnete Element, das eine explizite Datumsauswahl festgelegt wurde.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   

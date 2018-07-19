@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860189"
 ---
 # <a name="attributed-programming-concepts"></a>Konzepte der attributierten Programmierung
 Visual C++ enthält eine Vielzahl von Material können Sie die Attribute in Ihren Programmen zu verwenden. Attribute, ein neues Feature in Visual C++ dienen zur Programmierung von COM und .NET Framework common Language Runtime-Entwicklung zu vereinfachen. Attribute in den Quellcodedateien einschließen möchten, arbeitet der Compiler mit Anbieter Dynamic Link Libraries (DLL) zum Einfügen von Code oder ändern Sie den Code in der generierten Objektdateien zusammen. Es sind Attribute, die bei der Erstellung der IDL-Dateien, Schnittstellen, Typbibliotheken und anderen COM-Elementen zu unterstützen. In der integrierten Entwicklungsumgebung (IDE) werden die Attribute von den Assistenten und im Fenster Eigenschaften von unterstützt.  

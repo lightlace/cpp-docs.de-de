@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383903"
 ---
 # <a name="punctuation-and-special-characters"></a>Interpunktions- und Sonderzeichen
 Interpunktion und Sonderzeichen im C-Zeichensatz haben verschiedene Funktionen. Diese reichen von der Strukturierung des Programmtexts bis zur Definition der Aufgaben, die der Compiler oder das kompilierte Programm ausführt. Sie legen keine auszuführende Operation fest. Einige Interpunktionssymbole sind auch Operatoren (siehe [Operatoren](../c-language/c-operators.md)). Der Compiler bestimmt ihre Verwendung im Kontext.  

@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392418"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist und _sys_nerr
 Globale Makros, die während der Programmausführung festgelegte Fehlercodes und mit den Fehlercodes identische Zeichenfolgen zur Anzeige enthalten.  

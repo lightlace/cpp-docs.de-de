@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 692c5243a7fe2984d43a1e70fc39616de5cbcc9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d21fcc27b5b4f92b690d8fae7669a18a5fcc1c46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964937"
 ---
 # <a name="islvaluereference-class"></a>is_lvalue_reference-Klasse
 
@@ -36,11 +37,11 @@ struct is_lvalue_reference;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz dieses Typprädikats ist TRUE, wenn der `Ty`-Typ ein Verweis auf ein Objekt oder eine Funktion ist; andernfalls FALSE. Beachten Sie, dass es sich beim `Ty`-Typ möglicherweise nicht um einen rvalue-Verweis handelt. Weitere Informationen zu Rvalues finden Sie unter [Rvalue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+Eine Instanz dieses typprädikats ist true, wenn der Typ *Ty* ist ein Verweis auf ein Objekt oder eine Funktion ist, andernfalls "false". Beachten Sie, dass *Ty* möglicherweise nicht in ein Rvalue-Verweis. Weitere Informationen zu „rvalues“ finden Sie unter [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md) (Rvalue-Verweisdeklarator: &&).
 
 ## <a name="requirements"></a>Anforderungen
 

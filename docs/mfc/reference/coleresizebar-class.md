@@ -1,5 +1,5 @@
 ---
-title: COleResizeBar Klasse | Microsoft Docs
+title: COleResizeBar-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf000b45e2bd24ec40e1ae15001c3df46d1b12c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3706521108d848535742bf2314142fedf46f1746
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852711"
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar-Klasse
 Ein Steuerleistentyp, die Größenanpassung von direkten OLE-Elementen unterstützt.  
@@ -50,9 +51,9 @@ class COleResizeBar : public CControlBar
 |[COleResizeBar::Create](#create)|Erstellt und initialisiert ein untergeordnetes Fenster von Windows und ordnet es die `COleResizeBar` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `COleResizeBar` Objekte werden als ein [CRectTracker](../../mfc/reference/crecttracker-class.md) mit einem schraffierten Rahmen und äußeren Handles zur Größenänderung.  
+ `COleResizeBar` Objekte werden als eine [CRectTracker](../../mfc/reference/crecttracker-class.md) mit schraffiert und äußeren Handles zur Größenänderung.  
   
- `COleResizeBar` -Objekte sind in der Regel eingebettete Elemente des Rahmenfensterobjekt abgeleitet wurde. die [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) Klasse.  
+ `COleResizeBar` Objekte sind in der Regel eingebettete Elemente der abgeleitete Rahmenfenster Objekte der [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) Klasse.  
   
  Weitere Informationen finden Sie im Artikel [Aktivierung](../../mfc/activation-cpp.md).  
   
@@ -78,10 +79,10 @@ COleResizeBar();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie **erstellen** Resize Bar-Objekt zu erstellen.  
+ Rufen Sie `Create` das Ändern der Größe Bar-Objekt zu erstellen.  
   
 ##  <a name="create"></a>  COleResizeBar::Create  
- Erstellt ein untergeordnetes Fenster, und ordnet sie der `COleResizeBar` Objekt.  
+ Erstellt ein untergeordnetes Fenster und ordnet ihn dem `COleResizeBar` Objekt.  
   
 ```  
 virtual BOOL Create(
@@ -91,17 +92,17 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentWnd`  
- Ein Zeiger auf das übergeordnete Fenster des Balkens zum Ändern der Größe.  
+ *pParentWnd*  
+ Zeiger auf das übergeordnete Fenster der Größe angezeigt.  
   
- `dwStyle`  
+ *dwStyle*  
  Gibt an, die [Fensterstil](../../mfc/reference/styles-used-by-mfc.md#window-styles) Attribute.  
   
- `nID`  
- Die Größe des Balkens untergeordnetes Fenster-ID.  
+ *nID*  
+ Die Größe des Balkens untergeordneten Fensters-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Größenanpassungsleiste zum Ändern der erstellt wurde; andernfalls 0.  
+ Ungleich NULL, wenn die Größenänderung Leiste erstellt wurde; andernfalls 0.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Beispiel SUPERPAD](../../visual-cpp-samples.md)   

@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0e1e57693650c69aa1a5b8ec006830458ef7775
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c691ce0896a5227e28db6ac8f684d712150e8861
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960914"
 ---
 # <a name="maxfixedsize-class"></a>max_fixed_size-Klasse
 
@@ -47,7 +48,7 @@ class max_fixed_size
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Max`|Die max-Klasse, die die maximale Anzahl von Elementen zum Speichern in der `freelist` bestimmt.|
+|*Max*|Die max-Klasse, die die maximale Anzahl von Elementen zum Speichern in der `freelist` bestimmt.|
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -83,11 +84,11 @@ void allocated(std::size_t _Nx = 1);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`_Nx`|Der Inkrementwert|
+|*_Nx*|Der Inkrementwert|
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion bleibt untätig. Diese Memberfunktion wird nach jedem erfolgreichen Aufruf von `cache_freelist::allocate` auf Operator `new` aufgerufen. Das Argument `_Nx` stellt die Anzahl der Speicherblöcke im Segment dar, die vom Operator `new` zugeordnet wurde.
+Die Memberfunktion bleibt untätig. Diese Memberfunktion aufgerufen wird, nach jedem erfolgreichen Aufruf von `cache_freelist::allocate` Operator **neue**. Das Argument *_Nx* ist die Anzahl der Speicherblöcke im Segment von Operator zugeordneten **neue**.
 
 ## <a name="deallocated"></a> max_fixed_size::deallocated
 
@@ -101,11 +102,11 @@ void deallocated(std::size_t _Nx = 1);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`_Nx`|Der Inkrementwert|
+|*_Nx*|Der Inkrementwert|
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion bleibt untätig. Diese Memberfunktion wird nach jedem Aufruf von `cache_freelist::deallocate` auf Operator `delete` aufgerufen. Das Argument `_Nx` stellt die Anzahl der Speicherblöcke im Segment dar, die vom Operator `delete` verringert wurde.
+Die Memberfunktion bleibt untätig. Diese Memberfunktion aufgerufen wird, nach jedem Aufruf von `cache_freelist::deallocate` Operator **löschen**. Das Argument *_Nx* ist die Anzahl der Speicherblöcke im Segment vom Operator aufgehoben **löschen**.
 
 ## <a name="full"></a> max_fixed_size::full
 
@@ -117,11 +118,11 @@ bool full();
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` wenn `Max <= _Nblocks`; andernfalls `false`.
+**"true"** Wenn `Max <= _Nblocks`ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion wird von `cache_freelist::deallocate` aufgerufen. Wenn der Aufruf `true` zurückgibt, setzt `deallocate` den Speicherblock auf die Freiliste. Wenn FALSE zurückgegeben wird, ruft `deallocate` den Operator `delete` auf, um die Zuordnung für den Block aufzuheben.
+Diese Memberfunktion wird von `cache_freelist::deallocate` aufgerufen. Wenn der Aufruf zurückgegeben **"true"**, `deallocate` den Speicherblock der Freiliste hinzugefügt; versetzt, wenn "false" zurückgegeben `deallocate` Aufrufe Operator **löschen** beim Aufheben der Zuordnung des Blocks.
 
 ## <a name="max_fixed_size"></a> max_fixed_size::max_fixed_size
 

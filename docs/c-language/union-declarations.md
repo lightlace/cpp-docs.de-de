@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391177"
 ---
 # <a name="union-declarations"></a>Union-Deklarationen
 Eine „Unionsdeklaration“ gibt einen Satz Variablenwerte und optional ein Tag an, der die Union benennt. Die Variablenwerte werden als "Member" der Union bezeichnet und können unterschiedliche Typen aufweisen. Unions ähneln varianten Datensätzen in anderen Sprachen.  

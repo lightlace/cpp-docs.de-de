@@ -1,5 +1,5 @@
 ---
-title: Durch das Auslösen von Softwareausnahmen | Microsoft Docs
+title: Auslösen von Softwareausnahmen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,26 +23,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa925a01633d72f43b165b87c27e5203a143d1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943775"
 ---
 # <a name="raising-software-exceptions"></a>Auslösen von Softwareausnahmen
 Einige der häufigsten Programmfehlerquellen werden vom System nicht als Ausnahmen gekennzeichnet. Wenn Sie beispielsweise versuchen, einen Speicherblock zu belegen, jedoch unzureichend Arbeitsspeicher vorhanden ist, löst die Laufzeit oder API-Funktion keine Ausnahme aus, sondern gibt einen Fehlercode zurück.  
   
- Sie können jedoch jede Bedingung als Ausnahme behandeln, durch das erkennen diese Bedingung in Ihrem Code, und melden es dann durch Aufrufen der [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) Funktion. Indem Sie Fehler auf diese Weise kennzeichnen, können Sie die Vorteile der strukturierten Ausnahmebehandlung für jede Art von Laufzeitfehler nutzen.  
+ Allerdings können Sie jede Bedingung, die auch als Ausnahme behandeln, durch die Bedingung in Ihrem Code erkennen und dann durch Aufrufen der [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) Funktion. Indem Sie Fehler auf diese Weise kennzeichnen, können Sie die Vorteile der strukturierten Ausnahmebehandlung für jede Art von Laufzeitfehler nutzen.  
   
  So verwenden Sie die strukturierte Ausnahmebehandlung bei Fehlern  
   
 -   Definieren Sie einen eigenen Ausnahmecode für das Ereignis.  
   
--   Rufen Sie **RaiseException** Wenn Sie ein Problem feststellen.  
+-   Rufen Sie `RaiseException` Wenn Sie ein Problem feststellen.  
   
 -   Verwenden Sie Ausnahmebehandlungsfilter, um den von Ihnen definierten Ausnahmecode zu testen.  
   
- Die \<winerror.h > Datei zeigt das Format für Ausnahmecodes. Um sicherzustellen, dass Sie keinen Code definieren, der in Konflikt mit einem vorhandenen Ausnahmecode steht, legen Sie das dritte höchstwertige Bit auf 1 fest. Die vier höchstwertigen Bits sollten so festgelegt werden, wie in der folgenden Tabelle gezeigt.  
+ Die \<"Winerror.h" > Datei zeigt das Format für Ausnahmecodes. Um sicherzustellen, dass Sie keinen Code definieren, der in Konflikt mit einem vorhandenen Ausnahmecode steht, legen Sie das dritte höchstwertige Bit auf 1 fest. Die vier höchstwertigen Bits sollten so festgelegt werden, wie in der folgenden Tabelle gezeigt.  
   
 |Bits|Empfohlene Binäreinstellung|Beschreibung|  
 |----------|--------------------------------|-----------------|  
@@ -54,24 +55,24 @@ Einige der häufigsten Programmfehlerquellen werden vom System nicht als Ausnahm
   
  Das fehlercodeergebnis sollte daher die vier höchsten Bits auf hexadezimales e festgelegt haben. Die folgenden Definitionen definieren beispielsweise Ausnahmecodes, die keinen Konflikt mit jeder Windows-Ausnahmecodes. (Sie müssen jedoch prüfen, welche Codes von Drittanbieter-DLLs verwendet werden).  
   
-```  
+```cpp 
 #define STATUS_INSUFFICIENT_MEM       0xE0000001  
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
  Nachdem Sie einen Ausnahmecode definiert haben, können Sie ihn verwenden, um eine Ausnahme auszulösen. Zum Beispiel löst der folgende Code die STATUS_INSUFFICIENT_MEM-Ausnahme als Reaktion auf ein Problem mit der Speicherbelegung aus:  
   
-```  
+```cpp 
 lpstr = _malloc( nBufferSize );  
 if (lpstr == NULL)  
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
 ```  
   
- Wenn Sie einfach eine Ausnahme auslösen möchten, können Sie die letzten drei Parameter auf 0 festlegen. Die drei letzten Parameter übergeben zusätzliche Informationen und legen Flags fest, die Handler beim Fortsetzen der Ausführung hindern. Finden Sie unter der [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) -Funktion in der [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] für Weitere Informationen.  
+ Wenn Sie einfach eine Ausnahme auslösen möchten, können Sie die letzten drei Parameter auf 0 festlegen. Die drei letzten Parameter übergeben zusätzliche Informationen und legen Flags fest, die Handler beim Fortsetzen der Ausführung hindern. Finden Sie unter den [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) Funktion in der [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] für Weitere Informationen.  
   
  In den Ausnahmebehandlungsfiltern können Sie dann die Codes testen, die Sie definiert haben. Zum Beispiel:  
   
-```  
+```cpp 
 __try {  
     ...  
 }  

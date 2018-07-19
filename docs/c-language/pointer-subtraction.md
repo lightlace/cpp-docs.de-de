@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383726"
 ---
 # <a name="pointer-subtraction"></a>Zeiger-Subtraktion
 **ANSI 3.3.6, 4.1.1** Der Typ einer Ganzzahl, die erforderlich ist, um den Unterschied zwischen zwei Zeigern, die auf Elemente des gleichen Arrays – **ptrdiff_t** – zeigen, zu speichern  

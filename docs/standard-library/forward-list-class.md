@@ -90,11 +90,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e66d7f626943db2288cefdc6bedd5087f71c82
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c85e1637691d602c63208cd180071c0f388c5893
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954954"
 ---
 # <a name="forwardlist-class"></a>forward_list-Klasse
 
@@ -112,12 +113,12 @@ class forward_list
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Type`|Das in der Doppelschlange zu speichernde forward_list-Element.|
-|`Allocator`|Das gespeicherte Zuordnungsobjekt, das Details zum Belegen und Freigeben des Arbeitsspeichers des forward_list-Elements kapselt. Dieser Parameter ist optional. Der Standardwert lautet allocator< `Type`>.|
+|*Type*|Das in der Doppelschlange zu speichernde forward_list-Element.|
+|*Zuweisung*|Das gespeicherte Zuordnungsobjekt, das Details zum Belegen und Freigeben des Arbeitsspeichers des forward_list-Elements kapselt. Dieser Parameter ist optional. Der Standardwert lautet allocator< `Type`>.|
 
 ## <a name="remarks"></a>Hinweise
 
-Ein `forward_list`-Objekt nimmt für die Sequenz, die von ihm gesteuert wird, Speicherbelegungen und -freigaben über ein gespeichertes Objekt vor, das aus der Klasse `Allocator` abgeleitet wurde, die auf der [allocator-Klasse](../standard-library/allocator-class.md) basiert (im Allgemeinen als `std::allocator)` bekannt). Weitere Informationen finden Sie unter [Allocators](../standard-library/allocators.md). Ein Zuweisungsobjekt muss gleiche externe Schnittstelle wie ein Objekt der Vorlagenklasse `allocator` aufweisen.
+Ein `forward_list` Objekt weist speicherbelegungen und-Freigaben für die gesteuerte Sequenz durch ein gespeichertes Objekt der Klasse *Allocator* , basiert auf [Allocator-Klasse](../standard-library/allocator-class.md) (so genannte `std::allocator)`. Weitere Informationen finden Sie unter [Allocators](../standard-library/allocators.md). Ein Zuweisungsobjekt muss gleiche externe Schnittstelle wie ein Objekt der Vorlagenklasse `allocator` aufweisen.
 
 > [!NOTE]
 > Das gespeicherte Zuweisungsobjekt wird nicht kopiert, wenn das Containerobjekt zugewiesen wird.
@@ -138,7 +139,7 @@ Hinzufügungen zur gesteuerten Sequenz können bei Aufrufen von [forward_list::i
 |-|-|
 |[allocator_type](#allocator_type)|Ein Typ, mit dem die Zuweisungsklasse für ein forward list-Objekt dargestellt wird.|
 |[const_iterator](#const_iterator)|Ein Typ, der einen konstanten Iterator für die Vorwärtsliste bereitstellt.|
-|[const_pointer](#const_pointer)|Ein Typ, der einen Zeiger auf ein `const`-Element in einer Vorwärtsliste bereitstellt.|
+|[const_pointer](#const_pointer)|Ein Typ, einen Zeiger auf eine **const** Element in einer vorwärtsliste.|
 |[const_reference](#const_reference)|Ein Typ, der einen Konstantenverweis auf einer Vorwärtsliste gespeichertes Element bereitstellt.|
 |[difference_type](#difference_type)|Ein Ganzzahltyp mit Vorzeichen, der dazu verwendet werden kann, die Anzahl von Elementen einer Vorwärtsliste in einen Bereich zwischen Elementen darzustellen, auf die von Iteratoren gezeigt wird.|
 |[Iterator](#iterator)|Ein Typ, der einen Iterator für die Vorwärtsliste bereitstellt.|
@@ -223,12 +224,12 @@ void assign(InputIterator First, InputIterator Last);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`first`|Der Anfang des Ersetzungsbereichs.|
-|`last`|Das Ende des Ersetzungsbereichs.|
-|`count`|Die Anzahl zuzuweisender Elemente.|
-|`val`|Der jedem Element zuzuweisende Wert.|
-|`Type`|Der Typ des Werts.|
-|`IList`|Das zu kopierende initializer_list-Element.|
+|*Erste*|Der Anfang des Ersetzungsbereichs.|
+|*last*|Das Ende des Ersetzungsbereichs.|
+|*count*|Die Anzahl zuzuweisender Elemente.|
+|*val*|Der jedem Element zuzuweisende Wert.|
+|*Type*|Der Typ des Werts.|
+|* IList'|Das zu kopierende initializer_list-Element.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -284,7 +285,7 @@ Gibt einen Forward-Iterator zurück, der unmittelbar vor das erste Element der S
 
 ## <a name="cbegin"></a> forward_list::cbegin
 
-Gibt einen `const`-Iterator zurück, mit dem das erste Element im Bereich behandelt wird.
+Gibt eine **const** -Iterator, der das erste Element im Bereich adressiert.
 
 ```cpp
 const_iterator cbegin() const;
@@ -292,13 +293,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `const`-Forward-Access-Iterator, der auf das erste Element des Bereichs zeigt oder die Position direkt hinter dem Ende eines leeren Bereichs (für einen leeren Bereich gilt `cbegin() == cend()`).
+Ein **const** Forward-Access-Iterator, der zeigt auf das erste Element des Bereichs, oder die Position direkt hinter das Ende eines leeren Bereichs (für einen leeren Bereich gilt `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Hinweise
 
 Bei dem Rückgabewert `cbegin` können die Elemente im Bereich nicht geändert werden.
 
-Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger, änderbarer (nicht `const`) Container, der `begin()` und `cbegin()` unterstützt.
+Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel können Sie auch `Container` ein beliebiger änderbarer (nicht- **const**) Container jeder Art, die unterstützt `begin()` und `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -309,7 +310,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a> forward_list::cend
 
-Gibt einen `const`-Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines Bereichs unmittelbar nachfolgt.
+Gibt eine **const** Iterator, der die Position direkt hinter dem letzten Element in einem Bereich.
 
 ```cpp
 const_iterator cend() const;
@@ -323,7 +324,7 @@ Ein Forward-Access-Iterator, der auf eine Position unmittelbar hinter dem Ende d
 
 `cend` wird verwendet, um zu testen, ob ein Iterator das Ende seines Bereichs übergeben hat.
 
-Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger änderbarer (Nicht-`const`-)Container, der `end()` und `cend()` unterstützt.
+Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel können Sie auch `Container` ein beliebiger änderbarer (nicht- **const**) Container jeder Art, die unterstützt `end()` und `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -361,7 +362,7 @@ typedef implementation-defined const_iterator;
 
 ## <a name="const_pointer"></a> forward_list::const_pointer
 
-Ein Typ, der einen Zeiger auf ein `const`-Element in einer Vorwärtsliste bereitstellt.
+Ein Typ, einen Zeiger auf eine **const** Element in einer vorwärtsliste.
 
 ```cpp
 typedef typename Allocator::const_pointer
@@ -405,8 +406,8 @@ iterator emplace_after(const_iterator Where, Type&& val);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Where`|Die Position in der forward_list-Klasse, an der das neue Element erstellt wird.|
-|`val`|Das Konstruktorargument|
+|*Where*|Die Position in der forward_list-Klasse, an der das neue Element erstellt wird.|
+|*val*|Das Konstruktorargument|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -414,7 +415,7 @@ Ein Iterator, der das neu eingefügte Element entwirft
 
 ### <a name="remarks"></a>Hinweise
 
-Diese Memberfunktion fügt ein Element mit dem Konstruktorargument `val` direkt hinter dem Element ein, auf das `Where` in der gesteuerten Sequenz zeigt. Das Verhalten entspricht andernfalls [forward_list::insert_after](#insert_after).
+Diese Memberfunktion Fügt ein Element mit dem Konstruktorargument *Val* direkt hinter dem Element verweist *, in denen* in der kontrollierten Sequenz. Das Verhalten entspricht andernfalls [forward_list::insert_after](#insert_after).
 
 ## <a name="emplace_front"></a> forward_list::emplace_front
 
@@ -429,7 +430,7 @@ void emplace_front(Type&& val);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`val`|Das am Anfang der Vorwärtsliste hinzugefügte Element|
+|*val*|Das am Anfang der Vorwärtsliste hinzugefügte Element|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -447,7 +448,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die forward_list-Klasse leer ist, andernfalls `false`.
+**"true"** ist die Liste leer ist, andernfalls **"false"**.
 
 ## <a name="end"></a> forward_list::end
 
@@ -475,9 +476,9 @@ iterator erase_after(const_iterator first, const_iterator last);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Where`|Die Position in der forward_list-Klasse, an der das Element gelöscht wird|
-|`first`|Der Anfang des zu löschenden Bereichs|
-|`last`|Das Ende des zu löschenden Bereichs|
+|*Where*|Die Position in der forward_list-Klasse, an der das Element gelöscht wird|
+|*Erste*|Der Anfang des zu löschenden Bereichs|
+|*last*|Das Ende des zu löschenden Bereichs|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -485,7 +486,7 @@ Ein Iterator, der das erste über die entfernten Elemente hinaus verbliebene Ele
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Memberfunktion entfernt das Element der gesteuerten Sequenz direkt hinter `Where`.
+Die erste Memberfunktion entfernt das Element der gesteuerten Sequenz direkt hinter *, in denen*.
 
 Die zweite Memberfunktion entfernt die Elemente der gesteuerten Sequenz im Bereich `( first,  last)` (keiner der beiden Endpunkte ist beinhaltet).
 
@@ -518,25 +519,25 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Al`|Die mit diesem Objekt zu verwendende Zuweisungsklasse.|
-|`Count`|Die Anzahl von Elementen in der erstellten Liste.|
-|`Val`|Der Wert der Elemente in der erstellten Liste.|
-|`Right`|Die Liste, deren Kopie die erstellte Liste ist.|
-|`First`|Die Position des ersten Elements in dem zu kopierenden Elementbereich.|
-|`Last`|Die Position des ersten Elements nach dem zu kopierenden Elementbereich.|
-|`IList`|Das zu kopierende initializer_list-Element.|
+|*Al*|Die mit diesem Objekt zu verwendende Zuweisungsklasse.|
+|*Anzahl*|Die Anzahl von Elementen in der erstellten Liste.|
+|*val*|Der Wert der Elemente in der erstellten Liste.|
+|*Rechts*|Die Liste, deren Kopie die erstellte Liste ist.|
+|*Erste*|Die Position des ersten Elements in dem zu kopierenden Elementbereich.|
+|*letzte*|Die Position des ersten Elements nach dem zu kopierenden Elementbereich.|
+|*IList*|Das zu kopierende initializer_list-Element.|
 
 ### <a name="remarks"></a>Hinweise
 
-Alle Konstruktoren speichern [allocator](../standard-library/allocator-class.md)-Element und initialisieren die gesteuerte Sequenz. Das Zuweisungsobjekt ist das Argument `Al`, sofern es vorhanden ist. Beim Kopierkonstruktor ist es ` right.get_allocator()`. Andernfalls ist der Wert `Allocator()`.
+Alle Konstruktoren speichern [allocator](../standard-library/allocator-class.md)-Element und initialisieren die gesteuerte Sequenz. Das Zuweisungsobjekt ist das Argument *Al*, falls vorhanden. Beim Kopierkonstruktor ist es ` right.get_allocator()`. Andernfalls ist der Wert `Allocator()`.
 
 Die ersten beiden Konstruktoren geben eine leere gesteuerte Sequenz an.
 
-Der dritte Konstruktor gibt eine Wiederholung der `Count`-Elemente des Werts `Type()` an.
+Der dritte Konstruktor gibt eine Wiederholung von *Anzahl* -Elementen des Werts `Type()`.
 
-Die vierten und fünften Konstruktoren geben eine Wiederholung von `Count`-Elementen des Werts `Val` an.
+Die vierten und fünften Konstruktoren geben eine Wiederholung von *Anzahl* -Elementen des Werts *Val*.
 
-Mit dem sechsten Konstruktor wird eine Kopie der Sequenz angegeben, die von `Right` gesteuert wird. Wenn `InputIterator` ein Ganzzahltyp ist, geben die folgenden zwei Konstruktoren eine Wiederholung von `(size_type)First`-Elementen des Werts `(Type)Last` an. Andernfalls geben die folgenden zwei Konstruktoren die Sequenz `[First, Last)` an.
+Der sechste Konstruktor gibt eine Kopie der gesteuerte Sequenz durch *rechts*. Wenn `InputIterator` ein Ganzzahltyp ist, geben die folgenden zwei Konstruktoren eine Wiederholung von `(size_type)First`-Elementen des Werts `(Type)Last` an. Andernfalls geben die folgenden zwei Konstruktoren die Sequenz `[First, Last)` an.
 
 Der neunte und zehnte Konstruktor sind mit dem sechsten identisch, haben aber einen [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md)-Verweis.
 
@@ -584,12 +585,12 @@ void insert_after(const_iterator Where, InputIterator First, InputIterator Last)
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Where`|Die Position in der Zielvorwärtsliste, an der das erste Element eingefügt wird.|
-|`Count`|Die Anzahl einzufügender Elemente.|
-|`First`|Der Anfang des Einfügebereichs.|
-|`Last`|Das Ende des Einfügebereichs.|
-|`Val`|Das Element hinzugefügt Vorwärtsliste.|
-|`IList`|Das einzufügende initializer_list-Element.|
+|*Where*|Die Position in der Zielvorwärtsliste, an der das erste Element eingefügt wird.|
+|*Anzahl*|Die Anzahl einzufügender Elemente.|
+|*Erste*|Der Anfang des Einfügebereichs.|
+|*letzte*|Das Ende des Einfügebereichs.|
+|*val*|Das Element hinzugefügt Vorwärtsliste.|
+|*IList*|Das einzufügende initializer_list-Element.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -597,11 +598,11 @@ Ein Iterator, der das neu eingefügte Element festlegt (nur erste und letzte Mem
 
 ### <a name="remarks"></a>Hinweise
 
-Jede der Memberfunktionseinfügungen – direkt nach dem Element, auf das von `Where` in der gesteuerten Sequenz gezeigt wird – eine Sequenz, die von den verbleibenden Operanden angegeben wird.
+Jede der memberfunktionseinfügungen – direkt nach dem Element verweist *, in denen* in der gesteuerten Sequenz – eine Sequenz, die "von den verbleibenden Operanden angegeben.
 
-Die erste Memberfunktion fügt ein Element ein, das den Wert `Val` aufweist und ein Iterator zurückgibt, der das neu eingefügte Element festlegt.
+Die erste Memberfunktion Fügt ein Element mit Wert *Val* und gibt einen Iterator, der das neu eingefügte Element festlegt.
 
-Die zweite Memberfunktion fügt eine Wiederholung der `Count`-Elemente des Werts `Val` ein.
+Die zweite Memberfunktion Fügt eine Wiederholung der *Anzahl* -Elementen des Werts *Val*.
 
 Wenn `InputIterator` ein Ganzzahltyp ist, verhält sich die dritte Memberfunktion genau wie `insert(it, (size_type)First, (Type)Last)`. Andernfalls wird die Sequenz `[First, Last)` eingefügt, die die ursprüngliche gesteuerte Sequenz nicht überschneiden darf.
 
@@ -653,12 +654,12 @@ void merge(forward_list& right, Predicate comp);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`right`|Die forward_list-Klasse, aus der zusammengeführt wird|
-|`comp`|Der Funktionenvergleichsobjekt, das zum Sortieren der Elemente verwendet wird|
+|*right*|Die forward_list-Klasse, aus der zusammengeführt wird|
+|*comp*|Der Funktionenvergleichsobjekt, das zum Sortieren der Elemente verwendet wird|
 
 ### <a name="remarks"></a>Hinweise
 
-`forward_list::merge` Entfernt Elemente aus der `forward_list` `right`, und fügt sie in dieser `forward_list`. Beide Sequenzen müssen nach dem gleichen Prädikat sortiert werden, wie unten beschrieben. Die kombinierte Ereignissequenz wird ebenfalls nach diesem Funktionenvergleichssobjekt sortiert.
+`forward_list::merge` Entfernt Elemente aus der `forward_list` `right`, und fügt sie in `forward_list`. Beide Sequenzen müssen nach dem gleichen Prädikat sortiert werden, wie unten beschrieben. Die kombinierte Ereignissequenz wird ebenfalls nach diesem Funktionenvergleichssobjekt sortiert.
 
 Für die Iteratoren `Pi` und `Pj`, die Elemente an den Positionen `i` und `j` festlegen, erzwingt die erste Memberfunktion die Reihenfolge `!(*Pj < *Pi)`, immer wenn `i < j` vorliegt. (Die Elemente werden in aufsteigender Reihenfolge (`ascending`) sortiert.) Die zweite Memberfunktion erzwingt die Reihenfolge `! comp(*Pj, *Pi)`, immer wenn `i < j` vorliegt.
 
@@ -680,12 +681,12 @@ forward_list& operator=(forward_list&& right);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`right`|forward_list-Klasse, die in die forward_list-Klasse kopiert wird|
-|`IList`|Ein Initialisierer mit geschweiften Klammern, der sich wie eine Sequenz von Elementen des Typs `Type` verhält.|
+|*right*|forward_list-Klasse, die in die forward_list-Klasse kopiert wird|
+|*IList*|Ein Initialisierer mit geschweiften Klammern, der sich wie eine Sequenz von Elementen des Typs `Type` verhält.|
 
 ### <a name="remarks"></a>Hinweise
 
-Der Memberoperator ersetzt die gesteuerte Sequenz durch eine Kopie der von `right` gesteuerten Sequenz.
+Der erste Memberoperator ersetzt die kontrollierte Sequenz durch eine Kopie der gesteuerte Sequenz durch *rechten*.
 
 Der zweite Memberoperator ersetzt die gesteuerte Sequenz durch ein Objekt der Klasse `initializer_list<Type>`.
 
@@ -728,7 +729,7 @@ void push_front(Type&& val);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`val`|Das am Anfang der Vorwärtsliste hinzugefügte Element|
+|*val*|Das am Anfang der Vorwärtsliste hinzugefügte Element|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -756,7 +757,7 @@ void remove(const Type& val);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`val`|Der Wert, der, sofern er von einem Element gehalten wird, das Entfernen dieses Elements aus der Liste verursacht.|
+|*val*|Der Wert, der, sofern er von einem Element gehalten wird, das Entfernen dieses Elements aus der Liste verursacht.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -777,13 +778,13 @@ void remove_if(Predicate pred);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`pred`|Das unäre Prädikat, das bei Erfüllung durch ein Element das Löschen dieses Elements in der Liste zur Folge hat.|
+|*Pred*|Das unäre Prädikat, das bei Erfüllung durch ein Element das Löschen dieses Elements in der Liste zur Folge hat.|
 
 ### <a name="remarks"></a>Hinweise
 
 Die Memberfunktion entfernt alle Elemente aus der kontrollierten Sequenz, die vom Iterator `P` bestimmt wurden, für den ` pred(*P)` TRUE ist.
 
-Eine Ausnahme tritt nur dann auf, wenn `pred` eine Ausnahme auslöst. In diesem Fall bleibt die gesteuerten Sequenz in einem nicht vorgegebenen Zustand, und die Ausnahme wird erneut ausgelöst.
+Eine Ausnahme tritt auf, wenn nur *Pred* löst eine Ausnahme aus. In diesem Fall bleibt die gesteuerten Sequenz in einem nicht vorgegebenen Zustand, und die Ausnahme wird erneut ausgelöst.
 
 ## <a name="resize"></a> forward_list::resize
 
@@ -798,12 +799,12 @@ void resize(size_type _Newsize, const Type& val);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`_Newsize`|Die Anzahl der Elemente im Vorwärtsliste, deren Größe angepasst wurde|
-|`val`|Der für die Auffüllung zu nutzende Wert|
+|*_Newsize*|Die Anzahl der Elemente im Vorwärtsliste, deren Größe angepasst wurde|
+|*val*|Der für die Auffüllung zu nutzende Wert|
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktionen stellen beide sicher, dass die Anzahl der Elemente in der Liste fortan `_Newsize` beträgt. Wenn die gesteuerte Sequenz verlängert werden muss, fügt die erste Memberfunktion Elemente mit dem Wert `Type()` an, während die zweite Memberfunktion Elemente mit dem Wert `val` anfügt. Damit die gesteuerte Sequenz kürzer wird, rufen beide Memberfunktionen `erase_after(begin() + _Newsize - 1, end())` auf.
+Die beiden Memberfunktionen stellen Sie sicher, dass die Anzahl der Elemente in der Liste fortan *_Newsize*. Wenn sie die gesteuerte Sequenz verlängert vornehmen muss, fügt die erste Memberfunktion Elemente mit dem Wert `Type()`, während die zweite Memberfunktion Elemente mit dem Wert fügt *Val*. Damit die gesteuerte Sequenz kürzer wird, rufen beide Memberfunktionen `erase_after(begin() + _Newsize - 1, end())` auf.
 
 ## <a name="reverse"></a> forward_list::reverse
 
@@ -841,7 +842,7 @@ void sort(Predicate pred);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`pred`|Das Sortierungsprädikat|
+|*Pred*|Das Sortierungsprädikat|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -849,7 +850,7 @@ Beide Memberfunktionen sortieren die Elemente in der gesteuerten Sequenz mithilf
 
 Für die Iteratoren `Pi` und `Pj`, die Elemente an den Positionen `i` und `j` festlegen, erzwingt die erste Memberfunktion die Reihenfolge `!(*Pj < *Pi)`, immer wenn `i < j` vorliegt. (Die Elemente werden in aufsteigender Reihenfolge (`ascending`) sortiert.) Die Membervorlagenfunktion erzwingt die Reihenfolge `! pred(*Pj, *Pi)`, immer wenn `i < j` vorliegt. In der ursprünglichen gesteuerten Sequenz werden in der resultierenden gesteuerten Sequenz keine sortierten Elementpaare rückgängig gemacht. (Die Sortierung ist stabil.)
 
-Eine Ausnahme tritt nur dann auf, wenn `pred` eine Ausnahme auslöst. In diesem Fall bleibt die gesteuerten Sequenz in einer nicht vorgegebenen Reihenfolge, und die Ausnahme wird erneut ausgelöst.
+Eine Ausnahme tritt auf, wenn nur *Pred* löst eine Ausnahme aus. In diesem Fall bleibt die gesteuerten Sequenz in einer nicht vorgegebenen Reihenfolge, und die Ausnahme wird erneut ausgelöst.
 
 ## <a name="splice_after"></a> forward_list::splice_after
 
@@ -880,25 +881,25 @@ void splice_after(
 
 ### <a name="parameters"></a>Parameter
 
-`Where` Die Position in der Ziel-Forward_list, nach dem Einfügen.
+*Wo* die Position in die Ziel-Forward_list, nach dem eingefügt werden soll.
 
-`Source` Der Quell-Forward_list, die in der Ziel-Forward_list eingefügt werden soll.
+*Quelle* der Quell-Forward_list, die in der Ziel-Forward_list eingefügt werden soll.
 
-`Iter` Das Element, aus der Quell-Forward_list eingefügt werden soll.
+*Iter* das Element, aus der Quell-Forward_list eingefügt werden soll.
 
-`First` Das erste Element im Bereich, das aus der Quell-Forward_list eingefügt werden soll.
+*Erste* das erste Element im Bereich, aus der Quell-Forward_list eingefügt werden soll.
 
-`Last` Die erste Position hinter dem Bereich, aus der Quell-Forward_list eingefügt werden soll.
+*Letzte* die erste Position hinter dem Bereich, aus der Quell-Forward_list eingefügt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Das erste Paar von Memberfunktionen fügt die durch `Source` gesteuerte Sequenz direkt hinter dem Element in der gesteuerten Sequenz ein, auf die von `Where` gezeigt wird. Es entfernt auch alle Elemente aus `Source`. ( `&Source` darf nicht gleich `this` sein.)
+Das erste Paar von Memberfunktionen fügt die gesteuerte Sequenz durch ein *Quelle* direkt hinter dem Element in der kontrollierten Sequenz verweist *, in denen*. Es entfernt auch alle Elemente aus *Quelle*. (`&Source` darf nicht gleich **dies**.)
 
-Das zweite Paar von Memberfunktionen entfernt das Element direkt hinter `Iter` in der durch `Source` gesteuerten Sequenz und fügt es hinter dem Element in der gesteuerten Sequenz ein, auf die von `Where` gezeigt wird. (Wenn `Where == Iter || Where == ++Iter` ist, findet keine Änderung statt.)
+Das zweite Paar von Memberfunktionen entfernt das Element direkt nach *Iter* in der Reihenfolge benutzergesteuert *Quelle* und fügt es hinter das Element in der kontrollierten Sequenz, zeigt *, In denen*. (Wenn `Where == Iter || Where == ++Iter` ist, findet keine Änderung statt.)
 
-Das dritte Paar von Memberfunktionen (Bereich-Splice) fügt den von `(First, Last)` festgelegten Unterbereich aus der durch `Source` gesteuerten Sequenz direkt hinter dem Element in der gesteuerten Sequenz ein, auf die von `Where` gezeigt wird. Es entfernt auch den Original-Unterbereich aus der durch `Source` gespeicherten Sequenz. (Wenn `&Source == this` ist, darf der Bereich `(First, Last)` nicht das Element enthalten, auf das von `Where` gezeigt wird.)
+Das dritte Paar von Memberfunktionen (Bereich-Splice) Fügt der Unterbereich gesucht, die vom angegebenen `(First, Last)` aus die gesteuerte Sequenz durch *Quelle* direkt hinter dem Element in der kontrollierten Sequenz verweist *, in denen*. Es entfernt auch den original-Unterbereich aus die gesteuerte Sequenz durch *Quelle*. (Wenn `&Source == this`, den Bereich `(First, Last)` dürfen keine in das Element verweist *, in denen*.)
 
-Wenn der Bereichs-Splice `N`-Elemente und `&Source != this` einfügt, wird ein Objekt der [iterator](#iterator)-Klasse um das `N`-vergrößert erhöht.
+Wenn der Bereichs-Splice `N`-Elemente und `&Source != this` einfügt, wird ein Objekt der Klasse [iterator](#iterator) um das `N`-fache erhöht.
 
 Keine Iteratoren, Zeiger oder Verweise, die zusammengeführte Elemente bezeichnen, werden ungültig.
 
@@ -988,11 +989,11 @@ void swap(forward_list& right);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`right`|Die forward_list-Klasse, die auszutauschende Elemente bereitstellt|
+|*right*|Die forward_list-Klasse, die auszutauschende Elemente bereitstellt|
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `*this` und `right` aus. Wenn `get_allocator() ==  right.get_allocator()`, führt sie dies in einer konstanten Zeit aus, löst keine Ausnahmen aus und macht keine Verweise, Zeiger oder Iteratoren ungültig, die Elemente in den beiden gesteuerten Sequenzen bestimmen. Andernfalls führt Sie proportional zur Anzahl der Elemente in den beiden kontrollierten Sequenzen eine Reihe von Elementzuweisungen und Konstruktoraufrufe aus.
+Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `*this` und *rechten*. Wenn `get_allocator() ==  right.get_allocator()`, führt sie dies in einer konstanten Zeit aus, löst keine Ausnahmen aus und macht keine Verweise, Zeiger oder Iteratoren ungültig, die Elemente in den beiden gesteuerten Sequenzen bestimmen. Andernfalls führt Sie proportional zur Anzahl der Elemente in den beiden kontrollierten Sequenzen eine Reihe von Elementzuweisungen und Konstruktoraufrufe aus.
 
 ## <a name="unique"></a> forward_list::unique
 
@@ -1008,7 +1009,7 @@ void unique(BinaryPredicate comp);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`comp`|Das binäre Prädikat, das zum Vergleichen von aufeinander folgenden Elementen verwendet wird.|
+|*comp*|Das binäre Prädikat, das zum Vergleichen von aufeinander folgenden Elementen verwendet wird.|
 
 ### <a name="remarks"></a>Hinweise
 

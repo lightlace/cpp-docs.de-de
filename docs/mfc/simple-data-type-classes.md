@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d7f200ee35489f37256023d28bdd3260bf48ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 176ad940e95fbbf18e4ea86800111b483ee32135
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953595"
 ---
 # <a name="simple-data-type-classes"></a>Klassen für einfache Datentypen
-Die folgenden Klassen kapseln, zeichnen Koordinaten, Zeichenfolgen und Uhrzeit und Datumsinformationen, sodass die praktische von C++-Syntax verwenden. Diese Objekte werden häufig als Parameter für die Memberfunktionen der Windows-Klassen in der Klassenbibliothek verwendet werden. Da `CPoint`, `CSize`, und `CRect` entsprechen der **Punkt**, **Größe**, und `RECT` um Datenstrukturen handelt, bzw., im Windows SDK können Sie Objekte dieser C++-Klassen, wo Sie diese Strukturen C-Sprachen verwenden können. Die Klassen bieten nützliche Schnittstellen über deren Memberfunktionen. `CStringT` Stellt sehr flexibel, dynamische Zeichenfolgen bereit. `CTime`, `COleDateTime`, `CTimeSpan`, und **COleTimeSpan** Uhrzeit-und Datumswerte darstellen. Weitere Informationen zu diesen Klassen finden Sie im Artikel [Datum und Uhrzeit](../atl-mfc-shared/date-and-time.md).  
+Die folgenden Klassen kapseln, zeichnen Koordinaten, Zeichenfolgen und Uhrzeit und Datumsinformationen, sodass die praktische von C++-Syntax verwenden. Diese Objekte werden häufig als Parameter für die Memberfunktionen der Windows-Klassen in der Klassenbibliothek verwendet werden. Da `CPoint`, `CSize`, und `CRect` entsprechen den **Punkt**, **Größe**, und **RECT** Strukturen bzw., im Windows SDK Sie können Objekte dieser C++-Klassen verwenden, wo Sie diese Strukturen C-Sprachen verwenden können. Die Klassen bieten nützliche Schnittstellen über deren Memberfunktionen. `CStringT` Stellt sehr flexibel, dynamische Zeichenfolgen bereit. `CTime`, `COleDateTime`, `CTimeSpan`, und `COleTimeSpan` Uhrzeit-und Datumswerte darstellen. Weitere Informationen zu diesen Klassen finden Sie im Artikel [Datum und Uhrzeit](../atl-mfc-shared/date-and-time.md).  
   
- Die Klassen, die mit "**COle**" Encapsulations Datentypen, die von OLE bereitgestellt werden. Diese Datentypen können verwendet werden, in der Windows-Programme, unabhängig davon, ob andere OLE-Funktionen verwendet werden.  
+ Die Klassen, die mit "`COle`" Encapsulations Datentypen, die von OLE bereitgestellt werden. Diese Datentypen können verwendet werden, in der Windows-Programme, unabhängig davon, ob andere OLE-Funktionen verwendet werden.  
   
  [CStringT-Klasse](../atl-mfc-shared/reference/cstringt-class.md)  
  Enthält die Zeichenfolgen.  

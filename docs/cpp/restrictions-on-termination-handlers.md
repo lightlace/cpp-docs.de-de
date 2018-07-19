@@ -1,5 +1,5 @@
 ---
-title: Einschränkungen bei Beendigungshandlern | Microsoft Docs
+title: Einschränkungen bei Beendigungshandlern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f35560c6f29e341b05f6b8bdf22873847644d7c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 969930c3918cdc0d2e38747796279c7135aba5a7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941339"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Einschränkungen bei Beendigungshandlern
-Sie können keine `goto`-Anweisung verwenden, um in einen `__try`-Anweisungsblock oder einen `__finally`-Anweisungsblock zu wechseln. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. (Sie können jedoch aus einem `__try`-Anweisungsblock herausspringen). Sie können auch keinen Ausnahmehandler oder Beendigungshandler innerhalb eines `__finally`-Blocks verschachteln.  
+Können keine **Goto** gesprungen-Anweisung eine **__try** Anweisungsblock oder ein **__finally** Anweisungsblock. Stattdessen müssen Sie den Anweisungsblock über die normale Ablaufsteuerung eingeben. (Sie können jedoch direkt von einem **__try** Anweisungsblock.) Darüber hinaus können nicht geschachtelt keinen Ausnahmehandler oder Beendigungshandler innerhalb einer **__finally** Block.  
   
- Darüber hinaus erzeugen einige in einem Beendigungshandler zulässige Arten von Code fragliche Ergebnisse. Daher sollten Sie diese, wenn überhaupt, mit Vorsicht verwenden. Eine ist eine `goto`-Anweisung, die aus einem `__finally`-Anweisungsblock herausspringt. Wenn der Block als Teil der normalen Beendigung ausgeführt wird, passiert nichts Ungewöhnliches. Aber wenn das System den Stapel entlädt, wird das Entladen gestoppt, und die aktuelle Funktion erhält die Steuerung,als ob keine nicht ordnungsgemäße Beendigung vorläge.  
+ Darüber hinaus erzeugen einige in einem Beendigungshandler zulässige Arten von Code fragliche Ergebnisse. Daher sollten Sie diese, wenn überhaupt, mit Vorsicht verwenden. Eine ist ein **Goto** -Anweisung, die von springt eine **__finally** Anweisungsblock. Wenn der Block als Teil der normalen Beendigung ausgeführt wird, passiert nichts Ungewöhnliches. Aber wenn das System den Stapel entlädt, wird das Entladen gestoppt, und die aktuelle Funktion erhält die Steuerung,als ob keine nicht ordnungsgemäße Beendigung vorläge.  
   
- Eine `return`-Anweisung innerhalb eines `__finally`-Anweisungsblocks stellt ungefähr die gleiche Situation dar. Die Steuerung wird an den unmittelbaren Aufrufer der Funktion zurückgegeben, die den Beendigungshandler enthält. Wenn das System beim Entladen des Stapels war, wird dieser Prozess unterbrochen, und das Programm wird fortgesetzt, als wäre keine Ausnahme ausgelöst worden.  
+ Ein **zurückgeben** -Anweisung innerhalb einer **__finally** -Anweisungsblocks stellt ungefähr die gleiche Situation. Die Steuerung wird an den unmittelbaren Aufrufer der Funktion zurückgegeben, die den Beendigungshandler enthält. Wenn das System beim Entladen des Stapels war, wird dieser Prozess unterbrochen, und das Programm wird fortgesetzt, als wäre keine Ausnahme ausgelöst worden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Schreiben eines Beendigungshandlers](../cpp/writing-a-termination-handler.md)   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876123"
 ---
 # <a name="new-custom-resource-dialog-box"></a>Dialogfeld "Neue benutzerdefinierte Ressource"
 Können Sie eine neue benutzerdefinierte Ressource erstellen.  

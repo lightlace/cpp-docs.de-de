@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9e9ff3d6e3e4bcccf8e9ebd46f791f60f1cc37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56fa354a46e40704ac063791931ca01d1386a558
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038457"
 ---
 # <a name="ckeyframe-class"></a>CKeyFrame-Klasse
 Stellt einen Animationskeyframe dar.  
@@ -101,10 +102,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pStoryboard`  
+ *pStoryboard*  
  Ein Zeiger auf ein Storyboard.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Gibt an, ob Keyframe hinzufügen oder Übergang rekursiv.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -123,10 +124,10 @@ BOOL AddToStoryboardAfterTransition(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pStoryboard`  
+ *pStoryboard*  
  Ein Zeiger auf ein Storyboard.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Gibt an, ob ein Übergang rekursiv hinzugefügt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -145,10 +146,10 @@ virtual BOOL AddToStoryboardAtOffset(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pStoryboard`  
+ *pStoryboard*  
  Ein Zeiger auf ein Storyboard.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Gibt an, ob ein hinzuzufügende Keyframe dieser Keyframe rekursiv abhängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -170,13 +171,13 @@ CKeyFrame(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pTransition`  
+ *pTransition*  
  Ein Zeiger auf einen Übergang.  
   
- `pKeyframe`  
+ *pKeyframe*  
  Ein Zeiger auf Keyframe.  
   
- `offset`  
+ *offset*  
  Offset in Sekunden, die aus von pKeyframe angegeben wird.  
   
 ### <a name="remarks"></a>Hinweise  

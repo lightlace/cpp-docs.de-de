@@ -15,6 +15,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376868"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE (umfassen alle Bibliotheksdateien-Objekt)
 Erzwingen, dass des Linkers die statische Bibliothek in der verknüpften ausführbaren Datei alle Objektdateien einschließt.  

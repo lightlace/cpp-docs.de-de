@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877539"
 ---
 # <a name="new-toolbar-resource-dialog-box"></a>Neue Symbolleistenressource (Dialogfeld)
 Das Dialogfeld "Neue Symbolleistenressource" können Sie angeben, die Breite und Höhe von Schaltflächen, die Sie auf eine Symbolleistenressource hinzufügen. Der Standardwert ist 16 x 15 Pixel.  

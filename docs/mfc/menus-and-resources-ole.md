@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54cc874fd3c95123446ab81b920bfe0fce52df5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cae180ca71b89732e073b9039483b8b46366a42a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929633"
 ---
 # <a name="menus-and-resources-ole"></a>Menüs und Ressourcen (OLE)
 Diese Gruppe von Artikeln wird die Verwendung von Menüs und Ressourcen in MFC-OLE-dokumentanwendungen erläutert.  
@@ -53,10 +54,10 @@ Diese Gruppe von Artikeln wird die Verwendung von Menüs und Ressourcen in MFC-O
   
 |Ressourcenname|Mit|  
 |-------------------|---------|  
-|**IDR_MAINFRAME**|In einer MDI-Anwendung, wenn keine Datei geöffnet ist oder in einer SDI-Anwendung unabhängig von der geöffneten Dateien verwendet. Dies ist die standardmäßige Menü in nicht-OLE-Anwendungen verwendet.|  
-|**IDR_\<Projekt > Typ**|In einer MDI-Anwendung verwendet, wenn Dateien geöffnet sind. Verwendet, wenn eine Anwendung eigenständig ausgeführt wird. Dies ist die standardmäßige Menü in nicht-OLE-Anwendungen verwendet.|  
-|**IDR_\<Projekt > TYPE_SRVR_IP**|Vom Server oder Container verwendet, wenn ein Objekt öffnen vorhanden ist.|  
-|**IDR_\<Projekt > TYPE_SRVR_EMB**|Von einer Serveranwendung verwendet, wenn ein Objekt ohne direkte Aktivierung geöffnet ist.|  
+|IDR_MAINFRAME|In einer MDI-Anwendung, wenn keine Datei geöffnet ist oder in einer SDI-Anwendung unabhängig von der geöffneten Dateien verwendet. Dies ist die standardmäßige Menü in nicht-OLE-Anwendungen verwendet.|  
+|IDR_\<Projekt > Typ|In einer MDI-Anwendung verwendet, wenn Dateien geöffnet sind. Verwendet, wenn eine Anwendung eigenständig ausgeführt wird. Dies ist die standardmäßige Menü in nicht-OLE-Anwendungen verwendet.|  
+|IDR_\<Projekt > TYPE_SRVR_IP|Vom Server oder Container verwendet, wenn ein Objekt öffnen vorhanden ist.|  
+|IDR_\<Projekt > TYPE_SRVR_EMB|Von einer Serveranwendung verwendet, wenn ein Objekt ohne direkte Aktivierung geöffnet ist.|  
   
  Jedes dieser Ressource-Namen darstellt eines Menüs und, in der Regel einer Zugriffstastentabelle. Eine ähnliche Schema sollte in MFC-Anwendungen verwendet werden, die nicht mit dem Anwendungs-Assistenten erstellt werden.  
   

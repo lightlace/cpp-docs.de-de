@@ -1,5 +1,5 @@
 ---
-title: ICommandSource Schnittstelle | Microsoft Docs
+title: ICommandSource-Schnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,14 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ff57ec9deea4ff8b39e572d720ad7e0fdaa15dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 375d4135e4042abbd6aee6fc547640d78a33ce0d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335770"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource-Schnittstelle
-Verwaltet die Befehle, die von einem Befehlsquellobjekt in einem Benutzersteuerelement gesendet.  
+Verwaltet die Befehle, die von einem Quellobjekt für den Befehl zu einem Benutzersteuerelement gesendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,29 +49,29 @@ interface class ICommandSource
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ICommandSource::AddCommandHandler](#addcommandhandler)|Eine Befehlsquellobjekt hinzugefügt Befehlshandler.|  
-|[ICommandSource::AddCommandRangeHandler](#addcommandrangehandler)|Ein Befehl Quellobjekt, das hinzugefügt eine Gruppe von Befehlshandler.|  
-|[ICommandSource::AddCommandRangeUIHandler](#addcommandrangeuihandler)|Ein Befehl Quellobjekt, das hinzugefügt eine Gruppe von Benutzer Schnittstelle Befehlshandler Nachricht.|  
-|[ICommandSource::AddCommandUIHandler](#addcommandrangeuihandler)|Ein Befehlsobjekt für die Quelle hinzugefügt einen Benutzer-Schnittstelle Befehlshandler Nachricht.|  
-|[ICommandSource::PostCommand](#postcommand)|Sendet eine Meldung ohne zu warten, bis sie verarbeitet werden.|  
+|[ICommandSource::AddCommandHandler](#addcommandhandler)|Ein Befehlsobjekt für die Datenquelle wird einen Befehlshandler hinzugefügt.|  
+|[ICommandSource::AddCommandRangeHandler](#addcommandrangehandler)|Ein Befehlsobjekt für die Quelle wird eine Gruppe von Befehlshandler hinzugefügt.|  
+|[ICommandSource::AddCommandRangeUIHandler](#addcommandrangeuihandler)|Ein Befehlsobjekt für die Quelle wird eine Gruppe von Benutzer-Schnittstelle Nachricht Befehlshandler hinzugefügt.|  
+|[ICommandSource::AddCommandUIHandler](#addcommandrangeuihandler)|Ein Befehlsobjekt für die Quelle wird einen Benutzer Schnittstelle Befehlshandler Meldung hinzugefügt.|  
+|[ICommandSource::PostCommand](#postcommand)|Sendet eine Nachricht ohne zu warten, bis es verarbeitet werden.|  
 |[ICommandSource::RemoveCommandHandler](#removecommandhandler)|Entfernt einen Befehlshandler von einem Befehl-Quellobjekt.|  
 |[ICommandSource::RemoveCommandRangeHandler](#removecommandrangehandler)|Entfernt eine Gruppe von Befehlshandler von einem Befehl-Quellobjekt.|  
-|[ICommandSource::RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|Entfernt eine Gruppe von Benutzer Schnittstelle Befehlshandler Nachricht von einem Befehl-Quellobjekt.|  
-|[ICommandSource::RemoveCommandUIHandler](#removecommandrangeuihandler)|Entfernt einen Benutzer Schnittstelle Befehlshandler Nachricht von einem Befehl-Quellobjekt.|  
-|[ICommandSource::SendCommand](#sendcommand)|Sendet eine Nachricht und wartet, bis er vor der Rückgabe verarbeitet werden.|  
+|[ICommandSource::RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|Entfernt eine Gruppe von Benutzer Schnittstelle Befehlshandler-Nachricht von einem Befehl-Quellobjekt.|  
+|[ICommandSource::RemoveCommandUIHandler](#removecommandrangeuihandler)|Entfernt einen Benutzer Schnittstelle Befehlshandler Nachricht von einem Quellobjekt für den Befehl.|  
+|[ICommandSource::SendCommand](#sendcommand)|Sendet eine Nachricht und wartet darauf, dass sie vor der Rückgabe verarbeitet werden.|  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie ein benutzerdefiniertes Steuerelement in einer MFC-Ansicht hosten [CWinFormsView Class](../../mfc/reference/cwinformsview-class.md) Routen Befehle und Update-Befehl UI Nachrichten auf das Benutzersteuerelement, damit Sie die MFC-Befehle (z. B. Frame Menüelemente und Symbolleisten-Schaltflächen) verarbeiten kann. Durch die Implementierung [ICommandTarget Schnittstelle](../../mfc/reference/icommandtarget-interface.md), Sie geben dem Benutzersteuerelement einen Verweis auf die `ICommandSource` Objekt.  
+ Beim Hosten eines Benutzersteuerelements in MFC-Ansicht, [CWinFormsView-Klasse](../../mfc/reference/cwinformsview-class.md) Routen Befehle und Update-Befehl UI-Nachrichten an das Steuerelement, damit Sie die MFC-Befehle (z. B. Frame Menüelemente und Symbolleistenschaltflächen) verarbeiten kann. Durch die Implementierung [ICommandTarget-Schnittstelle](../../mfc/reference/icommandtarget-interface.md), geben Sie dem Benutzersteuerelement einen Verweis auf die `ICommandSource` Objekt.  
   
- Finden Sie unter [wie: Hinzufügen Befehlsrouting zum Windows Forms-Steuerelements](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zum Verwenden von `ICommandTarget`.  
+ Finden Sie unter [Vorgehensweise: Hinzufügen Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zur Verwendung für `ICommandTarget`.  
   
- Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [Verwenden eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [verwenden ein Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** afxwinforms.h (definiert in der Assembly atlmfc\lib\mfcmifc80.dll)  
   
 ## <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler
-Eine Befehlsquellobjekt hinzugefügt Befehlshandler.
+Ein Befehlsobjekt für die Datenquelle wird einen Befehlshandler hinzugefügt.
 ```
 void AddCommandHandler(
     unsigned int cmdID,
@@ -78,18 +79,18 @@ void AddCommandHandler(
 ```
 
 ### <a name="parameters"></a>Parameter  
-`cmdID`  
+*cmdID*  
 Die Befehls-ID.  
-`cmdHandler`  
+*cmdHandler*  
 Ein Handle für die Handlermethode.
 
 ### <a name="remarks"></a>Hinweise
-Diese Methode das Befehlsquellobjekt der Befehl Handler CmdHandler hinzugefügt und ist den Handler CmdID zugeordnet.
-Finden Sie unter [wie: Hinzufügen Befehlsrouting zum Windows Forms-Steuerelements](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zum AddCommandHandler verwenden.
+Diese Methode fügt den Befehl Handler CmdHandler auf das Befehlsquellobjekt und CmdID wird den Handler zugeordnet.
+Finden Sie unter [Vorgehensweise: Hinzufügen Befehlsrouting an der Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) ein Beispiel zur Verwendung von AddCommandHandler.
 
 ## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 
-Ein Befehl Quellobjekt, das hinzugefügt eine Gruppe von Befehlshandler.
+Ein Befehlsobjekt für die Quelle wird eine Gruppe von Befehlshandler hinzugefügt.
 ```
 void AddCommandRangeHandler(
     unsigned int cmdIDMin,
@@ -97,17 +98,17 @@ void AddCommandRangeHandler(
     CommandHandler^ cmdHandler);
 ```
 ### <a name="parameters"></a>Parameter  
-`cmdIDMin`  
-Der Anfangsindex der Befehls-ID-Bereich.
-`cmdIDMax`  
+*cmdIDMin*  
+Der Startindex des der Befehls-ID-Bereich.
+*cmdIDMax*  
 Der Endindex der Befehls-ID-Bereich.
-`cmdHandler`  
+*cmdHandler*  
 Ein Handle für die Message-Handler-Methode, die die Befehle zugeordnet sind.
 ### <a name="remarks"></a>Hinweise
-Diese Methode ordnet einen zusammenhängenden Bereich von Befehls-IDs an einen einzelnen Meldungshandler und das Befehlsquellobjekt hinzugefügt. Dies wird verwendet, für die Behandlung einer Gruppenstatus von verwandten Schaltflächen mit einer Methode.
+Diese Methode ordnet einen zusammenhängenden Bereich von Befehls-IDs ein einzelnes Message-Handler und das Befehlsquellobjekt hinzugefügt. Hiermit wird für die Verarbeitung einer Gruppenstatus von zugehörigen Schaltflächen mit einer Methode.
 
 ## <a name="addcommandrangeuihandler"></a> ICommandSource::AddCommandRangeUIHandler
-Ein Befehl Quellobjekt, das hinzugefügt eine Gruppe von Benutzer Schnittstelle Befehlshandler Nachricht.
+Ein Befehlsobjekt für die Quelle wird eine Gruppe von Benutzer-Schnittstelle Nachricht Befehlshandler hinzugefügt.
 ```
 void AddCommandRangeUIHandler(
     unsigned int cmdIDMin, 
@@ -115,42 +116,42 @@ void AddCommandRangeUIHandler(
     CommandUIHandler^ cmdUIHandler);
 ```
 ### <a name="parameters"></a>Parameter  
-`cmdIDMin`  
-Der Anfangsindex der Befehls-ID-Bereich.
-`cmdIDMax`  
+*cmdIDMin*  
+Der Startindex des der Befehls-ID-Bereich.
+*cmdIDMax*  
 Der Endindex der Befehls-ID-Bereich.
-`cmdHandler`  
+*cmdHandler*  
 Ein Handle für die Message-Handler-Methode, die die Befehle zugeordnet sind.
 
 ### <a name="remarks"></a>Hinweise
-Diese Methode ordnet einen zusammenhängenden Bereich von Befehls-IDs an einen einzelnen Benutzer Schnittstelle Befehl-Meldungshandler und das Befehlsquellobjekt hinzugefügt. Dies wird verwendet, für die Behandlung einer Gruppenstatus von verwandten Schaltflächen mit einer Methode.
+Diese Methode ordnet einen zusammenhängenden Bereich von Befehls-IDs einen einzelnen Benutzer Schnittstelle Befehl Message-Handler und das Befehlsquellobjekt hinzugefügt. Hiermit wird für die Verarbeitung einer Gruppenstatus von zugehörigen Schaltflächen mit einer Methode.
 
 ## <a name="addcommanduihandler"></a> ICommandSource::AddCommandUIHandler
-Ein Befehlsobjekt für die Quelle hinzugefügt einen Benutzer-Schnittstelle Befehlshandler Nachricht.
+Ein Befehlsobjekt für die Quelle wird einen Benutzer Schnittstelle Befehlshandler Meldung hinzugefügt.
 ```
 void AddCommandUIHandler(
     unsigned int cmdID, 
     CommandUIHandler^ cmdUIHandler);
 ```
 ### <a name="parameters"></a>Parameter
-`cmdID`  
+*cmdID*  
 Die Befehls-ID.  
-`cmdUIHandler`  
+*cmdUIHandler*  
 Ein Handle für die Benutzer-Schnittstelle Befehl Message-Handler-Methode.
 
 ### <a name="remarks"></a>Hinweise
-Diese Methode das Befehlsquellobjekt Benutzer Schnittstelle Befehl Message-Handler-CmdHandler hinzugefügt und ist den Handler CmdID zugeordnet.
+Diese Methode fügt den Benutzer-Schnittstelle Befehl Message-Handler CmdHandler auf das Befehlsquellobjekt und CmdID wird den Handler zugeordnet.
 
 ## <a name="postcommand"></a> ICommandSource::PostCommand
-Sendet eine Meldung ohne zu warten, bis sie verarbeitet werden.
+Sendet eine Nachricht ohne zu warten, bis es verarbeitet werden.
 ```
 void PostCommand(unsigned int command);
 ```
 ### <a name="parameters"></a>Parameter
-`command`  
-Die Befehls-ID der Nachricht gesendet werden.
+*command*  
+Die Befehls-ID der Nachricht, die gepostet werden soll.
 ### <a name="remarks"></a>Hinweise
-Diese Methode sendet asynchron die Nachricht, die vom Befehl angegebene ID zugeordnet ist. Er ruft CWnd::PostMessage, um die Nachricht in das Fenster Nachrichtenwarteschlange zu platzieren und dann ohne zu warten, für das entsprechende Fenster zum Verarbeiten der Nachricht zurückgegeben.
+Diese Methode sendet asynchron die Nachricht, die vom Befehl angegebene ID zugeordnet. Ruft die CWnd::PostMessage, um die Nachricht in der Nachrichtenwarteschlange des Fensters zu platzieren und gibt dann zurück, ohne zu warten, für das entsprechende Fenster zur Verarbeitung der Nachricht.
 
 
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
@@ -159,10 +160,10 @@ Entfernt einen Befehlshandler von einem Befehl-Quellobjekt.
 void RemoveCommandHandler(unsigned int cmdID);
 ```
 ### <a name="parameters"></a>Parameter
-`cmdID`  
+*cmdID*  
 Die Befehls-ID.
 ### <a name="remarks"></a>Hinweise
-Diese Methode entfernt die Befehlshandler CmdID aus dem Befehlsquellobjekt zugeordnet.
+Diese Methode entfernt den Befehlshandler, der aus das Befehlsquellobjekt CmdID zugeordnet.
 
 
 ## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler 
@@ -173,49 +174,49 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMax);
 ```
 ### <a name="parameters"></a>Parameter
-`cmdIDMin`  
-Der Anfangsindex der Befehls-ID-Bereich.
-`cmdIDMax`  
+*cmdIDMin*  
+Der Startindex des der Befehls-ID-Bereich.
+*cmdIDMax*  
 Der Endindex der Befehls-ID-Bereich.
 ### <a name="remarks"></a>Hinweise
-Diese Methode entfernt eine Gruppe von-Meldungshandler die Befehls-IDs angegeben durch CmdIDMin und CmdIDMax, aus dem Befehlsquellobjekt zugeordnet.
+Diese Methode entfernt eine Gruppe von Meldungshandler, der angegebenen Befehls-IDs von CmdIDMin und CmdIDMax, aus das Befehlsquellobjekt zugeordnet.
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler 
-Entfernt eine Gruppe von Benutzer Schnittstelle Befehlshandler Nachricht von einem Befehl-Quellobjekt.
+Entfernt eine Gruppe von Benutzer Schnittstelle Befehlshandler-Nachricht von einem Befehl-Quellobjekt.
 ```
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
 ### <a name="parameters"></a>Parameter
-`cmdIDMin`  
-Der Anfangsindex der Befehls-ID-Bereich.
-`cmdIDMax`  
+*cmdIDMin*  
+Der Startindex des der Befehls-ID-Bereich.
+*cmdIDMax*  
 Der Endindex der Befehls-ID-Bereich.
 ### <a name="remarks"></a>Hinweise
-Diese Methode entfernt eine Gruppe von Benutzer-Schnittstelle Befehl Meldungshandler, der Befehls-IDs angegeben durch CmdIDMin und CmdIDMax, aus dem Befehlsquellobjekt zugeordnet.
+Diese Methode entfernt eine Gruppe von Benutzer-Schnittstelle Nachricht Befehlshandler, der angegebenen Befehls-IDs von CmdIDMin und CmdIDMax, aus das Befehlsquellobjekt zugeordnet.
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler 
-Entfernt einen Benutzer Schnittstelle Befehlshandler Nachricht von einem Befehl-Quellobjekt.
+Entfernt einen Benutzer Schnittstelle Befehlshandler Nachricht von einem Quellobjekt für den Befehl.
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
 ### <a name="parameters"></a>Parameter
-`cmdID`  
+*cmdID*  
 Die Befehls-ID.
 ### <a name="remarks"></a>Hinweise
-Diese Methode entfernt Benutzer Schnittstelle Nachricht Befehlshandler CmdID aus dem Befehlsquellobjekt zugeordnet.
+Diese Methode entfernt den Benutzer Schnittstelle Nachricht Befehlshandler aus das Befehlsquellobjekt CmdID zugeordnet.
 
 ## <a name="sendcommand"></a> ICommandSource::SendCommand 
-Sendet eine Nachricht und wartet, bis er vor der Rückgabe verarbeitet werden.
+Sendet eine Nachricht und wartet darauf, dass sie vor der Rückgabe verarbeitet werden.
 ```
 void SendCommand(unsigned int command);
 ```
 ### <a name="parameters"></a>Parameter
-`command`  
+*command*  
 Die Befehls-ID der Nachricht gesendet werden.
 ### <a name="remarks"></a>Hinweise
-Diese Methode sendet synchron die Nachricht, die vom Befehl angegebene ID zugeordnet ist. Ruft die Funktion CWnd:: SendMessage, um die Nachricht in das Fenster Nachrichtenwarteschlange einstellt auf und wartet, bis diese Fensterprozedur die Nachricht vor der Rückgabe verarbeitet hat.
+Diese Methode sendet synchron die Nachricht, die vom Befehl angegebene ID zugeordnet. Ruft die Funktion CWnd:: SendMessage, um die Nachricht in der Nachrichtenwarteschlange des Fensters zu platzieren und wartet, bis diese Fensterprozedur die Meldung vor der Rückgabe verarbeitet hat.
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Hinzufügen (Befehl) Befehlsrouting zum Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
+ [Vorgehensweise: Befehl "hinzufügen" Routing an das Windows Forms-Steuerelement](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
  [ICommandTarget-Schnittstelle](../../mfc/reference/icommandtarget-interface.md)

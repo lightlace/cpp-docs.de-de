@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106543"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Verweisen auf eine Eigenschaft im Anbieter
 Suchen Sie die Eigenschaftsgruppe und die Eigenschafts-ID für die gewünschte Eigenschaft. Weitere Informationen finden Sie unter [OLE DB-Eigenschaften](https://msdn.microsoft.com/en-us/library/ms722734.aspx) in der *OLE DB Programmer's Reference*.  

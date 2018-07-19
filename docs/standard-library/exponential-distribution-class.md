@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f324eaea0f84767d174bb109a8c1cfff7abfb50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960195"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution-Klasse
 
@@ -76,14 +77,14 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-*RealType* der gleitkommaergebnistyp standardmäßig `double`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 
   *URNG* Die Zufallszahlengenerator-Engine. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten ganzzahligen Typs produziert. Wenn kein entsprechend der exponentiellen Verteilung verteilter Wert ausgeben wird, geben Sie `double` ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Vorlagenklasse beschreibt eine Verteilung, Werte eines benutzerdefinierten ganzzahligen produziert, Typs **doppelte** Wenn none angegeben wird, entsprechend der exponentiellen Verteilung verteilter Wert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -191,9 +192,9 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*Lambda* der `lambda` -verteilungsparameter.
+*Lambda* der `lambda` verteilungsparameter.
 
-*Parm* parameterpaket, die für die Verteilung verwendete Parameterstruktur.
+*Parm* das parameterpaket verwendet, um die Verteilung erstellen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -220,9 +221,9 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*Lambda* der `lambda` -verteilungsparameter.
+*Lambda* der `lambda` verteilungsparameter.
 
-*Rechte* der `param_type` zu vergleichende Objekt.
+*richtige* der `param_type` zu zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 

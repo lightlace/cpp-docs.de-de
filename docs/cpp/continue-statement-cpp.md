@@ -1,5 +1,5 @@
 ---
-title: Fortfahren Anweisung (C++) | Microsoft Docs
+title: continue-Anweisung (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b153c9f5dfae93f1a5cb83dc2b9bcfc09e77af07
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97422a09f890686c4d414eea13da7db891494cc4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943864"
 ---
 # <a name="continue-statement-c"></a>continue-Anweisung (C++)
 Erzwingt die Übertragung der Steuerung an den steuernden Ausdruck der kleinsten einschließenden [führen](../cpp/do-while-statement-cpp.md), [für](../cpp/for-statement-cpp.md), oder [während](../cpp/while-statement-cpp.md) Schleife.  
@@ -34,15 +35,15 @@ continue;
 ## <a name="remarks"></a>Hinweise  
  Alle verbleibenden Anweisungen in der aktuellen Iteration werden nicht ausgeführt. Die nächste Iteration der Schleife wird wie folgt bestimmt:  
   
--   In einer `do`- oder `while`-Schleife wird die nächste Iteration mit einer erneuten Auswertung des steuernden Ausdrucks der `do`- oder der `while`-Anweisung begonnen.  
+-   In einer **führen** oder **während** Schleife, die nächste Iteration beginnt mit einer erneuten Auswertung des steuernden Ausdrucks die **führen** oder **während** Anweisung.  
   
--   In einer `for`-Schleife (mit der Syntax `for`(`init-expr`; `cond-expr`; `loop-expr`)), wird die `loop-expr`-Klausel ausgeführt. Anschließend wird die `cond-expr`-Klausel neu ausgewertet und, je nach Ergebnis, wird die Schleife entweder beendet oder es tritt eine andere Iteration auf.  
+-   In einem **für** Schleife (mit der Syntax `for`(`init-expr`; `cond-expr`; `loop-expr`)), wird die `loop-expr` -Klausel ausgeführt wird. Anschließend wird die `cond-expr`-Klausel neu ausgewertet und, je nach Ergebnis, wird die Schleife entweder beendet oder es tritt eine andere Iteration auf.  
   
- Das folgende Beispiel zeigt, wie die `continue`-Anweisung verwendet werden kann, um Abschnitte des Codes zu umgehen und die Iteration der nächsten Schleife zu starten.  
+ Das folgende Beispiel zeigt die **weiterhin** Anweisung kann verwendet werden, um Abschnitte des Codes zu umgehen und die nächste Iteration einer Schleife zu beginnen.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // continue_statement.cpp  
 #include <stdio.h>  
 int main()  

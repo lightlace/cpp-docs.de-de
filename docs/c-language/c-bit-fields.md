@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385675"
 ---
 # <a name="c-bit-fields"></a>C-Bitfelder
 Neben Deklaratoren für Member einer Struktur oder Union kann ein Strukturdeklarator auch eine angegebene Anzahl von Bits sein, die als "Bitfeld" bezeichnet wird. Seine Länge wird vom Deklarator für den Feldnamen durch einen Doppelpunkt abgegrenzt. Ein Bitfeld wird als Ganzzahltyp interpretiert.  

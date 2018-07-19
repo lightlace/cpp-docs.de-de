@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343774"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Dialogdatenaustausch und -validierung
 Dialogdatenaustausch (DDX) ist eine einfache Möglichkeit, um die Steuerelemente in einem Dialogfeld zu initialisieren und zum Sammeln von Dateneingaben durch den Benutzer. Validieren von Dialogfelddaten (DDV) ist eine einfache Möglichkeit, um die Dateneingabe in ein Dialogfeld zu überprüfen. DDX- und DDV in den Dialogfeldern nutzen möchten, verwenden Sie die [Assistenten zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md) Datenmitglieder erstellen und deren Datentypen festgelegt und Validierungsregeln angeben.  

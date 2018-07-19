@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343923"
 ---
 # <a name="destroying-the-dialog-box"></a>Zerstören des Dialogfelds
 Modale Dialogfelder werden normalerweise auf den Stapelrahmen erstellt und zerstört, wenn die Funktion, die sie erstellt wurden. Das Dialogfeldobjekt-Destruktor wird aufgerufen, wenn das Objekt den Gültigkeitsbereich verlässt.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354729"
 ---
 # <a name="building-and-testing-the-atl-project"></a>Erstellen und Testen des ATL-Projekts
 Siehe [Einfügen eines zusammengesetzten Steuerelements](../atl/inserting-a-composite-control.md), eine der anfänglichen Komponenten des Projekts wird eine Standard-HTML-Seite, die das neue zusammengesetzte Steuerelement hostet. Nachdem Sie die Änderung des zusammengesetzten Steuerelements abgeschlossen haben, klicken Sie auf **Projektmappe** oder **Projektmappe neu erstellen** aus der **erstellen** Menü. Nachdem das Projekt erfolgreich erstellt wurde, laden Sie die HTML-Seite befindet sich im Stammverzeichnis des Projekts zusammengesetztes Steuerelement in Internet Explorer oder einen anderen Browser, und Testen Sie die Funktionalität des Steuerelements.  

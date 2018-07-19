@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359994"
 ---
 # <a name="what-is-atlaxwin100"></a>Was ist AtlAxWin100?
 `AtlAxWin100` ist der Name einer Fenster-Klasse, die der Identifikation ATLs-Steuerelement-hosting-Funktionalität bereitstellen. Wenn Sie eine Instanz dieser Klasse erstellen, verwendet die Fensterprozedur automatisch die Steuerelement-hosting-API So erstellen ein Hostobjekt für das Fenster zugeordnet und Laden es mit dem Steuerelement, das Sie als Titel des Fensters angeben.  

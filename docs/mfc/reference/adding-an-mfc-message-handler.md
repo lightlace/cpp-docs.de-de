@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353725"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Hinzufügen eines MFC-Meldungshandlers
 Können Sie [Verwenden des Eigenschaftenfensters zum Hinzufügen eines meldungshandlers](../../mfc/reference/mapping-messages-to-functions.md) (eine Memberfunktion, die Windows-Meldungen behandelt) einer Klasse und Zuordnung Windows-Meldungen an die Meldungshandler. Sie können auch hinzufügen [einen Ereignishandler für beliebige Dialogfenster-Steuerelemente](../../windows/adding-event-handlers-for-dialog-box-controls.md).  

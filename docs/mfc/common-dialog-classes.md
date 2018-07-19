@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342214"
 ---
 # <a name="common-dialog-classes"></a>Standarddialogfeld-Klassen
 Zusätzlich zur Klasse [CDialog](../mfc/reference/cdialog-class.md), MFC stellt mehrere Klassen abgeleitet `CDialog` , häufig verwendete Dialogfelder kapseln, wie in der folgenden Tabelle gezeigt. Diese Dialogfelder werden als "häufig verwendete Dialogfelder" bezeichnet und sind Teil der Windows-allgemeine Dialogfeld Bibliothek (COMMDLG. (DLL). Der Dialogfeld-Vorlagenressourcen und den Code für diese Klassen werden in den Fenstern häufig verwendete Dialogfelder bereitgestellt, die Teil von Windows-Versionen 3.1 und höher sind.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379106"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Ausnahmebehandlungsmodell)
 Gibt die Art der Ausnahmebehandlung an, die vom Compiler verwendet werden soll, gibt an, ob Ausnahmeprüfungen wegoptimiert werden sollen, und gibt an, ob C++-Objekte zerstört werden sollen, die sich aufgrund einer Ausnahme nicht mehr im Gültigkeitsbereich befinden. Wenn **/EH** nicht angegeben ist, fängt der Compiler sowohl asynchrone strukturierte Ausnahmen als auch C++-Ausnahmen ab. C++-Objekte, die wegen einer asynchronen Ausnahme außerhalb des Gültigkeitsbereichs liegen, werden jedoch nicht zerstört.  

@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f3bd6c6463bbbe26214a29960260d2be583e20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb5e6ad4cfcc1e14d3b6accc1e5adaf4037669a4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950213"
 ---
 # <a name="using-documents"></a>Verwenden von Dokumenten
 Arbeiten zusammen, Dokumente und Ansichten:  
@@ -43,7 +44,7 @@ Arbeiten zusammen, Dokumente und Ansichten:
   
 -   [Behandeln](../mfc/handling-commands-in-the-document.md) die meisten Befehle und Nachrichten von der Anwendung.  
   
- Das Dokument ist besonders beim Verwalten von Daten. Speichern Sie Ihre Daten in der Regel im Dokument Klasse Membervariablen. Die Sicht verwendet diese Variablen zum Zugriff auf die Daten für die Anzeige und zu aktualisieren. Das Dokument Standardmechanismus für die Serialisierung verwaltet lesen und Schreiben der Daten in und aus Dateien. Dokumente können auch Befehle verarbeiten (jedoch nicht die Windows-Nachrichten außer **WM_COMMAND**).  
+ Das Dokument ist besonders beim Verwalten von Daten. Speichern Sie Ihre Daten in der Regel im Dokument Klasse Membervariablen. Die Sicht verwendet diese Variablen zum Zugriff auf die Daten für die Anzeige und zu aktualisieren. Das Dokument Standardmechanismus für die Serialisierung verwaltet lesen und Schreiben der Daten in und aus Dateien. Dokumente können auch Befehle (jedoch nicht über die Windows-Meldungen als WM_COMMAND) verarbeiten.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   

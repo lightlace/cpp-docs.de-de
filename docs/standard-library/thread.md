@@ -1,5 +1,5 @@
 ---
-title: '&lt;Thread&gt; | Microsoft Docs'
+title: '&lt;Thread&gt; | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5558f1e7998cca1efd64fbc5ee0ad39cc40ee2a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef5470d7c7e83c260f44d723665d5d9c0a5ad061
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953028"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
-Schließen Sie den Standardheader \<Thread > zum Definieren der Klasse `thread` und verschiedene unterstützende Funktionen.
+Schließen Sie den Standardheader \<Thread > zum Definieren der Klasse **Thread** und verschiedene unterstützende Funktionen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,9 +34,9 @@ Schließen Sie den Standardheader \<Thread > zum Definieren der Klasse `thread` 
 ## <a name="remarks"></a>Hinweise
 
 > [!NOTE]
-> In Code, der kompiliert wurde **"/ CLR"**, dieser Header blockiert.
+> Im Code, der kompiliert wird **"/ CLR"**, dieser Header blockiert.
 
-Die `__STDCPP_THREADS__` -Makro wird definiert als einen Wert ungleich NULL, um anzugeben, dass Threads von dieser Header unterstützt werden.
+Die `__STDCPP_THREADS__` -Makro ist definiert als einen Wert ungleich NULL, um anzugeben, dass Threads, die von dieser Header unterstützt werden.
 
 ## <a name="members"></a>Member
 
@@ -49,7 +50,7 @@ Die `__STDCPP_THREADS__` -Makro wird definiert als einen Wert ungleich NULL, um 
 
 |name|Beschreibung|
 |----------|-----------------|
-|[Hash-Struktur (C++-Standardbibliothek)](../standard-library/hash-structure-stl.md)|Definiert eine Memberfunktion, die einen Wert zurückgibt, die durch nicht eindeutig bestimmt ist eine `thread::id`. Die Member-Funktion definiert einen [Hash](../standard-library/hash-class.md) Funktion für die Zuordnung von Werten des Typs `thread::id` auf eine Verteilung von Indexwerten.|
+|[Hash-Struktur (C++-Standardbibliothek)](../standard-library/hash-structure-stl.md)|Definiert eine Memberfunktion, die einen Wert, die eindeutig zurückgibt nach richtet eine `thread::id`. Das Funktionsobjekt definiert eine [Hash](../standard-library/hash-class.md) -Funktion, die für Werte des Typs eignet `thread::id` einer Verteilung von Indexwerten.|
 
 ### <a name="public-functions"></a>Öffentliche Funktionen
 
@@ -58,7 +59,7 @@ Die `__STDCPP_THREADS__` -Makro wird definiert als einen Wert ungleich NULL, um 
 |[get_id](../standard-library/thread-functions.md#get_id)|Weist den aktuellen Ausführungsthread eindeutig aus.|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|Blockiert den aufrufenden Thread.|
 |[sleep_until](../standard-library/thread-functions.md#sleep_until)|Blockiert den aufrufenden Thread mindestens bis zum angegebenen Zeitpunkt.|
-|[swap](../standard-library/thread-functions.md#swap)|Tauscht die Zustände von zwei `thread` Objekte.|
+|[swap](../standard-library/thread-functions.md#swap)|Vertauscht die Zustände von zwei **Thread** Objekte.|
 |[yield](../standard-library/thread-functions.md#yield)|Signalisiert dem Betriebssystem, andere Threads auszuführen, auch wenn der aktuelle Thread normalerweise weiterhin ausgeführt werden würde.|
 
 ### <a name="public-operators"></a>Öffentliche Operatoren

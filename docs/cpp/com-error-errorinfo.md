@@ -1,5 +1,5 @@
 ---
-title: _com_error::errorInfo | Microsoft Docs
+title: _com_error::errorInfo | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fbc735dfae1b30209eccfd14f1170826fb07680
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52935c81849ded072cb20d6c835b3a71b66c2871
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941313"
 ---
 # <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
 **Microsoft-spezifisch**  
   
- Ruft die **IErrorInfo** Objekt an den Konstruktor übergeben.  
+ Ruft das `IErrorInfo`-Objekt ab, das an den Konstruktor übergeben wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,10 +37,10 @@ IErrorInfo * ErrorInfo( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Unformatierte **IErrorInfo** Element an den Konstruktor übergeben.  
+ Unformatiertes `IErrorInfo`-Element, das an den Konstruktor übergeben wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Ruft das gekapselte **IErrorInfo** Element in einem `_com_error` -Objekt, oder **NULL** kein **IErrorInfo** -Element erfasst ist. Der Aufrufer muss Aufrufen **Version** Verwendung für das zurückgegebene Objekt abgeschlossen.  
+ Ruft das gekapselte `IErrorInfo` Element in einem `_com_error` Objekt oder NULL, wenn keine `IErrorInfo` -Element erfasst ist. Der Aufrufer muss Aufrufen `Release` für das zurückgegebene Objekt nach Verwendung.  
   
  **Ende Microsoft-spezifisch**  
   

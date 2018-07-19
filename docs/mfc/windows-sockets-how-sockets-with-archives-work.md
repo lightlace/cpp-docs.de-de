@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c4f581acb0af27f44c88d59597e52b057991ee4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954278"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Wie Sockets mit Archiven arbeiten
 In diesem Artikel wird erläutert, wie eine [CSocket](../mfc/reference/csocket-class.md) -Objekt, eine [CSocketFile](../mfc/reference/csocketfile-class.md) -Objekt, und ein [CArchive](../mfc/reference/carchive-class.md) Objekt werden kombiniert, um vereinfachen das Senden und Empfangen von Daten über eine Windows Ein Sockettimeout aufgetreten.  
   
- Der Artikel [Windows Sockets: Beispiel für Sockets mithilfe Archive](../mfc/windows-sockets-example-of-sockets-using-archives.md) stellt die **PacketSerialize** Funktion. Das Archivobjekt in der **PacketSerialize** Beispiel funktioniert ähnlich wie ein Archivobjekt übergeben, um ein MFC [Serialize](../mfc/reference/cobject-class.md#serialize) Funktion. Der wesentliche Unterschied ist, dass für Sockets, das Archiv, nicht an einen Standard angefügt ist [CFile](../mfc/reference/cfile-class.md) Objekt (i. d. r. eine Datenträgerdatei zugeordnet) in einem `CSocketFile` Objekt. Anstatt das Herstellen einer Verbindung mit einer Datenträgerdatei der `CSocketFile` Objekt eine Verbindung mit einem `CSocket` Objekt.  
+ Der Artikel [Windows Sockets: Beispiel für Sockets mithilfe Archive](../mfc/windows-sockets-example-of-sockets-using-archives.md) stellt die `PacketSerialize` Funktion. Das Archivobjekt in der `PacketSerialize` Beispiel funktioniert ähnlich wie ein Archivobjekt übergeben, um ein MFC [Serialize](../mfc/reference/cobject-class.md#serialize) Funktion. Der wesentliche Unterschied ist, dass für Sockets, das Archiv, nicht an einen Standard angefügt ist [CFile](../mfc/reference/cfile-class.md) Objekt (i. d. r. eine Datenträgerdatei zugeordnet) in einem `CSocketFile` Objekt. Anstatt das Herstellen einer Verbindung mit einer Datenträgerdatei der `CSocketFile` Objekt eine Verbindung mit einem `CSocket` Objekt.  
   
  Ein `CArchive` Objekt verwaltet einen Puffer. Wenn der Puffer eines speichern (senden) Archivs voll ist, ein zugehöriges `CFile` Objekt schreibt, die Inhalte des Puffers. Das Leeren des Puffers eines Archivs, angefügt an ein Socket entspricht dem Senden einer Nachricht zur Verfügung. Wenn der Puffer eines Archivs laden (empfangen) voll ist, ist die `CFile` Objekt beendet das Lesen, bis der Puffer wieder verfügbar ist.  
   
@@ -50,7 +51,7 @@ CArchive, CSocketFile und CSocket
  Wenn `CSocket` nicht implementiert wurden als eine zwei-Status-Objekt, es kann möglich sein, zusätzliche Benachrichtigungen für die gleiche Art von Ereignis zu erhalten, während Sie eine vorherige Benachrichtigung verarbeitet wurden. Angenommen, Sie erhalten möglicherweise eine `OnReceive` Benachrichtigung während der Verarbeitung einer `OnReceive`. Im obigen Codefragment extrahieren `str` kann aus dem Archiv zu Rekursion führen. Durch den Wechsel Zustände `CSocket` wird verhindert, dass Rekursion durch Verhindern von automatisch neu gestartet. Als allgemeine Regel gilt keine Benachrichtigungen Benachrichtigungen.  
   
 > [!NOTE]
->  Ein `CSocketFile` kann auch verwendet werden, als (begrenzt)-Datei ohne eine `CArchive` Objekt. Wird standardmäßig die `CSocketFile` des Konstruktors `bArchiveCompatible` Parameter ist **"true"**. Dies gibt an, dass das Objekt "Datei" für die Verwendung mit einem Archiv. Um das Objekt "Datei" ohne ein Archiv zu verwenden, übergeben **"false"** in der `bArchiveCompatible` Parameter.  
+>  Ein `CSocketFile` kann auch verwendet werden, als (begrenzt)-Datei ohne eine `CArchive` Objekt. Wird standardmäßig die `CSocketFile` des Konstruktors *bArchiveCompatible* Parameter ist **"true"**. Dies gibt an, dass das Objekt "Datei" für die Verwendung mit einem Archiv. Um das Objekt "Datei" ohne ein Archiv zu verwenden, übergeben **"false"** in der *bArchiveCompatible* Parameter.  
   
  Im Modus "Archiv Compatible" ein `CSocketFile` Objekt bietet eine bessere Leistung und reduziert die Gefahr eines "Deadlocks". Ein Deadlock tritt auf, wenn die sendenden und empfangenden Sockets warten auf einander, oder eine gemeinsame Ressource warten. Diese Situation kann auftreten, wenn die `CArchive` Objekt arbeitet mit der `CSocketFile` Weise mit einem `CFile` Objekt. Mit `CFile`, das Archiv kann davon ausgehen, dass weniger Bytes als angefordert Empfang, die das Ende der Datei erreicht wurde. Mit `CSocketFile`jedoch Daten nachrichtenbasiert; der Puffer kann mehrere Nachrichten enthalten, wird daher empfangen von weniger als die Anzahl der angeforderten Bytes Dateiende nicht impliziert. Die Anwendung wird in diesem Fall nicht blockiert, wie mit möglicherweise `CFile`, und sie können weiterhin Nachrichten aus dem Puffer zu lesen, bis der Puffer leer ist. Die [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) -Funktion in `CArchive` eignet sich zum Überwachen des Status des Archivs Puffer in einem solchen Fall.  
   

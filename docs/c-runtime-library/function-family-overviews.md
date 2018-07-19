@@ -13,6 +13,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385057"
 ---
 # <a name="function-family-overviews"></a>Übersichten über die Funktionsfamilie
 Fügen Sie hier eine Einleitung ein.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392038"
 ---
 # <a name="global-variables"></a>Globale Variablen
 Die Microsoft C-Laufzeitbibliothek bietet die folgenden globalen Variablen oder Makros. Mehrere dieser globalen Variablen oder Makros sind veraltet und wurden durch sicherere, funktionsbereite Versionen ersetzt, die Sie anstelle der globalen Variablen verwenden sollten.  

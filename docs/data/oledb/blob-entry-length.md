@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094864"
 ---
 # <a name="blobentrylength"></a>BLOB_ENTRY_LENGTH
 Mit verwendet `BEGIN_COLUMN_MAP` und `END_COLUMN_MAP` binden ein binary large Object ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Ähnlich wie [BLOB_ENTRY](../../data/oledb/blob-entry.md), außer dass Sie dieses Makro auch die Länge in Bytes der BLOB-Spalte erhält.  

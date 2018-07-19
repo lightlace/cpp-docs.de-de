@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381250"
 ---
 # <a name="spin-button-member-functions"></a>Memberfunktionen für das Drehfeldsteuerelement
 Es stehen mehrere Memberfunktionen für das Drehfeld-Steuerelement ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)). Verwenden Sie diese Funktionen so ändern Sie die folgenden Attribute für das Drehfeld.  

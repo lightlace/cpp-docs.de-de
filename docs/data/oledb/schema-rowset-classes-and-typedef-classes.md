@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111444"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Schemarowset-Klassen und Typedef-Klassen
 Ein Schema ist eine Auflistung von Datenbankobjekten, die im Besitz sind, oder durch einen bestimmten Benutzer erstellt wurden. Ein Katalog kann eine oder mehrere Schemas enthalten, jedoch muss ein Schema namens INFORMATION_SCHEMA, die die Ansichten und Domänen des informationsschemas enthält immer enthalten. Schemainformationen in OLE DB mithilfe vordefinierter Schemarowsets abgerufen und enthält Typen, Tabellen, Spalten, Indizes, Sichten, Assertionen und Einschränkungen, Statistiken, Zeichensätze, Sortierungen und Domänen.  

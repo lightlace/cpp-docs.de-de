@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282716"
 ---
 # <a name="compiler-warning-level-1-c4835"></a>Compilerwarnung (Stufe 1) C4835
 'Variable': die Initialisierung für die exportierten Daten wird nicht ausgeführt, bis verwalteter Code in der Hostassembly zuerst ausgeführt wird  

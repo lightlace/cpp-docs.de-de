@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2916bd96bf36333a81b2e8a88e62cc8f562e9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f11cc3258d577969807dd63c24c00da39652fff
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931272"
 ---
 # <a name="how-to-add-restart-manager-support"></a>Gewusst wie: Hinzufügen von Unterstützung für den Neustart-Manager
 
@@ -46,7 +47,7 @@ Die Neustart-Manager ist eine Funktion, die Visual Studio für Windows Vista ode
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;  
  ```  
   
-5.  Stellen Sie sicher, dass in der `InitInstance` -Methode Ihrer Anwendung deren übergeordnete `InitInstance` -Methode aufgerufen wird: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) oder `CWinAppEx::InitInstance`hinzugefügt wurde. Aufgabe der `InitInstance` -Methode ist es, den `m_dwRestartManagerSupportFlags` -Parameter zu überprüfen.  
+5.  Stellen Sie sicher, dass in der `InitInstance` -Methode Ihrer Anwendung deren übergeordnete `InitInstance` -Methode aufgerufen wird: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) oder `CWinAppEx::InitInstance`hinzugefügt wurde. Die `InitInstance` Methode ist verantwortlich für die Überprüfung der *M_dwRestartManagerSupportFlags* Parameter.  
   
 6.  Kompilieren Sie Ihre Anwendung, und führen Sie sie aus.  
   

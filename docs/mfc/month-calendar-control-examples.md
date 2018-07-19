@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342906"
 ---
 # <a name="month-calendar-control-examples"></a>Beispiele für Monatskalender-Steuerelemente
 Die [CMNCTRL1](../visual-cpp-samples.md) beispielanwendung für veranschaulicht, die verschiedene Attribute der `CMonthCalCtrl` Klasse. Das Steuerelement, finden Sie auf eine separate Registerkarte im Beispiel veranschaulicht die grundlegende Funktionalität und ermöglicht dem Benutzer, bestimmte Attribute dynamisch zu ändern.  

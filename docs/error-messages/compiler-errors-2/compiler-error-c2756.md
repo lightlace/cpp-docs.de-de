@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231776"
 ---
 # <a name="compiler-error-c2756"></a>Compiler-Fehler C2756 generiert
 'template type': Bei einer teilweisen Spezialisierung sind Standardvorlagenargumente nicht zulässig  

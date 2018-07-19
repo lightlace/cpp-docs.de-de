@@ -31,11 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ac243333c8dc778486dd18323658f262c6d6610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b221bd97d9ee943e19b043bcc9be6aba0fa1672
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929594"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Abrufen von Daten aus dem Dialogfeldobjekt
 Das Framework bietet eine einfache Möglichkeit, um die Werte von Steuerelementen in einem Dialogfeld zu initialisieren und zum Abrufen der Werte aus den Steuerelementen. Der mehr arbeitsaufwendig manuelle Ansatz ist die Funktionen aufrufen, wie die `SetDlgItemText` und `GetDlgItemText` Memberfunktionen der Klasse `CWnd`, das Steuerelement Windows gelten. Mit diesen Funktionen Sie Zugriff auf jedes Steuerelement einzeln zu festlegen oder Abrufen des Objektwerts, Aufrufen von Funktionen wie z. B. `SetWindowText` und `GetWindowText`. Das Framework Ansatz automatisiert Initialisierung und abrufen.  
@@ -46,7 +47,7 @@ Das Framework bietet eine einfache Möglichkeit, um die Werte von Steuerelemente
   
  DDX- und DDV werden ausführlicher in [Dialogdatenaustausch und-Validierung](../mfc/dialog-data-exchange-and-validation.md).  
   
- Für ein modales Dialogfeld rufen Sie alle Daten, die vom Benutzer wenn eingegebenen `DoModal` gibt **IDOK** , aber bevor das Dialogfeld Objekt zerstört wird. Für ein nicht modales Dialogfeld kann Abrufen von Daten aus dem Dialogfeldobjekt jederzeit aufrufen `UpdateData` mit dem Argument **"true"** und klicken Sie dann den Zugriff auf Membervariablen für Dialogfeld-Klasse. Dieses Thema wird ausführlicher im [Dialogdatenaustausch und-Validierung](../mfc/dialog-data-exchange-and-validation.md).  
+ Für ein modales Dialogfeld rufen Sie alle Daten, die vom Benutzer wenn eingegebenen `DoModal` IDOK zurückgegeben, aber bevor das Dialogfeld Objekt zerstört wird. Für ein nicht modales Dialogfeld kann Abrufen von Daten aus dem Dialogfeldobjekt jederzeit aufrufen `UpdateData` mit dem Argument **"true"** und klicken Sie dann den Zugriff auf Membervariablen für Dialogfeld-Klasse. Dieses Thema wird ausführlicher im [Dialogdatenaustausch und-Validierung](../mfc/dialog-data-exchange-and-validation.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Lebenszyklus eines Dialogfelds](../mfc/life-cycle-of-a-dialog-box.md)

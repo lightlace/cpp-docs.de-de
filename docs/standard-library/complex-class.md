@@ -20,15 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d3de4c7538c36ac1a55ea2519fa26a878663a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026406"
 ---
 # <a name="complex-class"></a>complex-Klasse
 
-Die Vorlagenklasse beschreibt ein Objekt, das zwei Objekte vom Typ **Type** speichert: Eines entspricht dem Realteil einer komplexen Zahl, das anderen dem Imaginärteil.
+Die Vorlagenklasse beschreibt ein Objekt, das zwei Objekte vom Typ speichert `Type`, eines entspricht dem Realteil einer komplexen Zahl und eine, die den imaginären Teil darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +42,7 @@ class complex
 
 ## <a name="remarks"></a>Hinweise
 
-Für ein Objekt der Klasse **Type**gilt Folgendes:
+Ein Objekt der Klasse `Type`:
 
 - Es hat einen öffentlichen Standardkonstruktor, Destruktor, Kopierkonstruktor und Zuweisungsoperator mit üblichem Verhalten.
 
@@ -49,9 +50,9 @@ Für ein Objekt der Klasse **Type**gilt Folgendes:
 
 - Es definiert nach Bedarf die arithmetischen Operatoren und mathematischen Funktionen, die für die Gleitkommatypen definiert sind (mit üblichem Verhalten).
 
-Insbesondere dürfen keine feinen Unterschiede zwischen einer Kopierkonstruktion und einer Standardkonstruktion bestehen, auf die eine Zuweisung folgt. Keiner der Vorgänge für Objekte, die aus der **Type**-Klasse abgeleitet wurden, darf Ausnahmen auslösen.
+Insbesondere dürfen keine feinen Unterschiede zwischen einer Kopierkonstruktion und einer Standardkonstruktion bestehen, auf die eine Zuweisung folgt. Keiner der Vorgänge für Objekte der Klasse `Type` möglicherweise Ausnahmen auslösen.
 
-Für die drei Gleitkommatypen sind explizite Spezialisierungen der Vorlagenklasse „complex“ vorhanden. In dieser Implementierung wird der Wert eines anderen Typs **Type** für tatsächliche Berechnungen umgewandelt zu **double**, wobei das Ergebnis **double** wieder an das gespeicherte Objekt vom Typ **Type**`.` zugewiesen wird.
+Für die drei Gleitkommatypen sind explizite Spezialisierungen der Vorlagenklasse „complex“ vorhanden. In dieser Implementierung wird der Wert eines anderen Typs `Type` umgewandelt zu **doppelte** für tatsächliche Berechnungen, mit der **doppelte** Ergebnis zurück, die das gespeicherte Objekt vom Typ zugewiesen `Type``.`
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -88,7 +89,7 @@ Für die drei Gleitkommatypen sind explizite Spezialisierungen der Vorlagenklass
 
 **Namespace:** std
 
-## <a name="complex"></a>  complex::complex
+## <a name="complex">complex::complex</a>
 
 Erstellt eine komplexe Zahl aus den angegebenen reellen und imaginären Teilen oder eine Kopie einer anderen komplexen Zahl.
 
@@ -107,11 +108,11 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parameter
 
-`_RealVal` Der Wert des reellen Teils, der zum Initialisieren der zu erstellenden komplexen Zahl verwendet.
+*_RealVal* den Wert des reellen Teils, der zum Initialisieren der komplexen Zahl, die erstellt wird.
 
-`_ImagVal` Der Wert des imaginären Teils zum Initialisieren der zu erstellenden komplexen Zahl verwendet werden soll.
+*_ImagVal* den Wert des imaginären Teils, der zum Initialisieren der komplexen Zahl, die erstellt wird.
 
-`complexNum` Die komplexe Zahl, deren reellen und imaginären Teile zum Initialisieren der zu erstellenden komplexen Zahl verwendet werden.
+*ComplexNum* die komplexe Zahl, deren tatsächliche und imaginäre Teile werden verwendet, um das Initialisieren der komplexen Zahl, die erstellt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -173,7 +174,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a>  complex::imag
+## <a name="imag">complex::imag</a>
 
 Extrahiert die imaginäre Komponente einer komplexen Zahl.
 
@@ -186,7 +187,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Eine komplexe Zahl, deren imaginärer Wert extrahiert werden soll.
+*richtige* eine komplexe Zahl, deren imaginärer Wert extrahiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -242,7 +243,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Eine komplexe Zahl oder eine Zahl, die den gleichen Typ wie der Parameter der komplexen Zielanzahl ist.
+*richtige* eine komplexe Zahl oder eine Zahl, die den gleichen Typ wie der Parameter von der komplexen zielzahl ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -310,7 +311,7 @@ int main() {
 }
 ```
 
-## <a name="op_add_eq"></a>  complex::operator+=
+## <a name="op_add_eq">complex::operator+=</a>
 
 Fügt der komplexen Zielzahl eine Zahl hinzu, die komplex ist oder vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl, der sie hinzugefügt wird
 
@@ -325,7 +326,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Eine komplexe Zahl oder eine Zahl, die den gleichen Typ wie der Parameter der komplexen Zielanzahl ist.
+*richtige* eine komplexe Zahl oder eine Zahl, die den gleichen Typ wie der Parameter von der komplexen zielzahl ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -412,7 +413,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="complex__operator-_eq"></a>  complex::operator-=
+## <a name="complex__operator-_eq">complex::operator-=</a>
 
 Subtrahiert eine Zahl von der komplexen Zielzahl, wobei die subtrahiert Zahl komplex ist oder vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl, von der sie subtrahiert wurde
 
@@ -427,9 +428,9 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Eine komplexe Zahl vom Ziel komplexen Zahl subtrahiert werden.
+*ComplexNum* eine komplexe Zahl, die von der komplexen zielzahl subtrahiert werden soll.
 
-`_RealPart` Eine reelle Zahl, von der Ziel-komplexen Zahl subtrahiert werden soll.
+*_RealPart* eine reelle Zahl, die von der komplexen zielzahl subtrahiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -518,7 +519,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a>  complex::operator/=
+## <a name="op_div_eq">complex::operator/=</a>
 
 Dividiert eine komplexe Zielzahl durch einen komplexen Faktor oder einen Faktor vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl
 
@@ -533,9 +534,9 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parameter
 
-`complexNum` Eine komplexe Zahl vom Ziel komplexen Zahl subtrahiert werden.
+*ComplexNum* eine komplexe Zahl, die von der komplexen zielzahl subtrahiert werden soll.
 
-`_RealPart` Eine reelle Zahl, von der Ziel-komplexen Zahl subtrahiert werden soll.
+*_RealPart* eine reelle Zahl, die von der komplexen zielzahl subtrahiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -633,7 +634,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Eine komplexe Zahl oder eine Zahl, die den gleichen Typ wie der Parameter der komplexen Zielanzahl ist.
+*richtige* eine komplexe Zahl oder eine Zahl, die den gleichen Typ wie der Parameter von der komplexen zielzahl ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -710,7 +711,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Eine komplexe Zahl, deren Reeller Wert extrahiert werden soll.
+*richtige* eine komplexe Zahl, deren Reeller Wert extrahiert werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -762,7 +763,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Hinweise
 
-`value_type` ist ein Synonym für den Parameter **Type** der Vorlagenklasse „complex“.
+`value_type` ist ein Synonym für die Klasse komplexen `Type` Template-Parameter.
 
 ### <a name="example"></a>Beispiel
 
@@ -791,5 +792,5 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Complex-Member](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
+[komplexe Member](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [Threadsicherheit in der C++-Standardbibliothek](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098146"
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 Die `CMyProviderCommand` Klasse ist die Implementierung für die Anbieter-Befehlsobjekt. Sie stellt die Implementierung für die `IAccessor`, `ICommandText`, und **ICommandProperties** Schnittstellen. Die `IAccessor` Schnittstelle ist identisch mit der im Rowset. Das Befehlsobjekt verwendet die Zugriffsmethode, um Bindungen für Parameter anzugeben. Das Rowsetobjekt, das verwendet werden, um Bindungen für Ausgabespalten anzugeben. Die `ICommandText` Schnittstelle ist eine gute Möglichkeit, einen Textbefehl anzugeben. Dieses Beispiel verwendet die `ICommandText` Schnittstelle später, wenn sie benutzerdefinierten Code hinzufügt, überschreibt auch die `ICommand::Execute` Methode. Die **ICommandProperties** Schnittstelle behandelt alle Eigenschaften für die Befehls- und Rowsetobjekte-Objekte.  

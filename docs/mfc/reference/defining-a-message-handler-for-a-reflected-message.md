@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373168"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definieren eines Meldungshandlers für eine reflektierte Meldung
 Nachdem Sie eine neue MFC-Steuerelementklasse erstellt haben, können Sie Meldungshandler dafür definieren. Reflektierte fenstermeldungs-Handler ermöglichen die Steuerelementklasse eigene Nachrichten zu verarbeiten, bevor die Nachricht vom übergeordneten Element empfangen wird. Sie können die MFC-Bibliothek [Funktion CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) Funktion zum Senden von Nachrichten über das Steuerelement für ein übergeordnetes Fenster.  

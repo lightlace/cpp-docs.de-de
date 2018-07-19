@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197909"
 ---
 # <a name="compiler-error-c2392"></a>Compilerfehler C2392
 "Methode1": verwaltete kovariant zurückgibt, die Typen werden in nicht unterstützt oder würden WinRTtypes, andernfalls "Methode2" überschrieben werden  

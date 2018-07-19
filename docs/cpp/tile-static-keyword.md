@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422162"
 ---
 # <a name="tilestatic-keyword"></a>tile_static-Schlüsselwort
 Das Schlüsselwort `tile_static` wird verwendet, um eine Variable zu deklarieren, auf die von allen Threads in einer Kachel mit Threads zugegriffen werden kann. Die Lebensdauer der Variable beginnt, wenn die Ausführung den Punkt der Deklaration erreicht, und sie endet dann, wenn die Kernelfunktion zurückgegeben wird. Weitere Informationen zur Verwendung von Kacheln finden Sie unter [mithilfe von Kacheln](../parallel/amp/using-tiles.md).  

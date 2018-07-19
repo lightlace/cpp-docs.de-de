@@ -1,5 +1,5 @@
 ---
-title: Implementieren der Schnittstelle-Assistenten | Microsoft Docs
+title: Assistent zum Implementieren von Schnittstellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,49 +17,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33340540"
 ---
 # <a name="implement-interface-wizard"></a>Assistent zum Implementieren von Schnittstellen
-Dieser Assistent implementiert eine Schnittstelle für ein COM-Objekt. Implementierungen von vielen Schnittstellen sind in der COM-Bibliotheken in Visual Studio und Windows verfügbare enthalten. Eine Implementierung bezieht sich auf ein Objekt zur Verfügung, wenn eine Instanz dieses Objekts erstellt wird, und darüber, dass die Dienste, die das Objekt bietet.  
+Dieser Assistent implementiert eine Schnittstelle für ein COM-Projekt. Implementierungen vieler Schnittstellen sind in den COM-Bibliotheken enthalten, die in Visual Studio und Windows verfügbar sind. Eine Schnittstellen-Implementierung wird einem Objekt zugeordnet, wenn eine Schnittstelle dieses Objekts erstellt wird. Diese stellt die Dienste bereit, die das Objekt anbietet.  
   
- Eine Erläuterung der Schnittstellen und Implementierungen, finden Sie unter [Schnittstellen und Schnittstellenimplementierungen](http://msdn.microsoft.com/library/windows/desktop/ms694356) im Windows SDK.  
+ Eine Erläuterung der Schnittstellen und Implementierungen finden Sie im Windows SDK unter [Interfaces and Interface Implementations (Schnittstellen und Schnittstellenimplementierungen)](http://msdn.microsoft.com/library/windows/desktop/ms694356).  
   
- **Schnittstelle implementieren aus**  
- Gibt den Speicherort der Typbibliothek, aus der die Schnittstelle erstellt wird.  
+ **Implement interface from** (Schnittstelle implementieren aus)  
+ Gibt den Speicherort der Typbibliothek an, aus der die Schnittstelle erstellt wird.  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
-|**Projekt**|Die Typbibliothek ist Teil des Projekts.|  
-|**Registry**|Die Typbibliothek ist im System registriert. Registrierte Typbibliotheken in aufgelisteten **verfügbaren Typbibliotheken**.|  
-|**Datei**|Die Typbibliothek ist nicht unbedingt im System registriert, aber in einer Datei enthalten ist. Geben Sie den Dateispeicherort in **Speicherort**.|  
+|**Projekt**|Die Typbibliothek ist ein Teil des Projekts.|  
+|**Registry**|Die Typbibliothek ist im System registriert. Registrierte Typbibliotheken werden unter **Verfügbare Typbibliotheken** aufgeführt.|  
+|**Datei**|Die Typbibliothek ist nicht unbedingt im System registriert, sondern in einer Datei enthalten. Sie müssen den Dateispeicherort unter **Speicherort** angeben.|  
   
  **Verfügbare Typbibliotheken**  
- Zeigt die verfügbaren Typbibliotheken mit Schnittstellendefinitionen, die Sie implementieren können. Wenn Sie auf **Datei** unter **Schnittstelle implementieren aus**, dieses Feld ist für die Änderung nicht verfügbar.  
+ Zeigt die verfügbaren Typbibliotheken an, die die Schnittstellendefinitionen enthalten, die Sie implementieren können. Wenn Sie unter **Implement interface from** (Schnittstelle implementieren aus) auf **Datei** klicken, kann dieses Feld nicht geändert werden.  
   
  **Position**  
- Zeigt den Speicherort der Typbibliothek, die derzeit im ausgewählten der **verfügbaren Typbibliotheken** Liste. Wenn Sie ausgewählt haben **Datei** unter **Schnittstelle implementieren aus**, klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um eine Datei mit der Typbibliothek verwenden suchen.  
+ Zeigt den Speicherort der Typbibliothek an, die in der Liste **Verfügbare Typbibliotheken** aktuell ausgewählt ist. Wenn Sie unter **Implement interface from** (Schnittstelle implementieren aus) auf **Datei** geklickt haben, klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um eine Datei zu suchen, die die zu verwendende Typbibliothek enthält.  
   
  **Schnittstellen**  
- Zeigt die Schnittstellen, deren Definitionen werden in der Typbibliothek, die derzeit im ausgewählten enthalten, die **verfügbaren Typbibliotheken** Feld.  
+ Zeigt die Schnittstellen an, deren Definitionen in der aktuell im Feld **Verfügbare Typbibliotheken** ausgewählten Typbibliothek enthalten sind.  
   
 > [!NOTE]
->  Schnittstellen, die den gleichen Namen haben wie die vom ausgewählten Objekt bereits implementiert nicht, in angezeigt werden der **Schnittstellen** Feld.  
+>  Schnittstellen mit dem gleichen Namen wie die, die bereits vom ausgewählten Objekt implementiert wurden, werden nicht im Feld **Schnittstellen** angezeigt.  
   
-|Übertragen Sie die Schaltfläche|Beschreibung|  
+|Schaltfläche „Übertragen“|description|  
 |---------------------|-----------------|  
-|**>**|Hinzugefügt, die **Schnittstellen implementieren** Liste der derzeit im ausgewählten Schnittstellenname der **Schnittstellen** Liste.|  
-|**>>**|Hinzugefügt, die **Schnittstellen implementieren** Liste alle Schnittstellennamen in verfügbaren der **Schnittstellen** Liste.|  
-|**<**|Entfernt die derzeit im ausgewählten Schnittstelle die **Schnittstellen implementieren** Liste.|  
-|**<\<**|Entfernt alle derzeit aufgeführt Schnittstellennamen, der **Schnittstellen implementieren** Liste.|  
+|**>**|Fügt den Namen der aktuell in der Liste **Schnittstellen** ausgewählten Schnittstelle der Liste **Schnittstellen implementieren** hinzu.|  
+|**>>**|Fügt alle Namen der in der Liste **Schnittstellen** verfügbaren Schnittstellen der Liste **Schnittstellen implementieren** hinzu.|  
+|**<**|Entfernt den Namen der Schnittstelle, die aktuell in der Liste **Schnittstellen implementieren** ausgewählt ist.|  
+|**<\<**|Entfernt alle Namen der Schnittstellen, die aktuell in der Liste **Schnittstellen implementieren** aufgelistet sind.|  
   
- **Implementieren von Schnittstellen**  
- Zeigt die Namen der Schnittstellen, die Sie ausgewählt haben, um für das Objekt zu implementieren.  
+ **Schnittstellen implementieren**  
+ Zeigt die Namen der Schnittstellen an, die Sie zum Implementieren in Ihr Objekt ausgewählt haben.  
   
 > [!NOTE]
->  Wenn Sie mehr als eine Schnittstelle enthalten, die abgeleitet `IDispatch`, oder Sie müssen die Einträge COM_MAP eindeutig machen, wenn Sie versuchen, eine Schnittstelle zu implementieren, die von einer anderen Schnittstelle, die bereits in der Klasse abgeleitet ist. Finden Sie unter [COM_INTERFACE_ENTRY2](../atl/reference/com-interface-entry-macros.md#com_interface_entry2) für Weitere Informationen.  
+>  Wenn Sie mehr als eine Schnittstelle einfügen, die von `IDispatch` abgeleitet wird, oder wenn Sie versuchen eine Schnittstelle zu implementieren, die von einer Schnittstelle abgeleitet wird, die sich bereits in der Klasse befindet, müssen Sie die COM_MAP-Einträge voneinander unterscheiden. Weitere Informationen finden Sie unter [COM_INTERFACE_ENTRY2](../atl/reference/com-interface-entry-macros.md#com_interface_entry2).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Implementieren einer Schnittstelle](../ide/implementing-an-interface-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: ATL-Registrierung und Backus Nauer Form (BNF)-Syntax | Microsoft Docs
+title: ATL-Registrierung und Backus Nauer Form (BNF)-Syntax | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,41 +15,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4137dd94886456d5813076f3cb328bac5ecf5c03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bf1033007a02ea21e7625068bc23d762c103aa41
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854446"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Grundlegendes zu Backus Nauer Form (BNF)-Syntax
-In diesem Thema mithilfe der BNF-Syntax, die in der folgenden Tabelle aufgeführten Notation verwendet, werden die Skripts, die verwendet werden, durch die ATL-Registrierung beschrieben.  
+Die Skripts, die von der ATL-Registrierung verwendet werden beschrieben, in diesem Thema mithilfe der BNF-Syntax, die in der folgenden Tabelle aufgeführten Notation verwendet wird.  
   
-|Konvention-symbol|Bedeutung|  
+|Konvention/symbol|Bedeutung|  
 |------------------------|-------------|  
-|`::=`|Entsprechung|  
-|`&#124;`|ODER|  
-|`X+`|Eine oder mehrere `X`s.|  
-|`[X]`|`X` ist optional. Optionale Trennzeichen sind gekennzeichnet durch `[]`.|  
+|::=|Entsprechung|  
+|&#124;|ODER|  
+|X +|Eine oder mehrere Xs.|  
+|[X]|X ist optional. Optionale Trennzeichen sind gekennzeichnet durch \[].|  
 |Alle **fett** Text|Ein Zeichenfolgenliteral.|  
-|Alle *Kursiv* Text|Wie das Zeichenfolgenliteral erstellt.|  
+|Alle *Kursiv* Text|So erstellen Sie das Zeichenfolgenliteral.|  
   
- Wie in der obigen Tabelle angegeben wird, verwenden Sie registrierungsskripte Zeichenfolgenliterale. Diese Werte sind die tatsächlichen Text, der im Skript verwendet werden muss. Die folgende Tabelle beschreibt die Zeichenfolgenliterale in einem Skript ATL-Registrierung.  
+ Wie in der obigen Tabelle angegeben wird, verwenden Sie registrierungsskripte Zeichenfolgenliterale. Diese Werte sind die eigentliche Text, der im Skript verwendet werden muss. In der folgende Tabelle wird beschrieben, die Zeichenfolgenliterale in einem ATL-Registrierung-Skript verwendet wird.  
   
-|Ein Zeichenfolgenliteral handeln|Aktion|  
+|Zeichenfolgenliteral|Aktion|  
 |--------------------|------------|  
-|**ForceRemove**|Den nächsten Schlüssel entfernt, vollständig (falls vorhanden) und dann neu erstellt.|  
-|**NoRemove**|Den nächsten Schlüssel werden nicht während der Aufhebung der Registrierung entfernt werden.|  
-|**Val**|Gibt an, dass `<Key Name>` ist tatsächlich ein benannter Wert.|  
+|**ForceRemove**|Mit der nächste Taste vollständig entfernt werden, (falls vorhanden) und dann neu erstellt.|  
+|**NoRemove**|Mit der nächste Taste werden nicht während der Aufhebung der Registrierung entfernt werden.|  
+|**val**|Gibt an, dass `<Key Name>` ist tatsächlich ein benannter Wert.|  
 |**Löschen**|Löscht den nächsten Schlüssel während der Registrierung.|  
-|**s**|Gibt an, dass der nächste Wert eine Zeichenfolge ist (**REG_SZ**).|  
-|**d**|Gibt an, dass der nächste Wert ist ein **DWORD** (**REG_DWORD**).|  
-|**m**|Gibt an, dass der nächste Wert eine mehrteilige Zeichenfolge ist (**REG_MULTI_SZ**).|  
-|**b**|Gibt an, dass der nächste Wert ein binärer Wert ist (**REG_BINARY**).|  
+|**s**|Gibt an, dass der nächste Wert eine Zeichenfolge (REG_SZ).|  
+|**d**|Gibt an, dass der nächste Wert ein DWORD (REG_DWORD).|  
+|**m**|Gibt an, dass der nächste Wert eine mehrteilige Zeichenfolge (REG_MULTI_SZ).|  
+|**b**|Gibt an, dass der nächste Wert einen Binärwert (REG_BINARY).|  
   
-## <a name="bnf-syntax-examples"></a>Beispiele für BNF-Syntax  
- Hier sind einige Syntaxbeispiele um besser zu verstehen, wie die Notation und Zeichenfolgenliterale in einem Skript ATL-Registrierung funktionieren.  
+## <a name="bnf-syntax-examples"></a>Beispiele für die BNF-Syntax  
+ Hier sind einige Beispiele für Abfragesyntax um besser zu verstehen, wie die Literale Notation und die Zeichenfolge in einem ATL-Registrierung Skript funktionieren.  
   
-### <a name="syntax-example-1"></a>Syntaxbeispiel 1  
+### <a name="syntax-example-1"></a>Attributsyntax-Beispiel 1  
   
 ```  
 <registry expression> ::= <Add Key>  
@@ -57,7 +58,7 @@ In diesem Thema mithilfe der BNF-Syntax, die in der folgenden Tabelle aufgeführ
   
  Gibt an, dass `registry expression` entspricht `Add Key`.  
   
-### <a name="syntax-example-2"></a>Syntaxbeispiel 2  
+### <a name="syntax-example-2"></a>Attributsyntax-Beispiel 2  
   
 ```  
 <registry expression> ::= <Add Key> | <Delete Key>  
@@ -87,15 +88,15 @@ In diesem Thema mithilfe der BNF-Syntax, die in der folgenden Tabelle aufgeführ
 <AlphaNumeric> ::= any character not NULL, that is, ASCII 0  
 ```  
   
- Gibt an, dass `AlphaNumeric` entspricht, nicht-NULL-Zeichen.  
+ Gibt an, dass `AlphaNumeric` entspricht, alle nicht-NULL-Zeichen.  
   
-### <a name="syntax-example-6"></a>Syntaxbeispiel 6  
+### <a name="syntax-example-6"></a>Attributsyntax-Beispiel 6  
   
 ```  
 val 'testmulti' = m 'String 1\0String 2\0'  
 ```  
   
- Gibt an, dass der Schlüsselname `testmulti` besteht aus ein Wert für mehrteilige Zeichenfolgen `String 1` und `String 2`.  
+ Gibt an, dass der Schlüsselname `testmulti` eine mehrteilige Zeichenfolge besteht aus `String 1` und `String 2`.  
   
 ### <a name="syntax-example-7"></a>Syntaxbeispiel 7  
   
@@ -103,7 +104,7 @@ val 'testmulti' = m 'String 1\0String 2\0'
 val 'testhex' = d '&H55'  
 ```  
   
- Gibt an, dass der Schlüsselname `testhex` ist ein **DWORD** Wert auf hexadezimale 55 (85 dezimal) festgelegt. Beachten Sie dieses Format entspricht der **& H** Schreibweise wie in der Visual Basic-Spezifikation gefunden.  
+ Gibt an, dass der Schlüsselname `testhex` ist ein DWORD-Wert, die auf hexadezimale 55 (decimal 85) festgelegt. Beachten Sie dieses Format entspricht dem **& H** Notation als finden Sie in der Visual Basic-Spezifikation.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Registrierungsskripts](../atl/creating-registrar-scripts.md)

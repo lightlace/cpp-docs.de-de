@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380248"
 ---
 # <a name="unwind-helpers-for-masm"></a>Entladehilfen für MASM
 Um die richtige Assemblyroutinen schreiben zu können, stehen Ihnen eine Reihe von Pseudo-Vorgängen, die zum Erstellen der entsprechenden .pdata und .xdata parallel mit den tatsächlichen Assemblyanweisungen verwendet werden kann. Es gibt auch ein Satz von Makros zur Verfügung verwenden, der für ihre Zwecke am häufigsten verwendeten Pseudooperationen vereinfacht.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375297"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Stapelüberprüfungen aktivieren)
 Aktiviert stapelüberprüfungen für jeden Funktionsaufruf, der Speicher für lokale Variablen benötigt.  

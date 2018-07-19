@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a320b02bb97c4f6b506e23a7dc93b36c22421aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5408cf05910bdc1802213d69a286707199f0be76
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940228"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator !
 **Microsoft-spezifisch**  
   
- Überprüft, ob das gekapselte `BSTR` ist ein **NULL** Zeichenfolge.  
+ Überprüft, ob das gekapselte `BSTR` ist eine NULL-Zeichenfolge.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +39,7 @@ bool operator!( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Es gibt **"true"** Falls Ja, **"false"** Wenn dies nicht.  
+ Er gibt TRUE zurück, wenn dies der Fall, FALSE, wenn nicht.  
   
  **Ende Microsoft-spezifisch**  
   

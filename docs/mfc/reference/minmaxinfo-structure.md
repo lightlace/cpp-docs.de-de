@@ -1,5 +1,5 @@
 ---
-title: MINMAXINFO-Struktur | Microsoft Docs
+title: MINMAXINFO-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12161938f96e5044ae48f9eb5cf380fbc3840d3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf9a6e6a1397b9361df5372af09be8e61d997e62
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337813"
 ---
 # <a name="minmaxinfo-structure"></a>MINMAXINFO-Struktur
-Die `MINMAXINFO` Struktur enthält Informationen über ein Fenster maximiert Größe und Position und die minimalen und maximalen Tracking-Größe.  
+Die `MINMAXINFO` Struktur enthält Informationen über die Größe eines Fensters maximiert und die Position und die nachverfolgung von minimalen und maximalen Größe.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,10 +43,10 @@ typedef struct tagMINMAXINFO {
  Für die interne Verwendung vorgesehen.  
   
  *ptMaxSize*  
- Gibt die maximierten Breite (point.x) und der maximierten Höhe (point.y) des Fensters.  
+ Gibt an, die maximierten Breite (point.x) und der maximierten Höhe (point.y) des Fensters.  
   
- `ptMaxPosition`  
- Gibt die Position des linken Rands des maximierten Fensters (point.x) und die Position des oberen Rands des maximierten Fensters (point.y).  
+ *ptMaxPosition*  
+ Gibt die Position des linken Rands des maximierten Fensters (point.x) und die Position des oberen Rands der maximierten Fensters (point.y).  
   
  *ptMinTrackSize*  
  Gibt die minimale Trackingbreite (point.x) und die minimale Höhe (point.y) des Fensters nachverfolgen.  

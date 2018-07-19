@@ -1,5 +1,5 @@
 ---
-title: _bstr_t-Operatoren (relational) | Microsoft Docs
+title: _bstr_t-Operatoren (relational) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -39,11 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 556a56de97c6e1b547b9a67387acfcdd3205913c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40834c7c41bc19b395958b4a173a68bd014b2e70
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943633"
 ---
 # <a name="bstrt-relational-operators"></a>_bstr_t-Operatoren (relational)
 **Microsoft-spezifisch**  
@@ -54,29 +55,17 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      bool operator!( ) const throw( );   
-bool operator==(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator!=(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator<(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator>(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator<=(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator>=(  
-   const _bstr_t& str   
-) const throw( );  
+bool operator!( ) const throw( );   
+bool operator==(const _bstr_t& str) const throw( );  
+bool operator!=(const _bstr_t& str) const throw( );  
+bool operator<(const _bstr_t& str) const throw( );  
+bool operator>(const _bstr_t& str) const throw( );  
+bool operator<=(const _bstr_t& str) const throw( );  
+bool operator>=(const _bstr_t& str) const throw( );  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Operatoren vergleichen zwei `_bstr_t`-Objekte auf lexikografischer Ebene. Die Operatoren geben **"true"** , wenn die Vergleiche stimmen; andernfalls zurückgeben **"false"**.  
+ Diese Operatoren vergleichen zwei `_bstr_t`-Objekte auf lexikografischer Ebene. Die Operatoren geben "true" zurück, wenn die Vergleiche stimmen; andernfalls "false" zurückgegeben.  
   
  **Ende Microsoft-spezifisch**  
   

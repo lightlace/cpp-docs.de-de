@@ -31,11 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0a3f60a4cbcde76a681b33ed9201e81f313bac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963793"
 ---
 # <a name="locale-class"></a>locale-Klasse
 
@@ -212,27 +213,27 @@ static const int none = 0;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für einen `int`-Typ, der eine Gruppe von verschiedenen Elementen eines locale-Bitmaskentyps zur locale-Klasse darstellen kann oder als diese verwendet werden kann, um die entsprechenden C-Gebietsschemakategorien darstellen. Die Elemente sind:
+Der Typ ist ein Synonym für einen **Int** Typ, eine Gruppe von verschiedenen Elementen einer Bitmaske darstellen kann, geben Sie lokal auf Locale-Klasse, oder kann verwendet werden, um jeden der entsprechenden C-gebietsschemakategorien darstellen. Die Elemente sind:
 
-- **collate**, entspricht der C-Kategorie LC_COLLATE
+- `collate`, entspricht der C-Kategorie LC_COLLATE
 
-- **ctype**, entspricht der C-Kategorie LC_CTYPE
+- `ctype`, entspricht der C-Kategorie LC_CTYPE
 
-- **monetary**, entspricht der C-Kategorie LC_MONETARY
+- `monetary`, entspricht der C-Kategorie LC_MONETARY
 
-- **monetary**, entspricht der C-Kategorie LC_MONETARY
+- `numeric`, für die C-Kategorie lc_monetary
 
-- **time**, entspricht der C-Kategorie LC_TIME
+- `time`, entspricht der C-Kategorie LC_TIME
 
-- **messages**, entspricht der Posix-Kategorie LC_MESSAGES
+- `messages`, entspricht der Posix-Kategorie LC_MESSAGES
 
 Zusätzlich gibt es zwei weitere nützliche Werte:
 
-- **none**, entspricht keiner der C-Kategorien
+- `none`, entspricht keiner der C-Kategorien
 
-- **all**, entspricht der C-Union aller Kategorien LC_ALL
+- `all`, entspricht der C-Union aller Kategorien LC_ALL
 
-Sie können eine beliebige Gruppe von Kategorien darstellen, indem Sie `OR` genauso wie in **monetary** &#124; **time** mit diesen Konstanten verwenden.
+Sie können eine beliebige Gruppe von Kategorien darstellen, indem Sie mithilfe von `OR` diese Konstanten, wie im `monetary` &#124; `time`.
 
 ## <a name="classic"></a> locale::classic
 
@@ -248,7 +249,7 @@ Ein Verweis auf das C-Gebietsschema.
 
 ### <a name="remarks"></a>Hinweise
 
-Das klassische C-Gebietsschema ist die USA Englischen ASCII-Gebietsschema in der C-Standardbibliothek, der implizit in Programmen verwendet wird, die nicht internationalisiert werden.
+Das klassische C-Gebietsschema ist das US- Englische ASCII-Gebietsschema in der Standard-C-Bibliothek, die implizit in Programmen verwendet wird, die nicht International sind.
 
 ### <a name="example"></a>Beispiel
 
@@ -300,11 +301,11 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parameter
 
-`Loc` Das Gebietsschema, enthält das Facet in das Zielgebietsschema eingefügt werden soll.
+*LOC* das Gebietsschema enthält das Facet, in das Zielgebietsschema eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die Memberfunktion gibt ein Gebietsschemaobjekt zurück, das das unter `Loc` aufgelistete Facet `Facet` in **\*this** ersetzt oder dieses diesem hinzufügt.
+Die Memberfunktion gibt ein Locale-Objekt, das ersetzt oder fügt hinzu  **\*dies** Facets `Facet` in aufgeführten *Loc*.
 
 ### <a name="example"></a>Beispiel
 
@@ -368,7 +369,7 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parameter
 
-`Loc` Das Gebietsschema als das Standardgebietsschema vom Programm verwendet werden.
+*LOC* das Gebietsschema als das Standardgebietsschema vom Programm verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -414,7 +415,7 @@ Klasse id { protected:    id(); private:    id(const id&) // not defined void op
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberklasse beschreibt das statische Memberobjekt, das von jedem Gebietsschemafacet benötigt wird. Beachten Sie, dass Sie ein Objekt der Klasse **id** nicht kopieren oder zuweisen können.
+Die Memberklasse beschreibt das statische Memberobjekt, das von jedem Gebietsschemafacet benötigt wird. Beachten Sie, dass Sie nicht kopieren oder Zuweisen von einem Objekt der Klasse `id`.
 
 ## <a name="locale"></a> locale::locale
 
@@ -435,35 +436,35 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Parameter
 
-`Locname` Der Name eines Gebietsschemas.
+*Locname* Name eines Gebietsschemas.
 
-`Loc` Ein Gebietsschema, das kopiert werden soll, in das neue Gebietsschema zu erstellen.
+*LOC* einem Gebietsschema, das beim Erstellen des neuen Gebietsschemas kopiert werden soll.
 
-`Other` Ein Gebietsschema aus, wählen Sie eine Kategorie.
+*Andere* eines Gebietsschemas, aus denen Sie eine Kategorie auswählen.
 
-`Cat` Die Kategorie in das konstruierte Gebietsschema ersetzt werden sollen.
+*CAT* die Kategorie, das im erstellten Gebietsschema ersetzt werden soll.
 
-`Fac` Das Facet in der konstruierten Gebietsschema ersetzt werden sollen.
+*FAc* das Facet, das im erstellten Gebietsschema ersetzt werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor initialisiert das Objekt, um mit dem globalen Gebietsschema übereinzustimmen. Der zweite und dritte Konstruktor initialisieren alle Gebietsschemakategorien, die ein konsistentes Verhalten mit dem Gebietsschemanamen `Locname` haben sollen. Kopieren Sie die übrigen Konstruktoren `Loc`, mit den folgenden Ausnahmen:
+Der erste Konstruktor initialisiert das Objekt, um mit dem globalen Gebietsschema übereinzustimmen. Der zweite und dritte Konstruktor initialisieren alle gebietsschemakategorien Verhalten mit der Gebietsschemanamen konsistent *Locname*. Kopieren Sie die übrigen Konstruktoren *Loc*, mit der Ausnahmen:
 
 `locale(const locale& Loc, const locale& Other, category Cat);`
 
-ersetzt aus `Other` die Facets, die einer Kategorie C entsprechen, für welche C & `Cat` ungleich null sind.
+ersetzt aus *andere* die Facets, einer Kategorie C entsprechen, für welche C & *Cat* ungleich NULL ist.
 
 `locale(const locale& Loc, const char* Locname, category Cat);`
 
 `locale(const locale& Loc, const string& Locname, category Cat);`
 
-ersetzt aus `locale(Locname, _All)` die Facets, die einer Kategorie C entsprechen, für welche C & `Cat` ungleich null sind.
+ersetzt aus `locale(Locname, _All)` die Facets, einer Kategorie C entsprechen, für welche C & *Cat* ungleich NULL ist.
 
 `template<class Facet> locale(const locale& Loc, Facet* Fac);`
 
-ersetzt in `Loc` das Facet `Fac`, wenn `Fac` kein Nullzeiger ist (oder fügt dieses hinzu).
+ersetzt in (oder hinzugefügt) *Loc* Facets *Fac*, wenn *Fac* ist kein null-Zeiger.
 
-Wenn ein Gebietsschema `Locname` ein NULL-Zeiger oder ungültig ist, löst die Funktion [runtime_error](../standard-library/runtime-error-class.md) aus.
+Wenn ein Gebietsschema *Locname* ist ein null-Zeiger oder ungültig ist, löst die Funktion aus [Runtime_error](../standard-library/runtime-error-class.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -554,7 +555,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-`right` Einer der Gebietsschemas auf Ungleichheit geprüft werden soll.
+*richtige* eines Gebietsschemas, die auf Ungleichheit geprüft werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -617,9 +618,9 @@ bool operator()(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die linke Zeichenfolge.
+*linken* die linke Zeichenfolge.
 
-`right` Die richtige Zeichenfolge.
+*richtige* die Rechte Zeichenfolge.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -684,7 +685,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-`right` Einer der Gebietsschemas auf Gleichheit geprüft werden soll.
+*richtige* eines Gebietsschemas, die auf Gleichheit getestet werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 

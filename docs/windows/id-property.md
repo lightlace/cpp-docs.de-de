@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881116"
 ---
 # <a name="id-property"></a>Eigenschaft "ID"
 Die ID-Eigenschaft verweist auf einzelnen Zugriffstastentabellen-Einträge im Programmcode. Dies ist der Befehlswert, den das Programm erhalten sollen, wenn ein Benutzer die Zugriffstaste oder eine Tastenkombination drückt. Um einer Zugriffstaste eines Menüelements identisch machen, legen Sie ihre IDs identisch (so lange die ID der Accelerator-Tabelle mit der ID für die Menüressource identisch ist).  

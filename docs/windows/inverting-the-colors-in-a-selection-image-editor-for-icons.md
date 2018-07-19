@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874079"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Invertieren der Farben in einer Markierung (Bildbearbeitung für Symbole)
 Der Grafik-Editor bietet eine bequeme Möglichkeit zum Invertieren von Farben im ausgewählten Teil des Bilds, damit Sie feststellen können, wie ein Bild mit invertierten Farben aussieht.  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 757a5eb526bc8d4294a64cbdc9645e72285162ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f73559503ad427c9b7eb513d4164d3348c652948
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954746"
 ---
 # <a name="istriviallyconstructible-class"></a>Is_trivially_constructible-Klasse
 
@@ -36,13 +37,13 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Der abzufragende Typ.
+*T* der abzufragende Typ.
 
-`Args` Die Argumenttypen entsprechend in einem Konstruktor, der `T`.
+*Args* den Argumenttypen in einem Konstruktor, der entsprechend *T*.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist TRUE, wenn der Typ `T` durch die Verwendung der Argumenttypen von `Args` trivial konstruierbar ist; andernfalls ist sie FALSE. Typ `T` ist trivial konstruierbar, wenn die Variablendefinition `T t(std::declval<Args>()...);` wohlgeformt ist, und keine nicht trivialen Operationen aufruft. Sowohl `T` als auch alle Typen in `Args` müssen vollständige Typen `void` sein oder Arrays mit unbekannter Grenze.
+Eine Instanz des typprädikats ist true, wenn der Typ *T* Trivial konstruierbar ist mit den Argumenttypen in *Args*, andernfalls ist Sie false. Typ *T* Trivial konstruierbar ist; wenn die Variablendefinition `T t(std::declval<Args>()...);` wohlgeformt ist, und ist bekannt, dass keine nicht trivialen Operationen aufruft. Beide *T* und alle Typen in *Args* müssen vollständige Typen werden **"void"**, oder Arrays mit Unbekannter Grenze.
 
 ## <a name="requirements"></a>Anforderungen
 

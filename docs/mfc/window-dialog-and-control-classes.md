@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381845"
 ---
 # <a name="window-dialog-and-control-classes"></a>Klassen für Fenster, Dialogfelder und Steuerelemente
 Klasse `CWnd` und die abgeleiteten Klassen kapseln einer `HWND`, ein Handle für ein Windows-Fenster. `CWnd` allein oder als Basis dient für die neue Klassen ableiten. Die abgeleiteten Klassen, die von der Klassenbibliothek bereitgestellt stellen verschiedene Arten von Windows dar.  

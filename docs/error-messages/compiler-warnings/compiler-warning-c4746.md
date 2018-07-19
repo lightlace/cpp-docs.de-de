@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270897"
 ---
 # <a name="compiler-warning-c4746"></a>Compilerfehler Warnung C4746
 flüchtige Zugriff des "\<Ausdruck >" / volatile des unterliegt: [Iso&#124;ms] festlegen; in Betracht __iso_volatile_load/Store systeminterne Funktionen.  

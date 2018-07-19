@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097522"
 ---
 # <a name="columnname"></a>COLUMN_NAME
 Stellt eine Bindung für das Rowset für die spezifische Spalte des Rowsets dar. Ähnlich wie [COLUMN_ENTRY](../../data/oledb/column-entry.md), außer dass Sie dieses Makro anstatt die Nummer der Spalte den Spaltennamen erhält.  

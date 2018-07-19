@@ -1,5 +1,5 @@
 ---
-title: 'Formatierung von Zeitwerten: Allzweckklassen | Microsoft Docs'
+title: 'Formatierung von Zeitwerten: Allgemeine Klassen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48dd7ef4990c4ffe13c7c1f056d5904b6897435
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa5192ebcbc6b0b9b82bcce0bd0f2041ff536016
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879367"
 ---
-# <a name="formatting-time-values-general-purpose-classes"></a>Formatierung Time-Werten: Allgemeine Klassen
-Das folgende Verfahren zeigt, wie so formatieren Sie Time-Werten.  
+# <a name="formatting-time-values-general-purpose-classes"></a>Formatierung von Zeitwerten: Allgemeine Klassen
+Das folgende Verfahren zeigt, wie Zeitwerte formatiert wird.  
   
-#### <a name="to-format-a-string-representation-of-a-time-or-elapsed-time"></a>So formatieren Sie eine Zeichenfolgendarstellung bzw. eine verstrichene Zeit  
+#### <a name="to-format-a-string-representation-of-a-time-or-elapsed-time"></a>So formatieren eine Zeichenfolgendarstellung bzw. eine verstrichene Zeit  
   
-1.  Verwenden der **Format** Memberfunktion entweder aus der [CTime](../atl-mfc-shared/reference/ctime-class.md) oder [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) Klassen zum Erstellen eines Zeichens Zeichenfolgendarstellung bzw. die verstrichene Zeit, wie durch die folgende.  
+Verwenden der `Format` Memberfunktion entweder die [CTime](../atl-mfc-shared/reference/ctime-class.md) oder [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) Klassen ein Zeichen zu erstellen, die Zeichenfolgendarstellung der bzw. die verstrichene Zeit, wie im folgenden Beispiel gezeigt.
   
      [!code-cpp[NVC_ATLMFC_Utilities#175](../atl-mfc-shared/codesnippet/cpp/formatting-time-values-general-purpose-classes_1.cpp)]  
   

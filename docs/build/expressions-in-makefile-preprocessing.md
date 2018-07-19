@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367267"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Ausdrücke für den Präprozessorlauf eines Makefiles
 Die **! IF** oder **! ElseIf** `constantexpression` Ganzzahlkonstanten (in Dezimal oder C-Schreibweise), Zeichenfolgenkonstanten oder Befehle besteht. Verwenden Sie Klammern, um Ausdrücke zu. Ausdrücke verwenden C-Stil Ganzzahlen mit Vorzeichen arithmetische; Zahlen werden in 32-Bit zweierkomplementdarstellung im Bereich von – 2147483648 bis 2147483647.  

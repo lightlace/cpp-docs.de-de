@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341974"
 ---
 # <a name="date-and-time-picker-control-examples"></a>Beispiele für Datums- und Zeitauswahlsteuerelemente
 Die [CMNCTRL1](../visual-cpp-samples.md) Beispiel wird veranschaulicht, die verschiedene Attribute der `CDateTimeCtrl` Klasse. Eine separate Seite enthält ein Datum und Uhrzeit Kontoauswahl-Steuerelement, das der Benutzer durch verschiedene Attribute ändern und testen die grundlegende Funktionalität des Steuerelements ändern können.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693860"
 ---
 # <a name="scheduler-instances"></a>Planerinstanzen
 Dieses Dokument beschreibt die Rolle des Scheduler-Instanzen in der Concurrency Runtime sowie zum Verwenden der [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) und [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) Klassen zum Erstellen und verwalten Scheduler-Instanzen. Planerinstanzen sind nützlich, wenn Sie explizite Planungsrichtlinien bestimmten Arten von Arbeitslasten zuordnen möchten. Beispielsweise können Sie eine Planerinstanz erstellen, um einige Aufgaben mit höherer Threadpriorität auszuführen und andere Aufgaben mit dem Standardplaner mit normaler Threadpriorität auszuführen.  

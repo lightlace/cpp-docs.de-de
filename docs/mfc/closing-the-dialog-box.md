@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341744"
 ---
 # <a name="closing-the-dialog-box"></a>Schließen des Dialogfelds
 Ein modales Dialogfeld wird geschlossen, wenn der Benutzer eine der zugehörigen Schaltflächen, in der Regel auf die Schaltfläche "OK" oder die Schaltfläche "Abbrechen wählt". Dann die Schaltfläche OK oder auf "Abbrechen" bewirkt, dass Windows auf das Dialogfeldobjekt senden eine **BN_CLICKED** Steuerelement-Benachrichtigung mit der Schaltfläche-ID, entweder des **IDOK** oder **IDCANCEL**. `CDialog` Stellt Handlerfunktionen für diese Nachrichten: `OnOK` und `OnCancel`. Die Handler rufen die `EndDialog` Memberfunktion, um das Dialogfeld zu schließen. Sie können auch aufrufen `EndDialog` aus Ihrem eigenen Code. Weitere Informationen finden Sie unter der ["EndDialog"](../mfc/reference/cdialog-class.md#enddialog) Memberfunktion der Klasse `CDialog` in der *MFC-Referenz*.  

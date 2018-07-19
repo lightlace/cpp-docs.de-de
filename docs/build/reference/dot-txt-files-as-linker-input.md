@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369902"
 ---
 # <a name="txt-files-as-linker-input"></a>TXT-Dateien als Eingabe für den Linker
 LINK erwartet verschiedene Textdateien als zusätzliche Eingabe. Die [Befehlsdatei](../../build/reference/link-command-files.md) Spezifizierer (@) und die [Basisadresse](../../build/reference/base-base-address.md) (/ BASE) [DEF](../../build/reference/def-specify-module-definition-file.md), und [/ORDER](../../build/reference/order-put-functions-in-order.md) alle Optionen geben Textdateien. Diese Dateien können eine beliebige Erweiterung, die nicht nur ".txt".  

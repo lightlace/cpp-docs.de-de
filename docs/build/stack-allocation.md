@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380601"
 ---
 # <a name="stack-allocation"></a>Stapelreservierung
 Eine Funktion Prolog ist verantwortlich für die Zuordnung von Stapelspeicher für lokale Variablen, gespeicherte Register, stack-Parameter, und registrieren Sie Parameter.  

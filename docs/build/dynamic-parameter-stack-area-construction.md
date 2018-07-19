@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367471"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Dynamische Parameterstapelbereichskonstruktion
 Wenn Frame-Pointer verwendet wird, ist die Option zum dynamischen Erstellen von Parameterbereich Stapel vorhanden. Dies wird zurzeit nicht durchgeführt die [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Compiler.  

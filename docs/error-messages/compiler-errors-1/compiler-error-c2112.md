@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164644"
 ---
 # <a name="compiler-error-c2112"></a>Compilerfehler C2112
 '-': Zeiger-Subtraktion erfordert einen Ganzzahl- oder Zeigertyp Ganzzahloperanden  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111207"
 ---
 # <a name="double-thunking-c"></a>Doppeltes Thunking (C++)
 Doppeltes thunking bezieht sich auf einen Datenverlust auf der Leistung, die auftreten können, wenn ein Funktionsaufruf in einen verwalteten Kontext aufrufen, die eine Visual C++-Funktion verwaltet und, in dem programmausführung systemeigener Einstiegspunkt der Funktion aufruft, um die verwaltete Funktion aufzurufen. In diesem Thema wird erläutert, wo doppeltes thunking auftritt und wie Sie es zur Verbesserung der Leistung vermeiden können.  

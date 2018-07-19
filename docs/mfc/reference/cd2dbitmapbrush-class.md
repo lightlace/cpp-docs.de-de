@@ -52,11 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fb0833fc82895f1f32fb5c93a6e6519bfe119c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23728966dfd6bd759c16b364da063c7f80687b5e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954490"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush-Klasse
 Ein Wrapper für ID2D1BitmapBrush.  
@@ -141,7 +142,7 @@ void Attach(ID2D1BitmapBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pResource`  
+ *pResource*  
  Vorhandene Ressourcenschnittstelle. NULL darf nicht sein  
   
 ##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
@@ -175,28 +176,28 @@ CD2DBitmapBrush(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentTarget`  
+ *pParentTarget*  
  Ein Zeiger auf das Renderziel.  
   
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  Ein Zeiger auf die Erweiterungsmodi und den Interpolationsmodus eines Bitmappinsels mithilfe einer.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Ein Zeiger auf die Deckkraft- und Transformation eines Pinsels.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
- `uiResID`  
+ *uiResID*  
  Die Ressourcen-ID-Nummer der Ressource.  
   
- `lpszType`  
+ *lpszType*  
  Ein Zeiger auf eine auf Null endende Zeichenfolge, die den Ressourcentyp enthält.  
   
- `sizeDest`  
+ *sizeDest*  
  Die Zielgröße der Bitmap.  
   
- `lpszImagePath`  
+ *lpszImagePath*  
  Ein Zeiger auf eine auf Null endende Zeichenfolge, die den Namen der Datei enthält.  
   
 ##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
@@ -207,7 +208,7 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  Ein Zeiger auf die Bitmap Pinsel-Eigenschaften.  
   
 ##  <a name="create"></a>  CD2DBitmapBrush::Create  
@@ -218,7 +219,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pRenderTarget`  
+ *pRenderTarget*  
  Ein Zeiger auf das Renderziel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -330,7 +331,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pBitmap`  
+ *pBitmap*  
  Die Bitmapquelle, die durch den Pinsel verwendet  
   
 ##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
@@ -341,7 +342,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `extendModeX`  
+ *extendModeX*  
  Ein Wert, der angibt, wie der Pinsel jene Bereiche, die über seine Bitmap hinausreichen nebeneinander anordnet  
   
 ##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
@@ -352,7 +353,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `extendModeY`  
+ *extendModeY*  
  Ein Wert, der angibt, wie der Pinsel jene Bereiche, die über seine Bitmap hinausreichen nebeneinander anordnet  
   
 ##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
@@ -363,7 +364,7 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `interpolationMode`  
+ *interpolationMode*  
  Der Interpolationsmodus verwendet, wenn die Pinselbitmap skaliert wird oder gedreht wird  
   
 ## <a name="see-also"></a>Siehe auch  

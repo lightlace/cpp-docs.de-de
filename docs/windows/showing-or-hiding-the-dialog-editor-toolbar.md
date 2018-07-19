@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891593"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Ein- oder Ausblenden der Symbolleiste des Dialog-Editors
 Wenn Sie den Dialog-Editor öffnen, wird die Symbolleiste des Dialog-Editors automatisch am oberen Rand der Projektmappe angezeigt.  

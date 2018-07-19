@@ -15,11 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd851ae3cf47ca260b1923d969123b21293d8623
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3b758c5db483f74ddb43031ab41f2d2b46514e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965241"
 ---
 # <a name="c-standard-library-containers"></a>C++-Standardbibliothekscontainer
 
@@ -176,7 +177,7 @@ Alle Container überladen den Operator „==“ zum Vergleichen von zwei Contain
 
 ### <a name="comparing-dissimilar-containers-c14"></a>Vergleichen unterschiedlicher Container (C++14)
 
-Mit den **std::equal**, **std::mismatch**- oder **std::is_permutation**-Funktionsüberladungen, die zwei vollständige Bereiche umfassen, können Sie in C++14 und höher unterschiedliche Container und/oder Elementtypen vergleichen. Mit diesen Überladungen können Sie Container mit unterschiedlicher Länge vergleichen. Diese Überladungen sind weniger für Benutzerfehler anfällig und sind beim Vergleichen von Containern mit unterschiedlicher Länge so optimiert, dass sie in konstanter Zeit FALSE zurückgeben. Aus diesem Grund wird empfohlen, diese Überladungen zu verwenden, es sei denn (1) Sie haben einen klaren Grund dazu, dies nicht zu tun, oder (2) Sie verwenden einen [std:: list](../standard-library/list-class.md)-Container, der nicht von den Optimierungen mit zwei Bereichen profitiert.
+In C ++ 14 und höher, Sie können vergleichen unterschiedliche Container und/oder Elementtypen mithilfe eines der `std::equal`, `std::mismatch`, oder `std::is_permutation` -funktionsüberladungen, die zwei vollständige Bereiche. Mit diesen Überladungen können Sie Container mit unterschiedlicher Länge vergleichen. Diese Überladungen sind weniger für Benutzerfehler anfällig und sind beim Vergleichen von Containern mit unterschiedlicher Länge so optimiert, dass sie in konstanter Zeit FALSE zurückgeben. Aus diesem Grund wird empfohlen, diese Überladungen zu verwenden, es sei denn (1) Sie haben einen klaren Grund dazu, dies nicht zu tun, oder (2) Sie verwenden einen [std:: list](../standard-library/list-class.md)-Container, der nicht von den Optimierungen mit zwei Bereichen profitiert.
 
 ## <a name="see-also"></a>Siehe auch
 

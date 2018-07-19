@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243969"
 ---
 # <a name="compiler-error-c2850"></a>Compilerfehler C2850
 'construct': nur im Dateigültigkeitsbereich; zulässig. in einer geschachtelten Konstrukts möglicherweise nicht  

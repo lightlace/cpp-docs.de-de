@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341325"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Bereinigen von Dokumenten und Ansichten
 Wenn ein Dokument geschlossen wird, ruft das Framework zuerst die [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) Memberfunktion. Wenn Sie im Verlauf des Vorgangs für das Dokument, Arbeitsspeicher, der auf dem Heap zugeordnet `DeleteContents` ist der beste Ort, um ihn freizugeben.  

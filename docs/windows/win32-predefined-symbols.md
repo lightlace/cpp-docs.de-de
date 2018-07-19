@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891736"
 ---
 # <a name="win32-predefined-symbols"></a>Vordefinierte Win32-Symbole
 Diese Symbole werden in den Win32-Headerdateien definiert und Standardfunktionen für Windows-Anwendung und Aktionen unterstützen. Diese Symbole werden hauptsächlich mit allgemeine Elemente der Benutzeroberfläche verwendet. Bei der Arbeit mit Steuerelementen im Ressourcen-Editor werden diese Symbole angezeigt, der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) Standardsteuerelementen zugeordnet. Für die Instanz, wenn die Symbolleiste das Anwendungssymbol angezeigt werden soll, werden das Symbol "das Symbol IDI_SMALL des Fensters Eigenschaften zugeordnet.  

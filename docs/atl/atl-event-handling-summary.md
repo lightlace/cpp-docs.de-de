@@ -1,5 +1,5 @@
 ---
-title: ATL-Ereignisbehandlung Zusammenfassung | Microsoft Docs
+title: Zusammenfassung der ATL-Ereignisbehandlung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,46 +14,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a938bd072ea8df30e64cce28fbf0709f08547d28
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 743939683d212de529816a165907e12063df03be
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027192"
 ---
-# <a name="atl-event-handling-summary"></a>ATL-Behandlung Ereigniszusammenfassung
-Im Allgemeinen ist die Behandlung von COM-Ereignissen ein relativ einfacher Vorgang. Es gibt drei Hauptschritte:  
+# <a name="atl-event-handling-summary"></a>Zusammenfassung der ATL-Ereignis behandeln
+Im Allgemeinen ist die Behandlung von COM-Ereignissen ein relativ einfacher Prozess. Es gibt drei Hauptschritte:  
   
--   Implementieren Sie die Schnittstelle für das Objekt.  
+-   Implementieren Sie die Schnittstelle für das Objekt an.  
   
--   Informieren Sie der Ereignisquelle, Ihr Objekt Ereignisse empfangen möchte.  
+-   Empfehlen Sie, dass das Objekt zum Empfangen von Ereignissen soll der Ereignisquelle.  
   
--   Die Ereignisquelle senkereigniszuordnung, wenn Ihr Objekt nicht mehr benötigt wird, um Ereignisse zu empfangen.  
+-   Abzumelden Sie die Ereignisquelle, wenn das Objekt nicht mehr benötigt wird, um Ereignisse zu empfangen.  
   
 ## <a name="implementing-the-interface"></a>Implementieren der Schnittstelle  
  Es gibt vier verschiedene Arten der Implementierung einer Schnittstelle mit ATL  
   
-|Ableiten von|Eignet sich für Schnittstellentyp|Erfordert, dass Sie alle Methoden * implementieren|Erfordert eine Typbibliothek zur Laufzeit|  
+|Leiten Sie von|Eignet sich für den Schnittstellentyp|Erfordert, dass Sie alle Methoden * implementieren|Erfordert eine Typbibliothek zur Laufzeit|  
 |-----------------|---------------------------------|---------------------------------------------|-----------------------------------------|  
-|Die Schnittstelle|Vtable|Ja|Nein|  
+|Die-Schnittstelle|Vtable|Ja|Nein|  
 |[IDispatchImpl](../atl/reference/idispatchimpl-class.md)|Dual|Ja|Ja|  
 |[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Disp-Schnittstelle|Nein|Ja|  
 |[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Disp-Schnittstelle|Nein|Nein|  
   
- \* Wenn Sie ATL-Unterstützungsklassen verwenden zu können, müssen Sie nie implementieren die **IUnknown** oder `IDispatch` Methoden manuell.  
+ \* Wenn die ATL-Unterstützungsklassen verwenden zu können, nie müssen Sie zum Implementieren der `IUnknown` oder `IDispatch` Methoden manuell.  
   
 ## <a name="advising-and-unadvising-the-event-source"></a>Anmelden und Abmelden von der Ereignisquelle  
- Es gibt drei verschiedene Arten von anmelden und Abmelden von einer Ereignisquelle mit ATL  
+ Es gibt drei Arten von anmelden und Abmelden von einer Ereignisquelle mit ATL  
   
-|Advise-Funktion|Senkereigniszuordnung-Funktion|Am besten geeigneten für die Verwendung mit|Erfordert, dass Sie zum Nachverfolgen ein Cookies|Kommentare|  
-|---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|  
-
-|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable oder duale Schnittstellen | Ja | `AtlAdvise` ist eine globale ATL-Funktion. `CComPtrBase::Advise` Dient der [CComPtr](../atl/reference/ccomptr-class.md) und [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
-
-|[IDispEventSimpleImpl:: DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) oder [ IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)| Nicht | Weniger Parameter als `AtlAdvise` , da die Basisklasse weitere Arbeit ausführt. |  
-|[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)| ActiveX-Steuerelementen in zusammengesetzten Steuerelementen | Nicht | `CComCompositeControl::AdviseSinkMap` Member-alle Einträge in der ereignismeldung sink Zuordnung. Die gleiche Funktion werden die Einträge abgemeldet. Diese Methode aufgerufen wird, automatisch von der `CComCompositeControl` Klasse. |  
-|[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)| ActiveX-Steuerelemente in einem Dialogfeld | Nicht | `CAxDialogImpl::AdviseSinkMap` Member- und alle ActiveX-Steuerelemente in die Dialogressource unadvises. Dies geschieht automatisch für Sie. |  
+|Empfehlen Sie Funktion|Abzumelden-Funktion|Am besten geeigneten, für die Verwendung mit|Erfordert, dass Sie zum Nachverfolgen ein Cookies|Kommentare|  
+|---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)|Vtable oder duale Schnittstellen|Ja|`AtlAdvise` ist eine globale ATL-Funktion. `CComPtrBase::Advise` Dient der [CComPtr](../atl/reference/ccomptr-class.md) und [CComQIPtr](../atl/reference/ccomqiptr-class.md).|  
+|[IDispEventSimpleImpl:: DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) oder [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Nein|Weniger Parameter als `AtlAdvise` , da die Basisklasse für weitere funktioniert.|  
+|[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|ActiveX-Steuerelemente im zusammengesetzten Steuerelementen|Nein|`CComCompositeControl::AdviseSinkMap` empfiehlt, dass alle Einträge in dieser Zuordnung Senke an. Die gleiche Funktion werden die Einträge abgemeldet. Diese Methode aufgerufen wird, automatisch von der `CComCompositeControl` Klasse.|  
+|[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|ActiveX-Steuerelemente in einem Dialogfeld|Nein|`CAxDialogImpl::AdviseSinkMap` empfiehlt, und hebt Anweisungen für alle ActiveX-Steuerelemente in der Dialogfeldressource. Dies erfolgt automatisch für Sie.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ereignisbehandlung](../atl/event-handling-and-atl.md)   
+ [Behandlung von Ereignissen](../atl/event-handling-and-atl.md)   
  [Unterstützen von IDispEventImpl](../atl/supporting-idispeventimpl.md)
 

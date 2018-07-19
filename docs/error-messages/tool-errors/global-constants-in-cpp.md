@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297335"
 ---
 # <a name="global-constants-in-c"></a>Globale Konstanten in C++
 Globale Konstanten in C++ haben statische Verknüpfung. Dies ist anders als C. Wenn Sie versuchen, einen globalen erhalten Konstante in C++ in mehreren Dateien Sie nicht aufgelösten externe Fehler. Der Compiler globale Konstanten werden optimiert, sodass kein Platz für die Variable reserviert.  

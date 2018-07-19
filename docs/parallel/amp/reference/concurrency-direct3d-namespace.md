@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687386"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d-Namespace
 Der `direct3d`-Namespace enthält Funktionen, welche die D3D-Interoperabilität unterstützen. Dies ermöglicht die einfache Verwendung von D3D-Ressourcen zur Berechnung von AMP-Code sowie die Verwendung von in AMP erstellen Ressourcen in D3D-Code, ohne dass redundante Zwischenkopien erstellt werden. Sie können die berechnungsintensiven Abschnitte der Ihrer DirectX-Anwendungen inkrementell beschleunigen, indem Sie C++ AMP verwenden und die D3D-API für Daten nutzen, die aus AMP-Berechnungen resultieren.  

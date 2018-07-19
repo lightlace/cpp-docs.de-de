@@ -1,5 +1,5 @@
 ---
-title: Definitionen und Deklarationen (C++) | Microsoft Docs
+title: Definitionen und Deklarationen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 742270c77d47c178d0254ca9b9882f73fe3b8293
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f4b8635f082f706ef07697653d56155414c5199d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940910"
 ---
 # <a name="definitions-and-declarations-c"></a>Definitionen und Deklarationen (C++)
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch
- Die DLL-Schnittstelle bezieht sich auf alle Elemente (Funktionen und Daten), die bekanntermaßen von einem Programm im System exportiert werden soll. d. h., alle Elemente, die als deklariert werden `dllimport` oder `dllexport`. Alle Deklarationen, die in der DLL-Schnittstelle eingeschlossen müssen Geben Sie entweder die `dllimport` oder `dllexport` Attribut. Allerdings muss die Definition nur das `dllexport`-Attribut angeben. Beispielsweise verursacht die folgende Funktionsdefinition einen Compilerfehler:
+ Die DLL-Schnittstelle bezieht sich auf alle Elemente (Funktionen und Daten), die bekanntermaßen von einem Programm im System exportiert werden. d. h. alle Elemente, die als deklariert sind **Dllimport** oder **Dllexport**. Alle Deklarationen, die in der DLL-Schnittstelle eingeschlossen geben die **Dllimport** oder **Dllexport** Attribut. Die Definition muss jedoch angeben, nur die **Dllexport** Attribut. Beispielsweise verursacht die folgende Funktionsdefinition einen Compilerfehler:
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
@@ -41,7 +42,7 @@ __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
- Die Verwendung von `dllexport` eine Definition impliziert während `dllimport` eine Deklaration impliziert. Sie müssen das `extern`-Schlüsselwort mit `dllexport` verwenden, um eine Deklaration zu erzwingen; andernfalls wird eine Definition impliziert. Daher sind die folgenden Beispiele richtig:
+ Die Verwendung von **Dllexport** impliziert eine Definition, während **Dllimport** eine Deklaration impliziert. Verwenden Sie die **"extern"** Schlüsselwort mit **Dllexport** auf eine Deklaration zu erzwingen; andernfalls wird eine Definition impliziert. Daher sind die folgenden Beispiele richtig:
 
 ```
 #define DllImport   __declspec( dllimport )

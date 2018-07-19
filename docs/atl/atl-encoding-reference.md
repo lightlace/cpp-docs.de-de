@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358627"
 ---
 # <a name="atl-encoding-reference"></a>ATL-Codierungsreferenz
 In einem Bereich von allgemeinen Internetstandards wie Uuencode Hexadezimal, und die UTF8-Codierung wird vom Code, der in atlenc.h unterstützt.  

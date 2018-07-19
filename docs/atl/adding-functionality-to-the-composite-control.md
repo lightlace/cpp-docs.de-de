@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354181"
 ---
 # <a name="adding-functionality-to-the-composite-control"></a>Hinzufügen von Funktionalität zu zusammengesetzten Steuerelementen
 Nachdem Sie alle erforderlichen Steuerelemente in der zusammengesetzten Steuerelements eingefügt haben, besteht der nächste Schritt das Hinzufügen neuer Funktionen. Diese neue Funktionalität liegt in der Regel in zwei Kategorien unterteilt:  

@@ -1,5 +1,5 @@
 ---
-title: Funktionen mit Variablenargumentlisten (C++) | Microsoft Docs
+title: Funktionen mit Variablenargumentlisten (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14bbb56c7ae62bd7ef8c58b45704a4ba809965e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e66ee17f8aa82e46011a78e34baa79b3dea3cdb1
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943176"
 ---
-# <a name="functions-with-variable-argument-lists--c"></a>Funktionen mit Variablenargumentlisten Listen (C++)
+# <a name="functions-with-variable-argument-lists--c"></a>Funktionen mit Variablenargumentlisten aufgelistet (C++)
 Funktionsdeklarationen, in denen der letzte Member von  das Auslassungszeichen (...) ist, können eine variable Anzahl von Argumenten akzeptieren. In diesen Fällen stellt C++ die Typüberprüfung nur für die explizit deklarierten Argumente bereit. Sie können Variablenargumentlisten verwenden, wenn Sie eine Funktion so allgemein gestalten müssen, dass sogar die Anzahl und Typen von Argumenten variieren können. Die Funktionsreihe ist ein Beispiel für Funktionen, die Variable Argumentlisten verwenden. `printf` *Argument-Declaration-List*  
   
 ## <a name="functions-with-variable-arguments"></a>Funktionen mit Variablenargumenten  
@@ -39,13 +40,13 @@ Funktionsdeklarationen, in denen der letzte Member von  das Auslassungszeichen (
   
  Die Deklaration einer Funktion, die eine variable Anzahl von Argumenten akzeptiert, erfordert selbst dann mindestens ein Platzhalterargument, wenn sie nicht verwendet wird. Wenn dieses Platzhalterargument nicht angegeben ist, gibt es keine Möglichkeit, auf die übrigen Argumente zugreifen.  
   
- Wenn Argumente des Typs `char` als Variablenargumente übergeben werden, werden sie in den Typ `int` konvertiert. Auf ähnliche Weise, wenn Argumente des Typs **"float"** übergeben werden als Variable Argumente, sie sind in den Typ konvertiert **doppelte**. Argumente anderer Typen unterliegen den üblichen Ganzzahl- und Gleitkomma-Erweiterungen. Finden Sie unter [Standardkonvertierungen](standard-conversions.md) für Weitere Informationen.  
+ Wenn Argumente des Typs **Char** übergeben werden als Variable Argumente, sie werden in den Typ konvertiert **Int**. Auf ähnliche Weise, wenn Argumente des Typs **"float"** übergeben werden als Variable Argumente, sie werden in den Typ konvertiert **doppelte**. Argumente anderer Typen unterliegen den üblichen Ganzzahl- und Gleitkomma-Erweiterungen. Finden Sie unter [Standardkonvertierungen](standard-conversions.md) für Weitere Informationen.  
   
- Funktionen, für die Variablenlisten erforderlich sind, werden mithilfe von Auslassungspunkten (...) in der Argumentliste deklariert. Verwenden Sie die Typen und Makros, die in beschriebenen der \<stdarg.h > include-Datei, um auf Argumente zuzugreifen, die von einer Variablenliste übergeben werden. Weitere Informationen zu diesen Makros finden Sie unter [Va_arg, Va_copy, Va_end, Va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). in der Dokumentation für die C-Laufzeitbibliothek.  
+ Funktionen, für die Variablenlisten erforderlich sind, werden mithilfe von Auslassungspunkten (...) in der Argumentliste deklariert. Die Typen und Makros, die im Abschnitt der \<stdarg.h > include-Datei, um auf Argumente zuzugreifen, die von einer Variablenliste übergeben werden. Weitere Informationen zu diesen Makros finden Sie unter [Va_arg, Va_copy, Va_end, Va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). in der Dokumentation für die C-Laufzeitbibliothek.  
   
- Das folgende Beispiel zeigt, wie die Makros zusammen mit dem Typ funktionieren (deklariert \<stdarg.h >): 
+ Das folgende Beispiel zeigt, wie die Makros, die zusammen mit dem Typ funktionieren (deklariert \<stdarg.h >): 
   
-```  
+```cpp 
 // variable_argument_lists.cpp  
 #include <stdio.h>  
 #include <stdarg.h>  

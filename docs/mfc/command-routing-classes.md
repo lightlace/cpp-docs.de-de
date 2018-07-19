@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341961"
 ---
 # <a name="command-routing-classes"></a>Klassen zur Befehlsweiterleitung
 Wie der Benutzer mit der Anwendung interagiert, indem Sie Menüs oder Steuerleiste Schaltflächen mit der Maus auswählen, sendet die Anwendung Nachrichten aus dem betroffenen Benutzeroberflächen-Objekt in eine entsprechende Befehlsziel Objekt an. Befehlszielklassen abgeleitet `CCmdTarget` enthalten [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), und die Klassen, die von ihnen abgeleitet. Das Framework unterstützt die automatische Befehlsrouting, sodass Befehle von der derzeit aktiven in der Anwendung am besten geeignete Objekt behandelt werden können.  

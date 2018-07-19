@@ -1,7 +1,7 @@
 ---
-title: Db_command | Microsoft Docs
+title: Db_command | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/10/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,20 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e0fe3f712566345bb069b798207cfdb10a0aa636
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70399b15081de89d8da49268c8d62d3ad390858d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "38954980"
 ---
 # <a name="dbcommand"></a>db_command
 Erstellt einen OLE DB-Befehl.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
-      [ db_command(   
+```cpp
+[ db_command(   
    command,   
    name,   
    source_name,   
@@ -40,59 +40,58 @@ Erstellt einen OLE DB-Befehl.
 ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `command`  
- Eine Befehlszeichenfolge, die den Text eines OLE DB-Befehls enthält. Ein einfaches Beispiel lautet:  
+### <a name="parameters"></a>Parameter  
+
+*command*  
+Eine Befehlszeichenfolge, die den Text eines OLE DB-Befehls enthält. Ein einfaches Beispiel lautet:  
   
-```  
+```cpp
 [ db_command ( command = "Select * from Products" ) ]  
 ```  
   
- Die *Befehlssyntax* lautet wie folgt:  
+Die *Befehlssyntax* lautet wie folgt:  
+    
+> Binding Parameterblock 1  
+> &nbsp;&nbsp;OLE DB-Befehl  
+> Binding Parameterblock 2  
+> &nbsp;&nbsp;Fortsetzung der OLE DB-Befehl  
+> Binding Parameterblock 3  
+> ...  
   
-```  
-binding parameter block 1  
-   OLE DB command  
-binding parameter block 2  
-   continuation of OLE DB command  
-binding parameter block 3  
-...  
-```  
+*binding parameter block* ist folgendermaßen definiert:  
   
- *binding parameter block* ist folgendermaßen definiert:  
-  
- **([** `bindtype` **]** *szVar1* [*, szVar2* [, *nVar3* [, ...]]] **)**  
+> **(\[**  *Bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[,...]]] **)**  
   
  Dabei gilt:  
   
- **(** kennzeichnet den Anfang des Datenbindungsblocks.  
+- **(** kennzeichnet den Anfang des Datenbindungsblocks.  
   
- **[** `bindtype` **]** ist eine der folgenden Zeichenfolgen, bei denen nicht zwischen Groß-und Kleinschreibung unterschieden wird:  
+- **\[** *BindType* **]** ist eine der folgenden Zeichenfolgen, Groß-/Kleinschreibung:  
   
--   **[db_column]** bindet die einzelnen Membervariablen an eine Spalte in einem Rowset.  
+  -   **\[Db_column]** bindet die einzelnen Membervariablen an eine Spalte in einem Rowset.  
   
--   **[bindto]** (identisch mit **[db_column]**).  
+  -   **\[BindTo]** (identisch mit  **\[Db_column]**).  
   
--   **[in]** bindet Membervariablen als Eingabeparameter.  
+  -   **\[in]** bindet Membervariablen als Eingabeparameter.  
   
--   **[out]** bindet Membervariablen als Ausgabeparameter.  
+  -   **\[Out]** bindet Membervariablen als Ausgabeparameter.  
   
--   **[in,out]** bindet Membervariablen als Ein-/Ausgabeparameter.  
+  -   **\[in, Out]** bindet Membervariablen als ein-/Ausgabeparameter.  
   
- *SzVarX* wird zu einer Membervariablen im aktuellen Gültigkeitsbereich aufgelöst.  
+- *SzVarX*, *nVarX* wird in einer Membervariablen im aktuellen Gültigkeitsbereich aufgelöst.  
   
- **)** kennzeichnet das Ende des Datenbindungsblocks.  
+- **)** kennzeichnet das Ende des Datenbindungsblocks.  
   
- Enthält die Befehlszeichenfolge einen oder mehrere Bezeichner wie [in], [out] oder [in/out], erstellt **db_command** eine Parameterzuordnung.  
+Wenn die Befehlszeichenfolge einen oder mehrere Bezeichner, z. B. enthält \[im], \[out], oder \[in/out], **Db_command** eine parameterzuordnung.  
   
- Enthält die Befehlszeichenfolge mindestens ein Parameter wie z.B. [db_column] oder [bindto], generiert **db_command** ein Rowset und eine Accessorkarte, um diese gebundenen Variablen zu bedienen. Weitere Informationen finden Sie unter [db_accessor](../windows/db-accessor.md) .  
+Wenn die Befehlszeichenfolge einen oder mehrere Parameter, z. B. enthält \[Db_column] oder \[Bindto], **Db_command** generiert wird, ein Rowset und eine accessorkarte, um diese gebundenen Variablen zu bedienen. Weitere Informationen finden Sie unter [db_accessor](../windows/db-accessor.md) .  
   
 > [!NOTE]
->  [`bindtype`]-Syntax und die `bindings` -Parameter sind nicht gültig, wenn **db_command** auf Klassenebene verwendet wird.  
+> \[*BindType*] Syntax und die *Bindungen* Parameter sind nicht gültig, wenn **Db_command** auf Klassenebene.  
   
  Nachfolgend finden Sie einige Beispiele für „binding parameter block“. Im folgenden Beispiel werden die Datenmember `m_au_fname` und `m_au_lname` jeweils an die Spalten `au_fname` und `au_lname` der Autorentabelle in der pubs-Datenbank gebunden:  
   
-```  
+```cpp  
 TCHAR m_au_fname[21];  
 TCHAR m_au_lname[41];  
 TCHAR m_state[3] = 'CA';  
@@ -101,52 +100,51 @@ TCHAR m_state[3] = 'CA';
    command = "SELECT au_fname([bindto]m_au_fname), au_lname([bindto]m_au_lname) " \  
    "FROM dbo.authors " \  
    "WHERE state = ?([in]m_state)")  
-```  
+]
+```
   
- ]  
+*name* (optional)  
+Der Name des Handles, den Sie für die Arbeit mit dem Rowset verwenden. Wenn Sie *name*angeben, generiert **db_command** eine Klasse mit dem angegebenen *Namen*, das verwendet werden kann, um das Rowset zu traversieren oder mehrere Aktionsabfragen auszuführen. Wenn Sie *name*nicht angeben, ist es nicht möglich, mehr als eine Zeile mit Ergebnissen an den Benutzer zurückzugeben.  
   
- *name* (optional)  
- Der Name des Handles, den Sie für die Arbeit mit dem Rowset verwenden. Wenn Sie *name*angeben, generiert **db_command** eine Klasse mit dem angegebenen *Namen*, das verwendet werden kann, um das Rowset zu traversieren oder mehrere Aktionsabfragen auszuführen. Wenn Sie *name*nicht angeben, ist es nicht möglich, mehr als eine Zeile mit Ergebnissen an den Benutzer zurückzugeben.  
+*source_name* (optional)  
+Die Variable `CSession` oder die Instanz einer Klasse, auf die das `db_source` -Attribut angewendet wird, auf Grundlage dessen der Befehl ausgeführt wird. Informationen hierzu finden Sie unter [db_source](../windows/db-source.md).  
   
- *source_name* (optional)  
- Die Variable `CSession` oder die Instanz einer Klasse, auf die das `db_source` -Attribut angewendet wird, auf Grundlage dessen der Befehl ausgeführt wird. Informationen hierzu finden Sie unter [db_source](../windows/db-source.md).  
+**db_command** stellt sicher, dass die Variable für *source_name* gültig ist, um den Gültigkeitsbereich der angegebenen Variablen auf eine Funktion oder als global festzulegen.  
   
- **db_command** stellt sicher, dass die Variable für *source_name* gültig ist, um den Gültigkeitsbereich der angegebenen Variablen auf eine Funktion oder als global festzulegen.  
+*HRESULT* (optional)  
+Identifiziert die Variable, die `HRESULT` von diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.  
   
- `hresult` (optional)  
- Identifiziert die Variable, die `HRESULT` von diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.  
+*bindings* (optional)  
+Ermöglicht die Trennung der Bindungsparameter vom OLE DB-Befehl.  
   
- *bindings* (optional)  
- Ermöglicht die Trennung der Bindungsparameter vom OLE DB-Befehl.  
+Bei Angabe ein Werts für *Bindungen*, **Db_command** analysiert den zugeordneten Wert und nicht die \[ *Bindtype*] Parameter. Dies ermöglicht Ihnen die Verwendung der OLE DB-Anbietersyntax. Geben Sie zum Deaktivieren der Analyse ohne Bindungsparameter **Bindings=""**.  
   
- Wenn Sie einen Wert für `bindings`angeben, analysiert **db_command** den zugeordneten Wert und nicht den [`bindtype`]-Parameter. Dies ermöglicht Ihnen die Verwendung der OLE DB-Anbietersyntax. Geben Sie zum Deaktivieren der Analyse ohne Bindungsparameter **Bindings=""**.  
+Wenn Sie einen Wert für nicht angeben *Bindungen*, **Db_command** analysiert Bindung Parameterblock, Suche nach "**(**", gefolgt von **\[** _Bindtype_**]** in Klammern, gefolgt von einem oder mehreren zuvor deklarierten C++-Membervariablen, gefolgt von "**)**". Der in Klammern gefasste Text wird aus dem sich ergebenden Befehl entfernt, und diese Parameter werden verwendet, um die Spalten- und Parameterbindungen für diesen Befehl zu erstellen.  
   
- Wenn Sie keinen Wert für `bindings`angeben, analysiert **db_command** den „binding parameter block“, sucht nach „**(**“, gefolgt von **[**`bindtype`**]** in Klammern, gefolgt von mindestens einer zuvor deklarierten C++-Membervariablen, gefolgt von „**)**“. Der in Klammern gefasste Text wird aus dem sich ergebenden Befehl entfernt, und diese Parameter werden verwendet, um die Spalten- und Parameterbindungen für diesen Befehl zu erstellen.  
+*Bulk_fetch* (optional)  
+Ein Integer-Wert, der die Anzahl der abzurufenden Zeilen angibt.  
   
- *bulk_fetch*(optional)  
- Ein Integer-Wert, der die Anzahl der abzurufenden Zeilen angibt.  
+Mit dem Standardwert 1 werden die Zeilen einzeln abgerufen (das Rowset ist vom Typ [CRowset](../data/oledb/crowset-class.md)).  
   
- Mit dem Standardwert 1 werden die Zeilen einzeln abgerufen (das Rowset ist vom Typ [CRowset](../data/oledb/crowset-class.md)).  
+Ein höherer Wert als 1 gibt das Massenabrufen von Zeilen an. Das Massenabrufen von Zeilen bezieht sich auf die Fähigkeit von Massenrowsets, mehrere Zeilenhandles abzurufen (das Rowset ist vom Typ [CBulkRowset](../data/oledb/cbulkrowset-class.md) und wird `SetRows` mit der angegebenen Anzahl von Zeilen aufrufen).  
   
- Ein höherer Wert als 1 gibt das Massenabrufen von Zeilen an. Das Massenabrufen von Zeilen bezieht sich auf die Fähigkeit von Massenrowsets, mehrere Zeilenhandles abzurufen (das Rowset ist vom Typ [CBulkRowset](../data/oledb/cbulkrowset-class.md) und wird `SetRows` mit der angegebenen Anzahl von Zeilen aufrufen).  
-  
- Wenn *bulk_fetch* kleiner als 1 ist, gibt `SetRows` 0 (Null) zurück.  
+Wenn *bulk_fetch* kleiner als 1 ist, gibt `SetRows` 0 (Null) zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- **db_command** erstellt ein [CCommand](../data/oledb/ccommand-class.md) -Objekt, das von einem OLE DB-Consumer verwendet wird, um einen Befehl auszuführen.  
+**db_command** erstellt ein [CCommand](../data/oledb/ccommand-class.md) -Objekt, das von einem OLE DB-Consumer verwendet wird, um einen Befehl auszuführen.  
   
- Sie können **db_command** entweder mit einem Klassen- oder Funktionsbereich verwenden. Der Hauptunterschied liegt im Bereich des `CCommand` -Objekts. Ist der Gültigkeitsbereich auf die Funktion beschränkt, werden Daten wie z.B. Bindungen bei Beendigung der Funktion ebenfalls beendet. Klassen und Funktionen Bereich Verwendungen umfassen den OLE DB-Consumer Vorlagenklasse **CCommand <>**, die Vorlagenargumente für die Funktion und der Klasse Fälle unterscheiden sich jedoch. Während bei Verwendung des Funktionsbereichs Bindungen zu einem **Accessor** hergestellt werden, der lokale Variablen enthält,erfordert die Verwendung des Klassenbereichs eine von `CAccessor`abgeleitete Klasse als Argument Wenn es als Klassenattribut verwendet wird, funktioniert **db_command** zusammen mit **db_column**.  
+Sie können **db_command** entweder mit einem Klassen- oder Funktionsbereich verwenden. Der Hauptunterschied liegt im Bereich des `CCommand` -Objekts. Ist der Gültigkeitsbereich auf die Funktion beschränkt, werden Daten wie z.B. Bindungen bei Beendigung der Funktion ebenfalls beendet. Sowohl die Klasse als auch die Funktion Bereich Verwendungen umfassen die Klasse des OLE DB-Consumervorlagen **CCommand\<>**, unterscheiden sich die Vorlagenargumente für die Fälle Funktion und der Klasse. Während bei Verwendung des Funktionsbereichs Bindungen zu einem **Accessor** hergestellt werden, der lokale Variablen enthält,erfordert die Verwendung des Klassenbereichs eine von `CAccessor`abgeleitete Klasse als Argument Wenn es als Klassenattribut verwendet wird, funktioniert **db_command** zusammen mit **db_column**.  
   
- Mit**db_command** können Befehle ausgeführt werden, die kein Resultset zurückgeben.  
+Mit**db_command** können Befehle ausgeführt werden, die kein Resultset zurückgeben.  
   
- Wenn vom Consumer-Attribut-Anbieter dieses Attribut auf eine Klasse angewendet werden, wird der Compiler die Klasse umbenennen \_ *Klassenname*-Accessor, in dem *Klassenname* der eingegebene Name ist der Klasse und der Compiler erstellt auch eine Klasse mit dem Namen *Klassenname*, die sich daraus ableitet \_ *Klassenname*Accessor.  In dieser Klassenansicht werden beide Klassen angezeigt.  
+ Wenn der Consumer Attributanbieter dieses Attribut auf eine Klasse angewendet wird, wird der Compiler die Klasse umbenennen \_ *Klassenname*Accessor, in denen *Klassenname* ist der Name, der Sie zugewiesen haben die Klasse und der Compiler erstellt auch eine Klasse namens *Klassenname*, die sich daraus ableitet \_ *Klassenname*Accessor.  In dieser Klassenansicht werden beide Klassen angezeigt.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird ein Befehl definiert, der die Vor- und Nachnamen aus einer Tabelle auswählt, in der die Statusspalte „CA“ entspricht. **db_command** erstellt und liest ein Rowset, für das Sie sowohl über den Assistenten generierte Funktionen wie [OpenAll und CloseAll](../data/oledb/consumer-wizard-generated-methods.md)als auch `CRowset` -Memberfunktionen wie [MoveNext](../data/oledb/crowset-movenext.md)ausführen können.  
   
- Beachten Sie, dass Sie für diesen Code eine eigene Verbindungszeichenfolge bereitstellen müssen, die eine Verbindung mit der pubs-Datenbank herstellt. Weitere Informationen dazu, wie Sie dies in der Entwicklungsumgebung bewerkstelligen, finden Sie unter [How to: Connect to a Database from Server Explorer](http://msdn.microsoft.com/en-us/7c1c3067-0d77-471b-872b-639f9f50db74) und [How to: Add New Data Connections in Server Explorer/Database Explorer](http://msdn.microsoft.com/en-us/fb2f513b-ddad-4142-911e-856bba0054c8).  
+ Beachten Sie, dass Sie für diesen Code eine eigene Verbindungszeichenfolge bereitstellen müssen, die eine Verbindung mit der pubs-Datenbank herstellt. Weitere Informationen dazu in der Entwicklungsumgebung, finden Sie unter [Vorgehensweise: Verbinden mit einer Datenbank und Durchsuchen vorhandener Objekte](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) und [neue Verbindungen hinzufügen](/visualstudio/data-tools/add-new-connections).  
   
-```  
+```cpp  
 // db_command.h  
 #include <atlbase.h>  
 #include <atlplus.h>  
@@ -183,7 +181,7 @@ struct CAuthors {
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // db_command.cpp  
 // compile with: /c  
 #include "db_command.h"  
@@ -214,7 +212,7 @@ int main(int argc, _TCHAR* argv[]) {
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird `db_source` auf die Datenquellenklasse `CMySource`angewendet und `db_command` auf die Befehlsklassen `CCommand1` und `CCommand2`.  
   
-```  
+```cpp  
 // db_command_2.cpp  
 // compile with: /c  
 #include <atlbase.h>  
@@ -260,7 +258,7 @@ int main() {
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`, Member, Methode, lokal|  
+|**Betrifft**|**Klasse**, **Struktur**, Member, Methode, lokal|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  
@@ -268,5 +266,5 @@ int main() {
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLE Consumerattribute DB-](../windows/ole-db-consumer-attributes.md)   
+ [OLE DB-Consumerattribute](../windows/ole-db-consumer-attributes.md)   
  [Eigenständige Attribute](../windows/stand-alone-attributes.md)   

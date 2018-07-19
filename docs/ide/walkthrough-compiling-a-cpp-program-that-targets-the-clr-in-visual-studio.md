@@ -1,5 +1,5 @@
 ---
-title: Kompilieren eines C++-Programms die CLR | Microsoft Docs
+title: Kompilieren eines C++-Programms für die CLR | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,69 +18,70 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d2a7bcb0eead62730f0b70b0b1df64e5ed08f1f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33336094"
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Exemplarische Vorgehensweise: Kompilieren eines C++-Programms für die CLR in Visual Studio
-Sie können Visual C++-Programme erstellen, die Klassen von .NET verwenden, und kompilieren Sie diese mithilfe der Visual Studio-Entwicklungsumgebung.  
+Sie können Visual C++-Programme erstellen, die .NET-Klassen verwenden, und diese kompilieren, indem Sie die Visual Studio-Entwicklungsumgebung verwenden.  
   
- Für dieses Verfahren können Sie Visual C++-Programm eingeben oder eines der Beispielprogramme verwenden. Das Beispielprogramm, das wir in diesem Verfahren verwenden, erstellt eine Textdatei mit dem Namen textfile.txt und speichert es in das Projektverzeichnis.  
+ Für diese Vorgehensweise können Sie Ihr eigenes Visual C++-Programm schreiben oder eines der Beispielprogramme verwenden. Das Beispielprogramm, das für diese Vorgehensweise verwendet wird, erstellt eine Textdatei namens „textfile.txt“, die im Projektverzeichnis gespeichert wird.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- In diesen Themen wird davon ausgegangen, dass Sie die Grundlagen der Programmiersprache C++ beherrschen.  
+ In diesen Artikeln wird davon ausgegangen, dass Sie die Grundlagen der Programmiersprache C++ beherrschen.  
   
-### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>Zum Erstellen eines neuen Projekts in Visual Studio, und fügen Sie eine neue Quelldatei hinzu  
+### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>So erstellen Sie ein neues Projekt in Visual Studio und fügen eine neue Quelldatei hinzu  
   
 1.  Erstellen Sie ein neues Projekt. Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
   
-2.  Klicken Sie in der Visual C++-Projekttypen auf **CLR**, und klicken Sie dann auf **leeres CLR-Projekt**.  
+2.  Klicken Sie in den Visual C++-Projekttypen auf **CLR**, und klicken Sie dann auf **leeres CLR-Projekt**.  
   
 3.  Geben Sie einen Projektnamen ein.  
   
-     Die Lösung, die das Projekt enthält, hat den gleichen Namen wie das neue Projekt standardmäßig, jedoch können Sie einen anderen Namen eingeben. Wenn Sie möchten, können Sie einen anderen Speicherort für das Projekt eingeben.  
+     Standardmäßig erhält die Projektmappe, in der das Projekt enthalten ist, den gleichen Namen wie das neue Projekt. Sie können jedoch auch einen anderen Namen eingeben. Wenn Sie möchten, können Sie auch einen anderen Speicherort für das Projekt angeben.  
   
-     Klicken Sie auf **OK** zum Erstellen eines neuen Projekts.  
+     Klicken Sie auf **OK**, um das neue Projekt zu erstellen.  
   
-4.  Wenn der Projektmappen-Explorer nicht sichtbar ist, klicken Sie auf **Projektmappen-Explorer** auf die **Ansicht** Menü.  
+4.  Wenn der Projektmappen-Explorer nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Projektmappen-Explorer**.  
   
 5.  Fügen Sie dem Projekt eine neue Quelldatei hinzu:  
   
-    -   Mit der rechten Maustaste die **Quelldateien** Ordner zeigen Sie im Projektmappen-Explorer auf **hinzufügen** , und klicken Sie auf **neues Element**.  
+    -   Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Ordner **Quelldateien**, zeigen Sie auf **Hinzufügen**, und wählen Sie **Neues Element** aus.  
   
-    -   Klicken Sie auf **C++-Datei (.cpp)** und geben Sie einen Dateinamen ein, und klicken Sie dann auf **hinzufügen**.  
+    -   Klicken Sie auf **C++-Datei (.cpp)**, geben Sie einen Dateinamen ein, und klicken Sie dann auf **Hinzufügen**.  
   
-     Der **cpp** Datei erscheint der **Quelldateien** Ordner im Projektmappen-Explorer und in einem Fenster im Registerkartenformat angezeigt wird, geben Sie den Code ein in dieser Datei werden sollen.  
+     Die **CPP**-Datei wird im Ordner **Quelldateien** im Projektmappen-Explorer angezeigt und ein Fenster im Registerkartenformat wird angezeigt, in dem Sie den Code eingeben, den Sie in diese Datei einfügen möchten.  
   
-6.  Klicken Sie in der neu erstellte Registerkarte in Visual Studio, und geben Sie ein gültiges Visual C++-Programm oder kopieren Sie eines der Beispielprogramme.  
+6.  Klicken Sie in Visual Studio in die neu erstellte Registerkarte, und geben Sie ein gültiges Visual C++-Programm ein, oder kopieren Sie eines der Beispielprogramme und fügen es ein.  
   
-     Beispielsweise können Sie der [wie: Schreiben einer Textdatei (C + c++ / CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md) Beispielprogramm (in der **Dateibehandlung und e/a-** Knoten die Programmierhandbuch).  
+     Sie können beispielsweise das Beispielprogramm [How to: Write a Text File (C++/CLI) (Vorgehensweise: Schreiben einer Textdatei (C++/CLI))](../dotnet/how-to-write-a-text-file-cpp-cli.md) verwenden (im Knoten **Dateibehandlung und E/A** des Programmierhandbuchs).  
   
-     Wenn Sie das Beispielprogramm verwenden, beachten Sie, dass Sie verwenden die `gcnew` -Schlüsselwort anstelle von `new` beim Erstellen des Objekts, und dass `gcnew` gibt ein Handle zurück (`^`) anstelle eines Zeigers (`*`):  
+     Beachten Sie, wenn Sie das Beispielprogramm verwenden, dass Sie das Schlüsselwort `gcnew` anstelle von `new` beim Erstellen eines .NET-Objekts verwenden, und dass `gcnew` ein Handle (`^`) anstelle eines Pointers (`*`) zurückgibt:  
   
      `StreamWriter^ sw = gcnew StreamWriter(fileName);`  
   
-     Weitere Informationen zur neuen Visual C++-Syntax finden Sie unter [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md).  
+     Weitere Informationen zur neuen Visual C++-Syntax finden Sie unter [Component Extensions for Runtime Platforms (Komponentenerweiterungen für Laufzeitplattformen)](../windows/component-extensions-for-runtime-platforms.md).  
   
 7.  Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  
   
-     Die **Ausgabe** Fenster werden Informationen zum Kompilierungsprozess angezeigt, wie den Speicherort des Buildprotokolls und eine Meldung, die den Buildstatus angezeigt.  
+     Im **Ausgabefenster** werden Informationen zum Kompilierungsprozess angezeigt, z.B. der Speicherort des Buildprotokolls und eine Meldung über den Buildstatus.  
   
-     Wenn Sie Änderungen vornehmen, und führen Sie das Programm ohne einen Build auszuführen, ein Dialogfeld wird angegeben, dass das Projekt nicht mehr aktuell ist. Aktivieren Sie das Kontrollkästchen in diesem Dialogfeld aus, bevor Sie auf **OK** ggf. Visual Studio immer die aktuellen Versionen von Dateien verwenden, anstatt Sie jedes Mal beim Erstellen der Anwendung.  
+     Wenn Sie Änderungen vornehmen und das Programm ausführen, ohne einen Buildvorgang auszuführen, gibt ein Dialogfeld möglicherweise an, dass das Projekt nicht mehr aktuell ist. Aktivieren Sie in diesem Dialogfeld das Kontrollkästchen, bevor Sie auf **OK** klicken, wenn Sie möchten, dass Visual Studio immer die aktuellen Versionen von Dateien verwendet, anstatt Sie jedes zur Eingabe aufzufordern, wenn die Anwendung erstellt wird.  
   
-8.  Auf der **Debuggen** Menü klicken Sie auf **Starten ohne Debugging**.  
+8.  Klicken Sie im Menü **Debuggen** auf **Starten ohne Debuggen**.  
   
-9. Wenn Sie das Beispielprogramm verwendet, wenn Sie das Programm ausführen, wird ein Befehlsfenster angezeigt, der angibt, dass die Textdatei erstellt wurde. Drücken Sie eine beliebige Taste, um das Befehlsfenster zu schließen.  
+9. Wenn Sie das Beispielprogramm verwendet haben und das Programm ausführen, wird ein Befehlsfenster angezeigt, das angibt, dass die Textdatei erstellt wurde. Drücken Sie eine beliebige Taste, um das Befehlsfenster zu schließen.  
   
-     Die **textfile.txt** Textdatei befindet sich jetzt im Projektverzeichnis. Sie können diese Datei mithilfe des Editors öffnen.  
+     Die Textdatei **textfile.txt** befindet sich nun in Ihrem Projektverzeichnis. Sie können diese Datei mit dem Editor öffnen.  
   
     > [!NOTE]
-    >  Wählen die leere CLR-Projektvorlage automatisch festgelegt die **"/ CLR"** -Compileroption. Um dies zu überprüfen, Maustaste das Projekt im **Projektmappen-Explorer** und auf **Eigenschaften**, und überprüfen Sie dann die **Common Language Runtime-Unterstützung** -Option in der  **Allgemeine** Knoten **Konfigurationseigenschaften**.  
+    >  Durch Auswählen der leeren CLR-Projektvorlage wird automatisch die Compileroption **/clr** festgelegt. Klicken Sie zum Überprüfen mit der rechten Maustaste auf das Projekt im **Projektmappen-Explorer**, klicken Sie auf **Eigenschaften**, und überprüfen Sie dann die Option **Common Language Runtime-Unterstützung** im Knoten **Allgemein** der **Konfigurationseigenschaften**.  
   
 ## <a name="whats-next"></a>Weitere Informationen  
- **Vorherige:** [Exemplarische Vorgehensweise: Kompilieren eines systemeigenen C++-Programms in der Befehlszeile](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) &#124; **weiter:**[Exemplarische Vorgehensweise: Kompilieren ein C-Programms in der Befehlszeile](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
+ **Zurück:** [Walkthrough: Compiling a Native C++ Program on the Command Line (Exemplarische Vorgehensweise: Kompilieren eines nativen C++-Programms über die Befehlszeile)](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) &#124; **Weiter:**[Walkthrough: Compile a C Program on the Command Line (Exemplarische Vorgehensweise: Kompilieren eines C-Programms über die Befehlszeile)](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [C++-Sprachreferenz](../cpp/cpp-language-reference.md)   
+ [C++ Language Reference (C++-Programmiersprachenreferenz)](../cpp/cpp-language-reference.md)   
  [Erstellen von C/C++-Programmen](../build/building-c-cpp-programs.md)

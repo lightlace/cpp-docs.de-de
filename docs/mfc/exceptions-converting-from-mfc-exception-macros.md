@@ -24,16 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a386de558730e12bb8cf40da250c1d04dd4ff37a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931117"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Ausnahmen: Umwandeln von MFC-Ausnahmemakros
 Dies ist ein-Thema für fortgeschrittene.  
   
- In diesem Artikel wird erläutert, wie das Konvertieren von vorhandenem Code, die mit Microsoft Foundation Class-Makros geschrieben – **versuchen Sie es**, **CATCH**, **AUSLÖSEN**usw. – verwenden Sie die C++-Ausnahmebehandlung Schlüsselwörter **versuchen**, **catch**, und `throw`. Folgende Themen werden behandelt:  
+ In diesem Artikel wird erläutert, wie das Konvertieren von vorhandenem Code, die mit Microsoft Foundation Class-Makros geschrieben – **versuchen Sie es**, **CATCH**, **AUSLÖSEN**usw. – verwenden Sie die C++-Ausnahmebehandlung Schlüsselwörter **versuchen**, **catch**, und **auslösen**. Folgende Themen werden behandelt:  
   
 -   [Vorteile der Konvertierung](#_core_advantages_of_converting)  
   
@@ -46,7 +47,7 @@ Dies ist ein-Thema für fortgeschrittene.
   
 -   Code, in der C++-Schlüsselwörter für die Ausnahmebehandlung verwendet, die in einer etwas kleiner kompiliert werden. EXE-Datei oder. DLL.  
   
--   Die C++-Ausnahmebehandlung Schlüsselwörter sind flexibler: sie können Behandeln von Ausnahmen eines beliebigen Datentyps, die kopiert werden können (`int`, **"float"**, `char`usw.), während die Makros Klasse nurAusnahmenbehandeln`CException` und davon abgeleitete Klassen.  
+-   Die C++-Ausnahmebehandlung Schlüsselwörter sind flexibler: sie können Behandeln von Ausnahmen eines beliebigen Datentyps, die kopiert werden können (**Int**, **"float"**, **Char**usw.), während die Makros Behandeln von Ausnahmen nur der Klasse `CException` und davon abgeleitete Klassen.  
   
  Der Hauptunterschied zwischen die Makros und die Schlüsselwörter ist, verwenden die Makros "automatisch" Code eine abgefangene Ausnahme gelöscht, wenn die Ausnahme den Gültigkeitsbereich verlässt. Code mit die Schlüsselwörtern nicht der Fall, können Sie eine abgefangene Ausnahme explizit löschen müssen. Weitere Informationen finden Sie im Artikel [Ausnahmen: Abfangen und Löschen von Ausnahmen](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
@@ -68,19 +69,19 @@ Dies ist ein-Thema für fortgeschrittene.
   
 2.  Trennung von Catch-Blöcken:  
   
-     Mit den Makros die **CATCH** Makros (mit den Argumenten) beginnt, den ersten Catch-Block; das `AND_CATCH` Makros beginnt nachfolgende Catch-Blöcke und die `END_CATCH` Makro beendet die Abfolge der Catch-Blöcken.  
+     Mit den Makros die **CATCH** Makros (mit den Argumenten) beginnt, den ersten Catch-Block; das **AND_CATCH** Makros beginnt nachfolgende Catch-Blöcke und die **END_CATCH** Makro beendet die Abfolge der Catch-Blöcken.  
   
-     Mit den Schlüsselwörtern die **catch** -Schlüsselwort (mit der Ausnahmedeklaration) beginnt jede Catch-Block. Es gibt keine Entsprechung, um die `END_CATCH` -Makro; Catch blockieren endet mit der schließenden Klammer.  
+     Mit den Schlüsselwörtern die **catch** -Schlüsselwort (mit der Ausnahmedeklaration) beginnt jede Catch-Block. Es gibt keine Entsprechung zu den **END_CATCH** -Makro; Catch blockieren endet mit der schließenden Klammer.  
   
 3.  Der Throw-Ausdruck:  
   
-     Verwenden Sie die Makros `THROW_LAST` die aktuelle Ausnahme erneut ausgelöst. Die `throw` -Schlüsselwort, ohne Argument hat dieselbe Wirkung.  
+     Verwenden Sie die Makros **THROW_LAST** die aktuelle Ausnahme erneut ausgelöst. Die **auslösen** -Schlüsselwort, ohne Argument hat dieselbe Wirkung.  
   
 ##  <a name="_core_doing_the_conversion"></a> Die Konvertierung  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>So konvertieren Sie Code mithilfe von Makros zur Verwendung der C++-Ausnahmebehandlung-Schlüsselwörter  
   
-1.  Suchen Sie alle Vorkommen von MFC-Makros **versuchen**, **CATCH**, `AND_CATCH`, `END_CATCH`, **AUSLÖSEN**, und `THROW_LAST`.  
+1.  Suchen Sie alle Vorkommen von MFC-Makros **versuchen**, **CATCH**, **AND_CATCH**, **END_CATCH**, **AUSLÖSEN**, und **THROW_LAST**.  
   
 2.  Ersetzen Sie oder löschen Sie alle Vorkommen der folgenden Makros:  
   
@@ -88,13 +89,13 @@ Dies ist ein-Thema für fortgeschrittene.
   
      **ABFANGEN** (ersetzen Sie diesen **catch**)  
   
-     `AND_CATCH` (Ersetzen Sie diesen **catch**)  
+     **AND_CATCH** (ersetzen Sie diesen **catch**)  
   
-     `END_CATCH` (Löschen)  
+     **END_CATCH** (löschen)  
   
-     **LÖST** (ersetzen Sie diesen `throw`)  
+     **LÖST** (ersetzen Sie diesen **auslösen**)  
   
-     `THROW_LAST` (Ersetzen Sie diesen `throw`)  
+     **THROW_LAST** (ersetzen Sie diesen **auslösen**)  
   
 3.  Ändern Sie das Makroargumente, sodass diese Ausnahmedeklarationen ungültig bilden.  
   

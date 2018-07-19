@@ -24,17 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d220c928f2ca3fe0594d03d558d2d6dcfce773
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64a8df138ef0d581bcc93bf836ee0935a634983d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930502"
 ---
 # <a name="files-in-mfc"></a>Dateien in MFC
 In der Microsoft Foundation Class Library (MFC)-Klasse [CFile](../mfc/reference/cfile-class.md) normale Datei-e/a-Vorgänge abwickelt. Diese Artikelreihe erläutert, wie zu öffnen und schließen Sie Dateien als auch lesen und Schreiben von Daten zu diesen Dateien. Darüber hinaus werden die Status Dateioperationen erläutert. Eine Beschreibung, wie die Serialisierung objektbasierten Funktionen von MFC als eine alternative Möglichkeit zum Lesen und Schreiben von Daten in Dateien zu verwenden, finden Sie im Artikel [Serialisierung](../mfc/serialization-in-mfc.md).  
   
 > [!NOTE]
->  Bei Verwendung von MFC **CDocument** -Objekten, das Framework wickelt einen großen Teil der Arbeit für die Serialisierung für Sie. Insbesondere das Framework erstellt und verwendet die `CFile` Objekt. Sie müssen nur für das Schreiben von Code in der Überschreibung der der `Serialize` Memberfunktion der Klasse **CDocument**.  
+>  Bei Verwendung von MFC `CDocument` -Objekten, das Framework wickelt einen großen Teil der Arbeit für die Serialisierung für Sie. Insbesondere das Framework erstellt und verwendet die `CFile` Objekt. Sie müssen nur für das Schreiben von Code in der Überschreibung der der `Serialize` Memberfunktion der Klasse `CDocument`.  
   
  Die `CFile` Klasse stellt eine Schnittstelle für allgemeine binäre Dateivorgänge. Die `CStdioFile` und `CMemFile` von abgeleiteten Klassen `CFile` und `CSharedFile` abgeleitete Klasse `CMemFile` spezialisierter "Dateidienste" angeben.  
   

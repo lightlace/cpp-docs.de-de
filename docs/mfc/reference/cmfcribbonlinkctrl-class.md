@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonLinkCtrl Klasse | Microsoft Docs
+title: CMFCRibbonLinkCtrl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,11 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9267dd6ab89871bcf8058529f32eb3686be937df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851495"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl-Klasse
 Implementiert einen Hyperlink, der auf einem Menüband positioniert wird. Wenn Sie den Hyperlink anklicken, wird eine Webseite geöffnet.  
@@ -84,7 +85,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 |[CMFCRibbonLinkCtrl::SetLink](#setlink)|Legt den Wert des Links fest.|  
   
 ## <a name="remarks"></a>Hinweise  
- Nachdem Sie einen Hyperlink erstellen, hinzufügen zu einem Bereich durch Aufrufen von [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+ Nachdem Sie einen Link erstellen, hinzufügen, einen Bereich durch den Aufruf [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -105,17 +106,17 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nID`  
- Gibt die Befehls-ID des Befehls, der ausgeführt wird, wenn das Linksteuerelement geklickt wird.  
+ [in] *nID*  
+ Gibt an, die Befehls-ID des Befehls, der ausgeführt wird, wenn die Linksteuerelement geklickt wird.  
   
- [in] `lpszText`  
- Gibt die Bezeichnung auf die Link-Steuerelement angezeigt werden sollen.  
+ [in] *LpszText*  
+ Gibt die Bezeichnung, die auf den Link-Steuerelement angezeigt.  
   
- [in] `lpszLink`  
- Gibt den Link, der dem Linksteuerelement zugeordnet.  
+ [in] *LpszLink*  
+ Gibt an, den Link, der die Linksteuerelement zugeordnet.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie mithilfe des Konstruktors, der die `CMFCRibbonLinkCtrl` Klasse. Dieser Codeausschnitt ist Teil der [Menüband Gadgets Beispiel](../../visual-cpp-samples.md).  
+ Im folgenden Beispiel wird veranschaulicht, wie den Konstruktor, der die `CMFCRibbonLinkCtrl` Klasse. Dieser Codeausschnitt ist Teil der [Menüband Gadgets Beispiel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
@@ -127,7 +128,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `src`  
+ [in] *Src*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -139,7 +140,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -165,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -190,8 +191,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `CDC*`  
- [in] `CRect`  
+ [in] *CDC**  
+ [in] *CRect*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -216,7 +217,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -228,7 +229,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `point`  
+ [in] *zeigen*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -249,10 +250,10 @@ BOOL OpenLink();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn der zugeordnete Webseite erfolgreich geöffnet wurde; andernfalls `FALSE`.  
+ True, wenn die zugeordnete Webseite erfolgreich geöffnet wurde. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Öffnet eine Webseite, die über den Link zugeordnet der `CMFCRibbonLinkCtrl` Objekt.  
+ Öffnet eine Webseite mit den zugehörigen Link der `CMFCRibbonLinkCtrl` Objekt.  
   
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink  
  Legt den Wert des Links fest.  
@@ -262,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszLink`  
- Gibt den Text des Links.  
+ [in] *LpszLink*  
+ Gibt den Hyperlinktext.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

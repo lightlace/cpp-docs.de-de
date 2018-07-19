@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed73314d5cef6849c84a8e1019e1fd2d6c8ead86
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 43f4aec5796db6a277b6bfb1edecdcd2e7f5c455
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954616"
 ---
 # <a name="isbaseof-class"></a>is_base_of-Klasse
 
@@ -36,13 +37,13 @@ struct is_base_of;
 
 ### <a name="parameters"></a>Parameter
 
-`Base` Die Basisklasse zum Testen.
+*Basis* Basisklasse, um zu testen.
 
-`Derived` Der abgeleitete Typ zum Testen.
+*Abgeleitete* der abgeleitete Typ zum Testen.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn der `Base`-Typ eine Basisklasse des Typs `Derived` ist, andernfalls „false“.
+Eine Instanz des typprädikats ist true, wenn der Typ *Basis* ist eine Basisklasse des Typs *abgeleiteten*, andernfalls ist Sie false.
 
 ## <a name="example"></a>Beispiel
 

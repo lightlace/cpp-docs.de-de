@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381617"
 ---
 # <a name="using-canimatectrl"></a>Verwenden von CAnimateCtrl
 Eines Animationssteuerelements, dargestellt durch die Klasse [CAnimateCtrl](../mfc/reference/canimatectrl-class.md), ist ein Fenster, in dem einen Clip Audio / Video Interleaved (AVI)-Format angezeigt – Windows Video-oder Audio-Standardformat. Ein AVI-Videoclips besteht aus einer Reihe von Bitmapframes, z. B. einen Film.  

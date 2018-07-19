@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348090"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Dokumentvorlagen und der Erstellungsvorgang für Dokumente und Ansichten
 Zur Verwaltung der komplexen Vorgang des Erstellens von Dokumenten mit ihren zugehörigen Ansichten und Rahmenfenster verwendet das Framework zwei Dokumentvorlagenklassen: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) für SDI-Anwendungen und [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) für MDI-Anwendungen. Ein `CSingleDocTemplate` erstellen und speichern Sie ein Dokument von einem Typ zu einem Zeitpunkt können. Ein `CMultiDocTemplate` hält eine Liste viele geöffnete Dokumente eines bestimmten Typs.  

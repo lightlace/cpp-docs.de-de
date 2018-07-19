@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361865"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>Testen des ATL-DHTML-Steuerelements
 Nachdem Sie das Projekt erstellt haben, können Sie erstellen und Testen des Beispiel-Steuerelements. Bevor Sie dies tun, mit der Klassenansicht und im Projektmappen-Explorer überprüfen Sie das Projekt. Die Elemente des Projekts werden ausführlicher in beschrieben [identifizieren die Elemente eines DHTML-Steuerelementprojekts](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  

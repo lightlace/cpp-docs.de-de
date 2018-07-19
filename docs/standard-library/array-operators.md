@@ -13,15 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 09d09e47103fa263adc4c5cf288803835b112142
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 782acd7fda671d84252ab226d095fe21c75645bf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965457"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt;-Operatoren
 
-Der Header \<array> enthält diese `array`-Nicht-Memberfunktionen für den Vorlagenvergleich.
+Die \<Array >-Header enthält diese **Array** nicht-Member den vorlagenvergleich.
 
 ||||
 |-|-|-|
@@ -41,13 +42,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der Typ eines Elements.
+*Ty* den Typ eines Elements.
 
-`N` Die Größe des Arrays.
+*N* die Größe des Arrays.
 
-`left` Linke Container, verglichen werden soll.
+*linken* Linker zu vergleichender Container.
 
-`right` Rechte Container, verglichen werden soll.
+*richtige* rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -110,13 +111,13 @@ bool operator<(
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der Typ eines Elements.
+*Ty* den Typ eines Elements.
 
-`N` Die Größe des Arrays.
+*N* die Größe des Arrays.
 
-`left` Linke Container, verglichen werden soll.
+*linken* Linker zu vergleichender Container.
 
-`right` Rechte Container, verglichen werden soll.
+*richtige* rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -180,13 +181,13 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der Typ eines Elements.
+*Ty* den Typ eines Elements.
 
-`N` Die Größe des Arrays.
+*N* die Größe des Arrays.
 
-`left` Linke Container, verglichen werden soll.
+*linken* Linker zu vergleichender Container.
 
-`right` Rechte Container, verglichen werden soll.
+*richtige* rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -250,13 +251,13 @@ bool operator==(
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der Typ eines Elements.
+*Ty* den Typ eines Elements.
 
-`N` Die Größe des Arrays.
+*N* die Größe des Arrays.
 
-`left` Linke Container, verglichen werden soll.
+*linken* Linker zu vergleichender Container.
 
-`right` Rechte Container, verglichen werden soll.
+*richtige* rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -320,13 +321,13 @@ bool operator>(
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der Typ eines Elements.
+*Ty* den Typ eines Elements.
 
-`N` Die Größe des Arrays.
+*N* die Größe des Arrays.
 
-`left` Linke Container, verglichen werden soll.
+*linken* Linker zu vergleichender Container.
 
-`right` Rechte Container, verglichen werden soll.
+*richtige* rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -390,13 +391,13 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der Typ eines Elements.
+*Ty* den Typ eines Elements.
 
-`N` Die Größe des Arrays.
+*N* die Größe des Arrays.
 
-`left` Linke Container, verglichen werden soll.
+*linken* Linker zu vergleichender Container.
 
-`right` Rechte Container, verglichen werden soll.
+*richtige* rechter zu vergleichender Container.
 
 ### <a name="remarks"></a>Hinweise
 

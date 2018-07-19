@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317319"
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>Fehler und Warnungen in der profilgesteuerten Optimierung
 Dieser Abschnitt ist eine Referenz zu den von den Buildtools ausgegebenen Fehlermeldungen. Um Hilfe zu einer bestimmten Fehlermeldung, entweder klicken Sie auf die Fehlernummer im Ausgabefenster angezeigt, und drücken Sie F1, geben die Fehlernummer in der **suchen Sie nach** im Index ein, oder klicken Sie auf den entsprechenden Link:  

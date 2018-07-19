@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33884475"
 ---
 # <a name="editing-binary-data"></a>Bearbeiten von Binärdaten
 ### <a name="to-edit-a-resource-in-the-binary-editor"></a>So bearbeiten Sie eine Ressource im Binär-editor  

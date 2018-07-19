@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352062"
 ---
 # <a name="frame-windows"></a>Rahmenfenster
 Wenn eine Anwendung unter Windows ausgeführt wird, interagiert der Benutzer mit Dokumenten im Frame-Fensters angezeigt. Einem Dokumentrahmenfenster besteht aus zwei wesentlichen Komponenten: Frames und den Inhalt, der sie frames. Einem Dokumentrahmenfenster kann eine [Einzeldokumentoberfläche](../mfc/sdi-and-mdi.md) Rahmenfenster (SDI) oder ein [mehrerer dokumentoberflächen](../mfc/sdi-and-mdi.md) (MDI) untergeordnetes Fenster. Windows verwaltet die meisten der Benutzerinteraktion mit dem Rahmenfenster: verschieben und Ändern der Größe des Fensters, schließen und minimieren und maximieren. Sie verwalten den Inhalt innerhalb des Rahmens.  

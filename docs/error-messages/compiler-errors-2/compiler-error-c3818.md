@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268832"
 ---
 # <a name="compiler-error-c3818"></a>Compilerfehler C3818
 Eigenschaft Arraydeklaration "property1" wird eine Index-Eigenschaft "property2" nicht überladen werden.  

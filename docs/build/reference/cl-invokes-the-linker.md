@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371914"
 ---
 # <a name="cl-invokes-the-linker"></a>CL: Starten des Linkers
 CL Ruft den Linker automatisch nach dem Kompilieren, es sei denn, die/c-Option verwendet wird. CL wird an den Linker übergeben, die Namen der OBJ-Dateien, die während des Kompilierens erstellt und die Namen aller anderen Dateien, die in der Befehlszeile angegeben. Der Linker verwendet die in der Umgebungsvariablen LINK aufgeführten Optionen. / Link-Option können Sie die Optionen des Linkers in der CL-Befehlszeile angeben. Optionen, die die Option/Link folgen, überschreiben die in der Umgebungsvariablen LINK. Die Optionen in der folgenden Tabelle unterdrücken Sie verknüpfen.  

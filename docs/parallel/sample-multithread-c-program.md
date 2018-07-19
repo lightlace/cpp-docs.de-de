@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687991"
 ---
 # <a name="sample-multithread-c-program"></a>Beispiel für ein C-Multithreadprogramm
 Bounce.c ist ein Beispiel für ein Multithreadprogramm, die eine neue erstellt bei jedem thread den Buchstaben **eine** oder **ein** typisiert ist. Bei jedem Thread bewegt sich ein lachendes Gesicht in einer anderen Farbe über den Bildschirm. Es können bis zu 32 Threads erstellt werden. Normale Beendigung des Programms tritt auf, wenn `q` oder **Q** typisiert ist. Informationen zum Kompilieren und Verknüpfen von Bounce.c finden Sie unter [kompilieren und Binden von Multithreadprogrammen](../parallel/compiling-and-linking-multithread-programs.md).  

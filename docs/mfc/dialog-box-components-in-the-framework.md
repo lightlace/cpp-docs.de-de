@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343966"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>Dialogfeld-Steuerelemente im Framework
 In der MFC-Framework besteht ein Dialogfeld aus zwei Komponenten:  

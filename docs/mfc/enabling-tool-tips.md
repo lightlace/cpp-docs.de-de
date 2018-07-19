@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346135"
 ---
 # <a name="enabling-tool-tips"></a>Erstellen von QuickInfos
 Sie können die Tool-Tipp-Unterstützung für die untergeordneten Steuerelemente von einem Fenster (z. B. die Steuerelemente auf einem Formular Ansichts- oder Dialogfeldobjekt) aktivieren.  

@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040674"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage-Klasse
 Implementiert eine benutzerdefinierte Seite für die **anpassen** Dialogfeld in Menüband-basierten Anwendungen.  
@@ -97,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `lpszName`|Gibt den Namen der benutzerdefinierten Softwarekategorie an.|  
-|[in] `lstIDS`|Enthält die Menübandbefehls-IDs in der benutzerdefinierten Kategorie angezeigt werden.|  
+|[in] *Wert*|Gibt den Namen der benutzerdefinierten Softwarekategorie an.|  
+|[in] *LstIDS*|Enthält die Menübandbefehls-IDs in der benutzerdefinierten Kategorie angezeigt werden.|  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode fügt eine Kategorie mit dem Namen `lpszName` auf die **Befehle** Kombinationsfeld. Wenn der Benutzer die Kategorie auswählt, wird die Befehle in angegebenen `lstIDS` in der Befehlsliste angezeigt.  
+ Diese Methode fügt eine Kategorie mit dem Namen *Wert* auf die **Befehle** Kombinationsfeld. Wenn der Benutzer die Kategorie auswählt, wird die Befehle in angegebenen *LstIDS* in der Befehlsliste angezeigt.  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Erstellt ein `CMFCRibbonCustomizePropertyPage`-Objekt.  
@@ -111,7 +112,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  Ein Zeiger auf ein Menübandsteuerelement für die die Optionen zum Anpassen.  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  

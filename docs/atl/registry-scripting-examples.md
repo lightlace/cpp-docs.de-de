@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361888"
 ---
 # <a name="registry-scripting-examples"></a>Beispiele für die Registrierung Scripting
 Skripts in diesem Thema wird erklärt, wie fügen Sie einen Schlüssel in der systemregistrierung, registrieren Sie den Registrierungsstelle COM-Server und mehrere Analyse Strukturen angeben.  

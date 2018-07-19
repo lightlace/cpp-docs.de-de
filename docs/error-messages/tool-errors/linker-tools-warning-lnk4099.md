@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300812"
 ---
 # <a name="linker-tools-warning-lnk4099"></a>Linkertoolwarnung LNK4099
 PDB-Datei "Dateiname" wurde nicht mit "Objektbibliothek" oder auf "%Path;" gefunden. Objekt wird verknüpft, als ob keine Debuginformationen vorhanden wären  

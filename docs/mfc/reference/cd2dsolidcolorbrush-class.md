@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9020eb0165a0f06e430caa6a0e1641ea1afb3d75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cf3f78624761b364bf192876cb8368c73507e86
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951574"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush-Klasse
 Ein Wrapper für ID2D1SolidColorBrush.  
@@ -112,7 +113,7 @@ void Attach(ID2D1SolidColorBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pResource`  
+ *pResource*  
  Vorhandene Ressourcenschnittstelle. NULL darf nicht sein  
   
 ##  <a name="cd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::CD2DSolidColorBrush  
@@ -135,19 +136,19 @@ CD2DSolidColorBrush(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentTarget`  
+ *pParentTarget*  
  Ein Zeiger auf das Renderziel.  
   
- `color`  
+ *Farbe*  
  Die Rot, Grün, Blau und alpha-Werte der Farbe des Pinsels.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Ein Zeiger auf die Deckkraft- und Transformation eines Pinsels.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
- `nAlpha`  
+ *nAlpha*  
  Die Deckkraft der Farbe des Pinsels.  
   
 ##  <a name="create"></a>  CD2DSolidColorBrush::Create  
@@ -158,7 +159,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pRenderTarget`  
+ *pRenderTarget*  
  Ein Zeiger auf das Renderziel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -233,7 +234,7 @@ void SetColor(D2D1_COLOR_F color);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `color`  
+ *Farbe*  
  Die Farbe der diesen Pinsel mit Volltonfarbe  
   
 ## <a name="see-also"></a>Siehe auch  

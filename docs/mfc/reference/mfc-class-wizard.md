@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370141"
 ---
 # <a name="mfc-class-wizard"></a>MFC-Klassen-Assistent
 Ermöglicht das Hinzufügen von Meldungen und Meldungshandlern zu Klassen im Projekt. Sie können auch andere Assistenten starten oder dem Projekt eine Klasse hinzufügen.  

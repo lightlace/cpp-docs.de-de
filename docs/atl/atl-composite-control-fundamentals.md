@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354616"
 ---
 # <a name="atl-composite-control-fundamentals"></a>ATL-Grundlagen von zusammengesetzten Steuerelementen
 Ein zusammengesetztes Steuerelement ist ein ActiveX-Steuerelement, das (ähnlich wie ein Dialogfeld) enthalten, kann andere ActiveX-Steuerelemente oder Windows-Steuerelemente. Sobald die zusammengesetzten Steuerelements erstellt wurde, können sie überall eingefügt werden ein ActiveX-Steuerelement gehostet werden kann.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686613"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Vermeiden von Problembereichen bei Multithreadprogrammen
 Es gibt mehrere Probleme, die Sie erstellen, verknüpfen oder Ausführen einer C-Multithreadprogramm auftreten können. Einige der häufigsten Probleme werden in der folgenden Tabelle beschrieben. (Eine ähnliche Erläuterung von MFC-Sicht, finden Sie unter [Multithreading: Tipps für die Programmierung](../parallel/multithreading-programming-tips.md).)  

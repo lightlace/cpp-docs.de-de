@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343375"
 ---
 # <a name="destroying-window-objects"></a>Zerstören von Fensterobjekten
 Mit eigene untergeordnete Fenster muss geachtet werden, die C++-Fensterobjekt zerstört, wenn der Benutzer mit dem Fenster abgeschlossen ist. Wenn diese Objekte nicht zerstört werden, wird Ihre Anwendung nicht ihren Speicher wiederhergestellt wird. Glücklicherweise verwaltet das Framework fensterzerstörung sowie das Erstellen von Rahmenfenstern, Ansichten und Dialogfelder. Wenn Sie zusätzliche Fenster erstellen, können Sie sie zerstören.  

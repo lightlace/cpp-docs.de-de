@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888844"
 ---
 # <a name="setting-accelerator-properties"></a>Festlegen von Eigenschaften für Zugriffstasten
 Festlegen von Zugriffstasteneigenschaften der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) zu einem beliebigen Zeitpunkt. Sie können zudem den Tastenkombinations-Editor verwenden, um die Tastenkombinationseigenschaften in der Tastenkombinationstabelle zu ändern. Mithilfe des Fensters „Eigenschaften“ oder des Tastenkombinations-Editors vorgenommene Änderungen führen zum gleichen Ergebnis: Die Bearbeitungen werden sofort in der Tastenkombinationstabelle berücksichtigt.  

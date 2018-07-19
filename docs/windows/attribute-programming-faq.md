@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862363"
 ---
 # <a name="attribute-programming-faq"></a>Fragen und Antworten zur attributierten Programmierung
 In diesem Thema werden die folgenden häufig gestellten Fragen beantwortet:  

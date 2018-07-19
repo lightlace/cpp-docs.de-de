@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0e8713bc228e65cb06e58d7ccb5389f7366e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9c3d9f4744ae01a7e251387bd342b77292d1c0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931608"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC-ActiveX-Steuerelemente: Hinzufügen einer weiteren benutzerdefinierten Eigenschaftenseite
 In einigen Fällen müssen ein ActiveX-Steuerelement mehr Eigenschaften als angemessen auf eine Seite passen. In diesem Fall können Sie die Eigenschaftenseiten für das ActiveX-Steuerelement zum Anzeigen dieser Eigenschaften hinzufügen.  
@@ -47,7 +48,7 @@ In einigen Fällen müssen ein ActiveX-Steuerelement mehr Eigenschaften als ange
   
 3.  Erweitern Sie die **Dialogfeld** Knoten, und wählen **IDD_OLE_PROPPAGE_SMALL aus**.  
   
-4.  Klicken Sie auf `New` die Ressource zu Ihrem Projekt hinzugefügt.  
+4.  Klicken Sie auf **neu** die Ressource zu Ihrem Projekt hinzugefügt.  
   
 5.  Wählen Sie die neue Eigenschaft Seitenvorlage, um das Eigenschaftenfenster zu aktualisieren.  
   
@@ -81,7 +82,7 @@ In einigen Fällen müssen ein ActiveX-Steuerelement mehr Eigenschaften als ange
   
  [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]  
   
- Beachten Sie, dass den zweiten Parameter der zu erhöhen, müssen die `BEGIN_PROPPAGEIDS` Makro (die Eigenschaft Seitenanzahl) von 1 auf 2.  
+ Beachten Sie, dass den zweiten Parameter von der BEGIN_PROPPAGEIDS-Makro (die Eigenschaft Seitenanzahl) von 1 auf 2 erhöht werden muss.  
   
  Sie müssen auch die Implementierungsdatei des Steuerelements ändern (. CPP)-Datei, die den Header enthalten (. H)-Datei von der neuen Eigenschaft Page-Klasse.  
   
@@ -109,7 +110,7 @@ In einigen Fällen müssen ein ActiveX-Steuerelement mehr Eigenschaften als ange
   
      [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]  
   
-7.  Ändern Sie den Konstruktor des `CAddtlPropPage` , damit **IDS_SAMPLE_ADDPPG_CAPTION** wird zum Übergeben der `COlePropertyPage` -Konstruktor wie folgt:  
+7.  Ändern Sie den Konstruktor des `CAddtlPropPage` , damit IDS_SAMPLE_ADDPPG_CAPTION übergeben wird, um die `COlePropertyPage` -Konstruktor wie folgt:  
   
      [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]  
   

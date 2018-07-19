@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688995"
 ---
 # <a name="asynchronous-agents-library"></a>Asynchronous Agents Library
 Die Asynchronous Agents Library (oder einfach *Agents Library*) bietet ein Programmiermodell, in dem Sie die Stabilität der parallelitätsfähigen Anwendungsentwicklung steigern kann. Die Agents Library ist eine C++-Vorlagenbibliothek, die ein akteurbasiertes Programmiermodell und prozessinterne Nachrichtenübergabe für undifferenzierten Datenfluss und Pipelineaufgaben begünstigt. Die Agents Library baut auf der Planung und den Ressourcenverwaltungskomponenten von der Concurrency Runtime auf.  

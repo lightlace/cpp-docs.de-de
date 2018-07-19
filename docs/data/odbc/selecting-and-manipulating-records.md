@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090077"
 ---
 # <a name="selecting-and-manipulating-records"></a>Auswählen und Verändern von Datensätzen
 Normalerweise bei Auswahl Datensätze aus einer Datenquelle mit einer SQL **wählen** -Anweisung, erhalten Sie ein Resultset, das eine Gruppe von Datensätzen aus einer Tabelle oder einer Abfrage ist. Mit den Datenbankklassen verwenden Sie ein Recordset-Objekt auswählen und das Resultset zuzugreifen. Dies ist ein Objekt einer anwendungsspezifischen-Klasse, die Sie von der Klasse ableiten [CRecordset](../../mfc/reference/crecordset-class.md). Wenn Sie eine Recordset-Klasse definieren, geben Sie an der Datenquelle zum Zuordnen der Tabelle und die Spalten der Tabelle. MFC-Anwendung-Assistenten oder **Klasse hinzufügen** (wie in beschrieben [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) erstellt eine Klasse mit einer Verbindung mit einer bestimmten Datenquelle. Schreiben Sie die Assistenten der [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) Memberfunktion der Klasse `CRecordset` zum Zurückgeben des Namens der Tabelle. Weitere Informationen zum Verwenden der Assistenten zum Erstellen von Recordset-Klassen finden Sie unter [Datenbankunterstützung, MFC-Anwendungs-Assistent](../../mfc/reference/database-support-mfc-application-wizard.md) und [Hinzufügen eines MFC-ODBC-Consumers](../../mfc/reference/adding-an-mfc-odbc-consumer.md).  

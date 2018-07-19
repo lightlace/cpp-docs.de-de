@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358828"
 ---
 # <a name="understanding-parse-trees"></a>Grundlegendes zur Analyse Strukturen
 Sie können mindestens ein Analyse-Strukturen in Ihrem Skript Registrierungsstelle definieren, in dem jede Analysestruktur die folgende Form aufweist:  

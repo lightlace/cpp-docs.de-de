@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691351"
 ---
 # <a name="a29---use-of-work-sharing-constructs-inside-a-critical-construct"></a>A.29   Verwenden von Arbeitsteilungskonstrukten innerhalb eines critical-Konstrukts
 Das folgende Beispiel veranschaulicht die Verwendung eines Konstrukts Freigeben von Arbeit in einem `critical` erstellen. In diesem Beispiel ist kompatibel, da die Arbeit Freigabe zu erstellen und die `critical` Konstrukt nicht zur selben parallele Region gebunden.  

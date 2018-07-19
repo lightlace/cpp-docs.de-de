@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353131"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Empfehlungen für die Auswahl einer Sammlungsklasse
 Dieser Artikel enthält ausführliche Informationen zur Auswahl einer Auflistungsklasse für Ihre besonderen Anwendungsanforderungen.  

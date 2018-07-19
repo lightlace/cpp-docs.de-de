@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861385"
 ---
 # <a name="com-attributes"></a>COM-Attribute
 Die COM-Attribute fügen Code um mehrere Bereiche von COM-Entwicklung und .NET Framework common Language Runtime-Entwicklung zu unterstützen. Diese Bereiche reichen von benutzerdefinierten Implementierung und Unterstützung von vorhandenen Schnittstellen zur Unterstützung von vordefinierten Eigenschaften, Methoden und Ereignisse. Darüber hinaus kann die Unterstützung für zusammengesetzte und ActiveX-Steuerelement Implementierung gefunden werden.  

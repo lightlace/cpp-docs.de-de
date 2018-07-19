@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373035"
 ---
 # <a name="nmake-options"></a>NMAKE-Optionen
 NMAKE-Optionen werden in der folgenden Tabelle beschrieben. Optionen, die durch einen Schrägstrich (/) oder einen Bindestrich (-) vorangestellt werden und sind nicht Groß-/Kleinschreibung beachtet. Verwendung [! CMDSWITCHES](../build/makefile-preprocessing-directives.md) optionseinstellungen in einem Makefile oder Tools.ini ändern.  

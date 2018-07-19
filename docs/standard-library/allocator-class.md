@@ -44,15 +44,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaa9ab355456c912617bfcc1d803fa980ff21669
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4062ebc1e6c78bcd6e50adca4c372012030f75d0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964508"
 ---
 # <a name="allocator-class"></a>allocator-Klasse
 
-Die Vorlagenklasse beschreibt ein Objekt, das die Speicherbelegung und -freigabe für Objektarrays des Typs **Type** verwaltet. Ein Objekt der **allocator**-Klasse ist das Standardzuweisungsobjekt, das in den Konstruktoren für verschiedene Containervorlagenklassen in der C++-Standardbibliothek angegeben ist.
+Die Vorlagenklasse beschreibt ein Objekt, das speicherbelegung und-Freigabe für Objektarrays des Typs verwaltet `Type`. Ein Objekt der Klasse `allocator` ist das standardzuweisungsobjekt, das in den Konstruktoren für verschiedene containervorlagenklassen in der C++-Standardbibliothek angegeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,7 +68,7 @@ class allocator
 
 ## <a name="remarks"></a>Hinweise
 
-Alle C++-Standardbibliothekcontainer verfügen über einen Vorlagenparameter, der auf **allocator** zurückgesetzt wird. Durch das Erstellen eines Containers mit einer benutzerdefinierten Zuweisung erhalten Sie die Kontrolle über die Zuweisung und können Element des Containers freisetzen.
+Alle C++-Standardbibliothek-Containern haben einen Template-Parameter, die standardmäßig `allocator`. Durch das Erstellen eines Containers mit einer benutzerdefinierten Zuweisung erhalten Sie die Kontrolle über die Zuweisung und können Element des Containers freisetzen.
 
 Beispielsweise kann ein Zuweisungsobjekt Speicher in einem privaten Heap oder im freigegebenen Arbeitsspeicher zuweisen oder für kleine oder große Objektgrößen optimieren. Es könnte auch über die von ihm bereitgestellten Typdefinitionen angeben, dass über spezielle Zugriffsmethodenobjekte auf Elemente zugegriffen wird, die den freigegebenen Arbeitsspeicher verwalten, oder dass eine automatische Garbage Collection ausgeführt wird. Daher sollte eine Klasse, die den Speicher mithilfe eines Zuweisungsobjekts zuweist, diese Typen für das Deklarieren von Zeiger- und Verweisobjekten verwenden, wie dies bei den Containern in der C++-Standardbibliothek der Fall ist.
 
@@ -75,15 +76,15 @@ Beispielsweise kann ein Zuweisungsobjekt Speicher in einem privaten Heap oder im
 
 Daher definiert eine Zuweisung die folgenden Typen:
 
-- [pointer](#pointer) verhält sich wie ein Zeiger auf **Type**.
+- [Zeiger](#pointer) verhält sich wie ein Zeiger auf `Type`.
 
-- [const_pointer](#const_pointer) verhält sich wie ein const-Zeiger auf **Type**.
+- [Const_pointer](#const_pointer) verhält sich wie ein const-Zeiger auf `Type`.
 
-- [reference](#reference) verhält sich wie ein Verweis auf **Type**.
+- [Verweis](#reference) verhält sich wie ein Verweis auf `Type`.
 
-- [const_reference](#const_reference) verhält sich wie ein const-Verweist auf **Type**.
+- [Const_reference](#const_reference) verhält sich wie ein const-verweist auf `Type`.
 
-Diese **Type**s geben das Format an, das Zeiger und Verweise für zugewiesene Elemente verwenden müssen. ([allocator::pointer](#pointer) entspricht nicht unbedingt **Type**\* für alle Zuweisungsobjekte, obwohl es über diese offensichtliche Definition für die **allocator**-Klasse verfügt.)
+Diese `Type`s geben das Format, das Zeiger und Verweise für zugewiesene Elemente verwenden müssen. ( [allocator:: Pointer](#pointer) ist nicht unbedingt identisch mit `Type*` für alle zuweisungsobjekte, obwohl er verfügt über diese offensichtliche Definition für die Klasse `allocator`.)
 
 **C++11 und höher:** Verwenden Sie zum Aktivieren von „move“-Vorgängen in Ihrer Zuweisung die minimale Zuweisungsschnittstelle, und implementieren Sie den Kopierkonstruktor „== and !=“, Operatoren, „allocate“ und „deallocate“. Weitere Informationen und ein Beispiel finden Sie unter [Allocators](../standard-library/allocators.md)
 
@@ -142,7 +143,7 @@ const_pointer address(const_reference val) const;
 
 ### <a name="parameters"></a>Parameter
 
-`val` Der Konstante oder nonconst Wert des Objekts, dessen Adresse gesucht wird.
+*Val* der Konstante oder nicht konstante Wert des Objekts, dessen Adresse gesucht wird ist.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -150,7 +151,7 @@ Ein konstanter oder nicht konstanter Zeiger auf ein Objekt mit konstantem bzw. n
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt die Adresse von `val` zurück, in der Form, die Zeiger für zugewiesen Elemente benutzen.
+Die Memberfunktion gibt die Adresse des *Val*in das Formular, die Zeiger, für werden müssen zugewiesen Elemente benutzen.
 
 ### <a name="example"></a>Beispiel
 
@@ -206,9 +207,9 @@ pointer allocate(size_type count, const void* _Hint);
 
 ### <a name="parameters"></a>Parameter
 
-`count` Die Anzahl der Elemente, die für die ist ausreichend Speicherplatz zugeordnet werden soll.
+*Anzahl* die Anzahl der Elemente, die für die ist ausreichend Speicherplatz zugeordnet werden.
 
-*_Hint* ein konstanter Zeiger, die das Zuordnungsobjekt unterstützen möglicherweise erfüllen die Anforderung für die Speicherung von Suchen der Adresse eines Objekts, das vor der Anforderung zugeordnet.
+*_Hint* ein const-Zeiger, der das Zuweisungsobjekt möglicherweise dabei hilft die Anforderung von Speicherplatz erfüllen, sucht er die Adresse eines vor der Anforderung zugewiesenen Objekts.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -216,7 +217,7 @@ Ein Zeiger auf das zugewiesene Objekt oder NULL, wenn kein Arbeitsspeicher zugew
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion weist Speicherplatz zu für ein Array von count-Elementen des Typs **Type**, indem er den Operator new(`count`) aufruft. Er gibt einen Zeiger auf das zugewiesene Objekt zurück. Das hint-Argument hilft einigen Allocators dabei, die Positionierung von Verweisen zu verbessern; eine gültige Auswahl ist die Adresse eines Objekts, das schon mal vom gleichen Zuweisungsobjekt zugewiesen, aber noch nicht freigegeben wurde. Wenn Sie kein hint-Argument angeben möchten, können Sie stattdessen ein NULL-Zeigerargument verwenden.
+Die Memberfunktion weist Speicherplatz zu für ein Array von Count-Elementen des Typs `Type`, durch den Aufruf des neuen Operators (*Anzahl*). Er gibt einen Zeiger auf das zugewiesene Objekt zurück. Das hint-Argument hilft einigen Allocators dabei, die Positionierung von Verweisen zu verbessern; eine gültige Auswahl ist die Adresse eines Objekts, das schon mal vom gleichen Zuweisungsobjekt zugewiesen, aber noch nicht freigegeben wurde. Wenn Sie kein hint-Argument angeben möchten, können Sie stattdessen ein NULL-Zeigerargument verwenden.
 
 ### <a name="example"></a>Beispiel
 
@@ -267,7 +268,7 @@ allocator(const allocator<Other>& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Das Zuweisungsobjekt kopiert werden soll.
+*richtige* Allocator-Objekts kopiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -346,7 +347,7 @@ typedef const value_type *const_pointer;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Zeigertyp beschreibt ein Objekt **ptr**, das durch den Ausdruck **\*ptr** jedes beliebige konstante Objekt angeben kann, das von einem Objekt des Vorlagenklassenallocators zugewiesen werden kann.
+Der Zeigertyp beschreibt ein Objekt `ptr` angeben kann, durch den Ausdruck `*ptr`, jedes beliebige Konstante Objekt, das ein Objekt des vorlagenklassenallocators zugewiesen werden kann.
 
 ### <a name="example"></a>Beispiel
 
@@ -470,9 +471,9 @@ void construct(pointer ptr, _Other&&...   val);
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Ein Zeiger auf den Speicherort, an dem das Objekt erstellt werden.
+*PTR* ein Zeiger auf den Speicherort, an dem das Objekt erstellt werden.
 
-`val` Der Wert, mit denen der zu erstellte Objekt initialisiert werden.
+*Val* der Wert, mit dem die zu erstellende Objekt initialisiert werden.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -537,13 +538,13 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Ein Zeiger auf das erste Objekt aus dem Speicher freigegeben werden muss.
+*PTR* ein Zeiger auf das erste Objekt aus dem Speicher aufgehoben werden.
 
-`count` Die Anzahl der Objekte aus dem Speicher freigegeben werden muss.
+*Anzahl* die Anzahl von Objekten aus dem Speicher aufgehoben werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion Speicherplatz für das Array von Anzahl von Objekten des Typs frei **Typ** beginnend `ptr`, durch den Aufruf `operator delete(ptr)`. Der Zeiger `ptr` muss für ein Zuweisungsobjekt, das gleich **\*this** ist,von einem Aufruf an [allocate](#allocate) zurückgegeben worden sein, damit er ein Arrayobjekt der gleichen Größe und des gleichen Typs zuweisen kann. `deallocate` löst nie eine Ausnahme aus.
+Die Memberfunktion gibt Speicherplatz für das Array von Count-Elementen des Typs frei `Type` beginnend bei *Ptr*, durch den Aufruf `operator delete(ptr)`. Der Zeiger *Ptr* müssen zurückgegeben wurden zuvor durch einen Aufruf von [zuordnen](#allocate) für ein Zuweisungsobjekt, das gleich vergleicht  **\*dies**, Zuordnen eines Arrays ein Objekt der gleichen Größe und Art. `deallocate` löst nie eine Ausnahme aus.
 
 ### <a name="example"></a>Beispiel
 
@@ -559,11 +560,11 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Ein Zeiger, der die Adresse des Objekts gelöscht werden, festlegen.
+*PTR* ein Zeiger, der die Adresse des Objekts, das zerstört werden, festlegen.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion zerstört das Objekt vom angegebenen `ptr`, durch Aufrufen des Destruktors `ptr->` **Typ**::**~ Typ**.
+Die Memberfunktion zerstört das Objekt vom angegebenen *Ptr*, durch Aufrufen des Destruktors `ptr->` **Typ**::**~ Type**.
 
 ### <a name="example"></a>Beispiel
 
@@ -677,7 +678,7 @@ The difference between the integer's addresses is: 8.
 
 ## <a name="max_size"></a> allocator::max_size
 
-Gibt die Anzahl der Elemente vom Typ **Type** zurück, die von einem Objekt der Klassenzuweisung zugeordnet werden konnten, bevor der freie Speicherplatz verbraucht ist.
+Gibt die Anzahl der Elemente vom Typ `Type` zurück, die von einem Objekt der Klassenzuweisung zugeordnet werden konnten, bevor der freie Speicherplatz verbraucht ist.
 
 ```cpp
 size_type max_size() const;
@@ -755,7 +756,7 @@ allocator<Type>& operator=(const allocator<Other>& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Ein Zuweisungsobjekt, einem anderen Objekt zugewiesen werden soll.
+*richtige* ein Zuweisungsobjekt, das einem anderen Objekt zugewiesen werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -816,7 +817,7 @@ typedef value_type *pointer;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Zeigertyp beschreibt ein Objekt **ptr**, das durch den Ausdruck **\*ptr** jedes beliebige Objekt angeben kann, das von einem Objekt des Vorlagenklassenallocators zugewiesen werden kann.
+Der Zeigertyp beschreibt ein Objekt `ptr` angeben kann, durch den Ausdruck  **\*Ptr**, jedes Objekt, das ein Objekt des vorlagenklassenallocators zugewiesen werden kann.
 
 ### <a name="example"></a>Beispiel
 
@@ -869,7 +870,7 @@ struct rebind {    typedef allocator<_Other> other ;    };
 ```
 ### <a name="parameters"></a>Parameter
 
-*andere* der Typ des Elements für das belegen von Arbeitsspeicher.
+*andere* der Typ des Elements, für den Speicher belegt wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -877,7 +878,7 @@ Diese Struktur ist nützlich beim Zuweisen von Arbeitsspeicher für einen Typ, d
 
 Die Membervorlagenklasse definiert den Typ „other“. Ihr einziger Zweck ist es, den Typnamen **allocator**\<_ **_Other**> bereitzustellen, wenn der Typname **allocator**\<**Type**> ist.
 
-Hat man z.B. ein Zuweisungsobjekt **al** des Typs **A**, können Sie ein Objekt des Typ **_Other** mit folgendem Ausdruck zuweisen:
+Angenommen, ein Zuweisungsobjekt `al` des Typs `A`, Sie können ein Objekt vom Typ zuordnen `_Other` mit dem Ausdruck:
 
 ```cpp
 A::rebind<Other>::other(al).allocate(1, (Other *)0)
@@ -1029,7 +1030,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter **Type** dar.
+Der Type stellt ein Synonym für den Vorlagenparameter `Type` dar.
 
 ### <a name="example"></a>Beispiel
 

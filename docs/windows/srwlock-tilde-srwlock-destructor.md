@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889078"
 ---
 # <a name="srwlocksrwlock-destructor"></a>SRWLock::~SRWLock-Destruktor
 Hebt die Initialisierung einer Instanz der SRWLock-Klasse.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879593"
 ---
 # <a name="resource-editors"></a>Ressourcen-Editor
 Ein Ressourcen-Editor ist eine spezialisierte Umgebung zum Erstellen oder Ändern von Ressourcen, die in einem Visual Studio-Projekt enthalten sind. Die Ressourcen-Editoren von Visual Studio teilen Techniken und Schnittstellen, die Sie beim schnellen und einfachen Erstellen und Ändern von Anwendungsressourcen unterstützen. Mithilfe von Ressourcen-Editoren können Sie [Ressourcen im entsprechenden Editor anzeigen und bearbeiten](../windows/viewing-and-editing-resources-in-a-resource-editor.md) sowie [Ressourcen in der Vorschau anzeigen](../windows/previewing-resources.md).  

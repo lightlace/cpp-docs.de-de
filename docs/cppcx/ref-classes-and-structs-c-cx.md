@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092443"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Verweisklassen und Strukturen (C++/CX)
 Die C + c++ / CX unterstützt benutzerdefinierte *Verweisklassen* und *referenzstrukturen*, und eine benutzerdefinierte *Wert Klassen* und *Wert Strukturen*. Diese Datenstrukturen sind die primären Container, durch die C + c++ / CX unterstützt die Windows-Runtime-Typsystem. Die Inhalte werden nach bestimmten Regeln an Metadaten ausgegeben und können dadurch zwischen Windows-Runtime-Komponenten und universelle Windows-Plattform-apps, die in C++ oder anderen Sprachen geschrieben sind ausgetauscht werden.  

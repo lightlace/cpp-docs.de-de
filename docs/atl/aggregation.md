@@ -1,5 +1,5 @@
 ---
-title: Aggregation | Microsoft Docs
+title: Aggregation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 760a595274ba7a1901138cc0cceceddf97122725
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2457d6e94677c43985cadf8ca49a176a82566b6a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37847868"
 ---
 # <a name="aggregation"></a>Aggregation
-Es gibt Situationen, wenn Implementierer eines Objekts einem anderen Objekt vorgefertigten angebotenen Dienste zu nutzen möchten. Darüber hinaus möchte er dieses zweite Objekt als eine natürliche Teil des ersten angezeigt werden. COM erreicht beide Ziele durch Kapselung und Aggregation.  
+Es gibt Situationen, wenn ein Objekt der Implementierer, Nutzen der Dienste, die von einem anderen, bereits erstellte Objekt möchten. Darüber hinaus möchten sie dieses zweite Objekt als einem natürlichen Bestandteil der ersten angezeigt werden. COM erreicht werden beide dieser Ziele durch Kapselung und Aggregation.  
   
- Aggregation bedeutet, dass der enthaltenden Objekts (äußeren) die darin enthaltenen Objekte (innere) im Rahmen der Erstellung erstellt und die Schnittstellen des inneren Objekts werden von der äußeren verfügbar gemacht. Ein Objekt kann sich selbst oder nicht aggregierbar sein. Wenn dies der Fall, müssen sie bestimmte Regeln für die Aggregation ordnungsgemäß funktioniert entsprechen.  
+ Aggregation bedeutet, dass das enthaltende (äußere) Objekt (innere) enthaltenen Objekts im Rahmen der Erstellung erstellt und die Schnittstellen des inneren Objekts von der äußeren verfügbar gemacht werden. Ein Objekt kann selbst aggregierbar sein muss. Wenn es sich handelt, muss er bestimmte Regeln für die Aggregation zum ordnungsgemäßen folgen.  
   
- In erster Linie für alle **IUnknown** -Methodenaufrufe der darin enthaltenen Objekte auf das enthaltende Objekt delegieren müssen.  
+ In erster Linie für alle `IUnknown` -Methodenaufrufe des enthaltenen Objekts auf das enthaltende Objekt delegieren müssen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in COM](../atl/introduction-to-com.md)   
- [Wiederverwenden von Objekten](http://msdn.microsoft.com/library/windows/desktop/ms678443)
+ [Wiederverwendung von Objekten](http://msdn.microsoft.com/library/windows/desktop/ms678443)
 

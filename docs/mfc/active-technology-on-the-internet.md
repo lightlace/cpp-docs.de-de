@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338587"
 ---
 # <a name="active-technology-on-the-internet"></a>Active Technology für das Internet
 Active Technology ist eine offene Plattform, die ermöglicht Entwicklern das Erstellen von aufregend, dynamische Inhalte und Anwendungen für das globale Internet oder für ein Unternehmen interne Netzwerk als ein Intranet bezeichnet. Die wichtigsten Technologien von Microsoft internetprogrammierung deckte werden nachfolgend beschrieben.  

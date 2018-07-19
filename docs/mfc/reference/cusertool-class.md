@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59f5ab622d6124e830028ea61a0c77583f76d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 925e93afae4682497263eb96832aa466c6034231
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121315"
 ---
 # <a name="cusertool-class"></a>CUserTool-Klasse
 Ein Benutzertool ist ein Menüelement, das eine externe Anwendung ausführt. Die **Tools** auf der Registerkarte die **anpassen** (Dialogfeld) ( [CMFCToolBarsCustomizeDialog Klasse](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) ermöglicht es dem Benutzer, Benutzertools hinzuzufügen und um anzugeben, der Name, den Befehl, die Argumente, und ursprüngliche Verzeichnis für jedes benutzertool.  
@@ -121,10 +122,10 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
+ [in] *pDC*  
  Ein Zeiger zu einem Gerätekontext.  
   
- [in] `rectImage`  
+ [in] *RectImage*  
  Gibt an, die Koordinaten des Bereichs, um das Symbol anzuzeigen.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
@@ -168,7 +169,7 @@ virtual HICON LoadDefaultIcon();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Handle für das Symbol geladen ( `HICON`), oder `NULL` , wenn das Symbol "Standard" kann nicht geladen werden.  
+ Ein Handle für das geladene Symbol (HICON) oder NULL, wenn das Symbol "Standard" kann nicht geladen werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode auf, wenn sie ein Symbol für ein benutzerdefiniertes Tool aus der ausführbaren Datei des Tools laden kann.  
@@ -210,7 +211,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `ar`  
+ [in] *Ar*  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -222,7 +223,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszCmd`  
+ [in] *LpszCmd*  
  Gibt die neue Anwendung mit dem Benutzer zugeordnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  

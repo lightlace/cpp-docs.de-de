@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092387"
 ---
 # <a name="delegates-ccx"></a>Delegaten (C++/CX)
 Die `delegate` Schlüsselwort wird verwendet, um einen Referenztyp zu deklarieren, die die Windows-Runtime-Entsprechung eines Funktionsobjekts in Standard-c++ ist. Eine Delegatdeklaration ähnlich einer Funktionssignatur; sie gibt den Rückgabetyp und die Parametertypen an, über die die umschlossene Funktion verfügen muss. Dies ist eine benutzerdefinierte Delegatdeklaration:  

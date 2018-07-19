@@ -1,5 +1,5 @@
 ---
-title: Ereigniszuordnungs-Makros (ATL)-Nachricht | Microsoft Docs
+title: Message-Zuordnungs-Makros (ATL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -47,79 +47,80 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f026e7b8190b311b16e86673b6f2271637442df0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 295fb6944c3c18c2e7794ca13ad5ab93b788a776
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883478"
 ---
 # <a name="message-map-macros-atl"></a>Meldungszuordnungsmakros (ATL)
 Diese Makros definieren nachrichtenzuordnungen und Einträge.  
   
 |||  
 |-|-|  
-|[ALT_MSG_MAP](#alt_msg_map)|Markiert den Beginn einer alternativen meldungszuordnung.|  
-|[BEGIN_MSG_MAP](#begin_msg_map)|Markiert den Beginn des Standard-meldungszuordnung.|  
-|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|Der Zertifizierungskette auf eine alternative meldungszuordnung in der Basisklasse.|  
-|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|Der Zertifizierungskette auf eine alternative meldungszuordnung in einem Datenmember der Klasse.|  
-|[CHAIN_MSG_MAP](#chain_msg_map)|Die Ketten für die Standard-meldungszuordnung in der Basisklasse.|  
+|[ALT_MSG_MAP](#alt_msg_map)|Markiert den Beginn des einen alternativen meldungszuordnung.|  
+|[BEGIN_MSG_MAP](#begin_msg_map)|Kennzeichnet den Anfang der Standard-meldungszuordnung.|  
+|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|Ordnen Sie Ketten für eine andere Meldung angezeigt, in der Basisklasse.|  
+|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|Ordnen Sie Ketten für eine andere Meldung angezeigt, in einem Datenmember der Klasse.|  
+|[CHAIN_MSG_MAP](#chain_msg_map)|-Ketten für die Standard-meldungszuordnung in der Basisklasse.|  
 |[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|-Ketten für die Nachricht, die zur Laufzeit in einer anderen Klasse zugeordnet werden.|  
-|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|Die Ketten für die Standard-meldungszuordnung in einem Datenmember der Klasse.|  
-|[COMMAND_CODE_HANDLER](#command_code_handler)|Ordnet eine **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode.|  
-|[COMMAND_HANDLER](#command_handler)|Ordnet eine **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und den Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.|  
-|[COMMAND_ID_HANDLER](#command_id_handler)|Ordnet eine **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.|  
-|[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)|Ordnet eine **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und einen zusammenhängenden Bereich von Steuerelement-IDs.|  
-|[COMMAND_RANGE_HANDLER](#command_range_handler)|Ordnet eine **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs.|  
+|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|-Ketten für die Standard-meldungszuordnung in einem Datenmember der Klasse.|  
+|[COMMAND_CODE_HANDLER](#command_code_handler)|Ordnet eine Handlerfunktion, die basierend auf dem Notification-Code zu eine WM_COMMAND-Meldung.|  
+|[COMMAND_HANDLER](#command_handler)|Ordnet eine WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und den Bezeichner der dem Menüelement-Steuerelement oder Accelerator.|  
+|[COMMAND_ID_HANDLER](#command_id_handler)|Ordnet eine WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf den Bezeichner der dem Menüelement-Steuerelement oder Accelerator.|  
+|[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)|Ordnet eine WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und einen zusammenhängenden Bereich von Steuerelement-IDs an.|  
+|[COMMAND_RANGE_HANDLER](#command_range_handler)|Ordnet eine WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs an.|  
 |[DECLARE_EMPTY_MSG_MAP](#declare_empty_msg_map)|Implementiert eine leere Nachricht zuordnen.|  
-|[DEFAULT_REFLECTION_HANDLER](#default_reflection_handler)|Reflektierte Meldungen, die nicht, andernfalls verarbeitet werden wird einen Standard-Handler bereit.|  
+|[DEFAULT_REFLECTION_HANDLER](#default_reflection_handler)|Bietet einen Standardhandler für reflektierter Meldungen, die andernfalls nicht verarbeitet werden.|  
 |[END_MSG_MAP](#end_msg_map)|Markiert das Ende einer meldungszuordnung.|  
 |[FORWARD_NOTIFICATIONS](#forward_notifications)|Leitet die benachrichtigungsmeldungen an das übergeordnete Fenster.|  
-|[MESSAGE_HANDLER](#message_handler)|Ordnet eine Windows-Nachricht an eine Handlerfunktion.|  
+|[MESSAGE_HANDLER](#message_handler)|Ordnet eine Windows-Meldung an eine Handlerfunktion.|  
 |[MESSAGE_RANGE_HANDLER](#message_range_handler)|Ordnet einen zusammenhängenden Bereich von Windows-Nachrichten an eine Handlerfunktion.|  
-|[NOTIFY_CODE_HANDLER](#notify_code_handler)|Ordnet eine **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode.|  
-|[NOTIFY_HANDLER](#notify_handler)|Ordnet eine **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und der Bezeichner.|  
-|[NOTIFY_ID_HANDLER](#notify_id_handler)|Ordnet eine **WM_NOTIFY** Nachricht für eine Ereignishandler-Funktion, die auf Grundlage des Steuerelements.|  
-|[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)|Ordnet eine **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und einen zusammenhängenden Bereich von Steuerelement-IDs.|  
-|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Ordnet eine **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs.|  
-|[REFLECT_NOTIFICATIONS](#reflect_notifications)|Gibt die benachrichtigungsmeldungen an das Fenster, das sie gesendet wurden.|  
-|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Ordnet eine reflektierte **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode.|  
-|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Ordnet eine reflektierte **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und den Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.|  
-|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Ordnet eine reflektierte **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.|  
-|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Ordnet eine reflektierte **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und einen zusammenhängenden Bereich von Steuerelement-IDs.|  
-|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Ordnet eine reflektierte **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs.|  
-|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Ordnet eine reflektierte **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode.|  
-|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Ordnet eine reflektierte **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und der Bezeichner.|  
-|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Ordnet eine reflektierte **WM_NOTIFY** Nachricht für eine Ereignishandler-Funktion, die auf Grundlage des Steuerelements.|  
-|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Ordnet eine reflektierte **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und einen zusammenhängenden Bereich von Steuerelement-IDs.|  
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Ordnet eine reflektierte **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs.|  
+|[NOTIFY_CODE_HANDLER](#notify_code_handler)|Ordnet eine WM_NOTIFY-Meldung an eine Handlerfunktion, basierend auf dem Notification-Code.|  
+|[NOTIFY_HANDLER](#notify_handler)|Ordnet eine WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und die Steuerelement-ID an.|  
+|[NOTIFY_ID_HANDLER](#notify_id_handler)|Ordnet eine WM_NOTIFY-Meldung an eine Handlerfunktion, die auf Grundlage des Steuerelement-ID an.|  
+|[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)|Ordnet eine WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und einen zusammenhängenden Bereich von Steuerelement-IDs an.|  
+|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Ordnet eine WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs an.|  
+|[REFLECT_NOTIFICATIONS](#reflect_notifications)|Gibt Nachrichten zurück an das Fenster, das sie gesendet wurden.|  
+|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Ordnet eine reflektierte WM_COMMAND-Meldung an eine Handlerfunktion, basierend auf dem Notification-Code.|  
+|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Ordnet eine reflektierte WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und den Bezeichner der dem Menüelement-Steuerelement oder Accelerator.|  
+|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Ordnet eine reflektierte WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf den Bezeichner der dem Menüelement-Steuerelement oder Accelerator.|  
+|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Ordnet eine reflektierte WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und einen zusammenhängenden Bereich von Steuerelement-IDs an.|  
+|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Ordnet eine reflektierte WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs an.|  
+|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, basierend auf dem Notification-Code.|  
+|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und die Steuerelement-ID an.|  
+|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, die auf Grundlage des Steuerelement-ID an.|  
+|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und einen zusammenhängenden Bereich von Steuerelement-IDs an.|  
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs an.|  
 
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
 
 ##  <a name="alt_msg_map"></a>  ALT_MSG_MAP  
- Markiert den Beginn einer alternativen meldungszuordnung.  
+ Markiert den Beginn des einen alternativen meldungszuordnung.  
   
 ```
 ALT_MSG_MAP(msgMapID)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `msgMapID`  
- [in] Der Meldungsbezeichner Zuordnung.  
+ *msgMapID*  
+ [in] Der Nachrichtenbezeichner zuordnen.  
   
 ### <a name="remarks"></a>Hinweise  
- ATL identifiziert jede Nachricht Zuordnung durch eine Zahl. Die Standard-meldungszuordnung (deklariert mit den `BEGIN_MSG_MAP` Makro) von 0 bezeichnet wird. Eine alternative meldungszuordnung identifizierte `msgMapID`.  
+ ATL wird jede Nachricht Zuordnung durch eine Reihe identifiziert. Die Standard-meldungszuordnung (deklariert mit dem Makro BEGIN_MSG_MAP) wird durch 0 angegeben. Eine alternative meldungszuordnung identifizierte *MsgMapID*.  
   
- Meldungszuordnungen werden verwendet, um Nachrichten an ein Fenster zu verarbeiten. Beispielsweise [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) können Sie den Bezeichner des einer meldungszuordnung in des enthaltenden Objekts angeben. [CContainedWindow::WindowProc](ccontainedwindowt-class.md#windowproc) verwendet dann diese meldungszuordnung, um den im Fenster Meldungen an die entsprechenden Handler-Funktion oder auf einem anderen meldungszuordnung weiter. Eine Liste der Makros, die Handlerfunktionen deklarieren, finden Sie unter [BEGIN_MSG_MAP](#begin_msg_map).  
+ Meldungszuordnungen werden verwendet, um Nachrichten an ein Fenster zu verarbeiten. Z. B. [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) können Sie den Bezeichner des eine meldungszuordnung in dem Objekt angeben. [CContainedWindow::WindowProc](ccontainedwindowt-class.md#windowproc) verwendet dann diese meldungszuordnung, leiten Sie den im Fenster Nachrichten an die entsprechenden Handler-Funktion oder an einen anderen meldungszuordnung. Eine Liste der Makros, die Handlerfunktionen zu deklarieren, finden Sie unter [BEGIN_MSG_MAP](#begin_msg_map).  
   
- Beginnen immer mit eine meldungszuordnung `BEGIN_MSG_MAP`. Sie können dann nachfolgende alternativen meldungszuordnungen deklarieren.  
+ Beginnen Sie immer einer meldungszuordnung mit BEGIN_MSG_MAP. Sie können dann die nachfolgenden alternativen meldungszuordnungen deklarieren.  
   
- Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der meldungszuordnung. Beachten Sie, dass immer genau eine Instanz des `BEGIN_MSG_MAP` und `END_MSG_MAP`.  
+ Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der nachrichtenzuordnung. Beachten Sie, dass immer genau eine Instanz des BEGIN_MSG_MAP und END_MSG_MAP vorhanden ist.  
   
  Weitere Informationen zur Verwendung von meldungszuordnungen in ATL finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md).  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt die Standard-meldungszuordnung und eine alternative meldungszuordnung, jeweils eine Handlerfunktion enthalten:  
+ Das folgende Beispiel zeigt die Standard-meldungszuordnung und die Zuordnung für eine andere Meldung angezeigt, jeweils eine Handlerfunktion:  
   
  [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]  
   
@@ -131,66 +132,66 @@ ALT_MSG_MAP(msgMapID)
  **Header:** atlwin.h vorhanden   
 
 ##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP  
- Markiert den Beginn des Standard-meldungszuordnung.  
+ Kennzeichnet den Anfang der Standard-meldungszuordnung.  
   
 ```
 BEGIN_MSG_MAP(theClass)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theClass`  
+ *theClass*  
  [in] Der Name der Klasse, die die meldungszuordnung enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- [CWindowImpl:: WindowProc](cwindowimpl-class.md#windowproc) verwendet die Standard-meldungszuordnung zum Verarbeiten von Nachrichten an das Fenster gesendet. Die meldungszuordnung leitet Nachrichten an die entsprechenden Handler-Funktion oder einer anderen Nachricht zuordnen.  
+ [CWindowImpl:: WindowProc](cwindowimpl-class.md#windowproc) verwendet die Standard-meldungszuordnung zum Verarbeiten von Nachrichten an das Fenster gesendet. Die meldungszuordnung leitet Nachrichten an die entsprechenden Handler-Funktion oder an einer anderen Nachricht zuordnen.  
 
   
- Die folgenden Makros eine Nachricht an eine Handlerfunktion zugeordnet. Diese Funktion muss definiert werden, `theClass`.  
+ Die folgenden Makros, die eine Nachricht an eine Handlerfunktion zugeordnet. Diese Funktion muss definiert werden, *TheClass*.  
   
 |Makro|Beschreibung|  
 |-----------|-----------------|  
-|[MESSAGE_HANDLER](#message_handler)|Ordnet eine Windows-Nachricht an eine Handlerfunktion.|  
+|[MESSAGE_HANDLER](#message_handler)|Ordnet eine Windows-Meldung an eine Handlerfunktion.|  
 |[MESSAGE_RANGE_HANDLER](#message_range_handler)|Ordnet einen zusammenhängenden Bereich von Windows-Nachrichten an eine Handlerfunktion.|  
-|[COMMAND_HANDLER](#command_handler)|Ordnet eine **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und den Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.|  
-|[COMMAND_ID_HANDLER](#command_id_handler)|Ordnet eine **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.|  
-|[COMMAND_CODE_HANDLER](#command_handler)|Ordnet eine **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode.|  
-|[COMMAND_RANGE_HANDLER](#command_range_handler)|Ordnet einen zusammenhängenden Bereich von **WM_COMMAND** Nachrichten an eine Handlerfunktion anhand der ID des Menüelements, Steuerelements oder Zugriffstaste.|  
-|[NOTIFY_HANDLER](#notify_handler)|Ordnet eine **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und der Bezeichner.|  
-|[NOTIFY_ID_HANDLER](#notify_id_handler)|Ordnet eine **WM_NOTIFY** Nachricht für eine Ereignishandler-Funktion, die auf Grundlage des Steuerelements.|  
-|[NOTIFY_CODE_HANDLER](#notify_code_handler)|Ordnet eine **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode.|  
-|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Ordnet einen zusammenhängenden Bereich von **WM_NOTIFY** Nachrichten an eine Handlerfunktion auf Grundlage des Steuerelements.|  
+|[COMMAND_HANDLER](#command_handler)|Ordnet eine WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und den Bezeichner der dem Menüelement-Steuerelement oder Accelerator.|  
+|[COMMAND_ID_HANDLER](#command_id_handler)|Ordnet eine WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf den Bezeichner der dem Menüelement-Steuerelement oder Accelerator.|  
+|[COMMAND_CODE_HANDLER](#command_handler)|Ordnet eine Handlerfunktion, die basierend auf dem Notification-Code zu eine WM_COMMAND-Meldung.|  
+|[COMMAND_RANGE_HANDLER](#command_range_handler)|Ordnet einen zusammenhängenden Bereich von WM_COMMAND-Meldungen an eine Handlerfunktion, die basierend auf den Bezeichner der dem Menüelement-Steuerelement oder Accelerator.|  
+|[NOTIFY_HANDLER](#notify_handler)|Ordnet eine WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und die Steuerelement-ID an.|  
+|[NOTIFY_ID_HANDLER](#notify_id_handler)|Ordnet eine WM_NOTIFY-Meldung an eine Handlerfunktion, die auf Grundlage des Steuerelement-ID an.|  
+|[NOTIFY_CODE_HANDLER](#notify_code_handler)|Ordnet eine WM_NOTIFY-Meldung an eine Handlerfunktion, basierend auf dem Notification-Code.|  
+|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Ordnet einen zusammenhängenden Bereich von WM_NOTIFY-Meldungen an eine Handlerfunktion, die auf Grundlage des Steuerelement-ID an.|  
   
- Die folgenden Makros verweisen Sie Nachrichten in einer anderen Nachricht zuordnen. Dieser Vorgang wird als "verketten".  
-  
-|Makro|Beschreibung|  
-|-----------|-----------------|  
-|[CHAIN_MSG_MAP](#chain_msg_map)|Die Ketten für die Standard-meldungszuordnung in der Basisklasse.|  
-|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|Die Ketten für die Standard-meldungszuordnung in einem Datenmember der Klasse.|  
-|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|Der Zertifizierungskette auf eine alternative meldungszuordnung in der Basisklasse.|  
-|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|Der Zertifizierungskette auf eine alternative meldungszuordnung in einem Datenmember der Klasse.|  
-|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|Die Ketten für die Standard-meldungszuordnung in einer anderen Klasse zur Laufzeit.|  
-  
- Die folgenden Makros weiterleiten "wiedergegeben" Nachrichten über das übergeordnete Fenster. Angenommen, ein Steuerelement normalerweise sendet benachrichtigungsmeldungen an das übergeordnete Fenster für die Verarbeitung, aber das übergeordnete Fenster reflektiert die Nachricht zurück an das Steuerelement.  
+ Die folgenden Makros leiten Nachrichten an einen anderen meldungszuordnung. Dieser Vorgang wird "verketten" bezeichnet.  
   
 |Makro|Beschreibung|  
 |-----------|-----------------|  
-|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Ordnet eine reflektierte **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und den Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.|  
-|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Ordnet eine reflektierte **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.|  
-|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Ordnet eine reflektierte **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode.|  
-|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Ordnet eine reflektierte **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs.|  
-|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Ordnet eine reflektierte **WM_COMMAND** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und einen zusammenhängenden Bereich von Steuerelement-IDs.|  
-|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Ordnet eine reflektierte **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und der Bezeichner.|  
-|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Ordnet eine reflektierte **WM_NOTIFY** Nachricht für eine Ereignishandler-Funktion, die auf Grundlage des Steuerelements.|  
-|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Ordnet eine reflektierte **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode.|  
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Ordnet eine reflektierte **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs.|  
-|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Ordnet eine reflektierte **WM_NOTIFY** Nachricht an eine Handlerfunktion, basierend auf den Benachrichtigungscode und einen zusammenhängenden Bereich von Steuerelement-IDs.|  
+|[CHAIN_MSG_MAP](#chain_msg_map)|-Ketten für die Standard-meldungszuordnung in der Basisklasse.|  
+|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|-Ketten für die Standard-meldungszuordnung in einem Datenmember der Klasse.|  
+|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|Ordnen Sie Ketten für eine andere Meldung angezeigt, in der Basisklasse.|  
+|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|Ordnen Sie Ketten für eine andere Meldung angezeigt, in einem Datenmember der Klasse.|  
+|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|-Ketten für die Standardnachricht, die zur Laufzeit in einer anderen Klasse zugeordnet werden.|  
+  
+ Die folgenden Makros direkte "wiedergegeben" Nachrichten über das übergeordnete Fenster. Z. B. ein Steuerelement normalerweise sendet benachrichtigungsmeldungen an das übergeordnete Fenster für die Verarbeitung, aber das übergeordnete Fenster kann die Nachricht an das Steuerelement widerspiegeln.  
+  
+|Makro|Beschreibung|  
+|-----------|-----------------|  
+|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Ordnet eine reflektierte WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und den Bezeichner der dem Menüelement-Steuerelement oder Accelerator.|  
+|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Ordnet eine reflektierte WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf den Bezeichner der dem Menüelement-Steuerelement oder Accelerator.|  
+|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Ordnet eine reflektierte WM_COMMAND-Meldung an eine Handlerfunktion, basierend auf dem Notification-Code.|  
+|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Ordnet eine reflektierte WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs an.|  
+|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Ordnet eine reflektierte WM_COMMAND-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und einen zusammenhängenden Bereich von Steuerelement-IDs an.|  
+|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und die Steuerelement-ID an.|  
+|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, die auf Grundlage des Steuerelement-ID an.|  
+|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, basierend auf dem Notification-Code.|  
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf einen zusammenhängenden Bereich von Steuerelement-IDs an.|  
+|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Ordnet eine reflektierte WM_NOTIFY-Meldung an eine Handlerfunktion, die basierend auf den Benachrichtigungscode und einen zusammenhängenden Bereich von Steuerelement-IDs an.|  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#102](../../atl/codesnippet/cpp/message-map-macros-atl_3.h)]  
   
- Wenn eine `CMyExtWindow` Objekt empfängt ein `WM_PAINT` Nachricht, an die Nachricht weitergeleitet wird `CMyExtWindow::OnPaint` für die tatsächliche Verarbeitung. Wenn `OnPaint` gibt an, die Nachricht erfordert weitere Verarbeitung der Nachricht wird, und klicken Sie dann auf die Standard-meldungszuordnung in weitergeleitet `CMyBaseWindow`.  
+ Wenn eine `CMyExtWindow` -Objekt eine WM_PAINT-Nachricht empfängt, die Nachricht weitergeleitet wird, um `CMyExtWindow::OnPaint` für die eigentliche Verarbeitung. Wenn `OnPaint` gibt an, die Nachricht weiter verarbeitet, die Nachricht automatisch werden muss, und klicken Sie dann auf die Standard-meldungszuordnung in geleitet werden `CMyBaseWindow`.  
   
- Zusätzlich zu den Standard-meldungszuordnung, können Sie definieren eine alternative meldungszuordnung mit [ALT_MSG_MAP](#alt_msg_map). Beginnen immer mit eine meldungszuordnung `BEGIN_MSG_MAP`. Sie können dann nachfolgende alternativen meldungszuordnungen deklarieren. Das folgende Beispiel zeigt die Standard-meldungszuordnung und eine alternative meldungszuordnung, jeweils eine Handlerfunktion enthalten:  
+ Neben der Standard-meldungszuordnung, können Sie definieren, mit einer alternativen meldungszuordnung [ALT_MSG_MAP](#alt_msg_map). Beginnen Sie immer einer meldungszuordnung mit BEGIN_MSG_MAP. Sie können dann die nachfolgenden alternativen meldungszuordnungen deklarieren. Das folgende Beispiel zeigt die Standard-meldungszuordnung und die Zuordnung für eine andere Meldung angezeigt, jeweils eine Handlerfunktion:  
   
  [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]  
   
@@ -198,7 +199,7 @@ BEGIN_MSG_MAP(theClass)
   
  [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]  
   
- Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der meldungszuordnung. Beachten Sie, dass immer genau eine Instanz des `BEGIN_MSG_MAP` und `END_MSG_MAP`.  
+ Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der nachrichtenzuordnung. Beachten Sie, dass immer genau eine Instanz des BEGIN_MSG_MAP und END_MSG_MAP vorhanden ist.  
   
  Weitere Informationen zur Verwendung von meldungszuordnungen in ATL finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md).  
   
@@ -213,17 +214,17 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theChainClass`  
- [in] Der Name der Basisklasse, die nachrichtenzuordnung enthält.  
+ *theChainClass*  
+ [in] Der Name der Basisklasse, die die meldungszuordnung enthält.  
   
- `msgMapID`  
- [in] Der Meldungsbezeichner Zuordnung.  
+ *msgMapID*  
+ [in] Der Nachrichtenbezeichner zuordnen.  
   
 ### <a name="remarks"></a>Hinweise  
- `CHAIN_MSG_MAP_ALT` leitet Nachrichten an einen alternativen meldungszuordnung in einer Basisklasse. Sie müssen mit diesem alternativen meldungszuordnung deklariert [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Weiterleiten von Nachrichten an eine Basisklasse Standard-meldungszuordnung (deklariert mit [BEGIN_MSG_MAP](#begin_msg_map)), verwenden Sie `CHAIN_MSG_MAP`. Ein Beispiel finden Sie unter [CHAIN_MSG_MAP](#chain_msg_map).  
+ CHAIN_MSG_MAP_ALT leitet Nachrichten an einen alternativen meldungszuordnung in einer Basisklasse. Sie müssen mit diesem alternativen meldungszuordnung deklariert [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Übermitteln von Nachrichten zur meldungszuordnung für eine Basisklasse-Standard (deklariert mit [BEGIN_MSG_MAP](#begin_msg_map)), CHAIN_MSG_MAP verwenden. Ein Beispiel finden Sie unter [CHAIN_MSG_MAP](#chain_msg_map).  
   
 > [!NOTE]
->  Beginnen immer mit eine meldungszuordnung `BEGIN_MSG_MAP`. Dann können Sie nachfolgende alternativen meldungszuordnungen mit deklarieren `ALT_MSG_MAP`. Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der meldungszuordnung. Jeder nachrichtenzuordnung muss genau eine Instanz haben `BEGIN_MSG_MAP` und `END_MSG_MAP`.  
+>  Beginnen Sie immer einer meldungszuordnung mit BEGIN_MSG_MAP. Sie können dann die nachfolgenden alternativen meldungszuordnungen mit ALT_MSG_MAP deklarieren. Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der nachrichtenzuordnung. Jede nachrichtenzuordnung muss genau eine Instanz des BEGIN_MSG_MAP und END_MSG_MAP haben.  
   
  Weitere Informationen zur Verwendung von meldungszuordnungen in ATL finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md).  
   
@@ -238,17 +239,17 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theChainMember`  
+ *theChainMember*  
  [in] Der Name des Datenmembers, enthält die meldungszuordnung.  
   
- `msgMapID`  
- [in] Der Meldungsbezeichner Zuordnung.  
+ *msgMapID*  
+ [in] Der Nachrichtenbezeichner zuordnen.  
   
 ### <a name="remarks"></a>Hinweise  
- `CHAIN_MSG_MAP_ALT_MEMBER` leitet Nachrichten an einen alternativen meldungszuordnung in einem Datenmember. Sie müssen mit diesem alternativen meldungszuordnung deklariert [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Weiterleiten von Nachrichten an einen Datenmember standardmäßig meldungszuordnung (deklariert mit [BEGIN_MSG_MAP](#begin_msg_map)), verwenden Sie `CHAIN_MSG_MAP_MEMBER`. Ein Beispiel finden Sie unter [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member).  
+ CHAIN_MSG_MAP_ALT_MEMBER leitet Nachrichten an einen alternativen meldungszuordnung in einen Datenmember. Sie müssen mit diesem alternativen meldungszuordnung deklariert [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Um Nachrichten an einen Datenmember des Standard-meldungszuordnung weiterzuleiten (deklariert mit [BEGIN_MSG_MAP](#begin_msg_map)), CHAIN_MSG_MAP_MEMBER verwenden. Ein Beispiel finden Sie unter [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member).  
   
 > [!NOTE]
->  Beginnen immer mit eine meldungszuordnung `BEGIN_MSG_MAP`. Dann können Sie nachfolgende alternativen meldungszuordnungen mit deklarieren `ALT_MSG_MAP`. Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der meldungszuordnung. Jeder nachrichtenzuordnung muss genau eine Instanz haben `BEGIN_MSG_MAP` und `END_MSG_MAP`.  
+>  Beginnen Sie immer einer meldungszuordnung mit BEGIN_MSG_MAP. Sie können dann die nachfolgenden alternativen meldungszuordnungen mit ALT_MSG_MAP deklarieren. Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der nachrichtenzuordnung. Jede nachrichtenzuordnung muss genau eine Instanz des BEGIN_MSG_MAP und END_MSG_MAP haben.  
   
  Weitere Informationen zur Verwendung von meldungszuordnungen in ATL finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md).  
   
@@ -263,14 +264,14 @@ CHAIN_MSG_MAP(theChainClass)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theChainClass`  
- [in] Der Name der Basisklasse, die nachrichtenzuordnung enthält.  
+ *theChainClass*  
+ [in] Der Name der Basisklasse, die die meldungszuordnung enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- `CHAIN_MSG_MAP` leitet Nachrichten an eine Basisklasse Standard-meldungszuordnung (deklariert mit [BEGIN_MSG_MAP](#begin_msg_map)). Weiterleiten von Nachrichten an eine Basisklasse alternativen meldungszuordnung (deklariert mit [ALT_MSG_MAP](#alt_msg_map)), verwenden Sie [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt).  
+ CHAIN_MSG_MAP leitet Nachrichten an eine Basisklasse des Standard-meldungszuordnung (deklariert mit [BEGIN_MSG_MAP](#begin_msg_map)). Übermitteln von Nachrichten zur alternativen meldungszuordnung für eine Basisklasse (deklariert mit [ALT_MSG_MAP](#alt_msg_map)), verwenden Sie [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt).  
   
 > [!NOTE]
->  Beginnen immer mit eine meldungszuordnung `BEGIN_MSG_MAP`. Dann können Sie nachfolgende alternativen meldungszuordnungen mit deklarieren `ALT_MSG_MAP`. Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der meldungszuordnung. Jeder nachrichtenzuordnung muss genau eine Instanz haben `BEGIN_MSG_MAP` und `END_MSG_MAP`.  
+>  Beginnen Sie immer einer meldungszuordnung mit BEGIN_MSG_MAP. Sie können dann die nachfolgenden alternativen meldungszuordnungen mit ALT_MSG_MAP deklarieren. Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der nachrichtenzuordnung. Jede nachrichtenzuordnung muss genau eine Instanz des BEGIN_MSG_MAP und END_MSG_MAP haben.  
   
  Weitere Informationen zur Verwendung von meldungszuordnungen in ATL finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md).  
   
@@ -279,11 +280,11 @@ CHAIN_MSG_MAP(theChainClass)
   
  Dieses Beispiel veranschaulicht Folgendes:  
   
--   Wenn eine Fensterprozedur verwendet `CMyClass`des Standard-meldungszuordnung und `OnPaint` ist kein Handle eine Nachricht, die Nachricht wird an `CMyBaseClass`des Standard-meldungszuordnung für die Verarbeitung.  
+-   Wenn eine Fensterprozedur verwendet `CMyClass`des Standard-meldungszuordnung und `OnPaint` ist keine Handles, die eine Nachricht, die Nachricht wird an `CMyBaseClass`des Standard-meldungszuordnung für die Verarbeitung.  
   
--   Wenn eine Fensterprozedur die erste Alternative meldungszuordnung in verwendet `CMyClass`, alle Nachrichten werden weitergeleitet, um `CMyBaseClass`des Standard-meldungszuordnung.  
+-   Wenn eine Fensterprozedur die erste Alternative meldungszuordnung in verwendet `CMyClass`, alle Nachrichten werden weitergeleitet, dass `CMyBaseClass`des Standard-meldungszuordnung.  
   
--   Wenn eine Fensterprozedur verwendet `CMyClass`des zweiten alternative Nachricht zuordnen und `OnChar` ist kein Handle eine Nachricht, die Nachricht wird an die angegebene alternative meldungszuordnung in `CMyBaseClass`. `CMyBaseClass` muss mit diesem meldungszuordnung deklariert `ALT_MSG_MAP(1)`.  
+-   Wenn eine Fensterprozedur verwendet `CMyClass`der zweiten alternative Meldung zugeordnet und `OnChar` ist keine Handles, die eine Nachricht, die Nachricht wird in der angegebenen alternativen meldungszuordnung an `CMyBaseClass`. `CMyBaseClass` müssen diese meldungszuordnung mit ALT_MSG_MAP(1) deklariert haben.  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden   
@@ -297,14 +298,14 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
   
 ### <a name="parameters"></a>Parameter  
  *dynaChainID*  
- [in] Der eindeutige Bezeichner für ein Objekt meldungszuordnung.  
+ [in] Der eindeutige Bezeichner für ein Objekt in der meldungszuordnung.  
   
 ### <a name="remarks"></a>Hinweise  
- `CHAIN_MSG_MAP_DYNAMIC` leitet Nachrichten zur Laufzeit, um die Standard-meldungszuordnung in einem anderen Objekt. Das Objekt und seine meldungszuordnung zugeordnet sind *DynaChainID*, die Sie definieren, über [CDynamicChain:: SetChainEntry](cdynamicchain-class.md#setchainentry). Leiten Sie eine Klasse von `CDynamicChain` um verwenden `CHAIN_MSG_MAP_DYNAMIC`. Ein Beispiel finden Sie die [CDynamicChain](../../atl/reference/cdynamicchain-class.md) (Übersicht).  
+ CHAIN_MSG_MAP_DYNAMIC leitet Nachrichten zur Laufzeit, um die Standard-meldungszuordnung in einem anderen Objekt. Das Objekt und seine meldungszuordnung, zugeordnet sind *DynaChainID*, das Sie durch definieren [CDynamicChain:: SetChainEntry](cdynamicchain-class.md#setchainentry). Leiten Sie müssen Ihre Klasse von `CDynamicChain` um CHAIN_MSG_MAP_DYNAMIC verwenden. Ein Beispiel finden Sie unter den [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Übersicht.  
 
   
 > [!NOTE]
->  Beginnen immer mit eine meldungszuordnung [BEGIN_MSG_MAP](#begin_msg_map). Dann können Sie nachfolgende alternativen meldungszuordnungen mit deklarieren `ALT_MSG_MAP`. Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der meldungszuordnung. Jeder nachrichtenzuordnung muss genau eine Instanz haben `BEGIN_MSG_MAP` und `END_MSG_MAP`.  
+>  Beginnen Sie immer eine meldungszuordnung mit [BEGIN_MSG_MAP](#begin_msg_map). Sie können dann die nachfolgenden alternativen meldungszuordnungen mit ALT_MSG_MAP deklarieren. Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der nachrichtenzuordnung. Jede nachrichtenzuordnung muss genau eine Instanz des BEGIN_MSG_MAP und END_MSG_MAP haben.  
   
  Weitere Informationen zur Verwendung von meldungszuordnungen in ATL finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md).  
   
@@ -319,14 +320,14 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `theChainMember`  
+ *theChainMember*  
  [in] Der Name des Datenmembers, enthält die meldungszuordnung.  
   
 ### <a name="remarks"></a>Hinweise  
- `CHAIN_MSG_MAP_MEMBER` leitet Nachrichten an einen Datenmember standardmäßig meldungszuordnung (deklariert mit [BEGIN_MSG_MAP](#begin_msg_map)). Weiterleiten von Nachrichten an einen Datenmember alternativen meldungszuordnung (deklariert mit [ALT_MSG_MAP](#alt_msg_map)), verwenden Sie [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member).  
+ CHAIN_MSG_MAP_MEMBER leitet Nachrichten an einen Datenmember des Standard-meldungszuordnung (deklariert mit [BEGIN_MSG_MAP](#begin_msg_map)). Um Nachrichten an einen Datenmember alternativen meldungszuordnung weiterzuleiten (deklariert mit [ALT_MSG_MAP](#alt_msg_map)), verwenden Sie [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member).  
   
 > [!NOTE]
->  Beginnen immer mit eine meldungszuordnung `BEGIN_MSG_MAP`. Dann können Sie nachfolgende alternativen meldungszuordnungen mit deklarieren `ALT_MSG_MAP`. Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der meldungszuordnung. Jeder nachrichtenzuordnung muss genau eine Instanz haben `BEGIN_MSG_MAP` und `END_MSG_MAP`.  
+>  Beginnen Sie immer einer meldungszuordnung mit BEGIN_MSG_MAP. Sie können dann die nachfolgenden alternativen meldungszuordnungen mit ALT_MSG_MAP deklarieren. Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der nachrichtenzuordnung. Jede nachrichtenzuordnung muss genau eine Instanz des BEGIN_MSG_MAP und END_MSG_MAP haben.  
   
  Weitere Informationen zur Verwendung von meldungszuordnungen in ATL finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md).  
   
@@ -335,28 +336,28 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
   
  Dieses Beispiel veranschaulicht Folgendes:  
   
--   Wenn eine Fensterprozedur verwendet `CMyClass`des Standard-meldungszuordnung und `OnPaint` ist kein Handle eine Nachricht, die Nachricht wird an `m_obj`des Standard-meldungszuordnung für die Verarbeitung.  
+-   Wenn eine Fensterprozedur verwendet `CMyClass`des Standard-meldungszuordnung und `OnPaint` ist keine Handles, die eine Nachricht, die Nachricht wird an `m_obj`des Standard-meldungszuordnung für die Verarbeitung.  
   
--   Wenn eine Fensterprozedur die erste Alternative meldungszuordnung in verwendet `CMyClass`, alle Nachrichten werden weitergeleitet, um `m_obj`des Standard-meldungszuordnung.  
+-   Wenn eine Fensterprozedur die erste Alternative meldungszuordnung in verwendet `CMyClass`, alle Nachrichten werden weitergeleitet, dass `m_obj`des Standard-meldungszuordnung.  
   
--   Wenn eine Fensterprozedur verwendet `CMyClass`des zweiten alternative Nachricht zuordnen und `OnChar` ist keine Handles, die eine Nachricht, die Nachricht wird an die angegebene alternative meldungszuordnung von `m_obj`. Klasse `CMyContainedClass` muss deklariert diese meldungszuordnung mit `ALT_MSG_MAP(1)`.  
+-   Wenn eine Fensterprozedur verwendet `CMyClass`der zweiten alternative Meldung zugeordnet und `OnChar` ist keine Handles, die eine Nachricht, die Nachricht wird von der angegebenen alternativen meldungszuordnung an `m_obj`. Klasse `CMyContainedClass` muss diese meldungszuordnung mit ALT_MSG_MAP(1) deklariert.  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden   
   
 ##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER  
- Ähnlich wie [COMMAND_HANDLER](#command_handler), jedoch ordnet eine [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht schon auf Grundlage der Benachrichtigungscode.  
+ Ähnlich wie [COMMAND_HANDLER](#command_handler), jedoch ordnet eine [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht nur anhand der Benachrichtigungscode.  
   
 ```
 COMMAND_CODE_HANDLER(code, func)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `code`  
- [in] Benachrichtigungscode.  
+ *Code*  
+ [in] Der Benachrichtigungscode.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden   
@@ -369,30 +370,30 @@ COMMAND_HANDLER(id, code, func)
 ```    
   
 ### <a name="parameters"></a>Parameter  
- `id`  
- [in] Der Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.  
+ *ID*  
+ [in] Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.  
   
- `code`  
- [in] Benachrichtigungscode.  
+ *Code*  
+ [in] Der Benachrichtigungscode.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ### <a name="remarks"></a>Hinweise  
- `COMMAND_HANDLER` Ordnet eine [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht an die angegebene Handler-Funktion, basierend auf den Benachrichtigungscode und der Bezeichner. Zum Beispiel:  
+ COMMAND_HANDLER ordnet eine [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht an die angegebenen Handler-Funktion, die auf der Grundlage der Benachrichtigungscode und der Bezeichner des. Zum Beispiel:  
   
  [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]  
   
- Jede Funktion, die im angegebenen eine `COMMAND_HANDLER` Makro muss wie folgt definiert werden:  
+ Jede Funktion, die in einem Makro COMMAND_HANDLER angegebenen muss wie folgt definiert werden:  
   
  `LRESULT CommandHandler(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL& bHandled);`  
   
- Die Nachricht Zuordnung Mengen `bHandled` auf **"true"** vor `CommandHandler` aufgerufen wird. Wenn `CommandHandler` behandelt die Nachricht nicht vollständig sollte `bHandled` auf **"false"** an, dass die Nachricht noch weitere Verarbeitung erforderlich.  
+ Die Zuordnung Nachrichtensätze `bHandled` auf "true", bevor Sie `CommandHandler` aufgerufen wird. Wenn `CommandHandler` ist nicht vollständig verarbeitet die Nachricht sollte `bHandled` auf "false", um anzugeben, die Nachricht noch weitere Verarbeitung erforderlich.  
   
 > [!NOTE]
->  Beginnen immer mit eine meldungszuordnung [BEGIN_MSG_MAP](#begin_msg_map). Dann können Sie nachfolgende alternativen meldungszuordnungen mit deklarieren [ALT_MSG_MAP](#alt_msg_map). Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der meldungszuordnung. Jeder nachrichtenzuordnung muss genau eine Instanz haben `BEGIN_MSG_MAP` und `END_MSG_MAP`.  
+>  Beginnen Sie immer eine meldungszuordnung mit [BEGIN_MSG_MAP](#begin_msg_map). Sie können dann mit nachfolgenden alternativen meldungszuordnungen deklarieren [ALT_MSG_MAP](#alt_msg_map). Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der nachrichtenzuordnung. Jede nachrichtenzuordnung muss genau eine Instanz des BEGIN_MSG_MAP und END_MSG_MAP haben.  
   
- Zusätzlich zu `COMMAND_HANDLER`, können Sie [MESSAGE_HANDLER](#message_handler) Zuordnen einer **WM_COMMAND** Nachricht unabhängig von der einen Bezeichner oder einen Code. In diesem Fall `MESSAGE_HANDLER(WM_COMMAND, OnHandlerFunction)` leitet alle **WM_COMMAND** von Nachrichten an `OnHandlerFunction`.  
+ Zusätzlich zu COMMAND_HANDLER, können Sie [MESSAGE_HANDLER aus](#message_handler) eine WM_COMMAND-Meldung ohne Berücksichtigung der einen Bezeichner oder Code zuordnen. In diesem Fall `MESSAGE_HANDLER(WM_COMMAND, OnHandlerFunction)` leitet alle WM_COMMAND-Meldungen in `OnHandlerFunction`.  
   
  Weitere Informationen zur Verwendung von meldungszuordnungen in ATL finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md).  
   
@@ -400,85 +401,85 @@ COMMAND_HANDLER(id, code, func)
  **Header:** atlwin.h vorhanden   
   
 ##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER  
- Ähnlich wie [COMMAND_HANDLER](#command_handler), jedoch ordnet eine [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht schon auf Grundlage der Bezeichner des Menüelements, Steuerelements oder Zugriffstaste.  
+ Ähnlich wie [COMMAND_HANDLER](#command_handler), jedoch ordnet eine [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht nur auf Grundlage des Bezeichners des Menüelements, Control oder Accelerator.  
   
 ```
 COMMAND_ID_HANDLER(id, func)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `id`  
- [in] Der Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste Senden der Nachricht.  
+ *ID*  
+ [in] Der Bezeichner, der die Menüelement-Steuerelement oder Zugriffstaste, die die Nachricht gesendet werden soll.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden   
   
 ##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER  
- Ähnlich wie [COMMAND_RANGE_HANDLER](#command_range_handler), jedoch ordnet [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachrichten mit einer bestimmten Benachrichtigungscode aus einem Bereich von Steuerelementen für eine einzelnes Handlerfunktion.  
+ Ähnlich wie [COMMAND_RANGE_HANDLER](#command_range_handler), jedoch ordnet [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachrichten mit einem bestimmten Benachrichtigungscode aus einem Bereich von Steuerelementen zu einer einzelnen Handler-Funktion.  
   
 ```
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ```    
   
 ### <a name="parameters"></a>Parameter  
- `idFirst`  
+ *idFirst*  
  [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `idLast`  
- [in] Markiert das Ende des einen zusammenhängenden Bereich von Steuerelement-IDs.  
+ *idLast*  
+ [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `code`  
- [in] Benachrichtigungscode.  
+ *Code*  
+ [in] Der Benachrichtigungscode.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Bereich basiert auf den Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste Senden der Nachricht.  
+ Dieser Bereich basiert auf den Bezeichner der die Menüelement-Steuerelement oder Accelerator Senden der Nachricht.  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden   
   
 ##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER  
- Ähnlich wie [COMMAND_HANDLER](#command_handler), jedoch ordnet [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachrichten aus einem Bereich von Steuerelementen für eine einzelnes Handlerfunktion.  
+ Ähnlich wie [COMMAND_HANDLER](#command_handler), jedoch ordnet [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachrichten aus einem Bereich von Steuerelementen zu einer einzelnen Handler-Funktion.  
   
 ```
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ```    
   
 ### <a name="parameters"></a>Parameter  
- `idFirst`  
+ *idFirst*  
  [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `idLast`  
- [in] Markiert das Ende des einen zusammenhängenden Bereich von Steuerelement-IDs.  
+ *idLast*  
+ [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Bereich basiert auf den Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste Senden der Nachricht.  
+ Dieser Bereich basiert auf den Bezeichner der die Menüelement-Steuerelement oder Accelerator Senden der Nachricht.  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden   
   
 ##  <a name="declare_empty_msg_map"></a>  DECLARE_EMPTY_MSG_MAP  
- Deklariert eine leere Nachricht zuordnen.  
+ Deklariert eine Zuordnung für die leere Nachricht an.  
   
 ```
 DECLARE_EMPTY_MSG_MAP()
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `DECLARE_EMPTY_MSG_MAP` ist eine benutzerfreundliche-Makro, das Aufrufe der Makros [BEGIN_MSG_MAP](#begin_msg_map) und [END_MSG_MAP](#end_msg_map) eine leere nachrichtenzuordnung erstellen:  
+ DECLARE_EMPTY_MSG_MAP ist einer der Einfachheit halber-Makro, das die Makros, die Aufrufe [BEGIN_MSG_MAP](#begin_msg_map) und [END_MSG_MAP](#end_msg_map) um eine leere Nachricht zu erstellen:  
   
  [!code-cpp[NVC_ATL_Windowing#122](../../atl/codesnippet/cpp/message-map-macros-atl_7.h)]  
   
 ##  <a name="default_reflection_handler"></a>  DEFAULT_REFLECTION_HANDLER  
- Bietet ein Standard-Handler für das untergeordnete Fenster (Steuerelement), das empfangen Nachrichten reflektiert. der Handler wird nicht verarbeitete Nachrichten ordnungsgemäß übergeben `DefWindowProc`.  
+ Bietet ein Standard-Handler für das untergeordnete Fenster (Steuerelement), das erhält Nachrichten berücksichtigt; der Handler für nicht behandelte Meldungen zu ordnungsgemäß übergibt `DefWindowProc`.  
   
 ```
 DEFAULT_REFLECTION_HANDLER()
@@ -495,14 +496,14 @@ END_MSG_MAP()
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie immer die [BEGIN_MSG_MAP](#begin_msg_map) Makro mit den Anfang einer meldungszuordnung markiert. Verwendung [ALT_MSG_MAP](#alt_msg_map) nachfolgende alternativen meldungszuordnungen zu deklarieren.  
+ Verwenden Sie immer die [BEGIN_MSG_MAP](#begin_msg_map) Makro, um den Anfang einer meldungszuordnung markieren. Verwendung [ALT_MSG_MAP](#alt_msg_map) nachfolgende alternativen meldungszuordnungen zu deklarieren.  
   
- Beachten Sie, dass immer genau eine Instanz des `BEGIN_MSG_MAP` und `END_MSG_MAP`.  
+ Beachten Sie, dass immer genau eine Instanz des BEGIN_MSG_MAP und END_MSG_MAP vorhanden ist.  
   
  Weitere Informationen zur Verwendung von meldungszuordnungen in ATL finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md).  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt die Standard-meldungszuordnung und eine alternative meldungszuordnung, jeweils eine Handlerfunktion enthalten:  
+ Das folgende Beispiel zeigt die Standard-meldungszuordnung und die Zuordnung für eine andere Meldung angezeigt, jeweils eine Handlerfunktion:  
   
  [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]  
   
@@ -526,7 +527,7 @@ FORWARD_NOTIFICATIONS()
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden   
   
-##  <a name="message_handler"></a>  MESSAGE_HANDLER  
+##  <a name="message_handler"></a>  MESSAGE_HANDLER AUS  
  Definiert einen Eintrag in einer meldungszuordnung.  
   
 ```
@@ -534,25 +535,25 @@ MESSAGE_HANDLER( msg, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `msg`  
+ *Meldung*  
  [in] Die Windows-Meldung.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ### <a name="remarks"></a>Hinweise  
- `MESSAGE_HANDLER` Ordnet eine Windows-Meldung an die angegebene Handler-Funktion.  
+ MESSAGE_HANDLER aus ordnet eine Windows-Meldung an die angegebenen Handler-Funktion.  
   
- Jede Funktion, die im angegebenen eine `MESSAGE_HANDLER` Makro muss wie folgt definiert werden:  
+ Jede Funktion, die in einem Makro MESSAGE_HANDLER aus angegebenen muss wie folgt definiert werden:  
   
  `LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);`  
   
- Die Nachricht Zuordnung Mengen `bHandled` auf **"true"** vor `MessageHandler` aufgerufen wird. Wenn `MessageHandler` behandelt die Nachricht nicht vollständig sollte `bHandled` auf **"false"** an, dass die Nachricht noch weitere Verarbeitung erforderlich.  
+ Die Zuordnung Nachrichtensätze `bHandled` auf "true", bevor Sie `MessageHandler` aufgerufen wird. Wenn `MessageHandler` ist nicht vollständig verarbeitet die Nachricht sollte `bHandled` auf "false", um anzugeben, die Nachricht noch weitere Verarbeitung erforderlich.  
   
 > [!NOTE]
->  Beginnen immer mit eine meldungszuordnung [BEGIN_MSG_MAP](#begin_msg_map). Dann können Sie nachfolgende alternativen meldungszuordnungen mit deklarieren [ALT_MSG_MAP](#alt_msg_map). Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der meldungszuordnung. Jeder nachrichtenzuordnung muss genau eine Instanz haben `BEGIN_MSG_MAP` und `END_MSG_MAP`.  
+>  Beginnen Sie immer eine meldungszuordnung mit [BEGIN_MSG_MAP](#begin_msg_map). Sie können dann mit nachfolgenden alternativen meldungszuordnungen deklarieren [ALT_MSG_MAP](#alt_msg_map). Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der nachrichtenzuordnung. Jede nachrichtenzuordnung muss genau eine Instanz des BEGIN_MSG_MAP und END_MSG_MAP haben.  
   
- Zusätzlich zu `MESSAGE_HANDLER`, können Sie [COMMAND_HANDLER](#command_handler) und [NOTIFY_HANDLER](#notify_handler) abzubildenden [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) und [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) Nachrichten, bzw.  
+ Zusätzlich zu MESSAGE_HANDLER aus, können Sie [COMMAND_HANDLER](#command_handler) und [NOTIFY_HANDLER](#notify_handler) zuordnen [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) und [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) Nachrichten , bzw.  
   
  Weitere Informationen zur Verwendung von meldungszuordnungen in ATL finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md).  
   
@@ -563,7 +564,7 @@ MESSAGE_HANDLER( msg, func )
  **Header:** atlwin.h vorhanden   
   
 ##  <a name="message_range_handler"></a>  MESSAGE_RANGE_HANDLER  
- Ähnlich wie [MESSAGE_HANDLER](#message_handler), aber einen Bereich von Windows-an einen einzelnen Handlerfunktion Nachrichten Zuordnungen.  
+ Ähnlich wie [MESSAGE_HANDLER aus](#message_handler), aber die Zuordnungen, die einen Bereich von Windows-zu einer einzelnen Handler-Funktion Meldungen.  
   
 ```
 MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
@@ -574,27 +575,27 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
  [in] Markiert den Beginn des einen zusammenhängenden Bereich von Nachrichten.  
   
  *msgLast*  
- [in] Markiert das Ende des einen zusammenhängenden Bereich von Nachrichten.  
+ [in] Markiert das Ende einer zusammenhängenden Bereich von Nachrichten.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden   
   
 ##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER  
- Ähnlich wie [NOTIFY_HANDLER](#notify_handler), jedoch ordnet eine [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) Nachricht schon auf Grundlage der Benachrichtigungscode.  
+ Ähnlich wie [NOTIFY_HANDLER](#notify_handler), jedoch ordnet eine [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) Nachricht nur anhand der Benachrichtigungscode.  
   
 ```
 NOTIFY_CODE_HANDLER(cd, func)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cd`  
- [in] Benachrichtigungscode.  
+ *CD*  
+ [in] Der Benachrichtigungscode.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden   
@@ -607,28 +608,28 @@ NOTIFY_HANDLER( id, cd, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `id`  
- [in] Der Bezeichner des Steuerelements, das Senden der Nachricht.  
+ *ID*  
+ [in] Der Bezeichner des Steuerelements, das Sie die Nachricht gesendet.  
   
- `cd`  
- [in] Benachrichtigungscode.  
+ *CD*  
+ [in] Der Benachrichtigungscode.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ### <a name="remarks"></a>Hinweise  
- `NOTIFY_HANDLER` Ordnet eine [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) Nachricht an die angegebene Handler-Funktion, basierend auf den Benachrichtigungscode und der Bezeichner.  
+ NOTIFY_HANDLER ordnet eine [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) Nachricht an die angegebenen Handler-Funktion, die auf der Grundlage der Benachrichtigungscode und der Bezeichner des.  
   
- Jede Funktion, die im angegebenen eine `NOTIFY_HANDLER` Makro muss wie folgt definiert werden:  
+ Jede Funktion, die in einem Makro NOTIFY_HANDLER angegebenen muss wie folgt definiert werden:  
   
  `LRESULT NotifyHandler(int idCtrl, LPNMHDR pnmh, BOOL& bHandled);`  
   
- Die Nachricht Zuordnung Mengen `bHandled` auf **"true"** vor `NotifyHandler` aufgerufen wird. Wenn `NotifyHandler` behandelt die Nachricht nicht vollständig sollte `bHandled` auf **"false"** an, dass die Nachricht noch weitere Verarbeitung erforderlich.  
+ Die Zuordnung Nachrichtensätze `bHandled` auf "true", bevor Sie `NotifyHandler` aufgerufen wird. Wenn `NotifyHandler` ist nicht vollständig verarbeitet die Nachricht sollte `bHandled` auf "false", um anzugeben, die Nachricht noch weitere Verarbeitung erforderlich.  
   
 > [!NOTE]
->  Beginnen immer mit eine meldungszuordnung [BEGIN_MSG_MAP](#begin_msg_map). Dann können Sie nachfolgende alternativen meldungszuordnungen mit deklarieren [ALT_MSG_MAP](#alt_msg_map). Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der meldungszuordnung. Jeder nachrichtenzuordnung muss genau eine Instanz haben `BEGIN_MSG_MAP` und `END_MSG_MAP`.  
+>  Beginnen Sie immer eine meldungszuordnung mit [BEGIN_MSG_MAP](#begin_msg_map). Sie können dann mit nachfolgenden alternativen meldungszuordnungen deklarieren [ALT_MSG_MAP](#alt_msg_map). Die [END_MSG_MAP](#end_msg_map) Makro markiert das Ende der nachrichtenzuordnung. Jede nachrichtenzuordnung muss genau eine Instanz des BEGIN_MSG_MAP und END_MSG_MAP haben.  
   
- Zusätzlich zu `NOTIFY_HANDLER`, können Sie [MESSAGE_HANDLER](#message_handler) Zuordnen einer **WM_NOTIFY** Nachricht unabhängig von der einen Bezeichner oder einen Code. In diesem Fall `MESSAGE_HANDLER(WM_NOTIFY, OnHandlerFunction)` leitet alle **WM_NOTIFY** von Nachrichten an `OnHandlerFunction`.  
+ Zusätzlich zu NOTIFY_HANDLER, können Sie [MESSAGE_HANDLER aus](#message_handler) eine WM_NOTIFY-Nachricht ohne Berücksichtigung der einen Bezeichner oder Code zuordnen. In diesem Fall `MESSAGE_HANDLER(WM_NOTIFY, OnHandlerFunction)` leitet alle WM_NOTIFY-Meldungen zu `OnHandlerFunction`.  
   
  Weitere Informationen zur Verwendung von meldungszuordnungen in ATL finden Sie unter [Meldungszuordnungen](../../atl/message-maps-atl.md).  
   
@@ -646,66 +647,66 @@ NOTIFY_ID_HANDLER( id, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `id`  
- [in] Der Bezeichner des Steuerelements, das Senden der Nachricht.  
+ *ID*  
+ [in] Der Bezeichner des Steuerelements, das Sie die Nachricht gesendet.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden   
   
 ##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER  
- Ähnlich wie [NOTIFY_RANGE_HANDLER](#notify_range_handler), jedoch ordnet [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) Nachrichten mit einer bestimmten Benachrichtigungscode aus einem Bereich von Steuerelementen für eine einzelnes Handlerfunktion.  
+ Ähnlich wie [NOTIFY_RANGE_HANDLER](#notify_range_handler), jedoch ordnet [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) Nachrichten mit einem bestimmten Benachrichtigungscode aus einem Bereich von Steuerelementen zu einer einzelnen Handler-Funktion.  
   
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `idFirst`  
+ *idFirst*  
  [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `idLast`  
- [in] Markiert das Ende des einen zusammenhängenden Bereich von Steuerelement-IDs.  
+ *idLast*  
+ [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `cd`  
- [in] Benachrichtigungscode.  
+ *CD*  
+ [in] Der Benachrichtigungscode.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Bereich basiert auf den Bezeichner des Steuerelements, das Senden der Nachricht.  
+ Dieser Bereich basiert auf den Bezeichner des Steuerelements, das Sie die Nachricht gesendet.  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden   
   
 ##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER  
- Ähnlich wie [NOTIFY_HANDLER](#notify_handler), jedoch ordnet [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) Nachrichten aus einem Bereich von Steuerelementen für eine einzelnes Handlerfunktion.  
+ Ähnlich wie [NOTIFY_HANDLER](#notify_handler), jedoch ordnet [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) Nachrichten aus einem Bereich von Steuerelementen zu einer einzelnen Handler-Funktion.  
   
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `idFirst`  
+ *idFirst*  
  [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `idLast`  
- [in] Markiert das Ende des einen zusammenhängenden Bereich von Steuerelement-IDs.  
+ *idLast*  
+ [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Bereich basiert auf den Bezeichner des Steuerelements, das Senden der Nachricht.  
+ Dieser Bereich basiert auf den Bezeichner des Steuerelements, das Sie die Nachricht gesendet.  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden   
   
 ##  <a name="reflect_notifications"></a>  REFLECT_NOTIFICATIONS  
- Gibt die benachrichtigungsmeldungen an das untergeordnete Fenster (Steuerelement), das sie gesendet.  
+ Gibt Nachrichten zurück an das untergeordnete Fenster (Steuerelement), das sie gesendet wurden.  
   
 ```
 REFLECT_NOTIFICATIONS()
@@ -718,195 +719,195 @@ REFLECT_NOTIFICATIONS()
  **Header:** atlwin.h vorhanden   
   
 ##  <a name="reflected_command_code_handler"></a>  REFLECTED_COMMAND_CODE_HANDLER  
- Ähnlich wie [COMMAND_CODE_HANDLER](#command_code_handler), jedoch ordnet Befehle, die über das übergeordnete Fenster wiedergegeben.  
+ Ähnlich wie [COMMAND_CODE_HANDLER](#command_code_handler), jedoch ordnet Befehle, die über das übergeordnete Fenster übernommen.  
   
 ```
 REFLECTED_COMMAND_CODE_HANDLER( code, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `code`  
- [in] Benachrichtigungscode.  
+ *Code*  
+ [in] Der Benachrichtigungscode.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
    
 ##  <a name="reflected_command_handler"></a>  REFLECTED_COMMAND_HANDLER  
- Ähnlich wie [COMMAND_HANDLER](#command_handler), jedoch ordnet Befehle, die über das übergeordnete Fenster wiedergegeben.  
+ Ähnlich wie [COMMAND_HANDLER](#command_handler), jedoch ordnet Befehle, die über das übergeordnete Fenster übernommen.  
   
 ```
 REFLECTED_COMMAND_HANDLER( id, code, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `id`  
- [in] Der Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.  
+ *ID*  
+ [in] Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.  
   
- `code`  
- [in] Benachrichtigungscode.  
+ *Code*  
+ [in] Der Benachrichtigungscode.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
 
 ##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER  
- Ähnlich wie [COMMAND_ID_HANDLER](#command_id_handler), jedoch ordnet Befehle, die über das übergeordnete Fenster wiedergegeben.  
+ Ähnlich wie [COMMAND_ID_HANDLER](#command_id_handler), jedoch ordnet Befehle, die über das übergeordnete Fenster übernommen.  
   
 ```
 REFLECTED_COMMAND_ID_HANDLER( id, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `id`  
- [in] Der Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.  
+ *ID*  
+ [in] Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
 
 ##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER  
- Ähnlich wie [COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), jedoch ordnet Befehle, die über das übergeordnete Fenster wiedergegeben.  
+ Ähnlich wie [COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), jedoch ordnet Befehle, die über das übergeordnete Fenster übernommen.  
   
 ```
 REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `idFirst`  
+ *idFirst*  
  [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `idLast`  
- [in] Markiert das Ende des einen zusammenhängenden Bereich von Steuerelement-IDs.  
+ *idLast*  
+ [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `code`  
- [in] Benachrichtigungscode.  
+ *Code*  
+ [in] Der Benachrichtigungscode.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
 
 ##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER  
- Ähnlich wie [COMMAND_RANGE_HANDLER](#command_range_handler), jedoch ordnet Befehle, die über das übergeordnete Fenster wiedergegeben.  
+ Ähnlich wie [COMMAND_RANGE_HANDLER](#command_range_handler), jedoch ordnet Befehle, die über das übergeordnete Fenster übernommen.  
   
 ```
 REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `idFirst`  
+ *idFirst*  
  [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `idLast`  
- [in] Markiert das Ende des einen zusammenhängenden Bereich von Steuerelement-IDs.  
+ *idLast*  
+ [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
 
 ##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER  
- Ähnlich wie [NOTIFY_CODE_HANDLER](#notify_code_handler), jedoch ordnet Benachrichtigungen über das übergeordnete Fenster wiedergegeben.  
+ Ähnlich wie [NOTIFY_CODE_HANDLER](#notify_code_handler), jedoch ordnet Benachrichtigungen über das übergeordnete Fenster übernommen.  
   
 ```
 REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cd`  
- [in] Benachrichtigungscode.  
+ *CD*  
+ [in] Der Benachrichtigungscode.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
 
 ##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER  
- Ähnlich wie [NOTIFY_HANDLER](#notify_handler), jedoch ordnet Benachrichtigungen über das übergeordnete Fenster wiedergegeben.  
+ Ähnlich wie [NOTIFY_HANDLER](#notify_handler), jedoch ordnet Benachrichtigungen über das übergeordnete Fenster übernommen.  
   
 ```
 REFLECTED_NOTIFY_HANDLER( id, cd, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `id`  
- [in] Der Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.  
+ *ID*  
+ [in] Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.  
   
- `cd`  
- [in] Benachrichtigungscode.  
+ *CD*  
+ [in] Der Benachrichtigungscode.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
 
 ##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER  
- Ähnlich wie [NOTIFY_ID_HANDLER](#notify_id_handler), jedoch ordnet Benachrichtigungen über das übergeordnete Fenster wiedergegeben.  
+ Ähnlich wie [NOTIFY_ID_HANDLER](#notify_id_handler), jedoch ordnet Benachrichtigungen über das übergeordnete Fenster übernommen.  
   
 ```
 REFLECTED_NOTIFY_ID_HANDLER( id, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `id`  
- [in] Der Bezeichner der dem Menüelement, Steuerelement oder Zugriffstaste.  
+ *ID*  
+ [in] Der Bezeichner der dem Menüelement-Steuerelement oder Accelerator.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
 
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
 
 ##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
- Ähnlich wie [NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), jedoch ordnet Benachrichtigungen über das übergeordnete Fenster wiedergegeben.  
+ Ähnlich wie [NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), jedoch ordnet Benachrichtigungen über das übergeordnete Fenster übernommen.  
   
 ```
 REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ```    
   
 ### <a name="parameters"></a>Parameter  
- `idFirst`  
+ *idFirst*  
  [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `idLast`  
- [in] Markiert das Ende des einen zusammenhängenden Bereich von Steuerelement-IDs.  
+ *idLast*  
+ [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `cd`  
- [in] Benachrichtigungscode.  
+ *CD*  
+ [in] Der Benachrichtigungscode.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ### <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden   
   
 ##  <a name="reflected_notify_range_handler"></a>  REFLECTED_NOTIFY_RANGE_HANDLER  
- Ähnlich wie [NOTIFY_RANGE_HANDLER](#notify_range_handler), jedoch ordnet Benachrichtigungen über das übergeordnete Fenster wiedergegeben.  
+ Ähnlich wie [NOTIFY_RANGE_HANDLER](#notify_range_handler), jedoch ordnet Benachrichtigungen über das übergeordnete Fenster übernommen.  
   
 ```
 REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `idFirst`  
+ *idFirst*  
  [in] Markiert den Beginn des einen zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `idLast`  
- [in] Markiert das Ende des einen zusammenhängenden Bereich von Steuerelement-IDs.  
+ *idLast*  
+ [in] Markiert das Ende einer zusammenhängenden Bereich von Steuerelement-IDs.  
   
- `func`  
- [in] Der Name der Nachrichtenhandler Funktion.  
+ *func*  
+ [in] Der Name der Meldungshandler-Funktion.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Makros](../../atl/reference/atl-macros.md)

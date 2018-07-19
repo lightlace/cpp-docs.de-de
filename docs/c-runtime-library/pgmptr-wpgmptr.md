@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389997"
 ---
 # <a name="pgmptr-wpgmptr"></a>_pgmptr, _wpgmptr
 Der Pfad der ausführbaren Datei. Veraltet; verwenden Sie [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) und [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md).  

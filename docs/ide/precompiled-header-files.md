@@ -1,5 +1,5 @@
 ---
-title: Vorkompilierte Headerdateien | Microsoft Docs
+title: Vorkompilierte Headerdateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4595ea9ce27c40fb798ac050ce456c4d43b2cacb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33328086"
 ---
 # <a name="precompiled-header-files"></a>Vorkompilierte Headerdateien
 Diese Dateien werden dazu verwendet, die vorkompilierte Headerdatei *Projektname.pch*und die vorkompilierte Typendatei „StdAfx.obj“ zu erstellen.  
   
  Diese Dateien befinden sich im Verzeichnis *Projektname* . Im Projektmappen-Explorer befindet sich „Stdafx.h“ im Ordner „Headerdateien“ und „Stdafx.cpp“ im Ordner „Quelldateien“.  
   
-|Dateiname|Beschreibung|  
+|Dateiname|description|  
 |---------------|-----------------|  
 |stdafx.h|Eine Includedatei für systemspezifische Standardincludedateien und projektspezifische Includedateien, die häufig verwendet, aber nur selten geändert werden.<br /><br /> Sie sollten für keines der _AFX_NO_XXX-Makros in „stdafx.h“ dessen Definition ändern. Weitere Informationen hierzu finden Sie im Knowledge Base-Artikel „PRB: Probleme beim Definieren von _AFX_NO_XXX“. Sie finden Knowledge Base-Artikel in MSDN Library oder unter [http://support.microsoft.com](http://%20support.microsoft.com/).|  
 |stdafx.cpp|Enthält die Präprozessordirektive `#include "stdafx.h"` und fügt Includedateien für vorkompilierte Typen hinzu. Vorkompilierte Dateien eines beliebigen Typs, einschließlich Headerdateien, sorgen für kürzere Kompilierungszeiten, indem sie die Kompilierung auf die Dateien beschränken, die dies erfordern. Sobald Ihr Projekt erstmalig erstellt wurde, werden Sie feststellen, dass die Buildzeiten nachfolgender Builds aufgrund der vorkompilierten Headerdateien sehr viel kürzer sind.|  

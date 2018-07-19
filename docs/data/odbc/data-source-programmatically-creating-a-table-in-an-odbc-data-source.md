@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090509"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Datenquelle: Programmgesteuertes Erstellen einer Tabelle in einer ODBC-Datenquelle
 In diesem Thema wird erläutert, wie zum Erstellen einer Tabelle für Ihre Daten Datenquelle mithilfe der `ExecuteSQL` Memberfunktion der Klasse `CDatabase`, übergeben der Funktion eine Zeichenfolge, enthält eine **CREATE TABLE** SQL-Anweisung.  

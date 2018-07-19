@@ -1,5 +1,5 @@
 ---
-title: CKeyboardManager Klasse | Microsoft Docs
+title: CKeyboardManager-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9d4aace502310836429ec8f8f9db74d7cf17ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105a6310968844336ead5c787586d547f3952e57
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338985"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager-Klasse
 Verwaltet Tastenkombinationstabellen für das Hauptrahmenfenster und die untergeordneten Rahmenfenster.  
@@ -70,24 +71,24 @@ class CKeyboardManager : public CObject
 |-|-|  
 |Name|Beschreibung|  
 |[CKeyboardManager::CleanUp](#cleanup)|Löscht die tastenkombinationstabellen an.|  
-|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Ruft die standardmäßige Tastenkombination für den angegebenen Befehl und Fenster ab.|  
-|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Bestimmt, ob ein Schlüssel durch die Zugriffstastentabelle behandelt wird.|  
-|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Gibt an, ob ein Zeichen ist, die gedruckt werden können.|  
+|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Ruft die standardmäßige Tastenkombination für den angegebenen Befehl und das Fenster ab.|  
+|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Bestimmt, ob ein Schlüssel von der tastenkombinationstabelle verarbeitet wird.|  
+|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Gibt an, ob ein Zeichen druckbaren ist.|  
 |[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Gibt an, ob alle Tastenkombinationen für einen Befehl oder nur die standardmäßige Tastenkombination Menüs angezeigt werden.|  
 |[CKeyboardManager::LoadState](#loadstate)|Lädt die tastenkombinationstabellen aus der Windows-Registrierung.|  
-|[CKeyboardManager::ResetAll](#resetall)|Lädt die tastenkombinationstabellen aus der Anwendungsressource erneut.|  
-|[CKeyboardManager::SaveState](#savestate)|Speichert die Verknüpfung Key Tabellen an der Windows-Registrierung.|  
-|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Gibt an, ob das Framework die Tastenkombinationen für alle Befehle oder einer einzelnen Tastenkombination für jedem Befehl angezeigt wird. Diese Methode wirkt sich nicht auf Befehle aus, die nur einen zugeordneten Tastenkombination verfügen.|  
+|[CKeyboardManager::ResetAll](#resetall)|Lädt die tastenkombinationstabellen aus Ressource für die Anwendung erneut.|  
+|[CKeyboardManager::SaveState](#savestate)|Speichert die Verknüpfung Tabellen in der Windows-Registrierung.|  
+|[Ckeyboardmanager](#showallaccelerators)|Gibt an, ob das Framework alle Tastenkombinationen für alle Befehle oder einer einzelnen Tastenkombination für jeden Befehl angezeigt. Diese Methode wirkt sich nicht auf Befehle aus, die nur einen zugeordneten Tastenkombination verfügen.|  
 |[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Konvertiert ein Zeichen in der oberen registrieren.|  
-|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Tabellenform Verknüpfung aktualisiert mit einer neuen Verknüpfung-Key-Tabelle.|  
+|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Eine wichtige Verknüpfung-Tabelle aktualisiert mit einer neuen Verknüpfung-Key-Tabelle.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Member dieser Klasse ermöglichen es Ihnen, speichern und Laden tastenkombinationstabellen zur Windows-Registrierung, anhand einer Vorlage um die Abkürzung Key Tabellen zu aktualisieren, und suchen die standardmäßige Tastenkombination für einen Befehl in einem Rahmenfenster. Darüber hinaus die `CKeyboardManager` Objekt können Sie steuern, wie die Tastenkombinationen für den Benutzer angezeigt werden.  
+ Die Member dieser Klasse ermöglichen Ihnen das Speichern und Laden tastenkombinationstabellen an der Windows-Registrierung, mithilfe einer Vorlage um die wichtige Verknüpfung-Tabellen zu aktualisieren, und suchen die standardmäßige Tastenkombination für einen Befehl in einem Rahmenfenster. Darüber hinaus die `CKeyboardManager` -Objekt können Sie steuern, wie die Tastenkombinationen für den Benutzer angezeigt werden.  
   
- Sie sollten keine erstellen eine `CKeyboardManager` Objekt manuell. Es wird automatisch durch das Framework der Anwendung erstellt werden. Sie sollten jedoch aufrufen [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) während der Initialisierung der Anwendung. Rufen Sie zum Abrufen eines Zeigers auf die Tastatur-Manager für Ihre Anwendung [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).  
+ Erstellen Sie keine `CKeyboardManager` Objekt manuell. Es wird automatisch durch das Framework der Anwendung erstellt werden. Sie sollten jedoch aufrufen [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) während der Initialisierung der Anwendung. Um einen Zeiger auf die Tastatur-Manager für Ihre Anwendung zu erhalten, rufen [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie einen Zeiger zum Abrufen einer `CKeyboardManager` -Objekt aus einer `CWinAppEx` Klasse sowie zum Anzeigen aller Tastenkombinationen, die Befehle im Menü zugeordnet. Dieser Codeausschnitt ist Teil der [benutzerdefinierte Seiten Beispiel](../../visual-cpp-samples.md).  
+ Im folgende Beispiel wird veranschaulicht, wie einen Zeiger zum Abrufen einer `CKeyboardManager` -Objekt aus einer `CWinAppEx` -Klasse, und alle zugeordneten Befehle im Menü Tastenkombinationen anzeigen. Dieser Codeausschnitt ist Teil der [Beispiel für benutzerdefinierte Seiten](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]  
   
@@ -107,22 +108,22 @@ CKeyboardManager();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- In den meisten Fällen Sie keine zum Erstellen einer `CKeyboardManager` direkt. Standardmäßig erstellt das Framework einer für Sie. Um einen Zeiger auf die `CKeyboardManager`, rufen Sie [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Wenn Sie eine manuell erstellen, müssen Sie es mit der Methode initialisieren [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).  
+ In den meisten Fällen, Sie müssen keine Erstellung einer `CKeyboardManager` direkt. Standardmäßig erstellt das Framework für Sie. Um einen Zeiger auf die `CKeyboardManager`, rufen Sie [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Wenn Sie einen manuell erstellen, müssen Sie es mit der Methode initialisieren [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).  
   
 ##  <a name="cleanup"></a>  CKeyboardManager::CleanUp  
- Gibt die `CKeyboardManager` Ressourcen und löscht alle Schlüssel Verknüpfung-Zuordnungen.  
+ Gibt frei, die `CKeyboardManager` Ressourcen und löscht alle Schlüssel Verknüpfung-Zuordnungen.  
   
 ```  
 static void CleanUp();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen zu Tastenkombinationen, finden Sie unter [Anpassen von Tastatur und Maus](../../mfc/keyboard-and-mouse-customization.md).  
+ Weitere Informationen zu Tastenkombinationen finden Sie unter [Anpassen von Tastatur und Maus](../../mfc/keyboard-and-mouse-customization.md).  
   
- Sie müssen nicht diese Funktion aufgerufen wird, wenn die Anwendung beendet wird, da das Framework sie beim Beenden der Anwendung automatisch aufruft.  
+ Sie müssen nicht diese Funktion aufrufen, wenn die Anwendung beendet wird, da das Framework sie beim Beenden der Anwendung automatisch aufruft.  
   
 ##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator  
- Ruft die standardmäßige Tastenkombination für den angegebenen Befehl und Fenster ab.  
+ Ruft die standardmäßige Tastenkombination für den angegebenen Befehl und das Fenster ab.  
   
 ```  
 static BOOL FindDefaultAccelerator(
@@ -133,26 +134,26 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `uiCmd`  
+ [in] *UiCmd*  
  Die Befehls-ID.  
   
- [out] `str`  
+ [out] *str*  
  Ein Verweis auf ein `CString`-Objekt.  
   
- [in] `pWndFrame`  
+ [in] *pWndFrame*  
  Ein Zeiger auf ein Rahmenfenster.  
   
- [in] `bIsDefaultFrame`  
- Gibt an, ob das Rahmenfenster der Standard-Rahmenfenster ist.  
+ [in] *bIsDefaultFrame*  
+ Gibt an, ob das Rahmenfenster, das Standard-Rahmenfenster ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Verknüpfung gefunden wird; andernfalls 0.  
+ Ungleich NULL ist, wenn die Verknüpfung gefunden wird; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sucht den vom angegebenen Befehl `uiCmd` und ruft die standardmäßige Tastenkombination ab. Die Methode nimmt die Zeichenfolge, die diese Tastenkombination zugeordnet, und schreibt den Wert der `str` Parameter.  
+ Diese Methode sucht anhand des Befehls *UiCmd* und ruft die standardmäßige Tastenkombination. Die Methode nimmt die Zeichenfolge, die diese Tastenkombination zugeordnet, und schreibt den Wert, der *str* Parameter.  
   
 ##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
- Bestimmt, ob der angegebene Schlüssel vom behandelt wird die [CKeyboardManager Klasse](../../mfc/reference/ckeyboardmanager-class.md).  
+ Bestimmt, ob es sich bei der angegebene Schlüssel von verarbeitet wird die [CKeyboardManager-Klasse](../../mfc/reference/ckeyboardmanager-class.md).  
   
 ```  
 static BOOL __stdcall IsKeyHandled(
@@ -167,19 +168,19 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `nKey`|Der zu überprüfende Schlüssel.|  
-|[in] `fVirt`|Gibt das Verhalten der Tastenkombination. Eine Liste der möglichen Werte finden Sie unter [ACCELERATION Struktur](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
-|[in] `pWndFrame`|Einem Rahmenfenster. Diese Methode bestimmt, ob eine Tastenkombination in diesem Frame behandelt wird.|  
-|[in] `bIsDefaultFrame`|Ein boolescher Parameter, der angibt, ob `pWndFrame` ist das Standard-Rahmenfenster.|  
+|[in] *nKey*|Der zu überprüfende Schlüssel.|  
+|[in] *fVirt*|Gibt das Verhalten der Tastenkombination. Eine Liste der möglichen Werte, finden Sie unter [ACCELERATION Struktur](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] *pWndFrame*|Ein Rahmenfenster. Diese Methode bestimmt, ob eine Tastenkombination, die in diesem Frame behandelt wird.|  
+|[in] *bIsDefaultFrame*|Ein boolescher Parameter, der angibt, ob *pWndFrame* ist das Standard-Rahmenfenster.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Tastenkombination behandelt wird. `FALSE` Wenn der Schlüssel nicht behandelt wird oder wenn `pWndFrame` ist `NULL`.  
+ TRUE, wenn die Tastenkombination behandelt wird. "False", wenn der Schlüssel nicht behandelt wird oder wenn *pWndFrame* ist NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Eingabeparameter müssen den Eintrag in der Zugriffstastentabelle sowohl für entsprechen `nKey` und `fVirt` zu bestimmen, ob eine Tastenkombination im behandelt wird `pWndFrame`.  
+ Der Eingabeparameter müssen den Eintrag in der tastenkombinationstabelle sowohl für entsprechen *nKey* und *fVirt* zu bestimmen, ob eine Tastenkombination in erfolgt *pWndFrame*.  
   
 ##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
- Gibt an, ob ein Zeichen ist, die gedruckt werden können.  
+ Gibt an, ob ein Zeichen druckbaren ist.  
   
 ```  
 static BOOL __stdcall IsKeyPrintable(const UINT nChar);
@@ -190,26 +191,26 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |Parameter|Beschreibung|  
-|[in] `nChar`|Das Zeichen, das diese Methode überprüft.|  
+|[in] *nChar*|Das Zeichen, das diese Methode überprüft.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL ist das Zeichen gedruckt werden können, ist er nicht auf NULL.  
+ Ungleich NULL, wenn das Zeichen "druckbaren" ist, ist dies nicht.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Methode schlägt fehl, wenn ein Aufruf von [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) ein Fehler auftritt.  
   
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
- Gibt an, ob alle Tastenkombinationen, die Befehle im Menü zugeordnet oder nur die Standardtastenkombinationen Menüs angezeigt werden.  
+ Gibt an, ob alle Befehle im Menü zugeordneten Tastenkombinationen oder nur die Standardtastenkombinationen Menüs angezeigt werden.  
   
 ```  
 static BOOL IsShowAllAccelerators();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Anwendung die Tastenkombinationen für Befehle im Menü aufgelistet; 0, wenn die Anwendung nur die Standardtastenkombinationen zeigt.  
+ Ungleich NULL ist, wenn die Anwendung alle Tastenkombinationen für Befehle im Menü angezeigt werden; 0, wenn die Anwendung nur Standardtastenkombinationen zeigt.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Anwendung werden die Tastenkombinationen für Befehle in der Menüleiste im Menü aufgelistet. Verwenden Sie die Funktion [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) steuern, ob die Anwendung listet alle Tastenkombinationen oder nur die Standardtastenkombinationen.  
+ Die Anwendung sind die Tastenkombinationen für Befehle in der Menüleiste im Menü aufgeführt. Verwenden Sie die Funktion [Ckeyboardmanager](#showallaccelerators) steuern, ob die Anwendung listet alle Tastenkombinationen oder nur die standardmäßigen Tastenkombinationen.  
   
 ##  <a name="loadstate"></a>  CKeyboardManager::LoadState  
  Lädt die tastenkombinationstabellen aus der Windows-Registrierung.  
@@ -221,32 +222,32 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszProfileName`  
- Der Registrierungspfad, in denen `CKeyboardManager` Daten gespeichert ist.  
+ [in] *LpszProfileName*  
+ Im Registrierungspfad befinden, in denen `CKeyboardManager` Daten werden gespeichert.  
   
- [in] `pDefaultFrame`  
- Ein Zeiger auf ein Rahmenfenster als Standardfenster verwendet.  
+ [in] *pDefaultFrame*  
+ Ein Zeiger auf ein Rahmenfenster, das als das Standardfenster verwendet werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn der Zustand erfolgreich geladen oder 0 ist.  
+ Ungleich NULL, wenn der Zustand erfolgreich geladen wurde, oder 0 ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die `lpszProfileName` Parameter ist `NULL`, diese Methode überprüft den Standardspeicherort für die Registrierung für `CKeyboardManager` Daten. Der Standardspeicherort für die Registrierung wird angegeben, indem die [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). Die Daten müssen zuvor geschrieben werden, mit der Methode [CKeyboardManager::SaveState](#savestate).  
+ Wenn die *LpszProfileName* Parameter NULL ist, diese Methode überprüft den Standardspeicherort für die Registrierung für `CKeyboardManager` Daten. Der Standardspeicherort für die Registrierung wird angegeben, indem die [CWinAppEx-Klasse](../../mfc/reference/cwinappex-class.md). Die Daten müssen zuvor geschrieben werden, mit der Methode [CKeyboardManager::SaveState](#savestate).  
   
  Wenn Sie ein Standardfenster nicht angeben, wird das Hauptrahmenfenster Ihrer Anwendung verwendet werden.  
   
 ##  <a name="resetall"></a>  CKeyboardManager::ResetAll  
- Lädt die tastenkombinationstabellen aus der Anwendungsressource erneut.  
+ Lädt die tastenkombinationstabellen aus Ressource für die Anwendung erneut.  
   
 ```  
 void ResetAll();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion löscht die Tastenkombinationen, gespeichert der `CKeyboardManager` Instanz. Es wird das den Status der Tastatur-Manager aus der Anwendungsressource dann neu.  
+ Diese Funktion löscht die Tastenkombinationen, gespeichert der `CKeyboardManager` Instanz. Es wird dann den Status der Ressource für die Anwendung den Manager für die Tastatur neu geladen.  
   
 ##  <a name="savestate"></a>  CKeyboardManager::SaveState  
- Speichert die Verknüpfung Key Tabellen an der Windows-Registrierung.  
+ Speichert die Verknüpfung Tabellen in der Windows-Registrierung.  
   
 ```  
 BOOL SaveState(
@@ -255,22 +256,22 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `lpszProfileName`  
+ [in] *LpszProfileName*  
  Der Registrierungspfad zum Speichern der `CKeyboardManager` Zustand.  
   
- [in] `pDefaultFrame`  
- Ein Zeiger auf ein Rahmenfenster, die im Fenster wird.  
+ [in] *pDefaultFrame*  
+ Ein Zeiger auf ein Rahmenfenster, das den Standardwert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich NULL, wenn der Zustand der Tastatur-Manager erfolgreich gespeichert wurde oder andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die `lpszProfileName` Parameter ist `NULL`, diese Methode schreibt den `CKeyboardManager` Zustands, in der vom angegebenen Standardspeicherort der [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). Wenn Sie einen Speicherort angeben, können Sie die Daten, die später mithilfe der Methode laden [CKeyboardManager::LoadState](#loadstate).  
+ Wenn die *LpszProfileName* Parameter NULL ist, diese Methode schreibt die `CKeyboardManager` am Standardspeicherort, der anhand des Status der [CWinAppEx-Klasse](../../mfc/reference/cwinappex-class.md). Wenn Sie einen Speicherort angeben, können Sie die Daten, die später mithilfe der-Methode laden [CKeyboardManager::LoadState](#loadstate).  
   
- Wenn Sie ein Standardfenster nicht angeben, wird das Hauptrahmenfenster als Standardfenster verwendet werden.  
+ Wenn Sie ein Standardfenster nicht angeben, wird das Hauptrahmenfenster als das Standardfenster verwendet werden.  
   
-##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators  
- Zeigt alle Tastenkombinationen, die Befehle im Menü zugeordnet.  
+##  <a name="showallaccelerators"></a>  Ckeyboardmanager  
+ Zeigt alle zugeordneten Befehle im Menü Tastenkombinationen.  
   
 ```  
 static void ShowAllAccelerators(
@@ -279,16 +280,16 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bShowAll`  
- Wenn `true`, alle Tastenkombinationen angezeigt. Wenn `false`, nur die ersten Tastenkombination wird angezeigt.  
+ [in] *bShowAll*  
+ Bei TRUE werden alle Tastenkombinationen angezeigt. Wenn "FALSE" werden nur die ersten Tastenkombination angezeigt.  
   
- [in] `lpszDelimiter`  
- Eine Zeichenfolge, die zwischen Tastenkombinationen eingefügt. Diese Trennzeichen hat keine Auswirkungen, wenn nur eine Tastenkombination angezeigt wird.  
+ [in] *LpszDelimiter*  
+ Eine Zeichenfolge, die zwischen Tastenkombinationen eingefügt werden soll. Diese Trennzeichen hat keine Auswirkungen, wenn nur eine Tastenkombination angezeigt wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig verfügt ein Befehl mehr als eine Tastenkombination zugeordnet, wird nur die erste Tastenkombination angezeigt. Diese Funktion können Sie alle zugeordneten alle Befehle Tastenkombinationen aufgeführt.  
+ Standardmäßig verfügt ein Befehl mehr als eine Tastenkombination zugeordnet, wird nur die ersten Tastenkombination angezeigt. Diese Funktion können Sie alle Tastenkombinationen zugeordnet alle Befehle auflisten.  
   
- Neben den Befehl in der Menüleiste werden die Tastenkombinationen aufgeführt. Wenn alle Tastenkombinationen angezeigt werden, wird die Zeichenfolge von bereitgestellten `lpszDelimiter` einzelne Tastenkombinationen getrennt wird.  
+ Die Tastenkombination gedrückt werden neben den Befehl in der Menüleiste aufgeführt. Wenn die Tastenkombination gedrückt angezeigt werden, wird die Zeichenfolge von bereitgestellten *LpszDelimiter* trennt die einzelnen Tastenkombinationen.  
   
 ##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
  Konvertiert ein Zeichen in der oberen registrieren.  
@@ -298,14 +299,14 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `nChar`  
+ [in] *nChar*  
  Das zu konvertierende Zeichen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Zeichen, das den oberen Register des Eingabeparameters ist.  
+ Das Zeichen, das den oberen Register des input-Parameters ist.  
   
 ##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable  
- Tabellenform Verknüpfung aktualisiert mit einer neuen Verknüpfung-Key-Tabelle.  
+ Eine wichtige Verknüpfung-Tabelle aktualisiert mit einer neuen Verknüpfung-Key-Tabelle.  
   
 ```  
 BOOL UpdateAccelTable(
@@ -322,26 +323,26 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pTemplate`  
+ [in] *pTemplate*  
  Ein Zeiger auf eine Dokumentvorlage.  
   
- [in] `lpAccel`  
- Ein Zeiger auf die neue Tastenkombination.  
+ [in] *LpAccel*  
+ Ein Zeiger auf die neue Zugriffstaste.  
   
- [in] `nSize`  
- Die Größe der neuen Verknüpfung-Tabelle.  
+ [in] *nSize*  
+ Die Größe der neuen Tabelle Verknüpfung.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Ein Zeiger auf das Standard-Rahmenfenster.  
   
- [in] `hAccelNew`  
+ [in] *hAccelNew*  
  Ein Handle für die neue Tabelle für die Verknüpfung.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Methode erfolgreich ist; andernfalls 0.  
+ Ungleich NULL, wenn die Methode erfolgreich ist; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Funktion, um die vorhandene Verknüpfung-Tabelle mit neuen Tastenkombinationen für mehrere Objekte der Frame-Fensters zu ersetzen. Die Funktion empfängt eine Dokumentvorlage als Parameter für den Zugriff auf alle Objekte des Frame-Fensters mit dem angegebenen Dokumentvorlage verbunden zu erhalten.  
+ Verwenden Sie diese Funktion, um die vorhandene Verknüpfung-Tabelle mit neuen Tastenkombinationen für verschiedene Windows-Frame-Objekte zu ersetzen. Die Funktion empfängt eine Dokumentvorlage, als Parameter für den Zugriff auf alle Fensterobjekte für Frame mit dem angegebenen Dokument-Vorlage verbunden sind.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

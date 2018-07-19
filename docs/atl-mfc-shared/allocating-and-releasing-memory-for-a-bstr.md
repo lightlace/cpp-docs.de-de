@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358324"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>Zuweisen und Freigeben von Arbeitsspeicher für einen BSTR
 Beim Erstellen von `BSTR`s und zwischen COM-Objekte zu übergeben, achten Sie in der zum Behandeln von den Arbeitsspeicher, die sie verwenden, um Speicherverluste zu vermeiden. Wenn eine `BSTR` bleibt in einer Schnittstelle, müssen Sie ihren Arbeitsspeicher freigeben, wenn Sie damit fertig sind. Jedoch, dass bei einem `BSTR` übergibt Out eine Schnittstelle, das empfangende Objekt übernimmt die Verantwortung für die Verwaltung des Arbeitsspeichers.  

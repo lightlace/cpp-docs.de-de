@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391232"
 ---
 # <a name="create-a-c-console-app-project"></a>Erstellen eines C++-Konsolen-app-Projekts
 
@@ -34,7 +35,7 @@ Visual Studio verwendet *Projekte*, um Code für eine App zu ordnen, und *Projek
 
 1. Öffnen Sie in Visual Studio die **Datei** Menü, und wählen Sie **neu > Projekt** So öffnen die **neues Projekt** Dialogfeld.
 
-   ![Öffnen Sie das Dialogfeld "Neues Projekt"](../build/media/vscpp-file-new-project.gif "öffnen Sie das Dialogfeld "Neues Projekt"")
+   ![Öffnen Sie das Dialogfeld "Neues Projekt"](../build/media/vscpp-file-new-project.gif "öffnen Sie das Dialogfeld \"Neues Projekt\"")
 
 1. In der **neues Projekt** wählen Sie im Dialogfeld **installiert**, **Visual C++** , wenn er nicht bereits ausgewählt ist, und wählen Sie dann die **leeres Projekt** Vorlage. In der **Namen** Feld *HelloWorld*. Wählen Sie **OK** zum Erstellen des Projekts.
 
@@ -52,7 +53,7 @@ Visual Studio kann alle Arten von apps und Komponenten für Windows und andere P
 
 1. In der **Eigenschaftenseiten** Dialogfeld unter **Konfigurationseigenschaften**Option **Linker**, **System**, und wählen Sie im Bearbeitungsfeld neben die **Subsystem** Eigenschaft. Wählen Sie im Dropdownmenü **Konsole (/ SUBSYSTEM: CONSOLE)**. Wählen Sie **OK** zum Speichern der Änderungen.
 
-   ![Öffnen Sie das Dialogfeld "Eigenschaftenseiten"](../build/media/vscpp-properties-linker-subsystem.gif "öffnen Sie das Dialogfeld "Eigenschaftenseiten"")
+   ![Öffnen Sie das Dialogfeld "Eigenschaftenseiten"](../build/media/vscpp-properties-linker-subsystem.gif "öffnen Sie das Dialogfeld \"Eigenschaftenseiten\"")
 
 Visual Studio weiß jetzt zum Erstellen des Projekts in einem Konsolenfenster ausgeführt. Als Nächstes, Sie fügen eine Quellcodedatei hinzu und geben Sie den Code für Ihre app.
 

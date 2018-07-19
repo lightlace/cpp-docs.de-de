@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889019"
 ---
 # <a name="string-c"></a>string (C++)
 Gibt an, dass das eindimensionale `char`, `wchar_t`, **Byte** (oder gleichwertigen) Array oder der Zeiger auf ein solches Array als Zeichenfolge behandelt werden muss.  

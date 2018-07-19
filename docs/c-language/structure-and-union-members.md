@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392249"
 ---
 # <a name="structure-and-union-members"></a>Struktur- und Unionmember
 Ein Memberauswahlausdruck bezieht sich auf Member von Strukturen und Unions. Ein solcher Ausdruck hat den Wert und Typ des ausgewählten Members.  

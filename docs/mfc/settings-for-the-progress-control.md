@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380008"
 ---
 # <a name="settings-for-the-progress-control"></a>Einstellungen für das Statussteuerelement
 Die grundlegenden Einstellungen für das Statussteuerelement ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) sind der Bereich und die aktuelle Position. Der Bereich stellt die gesamte Dauer des Vorgangs dar. Die aktuelle Position darstellt, den Status, den Ihre Anwendung, bis zum Abschließen des Vorgangs erzielt hat. Alle Änderungen an den Bereich oder die Position dazu führen, dass das Statussteuerelement selbst neu zeichnet.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358643"
 ---
 # <a name="control-classes"></a>Steuerelementklassen
 Steuerelementklassen kapseln eine Vielzahl von Windows-Standardsteuerelemente von statischem Textsteuerelemente bis hin zu Tree-Steuerelementen. Darüber hinaus bietet MFC einige neue Steuerelemente, z. B. Schaltflächen, Bitmaps und Steuerelement Balken an.  

@@ -1,7 +1,7 @@
 ---
 title: C/C++-Code in der Befehlszeile erstellen | Microsoft Docs
 ms.custom: conceptual
-ms.date: 03/29/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 241a7ae0d7f6c1adf269370301b39a3267440995
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322315"
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Erstellen von C/C++-Code in der Befehlszeile
 
@@ -50,7 +51,7 @@ Die eingabeaufforderungsverknüpfungen werden in einem Ordner hängt von der Ver
 
 Die tatsächlichen Start Ordner und Verknüpfung Menünamen variieren abhängig von der Version von Visual Studio, die Sie installiert haben und die Installation des Spitznamens für das, wenn Sie eine festlegen. Z. B., wenn Sie Visual Studio 2017 installiert haben und Sie haben es das angegebene eine Installation Spitzname der *Vorschau*, heißt die Developer-eingabeaufforderungsverknüpfung **Developer-Eingabeaufforderung für VS 2017 (Vorschau)**, in einem Ordner namens **Visual Studio 2017**.
 
-Wenn Sie installiert haben die [Build-Tools für Visual Studio-2017](https://go.microsoft.com/fwlink/p/?linkid=840931) (auch einschließlich der Visual Studio 2015 Update 3-Compilertoolset), nur architekturspezifischer oder der systemeigenen Sprache Cross tools entwicklereingabeaufforderung Optionen installiert werden. , und nicht die allgemeinen **Entwicklereingabeaufforderung** Verknüpfung.
+Wenn Sie installiert haben die [Build-Tools für Visual Studio-2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (auch einschließlich der Visual Studio 2015 Update 3-Compilertoolset), nur architekturspezifischer oder der systemeigenen Sprache Cross tools entwicklereingabeaufforderung Optionen installiert werden. , und nicht die allgemeinen **Entwicklereingabeaufforderung** Verknüpfung.
 
 <a name="developer_command_prompt"></a>
 ### <a name="to-open-a-developer-command-prompt-window"></a>Um ein Developer-Eingabeaufforderungsfenster zu öffnen.

@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890553"
 ---
 # <a name="toolbar-image-editor-for-icons"></a>Symbolleiste (Bildbearbeitung für Symbole)
 Die **Bildbearbeitung** Symbolleiste enthält Tools zum Zeichnen, zeichnen Text eingeben, löschen und Bearbeiten von Ansichten. Es enthält auch eine Optionsauswahl, mit der Sie Optionen für die Verwendung der einzelnen Tools auswählen können. Sie können z. B. aus verschiedenen Pinsel Breiten, Vergrößerungsfaktoren und Stile.  

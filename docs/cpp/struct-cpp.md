@@ -1,5 +1,5 @@
 ---
-title: Struktur (C++) | Microsoft Docs
+title: Struktur (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a9ea6bea20ad1591db9b07507b4db959d10a318
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4f4b343097be6c15b5a273fd4e2a59198858d576
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943239"
 ---
 # <a name="struct-c"></a>struct (C++)
-Das `struct`-Schlüsselwort definiert einen Strukturtyp und/oder eine Variable eines Strukturtyps.  
+Die **Struktur** -Schlüsselwort definiert einen Strukturtyp und/oder eine Variable eines Strukturtyps.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,36 +37,36 @@ Das `struct`-Schlüsselwort definiert einen Strukturtyp und/oder eine Variable e
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `template-spec`  
+ *Vorlage-Spezifikation*  
  Optionale Vorlagenspezifikationen. Weitere Informationen finden Sie unter [Vorlagenspezifikationen](templates-cpp.md).  
   
- `struct`  
- Das `struct`-Schlüsselwort.  
+ *struct*  
+ Die **Struktur** Schlüsselwort.  
   
- `ms-decl-spec`  
- Optionale Speicherklassenspezifikation. Weitere Informationen finden Sie unter der [__declspec](../cpp/declspec.md) Schlüsselwort.  
+ *MS-Decl-Spezifikation*  
+ Optionale Speicherklassenspezifikation. Weitere Informationen finden Sie in der [__declspec](../cpp/declspec.md) Schlüsselwort.  
   
- `tag`  
+ *Tag*  
  Der Typname, der für die Struktur angegeben wurde. Das Tag wird ein reserviertes Wort innerhalb des Gültigkeitsbereichs der Struktur. Das Tag ist optional. Wenn es nicht angegeben wird, wird eine anonyme Struktur definiert. Weitere Informationen finden Sie unter [Anonyme Klassentypen](../cpp/anonymous-class-types.md).  
   
- `base-list`  
- Optionale Liste von Klassen oder Strukturen, von denen diese Struktur ihre Member ableitet. Finden Sie unter [Basisklassen](../cpp/base-classes.md) für Weitere Informationen. Jede Klasse oder Struktur Basisnamen kann einen Zugriffsspezifizierer vorangestellt werden ([öffentlichen](../cpp/public-cpp.md), [private](../cpp/private-cpp.md), [geschützt](../cpp/protected-cpp.md)) und die [virtuellen](../cpp/virtual-cpp.md) Schlüsselwort. Finden Sie in der memberzugriffstabelle in [Steuern des Zugriffs auf Klassenmember](member-access-control-cpp.md) für Weitere Informationen.  
+ *Base-list*  
+ Optionale Liste von Klassen oder Strukturen, von denen diese Struktur ihre Member ableitet. Finden Sie unter [Basisklassen](../cpp/base-classes.md) für Weitere Informationen. Jede Klasse oder Struktur Basisnamen kann einen Zugriffsspezifizierer vorangestellt werden ([öffentliche](../cpp/public-cpp.md), [private](../cpp/private-cpp.md), [geschützt](../cpp/protected-cpp.md)) und die [virtuellen](../cpp/virtual-cpp.md) Schlüsselwort. Finden Sie in der memberzugriffstabelle in [Steuern des Zugriffs auf Klassenmember](member-access-control-cpp.md) für Weitere Informationen.  
   
- `member-list`  
- Liste der Strukturmember. Verweisen auf [Member Klassenüberblick](../cpp/class-member-overview.md) für Weitere Informationen. Der einzige Unterschied besteht darin, dass `struct` anstelle von `class` verwendet wird.  
+ *Memberliste*  
+ Liste der Strukturmember. Finden Sie unter [Member-Klassenübersicht](../cpp/class-member-overview.md) für Weitere Informationen. Der einzige Unterschied besteht darin, die **Struktur** dient anstelle von **Klasse**.  
   
- `declarators`  
- Deklaratorliste, die die Namen der Klasse angibt. Deklaratorlisten deklarieren eine oder mehrere Instanzen des Strukturtyps. Deklaratoren können Initialisierungslisten enthalten, wenn alle Datenmember der Klasse `public` sind. Initialisierungslisten werden häufig in Strukturen verwendet, da Datenmember standardmäßig `public` sind.  Finden Sie unter [Übersicht von Deklaratoren](../cpp/overview-of-declarators.md) für Weitere Informationen.  
+ *Deklaratoren*  
+ Deklaratorliste, die die Namen der Klasse angibt. Deklaratorlisten deklarieren eine oder mehrere Instanzen des Strukturtyps. Deklaratoren können Initialisierungslisten enthalten, wenn alle Datenmember der Klasse sind **öffentliche**. Initialisierungslisten werden häufig in Strukturen, da der Datenmember sind **öffentliche** standardmäßig.  Finden Sie unter [Übersicht von Deklaratoren](../cpp/overview-of-declarators.md) für Weitere Informationen.  
   
 ## <a name="remarks"></a>Hinweise  
  Ein Strukturtyp ist ein benutzerdefinierter zusammengesetzter Typ. Er setzt sich aus Feldern oder Membern zusammen, die unterschiedliche Typen aufweisen können.  
   
- In C++ ist eine Struktur identisch mit einer Klasse, mit der Ausnahme, dass die Member standardmäßig `public` sind.  
+ In C++ ist eine Struktur ist identisch mit einer Klasse mit dem Unterschied, dass die Member werden **öffentliche** standardmäßig.  
   
- Informationen über verwaltete Klassen und Strukturen finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Weitere Informationen über verwaltete Klassen und Strukturen finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md).  
   
 ## <a name="using-a-structure"></a>Verwenden einer Struktur  
- In C müssen Sie explizit das `struct`-Schlüsselwort verwenden, um eine Struktur zu deklarieren. In C++ müssen Sie das `struct`-Schlüsselwort nicht verwenden, nachdem der Typ definiert wurde.  
+ In C müssen Sie explizit verwenden die **Struktur** Schlüsselwort, um eine Struktur zu deklarieren. In C++, Sie ist nicht erforderlich, verwenden die **Struktur** Schlüsselwort, nachdem der Typ definiert wurde.  
   
  Sie können Variablen deklarieren, wenn der Strukturtyp so definiert wurde, dass mindestens ein durch Trennzeichen getrennter Variablenname zwischen schließender Klammer und Semikolon steht.  
   
@@ -75,7 +76,7 @@ Das `struct`-Schlüsselwort definiert einen Strukturtyp und/oder eine Variable e
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   

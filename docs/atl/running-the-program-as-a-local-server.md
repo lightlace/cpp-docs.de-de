@@ -1,5 +1,5 @@
 ---
-title: Ausführen des Programms als lokaler Server | Microsoft Docs
+title: Ausführen des Programms als lokaler Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b8a79978528493e02ac5a272dafe8da6fdc1d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ae2e44ba51a878d293ad5b497a1638cc9d7dc76
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848482"
 ---
 # <a name="running-the-program-as-a-local-server"></a>Ausführen des Programms als lokaler Server
-Wenn das Programm als Dienst ausführen unpraktisch ist, können Sie die Registrierung vorübergehend ändern, damit das Programm als normaler lokaler Server ausgeführt wird. Benennen Sie einfach die `LocalService` Wert unter der AppID an `_LocalService` und stellen Sie sicher der `LocalServer32` Schlüssel unter der CLSID richtig festgelegt ist. (Beachten Sie, dass benennt mithilfe von DCOMCNFG um anzugeben, dass Ihre Anwendung auf einem anderen Computer ausgeführt werden soll, um Ihre `LocalServer32` um `_LocalServer32`.) Das Programm ausgeführt wird, wie ein lokaler Server ein paar Sekunden beim Start da findet der Aufruf von **StartServiceCtrlDispatcher** in `CAtlServiceModuleT::Start` braucht einige Sekunden, bevor ein Fehler auftritt.  
+Wenn die Anwendung als Dienst ausführen mergereplikationsabonnenten nicht geeignet ist, können Sie die Registrierung vorübergehend ändern, damit das Programm als normaler lokalen Server ausgeführt wird. Benennen Sie einfach die `LocalService` Wert unter Ihrem App-ID, `_LocalService` und stellen Sie sicher die `LocalServer32` Schlüssel unter Ihrer CLSID richtig festgelegt ist. (Beachten Sie, dass benennt mithilfe von DCOMCNFG um anzugeben, dass Ihre Anwendung auf einem anderen Computer ausgeführt werden soll, um Ihre `LocalServer32` um `_LocalServer32`.) Das Programm ausgeführt wird, wie ein lokaler Server Weitere wenige Sekunden beim Start dauert da der Aufruf von `StartServiceCtrlDispatcher` in `CAtlServiceModuleT::Start` dauert ein paar Sekunden, bevor ein Fehler auftritt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tipps zum Debuggen](../atl/debugging-tips.md)

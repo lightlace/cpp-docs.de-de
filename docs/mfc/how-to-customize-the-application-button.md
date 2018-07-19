@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351363"
 ---
 # <a name="how-to-customize-the-application-button"></a>Gewusst wie: Anpassen der Anwendungsschaltfläche
 Wenn Sie die Schaltfläche klicken, wird ein Menü mit Befehlen angezeigt. In der Regel das Menü enthält dateibezogene Befehle wie z. B. **öffnen**, **speichern**, **Drucken**, und **beenden**.  

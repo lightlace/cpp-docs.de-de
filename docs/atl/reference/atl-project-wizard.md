@@ -1,5 +1,5 @@
 ---
-title: ATL-Projekt-Assistent | Microsoft Docs
+title: ATL-Projektassistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,47 +17,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f47af89297efba2501e7f548075800d93dfda296
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80556b31650cc04e66b2ad6681d60eff2fa72d5f
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025817"
 ---
 # <a name="atl-project-wizard"></a>ATL-Projekt-Assistent
-Die Active Template Library (ATL) ist eine Reihe von Template-basierten C++-Klassen, die Schreiben von kleinen und schnelle COM-Objekten vereinfachen. ATL-Projekt-Assistent erstellt ein Projekt mit den Strukturen, die COM-Objekte enthalten.  
+Die Active Template Library (ATL) ist eine Reihe von Template-basierten C++-Klassen, die das Schreiben von klein und schnell eine COM-Objekte vereinfachen. ATL-Projektassistenten erstellt ein Projekt mit den Strukturen, die COM-Objekte enthalten.  
   
 ## <a name="overview"></a>Übersicht  
- Diese Seite des Assistenten beschreibt den aktuellen [Anwendungseinstellungen für das ATL-Projekt](../../atl/reference/application-settings-atl-project-wizard.md) Sie erstellen. Standardmäßig weist das Projekt die folgenden Einstellungen:  
+ Diese Seite des Assistenten wird beschrieben, die aktuelle [Anwendungseinstellungen für das ATL-Projekt](../../atl/reference/application-settings-atl-project-wizard.md) erstellen. Standardmäßig verfügt das Projekt die folgenden Einstellungen:  
   
--   Dynamic Link Library gibt an, dass der Server eine DLL, und daher ein in-Process-Server ist.  
+-   Dynamic Link Library gibt an, dass der Server eine DLL und somit in-Process-Server ist.  
   
--   Attributiert, gibt an, dass das Projekt Attribute verwendet.  
+-   Attributiert, gibt an, dass Ihr Projekt Attribute verwendet.  
   
- Zum Ändern dieser Standardeinstellungen klicken Sie auf **Anwendungseinstellungen** in der linken Spalte der Assistenten, und nehmen Änderungen in dieser Seite des ATL-Projekt-Assistenten.  
+ Zum Ändern dieser Standardeinstellungen klicken Sie auf **Anwendungseinstellungen** in der linken Spalte der Assistenten, und stellen Änderungen in die entsprechende Seite des ATL-Projektassistenten.  
   
- Informationen zu den Standardeinstellungen für das Projekt, z. B. die Auswahl des Zeichensatzes und verknüpfen die Standardwerte, finden Sie unter [Standardkonfigurationen für ATL-Projekt](../../atl/reference/default-atl-project-configurations.md).  
+ Informationen zu den Standardeinstellungen für das Projekt, einschließlich der Auswahl des Zeichensatzes und verknüpfen die Standardwerte, finden Sie unter [standardmäßige ATL-Projektkonfigurationen](../../atl/reference/default-atl-project-configurations.md).  
   
- Nachdem Sie eine ATL-Projekt erstellen, können Sie hinzufügen Objekte oder Steuerelemente zum Projekt mit Visual C++ [-code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md). Sie können die folgenden Typen von Erweiterungen, um ein einfaches ATL-Projekt mit Code-Assistenten erstellen:  
+ Nachdem Sie einem ATL-Projekt erstellen, können Sie hinzufügen Objekte oder Steuerelemente zu Ihrem Projekt mithilfe von Visual C++ [-code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md). Sie können die folgenden Typen von Erweiterungen mit Code-Assistenten ein einfaches ATL-Projekt erstellen:  
   
--   [ATL-Projekt-Objekt und Steuerelemente hinzufügen](../../atl/reference/adding-objects-and-controls-to-an-atl-project.md)  
+-   [Hinzufügen von Objekten und Steuerelementen zu einem ATL-Projekt](../../atl/reference/adding-objects-and-controls-to-an-atl-project.md)  
   
 -   [Fügen Sie eine neue Schnittstelle in einem ATL-Projekt hinzu.](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)  
   
--   [Fügen Sie einem ATL-Projekt eine COM+ 1.0-Komponente](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)  
+-   [Hinzufügen einer COM+ 1.0-Komponente zu einem ATL-Projekt](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)  
   
- Darüber hinaus berücksichtigen Sie diese Aufgaben beim Erstellen und erweitern ein ATL-Projekts:  
+ Darüber hinaus berücksichtigen Sie diese Aufgaben beim Erstellen und erweitern ein ATL-Projekt:  
   
--   [Stellen Sie eine nicht erstellbare ATL-Objekt](../../atl/reference/making-an-atl-object-noncreatable.md)  
+-   [Stellen Sie eine ATL-Objekt als nicht erstellbares Objekt](../../atl/reference/making-an-atl-object-noncreatable.md)  
   
--   [Optimieren des Compilers für ATL-Projekt](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
+-   [Optimieren des Compilers für ein ATL-Projekt](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   
- Sie können Projekteigenschaften angeben (z. B. [angibt, ob mit der CRT statisch verknüpft](../../atl/programming-with-atl-and-c-run-time-code.md)) in der [Projekteigenschaften](../../ide/general-property-page-project.md) Seite, und Sie können festlegen, [Buildkonfigurationen](/visualstudio/ide/understanding-build-configurations) für ein ATL-Projekt. Finden Sie unter [Projekten zum Erstellen von Anwendungen mithilfe von](http://msdn.microsoft.com/en-us/3339fa90-bac2-4b95-8361-662a2e0e7dfe) für Weitere Informationen.  
+ Sie können Projekteigenschaften angeben (z. B. [angibt, ob mit der CRT statisch verknüpft](../../atl/programming-with-atl-and-c-run-time-code.md)) in der [Projekteigenschaften](../../ide/general-property-page-project.md) Seite, und Sie können festlegen, [Buildkonfigurationen](/visualstudio/ide/understanding-build-configurations) für ein ATL-Projekt. Finden Sie unter [Projekte zum Erstellen von Anwendungen mithilfe von](http://msdn.microsoft.com/3339fa90-bac2-4b95-8361-662a2e0e7dfe) für Weitere Informationen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von Visual C++-Projekten](../../ide/creating-and-managing-visual-cpp-projects.md)   
- [Visual C++-Projekttypen](../../ide/visual-cpp-project-types.md)   
- [Erstellen von Desktopprojekten mit Anwendungs-Assistenten](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Grundlagen von ATL-COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Visual C++ Project Types (Visual C++-Projekttypen)](../../ide/visual-cpp-project-types.md)   
+ [Creating Desktop Projects By Using Application Wizards (Erstellen von Desktopprojekten mit Anwendungs-Assistenten)](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md)   
  [Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Lernprogramm](../../atl/active-template-library-atl-tutorial.md)
+ [Tutorial](../../atl/active-template-library-atl-tutorial.md)
 

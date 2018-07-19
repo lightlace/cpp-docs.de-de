@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39db2ead78a123c3274405e3560bca1c67cf1f5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 10c01fcc7c75fb3ea9abf5803f5f17d3bd378333
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953900"
 ---
 # <a name="timeputbyname-class"></a>time_put_byname-Klasse
 
@@ -49,13 +50,15 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-`_Locname` Eine Gebietsschemanamen.
+*_Locname*  
+ Name eines Gebietsschemas.
 
-`_Refs` Ein Verweiszähler.
+*_Refs*  
+ Eine initiale Verweisanzahl.
 
 ## <a name="remarks"></a>Hinweise
 
-Das Verhalten wird durch das [named](../standard-library/locale-class.md#name)-Gebietsschema `_Locname` bestimmt. Alle Konstruktoren initialisieren ihr jeweiliges Basisobjekt mit [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`).
+Das Verhalten richtet sich nach der [mit dem Namen](../standard-library/locale-class.md#name) Gebietsschema *_Locname*. Jeder Konstruktor initialisiert sein Basisobjekt mit [Time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a6c42a4203fb1d0224f5f31e4123dca9a6fad65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121837"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane-Klasse
 Implementiert die Funktionalität eines Bereichs mit abtrennbaren Registerkarten.  
@@ -87,7 +88,7 @@ class CTabbedPane : public CBaseTabbedPane
 ## <a name="remarks"></a>Hinweise  
  Das Framework erstellt automatisch eine Instanz dieser Klasse, wenn ein Benutzer einen Bereich an einen anderen anfügt, indem es auf die Beschriftung des zweiten Bereichs verweist. Alle der vom Framework erstellten Bereiche im Registerkartenformat besitzen eine ID von "-1".  
   
- Um normale Registerkarten anstatt von Registerkarten im Outlook-Format anzugeben, übergeben die `AFX_CBRS_REGULAR_TABS` -Stil an die [CDockablePane:: CreateEx](../../mfc/reference/cdockablepane-class.md#createex) Methode.  
+ Um normale Registerkarten anstatt von Registerkarten im Outlook-Format anzugeben, übergeben Sie die Formatvorlage AFX_CBRS_REGULAR_TABS, die [CDockablePane:: CreateEx](../../mfc/reference/cdockablepane-class.md#createex) Methode.  
   
  Wenn Sie einen Bereich im Registerkartenformat mit abtrennbaren Registerkarten erstellen, kann der Bereich automatisch durch das Framework zerstört werden. Speichern Sie daher nicht den Zeiger. Um einen Zeiger zum Bereich im Registerkartenformat zu erhalten, rufen Sie die `CBasePane::GetParentTabbedPane`-Methode auf.  
   
@@ -176,8 +177,8 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pBar`  
- [in] `bHide`  
+ [in] *pBar*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -191,8 +192,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `bEnable`  
- `TRUE` So aktivieren Sie die automatische registerkartenfärbung; andernfalls `FALSE`.  
+ [in] *bAktivieren*  
+ True, um die automatische registerkartenfärbung zu aktivieren. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese statische Methode zum Aktivieren oder deaktivieren die automatische registerkartenfärbung in alle Bereiche im Registerkartenformat in der Anwendung. Wenn diese Funktion aktiviert ist, wird jede Registerkarte durch eine eigene Farbe gefüllt. Sie finden die Liste der Farben, die verwendet werden, um die Farbe der Registerkarten durch Aufrufen der [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) Methode.  
@@ -213,10 +214,10 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pBar`  
- [in] `nTabID`  
- [in] `dockMethod`  
- [in] `bHide`  
+ [in] *pBar*  
+ [in] *nTabID*  
+ [in] *DockMethod*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -232,10 +233,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [out] `rectTabAreaTop`  
+ [out] *RectTabAreaTop*  
  Enthält die Größe und Position in Bildschirmkoordinaten des oberen Registerkartenbereichs.  
   
- [out] `rectTabAreaBottom`  
+ [out] *RectTabAreaBottom*  
  Enthält die Größe und Position des Registerkartenbereichs unteren Bereich, in Bildschirmkoordinaten.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -273,7 +274,7 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn der Registerkartenbereich am unteren Rand des Fensters im Registerkartenformat befindet; andernfalls `FALSE`.  
+ True, wenn der Registerkartenbereich am unteren Rand des Fensters im Registerkartenformat befindet. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -285,11 +286,11 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Legen Sie dieses statische Element auf `TRUE` gezwungen aller Registerkarten in der Anwendung, die am oberen Rand der Seite im Registerformat angezeigt werden.  
+ Legen Sie dieses statische Element auf "true" erzwingen, die alle Registerkarten in der Anwendung, die am oberen Rand der Seite im Registerformat angezeigt werden.  
   
  Dieser Wert muss festgelegt werden, bevor Sie ein Bereich im Registerkartenformat erstellt wurde.  
   
- Der Standardwert ist `FALSE`.  
+ Der Standardwert ist "false".  
   
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
  Laufzeitklasseninformationen für ein benutzerdefiniertes `CMFCTabCtrl`-abgeleitetes Objekt.  
@@ -319,7 +320,7 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `arColors`  
+ [in] *ArColors*  
  Enthält das Array der Farben festgelegt.  
   
 ### <a name="remarks"></a>Hinweise  

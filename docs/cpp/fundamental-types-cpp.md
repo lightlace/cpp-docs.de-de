@@ -1,5 +1,5 @@
 ---
-title: Grundlegende Typen (C++) | Microsoft Docs
+title: Grundlegende Typen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -53,16 +53,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c24ee360f1c14aa9b355f45ec1c12877efa306c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d91971b7d96b09fe1fd0d14a2a711f7771503a6a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941475"
 ---
 # <a name="fundamental-types--c"></a>Grundlegende Typen (C++)
 Grundlegende Typen in C++ werden in drei Kategorien unterteilt: integraler Typ, Gleitkommatyp und void. Von integralen Typen können ganze Zahlen verarbeitet werden. Von Gleitkommatypen können Werte angegeben werden, die möglicherweise Nachkommastellen aufweisen.  
   
- Der Typ [void](../cpp/void-cpp.md) beschreibt eine leere Menge von Werten. Es kann keine Variable vom Typ `void` angegeben werden. Dieser wird hauptsächlich verwendet, um Funktionen zu deklarieren, die keine Werte zurückgeben, oder um generische Zeiger auf nicht typisierte oder willkürlich typisierte Daten zu deklarieren. Jeder Ausdruck kann explizit konvertiert oder in den Typ `void`umgewandelt werden. Allerdings werden solche Ausdrücke auf folgende Anwendungsbereiche begrenzt:  
+ Der Typ [void](../cpp/void-cpp.md) beschreibt eine leere Menge von Werten. Keine Variable vom Typ **"void"** kann angegeben werden, dient in erster Linie zum Deklarieren von Funktionen, die keine Werte zurückgeben, oder deklarieren generische Zeiger auf nicht typisierte oder willkürlich typisierte Daten. Jeder Ausdruck kann explizit konvertiert oder umgewandelt Typ **"void"**. Allerdings werden solche Ausdrücke auf folgende Anwendungsbereiche begrenzt:  
   
 -   Eine Ausdrucksanweisung. (Weitere Informationen finden Sie unter [Ausdrücke](../cpp/expressions-cpp.md).)  
   
@@ -76,17 +77,17 @@ Grundlegende Typen in C++ werden in drei Kategorien unterteilt: integraler Typ, 
   
 |Kategorie|Typ|Inhalt|  
 |--------------|----------|--------------|  
-|Ganzzahlig|`char`|Der Typ `char` ist ein integraler Typ, der normalerweise Member des grundlegenden Ausführungszeichensatzes enthält. In Microsoft C++ ist dies standardmäßig ASCII.<br /><br /> Der C++-Compiler behandelt Variablen des Typs `char`, `signed` `char`und `unsigned` `char` , als würde es sich um unterschiedliche Typen handeln. Variablen des Typs `char` werden zu `int` heraufgestuft, als ob es sich standardmäßig um den Typ `signed` `char` handeln würde, es sei denn, es wird die Kompilierungsoption /J verwendet. In diesem Fall werden sie als Typ `unsigned` `char` behandelt und auf `int` ohne Vorzeichenerweiterung hochgestuft.|  
-||`bool`|Der Typ `bool` ist ein integraler Typ, der entweder den Wert `true` oder `false`haben kann. Seine Größe ist nicht angegeben.|  
-||`short`|Der Typ `short` `int` (oder einfach `short`) ist ein integraler Typ, der größer oder gleich der Größe des Typs `char`ist und kleiner oder gleich der Größe des Typs `int`.<br /><br /> Objekte des Typs `short` können als `signed` `short` oder `unsigned short`deklariert werden. `Signed short` ist ein Synonym für `short`.|  
-||`int`|Der Typ `int` ist ein integraler Typ, der größer oder gleich der Größe des Typs `short` `int`ist und kleiner oder gleich der Größe des Typs `long`.<br /><br /> Objekte des Typs `int` können als `signed` `int` oder `unsigned` `int`deklariert werden. `Signed` `int` ist ein Synonym für `int`.|  
-||`__int8`, `__int16`, `__int32`, `__int64`|Ganzzahl mit fester Größe `__int n`, wobei `n` in Bits die Größe der ganzzahligen Variablen ist. `__int8`, `__int16`, `__int32` und `__int64` sind Microsoft-spezifische Schlüsselwörter. Nicht alle Typen sind in allen Architekturen verfügbar. `(__int128` wird nicht unterstützt.)|  
-||`long`|Der Typ `long` (oder `long` `int`) ist ein ganzzahliger Typ, der größer oder gleich der Größe des Typs `int`ist.<br /><br /> Objekte des Typs `long` können als `signed` `long` oder `unsigned` `long`deklariert werden. `Signed` `long` ist ein Synonym für `long`.|  
-||`long` `long`|Größer als ein unsigned `long`.<br /><br /> Objekte des Typs `long long` können als `signed` `long long` oder `unsigned` `long long`deklariert werden. `signed` `long long` ist ein Synonym für `long long`.|  
-||`wchar_t`, `__wchar_t`|Eine Variable des Typs `wchar_t` gibt einen Breitzeichen- oder einen Mehrbytezeichentyp an. Standardmäßig ist `wchar_t` ein systemeigener Typ. Sie können jedoch [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) verwenden, um `wchar_t` zu einer Typdefinition für `unsigned short`zu machen. Der Typ `__wchar_t` ist ein Microsoft-spezifisches Synonym für den systemeigenen Typ `wchar_t` .<br /><br /> Verwenden Sie das Präfix L vor einem Zeichen oder einem Zeichenliteral, um einen Breitzeichentyp festzulegen.|  
-|Gleitkomma|`float`|Der Typ `float` ist der kleinste Gleitkommatyp.|  
-||`double`|Der Typ `double` ist ein Gleitkommatyp, der größer oder gleich dem Typ `float`, aber kleiner oder gleich der Größe des Typs `long` `double`ist.<br /><br /> Microsoft-spezifisch: Die Darstellung von `long double` und `double` ist identisch. Allerdings sind `long double` und `double` unabhängige Typen.|  
-||`long double`|Der Typ `long` `double` ist ein Gleitkommatyp, der größer als der oder gleich dem Typ `double`ist.|  
+|Ganzzahlig|**char**|Typ **Char** ist ein integraler Typ, der normalerweise Member des grundlegenden ausführungszeichensatz enthält, ist dies standardmäßig ASCII in Microsoft C++.<br /><br /> Der C++-Compiler behandelt Variablen des Typs **Char**, **signiert Char**, und **unsigned Char** als mit unterschiedlichen Typen. Variablen vom Typ **Char** zu hochgestuft **Int** als wären sie Typ **signiert Char** standardmäßig, wenn die Kompilierungsoption/j verwendet wird. In diesem Fall werden sie als Typ behandelt **unsigned Char** und zu hochgestuft **Int** ohne vorzeichenerweiterung.|  
+||**bool**|Typ **"bool"** ist ein integraler Typ, der einen der beiden Werte enthalten kann **"true"** oder **"false"**. Seine Größe ist nicht angegeben.|  
+||**short**|Typ **short Int** (oder einfach **kurze**) ist ein integraler Typ, der größer als oder gleich der Größe des Typs **Char**, und kleiner als oder gleich der Größe des Typs **Int**.<br /><br /> Objekte des Typs **kurze** können deklariert werden, als **kurz signiert** oder **unsigned short**. **Kurz gesagt signiert** ist ein Synonym für **kurze**.|  
+||**int**|Typ **Int** ist ein integraler Typ, der größer als oder gleich der Größe des Typs **short Int**, und kleiner als oder gleich der Größe des Typs **lange**.<br /><br /> Objekte des Typs **Int** können deklariert werden, als **signiert Int** oder **ganze Zahl ohne Vorzeichen**. **Int signiert** ist ein Synonym für **Int**.|  
+||**__int8**, **__int16**, **__int32**, **__int64**|Ganzzahl mit fester Größe `__int n`, wobei `n` in Bits die Größe der ganzzahligen Variablen ist. **__int8**, **__int16**, **__int32** und **__int64** sind Microsoft-spezifische Schlüsselwörter. Nicht alle Typen sind in allen Architekturen verfügbar. (**__int128** wird nicht unterstützt.)|  
+||**long**|Typ **lange** (oder **long Int**) ist ein integraler Typ, der größer als oder gleich der Größe des Typs **Int**.<br /><br /> Objekte des Typs **lange** können deklariert werden, als **lange signiert** oder **unsigned long**. **Lange signiert** ist ein Synonym für **lange**.|  
+||**langes long**|Größer als ein unsigned **lange**.<br /><br /> Objekte des Typs **long long** können deklariert werden, als **long long signiert** oder **long long ohne Vorzeichen**. **long long signiert** ist ein Synonym für **long long**.|  
+||**"wchar_t"**, **"__wchar_t"**|Eine Variable vom Typ **"wchar_t"** kennzeichnet einen Breitzeichen oder Multibytezeichen Zeichentyp. In der Standardeinstellung **"wchar_t"** ist ein systemeigener Typ, aber Sie können [/Zc:](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) vornehmen **"wchar_t"** eine Typedef für **unsigned short**. Die **__wchar_t** Typ ist ein Microsoft-spezifisches Synonym für den systemeigenen **"wchar_t"** Typ.<br /><br /> Verwenden Sie das Präfix L vor einem Zeichen oder einem Zeichenliteral, um einen Breitzeichentyp festzulegen.|  
+|Gleitkomma|**float**|Typ **"float"** ist der kleinste Gleitkommatyp Punkttyp.|  
+||**double**|Typ **doppelte** ist ein Gleitkommatyp, der größer als oder gleich dem Typ **"float"**, aber kleiner oder gleich der Größe des Typs **long double**.<br /><br /> Microsoft-spezifisch: die Darstellung der **long double** und **doppelte** identisch ist. Allerdings **long double** und **doppelte** sind separate Projektionstypen und.|  
+||**long double**|Typ **long double** ist ein Gleitkommatyp, der größer als oder gleich dem Typ **doppelte**.|  
   
  **Microsoft-spezifisch**  
   
@@ -96,10 +97,10 @@ Grundlegende Typen in C++ werden in drei Kategorien unterteilt: integraler Typ, 
   
 |Typ|Größe|  
 |----------|----------|  
-|`bool`, `char`, `unsigned char`, `signed char`, `__int8`|1 Byte|  
-|`__int16`, `short`, `unsigned short`, `wchar_t`, `__wchar_t`|2 Bytes|  
-|`float`, `__int32`, `int`, `unsigned int`, `long`, `unsigned long`|4 Bytes|  
-|`double`, `__int64`, `long double`, `long long`|8 Bytes|  
+|**"bool"**, **Char**, **unsigned Char**, **signiert Char**, **__int8**|1 Byte|  
+|**__int16**, **kurze**, **unsigned short**, **"wchar_t"**, **"__wchar_t"**|2 Bytes|  
+|**"float"**, **__int32**, **Int**, **ganze Zahl ohne Vorzeichen**, **lange**, **unsigned long**|4 Bytes|  
+|**doppelte**, **__int64**, **long double**, **long long**|8 Bytes|  
   
  **Ende Microsoft-spezifisch**  
   

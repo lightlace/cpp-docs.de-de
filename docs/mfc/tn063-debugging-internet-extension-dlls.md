@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380464"
 ---
 # <a name="tn063-debugging-internet-mfc-extension-dlls"></a>TN063: Debuggen von Internet-MFC-Erweiterungs-DLLs
 Diese Information ist veraltet und wurde entfernt.  

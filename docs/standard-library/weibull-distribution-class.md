@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e27742bc956a4d6c86db4a3eb0893ff8437e6c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b651f4117cae6d3b4ed72d22ace5194e5d24446
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957671"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution-Klasse
 
@@ -79,11 +80,11 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Parameter
 
-*RealType* der gleitkommaergebnistyp standardmäßig `double`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* der gleitkommaergebnistyp standardmäßig **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleitkommatyps produziert. Wenn kein entsprechend der Weibull-Verteilung verteilter Wert ausgegeben wird, geben Sie `double` ein. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Vorlagenklasse beschreibt eine Verteilung, die Werte eines benutzerdefinierten Gleitkommatyps produziert geben **doppelte** Wenn none angegeben wird, entsprechend der Weibull-Verteilung verteilter Wert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -231,11 +232,14 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*eine* der `a` -verteilungsparameter.
+*a*  
+Der `a`-Verteilungsparameter.
 
-*b* der `b` -verteilungsparameter.
+*b*  
+Der `b`-Verteilungsparameter.
 
-*Parm* der `param_type` Struktur für die Verteilung verwendete Parameterstruktur.
+*parm*  
+Die für die Erstellung der Verteilung verwendete `param_type`-Struktur.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -263,11 +267,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parameter
 
-*eine* der `a` -verteilungsparameter.
+*a*  
+Der `a`-Verteilungsparameter.
 
-*b* der `b` -verteilungsparameter.
+*b*  
+Der `b`-Verteilungsparameter.
 
-*Rechte* der `param_type` zu vergleichende Objekt.
+*right*  
+Das mit diesem `param_type`-Objekt zu vergleichende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 

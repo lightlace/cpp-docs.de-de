@@ -22,21 +22,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1055fd9b1ef75b2090478d85e8251d1800b8b039
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e19cda1869938a854ff03ea83cdda747e8120a0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929529"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Verwalten von Menüs, Steuerleisten und Zugriffstasten
 Das Rahmenfenster verwaltet aktualisieren Benutzeroberflächenobjekten, einschließlich Menüs, Symbolleisten-Schaltflächen, die Statusleiste und Zugriffstasten. Ebenso wird die Freigabe der Menüleiste im MDI-Anwendungen verwaltet.  
   
 ## <a name="managing-menus"></a>Verwalten von Menüs  
- Das Rahmenfenster beteiligt ist, Aktualisieren von Elementen der Benutzeroberfläche mithilfe der `ON_UPDATE_COMMAND_UI` Mechanismus in beschriebenen [wie Aktualisieren von Benutzeroberflächenobjekten](../mfc/how-to-update-user-interface-objects.md). Schaltflächen in Symbolleisten und anderen Steuerleisten werden während der Leerlaufschleife aktualisiert. Menüelemente im Dropdown-Menüs in der Menüleiste werden aktualisiert, kurz bevor das Dropdownmenü.  
+ Das Rahmenfenster beteiligt ist, Aktualisieren von Elementen der Benutzeroberfläche mithilfe des Mechanismus der ON_UPDATE_COMMAND_UI in beschriebenen [wie Aktualisieren von Benutzeroberflächenobjekten](../mfc/how-to-update-user-interface-objects.md). Schaltflächen in Symbolleisten und anderen Steuerleisten werden während der Leerlaufschleife aktualisiert. Menüelemente im Dropdown-Menüs in der Menüleiste werden aktualisiert, kurz bevor das Dropdownmenü.  
   
  Verwaltet die MDI-Rahmenfenster für MDI-Anwendungen die Menüleiste und die Beschriftung. Ein MDI-Rahmenfenster besitzt ein Standardmenü, die als Menüleiste verwendet wird, wenn keine aktive untergeordnete MDI-Fenster vorhanden sind. Beim aktiven untergeordneten Elemente vorhanden sind, ist die Menüleiste des MDI-Rahmenfensters von des Menüs für das aktive untergeordnete MDI-Fenster übernommen. Wenn eine MDI-Anwendung mehrere Dokumenttypen, z. B. Diagramm bzw. Arbeitsblatt Dokumente unterstützt jeder versetzt eigene Menüs in der Menüleiste und ändert das Hauptrahmenfenster Beschriftung.  
   
- [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) standardimplementierungen für die standard-Befehle im Menü Fenster für MDI-Anwendungen enthält. Insbesondere die neuen Fenster-Befehl (**ID_WINDOW_NEW**) wird implementiert, um eine neue Rahmenfenster und die Sicht auf das aktuelle Dokument erstellen. Sie müssen diese Implementierungen zu überschreiben, nur dann, wenn Sie erweiterte Anpassung benötigen.  
+ [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) standardimplementierungen für die standard-Befehle im Menü Fenster für MDI-Anwendungen enthält. Insbesondere wird der Befehl "Neues Fenster" (ID_WINDOW_NEW) implementiert, um ein neues Rahmenfenster und die Sicht auf das aktuelle Dokument zu erstellen. Sie müssen diese Implementierungen zu überschreiben, nur dann, wenn Sie erweiterte Anpassung benötigen.  
   
  Mehrere untergeordnete MDI denselben Dokumenttyp freigeben Menüressourcen. Wenn mehrere untergeordnete MDI-Fenster von der gleichen Dokumentvorlage erstellt werden, können alle die gleiche Menüressource, Systemressourcen in Windows speichern verwenden.  
   

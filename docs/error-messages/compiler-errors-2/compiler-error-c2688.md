@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236013"
 ---
 # <a name="compiler-error-c2688"></a>Compiler-Fehler C2688 generiert
 "C2:: fgrv": covariant-Rückgaben mit mehreren oder virtuelle Vererbung für Varargs-Funktionen nicht unterstützt.  

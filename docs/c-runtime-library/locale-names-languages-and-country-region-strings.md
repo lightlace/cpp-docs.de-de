@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391814"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Gebietsschema-Namen, Sprachen und Zeichenfolgen für Länder und Regionen
 Das *locale*-Argument für die Funktionen `setlocale` und `_create_locale` kann mithilfe der Gebietsschemanamen, Sprachen, Länder-/Regionscodes und Codepages festgelegt werden, die von der Windows NLS API unterstützt werden. Das *locale*-Argument weist folgende Form auf:  

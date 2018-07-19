@@ -1,7 +1,7 @@
 ---
 title: Datentypkonstanten| Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -44,6 +44,39 @@ f1_keywords:
 - UCHAR_MAX
 - FLT_EPSILON
 - UINT_MAX
+- LLONG_MIN
+- LLONG_MAX
+- ULLONG_MAX
+- _I8_MIN
+- _I8_MAX
+- _UI8_MAX
+- _I16_MIN
+- _I16_MAX
+- _UI16_MAX
+- _I32_MIN
+- _I32_MAX
+- _UI32_MAX
+- _I64_MIN
+- _I64_MAX
+- _UI64_MAX
+- _I128_MIN
+- _I128_MAX
+- _UI128_MAX
+- SIZE_MAX
+- RSIZE_MAX
+- LDBL_DIG
+- LDBL_EPSILON
+- LDBL_HAS_SUBNORM
+- LDBL_MANT_DIG
+- LDBL_MAX
+- LDBL_MAX_10_EXP
+- LDBL_MAX_EXP
+- LDBL_MIN
+- LDBL_MIN_10_EXP
+- LDBL_MIN_EXP
+- _LDBL_RADIX
+- LDBL_TRUE_MIN
+- DECIMAL_DIG
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,71 +124,142 @@ helpviewer_keywords:
 - UINT_MAX constant
 - FLT_MANT_DIG constant
 - SCHAR_MIN constant
+- LLONG_MIN constant
+- LLONG_MAX constant
+- ULLONG_MAX constant
+- _I8_MIN constant
+- _I8_MAX constant
+- _UI8_MAX constant
+- _I16_MIN constant
+- _I16_MAX constant
+- _UI16_MAX constant
+- _I32_MIN constant
+- _I32_MAX constant
+- _UI32_MAX constant
+- _I64_MIN constant
+- _I64_MAX constant
+- _UI64_MAX constant
+- _I128_MIN constant
+- _I128_MAX constant
+- _UI128_MAX constant
+- SIZE_MAX constant
+- RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9a64b81ae90c517e9cd15e796dfb1333c7b08c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55690bc06ae838ad44e1d0d6f0527974b7859b94
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952465"
 ---
 # <a name="data-type-constants"></a>Datentypkonstanten
-Datentypkonstanten sind von der Implementierung abhängige Wertbereiche, die für integrale Datentypen zulässig sind. Die unten aufgelisteten Konstanten geben die Bereiche für die integralen Datentypen an und sind in „limits.h“ definiert.  
-  
+
+Datentypkonstanten sind von der Implementierung abhängige Wertbereiche, die für integrale und Gleitkommadatentypen zulässig sind.
+
+## <a name="integral-type-constants"></a>Konstanten integraler Datentypen
+
+Diese Konstanten geben den Bereich für die integralen Datentypen an. Um diese Konstanten zu verwenden, schließen Sie den „limits.h“-Header in Ihre Quelldatei ein:
+
+```C
+#include <limits.h>
+```
+
 > [!NOTE]
->  Die /J-Compileroption ändert den Standard von `char` in `unsigned`.  
-  
-|Konstante|Wert|Bedeutung|  
-|--------------|-----------|-------------|  
-|**SCHAR_MAX**|127|Der Höchstwert von `char` mit Vorzeichen|  
-|**SCHAR_MIN**|-128|Der Mindestwert von `char` mit Vorzeichen|  
-|**UCHAR_MAX**|255 (0xff)|Der Höchstwert von `unsigned char`|  
-|**CHAR_BIT**|8|Die Anzahl der Bits in einem `char`|  
-|**USHRT_MAX**|65535 (0xffff)|Der Höchstwert von **unsigned short**|  
-|**SHRT_MAX**|32767|Der Höchstwert von **short** (mit Vorzeichen)|  
-|**SHRT_MIN**|-32768|Der Mindestwert von **short** (mit Vorzeichen)|  
-|**UINT_MAX**|4294967295 (0xffffffff)|Der Höchstwert von `unsigned int`|  
-|**ULONG_MAX**|4294967295 (0xffffffff)|Der Höchstwert von `unsigned long`|  
-|**INT_MAX**|2147483647|Der Höchstwert von `int` (mit Vorzeichen)|  
-|**INT_MIN**|-2147483647-1|Der Mindestwert von `int` (mit Vorzeichen)|  
-|**LONG_MAX**|2147483647|Der Höchstwert von **long** (mit Vorzeichen)|  
-|**LONG_MIN**|-2147483647-1|Der Mindestwert von **long** (mit Vorzeichen)|  
-|**CHAR_MAX**|127 (255 bei Verwendung der /J-Option)|Höchstwert von `char`|  
-|**CHAR_MIN**|-128 (0 bei Verwendung der /J-Option)|Mindestwert von `char`|  
-|**MB_LEN_MAX**|2|Die maximale Anzahl der Bytes in `char` in Multibyte|  
-|**_I64_MAX**|9223372036854775807|Der Höchstwert von _**int64** (mit Vorzeichen)|  
-|**_I64_MIN**|-9223372036854775807-1|Der Mindestwert von _**int64** (mit Vorzeichen)|  
-|**_UI64_MAX**|0xffffffffffffffff|Der Höchstwert von _**int64** (ohne Vorzeichen)|  
-  
- Folgende Konstanten geben den Bereich und andere Merkmale der Datentypen **double** und **float** an, die in „float.h“ definiert sind:  
-  
-|Konstante|Wert|description|  
-|--------------|-----------|-----------------|  
-|**DBL_DIG**|15|Anzahl der Dezimalstellen der Genauigkeit|  
-|**DBL_EPSILON**|2.2204460492503131e-016|Am kleinsten, derart, dass 1.0+**DBL_EPSILON** !=1.0|  
-|**DBL_MANT_DIG**|53|Anzahl der Bits in der Mantisse|  
-|**DBL_MAX**|1.7976931348623158e+308|Maximalwert|  
-|**DBL_MAX_10_EXP**|308|Der höchstmögliche dezimale Exponent|  
-|**DBL_MAX_EXP**|1024|Der höchstmögliche binäre Exponent|  
-|**DBL_MIN**|2.2250738585072014e-308|Der positive Mindestwert|  
-|**DBL_MIN_10_EXP**|(-307)|Der dezimale Mindestwert|  
-|**DBL_MIN_EXP**|(-1021)|Der binäre Mindestwert|  
-|**_DBL_RADIX**|2|Die Exponentenbasis|  
-|**_DBL_ROUNDS**|1|Runden der Addition: nah|  
-|**FLT_DIG**|6|Anzahl der Dezimalstellen der Genauigkeit|  
-|**FLT_EPSILON**|1.192092896e-07F|Am kleinsten, derart, dass 1.0+**FLT_EPSILON** !=1.0|  
-|**FLT_MANT_DIG**|24|Anzahl der Bits der Mantisse|  
-|**FLT_MAX**|3.402823466e+38F|Maximalwert|  
-|**FLT_MAX_10_EXP**|38|Der höchstmögliche dezimale Exponent|  
-|**FLT_MAX_EXP**|128|Der höchstmögliche binäre Exponent|  
-|**FLT_MIN**|1.175494351e-38F|Der positive Mindestwert|  
-|**FLT_MIN_10_EXP**|(-37)|Der dezimale Mindestwert|  
-|**FLT_MIN_EXP**|(-125)|Der binäre Mindestwert|  
-|**FLT_RADIX**|2|Die Exponentenbasis|  
-|**FLT_ROUNDS**|1|Runden der Addition: nah|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Globale Konstanten](../c-runtime-library/global-constants.md)
+> Die [/J](../build/reference/j-default-char-type-is-unsigned.md)-Compileroption ändert den Standard von **char** in **unsigned**.
+
+|Konstante|Wert|description|
+|--------------|-----------|-------------|
+|**CHAR_BIT**|8|Die Anzahl der Bits in einem **char**|
+|**SCHAR_MIN**|(–128)|signed **char**-Mindestwert|
+|**SCHAR_MAX**|127|signed **char**-Höchstwert|
+|**UCHAR_MAX**|255 (0xff)|**unsigned** **char**-Höchstwert|
+|**CHAR_MIN**|–128 (0 bei Verwendung der **/J**-Option)|**char**-Mindestwert|
+|**CHAR_MAX**|-127 (255 bei Verwendung der **/J**-Option)|**char**-Höchstwert|
+|**MB_LEN_MAX**|5|Die maximale Anzahl der Bytes in **char** in Multibyte|
+|**SHRT_MIN**|-32768|signed **short**-Mindestwert|
+|**SHRT_MAX**|32767|signed **short**-Höchstwert|
+|**USHRT_MAX**|65535 (0xffff)|**unsigned** **short**-Höchstwert|
+|**INT_MIN**|(–2147483647 – 1)|signed **int**-Mindestwert|
+|**INT_MAX**|2147483647|signed **int**-Höchstwert|
+|**UINT_MAX**|4294967295 (0xffffffff)|**unsigned** **int**-Höchstwert|
+|**LONG_MIN**|(–2147483647L – 1)|signed **long**-Mindestwert|
+|**LONG_MAX**|2147483647L|signed **long**-Höchstwert|
+|**ULONG_MAX**|4294967295UL (0xfffffffful)|**unsigned** **long**-Höchstwert|
+|**LLONG_MIN**|(–9223372036854775807LL – 1)|signed **long** **long**-Mindestwert oder **__int64**-Mindestwert|
+|**LLONG_MAX**|9223372036854775807LL|signed **long** **long**-Höchstwert oder **__int64**-Höchstwert|
+|**ULLONG_MAX**|0xffffffffffffffffull|**unsigned** **long** **long**-Höchstwert|
+|**_I8_MIN**|(-127i8 - 1)|8-Bit-Mindestwert (signed)|
+|**_I8_MAX**|127i8|8-Bit-Höchstwert (signed)|
+|**_UI8_MAX**|0xffui8|8-Bit-Höchstwert (unsigned)|
+|**_I16_MIN**|(-32767i16 - 1)|16-Bit-Mindestwert (signed)|
+|**_I16_MIN**|32767i16|16-Bit-Höchstwert (signed)|
+|**_UI16_MAX**|0xffffui16|16-Bit-Höchstwert (unsigned)|
+|**_I32_MIN**|(-2147483647i32 - 1)|32-Bit-Mindestwert (signed)|
+|**_I32_MAX**|2147483647i32|32-Bit-Höchstwert (signed)|
+|**_UI32_MAX**|0xffffffffui32|32-Bit-Höchstwert (unsigned)|
+|**_I64_MIN**|(-9223372036854775807 - 1)|64-Bit-Mindestwert (signed)|
+|**_I64_MAX**|9223372036854775807|64-Bit-Höchstwert (signed)|
+|**_UI64_MAX**|0xffffffffffffffffui64|64-Bit-Höchstwert (unsigned)|
+|**_I128_MIN**|(-170141183460469231731687303715884105727i128 - 1)|128-Bit-Mindestwert (signed)|
+|**_I128_MAX**|170141183460469231731687303715884105727i128|128-Bit-Höchstwert (signed)|
+|**_UI128_MAX**|0xffffffffffffffffffffffffffffffffui128|128-Bit-Höchstwert (unsigned)|
+|**SIZE_MAX**|das gleiche wie **_UI64_MAX**, wenn **_WIN64** definiert ist, oder **UINT_MAX**|Maximale Größe eines nativen Integerwerts|
+|**RSIZE_MAX**|das gleich wie (**SIZE_MAX** >> 1)|Maximale Größe eines sicheren Bibliotheksintegers|
+
+## <a name="floating-point-type-constants"></a>Gleitkommatypkonstanten
+
+Folgende Konstanten geben den Bereich und andere Merkmale der Datentypen **long** **double**, **double** und **float** an. Um diese Konstanten zu verwenden, schließen Sie den „float.h“-Header in Ihre Quelldatei ein:
+
+```C
+#include <float.h>
+```
+
+|Konstante|Wert|description|
+|--------------|-----------|-----------------|
+|**DBL_DECIMAL_DIG**|17|Anzahl der Dezimalstellen der Rundungsgenauigkeit|
+|**DBL_DIG**|15|Anzahl der Dezimalstellen der Genauigkeit|
+|**DBL_EPSILON**|2.2204460492503131e-016|Am kleinsten, sodass 1.0 + **DBL_EPSILON** != 1.0|
+|**DBL_HAS_SUBNORM**|1|Der Typ unterstützt subnormale (denormale) Zahlen|
+|**DBL_MANT_DIG**|53|Anzahl der Bits in Signifikanden (Mantissen)|
+|**DBL_MAX**|1.7976931348623158e+308|Maximalwert|
+|**DBL_MAX_10_EXP**|308|Der höchstmögliche dezimale Exponent|
+|**DBL_MAX_EXP**|1024|Der höchstmögliche binäre Exponent|
+|**DBL_MIN**|2.2250738585072014e-308|Regulärer positiver Mindestwert|
+|**DBL_MIN_10_EXP**|(-307)|Der dezimale Mindestwert|
+|**DBL_MIN_EXP**|(-1021)|Der binäre Mindestwert|
+|**_DBL_RADIX**|2|Die Exponentenbasis|
+|**DBL_TRUE_MIN**|4.9406564584124654e-324|Positiver subnormaler Mindestwert|
+|**FLT_DECIMAL_DIG**|9|Anzahl der Dezimalstellen der Rundungsgenauigkeit|
+|**FLT_DIG**|6|Anzahl der Dezimalstellen der Genauigkeit|
+|**FLT_EPSILON**|1.192092896e-07F|Am kleinsten, sodass 1.0 + **FLT_EPSILON** != 1.0|
+|**FLT_HAS_SUBNORM**|1|Der Typ unterstützt subnormale (denormale) Zahlen|
+|**FLT_MANT_DIG**|24|Anzahl der Bits in Signifikanden (Mantissen)|
+|**FLT_MAX**|3.402823466e+38F|Maximalwert|
+|**FLT_MAX_10_EXP**|38|Der höchstmögliche dezimale Exponent|
+|**FLT_MAX_EXP**|128|Der höchstmögliche binäre Exponent|
+|**FLT_MIN**|1.175494351e-38F|Regulärer positiver Mindestwert|
+|**FLT_MIN_10_EXP**|(-37)|Der dezimale Mindestwert|
+|**FLT_MIN_EXP**|(-125)|Der binäre Mindestwert|
+|**FLT_RADIX**|2|Die Exponentenbasis|
+|**FLT_TRUE_MIN**|1.401298464e-45F|Positiver subnormaler Mindestwert|
+|**LDBL_DIG**|15|Anzahl der Dezimalstellen der Genauigkeit|
+|**LDBL_EPSILON**|2.2204460492503131e-016|Am kleinsten, sodass 1.0 + **LDBL_EPSILON** != 1.0|
+|**LDBL_HAS_SUBNORM**|1|Der Typ unterstützt subnormale (denormale) Zahlen|
+|**LDBL_MANT_DIG**|53|Anzahl der Bits in Signifikanden (Mantissen)|
+|**LDBL_MAX**|1.7976931348623158e+308|Maximalwert|
+|**LDBL_MAX_10_EXP**|308|Der höchstmögliche dezimale Exponent|
+|**LDBL_MAX_EXP**|1024|Der höchstmögliche binäre Exponent|
+|**LDBL_MIN**|2.2250738585072014e-308|Regulärer positiver Mindestwert|
+|**LDBL_MIN_10_EXP**|(-307)|Der dezimale Mindestwert|
+|**LDBL_MIN_EXP**|(-1021)|Der binäre Mindestwert|
+|**_LDBL_RADIX**|2|Die Exponentenbasis|
+|**LDBL_TRUE_MIN**|4.9406564584124654e-324|Positiver subnormaler Mindestwert|
+|**DECIMAL_DIG**|das gleiche wie **DBL_DECIMAL_DIG**|Standard (doppelte) Dezimalstellen der Rundungsgenauigkeit|
+
+## <a name="see-also"></a>Siehe auch
+
+[Globale Konstanten](../c-runtime-library/global-constants.md)  

@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fc3f586c7fc8861bfc29dade7b62e741bb0ffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a95725565dee2b25fd7f2e39927fde88c9cddff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956001"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Bytereihenfolge
 In diesem Artikel sowie zwei Begleit-Artikel wird erläutert, mehrere Probleme bei der Windows Sockets-Programmierung. Dieser Artikel behandelt die Bytereihenfolge. Die anderen Probleme werden in den Artikeln behandelt: [Windows Sockets: blockieren](../mfc/windows-sockets-blocking.md) und [Windows Sockets: Konvertieren von Zeichenfolgen](../mfc/windows-sockets-converting-strings.md).  
@@ -79,7 +80,7 @@ In diesem Artikel sowie zwei Begleit-Artikel wird erläutert, mehrere Probleme b
   
  [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]  
   
- In C++ ist eine `struct` ist im Wesentlichen identisch mit einer Klasse. Die `Message` Struktur kann verfügen über Memberfunktionen, z. B. die `Serialize` Memberfunktion oben deklariert. Die `Serialize` Memberfunktion kann wie folgt aussehen:  
+ In C++ ist eine **Struktur** ist im Wesentlichen identisch mit einer Klasse. Die `Message` Struktur kann verfügen über Memberfunktionen, z. B. die `Serialize` Memberfunktion oben deklariert. Die `Serialize` Memberfunktion kann wie folgt aussehen:  
   
  [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]  
   
@@ -91,8 +92,8 @@ In diesem Artikel sowie zwei Begleit-Artikel wird erläutert, mehrere Probleme b
 |--------------|-------------|  
 |**ntohs**|Konvertieren Sie eine 16-Bit-Menge von netzwerkbyte-Reihenfolge, in die Host-Bytereihenfolge (von big-Endian in little-Endian).|  
 |**ntohl**|Konvertieren Sie eine 32-Bit-Menge von netzwerkbyte-Reihenfolge, in die Host-Bytereihenfolge (von big-Endian in little-Endian).|  
-|**htons**|Konvertieren Sie eine 16-Bit-Menge von Host-Bytereihenfolge, in der netzwerkbyte-Reihenfolge (von little-Endian in big-Endian).|  
-|**htonl**|Konvertieren Sie eine 32-Bit-Menge von Host-Bytereihenfolge, in der netzwerkbyte-Reihenfolge (von little-Endian in big-Endian).|  
+|**Htons**|Konvertieren Sie eine 16-Bit-Menge von Host-Bytereihenfolge, in der netzwerkbyte-Reihenfolge (von little-Endian in big-Endian).|  
+|**Htonl**|Konvertieren Sie eine 32-Bit-Menge von Host-Bytereihenfolge, in der netzwerkbyte-Reihenfolge (von little-Endian in big-Endian).|  
   
  Einem anderen Punkt in diesem Beispiel wird, wenn die Socket-Anwendung am anderen Ende der Kommunikation über eine MFC-fremde Anwendung ist, zu vermeiden müssen, etwa wie folgt ausführen:  
   

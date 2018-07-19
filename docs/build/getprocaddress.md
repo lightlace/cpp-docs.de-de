@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367965"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 Prozesse, die explizit auf einen Anruf DLL verknüpfen [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) zum Abrufen der Adresse einer exportierten Funktion in der DLL. Sie rufen die DLL-Funktion dann über den zurückgegebenen Funktionszeiger auf. **GetProcAddress** als Parameter akzeptiert, die DLL-Modulhandle (entweder zurückgegebenes **LoadLibrary**, `AfxLoadLibrary`, oder **GetModuleHandle**) und entweder den Namen der gewünschten Funktion akzeptiert zum Aufruf oder die Funktion Exportordinalzahl.  

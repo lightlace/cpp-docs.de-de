@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089391"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array und WriteOnlyArray (C++/CX)
 Frei können reguläre Arrays im C-Stil oder [Std:: Array](../standard-library/array-class-stl.md) in C + c++ / CX-Programm (obwohl [Std:: vector](../standard-library/vector-class.md) ist häufig die bessere Wahl), jedoch in jeder API, die in Metadaten veröffentlicht wird, müssen Sie ein Array im C-Format konvertieren oder Vektor zu einem [Platform:: Array](../cppcx/platform-array-class.md) oder [Platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md) Typ abhängig davon, wie sie verwendet wird. Der [Platform::Array](../cppcx/platform-array-class.md) -Typ ist weder so effizient noch so leistungsfähig wie [std::vector](../standard-library/vector-class.md). Als allgemeine Richtlinie sollten Sie daher dessen Verwendung im internen Code vermeiden, da dieser viele Vorgänge mit den Arrayelementen ausführt.  

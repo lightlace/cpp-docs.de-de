@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339903"
 ---
 # <a name="resource-compiler-errors-rc1000-through-rc4413"></a>Ressourcencompiler: Fehlers RC1000 through RC4413
 Dieser Abschnitt ist eine Referenz zu den von den Buildtools ausgegebenen Fehlermeldungen. Um Hilfe zu einer bestimmten Fehlermeldung zu erhalten, klicken Sie mit der Maus auf eine Fehlernummer im Ausgabefenster angezeigt, und drücken Sie F1, oder geben die Fehlernummer in der **gesucht** Feld im Index.

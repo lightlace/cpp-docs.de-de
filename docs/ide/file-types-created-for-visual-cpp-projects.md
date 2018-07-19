@@ -1,5 +1,5 @@
 ---
-title: Für Visual C++-Projekte erstellte Dateitypen | Microsoft Docs
+title: Für Visual C++-Projekte erstellte Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,17 +25,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33336016"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Für Visual C++-Projekte erstellte Dateitypen
 In diesem Thema werden alle mit Visual C++-Projekten für klassische Desktopcomputeranwendungen verknüpften Dateitypen beschrieben. Die in Ihrem Projekt tatsächlich enthaltenen Dateien sind vom Projekttyp und von Ihnen mithilfe eines Assistenten ausgewählten Optionen abhängig.  
   
 -   [Projekt- und Projektmappendateien](../ide/project-and-solution-files.md)  
   
--   [CLR-Projekte](../ide/files-created-for-clr-projects.md)  
+-   [CLR Projects (CLR-Projekte)](../ide/files-created-for-clr-projects.md)  
   
 -   [ATL-Programm oder Steuern von Quell- und Headerdateien](../ide/atl-program-or-control-source-and-header-files.md)  
   
@@ -72,7 +73,7 @@ In diesem Thema werden alle mit Visual C++-Projekten für klassische Desktopcomp
 |.HxC|Projekt|Hilfsprojektdatei.|  
 |.ico|Ressource|Symbolbitmap-Grafikdatei.|  
 |.idb|Kompilieren|Die die Abhängigkeitsinformationen zwischen den Quelldateien und Klassendefinitionen enthaltende Statusdatei, die durch den Compiler während der minimalen Neuerstellung und der inkrementellen Kompilierung verwendet werden kann. Verwenden Sie die Compileroption [/Fd](../build/reference/fd-program-database-file-name.md) zum Angeben des Namens der IDB-Datei. Weitere Informationen finden Sie unter [/Gm (Minimale Neuerstellung aktivieren)](../build/reference/gm-enable-minimal-rebuild.md) .|  
-|.idl|Kompilieren|Eine IDL-Datei. Finden Sie unter [IDL (Interface Definition)-Datei](http://msdn.microsoft.com/library/windows/desktop/aa378712) in das Windows SDK für Weitere Informationen.|  
+|.idl|Kompilieren|Eine IDL-Datei. Weitere Informationen finden Sie im Windows SDK unter [Interface Definition (IDL) File (Schnittstellendefinitionsdatei)](http://msdn.microsoft.com/library/windows/desktop/aa378712).|  
 |.ilk|Verknüpfen|Datei für inkrementelle Verknüpfung. Weitere Informationen finden Sie unter [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) .|  
 |.map|Verknüpfen|Eine Textdatei mit Linkerinformationen. Verwenden Sie die Compileroption [/Fm](../build/reference/fm-name-mapfile.md) , um die MAP-Datei zu benennen. Weitere Informationen finden Sie unter [/MAP](../build/reference/map-generate-mapfile.md) .|  
 |.mfcribbon-ms|Ressource|Eine den die Schaltflächen, Steuerelemente und Attribute im Menüband definierenden XML-Code enthaltende Ressourcendatei. Weitere Informationen finden Sie unter [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md).|  
@@ -86,7 +87,7 @@ In diesem Thema werden alle mit Visual C++-Projekten für klassische Desktopcomp
 |.vap|Projekt|Eine Visual Studio Analyzer-Projektdatei.|  
 |.vbg|Lösung|Eine kompatible Projektgruppendatei.|  
 |.vbp, .vip, .vbproj|Projekt|Die Visual Basic-Projektdatei.|  
-|.vcxitems|Projekt|Freigegebene Elemente-Projekt für die Freigabe von Dateien zwischen mehreren C++-Projekten. Weitere Informationen finden Sie unter [Projektdateien und Makefiles](../ide/project-and-solution-files.md) .|
+|.vcxitems|Projekt|Ein Projekt mit freigegebenen Elementen zum Freigeben von Codedateien zwischen mehreren C++-Projekten. Weitere Informationen finden Sie unter [Projektdateien und Makefiles](../ide/project-and-solution-files.md) .|
 |.vcxproj|Projekt|Die Visual C++-Projektdatei. Weitere Informationen finden Sie unter [Projektdateien und Makefiles](../ide/project-and-solution-files.md) .|  
 |.vcxproj.filters|Projekt|Wenn der Projektmappen-Explorer verwendet wird, um einem Projekt eine Datei hinzuzufügen, definiert die Filterdatei auf Grundlage der entsprechenden Dateinamenserweiterung, wo in der Projektmappen-Explorer-Gesamtstrukturansicht die Datei hinzugefügt wird.|  
 |.vdproj|Projekt|Die Visual Studio-Bereitstellungsprojektdatei.|  
@@ -101,5 +102,5 @@ In diesem Thema werden alle mit Visual C++-Projekten für klassische Desktopcomp
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von Visual C++-Projekten](../ide/creating-and-managing-visual-cpp-projects.md)   
- [Visual C++-Projekttypen](../ide/visual-cpp-project-types.md)   
+ [Visual C++ Project Types (Visual C++-Projekttypen)](../ide/visual-cpp-project-types.md)   
  [Assistentenunterstützung für andere Sprachen](../ide/wizard-support-for-other-languages.md)

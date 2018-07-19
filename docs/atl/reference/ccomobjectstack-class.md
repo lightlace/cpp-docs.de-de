@@ -1,5 +1,5 @@
 ---
-title: CComObjectStack Klasse | Microsoft Docs
+title: CComObjectStack-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac37ac5abc193082aaccb8d5de1a4f75f8a3f7c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3abbd69a69205b0dd7f4ee9fb43d5889e2824552
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882717"
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack-Klasse
-Diese Klasse wird ein temporäres COM-Objekt erstellt und bietet es eine skeletal Implementierung der **IUnknown**.  
+Diese Klasse erstellt ein temporäre COM-Objekt, und bietet es eine skeletal-Implementierung der `IUnknown`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,8 +41,8 @@ class CComObjectStack
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `Base`  
- Die Klasse abgeleitet [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie gut wie aus einer beliebigen anderen Schnittstelle für das Objekt unterstützt werden sollen.  
+ *Basis*  
+ Abgeleitet von die Klasse [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) oder [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), wie auch über eine beliebige andere Schnittstelle für das Objekt unterstützt werden sollen.  
   
 ## <a name="members"></a>Member  
   
@@ -56,24 +57,24 @@ class CComObjectStack
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CComObjectStack::AddRef](#addref)|Gibt 0 (null). Im Debugmodus befindet, ruft `_ASSERTE`.|  
-|[CComObjectStack::QueryInterface](#queryinterface)|Gibt **E_NOINTERFACE**. Im Debugmodus befindet, ruft `_ASSERTE`.|  
-|[CComObjectStack::Release](#release)|Gibt 0 (null). Im Debugmodus befindet, ruft `_ASSERTE`. ~|  
+|[CComObjectStack::AddRef](#addref)|Gibt NULL zurück. Im Debugmodus befindet, ruft `_ASSERTE`.|  
+|[CComObjectStack::QueryInterface](#queryinterface)|Gibt einen E_NOINTERFACE zurück. Im Debugmodus befindet, ruft `_ASSERTE`.|  
+|[CComObjectStack::Release](#release)|Gibt NULL zurück. Im Debugmodus befindet, ruft `_ASSERTE`. ~|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Enthält die **HRESULT** während der Erstellung der zurückgegebenen der `CComObjectStack` Objekt.|  
+|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Das während der Erstellung der zurückgegebene HRESULT enthält die `CComObjectStack` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComObjectStack` Dient zum Erstellen eines temporären COM-Objekts und dem Objekt eine skeletal Implementierung bereitstellen, **IUnknown**. Das Objekt wird in der Regel als lokale Variable innerhalb einer Funktion verwendet (die auf dem Stapel abgelegt wird). Da das Objekt zerstört wird, wenn die Funktion beendet wird, wird verweiszählung nicht ausgeführt, um Effizienz steigern.  
+ `CComObjectStack` wird verwendet, um ein temporäres COM-Objekt erstellt, und geben Sie dem Objekt eine skeletal-Implementierung der `IUnknown`. Das Objekt wird in der Regel als lokale Variable innerhalb einer Funktion verwendet (die auf dem Stapel abgelegt wird). Da das Objekt zerstört wird, wenn die Funktion abgeschlossen ist, zählen der Verweise nicht durchgeführt, um Effizienz zu steigern.  
   
- Im folgende Beispiel wird gezeigt, wie zum Erstellen eines COM-Objekts, die innerhalb einer Funktion verwendet wird:  
+ Das folgende Beispiel zeigt, wie zum Erstellen eines COM-Objekts, das innerhalb einer Funktion verwendet wird:  
   
  [!code-cpp[NVC_ATL_COM#42](../../atl/codesnippet/cpp/ccomobjectstack-class_1.cpp)]  
   
- Das temporäre Objekt `Tempobj` wird auf dem Stapel abgelegt und automatisch ausgeblendet, wenn die Funktion beendet.  
+ Das temporäre Objekt `Tempobj` wird auf dem Stapel abgelegt und automatisch ausgeblendet, wenn die Funktion abgeschlossen ist.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `Base`  
@@ -84,14 +85,14 @@ class CComObjectStack
  **Header:** atlcom.h  
   
 ##  <a name="addref"></a>  CComObjectStack::AddRef  
- Gibt 0 (null).  
+ Gibt NULL zurück.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt 0 (null).  
+ Gibt NULL zurück.  
   
 ### <a name="remarks"></a>Hinweise  
  Im Debugmodus befindet, ruft `_ASSERTE`.  
@@ -104,7 +105,7 @@ CComObjectStack(void* = NULL);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufe `FinalConstruct` und legt dann [M_hResFinalConstruct](#m_hresfinalconstruct) auf die `HRESULT` zurückgegebenes `FinalConstruct`. Wenn Sie nicht die Basisklasse aus abgeleiteten [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), geben Sie an Ihre eigenen `FinalConstruct` Methode. Der Destruktor ruft `FinalRelease` auf.  
+ Aufrufe `FinalConstruct` und legt dann [M_hResFinalConstruct](#m_hresfinalconstruct) zurückgegebenes HRESULT `FinalConstruct`. Wenn Sie nicht Ihre Basisklasse von abgeleiteten [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), geben Sie an Ihre eigenen `FinalConstruct` Methode. Der Destruktor ruft `FinalRelease` auf.  
   
 ##  <a name="dtor"></a>  CComObjectStack:: ~ CComObjectStack  
  Der Destruktor.  
@@ -114,17 +115,17 @@ CComObjectStack();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt alle zugeordneten Ressourcen und ruft [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
+ Gibt Sie frei, alle zugeordneten Ressourcen und ruft [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
 ##  <a name="m_hresfinalconstruct"></a>  CComObjectStack::m_hResFinalConstruct  
- Enthält die `HRESULT` vom Aufruf zurückgegebene `FinalConstruct` während der Erstellung der `CComObjectStack` Objekt.  
+ Vom Aufruf zurückgegebene HRESULT enthält `FinalConstruct` während der Erstellung der `CComObjectStack` Objekt.  
   
 ```
 HRESULT    m_hResFinalConstruct;
 ```  
   
 ##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface  
- Gibt **E_NOINTERFACE**.  
+ Gibt einen E_NOINTERFACE zurück.  
   
 ```
 HRESULT    QueryInterface(REFIID, void**)
@@ -132,20 +133,20 @@ HRESULT    QueryInterface(REFIID, void**)
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt **E_NOINTERFACE**.  
+ Gibt einen E_NOINTERFACE zurück.  
   
 ### <a name="remarks"></a>Hinweise  
  Im Debugmodus befindet, ruft `_ASSERTE`.  
   
 ##  <a name="release"></a>  CComObjectStack::Release  
- Gibt 0 (null).  
+ Gibt NULL zurück.  
   
 ```
 STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt 0 (null).  
+ Gibt NULL zurück.  
   
 ### <a name="remarks"></a>Hinweise  
  Im Debugmodus befindet, ruft `_ASSERTE`.  
@@ -154,4 +155,4 @@ STDMETHOD_(ULONG, Release)();
  [CComAggObject-Klasse](../../atl/reference/ccomaggobject-class.md)   
  [CComObject-Klasse](../../atl/reference/ccomobject-class.md)   
  [CComObjectGlobal-Klasse](../../atl/reference/ccomobjectglobal-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

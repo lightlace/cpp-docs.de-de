@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 504d561dd0d7fbc640c898aa8aa70a70337accb8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959270"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine-Klasse
 
@@ -38,23 +39,23 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parameter
 
-`UIntType` Der Ergebnistyp für die ganze Zahl ohne Vorzeichen. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*UIntType* der Ergebnistyp für die ganze Zahl ohne Vorzeichen. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-`W` **Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**:`2u < W ≤ numeric_limits<UIntType>::digits`
+*W* **Wortgröße**. Größe jedes einzelnen Wortes der Zustandssequenz in Bits. **Vorbedingung**:`2u < W ≤ numeric_limits<UIntType>::digits`
 
-`N` **Zustandsgröße**. Die Anzahl von Elementen (Werten) in der Zustandssequenz.
+*N* **Zustandsgröße**. Die Anzahl von Elementen (Werten) in der Zustandssequenz.
 
-`M` **Verschiebungsgröße**. Die Anzahl von Elementen, die während jeder Verzerrung übersprungen werden sollen. **Vorbedingung**:`0 < M ≤ N`
+*M* **Verschiebungsgröße**. Die Anzahl von Elementen, die während jeder Verzerrung übersprungen werden sollen. **Vorbedingung**:`0 < M ≤ N`
 
-`R` **Maskenbits**. **Vorbedingung**:`R ≤ W`
+*R* **Maskenbits**. **Vorbedingung**:`R ≤ W`
 
-`A` **XOR-Maske**. **Vorbedingung**:`A ≤ (1u<<W) - 1u`
+*Ein* **XOR-Maske**. **Vorbedingung**:`A ≤ (1u<<W) - 1u`
 
-`U`, `S`, `T`, `L` **Tempering verschiebungsparameter**. Werden während der Verschlüsselung (Tempering) als Verschiebungswerte verwendet. Vorbedingung: `U,S,T,L ≤ W`
+*U*, *S*, *T*, *L* **Tempering verschiebungsparameter**. Werden während der Verschlüsselung (Tempering) als Verschiebungswerte verwendet. Vorbedingung: `U,S,T,L ≤ W`
 
-`D`, `B`, `C` **Tempering von bitmaskenparametern**. Werden während der Verschlüsselung (Tempering) als Maskenwerte verwendet. Vorbedingung: `D,B,C ≤ (1u<<W) - 1u`
+*D*, *B*, *C* **Tempering von bitmaskenparametern**. Werden während der Verschlüsselung (Tempering) als Maskenwerte verwendet. Vorbedingung: `D,B,C ≤ (1u<<W) - 1u`
 
-`F` **Initialisierungsmultiplikator**. Wird verwendet, um die Initialisierung der Sequenz zu unterstützen. Vorbedingung: `F ≤ (1u<<W) - 1u`
+*F* **initialisierungsmultiplikator**. Wird verwendet, um die Initialisierung der Sequenz zu unterstützen. Vorbedingung: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Mitglieder
 
@@ -69,9 +70,9 @@ Weitere Informationen über Engine-Member finden Sie unter [\<random&gt;](../sta
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse beschreibt eine Zufallszahlen-Engine und gibt Werte zum geschlossenen Intervall [`0`, `2`<sup>W</sup> - `1`] zurück. Sie enthält einen großen Integralwert mit `W * (N - 1) + R` Bits. Sie extrahiert aus diesem großen Wert `W` Bits auf einmal, und sobald alle Bits verwendet wurden, wird der große Wert verzerrt, indem die Bits verschoben und kombiniert werden, sodass ein neuen Satz von Bits entsteht aus dem extrahiert werden kann. Beim Zustand des Moduls handelt es sich um den letzten verwendeten `N` `W`-Bitwert, wenn `operator()` mindestens `N`-mal aufgerufen wurde. Andernfalls sind es die verwendeten `M` `W`-Bitwerte und die letzten `N - M`-Werte des Startwerts.
+Diese Vorlagenklasse beschreibt eine Zufallszahlen-Engine und gibt Werte zum geschlossenen Intervall [`0`, `2`<sup>W</sup> - `1`] zurück. Sie enthält einen großen Integralwert mit `W * (N - 1) + R` Bits. Er extrahiert *W* Bits auf einmal aus diesem großen Wert, und wenn sie alle Bits verwendet hat verzerrt es den großen Wert von verschoben und die Bits kombiniert werden, damit sie einen neuen Satz von Bits aus extrahieren aufweist. Der Zustand der Engine ist die letzte `N` `W`-bit-Werten verwendet, wenn `operator()` mindestens aufgerufen wurde *N* Timeout, andernfalls die `M` `W`-Werte, die verwendet wurden und die letzten `N - M` -Werte des Startwerts.
 
-Der Generator verzerrt den großen Wert, den er enthält, indem er ein verzerrtes generalisiertes Feedback-Schieberegister verwendet, das durch die Verschiebungswerte `N` und `M`, einen Verzerrungswert `R` und eine bedingte XOR-Maske `A` definiert wird. Zusätzlich werden die Bits des Schieberegisters verschlüsselt (getempert). Dies geschieht entsprechend einer Bit-Scrambling-Matrix, die durch die Werte `U`, `D`, `S`, `B`, `T`, `C` und `L` definiert ist.
+Der Generator verzerrt den großen Wert, der ihn enthält, indem Sie durch die Verschiebungswerte definiert eine gedrehte generalisiertes Feedback-Schieberegister *N* und *M*, einen verzerrungswert *R*, und ein Bedingte XOR-Maske *ein*. Darüber hinaus die Bits eines das unformatierte Schieberegister schieberegisters (getempert) entsprechend einer Bit-scrambling-Matrix, die durch Werte definiert *U*, *D*, *S*, *B* , *T*, *C*, und *L*.
 
 Das Vorlagenargument `UIntType`muss groß genug sein, um Werte bis zu `2`<sup>W</sup> - `1` zu enthalten. Die Werte der anderen Vorlagenargumente müssen die folgenden Anforderungen erfüllen: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 

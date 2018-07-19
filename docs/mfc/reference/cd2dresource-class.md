@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eed5b60954d05094db610a233968c9c7dd83c704
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1848e0fe6d3e09ea4707279e83293ae2dc0feb64
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950676"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource-Klasse
 Eine abstrakte Klasse, die eine Schnittstelle zum Erstellen und Verwalten von D2D-Ressourcen, z. B. Pinsel, Ebenen und Texte bereitstellt.  
@@ -103,10 +104,10 @@ CD2DResource(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentTarget`  
+ *pParentTarget*  
  Ein Zeiger auf das Renderziel.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
 ##  <a name="create"></a>  CD2DResource:: Create  
@@ -117,7 +118,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pRenderTarget`  
+ *pRenderTarget*  
  Ein Zeiger auf das Renderziel.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -172,7 +173,7 @@ virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pRenderTarget`  
+ *pRenderTarget*  
  Ein Zeiger auf das Renderziel.  
   
 ### <a name="return-value"></a>Rückgabewert  

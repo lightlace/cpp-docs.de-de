@@ -1,5 +1,5 @@
 ---
-title: CBrush-Klasse | Microsoft Docs
+title: CBrush-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b38ca29ed166f27459da5192f23accf32969465
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336633"
 ---
 # <a name="cbrush-class"></a>CBrush-Klasse
 Kapselt einen Pinsel der Windows GDI (Graphics Device Interface).  
@@ -61,25 +62,25 @@ class CBrush : public CGdiObject
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|Initialisiert einen Pinsel mit der Formatvorlage, die Farbe und die Muster im angegebenen eine [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) Struktur.|  
+|[CBrush::CreateBrushIndirect](#createbrushindirect)|Initialisiert einen Pinsel, mit der Formatvorlage, die Farbe und im angegebenen Muster eine [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) Struktur.|  
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Initialisiert einen Pinsel mit einem Muster, die durch eine geräteunabhängige Bitmap (DIB) angegeben.|  
-|[CBrush::CreateHatchBrush](#createhatchbrush)|Initialisiert einen Pinsel mit dem angegebenen Schraffur und die Farbe an.|  
+|[CBrush::CreateHatchBrush](#createhatchbrush)|Initialisiert einen Pinsel, mit der angegebenen Schraffurmuster und Farbe.|  
 |[CBrush::CreatePatternBrush](#createpatternbrush)|Initialisiert einen Pinsel mit einem Muster, die durch eine Bitmap angegeben.|  
-|[CBrush::CreateSolidBrush](#createsolidbrush)|Initialisiert einen Pinsel mit der angegebenen Volltonfarbe aus.|  
+|[CBrush::CreateSolidBrush](#createsolidbrush)|Initialisiert einen Pinsel, mit der angegebenen Volltonfarbe entspricht.|  
 |[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Erstellt einen Pinsel, der die Standardsystemfarbe ist.|  
-|[CBrush::FromHandle](#fromhandle)|Gibt einen Zeiger auf eine `CBrush` Objekt, wenn ein Handle zu einem Windows vorhanden `HBRUSH` Objekt.|  
+|[CBrush::FromHandle](#fromhandle)|Gibt einen Zeiger auf eine `CBrush` Objekt, wenn ein Handle auf ein Windows gewährt `HBRUSH` Objekt.|  
 |[CBrush::GetLogBrush](#getlogbrush)|Ruft eine [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) Struktur.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CBrush::operator HBRUSH](#operator_hbrush)|Gibt die Windows-Handle an der die `CBrush` Objekt.|  
+|[CBrush::operator HBRUSH](#operator_hbrush)|Gibt zurück, das Windows-Handle, das angefügt wird, um die `CBrush` Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden einer `CBrush` Objekt, das Erstellen einer `CBrush` -Objekt und übergibt ihn dann an alle `CDC` Memberfunktion, die einen Pinsel erfordert.  
+ Verwenden einer `CBrush` Objekt, das Erstellen einer `CBrush` -Objekt und übergeben Sie es auf eine `CDC` Memberfunktion, die einen Pinsel erfordert.  
   
- Pinsel können eingestellt oder gemusterten durchgezogen, sein.  
+ Pinsel können durchgezogen, ausgebrütet oder Muster sein.  
   
  Weitere Informationen zu `CBrush`, finden Sie unter [Grafikobjekte](../../mfc/graphic-objects.md).  
   
@@ -104,43 +105,43 @@ explicit CBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `crColor`  
- Gibt die Vordergrundfarbe des Pinsels als RGB-Farbe. Wenn der Pinsel eingestellt ist, gibt dieser Parameter die Farbe der Schraffur an.  
+ *crColor*  
+ Gibt die Vordergrundfarbe des Pinsels als eine RGB-Farbe. Wenn der Pinsel ausgebrütet ist, gibt dieser Parameter die Farbe der Schraffur an.  
   
- `nIndex`  
+ *nIndex*  
  Gibt die Schraffurart des Pinsels. Eine der folgenden Werte sind möglich:  
   
-- `HS_BDIAGONAL` Nach unten weisenden Schraffur (von links nach rechts) auf 45 Grad  
+- HS_BDIAGONAL Schraffierung nach unten (von links nach rechts) auf 45 Grad  
   
-- `HS_CROSS` Horizontale und vertikale Schraffur  
+- HS_CROSS horizontale und vertikale Schraffur  
   
-- `HS_DIAGCROSS` Kreuzschraffur 45 Grad  
+- HS_DIAGCROSS Kreuzschraffur auf 45 Grad  
   
-- `HS_FDIAGONAL` Nach oben Schraffur (von links nach rechts) auf 45 Grad  
+- HS_FDIAGONAL nach oben Schraffur (von links nach rechts) auf 45 Grad  
   
-- `HS_HORIZONTAL` Horizontale Schraffur  
+- Horizontale HS_HORIZONTAL Schraffur  
   
-- `HS_VERTICAL` Vertikale Schraffur  
+- Vertikale HS_VERTICAL Schraffur  
   
- `pBitmap`  
- Verweist auf ein `CBitmap` Objekt, das eine Bitmap angibt, mit denen die Pinsel zeichnet.  
+ *pBitmap*  
+ Verweist auf eine `CBitmap` -Objekt, das einer Bitmap gibt an, mit denen der Pinsel zeichnet.  
   
 ### <a name="remarks"></a>Hinweise  
- `CBrush` verfügt über vier Konstruktoren überladen. Der Konstruktor ohne Argumente erstellt eine nicht initialisierte `CBrush` -Objekt, das initialisiert werden muss, bevor er verwendet werden kann.  
+ `CBrush` verfügt über vier Konstruktoren überladen. Der Konstruktor ohne Argumente erstellt ein nicht initialisiertes `CBrush` -Objekt, das initialisiert werden muss, bevor sie verwendet werden kann.  
   
- Wenn Sie den Konstruktor ohne Argumente verwenden, müssen Sie initialisieren, das resultierende `CBrush` -Objekt mit [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), oder [CreateDIBPatternBrush](#createdibpatternbrush). Bei Verwendung eines Konstruktors, die Argumente akzeptiert, ist keine weitere Initialisierung erforderlich. Die Konstruktoren mit Argumenten können Fehler auftreten, während der Konstruktor ohne Argumente immer erfolgreich sein wird, eine Ausnahme ausgelöst.  
+ Wenn Sie den Konstruktor ohne Argumente verwenden, müssen Sie die resultierende initialisieren `CBrush` Objekt mit [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), oder [CreateDIBPatternBrush](#createdibpatternbrush). Bei Verwendung eines Konstruktors, die Argumente akzeptiert, ist keine weitere Initialisierung erforderlich. Die Konstruktoren mit Argumenten können eine Ausnahme auslösen, wenn Fehler auftreten, während der Konstruktor ohne Argumente immer erfolgreich ist, wird.  
   
- Der Konstruktor mit einem einzelnen [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter erstellt ein Pinsels in Volltonfarbe mit der angegebenen Farbe. Die Farbe Gibt einen RGB-Wert und konstruiert werden kann, mit der `RGB` Makro in WINDOWS. H.  
+ Der Konstruktor mit einem einzelnen [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Parameter erstellt einen einfarbigen Pinsel, mit der angegebenen Farbe. Die Farbe Gibt einen RGB-Wert und kann mit dem RGB-Makro in WINDOWS erstellt werden. H.  
   
- Der Konstruktor mit zwei Parametern erstellt ein Schraffurpinsel. Die `nIndex` Parameter gibt den Index einer Schraffur. Die `crColor` Parameter gibt die Farbe an.  
+ Der Konstruktor mit zwei Parametern konstruiert ein Schraffurpinsel. Die *nIndex* Parameter gibt den Index einer Schraffurmuster. Die *CrColor* Parameter gibt die Farbe an.  
   
- Der Konstruktor mit einem `CBitmap` Parameter erstellt einen Pinsel. Der Parameter identifiziert eine Bitmap. Wird angenommen, dass die Bitmap mit erstellten [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), oder [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). Die minimale Größe für eine Bitmap in einem Füllmusters vorgesehen ist 8 x 8 Pixel.  
+ Der Konstruktor mit einem `CBitmap` -Parameter erstellt einen Pinsel. Der Parameter bezeichnet eine Bitmap. Wird angenommen, dass die Bitmap erstellt wurden, indem Sie mithilfe von [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), oder [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). Die minimale Größe für eine Bitmap, die in einem Muster für die Füllung verwendet werden, ist 8 x 8 Pixel.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
 ##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
- Initialisiert einen Pinsel mit einer Formatvorlage, die Farbe und die Muster im angegebenen eine [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) Struktur.  
+ Initialisiert einen Pinsel, mit einem Stil, Farbe und im angegebenen Muster eine [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) Struktur.  
   
 ```  
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
@@ -154,9 +155,9 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
  Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfalls null (0).  
   
 ### <a name="remarks"></a>Hinweise  
- Der Pinsel kann anschließend als den aktuellen Pinsel für alle Gerätekontext ausgewählt werden.  
+ Der Pinsel kann anschließend als den aktuellen Pinsel für einen beliebigen Gerätekontext ausgewählt werden.  
   
- Ein Pinsel erstellt mithilfe einer Bitmap Monochrom (1-Ebene, 1 Bit pro Pixel) wird unter Verwendung der aktuellen Text- und Hintergrundfarben gezeichnet. Pixel, dargestellt durch ein Bit auf 0 festgelegt werden mit der aktuellen Farbe des Texts gezeichnet. Pixel, dargestellt durch ein Bit auf 1 festgelegt werden mit der aktuellen Hintergrundfarbe gezeichnet werden.  
+ Ein Pinsel, der mithilfe einer Bitmap Monochrom (1-Ebene, 1 Bit pro Pixel) erstellt wird unter Verwendung der aktuellen Farben für Text und Hintergrund gezeichnet. Pixel, dargestellt durch ein Bit auf 0 festgelegt, werden in der aktuellen Text gezeichnet werden. Pixel, dargestellt durch ein Bit auf 1 festgelegt, werden mit der aktuellen Hintergrundfarbe gezeichnet werden.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
@@ -177,14 +178,14 @@ BOOL CreateDIBPatternBrush(
   
 ### <a name="parameters"></a>Parameter  
  *hPackedDIB*  
- Identifiziert ein globaler Speicher-Objekt, das eine gepackte geräteunabhängige Bitmap (DIB) enthält.  
+ Identifiziert einen globalen Arbeitsspeicher-Objekt, die eine gepackte geräteunabhängige Bitmap (DIB) enthält.  
   
- *nUsage*  
- Gibt an, ob die **BmiColors []** Felder von der [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) explizite RGB-Werte oder Indizes Datenstruktur (ein Teil der "zurück, der die DIB") enthalten, in der aktuell realisierte logische Palette. Der Parameter muss einen der folgenden Werte sein:  
+ *Nsyntax*  
+ Gibt an, ob die `bmiColors[]` Felder der [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) Datenstruktur (ein Teil von "gepackt das DIB") enthalten die explizite RGB-Werte oder Indizes in der derzeit realisierten logische Palette. Der Parameter muss einen der folgenden Werte sein:  
   
-- **DIB_PAL_COLORS** die Farbtabelle besteht aus einem Array von 16-Bit-Indizes.  
+- DIB_PAL_COLORS die Farbtabelle besteht aus einem Array von 16-Bit-Indizes.  
   
-- **DIB_RGB_COLORS** der Farbtabelle enthält Literale RGB-Werte.  
+- DIB_RGB_COLORS die Farbtabelle enthält Literale RGB-Werte.  
   
  *lpPackedDIB*  
  Verweist auf eine gepackte DIB bestehend aus einem `BITMAPINFO` Struktur folgt unmittelbar ein Array von Bytes, die die Pixel der Bitmap definieren.  
@@ -193,23 +194,23 @@ BOOL CreateDIBPatternBrush(
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Der Pinsel kann anschließend für jeden Gerätekontext ausgewählt werden, die auszuführenden Vorgängen unterstützen.  
+ Der Pinsel kann anschließend für einen beliebigen Gerätekontext ausgewählt werden, die Raster-Vorgänge unterstützt.  
   
  Die beiden Versionen unterscheiden sich in der, wie Sie die DIB behandelt:  
   
--   In der ersten Version ein Handle für die DIB abrufen rufen Sie auf der Windows **GlobalAlloc** Funktion, um einen globalen Speicherblock zuordnen und geben Sie dann den Speicher mit dem gepackten DIB.  
+-   In der ersten Version, um ein Handle für das DIB-Datei erhalten Sie die Windows aufrufen `GlobalAlloc` Funktion, um einen globalen Speicherblock zuordnen und geben Sie dann den Arbeitsspeicher mit gepackte DIB-Datei.  
   
--   In der zweiten Version ist es nicht notwendig, **GlobalAlloc** für die gepackte DIB Arbeitsspeicher belegt werden.  
+-   In der zweiten Version, ist es nicht notwendig, `GlobalAlloc` zum Belegen von Arbeitsspeicher für die gepackte DIB-Datei.  
   
- Eine gepackte DIB besteht aus einem `BITMAPINFO` Datenstruktur, die unmittelbar nach der das Array von Bytes, die die Pixel der Bitmap definiert. Als Füllung Muster verwendet Bitmaps muss 8 x 8 Pixel. Wenn die Bitmap größer ist, erstellt Windows eine Füllmusters verwenden nur die Bits, die die ersten 8 Zeilen und 8 Spalten in der oberen linken Ecke der Bitmap Pixel entspricht.  
+ Eine gepackte DIB besteht aus einem `BITMAPINFO` Datenstruktur, die unmittelbar nach der das Array von Bytes, die die Pixel der Bitmap definiert. Bitmaps, die als Füllung Muster sollte 8 x 8 Pixel sein. Wenn die Bitmap größer ist, erstellt Windows ein Fill-Muster verwenden nur die Bits, die für die ersten 8 Zeilen und 8 Spalten der Pixel in der oberen linken Ecke der Bitmap.  
   
- Wenn eine Anwendung eine monochrome Gerätekontext Pinsel zwei Farben DIB Muster auswählt, wird Windows in DIB angegebenen Farben ignoriert und stattdessen zeigt den Musterpinsel mit der aktuellen Text- und Hintergrundfarben des Gerätekontexts. Der ersten Farbe (am Offset 0 in der Farbtabelle DIB) der DIB Pixel werden mit der Textfarbe angezeigt. Pixel, die der zweiten Farbe (Offset 1 in der Tabelle Farbe) werden mit der Hintergrundfarbe angezeigt.  
+ Wenn eine Anwendung einen zwei-DIB Musterpinsel für einen Kontext monochromen Gerät auswählt, wird Windows ignoriert die Farben in DIB-Datei angegeben, sondern zeigt stattdessen die Musterpinsel, mit der aktuellen Text- und Hintergrundfarben des Gerätekontexts. Pixel der ersten Farbe (am Offset 0 in der Farbtabelle DIB) der DIB-Datei zugeordnet werden, verwenden die Textfarbe angezeigt. Pixel, die zweite Farbe (am Offset von 1 in der Farbtabelle) zugeordnet werden, mit der Hintergrundfarbe angezeigt.  
   
  Informationen zur Verwendung der folgenden Windows-Funktionen finden Sie im Windows-SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (diese Funktion wird nur für Kompatibilität mit Anwendungen für Windows-Versionen vor 3.0 bereitgestellt; verwenden Sie die **CreateDIBPatternBrushPt** Funktion.)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (diese Funktion wird nur bereitgestellt, um Kompatibilität mit Anwendungen für Windows-Versionen vor 3.0 geschrieben wurden; verwenden Sie die `CreateDIBPatternBrushPt` Funktion.)  
   
-- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (diese Funktion sollte für Win32-basierte Anwendungen verwendet werden.)  
+- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (diese Funktion sollte für die Win32-basierten Anwendungen verwendet werden.)  
   
 - [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)  
   
@@ -217,7 +218,7 @@ BOOL CreateDIBPatternBrush(
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
 ##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
- Initialisiert einen Pinsel mit dem angegebenen Schraffur und die Farbe an.  
+ Initialisiert einen Pinsel, mit der angegebenen Schraffurmuster und Farbe.  
   
 ```  
 BOOL CreateHatchBrush(
@@ -226,29 +227,29 @@ BOOL CreateHatchBrush(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
+ *nIndex*  
  Gibt die Schraffurart des Pinsels. Eine der folgenden Werte sind möglich:  
   
-- `HS_BDIAGONAL` Nach unten weisenden Schraffur (von links nach rechts) auf 45 Grad  
+- HS_BDIAGONAL Schraffierung nach unten (von links nach rechts) auf 45 Grad  
   
-- `HS_CROSS` Horizontale und vertikale Schraffur  
+- HS_CROSS horizontale und vertikale Schraffur  
   
-- `HS_DIAGCROSS` Kreuzschraffur 45 Grad  
+- HS_DIAGCROSS Kreuzschraffur auf 45 Grad  
   
-- `HS_FDIAGONAL` Nach oben Schraffur (von links nach rechts) auf 45 Grad  
+- HS_FDIAGONAL nach oben Schraffur (von links nach rechts) auf 45 Grad  
   
-- `HS_HORIZONTAL` Horizontale Schraffur  
+- Horizontale HS_HORIZONTAL Schraffur  
   
-- `HS_VERTICAL` Vertikale Schraffur  
+- Vertikale HS_VERTICAL Schraffur  
   
- `crColor`  
- Gibt die Vordergrundfarbe des Pinsels als eine RGB-Farbe (die Farbe der Schraffuren) an. Finden Sie unter [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) in das Windows SDK für Weitere Informationen.  
+ *crColor*  
+ Gibt die Vordergrundfarbe des Pinsels als eine RGB-Farbe (die Farbe der Schraffuren) an. Finden Sie unter [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) im Windows SDK für Weitere Informationen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Der Pinsel kann anschließend als den aktuellen Pinsel für alle Gerätekontext ausgewählt werden.  
+ Der Pinsel kann anschließend als den aktuellen Pinsel für einen beliebigen Gerätekontext ausgewählt werden.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
@@ -261,44 +262,44 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pBitmap`  
- Identifiziert eine Bitmap an.  
+ *pBitmap*  
+ Eine Bitmap bezeichnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Der Pinsel kann anschließend für jeden Gerätekontext ausgewählt werden, die auszuführenden Vorgängen unterstützen. Die Bitmap identifizierte `pBitmap` ist in der Regel initialisiert, indem die [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), oder [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) Funktion.  
+ Der Pinsel kann anschließend für einen beliebigen Gerätekontext ausgewählt werden, die Raster-Vorgänge unterstützt. Die Bitmap identifizierte *pBitmap* wird in der Regel mit initialisiert die [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), oder [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) Funktion.  
   
- Als Füllung Muster verwendet Bitmaps muss 8 x 8 Pixel. Wenn die Bitmap größer ist, verwendet Windows nur die Bits, die ersten 8 Zeilen und Spalten der Pixel in der oberen linken Ecke der Bitmap entsprechen.  
+ Bitmaps, die als Füllung Muster sollte 8 x 8 Pixel sein. Wenn die Bitmap größer ist, verwendet Windows nur die Bits für die ersten 8 Zeilen und Spalten der Pixel in der oberen linken Ecke der Bitmap.  
   
- Ein Musterpinsel kann ohne Auswirkungen auf die zugeordneten Bitmap gelöscht werden. Dies bedeutet, dass die Bitmap verwendet werden kann, um eine beliebige Anzahl von Musterpinsel zu erstellen.  
+ Ein Musterpinsel kann gelöscht werden, ohne Auswirkungen auf die zugeordnete Bitmap. Dies bedeutet, dass die Bitmap verwendet werden kann, um eine beliebige Anzahl von Musterpinsel zu erstellen.  
   
- Ein Pinsel mit eine monochrome Bitmap (Ebene 1 Farbe, 1 Bit pro Pixel) erstellt wird unter Verwendung der aktuellen Text- und Hintergrundfarben gezeichnet. Pixel, dargestellt durch ein Bit auf 0 festgelegt, werden mit der aktuellen Farbe des Texts gezeichnet. Pixel, dargestellt durch ein Bit auf 1 festgelegt, werden mit der aktuellen Hintergrundfarbe gezeichnet.  
+ Ein Pinsel, mit der eine monochrome Bitmap (Ebene 1 Farbe, 1 Bit pro Pixel) erstellt wird unter Verwendung der aktuellen Farben für Text und Hintergrund gezeichnet. Pixel, dargestellt durch ein Bit auf 0 festgelegt, werden mit der aktuellen Farbe des Texts gezeichnet. Pixel, dargestellt durch ein Bit auf 1 festgelegt, werden mit der aktuellen Hintergrundfarbe gezeichnet.  
   
- Informationen zur Verwendung [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508), ein Windows-Funktion, finden Sie im Windows SDK.  
+ Informationen zur Verwendung [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508), ein Windows funktionieren, finden Sie im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
 ##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
- Initialisiert einen Pinsel mit einer angegebenen Volltonfarbe aus.  
+ Initialisiert einen Pinsel mit Volltonfarbe angegebenen.  
   
 ```  
 BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `crColor`  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) -Struktur, die Farbe des Pinsels angibt. Die Farbe Gibt einen RGB-Wert und konstruiert werden kann, mit der `RGB` Makro in WINDOWS. H.  
+ *crColor*  
+ Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Struktur, die die Farbe des Pinsels angibt. Die Farbe Gibt einen RGB-Wert und kann mit dem RGB-Makro in WINDOWS erstellt werden. H.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Der Pinsel kann anschließend als den aktuellen Pinsel für alle Gerätekontext ausgewählt werden.  
+ Der Pinsel kann anschließend als den aktuellen Pinsel für einen beliebigen Gerätekontext ausgewählt werden.  
   
- Wenn eine Anwendung nicht mehr verwendet den Pinsel erstellt, indem `CreateSolidBrush`, sollten sie den Pinsel im Gerätekontext auswählen.  
+ Wenn eine Anwendung wurde mit dem Pinsel erstellt `CreateSolidBrush`, sollten sie den Pinsel im Gerätekontext auswählen.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CBrush::CBrush](#cbrush).  
@@ -311,38 +312,38 @@ BOOL CreateSysColorBrush(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nIndex`  
- Gibt einen Index für die Farbe an. Dieser Wert entspricht der Farbe verwendet, um eines der Fensterelemente 21 zeichnen. Finden Sie unter [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) in das Windows SDK für eine Liste von Werten.  
+ *nIndex*  
+ Gibt einen Farbenindex an. Dieser Wert entspricht der Farbe verwendet, um eines der Fensterelemente 21 gezeichnet werden soll. Finden Sie unter [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) im Windows SDK für eine Liste von Werten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Der Pinsel kann anschließend als den aktuellen Pinsel für alle Gerätekontext ausgewählt werden.  
+ Der Pinsel kann anschließend als den aktuellen Pinsel für einen beliebigen Gerätekontext ausgewählt werden.  
   
- Wenn eine Anwendung nicht mehr verwendet den Pinsel erstellt, indem `CreateSysColorBrush`, sollten sie den Pinsel im Gerätekontext auswählen.  
+ Wenn eine Anwendung wurde mit dem Pinsel erstellt `CreateSysColorBrush`, sollten sie den Pinsel im Gerätekontext auswählen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
 ##  <a name="fromhandle"></a>  CBrush::FromHandle  
- Gibt einen Zeiger auf eine `CBrush` Objekt, wenn ein Handle zu einem Windows vorhanden [HBRUSH](#operator_hbrush) Objekt.  
+ Gibt einen Zeiger auf eine `CBrush` Objekt, wenn ein Handle auf ein Windows gewährt [HBRUSH](#operator_hbrush) Objekt.  
   
 ```  
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hBrush`  
- `HANDLE` auf einem Windows-GDI-Pinsel.  
+ *hBrush*  
+ HANDLE für einen Windows-GDI-Pinsel.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine `CBrush` -Objekt, wenn erfolgreich; andernfalls **NULL**.  
+ Ein Zeiger auf eine `CBrush` -Objekt, wenn erfolgreich; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn eine `CBrush` Objekt ist nicht bereits angefügt an das Handle, das einen temporären `CBrush` Objekt erstellt und angefügt. Dieser temporäre `CBrush` -Objekt nur bis zur nächsten Ausführung, die die Anwendung Leerlaufzeit in die Ereignisschleife verfügt gültig ist. Zu diesem Zeitpunkt werden alle temporären Grafikobjekte gelöscht. Das heißt, ist das temporäre Objekt nur während der Verarbeitung der Nachricht von einem Fenster gültig.  
+ Wenn eine `CBrush` Objekt ist noch nicht auf das Handle, eine temporäre angefügt `CBrush` Objekt erstellt und angefügt. Diese temporären `CBrush` Objekt nur bis zur nächsten Ausführung, die die Anwendung hat die Zeit im Leerlauf in seiner Ereignisschleife gültig ist. Zu diesem Zeitpunkt werden alle temporären grafische Objekte gelöscht. Das heißt, ist das temporäre Objekt nur während der Verarbeitung der Nachricht für ein Fenster gültig.  
   
- Weitere Informationen zum Verwenden von Grafikobjekten, finden Sie unter [Grafik Objekte](http://msdn.microsoft.com/library/windows/desktop/dd144962) im Windows SDK.  
+ Weitere Informationen zur Verwendung von Grafikobjekten finden Sie unter [Grafik Objekte](http://msdn.microsoft.com/library/windows/desktop/dd144962) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CBrush::CBrush](#cbrush).  
@@ -355,38 +356,38 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pLogBrush`  
+ *pLogBrush*  
  Verweist auf eine [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) -Struktur, die Informationen zu den Pinsel enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn die Funktion erfolgreich ausgeführt wird, und `pLogBrush` gültiger Zeiger ist, ist der Rückgabewert ist die Anzahl der Bytes im Puffer gespeichert.  
+ Wenn die Funktion erfolgreich ist, und *pLogBrush* gültiger Zeiger ist, ist der Rückgabewert ist die Anzahl der Bytes im Puffer gespeichert.  
   
- Wenn die Funktion erfolgreich ausgeführt wird, und `pLogBrush` ist **NULL**, der Rückgabewert ist die Anzahl der Bytes, die erforderlich sind, für die Informationen der Funktion würde im Puffer gespeichert.  
+ Wenn die Funktion erfolgreich ist, und *pLogBrush* NULL ist, der Rückgabewert ist die Anzahl von Bytes erforderlich, um die Informationen über die Funktion aufzunehmen speichern in den Puffer.  
   
  Wenn die Funktion fehlschlägt, ist der Rückgabewert 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `LOGBRUSH` Struktur definiert die Formatvorlage, die Farbe und die Muster aus einem Pinsel.  
+ Die `LOGBRUSH` Struktur definiert, der Stil, Farbe und Muster eines Pinsels.  
   
- Rufen Sie z. B. `GetLogBrush` mit der bestimmten Farbe oder eine Bitmap-Muster übereinstimmen.  
+ Rufen Sie z. B. `GetLogBrush` mit dem bestimmten Farbe oder ein Muster einer Bitmap übereinstimmen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
 ##  <a name="operator_hbrush"></a>  CBrush::operator HBRUSH  
- Verwenden Sie diesen Operator, um das angefügte Windows-GDI-Handle Abrufen der `CBrush` Objekt.  
+ Verwenden Sie diesen Operator, um das angefügte Windows-GDI-Handle des erhalten die `CBrush` Objekt.  
   
 ```  
 operator HBRUSH() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn erfolgreich, ein Handle für das Windows-GDI-Objekt durch dargestellt die `CBrush` Objekt; andernfalls **NULL**.  
+ Wenn erfolgreich, ein Handle für das Windows-GDI-Objekt durch dargestellt die `CBrush` Objekt; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Operator wird ein Typumwandlungsoperator, die direkte Verwendung von unterstützt ein `HBRUSH` Objekt.  
+ Dieser Operator ist ein Umwandlungsoperator, die direkte Verwendung eines Objekts HBRUSH unterstützt.  
   
- Weitere Informationen zum Verwenden von Grafikobjekten, finden Sie unter [Grafik Objekte](http://msdn.microsoft.com/library/windows/desktop/dd144962) im Windows SDK.  
+ Weitere Informationen zur Verwendung von Grafikobjekten finden Sie unter [Grafik Objekte](http://msdn.microsoft.com/library/windows/desktop/dd144962) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  

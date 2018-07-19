@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e911d91e987bb5172d9681161dcd87a287201b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7323c7dc104d8fbf54292fb7f1ca455b5e1a92f6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957372"
 ---
 # <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag-Struktur
 
-Eine Klasse, die einen Rückgabetyp für eine **iterator_category**-Funktion bereitstellt, die einen Random-Access-Iterator darstellt.
+Eine Klasse, die einen Rückgabetyp für eine `iterator_category` -Funktion, die einen random-Access-Iterator darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +38,7 @@ struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 
 Die Kategorietagklassen werden als Kompiliertags für die Auswahl des Algorithmus verwendet. Die Vorlagenfunktion muss herausfinden, welche die spezifischste Kategorie ihres Iteratorarguments ist, um zur Kompilierzeit den effizientesten Algorithmus verwenden zu können. Für jeden Iterator des Typs `Iterator` muss `iterator_traits`< `Iterator`> **::iterator_category** definiert werden, um das spezifischste Kategorietag zu werden, das das Iteratorverhalten beschreibt.
 
-Der Typ ist identisch mit **iterator**\< **Iter**> **::iterator_category**, wenn **Iter** ein Objekt beschreibt, das als Random-Access-Iterator verwendet werden kann.
+Der Typ ist identisch mit **Iterator** \< **Iter**> **:: Iterator_category** beim `Iter` beschreibt ein Objekt, das als dienen kann ein Random-Access-Iterator.
 
 ## <a name="example"></a>Beispiel
 

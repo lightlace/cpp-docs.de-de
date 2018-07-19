@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa2694e9f5bb477447d08ab976cac60634ef3b60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09123f4b8d0200d133ae04244d38b615640f7d30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964925"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Funktionsobjekte in der C++-Standardbibliothek
 
@@ -57,7 +58,7 @@ template <class Key,
 class set
 ```
 
-Das zweite Vorlagenargument ist das Funktionsobjekt „ `less`“. Dieses Funktionsobjekt gibt `true` zurück, wenn der erste an sie übergebene Parameter kleiner als der zweite übergebene Parameter ist. Da einige Container ihre Elemente sortieren, benötigt der Container eine Möglichkeit zum Vergleich von zwei Elementen, und dies wird mithilfe des Funktionsobjekts erreicht. Sie können eigene Sortierungskriterien für Container definieren, indem Sie ein Funktionsobjekt erstellen und es in der Vorlagenliste für den Container angeben.
+Das zweite Vorlagenargument ist das Funktionsobjekt „ `less`“. Dieses Funktionsobjekt gibt **"true"** , wenn der erste Parameter zu übergeben. dieser Wert ist kleiner als der zweite Parameter übergeben. Da einige Container ihre Elemente sortieren, benötigt der Container eine Möglichkeit zum Vergleich von zwei Elementen, und dies wird mithilfe des Funktionsobjekts erreicht. Sie können eigene Sortierungskriterien für Container definieren, indem Sie ein Funktionsobjekt erstellen und es in der Vorlagenliste für den Container angeben.
 
 ## <a name="function-objects-and-algorithms"></a>Funktionsobjekte und Algorithmen
 
@@ -71,7 +72,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-Das letzte Argument für `remove_if` ist ein Funktionsobjekt, das einen booleschen Wert zurückgibt (ein *Prädikat*). Wenn das Ergebnis des Funktionsobjekts `true` ist, wird das Element aus dem Container entfernt, auf den die Iteratoren `first` und `last`zugreifen. Sie können eines der Funktionsobjekte verwenden, die im Header [\<functional>](../standard-library/functional.md) für das Argument `pred` deklariert sind, oder ein eigenes erstellen.
+Das letzte Argument für `remove_if` ist ein Funktionsobjekt, das einen booleschen Wert zurückgibt (ein *Prädikat*). Wenn das Ergebnis des Funktionsobjekts **"true"**, und klicken Sie dann das Element entfernt wird, aus dem Container, die Zugriff auf die Iteratoren `first` und `last`. Sie können eines der Funktionsobjekte verwenden, die im Header [\<functional>](../standard-library/functional.md) für das Argument `pred` deklariert sind, oder ein eigenes erstellen.
 
 ## <a name="see-also"></a>Siehe auch
 

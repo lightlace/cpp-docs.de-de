@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369564"
 ---
 # <a name="bscmake-command-file-response-file"></a>BSCMAKE-Befehlsdatei (Antwortdatei)
 Sie können die Befehlszeileneingabe in einer Befehlsdatei ganz oder teilweise bereitstellen. Geben Sie die Befehlsdatei, die mit der folgenden Syntax:  

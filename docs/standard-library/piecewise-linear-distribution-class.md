@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b516478c72e92f63b898cc43aa4838ab72733a05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959471"
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution-Klasse
 
@@ -89,7 +90,7 @@ public:
 
 ### <a name="parameters"></a>Parameter
 
-`RealType` Der gleitkommaergebnistyp, der Standardwert ist `double`. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*RealType* der gleitkommaergebnistyp, der Standardwert ist **doppelte**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Hinweise
 
@@ -257,23 +258,23 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*FirstI* ein eingabeiterator für das erste Element im Verteilungsbereich.
+*FirstI* einen eingabeiterator des ersten Elements im Verteilungsbereich.
 
 *LastI* ein eingabeiterator für das letzte Element im Verteilungsbereich.
 
 *FirstW* ein eingabeiterator für das erste Element im gewichtsbereich.
 
-*Intervalle* ein [Initializer_list](../cpp/initializers.md) mit den Intervallen der Verteilung.
+*Intervalle* ein [initializer_list-Element](../cpp/initializers.md) mit den Intervallen der Verteilung.
 
 *Anzahl* die Anzahl von Elementen im Verteilungsbereich.
 
-*Xmin* den niedrigsten Wert im Verteilungsbereich.
+*"xmin"* den niedrigsten Wert im Verteilungsbereich.
 
 *"xmax"* der höchste Wert im Verteilungsbereich. Muss größer als *xmin* sein.
 
-*Weightfunc* das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Sowohl der Parameter als auch der Rückgabewert müssen in `double` konvertierbar sein.
+*Weightfunc* das Objekt, das die Wahrscheinlichkeitsfunktion für die Verteilung darstellt. Die Parameter und der Rückgabewert müssen konvertierbar sein **doppelte**.
 
-*Parm* Parameterstruktur, die für die Verteilung verwendete Parameterstruktur.
+*Parm* die Parameterstruktur verwendet, um die Verteilung erstellen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -289,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-erstellt ein Verteilungsobjekt mit Intervallen von Iteratoren über die Sequenz [`firstI`, `lastI`) und einer passenden Gewichtssequenz, die mit `firstW` beginnt.
+erstellt ein Verteilungsobjekt mit Intervallen von Iteratoren über die Sequenz [ `firstI`, `lastI`) und eine entsprechende gewichtssequenz *FirstW*.
 
 Der Initialisiererlistenkonstruktor
 
@@ -300,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-erstellt ein Verteilungsobjekt mit Intervallen aus der Initialisiererliste `intervals` und aus der Funktion `weightfunc` erzeugten Gewichten.
+erstellt ein Verteilungsobjekt mit Intervallen aus der Initialisiererliste *Intervallen* und Gewichtungen, die von der Funktion generiert *Weightfunc*.
 
 Der als
 
@@ -313,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-definierte Konstruktor erstellt ein Verteilungsobjekt mit gleichmäßig über [`xmin,xmax`] verteilten `count`-Intervallen und weist jedem Intervall Gewichte entsprechend der Funktion `weightfunc` zu. `weightfunc` muss einen Parameter übernehmen und einen Rückgabewert haben, beide davon müssen in `double` konvertierbar sein. **Vorbedingung:**`xmin < xmax`.
+erstellt ein Verteilungsobjekt mit *Anzahl* verteilten Intervallen gleichmäßig über [ `xmin,xmax`], weist jedem Intervall Gewichte entsprechend der Funktion *Weightfunc*, und  *Weightfunc* muss einen Parameter übernehmen und einen Rückgabewert haben, beide davon konvertierbar müssen `double`. **Vorbedingung:**`xmin < xmax`.
 
 Der als
 
@@ -321,7 +322,7 @@ Der als
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-definierte Konstruktor erstellt ein Verteilungsobjekt mit `parm` als gespeicherte Parameterstruktur.
+erstellt ein Verteilungsobjekt mit *Parm* als gespeicherte Parameterstruktur.
 
 ## <a name="param_type"></a> piecewise_linear_distribution::param_type
 

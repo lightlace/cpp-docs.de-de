@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691000"
 ---
 # <a name="4-environment-variables"></a>4. Umgebungsvariablen
 In diesem Kapitel wird beschrieben, die Umgebungsvariablen OpenMP-C- und C++-API (oder die entsprechende plattformspezifische Mechanismen), die die Ausführung des parallelen Code steuern.  Die Namen der Umgebungsvariablen müssen in Großbuchstaben angegeben werden. Die Werte, die ihnen zugewiesen werden Groß-/Kleinschreibung und möglicherweise führende und nachfolgende Leerzeichen.  Änderungen der Werte aus, nachdem das Programm gestartet wurde, werden ignoriert.  

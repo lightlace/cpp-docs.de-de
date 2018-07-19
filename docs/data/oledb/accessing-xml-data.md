@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093401"
 ---
 # <a name="accessing-xml-data"></a>Zugreifen auf XML-Daten
 Es gibt zwei separate Methoden zum Abrufen von XML-Daten aus einer Datenquelle: eine verwendet [CStreamRowset](../../data/oledb/cstreamrowset-class.md) und die andere Verwendungen [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  

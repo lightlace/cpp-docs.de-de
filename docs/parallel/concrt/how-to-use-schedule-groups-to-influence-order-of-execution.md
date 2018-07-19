@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691195"
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Gewusst wie: Beeinflussen der Ausführungsreihenfolge mithilfe von Zeitplangruppen
 In der Concurrency Runtime ist die Reihenfolge, in der Aufgaben geplant werden, nicht deterministisch. Sie können die Reihenfolge der Aufgabenausführung jedoch mithilfe von Planungsrichtlinien beeinflussen. In diesem Thema wird gezeigt, wie Planungsgruppen zusammen mit den [SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) Planerrichtlinie, die die Reihenfolge beeinflussen, in dem Aufgaben ausgeführt werden.  

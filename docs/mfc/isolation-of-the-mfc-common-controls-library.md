@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346814"
 ---
 # <a name="isolation-of-the-mfc-common-controls-library"></a>Isolierung der MFC-Bibliothek für Standardsteuerelemente
 Common Controls-Bibliothek ist jetzt in MFC, ermöglichen andere Modulen (z. B. Benutzer DLLs) isolierte verschiedene Versionen der Common Controls-Bibliothek durch Angeben der Version in ihren Manifesten verwenden.  

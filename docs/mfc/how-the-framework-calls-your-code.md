@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348178"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Wie das Framework Code aufruft
 Es ist entscheidend, um die Beziehung zwischen Quellcode und den Code in der MFC-Framework zu verstehen. Wenn die Anwendung ausgeführt wird, die meisten die ablaufsteuerung befindet sich in der Framework-Code. Das Framework verwaltet die Nachrichtenschleife, die Nachrichten von Windows Ruft ab, wie der Benutzer Befehle wählt und Bearbeiten von Daten in einer Ansicht an. Ereignisse, die das Framework selbst bewältigt verlassen überhaupt nicht auf den Code. Das Framework beispielsweise weiß, wie Windows schließen und die Anwendung als Reaktion auf Benutzerbefehle zu beenden. Wie sie diese Aufgaben behandelt, verwendet das Framework Meldungshandler und virtuelle C++-Funktionen bieten Möglichkeiten für die Reaktion auf diese Ereignisse auch an. Der Code ist jedoch nicht im Steuerelement. Das Framework ist.  

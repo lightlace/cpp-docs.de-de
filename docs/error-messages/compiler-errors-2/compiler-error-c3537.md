@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252604"
 ---
 # <a name="compiler-error-c3537"></a>Compilerfehler C3537
 'Typ': Sie können nicht eine Umwandlung in einen Typ, der "auto" enthält  

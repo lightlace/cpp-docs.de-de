@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de11114eafe423e80c885f3b1a5d00a70b449e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4eab6d6ce44655177d20073ca5c5cda3859cb8b3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966380"
 ---
 # <a name="ispolymorphic-class"></a>is_polymorphic-Klasse
 
@@ -36,11 +37,11 @@ struct is_polymorphic;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn es sich beim Typ `Ty` um eine Klasse handelt, die eine virtuelle Funktion deklariert oder erbt; andernfalls „false“.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist eine Klasse, die deklariert oder erbt von einer virtuellen Funktion ist, andernfalls "false".
 
 ## <a name="example"></a>Beispiel
 

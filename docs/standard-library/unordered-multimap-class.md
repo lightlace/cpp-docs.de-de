@@ -147,11 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c69d344276ef584ef20801395c62c8ed55567cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd7a7489c07572a9e3865698dc02988768983669
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960576"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap-Klasse
 
@@ -172,11 +173,11 @@ class unordered_multimap;
 
 |Parameter|Beschreibung|
 |-|-|
-|`Key`|Der Schlüsseltyp.|
-|`Ty`|Der zugeordnete Typ.|
-|`Hash`|Der Hashfunktionsobjekttyp.|
-|`Pred`|Der Gleichheitsvergleich-Funktionsobjekttyp.|
-|`Alloc`|Die Zuweisungsklasse.|
+|*Key*|Der Schlüsseltyp.|
+|*Ty*|Der zugeordnete Typ.|
+|*Hash*|Der Hashfunktionsobjekttyp.|
+|*Pred*|Der Gleichheitsvergleich-Funktionsobjekttyp.|
+|*Alloc*|Die Zuweisungsklasse.|
 
 ## <a name="members"></a>Member
 
@@ -307,11 +308,11 @@ const_local_iterator begin(size_type nbucket) const;
 
 |Parameter|Beschreibung|
 |-|-|
-|`nbucket`|Die Bucketnummer.|
+|*nbucket*|Die Bucketnummer.|
 
 ### <a name="remarks"></a>Hinweise
 
-Die beiden ersten Memberfunktionen geben einen Vorwärtsiterator zurück, der auf das erste Element der Sequenz zeigt (bzw. unmittelbar hinter das Ende einer leeren Sequenz). Die beiden letzten Memberfunktionen geben einen Vorwärtsiterator zurück, der auf das erste Element des Buckets `nbucket` zeigt (bzw. unmittelbar hinter das Ende eines leeren Buckets).
+Die beiden ersten Memberfunktionen geben einen Vorwärtsiterator zurück, der auf das erste Element der Sequenz zeigt (bzw. unmittelbar hinter das Ende einer leeren Sequenz). Die beiden letzten Memberfunktionen geben einen vorwärtsiterator zurück, der auf das erste Element des Buckets zeigt *Nbucket* (bzw. unmittelbar hinter das Ende eines leeren Buckets).
 
 ### <a name="example"></a>Beispiel
 
@@ -368,11 +369,12 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-`keyval` Der zuzuordnende Schlüsselwert.
+*keyVal*  
+ Der zuzuordnende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt die Bucketnummer zurück, die derzeit dem Schlüsselwert `keyval`entspricht.
+Die Memberfunktion gibt die bucketnummer zurück derzeit dem Schlüsselwert entspricht *Keyval*.
 
 ### <a name="example"></a>Beispiel
 
@@ -512,11 +514,12 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parameter
 
-`nbucket` Die bucketnummer.
+*nbucket*  
+ Die Bucketnummer.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt die Größe von Bucket Nummer `nbucket`zurück.
+Die Memberfunktion gibt die Größe der bucketnummer *Nbucket*.
 
 ### <a name="example"></a>Beispiel
 
@@ -560,7 +563,7 @@ bucket_size(7) == 1
 
 ## <a name="cbegin"></a> unordered_multimap::cbegin
 
-Gibt einen `const`-Iterator zurück, mit dem das erste Element im Bereich behandelt wird.
+Gibt eine **const** -Iterator, der das erste Element im Bereich adressiert.
 
 ```cpp
 const_iterator cbegin() const;
@@ -568,13 +571,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein `const`-Forward-Access-Iterator, der auf das erste Element des Bereichs zeigt oder die Position direkt hinter dem Ende eines leeren Bereichs (für einen leeren Bereich gilt `cbegin() == cend()`).
+Ein **const** Forward-Access-Iterator, der zeigt auf das erste Element des Bereichs, oder die Position direkt hinter das Ende eines leeren Bereichs (für einen leeren Bereich gilt `cbegin() == cend()`).
 
 ### <a name="remarks"></a>Hinweise
 
 Bei dem Rückgabewert `cbegin` können die Elemente im Bereich nicht geändert werden.
 
-Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger änderbarer (Nicht-`const`-)Container, der `begin()` und `cbegin()` unterstützt.
+Sie können diese Memberfunktion anstelle der `begin()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel können Sie auch `Container` ein beliebiger änderbarer (nicht- **const**) Container jeder Art, die unterstützt `begin()` und `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -586,7 +589,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a> unordered_multimap::cend
 
-Gibt einen `const`-Iterator zurück, der den Speicherort adressiert, der dem letzten Element eines Bereichs unmittelbar nachfolgt.
+Gibt eine **const** Iterator, der die Position direkt hinter dem letzten Element in einem Bereich.
 
 ```cpp
 const_iterator cend() const;
@@ -594,13 +597,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt einen `const`-Forward-Access-Iterator zurück, der auf eine Position unmittelbar nach dem Ende des Bereichs verweist.
+Ein **const** Forward-Access-Iterator, der direkt hinter das Ende des Bereichs verweist.
 
 ### <a name="remarks"></a>Hinweise
 
 `cend` wird verwendet, um zu testen, ob ein Iterator das Ende seines Bereichs übergeben hat.
 
-Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. Im folgenden Beispiel ist `Container` ein beliebiger änderbarer (Nicht-`const`-)Container, der `end()` und `cend()` unterstützt.
+Sie können diese Memberfunktion anstelle der `end()`-Memberfunktion verwenden, um sicherzustellen, dass der Rückgabewert `const_iterator` ist. Normalerweise wird sie zusammen mit dem [auto](../cpp/auto-cpp.md)-Typableitungs-Schlüsselwort verwendet, wie im folgenden Beispiel gezeigt. In diesem Beispiel können Sie auch `Container` ein beliebiger änderbarer (nicht- **const**) Container jeder Art, die unterstützt `end()` und `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -877,7 +880,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-`keyval` Zu suchende Schlüsselwert.
+*keyVal*  
+ Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -995,7 +999,7 @@ iterator emplace(Args&&... args);
 
 |Parameter|Beschreibung|
 |-|-|
-|`args`|Die weitergeleiteten Argumente zur Konstruktion eines Elements, dass in das unordered_multimap-Element eingefügt werden soll.|
+|*args*|Die weitergeleiteten Argumente zur Konstruktion eines Elements, dass in das unordered_multimap-Element eingefügt werden soll.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1026,8 +1030,8 @@ iterator emplace_hint(
 
 |Parameter|Beschreibung|
 |-|-|
-|`args`|Die weitergeleiteten Argumente zur Konstruktion eines Elements, dass in die unsortierte Mehrfachzuordnung eingefügt werden soll.|
-|`where`|Ein Hinweis bezüglich des Platzes, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird.|
+|*args*|Die weitergeleiteten Argumente zur Konstruktion eines Elements, dass in die unsortierte Mehrfachzuordnung eingefügt werden soll.|
+|*where*|Ein Hinweis bezüglich des Platzes, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1130,11 +1134,11 @@ const_local_iterator end(size_type nbucket) const;
 
 |Parameter|Beschreibung|
 |-|-|
-|`nbucket`|Die Bucketnummer.|
+|*nbucket*|Die Bucketnummer.|
 
 ### <a name="remarks"></a>Hinweise
 
-Die ersten beiden Memberfunktionen geben einen Vorwärtsiterator zurück, der direkt hinter das Ende der Sequenz verweist. Die letzten beiden Memberfunktionen geben einen Vorwärtsiterator zurück, der direkt hinter von Bucket `nbucket` verweist.
+Die ersten beiden Memberfunktionen geben einen Vorwärtsiterator zurück, der direkt hinter das Ende der Sequenz verweist. Die beiden letzten Memberfunktionen geben einen vorwärtsiterator zurück, der direkt hinter das Ende von Bucket zeigt *Nbucket*.
 
 ### <a name="example"></a>Beispiel
 
@@ -1197,11 +1201,12 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parameter
 
-`keyval` Zu suchende Schlüsselwert.
+*keyVal*  
+ Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt ein Paar von Iteratoren `X` zurück, sodass `[X.first, X.second)` nur die Elemente der gesteuerten Sequenz begrenzt, die eine entsprechende Sortierung mit `keyval`aufweisen. Wenn keine solchen Elemente vorhanden sind, sind beide Iteratoren `end()`.
+Die Memberfunktion gibt ein Paar von Iteratoren `X` so, dass `[X.first, X.second)` nur die Elemente der gesteuerten Sequenz, die entsprechende Sortierung mit begrenzt *Keyval*. Wenn keine solchen Elemente vorhanden sind, sind beide Iteratoren `end()`.
 
 ### <a name="example"></a>Beispiel
 
@@ -1272,13 +1277,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parameter
 
-`Where` Die Position des zu entfernenden Elements.
+*Where*  
+ Die Position des zu entfernenden Elements.
 
-`First` Die Position des ersten Elements entfernt werden soll.
+*Erste*  
+ Die Position des ersten zu entfernenden Elements.
 
-`Last` Die Position direkt hinter dem letzten Element entfernt werden soll.
+*letzte*  
+ Die Position direkt hinter dem letzten zu entfernenden Element.
 
-`Key` Der Schlüsselwert der zu entfernenden Elemente.
+*Key*  
+ Der Schlüsselwert der zu entfernenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1300,7 +1309,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parameter
 
-`keyval` Zu suchende Schlüsselwert.
+*keyVal*  
+ Der zu suchende Schlüsselwert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1514,13 +1524,13 @@ IList);
 
 |Parameter|Beschreibung|
 |-|-|
-|`Val`|Der Wert eines in das unordered_multimap-Element einzufügenden Elements.|
-|`Where`|Die Position, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird.|
-|`ValTy`|Der Vorlagenparameter, mit dem der Argumenttyp angegeben wird, der vom unordered_multimap-Element verwendet werden kann, um ein Element von [value_type](../standard-library/map-class.md#value_type) zu erstellen und `Val` perfekt als Argument weiterzuleiten.|
-|`First`|Die Position des ersten zu kopierenden Elements.|
-|`Last`|Die Position direkt über den letzten zu kopierenden Elements.|
-|`InputIterator`|Das Vorlagenfunktionsargument, das den Anforderungen eines [Eingabeiterators](../standard-library/input-iterator-tag-struct.md) erfüllt, der auf Elemente eines Typs zeigt, der zum Erstellen von [value_type](../standard-library/map-class.md#value_type)-Objekten verwendet werden kann.|
-|`IList`|Das [initializer_list](../standard-library/initializer-list.md)-Element, aus dem die Elemente kopiert werden sollen.|
+|*val*|Der Wert eines in das unordered_multimap-Element einzufügenden Elements.|
+|*Where*|Die Position, an dem mit der Suche nach dem richtigen Einfügepunkt begonnen wird.|
+|*ValTy*|Vorlagenparameter, der der Argumenttyp angegeben wird, die das unordered_multimap-Element verwenden können, erstellen Sie ein Element der [Value_type](../standard-library/map-class.md#value_type), und perfekt *Val* als Argument.|
+|*Erste*|Die Position des ersten zu kopierenden Elements.|
+|*letzte*|Die Position direkt über den letzten zu kopierenden Elements.|
+|*InputIterator*|Das Vorlagenfunktionsargument, das den Anforderungen eines [Eingabeiterators](../standard-library/input-iterator-tag-struct.md) erfüllt, der auf Elemente eines Typs zeigt, der zum Erstellen von [value_type](../standard-library/map-class.md#value_type)-Objekten verwendet werden kann.|
+|*IList*|Das [initializer_list](../standard-library/initializer-list.md)-Element, aus dem die Elemente kopiert werden sollen.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1536,7 +1546,7 @@ Wird beim Einfügen von nur einem Element eine Ausnahme ausgelöst, die jedoch n
 
 Das [value_type](../standard-library/map-class.md#value_type)-Element eines Containers ist eine Typedef, die dem Container angehört. Bei einer Zuordnung ist `map<K, V>::value_type` `pair<const K, V>`. Der Wert eines Elements ist ein sortiertes Paar, in dem die erste Komponente gleich dem Schlüsselwert und die zweite Komponente gleich dem Datenwert des Elements ist.
 
-Die Bereichsmemberfunktion (5) fügt die Sequenz von Elementwerten in ein unordered_multimap-Element ein, das jedem Element entspricht, das von einem Iterator im Bereich `[First, Last)` adressiert wird. Daher wird `Last` nicht eingefügt. Die Containermemberfunktion `end()` bezieht sich auf die Position direkt hinter dem letzten Element im Container. Z. B fügt die Anweisung `m.insert(v.begin(), v.end());` alle Elemente von `v` in `m` ein.
+Die bereichsmemberfunktion (5) Fügt die Sequenz von Elementwerten in ein unordered_multimap-Element, das jedes Element von einem Iterator im Bereich adressiert entspricht `[First, Last)`daher *letzten* nicht eingefügt. Die Containermemberfunktion `end()` bezieht sich auf die Position direkt hinter dem letzten Element im Container. Z. B fügt die Anweisung `m.insert(v.begin(), v.end());` alle Elemente von `v` in `m` ein.
 
 Die Memberfunktion für die Initialisiererliste (6) verwendet eine [initializer_list](../standard-library/initializer-list.md), um Elemente in die unordered_multimap zu kopieren.
 
@@ -2001,11 +2011,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parameter
 
-`factor` Die neue maximale Lastfaktor.
+*factor*  
+ Der neue maximale Lastfaktor.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Memberfunktion gibt den gespeicherten maximalen Lastfaktor zurück. Die zweite Memberfunktion ersetzt den gespeicherten maximalen Lastfaktor durch `factor`.
+Die erste Memberfunktion gibt den gespeicherten maximalen Lastfaktor zurück. Die zweite Memberfunktion ersetzt den gespeicherten maximalen Lastfaktor durch *Faktor*.
 
 ### <a name="example"></a>Beispiel
 
@@ -2133,11 +2144,11 @@ unordered_multimap& operator=(unordered_multimap&& right);
 
 |Parameter|Beschreibung|
 |-|-|
-|`right`|Das unordered_multimap-Element, das in das unordered_multimap-Element kopiert wird.|
+|*right*|Das unordered_multimap-Element, das in das unordered_multimap-Element kopiert wird.|
 
 ### <a name="remarks"></a>Hinweise
 
-Nachdem alle vorhandenen Elemente in einem unordered_multimap-Element gelöscht wurden, kopiert oder verschiebt `operator=` den Inhalt von `right` in das unordered_multimap-Element.
+Nach dem Löschen alle vorhandenen Elemente in einem unordered_multimap-Element, `operator=` kopiert oder verschiebt den Inhalt der *rechten* in das unordered_multimap-Element.
 
 ### <a name="example"></a>Beispiel
 
@@ -2280,11 +2291,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parameter
 
-`nbuckets` Die angeforderte Anzahl von Buckets.
+*nbuckets*  
+ Die angeforderte Anzahl von Buckets.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion ändert die Anzahl der Buckets in mindestens `nbuckets` und erstellt ggf. die Hashtabelle neu.
+Die Memberfunktion ändert die Anzahl der Buckets in mindestens *Nbuckets* und erstellt die Hashtabelle nach Bedarf neu.
 
 ### <a name="example"></a>Beispiel
 
@@ -2463,11 +2475,11 @@ void swap(unordered_multimap& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Der Container für den Tauschvorgang.
+*richtige* den Container, mit dem getauscht.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `*this` und `right`aus. Wenn [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()` gilt, führt sie dies in einer konstanten Zeit aus, sie löst eine Ausnahme nur als Reaktion auf das Kopieren des gespeicherter Merkmalobjekts vom Typ `Tr` aus, und sie macht keine Verweise, Zeiger oder Iteratoren ungültig, die Elemente in den beiden kontrollierten Sequenzen bestimmen. Andernfalls führt Sie proportional zur Anzahl der Elemente in den beiden kontrollierten Sequenzen eine Reihe von Elementzuweisungen und Konstruktoraufrufe aus.
+Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `*this` und *rechten*. Wenn [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()` gilt, führt sie dies in einer konstanten Zeit aus, sie löst eine Ausnahme nur als Reaktion auf das Kopieren des gespeicherter Merkmalobjekts vom Typ `Tr` aus, und sie macht keine Verweise, Zeiger oder Iteratoren ungültig, die Elemente in den beiden kontrollierten Sequenzen bestimmen. Andernfalls führt Sie proportional zur Anzahl der Elemente in den beiden kontrollierten Sequenzen eine Reihe von Elementzuweisungen und Konstruktoraufrufe aus.
 
 ### <a name="example"></a>Beispiel
 
@@ -2580,27 +2592,27 @@ unordered_multimap(
 
 |Parameter|Beschreibung|
 |-|-|
-|`InputIterator`|Der Iteratortyp.|
-|`Al`|Das zu speichernde Zuweisungsobjekt.|
-|`Comp`|Das zu speichernde Vergleichsfunktionsobjekt.|
-|`Hash`|Das zu speichernde Hashfunktionsobjekt.|
-|`Bucket_count`|Die Mindestanzahl von Buckets.|
-|`Right`|Der zu kopierende Container.|
-|`IList`|Das initializer_list-Element, aus dem die Elemente kopiert werden sollen.|
+|*InputIterator*|Der Iteratortyp.|
+|*Al*|Das zu speichernde Zuweisungsobjekt.|
+|*Comp*|Das zu speichernde Vergleichsfunktionsobjekt.|
+|*Hash*|Das zu speichernde Hashfunktionsobjekt.|
+|*Bucket_count-Wert*|Die Mindestanzahl von Buckets.|
+|*Rechts*|Der zu kopierende Container.|
+|*IList*|Das initializer_list-Element, aus dem die Elemente kopiert werden sollen.|
 
 ### <a name="remarks"></a>Hinweise
 
-Mit dem ersten Konstruktor wird eine Kopie der Sequenz angegeben, die von `Right` gesteuert wird. Mit dem zweiten Konstruktor wird eine leere gesteuerte Sequenz angegeben. Mit dem dritten Konstruktor wird eine Kopie der Sequenz angegeben, indem `Right` verschoben wird. Bei den vierten, fünften sechsten, siebten und achten Konstruktoren wird ein initializer_list-Element für die Member verwendet. Mit dem neunten Konstruktor wird die Elementwertesequenz `[First, Last)` eingefügt.
+Der erste Konstruktor gibt eine Kopie der gesteuerte Sequenz durch *rechts*. Mit dem zweiten Konstruktor wird eine leere gesteuerte Sequenz angegeben. Mit dem dritten Konstruktor Gibt eine Kopie der Sequenz an, durch das Verschieben *rechts*. Bei den vierten, fünften sechsten, siebten und achten Konstruktoren wird ein initializer_list-Element für die Member verwendet. Mit dem neunten Konstruktor wird die Elementwertesequenz `[First, Last)` eingefügt.
 
-Alle Konstruktoren initialisieren auch einige gespeicherte Werte. Für den Kopierkonstruktor werden die Werte aus `Right` abgerufen. Andernfalls gilt:
+Alle Konstruktoren initialisieren auch einige gespeicherte Werte. Für den Kopierkonstruktor werden die Werte erhalten Sie vom *rechts*. Andernfalls gilt:
 
-Die Mindestbucketanzahl entspricht dem Argument `Bucket_count`, falls es vorhanden ist. Andernfalls ist es ein Standardwert, der hier als der durch die Implementierung definierte Wert `N0` beschrieben wird.
+die minimale Anzahl von Buckets ist das Argument *Bucket_count*, wenn vorhanden; andernfalls den Standardwert beschrieben wird hier als der implementierungsdefinierte Wert `N0`.
 
-Das Hashfunktionsobjekt ist das Argument `Hash`, falls es vorhanden ist. Andernfalls ist es `Hash()`.
+Das hashfunktionsobjekt ist das Argument *Hash*, wenn vorhanden; andernfalls es ist `Hash()`.
 
-Das Vergleichfunktionsobjekt ist das Argument `Comp`, falls es vorhanden ist. Andernfalls ist es `Pred()`.
+Das vergleichsfunktionsobjekt ist das Argument *Comp*, wenn vorhanden; andernfalls es ist `Pred()`.
 
-Das Zuweisungsobjekt ist das Argument `Al`, falls es vorhanden ist. Andernfalls ist es `Alloc()`.
+Das Zuweisungsobjekt ist das Argument *Al*, wenn vorhanden; andernfalls es ist `Alloc()`.
 
 ### <a name="example"></a>Beispiel
 

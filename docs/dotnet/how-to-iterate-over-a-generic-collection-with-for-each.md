@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128026"
 ---
 # <a name="how-to-iterate-over-a-generic-collection-with-for-each"></a>Gewusst wie: Durchlaufen einer generischen Auflistung mit der for-each-Klausel
 Die [Generika](../windows/generics-cpp-component-extensions.md) Feature von Visual C++ können Sie generische Auflistungen zu erstellen.  

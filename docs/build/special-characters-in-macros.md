@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380172"
 ---
 # <a name="special-characters-in-macros"></a>Sonderzeichen in Makros
 Mit einem Nummernzeichen (#) nach eine Definition gibt einen Kommentar an. Verwenden Sie ein Caretzeichen (^), um ein literal Nummernzeichen in einem Makro angeben, wie in ^ #.  

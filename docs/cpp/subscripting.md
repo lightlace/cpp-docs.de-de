@@ -1,5 +1,5 @@
 ---
-title: Indizierung | Microsoft Docs
+title: Indizierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65798eb9983273cf3b8b2b136be9a9acc082cb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943538"
 ---
 # <a name="subscripting"></a>Indizierung 
-Der Indexoperator (**[]**) wie der Funktionsaufrufoperator als binärer Operator betrachtet wird. Der Indexoperator muss eine nicht statische Memberfunktion sein, die ein einzelnes Argument akzeptiert. Dieses Argument kann einen beliebigen Typ aufweisen und legt den gewünschten Arrayindex fest.  
+Der Indexoperator (**[]**), wie der Funktionsaufrufoperator wird als binärer Operator betrachtet. Der Indexoperator muss eine nicht statische Memberfunktion sein, die ein einzelnes Argument akzeptiert. Dieses Argument kann einen beliebigen Typ aufweisen und legt den gewünschten Arrayindex fest.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie ein Vektor vom Typ `int` erstellt werden kann, der die Überprüfung der Begrenzungen implementiert:  
+ Im folgende Beispiel wird veranschaulicht, wie einen Vektor vom Typ erstellen **Int** , die Überprüfung der Begrenzungen implementiert:  
   
-```  
+```cpp 
 // subscripting.cpp  
 // compile with: /EHsc  
 #include <iostream>  

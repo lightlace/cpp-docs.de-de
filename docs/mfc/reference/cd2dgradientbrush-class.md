@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e479c156967addc7add8f048d2ef1c3abab0dd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956232"
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush-Klasse
 Die Basisklasse der CD2DLinearGradientBrush und die CD2DRadialGradientBrush-Klassen.  
@@ -101,25 +102,25 @@ CD2DGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentTarget`  
+ *pParentTarget*  
  Ein Zeiger auf das Renderziel.  
   
- `gradientStops`  
+ *gradientStops*  
  Ein Zeiger auf ein Array von D2D1_GRADIENT_STOP-Strukturen.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Ein Wert größer als oder gleich 1, der die Anzahl der Farbverlaufsstopps im Array GradientStops angibt.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  Der Speicherplatz in der die, den Farbe Interpolation zwischen dem Farbverlaufsstopps ausgeführt wird.  
   
- `extendMode`  
+ *extendMode*  
  Das Verhalten des Farbverlaufs außerhalb des Bereichs, [0,1] normalisierte.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Ein Zeiger auf die Deckkraft- und Transformation eines Pinsels.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
 ##  <a name="destroy"></a>  CD2DGradientBrush:: Destroy  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196882"
 ---
 # <a name="compiler-error-c2397"></a>Compilerfehler Fehler C2397
 Konvertierung von 'type_1' zu 'type_2' ist eine einschränkende Konvertierung erforderlich.  

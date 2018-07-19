@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053115"
 ---
 # <a name="if"></a>.IF
 Generiert Code, der testet `condition1` (z. B. AX 7 >) und führt die *Anweisungen* , wenn die Bedingung "true" ist.  

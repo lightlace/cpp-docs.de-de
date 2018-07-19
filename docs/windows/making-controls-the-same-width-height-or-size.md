@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874797"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Festlegen der gleichen Breite, Höhe oder Größe für Steuerelemente
 Sie können eine Gruppe von Steuerelementen, die basierend auf der Größe des bestimmenden Steuerelements ändern. Sie können auch [ändern Sie die Größe eines Steuerelements basierend auf den angegebenen Dimensionen Beschriftung Text](../windows/sizing-individual-controls.md).  

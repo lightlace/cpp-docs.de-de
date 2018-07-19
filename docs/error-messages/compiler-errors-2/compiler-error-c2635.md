@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233989"
 ---
 # <a name="compiler-error-c2635"></a>Compiler-Fehler C2635 generiert
 Konvertierung einer 'Bezeichner1*"in einer" Bezeichner2\*"; Konvertierung von einer virtuellen Basisklasse wird impliziert.  

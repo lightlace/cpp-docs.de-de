@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097691"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Erstellen eines Consumers ohne Assistent
 Im folgende Beispiel wird davon ausgegangen, dass Sie ein vorhandenes ATL-Projekt OLE DB-Consumer-Unterstützung hinzufügen. Wenn Sie OLE DB-Consumer-Unterstützung für eine MFC_Anwendung hinzufügen möchten, sollten Sie die MFC-Anwendung-Assistenten ausführen erstellt alle Unterstützung erforderlich sind, und ruft MFC-Routinen, die zum Ausführen der Anwendung.  

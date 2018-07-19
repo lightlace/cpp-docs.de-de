@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686538"
 ---
 # <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11   Angeben einer festgelegten Anzahl von Threads
 Einige Programme basieren auf einer festen, vordefinierten Anzahl von Threads ordnungsgemäß ausgeführt.  Da die Standardeinstellung für die dynamische Anpassung der Anzahl von Threads Implementierung definiert ist, können diese Programme deaktivieren Sie die dynamische Threads-Funktion, und legen Sie die Anzahl der Threads explizit, um Portabilität sicherzustellen. Im folgende Beispiel wird gezeigt, wie Sie diesen Vorgang mit `omp_set_dynamic` ([Abschnitt 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) auf Seite 39), und `omp_set_num_threads` ([Abschnitt 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) auf Seite 36):  

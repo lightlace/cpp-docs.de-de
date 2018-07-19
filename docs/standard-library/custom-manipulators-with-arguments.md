@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56eac7eef1feba1ba287af0dcd0d581335e395c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2450f57d755b70170165d1b2e46e4b00788fe573
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965860"
 ---
 # <a name="custom-manipulators-with-arguments"></a>Benutzerdefinierte Manipulatoren mit Argumenten
 
@@ -28,7 +29,7 @@ In diesem Abschnitt wird die Erstellung von Ausgabestreammanipulatoren mit einem
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Ausgabestreammanipulatoren mit einem Argument](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md) (`int` oder `long`)
+[Ausgabe von Stream-Manipulatoren mit einem Argument](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md) (**Int** oder **lange**)
 
 [Andere Ausgabestreammanipulatoren mit einem Argument](../standard-library/other-one-argument-output-stream-manipulators.md)
 

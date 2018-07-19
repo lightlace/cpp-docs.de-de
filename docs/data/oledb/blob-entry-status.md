@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095182"
 ---
 # <a name="blobentrystatus"></a>BLOB_ENTRY_STATUS
 Mit verwendet `BEGIN_COLUMN_MAP` oder `BEGIN_ACCESSOR_MAP` binden ein binary large Object ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Ähnlich wie [BLOB_ENTRY](../../data/oledb/blob-entry.md), mit dem Unterschied, dass dieses Makro auch den Status der BLOB-Spalte erhält.  

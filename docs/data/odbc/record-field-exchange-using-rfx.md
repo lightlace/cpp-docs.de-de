@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091997"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Datensatzfeldaustausch: Verwenden von RFX
 In diesem Thema wird erläutert, was Sie tun, um RFX in Bezug auf, was bewirkt, dass das Framework verwenden.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332672"
 ---
 # <a name="active-document-containment"></a>Active Document-Container
 Active Document-Container ist eine Technologie, die einen einzelnen Frame, in dem Sie arbeiten mit Dokumenten, anstatt Sie zu erstellen und verwenden mehrere Frames der Anwendung für jeden Dokumenttyp zwingen bereitstellt. Es unterscheidet sich vom einfachen OLE-Technologie, OLE mit eingebettete Objekte in ein Verbunddokument funktioniert nur ein einzelnes Stück des Inhalts aktiv sein kann. Mit active Document-Container aktivieren Sie ein ganzes Dokument (d. h. einer vollständigen Anwendung, einschließlich der zugehörigen Menüs, Symbolleisten und So weiter) innerhalb des Kontexts eines einzelnen Frames an.  

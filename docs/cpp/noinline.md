@@ -1,5 +1,5 @@
 ---
-title: Noinline | Microsoft Docs
+title: Noinline | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f81ab892fd7f406292925f424bebc7514fd7ea0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37098e904402a42f6ff28e594db265fc07b4d458
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943591"
 ---
 # <a name="noinline"></a>noinline
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- **__declspec(noinline)** teilt dem Compiler mit nie Inline eine bestimmten Member-Funktion (Funktion in einer Klasse).  
+ **__declspec(noinline)** weist den Compiler niemals eine inlineersetzung eine bestimmten Member-Funktion (Funktion in einer Klasse).  
   
  Es lohnt sich möglicherweise, eine Funktion nicht inline auszuführen, wenn die Funktion klein und für die Leistung des Codes nicht wichtig ist. Das ist der Fall, wenn die Funktion klein ist und wahrscheinlich nicht häufig aufgerufen wird, z. B. eine Funktion, die eine Fehlerbedingung behandelt.  
   
- Beachten Sie Folgendes: Wenn eine Funktion als `noinline` markiert ist, ist die aufrufende Funktion kleiner und somit selbst ein Kandidat für Compiler-Inlining.  
+ Beachten Sie, dass wenn eine Funktion markiert ist **Noinline**, die aufrufende Funktion werden kleiner und somit selbst ein Kandidat für Compiler-inlining.  
   
-```  
+```cpp 
 class X {  
    __declspec(noinline) int mbrfunc() {  
       return 0;   

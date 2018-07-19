@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875096"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>Öffnen des Ressourcen-Editors für ein bestimmtes Symbol
 Wenn Sie Symbole im Durchsuchen der [Ressourcensymbole (Dialogfeld)](../windows/resource-symbols-dialog-box.md), sollten Sie weitere Informationen zur Verwendung ein bestimmtes Symbols. Die **Verwendung anzeigen** Schaltfläche bietet eine schnelle Möglichkeit zum Abrufen dieser Informationen.  

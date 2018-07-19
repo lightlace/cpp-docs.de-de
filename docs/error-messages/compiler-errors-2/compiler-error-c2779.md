@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233927"
 ---
 # <a name="compiler-error-c2779"></a>Compiler-Fehler C2779 generiert
 'Declaration': Eigenschaftenmethoden können nur nicht statische Datenmember zugeordnet werden  

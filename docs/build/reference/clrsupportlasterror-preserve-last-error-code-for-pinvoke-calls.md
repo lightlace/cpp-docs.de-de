@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378635"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Letzten Fehlercode für PInvoke-Aufrufe beibehalten)
 **/ CLRSUPPORTLASTERROR**, die ist standardmäßig aktiviert, behält der letzte Fehlercode von Funktionen aufgerufen werden, mithilfe der P/Invoke-Mechanismus, dadurch können Sie Code aufrufen systemeigene Funktionen in DLLS kompiliert mit **"/ CLR"**.  

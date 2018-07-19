@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54045dfdebf3ab7c9f7ad04611bc9e267faea0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7becd4cb5700cfb31acacc244d2640498bf8120e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963471"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -33,7 +34,7 @@ Für diesen Header wird "Concurrency Runtime (ConcRT)" verwendet, sodass er zusa
 ```
 
 > [!NOTE]
-> In Code, der kompiliert wurde **"/ CLR"**, dieser Header blockiert.
+> Im Code, der kompiliert wird **"/ CLR"**, dieser Header blockiert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -58,9 +59,9 @@ Die `condition_variable_any`- und `condition_variable`- Klassen verfügen über 
 
 - `wait_for` wartet, bis zu einer angegebenen Dauer (`time interval`).
 
-Jede dieser Methoden verfügt über zwei überladene Versionen. Eine davon wartet einfach und kann fälschlicherweise aufwachen. Die andere verwendet ein zusätzliches Vorlagenargument, das ein Prädikat definiert. Die Methode gibt erst dann zurück, wenn das Prädikat den Wert `true` hat.
+Jede dieser Methoden verfügt über zwei überladene Versionen. Eine davon wartet einfach und kann fälschlicherweise aufwachen. Die andere verwendet ein zusätzliches Vorlagenargument, das ein Prädikat definiert. Die Methode wird nicht zurückgegeben werden, bis das Prädikat **"true"**.
 
-Jede Klasse verfügt auch über zwei Methoden, mit denen eine Bedingungsvariable benachrichtigt wird, dass die Bedingung den Wert `true` hat.
+Jede Klasse verfügt auch über zwei Methoden, mit denen eine Bedingungsvariable benachrichtigt wird, die die Bedingung den Wert **"true"**.
 
 - `notify_one` weckt einen der Threads auf, der auf die Bedingungsvariable wartet.
 

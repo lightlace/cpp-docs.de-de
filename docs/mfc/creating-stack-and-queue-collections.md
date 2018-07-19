@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345712"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Erstellen von Stack- und Warteschlangenauflistungen
 In diesem Artikel wird erläutert, wie andere Datenstrukturen, z. B. erstellen [Stapel](#_core_stacks) und [Warteschlangen](#_core_queues), von MFC-Klassen aufgelistet. Die Beispiele verwenden von abgeleitete Klassen `CList`, Sie können jedoch `CList` direkt, wenn Sie Funktionen hinzufügen möchten.  

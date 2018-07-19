@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381170"
 ---
 # <a name="scalar-types"></a>Skalare Typen
 Obwohl der Zugriff auf Daten aus jeder Ausrichtung ergeben kann, empfiehlt es sich, dass die Daten auf die natürliche Begrenzung zur Vermeidung von Leistung Verlust (oder ein Vielfaches davon) ausgerichtet werden. Enumerationen sind Konstante ganze Zahlen und werden als 32-Bit-Ganzzahlen behandelt. Die folgende Tabelle beschreibt die Typdefinition und empfohlene Speicher dafür, wie sie mithilfe der folgenden Ausrichtungswerte der Ausrichtung bezieht sich:  

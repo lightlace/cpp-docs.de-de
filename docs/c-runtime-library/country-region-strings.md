@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391443"
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 Zeichenfolgen für Länder und Regionen können mit einer Sprachenzeichenfolge kombiniert werden, um eine Gebietsschemaspezifikation für die Funktionen `setlocale`, `_wsetlocale`, `_create_locale`und `_wcreate_locale` zu erstellen. Listen der Länder-/Regionsnamen, die von verschiedenen Windows-Betriebssystemversionen unterstützt werden, finden Sie unter [National Language Support (NLS) API Reference](https://www.microsoft.com/resources/msdn/goglobal/default.mspx) (API-Referenz für die Unterstützung von Landessprachen). In den Listen kann die Zeichenfolge für Land/Region einer der Werte in der Spalte **Locale – Language County/Region** oder eine der Abkürzungen in der Spalte **Country or Region name abbreviation** sein. Weitere Informationen zur Sprachunterstützung in Windows-Betriebssystemen nach Version finden Sie unter [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) in „[MS-LCID]: Windows Language Code Identifier (LCID) Reference“ (Anhang A: Produktverhalten in „[MS-LCID]: Windows-Sprachcodebezeichner – Referenz“).  

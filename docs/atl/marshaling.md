@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360099"
 ---
 # <a name="marshaling"></a>Marshalling
 Das Verfahren COM-Marshalling kann Schnittstellen verfügbar gemacht werden, indem Sie ein Objekt in einem Prozess in einem anderen Prozess verwendet werden. Marshalling COM stellt Code bereit (oder Code bereitgestellt, die von der Implementierung der Schnittstelle verwendet), damit Parameter einer Methode in ein Format zu packen, die prozessübergreifend (sowie über das Netzwerk auf andere Computer ausgeführten Prozesse) verschoben werden können und Entpacken Sie diese Parameter am anderen Ende. Ebenso muss COM dieselben Schritte für die Rückgabe aus dem Aufruf ausführen.  

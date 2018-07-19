@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355874"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programmieren mit ATL- und C-Laufzeitcode
 Dieser Abschnitt beschreibt die Vorteile der Verwendung von C Run-Time Library (CRT) mit entweder statisch oder dynamisch zu verknüpfen.  

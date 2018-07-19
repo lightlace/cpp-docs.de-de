@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377182"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (Darstellungsmethode)
 Wählen Sie die Methode, die der Compiler verwendet, die Zeiger auf Member der Klasse darstellt.  

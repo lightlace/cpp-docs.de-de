@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367819"
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC-Erweiterungs-DLLs: Übersicht
 Eine MFC-Erweiterungs-DLL ist eine DLL, die in der Regel verwendbare von bestehenden Microsoft Foundation Class Library-Klassen abgeleitete Klassen implementiert. MFC-Erweiterungs-DLLs werden über die Dynamic Link Library-Version von MFC (auch bekannt als die freigegebene Version von MFC) erstellt. Nur ausführbaren MFC-Dateien (entweder Anwendungen oder regulären MFC-DLLs), die mit der gemeinsam genutzten MFC-Version erstellt wurden, können eine MFC-Erweiterungs-DLL verwenden. Mit dem eine MFC-Erweiterungs-DLL können Sie neue benutzerdefinierte Klassen von MFC ableiten und dann bieten diese erweiterte MFC-Version für Anwendungen, die die DLL aufrufen.  

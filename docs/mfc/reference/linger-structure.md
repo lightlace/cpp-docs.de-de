@@ -1,5 +1,5 @@
 ---
-title: LINGER-Struktur | Microsoft Docs
+title: LINGER-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19ab7e05b4e27a3b00576339d0b60b37bdba4a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53601afdd562f29ccd4bce9db76811e610940b7a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339370"
 ---
 # <a name="linger-structure"></a>LINGER-Struktur
-Die `LINGER` Struktur dient zum Bearbeiten der **SO_LINGER** und **SO_DONTLINGER** Optionen des `CAsyncSocket::GetSockOpt`.  
+Die `LINGER` Struktur dient zum Bearbeiten der Optionen SO_LINGER und SO_DONTLINGER des `CAsyncSocket::GetSockOpt`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,7 +36,7 @@ struct linger {
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Festlegen der **SO_DONTLINGER** Option wird verhindert, dass Blockierung auf Memberfunktion **schließen** warten, nicht gesendeten Daten gesendet werden sollen. Festlegen dieser Option entspricht dem Festlegen **SO_LINGER** mit **L_onoff** auf 0 festgelegt.  
+ Festlegen der SO_DONTLINGER-Option wird verhindert, dass Blockierung auf Memberfunktion `Close` beim Warten auf nicht gesendeter Daten gesendet werden sollen. Das Festlegen dieser Option entspricht dem Festlegen von SO_LINGER mit `l_onoff` auf 0 festgelegt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** winsock2.h  

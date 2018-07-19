@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358260"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Erstellen eine nicht erstellbare ATL-Objekt
 Sie können die Attribute eines ATL-basierten COM-Objekts ändern, sodass ein Client das Objekt direkt erstellt werden kann. In diesem Fall würde das Objekt werden durch einen Methodenaufruf zurückgegeben wird, auf einem anderen Objekt anstatt direkt erstellt.  

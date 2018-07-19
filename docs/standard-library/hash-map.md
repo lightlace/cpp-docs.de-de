@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e3948e8697825af6cdd785117647943b33bac0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: caae1a52c36c5d21e55e90a821b280f2face7ede
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959773"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> Dieser Header ist veraltet. Die Alternative ist [ \<"unordered_map" >](unordered-map.md).
+> Dieser Header ist veraltet. Die Alternative ist [ \<Unordered_map >](unordered-map.md).
 
 Definiert die Containervorlagenklassen „hash_map“ und „hash_multimap“ und deren unterstützende Vorlagen.
 
 ## <a name="syntax"></a>Syntax
 
-> #<a name="include-hashmap"></a>Einschließen von < Hash_map >
+> #<a name="include-hashmap"></a>< Hash_map > einschließen
 
 ### <a name="operators"></a>Operatoren
 
@@ -50,7 +51,7 @@ Definiert die Containervorlagenklassen „hash_map“ und „hash_multimap“ un
 
 |Klasse|Beschreibung|
 |-|-|
-|[hash_compare-Klasse](hash-compare-class.md)|Beschreibt ein Objekt, das von jedem hashassoziativen Container – hash_map, hash_multimap, hash_set oder hash_multiset – als standardmäßiges **Traits** -Parameterobjekt verwendet werden kann, um die darin enthaltenen Elemente zu sortieren und zu hashen.|
+|[hash_compare-Klasse](hash-compare-class.md)|Beschreibt ein Objekt, das von jedem hashassoziativen Container verwendet werden kann – Hash_map, Hash_multimap, Hash_set oder Hash_multiset – als standardmäßiges `Traits` Parameterobjekt zu sortieren und zu hashen die darin enthaltenen Elemente.|
 |[value_compare-Klasse](value-compare-class.md)|Stellt ein Funktionsobjekt bereit, das die Elemente einer hash_map vergleichen kann, indem die Werte ihrer Schlüssel verglichen werden, um deren relative Reihenfolge in der hash_map zu bestimmen.|
 |[hash_map-Klasse](hash-map-class.md)|Speichert Daten und ruft sie schnell aus einer Auflistung ab, in der jedes Element ein Paar ist, das einen Sortierschlüssel mit eindeutigem Wert und einen zugeordneten Datenwert aufweist.|
 |[hash_multimap-Klasse](hash-multimap-class.md)|Speichert Daten und ruft sie schnell aus einer Auflistung ab, in der jedes Element ein Paar ist, das einen Sortierschlüssel, dessen Wert nicht eindeutig sein muss, und einen zugeordneten Datenwert aufweist.|
@@ -63,6 +64,6 @@ Definiert die Containervorlagenklassen „hash_map“ und „hash_multimap“ un
 
 ## <a name="see-also"></a>Siehe auch
 
-[Headerdateien der Verweis](cpp-standard-library-header-files.md)
+[Referenz-Headerdateien](cpp-standard-library-header-files.md)
 [Threadsicherheit in der C++-Standardbibliothek](thread-safety-in-the-cpp-standard-library.md)
 [C++-Standardbibliotheksreferenz](cpp-standard-library-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Relationale Operatoren: &lt;, &gt;, &lt;=, und &gt;= | Microsoft Docs'
+title: 'Relationale Operatoren: &lt;, &gt;, &lt;=, und &gt;= | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea629afbe975e60e9fc4f25e51d757eb3f0f8728
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56372764c70498aec4ccf7b23fc7d074d1df179e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943519"
 ---
 # <a name="relational-operators-lt-gt-lt-and-gt"></a>Relationale Operatoren: &lt;, &gt;, &lt;=, und &gt;=
 ## <a name="syntax"></a>Syntax  
@@ -52,11 +53,11 @@ expression >= expression
   
 -   Größer als oder gleich (**>=**)  
   
- Die relationalen Operatoren haben Assoziativität von links nach rechts. Beide Operanden aus relationalen Operatoren müssen vom arithmetischen oder vom Zeigertyp sein. Sie ergeben Werte des `bool`-Typs. Der zurückgegebene Wert ist **"false"** (0), wenn die Beziehung im Ausdruck, andernfalls "false ist", der zurückgegebene Wert ist **"true"** (1).  
+ Die relationalen Operatoren haben Assoziativität von links nach rechts. Beide Operanden aus relationalen Operatoren müssen vom arithmetischen oder vom Zeigertyp sein. Sie ergeben Werte des Typs **"bool"**. Der zurückgegebene Wert ist **"false"** (0), wenn die Beziehung im Ausdruck, andernfalls "false ist", der zurückgegebene Wert ist **"true"** (1).  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // expre_Relational_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -71,16 +72,16 @@ int main() {
 }  
 ```  
   
- Die Ausdrücke im vorangehenden Beispiel müssen in Klammern eingeschlossen werden, da der Operator zum Einfügen von Streams (**<<**) hat Vorrang vor den relationalen Operatoren. Daher würde der erste Ausdruck ohne Klammern wie folgt ausgewertet:  
+ Die Ausdrücke im vorherigen Beispiel müssen in Klammern gesetzt werden, da der Operator zum Einfügen des Datenstroms (**<<**) hat Vorrang vor den relationalen Operatoren. Daher würde der erste Ausdruck ohne Klammern wie folgt ausgewertet:  
   
-```  
+```cpp 
 (cout << "The true expression 3 > 2 yields: " << 3) < (2 << "\n");  
 ```  
   
  Die üblichen arithmetischen Konvertierungen finden Sie im [Standardkonvertierungen](standard-conversions.md) werden auf die Operanden arithmetischen Typs angewendet.  
   
 ## <a name="comparing-pointers"></a>Vergleichen von Zeigern  
- Wenn zwei Zeiger auf Objekte vom gleichen Typs verglichen werden, wird das Ergebnis nach der Position der Objekte bestimmt, auf die im Adressbereich des Programms gezeigt wird. Zeiger können auch mit einem konstanten Ausdruck verglichen werden, der auf 0 oder einen Zeiger vom Typ void * auswertet. Wenn ein Zeiger ein Zeiger vom Typ "void" verglichen wird \*, der andere Zeiger wird implizit konvertiert, um den Typ "void" \*. Anschließend wird verglichen.  
+ Wenn zwei Zeiger auf Objekte vom gleichen Typs verglichen werden, wird das Ergebnis nach der Position der Objekte bestimmt, auf die im Adressbereich des Programms gezeigt wird. Zeiger können auch mit einem konstanten Ausdruck verglichen werden, der auf 0 oder einen Zeiger vom Typ void * auswertet. Wenn ein zeigervergleich mit einem Zeiger vom Typ "void" erfolgt \*, der andere Zeiger wird implizit konvertiert, um den Typ "void" \*. Anschließend wird verglichen.  
   
  Zwei Zeiger verschiedener Typen können nicht verglichen werden, es sei denn:  
   
@@ -90,9 +91,9 @@ int main() {
   
  Zwei Zeiger desselben Typs, die auf dasselbe Objekt zeigen, sind beim Vergleich garantiert gleich. Wenn zwei Zeiger auf nicht statische Member eines Objekts verglichen werden, gelten folgende Regeln:  
   
--   Wenn der Klassentyp keine Union ist und die zwei Member nicht durch getrennt sind ein *Access-Specifier*, wie öffentlich, geschützt oder privat ist, die Zeiger auf das Element deklariert zuletzt wird vergleichen größer als der Zeiger auf das Element deklariert weiter oben.  
+-   Wenn der Klassentyp keine Union ist und die zwei Member nicht durch voneinander getrennt sind ein *Zugriffsspezifizierer*, wie öffentlich, geschützt oder privat ist, der Zeiger auf das Element deklariert letzten Vergleich einen größeren Wert als der Zeiger auf das Element deklariert weiter oben.  
   
--   Wenn die beiden Elemente durch getrennt sind ein *Access-Specifier*, sind die Ergebnisse nicht definiert.  
+-   Wenn die beiden Elemente durch getrennt sind ein *Zugriffsspezifizierer*, sind die Ergebnisse nicht definiert.  
   
 -   Wenn der Klassentyp eine Union ist, sind Zeiger auf unterschiedliche Datenmember in dieser Union beim Vergleich gleich.  
   
@@ -100,5 +101,5 @@ int main() {
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke mit binären Operatoren](../cpp/expressions-with-binary-operators.md)   
- [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++-Built-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C-Operatoren (relational) und C-Gleichheitsoperatoren](../c-language/c-relational-and-equality-operators.md)

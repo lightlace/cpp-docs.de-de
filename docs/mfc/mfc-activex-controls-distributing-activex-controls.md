@@ -35,11 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d052b2d77df8b3209671b4330347ef642877e47a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928881"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC-ActiveX-Steuerelemente: Weitergabe von ActiveX-Steuerelementen
 Dieser Artikel beschreibt mehrere Probleme beim Verteilen von ActiveX-Steuerelemente:  
@@ -59,7 +60,7 @@ Dieser Artikel beschreibt mehrere Probleme beim Verteilen von ActiveX-Steuerelem
  Das Setup-Programm an die ActiveX-Steuerelemente erstellen ein Unterverzeichnis des Windows-Verzeichnisses, und installieren die Steuerelemente. OCX-Dateien zu.  
   
 > [!NOTE]
->  Verwenden Sie das Fenster **GetWindowsDirectory** -API im Setup-Programm, um den Namen des Windows-Verzeichnisses zu erhalten. Möglicherweise möchten den Namen des Unterverzeichnisses nicht mit dem Namen Ihres Unternehmens oder Produkt abgeleitet werden.  
+>  Verwenden Sie das Fenster `GetWindowsDirectory` -API im Setup-Programm, um den Namen des Windows-Verzeichnisses zu erhalten. Möglicherweise möchten den Namen des Unterverzeichnisses nicht mit dem Namen Ihres Unternehmens oder Produkt abgeleitet werden.  
   
  Das Setup-Programm muss die erforderlichen weitervertreibbaren DLL-Dateien in das Windows-Systemverzeichnis installieren. Wenn eine der DLLs bereits auf dem Computer des Benutzers vorhanden sind, sollte das Setupprogramm ihre Versionen auszuweiten, mit den Versionen vergleichen, das Sie installieren. Installieren Sie eine Datei nur dann, wenn dessen Versionsnummer höher als die Datei bereits installiert ist.  
   
@@ -70,14 +71,14 @@ Dieser Artikel beschreibt mehrere Probleme beim Verteilen von ActiveX-Steuerelem
   
  Falls gewünscht, können Sie das Setupprogramm aus, um das Steuerelement direkt registrieren Sie stattdessen schreiben.  
   
- Verwenden der **LoadLibrary** Windows-API zum Laden der DLL des Steuerelements. Verwenden Sie als Nächstes **GetProcAddress** die Adresse der Funktion "DllRegisterServer" beziehen. Rufen Sie zum Schluss die `DllRegisterServer` Funktion. Das folgende Codebeispiel veranschaulicht eine mögliche Methode, wobei `hLib` speichert das Handle für die Steuerelementbibliothek und `lpDllEntryPoint` speichert die Adresse der Funktion "DllRegisterServer".  
+ Verwenden der `LoadLibrary` Windows-API zum Laden der DLL des Steuerelements. Verwenden Sie als Nächstes `GetProcAddress` die Adresse der Funktion "DllRegisterServer" beziehen. Rufen Sie zum Schluss die `DllRegisterServer` Funktion. Das folgende Codebeispiel veranschaulicht eine mögliche Methode, wobei `hLib` speichert das Handle für die Steuerelementbibliothek und `lpDllEntryPoint` speichert die Adresse der Funktion "DllRegisterServer".  
   
  [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]  
   
  Der Vorteil, dass das Steuerelement direkt registriert ist, müssen keine aufrufen und Laden einen separaten Prozess (nämlich "regsvr32"), Installationsdauer zu reduzieren. Darüber hinaus da die Registrierung ein interner Prozess ist, wird das Setup-Programm behandeln Sie Fehler und unvorhergesehene Situationen besser als ein externer Prozess können.  
   
 > [!NOTE]
->  Bevor Sie das Setupprogramm ein ActiveX-Steuerelement installiert, sollte es aufrufen **OleInitialize**. Wenn das Setupprogramm abgeschlossen ist, rufen **OleUnitialize auf**. Dadurch wird sichergestellt, dass der OLE-System-DLLs sind in den richtigen Status zum Registrieren von ActiveX-Steuerelement.  
+>  Bevor Sie das Setupprogramm ein ActiveX-Steuerelement installiert, sollte es aufrufen `OleInitialize`. Wenn das Setupprogramm abgeschlossen ist, rufen Sie `OleUnitialize`. Dadurch wird sichergestellt, dass der OLE-System-DLLs sind in den richtigen Status zum Registrieren von ActiveX-Steuerelement.  
   
  Sie sollten MFCx0.DLL registrieren.  
   

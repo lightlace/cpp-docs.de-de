@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392496"
 ---
 # <a name="ismbb-routines"></a>_ismbb-Routinen
 Testet den angegebenen ganzzahligen Wert `c` unter Verwendung des aktuellen Gebietsschemas oder einer angegebenen LC_CTYPE-Konvertierungszustandskategorie auf eine bestimmte Bedingung.  

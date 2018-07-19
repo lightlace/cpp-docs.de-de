@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Schnittstelle zwischen herausragende und ohne Ausnahmen Code | Microsoft Docs'
+title: 'Vorgehensweise: Schnittstelle zwischen Code von nicht- Ausnahmen | Microsoft-Dokumentation'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cf2216ba75912520f744f0f0331a50520aa895
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940117"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Gewusst wie: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen
 In diesem Artikel wird beschrieben, wie die konsistente Ausnahmebehandlung in einem C++-Modul implementiert wird und wie diese Ausnahmen zu und von Fehlercodes an den Ausnahmegrenzen übertragen werden.  
@@ -196,7 +197,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
   
 ```  
   
- Bei Konvertierungen von Ausnahmen in Fehlercodes besteht ein mögliches Problem darin, dass Fehlercodes häufig nicht die umfangreichen Informationen enthalten, die eine Ausnahme speichern kann. Um dieses Problem zu beheben, können Sie einen `catch`-Block für jeden einzelnen Ausnahmetyp bereitstellen, der ausgelöst werden kann, und durch Protokollierung die Details der Ausnahme erfassen, bevor sie in einen Fehlercode konvertiert wird. Durch diesen Ansatz können viele Codewiederholungen erstellt werden, wenn mehrere Funktionen denselben Satz von `catch`-Blöcken verwenden. Eine gute Möglichkeit zur Vermeidung von Codewiederholungen besteht in der Umgestaltung dieser Blöcke in eine private Hilfsfunktion, die die Blöcke `try` und `catch` implementiert und ein Funktionsobjekt akzeptiert, das im `try`-Block aufgerufen wird. Übergeben Sie den Code in jeder öffentlichen Funktion als Lambdaausdruck an die Hilfsfunktion.  
+ Bei Konvertierungen von Ausnahmen in Fehlercodes besteht ein mögliches Problem darin, dass Fehlercodes häufig nicht die umfangreichen Informationen enthalten, die eine Ausnahme speichern kann. Um dieses Problem zu beheben, geben Sie einen **catch** Block für jeden einzelnen Ausnahmetyp, die ausgelöst werden kann, und führen Sie die Protokollierung, um die Details der Ausnahme aufzuzeichnen, bevor es in einen Fehlercode konvertiert wird. Diesen Ansatz kann viele codewiederholungen erstellt, wenn mehrere Funktionen, die alle den gleichen Satz von verwenden **catch** Blöcke. Ist eine gute Möglichkeit zur Vermeidung von codewiederholungen refactoring dieser Blöcke in eine private Hilfsfunktion, die implementiert die **versuchen** und **catch** blockiert und ein Funktionsobjekt, das aufgerufen wird, in der akzeptiert**versuchen** Block. Übergeben Sie den Code in jeder öffentlichen Funktion als Lambdaausdruck an die Hilfsfunktion.  
   
 ```cpp  
 template<typename Func>   

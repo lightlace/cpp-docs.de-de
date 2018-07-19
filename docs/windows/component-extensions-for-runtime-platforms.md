@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862639"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Komponentenerweiterungen für Laufzeitplattformen
 Visual C++ bietet Spracherweiterungen zur Unterstützung der Programmierung mit Laufzeitplattformen. Mithilfe von C + c++ / CX, können Sie programmieren, universelle Windows-Plattform-apps und Komponenten, die in systemeigenen Code kompiliert. Obwohl Uwp-apps durch direkten Programmierens mit der Windows-Runtime-COM-Schnittstellen erstellt werden können, mithilfe von C + c++ / CX, Sie können mit Konstruktoren, Ausnahmen und anderen moderner C++-Idiome-Programmierung arbeiten. Um C++-Programmierung in einer verwalteten ausführungsumgebung auf der .NET-Plattform zu aktivieren, können Sie C + c++ / CLI.  

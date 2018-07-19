@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705314"
 ---
 # <a name="315-ompgetnumprocs-function"></a>3.1.5 omp_get_num_procs-Funktion
 Die `omp_get_num_procs` Funktion gibt die Anzahl der Prozessoren, die zum Zeitpunkt des Programms zur Verfügung stehen die Funktion aufgerufen wird. Es wird folgendes Format verwendet:  

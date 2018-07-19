@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d4368fa2b88d22f0b07bc10bba4769d05375041
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 316ffdee4905ff8a35baef7137ff7f28a2846786
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958191"
 ---
 # <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible-Klasse
 
@@ -35,25 +36,25 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist TRUE, wenn der `Ty` Typ eine Klasse ist, die einen trivialen Bewegungskonstruktor aufweist; andernfalls FALSE.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist eine Klasse, die einen trivialen bewegungskonstruktor, andernfalls er false enthält.
 
-Ein Bewegungskonstruktor für eine `Ty`-Klasse ist trivial, wenn:
+Ein bewegungskonstruktor für eine Klasse *Ty* ist trivial wenn:
 
 Er wird implizit deklariert.
 
 die Parametertypen entsprechen den einer impliziten Deklaration
 
-die `Ty`-Klasse hat keine virtuellen Funktionen
+die Klasse *Ty* verfügt über keine virtuellen Funktionen
 
-die `Ty`-Klasse hat keine virtuellen Basen
+die Klasse *Ty* hat keine virtuellen Basen
 
 die Klasse verfügt über keine flüchtigen nicht statischen Datenmember
 
-alle direkten Basisklassen der `Ty`-Klasse weisen triviale Bewegungskonstruktoren auf
+alle direkten Basisklassen der Klasse *Ty* haben triviale bewegungskonstruktoren
 
 die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Bewegungskonstruktoren
 

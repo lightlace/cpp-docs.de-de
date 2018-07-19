@@ -1,5 +1,5 @@
 ---
-title: Objekt-Zuordnungsmakros | Microsoft Docs
+title: Objekt-Zuordnungsmakros | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 671fd80bc2c4ad320efb282fd659899756c2ecbc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f0e2e14309b7175b003fbab9214d9dffde63af63
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026016"
 ---
-# <a name="object-map-macros"></a>Objekt-Zuordnungsmakros
-Diese Makros definieren Objekt Karten und Einträge.  
+# <a name="object-map-macros"></a>Objektzuordnungs-Makros
+Diese Makros definieren die Objekt-Zuordnungen und Einträge.  
   
 |||  
 |-|-|  
-|[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|Ermöglicht Ihnen die Angabe eines Klassenobjekts Beschreibung, die in der objektzuordnung eingegeben wird.|  
-|[OBJECT_ENTRY_AUTO](#object_entry_auto)|Ein ATL-Objekt in der objektzuordnung gelangt, wird ein Update der Registrierung und erstellt eine Instanz des Objekts.|  
+|[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|Ermöglicht Ihnen die Angabe ein Klassenobjekt Beschreibung, die in der objektzuordnung eingegeben wird.|  
+|[OBJECT_ENTRY_AUTO](#object_entry_auto)|Ein ATL-Objekt in der objektzuordnung gelangt, wird die Registrierung und erstellt eine Instanz des Objekts.|  
 |[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Ermöglicht es Ihnen, anzugeben, dass das Objekt registriert und initialisiert werden sollte, jedoch nicht extern über `CoCreateInstance` erstellbar sein sollte.|  
 
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
    
 ##  <a name="declare_object_description"></a>  DECLARE_OBJECT_DESCRIPTION  
- Können Sie eine Beschreibung für das Klassenobjekt angeben.  
+ Können Sie eine textbeschreibung für das Klassenobjekt angeben.  
   
 ```
 DECLARE_OBJECT_DESCRIPTION( x )
@@ -43,15 +44,15 @@ DECLARE_OBJECT_DESCRIPTION( x )
   
 ### <a name="parameters"></a>Parameter  
  *w*  
- [in] Beschreibung für das Klassenobjekt.  
+ [in] Die Klasse die Beschreibung des Objekts.  
   
 ### <a name="remarks"></a>Hinweise  
- ATL trägt diese Beschreibung in der objektzuordnung über die [OBJECT_ENTRY](http://msdn.microsoft.com/en-us/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd) Makro.  
+ ATL gibt diese Beschreibung in der objektzuordnung über die [OBJECT_ENTRY](http://msdn.microsoft.com/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd) Makro.  
   
- `DECLARE_OBJECT_DESCRIPTION` implementiert eine `GetObjectDescription` -Funktion, die Sie verwenden können, überschreiben die [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) Methode.  
+ DECLARE_OBJECT_DESCRIPTION implementiert eine `GetObjectDescription` -Funktion, die Sie verwenden können, überschreiben die [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) Methode.  
 
   
- Die `GetObjectDescription` Funktion wird aufgerufen, indem **IComponentRegistrar::GetComponents**. **IComponentRegistrar** ist eine Automatisierungsschnittstelle, mit der Sie beim Registrieren und Aufheben der einzelne Komponenten in einer DLL. Wenn Sie eine Komponente Registrierungsstelle-Objekt mit dem ATL-Projekt-Assistenten erstellen, wird der Assistent automatisch implementieren die **IComponentRegistrar** Schnittstelle. **IComponentRegistrar** wird meist von Microsoft Transaction Server verwendet.  
+ Die `GetObjectDescription` Funktion wird aufgerufen, indem `IComponentRegistrar::GetComponents`. `IComponentRegistrar` ist eine Automatisierungsschnittstelle, mit dem Sie an-und Abmelden einzelne Komponenten in einer DLL. Wenn Sie ein Objekt für die Registrierung der Komponente mit dem ATL-Projekt-Assistenten erstellen, wird der Assistent automatisch implementieren die `IComponentRegistrar` Schnittstelle. `IComponentRegistrar` von Microsoft Transaction Server ist in der Regel verwendet werden.  
   
  Weitere Informationen über ATL-Projektassistenten finden Sie im Artikel [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md).  
   
@@ -59,33 +60,33 @@ DECLARE_OBJECT_DESCRIPTION( x )
  [!code-cpp[NVC_ATL_Windowing#123](../../atl/codesnippet/cpp/object-map-macros_1.h)]  
   
 ##  <a name="object_entry_auto"></a>  OBJECT_ENTRY_AUTO  
- Ein ATL-Objekt in der objektzuordnung gelangt, wird ein Update der Registrierung und erstellt eine Instanz des Objekts.  
+ Ein ATL-Objekt in der objektzuordnung gelangt, wird die Registrierung und erstellt eine Instanz des Objekts.  
   
 ```
 OBJECT_ENTRY_AUTO( clsid, class )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clsid`  
- [in] Die CLSID der durch die C++-Klasse mit dem Namen `class` implementierten COM-Klasse.  
+ *clsid*  
+ [in] Die CLSID des eine COM-Klasse, die von der C++-Klasse, die mit dem Namen implementierten *Klasse*.  
   
- `class`  
- [in] Der Name der C++-Klasse, die die COM-Klasse implementiert, die durch die `clsid` dargestellt wird.  
+ *class*  
+ [in] Der Name der C++-Klasse dargestellte, die von COM-Klasse implementieren *Clsid*.  
   
 ### <a name="remarks"></a>Hinweise  
  Objekt-Eintragsmakros befinden sich im globalen Gültigkeitsbereich des Projekts, um Unterstützung für die Registrierung, Initialisierung und Erstellung einer neuen Klasse bereitzustellen.  
   
- `OBJECT_ENTRY_AUTO` Gibt die Funktionszeiger der Klasse des projektverbindungserstellers und ClassFactory Klasse des projektverbindungserstellers `CreateInstance` Funktionen für dieses Objekt in die Zuordnung der automatisch generierten ATL-Objekt. Wenn [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) wird aufgerufen, für jedes Objekt in der objektzuordnung der systemregistrierung aktualisiert.  
+ OBJECT_ENTRY_AUTO eingibt, der Funktionszeiger der Klasse des projektverbindungserstellers und Klassenfactory Klasse des projektverbindungserstellers `CreateInstance` Funktionen für dieses Objekt in die Zuordnung der automatisch generierten ATL-Objekt. Wenn [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) wird aufgerufen, die Registrierung des Systems für jedes Objekt in der objektzuordnung aktualisiert.  
 
   
- In der folgenden Tabelle wird beschrieben, wie die Informationen zur objektzuordnung aus der Klasse, die als zweiter Parameter angegeben wird, um dieses Makro abgerufen wird.  
+ In der folgenden Tabelle wird beschrieben, wie der objektzuordnung hinzugefügten Informationen von der Klasse, die als zweiter Parameter angegeben wird, um dieses Makro abgerufen wird.  
   
-|Informationen zu|Abgerufenes|  
+|Informationen zu|Abgerufen aus|  
 |---------------------|-------------------|  
 |COM-Registrierung|[Registrierungsmakros](../../atl/reference/registry-macros.md)|  
-|Erstellung von kanalfactorys|[Factory-Makros](../../atl/reference/aggregation-and-class-factory-macros.md)|  
+|Klasse von Factory-Erstellung|[Klassenfactory-Makros](../../atl/reference/aggregation-and-class-factory-macros.md)|  
 |Instanzerstellung|[Aggregationsmakros](../../atl/reference/aggregation-and-class-factory-macros.md)|  
-|Die Registrierung der Komponente-Kategorie|[Kategorie-Makros](../../atl/reference/category-macros.md)|  
+|Kategorie-komponentenregistrierung|[Kategorie-Makros](../../atl/reference/category-macros.md)|  
 |Auf Klassenebene Initialisierung und Bereinigung|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
 
   
@@ -97,16 +98,16 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clsid`  
- [in] Die CLSID der durch die C++-Klasse mit dem Namen `class` implementierten COM-Klasse.  
+ *clsid*  
+ [in] Die CLSID des eine COM-Klasse, die von der C++-Klasse, die mit dem Namen implementierten *Klasse*.  
   
- `class`  
- [in] Der Name der C++-Klasse, die die COM-Klasse implementiert, die durch die `clsid` dargestellt wird.  
+ *class*  
+ [in] Der Name der C++-Klasse dargestellte, die von COM-Klasse implementieren *Clsid*.  
   
 ### <a name="remarks"></a>Hinweise  
  Objekt-Eintragsmakros befinden sich im globalen Gültigkeitsbereich des Projekts, um Unterstützung für die Registrierung, Initialisierung und Erstellung einer neuen Klasse bereitzustellen.  
   
- `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO` können Sie angeben, dass ein Objekt registriert und initialisiert werden soll (finden Sie unter [OBJECT_ENTRY_AUTO](#object_entry_auto) für Weitere Informationen), es sollte jedoch nicht über erstellbar `CoCreateInstance`.  
+ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO können Sie angeben, dass ein Objekt registriert und initialisiert werden soll (finden Sie unter [OBJECT_ENTRY_AUTO](#object_entry_auto) Informationen), aber es sollte keine erstellbaren über sein `CoCreateInstance`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Makros](../../atl/reference/atl-macros.md)

@@ -50,15 +50,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dc91bebf55c617d5c18d86d308558e57cbd3c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9ea6f4a5770163ddaa34478f6630ed2a24ffbd6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954967"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf-Klasse
 
-Beschreibt einen die Übertragung zu und aus einer Sequenz von in einer externen Datei gespeicherten Elementen von Elementen des Typs `Elem` steuernden Streampuffer, dessen Zeichenmerkmale durch die Klasse `Tr` ermittelt werden.
+Beschreibt einen Streampuffer, der die Übertragung von Elementen des Typs steuert *Elem*, dessen Zeichenmerkmale von der Klasse ermittelt werden *Tr*zu und aus einer Sequenz von Elementen in einer externen Datei gespeichert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,16 +70,16 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Parameter
 
-`Elem` Das grundlegende Element des Dateipuffers.
+*Elem* grundlegenden Elements des Dateipuffers.
 
-`Tr` Die Merkmale des grundlegenden Elements des Dateipuffers (in der Regel `char_traits` <  `Elem`>).
+*TR* die Merkmale des grundlegenden Elements des Dateipuffers (in der Regel `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt einen die Übertragung zu und aus einer Sequenz von in einer externen Datei gespeicherten Elementen von Elementen des Typs `Elem` steuernden Streampuffer, dessen Zeichenmerkmale durch die Klasse `Tr` ermittelt werden.
+Die Vorlagenklasse beschreibt einen Streampuffer, der steuert, wie Elemente des Typs *Elem*, dessen Zeichenmerkmale durch die Klasse *Tr* bestimmt sind, in eine oder aus einer Sequenz von Elementen übertragen werden, die in einer externen Datei gespeichert sind.
 
 > [!NOTE]
-> Objekte des Typs `basic_filebuf` werden mit einem internen Puffer des Typs `char *` erstellt, unabhängig vom durch den Typparameter `Elem` angegebenen `char_type`. Eine Unicode-Zeichenfolge (die `wchar_t`-Zeichen enthält) wird demnach in eine ANSI-Zeichenfolge (die `char`-Zeichen enthält) umgewandelt, bevor sie in den internen Puffer geschrieben wird. Erstellen Sie zum Speichern von Unicode-Zeichenfolgen im Puffer einen neuen Puffer des Typs `wchar_t`, und legen Sie ihn mithilfe der Methode [basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf)`()` fest. Ein Beispiel, in dem dieses Verhalten veranschaulicht wird, finden Sie im Folgenden.
+> Objekte des Typs `basic_filebuf` werden erstellt, mit einem internen Puffer des Typs `char *` unabhängig von der `char_type` durch den Typparameter angegebene *Elem*. Dies bedeutet, dass eine Unicode-Zeichenfolge (mit **"wchar_t"** Zeichen) wird in eine ANSI-Zeichenfolge konvertiert werden (mit **Char** Zeichen) bevor sie auf den internen Puffer geschrieben werden. Erstellen Sie zum Speichern von Unicode-Zeichenfolgen im Puffer einen neuen Puffer des Typs **"wchar_t"** und legen Sie es mit der [basic_streambuf:: pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` Methode. Ein Beispiel, in dem dieses Verhalten veranschaulicht wird, finden Sie im Folgenden.
 
 Ein Objekt der Klasse`basic_filebuf`< `Elem`, `Tr`> speichert einen Dateizeiger, der das `FILE`-Objekt angibt, welches den mit einer geöffneten Datei verknüpften Stream steuert. Es speichert zudem Zeiger zu zwei Dateikonvertierungs-Facets für die Verwendung durch die geschützten Memberfunktionen [overflow](#overflow) und [underflow](#underflow). Weitere Informationen finden Sie unter [basic_filebuf::open](#open).
 
@@ -258,7 +259,7 @@ Der zweite Konstruktor initialisiert das Objekt mit dem Inhalt von `right`, das 
 
 ## <a name="char_type"></a> basic_filebuf::char_type
 
-Verknüpft einen Typnamen mit dem Vorlagenparameter **Elem**.
+Verknüpft einen Typnamen mit dem `Elem`-Vorlagenparameter.
 
 ```cpp
 typedef Elem char_type;
@@ -278,9 +279,9 @@ Die Memberfunktion gibt einen NULL-Zeiger zurück, wenn der Dateizeiger ein NULL
 
 ### <a name="remarks"></a>Hinweise
 
-**close** ruft `fclose`( **fp**) auf. Wenn diese Funktion einen Wert zurückgibt, der ungleich Null ist, gibt die Funktion einen NULL-Zeiger zurück. Andernfalls wird **this** zurückgegeben, um anzugeben, dass die Datei erfolgreich geschlossen wurde.
+`close` Aufrufe `fclose`( **fp**). Wenn diese Funktion einen Wert zurückgibt, der ungleich Null ist, gibt die Funktion einen NULL-Zeiger zurück. Andernfalls wird **this** zurückgegeben, um anzugeben, dass die Datei erfolgreich geschlossen wurde.
 
-Bei einem breiten Stream ruft die Funktion [overflow](#overflow) auf, wenn seit der Öffnung des Streams oder des letzten Aufrufs von `streampos` Einfügungen vorgenommen wurden. Ebenso wird eine beliebige Sequenz eingefügt, die notwendig ist, um den ursprünglichen Konvertierungszustand mithilfe des Dateikonvertierungs-Facets **fac** zum Aufruf von **fac.unshift** nach Bedarf wiederherzustellen. Jedes **byte**-Element vom Typ `char`, das so erstellt wurde, wird in den zugeordneten Stream geschrieben, der durch den Dateizeiger **fp** oder durch aufeinander folgende Aufrufe des Formulars `fputc`( **byte**, **fp**) festgelegt wird. Bei einem Fehler beim Aufruf von **fac.unshift** oder einem Schreibvorgang kann die Funktion nicht erfolgreich ausgeführt werden.
+Bei einem breiten Stream ruft die Funktion [overflow](#overflow) auf, wenn seit der Öffnung des Streams oder des letzten Aufrufs von `streampos` Einfügungen vorgenommen wurden. Es fügt auch eine beliebige Sequenz, die erforderlich sind, um den ursprünglichen konvertierungszustand mithilfe des dateikonvertierungs-Facets wiederherzustellen `fac` aufzurufende `fac.unshift` je nach Bedarf. Jedes Element `byte` des Typs **Char** so erstellt wurde, die durch den Dateizeiger zugeordneten Stream geschrieben `fp` oder durch aufeinander folgende Aufrufe des Formulars `fputc`( **Byte**, **fp**). Wenn der Aufruf von `fac.unshift` oder ein Schreibvorgang fehlschlägt, wird die Funktion nicht erfolgreich ist.
 
 ### <a name="example"></a>Beispiel
 
@@ -333,7 +334,7 @@ s
 
 ## <a name="int_type"></a> basic_filebuf::int_type
 
-Stellt den Typ im Bereich von basic_filebuf dem Typ desselben Namens im Bereich **Tr** gleich.
+Stellt den Typ im Bereich von Basic_filebuf dem Typ mit dem gleichen Namen in der `Tr` Bereich.
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -377,7 +378,7 @@ true
 
 ## <a name="off_type"></a> basic_filebuf::off_type
 
-Stellt den Typ im Bereich von basic_filebuf dem Typ desselben Namens im Bereich **Tr** gleich.
+Stellt den Typ im Bereich von Basic_filebuf dem Typ mit dem gleichen Namen in der `Tr` Bereich.
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -409,11 +410,11 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>Parameter
 
-`_Filename` Der Name der Datei zu öffnen.
+*_Filename* den Namen des zu öffnenden Datei.
 
-`_Mode` Eine der Aufzählungen in [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*_Modus* eine der Enumerationen in [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
 
-`_Prot` Die standardmäßige Datei öffnen Schutz, entspricht die `shflag` im Parameters [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot* den Standardwert der dateiöffnung, entspricht die *Shflag* Parameter im [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -421,9 +422,9 @@ Wenn der Dateizeiger ein NULL-Zeiger ist, gibt die Funktion einen NULL-Zeiger zu
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion öffnet die Datei mit dem Dateinamen *Dateiname*, indem sie [fopen](../c-runtime-library/reference/fopen-wfopen.md)( *Dateiname*, **strmode**) aufruft. **strmode** wird von **mode &**~( [ate](../standard-library/ios-base-class.md#openmode) & &#124; [binary](../standard-library/ios-base-class.md#openmode)) bestimmt:
+Die Memberfunktion öffnet die Datei mit dem Dateinamen *Dateiname*, indem sie [fopen](../c-runtime-library/reference/fopen-wfopen.md)( *Dateiname*, **strmode**) aufruft. `strmode` wird von bestimmt **Modus &**~ ( [ate](../standard-library/ios-base-class.md#openmode) & &#124; [binäre](../standard-library/ios-base-class.md#openmode)):
 
-- **ios_base::in** wird zu **"r"** (vorhandene Datei zum Lesen öffnen).
+- `ios_base::in` wird **"R"** (vorhandene Datei zum Lesen öffnen).
 
 - [ios_base::out](../standard-library/ios-base-class.md#fmtflags) oder **ios_base::out &#124; ios_base::trunc** wird zu **"w"** (vorhandene Datei abschneiden oder zum Schreiben erstellen).
 
@@ -435,7 +436,7 @@ Die Memberfunktion öffnet die Datei mit dem Dateinamen *Dateiname*, indem sie [
 
 - **ios_base::in &#124; ios_base::out &#124; ios_base::trunc** wird zu **"a+"** (vorhandene Datei zum Lesen und Anfügen aller Schreibvorgänge öffnen).
 
-Wenn **mode & ios_base::binary** ungleich null ist, fügt die Funktion **b** an **strmode** an, um einen binären Stream anstelle eines Textstreams zu öffnen. Der von `fopen` zurückgegebene Wert wird anschließend im Dateizeiger **fp** gespeichert. Wenn **mode & ios_base::ate** ungleich null ist, und der Dateizeiger kein NULL-Zeiger ist, ruft die Funktion `fseek`( **fp**, 0, `SEEK_END`) auf, um den Stream am Ende der Datei zu positionieren. Wenn bei dieser Positionierung ein Fehler auftritt, ruft die Funktion [close](#close)( **fp**) auf und speichert einen NULL-Zeiger im Dateizeiger.
+Wenn **Mode & ios_base:: Binary** ist ungleich NULL ist, fügt die Funktion an `b` zu `strmode` zu einen binären Stream anstelle eines Textstreams zu öffnen. Es speichert dann den Rückgabewert von `fopen` im Dateizeiger `fp`. Wenn **mode & ios_base::ate** ungleich null ist, und der Dateizeiger kein NULL-Zeiger ist, ruft die Funktion `fseek`( **fp**, 0, `SEEK_END`) auf, um den Stream am Ende der Datei zu positionieren. Wenn es sich bei dieser Positionierung ein Fehler auftritt, ruft die Funktion [schließen](#close)( `fp`) und einen null-Zeiger im Dateizeiger gespeichert.
 
 Wenn der Dateizeiger kein NULL-Zeiger ist, bestimmt die Funktion das Dateikonvertierungs-Facet: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc)) für die Verwendung durch [underflow](#underflow) und [overflow](#overflow).
 
@@ -443,7 +444,7 @@ Wenn der Dateizeiger ein NULL-Zeiger ist, gibt die Funktion einen NULL-Zeiger zu
 
 ### <a name="example"></a>Beispiel
 
-Sie finden ein Beispiel, in dem **open** verwendet wird, unter [basic_filebuf::close](#close).
+Sie finden ein Beispiel, in dem `open` verwendet wird, unter [basic_filebuf::close](#close).
 
 ## <a name="op_eq"></a> basic_filebuf::operator=
 
@@ -455,7 +456,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Ein Rvalue-Verweis auf eine [Basic_filebuf](../standard-library/basic-filebuf-class.md) Objekt.
+*richtige* ein Rvalue-Verweis auf eine [Basic_filebuf](../standard-library/basic-filebuf-class.md) Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -463,7 +464,7 @@ Gibt *dies zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Member-Operator ersetzt den Inhalt des Objekts mithilfe des Inhalts von `right`, als Rvalue-Verweis behandelt. Weitere Informationen finden Sie unter [RValue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+Der Memberoperator ersetzt den Inhalt des Objekts anhand der Inhalte des *rechten*, als Rvalue-Verweis behandelt. Weitere Informationen finden Sie unter [RValue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="overflow"></a> basic_filebuf::overflow
 
@@ -475,21 +476,21 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parameter
 
-`_Meta` Das Zeichen im Puffer eingefügt oder **traits_type::eof**.
+*_Meta* das Zeichen, das in den Puffer eingefügt oder `traits_type::eof`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird **traits_type::eof** zurückgegeben. Andernfalls wird **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) zurückgegeben.
+Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `traits_type::eof` zurückgegeben. Andernfalls wird **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn _ * Meta ***! = Traits_type::**[eof](../standard-library/char-traits-struct.md#eof), die geschützte virtuelle Memberfunktion versucht, auf das Element einfügen **ch = Traits_type::**[To_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) in den Ausgabepuffer. Hierfür gibt es verschiedene Möglichkeiten:
+Wenn _ * Meta ***! = Traits_type::**[eof](../standard-library/char-traits-struct.md#eof), die geschützte virtuelle Memberfunktion versucht, das Element eingefügt **ch = Traits_type::**[To_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) in den Ausgabepuffer. Hierfür gibt es verschiedene Möglichkeiten:
 
 - Wenn eine Schreibposition verfügbar ist, kann das Element in der Schreibposition gespeichert werden, und der nächste Zeiger für den Ausgabepuffer kann inkrementiert werden.
 
 - Eine Schreibposition kann verfügbar gemacht werden, indem neuer oder zusätzlicher Speicher für den Ausgabepuffer zugewiesen wird.
 
-- Ausstehende Ausgaben im Ausgabepuffer, auf die **ch** folgt, können konvertiert werden, indem das Dateikonvertierungs-Facet **fac** zum Aufruf von **fac.out** bei Bedarf verwendet wird. Jedes `ch`-Element vom Typ *char*, das so erstellt wurde, wird in den zugeordneten Stream geschrieben, der durch den Dateizeiger **fp** oder durch aufeinander folgende Aufrufe des Formulars `fputc`( **h**, **fp**) festgelegt wird. Wenn bei einer Konvertierung oder einem Schreibvorgang ein Fehler auftritt, kann die Funktion nicht erfolgreich ausgeführt werden.
+- Sie können ausstehende Ausgaben im Ausgabepuffer, gefolgt von konvertieren `ch`, mithilfe des dateikonvertierungs-Facets `fac` Aufrufen `fac.out` je nach Bedarf. Jedes Element `ch` des Typs *Char* so erstellt wurde, die durch den Dateizeiger zugeordneten Stream geschrieben `fp` oder durch aufeinander folgende Aufrufe des Formulars `fputc`( **ch**, **fp**). Wenn bei einer Konvertierung oder einem Schreibvorgang ein Fehler auftritt, kann die Funktion nicht erfolgreich ausgeführt werden.
 
 ## <a name="pbackfail"></a> basic_filebuf::pbackfail
 
@@ -501,25 +502,25 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>Parameter
 
-`_Meta` Das Zeichen im Puffer eingefügt oder **traits_type::eof**.
+*_Meta* das Zeichen, das in den Puffer eingefügt oder `traits_type::eof`.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird **traits_type::eof** zurückgegeben. Andernfalls wird **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) zurückgegeben.
+Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird `traits_type::eof` zurückgegeben. Andernfalls wird **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) zurückgegeben.
 
 ### <a name="remarks"></a>Hinweise
 
 Die geschützte virtuelle Memberfunktion versetzt ein Element zurück in den Eingabepuffer und ernennt es dann zum aktuellen Element (wird mit dem nächsten Zeiger darauf gezeigt). Bei _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof) ist das Element für den Pushback das Element, das sich bereits vor dem aktuellen Element im Stream befindet. Andernfalls wird dieses Element durch **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) ersetzt. Ein Element kann auf verschiedene Arten durch die Funktion wiederhergestellt werden:
 
-- Wenn eine Position zur Wiederherstellung verfügbar ist, und das Element, das dort gespeichert ist, **ch** entspricht, kann der nächste Zeiger für den Eingabepuffer verringert werden.
+- Wenn eine Position zur Wiederherstellung zur Verfügung steht, und das Element dort gespeicherten gleich `ch`, kann er den nächsten Zeiger für den Eingabepuffer verringert.
 
-- Wenn die Funktion eine `putback`-Position verfügbar machen kann, kann sie das durchführen, den nächsten Zeiger als Zeiger auf diese Position festlegen und **ch** in dieser Position speichern.
+- Wenn die Funktion ausführen, kann eine `putback` Position verfügbar ist, kann es zu diesem Zweck, legen Sie den nächsten Zeiger darauf an, die zu positionieren, und speichern `ch` an dieser Position.
 
-- Falls die Funktion ein Element wieder auf den Eingabedatenstrom abgelegt kann, es kann dazu, wie z. B. durch Aufrufen von `ungetc` nach einem Element vom Typ `char`.
+- Wenn die Funktion ein Element zurück in den Eingabestream durchführen kann, hierfür, z. B. durch Aufrufen von `ungetc` für ein Element vom Typ **Char**.
 
 ## <a name="pos_type"></a> basic_filebuf::pos_type
 
-Stellt den Typ im Bereich von basic_filebuf dem Typ desselben Namens im Bereich **Tr** gleich.
+Stellt den Typ im Bereich von Basic_filebuf dem Typ mit dem gleichen Namen in der `Tr` Bereich.
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -537,11 +538,11 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parameter
 
-`_Off` Die Position zur für relativ zur Suche nach `_Way`.
+*_Off* die Position, die für die Suche, relativ zum *_Way*.
 
-`_Way` Der Startpunkt für offsetvorgänge. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
+*_Way* den Startpunkt für offsetvorgänge. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
 
-`_Which` Gibt den Modus für die Position des Mauszeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+*_Which* gibt den Modus für die Position des Zeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -553,7 +554,7 @@ Die geschützte virtuelle Memberfunktion versucht, die aktuellen Positionen für
 
 Bei einer Datei, die sowohl zum Lesen als auch zum Schreiben geöffnet wird, werden sowohl die Eingabe- als auch Ausgabestreams zusammen positioniert. Zum Wechseln zwischen Einfügen und Extrahieren müssen Sie entweder [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) oder [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos) aufrufen. Aufrufe von `pubseekoff` (und somit von `seekoff`) haben verschiedene Einschränkungen für [Textstreams](../c-runtime-library/text-and-binary-streams.md), [binäre Streams](../c-runtime-library/text-and-binary-streams.md) und [breite Streams](../c-runtime-library/byte-and-wide-streams.md).
 
-Wenn der Dateizeiger **fp** ein NULL-Zeiger ist, tritt bei der Funktion ein Fehler auf. Andernfalls versucht sie, die Streamposition durch Aufruf von `fseek`( **fp**, `_Off`, `_Way`) zu ändern. Wenn diese Funktion erfolgreich ausgeführt wurde, und die resultierende Position **fposn** durch Aufruf von `fgetpos`( **fp**, **&fposn**) bestimmt werden kann, wird die Funktion erfolgreich ausgeführt. Wenn die Funktion erfolgreich ausgeführt wird, gibt sie einen Wert vom Typ **pos_type** zurück, der **fposn** enthält. Andernfalls gibt sie eine ungültige Streamposition zurück.
+Wenn der Dateizeiger `fp` ist ein null-Zeiger, schlägt die Funktion. Andernfalls versucht sie, die Streamposition durch Aufruf von `fseek`( **fp**, `_Off`, `_Way`) zu ändern. Die Funktion erfolgreich ausgeführt und die resultierende Position `fposn` kann bestimmt werden, indem `fgetpos`( **fp**, **& Fposn**), die Funktion erfolgreich ist. Wenn die Funktion erfolgreich ist, wird einen Wert vom Typ `pos_type` mit `fposn`. Andernfalls gibt sie eine ungültige Streamposition zurück.
 
 ## <a name="seekpos"></a> basic_filebuf::seekpos
 
@@ -565,13 +566,13 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parameter
 
-`_Sp` Die Position, die für die Suche.
+*_Sp* die Position, die für die Suche.
 
-`_Which` Gibt den Modus für die Position des Mauszeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+*_Which* gibt den Modus für die Position des Zeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn der Dateizeiger **fp** ein NULL-Zeiger ist, tritt bei der Funktion ein Fehler auf. Andernfalls versucht sie, die Streamposition durch Aufruf von `fsetpos`( **fp**, **&fposn**) zu ändern, wobei **fposn** das in `pos` gespeicherte `fpos_t`-Objekt ist. Wenn diese Funktion erfolgreich ausgeführt wurde, gibt die Funktion `pos` zurück. Andernfalls gibt sie eine ungültige Streamposition zurück. Vergleichen Sie den Rückgabewert mit `pos_type(off_type(-1))`, um festzustellen, ob die Streamposition ungültig ist.
+Wenn der Dateizeiger `fp` ist ein null-Zeiger, schlägt die Funktion. Andernfalls versucht Sie, die die Position im Stream durch Aufrufen von alter `fsetpos`( **fp**, **& Fposn**), wobei `fposn` ist die `fpos_t` in gespeicherten Objekts `pos`. Wenn diese Funktion erfolgreich ausgeführt wurde, gibt die Funktion `pos` zurück. Andernfalls gibt sie eine ungültige Streamposition zurück. Vergleichen Sie den Rückgabewert mit `pos_type(off_type(-1))`, um festzustellen, ob die Streamposition ungültig ist.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -579,7 +580,7 @@ Die geschützte virtuelle Memberfunktion versucht, die aktuellen Positionen für
 
 Bei einer Datei, die sowohl zum Lesen als auch zum Schreiben geöffnet wird, werden sowohl die Eingabe- als auch Ausgabestreams zusammen positioniert. Zum Wechseln zwischen Einfügen und Extrahieren müssen Sie entweder [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) oder [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos) aufrufen. Aufrufe von `pubseekoff` (und somit von `seekoff`) haben verschiedene Einschränkungen für Textstreams, binäre Streams und breite Streams.
 
-Bei einem breiten Stream ruft die Funktion [overflow](#overflow) auf, wenn seit der Öffnung des Streams oder des letzten Aufrufs von `streampos` Einfügungen vorgenommen wurden. Ebenso wird eine beliebige Sequenz eingefügt, die notwendig ist, um den ursprünglichen Konvertierungszustand mithilfe des Dateikonvertierungs-Facets **fac** zum Aufruf von **fac**`.unshift` nach Bedarf wiederherzustellen. Jedes **byte**-Element vom Typ `char`, das so erstellt wurde, wird in den zugeordneten Stream geschrieben, der durch den Dateizeiger **fp** oder durch aufeinander folgende Aufrufe des Formulars `fputc`( **byte**, **fp**) festgelegt wird. Bei einem Fehler beim Aufruf von **fac.unshift** oder einem Schreibvorgang kann die Funktion nicht erfolgreich ausgeführt werden.
+Bei einem breiten Stream ruft die Funktion [overflow](#overflow) auf, wenn seit der Öffnung des Streams oder des letzten Aufrufs von `streampos` Einfügungen vorgenommen wurden. Es fügt auch eine beliebige Sequenz, die erforderlich sind, um den ursprünglichen konvertierungszustand mithilfe des dateikonvertierungs-Facets wiederherzustellen `fac` aufzurufende **Fac** `.unshift` je nach Bedarf. Jedes Element `byte` des Typs **Char** so erstellt wurde, die durch den Dateizeiger zugeordneten Stream geschrieben `fp` oder durch aufeinander folgende Aufrufe des Formulars `fputc`( **Byte**, **fp**). Wenn der Aufruf von `fac.unshift` oder ein Schreibvorgang fehlschlägt, wird die Funktion nicht erfolgreich ist.
 
 ## <a name="setbuf"></a> basic_filebuf::setbuf
 
@@ -593,9 +594,9 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parameter
 
-`_Buffer` Zeiger auf einen Puffer.
+*_Buffer* Zeiger auf einen Puffer.
 
-`count` Die Größe des Puffers.
+*Anzahl* Größe des Puffers.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -615,7 +616,7 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Ein `lvalue` Verweis auf einen anderen `basic_filebuf`.
+*richtige* ein `lvalue` Verweis auf ein anderes `basic_filebuf`.
 
 ## <a name="sync"></a> basic_filebuf::sync
 
@@ -627,11 +628,11 @@ virtual int sync();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt null zurück, wenn der Dateizeiger **fp** ein NULL-Zeiger ist. Andernfalls wird null nur zurückgegeben, wenn Aufrufe von [overflow](#overflow) und `fflush`( **fp**) erfolgreich ausstehende Ausgaben aus dem Stream leeren.
+Gibt zurück auf NULL, wenn der Dateizeiger `fp` ist ein null-Zeiger. Andernfalls wird null nur zurückgegeben, wenn Aufrufe von [overflow](#overflow) und `fflush`( **fp**) erfolgreich ausstehende Ausgaben aus dem Stream leeren.
 
 ## <a name="traits_type"></a> basic_filebuf::traits_type
 
-Verknüpft einen Typnamen mit dem **Tr**-Vorlagenparameter.
+Verknüpft einen Typnamen mit dem `Tr`-Vorlagenparameter.
 
 ```cpp
 typedef Tr traits_type;
@@ -647,15 +648,15 @@ virtual int_type underflow();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) zurückgegeben. Andernfalls wird **ch** zurückgegeben, das wie im Bereich „Hinweise“ beschrieben konvertiert wird.
+Wenn die Funktion nicht erfolgreich abgeschlossen werden kann, wird **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) zurückgegeben. Andernfalls wird `ch`, konvertiert, wie im Abschnitt "Hinweise" beschrieben.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Memberfunktion versucht, das aktuelle Element **ch** aus dem Eingabestream zu extrahieren und das Element als **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**) zurückzugeben. Hierfür gibt es verschiedene Möglichkeiten:
+Die geschützte virtuelle Memberfunktion versucht, das aktuelle Element extrahieren `ch` aus der Eingabe nutzen und Zurückgeben des Elements als **Traits_type::**[To_int_type](../standard-library/char-traits-struct.md#to_int_type)(`ch`). Hierfür gibt es verschiedene Möglichkeiten:
 
-- Wenn eine Leseposition verfügbar ist, wird **ch** als das in der Leseposition gespeicherte Element verwendet, und der nächste Zeiger für den Eingabepuffer wird nach vorne verschoben.
+- Wenn eine Leseposition verfügbar ist, dauert es `ch` wie das Element in der Leseposition gespeichert, und den nächsten Zeiger für den Eingabepuffer verschiebt.
 
-- Eine oder mehrere Elemente des Typs zu lesen `char`, wie durch aufeinander folgende Aufrufe des Formulars `fgetc`(**fp**), und konvertieren Sie sie auf ein Element **ch** des Typs **Elem**mithilfe der Datei Konvertierung Facet Fac Aufrufen **fac.in** nach Bedarf. Wenn ein Lesevorgang oder eine Konvertierung fehlschlägt, kann die Funktion nicht erfolgreich ausgeführt werden.
+- Sie können eine oder mehrere Elemente des Typs gelesen **Char**, wie durch aufeinander folgende Aufrufe des Formulars `fgetc`(**fp**), und wandeln die Dateien auf ein Element **ch** des Typs `Elem`mithilfe der Datei Konvertierung Facet Fac aufzurufende `fac.in` je nach Bedarf. Wenn ein Lesevorgang oder eine Konvertierung fehlschlägt, kann die Funktion nicht erfolgreich ausgeführt werden.
 
 ## <a name="see-also"></a>Siehe auch
 

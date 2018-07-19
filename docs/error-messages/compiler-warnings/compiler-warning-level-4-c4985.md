@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301089"
 ---
 # <a name="compiler-warning-level-4-c4985"></a>Compilerwarnung (Stufe 4) C4985
 "Symbolname": Attribute sind in vorheriger Deklaration nicht vorhanden.  

@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Detach | Microsoft Docs
+title: _variant_t::Detach | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b53d6dc51117ffe9b82511c6084e36bc49873b88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f71257b369e7833f279c0f68ce33e0ec925ebf6b
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026259"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 **Microsoft-spezifisch**  
   
- Trennt das gekapselte **VARIANT** -Objekt von diesem `_variant_t` Objekt.  
+ Trennt das gekapselte `VARIANT` -Objekt aus diesem `_variant_t` Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,10 +40,10 @@ VARIANT Detach( );
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Das gekapselte **VARIANT**.  
+ Das gekapselte `VARIANT`.  
   
 ## <a name="remarks"></a>Hinweise  
- Extrahiert und gibt den gekapselten **VARIANT**, löscht Sie dies `_variant_t` Objekt, ohne Sie zu zerstören. Diese Memberfunktion entfernt die **VARIANT** aus der Kapselung und legt die **VARTYPE** dieses `_variant_t` -Objekt `VT_EMPTY`. Es liegt bei Ihnen das Freigeben der zurückgegebenen **VARIANT** durch Aufrufen der [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) Funktion.  
+ Extrahiert und gibt den gekapselten `VARIANT`, löscht Sie dann dieses `_variant_t` Objekt ohne Sie zu zerstören. Diese Memberfunktion entfernt die `VARIANT` aus der Kapselung und legt die `VARTYPE` dieses `_variant_t` Objekt auf VT_EMPTY. Sie entscheiden, ob Sie das zurückgegebene Version ist `VARIANT` durch Aufrufen der [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835) Funktion.  
   
  **Ende Microsoft-spezifisch**  
   

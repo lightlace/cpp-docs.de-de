@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f11e1ce8b016ab8c6e8af04e351e80307b2189e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 424fcf5b960182326dc1192d8d60f168ead59d98
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965414"
 ---
 # <a name="isnothrowassignable-class"></a>Is_nothrow_assignable-Klasse
 
-Testet, ob der Wert des `From`-Typ dem `To`-Typ zugewiesen werden kann und die Zuweisung nicht ausgelöst wird.
+Testet, ob der Wert *aus* Typ zugewiesen werden kann, um *zu* Typ und die Zuweisung ist bekanntermaßen nicht auslösen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,13 +37,13 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-In den Typ des Objekts, das die Zuweisung empfängt.
+*Um* den Typ des Objekts, das die Zuweisung empfängt.
 
-Vom Typ des Objekts, das den Wert bereitstellt.
+*Von* den Typ des Objekts, das den Wert bereitstellt.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein und der Compiler muss wissen, dass er nicht auslöst. Sowohl `From` als auch `To` müssen vollständige Typen `void` sein, oder Arrays mit unbekannter Grenze.
+Der Ausdruck `declval<To>() = declval<From>()` muss wohlgeformt sein und der Compiler muss wissen, dass er nicht auslöst. Beide *aus* und *zu* müssen vollständige Typen werden **"void"**, oder Arrays mit Unbekannter Grenze.
 
 ## <a name="requirements"></a>Anforderungen
 

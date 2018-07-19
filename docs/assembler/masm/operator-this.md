@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057122"
 ---
 # <a name="operator-this"></a>Operator THIS
 Gibt ein Operanden des angegebenen `type` , deren Werte für Offset und das Segment mit dem aktuellen Speicherort Counter-Wert gleich sind.  

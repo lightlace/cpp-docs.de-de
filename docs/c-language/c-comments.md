@@ -1,7 +1,7 @@
 ---
 title: C-Kommentare | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a6c2d32596aa8205d02ee5cddb28b5ba3c8166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c2eccff8ab582270f766fdbcb448fdb91145e348
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121743"
 ---
 # <a name="c-comments"></a>C-Kommentare
 Ein „Kommentar“ ist eine Folge von Zeichen, die mit einer Kombination aus Schrägstrich und Sternchen (<b>/\*</b>)beginnt und vom Compiler als einzelnes Leerzeichen behandelt und andernfalls ignoriert wird. Ein Kommentar kann jede Kombination von Zeichen aus dem darstellbaren Zeichensatz enthalten, einschließlich Zeilenumbruchzeichen, aber ausschließlich des „Kommentarende“-Trennzeichens (<b>\*/</b>). Kommentare können mehr als eine Zeile belegen, jedoch nicht geschachtelt werden.  
@@ -69,13 +70,13 @@ printf( "Hello\n" );  /* Comments can go here */
   
  **Microsoft-spezifisch**  
   
- Der Microsoft-Compiler unterstützt ebenfalls einzeilige Kommentare, denen zwei Schrägstriche (**//**) vorangestellt wurden. Wenn Sie mit /Za (ANSI-Standard) kompilieren, generieren diese Kommentare Fehler. Diese Kommentare dürfen nicht auf eine zweite Zeile erweitert werden.  
+ Der Microsoft-Compiler unterstützt ebenfalls einzeilige Kommentare, denen zwei Schrägstriche (__//__) vorangestellt wurden. Wenn Sie mit /Za (ANSI-Standard) kompilieren, generieren diese Kommentare Fehler. Diese Kommentare dürfen nicht auf eine zweite Zeile erweitert werden.  
   
 ```  
 // This is a valid comment  
 ```  
   
- Kommentare, die mit zwei Schrägstrichen (**//**) beginnen, werden durch das nächste Zeilenumbruchzeichen, dem kein Escapezeichen vorangestellt ist, beendet. Im folgenden Beispiel wird dem Zeilenumbruchzeichen ein umgekehrter Schrägstrich (**\\**) vorangestellt, wodurch eine „Escapesequenz“ erstellt wird. Diese Escapesequenz bewirkt, dass der Compiler die nächste Zeile als Teil der vorherigen Zeile behandelt. (Weitere Informationen finden Sie unter [Escapesequenzen](../c-language/escape-sequences.md).)  
+ Kommentare, die mit zwei Schrägstrichen (__//__) beginnen, werden durch das nächste Zeilenumbruchzeichen, dem kein Escapezeichen vorangestellt ist, beendet. Im folgenden Beispiel wird dem Zeilenumbruchzeichen ein umgekehrter Schrägstrich (**\\**) vorangestellt, wodurch eine „Escapesequenz“ erstellt wird. Diese Escapesequenz bewirkt, dass der Compiler die nächste Zeile als Teil der vorherigen Zeile behandelt. (Weitere Informationen finden Sie unter [Escapesequenzen](../c-language/escape-sequences.md).)  
   
 ```  
 // my comment \  

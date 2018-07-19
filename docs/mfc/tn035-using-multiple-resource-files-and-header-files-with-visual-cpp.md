@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c23e0a978ab8cb3c63566bd8d5ce64ecb2a80d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952410"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Verwenden mehrerer Ressourcendateien und Headerdateien mit Visual C++
 > [!NOTE]
@@ -226,7 +227,7 @@ RESOURCE.H     AFXRES.H
 #endif //APSTUDIO_INVOKED  
 ```  
   
- Wenn Visual C++ kompiliert die. RC-Datei definiert **APSTUDIO_INVOKED** sowie **RC_INVOKED**. Wenn die Struktur der von AppWizard erstellten Datei beschädigt ist und Visual C++ die #error-Zeile oben liest, wird ein schwerwiegender Fehler gemeldet, und das Lesen der RC-Datei wird abgebrochen.  
+ Wenn Visual C++ kompiliert die. RC-Datei definiert `APSTUDIO_INVOKED` sowie `RC_INVOKED`. Wenn die Struktur der von AppWizard erstellten Datei beschädigt ist und Visual C++ die #error-Zeile oben liest, wird ein schwerwiegender Fehler gemeldet, und das Lesen der RC-Datei wird abgebrochen.  
   
  **Verwalten von Symbolen, die von mehreren Visual C++ bearbeiteten gemeinsam verwendet werden. RC-Dateien**  
   
@@ -261,19 +262,19 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **_APS_NEXT_RESOURCE_VALUE** ist der nächste Symbolwert, der für eine Dialogfeldressource, Menüressource usw. verwendet wird. Der gültige Bereich für Ressourcensymbolwerte ist 1 bis 0x6FFF.  
+ `_APS_NEXT_RESOURCE_VALUE` ist der nächste Symbolwert, der für eine Dialogfeldressource, Menüressource usw. verwendet wird. Der gültige Bereich für Ressourcensymbolwerte ist 1 bis 0x6FFF.  
   
- **_APS_NEXT_COMMAND_VALUE** ist der nächste Symbolwert, der für einen Befehlsbezeichner verwendet wird. Der gültige Bereich für Befehlssymbolwerte ist 0x8000 bis 0xDFFF.  
+ `_APS_NEXT_COMMAND_VALUE` ist der nächste Symbolwert, der für einen Befehlsbezeichner verwendet wird. Der gültige Bereich für Befehlssymbolwerte ist 0x8000 bis 0xDFFF.  
   
- **_APS_NEXT_CONTROL_VALUE** ist der nächste Symbolwert, der für ein dialogsteuerelement verwendet wird. Der gültige Bereich für Symbolwerte für Dialogsteuerelemente ist 8 bis 0xDFFF.  
+ `_APS_NEXT_CONTROL_VALUE` ist der nächste Symbolwert, der für ein dialogsteuerelement verwendet wird. Der gültige Bereich für Symbolwerte für Dialogsteuerelemente ist 8 bis 0xDFFF.  
   
- **_APS_NEXT_SYMED_VALUE** ist der nächste Symbolwert, der ausgegeben wird, wenn Sie manuell einen Symbolwert mithilfe des neuen Befehls im Symbolbrowser zuweisen.  
+ `_APS_NEXT_SYMED_VALUE` ist der nächste Symbolwert, der ausgegeben wird, wenn Sie manuell einen Symbolwert weisen im Symbolbrowser den neuen Befehl verwenden.  
   
  Visual C++-startet beim Erstellen einer neuen RC-Datei mit Werten, die etwas höher sind als der niedrigste gültige Wert. AppWizard initialisiert diese Werte zudem in einem Format, das für MFC-Anwendungen geeignet ist. Weitere Informationen zur ID-Wertbereiche finden Sie unter [technischer Hinweis 20](../mfc/tn020-id-naming-and-numbering-conventions.md).  
   
- Nun jedes Mal, wenn Sie auch im selben Projekt eine neue Ressourcendatei erstellen, Visual C++ die gleiche definiert **_APS_NEXT\_**  Werte. Das bedeutet, dass es z. B. beim Hinzufügen von mehreren Dialogfeldern in zwei verschiedenen RC-Dateien sehr wahrscheinlich ist, dass der gleiche #define-Wert verschiedenen Dialogfeldern zugewiesen wird. So kann IDD_MY_DLG1 in der ersten RC-Datei beispielsweise die gleiche Zahl, 101, zugewiesen werden, wie IDD_MY_DLG2 in einer zweiten RC-Datei.  
+ Nun jedes Mal, wenn Sie auch im selben Projekt eine neue Ressourcendatei erstellen, Visual C++ die gleiche definiert `_APS_NEXT_` Werte. Das bedeutet, dass es z. B. beim Hinzufügen von mehreren Dialogfeldern in zwei verschiedenen RC-Dateien sehr wahrscheinlich ist, dass der gleiche #define-Wert verschiedenen Dialogfeldern zugewiesen wird. So kann IDD_MY_DLG1 in der ersten RC-Datei beispielsweise die gleiche Zahl, 101, zugewiesen werden, wie IDD_MY_DLG2 in einer zweiten RC-Datei.  
   
- Um dies zu vermeiden, sollten Sie einen separaten numerischen Bereich für jede der vier ID-Domänen in den jeweiligen RC-Dateien reservieren. Dazu aktualisieren manuell die **_APS_NEXT** Wertelisten jedes der. RC-Dateien `before` Sie das Hinzufügen von Ressourcen beginnen. Beispielsweise, wenn das erste. RC-Datei verwendet die standardmäßige **_APS_NEXT** Werte, möglicherweise möchten Sie die folgenden weisen **_APS_NEXT** Werte an den zweiten. RC-Datei:  
+ Um dies zu vermeiden, sollten Sie einen separaten numerischen Bereich für jede der vier ID-Domänen in den jeweiligen RC-Dateien reservieren. Dazu aktualisieren manuell die `_APS_NEXT` Wertelisten jedes der. RC-Dateien **vor** Sie das Hinzufügen von Ressourcen beginnen. Beispielsweise, wenn das erste. RC-Datei verwendet die standardmäßige `_APS_NEXT` Werte, möglicherweise möchten Sie die folgenden weisen `_APS_NEXT` Werte an den zweiten. RC-Datei:  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  

@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e403e0133818846deb08bb336adc98618e944bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7025e0d52aa882c26e2785279626959ca6b29ac1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962929"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor-Klasse
 
@@ -130,9 +131,9 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>Parameter
 
-`count` Die Anzahl der Elemente, die für die ist ausreichend Speicherplatz zugeordnet werden soll.
+*Anzahl* die Anzahl der Elemente, die für die ist ausreichend Speicherplatz zugeordnet werden.
 
-`hint` Ein Zeiger, der das Zuordnungsobjekt unterstützen kann, indem Sie Suchen der Adresse eines Objekts, das vor der Anforderung zugeordnet.
+*Hinweis* ein Zeiger, der möglicherweise das zuweiserobjekt unterstützt, dazu sucht er die Adresse eines vor der Anforderung zugewiesenen Objekts.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -167,19 +168,19 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Ein Zeiger auf die Speicheradresse, auf dem das Objekt ist, erstellt werden soll.
+*PTR* ein Zeiger auf die Speicheradresse, in dem das Objekt ist, erstellt werden soll.
 
-`args` Eine Liste von Argumenten.
+*Args* eine Liste von Argumenten.
 
-`first` Ein Objekt des ersten Typs in ein Paar.
+*erste* ein Objekt des ersten Typs in einem Paar.
 
-`second` Ein Objekt des zweiten Typs in ein Paar.
+*zweite* ein Objekt des zweiten Typs in einem Paar.
 
-`right` Ein vorhandenes Objekt verschoben oder kopiert werden.
+*richtige* ein vorhandenes Objekt verschoben oder kopiert werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Methode erstellt das Objekt in `ptr` durch Aufrufen von `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`, wobei `xargs...` eines der folgenden Elemente ist.
+Die erste Methode erstellt das Objekt am *Ptr* durch Aufrufen von `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`, wobei `xargs...` ist eine der folgenden.
 
 - Wenn `uses_allocator<Ty, inner_allocator_type>` FALSE enthält, dann ist `xargs...` gleich `args...`.
 
@@ -187,7 +188,7 @@ Die erste Methode erstellt das Objekt in `ptr` durch Aufrufen von `Outermost_tra
 
 - Wenn `uses_allocator<Ty, inner_allocator_type>` und `is_constructible<Ty, args..., inner_allocator()>` TRUE enthalten, ist `xargs...` gleich `args..., inner_allocator()`.
 
-Mit der zweiten Methode wird das Paarobjekt in `ptr` durch Aufruf von `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`, wobei `xargs...` gleich `first...` ist, geändert wie in obiger Liste, und durch Aufruf von `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)` erstellt, wobei `xargs...` gleich `second...` ist, geändert wie in obiger Liste.
+Die zweite Methode erstellt das paarobjekt in *Ptr* durch Aufrufen von `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`, wobei `xargs...` ist `first...` geändert wie in der Liste oben und `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`, wobei `xargs...` ist `second...` geändert wie in der obigen Liste.
 
 Die dritte Methode verhält sich wie `this->construct(ptr, piecewise_construct, tuple<>, tuple<>)`.
 
@@ -207,9 +208,9 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Ein Zeiger auf die Anfangsposition der Objekte freigegeben werden muss.
+*PTR* ein Zeiger auf die Startposition der Objekte aufgehoben werden.
 
-`count` Die Anzahl der Objekte aufgehoben werden soll.
+*Anzahl* die Anzahl der Objekte beim Aufheben der Zuordnung.
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor:: Destroy
 
@@ -222,7 +223,7 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Ein Zeiger auf das Objekt zerstört werden.
+*PTR* ein Zeiger auf das Objekt zerstört werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -270,7 +271,7 @@ Ein Verweis auf das gespeicherte Objekt vom Typ `outer_allocator_type`
 
 Definiert den Typ `Outer::rebind\<Other>::other` als Synonym für `scoped_allocator_adaptor\<Other, Inner...>`.
 
-Struktur Seitenindex {Typedef Other_traits::rebind\<andere > Other_alloc; Typedef Scoped_allocator_adaptor\<Other_alloc, innere... > andere;};
+Struktur binden {Typedef Other_traits::rebind\<andere > Other_alloc; Typedef Scoped_allocator_adaptor\<Other_alloc, innere... > andere;};
 
 ## <a name="scoped_allocator_adaptor"></a> scoped_allocator_adaptor::scoped_allocator_adaptor-Konstruktor
 
@@ -293,15 +294,15 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>Parameter
 
-`right` Eine vorhandene `scoped_allocator_adaptor`.
+*richtige* bestehendes `scoped_allocator_adaptor`.
 
-`al` Eine vorhandene Zuweisung als äußere Zuweisung verwendet werden soll.
+*Al* eine vorhandener zuweiser, der als äußerer zuweiser verwendet werden.
 
-`rest` Eine Liste der Zuordnungen als inneren Zuweisungen verwendet werden soll.
+*Rest* eine Liste von zuweisern, die als innere zuweiser verwendet werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktorstandard erstellt seine gespeicherten Zuweiserobjekte. Jeder der nächsten drei Konstruktoren erstellt die gespeicherten Zuweiserobjekte aus den entsprechenden Objekten in `right`. Der letzte Konstruktor erstellt seine gespeicherten Zuweiserobjekte aus den entsprechenden Argumenten in der Argumentliste.
+Der erste Konstruktorstandard erstellt seine gespeicherten Zuweiserobjekte. Jeder der nächsten drei Konstruktoren erstellt seine gespeicherten zuweiserobjekte aus den entsprechenden Objekten in *rechten*. Der letzte Konstruktor erstellt seine gespeicherten Zuweiserobjekte aus den entsprechenden Argumenten in der Argumentliste.
 
 ## <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor:: select_on_container_copy_construction
 
@@ -313,7 +314,7 @@ scoped_allocator_adaptor select_on_container_copy_construction();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())` zurück. Das Ergebnis ist ein neues `scoped_allocator_adaptor`-Objekt mit jedem gespeicherten Zuweiserobjekt, das durch Aufrufen von `al.select_on_container_copy_construction()` für den entsprechenden Zuweiser `al` initialisiert wird.
+Diese Methode gibt `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())` zurück. Das Ergebnis ist ein neues `scoped_allocator_adaptor` Objekt mit jedem gespeicherten zuweiserobjekt, das initialisiert, durch den Aufruf `al.select_on_container_copy_construction()` für den entsprechenden zuweiser *al*.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891019"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Anzeigen eines Menüs als Popupmenü
 Wenn Sie im Menü-Editor arbeiten, wird eine Menüressource normalerweise als Menüleiste angezeigt. Sie verfügen jedoch möglicherweise über Menüressourcen, die während der Ausführung des Programms zur Menüleiste der Anwendung hinzugefügt werden.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863737"
 ---
 # <a name="atl-predefined-symbols"></a>Vordefinierte ATL-Symbole
 Diese Symbole in den ATL-Headerdateien definiert sind, aber sie Standardfunktionen für Windows-Anwendung und Aktionen unterstützen. Hauptsächlich Sie werden mit Dialogfeldern verwendet. Wenn Sie mit der Dialogfelder und Steuerelemente arbeiten in der [Dialog-Editor](../windows/dialog-editor.md), diese Symbole im Fenster Eigenschaften zusammen mit allgemeinen Steuerelementen angezeigt. Beispielsweise verfügt das Dialogfeld eine Schaltfläche "Abbrechen", dieses Befehls zugeordnet werden das Symbol IDCANCEL in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).  

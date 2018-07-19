@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391664"
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretieren von komplexeren Deklaratoren
 Sie können einen beliebigen Deklarator in Klammern einschließen, um eine bestimmte Interpretation eines "komplexen Deklarators" anzugeben. Ein komplexer Deklarator ist ein Bezeichner, der durch mehr als einen Array-, Zeiger- oder Funktionsmodifizierer qualifiziert wird. Sie können verschiedene Kombinationen von Array-, Zeiger- und Funktionsmodifizierern auf einen einzelnen Bezeichner anwenden. Im Allgemeinen kann `typedef` verwendet werden, um Deklarationen zu vereinfachen. Weitere Informationen finden Sie unter [Typedef-Deklarationen](../c-language/typedef-declarations.md).  

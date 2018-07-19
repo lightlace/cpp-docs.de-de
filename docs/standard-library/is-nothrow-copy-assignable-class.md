@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c5c5bdc1e944483071f0f1dcd53c3bc93eb6ed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e540d6fe4c00772af01b187d24efae18fd62357f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957557"
 ---
 # <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable-Klasse
 
@@ -35,11 +36,11 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Der abzufragende Typ.
+*T* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist für einen verweisbaren Typ `T` da TRUE, wo `is_nothrow_assignable<T&, const T&>` TRUE ist; andernfalls ist sie FALSE.
+Eine Instanz des typprädikats enthält "true" für einen referenzierbare *T* , in denen `is_nothrow_assignable<T&, const T&>` enthält true ist; andernfalls ist Sie false.
 
 ## <a name="requirements"></a>Anforderungen
 

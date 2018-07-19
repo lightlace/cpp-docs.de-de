@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850182"
 ---
 # <a name="macros-cc"></a>Makros (C/C++)
 Makros in allen Zeilen, die nicht Präprozessordirektiven sind vorverarbeitung erweitert (Linien, die keine **#** als erstes Zeichen nicht-Leerzeichen) und in Teilen der einige Direktiven, die nicht im Rahmen des übersprungen werden ein Bedingte Kompilierung. "Direktiven für die bedingte Kompilierung" ermöglichen es Ihnen, die Kompilierung von Teilen einer Quelldatei zu unterdrücken, indem sie einen konstanten Ausdruck oder einen Bezeichner testen, um zu bestimmen, welche Textblöcke an den Compiler übergeben werden und welche Textblöcke während des Präprozessorlaufs aus der Quelldatei entfernt werden .  

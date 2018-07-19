@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367146"
 ---
 # <a name="function-pointers"></a>Funktionszeiger
 Funktionszeiger sind einfache Zeiger auf die Bezeichnung der jeweiligen Funktion. Es ist kein Inhaltsverzeichnis Anforderungen für Funktionszeiger.  

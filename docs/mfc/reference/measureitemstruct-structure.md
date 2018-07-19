@@ -1,5 +1,5 @@
 ---
-title: MEASUREITEMSTRUCT-Struktur | Microsoft Docs
+title: MEASUREITEMSTRUCT-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff015fdaf9e37d919459cadc8e4c35c4b795b3f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcf4bd41d00f6999b4158f0884c39e7a16d10bcc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336958"
 ---
 # <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT-Struktur
-Die `MEASUREITEMSTRUCT` Struktur informiert Windows über die Abmessungen eines Ownerdrawn-Steuerelement oder Menüelement-Elements.  
+Die `MEASUREITEMSTRUCT` Struktur informiert Windows der Dimensionen eines Ownerdrawn-Steuerelements oder Menüelements-Elements.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,28 +40,28 @@ typedef struct tagMEASUREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `CtlType`  
- Enthält den Steuerelementtyp ". Folgende Werte sind für Steuerelementtypen gültig:  
+ *CtlType*  
+ Enthält den Steuerelementtyp. Folgende Werte sind für Steuerelementtypen gültig:  
   
-- **ODT_COMBOBOX** Ownerdrawn-Kombinationsfeld  
+- ODT_COMBOBOX Ownerdrawn-Kombinationsfeld  
   
-- **Odt_combobox** Besitzer gezeichnetes Listenfeld  
+- Odt_combobox Ownerdrawn-Listenfeld  
   
-- **ODT_MENU** Besitzer gezeichnetes Menü  
+- ODT_MENU Ownerdrawn-Menü  
   
- `CtlID`  
+ *CtlID*  
  Enthält die Steuerelement-ID für ein Kombinationsfeld, Listenfeld oder Schaltfläche. Dieser Member wird nicht für ein Menü verwendet.  
   
- `itemID`  
- Die Menüelement ID für ein Menü oder die Listenfeldelement ID für ein variabler Höhe Kombinationsfeld oder Listenfeld enthält. Dieses Element ist nicht für eine feste Höhe Kombinationsfeld oder Listenfeld oder für eine Schaltfläche verwendet.  
+ *Element-ID*  
+ Die Menüelement-ID für ein Menü oder die Listenelement Feld ID für ein variabler Höhe Kombinationsfeld oder Listenfeld enthält. Dieser Member wird nicht für eine feste Höhe Kombinationsfeld oder Listenfeld oder für eine Schaltfläche verwendet.  
   
  *itemWidth*  
- Gibt die Breite eines Menüelements. Der Besitzer des Menüelements Ownerdrawn-muss bei diesem Member ausfüllen, bevor sie aus der Nachricht zurückgibt.  
+ Gibt die Breite eines Menüelements. Der Besitzer des Menüelements Ownerdrawn-muss dieses Element ausfüllen, bevor sie aus der Nachricht zurückgibt.  
   
  *itemHeight*  
- Gibt die Höhe eines einzelnen Elements in einem Listenfeld oder ein Menü an. Vor der Rückgabe aus der Nachricht, die Besitzer des Kombinationsfelds Ownerdrawn-muss bei diesem Member im Listenfeld oder Menüelement ausfüllen. Die maximale Höhe des ein Listenfeldelement ist 255.  
+ Gibt die Höhe eines einzelnen Elements in einem Listenfeld oder einem Menü an. Vor dem Zurückgeben aus der Nachricht, der Besitzer des im Ownerdrawn-Kombinationsfeld, muss dieses Element im Listenfeld oder Menüelement ausfüllen. Die maximale Höhe des Listenfelds ist 255.  
   
- `itemData`  
+ *itemData*  
  Für ein Kombinationsfeld oder Listenfeld enthält dieser Member den Wert, der dem Listenfeld von einer der folgenden Methoden übergeben wurde:  
   
 - [CComboBox:: AddString](../../mfc/reference/ccombobox-class.md#addstring)  
@@ -79,7 +80,7 @@ typedef struct tagMEASUREITEMSTRUCT {
   
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
- Dies ermöglicht Windows Benutzerinteraktion mit dem Steuerelement ordnungsgemäß verarbeiten. Fehler beim Ausfüllen der entsprechenden Elemente in der `MEASUREITEMSTRUCT` Struktur führt dazu, dass falsche Vorgang des Steuerelements.  
+ Dadurch wird Windows, um die Benutzerinteraktion mit dem Steuerelement ordnungsgemäß zu verarbeiten. Fehler beim Ausfüllen der entsprechenden Elemente in der `MEASUREITEMSTRUCT` Struktur führt dazu, dass eine ungültige Operation des Steuerelements.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** winuser.h  

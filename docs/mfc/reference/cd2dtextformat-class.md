@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e55689fa71ed5f0e4ebd4978a004212d5fb82b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 017267a2b633ee8e0a9c23149fe9d3cb7a8be980
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955468"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat-Klasse
 Ein Wrapper für IDWriteTextFormat.  
@@ -116,31 +117,31 @@ CD2DTextFormat(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pParentTarget`  
+ *pParentTarget*  
  Ein Zeiger auf das Renderziel.  
   
- `strFontFamilyName`  
+ *strFontFamilyName*  
  Eines CString-Objekts mit dem Namen der Schriftfamilie.  
   
- `fontSize`  
+ *FontSize*  
  Die logische Größe der Schriftart in Einheiten DIP-Adresse ("geräteunabhängige Pixel"). Eine DIP entspricht 1/96 Zoll.  
   
- `fontWeight`  
+ *FontWeight*  
  Ein Wert, der die Schriftbreite für Text-Objekts angibt.  
   
- `fontStyle`  
+ *fontStyle*  
  Ein Wert, der den Schriftschnitt für Text-Objekts angibt.  
   
- `fontStretch`  
+ *fontStretch*  
  Ein Wert, der die Streckung Schriftart für das Objekt angibt.  
   
- `strFontLocale`  
+ *strFontLocale*  
  Eines CString-Objekts, das den Gebietsschemanamen enthält.  
   
- `pFontCollection`  
+ *pFontCollection*  
  Ein Zeiger auf ein Auflistungsobjekt Schriftart. Wenn dieser NULL ist, gibt die Auflistung der Systemschriftarten an.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Gibt an, dass das Objekt vom Besitzer (pParentTarget) zerstört wird.  
   
 ##  <a name="create"></a>  CD2DTextFormat::Create  

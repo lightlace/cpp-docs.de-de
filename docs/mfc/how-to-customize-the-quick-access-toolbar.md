@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349645"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Gewusst wie: Anpassen der Symbolleiste für den Schnellzugriff
 Die schnellen Zugriff Symbolleiste Schnellzugriff ist eine anpassbare Symbolleiste, die eine Reihe von Befehlen enthält, die entweder neben der Schaltfläche "Anwendung" oder auf den Registerkarten Kategorie angezeigt. Die folgende Abbildung zeigt eine typische Symbolleiste für den Schnellzugriff an.  

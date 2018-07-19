@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380800"
 ---
 # <a name="behavior-of-identifiers"></a>Verhalten von Bezeichnern
 -   [Signifikante Zeichen ohne externe Bindung](../c-language/significant-characters-without-external-linkage.md)  

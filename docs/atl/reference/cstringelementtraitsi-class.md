@@ -1,5 +1,5 @@
 ---
-title: CStringElementTraitsI Klasse | Microsoft Docs
+title: CStringElementTraitsI-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1544a2fec1c4567c301eb2c051f7455c8ca393c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d523c882754a69239ebbbfad1adcb0e91c0c4ca6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879887"
 ---
 # <a name="cstringelementtraitsi-class"></a>CStringElementTraitsI-Klasse
-Diese Klasse enthält statische Funktionen, die im Zusammenhang mit Zeichenfolgen, die in der Auflistung von Klassenobjekten gespeichert. Sie ähnelt damit [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), jedoch führt Vergleiche Groß-/Kleinschreibung.  
+Diese Klasse stellt statische Funktionen, die im Zusammenhang mit Zeichenfolgen, die in der Auflistung von Klassenobjekten gespeichert. Sie ähnelt damit [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), aber die Groß-/Kleinschreibung Vergleiche ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,7 +40,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
+ *T*  
  Der Typ der Daten in der Auflistung gespeichert werden.  
   
 ## <a name="members"></a>Member  
@@ -48,19 +49,19 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CStringElementTraitsI::INARGTYPE](#inargtype)|Der Datentyp zum Hinzufügen von Elementen auf das Klassenobjekt Auflistung verwendet werden soll.|  
-|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|Der Datentyp zum Abrufen von Elementen aus der Auflistung-Klassenobjekt verwendet werden soll.|  
+|[CStringElementTraitsI::INARGTYPE](#inargtype)|Der Datentyp, zum Hinzufügen von Elementen für das Objekt der Sammlung-Klasse verwendet werden soll.|  
+|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|Der Datentyp für das Abrufen von Elementen aus dem Auflistungsobjekt-Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CStringElementTraitsI::CompareElements](#compareelements)|Rufen Sie diese statische Funktion zum Vergleichen von zwei Zeichenfolgenelementen Gleichheit Unterschiede in den Fällen ignoriert.|  
-|[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Rufen Sie diese statische Funktion zum Vergleichen von zwei Zeichenfolgenelemente, werden die Unterschiede im Fall ignoriert.|  
+|[CStringElementTraitsI::CompareElements](#compareelements)|Rufen Sie diese statische Funktion zum Vergleichen von zwei Zeichenfolgenelementen Gleichheit, ignorieren die Unterschiede bei.|  
+|[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Rufen Sie diese statische Funktion zum Vergleichen von zwei Zeichenfolgenelementen, ignorieren die Unterschiede bei.|  
 |[CStringElementTraitsI::Hash](#hash)|Rufen Sie diese statischen Funktion um einen Hashwert für das Element der angegebenen Zeichenfolge zu berechnen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse enthält statische Funktionen zum Vergleichen von Zeichenfolgen und zum Erstellen eines Hashwerts. Diese Funktionen sind hilfreich, wenn Sie eine Auflistungsklasse verwenden zum Speichern von Daten zeichenfolgenbasierten. Verwendung [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) Wenn die Zeichenfolgeobjekte sind als Verweise mit mit behandelt werden.  
+ Diese Klasse stellt statische Funktionen zum Vergleichen von Zeichenfolgen und zum Erstellen eines Hashwerts. Diese Funktionen sind hilfreich, wenn eine Auflistungsklasse verwenden, um zeichenfolgenbasierter Daten zu speichern. Verwendung [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) Wenn die Zeichenfolgeobjekte sind mit als Verweise überwunden werden müssen.  
   
  Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
@@ -73,45 +74,45 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
  **Header:** atlcoll.h  
   
 ##  <a name="compareelements"></a>  CStringElementTraitsI::CompareElements  
- Rufen Sie diese statische Funktion zum Vergleichen von zwei Zeichenfolgenelementen Gleichheit Unterschiede in den Fällen ignoriert.  
+ Rufen Sie diese statische Funktion zum Vergleichen von zwei Zeichenfolgenelementen Gleichheit, ignorieren die Unterschiede bei.  
   
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `str1`  
- Das erste string-Element.  
+ *str1*  
+ Die erste Zeichenfolge Element.  
   
- `str2`  
- Das zweite string-Element.  
+ *str2*  
+ Die zweite Zeichenfolge Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" zurück, wenn die Elemente gleich "false", andernfalls sind.  
   
 ### <a name="remarks"></a>Hinweise  
- Vergleiche werden Groß-/Kleinschreibung beachtet.  
+ Beim Vergleichen wird die Groß-/Kleinschreibung.  
   
 ##  <a name="compareelementsordered"></a>  CStringElementTraitsI::CompareElementsOrdered  
- Rufen Sie diese statische Funktion zum Vergleichen von zwei Zeichenfolgenelemente, werden die Unterschiede im Fall ignoriert.  
+ Rufen Sie diese statische Funktion zum Vergleichen von zwei Zeichenfolgenelementen, ignorieren die Unterschiede bei.  
   
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `str1`  
- Das erste string-Element.  
+ *str1*  
+ Die erste Zeichenfolge Element.  
   
- `str2`  
- Das zweite string-Element.  
+ *str2*  
+ Die zweite Zeichenfolge Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
- 0 (null), wenn die Zeichenfolgen identisch sind, < 0 Wenn `str1` ist kleiner als `str2`, oder 0 > Wenn `str1` ist größer als `str2`. Die [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) Methode wird verwendet, um die Qualität der Vergleiche ausführen.  
+ 0 (null), wenn die Zeichenfolgen identisch sind, < 0 Wenn *str1* ist kleiner als *str2*, oder > 0, wenn *str1* ist größer als *str2*. Die [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) Methode wird verwendet, um die Vergleiche durchzuführen.  
 
   
 ### <a name="remarks"></a>Hinweise  
- Vergleiche werden Groß-/Kleinschreibung beachtet.  
+ Beim Vergleichen wird die Groß-/Kleinschreibung.  
   
 ##  <a name="hash"></a>  CStringElementTraitsI::Hash  
  Rufen Sie diese statischen Funktion um einen Hashwert für das Element der angegebenen Zeichenfolge zu berechnen.  
@@ -121,21 +122,21 @@ static ULONG Hash(INARGTYPE str) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `str`  
+ *str*  
  Das String-Element.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt einen Hashwert berechnet wird, verwenden den Inhalt der Zeichenfolge zurück.  
+ Gibt einen Hashwert berechnet mithilfe des Inhalts der Zeichenfolge zurück.  
   
 ##  <a name="inargtype"></a>  CStringElementTraitsI::INARGTYPE  
- Der Datentyp zum Hinzufügen von Elementen auf das Klassenobjekt Auflistung verwendet werden soll.  
+ Der Datentyp, zum Hinzufügen von Elementen für das Objekt der Sammlung-Klasse verwendet werden soll.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CStringElementTraitsI::OUTARGTYPE  
- Der Datentyp zum Abrufen von Elementen aus der Auflistung-Klassenobjekt verwendet werden soll.  
+ Der Datentyp für das Abrufen von Elementen aus dem Auflistungsobjekt-Klasse.  
   
 ```
 typedef T& OUTARGTYPE;
@@ -143,5 +144,5 @@ typedef T& OUTARGTYPE;
   
 ## <a name="see-also"></a>Siehe auch  
  [CElementTraitsBase-Klasse](../../atl/reference/celementtraitsbase-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)   
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
  [CStringElementTraits-Klasse](../../atl/reference/cstringelementtraits-class.md)

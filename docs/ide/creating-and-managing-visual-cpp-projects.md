@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Verwalten von Visual C++-Projekten | Microsoft Docs
+title: Erstellen und Verwalten von Visual C++-Projekten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,31 +22,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33332422"
 ---
-# <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Erstellen und Verwalten von MSBuild-basierte Visual C++-Projekten
-MSBuild ist das native Buildsystem für Visual C++ und im Allgemeinen, dass die beste Buildsystem für uwp-apps als auch Desktop-Anwendungen, die MFC oder ATL-Bibliotheken verwenden. MSBuild ist eng mit dem Visual Studio-IDE und Projektsystem integriert, aber Sie können Sie auch über die Befehlszeile verwenden. Ab Visual Studio 2017 können Visual C++ unterstützt [CMake und anderen Systemen nicht MSBuild über das Feature Open Folder](non-msbuild-projects.md).
+# <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Erstellen und Verwalten von MSBuild-basierten Visual C++-Projekten
+MSBuild ist das native Buildsystem für Visual C++ und im Allgemeinen das beste Buildsystem für die Verwendung von UWP-Apps und Desktopanwendungen, die MFC- oder ATL-Bibliotheken verwenden. MSBuild ist eng in die Visual Studio-IDE und das Projektsystem integriert. Sie können MSBuild jedoch auch über die Befehlszeile verwenden. Ab Visual Studio 2017 unterstützt Visual C++ [CMake- und andere nicht MSBuild-Systeme mithilfe des Features „Ordner öffnen“](non-msbuild-projects.md).
 
-Ein MSBuild-basiertes Projekt enthält eine Projektdatei im XML-Format (.vcxproj), der angibt, die Dateien und Ressourcen benötigt zum Kompilieren des Programms sowie andere Konfigurationseinstellungen, z. B. die Zielplattform (x 86, X64 oder ARM) und gibt an, ob Sie erstellen eine Release-Version oder Debugversion des Programms. Ein Projekt bzw. mehrere Projekte befinden sich in einer *Projektmappe*. Eine Projektmappe kann zum Beispiel mehrere Win32-DLL-Projekte und eine einzelne Win32-Konsolenanwendung enthalten, die diese DLLs verwendet. Wenn Sie das Projekt erstellen, verarbeitet das MSBuild-Modul die Projektdatei und erstellt die ausführbare Datei und/oder jede weitere benutzerdefinierte Ausgabe, die Sie angegeben haben.
+Ein Projekt, das auf MSBuild basiert, enthält eine Projektdatei im XML-Format (VCXPROJ), die alle Dateien und Ressourcen angibt, die zum Kompilieren des Programms notwendig sind. Außerdem gibt sie andere Konfigurationseinstellungen an, wie z.B. die Zielplattform (x86, x64 oder ARM), und ob Sie eine Releaseversion oder Debugversion des Programms erstellen. Ein Projekt bzw. mehrere Projekte befinden sich in einer *Projektmappe*. Eine Projektmappe kann zum Beispiel mehrere Win32-DLL-Projekte und eine einzelne Win32-Konsolenanwendung enthalten, die diese DLLs verwendet. Wenn Sie das Projekt erstellen, verarbeitet die MSBuild-Engine die Projektdatei und erstellt die ausführbare Datei und/oder jede weitere benutzerdefinierte Ausgabe, die Sie angegeben haben.
 
-Sie können Visual C++-Projekte erstellen, indem Sie auswählen **Datei &#124; neu &#124; Projekt**, sicherstellen, dass Visual C++ im linken Bereich ausgewählt ist, und klicken Sie dann aus der Liste der Projektvorlagen im mittleren Bereich auswählen. Wenn Sie in einer Vorlage klicken, wird in vielen Fällen ein Assistent angezeigt, mit dem Sie verschiedene Projekteigenschaften festlegen, bevor das Projekt erstellt wird. Sie können Eigenschaften anzeigen und ändern diese später mithilfe der Eigenschaftenseiten des Projekts (**Projekt &#124; Eigenschaften**).  
+Sie können Visual C++-Projekte erstellen, indem Sie **Datei > Neu > Projekt** auswählen und dabei sicherstellen, dass Visual C++ im linken Bereich ausgewählt ist, und dann aus der Liste der Projektvorlagen im mittleren Bereich wählen. Wenn Sie auf eine Vorlage klicken, wird in vielen Fällen ein Assistent angezeigt, mit dem Sie verschiedene Projekteigenschaften festlegen können, bevor das Projekt erstellt wird. Sie können diese Eigenschaften mithilfe der Eigenschaftenseiten des Projekts (**Projekt > Eigenschaften**) später anzeigen und ändern.  
   
- Sie können auch neue Projekte erstellen:  
+ Sie können auch mit den folgenden Vorgehensweisen neue Projekte erstellen:  
   
--   Auswählen von **Datei &#124; neu &#124; Projekt aus vorhandenem Code** und den Anweisungen zum Hinzufügen von vorhandenen Quellcodedateien folgen. Diese Option ist am besten für relativ kleine und einfache Projekte geeignet, etwa 25 Quellcodedateien mit wenigen oder ohne komplexe Abhängigkeiten.  
+-   Klicken Sie auf **Datei > Neu > Projekt aus vorhandenem Code**, und führen Sie die Anweisungen zum Hinzufügen von vorhandenen Quellcodedateien aus. Diese Option ist am besten für relativ kleine und einfache Projekte geeignet, etwa 25 Quellcodedateien mit wenigen oder ohne komplexe Abhängigkeiten.  
   
 -   Wählen Sie die Makefile-Projektvorlage auf der Registerkarte „Allgemein“.  
   
--   Erstellen ein leeres Projekt (unter der **allgemeine** Registerkarte ") und fügen Sie manuell Quellcodedateien, indem Sie mit der rechten Maustaste auf den Projektknoten im Projektmappen-Explorer und **hinzufügen &#124; vorhandenes Element**.  
+-   Erstellen Sie ein leeres Projekt (auf der Registerkarte **Allgemein**), und fügen Sie manuell Quellcodedateien hinzu, indem Sie mit der rechten Maustaste auf den Projektknoten im Projektmappen-Explorer und auf **Hinzufügen > Vorhandenes Element** klicken.  
   
 -   using the [Win32 Application Wizard](../windows/win32-application-wizard.md)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Visual C++-Projekttypen](../ide/visual-cpp-project-types.md)  
- Beschreibt die MSBuild-basiertes Projekt-Typen, die in Visual C++ verfügbar sind.  
+ Beschreibt die MSBuild-basierten Projekttypen, die in Visual C++ verfügbar sind.  
   
  [Für Visual C++-Projekte erstellte Dateitypen](../ide/file-types-created-for-visual-cpp-projects.md)  
  Beschreibt die Arten von Dateien, die mit verschiedenen MSBuild-Projekttypen verwendet werden.  
@@ -57,7 +58,7 @@ Sie können Visual C++-Projekte erstellen, indem Sie auswählen **Datei &#124; n
  [Arbeiten mit Projekteigenschaften](../ide/working-with-project-properties.md)  
  Erläutert, wie Sie Eigenschaftsseiten und Eigenschaftenblätter verwenden können, um Ihre Projekteinstellungen festzulegen.  
   
- [Hinzufügen neuer Funktionen mit Code-Assistenten](../ide/adding-functionality-with-code-wizards-cpp.md)  
+ [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../ide/adding-functionality-with-code-wizards-cpp.md)  
  Beschreibt, wie Sie Klassen, Methoden, Variablen und andere Elemente Ihrem Projekt hinzufügen können, um weitere Funktionen hinzuzufügen.  
   
  [Vorgehensweise: Organisieren von Projektausgabedateien für Builds](../ide/how-to-organize-project-output-files-for-builds.md)  

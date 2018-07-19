@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8048a38c2ec09828c462d5b671cc0c89aec30805
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ca7c673f47510282e129eab2538008400eb2fb9
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929431"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Verwalten von Daten mit Dokumentdatenvariablen
 Implementieren Sie die Daten des Dokuments als Membervariablen der Dokumentklasse. Das Scribble-Programm deklariert beispielsweise einen Datenmember des Typs `CObList` – eine verknüpfte Liste, die Zeiger auf speichert `CObject` Objekte. Diese Liste wird verwendet, um Arrays von Punkten zu speichern, aus denen eine Freihandlinie Strichzeichnung besteht.  
@@ -34,7 +35,7 @@ Implementieren Sie die Daten des Dokuments als Membervariablen der Dokumentklass
   
  Wenn Sie Ihr Dokument Elementdaten definieren, fügen in der Regel Sie Memberfunktionen der Dokument-Klasse zum Festlegen und Abrufen von Datenelementen und andere nützliche Vorgänge darauf.  
   
- Die Sicht Zeiger auf das Dokument, in der Sicht zum Zeitpunkt der Erstellung installiert über Ihre Ansichten sind das Document-Objekt zugreifen. Sie können die this-Zeiger in eine Sicht Memberfunktionen abrufen, durch Aufrufen der `CView` Memberfunktion **GetDocument**. Achten Sie darauf, dass Sie für Ihre eigenen Dokumenttyp this-Zeiger umgewandelt. Dann können Sie Mitglieder für Öffentliche Dokumente über den Zeiger zugreifen.  
+ Die Sicht Zeiger auf das Dokument, in der Sicht zum Zeitpunkt der Erstellung installiert über Ihre Ansichten sind das Document-Objekt zugreifen. Sie können die this-Zeiger in eine Sicht Memberfunktionen abrufen, durch Aufrufen der `CView` Memberfunktion `GetDocument`. Achten Sie darauf, dass Sie für Ihre eigenen Dokumenttyp this-Zeiger umgewandelt. Dann können Sie Mitglieder für Öffentliche Dokumente über den Zeiger zugreifen.  
   
  Wenn häufige Datenübertragung Direktzugriff erfordert, oder Sie nicht öffentliche Member der Dokumentklasse verwenden möchten, empfiehlt es sich, die Ihrer Ansicht einen "Friend" (in der C++-Terminologie) der Dokumentklasse Klasse sein.  
   

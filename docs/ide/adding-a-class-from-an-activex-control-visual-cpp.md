@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Klasse aus einem ActiveX-Steuerelement (Visual C++) | Microsoft Docs
+title: Hinzufügen einer Klasse aus einem ActiveX-Steuerelement (Visual C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 793adf38da33808371a0df71f671c3e29da75326
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33322405"
 ---
 # <a name="adding-a-class-from-an-activex-control-visual-c"></a>Hinzufügen einer Klasse aus einem ActiveX-Steuerelement (Visual C++)
-Verwenden Sie diesen Assistenten zum Erstellen einer MFC-Klasse von einer Schnittstelle in einem verfügbaren ActiveX-Steuerelement. Sie können eine MFC-Klasse zum Hinzufügen ein [MFC-Anwendung](../mfc/reference/creating-an-mfc-application.md), wird eine [MFC-DLL](../mfc/reference/creating-an-mfc-dll-project.md), oder ein [MFC-ActiveX-Steuerelement](../mfc/reference/creating-an-mfc-activex-control.md).  
+Verwenden Sie diesen Assistenten, um eine MFC-Klasse aus einer Schnittstelle in einem verfügbaren ActiveX-Steuerelement zu erstellen. Sie können eine MFC-Klasse in eine [MFC-Anwendung](../mfc/reference/creating-an-mfc-application.md), eine [MFC-DLL](../mfc/reference/creating-an-mfc-dll-project.md) oder ein [MFC-ActiveX-Steuerelement](../mfc/reference/creating-an-mfc-activex-control.md) einfügen.  
   
 > [!NOTE]
->  Sie müssen nicht zum Erstellen von MFC-Projekt mit Automatisierung aktiviert, um eine Klasse aus einem ActiveX-Steuerelement hinzufügen.  
+>  Sie müssen Ihr MFC-Projekt nicht mit aktiver Automatisierung erstellen, um eine Klasse aus einem ActiveX-Steuerelement hinzuzufügen.  
   
- Ein ActiveX-Steuerelement ist eine wiederverwendbare Softwarekomponente, die auf dem Component Object Model (COM) basiert. Dieses Modell unterstützt zahlreiche OLE-Funktionen und kann an die unterschiedlichsten Softwareanforderungen angepasst werden. ActiveX-Steuerelemente sind für die Verwendung sowohl im normalen ActiveX-Steuerelementcontainer und im Internet im World Wide Web Pages entworfen.  
+ Ein ActiveX-Steuerelement ist eine wiederverwendbare Softwarekomponente, die auf dem Component Object Model (COM) basiert. Dieses Modell unterstützt zahlreiche OLE-Funktionen und kann an die unterschiedlichsten Softwareanforderungen angepasst werden. ActiveX-Steuerelemente sind sowohl für den herkömmlichen Einsatz in ActiveX-Steuerelementcontainern als auch für die Verwendung in World Wide Web-Seiten im Internet geeignet.  
   
 ### <a name="to-add-an-mfc-class-from-an-activex-control"></a>So fügen Sie eine MFC-Klasse aus einem ActiveX-Steuerelement hinzu  
   
-1.  In beiden **Projektmappen-Explorer** oder [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), mit der rechten Maustaste in des Namens des Projekts, dem Sie die ActiveX-Steuerelementklasse hinzufügen möchten.  
+1.  Klicken Sie entweder im **Projektmappen-Explorer** oder in der [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) mit der rechten Maustaste auf den Namen des Projekts, dem Sie die ActiveX-Steuerelementklasse hinzufügen möchten.  
   
-2.  Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.  
+2.  Klicken Sie im Kontextmenü auf die Option **Hinzufügen**, und klicken Sie danach auf **Klasse hinzufügen**.  
   
-3.  In der [Klasse hinzufügen](../ide/add-class-dialog-box.md) (Dialogfeld), klicken Sie im Bereich "Vorlagen" klicken Sie auf **MFC-Klasse von ActiveX-Steuerelement**, und klicken Sie dann auf **öffnen** zum Anzeigen der [Klasse hinzufügen von ActiveX Steuern von Assistenten](../ide/add-class-from-activex-control-wizard.md).  
+3.  Klicken Sie im Dialogfeld [Klasse hinzufügen](../ide/add-class-dialog-box.md) im Bereich „Vorlagen“ auf **MFC-Klasse von ActiveX-Steuerelement**, und klicken Sie dann auf **Öffnen**, um den [Assistenten zum Hinzufügen einer ActiveX-Steuerelementklasse](../ide/add-class-from-activex-control-wizard.md) anzuzeigen.  
   
- Im Assistenten können Sie mehr als eine Schnittstelle in einem ActiveX-Steuerelement hinzufügen. Ebenso können Sie Klassen aus mehr als ein ActiveX-Steuerelement in einer einzelnen Assistenten-Sitzung erstellen.  
+ Im Assistenten können Sie mehrere Schnittstellen in einem ActiveX-Steuerelement hinzufügen. Ebenso können Sie Klassen aus mehreren ActiveX-Steuerelementen in einer einzelnen Assistenten-Sitzung erstellen.  
   
- Können Sie Klassen aus ActiveX-Steuerelemente, die in Ihrem System registrierten hinzufügen, oder Sie können Klassen aus ActiveX-Steuerelemente in Typbibliotheksdateien (TLB-Datei, OLB-, DLL, ".ocx" oder .exe) befindet, ohne sie in Ihrem System Registrierung hinzufügen. Finden Sie unter [OLE-Steuerelemente registrieren](../mfc/reference/registering-ole-controls.md) für Weitere Informationen zum Registrieren von ActiveX-Steuerelemente.  
+ Sie können Klassen aus ActiveX-Steuerelementen hinzufügen, die im System registriert sind oder sich in Typbibliotheksdateien befinden (TLB-, OLB-, DLL-, OCX- oder EXE-Dateien), ohne diese zuerst im System registrieren zu müssen. Weitere Informationen zum Registrieren von ActiveX-Steuerelementen finden Sie unter [Registering OLE Controls (Registrieren von OLE-Steuerelementen)](../mfc/reference/registering-ole-controls.md).  
   
- Der Assistent erstellt eine MFC-Klasse abgeleitet [CWnd](../mfc/reference/cwnd-class.md) oder [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md), für jede Schnittstelle, die Sie aus dem ausgewählten ActiveX-Steuerelement hinzufügen.  
+ Der Assistent erstellt für jede Schnittstelle, die Sie aus dem ausgewählten ActiveX-Steuerelement hinzufügen, eine MFC-Klasse, die von [CWnd](../mfc/reference/cwnd-class.md) oder [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md) abgeleitet wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls (MFC-ActiveX-Steuerelemente)](../mfc/mfc-activex-controls.md)   
  [Einführung in COM und ATL](../atl/introduction-to-com-and-atl.md)

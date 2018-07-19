@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c1187d0fcfec45a21a358c8d20c4f3684f17feb3
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705565"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322393"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Compiler-Warnungen standardmäßig deaktiviert sind
 
@@ -89,7 +89,7 @@ Die folgenden Warnungen werden in Visual Studio 2015 und höher standardmäßig 
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) (Stufe 1)|"*operator1*': Operator vor dem Komma hat keine Auswirkungen; wollten Sie"*operator2*"?|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) (Stufe 1)|Der Ausdruck hat keine Auswirkungen; Ausdruck mit Nebeneffekten erwartet|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (Stufe 3)|"__assume' enthält den Effekt '*Effekt*"|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (Stufe 4)|Information: catch(...)-Semantik seit Visual C++ 7.1 geändert; strukturierte Ausnahmen (SEH) werden nicht mehr abgefangen.|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (Stufe 4)|Information: die catch(...)-Semantik seit Visual C++ 7.1; geändert strukturierte Ausnahmen (SEH) werden nicht mehr abgefangen.|
 |C4574 (Stufe 4)|"*Bezeichner*'definiert ' 0': wollten Sie verwenden" #if *Bezeichner*"?|
 |C4577 (Stufe 1)|"Noexcept" verwendet, mit der keine Ausnahmebehandlung angegebenen Modus; Beenden von Ausnahme ist nicht gewährleistet. Geben Sie/EHsc|
 |C4582 (Stufe 4)|"*Typ*': Konstruktor wird nicht implizit aufgerufen.|
@@ -153,12 +153,14 @@ Die folgenden Warnungen werden in Visual Studio 2015 und höher standardmäßig 
 |[C5038](../error-messages/compiler-warnings/c5038.md) (Stufe 4)|Datenmember "*member1*"wird so initialisiert, nach der Datenmember"*member2*" <sup>15.3</sup>|
 |C5039 (Stufe 4)|"*Funktion*': Zeiger oder Verweis auf potenziell Auslösen von Funktion" extern "C-Funktion unter - EHc übergeben. Nicht definiertes Verhalten kann auftreten, wenn diese Funktion eine Ausnahme auslöst. <sup>15.5</sup>|
 |C5042 (Stufe 3)|"*Funktion*": Funktionsdeklarationen im Gültigkeitsbereich der-Block nicht "Inline" angegeben sein, in standardmäßigem C++ – entfernen "Inlinespezifizierer" <sup>15.5</sup>|
+|[C5045](../error-messages/compiler-warnings/c5045.md)|Compilerfehler einfügen Absorptionsspektrum zur Risikominderung für Arbeitsspeicherlast aus, wenn /Qspectre Switch angegeben <sup>15.7</sup>|
 
-<sup>14,1</sup> diese Warnung ab, die in Visual Studio 2015 Update 1 verfügbar ist.<br>
-<sup>14.3</sup> diese Warnung ab, die in Visual Studio 2015 Update 3 verfügbar ist.<br>
-<sup>15.3</sup> diese Warnung ist verfügbar in Visual Studio 2017 Version 15.3 ab.<br>
-<sup>15.5</sup> diese Warnung ist verfügbar in Visual Studio 2017 Version 15.5 ab.<br>
-<sup>Permanent</sup> diese Warnung ist deaktiviert, es sei denn, die [/ liberalen-](../build/reference/permissive-standards-conformance.md) (Compileroption) festgelegt ist.
+<sup>14,1</sup> diese Warnung ab, die in Visual Studio 2015 Update 1 verfügbar ist.  
+<sup>14.3</sup> diese Warnung ab, die in Visual Studio 2015 Update 3 verfügbar ist.  
+<sup>15.3</sup> diese Warnung ist verfügbar in Visual Studio 2017 Version 15.3 ab.  
+<sup>15.5</sup> diese Warnung ist verfügbar in Visual Studio 2017 Version 15.5 ab.  
+<sup>15.7</sup> diese Warnung ist verfügbar in Visual Studio 2017 Version 15.7 ab.  
+<sup>Permanent</sup> diese Warnung ist deaktiviert, es sei denn, die [/ liberalen-](../build/reference/permissive-standards-conformance.md) (Compileroption) festgelegt ist.  
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Warnungen deaktiviert standardmäßig in früheren Versionen
 

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689180"
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context-Klasse
 Mit der `task_continuation_context`-Klasse können Sie angeben, an welcher Stelle eine Fortsetzung ausgeführt werden soll. Es ist nur hilfreich, diese Klasse aus einer Windows-Runtime-app zu verwenden. Für nicht - Windows-Runtime-apps ist Ausführungskontext der aufgabenfortsetzung von der Laufzeit bestimmt und kann nicht konfiguriert.  

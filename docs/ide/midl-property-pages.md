@@ -1,5 +1,5 @@
 ---
-title: Eigenschaftenseiten "MIDL" | Microsoft Docs
+title: MIDL-Eigenschaftenseiten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,13 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f4b32aaa7626bcb5cfabc59e0d3b9554d73379e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33328073"
 ---
 # <a name="midl-property-pages"></a>Eigenschaftenseiten "MIDL"
-Die **"MIDL"** Knoten sind mehrere Eigenschaftenseiten. Um auf diese zuzugreifen, mit der rechten Maustaste auf die IDL-Datei im **Projektmappen-Explorer**.  
+Der **MIDL**-Knoten enthält mehrere Eigenschaftenseiten. Um auf diese zuzugreifen, klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die IDL-Datei.  
   
 -   [Eigenschaftenseiten "MIDL": "Allgemein"](../ide/midl-property-pages-general.md)  
   

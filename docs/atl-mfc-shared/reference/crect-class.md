@@ -1,5 +1,5 @@
 ---
-title: CRect Klasse | Microsoft Docs
+title: CRect-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -44,14 +44,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a819cfc95588dc9225570a82b8a359d90a8f6b9f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a1b968e09ed40959c30a649d4d4e17baea28703
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881086"
 ---
 # <a name="crect-class"></a>CRect-Klasse
-Ähnelt der Windows [RECT](../../mfc/reference/rect-structure1.md) Struktur.  
+Ähnlich wie eine Windows [RECT](../../mfc/reference/rect-structure1.md) Struktur.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,63 +72,63 @@ class CRect : public tagRECT
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CRect::BottomRight](#bottomright)|Gibt die zum Zeitpunkt der unteren rechten Ecke des `CRect`.|  
-|[CRect::CenterPoint](#centerpoint)|Gibt den Mittelpunkt des `CRect`.|  
-|[CRect::CopyRect](#copyrect)|Kopiert die Dimensionen der einem Quellrechteck auf `CRect`.|  
+|[CRect::BottomRight](#bottomright)|Gibt den Punkt unten rechts `CRect`.|  
+|[CRect::CenterPoint](#centerpoint)|Gibt den Mittelpunkt der `CRect`.|  
+|[CRect::CopyRect](#copyrect)|Kopiert die Abmessungen des einem Quellrechteck auf `CRect`.|  
 |[CRect::DeflateRect](#deflaterect)|Verringert die Breite und Höhe des `CRect`.|  
-|[CRect::EqualRect](#equalrect)|Bestimmt, ob `CRect` gleich einem angegebenen Rechteck.|  
+|[CRect::EqualRect](#equalrect)|Bestimmt, ob `CRect` ist gleich einem angegebenen Rechteck.|  
 |[CRect::Height](#height)|Berechnet die Höhe des `CRect`.|  
-|[CRect::InflateRect](#inflaterect)|Vergrößert die Breite und Höhe des `CRect`.|  
+|[CRect::InflateRect](#inflaterect)|Erhöht die Breite und Höhe des `CRect`.|  
 |[CRect::IntersectRect](#intersectrect)|Legt `CRect` die Schnittmenge zweier Rechtecke gleich.|  
 |[CRect::IsRectEmpty](#isrectempty)|Bestimmt, ob `CRect` ist leer. `CRect` ist leer, wenn die Breite bzw. Höhe 0 sind.|  
-|[CRect::IsRectNull](#isrectnull)|Bestimmt, ob die **oben**, **unteren**, **linken**, und **rechten** Membervariablen sind alle gleich 0.|  
-|[CRect::MoveToX](#movetox)|Verschiebt `CRect` zur angegebenen X-Koordinate.|  
+|[CRect::IsRectNull](#isrectnull)|Bestimmt, ob die `top`, `bottom`, `left`, und `right` Membervariablen sind alle gleich 0.|  
+|[CRect::MoveToX](#movetox)|Verschiebt `CRect` an der angegebenen X-Koordinate.|  
 |[CRect::MoveToXY](#movetoxy)|Verschiebt `CRect` auf den angegebenen x- und y-Koordinaten.|  
-|[CRect::MoveToY](#movetoy)|Verschiebt `CRect` zur angegebenen y-Koordinate.|  
-|[CRect:: NormalizeRect](#normalizerect)|Die Höhe und Breite der standardisiert `CRect`.|  
-|[CRect::OffsetRect](#offsetrect)|Verschiebt `CRect` durch den angegebenen Offsets.|  
+|[CRect::MoveToY](#movetoy)|Verschiebt `CRect` auf den angegebenen y-Koordinate.|  
+|[CRect:: NormalizeRect](#normalizerect)|Standardisiert die Höhe und Breite des `CRect`.|  
+|[CRect::OffsetRect](#offsetrect)|Verschiebt `CRect` durch die angegebenen Offsets.|  
 |[CRect::PtInRect](#ptinrect)|Bestimmt, ob der angegebene Punkt innerhalb liegt `CRect`.|  
 |[CRect::SetRect](#setrect)|Gibt die Abmessungen des `CRect`.|  
-|[CRect::SetRectEmpty](#setrectempty)|Legt `CRect` auf ein leeres Rechteck (alle Koordinaten ungleich 0).|  
-|[CRect::Size](#size)|Berechnet die Größe des `CRect`.|  
+|[CRect::SetRectEmpty](#setrectempty)|Legt `CRect` auf ein leeres Rechteck, das (alle Koordinaten gleich 0).|  
+|[CRect::Size](#size)|Berechnet die Größe der `CRect`.|  
 |[CRect::SubtractRect](#subtractrect)|Subtrahiert ein Rechteck von einem anderen.|  
-|[CRect::TopLeft](#topleft)|Gibt die linke obere Punkt `CRect`.|  
-|[CRect::UnionRect](#unionrect)|Legt `CRect` die Vereinigung zweier Rechtecke gleich.|  
-|[CRect::Width](#width)|Berechnet die Breite der `CRect`.|  
+|[CRect::TopLeft](#topleft)|Gibt die linke obere Fehlerquelle `CRect`.|  
+|[CRect::UnionRect](#unionrect)|Legt `CRect` bezüglich der Gesamtmenge von zwei Rechtecke gleich.|  
+|[CRect::Width](#width)|Berechnet die Breite des `CRect`.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren    
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CRect::operator-](#operator_-)|Subtrahiert den angegebenen Offsets von `CRect` oder entfernt `CRect` und gibt das resultierende `CRect`.|  
-|[CRect::operator LPCRECT](#operator_lpcrect)|Konvertiert eine `CRect` auf eine **LPCRECT**.|  
+|[CRect::operator-](#operator_-)|Subtrahiert den angegebenen Offsets von `CRect` oder entleert `CRect` und gibt das resultierende `CRect`.|  
+|[CRect::operator LPCRECT](#operator_lpcrect)|Konvertiert eine `CRect` auf eine `LPCRECT`.|  
 |[CRect::operator LPRECT](#operator_lprect)|Konvertiert eine `CRect` auf eine `LPRECT`.|  
-|[CRect::operator! =](#operator_neq)|Bestimmt, ob `CRect` stimmt nicht mit einem Rechteck.|  
+|[CRect::operator! =](#operator_neq)|Bestimmt, ob `CRect` entspricht keinem Rechteck.|  
 |[CRect::operator &amp;](#operator_amp)|Erstellt die Schnittmenge der `CRect` und ein Rechteck und gibt das resultierende `CRect`.|  
-|[CRect::operator &amp;=](#operator_amp_eq)|Legt `CRect` gleich bei der Schnittmenge der `CRect` und ein Rechteck.|  
-|[CRect::operator |](#operator_or)|Erstellt die Vereinigung der `CRect` und ein Rechteck und gibt das resultierende `CRect`.|  
-|[CRect::operator |=](#operator_or_eq)|Legt `CRect` entspricht die Kombination `CRect` und ein Rechteck.|  
-|[CRect::operator +](#operator_add)|Fügt die angegebenen Offsets `CRect` oder vergrößert `CRect` und gibt das resultierende `CRect`.|  
+|[CRect::operator &amp;=](#operator_amp_eq)|Legt `CRect` gleich für die Schnittmenge der `CRect` und ein Rechteck.|  
+|[CRect::operator |](#operator_or)|Erstellt die Union der `CRect` und ein Rechteck und gibt das resultierende `CRect`.|  
+|[CRect::operator |=](#operator_or_eq)|Legt `CRect` bezüglich ihrer Gesamtmenge gleich `CRect` und ein Rechteck.|  
+|[CRect::operator +](#operator_add)|Fügt die angegebenen Offsets zu ILS der `CRect` oder vergrößert `CRect` und gibt das resultierende `CRect`.|  
 |[CRect::operator +=](#operator_add_eq)|Fügt die angegebenen Offsets `CRect` oder vergrößert `CRect`.|  
-|[CRect::operator =](#operator_eq)|Kopiert die Dimensionen eines Rechtecks, das `CRect`.|  
-|[CRect::operator =](#operator_-_eq)|Subtrahiert den angegebenen Offsets von `CRect` oder entfernt `CRect`.|  
+|[CRect::operator =](#operator_eq)|Kopiert die Abmessungen eines Rechtecks an `CRect`.|  
+|[CRect::operator =](#operator_-_eq)|Subtrahiert den angegebenen Offsets von `CRect` oder entleert `CRect`.|  
 |[CRect::operator ==](#operator_eq_eq)|Bestimmt, ob `CRect` entspricht einem Rechteck.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CRect` enthält auch Memberfunktionen zum Bearbeiten von `CRect` Objekte und Windows `RECT` Strukturen.  
+ `CRect` enthält auch Member-Funktionen zum Bearbeiten von `CRect` Objekte und Windows `RECT` Strukturen.  
   
- Ein `CRect` Objekt übergeben werden, als Funktionsparameter immer ein `RECT` Struktur **LPCRECT**, oder `LPRECT` übergeben werden kann.  
+ Ein `CRect` Objekt übergeben werden kann, als Funktionsparameter immer eine `RECT` Struktur `LPCRECT`, oder `LPRECT` übergeben werden kann.  
   
 > [!NOTE]
->  Diese Klasse ist abgeleitet von der **TagRECT** Struktur. (Der Name **TagRECT** weniger häufig verwendete Name ist für die `RECT` Struktur.) Dies bedeutet, dass das Datenmember (**linken**, **oben**, **rechten**, und **unteren**) von der `RECT` Struktur werden die Daten zugegriffen werden kann Mitglieder der `CRect`.  
+>  Diese Klasse ist abgeleitet von der `tagRECT` Struktur. (Der Name `tagRECT` weniger häufig verwendete Name ist für die `RECT` Struktur.) Dies bedeutet, dass die Datenmember (`left`, `top`, `right`, und `bottom`) von der `RECT` Struktur werden die zugänglichen Datenmember `CRect`.  
   
- Ein `CRect` Membervariablen, die definieren, die Punkte oberen linken und unteren rechten Ecke eines Rechtecks enthält.  
+ Ein `CRect` Membervariablen, die definieren, der oberen linken und rechten unteren Punkten eines Rechtecks enthält.  
   
- Beim Angeben einer `CRect`, achten Sie es erstellen, damit er normalisiert ist – also so, dass der Wert der die linke Koordinate kleiner als der rechten Seite und dem oberen ist kleiner als die unteren. Z. B. eine oben links (10,10) unten rechts auf der (20,20) definiert ein normalisierte Rechteck jedoch eine oben links (20,20) und unten rechts auf der (10,10) definiert ein nicht normalisierter Rechteck. Wenn das Rechteck wird nicht normalisiert, viele `CRect` Memberfunktionen möglicherweise falsche Ergebnisse zurückgegeben. (Siehe [CRect:: NormalizeRect](#normalizerect) eine Liste dieser Funktionen.) Vor dem Aufrufen einer funktionsrückgabewerts, die normalisierte Rechtecke erfordert, können Sie nicht normalisierte Rechtecke normalisieren, durch Aufrufen der `NormalizeRect` Funktion.  
+ Beim Angeben einer `CRect`, achten Sie ihn erstellen, damit es normalisiert wird, anders gesagt, dass der Wert, der die linke Koordinate der rechten Seite und dem oberen unterschreitet ist kleiner als im unteren Bereich. Z. B. eine oben links (10,10) und unten rechts (20,20) definiert eines normalisierten Rechtecks, aber eine oben links (20,20) und unten rechts (10,10) definiert eine nicht normalisierte Rechteck. Wenn das Rechteck ist nicht normalisiert; viele `CRect` Memberfunktionen möglicherweise falsche Ergebnisse zurückgegeben. (Finden Sie unter [CRect:: NormalizeRect](#normalizerect) eine Liste dieser Funktionen.) Bevor Sie eine Funktion, die normalisierte Rechtecke erforderlich sind aufrufen, können Sie Rechtecke nicht normalisierte normalisieren, durch den Aufruf der `NormalizeRect` Funktion.  
   
- Seien Sie vorsichtig beim Bearbeiten einer `CRect` mit der [CDC::DPtoLP](../../mfc/reference/cdc-class.md#dptolp) und [CDC::LPtoDP](../../mfc/reference/cdc-class.md#lptodp) Memberfunktionen. Wenn der Zuordnungsmodus eines Kontexts Anzeige ist die y-Block negativ ist, wie in `MM_LOENGLISH`, klicken Sie dann `CDC::DPtoLP` Transformation wird die `CRect` , damit die oben im unteren Bereich größer ist. Funktionen wie **Höhe** und **Größe** negative Werte für die Höhe des transformierten dann zurück `CRect`, und das Rechteck wird nicht normalisiert werden.  
+ Seien Sie vorsichtig beim Bearbeiten von einen `CRect` mit der [CDC::DPtoLP](../../mfc/reference/cdc-class.md#dptolp) und [CDC::LPtoDP](../../mfc/reference/cdc-class.md#lptodp) Memberfunktionen. Wenn der Zuordnungsmodus, der einen Anzeigekontext ist, sodass der y-Block negativ ist, wie in `MM_LOENGLISH`, klicken Sie dann `CDC::DPtoLP` transformiert die `CRect` , damit seinen oberen, unteren größer ist. Funktionen wie `Height` und `Size` gibt dann negative Werte für die Höhe des transformierten `CRect`, und das Rechteck wird nicht normalisiert.  
 
   
- Wenn mithilfe von überladenen `CRect` Operatoren wird der erste Operand muss ein `CRect`; das zweite kann es sich um eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder ein `CRect` Objekt.  
+ Wenn mithilfe von überladenen `CRect` Operatoren, der erste Operand muss ein `CRect`; das zweite kann es sich um eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder ein `CRect` Objekt.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `tagRECT`  
@@ -146,10 +147,10 @@ const CPoint& BottomRight() const throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Koordinaten der der unteren rechten Ecke des Rechtecks.  
+ Die Koordinaten des der unteren rechten Ecke des Rechtecks.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können diese Funktion verwenden, zum Abrufen oder Festlegen der unteren rechten Ecke des Rechtecks. Legen Sie mithilfe dieser Funktion auf der linken Seite des Zuweisungsoperators der Ecke.  
+ Sie können diese Funktion verwenden, zum Abrufen oder Festlegen der unteren rechten Ecke des Rechtecks. Legen Sie die Ecke mit dieser Funktion auf der linken Seite des Zuweisungsoperators.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -177,7 +178,7 @@ rect2.BottomRight() = ptLow;
 ```
   
 ##  <a name="centerpoint"></a>  CRect::CenterPoint 
- Berechnet den Mittelpunkt der `CRect` durch die linken und rechten Werte addiert und geteilt durch zwei, und die oberen und unteren Werte addiert und geteilt durch zwei.  
+ Berechnet den Mittelpunkt der `CRect` durch die linken und rechten Werte addiert und geteilt durch zwei, und die oberen und unteren Werte addiert und durch zwei dividiert wird.  
   
 ```  
 CPoint CenterPoint() const throw();
@@ -245,7 +246,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpSrcRect`  
+ *lpSrcRect*  
  Verweist auf die [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das kopiert werden soll.  
   
 ### <a name="example"></a>Beispiel  
@@ -284,39 +285,39 @@ CRect(POINT topLeft, POINT bottomRight) throw();
   
 ### <a name="parameters"></a>Parameter  
  *l*  
- Gibt die linke Position der `CRect`.  
+ Gibt an, die linke Position des `CRect`.  
   
  *t*  
- Gibt den Anfang `CRect`.  
+ Gibt an, am Anfang `CRect`.  
   
  *r*  
- Gibt die Rechte Position der `CRect`.  
+ Gibt an, die Rechte Position der `CRect`.  
   
  *b*  
- Gibt den unteren Rand `CRect`.  
+ Gibt an, am Ende `CRect`.  
   
  *srcRect*  
  Bezieht sich auf die [RECT](../../mfc/reference/rect-structure1.md) Struktur mit den Koordinaten für `CRect`.  
   
- `lpSrcRect`  
+ *lpSrcRect*  
  Verweist auf die `RECT` Struktur mit den Koordinaten für `CRect`.  
   
- `point`  
+ *Zeigen Sie*  
  Gibt den Ausgangspunkt für das Rechteck erstellt werden soll. Entspricht der linken oberen Ecke.  
   
- `size`  
- Gibt die Verschiebung von der linken oberen Ecke der unteren rechten Ecke des Rechtecks erstellt werden soll.  
+ *size*  
+ Gibt an, die Verschiebung von der linken oberen Ecke der unteren rechten Ecke des Rechtecks erstellt werden soll.  
   
- *TopLeft*  
+ *topLeft*  
  Gibt die linke obere Position der `CRect`.  
   
- *BottomRight*  
- Gibt die Position der unteren rechten Ecke der `CRect`.  
+ *bottomRight*  
+ Gibt die Position unten rechts auf der `CRect`.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn keine Argumente angegeben werden, **linken**, **oben**, **rechten**, und **unteren** Member nicht initialisiert werden.  
+ Wenn keine Argumente angegeben werden, `left`, `top`, `right`, und `bottom` Member nicht initialisiert werden.  
   
- Die `CRect`(**const RECT &**) und `CRect`(**LPCRECT**) Konstruktoren führen eine [CopyRect](#copyrect). Die anderen Konstruktoren initialisieren die Membervariablen des Objekts direkt auf.  
+ Die `CRect`(`const RECT&`) und `CRect`(`LPCRECT`) führen Sie die Konstruktoren eine [CopyRect](#copyrect). Die anderen Konstruktoren initialisieren die Membervariablen des Objekts direkt auf.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -357,7 +358,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 ```
   
 ##  <a name="deflaterect"></a>  CRect::DeflateRect  
- `DeflateRect` entfernt `CRect` durch seine Seiten an dessen Mitte verschieben.  
+ `DeflateRect` entleert `CRect` durch dessen Seiten in Richtung der Mitte verschieben.  
   
 ```  
 void DeflateRect(int x, int y) throw();
@@ -368,33 +369,33 @@ void DeflateRect(int l, int t, int r, int b) throw();
   
 ### <a name="parameters"></a>Parameter  
  *w*  
- Gibt die Anzahl der Einheiten, um die deflate links und rechts vom `CRect`.  
+ Gibt an, die Anzahl der Einheiten, die zum Verkleinern nach links und rechts vom `CRect`.  
   
  *y*  
- Gibt die Anzahl der Einheiten, um den oberen bzw. unteren Rand deflate `CRect`.  
+ Gibt die Anzahl der Einheiten, um den oberen und unteren Rand deflate `CRect`.  
   
- `size`  
- Ein [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) oder [CSize](csize-class.md) , die angibt, dass der Anzahl der Einheiten, um die deflate `CRect`. Die `cx` Wert gibt die Anzahl der Einheiten, um die linken und rechten Seite Deflate ausführen und die `cy` Wert gibt die Anzahl der Einheiten, um die am oberen bzw. unteren Deflate ausführen.  
+ *size*  
+ Ein [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) oder [CSize](csize-class.md) , angibt, dass die Anzahl der Einheiten, deflate `CRect`. Die `cx` Wert gibt die Anzahl der Einheiten, um den linken und rechten Seite deflate und `cy` Wert gibt die Anzahl der Einheiten, um den oberen und unteren deflate.  
   
- `lpRect`  
- Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` , die die Anzahl der Einheiten, um jede Seite deflate angibt.  
+ *lpRect*  
+ Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` , der die Anzahl der Einheiten, um jede Seite deflate angibt.  
   
  *l*  
- Gibt die Anzahl der Einheiten auf der linken Seite des deflate `CRect`.  
+ Gibt die Anzahl der Einheiten, die auf der linken Seite des deflate `CRect`.  
   
  *t*  
  Gibt die Anzahl der Einheiten, um am Anfang deflate `CRect`.  
   
  *r*  
- Gibt die Anzahl der Einheiten auf der rechten Seite des deflate `CRect`.  
+ Gibt die Anzahl der Einheiten, die auf der rechten Seite des deflate `CRect`.  
   
  *b*  
- Gibt die Anzahl der Einheiten, um das Ende deflate `CRect`.  
+ Gibt die Anzahl der Einheiten, um am Ende deflate `CRect`.  
   
 ### <a name="remarks"></a>Hinweise  
- Hierzu `DeflateRect` linken und oberen Einheiten hinzugefügt und Einheiten aus dem rechten und unteren subtrahiert. Die Parameter der `DeflateRect` signiert werden Werte: positive Werte deflate `CRect` und negative Werte vergrößern sie.  
+ Zu diesem Zweck `DeflateRect` linken und oberen Einheiten hinzugefügt und Einheiten aus dem rechten und unteren subtrahiert. Die Parameter der `DeflateRect` angemeldet sind Werte: positive Werte, die deflate `CRect` und es negative Werte vergrößert werden soll.  
   
- Die ersten beiden Überladungen deflate beide Paare von gegenüberliegenden Seiten des `CRect` , damit die Gesamtbreite um zweimal verringert *x* (oder `cx`) und die gesamte Höhe wird zweimal verringert *y* () oder `cy`). Die anderen beiden Überladungen deflate jede Seite der `CRect` unabhängig von den anderen.  
+ Die ersten beiden überladen deflate zwei Paare von gegenüberliegenden Seiten des `CRect` , damit die gesamte Breite von zwei Mal verringert wird *x* (oder `cx`) und die gesamte Höhe ist doppelt so groß wie gesunken *y* () oder `cy`). Die anderen zwei Überladungen deflate, jede Seite der `CRect` unabhängig von den anderen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -411,21 +412,21 @@ void DeflateRect(int l, int t, int r, int b) throw();
 ```
   
 ##  <a name="equalrect"></a>  CRect::EqualRect  
- Bestimmt, ob `CRect` gleich einem angegebenen Rechteck.  
+ Bestimmt, ob `CRect` ist gleich einem angegebenen Rechteck.  
   
 ```  
 BOOL EqualRect(LPCRECT lpRect) const throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpRect`  
- Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` Objekt, das die Koordinaten der oberen linken und unteren rechten Ecke eines Rechtecks enthält.  
+ *lpRect*  
+ Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das die Koordinaten der oberen linken und rechten unteren Ecke eines Rechtecks enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die zwei Rechtecken, die gleichen oben, links, unteren und rechten Werte haben; andernfalls 0.  
+ Ungleich NULL ist, wenn die zwei Rechtecke der gleichen oben, links, unten und richtige Werte verfügen; andernfalls 0.  
   
 > [!NOTE]
->  Müssen sowohl der Rechtecke normalisiert werden, oder diese Funktion kann fehlschlagen. Sie können Aufrufen [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Die Rechtecke müssen normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -446,7 +447,7 @@ ASSERT(rect1.EqualRect(rect2));
 ```
 
 ##  <a name="height"></a>  CRect::Height  
- Berechnet die Höhe des `CRect` durch Subtrahieren den obersten Wert aus dem unteren Wert.  
+ Berechnet die Höhe des `CRect` durch Subtrahieren der Höchstwert aus den unteren Wert.  
   
 ```  
 int Height() const throw();
@@ -456,10 +457,10 @@ int Height() const throw();
  Die Höhe des `CRect`.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Ergebniswert kann negativ sein.  
+ Der resultierende Wert kann negativ sein.  
   
 > [!NOTE]
->  Das Rechteck muss normalisiert werden, oder diese Funktion möglicherweise ein Fehler. Sie können Aufrufen [NormalizeRect](#normalizerect) , das Rechteck zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Das Rechteck muss normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , das Rechteck zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -476,7 +477,7 @@ int nHt = rect.Height();
 
   
 ##  <a name="inflaterect"></a>  CRect::InflateRect  
- `InflateRect` Vergrößert dieses `CRect` durch seine Seiten Weg von der Mitte verschieben.  
+ `InflateRect` vergrößert `CRect` durch dessen Seiten von der Mitte verschieben.  
   
 ```  
 void InflateRect(int x, int y) throw();
@@ -487,33 +488,33 @@ void InflateRect(int l, int t, int r,  int b) throw();
   
 ### <a name="parameters"></a>Parameter  
  *w*  
- Gibt die Anzahl der Einheiten, um Links vergrößert werden soll und rechten Seite des Anwendungsfensters `CRect`.  
+ Gibt an, die Anzahl der Einheiten, um die Vergrößerung der linken und rechten Seite des Anwendungsfensters `CRect`.  
   
  *y*  
- Gibt die Anzahl der Einheiten, um die am oberen bzw. unteren Rand vergrößern `CRect`.  
+ Gibt die Anzahl der Einheiten, um den oberen und unteren Rand Vergrößerung `CRect`.  
   
- `size`  
- Ein [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) oder [CSize](csize-class.md) , die gibt der Anzahl der Einheiten vergrößern `CRect`. Die `cx` Wert gibt die Anzahl der Einheiten, um die Links und rechts zu vergrößern und den `cy` Wert gibt die Anzahl der Einheiten, um die am oberen bzw. unteren vergrößert werden soll.  
+ *size*  
+ Ein [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) oder [CSize](csize-class.md) , der angibt, dass der Anzahl der Einheiten, um die Vergrößerung `CRect`. Die `cx` Wert gibt die Anzahl der Einheiten, um den linken und rechten Seite vergrößert werden soll und die `cy` Wert gibt die Anzahl der Einheiten, um den oberen und unteren vergrößert werden soll.  
   
- `lpRect`  
+ *lpRect*  
  Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` , der angibt, dass der Anzahl der Einheiten, um jede Seite vergrößert werden soll.  
   
  *l*  
- Gibt die Anzahl der Einheiten auf der linken Seite des vergrößern `CRect`.  
+ Gibt die Anzahl der Einheiten, um die Vergrößerung der linken Seite des `CRect`.  
   
  *t*  
- Gibt die Anzahl der Einheiten, um am Anfang vergrößern `CRect`.  
+ Gibt die Anzahl der Einheiten, um am Anfang Vergrößerung `CRect`.  
   
  *r*  
- Gibt die Anzahl der Einheiten vergrößern rechts neben `CRect`.  
+ Gibt die Anzahl der Einheiten, um die Vergrößerung der rechten Seite des `CRect`.  
   
  *b*  
- Gibt die Anzahl der Einheiten, um das Ende vergrößert werden soll `CRect`.  
+ Gibt die Anzahl der Einheiten, um die Vergrößerung Ende `CRect`.  
   
 ### <a name="remarks"></a>Hinweise  
- Hierzu `InflateRect` subtrahiert Einheiten vom linken und oberen und den rechten und unteren Einheiten hinzugefügt. Die Parameter der `InflateRect` signiert werden positive Werte vergrößern Werte `CRect` und negative Werte deflate es.  
+ Zu diesem Zweck `InflateRect` subtrahiert Einheiten vom linken und oberen und am rechten und unteren Einheiten hinzugefügt. Die Parameter der `InflateRect` signiert werden positive Werte Vergrößerung Werte `CRect` und negative Werte "Deflate" es.  
   
- Die ersten beiden Überladungen vergrößert werden soll, beide Paare von gegenüberliegenden Seiten des `CRect` , damit die Gesamtbreite zweimal gestiegen ist *x* (oder `cx`) und die gesamte Höhe ist zweimal gestiegen *y* () oder `cy`). Die anderen beiden Überladungen vergrößert werden soll, jede Seite der `CRect` unabhängig von den anderen.  
+ Die ersten beiden überladen Vergrößerung zwei Paare von gegenüberliegenden Seiten des `CRect` , damit die gesamte Breite von zwei Mal erhöht wird *x* (oder `cx`) und die gesamte Höhe zweimal erhöht *y* () oder `cy`). Die anderen zwei Überladungen Vergrößerung jeder Seite der `CRect` unabhängig von den anderen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -525,27 +526,27 @@ void InflateRect(int l, int t, int r,  int b) throw();
 ```
   
 ##  <a name="intersectrect"></a>  CRect::IntersectRect  
- Stellt eine `CRect` gleich der Schnittmenge von zwei vorhandenen Rechtecken.  
+ Stellt eine `CRect` die Schnittmenge von zwei vorhandenen Rechtecke gleich.  
   
 ```  
 BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();  
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpRect1`  
+ *lpRect1*  
  Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` Objekt, das einem Quellrechteck enthält.  
   
- `lpRect2`  
+ *lpRect2*  
  Verweist auf eine `RECT` Struktur oder `CRect` Objekt, das einem Quellrechteck enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Schnittmenge nicht leer ist; 0, wenn die Schnittmenge leer ist.  
+ Ungleich NULL ist, wenn die Schnittmenge nicht leer ist; 0, wenn die Schnittmenge leer ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Schnittmenge ist das größte Rechteck, das in beiden vorhandenen Rechtecke enthalten sind.  
   
 > [!NOTE]
->  Müssen sowohl der Rechtecke normalisiert werden, oder diese Funktion kann fehlschlagen. Sie können Aufrufen [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Die Rechtecke müssen normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -578,10 +579,10 @@ BOOL IsRectEmpty() const throw();
  Einen Wert ungleich NULL `CRect` leer ist; 0 Wenn `CRect` ist nicht leer.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Rechteck ist leer, wenn die Breite bzw. Höhe 0 sind oder negativ sein. Unterscheidet sich von `IsRectNull`, der bestimmt, ob alle Koordinaten des Rechtecks 0 (null) sind.  
+ Ein Rechteck ist leer, wenn die Breite bzw. Höhe 0 sind oder negativ sein. Unterscheidet sich von `IsRectNull`, der bestimmt, ob alle Koordinaten des Rechtecks auf 0 (null) sind.  
   
 > [!NOTE]
->  Das Rechteck muss normalisiert werden, oder diese Funktion möglicherweise ein Fehler. Sie können Aufrufen [NormalizeRect](#normalizerect) , das Rechteck zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Das Rechteck muss normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , das Rechteck zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -599,14 +600,14 @@ CRect rectEmpty(35, 35, 35, 35);
 
   
 ##  <a name="isrectnull"></a>  CRect::IsRectNull  
- Bestimmt, ob der oberen linken unten, und mit der rechten Maustaste Werte `CRect` sind alle gleich 0.  
+ Bestimmt, ob es sich bei den oberen, linken nach unten, und Werte von rechten `CRect` sind alle gleich 0.  
   
 ```  
 BOOL IsRectNull() const throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Einen Wert ungleich NULL `CRect`des oben, links, unteren und rechten Werte sind alle gleich 0, andernfalls 0.  
+ Einen Wert ungleich NULL `CRect`des oberen, linken, unteren und rechten Werte sind alle gleich 0, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
  Unterscheidet sich von `IsRectEmpty`, der bestimmt, ob das Rechteck leer ist.  
@@ -628,7 +629,7 @@ ASSERT(rectNone.IsRectNull());
 ```
   
 ##  <a name="movetox"></a>  CRect::MoveToX  
- Mit dieser Funktion können Sie das Rechteck verschieben, um die absolute X-Koordinate angegeben *x*.  
+ Mit dieser Funktion können Sie das Rechteck verschieben, auf die absolute X-Koordinate gemäß *x*.  
   
 ```  
 void MoveToX(int x) throw();  
@@ -652,7 +653,7 @@ rect.MoveToX(10);
 ```
   
 ##  <a name="movetoxy"></a>  CRect::MoveToXY  
- Mit dieser Funktion können verschieben Sie das Rechteck auf die absolute X - und y-Koordinaten angegeben.  
+ Rufen Sie diese Funktion, um das Rechteck auf die absolute X - und y-Koordinaten angegeben zu verschieben.  
   
 ```  
 void MoveToXY(int x, int y) throw();
@@ -666,8 +667,8 @@ void MoveToXY(POINT point) throw();
  *y*  
  Die absolute y-Koordinate für die linke obere Ecke des Rechtecks.  
   
- `point`  
- Ein **Punkt** Struktur, die die absolute linke obere Ecke des Rechtecks angibt.  
+ *Zeigen Sie*  
+ Ein `POINT` -Struktur, die die absolute linke obere Ecke des Rechtecks angibt.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -683,7 +684,7 @@ void MoveToXY(POINT point) throw();
 
   
 ##  <a name="movetoy"></a>  CRect::MoveToY  
- Mit dieser Funktion können Sie das Rechteck verschieben, um die absolute y-Koordinate angegeben *y*.  
+ Mit dieser Funktion können Sie das Rechteck verschieben, auf die absolute y-Koordinate gemäß *y*.  
   
 ```  
 void MoveToY(int y) throw();  
@@ -714,10 +715,10 @@ void NormalizeRect() throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Das Rechteck ist für die vierte Quadranten Positionierung, normalisiert die Verwendung von Windows in der Regel für die Koordinaten. `NormalizeRect` Vergleicht die oberen und unteren Werten und vertauscht diese, wenn im oberen Bereich im unteren Bereich größer ist. Auf ähnliche Weise vertauscht den linken und rechten Werte, wenn der linken Seite größer als der rechten Seite ist. Diese Funktion ist hilfreich beim Umgang mit verschiedenen Zuordnungsmodi und Rechtecke umgekehrt.  
+ Das Rechteck wird zum vierten Quadranten zu positionieren, normalisiert die Windows in der Regel verwendet, für die Koordinaten. `NormalizeRect` Vergleicht die oberen und unteren Werte und tauscht diese, wenn oben im unteren Bereich größer ist. Auf ähnliche Weise vertauscht den linken und rechten Werte, wenn der linken Seite größer als der rechten Seite ist. Diese Funktion ist nützlich, beim Umgang mit anderen Zuordnungsmodi und Rechtecke umgekehrt.  
   
 > [!NOTE]
->  Die folgenden `CRect` Memberfunktionen normalisierte Rechtecke erfordern, damit Sie ordnungsgemäß funktioniert: [Höhe](#height), [Breite](#width), [Größe](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [Operator ==](#operator_eq_eq), [Operator! =](#operator_neq), [Operator &#124; ](#operator_or), [Operator &#124;=](#operator_or_eq), [Operator &](#operator_amp), und [Operator & =](#operator_amp_eq).  
+>  Die folgenden `CRect` Memberfunktionen erfordern normalisierte Rechtecke, damit es einwandfrei funktioniert: [Höhe](#height), [Breite](#width), [Größe](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [Operator ==](#operator_eq_eq), [Operator! =](#operator_neq), [Operator &#124; ](#operator_or), [Operator &#124;=](#operator_or_eq), [Operator &](#operator_amp), und [Operator & =](#operator_amp_eq).  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -733,7 +734,7 @@ rect1.NormalizeRect();
 ```
   
 ##  <a name="offsetrect"></a>  CRect::OffsetRect  
- Verschiebt `CRect` durch den angegebenen Offsets.  
+ Verschiebt `CRect` durch die angegebenen Offsets.  
   
 ```  
 void OffsetRect(int x, int y) throw();
@@ -746,16 +747,16 @@ void OffsetRect(SIZE size) throw();
  Gibt die Menge, die zum Verschieben von links oder rechts. Sie müssen nach links verschieben negativ sein.  
   
  *y*  
- Gibt den Umfang nach oben oder unten zu verschieben. Es muss auf nach oben verschieben negativ sein.  
+ Gibt an, der Betrag, um nach oben oder unten zu verschieben. Es muss negativen nach oben zu verschieben.  
   
- `point`  
- Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das beide Dimensionen nach dem Verschieben angibt.  
+ *Zeigen Sie*  
+ Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das beide Dimensionen, um die verschoben angibt.  
   
- `size`  
- Enthält eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](csize-class.md) Objekt, das beide Dimensionen nach dem Verschieben angibt.  
+ *size*  
+ Enthält eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](csize-class.md) Objekt, das beide Dimensionen, um die verschoben angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Verschiebt `CRect` *x* Einheiten entlang der x-Achse und *y* Einheiten entlang der y-Achse. Die *x* und *y* Parameter sind Werte mit Vorzeichen, sodass `CRect` können verschoben werden, links oder rechts oben oder unten.  
+ Verschiebt `CRect` *x* Einheiten entlang der x-Achse und *y* Einheiten entlang der y-Achse. Die *x* und *y* Parameter sind Werte mit Vorzeichen, also `CRect` können verschoben werden, nach links oder rechts oben oder unten.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -779,7 +780,7 @@ operator LPCRECT() const throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie diese Funktion verwenden, Sie brauchen nicht die Adresse des (**&**) Operator. Dieser Operator wird automatisch verwendet, wenn Sie übergeben ein `CRect` -Objekt an eine Funktion, die erwartet ein **LPCRECT**.  
+ Wenn Sie diese Funktion verwenden, nicht erforderlich, dem Address-of (**&**) Operator. Dieser Operator wird automatisch verwendet, wenn Sie übergeben eine `CRect` Objekt, das eine Funktion, die erwartet, dass ein `LPCRECT`.  
   
 
 ##  <a name="operator_lprect"></a>  CRect::operator LPRECT  
@@ -791,13 +792,13 @@ operator LPRECT() throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie diese Funktion verwenden, Sie brauchen nicht die Adresse des (**&**) Operator. Dieser Operator wird automatisch verwendet, wenn Sie übergeben ein `CRect` -Objekt an eine Funktion, die erwartet ein `LPRECT`.  
+ Wenn Sie diese Funktion verwenden, nicht erforderlich, dem Address-of (**&**) Operator. Dieser Operator wird automatisch verwendet, wenn Sie übergeben eine `CRect` Objekt, das eine Funktion, die erwartet, dass ein `LPRECT`.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CRect::operator LPCRECT](#operator_lpcrect).  
   
 ##  <a name="operator_eq"></a>  CRect::operator =  
- Weist *SrcRect* auf `CRect`.  
+ Weist *SrcRect* zu `CRect`.  
   
 ```  
 void operator=(const RECT& srcRect) throw();
@@ -822,23 +823,23 @@ void operator=(const RECT& srcRect) throw();
 
   
 ##  <a name="operator_eq_eq"></a>  CRect::operator ==  
- Bestimmt, ob `rect` gleich `CRect` durch Vergleichen die Koordinaten der oberen linken und unteren rechten Ecke.  
+ Bestimmt, ob `rect` gleich `CRect` durch Vergleichen die Koordinaten der linken, oberen und unteren rechten Ecke.  
   
 ```  
 BOOL operator==(const RECT& rect) const throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rect`  
+ *Rect*  
  Bezieht sich auf einem Quellrechteck. Kann eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn es übereinstimmt; andernfalls 0.  
+ Ungleich NULL ist, wenn das Objekt gleich; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Müssen sowohl der Rechtecke normalisiert werden, oder diese Funktion kann fehlschlagen. Sie können Aufrufen [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Die Rechtecke müssen normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -864,23 +865,23 @@ ASSERT(rect1 == rect2);
 
   
 ##  <a name="operator_neq"></a>  CRect::operator! =  
- Bestimmt, ob `rect` stimmt nicht mit `CRect` durch Vergleichen die Koordinaten der oberen linken und unteren rechten Ecke.  
+ Bestimmt, ob *Rect* ist nicht gleich `CRect` durch Vergleichen die Koordinaten der linken, oberen und unteren rechten Ecke.  
   
 ```  
 BOOL operator!=(const RECT& rect) const throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rect`  
+ *Rect*  
  Bezieht sich auf einem Quellrechteck. Kann eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn nicht gleich sind; andernfalls 0.  
+ Ungleich NULL ist, wenn es nicht übereinstimmt; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Müssen sowohl der Rechtecke normalisiert werden, oder diese Funktion kann fehlschlagen. Sie können Aufrufen [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Die Rechtecke müssen normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -905,7 +906,7 @@ ASSERT(rect1 != rect3);
 ```
   
 ##  <a name="operator_add_eq"></a>  CRect::operator +=  
- Verschieben Sie die ersten beiden Überladungen `CRect` durch den angegebenen Offsets.  
+ Verschieben Sie die ersten beiden überladen `CRect` durch die angegebenen Offsets.  
   
 ```  
 void operator+=(POINT point) throw();
@@ -914,19 +915,19 @@ void operator+=(LPCRECT lpRect) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `point`  
+ *Zeigen Sie*  
  Ein [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das die Anzahl der Einheiten, um das Rechteck verschieben angibt.  
   
- `size`  
+ *size*  
  Ein [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](csize-class.md) Objekt, das die Anzahl der Einheiten, um das Rechteck verschieben angibt.  
   
- `lpRect`  
- Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das die Anzahl der Einheiten, um die beiden Seiten des vergrößern enthält `CRect`.  
+ *lpRect*  
+ Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das die Anzahl der Einheiten, um jede Seite der Vergrößerung enthält `CRect`.  
   
 ### <a name="remarks"></a>Hinweise  
- Des Parameters *x* und *y* (oder `cx` und `cy`) werden hinzugefügt, um `CRect`.  
+ Des Parameters des *x* und *y* (oder `cx` und `cy`) Werte hinzugefügt, `CRect`.  
   
- Die dritte Überladung vergrößert `CRect` durch die Anzahl der Einheiten, die in jedes Element des Parameters angegeben.  
+ Die dritte Überladung vergrößert `CRect` durch die Anzahl der Einheiten, die im jeden Member des-Parameters angegeben.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -944,7 +945,7 @@ void operator+=(LPCRECT lpRect) throw();
 ```
   
 ##  <a name="operator_-_eq"></a>  CRect::operator =  
- Verschieben Sie die ersten beiden Überladungen `CRect` durch den angegebenen Offsets.  
+ Verschieben Sie die ersten beiden überladen `CRect` durch die angegebenen Offsets.  
   
 ```  
 void operator-=(POINT point) throw();
@@ -953,19 +954,19 @@ void operator-=(LPCRECT lpRect) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `point`  
+ *Zeigen Sie*  
  Ein [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das die Anzahl der Einheiten, um das Rechteck verschieben angibt.  
   
- `size`  
+ *size*  
  Ein [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](csize-class.md) Objekt, das die Anzahl der Einheiten, um das Rechteck verschieben angibt.  
   
- `lpRect`  
- Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das die Anzahl der Einheiten, um die beiden Seiten des deflate enthält `CRect`.  
+ *lpRect*  
+ Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das die Anzahl der Einheiten, um jede Seite der deflate enthält `CRect`.  
   
 ### <a name="remarks"></a>Hinweise  
- Des Parameters *x* und *y* (oder `cx` und `cy`) Werte subtrahiert `CRect`.  
+ Des Parameters des *x* und *y* (oder `cx` und `cy`) Werten subtrahiert werden `CRect`.  
   
- Die dritte Überladung entfernt `CRect` durch die Anzahl der Einheiten, die in jedes Element des Parameters angegeben. Beachten Sie, die diese Überladung wie funktioniert [DeflateRect](#deflaterect).  
+ Die dritte Überladung entleert `CRect` durch die Anzahl der Einheiten, die im jeden Member des-Parameters angegeben. Beachten Sie, die diese Überladung wie Funktionen [DeflateRect](#deflaterect).  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -983,41 +984,41 @@ void operator-=(LPCRECT lpRect) throw();
 ```
   
 ##  <a name="operator_amp_eq"></a>  CRect::operator &amp;=  
- Legt `CRect` gleich bei der Schnittmenge der `CRect` und `rect`.  
+ Legt `CRect` gleich für die Schnittmenge der `CRect` und `rect`.  
   
 ```  
 void operator&=(const RECT& rect) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rect`  
+ *Rect*  
  Enthält eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect`.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Schnittmenge ist das größte Rechteck, das in beiden Rechtecke enthalten ist.  
   
 > [!NOTE]
->  Müssen sowohl der Rechtecke normalisiert werden, oder diese Funktion kann fehlschlagen. Sie können Aufrufen [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Die Rechtecke müssen normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CRect::IntersectRect](#intersectrect).  
   
 ##  <a name="operator_or_eq"></a>  CRect::operator &#124;=  
- Legt `CRect` entspricht die Kombination `CRect` und `rect`.  
+ Legt `CRect` bezüglich ihrer Gesamtmenge gleich `CRect` und `rect`.  
   
 ```  
 void operator|=(const RECT& rect) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `rect`  
+ *Rect*  
  Enthält eine `CRect` oder [RECT](../../mfc/reference/rect-structure1.md).  
   
 ### <a name="remarks"></a>Hinweise  
- Die Union ist das kleinste Rechteck befindet, das sowohl Quelle Rechtecke enthält.  
+ Die Union ist das kleinste Rechteck befindet, das beide Rechtecke für die Datenquelle enthält.  
   
 > [!NOTE]
->  Müssen sowohl der Rechtecke normalisiert werden, oder diese Funktion kann fehlschlagen. Sie können Aufrufen [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Die Rechtecke müssen normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -1036,7 +1037,7 @@ void operator|=(const RECT& rect) throw();
 
   
 ##  <a name="operator_add"></a>  CRect::operator +  
- Die ersten beiden Überladungen Zurückgeben einer `CRect` -Objekt, das gleich `CRect` ersetzt durch den angegebenen Offsets.  
+ Die ersten beiden überladen Zurückgeben einer `CRect` -Objekt, das gleich ist `CRect` verschoben werden, indem die angegebenen Offsets.  
   
 ```  
 CRect operator+(POINT point) const throw();
@@ -1045,22 +1046,22 @@ CRect operator+(SIZE size) const throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `point`  
- Ein [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das die Anzahl der Einheiten, um das Verschieben des Rückgabewerts angibt.  
+ *Zeigen Sie*  
+ Ein [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](cpoint-class.md) Objekt, das die Anzahl der Einheiten, verschieben Sie den Rückgabewert angibt.  
   
- `size`  
- Ein [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](csize-class.md) Objekt, das die Anzahl der Einheiten, um das Verschieben des Rückgabewerts angibt.  
+ *size*  
+ Ein [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](csize-class.md) Objekt, das die Anzahl der Einheiten, verschieben Sie den Rückgabewert angibt.  
   
- `lpRect`  
- Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das die Anzahl der Einheiten, um jede Seite des Rückgabewerts vergrößert werden soll.  
+ *lpRect*  
+ Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, die Anzahl der Einheiten enthält, um jede Seite des Rückgabewerts vergrößert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die `CRect` entstandene verschieben oder überhöhte `CRect` durch die Anzahl der Einheiten, die im Parameter angegeben.  
+ Die `CRect` verschieben bzw. jedoch `CRect` durch die Anzahl der Einheiten, die im Parameter angegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Des Parameters *x* und *y* (oder `cx` und `cy`) Parameter hinzugefügt werden `CRect`des positionieren.  
+ Des Parameters des *x* und *y* (oder `cx` und `cy`) Parameter hinzugefügt werden `CRect`des positionieren.  
   
- Die dritte Überladung gibt eine neue `CRect` , die gleich `CRect` vergrößert, um die Anzahl der Einheiten, die in jedes Element des Parameters angegeben.  
+ Die dritte Überladung gibt eine neue `CRect` gleich `CRect` aufgeblasen wird durch die Anzahl der Einheiten, die im jeden Member des-Parameters angegeben.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -1075,7 +1076,7 @@ CRect operator+(SIZE size) const throw();
 
   
 ##  <a name="operator_-"></a>  CRect::operator-  
- Die ersten beiden Überladungen Zurückgeben einer `CRect` -Objekt, das gleich `CRect` ersetzt durch den angegebenen Offsets.  
+ Die ersten beiden überladen Zurückgeben einer `CRect` -Objekt, das gleich ist `CRect` verschoben werden, indem die angegebenen Offsets.  
   
 ```  
 CRect operator-(POINT point) const throw();
@@ -1084,22 +1085,22 @@ CRect operator-(LPCRECT lpRect) const throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `point`  
- Ein [Punkt](../../mfc/reference/point-structure1.md) Struktur oder `CPoint` Objekt, das die Anzahl der Einheiten, um das Verschieben des Rückgabewerts angibt.  
+ *Zeigen Sie*  
+ Ein [Punkt](../../mfc/reference/point-structure1.md) Struktur oder `CPoint` Objekt, das die Anzahl der Einheiten, verschieben Sie den Rückgabewert angibt.  
   
- `size`  
- Ein [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder `CSize` Objekt, das die Anzahl der Einheiten, um das Verschieben des Rückgabewerts angibt.  
+ *size*  
+ Ein [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder `CSize` Objekt, das die Anzahl der Einheiten, verschieben Sie den Rückgabewert angibt.  
   
- `lpRect`  
- Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das die Anzahl von Einheiten auf jeder Seite des Rückgabewerts deflate enthält.  
+ *lpRect*  
+ Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` -Objekt, das die Anzahl der Einheiten, um jede Seite des Rückgabewerts deflate enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die `CRect` entstandene verschieben oder Entleeren `CRect` durch die Anzahl der Einheiten, die im Parameter angegeben.  
+ Die `CRect` verschieben bzw. Entleeren `CRect` durch die Anzahl der Einheiten, die im Parameter angegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Des Parameters *x* und *y* (oder `cx` und `cy`) Parameter subtrahiert `CRect`des positionieren.  
+ Des Parameters des *x* und *y* (oder `cx` und `cy`) Parameter subtrahiert werden `CRect`der position.  
   
- Die dritte Überladung gibt eine neue `CRect` , die gleich `CRect` verkleinert werden, um die Anzahl der Einheiten, die in jedes Element des Parameters angegeben. Beachten Sie, die diese Überladung wie funktioniert [DeflateRect](#deflaterect), nicht [SubtractRect](#subtractrect).  
+ Die dritte Überladung gibt eine neue `CRect` gleich `CRect` verkleinert werden, um die Anzahl der Einheiten, die im jeden Member des-Parameters angegeben. Beachten Sie, die diese Überladung wie Funktionen [DeflateRect](#deflaterect), nicht [SubtractRect](#subtractrect).  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -1114,7 +1115,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 
   
 ##  <a name="operator_amp"></a>  CRect::operator &amp;  
- Gibt eine `CRect` also die Schnittmenge der `CRect` und *rect2*.  
+ Gibt eine `CRect` d. h. die Schnittmenge der `CRect` und *rect2*.  
   
 ```  
 CRect operator&(const RECT& rect2) const throw();
@@ -1125,13 +1126,13 @@ CRect operator&(const RECT& rect2) const throw();
  Enthält eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `CRect` also die Schnittmenge der `CRect` und *rect2*.  
+ Ein `CRect` d. h. die Schnittmenge der `CRect` und *rect2*.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Schnittmenge ist das größte Rechteck, das in beiden Rechtecke enthalten ist.  
   
 > [!NOTE]
->  Müssen sowohl der Rechtecke normalisiert werden, oder diese Funktion kann fehlschlagen. Sie können Aufrufen [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Die Rechtecke müssen normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -1146,7 +1147,7 @@ CRect operator&(const RECT& rect2) const throw();
 
   
 ##  <a name="operator_or"></a>  CRect::operator&#124;  
- Gibt eine `CRect` die Kombination `CRect` und *rect2*.  
+ Gibt eine `CRect` , die Union der `CRect` und *rect2*.  
   
 ```   
 CRect operator|(const RECT& 
@@ -1158,13 +1159,13 @@ rect2) const throw();
  Enthält eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `CRect` die Kombination `CRect` und *rect2*.  
+ Ein `CRect` , die Union der `CRect` und *rect2*.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Union ist das kleinste Rechteck befindet, das beide Rechtecke enthält.  
   
 > [!NOTE]
->  Müssen sowohl der Rechtecke normalisiert werden, oder diese Funktion kann fehlschlagen. Sie können Aufrufen [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Die Rechtecke müssen normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -1191,17 +1192,17 @@ BOOL PtInRect(POINT point) const throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `point`  
+ *Zeigen Sie*  
  Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](cpoint-class.md) Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich NULL, wenn der Punkt innerhalb liegt `CRect`, andernfalls 0.  
+ Ungleich NULL, wenn der Punkt in liegt `CRect`, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Punkt ist in `CRect` liegt auf der linken oder oberen Seite oder in allen vier Seiten. Ein Punkt auf der rechten oder unteren Seite liegt außerhalb `CRect`.  
+ Ein Punkt ist in `CRect` bei auf der linken oder oberen Seite liegt oder in allen vier Seiten. Ein Punkt auf der rechten oder unteren Seite befindet sich außerhalb `CRect`.  
   
 > [!NOTE]
->  Das Rechteck muss normalisiert werden, oder diese Funktion möglicherweise ein Fehler. Sie können Aufrufen [NormalizeRect](#normalizerect) , das Rechteck zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Das Rechteck muss normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , das Rechteck zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -1238,16 +1239,16 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `x1`  
- Gibt die X-Koordinate der oberen linken Ecke.  
+ *x1*  
+ Gibt die X-Koordinate der oberen linken Ecke an.  
   
- `y1`  
- Gibt die y-Koordinate der oberen linken Ecke.  
+ *y1*  
+ Gibt die y-Koordinate der oberen linken Ecke an.  
   
- `x2`  
+ *x2*  
  Gibt die X-Koordinate der unteren rechten Ecke.  
   
- `y2`  
+ *Y2*  
  Gibt die y-Koordinate der unteren rechten Ecke.  
   
 ### <a name="example"></a>Beispiel  
@@ -1286,13 +1287,13 @@ CSize Size() const throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [CSize](csize-class.md) -Objekt, das die Größe des enthält `CRect`.  
+ Ein [CSize](csize-class.md) Objekt, das die Größe des enthält `CRect`.  
   
 ### <a name="remarks"></a>Hinweise  
- Höhe oder Breite kann negativ sein.  
+ Entweder die Höhe oder Breite kann negativ sein.  
   
 > [!NOTE]
->  Das Rechteck muss normalisiert werden, oder diese Funktion möglicherweise ein Fehler. Sie können Aufrufen [NormalizeRect](#normalizerect) , das Rechteck zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Das Rechteck muss normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , das Rechteck zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -1302,33 +1303,33 @@ CSize Size() const throw();
 ```
 
 ##  <a name="subtractrect"></a>  CRect::SubtractRect  
- Macht die Dimensionen der **CRect** gleich der Subtraktion von `lpRectSrc2` aus `lpRectSrc1`.  
+ Stellt die Abmessungen des der `CRect` gleich bei die Subtraktion von `lpRectSrc2` aus `lpRectSrc1`.  
   
 ```  
 BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpRectSrc1`  
+ *lpRectSrc1*  
  Verweist auf die [RECT](../../mfc/reference/rect-structure1.md) Struktur oder `CRect` Objekt, von dem ein Rechteck subtrahiert werden soll.  
   
- `lpRectSrc2`  
- Verweist auf die `RECT` Struktur oder `CRect` Objekt, von dem Rechteck abgezogen werden verweist die `lpRectSrc1` Parameter.  
+ *lpRectSrc2*  
+ Verweist auf die `RECT` Struktur oder `CRect` -Objekt, das auf das Rechteck subtrahiert werden auf die von der *lpRectSrc1* Parameter.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ist ungleich null (0), wenn die Funktion erfolgreich ausgeführt wird, andernfalls null (0).  
   
 ### <a name="remarks"></a>Hinweise  
- Subtraktion ist das kleinste Rechteck befindet, die alle Punkte enthält `lpRectScr1` , die sich nicht in der Schnittmenge der `lpRectScr1` und *lpRectScr2*.  
+ Die Subtraktion ist das kleinste Rechteck, das alle Punkte im enthält *lpRectScr1* , die sich nicht in der Schnittmenge von *lpRectScr1* und *lpRectScr2*.  
   
- Das Rechteck, angegeben durch `lpRectSrc1` werden unverändert, wenn das Rechteck nach angegeben `lpRectSrc2` nicht vollständig durch angegebenen Rechtecks überschneiden *lpRectSrc1* in mindestens einer der x oder y-Richtung.  
+ Anhand des Rechtecks *lpRectSrc1* ist, nicht geändert, wenn das Rechteck angegeben *lpRectSrc2* nicht vollständig anhand des Rechtecks überschneiden *lpRectSrc1*in mindestens einem von der X - oder y-Richtung.  
   
- Z. B. wenn `lpRectSrc1` wurden (10,10, 100,100) und `lpRectSrc2` wurden (50,50, 150,150), das Rechteck verweist `lpRectSrc1` würde unverändert sein, wenn die Funktion zurückgegeben. Wenn `lpRectSrc1` wurden (10,10, 100,100) und `lpRectSrc2` wurden (50,10, 150,150), jedoch das Rechteck verweist `lpRectSrc1` enthält die Koordinaten (10,10, Punkt 50,100) bei die Funktion zurückgegeben.  
+ Z. B. wenn *lpRectSrc1* wurden (10,10, 100,100) und *lpRectSrc2* wurden (50,50, 150,150) des Rechtecks zeigt *lpRectSrc1* wäre unverändert sein, wenn die die Funktion zurückgegeben wird. Wenn *lpRectSrc1* wurden (10,10, 100,100) und *lpRectSrc2* wurden (50,10, 150,150), jedoch das Rechteck verweist *lpRectSrc1* enthält die Koordinaten (10,10, Punkt 50,100) Wenn die Funktion zurückgegeben.  
   
- `SubtractRect` entspricht nicht dem als [Operator -](#operator_-) noch [Operator-=](#operator_-_eq). Keines dieser Operatoren jemals ruft `SubtractRect`.  
+ `SubtractRect` entspricht nicht der [Operator -](#operator_-) noch [Operator-=](#operator_-_eq). Keines dieser Operatoren jemals ruft `SubtractRect`.  
   
 > [!NOTE]
->  Müssen sowohl der Rechtecke normalisiert werden, oder diese Funktion kann fehlschlagen. Sie können Aufrufen [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Die Rechtecke müssen normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -1372,38 +1373,38 @@ const CPoint& TopLeft() const throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Koordinaten von der oberen linken Ecke des Rechtecks.  
+ Die Koordinaten der die linke obere Ecke des Rechtecks.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können diese Funktion verwenden, zum Abrufen oder Festlegen der oberen linken Ecke des Rechtecks. Legen Sie mithilfe dieser Funktion auf der linken Seite des Zuweisungsoperators der Ecke.  
+ Sie können diese Funktion verwenden, zum Abrufen oder Festlegen der oberen linken Ecke des Rechtecks. Legen Sie die Ecke mit dieser Funktion auf der linken Seite des Zuweisungsoperators.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CRect::CenterPoint](#centerpoint).  
   
 ##  <a name="unionrect"></a>  CRect::UnionRect  
- Macht die Dimensionen der `CRect` der Union der beiden Rechtecke gleich.  
+ Stellt die Abmessungen des `CRect` die Union der beiden Rechtecke gleich.  
   
 ```  
 BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpRect1`  
- Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect` , einem Quellrechteck enthält.  
+ *lpRect1*  
+ Verweist auf eine [RECT](../../mfc/reference/rect-structure1.md) oder `CRect` , die einem Quellrechteck enthält.  
   
- `lpRect2`  
- Verweist auf eine `RECT` oder `CRect` , einem Quellrechteck enthält.  
+ *lpRect2*  
+ Verweist auf eine `RECT` oder `CRect` , die einem Quellrechteck enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Union nicht leer ist; 0, wenn die Union leer ist.  
+ Ungleich NULL ist, wenn die Union nicht leer ist; 0, wenn die Union leer ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Union ist das kleinste Rechteck befindet, das sowohl Quelle Rechtecke enthält.  
+ Die Union ist das kleinste Rechteck befindet, das beide Rechtecke für die Datenquelle enthält.  
   
- Die Dimensionen der ein leeres Rechteck, ignoriert Windows; d. h. ein Rechteck, das keine Höhe hat oder keine Breite.  
+ Windows ignoriert die Abmessungen des ein leeres Rechteck. d. h. ein Rechteck, das keine Höhe hat oder keine Breite.  
   
 > [!NOTE]
->  Müssen sowohl der Rechtecke normalisiert werden, oder diese Funktion kann fehlschlagen. Sie können Aufrufen [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Die Rechtecke müssen normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , Rechtecke zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 ```cpp  
@@ -1417,7 +1418,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ```
  
 ##  <a name="width"></a>  CRect::Width  
- Berechnet die Breite der `CRect` durch den linken Wert aus den richtigen Wert subtrahiert.  
+ Berechnet die Breite des `CRect` durch Subtrahieren den linken Wert aus den richtigen Wert.  
   
 ```  
 int Width() const throw();
@@ -1430,7 +1431,7 @@ int Width() const throw();
  Die Breite kann negativ sein.  
   
 > [!NOTE]
->  Das Rechteck muss normalisiert werden, oder diese Funktion möglicherweise ein Fehler. Sie können Aufrufen [NormalizeRect](#normalizerect) , das Rechteck zu normalisieren, bevor Sie diese Funktion aufrufen.  
+>  Das Rechteck muss normalisiert werden, oder dieser Funktion kann fehlschlagen. Rufen Sie [NormalizeRect](#normalizerect) , das Rechteck zu normalisieren, bevor Sie diese Funktion aufzurufen.  
   
 ### <a name="example"></a>Beispiel  
 

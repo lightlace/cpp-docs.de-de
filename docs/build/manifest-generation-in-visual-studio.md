@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370448"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Manifestgenerierung in Visual Studio
 Die Generierung einer Manifestdatei für ein bestimmtes Projekt kann gesteuert werden, in das Projekt **Eigenschaftenseiten** Dialogfeld. Auf der **Konfigurationseigenschaften** auf **Linker**, klicken Sie dann **Manifestdatei**, klicken Sie dann **Manifest generieren**. Standardmäßig werden die Projekteigenschaften des neuen Projekten festgelegt, eine Manifestdatei generiert. Jedoch ist es möglich, deaktivieren Sie die Generierung des Manifests für ein Projekt mit der **Manifest generieren** -Eigenschaft des Projekts. Wenn diese Eigenschaft festgelegt wird, um **Ja**, das Manifest für dieses Projekt generiert wird. Andernfalls der vom Linker ignoriert Assemblyinformationen beim Auflösen der Abhängigkeiten des Anwendungscodes, und nicht das Manifest zu generieren.  

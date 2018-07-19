@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366782"
 ---
 # <a name="comments-in-a-makefile"></a>Kommentare in einem Makefile
 Stellen Sie einen Kommentar mit einem Nummernzeichen voran (##). NMAKE ignoriert Text aus dem Nummernzeichen auf das nächste neue Zeilenumbruchzeichen. Beispiele:  

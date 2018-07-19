@@ -1,5 +1,5 @@
 ---
-title: Speicherverwaltung mit CStringT | Microsoft Docs
+title: Speicherverwaltung mit CStringT | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,14 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b65efd934fecdab36bfa1c0c882de1dd8862c81f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73651aa4696425750fea728a5e66ca727e742b9a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886192"
 ---
 # <a name="memory-management-with-cstringt"></a>Speicherverwaltung mit CStringT
-Klasse [CStringT](../atl-mfc-shared/reference/cstringt-class.md) ist eine Vorlagenklasse, die zur Bearbeitung von Zeichenfolgen mit variabler Länge. Der Arbeitsspeicher für diese Zeichenfolgen enthalten reserviert und freigegeben, die über einen String-Manager-Objekt verknüpft sind, wobei jede Instanz von `CStringT`. MFC und ATL bieten standardmäßig Instanziierungen von `CStringT`namens `CString`, `CStringA`, und `CStringW`, das Bearbeiten von Zeichenfolgen, die von verschiedenen Zeichentypen. Diese Zeichentypen sind vom Typ **TCHAR**, `char`, und `wchar_t`zugeordnet. Diese Zeichenfolge Standardtypen verwenden Zeichenfolge, die aus den Prozessheap (in ATL) oder dem CRT-Heap (in MFC) Speicher belegt wird. In vielen Anwendungen reicht diese Speicherbelegungsschema. Verwenden Sie jedoch für Code, der rechenintensiven von Zeichenfolgen (oder Multithreadcode), die die Standard-Speicher-Manager nicht optimal ausgeführt werden können. In diesem Thema wird beschrieben, wie das Standardverhalten für die Verwaltung von Arbeitsspeicher von überschreiben `CStringT`, erstellen Zuweisungen speziell für die jeweilige Aufgabe optimiert.  
+Klasse [CStringT](../atl-mfc-shared/reference/cstringt-class.md) ist eine Vorlagenklasse, die zum Bearbeiten von Zeichenfolgen mit variabler Länge verwendet. Der Arbeitsspeicher zum Speichern dieser Zeichenfolgen reserviert und freigegeben, die über einen Zeichenfolge-Manager-Objekt verknüpft ist, wobei jede Instanz von `CStringT`. MFC und ATL bieten standardmäßig Instanziierungen von `CStringT`namens `CString`, `CStringA`, und `CStringW`, das Bearbeiten von Zeichenfolgen, die von verschiedenen Zeichentypen. Diese Typen mit Zeichen sind vom Typ TCHAR **Char**, und `wchar_t`bzw. Diese Standard-Zeichenfolgen-Datentypen verwenden einen Zeichenfolge-Manager, der Arbeitsspeicher von den Prozessheap (in ATL) oder dem CRT-Heap (in MFC) zuweist. In vielen Anwendungen reicht diese Speicherbelegungsschema. Verwenden Sie jedoch für Code, sodass rechenintensive von Zeichenfolgen (oder Multithreadcode), die die Standard-Speicher-Manager nicht optimal ausgeführt werden können. In diesem Thema wird beschrieben, wie zum Überschreiben des Standardverhalten für die Verwaltung von Arbeitsspeicher von `CStringT`, erstellen Zuweisungen speziell für die aktuelle Aufgabe optimiert.  
   
 -   [Implementierung eines benutzerdefinierten Zeichenfolgenmanagers (grundlegende Methode)](../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md)  
   
@@ -39,7 +40,7 @@ Klasse [CStringT](../atl-mfc-shared/reference/cstringt-class.md) ist eine Vorlag
   
 -   [Implementierung eines benutzerdefinierten Zeichenfolgenmanagers (fortgeschrittene Methode)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)  
   
--   [CFixedStringT: Ein Beispiel eines benutzerdefinierten Zeichenfolge-Managers](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
+-   [CFixedStringT: Beispiel eines benutzerdefinierten Zeichenfolgenmanagers](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [CustomString-Beispiel](../visual-cpp-samples.md)

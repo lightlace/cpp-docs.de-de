@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354278"
 ---
 # <a name="displaying-assertions"></a>Anzeigen von Assertionen
 Wenn der Client mit dem Dienst verbundenen angezeigt wird, nicht mehr reagiert, möglicherweise der Dienst übergeben und ein Meldungsfeld an, die Sie nicht anzeigen angezeigt. Sie können dies überprüfen, indem Sie mithilfe von Visual C++-Debugger zum Debuggen des Codes (finden Sie unter [mithilfe des Task-Managers](../atl/using-task-manager.md) weiter oben in diesem Abschnitt).  

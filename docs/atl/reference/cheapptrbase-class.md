@@ -1,5 +1,5 @@
 ---
-title: CHeapPtrBase Klasse | Microsoft Docs
+title: CHeapPtrBase-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ca18054509ab069722e632308b4d8f57706e548
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d847c83fce13ea39c3032e7db638a91b1cb7ad85
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880319"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase-Klasse
-Diese Klasse bildet die Grundlage für mehrere Heap intelligenten Zeiger-Klassen.  
+Diese Klasse bildet die Grundlage für mehrere Klassen von smart-Heap-Zeiger.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,11 +44,11 @@ class CHeapPtrBase
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
+ *T*  
  Der Objekttyp, auf dem Heap gespeichert werden.  
   
- `Allocator`  
- Die Arbeitsspeicher-Allocation-Klasse, verwendet. Standardmäßig werden CRT-Routinen zum Belegen und Freigeben von Arbeitsspeicher.  
+ *Zuweisung*  
+ Die Speicher-Allocation-Klasse verwenden. Standardmäßig werden die CRT-Routinen zum Zuordnen und Freigeben von Arbeitsspeicher verwendet.  
   
 ## <a name="members"></a>Member  
   
@@ -61,10 +62,10 @@ class CHeapPtrBase
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CHeapPtrBase::AllocateBytes](#allocatebytes)|Rufen Sie diese Methode, um Arbeitsspeicher belegt werden.|  
-|[CHeapPtrBase::Attach](#attach)|Rufen Sie diese Methode, um einem vorhandenen Zeiger Besitz zu nehmen.|  
-|[CHeapPtrBase::Detach](#detach)|Rufen Sie diese Methode, um den Besitz eines Zeigers freigibt.|  
-|[CHeapPtrBase::Free](#free)|Rufen Sie diese Methode zum Löschen eines Objekts verweist, zu einem `CHeapPtrBase`.|  
+|[CHeapPtrBase::AllocateBytes](#allocatebytes)|Rufen Sie diese Methode, um Speicher zu belegen.|  
+|[CHeapPtrBase::Attach](#attach)|Rufen Sie diese Methode, um den Besitz eines bestehenden Zeigers zu übernehmen.|  
+|[CHeapPtrBase::Detach](#detach)|Rufen Sie diese Methode, um den Besitz eines Zeigers freizugeben.|  
+|[CHeapPtrBase::Free](#free)|Rufen Sie diese Methode zum Löschen eines Objekts verweist eine `CHeapPtrBase`.|  
 |[CHeapPtrBase::ReallocateBytes](#reallocatebytes)|Rufen Sie diese Methode, um Arbeitsspeicher neu zuzuordnen.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
@@ -72,8 +73,8 @@ class CHeapPtrBase
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CHeapPtrBase::operator T *](#operator_t_star)|Der Cast-Operator.|  
-|[CHeapPtrBase::operator &](#operator_amp)|Der &-Operator.|  
-|[CHeapPtrBase::operator ->](#operator_ptr)|Der Pointer-to-Member-Operator.|  
+|[CHeapPtrBase::operator &](#operator_amp)|Die & Operator.|  
+|[CHeapPtrBase::operator ->](#operator_ptr)|Der Zeiger-auf-Member-Operator.|  
 
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
@@ -83,43 +84,43 @@ class CHeapPtrBase
 |[CHeapPtrBase::m_pData](#m_pdata)|Die Zeiger-Membervariable.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse bildet die Grundlage für mehrere Heap intelligenten Zeiger-Klassen. Die abgeleiteten Klassen, z. B. [CHeapPtr](../../atl/reference/cheapptr-class.md) und [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), ihre eigenen Konstruktoren und Operatoren hinzufügen. Finden Sie diese Klassen für die Beispiele für die Implementierung.  
+ Diese Klasse bildet die Grundlage für mehrere Klassen von smart-Heap-Zeiger. Die abgeleiteten Klassen, z. B. [CHeapPtr](../../atl/reference/cheapptr-class.md) und [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), ihre eigenen Konstruktoren und Operatoren hinzufügen. Diese Klassen Beispiele für die Implementierung wird angezeigt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcore.h  
   
 ##  <a name="allocatebytes"></a>  CHeapPtrBase::AllocateBytes  
- Rufen Sie diese Methode, um Arbeitsspeicher belegt werden.  
+ Rufen Sie diese Methode, um Speicher zu belegen.  
   
 ```
 bool AllocateBytes(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nBytes`  
+ *nBytes*  
  Die Anzahl der Bytes an Arbeitsspeicher zugewiesen werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt true zurück, wenn der Speicher erfolgreich belegt, "false" andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
- Debug-Builds wird ein Assertionsfehler auftreten, wenn die [CHeapPtrBase::m_pData](#m_pdata) Membervariable wird derzeit auf einen vorhandenen Wert zeigt; es ist also nicht gleich NULL.  
+ Debug-Builds wird ein Assertionsfehler auftreten, wenn die [CHeapPtrBase::m_pData](#m_pdata) Membervariable zeigt derzeit zu einem vorhandenen Wert; das heißt, ist es nicht gleich NULL.  
   
 ##  <a name="attach"></a>  CHeapPtrBase::Attach  
- Rufen Sie diese Methode, um einem vorhandenen Zeiger Besitz zu nehmen.  
+ Rufen Sie diese Methode, um den Besitz eines bestehenden Zeigers zu übernehmen.  
   
 ```
 void Attach(T* pData) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pData`  
- Die `CHeapPtrBase` Objekt wird die Besitzrechte des this-Zeigers.  
+ *pData*  
+ Die `CHeapPtrBase` Objekt übernimmt dann den Besitz des this-Zeigers.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn ein `CHeapPtrBase` Objekt übernimmt den Besitz eines Zeigers, wird es automatisch löschen den Zeiger und alle zugeordneten Daten, wenn sie den Gültigkeitsbereich verlässt.  
+ Wenn eine `CHeapPtrBase` Objekt übernimmt den Besitz eines Zeigers, wird es automatisch löschen den Zeiger und alle zugeordneten Daten, wenn sie den Gültigkeitsbereich verlässt.  
   
- Debug-Builds wird ein Assertionsfehler auftreten, wenn die [CHeapPtrBase::m_pData](#m_pdata) Membervariable wird derzeit auf einen vorhandenen Wert zeigt; es ist also nicht gleich NULL.  
+ Debug-Builds wird ein Assertionsfehler auftreten, wenn die [CHeapPtrBase::m_pData](#m_pdata) Membervariable zeigt derzeit zu einem vorhandenen Wert; das heißt, ist es nicht gleich NULL.  
   
 ##  <a name="dtor"></a>  CHeapPtrBase:: ~ CHeapPtrBase  
  Der Destruktor.  
@@ -132,27 +133,27 @@ void Attach(T* pData) throw();
  Gibt alle zugeordnete Ressourcen frei.  
   
 ##  <a name="detach"></a>  CHeapPtrBase::Detach  
- Rufen Sie diese Methode, um den Besitz eines Zeigers freigibt.  
+ Rufen Sie diese Methode, um den Besitz eines Zeigers freizugeben.  
   
 ```
 T* Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt eine Kopie des Zeigers zurück.  
+ Gibt eine Kopie des Zeigers.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt den Besitz eines Zeigers frei wird, wird dadurch die [CHeapPtrBase::m_pData](#m_pdata) Membervariable auf NULL, und gibt eine Kopie des Zeigers zurück.  
+ Gibt den Besitz eines Zeigers, legt die [CHeapPtrBase::m_pData](#m_pdata) Membervariable für NULL-Werte und gibt eine Kopie des Zeigers zurück.  
   
 ##  <a name="free"></a>  CHeapPtrBase::Free  
- Rufen Sie diese Methode zum Löschen eines Objekts verweist, zu einem `CHeapPtrBase`.  
+ Rufen Sie diese Methode zum Löschen eines Objekts verweist eine `CHeapPtrBase`.  
   
 ```
 void Free() throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Das Objekt verweist die `CHeapPtrBase` wird freigegeben, und die [CHeapPtrBase::m_pData](#m_pdata) Membervariable wird auf NULL festgelegt.  
+ Das Objekt verweist die `CHeapPtrBase` wird freigegeben, und die [CHeapPtrBase::m_pData](#m_pdata) Member-Variable auf NULL festgelegt ist.  
   
 ##  <a name="m_pdata"></a>  CHeapPtrBase::m_pData  
  Die Zeiger-Membervariable.  
@@ -162,32 +163,32 @@ T* m_pData;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Membervariable enthält die Zeigerinformationen zur.  
+ Diese Membervariable enthält Zeigerinformationen.  
   
 ##  <a name="operator_amp"></a>  CHeapPtrBase::operator &amp;  
- Der &-Operator.  
+ Die & Operator.  
   
 ```
 T** operator&() throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Adresse des Objekts verweist, zu der `CHeapPtrBase` Objekt.  
+ Gibt die Adresse des Objekts verweist die `CHeapPtrBase` Objekt.  
   
 
 ##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;  
 
- Der Pointer-to-Member-Operator.  
+ Der Zeiger-auf-Member-Operator.  
   
 ```
 T* operator->() const throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den Wert der [CHeapPtrBase::m_pData](#m_pdata) Membervariablen gespeichert.  
+ Gibt den Wert des der [CHeapPtrBase::m_pData](#m_pdata) Membervariablen gespeichert.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diesen Operator zum Aufrufen einer Methode in einer Klasse, die durch die `CHeapPtrBase` Objekt. Debug-Builds wird ein Assertionsfehler auftreten, wenn die `CHeapPtrBase` verweist auf NULL.  
+ Verwenden Sie diesen Operator zum Aufrufen einer Methode in einer Klasse verweist die `CHeapPtrBase` Objekt. Debug-Builds wird ein Assertionsfehler auftreten, wenn die `CHeapPtrBase` verweist auf NULL.  
   
 ##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T *  
  Der Cast-Operator.  
@@ -207,8 +208,8 @@ bool ReallocateBytes(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nBytes`  
- Die neue Arbeitsspeichermenge in Bytes zugewiesen werden.  
+ *nBytes*  
+ Die neue Menge von Arbeitsspeicher zugeordnet werden soll, in Bytes.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt true zurück, wenn der Speicher erfolgreich belegt, "false" andernfalls.  
@@ -216,4 +217,4 @@ bool ReallocateBytes(size_t nBytes) throw();
 ## <a name="see-also"></a>Siehe auch  
  [CHeapPtr-Klasse](../../atl/reference/cheapptr-class.md)   
  [CComHeapPtr-Klasse](../../atl/reference/ccomheapptr-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

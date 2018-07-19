@@ -9,11 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d0a556505370078f599d6d667fa856723d9bac8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974b1294f8ef23936d79e64926595779a9019368
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963692"
 ---
 # <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt;-Operatoren
 
@@ -37,8 +38,8 @@ bool operator==(const error_condition& left,
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`left`|Das Objekt, das auf Gleichheit getestet werden soll.|
-|`right`|Das Objekt, das auf Gleichheit getestet werden soll.|
+|*left*|Das Objekt, das auf Gleichheit getestet werden soll.|
+|*right*|Das Objekt, das auf Gleichheit getestet werden soll.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -64,12 +65,12 @@ bool operator!=(const error_condition& left,
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`left`|Das Objekt, das auf Ungleichheit geprüft werden soll.|
-|`right`|Das Objekt, das auf Ungleichheit geprüft werden soll.|
+|*left*|Das Objekt, das auf Ungleichheit geprüft werden soll.|
+|*right*|Das Objekt, das auf Ungleichheit geprüft werden soll.|
 
 ### <a name="return-value"></a>Rückgabewert
 
-**TRUE**, wenn das in `left` übergebene Objekt nicht gleich dem in `right` übergebenen Objekt ist, andernfalls **FALSE**.
+**"true"** , wenn das übergebene Objekt *linken* ist nicht gleich dem übergebenen Objekt *rechten*andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -107,12 +108,12 @@ inline bool operator<(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`left`|Das zu vergleichende Objekt.|
-|`right`|Das zu vergleichende Objekt.|
+|*left*|Das zu vergleichende Objekt.|
+|*right*|Das zu vergleichende Objekt.|
 
 ### <a name="return-value"></a>Rückgabewert
 
-**TRUE**, wenn das in `left` übergebene Objekt kleiner als das in `right` übergebene ist; andernfalls **FALSE**.
+**"true"** , wenn das übergebene Objekt *linken* ist kleiner als das übergebene Objekt *rechten*; Andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 

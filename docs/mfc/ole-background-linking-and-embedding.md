@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347278"
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE-Hintergrund: Verlinken und Einbetten
 Mit dem Befehl Einfügen in eine Steuerelementcontainer-Anwendung kann eine eingebettete Komponente oder ein eingebettetes Element erstellt. Die Quelldaten für ein eingebettetes Element werden als Teil des OLE-Dokuments gespeichert, die es enthält. Auf diese Weise wird eine Dokumentdatei für ein Textverarbeitungsprogramm-Dokument kann Text enthalten und dürfen auch Bitmaps, Diagramme, Formeln oder andere Arten von Daten.  

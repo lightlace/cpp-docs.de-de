@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fd2bfdfc2a55dc1723fb72ab8de64a46c3c612f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d20a887c5fa056ef697b087fdaf91b94702d0c0f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953233"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution-Klasse
 
@@ -80,7 +81,7 @@ public:
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse beschreibt eine Verteilung, die Werte vom Typ `bool` produziert. Diese werden entsprechend der diskreten Wahrscheinlichkeitsfunktion zur Bernoulli-Verteilung verteilt. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
+Die Klasse beschreibt eine Verteilung, die Werte des Typs **"bool"**, verteilte entsprechend der diskreten Wahrscheinlichkeitsfunktion Bernoulli-Verteilung. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
@@ -178,9 +179,9 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*p* gespeicherten `p` -verteilungsparameter.
+*p* gespeicherten `p` verteilungsparameter.
 
-*Parm* der `param_type` Struktur für die Verteilung verwendete Parameterstruktur.
+*Parm* der `param_type` Struktur verwendet, um die Verteilung erstellen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -194,13 +195,13 @@ Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parame
 
 Enthält die Parameter der Verteilung.
 
-Struktur Param_type {Typedef Bernoulli_distribution Distribution_type; Param_type (doppelte p = 0,5); doppelte p() const;
+Struktur Param_type {Typedef Bernoulli_distribution Distribution_type; Param_type (Doppelklicken Sie p = 0,5); p() const; Doppelklicken
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Parameter
 
-*p* gespeicherten `p` -verteilungsparameter.
+*p* gespeicherten `p` verteilungsparameter.
 
 ### <a name="remarks"></a>Hinweise
 

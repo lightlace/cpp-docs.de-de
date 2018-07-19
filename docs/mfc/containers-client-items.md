@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14979f1c5f11e9a229c408e33e7c17d8776a54a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a7b498ed1ddc3a3d040abde6ebcb7e27615b801
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929342"
 ---
 # <a name="containers-client-items"></a>Container: Clientelemente
 In diesem Artikel wird erläutert, was Clientelemente sind und von welchen Klassen sollte die Anwendung Clientelemente ableiten.  
   
  Clientelemente sind von Datenelementen, die auf eine andere Anwendung, die entweder in enthaltenen oder verweist auf eine OLE-Container-Anwendung Dokument gehören. Clientelemente, deren Daten im Dokument enthalten ist, sind eingebettet. Rollenoptionen, deren Daten in einem anderen Speicherort verweist, die für das Containerdokument verknüpft sind.  
   
- Die Dokumentklasse in einer OLE-Anwendung wird von der Klasse abgeleitet [COleDocument](../mfc/reference/coledocument-class.md) anstatt von **CDocument**. Die `COleDocument` Klasse erbt von **CDocument** alle Funktionen für die Verwendung der Dokument-/Ansichtarchitektur Anwendungen auf MFC basieren. `COleDocument` Außerdem definiert eine Schnittstelle, die einem Dokument als eine Auflistung von behandelt `CDocItem` Objekte. Mehrere `COleDocument` Memberfunktionen zum Hinzufügen, abrufen und Löschen von Elementen, die dieser Sammlung bereitgestellt werden.  
+ Die Dokumentklasse in einer OLE-Anwendung wird von der Klasse abgeleitet [COleDocument](../mfc/reference/coledocument-class.md) anstatt von `CDocument`. Die `COleDocument` Klasse erbt von `CDocument` alle Funktionen für die Verwendung der Dokument-/Ansichtarchitektur Anwendungen auf MFC basieren. `COleDocument` Außerdem definiert eine Schnittstelle, die einem Dokument als eine Auflistung von behandelt `CDocItem` Objekte. Mehrere `COleDocument` Memberfunktionen zum Hinzufügen, abrufen und Löschen von Elementen, die dieser Sammlung bereitgestellt werden.  
   
  Jede Steuerelementcontainer-Anwendung sollte leiten Sie mindestens eine Klasse von `COleClientItem`. Objekte dieser Klasse stellen die Elemente, die eingebettete oder verknüpfte im OLE-Dokument dar. Für die Lebensdauer des Dokuments enthält, sind diese Objekte vorhanden, es sei denn, sie aus dem Dokument gelöscht werden.  
   

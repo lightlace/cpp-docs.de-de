@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412188"
 ---
 # <a name="compiler-com-global-functions"></a>Globale COM-Funktionen des Compilers
 **Microsoft-spezifisch**  

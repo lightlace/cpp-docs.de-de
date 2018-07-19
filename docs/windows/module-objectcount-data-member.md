@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875018"
 ---
 # <a name="moduleobjectcount-data-member"></a>Module::objectCount_-Datenmember
 Hält den Überblick über wie viele Klassen erstellt wurden die [stellen](../windows/make-function.md) Funktion.  

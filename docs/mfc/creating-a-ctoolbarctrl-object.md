@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341693"
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Erstellen eines CToolBarCtrl-Objekts
 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) Objekte enthalten verschiedene interne Datenstrukturen – eine Liste der Schaltfläche Image Bitmaps, eine Liste der Schaltfläche Label-Zeichenfolgen und eine Liste der `TBBUTTON` Strukturen –, die ein Bild zuordnen und/oder die Zeichenfolge, die Position, Stil, State, und Befehls-ID der Schaltfläche. Jedes Element dieser Datenstrukturen wird durch einen nullbasierten Index bezeichnet. Vor der Verwendung einer `CToolBarCtrl` Objekt ist, müssen Sie diese Datenstrukturen einrichten. Eine Liste der Datenstruktur, finden Sie unter [Symbolleisten-Steuerelemente](controls-mfc.md) im Windows SDK. Die Liste von Zeichenfolgen kann nur für Schaltfläche Bezeichnungen verwendet werden. Verbindungszeichenfolgen können über die Symbolleiste kann nicht abgerufen werden.  

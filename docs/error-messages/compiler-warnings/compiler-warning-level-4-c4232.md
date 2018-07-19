@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293825"
 ---
 # <a name="compiler-warning-level-4-c4232"></a>Compilerwarnung (Stufe 4) C4232
 nicht dem Standard entsprechende Erweiterung: 'Bezeichner': Adresse von Dllimport 'Dllimport' ist nicht statisch, Identität nicht garantiert.  

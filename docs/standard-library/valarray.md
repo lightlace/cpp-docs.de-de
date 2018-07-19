@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 578dd43f747eddbf37f76c41a2fa35df8edca658
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98ee264d019e89ef3fbdf299a58c972ad895caed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954798"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -65,8 +66,8 @@ Diese Vorlagenklassen und Funktionen haben im Interesse einer verbesserten Leist
 |-|-|
 |[operator!=](../standard-library/valarray-operators.md#op_neq)|Überprüft, ob die entsprechenden Elemente von zwei gleich großen valarray-Objekten ungleich sind oder ob alle Elemente eines valarray-Objekts entsprechend einem angegebenen Wert des Elementtyps des valarray-Objekts ungleich sind.|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|Ruft den Rest der Division der entsprechenden Elemente von zwei gleich großen valarray-Objekten oder der Division eines valarray-Objekts durch einen angegebenen Wert des valarray Elementtyps oder der Division eines angegebenen Werts durch ein valarray-Objekt ab.|
-|[operator&](../standard-library/valarray-operators.md#op_amp)|Ruft das bitweise **AND** zwischen den entsprechenden Elementen von zwei gleich großen valarray-Objekten oder zwischen einem valarray-Objekt und einem angegebenen Wert des Elementtyps ab.|
-|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|Ruft das logische **AND** zwischen den entsprechenden Elementen von zwei gleich großen valarray-Objekten oder zwischen einem valarray-Objekt und einem angegebenen Wert des Elementtyps des valarray-Objekts ab.|
+|[operator&](../standard-library/valarray-operators.md#op_amp)|Ruft das bitweise `AND` zwischen den entsprechenden Elementen von zwei gleich großen valarray-Objekten oder zwischen einem valarray-Objekt und einem angegebenen Wert des Elementtyps ab.|
+|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|Ruft das logische `AND` zwischen den entsprechenden Elementen von zwei gleich großen valarray-Objekten oder zwischen einem valarray-Objekt und einem angegebenen Wert des Elementtyps des valarray-Objekts ab.|
 |[operator>](../standard-library/valarray-operators.md#op_gt)|Überprüft, ob die Elemente eines valarray-Objekts größer sind als die Elemente eines gleich großen valarray-Objekts oder ob alle Elemente eines valarray-Objekts größer oder kleiner sind als ein angegebener Wert des Elementtyps des valarray-Objekts.|
 |[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|Überprüft, ob die Elemente eines valarray-Objekts größer gleich den Elementen eines gleich großen valarray-Objekts oder ob alle Elemente eines valarray-Objekts größer gleich oder kleiner gleich einem angegebenen Wert sind.|
 |[operator>>](../standard-library/valarray-operators.md#op_gt_gt)|Verschiebt die Bits für jedes Element eines valarray-Objekts um eine angegebene Anzahl von Positionen oder um einen elementweisen Betrag, der durch ein zweites valarray-Objekt angegeben ist, nach rechts.|
@@ -92,13 +93,13 @@ Diese Vorlagenklassen und Funktionen haben im Interesse einer verbesserten Leist
 |[mask_array-Klasse](../standard-library/mask-array-class.md)|Eine interne zusätzliche Vorlagenklasse, die Objekte, die Teilmengen von übergeordneten valarray-Objekten und mit einem booleschen Ausdruck angegeben sind, dadurch unterstützt, dass sie Vorgänge zwischen den Teilmengenarrays bereitstellt.|
 |[slice-Klasse](../standard-library/slice-class.md)|Eine Hilfsklasse für die valarray-Klasse, die dazu verwendet wird, eindimensionale vektorähnliche Teilmengen eines valarray-Objekts zu definieren.|
 |[slice_array-Klasse](../standard-library/slice-array-class.md)|Eine interne zusätzliche Vorlagenklasse, die slice-Objekte (Segmente) unterstützt, indem sie Vorgänge zwischen Teilmengenarrays bereitstellt, die durch das Segment eines valarray-Objekts definiert sind.|
-|[valarray-Klasse](../standard-library/valarray-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das eine Sequenz von Elementen des Typs **Type** steuert, die als Array gespeichert sind. Diese Klasse ist für das Ausführen von schnellen mathematischen Operationen vorgesehen und für rechnerische Leistung optimiert.|
+|[valarray-Klasse](../standard-library/valarray-class.md)|Die Vorlagenklasse beschreibt ein Objekt, das eine Sequenz von Elementen des Typs steuert `Type` , die als Array gespeichert und für das Ausführen von schnellen mathematischer Operations für rechnerische Leistung optimiert vorgesehen.|
 
 ### <a name="specializations"></a>Spezialisierungen
 
 |||
 |-|-|
-|[valarray\<bool>-Klasse](../standard-library/valarray-bool-class.md)|Eine spezielle Version der Vorlagenklasse valarray\<**Type**> für Elemente des Typs `bool`.|
+|[valarray\<bool>-Klasse](../standard-library/valarray-bool-class.md)|Eine spezielle Version der Vorlagenklasse Valarray\<**Typ**> für Elemente des Typs **"bool"**.|
 
 ## <a name="see-also"></a>Siehe auch
 

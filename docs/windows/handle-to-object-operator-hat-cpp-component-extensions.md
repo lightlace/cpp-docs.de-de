@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881168"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Handle für Objekt (^) (Komponentenerweiterungen für C++)
 Die *handledeklarator* (`^`, Aussprache "hat"), modifiziert den [Spezifizierer](../cpp/overview-of-declarators.md) bedeutet, dass das deklarierte Objekt automatisch gelöscht werden soll, wenn das System feststellt, dass das Objekt ist nicht mehr zugegriffen werden kann.  

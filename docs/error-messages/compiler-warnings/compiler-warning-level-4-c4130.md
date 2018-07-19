@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292174"
 ---
 # <a name="compiler-warning-level-4-c4130"></a>Compilerwarnung (Stufe 4) C4130
 "Operator": Logische Operation mit Adresse einer Zeichenfolgenkonstanten  

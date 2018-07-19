@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863405"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Zugriffstasten für den Dialog-Editor
 Im folgenden sind die Zugriffstasten für den Dialogfeld-Editor-Befehle. Um Tastenkombinationen zu ändern, klicken Sie auf **Optionen** auf die **Tools** Menü Wählen Sie dann **Tastatur** unter der **Umgebung** Ordner. Weitere Informationen finden Sie unter [Identifizieren und Anpassen von Tastenkombinationen in Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  

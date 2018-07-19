@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892877"
 ---
 # <a name="restricted"></a>restricted
 Gibt an, dass ein Mitglied aus einem Modul, Schnittstelle oder Disp-Schnittstelle kann nicht nach dem Zufallsprinzip aufgerufen werden.  

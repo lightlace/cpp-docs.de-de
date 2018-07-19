@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098497"
 ---
 # <a name="crowsetimplvalidatecommandid"></a>CRowsetImpl::ValidateCommandID
 Überprüfen, ob eine oder beide Ziele überprüft **DBID**s Zeichenfolgenwerte enthalten, und wenn dies der Fall ist, kopiert Sie sie in seinen Datenmembern [M_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) und [M_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).  

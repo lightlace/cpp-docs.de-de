@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415493"
 ---
 # <a name="routine-mappings"></a>Routinezuordnungen
 Die Zuordnungen der generische Textroutinen werden in TCHAR.H. definiert. `_tccpy` und `_tclen` werden zu Funktionen im MBCS-Modell zugeordnet. Aus Gründen der Vollständigkeit werden sie zu Makros oder Funktionen in den SBCS- und Unicode-Modellen zugeordnet. Weitere Informationen über generische Textroutinen finden Sie im entsprechenden Hilfethema über `SBCS`-, `_MBCS`- oder `_UNICODE`-verwandte Routinen.  

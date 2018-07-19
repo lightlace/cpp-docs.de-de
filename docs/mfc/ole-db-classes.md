@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345103"
 ---
 # <a name="ole-db-classes"></a>OLE DB-Klassen
 Die OLE DB-Unterstützung in MFC besteht zurzeit die Klasse [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` Datenbankdatensätze in Steuerelementen, über eine Formularansicht können Sie eine direkte Verbindung zum zeigt eine [CRowset](../data/oledb/crowset-class.md) Objekt. Weitere Informationen zu den OLE DB-Consumervorlagen, finden Sie unter [Liste von OLE DB-Consumervorlagen](../data/oledb/ole-db-consumer-templates-reference.md).  

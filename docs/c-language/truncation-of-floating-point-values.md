@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385789"
 ---
 # <a name="truncation-of-floating-point-values"></a>Abschneiden von Gleitkommawerten
 **ANSI 3.2.1.4** Die Richtung des Verkürzens oder Rundens, wenn eine Gleitkommazahl in eine geringere Gleitkommazahl konvertiert wird  

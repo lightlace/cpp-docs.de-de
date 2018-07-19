@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805045e4ea63f153e9a35b0d4b068bd69874b93f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3195d2c988abcfb2d62acb4ece957c8c5156bbd7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965687"
 ---
 # <a name="moneybase-class"></a>money_base-Klasse
 
@@ -37,17 +38,17 @@ struct pattern
 
 ## <a name="remarks"></a>Hinweise
 
-Die Enumeration **part** beschreibt die möglichen Werte in Elementen des Array-Felds im Strukturmuster. Als Werte von **part** dienen:
+Die Enumeration `part` beschreibt die möglichen Werte in Elementen des Array-Felds im strukturmuster. Die Werte der `part` sind:
 
-- **none**, um auf null oder mehr Leerzeichen abzustimmen bzw. nichts zu generieren.
+- `none` auf NULL oder mehr Leerzeichen abzustimmen bzw. nichts zu generieren.
 
-- **sign**, um auf ein positives bzw. negatives Vorzeichen abzustimmen oder um ein positives bzw. negatives Vorzeichen zu generieren.
+- `sign` übereinstimmen oder ein positiven oder negativen Vorzeichen zu generieren.
 
-- **space**, um auf null oder mehr Leerzeichen abzustimmen bzw. um ein Leerzeichen zu generieren.
+- `space` NULL oder mehr Leerzeichen abzustimmen, oder ein Leerzeichen zu generieren.
 
-- **symbol**, um auf ein Währungssymbol abzustimmen bzw. um ein Währungssymbol zu generieren.
+- `symbol` übereinstimmen oder ein Währungssymbol zu generieren.
 
-- **value**, um auf einen monetären Wert abzustimmen bzw. um einen monetären Wert zu generieren.
+- `value` Um abzustimmen bzw. einen monetären Wert zu generieren.
 
 ## <a name="requirements"></a>Anforderungen
 

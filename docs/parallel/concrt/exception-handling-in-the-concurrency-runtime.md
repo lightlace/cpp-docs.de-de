@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695560"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Ausnahmebehandlung in der Concurrency Runtime
 Die Concurrency Runtime übermittelt viele Arten von Fehlern mithilfe der C++-Ausnahmebehandlung. Zu diesen Fehlern zählen die falsche Verwendung der Runtime, Runtime-Fehler wie etwa das Nichtabrufen einer Ressource sowie Fehler, die in Arbeitsfunktionen auftreten, die Sie für Aufgaben und Aufgabengruppen bereitstellen. Wenn eine Aufgabe oder eine Aufgabengruppe eine Ausnahme auslöst, wird diese Ausnahme von der Runtime gespeichert und an den Kontext gemarshallt, der wartet, bis die Aufgabe oder Aufgabengruppe beendet wird. Bei Komponenten wie bei einfachen Aufgaben und Agents verwaltet die Runtime keine Ausnahmen. In diesen Fällen müssen Sie einen eigenen Mechanismus für die Ausnahmenbehandlung implementieren. In diesem Thema wird beschrieben, wie die Runtime Ausnahmen behandelt, die von Aufgaben, Aufgabengruppen, einfachen Aufgaben und asynchronen Agents ausgelöst werden, und wie auf Ausnahmen von den Anwendungen reagiert wird.  

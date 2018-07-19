@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e79c06c49c8245da4911e8b72020537aa2e7bb45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eff64a70b2a666a6df081601c0e2a24f04563317
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954066"
 ---
 # <a name="addconst-class"></a>add_const-Klasse
 
@@ -36,11 +37,11 @@ struct add_const;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Die zu ändernde Typ.
+*Ty* der zu ändernde Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typmodifizierers enthält einen geänderten Typ, der `Ty` ist, wenn `Ty` ein Verweis, eine Funktion oder ein konstant qualifizierter Typ ist; andernfalls `const Ty`.
+Eine Instanz des typmodifizierers enthält einen geänderten Typ, der *Ty* Wenn *Ty* ist ein Verweis, eine Funktion oder ein konstant qualifizierter Typ ist, andernfalls `const Ty`.
 
 ## <a name="example"></a>Beispiel
 

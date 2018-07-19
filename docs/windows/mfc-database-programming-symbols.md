@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877604"
 ---
 # <a name="mfc-database-programming-symbols"></a>Symbole für die MFC-Datenbankprogrammierung
 Die Symbole in dieser Tabelle werden nur in einem MFC-Projekt angezeigt, wenn datenbankunterstützung hinzugefügt wurde. Sie unterstützen die MFC-Verbindung mit SQL Server und datenbankprogrammierung.  

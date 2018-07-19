@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381035"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Testen der Eigenschaften und Ereignisse mit Test Container
 Die Testcontainer-Anwendung, die im Lieferumfang von Visual C++ ist ein ActiveX-Steuerelementcontainer zum Testen und Debuggen von ActiveX-Steuerelemente. Testcontainer kann Entwickler von Steuerelementen So testen Sie die Funktionalität des Steuerelements durch Ändern der Eigenschaften, Methoden aufruft und seine Ereignisse auslöst. Testcontainer können die Protokolle der Datenbindung Benachrichtigungen angezeigt und auch bietet Funktionen zum Testen der Funktionalität für ein ActiveX-Steuerelement Persistenz: können Sie Eigenschaften in einen Stream oder Substorage speichern, laden Sie sie erneut, und überprüfen Sie die gespeicherten Daten. Dieser Abschnitt beschreibt, wie die grundlegenden Funktionen des Testcontainers. Wählen Sie zusätzliche Informationen, die **Hilfe** Menü während der Ausführung der Testcontainer.  

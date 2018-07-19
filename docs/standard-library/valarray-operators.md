@@ -34,11 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: e65d11ef95b5305988fe77ab258bb39c2b80de57
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c297ddf24c1ed357a0756c5e0e5631e7b3d1c02
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964833"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt;-Operatoren
 
@@ -77,9 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste von der zwei valarray-Objekten, dessen Elemente werden auf Ungleichheit geprüft werden soll.
+*left*  
+ Das erste der beiden valarray-Objekte, deren Elemente auf Ungleichheit getestet werden sollen.
 
-`right` Die zweite von zwei valarray-Objekten sind, deren Elemente auf Ungleichheit geprüft werden soll.
+*right*  
+ Das zweite der beiden valarray-Objekte, deren Elemente auf Ungleichheit getestet werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -91,11 +94,11 @@ Ein valarray-Objekt mit booleschen Werten, für die Folgendes gilt:
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Vorlagenoperator gibt ein Objekt der Klasse [Valarray\<Bool >](../standard-library/valarray-bool-class.md), jedes, dessen Elemente `I` ist `left[I] != right[I]`.
+Der erste Vorlagenoperator gibt ein Objekt der Klasse [Valarray\<Bool >](../standard-library/valarray-bool-class.md), jedes, deren Elemente `I` ist `left[I] != right[I]`.
 
-Der zweite Vorlagenoperator gespeichert wird, im Element `I` `left[I] != right`.
+Der zweite Vorlagenoperator speichert in Element `I` `left[I] != right`.
 
-Der dritte Vorlagenoperator speichert im Element `I` `left != right[I]`.
+Der dritte Vorlagenoperator speichert in Element `I` `left != right[I]`.
 
 ### <a name="example"></a>Beispiel
 
@@ -170,13 +173,15 @@ operator%(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Wert oder Valarray, die in der einen anderen Wert als der Dividend geteilt dient oder Valarray ist unterteilt werden.
+*left*  
+ Ein Wert oder ein valarray-Objekt, der bzw. das als Dividend dient, durch den ein anderer Wert oder ein anderes valarray-Objekt dividiert wird.
 
-`right` Ein Wert oder Valarray, die als Divisor dient und, die einen anderen Wert dividiert, oder valarray-Objekts.
+*right*  
+ Ein Wert oder ein valarray-Objekt, der bzw. das als Divisor dient und der einen anderen Wert oder ein anderes valarray-Objekt dividiert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente elementweisen Reste wurden, der `left` geteilt durch `right`.
+Ein valarray-Objekt, dessen Elemente den elementweisen Reste der *linken* geteilt durch *rechten*.
 
 ### <a name="example"></a>Beispiel
 
@@ -251,19 +256,21 @@ operator&(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste von der zwei valarray-Objekten, dessen entsprechende Elemente werden mit einer bitweisen Kombination **AND** oder einen angegebenen Wert des Elementtyps, wobei jedes Element eines valarray-Objekts bitweiser kombiniert werden sollen.
+*left*  
+ Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen `AND`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
-`right` Die zweite von der zwei valarray-Objekten, dessen entsprechende Elemente werden mit einer bitweisen Kombination **AND** oder einen angegebenen Wert des Elementtyps, wobei jedes Element eines valarray-Objekts bitweiser kombiniert werden sollen.
+*right*  
+ Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen `AND`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente die elementweise Kombination aus der bitweisen AND-Operation sind, der `left` und `right`.
+Ein valarray-Objekt, dessen Elemente die elementweise Verknüpfung der bitweisen AND-Operation von *linken* und *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine bitweise Operation kann nur verwendet werden, um Bits in `char`- und `int`-Datentypen und -Varianten und nicht in den Datentypen **float**, **double**, **longdouble**, `void`, `bool` oder in anderen komplexeren Datentypen bearbeitet werden.
+Eine bitweise Operation kann nur verwendet werden, um Bits in **Char** und **Int** -Datentypen und-Varianten und nicht in **"float"**, **doppelte**, **Longdouble**, **"void"**, **"bool"** oder in anderen komplexeren Datentypen.
 
-Für die bitweise **AND**-Operation gilt dieselbe Wahrheitstabelle wie für die logische **AND**-Operation. Die bitweise AND-Operation wird jedoch nur auf den Datentyp auf der Ebene der Einzelbits angewendet. Der [operator&&](../standard-library/valarray-operators.md#amp) wird auf Elementebene angewendet, wobei alle Werte, die nicht null sind, als TRUE zählen, und das Ergebnis ein valarray-Objekt mit booleschen Werten ist. Der bitweise **ANDoperator&** kann dagegen je nach dem Ergebnis der bitweisen Operation ein valarray-Objekt mit anderen Werten als 0 und 1 ergeben.
+Für die bitweise `AND`-Operation gilt dieselbe Wahrheitstabelle wie für die logische `AND`-Operation. Die bitweise OR-Operation wird jedoch nur auf den Datentyp auf der Ebene der Einzelbits angewendet. Der [operator&&](../standard-library/valarray-operators.md#amp) wird auf Elementebene angewendet, wobei alle Werte, die nicht null sind, als TRUE zählen, und das Ergebnis ein valarray-Objekt mit booleschen Werten ist. Der bitweise **ANDoperator&** kann dagegen je nach dem Ergebnis der bitweisen Operation ein valarray-Objekt mit anderen Werten als 0 und 1 ergeben.
 
 ### <a name="example"></a>Beispiel
 
@@ -338,17 +345,19 @@ operator&&(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste von der zwei valarray-Objekten, dessen entsprechende Elemente werden mit dem logischen kombiniert werden **AND** oder einen angegebenen Wert des Elementtyps, wobei jedes Element eines valarray-Objekts kombiniert werden sollen.
+*left*  
+ Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem logischen `AND`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
-`right` Die zweite von der zwei valarray-Objekten, dessen entsprechende Elemente werden mit dem logischen kombiniert werden **AND** oder einen angegebenen Wert des Elementtyps, wobei jedes Element eines valarray-Objekts kombiniert werden sollen.
+*right*  
+ Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem logischen `AND`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente sind vom Typ Bool und elementweise Kombination aus dem logischen **AND** Vorgang `left` und `right`.
+Ein valarray-Objekt, dessen Elemente vom Typ "bool" und die elementweise Verknüpfung der logischen `AND` Vorgang *linken* und *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
-Der logische **ANDoperator&&** wird auf Elementebene angewendet, wobei alle Werte, die nicht Null sind, als TRUE zählen, und das Ergebnis ein valarray-Objekt mit booleschen Werten ist. Die bitweise Version von **AND**, [operator&,](../standard-library/valarray-operators.md#op_amp) kann dagegen je nach dem Ergebnis der bitweisen Operation ein valarray-Objekt mit anderen Werten als 0 und 1 ergeben.
+Die logische `ANDoperator&&` gilt auf Elementebene, zählen alle Werte als "true", und das Ergebnis ein valarray-Objekt mit booleschen Werten ist. Die bitweise Version von `AND`, [Operator &,](../standard-library/valarray-operators.md#op_amp), im Gegensatz dazu kann dazu führen, mit anderen Werten als 0 oder 1, abhängig vom Ergebnis der bitweisen Operation ein valarray-Objekt.
 
 ### <a name="example"></a>Beispiel
 
@@ -423,17 +432,19 @@ operator>(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste der beiden valarray-Objekten, dessen Elemente sind, verglichen werden soll, oder einen angegebenen Wert, wobei jedes Element eines valarray-Objekts verglichen werden soll.
+*left*  
+ Das erste der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
-`right` Die zweite von der zwei valarray-Objekten, dessen Elemente sind, verglichen werden soll, oder einen angegebenen Wert, wobei jedes Element eines valarray-Objekts verglichen werden soll.
+*right*  
+ Das zweite der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ein valarray-Objekt mit booleschen Werten, für die Folgendes gilt:
 
-- **TRUE**, wenn das `left`-Element oder der Wert größer als das entsprechende `right`-Element oder der entsprechende Wert ist.
+- **"true"** Wenn die *linken* -Element oder der Wert ist größer als die entsprechende *rechten* -Element oder Wert.
 
-- **FALSE**, wenn das `left`-Element oder der Wert nicht größer als das entsprechende `right`-Element oder der entsprechende Wert ist.
+- **"false"** Wenn die *linken* -Element oder der Wert ist nicht größer als die entsprechende *rechten* -Element oder Wert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -512,17 +523,19 @@ operator>=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste der beiden valarray-Objekten, dessen Elemente sind, verglichen werden soll, oder einen angegebenen Wert, wobei jedes Element eines valarray-Objekts verglichen werden soll.
+*left*  
+ Das erste der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
-`right` Die zweite von der zwei valarray-Objekten, dessen Elemente sind, verglichen werden soll, oder einen angegebenen Wert, wobei jedes Element eines valarray-Objekts verglichen werden soll.
+*right*  
+ Das zweite der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ein valarray-Objekt mit booleschen Werten, für die Folgendes gilt:
 
-- **TRUE**, wenn das `left`-Element oder der Wert größer als oder gleich dem entsprechenden `right`-Element oder dem entsprechenden Wert ist.
+- **"true"** Wenn die *linken* -Element oder der Wert ist größer als oder gleich dem entsprechenden *rechten* -Element oder Wert.
 
-- **FALSE**, wenn das `left`-Element oder der Wert kleiner als das entsprechende `right`-Element oder der entsprechende Wert ist.
+- **"false"** Wenn die *linken* -Element oder der Wert ist kleiner als die entsprechende *rechten* -Element oder Wert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -601,9 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Der Wert verschoben werden sollen oder des valarray-Objekts, dessen Elemente sind verschoben werden sollen.
+*left*  
+ Der Wert, der verschoben werden soll, oder das valarray-Objekt, dessen Elemente verschoben werden sollen.
 
-`right` Der Wert, der angibt, des Betrag der Verschiebung nach rechts oder valarray-Objekt zurück, dessen Elemente die elementweisen Betrag der Verschiebung nach rechts an.
+*right*  
+ Der Wert, der den Betrag angibt, um den die Bits nach rechts verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach rechts verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -686,17 +701,19 @@ operator<(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste der beiden valarray-Objekten, dessen Elemente sind, verglichen werden soll, oder einen angegebenen Wert, wobei jedes Element eines valarray-Objekts verglichen werden soll.
+*left*  
+ Das erste der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
-`right` Die zweite von der zwei valarray-Objekten, dessen Elemente sind, verglichen werden soll, oder einen angegebenen Wert, wobei jedes Element eines valarray-Objekts verglichen werden soll.
+*right*  
+ Das zweite der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ein valarray-Objekt mit booleschen Werten, für die Folgendes gilt:
 
-- **TRUE**, wenn das `left`-Element oder der Wert kleiner als das entsprechende `right`-Element oder der entsprechende Wert ist.
+- **"true"** Wenn die *linken* -Element oder der Wert ist kleiner als die entsprechende *rechten* -Element oder Wert.
 
-- **TRUE**, wenn das `left`-Element oder der Wert nicht kleiner als das entsprechende `right`-Element oder der entsprechende Wert ist.
+- **"false"** Wenn die *linken* -Element oder der Wert ist nicht kleiner als die entsprechende *rechten* -Element oder Wert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -775,17 +792,19 @@ operator<=(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste der beiden valarray-Objekten, dessen Elemente sind, verglichen werden soll, oder einen angegebenen Wert, wobei jedes Element eines valarray-Objekts verglichen werden soll.
+*left*  
+ Das erste der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
-`right` Die zweite von der zwei valarray-Objekten, dessen Elemente sind, verglichen werden soll, oder einen angegebenen Wert, wobei jedes Element eines valarray-Objekts verglichen werden soll.
+*right*  
+ Das zweite der beiden valarray-Objekte, deren Elemente verglichen werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts verglichen werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
 Ein valarray-Objekt mit booleschen Werten, für die Folgendes gilt:
 
-- **TRUE**, wenn das `left`-Element oder der Wert kleiner als oder gleich dem entsprechenden `right`-Element oder dem entsprechenden Wert ist.
+- **"true"** Wenn die *linken* -Element oder der Wert ist kleiner oder gleich dem entsprechenden *rechten* -Element oder Wert.
 
-- **FALSE**, wenn das `left`-Element oder der Wert größer als das entsprechende `right`-Element oder der entsprechende Wert ist.
+- **"false"** Wenn die *linken* -Element oder der Wert ist größer als die entsprechende *rechten* -Element oder Wert.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -864,9 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Der Wert verschoben werden sollen oder des valarray-Objekts, dessen Elemente sind verschoben werden sollen.
+*left*  
+ Der Wert, der verschoben werden soll, oder das valarray-Objekt, dessen Elemente verschoben werden sollen.
 
-`right` Der Wert, der angibt, des Betrag der Verschiebung nach links oder valarray-Objekt zurück, dessen Elemente die elementweisen Betrag der Verschiebung nach links an.
+*right*  
+ Der Wert, der den Betrag angibt, um den die Bits nach links verschoben werden, oder das valarray-Objekt, dessen Elemente den elementweisen Betrag angeben, um den die Bits nach links verschoben werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -949,13 +970,15 @@ operator*(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste der zwei valarray-Objekten, dessen Elemente sind multipliziert werden soll, oder einen angegebenen Wert, wobei jedes Element eines valarray-Objekts multipliziert werden soll.
+*left*  
+ Das erste der beiden valarray-Objekte, deren Elemente multipliziert werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts multipliziert werden sollen.
 
-`right` Die zweite von der zwei valarray-Objekten, dessen Elemente sind multipliziert werden soll, oder einen angegebenen Wert, wobei jedes Element eines valarray-Objekts multipliziert werden soll.
+*right*  
+ Das zweite der beiden valarray-Objekte, deren Elemente multipliziert werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts multipliziert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente elementweisen Produkts wurden, von `left` und `right`.
+Ein valarray-Objekt, dessen Elemente das elementweise Produkt der *linken* und *rechten*.
 
 ### <a name="example"></a>Beispiel
 
@@ -1030,13 +1053,15 @@ operator+(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste der beiden valarray-Objekten, dessen Elemente hinzugefügt werden sollen, oder einen angegebenen Wert, wobei jedes Element eines valarray-Objekts hinzugefügt werden.
+*left*  
+ Das erste der beiden valarray-Objekte, deren Elemente addiert werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts addiert werden sollen.
 
-`right` Die zweite von der zwei valarray-Objekten, dessen Elemente hinzugefügt werden sollen, oder einen angegebenen Wert, wobei jedes Element eines valarray-Objekts hinzugefügt werden.
+*right*  
+ Das zweite der beiden valarray-Objekte, deren Elemente addiert werden sollen, oder ein angegebener Wert, der mit den Elementen eines valarray-Objekts addiert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente die elementweise Summe sind, der `left` und `right`.
+Ein valarray-Objekt, dessen Elemente die elementweise Summe der *linken* und *rechten*.
 
 ### <a name="example"></a>Beispiel
 
@@ -1111,13 +1136,15 @@ operator-(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Wert oder ein valarray-Objekt, das als der Minuend aus der anderen Werte oder die valarray-Objekten sind dient, subtrahiert werden soll, in den Unterschied zu bilden.
+*left*  
+ Ein Wert oder ein valarray-Objekt, das als Minuend dient, von dem andere Werte oder valarray-Objekte subtrahiert werden und so eine Differenz ergeben.
 
-`right` Ein Wert oder ein valarray-Objekt, das als der Subtrahend dient, die aus anderen Werten oder valarray-Objekten in bilden den Unterschied subtrahiert werden soll.
+*right*  
+ Ein Wert oder ein valarray-Objekt, das als Subtrahend dient, der von anderen Werten oder valarray-Objekten subtrahiert wird und so eine Differenz ergibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente die elementweise Differenz sind, von `left` und `right`.
+Ein valarray-Objekt, dessen Elemente die elementweise Differenz der *linken* und *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1198,13 +1225,15 @@ operator/(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Wert oder Valarray, die in der einen anderen Wert als der Dividend geteilt dient oder Valarray ist in den Quotienten bilden unterteilt werden.
+*left*  
+ Ein Wert oder ein valarray-Objekt, der bzw. das als Dividend dient, durch den ein anderer Wert oder ein anderes valarray-Objekt dividiert wird und so den Quotienten ergibt.
 
-`right` Ein Wert oder ein valarray-Objekt zurück, die als Divisor dient und, die einen anderen Wert oder Valarray in bilden den Quotienten dividiert.
+*right*  
+ Ein Wert oder ein valarray-Objekt, der bzw. das als Divisor dient und der einen anderen Wert oder ein anderes valarray-Objekt dividiert und so den Quotienten ergibt.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente sind von den elementweise Quotienten, des `left` geteilt durch `right`.
+Ein valarray-Objekt, dessen Elemente den elementweisen Quotienten von *linken* geteilt durch *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1285,9 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste von der zwei valarray-Objekten, dessen Elemente werden auf Gleichheit geprüft werden soll.
+*left*  
+ Das erste der beiden valarray-Objekte, deren Elemente auf Gleichheit getestet werden sollen.
 
-`right` Die zweite von zwei valarray-Objekten sind, deren Elemente auf Gleichheit geprüft werden soll.
+*right*  
+ Das zweite der beiden valarray-Objekte, deren Elemente auf Gleichheit getestet werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1299,7 +1330,7 @@ Ein valarray-Objekt mit booleschen Werten, für die Folgendes gilt:
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Vorlagenoperator gibt ein Objekt der Klasse [Valarray\<Bool >](../standard-library/valarray-bool-class.md), jedes, dessen Elemente `I` ist `left[I] == right[I]`. Der zweite Vorlagenoperator gespeichert wird, im Element `I` `left[I] == right`. Der dritte Vorlagenoperator speichert im Element `I` `left == right[I]`.
+Der erste Vorlagenoperator gibt ein Objekt der Klasse [Valarray\<Bool >](../standard-library/valarray-bool-class.md), jedes, deren Elemente `I` ist `left[I] == right[I]`. Der zweite Vorlagenoperator speichert in Element `I` `left[I] == right`. Der dritte Vorlagenoperator speichert in Element `I` `left == right[I]`.
 
 ### <a name="example"></a>Beispiel
 
@@ -1374,17 +1405,19 @@ operator^(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste von der zwei valarray-Objekten, dessen entsprechende Elemente werden mit einer bitweisen Kombination **XOR** oder einen angegebenen Wert des Elementtyps, wobei jedes Element eines valarray-Objekts bitweiser kombiniert werden sollen.
+*left*  
+ Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen **XOR**-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
-`right` Die zweite von der zwei valarray-Objekten, dessen entsprechende Elemente werden mit einer bitweisen Kombination **XOR** oder einen angegebenen Wert des Elementtyps, wobei jedes Element eines valarray-Objekts bitweiser kombiniert werden sollen.
+*right*  
+ Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen **XOR**-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente die elementweise Kombination des bitweisen sind **XOR** Vorgang `left` und `right`.
+Ein valarray-Objekt, dessen Elemente die elementweise Verknüpfung der bitweisen **XOR** Vorgang *linken* und *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine bitweise Operation kann nur verwendet werden, zum Bearbeiten von Bits in `char` und `int` Datentypen und Varianten und nicht unter **"float"**, **doppelte**, `long double`, `void`, `bool` oder anderen komplexen Datentypen.
+Eine bitweise Operation kann nur verwendet werden, um Bits in **Char** und **Int** -Datentypen und-Varianten und nicht in **"float"**, **doppelte**, **long double**, **"void"**, **"bool"** oder in anderen komplexeren Datentypen.
 
 Der Operator exklusives `OR` ( **XOR**) weist die folgende Semantik auf: Wenn die Bits *b*1 und *b*2 gegeben sind, ist *b*1 **XOR** *b*2 **TRUE**, wenn exakt eines der Bits TRUE ist; **FALSE**, wenn beide Bits FALSE sind oder beide Bits TRUE sind.
 
@@ -1465,17 +1498,19 @@ operator|(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste von der zwei valarray-Objekten, dessen entsprechende Elemente werden mit einer bitweisen Kombination `OR` oder einen angegebenen Wert des Elementtyps, wobei jedes Element eines valarray-Objekts bitweiser kombiniert werden sollen.
+*left*  
+ Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen `OR`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
-`right` Die zweite von der zwei valarray-Objekten, dessen entsprechende Elemente werden mit einer bitweisen Kombination `OR` oder einen angegebenen Wert des Elementtyps, wobei jedes Element eines valarray-Objekts bitweiser kombiniert werden sollen.
+*right*  
+ Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem bitweisen `OR`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der bitweise mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente die elementweise Kombination des bitweisen sind `OR` Vorgang `left` und `right`.
+Ein valarray-Objekt, dessen Elemente die elementweise Verknüpfung der bitweisen `OR` Vorgang *linken* und *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine bitweise Operation kann nur verwendet werden, um Bits in `char`- und `int`-Datentypen und -Varianten und nicht in den Datentypen **float**, **double**, **longdouble**, `void`, `bool` oder in anderen komplexeren Datentypen bearbeitet werden.
+Eine bitweise Operation kann nur verwendet werden, um Bits in **Char** und **Int** -Datentypen und-Varianten und nicht in **"float"**, **doppelte**, **Longdouble**, **"void"**, **"bool"** oder in anderen komplexeren Datentypen.
 
 Für die bitweise OR-Operation gilt dieselbe Wahrheitstabelle wie für die logische `OR`-Operation. Die bitweise OR-Operation wird jedoch nur auf den Datentyp auf der Ebene der Einzelbits angewendet. Wenn die Bits *b*1 und *b*2 gegeben sind, ist *b*1 `OR` *b*2 **TRUE**, wenn mindestens eines der Bits TRUE ist; **FALSE**, wenn beide Bits FALSE sind. Der logische `OR`[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor) wird auf Elementebene angewendet, wobei alle Werte, die nicht null sind, als **TRUE** zählen, und das Ergebnis ein valarray-Objekt mit booleschen Werten ist. Der bitweise OR `operator|` kann dagegen je nach dem Ergebnis der bitweisen Operation ein valarray-Objekt mit anderen Werten als 0 und 1 ergeben.
 
@@ -1556,17 +1591,19 @@ operator||(
 
 ### <a name="parameters"></a>Parameter
 
-`left` Die erste von der zwei valarray-Objekten, dessen entsprechende Elemente werden mit dem logischen kombiniert werden `OR` oder einen angegebenen Wert des Elementtyps, wobei jedes Element eines valarray-Objekts kombiniert werden sollen.
+*left*  
+ Das erste der beiden valarray-Objekte, deren Elemente jeweils mit dem logischen `OR`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
-`right` Die zweite von der zwei valarray-Objekten, dessen entsprechende Elemente werden mit dem logischen kombiniert werden `OR` oder einen angegebenen Wert des Elementtyps, wobei jedes Element eines valarray-Objekts kombiniert werden sollen.
+*right*  
+ Das zweite der beiden valarray-Objekte, deren Elemente jeweils mit dem logischen `OR`-Operator verknüpft werden soll, oder ein angegebener Wert des Elementtyps, der mit den Elementen eines valarray-Objekts verknüpft werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Valarray-Objekts, dessen Elemente vom Typ sind `bool` und elementweise Kombination aus dem logischen OR-Operation mit `left` und `right`.
+Ein valarray-Objekt, dessen Elemente vom Typ **"bool"** und die elementweise Verknüpfung der logischen OR-Operation von *linken* und *rechten*.
 
 ### <a name="remarks"></a>Hinweise
 
-Die logische `OR` `operator||` gilt, die auf eine Elementebene zählen alle Werte als **"true"**, und das Ergebnis ist ein valarray-Objekt von booleschen Werten. Die bitweise Version von `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or) kann dagegen je nach dem Ergebnis der bitweisen Operation ein valarray-Objekt mit anderen Werten als 0 und 1 ergeben.
+Die logische `OR` `operator||` wendet auf Elementebene, zählen alle ungleich NULL-Werte als **"true"**, und das Ergebnis ein valarray-Objekt mit booleschen Werten. Die bitweise Version von `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or) kann dagegen je nach dem Ergebnis der bitweisen Operation ein valarray-Objekt mit anderen Werten als 0 und 1 ergeben.
 
 ### <a name="example"></a>Beispiel
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687230"
 ---
 # <a name="14-compliance"></a>1.4 Kompatibilität
 Eine Implementierung der OpenMP-C-/C++-API bildet *OpenMP-kompatible* wenn er erkennt und behält die Semantik der alle Elemente in dieser Spezifikation ist, wie in Kapitel 1, 2, 3, 4, angeordnet und dienen der Anhang c Anhänge A, B, D, E und F Informationen nur zu Informationszwecken und sind nicht Teil der Spezifikation. Implementierungen, die nur eine Teilmenge der API enthalten sind nicht in der OpenMP-kompatibel.  

@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2896e8a29a1b941b085f7d95276b6d28081b6458
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f894be144956dc0feb6ba8b67dbdc05f9cf0bcf5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963938"
 ---
 # <a name="container-classiterator"></a>Container-Klasse::iterator
 
@@ -36,7 +37,7 @@ typedef T5 iterator;
 
 ## <a name="remarks"></a>Hinweise
 
-Sie wird hier als Synonym für den nicht angegebenen Typ **T5** beschrieben. Ein Objekt vom Typ **iterator** kann in ein Objekt vom Typ [const_iterator](../standard-library/container-class-const-iterator.md) umgewandelt werden.
+Sie finden Sie hier als Synonym für den nicht angegebenen Typ `T5`. Ein Objekt des Typs `iterator` umgewandelt werden kann, um ein Objekt des Typs [Const_iterator](../standard-library/container-class-const-iterator.md).
 
 ## <a name="see-also"></a>Siehe auch
 

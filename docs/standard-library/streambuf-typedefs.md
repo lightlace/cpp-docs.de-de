@@ -7,11 +7,12 @@ f1_keywords:
 - iosfwd/std::streambuf
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
-ms.openlocfilehash: 8fb1713dfbc2d9766c488f21d324d801a4886d68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81c7cd875c6083ee77701116f6b1179760373ec0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953991"
 ---
 # <a name="ltstreambufgt-typedefs"></a>&lt;streambuf&gt;-Typdefinition
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="streambuf"></a> streambuf
 
-Eine Spezialisierung von `basic_streambuf`, die `char` als Vorlagenparameter verwendet.
+Eine Spezialisierung der `basic_streambuf` verwendet **Char** als Vorlagenparameter.
 
 ```cpp
 typedef basic_streambuf<char, char_traits<char>> streambuf;
@@ -29,11 +30,11 @@ typedef basic_streambuf<char, char_traits<char>> streambuf;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse [basic_filebuf](../standard-library/basic-streambuf-class.md), die auf Elemente vom Typ `char` mit Standardzeichenmerkmalen spezialisiert ist.
+Der Typ ist ein Synonym für die Vorlagenklasse ["basic_streambuf"](../standard-library/basic-streambuf-class.md), die auf Elemente des Typs **Char** mit Standard-Zeichenmerkmale.
 
 ## <a name="wstreambuf"></a> wstreambuf
 
-Eine Spezialisierung von `basic_streambuf`, die `wchar_t` als Vorlagenparameter verwendet.
+Eine Spezialisierung der `basic_streambuf` verwendet **"wchar_t"** als Vorlagenparameter.
 
 ```cpp
 typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
@@ -41,7 +42,7 @@ typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse [basic_filebuf](../standard-library/basic-streambuf-class.md), die auf Elemente vom Typ `wchar_t` mit Standardzeichenmerkmalen spezialisiert ist.
+Der Typ ist ein Synonym für die Vorlagenklasse ["basic_streambuf"](../standard-library/basic-streambuf-class.md), die auf Elemente des Typs **"wchar_t"** mit Standard-Zeichenmerkmale.
 
 ## <a name="see-also"></a>Siehe auch
 

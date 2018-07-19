@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093414"
 ---
 # <a name="cdataconnectionoperator-bool"></a>CDataConnection::operator BOOL
 Bestimmt, ob die aktuelle Sitzung geöffnet ist.  

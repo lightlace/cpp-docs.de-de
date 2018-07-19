@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 726eba2edbb857784a3a23ddcfb2d69fd8e30a72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43caffe53be180221b4145a03df7cfc41c31828e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928637"
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI Macro
-Verwenden der **Eigenschaften** Fenster aus, um ein Objekt für die Benutzeroberfläche ein Befehl / Update-Ereignishandler in einem Befehlszielobjekt verbinden. Es wird automatisch verbinden, die Benutzeroberflächen-Objekt-ID, die `ON_UPDATE_COMMAND_UI` Makro und erstellen Sie einen Ereignishandler, in dem Objekt, das Update behandelt wird. Finden Sie unter [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md) für Weitere Informationen.  
+Verwenden der **Eigenschaften** Fenster aus, um ein Objekt für die Benutzeroberfläche ein Befehl / Update-Ereignishandler in einem Befehlszielobjekt verbinden. Es wird automatisch verbinden den Benutzeroberflächen-Objekt-ID mit der ON_UPDATE_COMMAND_UI-Makro und erstellen Sie einen Ereignishandler, in dem Objekt, das Update behandelt wird. Finden Sie unter [Zuordnen von Meldungen zu Funktionen](../mfc/reference/mapping-messages-to-functions.md) für Weitere Informationen.  
   
  Verwenden Sie z. B. um einen Befehl alle Löschen Ihres Programms Bearbeitungsmenü zu aktualisieren, die **Eigenschaften** Fenster hinzuzufügende eine Meldungszuordnungseintrags in der ausgewählten Klasse ist die Deklaration einer Funktion für einen Befehl / Update-Handler mit der Bezeichnung `OnUpdateEditClearAll` in der Klasse Deklaration, und eine leere Funktionsvorlage in der Klassenimplementierungsdatei. Der Funktionsprototyp sieht wie folgt:  
   

@@ -1,5 +1,5 @@
 ---
-title: Asssistent zum Hinzufügen von | Microsoft Docs
+title: Assistent zum Hinzufügen von Memberfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 488c7ca455b267a79b0d2906849596346a191792
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33332396"
 ---
 # <a name="add-member-function-wizard"></a>Assistent zum Hinzufügen von Memberfunktionen
-Dieser Assistent fügt die Deklaration einer Memberfunktion die Headerdatei und Stub-Memberimplementierung-Funktion der Implementierungsdatei für die ausgewählte Klasse.  
+Dieser Assistent fügt die Funktionsdeklaration eines Members zur Headerdatei und die Implementierung einer Stub-Memberfunktion zur Implementierungsdatei der ausgewählten Klasse hinzu.  
   
- Nachdem Sie die Memberfunktion mit dem Assistenten hinzugefügt haben, können Sie den Code in der Entwicklungsumgebung bearbeiten.  
+ Sobald Sie eine Memberfunktion mithilfe des Assistenten hinzugefügt haben, können Sie den Code in der Entwicklungsumgebung bearbeiten.  
   
  **Rückgabetyp**  
- Legt den Rückgabetyp für die Member-Funktion, die Sie hinzufügen. Können Sie Ihre eigenen Rückgabetyp angeben, oder Sie können aus der Liste der verfügbaren Typen auswählen. Informationen zu den Typen finden Sie unter [grundlegende Typen](../cpp/fundamental-types-cpp.md).  
+ Legt den Rückgabetyp für die hinzugefügte Memberfunktion fest. Sie können einen eigenen Rückgabetyp bereitstellen oder einen aus der Liste der verfügbaren Typen auswählen. Weitere Informationen zu Typen finden Sie unter [Grundlegende Typen](../cpp/fundamental-types-cpp.md).  
   
 ||||  
 |-|-|-|  
@@ -38,10 +39,10 @@ Dieser Assistent fügt die Deklaration einer Memberfunktion die Headerdatei und 
 |`HRESULT`|`unsigned char`||  
   
  **Funktionsname**  
- Legt den Namen der Memberfunktion, die Sie hinzufügen.  
+ Legt den Namen der hinzugefügten Memberfunktion fest.  
   
  **Parametertyp**  
- Legt den Typ des Parameters, die Sie für die Member-Funktion hinzufügen fest, wenn die Memberfunktion über Parameter verfügt. Sie können Ihren eigenen Parametertyp bereitstellen oder können Sie aus der Liste der verfügbaren Typen auswählen.  
+ Legt den Parametertyp fest, den Sie für die Memberfunktion hinzufügen, falls diese über Parameter verfügt. Sie können einen eigenen Parametertyp bereitstellen oder einen aus der Liste der verfügbaren Typen auswählen.  
   
 ||||  
 |-|-|-|  
@@ -50,13 +51,13 @@ Dieser Assistent fügt die Deklaration einer Memberfunktion die Headerdatei und 
 |**float**|**short**|`unsigned long`|  
   
  **Parametername**  
- Legt den Namen eines Parameters, die Sie für die Member-Funktion hinzufügen fest, wenn die Memberfunktion über Parameter verfügt.  
+ Legt die Parameternamen fest, die Sie für die Memberfunktion hinzufügen, falls diese über Parameter verfügt.  
   
  **Parameterliste**  
- Zeigt eine Liste der Parameter, mit denen, die Sie die Member-Funktion hinzugefügt haben. Um einen Parameter zur Liste hinzuzufügen, geben Sie einen Typ aus, und nennen Sie der **Parametertyp** und **Parametername** Kontrollkästchen und klicken Sie auf **hinzufügen**. Um einen Parameter aus der Liste zu entfernen, wählen Sie den Parameter, und klicken Sie auf **entfernen**.  
+ Zeigt eine Liste der Parameter an, die Sie zur Memberfunktion hinzugefügt haben. Wenn Sie einen Parameter zur Liste hinzufügen möchten, geben Sie einen Typ und einen Namen in den Feldern **Parametertyp** und **Parametername** ein, und klicken Sie auf **Hinzufügen**. Wenn Sie einen Parameter aus der Liste entfernen möchten, wählen Sie diesen aus, und klicken Sie auf **Entfernen**.  
   
  **Zugriff**  
- Legt den Zugriff auf die Member-Funktion fest. Zugriffsmodifizierer sind Schlüsselwörter, die den Zugriff angeben, den andere Klassen auf die Member-Funktion haben. Finden Sie unter [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md) für Weitere Informationen zum Zugriff angeben. Die Zugriffsebene des Members-Funktion festgelegt ist, um **öffentlichen** standardmäßig.  
+ Legt den Zugriff auf die Memberfunktion fest. Bei Zugriffsmodifizierern handelt es sich um Schlüsselwörter, die den Zugriff festlegen, den andere Klassen auf die Memberfunktion haben. Weitere Informationen zum Festlegen des Zugriffs finden Sie unter [Member-Access Control (Steuerung des Memberzugriffs)](../cpp/member-access-control-cpp.md). Standardmäßig wird die Zugriffsebene von Memberfunktionen auf **public** festgelegt.  
   
 -   [public](../cpp/public-cpp.md)  
   
@@ -64,23 +65,23 @@ Dieser Assistent fügt die Deklaration einer Memberfunktion die Headerdatei und 
   
 -   [private](../cpp/private-cpp.md)  
   
- Überprüfen Sie, ob die neue Member-Funktion statisch oder virtuell ist, und gibt an, ob es Inline ist oder reinen. Wenn Sie festlegen, dass der als reine Memberfunktion, die `Virtual` Kontrollkästchen ausgewählt ist, und die **Inline** Kontrollkästchen nicht mehr verfügbar ist. Der Standardwert ist eine nicht statische, nicht virtuelle Memberfunktion.  
+ Überprüfen Sie, ob die neue Memberfunktion „static“ oder „virtual“ ist und ob diese „inline“ oder „pure“ ist. Wenn Sie die Memberfunktion auf „pure“ festlegen, wird das Kontrollkästchen `Virtual` aktiviert, und das Kontrollkästchen **Inline** wird deaktiviert. Standardmäßig sind Memberfunktionen nicht „static“ und nicht „virtual“.  
   
-|Option|Beschreibung|  
+|Option|description|  
 |------------|-----------------|  
-|[Static](../cpp/storage-classes-cpp.md)|Gibt an, dass die Funktion verhält sich wie ein globaler und außerhalb der Klasse, selbst bei keine Klasseninstanziierung aufgerufen werden kann. Die Memberfunktion hat keinen Zugriff auf nicht statische Member. Eine Memberfunktion, angegeben als `Static` nicht virtuell sein.|  
-|[Virtuelle](../cpp/virtual-cpp.md)|Stellt sicher, dass die richtige Memberfunktion für ein Objekt, unabhängig von der Ausdruck verwendet, um die Member-Funktion aufrufen, aufgerufen wird. Eine Memberfunktion, angegeben als `Virtual` kann nicht statisch sein.|  
-|**Reine**|Gibt an, keine Implementierung angegeben wird, für die virtuelle Memberfunktion, die deklariert wird. aus diesem Grund **reiner** kann nur für virtuelle Memberfunktionen angegeben werden. Eine Klasse enthält mindestens eine reine virtuelle Memberfunktion ist eine abstrakte Klasse angesehen. Von der abstrakten Klasse abgeleitete Klassen müssen die rein virtuelle Memberfunktion implementieren oder sie sich, auch abstrakte Klassen.|  
-|[Inline](../cpp/inline-functions-cpp.md)|Weist den Compiler an, eine Kopie des Elements Funktionstexts an jeder Stelle einzufügen, der die Memberfunktion aufgerufen wird. Eine Memberfunktion, angegeben als **Inline** kann nicht rein sein.|  
+|[Static](../cpp/storage-classes-cpp.md)|Gibt an, dass die Funktion sich wie eine globale Funktion verhält und außerhalb der Klasse aufgerufen werden kann, auch wenn die Klasse nicht instanziiert wird. Die Memberfunktion hat keinen Zugriff auf nicht statische Members. Eine Memberfunktion, die als `Static` angegeben ist, kann nicht „virtual“ sein.|  
+|[Virtual](../cpp/virtual-cpp.md)|Stellt sicher, dass die richtige Memberfunktion für ein Objekt aufgerufen wird, und zwar unabhängig von dem Ausdruck, mit dem der Aufruf der Memberfunktion erfolgt. Eine Memberfunktion, die als `Virtual` angegeben ist, kann nicht „static“ sein.|  
+|**Pure**|Gibt an, dass keine Implementierung für die deklarierte Memberfunktion bereitgestellt wird. Deshalb kann **pure** nur für virtuelle Memberfunktionen angegeben werden. Eine Klasse, die mindestens eine rein virtuelle Memberfunktion enthält, wird als abstrakte Klasse angesehen. Klassen, die von der abstrakten Klasse abgeleitet sind, müssen die rein virtuelle Memberfunktion implementieren, um nicht selbst als abstrakte Klasse angesehen zu werden.|  
+|[Inline](../cpp/inline-functions-cpp.md)|Weist den Compiler an, eine Kopie des Memberfunktionstexts an jeder Stelle einzufügen, an der die Memberfunktion aufgerufen wird. Eine Memberfunktion, die als **Inline** angegeben ist, kann nicht „pure“ sein.|  
   
  **CPP-Datei**  
- Legt den Speicherort der Datei, in denen die Implementierung der Stub-Memberfunktion geschrieben wird. Standardmäßig ist es in der CPP-Datei für die Klasse geschrieben, der die Member-Funktion hinzugefügt wird. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen zu ändern. Die Implementierung der Memberfunktion wird auf den Inhalt der ausgewählten Datei hinzugefügt.  
+ Legt den Speicherort der Datei fest, in die die Implementierung der Stub-Memberfunktion geschrieben wird. Standardmäßig wird diese in die CPP-Datei der Klasse geschrieben, zu der die Memberfunktion hinzugefügt wird. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um den Dateinamen zu ändern. Die Implementierung der Memberfunktion wird den Inhalten der ausgewählten Datei hinzugefügt.  
   
  **Kommentar**  
- Stellt einen Kommentar in der Headerdatei für die Member-Funktion.  
+ Fügt einen Kommentar zur Headerdatei der Memberfunktion hinzu.  
   
  **Funktionssignatur**  
- Die Memberfunktion zeigt, wie er im Code angezeigt wird, wenn Sie auf **Fertig stellen**. Sie können der Text in diesem Feld nicht bearbeiten. Um die Member-Funktion zu ändern, ändern Sie die entsprechenden Felder im Assistenten aus.  
+ Zeigt die Memberfunktion so an, wie Sie im Code angezeigt wird, wenn Sie auf **Fertig stellen** klicken. Sie können den Text in diesem Feld nicht bearbeiten. Ändern Sie die entsprechenden Felder im Assistenten, wenn Sie die Memberfunktion ändern möchten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen einer Memberfunktion](../ide/adding-a-member-function-visual-cpp.md)

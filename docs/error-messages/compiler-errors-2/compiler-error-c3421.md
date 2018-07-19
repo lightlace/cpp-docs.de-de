@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255291"
 ---
 # <a name="compiler-error-c3421"></a>Compilerfehler C3421
 'Typ': Sie können den Finalizer für diese Klasse nicht aufrufen, da er nicht zugreifbar oder nicht vorhanden ist.  

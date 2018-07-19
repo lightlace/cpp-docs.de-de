@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098523"
 ---
 # <a name="creating-a-simple-consumer"></a>Erstellen eines einfachen Consumers
 Verwenden Sie die ATL-Projekt-Assistent und die ATL-OLE DB-Consumer-Assistenten, um einen OLE DB-Vorlagen-Consumer zu generieren.  

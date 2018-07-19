@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0dfacc6bf08aa5b36288a9933ffa9980937f2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121649"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx-Klasse
 
@@ -80,13 +81,13 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] `pDC`  
- Ein Zeiger auf den Gerätekontext. Wenn dieser Parameter ist `NULL`, das Framework zeichnet des aktiven Fensters.  
+ [in] *pDC*  
+ Ein Zeiger auf den Gerätekontext. Wenn dieser Parameter NULL ist, zeichnet das Framework des aktiven Fensters.  
   
- [in] `nType`  
+ [in] *%nbenachrichtigungen zu*  
  Eines der `CSplitterWnd::ESplitType` Enumerationswerte, der angibt, der Splitter Fensterelement gezeichnet werden soll. Gültige Werte sind `splitBox`, `splitBar`, `splitIntersection` und `splitBorder`.  
   
- [in] `rect`  
+ [in] *Rect*  
  Ein umschließendes Rechteck, das angibt, die Abmessungen und Position der angegebenen Splitter Fensterelement gezeichnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  

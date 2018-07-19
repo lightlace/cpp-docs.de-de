@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0580d6e2128a75f7457541cc82caf2fece958b81
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cfc3f744da2deb804f1a3e3445fbed3da3fac0b5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955785"
 ---
 # <a name="divides-struct"></a>divides-Struktur
 
-Ein vordefiniertes Funktionsobjekt, das den Divisionsvorgang (`operator/`) für seine Argumente ausführt.
+Ein vordefiniertes Funktionsobjekt, das den Divisionsvorgang (`operator/`) auf den Argumenten ausführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,11 +49,11 @@ struct divides<void>
 
 ### <a name="parameters"></a>Parameter
 
-`Type`, `T`, `U` Ein Typ, unterstützt ein `operator/` , das Operanden angegebenen oder abgeleiteten Typen akzeptiert.
+*Typ*, *T*, *U* ein Typ, unterstützt eine `operator/` , das Operanden angegebener oder abgeleiteter Typen akzeptiert.
 
-`Left` Der linke Operand des divisionsvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `T`.
+*Links* der linke Operand des divisionsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *T*.
 
-`Right` Der Rechte Operand des divisionsvorgangs. Die nicht spezialisierte Vorlage besitzt ein lvalue-Verweisargument vom Typ `Type`. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von lvalue und rvalue-Verweisargumenten des abgeleiteten Typs `U`.
+*Rechts* der Rechte Operand des divisionsvorgangs. Die nicht spezialisierte Vorlage besitzt ein Lvalue-Verweisargument vom Typ *Typ*. Die spezialisierte Vorlage vervollkommnet die Weiterleitung von Lvalue und Rvalue-verweisargumenten des abgeleiteten Typs *U*.
 
 ## <a name="return-value"></a>Rückgabewert
 

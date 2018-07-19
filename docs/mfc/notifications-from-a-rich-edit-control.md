@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c678af3444ef408a0a9c50e972942d67e2d3cf1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 928728093ff6e2150578c4ba48f2d8081620a48d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931143"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Benachrichtigungen von einem RichEdit-Steuerelement
 Benachrichtigung Nachrichten Bericht Ereignisse, die Auswirkungen auf ein Rich-edit-Steuerelement ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Sie können durch das übergeordnete Fenster verarbeitet werden oder mithilfe von Reflektion Nachricht vom Rich edit-Steuerelement selbst. Rich-Edit-Steuerelemente unterstützen alle die benachrichtigungsmeldungen mit Bearbeitungssteuerelementen sowie mehrere zusätzliche diejenigen verwendet. Sie können bestimmen, welche benachrichtigungsmeldungen ein rich-Edit-Steuerelement das übergeordnete Fenster sendet durch Festlegen seiner "" Ereignismaske.  
@@ -30,13 +31,13 @@ Benachrichtigung Nachrichten Bericht Ereignisse, die Auswirkungen auf ein Rich-e
   
  In den folgenden Absätzen Liste mehrere bestimmte Benachrichtigungen und deren Verwendung:  
   
--   **EN_MSGFILTER** Behandlung der **EN_MSGFILTER** Benachrichtigung können Sie eine Klasse, die entweder die Rich-Text-Steuerelement oder das übergeordnete Fenster bearbeiten, filtern alle Tastatur und eine Maus Eingabe für das Steuerelement. Der Handler kann verhindern, dass die Tastatur- oder Maustastenzustand Nachricht verarbeitet wird, oder ändern Sie die Nachricht kann durch Ändern der angegebenen [MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936) Struktur.  
+-   EN_MSGFILTER durch Verarbeiten der EN_MSGFILTER-Benachrichtigung können einer Klasse entweder das rich-Edit-Steuerelement oder das übergeordnete Fenster, alle Tastatur- und Mauseingaben an das Steuerelement zu filtern. Der Handler kann verhindern, dass die Tastatur- oder Maustastenzustand Nachricht verarbeitet wird, oder ändern Sie die Nachricht kann durch Ändern der angegebenen [MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936) Struktur.  
   
--   **EN_PROTECTED durch** behandeln die **EN_PROTECTED durch** benachrichtigungsmeldung erkennen, wenn der Benutzer versucht, geschützten Text zu ändern. Um einen Textbereich als geschützt zu kennzeichnen, können Sie die geschützten Zeichen Auswirkungen festlegen. Weitere Informationen finden Sie unter [Formatieren von Zeichen im Rich-Edit-Steuerelemente](../mfc/character-formatting-in-rich-edit-controls.md).  
+-   EN_PROTECTED durch Behandeln der EN_PROTECTED-Benachrichtigung erkennen, wenn der Benutzer versucht, geschützten Text zu ändern. Um einen Textbereich als geschützt zu kennzeichnen, können Sie die geschützten Zeichen Auswirkungen festlegen. Weitere Informationen finden Sie unter [Formatieren von Zeichen im Rich-Edit-Steuerelemente](../mfc/character-formatting-in-rich-edit-controls.md).  
   
--   **EN_DROPFILES** können Sie ermöglichen es dem Benutzer zum Löschen von Dateien in einem rich-Edit-Steuerelement durch die Verarbeitung der **EN_DROPFILES** Benachrichtigung. Das angegebene [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) Struktur enthält Informationen zu den Dateien, die gelöscht wird.  
+-   EN_DROPFILES Sie können den Benutzer, die Dateien in einem rich-Edit-Steuerelement zu löschen, indem Sie die Verarbeitung der benachrichtigungsmeldung EN_DROPFILES aktivieren. Das angegebene [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) Struktur enthält Informationen zu den Dateien, die gelöscht wird.  
   
--   **EN_SELCHANGE** eine Anwendung kann erkennen, wenn die aktuelle Auswahl, durch die Verarbeitung ändert der **EN_SELCHANGE** Benachrichtigung. Gibt an, die Nachricht eine [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952) Struktur, die Informationen über die neue Auswahl enthält.  
+-   EN_SELCHANGE eine Anwendung kann erkennen, wenn die aktuelle Auswahl ändert, durch die Verarbeitung der benachrichtigungsmeldung EN_SELCHANGE. Gibt an, die Nachricht eine [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952) Struktur, die Informationen über die neue Auswahl enthält.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CRichEditCtrl](../mfc/using-cricheditctrl.md)   

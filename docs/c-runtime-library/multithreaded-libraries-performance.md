@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390412"
 ---
 # <a name="multithreaded-libraries-performance"></a>Leistung von Multithreadbibliotheken
 Singlethread-CRT ist nicht mehr verfügbar. In diesem Thema wird erläutert, wie Sie maximale Leistung mit Multithreadbibliotheken erzielen.  

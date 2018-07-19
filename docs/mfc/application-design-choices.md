@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347759"
 ---
 # <a name="application-design-choices"></a>Überlegungen zum Anwendungsentwurf
 Dieser Artikel beschreibt einige der Entwurfsprobleme bei der Programmierung für das Internet zu berücksichtigen.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421944"
 ---
 # <a name="using-structured-exception-handling-with-c"></a>Verwendung von strukturierter Ausnahmebehandlung in C++
 Die in diesen Artikeln beschriebene strukturierte Ausnahmebehandlung funktioniert sowohl mit C- als auch mit C++-Quelldateien. Sie wurde jedoch nicht speziell für C++ entwickelt und wird daher nicht empfohlen. Sie können sicherstellen, dass der Code portabler ist, indem Sie die C++-Ausnahmebehandlung verwenden. Der C++-Ausnahmebehandlungsmechanismus ist außerdem flexibler, da er Ausnahmen eines beliebigen Typs behandeln kann.  

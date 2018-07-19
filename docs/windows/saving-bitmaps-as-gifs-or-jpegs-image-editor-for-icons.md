@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890182"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Speichern von Bitmaps als GIFs oder JPEGs (Bildbearbeitung für Symbole)
 Wenn Sie eine Bitmap erstellen, wird das Bild im Bitmapformat (BMP) erstellt. Sie können jedoch das Bild als GIF- oder JPEG oder in anderen Formaten Grafiken speichern.  

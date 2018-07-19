@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f03d66fac6d58bdb48aa9b7a6d8aafe18a74ea
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956429"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Server: Implementieren eines In-Place-Frame-Fensters
 In diesem Artikel wird erläutert, was Sie tun müssen, um direkte Rahmenfenster in die visuelle Bearbeitung Server-Anwendung zu implementieren, wenn Sie nicht den Assistenten zum Erstellen Sie die Server-Anwendung verwenden. Statt die Schritte in diesem Artikel beschrieben, können Sie eine vorhandenen direkte Rahmenfenster-Klasse von einer Anwendung vom Assistenten generierte Anwendung oder eines Beispiels mit Visual C++ verwenden.  
@@ -31,13 +32,13 @@ In diesem Artikel wird erläutert, was Sie tun müssen, um direkte Rahmenfenster
   
 1.  Leiten Sie eine direkte Rahmenfenster Klasse von `COleIPFrameWnd`.  
   
-    -   Verwenden der `DECLARE_DYNCREATE` Makro in der Headerdatei.  
+    -   Verwenden Sie das DECLARE_DYNCREATE-Makro in der Headerdatei.  
   
-    -   Verwenden der `IMPLEMENT_DYNCREATE` Makro in Ihrer Klassenimplementierungsdatei (.cpp). Dadurch können Objekte dieser Klasse durch das Framework erstellt werden.  
+    -   Verwenden Sie das IMPLEMENT_DYNCREATE-Makro in Ihrer Klassenimplementierungsdatei (.cpp). Dadurch können Objekte dieser Klasse durch das Framework erstellt werden.  
   
 2.  Deklarieren Sie eine `COleResizeBar` Member in der Rahmenfenster Klasse. Dies ist erforderlich, wenn Sie direkte Ändern der Größe in Server-Anwendungen unterstützen möchten.  
   
-     Deklarieren einer `OnCreate` Message-Handler (mithilfe der **Eigenschaften** Fenster), und rufen Sie **erstellen** für Ihre `COleResizeBar` Member auf, wenn Sie sie definiert haben.  
+     Deklarieren einer `OnCreate` Message-Handler (mithilfe der **Eigenschaften** Fenster), und rufen Sie `Create` für Ihre `COleResizeBar` Member auf, wenn Sie sie definiert haben.  
   
 3.  Deklarieren Sie eine Symbolleiste ist eine `CToolBar` Member in der Rahmenfenster Klasse.  
   

@@ -1,5 +1,5 @@
 ---
-title: '&lt;umfassen&gt; (Visual C++) | Microsoft Docs'
+title: '&lt;include&gt; (Visual C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b4c1a75acb89d9510dd7f489e5d0d582611da8de
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33330426"
 ---
-# <a name="ltincludegt-visual-c"></a>&lt;umfassen&gt; (Visual C++)
-Mit dem \<include>-Tag können Sie auf Kommentare in einer anderen Datei verweisen, die die Typen und Member in Ihrem Quellcode beschreiben. Dies ist eine Alternative zum direkten Platzieren von Dokumentationskommentaren in der Quellcodedatei.  Beispielsweise können Sie \<enthalten > standard "Textbaustein" Kommentare einfügen, die in Ihrem Team oder Ihr Unternehmen verwendet werden.  
+# <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
+Mit dem \<include>-Tag können Sie auf Kommentare in einer anderen Datei verweisen, die die Typen und Member in Ihrem Quellcode beschreiben. Dies ist eine Alternative zum direkten Platzieren von Dokumentationskommentaren in der Quellcodedatei.  Sie können \<include> beispielsweise verwenden, um Standardkommentare einzufügen, die von Ihrem Team bzw. Unternehmen verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,10 +36,10 @@ Mit dem \<include>-Tag können Sie auf Kommentare in einer anderen Datei verweis
   
 #### <a name="parameters"></a>Parameter  
  `filename`  
- Der Name der Datei mit der Dokumentation. Der Dateiname kann mit einem Pfad qualifiziert werden.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.  Der Compiler gibt eine Warnung aus, wenn er `filename` nicht findet.  
+ Der Name der Datei, die die Dokumentation enthält. Der Dateiname kann mit einem Pfad qualifiziert werden.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.  Der Compiler gibt eine Warnung aus, wenn er `filename` nicht findet.  
   
  `tagpath`  
- Ein gültiger xpathausdruck, der den gewünschten Knotensatz in der Datei enthaltenen auswählt.  
+ Ein gültiger XPath-Ausdruck, mit dem der gewünschte in der Datei enthaltene Knotensatz ausgewählt wird.  
   
  `name`  
  Der Namensbezeichner in dem Tag, das sich vor den Kommentaren befindet. `name` besitzt eine `id`.  
@@ -47,12 +48,12 @@ Mit dem \<include>-Tag können Sie auf Kommentare in einer anderen Datei verweis
  Die ID für das Tag, das sich vor den Kommentaren befindet.  Setzen Sie den Namen in einfache oder doppelte Anführungszeichen.  
   
 ## <a name="remarks"></a>Hinweise  
- Das \<include>-Tag verwendet die XPath-Syntax von XML. XPath-Dokumentation nach Möglichkeiten zum Anpassen mit \<enthalten >.  
+ Das \<include>-Tag verwendet die XPath-Syntax von XML. Weitere Anpassungsmöglichkeiten mithilfe von \<include> finden Sie in der XPath-Dokumentation.  
   
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) kompiliert werden.  
   
 ## <a name="example"></a>Beispiel  
- Dies ist ein Beispiel einer Mehrfachdatei. Die erste Datei, die verwendet \<enthalten >, enthält die folgenden Dokumentationskommentare:  
+ Dies ist ein Beispiel einer Mehrfachdatei. Die erste Datei, die \<include> verwendet, enthält die folgenden Dokumentationskommentare:  
   
 ```  
 // xml_include_tag.cpp  

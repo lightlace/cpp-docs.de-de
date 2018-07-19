@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377931"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>Arbeiten mit Importbibliotheken und Exportdateien
 LIB können mit der DEF-Option Sie um eine Importbibliothek und einer Exportdatei zu erstellen. LINK verwendet, die die Exportdatei ein Programm erstellen, enthält exportiert (in der Regel eine Dynamic Link Library (DLL)), und die Importbibliothek verwendet, um Verweise auf diese Exporte in anderen Programmen zu beheben.  

@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9cb5c8892583adac01ca883034b8c0af18595c9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954594"
 ---
 # <a name="using-tree-controls"></a>Verwenden von Struktursteuerelementen
 Typische Verwendung des Strukturansicht-Steuerelements ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) entspricht dem folgenden Muster:  
@@ -30,7 +31,7 @@ Typische Verwendung des Strukturansicht-Steuerelements ([CTreeCtrl](../mfc/refer
   
 -   Fügen Sie Daten in das Steuerelement durch Aufrufen der `CTreeCtrl`des [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) Funktion einmal für jedes Datenelement. `InsertItem` Gibt ein Handle auf das Element, das Sie verwenden können, z. B. Wenn später darauf verweisen Hinzufügen untergeordneter Elemente. Ein guter Zeitpunkt, um die Daten zu initialisieren ist `OnInitDialog` (für Steuerelemente in Dialogfeldern) oder `OnInitialUpdate` (für Ansichten).  
   
--   Wie der Benutzer mit dem Steuerelement interagiert, sendet er verschiedene benachrichtigungsmeldungen. Sie können angeben, dass eine Funktion, um die einzelnen Nachrichten behandeln Sie durch Hinzufügen von behandeln möchten eine **ON_NOTIFY_REFLECT** Makro in Ihre Steuerelementfensters meldungszuordnung oder indem Sie ein `ON_NOTIFY` Makro, das das übergeordnete Fenster meldungszuordnung. Finden Sie unter [Benachrichtigungsmeldungen von Struktursteuerelementen](../mfc/tree-control-notification-messages.md) weiter unten in diesem Thema eine Liste der möglichen Benachrichtigungen.  
+-   Wie der Benutzer mit dem Steuerelement interagiert, sendet er verschiedene benachrichtigungsmeldungen. Sie können angeben, dass eine Funktion, um jede der Nachrichten zu verarbeiten, die Sie durch Hinzufügen eines ON_NOTIFY_REFLECT-Makros in Ihrem Steuerelementfensters meldungszuordnung oder indem Sie eine ON_NOTIFY-Makro auf das übergeordnete Fenster meldungszuordnung behandeln möchten. Finden Sie unter [Benachrichtigungsmeldungen von Struktursteuerelementen](../mfc/tree-control-notification-messages.md) weiter unten in diesem Thema eine Liste der möglichen Benachrichtigungen.  
   
 -   Rufen Sie die verschiedenen Satz Memberfunktionen können Sie Werte für das Steuerelement festlegen. Änderungen, die Sie vornehmen können, gehören das Festlegen von des Einzugs, und der Text, Image oder einem Element zugeordneten Daten ändern.  
   

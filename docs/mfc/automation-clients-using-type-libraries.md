@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342588"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Automatisierungsclients: Verwenden von Typbibliotheken
 Benutzeroberflächenautomatisierungs-Clients benötigen Informationen zum Server-Objekte Eigenschaften und Methoden, wenn die Clients sind, um die Server Objekte zu bearbeiten. Datentypen weisen Eigenschaften auf. Methoden werden häufig Rückgabewerte und Parameter annehmen. Der Client benötigt Informationen zu den Datentypen all dieser um statisch in Server-Objekt zu binden.  

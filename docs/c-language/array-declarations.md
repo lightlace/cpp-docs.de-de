@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386903"
 ---
 # <a name="array-declarations"></a>Arraydeklarationen
 Eine "Arraydeklaration" benennt das Array und gibt den Typ der Elemente an. Hiermit kann auch die Anzahl von Elementen im Array definiert werden. Eine Variable mit Arraytyp wird als Zeiger auf den Typ der Arrayelemente betrachtet.  

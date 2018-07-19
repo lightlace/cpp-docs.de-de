@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247976"
 ---
 # <a name="compiler-error-c3167"></a>Compilerfehler Fehler C3167
 Kann nicht initialisiert werden, .NET Framework: Stellen Sie sicher, dass es installiert ist  

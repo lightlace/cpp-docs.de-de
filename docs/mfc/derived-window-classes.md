@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351492"
 ---
 # <a name="derived-window-classes"></a>Abgeleitete Fensterklassen
 Sie können Fenster direkt aus erstellen [CWnd](../mfc/reference/cwnd-class.md), oder leiten neue Fensterklassen von `CWnd`. Im Allgemeinen erstellen Sie eigene, benutzerdefinierte Fenster auf diese Weise. Allerdings werden die meisten Fenster, die in einem Frameworkprogramm verwendet werden, stattdessen aus einer der von MFC bereitgestellten, von `CWnd` abgeleiteten Rahmenfensterklassen erstellt.  

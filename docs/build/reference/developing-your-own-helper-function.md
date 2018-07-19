@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371397"
 ---
 # <a name="developing-your-own-helper-function"></a>Entwickeln eigener Hilfsfunktionen
 Sie möchten eine eigene Version der Routine zur spezifischen Verarbeitung basierend auf den Namen der DLL oder Importe sind bereitstellen. Es gibt zwei Methoden, die Auswirkungen dieses: eigene Codierung, meist basierend auf den angegebenen Code oder lediglich die angegebene Version mit der zuvor beschriebenen Benachrichtigungshooks einbinden.  

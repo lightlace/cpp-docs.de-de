@@ -1,5 +1,5 @@
 ---
-title: __super | Microsoft Docs
+title: __super | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ce48232884d1ab242ed52f82f614de058a2f91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9caa3d08140887da45916b931b6a4850358db16
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943967"
 ---
 # <a name="super"></a>__super
 **Microsoft-spezifisch**  
@@ -31,24 +32,22 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-__super::  
-member_function  
-();  
+__super::member_function();  
   
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Alle verfügbaren Basisklassenmethoden werden während der Überladungsauflösungsphase berücksichtigt, und die Funktion, die die beste Übereinstimmung bereitstellt, ist die, die aufgerufen wird.  
   
- `__super` kann nur innerhalb des Texts einer Memberfunktion stehen.  
+ **__super** kann nur innerhalb des Texts einer Memberfunktion verwendet werden.  
   
- `__super` kann nicht mit einer using-Deklaration verwendet werden. Finden Sie unter [using-Deklaration](../cpp/using-declaration.md) für Weitere Informationen.  
+ **__super** kann nicht verwendet werden, mithilfe einer Deklaration. Finden Sie unter [using-Deklaration](../cpp/using-declaration.md) für Weitere Informationen.  
   
- Durch die Einführung des [Attribute](../windows/cpp-attributes-reference.md) , die Code einfügen, kann der Code enthält möglicherweise eine oder mehrere Basisklassen, deren Namen Sie möglicherweise nicht, die aber kennen enthalten Methoden, die Sie aufrufen möchten.  
+ Mit der Einführung von [Attribute](../windows/cpp-attributes-reference.md) , die Code einfügen, kann Ihr Code enthält eine oder mehrere Basisklassen, deren Namen Sie möglicherweise nicht, die aber kennen Methoden enthalten, die Sie aufrufen möchten.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // deriv_super.cpp  
 // compile with: /c  
 struct B1 {  

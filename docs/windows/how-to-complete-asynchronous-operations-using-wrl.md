@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881522"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Gewusst wie: Abschließen asynchroner Vorgänge mit WRL
 Dieses Dokument wird gezeigt, wie der Windows Runtime C++ Template Library (WRL) verwenden, um asynchrone Vorgänge starten und Arbeiten ausführen, wenn die Vorgänge abgeschlossen werden.  

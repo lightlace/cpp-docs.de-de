@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385005"
 ---
 # <a name="organization-of-the-c-language-reference"></a>Organisation der C-Programmiersprachenreferenz
 -   [C-Elemente](../c-language/elements-of-c.md)  

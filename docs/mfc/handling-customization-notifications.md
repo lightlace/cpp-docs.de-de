@@ -57,16 +57,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b95af9c0562c4b3210cbcdd7b9ce6216a5d49fb
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930016"
 ---
 # <a name="handling-customization-notifications"></a>Behandeln von Anpassungsbenachrichtigungen
 Ein allgemeine Windows-Symbolleisten-Steuerelement verfügt über integrierte Funktionen zur Anpassung, einschließlich eines vom System definierten Anpassungsdialogfelds, das dem Benutzer das Einfügen, Löschen oder erneute Anordnen von Schaltflächen auf der Symbolleiste ermöglicht. Die Anwendung bestimmt, ob die Anpassungsfunktionen verfügbar sind und steuert das Ausmaß, bis zu dem der Benutzer die Symbolleiste anpassen kann.  
   
- Sie können dem Benutzer diese Anpassungsfunktionen zugänglich machen, indem Sie der Symbolleiste die Formatvorlage `CCS_ADJUSTABLE` zuweisen. Die Anpassungsfunktionen ermöglichen es dem Benutzer, eine Schaltfläche an eine neue Position zu ziehen oder eine Schaltfläche zu entfernen, indem er sie von der Symbolleiste zieht. Darüber hinaus kann der Benutzer auf die Symbolleiste doppelklicken, um das Dialogfeld **Symbolleiste anpassen** anzuzeigen, in dem der Benutzer Symbolleistenschaltflächen hinzufügen, löschen und neu anordnen kann. Die Anwendung kann das Dialogfeld mithilfe der Memberfunktion [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) anzeigen.  
+ Sie können diese Anpassungsfunktionen zugänglich machen, die dem Benutzer durch die Vergabe der Symbolleiste der **CCS_ADJUSTABLE** Stil. Die Anpassungsfunktionen ermöglichen es dem Benutzer, eine Schaltfläche an eine neue Position zu ziehen oder eine Schaltfläche zu entfernen, indem er sie von der Symbolleiste zieht. Darüber hinaus kann der Benutzer auf die Symbolleiste doppelklicken, um das Dialogfeld **Symbolleiste anpassen** anzuzeigen, in dem der Benutzer Symbolleistenschaltflächen hinzufügen, löschen und neu anordnen kann. Die Anwendung kann das Dialogfeld mithilfe der Memberfunktion [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) anzeigen.  
   
  Das Symbolleistensteuerelement sendet bei jedem Schritt im Anpassungsvorgang Benachrichtigungsmeldungen an das übergeordnete Fenster. Wenn der Benutzer die UMSCHALT-Taste gedrückt hält und beginnt, eine Schaltfläche zu ziehen, übernimmt die Symbolleiste automatisch die Verarbeitung des Ziehvorgangs. Die Symbolleiste sendet die Benachrichtigungsmeldung **TBN_QUERYDELETE** an das übergeordnete Fenster, um zu bestimmen, ob die Schaltfläche gelöscht werden darf. Der Ziehvorgang endet, wenn das übergeordnete Fenster **FALSE**zurückgibt. Andernfalls erfasst die Symbolleiste die Mauseingabe und wartet darauf, dass der Benutzer die Maustaste freigibt.  
   
@@ -164,7 +165,7 @@ Ein allgemeine Windows-Symbolleisten-Steuerelement verfügt über integrierte Fu
  Index der Schaltfläche, die der Benachrichtigung zugeordnet ist.  
   
  **tbButton**  
- `TBBUTTON` -Struktur, die Informationen über die Symbolleisten-Schaltfläche, die der Benachrichtigung zugeordnete enthält.  
+ **TBBUTTON** -Struktur, die Informationen über die Symbolleistenschaltfläche enthält, die der Benachrichtigung zugeordnet.  
   
  **cchText**  
  Anzahl der Zeichen im Schaltflächentext.  

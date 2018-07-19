@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871704"
 ---
 # <a name="data-member-attributes"></a>Datenmemberattribute
 Die folgenden Attribute gelten für die Datenelemente in eine Klasse, Co-Klasse oder Schnittstelle.  

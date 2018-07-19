@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418379"
 ---
 # <a name="vprintf-functions"></a>vprintf-Funktionen
 Jede dieser `vprintf`-Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt dann die angegebenen Daten in ein bestimmtes Ziel. Die Funktionen unterscheiden sich von der durchgeführten Parameterüberprüfung, unabhängig davon, ob die Funktionen Breit- oder Einzelbyte-Zeichenfolgen annehmen. Auch das Ausgabeziel und die Unterstützung für die Angabe der Reihenfolge, in der Parameter in der Formatzeichenfolge verwendet werden, spielen keine Rolle.  

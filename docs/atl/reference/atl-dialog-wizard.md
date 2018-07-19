@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358005"
 ---
 # <a name="atl-dialog-wizard"></a>ATL-Dialogfeld-Assistent
 Dieser Assistent fügt dem Projekt abgeleitet ATL-Dialogfeldobjekt [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Ein Dialogfeld abgeleitet `CAxDialogImpl` ActiveX-Steuerelemente hosten können.  

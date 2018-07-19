@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892656"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive-Methode
 Versucht, ein SRWLock-Objekt im exklusiven Modus für das aktuelle oder angegebene SRWLock-Objekt zu erhalten. Wenn der Aufruf erfolgreich ist, wird der aufrufende Thread den Besitz der Sperre.  

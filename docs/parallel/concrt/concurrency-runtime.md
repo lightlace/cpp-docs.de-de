@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693522"
 ---
 # <a name="concurrency-runtime"></a>Concurrency Runtime
 Die Concurrency Runtime für C++ hilft Ihnen beim Schreiben robuster, skalierbarer und reaktionsschneller paralleler Anwendungen. Es stellt eine höhere Abstraktionsebene bereit, sodass Sie die Infrastrukturdetails im Zusammenhang mit der Parallelität nicht verwalten müssen. Sie können mit ihm außerdem Planungsrichtlinien angeben, die den Servicequalitätsforderungen Ihrer Anwendungen entsprechen. Verwenden Sie diese Ressourcen für die ersten Schritte beim Arbeiten mit der Concurrency Runtime.  

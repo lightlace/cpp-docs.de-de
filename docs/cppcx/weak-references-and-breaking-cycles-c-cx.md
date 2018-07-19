@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089077"
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Schwache Verweise und unterbrochene Zyklen (C++/CX)
 In jedem Typsystem, dem Verweiszählung zugrunde liegt, können Verweise auf Typen *zyklisch*sein, d. h. ein Objekt kann auf ein zweites Objekt verweisen, dieses auf ein drittes Objekt, usw., bis das letzte Objekt zurück zum ersten Objekt verweist. In einem Verweiszyklus können Objekte nicht ordnungsgemäß gelöscht werden, wenn der Verweiszähler eines Objekts null wird. Zur einfacheren Behebung dieses Problem C + c++ / CX bietet die [Platform:: WeakReference-Klasse](../cppcx/platform-weakreference-class.md) Klasse. Ein `WeakReference` -Objekt unterstützt die [Resolve](../cppcx/platform-weakreference-class.md#resolve) -Methode, die NULL zurückgibt, wenn das Objekt nicht mehr vorhanden ist, oder eine [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) -Ausnahme auslöst, wenn das Objekt nicht vom Typ `T`ist.  

@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f1bcdfa87eac674d935eeaa8007434f930636e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52f9c1335304cc3eefec76abde641e62932eb727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964407"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution-Klasse
 
@@ -76,36 +77,36 @@ public:
     result_type min() const;
     result_type max() const;
 };
+```
 
-### Parameters
+### <a name="parameters"></a>Parameter
 
-*IntType*
-The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).
+*IntType* standardmäßig der ganzzahligen Ergebnistyp **Int**. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
-## Remarks
+## <a name="remarks"></a>Hinweise
 
-The template class describes a distribution that produces values of a user-specified integral type, or type `int` if none is provided, distributed according to the Negative Binomial Distribution discrete probability function. The following table links to articles about individual members.
+Die Vorlagenklasse beschreibt eine Verteilung, Werte eines benutzerdefinierten ganzzahligen produziert, Typs **Int** Wenn none angegeben wird, entsprechend der diskreten Wahrscheinlichkeitsfunktion Negative Binomialverteilung verteilter Wert. Die folgende Tabelle ist mit Artikeln über einzelne Member verknüpft.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-The property members `k()` and `p()` return the currently stored distribution parameter values *k* and *p* respectively.
+Die Eigenschaftenmember `k()` und `p()` Parameterwerte für die aktuell gespeicherten verteilungsparameterwerte zurückzugeben *k* und *p* bzw.
 
-The property member `param()` sets or returns the `param_type` stored distribution parameter package.
+Das Eigenschaftsmember `param()` gibt das aktuell gespeicherte Verteilungspaket `param_type` zurück oder legt es fest.
 
-The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.
+Die `min()`- und `max()`-Memberfunktion gibt das jeweils kleinst- und größtmögliche Ergebnis zurück.
 
-The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.
+Die `reset()`-Memberfunktion verwirft alle zwischengespeicherten Werte, damit das Ergebnis des folgenden Aufrufs von `operator()` nicht von Werten abhängig ist, die vor dem Aufruf aus der Engine bezogen wurden.
 
-The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
+Die `operator()`-Memberfunktionen geben den nächsten generierten Wert von entweder dem aktuellen oder dem spezifizierten Parameterpaket zurück, das auf der URNG-Engine basiert.
 
-For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
+Weitere Informationen zu Verteilungsklassen und ihren Membern finden Sie unter [\<random>](../standard-library/random.md).
 
-For detailed information about the negative binomial distribution discrete probability function, see the Wolfram MathWorld article [Negative Binomial Distribution](http://go.microsoft.com/fwlink/p/?linkid=400516).
+Ausführliche Informationen über die diskrete Wahrscheinlichkeitsfunktion negative binomiale Verteilung, finden Sie im Wolfram MathWorld-Artikel [Negative Binomialverteilung](http://go.microsoft.com/fwlink/p/?linkid=400516).
 
-## Example
+## <a name="example"></a>Beispiel
 
 ```cpp
 // compile with: /EHsc /W4
@@ -241,11 +242,11 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parameter
 
-*k* der `k` -verteilungsparameter.
+*k* der `k` verteilungsparameter.
 
-*p* der `p` -verteilungsparameter.
+*p* der `p` verteilungsparameter.
 
-*Parm* Parameterstruktur, die für die Verteilung verwendete Parameterstruktur.
+*Parm* die Parameterstruktur verwendet, um die Verteilung erstellen.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -259,17 +260,17 @@ Mit dem zweiten Konstruktor wird ein Objekt erstellt, dessen gespeicherte Parame
 
 Speichert die Parameter der Verteilung.
 
-Struktur Param_type {Typedef Negative_binomial_distribution`<`Result_type > Distribution_type; Param_type (Result_type k = 1, doppelklicken Sie p = 0,5); Result_type k() const; Doppelklicken p() const;
+Struktur Param_type {Typedef Negative_binomial_distribution`<`Result_type > Distribution_type; Param_type (Result_type k = 1, doppelklicken Sie p = 0,5); Result_type k() const; p() const; Doppelklicken
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Parameter
 
-*k* der `k` -verteilungsparameter.
+*k* der `k` verteilungsparameter.
 
-*p* der `p` -verteilungsparameter.
+*p* der `p` verteilungsparameter.
 
-*Rechte* der `param_type` Struktur, die zum Vergleichen verwendet.
+*richtige* der `param_type` Struktur, mit der verglichen werden soll.
 
 ### <a name="remarks"></a>Hinweise
 

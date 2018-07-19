@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258749"
 ---
 # <a name="compiler-error-c3490"></a>Compilerfehler C3490
 "var" kann nicht geändert werden, da über ein Konstantenobjekt darauf zugegriffen wird  

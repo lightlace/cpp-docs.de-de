@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101993"
 ---
 # <a name="irowsetnotifycpfireonrowsetchange"></a>IRowsetNotifyCP::Fire_OnRowsetChange
 Überträgt ein [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx) Ereignis an alle Listener auf dem Verbindungspunkt **IID_IRowsetNotify** eine Änderung der Auswirkungen auf das gesamte Rowset Verbraucher darüber informieren.  

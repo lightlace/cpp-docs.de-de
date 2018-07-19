@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111080"
 ---
 # <a name="ole-db-object-model"></a>OLE DB-Objektmodell
 Der OLE DB-Objektmodell besteht aus den folgenden Objekten oder Komponenten. Die ersten vier Objekte oder aufgelisteten Komponenten (Datenquellen, Sitzungen, Befehle und Rowsets) ermöglichen Ihnen, eine Verbindung mit einer Datenquelle herstellen und Sie ansehen. Der Rest, beginnend mit den Accessoren beziehen sich auf das Arbeiten mit den Daten, wenn er angezeigt wird.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880165"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 Deklariert eine *feste Zeiger*, der nur mit der common Language Runtime verwendet wird.  

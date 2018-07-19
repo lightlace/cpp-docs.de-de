@@ -1,5 +1,5 @@
 ---
-title: Allgemeine Regeln für Operatorüberladung | Microsoft Docs
+title: Allgemeine Regeln für Operatorüberladung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
-ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
+ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814338"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943297"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Allgemeine Regeln für die Überladung von Operatoren
 Die folgenden Regeln schränken die Art und Weise ein, wie überladene Operatoren implementiert werden. Aber sie gelten nicht für die [neue](../cpp/new-operator-cpp.md) und [löschen](../cpp/delete-operator-cpp.md) Operatoren, die separat behandelt werden.  
   
--   Sie können keine neue Operatoren wie z. B. definieren **.**.  
+-   Sie können keine neue Operatoren, z. B. definieren **.**.  
   
 -   Sie können die Bedeutung von Operatoren nicht neu definieren, wenn sie auf integrierte Datentypen angewendet werden.  
   
@@ -47,15 +47,15 @@ Die folgenden Regeln schränken die Art und Weise ein, wie überladene Operatore
     }  
     ```  
   
-     Das vorhergehende Codebeispiel deklariert den Less Than-Operator als Memberfunktion. Allerdings werden die Additionsoperatoren als globale Funktionen deklariert, die Friend-Zugriff haben. Beachten Sie, dass mehr als eine Implementierung für einen angegebenen Operator bereitgestellt werden kann. Im Fall des vorhergehenden Additionsoperators werden die beiden Implementierungen bereitgestellt, um Kommutativität zu ermöglichen. Es ist ebenso wahrscheinlich, dass Operatoren, die `Point` `Point`, `int` einem `Point` usw. hinzufügen, implementiert werden könnten.  
+     Das vorhergehende Codebeispiel deklariert den Less Than-Operator als Memberfunktion. Allerdings werden die Additionsoperatoren als globale Funktionen deklariert, die Friend-Zugriff haben. Beachten Sie, dass mehr als eine Implementierung für einen angegebenen Operator bereitgestellt werden kann. Im Fall des vorhergehenden Additionsoperators werden die beiden Implementierungen bereitgestellt, um Kommutativität zu ermöglichen. Es ist ebenso wahrscheinlich, dass Operatoren, die hinzufügen eine `Point` auf eine `Point`, **Int** auf eine `Point`, und so weiter, implementiert werden könnte.  
   
--   Operatoren unterliegen der Priorität, Gruppierung und Anzahl von Operanden, die durch ihre typische Verwendung mit integrierten Typen vorgegeben werden. Daher besteht keine Möglichkeit, das Konzept "ein Objekt vom Typ 2 und 3 hinzufügen `Point`," erwartet 2 hinzugefügt werden die *x* Koordinate und 3 hinzugefügt werden die *y* koordinieren.  
+-   Operatoren unterliegen der Priorität, Gruppierung und Anzahl von Operanden, die durch ihre typische Verwendung mit integrierten Typen vorgegeben werden. Daher besteht keine Möglichkeit, das Konzept "Hinzufügen von 2 und 3 zu einem Objekt vom Typ `Point`," erwartet 2 hinzugefügt werden die *x* Koordinate und 3, hinzugefügt werden die *y* zu koordinieren.  
   
 -   Unäre Operatoren, die als Memberfunktionen deklariert werden, akzeptieren keine Argumente. Wenn sie als globale Funktionen deklariert werden, nehmen sie ein Argument an.  
   
 -   Binäre Operatoren, die als Memberfunktionen deklariert werden, akzeptieren ein Argument. Wenn sie als globale Funktionen deklariert werden, nehmen sie zwei Argumente an.  
   
--   Wenn ein Operator als unärer oder binärer Operator verwendet werden kann (__&__, __*__, __+__, und __-__), können Sie jede Verwendung separat überladen.  
+-   Wenn ein Operator entweder als unärer oder binärer Operator verwendet werden kann (__&__, __*__, __+__, und __-__), können Sie jede Verwendung separat überladen.  
   
 -   Überladene Operatoren können keine Standardargumente haben.  
   
@@ -63,9 +63,9 @@ Die folgenden Regeln schränken die Art und Weise ein, wie überladene Operatore
   
 -   Das erste Argument für mit Memberfunktionen überladene Operatoren weist immer den Klassentyp des Objekts auf, für das der Operator aufgerufen wird (die Klasse, in der der Operator deklariert ist, oder eine Klasse, die von dieser Klasse abgeleitet ist). Es werden keine Konvertierungen für das erste Argument bereitgestellt.  
   
- Beachten Sie, dass die Bedeutung aller Operatoren vollständig geändert werden kann. Enthält die Bedeutung der Adresse des (**&**), Zuweisung (**=**), und Funktionsaufruf Operatoren. Auch Identitäten, auf denen integrierte Typen basieren können, können mithilfe der Operatorüberladung geändert werden. Beispielsweise sind die folgenden vier Anweisungen normalerweise gleichwertig, wenn sie vollständig ausgewertet werden:  
+ Beachten Sie, dass die Bedeutung aller Operatoren vollständig geändert werden kann. Das schließt die Bedeutung des Address-of (**&**), Zuweisung (**=**), und funktionsaufrufoperatoren. Auch Identitäten, auf denen integrierte Typen basieren können, können mithilfe der Operatorüberladung geändert werden. Beispielsweise sind die folgenden vier Anweisungen normalerweise gleichwertig, wenn sie vollständig ausgewertet werden:  
   
-```  
+```cpp 
 var = var + 1;  
 var += 1;  
 var++;  

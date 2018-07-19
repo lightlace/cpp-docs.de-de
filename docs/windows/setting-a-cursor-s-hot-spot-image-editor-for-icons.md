@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889406"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Festlegen eines Cursors&#39;Hotspot "s" (Bildbearbeitung für Symbole)
 Den Hotspot von einem [Cursor](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) ist der Punkt, auf die Windows verweist, in die Position des Cursors nachzuverfolgen. Standardmäßig wird der Hotspot auf der linken oberen Ecke des Cursors (Koordinaten 0,0) festgelegt. Die Eigenschaft "Hotspot" in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) zeigt die Koordinaten des HotSpot.  

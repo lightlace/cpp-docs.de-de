@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349531"
 ---
 # <a name="methods-of-creating-tool-tips"></a>Methoden zum Erstellen von QuickInfos
 MFC stellt drei Klassen zum Erstellen und verwalten das Tool QuickInfo-Steuerelement: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) und [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). Die QuickInfo-Memberfunktionen in diesen Klassen zu umschließen die allgemeine Windows-Steuerungs-API. Klasse `CToolBarCtrl` und Klasse `CToolTipCtrl` Klasse abgeleitet sind `CWnd`.  

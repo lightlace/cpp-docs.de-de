@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1cf7d03b9c34f6be15fc947206e8d14ec04c991
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6528cb1f3aa4da429cd27d1123536ab694f60ac6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961235"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -39,7 +40,7 @@ Definiert C++-Standardbibliotheksfunktionen, die dabei helfen, *Funktionsobjekte
 
 Algorithmen erfordern zwei Typen von Funktionsobjekten: unär und binär. Für unäre Funktionsobjekte ist ein Argument und für binäre Funktionsobjekte sind zwei Argumente erforderlich. Ein Funktionsobjekt und Funktionszeiger können einem Algorithmus als Prädikat übergeben werden; Funktionsobjekte sind allerdings auch anwendbar und erweitern den Bereich, die Flexibilität und die Effizienz der C++-Standardbibliothek. Wenn beispielsweise ein Wert, der benötigt wurde, an eine Funktion gebunden, bevor an einem Algorithmus, dann ein Funktionszeiger übergeben wurde, nicht verwendet werden kann. Funktionsadapter konvertieren Funktionszeiger in anwendbare Funktionsobjekte, die an einen Wert gebunden werden können. Im Header \<functional> sind auch Memberfunktionsadapter enthalten, die es ermöglichen, dass Memberfunktionen als anwendbare Funktionsobjekte aufgerufen werden können. Funktionen sind anwendbar, wenn sie über geschachtelte Typdeklarationen verfügen, die die Argument- und Rückgabetypen angeben. Der C++-Standard erfordert, dass diese Anwendbarkeit implementiert wird, indem alle Standardobjektklassen von den "unary_function"- oder "binary_function"-Basisklassen erben. Funktionsobjekte und Adapter ermöglichen es der C++-Standardbibliothek, bestehende Anwendungen zu aktualisieren, und helfen bei der Integration der Bibliothek in die C++-Programmierumgebung.
 
-Die Visual C++-Implementierung der Funktionsobjekte in \<funktionale > enthält *transparente operatorfunktionselemente*, die spezialisierungen von standardfunktionsobjekten sind Objekte, Funktion und keine Vorlagenparameter akzeptieren und Führen Sie die perfekte Weiterleitung der Funktionsargumente und eine perfekte Rückgabe des Ergebnisses. Diese Funktion ist Teil der Spezifikation des Normenentwurfs C++14. Für diese Vorlagenspezialisierungen müssen keine Argumenttypen angeben werden, wenn arithmetische, bitweise sowie Vergleichs- und Logikoperatorfunktionselemente aufgerufen werden. Sie können arithmetische, bitweise sowie Vergleichs- und Logikoperatoren für eigene Typen überladen oder für heterogene Typkombinationen und die transparenten Operatorfunktionselemente dann als Funktionsargumente verwenden. Wenn Ihr Typ *MyType* z.B. `operator<` implementiert, können Sie `sort(my_collection.begin(), my_collection.end(), less<>())` aufrufen, anstatt explizit den Typ `sort(my_collection.begin(), my_collection.end(), less<MyType>())` anzugeben.
+Die Visual C++-Implementierung der Funktionsobjekte in \<funktionale > enthält *transparente operatorfunktionselemente*, die spezialisierungen von standardfunktionsobjekten sind Funktionsobjekte und keine Vorlagenparameter akzeptieren und Führen Sie die perfekte Weiterleitung der Funktionsargumente und eine perfekte Rückgabe der Ergebnisse. Diese Funktion ist Teil der Spezifikation des Normenentwurfs C++14. Für diese Vorlagenspezialisierungen müssen keine Argumenttypen angeben werden, wenn arithmetische, bitweise sowie Vergleichs- und Logikoperatorfunktionselemente aufgerufen werden. Sie können arithmetische, bitweise sowie Vergleichs- und Logikoperatoren für eigene Typen überladen oder für heterogene Typkombinationen und die transparenten Operatorfunktionselemente dann als Funktionsargumente verwenden. Wenn Ihr Typ *MyType* z.B. `operator<` implementiert, können Sie `sort(my_collection.begin(), my_collection.end(), less<>())` aufrufen, anstatt explizit den Typ `sort(my_collection.begin(), my_collection.end(), less<MyType>())` anzugeben.
 
 ## <a name="c11c14-implementation"></a>C++11/C++14-Implementierung
 
@@ -99,10 +100,10 @@ Jeder Aufrufwrapper weist einen Verschiebekonstruktor und einen Kopierkonstrukto
 |[hash](../standard-library/hash-class.md)|Eine Klasse, die einen Hashcode für einen Wert berechnet.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Eine Klasse, die überprüft, ob ein bestimmter Typ generiert wird, indem `bind` aufgerufen wird.|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|Eine Klasse, die überprüft, ob ein bestimmter Typ ein Platzhalter ist.|
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Eine Adapterklasse, die es einer **non_const**-Memberfunktion, die keine Argumente akzeptiert, ermöglicht, als unäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Verweisargument initialisiert wird.|
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Eine Adapterklasse, die es einer **non_const**-Memberfunktion, die keine Argumente akzeptiert, ermöglicht, als unäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Zeigerargument initialisiert wird.|
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Eine Adapterklasse, die es einer **non_const**-Memberfunktion, die ein einzelnes Argument akzeptiert, ermöglicht, als binäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Verweisargument initialisiert wird.|
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Eine Adapterklasse, die es einer **non_const**-Memberfunktion, die ein einzelnes Argument akzeptiert, ermöglicht, als binäres Funktionsobjekt aufgerufen zu werden, wenn sie mit einem Zeigerargument initialisiert wird.|
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|Eine Adapterklasse, die ermöglicht eine `non_const` Memberfunktion, die keine Argumente als wenn Sie mit einem Verweisargument Initialisiert ein unäres Funktionsobjekt aufgerufen zu werden.|
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|Eine Adapterklasse, die ermöglicht eine `non_const` Memberfunktion, die keine Argumente als wenn Sie mit einem Zeigerargument Initialisiert ein unäres Funktionsobjekt aufgerufen zu werden.|
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|Eine Adapterklasse, die ermöglicht eine `non_const` Memberfunktion, die ein einzelnes Argument als ein binäres Funktionsobjekt, wenn Sie mit einem Verweisargument initialisiert aufgerufen werden.|
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|Eine Adapterklasse, die ermöglicht eine `non_const` Memberfunktion, die ein einzelnes Argument als ein binäres Funktionsobjekt, wenn Sie mit einem Zeigerargument initialisiert aufgerufen werden.|
 |[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Konvertiert einen binären Funktionszeiger in eine anwendbare binäre Funktion.|
 |[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Konvertiert einen unären Funktionszeiger in eine anwendbare unäre Funktion.|
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Eine Klasse, die einen Verweis umschließt.|

@@ -2,7 +2,7 @@
 title: C++-Unterstützung in Visual Studio zu installieren | Microsoft Docs
 description: Installieren Sie Visual Studio-Unterstützung für Visual C++
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 06/21/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69092cdd6d79197fb7a2cbdc60b783174b70950b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5807110caf730c72d93de7e1265199b63f1d6bff
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322484"
 ---
 # <a name="install-c-support-in-visual-studio"></a>C++-Unterstützung in Visual Studio installieren
 
@@ -32,17 +33,17 @@ Wenn Sie noch nicht heruntergeladen und installiert noch Visual Studio und Visua
 
 - Ausreichend freier Speicherplatz vorhanden. Visual Studio erfordert mindestens 7GB Speicherplatz und dauert mindestens 50GB, wenn viele allgemeine Optionen installiert werden. Es wird empfohlen, dass die Installation auf dem Laufwerk "c:".
 
-Ausführliche Informationen zu den freien Speicherplatz und die Anforderungen an das Betriebssystem, finden Sie unter [Systemanforderungen für Visual Studio 2017](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs). Das Installationsprogramm gibt an, wie viel Speicherplatz für die Optionen erforderlich ist, die Sie auswählen.
+Ausführliche Informationen zu den freien Speicherplatz und die Anforderungen an das Betriebssystem, finden Sie unter [Visual Studio-Produktfamilie System Produktanforderungen](/visualstudio/productinfo/vs2017-system-requirements-vs). Das Installationsprogramm gibt an, wie viel Speicherplatz für die Optionen erforderlich ist, die Sie auswählen.
 
 ## <a name="installation"></a>Installation
 
 1. Laden Sie das neueste Visual Studio 2017-Installationsprogramm für Windows herunter.
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_source=docs&utm_medium=clickbutton">Installieren von Visual Studio 2017 Community</a>
+   > <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Installieren von Visual Studio 2017 Community</a>
 
    >[!Tip]
-   > Die Community Edition eignet sich für einzelne Entwickler, Schulungsumgebungen, akademische Forschung und Open Source-Entwicklung. Installieren Sie für andere Verwendungen <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Professional</a> oder <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Enterprise</a>.
+   > Die Community Edition eignet sich für einzelne Entwickler, Schulungsumgebungen, akademische Forschung und Open Source-Entwicklung. Installieren Sie für andere Verwendungen <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> oder <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
 
 1. Suchen Sie die Installationsdatei heruntergeladen und führen Sie es. Kann in Ihrem Browser angezeigt werden, oder Sie finden es vielleicht in Ihrem Ordner "Downloads". Das Installationsprogramm benötigt Administratorrechte zum Ausführen. Sie wird möglicherweise eine **User Account Control** Dialogfeld bestätigen Sie gewähren der Berechtigung, lassen das Installationsprogramm, nehmen Sie Änderungen an Ihrem System aus, wählen Sie **Ja**. Wenn Sie Probleme haben, suchen Sie die heruntergeladene Datei im Datei-Explorer mit der rechten Maustaste auf das Symbol "Installationsprogramm", und wählen **als Administrator ausführen** aus dem Kontextmenü.
 

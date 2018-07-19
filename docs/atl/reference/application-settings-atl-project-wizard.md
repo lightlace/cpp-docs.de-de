@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357404"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Anwendungseinstellungen, ATL-Projekt-Assistent
 Verwenden der **Anwendungseinstellungen** Seite des ATL-Projekt-Assistenten entworfen und grundlegende Funktionen zu einem neuen ATL-Projekt hinzufügen.  

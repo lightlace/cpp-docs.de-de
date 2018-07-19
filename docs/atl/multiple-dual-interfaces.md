@@ -1,5 +1,5 @@
 ---
-title: Mehrere duale Schnittstellen | Microsoft Docs
+title: Duale Mehrfachschnittstellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e23682bd0b7c923a1e377463405f84a6c6ee1221
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ace347148f3a339c75fd9a1069be368c7373d351
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952928"
 ---
-# <a name="multiple-dual-interfaces"></a>Mehrere duale Schnittstellen
-Möglicherweise möchten Sie die Vorteile, die eine duale Schnittstelle (d. h. die Flexibilität der Vtable und späte Bindung, daher und die Klasse für Skriptsprachen als auch für C++ zur Verfügung) kombinieren mit den Techniken der mehrfachvererbung.  
+# <a name="multiple-dual-interfaces"></a>Duale Mehrfachschnittstellen
+Möglicherweise möchten Sie die Vorteile eine duale Schnittstelle (d. h. die Flexibilität von Vtable und späte Bindung, daher die Klasse verfügbar zu machen. Skriptsprachen als auch für C++) kombinieren mit den Methoden der mehrfachvererbung.  
   
- Obwohl es möglich, mehrere duale Schnittstellen für eine einzelnes COM-Objekt verfügbar zu machen, wird nicht empfohlen. Wenn mehrere duale Schnittstellen sind, es muss nur eine `IDispatch` Schnittstelle verfügbar gemacht werden. Die Techniken zur Verfügung, um sicherzustellen, dass dies der Fall ist tragen dies z. B. geringere-Funktion oder höhere Codekomplexität. Der Entwickler, die Berücksichtigung dieser Ansatz sollten sorgfältig abwägen, die vor- und Nachteile.  
+ Obwohl es möglich, mehrere duale Schnittstellen für ein einzelnes COM-Objekt verfügbar zu machen, ist es nicht empfohlen. Wenn mehrere duale Schnittstellen vorhanden sind, ist nur eine `IDispatch` Schnittstelle verfügbar gemacht werden. Techniken zur Verfügung, um sicherzustellen, dass dies der Fall ist, tragen zur Folge haben, z. B. geringere-Funktion oder erhöhten Codekomplexität. Die Entwickler und möchten diesen Ansatz sollte sorgfältig abwägen, die vor- und Nachteile.  
   
 ## <a name="exposing-a-single-idispatch-interface"></a>Verfügbarmachen von einer einzelnen IDispatch-Schnittstelle  
- Es ist möglich, mehrere duale Schnittstellen für ein einzelnes Objekt verfügbar zu machen, durch Ableiten von zwei oder mehr spezialisierungen `IDispatchImpl`. Jedoch wenn Sie zulassen, Clients dass bei der Abfrage der `IDispatch` -Schnittstelle, müssen Sie verwenden die [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) Makro (oder [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid))) an die Basisklasse für die Verwendung der Implementierung von `IDispatch`.  
+ Es ist möglich, mehrere duale Schnittstellen für ein einzelnes Objekt verfügbar machen, durch Ableiten von mindestens zwei spezialisierungen `IDispatchImpl`. Jedoch wenn Sie zulassen, dass Clients bei der Abfrage die `IDispatch` -Schnittstelle, Sie benötigen, verwenden Sie die [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) Makro (oder [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid))) an die Basisklasse für die Verwendung der Implementierung von `IDispatch`.  
   
  [!code-cpp[NVC_ATL_COM#23](../atl/codesnippet/cpp/multiple-dual-interfaces_1.h)]  
   
- Da nur ein `IDispatch` Schnittstelle verfügbar gemacht wird, Clients, die nur Zugriff auf Ihre Objekte über können die `IDispatch` Schnittstelle wird nicht in der Lage, auf die Methoden oder Eigenschaften in einer beliebigen anderen Schnittstelle zuzugreifen.  
+ Da nur ein `IDispatch` Schnittstelle verfügbar gemacht wird, Clients, die nur die Objekte über zugreifen können die `IDispatch` Schnittstelle werden nicht auf die Methoden oder Eigenschaften in einer beliebigen anderen Schnittstelle zugreifen.  
   
 ## <a name="combining-multiple-dual-interfaces-into-a-single-implementation-of-idispatch"></a>Kombinieren von mehreren duale Schnittstellen in eine einzelne Implementierung von IDispatch  
- ATL bietet keine Unterstützung für das Kombinieren mehrerer dualer Schnittstellen in eine einzelne Implementierung von `IDispatch`. Es gibt jedoch mehrere Methoden für die manuell kombiniert die Schnittstellen, z. B. das Erstellen einer auf Vorlagen basierenden Klasse enthält eine Kombination der separaten `IDispatch` Schnittstellen, erstellen ein neues Objekt zum Ausführen der `QueryInterface` -Funktion oder über eine TypeInfo-basierte Implementierung eines geschachtelten Objekte zum Erstellen der `IDispatch` Schnittstelle.  
+ ATL bietet keine Unterstützung für das Kombinieren von mehreren duale Schnittstellen in eine einzelne Implementierung von `IDispatch`. Es gibt jedoch mehrere Methoden für die manuelle kombiniert die Schnittstellen, z. B. das Erstellen einer auf Vorlagen basierenden Klasse, die eine Kombination der separaten enthält `IDispatch` Schnittstellen, erstellen ein neues Objekt zum Ausführen der `QueryInterface` -Funktion oder über eine TypeInfo-basierte Implementierung eines geschachtelten Objekte zum Erstellen der `IDispatch` Schnittstelle.  
   
- Diese Ansätze haben Probleme mit potenziellen Namespacekonflikte, als auch Codekomplexität und verwaltbarkeit. Es wird nicht empfohlen, mehrere duale Schnittstellen zu erstellen.  
+ Diese Ansätze haben Probleme mit möglichen Namespacekonflikte, als auch Komplexität von Code und verwaltbarkeit. Es wird nicht empfohlen, dass Sie duale mehrfachschnittstellen erstellen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Duale Schnittstellen und ATL](../atl/dual-interfaces-and-atl.md)
