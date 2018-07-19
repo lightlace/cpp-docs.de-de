@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89e6e0fc83a83ece82793050441fec9a1e7978b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f802dc91c3429ba718778d122d1a787aad0dec87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844496"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964222"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine-Klasse
 
@@ -36,11 +36,11 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parameter
 
-`Engine` Der Typ des Basismoduls.
+*Engine* den Basis-Engine-Typ.
 
-`W` **Wortgröße**. Größe jeder generierten Zahl in Bits. **Vorbedingung**:`0 < W ≤ numeric_limits<UIntType>::digits`
+*W* **Wortgröße**. Größe jeder generierten Zahl in Bits. **Vorbedingung**:`0 < W ≤ numeric_limits<UIntType>::digits`
 
-`UIntType` Der Ergebnistyp für die ganze Zahl ohne Vorzeichen. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
+*UIntType* der Ergebnistyp für die ganze Zahl ohne Vorzeichen. Mögliche Typen finden Sie unter [\<random>](../standard-library/random.md).
 
 ## <a name="members"></a>Member
 
@@ -53,7 +53,7 @@ Weitere Informationen über Engine-Member finden Sie unter [\<random&gt;](../sta
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Vorlagenklasse beschreibt einen *Engine-Adapter*, der Werte produziert, indem er die von seiner Basis-Engine zurückgegebenen Bits neu verpackt. Dies führt zu `W`-Bit-Werten.
+Diese Vorlagenklasse beschreibt ein *Moduladapter* , der Werte produziert, indem Sie die Rückgabewerte von seinem Moduladapter, wodurch Moduladapter *W*-bit-Werten.
 
 ## <a name="requirements"></a>Anforderungen
 

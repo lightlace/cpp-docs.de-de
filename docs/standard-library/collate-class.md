@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2b6c5e4847737ce0208b35a2db9fac783c225f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848075"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966458"
 ---
 # <a name="collate-class"></a>collate-Klasse
 
@@ -52,11 +52,11 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-`CharType` Der Typ, der innerhalb eines Programms zum Codieren von Zeichen verwendet wird.
+*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen verwendet.
 
 ## <a name="remarks"></a>Hinweise
 
-Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird ein eindeutiger positiver Wert in **id** gespeichert. In einigen Sprachen werden Zeichen gruppiert und als einzelnes Zeichen behandelt. In anderen Sprachen hingegen werden einzelne Zeichen als zwei Zeichen behandelt. Die sortierenden Dienste, die von der collate-Klasse bereitgestellt werden, bieten die Möglichkeit zum Sortieren dieser Fälle.
+Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen gespeicherten Wert von NULL. Beim ersten Versuch, auf den gespeicherten Wert zuzugreifen, wird ein eindeutiger positiver Wert in `id` gespeichert. In einigen Sprachen werden Zeichen gruppiert und als einzelnes Zeichen behandelt. In anderen Sprachen hingegen werden einzelne Zeichen als zwei Zeichen behandelt. Die sortierenden Dienste, die von der collate-Klasse bereitgestellt werden, bieten die Möglichkeit zum Sortieren dieser Fälle.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -90,7 +90,7 @@ Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen
 
 ## <a name="char_type"></a> collate::char_type
 
-Ein Typ, der ein Zeichen vom Typ **CharType** beschreibt.
+Ein Typ, der ein Zeichen vom Typ `CharType` beschreibt.
 
 ```cpp
 typedef CharType char_type;
@@ -98,7 +98,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter **CharType** dar.
+Der Type stellt ein Synonym für den Vorlagenparameter `CharType` dar.
 
 ## <a name="collate"></a> collate::collate
 
@@ -117,13 +117,13 @@ protected:
 
 ### <a name="parameters"></a>Parameter
 
-`_Refs` Integer-Wert verwendet, um den Typ der Verwaltung des Arbeitsspeichers für das Objekt angeben.
+*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
 
-`_Locname` Der Name des Gebietsschemas.
+*_Locname* den Namen des Gebietsschemas.
 
 ### <a name="remarks"></a>Hinweise
 
-Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:
+Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
 - 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
 
@@ -131,7 +131,7 @@ Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:
 
 - \> 1: Diese Werte sind nicht definiert.
 
-Der Konstruktor initialisiert seine Basisobjekt mit **Gebietsschema::**[Facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Der Konstruktor initialisiert sein Basisobjekt mit **Locale::**[Facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="compare"></a> collate::compare
 
@@ -146,13 +146,13 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parameter
 
-`first1` Zeiger auf das erste Element in der ersten Sequenz verglichen werden soll.
+*first1* Zeiger auf das erste Element in der ersten Sequenz verglichen werden soll.
 
-`last1` Zeiger auf das letzte Element in der ersten Sequenz verglichen werden soll.
+*Last1* Zeiger auf das letzte Element in der ersten Sequenz verglichen werden soll.
 
-`first2` Zeiger auf das erste Element in der zweiten Sequenz verglichen werden soll.
+*first2* Zeiger auf das erste Element in der zweiten Sequenz verglichen werden soll.
 
-`last2` Zeiger auf das letzte Element in der zweiten Sequenz verglichen werden soll.
+*Last2* Zeiger auf das letzte Element in der zweiten Sequenz verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -208,13 +208,13 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parameter
 
-`first1` Zeiger auf das erste Element in der ersten Sequenz verglichen werden soll.
+*first1* Zeiger auf das erste Element in der ersten Sequenz verglichen werden soll.
 
-`last1` Zeiger auf das letzte Element in der ersten Sequenz verglichen werden soll.
+*Last1* Zeiger auf das letzte Element in der ersten Sequenz verglichen werden soll.
 
-`first2` Zeiger auf das erste Element in der zweiten Sequenz verglichen werden soll.
+*first2* Zeiger auf das erste Element in der zweiten Sequenz verglichen werden soll.
 
-`last2` Zeiger auf das letzte Element in der zweiten Sequenz verglichen werden soll.
+*Last2* Zeiger auf das letzte Element in der zweiten Sequenz verglichen werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -228,7 +228,7 @@ Die Memberfunktion gibt Folgendes zurück:
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Memberfunktion vergleicht die Sequenz unter [* first1, Last1) * mit der Sequenz unter *[first2, last2*). Sie vergleicht Werte durch Anwenden von **operator<** auf Paare entsprechender Elemente des Typs **CharType**. Die erste Sequenz ist im Vergleich kleiner, wenn sie im frühesten ungleichen Paar in den Sequenzen das kleinere Element enthält oder wenn zwar keine ungleichen Paare vorhanden sind, die erste Sequenz aber kürzer ist.
+Die geschützte virtuelle Memberfunktion vergleicht die Sequenz an [* first1, Last1) * mit der Sequenz an *[first2, last2*). Sie vergleicht Werte durch Anwenden von `operator<` zwischen Paaren entsprechender Elemente des Typs `CharType`. Die erste Sequenz ist im Vergleich kleiner, wenn sie im frühesten ungleichen Paar in den Sequenzen das kleinere Element enthält oder wenn zwar keine ungleichen Paare vorhanden sind, die erste Sequenz aber kürzer ist.
 
 ### <a name="example"></a>Beispiel
 
@@ -244,9 +244,9 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-`first` Ein Zeiger auf das erste Zeichen in der Sequenz, deren Wert hat, ist bestimmt werden soll.
+*erste* werden, dass ein Zeiger auf das erste Zeichen in der Sequenz, dessen Hashwert, bestimmt werden.
 
-`last` Ein Zeiger auf das letzte Zeichen in der Sequenz, deren Wert hat, ist bestimmt werden soll.
+*letzte* werden, dass ein Zeiger auf das letzte Zeichen in der Sequenz, dessen Hashwert, bestimmt werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -270,9 +270,9 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parameter
 
-`first` Ein Zeiger auf das erste Zeichen in der Sequenz, die konvertiert werden.
+*erste* ein Zeiger auf das erste Zeichen in der zu konvertierenden Sequenz.
 
-`last` Ein Zeiger auf das letzte Zeichen in der Sequenz konvertiert werden.
+*letzte* ein Zeiger auf das letzte Zeichen in der zu konvertierenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -296,9 +296,9 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-`first` Ein Zeiger auf das erste Zeichen in der Sequenz, deren Wert hat, ist bestimmt werden soll.
+*erste* werden, dass ein Zeiger auf das erste Zeichen in der Sequenz, dessen Hashwert, bestimmt werden.
 
-`last` Ein Zeiger auf das letzte Zeichen in der Sequenz, deren Wert hat, ist bestimmt werden soll.
+*letzte* werden, dass ein Zeiger auf das letzte Zeichen in der Sequenz, dessen Hashwert, bestimmt werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -340,7 +340,7 @@ int main( )
 
 ## <a name="string_type"></a> collate::string_type
 
-Ein Typ, der eine Zeichenfolge vom Typ `basic_string` beschreibt, die Zeichen vom Typ **CharType** enthält.
+Ein Typ, der eine Zeichenfolge vom Typ `basic_string` beschreibt, die Zeichen vom Typ `CharType` enthält.
 
 ```cpp
 typedef basic_string<CharType> string_type;
@@ -364,9 +364,9 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-`first` Ein Zeiger auf das erste Zeichen in der Sequenz, die konvertiert werden.
+*erste* ein Zeiger auf das erste Zeichen in der zu konvertierenden Sequenz.
 
-`last` Ein Zeiger auf das letzte Zeichen in der Sequenz konvertiert werden.
+*letzte* ein Zeiger auf das letzte Zeichen in der zu konvertierenden Sequenz.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -374,7 +374,7 @@ Eine Zeichenfolge, die die transformierte Zeichensequenz enthält.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt [do_transform](#do_transform)( `first`, `last`) zurück.
+Die Memberfunktion gibt [Do_transform](#do_transform)(`first`, `last`).
 
 ### <a name="example"></a>Beispiel
 

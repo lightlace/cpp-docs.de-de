@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65939df15feeb7654f48246d75d128237c393b10
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f58436bb281af2746197e5d979e1b038a6a5ce1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844327"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961694"
 ---
 # <a name="isabstract-class"></a>is_abstract-Klasse
 
@@ -37,11 +37,11 @@ struct is_abstract;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist TRUE, wenn der `Ty`-Typ eine Klasse ist, die mindestens eine reine virtuelle Funktion aufweist; andernfalls FALSE.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist eine Klasse, die mindestens eine reine virtuelle Funktion ist; andernfalls ist Sie false.
 
 ## <a name="example"></a>Beispiel
 

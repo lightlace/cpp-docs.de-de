@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882248ab4f9ed692aa36bac5873251867b2fff54
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1695306ddc53a8150917eef8b27f5d3edce2bf3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856634"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961863"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
-Definiert mehrere Klassen, die iostreams-Vorgänge für Sequenzen unterstützt, die in einem reservierten Array des `char`-Objekts gespeichert werden. Solche Sequenzen sind leicht in und aus C-Zeichenfolgen zu konvertieren.
+Definiert mehrere Klassen, die Iostreams-Vorgänge für Sequenzen, die in einem reservierten Array des gespeicherten unterstützen **Char** Objekt. Solche Sequenzen sind leicht in und aus C-Zeichenfolgen zu konvertieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,13 +39,13 @@ Definiert mehrere Klassen, die iostreams-Vorgänge für Sequenzen unterstützt, 
 Objekte vom Typ `strstream` arbeiten mit `char` *, die C-Zeichenfolgen darstellen. Verwenden Sie [\<sstream>](../standard-library/sstream.md) zum Arbeiten mit Objekten des Typs [basic_string](../standard-library/basic-string-class.md).
 
 > [!NOTE]
-> Die Klassen in \<Strstream > sind veraltet. Erwägen Sie die Klassen im \<Sstream > stattdessen.
+> Die Klassen im \<Strstream > sind veraltet. Beachten Sie, mithilfe der Klassen im \<Sstream > stattdessen.
 
 ### <a name="classes"></a>Klassen
 
 |Klasse|Beschreibung|
 |-|-|
-|[strstreambuf-Klasse](../standard-library/strstreambuf-class.md)|Die Klasse beschreibt einen Streampuffer, der die Übertragung von Elementen in eine bzw. aus einer Sequenz von Elementen steuert, die in einem `char`-Arrayobjekt gespeichert sind.|
+|[strstreambuf-Klasse](../standard-library/strstreambuf-class.md)|Die Klasse beschreibt einen Streampuffer, der die Übertragung von Elementen in eine bzw. aus einer Sequenz von Elementen, die in gespeicherten steuert eine **Char** Array-Objekt.|
 |[istrstream-Klasse](../standard-library/istrstream-class.md)|Die Klasse beschreibt ein Objekt, das die Extraktion von Elementen und codierten Objekten aus einem Streampuffer der Klasse [strstreambuf](../standard-library/strstreambuf-class.md) steuert.|
 |[ostrstream-Klasse](../standard-library/ostrstream-class.md)|Die Klasse beschreibt ein Objekt, das die Einfügung von Elementen und codierten Objekten in einen Streampuffer der Klasse [strstreambuf](../standard-library/strstreambuf-class.md) steuert.|
 |[strstream-Klasse](../standard-library/strstream-class.md)|Die Klasse beschreibt ein Objekt, das die Einfügung und Extraktion von Elementen und codierten Objekten mit einem Streampuffer der Klasse [strstreambuf](../standard-library/strstreambuf-class.md) steuert.|

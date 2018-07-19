@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109d7ee960b6788468c473e88321a00a38fb4379
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ff0fffeffd10f382f4d0d4fe6361c2eddac55e3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862389"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963130"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -39,7 +39,7 @@ Um ein Objekt für einen regulären Ausdruck zu erstellen, verwenden Sie die Vor
 
 Um Text nach Übereinstimmungen mit Objekt eines regulären Ausdrucks zu suchen, verwenden Sie die Vorlagenfunktionen [Regex_match](../standard-library/regex-functions.md#regex_match) und [Regex_search](../standard-library/regex-functions.md#regex_search)zusammen mit den übereinstimmungsflags des Typs [regex_constants::match_ Flag_type](../standard-library/regex-constants-class.md#match_flag_type). Diese Funktionen geben Ergebnisse zurück, indem sie die Vorlagenklasse [match_results-Klasse](../standard-library/match-results-class.md) und deren Spezialisierungen, [cmatch](../standard-library/regex-typedefs.md#cmatch), [wcmatch](../standard-library/regex-typedefs.md#wcmatch), [smatch](../standard-library/regex-typedefs.md#smatch) und [wsmatch](../standard-library/regex-typedefs.md#wsmatch) zusammen mit der Vorlagenklasse [sub_match-Klasse](../standard-library/sub-match-class.md) und deren Spezialisierungen, [csub_match](../standard-library/regex-typedefs.md#csub_match), [wcsub_match](../standard-library/regex-typedefs.md#wcsub_match), [ssub_match](../standard-library/regex-typedefs.md#ssub_match) und [wssub_match](../standard-library/regex-typedefs.md#wssub_match) verwenden.
 
-Um Text zu ersetzen, das Objekt eines regulären Ausdrucks entspricht, verwenden Sie die Vorlagenfunktion [Regex_replace](../standard-library/regex-functions.md#regex_replace)zusammen mit den übereinstimmungsflags des Typs [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
+Um Text zu ersetzen, die Objekt für einen regulären Ausdruck übereinstimmt, verwenden Sie die Vorlagenfunktion [Regex_replace](../standard-library/regex-functions.md#regex_replace)zusammen mit den übereinstimmungsflags des Typs [regex_constants:: match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
 
 Um mehrere Übereinstimmungen eines Objekts für einen regulären Ausdruck zu durchlaufen, verwenden Sie die Vorlagenklassen [regex_iterator-Klasse](../standard-library/regex-iterator-class.md) und [regex_token_iterator-Klasse](../standard-library/regex-token-iterator-class.md) oder eine von deren Spezialisierungen [cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator), [sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator), [wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator), [wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator), [cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator), [sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator), [wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator) oder [wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator) zusammen mit den Übereinstimmungsflags des Typs [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
 
@@ -55,8 +55,8 @@ Um die Details der Grammatik regulärer Ausdrücke zu ändern, schreiben Sie ein
 |[regex_error](../standard-library/regex-error-class.md)|Meldet einen ungültigen regulären Ausdruck.|
 |[regex_iterator](../standard-library/regex-iterator-class.md)|Durchläuft Übereinstimmungsergebnisse.|
 |[regex_traits](../standard-library/regex-traits-class.md)|Beschreibt die Merkmale von Elementen zum Abgleichen.|
-|[regex_traits\<char>](../standard-library/regex-traits-char-class.md)|Beschreibt die Merkmale von `char` zum Abgleichen.|
-|[regex_traits<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)|Beschreibt die Merkmale von `wchar_t` zum Abgleichen.|
+|[regex_traits\<char>](../standard-library/regex-traits-char-class.md)|Beschreibt die Merkmale von **Char** für den Abgleich.|
+|[regex_traits<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)|Beschreibt die Merkmale von **"wchar_t"** für den Abgleich.|
 |[regex_token_iterator](../standard-library/regex-token-iterator-class.md)|Durchläuft Teilübereinstimmungen.|
 |[sub_match](../standard-library/sub-match-class.md)|Beschreibt eine Teilübereinstimmung.|
 
@@ -64,20 +64,20 @@ Um die Details der Grammatik regulärer Ausdrücke zu ändern, schreiben Sie ein
 
 |||
 |-|-|
-|[cmatch](../standard-library/regex-typedefs.md#cmatch)|Typdefinition für `char` `match_results`.|
-|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Typdefinition für `char` `regex_iterator`.|
-|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|Typdefinition für `char` `regex_token_iterator`.|
-|[csub_match](../standard-library/regex-typedefs.md#csub_match)|Typdefinition für `char` `sub_match`.|
-|[regex](../standard-library/regex-typedefs.md#regex)|Typdefinition für `char` `basic_regex`.|
+|[cmatch](../standard-library/regex-typedefs.md#cmatch)|Die Typdefinition für **Char** `match_results`.|
+|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Die Typdefinition für **Char** `regex_iterator`.|
+|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|Die Typdefinition für **Char** `regex_token_iterator`.|
+|[csub_match](../standard-library/regex-typedefs.md#csub_match)|Die Typdefinition für **Char** `sub_match`.|
+|[regex](../standard-library/regex-typedefs.md#regex)|Die Typdefinition für **Char** `basic_regex`.|
 |[smatch](../standard-library/regex-typedefs.md#smatch)|Typdefinition für `string` `match_results`.|
 |[sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator)|Typdefinition für `string` `regex_iterator`.|
 |[sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator)|Typdefinition für `string` `regex_token_iterator`.|
 |[ssub_match](../standard-library/regex-typedefs.md#ssub_match)|Typdefinition für `string` `sub_match`.|
-|[wcmatch](../standard-library/regex-typedefs.md#wcmatch)|Typdefinition für `wchar_t` `match_results`.|
-|[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator)|Typdefinition für `wchar_t` `regex_iterator`.|
-|[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)|Typdefinition für `wchar_t` `regex_token_iterator`.|
-|[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)|Typdefinition für `wchar_t` `sub_match`.|
-|[wregex](../standard-library/regex-typedefs.md#wregex)|Typdefinition für `wchar_t` `basic_regex`.|
+|[wcmatch](../standard-library/regex-typedefs.md#wcmatch)|Die Typdefinition für **"wchar_t"** `match_results`.|
+|[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator)|Die Typdefinition für **"wchar_t"** `regex_iterator`.|
+|[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)|Die Typdefinition für **"wchar_t"** `regex_token_iterator`.|
+|[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)|Die Typdefinition für **"wchar_t"** `sub_match`.|
+|[wregex](../standard-library/regex-typedefs.md#wregex)|Die Typdefinition für **"wchar_t"** `basic_regex`.|
 |[wsmatch](../standard-library/regex-typedefs.md#wsmatch)|Typdefinition für `wstring` `match_results`.|
 |[wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator)|Typdefinition für `wstring` `regex_iterator`.|
 |[wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator)|Typdefinition für `wstring` `regex_token_iterator`.|

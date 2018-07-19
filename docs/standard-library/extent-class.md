@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb721b23f473c59051e72edc969e5de38f1c984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6df4526eea3b0b8b4e91fa4f3e6a89cdd8adb7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843248"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964309"
 ---
 # <a name="extent-class"></a>extent-Klasse
 
@@ -37,13 +37,13 @@ struct extent;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
-`I` An die Abfrage gebundene Array auf.
+*Ich* das Array an die Abfrage gebundene.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn `Ty` ein Arraytyp mit mindestens `I` Dimensionen ist, enthält die Abfrage die Anzahl der Elemente in der durch `I` angegebener Dimension. Wenn `Ty` nicht ein Arraytyp oder sein Rang kleiner als `I` ist, oder wenn `I` 0 und `Ty` vom Datentyp „Array mit unbekannter Grenze `U`“ ist, enthält die Abfrage den Wert 0.
+Wenn *Ty* ist ein Arraytyp, der mindestens über *ich* Dimensionen, die Typabfrage enthält die Anzahl der Elemente in der Dimension, die anhand des *ich*. Wenn *Ty* ist kein Arraytyp oder sein Rang kleiner als *ich*, oder wenn *ich* ist 0 (null) und *Ty* ist vom Typ "Array mit Unbekannter Grenze von `U` ", die Typabfrage enthält den Wert 0.
 
 ## <a name="example"></a>Beispiel
 

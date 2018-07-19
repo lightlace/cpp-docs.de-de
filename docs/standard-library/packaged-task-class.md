@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], valid
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37d6fc7b01c179f017e04f8064a789b8f4ad2b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7eb5b8d003682f5b941dd805f424afbe4a36cc85
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860904"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964794"
 ---
 # <a name="packagedtask-class"></a>packaged_task-Klasse
 
@@ -123,7 +123,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Parameter
 
-`Right` Ein `packaged_task` Objekt.
+*Rechts* ein `packaged_task` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -131,7 +131,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="remarks"></a>Hinweise
 
-Nach dem Vorgang verfügt `Right` über keinen asynchron zugeordneten Zustand mehr.
+Nach dem Vorgang *rechts* mehr verfügt über keinen zugeordneten asynchronen Zustand.
 
 ## <a name="op_call"></a> packaged_task::operator()
 
@@ -159,7 +159,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn das Objekt einen zugeordneten asynchronen Zustand hat; andernfalls `false`.
+**"true"** verfügt das Objekt einen zugeordneten asynchronen Zustand ist; andernfalls **"false"**.
 
 ## <a name="packaged_task"></a> packaged_task::packaged_task-Konstruktor
 
@@ -178,21 +178,21 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Parameter
 
-`Right` Ein `packaged_task` Objekt.
+*Rechts* ein `packaged_task` Objekt.
 
-`alloc` Eine speicherbelegung. Siehe [\<allocators>](../standard-library/allocators-header.md) für weitere Informationen.
+*Alloc* eine speicherbelegung. Siehe [\<allocators>](../standard-library/allocators-header.md) für weitere Informationen.
 
-`fn` Ein Funktionsobjekt.
+*fn* ein Function-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
 Der erste Konstruktor erstellt ein `packaged_task`-Objekt, das über keinen *zugeordneten asynchronen Zustand* verfügt.
 
-Mit dem zweiten Konstruktor wird ein `packaged_task`-Objekt erstellt, und der zugeordnete asynchrone Zustand wird von `Right` übertragen. Nach dem Vorgang verfügt `Right` über keinen asynchron zugeordneten Zustand mehr.
+Der zweite Konstruktor erstellt ein `packaged_task` Objekt aus, und überträgt den zugeordneten asynchronen Zustand aus *rechts*. Nach dem Vorgang *rechts* mehr verfügt über keinen zugeordneten asynchronen Zustand.
 
-Mit dem dritten Konstruktor wird ein `packaged_task`-Objekt erstellt, das über eine in dessen zugeordnetem asynchronen Zustand gespeicherten Kopie von `fn` verfügt.
+Der dritte Konstruktor erstellt ein `packaged_task` -Objekt, das eine Kopie des ist *fn* in dessen zugeordnetem asynchronen Zustand gespeichert.
 
-Mit dem vierten Konstruktor wird ein `packaged_task`-Objekt erstellt, das über eine Kopie in dessen zugeordnetem asynchronen Zustand gespeicherten `fn` verfügt und `alloc` als Speicherbelegung verwendet.
+Der vierte Konstruktor erstellt ein `packaged_task` -Objekt, das eine Kopie des ist *fn* in dessen zugeordnetem asynchronen Zustand gespeichert, und verwendet `alloc` für speicherbelegung.
 
 ## <a name="dtorpackaged_task_destructor"></a> packaged_task::~packaged_task-Destruktor
 
@@ -228,7 +228,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-`Right` Ein `packaged_task` Objekt.
+*Rechts* ein `packaged_task` Objekt.
 
 ## <a name="valid"></a> packaged_task::valid
 
@@ -240,7 +240,7 @@ bool valid() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn das Objekt einen zugeordneten asynchronen Zustand hat; andernfalls `false`.
+**"true"** verfügt das Objekt einen zugeordneten asynchronen Zustand ist; andernfalls **"false"**.
 
 ## <a name="see-also"></a>Siehe auch
 

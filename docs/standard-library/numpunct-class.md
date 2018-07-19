@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa161e1eec0e02097f22bb15f825542a6928111b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1ae2acae1664656883f4f2eba85c57c8e7725b26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861177"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965564"
 ---
 # <a name="numpunct-class"></a>numpunct-Klasse
 
@@ -60,7 +60,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parameter
 
-`CharType` Der Typ, der innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet wird.
+*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen in einem Gebietsschema verwendet.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -85,14 +85,14 @@ Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen
 |-|-|
 |[decimal_point](#decimal_point)|Gibt ein gebietsschemaspezifisches Element zurück, das als Dezimaltrennzeichen verwendet werden soll.|
 |[do_decimal_point](#do_decimal_point)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um ein gebietsschemaspezifisches Element zurückzugeben, das als Dezimaltrennzeichen verwendet werden soll.|
-|[do_falsename](#do_falsename)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge zurückzugeben, die als Textdarstellung des Werts `false` verwendet werden soll.|
+|[do_falsename](#do_falsename)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge, die als eine Textdarstellung des Werts verwendet zurückzugeben **"false"**.|
 |[do_grouping](#do_grouping)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine gebietsschemaspezifische Regel zur Bestimmung zurückzugeben, wie Ziffern auf der linken Seite eines Dezimaltrennzeichens gruppiert werden.|
 |[do_thousands_sep](#do_thousands_sep)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um ein gebietsschemaspezifisches Element zurückzugeben, das als Tausendertrennzeichen verwendet werden soll.|
-|[do_truename](#do_truename)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge zurückzugeben, die als Textdarstellung des Werts `true` verwendet werden soll.|
-|[falsename](#falsename)|Gibt eine Zeichenfolge zurück, die als Textdarstellung des Werts `false` verwendet werden soll.|
+|[do_truename](#do_truename)|Eine geschützte virtuelle Memberfunktion, die aufgerufen wird, um eine Zeichenfolge zurückzugeben, die als Textdarstellung des Werts **TRUE** verwendet werden soll.|
+|[falsename](#falsename)|Gibt eine Zeichenfolge zurück, die als Textdarstellung des Werts **FALSE** verwendet werden soll.|
 |[grouping](#grouping)|Gibt eine gebietsschemaspezifische Regel zur Bestimmung zurück, wie Ziffern auf der linken Seite eines Dezimaltrennzeichens gruppiert werden sollen.|
 |[thousands_sep](#thousands_sep)|Gibt ein gebietsschemaspezifisches Element zurück, das als Tausendertrennzeichen verwendet werden soll.|
-|[truename](#truename)|Gibt eine Zeichenfolge zurück, die als Textdarstellung des Werts `true` verwendet werden soll.|
+|[truename](#truename)|Gibt eine Zeichenfolge zurück, die als Textdarstellung des Werts **TRUE** verwendet werden soll.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -209,7 +209,7 @@ Die geschützte virtuelle Memberfunktion gibt eine gebietsschemaspezifische Rege
 
 ### <a name="example"></a>Beispiel
 
-Informationen hierzu finden Sie im Beispiel für [grouping](#grouping), bei dem die virtuelle Memberfunktion durch **grouping** aufgerufen wird.
+Siehe das Beispiel für [gruppieren](#grouping), bei dem die virtuelle Memberfunktion, indem aufgerufen wird `grouping`.
 
 ## <a name="do_thousands_sep"></a> numpunct::do_thousands_sep
 
@@ -225,7 +225,7 @@ Gibt ein gebietsschemaspezifisches Element zurück, das als Tausendertrennzeiche
 
 ### <a name="remarks"></a>Hinweise
 
-Eine geschützte virtuelle Memberfunktion gibt ein gebietsschemaspezifisches Element des Typs **CharType** zurück, das auf der linken Seite eines Dezimalzeichens als Gruppentrennzeichen verwendet werden soll.
+Die geschützte virtuelle Memberfunktion gibt ein gebietsschemaspezifisches Element des Typs `CharType` als Gruppentrennzeichen auf der linken Seite eines Dezimaltrennzeichens verwenden.
 
 ### <a name="example"></a>Beispiel
 
@@ -259,7 +259,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Rückgabewert
 
-Eine Zeichenfolge, die eine **CharType**-Sequenz enthält, die als Textdarstellung des Werts **FALSE** verwendet werden soll.
+Eine Zeichenfolge, die eine Sequenz von `CharType`e zur Verwendung als eine Textdarstellung des Werts **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -354,11 +354,11 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-`_Refs` Integer-Wert verwendet, um den Typ der Verwaltung des Arbeitsspeichers für das Objekt angeben.
+*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
 
 ### <a name="remarks"></a>Hinweise
 
-Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:
+Die möglichen Werte für die *_Refs* Parameter und ihre Bedeutung:
 
 - 0: Die Lebensdauer des Objekts wird von den Gebietsschemas verwaltet, in denen es enthalten ist.
 
@@ -368,7 +368,7 @@ Mögliche Werte für den `_Refs`-Parameter und ihre Bedeutung:
 
 Direkte Beispiele hierfür sind nicht möglich, da der Destruktor geschützt ist.
 
-Der Konstruktor initialisiert sein Basisobjekt mit **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
+Der Konstruktor initialisiert sein Basisobjekt mit **Locale::**[Facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="string_type"></a> numpunct::string_type
 

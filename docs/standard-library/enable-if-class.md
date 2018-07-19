@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fbcf91b2b863312374fad96239a9585bb3b38c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2192ea954df1e7a63157d6deb04c7d34cd42337c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846908"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966484"
 ---
 # <a name="enableif-class"></a>enable_if-Klasse
 
-Wandelt einen Typ für die SFINAE-Überladungsauflösung bedingt in eine Instanz um. Der geschachtelte typedef-`enable_if<Condition,Type>::type` existiert und ist ein Synonym für `Type` – wenn und nur dann, wenn `Condition` gleich `true` ist.
+Wandelt einen Typ für die SFINAE-Überladungsauflösung bedingt in eine Instanz um. Die geschachtelte Typedef `enable_if<Condition,Type>::type` vorhanden ist, und ist ein Synonym für `Type`– nur, wenn `Condition` ist **"true"**.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,15 +37,15 @@ struct enable_if;
 
 ### <a name="parameters"></a>Parameter
 
-`B` Der Wert, der das Vorhandensein des Ergebnistyps bestimmt.
+*B* den Wert, der bestimmt, ob der resultierende Typ vorhanden ist.
 
-`T` Der Typ, wenn instanziieren `B` ist "true".
+*T* der Typ, wenn instanziieren *B* ist "true".
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn `B` "true" ist, weist `enable_if<B, T>` eine geschachtelte Typdefinition namens "type" auf, die ein Synonym für `T` ist.
+Wenn *B* ist "true" `enable_if<B, T>` verfügt über eine geschachtelte Typdefinition namens "type", das ein Synonym für *T*.
 
-Wenn `B` "false" ist, weist `enable_if<B, T>` keine geschachtelte Typdefinition namens "type" auf.
+Wenn *B* ist "false" `enable_if<B, T>` verfügt nicht über eine geschachtelte Typdefinition namens "Type".
 
 Die folgende Alias-Vorlage steht zur Verfügung:
 
@@ -100,7 +100,7 @@ s) {// ...
 
 Szenario 1 funktioniert nicht mit Konstruktoren und Konvertierungsoperatoren, da diese keine Rückgabetypen haben.
 
-In Szenario 2 bleibt der Parameter unbenannt. Sie können ihn `::type Dummy = BAR` nennen, aber der Namens-`Dummy` ist irrelevant, und eine Benennung löst wahrscheinlich eine Warnung über einen nicht referenzierten Parameter aus. Sie müssen einen `FOO` Funktionsparameter typ und ein `BAR`-Standardargument auswählen.  Sie können diese `int` und `0` nennen, aber in diesem Falle könnten Benutzer Ihres Codes zufällig eine zusätzliche Ganzzahl an diese Funktion übergeben, die ignoriert würde. Wir empfehlen stattdessen, `void **` und entweder `0` oder `nullptr` zu verwenden, da fast nichts in `void **` umwandelbar ist:
+In Szenario 2 bleibt der Parameter unbenannt. Sie können ihn `::type Dummy = BAR` nennen, aber der Namens-`Dummy` ist irrelevant, und eine Benennung löst wahrscheinlich eine Warnung über einen nicht referenzierten Parameter aus. Sie müssen einen `FOO` Funktionsparameter typ und ein `BAR`-Standardargument auswählen.  Sie können z. B. **Int** und `0`, aber dann Benutzer Ihres Codes könnte versehentlich an die Funktion übergeben eine zusätzliche Ganzzahl, die ignoriert würde. Stattdessen empfehlen wir die Verwendung von `void **` und entweder `0` oder **"nullptr"** da fast nichts konvertierbar ist `void **`:
 
 ```cpp
 template <your_stuff>
@@ -135,7 +135,7 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-In diesem Beispiel gibt `make_pair("foo", "bar")` `pair<const char *, const char *>` zurück. Überladungsauslösung, die bestimmen muss, welche `func()` Sie möchten. `pair<A, B>` hat einen impliziten Konvertierungskonstruktor aus `pair<X, Y>`.  Dies ist nicht neu, sondern war schon in C++98 vorhanden. In C++98/03 ist allerdings die Signatur des impliziten Konvertierungskonstruktors immer vorhanden, selbst wenn es `pair<int, int>(const pair<const char *, const char *>&)` ist.  Für die Überladungsauslösung ist es egal, wenn ein Versuch, diesen Konstruktor zu instanzieren, fehlschlägt, da `const char *` nicht implizit in `int` konvertierbar ist; sie schaut nur auf Signaturen, bevor Funktionsdefinitionen instanziert werden.  Deshalb ist der Beispielcode mehrdeutig, da Signaturen zur Konvertierung von `pair<const char *, const char *>` in `pair<int, int>` und in `pair<string, string>` vorhanden sind.
+In diesem Beispiel gibt `make_pair("foo", "bar")` `pair<const char *, const char *>` zurück. Überladungsauslösung, die bestimmen muss, welche `func()` Sie möchten. `pair<A, B>` hat einen impliziten Konvertierungskonstruktor aus `pair<X, Y>`.  Dies ist nicht neu, sondern war schon in C++98 vorhanden. In C++98/03 ist allerdings die Signatur des impliziten Konvertierungskonstruktors immer vorhanden, selbst wenn es `pair<int, int>(const pair<const char *, const char *>&)` ist.  Überladungsauflösung ist unerheblich, dass der Versuch, diesen Konstruktor zu instanzieren furchtbar da überladungsauslösung `const char *` wird nicht implizit in **Int**; nur auf Signaturen gesucht wird, vor der Funktion sind instanziiert.  Deshalb ist der Beispielcode mehrdeutig, da Signaturen zur Konvertierung von `pair<const char *, const char *>` in `pair<int, int>` und in `pair<string, string>` vorhanden sind.
 
 In C++11 wurde diese Mehrdeutigkeit durch Verwendung von `enable_if` aufgelöst, um sicherzustellen, dass `pair<A, B>(const pair<X, Y>&)` **nur dann** vorhanden ist, wenn `const X&` implizit in `A` konvertierbar ist und `const Y&` implizit in `B` konvertierbar ist.  Dadurch kann die Überladungsauflösung festlegen, dass `pair<const char *, const char *>` nicht in `pair<int, int>` konvertierbar ist und dass die Überladung, die `pair<string, string>` aufnimmt, realisierbar ist.
 

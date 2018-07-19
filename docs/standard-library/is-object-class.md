@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eaae998f1ca975e8eb4d102c8f7793ac8ab3b34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413223636efb735303ec600b09803472370ff306
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912783"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965590"
 ---
 # <a name="isobject-class"></a>is_object-Klasse
 
@@ -37,11 +37,11 @@ struct is_object;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typs Prädikats ist „false“, wenn der Typ `Ty` ein Verweistyp, ein Funktionstyp, ungültig oder eine `cv-qualified`-Form davon ist, andernfalls „true“.
+Eine Instanz des typprädikats ist "false" aus, wenn der Typ *Ty* ist ein Verweistyp, ein Funktionstyp oder "void", oder ein `cv-qualified` -Formular von einem davon ist, andernfalls gilt.
 
 ## <a name="example"></a>Beispiel
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84cc8ade8d844b591d6cb848ebee0fb3b05fb932
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c0e37eb0eaa7f0a6e40f385315822742f15516e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851901"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962370"
 ---
 # <a name="isscalar-class"></a>is_scalar-Klasse
 
@@ -37,11 +37,11 @@ struct is_scalar;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ergibt TRUE, wenn der Typ `Ty` ein ganzzahliger Typ, ein Gleitkommawert, ein Enumerationstyp, ein Zeigertyp oder ein Zeiger auf einen Membertyp oder ein `cv-qualified`-Formular von diesen ist; andernfalls FALSE.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein integraler Typ, ein Gleitkommawert Typ, ein Enumerationstyp, ein Zeigertyp oder ein Zeiger auf einen Membertyp oder ein `cv-qualified` -Formular von einem davon ist, andernfalls er false enthält.
 
 ## <a name="example"></a>Beispiel
 

@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7453120d40efc05fd0dce919a7b85869710a9b18
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ab94a9aadc40b4313995a71171d6712657e7ff0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848910"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964951"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf-Klasse
 
@@ -124,13 +124,13 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>Parameter
 
-`Elem` Ein [Char_type](#char_type).
+*Elem* ein [Char_type](#char_type).
 
-`Tr` Das Zeichen [Traits_type](#traits_type).
+*TR* das Zeichen [Traits_type](#traits_type).
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse beschreibt eine abstrakte Basisklasse für die Ableitung eines Streampuffers, der die Übertragung von Elementen in eine und aus einer bestimmten Darstellung eines Streams steuert. Ein Objekt der Klasse `basic_streambuf` dient zur Steuerung eines Streams mit Elementen vom Typ `Tr`, auch als [char_type](#char_type) bezeichnet, deren Zeichenmerkmale durch die Klasse [char_traits](../standard-library/char-traits-struct.md), auch als [traits_type](#traits_type) bezeichnet, bestimmt werden.
+Die Vorlagenklasse beschreibt eine abstrakte Basisklasse für die Ableitung eines Streampuffers, der die Übertragung von Elementen in eine und aus einer bestimmten Darstellung eines Streams steuert. Ein Objekt der Klasse `basic_streambuf` steuert einen Stream mit Elementen des Typs *Tr*, auch bekannt als [Char_type](#char_type), dessen Zeichenmerkmale von der Klasse ermittelt werden [Char_traits](../standard-library/char-traits-struct.md), auch bekannt als [Traits_type](#traits_type).
 
 Jeder Streampuffer steuert konzeptuell zwei unabhängige Streams: einen für Extraktionen (Eingabe) und einen für Einfügungen (Ausgabe). Eine bestimmte Darstellung kann jedoch den Zugriff auf einen oder beide Streams unmöglich machen. In der Regel besteht eine bestimmte Beziehung zwischen den beiden Streams. Was Sie in den Ausgabestream eines [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`>-Objekts einfügen, extrahieren Sie beispielsweise später aus dem Eingabestream. Wenn Sie einen Stream eines [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>-Objekts positionieren, positionieren Sie den anderen Stream entsprechend.
 
@@ -250,13 +250,13 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Ein Lvalue-Verweis auf die `basic_streambuf` -Objekt, das verwendet wird, zum Festlegen der Werte für diesen `basic_streambuf` Objekt.
+*richtige* ein Lvalue-Verweis auf die `basic_streambuf` -Objekt, das verwendet wird, zum Festlegen der Werte für diese `basic_streambuf` Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
 Der erste geschützte Konstruktor speichert einen NULL-Zeiger in allen Zeigern, die den Eingabe- und Ausgabepuffer steuern. Er speichert auch `locale::classic` im locale-Objekt. Weitere Informationen finden Sie unter [locale::classic](../standard-library/locale-class.md#classic).
 
-Der zweite geschützte Konstruktor kopiert die Zeiger und das Gebietsschema von `right`.
+Der zweite geschützte Konstruktor kopiert die Zeiger und das Gebietsschema von *rechten*.
 
 ## <a name="char_type"></a> basic_streambuf::char_type
 
@@ -304,7 +304,7 @@ Ein Zeiger hinter das Ende des Ausgabepuffers.
 
 ## <a name="gbump"></a> basic_streambuf::gbump
 
-Eine geschützte Funktion, die dem nächsten Zeiger für den Eingabepuffer `count` hinzufügt.
+Eine geschützte Funktion, die hinzufügt *Anzahl* dem nächsten Zeiger für den Eingabepuffer.
 
 ```cpp
 void gbump(int count);
@@ -312,7 +312,7 @@ void gbump(int count);
 
 ### <a name="parameters"></a>Parameter
 
-`count` Der Betrag, um den Zeiger zu gelangen.
+*Anzahl* der Betrag, um den Zeiger nach vorne verschoben.
 
 ## <a name="getloc"></a> basic_streambuf::getloc
 
@@ -370,7 +370,7 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parameter
 
-`_Loc` Ein Verweis auf ein Gebietsschema.
+*_Loc* einen Verweis auf ein Gebietsschema.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -436,11 +436,11 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Ein Lvalue-Verweis auf die `basic_streambuf` -Objekt, das verwendet wird, um dieses Objekt Werte zuzuweisen.
+*richtige* ein Lvalue-Verweis auf die `basic_streambuf` -Objekt, das verwendet wird, um dieses Objekt Werte zuzuweisen.
 
 ### <a name="remarks"></a>Hinweise
 
-Der geschützte Memberoperator kopiert die Zeiger aus `right`, die den Eingabepuffer und den Ausgabepuffer steuern. Außerdem speichert er `right.`[getloc()](#getloc) im `locale object`. Er gibt `*this` zurück.
+Der geschützte Memberoperator kopiert aus *rechten* die Zeiger, die den Eingabe- und Ausgabepuffer steuern. Außerdem speichert er `right.`[getloc()](#getloc) im `locale object`. Er gibt `*this` zurück.
 
 ## <a name="overflow"></a> basic_streambuf::overflow
 
@@ -452,7 +452,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parameter
 
-`_Meta` Das Zeichen im Puffer eingefügt oder **Traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta* das Zeichen, das in den Puffer eingefügt oder **Traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -486,7 +486,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parameter
 
-`_Meta` Das Zeichen im Puffer eingefügt oder **Traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta* das Zeichen, das in den Puffer eingefügt oder **Traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -516,7 +516,7 @@ Ein Zeiger auf den Anfang des Ausgabepuffers.
 
 ## <a name="pbump"></a> basic_streambuf::pbump
 
-Eine geschützte Funktion, die dem nächsten Zeiger für den Ausgabepuffer `count` hinzufügt.
+Eine geschützte Funktion, die hinzufügt *Anzahl* dem nächsten Zeiger für den Ausgabepuffer.
 
 ```cpp
 void pbump(int count);
@@ -524,7 +524,7 @@ void pbump(int count);
 
 ### <a name="parameters"></a>Parameter
 
-`count` Die Anzahl der Zeichen, um die Schreibposition vorwärts zu bewegen.
+*Anzahl* vorwärts positionieren Sie die Anzahl der Zeichen, um den Schreibvorgang verschoben.
 
 ## <a name="pos_type"></a> basic_streambuf::pos_type
 
@@ -556,7 +556,7 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parameter
 
-`_Loc` Ein Verweis auf ein Gebietsschema.
+*_Loc* einen Verweis auf ein Gebietsschema.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -582,11 +582,11 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parameter
 
-`_Off` Die Position zur für relativ zur Suche nach `_Way`.
+*_Off* die Position, die für die Suche, relativ zum *_Way*.
 
-`_Way` Der Startpunkt für offsetvorgänge. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
+*_Way* den Startpunkt für offsetvorgänge. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
 
-`_Which` Gibt den Modus für die Position des Mauszeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+*_Which* gibt den Modus für die Position des Zeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -594,7 +594,7 @@ Gibt die neue Position oder eine ungültige Streamposition zurück ( [seekoff](#
 
 ### <a name="remarks"></a>Hinweise
 
-Bewegt den Zeiger relativ zu `_Way`.
+Bewegt den Zeiger relativ zum *_Way*.
 
 ## <a name="pubseekpos"></a> basic_streambuf::pubseekpos
 
@@ -606,9 +606,9 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>Parameter
 
-`_Sp` Die Position, die für die Suche.
+*_Sp* die Position, die für die Suche.
 
-`_Which` Gibt den Modus für die Position des Mauszeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+*_Which* gibt den Modus für die Position des Zeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -630,9 +630,9 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>Parameter
 
-`_Buffer` Ein Zeiger auf `char_type` für diese Instanziierung.
+*_Buffer* ein Zeiger auf `char_type` für diese Instanziierung.
 
-`count` Die Größe des Puffers.
+*Anzahl* die Größe des Puffers.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -648,7 +648,7 @@ int pubsync();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Gibt [Sync](#sync) oder-1 zurück, wenn Fehler.
+Gibt [Sync](#sync) oder -1, wenn Fehler.
 
 ## <a name="sbumpc"></a> basic_streambuf::sbumpc
 
@@ -707,11 +707,11 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parameter
 
-`_Off` Die Position zur für relativ zur Suche nach `_Way`.
+*_Off* die Position, die für die Suche, relativ zum *_Way*.
 
-`_Way` Der Startpunkt für offsetvorgänge. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
+*_Way* den Startpunkt für offsetvorgänge. Mögliche Werte sind unter [seekdir](../standard-library/ios-base-class.md#seekdir) aufgeführt.
 
-`_Which` Gibt den Modus für die Position des Mauszeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+*_Which* gibt den Modus für die Position des Zeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -741,9 +741,9 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parameter
 
-`_Sp` Die Position, die für die Suche.
+*_Sp* die Position, die für die Suche.
 
-`_Which` Gibt den Modus für die Position des Mauszeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
+*_Which* gibt den Modus für die Position des Zeigers. Standardmäßig können Lese- und Schreibpositionen geändert werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -769,9 +769,9 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parameter
 
-`_Buffer` Zeiger auf einen Puffer.
+*_Buffer* Zeiger auf einen Puffer.
 
-`count` Die Größe des Puffers.
+*Anzahl* Größe des Puffers.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -793,15 +793,15 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>Parameter
 
-*_Gbeg* einen Zeiger auf den Anfang des Puffers.
+*_Gbeg* ein Zeiger auf den Anfang des Puffers.
 
-`_Gnext` Ein Zeiger auf die an einer Stelle in der Mitte der Puffer.
+*_Gnext* ein Zeiger auf eine Position in der Mitte des Puffers.
 
-`_Gend` Ein Zeiger auf das Ende des Puffers.
+*_Gend* ein Zeiger auf das Ende des Puffers.
 
 ## <a name="setp"></a> basic_streambuf::setp
 
-Eine geschützte Funktion, die `_Pbeg` im Startzeiger und `_Pend` im Endzeiger für den Ausgabepuffer speichert.
+Eine geschützte Funktion, die speichert *_Pbeg* im startzeiger und *_Pend* im endzeiger für den Ausgabepuffer.
 
 ```cpp
 void setp(char_type* _Pbeg, char_type* _Pend);
@@ -809,9 +809,9 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>Parameter
 
-`_Pbeg` Ein Zeiger auf den Anfang des Puffers.
+*_Pbeg* ein Zeiger auf den Anfang des Puffers.
 
-`_Pend` Ein Zeiger auf das Ende des Puffers.
+*_Pend* ein Zeiger auf das Ende des Puffers.
 
 ## <a name="sgetc"></a> basic_streambuf::sgetc
 
@@ -851,7 +851,7 @@ int main( )
 
 ## <a name="sgetn"></a> basic_streambuf::sgetn
 
-Extrahiert bis zu `count` Zeichen aus dem Eingabepuffer und speichert Sie im bereitgestellten Puffer `ptr`.
+Extrahiert bis zu *Anzahl* Zeichen aus dem Eingabepuffer und speichert sie in den bereitgestellten Puffer *Ptr*.
 
 Diese Methode ist potenziell unsicher, da sie darauf basiert, dass der Aufrufer überprüft, ob die übergebenen Werte korrekt sind.
 
@@ -863,9 +863,9 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Der Puffer, der die extrahierten Zeichen enthalten.
+*PTR* der Puffer, der die extrahierten Zeichen enthalten.
 
-`count` Die Anzahl der zu lesenden Elemente.
+*Anzahl* die Anzahl der zu lesenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -967,7 +967,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Parameter
 
-`_Ch` Das Zeichen.
+*_Ch* das Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -975,7 +975,7 @@ Gibt das Zeichen oder einen Fehler zurück.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn eine Position zur Wiederherstellung verfügbar ist, und `_Ch` mit dem Zeichen übereinstimmt, das in dieser Position gespeichert ist, verringert die Memberfunktion den nächsten Zeiger für den Eingabepuffer und gibt **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`) zurück. Andernfalls wird [pbackfail](#pbackfail)( `_Ch`) zurückgegeben.
+Wenn eine Position zur Wiederherstellung verfügbar ist und *_Ch* übereinstimmt, das Zeichen gespeichert, die an dieser Position, verringert die Memberfunktion den nächsten Zeiger für den Eingabepuffer und gibt **Traits_type::** [ To_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). Andernfalls wird [pbackfail](#pbackfail)( `_Ch`) zurückgegeben.
 
 ### <a name="example"></a>Beispiel
 
@@ -1014,7 +1014,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Parameter
 
-`_Ch` Das Zeichen.
+*_Ch* das Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1022,7 +1022,7 @@ Gibt das Zeichen zurück, falls erfolgreich.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn `write position` verfügbar ist, speichert die Memberfunktion `_Ch` in der Schreibposition, erhöht den nächsten Zeiger für den Ausgabespeicher und gibt **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`) zurück. Andernfalls wird [overflow](#overflow)( `_Ch`) zurückgegeben.
+Wenn eine `write position` verfügbar ist, die Memberfunktion speichert *_Ch* in der Schreibposition, erhöht den nächsten Zeiger für den Ausgabepuffer und gibt **Traits_type::**[To_int_type ](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). Andernfalls wird [overflow](#overflow)( `_Ch`) zurückgegeben.
 
 ### <a name="example"></a>Beispiel
 
@@ -1056,9 +1056,9 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Die Zeichenfolge.
+*PTR* der Zeichenfolge.
 
-`count` Die Anzahl der Zeichen.
+*Anzahl* die Anzahl von Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1183,11 +1183,11 @@ void swap(basic_streambuf& right);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`right`|Einen lvalue-Verweis auf das `basic_streambuf`-Objekt, das zum Austauschen von Werten verwendet wird.|
+|*right*|Einen lvalue-Verweis auf das `basic_streambuf`-Objekt, das zum Austauschen von Werten verwendet wird.|
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Memberfunktion tauscht mit `right` alle Zeiger aus, die den `input buffer` und den `output buffer` steuern. Außerdem tauscht sie `right.`[getloc()](#getloc) mit dem `locale`-Objekt aus.
+Die geschützte Memberfunktion tauscht mit *rechten* allen Zeigern, steuern die `input buffer` und `output buffer`. Außerdem tauscht sie `right.`[getloc()](#getloc) mit dem `locale`-Objekt aus.
 
 ## <a name="sync"></a> basic_streambuf::sync
 
@@ -1281,9 +1281,9 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Der Puffer, der die extrahierten Zeichen enthalten.
+*PTR* der Puffer, der die extrahierten Zeichen enthalten.
 
-`count` Die Anzahl von Elementen zu extrahieren.
+*Anzahl* die Anzahl der zu extrahierenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1291,7 +1291,7 @@ Die Anzahl der extrahierten Elemente.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Memberfunktion extrahiert bis zu `count` Elemente aus dem Eingabestream, wie durch mehrfache Aufrufe von [sbumpc](#sbumpc), und speichert sie im Array, das bei `ptr` beginnt. Gibt die Anzahl der Elemente zurück, die tatsächlich extrahiert wurden.
+Die geschützte virtuelle Memberfunktion extrahiert bis zu *Anzahl* Elemente aus dem Eingabestream, wie durch mehrfache Aufrufe von [Sbumpc](#sbumpc), und speichert sie in das Array, beginnend am *Ptr*. Gibt die Anzahl der Elemente zurück, die tatsächlich extrahiert wurden.
 
 ## <a name="xsputn"></a> basic_streambuf::xsputn
 
@@ -1303,9 +1303,9 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Ein Zeiger auf die einzufügenden Elemente.
+*PTR* Zeiger auf Elemente einfügen.
 
-`count` Anzahl der einzufügenden Elemente.
+*Anzahl* Anzahl der einzufügenden Elemente.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -1313,7 +1313,7 @@ Die Anzahl von Elementen, die tatsächlich in den Stream eingefügt werden.
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte virtuelle Memberfunktion fügt bis zu `count` Elemente in den Eingabestream, wie durch mehrfache Aufrufe von [sputc](#sputc), aus dem Array ein, das bei `ptr` beginnt. Das Einfügen von Zeichen in den Ausgabestream beendet einmalig alle `count` Zeichen, die geschrieben wurden. Beim Aufruf von `sputc( count)` würde `traits::eof()` zurückgegeben werden. Sie gibt die Anzahl der Elemente zurück, die tatsächlich eingefügt werden.
+Die geschützte virtuelle Memberfunktion fügt bis zu *Anzahl* Elemente in der Ausgabe zu streamen, wie durch mehrfache Aufrufe von [Sputc](#sputc), aus dem Array, beginnend bei *Ptr*. Das Einfügen von Zeichen in den Ausgabestream beendet einmalig alle *Anzahl* Zeichen geschrieben wurden, oder wenn der Aufruf `sputc( count)` zurück `traits::eof()`. Sie gibt die Anzahl der Elemente zurück, die tatsächlich eingefügt werden.
 
 ## <a name="see-also"></a>Siehe auch
 

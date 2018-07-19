@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 25e40157c1872df3e970bb234accab5c487c6287
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0bc4ce7c36d3ba097b04b1704fea7633eb7d26ea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841127"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962955"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;Allocators&gt;-Operatoren
 
-Dies sind globale Vorlage Operatorfunktionen in definierten &lt;allokatoren&gt;. Klassenmemberfunktionen Operator finden Sie in der Klassendokumentation.
+Hierbei handelt es sich um die globale Operator Vorlagenfunktionen in definierten &lt;Zuweisungen&gt;. Operator Memberfunktionen von Klassen finden Sie in der Dokumentation der Klasse.
 
 |||
 |-|-|
@@ -39,8 +39,8 @@ bool operator!=(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`left`|Eines der Zuweisungsobjekte, die auf Ungleichheit geprüft werden sollen.|
-|`right`|Eines der Zuweisungsobjekte, die auf Ungleichheit geprüft werden sollen.|
+|*left*|Eines der Zuweisungsobjekte, die auf Ungleichheit geprüft werden sollen.|
+|*right*|Eines der Zuweisungsobjekte, die auf Ungleichheit geprüft werden sollen.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -65,8 +65,8 @@ bool operator==(
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`left`|Eines der Zuweisungsobjekte, die auf Gleichheit geprüft werden sollen.|
-|`right`|Eines der Zuweisungsobjekte, die auf Gleichheit geprüft werden sollen.|
+|*left*|Eines der Zuweisungsobjekte, die auf Gleichheit geprüft werden sollen.|
+|*right*|Eines der Zuweisungsobjekte, die auf Gleichheit geprüft werden sollen.|
 
 ### <a name="return-value"></a>Rückgabewert
 

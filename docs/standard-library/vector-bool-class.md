@@ -25,16 +25,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7f4e185f19b07ddcec47b8f167e7040a5bef28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863399"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962779"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt;-Klasse
 
-Die `vector<bool>`-Klasse ist eine teilweise Spezialisierung von [vector](../standard-library/vector-class.md) für Elemente vom Typ `bool`. Sie verfügt über eine Zuweisung für den zugrunde liegenden Typ, der von der Spezialisierung verwendet wird, die Leerzeichenoptimierung durch Speichern von einem `bool`-Wert pro Bit bereitstellt.
+Die `vector<bool>` -Klasse ist eine teilweise Spezialisierung von [Vektor](../standard-library/vector-class.md) für Elemente des Typs **"bool"**. Es wurde eine Zuweisung für den zugrunde liegenden Typ, der von der Spezialisierung, die leerzeichenoptimierung verwendet wird durch Speichern von einem bietet **"bool"** -Wert pro Bit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,14 +47,14 @@ class vector<bool, Allocator>
 
 Diese Spezialisierung einer Klassenvorlage verhält sich wie vector, abgesehen von den Unterschieden, die in diesem Artikel erklärt werden.
 
-Vorgänge, die den `bool`-Typ betreffen, entsprechen den Werten im Containerspeicher. `allocator_traits::construct` wird nicht verwendet, um diese Werte zu erstellen.
+Vorgänge, die Behandlung der **"bool"** Typ entsprechen Werten im containerspeicher. `allocator_traits::construct` wird nicht verwendet, um diese Werte zu erstellen.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Typname|Beschreibung|
 |-|-|
 |[const_pointer](#const_pointer)|Eine Typedef für ein `const_iterator`-Element, das als konstanter Zeiger auf ein boolesches Element des `vector<bool>`-Elements dienen kann.|
-|[const_reference](#const_reference)|Eine Typedef für `bool`. Nach der Initialisierung werden keine Updates auf den ursprünglichen Wert berücksichtigt.|
+|[const_reference](#const_reference)|Eine Typedef für **"bool"**. Nach der Initialisierung werden keine Updates auf den ursprünglichen Wert berücksichtigt.|
 |[pointer](#pointer)|Eine Typedef für ein `iterator`-Element, das als Zeiger auf ein boolesches Element des `vector<bool>`-Elements dienen kann.|
 
 ### <a name="member-functions"></a>Memberfunktionen
@@ -153,7 +153,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |Parameter|Beschreibung|
 |-|-|
-|`Pos`|Die Position des `vector<bool>`-Elements.|
+|*POS*|Die Position des `vector<bool>`-Elements.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -163,7 +163,7 @@ Wenn die angegebene Position größer oder gleich der Größe des Containers ist
 
 ### <a name="remarks"></a>Hinweise
 
-Beim Kompilieren mit festgelegtem `_ITERATOR_DEBUG_LEVEL`-Wert tritt ein Laufzeitfehler auf, wenn Sie versuchen, auf ein Element außerhalb der Grenzen des Vektors zuzugreifen.  Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
+Wenn Sie mit _ITERATOR_DEBUG_LEVEL kompilieren, tritt ein Laufzeitfehler auf, wenn Sie versuchen, auf ein Element außerhalb der Grenzen des Vektors zuzugreifen.  Weitere Informationen finden Sie unter [Checked Iterators (Überprüfte Iteratoren)](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -268,7 +268,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a> vector\<bool>::reference::operator bool
 
-Stellt eine implizite Konvertierung von `vector<bool>::reference` in `bool` bereit.
+Stellt eine implizite Konvertierung von `vector<bool>::reference` zu **"bool"**.
 
 ```cpp
 operator bool() const;
@@ -293,9 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parameter
 
-`Right` Der Elementverweis, dessen Wert ist mit dem Bit zugewiesen werden.
+*Rechts*  
+ Der Elementverweis, dessen Wert dem Bit zugewiesen werden soll.
 
-`Val` Der boolesche Wert, der dem Bit zugewiesen werden.
+*val*  
+ Der boolesche Wert, der dem Bit zugewiesen werden soll.
 
 #### <a name="example"></a>Beispiel
 
@@ -380,9 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>Parameter
 
-`Left` Das Element mit ausgetauscht werden sollen die `Right` Element.
+*Links*  
+ Das Element, das mit ausgetauscht werden, die *rechts* Element.
 
-`Right` Das Element mit ausgetauscht werden sollen die `Left` Element.
+*Rechts*  
+ Das Element, das mit ausgetauscht werden, die *Links* Element.
 
 ### <a name="remarks"></a>Hinweise
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c95007f1db1bcaf549398fa8865a9e51fe23d1
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 410566c623595cc941ab6e6ad21dd95bd70fe516
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954101"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963666"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible-Klasse
 
@@ -36,13 +36,13 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Der abzufragende Typ.
+*T* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist „true“, wenn der `T` Typ eine Klasse ist, die einen trivialen Kopierkonstruktor aufweist; andernfalls „false“.
+Eine Instanz des typprädikats ist true, wenn der Typ *T* ist eine Klasse, die einen trivialen Kopierkonstruktor, andernfalls er false enthält.
 
-Ein Kopierkonstruktor für eine Klasse `T` ist trivial, wenn er implizit deklariert wurde. Die Klasse `T` verfügt über keine virtuellen Funktionen oder Basen und alle direkten Basen der Klasse `T` haben triviale Kopierkonstruktoren. Die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Kopierkonstruktoren und die Klassen aller nicht statischen Datenmember vom Typ „array“ der Klasse haben triviale Kopierkonstruktoren.
+Ein Kopierkonstruktor für eine Klasse *T* ist trivial, wenn er implizit deklariert, die Klasse *T* verfügt über keine virtuellen Funktionen oder Basen und alle direkten Basen der Klasse *T* haben triviale Kopierkonstruktoren, die Klassen aller nicht statischen Datenmember des Klassentyps haben triviale Kopierkonstruktoren, und die Klassen aller nicht statischen Datenmember vom Typarray der Klasse haben triviale Kopierkonstruktoren.
 
 ## <a name="requirements"></a>Anforderungen
 

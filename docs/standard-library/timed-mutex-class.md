@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4dc22ed8676c720dd8bde5c8f424915dfa8fe40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7181b4c5c1c74d5726fd37e98366225aecf7f63a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863257"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962659"
 ---
 # <a name="timedmutex-class"></a>timed_mutex-Klasse
 
@@ -112,7 +112,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Methode erfolgreich in den Besitz von `mutex` gelangt; andernfalls `false`.
+**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex`ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -129,11 +129,12 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parameter
 
-`Rel_time` Ein [chrono](../standard-library/duration-class.md) Objekt, das die maximale Zeitdauer, die die Methode versucht angibt, den Besitz von gelangen die `mutex`.
+*Rel_time*  
+ Ein [chrono::duration](../standard-library/duration-class.md)-Objekt, das angibt, wie lange die Methode höchstens versucht, in den Besitz von `mutex` zu gelangen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Methode erfolgreich in den Besitz von `mutex` gelangt; andernfalls `false`.
+**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex`ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -152,11 +153,12 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parameter
 
-`Abs_time` Zeitpunkt, die den Schwellenwert angibt, nach dem die Methode nicht mehr versucht, den Besitz von gelangen, die `mutex`.
+*Abs_time*  
+ Ein Zeitpunkt, der den Schwellenwert angibt, nach dem die Methode nicht mehr versucht, in den Besitz von `mutex` zu gelangen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Methode erfolgreich in den Besitz von `mutex` gelangt; andernfalls `false`.
+**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex`ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 

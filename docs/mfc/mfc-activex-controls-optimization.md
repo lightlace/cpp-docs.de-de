@@ -1,5 +1,5 @@
 ---
-title: 'MFC-ActiveX-Steuerelemente: Optimierung | Microsoft Docs'
+title: 'MFC-ActiveX-Steuerelemente: Optimierung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,36 +24,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91f147637b53250f8d373af9950d6205c82d3e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355310"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028173"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC-ActiveX-Steuerelemente: Optimierung
-Dieser Artikel beschreibt die Techniken, die Sie verwenden können, um die ActiveX-Steuerelemente für eine bessere Leistung zu optimieren.  
+Dieser Artikel beschreibt die Techniken, die Sie verwenden können, um der ActiveX-Steuerelemente für eine bessere Leistung zu optimieren.  
   
- Die Themen [deaktivieren deaktiviert die Option "aktiviert wenn sichtbar"](../mfc/turning-off-the-activate-when-visible-option.md) und [Bereitstellen der Aktivität während der Inaktivität](../mfc/providing-mouse-interaction-while-inactive.md) besprechen Sie Steuerelemente, die ein Fenster bis aktiviert nicht erstellen. Das Thema [bereitstellen Fensterloser Aktivierung](../mfc/providing-windowless-activation.md) erläutert, Steuerelemente, die nie ein Fenster erstellen, selbst wenn sie aktiviert sind.  
+ Die Themen [Aktivieren Deaktivieren der Option "aktiviert wenn sichtbar"](../mfc/turning-off-the-activate-when-visible-option.md) und [Bereitstellen der Interaktion während der Inaktivität](../mfc/providing-mouse-interaction-while-inactive.md) besprechen Sie Steuerelemente, die ein Fenster, bis Sie es aktivieren nicht erstellen. Das Thema [bereitstellen Fensterloser Aktivierung](../mfc/providing-windowless-activation.md) wird erläutert, Steuerelemente, die nie ein Fenster erstellen, selbst wenn sie aktiviert werden.  
   
- Windows haben zwei wichtige Nachteile für OLE-Objekte: sie verhindern, dass Objekte transparent oder nicht rechteckige aktiven Zustand., und sie einen großen Aufwand für die Instanziierung und Anzeige von Steuerelementen hinzufügen. Normalerweise dauert das Erstellen eines Fensters 60 Prozent der Zeitpunkt der Erstellung des Steuerelements aus. Mit einem einzelnen freigegebenen Fenster (normalerweise des Containers) und verteilen Code erhält ein Steuerelement dieselbe Windows-Dienste, im Allgemeinen ohne Verlust der Leistung. Ein Fenster ist meist einen unnötigen Mehraufwand für das Objekt.  
+ Windows haben Sie zwei wesentliche Nachteile für OLE-Objekte: sie verhindern, dass Objekte transparent oder nicht rechteckige wenn aktiv, und sie eine große Belastung der Instanziierung und die Anzeige von Steuerelementen hinzufügen. In der Regel dauert die Erstellung eines Fensters 60 Prozent der Zeitpunkt der Erstellung des Steuerelements. Mit einem gemeinsamen Fenster (in der Regel des Containers) und Verteilung Code empfängt ein Steuerelement die gleichen Fensterdienste in der Regel ohne einen Verlust der Leistung. Ein Fenster ist meist einen unnötigen Mehraufwand für das Objekt.  
   
- Einige Optimierungen sind nicht unbedingt Leistung verbessern, wenn das Steuerelement in bestimmten Container verwendet wird. Beispielsweise hat Container vor 1996 veröffentlicht fensterlosen Aktivierung, nicht unterstützt, damit diese Funktion keinen Vorteil in älteren Container bereitstellen. Allerdings unterstützt nahezu jeder Container Persistenz, Optimieren des Steuerelements Persistenzcode wahrscheinlich die Leistung in einem Container verbessert wird. Wenn das Steuerelement speziell einen bestimmten Typ von Container verwendet werden soll, können Sie untersuchen möchten der dieser Optimierungen vom Container unterstützt wird. Im Allgemeinen sollten Sie jedoch, wie viele dieser Techniken wie gelten für das jeweilige Steuerelement aus, um sicherzustellen, dass das Steuerelement möglicherweise gut wie vorgesehen führt in einer Vielzahl von Containern implementiert.  
+ Einige Optimierungen sind nicht unbedingt Leistung verbessern, wenn das Steuerelement in bestimmten Containern verwendet wird. Beispielsweise hat Container vor 1996 veröffentlicht fensterlosen Aktivierung, nicht unterstützt, damit diese Funktion keinen Vorteil in älteren Container bereitstellen. Allerdings unterstützt nahezu jeder Container Persistenz, damit Optimieren Ihres Steuerelements Persistenzcode wahrscheinlich Verbessern der Leistung in jedem Container wird. Wenn das Steuerelement speziell mit der ein bestimmter Typ des Containers verwendet werden soll, sollten Sie herausfinden der dieser Optimierungen von diesem Container unterstützt wird. Im Allgemeinen sollten Sie jedoch zu implementieren, wie viele dieser Techniken wie gelten für das jeweilige Steuerelement aus, um sicherzustellen, dass das Steuerelement wie möglicherweise führt eine Vielzahl von Containern können.  
   
  Sie können viele dieser Optimierungen durch Implementieren der [MFC-ActiveX-Steuerelement-Assistent](../mfc/reference/mfc-activex-control-wizard.md)auf die [Steuerelementeinstellungen](../mfc/reference/control-settings-mfc-activex-control-wizard.md) Seite.  
   
-### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>OLE-Optimierungsoptionen für MFC-ActiveX-Steuerelement-Assistent  
+### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>MFC-ActiveX-Steuerelement-Assistent OLE-Optimierungsoptionen  
   
-|Einstellung des Steuerelements in MFC-ActiveX-Steuerelement-Assistenten|Aktion|Weitere Informationen|  
+|Steuerelement-Einstellung in der MFC-ActiveX-Steuerelement-Assistent|Aktion|Weitere Informationen|  
 |-------------------------------------------------------|------------|----------------------|  
-|**Aktivieren von sichtbaren** Kontrollkästchen|Clear|[Durch das Deaktivieren der aktiviert, wenn sichtbar-Option](../mfc/turning-off-the-activate-when-visible-option.md)|  
+|**Aktiviert werden, wenn sichtbar** Kontrollkästchen|Clear|[Durch das Deaktivieren der aktiviert, wenn Option "sichtbar"](../mfc/turning-off-the-activate-when-visible-option.md)|  
 |**Fensterlose Aktivierung** Kontrollkästchen|Auswählen|[Bereitstellung von fensterloser Aktivierung](../mfc/providing-windowless-activation.md)|  
-|**Gerätekontexts ohne clippingbereichsanpassung** Kontrollkästchen|Auswählen|[Verwenden eines Gerätekontexts ohne Clippingbereichsanpassung](../mfc/using-an-unclipped-device-context.md)|  
+|**Ungeschnittener Gerätekontext** Kontrollkästchen|Auswählen|[Verwenden eines Gerätekontexts ohne Clippingbereichsanpassung](../mfc/using-an-unclipped-device-context.md)|  
 |**Flimmerfreier Aktivierung** Kontrollkästchen|Auswählen|[Bereitstellen flimmerfreier Aktivierung](../mfc/providing-flicker-free-activation.md)|  
-|**Mit der Maus Zeiger Benachrichtigungen inaktiven Zustand** Kontrollkästchen|Auswählen|[Bereitstellen von Mausinteraktionen in inaktiven Steuerelementen](../mfc/providing-mouse-interaction-while-inactive.md)|  
+|**Mit der Maus Benachrichtigungen, wenn inaktiv** Kontrollkästchen|Auswählen|[Bereitstellen von Mausinteraktionen in inaktiven Steuerelementen](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**Optimierter Zeichencode** Kontrollkästchen|Auswählen|[Optimieren der Steuerelementdarstellung](../mfc/optimizing-control-drawing.md)|  
   
- Ausführliche Informationen über die Memberfunktionen, die durch diese Optimierungen implementieren, finden Sie unter [COleControl](../mfc/reference/colecontrol-class.md). Die Memberfunktionen werden nach Verwendung aufgelistet, z. B. [Fensterlose Vorgänge](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) und [inaktive Zeiger Behandlung von Funktionen](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
+ Ausführliche Informationen über die Memberfunktionen, die diese Optimierungen zu implementieren, finden Sie unter [COleControl](../mfc/reference/colecontrol-class.md). Die Member-Funktionen werden durch die Verwendung aufgeführt, wie z. B. [Fensterlose Vorgänge](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) und [Behandlungsfunktionen für inaktive Zeiger](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
   
  Weitere Informationen finden Sie unter:  
   
@@ -61,7 +61,7 @@ Dieser Artikel beschreibt die Techniken, die Sie verwenden können, um die Activ
   
 -   [Bereitstellung von fensterloser Aktivierung](../mfc/providing-windowless-activation.md)  
   
--   [Durch das Deaktivieren der aktiviert, wenn sichtbar-Option](../mfc/turning-off-the-activate-when-visible-option.md)  
+-   [Durch das Deaktivieren der aktiviert, wenn Option "sichtbar"](../mfc/turning-off-the-activate-when-visible-option.md)  
   
 -   [Bereitstellen von Mausinteraktionen in inaktiven Steuerelementen](../mfc/providing-mouse-interaction-while-inactive.md)  
   

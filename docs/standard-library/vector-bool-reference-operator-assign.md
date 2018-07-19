@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6413737b6b442313b77f0f2b2115631a260cc40b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 037c6cfb9360f85c1ffdf92dcce11a86a0c458d7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855343"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965614"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
 
@@ -41,9 +41,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parameter
 
-`Right` Der Elementverweis, dessen Wert ist mit dem Bit zugewiesen werden.
+*Rechts*  
+ Der Elementverweis, dessen Wert dem Bit zugewiesen werden soll.
 
-`Val` Der boolesche Wert, der dem Bit zugewiesen werden.
+*val*  
+ Der boolesche Wert, der dem Bit zugewiesen werden soll.
 
 ## <a name="example"></a>Beispiel
 
@@ -127,5 +129,5 @@ The original value of the 3rd element still stored in a bool: false
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vektor\<Bool >:: Klasse verweisen](../standard-library/vector-bool-reference-class.md)<br/>
+[Vektor\<Bool >:: reference-Klasse](../standard-library/vector-bool-reference-class.md)<br/>
 [C++-Standardbibliotheksreferenz](../standard-library/cpp-standard-library-reference.md)<br/>

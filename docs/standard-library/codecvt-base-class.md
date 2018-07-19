@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe2a27a79705e9850df2c9fb54037278abd8cd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a471cdd63ed46e15c9ec41968ed341eefaf36963
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843261"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965391"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base-Klasse
 
-Eine Basisklasse für die codecvt-Klasse, die verwendet wird, um einen Enumerationstyp zu definieren, der als **Ergebnis** gekennzeichnet ist. Dieser wird als Rückgabetyp für die Facetmemberfunktionen verwendet, um das Ergebnis einer Konvertierung anzugeben.
+Eine Basisklasse für die Codecvt-Klasse, die verwendet wird, um einen Enumerationstyp zu definieren, die als bezeichnet `result`wird als den Rückgabetyp für die facetmemberfunktionen um das Ergebnis einer Konvertierung anzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,13 +50,13 @@ protected:
 
 Die Klasse beschreibt eine Enumeration, die allen Spezialisierungen der Vorlagenklasse [codecvt](../standard-library/codecvt-class.md) gemein ist. Das Enumerationsergebnis beschreibt die möglichen Rückgabewerte [do_in](../standard-library/codecvt-class.md#do_in) oder [do_out](../standard-library/codecvt-class.md#do_out):
 
-- **ok**, wenn die Konvertierung zwischen internen und externen Zeichencodierungen erfolgreich war.
+- `ok` Wenn die Konvertierung zwischen internen und externen zeichencodierungen erfolgreich ausgeführt wird.
 
-- **partial**, wenn das Ziel nicht groß genug ist, damit die Konvertierung erfolgreich ausgeführt werden kann.
+- `partial` Wenn das Ziel nicht groß genug für die Konvertierung erfolgreich ausgeführt werden kann.
 
-- **error**, wenn die Quellsequenz fehlerhaft formuliert ist.
+- `error` Wenn die Quellsequenz fehlerhaft formuliert ist gebildet werden soll.
 
-- **noconv**, wenn die Funktion keine Konvertierung ausführt.
+- `noconv`, wenn die Funktion keine Konvertierung ausführt.
 
 ## <a name="requirements"></a>Anforderungen
 

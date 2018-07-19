@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 407da94d8d813e4951f12ad9951dc64ac298f61d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 256ca308160a2e34341c6156ee761473c13142e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863646"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964482"
 ---
 # <a name="matchresults-class"></a>match_results-Klasse
 
@@ -69,9 +69,9 @@ class match_results {
 
 ### <a name="parameters"></a>Parameter
 
-`BidIt` Der itertatortyp für teilübereinstimmungen.
+*BidIt* der itertatortyp für teilübereinstimmungen.
 
-`Alloc` Der Typ einer Zuweisung für die Speicherverwaltung.
+*Alloc* den Typ einer Zuweisung für das Verwalten von Speicher.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -93,7 +93,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Die Typedef stellt ein Synonym für das Vorlagenargument `Alloc`dar.
+Die Typedef stellt ein Synonym für die die Template-Argument *Alloc*.
 
 ### <a name="example"></a>Beispiel
 
@@ -1066,17 +1066,17 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Parameter
 
-`OutIt` Der ausgabeiteratortyp.
+*OutIt* der ausgabeiteratortyp.
 
-`out` Der Ausgabestream zu schreiben.
+*out* den Ausgabestream zu schreiben.
 
-`fmt` Die Formatzeichenfolge.
+*FMT* der Formatzeichenfolge.
 
-`flags` Die Formatflags.
+*Flags* die Formatflags.
 
 ### <a name="remarks"></a>Hinweise
 
-Jede Memberfunktion generiert formatierten Text unter Einhaltung des Formats `fmt`. Die erste Memberfunktion schreibt den formatierten Text in die Sequenz, die von ihrem Argument `out` definiert ist, und gibt `out` zurück. Die zweite Memberfunktion gibt ein Zeichenfolgenobjekt zurück, das eine Kopie des formatierten Text enthält.
+Jede Memberfunktion generiert formatierten Text unter der Kontrolle des Formats *Fmt*. Die erste Memberfunktion schreibt den formatierten Text in der Sequenz, die durch sein Argument definiert *out* und gibt *out*. Die zweite Memberfunktion gibt ein Zeichenfolgenobjekt zurück, das eine Kopie des formatierten Text enthält.
 
 Um formatierten Text zu generieren, wird Literaltext in der Formatzeichenfolge einfach in die Zielsequenz kopiert. Jede Escapesequenz in der Formatzeichenfolge wird vom Text ersetzt, den sie darstellt. Die Details des Kopierens und Ersetzens werden durch die Formatflags gesteuert, die an die Funktion übergeben werden.
 
@@ -1441,7 +1441,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parameter
 
-`sub` Der Index der teilübereinstimmung.
+*Sub* der Index der teilübereinstimmung.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -1568,13 +1568,13 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parameter
 
-`alloc` Das zu speichernde Zuweisungsobjekt.
+*Alloc* das zu speichernde Zuweisungsobjekt.
 
-`right` Das zu kopierende Match_results-Objekt.
+*richtige* das Match_results-Objekt zum Kopieren.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor erstellt ein `match_results`-Objekt, das keine Teilübereinstimmungen enthält. Der zweite Konstruktor erstellt ein `match_results`-Objekt, das eine Kopie von `right` ist.
+Der erste Konstruktor erstellt ein `match_results`-Objekt, das keine Teilübereinstimmungen enthält. Der zweite Konstruktor erstellt ein `match_results` -Objekt, das eine Kopie des *rechten*.
 
 ### <a name="example"></a>Beispiel
 
@@ -1816,11 +1816,11 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Das zu kopierende Match_results-Objekt.
+*richtige* das Match_results-Objekt zum Kopieren.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Memberoperator ersetzt die Sequenz, die von `*this` gesteuert wird, durch eine Kopie der Sequenz, die von `right` gesteuert wird.
+Der Memberoperator ersetzt die gesteuerte Sequenz durch `*this` mit einer Kopie die gesteuerte Sequenz durch *rechten*.
 
 ### <a name="example"></a>Beispiel
 
@@ -1941,11 +1941,11 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>Parameter
 
-`n` Der Index der teilübereinstimmung.
+*n* Index der teilübereinstimmung.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt einen Verweis auf das Element `n` der kontrollierten Sequenz oder einen Verweis auf ein leeres `sub_match` Objekt zurück, wenn `size() <= n` oder wenn die Erfassungsgruppe `n` kein Bestandteil der Übereinstimmung war.
+Die Memberfunktion gibt einen Verweis auf Element *n* der kontrollierten Sequenz oder einen Verweis auf ein leeres `sub_match` Objekt, wenn `size() <= n` oder wenn die Erfassungsgruppe *n* war nicht Bestandteil der Übereinstimmung.
 
 ### <a name="example"></a>Beispiel
 
@@ -2066,7 +2066,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parameter
 
-`sub` Der Index der teilübereinstimmung.
+*Sub* Index der teilübereinstimmung.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -2675,7 +2675,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parameter
 
-`sub` Der Index der teilübereinstimmung.
+*Sub* Index der teilübereinstimmung.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -3042,11 +3042,11 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Parameter
 
-`right` Das Match_results-Objekt für den Tauschvorgang.
+*richtige* das Match_results-Objekt, das mit dem getauscht.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion tauscht die Inhalte von `*this` und `right` in konstanter Zeit und löst keine Ausnahmen aus.
+Die Memberfunktion tauscht den Inhalt der `*this` und *rechten* in konstanter Zeit und löst keine Ausnahmen.
 
 ### <a name="example"></a>Beispiel
 

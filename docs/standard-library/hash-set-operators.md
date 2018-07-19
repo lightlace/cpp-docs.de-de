@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 4f8347ad891508e7cdf06db5a42ec7953fb7746a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ecc6640dd41fcc6a275de10becf1d9c03128f562
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847259"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966653"
 ---
 # <a name="lthashsetgt-operators"></a>&lt;hash_set&gt;-Operatoren
 
@@ -36,9 +36,9 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt vom Typ `hash_set`.
+*linken* ein Objekt des Typs `hash_set`.
 
-`right` Ein Objekt vom Typ `hash_set`.
+*richtige* ein Objekt des Typs `hash_set`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -102,9 +102,9 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt vom Typ `hash_set`.
+*linken* ein Objekt des Typs `hash_set`.
 
-`right` Ein Objekt vom Typ `hash_set`.
+*richtige* ein Objekt des Typs `hash_set`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -166,9 +166,9 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt vom Typ `hash_multiset`.
+*linken* ein Objekt des Typs `hash_multiset`.
 
-`right` Ein Objekt vom Typ `hash_multiset`.
+*richtige* ein Objekt des Typs `hash_multiset`.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -230,9 +230,9 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parameter
 
-`left` Ein Objekt vom Typ `hash_multiset`.
+*linken* ein Objekt des Typs `hash_multiset`.
 
-`right` Ein Objekt vom Typ `hash_multiset`.
+*richtige* ein Objekt des Typs `hash_multiset`.
 
 ### <a name="return-value"></a>Rückgabewert
 

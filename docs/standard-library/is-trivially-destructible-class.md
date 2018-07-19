@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89215ac3d7b1035ef4326d73b21d540aada5fba6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0e2fb16ad96ba102295981b9f9d56fda810ddff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857814"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961057"
 ---
 # <a name="istriviallydestructible-class"></a>is_trivially_destructible-Klasse
 
@@ -37,11 +37,11 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Der abzufragende Typ.
+*T* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist TRUE, wenn der Typ `T` ein zerstörbarer Typ ist, und der Destruktor beim Compiler keine nicht trivialen Operationen verwendet. Andernfalls ist sie FALSE.
+Eine Instanz des typprädikats ist true, wenn der Typ *T* "destructible" ist, und des Destruktors wird an den Compiler keine nicht trivialen Vorgänge verwendet. Andernfalls ist sie FALSE.
 
 ## <a name="requirements"></a>Anforderungen
 

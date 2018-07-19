@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: e85ce2728aaaa8ae9b23067bfb1dcbb3ff2db7d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d30ad23956c978ee47ef447463a0d5422a94d4b9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855545"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962321"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt;-Funktionen
 
-Hierbei handelt es sich um die globalen Vorlagenfunktionen, die in definierten &lt;Ostream&gt;. Member-Funktionen finden Sie unter der [Basic_ostream-Klasse](basic-ostream-class.md) Dokumentation.
+Hierbei handelt es sich um die globale Vorlagenfunktionen, die in definierten &lt;Ostream&gt;. Member-Funktionen, finden Sie unter den [Basic_ostream-Klasse](basic-ostream-class.md) Dokumentation.
 
 ||||
 |-|-|-|
@@ -42,11 +42,11 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>Parameter
 
-*Elem* der Elementtyp.
+*Elem* Typ des Elements.
 
 *Ostr* ein Objekt des Typs **Basic_ostream**.
 
-*TR* Merkmale Zeichen.
+*TR* "traits"-Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -54,7 +54,7 @@ Ein Objekt des Typs **Basic_ostream**.
 
 ### <a name="remarks"></a>Hinweise
 
-Ruft die Manipulator *Ostr*.[ Put](../standard-library/basic-ostream-class.md#put)(*Ostr*.[ Widen](../standard-library/basic-ios-class.md#widen)("\n")), und ruft dann *Ostr*.[ Flush](../standard-library/basic-ostream-class.md#flush). Es gibt *Ostr*.
+Der Manipulator ruft *Ostr*.[ Put](../standard-library/basic-ostream-class.md#put)(*Ostr*.[ Widen](../standard-library/basic-ios-class.md#widen)('\n')), und ruft dann *Ostr*.[ leeren](../standard-library/basic-ostream-class.md#flush). Es gibt *Ostr*.
 
 ### <a name="example"></a>Beispiel
 
@@ -86,19 +86,19 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>Parameter
 
-*Elem* der Elementtyp.
+*Elem* Typ des Elements.
 
-*Ostr* ein Objekt des Typs **Basic_ostream**.
+*Ostr* ein Objekt des Typs `basic_ostream`.
 
-*TR* Merkmale Zeichen.
+*TR* "traits"-Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Objekt des Typs **Basic_ostream**.
+Ein Objekt vom Typ `basic_ostream`.
 
 ### <a name="remarks"></a>Hinweise
 
-Ruft die Manipulator *Ostr*.[ Put](../standard-library/basic-ostream-class.md#put)(*Elem*('\0')). Es gibt *Ostr*.
+Der Manipulator ruft *Ostr*.[ Put](../standard-library/basic-ostream-class.md#put)(*Elem*('\0')). Es gibt *Ostr*.
 
 ### <a name="example"></a>Beispiel
 
@@ -132,19 +132,19 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>Parameter
 
-*Elem* der Elementtyp.
+*Elem* Typ des Elements.
 
-*Ostr* ein Objekt des Typs **Basic_ostream**.
+*Ostr* ein Objekt des Typs `basic_ostream`.
 
-*TR* Merkmale Zeichen.
+*TR* "traits"-Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Ein Objekt des Typs **Basic_ostream**.
+Ein Objekt vom Typ `basic_ostream`.
 
 ### <a name="remarks"></a>Hinweise
 
-Ruft die Manipulator *Ostr*.[ Flush](../standard-library/basic-ostream-class.md#flush). Es gibt *Ostr*.
+Der Manipulator ruft *Ostr*.[ leeren](../standard-library/basic-ostream-class.md#flush). Es gibt *Ostr*.
 
 ### <a name="example"></a>Beispiel
 
@@ -166,7 +166,7 @@ testing
 
 ## <a name="swap"></a>swap
 
-Tauscht die Werte von zwei **Basic_ostream** Objekte.
+Tauscht die Werte zweier `basic_ostream`-Objekte aus.
 
 ```cpp
 template <class Elem, class Tr>
@@ -177,17 +177,17 @@ void swap(
 
 ### <a name="parameters"></a>Parameter
 
-*Elem* der Elementtyp.
+*Elem* Typ des Elements.
 
-*TR* Merkmale Zeichen.
+*TR* "traits"-Zeichen.
 
-*Linke* ein Lvalue-Verweis auf eine **Basic_ostream** Objekt.
+*linken* ein Lvalue-Verweis auf eine `basic_ostream` Objekt.
 
-*Rechte* ein Lvalue-Verweis auf eine **Basic_ostream** Objekt.
+*richtige* ein Lvalue-Verweis auf eine `basic_ostream` Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Vorlagenfunktion **Swap** führt `left.swap(right)`.
+Die Vorlagenfunktion `swap` führt `left.swap(right)` aus.
 
 ## <a name="see-also"></a>Siehe auch
 

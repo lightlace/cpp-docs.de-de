@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer ATL COM+ 1.0-Komponente | Microsoft Docs
+title: Hinzufügen einer ATL COM+ 1.0-Komponente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0375c0c098d3e8328cb8c8a678b266053ef7e89
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50529f5e229736c2d2688cb74edabee0ec492718
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355790"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963562"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Hinzufügen einer ATL COM+ 1.0-Komponente
-Dieser Assistent fügt ein Objekt, das Projekt, das COM+ 1.0-Dienste, einschließlich Transaktionen unterstützt.  
+Dieser Assistent fügt ein Objekt hinzu, die COM+ 1.0-Dienste, einschließlich Transaktionen unterstützt.  
   
-### <a name="to-add-an-atl-com-10-component-to-your-project"></a>So fügen Sie eine ATL COM+ 1.0-Komponente zu Ihrem Projekt hinzu  
+### <a name="to-add-an-atl-com-10-component-to-your-project"></a>Zum Hinzufügen einer ATL COM+ 1.0-Komponente zu Ihrem Projekt  
   
-1.  In beiden **Projektmappen-Explorer** oder [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), mit der rechten Maustaste in des Namens des Projekts, dem Sie die ATL COM+ 1.0-Komponente hinzufügen möchten.  
+1.  In einem **Projektmappen-Explorer** oder [Klassenansicht](/visualstudio/ide/viewing-the-structure-of-code), mit der rechten Maustaste in des Namens des Projekts, dem Sie die ATL COM+ 1.0-Komponente hinzufügen möchten.  
   
 2.  Klicken Sie im Kontextmenü auf **hinzufügen**, und klicken Sie dann auf **Klasse hinzufügen**.  
   
-3.  In der [Klasse hinzufügen](../../ide/add-class-dialog-box.md) (Dialogfeld), klicken Sie im Bereich "Vorlagen" klicken Sie auf **ATL COM+ 1.0-Komponente**, und klicken Sie dann auf **öffnen** zum Anzeigen der [ATL COM+ 1.0 Komponenten-Assistenten ](../../atl/reference/atl-com-plus-1-0-component-wizard.md).  
+3.  In der [Klasse hinzufügen](../../ide/add-class-dialog-box.md) im Dialogfeld im Bereich "Vorlagen", klicken Sie auf **ATL COM+ 1.0-Komponente**, und klicken Sie dann auf **öffnen** zum Anzeigen der [ATL COM+ 1.0 Komponenten-Assistenten ](../../atl/reference/atl-com-plus-1-0-component-wizard.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Class (Hinzufügen einer Klasse)](../../ide/adding-a-class-visual-cpp.md)   
  [Hinzufügen einer Methode](../../ide/adding-a-method-visual-cpp.md)
 

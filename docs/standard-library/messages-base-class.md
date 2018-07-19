@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddde025fa633ccc1b9561acf595de186548ba3a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e402f103a29dd4c4af49fa1c34b9cae71fc6e9af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857167"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964846"
 ---
 # <a name="messagesbase-class"></a>messages_base-Klasse
 
-Die Basisklasse beschreibt einen `int`-Typ für den Katalog von Meldungen.
+Die Basisklasse beschreibt einen **Int** -Typ für den Katalog von Meldungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ struct messages_base : locale::facet {
 
 ## <a name="remarks"></a>Hinweise
 
-Der Typ „catalog“ ist ein Synonym für den Typen `int`, der mögliche Rückgabewerte von messages::[do_open](../standard-library/messages-class.md#do_open) beschreibt.
+Der Typkatalog ist ein Synonym für den Typ **Int** , beschreibt die möglichen Rückgabewerte von Messages:: [Do_open](../standard-library/messages-class.md#do_open).
 
 ## <a name="requirements"></a>Anforderungen
 

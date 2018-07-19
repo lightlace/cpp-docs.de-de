@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d31f30971184356374b3991fedda474ca27465
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2283e74c00867e373d2ba117fd5dfbf70f137c75
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857297"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966006"
 ---
 # <a name="using-c-library-headers"></a>Verwenden von C++-Bibliotheksheadern
 
@@ -41,11 +41,11 @@ Ein C++-Bibliotheksheader enthält alle anderen C++-Bibliotheksheader, die zum D
 
 Alle Funktionen in der Bibliothek werden in einem Standardheader deklariert. Im Gegensatz zu Standard C wird vom Standardheader kein Maskierungsmakro mit demselben Namen wie die Funktion bereitgestellt, das die Funktionsdeklaration maskiert und denselben Effekt erzielt. Weitere Informationen zu Maskierungsmakros finden Sie unter [C++ Library Conventions (C++-Bibliothekskonventionen)](../standard-library/cpp-library-conventions.md).
 
-Alle Namen außer `operator delete` und `operator new` in den C++-Bibliotheksheadern werden im Namespace `std` oder in einem Namespace definiert, der innerhalb von Namespace `std` geschachtelt ist. Auf den Namen `cin` wird beispielsweise mit `std::cin` verwiesen. Makronamen unterliegen nicht der Namespacequalifikation. Daher wird `__STD_COMPLEX` ohne Namespacequalifizierer geschrieben.
+Alle Namen außer **Delete-Operator** und **new-Operator** in der C++-Standardbibliothek definiert sind die `std` -Namespace oder in einem Namespace geschachtelt die `std` Namespace. Auf den Namen `cin` wird beispielsweise mit `std::cin` verwiesen. Makronamen unterliegen nicht der Namespacequalifikation. Daher wird `__STD_COMPLEX` ohne Namespacequalifizierer geschrieben.
 
-In einigen Übersetzungsumgebungen kann das Einbinden eines C++-Bibliotheksheaders dazu führen, dass externe, im Namespace `std` deklarierte Namen mit individuellen `using`-Deklarationen für die einzelnen Namen auch in den globalen Namespace gehoben werden. Ist dies nicht der Fall, werden vom Header *keine* Bibliotheksnamen in den aktuellen Namespace eingeführt.
+In einigen übersetzungsumgebungen, einschließlich einer C++-bibliotheksheader externe in deklarierte Namen auszudehnen kann die `std` Namespace in den globalen Namespace auch mit individuellen **mit** Deklarationen für die einzelnen Namen. Ist dies nicht der Fall, werden vom Header *keine* Bibliotheksnamen in den aktuellen Namespace eingeführt.
 
-Der C++-Standard verlangt, dass die C-Standardheader alle externen Namen in Namespace `std` deklarieren und sie anschließend mit individuellen `using`-Deklarationen für die einzelnen Namen in den globalen Namespace heben. In einigen Übersetzungsumgebungen enthalten die C-Standardheader jedoch keine Namespacedeklarationen. Stattdessen werden alle Namen direkt im globalen Namespace deklariert. Somit wird das Ergebnis am besten portierbar, wenn im Umgang mit Namespaces zwei Regeln befolgt werden:
+Die C++-Standard erfordert, dass die C-Standardheader alle externe Namen in Namespaces deklarieren `std`, klicken Sie dann in den globalen Namespace mit individuellen heben **mit** Deklarationen für die einzelnen Namen. In einigen Übersetzungsumgebungen enthalten die C-Standardheader jedoch keine Namespacedeklarationen. Stattdessen werden alle Namen direkt im globalen Namespace deklariert. Somit wird das Ergebnis am besten portierbar, wenn im Umgang mit Namespaces zwei Regeln befolgt werden:
 
 - Deklarieren Sie einen externen Namen, der traditionell in \<stdlib.h> deklariert wird, unbedingt in Namespace `std`, indem Sie beispielsweise den Header \<cstdlib> einbinden. Beachten Sie, dass der Name möglicherweise auch im globalen Namespace deklariert wird.
 

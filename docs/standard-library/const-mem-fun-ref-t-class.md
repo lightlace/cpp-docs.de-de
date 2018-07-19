@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c86f71912c5fe4cf3f5d2fc0df37c8530a8517
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5051fe82a4d197a1518ccf9c0f3c797108c665e0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842135"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961248"
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t-Klasse
 
@@ -41,9 +41,9 @@ class const_mem_fun_ref_t
 
 ### <a name="parameters"></a>Parameter
 
-`Pm` Ein Zeiger auf die Memberfunktion der Klasse **Typ** , um ein Funktionsobjekt konvertiert werden soll.
+*PM* ein Zeiger auf die Memberfunktion der Klasse `Type` in ein Funktionsobjekt konvertiert werden.
 
-`left` Das Objekt, das die `Pm` für Memberfunktion aufgerufen wird.
+*linken* das Objekt, das *Uhr* auf Memberfunktion aufgerufen wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -51,7 +51,7 @@ Eine anpassungsfähige unäre Funktion.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Vorlagenklasse speichert eine Kopie von `Pm`, die ein Zeiger auf eine Memberfunktion der Klasse **Type** in einem privaten Memberobjekt sein muss. Es definiert seine Memberfunktion `operator()` als Rückgabe ( **linken**.\* `Pm`) () **const**.
+Die Vorlagenklasse speichert eine Kopie des *Uhr*, die einen Zeiger auf eine Memberfunktion der Klasse sein muss `Type`, in einem privaten Memberobjekt. Sie definiert ihre Memberfunktion `operator()` als Rückgabewert ( **linken**.\* `Pm`) () **const**.
 
 ## <a name="example"></a>Beispiel
 

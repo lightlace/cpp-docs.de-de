@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2491fd14ccb7c165665cfb948836b7351dc907ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fec9d9e80a277a8c10a1767734a9e758177df508
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912900"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966419"
 ---
 # <a name="regextraitsltchargt-class"></a>regex_traits&lt;Char&gt;-Klasse
 
@@ -36,7 +36,7 @@ class regex_traits<char>
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klasse ist eine explizite Spezialisierung der Vorlagenklasse [regex_traits](../standard-library/regex-traits-class.md) für Elemente des Typs `char` (sodass sie Bibliotheksfunktionen zum Bearbeiten von Objekten dieses Typs nutzen kann).
+Die Klasse ist eine explizite Spezialisierung der Vorlagenklasse [Regex_traits](../standard-library/regex-traits-class.md) für Elemente des Typs **Char** (sodass sie Bibliotheksfunktionen zum Bearbeiten von Objekten dieses Typs nutzen kann).
 
 ## <a name="requirements"></a>Anforderungen
 

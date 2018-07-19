@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22dc1282dc165941c1a611583138c2d9aed51090
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ca0b25f5df6d4efb70e27fea6ef2323568134b2e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848923"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964462"
 ---
 # <a name="basicistream-class"></a>basic_istream-Klasse
 
@@ -129,13 +129,13 @@ if (ok)
 setstate(state);
 ```
 
-Beide Gruppen von Funktionen rufen [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) auf, wenn sie beim Extrahieren von Elementen das Dateiende feststellen.
+Beide Gruppen von Funktionen rufen [Setstate](../standard-library/basic-ios-class.md#setstate)(`eofbit`) Wenn sie beim Extrahieren von Elementen den Dateiende feststellen.
 
 Ein Objekt der Klasse `basic_istream`< `Elem`, *Tr*> speichert Folgendes:
 
 - Ein virtuelles öffentliches Basisobjekt der Klasse [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, *Tr*> `.`.
 
-- Eine Extraktionsanzahl für den letzten Vorgang unformatierter Eingabe (im obigen Code als **count** bezeichnet).
+- Eine extraktionsanzahl für den letzten Vorgang unformatierter Eingabe (namens `count` im vorherigen Code).
 
 ## <a name="example"></a>Beispiel
 
@@ -193,11 +193,11 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>Parameter
 
-`strbuf` Ein Objekt des Typs [Basic_streambuf](../standard-library/basic-streambuf-class.md).
+*Strbuf* ein Objekt des Typs ["basic_streambuf"](../standard-library/basic-streambuf-class.md).
 
-`_Isstd` `true` ist dies ein Standardstream; andernfalls `false`.
+*_Isstd* **"true"** Wenn dies einen Standardstream handelt; andernfalls **"false"**.
 
-`right` Ein `basic_istream` zu kopierende Objekt.
+*richtige* ein `basic_istream` zu kopierende Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -277,15 +277,15 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 ### <a name="parameters"></a>Parameter
 
-`count` Die Anzahl der Zeichen, die zum Auslesen `strbuf`.
+*Anzahl* die Anzahl der zu lesenden Zeichen aus `strbuf`.
 
-`Delim` Das Zeichen, das den Lesevorgang beendet werden soll, wenn sie vor dem entdeckt wird `count`.
+*Delim* das Zeichen, das den Lesevorgang beenden soll, wenn es vor erreicht wird *Anzahl*.
 
-`str` Eine Zeichenfolge, in die geschrieben werden soll.
+*Str* eine Zeichenfolge in die geschrieben.
 
-`Ch` Ein Zeichen abgerufen werden soll.
+*CH* ein Zeichen, das abgerufen.
 
-`strbuf` Ein Puffer, in die geschrieben werden soll.
+*Strbuf* einen Puffer, in die geschrieben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -293,25 +293,25 @@ Die parameterlose Form von „get“ gibt das gelesene Element als ganze Zahl od
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste dieser nicht formatierten Eingabefunktionen extrahiert falls möglich ein Element, als wäre `rdbuf`-> `sbumpc` zurückgegeben worden. Andernfalls wird **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) zurückgegeben. Wenn die Funktion kein Element extrahiert, ruft sie [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf.
+Die erste dieser nicht formatierten Eingabefunktionen extrahiert falls möglich ein Element, als wäre `rdbuf`-> `sbumpc` zurückgegeben worden. Andernfalls wird **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) zurückgegeben. Wenn die Funktion kein Element extrahiert, ruft es [Setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 Die zweite Funktion extrahiert das [int_type](../standard-library/basic-ios-class.md#int_type)-Element `meta` auf die gleiche Weise. Wenn `meta` mit **traits_type::eof** übereinstimmt, ruft die Funktion `setstate`( **failbit**) auf. Andernfalls wird **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)( `meta`) in `Ch` gespeichert. Die Funktion gibt **\*this** zurück.
 
 Die dritte Funktion gibt **get**(_ *Str*, `count`, `widen`('\ **n**')) zurück.
 
-Die vierte Funktion extrahiert bis zu `count` - 1 Elemente, und speichert sie in das Array, beginnend bei _ *Str*. Sie speichert `char_type` immer nach den extrahierten Elementen, die sie speichert. In der Reihenfolge der Tests hält die Extrahierung hier an:
+Die vierte Funktion extrahiert bis zu *Anzahl* - 1 Elemente und speichert sie in das Array, beginnend bei _ *Str*. Sie speichert `char_type` immer nach den extrahierten Elementen, die sie speichert. In der Reihenfolge der Tests hält die Extrahierung hier an:
 
 - Am Ende der Datei.
 
-- Nachdem die Funktion ein Element extrahiert hat, das `Delim` entspricht. In diesem Fall wird das Element an die kontrollierte Sequenz zurückgestellt.
+- Nachdem die Funktion ein Element extrahiert, die gleich vergleicht *Delim*, in diesem Fall das Element wieder an die gesteuerte Sequenz eingefügt wird.
 
-- Nachdem die Funktion `count` - 1 Elemente extrahiert hat.
+- Nachdem die Funktion extrahiert *Anzahl* - 1 Elemente.
 
 Wenn die Funktion keine Elemente extrahiert, ruft sie `setstate`( **failbit**) auf. In jedem Fall gibt sie **\*this** zurück.
 
 Die fünfte Funktion gibt **get**( **trbuf**, `widen`('\ **n**')) zurück.
 
-Die sechste Funktion extrahiert Elemente und fügt sie in **strbuf** ein. Die Extrahierung hält am Ende der Datei oder bei einem Element an, das *Delim* entspricht, das nicht extrahiert wird. Sie hält ebenfalls an, ohne die jeweiligen Elemente zu extrahieren, wenn bei einer Einfügung ein Fehler auftritt, oder löst eine Ausnahme aus (die aufgefangen, aber nicht erneut ausgelöst wird). Wenn die Funktion keine Elemente extrahiert, ruft sie `setstate`( **failbit**) auf. In jedem Fall gibt die Funktion **\*this** zurück.
+Die sechste Funktion extrahiert Elemente und fügt sie in `strbuf`. Die Extrahierung hält am Ende der Datei oder bei einem Element an, das *Delim* entspricht, das nicht extrahiert wird. Sie hält ebenfalls an, ohne die jeweiligen Elemente zu extrahieren, wenn bei einer Einfügung ein Fehler auftritt, oder löst eine Ausnahme aus (die aufgefangen, aber nicht erneut ausgelöst wird). Wenn die Funktion keine Elemente extrahiert, ruft sie `setstate`( **failbit**) auf. In jedem Fall gibt die Funktion **\*this** zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -356,11 +356,11 @@ basic_istream<Elem, Tr>& getline(
 
 ### <a name="parameters"></a>Parameter
 
-`count` Die Anzahl der Zeichen, die zum Auslesen **Strbuf**.
+*Anzahl* die Anzahl der zu lesenden Zeichen aus `strbuf`.
 
-`Delim` Das Zeichen, das den Lesevorgang beendet werden soll, wenn sie vor dem entdeckt wird `count`.
+*Delim* das Zeichen, das den Lesevorgang beenden soll, wenn es vor erreicht wird *Anzahl*.
 
-`str` Eine Zeichenfolge, in die geschrieben werden soll.
+*Str* eine Zeichenfolge in die geschrieben.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -370,15 +370,15 @@ Der Stream ( **\*this**).
 
 Die erste dieser nicht formatierten Eingabefunktionen gibt **getline**(_ *Str*, `count`, `widen`(' `\`**n**')) zurück.
 
-Die zweite Funktion extrahiert bis zu `count` - 1 Elemente und speichert sie in das Array, beginnend bei _ *Str*. Das Abschlusszeichen der Zeichenfolge wird immer nach jedem Element gespeichert, das sie speichert. In der Reihenfolge der Tests hält die Extrahierung hier an:
+Die zweite Funktion extrahiert bis zu *Anzahl* - 1 Elemente und speichert sie in das Array, beginnend bei _ *Str*. Das Abschlusszeichen der Zeichenfolge wird immer nach jedem Element gespeichert, das sie speichert. In der Reihenfolge der Tests hält die Extrahierung hier an:
 
 - Am Ende der Datei.
 
-- Nachdem die Funktion ein Element extrahiert hat, das `Delim` entspricht; in diesem Fall wird das Element weder zurückgestellt noch an die kontrollierte Sequenz angefügt.
+- Nachdem die Funktion ein Element extrahiert, die gleich vergleicht *Delim*, in diesem Fall das Element ist weder zurückgestellt noch an die gesteuerte Sequenz angefügt.
 
-- Nachdem die Funktion `count` - 1 Elemente extrahiert hat.
+- Nachdem die Funktion extrahiert *Anzahl* - 1 Elemente.
 
-Wenn die Funktion keine oder `count` - 1 Elemente extrahiert, ruft sie [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf. In jedem Fall gibt sie **\*this** zurück.
+Wenn die Funktion keine Elemente extrahiert oder *Anzahl* - 1 Elemente ruft [Setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). In jedem Fall gibt sie **\*this** zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -414,9 +414,9 @@ basic_istream<Elem, Tr>& ignore(
 
 ### <a name="parameters"></a>Parameter
 
-`count` Die Anzahl von Elementen aus der aktuellen Leseposition zu überspringen.
+*Anzahl* die Anzahl von Elementen, überspringen Sie aus der aktuellen Leseposition.
 
-`Delim` Das Element, das bewirkt, wenn Count vorgekommen dass **ignorieren** zurückzugebenden und zulassen, dass alle Elemente nach `Delim` gelesen werden.
+*Delim* das Element, das bewirkt, wenn vor dem Zieleintrag, aufgetreten dass `ignore` zurückgegeben und zulassen, dass alle Elemente nach *Delim* gelesen werden.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -424,7 +424,7 @@ Der Stream ( **\*this**).
 
 ### <a name="remarks"></a>Hinweise
 
-Die unformatierte Eingabefunktion extrahiert bis zu `count` Elemente und verwirft sie. Wenn `count` jedoch **numeric_limits\<int>::max** entspricht, wird sie als beliebig groß angesehen. Die Extraktion wird auf das Ende der Datei oder ein Element frühzeitig beendet `Ch` so, dass **Traits_type::**[To_int_type](../standard-library/char-traits-struct.md#to_int_type)( `Ch`) vergleicht gleich *Delim* (die Außerdem extrahiert werden). Die Funktion gibt **\*this** zurück.
+Die unformatierte Eingabefunktion extrahiert bis zu *Anzahl* Elemente und verwirft sie. Wenn *Anzahl* gleich **Numeric_limits\<Int >:: max**, allerdings wird sie als beliebig groß angesehen. Extrahierung hält früh am Ende der Datei oder für ein Element `Ch` so, dass **Traits_type::**[To_int_type](../standard-library/char-traits-struct.md#to_int_type)( `Ch`) übereinstimmt *Delim* (die Außerdem extrahiert werden). Die Funktion gibt **\*this** zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -474,11 +474,11 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>Parameter
 
-`Pfn` Ein Funktionszeiger.
+*Pfn* einen Funktionszeiger.
 
-`strbuf` Ein Objekt des Typs **Stream_buf**.
+*Strbuf* ein Objekt des Typs `stream_buf`.
 
-`val` Der Wert aus dem Datenstrom gelesen werden kann.
+*Val* der Wert, der aus dem Stream gelesen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -486,7 +486,7 @@ Der Stream ( **\*this**).
 
 ### <a name="remarks"></a>Hinweise
 
-Die \<Istream >-Header definiert auch mehrere globale Extraktionsoperatoren. Weitere Informationen finden Sie unter [operator>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt).
+Die \<Istream >-Header definiert außerdem mehrere globale Extraktionsoperatoren. Weitere Informationen finden Sie unter [operator>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt).
 
 Die erste Memberfunktion stellt sicher, dass ein Ausdruck der Form **istr** >> `ws` [ws](../standard-library/istream-functions.md#ws)( **istr**) aufruft, und anschließend **\*this** zurückgibt. Die zweiten und dritten Funktionen stellen sicher, dass andere Manipulatoren, z.B. [hex](../standard-library/ios-functions.md#hex) sich ähnlich verhalten. Die übrigen Funktionen bilden die formatierten Eingabefunktionen.
 
@@ -497,7 +497,7 @@ basic_istream& operator>>(
     basic_streambuf<Elem, Tr>* strbuf);
 ```
 
-extrahiert Elemente, wenn _ *Strbuf* kein NULL-Zeiger ist, und fügt sie in `strbuf` ein. Die Extrahierung hält am Ende der Datei an. Sie hält ebenfalls an, ohne die jeweiligen Elemente zu extrahieren, wenn eine Einfügung fehlschlägt, oder löst eine Ausnahme aus (die aufgefangen, aber nicht erneut ausgelöst wird). Wenn die Funktion keine Elemente extrahiert, ruft sie [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf. In jedem Fall gibt die Funktion **\*this** zurück.
+extrahiert Elemente, wenn _ *Strbuf* ist kein null-Zeiger ist, und fügt sie in *Strbuf*. Die Extrahierung hält am Ende der Datei an. Sie hält ebenfalls an, ohne die jeweiligen Elemente zu extrahieren, wenn eine Einfügung fehlschlägt, oder löst eine Ausnahme aus (die aufgefangen, aber nicht erneut ausgelöst wird). Wenn die Funktion keine Elemente extrahiert, ruft es [Setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). In jedem Fall gibt die Funktion **\*this** zurück.
 
 Die Funktion:
 
@@ -521,9 +521,9 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-extrahieren alle ein Feld, und konvertieren es durch Aufrufen von `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`) in einen numerischen Wert. [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Hier **InIt** ist definiert als `istreambuf_iterator` \< **Elem**, **Tr**>, und `val` weist den Typ **lang**,`unsigned long`, oder **"void" \***  nach Bedarf.
+extrahieren alle ein Feld, und konvertieren es durch Aufrufen von `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`) in einen numerischen Wert. [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Hier **InIt** ist definiert als `istreambuf_iterator` \< **Elem**, **Tr**>, und `val` weist den Typ **lange**,**unsigned long**, oder **"void" \***  je nach Bedarf.
 
-Wenn der konvertierte Wert nicht als Typ `val` dargestellt werden kann, ruft die Funktion [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf. In jedem Fall gibt die Funktion **\*this** zurück.
+Wenn der konvertierte Wert kann, mit dem Typ der dargestellt werden `val`, ruft die Funktion [Setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). In jedem Fall gibt die Funktion **\*this** zurück.
 
 Die Funktionen:
 
@@ -533,7 +533,7 @@ basic_istream& operator>>(double& val);
 basic_istream& operator>>(long double& val);
 ```
 
-extrahieren alle ein Feld, und konvertieren es durch Aufrufen von `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`) in einen numerischen Wert. **get**( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Hier ist **InIt** als `istreambuf_iterator`\< **Elem**, **Tr**> definiert und `val`hat den Typ **double** oder `long double`, je nach Bedarf.
+extrahieren alle ein Feld, und konvertieren es durch Aufrufen von `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`) in einen numerischen Wert. **get**( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Hier `InIt` ist definiert als `istreambuf_iterator` \< **Elem**, **Tr**>, und `val` weist den Typ **doppelte** oder **lange doppelte** je nach Bedarf.
 
 Wenn der konvertierte Wert nicht als Typ `val` dargestellt werden kann, ruft die Funktion `setstate`( **failbit**) auf. In jedem Fall gibt sie **\*this** zurück.
 
@@ -584,7 +584,7 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Ein `rvalue` einen Verweis auf ein `basic_ifstream` Objekt.
+*richtige* ein `rvalue` Verweis auf eine `basic_ifstream` Objekt.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -653,7 +653,7 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>Parameter
 
-`Ch` Ein Zeichen zurück in den Stream zu versetzen.
+*CH* ein Zeichen zurück in den Stream zu versetzen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -661,7 +661,7 @@ Der Stream ( **\*this**).
 
 ### <a name="remarks"></a>Hinweise
 
-Die [nicht formatierte Eingabefunktion](../standard-library/basic-istream-class.md) stellt wenn möglich `Ch` wieder her, als wäre [rdbuf](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc](../standard-library/basic-streambuf-class.md#sputbackc) aufgerufen worden. Wenn „rdbuf“ ein NULL-Zeiger ist, oder wenn der Aufruf von `sputbackc` **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) zurückgibt, ruft die Funktion [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**) auf. In jedem Fall gibt sie **\*this** zurück.
+Die [nicht formatierte Eingabefunktion](../standard-library/basic-istream-class.md) setzt zurück *Ch*, sofern möglich, als wäre [Rdbuf](../standard-library/basic-ios-class.md#rdbuf)`->`[Sputbackc](../standard-library/basic-streambuf-class.md#sputbackc). Wenn Rdbuf null-Zeiger ist oder wenn der Aufruf von `sputbackc` gibt **Traits_type::**[eof](../standard-library/char-traits-struct.md#eof), ruft die Funktion [Setstate](../standard-library/basic-ios-class.md#setstate)(`badbit`). In jedem Fall gibt sie **\*this** zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -702,9 +702,9 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="parameters"></a>Parameter
 
-`str` Das Array, in dem die Zeichen gelesen werden soll.
+*Str* Arrays, in dem die Zeichen gelesen.
 
-`count` Die Anzahl der zu lesenden Zeichen.
+*Anzahl* die Anzahl der zu lesenden Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -712,7 +712,7 @@ Der Stream ( `*this`).
 
 ### <a name="remarks"></a>Hinweise
 
-Die nicht formatierte Eingabefunktion extrahiert bis zu `count` Elemente, und speichert sie in das Array, beginnend bei _ `Str`. Die Extrahierung hält früh am Ende der Datei an. In diesem Fall ruft die Funktion [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`) auf. In jedem Fall gibt sie `*this` zurück.
+Die unformatierte Eingabefunktion extrahiert bis zu *Anzahl* Elemente und speichert sie in das Array, beginnend bei _ `Str`. Extrahierung hält früh am Ende der Datei, in dem Fall wird die Funktion ruft [Setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). In jedem Fall gibt sie `*this` zurück.
 
 ### <a name="example"></a>Beispiel
 
@@ -764,9 +764,9 @@ streamsize readsome(
 
 ### <a name="parameters"></a>Parameter
 
-`str` Das Array, in dem `readsome` speichert gelesenen Zeichen.
+*Str* Arrays, in dem `readsome` die gelesenen Zeichen speichert.
 
-`count` Die Anzahl der zu lesenden Zeichen.
+*Anzahl* die Anzahl der zu lesenden Zeichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -774,7 +774,7 @@ Die Anzahl der tatsächlich gelesenen Zeichen, [gcount](#gcount).
 
 ### <a name="remarks"></a>Hinweise
 
-Diese nicht formatierte Eingabefunktion extrahiert bis zu `count` Elemente, und speichert sie in das Array `str`.
+Diese nicht formatierte Eingabefunktion extrahiert bis zu *Anzahl* Elemente aus der Eingabe zu streamen, und speichert sie in das Array *str*.
 
 Diese Funktion wartet nicht auf Eingabe. Sie liest alle verfügbaren Daten.
 
@@ -819,11 +819,11 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>Parameter
 
-`pos` Die absolute Position in die die read-Zeiger verschoben.
+*POS* die absolute Position in die der Lesezeiger verschoben.
 
-`off` Ein Offset, der den schreibgeschützten Zeiger relativ zum Verschieben `way`.
+*Off* einen Offset zum Verschieben des lesezeigers relativ zum *Weise*.
 
-`way` Eines der [ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir) Enumerationen.
+*Möglichkeit* eines der [ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir) Enumerationen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -836,7 +836,7 @@ Die erste Memberfunktion führt eine absolute, die zweite Memberfunktion eine re
 > [!NOTE]
 > Verwenden Sie die zweite Memberfunktion nicht mit Textdateien, da Standard C++ keine relativen Suchen in Textdateien unterstützt.
 
-Wenn [fail](../standard-library/basic-ios-class.md#fail) FALSE ist, ruft die erste Memberfunktion **newpos** = [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`) für einige temporäre **pos_type**-Objekte **newpos** auf. Wenn **fail** FALSE ist, ruft die zweite Funktion **newpos** = **rdbuf** -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`, `way`) auf. In beiden Fällen Wenn ( `off_type`) **Newpos** == ( `off_type`)(-1) (das Positionierung fehl), die Funktionsaufrufe **Istr**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf. Beide Funktionen geben **\*this** zurück.
+Wenn [fehlschlagen](../standard-library/basic-ios-class.md#fail) "false" ist die erste Memberfunktion ruft **Newpos** = [Rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [Pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`), für einige `pos_type` temporäres Objekt `newpos`. Wenn `fail` ist "false", die zweite Funktion ruft **Newpos** = **Rdbuf** -> [Pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`, `way`). In beiden Fällen Wenn ( `off_type`) **Newpos** == ( `off_type`)(-1) (die Positionierung schlägt fehl), ruft die Funktion `istr`. [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`). Beide Funktionen geben **\*this** zurück.
 
 Wenn [fail](../standard-library/basic-ios-class.md#fail) TRUE ist, führen die Memberfunktionen keine Aufgaben durch.
 
@@ -865,7 +865,7 @@ int main ( )
 
 Die geschachtelte Klasse beschreibt ein Objekt, dessen Deklaration die formatierte und unformatierte Eingabe strukturiert.
 
-Klasse Sentry {öffentliche: explizite Sentry (Basic_istream\<Elem, Tr > & _Istr Bool _Noskip = "false"); Operator bool() const;};
+Klasse Sentry {public: explizite Sentry (Basic_istream\<Elem, Tr > & _Istr, "bool" _Noskip = False), Operator bool() const;};
 
 ### <a name="remarks"></a>Hinweise
 
@@ -875,7 +875,7 @@ Wenn `_Istr.`[good](../standard-library/basic-ios-class.md#good) TRUE ist, führ
 
 - Ruft effektiv [ws](../standard-library/istream-functions.md#ws)( `_Istr`) auf, wenn `_Istr`. [flags](../standard-library/ios-base-class.md#flags)**&**[skipws](../standard-library/ios-functions.md#skipws) ungleich null ist.
 
-Wenn nach Vorbereitungen dieser Art `_Istr`. **good** FALSE ist, ruft der Konstruktor `_Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) auf. Der Konstruktor speichert in jedem Fall den Wert, der von `_Istr`. **good** zurückgegeben wird, in **status**. Ein späterer Aufruf von **operator bool** liefert diesen gespeicherten Wert.
+Wenn nach Vorbereitungen dieser Art `_Istr`. `good` false ist, ruft der Konstruktor `_Istr`. [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`). Der Konstruktor speichert in jedem Fall den Wert, der von `_Istr`. `good` in `status`. Ein späterer Aufruf von `operator bool` liefert diesen gespeicherten Wert.
 
 ## <a name="swap"></a> basic_istream::swap
 
@@ -887,11 +887,11 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>Parameter
 
-`right` Ein Lvalue-Verweis auf eine `basic_istream` Objekt.
+*richtige* ein Lvalue-Verweis auf eine `basic_istream` Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion ruft [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)` auf. Sie tauscht außerdem die Extraktionsanzahl mit der Extraktionsanzahl für `right` aus.
+Die Memberfunktion ruft [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)` auf. Sie tauscht außerdem die extraktionsanzahl mit der extraktionsanzahl für *rechten*.
 
 ## <a name="sync"></a> basic_istream::sync
 
@@ -903,7 +903,7 @@ int sync();
 
 ### <a name="return-value"></a>Rückgabewert
 
-Wenn [rdbuf](../standard-library/basic-ios-class.md#rdbuf) ein NULL-Zeiger ist, gibt die Funktion -1 zurück. Andernfalls ruft sie `rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync) auf. Wenn -1 zurückgegeben wird, ruft die Funktion [setstate](../standard-library/basic-ios-class.md#setstate) ( **badbit**) auf, und gibt -1 zurück. Andernfalls wird von der Funktion null zurückgegeben.
+Wenn [rdbuf](../standard-library/basic-ios-class.md#rdbuf) ein NULL-Zeiger ist, gibt die Funktion -1 zurück. Andernfalls ruft sie `rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync) auf. Wenn-1 zurückgegeben wird, ruft die Funktion [Setstate](../standard-library/basic-ios-class.md#setstate)(`badbit`) und gibt-1 zurück. Andernfalls wird von der Funktion null zurückgegeben.
 
 ## <a name="tellg"></a> basic_istream::tellg
 
@@ -961,7 +961,7 @@ Der Stream ( **\*this**).
 
 ### <a name="remarks"></a>Hinweise
 
-Die [nicht formatierte Eingabefunktion](../standard-library/basic-istream-class.md) stellt, wenn möglich, das vorherige Element im Stream wieder her, als wäre `rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc) aufgerufen worden. Wenn [rdbuf](../standard-library/basic-ios-class.md#rdbuf) ein NULL-Zeiger ist, oder wenn der Aufruf von `sungetc` **traits_type::**[eof](../standard-library/basic-ios-class.md#eof) zurückgibt, ruft die Funktion [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**) auf. In jedem Fall gibt sie **\*this** zurück.
+Die [nicht formatierte Eingabefunktion](../standard-library/basic-istream-class.md) stellt, wenn möglich, das vorherige Element im Stream wieder her, als wäre `rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc) aufgerufen worden. Wenn [Rdbuf](../standard-library/basic-ios-class.md#rdbuf) ein null-Zeiger ist oder wenn der Aufruf von `sungetc` gibt **Traits_type::**[eof](../standard-library/basic-ios-class.md#eof), ruft die Funktion [Setstate](../standard-library/basic-ios-class.md#setstate)( `badbit`). In jedem Fall gibt sie **\*this** zurück.
 
 Informationen dazu, wann bei `unget` ein Fehler auftreten könnte, finden Sie unter [basic_streambuf::sungetc](../standard-library/basic-streambuf-class.md#sungetc).
 

@@ -1,5 +1,5 @@
 ---
-title: 'Operator für explizite Typkonvertierung: () | Microsoft Docs'
+title: 'Operator für explizite Typkonvertierung: () | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93cbd58b3259821292254d8395f5d2435ecaa365
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966933"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operator für die explizite Typkonvertierung: ()
 C++ lässt die explizite Typkonvertierung mithilfe der Syntax ähnlich der Syntax des Funktionsaufrufs zu.  
@@ -34,9 +35,9 @@ simple-type-name ( expression-list )
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Ein *Simple-Type-Name* gefolgt von einem *Expression-List* eingeschlossen in Klammern erstellt ein Objekt des angegebenen Typs unter Verwendung der angegebenen Ausdrücke. Das folgende Beispiel zeigt eine explizite Typkonvertierung in den Typ "int":  
+ Ein *Simple-Type-Name* gefolgt von einem *-Ausdrucksliste* eingeschlossen in Klammern erstellt ein Objekt des genannten Typs mithilfe der angegebenen Ausdrücke. Das folgende Beispiel zeigt eine explizite Typkonvertierung in den Typ "int":  
   
-```  
+```cpp 
 int i = int( d );  
 ```  
   
@@ -44,7 +45,7 @@ int i = int( d );
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // expre_Explicit_Type_Conversion_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -90,14 +91,14 @@ int main()
   
 ## <a name="output"></a>Ausgabe  
   
-```  
+```Output  
 x = 20, y = 10  
 x = 0, y = 0  
 ```  
   
  Obwohl das obige Beispiel die explizite Typkonvertierung mithilfe von Konstanten demonstriert, funktioniert das gleiche Verfahren, um diese Konvertierungen für Objekte auszuführen. Der folgende Codeausschnitt stellt dies dar:  
   
-```  
+```cpp 
 int i = 7;  
 float d;  
   
@@ -106,13 +107,16 @@ d = float( i );
   
  Explizite Typkonvertierungen können mithilfe der "cast"-Syntax ebenfalls angegeben werden. Das vorherige Beispiel, das mithilfe der Umwandlungssyntax neu geschrieben wird, lautet:  
   
-```  
+```cpp
+
 d = (float)i;  
+
 ```  
   
  Umwandlungs- und Funktionskonvertierungen haben dieselben Ergebnisse beim Konvertieren von Einzelwerten. In der Funktionsformatsyntax können Sie mehr als ein Argument für die Konvertierung angeben. Dieser Unterschied ist für benutzerdefinierte Typen wichtig. Betrachten Sie eine `Point`-Klasse und ihre Konvertierungen:  
   
-```  
+```cpp
+
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -121,14 +125,15 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-```  
+
+```
   
- Im vorhergehende Beispiel, das funktionskonvertierung verwendet wird, wird gezeigt, wie zwei Werte zu konvertieren (eine für *x* und eine für *y*) in den benutzerdefinierten Typ `Point`.  
+ Im vorherige Beispiel, das funktionskonvertierung verwendet wird, zeigt, wie zwei Werte konvertiert (eines für *x* und eine für *y*) in den benutzerdefinierten Typ `Point`.  
   
 > [!CAUTION]
 >  Verwenden Sie die expliziten Typkonvertierungen mit Bedacht, da sie die integrierte Typüberprüfung des C++-Compilers überschreiben.  
   
- Die [Umwandlung](../cpp/cast-operator-parens.md) -Schreibweise muss verwendet werden, für die Konvertierung in Typen, die keine *Simple-Type-Name* (Zeiger- oder Verweistyp Typen, z. B.). Konvertierung in Typen, die mit ausgedrückt werden, kann eine *Simple-Type-Name* können in jeder Form geschrieben werden. Finden Sie unter [Typspezifizierer](http://msdn.microsoft.com/en-us/34b6c737-0ef1-4470-9b77-b26e46c0bbd4) Weitere Informationen darüber, worin eine *Simple-Type-Name*.  
+ Die [Umwandlung](../cpp/cast-operator-parens.md) -Schreibweise muss für Konvertierungen in Typen, die nicht verwendet werden eine *Simple-Type-Name* (Zeiger oder Verweis Typen, z. B.). Die Konvertierung in Typen, die mit ausgedrückt werden, kann ein *Simple-Type-Name* können in jeder Form geschrieben werden.  
   
  Eine Typdefinition innerhalb von Umwandlungen ist unzulässig.  
   

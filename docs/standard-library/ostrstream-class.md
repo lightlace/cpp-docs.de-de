@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d268b9cd2ba7d83f44b5e0ebd516208d17ee726
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ea34ac38b70defc873278ce964ff10b8383dcc5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858106"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966578"
 ---
 # <a name="ostrstream-class"></a>ostrstream-Klasse
 
@@ -77,7 +77,7 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parameter
 
-`_Freezeit` Ein `bool` , der angibt, ob den Stream, fixiert werden soll.
+*_Freezeit* ein **"bool"** , der angibt, ob den Stream fixiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -85,7 +85,7 @@ Die Memberfunktion ruft [rdbuf](#rdbuf) -> [freeze](../standard-library/strstrea
 
 ### <a name="example"></a>Beispiel
 
-Ein Beispiel, das **freeze** verwendet, finden Sie unter [strstream::freeze](../standard-library/strstreambuf-class.md#freeze).
+Finden Sie unter [strstream:: Freeze](../standard-library/strstreambuf-class.md#freeze) für ein Beispiel, verwendet `freeze`.
 
 ## <a name="ostrstream"></a> ostrstream::ostrstream
 
@@ -101,19 +101,19 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Parameter
 
-`ptr` Der Puffer.
+*PTR* Puffer.
 
-`count` Die Größe des Puffers in Bytes.
+*Anzahl* die Größe des Puffers in Bytes.
 
-`_Mode` Der Eingabe- und der Modus des Puffers. Weitere Informationen finden Sie unter [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Modus* der Eingabe- und den Modus des Puffers. Weitere Informationen finden Sie unter [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="remarks"></a>Hinweise
 
-Beide Konstruktoren initialisieren die Basisklasse durch Aufrufen von [ostream](../standard-library/ostream-typedefs.md#ostream)( **sb**), wobei **sb** das gespeicherte Objekt der Klasse [strstreambuf](../standard-library/strstreambuf-class.md) ist. Der erste Konstruktor initialisiert zudem **sb** durch Aufrufen von `strstreambuf`. Der zweite Konstruktor initialisiert die Basisklasse auf einer von zwei Arten:
+Beide Konstruktoren initialisieren die Basisklasse durch Aufrufen von [Ostream](../standard-library/ostream-typedefs.md#ostream)(**Sb**), wobei `sb` das gespeicherte Objekt der Klasse [Strstreambuf](../standard-library/strstreambuf-class.md). Der erste Konstruktor initialisiert zudem `sb` durch Aufrufen von `strstreambuf`. Der zweite Konstruktor initialisiert die Basisklasse auf eine von zwei Arten:
 
-- Wenn `_Mode` & **ios_base::app**== 0, dann muss `ptr` das erste Element eines Arrays von `count`-Elementen festlegen, und der Konstruktor ruft `strstreambuf`( `ptr`, `count`, `ptr`) auf.
+- Wenn `_Mode`  &  **ios_base:: trunc**== 0, dann `ptr` müssen festlegen, das erste Element eines Arrays von `count` Elemente und der Konstruktor ruft `strstreambuf`(`ptr`, `count`, `ptr`).
 
-- Andernfalls muss `ptr` das erste Element eines Arrays an count-Elementen bezeichnen, die eine C-Zeichenfolge enthält, deren erstes Element von `ptr` bezeichnet wird und der Konstruktor ruft `strstreambuf`( `ptr`, `count`, `ptr`  +  `strlen`( `ptr`)) auf.
+- Andernfalls `ptr` müssen festlegen, das erste Element eines Arrays an Count-Elementen, die eine C-Zeichenfolge enthält, deren erstes Element erhalten Sie, `ptr`, und der Konstruktor ruft `strstreambuf`(`ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="pcount"></a> ostrstream::pcount
 
@@ -149,7 +149,7 @@ Ein Zeiger auf das dem Stream zugeordnete strstreambuf-Objekt.
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion gibt die Adresse des gespeicherten Streampuffers des Typs **pointer** auf [strstreambuf](../standard-library/strstreambuf-class.md) zurück.
+Die Memberfunktion gibt die Adresse des gespeicherten Streampuffers des Typs `pointer` zu [Strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Beispiel
 
@@ -173,7 +173,7 @@ Die Memberfunktion gibt [rdbuf](#rdbuf) -> [str](../standard-library/strstreambu
 
 ### <a name="example"></a>Beispiel
 
-Unter [strstream::str](../standard-library/strstreambuf-class.md#str) finden Sie ein Beispiel, das **str** verwendet.
+Finden Sie unter [strstream:: str](../standard-library/strstreambuf-class.md#str) für ein Beispiel, verwendet `str`.
 
 ## <a name="see-also"></a>Siehe auch
 

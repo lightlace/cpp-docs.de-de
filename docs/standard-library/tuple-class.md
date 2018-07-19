@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d265938eb024a41d8b90f3b9891c35ec1ec251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858798"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963925"
 ---
 # <a name="tuple-class"></a>Tupelklasse
 
@@ -48,17 +48,18 @@ public:
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
    };
+```
 
-### Parameters
+### <a name="parameters"></a>Parameter
 
-`TN`
- The type of the Nth tuple element.
+*TN*  
+ Der Typ des N-ten Tupelelements.
 
-## Remarks
+## <a name="remarks"></a>Hinweise
 
-The template class describes an object that stores N objects of types `T1`, `T2`, ..., `TN`, respectively, where where `0 <= N <= Nmax`. The extent of a tuple instance `tuple<T1, T2, ..., TN>` is the number `N` of its template arguments. The index of the template argument `Ti` and of the corresponding stored value of that type is `i - 1`. Thus, while we number the types from 1 to N in this documentation, the corresponding index values range from 0 to N - 1.
+Die Vorlagenklasse beschreibt ein Objekt, das N-Objekte des Typs speichert `T1`, `T2`,..., `TN`, bzw., in denen where `0 <= N <= Nmax`. Das Ausmaß der eine tupelinstanz `tuple<T1, T2, ..., TN>` ist die Anzahl `N` der dazugehörigen Vorlagenargumente. Der Index des dem Vorlagenargument `Ti` und des entsprechenden gespeicherten Werts des betreffenden Typs ist `i - 1`. Während wir die Typen von 1 bis N in dieser Dokumentation Zahl ist, Werte der entsprechende Index folglich reichen von 0 bis N - 1.
 
-## Example
+## <a name="example"></a>Beispiel
 
 ```cpp
 // tuple.cpp
@@ -153,13 +154,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parameter
 
-`UN` Der Typ des n-ten kopierten Tupelelements.
+*AUFHEBEN*  
+ Der Typ des N-ten kopierten Tupelelements.
 
-`right` Das Tupel, aus dem kopiert werden soll.
+*right*  
+ Das Tupel, aus dem kopiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
-Die ersten beiden Memberoperatoren weisen die Elemente von `right` den entsprechenden Elementen von `*this` zu. Der dritte Memberoperator weist dem Element am Index 0 von `*this` `right.first` zu und dem Element am Index 1 `right.second`. Alle drei Memberoperatoren geben `*this` zurück.
+Die ersten beiden memberoperatoren weisen die Elemente von *rechten* zu den entsprechenden Elementen von `*this`. Der dritte Memberoperator weist dem Element am Index 0 von `*this` `right.first` zu und dem Element am Index 1 `right.second`. Alle drei Memberoperatoren geben `*this` zurück.
 
 Die restlichen Memberoperatoren sind analog zu früheren, aber mit [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -226,8 +229,8 @@ template <class... Types>
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`left`|Ein Tupel, dessen Elemente mit denen des Tupels `right` ausgetauscht werden sollen.|
-|`right`|Ein Tupel, dessen Elemente mit denen des Tupels `left` ausgetauscht werden sollen.|
+|*left*|Ein Tupel, dessen Elemente mit denen des Tupels ausgetauscht werden *rechten*.|
+|*right*|Ein Tupel, dessen Elemente mit denen des Tupels ausgetauscht werden *linken*.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -260,9 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parameter
 
-`UN` Der Typ des n-ten kopierten Tupelelements.
+*AUFHEBEN*  
+ Der Typ des N-ten kopierten Tupelelements.
 
-`right` Das Tupel, aus dem kopiert werden soll.
+*right*  
+ Das Tupel, aus dem kopiert werden soll.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -270,7 +275,7 @@ Der erste Konstruktor erstellt ein Objekt, dessen Elemente standardmäßig erste
 
 Der zweite Konstruktor erstellt ein Objekt, dessen Elemente durch Kopieren aus den Argumenten `P1`, `P2`, ..., `PN` erstellt werden, wobei jedes `Pi` das Element initialisiert, das den Index `i - 1` hat.
 
-Der dritte und der vierte Konstruktor erstellen ein Objekt, dessen Elemente durch Kopieren des entsprechenden Elements von `right` erstellt werden.
+Die dritten und vierten-Konstruktoren erstellen ein Objekt, dessen Elemente kopieren, die aus dem entsprechenden Element des erstellt *rechten*.
 
 Der fünfte Konstruktor erstellt ein Objekt, dessen Element bei Index 0 durch Kopieren aus `right.first` und dessen Element bei Index 1 durch Kopieren aus `right.second` erstellt wird.
 

@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d7ae039fefc0137d317a15a803a0bf5d8205c31
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc84748e35807ef0f270fe8fbbd7560a9a18e3b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850013"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963494"
 ---
 # <a name="allocators"></a>Allocators
 
@@ -38,7 +38,7 @@ Die C++-Standardbibliothek stellt eine Standardimplementierung für einen Alloca
 
 ## <a name="writing-your-own-allocator-c11"></a>Schreiben von eigenen Allocators (C ++ 11)
 
-Der Standardallocator verwendet `new` und `delete` zum Zuordnen von Speichern und zum Aufheben der Zuordnung. Wenn Sie eine andere Methode für die Speicherzuordnung verwenden möchten, z. B. die Verwendung von gemeinsam genutztem Speicher, müssen Sie einen eigenen Allocator erstellen. Wenn Sie C ++ 11 als Ziel verwenden und Sie einen neuen benutzerdefinierten Allocator schreiben müssen, erstellen Sie möglichst einen minimalen Allocator. Auch wenn Sie bereits einen herkömmlichen Allocator implementiert haben, ziehen Sie in Betracht, ihn in einen *minimalen Allocator* zu ändern, um die effizientere Methode `construct()` nutzen zu können, die Ihnen automatisch bereitgestellt wird.
+Der standardallocator verwendet **neue** und **löschen** zum Reservieren und Freigeben von Arbeitsspeicher. Wenn Sie eine andere Methode für die Speicherzuordnung verwenden möchten, z. B. die Verwendung von gemeinsam genutztem Speicher, müssen Sie einen eigenen Allocator erstellen. Wenn Sie C ++ 11 als Ziel verwenden und Sie einen neuen benutzerdefinierten Allocator schreiben müssen, erstellen Sie möglichst einen minimalen Allocator. Auch wenn Sie bereits einen herkömmlichen Allocator implementiert haben, ziehen Sie in Betracht, ihn in einen *minimalen Allocator* zu ändern, um die effizientere Methode `construct()` nutzen zu können, die Ihnen automatisch bereitgestellt wird.
 
 Ein minimaler Allocator benötigt viel weniger Textbausteine und ermöglicht Ihnen, sich auf die `allocate`- und `deallocate`-Memberfunktionen zu konzentrieren, die die gesamte Arbeit erledigen. Implementieren Sie beim Erstellen eines minimalen Allocators keine Member außer den im folgenden Beispiel dargestellten:
 

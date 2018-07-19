@@ -11,12 +11,12 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 7ee458d0d84b63de52a2840a7a86903afed1704d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d79e3361d58165ac356e2ef75c0a3fd1a4cb4f26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845985"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963640"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;ios&gt;-Typedefs
 
@@ -35,7 +35,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse [basic_ios](../standard-library/basic-ios-class.md), die auf Elemente des Typs `char` mit Standardzeichenmerkmalen spezialisiert ist.
+Der Typ ist ein Synonym für die Vorlagenklasse [Basic_ios](../standard-library/basic-ios-class.md), die auf Elemente des Typs **Char** mit Standard-Zeichenmerkmale.
 
 ## <a name="streamoff"></a> streamoff
 
@@ -51,7 +51,7 @@ Unterstützt interne Vorgänge.
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist eine Ganzzahl mit Vorzeichen, die ein Objekt beschreibt, das einen Byte-Offset speichern kann, der an verschiedenen Streampositionierungsvorgängen beteiligt ist. Seine Repräsentation hat mindestens 32 Wertbits. Er ist nicht unbedingt groß genug, um eine willkürliche Byte-Position innerhalb eines Streams repräsentieren zu können. Der Wert **streamoff(–1)** markiert grundsätzlich einen fehlerhaften Offset.
+Der Typ ist eine Ganzzahl mit Vorzeichen, die ein Objekt beschreibt, das einen Byte-Offset speichern kann, der an verschiedenen Streampositionierungsvorgängen beteiligt ist. Seine Repräsentation hat mindestens 32 Wertbits. Er ist nicht unbedingt groß genug, um eine willkürliche Byte-Position innerhalb eines Streams repräsentieren zu können. Der Wert `streamoff(-1)` bedeutet im Allgemeinen, einen fehlerhaften Offset.
 
 ## <a name="streampos"></a> streampos
 
@@ -134,7 +134,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ ist ein Synonym für die Vorlagenklasse [basic_ios](../standard-library/basic-ios-class.md), die auf Elemente des Typs `wchar_t` mit Standardzeichenmerkmalen spezialisiert ist.
+Der Typ ist ein Synonym für die Vorlagenklasse [Basic_ios](../standard-library/basic-ios-class.md), die auf Elemente des Typs **"wchar_t"** mit Standard-Zeichenmerkmale.
 
 ## <a name="wstreampos"></a> wstreampos
 

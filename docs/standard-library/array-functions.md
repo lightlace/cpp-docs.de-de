@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 355b9945e8783879c9d35aab9893dffa32596d00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840774"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961070"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt;-Funktionen
 
-Der Header \<array> enthält zwei Nicht-Memberfunktionen, `get` und `swap`, die `array`-Objekte verarbeiten.
+Die \<Array >-Header enthält zwei nicht-Memberfunktionen, `get` und `swap`, arbeiten auf **Array** Objekte.
 
 |||
 |-|-|
@@ -50,13 +50,13 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parameter
 
-`Index` Der Offset des Elements.
+*Index* der Offset des Elements.
 
-`T` Der Typ eines Elements.
+*T* den Typ eines Elements.
 
-`N` Die Anzahl der Elemente im Array.
+*N* die Anzahl der Elemente im Array.
 
-`arr` Das Array, wählen Sie aus.
+*Arr* Arrays aus.
 
 ### <a name="example"></a>Beispiel
 
@@ -92,7 +92,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-Eine Nicht-Member-Vorlagenspezialisierung von `std::swap`, die zwei `array`-Objekte miteinander tauschen kann.
+Eine nicht-Member-vorlagenspezialisierung von `std::swap` , die tauscht zwei **Array** Objekte.
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -101,13 +101,13 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der Typ eines Elements.
+*Ty* den Typ eines Elements.
 
-`N` Die Größe des Arrays.
+*N* die Größe des Arrays.
 
-`left` Das erste Array austauschen.
+*linken* das erste auszutauschende Array.
 
-`right` Das zweite Array austauschen.
+*richtige* das zweite auszutauschende Array.
 
 ### <a name="remarks"></a>Hinweise
 

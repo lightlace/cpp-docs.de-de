@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3250d9a090dcbd5eaa9a3cc0d51df84600ed3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66f9401bed0a6c9d0b1ffa09a10f98afa258069d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912874"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964755"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -37,7 +37,7 @@ Definiert die Vorlagenklasse `numeric_limits` und zwei Enumerationen zu Gleitkom
 
 ## <a name="remarks"></a>Hinweise
 
-Explizite Spezialisierungen der `numeric_limits`-Klasse beschreiben viele Eigenschaften der grundlegenden Typen, einschließlich der Zeichen-, Integer- und Gleitkommatypen sowie `bool`, die nicht von den Regeln der Programmiersprache C++ festgelegt werden, sondern von der Implementierung abhängig sind. In \<limits> beschriebene Eigenschaften umfassen Genauigkeit, Darstellungen minimaler und maximaler Größe, Rundung und Fehler des Signalisierungstyps.
+Explizite spezialisierungen der `numeric_limits` -Klasse beschreiben viele Eigenschaften der grundlegenden Typen, einschließlich der Zeichen, ganze Zahl und Gleitkomma-Datentypen und **"bool"** , die Implementierung definiert und nicht als unveränderlich sind die Regeln der Programmiersprache C++. In \<limits> beschriebene Eigenschaften umfassen Genauigkeit, Darstellungen minimaler und maximaler Größe, Rundung und Fehler des Signalisierungstyps.
 
 ### <a name="enumerations"></a>Enumerationen
 

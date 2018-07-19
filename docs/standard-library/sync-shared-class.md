@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e275bd195c11b605891b250e9264bad587eb853
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0fb9b61ec4d2abc6ae73b2ebed7571398857d517
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865604"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963458"
 ---
 # <a name="syncshared-class"></a>sync_shared-Klasse
 
@@ -44,7 +44,7 @@ class sync_shared
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Cache`|Der Cachetyp, der diesem Synchronisierungsfilter zugeordnet werden soll. Dieser kann [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) oder [cache_suballoc](../standard-library/cache-suballoc-class.md) sein.|
+|*Cache*|Der Cachetyp, der diesem Synchronisierungsfilter zugeordnet werden soll. Dieser kann [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) oder [cache_suballoc](../standard-library/cache-suballoc-class.md) sein.|
 
 ### <a name="member-functions"></a>Memberfunktionen
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`count`|Die Anzahl der zuzuordnenden Elemente des Arrays.|
+|*count*|Die Anzahl der zuzuordnenden Elemente des Arrays.|
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -94,8 +94,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`ptr`|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
-|`count`|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
+|*ptr*|Ein Zeiger auf das erste Objekt, dessen Zuweisung zum Speicher aufgehoben werden soll.|
+|*count*|Die Anzahl von Objekten, deren Zuweisung zum Speicherplatz aufgehoben werden soll.|
 
 ### <a name="remarks"></a>Hinweise
 
@@ -113,12 +113,12 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 |Parameter|Beschreibung|
 |---------------|-----------------|
-|`Cache`|Der Cachetyp, der diesem Synchronisierungsfilter zugeordnet werden soll.|
-|`Other`|Das Cache-Objekt, das auf Gleichheit verglichen werden soll.|
+|*Cache*|Der Cachetyp, der diesem Synchronisierungsfilter zugeordnet werden soll.|
+|*Andere*|Das Cache-Objekt, das auf Gleichheit verglichen werden soll.|
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn das Ergebnis von `cache.equals(Other.cache)`, wobei `cache` das Cache-Objekt darstellt, `true` ist, andernfalls `false`.
+**"true"** Wenn das Ergebnis des `cache.equals(Other.cache)`, wobei `cache` das Cache-Objekt darstellt, ist **"true"** ist, andernfalls **"false"**.
 
 ### <a name="remarks"></a>Hinweise
 

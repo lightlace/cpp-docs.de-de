@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49626cbb33ed1220ad82cbec10ad675769b054d6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863607"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963523"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator-Klasse
 
-Die Vorlagenklasse ostream_iterator beschreibt ein Ausgabeiteratorobjekt, das aufeinander folgende Elemente in den Ausgabestream mit der Extraktion **operator <<** schreibt.
+Die Vorlagenklasse Ostream_iterator beschreibt ein ausgabeiteratorobjekt, das aufeinander folgende Elemente in den Ausgabestream mit der Extraktion schreibt `operator <<`.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ class ostream_iterator
 
 *Typ* den Typ des Objekts in den Ausgabestream eingefügt werden soll.
 
-`CharType` Der Typ, der den Zeichentyp für das `ostream_iterator`. Dieses Argument ist optional, und der Standardwert ist `char`.
+*CharType* der Typ, der den Zeichentyp für das `ostream_iterator`. Dieses Argument ist optional, und der Standardwert ist **Char**.
 
-`Traits` Der Typ, der den Zeichentyp für das `ostream_iterator`. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
+*"Traits"* der Typ, der den Zeichentyp für das `ostream_iterator`. Dieses Argument ist optional, und der Standardwert ist `char_traits`\< *CharType>.*
 
 Die ostream_iterator-Klasse muss den Anforderungen für einen Ausgabeiterator entsprechen. Algorithmen können mit `ostream_iterator` direkt in Ausgabestreams geschrieben werden.
 
@@ -88,7 +88,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter **CharType** dar.
+Der Type stellt ein Synonym für den Vorlagenparameter `CharType` dar.
 
 ### <a name="example"></a>Beispiel
 
@@ -236,11 +236,11 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>Parameter
 
-`val` Der Wert des Objekts vom Typ `Type` in den Ausgabestream eingefügt werden soll.
+*Val* den Wert des Objekts vom Typ `Type` in den Ausgabestream eingefügt werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Operator fügt `val` in den Ausgabestream ein, der dem Objekt zugeordnet ist, gefolgt von dem Trennzeichen, das in [ostream_iterator-Konstruktor](#ostream_iterator) angegeben ist (sofern vorhanden), und gibt dann einen Verweis auf die `ostream_iterator`.
+Der Operator fügt *Val* in den Ausgabestream, der dem Objekt zugeordnet wird, gefolgt von dem Trennzeichen den [Ostream_iterator-Konstruktor](#ostream_iterator) (sofern vorhanden), und klicken Sie dann einen Verweis auf die zurückgibt`ostream_iterator`.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -294,15 +294,15 @@ ostream_iterator(
 
 ### <a name="parameters"></a>Parameter
 
-`_Ostr` Der Ausgabedatenstrom des Typs [ostream_iterator:: ostream_type](#ostream_type) , die in einer Schleife durchlaufen werden.
+*_Ostr* der Ausgabestream vom Typ [ostream_iterator:: ostream_type](#ostream_type) durchlaufen werden soll.
 
-`_Delimiter` Das Trennzeichen, das in den Ausgabestream zwischen Werten eingefügt wird.
+*_Delimiter* das Trennzeichen, das in den Ausgabestream zwischen Werten eingefügt wird.
 
 ### <a name="remarks"></a>Hinweise
 
 Der erste Konstruktor initialisiert den Ausgabestreamzeiger mit `&_Ostr`. Der Zeiger für Zeichenfolgentrennzeichen kennzeichnet eine leere Zeichenfolge.
 
-Der zweite Konstruktor initialisiert den Ausgabestreamzeiger mit `&_Ostr` und den Zeiger für Zeichenfolgentrennzeichen mit `_Delimiter`.
+Der zweite Konstruktor initialisiert den ausgabestreamzeiger mit `&_Ostr` und der Zeiger für Zeichenfolgentrennzeichen mit *_Delimiter*.
 
 ### <a name="example"></a>Beispiel
 
@@ -377,7 +377,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Hinweise
 
-Der Typ stellt ein Synonym für den Vorlagenparameter **Merkmale** dar.
+Der Type stellt ein Synonym für den Vorlagenparameter `Traits` dar.
 
 ### <a name="example"></a>Beispiel
 

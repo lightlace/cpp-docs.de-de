@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: effa754f50f8c092cef727969a0f4036e765f888
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46f8d00877aa4147e4b3e4ec2a6a23b70d8154c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856045"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965847"
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare-Klasse (&lt;map&gt;)
 
@@ -45,7 +45,7 @@ protected:
 
 ## <a name="remarks"></a>Hinweise
 
-Die von `value_compare` bei einem Vergleich von **value_types** ganzer, in einer Zuordnung enthaltener Elemente bereitgestellten Vergleichskriterien werden von einem Vergleich der Schlüssel der jeweiligen Elemente durch die Erweiterungsklassenkonstruktion induziert. Der Operator der Memberfunktion verwendet das Objekt **comp** vom Typ `key_compare`, das in dem Funktionsobjekt gespeichert ist, das von `value_compare` für den Vergleich der Sortierschlüsselkomponenten von zwei Elementen bereitgestellt wird.
+Die gebotenen Vergleichskriterium `value_compare` zwischen `value_types` ganzer von einer Zuordnung enthaltener Elemente durch einen Vergleich der Schlüssel der jeweiligen Elemente durch die erweiterungsklassenkonstruktion induziert ausgelöst wird. Operator der Memberfunktion verwendet das Objekt `comp` des Typs `key_compare` gespeichert, in dem Funktionsobjekt gebotenen `value_compare` zum Vergleich der sortierschlüsselkomponenten von zwei Elementen.
 
 Bei Mengen und Multimengen, bei denen es sich um einfache Container handelt, bei denen die Schlüsselwerte mit den Elementwerten übereinstimmen, stimmt `value_compare` mit `key_compare` überein; bei Zuordnungen und Mehrfachzuordnungen nicht, da der Wert von Elementen vom Typ `pair` nicht mit dem Wert des Elementschlüssels identisch ist.
 

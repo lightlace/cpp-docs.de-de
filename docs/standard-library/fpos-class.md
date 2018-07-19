@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c7d7babe1112bbfcc80485d54d5a4a005b4dfc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848634"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966601"
 ---
 # <a name="fpos-class"></a>fpos-Klasse
 
@@ -34,7 +34,7 @@ Die Vorlagenklasse beschreibt ein Objekt, das alle Informationen, die zum Wieder
 
 - Ein Byteoffset vom Typ [streamoff](../standard-library/ios-typedefs.md#streamoff)
 
-- Ein Konvertierungszustand, der für ein Objekt der Klasse basic_filebuf und vom Typ **St** verwendet wird, in der Regel `mbstate_t`
+- Ein konvertierungszustand, für die Verwendung durch ein Objekt der Klasse Basic_filebuf und vom Typ `St`, in der Regel `mbstate_t`.
 
 Es kann auch eine beliebige Dateiposition speichern, die von einem Objekt der Klasse [basic_filebuf](../standard-library/basic-filebuf-class.md) und vom Typ `fpos_t` verwendet werden kann. In einer Umgebung mit begrenzter Dateigröße werden `streamoff` und `fpos_t` jedoch manchmal synonym verwendet. In einer Umgebung ohne Streams, mit zustandsabhängiger Codierung, wird `mbstate_t` möglicherweise nicht verwendet. Daher kann die Anzahl der gespeicherten Memberobjekte variieren.
 
@@ -92,17 +92,17 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Parameter
 
-`_Off` Der Offset in den Stream.
+*_Off* der Offset in den Stream.
 
-`_State` Der Anfangszustand des der `fpos` Objekt.
+*_State* den Status der `fpos` Objekt.
 
-*_Filepos* den Offset in den Stream.
+*_Filepos* der Offset in den Stream.
 
 ### <a name="remarks"></a>Hinweise
 
-Der erste Konstruktor speichert den `_Off`-Offset relativ zum Anfang der Datei und im ursprünglichen Konvertierungszustand (wenn dies gewünscht ist). Wenn `_Off` -1 ist, stellt das resultierende Objekt eine ungültige Streamposition dar.
+Der erste Konstruktor speichert den Offset *_Off*, relativ zum Anfang der Datei, und klicken Sie in den ursprünglichen konvertierungszustand (Wenn dies gewünscht ist). Wenn *_Off* ist-1. das resultierende Objekt stellt eine ungültige Streamposition dar.
 
-Der zweite Konstruktor speichert ein null-Offset und das Objekt `_State`.
+Der zweite Konstruktor speichert einen NULL-Offset und das Objekt *_State*.
 
 ## <a name="op_neq"></a> fpos::operator!=
 
@@ -114,7 +114,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-`right` Der dateipositionszeiger mit dem verglichen werden soll.
+*richtige* der dateipositionsindikator, gegen den verglichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -186,7 +186,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parameter
 
-`_Off` Der Offset der dateipositionszeiger erhöht werden soll.
+*_Off* der Offset, der durch den der dateipositionsindikator erhöht werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -210,7 +210,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Parameter
 
-`_Off` Der Offset der dateipositionszeiger erhöht werden soll.
+*_Off* der Offset, der durch den der dateipositionsindikator erhöht werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -218,7 +218,7 @@ Die Position in der Datei
 
 ### <a name="remarks"></a>Hinweise
 
-Die Memberfunktion fügt `_Off` den gespeicherten Offset-Memberobjekten hinzu und gibt dann **\*this** zurück. Für die Positionierung innerhalb einer Datei ist das Ergebnis in der Regel nur für binäre Datenströme gültig, die über keine zustandsabhängige Codierung verfügen.
+Addiert die Memberfunktion *_Off* auf das gespeicherte Offset-Memberobjekt-Objekt und klicken Sie dann die gibt  **\*dies**. Für die Positionierung innerhalb einer Datei ist das Ergebnis in der Regel nur für binäre Datenströme gültig, die über keine zustandsabhängige Codierung verfügen.
 
 ### <a name="example"></a>Beispiel
 
@@ -236,9 +236,9 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parameter
 
-`right` Dateiposition.
+*richtige* Dateiposition.
 
-`_Off` Streamoffset.
+*_Off* Stream Offset.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -258,7 +258,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Parameter
 
-`_Off` Streamoffset.
+*_Off* Stream Offset.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parameter
 
-`right` Der dateipositionszeiger mit dem verglichen werden soll.
+*richtige* der dateipositionsindikator, gegen den verglichen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -355,7 +355,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Parameter
 
-`_State` Der neue Status der Konvertierung.
+*_State* der neue Konvertierungsstatus.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -363,7 +363,7 @@ Der Konvertierungsstatus
 
 ### <a name="remarks"></a>Hinweise
 
-Die erste Memberfunktion gibt den im **St**-Memberobjekt gespeicherten Wert zurück. Die zweite Memberfunktion speichert `_State` im **St**-Memberobjekt.
+Die erste Memberfunktion gibt den Wert, der in gespeicherte zurück die `St` Member-Objekt. Die zweite Memberfunktion speichert *_State* in die `St` Member-Objekt.
 
 ### <a name="example"></a>Beispiel
 

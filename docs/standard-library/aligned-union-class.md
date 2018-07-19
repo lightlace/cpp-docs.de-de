@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a149269117f83b18838d54c728d6d8da580882b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdd2a8417f66c0e095f571c914d5a4624179fdb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840699"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962112"
 ---
 # <a name="alignedunion-class"></a>aligned_union-Klasse
 
@@ -39,13 +39,13 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Parameter
 
-`Len` Der Ausrichtungswert für den größten Typ in der Union.
+*Len* der Ausrichtungswert für den größten Typ in der Union.
 
-`Types` Die unterschiedlichen Typen in der zugrunde liegenden Union.
+*Typen* die unterschiedlichen Typen in der zugrunde liegenden Union.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die Vorlagenklasse, um eine Ausrichtung und die benötigte Größe zu schaffen, die für das Speichern einer Union in einem nicht initialisierten Speicherplatz erforderlich sind. Der typedef-Member `type` benennt einen POD-Typ, der zum Speichern jedes unter `Types` aufgelisteten Typen geeignet ist; die minimale Größe beträgt `Len`. Der statische Member `alignment_value` des Typs `std::size_t` enthält die striktesten Ausrichtungen, die für alle unter `Types` aufgelisteten Typen erforderliche sind.
+Verwenden Sie die Vorlagenklasse, um eine Ausrichtung und die benötigte Größe zu schaffen, die für das Speichern einer Union in einem nicht initialisierten Speicherplatz erforderlich sind. Der TypeDef-Member `type` benennt einen POD Geben Sie für die Speicherung eines beliebigen Typs in aufgeführten geeignet *Typen*; die minimale Größe beträgt *Len*. Das statische Element `alignment_value` des Typs `std::size_t` enthält die striktesten Ausrichtungen, die erforderlich sind, alle Dateitypen in *Typen*.
 
 ## <a name="example"></a>Beispiel
 
