@@ -1,5 +1,5 @@
 ---
-title: CDumpContext Klasse | Microsoft Docs
+title: CDumpContext-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80795131915da89928afc883fec0985087c4f38f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d80ed097056c9d52f5f9d98ab8e3f80fae431d98
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336344"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext-Klasse
 Unterstützt die Darstellung gestreamter Diagnoseausgaben als Klartext.  
@@ -57,10 +57,10 @@ class CDumpContext
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CDumpContext::DumpAsHex](#dumpashex)|Gibt das angegebene Element im Hexadezimalformat an.|  
-|[CDumpContext::Flush](#flush)|Leert alle Daten in den Kontextpuffer Dump an.|  
-|[CDumpContext::GetDepth](#getdepth)|Ruft eine ganze Zahl, die Tiefe des Speicherabbilds entspricht.|  
-|[CDumpContext::HexDump](#hexdump)|Sichert die Bytes in einem Array im hexadezimalen Format enthalten sind.|  
-|[CDumpContext::SetDepth](#setdepth)|Legt die Tiefe des Speicherabbilds.|  
+|[CDumpContext::Flush](#flush)|Leert alle Daten in Dumps Kontextpuffer.|  
+|[CDumpContext::GetDepth](#getdepth)|Ruft eine ganze Zahl, die die Tiefe des Dumps ab.|  
+|[CDumpContext::HexDump](#hexdump)|Gibt die Byte in ein Array im Hexadezimalformat.|  
+|[CDumpContext::SetDepth](#setdepth)|Legt fest, die Tiefe des Speicherabbilds.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
@@ -69,23 +69,23 @@ class CDumpContext
 |[CDumpContext::operator &lt;&lt;](#operator_lt_lt)|Fügt der Dumpkontext Variablen und Objekte zu.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CDumpContext` eine Basisklasse verfügt nicht über.  
+ `CDumpContext` eine Basisklasse keinen.  
   
- Sie können [AfxDump](diagnostic-services.md#afxdump), eine vordeklariert `CDumpContext` Objekt, für die meisten Ihrer Dump-Sicherungen. Die `afxDump` Objekt ist nur in der Debugversion des Microsoft Foundation Class-Bibliothek verfügbar.  
+ Sie können [AfxDump](diagnostic-services.md#afxdump), eine vorab deklarierte `CDumpContext` -Objekt, für die meisten Ihrer Sicherungen. Die `afxDump` Objekt nur in der Debugversion der Microsoft Foundation Class-Bibliothek verfügbar ist.  
   
  Mehrere des Arbeitsspeichers [Diagnosedienste](../../mfc/reference/diagnostic-services.md) verwenden `afxDump` für ihre Ausgabe.  
   
- Unter der Windows-Umgebung, die Ausgabe der vordefinierten `afxDump` Objekt konzeptionell identisch mit der `cerr` streamen, wird an den Debugger über die Windows-Funktion weitergeleitet **OutputDebugString**.  
+ Unter der Windows-Umgebung, die aus der vordefinierten `afxDump` Objekt, das konzeptionell identisch mit der `cerr` streamen, wird an den Debugger über die Windows-Funktion weitergeleitet `OutputDebugString`.  
   
- Die `CDumpContext` -Klasse verfügt über eine überladene Einfügung ( **<<**) Operator für `CObject` Zeiger, die Daten des Objekts einen Dump erstellt. Wenn Sie eine benutzerdefinierte dumpformat für ein abgeleitetes Objekt benötigen, überschreiben [CObject::Dump](../../mfc/reference/cobject-class.md#dump). Die meisten Microsoft Foundation Classes implementieren eine überschriebene `Dump` Memberfunktion.  
+ Die `CDumpContext` -Klasse verfügt über eine überladene Einfügung ( **<<**)-Operator für `CObject` Zeiger, die die Daten des Objekts sichert. Wenn Sie eine benutzerdefinierte dumpformat für ein abgeleitetes Objekt benötigen, überschreiben [CObject::Dump](../../mfc/reference/cobject-class.md#dump). Die meisten Microsoft Foundation Classes implementieren eine überschriebene `Dump` Member-Funktion.  
   
- Die nicht von abgeleiteten Klassen `CObject`, wie z. B. `CString`, `CTime`, und `CTimeSpan`, haben ihre eigenen überladene `CDumpContext` Einfügeoperatoren als führen häufig verwendeten Strukturen, z. B. `CFileStatus`, `CPoint`, und `CRect`.  
+ Nicht von abgeleiteten Klassen `CObject`, z. B. `CString`, `CTime`, und `CTimeSpan`, haben Sie ihre eigenen überladene `CDumpContext` Insertion-Operatoren als führen, die häufig verwendeten Strukturen wie z. B. `CFileStatus`, `CPoint`, und `CRect`.  
   
- Bei Verwendung der [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) oder [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) Makros in der Implementierung Ihrer Klasse `CObject::Dump` druckt den Namen des Ihrer `CObject`-abgeleitete Klasse. Wird hingegen Drucken `CObject`.  
+ Bei Verwendung der [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) oder [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) Makro in der Implementierung der Klasse, klicken Sie dann `CObject::Dump` gibt den Namen Ihrer `CObject`-abgeleitete Klasse. Andernfalls wird es ausgegeben `CObject`.  
   
- Die `CDumpContext` Klasse ist verfügbar, mit der Debugversion und Releaseversion Versionen der Bibliothek, aber die `Dump` Member-Funktion ist nur in der Debugversion definiert. Verwendung **#ifdef _DEBUG**  /  `#endif` Anweisungen, die Ihre Diagnosecode, einschließlich Ihrer benutzerdefinierten Klammer `Dump` Memberfunktionen.  
+ Die `CDumpContext` -Klasse ist verfügbar, mit dem Debug und Release-Versionen der Bibliothek, aber die `Dump` Memberfunktion ist nur in der Debugversion definiert. Verwendung **#ifdef _DEBUG**  /  `#endif` Anweisungen, die Ihre Diagnosecode, einschließlich Ihrer benutzerdefinierten Klammer `Dump` Memberfunktionen.  
   
- Bevor Sie Ihre eigenen erstellen `CDumpContext` -Objekt verwenden, müssen Sie erstellen eine `CFile` -Objekt, das als Ziel Dump dient.  
+ Bevor Sie Ihre eigenen erstellen `CDumpContext` Objekt ist, müssen Sie erstellen eine `CFile` Objekt, das als Ziel Dump dient.  
   
  Weitere Informationen zu `CDumpContext`, finden Sie unter [MFC-Anwendungen Debuggen](/visualstudio/debugger/mfc-debugging-techniques).  
   
@@ -105,19 +105,19 @@ CDumpContext(CFile* pFile = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *pFile*  
- Ein Zeiger auf die `CFile` -Objekt, das das Ziel Dump ist.  
+ *pFile-Datei*  
+ Ein Zeiger auf die `CFile` -Objekt, das das Ziel der Sicherung ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `afxDump` -Objekt automatisch erstellt wird.  
+ Die `afxDump` Objekt wird automatisch erstellt.  
   
- Schreiben Sie nicht in den zugrunde liegenden `CFile` während der Dumpkontext aktiv; andernfalls ist, Sie wirkt sich mit der Dumpdatei. Unter der Windows-Umgebung wird die Ausgabe an den Debugger über die Windows-Funktion weitergeleitet **OutputDebugString**.  
+ Schreiben Sie nicht in den zugrunde liegenden `CFile` während sicherungskontexts aktiv; andernfalls ist, werden Sie mit der Dump beeinträchtigen. Unter der Windows-Umgebung wird die Ausgabe an den Debugger über die Windows-Funktion weitergeleitet `OutputDebugString`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
   
 ##  <a name="dumpashex"></a>  CDumpContext::DumpAsHex  
- Den angegebenen Typ, der als Hexadezimalzeichenfolge formatiert ein Abbild sichert.  
+ Gibt den angegebenen Typ, der als hexadezimale Zahlen formatiert.  
   
 ```  
 CDumpContext& DumpAsHex(BYTE b);  
@@ -134,13 +134,13 @@ CDumpContext& DumpAsHex(WORD w);
  Ein Verweis auf ein `CDumpContext`-Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Memberfunktion, um das Element des angegebenen Typs als eine hexadezimale Zahl zu speichern. Um ein Array zu speichern, rufen [CDumpContext::HexDump](#hexdump).  
+ Rufen Sie diese Memberfunktion, um das Element des angegebenen Typs als hexadezimale Zahl zu sichern. Um ein Array zu speichern, rufen Sie [CDumpContext::HexDump](#hexdump).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
   
 ##  <a name="flush"></a>  CDumpContext::Flush  
- Erzwingt, dass alle Daten verbleiben in den Puffern an, die in die Datei geschrieben werden an den Dumpkontext angefügt.  
+ Erzwingt, dass alle Daten, die verbleibenden in Puffern, die in die Datei geschrieben werden an sicherungskontexts angefügt ist.  
   
 ```  
 void Flush();
@@ -150,20 +150,20 @@ void Flush();
  [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
   
 ##  <a name="getdepth"></a>  CDumpContext::GetDepth  
- Bestimmt, ob ein Speicherabbild tief oder flach ausgeführt wird.  
+ Bestimmt, ob eine Tiefe oder flache Sicherung ausgeführt wird.  
   
 ```  
 int GetDepth() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Tiefe des Speicherabbilds als Satz von `SetDepth`.  
+ Die Tiefe des Speicherabbilds mit `SetDepth`.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [SetDepth](#setdepth).  
   
 ##  <a name="hexdump"></a>  CDumpContext::HexDump  
- Ein Array von Bytes, die als hexadezimalen Zahlen formatiert ein Abbild sichert.  
+ Gibt ein Array von Bytes, die als Hexadezimalzahlen formatiert.  
   
 ```  
 void HexDump(
@@ -178,16 +178,16 @@ void HexDump(
  Eine Zeichenfolge am Anfang einer neuen Zeile ausgegeben.  
   
  *pby*  
- Ein Zeiger auf einen Puffer, der zu sichernden Bytes enthält.  
+ Ein Zeiger auf einen Puffer, der die zu sichernden Bytes enthält.  
   
- *Anzahl_byte*  
- Die Anzahl der Bytes, die zu speichern.  
+ *nBytes*  
+ Die Anzahl der Bytes, um zu speichern.  
   
  *nWidth*  
- Maximale Anzahl von Bytes pro Zeile (nicht die Stärke der Linie Ausgabe) ausgegeben.  
+ Maximale Anzahl von Bytes pro Zeile (nicht der Breite der Ausgabezeile) ausgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie zum Sichern eines bestimmten Elementtyp als eine hexadezimale Zahl [CDumpContext::DumpAsHex](#dumpashex).  
+ Rufen Sie zum Sichern eines einzelnen, bestimmten Elementtyp als hexadezimale Zahl [CDumpContext::DumpAsHex](#dumpashex).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
@@ -220,18 +220,18 @@ CDumpContext& operator<<(HFONT h);
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `CDumpContext` Verweis. Verwenden den Rückgabewert, können Sie mehrere einfügungen in einer einzelnen Zeile des Quellcodes schreiben.  
+ Ein `CDumpContext` Verweis. Verwenden den Wert zurückgibt, können Sie mehrere einfügungen in einer einzelnen Zeile des Quellcodes schreiben.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Operator zum Einfügen ist überladen für `CObject` Zeiger ebenso wie für die meisten primitiven Typen. Ein Zeiger auf Zeichen führt ein Speicherabbild der Zeichenfolgeninhalt; Ein Zeiger auf **"void"** führt zu einer hexadezimalen Dump der Adresse nur. Ein **LONGLONG** führt zu einem Speicherabbild einer 64-Bit-Ganzzahl mit Vorzeichen; Ein **ULONGLONG** führt zu einem Speicherabbild einer 64-Bit-Ganzzahl ohne Vorzeichen.  
+ Operator zum Einfügen des ist überladen, für die `CObject` Zeigern, die auch für die meisten primitiven Typen. Ein Zeiger auf Zeichen führt ein Speicherabbild des Zeichenfolgeninhalten; Ein Zeiger auf **"void"** in ein hexadezimales Speicherabbild der Adresse nur führt. Eine LONGLONG führt ein Speicherabbild des eine 64-Bit-Ganzzahl mit Vorzeichen; Ein-Wert ULONGLONG führt ein Speicherabbild des eine 64-Bit-Ganzzahl ohne Vorzeichen.  
   
- Bei Verwendung der `IMPLEMENT_DYNAMIC` oder `IMPLEMENT_SERIAL` Makros in der Implementierung der Klasse, und klicken Sie dann auf den Operator zum Einfügen, über `CObject::Dump`, druckt den Namen des Ihrer `CObject`-abgeleitete Klasse. Wird hingegen Drucken `CObject`. Wenn Sie überschreiben die `Dump` Funktion von der Klasse, und Sie können eine aussagekräftigere Ausgabe der Inhalt des Objekts, statt einen hexadezimalen Dump bereitzustellen.  
+ Wenn Sie über das IMPLEMENT_DYNAMIC oder IMPLEMENT_SERIAL-Makro in der Implementierung von Ihrer Klasse, und klicken Sie dann auf den Operator zum Einfügen, verwenden `CObject::Dump`, gibt den Namen Ihrer `CObject`-abgeleitete Klasse. Andernfalls wird es ausgegeben `CObject`. Wenn Sie außer Kraft setzen der `Dump` Funktion von der Klasse, Sie können eine aussagekräftigere Ausgabe der der Inhalt des Objekts statt ein hexadezimales Speicherabbild bereitstellen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
   
 ##  <a name="setdepth"></a>  CDumpContext::SetDepth  
- Legt die Tiefe für das Speicherabbild fest.  
+ Legt die Tiefe für die Sicherung fest.  
   
 ```  
 void SetDepth(int nNewDepth);
@@ -242,10 +242,10 @@ void SetDepth(int nNewDepth);
  Der neue Tiefenwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie einen primitiven Typ oder eine einfache Dump-Sicherungen werden `CObject` , die keine Zeiger auf andere Objekte enthält, und klicken Sie dann der Wert 0 ist ausreichend. Ein Wert größer als 0 einen tiefen Dump gibt an, wo alle Objekte gesichert rekursiv. Beispielsweise wird ein umfassende Dump einer Auflistung alle Elemente der Auflistung sichern. Sie können andere Tiefenwerte für bestimmte in Ihren abgeleiteten Klassen verwenden.  
+ Wenn Sie einen primitiven Typ "oder" einfach Dump-Sicherungen werden `CObject` , die keine Zeiger auf andere Objekte enthält, und klicken Sie dann der Wert 0 ist ausreichend. Ein Wert größer als 0 ein deep Dump gibt an, wo alle Objekte gesichert rekursiv. Beispielsweise wird eine umfassende Sicherung eine Auflistung aller Elemente der Auflistung sichern. Sie können andere Tiefenwerte für bestimmte in Ihren abgeleiteten Klassen verwenden.  
   
 > [!NOTE]
->  Zirkelverweise werden umfassende Dumps nicht erkannt und können zu Endlosschleifen führen.  
+>  Zirkelverweise werden nicht in Dumps für Tiefe erkannt und können zu Endlosschleifen führen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_Utilities#16](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]  

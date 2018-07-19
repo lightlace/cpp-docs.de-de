@@ -1,5 +1,5 @@
 ---
-title: CD2DRectU-Klasse | Microsoft Docs
+title: CD2DRectU-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5faf4bb8f2ff416d90311d678543c48d212acdd
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6e054c23d2137f5802c17731fac86dd64080389e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336468"
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU-Klasse
 Ein Wrapper für `D2D1_RECT_U`.  
@@ -48,13 +48,13 @@ class CD2DRectU : public D2D1_RECT_U;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|Gibt eine **booleschen** Wert, der angibt, ob ein Ausdruck keine gültigen Daten enthält ( **null**).|  
+|[CD2DRectU::IsNull](#isnull)|Gibt eine **booleschen** Wert, der angibt, ob ein Ausdruck keine gültigen Daten (NULL) enthält.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CRect CD2DRectU::Operator](#operator_crect)|Konvertiert `CD2DRectU` zu `CRect` Objekt.|  
+|[CD2DRectU::Operator CRect](#operator_crect)|Konvertiert `CD2DRectU` zu `CRect` Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `D2D1_RECT_U`  
@@ -65,7 +65,7 @@ class CD2DRectU : public D2D1_RECT_U;
  **Header:** afxrendertarget.h  
   
 ##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU  
- Erstellt ein CD2DRectU-Objekt aus CRect-Objekt.  
+ Erstellt ein Objekt CD2DRectU aus CRect-Objekt.  
   
 ```  
 CD2DRectU(const CRect& rect);  
@@ -91,7 +91,7 @@ CD2DRectU(
  obere Koordinate der Quelle  
   
  *uRight*  
- rechts-Koordinate Quelle  
+ Quelle, die rechte Koordinate  
   
  *uBottom*  
  die untere Quellkoordinate  
@@ -104,10 +104,10 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- True, wenn nach oben, links, unteren und rechten Werte des Rechtecks alle gleich 0 sind. andernfalls "false".  
+ True, wenn oben, links, unteren und rechten Werte des Rechtecks alle gleich 0 sind. andernfalls "false".  
   
-##  <a name="operator_crect"></a>  CRect CD2DRectU::Operator  
- Konvertiert CD2DRectU in CRect-Objekt.  
+##  <a name="operator_crect"></a>  CD2DRectU::Operator CRect  
+ CD2DRectU konvertiert in CRect-Objekt.  
   
 ```  
 operator CRect();

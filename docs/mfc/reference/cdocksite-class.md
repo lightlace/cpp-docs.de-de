@@ -1,5 +1,5 @@
 ---
-title: CDockSite-Klasse | Microsoft Docs
+title: CDockSite-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4a47efc1018f42cbd9f421f1d53566aa134addd6
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952557"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336838"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -162,9 +162,9 @@ class CDockSite: public CBasePane
 |[CDockSite::SwapRows](#swaprows)||  
   
 ## <a name="remarks"></a>Hinweise  
- Erstellt das Framework `CDockSite` -Objekte automatisch, wenn Sie rufen [cframewndex:: EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Dockpositionsfenster werden am Rand des Clientbereichs des Hauptframefensters positioniert.  
+ Erstellt das Framework `CDockSite` -Objekte automatisch, wenn Sie aufrufen [cframewndex:: EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Dockpositionsfenster werden am Rand des Clientbereichs des Hauptframefensters positioniert.  
   
- Sie in der Regel keine aufrufen, die Dienste, die durch die DockPosition bereitgestellt werden, da [CFrameWndEx Klasse](../../mfc/reference/cframewndex-class.md) behandelt diese Dienste.  
+ Keine Sie in der Regel rufen Sie die Dienste, die durch die DockPosition bereitgestellt werden, da [CFrameWndEx-Klasse](../../mfc/reference/cframewndex-class.md) behandelt diese Dienste.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie ein Objekt der `CDockSite`-Klasse erstellt wird.  
@@ -317,7 +317,7 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWnd*  
+ [in] *aufnehmen*  
  [in] *DockMethod*  
  [in] *LpRect*  
   
@@ -334,13 +334,13 @@ virtual BOOL DockPaneLeftOf(
   
 ### <a name="parameters"></a>Parameter  
  [in] [out] *pBarToDock*  
- Ein Zeiger auf den Bereich, um auf der linken Seite des angedockt werden *pTargetBar*.  
+ Ein Zeiger auf den Bereich, um an der linken Seite des angedockt werden *pTargetBar*.  
   
  [in] [out] *pTargetBar*  
- Ein Zeiger auf den Zielbereich.  
+ Ein Zeiger auf den Bereich "Ziel".  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn der Bereich erfolgreich angedockt ist andernfalls `FALSE`.  
+ True, wenn der Bereich erfolgreich angedockt ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -367,7 +367,7 @@ CPane* FindPaneByID(UINT nID);
  Die Befehls-ID des Bereichs gefunden werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf den Bereich mit der angegebenen Befehls-ID oder `NULL` , wenn der Bereich nicht gefunden wird.  
+ Ein Zeiger auf den Bereich mit der angegebenen Befehls-ID oder NULL, wenn der Bereich nicht gefunden wird.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -417,14 +417,14 @@ const CObList& GetDockSiteRowsList() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getpanelist"></a>  CDockSite::GetPaneList  
- Gibt eine Liste von Bereichen, die in der DockPosition angedockt sind.  
+ Gibt eine Liste der Bereiche, die in der DockPosition angedockt sind.  
   
 ```  
 const CObList& GetPaneList() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein schreibgeschützter Verweis auf die Liste von Bereichen an, die derzeit im andockleiste angedockt.  
+ Ein schreibgeschützter Verweis auf die Liste der Bereiche, die derzeit in andockleiste verankert werden.  
   
 ##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible  
 
@@ -501,7 +501,7 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWnd*  
+ [in] *aufnehmen*  
  [in] *nFlags*  
  [in] *PtOffset*  
   
@@ -615,10 +615,10 @@ virtual CPane* PaneFromPoint(CPoint pt);
   
 ### <a name="parameters"></a>Parameter  
  [in] *pt*  
- Ein Punkt in Bildschirmkoordinaten, für den Bereich abgerufen.  
+ Ein Punkt in Bildschirmkoordinaten, für den Bereich der abzurufenden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf den Bereich an der angegebenen Position befindet oder `NULL` Wenn kein Bereich am angegebenen Punkt vorhanden war.  
+ Ein Zeiger auf den Bereich befindet sich am angegebenen Punkt oder NULL, wenn kein Bereich am angegebenen Punkt vorhanden war.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -649,7 +649,7 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWnd*  
+ [in] *aufnehmen*  
  [in] *DockMethod*  
   
 ### <a name="remarks"></a>Hinweise  
@@ -742,22 +742,22 @@ virtual BOOL ShowPane(
   
 ### <a name="parameters"></a>Parameter  
  [in] [out] *pBar*  
- Ein Zeiger auf den Bereich ein-oder ausgeblendet werden.  
+ Ein Zeiger auf den Bereich, um ein- oder ausgeblendet werden.  
   
  [in] *bShow*  
- `TRUE` um anzugeben, dass der Bereich ist, angezeigt werden soll; `FALSE` um anzugeben, dass der Bereich ausgeblendet ist.  
+ True, um anzugeben, dass der Bereich ist, angezeigt werden soll. "False", um anzugeben, dass der Bereich wird ausgeblendet werden soll.  
   
  [in] *bDelay*  
- `TRUE` um anzugeben, dass das Layout des Bereichs verzögert werden soll, erst nach dem Bereich angezeigt. andernfalls `FALSE`.  
+ True, um anzugeben, dass das Layout des Bereichs bis verzögert werden soll, nachdem der Bereich angezeigt wird. andernfalls "false".  
   
  [in] *bActivate*  
  Dieser Parameter wird nicht verwendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn im Bereich angezeigt oder ausgeblendet erfolgreich war. `FALSE` Wenn der angegebene Bereich nicht zu dieser DockPosition gehört.  
+ TRUE, wenn im Bereich angezeigt oder ausgeblendet erfolgreich war. FALSE, wenn der angegebene Bereich nicht zu diesem DockPosition gehört.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode zum Anzeigen oder Ausblenden der angedockten Bereiche. In der Regel wird Sie keine Aufrufen `CDockSite::ShowPane` direkt, da sie von der übergeordneten Rahmenfensters oder durch den Basis-Bereich aufgerufen wird.  
+ Rufen Sie diese Methode zum Anzeigen oder Ausblenden der angedockten Bereiche. Normalerweise, Sie müssen keine Aufrufen `CDockSite::ShowPane` direkt, da sie von der übergeordneten Rahmenfensters oder durch den Basis-Bereich aufgerufen wird.  
   
 ##  <a name="showrow"></a>  CDockSite::ShowRow  
 

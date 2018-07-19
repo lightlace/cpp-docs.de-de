@@ -1,5 +1,5 @@
 ---
-title: CD2DSizeF-Klasse | Microsoft Docs
+title: CD2DSizeF-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e939d189d991ef234e940b272291c2da6c931684
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f7c25f55263270ad797b231a21e60fe4b0e552c4
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336112"
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF-Klasse
 Ein Wrapper für D2D1_SIZE_F.  
@@ -48,7 +48,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|Gibt eine **booleschen** Wert, der angibt, ob ein Ausdruck keine gültigen Daten enthält ( **null**).|  
+|[CD2DSizeF::IsNull](#isnull)|Gibt eine **booleschen** Wert, der angibt, ob ein Ausdruck keine gültigen Daten (NULL) enthält.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
@@ -65,7 +65,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
  **Header:** afxrendertarget.h  
   
 ##  <a name="cd2dsizef"></a>  CD2DSizeF::CD2DSizeF  
- Erstellt ein CD2DSizeF-Objekt aus CSize-Objekt.  
+ Erstellt ein Objekt CD2DSizeF aus CSize-Objekt.  
   
 ```  
 CD2DSizeF(const CSize& size);  
@@ -83,7 +83,7 @@ CD2DSizeF(
  Größe der Datenquelle  
   
  *CX*  
- Quelle Breite  
+ Source-Breite  
   
  *CY*  
  Quelle Höhe  
@@ -99,7 +99,7 @@ BOOL IsNull() const;
  True, wenn die Breite und Höhe leer sind. andernfalls "false".  
   
 ##  <a name="operator_csize"></a>  CD2DSizeF::Operator CSize  
- Konvertiert CD2DSizeF in CSize-Objekt.  
+ CD2DSizeF konvertiert in CSize-Objekt.  
   
 ```  
 operator CSize();

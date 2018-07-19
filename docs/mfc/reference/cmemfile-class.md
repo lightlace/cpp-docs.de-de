@@ -1,5 +1,5 @@
 ---
-title: CMemFile Klasse | Microsoft Docs
+title: CMemFile-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e13c3b609a53e8c885e04530995a11218bf2704d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3584568196fbccc9bab33ea3b51e876e174cbd18
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336591"
 ---
 # <a name="cmemfile-class"></a>CMemFile-Klasse
 Die [CFile](../../mfc/reference/cfile-class.md)-abgeleitete Klasse, die arbeitsspeicherdateien unterstützt.  
@@ -61,34 +61,34 @@ class CMemFile : public CFile
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CMemFile::Attach](#attach)|Fügt einen Speicherblock zu `CMemFile`.|  
-|[CMemFile::Detach](#detach)|Trennt den Speicherblock von `CMemFile` und gibt einen Zeiger auf den Speicherblock, der getrennt.|  
+|[CMemFile::Detach](#detach)|Trennt den Speicherblock aus `CMemFile` und gibt einen Zeiger auf den Speicherblock, getrennt.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMemFile::Alloc](#alloc)|Überschreiben Sie, um das Zuordnungsverhalten Arbeitsspeicher ändern.|  
-|[CMemFile::Free](#free)|Außer Kraft setzen Sie, um Arbeitsspeicher Aufhebung Verhalten zu ändern.|  
-|[CMemFile::GrowFile](#growfile)|Außer Kraft setzen Sie, um das Verhalten zu ändern, wenn eine Datei vergrößert.|  
-|[CMemFile::Memcpy](#memcpy)|Außer Kraft setzen Sie, um Speicher Kopierverhalten beim Lesen und Schreiben von Dateien zu ändern.|  
-|[CMemFile::Realloc](#realloc)|Außer Kraft setzen Sie, um Arbeitsspeicher neuzuordnungen Verhalten zu ändern.|  
+|[CMemFile::Alloc](#alloc)|Überschreiben Sie, um das Zuordnungsverhalten des Arbeitsspeichers zu ändern.|  
+|[CMemFile::Free](#free)|Außer Kraft setzen Sie, um Arbeitsspeicher Aufhebung der Zuordnung Verhalten zu ändern.|  
+|[CMemFile::GrowFile](#growfile)|Überschreiben Sie, um das Verhalten zu ändern, wenn eine Datei vergrößert.|  
+|[CMemFile::Memcpy](#memcpy)|Überschreiben Sie, um Arbeitsspeicher Kopierverhalten beim Lesen und Schreiben von Dateien ändern.|  
+|[CMemFile::Realloc](#realloc)|Außer Kraft setzen Sie, um Arbeitsspeicher neuzuordnung Verhalten zu ändern.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese arbeitsspeicherdateien Verhalten wie Dateien auf Datenträgern, außer dass die Datei im Arbeitsspeicher und nicht auf dem Datenträger gespeichert wird. Eine Arbeitsspeicherdatei eignet sich für die schnelle temporäre Speicherung oder zum Übertragen von unformatierten Bytes oder serialisiert Objekte zwischen unabhängigen Prozessen.  
+ Diese arbeitsspeicherdateien Verhalten sich wie Dateien auf Datenträgern, mit dem Unterschied, dass die Datei im Arbeitsspeicher und nicht auf dem Datenträger gespeichert wird. Eine Arbeitsspeicherdatei eignet sich zur schnellen temporären Speicherung oder für die Übertragung von unformatierten Bytes oder von serialisierten Objekten zwischen voneinander unabhängige Prozesse.  
   
- `CMemFile` Objekte können automatisch ihre eigenen Speicher zuordnen, oder Sie können eigene Speicherblocks zum Anfügen der `CMemFile` Objekt durch Aufrufen von [Anfügen](#attach). In beiden Fällen wird im Arbeitsspeicher für die Speicherdatei automatisch vergrößern reserviert `nGrowBytes`-Größe erhöht, wenn `nGrowBytes` ist nicht 0 (null).  
+ `CMemFile` Objekte können automatisch ihre eigenen Speicher belegen oder anfügen, die Ihre eigenen Speicherblock, der die `CMemFile` Objekt durch Aufrufen von [Anfügen](#attach). In beiden Fällen wird im Arbeitsspeicher für die Arbeitsspeicherdatei automatisch wachsende reserviert `nGrowBytes`-Größe erhöht, wenn `nGrowBytes` ist nicht 0 (null).  
   
- Der Speicherblock automatisch gelöscht werden nach der Zerstörung der `CMemFile` Objekt, wenn der Arbeitsspeicher von ursprünglich zugeordnet wurde die `CMemFile` Objekt; andernfalls sind Sie verantwortlich für das Freigeben des Arbeitsspeichers, die Sie an das Objekt angefügt.  
+ Der Speicherblock wird automatisch entfernt, nach der Destruktion von der `CMemFile` Objekt, wenn der Arbeitsspeicher von ursprünglich zugeordnet wurde die `CMemFile` Objekt; andernfalls sind Sie verantwortlich für die Zuordnung des Speicherplatzes, die Sie an das Objekt aufzuheben.  
   
- Sie erreichen den Speicherblock über den Zeiger angegeben, wenn Sie von getrennt den `CMemFile` Objekt durch Aufrufen von [trennen](#detach).  
+ Sie können auf den Speicherblock zugreifen, über den Zeiger angegeben, wenn Sie von getrennt den `CMemFile` Objekt durch Aufrufen von [trennen](#detach).  
   
- Die häufigste Verwendung von `CMemFile` besteht im Erstellen einer `CMemFile` Objekt, und verwenden Sie es durch den Aufruf [CFile](../../mfc/reference/cfile-class.md) Memberfunktionen. Beachten Sie, dass das Erstellen einer `CMemFile` wird er automatisch geöffnet: Rufen Sie nicht [CFile::Open](../../mfc/reference/cfile-class.md#open), dem wird nur für Dateien auf Datenträgern verwendet. Da `CMemFile` eine Datenträgerdatei Datenmembers verwendet keine `CFile::m_hFile` wird nicht verwendet.  
+ Die häufigste Verwendung von `CMemFile` ist die Erstellung einer `CMemFile` Objekt, und verwenden Sie es durch Aufrufen von [CFile](../../mfc/reference/cfile-class.md) Memberfunktionen. Beachten Sie, dass die Erstellung einer `CMemFile` wird es automatisch geöffnet: nicht aufgerufen [CFile::Open](../../mfc/reference/cfile-class.md#open), die nur für Dateien auf Datenträgern verwendet wird. Da `CMemFile` verwendet nicht die Datei auf einem Datenträger, der den Datenmember `CFile::m_hFile` wird nicht verwendet.  
   
- Die `CFile` Memberfunktionen [doppelte](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange), und [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) nicht implementiert werden `CMemFile`. Wenn Sie für diese Funktionen aufrufen einer `CMemFile` -Objekt erhalten Sie eine [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+ Die `CFile` Memberfunktionen [doppelte](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange), und [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) sind nicht für implementiert `CMemFile`. Wenn Sie für diese Funktionen aufrufen einer `CMemFile` Objekt ist, erhalten Sie eine [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- `CMemFile` verwendet die Funktionen der Laufzeit-Bibliothekscode ["malloc"](../../c-runtime-library/reference/malloc.md), [Realloc](../../c-runtime-library/reference/realloc.md), und [freien](../../c-runtime-library/reference/free.md) zuzuordnen, neu zu reservieren und Freigeben von Arbeitsspeicher und die systeminterne Funktion [Memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) Block Kopie Arbeitsspeicher beim Lesen und schreiben. Wenn Sie dieses Verhalten oder das Verhalten ändern möchten bei `CMemFile` vergrößert wird eine Datei, leiten Sie eine eigene Klasse von `CMemFile` und überschreiben Sie die entsprechenden Funktionen.  
+ `CMemFile` verwendet die Funktionen der Laufzeitbibliothek [Malloc](../../c-runtime-library/reference/malloc.md), [Realloc](../../c-runtime-library/reference/realloc.md), und [kostenlose](../../c-runtime-library/reference/free.md) zum Zuordnen zum erneuten Zuweisen und Freigeben von Arbeitsspeicher und die systeminterne Funktion [Memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) Block Kopie Arbeitsspeicher beim Lesen und schreiben. Wenn Sie, um dieses Verhalten oder das Verhalten zu ändern möchten beim `CMemFile` nimmt eine Datei, leiten Sie eine eigene Klasse von `CMemFile` und überschreiben Sie die entsprechenden Funktionen.  
   
- Weitere Informationen zu `CMemFile`, finden Sie in den Artikeln [Dateien in MFC](../../mfc/files-in-mfc.md) und [Speicher-Management (MFC)](../../mfc/memory-management.md) und finden Sie unter [Dateibehandlung](../../c-runtime-library/file-handling.md) in der *zur Laufzeit Bibliotheksverweis*.  
+ Weitere Informationen zu `CMemFile`, finden Sie in den Artikeln [Dateien in MFC](../../mfc/files-in-mfc.md) und [Memory Management (MFC)](../../mfc/memory-management.md) und finden Sie unter [Dateibehandlung](../../c-runtime-library/file-handling.md) in die *Run-Time Referenz zur Bibliothek*.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -108,19 +108,19 @@ virtual BYTE* Alloc(SIZE_T nBytes);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *Anzahl_byte*  
- Anzahl der Bytes an Arbeitsspeicher zugeordnet werden soll.  
+ *nBytes*  
+ Anzahl der Bytes im Arbeitsspeicher zugeordnet werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf den Speicherblock, der belegt wurde, oder **NULL** Wenn Fehler bei der Zuweisung.  
+ Ein Zeiger auf den Speicherblock, der belegt wurde, oder NULL, wenn die speicherbelegung fehlgeschlagen ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Funktion zum Implementieren von benutzerdefinierten speicherbelegung. Wenn Sie diese Funktion überschreiben, sollten Sie wahrscheinlich überschreiben [frei](#free) und [Realloc](#realloc) ebenfalls.  
+ Überschreiben Sie diese Funktion, um benutzerdefinierte speicherbelegung zu implementieren. Wenn Sie diese Funktion außer Kraft setzen, sollten Sie wahrscheinlich überschreiben [Free](#free) und [Realloc](#realloc) ebenfalls.  
   
- Die Standardimplementierung verwendet die Funktion der Laufzeitbibliothek ["malloc"](../../c-runtime-library/reference/malloc.md) belegt werden.  
+ Die Standardimplementierung verwendet die Funktion der Laufzeitbibliothek [Malloc](../../c-runtime-library/reference/malloc.md) um Speicher zu belegen.  
   
 ##  <a name="attach"></a>  CMemFile::Attach  
- Mit dieser Funktion können Sie einen Speicherblock, der zum Anfügen `CMemFile`.  
+ Mit dieser Funktion können Sie einen Speicherblock zu Anfügen `CMemFile`.  
   
 ```  
 void Attach(
@@ -137,19 +137,19 @@ void Attach(
  Eine ganze Zahl, die die Größe des Puffers in Bytes angibt.  
   
  *nGrowBytes*  
- Das Inkrement Zuweisung, Arbeitsspeicher in Bytes.  
+ Das Inkrement, Memory Allocation in Byte.  
   
 ### <a name="remarks"></a>Hinweise  
- Dies bewirkt, dass `CMemFile` , die den Speicherblock, der als Datei für den Speicher verwendet.  
+ Dies bewirkt, dass `CMemFile` den Speicherblock, der als Datei für den Speicher zu verwenden.  
   
- Wenn *nGrowBytes* ist 0, `CMemFile` wird festgelegt, der die Dateilänge mit *nBufferSize*. Dies bedeutet, dass die Daten im Speicherblock, bevor er angefügt war `CMemFile` wird die Datei verwendet werden. Arbeitsspeicherdateien erstellt, die auf diese Weise können nicht vergrößert werden.  
+ Wenn *nGrowBytes* ist 0 (null) `CMemFile` wird festgelegt, die Dateilänge mit *nBufferSize*. Dies bedeutet, dass die Daten in den Speicherblock, bevor er angefügt war `CMemFile` verwendet werden, wie die Datei. Speicher-Dateien, die auf diese Weise erstellten können nicht vergrößert werden.  
   
- Da die Datei vergrößert werden kann, achten Sie darauf, nicht bewirken, dass `CMemFile` versucht, die Datei vergrößert werden. Beispielsweise rufen Sie nicht die `CMemFile` überschreibt der [CFile:Write](../../mfc/reference/cfile-class.md#write) , hinter dem Ende schreiben, oder rufen Sie nicht [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) mit einer Länge von mehr als *nBufferSize*.  
+ Da die Datei vergrößert werden kann, werden nicht dazu führen, dass `CMemFile` versucht, die Datei vergrößert werden. Beispielsweise rufen Sie nicht die `CMemFile` überschreibungen der [CFile:Write](../../mfc/reference/cfile-class.md#write) , nach Erreichen des Dateiendes schreiben, oder rufen Sie nicht [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) mit einer Länge von mehr als *nBufferSize*.  
   
- Wenn *nGrowBytes* ist größer als 0 (null) `CMemFile` ignoriert den Inhalt des Speicherblocks, der Sie angefügt haben. Sie müssen den Inhalt der Datei für den Speicher aus mithilfe von Grund auf neu zu schreiben der `CMemFile` Überschreiben von `CFile::Write`. Wenn Sie versuchen, nach dem Ende der Datei schreiben oder die Vergrößerung der das durch Aufrufen der `CMemFile` Überschreiben von `CFile::SetLength`, `CMemFile` wächst die speicherbelegung in Schritten von *nGrowBytes*. Wächst die speicherbelegung schlägt fehl, wenn der Speicherblock an Sie übergeben `Attach` wurde nicht mit einer Methode, die kompatibel mit zugeordneten [Alloc](#alloc). Für die Kompatibilität mit die standardmäßige Implementierung des `Alloc`, müssen Sie den Speicher mit der Funktion der Laufzeitbibliothek reservieren ["malloc"](../../c-runtime-library/reference/malloc.md) oder [Calloc](../../c-runtime-library/reference/calloc.md).  
+ Wenn *nGrowBytes* ist größer als 0 (null) `CMemFile` ignoriert den Inhalt des Speicherblocks, der Sie hinzugefügt haben. Sie müssen den Inhalt der Datei für den Speicher von der Verwendung von Grund auf neu schreiben die `CMemFile` -Überschreibung `CFile::Write`. Wenn Sie versuchen, nach dem Ende der Datei zu schreiben, oder vergrößern Sie die Datei durch Aufrufen der `CMemFile` Überschreiben von `CFile::SetLength`, `CMemFile` wächst die speicherbelegung in Schritten von *nGrowBytes*. Wächst die speicherbelegung schlägt fehl, wenn der Speicherblock an Sie übergeben `Attach` wurde nicht zugeordnet, mit einer Methode, die kompatibel mit [Alloc](#alloc). Mit der Standardimplementierung von kompatibel `Alloc`, müssen Sie den Arbeitsspeicher mit der Funktion der Laufzeitbibliothek zuordnen [Malloc](../../c-runtime-library/reference/malloc.md) oder ["calloc"](../../c-runtime-library/reference/calloc.md).  
   
 ##  <a name="cmemfile"></a>  CMemFile::CMemFile  
- Die erste Überladung wird ein leeres Arbeitsspeicherdatei geöffnet.  
+ Die erste Überladung wird eine leerer Speicher-Datei geöffnet.  
   
 ```  
 CMemFile(UINT nGrowBytes = 1024);
@@ -163,7 +163,7 @@ CMemFile(
   
 ### <a name="parameters"></a>Parameter  
  *nGrowBytes*  
- Das Inkrement Zuweisung, Arbeitsspeicher in Bytes.  
+ Das Inkrement, Memory Allocation in Byte.  
   
  *LpBuffe*r  
  Zeiger auf einen Puffer, der Informationen der Größe empfängt *nBufferSize*.  
@@ -172,25 +172,25 @@ CMemFile(
  Eine ganze Zahl, die die Größe des Dateipuffers in Bytes angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Beachten Sie, dass die Datei, die vom Konstruktor geöffnet wird und Sie nicht rufen [CFile::Open](../../mfc/reference/cfile-class.md#open).  
+ Beachten Sie, dass die Datei, durch den Konstruktor geöffnet wird und Sie nicht aufrufen sollten [CFile::Open](../../mfc/reference/cfile-class.md#open).  
   
- Die zweite Überladung entspricht das Verhalten, als wäre den ersten Konstruktor verwendet und wird sofort aufgerufen, [Anfügen](#attach) mit denselben Parametern. Ausführliche Informationen finden Sie unter `Attach`.  
+ Die zweite Überladung entspricht das Verhalten, als ob Sie sofort aufgerufen und den ersten Konstruktor verwendet [Anfügen](#attach) mit denselben Parametern. Ausführliche Informationen finden Sie unter `Attach`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
   
 ##  <a name="detach"></a>  CMemFile::Detach  
- Mit dieser Funktion wird zum Abrufen eines Zeigers auf den Speicherblock, der vom verwendeten `CMemFile`.  
+ Mit dieser Funktion wird zum Abrufen eines Zeigers auf den Speicherblock, der von verwendeten `CMemFile`.  
   
 ```  
 BYTE* Detach();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf den Speicherblock mit dem Inhalt der Datei für den Speicher.  
+ Ein Zeiger zum Speicherblock, der den Inhalt der Datei für den Speicher enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufen dieser Funktion schließt auch die `CMemFile`. Sie können den Speicherblock Anfügen `CMemFile` durch Aufrufen von [Anfügen](#attach). Wenn Sie die Datei anfügen und die Daten darin möchten, sollten Sie aufrufen [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) die Länge der Datei vor dem Aufruf abgerufen `Detach`. Beachten Sie, dass, wenn Sie einen Speicherblock zu Anfügen `CMemFile` , damit Sie ihre Daten verwenden können ( `nGrowBytes` == 0), und Sie können zur Vergrößerung der Arbeitsspeicherdatei nicht.  
+ Das Aufrufen dieser Funktion auch schließt die `CMemFile`. Sie können den Speicherblock Anfügen `CMemFile` durch Aufrufen von [Anfügen](#attach). Wenn Sie die Datei anfügen und verwenden Sie die Daten darin möchten, sollten Sie aufrufen [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) zum Abrufen der Länge der Datei vor dem Aufruf `Detach`. Beachten Sie, dass, wenn Sie einen Speicherblock zu Anfügen `CMemFile` , damit Sie ihre Daten verwenden können ( `nGrowBytes` == 0), und klicken Sie dann Sie nicht die Arbeitsspeicherdatei vergrößert werden können.  
   
 ##  <a name="free"></a>  CMemFile::Free  
  Diese Funktion wird aufgerufen, indem `CMemFile` Memberfunktionen.  
@@ -201,13 +201,13 @@ virtual void Free(BYTE* lpMem);
   
 ### <a name="parameters"></a>Parameter  
  *lpMem*  
- Zeiger auf den Speicher freigegeben werden muss.  
+ Zeiger auf den Speicher aufgehoben werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Funktion zum Implementieren von benutzerdefinierten Speicherfreigabe an. Wenn Sie diese Funktion überschreiben, sollten Sie wahrscheinlich überschreiben [Alloc](#alloc) und [Realloc](#realloc) ebenfalls.  
+ Überschreiben Sie diese Funktion, um benutzerdefinierte Speicherfreigabe zu implementieren. Wenn Sie diese Funktion außer Kraft setzen, sollten Sie wahrscheinlich überschreiben [Alloc](#alloc) und [Realloc](#realloc) ebenfalls.  
   
 ##  <a name="growfile"></a>  CMemFile::GrowFile  
- Diese Funktion wird aufgerufen, von mehreren der `CMemFile` Memberfunktionen.  
+ Diese Funktion wird aufgerufen, von einigen der `CMemFile` Memberfunktionen.  
   
 ```  
 virtual void GrowFile(SIZE_T dwNewLen);
@@ -218,10 +218,10 @@ virtual void GrowFile(SIZE_T dwNewLen);
  Neue Größe der Datei für den Speicher.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können es überschreiben, wenn Sie ändern möchten wie `CMemFile` lässt die Datei wachsen. Die Standardimplementierung ruft [Realloc](#realloc) einen vorhandenen Block vergrößert (oder [Alloc](#alloc) einen Speicherblock zu erstellen), belegen von Speicher in Vielfachen von der `nGrowBytes` im Konstruktor angegebene Wert oder [Anfügen](#attach) aufrufen.  
+ Sie können es überschreiben, wenn Sie ändern möchten wie `CMemFile` wächst die Datei. Die Standardimplementierung ruft [Realloc](#realloc) einen vorhandenen Block wächst (oder [Alloc](#alloc) um einen Speicherblock zu erstellen), belegen von Speicher in Vielfachen von der `nGrowBytes` im Konstruktor angegebene Wert oder [Anfügen](#attach) aufrufen.  
   
 ##  <a name="memcpy"></a>  CMemFile::Memcpy  
- Diese Funktion wird aufgerufen, indem Sie die `CMemFile` überschreibt der [CFile:: Read](../../mfc/reference/cfile-class.md#read) und [CFile::Write](../../mfc/reference/cfile-class.md#write) zum Übertragen von Daten in und aus dem Arbeitsspeicher.  
+ Diese Funktion wird aufgerufen, indem die `CMemFile` überschreibungen der [CFile:: Read](../../mfc/reference/cfile-class.md#read) und [CFile::Write](../../mfc/reference/cfile-class.md#write) zum Übertragen von Daten in und aus dem Speicher-Datei.  
   
 ```  
 virtual BYTE* Memcpy(
@@ -232,19 +232,19 @@ virtual BYTE* Memcpy(
   
 ### <a name="parameters"></a>Parameter  
  *lpMemTarget*  
- Zeiger zum Speicherblock, der in dem Quelle Speicher kopiert wird.  
+ Zeiger auf den Speicherblock, in dem der Arbeitsspeicher kopiert werden.  
   
  *lpMemSource*  
  Zeiger zum Speicherblock Quelle.  
   
- *Anzahl_byte*  
+ *nBytes*  
  Anzahl der zu kopierenden Bytes.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Eine Kopie des *LpMemTarget*.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Funktion, wenn Sie die Art ändern möchten, `CMemFile` diese Speicher kopiert wird.  
+ Überschreiben Sie diese Funktion, wenn Sie ändern möchten, die `CMemFile` diese Speicher kopiert wird.  
   
 ##  <a name="realloc"></a>  CMemFile::Realloc  
  Diese Funktion wird aufgerufen, indem `CMemFile` Memberfunktionen.  
@@ -257,16 +257,16 @@ virtual BYTE* Realloc(
   
 ### <a name="parameters"></a>Parameter  
  *lpMem*  
- Ein Zeiger auf den Speicherblock zugewiesen werden.  
+ Ein Zeiger zum Speicherblock, verschoben werden.  
   
- *Anzahl_byte*  
+ *nBytes*  
  Neue Größe für den Speicherblock.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf den Speicherblock, der wurde neu zugewiesen wurde (und möglicherweise verschoben), oder **NULL** Wenn die neuzuordnung fehlgeschlagen ist.  
+ Ein Zeiger zum Speicherblock, der zugewiesen (und möglicherweise verschoben), oder NULL, wenn die neuzuordnung ist fehlgeschlagen.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Funktion zum Implementieren von benutzerdefinierten neuzuordnung. Wenn Sie diese Funktion überschreiben, sollten Sie wahrscheinlich überschreiben [Alloc](#alloc) und [frei](#free) ebenfalls.  
+ Überschreiben Sie diese Funktion, um benutzerdefinierte neuzuordnung zu implementieren. Wenn Sie diese Funktion außer Kraft setzen, sollten Sie wahrscheinlich überschreiben [Alloc](#alloc) und [Free](#free) ebenfalls.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CFile-Klasse](../../mfc/reference/cfile-class.md)   

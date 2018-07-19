@@ -1,5 +1,5 @@
 ---
-title: Ausnahmeverarbeitung | Microsoft Docs
+title: Ausnahmeverarbeitung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,23 +23,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a24d78089e468a2020e0ecdb1fba34783965325
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e77284d36a7290f5d9070bb355a8affae9ba864f
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336860"
 ---
 # <a name="exception-processing"></a>Ausnahmeverarbeitung
-Wenn ein Programm ausgeführt wird, kann eine Reihe von nicht ordnungsgemäße Bedingungen und namens "Ausnahmen" Fehler auftreten. Dazu können gehören, des Arbeitsspeichers, die aufgrund von Zuordnungsfehlern der Ressource sowie Fehler beim Suchen von Dateien zur Neige.  
+Wenn ein Programm ausgeführt wird, kann eine Reihe von nicht ordnungsgemäßen Bedingungen und dem Namen "Ausnahmen" Fehler auftreten. Dazu können gehören, auf unzureichenden Arbeitsspeicher aufgrund von Zuordnungsfehlern der Ressource und Fehler, um Dateien zu suchen.  
   
- Die Microsoft Foundation Class-Bibliothek verwendet eine Ausnahmebehandlung-Schema, das eng nach der Komprimierung einer vorgeschlagen, durch die ANSI-Standards Committee für C++ modelliert wird. Ein Ausnahmehandler muss eingerichtet werden, vor dem Aufrufen einer Funktion, eine solche Situation auftreten kann. Wenn die Funktion eine nicht ordnungsgemäße Zustand auftritt, wird eine Ausnahme ausgelöst und Steuerelement wird an den Ausnahmehandler übergeben.  
+ Die Microsoft Foundation Class-Bibliothek verwendet eine Ausnahmebehandlung-Schema, das genau eine vorgeschlagene vom ANSI-Standards Committee für C++ entwickelt wurde. Ein Ausnahmehandler muss eingerichtet werden, vor dem Aufrufen einer Funktion, die eine nicht normale Situation auftreten kann. Wenn die Funktion einen nicht ordnungsgemäßen Zustand auftritt, sie löst eine Ausnahme aus, und erhält die Kontrolle an den Ausnahmehandler.  
   
- Ausnahmehandler werden mehrere Makros, die mit der Microsoft Foundation Class-Bibliothek enthalten einrichten. Eine Reihe von anderen globalen Funktionen kann spezielle Ausnahmen auslösen, und Beenden von Programmen, bei Bedarf. Diese Makros und globale Funktionen fallen in folgenden Kategorien:  
+ Ausnahmehandler werden mehrere Makros, die in der Microsoft Foundation Class-Bibliothek enthaltenen einrichten. Eine Reihe von anderen globalen Funktionen kann spezielle Ausnahmen auslösen, und Beenden von Programmen, bei Bedarf. Diese Makros und globale Funktionen werden in der folgenden Kategorien fallen:  
   
 - Ausnahmemakros, die Struktur der Ausnahmehandler.  
   
-- Exception-Throwing Funktionen), die Ausnahmen bestimmter Typen generieren.  
+- Exception-Throwing Funktionen), das Generieren von Ausnahmen eines bestimmten Typs.  
   
 - Terminierungsfunktionen auf, die dazu führen, dass bei der Beendigung des Programms.  
   
@@ -49,45 +49,45 @@ Wenn ein Programm ausgeführt wird, kann eine Reihe von nicht ordnungsgemäße B
   
 |||  
 |-|-|  
-|[VERSUCHEN SIE ES](#try)|Kennzeichnet einen Codeblock für die ausnahmeverarbeitung.|  
-|[CATCH](#catch)|Kennzeichnet einen Codeblock für Abfangen einer Ausnahme aus der vorangehenden **versuchen** Block.|  
-|[CATCH_ALL](#catch_all)|Kennzeichnet einen Codeblock für alle Ausnahmen von den vorherigen abfangen **versuchen** Block.|  
-|[AND_CATCH](#and_catch)|Kennzeichnet einen Codeblock zum Abfangen von zusätzlichen Ausnahmetypen aus den vorherigen **versuchen** Block.|  
-|[AND_CATCH_ALL](#and_catch_all)|Kennzeichnet einen Codeblock zum Abfangen von allen anderen zusätzliche Ausnahmetypen, die ausgelöst wird, in einem vorhergehenden **versuchen** Block.|  
-|[END_CATCH](#end_catch)|Beendet die letzte **CATCH** oder `AND_CATCH` Codeblock.|  
-|[END_CATCH_ALL](#end_catch_all)|Beendet die letzte `CATCH_ALL` Codeblock.|  
+|[VERSUCHEN SIE ES](#try)|Kennzeichnet einen Codeblock für die ausnahmeverarbeitung an.|  
+|[CATCH](#catch)|Kennzeichnet einen Block von Code zum Abfangen einer Ausnahme aus vorhergehenden **versuchen** Block.|  
+|[CATCH_ALL](#catch_all)|Kennzeichnet einen Block von Code für das Abfangen aller Ausnahmen aus dem vorherigen **versuchen** Block.|  
+|[AND_CATCH](#and_catch)|Kennzeichnet einen Codeblock zum Abfangen von zusätzlichen Typen aus dem vorherigen **versuchen** Block.|  
+|[AND_CATCH_ALL](#and_catch_all)|Kennzeichnet einen Codeblock zum Abfangen von allen anderen zusätzlichen Ausnahmetypen, die ausgelöst wird, in einem vorhergehenden **versuchen** Block.|  
+|[END_CATCH](#end_catch)|Beendet die letzte **CATCH** oder **AND_CATCH** Codeblock.|  
+|[END_CATCH_ALL](#end_catch_all)|Beendet die letzte **CATCH_ALL** Codeblock.|  
 |[THROW](#throw)|Gibt eine angegebene Ausnahme.|  
-|[THROW_LAST](#throw_last)|Löst aus, die derzeit behandelte Ausnahme an den nächsten äußeren Handler.|  
+|[THROW_LAST](#throw_last)|Löst aus, die derzeit behandelten Ausnahme an den nächsten äußere Handler.|  
   
 ### <a name="exception-throwing-functions"></a>Ausnahme auslösende Funktionen  
   
 |||  
 |-|-|  
 |[AfxThrowArchiveException](#afxthrowarchiveexception)|Löst eine Ausnahme Archiv.|  
-|[AfxThrowFileException](#afxthrowfileexception)|Löst eine Ausnahme der Datei aus.|  
+|[AfxThrowFileException](#afxthrowfileexception)|Löst eine Ausnahme für die Datei aus.|  
 |[AfxThrowInvalidArgException](#afxthrowinvalidargexception)|Löst eine Ausnahme für ungültiges Argument.|
 |[AfxThrowMemoryException](#afxthrowmemoryexception)|Gibt eine Arbeitsspeicher-Ausnahme.|  
 |[AfxThrowNotSupportedException](#afxthrownotsupportedexception)|Gibt eine nicht unterstützte Ausnahme.|  
 |[AfxThrowResourceException](#afxthrowresourceexception)|Gibt eine Ausnahme für die Windows-Ressource nicht gefunden.|  
-|[AfxThrowUserException](#afxthrowuserexception)|Löst eine Ausnahme in einer Anwendung Benutzer initiierten Aktion.|  
+|[AfxThrowUserException](#afxthrowuserexception)|Löst eine Ausnahme in einer Anwendung vom Benutzer initiierte Aktion aus.|  
   
- MFC enthält zwei Ausnahme auslösende Funktionen speziell für OLE-Ausnahmen:  
+ MFC bietet zwei Ausnahme auslösende Funktionen speziell für OLE-Ausnahmen:  
   
 ### <a name="ole-exception-functions"></a>OLE-Ausnahme-Funktionen  
   
 |||  
 |-|-|  
-|[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|Löst eine Ausnahme innerhalb einer Funktion der OLE-Automatisierung.|  
+|[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|Löst eine Ausnahme in eine OLE-Automatisierung-Funktion.|  
 |[AfxThrowOleException](#afxthrowoleexception)|Eine OLE-Ausnahme ausgelöst.|  
   
- Zur Unterstützung von Datenbankausnahmen Datenbankklassen bieten zwei Ausnahmeklassen, `CDBException` und `CDaoException`, und globale Funktionen unterstützen die Ausnahmetypen ermöglicht:  
+ Um Datenbankausnahmen zu unterstützen, die Datenbankklassen stellen zwei Ausnahmeklassen `CDBException` und `CDaoException`, und globale Funktionen für die Unterstützung der Ausnahme:  
   
-### <a name="dao-exception-functions"></a>DAO-Funktionen  
+### <a name="dao-exception-functions"></a>Funktionen für DAO-Ausnahme  
   
 |||  
 |-|-|  
-|[AfxThrowDAOException](#afxthrowdaoexception)|Löst ein [CDaoException](../../mfc/reference/cdaoexception-class.md) aus Ihrem eigenen Code.|  
-|[AfxThrowDBException](#afxthrowdbexception)|Löst ein [CDBException](../../mfc/reference/cdbexception-class.md) aus Ihrem eigenen Code.|  
+|[AfxThrowDAOException](#afxthrowdaoexception)|Löst eine [CDaoException](../../mfc/reference/cdaoexception-class.md) über Ihren eigenen Code.|  
+|[AfxThrowDBException](#afxthrowdbexception)|Löst eine [CDBException](../../mfc/reference/cdbexception-class.md) über Ihren eigenen Code.|  
   
  MFC bietet die folgenden Beendigungsfunktion:  
   
@@ -95,7 +95,7 @@ Wenn ein Programm ausgeführt wird, kann eine Reihe von nicht ordnungsgemäße B
   
 |||  
 |-|-|  
-|[AfxAbort](#afxabort)|Wird aufgerufen, tritt ein, um eine Anwendung, wenn ein schwerwiegender Fehler beendet.|  
+|[AfxAbort](#afxabort)|Wird aufgerufen, tritt ein, um eine Anwendung, wenn ein schwerwiegender Fehler zu beenden.|  
   
 ##  <a name="try"></a>  VERSUCHEN SIE ES  
  Richtet eine **versuchen** Block.  
@@ -105,7 +105,7 @@ TRY
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Ein **versuchen** Block identifiziert einen Codeblock, der Ausnahmen auslösen kann. Diese Ausnahmen werden behandelt, in der folgenden **CATCH** und `AND_CATCH` blockiert. Rekursion ist zulässig: Ausnahmen übergeben werden können, um ein äußeres **versuchen** Block, ignorieren Sie diese oder mithilfe der `THROW_LAST` Makro. Ende der **versuchen** -block mit einer `END_CATCH` oder `END_CATCH_ALL` Makro.  
+ Ein **versuchen** Block identifiziert einen Codeblock, die möglicherweise Ausnahmen auslösen. Diese Ausnahmen werden behandelt, in der folgenden **CATCH** und **AND_CATCH** Blöcke. Rekursion ist zulässig: Ausnahmen können übergeben werden, um eine äußere **versuchen** entweder ignoriert oder mithilfe der THROW_LAST-Makro-Block. Ende der **versuchen** Block mit einer END_CATCH oder END_CATCH_ALL-Makro.  
   
  Weitere Informationen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).  
   
@@ -116,7 +116,7 @@ TRY
 Header: afx.h
 
 ##  <a name="catch"></a>  CATCH  
- Definiert einen Codeblock, der den ersten Ausnahmetyp in den vorherigen abfängt **versuchen** Block.  
+ Definiert einen Codeblock, der den ersten Ausnahmetyp, das Sie in der vorherigen abfängt **versuchen** Block.  
   
 ```   
 CATCH(exception_class, exception_object_pointer_name)  
@@ -125,28 +125,28 @@ CATCH(exception_class, exception_object_pointer_name)
   
 ### <a name="parameters"></a>Parameter  
  *exception_class*  
- Gibt den Ausnahmetyp zu testen. Eine Liste der standardmäßigen Ausnahmeklassen, finden Sie in der Klasse [CException](../../mfc/reference/cexception-class.md).  
+ Gibt den Typ der Ausnahme zu testen. Eine Liste der standard Ausnahmeklassen, finden Sie unter Klasse [CException](../../mfc/reference/cexception-class.md).  
   
  *exception_object_pointer_name*  
- Gibt einen Namen für ein Ausnahmeobjekt Zeiger, der durch das Makro erstellt werden soll. Können Sie den Zeigernamen auf das Ausnahmeobjekt innerhalb der **CATCH** Block. Diese Variable wird für Sie deklariert werden.  
+ Gibt einen Namen für ein Ausnahmeobjekt Zeiger, der durch das Makro erstellt werden. Sie können den Zeigernamen auf das Ausnahmeobjekt in zugreifen der **CATCH** Block. Diese Variable wird für Sie deklariert werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Der ausnahmeverarbeitung Code können Sie das Ausnahmeobjekt, falls erforderlich, um weitere Informationen über die genaue Ursache der Ausnahme erhalten Abfragen. Aufrufen der `THROW_LAST` Makro, um die Verarbeitung auf den nächsten äußeren Ausnahme Frame verschoben. Ende der **versuchen** -block mit einer `END_CATCH` Makro.  
+ Der ausnahmeverarbeitung Code können Sie das Ausnahmeobjekt, bei Bedarf, um weitere Informationen über die genaue Ursache der Ausnahme erhalten Abfragen. Rufen Sie das THROW_LAST-Makro, um die Verarbeitung der nächste äußere Ausnahme Frame zu verschieben. Ende der **versuchen** Block mit einer END_CATCH-Makro.  
   
- Wenn *Exception_class* ist die Klasse `CException`, und klicken Sie dann alle Ausnahmetypen abgefangen werden. Sie können die [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof) Member-Funktion, um zu bestimmen, welche spezifische Ausnahme ausgelöst wurde. Eine bessere Möglichkeit, verschiedene Arten von Ausnahmen abfangen ist die Verwendung sequenzielle `AND_CATCH` Anweisungen, die jeweils über einen anderen Ausnahmetyp.  
+ Wenn *Exception_class* ist die Klasse `CException`, und klicken Sie dann allen Ausnahmetypen abgefangen werden. Sie können die [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof) Member-Funktion, um zu bestimmen, welche spezifische Ausnahme ausgelöst wurde. Eine bessere Möglichkeit, verschiedene Arten von Ausnahmen abfangen ist die Verwendung sequenzielle **AND_CATCH** Anweisungen, die jeweils über einen anderen Ausnahmetyp.  
   
- Die Ausnahme Objektzeiger wird durch das Makro erstellt. Sie müssen nicht selbst deklarieren.  
+ Die Ausnahme Objektzeiger wird durch das Makro erstellt. Sie müssen sich nicht selbst deklarieren.  
   
 > [!NOTE]
->  Die **CATCH** Block als geschweifte Klammern getrennter C++ Bereich definiert wird. Wenn Sie in diesem Bereich Variablen deklarieren, sind sie nur innerhalb des Bereichs zugegriffen werden kann. Dies gilt auch für *Exception_object_pointer_name*.  
+>  Die **CATCH** Block wird definiert, wie eine C++-Bereich, der durch Klammern getrennt wird. Wenn Sie die Variablen in diesem Bereich deklarieren, sind sie nur innerhalb des Bereichs zugegriffen werden kann. Dies gilt auch für *Exception_object_pointer_name*.  
   
- Weitere Informationen zu Ausnahmen und die **CATCH** -Makro, finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).  
+ Weitere Informationen zu Ausnahmen und der CATCH-Makro, finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
   
 ##  <a name="catch_all"></a>  CATCH_ALL  
- Definiert einen Codeblock, der alle Ausnahmetypen, die ausgelöst wird, in den vorherigen abfängt **versuchen** Block.  
+ Definiert einen Codeblock, der allen Ausnahmetypen, die ausgelöst wird, in der vorherigen abfängt **versuchen** Block.  
   
 ```   
 CATCH_ALL(exception_object_pointer_name)   
@@ -154,13 +154,13 @@ CATCH_ALL(exception_object_pointer_name)
   
 ### <a name="parameters"></a>Parameter  
  *exception_object_pointer_name*  
- Gibt einen Namen für ein Ausnahmeobjekt Zeiger, der durch das Makro erstellt werden soll. Können Sie den Zeigernamen auf das Ausnahmeobjekt innerhalb der `CATCH_ALL` Block. Diese Variable wird für Sie deklariert werden.  
+ Gibt einen Namen für ein Ausnahmeobjekt Zeiger, der durch das Makro erstellt werden. Sie können den Zeigernamen verwenden, das Ausnahmeobjekt in den Zugriff auf die `CATCH_ALL` Block. Diese Variable wird für Sie deklariert werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Der ausnahmeverarbeitung Code können Sie das Ausnahmeobjekt, falls erforderlich, um weitere Informationen über die genaue Ursache der Ausnahme erhalten Abfragen. Aufrufen der `THROW_LAST` Makro, um die Verarbeitung auf den nächsten äußeren Ausnahme Frame verschoben. Bei Verwendung von `CATCH_ALL`, Ende der **versuchen** -block mit einer `END_CATCH_ALL` Makro.  
+ Der ausnahmeverarbeitung Code können Sie das Ausnahmeobjekt, bei Bedarf, um weitere Informationen über die genaue Ursache der Ausnahme erhalten Abfragen. Rufen Sie die `THROW_LAST` Makro, um die Verarbeitung der nächste äußere Ausnahme Frame zu verschieben. Bei Verwendung von **CATCH_ALL**, Ende der **versuchen** Block mit einer END_CATCH_ALL-Makro.  
   
 > [!NOTE]
->  Die `CATCH_ALL` Block als geschweifte Klammern getrennter C++ Bereich definiert wird. Wenn Sie in diesem Bereich Variablen deklarieren, sind sie nur innerhalb des Bereichs zugegriffen werden kann.  
+>  Die **CATCH_ALL** Block wird definiert, wie eine C++-Bereich, der durch Klammern getrennt wird. Wenn Sie die Variablen in diesem Bereich deklarieren, sind sie nur innerhalb des Bereichs zugegriffen werden kann.  
   
  Weitere Informationen zu Ausnahmen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).  
   
@@ -171,7 +171,7 @@ CATCH_ALL(exception_object_pointer_name)
   **Header** afx.h  
 
 ##  <a name="and_catch"></a>  AND_CATCH  
- Definiert einen Codeblock zum Abfangen von zusätzlichen Ausnahmetypen, die ausgelöst wird, in einem vorhergehenden **versuchen** Block.  
+ Definiert einen Block von Code zum Abfangen von zusätzlichen Ausnahmetypen, die ausgelöst wird, in einem vorhergehenden **versuchen** Block.  
   
 ```   
 AND_CATCH(exception_class, exception_object_pointer_name)   
@@ -179,18 +179,18 @@ AND_CATCH(exception_class, exception_object_pointer_name)
   
 ### <a name="parameters"></a>Parameter  
  *exception_class*  
- Gibt den Ausnahmetyp zu testen. Eine Liste der standardmäßigen Ausnahmeklassen, finden Sie in der Klasse [CException](../../mfc/reference/cexception-class.md).  
+ Gibt den Typ der Ausnahme zu testen. Eine Liste der standard Ausnahmeklassen, finden Sie unter Klasse [CException](../../mfc/reference/cexception-class.md).  
   
  *exception_object_pointer_name*  
- Ein Name für ein Ausnahmeobjekt Zeiger, der durch das Makro erstellt wird. Können Sie den Zeigernamen auf das Ausnahmeobjekt innerhalb der `AND_CATCH` Block. Diese Variable wird für Sie deklariert werden.  
+ Ein Name für ein Ausnahmeobjekt Zeiger, der durch das Makro erstellt werden. Sie können den Zeigernamen verwenden, das Ausnahmeobjekt in den Zugriff auf die **AND_CATCH** Block. Diese Variable wird für Sie deklariert werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden der **CATCH** Makro, das einen Typ von Ausnahme abfangen und dann die `AND_CATCH` Makro, um jede nachfolgende abfangen. Ende der **versuchen** -block mit einer `END_CATCH` Makro.  
+ Verwenden Sie die CATCH-Makro, einem Ausnahmetyp abzufangen, und klicken Sie dann auf die AND_CATCH-Makro, um jedes nachfolgende Typs abzufangen. Ende der **versuchen** Block mit einer END_CATCH-Makro.  
   
- Der ausnahmeverarbeitung Code können Sie das Ausnahmeobjekt, falls erforderlich, um weitere Informationen über die genaue Ursache der Ausnahme erhalten Abfragen. Rufen Sie die `THROW_LAST` Makro innerhalb der `AND_CATCH` UMSCHALT Verarbeitung an den nächsten äußeren Ausnahme Frame blockieren. `AND_CATCH` markiert das Ende der vorangehenden **CATCH** oder `AND_CATCH` Block.  
+ Der ausnahmeverarbeitung Code können Sie das Ausnahmeobjekt, bei Bedarf, um weitere Informationen über die genaue Ursache der Ausnahme erhalten Abfragen. Rufen Sie die THROW_LAST-Makro in der **AND_CATCH** Verarbeitung an den nächsten äußeren Ausnahme Frame zu blockieren. **AND_CATCH** markiert das Ende der vorangehenden **CATCH** oder **AND_CATCH** Block.  
   
 > [!NOTE]
->  Die `AND_CATCH` Block als ein C++-Bereich (geschweifte Klammern getrennter) definiert ist. Wenn Sie in diesem Bereich Variablen deklarieren, denken Sie daran, dass sie nur innerhalb des Bereichs zugegriffen werden kann. Dies gilt auch für die *Exception_object_pointer_name* Variable.  
+>  Die **AND_CATCH** Block wird definiert, wie eine C++-Bereich (getrennt durch geschweifte Klammern). Wenn Sie die Variablen in diesem Bereich deklarieren, denken Sie daran, dass sie nur innerhalb des Bereichs zugegriffen werden kann. Dies gilt auch für die *Exception_object_pointer_name* Variable.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CATCH](#catch).  
@@ -198,7 +198,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 ### <a name="requirements"></a>Anforderungen  
   **Header** afx.h  
 ##  <a name="and_catch_all"></a>  AND_CATCH_ALL  
- Definiert einen Codeblock zum Abfangen von zusätzlichen Ausnahmetypen, die ausgelöst wird, in einem vorhergehenden **versuchen** Block.  
+ Definiert einen Block von Code zum Abfangen von zusätzlichen Ausnahmetypen, die ausgelöst wird, in einem vorhergehenden **versuchen** Block.  
   
 ```   
 AND_CATCH_ALL(exception_object_pointer_name)  
@@ -206,34 +206,34 @@ AND_CATCH_ALL(exception_object_pointer_name)
   
 ### <a name="parameters"></a>Parameter  
  *exception_object_pointer_name*  
- Ein Name für ein Ausnahmeobjekt Zeiger, der durch das Makro erstellt wird. Können Sie den Zeigernamen auf das Ausnahmeobjekt innerhalb der `AND_CATCH_ALL` Block. Diese Variable wird für Sie deklariert werden.  
+ Ein Name für ein Ausnahmeobjekt Zeiger, der durch das Makro erstellt werden. Sie können den Zeigernamen verwenden, das Ausnahmeobjekt in den Zugriff auf die **AND_CATCH_ALL** Block. Diese Variable wird für Sie deklariert werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden der **CATCH** Makro, das einen Typ von Ausnahme abfangen und dann die `AND_CATCH_ALL` Makro, das alle anderen Typen nachfolgende abfangen. Bei Verwendung von `AND_CATCH_ALL`, Ende der **versuchen** -block mit einer `END_CATCH_ALL` Makro.  
+ Verwenden der **CATCH** -Makro, um einen Ausnahmetyp abzufangen, und klicken Sie dann auf die AND_CATCH_ALL-Makro zum Abfangen von allen anderen nachfolgenden Typen. Bei Verwendung von AND_CATCH_ALL enden die **versuchen** Block mit einer END_CATCH_ALL-Makro.  
   
- Der ausnahmeverarbeitung Code können Sie das Ausnahmeobjekt, falls erforderlich, um weitere Informationen über die genaue Ursache der Ausnahme erhalten Abfragen. Rufen Sie die `THROW_LAST` Makro innerhalb der `AND_CATCH_ALL` UMSCHALT Verarbeitung an den nächsten äußeren Ausnahme Frame blockieren. `AND_CATCH_ALL` markiert das Ende der vorangehenden **CATCH** oder `AND_CATCH_ALL` Block.  
+ Der ausnahmeverarbeitung Code können Sie das Ausnahmeobjekt, bei Bedarf, um weitere Informationen über die genaue Ursache der Ausnahme erhalten Abfragen. Rufen Sie die THROW_LAST-Makro in der **AND_CATCH_ALL** Verarbeitung an den nächsten äußeren Ausnahme Frame zu blockieren. **AND_CATCH_ALL** markiert das Ende der vorangehenden **CATCH** oder **AND_CATCH_ALL** Block.  
   
 > [!NOTE]
->  Die `AND_CATCH_ALL` Block als ein C++-Bereich (geschweifte Klammern getrennter) definiert ist. Wenn Sie in diesem Bereich Variablen deklarieren, denken Sie daran, dass sie nur innerhalb des Bereichs zugegriffen werden kann.  
+>  Die **AND_CATCH_ALL** Block wird definiert, wie eine C++-Bereich (der durch Klammern getrennt wird). Wenn Sie die Variablen in diesem Bereich deklarieren, denken Sie daran, dass sie nur innerhalb des Bereichs zugegriffen werden kann.  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afx.h  
   
 ##  <a name="end_catch"></a>  END_CATCH  
- Markiert das Ende der letzten **CATCH** oder `AND_CATCH` Block.  
+ Markiert das Ende der letzten **CATCH** oder **AND_CATCH** Block.  
   
 ```   
 END_CATCH  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den `END_CATCH` -Makro, finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).  
+ Weitere Informationen zu den END_CATCH-Makro, finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afx.h  
   
 ##  <a name="end_catch_all"></a>  END_CATCH_ALL  
- Markiert das Ende der letzten `CATCH_ALL` oder `AND_CATCH_ALL` Block.  
+ Markiert das Ende der letzten ** CATCH_ALL88 oder **AND_CATCH_ALL** Block.  
   
 ```   
 END_CATCH_ALL  
@@ -251,10 +251,10 @@ THROW(exception_object_pointer)
   
 ### <a name="parameters"></a>Parameter  
  *exception_object_pointer*  
- Verweist auf ein Ausnahmeobjekt von abgeleiteten `CException`.  
+ Verweist auf ein Ausnahmeobjekt abgeleitet `CException`.  
   
 ### <a name="remarks"></a>Hinweise  
- **LÖST** Interrupts programmausführung, übergeben an die zugeordnete Steuerelement **CATCH** in Ihrem Programm blockieren. Wenn Sie nicht bereitgestellt haben die **CATCH** blockieren, und dann das Steuerelement übergeben wird, um ein Microsoft Foundation Class Library-Modul, das druckt einen Fehler-Nachricht und beendet wird.  
+ **LÖST** Ausführung, die Kontrolle an die zugeordnete des Programms **CATCH** in Ihrem Programm zu blockieren. Wenn Sie nicht angegeben haben die **CATCH** blockieren, und dann das Steuerelement übergeben wird, um ein Microsoft Foundation Class Library-Modul, das gibt einen Fehler-Nachricht und beendet wird.  
   
  Weitere Informationen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).  
   
@@ -262,14 +262,14 @@ THROW(exception_object_pointer)
   **Header** afx.h  
   
 ##  <a name="throw_last"></a>  THROW_LAST  
- Löst die Ausnahme wieder an dem nächsten äußeren **CATCH** Block.  
+ Löst die Ausnahme zurück an dem nächsten äußeren **CATCH** Block.  
   
 ```   
 THROW_LAST()   
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Dieses Makro können Sie eine lokal erstellte Ausnahme auslösen. Wenn Sie versuchen, eine Ausnahme auslöst, die Sie gerade erfasst haben, wird normalerweise verlassen den Gültigkeitsbereich und gelöscht werden. Mit `THROW_LAST`, wird die Ausnahme ordnungsgemäß an den nächsten übergeben **CATCH** Handler.  
+ Dieses Makro können Sie eine lokal erstellte-Ausnahme auslösen. Wenn Sie versuchen, eine Ausnahme auszulösen, die Sie gerade erfasst haben, wird normalerweise verlassen den Gültigkeitsbereich und gelöscht werden. Mit **THROW_LAST**, wird die Ausnahme ordnungsgemäß auf die nächste übergeben **CATCH** Handler.  
   
  Weitere Informationen finden Sie im Artikel [Ausnahmen](../../mfc/exception-handling-in-mfc.md).  
   
@@ -287,17 +287,17 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cause`  
+ *Ursache*  
  Gibt eine ganze Zahl, die den Grund für die Ausnahme angibt. Eine Liste der möglichen Werte finden Sie [CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause).  
   
- `lpszArchiveName`  
- Verweist auf eine Zeichenfolge mit dem Namen des dem `CArchive` -Objekt, das die Ausnahme verursacht hat, (falls verfügbar).  
+ *lpszArchiveName*  
+ Verweist auf eine Zeichenfolge, die mit dem Namen des der `CArchive` -Objekt, das die Ausnahme verursacht hat, (falls verfügbar).  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afx.h  
   
 ##  <a name="afxthrowfileexception"></a>  AfxThrowFileException  
- Löst eine Ausnahme der Datei aus.  
+ Löst eine Ausnahme für die Datei aus.  
   
 ```   
 void AfxThrowFileException(
@@ -307,17 +307,17 @@ void AfxThrowFileException(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `cause`  
+ *Ursache*  
  Gibt eine ganze Zahl, die den Grund für die Ausnahme angibt. Eine Liste der möglichen Werte finden Sie [CFileException::m_cause](../../mfc/reference/cfileexception-class.md#m_cause).  
   
- `lOsError`  
- Enthält die Betriebssystem-Fehlernummer (falls verfügbar), die besagt, dass die Ursache der Ausnahme. Finden Sie unter Ihrem Betriebssystem manuell eine Liste der Fehlercodes.  
+ *lOsError*  
+ Enthält die Betriebssystem-Fehlernummer, (falls verfügbar), der die Ursache der Ausnahme angibt. Finden Sie unter Ihrem Betriebssystem manuell eine Liste der Fehlercodes.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Verweist auf eine Zeichenfolge, die mit dem Namen der Datei, die die Ausnahme verursacht hat, (falls verfügbar).  
   
 ### <a name="remarks"></a>Hinweise  
- Sie sind verantwortlich für die Ursache anhand der Betriebssystem-Fehlercode ermitteln.  
+ Sie sind verantwortlich für das Ermitteln der Ursache, die basierend auf dem Betriebssystem-Fehlercode.  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afx.h  
@@ -350,13 +350,13 @@ void AfxThrowMemoryException();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Mit dieser Funktion werden, wenn Aufrufe an die zugrunde liegende System-speicherzuordnungen (z. B. `malloc` und [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows-Funktion) fehl. Sie müssen nicht für Aufrufen **neue** da **neue** löst eine Speicherausnahme automatisch, wenn die speicherbelegung fehlschlägt.  
+ Diese Funktion aufrufen, wenn Aufrufe an die zugrunde liegende System-speicherzuordnungen (z. B. **"malloc"** und [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows-Funktion) fehl. Sie müssen nicht für nenne **neue** da **neue** löst eine Speicherausnahme automatisch, wenn die speicherbelegung fehlschlägt.  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afx.h  
   
 ##  <a name="afxthrownotsupportedexception"></a>  AfxThrowNotSupportedException  
- Löst eine Ausnahme, die das Ergebnis einer Anforderung einer nicht unterstützten Funktion ist.  
+ Löst eine Ausnahme, die das Ergebnis einer Anforderung für ein nicht unterstütztes Feature ist.  
   
 ```  
 void AfxThrowNotSupportedException(); 
@@ -366,7 +366,7 @@ void AfxThrowNotSupportedException();
   **Header** afx.h  
   
 ##  <a name="afxthrowresourceexception"></a>  AfxThrowResourceException  
- Gibt eine Ressourcenausnahme.  
+ Löst eine Ressourcenausnahme aus.  
   
 ```   
 void  AfxThrowResourceException(); 
@@ -386,13 +386,13 @@ void AfxThrowUserException();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion wird normalerweise aufgerufen, unmittelbar nach `AfxMessageBox` wurde für den Benutzer ein Fehler gemeldet.  
+ Diese Funktion wird normalerweise aufgerufen, unmittelbar nach `AfxMessageBox` hat einen Fehler, die dem Benutzer gemeldet.  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afx.h  
   
 ##  <a name="afxthrowoledispatchexception"></a>  AfxThrowOleDispatchException  
- Verwenden Sie diese Funktion eine Ausnahme innerhalb einer Funktion der OLE-Automatisierung.  
+ Verwenden Sie diese Funktion eine Ausnahme in eine OLE-Automatisierung-Funktion.  
   
 ```   
 void AFXAPI AfxThrowOleDispatchException(
@@ -407,20 +407,20 @@ void AFXAPI AfxThrowOleDispatchException(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `wCode`  
- Der Fehlercode für Ihre Anwendung spezifisch sind.  
+ *WCode*  
+ Ein Fehlercode, die spezifisch für Ihre Anwendung.  
   
- `lpszDescription`  
- Verbale Beschreibung des Fehlers.  
+ *lpszDescription*  
+ Mündliche Beschreibung des Fehlers.  
   
- `nDescriptionID`  
+ *nDescriptionID*  
  Ressourcen-ID für die verbale fehlerbeschreibung.  
   
- `nHelpID`  
- Ein Hilfekontext für die Anwendung Help (. HLP)-Datei.  
+ *nHelpID*  
+ Ein Hilfekontext Hilfe von Ihrer Anwendung (. HLP)-Datei.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Informationen zu dieser Funktion kann durch die steuernde Anwendung (Microsoft Visual Basic oder eine andere Clientanwendung für OLE-Automatisierung) angezeigt werden.  
+ Die Informationen zu dieser Funktion kann durch die treibende Anwendung (Microsoft Visual Basic oder eine andere OLE-Client-Anwendung) angezeigt werden.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCExceptions#25](../../mfc/codesnippet/cpp/exception-processing_2.cpp)]  
@@ -437,20 +437,20 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `sc`  
+ *SC*  
  Ein OLE-Statuscode, der die Ursache der Ausnahme angibt.  
   
- `hr`  
- Handle für einen Ergebniscode, der die Ursache der Ausnahme angibt.  
+ *HR*  
+ Handle für ein Ergebniscode, der den Grund für die Ausnahme angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Version, die akzeptiert ein `HRESULT` als ein Argument dieses Resultat den Code in die entsprechende konvertiert `SCODE`. Weitere Informationen zu `HRESULT` und `SCODE`, finden Sie unter [Struktur von COM-Fehlercodes](http://msdn.microsoft.com/library/windows/desktop/ms690088) im Windows SDK.  
+ Die Version, die ein HRESULT als Argument akzeptiert konvertiert, Ergebnis: in die entsprechende SCODE an. Weitere Informationen zu HRESULT und SCODE, finden Sie unter [Struktur von COM-Fehlercodes](http://msdn.microsoft.com/library/windows/desktop/ms690088) im Windows SDK.  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdao.h  
   
 ##  <a name="afxthrowdaoexception"></a>  AfxThrowDaoException  
- Mit dieser Funktion wird zum Auslösen einer Ausnahme vom Typ [CDaoException](../../mfc/reference/cdaoexception-class.md) aus Ihrem eigenen Code.  
+ Mit dieser Funktion wird zum Auslösen einer Ausnahme vom Typ [CDaoException](../../mfc/reference/cdaoexception-class.md) über Ihren eigenen Code.  
   
 ```   
 void AFXAPI AfxThrowDaoException(
@@ -459,22 +459,22 @@ void AFXAPI AfxThrowDaoException(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nAfxDaoError`  
- Ein Ganzzahlwert, ein DAO erweiterter Fehlercode darstellt, dem kann einen der Werte unter aufgeführt werden [CDaoException::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror).  
+ *nAfxDaoError*  
+ Ein ganzzahliger-Wert, der ein erweiterter Fehlercode DAO darstellt, die kann die Werte aufgeführt [CDaoException::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror).  
   
  *scode*  
- Ein OLE-Fehlercode aus DAO vom Typ `SCODE`. Informationen finden Sie unter [CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode).  
+ Ein OLE-Fehlercode von DAO, des Typs SCODE. Weitere Informationen finden Sie unter [CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode).  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework ruft auch `AfxThrowDaoException`. Aufrufen können Sie einen der Parameter oder beides übergeben. Z. B. eines auslösen sollen die Fehler in definierten **CDaoException::nAfxDaoError** , aber Sie ist nicht wichtig die *Scode* Parameter, übergeben Sie einen gültigen Code in der `nAfxDaoError` Parameter, und akzeptieren Sie die Standardwert für die *Scode*.  
+ Das Framework ruft auch `AfxThrowDaoException`. Aufruf können Sie einen der Parameter oder beide übergeben. Z. B. Wenn Sie eine der auslösen möchten die Fehler in definierten **CDaoException::nAfxDaoError** , aber Sie ist nicht wichtig die *Scode* Parameter, übergeben Sie einen gültigen Code in die *nAfxDaoError* Parameters und akzeptieren Sie den Standardwert für *Scode*.  
   
- Informationen zu Ausnahmen, die im Zusammenhang mit den MFC-DAO-Klassen finden Sie in der Klasse `CDaoException` in diesem Handbuch und im Artikel [Ausnahmen: Datenbankausnahmen](../../mfc/exceptions-database-exceptions.md).  
+ Informationen zu Ausnahmen im Zusammenhang mit den MFC-DAO-Klassen finden Sie in der Klasse `CDaoException` in diesem Buch sowie im Artikel [Ausnahmen: Datenbankausnahmen](../../mfc/exceptions-database-exceptions.md).  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afxdb.h  
   
 ##  <a name="afxthrowdbexception"></a>  AfxThrowDBException  
- Mit dieser Funktion wird zum Auslösen einer Ausnahme vom Typ `CDBException` aus Ihrem eigenen Code.  
+ Mit dieser Funktion wird zum Auslösen einer Ausnahme vom Typ `CDBException` über Ihren eigenen Code.  
   
 ```  
 void AfxThrowDBException(
@@ -484,32 +484,32 @@ void AfxThrowDBException(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nRetCode`  
- Ein Wert vom Typ **RETCODE**, definieren den Typ des Fehlers, der die Ausnahme ausgelöst wird, verursacht hat.  
+ *nRetCode*  
+ Ein Wert vom Typ "RETCODE", definieren den Typ des Fehlers, der die auszulösende Ausnahme verursacht hat.  
   
- `pdb`  
+ *PDB-Datei*  
  Ein Zeiger auf die `CDatabase` Objekt, das die datenquellenverbindung darstellt, der die Ausnahme zugeordnet ist.  
   
- `hstmt`  
- Ein ODBC **Befehls beschäftigt** -Handle, das das Anweisungshandle gibt an, der die Ausnahme zugeordnet ist.  
+ *Befehls beschäftigt*  
+ Eine ODBC HSTMT-Handle, das das Anweisungshandle gibt an, das die Ausnahme zugeordnet ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework ruft `AfxThrowDBException` ODBC empfängt **RETCODE** von einem Aufruf einer ODBC-API-Funktion und interpretiert die **RETCODE** als eine Ausnahmebedingung statt vorhersehbare Fehler. Beispielsweise kann eine Daten Zugriff aufgrund eines Datenträgers Lesefehler fehlschlagen.  
+ Das Framework ruft `AfxThrowDBException` Wenn eine ODBC RETCODE von einem Aufruf von einer ODBC-API-Funktion empfängt und die "RETCODE" als eine außergewöhnliche Bedingung, die nicht als eine vorhersehbare Fehler interpretiert. Z. B. möglicherweise einen datenzugriffsvorgang. aufgrund der ein Fehler beim Lesen der Datenträger.  
   
- Informationen zu den **RETCODE** Werte definiert, die von ODBC, finden Sie in Kapitel 8, "Abrufen von Status und Fehlerinformationen" im Windows SDK. Informationen über MFC-Erweiterungen für diese Codes finden Sie in der Klasse [CDBException](../../mfc/reference/cdbexception-class.md).  
+ Informationen zu den "RETCODE"-Werten, die von ODBC definiert finden Sie im Kapitel 8: "Abrufen von Status und Informationen zu Fehlern" im Windows SDK. Informationen über MFC-Erweiterungen für diese Codes finden Sie in der Klasse [CDBException](../../mfc/reference/cdbexception-class.md).  
   
 ### <a name="requirements"></a>Anforderungen  
   **Header** afx.h  
   
 ##  <a name="afxabort"></a>  AfxAbort  
- Der Standard-Beendigungsfunktion von MFC bereitgestellten.  
+ Die beenden-Standardfunktion, von MFC bereitgestellten.  
   
 ```   
 void  AfxAbort(); 
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `AfxAbort` wird intern von MFC-Memberfunktionen aufgerufen werden, wenn es ist ein schwerwiegender Fehler, z. B. eine nicht abgefangene Ausnahme, die nicht behandelt werden kann. Sie können Aufrufen `AfxAbort` in dem seltenen Fall, wenn Sie einen schwerwiegenden Fehler auftreten, aus dem kann nicht wiederhergestellt werden.  
+ `AfxAbort` wird intern von MFC-Memberfunktionen aufgerufen werden, wenn es ist ein schwerwiegender Fehler, z. B. eine nicht abgefangene Ausnahme, die nicht behandelt werden kann. Rufen Sie `AfxAbort` in dem seltenen Fall, wenn Sie einen schwerwiegenden Fehler auftritt, aus dem kann nicht wiederhergestellt werden.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CATCH](#catch).  
