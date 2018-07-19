@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2461d7986e87bed846d09d6e3938a339237c8f8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8f9e3f71a0d8647000f77863ecc9243b069f0521
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845166"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955826"
 ---
 # <a name="isconstructible-class"></a>is_constructible-Klasse
 
@@ -37,13 +37,13 @@ struct is_constructible;
 
 ### <a name="parameters"></a>Parameter
 
-`T` Der abzufragende Typ.
+*T* der abzufragende Typ.
 
-`Args` Die Argumenttypen entsprechend in einem Konstruktor, der `T`.
+*Args* den Argumenttypen in einem Konstruktor, der entsprechend *T*.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typprädikats ist TRUE, wenn der Typ `T` durch die Verwendung der Argumenttypen von `Args` konstruierbar ist; andernfalls ist sie FALSE. Typ `T` ist konstruierbar, wenn die Variablendefinition `T t(std::declval<Args>()...);` wohlgeformt ist. Sowohl `T` als auch alle Typen in `Args` müssen vollständige Typen `void` sein oder Arrays mit unbekannter Grenze.
+Eine Instanz des typprädikats ist true, wenn der Typ *T* konstruiert werden kann, ist die Verwendung der Argumenttypen *Args*, andernfalls ist Sie false. Typ *T* konstruierbar ist; wenn die Variablendefinition `T t(std::declval<Args>()...);` wohlgeformt ist. Beide *T* und alle Typen in *Args* müssen vollständige Typen werden **"void"**, oder Arrays mit Unbekannter Grenze.
 
 ## <a name="requirements"></a>Anforderungen
 

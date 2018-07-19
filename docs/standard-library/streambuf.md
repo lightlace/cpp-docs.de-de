@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4f2b455b362bcb170a09c89a0bfef8013286971
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 138ec5bb28e108751a7d4b03651826db38c098fa
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855265"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026931"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -38,14 +38,14 @@ Fügen Sie den iostreams-Standardheader \<streambuf> ein, um die Vorlagenklasse 
 
 |Typname|Beschreibung|
 |-|-|
-|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Eine Spezialisierung von `basic_streambuf`, die `char` als Vorlagenparameter verwendet.|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Eine Spezialisierung von `basic_streambuf`, die `wchar_t` als Vorlagenparameter verwendet.|
+|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Eine Spezialisierung der `basic_streambuf` verwendet **Char** als Vorlagenparameter.|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Eine Spezialisierung der `basic_streambuf` verwendet **"wchar_t"** als Vorlagenparameter.|
 
 ### <a name="classes"></a>Klassen
 
 |Klasse|Beschreibung|
 |-|-|
-|[basic_streambuf-Klasse](http://msdn.microsoft.com/en-us/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|Die Vorlagenklasse beschreibt eine abstrakte Basisklasse für die Ableitung eines Streampuffers, der die Übertragung von Elementen in eine und aus einer bestimmten Darstellung eines Streams steuert.|
+|[basic_streambuf-Klasse](http://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|Die Vorlagenklasse beschreibt eine abstrakte Basisklasse für die Ableitung eines Streampuffers, der die Übertragung von Elementen in eine und aus einer bestimmten Darstellung eines Streams steuert.|
 
 ## <a name="see-also"></a>Siehe auch
 

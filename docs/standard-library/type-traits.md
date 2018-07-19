@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7d09615b5f9ec7f0f72acde965d5ffbd018c9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1b0ae8be5e9f33982d9a24d3004ebb46b6b8a4d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863373"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026350"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -36,7 +36,7 @@ Definiert Vorlagen, die Kompilierzeitkonstanten bereitstellen, die Informationen
 
 ## <a name="remarks"></a>Hinweise
 
-Die Klassen und Vorlagen in \<Type_traits > dienen zur Unterstützung von Typrückschluss, Klassifizierung und die Transformation zum Zeitpunkt der Kompilierung, um Fehler im Zusammenhang mit dem Typ zu erkennen und zu Ihrer generischen Code optimieren können. Diese Klassen und Vorlagen umfassen unäre Typmerkmale, die eine Eigenschaft eines Typs beschreiben, binäre Typmerkmale, die eine Beziehung zwischen Typen beschreiben und Transformationsmerkmale, die eine Eigenschaft eines Typs ändern.
+Die Klassen und Vorlagen in \<Type_traits > dienen zur Unterstützung von Typrückschluss, Klassifizierung und Transformation zum Zeitpunkt der Kompilierung, um typbezogene Fehler zu erkennen und Ihnen helfen, den generischen Code zu optimieren. Diese Klassen und Vorlagen umfassen unäre Typmerkmale, die eine Eigenschaft eines Typs beschreiben, binäre Typmerkmale, die eine Beziehung zwischen Typen beschreiben und Transformationsmerkmale, die eine Eigenschaft eines Typs ändern.
 
 Zur Unterstützung von Typmerkmalen ist eine Hilfsklasse `integral_constant` definiert. Sie verfügt über die Vorlagenspezialisierungen `true_type` und `false_type`, die die Basisklassen für Typprädikate bilden. Ein *Typprädikat* ist eine Vorlage, die ein oder mehrere Typargumente entgegennimmt. Wenn ein Typprädikat *TRUE* ist, wird es direkt oder indirekt öffentlich aus [true_type](../standard-library/type-traits-typedefs.md#true_type) abgeleitet. Wenn ein Typprädikat *FALSE* ist, wird es direkt oder indirekt öffentlich aus [false_type](../standard-library/type-traits-typedefs.md#false_type) abgeleitet.
 
@@ -74,7 +74,7 @@ Primäre Typkategorien
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|Testet, ob der Typ `void` ist.|
+|[is_void](../standard-library/is-void-class.md)|Testet, ob der Typ ist **"void"**.|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Testet, ob der Typ `std::nullptr_t` ist.|
 |[is_integral](../standard-library/is-integral-class.md)|Testet, ob der Typ eine Ganzzahl ist.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Testet, ob der Typ ein Gleitkomma ist.|
@@ -95,7 +95,7 @@ Zusammengesetzte Typkategorien
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Testet, ob der Typ ein Verweis ist.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Testet, ob der Typ arithmetisch ist.|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|Testet, ob der Typ `void` oder arithmetisch ist.|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Testet, ob der Typ ist **"void"** oder arithmetische.|
 |[is_object](../standard-library/is-object-class.md)|Testet, ob der Typ ein Objekttyp ist.|
 |[is_scalar](../standard-library/is-scalar-class.md)|Testet, ob der Typ skalar ist.|
 |[is_compound](../standard-library/is-compound-class.md)|Testet, ob der Typ nicht skalar ist.|
@@ -105,8 +105,8 @@ Typeigenschaften
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|Testet, ob der Typ `const` ist.|
-|[is_volatile](../standard-library/is-volatile-class.md)|Testet, ob der Typ `volatile` ist.|
+|[is_const](../standard-library/is-const-class.md)|Testet, ob der Typ ist **const**.|
+|[is_volatile](../standard-library/is-volatile-class.md)|Testet, ob der Typ ist **flüchtige**.|
 |[is_trivial](../standard-library/is-trivial-class.md)|Testet, ob der Typ trivial ist.|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Testet, ob der Typ trivial kopierbar ist.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|Testet, ob der Typ ein Standardlayouttyp ist.|
@@ -142,7 +142,7 @@ Typeigenschaften
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Testet, ob der Typ durch Kopie zugewiesen werden kann und die Zuweisung keine Ausnahmefehler auslöst.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Prüft, ob dem Typ eine Verschiebung zugewiesen werden kann und die Zuweisung keine Ausnahmefehler auslöst.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Testet, ob der Typ zerstörbar ist und der Destruktor keine Ausnahmefehler auslöst.|
-|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Testet, ob der Typ einen virtuellen Destruktor aufweist.|
+|[has_virtual_destructor](http://msdn.microsoft.com/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Testet, ob der Typ einen virtuellen Destruktor aufweist.|
 
 Typeigenschaftsabfragen
 
@@ -164,9 +164,9 @@ Typbeziehungen
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Wandelt den Typ in einen `const`-Typ um.|
-|[add_volatile](../standard-library/add-volatile-class.md)|Wandelt den Typ in einen `volatile`-Typ um.|
-|[add_cv](../standard-library/add-cv-class.md)|Wandelt den Typ in einen `const volatile`-Typ um.|
+|[add_const](../standard-library/add-const-class.md)|Erzeugt eine **const** Typ vom Typ.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Erzeugt eine **flüchtige** Typ vom Typ.|
+|[add_cv](../standard-library/add-cv-class.md)|Erzeugt eine **const Volatile** Typ vom Typ.|
 |[remove_const](../standard-library/remove-const-class.md)|Wandelt den Typ in einen nicht konstanten Typ um.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Wandelt den Typ in einen nicht flüchtigen Typ um.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Wandelt den Typ in einen nicht konstanten nicht flüchtigen Typ um.|

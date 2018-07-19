@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66128074d7beb52ab73f2e6b48371999d38e83a5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: f6ef4f70807e753c24d3a3595ab3665b45fdbe42
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954050"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955701"
 ---
 # <a name="isunsigned-class"></a>is_unsigned-Klasse
 
@@ -37,11 +37,11 @@ struct is_unsigned;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typs Prädikat ist true, wenn der Typ `Ty` ein eine Ganzzahl ohne Vorzeichen ist oder ein `cv-qualified` vorzeichenloser Ganzzahltyp ist, andernfalls enthält er false.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ein Integraltyp ohne Vorzeichen ist oder ein `cv-qualified` vorzeichenloser Ganzzahltyp ist, andernfalls er false enthält.
 
 ## <a name="example"></a>Beispiel
 

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von CString | Microsoft Docs
+title: Verwenden von CString | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/18/2018
 ms.technology:
@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5759c8a0aaa628d612010cb7d04690a3d3bfa54f
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: 92807995183d2e5a34391250b36129e9bea01d66
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238720"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025843"
 ---
 # <a name="using-cstring"></a>Verwenden von CString
-In den Themen in diesem Abschnitt wird die Programmierung mit `CString` beschrieben. Referenzdokumentation zu den `CString` -Klasse finden Sie in der Dokumentation für [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
+In den Themen in diesem Abschnitt wird die Programmierung mit `CString` beschrieben. Referenzdokumentation zu den `CString` Klasse, finden Sie in der Dokumentation für [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
   
  Schließen Sie zum Verwenden von `CString` den `atlstr.h`-Header ein.  
   
  Die `CString`, `CStringA`, und `CStringW` -Klassen sind spezialisierungen einer Klassenvorlage namens [CStringT](../atl-mfc-shared/reference/cstringt-class.md) basierend auf dem Typ von Zeichendaten, die sie unterstützen.  
   
- Ein `CStringW`-Objekt enthält den `wchar_t`-Typ und unterstützt Unicode-Zeichenfolgen. Ein `CStringA`-Objekt enthält den `char`-Typ und unterstützt Singlebyte- und Multibyte (MBCS)-Zeichenfolgen. Ein `CString`-Objekt unterstützt den `char`-Typ oder den `wchar_t`-Typ, je nachdem, ob das `MBCS`-Symbol oder das `UNICODE`-Symbol bei der Kompilierung definiert wurde.  
+ Ein `CStringW` Objekt enthält die **"wchar_t"** -Typ und unterstützt Unicode-Zeichenfolgen. Ein `CStringA` Objekt enthält die **Char** Typ und der Zeichenfolgen für die Einzelbyte- und Multibyte (MBCS) unterstützt. Ein `CString` -Objekt unterstützt die **Char** Typ oder die `wchar_t` Typ, je nachdem, ob das Symbol für MBCS oder Unicode-Zeichen zum Zeitpunkt der Kompilierung definiert ist.  
   
- Ein `CString`-Objekt hält Zeichendaten in einem `CStringData`-Objekt. `CString` akzeptiert `null`-Zeichenfolgen im C-Stil beendet. `CString` verfolgt die Zeichenfolgenlänge für bessere Leistung, aber auch behält die `null` Zeichen in die gespeicherte Zeichendaten in die Konvertierung in LPCWSTR zu unterstützen. `CString` enthält den null-Terminator an, wenn es sich um eine Zeichenfolge im C-Format exportiert. Sie können zum Einfügen einer `null` an anderen Speicherorten in einer `CString`, aber es kann zu unerwarteten Ergebnissen führen.  
+ Ein `CString`-Objekt hält Zeichendaten in einem `CStringData`-Objekt. `CString` lässt NULL-terminierte c-Zeichenfolgen. `CString` verfolgt die Zeichenfolge Länge für höhere Leistung, sondern auch behält den NULL-Zeichen in den gespeicherten Zeichendaten zur Unterstützung der Konvertierung in LPCWSTR. `CString` enthält den null-Terminator an, wenn es sich um eine Zeichenfolge im C-Format exportiert. Sie können einen NULL-Wert einfügen, an anderen Speicherorten in ein `CString`, aber es kann zu unerwarteten Ergebnissen führen.  
   
- Die folgende Gruppe von Klassen kann verwendet werden, ohne zu verknüpfen eine MFC-Bibliothek mit oder ohne CRT-Unterstützung: `CAtlString`, `CAtlStringA`, und `CAtlStringW`.  
+ Der folgende Satz an Zeichenfolgenklassen kann ohne Verknüpfung einer MFC-Bibliothek mit oder ohne CRT-Support verwendet werden: `CAtlString`, `CAtlStringA`, und `CAtlStringW`.  
   
- `CString` wird in systemeigene Projekte verwendet. Verwenden Sie für Projekte mit verwaltetem Code (C++/CLI) `System::String`.  
+ `CString` wird in nativen Projekten verwendet werden. Verwenden Sie für Projekte mit verwaltetem Code (C++/CLI) `System::String`.  
   
  Um mehr Funktionen hinzuzufügen als `CString`, `CStringA` oder `CStringW` derzeit bieten, sollten Sie eine Unterklasse von `CStringT` erstellen, die die zusätzlichen Funktionen enthält.  
   
@@ -65,7 +65,7 @@ int main() {
  Beschreibt die Manipulation der Inhalte eines `CString`-Objekts wie eine mit Null abschließende Zeichenfolge im C-Format.  
   
  [Zuweisen und Freigeben von Arbeitsspeicher für einen BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
- Erläutert die Nutzung von Arbeitsspeicher für einen `BSTR` und für COM-Objekte.  
+ Erläutert die Verwendung von Arbeitsspeicher für einen BSTR und COM-Objekte.  
   
  [CString-Ausnahmebereinigung](../atl-mfc-shared/cstring-exception-cleanup.md)  
  Erklärt, dass eine explizite Bereinigung in MFC 3.0 und höher nicht mehr notwendig ist.  

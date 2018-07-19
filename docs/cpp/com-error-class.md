@@ -1,5 +1,5 @@
 ---
-title: _com_error-Klasse | Microsoft Docs
+title: _com_error-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95550c81235db58b1f8d372bf028750c003c7a9f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415724"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026633"
 ---
 # <a name="comerror-class"></a>_com_error-Klasse
 **Microsoft-spezifisch**  
   
- Ein `_com_error`-Objekt stellt eine Ausnahmebedingung dar, die von den Fehlerbehandlungs-Wrapperfunktionen in den Headerdateien erkannt wird, die von der Typbibliothek oder einer der COM-Unterstützungsklassen generiert werden. Die `_com_error`-Klasse kapselt den `HRESULT`-Fehlercode und jedes zugeordnete `IErrorInfo Interface`-Objekt.  
+ Ein `_com_error`-Objekt stellt eine Ausnahmebedingung dar, die von den Fehlerbehandlungs-Wrapperfunktionen in den Headerdateien erkannt wird, die von der Typbibliothek oder einer der COM-Unterstützungsklassen generiert werden. Die `_com_error` -Klasse kapselt die HRESULT-Fehlercode und alle zugehörigen `IErrorInfo Interface` Objekt.  
   
 ### <a name="construction"></a>Konstruktion  
   
@@ -44,9 +44,9 @@ ms.locfileid: "32415724"
   
 |||  
 |-|-|  
-|[Fehler](../cpp/com-error-error.md)|Ruft das an den Konstruktor übergebene `HRESULT` ab.|  
+|[Fehler](../cpp/com-error-error.md)|Ruft den HRESULT-Wert an den Konstruktor übergeben.|  
 |[ErrorInfo](../cpp/com-error-errorinfo.md)|Ruft das `IErrorInfo`-Objekt ab, das an den Konstruktor übergeben wurde.|  
-|[WCode](../cpp/com-error-wcode.md)|Ruft den 16-Bit-Fehlercode ab, der dem gekapselten `HRESULT` zugeordnet ist.|  
+|[WCode](../cpp/com-error-wcode.md)|Ruft ab, der 16-Bit-Fehlercode in der gekapselten HRESULT zugeordnet.|  
   
 ### <a name="ierrorinfo-functions"></a>IErrorInfo-Funktionen  
   
@@ -68,16 +68,16 @@ ms.locfileid: "32415724"
   
 |||  
 |-|-|  
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Ordnet 32-Bit-`HRESULT` dem 16-Bit-`wCode` zu.|  
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Ordnet die 16-Bit- `wCode` auf 32-Bit- `HRESULT`.|  
+|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Ordnet 32-Bit-HRESULT 16-Bit- `wCode`.|  
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Ordnet die 16-Bit- `wCode` in 32-Bit-HRESULT.|  
   
 **Ende Microsoft-spezifisch**  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<comdef.h>  
   
- `Lib:` "comsuppw.lib" oder "comsuppwd.lib" (siehe [/Zc: wchar_t (Wchar_t ist der systemeigene Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) für Weitere Informationen)  
+ `Lib:` comsuppw.lib oder comsuppwd.lib (finden Sie unter [/Zc: wchar_t (Wchar_t ist der systemeigene Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Informationen)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Compiler-COM-Unterstützungsklassen](../cpp/compiler-com-support-classes.md)   
- [IErrorInfo-Schnittstelle](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)
+ [Compilerklassen für COM-Unterstützung](../cpp/compiler-com-support-classes.md)   
+ [IErrorInfo-Schnittstelle](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

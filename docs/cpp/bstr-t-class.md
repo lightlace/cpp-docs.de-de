@@ -1,5 +1,5 @@
 ---
-title: _bstr_t-Klasse | Microsoft Docs
+title: _bstr_t-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bea9f863df08342f17419a16b14579fa6a257b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15ed9c32a204bdef726a5ace88d811d2eeeb2c53
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415282"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027247"
 ---
 # <a name="bstrt-class"></a>_bstr_t-Klasse
 **Microsoft-spezifisch**  
   
- Ein `_bstr_t` -Objekt kapselt die [BSTR-Datentyp](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Die Klasse verwaltet die Zuordnung und durch Funktionsaufrufe an **SysAllocString** und **SysFreeString** und andere `BSTR` APIs, falls erforderlich. Die `_bstr_t`-Klasse verwendet die Verweiszählung, um übermäßigen Mehraufwand zu vermeiden.  
+ Ein `_bstr_t` -Objekt kapselt den [BSTR-Datentyp](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Die Klasse verwaltet Ressourcen belegen und freigeben, die durch Funktionsaufrufe an `SysAllocString` und `SysFreeString` und andere `BSTR` APIs, falls erforderlich. Die `_bstr_t`-Klasse verwendet die Verweiszählung, um übermäßigen Mehraufwand zu vermeiden.  
   
 ### <a name="construction"></a>Konstruktion  
   
@@ -40,7 +40,7 @@ ms.locfileid: "32415282"
   
 |||  
 |-|-|  
-|[Zuweisen](../cpp/bstr-t-assign.md)|Kopiert ein `BSTR` in das `BSTR`, das von einem `_bstr_t` umschlossen wird.|  
+|[Weisen Sie](../cpp/bstr-t-assign.md)|Kopiert ein `BSTR` in das `BSTR`, das von einem `_bstr_t` umschlossen wird.|  
 |[Anfügen](../cpp/bstr-t-attach.md)|Verknüpft einen `_bstr_t`-Wrapper mit einem `BSTR`.|  
 |[copy](../cpp/bstr-t-copy.md)|Erstellt eine Kopie des gekapselten `BSTR`.|  
 |[Trennen](../cpp/bstr-t-detach.md)|Gibt `BSTR` zurück, das von `_bstr_t` umschlossen ist, und trennt `BSTR` von `_bstr_t`.|  
@@ -55,7 +55,7 @@ ms.locfileid: "32415282"
 |[operator =](../cpp/bstr-t-operator-equal.md)|Weist einem vorhandenen `_bstr_t`-Objekt einen neuen Wert zu.|  
 |[Operator +=](../cpp/bstr-t-operator-add-equal-plus.md)|Fügt Zeichen an das Ende des `_bstr_t`-Objekts an.|  
 |[Operator +](../cpp/bstr-t-operator-add-equal-plus.md)|Verkettet zwei Zeichenfolgen.|  
-|[Operator !](../cpp/bstr-t-operator-logical-not.md)|Überprüft, ob das gekapselte `BSTR` ist ein **NULL** Zeichenfolge.|  
+|[Operator !](../cpp/bstr-t-operator-logical-not.md)|Überprüft, ob das gekapselte `BSTR` ist eine NULL-Zeichenfolge.|  
 |[Operator ==,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Vergleicht zwei `_bstr_t`-Objekte.|  
 |[Operator Wchar_t * &#124; Char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Extrahiert die Zeiger auf das gekapselten Unicode- oder Mehrbyte-`BSTR`-Objekt.|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "32415282"
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<comutil.h>  
   
- **LIB:** "comsuppw.lib" oder "comsuppwd.lib" (siehe [/Zc: wchar_t (Wchar_t ist der systemeigene Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) für Weitere Informationen)  
+ **LIB:** comsuppw.lib oder comsuppwd.lib (finden Sie unter [/Zc: wchar_t (Wchar_t ist der systemeigene Typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Informationen)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Compilerklassen für COM-Unterstützung](../cpp/compiler-com-support-classes.md)

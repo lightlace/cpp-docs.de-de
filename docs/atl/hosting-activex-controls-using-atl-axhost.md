@@ -1,5 +1,5 @@
 ---
-title: Hosting von ActiveX-Steuerelementen mit ATL AXHost | Microsoft Docs
+title: Hosten von ActiveX-Steuerelementen mit ATL-xhost | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,39 +19,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5057a077e8e778fa3d943b736d51d19af8f60fc6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e26fd9e80b96c2b0196e3fd0e11b9c97f0f3bff3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356252"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027205"
 ---
-# <a name="hosting-activex-controls-using-atl-axhost"></a>Hosting von ActiveX-Steuerelementen mit ATL AXHost
-Im Beispiel in diesem Thema wird gezeigt, wie AXHost erstellt und wie mit verschiedenen Funktionen von ATL-ActiveX-Steuerelement gehostet. Außerdem wird gezeigt, wie auf das Steuerelement und die Senke Ereignisse zugreifen (mit [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) aus dem Steuerelement, das gehostet wird. Im Beispiel hostet das Kalender-Steuerelement in ein Hauptfenster oder ein untergeordnetes Fenster.  
+# <a name="hosting-activex-controls-using-atl-axhost"></a>Hosten von ActiveX-Steuerelementen mit ATL-xhost
+Das Beispiel in diesem Thema zeigt AXHost erstellt und zum Hosten eines ActiveX-Steuerelements, die verschiedene ATL-Funktionen verwenden. Darüber hinaus erfahren Sie, wie die Kontrolle und die Senke Ereignisse zugreifen (mit [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) aus dem Steuerelement, das gehostet wird. Das Beispiel hostet das Kalender-Steuerelement in ein Hauptfenster oder in einem untergeordneten Fenster.  
   
- Beachten Sie die Definition der `USE_METHOD` Symbol. Sie können den Wert dieses Symbols variiert zwischen 1 und 8 ändern. Der Wert des Symbols wird bestimmt, wie das Steuerelement erstellt wird:  
+ Beachten Sie, dass die Definition des Symbols USE_METHOD. Sie können den Wert dieses Symbols variiert zwischen 1 und 8 ändern. Der Wert des Symbols wird bestimmt, wie das Steuerelement erstellt wird:  
   
--   Für Werte des gerader `USE_METHOD`, den Aufruf beim Erstellen von der Host-Unterklassen eines Fensters und konvertiert sie in einem Steuerelementhost. Für die ungeraden Werte erstellt der Code ein untergeordnetes Fenster, das als Host fungiert.  
+-   Für gerade Werte USE_METHOD, den Aufruf von der Host-Unterklassen eines Fensters erstellen und in einem Steuerelementhost konvertiert wird. Ungerade Werte erstellt der Code ein untergeordneten Fensters, das als Host fungiert.  
   
--   Für Werte des `USE_METHOD` zwischen 1 und 4, der Zugriff auf das Steuerelement und Auffangen von Ereignissen von aktivitätsdesignerattribute im Aufruf, die auch auf den Host erstellt. Werte zwischen 5 und 8 Fragen Sie den Host für die Schnittstellen und die Senke zu verknüpfen.  
+-   USE_METHOD Werte zwischen 1 und 4, den Zugriff auf das Steuerelement und das Auffangen von Ereignissen werden im Aufruf durchgeführt wird, die auch den Host erstellt. Werte zwischen 5 und 8 den Host für die Schnittstellen Abfragen und verknüpfen Sie die Senke.  
   
- Hier finden Sie eine Zusammenfassung:  
+Hier finden Sie eine Zusammenfassung:  
   
-|USE_METHOD|Host|Steuern des Zugriffs und Auffangen|Funktion veranschaulicht|  
+|USE_METHOD|Host|Steuern des Zugriffs und Auffangen|Gezeigt Funktion|  
 |-----------------|----------|--------------------------------------|---------------------------|  
 |1|Untergeordnete Fenster|Ein Schritt|CreateControlLicEx|  
-|2|Im Hauptfenster|Ein Schritt|AtlAxCreateControlLicEx|  
+|2|Klicken Sie im Hauptfenster|Ein Schritt|AtlAxCreateControlLicEx|  
 |3|Untergeordnete Fenster|Ein Schritt|CreateControlEx|  
-|4|Im Hauptfenster|Ein Schritt|AtlAxCreateControlEx|  
+|4|Klicken Sie im Hauptfenster|Ein Schritt|AtlAxCreateControlEx|  
 |5|Untergeordnete Fenster|Mehrere Schritte|CreateControlLic|  
-|6|Im Hauptfenster|Mehrere Schritte|AtlAxCreateControlLic|  
+|6|Klicken Sie im Hauptfenster|Mehrere Schritte|AtlAxCreateControlLic|  
 |7|Untergeordnete Fenster|Mehrere Schritte|CreateControl|  
-|8|Im Hauptfenster|Mehrere Schritte|AtlAxCreateControl|  
+|8|Klicken Sie im Hauptfenster|Mehrere Schritte|AtlAxCreateControl|  
   
  [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zur steuerelementkapselung](../atl/atl-control-containment-faq.md)   
+ [Steuerelementkapselung – häufig gestellte Fragen](../atl/atl-control-containment-faq.md)   
  [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)   
  [AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
  [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)   

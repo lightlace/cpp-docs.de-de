@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen | Microsoft Docs'
+title: 'Vorgehensweise: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen | Microsoft-Dokumentation'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c63eb1657cd00580197e0571a40e9a7545688dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80efab13dfe28c7ecec2da1d3d932ed90d46f0f8
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415451"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026908"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Gewusst wie: Erstellen und Verwenden von CComPtr- und CComQIPtr-Instanzen
-In der klassischen Windows-Programmierung werden Bibliotheken häufig als COM-Objekte (oder genauer gesagt, als COM-Server) implementiert. Viele Windows-Betriebssystemkomponenten werden als COM-Server implementiert, und viele Mitwirkende bieten Bibliotheken in dieser Form. Informationen zu den COM-Grundlagen finden Sie unter [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
+In der klassischen Windows-Programmierung werden Bibliotheken häufig als COM-Objekte (oder genauer gesagt, als COM-Server) implementiert. Viele Windows-Betriebssystemkomponenten werden als COM-Server implementiert, und viele Mitwirkende bieten Bibliotheken in dieser Form. Weitere Informationen zu den Grundlagen von COM, finden Sie unter [Component Object Model (COM)](http://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
   
  Speichern Sie beim Instanziieren eines Component Object Model-Objekts (COM) den Schnittstellenzeiger in einem intelligenten COM-Zeiger, der die Zählung von Verweisen mit Aufrufen von `AddRef` und `Release` im Destruktor durchführt. Wenn Sie die Active Template Library (ATL) oder die Microsoft Foundation Class-Bibliothek (MFC-Bibliothek) verwenden, verwenden Sie den intelligenten `CComPtr` -Zeiger. Wenn Sie ATL bzw. MFC nicht verwenden, verwenden Sie `_com_ptr_t`. Da es kein COM-Äquivalent zu `std::unique_ptr`gibt, verwenden Sie diese intelligenten Zeiger sowohl für Szenarien mit einzelnen als auch mehreren Besitzern. Sowohl `CComPtr` als auch `ComQIPtr` unterstützt Verschiebungsvorgänge mit rvalue-Verweisen.  
   
@@ -29,7 +29,7 @@ In der klassischen Windows-Programmierung werden Bibliotheken häufig als COM-Ob
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr` und die zugehörigen Elemente sind Teil der ATL und werden im definiert \<"atlcomcli.h" >. `_com_ptr_t` im deklarierten \<"comip.h" >. Der Compiler erstellt Spezialisierungen von `_com_ptr_t` , wenn er Wrapperklassen für Typbibliotheken generiert.  
+ `CComPtr` und die zugehörigen Elemente sind Teil der ATL und definiert \<"atlcomcli.h" >. `_com_ptr_t` im deklarierten \<"comip.h" >. Der Compiler erstellt Spezialisierungen von `_com_ptr_t` , wenn er Wrapperklassen für Typbibliotheken generiert.  
   
 ## <a name="example"></a>Beispiel  
  ATL stellt auch `CComQIPtr`bereit, der eine einfachere Syntax verwendet, um ein COM-Objekt zum Abrufen einer zusätzlichen Schnittstelle abzufragen. Wir empfehlen jedoch `CComPtr` , da er alles beherrscht, was `CComQIPtr` kann, und semantisch mehr mit unformatierten COM-Schnittstellenzeigern übereinstimmt. Bei Verwendung eines `CComPtr` zum Abfragen einer Schnittstelle wird der neue Schnittstellenzeiger in einem Ausgabeparameter platziert. Wenn bei dem Aufruf ein Fehler auftritt, wird HRESULT – das normale COM-Muster – zurückgegeben. Mit `CComQIPtr`ist der Zeiger selbst der Rückgabewert, und wenn bei dem Aufruf ein Fehler auftritt, ist kein Zugriff auf den internen HRESULT-Rückgabewert möglich. Die folgenden beiden Zeilen zeigen, wie sich die Fehlerbehandlungsmechanismen in `CComPtr` und `CComQIPtr` unterscheiden.  

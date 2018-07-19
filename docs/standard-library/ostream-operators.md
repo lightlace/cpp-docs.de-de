@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e818c267f5fed9bd98b5c5998f4b0eac0c09f3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4819f5b5d5d6a16720bce29dd176fd0eb873014a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857791"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955932"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt;-Operatoren
 
@@ -88,17 +88,17 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>Parameter
 
-`_Ch` Ein Zeichen.
+*_Ch* ein Zeichen.
 
-`_Elem` Der Elementtyp.
+*_Elem* Typ des Elements.
 
-`_Ostr` Ein `basic_ostream` Objekt.
+*_Ostr* ein `basic_ostream` Objekt.
 
-`str` Eine Zeichenfolge.
+*Str* einer Zeichenfolge.
 
-`_Tr` Zeichenmerkmale.
+*_Tr* "traits"-Zeichen.
 
-`val` Der Typ
+*Val* den Typ
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -117,7 +117,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-bestimmt die Länge N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`) am Anfang der Sequenz an `str`, und fügt die Sequenz ein. Wenn N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), fügt die Funktion auch eine Wiederholung von `_Ostr.width`-N-Füllzeichen ein. Die Wiederholung geht der Sequenz voraus, wenn ( `_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). Andernfalls folgt die Wiederholung der Sequenz. Die Funktion gibt `_Ostr` zurück.
+Bestimmt die Länge N = `traits_type::` [Länge](../standard-library/char-traits-struct.md#length)(`str`) am Anfang der Sequenz *str*, und fügt die Sequenz. Wenn N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), fügt die Funktion auch eine Wiederholung von `_Ostr.width`-N-Füllzeichen ein. Die Wiederholung geht der Sequenz voraus, wenn (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). Andernfalls folgt die Wiederholung der Sequenz. Die Funktion gibt *_Ostr*.
 
 Die Vorlagenfunktion
 
@@ -128,7 +128,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-fügt das Element `_Ch` ein. Wenn 1 < `_Ostr.width`, dann fügt die Funktion auch eine Wiederholung von `_Ostr.width`-1 Füllzeichen hinzu. Die Wiederholung geht der Sequenz voraus, wenn ( `_Ostr.flags & adjustfield != left`. Andernfalls folgt die Wiederholung der Sequenz. Er gibt `_Ostr` zurück.
+fügt das Element `_Ch` ein. Wenn 1 < `_Ostr.width`, dann fügt die Funktion auch eine Wiederholung von `_Ostr.width`-1 Füllzeichen hinzu. Die Wiederholung geht der Sequenz voraus, wenn ( `_Ostr.flags & adjustfield != left`. Andernfalls folgt die Wiederholung der Sequenz. Es gibt *_Ostr*.
 
 Die Vorlagenfunktion
 
@@ -139,7 +139,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const char *str);
 ```
 
-verhält sich so
+verhält sich so wie
 
 ```cpp
 template <class _Elem, class _Tr>
@@ -148,7 +148,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-mit dem Unterschied, dass jedes Element `_Ch` der Sequenz beginnend bei `str` in ein Objekt vom Typ `Elem` konvertiert wird, indem `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`)) aufgerufen wird.
+mit dem Unterschied, dass jedes Element *_Ch* am Anfang der Sequenz *str* wird in ein Objekt des Typs konvertiert `Elem` durch Aufrufen von `_Ostr.` [put](../standard-library/basic-ostream-class.md#put)(`_Ostr.` [widen](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
 
 Die Vorlagenfunktion
 
@@ -168,7 +168,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-mit der Ausnahme, dass `_Ch` in ein Objekt vom Typ `Elem` konvertiert wird, indem `_Ostr.put`( `_Ostr.widen`( `_Ch`)) aufgerufen wird.
+mit dem Unterschied, dass *_Ch* wird in ein Objekt des Typs konvertiert `Elem` durch Aufrufen von `_Ostr.put`( `_Ostr.widen`( `_Ch`)).
 
 Die Vorlagenfunktion
 
@@ -208,7 +208,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-(Sie muss die `_Ch` nicht erweitern, bevor sie eingefügt werden.)
+(Es muss keine widen *_Ch* vor dem Einfügen.)
 
 Die Vorlagenfunktion
 
@@ -219,7 +219,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-gibt `_Ostr` << ( `const char *`) `str` zurück.
+Gibt `_Ostr` << (`const char *`) `str`.
 
 Die Vorlagenfunktion
 
@@ -230,7 +230,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-gibt `_Ostr` << ( `char`) `_Ch` zurück.
+Gibt `_Ostr` << (`char`) `_Ch`.
 
 Die Vorlagenfunktion:
 
@@ -241,7 +241,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-gibt `_Ostr` << ( `const char *`) `str` zurück.
+Gibt `_Ostr` << (`const char *`) `str`.
 
 Die Vorlagenfunktion:
 
@@ -252,7 +252,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-gibt `_Ostr` << ( `char`) `_Ch` zurück.
+Gibt `_Ostr` << (`char`) `_Ch`.
 
 Die Vorlagenfunktion:
 

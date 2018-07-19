@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonCheckBox Klasse | Microsoft Docs
+title: CMFCRibbonCheckBox-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042055"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027179"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox-Klasse
 Die `CMFCRibbonCheckBox`-Klasse implementiert ein Kontrollkästchen, das einem Menübandbereich, einer Symbolleiste für den Schnellzugriff oder einem Popupmenü hinzugefügt werden kann.  
@@ -77,9 +77,9 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-wobei *nID* ist die Befehls-ID für das Kontrollkästchen und *LpszText* ist die textbezeichnung des Kontrollkästchens.  
+wo *nID* ist die kontrollkästchenbefehls-ID und *LpszText* ist die textbezeichnung des Kontrollkästchens.  
   
- Sie können mithilfe ein Kontrollkästchens zu einem Menübandbereich hinzufügen [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+ Sie können das Kontrollkästchen zum Menübandbereich hinzufügen, indem Sie mithilfe von [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -94,7 +94,7 @@ wobei *nID* ist die Befehls-ID für das Kontrollkästchen und *LpszText* ist die
  **Header:** afxribboncheckbox.h  
   
 ##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox  
- Konstruktor des Objekts eine Menüband-Kontrollkästchen  
+ Der Konstruktor eines Objekts der Menüband-Kontrollkästchen  
   
 ```  
 CMFCRibbonCheckBox(
@@ -107,18 +107,18 @@ CMFCRibbonCheckBox(
  Gibt die Befehls-ID.  
   
  [in] *LpszText*  
- Gibt die Beschriftung an.  
+ Gibt die Bezeichnung.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Erstellt ein Menüband-Kontrollkästchen-Objekt.  
+ Erstellt ein Objekt der Menüband-Kontrollkästchen.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht das Erstellen von ein Objekt von der `CMFCRibbonCheckBox` Klasse.  
+ Im folgende Beispiel wird veranschaulicht, wie zum Erstellen eines Objekts von der `CMFCRibbonCheckBox` Klasse.  
   
  [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
 ##  <a name="getcompactsize"></a>  CMFCRibbonCheckBox::GetCompactSize  
- Ruft beim Überschreiben Ruft die komprimierte Größe des Kontrollkästchens auf.  
+ Ruft beim Überschreiben wird die komprimierte Größe des Kontrollkästchens ab.  
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
@@ -126,16 +126,16 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parameter  
  [in] *pDC*  
- Zeiger auf die `CDC` das Kontrollkästchen zugeordnet.  
+ Zeiger auf die mit dem Kontrollkästchen Verknüpfte CDC.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt eine `CSize` Objekt, das die komprimierte Größe des Kontrollkästchens enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn nicht überschrieben wird, gibt die intermediate Größe das Kontrollkästchen zurück.  
+ Wenn Sie nicht überschrieben wird, gibt die fortgeschrittene Größe des Kontrollkästchens zurück.  
   
 ##  <a name="getintermediatesize"></a>  CMFCRibbonCheckBox::GetIntermediateSize  
- Ruft die intermediate Größe des Kontrollkästchens.  
+ Ruft die fortgeschrittene Größe des Kontrollkästchens.  
   
 ```  
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -143,16 +143,16 @@ virtual CSize GetIntermediateSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parameter  
  [in] *pDC*  
- Zeiger auf die `CDC` dieses Kontrollkästchen zugeordnet.  
+ Zeiger auf den mit diesem Kontrollkästchen Verknüpfte CDC.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `CSize` Objekt, das die intermediate Größe des Kontrollkästchens enthält.  
+ Ein `CSize` Objekt mit der intermediate Größe des Kontrollkästchens.  
   
 ### <a name="remarks"></a>Hinweise  
- Nicht überschrieben wird, berechnet die intermediate Größe als die Standardgröße des Kontrollkästchen ( `AFX_CHECK_BOX_DEFAULT_SIZE`) sowie die Textgröße zuzüglich der Ränder.  
+ Wenn Sie nicht überschrieben wird, berechnet die fortgeschrittene Größe als die Standardgröße des Kontrollkästchen ( `AFX_CHECK_BOX_DEFAULT_SIZE`) sowie die Textgröße zuzüglich der Ränder.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonCheckBox::GetRegularSize  
- Ruft die reguläre Größe des Kontrollkästchens.  
+ Ruft die reguläre Größe des Kontrollkästchens ab.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -160,28 +160,28 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="parameters"></a>Parameter  
  [in] *pDC*  
- Zeiger auf die `CDC` mit diesem Kontrollkästchen.  
+ Zeiger auf die CDC-Objekt, das mit diesem Kontrollkästchen verknüpft ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt eine `CSize` Objekt, das die reguläre Größe des Kontrollkästchens enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn nicht überschrieben wird, gibt die intermediate Größe das Kontrollkästchen zurück.  
+ Wenn Sie nicht überschrieben wird, gibt die fortgeschrittene Größe des Kontrollkästchens zurück.  
   
 ##  <a name="isdrawtooltipimage"></a>  CMFCRibbonCheckBox::IsDrawTooltipImage  
- Gibt an, ob ein QuickInfo-Image, das Kontrollkästchen zugeordnet ist.  
+ Gibt an, ob ein QuickInfo-Image mit dem Kontrollkästchen Verknüpfte vorhanden ist.  
   
 ```  
 virtual BOOL IsDrawTooltipImage() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt `TRUE` , wenn ein QuickInfo-Image, das Kontrollkästchen zugeordnet ist oder `FALSE` Wenn dies nicht.  
+ Gibt TRUE zurück, wenn das Kontrollkästchen zugeordnet, oder FALSE, wenn kein QuickInfo-Image ist.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="ondraw"></a>  CMFCRibbonCheckBox::OnDraw  
- Wird aufgerufen, durch das Framework das Kontrollkästchen mit einem angegebenen Gerätekontext gezeichnet werden soll.  
+ Wird aufgerufen, durch das Framework, das Kontrollkästchen, die mit einem angegebenen Gerätekontext gezeichnet werden soll.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
@@ -189,12 +189,12 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="parameters"></a>Parameter  
  [in] *pDC*  
- Zeiger auf die `CDC` in der das Kontrollkästchen gezeichnet werden soll.  
+ Zeiger auf den CDC, in dem Sie das Kontrollkästchen gezeichnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage  
- Wird aufgerufen, durch das Framework ein Bild im Menü für das Kontrollkästchen gezeichnet werden soll.  
+ Wird aufgerufen, durch das Framework zum Zeichnen eines Bilds im Menü für das Kontrollkästchen.  
   
 ```  
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -202,19 +202,19 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
   
 ### <a name="parameters"></a>Parameter  
  [in] *CDC**  
- Zeiger auf die `CDC` das Kontrollkästchen zugeordnet.  
+ Zeiger auf die mit dem Kontrollkästchen Verknüpfte CDC.  
   
  [in] *CRect*  
- Ein `CRect` Objekt, das Rechteck in der das Bild gezeichnet werden soll.  
+ Ein `CRect` Objekt, das das Rechteck in der zum Zeichnen des Bilds im Menü angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt `TRUE` , wenn das Bild gezeichnet wurde, oder `FALSE` Wenn dies nicht.  
+ Gibt true zurück, wenn das Bild gezeichnet wurde, bzw. FALSE, wenn nicht.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt zurück, wenn nicht außer Kraft gesetzt, `FALSE`.  
+ Wenn Sie nicht überschrieben wird, gibt "false" zurück.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList  
- Wird aufgerufen, durch das Framework das Kontrollkästchen in einem Listenfeld Befehle gezeichnet werden soll.  
+ Wird aufgerufen, durch das Framework zum Zeichnen des Kontrollkästchens in einem Listenfeld Befehle.  
   
 ```  
 virtual void OnDrawOnList(
@@ -228,22 +228,22 @@ virtual void OnDrawOnList(
   
 ### <a name="parameters"></a>Parameter  
  [in] *pDC*  
- Ein Zeiger auf den Gerätekontext, in dem das Kontrollkästchen gezeichnet werden soll.  
+ Zeiger auf den Gerätekontext, in dem Sie das Kontrollkästchen gezeichnet werden soll.  
   
  [in] *StrText*  
  Der Anzeigetext.  
   
  [in] *nTextOffset*  
- Der Abstand vom links neben dem Listenfeld auf den Anzeigetext in Pixel.  
+ Der Abstand in Pixel von der linken Seite des Listenfelds auf den anzuzeigenden Text.  
   
  [in] *Rect*  
  Das Anzeigerechteck für das Kontrollkästchen.  
   
  [in] *bIsSelected*  
- `TRUE` Wenn das Kontrollkästchen aktiviert ist, oder `FALSE` Wenn dies nicht.  
+ True, wenn Sie das Kontrollkästchen ausgewählten bzw. FALSE, wenn nicht.  
   
  [in] *bHighlighted*  
- `TRUE` Wenn das Kontrollkästchen markiert ist, oder `FALSE` Wenn dies nicht.  
+ True, wenn Sie das Kontrollkästchen hervorgehobenen bzw. FALSE, wenn nicht.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -264,10 +264,10 @@ virtual BOOL SetACCData(
  Die barrierefreiheitsdaten für das Kontrollkästchen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt immer `TRUE` zurück.  
+ Gibt immer "true" zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig legt diese Methode die barrierefreiheitsdaten für das Kontrollkästchen und immer gibt `TRUE`. Setzen Sie diese Methode außer Kraft, um die Barrierefreiheitsdaten festzulegen und einen Wert zurückzugeben, der den Erfolg oder einen Fehler angibt.  
+ Standardmäßig wird diese Methode legt die barrierefreiheitsdaten für das Kontrollkästchen fest und gibt immer "true" zurück. Setzen Sie diese Methode außer Kraft, um die Barrierefreiheitsdaten festzulegen und einen Wert zurückzugeben, der den Erfolg oder einen Fehler angibt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

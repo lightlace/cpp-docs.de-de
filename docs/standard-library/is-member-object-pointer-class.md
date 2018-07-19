@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89dd2c01b4eea80fcd284a6eed44383c3eec9c5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a045abd8bb6a41e96febf972d21bae80b9b4f7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845478"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955415"
 ---
 # <a name="ismemberobjectpointer-class"></a>is_member_object_pointer-Klasse
 
@@ -37,11 +37,11 @@ struct is_member_object_pointer;
 
 ### <a name="parameters"></a>Parameter
 
-`Ty` Der abzufragende Typ.
+*Ty* der abzufragende Typ.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Instanz des Typsprädikats enthält true, wenn der Typ `Ty` ein Zeiger auf Member-Objekt oder ein `cv-qualified` Zeiger auf Member Objekt ist, andernfalls enthält es false. Beachten Sie, dass `is_member_object_pointer` false enthält, wenn `Ty` ein Zeiger auf eine Memberfunktion ist.
+Eine Instanz des typprädikats ist true, wenn der Typ *Ty* ist ein Zeiger auf ein Memberobjekt oder ein `cv-qualified` Zeiger auf Memberobjekt ist, andernfalls er false enthält. Beachten Sie, dass `is_member_object_pointer` false enthält, wenn *Ty* ist ein Zeiger auf Member-Funktion.
 
 ## <a name="example"></a>Beispiel
 

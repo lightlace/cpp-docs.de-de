@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c39f006cee8c62c22f3caf7e2c10ee9a0c1d03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0c137183e396255d0a9f9d3c304273eda320c72
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864929"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955893"
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex-Klasse
 
@@ -106,11 +106,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true`, wenn die Methode erfolgreich Besitzrechte von `mutex` erhält, oder wenn der aufrufende Thread bereits im Besitz der `mutex` ist; andernfalls `false`.
+**"true"** , wenn die Methode erfolgreich Besitzrechte erhält die `mutex` oder wenn der aufrufende Thread bereits im Besitz der `mutex**; otherwise, **false`.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der aufrufende Thread bereits im Besitz von `mutex` ist, gibt die Funktion sofort `true` zurück, und die vorherige Sperre bleibt in Kraft.
+Wenn der aufrufende Thread bereits im Besitz der `mutex`, die Funktion sofort zurück **"true"**, und die vorherige Sperre bleibt in Kraft.
 
 ## <a name="unlock"></a> unlock
 

@@ -1,5 +1,5 @@
 ---
-title: ATL-Projekt Standardkonfigurationen | Microsoft Docs
+title: Standardmäßige ATL-Projektkonfigurationen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/20/2017
 ms.technology:
@@ -14,27 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33f9f41a068605cbc73309f89c3ffb09def76750
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52f74ec15c6bc6d58f9f092a24faf66d0cef3740
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359044"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026471"
 ---
-# <a name="default-atl-project-configurations"></a>ATL-Projekt-Standardkonfigurationen
-ATL-Projekt-Assistent erstellt zwei Projektkonfigurationen standardmäßig:  
+# <a name="default-atl-project-configurations"></a>Standardmäßige ATL-Projektkonfigurationen
+ATL-Projektassistenten erstellt zwei Projektkonfigurationen standardmäßig:  
   
 |Konfiguration|Zeichensatz|Verwendung von ATL|  
 |-------------------|-------------------|----------------|  
 |Release|MBCS|DLL|  
 |Debug|MBCS|DLL|  
   
- **Zeichensatz**, **Verwendung von ATL** und kann alle geändert werden die **Projekteinstellungen** Dialogfeld unter die **allgemeine** Registerkarte. Sie können auch eigene Konfigurationen mithilfe des Konfigurations-Managers hinzufügen. Weitere Informationen finden Sie unter [Buildkonfigurationen](/visualstudio/ide/understanding-build-configurations).  
+ **Zeichensatz**, **Verwendung von ATL** und können alle in geändert werden die **Projekteinstellungen** Dialogfeld unter die **allgemeine** Registerkarte. Sie können auch eigene Konfigurationen mithilfe des Konfigurations-Managers hinzufügen. Weitere Informationen finden Sie unter [Buildkonfigurationen](/visualstudio/ide/understanding-build-configurations).  
   
 
 ## <a name="see-also"></a>Siehe auch  
  [Programmieren mit ATL- und C-Laufzeitcode](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [Arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md)   
- [Configuration Manager (Dialogfeld)](http://msdn.microsoft.com/en-us/fa182dca-282e-4ae5-bf37-e155344ca18b)   
+ [Configuration Manager (Dialogfeld)](http://msdn.microsoft.com/fa182dca-282e-4ae5-bf37-e155344ca18b)   
  [Kompilieren und Erstellen](/visualstudio/ide/compiling-and-building-in-visual-studio)
 

@@ -1,5 +1,5 @@
 ---
-title: CWinApp und der MFC-Anwendungs-Assistent | Microsoft Docs
+title: CWinApp und der MFC-Anwendungs-Assistent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d40f314c7717d2e69b2b4802bf9c2c5468511db5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 702c20fc9f303670d2add4ebf840785acff7750d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341260"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026484"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp und der MFC-Anwendungs-Assistent
-Bei der Erstellung einer skelettanwendung MFC-Anwendungsassistenten deklariert eine Anwendungsklasse abgeleitet [CWinApp](../mfc/reference/cwinapp-class.md). Die MFC-Anwendungs-Assistent erstellt auch eine Implementierungsdatei, die folgenden Elemente enthält:  
+Wenn sie eine Skelette-Anwendung erstellt haben, den MFS-Anwendungsassistenten deklariert eine Application-Klasse abgeleitet [CWinApp](../mfc/reference/cwinapp-class.md). Der MFC-Anwendung-Assistent generiert auch eine Implementierungsdatei, die folgenden Elemente enthält:  
   
--   Einer meldungszuordnung für die Anwendungsklasse.  
+-   Eine meldungszuordnung für die Anwendungsserver-Klasse.  
   
 -   Eine leere Klasse-Konstruktor.  
   
 -   Eine Variable, die den und nur ein Objekt der Klasse deklariert.  
   
--   Eine Standardimplementierung von Ihrem `InitInstance` Memberfunktion.  
+-   Eine Standardimplementierung von Ihrem `InitInstance` Member-Funktion.  
   
- Die Anwendungsklasse wird im Projektheader und Hauptquelldateien platziert. Die Namen der Klasse und der erstellten Dateien basieren auf den Namen des Projekts, die Sie im MFC-Anwendungs-Assistenten angeben. Die einfachste Möglichkeit zum Anzeigen des Codes für diese Klassen ist über [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+ Die Anwendungsserver-Klasse befindet sich im Projektheader und main Quelldateien. Die Namen der Klasse und der erstellten Dateien basieren auf den Projektnamen, die Sie im MFC-Anwendungs-Assistenten angeben. Die einfachste Möglichkeit zum Anzeigen des Codes für diese Klassen ist über [Klassenansicht](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
   
- Die standardimplementierungen und meldungszuordnung bereitgestellten für viele Zwecke geeignet sind, aber Sie können diese nach Bedarf ändern. Dieser Implementierungen am interessantesten ist die `InitInstance` Memberfunktion. In der Regel fügen Sie Code, für eine skeletal Implementierung der `InitInstance`.  
+ Die standardimplementierungen und eine meldungszuordnung, die bereitgestellt sind für viele Zwecke ausreichend, aber Sie können diese nach Bedarf ändern. Die interessantesten dieser Implementierungen ist das `InitInstance` Member-Funktion. In der Regel wird Code hinzugefügt, auf die Implementierung etwas grob strukturierte `InitInstance`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CWinApp: Die Anwendungsklasse](../mfc/cwinapp-the-application-class.md)   

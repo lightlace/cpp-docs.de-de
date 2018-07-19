@@ -1,5 +1,5 @@
 ---
-title: CWinFormsDialog Klasse | Microsoft Docs
+title: CWinFormsDialog-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fe7c8518366065e93360187247cbd07df42d79f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 324df7657be7f74cade6fc4b50b98d6790245ab4
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122496"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027088"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog-Klasse
 Ein Wrapper für eine MFC-Dialogfeldklasse, die ein Windows Forms-Benutzersteuerelement hostet.  
@@ -67,12 +67,12 @@ class CWinFormsDialog :
 |name||  
 |----------|-|  
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|Ersetzt [CWinFormsDialog::GetControl](#getcontrol) in Ausdrücken.|  
-|[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Wandelt einen Typ ein Verweis auf ein Windows Forms-Benutzersteuerelement.|  
+|[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Wandelt einen Typ um einen Verweis auf ein Windows Forms-Benutzersteuerelement.|  
   
 ## <a name="remarks"></a>Hinweise  
  `CWinFormsDialog` ist ein Wrapper für eine MFC-Dialogfeldklasse ( [CDialog](../../mfc/reference/cdialog-class.md)), die ein Windows Forms-Benutzersteuerelement hostet. Dies ermöglicht die Anzeige von .NET Framework-Steuerelemente in einem MFC-Dialogfeld mit oder ohne Modus.  
   
- Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [Verwenden eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) und [Hosten eines Windows Form-Benutzersteuerelements als MFC-Dialogfeld](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md).  
+ Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [verwenden ein Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) und [hosten ein Windows Form-Benutzersteuerelements als MFC-Dialogfeld](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxwinforms.h  
@@ -86,7 +86,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
   
 ### <a name="parameters"></a>Parameter  
  *nIDTemplate*  
- Enthält die ID der Dialogfeldvorlagen-Ressource ein Feld an. Verwenden Sie den Dialog-Editor, um der Dialogfeldvorlage erstellen und speichern es in der Anwendung Ressourcenskriptdatei. Weitere Informationen zu Dialogfeldvorlagen, finden Sie unter [CDialog-Klasse](../../mfc/reference/cdialog-class.md).  
+ Enthält die ID der Dialogfeldvorlagen-Ressource ein Feld an. Verwenden Sie den Dialog-Editor, um das Dialogfeldvorlage erstellen und speichern Sie sie in der Anwendung Ressourcenskriptdatei. Weitere Informationen zu Vorlagen für Dialogfelder, finden Sie unter [CDialog-Klasse](../../mfc/reference/cdialog-class.md).  
   
 ##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
  Ruft einen Verweis auf das Windows Forms-Benutzersteuerelement ab.  
@@ -106,7 +106,7 @@ inline HWND GetControlHandle() const throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt ein Fensterhandle auf das Windows Forms-Benutzersteuerelement zurück.  
+ Gibt ein Fensterhandle, das Windows Forms-Benutzersteuerelement zurück.  
   
 ##  <a name="oninitdialog"></a>  CWinFormsDialog::OnInitDialog  
  Initialisiert die MFC-Dialogfeld erstellen und Hosten eines Windows Forms-Benutzersteuerelements darauf.  
@@ -116,12 +116,12 @@ virtual BOOL OnInitDialog();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein boolescher Wert, der angibt, ob die Anwendung den Eingabefokus auf eines der Steuerelemente im Dialogfeld festgelegt wurde. Wenn `OnInitDialog` ungleich NULL zurückgegeben wird, Windows legt den Eingabefokus auf das erste Steuerelement im Dialogfeld. Diese Methode kann 0 zurückgeben, nur dann, wenn die Anwendung explizit den Eingabefokus eines der Steuerelemente im Dialogfeld festgelegt wurde.  
+ Ein boolescher Wert, der angibt, ob die Anwendung, den Eingabefokus auf eines der Steuerelemente im Dialogfeld festgelegt wurde. Wenn `OnInitDialog` ungleich NULL zurückgegeben wird, Windows legt den Eingabefokus auf das erste Steuerelement im Dialogfeld. Diese Methode kann 0 zurückgeben, nur dann, wenn die Anwendung den Eingabefokus im Dialogfeld explizit auf eines der Steuerelemente festgelegt wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die MFC-Dialogfeld erstellt wird (mithilfe der [erstellen](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), oder [DoModal](../../mfc/reference/cdialog-class.md#domodal) Methode geerbt von [CDialog](../../mfc/reference/cdialog-class.md)), eine WM_ INITDIALOG-Nachricht gesendet wird, und diese Methode wird aufgerufen. Erstellt eine Instanz eines Windows Forms-Steuerelements im Dialogfeld, und passt die Größe des Dialogfelds, um die Größe des Benutzersteuerelements Rechnung zu tragen. Klicken Sie dann hostet das neue Steuerelement in der MFC-Dialogfeld.  
+ Wenn die MFC-Dialogfeld erstellt wird (mithilfe der [erstellen](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), oder [DoModal](../../mfc/reference/cdialog-class.md#domodal) Methode geerbt von [CDialog](../../mfc/reference/cdialog-class.md)), eine WM_ INITDIALOG-Nachricht gesendet wird, und diese Methode wird aufgerufen. Erstellt eine Instanz eines Windows Forms-Steuerelements im Dialogfeld und passt die Größe des im Dialogfeld für die Größe des Benutzersteuerelements zu berücksichtigen. Klicken Sie dann hostet es sich um das neue Steuerelement in der MFC-Dialogfeld.  
   
- Überschreiben Sie diese Memberfunktion auf, wenn besondere Verarbeitung bei der Initialisierung des Dialogfelds "" ausführen müssen. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [CDialog::](../../mfc/reference/cdialog-class.md#oninitdialog).  
+ Überschreiben Sie diese Memberfunktion auf, wenn müssen Sie durchführen, besondere Bearbeitung, wenn das Dialogfeld initialisiert wird. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [CDialog::](../../mfc/reference/cdialog-class.md#oninitdialog).  
   
 ##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator-&gt;  
  Ersetzt [CWinFormsDialog::GetControl](#getcontrol) in Ausdrücken.  
@@ -131,19 +131,19 @@ inline TManagedControl^  operator->() const throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Operator bietet eine einfache Syntax, die ersetzt `GetControl` in Ausdrücken.  
+ Dieser Operator bietet eine praktische Syntax, die ersetzt `GetControl` in Ausdrücken.  
   
- Informationen zur Verwendung von Windows Forms finden Sie unter [Verwenden eines Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Weitere Informationen zur Verwendung von Windows Forms finden Sie unter [verwenden ein Windows Form-Benutzersteuerelements in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 ##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl ^  
- Wandelt einen Typ ein Verweis auf ein Windows Forms-Benutzersteuerelement.  
+ Wandelt einen Typ um einen Verweis auf ein Windows Forms-Benutzersteuerelement.  
   
 ```  
 inline operator TManagedControl^() const throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Operator Wandelt einen Typ ein Verweis auf ein Windows Forms-Steuerelement. Es wird zum Übergeben einer `CWinFormsDialog<TManagedControl>` (Dialogfeld), Funktionen, die einen Zeiger auf ein Windows Forms-Steuerelement Benutzerobjekt akzeptieren.  
+ Dieser Operator wird ein als Verweis auf ein Windows Forms-Steuerelement umgewandelt. Es wird zum Übergeben einer `CWinFormsDialog<TManagedControl>` Dialogfeld, um Funktionen, die einen Zeiger auf ein Windows Forms-Steuerelement Benutzerobjekt zu akzeptieren.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CWnd-Klasse](../../mfc/reference/cwnd-class.md)   
