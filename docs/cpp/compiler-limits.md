@@ -1,5 +1,5 @@
 ---
-title: Compiler-Grenzen | Microsoft Docs
+title: Compiler-Grenzen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,31 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc7cd26add0a46bab8df7669fb6dfb6060b0010e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ecf3351180fbff4d6872c7027eee90b92e560059
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412136"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938898"
 ---
 # <a name="compiler-limits"></a>Compiler-Grenzen
 Der C++-Standard empfiehlt Grenzen für verschiedene Sprachkonstrukte. Es folgt eine Liste von Fällen, bei denen der Visual C++-Compiler keine empfohlenen Limits implementiert. Die erste Nummer ist das im ISO C++ 11-Standard (INCITS/ISO/IEC 14882-2011[2012], Anhang B) definierte Limit, und die zweite Nummer ist das von Visual C++ implementierte Limit:  
   
--   Schachteln von Ebenen von verbundanweisungen, Iteration Steuerungsstrukturen und Auswahl Steuerelementstrukturen - C++-standard: 256, Visual C++-Compiler: die Kombination von Anweisungen, die geschachtelt sind, doch im Allgemeinen zwischen 100 und 110 abhängig.  
+-   Schachtelungsebenen von verbundanweisungen, iterationssteuerungsstrukturen und Auswahl Steuerungsstrukturen - C++-standard: 256, Visual C++-Compiler: abhängig von der Kombination von geschachtelten Anweisungen, typischerweise jedoch zwischen 100 und 110 ist.  
   
 -   Parameter in einer Makrodefinition - C++-standard: 256, Visual C++-Compiler: 127.  
   
 -   Argumente in einem Makroaufruf - C++-standard: 256, Visual C++-Compiler 127.  
   
--   Zeichen in einem Zeichen string-literal oder breiten Zeichenfolgenliterals (nach der Verkettung) - C++-Standard: 65536, Visual C++-Compiler: 65535 Einzelbyte-Zeichen, einschließlich der `null` Terminator und 32767 Doppelbyte-Zeichen, einschließlich der `null` Abschlusszeichen.  
+-   Zeichen in einem Zeichen string-literal oder breiten Zeichenfolgenliteral (nach Verkettung) - C++-Standard: 65536, Visual C++-Compiler: 65535 Einzelbytezeichen, einschließlich des NULL-Abschlusszeichens, und 32767 Doppelbytezeichen, einschließlich des NULL-Terminators.  
   
--   Ebenen der geschachtelten Klasse, Struktur oder union Definitionen in einer einzelnen `struct-declaration-list` -C++-Standard: 256, Visual C++-Compiler: 16.  
+-   Ebenen der geschachtelten Klasse, Struktur oder union-Definitionen in einer einzelnen `struct-declaration-list` -C++-Standard: 256, Visual C++-Compiler: 16.  
   
--   In der Konstruktordefinition eines - C++-standard datenmemberinitialisierer: 6144, Visual C++-Compiler: mindestens 6144.  
+-   Memberinitialisierer in einer Konstruktordefinition – C++-standard: 6144, Visual C++-Compiler: mindestens 6144.  
   
--   Bereich Qualifikationen von einem Bezeichner - C++-standard: 256, Visual C++-Compiler: 127.  
+-   Bereichsqualifikationen eines einzigen Bezeichners - C++-standard: 256, Visual C++-Compiler: 127.  
   
--   Geschachtelte `extern` Spezifikationen - C++-standard: 1024, Visual C++-Compiler: 9 (wird dabei nicht mitgezählt impliziter `extern` Spezifikation im globalen Gültigkeitsbereich oder 10, wenn Sie die implizite zählen `extern` Spezifikation im globalen Gültigkeitsbereich...  
+-   Geschachtelte **"extern"** Spezifikationen - C++-standard: 1024, Visual C++-Compiler: 9 (ohne Berücksichtigung der impliziten **"extern"** Spezifikation im globalen Gültigkeitsbereich oder 10, wenn Sie den impliziten zählen **"extern"**  -Spezifikation im globalen Bereich...  
   
 -   Vorlagenargumente in einer Vorlagendeklaration - C++-standard: 1024, Visual C++-Compiler: 2046.  
   

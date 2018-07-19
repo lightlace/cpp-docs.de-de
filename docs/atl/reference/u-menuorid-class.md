@@ -1,5 +1,5 @@
 ---
-title: _U_MENUorID Klasse | Microsoft Docs
+title: _U_MENUorID-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 847a735cdba6b9ff4173e23acf78ea7dc4d3034c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f945766283fa6e58b1eb3430cc780b1ae136e9f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363459"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884736"
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID-Klasse
-Diese Klasse stellt den Wrapper für **CreateWindow** und **CreateWindowEx**.  
+Diese Klasse stellt den Wrapper für `CreateWindow` und `CreateWindowEx`.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,25 +53,25 @@ class _U_MENUorID
 |[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Ein Handle für ein Menü.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dieses Argument-Adapterklasse ermöglicht entweder IDs ( **"uint"** s) oder im Menü Handles ( `HMENU`s) an eine Funktion übergeben werden, ohne eine explizite Umwandlung auf dem Teil des Aufrufers.  
+ Dieses Argument-Adapterklasse ermöglicht entweder-IDs (jenem) oder im Menü-Handles (HMENUs) an eine Funktion übergeben werden, ohne eine explizite Umwandlung seitens des Aufrufers.  
   
- Diese Klasse zum Implementieren der Windows-API-Wrapper dient vor allem die [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) und [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Funktionen, die beide akzeptieren ein `HMENU` Argument, das möglicherweise ein untergeordnetes Element Fenster Bezeichner ( **"uint"**) anstatt ein Menü-Handle. Sie können diese Klasse verwendet z. B. sehen, als Parameter an [CWindowImpl:: Create](cwindowimpl-class.md#create).  
+ Diese Klasse zum Implementieren der Windows-API-Wrapper dient insbesondere die [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) und [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Funktionen, die beide ein HMENU-Argument, das ein untergeordnetes Fenster möglicherweise akzeptieren Bezeichner (UINT), anstatt ein Menühandle. Beispielsweise sehen Sie diese Klasse verwendet als Parameter an [CWindowImpl:: Create](cwindowimpl-class.md#create).  
 
   
- Die Klasse definiert zwei Konstruktorüberladungen: einer akzeptiert eine **"uint"** Argument und die andere akzeptiert einen `HMENU` Argument. Die **"uint"** Argument nur umgewandelt wird ein `HMENU` im Konstruktor und das Ergebnis in die Klasse der einzelnen Datenmember, gespeicherten [M_hMenu](#_u_menuorid__m_hmenu). Das Argument für die `HMENU` Konstruktor direkt ohne Konvertierung gespeichert ist.  
+ Die Klasse definiert zwei Konstruktorüberladungen: eine ein UINT-Argument akzeptiert und die andere ein HMENU-Argument akzeptiert. Das Argument "uint" umgewandelt wird nur ein HMENU im Konstruktor und in das Ergebnis gespeichert werden, in der Klasse der einzelnen Datenmember, [M_hMenu](#_u_menuorid__m_hmenu). Das Argument für das HMENU-Konstruktor wird direkt ohne Konvertierung gespeichert.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlwin.h vorhanden  
   
 ##  <a name="_u_menuorid__m_hmenu"></a>  _U_MENUorID::m_hMenu  
- Die Klasse enthält den Wert, der entweder seiner Konstruktoren übergeben, als öffentliche `HMENU` -Datenmember.  
+ Die Klasse enthält den Wert als einen öffentlichen Datenmember von HMENU an eines ihrer Konstruktoren übergeben.  
   
 ```
 HMENU m_hMenu;
 ```  
   
 ##  <a name="_u_menuorid___u_menuorid"></a>  _U_MENUorID::_U_MENUorID  
- Die **"uint"** Argument nur umgewandelt wird ein `HMENU` im Konstruktor und das Ergebnis in die Klasse der einzelnen Datenmember, gespeicherten [M_hMenu](#_u_menuorid__m_hmenu).  
+ Das Argument "uint" umgewandelt wird nur ein HMENU im Konstruktor und in das Ergebnis gespeichert werden, in der Klasse der einzelnen Datenmember, [M_hMenu](#_u_menuorid__m_hmenu).  
   
 ```
 _U_MENUorID(UINT nID);  
@@ -79,14 +79,14 @@ _U_MENUorID(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nID`  
- Ein untergeordnetes Fenster-Bezeichner.  
+ *nID*  
+ Ein Bezeichner des untergeordneten Fensters.  
   
- `hMenu`  
+ *hMenu*  
  Ein Menühandle.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Argument für die `HMENU` Konstruktor direkt ohne Konvertierung gespeichert ist.  
+ Das Argument für das HMENU-Konstruktor wird direkt ohne Konvertierung gespeichert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

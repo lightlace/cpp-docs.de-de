@@ -1,5 +1,5 @@
 ---
-title: _com_error::WCodeToHRESULT | Microsoft Docs
+title: _com_error::WCodeToHRESULT | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31b9df8305d0eea772979904f63847f6d6c2325a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dce98775007360e3fdd4177141f7a550548d3679
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413374"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939194"
 ---
 # <a name="comerrorwcodetohresult"></a>_com_error::WCodeToHRESULT
 **Microsoft-spezifisch**  
   
- Ordnet die 16-Bit- `wCode` auf 32-Bit- `HRESULT`.  
+ Ordnet die 16-Bit- *wCode* in 32-Bit-HRESULT.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,14 +38,14 @@ ms.locfileid: "32413374"
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `wCode`  
- Der 16-Bit-`wCode`, der dem 32-Bit-`HRESULT` zugeordnet werden soll.  
+ *WCode*  
+ Die 16-Bit- *wCode* , 32-Bit-HRESULT zugeordnet werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
- 32-Bit-`HRESULT`, der vom 16-Bit- `wCode` zugeordnet wurde.  
+ zugeordnet aus dem 16-Bit-32-Bit-HRESULT *wCode*.  
   
 ## <a name="remarks"></a>Hinweise  
- Finden Sie unter der [WCode](../cpp/com-error-wcode.md) Memberfunktion.  
+ Finden Sie unter den [WCode](../cpp/com-error-wcode.md) Member-Funktion.  
   
  **Ende Microsoft-spezifisch**  
   

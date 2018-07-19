@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonGallery-Klasse | Microsoft Docs
+title: CMFCRibbonGallery-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61ab69daadcb7e030511362932be41a3919dd087
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: af14457e10758c696a4141e58249e43134cf385a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039322"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851521"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery-Klasse
 Implementiert Menübandkataloge im Stil von Office 2007.  
@@ -117,26 +117,26 @@ class CMFCRibbonGallery : public CMFCRibbonButton
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCRibbonGallery::AddGroup](#addgroup)|Fügt eine neue Gruppe an den Katalog.|  
-|[CMFCRibbonGallery::AddSubItem](#addsubitem)|Klicken Sie im Dropdown-Menü hinzugefügt ein neues Menüelement.|  
+|[CMFCRibbonGallery::AddGroup](#addgroup)|Fügt eine neue Gruppe im Katalog.|  
+|[CMFCRibbonGallery::AddSubItem](#addsubitem)|Klicken Sie im Dropdown-Menü wird ein neues Menüelement hinzugefügt.|  
 |[CMFCRibbonGallery::Clear](#clear)|Löscht den Inhalt des Katalogs.|  
-|[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|Aktiviert oder deaktiviert Ändern der Größe der Bereiche "im Menü".|  
-|[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|Aktiviert oder deaktiviert die Seite Leiste links neben dem Popupmenü.|  
+|[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|Aktiviert oder deaktiviert die Größenänderung des Panels Menü.|  
+|[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|Aktiviert oder deaktiviert die Seitenleiste auf der linken Seite des Popupmenüs.|  
 |[CMFCRibbonGallery::GetCompactSize](#getcompactsize)|(Überschreibt [cmfcribbonbutton:: Getcompactsize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|  
 |[CMFCRibbonGallery::GetDroppedDown](#getdroppeddown)|(Überschreibt [CMFCRibbonBaseElement::GetDroppedDown](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown).)|  
 |[CMFCRibbonGallery::GetGroupName](#getgroupname)|Gibt den Namen der Gruppe, die am angegebenen Index befindet.|  
 |[CMFCRibbonGallery::GetGroupOffset](#getgroupoffset)||  
 |[CMFCRibbonGallery::GetIconsInRow](#geticonsinrow)|Gibt die Anzahl der Elemente in eine Zeile mit dem Menübandkatalog zurück.|  
 |[CMFCRibbonGallery::GetItemToolTip](#getitemtooltip)|Gibt den QuickInfo-Text, der ein Element im Katalog zugeordnet ist.|  
-|[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|Gibt den Index des letzten Elements im Katalog, den Auswahl des Benutzers zurück.|  
-|[CMFCRibbonGallery::GetPaletteID](#getpaletteid)|Gibt die Befehls-ID des aktuellen Katalogs zurück.|  
+|[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|Gibt den Index des letzten Elements im Katalog, den der Benutzer ausgewählt.|  
+|[CMFCRibbonGallery::GetPaletteID](#getpaletteid)|Gibt die Befehls-ID der aktuellen Sammlung zurück.|  
 |[CMFCRibbonGallery::GetRegularSize](#getregularsize)|(Überschreibt [cmfcribbonbutton:: Getregularsize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|  
 |[CMFCRibbonGallery::GetSelectedItem](#getselecteditem)||  
 |[CMFCRibbonGallery::HasMenu](#hasmenu)|(Überschreibt [CMFCRibbonButton::HasMenu](../../mfc/reference/cmfcribbonbutton-class.md#hasmenu).)|  
-|[CMFCRibbonGallery::IsButtonMode](#isbuttonmode)|Gibt an, ob der Katalog in eine Schaltfläche Katalog enthalten ist.|  
-|[CMFCRibbonGallery::IsMenuResizeEnabled](#ismenuresizeenabled)|Gibt an, ob das Ändern der Größe von Menüs aktiviert oder deaktiviert ist.|  
+|[CMFCRibbonGallery::IsButtonMode](#isbuttonmode)|Gibt an, ob es sich bei der Katalog in einer Schaltfläche "Galerie" enthalten ist.|  
+|[CMFCRibbonGallery::IsMenuResizeEnabled](#ismenuresizeenabled)|Gibt an, ob das Ändern der Größe von Menü aktiviert oder deaktiviert ist.|  
 |[CMFCRibbonGallery::IsMenuResizeVertical](#ismenuresizevertical)||  
-|[CMFCRibbonGallery::IsMenuSideBar](#ismenusidebar)|Gibt an, ob der Randleiste aktiviert oder deaktiviert ist.|  
+|[CMFCRibbonGallery::IsMenuSideBar](#ismenusidebar)|Gibt an, ob der Seitenleiste aktiviert oder deaktiviert ist.|  
 |[CMFCRibbonGallery::OnAfterChangeRect](#onafterchangerect)|(Überschreibt `CMFCRibbonButton::OnAfterChangeRect`.)|  
 |[CMFCRibbonGallery::OnDraw](#ondraw)|(Überschreibt [cmfcribbonbutton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|  
 |[CMFCRibbonGallery::OnEnable](#onenable)|(Überschreibt `CMFCRibbonBaseElement::OnEnable`.)|  
@@ -145,24 +145,24 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|Entfernt die QuickInfos Grundlage aller Elemente im Katalog aus.|  
 |[CMFCRibbonGallery::SelectItem](#selectitem)||  
 |[CMFCRibbonGallery::SetACCData](#setaccdata)|(Überschreibt [cmfcribbonbutton:: Setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
-|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|Gibt an, ob dem Menübandkatalog als Dropdown-Schaltfläche oder als eine Palette direkt auf dem Menüband angezeigt werden soll.|  
+|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|Gibt an, ob dem Menübandkatalog als eine Dropdown Schaltfläche oder eine Palette direkt auf dem Menüband angezeigt werden soll.|  
 |[CMFCRibbonGallery::SetGroupName](#setgroupname)|Legt den Namen einer Gruppe.|  
-|[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Definiert die Anzahl von Elementen pro Zeile im Katalog.|  
+|[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Definiert die Anzahl der Elemente pro Zeile im Katalog.|  
 |[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Legt den QuickInfo-Text für ein Element im Katalog fest.|  
 |[CMFCRibbonGallery::SetPalette](#setpalette)|Fügt eine Palette an einem Menübandkatalog an.|  
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Definiert die Befehls-ID, die in der WM_COMMAND-Nachricht gesendet wird, wenn ein Galerieelement ausgewählt wurde.|  
+|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Definiert die Befehls-ID, die in die WM_COMMAND-Meldung gesendet wird, wenn ein Katalogelement ausgewählt wurde.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Vom Framework aufgerufen, wenn ein Katalog Symbol gezeichnet wird.|  
+|[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Vom Framework aufgerufen, wenn ein Katalog-Symbol gezeichnet wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Schaltfläche Katalog verhält sich wie eine reguläre Menüschaltfläche, außer dass es einen Katalog zeigt an, wenn ein Benutzer geöffnet wird. Wenn Sie ein Element in einem Katalog auswählen, sendet das Framework die WM_COMMAND Nachricht zusammen mit der Befehls-ID der Schaltfläche. Wenn Sie die Nachricht behandeln, Sie sollten Aufrufen [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) um zu bestimmen, welches Element aus dem Katalog ausgewählt wurde.  
+ Eine Schaltfläche "Galerie" verhält sich wie eine normale Menüschaltfläche, außer dass es einen Katalog zeigt an, wenn ein Benutzer, die sie geöffnet wird. Wenn Sie ein Element in einem Katalog auswählen, sendet das Framework die WM_COMMAND-Meldung zusammen mit der Befehls-ID der Schaltfläche. Wenn Sie die Nachricht behandeln, sollten Sie aufrufen [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) um zu bestimmen, welches Element aus dem Katalog ausgewählt wurde.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCRibbonGallery` Klasse zum Konfigurieren einer `CMFCRibbonGallery` Objekt. Das Beispiel veranschaulicht die Vorgehensweise geben Sie die Anzahl von Elementen pro Zeile im Katalog, aktivieren die Größe der Bereiche "im Menü", aktivieren Sie die Seite Leiste links neben dem Popupmenü und dem Menübandkatalog als eine Palette direkt auf der menübandleiste anzeigen. Dieser Codeausschnitt ist Teil des [Draw Client-Beispiels](../../visual-cpp-samples.md).  
+ Im folgende Beispiel wird veranschaulicht, wie verschiedene Methoden in der `CMFCRibbonGallery` Klasse zum Konfigurieren einer `CMFCRibbonGallery` Objekt. Im Beispiel wird veranschaulicht, wie Geben Sie die Anzahl der Elemente pro Zeile im Katalog, aktivieren, Ändern der Größe des Panels Menü, Aktivieren der Seitenleiste links neben dem Popup-Menü und dem Menübandkatalog als eine Palette direkt auf dem Menüband angezeigt wird. Dieser Codeausschnitt ist Teil des [Draw Client-Beispiels](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]  
   
@@ -175,7 +175,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
  **Header:** afxRibbonPaletteGallery.h  
   
 ##  <a name="addgroup"></a>  CMFCRibbonGallery::AddGroup  
- Fügt eine neue Gruppe an den Katalog.  
+ Fügt eine neue Gruppe im Katalog.  
   
 ```  
 void AddGroup(
@@ -199,22 +199,22 @@ void AddGroup(
  Gibt den Namen der Gruppe an.  
   
  [in] *UiImagesPaletteResID*  
- Gibt die Ressourcen-ID der Liste der Images, die die Bilder für die Gruppe enthält.  
+ Gibt an, die Ressourcen-ID der Liste der Bilder, die die Images für die Gruppe enthält.  
   
  [in] *CxPaletteImage*  
- Gibt die Breite in Pixel eines Bilds.  
+ Gibt die Breite in Pixel eines Bilds an.  
   
  [in] *ImagesGroup*  
- Ein Verweis auf die Bildliste, die Gruppe Bilder enthält.  
+ Ein Verweis auf die Bildliste an, das Gruppieren von Images enthält.  
   
  [in] *nIconsNum*  
- Gibt die Anzahl der Symbole in der Gruppe an. Dieser Parameter sollte angegeben werden, nur für den benutzerdefinierten (Besitzer gezeichneten) Gruppen.  
+ Gibt die Anzahl der Symbole in der Gruppe an. Dieser Parameter muss angegeben werden, nur für den benutzerdefinierten (Besitzer gezeichnet) Gruppen.  
   
 ### <a name="remarks"></a>Hinweise  
- Durch Aufruf dieser Methode können Sie mithilfe der Elemente in einem Menübandkatalog in mehrere Gruppen unterteilen. Jede Gruppe kann eine Beschriftung haben.  
+ Sie können die Elemente in einem Menübandkatalog in mehrere Gruppen unterteilen, durch Aufrufen dieser Methode. Jede Gruppe kann es sich um eine Beschriftung aufweisen.  
   
 ##  <a name="addsubitem"></a>  CMFCRibbonGallery::AddSubItem  
- Klicken Sie im Dropdown-Menü hinzugefügt ein neues Menüelement.  
+ Klicken Sie im Dropdown-Menü wird ein neues Menüelement hinzugefügt.  
   
 ```  
 void AddSubItem(
@@ -228,18 +228,18 @@ void AddSubItem(
  Ein Zeiger auf das Element, das Sie im Menü hinzugefügt.  
   
  [in] *nIndex*  
- Gibt dem nullbasierten Index des einen Speicherort, wo das Element eingefügt werden.  
+ Gibt dem nullbasierten Index des von einem Speicherort, wo Sie das Element eingefügt werden soll.  
   
  [in] *bOnTop*  
- `TRUE` um anzugeben, dass das Element vor dem Menübandkatalog eingefügt werden soll; andernfalls `FALSE`.  
+ True, um anzugeben, dass das Element vor dem Menübandkatalog eingefügt werden sollen. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Durch Aufruf dieser Methode können Sie mit Menüelementen Popup Popup Galerien kombinieren. Menüelemente können vor oder nach dem Katalog platziert werden.  
+ Popup-Galerien können durch Aufrufen dieser Methode mit Popupmenüelemente kombiniert werden. Menüelemente können vor oder nach dem Katalog platziert werden.  
   
- Um das Element vor dem Katalog einzufügen, legen Sie *bOnTop* auf `TRUE`. Legen Sie *bOnTop* auf `FALSE` das Element unterhalb des Katalogs eingefügt.  
+ Wenn das Element vor dem Katalog einfügen möchten, legen Sie *bOnTop* auf "true". Legen Sie *bOnTop* auf "false", um das Element unter den Katalog einzufügen.  
   
 > [!NOTE]
->  Der Parameter *nIndex* gibt den Einfügeindex, sowohl im oberen Bereich des Katalogs und am unteren Rand der Galerie. Wenn Sie eine Element eine Position vor dem Katalog einfügen möchten, z. B. festgelegt *nIndex* auf 1 und *bOnTop* auf `TRUE`. Wenn Sie eine Element eine Position unterhalb des Katalogs einfügen möchten, auf ähnliche Weise festlegen *nIndex* auf 1 und *bOnTop* auf `FALSE`.  
+>  Der Parameter *nIndex* gibt den Einfügeindex, sowohl am oberen Rand der Katalog als auch auf den unteren Rand des Katalogs. Wenn Sie eine Element eine Position vor dem Katalog einfügen müssen, z. B. Legen Sie *nIndex* auf 1 und *bOnTop* auf "true". Wenn Sie eine Element eine Position unterhalb des Katalogs einfügen möchten, legen *nIndex* auf 1 und *bOnTop* auf "false".  
   
 ##  <a name="clear"></a>  CMFCRibbonGallery::Clear  
  Löscht den Inhalt des Katalogs.  
@@ -249,7 +249,7 @@ virtual void Clear();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um alle Inhalte aus dem Menübandkatalog zu entfernen. Dies muss erfolgen, bevor Sie eine neue Menübandkatalog oder eine Gruppe von Gruppen auf dem Menübandkatalog anfügen.  
+ Rufen Sie diese Methode, um alle Inhalte aus dem Menübandkatalog zu entfernen. Dies muss erfolgen, bevor Sie eine neue Menüband oder eine Gruppe von Gruppen auf dem Menübandkatalog anfügen.  
   
 ##  <a name="cmfcribbongallery"></a>  CMFCRibbonGallery::CMFCRibbonGallery  
  Erstellt und initialisiert ein [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md) Objekt.  
@@ -284,25 +284,25 @@ CMFCRibbonGallery (
   
 ### <a name="parameters"></a>Parameter  
  *nID*  
- Gibt die Befehls-ID des Befehls ausführen, wenn ein Benutzer auf die Schaltfläche klickt.  
+ Gibt an, die Befehls-ID des Befehls, die ausgeführt werden, wenn ein Benutzer auf die Schaltfläche klickt.  
   
  *lpszText*  
- Gibt den Text auf der Schaltfläche angezeigt werden.  
+ Gibt den Text auf die Schaltfläche angezeigt werden.  
   
  *nSmallImageIndex*  
- Der nullbasierte Index, der das kleine Bild, das auf die Schaltfläche angezeigt werden soll.  
+ Der nullbasierte Index, der das kleine Bild auf die Schaltfläche angezeigt werden soll.  
   
  *nLargeImageIndex*  
- Der nullbasierte Index, der das große Bild, das auf die Schaltfläche angezeigt werden soll.  
+ Der nullbasierte Index des großen Bilds auf die Schaltfläche angezeigt werden.  
   
  *imagesPalette*  
- Ein Verweis auf die [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) -Objekt, das die Bilder auf den Katalog angezeigt werden.  
+ Ein Verweis auf die [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) -Objekt, enthält die Images im Katalog angezeigt werden.  
   
  *uiImagesPaletteResID*  
- Die Ressourcen-ID der Liste der Images auf dem Katalog angezeigt werden sollen.  
+ Die Ressourcen-ID der Liste der Images im Katalog angezeigt.  
   
  *cxPaletteImage*  
- Gibt die Breite in Pixel des Bilds in der Sammlung an.  
+ Gibt die Breite in Pixel des Images im Katalog an.  
   
  *sizeIcon*  
  Gibt die Größe des Images aus dem Katalog in Pixel an.  
@@ -311,12 +311,12 @@ CMFCRibbonGallery (
  Gibt die Anzahl der Symbole im Katalog an.  
   
  *bDefaultButtonStyle*  
- Gibt an, ob der Standard- oder den Schaltflächenstil Ownerdrawn.  
+ Gibt an, ob der Standardwert oder die Ownerdrawn-Schaltflächen-Formatvorlage verwendet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="enablemenuresize"></a>  CMFCRibbonGallery::EnableMenuResize  
- Aktiviert oder deaktiviert Ändern der Größe der Bereiche "im Menü".  
+ Aktiviert oder deaktiviert die Größenänderung des Panels Menü.  
   
 ```  
 void EnableMenuResize(
@@ -326,16 +326,16 @@ void EnableMenuResize(
   
 ### <a name="parameters"></a>Parameter  
  [in] *bAktivieren*  
- `TRUE` So aktivieren Sie die Größenänderung im Menüs; andernfalls `FALSE`.  
+ Ändern der Größe "im Menüs", "true" aktiviert; andernfalls "false".  
   
  [in] *bVertcalOnly*  
- `TRUE` um anzugeben, dass es sich bei der Katalog nur vertikal angepasst werden kann; `FALSE` angeben, dass der Katalog kann verkleinert sowohl vertikal und horizontal.  
+ True, um anzugeben, dass der Katalog nur vertikal geändert werden kann. "False", um anzugeben, dass der Katalog vertikal und horizontal geändert werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode zum Aktivieren oder deaktivieren, Ändern der Größe von dem Menübandkatalog. Beim Ändern der Größe aktiviert ist, zeigt das Menüband ein ziehelements, mit denen ein Benutzer kann Größe.  
+ Verwenden Sie diese Methode zum Aktivieren oder deaktivieren, Ändern der Größe von dem Menübandkatalog. Beim Ändern der Größe aktiviert ist, zeigt das Menüband ein ziehelements an, dem ein Benutzer verwenden können, zu ändern.  
   
 ##  <a name="enablemenusidebar"></a>  CMFCRibbonGallery::EnableMenuSideBar  
- Aktiviert oder deaktiviert die Seite Leiste links neben dem Popupmenü.  
+ Aktiviert oder deaktiviert die Seitenleiste auf der linken Seite des Popupmenüs.  
   
 ```  
 void EnablMenuSideBar(BOOL bEnable=TRUE);
@@ -343,10 +343,10 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] *bAktivieren*  
- `TRUE` um anzugeben, dass der Randleiste aktiviert ist; andernfalls `FALSE`.  
+ True, um anzugeben, dass der Seitenleiste aktiviert ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode zum Aktivieren oder Deaktivieren der Stil von Office XP-Seite-Leiste auf der linken Seite des Menüs.  
+ Rufen Sie diese Methode zum Aktivieren oder Deaktivieren der Seitenleiste von Office XP-Stil auf der linken Seite des Menüs.  
   
 ##  <a name="getcompactsize"></a>  CMFCRibbonGallery::GetCompactSize  
 
@@ -385,7 +385,7 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
  Gibt den nullbasierten Index für die Gruppe, deren Name abgerufen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Name der Gruppe am angegebenen Index. Übergeben einen ungültigen Index führt zu einem fehlgeschlagenen Assertion.  
+ Der Name der Gruppe am angegebenen Index. Übergeben einen ungültigen Index führt eine fehlgeschlagene Assertion.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -421,10 +421,10 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
   
 ### <a name="parameters"></a>Parameter  
  [in] *nItemIndex*  
- Gibt den nullbasierten Index des Elements, für das QuickInfotext abzurufen.  
+ Gibt den nullbasierten Index des Elements, für das Abrufen den QuickInfo-Text an.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die QuickInfo-Zeichenfolge, die ein Element in dem Menübandkatalog zugewiesen. Es kann sein `NULL` Wenn dieses Element keine QuickInfo zugewiesen wird.  
+ Ein Zeiger auf die QuickInfo-Zeichenfolge, die ein Element im Menübandkatalog zugewiesen. Es kann NULL sein, wenn dieses Element keine QuickInfo zugeordnet ist.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -437,10 +437,10 @@ static int GetLastSelectedItem(UINT uiCmdID);
   
 ### <a name="parameters"></a>Parameter  
  [in] *UiCmdID*  
- Gibt die Befehls-ID des Menüelements, die dem Menübandkatalog geöffnet.  
+ Gibt an, die Befehls-ID des Menüelements, das dem Menübandkatalog geöffnet.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wenn der Benutzer ein Element in dem Menübandkatalog auswählt, sendet die Bibliothek die WM_COMMAND Nachricht zusammen mit der Befehls-ID der Menüschaltfläche, die dem Menübandkatalog geöffnet.  
+ Wenn der Benutzer ein Element im Menübandkatalog auswählt, sendet die Bibliothek die WM_COMMAND-Meldung zusammen mit der Befehls-ID neben der Menüschaltfläche, die dem Menübandkatalog geöffnet.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -493,26 +493,26 @@ virtual BOOL HasMenu() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="isbuttonmode"></a>  CMFCRibbonGallery::IsButtonMode  
- Gibt an, ob die Palette in eine Schaltfläche Katalog enthalten ist.  
+ Gibt an, ob die Palette in eine Schaltfläche "Galerie" enthalten ist.  
   
 ```  
 BOOL IsButtonMode() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Palette als Schaltfläche Dropdown-Menü angezeigt wird; `FALSE` Wenn die Palette direkt auf dem Menüband angezeigt wird.  
+ True, wenn die Palette als eine Dropdown-Menü-Schaltfläche angezeigt wird. "False", wenn die Palette direkt auf dem Menüband angezeigt wird.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="ismenuresizeenabled"></a>  CMFCRibbonGallery::IsMenuResizeEnabled  
- Gibt an, ob das Ändern der Größe von Menüs aktiviert ist.  
+ Gibt an, ob im Menü Ändern der Größe aktiviert ist.  
   
 ```  
 BOOL IsMenuResizeEnabled() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Ändern der Größe von Menüs aktiviert wurde; andernfalls `FALSE`.  
+ True, wenn die Größenänderung im Menü aktiviert wurde. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -528,14 +528,14 @@ BOOL IsMenuResizeVertical() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="ismenusidebar"></a>  CMFCRibbonGallery::IsMenuSideBar  
- Gibt an, ob der Randleiste aktiviert oder deaktiviert ist.  
+ Gibt an, ob der Seitenleiste aktiviert oder deaktiviert ist.  
   
 ```  
 BOOL IsMenuSideBar() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Stil von Office XP-Seite-Leiste auf der linken Seite des Popupmenüs gezeichnet wird; andernfalls `FALSE`.  
+ True, wenn der Stil von Office XP-Seitenleiste auf der linken Seite des Popupmenüs gezeichnet wird. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -564,7 +564,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="ondrawpaletteicon"></a>  CMFCRibbonGallery::OnDrawPaletteIcon  
- Vom Framework aufgerufen, wenn ein Katalog Symbol gezeichnet wird.  
+ Vom Framework aufgerufen, wenn ein Katalog-Symbol gezeichnet wird.  
   
 ```  
 virtual void OnDrawPaletteIcon(
@@ -580,19 +580,19 @@ virtual void OnDrawPaletteIcon(
  Ein Zeiger auf den Gerätekontext, der zum Zeichnen verwendet wird.  
   
  [in] *RectIcon*  
- Gibt das umschließende Rechteck des Symbols gezeichnet werden soll.  
+ Gibt das umschließende Rechteck des Symbols, das gezeichnet werden soll.  
   
  [in] *nIconIndex*  
- Gibt den nullbasierten Index in der Bildliste der Katalog Symbole des Symbols gezeichnet werden soll.  
+ Gibt den nullbasierten Index in der Bildliste der Katalog Symbole des Symbols, das gezeichnet werden soll.  
   
  [in] *pIcon*  
- Ein Zeiger auf das Symbol gezeichnet werden.  
+ Ein Zeiger auf das Symbol, das gerade gezeichnet wird.  
   
  [in] *ClrText*  
- Gibt die Farbe für den Text des Elements gezeichnet werden soll.  
+ Gibt die Farbe für den Text des Elements, das gezeichnet werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie können diese Methode in einer abgeleiteten Klasse zum Anpassen der Darstellung von einem Menübandkatalog überschreiben.  
+ Sie können diese Methode in einer abgeleiteten Klasse anpassen die Darstellung von einem Menübandkatalog überschreiben.  
   
 ##  <a name="onenable"></a>  CMFCRibbonGallery::OnEnable  
 
@@ -626,7 +626,7 @@ void RedrawIcons();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Funktion, um den Katalog neu gezeichnet werden. Sie müssen diese Methode aufrufen, wenn Sie den Inhalt des Katalogs zur Laufzeit geändert haben.  
+ Rufen Sie diese Funktion aus, um den Katalog neu zu zeichnen. Sie müssen diese Methode aufrufen, wenn Sie den Inhalt des Katalogs zur Laufzeit geändert haben.  
   
 ##  <a name="removeitemtooltips"></a>  CMFCRibbonGallery::RemoveItemToolTips  
  Entfernt die QuickInfos Grundlage aller Elemente im Katalog aus.  
@@ -668,10 +668,10 @@ virtual BOOL SetACCData(
 ### <a name="return-value"></a>Rückgabewert  
   
 ### <a name="remarks"></a>Hinweise  
- `TRUE` Wenn die Methode erfolgreich ist; andernfalls `FALSE`.  
+ True, wenn die Methode erfolgreich ist. andernfalls "false".  
   
 ##  <a name="setbuttonmode"></a>  CMFCRibbonGallery::SetButtonMode  
- Bestimmt, ob dem Menübandkatalog als Dropdown-Schaltfläche oder als eine Palette direkt auf dem Menüband angezeigt.  
+ Bestimmt, ob dem Menübandkatalog als eine Dropdown Schaltfläche oder eine Palette direkt auf dem Menüband angezeigt.  
   
 ```  
 void SetButtonMode(BOOL bSet=TRUE);
@@ -679,7 +679,7 @@ void SetButtonMode(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] *bSet*  
- `TRUE` um dem Menübandkatalog als Schaltfläche Dropdown-Menü anzuzeigen; `FALSE` der Inhalt des dem Menübandkatalog direkt auf dem Menüband angezeigt.  
+ "True", um dem Menübandkatalog als eine Dropdown-Menü-Schaltfläche anzuzeigen; FALSE, wenn der Inhalt der Menüband direkt auf dem Menüband angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -694,16 +694,16 @@ void SetGroupName(
   
 ### <a name="parameters"></a>Parameter  
  [in] *nGroupIndex*  
- Gibt den nullbasierten Index für die Gruppe, für die der Name geändert wird.  
+ Gibt den nullbasierten Index für die Gruppe, die für die der Name geändert wird.  
   
  [in] *LpszGroupName*  
  Gibt den neuen Namen für die Gruppe an.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Gruppe, deren Name geändert wird, muss wurden hinzugefügt mithilfe der [CMFCRibbonGallery::AddGroup](#addgroup) Methode.  
+ Die Gruppe, deren Name geändert wird, muss hinzugefügt worden sein mithilfe der [CMFCRibbonGallery::AddGroup](#addgroup) Methode.  
   
 ##  <a name="seticonsinrow"></a>  CMFCRibbonGallery::SetIconsInRow  
- Gibt die Anzahl von Elementen pro Zeile im Katalog an.  
+ Gibt die Anzahl der Elemente pro Zeile im Katalog an.  
   
 ```  
 void SetIconsInRow(int nIconsInRow);
@@ -730,7 +730,7 @@ void SetItemToolTip(
  Der nullbasierte Index des Elements Palette mit dem die QuickInfo zugeordnet werden soll.  
   
  [in] *LpszToolTip*  
- Der Text in der QuickInfo angezeigt werden.  
+ Der Text der QuickInfo angezeigt werden.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -748,18 +748,18 @@ void SetPalette(
   
 ### <a name="parameters"></a>Parameter  
  [in] *ImagesPalette*  
- Gibt die Bildliste, die die Symbole in der Sammlung angezeigt werden sollen.  
+ Gibt die Bildliste mit den Symbolen im Katalog angezeigt werden.  
   
  [in] *UiImagesPaletteResID*  
- Gibt die Ressourcen-ID der Bildliste, die die Symbole in der Sammlung angezeigt werden sollen.  
+ Gibt an, die Ressourcen-ID der Liste der Bilder, die enthält die Symbole im Katalog angezeigt werden.  
   
  [in] *CxPaletteImage*  
- Gibt die Breite in Pixel, ein Bild in der Sammlung an.  
+ Gibt die Breite in Pixel eines Bilds in den Katalog an.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID  
- Definiert die Befehls-ID, die in der WM_COMMAND-Nachricht gesendet wird, wenn ein Benutzer ein Galerieelement auswählt.  
+ Definiert die Befehls-ID, die in die WM_COMMAND-Meldung gesendet wird, wenn ein Benutzer ein Galerieelement auswählt.  
   
 ```  
 void SetPaletteID(UINT nID);
@@ -767,10 +767,10 @@ void SetPaletteID(UINT nID);
   
 ### <a name="parameters"></a>Parameter  
  [in] *nID*  
- Gibt die Befehls-ID, die in der WM_COMMAND-Nachricht gesendet wird, wenn ein Benutzer ein Galerieelement auswählt.  
+ Gibt an, die Befehls-ID, die in die WM_COMMAND-Meldung gesendet wird, wenn ein Benutzer ein Galerieelement auswählt.  
   
 ### <a name="remarks"></a>Hinweise  
- Um das spezifische Element zu bestimmen, die ein Benutzer aus dem Katalog ausgewählt haben, rufen die [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) statische Methode.  
+ Um das spezifische Element zu bestimmen, die ein Benutzer aus dem Katalog ausgewählt haben, rufen Sie die [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) statische Methode.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

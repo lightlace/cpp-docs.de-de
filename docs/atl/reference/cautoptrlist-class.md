@@ -1,5 +1,5 @@
 ---
-title: CAutoPtrList Klasse | Microsoft Docs
+title: CAutoPtrList-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9101d66de6782d1a060a8acdfb0d02e9971bb9c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d942c0611b408303922f3e6ab91000630ce8774
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357544"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883592"
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList-Klasse
-Diese Klasse enthält Methoden, die hilfreich beim Erstellen einer Liste von intelligenten Zeigern.  
+Diese Klasse stellt nützliche Methoden aus, wenn Sie eine Liste von intelligenten Zeigern zu erstellen.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +40,7 @@ class CAutoPtrList :
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `E`  
+ *E*  
  Der Zeigertyp.  
   
 ## <a name="members"></a>Member  
@@ -52,7 +52,7 @@ class CAutoPtrList :
 |[CAutoPtrList::CAutoPtrList](#cautoptrlist)|Der Konstruktor.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse stellt einen Konstruktor bereit, und leitet Sie Methoden aus [CAtlList](../../atl/reference/catllist-class.md) und [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) für die Erstellung eines List-Objekts, das Speichern von intelligenten Zeigern verwendet. Die Klasse [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) bietet eine ähnliche Funktion für ein Arrayobjekt.  
+ Diese Klasse stellt einen Konstruktor bereit und leitet Sie Methoden aus [CAtlList](../../atl/reference/catllist-class.md) und [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) zur Unterstützung der Erstellung eines Listenobjekts intelligente Zeiger speichern. Die Klasse [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) bietet eine ähnliche Funktion für ein Arrayobjekt.  
   
  Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
@@ -72,7 +72,7 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nBlockSize`  
+ *nBlockSize*  
  Die Blockgröße hat den Standardwert 10.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -81,4 +81,4 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 ## <a name="see-also"></a>Siehe auch  
  [CAtlList-Klasse](../../atl/reference/catllist-class.md)   
  [CAutoPtrElementTraits-Klasse](../../atl/reference/cautoptrelementtraits-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

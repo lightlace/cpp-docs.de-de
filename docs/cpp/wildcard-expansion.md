@@ -1,5 +1,5 @@
 ---
-title: Platzhaltererweiterung | Microsoft Docs
+title: Platzhaltererweiterung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb58d5da479d686cac0d18c9d36e500bd6b5a632
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f4de54cbbe978534a42dcb9cbfa677eb1597aa5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420645"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939135"
 ---
 # <a name="wildcard-expansion"></a>Platzhaltererweiterung
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
  Sie können Platzhalter – das Fragezeichen (?) und das Sternchen (*) – verwenden, um Dateinamen- und Pfadargumente in der Befehlszeile anzugeben.  
   
- Befehlszeilenargumente werden durch eine Routine aufgerufen behandelt **_setargv** (oder **_wsetargv** in der Breitzeichen-Umgebung), wird standardmäßig erweitert nicht Platzhalter in separate Zeichenfolgen im die `argv`Array von Zeichenfolgen. Weitere Informationen zum Aktivieren der platzhaltererweiterung finden Sie unter [Erweitern von Platzhalter-Argumenten](../c-language/expanding-wildcard-arguments.md).  
+ Befehlszeilenargumente werden durch eine Routine, die mit dem Namen behandelt `_setargv` (oder `_wsetargv` in der Breitzeichen-Umgebung), die standardmäßig Platzhalter in separate Zeichenfolgen im nicht erweitert die `argv` Zeichenfolgenarray. Weitere Informationen zum Aktivieren von platzhaltererweiterung finden Sie unter [Erweitern von Platzhalterargumenten](../c-language/expanding-wildcard-arguments.md).  
   
 **Ende Microsoft-spezifisch**  
   

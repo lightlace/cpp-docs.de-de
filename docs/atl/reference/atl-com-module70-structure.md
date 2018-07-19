@@ -1,5 +1,5 @@
 ---
-title: _ATL_COM_MODULE70 Struktur | Microsoft Docs
+title: _ATL_COM_MODULE70-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d78165481c8f2e9d8bba33ad14ebd0794f04fde
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 3a3140a0013d284b9145029575418054af22c65e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255660"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883712"
 ---
 # <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70-Struktur
-Verwendung durch COM-bezogenen Code in ATL  
+Ein, die COM-bezogenem Code in ATL  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,22 +43,22 @@ struct _ATL_COM_MODULE70 {
   
 ## <a name="members"></a>Member  
  `cbSize`  
- Die Größe der Struktur, die für die versionsverwaltung verwendet.  
+ Die Größe der Struktur, die für die versionsverwaltung verwendet werden soll.  
   
  `m_hInstTypeLib`  
  Die Handle-Instanz, auf die Typbibliothek für dieses Modul.  
   
- **m_ppAutoObjMapFirst**  
- Die Adresse des Arrayelements, der angibt, der des Anfang der Objekt-Zuordnungseinträge für dieses Modul.  
+ `m_ppAutoObjMapFirst`  
+ Die Adresse des Arrayelements dar, der angibt, der des Anfang der Objekt-Zuordnungseinträge für dieses Modul.  
   
- **m_ppAutoObjMapLast**  
- Die Adresse des Arrayelements, die das Ende der Objekt-Zuordnungseinträge für dieses Modul.  
+ `m_ppAutoObjMapLast`  
+ Die Adresse des Arrayelements dar, der angibt, des Ende der Objekt-Zuordnungseinträge für dieses Modul.  
   
  `m_csObjMap`  
- Kritischen Abschnitt, um die Serialisierung des Zugriffs auf die Objekt-Zuordnungseinträge. Wird intern vom ATL verwendet  
+ Kritischen Abschnitt, um die Serialisierung des Zugriffs auf der Objekt-Zuordnungseinträge. Wird intern verwendet, von ATL  
   
 ## <a name="remarks"></a>Hinweise  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) ist definiert als Typedef von `_ATL_COM_MODULE70`.  
+ [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) als Typdefinition von _ATL_COM_MODULE70 definiert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  

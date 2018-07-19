@@ -1,5 +1,5 @@
 ---
-title: IPropertyPageImpl Klasse | Microsoft Docs
+title: IPropertyPageImpl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -41,18 +41,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f86b93bad181fdbac5763bd215b0ec28ab50296
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7692f60731c47f295630885c77e0e61e8bb5aac
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365353"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884749"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl-Klasse
-Diese Klasse implementiert **IUnknown** und stellt eine Standardimplementierung von der [IPropertyPage-Schnittstelle](http://msdn.microsoft.com/library/windows/desktop/ms691246) Schnittstelle.  
+Diese Klasse implementiert `IUnknown` und stellt eine Standardimplementierung von der [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) Schnittstelle.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,8 +62,8 @@ class IPropertyPageImpl
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Die Klasse abgeleitet `IPropertyPageImpl`.  
+ *T*  
+ Abgeleitet von die Klasse `IPropertyPageImpl`.  
   
 ## <a name="members"></a>Member  
   
@@ -77,16 +77,16 @@ class IPropertyPageImpl
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IPropertyPageImpl::Activate](#activate)|Das Dialogfeld für die Eigenschaftsseite "wird erstellt.|  
-|[IPropertyPageImpl::Apply](#apply)|Die zugrunde liegenden Objekte, die durch die angegebenen aktuellen Eigenschaftswerte Seite betrifft `SetObjects`. Gibt die ATL-Implementierung `S_OK`.|  
-|[IPropertyPageImpl::Deactivate](#deactivate)|Zerstört das Fenster mit erstellt **aktivieren**.|  
+|[IPropertyPageImpl::Activate](#activate)|Erstellt das Dialogfeldfenster für die Eigenschaftenseite.|  
+|[IPropertyPageImpl::Apply](#apply)|Die zugrunde liegenden Objekte, die durch die angegebenen aktuellen eigenschaftsseitenwerte gilt `SetObjects`. Es gibt S_OK zurück, die ATL-Implementierung.|  
+|[IPropertyPageImpl::Deactivate](#deactivate)|Zerstört das Fenster mit erstellt `Activate`.|  
 |[IPropertyPageImpl::GetPageInfo](#getpageinfo)|Ruft Informationen über die Eigenschaftenseite.|  
 |[IPropertyPageImpl::Help](#help)|Ruft die Windows-Hilfe für die Eigenschaftenseite.|  
 |[IPropertyPageImpl::IsPageDirty](#ispagedirty)|Gibt an, ob die Eigenschaftenseite geändert wurde, da er aktiviert wurde.|  
 |[IPropertyPageImpl::Move](#move)|Positioniert, und ändert die Größe der Eigenschaftenseiten-Dialogfeld.|  
-|[:: SetDirty](#setdirty)|Kennzeichnet die Eigenschaftenseite geänderten oder unveränderten Zustand.|  
-|[IPropertyPageImpl::SetObjects](#setobjects)|Stellt ein Array von **IUnknown** Zeiger für die Eigenschaftenseite zugeordneten Objekte. Diese Objekte erhalten, die aktuellen Eigenschaftswerte für die Seite durch einen Aufruf von **übernehmen**.|  
-|[IPropertyPageImpl::SetPageSite](#setpagesite)|Die Eigenschaft wird auf der Seite mit einem `IPropertyPageSite` -Zeiger ist, über die Eigenschaftenseite, mit der Eigenschaft Frame kommuniziert.|  
+|[:: SetDirty](#setdirty)|Kennzeichnet die Eigenschaftenseite-Status, als geändert oder unverändert.|  
+|[IPropertyPageImpl::SetObjects](#setobjects)|Bietet eine Reihe von `IUnknown` Entscheidungshilfen für die Auswahl auf der Seite der zugeordneten Objekte. Diese Objekte erhalten, die aktuellen Eigenschaftswerte für die Seite durch einen Aufruf von `Apply`.|  
+|[IPropertyPageImpl::SetPageSite](#setpagesite)|Die Eigenschaft auf der Seite mit einer `IPropertyPageSite` -Zeiger ist, über die Eigenschaftenseite, die mit der Eigenschaftenrahmen kommuniziert.|  
 |[IPropertyPageImpl::Show](#show)|Macht die Eigenschaftenseiten-Dialogfeld, ein- oder ausgeblendet.|  
 |[IPropertyPageImpl::TranslateAccelerator](#translateaccelerator)|Verarbeitet eine Tastatureingabe angegebene.|  
   
@@ -94,18 +94,18 @@ class IPropertyPageImpl
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IPropertyPageImpl::m_bDirty](#m_bdirty)|Gibt an, ob die Eigenschaftenseite Status geändert wurde.|  
-|[IPropertyPageImpl::m_dwDocString](#m_dwdocstring)|Speichert den Ressourcenbezeichner, der die Textzeichenfolge, beschreibt die Eigenschaftsseite "zugeordnet.|  
-|[IPropertyPageImpl::m_dwHelpContext](#m_dwhelpcontext)|Speichert den Kontextbezeichner für das Hilfethema, das die Eigenschaftsseite "zugeordnet.|  
-|[IPropertyPageImpl::m_dwHelpFile](#m_dwhelpfile)|Speichert den Ressourcenbezeichner, der den Namen der Hilfedatei, beschreibt die Eigenschaftsseite "zugeordnet.|  
-|[IPropertyPageImpl::m_dwTitle](#m_dwtitle)|Speichert den Ressourcenbezeichner zugeordneten die Textzeichenfolge, die auf der Registerkarte der Eigenschaftenseite angezeigt wird.|  
-|[IPropertyPageImpl::m_nObjects](#m_nobjects)|Speichert die Anzahl der Objekte, die die Eigenschaftsseite "zugeordnet.|  
-|[IPropertyPageImpl::m_pPageSite](#m_ppagesite)|Verweist auf die `IPropertyPageSite` Schnittstelle, die über die Eigenschaftenseite, mit der Eigenschaft Frame kommuniziert.|  
-|[IPropertyPageImpl::m_ppUnk](#m_ppunk)|Verweist auf ein Array von **IUnknown** Zeiger auf die Eigenschaftenseite zugeordneten Objekte.|  
+|[IPropertyPageImpl::m_bDirty](#m_bdirty)|Gibt an, ob die Eigenschaftenseite Zustand geändert hat.|  
+|[IPropertyPageImpl::m_dwDocString](#m_dwdocstring)|Speichert den Ressourcenbezeichner, der die Beschreibung auf der Seite der Zeichenfolge zugeordnet.|  
+|[IPropertyPageImpl::m_dwHelpContext](#m_dwhelpcontext)|Speichert den Kontextbezeichner für das Hilfethema, das die Eigenschaftenseite zugeordnet.|  
+|[IPropertyPageImpl::m_dwHelpFile](#m_dwhelpfile)|Speichert den Ressourcenbezeichner, der den Namen der Hilfedatei, die die Eigenschaftenseite beschreibt zugeordnet.|  
+|[IPropertyPageImpl::m_dwTitle](#m_dwtitle)|Speichert den Ressourcenbezeichner verknüpft ist, mit der Textzeichenfolge, die auf der Registerkarte für die Eigenschaftenseite angezeigt wird.|  
+|[IPropertyPageImpl::m_nObjects](#m_nobjects)|Speichert die Anzahl der Objekte, die die Eigenschaftenseite zugeordnet.|  
+|[IPropertyPageImpl::m_pPageSite](#m_ppagesite)|Verweist auf die `IPropertyPageSite` Schnittstelle, die über die Eigenschaftenseite, die mit der Eigenschaftenrahmen kommuniziert.|  
+|[IPropertyPageImpl::m_ppUnk](#m_ppunk)|Verweist auf ein Array von `IUnknown` Zeiger auf die auf der Seite der zugeordneten Objekte.|  
 |[IPropertyPageImpl::m_size](#m_size)|Speichert die Höhe und Breite des Dialogfelds die Eigenschaftenseite in Pixel an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [IPropertyPage-Schnittstelle](http://msdn.microsoft.com/library/windows/desktop/ms691246) Schnittstelle ermöglicht es, ein Objekt, das eine bestimmte Eigenschaft in einem Eigenschaftenblatt verwalten. Klasse `IPropertyPageImpl` stellt eine Standardimplementierung dieser Schnittstelle und implementiert **IUnknown** durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus erstellt.  
+ Die [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) Schnittstelle ermöglicht es, ein Objekt eine bestimmten Eigenschaftenseite innerhalb eines Eigenschaftenblatts zu verwalten. Klasse `IPropertyPageImpl` stellt eine Standardimplementierung dieser Schnittstelle bereit und implementiert `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.  
   
  **Verwandte Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)  
   
@@ -118,7 +118,7 @@ class IPropertyPageImpl
  **Header:** atlctl.h  
   
 ##  <a name="activate"></a>  IPropertyPageImpl::Activate  
- Das Dialogfeld für die Eigenschaftsseite "wird erstellt.  
+ Erstellt das Dialogfeldfenster für die Eigenschaftenseite.  
   
 ```
 HRESULT Activate(  
@@ -128,35 +128,35 @@ HRESULT Activate(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig ist das Dialogfeld immer unabhängig vom Wert von nicht modalen der *bModal* Parameter.  
+ Das Dialogfeld wird standardmäßig immer nicht modales, unabhängig vom Wert für die *bModal* Parameter.  
   
- Finden Sie unter [IPropertyPage::Activate](http://msdn.microsoft.com/library/windows/desktop/ms682250) im Windows SDK.  
+ Finden Sie unter [IPropertyPage::Activate](http://msdn.microsoft.com/library/windows/desktop/ms682250) in das Windows SDK.  
   
 ##  <a name="apply"></a>  IPropertyPageImpl::Apply  
- Die zugrunde liegenden Objekte, die durch die angegebenen aktuellen Eigenschaftswerte Seite betrifft `SetObjects`.  
+ Die zugrunde liegenden Objekte, die durch die angegebenen aktuellen eigenschaftsseitenwerte gilt `SetObjects`.  
   
 ```
 HRESULT Apply();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt `S_OK`zurück.  
+ Gibt S_OK zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IPropertyPage::Apply](http://msdn.microsoft.com/library/windows/desktop/ms691284) im Windows SDK.  
+ Finden Sie unter [IPropertyPage::Apply](http://msdn.microsoft.com/library/windows/desktop/ms691284) in das Windows SDK.  
   
 ##  <a name="deactivate"></a>  IPropertyPageImpl::Deactivate  
- Zerstört das Dialogfeld mit erstellt [aktivieren](#activate).  
+ Zerstört das Dialogfeldfenster mit erstellt [aktivieren](#activate).  
   
 ```
 HRESULT Deactivate();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IPropertyPage::Deactivate](http://msdn.microsoft.com/library/windows/desktop/ms682504) im Windows SDK.  
+ Finden Sie unter [IPropertyPage::Deactivate](http://msdn.microsoft.com/library/windows/desktop/ms682504) in das Windows SDK.  
   
 ##  <a name="getpageinfo"></a>  IPropertyPageImpl::GetPageInfo  
- Füllt die *pPageInfo* Struktur mit Informationen, die in der Datenmember enthalten sind.  
+ Füllt die *pPageInfo* Struktur mit Informationen, die in der Datenmember enthalten.  
   
 ```
 HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
@@ -165,7 +165,7 @@ HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 ### <a name="remarks"></a>Hinweise  
  `GetPageInfo` Lädt die Zeichenfolgenressourcen zugeordneten [M_dwDocString](#m_dwdocstring), [M_dwHelpFile](#m_dwhelpfile), und [M_dwTitle](#m_dwtitle).  
   
- Finden Sie unter [IPropertyPage::GetPageInfo](http://msdn.microsoft.com/library/windows/desktop/ms680714) im Windows SDK.  
+ Finden Sie unter [IPropertyPage::GetPageInfo](http://msdn.microsoft.com/library/windows/desktop/ms680714) in das Windows SDK.  
   
 ##  <a name="help"></a>  IPropertyPageImpl::Help  
  Ruft die Windows-Hilfe für die Eigenschaftenseite.  
@@ -175,7 +175,7 @@ HRESULT Help(PROPPAGEINFO* pPageInfo);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IPropertyPage::Help](http://msdn.microsoft.com/library/windows/desktop/ms691504) im Windows SDK.  
+ Finden Sie unter [IPropertyPage::Help](http://msdn.microsoft.com/library/windows/desktop/ms691504) in das Windows SDK.  
   
 ##  <a name="ipropertypageimpl"></a>  IPropertyPageImpl::IPropertyPageImpl  
  Der Konstruktor.  
@@ -185,7 +185,7 @@ IPropertyPageImpl();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Alle Datenmember initialisiert.  
+ Initialisiert alle Datenmember.  
   
 ##  <a name="ispagedirty"></a>  IPropertyPageImpl::IsPageDirty  
  Gibt an, ob die Eigenschaftenseite geändert wurde, da er aktiviert wurde.  
@@ -195,59 +195,59 @@ HRESULT IsPageDirty(void);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- `IsPageDirty` Gibt `S_OK` , wenn die Seite geändert wurde, seit er aktiviert wurde.  
+ `IsPageDirty` Gibt S_OK zurück, wenn die Seite geändert wurde, da er aktiviert wurde.  
   
 ##  <a name="m_bdirty"></a>  IPropertyPageImpl::m_bDirty  
- Gibt an, ob die Eigenschaftenseite Status geändert wurde.  
+ Gibt an, ob die Eigenschaftenseite Zustand geändert hat.  
   
 ```
 BOOL m_bDirty;
 ```  
   
 ##  <a name="m_nobjects"></a>  IPropertyPageImpl::m_nObjects  
- Speichert die Anzahl der Objekte, die die Eigenschaftsseite "zugeordnet.  
+ Speichert die Anzahl der Objekte, die die Eigenschaftenseite zugeordnet.  
   
 ```
 ULONG m_nObjects;
 ```  
   
 ##  <a name="m_dwhelpcontext"></a>  IPropertyPageImpl::m_dwHelpContext  
- Speichert den Kontextbezeichner für das Hilfethema, das die Eigenschaftsseite "zugeordnet.  
+ Speichert den Kontextbezeichner für das Hilfethema, das die Eigenschaftenseite zugeordnet.  
   
 ```
 DWORD m_dwHelpContext;
 ```  
   
 ##  <a name="m_dwdocstring"></a>  IPropertyPageImpl::m_dwDocString  
- Speichert den Ressourcenbezeichner, der die Textzeichenfolge, beschreibt die Eigenschaftsseite "zugeordnet.  
+ Speichert den Ressourcenbezeichner, der die Beschreibung auf der Seite der Zeichenfolge zugeordnet.  
   
 ```
 UINT m_dwDocString;
 ```  
   
 ##  <a name="m_dwhelpfile"></a>  IPropertyPageImpl::m_dwHelpFile  
- Speichert den Ressourcenbezeichner, der den Namen der Hilfedatei, beschreibt die Eigenschaftsseite "zugeordnet.  
+ Speichert den Ressourcenbezeichner, der den Namen der Hilfedatei, die die Eigenschaftenseite beschreibt zugeordnet.  
   
 ```
 UINT m_dwHelpFile;
 ```  
   
 ##  <a name="m_dwtitle"></a>  IPropertyPageImpl::m_dwTitle  
- Speichert den Ressourcenbezeichner zugeordneten die Textzeichenfolge, die auf der Registerkarte der Eigenschaftenseite angezeigt wird.  
+ Speichert den Ressourcenbezeichner verknüpft ist, mit der Textzeichenfolge, die auf der Registerkarte für die Eigenschaftenseite angezeigt wird.  
   
 ```
 UINT m_dwTitle;
 ```  
   
 ##  <a name="m_ppagesite"></a>  IPropertyPageImpl::m_pPageSite  
- Verweist auf die [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583) Schnittstelle, die über die Eigenschaftenseite, mit der Eigenschaft Frame kommuniziert.  
+ Verweist auf die [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583) Schnittstelle, die über die Eigenschaftenseite, die mit der Eigenschaftenrahmen kommuniziert.  
   
 ```
 IPropertyPageSite* m_pPageSite;
 ```  
   
 ##  <a name="m_ppunk"></a>  IPropertyPageImpl::m_ppUnk  
- Verweist auf ein Array von **IUnknown** Zeiger auf die Eigenschaftenseite zugeordneten Objekte.  
+ Verweist auf ein Array von `IUnknown` Zeiger auf die auf der Seite der zugeordneten Objekte.  
   
 ```
 IUnknown** m_ppUnk;
@@ -268,41 +268,41 @@ HRESULT Move(LPCRECT pRect);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IPropertyPage::Move](http://msdn.microsoft.com/library/windows/desktop/ms680118) im Windows SDK.  
+ Finden Sie unter [IPropertyPage::Move](http://msdn.microsoft.com/library/windows/desktop/ms680118) in das Windows SDK.  
   
 ##  <a name="setdirty"></a>  :: SetDirty  
- Kennzeichnet die Eigenschaftenseite Status als geänderten oder unveränderten, abhängig vom Wert `bDirty`.  
+ Kennzeichnet die Eigenschaftenseite Status als geändert oder unverändert, abhängig vom Wert *bDirty*.  
   
 ```
 void SetDirty(BOOL bDirty);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `bDirty`  
- [in] Wenn **"true"**, wird die Eigenschaftenseite Zustand als geändert markiert. Er ist, andernfalls gekennzeichnet als unverändert.  
+ *bDirty*  
+ [in] Bei "true", wird die Eigenschaftenseite Status als geändert markiert. Anderenfalls ist es markiert als unverändert.  
   
 ### <a name="remarks"></a>Hinweise  
  Bei Bedarf `SetDirty` informiert den Frame, die die Eigenschaftenseite geändert wurde.  
   
 ##  <a name="setobjects"></a>  IPropertyPageImpl::SetObjects  
- Stellt ein Array von **IUnknown** Zeiger für die Eigenschaftenseite zugeordneten Objekte.  
+ Bietet eine Reihe von `IUnknown` Entscheidungshilfen für die Auswahl auf der Seite der zugeordneten Objekte.  
   
 ```
 HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IPropertyPage::SetObjects](http://msdn.microsoft.com/library/windows/desktop/ms678529) im Windows SDK.  
+ Finden Sie unter [IPropertyPage::SetObjects](http://msdn.microsoft.com/library/windows/desktop/ms678529) in das Windows SDK.  
   
 ##  <a name="setpagesite"></a>  IPropertyPageImpl::SetPageSite  
- Die Eigenschaft wird auf der Seite mit einem [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583) -Zeiger ist, über die Eigenschaftenseite, mit der Eigenschaft Frame kommuniziert.  
+ Die Eigenschaft auf der Seite mit einer [IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583) -Zeiger ist, über die Eigenschaftenseite, die mit der Eigenschaftenrahmen kommuniziert.  
   
 ```
 HRESULT SetPageSite(IPropertyPageSite* pPageSite);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IPropertyPage::SetPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690413) im Windows SDK.  
+ Finden Sie unter [IPropertyPage::SetPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690413) in das Windows SDK.  
   
 ##  <a name="show"></a>  IPropertyPageImpl::Show  
  Macht die Eigenschaftenseiten-Dialogfeld, ein- oder ausgeblendet.  
@@ -312,20 +312,20 @@ HRESULT Show(UINT nCmdShow);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IPropertyPage::Show](http://msdn.microsoft.com/library/windows/desktop/ms694467) im Windows SDK.  
+ Finden Sie unter [IPropertyPage::Show](http://msdn.microsoft.com/library/windows/desktop/ms694467) in das Windows SDK.  
   
 ##  <a name="translateaccelerator"></a>  IPropertyPageImpl::TranslateAccelerator  
- Verarbeitet die Tastatureingabe im angegebenen `pMsg`.  
+ Verarbeitet die Tastatureingabe in angegebenen `pMsg`.  
   
 ```
 HRESULT TranslateAccelerator(MSG* pMsg);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IPropertyPage::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms686603) im Windows SDK.  
+ Finden Sie unter [IPropertyPage::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms686603) in das Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [IPropertyPage2Impl-Klasse](../../atl/reference/ipropertypage2impl-class.md)   
  [IPerPropertyBrowsingImpl-Klasse](../../atl/reference/iperpropertybrowsingimpl-class.md)   
  [ISpecifyPropertyPagesImpl-Klasse](../../atl/reference/ispecifypropertypagesimpl-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

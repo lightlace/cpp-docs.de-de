@@ -1,5 +1,5 @@
 ---
-title: Anpassen der C++-Befehlszeilenverarbeitung | Microsoft Docs
+title: Anpassen der C++-Befehlszeilenverarbeitung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,20 +24,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2691ba3b83cd536c6f0a152bf4de2a855f81e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9415073630505e3cc879f53de14ed469c7e0e2ba
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411110"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939051"
 ---
 # <a name="customizing-c-command-line-processing"></a>Anpassen der C++-Befehlszeilenverarbeitung
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Wenn das Programm keine Befehlszeilenargumente akzeptiert, können Sie ein wenig Platz sparen, indem Sie die Verwendung der Bibliotheksroutine unterdrücken, die die Befehlszeilenverarbeitung ausführt. Diese Routine hat die Bezeichnung **_setargv** und wird im beschrieben [Platzhaltererweiterung](../cpp/wildcard-expansion.md). Um seine Verwendung zu unterdrücken, definieren Sie eine Routine, "nothing" in der Datei mit den **main** -Funktion, und nennen Sie sie **_setargv**. Der Aufruf von **_setargv** erfüllt wird dann durch Ihre Definition von **_setargv**, und die Bibliotheksversion wird nicht geladen.  
+ Wenn das Programm keine Befehlszeilenargumente akzeptiert, können Sie ein wenig Platz sparen, indem Sie die Verwendung der Bibliotheksroutine unterdrücken, die die Befehlszeilenverarbeitung ausführt. Diese Routine hat die Bezeichnung `_setargv` und wird im beschrieben [Platzhaltererweiterung](../cpp/wildcard-expansion.md). Um ihre Verwendung zu unterdrücken, definieren Sie eine Routine, "nothing" in der Datei mit den `main` funktionieren, und nennen Sie sie `_setargv`. Der Aufruf von `_setargv` erfüllt wird dann durch Ihre Definition von `_setargv`, und die Bibliotheksversion wird nicht geladen werden.  
   
- Ebenso sollten Sie nie auf die umgebungstabelle zugreifen der `envp` Argument, Sie können eine eigene leere Routine anstelle von bereitstellen **_setenvp**, die umgebungsverarbeitende Routine. Wie bei der **_setargv** Funktion **_setenvp** muss deklariert werden, als **"extern"C""**.  
+ Auf ähnliche Weise, wenn Sie niemals auf die umgebungstabelle auf die `envp` -Argument, Sie können Ihre eigene leere Routine anstelle der zu verwendende bereitstellen `_setenvp`, die umgebungsverarbeitende Routine. Wie bei der `_setargv` Funktion `_setenvp` muss deklariert werden, als **Extern "C"**.  
   
- Das Programm möglicherweise Aufrufe an die **Spawn** oder `exec` -Gruppe von Routinen in C-Laufzeitbibliothek. Wenn dies der Fall ist, sollten Sie die umgebungsverarbeitende Routine nicht unterdrücken, da diese Routine verwendet wird, um eine Umgebung aus dem übergeordneten Prozess an den untergeordneten Prozess zu übergeben.  
+ Das Programm möglicherweise Aufrufe an die `spawn` oder `exec` -Gruppe von Routinen in der C-Laufzeitbibliothek. Wenn dies der Fall ist, sollten Sie die umgebungsverarbeitende Routine nicht unterdrücken, da diese Routine verwendet wird, um eine Umgebung aus dem übergeordneten Prozess an den untergeordneten Prozess zu übergeben.  
   
 **Ende Microsoft-spezifisch**  
   

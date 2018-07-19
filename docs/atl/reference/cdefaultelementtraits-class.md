@@ -1,5 +1,5 @@
 ---
-title: CDefaultElementTraits Klasse | Microsoft Docs
+title: CDefaultElementTraits-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16574857f4f5bd4566fcef551fa5e56290b7ce6b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c86df573e35ba58d01be6c12ed9fff87c837126
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360961"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882662"
 ---
 # <a name="cdefaultelementtraits-class"></a>CDefaultElementTraits-Klasse
-Diese Klasse stellt die Standardmethoden und Funktionen bereit, damit eine Auflistungsklasse.  
+Diese Klasse stellt die Standardmethoden und -Funktionen, damit eine Auflistungsklasse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,11 +37,11 @@ class CDefaultElementTraits : public CElementTraitsBase<T>,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
+ *T*  
  Der Typ der Daten in der Auflistung gespeichert werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse bietet statische Standard-Funktionen und-Methoden für verschieben, kopieren, vergleichen und hashing ein Klassenobjekt Auflistung gespeicherten Elemente. Diese Klasse abgeleitet wird, seine Funktionen und Methoden von [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md), [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md), und [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md), und wird durch [ CElementTraits](../../atl/reference/celementtraits-class.md), [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md), und [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md).  
+ Diese Klasse stellt statische Standard-Funktionen und Methoden für das Verschieben, kopieren, vergleichen und hashing in ein Klassenobjekt Auflistung gespeicherten Elementen an. Diese Klasse abgeleitet wird, seine Funktionen und Methoden aus [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md), [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md), und [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md), und wird verwendet, indem [ CElementTraits](../../atl/reference/celementtraits-class.md), [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md), und [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md).  
   
  Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
@@ -49,4 +49,4 @@ class CDefaultElementTraits : public CElementTraitsBase<T>,
  **Header:** atlcoll.h  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

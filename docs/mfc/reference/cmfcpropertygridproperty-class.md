@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridProperty Klasse | Microsoft Docs
+title: CMFCPropertyGridProperty-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -176,15 +176,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c218f38b76d70ef20fed46a502a7cc15041aa8c5
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 5879f4f81a847b21a0ab8d126a4a51bc0ee826e1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039179"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850260"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty-Klasse
-Ein `CMFCPropertyGridProperty` -Objekt stellt ein Listenelement in einem Eigenschaftenlisten-Steuerelement dar.  
+Ein `CMFCPropertyGridProperty` Objekt stellt ein Listenelement in einem Eigenschaftenlisten-Steuerelement dar.  
   
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
    
@@ -207,86 +207,86 @@ class CMFCPropertyGridProperty : public CObject
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCPropertyGridProperty::AddOption](#addoption)|Fügt ein neues Listenelement zu einem Eigenschaftenlisten-Steuerelement.|  
-|[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Fügt ein untergeordnetes Element an eine Eigenschaft an.|  
-|[CMFCPropertyGridProperty::AdjustButtonRect](#adjustbuttonrect)|Wird von der übergeordneten Eigenschaftenlisten-Steuerelement anzuweisen, eine Eigenschaft, um die Größe des umschließenden Rechtecks des eine eingebettete Schaltfläche aufgerufen.|  
-|[CMFCPropertyGridProperty::AdjustInPlaceEditRect](#adjustinplaceeditrect)|Ruft die Grenzen des Textfelds und optionale Drehfeld-Steuerelement, mit denen ein Eigenschaftswert festgelegt.|  
-|[CMFCPropertyGridProperty::AllowEdit](#allowedit)|Stellt eine Eigenschaft an, entweder bearbeitbar oder schreibgeschützt.|  
+|[CMFCPropertyGridProperty::AddOption](#addoption)|Ein Eigenschaftenlisten-Steuerelement wird ein neues Listenelement hinzugefügt.|  
+|[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Fügt ein untergeordnetes Element auf eine Eigenschaft hinzu.|  
+|[CMFCPropertyGridProperty::AdjustButtonRect](#adjustbuttonrect)|Wird aufgerufen, von der übergeordneten Eigenschaftenlisten-Steuerelement eine Eigenschaft, um das umschließende Rechteck einer eingebetteten Schaltfläche Ändern der Größe zu informieren.|  
+|[CMFCPropertyGridProperty::AdjustInPlaceEditRect](#adjustinplaceeditrect)|Ruft die Grenzen des das Textfeld und einer optionalen Drehfeld-Steuerelement, die zum Festlegen eines Eigenschaftswerts verwendet werden.|  
+|[CMFCPropertyGridProperty::AllowEdit](#allowedit)|Legt eine Eigenschaft an, entweder bearbeitbar oder schreibgeschützt.|  
 |[CMFCPropertyGridProperty::CreateInPlaceEdit](#createinplaceedit)|Wird aufgerufen, durch das Framework für eine Eigenschaft ein editierbaren Steuerelement zu erstellen.|  
-|[CMFCPropertyGridProperty::CreateSpinControl](#createspincontrol)|Wird aufgerufen, durch das Framework einer bearbeitbaren Drehfeld-Steuerelement zu erstellen.|  
+|[CMFCPropertyGridProperty::CreateSpinControl](#createspincontrol)|Wird aufgerufen, durch das Framework, um eine bearbeitbare Drehfeld-Steuerelement zu erstellen.|  
 |[CMFCPropertyGridProperty::Enable](#enable)|Aktiviert oder deaktiviert eine Eigenschaft.|  
-|[CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol)|Aktiviert oder deaktiviert ein Drehfeld-Steuerelement, das zum Ändern eines Eigenschaftswerts verwendet wird.|  
-|[CMFCPropertyGridProperty::Expand](#expand)|Erweitert oder reduziert eine Eigenschaft, die untergeordneten Eigenschaften enthält.|  
+|[CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol)|Aktiviert oder deaktiviert ein Drehfeld-Steuerelement, das verwendet wird, um einen Eigenschaftswert zu ändern.|  
+|[CMFCPropertyGridProperty::Expand](#expand)|Erweitert oder reduziert eine Eigenschaft, die untergeordnete Eigenschaften enthält.|  
 |[Cmfcpropertygridproperty:: Formatproperty](#formatproperty)|Formatiert die Textdarstellung eines Eigenschaftswerts.|  
-|[CMFCPropertyGridProperty::GetData](#getdata)|Ruft ab einen `DWORD` Wert, der einer Eigenschaft zugeordnet ist.|  
-|[CMFCPropertyGridProperty::GetDescription](#getdescription)|Ruft eine Beschreibung der Eigenschaft ab.|  
+|[CMFCPropertyGridProperty::GetData](#getdata)|Ruft ab einen DWORD-Wert, der einer Eigenschaft zugeordnet ist.|  
+|[CMFCPropertyGridProperty::GetDescription](#getdescription)|Ruft die Beschreibung einer Eigenschaft ab.|  
 |[CMFCPropertyGridProperty::GetExpandedSubItems](#getexpandedsubitems)|Ruft die Anzahl der erweiterten untergeordneten Elemente ab.|  
-|[CMFCPropertyGridProperty::GetHierarchyLevel](#gethierarchylevel)|Ruft den nullbasierten Index des Hierarchieebene für die Eigenschaft ab.|  
+|[CMFCPropertyGridProperty::GetHierarchyLevel](#gethierarchylevel)|Ruft den nullbasierten Index des Hierarchieebene der Eigenschaft ab.|  
 |[CMFCPropertyGridProperty::GetName](#getname)|Ruft den Namen der Eigenschaft ab.|  
-|[CMFCPropertyGridProperty::GetNameTooltip](#getnametooltip)|Vom Framework aufgerufen, die den Namen der Eigenschaft in einer QuickInfo anzuzeigen.|  
-|[CMFCPropertyGridProperty::GetOption](#getoption)|Ruft den Text der Optionen, die durch einen Index angegeben wird.|  
-|[CMFCPropertyGridProperty::GetOptionCount](#getoptioncount)|Ruft die Anzahl der Optionen, die auf eine Eigenschaft gehören.|  
-|[CMFCPropertyGridProperty::GetOriginalValue](#getoriginalvalue)|Ruft den ersten Wert der aktuellen Eigenschaft.|  
-|[CMFCPropertyGridProperty::GetParent](#getparent)|Ruft einen Zeiger auf eine Parent-Eigenschaft ab.|  
+|[CMFCPropertyGridProperty::GetNameTooltip](#getnametooltip)|Wird aufgerufen, durch das Framework, um den Namen der Eigenschaft in einer QuickInfo anzuzeigen.|  
+|[CMFCPropertyGridProperty::GetOption](#getoption)|Ruft den Text der Option, die durch einen Index angegeben wird.|  
+|[CMFCPropertyGridProperty::GetOptionCount](#getoptioncount)|Ruft die Anzahl von Optionen, die auf eine Eigenschaft gehört.|  
+|[CMFCPropertyGridProperty::GetOriginalValue](#getoriginalvalue)|Ruft den Anfangswert der aktuellen Eigenschaft ab.|  
+|[CMFCPropertyGridProperty::GetParent](#getparent)|Ruft einen Zeiger auf einer übergeordneten Eigenschaft ab.|  
 |[CMFCPropertyGridProperty::GetRect](#getrect)|Ruft das umschließende Rechteck einer Eigenschaft ab.|  
-|[CMFCPropertyGridProperty::GetSubItem](#getsubitem)|Ruft eine untergeordnete Eigenschaft identifiziert, die durch einen nullbasierten Index ab.|  
+|[CMFCPropertyGridProperty::GetSubItem](#getsubitem)|Ruft eine untergeordnete Eigenschaft, die durch einen nullbasierten Index identifiziert ab.|  
 |[CMFCPropertyGridProperty::GetSubItemsCount](#getsubitemscount)|Ruft die Anzahl der untergeordneten Elemente ab.|  
-|`CMFCPropertyGridProperty::GetThisClass`|Durch das Framework verwendet wird, um einen Zeiger auf die [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
+|`CMFCPropertyGridProperty::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
 |[CMFCPropertyGridProperty::GetValue](#getvalue)|Ruft einen Eigenschaftswert ab.|  
-|[CMFCPropertyGridProperty::GetValueTooltip](#getvaluetooltip)|Vom Framework aufgerufen, die Textdarstellung des Werts der abzurufen, die dann in einer QuickInfo angezeigt wird.|  
-|[CMFCPropertyGridProperty::HitTest](#hittest)|Verweist auf das Property-Objekt, das das Listenelement Eigenschaft entspricht, das einen Punkt entspricht.|  
-|[CMFCPropertyGridProperty::IsAllowEdit](#isallowedit)|Gibt an, ob eine Eigenschaft bearbeitbar ist.|  
+|[CMFCPropertyGridProperty::GetValueTooltip](#getvaluetooltip)|Wird aufgerufen, durch das Framework, um die Textdarstellung des Werts der abzurufen, die dann in einer QuickInfo angezeigt werden.|  
+|[CMFCPropertyGridProperty::HitTest](#hittest)|Verweist auf das Property-Objekt, das das Listenelement für die Eigenschaft entspricht, der ein Punkt entspricht.|  
+|[CMFCPropertyGridProperty::IsAllowEdit](#isallowedit)|Gibt an, ob eine Eigenschaft bearbeitet werden kann.|  
 |[CMFCPropertyGridProperty::IsEnabled](#isenabled)|Gibt an, ob eine Eigenschaft aktiviert oder deaktiviert ist.|  
 |[CMFCPropertyGridProperty::IsExpanded](#isexpanded)|Gibt an, ob eine Eigenschaft erweitert oder reduziert ist.|  
 |[CMFCPropertyGridProperty::IsGroup](#isgroup)|Gibt an, ob die aktuelle Eigenschaft eine Gruppe darstellt.|  
-|[CMFCPropertyGridProperty::IsInPlaceEditing](#isinplaceediting)|Gibt an, ob die aktuelle Eigenschaft bearbeitbar ist.|  
-|[CMFCPropertyGridProperty::IsModified](#ismodified)|Gibt an, ob die aktuelle Eigenschaft geändert wird.|  
+|[CMFCPropertyGridProperty::IsInPlaceEditing](#isinplaceediting)|Gibt an, ob die aktuelle Eigenschaft bearbeitet werden kann.|  
+|[CMFCPropertyGridProperty::IsModified](#ismodified)|Gibt an, ob die current-Eigenschaft geändert wurde.|  
 |[CMFCPropertyGridProperty::IsParentExpanded](#isparentexpanded)|Gibt an, ob die übergeordneten Elemente der aktuellen Eigenschaft erweitert werden.|  
 |[CMFCPropertyGridProperty::IsSelected](#isselected)|Gibt an, ob die aktuelle Eigenschaft ausgewählt ist.|  
-|[CMFCPropertyGridProperty::IsVisible](#isvisible)|Gibt an, ob die aktuelle Eigenschaft sichtbar ist.|  
+|[CMFCPropertyGridProperty::IsVisible](#isvisible)|Gibt an, ob die current-Eigenschaft sichtbar ist.|  
 |[Cmfcpropertygridproperty:: Onclickbutton](#onclickbutton)|Wird vom Framework aufgerufen, wenn der Benutzer auf eine Schaltfläche klickt, die in einer Eigenschaft enthalten ist.|  
 |[CMFCPropertyGridProperty::OnClickName](#onclickname)|Wird von einem übergeordneten Eigenschaftenlisten-Steuerelement aufgerufen, klickt ein Benutzer das Namensfeld einer Eigenschaft.|  
-|[CMFCPropertyGridProperty::OnClickValue](#onclickvalue)|Wird von einem übergeordneten Eigenschaftenlisten-Steuerelement aufgerufen, klickt ein Benutzer das Wertefeld einer Eigenschaft.|  
-|[CMFCPropertyGridProperty::OnCloseCombo](#onclosecombo)|Vom Framework aufgerufen, wenn ein Kombinationsfeld, die in einer Eigenschaft enthalten sind, geschlossen wird.|  
-|[CMFCPropertyGridProperty::OnDblClk](#ondblclk)|Vom Framework aufgerufen, wenn der Benutzer auf eine Eigenschaft doppelklickt.|  
-|[CMFCPropertyGridProperty::OnDrawButton](#ondrawbutton)|Wird aufgerufen, durch das Framework eine Schaltfläche gezeichnet werden soll, die in einer Eigenschaft enthalten ist.|  
-|[CMFCPropertyGridProperty::OnDrawDescription](#ondrawdescription)|Wird aufgerufen, durch das Framework zum Anzeigen der Beschreibung der Eigenschaft.|  
-|[CMFCPropertyGridProperty::OnDrawExpandBox](#ondrawexpandbox)|Wird aufgerufen, durch das Framework zum Erweitern einer Eigenschaft in der Nähe ein Steuerelements zu zeichnen, die untergeordneten Eigenschaften enthält.|  
+|[CMFCPropertyGridProperty::OnClickValue](#onclickvalue)|Wird von einem übergeordneten Eigenschaftenlisten-Steuerelement aufgerufen, klickt ein Benutzer das Feld eine Eigenschaft mit dem Wert.|  
+|[CMFCPropertyGridProperty::OnCloseCombo](#onclosecombo)|Vom Framework aufgerufen, wenn ein Kombinationsfeld, die in einer Eigenschaft enthalten ist, geschlossen wird.|  
+|[CMFCPropertyGridProperty::OnDblClk](#ondblclk)|Wird vom Framework aufgerufen, wenn der Benutzer eine Eigenschaft doppelklickt.|  
+|[CMFCPropertyGridProperty::OnDrawButton](#ondrawbutton)|Wird aufgerufen, durch das Framework, um eine Schaltfläche zeichnen, die in einer Eigenschaft enthalten ist.|  
+|[CMFCPropertyGridProperty::OnDrawDescription](#ondrawdescription)|Wird aufgerufen, durch das Framework zur Anzeige der eigenschaftenbeschreibung.|  
+|[CMFCPropertyGridProperty::OnDrawExpandBox](#ondrawexpandbox)|Wird aufgerufen, durch das Framework erweitern Sie in der Nähe von einer Eigenschaft ein Steuerelements zu zeichnen, die untergeordnete Eigenschaften enthält.|  
 |[CMFCPropertyGridProperty::OnDrawName](#ondrawname)|Wird aufgerufen, durch das Framework der Eigenschaftenname angezeigt.|  
 |[Cmfcpropertygridproperty:: Ondrawvalue](#ondrawvalue)|Wird vom Framework aufgerufen, um die Liste der Eigenschaftenwerte anzuzeigen.|  
 |[Cmfcpropertygridproperty:: onEdit](#onedit)|Wird vom Framework aufgerufen, wenn der Benutzer dabei ist, einen Eigenschaftenwert zu bearbeiten.|  
-|[CMFCPropertyGridProperty::OnEndEdit](#onendedit)|Vom Framework aufgerufen, nachdem der Benutzer wurde Ändern eines Eigenschaftswerts.|  
+|[CMFCPropertyGridProperty::OnEndEdit](#onendedit)|Vom Framework aufgerufen, wenn der Benutzer abgeschlossen ist einen Eigenschaftswert ändern.|  
 |[CMFCPropertyGridProperty::OnKillSelection](#onkillselection)||  
 |[CMFCPropertyGridProperty::OnPosSizeChanged](#onpossizechanged)||  
-|[CMFCPropertyGridProperty::OnRClickName](#onrclickname)|Vom Framework aufgerufen, wenn der Benutzer mit die rechten Maustaste im Bereich der Eigenschaft "Name" klickt.|  
-|[CMFCPropertyGridProperty::OnRClickValue](#onrclickvalue)|Vom Framework aufgerufen, wenn der Benutzer mit die rechten Maustaste im Bereich der Eigenschaft "Wert" klickt.|  
-|[CMFCPropertyGridProperty::OnSelectCombo](#onselectcombo)|Wird vom Framework aufgerufen, wenn der Benutzer ein Element aus dem bearbeitbaren Kombinationsfeld auswählt.|  
-|[CMFCPropertyGridProperty::OnSetCursor](#onsetcursor)|Vom Framework aufgerufen, wenn der Mauszeiger bewegt, um ein Eigenschaftenelement wird.|  
+|[CMFCPropertyGridProperty::OnRClickName](#onrclickname)|Vom Framework aufgerufen, wenn der Benutzer mit die rechten Maustaste im Bereich Name "-Eigenschaft" klickt.|  
+|[CMFCPropertyGridProperty::OnRClickValue](#onrclickvalue)|Vom Framework aufgerufen, wenn der Benutzer mit die rechten Maustaste in den Wertebereich für die Eigenschaft klickt.|  
+|[CMFCPropertyGridProperty::OnSelectCombo](#onselectcombo)|Wird vom Framework aufgerufen, wenn der Benutzer ein Element aus dem bearbeitbare Kombinationsfeld auswählt.|  
+|[CMFCPropertyGridProperty::OnSetCursor](#onsetcursor)|Vom Framework aufgerufen, wenn der Mauszeiger auf einem Eigenschaftenlisten-Element verschoben wird.|  
 |[CMFCPropertyGridProperty::OnSetSelection](#onsetselection)||  
 |[Cmfcpropertygridproperty:: Onupdatevalue](#onupdatevalue)|Wird vom Framework aufgerufen, wenn der Wert einer änderbaren Eigenschaft geändert wurde.|  
-|[CMFCPropertyGridProperty::PushChar](#pushchar)|Von der Eigenschaftenlisten-Steuerelement aufgerufen, wenn die Eigenschaft ausgewählt ist und der Benutzer ein neues Zeichen gibt.|  
+|[CMFCPropertyGridProperty::PushChar](#pushchar)|Wird vom Eigenschaftenlisten-Steuerelement aufgerufen, wenn die Eigenschaft ausgewählt ist, und der Benutzer ein neues Zeichen gibt.|  
 |[CMFCPropertyGridProperty::Redraw](#redraw)|Zeichnet die Eigenschaft neu.|  
 |[CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions)|Entfernt alle Optionen (Elemente) aus einer Eigenschaft an.|  
 |[CMFCPropertyGridProperty::RemoveSubItem](#removesubitem)|Entfernt das angegebene untergeordnete Element.|  
 |[Cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue)|Stellt den ursprünglichen Wert einer bearbeiteten Eigenschaft.|  
-|[CMFCPropertyGridProperty::SetData](#setdata)|Ordnet eine `DWORD` Wert mit einer Eigenschaft.|  
+|[CMFCPropertyGridProperty::SetData](#setdata)|Ordnet eine Eigenschaft einen DWORD-Wert zu.|  
 |[CMFCPropertyGridProperty::SetDescription](#setdescription)|Gibt den Text, der die aktuelle Eigenschaft beschreibt.|  
-|[CMFCPropertyGridProperty::SetName](#setname)|Legt den Namen einer Eigenschaft fest.|  
+|[CMFCPropertyGridProperty::SetName](#setname)|Legt den Namen einer Eigenschaft.|  
 |[CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue)|Legt den ursprünglichen Wert einer bearbeitbaren Eigenschaft fest.|  
-|[CMFCPropertyGridProperty::SetValue](#setvalue)|Legt den Wert einer Eigenschaft Raster-Eigenschaft.|  
-|[CMFCPropertyGridProperty::Show](#show)|Zeigt an oder blendet Sie aus einer Eigenschaft.|  
+|[CMFCPropertyGridProperty::SetValue](#setvalue)|Legt den Wert einer Eigenschaft Grid-Eigenschaft.|  
+|[CMFCPropertyGridProperty::Show](#show)|Zeigt an, oder blendet Sie aus einer Eigenschaft.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Wird aufgerufen, durch das Framework einer Eigenschaft ein Kombinationsfeld hinzu.|  
+|[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Wird aufgerufen, durch das Framework eine Eigenschaft ein Kombinationsfeld hinzu.|  
 |[CMFCPropertyGridProperty::HasButton](#hasbutton)|Gibt an, ob eine Eigenschaft auf eine Schaltfläche enthält.|  
 |[CMFCPropertyGridProperty::Init](#init)|Wird aufgerufen, durch das Framework um ein Objekt zu initialisieren.|  
-|[CMFCPropertyGridProperty::IsSubItem](#issubitem)|Gibt an, ob die angegebene Eigenschaft eines untergeordneten Elements der aktuellen Eigenschaft.|  
+|[CMFCPropertyGridProperty::IsSubItem](#issubitem)|Gibt an, ob die angegebene Eigenschaft eines untergeordneten Elements der aktuellen Eigenschaft ist.|  
 |[CMFCPropertyGridProperty::IsValueChanged](#isvaluechanged)|Gibt an, ob der Wert der aktuellen Eigenschaft geändert hat.|  
-|[CMFCPropertyGridProperty::OnCtlColor](#onctlcolor)|Vom Framework aufgerufen, wenn einen Pinsel, füllen Sie die Farbe des Hintergrunds einer Eigenschaft abgerufen werden muss.|  
-|[CMFCPropertyGridProperty::OnDestroyWindow](#ondestroywindow)|Vom Framework aufgerufen, wenn eine Eigenschaft zerstört wird oder wenn die Bearbeitung beendet wird.|  
+|[CMFCPropertyGridProperty::OnCtlColor](#onctlcolor)|Vom Framework aufgerufen, wenn er einen Pinsel, füllen Sie die Hintergrundfarbe einer Eigenschaft abrufen muss.|  
+|[CMFCPropertyGridProperty::OnDestroyWindow](#ondestroywindow)|Wird vom Framework aufgerufen, wenn eine Eigenschaft zerstört wird oder wenn Bearbeitung abgeschlossen ist.|  
 |[CMFCPropertyGridProperty::OnKillFocus](#onkillfocus)|Wird vom Framework aufgerufen, wenn die Eigenschaft den Eingabefokus verliert.|  
   
 ### <a name="data-members"></a>Datenmember  
@@ -299,12 +299,12 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::m_strFormatShort](#m_strformatshort)|Formatzeichenfolge für einen Wert vom Typ short.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden einer `CMFCPropertyGridProperty` Objekt, das eine Eigenschaft darstellen, den Sie dann zu einem Eigenschaftenlisten-Steuerelement hinzufügen. Weitere Informationen finden Sie unter [CMFCPropertyGridCtrl Klasse](../../mfc/reference/cmfcpropertygridctrl-class.md).  
+ Verwenden einer `CMFCPropertyGridProperty` Objekt, eine Eigenschaft darstellt, die Sie dann zu einem Eigenschaftenlisten-Steuerelement hinzufügen. Weitere Informationen finden Sie unter [CMFCPropertyGridCtrl Class](../../mfc/reference/cmfcpropertygridctrl-class.md).  
   
- Ein Objekt kann es sich um Datentypen, z. B. Zeichenfolgen, Datumsangaben und Boolean oder ganzzahlige Werte darstellen. Kann es die untergeordneten Eigenschaften enthalten, oder es kann z. B. ein Kombinationsfeld-Steuerelement oder ein Schaltflächen-Steuerelement enthalten.  
+ Ein Objekt kann es sich um Datentypen wie Zeichenfolgen, Datumsangaben und boolescher Wert oder ganzzahlige Werte darstellen. Untergeordnete Eigenschaften enthalten, oder es kann ein z. B. ein Kombinationsfeld-Steuerelement oder ein Schaltflächen-Steuerelement enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCPropertyGridProperty` Objekt. Außerdem wird veranschaulicht, wie mithilfe verschiedener Methoden in der `CMFCPropertyGridProperty` Klasse, um eine Option hinzufügen, Hinzufügen eines untergeordneten Elements, aktivieren eine Eigenschaft und eine Eigenschaft anzeigen. In diesem Beispiel ist Teil der [neues Steuerelement-Beispiel](../../visual-cpp-samples.md).  
+ Das folgende Beispiel veranschaulicht das Erstellen einer `CMFCPropertyGridProperty` Objekt. Außerdem wird veranschaulicht, wie Sie mit verschiedenen Methoden in der `CMFCPropertyGridProperty` Klasse, um eine Option hinzufügen, Hinzufügen eines untergeordneten Elements, eine Eigenschaft zu aktivieren und eine Eigenschaft anzeigen. In diesem Beispiel ist Teil der [Beispiel neue Steuerelemente](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]  
   
@@ -317,7 +317,7 @@ class CMFCPropertyGridProperty : public CObject
  **Header:** afxpropertygridctrl.h  
   
 ##  <a name="addoption"></a>  CMFCPropertyGridProperty::AddOption  
- Fügt ein neues Listenelement zu einem Eigenschaftenlisten-Steuerelement.  
+ Ein Eigenschaftenlisten-Steuerelement wird ein neues Listenelement hinzugefügt.  
   
 ```  
 BOOL AddOption(
@@ -327,18 +327,18 @@ BOOL AddOption(
   
 ### <a name="parameters"></a>Parameter  
  [in] *LpszOption*  
- Listenelement (Option) hinzufügen.  
+ Das Listenelement (Option) hinzufügen.  
   
  [in] *bInsertUnique*  
- `TRUE` die Liste hinzuzufügende Element nur dann, wenn er nicht bereits vorhanden ist. andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ "True", die die Liste der hinzuzufügenden Element nur dann, wenn es nicht bereits vorhanden ist; andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`, was bedeutet, dass das Listenelement hinzugefügt wird. Andernfalls `FALSE`, welche darauf hin, dass das Element der Liste nicht hinzugefügt werden, da die *bInsertUnique* Parameter ist `TRUE` und in der Liste das angegebene Element durch die *LpszOption* Parameter bereits vorhanden ist.  
+ "True", was bedeutet, dass das Listenelement hinzugefügt wird. Andernfalls "false", d. h., der das Element der Liste nicht hinzugefügt, da die *bInsertUnique* -Parameter ist "true" und vom Element angegebene Liste der *LpszOption* Parameter bereits vorhanden ist.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="addsubitem"></a>  CMFCPropertyGridProperty::AddSubItem  
- Fügt ein untergeordnetes Element an eine Eigenschaft an.  
+ Fügt ein untergeordnetes Element auf eine Eigenschaft hinzu.  
   
 ```  
 BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
@@ -346,16 +346,16 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
   
 ### <a name="parameters"></a>Parameter  
  [in] *pProp*  
- Ein Zeiger auf eine Eigenschaft hinzufügen.  
+ Zeiger auf eine Eigenschaft hinzufügen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die angegebene Eigenschaft wurde erfolgreich als eine untergeordnete Eigenschaft hinzugefügt wird. `FALSE` Wenn die Eigenschaft nicht hinzugefügt wurde, da er bereits in der übergeordneten Eigenschaft vorkommt.  
+ TRUE, wenn die angegebene Eigenschaft als eine untergeordnete Eigenschaft erfolgreich hinzugefügt wurde. "False", wenn die Eigenschaft nicht hinzugefügt wird, da er bereits in die übergeordnete Eigenschaft auftritt.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode, um eine hierarchische Liste von übergeordneten und untergeordneten Eigenschaften zu erstellen. Nachdem ein untergeordnetes Element Eigenschaft hinzugefügt wurde, die übergeordnete Eigenschaft automatisch ein Strukturansicht-Steuerelement zeigt an, die durch ein Pluszeichen (+) gekennzeichnet ist. Klickt der Benutzer auf das Pluszeichen (+), wird die übergeordnete Eigenschaft erweitert und zeigt alle Elemente der untergeordneten Eigenschaft.  
+ Verwenden Sie diese Methode, um eine hierarchische Liste von übergeordneten und untergeordneten Eigenschaften erstellen. Nach der ein untergeordnetes Element wird Eigenschaft hinzugefügt, wird die übergeordnete Eigenschaft zeigt automatisch eine erweitern-Steuerelement, das durch ein Pluszeichen (+) festgelegt ist. Klickt der Benutzer auf das Pluszeichen (+), wird die übergeordnete Eigenschaft erweitert und zeigt alle Elemente der untergeordneten Eigenschaft.  
   
 ##  <a name="adjustbuttonrect"></a>  CMFCPropertyGridProperty::AdjustButtonRect  
- Wird von der übergeordneten Eigenschaftenlisten-Steuerelement anzuweisen, eine Eigenschaft, um die Größe des umschließenden Rechtecks des eine eingebettete Schaltfläche aufgerufen.  
+ Wird aufgerufen, von der übergeordneten Eigenschaftenlisten-Steuerelement eine Eigenschaft, um das umschließende Rechteck einer eingebetteten Schaltfläche Ändern der Größe zu informieren.  
   
 ```  
 virtual void AdjustButtonRect();
@@ -364,14 +364,14 @@ virtual void AdjustButtonRect();
 ### <a name="remarks"></a>Hinweise  
  Standardmäßig ist diese Methode:  
   
--   Passt die Breite der Schaltfläche Gleichheitsoperator, der die Höhe der Schaltfläche plus 3 Pixel.  
+-   Passt die Breite der Schaltfläche gleich auf die Höhe der Schaltfläche plus 3 Pixel.  
   
 -   Verschiebt das umschließende Rechteck der Schaltfläche an den rechten Rand der Eigenschaft  
   
--   Verschiebt die Schaltfläche 1 Pixel oberen Rand der Eigenschaft an.  
+-   Verschiebt die Schaltfläche "1-Pixel oberen Rand der Eigenschaft an.  
   
 ##  <a name="adjustinplaceeditrect"></a>  CMFCPropertyGridProperty::AdjustInPlaceEditRect  
- Ruft die Grenzen des Textfelds und optionale Drehfeld-Steuerelement, mit denen ein Eigenschaftswert festgelegt.  
+ Ruft die Grenzen des das Textfeld und einer optionalen Drehfeld-Steuerelement, die zum Festlegen eines Eigenschaftswerts verwendet werden.  
   
 ```  
 virtual void AdjustInPlaceEditRect(
@@ -381,16 +381,16 @@ virtual void AdjustInPlaceEditRect(
   
 ### <a name="parameters"></a>Parameter  
  [out] *RectEdit*  
- Bei dieser Methode wird ein Rechteck, das die Grenzen des Textfelds, das für den Wert der Eigenschaft angibt.  
+ Bei dieser Methode wird ein Rechteck, das die Begrenzungen des im Textfeld für den Wert der Eigenschaft angibt.  
   
  [out] *RectSpin*  
- Bei dieser Methode wird ein Rechteck, das die Grenzen des dem Drehfeld-Steuerelement für den Wert der Eigenschaft angibt. Oder, wenn die Eigenschaft ein Drehfeld, ein leeres Rechteck nicht unterstützt.  
+ Wenn diese Methode, gibt ein Rechteck zurück, der die Grenzen des das Drehfeld-Steuerelement für den Eigenschaftswert angibt. Oder, wenn die Eigenschaft ein Drehfeld, ein leeres Rechteck nicht unterstützt.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Wertbereich einer Eigenschaft besteht aus einem Textfeld und möglicherweise eine *Optionsfeld*, z. B. ein Drehfeld-Steuerelement. Diese Methode berechnet die Dimensionen der Text im Feld und der angegebenen Option Schaltfläche und gibt anschließend diese Werte in den angegebenen Parametern.  
+ Der Wertbereich, einer Eigenschaft besteht aus einem Textfeld und möglicherweise eine *Optionsfeld*, z. B. ein Drehfeld-Steuerelement. Diese Methode berechnet die Abmessungen des der Textschaltfläche Box und Option und dann diese Werte in der angegebenen Parameter zurückgegeben.  
   
 ##  <a name="allowedit"></a>  CMFCPropertyGridProperty::AllowEdit  
- Stellt eine Eigenschaft an, entweder bearbeitbar oder schreibgeschützt.  
+ Legt eine Eigenschaft an, entweder bearbeitbar oder schreibgeschützt.  
   
 ```  
 void AllowEdit(BOOL bAllow=TRUE);
@@ -398,7 +398,7 @@ void AllowEdit(BOOL bAllow=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] *bVererbbare*  
- `TRUE` die Eigenschaft bearbeitbar zu machen; `FALSE` auf die Eigenschaft schreibgeschützt machen. Der Standardwert ist `TRUE`.  
+ True, um die Eigenschaft bearbeitbar zu machen. FALSE, wenn die Eigenschaft schreibgeschützt machen. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -424,7 +424,7 @@ CMFCPropertyGridProperty(
   
 ### <a name="parameters"></a>Parameter  
  [in] *StrGroupName*  
- Der Gruppenname. Ein *Gruppe* ist eine Auflistung von zugehörigen Eigenschaften in einem Eigenschaftenraster-Steuerelement. Wenn das Steuerelement hierarchisch angezeigt wird der *Gruppenname* wird als Kategorietitel in der Zeile über der Gruppe angezeigt.  
+ Der Gruppenname. Ein *Gruppe* ist eine Sammlung verwandter Eigenschaften in einem Eigenschaftenraster-Steuerelement. Wenn das Steuerelement hierarchisch angezeigt wird der *Gruppenname* als Kategorietitel in der Zeile über der Gruppe angezeigt wird.  
   
  [in] *DwData*  
  Anwendungsspezifische Daten, z. B. eine ganze Zahl oder ein Zeiger auf andere Daten, die der Eigenschaft zugeordnet ist. Der Standardwert ist 0.  
@@ -436,24 +436,24 @@ CMFCPropertyGridProperty(
  Der Eigenschaftswert.  
   
  [in] *LpszDescr*  
- Die Beschreibung der Eigenschaft. Der Standardwert ist `NULL`.  
+ Beschreibung der Eigenschaft. Der Standardwert ist NULL.  
   
  [in] *LpszEditMask*  
- Die Maske bearbeiten, wenn die Eigenschaft eine MaskedEdit-Steuerelement ist. Der Standardwert ist `NULL`.  
+ Die Maske bearbeiten, wenn die Eigenschaft, ein maskiertes Bearbeitungssteuerelement ist. Der Standardwert ist NULL.  
   
  [in] *LpszEditTemplate*  
- Die Bearbeitungsvorlage, wenn die Eigenschaft eine MaskedEdit-Steuerelement ist. Der Standardwert ist `NULL`.  
+ Die Bearbeitungsvorlage, wenn die Eigenschaft, ein maskiertes Bearbeitungssteuerelement ist. Der Standardwert ist NULL.  
   
  [in] *LpszValidChars*  
- Eine Liste der gültigen Zeichen, wenn die Eigenschaft eine MaskedEdit-Steuerelement ist. Der Standardwert ist `NULL`.  
+ Eine Liste der gültigen Zeichen, wenn die Eigenschaft, ein maskiertes Bearbeitungssteuerelement ist. Der Standardwert ist NULL.  
   
  [in] *bIsValueList*  
- `TRUE` Wenn die Eigenschaft eine Liste von Werten darstellt; `FALSE` , wenn die Eigenschaft auf einen einzelnen Wert darstellt. Der Standardwert ist `FALSE`.  
+ True, wenn die Eigenschaft eine Liste von Werten darstellt. "False", wenn die Eigenschaft auf einen einzelnen Wert darstellt. Der Standardwert ist "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="createcombo"></a>  CMFCPropertyGridProperty::CreateCombo  
- Wird aufgerufen, durch das Framework einer Eigenschaft ein Kombinationsfeld hinzu.  
+ Wird aufgerufen, durch das Framework eine Eigenschaft ein Kombinationsfeld hinzu.  
   
 ```  
 virtual CComboBox* CreateCombo(
@@ -463,7 +463,7 @@ virtual CComboBox* CreateCombo(
   
 ### <a name="parameters"></a>Parameter  
  [in] *pWndParent*  
- Ein Zeiger auf das übergeordnete Fenster des Kombinationsfelds.  
+ Zeiger auf das übergeordnete Fenster des Kombinationsfelds.  
   
  [in] *Rect*  
  Das umschließende Rechteck des Kombinationsfelds.  
@@ -487,18 +487,18 @@ virtual CWnd* CreateInPlaceEdit(
  Das umschließende Rechteck des Steuerelements bearbeitet werden.  
   
  [in] *bDefaultFormat*  
- `TRUE` um das Standardformat für die Eigenschaft verwenden, um den Text des Steuerelements bearbeitbar festlegen; andernfalls `FALSE`.  
+ TRUE, um das Standardformat für die Eigenschaft verwenden, legen Sie den Text des Steuerelements bearbeitet werden; andernfalls "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die editierbaren Steuerelement, wenn diese Methode erfolgreich ist; andernfalls `NULL`.  
+ Ein Zeiger auf die editierbaren Steuerelement, wenn diese Methode erfolgreich ist; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode verwendet die Werte von der *VarValue*, *LpszEditMask*, *LpszEditTemplate*, und *LpszValidChars* Parameter im angegebenen der [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) Klassenkonstruktor. Diese Methode unterstützt standardmäßig die *VarValue* variant-Typen. Dies schließt `VT_BSTR`, `VT_R4`, `VT_R8`, `VT_UI1`, `VT_I2`, `VT_INT`, `VT_UINT`, `VT_I4`, `VT_UI2`, `VT_UI4`, und `VT_BOOL`.  
+ Diese Methode verwendet die Werte von der *VarValue*, *LpszEditMask*, *LpszEditTemplate*, und *LpszValidChars* Parameter Angabe in der [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) Klassenkonstruktor. Diese Methode unterstützt standardmäßig die *VarValue* variant-Typen. Dies schließt VT_BSTR, VT_R4, VT_R8, VT_UI1, VT_I2, VT_INT, VT_UINT, VT_I4, VT_UI2, VT_UI4, und VT_BOOL.  
   
- Diese Methode erstellt eine [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) steuern, wenn ein oder mehrere der *LpszEditMask*, *LpszEditTemplate*, oder *LpszValidChars* Parameter werden angegeben. Andernfalls erstellt sie eine [CEdit](../../mfc/reference/cedit-class.md) Steuerelement.  
+ Diese Methode erstellt eine [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) steuern, wenn eine oder mehrere der *LpszEditMask*, *LpszEditTemplate*, oder *LpszValidChars* Parameter werden angegeben. Erstellt andernfalls einen [CEdit](../../mfc/reference/cedit-class.md) Steuerelement.  
   
 ##  <a name="createspincontrol"></a>  CMFCPropertyGridProperty::CreateSpinControl  
- Wird aufgerufen, durch das Framework einer bearbeitbaren Drehfeld-Steuerelement zu erstellen.  
+ Wird aufgerufen, durch das Framework, um eine bearbeitbare Drehfeld-Steuerelement zu erstellen.  
   
 ```  
 virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
@@ -506,10 +506,10 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
   
 ### <a name="parameters"></a>Parameter  
  [in] *RectSpin*  
- Ein Rechteck, das definiert, wo die bearbeitbaren Drehfeld-Steuerelement erstellt wird.  
+ Ein Rechteck, das definiert, wo das bearbeitbare Drehfeld-Steuerelement erstellt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf ein neues [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md) -Objekt, das als Zeiger auf geworfen wird eine [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md) Objekt.  
+ Ein Zeiger auf ein neues [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md) -Objekt, das als Zeiger auf umgewandelt wird eine [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md) Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie die [CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol) Methode, um eine bearbeitbare Drehfeld-Steuerelement am rechten Rand der Eigenschaft anzuzeigen.  
@@ -523,12 +523,12 @@ void Enable(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] *bAktivieren*  
- `TRUE` So aktivieren Sie die Eigenschaft; `FALSE` So deaktivieren Sie die Eigenschaft. Deaktivierte Eigenschaften nicht auf Maus- und Tastatureingaben reagieren. Der Standardwert ist `TRUE`.  
+ True, zum Aktivieren der Eigenschaft. So deaktivieren Sie die Eigenschaft wird false ZURÜCKGEGEBEN. Deaktivierte Eigenschaften reagieren nicht auf die Maus- und Tastatureingaben. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="enablespincontrol"></a>  CMFCPropertyGridProperty::EnableSpinControl  
- Aktiviert oder deaktiviert ein Drehfeld-Steuerelement, das zum Ändern eines Eigenschaftswerts verwendet wird.  
+ Aktiviert oder deaktiviert ein Drehfeld-Steuerelement, das verwendet wird, um einen Eigenschaftswert zu ändern.  
   
 ```  
 void EnableSpinControl(
@@ -539,21 +539,21 @@ void EnableSpinControl(
   
 ### <a name="parameters"></a>Parameter  
  [in] *bAktivieren*  
- `TRUE` So aktivieren Sie das Drehfeld-Steuerelement; `FALSE` So deaktivieren Sie das Drehfeld-Steuerelement. Der Standardwert ist `TRUE`.  
+ "True", um das Drehfeld-Steuerelement zu aktivieren; So deaktivieren Sie das Drehfeld-Steuerelement wird false ZURÜCKGEGEBEN. Der Standardwert ist "true".  
   
- [in] *nMin*  
- Der kleinste Wert, der dem Drehfeld-Steuerelement. Der Standardwert ist 0.  
+ [in] *nmin.*  
+ Der minimale Wert, der das Drehfeld-Steuerelement. Der Standardwert ist 0.  
   
- [in] *nMax*  
- Der maximale Wert für das Drehfeld-Steuerelement. Der Standardwert ist 0.  
+ [in] *nmax.*  
+ Der maximale Wert, der das Drehfeld-Steuerelement. Der Standardwert ist 0.  
   
 ### <a name="remarks"></a>Hinweise  
  Das Framework erstellt automatisch ein Drehfeld-Steuerelement, wenn eine Eigenschaft gerade bearbeitet werden.  
   
- Der Eigenschaftentyp, der durch angegeben ist die *VarValue* Parameter von der [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) Konstruktor, muss ein unterstützter variant-Typ sein. Andernfalls überprüft diese Methode im Debugmodus. Unterstützt die folgenden Anweisungstypen `VT_INT`, `VT_UINT`, `VT_I2`, `VT_I4`, `VT_UI2`, und `VT_UI4`.  
+ Der Eigenschaftentyp, die von angegeben wird die *VarValue* Parameter, der die [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) Konstruktor muss ein variant-Typ unterstützt werden. Bestätigt, andernfalls diese Methode, im Debugmodus befindet. Die unterstützten Typen gehören VT_INT, VT_UINT, VT_I2, VT_I4, VT_UI2 und VT_UI4.  
   
 ##  <a name="expand"></a>  CMFCPropertyGridProperty::Expand  
- Erweitert oder reduziert eine Eigenschaft, die untergeordneten Eigenschaften enthält.  
+ Erweitert oder reduziert eine Eigenschaft, die untergeordnete Eigenschaften enthält.  
   
 ```  
 void Expand(BOOL bExpand=TRUE);
@@ -561,7 +561,7 @@ void Expand(BOOL bExpand=TRUE);
   
 ### <a name="parameters"></a>Parameter  
  [in] *bExpand*  
- `TRUE` Erweitern Sie die Eigenschaft; "False", um die Eigenschaft zu reduzieren. Der Standardwert ist `TRUE`.  
+ True, um die Eigenschaft zu erweitern. "False", um die Eigenschaft zu reduzieren. Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -579,20 +579,20 @@ virtual CString FormatProperty();
  Diese Methode wird vom Framework aufgerufen, bevor Sie den Wert der Eigenschaft angezeigt wird.  
   
 ##  <a name="getdata"></a>  CMFCPropertyGridProperty::GetData  
- Ruft ab einen `DWORD` Wert, der einer Eigenschaft zugeordnet ist.  
+ Ruft ab einen DWORD-Wert, der einer Eigenschaft zugeordnet ist.  
   
 ```  
 DWORD_PTR GetData() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `DWORD`-Wert.  
+ Ein DWORD-Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die zurückgegebenen Daten ist eine anwendungsspezifische-Wert, z. B. eine Zahl oder ein Zeiger auf andere Daten. Geben Sie den Datenwert, wenn Sie die Eigenschaft erstellen oder beim Aufrufen der [CMFCPropertyGridProperty::SetData](#setdata) Methode.  
+ Die Daten, die zurückgegeben werden, ist eine anwendungsspezifische-Wert, z. B. eine Zahl oder ein Zeiger auf andere Daten. Geben Sie den Datenwert, wenn Sie die Eigenschaft erstellen oder beim Aufrufen der [CMFCPropertyGridProperty::SetData](#setdata) Methode.  
   
 ##  <a name="getdescription"></a>  CMFCPropertyGridProperty::GetDescription  
- Ruft eine Beschreibung der Eigenschaft ab.  
+ Ruft die Beschreibung einer Eigenschaft ab.  
   
 ```  
 const CString& GetDescription() const;  
@@ -602,7 +602,7 @@ const CString& GetDescription() const;
  Eine Textzeichenfolge, die die Beschreibung der Eigenschaft enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Eigenschaftenlisten-Steuerelement verwendet diese Methode auch zum Anzeigen der Beschreibung der Eigenschaft.  
+ Eigenschaftenlisten-Steuerelement verwendet diese Methode auch zur Anzeige der Beschreibung der Eigenschaft.  
   
 ##  <a name="getexpandedsubitems"></a>  CMFCPropertyGridProperty::GetExpandedSubItems  
  Ruft die Anzahl der erweiterten untergeordneten Elemente ab.  
@@ -615,7 +615,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *bIncludeHidden*|`TRUE` die Anzahl der ausgeblendeten untergeordneten Elemente einschließt; andernfalls `FALSE`. Der Standardwert ist `TRUE`.|  
+|[in] *bIncludeHidden*|True, um die ausgeblendeten untergeordneten Elemente in der Zählung enthalten. andernfalls "false". Der Standardwert ist "true".|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Anzahl der erweiterten untergeordneten Elemente.  
@@ -623,14 +623,14 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="gethierarchylevel"></a>  CMFCPropertyGridProperty::GetHierarchyLevel  
- Ruft den nullbasierten Index des Hierarchieebene für die Eigenschaft ab.  
+ Ruft den nullbasierten Index des Hierarchieebene der Eigenschaft ab.  
   
 ```  
 int GetHierarchyLevel() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Eigenschaft Hierarchieebene.  
+ Die Eigenschaft der hierarchischen Ebene.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -642,12 +642,12 @@ LPCTSTR GetName() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine Zeichenfolge, die den Namen der Eigenschaft enthält.  
+ Zeiger auf eine Zeichenfolge, die den Namen der Eigenschaft enthält.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getnametooltip"></a>  CMFCPropertyGridProperty::GetNameTooltip  
- Vom Framework aufgerufen, die den Namen der Eigenschaft in einer QuickInfo anzuzeigen.  
+ Wird aufgerufen, durch das Framework, um den Namen der Eigenschaft in einer QuickInfo anzuzeigen.  
   
 ```  
 virtual CString GetNameTooltip();
@@ -659,7 +659,7 @@ virtual CString GetNameTooltip();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getoption"></a>  CMFCPropertyGridProperty::GetOption  
- Ruft den Text der Optionen, die durch einen Index angegeben wird.  
+ Ruft den Text der Option, die durch einen Index angegeben wird.  
   
 ```  
 LPCTSTR GetOption(int nIndex) const;  
@@ -670,25 +670,25 @@ LPCTSTR GetOption(int nIndex) const;
  Der nullbasierte Index des Listenelements Eigenschaft (Option) abgerufen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine Zeichenfolge, die Optionstext enthält.  
+ Zeiger auf eine Zeichenfolge, die Optionstext enthält.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getoptioncount"></a>  CMFCPropertyGridProperty::GetOptionCount  
- Ruft die Anzahl der Optionen, die auf eine Eigenschaft gehören.  
+ Ruft die Anzahl von Optionen, die auf eine Eigenschaft gehört.  
   
 ```  
 int GetOptionCount() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl der Eigenschaft-Listenelemente (Optionen), die in das Eigenschaftensteuerelement enthalten sind.  
+ Die Anzahl der Eigenschaft Auflisten von Elementen (Optionen), die in das Eigenschaftensteuerelement enthalten sind.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie die [CMFCPropertyGridProperty::AddOption](#addoption) Methode, um die Elemente der Eigenschaftenliste hinzufügen. Rufen Sie die [CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions) Methode, um alle Elemente zu entfernen.  
+ Rufen Sie die [CMFCPropertyGridProperty::AddOption](#addoption) Methode, um der Liste der Elemente hinzugefügt werden. Rufen Sie die [CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions) Methode, um alle Elemente zu entfernen.  
   
 ##  <a name="getoriginalvalue"></a>  CMFCPropertyGridProperty::GetOriginalValue  
- Ruft den ersten Wert der aktuellen Eigenschaft.  
+ Ruft den Anfangswert der aktuellen Eigenschaft ab.  
   
 ```  
 const COleVariant& GetOriginalValue() const;  
@@ -700,17 +700,17 @@ const COleVariant& GetOriginalValue() const;
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um die Auswirkungen eines Bearbeitungsvorgangs rückgängig zu machen, die den Wert der aktuellen Eigenschaft ändert.  
   
- Der ursprüngliche Wert der aktuellen Eigenschaft wird festgelegt, indem die [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) Konstruktor geändert, indem die [CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue) Methode , und zurücksetzen, indem Sie die [cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue) Methode.  
+ Der ursprüngliche Wert der aktuellen Eigenschaft wird festgelegt, durch die [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) Konstruktor geändert, indem die [CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue) Methode , und durch Zurücksetzen der [cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue) Methode.  
   
 ##  <a name="getparent"></a>  CMFCPropertyGridProperty::GetParent  
- Ruft einen Zeiger auf eine Parent-Eigenschaft ab.  
+ Ruft einen Zeiger auf einer übergeordneten Eigenschaft ab.  
   
 ```  
 CMFCPropertyGridProperty* GetParent() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine Eigenschaft des übergeordneten Objekts, oder `NULL` für die Eigenschaft der obersten Ebene.  
+ Ein Zeiger auf ein übergeordnetes Objekt oder NULL für die Eigenschaft der obersten Ebene.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -727,7 +727,7 @@ CRect GetRect() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getsubitem"></a>  CMFCPropertyGridProperty::GetSubItem  
- Ruft eine untergeordnete Eigenschaft identifiziert, die durch einen nullbasierten Index ab.  
+ Ruft eine untergeordnete Eigenschaft, die durch einen nullbasierten Index identifiziert ab.  
   
 ```  
 CMFCPropertyGridProperty* GetSubItem(int nIndex) const;  
@@ -742,7 +742,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
   
  - oder -   
   
- Im Modus "Retail" `NULL` Wenn die *nIndex* Parameter ist ungültig. Im Debugmodus befindet gibt diese Methode.  
+ Im Modus "Retail" NULL, wenn die *nIndex* -Parameter ist ungültig. Im Debugmodus befindet bestätigt diese Methode.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -766,19 +766,19 @@ virtual const _variant_t& GetValue() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Variant-Wert, der den Eigenschaftswert enthält.  
+ Eine Variante, die den Eigenschaftswert enthält.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getvaluetooltip"></a>  CMFCPropertyGridProperty::GetValueTooltip  
- Vom Framework aufgerufen, die Textdarstellung des Werts der abzurufen, die dann in einer QuickInfo angezeigt wird.  
+ Wird aufgerufen, durch das Framework, um die Textdarstellung des Werts der abzurufen, die dann in einer QuickInfo angezeigt werden.  
   
 ```  
 virtual CString GetValueTooltip();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `CString` Objekt, das die Textdarstellung des Werts der enthält. Standardmäßig ist dieser Wert die leere Zeichenfolge.  
+ Ein `CString` -Objekt, das die Textdarstellung des Eigenschaftswerts enthält. Standardmäßig ist dieser Wert die leere Zeichenfolge.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -790,12 +790,12 @@ virtual BOOL HasButton() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn eine Eigenschaft einer Schaltfläche (oder Eigenschaftenliste) enthält. andernfalls `FALSE`.  
+ TRUE, wenn eine Eigenschaft enthält eine Schaltfläche (oder Eigenschaftenliste) andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="hittest"></a>  CMFCPropertyGridProperty::HitTest  
- Verweist auf das Property-Objekt, das das Listenelement Eigenschaft entspricht, das einen Punkt entspricht.  
+ Verweist auf das Property-Objekt, das das Listenelement für die Eigenschaft entspricht, der ein Punkt entspricht.  
   
 ```  
 CMFCPropertyGridProperty* HitTest(
@@ -817,22 +817,22 @@ CMFCPropertyGridProperty* HitTest(
  Der Punkt zu testen, in Clientkoordinaten.  
   
  [out] *PnArea*  
- Rückkehr dieser Methode angibt den Bereich, der den angegebenen Punkt enthält. Weitere Informationen finden Sie in den Hinweisen. Der Standardwert ist `NULL`.  
+ Bei der Rückgabe dieser Methode gibt den Bereich, der den angegebenen Punkt enthält. Weitere Informationen finden Sie in den Hinweisen. Der Standardwert ist NULL.  
   
  [in] *bPropsOnly*  
- `TRUE` So testen Sie einen beliebigen Bereich in das Eigenschaftensteuerelement; `FALSE` nur der Bereich der Beschreibung zu testen. Der Standardwert ist `FALSE`.  
+ True, um einen Bereich in das Eigenschaftensteuerelement zu testen. "False", um nur den Beschreibungsbereich zu testen. Der Standardwert ist "false".  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf ein Eigenschaftenobjekt oder `NULL`.  
+ Ein Zeiger auf ein Eigenschaftenobjekt oder NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig prüft diese Methode Unterelemente Eigenschaft aus, wenn der angegebene Punkt innerhalb der Items-Eigenschaft nicht gefunden wird.  
+ Diese Methode prüft standardmäßig untergeordnete die Items-Eigenschaft, wenn der angegebene Punkt in einer beliebigen, von der Items-Eigenschaft nicht gefunden wird.  
   
- Die folgende Tabelle enthält die Werte, die zurückgegeben werden können die *PnArea* Parameter.  
+ Die folgende Tabelle enthält die Werte, die zurückgegeben werden, können, die *PnArea* Parameter.  
   
 |Bereich|Beschreibung|  
 |----------|-----------------|  
-|`ClickArea::ClickExpandBox`|Das Erweitern-Steuerelement, das durch ein Pluszeichen (+) bezeichnet wird.|  
+|`ClickArea::ClickExpandBox`|Das Erweitern-Steuerelement, diese wird durch ein Pluszeichen (+) bezeichnet.|  
 |`ClickArea::ClickName`|Der Eigenschaftenname.|  
 |`ClickArea::ClickValue`|Der Eigenschaftswert.|  
   
@@ -846,14 +846,14 @@ void Init();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="isallowedit"></a>  CMFCPropertyGridProperty::IsAllowEdit  
- Gibt an, ob eine Eigenschaft bearbeitbar ist.  
+ Gibt an, ob eine Eigenschaft bearbeitet werden kann.  
   
 ```  
 BOOL IsAllowEdit() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Eigenschaft bearbeitet werden kann; andernfalls `FALSE`.  
+ True, wenn die Eigenschaft bearbeitet werden kann. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -865,7 +865,7 @@ BOOL IsEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Eigenschaft aktiviert ist; `FALSE` , wenn die Eigenschaft deaktiviert ist.  
+ True, wenn die Eigenschaft aktiviert ist. "False", wenn die Eigenschaft deaktiviert ist.  
   
 ### <a name="remarks"></a>Hinweise  
  Erfahren Sie, ob eine Eigenschaft aktiviert oder deaktiviert ist.  
@@ -878,7 +878,7 @@ BOOL IsExpanded() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Eigenschaft erweitert ist; `FALSE` gegebenenfalls die Eigenschaft.  
+ True, wenn die Eigenschaft erweitert wird. "False", wenn die Eigenschaft vollständig reduziert ist.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -890,32 +890,32 @@ BOOL IsGroup() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die aktuelle Property-Objekt eine Gruppe darstellt; `FALSE` , wenn die Eigenschaft einen Wert darstellt.  
+ True, wenn das aktuelle Eigenschaftenobjekt eine Gruppe darstellt. "False", wenn die Eigenschaft einen Wert darstellt.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein *Gruppe* ist eine Auflistung von zugehörigen Eigenschaften in einem Eigenschaftenraster-Steuerelement. Wenn das Steuerelement hierarchisch angezeigt wird der *Gruppenname* wird als Kategorietitel in der Zeile über der Gruppe angezeigt.  
+ Ein *Gruppe* ist eine Sammlung verwandter Eigenschaften in einem Eigenschaftenraster-Steuerelement. Wenn das Steuerelement hierarchisch angezeigt wird der *Gruppenname* als Kategorietitel in der Zeile über der Gruppe angezeigt wird.  
   
 ##  <a name="isinplaceediting"></a>  CMFCPropertyGridProperty::IsInPlaceEditing  
- Gibt an, ob die aktuelle Eigenschaft bearbeitbar ist.  
+ Gibt an, ob die aktuelle Eigenschaft bearbeitet werden kann.  
   
 ```  
 BOOL IsInPlaceEditing() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die aktuelle Eigenschaft bearbeitet werden kann; andernfalls `FALSE`.  
+ True, wenn die aktuelle Eigenschaft bearbeitet werden kann. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="ismodified"></a>  CMFCPropertyGridProperty::IsModified  
- Gibt an, ob die aktuelle Eigenschaft geändert wird.  
+ Gibt an, ob die current-Eigenschaft geändert wurde.  
   
 ```  
 BOOL IsModified() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Eigenschaft geändert wird; andernfalls `FALSE`.  
+ True, wenn die Eigenschaft geändert wird. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -927,7 +927,7 @@ BOOL IsParentExpanded() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn alle übergeordneten Elemente der aktuellen Eigenschaft erweitert werden; `FALSE` , wenn die Eigenschaften des übergeordneten reduziert werden.  
+ True, wenn alle übergeordneten Elemente der aktuellen Eigenschaft erweitert werden. FALSE, wenn die übergeordneten Eigenschaften reduziert werden.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -939,12 +939,12 @@ virtual BOOL IsSelected() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die aktuelle Eigenschaft ausgewählt ist. andernfalls `FALSE`.  
+ True, wenn die aktuelle Eigenschaft ausgewählt ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="issubitem"></a>  CMFCPropertyGridProperty::IsSubItem  
- Gibt an, ob die angegebene Eigenschaft eines untergeordneten Elements der aktuellen Eigenschaft.  
+ Gibt an, ob die angegebene Eigenschaft eines untergeordneten Elements der aktuellen Eigenschaft ist.  
   
 ```  
 BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;  
@@ -955,7 +955,7 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
  Ein Zeiger auf eine Eigenschaft.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die angegebene Eigenschaft eines untergeordneten Elements der aktuellen Eigenschaft ist. andernfalls `FALSE`.  
+ True, wenn die angegebene Eigenschaft eines untergeordneten Elements der aktuellen Eigenschaft. andernfalls "false".  
   
 ##  <a name="isvaluechanged"></a>  CMFCPropertyGridProperty::IsValueChanged  
  Gibt an, ob der Wert der aktuellen Eigenschaft geändert hat.  
@@ -965,19 +965,19 @@ virtual BOOL IsValueChanged() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn sich der Wert der aktuellen Eigenschaft geändert hat andernfalls `FALSE`.  
+ True, wenn der Wert der aktuellen Eigenschaft geändert hat. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="isvisible"></a>  CMFCPropertyGridProperty::IsVisible  
- Gibt an, ob die aktuelle Eigenschaft sichtbar ist.  
+ Gibt an, ob die current-Eigenschaft sichtbar ist.  
   
 ```  
 BOOL IsVisible() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die aktuelle Eigenschaft sichtbar ist; andernfalls `FALSE`.  
+ True, wenn die aktuelle Eigenschaft sichtbar ist. andernfalls "FALSE".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1000,7 +1000,7 @@ static CString m_strFormatFloat;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="m_strformatlong"></a>  CMFCPropertyGridProperty::m_strFormatLong  
- Enthält eine Formatzeichenfolge für einen Wert vom Typ long.  
+ Enthält eine Formatzeichenfolge für einen Wert vom Typ "long".  
   
 ```  
 static CString m_strFormatLong;  
@@ -1026,10 +1026,10 @@ virtual void OnClickButton(CPoint point);
   
 ### <a name="parameters"></a>Parameter  
  [in] *zeigen*  
- Einen Punkt, in Clientkoordinaten.  
+ Ein Punkt in Clientkoordinaten.  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig wird diese Methode keine Aktion ausgeführt.  
+ Standardmäßig führt diese Methode keine Aktion.  
   
 ##  <a name="onclickname"></a>  CMFCPropertyGridProperty::OnClickName  
  Wird von einem übergeordneten Eigenschaftenlisten-Steuerelement aufgerufen, klickt ein Benutzer das Namensfeld einer Eigenschaft.  
@@ -1042,13 +1042,13 @@ virtual void OnClickName(CPoint C);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *C*|Einen Punkt, in Clientkoordinaten.|  
+|[in] *C*|Ein Punkt in Clientkoordinaten.|  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig wird diese Methode keine Aktion ausgeführt.  
+ Standardmäßig führt diese Methode keine Aktion.  
   
 ##  <a name="onclickvalue"></a>  CMFCPropertyGridProperty::OnClickValue  
- Wird von einem übergeordneten Eigenschaftenlisten-Steuerelement aufgerufen, klickt ein Benutzer das Wertefeld einer Eigenschaft.  
+ Wird von einem übergeordneten Eigenschaftenlisten-Steuerelement aufgerufen, klickt ein Benutzer das Feld eine Eigenschaft mit dem Wert.  
   
 ```  
 virtual BOOL OnClickValue(
@@ -1058,19 +1058,19 @@ virtual BOOL OnClickValue(
   
 ### <a name="parameters"></a>Parameter  
  [in] *UiMsg*  
- Eine Maus-Meldung.  
+ Eine mausmeldung.  
   
  [in] *zeigen*  
- Einen Punkt, in Clientkoordinaten.  
+ Ein Punkt in Clientkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn von dieser Methode das angegebene Maus-Nachricht verarbeitet wird; andernfalls `FALSE`.  
+ True, wenn die angegebene Maus-Nachricht, die von dieser Methode verarbeitet wird. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig gibt diese Methode `FALSE` , wenn die aktuelle Eigenschaft nicht bearbeitbar ist. Andernfalls die bearbeiten oder ein Drehfeld-Steuerelement, das mit dieser Eigenschaft verknüpft ist, die angegebene Maus-Nachricht verarbeitet, und klicken Sie dann diese Methode gibt `TRUE`.  
+ Standardmäßig gibt diese Methode "false" zurück, wenn die current-Eigenschaft nicht bearbeitet werden kann. Andernfalls die bearbeiten oder ein Drehfeld-Steuerelement, das mit dieser Eigenschaft verbunden ist, verarbeitet die angegebenen Maus-Nachricht, und klicken Sie dann diese Methode gibt "true" zurück.  
   
 ##  <a name="onclosecombo"></a>  CMFCPropertyGridProperty::OnCloseCombo  
- Vom Framework aufgerufen, wenn ein Kombinationsfeld, die in einer Eigenschaft enthalten sind, geschlossen wird.  
+ Vom Framework aufgerufen, wenn ein Kombinationsfeld, die in einer Eigenschaft enthalten ist, geschlossen wird.  
   
 ```  
 virtual void OnCloseCombo();
@@ -1079,7 +1079,7 @@ virtual void OnCloseCombo();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="onctlcolor"></a>  CMFCPropertyGridProperty::OnCtlColor  
- Vom Framework aufgerufen, wenn einen Pinsel, füllen Sie die Farbe des Hintergrunds einer Eigenschaft abgerufen werden muss.  
+ Vom Framework aufgerufen, wenn er einen Pinsel, füllen Sie die Hintergrundfarbe einer Eigenschaft abrufen muss.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -1095,12 +1095,12 @@ virtual HBRUSH OnCtlColor(
  (Dieser Parameter wird nicht verwendet.)  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Handle in einen Pinsel, wenn diese Methode erfolgreich ist; andernfalls `NULL`.  
+ Das Handle in einen Pinsel, wenn diese Methode erfolgreich ausgeführt wird. andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="ondblclk"></a>  CMFCPropertyGridProperty::OnDblClk  
- Vom Framework aufgerufen, wenn der Benutzer auf eine Eigenschaft doppelklickt.  
+ Wird vom Framework aufgerufen, wenn der Benutzer eine Eigenschaft doppelklickt.  
   
 ```  
 virtual BOOL OnDblClk(CPoint point);
@@ -1108,16 +1108,16 @@ virtual BOOL OnDblClk(CPoint point);
   
 ### <a name="parameters"></a>Parameter  
  [in] *zeigen*  
- Einen Punkt, in Clientkoordinaten.  
+ Ein Punkt in Clientkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig wird diese Methode das nächste Eigenschaftenelement in der Eigenschaftenlisten-Steuerelement ausgewählt.  
+ Standardmäßig wählt diese Methode das nächste Eigenschaftenelement in der Eigenschaftenlisten-Steuerelement.  
   
 ##  <a name="ondestroywindow"></a>  CMFCPropertyGridProperty::OnDestroyWindow  
- Vom Framework aufgerufen, wenn eine Eigenschaft zerstört wird oder wenn die Bearbeitung beendet wird.  
+ Wird vom Framework aufgerufen, wenn eine Eigenschaft zerstört wird oder wenn Bearbeitung abgeschlossen ist.  
   
 ```  
 virtual void OnDestroyWindow();
@@ -1126,7 +1126,7 @@ virtual void OnDestroyWindow();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="ondrawbutton"></a>  CMFCPropertyGridProperty::OnDrawButton  
- Wird aufgerufen, durch das Framework eine Schaltfläche gezeichnet werden soll, die in einer Eigenschaft enthalten ist.  
+ Wird aufgerufen, durch das Framework, um eine Schaltfläche zeichnen, die in einer Eigenschaft enthalten ist.  
   
 ```  
 virtual void OnDrawButton(
@@ -1139,12 +1139,12 @@ virtual void OnDrawButton(
  Ein Zeiger zu einem Gerätekontext.  
   
  [in] *RectButton*  
- Ein umschließendes Rechteck, das angibt, wo Sie eine Schaltfläche gezeichnet werden soll.  
+ Ein umgebendes Rechteck, das angibt, wo Sie eine Schaltfläche zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="ondrawdescription"></a>  CMFCPropertyGridProperty::OnDrawDescription  
- Wird aufgerufen, durch das Framework die eigenschaftenbeschreibung gezeichnet werden soll.  
+ Wird aufgerufen, durch das Framework, um die Beschreibung der Eigenschaft zu zeichnen.  
   
 ```  
 virtual void OnDrawDescription(
@@ -1157,13 +1157,13 @@ virtual void OnDrawDescription(
  Ein Zeiger zu einem Gerätekontext.  
   
  [in] *Rect*  
- Ein umschließendes Rechteck, das angibt, wo Sie die Beschreibung der Eigenschaft zu zeichnen.  
+ Ein umgebendes Rechteck, das angibt, wo Sie die Beschreibung der Eigenschaft zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig zeichnet diese Methode den Eigenschaftennamen und die Beschreibung in der von der übergeordneten Eigenschaftenlisten-Steuerelement verwendete Schriftart an. Die Beschreibung der Eigenschaft im regulären Format gezeichnet, und den Namen der Eigenschaft in fett gezeichnet wird.  
+ Standardmäßig zeichnet diese Methode den Eigenschaftennamen und die Beschreibung in der Schriftart, die von der übergeordneten Eigenschaftenlisten-Steuerelement verwendet. Die Beschreibung der Eigenschaft im regulären Format gezeichnet wird und der Eigenschaftennamen in fettformatierung gezeichnet wird.  
   
 ##  <a name="ondrawexpandbox"></a>  CMFCPropertyGridProperty::OnDrawExpandBox  
- Wird aufgerufen, durch das Framework zum Erweitern einer Eigenschaft in der Nähe ein Steuerelements zu zeichnen, die untergeordneten Eigenschaften enthält.  
+ Wird aufgerufen, durch das Framework erweitern Sie in der Nähe von einer Eigenschaft ein Steuerelements zu zeichnen, die untergeordnete Eigenschaften enthält.  
   
 ```  
 virtual void OnDrawExpandBox(
@@ -1176,10 +1176,10 @@ virtual void OnDrawExpandBox(
  Ein Zeiger zu einem Gerätekontext.  
   
  [in] *RectExpand*  
- Ein umschließendes Rechteck, das angibt, wo das Steuerelement erweitern gezeichnet werden soll.  
+ Ein umgebendes Rechteck, das angibt, wo das Erweitern-Steuerelement zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
- Klicken Sie auf das Steuerelement zum Erweitern oder reduzieren Sie eine Liste der untergeordneten Eigenschaften erweitern. Das Steuerelement erweitern erhalten Sie, ein Quadrat, die ein Pluszeichen (+) oder Minuszeichen (-). Ein Pluszeichen (+) gibt an, dass die Eigenschaft erweitert werden kann, um eine Liste der untergeordneten Eigenschaften anzuzeigen. Ein Minuszeichen (-) gibt an, dass die Liste reduziert werden kann, um nur die Eigenschaft anzuzeigen.  
+ Klicken Sie auf das Steuerelement zum Erweitern oder reduzieren eine Liste der untergeordneten Eigenschaften erweitern. Erhalten Sie das Steuerelement erweitern, ein Quadrat, das enthält ein Pluszeichen (+) oder Minuszeichen (-). Ein Pluszeichen (+) gibt an, dass die Eigenschaft erweitert werden kann, um eine Liste der untergeordneten Eigenschaften anzuzeigen. Ein Minuszeichen (-) gibt an, dass die Liste reduziert werden kann, um nur die Eigenschaft anzuzeigen.  
   
 ##  <a name="ondrawname"></a>  CMFCPropertyGridProperty::OnDrawName  
  Wird aufgerufen, durch das Framework der Eigenschaftenname angezeigt.  
@@ -1195,7 +1195,7 @@ virtual void OnDrawName(
  Ein Zeiger zu einem Gerätekontext.  
   
  [in] *Rect*  
- Ein umschließendes Rechteck, das angibt, wo Sie den Namen der Eigenschaft zu zeichnen.  
+ Ein umgebendes Rechteck, das angibt, wo Sie den Namen der Eigenschaft zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1213,7 +1213,7 @@ virtual void OnDrawValue(
  Ein Zeiger zu einem Gerätekontext.  
   
  [in] *Rect*  
- Ein umschließendes Rechteck, das angibt, wo Sie den Eigenschaftswert zu zeichnen.  
+ Ein umgebendes Rechteck, das angibt, wo Sie den Wert der Eigenschaft zu zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1229,23 +1229,23 @@ virtual BOOL OnEdit(LPPOINT lptClick);
  (Dieser Parameter wird nicht verwendet.) Ein Zeiger auf einen Punkt, in Clientkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Bearbeitungsoperation wurde erfolgreich gestartet wird; andernfalls `FALSE`.  
+ True, wenn der Bearbeitungsvorgang erfolgreich gestartet wurde. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion wird vom Framework aufgerufen, wenn der Benutzer zum Ändern eines Eigenschaftswerts. Standardmäßig beginnt diese Methode den entsprechenden Editor für ein Kombinationsfeld-Steuerelement oder ein Drehfeld-Steuerelement.  
+ Diese Funktion wird vom Framework aufgerufen, wenn der Benutzer zum Ändern eines Eigenschaftswerts. Standardmäßig beginnt diese Methode den geeigneten Editor für ein Kombinationsfeld-Steuerelement oder ein Drehfeld-Steuerelement.  
   
 ##  <a name="onendedit"></a>  CMFCPropertyGridProperty::OnEndEdit  
- Vom Framework aufgerufen, nachdem der Benutzer wurde Ändern eines Eigenschaftswerts.  
+ Vom Framework aufgerufen, wenn der Benutzer abgeschlossen ist einen Eigenschaftswert ändern.  
   
 ```  
 virtual BOOL OnEndEdit();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt immer `TRUE` zurück.  
+ Diese Methode gibt immer "true" zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Wird standardmäßig diese Methode zerstört die aktuelle Bearbeitungssteuerelements und gibt dann zurück `TRUE`.  
+ Standardmäßig wird diese Methode zerstört die aktuelle Steuerelement zur Textbearbeitung, und gibt dann "true" zurück.  
   
 ##  <a name="onkillfocus"></a>  CMFCPropertyGridProperty::OnKillFocus  
  Wird vom Framework aufgerufen, wenn die Eigenschaft den Eingabefokus verliert.  
@@ -1258,13 +1258,13 @@ virtual BOOL OnKillFocus(CWnd*);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *CWnd*|(Nicht verwendet.) Ein Zeiger auf ein Fenster.|  
+|[in] *CWnd*|(Nicht verwendet.) Zeiger auf ein Fenster.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt immer `TRUE` zurück.  
+ Diese Methode gibt immer "true" zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig ist diese Methode nichts und gibt dann `TRUE`. Wenn Sie diese Methode überschreiben, zurückgeben `TRUE` , wenn das Framework die Bearbeitungsoperation enden kann, wenn die Eigenschaft den Eingabefokus verliert.  
+ Standardmäßig wird diese Methode führt keine Aktion aus und gibt dann "true" zurück. Wenn Sie diese Methode überschreiben, gibt WAHR zurück, wenn das Framework den Bearbeitungsvorgang beenden kann, wenn die Eigenschaft den Eingabefokus verliert.  
   
 ##  <a name="onkillselection"></a>  CMFCPropertyGridProperty::OnKillSelection  
 
@@ -1277,7 +1277,7 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
  [in] *CMFCPropertyGridProperty**  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig wird diese Methode keine Aktion ausgeführt.  
+ Standardmäßig führt diese Methode keine Aktion.  
   
 ##  <a name="onpossizechanged"></a>  CMFCPropertyGridProperty::OnPosSizeChanged  
 
@@ -1290,10 +1290,10 @@ virtual void OnPosSizeChanged(CRect);
  [in] *CRect*  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig wird diese Methode keine Aktion ausgeführt.  
+ Standardmäßig führt diese Methode keine Aktion.  
   
 ##  <a name="onrclickname"></a>  CMFCPropertyGridProperty::OnRClickName  
- Vom Framework aufgerufen, wenn der Benutzer mit die rechten Maustaste im Bereich der Eigenschaft "Name" klickt.  
+ Vom Framework aufgerufen, wenn der Benutzer mit die rechten Maustaste im Bereich Name "-Eigenschaft" klickt.  
   
 ```  
 virtual void OnRClickName(CPoint C);
@@ -1303,13 +1303,13 @@ virtual void OnRClickName(CPoint C);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *C*|Einen Punkt, in Clientkoordinaten.|  
+|[in] *C*|Ein Punkt in Clientkoordinaten.|  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig wird diese Methode keine Aktion ausgeführt.  
+ Standardmäßig führt diese Methode keine Aktion.  
   
 ##  <a name="onrclickvalue"></a>  CMFCPropertyGridProperty::OnRClickValue  
- Vom Framework aufgerufen, wenn der Benutzer mit die rechten Maustaste im Bereich der Eigenschaft "Wert" klickt.  
+ Vom Framework aufgerufen, wenn der Benutzer mit die rechten Maustaste in den Wertebereich für die Eigenschaft klickt.  
   
 ```  
 virtual void OnRClickValue(
@@ -1321,34 +1321,34 @@ virtual void OnRClickValue(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *C*|Einen Punkt, in Clientkoordinaten.|  
+|[in] *C*|Ein Punkt in Clientkoordinaten.|  
 |[in] *B*|Ein boolescher Wert.|  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig wird diese Methode keine Aktion ausgeführt und die *B* Parameter hat keine vordefinierten Zweck.  
+ Standardmäßig führt diese Methode keine Aktion und die *B* Parameter hat keine vordefinierten Zweck.  
   
 ##  <a name="onselectcombo"></a>  CMFCPropertyGridProperty::OnSelectCombo  
- Wird vom Framework aufgerufen, wenn der Benutzer ein Element aus dem bearbeitbaren Kombinationsfeld auswählt.  
+ Wird vom Framework aufgerufen, wenn der Benutzer ein Element aus dem bearbeitbare Kombinationsfeld auswählt.  
   
 ```  
 virtual void OnSelectCombo();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig verwendet diese Methode den Text des ausgewählten Elements um den Wert der Eigenschaft zu aktualisieren.  
+ Standardmäßig verwendet diese Methode den Text des ausgewählten Elements, um den Wert der Eigenschaft zu aktualisieren.  
   
 ##  <a name="onsetcursor"></a>  CMFCPropertyGridProperty::OnSetCursor  
- Vom Framework aufgerufen, wenn der Mauszeiger bewegt, um ein Eigenschaftenelement wird.  
+ Vom Framework aufgerufen, wenn der Mauszeiger auf einem Eigenschaftenlisten-Element verschoben wird.  
   
 ```  
 virtual BOOL OnSetCursor() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die aktuelle Eigenschaft ein variant-Typ oder eine Liste mit Werten ist, und diese Methode erfolgreich den Cursor einfügen Point (i lädt); andernfalls `FALSE`.  
+ True, wenn die aktuelle Eigenschaft ein variant-Typ oder eine Liste mit Werten ist aus, und diese Methode erfolgreich, den Cursor zeigen (i-Balken) einfügen lädt. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode unterstützt die folgenden Varianten-Typen: `VT_INT`, `VT_I2`, `VT_I4`, `VT_UINT`, `VT_UI1`, `VT_UI2`, `VT_UI4`, `VT_R4`, `VT_R8`, und `VT_BSTR`.  
+ Diese Methode unterstützt die folgenden variant-Typen: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 und VT_BSTR.  
   
 ##  <a name="onsetselection"></a>  CMFCPropertyGridProperty::OnSetSelection  
 
@@ -1361,7 +1361,7 @@ virtual void OnSetSelection(CMFCPropertyGridProperty*);
  [in] *CMFCPropertyGridProperty**  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig wird diese Methode keine Aktion ausgeführt.  
+ Standardmäßig führt diese Methode keine Aktion.  
   
 ##  <a name="onupdatevalue"></a>  Cmfcpropertygridproperty:: Onupdatevalue  
  Wird vom Framework aufgerufen, wenn der Wert einer änderbaren Eigenschaft geändert wurde.  
@@ -1371,12 +1371,12 @@ virtual BOOL OnUpdateValue();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn diese Methode erfolgreich ist; andernfalls `FALSE`.  
+ True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="pushchar"></a>  CMFCPropertyGridProperty::PushChar  
- Von der Eigenschaftenlisten-Steuerelement aufgerufen, wenn die Eigenschaft ausgewählt ist und der Benutzer ein neues Zeichen gibt.  
+ Wird vom Eigenschaftenlisten-Steuerelement aufgerufen, wenn die Eigenschaft ausgewählt ist, und der Benutzer ein neues Zeichen gibt.  
   
 ```  
 virtual BOOL PushChar(UINT nChar);
@@ -1387,10 +1387,10 @@ virtual BOOL PushChar(UINT nChar);
  Ein Zeichen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn die Bearbeitungsoperation fortgesetzt wird; andernfalls `FALSE`.  
+ True, wenn der Bearbeitungsvorgang fortgesetzt wird. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode unterstützt die Eigenschaft, die eine Liste mit Werten oder einen der folgenden Varianten-Typen ist: `VT_INT`, `VT_I2`, `VT_I4`, `VT_UINT`, `VT_UI1`, `VT_UI2`, `VT_UI4`, `VT_R4`, `VT_R8` , und `VT_BSTR`.  
+ Diese Methode unterstützt, eine Eigenschaft, die entweder eine Liste von Werten oder eine der folgenden Varianten-Typen ist: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 und VT_BSTR.  
   
 ##  <a name="redraw"></a>  CMFCPropertyGridProperty::Redraw  
  Zeichnet die Eigenschaft neu.  
@@ -1409,7 +1409,7 @@ void RemoveAllOptions();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Optionen sind auch die Listenelemente von einem Eigenschaftenlisten-Steuerelement.  
+ Optionen sind auch die Listenelemente eines ein Eigenschaftenlisten-Steuerelement.  
   
 ##  <a name="removesubitem"></a>  CMFCPropertyGridProperty::RemoveSubItem  
  Entfernt das angegebene untergeordnete Element.  
@@ -1422,15 +1422,15 @@ BOOL RemoveSubItem(
   
 ### <a name="parameters"></a>Parameter  
  [in] *pProp*  
- Ein Zeiger auf eine untergeordnete Eigenschaftenelement.  
+ Zeiger auf eine untergeordnete Eigenschaftenelement.  
   
  [in] *bLöschen*  
- `TRUE` der Property-Objekt zu löschen, die von angegeben wird die *pProp* Parameter ist, andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ True löschen das Property-Objekt, das angegeben wird, um die *pProp* Parameter ist, andernfalls FALSE. Der Standardwert ist "true".  
   
 ### <a name="return-value"></a>Rückgabewert  
   
 ### <a name="remarks"></a>Hinweise  
- Geben Sie `FALSE` für die *bLöschen* Parameter an, wenn Sie beabsichtigen, verschieben Sie das angegebene untergeordnete Element; d. h. das untergeordnete Element zu entfernen und fügen Sie es an anderer Stelle.  
+ Geben Sie "false" für die *bLöschen* Parameter, wenn Sie beabsichtigen, das angegebene untergeordnete Element zu verschieben; das heißt, entfernen Sie das untergeordnete Element und fügen Sie ihn anschließend an anderer Stelle.  
   
 ##  <a name="resetoriginalvalue"></a>  Cmfcpropertygridproperty:: Resetoriginalvalue  
  Stellt den ursprünglichen Wert einer bearbeiteten Eigenschaft.  
@@ -1442,7 +1442,7 @@ virtual void ResetOriginalValue();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setdata"></a>  CMFCPropertyGridProperty::SetData  
- Ordnet eine `DWORD` Wert mit einer Eigenschaft.  
+ Ordnet eine Eigenschaft einen DWORD-Wert zu.  
   
 ```  
 void SetData(DWORD_PTR dwData);
@@ -1453,7 +1453,7 @@ void SetData(DWORD_PTR dwData);
  Ein anwendungsspezifische 32-Bit-Wert, z. B. eine ganze Zahl oder ein Zeiger auf andere Daten.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden der [CMFCPropertyGridProperty::GetData](#getdata) Methode zum Abrufen der `DWORD` Wert. Verwenden der [CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata) Methode, um das Listenelement Eigenschaft zu suchen, die mit dem angegebenen `DWORD` Wert.  
+ Verwenden der [CMFCPropertyGridProperty::GetData](#getdata) Methode, um den DWORD-Wert abzurufen. Verwenden der [CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata) Methode, um das Listenelement für die Eigenschaft zu suchen, die mit dem angegebenen DWORD-Wert zugeordnet ist.  
   
 ##  <a name="setdescription"></a>  CMFCPropertyGridProperty::SetDescription  
  Gibt den Text, der die aktuelle Eigenschaft beschreibt.  
@@ -1464,12 +1464,12 @@ void SetDescription(const CString& strDescr);
   
 ### <a name="parameters"></a>Parameter  
  [in] *StrDescr*  
- Text zur Beschreibung der aktuellen Eigenschaft.  
+ Text, der die aktuelle Eigenschaft beschreibt.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setname"></a>  CMFCPropertyGridProperty::SetName  
- Legt den Namen einer Eigenschaft fest.  
+ Legt den Namen einer Eigenschaft.  
   
 ```  
 void SetName(
@@ -1482,7 +1482,7 @@ void SetName(
  Der Eigenschaftenname.  
   
  [in] *bRedraw*  
- `TRUE` die Eigenschaft sofort neu zeichnet; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ True, um die Eigenschaft sofort neu zu zeichnen. andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -1498,10 +1498,10 @@ virtual void SetOriginalValue(const COleVariant& varValue);
  Ein Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden der [cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue) -Methode zum Zurücksetzen des ursprünglichen Wert einer bearbeiteten Eigenschaft.  
+ Verwenden der [cmfcpropertygridproperty:: Resetoriginalvalue](#resetoriginalvalue) Methode, um den ursprünglichen Wert einer bearbeiteten Eigenschaft zurückzusetzen.  
   
 ##  <a name="setvalue"></a>  CMFCPropertyGridProperty::SetValue  
- Legt den Wert einer Eigenschaft Raster-Eigenschaft.  
+ Legt den Wert einer Eigenschaft Grid-Eigenschaft.  
   
 ```  
 virtual void SetValue(const _variant_t& varValue);
@@ -1514,7 +1514,7 @@ virtual void SetValue(const _variant_t& varValue);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="show"></a>  CMFCPropertyGridProperty::Show  
- Zeigt an oder blendet Sie aus einer Eigenschaft.  
+ Zeigt an, oder blendet Sie aus einer Eigenschaft.  
   
 ```  
 void Show(
@@ -1524,10 +1524,10 @@ void Show(
   
 ### <a name="parameters"></a>Parameter  
  [in] *bShow*  
- `TRUE` um die current-Eigenschaft und seine untergeordneten Elemente anzuzeigen; `FALSE` die current-Eigenschaft und seine untergeordneten Elemente ausblenden. Der Standardwert ist `TRUE`.  
+ True, um die current-Eigenschaft und die zugehörigen untergeordneten Elemente anzuzeigen. "False", um die current-Eigenschaft und die zugehörigen untergeordneten Elemente auszublenden. Der Standardwert ist "true".  
   
- [in] `bAdjustLayout`  
- `TRUE` neu berechnen, wie zeichnen die Bezeichnung und den Wert einer Eigenschaft und dann die Eigenschaft; `FALSE` zu vorhandene Berechnungen verwenden, um die Eigenschaft zu zeichnen. Der Standardwert ist `TRUE`.  
+ [in] *bAdjustLayout*  
+ True, um das Zeichnen der Bezeichnung und den Wert einer Eigenschaft und zeichnen Sie dann die Eigenschaft neu zu berechnen. "False", um die vorhandene Berechnungen verwenden, um die Eigenschaft zu zeichnen. Der Standardwert ist "true".  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

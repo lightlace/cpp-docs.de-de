@@ -1,5 +1,5 @@
 ---
-title: CAtlPreviewCtrlImpl Klasse | Microsoft Docs
+title: CAtlPreviewCtrlImpl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,18 +30,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 926076115a19b8c9669ec03958d841f08417e89c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d0d1e35e3c2a7d9467024afdf3d415478cd7de1
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362186"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884976"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl-Klasse
-Diese Klasse ist eine ATL-Implementierung eines Fensters, das auf ein Hostfenster bereitgestellt von der Shell for Rich Preview eingefügt wird.  
+Diese Klasse ist eine ATL-Implementierung eines Fensters, das auf ein Hostfenster, bereitgestellt von der Shell for Rich Preview eingefügt wird.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,14 +62,14 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAtlPreviewCtrlImpl::Create](#create)|Wird aufgerufen, von einem Rich Preview-Handler, um das Windows-Fenster zu erstellen.|  
-|[CAtlPreviewCtrlImpl::Destroy](#destroy)|Wird von einem Rich Preview-Handler aufgerufen, wenn es zerstört das Steuerelement muss.|  
-|[CAtlPreviewCtrlImpl::Focus](#focus)|Setzt den Eingabefokus auf dieses Steuerelement.|  
-|[CAtlPreviewCtrlImpl::OnPaint](#onpaint)|Behandelt die WM_PAINT-Meldung.|  
-|[CAtlPreviewCtrlImpl::Redraw](#redraw)|Weist das Steuerelement zum Neuzeichnen an.|  
-|[CAtlPreviewCtrlImpl::SetHost](#sethost)|Legt einen neuen übergeordneten für dieses Steuerelement fest.|  
-|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Wird aufgerufen, von einem Rich Preview Handler Wenn visuelle Elemente von rich Preview festgelegt werden muss Inhalt.|  
-|[CAtlPreviewCtrlImpl::SetRect](#setrect)|Legt einen neuen umschließenden Rechtecks für dieses Steuerelement fest.|  
+|[CAtlPreviewCtrlImpl::Create](#create)|Wird aufgerufen, von einem Rich Preview-Handler, der Windows-Fenster zu erstellen.|  
+|[CAtlPreviewCtrlImpl::Destroy](#destroy)|Wird von einem Rich Preview-Handler aufgerufen, wenn es sich bei muss dieses Steuerelements zu zerstören.|  
+|[CAtlPreviewCtrlImpl::Focus](#focus)|Legt den Eingabefokus auf dieses Steuerelement.|  
+|[CAtlPreviewCtrlImpl::OnPaint](#onpaint)|Verarbeitet die WM_PAINT-Meldung.|  
+|[CAtlPreviewCtrlImpl::Redraw](#redraw)|Weist diesem Steuerelement neu zeichnet.|  
+|[CAtlPreviewCtrlImpl::SetHost](#sethost)|Legt ein neues übergeordnetes Element für dieses Steuerelement fest.|  
+|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Wird aufgerufen, von einem Rich Preview-Handler beim Festlegen der visuellen Elemente des umfangreichen Vorschaufunktionen muss Inhalt.|  
+|[CAtlPreviewCtrlImpl::SetRect](#setrect)|Legt ein neues umschließendes Rechteck für dieses Steuerelement fest.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
@@ -81,14 +81,14 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[CAtlPreviewCtrlImpl::m_plf](#m_plf)|Zum Anzeigen von Text im Vorschaufenster verwendete Schriftart.|  
+|[CAtlPreviewCtrlImpl::m_plf](#m_plf)|Schriftart für Text in einem Vorschaufenster angezeigt.|  
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
 |name|Beschreibung|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|Hintergrundfarbe des Vorschaufensters.|  
-|[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|Die Textfarbe des Vorschaufensters.|  
+|[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|Textfarbe des Vorschaufensters.|  
 
   
 ## <a name="remarks"></a>Hinweise  
@@ -131,26 +131,26 @@ virtual ~CAtlPreviewCtrlImpl(void);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="create"></a>  CAtlPreviewCtrlImpl::Create  
- Wird aufgerufen, von einem Rich Preview-Handler, um das Windows-Fenster zu erstellen.  
+ Wird aufgerufen, von einem Rich Preview-Handler, der Windows-Fenster zu erstellen.  
   
 ```
 virtual BOOL Create(HWND hWndParent, const RECT* prc);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hWndParent`  
- Ein Handle für das Hostfenster, die von der Shell for Rich Preview angegeben.  
+ *hWndParent*  
+ Ein Handle für das Hostfenster, die von der Shell for Rich Preview bereitgestellt.  
   
- `prc`  
+ *Volksrepublik China*  
  Gibt an, die ursprüngliche Größe und Position des Fensters.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE`, wenn erfolgreich, andernfalls `FALSE`.  
+ TRUE, wenn erfolgreich, andernfalls FALSE.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="destroy"></a>  CAtlPreviewCtrlImpl::Destroy  
- Wird von einem Rich Preview-Handler aufgerufen, wenn es zerstört das Steuerelement muss.  
+ Wird von einem Rich Preview-Handler aufgerufen, wenn es sich bei muss dieses Steuerelements zu zerstören.  
   
 ```
 virtual void Destroy();
@@ -166,13 +166,13 @@ virtual void DoPaint(HDC hdc);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hdc`  
- Ein Handle für einen Gerätekontext für das Paint-Ereignisse.  
+ *hdc*  
+ Ein Handle für einen Gerätekontext zum Zeichnen.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="focus"></a>  CAtlPreviewCtrlImpl::Focus  
- Setzt den Eingabefokus auf dieses Steuerelement.  
+ Legt den Eingabefokus auf dieses Steuerelement.  
   
 ```
 virtual void Focus();
@@ -199,7 +199,7 @@ COLORREF m_clrText;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="m_plf"></a>  CAtlPreviewCtrlImpl::m_plf  
- Zum Anzeigen von Text im Vorschaufenster verwendete Schriftart.  
+ Schriftart für Text in einem Vorschaufenster angezeigt.  
   
 ```
 const LOGFONTW* m_plf;
@@ -208,7 +208,7 @@ const LOGFONTW* m_plf;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="onpaint"></a>  CAtlPreviewCtrlImpl::OnPaint  
- Behandelt die WM_PAINT-Meldung.  
+ Verarbeitet die WM_PAINT-Meldung.  
   
 ```
 LRESULT OnPaint(  
@@ -219,17 +219,17 @@ LRESULT OnPaint(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nMsg`  
- Legen Sie auf WM_PAINT.  
+ *nMsg*  
+ Legen Sie auf der WM_PAINT.  
   
- `wParam`  
+ *wParam-Parameter*  
  Dieser Parameter wird nicht verwendet.  
   
- `lParam`  
+ *lParam*  
  Dieser Parameter wird nicht verwendet.  
   
- `bHandled`  
- Wenn diese Funktion zurückgibt, enthält Sie `TRUE`.  
+ *bHandled*  
+ Wenn diese Funktion zurückkehrt, enthält es "true".  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt immer 0 zurück.  
@@ -237,7 +237,7 @@ LRESULT OnPaint(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="redraw"></a>  CAtlPreviewCtrlImpl::Redraw  
- Weist das Steuerelement zum Neuzeichnen an.  
+ Weist diesem Steuerelement neu zeichnet.  
   
 ```
 virtual void Redraw();
@@ -246,20 +246,20 @@ virtual void Redraw();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="sethost"></a>  CAtlPreviewCtrlImpl::SetHost  
- Legt einen neuen übergeordneten für dieses Steuerelement fest.  
+ Legt ein neues übergeordnetes Element für dieses Steuerelement fest.  
   
 ```
 virtual void SetHost(HWND hWndParent);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `hWndParent`  
+ *hWndParent*  
  Ein Handle für das neue übergeordnete Fenster.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setpreviewvisuals"></a>  CAtlPreviewCtrlImpl::SetPreviewVisuals  
- Wird aufgerufen, von einem Rich Preview Handler Wenn visuelle Elemente von rich Preview festgelegt werden muss Inhalt.  
+ Wird aufgerufen, von einem Rich Preview-Handler beim Festlegen der visuellen Elemente des umfangreichen Vorschaufunktionen muss Inhalt.  
   
 ```
 virtual void SetPreviewVisuals(
@@ -269,30 +269,30 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `clrBack`  
+ *clrBack*  
  Hintergrundfarbe des Vorschaufensters.  
   
- `clrText`  
+ *clrText*  
  Die Textfarbe des Vorschaufensters.  
   
- `plf`  
- Zum Anzeigen von Text im Vorschaufenster verwendete Schriftart.  
+ *PLF*  
+ Schriftart für Text in einem Vorschaufenster angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="setrect"></a>  CAtlPreviewCtrlImpl::SetRect  
- Legt einen neuen umschließenden Rechtecks für dieses Steuerelement fest.  
+ Legt ein neues umschließendes Rechteck für dieses Steuerelement fest.  
   
 ```
 virtual void SetRect(const RECT* prc, BOOL bRedraw);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `prc`  
- Gibt an, die neue Größe und Position des Steuerelements Preview.  
+ *Volksrepublik China*  
+ Gibt an, die neue Größe und Position des Steuerelements (Vorschau).  
   
- `bRedraw`  
- Gibt an, ob das Steuerelement neu gezeichnet werden soll.  
+ *bRedraw*  
+ Gibt an, ob das Steuerelement neu gezeichnet werden muss.  
   
 ### <a name="remarks"></a>Hinweise  
   

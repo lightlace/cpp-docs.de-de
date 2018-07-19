@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::_com_ptr_t | Microsoft Docs
+title: _com_ptr_t::_com_ptr_t | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47cfc48a7d73ca1159c4a1862281c01c16cc11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413933"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939070"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Microsoft-spezifisch**  
@@ -143,31 +143,31 @@ explicit _com_ptr_t(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `pInterface`  
+ *pInterface*  
  Ein unformatierter Schnittstellenzeiger.  
   
- `fAddRef`  
- Wenn **"true"**, `AddRef` wird aufgerufen, um den Verweiszähler des gekapselten Schnittstellenzeigers zu inkrementieren.  
+ *fAddRef*  
+ True gibt an, `AddRef` aufgerufen, um den Verweiszähler des gekapselten Schnittstellenzeigers zu inkrementieren.  
   
- *Zertifikatrichtlinie*  
+ *CP*  
  Ein `_com_ptr_t`-Objekt.  
   
- `p`  
+ *p*  
  Ein unformatierter Schnittstellenzeiger, dessen Typ von dem Typ des intelligenten Zeigers dieses `_com_ptr_t`-Objekts abweicht.  
   
  *varSrc*  
  Ein `_variant_t`-Objekt.  
   
- `clsid`  
- Die **CLSID** einer Co-Klasse.  
+ *clsid*  
+ Die `CLSID` einer Co-Klasse.  
   
- `dwClsContext`  
+ *dwClsContext*  
  Kontext für die Ausführung von ausführbarem Code.  
   
  *lpcStr*  
- Eine multibyte-Zeichenfolge, die entweder eine **CLSID** (beginnend mit "**{**") oder ein **ProgID**.  
+ Eine multibyte-Zeichenfolge, die entweder eine `CLSID` (beginnend mit "**{**") oder ein `ProgID`.  
   
- `pOuter`  
+ *pOuter*  
  Die äußere unbekannte für [Aggregation](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
   
 ## <a name="see-also"></a>Siehe auch  

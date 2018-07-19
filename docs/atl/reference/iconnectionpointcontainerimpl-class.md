@@ -1,5 +1,5 @@
 ---
-title: IConnectionPointContainerImpl Klasse | Microsoft Docs
+title: IConnectionPointContainerImpl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af5e8b1bc1af0a515cc8fad0500c3f7d040b1eb9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d70989be8e8535336c831cb59fb9422c6e2c63e0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361169"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886231"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>IConnectionPointContainerImpl-Klasse
-Diese Klasse implementiert einen Container für Verbindung zur Verwaltung einer Auflistung von [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) Objekte.  
+Diese Klasse implementiert eine Verbindungspunktcontainer zur Verwaltung einer Auflistung von [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) Objekte.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,8 +40,8 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Die Klasse abgeleitet `IConnectionPointContainerImpl`.  
+ *T*  
+ Abgeleitet von die Klasse `IConnectionPointContainerImpl`.  
   
 ## <a name="members"></a>Member  
   
@@ -49,15 +49,15 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|Erstellt einen Enumerator zum Durchlaufen der Verbindungspunkte in das verbindungsfähige Objekt unterstützt.|  
-|[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|Ruft einen Schnittstellenzeiger auf dem Verbindungspunkt, der die angegebene IID unterstützt.|  
+|[IConnectionPointContainerImpl::EnumConnectionPoints](#enumconnectionpoints)|Erstellt einen Enumerator zum Durchlaufen der Verbindungspunkte, die in dem verbindungsfähigen Objekt unterstützt.|  
+|[IConnectionPointContainerImpl::FindConnectionPoint](#findconnectionpoint)|Ruft einen Schnittstellenzeiger auf den Verbindungspunkt, der die angegebene IID unterstützt ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- `IConnectionPointContainerImpl` implementiert einen Container für Verbindung zur Verwaltung einer Auflistung von [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) Objekte. `IConnectionPointContainerImpl` bietet zwei Methoden, die ein Client aufrufen kann, um weitere Informationen über ein verbindungsfähiges Objekt abzurufen:  
+ `IConnectionPointContainerImpl` implementiert eine Verbindungspunktcontainer zur Verwaltung einer Auflistung von [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) Objekte. `IConnectionPointContainerImpl` bietet zwei Methoden, die ein Client aufrufen kann, um weitere Informationen zu einem verbindungsfähigen Objekt abzurufen:  
   
 - `EnumConnectionPoints` ermöglicht dem Client, um zu bestimmen, welche ausgehend vom Objekt unterstützte Schnittstellen.  
   
-- `FindConnectionPoint` ermöglicht dem Client, um zu bestimmen, ob das Objekt einer bestimmten Ausgangsschnittstelle unterstützt.  
+- `FindConnectionPoint` ermöglicht dem Client zu bestimmen, ob das Objekt eine bestimmte Schnittstelle für ausgehende unterstützt.  
   
  Informationen zur Verwendung von Verbindungspunkten in ATL, finden Sie im Artikel [Verbindungspunkte](../../atl/atl-connection-points.md).  
   
@@ -70,25 +70,25 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
  **Header:** atlcom.h  
   
 ##  <a name="enumconnectionpoints"></a>  IConnectionPointContainerImpl::EnumConnectionPoints  
- Erstellt einen Enumerator zum Durchlaufen der Verbindungspunkte in das verbindungsfähige Objekt unterstützt.  
+ Erstellt einen Enumerator zum Durchlaufen der Verbindungspunkte, die in dem verbindungsfähigen Objekt unterstützt.  
   
 ```
 STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IConnectionPointContainer:: EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460) im Windows SDK.  
+ Finden Sie unter [IConnectionPointContainer:: EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460) in das Windows SDK.  
   
 ##  <a name="findconnectionpoint"></a>  IConnectionPointContainerImpl::FindConnectionPoint  
- Ruft einen Schnittstellenzeiger auf dem Verbindungspunkt, der die angegebene IID unterstützt.  
+ Ruft einen Schnittstellenzeiger auf den Verbindungspunkt, der die angegebene IID unterstützt ab.  
   
 ```
 STDMETHOD(FindConnectionPoint)(REFIID riid, IConnectionPoint** ppCP);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IConnectionPointContainer:: FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) im Windows SDK.  
+ Finden Sie unter [IConnectionPointContainer:: FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) in das Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
- [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [IConnectionPointContainer-Schnittstelle](http://msdn.microsoft.com/library/windows/desktop/ms683857)   
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Meldungen zu Funktionen | Microsoft Docs
+title: Zuordnen von Meldungen zu Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3388cd8e9a52ef9aacb427d66b027d793b08ca75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 962a86139b7fdf8afac08e04e7b42240603b4374
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335525"
 ---
 # <a name="mapping-messages-to-functions"></a>Zuordnen von Meldungen zu Funktionen
-Im Eigenschaftenfenster können Sie Meldungshandler (Memberfunktionen der MFC-Benutzeroberflächen-Klassen) zu binden, die Nachrichten, die durch die Ressourcen der Anwendung generiert. Verwenden sie [MFC-meldungszuordnungen](../../mfc/messages-and-commands-in-the-framework.md) , die Bindung zu erstellen.  
+Das Fenster "Eigenschaften" können Sie Meldungshandler (Memberfunktionen der MFC-Benutzeroberflächen-Klassen) zu binden, um die Nachrichten, die von Ihrer Anwendung Ressourcen generiert werden. Sie verwenden [MFC-meldungszuordnungen](../../mfc/messages-and-commands-in-the-framework.md) , die Bindung zu erstellen.  
   
- Wenn Sie Klassenansicht verwenden, um eine neue von einer der Frameworkklassen abgeleitete Klasse zu erstellen, wird automatisch Klasse stellen einen vollständigen und funktionalen in den Headerdateien (. h) und die Implementierungsdatei (.cpp) Dateien, die Sie angeben.  
+ Wenn Sie die Klassenansicht verwenden, erstellen Sie eine neue Klasse, die von einer der Framework-Klassen abgeleitet, wird automatisch Klasse stellen eine vollständige und funktionale in den Headerdateien (h) und der Implementierungsdatei (.cpp) Dateien, die Sie angeben.  
   
 > [!NOTE]
->  Um eine neue Klasse hinzufügen, die diese Nachrichten nicht verarbeiten kann, erstellen Sie die Klasse direkt in den Text-Editor ein.  
+>  Um eine neue Klasse hinzufügen, die Nachrichten nicht behandelt, erstellen Sie die Klasse direkt im Text-Editor ein.  
   
-### <a name="to-define-or-remove-a-message-handler-using-the-properties-window"></a>So definieren oder Entfernen eines meldungshandlers mithilfe des Eigenschaftenfensters  
+### <a name="to-define-or-remove-a-message-handler-using-the-properties-window"></a>Um zu definieren, oder entfernen ein meldungshandlers mithilfe des Eigenschaftenfensters  
   
 1.  Klicken Sie in der Klassenansicht auf die Klasse.  
   
@@ -41,22 +41,22 @@ Im Eigenschaftenfenster können Sie Meldungshandler (Memberfunktionen der MFC-Be
     > [!NOTE]
     >  Die **Nachrichten** Schaltfläche ist verfügbar, wenn Sie entweder den Klassennamen in der Klassenansicht oder im Quellcodefenster auf auswählen.  
   
-     Wenn das Projekt einen Handler für eine Nachricht hat, wird der Name des Handlers in der rechten Spalte neben der Nachricht angezeigt.  
+     Wenn Ihr Projekt einen Handler für eine Nachricht verfügt, wird der Name des Handlers in der rechten Spalte neben der Meldung angezeigt.  
   
-3.  Wenn die Nachricht keinen Ereignishandler aufweist, klicken Sie dann auf die Zelle in der rechten Spalte im Fenster Eigenschaften den vorgeschlagenen Namen des Handlers als anzuzeigende \<hinzufügen >*HandlerName*. (Z. B. die `WM_TIMER` Meldungshandler schlägt \<hinzufügen >`OnTimer`).  
+3.  Wenn die Nachricht kein Handler verfügt, klicken Sie dann auf die Zelle in der rechten Spalte im Fenster Eigenschaften den vorgeschlagenen Namen des Handlers als anzuzeigende \<hinzufügen >*HandlerName*. (Z. B. der WM_TIMER Meldungshandler schlägt \<hinzufügen >`OnTimer`).  
   
-4.  Klicken Sie auf den vorgeschlagenen Namen Stubcode für die Funktion hinzufügen.  
+4.  Klicken Sie auf den empfohlenen Namen, um Stubcode für die Funktion hinzuzufügen.  
   
-5.  Um einen Meldungshandler zu bearbeiten, doppelklicken Sie auf die Nachricht in der Klassenansicht und bearbeiten Sie den Code im Quellcodefenster.  
+5.  Klicken Sie zum Bearbeiten eines meldungshandlers Doppelklicken Sie auf die Nachricht in der Klassenansicht, und bearbeiten Sie den Code im Quellcodefenster.  
   
- Um einen Meldungshandler zu entfernen, doppelklicken Sie auf den Handler in der rechten Spalte aus, und wählen Sie \<Löschen >*HandlerName*. Der Code der Funktion wird auskommentiert.  
+ Um einen Meldungshandler entfernen möchten, doppelklicken Sie auf den Handler in der rechten Spalte aus, und wählen Sie \<Löschen >*HandlerName*. Der Code der Funktion wird auskommentiert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [MFC-Meldungshandler](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Hinzufügen einer Klasse](../../ide/adding-a-class-visual-cpp.md)   
+ [MFC Message Handler (MFC-Meldungshandler)](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class (Hinzufügen einer Klasse)](../../ide/adding-a-class-visual-cpp.md)   
  [Hinzufügen einer Memberfunktion](../../ide/adding-a-member-function-visual-cpp.md)   
- [Hinzufügen einer Membervariablen](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Adding a Member Variable (Hinzufügen einer Membervariablen)](../../ide/adding-a-member-variable-visual-cpp.md)   
  [Überschreiben einer virtuellen Funktion](../../ide/overriding-a-virtual-function-visual-cpp.md)   
  [Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../../windows/adding-event-handlers-for-dialog-box-controls.md)   
- [Navigieren in der Klassenstruktur](../../ide/navigating-the-class-structure-visual-cpp.md)
+ [Navigating the Class Structure (Navigieren in der Klassenstruktur)](../../ide/navigating-the-class-structure-visual-cpp.md)

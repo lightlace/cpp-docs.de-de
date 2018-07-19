@@ -1,5 +1,5 @@
 ---
-title: If-else-Anweisung (C++) | Microsoft Docs
+title: If-else-Anweisung (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/17/2017
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42174837f0f60f9a4e3ba9f19702210d6d34ccca
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943159"
 ---
 # <a name="if-else-statement-c"></a>if-else-Anweisung (C++)
-Steuert den bedingten Branch. Anweisungen in der *If-Block* werden nur ausgeführt, wenn die *If-Ausdruck* ergibt einen Wert ungleich 0 (oder `true`). Wenn der Wert der *Ausdruck* ungleich NULL ist *statement1* und allen anderen Anweisungen im Block ausgeführt werden und der else-Block, falls vorhanden, wird übersprungen. Wenn der Wert der *Ausdruck* 0 (null), wird der If-Block wird übersprungen, und der else-Block, falls vorhanden, wird ausgeführt. Ausdrücke, die ausgewertet ungleich NULL sind.
-- `true`
-- ein nicht-Null-Zeiger
+Steuert den bedingten Branch. Anweisungen in der *If-Block* werden nur ausgeführt, wenn die *If-Ausdruck* ergibt einen Wert ungleich Null (oder "true"). Wenn der Wert des *Ausdruck* ungleich NULL ist, *statement1* und alle anderen Anweisungen im Block ausgeführt werden, und der else-Block, falls vorhanden, wird übersprungen. Wenn der Wert des *Ausdruck* 0 (null), wird der If-Block wird übersprungen, und der else-Block, falls vorhanden, wird ausgeführt. Ausdrücke, die ungleich NULL ausgewertet, werden.
+- true
+- ein nicht-Null-Zeiger ist,
 - alle arithmetischen Wert ungleich NULL, oder 
-- Geben Sie ein Klassentyp, der eine eindeutige Konvertierung in einen arithmetischen, Boolean oder vom Zeigertyp definiert. (Weitere Informationen über Konvertierungen finden Sie unter [Standardkonvertierungen](../cpp/standard-conversions.md).)   
+- Geben Sie ein Klassentyp, der eine eindeutige Konvertierung in ein arithmetischer "," Boolean "oder" Zeiger definiert. (Weitere Informationen über Konvertierungen finden Sie unter [Standardkonvertierungen](../cpp/standard-conversions.md).)   
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,8 +72,10 @@ else  // optional
    ...
 } 
 ```  
+
 ## <a name="example"></a>Beispiel  
-```  
+
+```cpp  
 // if_else_statement.cpp  
 #include <iostream>
 
@@ -118,7 +121,7 @@ int main()
 }
 ```  
 ## <a name="if-statement-with-an-initializer"></a>Wenn die Anweisung mit einem Initialisierer
-**Visual Studio 2017 15,3 und höher** (verfügbar mit [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): ein **Wenn** Anweisung enthält möglicherweise auch einen Ausdruck, der eine benannte-Variable deklariert und initialisiert. Verwenden Sie diese Form der If-Anweisung, wenn die Variable nur innerhalb des Bereichs der If-Block erforderlich ist. 
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): ein **Wenn** Anweisung enthält möglicherweise auch einen Ausdruck, der deklariert und initialisiert eine benannte Variable. Verwenden Sie diese Form der If-Anweisung aus, wenn die Variable nur innerhalb des Bereichs der If-Block erforderlich ist. 
 
 ```cpp
 ## Example  
@@ -166,12 +169,12 @@ int main()
 }
 ```
 
- In allen Formularen von der **Wenn** -Anweisung *Ausdruck*, wofür einen beliebigen Wert außer einer Struktur wird ausgewertet, einschließlich aller Nebeneffekte. Wird die Steuerung von der **Wenn** Anweisung an die nächste Anweisung im Programm, wenn eines der *Anweisung*s enthält eine [Break](../cpp/break-statement-cpp.md), [zuFortfahren](../cpp/continue-statement-cpp.md), oder [Goto](../cpp/goto-statement-cpp.md).  
+ In allen Arten von der **Wenn** Anweisung *Ausdruck*, die einen beliebigen Wert außer einer Struktur verfügen können ausgewertet wird, einschließlich aller Nebeneffekte. Wird die Steuerung von der **Wenn** Anweisung, um die nächste Anweisung im Programm, wenn eines der *Anweisung*s enthält eine [Break](../cpp/break-statement-cpp.md), [weiterhin](../cpp/continue-statement-cpp.md), oder [Goto](../cpp/goto-statement-cpp.md).  
   
- Die **else** -Klausel eine `if...else` Anweisung bezieht sich auf die nächstgelegene vorherigen **Wenn** Anweisung im gleichen Bereich, die eine entsprechende keinen **else** -Anweisung.   
+ Die **else** -Klausel eine `if...else` Anweisung bezieht sich auf die nächstgelegene vorherigen **Wenn** -Anweisung im gleichen Gültigkeitsbereich, der einen entsprechenden keinen **else** -Anweisung.   
 
-## <a name="constexpr-if-statements"></a>Constexpr Wenn Anweisungen
-**Visual Studio 2017 15,3 und höher** (verfügbar mit [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): In den Funktionsvorlagen, können Sie eine **Constexpr Wenn** -Anweisung zum Zeitpunkt der Kompilierung Verzweigen Entscheidungen ohne müssen mehrere funktionsüberladungen verwenden. Beispielsweise können Sie einer einzelnen Funktion schreiben, diese Handles Parameter Entpacken (keine Überladung von NULL-Parameter ist erforderlich): 
+## <a name="constexpr-if-statements"></a>"constexpr" Wenn Anweisungen
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): In Funktionsvorlagen, können Sie eine `constexpr if` Anweisung, damit Verzweigungen Entscheidungen während der Kompilierung ohne zurückgreifen auf mehrere überlädt. Beispielsweise können Sie einer einzelnen Funktion schreiben, diese Handles Parameter Entpacken (keine Überladung für die NULL-Parameter ist erforderlich): 
 
 ```cpp
 template <class T, class... Rest>

@@ -1,5 +1,5 @@
 ---
-title: CDefaultCharTraits Klasse | Microsoft Docs
+title: CDefaultCharTraits-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24aa01ec29f063c1fa65ebe24c707deb1ea58556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e591bc8c77e2130548e65c6197f9e550efc480fb
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361726"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881853"
 ---
 # <a name="cdefaultchartraits-class"></a>CDefaultCharTraits-Klasse
-Diese Klasse enthält zwei statische Funktionen zum Konvertieren von Zeichen zwischen Groß- und Kleinbuchstaben.  
+Diese Klasse stellt zwei statische Funktionen zum Konvertieren von Zeichen zwischen Groß- und Kleinbuchstaben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +37,7 @@ class CDefaultCharTraits
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
+ *T*  
  Der Typ der Daten in der Auflistung gespeichert werden.  
   
 ## <a name="members"></a>Member  
@@ -46,17 +46,17 @@ class CDefaultCharTraits
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CDefaultCharTraits::CharToLower](#chartolower)|(Statisch) Mit dieser Funktion können ein Zeichen in Großbuchstaben zu konvertieren.|  
-|[CDefaultCharTraits::CharToUpper](#chartoupper)|(Statisch) Mit dieser Funktion können ein Zeichen in Kleinbuchstaben konvertiert.|  
+|[CDefaultCharTraits::CharToLower](#chartolower)|(Statisch) Mit dieser Funktion können Sie ein Zeichen in Großbuchstaben zu konvertieren.|  
+|[CDefaultCharTraits::CharToUpper](#chartoupper)|(Statisch) Rufen Sie diese Funktion, um ein Zeichen in Kleinbuchstaben zu konvertieren.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse bietet Funktionen, die von der Klasse ausgelastet sind [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
+ Diese Klasse bietet Funktionen, die von der Klasse verwendet werden [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcoll.h  
   
 ##  <a name="chartolower"></a>  CDefaultCharTraits::CharToLower  
- Mit dieser Funktion können ein Zeichen in Kleinbuchstaben konvertiert.  
+ Rufen Sie diese Funktion, um ein Zeichen in Kleinbuchstaben zu konvertieren.  
   
 ```
 static wchar_t CharToLower(wchar_t x);  
@@ -65,13 +65,13 @@ static char CharToLower(char x);
   
 ### <a name="parameters"></a>Parameter  
  *w*  
- Das Zeichen in Kleinbuchstaben konvertiert.  
+ Das Zeichen in Kleinbuchstaben konvertiert werden soll.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]  
   
 ##  <a name="chartoupper"></a>  CDefaultCharTraits::CharToUpper  
- Mit dieser Funktion können ein Zeichen in Großbuchstaben zu konvertieren.  
+ Mit dieser Funktion können Sie ein Zeichen in Großbuchstaben zu konvertieren.  
   
 ```
 static wchar_t CharToUpper(wchar_t x);  
@@ -80,7 +80,7 @@ static char CharToUpper(char x);
   
 ### <a name="parameters"></a>Parameter  
  *w*  
- Das Zeichen in Großbuchstaben zu konvertieren.  
+ Das Zeichen, die in Großbuchstaben zu konvertieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

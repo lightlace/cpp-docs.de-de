@@ -1,5 +1,5 @@
 ---
-title: Laufzeit-Typeninformation | Microsoft Docs
+title: Laufzeit-Typeninformation | Microsoft-Dokumentation
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23188b3dd49afb619576fa9cdcece69feca94f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14eafc1ebb50faaffb4c0a95e0cc929c89fb7c0b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419991"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938914"
 ---
 # <a name="run-time-type-information"></a>Laufzeit-Typinformationen
 Laufzeittypinformationen (Run-Time Type Information, RTTI) sind ein Mechanismus, mit dem der Typ eines Objekts während der Programmausführung bestimmt werden kann. Laufzeittypinformationen wurden zur Programmiersprache C++ hinzugefügt, da viele Anbieter von Klassenbibliotheken diese Funktion selbst implementiert haben. Dies verursachte Inkompatibilitäten zwischen Bibliotheken. Deshalb wurde es offensichtlich, dass eine Unterstützung der Laufzeittypinformationen auf Sprachebene erforderlich war.  
@@ -42,7 +42,7 @@ Laufzeittypinformationen (Run-Time Type Information, RTTI) sind ein Mechanismus,
   
 -   Die [Type_info](../cpp/type-info-class.md) Klasse.  
   
-     Wird verwendet, um die Typinformationen zu speichern, die vom `typeid`-Operator zurückgegeben werden.  
+     Verwendet, um die Typinformationen, die zurückgegeben werden, von aufzunehmen der **Typeid** Operator.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Umwandlung](../cpp/casting.md)

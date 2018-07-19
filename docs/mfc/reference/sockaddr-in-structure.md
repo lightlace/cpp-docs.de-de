@@ -1,5 +1,5 @@
 ---
-title: SOCKADDR_IN-Struktur | Microsoft Docs
+title: SOCKADDR_IN-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeb9e61f94ddd5f41ff3de26728c1fbe155f809d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5ec6ebf4329ff03c75240dc7cec93e9ba46331
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373637"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885737"
 ---
 # <a name="sockaddrin-structure"></a>SOCKADDR_IN-Struktur
 In der Internetadressenfamilie wird die `SOCKADDR_IN`-Struktur von Windows Sockets verwendet, um eine lokale oder Remoteendpunktadresse festlegen, mit der ein Socket verbunden werden soll.  
@@ -39,7 +39,7 @@ struct in_addr sin_addr;
   
 #### <a name="parameters"></a>Parameter  
  *sin_family*  
- Adressfamilie (muss **AF_INET**).  
+ -Adressenfamilie (muss AF_INET sein).  
   
  *sin_port*  
  IP-Port.  
@@ -53,7 +53,7 @@ struct in_addr sin_addr;
 ## <a name="remarks"></a>Hinweise  
  Dies ist die Form der `SOCKADDR`-Struktur speziell für die Internetadressenfamilie; sie kann in `SOCKADDR` umgewandelt werden.  
   
- Die IP-Adressenkomponente dieser Struktur ist vom Typ **IN_ADDR**. Die **IN_ADDR** Struktur wird in Windows-Sockets-Headerdatei WINSOCK definiert. H wie folgt:  
+ Die IP-Adressenkomponente dieser Struktur ist vom Typ `IN_ADDR`. Die `IN_ADDR` Struktur wird in Windows Sockets-Headerdatei WINSOCK definiert. H wie folgt:  
   
 ```  
 struct in_addr {

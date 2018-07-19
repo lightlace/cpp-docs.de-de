@@ -1,5 +1,5 @@
 ---
-title: CAtlFileMapping Klasse | Microsoft Docs
+title: CAtlFileMapping-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 524e5d9c7cef5bcff0d72ddf1225ef79b1b26d64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17f4735b56d6d15dfe3740c0dad727765e0eb84b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358837"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882304"
 ---
 # <a name="catlfilemapping-class"></a>CAtlFileMapping-Klasse
-Diese Klasse stellt eine Speicherabbilddatei, die Methoden der Umwandlungsoperatoren hinzugefügt [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  
+Diese Klasse stellt eine Speicherabbilddatei, die Methoden der Cast-Operator hinzugefügt [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,8 +38,8 @@ class CAtlFileMapping : public CAtlFileMappingBase
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Der Typ der Daten, die für die Cast-Operator verwendet.  
+ *T*  
+ Der Typ der Daten, die für die Cast-Operator verwendet werden soll.  
   
 ## <a name="members"></a>Member  
   
@@ -47,10 +47,10 @@ class CAtlFileMapping : public CAtlFileMappingBase
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CAtlFileMapping::operator T *](#operator_t_star)|Ermöglicht die implizite Konvertierung von `CAtlFileMapping` -Objekte `T` **\***.|  
+|[CAtlFileMapping::operator T *](#operator_t_star)|Ermöglicht die implizite Konvertierung von `CAtlFileMapping` Objekte `T` **\***.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse fügt einem einzelnen Umwandlungsoperator damit können die implizite Konvertierung des `CAtlFileMapping` -Objekte `T` **\***. Andere Member werden von der Basisklasse bereitgestellt [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  
+ Diese Klasse fügt einen einzelne Cast-Operator, um ermöglichen die implizite Konvertierung des `CAtlFileMapping` Objekte `T` **\***. Andere Mitglieder werden bereitgestellt, von der Basisklasse, [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)  
@@ -61,18 +61,18 @@ class CAtlFileMapping : public CAtlFileMappingBase
  **Header:** atlfile.h  
   
 ##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T *  
- Ermöglicht die implizite Konvertierung von `CAtlFileMapping` -Objekte `T` **\***.  
+ Ermöglicht die implizite Konvertierung von `CAtlFileMapping` Objekte `T` **\***.  
   
 ```  
 operator T*() const throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt eine `T` **\*** Zeiger am Anfang der Speicherabbilddatei.  
+ Gibt eine `T` **\*** Zeiger am Anfang der Datei mit zugewiesenem Speicher.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufe [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) und den zurückgegebenen Zeiger als interpretiert eine `T` **\*** , in denen *T* ist der Typ, der als Vorlage verwendet die Parameter dieser Klasse.  
+ Aufrufe [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) und interpretiert die zurückgegebenen Zeiger als einen `T` **\*** , in denen *T* ist der Typ, der als Vorlage verwendet die Parameter dieser Klasse.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CAtlFileMappingBase-Klasse](../../atl/reference/catlfilemappingbase-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

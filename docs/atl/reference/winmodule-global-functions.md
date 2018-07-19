@@ -1,5 +1,5 @@
 ---
-title: Globale Funktionen WinModule | Microsoft Docs
+title: Globale WinModule-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 514703e2c7c968035e9defc7677943377778a761
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ac96acaf337ad3ee73f0b6f93ae6893632962e9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362296"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884561"
 ---
-# <a name="winmodule-global-functions"></a>WinModule globale Funktionen
-Diese Funktionen bieten Unterstützung für `_AtlCreateWndData` Operations-Struktur.  
+# <a name="winmodule-global-functions"></a>Globale WinModule-Funktionen
+Diese Funktionen bieten Unterstützung für `_AtlCreateWndData` Vorgängen zu strukturieren.  
   
 > [!IMPORTANT]
 >  In der folgenden Tabelle aufgeführten Funktionen können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
@@ -47,17 +47,17 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWinModule`  
- Zeiger auf ein Modul [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) Struktur.  
+ *pWinModule*  
+ Zeiger auf ein Modul des [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) Struktur.  
   
- `pData`  
- Zeiger auf die [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) Struktur initialisiert und das aktuelle Modul hinzugefügt werden.  
+ *pData*  
+ Zeiger auf die [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) Struktur initialisiert und auf das aktuelle Modul hinzugefügt werden.  
   
- `pObject`  
- Zeiger auf ein Objekt **dies** Zeiger.  
+ *pObject*  
+ Zeiger auf ein Objekt des **dies** Zeiger.  
   
 ### <a name="remarks"></a>Hinweise  
- Initialisiert ein `_AtlCreateWndData` -Struktur, die zum Speichern der **dies** Zeiger verwendet, um Klasseninstanzen verweisen, und fügt es der Liste auf ein Modul verwiesen wird `_ATL_WIN_MODULE70` Struktur. Wird aufgerufen, indem [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).  
+ Initialisiert ein `_AtlCreateWndData` -Struktur, die zum Speichern von der **dies** Zeiger verwendet, um Klasseninstanzen verweisen, und fügt es der Liste auf die verwiesen wird von einem Modul die hinzu `_ATL_WIN_MODULE70` Struktur. Wird aufgerufen, indem [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).  
   
 ##  <a name="atlwinmoduleextractcreatewnddata"></a>  AtlWinModuleExtractCreateWndData  
  Mit dieser Funktion wird eine vorhandene `_AtlCreateWndData`-Struktur extrahiert.  
@@ -67,14 +67,14 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pWinModule`  
- Zeiger auf ein Modul [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) Struktur.  
+ *pWinModule*  
+ Zeiger auf ein Modul des [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Zeiger auf die [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion wird eine vorhandene extrahieren `_AtlCreateWndData` Struktur aus der Liste auf ein Modul verweist `_ATL_WIN_MODULE70` Struktur.  
+ Diese Funktion wird eine vorhandene extrahiert `_AtlCreateWndData` Struktur aus der Liste auf die verwiesen wird von einem Modul die `_ATL_WIN_MODULE70` Struktur.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen](../../atl/reference/atl-functions.md)

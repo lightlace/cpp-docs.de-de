@@ -1,5 +1,5 @@
 ---
-title: Zusammengesetztes Steuerelement Makros | Microsoft Docs
+title: Makros zusammengesetzter Steuerelemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,48 +18,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61335d25b0d9b97fe1c7e9915aa9c3d8583eb854
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c28ab24323f4636ede4ad7e9cccbdb2ceceac71d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363660"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879821"
 ---
-# <a name="composite-control-macros"></a>Makros von zusammengesetzten Steuerelementen
+# <a name="composite-control-macros"></a>Makros zusammengesetzter Steuerelemente
 Diese Makros definieren ereignissenkenzuordnungen und Einträge.  
   
 |||  
 |-|-|  
-|[BEGIN_SINK_MAP](#begin_sink_map)|Markiert den Beginn der Ereignis-Sink-Zuordnung für den zusammengesetzten Steuerelements an.|  
-|[END_SINK_MAP](#end_sink_map)|Markiert das Ende der Zuordnung Ereignissenke für den zusammengesetzten Steuerelements.|  
-|[SINK_ENTRY](#sink_entry)|Der Eintrag in der Senke ereigniszuordnung.|  
-|[SINK_ENTRY_EX](#sink_entry_ex)|Eintritt in die Senke ereigniszuordnung einen zusätzlichen Parameter.| 
-|[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Ähnliche SINK_ENTRY_EX, außer dass es sich um einen Zeiger auf die Iid verwendet.|  
-|[SINK_ENTRY_INFO](#sink_entry_info)|Eintritt in die Senke ereigniszuordnung mit manuell angegebenen Typinformationen für die Verwendung mit [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|  
-|[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Ähnliche SINK_ENTRY_INFO, außer dass es sich um einen Zeiger auf die Iid verwendet.|  
+|[BEGIN_SINK_MAP](#begin_sink_map)|Markiert den Beginn der Ereignis-Senke Zuordnung für das zusammengesetzte Steuerelement.|  
+|[END_SINK_MAP](#end_sink_map)|Markiert das Ende der Zuordnung Ereignissenke für das zusammengesetzte Steuerelement.|  
+|[SINK_ENTRY](#sink_entry)|Der Eintrag in die Senke ereigniszuordnung.|  
+|[SINK_ENTRY_EX](#sink_entry_ex)|Der Eintrag in der Ereignis-Sink-Zuordnung mit einem zusätzlichen Parameter.| 
+|[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Ähnlich wie SINK_ENTRY_EX außer dass es sich um einen Zeiger auf die Iid verwendet.|  
+|[SINK_ENTRY_INFO](#sink_entry_info)|Einen Eintrag in die Senke ereigniszuordnung mit manuell angegebenen Typinformationen für die Verwendung mit [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|  
+|[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Ähnlich wie SINK_ENTRY_INFO außer dass es sich um einen Zeiger auf die Iid verwendet.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlcom.h  
 
 ##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP  
- Deklariert den Anfang der Ereignis-Sink-Zuordnung für den zusammengesetzten Steuerelements an.  
+ Deklariert den Beginn der Ereignis-Sink-Zuordnung für das zusammengesetzte Steuerelement.  
   
 ```
 BEGIN_SINK_MAP(_class)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `_class`  
+ *_Klasse*  
  [in] Gibt das Steuerelement.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]  
   
 ### <a name="remarks"></a>Hinweise  
- CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt Rückgabewerte vom Typ HRESULT oder "void" aus Ihrem Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und sein Verhalten ist nicht definiert.  
+ CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt die Rückgabewerte vom Typ HRESULT oder "void" Ihre Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und das Verhalten nicht definiert ist.  
   
 ##  <a name="end_sink_map"></a>  END_SINK_MAP  
- Deklariert das Ende der Ereignis-Sink-Zuordnung für den zusammengesetzten Steuerelements an.  
+ Deklariert das Ende der Ereignis-Sink-Zuordnung für das zusammengesetzte Steuerelement.  
   
 ```
 END_SINK_MAP()
@@ -69,33 +69,33 @@ END_SINK_MAP()
  [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]  
   
 ### <a name="remarks"></a>Hinweise  
- CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt Rückgabewerte vom Typ HRESULT oder "void" aus Ihrem Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und sein Verhalten ist nicht definiert.  
+ CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt die Rückgabewerte vom Typ HRESULT oder "void" Ihre Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und das Verhalten nicht definiert ist.  
   
 ##  <a name="sink_entry"></a>  SINK_ENTRY  
- Die Handlerfunktion deklariert ( `fn`) für das angegebene Ereignis ( `dispid`), der das angegebene Steuerelement `id`.  
+ Deklariert die Handler-Funktion (*fn*) für das angegebene Ereignis (*Dispid*), der das angegebene Steuerelement *Id*.  
   
 ```
 SINK_ENTRY( id, dispid, fn )
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `id`  
+ *ID*  
  [in] Bezeichnet das Steuerelement.  
   
- `dispid`  
- [in] Gibt das angegebene Ereignis an.  
+ *DISPID*  
+ [in] Bezeichnet das angegebene Ereignis.  
   
- `fn`  
- [in] Name der Ereignishandlerfunktion. Diese Funktion verwenden, muss die **_stdcall** -Aufrufkonvention verwenden und über die entsprechenden Dispinterface-Stil Signatur verfügen.  
+ *fn*  
+ [in] Name des Ereignishandlerfunktion. Diese Funktion verwenden, muss die `_stdcall` Aufrufkonvention und die Signatur entsprechenden Dispinterface-Format haben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]  
   
 ### <a name="remarks"></a>Hinweise  
- CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt Rückgabewerte vom Typ HRESULT oder "void" aus Ihrem Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und sein Verhalten ist nicht definiert.  
+ CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt die Rückgabewerte vom Typ HRESULT oder "void" Ihre Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und das Verhalten nicht definiert ist.  
   
 ##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX und SINK_ENTRY_EX_P
- Deklariert die Handlerfunktion ( `fn`) für das angegebene Ereignis ( `dispid`), der die Dispatchschnittstelle ( *Iid)*, für das angegebene Steuerelement `id`.  
+ Deklariert die Handler-Funktion (*fn*) für das angegebene Ereignis (*Dispid*), der die Dispatchschnittstelle (*Iid*), für das Steuerelement, das identifizierte *Id*.  
   
 ```
 SINK_ENTRY_EX( id, iid, dispid, fn )
@@ -103,29 +103,29 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `id`  
+ *ID*  
  [in] Bezeichnet das Steuerelement.  
   
- `iid`  
+ *IID*  
  [in] Identifiziert die Dispatchschnittstelle.  
 
- `piid`  
+ *piid*  
  [in] Zeiger auf die Dispatchschnittstelle.  
   
- `dispid`  
- [in] Gibt das angegebene Ereignis an.  
+ *DISPID*  
+ [in] Bezeichnet das angegebene Ereignis.  
   
- `fn`  
- [in] Name der Ereignishandlerfunktion. Diese Funktion verwenden, muss die **_stdcall** -Aufrufkonvention verwenden und über die entsprechenden Dispinterface-Stil Signatur verfügen.  
+ *fn*  
+ [in] Name des Ereignishandlerfunktion. Diese Funktion verwenden, muss die `_stdcall` Aufrufkonvention und die Signatur entsprechenden Dispinterface-Format haben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#136](../../atl/codesnippet/cpp/composite-control-macros_2.h)]  
   
 ### <a name="remarks"></a>Hinweise  
- CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt Rückgabewerte vom Typ HRESULT oder "void" aus Ihrem Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und sein Verhalten ist nicht definiert.  
+ CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt die Rückgabewerte vom Typ HRESULT oder "void" Ihre Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und das Verhalten nicht definiert ist.  
   
 ##  <a name="sink_entry_info"></a>  SINK_ENTRY_INFO und SINK_ENTRY_INFO_P  
- Verwenden der `SINK_ENTRY_INFO` Makro innerhalb einer Ereignissenke-Adresszuordnung mit dem Bereitstellen der erforderlichen Informationen für [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) Route von Ereignissen an die entsprechenden Handlerfunktion.  
+ Verwenden Sie das SINK_ENTRY_INFO-Makro in eine Senke-Event-Zuordnung, die vom benötigten Informationen bereitstellen [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) zum Weiterleiten von Ereignissen an die entsprechende Handler-Funktion.  
   
 ```
 SINK_ENTRY_INFO( id, iid, dispid, fn, info )
@@ -133,26 +133,26 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `id`  
- [in] Identifizieren die Ereignisquelle Ganzzahl ohne Vorzeichen. Dieser Wert muss übereinstimmen. die `nID` Vorlagenparameter verwendet, die in den zugehörigen [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) Basisklasse.  
+ *ID*  
+ [in] Ganzzahl ohne Vorzeichen, die Ereignisquelle identifizieren. Dieser Wert muss übereinstimmen der *nID* Template-Parameter verwendet, die in den zugehörigen [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) Basisklasse.  
   
- `iid`  
- [in] Die IID, die die Schnittstelle für die Verteilung bezeichnet.  
+ *IID*  
+ [in] Die IID, die die Dispatchschnittstelle identifiziert.  
 
- `piid`  
- [in] Ein Zeiger auf die IID, die die Schnittstelle für die Verteilung bezeichnet.
+ *piid*  
+ [in] Zeiger auf die IID, die die Dispatchschnittstelle identifiziert.
   
- `dispid`  
+ *DISPID*  
  [in] DISPID, die das angegebene Ereignis zu identifizieren.  
   
- `fn`  
- [in] Name der Ereignishandlerfunktion. Diese Funktion verwenden, muss die **_stdcall** -Aufrufkonvention verwenden und über die entsprechenden Dispinterface-Stil Signatur verfügen.  
+ *fn*  
+ [in] Name des Ereignishandlerfunktion. Diese Funktion verwenden, muss die `_stdcall` Aufrufkonvention und die Signatur entsprechenden Dispinterface-Format haben.  
   
- `info`  
- [in] Informationen zum Ereignishandlerfunktion eingeben. Diese Typinformationen erfolgt in Form eines Zeigers auf eine `_ATL_FUNC_INFO` Struktur. `CC_CDECL` ist die einzige Option, die in Windows CE für unterstützt die `CALLCONV` Feld der `_ATL_FUNC_INFO` Struktur. Jeder andere Wert wird nicht unterstützt, daher das Verhalten nicht definiert.  
+ *Info*  
+ [in] Typinformationen Sie für die Ereignishandlerfunktion. Diese Typinformationen erfolgt in Form eines Zeigers auf ein `_ATL_FUNC_INFO` Struktur. CC_CDECL ist die einzige Option, die in Windows CE unterstützt wird, für das Feld CALLCONV, der die `_ATL_FUNC_INFO` Struktur. Jeder andere Wert wird nicht unterstützt somit das Verhalten nicht definiert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die ersten vier Makroparameter sind identisch mit denen für die [SINK_ENTRY_EX](#sink_entry_ex) Makro. Der letzte Parameter stellt Typinformationen für das Ereignis bereit. CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt Rückgabewerte vom Typ HRESULT oder "void" aus Ihrem Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und sein Verhalten ist nicht definiert.  
+ Die ersten vier Makroparameter sind identisch mit denen für die [SINK_ENTRY_EX](#sink_entry_ex) Makro. Der letzte Parameter stellt die Typinformationen für das Ereignis bereit. CE ATL-Implementierung von ActiveX-Ereignissenken nur unterstützt die Rückgabewerte vom Typ HRESULT oder "void" Ihre Ereignishandlermethoden; Jeder andere Rückgabewert wird nicht unterstützt, und das Verhalten nicht definiert ist.  
   
 
 ## <a name="see-also"></a>Siehe auch  

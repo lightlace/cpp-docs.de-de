@@ -1,5 +1,5 @@
 ---
-title: _ATL_WIN_MODULE70 Struktur | Microsoft Docs
+title: _ATL_WIN_MODULE70-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 587b115c428b0d82183abbec9f712ff06ea448f4
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e330beda4770f60d5358ed8baf8d3b2fae260d3a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256079"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883033"
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70-Struktur
-Verwendet von Windowing Code in ATL  
+Windowing-Code in ATL verwendet  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,16 +42,16 @@ struct _ATL_WIN_MODULE70 {
   
 ## <a name="members"></a>Member  
  `cbSize`  
- Die Größe der Struktur, die für die versionsverwaltung verwendet.  
+ Die Größe der Struktur, die für die versionsverwaltung verwendet werden soll.  
   
  `m_csWindowCreate`  
- Verwendet, um die Serialisierung des Zugriffs auf Registrierungscode Fenster. Wird intern vom ATL verwendet  
+ Verwendet, um die Serialisierung des Zugriffs auf Fenster-Registrierungscode. Wird intern verwendet, von ATL  
   
- **m_pCreateWndList**  
- Zum Binden von Windows an ihre Objekte verwendet. Wird intern vom ATL verwendet  
+ `m_pCreateWndList`  
+ Zum Binden von Windows in ihre Objekte verwendet. Wird intern verwendet, von ATL  
   
- **m_rgWindowClassAtoms**  
- Verwendet, um das Fenster Klasse Registrierungen nachverfolgt werden, damit sie ordnungsgemäß bei Beendigung aufgehoben werden können. Wird intern vom ATL verwendet  
+ `m_rgWindowClassAtoms`  
+ Verwendet, um die Registrierungen für Fenster-Klasse nachverfolgt, damit sie ordnungsgemäß bei Beendigung des aufgehoben werden können. Wird intern verwendet, von ATL  
   
 ## <a name="remarks"></a>Hinweise  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module) ist definiert als Typedef von `_ATL_WIN_MODULE70`.  

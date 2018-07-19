@@ -1,5 +1,5 @@
 ---
-title: CCRTHeap-Klasse | Microsoft Docs
+title: Ccomheap-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83655bddfb56bdd0e532b520b2389278e3fbd762
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68c99d1ef7b28a9325d59db2144be11fa63cc99f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363845"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883046"
 ---
-# <a name="ccrtheap-class"></a>CCRTHeap-Klasse
-Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) CRT-Heapfunktionen verwenden.  
+# <a name="ccrtheap-class"></a>Ccomheap-Klasse
+Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mithilfe der Funktionen der CRT-Heap.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,12 +44,12 @@ class CCRTHeap : public IAtlMemMgr
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[Ccrtheap:: Allocate](#allocate)|Rufen Sie diese Methode auf, um einen Speicherblock zu belegen.|  
-|[Ccrtheap:: Free](#free)|Rufen Sie diese Methode, um einen Speicherblock, der von diesem Speicher-Manager frei.|  
+|[Ccrtheap:: Free](#free)|Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.|  
 |[CCRTHeap::GetSize](#getsize)|Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.|  
 |[Ccrtheap:: ReAllocate](#reallocate)|Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CCRTHeap` Zuordnungsfunktionen mithilfe der CRT-heap Funktionen, einschließlich der Speicher implementiert ["malloc"](../../c-runtime-library/reference/malloc.md), [freien](../../c-runtime-library/reference/free.md), [Realloc](../../c-runtime-library/reference/realloc.md), und [_msize](../../c-runtime-library/reference/msize.md).  
+ `CCRTHeap` Memory heap Zuordnungsfunktionen, die Verwendung der CRT-Funktionen, einschließlich implementiert [Malloc](../../c-runtime-library/reference/malloc.md), [kostenlose](../../c-runtime-library/reference/free.md), [Realloc](../../c-runtime-library/reference/realloc.md), und [_msize](../../c-runtime-library/reference/msize.md).  
   
 ## <a name="example"></a>Beispiel  
  Siehe das Beispiel für [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -70,7 +70,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `nBytes`  
+ *nBytes*  
  Die angeforderte Anzahl von Bytes im neuen Speicherblock.  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -79,21 +79,21 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [ccrtheap:: Free](#free) oder [ccrtheap:: ReAllocate](#reallocate) um den von dieser Methode belegten Arbeitsspeicher freizugeben.  
   
- Implementiert mit ["malloc"](../../c-runtime-library/reference/malloc.md).  
+ Mithilfe von implementiert [Malloc](../../c-runtime-library/reference/malloc.md).  
   
 ##  <a name="free"></a>  Ccrtheap:: Free  
- Rufen Sie diese Methode, um einen Speicherblock, der von diesem Speicher-Manager frei.  
+ Rufen Sie diese Methode, um einen Block von diesem Speicher-Manager zugeordneten Arbeitsspeicher freizugeben.  
   
 ```
 virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `p`  
- Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde. NULL ist ein gültiger Wert, und es wird keine Aktion ausgeführt.  
+ *p*  
+ Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde. NULL ist ein gültiger Wert und hat keine Auswirkungen.  
   
 ### <a name="remarks"></a>Hinweise  
- Implementiert mit [freien](../../c-runtime-library/reference/free.md).  
+ Mithilfe von implementiert [kostenlose](../../c-runtime-library/reference/free.md).  
   
 ##  <a name="getsize"></a>  CCRTHeap::GetSize  
  Rufen Sie diese Methode zum Abrufen der zugeordneten Größe eines Speicherblocks, der von diesem Speicher-Manager zugeordnet.  
@@ -103,14 +103,14 @@ virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `p`  
+ *p*  
  Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Größe des belegten Speicherblocks in Bytes zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Implementiert mit [_msize](../../c-runtime-library/reference/msize.md).  
+ Mithilfe von implementiert [_msize](../../c-runtime-library/reference/msize.md).  
   
 ##  <a name="reallocate"></a>  Ccrtheap:: ReAllocate  
  Rufen Sie diese Methode auf, um den von diesem Speicher-Manager zugeordneten Arbeitsspeicher neu zuzuordnen.  
@@ -120,22 +120,22 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `p`  
+ *p*  
  Ein Zeiger auf den Arbeitsspeicher, der zuvor von diesem Speicher-Manager zugeordnet wurde.  
   
- `nBytes`  
+ *nBytes*  
  Die angeforderte Anzahl von Bytes im neuen Speicherblock.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt einen Zeiger auf den Anfang des neu belegten Speicherblocks zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie [ccrtheap:: Free](#free) um den von dieser Methode belegten Arbeitsspeicher freizugeben. Implementiert mit [Realloc](../../c-runtime-library/reference/realloc.md).  
+ Rufen Sie [ccrtheap:: Free](#free) um den von dieser Methode belegten Arbeitsspeicher freizugeben. Mithilfe von implementiert [Realloc](../../c-runtime-library/reference/realloc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../../atl/atl-class-overview.md)   
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
  [CComHeap-Klasse](../../atl/reference/ccomheap-class.md)   
  [CWin32Heap-Klasse](../../atl/reference/cwin32heap-class.md)   
- [Clocalheap – Klasse](../../atl/reference/clocalheap-class.md)   
+ [CLocalHeap-Klasse](../../atl/reference/clocalheap-class.md)   
  [CGlobalHeap-Klasse](../../atl/reference/cglobalheap-class.md)   
  [IAtlMemMgr-Klasse](../../atl/reference/iatlmemmgr-class.md)

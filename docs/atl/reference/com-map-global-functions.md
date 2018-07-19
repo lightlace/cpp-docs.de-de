@@ -1,5 +1,5 @@
 ---
-title: Globale Funktionen für COM-Zuordnung | Microsoft Docs
+title: Globale COM-Zuordnungs-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509479a923203acd80eaac1ef90aa64125d208c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a23dc598d499071183cfcf7b0172611a693e569d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359878"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884235"
 ---
-# <a name="com-map-global-functions"></a>COM-Zuordnung globale Funktionen
-Diese Funktionen bieten Unterstützung für COM-Zuordnung **IUnknown** Implementierungen.  
+# <a name="com-map-global-functions"></a>Globale COM-Zuordnungs-Funktionen
+Diese Funktionen bieten Unterstützung für COM-Zuordnung `IUnknown` Implementierungen.  
   
 |||  
 |-|-|  
-|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delegiert an die **IUnknown** eines zusammengesetzten Objekts.|  
-|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Generiert von effizientem Code zum Vergleichen von Schnittstellen für **IUnknown**.|  
+|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delegiert an die `IUnknown` eines zusammengesetzten Objekts.|  
+|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Generiert von effizientem Code für den Vergleich von Schnittstellen für `IUnknown`.|  
 
   
 ## <a name="requirements"></a>Anforderungen  
@@ -48,29 +48,29 @@ HRESULT AtlInternalQueryInterface(
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `pThis`  
- [in] Ein Zeiger auf das Objekt mit der COM-Zuordnung von Schnittstellen verfügbar gemacht werden, um `QueryInterface`.  
+ *pThis*  
+ [in] Ein Zeiger auf das Objekt, das die Zuordnung der COM-Schnittstellen verfügbar gemacht werden, um enthält `QueryInterface`.  
   
- `pEntries`  
- [in] Ein Array von **_ATL_INTMAP_ENTRY** Strukturen, die eine Übersicht der verfügbaren Schnittstellen zuzugreifen.  
+ *pEntries*  
+ [in] Ein Array von `_ATL_INTMAP_ENTRY` Strukturen, die auf eine Karte der verfügbaren Schnittstellen zugreifen.  
   
- `iid`  
+ *IID*  
  [in] Die GUID der Schnittstelle angefordert wird.  
   
- `ppvObject`  
- [out] Ein Zeiger auf den Schnittstellenzeiger, der im angegebenen `iid`, oder **NULL** , wenn die Schnittstelle nicht gefunden wird.  
+ *ppvObject*  
+ [out] Ein Zeiger auf den Schnittstellenzeiger, der im angegebenen *Iid*, oder NULL, wenn die Schnittstelle nicht gefunden wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- `AtlInternalQueryInterface` Nur behandelt Schnittstellen in der COM-Zuordnungstabelle. Wenn das Objekt aggregiert wird, `AtlInternalQueryInterface` delegieren, die äußere unbekannte nicht. Geben Sie den Schnittstellen, in der COM-Zuordnungstabelle mit dem Makro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) oder einer dessen Varianten.  
+ `AtlInternalQueryInterface` behandelt nur Schnittstellen in der COM-Zuordnungstabelle. Wenn das Objekt aggregiert wird, `AtlInternalQueryInterface` ist das nicht an die äußere unbekannte delegieren. Sie können Schnittstellen eingeben, in die COM-Zuordnungstabelle mit dem Makro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) oder eine ihrer Varianten.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
   
 ##  <a name="inlineisequaliunknown"></a>  InlineIsEqualIUnknown  
- Rufen Sie diese Funktion speziellen Test auf **IUnknown**.  
+ Rufen Sie diese Funktion, für die speziellen Test für `IUnknown`.  
   
 ```
 BOOL InlineIsEqualUnknown(REFGUID rguid1);
@@ -78,7 +78,7 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
   
 ### <a name="parameters"></a>Parameter  
  *rguid1*  
- [in] Die GUID für den Vergleich **IID_IUnknown**.  
+ [in] Die GUID, der zu vergleichende `IID_IUnknown`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen](../../atl/reference/atl-functions.md)   

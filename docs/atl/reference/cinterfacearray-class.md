@@ -1,5 +1,5 @@
 ---
-title: CInterfaceArray Klasse | Microsoft Docs
+title: CInterfaceArray-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36a24eadea87d0d34adf0f577b321fa16a7cfc86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33e0783acfba1b460894ac8f5dde80e61780762
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359461"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882713"
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray-Klasse
-Diese Klasse bietet Methoden, die hilfreich beim Erstellen ein Array von COM-Schnittstellenzeiger auf.  
+Diese Klasse stellt nützliche Methoden aus, wenn Sie ein Array von COM-Schnittstellenzeiger zu erstellen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,11 +38,11 @@ class CInterfaceArray :
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `I`  
- Eine COM-Schnittstelle, die Angabe des Typs der Zeiger gespeichert werden soll.  
+ *I*  
+ Eine COM-Schnittstelle, die den Typ des Zeigers gespeichert werden.  
   
- `piid`  
- Ein Zeiger auf die IID der `I`.  
+ *piid*  
+ Ein Zeiger auf die IID der *ich*.  
   
 ## <a name="members"></a>Member  
   
@@ -50,10 +50,10 @@ class CInterfaceArray :
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Der Konstruktor für das Array der Schnittstelle.|  
+|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Der Konstruktor für das schnittstellenarray.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse stellt einen Konstruktor und abgeleiteten Methoden zum Erstellen eines Arrays von COM-Schnittstellenzeigern. Verwendung [CInterfaceList](../../atl/reference/cinterfacelist-class.md) Wenn eine Liste erforderlich ist.  
+ Diese Klasse stellt einen Konstruktor und die abgeleiteten Methoden zum Erstellen eines Arrays von COM-Schnittstellenzeiger. Verwendung [CInterfaceList](../../atl/reference/cinterfacelist-class.md) Wenn eine Liste erforderlich ist.  
   
  Weitere Informationen finden Sie unter [ATL-Auflistungsklassen](../../atl/atl-collection-classes.md).  
   
@@ -79,4 +79,4 @@ CInterfaceArray() throw();
  [CAtlArray-Klasse](../../atl/reference/catlarray-class.md)   
  [CComQIPtr-Klasse](../../atl/reference/ccomqiptr-class.md)   
  [CComQIPtrElementTraits-Klasse](../../atl/reference/ccomqiptrelementtraits-class.md)   
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: COleIPFrameWndEx Klasse | Microsoft Docs
+title: COleIPFrameWndEx-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b79f65b39aa741a9794fbe05721c7dc44287603
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 80244a328fb374c4302f068c3c8b64f5b5d5c676
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041645"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850133"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx-Klasse
 Die Klasse `COleIPFrameWndEx` implementiert einen OLE-Container, der MFC unterstützt. Sie müssen die Klasse für das direkte Rahmenfenster der Anwendung von der `COleIPFrameWndEx` -Klasse ableiten und nicht von der [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)-Klasse. 
@@ -264,16 +264,16 @@ BOOL DockPaneLeftOf(
   
 ### <a name="parameters"></a>Parameter  
  [in] *pBar*  
- Ein Zeiger auf den Bereich angedockt.  
+ Ein Zeiger auf den Bereich anzudocken.  
   
  [in] *pLeftOf*  
  Ein Zeiger auf den Bereich, der als Ursprung dient.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt `TRUE` , wenn der Vorgang erfolgreich ist. Andernfalls wird `FALSE` zurückgegeben.  
+ Gibt TRUE zurück, wenn der Vorgang erfolgreich ist. Andernfalls wird false ZURÜCKGEGEBEN.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um mehrere Bereich Objekte in einer vordefinierten Reihenfolge andocken. Diese Methode Dockt den Bereich, der vom angegebenen an *pBar* auf der linken Seite des Bereichs von angegebenen *pLeftOf*.  
+ Rufen Sie diese Methode, um mehrere Bereich Objekte in einer vordefinierten Reihenfolge andocken. Diese Methode Dockt den Bereich, der gemäß an *pBar* auf der linken Seite des Bereichs gemäß *pLeftOf*.  
   
 ##  <a name="enableautohidepanes"></a>  COleIPFrameWndEx::EnableAutoHidePanes  
 
@@ -334,10 +334,10 @@ CMFCPopupMenu* GetActivePopup() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die aktives Popupmenü; andernfalls `NULL`.  
+ Ein Zeiger auf die aktives Popupmenü; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Mit dieser Methode können Sie einen Zeiger auf die [CMFCPopupMenu Klasse](../../mfc/reference/cmfcpopupmenu-class.md) -Objekt, das derzeit angezeigt wird.  
+ Verwenden Sie diese Methode einen Zeiger zum Abrufen der [CMFCPopupMenu-Klasse](../../mfc/reference/cmfcpopupmenu-class.md) -Objekt, das derzeit angezeigt wird.  
   
 ##  <a name="getcontainerframewindow"></a>  COleIPFrameWndEx::GetContainerFrameWindow  
 
@@ -351,17 +351,17 @@ COleCntrFrameWndEx* GetContainerFrameWindow();
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getdefaultresid"></a>  COleIPFrameWndEx::GetDefaultResId  
- Gibt zurück, die im Menü-Ressourcen-ID, die angegeben, wenn das Rahmenfenster im Menü geladen.  
+ Gibt zurück, das die Menü-Ressourcen-ID, die angegeben, wenn das Rahmenfenster Menü geladen.  
   
 ```  
 UINT GetDefaultResId() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Ressourcen-ID, der das Menü oder 0 zurück, wenn das Rahmenfenster keine Menüleisten hat.  
+ Gibt die Ressourcen-ID, der das Menü, oder 0 zurück, wenn das Rahmenfenster keine Menüleisten hat.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufruf dieser Funktion zum Abrufen der Ressourcen-ID, die angegeben, wenn das Rahmenfenster die Menüressource durch den Aufruf geladen `COleIPFrameWndEx::LoadFrame`.  
+ Aufruf dieser Funktion zum Abrufen der Ressourcen-ID, die angegeben, wenn das Rahmenfenster der Menüressource durch Aufrufen von geladen `COleIPFrameWndEx::LoadFrame`.  
   
 ##  <a name="getdockframe"></a>  COleIPFrameWndEx::GetDockFrame  
 
@@ -407,7 +407,7 @@ const CMFCMenuBar* GetMenuBar() const;
  Ein Zeiger auf das menüleistenobjekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Mit dieser Funktion können Sie einen Zeiger auf das menüleistenobjekt abzurufen, die zu gehört die `COleIPFrameWndEx` Objekt.  
+ Mit dieser Funktion können Sie einen Zeiger auf das menüleistenobjekt abrufen zu den `COleIPFrameWndEx` Objekt.  
   
 ##  <a name="getpane"></a>  COleIPFrameWndEx::GetPane  
 
@@ -431,10 +431,10 @@ const CObList& GetTearOffBars() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf eine `CObList` -Objekt, das eine Auflistung von Zeigern auf enthält die [CBasePane Klasse](../../mfc/reference/cbasepane-class.md)-abgeleitete Objekte.  
+ Ein Verweis auf eine `CObList` -Objekt, das eine Auflistung von Zeigern auf enthält die [CBasePane-Klasse](../../mfc/reference/cbasepane-class.md)--abgeleitete Objekte.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `COleIPFrameWndEx` -Objekt verwaltet die Auflistung von abtrennbare Menüs als eine Liste der [CBasePane Klasse](../../mfc/reference/cbasepane-class.md)--abgeleitete Objekte. Verwenden Sie diese Methode, um einen Verweis auf diese Liste abzurufen.  
+ Die `COleIPFrameWndEx` -Objekt verwaltet die Auflistung der abtrennbare Menüs als eine Liste der [CBasePane-Klasse](../../mfc/reference/cbasepane-class.md)--abgeleitete Objekte. Verwenden Sie diese Methode, um einen Verweis auf diese Liste abzurufen.  
   
 ##  <a name="gettoolbarbuttontooltiptext"></a>  COleIPFrameWndEx::GetToolbarButtonToolTipText  
  Wird vom Framework aufgerufen, bevor die QuickInfo für die Schaltfläche angezeigt wird.  
@@ -447,10 +447,10 @@ virtual BOOL GetToolbarButtonToolTipText(
   
 ### <a name="parameters"></a>Parameter  
  [in] *pButton*  
- Ein Zeiger auf die Schaltfläche "".  
+ Zeiger auf die Schaltfläche.  
   
  [in] *StrTTText*  
- Ein Zeiger auf den QuickInfo-Text.  
+ Zeiger auf den QuickInfo-Text.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die Standardimplementierung gibt 0 zurück.  
@@ -459,7 +459,7 @@ virtual BOOL GetToolbarButtonToolTipText(
  Überschreiben Sie diese Funktion, um die Anzeige der QuickInfo auf Symbolleisten-Schaltflächen anpassen.  
   
 ##  <a name="initusertoobars"></a>  COleIPFrameWndEx::InitUserToobars  
- Gibt einen Bereich von Steuerelement-IDs, die die benutzerdefinierten Symbolleisten das Framework zuweist.  
+ Gibt einen Bereich von Steuerelement-IDs, die das Framework der benutzerdefinierten Symbolleisten zuweist.  
   
 ```  
 void InitUserToolbars(
@@ -470,7 +470,7 @@ void InitUserToolbars(
   
 ### <a name="parameters"></a>Parameter  
  [in] *LpszRegEntry*  
- Der Registrierungseintrag, in dem die Bibliothek Symbolleiste benutzereinstellungen speichert.  
+ Der Registrierungseintrag, in denen die Bibliothek Symbolleiste benutzereinstellungen speichert.  
   
  [in] *UiUserToolbarFirst*  
  Steuerelement-ID, die die erste benutzerdefinierte Symbolleiste zugewiesen.  
@@ -479,7 +479,7 @@ void InitUserToolbars(
  Steuerelement-ID der letzten eine benutzerdefinierte Symbolleiste zugewiesen.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Funktion, um einen Bereich von Steuerelement-IDs für die Zuweisung zu Symbolleisten zu initialisieren, die Benutzer dynamisch zu definieren. Die Parameter *UiUserToolbarFirst* und *UiUserToolbarLast* definieren Sie einen Bereich der zulässigen Toolbar-Steuerelement-IDs. Um die Erstellung von benutzerdefinierten Symbolleisten zu deaktivieren, legen *UiUserToolbarFirst* oder *UiUserToolbarLast* auf-1 festgelegt.  
+ Verwenden Sie diese Funktion, um einen Bereich von Steuerelement-IDs für die Zuweisung zu Symbolleisten zu initialisieren, der Benutzer dynamisch zu definieren. Die Parameter *UiUserToolbarFirst* und *UiUserToolbarLast* definieren Sie einen Bereich von zulässigen Symbolleistensteuerelement-IDs. Legen Sie zum Deaktivieren der Erstellung von benutzerdefinierten Symbolleisten *UiUserToolbarFirst* oder *UiUserToolbarLast* -1.  
   
 ##  <a name="insertpane"></a>  COleIPFrameWndEx::InsertPane  
 
@@ -501,17 +501,17 @@ BOOL InsertPane(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="ismenubaravailable"></a>  COleIPFrameWndEx::IsMenuBarAvailable  
- Ermittelt, ob der Zeiger auf das Menüleistenobjekt nicht `NULL`  
+ Bestimmt, ob der Zeiger auf das menüleistenobjekt nicht NULL ist.  
   
 ```  
 BOOL IsMenuBarAvailable() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt ein NULL-Wert, wenn das Rahmenfenster eine Menüleiste; hat Andernfalls wird 0 zurückgegeben.  
+ Gibt eine nicht-NULL-Wert, wenn das Rahmenfenster auf eine Menüleiste; hat Andernfalls wird 0 zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um zu bestimmen, ob das Rahmenfenster nicht verwaltet `NULL` Zeiger auf seine menüleistenobjekt.  
+ Rufen Sie diese Methode, um zu bestimmen, ob das Rahmenfenster einen nicht-NULL-Zeiger auf die menüleistenobjekt verwaltet.  
   
 ##  <a name="ispointneardocksite"></a>  COleIPFrameWndEx::IsPointNearDockSite  
 
@@ -590,10 +590,10 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
   
 ### <a name="parameters"></a>Parameter  
  [in] *pMenuPopup*  
- Ein Zeiger auf das Popupmenü-Objekt.  
+ Ein Zeiger auf das Popup-Menü-Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode zum Empfangen von Benachrichtigungen von `CMFCPopupMenu` beim Verarbeiten von Nachrichten WM_DESTROY-Objekten.  
+ Überschreiben Sie diese Methode zum Empfangen von Benachrichtigungen von `CMFCPopupMenu` Objekte beim WM_DESTROY-Nachrichten verarbeiten.  
   
 ##  <a name="oncmdmsg"></a>  COleIPFrameWndEx::OnCmdMsg  
 
@@ -628,19 +628,19 @@ virtual BOOL OnDrawMenuImage(
   
 ### <a name="parameters"></a>Parameter  
  [in] *pDC*  
- Ein Zeiger auf den Gerätekontext.  
+ Zeiger auf den Gerätekontext.  
   
  [in] *pMenuButton*  
- Ein Zeiger auf die Menüschaltfläche.  
+ Zeiger auf die Menüschaltfläche.  
   
  [in] *RectImage*  
- Das Bild dem Menüelement zugeordnet ist.  
+ Das Bild, der dem Menüelement zugeordnet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Bei der Standardimplementierung wird keine Aktion ausgeführt, und gibt 0 zurück.  
+ Die Standardimplementierung führt keine Aktion aus und gibt 0 zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode, wenn Sie für die Menüelemente, die auf der Menüleiste, die im Besitz von gehören zeichnen Bild anpassen möchten die `COleIPFrameWndEx`-abgeleitetes Objekt.  
+ Diese Methode überschreiben, wenn Sie Images für die Menüelemente, die auf der Menüleiste, die im Besitz von gehören zeichnen anpassen möchten die `COleIPFrameWndEx`-abgeleitetes Objekt.  
   
 ##  <a name="ondrawmenulogo"></a>  COleIPFrameWndEx::OnDrawMenuLogo  
  Wird von Framework aufgerufen, wenn ein [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)-Objekt eine WM_PAINT-Meldung verarbeitet.  
@@ -654,19 +654,19 @@ virtual void OnDrawMenuLogo(
   
 ### <a name="parameters"></a>Parameter  
  [in] *pDC*  
- Ein Zeiger auf den Gerätekontext.  
+ Zeiger auf den Gerätekontext.  
   
  [in] *pMenu*  
- Zeiger auf das Popupmenü-Objekt.  
+ Zeiger auf das Popup-Menü-Objekt.  
   
  [in] *RectLogo*  
- Ein Zeiger auf das Logo angezeigt.  
+ Zeiger auf das Logo angezeigt.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode, um ein Logo im Popupmenü der Menüleiste, die im Besitz von zugeordneten Anzeigen der `COleIPFrameWndEx`-abgeleitetes Objekt. Bei der Standardimplementierung wird keine Aktion ausgeführt.  
+ Überschreiben Sie diese Methode, um ein Logo im Zusammenhang mit der Menüleiste, die im Besitz von Popupmenü Anzeigen der `COleIPFrameWndEx`-abgeleitetes Objekt. Bei der Standardimplementierung wird keine Aktion ausgeführt.  
   
 ##  <a name="onmenubuttontoolhittest"></a>  COleIPFrameWndEx::OnMenuButtonToolHitTest  
- Vom Framework aufgerufen, wenn eine [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)-Objekt Prozesse eine `WM_NCHITTEST` Nachricht.  
+ Vom Framework aufgerufen, wenn eine [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)-Objekt eine WM_NCHITTEST-Meldung verarbeitet.  
   
 ```  
 virtual BOOL OnMenuButtonToolHitTest(
@@ -676,16 +676,16 @@ virtual BOOL OnMenuButtonToolHitTest(
   
 ### <a name="parameters"></a>Parameter  
  [in] pButton  
- Ein Zeiger auf eine Menüschaltfläche.  
+ Zeiger auf eine Schaltfläche.  
   
  [out] pTI  
  Zeiger auf eine `TOOLINFO`-Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Bei der Standardimplementierung wird keine Aktion ausgeführt, und gibt 0 zurück. Die Implementierung muss einen Wert ungleich NULL zurückgeben, wenn es voll ist die *pTI* Parameter.  
+ Die Standardimplementierung führt keine Aktion aus und gibt 0 zurück. Die Implementierung sollte einen Wert ungleich NULL zurückgeben, wenn sie voll ist die *pTI* Parameter.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode, um QuickInfo-Informationen zu einem bestimmten Menüelement anzugeben.  
+ Überschreiben Sie diese Methode, um das QuickInfo-Informationen über ein besonderes Menüelement bereitzustellen.  
   
 ##  <a name="onmoveminiframe"></a>  COleIPFrameWndEx::OnMoveMiniFrame  
 
@@ -748,7 +748,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="onshowpopupmenu"></a>  COleIPFrameWndEx::OnShowPopupMenu  
- Vom Framework aufgerufen, wenn ein Popupmenü angezeigt wird.  
+ Vom Framework aufgerufen, wenn ein Popup-Menü angezeigt wird.  
   
 ```  
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
@@ -756,16 +756,16 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
   
 ### <a name="parameters"></a>Parameter  
  [in] *pMenuPopup*  
- Ein Zeiger auf das Menü das Popupmenü angezeigt werden.  
+ Zeiger auf das Popupmenü angezeigt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Bei der Standardimplementierung wird keine Aktion ausgeführt, und gibt einen Wert ungleich 0 (null) zurück. Die Implementierung sollte zurückgeben `FALSE` Popupmenü angezeigt werden kann.  
+ Die Standardimplementierung führt keine Aktion aus und gibt einen Wert ungleich NULL zurück. Die Implementierung sollte "false" zurückgeben, wenn das Popup-Menü nicht angezeigt werden kann.  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Methode, um die Anzeige eines Popupmenüs anpassen. Beispielsweise können Menüschaltflächen in Farbe Menüschaltflächen ändern oder abtrennbare Balken zu initialisieren.  
+ Überschreiben Sie diese Methode, um die Anzeige eines Popupmenüs anpassen. Sie können z. B. Menüschaltflächen in Menüschaltflächen Farbe ändern oder abtrennbare Balken zu initialisieren.  
   
 ##  <a name="ontearoffmenu"></a>  COleIPFrameWndEx::OnTearOffMenu  
- Vom Framework aufgerufen, wenn der Benutzer ein Menü auswählt, die einen Balken abtrennbare verfügt.  
+ Vom Framework aufgerufen, wenn der Benutzer ein Menü auswählt, die eine abtrennbarer Leiste verfügt.  
   
 ```  
 virtual BOOL OnTearOffMenu(
@@ -775,16 +775,16 @@ virtual BOOL OnTearOffMenu(
   
 ### <a name="parameters"></a>Parameter  
  [in] *pMenuPopup*  
- Ein Zeiger auf das Menü das Popupmenü, das der Benutzer ausgewählt.  
+ Ein Zeiger auf das Popup-Menü, das der Benutzer ausgewählt.  
   
  [in] *pBar*  
- Ein Zeiger auf den Bereich, der das Menü hostet.  
+ Ein Zeiger auf den Bereich, der Sie im Menü hostet.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `TRUE` Wenn das Framework das Menü das Popupmenü aktiviert werden sollen; andernfalls `FALSE`. Der Standardwert ist `TRUE`.  
+ True, wenn Sie das Framework das Popupmenü aktivieren möchten. andernfalls "false". Der Standardwert ist "true".  
   
 ### <a name="remarks"></a>Hinweise  
- Überschreiben Sie diese Funktion, wenn Sie das Setup von abtrennbarer Leiste anpassen möchten.  
+ Überschreiben Sie diese Funktion, wenn Sie das Setup von der abtrennbarer Leiste anpassen möchten.  
   
 ##  <a name="panefrompoint"></a>  COleIPFrameWndEx::PaneFromPoint  
 
@@ -873,7 +873,7 @@ void SetDockState(const CDockState& state);
  Gibt den andockzustand an.  
   
 ### <a name="remarks"></a>Hinweise  
- Mit dieser Funktion können Sie eine neue andockzustand für Bereiche angeben, die zu gehören die `COleIPFrameWndEx` Objekt.  
+ Mit dieser Funktion können Sie eine neue Andockstatus für Bereiche angeben, die zu gehören die `COleIPFrameWndEx` Objekt.  
   
 ##  <a name="setuptoolbarmenu"></a>  COleIPFrameWndEx::SetupToolbarMenu  
  Ändert ein Symbolleistenobjekt durch die Suche nach Dummy-Elementen und durch das anschließende Ersetzen dieser Dummy-Elemente durch die angegebenen benutzerdefinierten Elemente.  
@@ -890,10 +890,10 @@ void SetupToolbarMenu(
  Ein Verweis auf eine [CMenu](../../mfc/reference/cmenu-class.md) Objekt geändert werden.  
   
  [in] *UiViewUserToolbarCmdFirst*  
- Gibt die erste benutzerdefinierte-Befehl.  
+ Gibt den ersten benutzerdefinierten-Befehl.  
   
  [in] *UiViewUserToolbarCmdLast*  
- Gibt den letzten benutzerdefinierte-Befehl.  
+ Gibt an, mit dem letzten benutzerdefinierte-Befehl.  
   
 ### <a name="remarks"></a>Hinweise  
   
@@ -927,10 +927,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>Parameter  
  [in] dwData  
- Gibt die Daten nach Bedarf für den Typ der Hilfe von angegebenen *nCmd*.  
+ Gibt an, Daten nach Bedarf für den Typ der Hilfe, die anhand des *nCmd*.  
   
  [in] *nCmd*  
- Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Einfluss auf die *DwData* Parameter, finden Sie unter der [WinHelp-Funktion](http://msdn.microsoft.com/library/windows/desktop/bb762267) im Windows SDK.  
+ Gibt den Typ der angeforderten Hilfe an. Eine Liste der möglichen Werte und deren Auswirkungen auf die *DwData* Parameter finden Sie unter den [WinHelp-Funktion](http://msdn.microsoft.com/library/windows/desktop/bb762267) im Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
   

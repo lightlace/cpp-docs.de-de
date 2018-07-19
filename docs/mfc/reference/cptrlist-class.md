@@ -1,5 +1,5 @@
 ---
-title: CPtrList Klasse | Microsoft Docs
+title: CPtrList-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421373969beb83d033ce8ca14bd11fdb5d8dcb14
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 36746c7979511890bb450c9204c0c7a908bbace3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078620"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853893"
 ---
 # <a name="cptrlist-class"></a>CPtrList-Klasse
 Unterstützt Listen void-Zeigern.  
@@ -35,7 +35,7 @@ class CPtrList : public CObject
 ```  
   
 ## <a name="members"></a>Member  
- Die Memberfunktionen von `CPtrList` ähneln den Memberfunktionen der Klasse [CObList](../../mfc/reference/coblist-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CObList`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo eine `CObject` -Zeiger als Funktionsparameter oder Rückgabewert, ersetzen Sie einen Zeiger auf **"void"**.  
+ Die Memberfunktionen der `CPtrList` ähneln den Memberfunktionen der Klasse [CObList](../../mfc/reference/coblist-class.md). Aufgrund dieser Ähnlichkeit können Sie die `CObList`-Referenzdokumentation für Memberfunktionsbesonderheiten verwenden. Immer dort, wo ein `CObject` Zeiger als Funktionsparameter oder Rückgabewert, ersetzen Sie durch einen Zeiger auf **"void"**.  
   
  `CObject*& CObList::GetHead() const;`  
   
@@ -44,7 +44,7 @@ class CPtrList : public CObject
  `void*& CPtrList::GetHead() const;`  
   
 ## <a name="remarks"></a>Hinweise  
- `CPtrList` enthält das `IMPLEMENT_DYNAMIC`-Makro zur Unterstützung von Laufzeittypenzugriff und zum Sichern in ein `CDumpContext`-Objekt. Wenn Sie eine Sicherung einzelner Zeigerlistenelemente benötigen, müssen Sie die Tiefe des Sicherungskontexts auf 1 oder größer festlegen.  
+ `CPtrList` enthält das IMPLEMENT_DYNAMIC-Makro, um die Laufzeit laufzeittypenzugriff und zum unterstützen einer `CDumpContext` Objekt. Wenn Sie eine Sicherung einzelner Zeigerlistenelemente benötigen, müssen Sie die Tiefe des Sicherungskontexts auf 1 oder größer festlegen.  
   
  Zeigerlisten können nicht serialisiert werden.  
   

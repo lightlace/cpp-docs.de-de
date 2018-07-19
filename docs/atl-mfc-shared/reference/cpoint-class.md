@@ -1,5 +1,5 @@
 ---
-title: CPoint Klasse | Microsoft Docs
+title: CPoint-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36dc82c03f13b4708d705d9fd66eff26870c8346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd7e3b405f5724abd1df5e0e8fcc35dcd2149153
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365392"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880093"
 ---
 # <a name="cpoint-class"></a>CPoint-Klasse
 Ähnlich der Windows-Struktur `POINT` .  
@@ -49,26 +49,26 @@ class CPoint : public tagPOINT
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CPoint::Offset](#offset)|Fügt Werte für die **x** und **y** Mitglied der `CPoint`.|  
+|[CPoint::Offset](#offset)|Addiert die Werte, die `x` und `y` Mitglied der `CPoint`.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CPoint::operator-](#operator_-)|Gibt die Differenz zwischen einer `CPoint` und eine Größe oder die Negation des einen Punkt oder der Größenunterschied zwischen zwei Punkten der Erde oder den Offset von einer negativen Größe.|  
+|[CPoint::operator-](#operator_-)|Gibt die Differenz zwischen einer `CPoint` und eine Größe oder die Negation der einen Punkt oder die Differenz der Größe zwischen zwei Punkten der Erde oder den Offset von einer negativen Größe.|  
 |[CPoint::operator! =](#operator_neq)|Prüft auf Ungleichheit zwischen zwei Punkten.|  
-|[CPoint::operator +](#operator_add)|Gibt die Summe der eine `CPoint` und eine Größe oder ein Punkt oder ein `CRect` offset durch eine Größe.|  
-|[CPoint::operator +=](#operator_add_eq)|UTC-Offsets `CPoint` einen Größe oder den Punkt hinzufügen.|  
-|[CPoint::operator =](#operator_-_eq)|UTC-Offsets `CPoint` durch Subtrahieren eine Größe oder einen Punkt.|  
-|[CPoint::operator ==](#operator_eq_eq)|Überprüft die Gleichheit zwischen zwei Punkten.|  
+|[CPoint::operator +](#operator_add)|Gibt die Summe der ein `CPoint` und eine Größe oder ein Punkt oder ein `CRect` um eine Größe verringert.|  
+|[CPoint::operator +=](#operator_add_eq)|Offsets `CPoint` einen Größe oder den Punkt hinzufügen.|  
+|[CPoint::operator =](#operator_-_eq)|Offsets `CPoint` durch Subtrahieren eine Größe oder den Punkt.|  
+|[CPoint::operator ==](#operator_eq_eq)|Prüft auf Gleichheit zwischen zwei Punkten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Es beinhaltet außerdem Memberfunktionen zum Bearbeiten von `CPoint` und [Punkt](../../mfc/reference/point-structure1.md) Strukturen.  
+ Es enthält auch Member-Funktionen zum Bearbeiten von `CPoint` und [Punkt](../../mfc/reference/point-structure1.md) Strukturen.  
   
- Ein `CPoint` Objekt kann überall verwendet eine `POINT` Struktur wird verwendet. Die Operatoren für diese Klasse, die Interaktion mit einem "Size" akzeptiert beide [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekte oder [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Strukturen, da die beiden austauschbar sind.  
+ Ein `CPoint` Objekt kann es sich immer verwendet eine `POINT` Struktur verwendet wird. Die Operatoren dieser Klasse, die Interaktion mit einem "Size" akzeptiert beide [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekte oder [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) strukturiert werden, da die beiden austauschbar sind.  
   
 > [!NOTE]
->  Diese Klasse ist abgeleitet von der `tagPOINT` Struktur. (Der Name `tagPOINT` weniger häufig verwendeter Name ist für die `POINT` Struktur.) Dies bedeutet, dass die Datenmember von der `POINT` Struktur `x` und `y`, stehen zugegriffen werden die Datenmember der `CPoint`.  
+>  Diese Klasse ist abgeleitet von der `tagPOINT` Struktur. (Der Name `tagPOINT` weniger häufig verwendeter Name ist für die `POINT` Struktur.) Dies bedeutet, dass die Datenmember des der `POINT` Struktur `x` und `y`, sind die zugänglichen Datenmember `CPoint`.  
   
 > [!NOTE]
 >  Weitere Informationen zu freigegebenen hilfsprogrammklassen (z. B. `CPoint`), finden Sie unter [gemeinsam genutzten Klassen](../../atl-mfc-shared/atl-mfc-shared-classes.md).  
@@ -93,20 +93,20 @@ CPoint(LPARAM dwPoint) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `initX`  
+ *initX*  
  Gibt den Wert des `x`-Members von `CPoint` an.  
   
- `initY`  
+ *initY*  
  Gibt den Wert des `y`-Members von `CPoint` an.  
   
- `initPt`  
- [Punkt](../../mfc/reference/point-structure1.md) Struktur oder `CPoint` , die die Werte, die zur Initialisierung gibt `CPoint`.  
+ *initPt*  
+ [Punkt](../../mfc/reference/point-structure1.md) Struktur oder `CPoint` , die angibt, dass die Werte zum Initialisieren verwendet `CPoint`.  
   
- `initSize`  
- [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) , die die Werte, die zur Initialisierung gibt `CPoint`.  
+ *initSize*  
+ [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) , die angibt, dass die Werte zum Initialisieren verwendet `CPoint`.  
   
- `dwPoint`  
- Legt den `x`-Member auf das niederwertige Wort von `dwPoint` und den `y`-Member auf das höherwertige Wort von `dwPoint` fest.  
+ *dwPoint*  
+ Legt die `x` Member das niederwertige Wort *DwPoint* und `y` Member das höherwertige Word des *DwPoint*.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn keine Argumente angegeben werden, werden die `x`- und `y`-Member auf 0 festgelegt.  
@@ -139,7 +139,7 @@ ASSERT(ptFromDouble == ptMFCHere);
 ```  
   
 ##  <a name="offset"></a>  CPoint::Offset  
- Fügt Werte für die **x** und **y** Mitglied der `CPoint`.  
+ Addiert die Werte, die `x` und `y` Mitglied der `CPoint`.  
   
 ```  
 void Offset(int xOffset, int yOffset) throw();
@@ -149,33 +149,33 @@ void Offset(SIZE size) throw();
   
 ### <a name="parameters"></a>Parameter  
  *xOffset*  
- Gibt den Betrag für den offset der **x** Mitglied der `CPoint`.  
+ Gibt an, der Betrag, um die `x` Mitglied der `CPoint`.  
   
  *yOffset*  
- Gibt den Betrag für den offset der **y** Mitglied der `CPoint`.  
+ Gibt an, der Betrag, um die `y` Mitglied der `CPoint`.  
   
- `point`  
- Gibt den Umfang an ( [Punkt](../../mfc/reference/point-structure1.md) oder `CPoint`) für den offset der `CPoint`.  
+ *Zeigen Sie*  
+ Gibt an, wie ( [Punkt](../../mfc/reference/point-structure1.md) oder `CPoint`) für den offset der `CPoint`.  
   
- `size`  
- Gibt den Umfang an ( [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) oder [CSize](../../atl-mfc-shared/reference/csize-class.md)) für den offset der `CPoint`.  
+ *size*  
+ Gibt an, wie ( [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) oder [CSize](../../atl-mfc-shared/reference/csize-class.md)) für den offset der `CPoint`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]  
   
 ##  <a name="operator_eq_eq"></a>  CPoint::operator ==  
- Überprüft die Gleichheit zwischen zwei Punkten.  
+ Prüft auf Gleichheit zwischen zwei Punkten.  
   
 ```  
 BOOL operator==(POINT point) const throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `point`  
+ *Zeigen Sie*  
  Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder `CPoint` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Wert ist ungleich NULL, wenn die Punkte gleich sind; andernfalls 0.  
+ Ungleich NULL, wenn die Punkte gleich sind; andernfalls 0.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#29](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_2.cpp)]  
@@ -188,17 +188,17 @@ BOOL operator!=(POINT point) const throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `point`  
+ *Zeigen Sie*  
  Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder `CPoint` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn die Punkte nicht gleich sind; andernfalls 0.  
+ Ungleich NULL, wenn die Punkte ungleich sind; andernfalls 0.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#30](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_3.cpp)]  
   
 ##  <a name="operator_add_eq"></a>  CPoint::operator +=  
- Die erste Überladung fügt eine Größe der `CPoint`.  
+ Die erste Überladung fügt eine Größe, auf die `CPoint`.  
   
 ```  
 void operator+=(SIZE size) throw(); 
@@ -206,18 +206,18 @@ void operator+=(POINT point) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `size`  
+ *size*  
  Enthält eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.  
   
- `point`  
+ *Zeigen Sie*  
  Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
  Die zweite Überladung fügt einen Punkt in der `CPoint`.  
   
- In beiden Fällen erfolgt die Addition durch Hinzufügen der **x** (oder **Cx**) Member des rechten Operanden der **x** Mitglied der `CPoint` und Hinzufügen der **y**  (oder **cy**) Mitglied der Rechte Operand für den **y** Mitglied der `CPoint`.  
+ In beiden Fällen erfolgt die Addition durch Hinzufügen der `x` (oder `cx`) Mitglied der Rechte Operand, der die `x` Mitglied der `CPoint` und Hinzufügen der `y` (oder `cy`) Mitglied der Rechte Operand, der die `y` Mitglied der `CPoint`.  
   
- Beispielsweise durch Hinzufügen von `CPoint(5, -7)` an eine Variable enthält `CPoint(30, 40)` ändert sich die Variable `CPoint(35, 33)`.  
+ Z. B. Hinzufügen von `CPoint(5, -7)` auf eine Variable enthält `CPoint(30, 40)` ändert sich die Variable `CPoint(35, 33)`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]  
@@ -231,24 +231,24 @@ void operator-=(POINT point) throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `size`  
+ *size*  
  Enthält eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.  
   
- `point`  
+ *Zeigen Sie*  
  Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Die zweite Überladung subtrahiert einen Punkt vom der `CPoint`.  
+ Die zweite Überladung subtrahiert einen Punkt aus dem `CPoint`.  
   
- In beiden Fällen erfolgt die Subtraktion durch Subtrahieren der **x** (oder **Cx**) Member des rechten Operanden aus der **x** Mitglied der `CPoint` und die subtrahieren**y** (oder **cy**) Member des rechten Operanden aus der **y** Mitglied der `CPoint`.  
+ In beiden Fällen erfolgt durch Subtrahieren der Subtraktion der `x` (oder `cx`) Member des rechten Operanden aus der `x` Mitglied der `CPoint` und Subtrahieren von der `y` (oder `cy`) Mitglied der rechten Seite Operanden aus der `y` Mitglied der `CPoint`.  
   
- Beispielsweise subtrahieren `CPoint(5, -7)` aus einer Variablen mit `CPoint(30, 40)` ändert sich die Variable `CPoint(25, 47)`.  
+ Subtrahieren Sie z. B. `CPoint(5, -7)` aus einer Variablen mit `CPoint(30, 40)` ändert sich die Variable `CPoint(25, 47)`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#32](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_5.cpp)]  
   
 ##  <a name="operator_add"></a>  CPoint::operator +  
- Verwenden Sie diesen Operator für den offset `CPoint` durch eine `CPoint` oder `CSize` -Objekt, oder für den offset einer `CRect` durch eine `CPoint`.  
+ Verwenden Sie diesen Operator für den offset `CPoint` durch eine `CPoint` oder `CSize` Objekt oder für den offset ein `CRect` durch eine `CPoint`.  
   
 ```  
 CPoint operator+(SIZE size) const throw();
@@ -257,28 +257,28 @@ CRect operator+(const RECT* lpRect) const throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `size`  
+ *size*  
  Enthält eine [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.  
   
- `point`  
+ *Zeigen Sie*  
  Enthält eine [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.  
   
- `lpRect`  
+ *lpRect*  
  Enthält einen Zeiger auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `CPoint` , versetzt wird, indem Sie eine Größe einer **CPoint** , die durch einen Punkt, versetzt wird oder ein **CRect** offset von einem Punkt.  
+ Ein `CPoint` , versetzt wird, indem Sie eine Größe aus, eine `CPoint` , die durch einen Punkt, versetzt wird oder ein `CRect` durch einen Punkt ausgeglichen.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie eine der ersten beiden Überladungen z. B. für den offset des Punkts `CPoint(25, -19)` durch einen Punkt `CPoint(15, 5)` oder "Größe" `CSize(15, 5)` gibt den Wert `CPoint(40, -14)`.  
+ Verwenden Sie eine der ersten beiden Überladungen beispielsweise für den offset des Punkts `CPoint(25, -19)` durch einen Punkt `CPoint(15, 5)` oder Größe `CSize(15, 5)` gibt den Wert `CPoint(40, -14)`.  
   
- Hinzufügen eines Rechtecks bis zu einem Zeitpunkt gibt das Rechteck zurück, nachdem versetzt wird, durch die **x** und **y** in der angegebenen Werte. Verwenden Sie z. B. die letzte Überladung für den offset eines Rechtecks `CRect(125, 219, 325, 419)` durch einen Punkt `CPoint(25, -19)` gibt `CRect(150, 200, 350, 400)`.  
+ Hinzufügen von Rechtecken zu einem Zeitpunkt gibt das Rechteck zurück, nachdem durch ausgeglichen wird die `x` und `y` Werte, die im Punkt angegeben. Verwenden Sie beispielsweise die letzte Überladung für den offset eines Rechtecks `CRect(125, 219, 325, 419)` durch einen Punkt `CPoint(25, -19)` gibt `CRect(150, 200, 350, 400)`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]  
   
 ##  <a name="operator_-"></a>  CPoint::operator-  
- Verwenden Sie eine der ersten beiden Überladungen um zu subtrahierenden eine `CPoint` oder `CSize` -Sitzungsobjekts `CPoint`.  
+ Verwenden Sie eine der ersten beiden Überladungen subtrahiert einen `CPoint` oder `CSize` -Sitzungsobjekts `CPoint`.  
   
 ```  
 CSize operator-(POINT point) const throw();
@@ -288,34 +288,34 @@ CPoint operator-() const throw();
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `point`  
+ *Zeigen Sie*  
  Ein [Punkt](../../mfc/reference/point-structure1.md) Struktur oder [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) Objekt.  
   
- `size`  
+ *size*  
  Ein [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur oder [CSize](../../atl-mfc-shared/reference/csize-class.md) Objekt.  
   
- `lpRect`  
+ *lpRect*  
  Ein Zeiger auf eine [RECT](../../mfc/reference/rect-structure1.md) Struktur oder ein [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein `CSize` also den Unterschied zwischen zwei Punkten, eine `CPoint` , versetzt wird, mithilfe der Negation einer Größe eine `CRect` , die mithilfe der Negation eines Punkts versetzt wird oder ein `CPoint` also die Negation eines Punkts.  
+ Ein `CSize` , den Unterschied zwischen zwei Punkten einer `CPoint` , versetzt wird, mithilfe der Negation des eine Größe aus, eine `CRect` , die mithilfe der Negation eines Punkts, versetzt wird oder ein `CPoint` d. h. die Negation eines Punkts.  
   
 ### <a name="remarks"></a>Hinweise  
  Die dritte Überladung Offsets eine `CRect` mithilfe der Negation des `CPoint`. Verwenden Sie abschließend den unäroperator um zu negierende `CPoint`.  
   
- Z. B. mithilfe der ersten Überladung zu den Unterschied zwischen zwei Punkten `CPoint(25, -19)` und `CPoint(15, 5)` gibt `CSize(10, -24)`.  
+ Verwenden Sie beispielsweise die erste Überladung finden Sie den Unterschied zwischen zwei Punkten `CPoint(25, -19)` und `CPoint(15, 5)` gibt `CSize(10, -24)`.  
   
- Subtrahiert eine `CSize` aus `CPoint` dieselbe Berechnung wie oben beschrieben ist, gibt jedoch eine `CPoint` -Objekt und keine `CSize` Objekt. Z. B. die zweite Überladung verwenden, finden Sie den Unterschied zwischen dem Zeitpunkt `CPoint(25, -19)` und die Größe des `CSize(15, 5)` gibt `CPoint(10, -24)`.  
+ Subtrahiert eine `CSize` aus `CPoint` ist die gleiche Berechnung wie oben beschrieben, gibt jedoch eine `CPoint` -Objekt und keine `CSize` Objekt. Verwenden Sie beispielsweise die zweite Überladung finden Sie den Unterschied zwischen dem `CPoint(25, -19)` und die Größe des `CSize(15, 5)` gibt `CPoint(10, -24)`.  
   
- Subtrahiert ein Rechteck von einem Punkt gibt das Rechteck Offset zurück, durch die negative der der **x** und **y** in der angegebenen Werte. Beispielsweise verwenden die letzte Überladung für den offset des Rechtecks `CRect(125, 200, 325, 400)` vom Punkt `CPoint(25, -19)` gibt `CRect(100, 219, 300, 419)`.  
+ Subtrahieren eines Rechtecks von einem Punkt gibt den Offset des Rechtecks zurück, indem die negative der der `x` und `y` Werte, die im Punkt angegeben. Verwenden Sie beispielsweise die letzte Überladung für den offset des Rechtecks `CRect(125, 200, 325, 400)` vom Punkt `CPoint(25, -19)` gibt `CRect(100, 219, 300, 419)`.  
   
- Verwenden des unäre Operators einen Punkt zu negieren. Beispiel für die Verwendung des unäre Operators mit dem Punkt `CPoint(25, -19)` gibt `CPoint(-25, 19)`.  
+ Verwenden Sie den unäroperator, um einen Punkt zu negieren. Verwenden Sie beispielsweise den unäroperator, mit dem Punkt `CPoint(25, -19)` gibt `CPoint(-25, 19)`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#34](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_7.cpp)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [MFC-Beispiel MDI](../../visual-cpp-samples.md)   
+ [MDI MFC-Beispiel](../../visual-cpp-samples.md)   
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   
  [POINT-Struktur](../../mfc/reference/point-structure1.md)   
  [CRect-Klasse](../../atl-mfc-shared/reference/crect-class.md)   

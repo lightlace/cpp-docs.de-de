@@ -1,5 +1,5 @@
 ---
-title: CObArray-Klasse | Microsoft Docs
+title: CObArray-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41165f177671379eecbc700df016cd19aea69962
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c1c29a317ff2d4d8e40d6aca0d6b46ee3ba2fd88
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040206"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853835"
 ---
 # <a name="cobarray-class"></a>CObArray-Klasse
 Unterstützt Arrays mit `CObject` -Zeigern.  
@@ -87,7 +87,7 @@ class CObArray : public CObject
 |[CObArray::FreeExtra](#freeextra)|Gibt den gesamten nicht verwendeten Arbeitsspeicher über der aktuellen Obergrenze frei.|  
 |[CObArray::GetAt](#getat)|Gibt den Wert an einem bestimmten Index zurück.|  
 |[CObArray::GetCount](#getcount)|Ruft die Anzahl der Elemente im Array ab.|  
-|[CObArray::GetData](#getdata)|Ermöglicht den Zugriff auf Elemente im Array. Kann **NULL**.|  
+|[CObArray::GetData](#getdata)|Ermöglicht den Zugriff auf Elemente im Array. NULL kann sein.|  
 |[CObArray::GetSize](#getsize)|Ruft die Anzahl der Elemente im Array ab.|  
 |[CObArray::GetUpperBound](#getupperbound)|Gibt den größten gültigen Index zurück.|  
 |[CObArray::InsertAt](#insertat)|Fügt ein Element (oder alle Elemente in einem anderen Array) am angegebenen Index ein.|  
@@ -105,27 +105,27 @@ class CObArray : public CObject
 |[CObArray::operator]](#operator_at)|Legt das Element am angegebenen Index fest oder ruft es ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Objektarrays C-Arrays ähneln, aber sie dynamisch verkleinern und nach Bedarf vergrößert werden können.  
+ Diese Objektarrays C-Arrays ähneln, aber sie dynamisch verkleinern und nach Bedarf wachsen können.  
   
- Arrayindizes starten immer an Position 0. Sie können entscheiden, ob die obere Grenze beheben oder ermöglichen das Array zu erweitern, wenn Sie die Elemente hinter der aktuellen Grenze hinzufügen. Speicher ist zusammenhängend die Obergrenze belegt, auch wenn einige Elemente null sind.  
+ Arrayindizes starten immer an Position 0. Sie können entscheiden, ob beheben Sie die obere Grenze oder das Array, das erweitert, wenn Sie Elemente nach der aktuellen Grenze hinzufügen können. Arbeitsspeicher wird mit dem oberen Grenzwert, zusammenhängend zugeordnet, selbst wenn einige Elemente null sind.  
   
- Unter Win32, die Größe einer `CObArray` Objekt ist nur an den verfügbaren Arbeitsspeicher beschränkt.  
+ Klicken Sie unter "Win32", "die Größe des eine `CObArray` Objekt ist nur auf den verfügbaren Arbeitsspeicher beschränkt.  
   
- Wie bei einem C-Array, die Uhrzeit des Zugriffs für einen `CObArray` indizierte Element ist konstant und ist unabhängig von der Größe des Arrays.  
+ Wie bei einer C-Array, die Zugriffszeit für eine `CObArray` indizierte Element ist konstant und ist unabhängig von der Größe des Arrays.  
   
- `CObArray` enthält die IMPLEMENT_SERIAL-Makro, um die Unterstützung der Serialisierung und die Ausgabe der Elemente an. Wenn ein Array von `CObject` Zeiger befindet sich in ein Archiv, das mit den überladenen Operator zum Einfügen oder die `Serialize` Member-Funktion, `CObject` Element ist, zusammen mit dem Arrayindex wiederum serialisiert.  
+ `CObArray` enthält das IMPLEMENT_SERIAL-Makro, um Serialisierung und die Sicherung der Elemente zu unterstützen. Wenn ein Array von `CObject` Zeiger befindet sich in ein Archiv, das mit den überladenen Operator zum Einfügen oder mit der `Serialize` Member-Funktion, `CObject` Element ist, zusammen mit dem Arrayindex im Gegenzug serialisiert.  
   
  Wenn Sie eine Sicherung einzelner benötigen `CObject` Elemente in einem Array, müssen Sie die Tiefe der Festlegen der `CDumpContext` Objekt auf 1 oder größer.  
   
- Wenn eine `CObArray` Objekt gelöscht wird oder wenn die Elemente entfernt werden, nur die `CObject` zeigenden Elemente entfernt werden, nicht die Objekte, die sie verweisen.  
+ Wenn eine `CObArray` Objekt gelöscht wird oder wenn die Elemente werden entfernt, nur die `CObject` zeigenden Elemente entfernt werden, nicht die Objekte, die sie verweisen.  
   
 > [!NOTE]
 >  Vor dem Verwenden eines Arrays, verwenden Sie `SetSize`, um dessen Größe festzustellen, und weisen dafür Arbeitsspeicher zu. Wenn Sie `SetSize` nicht verwenden, kann das Hinzufügen von Elementen zu Ihrem Array dazu führen, dass es häufig neu zugeordnet und kopiert wird. Häufige Neuzuordnungen und Kopiervorgänge sind ineffizient und können zu einer Fragmentierung des Arbeitsspeichers führen.  
   
- Array-klassenableitung ähnelt Liste Ableitung. Ausführliche Informationen zu der Ableitung von einem bestimmten Zweck ausgerichteter List-Klasse, finden Sie im Artikel [Sammlungen](../../mfc/collections.md).  
+ Array-klassenableitung ist ähnlich wie die Ableitung der Liste. Informationen für die Ableitung einer Klasse spezielle Liste finden Sie im Artikel [Sammlungen](../../mfc/collections.md).  
   
 > [!NOTE]
->  Sie müssen in der Implementierung der abgeleiteten Klasse das IMPLEMENT_SERIAL-Makro verwenden, wenn Sie beabsichtigen, das Array zu serialisieren.  
+>  Sie müssen das IMPLEMENT_SERIAL-Makro in der Implementierung der abgeleiteten Klasse verwenden, wenn das Array serialisiert werden soll.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -136,7 +136,7 @@ class CObArray : public CObject
  **Header:** afxcoll.h  
   
 ##  <a name="add"></a>  CObArray::Add  
- Fügt ein neues Element am Ende eines Arrays, Arrays um 1 vergrößert.  
+ Fügt ein neues Element am Ende eines Arrays, wachsenden Arrays um 1.  
   
 ```  
 INT_PTR Add(CObject* newElement);
@@ -150,9 +150,9 @@ INT_PTR Add(CObject* newElement);
  Der Index des hinzugefügten Elements.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn [SetSize](#setsize) wurde mit verwendet ein *nGrowBy* Wert größer als 1, und klicken Sie dann auf zusätzlichen Arbeitsspeicher zugeordnet werden kann. Allerdings wird die obere Grenze nur 1 erhöhen.  
+ Wenn [SetSize](#setsize) verwendet wurde mit einer *nGrowBy* Wert größer als 1, und klicken Sie dann auf zusätzlichen Arbeitsspeicher zugewiesen werden kann. Allerdings erhöht sich die obere Grenze nur 1.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::Add`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::Add`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
@@ -160,15 +160,15 @@ INT_PTR Add(CObject* newElement);
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Hinzufügen von INT_PTR (DWORD** `newElement` **);**<br /><br /> **auslösen (CMemoryException\* );**|  
 |[CPtrArray](../../mfc/reference/cptrarray-class.md)|**Hinzufügen von INT_PTR ("void"\***  `newElement` **);**<br /><br /> **auslösen (CMemoryException\* );**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**Hinzufügen von INT_PTR (LPCTSTR** `newElement` **); auslösen (CMemoryException\* );**<br /><br /> **INT_PTR Add(const CString&** `newElement` **);**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**Hinzufügen von INT_PTR ("uint"** `newElement` **);**<br /><br /> **auslösen (CMemoryException\* );**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**Hinzufügen von INT_PTR (UINT** `newElement` **);**<br /><br /> **auslösen (CMemoryException\* );**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**Hinzufügen von INT_PTR (WORD** `newElement` **);**<br /><br /> **auslösen (CMemoryException\* );**|  
   
 ### <a name="example"></a>Beispiel  
-  Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+  Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#75](../../mfc/codesnippet/cpp/cobarray-class_1.cpp)]  
   
- Die Ergebnisse der dieses Programm sind wie folgt aus:  
+ Die Ergebnisse dieses Programms sind wie folgt aus:  
   
  `Add example: A CObArray with 2 elements`  
   
@@ -177,7 +177,7 @@ INT_PTR Add(CObject* newElement);
  `[1] = a CAge at $4468 40`  
   
 ##  <a name="append"></a>  CObArray::Append  
- Rufen Sie diese Memberfunktion um den Inhalt eines anderen Arrays bis zum Ende des angegebenen Arrays hinzuzufügen.  
+ Rufen Sie diese Memberfunktion um den Inhalt eines anderen Arrays am Ende des angegebenen Arrays hinzuzufügen.  
   
 ```  
 INT_PTR Append(const CObArray& src);
@@ -185,29 +185,29 @@ INT_PTR Append(const CObArray& src);
   
 ### <a name="parameters"></a>Parameter  
  *src*  
- Die Quelle für die Elemente des Arrays hinzugefügt werden.  
+ Die Quelle der Elemente, die das Array angefügt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Index des ersten Elements angefügt.  
+ Der Index des ersten Elements angefügt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Arrays sein des gleichen Typs.  
+ Die Arrays müssen vom gleichen Typ sein.  
   
- Bei Bedarf `Append` möglicherweise belegen zusätzlichen Speicherplatz, um die Elemente, die angefügt werden, auf das Array aufnehmen.  
+ Bei Bedarf `Append` auch zusätzlichen Speicher zur Aufnahme der Elemente, die an das Array angefügt reservieren.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::Append`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::Append`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**Anfügen von INT_PTR (const CByteArray &** *Src* **);**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Anfügen von INT_PTR (const CDWordArray &** *Src* **);**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**Anfügen von INT_PTR (const CPtrArray &** *Src* **);**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Anfügen von INT_PTR (const CStringArray &** *Src* **);**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**Anfügen von INT_PTR (const CUIntArray &** *Src* **);**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**Anfügen von INT_PTR (const CWordArray &** *Src* **);**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**Fügen Sie INT_PTR (const CByteArray &** *Src* **);**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Fügen Sie INT_PTR (const CDWordArray &** *Src* **);**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**Fügen Sie INT_PTR (const CPtrArray &** *Src* **);**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Fügen Sie INT_PTR (const CStringArray &** *Src* **);**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**Fügen Sie INT_PTR (const CUIntArray &** *Src* **);**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**Fügen Sie INT_PTR (const CWordArray &** *Src* **);**|  
   
 ### <a name="example"></a>Beispiel  
- Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+ Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#76](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
   
@@ -220,24 +220,24 @@ void Copy(const CObArray& src);
   
 ### <a name="parameters"></a>Parameter  
  *src*  
- Die Quelle der Elemente in das Array kopiert werden soll.  
+ Die Quelle der Elemente in das Array kopiert werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
- `Copy` Gibt Arbeitsspeicher frei; jedoch, bei Bedarf `Copy` möglicherweise belegen zusätzlichen Speicherplatz, um die in das Array kopierten Elemente aufzunehmen.  
+ `Copy` Gibt Arbeitsspeicher frei, jedoch, falls erforderlich, `Copy` auch zusätzlichen Speicher zur Aufnahme der in das Array kopierten Elemente reservieren.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::Copy`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::Copy`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**"void" Kopieren (const CByteArray &** *Src* **);**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**"void" Kopieren (const CDWordArray &** *Src* **);**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**"void" Kopieren (const CPtrArray &** *Src* **);**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**"void" Kopieren (const CStringArray &** *Src* **);**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**"void" Kopieren (const CUIntArray &** *Src* **);**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**"void" Kopieren (const CWordArray &** *Src* **);**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**"void" Kopie (const CByteArray &** *Src* **);**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**"void" Kopie (const CDWordArray &** *Src* **);**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**"void" Kopie (const CPtrArray &** *Src* **);**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**"void" Kopie (const CStringArray &** *Src* **);**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**"void" Kopie (const CUIntArray &** *Src* **);**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**"void" Kopie (const CWordArray &** *Src* **);**|  
   
 ### <a name="example"></a>Beispiel  
- Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+ Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#77](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
   
@@ -251,7 +251,7 @@ CObArray();
 ### <a name="remarks"></a>Hinweise  
  Das Array wird ein Element zu einem Zeitpunkt.  
   
- Die folgende Tabelle zeigt die anderen Konstruktoren, die ähnlich sind `CObArray::CObArray`.  
+ Die folgende Tabelle zeigt die anderen Konstruktoren, die ähnlich wie `CObArray::CObArray`.  
   
 |Klasse|Konstruktor|  
 |-----------|-----------------|  
@@ -274,30 +274,30 @@ CObject*& ElementAt(INT_PTR nIndex);
   
 ### <a name="parameters"></a>Parameter  
  *nIndex*  
- Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `GetUpperBound`.  
+ Eine ganzzahlige Index, der größer als oder gleich 0 und kleiner als oder gleich den Rückgabewert von `GetUpperBound`.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Verweis auf eine `CObject` Zeiger.  
   
 ### <a name="remarks"></a>Hinweise  
- Sie wird verwendet, um den linken Zuweisungsoperator für Arrays zu implementieren. Beachten Sie, dass dies eine erweiterte Funktion, die nur für spezielle Array Operatoren implementieren verwendet werden soll.  
+ Es wird zum Implementieren von des linken Seite Zuweisungsoperators für Arrays verwendet. Beachten Sie, dass es sich um eine erweiterte Funktion handelt, die nur für spezielle Array Operatoren implementieren verwendet werden soll.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::ElementAt`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::ElementAt`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**BYTE & ElementAt (INT_PTR** `nIndex` **);**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**& ElementAt BYTE (INT_PTR** `nIndex` **);**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD & ElementAt (INT_PTR** `nIndex` **);**|  
 |[CPtrArray](../../mfc/reference/cptrarray-class.md)|**"void"\*& ElementAt (INT_PTR** `nIndex` **);**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString & ElementAt (INT_PTR** `nIndex` **);**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**"Uint" & ElementAt (INT_PTR** `nIndex` **);**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT & ElementAt (INT_PTR** `nIndex` **);**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD & ElementAt (INT_PTR** `nIndex` **);**|  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CObArray::GetSize](#getsize).  
   
 ##  <a name="freeextra"></a>  CObArray::FreeExtra  
- Gibt alle zusätzlichen Speicherplatz, der belegt wurde, während das Array vergrößert wurde.  
+ Zusätzlichen Speicher, der belegt wurde, während das Array geworden war frei.  
   
 ```  
 void FreeExtra();
@@ -306,7 +306,7 @@ void FreeExtra();
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion hat keine Auswirkungen auf die Größe oder die obere Grenze des Arrays.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::FreeExtra`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::FreeExtra`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
@@ -329,17 +329,17 @@ CObject* GetAt(INT_PTR nIndex) const;
   
 ### <a name="parameters"></a>Parameter  
  *nIndex*  
- Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `GetUpperBound`.  
+ Eine ganzzahlige Index, der größer als oder gleich 0 und kleiner als oder gleich den Rückgabewert von `GetUpperBound`.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die `CObject` Zeiger Element zurzeit für diesen Index.  
+ Die `CObject` Zeiger-Element derzeit an diesem Index.  
   
 ### <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Übergeben einen negativen Wert oder einen Wert größer als der Rückgabewert von `GetUpperBound` führt zu einem fehlgeschlagenen Assertion.  
+>  Übergeben einen negativen Wert oder einen Wert größer als der Wert, der vom `GetUpperBound` führt dazu, eine fehlgeschlagene Assertion.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::GetAt`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::GetAt`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
@@ -347,11 +347,11 @@ CObject* GetAt(INT_PTR nIndex) const;
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD GetAt (INT_PTR** `nIndex` **) const;**|  
 |[CPtrArray](../../mfc/reference/cptrarray-class.md)|**"void"\* GetAt (INT_PTR** `nIndex` **) const;**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString GetAt (INT_PTR** `nIndex` **) const;**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**"Uint" GetAt (INT_PTR** `nIndex` **) const;**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT GetAt (INT_PTR** `nIndex` **) const;**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD GetAt (INT_PTR** `nIndex` **) const;**|  
   
 ### <a name="example"></a>Beispiel  
- Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+ Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#79](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
   
@@ -366,9 +366,9 @@ INT_PTR GetCount() const;
  Die Anzahl der Elemente im Array.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode zum Abrufen der Anzahl der Elemente im Array. Da die Indizes nullbasiert sind, ist die Größe größer als der größte Index 1.  
+ Rufen Sie diese Methode, um die Anzahl der Elemente im Array abzurufen. Da Indizes nullbasiert sind, ist die Größe 1 größer als der größte Index.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::GetCount`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::GetCount`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
@@ -380,7 +380,7 @@ INT_PTR GetCount() const;
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetCount( ) const;**|  
   
 ### <a name="example"></a>Beispiel  
- Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+ Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#80](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
   
@@ -397,23 +397,23 @@ CObject** GetData();
  Ein Zeiger auf das Array von `CObject` Zeiger.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn keine Elemente verfügbar ist, enthält `GetData` gibt einen null-Wert zurück.  
+ Wenn keine Elemente verfügbar sind, `GetData` gibt einen null-Wert zurück.  
   
- Beim direkter Zugriff auf die Elemente eines Arrays mit schneller Arbeit helfen, seien Sie vorsichtig beim Aufrufen von `GetData`; alle Fehler, die Sie direkt vornehmen Auswirkungen auf die Elemente des Arrays.  
+ Zwar die direkter Zugriff auf die Elemente eines Arrays Sie schneller arbeiten kann, seien Sie vorsichtig, beim Aufrufen von `GetData`; alle Fehler, die Sie, direkt vornehmen Auswirkungen auf die Elemente des Arrays.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::GetData`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::GetData`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
 |[CByteArray](../../mfc/reference/cbytearray-class.md)|**const BYTE\* GetData (const;) BYTE\* GetData ();**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**const DWORD\* GetData (const); DWORD\* GetData ();**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**const "void"\* \* GetData () const; "void"\* \* GetData ();**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**const Void\* \* GetData () const; "void"\* \* GetData ();**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**const CString\* GetData (const;) CString\* GetData ();**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**const "uint"\* GetData (const;) "Uint"\* GetData ();**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**const UINT\* GetData (const;) UINT\* GetData ();**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**const WORD\* GetData (const;) WORD\* GetData ();**|  
   
 ### <a name="example"></a>Beispiel  
- Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+ Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#81](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
   
@@ -425,9 +425,9 @@ INT_PTR GetSize() const;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Da die Indizes nullbasiert sind, ist die Größe größer als der größte Index 1.  
+ Da die Indizes nullbasiert sind, ist die Größe 1 größer als der größte Index.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::GetSize`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::GetSize`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
@@ -439,12 +439,12 @@ INT_PTR GetSize() const;
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetSize( ) const;**|  
   
 ### <a name="example"></a>Beispiel  
- Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+ Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
 ##  <a name="getupperbound"></a>  CObArray::GetUpperBound  
- Gibt die aktuellen Obergrenze für dieses Array zurück.  
+ Gibt die aktuellen Obergrenze dieses Arrays zurück.  
   
 ```  
 INT_PTR GetUpperBound() const;  
@@ -456,9 +456,9 @@ INT_PTR GetUpperBound() const;
 ### <a name="remarks"></a>Hinweise  
  Da Arrayindizes nullbasiert sind, gibt diese Funktion einen Wert von 1 kleiner als `GetSize`.  
   
- Die Bedingung **GetUpperBound ()** =-1 bedeutet, dass das Array keine Elemente enthält.  
+ Die Bedingung `GetUpperBound( )` =-1 bedeutet, dass das Array ohne Elemente enthält.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::GetUpperBound`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::GetUpperBound`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
@@ -470,7 +470,7 @@ INT_PTR GetUpperBound() const;
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetUpperBound () const;**|  
   
 ### <a name="example"></a>Beispiel  
- Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+ Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#83](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
   
@@ -491,28 +491,28 @@ void InsertAt(
   
 ### <a name="parameters"></a>Parameter  
  *nIndex*  
- Eine ganzzahlige Index, die größer als der zurückgegebene Wert möglicherweise `GetUpperBound`.  
+ Eine ganzzahlige Index, die größer als der von zurückgegebene Wert möglicherweise `GetUpperBound`.  
   
  *newElement*  
- Die `CObject` Zeiger auf die in diesem Array platziert werden. Ein *NewElement* des Werts **NULL** ist zulässig.  
+ Die `CObject` Zeiger auf die in diesem Array platziert werden. Ein *NewElement* der Wert NULL zulässig ist.  
   
  *nCount*  
- Die Anzahl der Häufigkeit, mit die dieses Element liegen eingefügt (Standardwert: 1).  
+ Die Anzahl der Male, die dieses Element eingefügt (Standardwert: 1).  
   
  *nStartIndex*  
- Eine ganzzahlige Index, die größer als der zurückgegebene Wert möglicherweise `GetUpperBound`.  
+ Eine ganzzahlige Index, die größer als der von zurückgegebene Wert möglicherweise `GetUpperBound`.  
   
  *pNewArray*  
- Ein anderes Array mit Elementen mit diesem Array hinzugefügt werden.  
+ Ein anderes Array mit Elementen in diesem Array hinzugefügt werden sollen.  
   
 ### <a name="remarks"></a>Hinweise  
- Die erste Version des `InsertAt` Fügt ein Element (oder mehrere Kopien eines Elements) an einem angegebenen Index in einem Array. Im Prozess, werden Sie verschoben (durch erhöhen den Index) Verschiebt das vorhandene Element in dieser Index, und es werden alle Elemente davor.  
+ Die erste Version des `InsertAt` Fügt ein Element (oder mehrere Kopien eines Elements) an einem angegebenen Index in einem Array. In den Prozess nach oben verschoben (durch Erhöhen des Indexes) das vorhandene Element an diesem Index und verschiebt, um alle übergeordneten Elemente.  
   
- Die zweite Version fügt alle Elemente aus einer anderen `CObArray` -Auflistung, beginnend ab dem *nStartIndex* Position.  
+ Die zweite Version fügt alle Elemente aus einer anderen `CObArray` -Auflistung, beginnend ab der *nStartIndex* Position.  
   
- Die `SetAt` -Funktion im Gegensatz dazu ersetzt ein angegebenes Array-Element und alle Elemente werden nicht verschoben.  
+ Die `SetAt` -Funktion, im Gegensatz dazu ersetzt ein angegebenes Array-Element und alle Elemente werden nicht verschoben.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::InsertAt`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::InsertAt`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
@@ -524,11 +524,11 @@ void InsertAt(
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**"void" InsertAt (INT_PTR** `nIndex` **, WORD** `newElement` **, Int** `nCount` **= 1);**<br /><br /> **auslösen (CMemoryException\* );**<br /><br /> **"void" InsertAt (INT_PTR** `nStartIndex` **, CWordArray\***  `pNewArray` **);**<br /><br /> **auslösen (CMemoryException\* );**|  
   
 ### <a name="example"></a>Beispiel  
-  Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+  Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#84](../../mfc/codesnippet/cpp/cobarray-class_10.cpp)]  
   
- Die Ergebnisse der dieses Programm sind wie folgt aus:  
+ Die Ergebnisse dieses Programms sind wie folgt aus:  
   
  `InsertAt example: A CObArray with 3 elements`  
   
@@ -546,10 +546,10 @@ BOOL IsEmpty() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn das Array leer ist; andernfalls 0.  
+ Ungleich NULL, wenn das Array leer ist; andernfalls 0.  
   
 ##  <a name="operator_at"></a>  CObArray::operator]  
- Diese-Indexoperatoren werden praktische Ersatz für die `SetAt` und `GetAt` Funktionen.  
+ Diese-Indexoperatoren sind eine praktische Ersatz für die `SetAt` und `GetAt` Funktionen.  
   
 ```  
 CObject*& operator[](int_ptr nindex);  
@@ -557,39 +557,39 @@ CObject* operator[](int_ptr nindex) const;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der erste Operator aufgerufen für Arrays, die nicht **const**, auf der rechten Seite (r) oder linken (l-Wert) einer zuweisungsanweisung verwendet werden kann. Die zweite für aufgerufen **const** Arrays dürfen nur auf der rechten Seite verwendet werden.  
+ Der erste Operator aufgerufen wird, für Arrays, die nicht **const**, kann auf der rechten Seite (r) oder der linken Seite (l-Wert) einer zuweisungsanweisung verwendet werden. Das zweite für aufgerufen **const** Arrays kann nur auf der rechten Seite verwendet werden.  
   
- Die Debugversion der Bibliothek wird bestätigt, wenn der Index (entweder auf der linken oder rechten Seite einer zuweisungsanweisung) außerhalb des gültigen Bereichs ist.  
+ Die Debugversion der Bibliothek wird bestätigt, den der Feldindex (entweder auf der linken oder rechten Seite einer zuweisungsanweisung) liegt außerhalb des gültigen Bereichs.  
   
- Die folgende Tabelle zeigt die anderen Operatoren, die ähnlich sind **CObArray::operator []**.  
+ Die folgende Tabelle zeigt die anderen Operatoren, die ähnlich wie `CObArray::operator []`.  
   
 |Klasse|Operator|  
 |-----------|--------------|  
 |[CByteArray](../../mfc/reference/cbytearray-class.md)|**Operator & BYTE [] (Int_ptr** `nindex`  **\);**<br /><br /> **BYTE []-Operator (Int_ptr** `nindex`  **\) const;**|  
 |[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD & -Operator [] (Int_ptr** `nindex`  **\);**<br /><br /> **DWORD-Operator [] (Int_ptr** `nindex`  **\) const;**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**"void"\*& []-Operator (Int_ptr** `nindex`  **\);**<br /><br /> **"void"\* []-Operator (Int_ptr** `nindex`  **\) const;**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**"void"\*&-Operator [] (Int_ptr** `nindex`  **\);**<br /><br /> **"void"\* []-Operator (Int_ptr** `nindex`  **\) const;**|  
 |[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString & -Operator [] (Int_ptr** `nindex`  **\);**<br /><br /> **CString-Operator [] (Int_ptr** `nindex`  **\) const;**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**"Uint" & -Operator [] (Int_ptr** `nindex`  **\);**<br /><br /> **[]-Operator "uint" (Int_ptr** `nindex`  **\) const;**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT & -Operator [] (Int_ptr** `nindex`  **\);**<br /><br /> **UINT-Operator [] (Int_ptr** `nindex`  **\) const;**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD & -Operator [] (Int_ptr** `nindex`  **\);**<br /><br /> **WORD-Operator [] (Int_ptr** `nindex`  **\) const;**|  
   
 ### <a name="example"></a>Beispiel  
- Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+ Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#88](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
   
 ##  <a name="removeall"></a>  CObArray::RemoveAll  
- Entfernt alle Zeiger aus diesem Array aber tatsächlich löscht keine der `CObject` Objekte.  
+ Entfernt alle Zeiger aus diesem Array aber nicht tatsächlich die `CObject` Objekte.  
   
 ```  
 void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie bereits das Array leer ist, funktioniert die Funktion weiterhin.  
+ Wenn bereits das Array leer ist, wird die Funktion weiterhin funktioniert.  
   
- Die `RemoveAll` Funktion alle Speicher für den Speicher für Zeiger freigegeben wird.  
+ Die `RemoveAll` Funktion gibt alle Speicher für Zeiger-Speicherung verwendet, frei.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::RemoveAll`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::RemoveAll`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
@@ -601,12 +601,12 @@ void RemoveAll();
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAll( );**|  
   
 ### <a name="example"></a>Beispiel  
- Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+ Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
 ##  <a name="removeat"></a>  CObArray::RemoveAt  
- Entfernt eine oder mehrere Elemente, beginnend am angegebenen Index in ein Array.  
+ Entfernt eine oder mehrere Elemente, die an einem angegebenen Index in einem Array ab.  
   
 ```  
 void RemoveAt(
@@ -616,19 +616,19 @@ void RemoveAt(
   
 ### <a name="parameters"></a>Parameter  
  *nIndex*  
- Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `GetUpperBound`.  
+ Eine ganzzahlige Index, der größer als oder gleich 0 und kleiner als oder gleich den Rückgabewert von `GetUpperBound`.  
   
  *nCount*  
  Die Anzahl der zu entfernenden Elemente.  
   
 ### <a name="remarks"></a>Hinweise  
- Im Prozess verschoben unten alle Elemente, die sich über die entfernten Elemente. Es verringert die obere Grenze des Arrays, aber keinen Speicherplatz frei.  
+ In den Prozess wechselt es alle Elemente über die entfernten Elemente. Es verringert die obere Grenze des Arrays, jedoch keinen Speicherplatz frei.  
   
- Wenn Sie versuchen, entfernen Sie weitere Elemente im Array oberhalb der Entfernung Punkt enthalten sind, überprüft dann die Debugversion der Bibliothek.  
+ Wenn Sie versuchen, entfernen Sie mehr Elemente als im oberhalb der entfernen-Punkt-Array enthalten sind, bestätigt Sie dann die Debugversion der Bibliothek.  
   
- Die `RemoveAt` -Funktion entfernt die `CObject` Zeiger von Arrays, aber es wird das Objekt selbst nicht gelöscht.  
+ Die `RemoveAt` Funktion entfernt die `CObject` Zeiger von Arrays, aber es wird das Objekt selbst nicht gelöscht.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::RemoveAt`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::RemoveAt`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
@@ -640,11 +640,11 @@ void RemoveAt(
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**"void" RemoveAt (INT_PTR** `nIndex` **, INT_PTR** *nCount* **= 1);**|  
   
 ### <a name="example"></a>Beispiel  
-  Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+  Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#112](../../mfc/codesnippet/cpp/cobarray-class_13.cpp)]  
   
- Die Ergebnisse der dieses Programm sind wie folgt aus:  
+ Die Ergebnisse dieses Programms sind wie folgt aus:  
   
  `RemoveAt example: A CObArray with 1 elements`  
   
@@ -661,17 +661,17 @@ void SetAt(
   
 ### <a name="parameters"></a>Parameter  
  *nIndex*  
- Eine ganzzahlige Index, der größer als oder gleich 0 ist und kleiner oder gleich den Rückgabewert von `GetUpperBound`.  
+ Eine ganzzahlige Index, der größer als oder gleich 0 und kleiner als oder gleich den Rückgabewert von `GetUpperBound`.  
   
  *newElement*  
- Der Zeiger in dieses Array eingefügt werden sollen. Ein **NULL** Wert ist zulässig.  
+ Der Objektzeiger, die in diesem Array eingefügt werden. Es ist ein NULL-Wert zulässig.  
   
 ### <a name="remarks"></a>Hinweise  
- `SetAt` Vergrößert das Array wird nicht verursacht werden. Verwendung `SetAtGrow` , wenn das Array die automatische Vergrößerung aktiviert werden soll.  
+ `SetAt` das Array, wachsen verursacht nicht. Verwendung `SetAtGrow` , wenn Sie das Array, das automatisch vergrößert werden soll.  
   
- Sie müssen sicherstellen, dass Ihre Indexwert eine gültige Position im Array darstellt. Wenn es außerhalb des gültigen Bereichs handelt, bestätigt klicken Sie dann die Debugversion der Bibliothek.  
+ Sie müssen sicherstellen, dass Ihr Indexwert eine gültige Position im Array darstellt. Wenn es außerhalb des gültigen Bereichs ist, bestätigt Sie dann die Debugversion der Bibliothek.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::SetAt`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::SetAt`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
@@ -683,11 +683,11 @@ void SetAt(
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**"void" SetAt (INT_PTR** `nIndex` **, WORD** `newElement` **);**|  
   
 ### <a name="example"></a>Beispiel  
-  Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+  Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#86](../../mfc/codesnippet/cpp/cobarray-class_14.cpp)]  
   
- Die Ergebnisse der dieses Programm sind wie folgt aus:  
+ Die Ergebnisse dieses Programms sind wie folgt aus:  
   
  `SetAt example: A CObArray with 2 elements`  
   
@@ -706,15 +706,15 @@ void SetAtGrow(
   
 ### <a name="parameters"></a>Parameter  
  *nIndex*  
- Ein Integer-Index, der größer als oder gleich 0 ist.  
+ Eine ganze Zahl-Index, der größer als oder gleich 0 ist.  
   
  *newElement*  
- Die Objektzeiger dieses Array hinzugefügt werden. Ein **NULL** Wert ist zulässig.  
+ Der Objektzeiger, die diesem Array hinzugefügt werden. Es ist ein NULL-Wert zulässig.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Array vergrößert automatisch bei Bedarf (d. h. die obere Grenze wird angepasst, dass das neue Element).  
+ Das Array automatisch vergrößert, bei Bedarf (d. h. die obere Grenze wird angepasst, um das neue Element).  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::SetAtGrow`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::SetAtGrow`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  
@@ -726,11 +726,11 @@ void SetAtGrow(
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**"void" SetAtGrow (INT_PTR** `nIndex` **, WORD** `newElement` **);**<br /><br /> **auslösen (CMemoryException\* );**|  
   
 ### <a name="example"></a>Beispiel  
-  Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) für eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
+  Finden Sie unter [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) eine Liste der `CAge` Klasse, die in allen Beispielen der Auflistung verwendet.  
   
  [!code-cpp[NVC_MFCCollections#87](../../mfc/codesnippet/cpp/cobarray-class_15.cpp)]  
   
- Die Ergebnisse der dieses Programm sind wie folgt aus:  
+ Die Ergebnisse dieses Programms sind wie folgt aus:  
   
  `SetAtGrow example: A CObArray with 4 elements`  
   
@@ -743,7 +743,7 @@ void SetAtGrow(
  `[3] = a CAge at $4840 65`  
   
 ##  <a name="setsize"></a>  CObArray::SetSize  
- Legt die Größe eines Arrays leer oder vorhandene; belegt Speicher aus, falls erforderlich.  
+ Legt die Größe eines Arrays von leeren oder vorhandenen; belegt Speicher aus, falls erforderlich.  
   
 ```  
 void SetSize(
@@ -753,19 +753,19 @@ void SetSize(
   
 ### <a name="parameters"></a>Parameter  
  *nNewSize*  
- Das neue Arraygröße (Anzahl der Elemente). Muss größer als oder gleich 0 sein.  
+ Die neue Arraygröße (Anzahl von Elementen). Muss größer als oder gleich 0 sein.  
   
  *nGrowBy*  
- Die minimale Anzahl der Element-Slots zugewiesen werden, wenn eine Größenzuwachs erforderlich ist.  
+ Die minimale Anzahl der Element-Slots zugewiesen werden, wenn eine Vergrößerung erforderlich ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die neue Größe kleiner als die alte Größe ist, wird das Array abgeschnitten, und alle nicht verwendeter Arbeitsspeicher freigegeben wird. Rufen Sie für die Effizienz, `SetSize` die Größe des Arrays festgelegt wird, bevor Sie ihn verwenden. Dies verhindert, dass die Notwendigkeit neu zuordnen und kopieren das Array jedes Mal, wenn ein Element hinzugefügt wird.  
+ Wenn die neue Größe kleiner als die alte Größe ist, klicken Sie dann das Array abgeschnitten, und alle nicht verwendeten Arbeitsspeicher wird freigegeben. Rufen Sie aus Effizienzgründen `SetSize` die Größe des Arrays festgelegt wird, bevor Sie ihn verwenden. Dies verhindert, dass die Notwendigkeit zum erneuten zuweisen, und kopieren das Array jedes Mal, wenn ein Element hinzugefügt wird.  
   
- Die *nGrowBy* Parameter wirkt sich auf interne speicherbelegung, während das Array zunimmt. Verwendungsmöglichkeiten nie wirkt sich auf die Arraygröße von gemeldeten `GetSize` und `GetUpperBound`.  
+ Die *nGrowBy* Parameter wirkt sich auf interne speicherbelegung während das Array vergrößert. Die Verwendung nie wirkt sich auf die Größe des Arrays von gemeldeten `GetSize` und `GetUpperBound`.  
   
  Wenn die Größe des Arrays angewachsen ist, alle neu zugeordneten **CObject \***  Zeigern auf NULL festgelegt werden.  
   
- Die folgende Tabelle zeigt die anderen Funktionen, die ähnlich sind `CObArray::SetSize`.  
+ Die folgende Tabelle zeigt die anderen Member-Funktionen, die ähnlich sind `CObArray::SetSize`.  
   
 |Klasse|Memberfunktion|  
 |-----------|---------------------|  

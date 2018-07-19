@@ -1,5 +1,5 @@
 ---
-title: CReBarCtrl-Klasse | Microsoft Docs
+title: CReBarCtrl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85a3c51f5c59b510e1024cc5f363096952c0f35a
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 37bd71ae328af76a01106d2efe6cd3945ddb25b9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079461"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853536"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl-Klasse
 Kapselt die Funktionalität eines Grundleisten-Steuerelements. Dabei handelt es sich um einen Container für ein untergeordnetes Fenster.  
@@ -138,62 +138,62 @@ class CReBarCtrl : public CWnd
 |----------|-----------------|  
 |[CReBarCtrl::BeginDrag](#begindrag)|Platziert die Grundleisten-Steuerelement in den Drag & Drop-Modus.|  
 |[CReBarCtrl::Create](#create)|Erstellt das Grundleistensteuerelement, und fügt es der `CReBarCtrl` Objekt.|  
-|[CReBarCtrl::CreateEx](#createex)|Erstellt ein Grundleistensteuerelement mit der angegebenen erweiterten Fensterstile und fügt es einer `CReBarCtrl` Objekt.|  
-|[CReBarCtrl::DeleteBand](#deleteband)|Löscht ein Band von einem Grundleisten-Steuerelement.|  
+|[CReBarCtrl::CreateEx](#createex)|Erstellt von einem Grundleisten-Steuerelement mit der angegebenen Erweiterte Stile für Windows und fügt sie an einer `CReBarCtrl` Objekt.|  
+|[CReBarCtrl::DeleteBand](#deleteband)|Löscht ein Band von einem Infoleisten-Steuerelement.|  
 |[CReBarCtrl::DragMove](#dragmove)|Aktualisiert die Position ziehen Sie in der Grundleisten-Steuerelement nach einem Aufruf von `BeginDrag`.|  
-|[CReBarCtrl::EndDrag](#enddrag)|Beendet die Grundleisten-Steuerelement Drag & Drop-Vorgang.|  
-|[CReBarCtrl::GetBandBorders](#getbandborders)|Ruft die Ränder eines Bandes ab.|  
-|[CReBarCtrl::GetBandCount](#getbandcount)|Ruft die Anzahl der Bänder, die derzeit in der Grundleisten-Steuerelement ab.|  
-|[CReBarCtrl::GetBandInfo](#getbandinfo)|Ruft Informationen zu einer angegebenen Band in einem Grundleisten-Steuerelement ab.|  
+|[CReBarCtrl::EndDrag](#enddrag)|Beendet das Grundleistensteuerelement Drag & Drop-Vorgang.|  
+|[CReBarCtrl::GetBandBorders](#getbandborders)|Ruft die Rahmen eines Bandes ab.|  
+|[CReBarCtrl::GetBandCount](#getbandcount)|Ruft die Anzahl der Bänder, die derzeit in der Infoleisten-Steuerelements ab.|  
+|[CReBarCtrl::GetBandInfo](#getbandinfo)|Ruft Informationen über ein angegebenes Band in einem Grundleisten-Steuerelement ab.|  
 |[CReBarCtrl::GetBandMargins](#getbandmargins)|Ruft die Ränder eines Bandes ab.|  
-|[CReBarCtrl::GetBarHeight](#getbarheight)|Ruft die Höhe des Grundleisten-Steuerelements ab.|  
-|[CReBarCtrl::GetBarInfo](#getbarinfo)|Ruft Informationen zu den Grundleisten-Steuerelement und die Bildliste verwendeten ab.|  
-|[CReBarCtrl::GetBkColor](#getbkcolor)|Ruft die Standardhintergrundfarbe einem Grundleisten-Steuerelement ab.|  
-|[CReBarCtrl::GetColorScheme](#getcolorscheme)|Ruft die [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) Struktur Grundleisten-Steuerelement zugeordnet ist.|  
+|[CReBarCtrl::GetBarHeight](#getbarheight)|Ruft die Höhe des Infoleiste-Steuerelements ab.|  
+|[CReBarCtrl::GetBarInfo](#getbarinfo)|Ruft Informationen über Infoleisten-Steuerelements und der verwendeten Bildliste ab.|  
+|[CReBarCtrl::GetBkColor](#getbkcolor)|Ruft die Standardhintergrundfarbe eines Grundleisten-Steuerelements ab.|  
+|[CReBarCtrl::GetColorScheme](#getcolorscheme)|Ruft die [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) Struktur Infoleisten-Steuerelements zugeordnet ist.|  
 |[CReBarCtrl::GetDropTarget](#getdroptarget)|Ruft ein Grundleistensteuerelement `IDropTarget` Schnittstellenzeiger auf.|  
-|[CReBarCtrl::GetExtendedStyle](#getextendedstyle)|Ruft den erweiterten Stil des aktuellen Grundleisten-Steuerelements ab.|  
+|[CReBarCtrl::GetExtendedStyle](#getextendedstyle)|Ruft den erweiterten Stil des aktuellen Infoleisten-Steuerelements ab.|  
 |[CReBarCtrl::GetImageList](#getimagelist)|Ruft die einem Grundleistensteuerelement zugeordnete Bildliste ab.|  
-|[CReBarCtrl::GetPalette](#getpalette)|Ruft die aktuelle Palette Grundleisten-Steuerelement ab.|  
-|[CReBarCtrl::GetRect](#getrect)|Ruft das umschließende Rechteck für eine angegebene Band in einem Grundleisten-Steuerelement ab.|  
-|[CReBarCtrl::GetRowCount](#getrowcount)|Ruft die Anzahl der Band Zeilen in einem Grundleisten-Steuerelement ab.|  
+|[CReBarCtrl::GetPalette](#getpalette)|Ruft die aktuelle Palette des Infoleistensteuerelements ab.|  
+|[CReBarCtrl::GetRect](#getrect)|Ruft das umschließende Rechteck für ein bestimmtes Band in einem Grundleisten-Steuerelement ab.|  
+|[CReBarCtrl::GetRowCount](#getrowcount)|Ruft die Anzahl der-Band-Zeilen in einem Grundleisten-Steuerelement ab.|  
 |[CReBarCtrl::GetRowHeight](#getrowheight)|Ruft die Höhe einer angegebenen Zeile in einem Grundleisten-Steuerelement ab.|  
-|[CReBarCtrl::GetTextColor](#gettextcolor)|Ruft die Standardtextfarbe einem Grundleisten-Steuerelement ab.|  
+|[CReBarCtrl::GetTextColor](#gettextcolor)|Ruft die Standardtextfarbe eines Grundleisten-Steuerelements ab.|  
 |[CReBarCtrl::GetToolTips](#gettooltips)|Ruft das Handle für alle Grundleisten-Steuerelement zugeordneten QuickInfo-Steuerelement ab.|  
-|[CReBarCtrl::HitTest](#hittest)|Bestimmt die Teil einer Infoleistenband ist zu einem bestimmten Zeitpunkt auf dem Bildschirm angezeigt, wenn ein Band Grundleisten an diesem Punkt vorhanden ist.|  
-|[CReBarCtrl::IDToIndex](#idtoindex)|Konvertiert einen Band Bezeichner (ID) zu einem Band Index in einem Grundleisten-Steuerelement.|  
-|[CReBarCtrl:: InsertBand](#insertband)|Fügt ein neues Band in einem Grundleisten-Steuerelement.|  
-|[CReBarCtrl::MaximizeBand](#maximizeband)|Ändert ein Band in einem Grundleisten-Steuerelement auf die maximale Größe an.|  
-|[CReBarCtrl::MinimizeBand](#minimizeband)|Ändert ein Band in einem Grundleisten-Steuerelement auf die kleinste Größe an.|  
-|[CReBarCtrl::MoveBand](#moveband)|Verschiebt ein Band von einem Index.|  
-|[CReBarCtrl::PushChevron](#pushchevron)|Es wird ein Chevron programmgesteuert.|  
-|[CReBarCtrl::RestoreBand](#restoreband)|Ändert die Größe ein Band in einem Grundleisten-Steuerelement, um die ideale Größe.|  
+|[CReBarCtrl::HitTest](#hittest)|Bestimmt, welcher Teil ein Infoleistenband wird zu einem bestimmten Zeitpunkt auf dem Bildschirm, wenn ein Infoleistenband an diesem Punkt vorhanden ist.|  
+|[CReBarCtrl::IDToIndex](#idtoindex)|Konvertiert einen-Band-Bezeichner (ID) in einen Index-Band-in einem Grundleisten-Steuerelement.|  
+|[CReBarCtrl:: InsertBand](#insertband)|Fügt ein neues Band in einem Grundleisten-Steuerelement ein.|  
+|[CReBarCtrl::MaximizeBand](#maximizeband)|Wird ein Band in einem Grundleisten-Steuerelement, auf die maximale Größe an.|  
+|[CReBarCtrl::MinimizeBand](#minimizeband)|Wird ein Band in einem Grundleisten-Steuerelement, auf die kleinste Größe angepasst.|  
+|[CReBarCtrl::MoveBand](#moveband)|Verschiebt ein Band aus einem Index.|  
+|[CReBarCtrl::PushChevron](#pushchevron)|Programmgesteuertes überträgt ein Steuerzeichen ein.|  
+|[CReBarCtrl::RestoreBand](#restoreband)|Wird ein Band in einem Grundleisten-Steuerelement, um die ideale Größe angepasst.|  
 |[CReBarCtrl::SetBandInfo](#setbandinfo)|Legt die Eigenschaften einer vorhandenen Band in einem Grundleisten-Steuerelement fest.|  
 |[CReBarCtrl::SetBandWidth](#setbandwidth)|Legt die Breite des angegebenen angedockten Band in der aktuellen Grundleisten-Steuerelement fest.|  
 |[CReBarCtrl::SetBarInfo](#setbarinfo)|Legt die Eigenschaften eines Grundleisten-Steuerelements fest.|  
-|[CReBarCtrl::SetBkColor](#setbkcolor)|Legt die Standardhintergrundfarbe einem Grundleisten-Steuerelement fest.|  
-|[CReBarCtrl::SetColorScheme](#setcolorscheme)|Legt das Farbschema für die Schaltflächen in einem Grundleistensteuerelement fest.|  
-|[CReBarCtrl::SetExtendedStyle](#setextendedstyle)|Legt die erweiterten Stile für das aktuelle Grundleistensteuerelement fest.|  
+|[CReBarCtrl::SetBkColor](#setbkcolor)|Legt die Standardhintergrundfarbe eines Grundleisten-Steuerelements fest.|  
+|[CReBarCtrl::SetColorScheme](#setcolorscheme)|Legt das Farbschema für die Schaltflächen auf einem Grundleisten-Steuerelement fest.|  
+|[CReBarCtrl::SetExtendedStyle](#setextendedstyle)|Legt fest, die erweiterten Stile für das aktuelle Grundleistensteuerelement.|  
 |[CReBarCtrl::SetImageList](#setimagelist)|Legt die Bildliste einem Grundleisten-Steuerelement fest.|  
-|[CReBarCtrl::SetOwner](#setowner)|Legt ein Grundleistensteuerelement Besitzerfenster fest.|  
-|[CReBarCtrl::SetPalette](#setpalette)|Legt die aktuelle Palette Grundleisten-Steuerelement fest.|  
-|[CReBarCtrl::SetTextColor](#settextcolor)|Legt die Standardtextfarbe einem Grundleisten-Steuerelement fest.|  
-|[CReBarCtrl::SetToolTips](#settooltips)|Ordnet die Grundleisten-Steuerelement ein QuickInfo-Steuerelement hinzu.|  
-|[CReBarCtrl::SetWindowTheme](#setwindowtheme)|Legt den visuellen Stil der Grundleisten-Steuerelement fest.|  
-|[CReBarCtrl::ShowBand](#showband)|Zeigt an, oder blendet Sie aus einer angegebenen Band in einem Grundleisten-Steuerelement.|  
+|[CReBarCtrl::SetOwner](#setowner)|Legt die besitzende Fenster einem Grundleisten-Steuerelement fest.|  
+|[CReBarCtrl::SetPalette](#setpalette)|Legt die aktuelle Palette des Infoleistensteuerelements fest.|  
+|[CReBarCtrl::SetTextColor](#settextcolor)|Legt die Standardtextfarbe eines Grundleisten-Steuerelements fest.|  
+|[CReBarCtrl::SetToolTips](#settooltips)|Ordnet das Grundleistensteuerelement ein QuickInfo-Steuerelement hinzu.|  
+|[CReBarCtrl::SetWindowTheme](#setwindowtheme)|Legt den visuellen Stil des Infoleisten-Steuerelements fest.|  
+|[CReBarCtrl::ShowBand](#showband)|Anzeigen oder Ausblenden von einem bestimmten Sperrband in einem Grundleisten-Steuerelement.|  
 |[CReBarCtrl::SizeToRect](#sizetorect)|Entspricht einem Grundleisten-Steuerelement zu einem bestimmten Rechteck.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Anwendung, in der die Grundleisten-Steuerelement sich befindet, weist das untergeordnete Fenster Grundleisten-Steuerelement auf dem Band Grundleisten enthalten sind. Das untergeordnete Fenster ist in der Regel eine andere Standardsteuerelements.  
+ Die Anwendung, die in der Infoleisten-Steuerelements befindet weist das untergeordnete Fenster Infoleisten-Steuerelements, das Infoleistenband enthalten sind. Das untergeordnete Fenster ist normalerweise eine andere Standardsteuerelements.  
   
- Rebar-Steuerelemente enthalten eine oder mehrere Bänder. Jedes Band kann eine Kombination des ziehelements-Leiste, eine Bitmap, einer textbezeichnung und ein untergeordnetes Fenster enthalten. Das Band kann nur eines dieser Elemente enthalten.  
+ Grundleisten-Steuerelemente enthalten eine oder mehrere Bänder. Jedes Band kann es sich um eine Kombination aus eine Ziehpunktleiste, eine Bitmap, einer textbezeichnung und einem untergeordneten Fenster enthalten. Das Band kann nur jeweils eine der folgenden Elemente enthalten.  
   
- Grundleisten-Steuerelement kann das untergeordnete Fenster über einen angegebenen Hintergrundbitmap angezeigt. Alle rebarbereichen Steuerelement geändert werden können, mit Ausnahme derjenigen, mit denen die **RBBS_FIXEDSIZE** Stil. Wie Sie neu positionieren, oder ändern ein Band der Grundleisten-Steuerelement, verwaltet Grundleisten-Steuerelement an die Größe und Position des untergeordneten Fensters dieses Band zugewiesen. Klicken Sie zum Ändern der Größe oder die Reihenfolge der Bänder innerhalb des Steuerelements ändern, klicken Sie auf, und ziehen Sie ein Band ziehelements Leiste.  
+ Infoleisten-Steuerelements kann das untergeordnete Fenster über eine angegebene Hintergrundbitmap angezeigt. Alle Bänder von Grundleisten-Steuerelement können geändert werden, mit Ausnahme derjenigen, die den Stil RBBS_FIXEDSIZE verwenden. Wie Sie neu positionieren, oder ändern ein Infoleistenband-Steuerelement, verwaltet das Grundleistensteuerelement die Größe und Position des untergeordneten Fensters, das Band zugewiesen. Klicken Sie zum Ändern der Größe oder die Reihenfolge der Bänder innerhalb des Steuerelements ändern, klicken Sie auf, und ziehen Sie die Ziehpunktleiste des Bands.  
   
  Die folgende Abbildung zeigt ein Grundleistensteuerelement, das drei Bändern:  
   
--   Band 0 enthält einen flachen, transparente Symbolleisten-Steuerelement.  
+-   Band 0 enthält eine Flatfile, transparente Symbolleisten-Steuerelement.  
   
--   Band 1 enthält beide transparente standard und transparente Dropdown-Schaltflächen.  
+-   Band 1 enthält beide transparent Standard- und transparent Dropdown-Schaltfläche.  
   
 -   Band 2 enthält ein Kombinationsfeld und vier Standardschaltflächen.  
   
@@ -202,13 +202,13 @@ class CReBarCtrl : public CWnd
 ## <a name="rebar-control"></a>Grundleisten-Steuerelement  
  Grundleisten Sie-Steuerelemente unterstützen:  
   
--   Bilderliste für das.  
+-   Bilderlisten.  
   
--   Meldungsbehandlung.  
+-   Nachrichtenverarbeitung.  
   
--   Benutzerdefiniertes Zeichnen Funktionalität.  
+-   Benutzerdefiniertes Zeichnen-Funktionalität.  
   
--   Eine Vielzahl von Steuerelementtypen für die zusätzlich zu den standardmäßigen Fensterstile. Eine Liste dieser Stile, finden Sie unter [Grundleisten-Steuerelementtypen für die](http://msdn.microsoft.com/library/windows/desktop/bb774377) im Windows SDK.  
+-   Eine Vielzahl von Steuerelementtypen für die zusätzlich zum standard-Window-Stile. Eine Liste dieser Stile, finden Sie unter [Stile für Grundleisten-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb774377) im Windows SDK.  
   
  Weitere Informationen finden Sie unter [Verwenden von CReBarCtrl](../../mfc/using-crebarctrl.md).  
   
@@ -225,7 +225,7 @@ class CReBarCtrl : public CWnd
  **Header:** afxcmn.h  
   
 ##  <a name="begindrag"></a>  CReBarCtrl::BeginDrag  
- Implementiert das Verhalten der Win32-Nachricht [RB_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774429)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774429), wie im Windows SDK beschrieben.  
   
 ```  
 void BeginDrag(
@@ -235,10 +235,10 @@ void BeginDrag(
   
 ### <a name="parameters"></a>Parameter  
  *uBand*  
- Nullbasierte Index des Bands, die der Drag-and-Drop-Vorgang auswirkt.  
+ Nullbasierte Index des Bands, die der Drag & Drop-Vorgang auswirkt.  
   
  *dwPos*  
- Ein `DWORD` -Wert, beginnend Mauskoordinaten enthält. Die horizontale Koordinate in der LOWORD enthalten ist, und die vertikale Koordinate in die HIWORD enthalten ist. Wenn Sie übergeben `(DWORD)-1`, Grundleisten-Steuerelement verwendet die Position der Maus der letzten Ausführung des Steuerelements Thread aufgerufen `GetMessage` oder `PeekMessage`.  
+ Mit der Maus eines DWORD-Wert, der die Anfangsposition enthält Koordinaten. Die horizontale Koordinate in der LOWORD enthalten ist, und die vertikale Koordinate befindet sich in der HIWORD verschlüsselt ist. Wenn Sie auf "(DWORD)-1" übergeben, verwenden Infoleisten-Steuerelements die Position der Maus bei der letzten-Thread des Steuerelements aufgerufen `GetMessage` oder `PeekMessage`.  
   
 ##  <a name="create"></a>  CReBarCtrl::Create  
  Erstellt das Grundleistensteuerelement, und fügt es der `CReBarCtrl` Objekt.  
@@ -253,34 +253,34 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
  *dwStyle*  
- Gibt die Kombination von Grundleisten-Steuerelementtypen, die auf das Steuerelement angewendet. Finden Sie unter [Grundleisten-Steuerelementtypen für die](http://msdn.microsoft.com/library/windows/desktop/bb774377) in das Windows SDK für eine Liste der unterstützten Formate.  
+ Gibt die Kombination der Grundleisten-Steuerelement-Formate, die auf das Steuerelement angewendet. Finden Sie unter [Stile für Grundleisten-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb774377) im Windows SDK für eine Liste der unterstützten Formate.  
   
  *Rect*  
- Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Position und Größe des Grundleisten-Steuerelements ist.  
+ Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Position und Größe des Infoleisten-Steuerelements ist.  
   
  *pParentWnd*  
- Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) Objekt, das das übergeordnete Fenster eines Grundleisten-Steuerelement darstellt. Es muss nicht **NULL**.  
+ Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das übergeordnete Fenster des Infoleisten-Steuerelements ist. Es darf nicht NULL sein.  
   
  *nID*  
- Gibt an, das Grundleisten-Steuerelement-Steuerelement-ID.  
+ Gibt an, das Grundleistensteuerelement-Steuerelement-ID.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn das Objekt erfolgreich erstellt wurde; andernfalls 0.  
+ Ungleich NULL, wenn das Objekt wurde erfolgreich erstellt wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
  Erstellen eines Grundleisten-Steuerelements in zwei Schritten:  
   
 1.  Rufen Sie [CReBarCtrl](#crebarctrl) zum Erstellen einer `CReBarCtrl` Objekt.  
   
-2.  Rufen Sie diese Memberfunktion, die Windows-Grundleisten-Steuerelement erstellt, und fügt es der `CReBarCtrl` Objekt.  
+2.  Rufen Sie diese Memberfunktion, die Windows Infoleisten-Steuerelements erstellt und fügt es der `CReBarCtrl` Objekt.  
   
- Beim Aufruf **erstellen**, die allgemeine Steuerelemente werden initialisiert.  
+ Beim Aufruf `Create`, die allgemeinen Steuerelemente werden initialisiert.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CReBarCtrl#3](../../mfc/reference/codesnippet/cpp/crebarctrl-class_1.cpp)]  
   
 ##  <a name="createex"></a>  CReBarCtrl::CreateEx  
- Erstellt ein Steuerelement (ein untergeordnetes Fenster) und ordnet sie der `CReBarCtrl` Objekt.  
+ Erstellt ein Steuerelement (ein untergeordnetes Fenster) und ordnet ihn dem `CReBarCtrl` Objekt.  
   
 ```  
 virtual BOOL CreateEx(
@@ -293,25 +293,25 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Fensterstile, finden Sie unter der *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
  *dwStyle*  
- Gibt die Kombination von Grundleisten-Steuerelementtypen, die auf das Steuerelement angewendet. Eine Liste der unterstützten Formate finden Sie unter [Grundleisten-Steuerelementtypen für die](http://msdn.microsoft.com/library/windows/desktop/bb774377) im Windows SDK.  
+ Gibt die Kombination der Grundleisten-Steuerelement-Formate, die auf das Steuerelement angewendet. Eine Liste der unterstützten Formate, finden Sie unter [Stile für Grundleisten-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb774377) im Windows SDK.  
   
  *Rect*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die beschreibt, die Größe und Position des Fensters erstellt werden, in Clientkoordinaten der *pParentWnd*.  
+ Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  
   
  *pParentWnd*  
- Ein Zeiger auf das Fenster, das das Steuerelement übergeordnet ist.  
+ Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.  
   
  *nID*  
- Das Steuerelement untergeordnete Fenster-ID.  
+ Der ID des Steuerelements untergeordneten Fensters mit.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende erweiterten Fensterstile, angegeben durch die Windows-erweiterten Stil ihm etwas voranzustellen **WS_EX_**.  
+ Verwendung `CreateEx` anstelle von [erstellen](#create) anzuwendende Erweiterte Windows-Stile, angegeben durch den Wert der Windows-erweiterten Stil **WS_EX_**.  
   
 ##  <a name="crebarctrl"></a>  CReBarCtrl::CReBarCtrl  
  Erstellt ein `CReBarCtrl`-Objekt.  
@@ -324,7 +324,7 @@ CReBarCtrl();
   Siehe das Beispiel für [CReBarCtrl::Create](#create).  
   
 ##  <a name="deleteband"></a>  CReBarCtrl::DeleteBand  
- Implementiert das Verhalten der Win32-Nachricht [RB_DELETEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774431)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_DELETEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774431), wie im Windows SDK beschrieben.  
   
 ```  
 BOOL DeleteBand(UINT uBand);
@@ -335,13 +335,13 @@ BOOL DeleteBand(UINT uBand);
  Nullbasierte Index des Bands gelöscht werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn das Band wurde erfolgreich gelöscht; andernfalls 0 (null).  
+ Ungleich NULL, wenn das Band wurde erfolgreich gelöscht; andernfalls 0 (null).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CReBarCtrl#4](../../mfc/reference/codesnippet/cpp/crebarctrl-class_2.cpp)]  
   
 ##  <a name="dragmove"></a>  CReBarCtrl::DragMove  
- Implementiert das Verhalten der Win32-Nachricht [RB_DRAGMOVE](https://msdn.microsoft.com/library/bb774433.aspx)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_DRAGMOVE](https://msdn.microsoft.com/library/bb774433.aspx), wie im Windows SDK beschrieben.  
   
 ```  
 void DragMove(DWORD dwPos = (DWORD)-1);
@@ -349,17 +349,17 @@ void DragMove(DWORD dwPos = (DWORD)-1);
   
 ### <a name="parameters"></a>Parameter  
  *dwPos*  
- Ein `DWORD` Wert, der die neue Mauskoordinaten enthält. Die horizontale Koordinate in der LOWORD enthalten ist, und die vertikale Koordinate in die HIWORD enthalten ist. Wenn Sie übergeben `(DWORD)-1`, Grundleisten-Steuerelement verwendet die Position der Maus der letzten Ausführung des Steuerelements Thread aufgerufen `GetMessage` oder `PeekMessage`.  
+ Eine DWORD-Wert, der die neuen Koordinaten enthält. Die horizontale Koordinate in der LOWORD enthalten ist, und die vertikale Koordinate befindet sich in der HIWORD verschlüsselt ist. Wenn Sie auf "(DWORD)-1" übergeben, verwenden Infoleisten-Steuerelements die Position der Maus bei der letzten-Thread des Steuerelements aufgerufen `GetMessage` oder `PeekMessage`.  
   
 ##  <a name="enddrag"></a>  CReBarCtrl::EndDrag  
- Implementiert das Verhalten der Win32-Nachricht [RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435), wie im Windows SDK beschrieben.  
   
 ```  
 void EndDrag();
 ```  
   
 ##  <a name="getbandborders"></a>  CReBarCtrl::GetBandBorders  
- Implementiert das Verhalten der Win32-Nachricht [RB_GETBANDBORDERS](http://msdn.microsoft.com/library/windows/desktop/bb774437)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_GETBANDBORDERS](http://msdn.microsoft.com/library/windows/desktop/bb774437), wie im Windows SDK beschrieben.  
   
 ```  
 void GetBandBorders(
@@ -369,13 +369,13 @@ void GetBandBorders(
   
 ### <a name="parameters"></a>Parameter  
  *uBand*  
- Nullbasierte Index des Bands für die Rahmen abgerufen werden sollen.  
+ Nullbasierte Index des dem Band für das die Rahmen abgerufen werden sollen.  
   
- *VR China*  
- Ein Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Rahmen Band erhält. Wenn das Grundleistensteuerelement verfügt die **RBS_BANDBORDERS** Stil jedes Mitglied dieser Struktur erhalten die Anzahl der Pixel auf der entsprechenden Seite des das Band, das den Rahmen darstellen. Wenn das Grundleistensteuerelement keinen der **RBS_BANDBORDERS** formatieren, nur das linke Element dieser Struktur gültige Informationen empfängt. Eine Beschreibung der Stile für Grundleisten-Steuerelemente, finden Sie unter [Steuerelementtypen für die Infoleiste](http://msdn.microsoft.com/library/windows/desktop/bb774377) im Windows SDK.  
+ *Volksrepublik China*  
+ Ein Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Rahmen-Band-erhält. Wenn Infoleisten-Steuerelements styl RBS_BANDBORDERS verfügt, erhält jedes Mitglied dieser Struktur die Anzahl der Pixel, auf der entsprechenden Seite des Bands, die den Rahmen darstellen. Wenn Infoleisten-Steuerelements keinen styl RBS_BANDBORDERS, empfängt nur das linke Element dieser Struktur gültige Informationen. Eine Beschreibung der Stile für Grundleisten-Steuerelemente, finden Sie unter [Steuerelementtypen für die Grundleiste](http://msdn.microsoft.com/library/windows/desktop/bb774377) im Windows SDK.  
   
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount  
- Implementiert das Verhalten der Win32-Nachricht [RB_GETBANDCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774439)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_GETBANDCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774439), wie im Windows SDK beschrieben.  
   
 ```  
 UINT GetBandCount() const;  
@@ -385,7 +385,7 @@ UINT GetBandCount() const;
  Die Anzahl der Bänder, die dem Steuerelement zugewiesen werden soll.  
   
 ##  <a name="getbandinfo"></a>  CReBarCtrl::GetBandInfo  
- Implementiert das Verhalten der Win32-Nachricht [RB_GETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774451) wie beschrieben im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_GETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774451) wie beschrieben in das Windows SDK.  
   
 ```  
 BOOL GetBandInfo(
@@ -395,10 +395,10 @@ BOOL GetBandInfo(
   
 ### <a name="parameters"></a>Parameter  
  *uBand*  
- Nullbasierte Index des Bands für die die Informationen abgerufen werden sollen.  
+ Nullbasierte Index des dem Band für das die Informationen abgerufen werden sollen.  
   
  *prbbi*  
- Ein Zeiger auf eine [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) Struktur das Band Informationen zu erhalten. Müssen Sie festlegen der `cbSize` Mitglied dieser Struktur zu `sizeof(REBARBANDINFO)` und legen Sie die **fMask** Member zu den Elementen, die Sie vor dem Senden dieser Nachricht abrufen möchten.  
+ Ein Zeiger auf eine [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) Struktur, die-Band-Informationen zu erhalten. Müssen Sie festlegen, die `cbSize` Mitglied dieser Struktur zu `sizeof(REBARBANDINFO)` und legen Sie die `fMask` Mitglied zu den Elementen, die vor dem Senden dieser Nachricht abgerufen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -412,23 +412,23 @@ void GetBandMargins(PMARGINS pMargins);
   
 ### <a name="parameters"></a>Parameter  
  *pMargins*  
- Ein Zeiger auf eine [RÄNDER](http://msdn.microsoft.com/library/windows/desktop/bb773244)-Struktur, die die Informationen erhält.  
+ Ein Zeiger auf eine [RÄNDER](http://msdn.microsoft.com/library/windows/desktop/bb773244)-Struktur, die die Informationen zu erhalten.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion emuliert die Funktionen des die [RB_GETBANDMARGINS](http://msdn.microsoft.com/library/windows/desktop/bb774453) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="getbarheight"></a>  CReBarCtrl::GetBarHeight  
- Ruft die Höhe des Balkens Grundleisten ab.  
+ Ruft die Höhe des Balkens Infoleiste ab.  
   
 ```  
 UINT GetBarHeight() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert, der die Höhe des Steuerelements in Pixel darstellt.  
+ Der Wert, der die Höhe des Steuerelements in Pixel darstellt.  
   
 ##  <a name="getbarinfo"></a>  CReBarCtrl::GetBarInfo  
- Implementiert das Verhalten der Win32-Nachricht [RB_GETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774457)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_GETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774457), wie im Windows SDK beschrieben.  
   
 ```  
 BOOL GetBarInfo(REBARINFO* prbi) const;  
@@ -442,14 +442,14 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ##  <a name="getbkcolor"></a>  CReBarCtrl::GetBkColor  
- Implementiert das Verhalten der Win32-Nachricht [RB_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774459)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774459), wie im Windows SDK beschrieben.  
   
 ```  
 COLORREF GetBkColor() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **COLORREF** Wert, der die aktuelle Standardhintergrundfarbe darstellen.  
+ Eine COLORREF-Wert, der die aktuelle Standardhintergrundfarbe darstellen.  
   
 ##  <a name="getcolorscheme"></a>  CReBarCtrl::GetColorScheme  
  Ruft die [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) Struktur für das Grundleistensteuerelement.  
@@ -460,16 +460,16 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
   
 ### <a name="parameters"></a>Parameter  
  *LPCs*  
- Ein Zeiger auf eine [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) strukturieren, wie im Windows SDK beschrieben.  
+ Ein Zeiger auf eine [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) Struktur, wie im Windows SDK beschrieben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Die **COLORSCHEME** Struktur enthält die Hervorhebungsfarbe für Schaltfläche und die Schattenfarbe Schaltfläche.  
+ Die `COLORSCHEME` Struktur umfasst die Hervorhebungsfarbe für Schaltfläche und die Schattenfarbe der Schaltfläche.  
   
 ##  <a name="getdroptarget"></a>  CReBarCtrl::GetDropTarget  
- Implementiert das Verhalten der Win32-Nachricht [RB_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb774463)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb774463), wie im Windows SDK beschrieben.  
   
 ```  
 IDropTarget* GetDropTarget() const;  
@@ -479,49 +479,49 @@ IDropTarget* GetDropTarget() const;
  Ein Zeiger auf ein [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) Schnittstelle.  
   
 ##  <a name="getextendedstyle"></a>  CReBarCtrl::GetExtendedStyle  
- Ruft die erweiterten Stile des aktuellen Grundleisten-Steuerelements ab.  
+ Ruft die erweiterten Stile des aktuellen Infoleisten-Steuerelements ab.  
   
 ```  
 DWORD GetExtendedStyle() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine bitweise Kombination (OR) von Flags, die die erweiterten Stile angeben. Die möglichen Flags sind `RBS_EX_SPLITTER` und `RBS_EX_TRANSPARENT`. Weitere Informationen finden Sie unter der *DwMask* Parameter von der [CReBarCtrl::SetExtendedStyle](#setextendedstyle) Methode.  
+ Eine bitweise Kombination (OR) von Flags, die die erweiterten Stile angeben. Die möglichen Flags sind RBS_EX_SPLITTER und RBS_EX_TRANSPARENT. Weitere Informationen finden Sie unter den *DwMask* Parameter, der die [CReBarCtrl::SetExtendedStyle](#setextendedstyle) Methode.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getimagelist"></a>  CReBarCtrl::GetImageList  
- Ruft die `CImageList` Objekt mit einem Grundleisten-Steuerelement zugewiesen ist.  
+ Ruft die `CImageList` Objekt mit einem Grundleisten-Steuerelement verknüpft ist.  
   
 ```  
 CImageList* GetImageList() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) Objekt. Gibt **NULL** Wenn keine Bildliste für das Steuerelement festgelegt ist.  
+ Ein Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) Objekt. Gibt NULL zurück, wenn keine Bildliste für das Steuerelement festgelegt ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion verwendet im gespeicherten Informationen zu Größe und die Subnetzmaske der [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) strukturieren, wie im Windows SDK beschrieben.  
+ Diese Memberfunktion verwendet Größe und der Maske in gespeicherten Informationen dem [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) Struktur, wie im Windows SDK beschrieben.  
   
 ##  <a name="getpalette"></a>  CReBarCtrl::GetPalette  
- Ruft die aktuelle Palette Grundleisten-Steuerelement ab.  
+ Ruft die aktuelle Palette des Infoleistensteuerelements ab.  
   
 ```  
 CPalette* GetPalette() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine [CPalette](../../mfc/reference/cpalette-class.md) Objekt, das aktuelle Palette Grundleisten-Steuerelement angibt.  
+ Ein Zeiger auf eine [CPalette](../../mfc/reference/cpalette-class.md) Objekt, das aktuelle Palette des Infoleistensteuerelements angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Beachten Sie, die diese Memberfunktion verwendet ein `CPalette` Objekt als Rückgabewert, anstelle einer `HPALETTE`.  
+ Diese Memberfunktion verwendet ein `CPalette` Objekt als ihren Rückgabewert, anstatt eine HPALETTE.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CReBarCtrl#5](../../mfc/reference/codesnippet/cpp/crebarctrl-class_3.cpp)]  
   
 ##  <a name="getrect"></a>  CReBarCtrl::GetRect  
- Implementiert das Verhalten der Win32-Nachricht [RB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb774469)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb774469), wie im Windows SDK beschrieben.  
   
 ```  
 BOOL GetRect(
@@ -533,8 +533,8 @@ BOOL GetRect(
  *uBand*  
  Nullbasierte Index, der ein Band in der Grundleisten-Steuerelement.  
   
- *VR China*  
- Ein Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Grenzen des Bands Grundleisten erhält.  
+ *Volksrepublik China*  
+ Ein Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) -Struktur, die die Grenzen des das Infoleistenband erhält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -543,20 +543,20 @@ BOOL GetRect(
  [!code-cpp[NVC_MFC_CReBarCtrl#6](../../mfc/reference/codesnippet/cpp/crebarctrl-class_4.cpp)]  
   
 ##  <a name="getrowcount"></a>  CReBarCtrl::GetRowCount  
- Implementiert das Verhalten der Win32-Nachricht [RB_GETROWCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774471)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_GETROWCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774471), wie im Windows SDK beschrieben.  
   
 ```  
 UINT GetRowCount() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **"uint"** Wert, der die Anzahl der Band Zeilen im Steuerelement darstellt.  
+ Ein UINT-Wert, der die Anzahl der Band Zeilen im Steuerelement darstellt.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CReBarCtrl#7](../../mfc/reference/codesnippet/cpp/crebarctrl-class_5.cpp)]  
   
 ##  <a name="getrowheight"></a>  CReBarCtrl::GetRowHeight  
- Implementiert das Verhalten der Win32-Nachricht [RB_GETROWHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb774473)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_GETROWHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb774473), wie im Windows SDK beschrieben.  
   
 ```  
 UINT GetRowHeight(UINT uRow) const;  
@@ -567,23 +567,23 @@ UINT GetRowHeight(UINT uRow) const;
  Nullbasierte Index des Bands, die die Höhe abgerufen hat.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **"uint"** Wert, der die Höhe der Zeilen, in Pixel darstellt.  
+ Ein UINT-Wert, der die Zeilenhöhe in Pixel darstellt.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CReBarCtrl#8](../../mfc/reference/codesnippet/cpp/crebarctrl-class_6.cpp)]  
   
 ##  <a name="gettextcolor"></a>  CReBarCtrl::GetTextColor  
- Implementiert das Verhalten der Win32-Nachricht [RB_GETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774475)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_GETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774475), wie im Windows SDK beschrieben.  
   
 ```  
 COLORREF GetTextColor() const;  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein **COLORREF** Wert, der die aktuelle Standard-Textfarbe darstellen.  
+ Eine COLORREF-Wert, der die aktuelle Standardtextfarbe darstellen.  
   
 ##  <a name="gettooltips"></a>  CReBarCtrl::GetToolTips  
- Implementiert das Verhalten der Win32-Nachricht [RB_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb774477)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb774477), wie im Windows SDK beschrieben.  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
@@ -593,10 +593,10 @@ CToolTipCtrl* GetToolTips() const;
  Ein Zeiger auf eine [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Beachten Sie, dass die MFC-Implementierung von `GetToolTips` gibt einen Zeiger auf eine `CToolTipCtrl`, anstelle einer `HWND`.  
+ Beachten Sie, dass die MFC-Implementierung von `GetToolTips` gibt einen Zeiger auf eine `CToolTipCtrl`, anstatt ein HWND.  
   
 ##  <a name="hittest"></a>  CReBarCtrl::HitTest  
- Implementiert das Verhalten der Win32-Nachricht [RB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb774494)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb774494), wie im Windows SDK beschrieben.  
   
 ```  
 int HitTest(RBHITTESTINFO* prbht);
@@ -604,13 +604,13 @@ int HitTest(RBHITTESTINFO* prbht);
   
 ### <a name="parameters"></a>Parameter  
  *prbht*  
- Ein Zeiger auf eine [RBHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774391) Struktur. Vor dem Senden der Nachricht die **pt** Mitglied dieser Struktur muss initialisiert werden, zu dem Punkt, die getestet werden, in Clientkoordinaten.  
+ Ein Zeiger auf eine [RBHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774391) Struktur. Vor dem Senden der Nachricht, die `pt` Member der Struktur muss initialisiert werden, zu dem Punkt, die getestet werden, in Clientkoordinaten.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Index des Bands an den angegebenen Punkt, andernfalls-1 wurde kein Band Grundleisten an dem Punkt.  
+ Der nullbasierte Index des Bands auf dem angegebenen Punkt oder -1, wenn keine Infoleistenband an dem Punkt war.  
   
 ##  <a name="idtoindex"></a>  CReBarCtrl::IDToIndex  
- Implementiert das Verhalten der Win32-Nachricht [RB_IDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774496)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_IDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774496), wie im Windows SDK beschrieben.  
   
 ```  
 int IDToIndex(UINT uBandID) const;  
@@ -618,13 +618,13 @@ int IDToIndex(UINT uBandID) const;
   
 ### <a name="parameters"></a>Parameter  
  *uBandID*  
- Übergeben Sie der Anwendung definierte Bezeichner des angegebenen Bands der **wID** Mitglied der [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) Struktur, wenn das Band eingefügt wird.  
+ Der anwendungsspezifische Bezeichner des angegebenen Bands, übergeben wird, der `wID` Mitglied der [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) Struktur, wenn das Band eingefügt wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der nullbasierte Band Index im Erfolgsfall oder andernfalls -1. Wenn doppelte Band Indizes vorhanden sind, wird die erste Vorlage zurückgegeben.  
+ Der nullbasierte-Band-Index im Erfolgsfall oder andernfalls -1. Wenn doppelte-Band-Indizes vorhanden sind, wird das erste Abonnement zurückgegeben.  
   
 ##  <a name="insertband"></a>  CReBarCtrl:: InsertBand  
- Implementiert das Verhalten der Win32-Nachricht [RB_INSERTBAND](http://msdn.microsoft.com/library/windows/desktop/bb774498)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_INSERTBAND](http://msdn.microsoft.com/library/windows/desktop/bb774498), wie im Windows SDK beschrieben.  
   
 ```  
 BOOL InsertBand(
@@ -637,7 +637,7 @@ BOOL InsertBand(
  Nullbasierte Index des Speicherorts, in dem das Band eingefügt wird. Wenn Sie diesen Parameter auf-1 festlegen, wird das Steuerelement das neue Band an der letzten Position hinzufügen.  
   
  *prbbi*  
- Ein Zeiger auf eine [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) -Struktur, die definiert, das Band aus, die eingefügt werden soll. Sie müssen festlegen, die *CbSize* Mitglied dieser Struktur zu `sizeof(REBARBANDINFO)` vor dem Aufrufen dieser Funktion.  
+ Ein Zeiger auf eine [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) -Struktur, die definiert, das Band eingefügt werden soll. Sie müssen festlegen, die *CbSize* Mitglied dieser Struktur zu `sizeof(REBARBANDINFO)` vor dem Aufrufen dieser Funktion.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -646,7 +646,7 @@ BOOL InsertBand(
  [!code-cpp[NVC_MFC_CReBarCtrl#9](../../mfc/reference/codesnippet/cpp/crebarctrl-class_7.cpp)]  
   
 ##  <a name="maximizeband"></a>  CReBarCtrl::MaximizeBand  
- Ändert ein Band in einem Grundleisten-Steuerelement auf die maximale Größe an.  
+ Wird ein Band in einem Grundleisten-Steuerelement, auf die maximale Größe an.  
   
 ```  
 void MaximizeBand(UINT uBand);
@@ -663,7 +663,7 @@ void MaximizeBand(UINT uBand);
  [!code-cpp[NVC_MFC_CReBarCtrl#10](../../mfc/reference/codesnippet/cpp/crebarctrl-class_8.cpp)]  
   
 ##  <a name="minimizeband"></a>  CReBarCtrl::MinimizeBand  
- Ändert ein Band in einem Grundleisten-Steuerelement auf die kleinste Größe an.  
+ Wird ein Band in einem Grundleisten-Steuerelement, auf die kleinste Größe angepasst.  
   
 ```  
 void MinimizeBand(UINT uBand);
@@ -671,16 +671,16 @@ void MinimizeBand(UINT uBand);
   
 ### <a name="parameters"></a>Parameter  
  *uBand*  
- Nullbasierte Index des Bands minimiert werden.  
+ Nullbasierte Index des Bands, minimiert werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Implementiert das Verhalten der Win32-Nachricht [RB_MINIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774502)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_MINIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774502), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CReBarCtrl#11](../../mfc/reference/codesnippet/cpp/crebarctrl-class_9.cpp)]  
   
 ##  <a name="moveband"></a>  CReBarCtrl::MoveBand  
- Implementiert das Verhalten der Win32-Nachricht [RB_MOVEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774504)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_MOVEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774504), wie im Windows SDK beschrieben.  
   
 ```  
 BOOL MoveBand(
@@ -690,16 +690,16 @@ BOOL MoveBand(
   
 ### <a name="parameters"></a>Parameter  
  *uFrom*  
- Nullbasierte Index des Bands verschoben werden soll.  
+ Nullbasierte Index des dem Band verschoben werden soll.  
   
- *utomatisch*  
- Nullbasierte Index der Position des neuen Band. Dieser Parameterwert muss niemals größer als die Anzahl der Bänder, die minus eins. Um die Anzahl der Bänder zu erhalten, rufen Sie [GetBandCount](#getbandcount).  
+ *utom*  
+ Nullbasierte Index, der Position des neuen Band. Wert dieses Parameters muss nie größer als die Anzahl der Bänder minus 1 sein. Rufen Sie zum Abrufen der Anzahl der Bänder [GetBandCount](#getbandcount).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ##  <a name="pushchevron"></a>  CReBarCtrl::PushChevron  
- Implementiert das Verhalten der Win32-Nachricht [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506), wie im Windows SDK beschrieben.  
   
 ```  
 void PushChevron(
@@ -709,13 +709,13 @@ void PushChevron(
   
 ### <a name="parameters"></a>Parameter  
  *uBand*  
- Nullbasierte Index des Bands, deren Chevron wird verschoben werden.  
+ Nullbasierte Index des Bands, deren Chevron wird mithilfe von Push übertragen werden.  
   
  *lAppValue*  
- Eine Anwendung definiert die 32-Bit-Wert. Finden Sie unter *lAppValue* in [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) im Windows SDK.  
+ Eine Anwendung definiert, 32-Bit-Wert. Finden Sie unter *lAppValue* in [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) im Windows SDK.  
   
 ##  <a name="restoreband"></a>  CReBarCtrl::RestoreBand  
- Ändert die Größe ein Band in einem Grundleisten-Steuerelement, um die ideale Größe.  
+ Wird ein Band in einem Grundleisten-Steuerelement, um die ideale Größe angepasst.  
   
 ```  
 void RestoreBand(UINT uBand);
@@ -732,7 +732,7 @@ void RestoreBand(UINT uBand);
  [!code-cpp[NVC_MFC_CReBarCtrl#12](../../mfc/reference/codesnippet/cpp/crebarctrl-class_10.cpp)]  
   
 ##  <a name="setbandinfo"></a>  CReBarCtrl::SetBandInfo  
- Implementiert das Verhalten der Win32-Nachricht [RB_SETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774508)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_SETBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774508), wie im Windows SDK beschrieben.  
   
 ```  
 BOOL SetBandInfo(
@@ -742,10 +742,10 @@ BOOL SetBandInfo(
   
 ### <a name="parameters"></a>Parameter  
  *uBand*  
- Nullbasierte Index des Bands an den neuen Einstellungen zu erhalten.  
+ Nullbasierte Index des Bands auf der neuen Einstellungen zu erhalten.  
   
  *prbbi*  
- Zeiger auf eine [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) -Struktur, die definiert, das Band aus, die eingefügt werden soll. Sie müssen festlegen, die `cbSize` Mitglied dieser Struktur zu `sizeof(REBARBANDINFO)` vor dem Senden dieser Nachricht.  
+ Zeiger auf eine [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) -Struktur, die definiert, das Band eingefügt werden soll. Sie müssen festlegen, die `cbSize` Mitglied dieser Struktur zu `sizeof(REBARBANDINFO)` vor dem Senden dieser Nachricht.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -766,27 +766,27 @@ BOOL SetBandWidth(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *uBand*|Nullbasierte Index von einem Grundleisten-Band.|  
-|[in] *CxWidth*|Neue Breite des Bands Infoleiste in Pixel.|  
+|[in] *uBand*|Nullbasierte Index des ein Infoleistenband.|  
+|[in] *CxWidth*|Neue Breite des der Infoleistenband in Pixel.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn die Methode erfolgreich ist; andernfalls `false`.  
+ True, wenn die Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [RB_SETBANDWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb774511) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [RB_SETBANDWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb774511) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel definiert die Variable `m_rebar`, d. h. auf das aktuelle Grundleistensteuerelement verwendet. Diese Variable wird im nächsten Beispiel verwendet.  
+ Das folgende Codebeispiel definiert die Variable `m_rebar`, d. h. für den Zugriff auf das aktuelle Grundleistensteuerelement. Diese Variable wird im nächsten Beispiel verwendet.  
   
  [!code-cpp[NVC_MFC_CReBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/crebarctrl-class_12.h)]  
   
 ### <a name="example"></a>Beispiel  
- Das folgende Codebeispiel legt fest, jede Grundleisten-Bereichs an die gleiche Breite.  
+ Das folgende Codebeispiel legt jedes Infoleistenband auf dieselbe Breite fest.  
   
  [!code-cpp[NVC_MFC_CReBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/crebarctrl-class_13.cpp)]  
   
 ##  <a name="setbarinfo"></a>  CReBarCtrl::SetBarInfo  
- Implementiert das Verhalten der Win32-Nachricht [RB_SETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774513)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_SETBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774513), wie im Windows SDK beschrieben.  
   
 ```  
 BOOL SetBarInfo(REBARINFO* prbi);
@@ -794,7 +794,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
   
 ### <a name="parameters"></a>Parameter  
  *prbi*  
- Ein Zeiger auf eine [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) -Struktur, die die Informationen enthält, festgelegt werden sollen. Sie müssen festlegen, die `cbSize` Mitglied dieser Struktur zu `sizeof(REBARINFO)` vor dem Senden dieser Nachricht  
+ Ein Zeiger auf eine [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) Struktur, die Informationen festgelegt werden. Sie müssen festlegen, die `cbSize` Mitglied dieser Struktur zu `sizeof(REBARINFO)` vor dem Senden dieser Nachricht  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
@@ -803,7 +803,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
  [!code-cpp[NVC_MFC_CReBarCtrl#14](../../mfc/reference/codesnippet/cpp/crebarctrl-class_14.cpp)]  
   
 ##  <a name="setbkcolor"></a>  CReBarCtrl::SetBkColor  
- Implementiert das Verhalten der Win32-Nachricht [RB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774515)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774515), wie im Windows SDK beschrieben.  
   
 ```  
 COLORREF SetBkColor(COLORREF clr);
@@ -811,30 +811,30 @@ COLORREF SetBkColor(COLORREF clr);
   
 ### <a name="parameters"></a>Parameter  
  *CLR*  
- Die **COLORREF** Wert, der die neue Standard-Hintergrundfarbe darstellt.  
+ Der COLORREF-Wert, der die neue Standard-Hintergrundfarbe darstellt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die vorherige Standardhintergrundfarbe darstellt.  
+ Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der vorherigen Standard-Hintergrundfarbe darstellt.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieses Thema enthält weitere Informationen zum beim Festlegen der Hintergrundfarbe und zum Festlegen des standardmäßigen angezeigt wird  
+ Finden Sie weitere Informationen, wann die Hintergrundfarbe festgelegt, und wie der Standardwert festgelegt.  
   
 ##  <a name="setcolorscheme"></a>  CReBarCtrl::SetColorScheme  
- Legt das Farbschema für die Schaltflächen in einem Grundleistensteuerelement fest.  
+ Legt das Farbschema für die Schaltflächen auf einem Grundleisten-Steuerelement fest.  
   
 ```  
 void SetColorScheme(const COLORSCHEME* lpcs);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `lpcs`  
- Ein Zeiger auf eine [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) strukturieren, wie im Windows SDK beschrieben.  
+ *LPCs*  
+ Ein Zeiger auf eine [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) Struktur, wie im Windows SDK beschrieben.  
   
 ### <a name="remarks"></a>Hinweise  
- Die **COLORSCHEME** Struktur enthält die Hervorhebungsfarbe für Schaltfläche und die Schattenfarbe Schaltfläche.  
+ Die `COLORSCHEME` Struktur umfasst die Hervorhebungsfarbe für Schaltfläche und die Schattenfarbe der Schaltfläche.  
   
 ##  <a name="setextendedstyle"></a>  CReBarCtrl::SetExtendedStyle  
- Legt die erweiterten Stile für das aktuelle Grundleistensteuerelement fest.  
+ Legt fest, die erweiterten Stile für das aktuelle Grundleistensteuerelement.  
   
 ```  
 DWORD SetExtendedStyle(
@@ -846,14 +846,14 @@ DWORD SetExtendedStyle(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *DwMask*|Eine bitweise Kombination (OR) von Flags, die angeben, welche Flags in der *DwStyleEx* Parameter angewendet. Verwenden Sie eine oder mehrere der folgenden Werte:<br /><br /> RBS_EX_SPLITTER: Standardmäßig zeigen Sie Splitters im unteren Bereich im horizontalen Modus, und klicken Sie rechts im vertikalen Modus an.<br /><br /> RBS_EX_TRANSPARENT: Weiterleiten der [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) Nachricht an das übergeordnete Fenster.|  
-|[in] *DwStyleEx*|Eine bitweise Kombination (OR) von Flags, die angeben, die Stile übernehmen. Eine Formatvorlage festlegen möchten, geben die gleichen Kennzeichen, das verwendet werden die *DwMask* Parameter. Geben Sie zum Zurücksetzen eines Stils binäre 0 (null).|  
+|[in] *DwMask*|Eine bitweise Kombination (OR) von Flags, die angeben, welche Flags-Seite in der *DwStyleEx* Parameter angewendet. Verwenden Sie eine oder mehrere der folgenden Werte ein:<br /><br /> RBS_EX_SPLITTER: Standardmäßig an den Splitter im unteren Bereich im horizontalen Modus, und klicken Sie auf der rechten Seite im vertikalen-Modus.<br /><br /> RBS_EX_TRANSPARENT: Weiterleiten die [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) Nachricht für das übergeordnete Fenster.|  
+|[in] *DwStyleEx*|Eine bitweise Kombination (OR) von Flags, die angeben, die Stile angewendet werden. Um einen Stil zu festzulegen, geben Sie das gleiche Flag, das verwendet wird die *DwMask* Parameter. Geben Sie zum Zurücksetzen eines Stils binäre 0 (null).|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der vorherige erweiterter Stil.  
+ Die vorherige erweiterten Stil.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [RB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774519) Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [RB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774519) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="setimagelist"></a>  CReBarCtrl::SetImageList  
  Weist eine Bildliste einem Grundleisten-Steuerelement.  
@@ -864,33 +864,33 @@ BOOL SetImageList(CImageList* pImageList);
   
 ### <a name="parameters"></a>Parameter  
  *pImageList*  
- Ein Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) Objekt, enthält die Bildliste, Grundleisten-Steuerelements zugewiesen werden soll.  
+ Ein Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) -Objekt, enthält die Liste der Bilder, Infoleisten-Steuerelements zugewiesen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ##  <a name="setowner"></a>  CReBarCtrl::SetOwner  
- Implementiert das Verhalten der Win32-Nachricht [RB_SETPARENT](http://msdn.microsoft.com/library/windows/desktop/bb774522)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_SETPARENT](http://msdn.microsoft.com/library/windows/desktop/bb774522), wie im Windows SDK beschrieben.  
   
 ```  
 CWnd* SetOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *pWnd*  
- Ein Zeiger auf ein `CWnd` Objekt, das als Besitzer des Grundleisten-Steuerelement festgelegt.  
+ *Aufnehmen*  
+ Ein Zeiger auf eine `CWnd` Objekt, das als Besitzer des Infoleisten-Steuerelements festgelegt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das der aktuelle Besitzer des Grundleisten-Steuerelements ist.  
+ Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das der aktuelle Besitzer des Infoleisten-Steuerelements ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Beachten Sie, dass diese Memberfunktion Zeiger auf verwendet `CWnd` Objekte für den aktuellen und dem ausgewählten Besitzer eines Grundleisten-Steuerelement, statt Windows behandelt.  
+ Beachten Sie, dass diese Memberfunktion auf Zeigern auf `CWnd` Objekte für den aktuellen und den ausgewählten Besitzer des Infoleisten-Steuerelements, anstatt Windows behandelt.  
   
 > [!NOTE]
->  Diese Memberfunktion ändert sich nicht auf das aktuelle übergeordnete Element aus, das festgelegt wurde, wenn das Steuerelement erstellt wurde; Stattdessen sendet er benachrichtigungsmeldungen an das Fenster, das Sie angeben.  
+>  Diese Memberfunktion ändert sich nicht auf das tatsächliche übergeordnete Element aus, das festgelegt wurde, wenn das Steuerelement erstellt wurde; Stattdessen sendet sie Benachrichtigungen an das Fenster, die, das Sie angeben.  
   
 ##  <a name="setpalette"></a>  CReBarCtrl::SetPalette  
- Implementiert das Verhalten der Win32-Nachricht [RB_SETPALETTE](http://msdn.microsoft.com/library/windows/desktop/bb774520)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_SETPALETTE](http://msdn.microsoft.com/library/windows/desktop/bb774520), wie im Windows SDK beschrieben.  
   
 ```  
 CPalette* SetPalette(HPALETTE hPal);
@@ -898,16 +898,16 @@ CPalette* SetPalette(HPALETTE hPal);
   
 ### <a name="parameters"></a>Parameter  
  *hPal*  
- Ein `HPALETTE` , angibt, dass die neue Palette, die das Grundleistensteuerelement verwenden.  
+ Ein HPALETTE, der die neue Palette angibt, die das Grundleistensteuerelement verwendet wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf eine [CPalette](../../mfc/reference/cpalette-class.md) -Objekt, das Grundleisten-Steuerelement vorherigen Palette angibt.  
+ Ein Zeiger auf eine [CPalette](../../mfc/reference/cpalette-class.md) Objekt, das vorherige Palette des Infoleistensteuerelements angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Beachten Sie, die diese Memberfunktion verwendet ein `CPalette` Objekt als Rückgabewert, anstelle einer `HPALETTE`.  
+ Diese Memberfunktion verwendet ein `CPalette` Objekt als ihren Rückgabewert, anstatt eine HPALETTE.  
   
 ##  <a name="settextcolor"></a>  CReBarCtrl::SetTextColor  
- Implementiert das Verhalten der Win32-Nachricht [RB_SETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774524)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_SETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774524), wie im Windows SDK beschrieben.  
   
 ```  
 COLORREF SetTextColor(COLORREF clr);
@@ -915,16 +915,16 @@ COLORREF SetTextColor(COLORREF clr);
   
 ### <a name="parameters"></a>Parameter  
  *CLR*  
- Ein **COLORREF** Wert, der den neuen Text darstellt Farbe in der `CReBarCtrl` Objekt.  
+ Farbe ein COLORREF-Wert, der den neuen Text darstellt, die der `CReBarCtrl` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) zugeordneten Wert, der die vorherige Textfarbe darstellt der `CReBarCtrl` Objekt.  
+ Die [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) zugeordnete Wert, der die Farbe des vorherigen darstellt der `CReBarCtrl` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Er wird bereitgestellt, um Text Farbe Flexibilität in einem Grundleisten-Steuerelement zu unterstützen.  
+ Er wird bereitgestellt, um Text Color Flexibilität in einem Grundleisten-Steuerelement zu unterstützen.  
   
 ##  <a name="settooltips"></a>  CReBarCtrl::SetToolTips  
- Ordnet ein QuickInfo-Steuerelement mit einem Grundleisten-Steuerelement.  
+ Ordnet einem Grundleisten-Steuerelement ein QuickInfo-Steuerelement hinzu.  
   
 ```  
 void SetToolTips(CToolTipCtrl* pToolTip);
@@ -938,7 +938,7 @@ void SetToolTips(CToolTipCtrl* pToolTip);
  Sie müssen Zerstören der `CToolTipCtrl` Objekt, wenn Sie damit fertig sind.  
   
 ##  <a name="setwindowtheme"></a>  CReBarCtrl::SetWindowTheme  
- Legt den visuellen Stil der Grundleisten-Steuerelement fest.  
+ Legt den visuellen Stil des Infoleisten-Steuerelements fest.  
   
 ```  
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
@@ -955,7 +955,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
  Diese Memberfunktion emuliert die Funktionen des die [RB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb774530) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="showband"></a>  CReBarCtrl::ShowBand  
- Implementiert das Verhalten der Win32-Nachricht [RB_SHOWBAND](http://msdn.microsoft.com/library/windows/desktop/bb774532)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_SHOWBAND](http://msdn.microsoft.com/library/windows/desktop/bb774532), wie im Windows SDK beschrieben.  
   
 ```  
 BOOL ShowBand(
@@ -968,13 +968,13 @@ BOOL ShowBand(
  Nullbasierte Index, der ein Band in der Grundleisten-Steuerelement.  
   
  *fShow*  
- Gibt an, ob das Band ein- oder ausgeblendet werden soll. Wenn dieser Wert ist **"true"**, das Band wird angezeigt. Andernfalls wird das Band ausgeblendet werden.  
+ Gibt an, ob das Band ein- oder ausgeblendet werden soll. Wenn dieser Wert "true" ist, wird das Band angezeigt. Andernfalls wird das Band ausgeblendet.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ##  <a name="sizetorect"></a>  CReBarCtrl::SizeToRect  
- Implementiert das Verhalten der Win32-Nachricht [RB_SIZETORECT](http://msdn.microsoft.com/library/windows/desktop/bb774534)gemäß der Beschreibung im Windows SDK.  
+ Implementiert das Verhalten der Win32-Nachricht [RB_SIZETORECT](http://msdn.microsoft.com/library/windows/desktop/bb774534), wie im Windows SDK beschrieben.  
   
 ```  
 BOOL SizeToRect(CRect& rect);
@@ -982,13 +982,13 @@ BOOL SizeToRect(CRect& rect);
   
 ### <a name="parameters"></a>Parameter  
  *Rect*  
- Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das das Rechteck angibt, deren Größe die Grundleisten-Steuerelements geändert werden sollte.  
+ Ein Verweis auf eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt, das das Rechteck angibt, dessen Größe Infoleisten-Steuerelements geändert werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich 0, wenn erfolgreich, andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Beachten Sie, die diese Memberfunktion verwendet ein `CRect` Objekt als Parameter anstelle eines `RECT` Struktur.  
+ Diese Memberfunktion verwendet ein `CRect` Objekt als Parameter anstelle eines `RECT` Struktur.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CWnd-Klasse](../../mfc/reference/cwnd-class.md)   

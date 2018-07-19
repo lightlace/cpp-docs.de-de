@@ -1,5 +1,5 @@
 ---
-title: CFirePropNotifyEvent Klasse | Microsoft Docs
+title: CFirePropNotifyEvent-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728f4e973a7ef74dcdbb44150375df235e0d990e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20fd9c660f036c04ea2ca7d06d04315391504e3e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360987"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881528"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent-Klasse
-Diese Klasse stellt Methoden für die Benachrichtigung des Containers Senke bezüglich eigenschaftenänderungen Steuerelement bereit.  
+Diese Klasse stellt Methoden für die Benachrichtigung des Containers-Senke in Bezug auf Änderungen von Steuerelement-Eigenschaften.  
   
 > [!IMPORTANT]
->  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt.  
+>  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,21 +46,21 @@ class CFirePropNotifyEvent
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(Statisch) Benachrichtigt den Container-Ereignissenke, die eine Steuerelementeigenschaft geändert wurde.|  
-|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Statisch) Benachrichtigt die Container-Senke, die eine Steuerelementeigenschaft ändern.|  
+|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(Statisch) Benachrichtigt den Container-Senke, die eine Steuerelementeigenschaft geändert wurde.|  
+|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Statisch) Benachrichtigt den Container-Senke, die eine Steuerelementeigenschaft geändert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CFirePropNotifyEvent` verfügt über zwei Methoden, mit die des Containers Senke, die eine Steuerelementeigenschaft geändert wurde oder benachrichtigt zu ändern.  
+ `CFirePropNotifyEvent` verfügt über zwei Methoden, mit die des Containers Senke benachrichtigt werden, die eine Steuerelementeigenschaft geändert hat oder zu ändern.  
   
- Wenn die Klasse zur Implementierung des Steuerelements abgeleitet ist `IPropertyNotifySink`, `CFirePropNotifyEvent` Methoden werden aufgerufen, wenn Sie aufrufen `FireOnRequestEdit` oder `FireOnChanged`. Wenn die Steuerelementklasse nicht abgeleitet ist `IPropertyNotifySink`, Aufrufe dieser Funktionen zurückgeben `S_OK`.  
+ Wenn die Klasse implementiert das Steuerelement abgeleitet wird `IPropertyNotifySink`, `CFirePropNotifyEvent` Methoden werden aufgerufen, wenn Sie aufrufen `FireOnRequestEdit` oder `FireOnChanged`. Wenn eine Klasse nicht abgeleitet ist `IPropertyNotifySink`, Aufrufe dieser Funktionen gibt S_OK zurück.  
   
- Weitere Informationen zum Erstellen von Steuerelementen finden Sie unter der [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md).  
+ Weitere Informationen zum Erstellen von Steuerelementen finden Sie unter den [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlctl.h  
   
 ##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
- Benachrichtigt alle verbundenen [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) Schnittstellen (auf jeden Verbindungspunkt des Objekts), die die angegebene Objekt-Eigenschaft geändert wurde.  
+ Benachrichtigt alle verbundenen [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) Schnittstellen (auf jeder Verbindungspunkt des Objekts), die die Eigenschaft des angegebenen Objekts geändert wurde.  
   
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -68,19 +68,19 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
   
 ### <a name="parameters"></a>Parameter  
  *pUnk*  
- [in] Zeiger auf die **IUnknown** des Objekts, das die Benachrichtigung gesendet.  
+ [in] Zeiger auf die `IUnknown` des Objekts, das die Benachrichtigung gesendet.  
   
  *dispID*  
  [in] Der Bezeichner der Eigenschaft, die geändert wurde.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Zu den standardmäßigen `HRESULT` Werte.  
+ Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ist sicher aufgerufen werden, auch wenn das Steuerelement Verbindungspunkte nicht unterstützt.  
   
 ##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
- Benachrichtigt alle verbundenen [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) Schnittstellen (auf jeden Verbindungspunkt des Objekts), die die angegebenen Objekteigenschaft ändern.  
+ Benachrichtigt alle verbundenen [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) Schnittstellen (auf jeder Verbindungspunkt des Objekts), die die angegebene geändert wird.  
   
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
@@ -88,16 +88,16 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
   
 ### <a name="parameters"></a>Parameter  
  *pUnk*  
- [in] Zeiger auf die **IUnknown** des Objekts, das die Benachrichtigung gesendet.  
+ [in] Zeiger auf die `IUnknown` des Objekts, das die Benachrichtigung gesendet.  
   
  *dispID*  
- [in] Der Bezeichner für die Eigenschaft zu ändern.  
+ [in] Der Bezeichner der Eigenschaft zu ändern.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Zu den standardmäßigen `HRESULT` Werte.  
+ Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="remarks"></a>Hinweise  
  Diese Funktion ist sicher aufgerufen werden, auch wenn das Steuerelement Verbindungspunkte nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../../atl/atl-class-overview.md)
+ [Übersicht über die Klasse](../../atl/atl-class-overview.md)
