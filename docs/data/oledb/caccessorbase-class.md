@@ -1,5 +1,5 @@
 ---
-title: CAccessorBase-Klasse | Microsoft Docs
+title: CAccessorBase-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -7,25 +7,44 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - CAccessorBase
+- CAccessorBase.Close
+- CAccessorBase::Close
+- GetHAccessor
+- CAccessorBase::GetHAccessor
+- CAccessorBase.GetHAccessor
+- CAccessorBase::GetNumAccessors
+- GetNumAccessors
+- CAccessorBase.GetNumAccessors
+- IsAutoAccessor
+- CAccessorBase.IsAutoAccessor
+- CAccessorBase::IsAutoAccessor
+- CAccessorBase::ReleaseAccessors
+- CAccessorBase.ReleaseAccessors
+- ReleaseAccessors
 dev_langs:
 - C++
 helpviewer_keywords:
 - CAccessorBase class
+- Close method
+- GetHAccessor method
+- GetNumAccessors method
+- IsAutoAccessor method
+- ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f598f49d279085b23e0bd3b94c48620363b5a816
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99f6be0815572b88f7c46406262ed21eaefdb77d
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090795"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181197"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase-Klasse
-Alle Accessoren in den OLE DB-Vorlagen, die von dieser Klasse abgeleitet werden. `CAccessorBase` ermöglicht ein Rowset, um mehrere Accessoren zu verwalten. Darüber hinaus Bindung für Parameter und Ausgabespalten.  
+Alle Accessoren in OLE DB-Vorlagen, die von dieser Klasse abgeleitet werden. `CAccessorBase` können ein Rowset, um mehrere Accessoren zu verwalten. Darüber hinaus Bindung für Parameter und Ausgabespalten.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -39,15 +58,93 @@ Alle Accessoren in den OLE DB-Vorlagen, die von dieser Klasse abgeleitet werden.
   
 |||  
 |-|-|  
-|[Schließen](../../data/oledb/caccessorbase-close.md)|Schließt die Accessoren.|  
-|[GetHAccessor](../../data/oledb/caccessorbase-gethaccessor.md)|Ruft das Accessorhandle ab.|  
-|[GetNumAccessors](../../data/oledb/caccessorbase-getnumaccessors.md)|Ruft die Anzahl der Accessoren, die von der Klasse erstellt.|  
-|[IsAutoAccessor](../../data/oledb/caccessorbase-isautoaccessor.md)|Testet, ob der angegebene Accessor ein Autoaccessor handelt.|  
-|[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md)|Gibt die Accessoren frei.|  
-  
+|[Schließen](#close)|Schließt die Accessoren.|  
+|[GetHAccessor](#geth)|Ruft das Accessorhandle ab.|  
+|[GetNumAccessors](#getnum)|Ruft die Anzahl der Accessoren, die von der Klasse erstellt.|  
+|[IsAutoAccessor](#isauto)|Testet, ob der angegebene Accessor einen Autoaccessor ist.|  
+|[ReleaseAccessors](#release)|Gibt die Accessoren frei.|  
+
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  
+
+## <a name="close"></a> CAccessorBase:: Close
+Schließt die Accessoren.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+void Close();  
+  
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Rufen Sie [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) erste.  
+
+## <a name="geth"></a> CAccessorBase:: Gethaccessor
+Ruft den Accessorhandle für einen angegebenen Accessor ab.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+      HACCESSOR GetHAccessor(ULONG nAccessor) const;  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+ *nAccessor*  
+ [in] Die Anzahl der NULL-Offset für die Zugriffsmethode.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Das Accessorhandle.  
+
+## <a name="getnum"></a> CAccessorBase:: Getnumaccessors
+Ruft die Anzahl der Accessoren, die von der Klasse erstellt.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+ULONG GetNumAccessors() const;  
+  
+```  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Die Anzahl der Accessoren, die von der Klasse erstellt.  
+
+## <a name="isauto"></a> CAccessorBase:: Isautoaccessor
+Gibt "true" zurück, wenn die Daten automatisch für den Accessor während eines Verschiebevorgangs abgerufen werden.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+      bool IsAutoAccessor(ULONG nAccessor) const;  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+ *nAccessor*  
+ [in] Die Anzahl der NULL-Offset für die Zugriffsmethode.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Gibt **"true"** Wenn der Accessor einen Autoaccessor ist. Andernfalls wird **false**zurückgegeben.  
+
+## <a name="release"></a> CAccessorBase:: Releaseaccessors
+Gibt die Accessoren, die von der Klasse erstellt.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+HRESULT ReleaseAccessors(IUnknown* pUnk);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+ *pUnk*  
+ [in] Ein Zeiger auf ein `IUnknown` Schnittstelle für das COM-Objekt, das für die die Accessoren erstellt wurden.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein standard-HRESULT.  
+  
+### <a name="remarks"></a>Hinweise  
+ Aufgerufen von [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md). 
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referenz der OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [Referenz der OLE DB Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [CAccessorBase-Klasse](../../data/oledb/caccessorbase-class.md)
