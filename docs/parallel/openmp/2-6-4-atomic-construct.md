@@ -1,5 +1,5 @@
 ---
-title: 2.6.4 atomic-Konstrukt | Microsoft Docs
+title: 2.6.4 atomic-Konstrukt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66f0dc8469d1d70b2697df1fe120f10142d90dbe
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3c906a9a9b781f742f525688b77d5f58da16bb10
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688127"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208132"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 atomic-Konstrukt
 Die `atomic` Richtlinie stellt sicher, dass eine bestimmte Speicheradresse atomar aktualisiert wird, anstatt eine Offenlegung für die Möglichkeit, mehrere gleichzeitige Threads zu schreiben. Die Syntax der `atomic` Richtlinie lautet wie folgt:  
@@ -26,7 +26,7 @@ Die `atomic` Richtlinie stellt sicher, dass eine bestimmte Speicheradresse atoma
 #pragma omp atomic new-lineexpression-stmt  
 ```  
   
- Die Ausdrucksanweisung muss einen der folgenden Formate aufweisen:  
+ Die Ausdrucksanweisung muss es sich um einen der folgenden Formate aufweisen:  
   
  *X binop*= *Expr*  
   
@@ -40,15 +40,15 @@ Die `atomic` Richtlinie stellt sicher, dass eine bestimmte Speicheradresse atoma
   
  In den vorherigen Ausdrücken:  
   
--   *X* ist ein Lvalue-Ausdruck mit skalaren Typ.  
+-   *X* ist ein l-Wert-Ausdruck mit skalaren Typ.  
   
 -   *Expr* ist ein Ausdruck mit skalaren Typ und keinen Verweis auf das Objekt vom angegebenen *x*.  
   
--   `binop` ist kein überladenen Operators und ist von +, *, -, /, &, ^, &#124;, <\<, oder >>.  
+-   `binop` ist kein überladenen Operators und ist einer der +, \*, -, /, &, ^, &#124;, <\<, oder >>.  
   
- Obwohl es Implementierung definiert ist, gibt an, ob eine Implementierung ersetzt `atomic` Direktiven mit **kritische** Direktiven, die den gleichen eindeutigen *Name*, die `atomic` Richtlinie ermöglicht eine bessere Optimierung. Häufig Hardware Anweisungen stehen zur Verfügung, das atomarische Update mit der geringsten Aufwand ausführen kann.  
+ Obwohl es Implementierung definiert ist, gibt an, ob eine Implementierung ersetzt alle `atomic` Direktiven mit **kritische** Direktiven, die die gleiche eindeutige *Name*, `atomic` Richtlinie ermöglicht bessere Optimierung. Häufig Hardware-Anweisungen stehen zur Verfügung, das unteilbare Update mit den geringsten Aufwand ausführen kann.  
   
- Nur für das Laden und Speichern des Objekts, das vom angegebenen *x* sind atomar; die Auswertung der *Expr* ist nicht atomar. Um Racebedingungen zu vermeiden, sollten alle Updates des Speicherorts parallel mit geschützt werden die `atomic` Richtlinie, mit Ausnahme derjenigen, die bekanntermaßen frei von Racebedingungen.  
+ Nur das Laden und den Speicher für das Objekt vom angegebenen *x* atomar sind; die Auswertung von *Expr* ist nicht unteilbar. Um Racebedingungen zu vermeiden, alle Updates des Speicherorts parallel geschützt werden sollte, mit der `atomic` Direktive, mit Ausnahme derjenigen, die bekannt ist, dass Racebedingungen kostenlos zur Verfügung gestellt.  
   
  Einschränkungen für die `atomic` Richtlinie lauten wie folgt:  
   

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 34089ec501934f5d6aa8408acded821a67f67502
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958477"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208831"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt;-Funktionen
 
@@ -141,7 +141,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Parameter
 
-*Str* ein Std:: String, Char *, Zeichenfolge Zeichenfolgenliteral oder unformatiertes Zeichenfolgenliteral oder eine Breite Version von diesen (z.B. Std:: wstring, Wchar_t\*).
+*Str* eine Std:: String, Char\*, string, Zeichenfolgenliteral oder unformatiertes Zeichenfolgenliteral oder eine Breite Version von diesen (z.B. Std:: wstring, Wchar_t\*).
 
 *Trennzeichen* ein benutzerdefiniertes Zeichen oder Breitzeichen, das als Trennzeichen für den Beginn und Ende der Zeichenfolge verwendet.
 

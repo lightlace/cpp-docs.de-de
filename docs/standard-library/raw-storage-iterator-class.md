@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d259040ec5f4d7f1148b9a782479b6db8617602
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954629"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208525"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator-Klasse
 
@@ -69,8 +69,8 @@ Diese Adapterklasse wird verwendet, wenn es erforderlich ist, Speicherbelegung u
 
 |Operator|Beschreibung|
 |-|-|
-|[operator*](#op_star)|Ein Dereferenzierungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks *`ii` = `x` verwendet wird.|
-|[operator=](#op_eq)|Ein Zuweisungsoperator, der dazu verwendet wird, den für einen unformatierten Speicheriterator verwendeten Ausdruck *`i` = `x` zu implementieren, damit er im Arbeitsspeicher gespeichert werden kann.|
+|[operator*](#op_star)|Ein Dereferenzierungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `ii`  =  `x`.|
+|[operator=](#op_eq)|Ein Zuweisungsoperator, der zum Implementieren der unformatierten speicheriteratorausdrucks \* `i`  =  `x` für das im Speicher gespeichert.|
 |[operator++](#op_add_add)|Inkrementoperatoren in Präfix- und Postfix-Notation für unformatierte Speicheriteratoren.|
 
 ## <a name="requirements"></a>Anforderungen
@@ -103,7 +103,7 @@ typedef ForwardIterator iter_type;
 
 Der Type stellt ein Synonym für den Vorlagenparameter `ForwardIterator` dar.
 
-## <a name="op_star"></a> raw_storage_iterator::operator*
+## <a name="op_star"></a>  raw_storage_iterator:: Operator\*
 
 Der Dereferenzierungsoperator, der zum Implementieren des unformatierten Speicheriteratorausdrucks \* *ii* = *x* verwendet wird.
 

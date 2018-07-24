@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f3d4945ef339f5166bdd07bc8d5615b161d266
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bcaebf6578bfb4168d17131989b9b200a7ef8f9
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407076"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209455"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -112,15 +112,15 @@ Ganzzahlexponent.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Scalbn** Funktionen Rückgabe des Werts der *x* * **FLT_RADIX**<sup>exp</sup> bei erfolgreicher Ausführung. Bei einem Überlauf (abhängig vom Vorzeichen des *x*), **Scalbn** gibt **HUGE_VAL**; das **Errno** Wert wird festgelegt, um **ERANGE** .
+Die **Scalbn** Funktionen geben den Wert der *x* \* **FLT_RADIX**<sup>"exp"</sup> bei erfolgreicher Ausführung. Bei einem Überlauf (abhängig vom Vorzeichen *x*), **Scalbn** gibt **HUGE_VAL**; die **Errno** Wert wird festgelegt, um **ERANGE** .
 
-Weitere Informationen zu **Errno** und potenzieller Fehler Werte zurückgeben, finden Sie unter [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Weitere Informationen zu **Errno** und mögliche Rückgabewerte finden Sie unter [Errno, _doserrno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
 **FLT_RADIX** ist definiert \<float.h > als native gleitkommabasis; in binären Systemen hat es den Wert 2, und **Scalbn** entspricht [Ldexp](ldexp.md).
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Scalbn** und **Scalbln** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Typen. In einem C-Programm **Scalbn** immer ein **doppelte** und ein **Int** und gibt eine **doppelte**, und **Scalbln**immer ein **doppelte** und ein **lange** und gibt eine **doppelte**.
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Scalbn** und **Scalbln** verwenden und zurückgeben **"float"** oder **lange** **doppelte** Typen. In einem C-Programm **Scalbn** immer eine **doppelte** und **Int** und gibt eine **doppelte**, und **Scalbln**immer eine **doppelte** und **lange** und gibt eine **doppelte**.
 
 ## <a name="requirements"></a>Anforderungen
 

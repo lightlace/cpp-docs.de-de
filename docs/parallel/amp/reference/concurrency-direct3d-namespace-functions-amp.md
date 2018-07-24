@@ -1,5 +1,5 @@
 ---
-title: 'Concurrency:: Direct3D-Namespace-Funktionen (AMP) | Microsoft Docs'
+title: 'Concurrency:: Direct3D Namespace-Funktionen (AMP) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -28,14 +28,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57015cc84053216e76f3459170c3dde9a26bb43c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 457b2d176b518e9c846c8684b8d21b757fd81a11
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693727"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208951"
 ---
-# <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: Direct3D-Namespace-Funktionen (AMP)
+# <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: Direct3D Namespace-Funktionen (AMP)
 ||||  
 |-|-|-|  
 |[abs](#abs)|[clamp](#clamp)|[countbits](#countbits)|
@@ -43,7 +43,7 @@ ms.locfileid: "33693727"
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
 |[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
-|[MAD](#mad)|[make_array](#make_array)|[Füllwörter](#noise)|  
+|[MAD](#mad)|[make_array](#make_array)|[rauschunterdrückung](#noise)|  
 |[Bogenmaß (Radiant)](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
 |[step](#step)|[umax](#umax)|[umin](#umin)|  
@@ -103,13 +103,13 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
   
 ### <a name="parameters"></a>Parameter  
  `_X`  
- Ganze Zahl ohne Vorzeichen  
+ Ganzzahlwert ohne Vorzeichen  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die Anzahl der festgelegten Bits in _X um  
+ Gibt die Anzahl der festgelegten Bits in _X  
 
 ## <a name="create_accelerator_view"></a> create_accelerator_view  
-Erstellt ein ["accelerator_view"](accelerator-view-class.md) Objekt von einem Zeiger auf eine Direct3D-Geräteschnittstelle.  
+Erstellt eine ["accelerator_view"](accelerator-view-class.md) Objekt von einem Zeiger auf die Schnittstelle eines Direct3D-Geräts.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -141,7 +141,7 @@ accelerator_view create_accelerator_view(
  Das `accelerator_view`-Objekt, das über die übergebene Direct3D-Geräteschnittstelle erstellt wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Funktion erstellt ein neues `accelerator_view`-Objekt von einem vorhandenen Zeiger auf eine Direct3D-Geräteschnittstelle. Wenn der Funktionsaufruf folgt, wird der Verweiszähler des Parameters mit einem `AddRef`-Aufruf der Schnittstelle erhöht. Sie können das Objekt sicher freigeben, wenn es im DirectX-Code nicht mehr benötigt wird. Wenn der Methodenaufruf fehlschlägt, eine [Runtime_exception](runtime-exception-class.md) ausgelöst wird.  
+ Diese Funktion erstellt ein neues `accelerator_view`-Objekt von einem vorhandenen Zeiger auf eine Direct3D-Geräteschnittstelle. Wenn der Funktionsaufruf folgt, wird der Verweiszähler des Parameters mit einem `AddRef`-Aufruf der Schnittstelle erhöht. Sie können das Objekt sicher freigeben, wenn es im DirectX-Code nicht mehr benötigt wird. Wenn der Methodenaufruf fehlschlägt, eine [Runtime_exception](runtime-exception-class.md) ausgelöst.  
   
  Das `accelerator_view`-Objekt, das Sie mit dieser Funktion erstellen, ist threadsicher. Sie müssen die gleichzeitige Verwendung des `accelerator_view`-Objekts synchronisieren. Die unsynchronisierte gleichzeitige Verwendung des `accelerator_view`-Objekts und die unformatierte ID3D11Device-Schnittstelle verursachen ein nicht definiertes Verhalten.  
   
@@ -328,7 +328,7 @@ inline unsigned int mad(
  Das dritte angegebene Argument.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Das Ergebnis des `_X`  *  `_Y`  +  `_Z`.  
+ Das Ergebnis des `_X` \* `_Y`  +  `_Z`.  
   
 ##  <a name="make_array"></a>  make_array  
  Erstellt ein Array aus dem Schnittstellenzeiger eines Direct3D-Puffers.  
@@ -363,8 +363,8 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>Rückgabewert  
  Ein mithilfe des angegebenen Direct3D-Puffers erstelltes Array.  
   
-##  <a name="noise"></a>  Füllwörter  
- Generiert einen Zufallswert mithilfe des Perlin-Noise-Algorithmus  
+##  <a name="noise"></a>  rauschunterdrückung  
+ Generiert einen zufälligen Wert mithilfe des Perlin-Noise-Algorithmus  
   
 ```  
 inline float noise(float _X) restrict(amp);
@@ -375,7 +375,7 @@ inline float noise(float _X) restrict(amp);
  Gleitkommawert aus dem Perlin-Noise generiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Perlin-Noise Wert innerhalb eines Bereichs zurückgibt zwischen-1 und 1  
+ Gibt die Perlin-Noise-Wert innerhalb eines Bereichs zwischen-1 und 1  
   
 ##  <a name="radians"></a>  Bogenmaß (Radiant)  
  Konvertiert _X von Grad in Bogenmaß  
@@ -417,12 +417,12 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
   
 ### <a name="parameters"></a>Parameter  
  `_X`  
- Ganze Zahl ohne Vorzeichen  
+ Ganzzahlwert ohne Vorzeichen  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt den Wert zurück, mit der Bit-Reihenfolge umgekehrt in _X um  
+ Gibt den Wert in der Reihenfolge der Bit in _X in umgekehrter Reihenfolge zurück.  
   
-##  <a name="saturate"></a>  stark beanspruchen  
+##  <a name="saturate"></a>  auslasten  
  Bindet _X im Bereich zwischen 0 und 1  
   
 ```  
@@ -434,7 +434,7 @@ inline float saturate(float _X) restrict(amp);
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt _X gebunden ist, innerhalb des Bereichs von 0 bis 1  
+ Gibt _X im Bereich von 0 bis 1 gebunden sind  
   
 ##  <a name="sign"></a>  Anmelden  
  Bestimmt das Vorzeichen des angegebenen Arguments.  
@@ -471,7 +471,7 @@ inline float smoothstep(
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt 0 zurück, wenn _X _Min unterschreitet. 1, wenn _X _Max größer ist. andernfalls, einen Wert zwischen 0 und 1, wenn _X im Bereich [_Min, _Max] liegt  
+ Gibt 0 zurück, wenn _X _Min unterschreitet. 1, wenn _X _Max größer ist. andernfalls ein Wert zwischen 0 und 1, wenn _X im Bereich [_Min, _Max] liegt.  
   
 ##  <a name="step"></a>  Schritt  
  Vergleicht zwei Werte und gibt, je nachdem welcher Wert größer ist, 0 oder 1 zurück  
@@ -490,7 +490,7 @@ inline float step(
  Gleitkommawert  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt 1 zurück, wenn die _X größer als oder gleich _Y ist. andernfalls 0  
+ Gibt 1 zurück, die _X ist größer als oder gleich _Y. andernfalls 0  
   
 ##  <a name="umax"></a>  UMAX  
  Festlegung des höchsten numerischen Werts der Argumente  

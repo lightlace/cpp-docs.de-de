@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::InputIterator Klasse | Microsoft Docs
+title: Platform::Collections::InputIterator-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,12 +15,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7188cba0655e2ca89f82b60ffe9ee4b8ce94633a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fbd80f649b27bcb3af720871d6d1378f5fe220c8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089090"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208483"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator-Klasse
 Stellt einen InputIterator der Standardvorlagenbibliothek für Auflistungen, die von der Windows-Runtime abgeleitet.  
@@ -102,7 +102,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>  Inputiterator:: *-Operator
+## <a name="operator-dereference"></a>  Inputiterator::\* Operator
 Ruft einen Verweis auf das Element ab, das vom aktuellen InputIterator angegeben wird.  
   
 ### <a name="syntax"></a>Syntax  
@@ -172,4 +172,4 @@ bool operator!=(const InputIterator& other) const;
 
   
 ## <a name="see-also"></a>Siehe auch  
- [Platform-Namespace](platform-namespace-c-cx.md)
+ [Plattform-Namespace](platform-namespace-c-cx.md)

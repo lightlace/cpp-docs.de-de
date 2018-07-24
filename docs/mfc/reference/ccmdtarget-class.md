@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9292e4d5ff9bf0f6f829c14dd0ee11e77a641d2d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 05bae03a94eac7a783f4ccb7248c8699729a006d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027653"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208688"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget-Klasse
 Die Basisklasse für die meldungszuordnungsarchitektur der Microsoft Foundation Class-Bibliothek.  
@@ -326,7 +326,7 @@ HRESULT GetTypeInfoOfGuid(
  Zeiger auf einen Zeiger auf die `ITypeInfo` Schnittstelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein HRESULT, der angibt, den Erfolg oder Fehler des Aufrufs. Im Erfolgsfall * *PpTypeInfo* verweist auf die Schnittstelle des Typs Informationen.  
+ Ein HRESULT, der angibt, den Erfolg oder Fehler des Aufrufs. Im Erfolgsfall \* *PpTypeInfo* verweist auf die Schnittstelle des Typs Informationen.  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  Ruft einen Zeiger auf eine Typbibliothek.  
@@ -345,7 +345,7 @@ virtual HRESULT GetTypeLib(
  Ein Zeiger auf einen Zeiger auf die `ITypeLib` Schnittstelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein HRESULT, der angibt, den Erfolg oder Fehler des Aufrufs. Im Erfolgsfall * *PpTypeLib* verweist auf die Typ-Library-Schnittstelle.  
+ Ein HRESULT, der angibt, den Erfolg oder Fehler des Aufrufs. Im Erfolgsfall \* *PpTypeLib* verweist auf die Typ-Library-Schnittstelle.  
   
 ### <a name="remarks"></a>Hinweise  
  Abgeleitete Klassen müssen diese Memberfunktion überschreiben (wenn nicht überschrieben, `GetTypeLib` TYPE_E_CANTLOADLIBRARY zurückgibt). Verwenden der [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) Makro, das implementiert auch `GetTypeInfoCount` und `GetTypeLibCache`.  
@@ -437,10 +437,10 @@ virtual BOOL OnCmdMsg(
   
 |*nCode* Wert|*pExtra* Wert|  
 |-------------------|--------------------|  
-|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
-|CN_EVENT|AFX_EVENT *|  
-|AUFGERUFEN|CCmdUI *|  
-|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)*|  
+|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|  
+|CN_EVENT|AFX_EVENT\*|  
+|AUFGERUFEN|CCmdUI\*|  
+|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|  
 |CN_OLE_UNREGISTER|NULL|  
   
 ### <a name="example"></a>Beispiel  

@@ -1,5 +1,5 @@
 ---
-title: Aufrufen systemeigener Funktionen aus verwaltetem Code | Microsoft Docs
+title: Aufrufen systemeigener Funktionen aus verwaltetem Code | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c0d7e69c95790122f44dc59d06f2843afbddfb2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3b8b266d44f9109a346160a1b2493f8644be839
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112042"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207597"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Aufrufen systemeigener Funktionen aus verwaltetem Code
 Die Common Language Runtime stellt Platform Invocation Services, oder PInvoke, zur Verfügung, wodurch verwalteter Code Funktionen in C-Format in systemeigenen DLLs (Dynamic Link Libraries) aufrufen kann. Hierbei wird das gleiche Datenmarshalling verwendet wie für die COM-Interoperabilität mit der Laufzeit und für den IJW („It Just Works“)-Mechanismus.  
@@ -180,7 +180,7 @@ int main() {
   
 |wtypes.h|Visual C++|Visual C++ mit /clr|Common Language Runtime|  
 |--------------|------------------|-----------------------------|-----------------------------|  
-|HANDLE|void*|void*|IntPtr, UIntPtr|  
+|HANDLE|"Void" \*|"Void" \*|IntPtr, UIntPtr|  
 |BYTE|unsigned char|unsigned char|Byte|  
 |SHORT|short|short|Int16|  
 |WORD|unsigned short|unsigned short|UInt16|  
@@ -191,10 +191,10 @@ int main() {
 |DWORD|unsigned long|unsigned long|UInt32|  
 |ULONG|unsigned long|unsigned long|UInt32|  
 |CHAR|char|char|Char|  
-|LPCSTR|char*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|  
-|LPCSTR|const char*|String ^|Zeichenfolge|  
-|LPWSTR|wchar_t*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|  
-|LPCWSTR|const wchar_t *|String ^|Zeichenfolge|  
+|LPCSTR|Char \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|  
+|LPCSTR|const char \*|String ^|Zeichenfolge|  
+|LPWSTR|"wchar_t" \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|  
+|LPCWSTR|const wchar_t \*|String ^|Zeichenfolge|  
 |FLOAT|float|float|Single|  
 |DOUBLE|double|double|Double|  
   
@@ -202,9 +202,9 @@ int main() {
   
  Im weiter oben gezeigten Beispiel gibt der CharSet-Parameter von DllImport an, wie verwaltete Zeichenfolgen gemarshallt werden sollen; in diesem Fall sollen sie für die native Seite zu ANSI-Zeichenfolgen gemarshallt werden.  
   
- Sie können Marshallinginformationen für einzelne Argumente einer systemeigenen Funktion mit dem MarshalAs-Attribut angeben. Es gibt mehrere Möglichkeiten, ein String *-Argument zu marshallen: BStr, ANSIBStr, TBStr, LPStr, LPWStr und LPTStr. Der Standard ist LPStr.  
+ Sie können Marshallinginformationen für einzelne Argumente einer nativen Funktion mit dem MarshalAs-Attribut angeben. Es gibt mehrere Möglichkeiten für das Marshalling einer Zeichenfolge \* Argument: BStr, ANSIBStr, TBStr, LPStr, LPWStr und LPTStr. Der Standard ist LPStr.  
   
- In diesem Beispiel wird die Zeichenfolge als Doppelbyte-Unicode-Zeichenfolge, LPWStr, gemarshallt. Die Ausgabe ist der erste Buchstabe der Hello World! Da das zweite Byte der gemarshallten Zeichenfolge null ist und ein einfacher Zugriff interpretiert dies als das Ende der Zeichenfolge-Marker.  
+ In diesem Beispiel wird die Zeichenfolge als Doppelbyte-Unicode-Zeichenfolge, LPWStr, gemarshallt. Die Ausgabe ist der erste Buchstabe des Hello World! Da das zweite Byte der gemarshallten Zeichenfolge null ist, und setzt interpretiert dies als das Ende der Zeichenfolge Marker.  
   
 ```  
 // platform_invocation_services_3.cpp  

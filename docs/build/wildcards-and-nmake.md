@@ -1,5 +1,5 @@
 ---
-title: Platzhalter und NMAKE | Microsoft Docs
+title: Platzhalter und NMAKE | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfe11313a456437fca2dd03aa8367c5f380e689
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6834e37c9f6624e231861fa28063cdbc7bec8508
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380450"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208623"
 ---
 # <a name="wildcards-and-nmake"></a>Platzhalter und NMAKE
-NMAKE erweitert Filename-Platzhalter (* und?) in von Abhängigkeitszeilen. Ein Platzhalter in einem Befehl angegeben, wird an den Befehl übergeben. NMAKE wird nicht erweitert.  
+NMAKE: erweitert die Platzhalterzeichen für Dateinamen (\* und?) in von Abhängigkeitszeilen. Ein Platzhalter in einem Befehl angegeben wird auf den Befehl übergeben. NMAKE: wird nicht erweitert.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Inhalt eines Makefiles](../build/contents-of-a-makefile.md)

@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa0067e3054972ccc60253bb7205dc7a4f1fe4bd
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7e6210f8c1b1fd1bd19efb74ca68c7a1bed3f7f1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337446"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209130"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace-Klasse
 Verwaltet eine benannte, kennwortgeschützte Datenbanksitzung eines einzelnen Benutzers von der Anmeldung bis zu Abmeldung.  
@@ -745,7 +745,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
 ### <a name="parameters"></a>Parameter  
  *lpszDefaultUser*  
- Der Standardbenutzername. Ein Benutzernamen kann 1 bis 20 Zeichen lang sein und sind Buchstaben, Sonderzeichen, Zahlen, Leerzeichen und Symbole mit Ausnahme von: "(Anführungszeichen) / (Schrägstrich), \ (umgekehrter Schrägstrich), \[ \] (Klammern): (Doppelpunkt), &#124; () senkrechter Strich), \< (kleiner-als-Zeichen), > (größer-als-Zeichen), + (Pluszeichen), = (Gleichheitszeichen), Semikolon (;), (Komma), (Fragezeichen) * (Sternchen), führende Leerzeichen und Steuerzeichen (ASCII 00 und ASCII-31). Weitere Informationen finden Sie unter dem Thema "UserName-Eigenschaft" in-DAO-Hilfe.  
+ Der Standardbenutzername. Ein Benutzernamen kann 1 bis 20 Zeichen lang sein und sind Buchstaben, Sonderzeichen, Zahlen, Leerzeichen und Symbole mit Ausnahme von: "(Anführungszeichen) / (Schrägstrich), \ (umgekehrter Schrägstrich), \[ \] (Klammern): (Doppelpunkt), &#124; () senkrechter Strich), \< (kleiner-als-Zeichen), > (größer-als-Zeichen), + (Pluszeichen), = (Gleichheitszeichen), Semikolon (;), (Komma), (Fragezeichen), \* (Sternchen), führende Leerzeichen und Steuerzeichen (ASCII 00 und ASCII-31). Weitere Informationen finden Sie unter dem Thema "UserName-Eigenschaft" in-DAO-Hilfe.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Standardname für den Benutzer, die Sie festlegen, gilt für neue Arbeitsbereiche, die Sie nach dem Aufruf zu erstellen. Wenn Sie die nachfolgenden Arbeitsbereiche erstellen, müssen Sie keinen Benutzernamen im Angeben der [erstellen](#create) aufrufen.  

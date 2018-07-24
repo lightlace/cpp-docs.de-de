@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::VectorIterator Klasse | Microsoft Docs
+title: Platform::Collections::VectorIterator-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,12 +15,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deaab183a092a073c6681004654312485959e924
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68198edb54c79d0872b3181d4ffe36df21a8cf02
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092531"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208470"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator-Klasse
 Stellt einen standardvorlagenbibliotheksiterator für Objekte, die von der Windows-Runtime-IVector-Schnittstelle abgeleitet.  
@@ -46,7 +46,7 @@ class VectorIterator;
 |----------|-----------------|  
 |`difference_type`|Ein Zeigerunterschied (ptrdiff_t).|  
 |`iterator_category`|Die Kategorie eines direkten Iterators (::std::random_access_iterator_tag).|  
-|`pointer`|Ein Zeiger auf einen internen Typ, Platform::Collections::Details::VectorProxy\<T >, d. h. für die Implementierung von VectorIterator erforderlich sind.|  
+|`pointer`|Ein Zeiger auf einen internen Typ, Platform::Collections::Details::VectorProxy\<T >, die für die Implementierung von VectorIterator erforderlich sind.|  
 |`reference`|Ein Verweis auf einen internen Typ, Platform::Collections::Details::VectorProxy\<T >, d. h. für die Implementierung von VectorIterator erforderlich sind.|  
 |`value_type`|Der `T` -Typname.|  
   
@@ -69,7 +69,7 @@ class VectorIterator;
 |[VectorIterator::operator++-Operator](#operator-increment)|Inkrementiert den aktuellen VectorIterator.|  
 |[VectorIterator::operator+=-Operator](#operator-plus-assign)|Inkrementiert den aktuellen VectorIterator um die angegebene Verschiebung.|  
 |[VectorIterator::operator<-Operator](#operator-less-than)|Gibt an, ob der aktuelle VectorIterator kleiner einem angegebenen VectorIterator ist.|  
-|[Vectoriterator::\<=-Operator](#operator-less-than-or-equals)|Gibt an, ob der aktuelle VectorIterator kleiner oder gleich einem angegebenen VectorIterator ist.|  
+|[Vectoriterator::\<Operator =-Operator](#operator-less-than-or-equals)|Gibt an, ob der aktuelle VectorIterator kleiner oder gleich einem angegebenen VectorIterator ist.|  
 |[VectorIterator::operator-=-Operator](#operator-subtract-assign)|Dekrementiert den aktuellen VectorIterator um die angegebene Verschiebung.|  
 |[VectorIterator::operator==-Operator](#operator-equality)|Gibt an, ob der aktuelle VectorIterator gleich einem angegebenen VectorIterator ist.|  
 |[VectorIterator::operator>-Operator](#operator-greater-than)|Gibt an, ob der aktuelle VectorIterator größer als ein angegebener VectorIterator ist.|  
@@ -117,11 +117,11 @@ VectorIterator operator--(int);
 ### <a name="remarks"></a>Hinweise  
  Die erste VectorIterator-Syntax prädekrementiert den aktuellen VectorIterator.  
   
- Die zweite Syntax postdekrementiert den aktuellen VectorIterator. Die `int` Typ in der zweiten Syntax gibt eine nach-dekrementierungsoperation an, keinen tatsächlichen ganzzahligen Operanden.  
+ Die zweite Syntax postdekrementiert den aktuellen VectorIterator. Die `int` Typ in der zweiten Syntax gibt eine nach-dekrementierungsoperation, keinen tatsächlichen ganzzahligen Operanden an.  
   
 
 
-## <a name="operator-dereference"></a>  Vectoriterator:: *-Operator
+## <a name="operator-dereference"></a>  Vectoriterator::\* Operator
 Ruft die Adresse des Elements ab, das vom aktuellen VectorIterator angegeben wird.  
   
 ### <a name="syntax"></a>Syntax  
@@ -172,7 +172,7 @@ bool operator>(const VectorIterator& other) const
   
 
 
-## <a name="operator-greater-than-or-equals"></a>  Vectoriterator::&gt;=-Operator
+## <a name="operator-greater-than-or-equals"></a>  Vectoriterator::&gt;Operator =-Operator
 Gibt an, ob der aktuelle VectorIterator größer oder gleich dem angegebenen VectorIterator ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -247,7 +247,7 @@ bool operator<(const VectorIterator& other) const
   
 
 
-## <a name="operator-less-than-or-equals"></a>  Vectoriterator::&lt;=-Operator
+## <a name="operator-less-than-or-equals"></a>  Vectoriterator::&lt;Operator =-Operator
 Gibt an, ob der aktuelle VectorIterator kleiner oder gleich einem angegebenen VectorIterator ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -266,7 +266,7 @@ bool operator<=(const VectorIterator& other) const
   
 
 
-## <a name="operator-minus"></a>  Vectoriterator:: Operator--Operator
+## <a name="operator-minus"></a>  Vectoriterator:: Operator-
 Subtrahiert entweder eine angegebene Anzahl von Elementen vom aktuellen Iterator und bildet einen neuen Iterator, oder subtrahiert einen angegebenen Iterator vom aktuellen Iterator, und gibt die Anzahl von Elementen zwischen den Iteratoren zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -286,7 +286,7 @@ difference_type operator-(const VectorIterator& other) const;
  Ein weiterer VectorIterator.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die erste Operatorsyntax gibt ein VectorIterator-Objekt, das `n` Elemente kleiner ist als der aktuelle VectorIterator. Die zweite Operatorsyntax gibt die Anzahl von Elementen zwischen dem aktuellen und dem `other` VectorIterator.  
+ Die erste Operatorsyntax gibt ein VectorIterator-Objekt, das `n` Elemente kleiner ist als der aktuelle VectorIterator. Die zweite Operatorsyntax gibt die Anzahl der Elemente zwischen dem aktuellen und dem `other` VectorIterator.  
   
 
 
@@ -394,13 +394,13 @@ explicit VectorIterator(
   
 ### <a name="parameters"></a>Parameter  
  `v`  
- Ein IVector\<T >-Objekt.  
+ Ein IVector\<T > Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Das erste Syntaxbeispiel ist der Standardkonstruktor. Das zweite Syntaxbeispiel ist ein expliziter Konstruktor, der verwendet wird, um einen VectorIterator aus einem IVector erstellen\<T >-Objekt.  
+ Das erste Syntaxbeispiel ist der Standardkonstruktor. Das zweite Syntaxbeispiel ist ein expliziter Konstruktor, der verwendet wird, erstellen Sie einen VectorIterator aus einem IVector\<T > Objekt.  
   
 
 
   
 ## <a name="see-also"></a>Siehe auch  
- [Platform-Namespace](platform-namespace-c-cx.md)
+ [Plattform-Namespace](platform-namespace-c-cx.md)

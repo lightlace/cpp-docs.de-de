@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c984b2ef59e022a355d7c24915b5edbcf7f7e74d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880946"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208662"
 ---
 # <a name="cfiletime-class"></a>CFileTime-Klasse
 Diese Klasse stellt Methoden zum Verwalten von einer Datei zugeordneten Werte für Datum und Uhrzeit.  
@@ -101,11 +101,11 @@ class CFileTime :  public FILETIME
 |Membervariable|Anzahl der 100-Nanosekunden-Intervallen|  
 |---------------------|-----------------------------------------|  
 |Millisecond|10,000|  
-|Second|Millisekunde * 1.000|  
-|Minute|Zweite * 60|  
-|Hour|Minuten * 60|  
-|Day|Stunde * 24|  
-|Woche|Tag * 7|  
+|Second|Millisekunde \* 1.000|  
+|Minute|Zweite \* 60|  
+|Hour|Minute \* 60|  
+|Day|Stunde \* 24|  
+|Woche|Tag \* 7|  
   
  **Beachten Sie** nicht alle Dateisysteme können Erstellung aufzeichnen, und notieren Sie sie nicht alle Dateisysteme und Zeitpunkt des letzten Zugriffs auf die gleiche Weise. Erstellen Sie beispielsweise im Windows NT-FAT-Dateisystem, genügend Zeit hat eine Auflösung von 10 Millisekunden, Schreibzeit hat eine Auflösung von 2 Sekunden und Zugriffszeit hat eine Auflösung von 1 Tag (das Access-Datum). Für NTFS hat Zugriff auf eine Auflösung von 1 Stunde. Darüber hinaus FAT zeichnet Zeiten auf dem Datenträger in der lokalen Zeit auf, sondern NTFS zeichnet Zeiten auf dem Datenträger in UTC. Weitere Informationen finden Sie unter [Dateizeitangaben](http://msdn.microsoft.com/library/windows/desktop/ms724290).  
   
