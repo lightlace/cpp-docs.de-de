@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::VectorViewIterator Klasse | Microsoft Docs
+title: Platform::Collections::VectorViewIterator-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,15 +15,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e01a6235ccd898e9ae732c89b9f9885db35151cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee104956bdfb5c7b72d20195fb3fb7a2789e236c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093061"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207704"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator-Klasse
-Stellt einen standardvorlagenbibliotheksiterator für Objekte, die von Windows-Runtime abgeleitete`IVectorView` Schnittstelle.  
+Stellt einen standardvorlagenbibliotheksiterator für die Windows-Runtime abgeleitete Objekte`IVectorView` Schnittstelle.  
   
  `ViewVectorIterator` ist ein Proxyiterator, der Elemente des Typs `VectorProxy<T>`speichert. Allerdings ist das Proxyobjekt fast nie für Benutzercode sichtbar. Weitere Informationen finden Sie unter [Auflistungen (C++/CX)](../cppcx/collections-c-cx.md).  
   
@@ -69,7 +69,7 @@ class VectorViewIterator;
 |[VectorViewIterator::operator++-Operator](#operator-increment)|Inkrementiert den aktuellen VectorViewIterator.|  
 |[VectorViewIterator::operator+=-Operator](#operator-plus-assign)|Inkrementiert den aktuellen VectorViewIterator um die angegebene Verschiebung.|  
 |[VectorViewIterator::operator<-Operator](#operator-less-than)|Gibt an, ob der aktuelle VectorViewIterator kleiner einem angegebenen VectorViewIterator ist.|  
-|[Vectorviewiterator::\<=-Operator](#operator-less-than-or-equals)|Gibt an, ob der aktuelle VectorViewIterator kleiner oder gleich einem angegebenen VectorViewIterator ist.|  
+|[Vectorviewiterator::\<Operator =-Operator](#operator-less-than-or-equals)|Gibt an, ob der aktuelle VectorViewIterator kleiner oder gleich einem angegebenen VectorViewIterator ist.|  
 |[VectorViewIterator::operator-=-Operator](#operator-minus-assign)|Dekrementiert den aktuellen VectorViewIterator durch die angegebene Verschiebung.|  
 |[VectorViewIterator::operator==-Operator](#operator-equality)|Gibt an, ob der aktuelle VectorViewIterator gleich einem angegebenen VectorViewIterator ist.|  
 |[VectorViewIterator::operator>-Operator](#operator-greater-than)|Gibt an, ob der aktuelle VectorViewIterator größer einem angegebenen VectorViewIterator ist.|  
@@ -116,11 +116,11 @@ VectorViewIterator operator--(int);
 ### <a name="remarks"></a>Hinweise  
  In der ersten VectorViewIterator-Syntax wird der aktuelle VectorViewIterator vordekrementiert.  
   
- In der zweiten Syntax wird der aktuelle VectorViewIterator nachdekrementiert. Die `int` Typ in der zweiten Syntax gibt eine nach-dekrementierungsoperation an, keinen tatsächlichen ganzzahligen Operanden.  
+ In der zweiten Syntax wird der aktuelle VectorViewIterator nachdekrementiert. Die `int` Typ in der zweiten Syntax gibt eine nach-dekrementierungsoperation, keinen tatsächlichen ganzzahligen Operanden an.  
   
 
 
-## <a name="operator-dereference"></a>  Vectorviewiterator:: *-Operator
+## <a name="operator-dereference"></a>  Vectorviewiterator::\* Operator
 Ruft einen Verweis auf das Element ab, das vom aktuellen VectorViewIterator angegeben wird.  
   
 ### <a name="syntax"></a>Syntax  
@@ -148,7 +148,7 @@ bool operator==(const VectorViewIterator& other) const;
  Ein weiterer VectorViewIterator.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn der aktuelle VectorViewIterator gleich `other`ist, andernfalls `false`.  
+ `true` Wenn der aktuelle VectorViewIterator gleich ist `other`ist, andernfalls `false`.  
   
 
 
@@ -171,7 +171,7 @@ bool operator>(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-greater-than-or-equals"></a>  Vectorviewiterator::&gt;=-Operator
+## <a name="operator-greater-than-or-equals"></a>  Vectorviewiterator::&gt;Operator =-Operator
 Gibt an, ob der aktuelle VectorViewIterator größer oder gleich dem angegebenen VectorViewIterator ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -225,7 +225,7 @@ bool operator!=(const VectorViewIterator& other) const;
  Ein weiterer VectorViewIterator.  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn der aktuelle VectorViewIterator nicht gleich `other`ist, andernfalls `false`.  
+ `true` Wenn der aktuelle VectorViewIterator nicht gleich ist `other`ist, andernfalls `false`.  
   
 
 
@@ -247,7 +247,7 @@ bool operator<(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-less-than-or-equals"></a>  Vectorviewiterator::&lt;=-Operator
+## <a name="operator-less-than-or-equals"></a>  Vectorviewiterator::&lt;Operator =-Operator
 Gibt an, ob der aktuelle VectorIterator kleiner oder gleich einem angegebenen VectorIterator ist.  
   
 ### <a name="syntax"></a>Syntax  
@@ -266,7 +266,7 @@ bool operator<=(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-minus"></a>  Vectorviewiterator:: Operator
+## <a name="operator-minus"></a>  Vectorviewiterator:: Operator-
 Subtrahiert entweder eine angegebene Anzahl von Elementen vom aktuellen Iterator und bildet einen neuen Iterator, oder subtrahiert einen angegebenen Iterator vom aktuellen Iterator, und gibt die Anzahl von Elementen zwischen den Iteratoren zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -393,12 +393,12 @@ explicit VectorViewIterator(
   
 ### <a name="parameters"></a>Parameter  
  `v`  
- Ein IVectorView\<T >-Objekt.  
+ Ein IVectorView\<T > Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Das erste Syntaxbeispiel ist der Standardkonstruktor. Das zweite Syntaxbeispiel ist ein expliziter Konstruktor, der verwendet wird, um einen VectorViewIterator aus einem IVectorView erstellen\<T >-Objekt.  
+ Das erste Syntaxbeispiel ist der Standardkonstruktor. Das zweite Syntaxbeispiel ist ein expliziter Konstruktor, der verwendet wird, erstellen Sie einen VectorViewIterator aus einem IVectorView\<T > Objekt.  
   
 
   
 ## <a name="see-also"></a>Siehe auch  
- [Platform-Namespace](platform-namespace-c-cx.md)
+ [Plattform-Namespace](platform-namespace-c-cx.md)

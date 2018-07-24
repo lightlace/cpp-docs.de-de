@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7abcfcfe6aec722fa3540ad974017ab47e6cf71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885450"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209221"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase-Klasse
 Diese Klasse bietet eine Grundlage für intelligente Zeiger-Klassen, die mit COM-basierten Speicher Routinen.  
@@ -77,7 +77,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|Der Cast-Operator.|  
 |[CComPtrBase::operator!](#operator_not)|Der NOT-Operator.|  
 |[CComPtrBase::operator &](#operator_amp)|Die & Operator.|  
-|[CComPtrBase::operator *](#operator_star)|Der *-Operator.|  
+|[CComPtrBase::operator *](#operator_star)|Der Operator \*.|  
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|Das kleiner-als-Operator.|  
 |[CComPtrBase::operator ==](#operator_eq_eq)|Der Gleichheitsoperator.|  
 |[CComPtrBase::operator ->](#operator_ptr)|Der Zeiger auf Member-Operator.|  
@@ -246,8 +246,8 @@ T** operator&() throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die Adresse des Objekts verweist die `CComPtrBase` Objekt.  
   
-##  <a name="operator_star"></a>  CComPtrBase::operator *  
- Der *-Operator.  
+##  <a name="operator_star"></a>  CComPtrBase::operator \*  
+ Der Operator \*.  
   
 ```
 T& operator*() const throw();
@@ -300,7 +300,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" zurück, wenn der Zeiger vom aktuellen Objekt verwaltet ist kleiner als der Zeiger mit dem verglichen wird.  
   
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
  Der Cast-Operator.  
   
 ```  

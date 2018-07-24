@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942093"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208548"
 ---
 # <a name="string-and-character-literals--c"></a>Zeichenfolgen- und Zeichenliterale (C++)
 C++ unterstützt verschiedene Zeichenfolgen- und Zeichentypen und bietet Möglichkeiten Literalwerte dieser einzelnen Typen auszudrücken. In Ihrem Quellcode stellen Sie die Inhalte Ihrer Zeichen- und Zeichenfolgenliterale mit einem Zeichensatz dar. Universelle Zeichennamen und Escapezeichen ermöglichen es Ihnen, eine beliebige Zeichenfolge darzustellen, indem Sie nur den grundlegenden Quellzeichensatz verwenden. Ein unformatiertes Zeichenfolgenliteral ermöglicht es Ihnen, die Verwendung von Escapezeichen zu vermeiden, und kann verwendet werden, um alle Typen von Zeichenfolgenliteralen auszudrücken. Sie können auch std::string-Literale erstellen, ohne zusätzliche Erstellungs- oder Konvertierungsschritte ausführen zu müssen.  
@@ -310,7 +310,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- Beachten Sie, dass `strlen()` und `wcslen()` enthalten nicht die Größe des beendenden Null-Zeichens, dessen Größe gleich der Elementgröße vom Zeichenfolgentyp ist: ein Byte für eine Zeichenfolge Char *, zwei Bytes für Wchar_t\* oder char16_t\* Zeichenfolgen und vier Bytes auf char32_t\* Zeichenfolgen.  
+ Beachten Sie, dass `strlen()` und `wcslen()` enthalten nicht die Größe des beendenden Null-Zeichens, dessen Größe gleich der Elementgröße vom Zeichenfolgentyp ist: ein Byte für eine Char\* "string", "zwei Bytes für Wchar_t\* oder char16_t\*Zeichenfolgen und vier Bytes auf char32_t\* Zeichenfolgen.  
   
  Die maximale Länge eines Zeichenfolgenliterals beträgt 65535 Bytes. Diese Begrenzung gilt sowohl für schmale Zeichenfolgenliterale als auch für breite Zeichenfolgenliterale.  
   
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>Zeichenfolgenliterale mit universellen Zeichennamen  
- In systemeigenen (nicht unformatierten) Zeichenfolgenliteralen können universelle Zeichennamen verwendet werden, um jedes beliebige Zeichen darzustellen, solange der jeweilige universelle Zeichenname als ein oder mehrere Zeichen im string-Datentyp codiert werden kann.  Beispielsweise kann ein universeller Zeichenname, der ein erweitertes Zeichen darstellt, nicht in einer schmalen Zeichenfolge über die ANSI-Codepage codiert werden, er kann aber in schmalen Zeichenfolgen in einigen Multibyte-Codepages oder in UTF-8-Zeichenfolgen oder in einer breiten Zeichenfolge codiert werden. In C ++ 11-Unicode-Unterstützung wird durch die char16_t * und char32_t erweitert\* Zeichenfolgentypen:  
+ In systemeigenen (nicht unformatierten) Zeichenfolgenliteralen können universelle Zeichennamen verwendet werden, um jedes beliebige Zeichen darzustellen, solange der jeweilige universelle Zeichenname als ein oder mehrere Zeichen im string-Datentyp codiert werden kann.  Beispielsweise kann ein universeller Zeichenname, der ein erweitertes Zeichen darstellt, nicht in einer schmalen Zeichenfolge über die ANSI-Codepage codiert werden, er kann aber in schmalen Zeichenfolgen in einigen Multibyte-Codepages oder in UTF-8-Zeichenfolgen oder in einer breiten Zeichenfolge codiert werden. In C ++ 11-Unicode-Unterstützung wird durch die char16_t erweitert\* und char32_t\* Zeichenfolgentypen:  
   
 ```cpp  
 // ASCII smiling face  

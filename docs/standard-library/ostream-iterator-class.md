@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963523"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207918"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator-Klasse
 
@@ -68,9 +68,9 @@ Die ostream_iterator-Klasse muss den Anforderungen für einen Ausgabeiterator en
 
 |Operator|Beschreibung|
 |-|-|
-|[operator*](#op_star)|Der Dereferenzierungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks *`i` = `x` verwendet wird.|
+|[operator*](#op_star)|Der Dereferenzierungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x`.|
 |[operator++](#op_add_add)|Ein nicht funktionaler Inkrementoperator, der einen `ostream_iterator` zum gleichen Objekt zurückgibt, das er adressiert hat, bevor der Vorgang aufgerufen wurde.|
-|[operator=](#op_eq)|Ein Zuweisungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks *`i` = `x` zum Schreiben in einen Ausgabestream verwendet wird.|
+|[operator=](#op_eq)|Zuweisungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x` zum Schreiben in einen Ausgabestream.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -228,7 +228,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a> ostream_iterator::operator=
 
-Ein Zuweisungsoperator, der zum Implementieren des Ausgabeiteratorausdrucks *`i` = `x` zum Schreiben in einen Ausgabestream verwendet wird.
+Zuweisungsoperator verwendet, um das Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x` zum Schreiben in einen Ausgabestream.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -244,7 +244,7 @@ Der Operator fügt *Val* in den Ausgabestream, der dem Objekt zugeordnet wird, g
 
 ### <a name="remarks"></a>Hinweise
 
-Die Anforderungen für einen Ausgabeiterator, der `ostream_iterator` erfüllen muss, benötigen nur den gültigen Ausdruck * `ii` = `t`, und sagen nichts über den operator oder den operator= selbst. Dieser Memberoperator gibt `*this` zurück.
+Die Anforderungen für einen Ausgabeiterator, der `ostream_iterator` erfüllen müssen, benötigen Sie nur den Ausdruck \* `ii`  =  `t` gültig sein, und sagen nichts über den Operator oder den Operator = selbst. Dieser Memberoperator gibt `*this` zurück.
 
 ### <a name="example"></a>Beispiel
 

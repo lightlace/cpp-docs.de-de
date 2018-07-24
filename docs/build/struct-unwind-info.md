@@ -1,5 +1,5 @@
 ---
-title: Struktur UNWIND_INFO | Microsoft Docs
+title: Struktur UNWIND_INFO | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,25 +12,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14b17a79905ffc7814e2aecf92e90f3db526453f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6046dffd74824b05c7b7b10be57bb0b2274ffdc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383240"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207571"
 ---
 # <a name="struct-unwindinfo"></a>struct UNWIND_INFO
-Die Entladung Info Datenstruktur wird verwendet, um die Auswirkungen aufzeichnet, die eine Funktion weist auf den Stack-Pointer und, in dem die nicht flüchtigen Register auf dem Stapel gespeichert werden:  
+Die Entladung-Info-Datenstruktur wird verwendet, um die Auswirkungen zu erfassen, die eine Funktion verfügt, auf den Stack-Pointer und, in dem die nicht flüchtigen Register auf dem Stapel gespeichert werden:  
   
 |||  
 |-|-|  
 |UBYTE: 3|Version|  
 |UBYTE: 5|Flags|  
-|UBYTE|Größe von prolog|  
+|UBYTE|Größe der prolog|  
 |UBYTE|Anzahl von entladungscodes|  
 |UBYTE: 4|Frame-Register|  
-|UBYTE: 4|Frame-Register-Offset (skalieren)|  
-|USHORT * n|Entladen Sie Codes array|  
+|UBYTE: 4|Frame-Register-Offset (skaliert)|  
+|USHORT \* n|Entladen Sie Codes array|  
 |Variable|Entweder kann der Form (1) oder (2) im folgenden werden|  
   
  (1) Ausnahmehandler  
@@ -40,51 +40,51 @@ Die Entladung Info Datenstruktur wird verwendet, um die Auswirkungen aufzeichnet
 |ULONG|Adresse des ausnahmehandlers|  
 |-Variable|Sprachspezifischer Handlerdaten (optional)|  
   
- (2) verkettete entladen, Info  
+ (2) verkettet Entladeinformationen  
   
 |||  
 |-|-|  
-|ULONG|Funktion-Startadresse|  
+|ULONG|Startadresse der Funktion|  
 |ULONG|Funktion-Endadresse|  
-|ULONG|Entladen Sie Info-Adresse|  
+|ULONG|Adresse der Entladeinformationen|  
   
- Die UNWIND_INFO-Struktur muss DWORD im Arbeitsspeicher ausgerichtet sein. Die Bedeutung der einzelnen Felder lautet wie folgt:  
+ Die Struktur UNWIND_INFO muss DWORD im Arbeitsspeicher ausgerichtet sein. Die Bedeutung jedes Felds lautet wie folgt aus:  
   
  **Version**  
- Die Versionsnummer der Entladedaten, gegenwärtig 1.  
+ Die Versionsnummer der Entladedaten, derzeit 1.  
   
  **Flags**  
- Derzeit sind drei Flags definiert:  
+ Aktuell sind drei Flags definiert:  
   
- UNW_FLAG_EHANDLER: die Funktion verfügt über einen Ausnahmehandler, der beim Suchen nach Funktionen, die Ausnahmen untersuchen müssen aufgerufen werden soll.  
+ UNW_FLAG_EHANDLER: die Funktion verfügt über einen Ausnahmehandler, der aufgerufen werden soll, beim Suchen nach Funktionen, die Ausnahmen zu analysieren.  
   
  UNW_FLAG_UHANDLER die Funktion verfügt über einen Beendigungshandler, der beim Entladen einer Ausnahme aufgerufen werden soll.  
   
- UNW_FLAG_CHAININFO diese Struktur ist nicht das primäre Replikat für die Prozedur Info entladen. Die verketteten entladen stattdessen Info, dass der Eintrag ist der Inhalt des vorherigen RUNTIME_FUNCTION-Eintrag. Finden Sie unter den folgenden Text eine Erläuterung der Verkettete Entladeinfostrukturen. Wenn dieses Flag festgelegt ist, müssen die Flags UNW_FLAG_EHANDLER und UNW_FLAG_UHANDLER gelöscht werden. Außerdem müssen die Frame-Register und -Stack Zuordnung Felder die gleichen Werte wie in der primären Info entladen aufweisen.  
+ UNW_FLAG_CHAININFO diese Struktur ist nicht das primäre Replikat für die Prozedur Entladeinformationen. Stattdessen Entladeinformationen die verketteten, dass Eintrag auf den Inhalt eines vorherigen RUNTIME_FUNCTION Eintrags ist. Finden Sie unter den folgenden Text, eine Erläuterung der Verkettete Entladeinfostrukturen. Wenn dieses Flag festgelegt ist, müssen die UNW_FLAG_EHANDLER und UNW_FLAG_UHANDLER Flags deaktiviert werden. Darüber hinaus müssen die Frame-registrieren und -Stack Allocation-Felder die gleichen Werte wie in der primären Informationen zu entladen.  
   
- **Größe von prolog**  
+ **Größe der prolog**  
  Die Länge des Funktionsprologs in Byte.  
   
  **Anzahl von entladungscodes**  
- Dies ist die Anzahl der Slots im Array Codes entladen. Beachten Sie, dass einige Codes (z. B. UWOP_SAVE_NONVOL) entladen erfordern mehr als einen Slot, der im Array.  
+ Dies ist die Anzahl der Slots in das Array entladen. Beachten Sie, dass einige Codes (z. B. UWOP_SAVE_NONVOL) entladen erfordern mehr als einen Slot im Array.  
   
  **Frame-register**  
- Wert ungleich NULL ist, klicken Sie dann die Funktion Frame-Pointer verwendet, und dieses Feld ist die Anzahl der nicht flüchtigen Register als Frame-Pointer, mit der gleichen Codierung für das Feld Vorgang Informationen Framezeiger verwendet.  
+ Wert ungleich NULL ist, klicken Sie dann die Funktion Frame-Pointer verwendet, und dieses Feld gibt an, der nicht flüchtigen Register als der Frame-Pointer verwenden die gleiche Codierung für das Feld des Vorgangs Informationen Framezeiger verwendet.  
   
- **Frame registrieren Offset (skalieren)**  
- Wenn der Frame-Register-Feld ungleich NULL ist, ist dies die skalierte Offset von RSP, die auf das FP Reg angewendet wird, wenn er eingerichtet wird. Die tatsächliche FP Reg RSP + 16 festgelegt ist * diese Zahl, sodass Offsets von 0 bis 240. Dies ermöglicht das FP Reg in die Mitte der lokalen stapelzuordnung für dynamische Stapelrahmen ermöglicht eine bessere Code Dichte über kürzere Anweisungen (mehrere Anweisungen können signierten 8-Bit-Offset Formulars) verweist.  
+ **Frame erfassen Offset (skaliert)**  
+ Wenn das Feld "Register" des Frame ungleich NULL ist, klicken Sie dann ist dies die skalierte Offset von RSP, die auf FP Reg angewendet wird, wenn es eingerichtet ist. Tatsächliche FP Reg nastaven NA hodnotu RSP + 16 \* diese Zahl, sodass die Offsets von 0 bis 240. Dies ermöglicht die FP Reg verweist, in die Mitte der lokalen stapelreservierung für dynamische Stapelrahmen, sodass eine höhere Dichte von Code mithilfe von kürzeren Anweisungen (Weitere Informationen können die signierten 8-Bit-Offset Formulars verwenden).  
   
  **Entladen Sie Codes array**  
- Dies ist ein Array von Elementen, die den Effekt des Prologs nicht flüchtigen Register und RSP erläutert. Die Bedeutungen der einzelnen Elemente finden Sie im Abschnitt auf UNWIND_CODE. Für die Ausrichtung enthält dieses Array immer auswirkt eine gerade Anzahl von Einträgen, wobei der abschließende Eintrag potenziell nicht verwendet (in diesem Fall das Array eine länger als angegeben durch die Anzahl der Entladung Codes Feld sein wird).  
+ Dies ist ein Array von Elementen, die die Auswirkungen der Prolog auf die nicht flüchtigen Register und die RSP erläutert. Die Bedeutungen der einzelnen Elemente finden Sie im Abschnitt für UNWIND_CODE. Für die Ausrichtung weisen dieses Array immer eine gerade Anzahl von Einträgen, wobei der abschließende Eintrag möglicherweise nicht verwendet (in diesem Fall das Array eine länger als durch die Anzahl der Entladung Codes Feld gekennzeichnet werden).  
   
  **Adresse des ausnahmehandlers**  
- Dies ist eine Relative Image-Zeiger auf die Funktion sprachspezifische Ausnahme/Beendigungshandler (wenn das UNW_FLAG_CHAININFO-Flag klar ist, und eines der Flags UNW_FLAG_EHANDLER oder UNW_FLAG_UHANDLER festgelegt ist).  
+ Dies ist ein Abbild relativ-Zeiger auf die Funktion sprachspezifische Ausnahme/Beendigungshandler (wenn Flag UNW_FLAG_CHAININFO nicht festgelegt, und eines der UNW_FLAG_EHANDLER oder UNW_FLAG_UHANDLER Flags festgelegt ist).  
   
  **Sprachspezifischer Handlerdaten**  
- Dies ist die Funktion sprachspezifischer Handler Ausnahmedaten. Das Format dieser Daten ist nicht angegeben wurde und vollständig vom Handler für bestimmte Ausnahmen in Verwendung bestimmt.  
+ Dies ist der Funktion sprachspezifischer Handler Ausnahmedaten. Das Format dieser Daten ist nicht angegeben und vollständig vom Handler für bestimmte Ausnahmen verwendet bestimmt.  
   
- **Verkettet entladen, Info**  
- Wenn das UNW_FLAG_CHAININFO-Flag festgelegt ist, und klicken Sie dann die UNWIND_INFO-Struktur mit drei UWORDs endet.  Diese UWORDs stellen die RUNTIME_FUNCTION-Informationen für die Funktion des verketteten Entladevorgangs dar.  
+ **Verkettet Entladeinformationen**  
+ Wenn das UNW_FLAG_CHAININFO-Flag festgelegt ist, und klicken Sie dann die UNWIND_INFO-Struktur mit drei UWORDs endet.  Diese UWORDs stellen die RUNTIME_FUNCTION Informationen für die Funktion die verketteten Entladung dar.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Entladedaten für die Ausnahmebehandlung, Debuggerunterstützung](../build/unwind-data-for-exception-handling-debugger-support.md)

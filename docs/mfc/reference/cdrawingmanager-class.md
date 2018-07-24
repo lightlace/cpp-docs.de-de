@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b5970f9d0ea6e3b0c7ed4715c8ff9c3578dc00
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337420"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209169"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager-Klasse
 Die `CDrawingManager` -Klasse implementiert komplexe zeichnen Algorithmen.  
@@ -932,7 +932,7 @@ static COLORREF __stdcall SmartMixColors(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode schlägt fehl mit Fehler, wenn *k1* oder *K2* ist kleiner als 0 (null). Die Methode gibt zurück, wenn beide Parameter auf 0 festgelegt werden, `RGB(0, 0, 0)`.  
   
- Die gewichtete Verhältnis wird anhand der folgenden Formel berechnet: ("Farbe1" * k1 + color2 \* K2) /(k1 + k2). Nach das gewichtete Verhältnis bestimmt wird, wird die Methode die Helligkeit für die gemischte Farbe berechnet. Dann multipliziert die Helligkeit durch *DblLumRatio*. Wenn der Wert größer als 1,0 ist, legt die Methode die Helligkeit für die Farbe von gemischten in den neuen Wert ein. Andernfalls wird die Helligkeit auf 1.0 festgelegt.  
+ Die gewichtete Verhältnis wird anhand der folgenden Formel berechnet: ("Farbe1" \* k1 + color2 \* K2) /(k1 + k2). Nach das gewichtete Verhältnis bestimmt wird, wird die Methode die Helligkeit für die gemischte Farbe berechnet. Dann multipliziert die Helligkeit durch *DblLumRatio*. Wenn der Wert größer als 1,0 ist, legt die Methode die Helligkeit für die Farbe von gemischten in den neuen Wert ein. Andernfalls wird die Helligkeit auf 1.0 festgelegt.  
   
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
  Wird eine Quell-DC-Inhalt in das angegebene Rechteck um 90 Grad gedreht.  

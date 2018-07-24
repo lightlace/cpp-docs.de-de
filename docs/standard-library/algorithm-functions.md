@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79d9492588688c7dd7e7fa754e4a4f0b0f892d05
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d905c8208bef98d584d3052c242de1ac127a4830
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027939"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209299"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;Algorithmusfunktionen&gt;
 
@@ -2705,7 +2705,7 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="remarks"></a>Hinweise
 
-`swap` sollte **iter_swap** vorgezogen werden; dieses war im C++-Standard für die Abwärtskompatibilität enthalten. Wenn sowohl `Fit1` als auch `Fit2` Forward-Iteratoren sind, entspricht `iter_swap` (`Fit1`, `Fit2`) `swap` (* `Fit1`, \* `Fit2`).
+`swap` sollte **iter_swap** vorgezogen werden; dieses war im C++-Standard für die Abwärtskompatibilität enthalten. Wenn `Fit1` und `Fit2` forward-Iteratoren sind `iter_swap` ( `Fit1`, `Fit2` ), entspricht der `swap` ( \* `Fit1`, \* `Fit2` ).
 
 Die Werttypen der Forward-Eingabeiteratoren müssen den gleichen Wert haben.
 

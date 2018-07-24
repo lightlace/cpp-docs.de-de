@@ -1,5 +1,5 @@
 ---
-title: 'Concurrency:: Direct3D-Namespace | Microsoft Docs'
+title: 'Concurrency:: Direct3D Namespace | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9516e3f89d393405a5f71af569a50e46e381d579
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e95a0cb4b2dc8dfae7667a147dc2912cd7922c3d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687386"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207691"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d-Namespace
 Der `direct3d`-Namespace enthält Funktionen, welche die D3D-Interoperabilität unterstützen. Dies ermöglicht die einfache Verwendung von D3D-Ressourcen zur Berechnung von AMP-Code sowie die Verwendung von in AMP erstellen Ressourcen in D3D-Code, ohne dass redundante Zwischenkopien erstellt werden. Sie können die berechnungsintensiven Abschnitte der Ihrer DirectX-Anwendungen inkrementell beschleunigen, indem Sie C++ AMP verwenden und die D3D-API für Daten nutzen, die aus AMP-Berechnungen resultieren.  
@@ -57,7 +57,7 @@ namespace direct3d;
 |[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Gibt den absoluten Wert des Arguments zurück.|  
 |[clamp](concurrency-direct3d-namespace-functions-amp.md#clamp)|Überladen. Bindet _X an den angegebenen _Min- und _Max-Bereich|  
 |[countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|Zählt die Anzahl der festgelegten Bits in _X|  
-|[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Erstellt ein ["accelerator_view"-Klasse](accelerator-view-class.md) von einem Zeiger auf eine Direct3D-Geräteschnittstelle|  
+|[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Erstellt eine [Accelerator_view-Klasse](accelerator-view-class.md) von einem Zeiger auf die Schnittstelle eines Direct3D-Geräts|  
 |[d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|Ruft eine Sperre für eine accelerator_view ab, um D3D-Vorgänge in Ressourcen, die gemeinsam mit der accelerator_view genutzt werden, sicher ausführen zu können.|  
 |[d3d_access_try_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|Versuch, ohne Blockierung die D3D-Zugriffssperre für eine accelerator_view abzurufen.|  
 |[d3d_access_unlock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|Gibt die D3D-Zugriffssperre für die angegebene accelerator_view frei.|  
@@ -67,9 +67,9 @@ namespace direct3d;
 |[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Vergleicht zwei Werte und gibt den größeren Wert zurück.|  
 |[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Vergleicht zwei Werte und gibt den kleineren Wert zurück.|  
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Gibt ein boolesches Flag zurück, das angibt, ob Timeout für die angegebene "accelerator_view" deaktiviert ist.|  
-|[MAD](concurrency-direct3d-namespace-functions-amp.md#mad)|Überladen. Führt ein arithmetische Multiplikations-Additions-Operation für drei Argumenten aus: _X * _Y + _Z|  
+|[MAD](concurrency-direct3d-namespace-functions-amp.md#mad)|Überladen. Führt eine arithmetische Multiplikation Operation für drei Argumente: _X \* _Y + _Z|  
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Erstellt ein Array aus dem Schnittstellenzeiger eines D3D-Puffers.|  
-|[Füllwörter](concurrency-direct3d-namespace-functions-amp.md#noise)|Generiert mithilfe des Perlin-Noise-Algorithmus einen Zufallswert|  
+|[rauschunterdrückung](concurrency-direct3d-namespace-functions-amp.md#noise)|Generiert mithilfe des Perlin-Noise-Algorithmus einen Zufallswert|  
 |[Bogenmaß (Radiant)](concurrency-direct3d-namespace-functions-amp.md#radians)|Konvertiert _X von Grad in Bogenmaß|  
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Berechnet einen schnellen, ungefähren Kehrwert des Arguments|  
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Kehrt die Reihenfolge der Bits in _X um|  

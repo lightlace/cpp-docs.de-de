@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf1c64aa2139764bcb26782c344a90379bafda23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336773"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208009"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-SysLink-Steuerelements bereit.  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
 |[in] *CxMaxWidth*|Die maximale Breite des Links in Pixeln.|  
-|[Out] * *pSize*|Ein Zeiger auf ein Windows [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur. Bei der Rückgabe dieser Methode die *cy* Mitglied der `SIZE` Struktur enthält die Höhe des idealen Link-Text für die Breite der Link-Text, der angegeben wird *CxMaxWidth*. Die *Cx* Member der Struktur enthält die Breite der Link-Text, der tatsächlich benötigt wird.|  
+|[out] \* *pSize*|Ein Zeiger auf ein Windows [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur. Bei der Rückgabe dieser Methode die *cy* Mitglied der `SIZE` Struktur enthält die Höhe des idealen Link-Text für die Breite der Link-Text, der angegeben wird *CxMaxWidth*. Die *Cx* Member der Struktur enthält die Breite der Link-Text, der tatsächlich benötigt wird.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die bevorzugte Höhe der Text des Links in Pixeln. Der Rückgabewert ist identisch mit dem Wert, der die *cy* Mitglied der `SIZE` Struktur.  

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e709ce37d60281bbc56a0e8ecf3cc7eafef5b0ee
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964384"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207610"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator-Klasse
 
@@ -63,9 +63,9 @@ Der Container muss den Anforderungen einer Sequenz zum Einfügen am Anfang entsp
 
 |Operator|Beschreibung|
 |-|-|
-|[operator*](#op_star)|Der Dereferenzierungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck * `i` = `x` für eine Einfügung am Anfang zu implementieren|
+|[operator*](#op_star)|Der Dereferenzierungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x` für eine Einfügung am Anfang.|
 |[operator++](#op_add_add)|Inkrementiert `front_insert_iterator` zum folgenden Speicherort, an dem ein Wert gespeichert werden kann.|
-|[operator=](#op_eq)|Der Zuweisungsoperator, der verwendet wird, um den Ausgabeiteratorausdruck * `i` = `x` für eine Einfügung am Anfang zu implementieren|
+|[operator=](#op_eq)|Zuweisungsoperator, der zum Implementieren des ausgabeiteratorausdrucks \* `i`  =  `x` für eine Einfügung am Anfang.|
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -177,7 +177,7 @@ After the front insertions, the list L is:
 *\
 ```
 
-## <a name="op_star"></a> front_insert_iterator::operator*
+## <a name="op_star"></a>  front_insert_iterator:: Operator\*
 
 Dereferenziert den Iterator zum Einfügen und gibt das Element zurück, das es adressiert
 

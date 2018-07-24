@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5866c3e945d55722a4cf8530c543b0e8ca5163
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943273"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208561"
 ---
 # <a name="overview-of-declarators"></a>Übersicht über Deklaratoren
 Deklaratoren sind die Komponenten einer Deklaration, die Namen von Objekten oder Funktionen angeben. Deklaratoren geben auch an, ob das benannte Objekt ein Objekt, ein Zeiger, ein Verweis oder ein Array ist.  Obwohl Deklaratoren nicht den Basistyp angeben, ändern sie die Typinformationen im Basistyp, sodass dieser abgeleitete Typen, wie Zeiger, Verweise und Arrays, angibt.  Auf Funktionen angewendet arbeitet der Deklarator mit dem Typspezifizierer, um den Rückgabetyp einer Funktion vollständig als Objekt, Zeiger oder Verweis anzugeben. (Bezeichner, die in beschriebenen [Deklarationen und Definitionen](declarations-and-definitions-cpp.md), übermitteln Eigenschaften, z. B. Typ und Speicherklasse. Modifizierer, erläutert in diesem Abschnitt und in [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md), ändern Deklaratoren.) Die folgende Abbildung zeigt eine vollständige Deklaration von `MyFunction` und ruft die Komponenten der Deklaration auf.  
@@ -127,7 +127,7 @@ int i, *j, f(int k);  // int, pointer to int, function returning int
 int* i, f(int k);  // pointer to int, function returning int (not int*)  
 ```  
   
- sieht möglicherweise wie die Deklaration einer **Int** Zeiger und eine Funktion zurückgibt `int*`, aber nicht.  Das liegt daran, dass * Bestandteil des Deklarators für `i` und nicht Teil des Deklarators für `f` ist.  
+ sieht möglicherweise wie die Deklaration einer **Int** Zeiger und eine Funktion zurückgibt `int*`, aber nicht.  Der Grund dafür ist die \* ist Teil des Deklarators für `i`, nicht Teil des Deklarators für `f`.  
   
  **Vereinfachung der deklaratorsyntax mit typedef**  
   
@@ -175,8 +175,8 @@ int a, *b, c[5], **d, &e=a;
   
 - und *Zeiger-Operator* ist einer der:  
   
-  - * [cv-Qualifizierer]  
-  - & [cv-Qualifizierer]:: geschachtelten namesspezifizierer * [cv-Qualifizierer]  
+  - \* [cv-Qualifizierer]  
+  - & [cv-Qualifizierer]:: geschachtelten namesspezifizierer \* [cv-Qualifizierer]  
 
   
  Da ein Deklarator Deklaratoren enthalten kann, ist es möglich, anhand der oben genannten Regeln komplexere abgeleitete Typen zu erstellen (z. B. Arrays von Zeigern, Funktionen, die Arrays von Funktionszeigern zurückgeben).  Um die einzelnen Schritte der Konstruktion zu bilden, beginnen Sie mit dem Bezeichner, der den Basisdatentyp darstellt, und wenden Sie die Syntaxregel oben mit dem vorherigen Ausdruck als `declarator` an.  Die Anwendung der Syntaxregeln sollte der umgekehrten Reihenfolge des Ausdrucks auf Englisch entsprechen.  Wenn die Anwendung die *Zeiger-Operator* -Syntaxregel auf einen Array- oder Funktionsausdruck, verwenden Sie Klammern, wenn einen Zeiger auf das Array oder eine Funktion, wie die letzte Zeile in der folgenden Tabelle werden sollen.  
@@ -190,4 +190,4 @@ int a, *b, c[5], **d, &e=a;
 |Array von 10|`(*i)[10]`|4|  
 |Zeiger auf|`*((*i)[10])`|6 und anschließend 5|  
   
- Wenn mehrere Zeiger-, Verweis-, Array- oder Funktionsmodifizierer verwendet werden, werden Deklaratoren möglicherweise recht kompliziert.  Das Thema [Interpretieren von komplexeren Deklaratoren](../c-language/interpreting-more-complex-declarators.md) beschreibt, wie Sie die Syntax komplexeren Deklaratoren gelesen.  Das Thema gilt für C- und C++, obwohl in C++ die * zeigt an, ein Zeiger ist, ein qualifizierter Name wie beispielsweise MyClass::\* kann verwendet werden, um einen Zeiger auf einen Member einer Klasse angeben.
+ Wenn mehrere Zeiger-, Verweis-, Array- oder Funktionsmodifizierer verwendet werden, werden Deklaratoren möglicherweise recht kompliziert.  Das Thema [Interpretieren von komplexeren Deklaratoren](../c-language/interpreting-more-complex-declarators.md) beschreibt, wie Sie die Syntax komplexeren Deklaratoren gelesen.  Das Thema gilt für C- und C++, obwohl in C++ die \* zeigt an, ein Zeiger ist, ein qualifizierter Name wie beispielsweise MyClass::\* kann verwendet werden, um einen Zeiger auf einen Member einer Klasse angeben.

@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49329d97343cfd210a93879961b0492454be9efa
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a65008b01262ad6252e9942444a4e80602d4292
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954772"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208636"
 ---
 # <a name="ctype-class"></a>ctype-Klasse
 
@@ -275,7 +275,7 @@ Ein Zeiger auf das erste Zeichen in einem Bereich, der einer bestimmten Maske en
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Memberfunktion gibt den kleinsten Zeiger `ptr` im Bereich [ `first`, `last`) zurück, für den [do_is](#do_is)( `maskVal`, * `ptr`) wahr ist.
+Die geschützte Memberfunktion gibt den kleinsten Zeiger `ptr` im Bereich [ `first`, `last`) für die [Do_is](#do_is)( `maskVal`, \* `ptr`) ist "true".
 
 ### <a name="example"></a>Beispiel
 
@@ -306,7 +306,7 @@ Ein Zeiger auf das erste Zeichen in einem Bereich, der einer bestimmten Maske ni
 
 ### <a name="remarks"></a>Hinweise
 
-Die geschützte Memberfunktion gibt den kleinsten Zeiger `ptr` im Bereich [ `first`, `last`) zurück, für den [do_is](#do_is)( `maskVal`, * `ptr`) falsch ist.
+Die geschützte Memberfunktion gibt den kleinsten Zeiger `ptr` im Bereich [ `first`, `last`) für die [Do_is](#do_is)( `maskVal`, \* `ptr`) ist "false".
 
 ### <a name="example"></a>Beispiel
 
