@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 98c8bd78f465054e4d86a1bd16450aba9a0d8258
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271395"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209052"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: Neuerungen von 2003 bis 2015
 
@@ -1494,7 +1494,7 @@ Der Microsoft Visual C++-Compiler unterstützt die folgenden ISO C++11-Sprachfea
 - Aliasvorlagen
 - Gelöschte Funktionen
 - Nicht statische Datenmemberinitialisierer (NSDMIs)
-- Standardfunktionen *
+- Standardfunktionen \*
 - Unterstützte ISO C99-Sprachfunktionen:
 - _Bool
 - Verbundliterale
