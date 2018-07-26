@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337573"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208574"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Trennzeichen für Visual C++-Dokumentationstags
 Die Verwendung von Dokumentationstags erfordert Trennzeichen, die dem Compiler angeben, wo ein Dokumentationskommentar beginnt und endet.  
@@ -51,7 +51,7 @@ Die Verwendung von Dokumentationstags erfordert Trennzeichen, die dem Compiler a
     /** <summary>text</summary> */  
     ```  
   
--   Der Compiler wendet ein Muster von „*“ an, um den Anfang der zweiten und dritten Zeile zu ignorieren.  
+-   Der Compiler wendet ein Muster von „\*“ an, um den Anfang der zweiten und dritten Zeile zu ignorieren.  
   
     ```  
     /**  

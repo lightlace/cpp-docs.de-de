@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed2165f75103f5e2aecd3d73dfe9518341d926e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2eb0ea67156671ac682b61cd0e105d1781bda915
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042328"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209091"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>C++-Konformitätsverbesserungen in Visual Studio 2017, Versionen 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) und [15.7](#improvements_157)
 
@@ -81,7 +81,7 @@ Es ist jetzt möglich, einen Wert mit individuellen Namen für die verschiedenen
 
 Es gibt jetzt eine implizite/nicht einschränkende Umwandlung des zugrunde liegenden Typs einer bereichsbezogenen Enumeration in die Enumeration selbst, wenn deren Definition keinen Enumerator einführt und die Quelle eine list-initialization-Syntax verwendet. Weitere Informationen finden Sie unter [Construction Rules for enum class Values (Erstellungsregeln für enum-Klassenwerte)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf).
 
-### <a name="capturing-this-by-value"></a>Erfassen von „*this“ anhand des Werts
+### <a name="capturing-this-by-value"></a>Erfassen von „\*this“ anhand des Werts
 
 Das `*this`-Objekt in einem Lambdaausdruck kann jetzt anhand des Werts erfasst werden. Das ermöglicht Szenarios in denen der Lambdaausdruck in parallelen und asynchronen Vorgängen aufgerufen wird, insbesondere in neueren Computerarchitekturen. Weitere Informationen finden Sie unter [Lambda Capture of \*this by Value as [=,\*this]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html) (Lambdaerfassung von „*this“ anhand des Werts als [=,*this]).
 

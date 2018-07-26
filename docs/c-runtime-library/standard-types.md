@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66b351ba03ad6d8afb9d7423a2d1833eec8e2b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418522"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208779"
 ---
 # <a name="standard-types"></a>Standardtypen
 Die Microsoft-Laufzeitbibliothek definiert die folgenden Standardtypen und TypeDefs.  
@@ -198,7 +198,7 @@ Die Microsoft-Laufzeitbibliothek definiert die folgenden Standardtypen und TypeD
 |int_fast64_t, uint_fast64_t|long long, unsigned long long|  
 |intmax_t, uintmax_t|long long, unsigned long long|  
   
-|Typ|description|Deklariert in|  
+|Typ|Beschreibung |Deklariert in|  
 |----------|-----------------|-----------------|  
 |`clock_t` (lang)|Speichert Zeitwerte, die von [clock](../c-runtime-library/reference/clock.md) verwendet werden.|TIME.H|  
 |`_complex`-Struktur|Speicher tatsächliche und imaginäre Teile komplexer Zahlen, die von [_cabs](../c-runtime-library/reference/cabs.md) verwendet werden.|MATH.H|  
@@ -218,7 +218,7 @@ Die Microsoft-Laufzeitbibliothek definiert die folgenden Standardtypen und TypeD
 |`fpos_t` (lange ganze Zahl, `__int64` oder Struktur, abhängig von der Zielplattform)|Wird von [fgetpos](../c-runtime-library/reference/fgetpos.md) und [fsetpos](../c-runtime-library/reference/fsetpos.md) verwendet, um Informationen für die eindeutige Angabe aller Positionen in einer Datei aufzuzeichnen.|STDIO.H|  
 |`_fsize_t` (lange ganze Zahl ohne Vorzeichen)|Wird verwendet, um die Größe einer Datei anzuzeigen.|IO.H,<br /><br /> WCHAR.H|  
 |`_HEAPINFO`-Struktur|Enthält Informationen zum nächsten Heapeintrag für [_heapwalk](../c-runtime-library/reference/heapwalk.md).|MALLOC.H|  
-|`_HFILE` (void *)|Ein Betriebssystem-Dateihandle.|CRTDBG.H|  
+|`_HFILE` (void \*)|Ein Betriebssystem-Dateihandle.|CRTDBG.H|  
 |`imaxdiv_t`|Der Typ des Werts, der von der [imaxdiv](../c-runtime-library/reference/imaxdiv.md)-Funktion zurückgegeben wird und den Quotienten und den Rest enthält.|inttypes.h|  
 |`ino_t`, `_ino_t` (kurz ohne Vorzeichen)|Zur Rückgabe von Statusinformationen.|WCHAR.H|  
 |`intmax_t`|Ein ganzzahliger Typ mit Vorzeichen, der beliebige Werte eines ganzzahligen Typs mit Vorzeichen darstellen kann.|stdint.h|  

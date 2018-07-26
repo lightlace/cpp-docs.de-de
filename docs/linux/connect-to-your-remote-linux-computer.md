@@ -1,7 +1,8 @@
 ---
-title: Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer | Microsoft Docs
+title: Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer in Visual Studio | Microsoft-Dokumentation
+description: Informationen zum Herstellen einer Verbindung mit einem Linux-Remotecomputer über ein C++-Projekt in Visual Studio
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,16 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: dd7f73a01b3b0941144ff59a683a9e42467f5a18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329321"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207665"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Herstellen einer Verbindung mit Ihrem Linux-Remotecomputer
 
-Beim Erstellen wird Linux-Code auf Ihren Linux-Remotecomputer kopiert und dann auf diesem System entsprechend den in Visual Studio ausgewählten Einstellungen kompiliert.  So richten Sie die Remoteverbindung ein:
+Beim Erstellen eines C++-Linux-Projekts in Visual Studio wird Linux-Code auf Ihren Linux-Remotecomputer kopiert und entsprechend den in Visual Studio ausgewählten Einstellungen kompiliert. So richten Sie die Remoteverbindung ein:
 
 1. Erstellen Sie das Projekt zum ersten Mal, oder erstellen Sie manuell einen neuen Eintrag durch Auswählen von **Tools > Optionen**. Öffnen Sie anschließend den Knoten unter **Plattformübergreifend > Verbindungs-Manager**, und klicken Sie auf die Schaltfläche **Hinzufügen** .
 
@@ -33,7 +34,7 @@ Beim Erstellen wird Linux-Code auf Ihren Linux-Remotecomputer kopiert und dann a
 
 1. Geben Sie die folgenden Informationen ein:
 
-   | Eingabe | description
+   | Eingabe | Beschreibung 
    | ----- | ---
    | **Hostname**           | Name oder IP-Adresse des Zielgeräts
    | **Port**                | Port, auf dem der SSH-Dienst ausgeführt wird, in der Regel Port 22
