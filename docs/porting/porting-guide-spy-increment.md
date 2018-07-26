@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 28c99f5f45aba2c77b84dce63ea200fb33b76f84
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848777"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208808"
 ---
 # <a name="porting-guide-spy"></a>Leitfaden zum Portieren: Spy++
 In dieser Portierungsfallstudie erhalten Sie eine Vorstellung über ein typisches Portierungsprojekt, die Problemtypen, die auftreten können, und einige allgemeine Tipps und Tricks zum Beheben von Portierungsproblemen. Sie stellt keine endgültige Anleitung zum Portieren dar, da das Portieren eines Projekts stark von den Codebesonderheiten abhängig ist.  
@@ -195,7 +195,7 @@ MOUT << _T(" chUser:'") << chUser
   
 ```  
   
- Das Makro `MOUT` wird zu *g_pmout aufgelöst, einem Objekt vom Typ `mstream`. Die mstream-Klasse wird von der standardmäßigen Ausgabezeichenfolgenklasse, `std::basic_ostream<TCHAR>.`, abgeleitet. Wenn das Zeichenfolgenliteral jedoch von einem _T umschlossen wird, was im Rahmen der Vorbereitung für die Konvertierung in Unicode hinzugefügt wurde, tritt bei der Überladungsauflösung für Operator << der folgende Fehler auf:  
+ Das Makro `MOUT` wird zu \*g_pmout aufgelöst, einem Objekt vom Typ `mstream`. Die mstream-Klasse wird von der standardmäßigen Ausgabezeichenfolgenklasse, `std::basic_ostream<TCHAR>.`, abgeleitet. Wenn das Zeichenfolgenliteral jedoch von einem _T umschlossen wird, was im Rahmen der Vorbereitung für die Konvertierung in Unicode hinzugefügt wurde, tritt bei der Überladungsauflösung für Operator << der folgende Fehler auf:  
   
 ```Output  
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions

@@ -1,7 +1,8 @@
 ---
 title: Konfigurieren eines Linux CMake-Projekts in Visual Studio | Microsoft Docs
+description: Konfigurieren eines Linux CMake-Projekts in Visual Studio
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 07/20/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,22 +15,22 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 014d23996777d0660d4978e307b80e4f94c19686
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b96c44f978be18e83736736b6edd5965f0f49ef6
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849258"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207786"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurieren eines Linux CMake-Projekts
 
 **Visual Studio 2017, Version 15.4 und höher**  
-Wenn Sie die Linux C++-Workload installieren, ist standardmäßig die CMake-Unterstützung für Linux ausgewählt. Sie können nun an Ihrer bestehenden Codebasis arbeiten, die CMake-verwendet, ohne sie in ein Visual Studio-Projekt konvertieren zu müssen. Wenn Ihre Codebasis plattformübergreifend ist, können Sie sowohl Windows als auch Linux in Visual Studio als Ziel verwenden.
+Wenn Sie unter Linux die C++-Workload für Visual Studio installieren, ist standardmäßig CMake-Unterstützung für Linux aktiviert. Sie können nun an Ihrer bestehenden Codebasis arbeiten, die CMake-verwendet, ohne sie in ein Visual Studio-Projekt konvertieren zu müssen. Wenn Ihre Codebasis plattformübergreifend ist, können Sie sowohl Windows als auch Linux in Visual Studio als Ziel verwenden.
 
 Dieses Thema setzt voraus, dass Sie über grundlegende Kenntnisse der CMake-Unterstützung in Visual Studio verfügen. Weitere Informationen finden Sie unter [CMake-Tools für Visual C++](../ide/cmake-tools-for-visual-cpp.md). Weitere Informationen zu CMake selbst finden Sie unter [Erstellen, Testen und Paketerstellung Ihrer Software mit CMake](https://cmake.org/).
 
 > [!NOTE]  
-> Die CMake-Unterstützung in Visual Studio erfordert die Servermodusunterstützung, die in CMake 3.8 eingeführt wurde. Wenn Ihr Paket-Manager eine ältere Version von CMake bereitstellt, können Sie als Umgehung [CMake aus der Quelle erstellen](#build-a-supported-cmake release-from-source) oder CMake über die offizielle [Seite für den CMake-Download](https://cmake.org/download/) herunterladen.
+> Die CMake-Unterstützung in Visual Studio erfordert die Servermodusunterstützung, die in CMake 3.8 eingeführt wurde. Wenn Ihr Paket-Manager eine ältere Version von CMake bereitstellt, können Sie als Umgehung [CMake aus der Quelle erstellen](#build-a-supported-cmake release-from-source) oder CMake über die offizielle [Seite für den CMake-Download](https://cmake.org/download/) herunterladen. Laden Sie unter [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) die aktuellsten vorab erstellten Binärdateien herunter, wenn Sie mit einer von Microsoft bereitgestellten CMake-Variante arbeiten möchten, die den Bereich [CMake-Zielansicht](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) in Visual Studio unterstützt.
 
 ## <a name="open-a-folder"></a>Öffnen eines Ordners
 
