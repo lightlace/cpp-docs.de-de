@@ -1,7 +1,7 @@
 ---
-title: EXPORTE | Microsoft Docs
+title: EXPORTE | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,70 +16,78 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cc7a9995fdc5be786712752e30015337b9f1607
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c642a623e76a9e1344a90efd4f0a47ad195c553e
+ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376825"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39322188"
 ---
 # <a name="exports"></a>EXPORTS
+
 Führt einen Abschnitt mit mindestens einer Exportdefinition ein, die die exportierten Namen oder Ordinalzahlen von Funktionen oder Daten angibt. Jede Definition muss sich in einer separaten Zeile befinden.  
   
-```  
+```DEF  
 EXPORTS  
    definition  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die erste `definition` kann sich in derselben Zeile wie das `EXPORTS`-Schlüsselwort oder in einer nachfolgenden Zeile befinden. Die .DEF-Datei kann eine oder mehrere `EXPORTS`-Anweisungen enthalten.  
+
+Die erste *Definition* auf derselben Zeile wie möglich die `EXPORTS` Schlüsselwort oder in einer nachfolgenden Zeile. Die .DEF-Datei kann eine oder mehrere `EXPORTS`-Anweisungen enthalten.  
   
- Die Syntax für eine Export-`definition` lautet:  
+Die Syntax für einen Export *Definition* ist:  
   
-```  
+```DEF
+entryname[=internal_name|other_module.another_exported_name] [@Ordinal [NONAME]] [[PRIVATE] | [DATA]]
+```
+
+*Eintragsname* ist der Name der Funktion oder Variable, die Sie exportieren möchten. Dieser ist erforderlich. Wenn der Name, den Sie exportieren, aus dem Namen in der DLL unterscheidet, geben Sie den Namen des Exports in der DLL mit *Internal_name*. Wenn Ihre DLL beispielsweise eine Funktion `func1` exportiert und Sie möchten, dass Aufrufer sie als `func2` verwenden, würden Sie Folgendes angeben:
+
+```DEF
+EXPORTS
+   func2=func1
+```
+
+Ist der Name, den Sie exportieren, aus dem anderen Modul, geben Sie den Namen des Exports in der DLL mit *other_module.exported_name*. Wenn Ihre DLL beispielsweise eine Funktion `other_module.func1` exportiert und Sie möchten, dass Aufrufer sie als `func2` verwenden, würden Sie Folgendes angeben:
+
+```DEF
+EXPORTS
+   func2=other_module.func1
+```
+
+Da Visual C++-Compiler die namensergänzung für C++-Funktionen verwendet, müssen Sie entweder die ergänzten Namen Internal_name oder definieren die exportierten Funktionen unter Verwendung von Extern "C" im Quellcode. Der Compiler ergänzt auch C-Funktionen, mit denen die [__stdcall](../../cpp/stdcall.md) -Aufrufkonvention mit einem Unterstrich (_)-Präfix und Suffix bestehend aus dem at-Zeichen (@) gefolgt von der Anzahl von Bytes (als Dezimalzahl) in der Argumentliste.  
   
-entryname[=internalname] [@ordinal [NONAME]] [[PRIVATE] | [DATA]]  
-```  
+Um die vom Compiler erzeugten, ergänzten Namen zu suchen, verwenden die [DUMPBIN](../../build/reference/dumpbin-reference.md) Tool oder den Linker [/MAP](../../build/reference/map-generate-mapfile.md) Option. Die ergänzten Namen sind compilerspezifisch. Wenn Sie die ergänzten Namen in der .DEF-Datei exportieren, müssen die ausführbaren Dateien, die zur DLL verknüpfen, ebenfalls mit derselben Version des Compilers erstellt werden. Damit wird sichergestellt, dass die ergänzten Namen im Aufrufer den exportierten Namen in der .DEF-Datei entsprechen.  
   
- `entryname` ist der Funktions- oder Variablenname, den Sie exportieren möchten. Dieser ist erforderlich. Wenn sich der Name, den Sie exportieren, von dem Namen in der DLL unterscheiden, geben Sie den Namen des Exports in der DLL an, indem Sie `internalname` verwenden. Wenn Ihre DLL beispielsweise eine Funktion `func1` exportiert und Sie möchten, dass Aufrufer sie als `func2` verwenden, würden Sie Folgendes angeben:  
+Sie können*ordinal* um anzugeben, dass eine Zahl und nicht der Funktionsname in der Exporttabelle der DLL geht. Viele Windows-DLLs exportieren Ordinalzahlen, um Legacycode zu unterstützen. Es war üblich, Ordinalzahlen in 16-Bit-Windows-Code zu verwenden, weil das dazu beitragen kann, die Größe einer DLL zu minimieren. Es wird nicht empfohlen, Funktionen anhand der Ordinalzahl zu exportieren, es sei denn, die Clients Ihrer DLL benötigen sie zur Legacyunterstützung. Da die .LIB-Datei die Zuordnung zwischen der Ordinalzahl und der Funktion enthält, können Sie den Funktionsnamen verwenden, wie Sie es normalerweise in Projekten tun würden, die die DLL verwenden.  
   
-```  
-EXPORTS  
-   func2=func1  
-```  
+Durch Verwendung des optionalen `NONAME`-Schlüsselworts können Sie nur anhand der Ordinalzahl exportieren und die Größe der Exporttabelle in der resultierenden DLL reduzieren. Allerdings sollten Sie verwenden [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) in der DLL, müssen Sie die Ordinalzahl kennen, da der Name nicht gültig ist.  
   
- Da der Visual C++-Compiler die Namensergänzung für C++-Funktionen verwendet, müssen den ergänzten Namen als `entryname` oder `internalname` verwenden oder die exportierten Funktionen über `extern "C"` im Quellcode definieren. Der Compiler ergänzt auch C-Funktionen, mit denen die [__stdcall](../../cpp/stdcall.md) -Aufrufkonvention mit einem Unterstrich (_) als Präfix und Suffix besteht das at-Zeichen (@) gefolgt von der Anzahl von Bytes (dezimal) in der Argumentliste.  
+Das optionale Schlüsselwort `PRIVATE` wird verhindert, dass *Eintragsname* aus, die in der von LINK generierte Importbibliothek eingeschlossen wird. Es wirkt sich nicht auf den Export des ebenfalls von LINK generierten Image aus.  
   
- Um die vom Compiler erzeugten, ergänzten Namen zu ermitteln, verwenden die [DUMPBIN](../../build/reference/dumpbin-reference.md) Tool oder die Linkeroption [/MAP](../../build/reference/map-generate-mapfile.md) Option. Die ergänzten Namen sind compilerspezifisch. Wenn Sie die ergänzten Namen in der .DEF-Datei exportieren, müssen die ausführbaren Dateien, die zur DLL verknüpfen, ebenfalls mit derselben Version des Compilers erstellt werden. Damit wird sichergestellt, dass die ergänzten Namen im Aufrufer den exportierten Namen in der .DEF-Datei entsprechen.  
+Das optionale Schlüsselwort `DATA` gibt an, dass ein Export Daten und nicht Code umfasst. Das folgende Beispiel zeigt, wie Sie eine Datenvariable namens `exported_global` exportieren könnten:  
   
- Sie können @`ordinal` verwenden, um anzugeben, dass eine Zahl und nicht der Funktionsname in die Exporttabelle der DLL geht. Viele Windows-DLLs exportieren Ordinalzahlen, um Legacycode zu unterstützen. Es war üblich, Ordinalzahlen in 16-Bit-Windows-Code zu verwenden, weil das dazu beitragen kann, die Größe einer DLL zu minimieren. Es wird nicht empfohlen, Funktionen anhand der Ordinalzahl zu exportieren, es sei denn, die Clients Ihrer DLL benötigen sie zur Legacyunterstützung. Da die .LIB-Datei die Zuordnung zwischen der Ordinalzahl und der Funktion enthält, können Sie den Funktionsnamen verwenden, wie Sie es normalerweise in Projekten tun würden, die die DLL verwenden.  
-  
- Durch Verwendung des optionalen `NONAME`-Schlüsselworts können Sie nur anhand der Ordinalzahl exportieren und die Größe der Exporttabelle in der resultierenden DLL reduzieren. Jedoch, wenn Sie verwenden möchten [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) in der DLL müssen Sie die Ordinalzahl kennen, da der Name nicht gültig ist.  
-  
- Das optionale Schlüsselwort `PRIVATE` verhindert, dass `entryname` in die von LINK generierte Importbibliothek eingeschlossen wird. Es wirkt sich nicht auf den Export des ebenfalls von LINK generierten Image aus.  
-  
- Das optionale Schlüsselwort `DATA` gibt an, dass ein Export Daten und nicht Code umfasst. Das folgende Beispiel zeigt, wie Sie eine Datenvariable namens `exported_global` exportieren könnten:  
-  
-```  
+```DEF  
 EXPORTS  
    exported_global DATA  
 ```  
   
- Es gibt vier Möglichkeiten für das Exportieren einer Definition, aufgelistet in empfohlener Reihenfolge:  
+Es gibt vier Möglichkeiten für das Exportieren einer Definition, aufgelistet in empfohlener Reihenfolge:  
   
 1.  Die [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) Schlüsselwort im Quellcode  
   
 2.  Eine `EXPORTS`-Anweisung in einer .DEF-Datei  
   
-3.  Ein [/EXPORT](../../build/reference/export-exports-a-function.md) -Spezifikation in einem Linkbefehl  
+3.  Ein [/EXPORT](../../build/reference/export-exports-a-function.md) Spezifikation in einem LINK-Befehl  
   
-4.  Ein [Kommentar](../../preprocessor/comment-c-cpp.md) -Direktive im Quellcode des Formulars `#pragma comment(linker, "/export: definition ")`  
+4.  Ein [Kommentar](../../preprocessor/comment-c-cpp.md) -Anweisung im Quellcode des Formulars `#pragma comment(linker, "/export: definition ")`  
   
- Alle vier Methoden können im selben Programm verwendet werden. Wenn LINK ein Programm erstellt, das Exporte enthält, wird auch eine Importbibliothek erstellt, es sei denn, im Build wird eine .EXP-Datei verwendet.  
+Alle vier Methoden können im selben Programm verwendet werden. Wenn LINK ein Programm erstellt, das Exporte enthält, wird auch eine Importbibliothek erstellt, es sei denn, im Build wird eine .EXP-Datei verwendet.  
   
- Hier ist ein Beispiel für einen EXPORTS-Abschnitt:  
+Hier ist ein Beispiel für einen EXPORTS-Abschnitt:  
   
-```  
+```DEF  
 EXPORTS  
    DllCanUnloadNow      @1          PRIVATE  
    DllWindowName = WindowName       DATA  
@@ -88,7 +96,8 @@ EXPORTS
    DllUnregisterServer  
 ```  
   
- Wenn Sie eine Variable aus einer DLL über dien .DEF-Datei exportieren, müssen Sie `__declspec(dllexport)` nicht in der Variable angeben. Sie müssen jedoch in jeder Datei, die die DLL verwendet, immer noch `__declspec(dllimport)` in der Deklaration der Daten verwenden.  
+Wenn Sie eine Variable aus einer DLL über dien .DEF-Datei exportieren, müssen Sie `__declspec(dllexport)` nicht in der Variable angeben. Sie müssen jedoch in jeder Datei, die die DLL verwendet, immer noch `__declspec(dllimport)` in der Deklaration der Daten verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Regeln für Moduldefinitionsanweisungen](../../build/reference/rules-for-module-definition-statements.md)
+## <a name="see-also"></a>Siehe auch
+
+[Regeln für Moduldefinitionsanweisungen](../../build/reference/rules-for-module-definition-statements.md)

@@ -1,5 +1,5 @@
 ---
-title: IRowsetCreatorImpl-Klasse | Microsoft Docs
+title: IRowsetCreatorImpl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,25 +11,34 @@ f1_keywords:
 - ATL::IRowsetCreatorImpl<T>
 - ATL.IRowsetCreatorImpl<T>
 - IRowsetCreatorImpl
+- IRowsetCreatorImpl.SetSite
+- IRowsetCreatorImpl<T>::SetSite
+- IRowsetCreatorImpl::SetSite
+- SetSite
+- ATL.IRowsetCreatorImpl.SetSite
+- ATL::IRowsetCreatorImpl<T>::SetSite
+- ATL::IRowsetCreatorImpl::SetSite
+- ATL.IRowsetCreatorImpl<T>.SetSite
 dev_langs:
 - C++
 helpviewer_keywords:
 - IRowsetCreatorImpl class
+- SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0492994193130ffa6a547691490b4da1ae557c8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8d43c0824b2f4783b9a09782360940fb1327d99
+ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102136"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39322058"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl-Klasse
-Führt die gleichen Funktionen wie `IObjectWithSite` können jedoch auch die Eigenschaften des OLE DB- **DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS**.  
+Führt die gleichen Funktionen wie `IObjectWithSite` kann jedoch auch die OLE DB-Eigenschaften `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -39,9 +48,12 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
    : public IObjectWithSiteImpl< T >  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
- Eine abgeleitete Klasse **IRowsetCreator**.  
+### <a name="parameters"></a>Parameter  
+ *T*  
+ Eine abgeleitete Klasse `IRowsetCreator`.  
+
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
 ## <a name="members"></a>Member  
   
@@ -49,14 +61,30 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
   
 |||  
 |-|-|  
-|[SetSite](../../data/oledb/irowsetcreatorimpl-setsite.md)|Legt die Website, die Rowset-Objekte enthält.|  
+|[SetSite](#setsite)|Legt fest, die Website, die Rowset-Objekt enthält.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Klasse erbt von ["IObjectWithSite"](http://msdn.microsoft.com/library/windows/desktop/ms693765) und überschreibt [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). Wenn ein Befehl oder Sitzung Anbieterobjekt ein Rowset erstellt, ruft er `QueryInterface` für die Suche nach Rowsetobjekt `IObjectWithSite` und ruft `SetSite` und übergeben des Rowsetobjekt **IUnkown** Schnittstelle als die Standort-Schnittstelle.  
+ Diese Klasse erbt von [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) und überschreibt [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). Wenn ein Befehl oder Sitzung Anbieterobjekt ein Rowset erstellt wird, ruft er `QueryInterface` für das Rowsetobjekt, das nach `IObjectWithSite` und ruft `SetSite` übergeben des Rowsetobjekt, das die `IUnkown` Schnittstelle wie die Website-Schnittstelle.  
+
+## <a name="setsite"></a> IRowsetCreatorImpl:: SetSite
+Legt fest, die Website, die Rowset-Objekt enthält. Weitere Informationen finden Sie unter [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869).  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** „atldb.h“  
+### <a name="syntax"></a>Syntax  
   
+```cpp
+      STDMETHOD(SetSite )(IUnknown* pCreator);  
+```  
+  
+#### <a name="parameters"></a>Parameter  
+ *pCreator*  
+ [in] Zeiger auf die `IUnknown` Schnittstellenzeiger auf der Website verwalten von Rowset-Objekt.  
+  
+### <a name="return-value"></a>Rückgabewert  
+ Ein standard-HRESULT.  
+  
+### <a name="remarks"></a>Hinweise  
+ Darüber hinaus `IRowsetCreatorImpl::SetSite` ermöglicht OLE DB- `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` Eigenschaften. 
+
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)
