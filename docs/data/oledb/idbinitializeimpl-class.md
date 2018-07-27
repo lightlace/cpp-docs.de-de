@@ -1,5 +1,5 @@
 ---
-title: IDBInitializeImpl-Klasse | Microsoft Docs
+title: IDBInitializeImpl-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,25 +11,54 @@ f1_keywords:
 - IDBInitializeImpl
 - ATL::IDBInitializeImpl
 - ATL.IDBInitializeImpl
+- IDBInitializeImpl.IDBInitializeImpl
+- IDBInitializeImpl
+- IDBInitializeImpl::IDBInitializeImpl
+- Initialize
+- IDBInitializeImpl::Initialize
+- IDBInitializeImpl.Initialize
+- IDBInitializeImpl.Uninitialize
+- Uninitialize
+- IDBInitializeImpl::Uninitialize
+- ATL::IDBInitializeImpl::m_dwStatus
+- IDBInitializeImpl.m_dwStatus
+- ATL.IDBInitializeImpl.m_dwStatus
+- IDBInitializeImpl::m_dwStatus
+- IDBInitializeImpl<T>::m_dwStatus
+- ATL.IDBInitializeImpl<T>.m_dwStatus
+- ATL::IDBInitializeImpl<T>::m_dwStatus
+- m_dwStatus
+- ATL::IDBInitializeImpl<T>::m_pCUtlPropInfo
+- m_pCUtlPropInfo
+- IDBInitializeImpl::m_pCUtlPropInfo
+- ATL.IDBInitializeImpl.m_pCUtlPropInfo
+- IDBInitializeImpl<T>::m_pCUtlPropInfo
+- IDBInitializeImpl.m_pCUtlPropInfo
+- ATL::IDBInitializeImpl::m_pCUtlPropInfo
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDBInitializeImpl class
+- IDBInitializeImpl constructor
+- Initialize method
+- Uninitialize method
+- m_dwStatus
+- m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e18d220b8ca7da0e76ac1434cebf851ef40ad67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69c7f92110312d4ae8cff427d1081853290919e9
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105737"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269923"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl-Klasse
-Stellt eine Implementierung für die [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx) Schnittstelle.  
+Stellt eine Implementierung für die [IDBInitialize](https://msdn.microsoft.com/library/ms713706.aspx) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -38,9 +67,12 @@ template <class T>
 class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
- Die Klasse abgeleitet `IDBInitializeImpl`.  
+### <a name="parameters"></a>Parameter  
+ *T*  
+ Abgeleitet von die Klasse `IDBInitializeImpl`.  
+
+## <a name="requirements"></a>Anforderungen  
+ **Header:** „atldb.h“  
   
 ## <a name="members"></a>Member  
   
@@ -48,27 +80,100 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
   
 |||  
 |-|-|  
-|[IDBInitializeImpl](../../data/oledb/idbinitializeimpl-idbinitializeimpl.md)|Der Konstruktor.|  
+|[IDBInitializeImpl](#idbinitializeimpl)|Der Konstruktor.|  
   
 ### <a name="interface-methods"></a>Schnittstellenmethoden  
   
 |||  
 |-|-|  
-|[Initialize](../../data/oledb/idbinitializeimpl-initialize.md)|Startet den Anbieter.|  
-|[Initialisierung aufheben](../../data/oledb/idbinitializeimpl-uninitialize.md)|Beendet den Anbieter an.|  
+|[Initialize](#initialize)|Startet den Anbieter.|  
+|[Die Initialisierung aufheben](#uninitialize)|Beendet den Anbieter an.|  
   
 ### <a name="data-members"></a>Datenmember  
   
 |||  
 |-|-|  
-|[m_dwStatus](../../data/oledb/idbinitializeimpl-m-dwstatus.md)|Datenquellen-Flags.|  
-|[m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)|Ein Zeiger auf die Durchführung von DB-Eigenschaften.|  
+|[m_dwStatus](#dwstatus)|Datenquellen-Flags.|  
+|[m_pCUtlPropInfo](#pcutlpropinfo)|Ein Zeiger auf die Implementierung der DB-Eigenschaften-Informationen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Keine verbindliche Schnittstelle für Datenquellenobjekte und eine optionale Schnittstelle auf Enumeratoren.  
+ Eine erforderliche Schnittstelle für Datenquellenobjekte und optionale Schnittstelle für Enumeratoren.  
+
+## <a name="idbinitializeimpl"></a> Idbinitializeimpl:: Idbinitializeimpl
+Der Konstruktor.  
   
-## <a name="requirements"></a>Anforderungen  
- **Header:** „atldb.h“  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+IDBInitializeImpl();  
+  
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Initialisiert alle Datenmember. 
+  
+## <a name="initialize"></a> Idbinitializeimpl:: Initialize
+Initialisiert das Objekt durch die Unterstützung für die Eigenschaft wird vorbereitet.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+      STDMETHOD(Initialize)(void);  
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Finden Sie unter [IDBInitialize:: Initialize](https://msdn.microsoft.com/library/ms718026.aspx) in die *OLE DB-Programmierreferenz*. 
+
+## <a name="uninitialize"></a> Idbinitializeimpl:: UnInitialize
+Stellen Sie die Daten Datenquellenobjekts im nicht initialisierten Zustand freigegeben werden und interne Ressourcen wie z. B. die Unterstützung für die Eigenschaft ein.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+      STDMETHOD(Uninitialize)(void);  
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Finden Sie unter [IDBInitialize:: UnInitialize](https://msdn.microsoft.com/library/ms719648.aspx) in die *OLE DB-Programmierreferenz*.
+
+## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
+Datenquellen-Flags.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+DWORD m_dwStatus;  
+  
+```  
+  
+### <a name="remarks"></a>Hinweise  
+ Diese Flags geben, oder geben Sie den Status der verschiedenen Attribute für das Datenquellenobjekt. Enthält eine oder mehrere der folgenden **Enum** Werte:  
+  
+```  
+enum DATASOURCE_FLAGS {  
+    DSF_MASK_INIT     = 0xFFFFF00F,  
+    DSF_PERSIST_DIRTY = 0x00000001,  
+    DSF_INITIALIZED   = 0x00000010,  
+};  
+```  
+  
+|||  
+|-|-|  
+|`DSF_MASK_INIT`|Eine Maske, die Wiederherstellung von nicht initialisierten Zustand zu aktivieren.|  
+|`DSF_PERSIST_DIRTY`|Festlegen Sie, wenn das Datenquellenobjekt Persistenz ist erforderlich (d.h., wenn Änderungen vorgenommen wurden).|  
+|`DSF_INITIALIZED`|Festlegen Sie, wenn die Datenquelle initialisiert wurde.|  
+
+## <a name="pcutlpropinfo"></a> Idbinitializeimpl:: M_pcutlpropinfo
+Ein Zeiger auf Objekt implementace Datenbankeigenschaften Informationen.  
+  
+### <a name="syntax"></a>Syntax  
+  
+```cpp
+CUtlPropInfo<  
+T  
+>* m_pCUtlPropInfo;  
+  
+```  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   
