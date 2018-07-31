@@ -1,5 +1,5 @@
 ---
-title: Legen Sie (STL/CLR) | Microsoft Docs
+title: Legen Sie (STL/CLR) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -105,21 +105,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 21c2ebc9ba59e6581a9f6d286f136c907b7c73aa
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: e12314be2711eb45487ed7430ebd4b998ab0e373
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079876"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376247"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
-Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `set` Vewaltung eine Sequenz von Elementen als (fast) mit Lastenausgleich geordneten Struktur der Knoten, jeweils ein Element speichern kann.  
+Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge Sequenz von Elementen steuert, die bidirektionalen Zugriff hat. Verwenden Sie den Container `set` zum Verwalten von einer Sequenz von Elementen als (fast) mit Lastenausgleich geordneten Struktur der Knoten, jeweils ein Element zu speichern.  
   
- In der folgenden Beschreibung `GValue` ist identisch mit `GKey`, die wiederum ist identisch mit `Key` , wenn die zweite Datei einen Ref-Typ ist, in diesem Fall wird `Key^`.  
+ In der folgenden Beschreibung `GValue` ist identisch mit `GKey`, die wiederum ist identisch mit *Schlüssel* , wenn die zweite ein Ref-Typ ist, in diesem Fall ist es `Key^`.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Key>  
     ref class set  
         :   public  
@@ -134,8 +134,8 @@ template<typename Key>
 ```  
   
 ### <a name="parameters"></a>Parameter  
- Key  
- Der Typ, der die zentrale Komponente eines Elements in der kontrollierten Sequenz.  
+ *Key*  
+ Der Typ der Schlüsselkomponente eines Elements in der kontrollierten Sequenz.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** \<Cliext/Set >  
@@ -149,7 +149,7 @@ template<typename Key>
 |[set::const_iterator (STL/CLR)](#const_iterator)|Der Typ eines konstanten Iterators für die gesteuerte Sequenz.|  
 |[set::const_reference (STL/CLR)](#const_reference)|Der Typ eines konstanten Verweises auf ein Element.|  
 |[set::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Der Typ eines konstanten umgekehrten Iterators für die gesteuerte Sequenz.|  
-|[set::difference_type (STL/CLR)](#difference_type)|Der Typ des Abstands zwischen zwei Elementen (möglicherweise mit Vorzeichen).|  
+|[set::difference_type (STL/CLR)](#difference_type)|Der Typ eines Abstands zwischen den beiden Elementen mit (möglicherweise Vorzeichen).|  
 |[set::generic_container (STL/CLR)](#generic_container)|Der Typ der generischen Schnittstelle für den Container.|  
 |[set::generic_iterator (STL/CLR)](#generic_iterator)|Der Typ eines Iterators für die generische Schnittstelle für den Container.|  
 |[set::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Der Typ eines umgekehrten Iterators für die generische Schnittstelle für den Container.|  
@@ -159,7 +159,7 @@ template<typename Key>
 |[set::key_type (STL/CLR)](#key_type)|Der Typ eines Sortierschlüssels.|  
 |[set::reference (STL/CLR)](#reference)|Der Typ eines Verweises auf ein Element.|  
 |[set::reverse_iterator (STL/CLR)](#reverse_iterator)|Der Typ eines umgekehrten Iterators für die gesteuerte Sequenz.|  
-|[set::size_type (STL/CLR)](#size_type)|Der Typ eines Abstands zwischen zwei Elementen (negativ).|  
+|[set::size_type (STL/CLR)](#size_type)|Der Typ der eine Entfernung (negativ) zwischen zwei Elementen.|  
 |[set::value_compare (STL/CLR)](#value_compare)|Der Delegat für zwei Elementwerte.|  
 |[set::value_type (STL/CLR)](#value_type)|Der Typ eines Elements.|  
   
@@ -167,7 +167,7 @@ template<typename Key>
 |---------------------|-----------------|  
 |[set::begin (STL/CLR)](#begin)|Legt den Anfang der kontrollierten Sequenz fest.|  
 |[set::clear (STL/CLR)](#clear)|Entfernt alle Elemente.|  
-|[set::count (STL/CLR)](#count)|Zählt die Elemente, die einem angegebenen Schlüssel entsprechen.|  
+|[set::count (STL/CLR)](#count)|Zählt Elemente, die einem angegebenen Schlüssel entsprechen.|  
 |[set::empty (STL/CLR)](#empty)|Testet, ob keine Elemente vorhanden sind.|  
 |[set::end (STL/CLR)](#end)|Legt das Ende der kontrollierten Sequenz fest.|  
 |[set::equal_range (STL/CLR)](#equal_range)|Sucht den Bereich, der einem angegebenen Schlüssel entspricht.|  
@@ -175,16 +175,16 @@ template<typename Key>
 |[set::find (STL/CLR)](#find)|Sucht ein Element, das einem angegebenen Schlüssel entspricht.|  
 |[set::insert (STL/CLR)](#insert)|Fügt Elemente hinzu.|  
 |[set::key_comp (STL/CLR)](#key_comp)|Kopiert der Delegat für zwei Schlüssel.|  
-|[set::lower_bound (STL/CLR)](#lower_bound)|Sucht den Anfang des Bereichs, die einem angegebenen Schlüssel entspricht.|  
+|[set::lower_bound (STL/CLR)](#lower_bound)|Sucht den Anfang des Bereichs, der einem angegebenen Schlüssel entspricht.|  
 |[set::make_value (STL/CLR)](#make_value)|Erstellt ein Wertobjekt.|  
 |[set::rbegin (STL/CLR)](#rbegin)|Legt den Anfang der umgekehrten kontrollierten Sequenz fest.|  
 |[set::rend (STL/CLR)](#rend)|Legt das Ende der umgekehrten kontrollierten Sequenz fest.|  
 |[set::set (STL/CLR)](#set)|Erstellt ein container-Objekt.|  
 |[set::size (STL/CLR)](#size)|Ermittelt die Anzahl von Elementen.|  
 |[set::swap (STL/CLR)](#swap)|Vertauscht den Inhalt von zwei Containern.|  
-|[set::to_array (STL/CLR)](#to_array)|Kopiert die gesteuerte Sequenz in ein neues Array.|  
-|[set::upper_bound (STL/CLR)](#upper_bound)|Sucht nach Ende des Bereichs, die einem angegebenen Schlüssel entspricht.|  
-|[set::value_comp (STL/CLR)](#value_comp)|Der Delegat für zwei Elementwerte wird kopiert.|  
+|[set::to_array (STL/CLR)](#to_array)|Kopiert die kontrollierte Sequenz in ein neues Array.|  
+|[set::upper_bound (STL/CLR)](#upper_bound)|Sucht das Ende des Bereichs, der einem angegebenen Schlüssel entspricht.|  
+|[set::value_comp (STL/CLR)](#value_comp)|Kopiert der Delegat für zwei Elementwerte.|  
   
 |Operator|Beschreibung|  
 |--------------|-----------------|  
@@ -192,8 +192,8 @@ template<typename Key>
 |[operator!= (set) (STL/CLR)](#op_neq)|Bestimmt, ob eine `set` Objekt ist nicht gleich einem anderen `set` Objekt.|  
 |[operator< (set) (STL/CLR)](#op_lt)|Bestimmt, ob eine `set` Objekt ist kleiner als ein anderes `set` Objekt.|  
 |[operator<= (set) (STL/CLR)](#op_lteq)|Bestimmt, ob eine `set` Objekt ist kleiner als oder gleich einem anderen `set` Objekt.|  
-|[operator== (set) (STL/CLR)](#op_eq)|Bestimmt, ob eine `set` -Objekt gleich einem anderen `set` Objekt.|  
-|[operator> (set) (STL/CLR)](#op_gt)|Bestimmt, ob eine `set` -Quellobjekt ist größer als ein anderes `set` Objekt.|  
+|[operator== (set) (STL/CLR)](#op_eq)|Bestimmt, ob eine `set` Objekt ist gleich einem anderen `set` Objekt.|  
+|[operator> (set) (STL/CLR)](#op_gt)|Bestimmt, ob eine `set` Objekt ist größer als ein anderer `set` Objekt.|  
 |[operator>= (set) (STL/CLR)](#op_gteq)|Bestimmt, ob eine `set` Objekt ist größer als oder gleich einem anderen `set` Objekt.|  
   
 ## <a name="interfaces"></a>Schnittstellen  
@@ -205,34 +205,34 @@ template<typename Key>
 |<xref:System.Collections.ICollection>|Behalten Sie die Gruppe von Elementen.|  
 |<xref:System.Collections.Generic.IEnumerable%601>|Durch die Elemente der typisierte Sequenz.|  
 |<xref:System.Collections.Generic.ICollection%601>|Behalten Sie die Gruppe von typisierten Elementen.|  
-|ITree\<Schlüssel, Wert >|Verwalten von generischen Container.|  
+|ITree\<Schlüssel, Wert >|Behalten Sie die generischen Container.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Objekt weist und Speicherplatz für die Sequenz, die als einzelne Knoten Steuersoftware frei. Er fügt Elemente in einen (fast) ausgewogenen Baum, den darin geordnete die Links zwischen Knoten sind, nie durch Kopieren den Inhalt eines Knotens zu einem anderen ändern. Bedeutet, dass Sie einfügen können, und Elemente beliebig ohne beunruhigende verbleibenden Elemente entfernen.  
+ Das Objekt belegt und-Freigaben für die Sequenz, die es, wie die einzelnen Knoten steuert. Er fügt Elemente an, in eine (nahezu) mit Lastenausgleich-Struktur, die er geordnete hält, durch die Links zwischen Knoten nie durch Kopieren den Inhalt eines Knotens in ein anderes ändern. Das bedeutet, Sie können einfügen und Entfernen von Elementen ohne störende verbleibenden Elemente frei.  
   
- Das Objekt sortiert die Sequenz, die sie durch Aufrufen einer gespeicherten Delegatobjekt des Typs steuert [Set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md). Sie können das gespeicherte Delegatobjekt angeben, beim Erstellen des Satzes. Wenn Sie keine Delegatobjekt angeben, wird der Standardwert ist der Vergleich `operator<(key_type, key_type)`. Sie Zugriff auf diesem gespeicherten Objekt durch Aufrufen der Memberfunktion [Set:: key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`.  
+ Das Objekt sortiert die Sequenz, indem ein Delegatobjekt gespeicherten des Typs aufrufen [Set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md). Sie können das gespeicherte Delegatobjekt angeben, wenn Sie die Gruppe erstellen; Wenn Sie kein Delegatobjekt angeben, wird der Standardwert ist der Vergleich `operator<(key_type, key_type)`. Sie greifen auf diese gespeicherten Objekt durch Aufrufen der Memberfunktion [Set:: key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`.  
   
- Solche ein Delegatobjekt muss eine strikte schwache Sortierung anwenden auf Schlüssel vom Typ [Set:: KEY_TYPE (STL/CLR)](../dotnet/set-key-type-stl-clr.md). Bedeutet, dass für zwei beliebige Tasten `X` und `Y`:  
+ Solche ein Delegatobjekt muss eine strikte schwache Sortierung auf die Schlüssel des Typs anwenden [Set:: KEY_TYPE (STL/CLR)](../dotnet/set-key-type-stl-clr.md). Bedeutet, dass für alle Schlüssel, der zwei `X` und `Y`:  
   
- `key_comp()(X, Y)` Gibt der gleiche booleschen führen bei jedem Aufruf.  
+ `key_comp()(X, Y)` Gibt der gleichen boolesche Ergebnis bei jedem Aufruf.  
   
- Wenn `key_comp()(X, Y)` ist "true", klicken Sie dann `key_comp()(Y, X)` muss "false" sein.  
+ Wenn `key_comp()(X, Y)` ist "true", klicken Sie dann `key_comp()(Y, X)` muss auf falsch gesetzt sein.  
   
- Wenn `key_comp()(X, Y)` ist "true", klicken Sie dann `X` herrscht die verbreitete vor bestellt werden `Y`.  
+ Wenn `key_comp()(X, Y)` ist "true", klicken Sie dann `X` wird vor dem sortiert werden als `Y`.  
   
  Wenn `!key_comp()(X, Y) && !key_comp()(Y, X)` ist "true", klicken Sie dann `X` und `Y` gelten als die entsprechende Reihenfolge aufweisen.  
   
- Für ein bestimmtes Element `X` vorausgeht, die `Y` in der gesteuerten Sequenz `key_comp()(Y, X)` lautet "false". (Für das Standardobjekt Delegaten verringern Schlüssel nie im Wert.) Im Gegensatz zur Vorlagenklasse [festgelegt](../dotnet/set-stl-clr.md), ein Objekt der Vorlagenklasse `set` erfordert nicht, dass der Schlüssel für alle Elemente eindeutig sind. (Mindestens zwei Tasten können die entsprechende Reihenfolge aufweisen.)  
+ Für jedes Element `X` vorausgeht, die `Y` in die kontrollierte Sequenz `key_comp()(Y, X)` ist "false". (Für das Objekt für den Standard-Delegaten verringern Sie Schlüssel nie im Wert.) Im Gegensatz zur Vorlagenklasse [festgelegt](../dotnet/set-stl-clr.md), ein Objekt der Vorlagenklasse `set` erfordert nicht, dass der Schlüssel für alle Elemente eindeutig sind. (Zwei oder mehr Tasten können die entsprechende Reihenfolge aufweisen.)  
   
- Jedes Element dient als ein Ey und einen Wert. Die Sequenz wird so dargestellt, die Such-, Einfüge- und Entfernung eines beliebigen Elements mit einer Reihen von Vorgängen proportional zum Logarithmus der Anzahl von Elementen in der Sequenz (logarithmischer Zeit) ermöglicht. Darüber hinaus führt das Einfügen eines Elements nicht dazu, dass Iteratoren ungültig werden, und durch das Entfernen eines Elements werden nur solche Iteratoren ungültig, die auf das entfernte Element gezeigt haben.  
+ Jedes Element dient sowohl als eine Ey auch einen Wert. Die Sequenz wird so dargestellt, die Such-, Einfüge- und zum Entfernen eines beliebigen Elements mit einer Anzahl von Vorgängen proportional zum Logarithmus der Anzahl der Elemente in der Sequenz (logarithmischer Zeit) zulässt. Darüber hinaus führt das Einfügen eines Elements nicht dazu, dass Iteratoren ungültig werden, und durch das Entfernen eines Elements werden nur solche Iteratoren ungültig, die auf das entfernte Element gezeigt haben.  
   
- Einen Satz unterstützt bidirektionale Iteratoren, was bedeutet, dass Sie schrittweise können, um benachbarte Elemente, die einen Iterator, der ein Element in der kontrollierten Sequenz angegeben. Ein spezieller Hauptknoten entspricht vom zurückgegebenen Iterator [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`. Dieser Iterator für das letzte Element in der kontrollierten Sequenz erreichen können ggf. verringert werden. Erhöhen Sie einen Set-Iterator für den Hauptknoten zu erreichen, und wird dann Vergleichen gleich `end()`. Aber Sie können nicht dereferenziert werden vom zurückgegebenen Iterator `end()`.  
+ Eine Gruppe unterstützt bidirektionale Iteratoren, was bedeutet, dass Sie schrittweise können, um benachbarte Elemente, die einen Iterator, der ein Element in der gesteuerten Sequenz angegeben. Ein spezieller Head-Knoten entspricht den von zurückgegeben Iterator [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`. Dieser Iterator das letzte Element in der kontrollierten Sequenz, erreichen können ggf. verringert werden. Können Sie einen Set-Iterator zum Erreichen des Head-Knotens erhöhen, und es wird dann gleich `end()`. Aber Sie können nicht den Iterator zurückgegeben, die von dereferenziert `end()`.  
   
- Beachten Sie, dass Sie verweisen können, um eine Set-Element, das direkt erhält die numerische Position--, die einen Iterator mit zufälligem Zugriff erfordert.  
+ Beachten Sie, dass Sie nicht auf ein Set-Element, das direkt erhält die numerische Position verweisen können, –, der einen Iterator mit zufälligem Zugriff erfordert.  
   
- Ein Iterator Satz speichert ein Handle zum Knoten zugeordnet, der wiederum ein Handle für den zugehörigen Container gespeichert. Sie können nur mit ihrer zugeordneten Containerobjekte Iteratoren verwenden. Ein Iterator Satz bleibt gültig, solange die Knoten der zugeordneten Gruppe einige Satz zugeordnet ist. Darüber hinaus ein gültiger Iterator ist dereferencable – können sie Zugriff haben und den Elementwert, die er festlegt – ändern, solange er nicht gleich `end()`.  
+ Ein Iterator Satz speichert ein Handle zum Knoten zugeordneten Gruppe, die wiederum ein Handle für den zugehörigen Container gespeichert. Sie können Iteratoren nur mit ihren zugehörigen Container-Objekten verwenden. Ein Iterator Satz bleibt gültig, solange der zugeordnete Knoten eine Gruppe zugeordnet ist. Darüber hinaus ein gültiger Iterator dereferencable – können sie Zugriff haben und ändern den Wert der Elements festlegt – solange sie nicht gleich ist `end()`.  
   
- Löschen oder Entfernen eines Elements ruft der Destruktor für den gespeicherten Wert. Zerstören von dem Container löscht alle Elemente. Somit wird sichergestellt, dass ein Container, dessen Elementtyp eine Verweisklasse ist, dass keine Elemente den Container Überleben. Beachten Sie jedoch, dass ein Container von Handles ist `not` seine Elemente zu zerstören.  
+ Löschen oder Entfernen eines Elements Ruft den Destruktor für ihren gespeicherten Wert auf. Löschen den Container löscht alle Elemente. Daher wird ein Container, dessen Elementtyp einer Verweisklasse ist, keine Elemente des Containers nicht überdauern. Beachten Sie jedoch, dass ein Container für Handles verfügt *nicht* seine Elemente zerstören.  
  
 ## <a name="members"></a>Member
 
@@ -241,12 +241,12 @@ Legt den Anfang der kontrollierten Sequenz fest.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt einen bidirektionalen Iterator, der das erste Element der kontrollierten Sequenz oder direkt hinter das Ende einer leeren Sequenz zurück. Es mit der einen Iterator abrufen, bestimmt die `current` Anfang der kontrollierten Sequenz kann ändern, wenn die Länge der gesteuerten Sequenz geändert wird.  
+ Die Memberfunktion gibt einen bidirektionalen Iterator, der das erste Element der kontrollierten Sequenz oder direkt hinter das Ende einer leeren Sequenz bestimmt. Sie können damit einen Iterator abrufen, bestimmt die `current` Anfang der kontrollierten Sequenz, aber der Status kann ändern, wenn die Länge der kontrollierten Sequenz ändert.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -274,7 +274,6 @@ int main()
     System::Console::WriteLine("*++begin() = {0}", *++it);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -288,12 +287,12 @@ Entfernt alle Elemente.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion ruft tatsächlich [Set:: Erase (STL/CLR)](../dotnet/set-erase-stl-clr.md) `(` [Set:: begin (STL/CLR)](../dotnet/set-begin-stl-clr.md) `(),` [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md) `())`. Sie verwenden es, um sicherzustellen, dass die kontrollierte Sequenz leer ist.  
+ Die Memberfunktion ruft effektiv [Set:: Erase (STL/CLR)](../dotnet/set-erase-stl-clr.md) `(` [Set:: begin (STL/CLR)](../dotnet/set-begin-stl-clr.md) `(),` [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md) `())`. Damit können Sie sicherstellen, dass die kontrollierte Sequenz leer ist.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -330,7 +329,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -345,12 +343,12 @@ Der Typ eines konstanten Iterators für die gesteuerte Sequenz.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein Objekt vom angegebenen Typ `T2` , die als einen bidirektionalen Konstanten Iterator für die gesteuerte Sequenz dienen kann.  
+ Der Typ beschreibt ein Objekt vom nicht angegebenen Typ `T2` , das als konstanter bidirektionaler Iterator für die gesteuerte Sequenz fungieren kann.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -374,7 +372,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -386,7 +383,7 @@ Der Typ eines konstanten Verweises auf ein Element.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
@@ -418,7 +415,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -430,12 +426,12 @@ Der Typ eines Konstanten umgekehrten Iterators für die gesteuerte Sequenz...
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein Objekt vom angegebenen Typ `T4` , die als Konstanten umgekehrten Iterators für die gesteuerte Sequenz fungieren kann.  
+ Der Typ beschreibt ein Objekt vom nicht angegebenen Typ `T4` , das als konstanter reverse-Iterator für die gesteuerte Sequenz dienen kann.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -459,7 +455,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -471,16 +466,16 @@ Sucht die Anzahl von Elementen, die einem angegebenen Schlüssel entsprechen.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 size_type count(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Key  
+ *key*  
  Der zu suchende Schlüsselwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt die Anzahl der Elemente in der kontrollierten Sequenz, die über entsprechende Sortierung mit `key`. Es können Sie verwenden, um die Anzahl der Elemente, die derzeit in der gesteuerten Sequenz zu ermitteln, die einen angegebenen Schlüssel entsprechen.  
+ Die Memberfunktion gibt die Anzahl der Elemente zurück, in der kontrollierten Sequenz, die entsprechende Sortierung mit *Schlüssel*. Damit können Sie um die Anzahl der Elemente, die derzeit in der gesteuerten Sequenz zu ermitteln, die einem angegebenen Schlüssel entsprechen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -506,8 +501,7 @@ int main()
     System::Console::WriteLine("count(L'b') = {0}", c1.count(L'b'));   
     System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -518,16 +512,16 @@ count(L'C') = 0
 ```  
 
 ## <a name="difference_type"></a>Set:: difference_type (STL/CLR)
-Die Typen des Abstands mit Vorzeichen zwischen zwei Elementen.  
+Die Typen des Abstands zwischen den beiden Elementen mit Vorzeichen.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein möglicherweise negativ Elementanzahl.  
+ Der Typ beschreibt eine möglicherweise negative Elementanzahl.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -562,7 +556,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -576,12 +569,12 @@ Testet, ob keine Elemente vorhanden sind.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt „true“ für eine leere gesteuerte Sequenz zurück. Dies ist äquivalent zum [Set:: Size (STL/CLR)](../dotnet/set-size-stl-clr.md)`() == 0`. Sie verwenden sie zum Überprüfen, ob die Gruppe leer ist.  
+ Die Memberfunktion gibt „true“ für eine leere gesteuerte Sequenz zurück. Dies ist äquivalent zum [Set:: Size (STL/CLR)](../dotnet/set-size-stl-clr.md)`() == 0`. Damit können Sie überprüfen, ob der Satz leer ist.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -611,7 +604,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -627,12 +619,12 @@ Legt das Ende der kontrollierten Sequenz fest.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt einem bidirektionalen Iterator, der direkt hinter das Ende der kontrollierten Sequenz verweist. Sie können damit einen Iterator abrufen, der das Ende der kontrollierten Sequenz bestimmt; der Status ist nicht nicht geändert werden, wenn die Länge der gesteuerten Sequenz geändert wird.  
+ Die Memberfunktion gibt einem bidirektionalen Iterator, der direkt hinter das Ende der kontrollierten Sequenz verweist. Damit können Sie einen Iterator abrufen, der das Ende der kontrollierten Sequenz bestimmt; der Status verfügt nicht geändert werden, wenn die Länge der kontrollierten Sequenz ändert.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -661,7 +653,6 @@ int main()
     System::Console::WriteLine("*--end() = {0}", *++it);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -675,16 +666,16 @@ Sucht den Bereich, der einem angegebenen Schlüssel entspricht.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Key  
+ *key*  
  Der zu suchende Schlüsselwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt ein Paar von Iteratoren `cliext::pair<iterator, iterator>(` [Set:: lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md) `(key),` [Set:: upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)`(key))`. Sie können damit um des Bereichs von Elementen, die derzeit in der gesteuerten Sequenz zu ermitteln, die einen angegebenen Schlüssel entsprechen.  
+ Die Memberfunktion gibt ein Paar von Iteratoren `cliext::pair<iterator, iterator>(` [Set:: lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md) `(key),` [Set:: upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)`(key))`. Damit können Sie um des Bereichs von Elementen, die derzeit in der gesteuerten Sequenz zu ermitteln, die einem angegebenen Schlüssel entsprechen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -719,7 +710,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -733,33 +723,33 @@ Entfernt Elemente an den angegebenen Positionen.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 size_type erase(key_type key)  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- first  
- Anfang des Bereichs, der gelöscht.  
+ *Erste*  
+ Anfang des zu löschenden Bereichs.  
   
- Key  
- Der Schlüsselwert, zu löschen.  
+ *key*  
+ Schlüssel-Wert zu löschen.  
   
- last  
- Das Ende des Bereichs zu löschen.  
+ *last*  
+ Ende der zu löschenden Bereichs.  
   
- wo  
+ *where*  
  Element löschen.  
   
 ### <a name="remarks"></a>Hinweise  
- Die erste Memberfunktion entfernt das Element der kontrollierten Sequenz verweist `where`, und gibt einen Iterator, der das erste Element, das über das Element entfernt wurde, oder [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` Wenn kein solches Element vorhanden ist. Es können Sie verwenden, um ein einzelnes Element zu entfernen.  
+ Die erste Memberfunktion entfernt das Element der kontrollierten Sequenz verweist *, in denen*, und gibt einen Iterator, der das erste Element, das über das Element entfernt wurde, oder [Set:: End (STL/CLR) ](../dotnet/set-end-stl-clr.md) `()` Wenn kein solches Element vorhanden ist. Damit können Sie um ein einzelnes Element zu entfernen.  
   
- Die zweite Memberfunktion entfernt die Elemente der gesteuerten Sequenz im Bereich [`first`, `last`), und gibt einen Iterator, der das erste Element, das über alle Elemente entfernt wurden, oder `end()` Wenn kein solches Element vorhanden ist... Sie verwenden es, NULL oder mehr aufeinander folgende Elemente entfernt.  
+ Die zweite Memberfunktion entfernt die Elemente der gesteuerten Sequenz im Bereich [`first`, `last`), und gibt einen Iterator, der das erste Element entfernten Elemente hinaus verbliebene festlegt oder `end()` Wenn kein solches Element vorhanden ist... Damit können Sie um NULL oder mehr aufeinander folgende Elemente zu entfernen.  
   
- Die dritte Memberfunktion entfernt jedes Element der gesteuerten Sequenz, deren Schlüssel hat die entsprechende Reihenfolge, zu `key`, und gibt die Anzahl der entfernten Elemente zurück. Sie verwenden es, zu entfernen und alle Elemente, die einen angegebenen Schlüssel entsprechen gezählt.  
+ Die dritte Memberfunktion entfernt jedes Element der kontrollierten Sequenz, deren Schlüssel verfügt über entsprechende Reihenfolge, auf *Schlüssel*, und gibt die Anzahl die Anzahl der entfernten Elemente zurück. Damit können Sie entfernen und die Anzahl aller Elemente, die einen angegebenen Schlüssel entsprechen.  
   
- Jedes Element Löschung dauert einige Zeit, die proportional zum Logarithmus der Anzahl der Elemente in der kontrollierten Sequenz.  
+ Jedes Element Löschung braucht Zeit proportional zum Logarithmus der Anzahl der Elemente der gesteuerten Sequenz.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -798,8 +788,7 @@ int main()
         *c1.erase(c1.begin(), --it));   
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -815,16 +804,16 @@ Sucht ein Element, das einem angegebenen Schlüssel entspricht.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 iterator find(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Key  
+ *key*  
  Der zu suchende Schlüsselwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Verfügt über mindestens ein Element in der kontrollierten Sequenz entsprechende Sortierung mit `key`, die Memberfunktion gibt einen Iterator Festlegen eines dieser Elemente zurück, andernfalls es [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`. Damit können sie ein Element aktuell in der kontrollierten Sequenz gesucht werden soll, die einem angegebenen Schlüssel entspricht.  
+ Verfügt über mindestens ein Element in der gesteuerten Sequenz entsprechende Sortierung mit *Schlüssel*, die Memberfunktion gibt einen Iterator zurück eins dieser Elemente; andernfalls [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`. Damit können Sie um ein Element derzeit in der gesteuerten Sequenz zu suchen, die einem angegebenen Schlüssel entspricht.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -854,7 +843,6 @@ int main()
         L'C', c1.find(L'C') != c1.end());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -869,7 +857,7 @@ Der Typ der generischen Schnittstelle für den Container.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     ITree<GKey, GValue>  
     generic_container;  
@@ -917,7 +905,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -932,14 +919,14 @@ Der Typ eines Iterators für die Verwendung mit der generischen Schnittstelle f�
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerBidirectionalIterator<generic_value>  
     generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt einen generischen Iterator, der für diese Vorlage Container-Klasse mit der generischen Schnittstelle verwendet werden kann.  
+ Der Typ beschreibt einen generischen Iterator, der mit der generischen Schnittstelle für diese Vorlage Container-Klasse verwendet werden kann.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -973,7 +960,6 @@ int main()
     System::Console::WriteLine(" {0}", gcval);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -987,14 +973,14 @@ Der Typ eines umgekehrten Iterators für die Verwendung mit der generischen Schn
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value>  
     generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt einen generischen reverse-Iterator, der für diese Vorlage Container-Klasse mit der generischen Schnittstelle verwendet werden kann.  
+ Der Typ beschreibt einen generische reverse-Iterator, der mit der generischen Schnittstelle für diese Vorlage Container-Klasse verwendet werden kann.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1028,7 +1014,6 @@ int main()
     System::Console::WriteLine(" {0}", gcval);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1042,12 +1027,12 @@ Der Typ eines Elements für die Verwendung mit der generischen Schnittstelle fü
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein Objekt des Typs `GValue` , beschreibt die gespeicherten Elementwert für die Verwendung mit der generischen Schnittstelle für diese Vorlage Container-Klasse.  
+ Der Typ beschreibt ein Objekt des Typs `GValue` , beschreibt den gespeichertes Element-Wert für die Verwendung mit der generischen Schnittstelle für diese Vorlage Container-Klasse.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1081,7 +1066,6 @@ int main()
     System::Console::WriteLine(" {0}", gcval);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1095,7 +1079,7 @@ Fügt Elemente hinzu.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 cliext::pair<iterator, bool> insert(value_type val);  
 iterator insert(iterator where, value_type val);  
 template<typename InIter>  
@@ -1104,33 +1088,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```  
   
 #### <a name="parameters"></a>Parameter  
- first  
+ *Erste*  
  Anfang des Bereichs, der eingefügt.  
   
- last  
- Das Ende des Bereichs einfügen.  
+ *last*  
+ Ende des Bereichs, der eingefügt.  
   
- Rechts  
- Die Enumeration eingefügt.  
+ *right*  
+ Die Enumeration zum Einfügen.  
   
- Val  
+ *val*  
  Schlüssel-Wert einfügen.  
   
- wo  
- Die Position, im Container (nur Hinweis) einfügen.  
+ *where*  
+ Die Position, im Container zum Einfügen (nur Hint).  
   
 ### <a name="remarks"></a>Hinweise  
  Jede der Memberfunktionen Fügt eine Sequenz, die von den verbleibenden Operanden angegeben.  
   
- Die erste Memberfunktion zum Einfügen eines Elements mit dem Wert versucht `val`, und gibt ein Wertepaar `X`. Wenn `X.second` ist "true", `X.first` bestimmt das neu eingefügte Element; andernfalls `X.first` kennzeichnet ein Element mit entsprechender Sortierung, die bereits vorhanden ist und kein neues Element eingefügt wird. Es können Sie verwenden, um ein einzelnes Element einzufügen.  
+ Die erste Memberfunktion versucht, ein Element mit dem Wert einfügen *Val*, und gibt ein Paar von Werten `X`. Wenn `X.second` ist "true" `X.first` bestimmt das neu eingefügte Element; andernfalls `X.first` kennzeichnet ein Element mit entsprechender Sortierung, die bereits vorhanden ist und kein neues Element eingefügt wird. Damit können Sie ein einzelnes Element einfügen.  
   
- Die zweite Memberfunktion Fügt ein Element mit dem Wert `val`mit `where` als Hinweis (zur Verbesserung der Leistung), und gibt einen Iterator, der das neu eingefügte Element festlegt. Damit können sie ein einzelnes Element einfügen, das neben einem Element möglicherweise, die Sie kennen.  
+ Die zweite Memberfunktion Fügt ein Element mit dem Wert *Val*mit *, in denen* als Hinweis (zur Verbesserung der Leistung), und gibt einen Iterator, der das neu eingefügte Element festlegt. Damit können Sie ein einzelnes Element einfügen, die neben einem Element möglicherweise, die Sie kennen.  
   
- Die dritte Memberfunktion fügt die Sequenz [`first`, `last`). Sie verwenden ihn zum Einfügen von NULL oder mehr Elementen aus einer anderen Sequenz kopiert.  
+ Die dritte Memberfunktion fügt die Sequenz [`first`, `last`). Sie verwenden ihn zum Einfügen von NULL oder mehr Elementen, die aus einer anderen Sequenz kopiert haben.  
   
- Die vierte Memberfunktion fügt die Sequenz, die vom angegebenen der `right`. Sie verwenden es, fügen Sie eine Sequenz, die durch einen Enumerator beschrieben.  
+ Die vierte Memberfunktion fügt die Sequenz, die vom angegebenen die *rechten*. Damit können Sie eine Sequenz, die von einem Enumerator beschrieben einfügen.  
   
- Jede elementeinfügung dauert einige Zeit, die proportional zum Logarithmus der Anzahl der Elemente in der kontrollierten Sequenz. Kann in amortisierter konstanter Zeit, jedoch die Einfügung erhält einen Hinweis, der ein Element, das neben der Einfügemarke festlegt.  
+ Jedes Element einfügen braucht Zeit proportional zum Logarithmus der Anzahl der Elemente der gesteuerten Sequenz. Einfügen kann in amortisierter konstanter Zeit, jedoch auftreten, erhalten einen Hinweis, der ein Element, das neben der Einfügemarke festlegt.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1190,7 +1174,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1209,12 +1192,12 @@ Der Typ eines Iterators für die gesteuerte Sequenz.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein Objekt vom angegebenen Typ `T1` , die als ein bidirektionaler Iterator für die gesteuerte Sequenz fungieren kann.  
+ Der Typ beschreibt ein Objekt vom nicht angegebenen Typ `T1` , die als bidirektionaler Iterator für die gesteuerte Sequenz fungieren kann.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1238,7 +1221,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1250,12 +1232,12 @@ Kopiert der Delegat für zwei Schlüssel.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 key_compare^key_comp();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt der Delegat zum Sortieren der kontrollierten Sequenz zurück. Sie können sie zwei Schlüssel vergleichen.  
+ Die Memberfunktion gibt der Delegat verwendet, um die kontrollierte Sequenz sortiert zurück. Damit können Sie zwei Schlüssel vergleichen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1290,7 +1272,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1308,13 +1289,13 @@ Der Delegat für zwei Schlüssel.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Synonym für den Delegaten, der die Reihenfolge der Schlüssel Argumente bestimmt.  
+ Der Typ ist ein Synonym für die der Delegat, der die Reihenfolge der wichtigsten Argumente bestimmt.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1349,7 +1330,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1367,12 +1347,12 @@ Der Typ eines Sortierschlüssels.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef Key key_type;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Type stellt ein Synonym für den Vorlagenparameter `Key` dar.  
+ Der Typ ist ein Synonym für den Vorlagenparameter *Schlüssel*.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1398,8 +1378,7 @@ int main()
         }   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1407,20 +1386,20 @@ a b c
 ```  
 
 ## <a name="lower_bound"></a> Set:: lower_bound (STL/CLR)
-Sucht den Anfang des Bereichs, die einem angegebenen Schlüssel entspricht.  
+Sucht den Anfang des Bereichs, der einem angegebenen Schlüssel entspricht.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 iterator lower_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Key  
+ *key*  
  Der zu suchende Schlüsselwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion bestimmt das erste Element `X` in der kontrollierten Sequenz, die Sortierung `key`. Wenn kein solches Element vorhanden ist, gibt es [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; andernfalls wird einen Iterator, `X`. Sie können damit derzeit suchen den Anfang einer Sequenz von Elementen in der kontrollierten Sequenz, die einen angegebenen Schlüssel entsprechen.  
+ Die Memberfunktion bestimmt das erste Element `X` in der kontrollierten Sequenz, die Sortierung *Schlüssel*. Wenn kein solches Element vorhanden ist, gibt es [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; andernfalls wird einen Iterator, `X`. Damit können Sie derzeit suchen den Anfang einer Sequenz von Elementen in der kontrollierten Sequenz, die einen angegebenen Schlüssel entsprechen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1451,7 +1430,6 @@ int main()
         *c1.lower_bound(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1466,16 +1444,16 @@ Erstellt ein Wertobjekt.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 static value_type make_value(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Key  
- Schlüsselwert verwenden.  
+ *key*  
+ Schlüssel-Wert verwenden.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt eine `value_type` Objekts, dessen Schlüssel `key`. Sie verwenden es, um ein Objekt, das für die Verwendung mit anderen Memberfunktionen geeignet zu verfassen.  
+ Die Memberfunktion gibt ein `value_type` Objekts, dessen Schlüssel *Schlüssel*. Damit können Sie um ein Objekt kann mit anderen Memberfunktionen zu erstellen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1497,8 +1475,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1510,16 +1487,16 @@ Ersetzt die kontrollierte Sequenz.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 set<Key>% operator=(set<Key>% right);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Rechts  
+ *right*  
  Der zu kopierende Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Member-Operator Kopien `right` klicken Sie dann auf das Objekt gibt `*this`. Sie können ihn verwenden, um die kontrollierte Sequenz durch eine Kopie der kontrollierten Sequenz in `right` zu ersetzen.  
+ Die Member-Operator Kopien *rechten* klicken Sie dann auf das Objekt, gibt `*this`. Damit können Sie die kontrollierte Sequenz durch eine Kopie der kontrollierten Sequenz in ersetzen *rechten*.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1549,8 +1526,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1563,12 +1539,12 @@ Legt den Anfang der umgekehrten kontrollierten Sequenz fest.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt einen umgekehrten Iterator, der das letzte Element der kontrollierten Sequenz oder nur vor dem Anfang einer leeren Sequenz zurück. Daher kennzeichnet es die `beginning` der umgekehrten Sequenz. Es mit der einen Iterator abrufen, bestimmt die `current` Anfang der kontrollierten Sequenz in umgekehrter Reihenfolge kann ändern, wenn die Länge der gesteuerten Sequenz geändert wird.  
+ Die Memberfunktion gibt einen umgekehrten Iterator, der das letzte Element der kontrollierten Sequenz oder unmittelbar nach dem Anfang einer leeren Sequenz bestimmt. Daher wird die `beginning` der umgekehrten Sequenz. Sie können damit einen Iterator abrufen, bestimmt die `current` Anfang der kontrollierten Sequenz in umgekehrter Reihenfolge, aber der Status kann ändern, wenn die Länge der kontrollierten Sequenz ändert.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1596,7 +1572,6 @@ int main()
     System::Console::WriteLine("*++rbegin() = {0}", *++rit);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1610,7 +1585,7 @@ Der Typ eines Verweises auf ein Element.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
@@ -1642,7 +1617,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1654,12 +1628,12 @@ Legt das Ende der umgekehrten kontrollierten Sequenz fest.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt einem reverse-Iterator, verweist direkt hinter dem Anfang der kontrollierten Sequenz zurück. Daher kennzeichnet es die `end` der umgekehrten Sequenz. Es mit der einen Iterator abrufen, bestimmt die `current` Ende der kontrollierten Sequenz in umgekehrter Reihenfolge, aber dessen Status kann ändern, wenn die Länge der gesteuerten Sequenz geändert wird.  
+ Die Memberfunktion gibt einem umgekehrten Iterator, der zeigt unmittelbar nach dem Anfang der kontrollierten Sequenz zurück. Daher wird die `end` der umgekehrten Sequenz. Sie können damit einen Iterator abrufen, bestimmt die `current` Ende der kontrollierten Sequenz in umgekehrter Reihenfolge, aber der Status kann ändern, wenn die Länge der kontrollierten Sequenz ändert.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1688,7 +1662,6 @@ int main()
     System::Console::WriteLine("*--rend() = {0}", *++rit);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1702,12 +1675,12 @@ Der Typ eines umgekehrten Iterators für die gesteuerte Sequenz.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein Objekt vom angegebenen Typ `T3` , die als umgekehrten Iterators für die gesteuerte Sequenz dienen kann.  
+ Der Typ beschreibt ein Objekt vom nicht angegebenen Typ `T3` , die als reverse-Iterator für die gesteuerte Sequenz fungieren kann.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1731,7 +1704,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1743,7 +1715,7 @@ Erstellt ein container-Objekt.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 set();  
 explicit set(key_compare^ pred);  
 set(set<Key>% right);  
@@ -1759,16 +1731,16 @@ set(System::Collections::Generic::IEnumerable<GValue>^ right,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- first  
+ *Erste*  
  Anfang des Bereichs, der eingefügt.  
   
- last  
- Das Ende des Bereichs einfügen.  
+ *last*  
+ Ende des Bereichs, der eingefügt.  
   
- pred  
- Sortierung Prädikat für die gesteuerte Sequenz.  
+ *Pred*  
+ Sortieren Prädikat für die gesteuerte Sequenz.  
   
- Rechts  
+ *right*  
  Einzufügendes Objekt bzw. einzufügender Bereich.  
   
 ### <a name="remarks"></a>Hinweise  
@@ -1776,49 +1748,49 @@ set(System::Collections::Generic::IEnumerable<GValue>^ right,
   
  `set();`  
   
- Initialisiert die gesteuerte Sequenz keine Elemente mit der standardmäßigen Reihenfolge Prädikat `key_compare()`. Sie können damit eine leere gesteuerte Sequenz, mit der standardmäßigen Reihenfolge Prädikat angeben.  
+ Initialisiert die kontrollierte Sequenz ohne Elemente, mit der standardmäßigen Reihenfolge Prädikat `key_compare()`. Damit können Sie eine leere gesteuerte Sequenz, mit der standardmäßigen Reihenfolge Prädikat angeben.  
   
  Der Konstruktor:  
   
  `explicit set(key_compare^ pred);`  
   
- Initialisiert die gesteuerte Sequenz keine Elemente, mit dem Prädikat Reihenfolge `pred`. Sie können damit eine leere gesteuerte Sequenz, mit der angegebenen Reihenfolge Prädikat angeben.  
+ Initialisiert die kontrollierte Sequenz ohne Elemente, mit der Sortierung Prädikat *Pred*. Damit können Sie eine leere gesteuerte Sequenz, mit dem angegebenen Prädikat für die Sortierung angeben.  
   
  Der Konstruktor:  
   
  `set(set<Key>% right);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz [`right.begin()`, `right.end()`), mit der standardmäßigen Reihenfolge Prädikat. Sie können damit eine gesteuerte Sequenz angeben, die eine Kopie der Sequenz, die durch das satzobjekt gesteuert wird `right`, mit der standardmäßigen Reihenfolge Prädikat.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz [`right.begin()`, `right.end()`), mit der standardmäßigen Reihenfolge Prädikat. Damit können Sie eine gesteuerte Sequenz angeben, die eine Kopie der gesteuerte Sequenz durch die Set-Objekt ist *rechten*, mit der standardmäßigen Reihenfolge Prädikat.  
   
  Der Konstruktor:  
   
  `set(set<Key>^ right);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz [`right->begin()`, `right->end()`), mit der standardmäßigen Reihenfolge Prädikat. Sie können damit eine gesteuerte Sequenz angeben, die eine Kopie der Sequenz, die durch das satzobjekt gesteuert wird `right`, mit der standardmäßigen Reihenfolge Prädikat.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz [`right->begin()`, `right->end()`), mit der standardmäßigen Reihenfolge Prädikat. Damit können Sie eine gesteuerte Sequenz angeben, die eine Kopie der gesteuerte Sequenz durch die Set-Objekt ist *rechten*, mit der standardmäßigen Reihenfolge Prädikat.  
   
  Der Konstruktor:  
   
  `template<typename InIter> set(InIter first, InIter last);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz [`first`, `last`), mit der standardmäßigen Reihenfolge Prädikat. Sie können damit der kontrollierten Sequenz eine Kopie einer anderen Sequenz mit der standardmäßigen Reihenfolge Prädikat erstellen.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz [`first`, `last`), mit der standardmäßigen Reihenfolge Prädikat. Damit können Sie der gesteuerten Sequenz eine Kopie einer anderen Sequenz, mit der standardmäßigen Reihenfolge Prädikat erstellen.  
   
  Der Konstruktor:  
   
  `template<typename InIter> set(InIter first, InIter last, key_compare^ pred);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz [`first`, `last`), mit dem Prädikat Reihenfolge `pred`. Sie können damit der gesteuerten Sequenz eine Kopie einer anderen Sequenz, mit dem angegebenen Reihenfolge Prädikat erstellen.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz [`first`, `last`), mit der Sortierung Prädikat *Pred*. Damit können Sie um der gesteuerten Sequenz eine Kopie einer anderen Sequenz, mit dem angegebenen Prädikat für die Sortierung zu erstellen.  
   
  Der Konstruktor:  
   
  `set(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz, die vom Enumerator festgelegte `right`, mit der standardmäßigen Reihenfolge Prädikat. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die durch ein Enumerator, mit der standardmäßigen Reihenfolge Prädikat beschrieben.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz, die vom Enumerator festgelegt *rechten*, mit der standardmäßigen Reihenfolge Prädikat. Damit können Sie um der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die von einem Enumerator, mit der standardmäßigen Reihenfolge Prädikat beschrieben zu erstellen.  
   
  Der Konstruktor:  
   
  `set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- Initialisiert die gesteuerte Sequenz durch die Sequenz, die vom Enumerator festgelegte `right`, mit dem Prädikat Reihenfolge `pred`. Sie mit ihrer Hilfe der gesteuerten Sequenz eine Kopie einer anderen Sequenz, die durch ein Enumerator, mit dem angegebenen Reihenfolge Prädikat beschrieben.  
+ Initialisiert die kontrollierte Sequenz durch die Sequenz, die vom Enumerator festgelegt *rechten*, mit der Sortierung Prädikat *Pred*. Damit können Sie um der gesteuerten Sequenz eine Kopie einer anderen Sequenz durch ein Enumerator, mit dem angegebenen Prädikat für die Sortierung beschrieben zu erstellen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1890,8 +1862,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1912,12 +1883,12 @@ Ermittelt die Anzahl von Elementen.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt die Länge der gesteuerten Sequenz zurück. Sie können erkennen, die Anzahl der Elemente, die derzeit in der kontrollierten Sequenz. Wenn Sie von Interesse ist, ob die Sequenz ungleich Größe finden Sie unter hat, [Set:: Empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)`()`.  
+ Die Memberfunktion gibt die Länge der gesteuerten Sequenz zurück. Damit können Sie die Anzahl der Elemente, die derzeit in der kontrollierten Sequenz bestimmt. Wenn Sie besonders interessierenden lediglich, ob die Reihenfolge größer, finden Sie unter hat [Set:: Empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1950,7 +1921,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1961,16 +1931,16 @@ size() = 2 after adding 2
 ```  
 
 ## <a name="size_type"></a> Set:: size_type (STL/CLR)
-Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.  
+Der Typ eines Abstands zwischen den beiden Elementen mit Vorzeichen.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein nicht negativer Elementanzahl.  
+ Der Typ beschreibt eine nicht Negative Elementanzahl.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1999,7 +1969,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2012,16 +1981,16 @@ Vertauscht den Inhalt von zwei Containern.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void swap(set<Key>% right);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Rechts  
+ *right*  
  Container für den Tausch von Inhalten.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `this` und `right`aus. Dies erfolgt in konstanter Zeit, und es löst keine Ausnahmen. Sie verwenden es als eine schnelle Möglichkeit zum Austauschen von den Inhalt von zwei Containern.  
+ Die Memberfunktion tauscht die kontrollierten Sequenzen zwischen `this` und *rechten*. Dies erfolgt in konstanter Zeit aus, und es löst keine Ausnahmen aus. Sie verwenden es als eine schnelle Möglichkeit, den Inhalt von zwei Containern austauschen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2062,8 +2031,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -2074,16 +2042,16 @@ a b c
 ```  
   
 ## <a name="to_array"></a> Set::to_array (STL/CLR)
-Kopiert die gesteuerte Sequenz in ein neues Array.  
+Kopiert die kontrollierte Sequenz in ein neues Array.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 cli::array<value_type>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt ein Array mit der kontrollierten Sequenz zurück. Sie können sie eine Kopie der gesteuerten Sequenz im Arrayform abrufen.  
+ Die Memberfunktion gibt ein Array mit der kontrollierten Sequenz zurück. Damit können Sie eine Kopie der kontrollierten Sequenz in Arrayform abrufen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2114,7 +2082,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2123,20 +2090,20 @@ a b c
 ```  
 
 ## <a name="upper_bound"></a> Set:: upper_bound (STL/CLR)
-Sucht nach Ende des Bereichs, die einem angegebenen Schlüssel entspricht.  
+Sucht das Ende des Bereichs, der einem angegebenen Schlüssel entspricht.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 iterator upper_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Key  
+ *key*  
  Der zu suchende Schlüsselwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion bestimmt das letzte Element `X` in der kontrollierten Sequenz, die Sortierung `key`. Wenn kein solches Element vorhanden ist, oder wenn `X` ist das letzte Element in der kontrollierten Sequenz gibt [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; andernfalls wird einen Iterator, der das erste Element nach `X`. Sie können damit derzeit suchen das Ende einer Sequenz von Elementen in der kontrollierten Sequenz, die einen angegebenen Schlüssel entsprechen.  
+ Die Memberfunktion bestimmt das letzte Element `X` in der kontrollierten Sequenz, die Sortierung *Schlüssel*. Wenn kein solches Element vorhanden ist, oder wenn `X` ist das letzte Element in der gesteuerten Sequenz ist, gibt [Set:: End (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; andernfalls wird einen Iterator, der das erste Element nach `X`. Damit können Sie derzeit suchen das Ende einer Sequenz von Elementen in der kontrollierten Sequenz, die einen angegebenen Schlüssel entsprechen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2167,7 +2134,6 @@ int main()
         *c1.upper_bound(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2178,16 +2144,16 @@ upper_bound(L'x')==end() = True
 ```  
 
 ## <a name="value_comp"></a> Set:: value_comp (STL/CLR)
-Der Delegat für zwei Elementwerte wird kopiert.  
+Kopiert der Delegat für zwei Elementwerte.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 value_compare^ value_comp();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt der Delegat zum Sortieren der kontrollierten Sequenz zurück. Sie können sie um zwei Elementwerte zu vergleichen.  
+ Die Memberfunktion gibt der Delegat verwendet, um die kontrollierte Sequenz sortiert zurück. Damit können Sie zwei Elementwerte vergleichen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2211,7 +2177,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2225,13 +2190,13 @@ Der Delegat für zwei Elementwerte.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ ist ein Synonym für den Delegaten, der die Reihenfolge der Werteargumente bestimmt.  
+ Der Typ ist ein Synonym für die der Delegat, der die Reihenfolge der Werteargumente bestimmt.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2255,7 +2220,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2269,10 +2233,8 @@ Der Typ eines Elements.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
-  
+```cpp  
 typedef generic_value value_type;  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -2303,7 +2265,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2311,25 +2272,25 @@ a b c
 ```  
 
 ## <a name="op_neq"></a> Operator! = (Set) (STL/CLR)
-Liste nicht gleich sein Vergleich aus.  
+Listen Sie nicht gleich-Vergleich ein.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Key>  
     bool operator!=(set<Key>% left,  
         set<Key>% right);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- links  
+ *left*  
  Linker zu vergleichender Container.  
   
- Rechts  
+ *right*  
  Rechter zu vergleichender Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt die Operatorfunktion `!(left == right)`. Verwenden sie zum Testen, ob `left` nicht sortiert wird, ist identisch mit `right` bei die beiden Sätzen verglichenen elementweise sind.  
+ Gibt zurück, die Operatorfunktion `!(left == right)`. Damit können Sie testen, ob *linken* ist nicht identisch mit geordnet *rechten* Wenn die beiden Sätze sind im Vergleich elementweise.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2367,8 +2328,7 @@ int main()
     System::Console::WriteLine("[a b c] != [a b d] is {0}",   
         c1 != c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -2383,21 +2343,21 @@ Liste kleiner als Vergleich.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Key>  
     bool operator<(set<Key>% left,  
         set<Key>% right);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- links  
+ *left*  
  Linker zu vergleichender Container.  
   
- Rechts  
+ *right*  
  Rechter zu vergleichender Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Operator-Funktion gibt "true" zurück, wenn, für die niedrigste Position `i` für die `!(right[i] < left[i])` es ist auch, die "true" `left[i] < right[i]`. Andernfalls wird zurückgegeben `left->size() < right->size()` Sie zum Testen verwenden, ob `left` sortiert ist, bevor Sie `right` bei die beiden Sätzen verglichenen elementweise sind.  
+ Der Operator-Funktion gibt "true" zurück, wenn, für die niedrigste Position `i` für die `!(right[i] < left[i])` es ist auch, die "true" `left[i] < right[i]`. Andernfalls wird `left->size() < right->size()` damit können Sie testen, ob *linken* sortiert ist, bevor Sie *rechten* Wenn die beiden Sätze sind im Vergleich elementweise.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2435,8 +2395,7 @@ int main()
     System::Console::WriteLine("[a b c] < [a b d] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -2451,21 +2410,21 @@ Kleiner oder gleich Liste Vergleich.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Key>  
     bool operator<=(set<Key>% left,  
         set<Key>% right);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- links  
+ *left*  
  Linker zu vergleichender Container.  
   
- Rechts  
+ *right*  
  Rechter zu vergleichender Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt die Operatorfunktion `!(right < left)`. Sie zum Testen verwenden, ob `left` ist nicht geordnet nach `right` bei die beiden Sätzen verglichenen elementweise sind.  
+ Gibt zurück, die Operatorfunktion `!(right < left)`. Damit können Sie testen, ob *linken* wird nicht nach dem sortiert *rechten* Wenn die beiden Sätze sind im Vergleich elementweise.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2503,8 +2462,7 @@ int main()
     System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -2515,25 +2473,25 @@ int main()
 ```  
   
 ## <a name="op_eq"></a> Operator == (Set) (STL/CLR)
-Liste gleich Vergleich.  
+Liste-gleich-Vergleich.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Key>  
     bool operator==(set<Key>% left,  
         set<Key>% right);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- links  
+ *left*  
  Linker zu vergleichender Container.  
   
- Rechts  
+ *right*  
  Rechter zu vergleichender Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Operatorfunktion gibt "true" nur, wenn die Sequenzen von gesteuert `left` und `right` haben die gleiche Länge und für die einzelnen Positionen `i`, `left[i] ==` `right[i]`. Sie verwenden es, um zu testen, ob `left` sortiert wird, ist identisch mit `right` bei die beiden Sätzen verglichenen elementweise sind.  
+ Die Operatorfunktion gibt "true" nur dann, wenn die Sequenzen von gesteuert *linken* und *rechten* die gleiche Länge aufweisen und für jede Position `i`, `left[i] ==` `right[i]`. Damit können Sie testen, ob *linken* sortiert wird, ist identisch mit *rechten* Wenn die beiden Sätze sind im Vergleich elementweise.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2571,8 +2529,7 @@ int main()
     System::Console::WriteLine("[a b c] == [a b d] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -2587,21 +2544,21 @@ Die Liste ist größer als-Vergleich.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Key>  
     bool operator>(set<Key>% left,  
         set<Key>% right);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- links  
+ *left*  
  Linker zu vergleichender Container.  
   
- Rechts  
+ *right*  
  Rechter zu vergleichender Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt die Operatorfunktion `right` `<` `left`. Verwenden sie zum Testen, ob `left` sortiert wird, ist nach `right` bei die beiden Sätzen verglichenen elementweise sind.  
+ Gibt zurück, die Operatorfunktion `right` `<` `left`. Damit können Sie testen, ob *linken* sortiert wird, ist nach *rechten* Wenn die beiden Sätze sind im Vergleich elementweise.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2639,8 +2596,7 @@ int main()
     System::Console::WriteLine("[a b d] > [a b c] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -2651,25 +2607,25 @@ int main()
 ```  
 
 ## <a name="op_gteq"></a> Operator&gt;= (Set) (STL/CLR)
-Liste, die größer als oder gleich Vergleich.  
+Liste, die größer als oder gleich-Vergleich.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Key>  
     bool operator>=(set<Key>% left,  
         set<Key>% right);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- links  
+ *left*  
  Linker zu vergleichender Container.  
   
- Rechts  
+ *right*  
  Rechter zu vergleichender Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt die Operatorfunktion `!(left < right)`. Sie verwenden es, um zu testen, ob `left` nicht sortiert ist `right` bei die beiden Sätzen verglichenen elementweise sind.  
+ Gibt zurück, die Operatorfunktion `!(left < right)`. Damit können Sie testen, ob *linken* ist nicht vor dem geordnet *rechten* Wenn die beiden Sätze sind im Vergleich elementweise.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -2707,8 +2663,7 @@ int main()
     System::Console::WriteLine("[a b c] >= [a b d] is {0}",   
         c1 >= c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  

@@ -1,5 +1,5 @@
 ---
-title: Warteschlange (STL/CLR) | Microsoft Docs
+title: Warteschlange (STL/CLR) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -73,21 +73,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: adf65c4af70b0ba6bc1f089576d69160ab21a5b6
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079706"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375996"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
-Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge steuert, die FIFO-Reihenfolge Zugriff hat. Sie verwenden die Containeradapter `queue` einen zugrunde liegenden Container wie eine Warteschlange zu verwalten.  
+Die Vorlagenklasse beschreibt ein Objekt, das eine Elementsequenz variabler Länge Sequenz von Elementen steuert, die First in First Out Zugriff hat. Verwenden des Adapters Container `queue` einen zugrunde liegenden Container wie eine Warteschlange zu verwalten.  
   
- In der folgenden Beschreibung `GValue` ist identisch mit `Value` , wenn die zweite Datei einen Ref-Typ ist, in diesem Fall wird `Value^`. Auf ähnliche Weise `GContainer` ist identisch mit `Container` , wenn die zweite Datei einen Ref-Typ ist, in diesem Fall wird `Container^`.  
+ In der folgenden Beschreibung `GValue` ist identisch mit *Wert* , wenn die zweite ein Ref-Typ ist, in diesem Fall ist es `Value^`. Auf ähnliche Weise `GContainer` ist identisch mit *Container* , wenn die zweite ein Ref-Typ ist, in diesem Fall ist es `Container^`.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     ref class queue  
@@ -98,10 +98,10 @@ template<typename Value,
 ```  
   
 ### <a name="parameters"></a>Parameter  
- Wert  
+ *Wert*  
  Der Typ eines Elements in der kontrollierten Sequenz.  
   
- Container  
+ *Container*  
  Der Typ des zugrunde liegenden Containers.  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -133,7 +133,7 @@ template<typename Value,
 |[queue::push (STL/CLR)](#push)|Fügt ein neues Letztes Element hinzu.|  
 |[queue::queue (STL/CLR)](#queue)|Erstellt ein container-Objekt.|  
 |[queue::size (STL/CLR)](#size)|Ermittelt die Anzahl von Elementen.|  
-|[queue::to_array (STL/CLR)](#to_array)|Kopiert die gesteuerte Sequenz in ein neues Array.|  
+|[queue::to_array (STL/CLR)](#to_array)|Kopiert die kontrollierte Sequenz in ein neues Array.|  
   
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
@@ -146,8 +146,8 @@ template<typename Value,
 |[operator!= (queue) (STL/CLR)](#op_neq)|Bestimmt, ob eine `queue` Objekt ist nicht gleich einem anderen `queue` Objekt.|  
 |[operator< (queue) (STL/CLR)](#op_lt)|Bestimmt, ob eine `queue` Objekt ist kleiner als ein anderes `queue` Objekt.|  
 |[operator<= (queue) (STL/CLR)](#op_lteq)|Bestimmt, ob eine `queue` Objekt ist kleiner als oder gleich einem anderen `queue` Objekt.|  
-|[operator== (queue) (STL/CLR)](#op_eq)|Bestimmt, ob eine `queue` -Objekt gleich einem anderen `queue` Objekt.|  
-|[operator> (queue) (STL/CLR)](#op_gt)|Bestimmt, ob eine `queue` -Quellobjekt ist größer als ein anderes `queue` Objekt.|  
+|[operator== (queue) (STL/CLR)](#op_eq)|Bestimmt, ob eine `queue` Objekt ist gleich einem anderen `queue` Objekt.|  
+|[operator> (queue) (STL/CLR)](#op_gt)|Bestimmt, ob eine `queue` Objekt ist größer als ein anderer `queue` Objekt.|  
 |[operator>= (queue) (STL/CLR)](#op_gteq)|Bestimmt, ob eine `queue` Objekt ist größer als oder gleich einem anderen `queue` Objekt.|  
   
 ## <a name="interfaces"></a>Schnittstellen  
@@ -155,10 +155,10 @@ template<typename Value,
 |Interface|Beschreibung|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Duplizieren Sie ein Objekt.|  
-|IQueue\<Container, den Wert >|Behalten Sie die generische Containeradapter.|  
+|IQueue\<-Wert, der Container >|Behalten Sie die generischen Container-Adapter.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Objekt weist und-Freigaben für die Sequenz, die sie über einen zugrunde liegenden Containers, des Typs steuert `Container`, zur Speicherung der `Value` Elemente und bei Bedarf vergrößert wird. Das Objekt schränkt den Zugriff mit dem Betätigen nur des ersten Elements, und entfernt das letzte Element, eine Warteschlange implementieren eine FIFO-Reihenfolge (auch bekannt als eine FIFO-Warteschlange oder einfach eine Warteschlange).  
+ Das Objekt weist speicherbelegungen und-Freigaben für die gesteuerte Sequenz durch eine zugrunde liegenden Containers, eines Typs `Container`, speichert `Value` Elemente und wächst nach Bedarf. Objekts schränkt den Zugriff auf Sie übertragen nur das erste Element und entfernt das letzte Element, in die Implementierung einer First in First Out Warteschlange (auch bekannt als eine FIFO-Warteschlange oder einfach eine Warteschlange).  
   
 ## <a name="members"></a>Member
 
@@ -167,16 +167,16 @@ Ersetzt alle Elemente.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void assign(queue<Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Rechts  
- Containeradapter eingefügt.  
+ *right*  
+ Der Containeradapter, einfügen.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion weist `right.get_container()` auf den zugrunde liegenden Container. Sie können damit ändern Sie den gesamten Inhalt der Warteschlange.  
+ Die Memberfunktion weist `right.get_container()` in den zugrunde liegenden Container. Damit können Sie um den gesamten Inhalt der Warteschlange zu ändern.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -206,7 +206,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -219,12 +218,12 @@ Greift auf das letzte Element zu.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 reference back();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt einen Verweis auf das letzte Element der gesteuerten Sequenz, die nicht leer sein darf. Sie verwenden es, auf das letzte Element zuzugreifen, wenn Sie wissen, dass es vorhanden ist.  
+ Die Memberfunktion gibt einen Verweis auf das letzte Element der kontrollierten Sequenz, die nicht leer sein darf. Damit können Sie das letzte Element zuzugreifen, wenn Sie wissen, dass es vorhanden ist.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -256,7 +255,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -270,12 +268,12 @@ Greift auf das letzte Element zu.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 property value_type back_item;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Eigenschaft greift auf das letzte Element der gesteuerten Sequenz, die nicht leer sein darf. Sie verwenden ihn zum Lesen oder schreiben das letzte Element, wenn Sie wissen, dass es vorhanden ist.  
+ Die Eigenschaft greift auf das letzte Element der kontrollierten Sequenz, die nicht leer sein darf. Sie verwenden ihn zum Lesen oder schreiben das letzte Element, wenn Sie wissen, dass es vorhanden ist.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -307,7 +305,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -321,7 +318,7 @@ Der Typ eines konstanten Verweises auf ein Element.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
@@ -352,7 +349,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -364,7 +360,7 @@ Der Typ des zugrunde liegenden Containers.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef Container value_type;  
 ```  
   
@@ -393,7 +389,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -401,16 +396,16 @@ a b c
 ```  
 
 ## <a name="difference_type"></a> Queue::difference_type (STL/CLR)
-Die Typen des Abstands mit Vorzeichen zwischen zwei Elementen.  
+Die Typen des Abstands zwischen den beiden Elementen mit Vorzeichen.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein möglicherweise negativ Elementanzahl.  
+ Der Typ beschreibt eine möglicherweise negative Elementanzahl.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -448,7 +443,6 @@ int main()
     System::Console::WriteLine("popping 3 = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -462,12 +456,12 @@ Testet, ob keine Elemente vorhanden sind.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt „true“ für eine leere gesteuerte Sequenz zurück. Dies ist äquivalent zum [Queue:: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`. Sie verwenden sie zum Überprüfen, ob die Warteschlange leer ist.  
+ Die Memberfunktion gibt „true“ für eine leere gesteuerte Sequenz zurück. Dies ist äquivalent zum [Queue:: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`. Damit können Sie überprüfen, ob die Warteschlange leer ist.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -499,7 +493,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -515,12 +508,12 @@ Greift auf das erste Element zu.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 reference front();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt einen Verweis auf das erste Element der gesteuerten Sequenz, die nicht leer sein darf. Sie verwenden es das erste Element auf, wenn Sie wissen, dass es vorhanden ist.  
+ Die Memberfunktion gibt einen Verweis auf das erste Element der kontrollierten Sequenz, die nicht leer sein darf. Damit können Sie das erste Element, zugreifen, wenn Sie wissen, dass es vorhanden ist.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -552,7 +545,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -566,12 +558,12 @@ Greift auf das erste Element zu.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 property value_type front_item;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Eigenschaft greift auf das erste Element der gesteuerten Sequenz, die nicht leer sein darf. Sie verwenden ihn zum Lesen oder schreiben das erste Element, wenn Sie wissen, dass es vorhanden ist.  
+ Die Eigenschaft greift auf das erste Element der kontrollierten Sequenz, die nicht leer sein darf. Sie verwenden ihn zum Lesen oder schreiben das erste Element, wenn Sie wissen, dass es vorhanden ist.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -603,7 +595,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -617,13 +608,13 @@ Der Typ der generischen Schnittstelle für den Containeradapter.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::IQueue<Value>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt die generische Schnittstelle für Adapter dieser Vorlagenklasse-Container.  
+ Der Typ beschreibt die generische Schnittstelle für diese Container Adapter-Vorlagenklasse.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -664,7 +655,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -679,12 +669,12 @@ Der Typ eines Elements für die Verwendung mit der generischen Schnittstelle fü
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein Objekt des Typs `GValue` , beschreibt die gespeicherten Elementwert für die Verwendung mit der generischen Schnittstelle für diese Vorlage Container-Klasse. (`GValue` handelt es sich um `value_type` oder `value_type^` Wenn `value_type` ein Ref-Typ ist.)  
+ Der Typ beschreibt ein Objekt des Typs `GValue` , beschreibt den gespeichertes Element-Wert für die Verwendung mit der generischen Schnittstelle für diese Vorlage Container-Klasse. (`GValue` ist entweder `value_type` oder `value_type^` Wenn `value_type` ist ein Ref-Typ.)  
   
 ### <a name="example"></a>Beispiel  
   
@@ -722,7 +712,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -736,12 +725,12 @@ Greift auf die zugrunde liegenden Containers.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 container_type^ get_container();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt den zugrunde liegenden Container zurück. Sie verwenden es, um die Einschränkungen von dem Container-Wrapper zu umgehen.  
+ Die Memberfunktion gibt den zugrunde liegenden Container zurück. Damit können Sie um die Einschränkungen, die vom Container Wrapper zu umgehen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -764,7 +753,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -776,16 +764,16 @@ Ersetzt die kontrollierte Sequenz.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 queue <Value, Container>% operator=(queue <Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Rechts  
- Containeradapter zu kopieren.  
+ *right*  
+ Der Containeradapter, zu kopieren.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Member-Operator Kopien `right` klicken Sie dann auf das Objekt gibt `*this`. Sie können ihn verwenden, um die kontrollierte Sequenz durch eine Kopie der kontrollierten Sequenz in `right` zu ersetzen.  
+ Die Member-Operator Kopien *rechten* klicken Sie dann auf das Objekt, gibt `*this`. Damit können Sie die kontrollierte Sequenz durch eine Kopie der kontrollierten Sequenz in ersetzen *rechten*.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -814,8 +802,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -828,16 +815,16 @@ Entfernt das letzte Element.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void pop();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion entfernt das letzte Element der gesteuerten Sequenz, die nicht leer sein darf. Sie verwenden es, um indem Sie ein Element auf der Rückseite die Warteschlange zu verkürzen.  
+ Die Memberfunktion entfernt das letzte Element der kontrollierten Sequenz, die nicht leer sein darf. Sie verwenden, um ein Element an der Rückseite die Warteschlange zu verkürzen.  
   
 ### <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // cliext_queue_pop.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -862,7 +849,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -875,12 +861,12 @@ Fügt ein neues Letztes Element hinzu.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void push(value_type val);  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion Fügt ein Element mit dem Wert `val` am Ende der Warteschlange. Sie verwenden es, ein Element in die Warteschlange angefügt werden soll.  
+ Die Memberfunktion Fügt ein Element mit dem Wert `val` am Ende der Warteschlange. Damit können Sie ein Element an die Warteschlange angefügt werden soll.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -903,7 +889,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -911,11 +896,11 @@ a b c
 ```  
 
 ## <a name="queue"></a> Queue:: Queue (STL/CLR)
-Erstellt ein Container-Adapter-Objekt.  
+Erstellt ein Containerobjekt für den Adapter.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 queue();  
 queue(queue<Value, Container>% right);  
 queue(queue<Value, Container>^ right);  
@@ -923,36 +908,36 @@ explicit queue(container_type% wrapped);
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Rechts  
+ *right*  
  Zu kopierende Objekt.  
   
- umschlossen  
- Umschlossene Container verwendet.  
+ *Umschlossen*  
+ Umschlossene Container verwenden.  
   
 ### <a name="remarks"></a>Hinweise  
  Der Konstruktor:  
   
  `queue();`  
   
- erstellt einen leeren umschlossenen Container an. Sie können damit Geben Sie eine leere gesteuerte Sequenz.  
+ erstellt einen leeren umschlossenen Container an. Damit können Sie eine leere gesteuerte Sequenz angeben.  
   
  Der Konstruktor:  
   
  `queue(queue<Value, Container>% right);`  
   
- erstellt einen umschlossenen Container, der eine Kopie des `right.get_container()`. Verwenden sie eine gesteuerte Sequenz an, die eine Kopie der Sequenz, die durch das Warteschlangenobjekt gesteuert wird `right`.  
+ erstellt einen Wrapper-Container, die eine Kopie des `right.get_container()`. Damit können Sie eine gesteuerte Sequenz angeben, die eine Kopie der gesteuerte Sequenz durch das Queue-Objekt ist *rechten*.  
   
  Der Konstruktor:  
   
  `queue(queue<Value, Container>^ right);`  
   
- erstellt einen umschlossenen Container, der eine Kopie des `right->get_container()`. Verwenden sie eine gesteuerte Sequenz an, die eine Kopie der Sequenz, die durch das Warteschlangenobjekt gesteuert wird `*right`.  
+ erstellt einen Wrapper-Container, die eine Kopie des `right->get_container()`. Damit können Sie eine gesteuerte Sequenz angeben, die eine Kopie der gesteuerte Sequenz durch das Queue-Objekt ist `*right`.  
   
  Der Konstruktor:  
   
  `explicit queue(container_type wrapped);`  
   
- verwendet den vorhandenen Container `wrapped` als umschlossene Container. Verwenden Sie es, um eine Warteschlange aus einem vorhandenen Container erstellen.  
+ den vorhandenen Container verwendet *umschlossen* als umschlossene Container. Damit können Sie um eine Warteschlange aus einem vorhandenen Container zu erstellen.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -991,7 +976,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1006,7 +990,7 @@ Der Typ eines Verweises auf ein Element.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
@@ -1041,7 +1025,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1054,12 +1037,12 @@ Ermittelt die Anzahl von Elementen.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt die Länge der gesteuerten Sequenz zurück. Sie können erkennen, die Anzahl der Elemente, die derzeit in der kontrollierten Sequenz. Wenn Sie von Interesse ist, ob die Sequenz ungleich Größe finden Sie unter hat, [Queue:: Empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.  
+ Die Memberfunktion gibt die Länge der gesteuerten Sequenz zurück. Damit können Sie die Anzahl der Elemente, die derzeit in der kontrollierten Sequenz bestimmt. Wenn Sie besonders interessierenden lediglich, ob die Reihenfolge größer, finden Sie unter hat [Queue:: Empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1092,7 +1075,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1103,16 +1085,16 @@ size() = 4 after adding 2
 ```  
 
 ## <a name="size_type"></a> Queue:: size_type (STL/CLR)
-Der Typ eines Abstands mit Vorzeichen zwischen zwei Elementen.  
+Der Typ eines Abstands zwischen den beiden Elementen mit Vorzeichen.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Typ beschreibt ein nicht negativer Elementanzahl.  
+ Der Typ beschreibt eine nicht Negative Elementanzahl.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1142,7 +1124,6 @@ int main()
     System::Console::WriteLine("size difference = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1151,20 +1132,20 @@ size difference = 2
 ```  
 
 ## <a name="to_array"></a> Queue::to_array (STL/CLR)
-Kopiert die gesteuerte Sequenz in ein neues Array.  
+Kopiert die kontrollierte Sequenz in ein neues Array.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion gibt ein Array mit der kontrollierten Sequenz zurück. Sie können sie eine Kopie der gesteuerten Sequenz im Arrayform abrufen.  
+ Die Memberfunktion gibt ein Array mit der kontrollierten Sequenz zurück. Damit können Sie eine Kopie der kontrollierten Sequenz in Arrayform abrufen.  
   
 ### <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // cliext_queue_to_array.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -1191,7 +1172,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1204,12 +1184,12 @@ Der Typ eines Elements.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Der Type stellt ein Synonym für den Vorlagenparameter `Value` dar.  
+ Der Typ ist ein Synonym für den Vorlagenparameter *Wert*.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1235,8 +1215,7 @@ int main()
         }   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1244,11 +1223,11 @@ a b c
 ```  
 
 ## <a name="op_neq"></a> Operator! = (Warteschlange) (STL/CLR)
-Ungleich-Vergleich in die Warteschlange.  
+Nicht gleich-Vergleich in die Warteschlange.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator!=(queue<Value, Container>% left,  
@@ -1256,14 +1235,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- links  
+ *left*  
  Linker zu vergleichender Container.  
   
- Rechts  
+ *right*  
  Rechter zu vergleichender Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt die Operatorfunktion `!(left == right)`. Verwenden sie zum Testen, ob `left` nicht sortiert wird, ist identisch mit `right` bei beiden Warteschlangen verglichenen elementweise sind.  
+ Gibt zurück, die Operatorfunktion `!(left == right)`. Damit können Sie testen, ob *linken* nicht sortiert wird, ist identisch mit *rechten* bei beiden Warteschlangen verglichenen elementweise sind.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1302,7 +1281,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1313,11 +1291,11 @@ int main()
 ```  
 
 ## <a name="op_lt"></a> Operator&lt; (Warteschlange) (STL/CLR)
-Kleiner als-Vergleich in die Warteschlange.  
+Die Warteschlange kleiner als-Vergleich.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<(queue<Value, Container>% left,  
@@ -1325,14 +1303,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- links  
+ *left*  
  Linker zu vergleichender Container.  
   
- Rechts  
+ *right*  
  Rechter zu vergleichender Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Operator-Funktion gibt "true" zurück, wenn, für die niedrigste Position `i` für die `!(right[i] < left[i])` es ist auch, die "true" `left[i] < right[i]`. Andernfalls wird zurückgegeben `left->` [Queue:: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` Sie zum Testen verwenden, ob `left` sortiert ist, bevor Sie `right` bei beiden Warteschlangen verglichenen elementweise sind.  
+ Der Operator-Funktion gibt "true" zurück, wenn, für die niedrigste Position `i` für die `!(right[i] < left[i])` es ist auch, die "true" `left[i] < right[i]`. Andernfalls wird `left->` [Queue:: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` damit können Sie testen, ob *linken* sortiert ist, bevor Sie *rechten* Wenn die zwei Warteschlangen verglichenen elementweise sind.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1370,8 +1348,7 @@ int main()
     System::Console::WriteLine("[a b c] < [a b d] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1382,11 +1359,11 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> Operator&lt;= (Warteschlange) (STL/CLR)
-Kleiner oder gleich Warteschlange Vergleich.  
+Kleiner oder gleich in die Warteschlange Vergleich.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<=(queue<Value, Container>% left,  
@@ -1394,14 +1371,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- links  
+ *left*  
  Linker zu vergleichender Container.  
   
- Rechts  
+ *right*  
  Rechter zu vergleichender Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt die Operatorfunktion `!(right < left)`. Sie zum Testen verwenden, ob `left` ist nicht geordnet nach `right` bei beiden Warteschlangen verglichenen elementweise sind.  
+ Gibt zurück, die Operatorfunktion `!(right < left)`. Damit können Sie testen, ob *linken* wird nicht nach dem sortiert *rechten* bei beiden Warteschlangen verglichenen elementweise sind.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1439,8 +1416,7 @@ int main()
     System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1451,11 +1427,11 @@ int main()
 ```  
 
 ## <a name="op_eq"></a> Operator == (Warteschlange) (STL/CLR)
-Warteschlange gleich Vergleich.  
+Queue-gleich-Vergleich.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator==(queue<Value, Container>% left,  
@@ -1463,14 +1439,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- links  
+ *left*  
  Linker zu vergleichender Container.  
   
- Rechts  
+ *right*  
  Rechter zu vergleichender Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Operatorfunktion gibt "true" nur, wenn die Sequenzen von gesteuert `left` und `right` haben die gleiche Länge und für die einzelnen Positionen `i`, `left[i] ==` `right[i]`. Sie verwenden es, um zu testen, ob `left` sortiert wird, ist identisch mit `right` bei beiden Warteschlangen verglichenen elementweise sind.  
+ Die Operatorfunktion gibt "true" nur dann, wenn die Sequenzen von gesteuert *linken* und *rechten* die gleiche Länge aufweisen und für jede Position `i`, `left[i] ==` `right[i]`. Damit können Sie testen, ob *linken* sortiert wird, ist identisch mit *rechten* bei beiden Warteschlangen verglichenen elementweise sind.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1508,8 +1484,7 @@ int main()
     System::Console::WriteLine("[a b c] == [a b d] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1524,7 +1499,7 @@ Die Warteschlange ist größer als-Vergleich.
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>(queue<Value, Container>% left,  
@@ -1532,14 +1507,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- links  
+ *left*  
  Linker zu vergleichender Container.  
   
- Rechts  
+ *right*  
  Rechter zu vergleichender Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt die Operatorfunktion `right` `<` `left`. Sie zum Testen verwenden, ob `left` sortiert wird, ist nach `right` bei beiden Warteschlangen verglichenen elementweise sind.  
+ Gibt zurück, die Operatorfunktion `right` `<` `left`. Damit können Sie testen, ob *linken* sortiert wird, ist nach *rechten* bei beiden Warteschlangen verglichenen elementweise sind.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1577,8 +1552,7 @@ int main()
     System::Console::WriteLine("[a b d] > [a b c] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1589,11 +1563,11 @@ int main()
 ```  
 
 ## <a name="op_gteq"></a> Operator&gt;= (Warteschlange) (STL/CLR)
-Warteschlange, die größer als oder gleich Vergleich.  
+Warteschlange, die größer als oder gleich-Vergleich.  
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>=(queue<Value, Container>% left,  
@@ -1601,14 +1575,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- links  
+ *left*  
  Linker zu vergleichender Container.  
   
- Rechts  
+ *right*  
  Rechter zu vergleichender Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Gibt die Operatorfunktion `!(left < right)`. Sie verwenden es, um zu testen, ob `left` nicht sortiert ist `right` bei beiden Warteschlangen verglichenen elementweise sind.  
+ Gibt zurück, die Operatorfunktion `!(left < right)`. Damit können Sie testen, ob *linken* ist nicht geordnet, bevor Sie *rechten* bei beiden Warteschlangen verglichenen elementweise sind.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -1646,8 +1620,7 @@ int main()
     System::Console::WriteLine("[a b c] >= [a b d] is {0}",   
         c1 >= c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
