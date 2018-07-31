@@ -101,12 +101,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4395f19367cac69ad1e1d20b3d637437b5614603
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: b29a5d0538cb3608ceeb5ec09bd629b1de18b4b6
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233472"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338219"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor-Klasse
 
@@ -156,7 +156,7 @@ Der Konstruktor.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      typedef CDynamicParameterAccessor _ParamClass;  
+typedef CDynamicParameterAccessor _ParamClass;  
 CDynamicParameterAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
    DBLENGTH nBlobSize = 8000 )   
    : CDynamicAccessor(eBlobHandling, nBlobSize )  
@@ -179,7 +179,7 @@ Ruft die Zeichenfolgendaten nicht für einen angegebenen Parameter aus dem Param
   
 ```cpp
 template <class ctype>bool GetParam(DBORDINAL nParam,   
-  ctype* pData) const throw();  
+   ctype* pData) const throw();  
 
 template <class ctype> bool GetParam(TCHAR* pParamName,   
    ctype* pData) const throw();  
@@ -214,7 +214,6 @@ Ruft die Anzahl von Parametern, die im Puffer gespeichert.
   
 ```cpp
 DB_UPARAMS GetParamCount() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -257,7 +256,7 @@ Ruft die Länge des angegebenen Parameters ab, der im Puffer gespeichert ist.
   
 ```cpp
 bool GetParamLength(DBORDINAL nParam,  
-  DBLENGTH* pLength);  
+   DBLENGTH* pLength);  
 
 DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();  
 ```  
@@ -278,7 +277,7 @@ Ruft den Namen des angegebenen Parameters ab.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      LPOLESTR GetParamName(DBORDINAL nParam) const throw();  
+LPOLESTR GetParamName(DBORDINAL nParam) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -295,7 +294,7 @@ Ruft den Status des angegebenen Parameters ab, der im Puffer gespeichert ist.
   
 ```cpp
 bool GetParamStatus(DBORDINAL nParam,  
-  DBSTATUS* pStatus);  
+   DBSTATUS* pStatus);  
 
 DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();  
 ```  
@@ -317,11 +316,17 @@ Ruft die Zeichenfolgendaten Status des angegebenen Parameters ab, der im Puffer 
   
 ```cpp
 bool GetParamString(DBORDINAL nParam,  
-  CSimpleStringA& strOutput) throw();bool GetParamString(DBORDINAL nParam,  
-  CSimpleStringW& strOutput) throw();bool GetParamString(DBORDINAL nParam,  
-  CHAR* pBuffer,  
-   size_t* pMaxLen) throw();bool GetParamString(DBORDINAL nParam,  
-  WCHAR* pBuffer,  
+   CSimpleStringA& strOutput) throw();
+
+bool GetParamString(DBORDINAL nParam,  
+   CSimpleStringW& strOutput) throw();
+   
+bool GetParamString(DBORDINAL nParam,  
+   CHAR* pBuffer,  
+   size_t* pMaxLen) throw();
+
+bool GetParamString(DBORDINAL nParam,  
+   WCHAR* pBuffer,  
    size_t* pMaxLen) throw();  
 ```  
   
@@ -356,7 +361,7 @@ Ruft den Datentyp eines angegebenen Parameters ab.
   
 ```cpp
 bool GetParamType(DBORDINAL nParam,  
-  DBTYPE* pType) const throw();  
+   DBTYPE* pType) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -377,13 +382,13 @@ Legt fest, der Parameterpuffer anhand der angegebenen (nicht-Zeichenfolge) Daten
 ```cpp
 template <class ctype>
 bool SetParam(DBORDINAL nParam,  
-               constctype* pData,  
-               DBSTATUS status = DBSTATUS_S_OK) throw();  
+   constctype* pData,  
+   DBSTATUS status = DBSTATUS_S_OK) throw();  
 
 template <class ctype>  
 bool SetParam(TCHAR* pParamName,  
-               const ctype* pData,  
-               DBSTATUS status = DBSTATUS_S_OK) throw();  
+   const ctype* pData,  
+   DBSTATUS status = DBSTATUS_S_OK) throw();  
 ```  
   
 #### <a name="parameters"></a>Parameter  

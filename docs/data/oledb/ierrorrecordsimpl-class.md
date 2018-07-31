@@ -76,12 +76,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4f12bd935e7dedf46e531d46e2ec91084059e9d
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 7339b345ad63f59a2db24251c06b80774305ab00
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269685"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338118"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl-Klasse
 Implementiert die OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) Schnittstelle, Hinzufügen von Einträgen zu und Abrufen von Datensätzen aus einem Datenmember ([M_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) vom Typ **CAtlArray <** `RecordClass`**>**.  
@@ -138,7 +138,7 @@ Ruft die Zeichenfolge zur fehlerbeschreibung aus einen Fehlerdatensatz ab.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
+LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -154,7 +154,7 @@ Ruft den GUID-Fehler aus einen Fehlerdatensatz ab.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      REFGUID GetErrorGUID(ERRORINFO& rCurError);  
+REFGUID GetErrorGUID(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -170,7 +170,7 @@ Ruft die Hilfekontext-ID aus einen Fehlerdatensatz ab.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
+DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -186,7 +186,7 @@ Ruft den Pfadnamen der Hilfedatei aus einen Fehlerdatensatz ab.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
+LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -202,7 +202,7 @@ Ruft den Quellcode, der den Fehler verursacht, über einen Fehlerdatensatz hat a
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
+LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -218,7 +218,7 @@ Fügt einen Datensatz auf den OLE DB-Error-Objekt.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
+STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
    DWORD dwLookupID,  
    DISPPARAMS *pdispparams,  
    IUnknown *punkCustomError,  
@@ -234,7 +234,7 @@ Gibt grundlegende Informationen über den Fehler, z. B. den Rückgabecode und di
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
    ERRORINFO *pErrorInfo);  
 ```  
   
@@ -247,7 +247,7 @@ Gibt einen Zeiger auf eine Schnittstelle für einen benutzerdefinierten Fehler-O
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
+STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
    REFIID riid,  
    IUnknown **ppObject);  
 ```  
@@ -261,7 +261,7 @@ Gibt eine [IErrorInfo](https://msdn.microsoft.com/library/ms718112.aspx) Schnitt
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
    LCID lcid,  
    IErrorInfo **ppErrorInfo);  
 ```  
@@ -275,7 +275,7 @@ Gibt die Fehlerparameter zurück.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
    DISPPARAMS *pdispparams);  
 ```  
   
@@ -288,7 +288,7 @@ Gibt die Anzahl der Datensätze in der OLE DB-Datensatz-Objekt zurück.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
+STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -300,10 +300,7 @@ Ein Array von fehlerdatensätzen.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-CAtlArray<  
-RecordClass  
-> m_rgErrors;  
-  
+CAtlArray< RecordClass > m_rgErrors;  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

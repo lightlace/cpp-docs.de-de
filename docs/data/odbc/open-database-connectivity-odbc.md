@@ -1,5 +1,5 @@
 ---
-title: Open Database Connectivity (ODBC) | Microsoft Docs
+title: Open Database Connectivity (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: de6931db1ef8048e6f376447307beebed67aa56a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a729497fe24fb0c08734e45d360965f5d22880c4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090447"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339447"
 ---
 # <a name="open-database-connectivity-odbc"></a>Open Database Connectivity (ODBC)
-Die MFC-Bibliothek (Microsoft Foundation Classes) stellt Klassen für die Programmierung mit ODBC (Open Database Connectivity) zur Verfügung. Ab Visual Studio 2015 und SQL Server 2012-ODBC-die ist die bevorzugte Methode zum Herstellen einer SQL-Datenquellen aus.
+Die MFC-Bibliothek (Microsoft Foundation Classes) stellt Klassen für die Programmierung mit ODBC (Open Database Connectivity) zur Verfügung. Ab Visual Studio 2015 und SQL Server 2012-ODBC-die ist die bevorzugte Methode für die Verbindung mit SQL-Datenquellen aus.
   
- Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter der [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK in MSDN.  
+ Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) -SDK in MSDN.  
   
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 -   [ODBC](odbc-basics.md)– die Open Database Connectivity-Standard und -API  
   
--   [Welche Unterstützung bietet MFC](odbc-and-mfc.md) für die ODBC-Programmierung  
+-   [Welche Unterstützung bietet MFC](odbc-and-mfc.md) für ODBC-Programmierung  
   
--   [Welche ODBC-Treiber zur Verfügung stehen](odbc-driver-list.md)  
+-   [Welche ODBC-Treiber verfügbar sind](odbc-driver-list.md)  
   
--   [Herstellen einer Verbindung mit der ODBC-Datenquellen](data-source-managing-connections-odbc.md)  
+-   [Herstellen einer Verbindung mit dem ODBC-Datenquellen](data-source-managing-connections-odbc.md)  
   
 -   [Datensatzfeldaustausch (RFX) aufzeichnen](record-field-exchange-rfx.md) zwischen einer Datenbank und einem Recordset-Objekt  
   
@@ -58,18 +58,18 @@ Die MFC-Bibliothek (Microsoft Foundation Classes) stellt Klassen für die Prog
   
 -   [Anpassen der SQL-Anweisung eines Recordsets](sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
--   [Festlegen, dass direkter SQL-Aufrufe](sql-making-direct-sql-calls-odbc.md)  
+-   [Erstellung direkter SQL-Aufrufe](sql-making-direct-sql-calls-odbc.md)  
   
 -   [Direktes Aufrufen von ODBC-API](odbc-calling-odbc-api-functions-directly.md)  
   
--   [Wie funktionieren die Datenbankklassen mit MFC Dokument-/ Ansichtarchitektur?](working-with-documents-and-views.md)  
+-   [Wie funktionieren die Datenbankklassen mit MFCs Dokument-/Ansichtarchitektur?](working-with-documents-and-views.md)  
   
 -   [Liste der ODBC-Treiber](odbc-driver-list.md)  
   
 ## <a name="odbc-database-tasks"></a>Aufgaben bei ODBC-Datenbanken  
- Diese Aufgaben basieren auf die MFC-Bibliothek [ODBC](odbc-basics.md) Klassen. Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter der [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK.  
+ Diese Aufgaben basieren auf die MFC-Bibliothek [ODBC](odbc-basics.md) Klassen. Weitere Informationen zur Verwendung der ODBC-API ohne MFC finden Sie unter den [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) SDK.  
   
--   [Installation und erste Schritte mit ODBC](installing-and-getting-started-with-odbc.md)  
+-   [Installation und erste Schritte mit dem ODBC-](installing-and-getting-started-with-odbc.md)  
   
 -   [Entwerfen und Erstellen einer ODBC-Datenbankanwendung](design-and-create-an-odbc-database-application.md)  
   

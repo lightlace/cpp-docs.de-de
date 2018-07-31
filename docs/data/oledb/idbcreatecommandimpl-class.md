@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ffc92cecb3b28423aa2e869171f730c956996cd
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 6a2457ed01214750091bd9ec5a59c9aeac819357
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269750"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336992"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl-Klasse
 Stellt eine Implementierung der [IDBCreateCommand](https://msdn.microsoft.com/library/ms711625.aspx) Schnittstelle.  
@@ -68,7 +68,7 @@ Erstellt einen neuen Befehl ein, und gibt die angeforderte Schnittstelle zurück
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,   
+STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,   
    REFIID riid,   
    IUnknown ** ppvCommand);  
 ```  

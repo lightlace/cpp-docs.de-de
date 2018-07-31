@@ -1,5 +1,5 @@
 ---
-title: CColumnAccessor-Klasse | Microsoft Docs
+title: CColumnAccessor-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d211277a8354d94f1892b97ea8f808cc0b22c30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c55b2e10112c38835bb1f230970db56a6f53d4e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095319"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341061"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor-Klasse
-Generiert Consumercode eingefügten.  
+Generiert Consumercode für eingefügte.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -36,25 +36,25 @@ class CColumnAccessor : public CAccessorBase
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- In den eingefügten Code wird jede Spalte als eine separate Accessor gebunden. Sollten Sie bedenken, dass diese Klasse in den eingefügten Code verwendet wird (z. B. Sie rechnen müssen sie beim Debuggen), jedoch in der Regel nie müssen Sie es oder seine Methoden direkt verwenden.  
+ In den injizierten Code verwenden wird jede Spalte als einen separaten Accessor gebunden. Sie sollten bedenken, dass diese Klasse in den injizierten Code verwendet wird (z. B. stoßen sollten sie beim Debuggen), aber Sie in der Regel nie direkt sie oder ihre Methoden zu verwenden.  
   
- `CColumnAccessor` implementiert die folgenden Stubmethoden, von denen jedes an der Funktionalität anderer Methoden des Eigenschaftenaccessors Klasse entsprechen:  
+ `CColumnAccessor` implementiert die folgenden Stubmethoden, von denen jede an der Funktionalität und der andere Accessor-Klassenmethoden entsprechen:  
   
 -   `CColumnAccessor` Der Konstruktor; instanziiert und initialisiert die `CColumnAccessor` Objekt.  
   
--   `CreateAccessor` Belegt Speicher für die Spalte bindungsstrukturen aus, und die spaltendatenmember initialisiert.  
+-   `CreateAccessor` Belegt Speicher für die Spalte bindungsstrukturen aus, und der Spaltenelemente für die Daten initialisiert.  
   
--   **BindColumns** Spalten Accessoren gebunden.  
+-   `BindColumns` Bindet Spalten Accessoren.  
   
--   **SetParameterBuffer** weist Puffer für Parameter.  
+-   `SetParameterBuffer` Ordnet Puffer für Parameter.  
   
--   `AddParameter` Die Parameter Eintrag Strukturen wird ein Parametereintrag eines hinzugefügt.  
+-   `AddParameter` Die Parameter-Eintrag-Strukturen wird ein Parametereintrag hinzugefügt.  
   
--   **HasOutputColumns** bestimmt, ob der Accessor Ausgabespalten hat  
+-   `HasOutputColumns` Bestimmt, ob der Accessor Spalten ausgegeben hat  
   
--   **HasParameters** bestimmt, ob der Accessor über Parameter verfügt.  
+-   `HasParameters` Bestimmt, ob der Accessor über Parameter verfügt.  
   
--   `BindParameters` Die erstellte Parameter an Spalten gebunden.  
+-   `BindParameters` Wird die erstellte Parameter an Spalten gebunden.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  

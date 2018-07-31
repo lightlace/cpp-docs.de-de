@@ -43,12 +43,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 70c9d1b5bc4952b0a56d8e136bc7b817a1e1b1c9
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 0f77f9a33b0cf51ea54d16f89e86ea914640f627
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269769"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339597"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl-Klasse
 Die OLE DB-Vorlagen-Implementierung, der die [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) -Schnittstelle in der OLE DB-Spezifikation.  
@@ -122,7 +122,7 @@ Löscht Zeilen aus dem Rowset.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,  
+STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBROWSTATUS rgRowStatus[]);  
@@ -137,7 +137,7 @@ Erstellt und initialisiert eine neue Zeile im Rowset.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,  
+STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,  
    HACCESSOR hAccessor,  
    void* pData,  
    HROW* phRow);  
@@ -152,7 +152,7 @@ Legt Datenwerte in einer oder mehreren Spalten fest.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (SetData )(HROW hRow,  
+STDMETHOD (SetData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pSrcData);  
 ```  

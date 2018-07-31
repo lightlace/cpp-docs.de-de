@@ -1,5 +1,5 @@
 ---
-title: Füllen eines Listenfelds aus einem zweiten Recordset (MFC-Datenzugriff) | Microsoft Docs
+title: Füllen eines Listenfelds aus einem zweiten Recordset (MFC-Datenzugriff) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed294527b4335459ab6d0658d9f57a5cb64a8fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e980f42384052e0ab4fbd0f98889509c41accf0b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090648"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339769"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Füllen eines Listenfelds aus einem zweiten Recordset MFC-(Datenzugriff)
 Standardmäßig ist eine Datensatzansicht mit einem einzigen Recordset-Objekt verknüpft, dessen Felder den Steuerelementen der Datensatzansicht zugeordnet sind. Manchmal möchten Sie ein Listenfeld- oder Kombinationsfeld-Steuerelement in die Datensatzansicht einfügen und mit Werten aus einem zweiten Recordset-Objekt füllen. Der Benutzer kann das Listenfeld zur Auswahl einer neuen Kategorie von Informationen verwenden, die in der Datensatzansicht angezeigt werden sollen. In diesem Thema wird beschrieben, wie und wann Sie dies tun sollten.  
@@ -40,15 +40,15 @@ Standardmäßig ist eine Datensatzansicht mit einem einzigen Recordset-Objekt ve
   
 1.  Erstellen Sie das Recordsetobjekt ([CRecordset](../mfc/reference/crecordset-class.md).  
   
-2.  Abrufen eines Zeigers auf die [CComboBox](../mfc/reference/ccombobox-class.md) Objekt für ein Kombinationsfeld-Steuerelement.  
+2.  Abrufen eines Zeigers auf die [CComboBox](../mfc/reference/ccombobox-class.md) -Objekt für das Kombinationsfeld-Steuerelement.  
   
 3.  Löschen Sie vorherige Inhalte aus dem Kombinationsfeld.  
   
-4.  Navigieren Sie durch alle Datensätze im Recordset Aufrufen [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) für jede Zeichenfolge des aktuellen Datensatzes, die Sie im Kombinationsfeld hinzufügen möchten.  
+4.  Navigieren Sie durch alle Datensätze im Recordset, Aufrufen von [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) für jede Zeichenfolge des aktuellen Datensatzes, die Sie zum Kombinationsfeld hinzufügen möchten.  
   
 5.  Initialisieren Sie die Auswahl im Kombinationsfeld.  
   
-```  
+```cpp  
 void CSectionForm::OnInitialUpdate()  
 {  
     // ...  

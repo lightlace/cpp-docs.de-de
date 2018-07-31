@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 457091d5dc0a76ce0cd495679d7c5f978e483574
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207626"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337721"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset-Klasse
 Abruft und verändert die Zeilen, die auf Daten in einer Massenoperation zu arbeiten, indem mehrere Zeilenhandles mit einem einzigen Aufruf abgerufen.  
@@ -166,7 +166,6 @@ Aufrufe [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) 
   
 ```cpp
 HRESULT AddRefRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -179,7 +178,6 @@ Erstellt ein neues `CBulkRowset` -Objekt und legt die Standardanzahl von Zeilen 
   
 ```cpp
 CBulkRowset();  
-  
 ```  
 
 ## <a name="movefirst"></a> CBulkRowset:: MoveFirst
@@ -189,7 +187,6 @@ Ruft die erste Zeile der Daten ab.
   
 ```cpp
 HRESULT MoveFirst() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -202,7 +199,6 @@ Wechselt zur letzten Zeile.
   
 ```cpp
 HRESULT MoveLast() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -215,7 +211,6 @@ Ruft die nächste Zeile der Daten ab.
   
 ```cpp
 HRESULT MoveNext() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -228,7 +223,6 @@ Wechselt zur vorherigen Zeile.
   
 ```cpp
 HRESULT MovePrev() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -240,7 +234,7 @@ Dadurch wird die Zeile, die durch ein Lesezeichen oder auf die Zeile an einem an
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark,  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
    DBCOUNTITEM lSkip = 0) throw();  
 ```  
   
@@ -259,8 +253,8 @@ Ruft Zeilen ab der ein Bruchteil Ausgangsposition im Rowset ab.
   
 ### <a name="syntax"></a>Syntax  
   
-```
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator,  
+```cpp
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
    DBCOUNTITEM nDenominator)throw();  
 ```  
   
@@ -287,8 +281,7 @@ Aufrufe [IRowset:: ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-HRESULT ReleaseRows() throw();  
-  
+HRESULT ReleaseRows() throw();   
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -300,7 +293,7 @@ Legt die Anzahl von Zeilenhandles, die von jedem Aufruf abgerufen.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      void SetRows(DBROWCOUNT nRows) throw();  
+void SetRows(DBROWCOUNT nRows) throw();  
 ```  
   
 #### <a name="parameters"></a>Parameter  

@@ -1083,12 +1083,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6c7b2cd83c9c0ce5dcaa32f04257bbbbe9618ca6
-ms.sourcegitcommit: 0bf5f6634d66ed92fffb32291ad9f854d9895b17
+ms.openlocfilehash: 02d0787ebb40379ac438880ab7a23aa36a0b0f56
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39250653"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338297"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Schemarowset-Klassen und Typedef-Klassen
 Ein Schema ist eine Auflistung von Datenbankobjekten, die Besitzer oder von einem bestimmten Benutzer erstellt wurden. Ein Katalog kann eine oder mehrere Schemas enthalten, aber es muss ein Schema namens INFORMATION_SCHEMA, die die Ansichten und Domänen des informationsschemas enthält immer enthalten. Informationen zum Datenbankschema in OLE DB mithilfe vordefinierter Schemarowsets abgerufen, und enthält Typen, Tabellen, Spalten, Indizes, Sichten, Assertionen und Einschränkungen, Statistiken, Zeichensätze, Sortierungen und Domänen.  

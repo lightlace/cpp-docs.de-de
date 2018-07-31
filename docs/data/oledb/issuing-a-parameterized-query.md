@@ -1,5 +1,5 @@
 ---
-title: Ausgeben einer parametrisierten Abfrage | Microsoft Docs
+title: Ausgeben einer parametrisierten Abfrage | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b377df31e9166ee5288d37b0843944a3b2eb6bc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104574"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339535"
 ---
 # <a name="issuing-a-parameterized-query"></a>Ausgeben einer parametrisierten Abfrage
-Im folgende Beispiel stellt eine einfache parametrisierte Abfrage, die Datensätze mit einer Altersfeld (, das größer als 30 ist) aus einer Tabelle in einer Microsoft Access-Datenbank abruft. Um den Parameter zu unterstützen, muss der Benutzerdatensatz eine weitere Zuordnung haben. Der folgende Code in einem ATL-Projekt verwendet die `CCommand` -Klasse statt der `CTable` im vorherigen Beispiel verwendete Klasse [Durchlaufen eines einfachen Rowsets](../../data/oledb/traversing-a-simple-rowset.md).  
+Im folgende Beispiel stellt eine einfache parametrisierte Abfrage, die Datensätze mit einem Feld "Age" (das größer als 30 ist) aus einer Tabelle in einer Microsoft Access-Datenbank abruft. Um den Parameter zu unterstützen, muss der Benutzerdatensatz eine zusätzliche Zuordnung verfügen. Der folgende Code in einem ATL-Projekt verwendet die `CCommand` -Klasse anstelle der `CTable` im vorherigen Beispiel verwendete Klasse [Durchlaufen eines einfachen Rowsets](../../data/oledb/traversing-a-simple-rowset.md).  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -51,9 +51,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Der Benutzerdatensatz `CArtists`, wie folgt aussieht:  
+ Benutzerdatensatz `CArtists`, sieht wie folgt aus:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

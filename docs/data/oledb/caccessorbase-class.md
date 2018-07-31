@@ -36,12 +36,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 99f6be0815572b88f7c46406262ed21eaefdb77d
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181197"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340663"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase-Klasse
 Alle Accessoren in OLE DB-Vorlagen, die von dieser Klasse abgeleitet werden. `CAccessorBase` können ein Rowset, um mehrere Accessoren zu verwalten. Darüber hinaus Bindung für Parameter und Ausgabespalten.  
@@ -74,7 +74,6 @@ Schließt die Accessoren.
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -86,7 +85,7 @@ Ruft den Accessorhandle für einen angegebenen Accessor ab.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      HACCESSOR GetHAccessor(ULONG nAccessor) const;  
+HACCESSOR GetHAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -103,7 +102,6 @@ Ruft die Anzahl der Accessoren, die von der Klasse erstellt.
   
 ```cpp
 ULONG GetNumAccessors() const;  
-  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -115,7 +113,7 @@ Gibt "true" zurück, wenn die Daten automatisch für den Accessor während eines
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      bool IsAutoAccessor(ULONG nAccessor) const;  
+bool IsAutoAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>Parameter  

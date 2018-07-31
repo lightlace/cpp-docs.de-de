@@ -1,5 +1,5 @@
 ---
-title: OLE DB-Anbietervorlagen (C++) | Microsoft Docs
+title: OLE DB-Anbietervorlagen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,57 +18,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a331e72433ca25d280d35edfd33a56402675aea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 204abfb28ed58051f27f62b522ed0b02a0a78585
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112744"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339574"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB-Anbietervorlagen (C++)
-OLE DB ist ein wichtiger Teil der Microsoft Universal Data Access-Strategie. Das OLE DB-Design ermöglicht es, hohe Leistung Datenzugriff aus einer beliebigen Datenquelle. Keine Tabellendaten können über OLE DB angezeigt werden, unabhängig davon, ob sie aus einer Datenbank stammt. Die Flexibilität bietet Ihnen eine enorme Power.  
+OLE DB ist ein wichtiger Teil der Microsoft Universal Data Access-Strategie. Der OLE DB-Entwurf ermöglicht leistungsstarke Datenzugriff aus einer beliebigen Datenquelle an. Tabellendaten können durch OLE DB angezeigt werden, unabhängig davon, ob sie eine Datenbank stammen. Die Flexibilität bietet Ihnen eine enorme Menge Energie.  
   
- Wie in beschrieben [OLE DB-Consumer und-Anbieter](../../data/oledb/ole-db-consumers-and-providers.md), OLE DB-Consumer und-Anbieter verwendet. Der Consumer fordert Daten; der Anbieter, die Daten in einem tabellarischen Format an den Consumer zurückgegeben wird. Hinsichtlich der Programmierung ist die wichtigste Implikation dieses Modell der Anbieter muss jeder Aufruf implementieren, die der Consumer vornehmen kann.  
+ Siehe [OLE DB-Consumer und-Anbieter](../../data/oledb/ole-db-consumers-and-providers.md), OLE DB-Consumer und-Anbieter verwendet. Der Consumer fordert Daten zurückgibt. der Anbieter gibt die Daten in einem tabellarischen Format an den Consumer zurück. Hinsichtlich der Programmierung besteht der wichtigste Aspekt dieses Modells, dass der Anbieter muss jeder Aufruf implementiert werden, die der Consumer vornehmen kann.  
   
 ## <a name="what-is-a-provider"></a>Was ist ein Anbieter?  
- OLE DB-Anbieter ist ein Satz von COM-Objekten, die Aufrufe aus einem Consumerobjekt Interface dienen übertragen von Daten in tabellarischer Form aus einer permanenten Quelle (als Datenspeicher bezeichnet) an den Consumer.  
+ OLE DB-Anbieter ist ein Satz von COM-Objekte, die Aufrufe von einem Consumerobjekt, Interface fungieren übertragen von Daten in tabellarischer Form aus einer permanenten Datenquelle (einen Datenspeicher bezeichnet) an den Consumer.  
   
- Anbieter können einfach oder komplex sein. Der Anbieter kann eine minimale Menge an Funktionalität oder ein vollständiges Produktion Qualität Anbieter unterstützen, durch mehrere Schnittstellen implementieren. Ein Anbieter kann geben eine Tabelle zurück, ermöglichen es dem Client wird das Format der Tabelle bestimmt und führen Operationen für diese Daten.  
+ Anbieter können einfach oder komplex sein. Der Anbieter kann eine minimale Menge an Funktionen erfüllen oder eine vollständige produktionsumgebung unterstützen, weitere Schnittstellen implementiert. Ein Anbieter kann geben eine Tabelle zurück, kann der Client das Format der Tabelle zu bestimmen und Vorgänge auf diesen Daten.  
   
- Jeder Anbieter implementiert einen Standardsatz von COM-Objekte für die Verarbeitung von Anforderungen vom Client mit einer standardmäßigen Bedeutung, dass jeder OLE DB-Consumer Daten von einem Anbieter, unabhängig von der Sprache (z. B. C++ und grundlegende) zugreifen kann.  
+ Jeder Anbieter implementiert einen standardmäßigen Satz von COM-Objekte zur Verarbeitung von Anforderungen vom Client mit einer standardmäßigen Bedeutung, alle OLE DB-Consumer Daten von einem Anbieter, unabhängig von der Sprache (z. B. C++ und grundlegende) zugreifen kann.  
   
- Jede COM-Objekt enthält mehrere Schnittstellen, von denen einige erforderlich sind und von denen einige sind optional. Durch die Implementierung der obligatorischen Schnittstellen können gewährleistet der Anbieter ein Mindestmaß an Funktionen (so genannte Kompatibilität), die einem beliebigen Client verwenden werden sollen. Ein Anbieter kann optionale Schnittstellen, um zusätzliche Funktionen bieten implementieren. [Der OLE DB-Vorlagen-Anbieterarchitektur](../../data/oledb/ole-db-provider-template-architecture.md) werden diese Schnittstellen im Detail beschrieben. Rufen Sie der Client sollte immer `QueryInterface` zu bestimmen, ob eine bestimmte Schnittstelle von einem Anbieter unterstützt.  
+ Jedes COM-Objekt enthält mehrere Schnittstellen, von denen einige erforderlich und von denen einige optional sind. Implementieren Sie die obligatorischen Schnittstellen, gewährleistet der Anbieter ein Mindestmaß an Funktionen (so genannte Kompatibilität), die einem beliebigen Client verwenden kann. Ein Anbieter kann es sich um optionale Schnittstellen um zusätzliche Funktionen bereitzustellen implementieren. [Der OLE DB-Anbieter Vorlage-Architektur](../../data/oledb/ole-db-provider-template-architecture.md) werden diese Schnittstellen im Detail beschrieben. Rufen Sie der Client sollten immer `QueryInterface` zu bestimmen, ob ein Anbieter eine bestimmte Schnittstelle unterstützt.  
   
-## <a name="ole-db-specification-level-support"></a>OLE DB-Spezifikation Unterstützung auf Hostebene  
- Der OLE DB-Anbietervorlagen unterstützen die Spezifikation der OLE DB Version 2.7. Verwenden den OLE DB-Anbietervorlagen, können Sie einen Ebene 0 kompatibel Anbieter implementieren. Die Anbieter-Beispiel verwendet die Vorlagen z. B. ein Servers Befehlsservers Befehl zu implementieren, das den DOS-Befehl DIR im Dateisystem Abfrage ausgeführt wird. Die Anbieter-Beispiel gibt die Verzeichnisinformationen in einem Rowset, also den OLE DB-Standardmechanismus zum Zurückgeben von tabellarischen Daten zurück.  
+## <a name="ole-db-specification-level-support"></a>Unterstützung von OLE DB-Spezifikation auf  
+ Der OLE DB-Anbietervorlagen unterstützt die Spezifikation der OLE DB-Version 2.7. Verwenden den OLE DB-Anbietervorlagen, können Sie einen kompatiblen Ebene 0-Anbieter implementieren. Das Anbieter-Beispiel, verwendet z. B. die Vorlagen, ein Servers Befehlsservers Befehl zu implementieren, das die DOS-Befehl DIR im Dateisystem Abfragen ausgeführt wird. Das Anbieter-Beispiel gibt die Verzeichnisinformationen zurück, in einem Rowset, die der OLE DB-Standardmechanismus für die Rückgabe von Tabellendaten ist.  
   
- Die einfachste Art des Anbieters, die von der OLE DB-Vorlagen unterstützt handelt es sich um eine nur-Lese Anbieter mit keine Befehle. Anbieter mit Befehlen werden ebenfalls unterstützt, wie das Hinzufügen von Lesezeichen und Lese-/Schreibzugriff-Funktion sind. Sie können einen Lese-/Schreibzugriff-Anbieter implementieren, indem Sie zusätzlichen Code schreiben. Dynamische Rowsets und Transaktionen werden von der aktuellen Version nicht unterstützt, jedoch können Sie diese hinzufügen, wenn Sie möchten.  
+ Die einfachste Art des von der OLE DB-Vorlagen unterstützten Anbieter ist ein nur-Lese Anbieter keine Befehle. Anbieter mit den Befehlen werden ebenfalls unterstützt, wie das Hinzufügen von Lesezeichen und Lese-/Schreibzugriff ist. Sie können einen Lese-/Schreibzugriff-Anbieter implementieren, durch das Schreiben von zusätzlichem Code. Dynamische Rowsets und Transaktionen werden von der aktuellen Version nicht unterstützt, aber Sie können diese hinzufügen, wenn Sie möchten.  
   
-## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>Auf diese Weise müssen Sie beim Erstellen eines OLE DB-Anbieters?  
- Erstellen Sie einen eigenen Anbieter ist nicht immer erforderlich; Microsoft bietet mehrere vorgefertigte Anbieter in der **Datenlinkeigenschaften** Dialogfeld in Visual C++. Der Hauptgrund zum Erstellen eines OLE DB-Anbieters ist die Universal Data Access-Strategie nutzen. Daher sind einige der Vorteile besteht:  
+## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>Wenn müssen Sie einen OLE DB-Anbieter zu erstellen?  
+ Sie ist nicht immer erforderlich, einen eigenen Anbieter erstellen; Microsoft bietet verschiedene vorgefertigte "," standard-Anbieter in der **Datenlinkeigenschaften** Dialogfeld in Visual C++. Der Hauptgrund für einen OLE DB-Anbieter erstellen, ist der Universal Data Access-Strategie nutzen. Einige der Vorteile dieser Vorgehensweise sind also:  
   
 -   Der Datenzugriff mithilfe einer beliebigen Sprache wie C++, Basic und Visual Basic Scripting Edition. Sie können verschiedene Programmierer in Ihrer Organisation Zugriff auf die gleichen Daten auf die gleiche Weise, unabhängig davon, welche Sprache sie verwenden.  
   
--   Verfügbarmachen der Daten zu anderen Datenquellen wie SQL Server, Excel und Access. Dies kann sehr nützlich, wenn Sie Daten zwischen unterschiedlichen Formaten übertragen möchten.  
+-   Verfügbarmachen der Daten zu anderen Datenquellen wie SQL Server, Excel und Access. Dies kann sehr nützlich, wenn Sie zum Übertragen von Daten zwischen unterschiedlichen Formaten sein.  
   
--   Teilnehmen an Cross-Datenquelle (heterogene)-Vorgänge. Dies kann eine sehr effektive Möglichkeit, Datawarehousing sein. Mithilfe von OLE DB-Anbieter können Sie Daten im systemeigenen Format speichern und weiterhin in der Lage für den Zugriff darauf in ein einfacher Vorgang.  
+-   Er in Operationen, Cross-Datenquelle (heterogenen). Dies kann ein sehr wirksamer Weg von Datawarehousing sein. Mithilfe von OLE DB-Anbieter können Sie Daten im systemeigenen Format beibehalten und weiterhin können sie in einem einfachen Vorgang darauf zugreifen.  
   
--   Hinzufügen von zusätzlichen Funktionen für die Daten, wie die abfrageverarbeitung.  
+-   Hinzufügen von zusätzlichen Funktionen auf Ihre Daten, z. B. die Verarbeitung von Abfragen.  
   
--   Erhöhen der Leistung beim Zugriff auf Daten durch steuern, wie es bearbeitet wird.  
+-   Erhöhen der Leistung beim Zugriff auf Daten, indem Sie steuern, wie es bearbeitet wird.  
   
--   Höhere Stabilität. Wenn Sie ein proprietäres Format haben, nur ein Programmierer zugreifen kann, Sie sind gefährdet. OLE DB-Anbieter verwenden, können Sie diese proprietäre Format für alle Ihre Programmierer öffnen.  
+-   Höhere Stabilität. Wenn Sie ein proprietäres Format haben, nur ein Programmierer zugreifen kann, die Sie gefährdet sind. Verwenden OLE DB-Anbieter, können Sie proprietäre Formate für alle Ihre Programmierer öffnen.  
   
 ## <a name="read-only-and-updatable-providers"></a>Nur-Lese und aktualisierbare Anbieter  
- Anbieter können Komplexität und Funktionalität erheblich variieren. Es eignet sich zum Kategorisieren von Anbietern in nur-Lese und aktualisierbare Anbieter:  
+ Anbieter können Komplexität und Funktionalität stark variieren. Es ist hilfreich, die Anbieter in nur-Lese und aktualisierbare Anbieter kategorisieren:  
   
--   Visual C++ 6.0 unterstützt nur schreibgeschützte Anbieter. [Erstellen einen OLE DB-Anbieter](../../data/oledb/creating-an-ole-db-provider.md) erläutert, wie einen nur-Lese Anbieter erstellt.  
-  
--   Visual C++ unterstützt aktualisierbare Anbieter, die aktualisiert werden können (Schreiben) den Datenspeicher. Informationen zu aktualisierbaren Anbietern finden Sie unter [Erstellen eines aktualisierbaren Anbieters](../../data/oledb/creating-an-updatable-provider.md); das [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) Beispiel ist ein Beispiel eines aktualisierbaren Anbieters.  
+-   Visual C++ 6.0 unterstützt nur nur-Lese Anbieter. [Erstellen einen OLE DB-Anbieter](../../data/oledb/creating-an-ole-db-provider.md) wird erläutert, wie einen nur-Lese Anbieter erstellt.  
+-   Visual C++ unterstützt aktualisierbare Anbieter, die aktualisiert werden können (Schreiben) dem Datenspeicher. Weitere Informationen zu aktualisierbaren Anbietern finden Sie unter [Erstellen eines aktualisierbaren Anbieters](../../data/oledb/creating-an-updatable-provider.md); die [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) Beispiel ist ein Beispiel eines aktualisierbaren Anbieters.  
   
  Weitere Informationen finden Sie unter:  
   
--   [Architektur von OLE DB-Anbieter](../../data/oledb/ole-db-provider-template-architecture.md)  
+-   [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)  
   
 -   [Erstellen eines OLE DB-Anbieters](../../data/oledb/creating-an-ole-db-provider.md)  
   
@@ -76,5 +75,5 @@ OLE DB ist ein wichtiger Teil der Microsoft Universal Data Access-Strategie. Das
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenzugriff](../data-access-in-cpp.md)   
- [OLE DB-SDK-Dokumentation](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   
- [OLE DB-Programmierreferenz](https://msdn.microsoft.com/en-us/library/ms713643.aspx)
+ [OLE DB-SDK-Dokumentation](https://msdn.microsoft.com/library/ms722784.aspx)   
+ [OLE DB-Programmierreferenz](https://msdn.microsoft.com/library/ms713643.aspx)

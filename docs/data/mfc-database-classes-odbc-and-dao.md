@@ -1,5 +1,5 @@
 ---
-title: MFC-Datenbankklassen (ODBC und DAO) | Microsoft Docs
+title: MFC-Datenbankklassen (ODBC und DAO) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ef8331142550424641b00742d302caedc2974a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94202eab788d376abf80866beafe74c52180474f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088114"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336576"
 ---
 # <a name="mfc-database-classes"></a>MFC-Datenbankklassen 
 > [!NOTE]
->  Microsoft empfiehlt die Verwendung von ODBC über Microsoft ODBC Driver 13 (oder höher) für SQL Server für neue Projekte. DAO wird nicht mehr unterstützt.    
+>  Microsoft empfiehlt die Verwendung von ODBC über Microsoft ODBC Driver 13 (oder höher) für SQL Server für neue Projekte. DAO ist nicht mehr unterstützt.    
 
  Weitere Informationen finden Sie unter den folgenden Themen:  
--   [Data Access Technologies Road Map (Überblick über Datenzugriffstechnologien)](https://msdn.microsoft.com/en-us/library/ms810810.aspx) 
+-   [Data Access Technologies Road Map (Überblick über Datenzugriffstechnologien)](https://msdn.microsoft.com/library/ms810810.aspx) 
 
--   [ODBC Driver 13.1 for SQL Server freigegeben](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Microsoft ODBC Driver 13 für SQL Server sollte verwendet werden, um die Erstellung neuer Anwendungen oder zur Verbesserung vorhandener Anwendungen, die neue SQL Server 2016-Funktionen nutzen müssen.
+-   [ODBC-Treiber 13.1 für SQL Server-Version](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Microsoft ODBC Driver 13 für SQL Server sollte verwendet werden, um die Erstellung neuer Anwendungen oder Überarbeiten bestehender Anwendungen, die neue SQL Server 2016-Funktionen nutzen müssen.
   
 -   [ODBC und MFC](../data/odbc/odbc-and-mfc.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: OLE DB-Consumervorlagen (C++) | Microsoft Docs
+title: OLE DB-Consumervorlagen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 39264ed7485e67377963316730689645c73f185f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 636f98337cacdeddbdd42dd74e498c0fbd12e4f8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112107"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339398"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB-Consumervorlagen (C++)
 Die OLE DB-Consumervorlagen unterstützen die Spezifikation der OLE DB Version 2.6. (Die OLE DB-Consumervorlagen werden mit OLE DB 2.6 getestet, unterstützen aber nicht alle Schnittstellen in der Spezifikation.) Die Consumervorlagen minimieren die Menge an Code, den Sie schreiben müssen, um einen OLE DB-Consumer zu implementieren. Die Vorlagen bieten Folgendes:  
@@ -34,7 +34,7 @@ Die OLE DB-Consumervorlagen unterstützen die Spezifikation der OLE DB Version
   
 -   Systemeigene C/C++-Datentypen für die OLE DB-Programmierung.  
   
- Sie sollten mit C++-Vorlagen, COM und den OLE DB-Schnittstellen vertraut sein, um OLE DB-Vorlagen verwenden zu können. Wenn Sie nicht mit OLE DB vertraut sind, finden Sie entsprechende Informationen in der [OLE DB-Programmierreferenz](https://msdn.microsoft.com/en-us/library/ms718124.aspx).  
+ Sie sollten mit C++-Vorlagen, COM und den OLE DB-Schnittstellen vertraut sein, um OLE DB-Vorlagen verwenden zu können. Wenn Sie nicht mit OLE DB vertraut sind, finden Sie unter [OLE DB-Programmierreferenz](https://msdn.microsoft.com/library/ms718124.aspx).  
   
  Die OLE DB-Vorlagen unterstützen eher das vorhandene OLE DB-Objektmodell als das Hinzufügen eines neuen Objektmodells. Die Klassen der obersten Ebene in den OLE DB-Consumervorlagen gleichen den in der der OLE DB-Spezifikation definierten Komponenten. Das Design der OLE DB-Consumervorlagen umfasst erweiterte Features, z. B. mehrere Accessoren für ein Rowset. Durch die Verwendung von Vorlagen und der mehrfachen Vererbung ergibt sich eine kleine und flexible Bibliothek.  
   
@@ -68,5 +68,5 @@ Die OLE DB-Consumervorlagen unterstützen die Spezifikation der OLE DB Version
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)   
  [Datenzugriff](../data-access-in-cpp.md)   
- [OLE DB-SDK-Dokumentation](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   
- [OLE DB-Programmierreferenz](https://msdn.microsoft.com/en-us/library/ms713643.aspx)
+ [OLE DB-SDK-Dokumentation](https://msdn.microsoft.com/library/ms722784.aspx)   
+ [OLE DB-Programmierreferenz](https://msdn.microsoft.com/library/ms713643.aspx)

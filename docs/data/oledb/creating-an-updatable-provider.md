@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbcd69168b70e8d85bf2b90c3f456f79cd1c228c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e9ee36d2300ed1e86c1f867012ed54c85692f5bd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954583"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340637"
 ---
 # <a name="creating-an-updatable-provider"></a>Erstellen eines aktualisierbaren Anbieters
 
@@ -30,7 +30,7 @@ Visual C++ unterstützt aktualisierbare Anbieter oder Anbieter, die aktualisiert
   
  In diesem Thema wird davon ausgegangen, dass Sie mit einem praktikable Anbieter starten. Es gibt zwei Schritte zum Erstellen eines aktualisierbaren Anbieters. Zunächst müssen Sie entscheiden, wie der Anbieter Änderungen an den Datenspeicher vereinfachen; insbesondere gibt an, ob Änderungen werden sofort erfolgen oder verzögert, bis ein Updatebefehl ausgegeben wird. Im Abschnitt "[aktualisierbare Anbieter machen](#vchowmakingprovidersupdatable)" beschreibt die Änderungen und die Einstellungen, die Sie in den Anbietercode tun müssen.  
   
- Als Nächstes müssen Sie sicherstellen, dass Ihr Anbieter enthält die gesamte Funktionalität zur Unterstützung der Consumer des anfordern kann. Wenn der Consumer den Datenspeicher zu aktualisieren möchte, muss der Anbieter Code enthalten, die Daten im Datenspeicher beibehalten. Beispielsweise können Sie der C-Laufzeitbibliothek oder die MFC-verwenden, um die Vorgänge an der Datenquelle auszuführen. Im Abschnitt "[Schreiben in die Datenquelle](#vchowwritingtothedatasource)" beschreibt, wie Sie mit der Datenquelle zu schreiben, das Vorgehen bei `NULL` und Standardwerte und die Spaltenflags festlegen.  
+ Als Nächstes müssen Sie sicherstellen, dass Ihr Anbieter enthält die gesamte Funktionalität zur Unterstützung der Consumer des anfordern kann. Wenn der Consumer den Datenspeicher zu aktualisieren möchte, muss der Anbieter Code enthalten, die Daten im Datenspeicher beibehalten. Beispielsweise können Sie der C-Laufzeitbibliothek oder die MFC-verwenden, um die Vorgänge an der Datenquelle auszuführen. Im Abschnitt "[Schreiben in die Datenquelle](#vchowwritingtothedatasource)" beschreibt, wie Sie mit der Datenquelle zu schreiben, befassen sich mit NULL-und Standardwerten und Spaltenflags festlegen.  
   
 > [!NOTE]
 >  UpdatePV ist ein Beispiel eines aktualisierbaren Anbieters. UpdatePV ist identisch, wie MyProv, jedoch mit aktualisierbaren Unterstützung.  
@@ -55,7 +55,7 @@ Visual C++ unterstützt aktualisierbare Anbieter oder Anbieter, die aktualisiert
   
      Hinzufügen `IRowsetChangeImpl` der Vererbungskette, die mit dieser Form:  
   
-    ```  
+    ```cpp  
     IRowsetChangeImpl< rowset-name, storage-name >  
     ```  
   
@@ -65,7 +65,7 @@ Visual C++ unterstützt aktualisierbare Anbieter oder Anbieter, die aktualisiert
   
      Hinzufügen `IRowsetUpdate` der Vererbungskette, die mit dieser Form:  
   
-    ```  
+    ```cpp  
     IRowsetUpdateImpl< rowset-name, storage>  
     ```  
   
@@ -88,7 +88,7 @@ Visual C++ unterstützt aktualisierbare Anbieter oder Anbieter, die aktualisiert
   
 4.  In der Zuordnung des Eigenschaftensets sollten Sie auch alle der folgenden Einstellungen hinzufügen wie sie unten angezeigt werden:  
   
-    ```  
+    ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
       DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
     PROPERTY_INFO_ENTRY_VALUE(CHANGEINSERTEDROWS, VARIANT_TRUE)  

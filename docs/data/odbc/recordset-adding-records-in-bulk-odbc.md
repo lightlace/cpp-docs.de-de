@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Hinzufügen von Datensätzen in einer Sammeloperation (ODBC) | Microsoft Docs'
+title: 'Recordset: Hinzufügen von Datensätzen in einer Sammeloperation (ODBC) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7bb39b910eae797f360513954ad0c32d5e99bb86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 167cf817074a992fae5492ba387ea8a3589a10ec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089284"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337228"
 ---
 # <a name="recordset-adding-records-in-bulk-odbc"></a>Recordset: Hinzufügen von Datensätzen in einer Sammeloperation (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
   
- Die MFC-Bibliothek [CRecordset](../../mfc/reference/crecordset-class.md) -Klasse verfügt über eine neue Optimierung, die Effizienz verbessert, wenn Sie neue Datensätze in einem Massenvorgang in eine Tabelle hinzufügen.  
+ Die MFC-Bibliothek [CRecordset](../../mfc/reference/crecordset-class.md) -Klasse verfügt über eine neue Optimierung, die Effizienz verbessert werden, wenn Sie neue Datensätze in eine Tabelle in einer Massenoperation hinzufügen.  
   
 > [!NOTE]
->  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie gesammelte verwenden, finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie die gesammelte verwenden werden, finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Eine neue Option für die **Wert** Parameter an die [CRecordset](../../mfc/reference/crecordset-class.md#open) Memberfunktion, **OptimizeBulkAdd**, verbessert die Leistung beim Hinzufügen mehrerer Datensätze fortlaufend ohne Aufruf **Requery** oder **schließen**. Nur die Felder, die vor dem ersten dirty sind **Update** Aufruf werden als modifizierte für nachfolgende `AddNew` / **Update** aufrufen.  
+ Eine neue Option für die *DwOptions* Parameter, um die [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) Memberfunktion `optimizeBulkAdd`, verbessert die Leistung bei der Sie mehrere Datensätze ohne hintereinanderhinzufügen`Requery` oder `Close`. Nur die Felder, die vor dem ersten dirty `Update` Aufruf werden als modifizierte für nachfolgende `AddNew` / `Update` aufrufen.  
   
- Wenn Sie die Datenbankklassen verwenden, nutzen die **:: SQLSetPos** ODBC-API-Funktion zum Hinzufügen, bearbeiten und Löschen von Datensätzen, diese Optimierung ist nicht erforderlich.  
+ Wenn Sie die Datenbankklassen verwendet werden, nutzen die `::SQLSetPos` ODBC-API-Funktion zum Hinzufügen, bearbeiten und Löschen von Datensätzen, ist diese Optimierung nicht erforderlich.  
   
- Wenn die ODBC-Cursorbibliothek geladen ist oder der ODBC-Treiber unterstützt keine hinzufügen, bearbeiten und löschen Sie über **:: SQLSetPos**, diese Optimierung sollten Bulk verbessern Leistung hinzufügen. Um diese Optimierung zu aktivieren, setzen die **OpenEx** Parameter in der **öffnen** für das Recordset, der dem folgenden aufrufen:  
+ Wenn die ODBC-Cursorbibliothek geladen ist, oder der ODBC-Treiber unterstützt nicht das Hinzufügen, bearbeiten und Löschen von über `::SQLSetPos`, diese Optimierung sollten Bulk verbessern Leistung hinzufügen. Um diese Optimierung zu deaktivieren, setzen die *DwOptions* Parameter in der `Open` für Recordsets der folgenden aufrufen:  
   
 ```  
 appendOnly | optimizeBulkAdd  

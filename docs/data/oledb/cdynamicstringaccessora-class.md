@@ -1,5 +1,5 @@
 ---
-title: CDynamicStringAccessorA-Klasse | Microsoft Docs
+title: CDynamicStringAccessorA-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6d05ac97846f55cf65d4010179b28d2b543ef66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e56f71a427fda2444992cc0ed2c3b6166993af1d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096482"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341022"
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA-Klasse
-Können Sie eine Datenquelle zugreifen, wenn Sie keine Kenntnisse des Datenbankschemas (zugrunde liegende Struktur) verfügen.  
+Können Sie eine Datenquelle zugreifen, wenn Sie keine Kenntnisse über das Datenbankschema (zugrunde liegende Struktur) verfügen.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -34,16 +34,16 @@ typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Beide anfordern, dass der Anbieter alle Daten, die aus dem Datenspeicher als die Zeichenfolgedaten zugegriffen abzurufen, aber `CDynamicStringAccessor` Anforderungen ANSI-Zeichenfolgendaten.  
+ Beide anfordern, dass der Anbieter alle Daten aus dem Datenspeicher Daten, die Zeichenfolge abruft, aber `CDynamicStringAccessor` Anforderungen ANSI-Zeichenfolgendaten.  
   
- `CDynamicStringAccessorA` erbt **GetString** und `SetString` aus `CDynamicStringAccessor`. Bei Verwendung dieser Methoden in einer `CDynamicStringAccessorA` Objekt ***BaseType*** ist **CHAR**.  
+ `CDynamicStringAccessorA` erbt `GetString` und `SetString` aus `CDynamicStringAccessor`. Bei Verwendung dieser Methoden in einer `CDynamicStringAccessorA` Objekt ***BaseType*** ist **CHAR**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header**: atldbcli.h  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB-Consumer-Vorlagenreferenz](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Referenz der OLE DB Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor-Klasse](../../data/oledb/caccessor-class.md)   
  [CDynamicParameterAccessor-Klasse](../../data/oledb/cdynamicparameteraccessor-class.md)   
  [CManualAccessor-Klasse](../../data/oledb/cmanualaccessor-class.md)   

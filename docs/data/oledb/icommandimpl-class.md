@@ -63,12 +63,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18174281baf76b383b56b10e86e2659279037b6c
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 07453e3040594332857ba75455b1847a3914fdd2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269598"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337793"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl-Klasse
 Stellt die Implementierung für die [ICommand](https://msdn.microsoft.com/library/ms709737.aspx) Schnittstelle.  
@@ -121,7 +121,6 @@ Bricht die Ausführung des aktuellen Befehls ab.
   
 ```cpp
 STDMETHOD(Cancel)();  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -134,7 +133,6 @@ Bricht die Ausführung des aktuellen Befehls ab.
   
 ```cpp
 HRESULT CancelExecution();  
-  
 ```  
 
 ## <a name="createrowset"></a> ICommandImpl:: CreateRowset
@@ -143,8 +141,7 @@ Wird aufgerufen, indem [Execute](../../data/oledb/icommandimpl-execute.md) um ei
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      template template <class RowsetClass  
-      >  
+template template <class RowsetClass>  
 HRESULT CreateRowset(IUnknown* pUnkOuter,  
    REFIID riid,  
    DBPARAMS* pParams,  
@@ -210,7 +207,7 @@ Gibt einen Schnittstellenzeiger zurück, mit der Sitzung, die den Befehl erstell
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (GetDBSession) (REFIID riid,  
+STDMETHOD (GetDBSession) (REFIID riid,  
    IUnknown** ppSession);  
 ```  
   
@@ -227,7 +224,6 @@ Der Konstruktor.
   
 ```cpp
 ICommandImpl();  
-  
 ```  
 
 ## <a name="bcancel"></a> ICommandImpl:: M_bcancel
@@ -237,7 +233,6 @@ Gibt an, ob der Befehl abgebrochen wird.
   
 ```cpp
 unsigned m_bCancel:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -250,7 +245,6 @@ Gibt an, ob der Befehl für die Ausführung abgebrochen werden kann.
   
 ```cpp
 unsigned m_bCancelWhenExecuting:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -263,7 +257,6 @@ Gibt an, ob der Befehl derzeit ausgeführt wird.
   
 ```cpp
 unsigned m_bIsExecuting:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  

@@ -1,5 +1,5 @@
 ---
-title: Transaktionsobjekt-Schnittstellen | Microsoft Docs
+title: Transaktionsobjekt-Schnittstellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 415fdec8397b72bf8f391865fb5af418f95fdf03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba98cfa4a88b695995902bdaca5e4ae3f33e5198
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104551"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339753"
 ---
 # <a name="transaction-object-interfaces"></a>Transaktionsobjekt-Schnittstellen
-Das Transaktionsobjekt, das eine unteilbare Arbeitseinheit für eine Datenquelle definiert und bestimmt, wie diese Arbeitseinheiten miteinander in Beziehung stehen. Dieses Objekt wird von der OLE DB-Anbietervorlagen nicht direkt unterstützt (d. h. Sie müssen ein eigenes Objekt erstellen).  
+Das Transaktionsobjekt, das eine unteilbare Arbeitseinheit in einer Datenquelle definiert, und bestimmt, wie diese Arbeitseinheiten miteinander in Beziehung stehen. Dieses Objekt wird nicht direkt von der OLE DB-Anbietervorlagen unterstützt (d. h. Sie müssen ein eigenes Objekt erstellen).  
   
- Die folgende Tabelle zeigt die obligatorischen und optionalen Schnittstellen, die durch OLE DB für ein Transaktionsobjekt definiert.  
+ Die folgende Tabelle zeigt die erforderlichen und optionalen Schnittstellen, die durch OLE DB für ein Transaktionsobjekt definiert.  
   
 |Interface|Erforderlich?|Vom OLE DB-Vorlagen implementiert?|  
 |---------------|---------------|--------------------------------------|  
 |[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Erforderlich|Nein|  
-|[ITransaction](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|Erforderlich|Nein|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Optional|Nein|  
+|[ITransaction](https://msdn.microsoft.com/library/ms723053.aspx)|Erforderlich|Nein|  
+|[ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Optional|Nein|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Architektur von OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-template-architecture.md)

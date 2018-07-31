@@ -76,12 +76,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eafb9c3eb9c8d76ee0c714b6b7c7c2f4e9e7eef1
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 64e7973c1a818b51173fd4f44458266c10053710
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207801"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338258"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection-Klasse
 Verwaltet die Verbindung mit der Datenquelle an.  
@@ -133,8 +133,7 @@ Instanziiert und initialisiert ein `CDataConnection` Objekt.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      CDataConnection();   
-
+CDataConnection();   
 CDataConnection(const CDataConnection &ds);  
 ```  
   
@@ -153,7 +152,7 @@ Erstellt eine Kopie einer vorhandenen Datenverbindung an.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      CDataConnection& Copy(const CDataConnection & ds) throw();  
+CDataConnection& Copy(const CDataConnection & ds) throw();  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -202,7 +201,6 @@ Bestimmt, ob die aktuelle Sitzung geöffnet oder nicht ist.
   
 ```cpp
 operator BOOL() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -215,7 +213,6 @@ Bestimmt, ob die aktuelle Sitzung geöffnet oder nicht ist.
   
 ```cpp
 operator bool() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -228,7 +225,6 @@ Gibt einen Verweis auf die enthaltene `CDataSource` Objekt.
   
 ```cpp
 operator const CDataSource&() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -248,7 +244,6 @@ Gibt einen Zeiger auf die enthaltene `CDataSource` Objekt.
   
 ```cpp
 operator const CDataSource*() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -263,7 +258,6 @@ Gibt einen Verweis auf die enthaltene `CSession` Objekt.
   
 ```cpp
 operator const CSession&();  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -283,7 +277,6 @@ Gibt einen Zeiger auf die enthaltene `CSession` Objekt.
   
 ```cpp
 operator const CSession*() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
