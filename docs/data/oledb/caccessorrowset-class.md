@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9f869a901885b064ef4ddbbfddc23b246455a39
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: edc18dcb83b2dda63fd5cfb5c56c3c95baa72df0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181184"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340728"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset-Klasse
 Kapselt ein Rowset und die zugehörigen Accessoren in einer einzelnen Klasse.  
@@ -55,7 +55,7 @@ Kapselt ein Rowset und die zugehörigen Accessoren in einer einzelnen Klasse.
 
 ```cpp
 template <class TAccessor = CNoAccessor, 
-          template <typename T> class TRowset = CRowset>  
+   template <typename T> class TRowset = CRowset>  
 class CAccessorRowset : public TAccessor, public TRowset<TAccessor>  
 ```  
   
@@ -79,7 +79,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|Konstruktor.|  
 |[Schließen](#close)|Schließt das Rowset und alle Accessoren.|  
 |[FreeRecordMemory](#freerecordmemory)|Gibt alle Spalten im aktuellen Datensatz, der freigegeben werden müssen frei.|  
-|[GetColumnInfo](#getcolumninfo)|Implementiert [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx).|  
+|[GetColumnInfo](#getcolumninfo)|Implementiert [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx).|  
   
 ## <a name="remarks"></a>Hinweise  
  Klasse `TAccessor` verwaltet die Zugriffsmethode. Klasse *TRowset* verwaltet das Rowset.  
@@ -91,7 +91,6 @@ Die Bindungen erstellt, wenn Sie angegeben haben `bBind` als **"false"** in [CCo
   
 ```cpp
 HRESULT Bind();  
-  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
@@ -104,7 +103,6 @@ Initialisiert das `CAccessorRowset`-Objekt.
   
 ```cpp
 CAccessorRowset();  
-  
 ```  
 
 ## <a name="close"></a> CAccessorRowset:: Close
@@ -114,7 +112,6 @@ Gibt alle aktiven Accessoren und Rowsets frei.
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -127,7 +124,6 @@ Gibt alle Spalten im aktuellen Datensatz, der freigegeben werden müssen frei.
   
 ```cpp
 void FreeRecordMemory();  
-  
 ```  
 
 ## <a name="getcolumninfo"></a> CAccessorRowset:: GetColumnInfo
@@ -136,16 +132,16 @@ Ruft die Spalteninformationen aus dem geöffneten Rowset ab.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-HRESULT GetColumnInfo(DBORDINAL* pulColumns,  
-   DBCOLUMNINFO** ppColumnInfo,  
-   LPOLESTR* ppStrings) const;  
-
-HRESULT GetColumnInfo(DBORDINAL* pColumns,  
+HRESULT GetColumnInfo(DBORDINAL* pulColumns, 
+   DBCOLUMNINFO** ppColumnInfo, 
+   LPOLESTR* ppStrings) const; 
+    
+HRESULT GetColumnInfo(DBORDINAL* pColumns, 
    DBCOLUMNINFO** ppColumnInfo);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) in die *OLE DB-Programmierreferenz*.  
+ Finden Sie unter [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard-HRESULT.  
@@ -153,7 +149,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ### <a name="remarks"></a>Hinweise  
  Der Benutzer muss den zurückgegebenen Spalteninformationen und Zeichenfolgenpuffer freigeben. Verwenden Sie die zweite Version dieser Methode, bei der Verwendung [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) und die Bindungen außer Kraft setzen müssen.  
   
- Weitere Informationen finden Sie unter [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) in die *OLE DB-Programmierreferenz*.  
+ Weitere Informationen finden Sie unter [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) in die *OLE DB-Programmierreferenz*.  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   

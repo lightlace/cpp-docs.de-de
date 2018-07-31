@@ -1,5 +1,5 @@
 ---
-title: CNoRowset-Klasse | Microsoft Docs
+title: CNoRowset-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 87d005dc19ef286bc4b0da927ecabcd90e6f0235
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098159"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339561"
 ---
 # <a name="cnorowset-class"></a>CNoRowset-Klasse
 Kann als ein Vorlagenargument verwendet werden (`TRowset`) für [CCommand](../../data/oledb/ccommand-class.md) oder [CTable](../../data/oledb/ctable-class.md).  
@@ -38,28 +38,28 @@ template <class TAccessor = CAccessorBase>
 class CNoRowset  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `TAccessor`  
- Ein Accessorklasse. Die Standardeinstellung ist `CAccessorBase`.  
+### <a name="parameters"></a>Parameter  
+ *TAccessor*  
+ Ein Accessor-Klasse. Die Standardeinstellung ist `CAccessorBase`.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwendung `CNoRowset` als ein Vorlagenargument, wenn der Befehl kein Rowset zurückgibt.  
   
- `CNoRowset` implementiert die folgenden Stubmethoden, von denen jedes anderen Methoden des Eigenschaftenaccessors Klasse entsprechen:  
+ `CNoRowset` implementiert die folgenden Stubmethoden, von denen jedes anderen Klassenmethoden Accessor entsprechen:  
   
--   **BindFinished** -gibt an, wann die Bindung abgeschlossen ist (gibt `S_OK`).  
+-   `BindFinished` -Gibt an, wenn die Bindung abgeschlossen ist (gibt `S_OK`).  
   
--   **Schließen** -frei, Zeilen und die aktuelle IRowset-Schnittstelle.  
+-   `Close` -Versionen der Zeilen und die aktuelle IRowset-Schnittstelle.  
   
--   `GetIID` -Ruft die Schnittstellen-ID von einem Verbindungspunkt ab.  
+-   `GetIID` -Ruft Sie die Schnittstellen-ID eines Verbindungspunkts ab.  
   
--   **GetInterface** -Schnittstelle abruft.  
+-   `GetInterface` -Ruft eine Schnittstelle ab.  
   
--   `GetInterfacePtr` -Ruft einen gekapselten Schnittstellenzeiger ab.  
+-   `GetInterfacePtr` -Ruft ab einen gekapselten Schnittstellenzeiger auf.  
   
--   **SetAccessor** -legt einen Zeiger auf den Accessor fest.  
+-   `SetAccessor` – Legt fest, die dem Accessor einen Zeiger.  
   
--   **SetupOptionalRowsetInterfaces** -optionale Schnittstellen für Rowset richtet.  
+-   `SetupOptionalRowsetInterfaces` – Legt fest, um optionale Schnittstellen für das Rowset.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  

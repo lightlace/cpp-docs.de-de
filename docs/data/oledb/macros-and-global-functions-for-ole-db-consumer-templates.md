@@ -111,12 +111,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e5d9105492af55547794023c3574fb626d470828
-ms.sourcegitcommit: 0bf5f6634d66ed92fffb32291ad9f854d9895b17
+ms.openlocfilehash: a915a581a574193918f86f80083d3202c9949674
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39250666"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338147"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Makros und globale Funktionen für OLE-Consumervorlagen
 Die OLE DB-Consumervorlagen gehören die folgenden Makros und globale Funktionen:  
@@ -197,7 +197,7 @@ Gibt OLE DB-Fehlerdatensatz Informationen auf dem Sicherungsmedium an, wenn ein 
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-      inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);  
+inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -305,7 +305,6 @@ Markiert das Ende eines Eintrags für die Zugriffsmethode.
   
 ```cpp
 END_ACCESSOR()  
-  
 ```  
   
 #### <a name="remarks"></a>Hinweise  
@@ -321,7 +320,6 @@ Markiert das Ende der Accessor-Zuordnungseinträge.
   
 ```cpp
 END_ACCESSOR_MAP()  
-  
 ```  
   
 #### <a name="remarks"></a>Hinweise  
@@ -335,7 +333,7 @@ Kennzeichnet den Anfang eines Spaltenzuordnungseintrags.
   
 #### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 BEGIN_COLUMN_MAP(x)  
 ```  
   
@@ -362,7 +360,6 @@ Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objek
   
 ```cpp
 BLOB_ENTRY(nOrdinal, IID, flags, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -388,7 +385,6 @@ Mit BEGIN_COLUMN_MAP und END_COLUMN_MAP verwendet, um ein großes binäres Objek
   
 ```cpp
 BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -453,8 +449,7 @@ BEGIN_COLUMN_MAP oder BEGIN_ACCESSOR_MAP verwendet werden, um ein großes binär
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)  
-  
+BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)   
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -586,7 +581,6 @@ Bindet die Lesezeichenspalte an.
   
 ```cpp
 BOOKMARK_ENTRY(variable)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -652,7 +646,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte des Rowsets dar.
   
 ```cpp
 COLUMN_ENTRY(nOrdinal, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -683,7 +676,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte in der Datenbank
   
 ```cpp
 COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -732,7 +724,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte in der Datenbank
   
 ```cpp
 COLUMN_ENTRY_LENGTH(nOrdinal, data, length)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -763,7 +754,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte in der Datenbank
   
 ```cpp
 COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -797,7 +787,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte des Rowsets dar.
   
 ```cpp
 COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -831,7 +820,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte in der Datenbank
   
 ```cpp
 COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -868,7 +856,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte in der Datenbank
   
 ```cpp
 COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -908,7 +895,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte in der Datenbank
   
 ```cpp
 COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -945,7 +931,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte in der Datenbank
   
 ```cpp
 COLUMN_ENTRY_STATUS(nOrdinal, data, status)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -976,7 +961,6 @@ Stellt eine Bindung an die spezifische Spalte in der Datenbank dar. Unterstützt
   
 ```cpp
 COLUMN_ENTRY_TYPE (nOrdinal, wType, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -999,7 +983,6 @@ Stellt eine Bindung an die spezifische Spalte in der Datenbank dar. Unterstützt
   
 ```cpp
 COLUMN_ENTRY_TYPE_SIZE(nOrdinal, wType, nLength, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -1025,7 +1008,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte des Rowsets dar.
   
 ```cpp
 COLUMN_NAME(pszName, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -1088,7 +1070,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte des Rowsets dar.
   
 ```cpp
 COLUMN_NAME_LENGTH(pszName, data, length)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -1270,7 +1251,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte des Rowsets dar.
   
 ```cpp
 COLUMN_NAME_TYPE(pszName, wType, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -1293,7 +1273,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte des Rowsets dar.
   
 ```cpp
 COLUMN_NAME_TYPE_PS(pszName, wType, nPrecision, nScale, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -1322,7 +1301,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte des Rowsets dar.
   
 ```cpp
 COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -1348,7 +1326,6 @@ Stellt eine Bindung für das Rowset für die spezifische Spalte des Rowsets dar.
   
 ```cpp
 COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -1374,7 +1351,6 @@ Markiert das Ende der Zuordnungseintrags-Spalte.
   
 ```cpp
 END_COLUMN_MAP()  
-  
 ```  
   
 #### <a name="remarks"></a>Hinweise  
@@ -1393,7 +1369,6 @@ Gibt den Befehl, der verwendet wird, um das Rowset zu erstellen, bei Verwendung 
   
 ```cpp
 DEFINE_COMMAND(x, szCommand)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -1418,7 +1393,6 @@ Gibt den Befehl, der verwendet wird, um das Rowset zu erstellen, bei Verwendung 
   
 ```cpp
 DEFINE_COMMAND_EX(x, wszCommand)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -1443,7 +1417,6 @@ Markiert den Beginn der Zuordnungseintrags-Parameter.
   
 ```cpp
 BEGIN_PARAM_MAP(x)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -1463,7 +1436,6 @@ Markiert das Ende der Zuordnungseintrags-Parameter.
   
 ```cpp
 END_PARAM_MAP()  
-  
 ```  
   
 #### <a name="example"></a>Beispiel  
@@ -1476,7 +1448,6 @@ Gibt an, COLUMN_ENTRY-Makros, die die SET_PARAM_TYPE-makroeingabe-, Ausgabe- ode
   
 ```cpp
 SET_PARAM_TYPE(type)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  

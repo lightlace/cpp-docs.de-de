@@ -1,5 +1,5 @@
 ---
-title: OLE DB-Programmierung | Microsoft Docs
+title: OLE DB-Programmierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fb77c5b7d7f6de91f74e83c395d0fcc13ebf70e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d211297d587fffcfc58ac57db6687dc8edde4344
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33107177"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336546"
 ---
 # <a name="ole-db-programming"></a>OLE DB-Programmierung
-Microsoft OLE DB ist eine veraltete Technologie. für neue Anwendungen ist es die erforderlichen Datenzugriffs-API für verknüpfte SQL Server. Andere neue Anwendungen sollten ODBC verwenden. Der aktuelle OLE DB-Anbieter für SQL Server ist SQLNCLI11. DLL. Der Anbieter ist immer noch in SQL Server 2016 konzipiert. Diese Dokumentation ist für Entwickler konzipiert, die vorhandene Anwendungen beibehalten werden, die bereits OLE DB-verwenden.
+Microsoft OLE DB ist eine veraltete Technologie. für neue Anwendungen ist es die erforderlichen Datenzugriffs-API für die verknüpfte SQL Server. Alle anderen neuen Anwendungen sollten ODBC verwenden. Der aktuelle OLE DB-Anbieter für SQL Server ist SQLNCLI11. DLL. Der Anbieter ist in SQL Server 2016 weiterhin versenden. Diese Dokumentation ist für Entwickler konzipiert, die vorhandene Anwendungen beibehalten, die bereits OLE DB verwenden.
   
  Die OLE DB-Vorlagen sind C++-Vorlagen, die die Arbeit mit der OLE DB-Hochleistungsdatenbanktechnologie vereinfachen, indem sie Klassen bereitstellen, die viele häufig verwendete OLE DB-Schnittstellen implementieren. Diese Vorlagenbibliothek ist in Verbraucher- und Anbietervorlagen unterteilt.  
   
@@ -39,11 +39,10 @@ Microsoft OLE DB ist eine veraltete Technologie. für neue Anwendungen ist es di
 |Verwenden von OLE DB-Anbietervorlagen (konzeptionelle Themen)|[OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)|  
 |OLE DB-Vorlagenklassen und -Makros|[Referenz der OLE DB-Vorlagen](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |OLE DB-Consumerattribute|[OLE DB-Consumerattribute](../../windows/ole-db-consumer-attributes.md)|  
-|OLE DB-Schnittstellen|[OLE DB-Programmierreferenz](https://msdn.microsoft.com/en-us/library/ms713643.aspx) (im Windows SDK)|  
-|OLE DB-Vorlagenbeispiele|[Beispiele für OLE DB-Vorlagen](http://msdn.microsoft.com/en-us/08958863-0b5f-41ad-ae99-fca7440c553c)| 
+|OLE DB-Schnittstellen|[OLE DB-Programmierreferenz](https://msdn.microsoft.com/library/ms713643.aspx) (im Windows SDK)|  
+|OLE DB-Vorlagenbeispiele|[Beispiele für OLE DB-Vorlagen](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)| 
 |Übersicht über die Datenzugriffsprogrammierung (Visual C++)|[Datenzugriffsprogrammierung](../../data/data-access-programming-mfc-atl.md)|  
 |Konzeptionelle ODBC-Themen|[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  
 
-  
 ## <a name="see-also"></a>Siehe auch  
  [Datenzugriff](../data-access-in-cpp.md)

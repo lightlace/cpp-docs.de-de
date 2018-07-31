@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Projekts für den Anbieter | Microsoft Docs
+title: Erstellen ein Projekt für den Anbieter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 08ceb80842d8552e19b62ff2ac2252d3f291b4ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dad3b020cb7f66fc4ba6535f79393c2d0ad0333f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098354"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339840"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Erstellen eines Projekts für den Anbieter
-#### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Zum Erstellen eines Projekts, in dem der OLE DB-Anbieters gespeichert werden soll  
+### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Zum Erstellen eines Projekts, in dem der OLE DB-Anbieter befindet  
   
-1.  Aus der **Datei** Menü klicken Sie auf `New`, und klicken Sie dann auf **Projekt**.  
+1.  Klicken Sie im Menü **Datei** auf **Neu**und dann auf **Projekt**.  
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-2.  Klicken Sie im Bereich Projekttypen auf den Ordner Visual C++-Projekte. Klicken Sie im Vorlagenbereich auf **ATL-Projekt**.  
+2.  Klicken Sie auf den Ordner "Visual C++-Projekte", klicken Sie im Bereich Projekttypen zur Verfügung. Klicken Sie im Bereich Vorlagen auf **ATL-Projekt**.  
   
-3.  In der **Namen** Feld Geben Sie einen Namen für das Projekt, und klicken Sie dann auf **OK**.  
+3.  In der **Namen** , geben Sie einen Namen für das Projekt, und klicken Sie dann auf **OK**.  
   
      Der ATL-Projekt-Assistent wird angezeigt.  
   
-4.  Wählen Sie im ATL-Projektassistenten **Dynamic Link Library (DLL)** für **Servertyp**.  
+4.  Wählen Sie in der ATL-Projektassistent **Dynamic Link Library (DLL)** für **Servertyp**.  
   
 5.  Klicken Sie auf **Fertig stellen**.  
   

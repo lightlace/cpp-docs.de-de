@@ -43,12 +43,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 986626fa391971ce342f8d80b9e3e7f8ec979b63
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 0cb4531f1a86d61b72363669d0f722f8dcf204d3
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322175"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338388"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl-Klasse
 Implementiert die OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) -Schnittstelle, die beliebige Zeilen aus einem Rowset abruft.  
@@ -128,7 +128,7 @@ Vergleicht zwei Lesezeichen.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (Compare )(HCHAPTER /* hReserved */,  
+STDMETHOD (Compare )(HCHAPTER /* hReserved */,  
    DBBKMARK cbBookmark1,  
    const BYTE* pBookmark1,  
    DBBKMARK cbBookmark2,  
@@ -158,7 +158,7 @@ Ruft Zeilen ab der Zeile, in einem Lesezeichen als Offset angegeben ab.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,  
+STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,  
    HCHAPTER hReserved2,  
    DBBKMARK cbBookmark,  
    const BYTE* pBookmark,  
@@ -182,7 +182,7 @@ Ruft eine oder mehrere Zeilen, die die angegebenen Lesezeichen entsprechen.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,  
+STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const DBBKMARK rgcbBookmarks[],  
    const BYTE* rgpBookmarks,  
@@ -205,7 +205,7 @@ Gibt hash-Werte für den angegebenen Lesezeichen.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (Hash )(HCHAPTER /* hReserved */,  
+STDMETHOD (Hash )(HCHAPTER /* hReserved */,  
    DBBKMARK cbBookmarks,  
    const DBBKMARK* rgcbBookmarks[],  
    const BYTE* rgpBookmarks[],  
@@ -226,7 +226,6 @@ Ein Array von Lesezeichen.
   
 ```cpp
 CAtlArray<DBROWCOUNT> m_rgBookmarks;  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

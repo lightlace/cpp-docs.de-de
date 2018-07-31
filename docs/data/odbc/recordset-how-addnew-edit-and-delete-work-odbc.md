@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: AddNew, Edit und Delete Funktionsweise (ODBC) | Microsoft Docs'
+title: 'Recordset: AddNew, Edit und Delete Funktionsweise (ODBC) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,17 +28,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52b469a53d48dcde8c28c0a0c984598875684778
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094129"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338313"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset: Funktionsweise von AddNew, Edit und Delete (ODBC)
 Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.  
   
- In diesem Thema wird erläutert, wie die `AddNew`, **bearbeiten**, und **löschen** Memberfunktionen der Klasse `CRecordset` arbeiten. Zu den behandelten Themen gehören:  
+ In diesem Thema wird erläutert, wie die `AddNew`, `Edit`, und `Delete` Memberfunktionen der Klasse `CRecordset` arbeiten. Zu den behandelten Themen gehören:  
   
 -   [Hinzufügen von Datensätzen](#_core_adding_a_record)  
   
@@ -49,120 +49,120 @@ Dieses Thema bezieht sich auf die MFC-ODBC-Klassen.
 -   [Löschen von Datensätzen](#_core_deleting_a_record)  
   
 > [!NOTE]
->  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie gesammelte verwenden, finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Dieses Thema bezieht sich auf von `CRecordset` abgeleitete Objekte, in denen das gesammelte Abrufen von Zeilen nicht implementiert wurde. Wenn Sie die gesammelte verwenden werden, finden Sie unter [Recordset: Abrufen von Datensätzen in einer Sammeloperation (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Als Ergänzung, möchten Sie möglicherweise lesen [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), das die entsprechende Rolle von RFX in Aktualisierungsvorgängen beschreibt.  
+ Als Ergänzung, Sie möchten lesen [Datensatzfeldaustausch: Funktionsweise von RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), dem die entsprechende Rolle von RFX in Aktualisierungsvorgängen beschrieben.  
   
 ##  <a name="_core_adding_a_record"></a> Hinzufügen eines Datensatzes  
 
- Hinzufügen eines neuen Datensatzes zu einem Recordset beinhaltet den Aufruf des Recordsets [AddNew](../../mfc/reference/crecordset-class.md#addnew) Memberfunktion, die Werte der Felddatenmember des neuen Datensatzes festzulegen und das Aufrufen der [Update](../../mfc/reference/crecordset-class.md#update) Memberfunktion schreiben der Datensatz mit der Datenquelle.  
+ Hinzufügen eines neuen Datensatzes zu einem Recordset beinhaltet den Aufruf des Recordsets [AddNew](../../mfc/reference/crecordset-class.md#addnew) Member-Funktion, wenn die Werte der Felddatenmember des neuen Datensatzes und dem Aufrufen der [Update](../../mfc/reference/crecordset-class.md#update) Memberfunktion schreiben der Datensatz mit der Datenquelle.  
   
- Als Voraussetzung für den Aufruf von `AddNew`, das Recordset muss nicht geöffnet wurden als schreibgeschützt. Die `CanUpdate` und `CanAppend` Memberfunktionen können Sie diese Bedingungen zu bestimmen.  
+ Voraussetzung für den Aufruf `AddNew`, das Recordset nicht geöffnet worden sein muss als schreibgeschützt. Die `CanUpdate` und `CanAppend` Memberfunktionen können Sie die folgenden Bedingungen zu ermitteln.  
   
  Beim Aufruf `AddNew`:  
   
--   Der Datensatz im Bearbeitungspuffer wird gespeichert, damit dessen Inhalt wiederhergestellt werden können, wenn der Vorgang abgebrochen wird.  
+-   Der Datensatz im Bearbeitungspuffer wird gespeichert, sodass dessen Inhalt wiederhergestellt werden können, wenn der Vorgang abgebrochen wird.  
   
--   Die Felddatenmember werden gekennzeichnet, daher ist es möglich, Änderungen in ihnen später zu erkennen. Die Felddaten Elemente werden ebenfalls markiert bereinigen (unverändert) und auf Null gesetzt.  
+-   Die Felddatenmember werden gekennzeichnet, daher ist es möglich, Änderungen in die sie später zu erkennen. Die Felddaten Member werden ebenfalls markiert bereinigen (unverändertes) und auf Null gesetzt.  
   
- Nach dem Aufruf `AddNew`, der Bearbeitungspuffer einen neuen, leeren Datensatz, mit Werten gefüllt werden soll. Zu diesem Zweck legen Sie die Werte manuell durch zuweisen. Anstatt einen Wert des tatsächlichen Daten für ein Feld angeben, rufen Sie `SetFieldNull` auf den Wert Null festlegen.  
+ Nach dem Aufruf von `AddNew`Bearbeitungspuffer stellt einen neuen, leeren Datensatz, mit Werten gefüllt werden soll. Zu diesem Zweck legen Sie die Werte manuell von ihnen zuweisen. Anstatt einen tatsächliche Datenwert für ein Feld zu verwenden, können Sie aufrufen `SetFieldNull` an den Wert Null.  
   
- Um die Änderungen zu speichern, rufen Sie **Update**. Beim Aufruf **Update** für den neuen Eintrag:  
+ Um die Änderungen zu speichern, rufen Sie `Update`. Beim Aufruf `Update` für den neuen Datensatz:  
   
--   Wenn der ODBC-Treiber unterstützt die **:: SQLSetPos** MFC-ODBC-API-Funktion verwendet die Funktion, um den Datensatz in der Datenquelle hinzuzufügen. Mit **:: SQLSetPos**, kann MFC einen Datensatz effizienter hinzufügen, da sie nicht zum Erstellen und verarbeiten eine SQL-Anweisung verfügt.  
+-   Wenn der ODBC-Treiber unterstützt die `::SQLSetPos` MFC-ODBC-API-Funktion verwendet die Funktion, um den Datensatz in der Datenquelle hinzuzufügen. Mit `::SQLSetPos`, kann MFC einen Datensatz effizienter hinzufügen, da es nicht zum Erstellen und eine SQL-Anweisung zu verarbeiten.  
   
--   Wenn **:: SQLSetPos** nicht verwendet, MFC bewirkt Folgendes:  
+-   Wenn `::SQLSetPos` nicht verwendet, von MFC bewirkt Folgendes:  
   
-    1.  Wenn keine Änderungen erkannt werden, **Update** wird keine Aktion ausgeführt, und gibt 0 zurück.  
+    1.  Wenn keine Änderungen erkannt werden, `Update` führt keine Aktion aus und gibt 0 zurück.  
   
-    2.  Bei Änderungen, **Update** erstellt eine SQL- **einfügen** Anweisung. Die Spalten, die durch alle Felddatenmember dargestellt sind aufgeführt, der **einfügen** Anweisung. Um eine Spalte enthalten, zu erzwingen, rufen Sie die [SetFieldDirty](../../mfc/reference/crecordset-class.md#setfielddirty) Memberfunktion:  
+    2.  Wenn es Änderungen gibt, `Update` erstellt eine SQL- **einfügen** Anweisung. Spalten, deren alle Felddatenmember finden Sie in der **einfügen** Anweisung. Um eine Spalte zu erzwingen, rufen die [SetFieldDirty](../../mfc/reference/crecordset-class.md#setfielddirty) Memberfunktion:  
   
         ```  
         SetFieldDirty( &m_dataMember, TRUE );  
         ```  
   
-    3.  **Update** führt einen Commit für den neuen Eintrag – die **einfügen** Anweisung ausgeführt wird und der Datensatz ist bestrebt, die Tabelle auf die Datenquelle (und auf das Recordset, wenn es sich nicht um eine Momentaufnahme handelt), es sei denn, eine Transaktion ausgeführt wird.  
+    3.  `Update` Führt einen Commit für den neuen Datensatz, der **einfügen** -Anweisung ausgeführt wird und der Datensatz ist an die Tabelle in der Datenquelle (und auf das Recordset, wenn es sich nicht um eine Momentaufnahme handelt) ein Commit ausgeführt, es sei denn, eine Transaktion ausgeführt wird.  
   
     4.  Gespeicherte Datensatz wird im Bearbeitungspuffer wiederhergestellt. Der Datensatz, der vor dem aktuellen wurde die `AddNew` Aufruf ist der aktuelle Vorgang unabhängig davon, ob die **einfügen** -Anweisung erfolgreich ausgeführt wurde.  
   
     > [!TIP]
-    >  Für die vollständige Steuerung eines neuen Datensatzes, nehmen Sie die folgende Weise: Legen Sie die Werte der Felder, die Werte aufweisen, und legen Sie dann explizit alle Felder, die durch den Aufruf Null bleibt, werden `SetFieldNull` mit einem Zeiger auf das Feld und der Parameter **"true"**  (Standard). Stellen Sie sicher, dass ein Feld mit der Datenquelle Aufruf nicht geschrieben werden sollen `SetFieldDirty` mit einem Zeiger auf das Feld und der Parameter **"false"**, und ändern Sie den Wert des Felds. Um zu bestimmen, ob ein Feld NULL zulässig ist, rufen Sie `IsFieldNullable`.  
+    >  Für die vollständige Kontrolle über einen neuen Datensatz, nehmen Sie die folgende Vorgehensweise: Legen Sie die Werte von Feldern, die über Werte verfügen und legen Sie dann alle Felder, die durch den Aufruf Null bleibt, explizit `SetFieldNull` mit einem Zeiger auf das Feld und den Parameter "true" (Standard). Wenn Sie möchten sicherstellen, dass ein Feld nicht in der Datenquelle, den Aufruf geschrieben wird `SetFieldDirty` mit einem Zeiger auf das Feld und den Parameter "false", und ändern Sie den Wert des Felds nicht. Um zu bestimmen, ob ein Feld NULL zulässig ist, rufen Sie `IsFieldNullable`.  
   
     > [!TIP]
-    >  Zum Erkennen von Recordset geändert verwendet MFC eine **PSEUDO_NULL** Wert für jeden Datentyp, der in einem Recordset gespeichert werden können. Wenn Sie ein Feld explizit, um festlegen müssen die **PSEUDO_NULL** Wert und das Feld erfolgt bereits Null gekennzeichnet sein müssen Sie auch aufrufen `SetFieldNull`, übergeben die Adresse des Felds in den ersten Parameter und **"false"** im zweiten Parameter.  
+    >  Zum erkennen, wenn Recordsets Wert ändern, verwendet MFC einen PSEUDO_NULL-Wert für jeden Datentyp, der in einem Recordset gespeichert werden können. Wenn ein Feld mit dem PSEUDO_NULL Wert explizit festlegen müssen und das Feld bereits erfolgt, Null gekennzeichnet werden, müssen Sie auch aufrufen `SetFieldNull`, übergeben Sie die Adresse des Felds in den ersten Parameter und "false", im zweiten Parameter.  
   
 ##  <a name="_core_visibility_of_added_records"></a> Sichtbarkeit der hinzugefügte Datensätze  
- Wenn ein hinzugefügter Datensatz für das Recordset sichtbar ist? Hinzugefügte Datensätze manchmal angezeigt und in einigen Fällen sind nicht sichtbar ist, je nach zwei Dinge:  
+ Wann ist ein hinzugefügte Datensatz für das Recordset sichtbar? Hinzugefügte Datensätze manchmal angezeigt und manchmal sind nicht sichtbar ist, je nach zwei Dinge:  
   
--   Welche des Treibers ist.  
+-   Welche der Treiber kann.  
   
 -   Was das Framework nutzen kann.  
   
- Wenn der ODBC-Treiber unterstützt die **:: SQLSetPos** MFC-ODBC-API-Funktion verwendet die Funktion zum Hinzufügen von Einträgen. Mit **:: SQLSetPos**, werden hinzugefügte Datensätze für jedes aktualisierbare MFC-Recordset sichtbar. Hinzugefügt, ohne dass die Unterstützung für die Funktion, Datensätze sind nicht sichtbar, und rufen Sie **Requery** um sie anzuzeigen. Mit **:: SQLSetPos** darüber hinaus ist effizienter.  
+ Wenn der ODBC-Treiber unterstützt die `::SQLSetPos` MFC-ODBC-API-Funktion verwendet die Funktion, um Datensätze hinzufügen. Mit `::SQLSetPos`, werden hinzugefügte Datensätze für alle aktualisierbaren MFC-Recordset sichtbar. Ohne Unterstützung für die Funktion hinzugefügt werden soll, Einträge sind nicht sichtbar, und rufen Sie `Requery` um sie anzuzeigen. Mithilfe von `::SQLSetPos` ist außerdem effizienter.  
   
 ##  <a name="_core_editing_an_existing_record"></a> Einen vorhandenen Datensatz bearbeiten  
- Bearbeiten einen vorhandenen Datensatz in einem Recordset, scrollen Sie zum Datensatz, rufen des Recordsets [bearbeiten](../../mfc/reference/crecordset-class.md#edit) Memberfunktion, die Werte der Felddatenmember des neuen Datensatzes festzulegen und das Aufrufen der [aktualisieren](../../mfc/reference/crecordset-class.md#update)Memberfunktion versucht, den geänderten Datensatz in der Datenquelle zu schreiben.  
+ Bearbeiten eines vorhandenen Datensatzes in einem Recordset, scrollen Sie auf den Datensatz, der Aufruf des Recordsets [bearbeiten](../../mfc/reference/crecordset-class.md#edit) Member-Funktion, wenn die Werte der Felddatenmember des neuen Datensatzes und dem Aufrufen der [aktualisieren](../../mfc/reference/crecordset-class.md#update)Memberfunktion versucht, den geänderten Datensatz in der Datenquelle zu schreiben.  
   
- Als Voraussetzung für den Aufruf von **bearbeiten**, muss das Recordset aktualisierbar und auf einen Datensatz. Die `CanUpdate` und `IsDeleted` Memberfunktionen können Sie diese Bedingungen zu bestimmen. Außerdem muss der aktuelle Datensatz nicht gelöscht wurde, und es muss Datensätze im Recordset (beide `IsBOF` und `IsEOF` geben 0 zurück).  
+ Voraussetzung für den Aufruf `Edit`, muss das Recordset aktualisierbar und auf einen Datensatz. Die `CanUpdate` und `IsDeleted` Memberfunktionen können Sie die folgenden Bedingungen zu ermitteln. Außerdem muss der aktuelle Datensatz nicht gelöscht wurde, muss sein und Datensätze im Recordset (beide `IsBOF` und `IsEOF` gibt 0 zurück).  
   
- Beim Aufruf **bearbeiten**, den Datensatz im Bearbeitungspuffer (der aktuelle Datensatz) gespeichert ist. Die gespeicherten Datensatz Werte werden später verwendet, um festzustellen, ob alle Felder geändert wurden.  
+ Beim Aufruf `Edit`, wird der Datensatz im Bearbeitungspuffer (der aktuelle Datensatz) gespeichert. Die gespeicherten Werte des Datensatzes werden später verwendet, um festzustellen, ob alle Felder geändert wurden.  
   
- Nach dem Aufruf **bearbeiten**, Bearbeitungspuffer immer noch den aktuellen Datensatz darstellt, jedoch ist jetzt bereit zur Annahme von Änderungen an den Felddatenmembern. Um den Datensatz zu ändern, legen Sie manuell die Werte der alle Felddatenmember, die Sie bearbeiten möchten. Anstatt einen Wert des tatsächlichen Daten für ein Feld angeben, rufen Sie `SetFieldNull` auf den Wert Null festlegen. Um die Änderungen zu speichern, rufen **Update**.  
+ Nach dem Aufruf von `Edit`, Bearbeitungspuffer weiterhin den aktuellen Datensatz darstellt, aber ist nun bereit, um Änderungen an den Felddatenmembern zu akzeptieren. Um den Datensatz zu ändern, legen Sie manuell die Werte des Felds Datenmember, die Sie bearbeiten möchten. Anstatt einen tatsächliche Datenwert für ein Feld zu verwenden, können Sie aufrufen `SetFieldNull` an den Wert Null. Aufrufen, um Ihre Änderungen zu übernehmen, `Update`.  
   
 > [!TIP]
->  Zum Abrufen von `AddNew` oder **bearbeiten** Modus, rufen **verschieben** mit dem Parameter **AFX_MOVE_REFRESH**.  
+>  Zum Abrufen von `AddNew` oder `Edit` Modus, rufen `Move` mit dem Parameter *AFX_MOVE_REFRESH*.  
   
- Als Voraussetzung für den Aufruf von **Update**, das Recordset darf nicht leer sein und der aktuelle Datensatz nicht gelöscht wurde. `IsBOF`, `IsEOF`, und `IsDeleted` sollten alle geben 0 zurück.  
+ Voraussetzung für den Aufruf `Update`, das Recordset darf nicht leer sein und der aktuelle Datensatz nicht gelöscht wurde. `IsBOF`, `IsEOF`, und `IsDeleted` sollten alle gibt 0 zurück.  
   
- Beim Aufruf **Update** für den geänderten Datensatz:  
+ Beim Aufruf `Update` für den geänderten Datensatz:  
   
--   Wenn der ODBC-Treiber unterstützt die **:: SQLSetPos** MFC-ODBC-API-Funktion verwendet die Funktion, um den Datensatz in der Datenquelle zu aktualisieren. Mit **:: SQLSetPos**, vergleicht der Treiber den Bearbeitungspuffer mit den entsprechenden Datensatz auf dem Server, aktualisieren Sie den Datensatz auf dem Server aus, wenn die beiden unterscheiden. Mit **:: SQLSetPos**, kann MFC einen Datensatz effizienter aktualisieren, da sie nicht zum Erstellen und verarbeiten eine SQL-Anweisung verfügt.  
+-   Wenn der ODBC-Treiber unterstützt die `::SQLSetPos` MFC-ODBC-API-Funktion verwendet die Funktion, um den Datensatz in der Datenquelle zu aktualisieren. Mit `::SQLSetPos`, vergleicht der Treiber den Bearbeitungspuffer mit den entsprechenden Datensatz auf dem Server, der den Datensatz auf dem Server aktualisieren, wenn die beiden unterscheiden. Mit `::SQLSetPos`, kann MFC Datensatz effizienter aktualisieren, da es nicht zum Erstellen und eine SQL-Anweisung zu verarbeiten.  
   
      - oder -   
   
--   Wenn **:: SQLSetPos** nicht verwendet, MFC bewirkt Folgendes:  
+-   Wenn `::SQLSetPos` nicht verwendet, von MFC bewirkt Folgendes:  
   
-    1.  Wenn keine Änderungen vorgenommen wurden **Update** wird keine Aktion ausgeführt, und gibt 0 zurück.  
+    1.  Wenn keine Änderungen wurden `Update` führt keine Aktion aus und gibt 0 zurück.  
   
-    2.  Bei Änderungen, **Update** erstellt eine SQL- **UPDATE** Anweisung. Die Spalten aufgeführt, die der **UPDATE** Anweisung basieren auf den Felddatenmembern, die geändert wurden.  
+    2.  Wenn es Änderungen gibt, `Update` erstellt eine SQL- **UPDATE** Anweisung. Die Spalten aufgelistet, die der **UPDATE** Anweisung hängen von den Felddatenmembern, die geändert wurden.  
   
-    3.  **Update** einen Commit der Änderungen – führt die **UPDATE** Anweisung – und der Datensatz in der Datenquelle geändert wird, jedoch kein Commit ausgeführt, wenn eine Transaktion ist, läuft (finden Sie unter [Transaktion: Ausführen einer Transaktion in ein Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) Informationen zu den Auswirkungen der Transaktions auf des Updates). ODBC wird eine Kopie des Datensatzes, die ebenfalls geändert wird.  
+    3.  `Update` übernimmt die Änderungen, führt die **UPDATE** Anweisung – und für die Datenquelle der Datensatz geändert wird, aber kein Commit ausgeführt. wenn eine Transaktion wird ausgeführt (finden Sie unter [Transaktion: Ausführen einer Transaktion in einem Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) Informationen zu den Auswirkungen der Transaktions auf des Updates). ODBC bewahrt eine Kopie des Datensatzes, die auch geändert.  
   
-    4.  Im Gegensatz zu den Prozess für `AddNew`, **bearbeiten** Prozess gespeicherten Datensatz nicht wiederhergestellt. Der bearbeitete Datensatz wird so lange als den aktuellen Datensatz.  
+    4.  Im Unterschied zu `AddNew`, `Edit` Prozess gespeicherten Datensatz nicht wiederhergestellt. Der bearbeitete Datensatz bleibt als aktuellen Datensatz.  
   
     > [!CAUTION]
-    >  Vorbereitung für die Aktualisierung eines Recordsets durch Aufrufen von **aktualisieren**, achten Sie darauf, dass das Recordset alle Spalten, aus denen der Primärschlüssel der Tabelle enthält (oder alle Spalten von jedem eindeutigen index für die Tabelle oder genügend Spalten eindeutig Identifizieren Sie die Zeile). In einigen Fällen kann das Framework zur Identifizierung des Datensatzes, der in der Tabelle aktualisiert werden soll, nur die Spalten verwenden, die im Recordset ausgewählt sind. Ohne die erforderlichen Spalten möglicherweise mehrere Datensätze in der Tabelle aktualisiert werden. In diesem Fall löst das Framework Ausnahmen aus, wenn Sie aufrufen **Update**.  
+    >  Vorbereitung für die Aktualisierung eines Recordsets durch Aufrufen von `Update`, müssen Sie sicherstellen, dass das Recordset alle Spalten, aus denen der Primärschlüssel der Tabelle (oder alle Spalten von beliebigen, eindeutigen Index für die Tabelle oder genügend Spalten zur eindeutigen Identifizierung die Zeile) enthält. In einigen Fällen kann das Framework zur Identifizierung des Datensatzes, der in der Tabelle aktualisiert werden soll, nur die Spalten verwenden, die im Recordset ausgewählt sind. Ohne die erforderlichen Spalten möglicherweise mehrere Datensätze in der Tabelle aktualisiert werden. In diesem Fall das Framework Ausnahmen auslöst, wenn Sie aufrufen `Update`.  
   
     > [!TIP]
-    >  Beim Aufrufen `AddNew` oder **bearbeiten** nach müssen entweder die Funktion aufgerufen, zuvor jedoch vor dem Aufruf **Update**, Bearbeitungspuffer wird aktualisiert, mit dem gespeicherten Datensatz, und Ersetzen Sie dabei den neuen oder bearbeiteten Datensatz in Fortschritt. Dieses Verhalten bietet Ihnen eine Möglichkeit zum Abbrechen einer `AddNew` oder **bearbeiten** und neu zu beginnen: Wenn Sie feststellen, dass der Datensatz in Bearbeitung fehlerhaft ist, rufen Sie einfach **bearbeiten** oder `AddNew` erneut aus.  
+    >  Wenn Sie aufrufen `AddNew` oder `Edit` rufen Sie nach dem jeweilige Funktion einmal aufgerufen werden, zuvor jedoch vor dem `Update`, Bearbeitungspuffer wird aktualisiert, mit dem gespeicherten Datensatz, und Ersetzen Sie dabei den neuen oder bearbeiteten Datensatz wird ausgeführt. Dieses Verhalten gibt Ihnen eine Möglichkeit zum Abbrechen einer `AddNew` oder `Edit` und beginnen Sie eine neue: Wenn Sie feststellen, dass die Datensatz-in Bearbeitung sind fehlerhaft ist, rufen Sie einfach `Edit` oder `AddNew` erneut.  
   
 ##  <a name="_core_deleting_a_record"></a> Löschen eines Datensatzes  
- Löschen eines Datensatzes aus einem Recordset umfasst, scrollen Sie zu dem Datensatz und rufen des Recordsets [löschen](../../mfc/reference/crecordset-class.md#delete) Memberfunktion. Im Gegensatz zu `AddNew` und **bearbeiten**, **löschen** erfordert keinen übereinstimmenden Aufruf von **Update**.  
+ Löschen eines Datensatzes aus einem Recordset umfasst, scrollen Sie zu dem Datensatz und das Aufrufen des Recordsets [löschen](../../mfc/reference/crecordset-class.md#delete) Member-Funktion. Im Gegensatz zu `AddNew` und `Edit`, `Delete` erfordert einen entsprechenden Aufruf von keine `Update`.  
   
- Als Voraussetzung für den Aufruf von **löschen**, muss das Recordset aktualisierbar sein und muss es sich um einen Datensatz handeln. Die `CanUpdate`, `IsBOF`, `IsEOF`, und `IsDeleted` Memberfunktionen können Sie diese Bedingungen zu bestimmen.  
+ Voraussetzung für den Aufruf `Delete`, muss das Recordset aktualisierbar sein und muss auf einen Datensatz sein. Die `CanUpdate`, `IsBOF`, `IsEOF`, und `IsDeleted` Memberfunktionen können Sie die folgenden Bedingungen zu ermitteln.  
   
- Beim Aufruf **löschen**:  
+ Beim Aufruf `Delete`:  
   
--   Wenn der ODBC-Treiber unterstützt die **:: SQLSetPos** MFC-ODBC-API-Funktion verwendet die Funktion zum Löschen des Datensatzes für die Datenquelle. Mit **:: SQLSetPos** ist normalerweise effizienter als die Verwendung von SQL.  
+-   Wenn der ODBC-Treiber unterstützt die `::SQLSetPos` MFC-ODBC-API-Funktion verwendet die Funktion, um den Datensatz in der Datenquelle zu löschen. Mithilfe von `::SQLSetPos` ist in der Regel effizienter als die Verwendung von SQL.  
   
      - oder -   
   
--   Wenn **:: SQLSetPos** nicht verwendet, MFC bewirkt Folgendes:  
+-   Wenn `::SQLSetPos` nicht verwendet, von MFC bewirkt Folgendes:  
   
-    1.  Der aktuelle Datensatz im Bearbeitungspuffer werden nicht gesichert, wie in `AddNew` und **bearbeiten**.  
+    1.  Der aktuelle Datensatz im Bearbeitungspuffer werden nicht gesichert, wie in `AddNew` und `Edit`.  
   
-    2.  **Löschen Sie** erstellt eine SQL- **löschen** -Anweisung, die den Datensatz entfernt.  
+    2.  `Delete` erstellt eine SQL- **löschen** -Anweisung, die den Datensatz wird entfernt.  
   
-         Der aktuelle Datensatz im Bearbeitungspuffer wird nicht gespeichert, wie in `AddNew` und **bearbeiten**.  
+         Der aktuelle Datensatz im Bearbeitungspuffer befindet sich nicht als in `AddNew` und `Edit`.  
   
-    3.  **Löschen Sie** führt einen Commit für die Löschung – führt die **löschen** Anweisung. Der Datensatz ist für die Datenquelle als gelöscht markiert und ist der Datensatz eine Momentaufnahme, in ODBC.  
+    3.  `Delete` Führt einen Commit für das Löschen, führt die **löschen** Anweisung. Der Datensatz ist für die Datenquelle als gelöscht markiert und, wenn der Datensatz mit einer Momentaufnahme in ODBC ist.  
   
-    4.  Der gelöschte Datensatz Werte sind immer noch in den Felddatenmembern eines Recordset, aber die Felddatenmembern Transaktionen markiert, Null und des Recordsets `IsDeleted` Memberfunktion gibt einen Wert ungleich NULL zurück.  
+    4.  Werte des gelöschten Datensatzes befinden sich noch in die Felddatenmember der Recordset, sondern die Felddatenmembern gekennzeichnet Null und des Recordsets `IsDeleted` Memberfunktion gibt einen Wert ungleich NULL zurück.  
   
     > [!NOTE]
-    >  Nach dem Löschen eines Datensatzes, sollten Sie einen Bildlauf zu einem anderen Datensatz Auffüllen mit Daten des neuen Datensatzes Bearbeitungspuffer durchführen. Es ist ein Fehler auf, rufen Sie **löschen** erneut, oder rufen **bearbeiten**.  
+    >  Nach dem Löschen eines Datensatzes, sollten Sie einen Bildlauf zu einem anderen Datensatz im Bearbeitungspuffer des neuen Datensatzes Daten auffüllen durchführen. Es ist ein Fehler Aufrufen `Delete` erneut oder Aufrufen `Edit`.  
   
- Informationen zu den SQL-Anweisungen, die in Update-Vorgänge verwendet, finden Sie unter [SQL](../../data/odbc/sql.md).  
+ Weitere Informationen zu den SQL-Anweisungen, die Updatevorgänge verwendet, finden Sie unter [SQL](../../data/odbc/sql.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   

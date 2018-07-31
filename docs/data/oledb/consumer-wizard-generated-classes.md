@@ -1,5 +1,5 @@
 ---
-title: Vom Consumer-Assistenten generierte Klassen | Microsoft Docs
+title: Vom Consumer-Assistenten generierte Klassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 030445a8e6b46afb9f893e21bceb221f7f9e89a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b63713dd57695a54a58ce3d57b295cd57cdf393d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091984"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338738"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Vom Consumer-Assistenten generierte Klassen
 Wenn Sie den ATL OLE DB-Consumer-Assistenten zum Erstellen eines Consumers verwenden, haben Sie die Wahl, ob Sie OLE DB-Vorlagen oder OLE DB-Attribute verwenden möchten. In beiden Fällen generiert der Assistent eine Befehlsklasse und eine Benutzerdatensatz-Klasse. Die Befehlsklasse enthält Code zum Öffnen der Datenquelle und des Rowsets, die Sie im Assistenten angegeben haben. Die Benutzerdatensatz-Klasse enthält Spaltenzuordnung für die ausgewählte Datenbanktabelle. Der generierte Code unterscheidet sich jedoch in beiden Fällen:  
@@ -47,9 +47,9 @@ Wenn Sie den ATL OLE DB-Consumer-Assistenten zum Erstellen eines Consumers verwe
 >  Wenn Sie die Benutzerdatensatz-klasse ändern oder einen eigenen Consumer erstellen, müssen die Datenvariablen in der Reihenfolge vor den Status- und Längenvariablen liegen.  
   
 > [!NOTE]
->  Der ATL-OLE DB-Consumer-Assistent verwendet den Typ **DB_NUMERIC** zum Binden von numerischen Datentypen. Zuvor wurde dazu **DBTYPE_VARNUMERIC** verwendet (das Format dieses Typs wird durch den **DB_VARNUMERIC** -Typ beschrieben; siehe „Oledb.h“). Wenn Sie zum Erstellen von Consumern nicht den Assistenten verwenden, wird die Verwendung von **DB_NUMERIC**empfohlen.  
+>  Der ATL-OLE DB-Consumer-Assistent verwendet die `DB_NUMERIC` Typ zum Binden von numerischen Datentypen. Es früher verwendete `DBTYPE_VARNUMERIC` (das Format wird durch beschrieben die `DB_VARNUMERIC` geben; Siehe "OleDb.h"). Wenn Sie den Assistenten zum Erstellen von Consumern nicht verwenden, wird empfohlen, Sie verwenden `DB_NUMERIC`.  
   
-```  
+```cpp  
 // Products.H : Declaration of the CProducts class  
   
 class CProductsAccessor  
@@ -95,7 +95,7 @@ public:
 ### <a name="rowset-properties"></a>Rowset-Eigenschaften  
  Anschließend legt der Assistent die Rowset-Eigenschaften fest. Wenn Sie im ATL-OLE DB-Consumer-Assistenten **Ändern**, **Einfügen**oder **Löschen** ausgewählt haben, werden die entsprechenden Eigenschaften hier festgelegt (DBPROP_IRowsetChange ist immer festgelegt, dann kommen DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT, und/oder DBPROPVAL_UP_DELETE hinzu).  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -108,7 +108,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ### <a name="command-or-table-class"></a>Befehls- oder Tabellenklasse  
  Wenn Sie eine Befehlsklasse angeben, deklariert der Assistent die Befehlsklasse; bei auf einer Vorlage basierendem Code sieht der Befehl so aus:  
   
-```  
+```cpp  
 DEFINE_COMMAND_EX(CProductsAccessor, L" \  
 SELECT \  
    ProductID, \  
@@ -146,7 +146,7 @@ SELECT \
 ### <a name="class-declaration"></a>Klassendeklaration  
  Schließlich generiert der Assistent eine Klassendeklaration wie etwa die folgende:  
   
-```  
+```cpp  
 class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
@@ -157,7 +157,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
  Im folgenden Beispiel generiert der Assistent eine Deklaration für die Klasse `COrders`, die Benutzerdatensatz-Klasse `COrdersAccessor` taucht jedoch nicht auf, da die Attribute sie injizieren.  
   
-```  
+```cpp  
 #define _ATL_ATTRIBUTES  
 #include <atlbase.h>  
 #include <atldbcli.h>  

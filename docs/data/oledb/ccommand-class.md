@@ -60,12 +60,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 169feff6ce364cea682c43aade427a98d5810437
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 74cabc19dd21be78771fba177758131d13c8794d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208597"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338362"
 ---
 # <a name="ccommand-class"></a>CCommand-Klasse
 Stellt Methoden zum Festlegen und einen Befehl ausführen.  
@@ -74,12 +74,12 @@ Stellt Methoden zum Festlegen und einen Befehl ausführen.
 
 ```cpp
 template <class TAccessor = CNoAccessor,  
-          template <typename T> class TRowset = CRowset,  
-          class TMultiple = CNoMultipleResults>  
+   template <typename T> class TRowset = CRowset,  
+   class TMultiple = CNoMultipleResults>  
 class CCommand :   
-           public CAccessorRowset <TAccessor, TRowset>,  
-           public CCommandBase,  
-           public TMultiple  
+   public CAccessorRowset <TAccessor, TRowset>,  
+   public CCommandBase,  
+   public TMultiple  
 ```  
   
 ### <a name="parameters"></a>Parameter  
@@ -151,7 +151,7 @@ Ruft das nächste Resultset, sofern verfügbar.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,  
+HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected, 
    bool bBind = true) throw();  
 ```  
   
@@ -184,7 +184,6 @@ HRESULT Open(const CSession& session,
    bool bBind = true,  
    ULONG ulPropSets = 0) throw();  
 
-
 HRESULT Open(const CSession& session,  
    LPCSTR szCommand,  
    DBPROPSET *pPropSet = NULL,  
@@ -193,7 +192,6 @@ HRESULT Open(const CSession& session,
    bool bBind = true,  
    ULONG ulPropSets = 0) throw();  
 
-
 HRESULT Open(const CSession& session,  
    INT szCommand = NULL,  
    DBPROPSET *pPropSet = NULL,  
@@ -201,7 +199,6 @@ HRESULT Open(const CSession& session,
    REFGUID guidCommand = DBGUID_DEFAULT,  
    bool bBind = true,  
    ULONG ulPropSets = 0) throw();  
-
 
 HRESULT Open(DBPROPSET *pPropSet = NULL,  
    DBROWCOUNT* pRowsAffected = NULL,  
@@ -266,7 +263,6 @@ Aufrufe [CCommand:: CreateCommand](../../data/oledb/ccommand-createcommand.md) e
 HRESULT CCommandBase::Create(const CSession& session,   
    LPCWSTR wszCommand,   
    REFGUID guidCommand = DBGUID_DEFAULT) throw ();  
-
 
 HRESULT CCommandBase::Create(const CSession& session,   
    LPCSTR szCommand,   
@@ -354,7 +350,6 @@ Den Parameteraccessor frei, und den Befehl selbst frei.
   
 ```cpp
 void CCommandBase::ReleaseCommand() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -384,7 +379,6 @@ Verwirft den aktuellen Befehl Ausführungsplan.
   
 ```cpp
 HRESULT CCommandBase::Unprepare() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  

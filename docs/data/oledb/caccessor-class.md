@@ -1,5 +1,5 @@
 ---
-title: CAccessor-Klasse | Microsoft Docs
+title: CAccessor-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,34 +21,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dffefb74faf6836b9f2fc81a7800dc34084657cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e7f722d4d1759bdec7a23bb15076b38de000eb6
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093908"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337416"
 ---
 # <a name="caccessor-class"></a>CAccessor-Klasse
 Stellt einen Accessor Typen dar.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```cpp
 template <class T>  
 class CAccessor : public CAccessorBase, public T  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
+### <a name="parameters"></a>Parameter  
+ *T*  
  Die Benutzerdatensatz-Klasse.  
   
 ## <a name="remarks"></a>Hinweise  
- Wird verwendet, wenn ein Datensatz statisch mit einer Datenquelle gebunden ist. Der Datensatz enthält den Puffer. Diese Klasse unterstützt mehrere Accessoren für ein Rowset.  
+ Sie wird verwendet, wenn ein Datensatz statisch mit einer Datenquelle gebunden ist. Der Datensatz enthält den Puffer. Diese Klasse unterstützt mehrere Accessoren für ein Rowset.  
   
  Verwenden Sie diesen Accessortyp, wenn Sie wissen, dass die Struktur und den Typ der Datenbank.  
   
- Wenn der Accessor Felder enthält, die in den Arbeitsspeicher zu verweisen (z. B. eine `BSTR` oder Schnittstelle) sein muss freigegeben ist, rufen Sie die Memberfunktion [CAccessorRowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md) vor der nächsten Datensatz gelesen wird.  
+ Wenn Ihre Accessor Felder enthält, die in den Speicher zu verweisen (wie z. B. eine `BSTR` oder Schnittstelle) muss freigegeben ist, rufen Sie die Memberfunktion [CAccessorRowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md) bis zur nächsten Datensatz gelesen wird.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  

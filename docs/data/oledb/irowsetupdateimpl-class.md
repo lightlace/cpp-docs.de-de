@@ -63,12 +63,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d58709e9a2b5bd86102e8323456c6bf9ca72fa1
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: afbf8b42b4d518412c1004d78c5c718e54078c1c
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322136"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340780"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl-Klasse
 Die OLE DB-Vorlagen-Implementierung, der die [IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx) Schnittstelle.  
@@ -161,7 +161,7 @@ Legt Datenwerte in einer oder mehreren Spalten fest.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (SetData )(HROW hRow,  
+STDMETHOD (SetData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pSrcData);  
 ```  
@@ -178,7 +178,7 @@ Ruft die Daten zuletzt übertragen oder abgerufen, die aus der Datenquelle, die 
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (GetOriginalData )(HROW hRow,  
+STDMETHOD (GetOriginalData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pData);  
 ```  
@@ -192,7 +192,7 @@ Gibt eine Liste der Zeilen mit ausstehenden Änderungen.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,  
+STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,  
    DBPENDINGSTATUS dwRowStatus,  
    DBCOUNTITEM* pcPendingRows,  
    HROW** prgPendingRows,  
@@ -214,7 +214,7 @@ Der Status der angegebenen Zeilen zurückgegeben.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,  
+STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBPENDINGSTATUS rgPendingStatus[]);  
@@ -232,7 +232,7 @@ Macht alle Änderungen auf die Zeile seit der letzten Fetch oder aktualisieren.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (Undo )(HCHAPTER /* hReserved */,  
+STDMETHOD (Undo )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const HROW rghRows[ ],  
    DBCOUNTITEM* pcRowsUndone,  
@@ -258,7 +258,7 @@ Macht alle Änderungen auf die Zeile seit der letzten Fetch oder aktualisieren.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (Update )(HCHAPTER /* hReserved */,  
+STDMETHOD (Update )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBCOUNTITEM* pcRows,  
@@ -305,7 +305,7 @@ Eine Karte mit den ursprünglichen Daten für die verzögerte Ausführung.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      CAtlMap<   
+CAtlMap<   
    HROW hRow,    
    Storage* pData   
 >   

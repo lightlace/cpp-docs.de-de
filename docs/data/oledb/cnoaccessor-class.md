@@ -1,5 +1,5 @@
 ---
-title: CNoAccessor-Klasse | Microsoft Docs
+title: CNoAccessor-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3110d20330d42fcb0816873ff3e8a25d1f8436ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0527f4b154b4b5d0dc07b2b152a3975f49746abf
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097353"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336738"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor-Klasse
-Kann als ein Vorlagenargument verwendet werden (`TAccessor`) für Vorlagenklassen, z. B. `CCommand` und `CTable`, erfordern, dass ein Argument der Accessor-Klasse.  
+Kann als ein Vorlagenargument verwendet werden (`TAccessor`) für die Vorlagenklassen, z. B. `CCommand` und `CTable`, erfordern ein Argument der Accessor-Klasse.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -36,33 +36,33 @@ class CNoAccessor
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Verwendung `CNoAccessor` als ein Vorlagenargument, wenn Sie nicht die Klasse zur Unterstützung von Parametern oder Spalten ausgeben möchten.  
+ Verwendung `CNoAccessor` als ein Vorlagenargument, wenn Sie nicht die Klasse zum unterstützen Parameter oder Spalten ausgeben möchten.  
   
- `CNoAccessor` implementiert die folgenden Stubmethoden, von denen jedes anderen Methoden des Eigenschaftenaccessors Klasse entsprechen:  
+ `CNoAccessor` implementiert die folgenden Stubmethoden, von denen jedes anderen Klassenmethoden Accessor entsprechen:  
   
--   **BindColumns** -Spalten Accessoren gebunden.  
+-   `BindColumns` -Bindet Spalten Accessoren.  
   
--   `BindParameters` -Die erstellte Parameter an Spalten gebunden.  
+-   `BindParameters` – Binden die erstellte Parameter an Spalten.  
   
--   **Binden Sie** -Bindungen erstellt.  
+-   `Bind` -Bindungen erstellt.  
   
--   **Schließen** -schließt die Zugriffsmethode.  
+-   `Close` -Schließt die Zugriffsmethode.  
   
--   `ReleaseAccessors` -Gibt die Accessoren erstellt, die von der Klasse frei.  
+-   `ReleaseAccessors` -Gibt die Accessoren, die von der Klasse erstellt.  
   
--   `FreeRecordMemory` -Gibt alle Spalten im aktuellen Datensatz, der freigegeben werden müssen.  
+-   `FreeRecordMemory` -Gibt frei, alle Spalten im aktuellen Datensatz, der freigegeben werden müssen.  
   
--   `GetColumnInfo` -Ruft Spalteninformationen aus dem Rowset geöffnet.  
+-   `GetColumnInfo` -Ruft Informationen aus dem Rowset geöffnet.  
   
--   `GetNumAccessors` -Ruft die Anzahl der Accessoren erstellt, die von der Klasse ab.  
+-   `GetNumAccessors` -Ruft die Anzahl der Accessoren, die von der Klasse erstellt.  
   
--   `IsAutoAccessor` -"Wahr" zurückgegeben, wenn Daten bei einem Verschiebevorgang automatisch für den Accessor abgerufen werden.  
+-   `IsAutoAccessor` -Gibt "true" zurück, wenn die Daten automatisch für den Accessor während eines Verschiebevorgangs abgerufen werden.  
   
--   `GetHAccessor` -Ruft die Accessorhandle für einen angegebenen Accessor ab.  
+-   `GetHAccessor` -Ruft Sie Accessorhandles für einen angegebenen Accessor ab.  
   
--   `GetBuffer` -Ruft die Zeiger auf den Puffer Lesezeichen ab.  
+-   `GetBuffer` -Ruft Sie den Zeiger auf den Lesezeichen Puffer ab.  
   
--   **NoBindOnNullRowset** -verhindert die Datenbindung für leere Rowsets.  
+-   `NoBindOnNullRowset` – Verhindert eine Datenbindung für leere Rowsets.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atldbcli.h  

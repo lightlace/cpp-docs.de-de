@@ -1,5 +1,5 @@
 ---
-title: Übersicht über die OLE DB-Programmierung | Microsoft Docs
+title: Übersicht über die OLE DB-Programmierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fdeca20ad97a09f9d5862fa43be680a2f907405f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 735e753412498d3285ad26e02b017fb931960daf
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106192"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336893"
 ---
 # <a name="ole-db-programming-overview"></a>Übersicht über die OLE DB-Programmierung
-OLE DB ist eine leistungsstarke, COM-basierte datenbanktechnologie. Er bietet eine allgemeine Möglichkeit für den Datenzugriff unabhängig von der Art, in dem es gespeichert ist. In einer typischen Unternehmenssituation wird eine große Menge an Informationen außerhalb der Unternehmensdatenbanken gespeichert. Diese Informationen befinden sich in Dateisystemen (z. B. FAT oder NTFS), indizierten sequenziellen Dateien, persönlichen Datenbanken (z. B. in Access), Arbeitsblättern (z. B. in Excel), Anwendungen zur Projektplanung (z. B. Project) sowie in E-Mail-Nachrichten (z. B. in Outlook). OLE DB-ermöglicht es Ihnen, jede Art von Datenspeicher auf die gleiche Weise den Zugriff auf als der Datenspeicher einen OLE DB-Anbieter verfügt.
+OLE DB ist eine leistungsstarke, COM-basierte datenbanktechnologie. Es bietet es sich um eine allgemeine Methode für den Datenzugriff unabhängig von der Art, in dem es gespeichert ist. In einer typischen Unternehmenssituation wird eine große Menge an Informationen außerhalb der Unternehmensdatenbanken gespeichert. Diese Informationen befinden sich in Dateisystemen (z. B. FAT oder NTFS), indizierten sequenziellen Dateien, persönlichen Datenbanken (z. B. in Access), Arbeitsblättern (z. B. in Excel), Anwendungen zur Projektplanung (z. B. Project) sowie in E-Mail-Nachrichten (z. B. in Outlook). OLE DB können Sie jede Art von Datenspeicher in die gleiche Weise zugreifen, solange der Datenspeicher OLE DB-Anbieter verfügt.
   
  OLE DB ermöglicht es Ihnen, Anwendungen zu entwickeln, mit denen Sie auf verschiedene DBMS- und Nicht-DBMS-Datenquellen zugreifen können. OLE DB ermöglicht den universellen Zugriff durch die Verwendung von COM-Schnittstellen, die die entsprechenden DBMS-Funktionen für die jeweilige Datenquelle unterstützen. COM reduziert unnötige Verdoppelungen von Diensten und erhöht die Interoperabilität nicht nur zwischen Datenquellen, sondern auch zwischen anderen Anwendungen.  
   
@@ -33,7 +33,6 @@ OLE DB ist eine leistungsstarke, COM-basierte datenbanktechnologie. Er bietet ei
   
  OLE DB definiert auf der Grundlage der COM-Spezifikation eine erweiterbare und verwaltbare Reihe von Schnittstellen, die konsistente und wiederverwendbare Teile der DBMS-Funktionalität berücksichtigen und einschließen. Diese Schnittstellen definieren die Grenzen der DBMS-Komponenten, z. B. Zeilencontainer, Abfrageprozessoren und Transaktionskoordinatoren, die einen einheitlichen Transaktionszugriff auf verschiedene Informationsquellen ermöglichen.  
  
-  
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Programmierung](../../data/oledb/ole-db-programming.md)   
  [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   

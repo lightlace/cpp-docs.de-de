@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 59793d206f8b53d57347070cbfccd6d98ff2c005
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 6cd6ec4bcee26c1e2fb558670c69d0130808c933
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321954"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338339"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl-Klasse
 Stellt eine Implementierung der `IRowset`-Schnittstelle bereit.  
@@ -177,7 +177,7 @@ Fügt einem vorhandenen Zeilenhandle einen Verweiszähler hinzu.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
+STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBREFCOUNT rgRefCounts[],  
    DBROWSTATUS rgRowStatus[]);  
@@ -193,7 +193,7 @@ Eine Hilfsmethode wird aufgerufen, indem [GetNextRows](../../data/oledb/irowseti
   
 ```cpp
 HRESULT CreateRow(DBROWOFFSET lRowsOffset,  
-  DBCOUNTITEM& cRowsObtained,  
+   DBCOUNTITEM& cRowsObtained,  
    HROW* rgRows);  
 ```  
   
@@ -216,7 +216,7 @@ Ruft Daten aus der Zeile des Rowsets ab.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD(GetData )(HROW hRow,  
+STDMETHOD(GetData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pDstData);  
 ```  
@@ -239,7 +239,7 @@ Gibt die DBSTATUS Gleitkommaausnahme-Flags für das angegebene Feld zurück.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
+virtual DBSTATUS GetDBStatus(RowClass* currentRow,  
    ATLCOLUMNINFO* columnNames);  
 ```  
   
@@ -259,7 +259,7 @@ Ruft Zeilen sequenziell ab, speichert die vorherige Position.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
+STDMETHOD(GetNextRows )(HCHAPTER hReserved,  
    DBROWOFFSET lRowsOffset,  
    DBROWCOUNT cRows,  
    DBCOUNTITEM* pcRowsObtained,  
@@ -276,7 +276,6 @@ Der Konstruktor.
   
 ```cpp
 IRowsetImpl();  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -307,7 +306,7 @@ Gibt Zeilen frei.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
+STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBROWOPTIONS rgRowOptions[],  
    DBREFCOUNT rgRefCounts[],  
@@ -323,7 +322,7 @@ Automatisch neu positioniert und in die nächste Abrufposition auf seine anfäng
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
+STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -338,7 +337,7 @@ Legt die DBSTATUS-Status-Flags für das angegebene Feld.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
+virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,  
    RowClass* currentRow,  
    ATLCOLUMNINFO* columnInfo);  
 ```  
@@ -366,7 +365,6 @@ Gibt an, ob ein Anbieter Abrufen der Abwärtskompatibilität unterstützt.
   
 ```cpp
 unsigned m_bCanFetchBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -379,7 +377,6 @@ Gibt an, ob ein Anbieter die Cursor Bildlauf rückwärts aufweisen kann.
   
 ```cpp
 unsigned  m_bCanScrollBack:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -392,7 +389,6 @@ Ein Bitflag, das verwendet, um zu bestimmen, ob die Cursorposition im Rowset def
   
 ```cpp
 unsigned m_bReset:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -405,7 +401,6 @@ Ein Index in das Rowset, der den Cursor darstellt.
   
 ```cpp
 DBROWOFFSET m_iRowset;  
-  
 ```  
 
 ## <a name="rgrowhandles"></a> IRowsetImpl:: M_rgrowhandles
@@ -414,9 +409,7 @@ Eine Zuordnung von Zeilenhandles, die derzeit vom Anbieter als Reaktion auf enth
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-MapClass  
- m_rgRowHandles;  
-  
+MapClass m_rgRowHandles;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  

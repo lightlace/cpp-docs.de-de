@@ -38,12 +38,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1aa70a8efea82660632cf0219c76009eea44f606
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: e95ab02abaf4dd536ad6a081708a76cf54cca6b0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269812"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337241"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl-Klasse
 Stellt eine Implementierung der [IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx) Schnittstelle.  
@@ -82,7 +82,7 @@ Gibt die von den meisten Consumern benötigte Spaltenmetadaten zurück.
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,  
+STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,  
    DBCOLUMNINFO** prgInfo,  
    OLECHAR** ppStringsBuffer);  
 ```  
@@ -96,7 +96,7 @@ Gibt ein Array von Ordnungszahlen der Spalten in einem Rowset, das durch die ang
 ### <a name="syntax"></a>Syntax  
   
 ```cpp
-      STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,  
+STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,  
    const DBID rgColumnIDs[],  
    DBORDINAL rgColumns[]);  
 ```  

@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6275b07cd06c82d2b9531c3b206b81eedef10db
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 0836a09adac92300a8438a0433fda874e78bcb25
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233419"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339216"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor-Klasse
 Ein, die [CEnumerator](../../data/oledb/cenumerator-class.md) Zugriff auf die Daten aus dem Enumerator-Rowset.  
@@ -89,7 +89,6 @@ Eine Variable, der angibt, ob der Enumerator einen übergeordneten-Enumerator is
   
 ```cpp
 VARIANT_BOOL m_bIsParent;  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -102,7 +101,6 @@ Eine Variable, der angibt, ob die Zeile eine Datenquelle oder einen Enumerator b
   
 ```cpp
 USHORT m_nType;  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -115,7 +113,6 @@ Die Beschreibung der Datenquelle oder Enumerator.
   
 ```cpp
 WCHAR m_szDescription[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -128,7 +125,6 @@ Der Name der Datenquelle oder Enumerator.
   
 ```cpp
 WCHAR m_szName[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -141,7 +137,6 @@ Zeichenfolge zu übergeben [IParseDisplayName](http://msdn.microsoft.com/library
   
 ```cpp
 WCHAR m_szParseName[129];  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  

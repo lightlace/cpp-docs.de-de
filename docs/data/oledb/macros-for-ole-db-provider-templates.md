@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a1845f2e2404604aa187a8569954b3cb289ae3ec
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: a5c9132325af7c05980aac0d7b6b7d53958e4a2b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321928"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338043"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makros für OLE DB-Anbietervorlagen
 Die Makros, die OLE DB-Vorlagen-Anbieter bieten Funktionen, die in den folgenden Kategorien:  
@@ -118,7 +118,6 @@ Markiert, die der Anfang einer Eigenschaft in einer Eigenschaft festgelegt-Zuord
   
 ```cpp
 BEGIN_PROPERTY_SET(guid)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -134,8 +133,7 @@ Markiert, die der Anfang einer Eigenschaft in einer Eigenschaft festgelegt-Zuord
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-BEGIN_PROPERTY_SET_EX(guid  
-, flags )  
+BEGIN_PROPERTY_SET_EX(guid, flags)  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -155,7 +153,6 @@ Ein Festlegen der Anfang der Eigenschaft-Zuordnungseinträge.
   
 ```cpp
 BEGIN_PROPSET_MAP(Class)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -180,7 +177,6 @@ Dieses Makro wird Eigenschaftengruppen miteinander verkettet.
   
 ```cpp
 CHAIN_PROPERTY_SET(ChainClass)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -200,7 +196,6 @@ Markiert das Ende der eine Eigenschaft festgelegt.
   
 ```cpp
 END_PROPERTY_SET(guid)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -217,7 +212,6 @@ Markiert das Ende der Eigenschaft legen Sie-Zuordnungseinträge.
   
 ```cpp
 END_PROPSET_MAP()  
-  
 ```  
   
 #### <a name="example"></a>Beispiel  
@@ -230,7 +224,6 @@ Stellt eine bestimmte Eigenschaft in einem Eigenschaftensatz dar.
   
 ```cpp
 PROPERTY_INFO_ENTRY(dwPropID)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -249,8 +242,7 @@ Stellt eine bestimmte Eigenschaft in einem Eigenschaftensatz dar.
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-PROPERTY_INFO_ENTRY_EX(dwPropID  
-, vt, dwFlags, value, options )  
+PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -281,8 +273,7 @@ Stellt eine bestimmte Eigenschaft in einem Eigenschaftensatz dar.
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-PROPERTY_INFO_ENTRY_VALUE(dwPropID  
-, value )  
+PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -305,7 +296,6 @@ Markiert den Beginn der Zuordnungseinträge für den Anbieter.
   
 ```cpp
 BEGIN_PROVIDER_COLUMN_MAP(theClass)  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -324,7 +314,6 @@ Markiert das Ende der Zuordnungseinträge für den Anbieter.
   
 ```cpp
 END_PROVIDER_COLUMN_MAP()  
-  
 ```  
   
 #### <a name="example"></a>Beispiel  
@@ -336,8 +325,7 @@ Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden.
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY (name  
-, ordinal, member )  
+PROVIDER_COLUMN_ENTRY (name, ordinal, member)  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -356,8 +344,7 @@ Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden.
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_FIXED(name  
-, ordinal, dbtype, member )  
+PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -385,8 +372,7 @@ Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden.
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_GN (name  
-, ordinal, flags, colSize, dbtype, precision, scale, guid )  
+PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scale, guid)  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -423,8 +409,7 @@ Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden.
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_LENGTH(name  
-, ordinal, size, member )  
+PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -452,8 +437,7 @@ Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden.
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_STR(name  
-, ordinal, member )  
+PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -478,13 +462,11 @@ Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden.
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name  
-, ordinal, dbtype, size, member )  
+PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)  
 ```  
   
 #### <a name="parameters"></a>Parameter  
  *name*  
-  
  [in] Name der Spalte.  
   
  *Ordinal*  
@@ -508,8 +490,7 @@ Stellt eine bestimmte Spalte, die vom Anbieter unterstützt werden.
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_WSTR(name  
-, ordinal, member )  
+PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -531,7 +512,7 @@ Kennzeichnet den Anfang einer schemazuordnung.
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-      BEGIN_SCHEMA_MAP(SchemaClass);  
+BEGIN_SCHEMA_MAP(SchemaClass);  
 ```  
   
 #### <a name="parameters"></a>Parameter  
@@ -548,7 +529,6 @@ Kennzeichnet das Ende der schemazuordnung.
   
 ```cpp
 END_SCHEMA_MAP()  
-  
 ```  
   
 #### <a name="see-also"></a>Siehe auch  
@@ -560,7 +540,7 @@ Ordnet eine GUID einer Klasse.
 #### <a name="syntax"></a>Syntax  
   
 ```cpp
-      SCHEMA_ENTRY(guid,  
+SCHEMA_ENTRY(guid,  
    rowsetClass);   
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: Durchlaufen eines einfachen Rowsets | Microsoft Docs
+title: Durchlaufen eines einfachen Rowsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102950"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336653"
 ---
 # <a name="traversing-a-simple-rowset"></a>Durchlaufen eines einfachen Rowsets
-Das folgende Beispiel zeigt die eine schnellen und einfachen Zugriff, die keine Befehle beinhaltet. Die folgenden Consumercode in einem ATL-Projekt ruft Datensätze aus einer Tabelle mit dem Namen *Künstler* in einer Microsoft Access-Datenbank mithilfe der Microsoft OLE DB-Anbieter für ODBC. Der Code erstellt ein [CTable](../../data/oledb/ctable-class.md) Table-Objekt mit einem Accessor basierend auf die Benutzerdatensatz-Klasse `CArtists`. Öffnet eine Verbindung, wird eine Sitzung für die Verbindung geöffnet und die Tabelle in der Sitzung geöffnet.  
+Das folgende Beispiel zeigt eine schnelle und einfache Zugriff auf die Datenbank, die Befehle nicht beinhaltet. Der folgende Consumercode, in einem ATL-Projekt ruft Datensätze aus einer Tabelle namens *Künstler* in einer Microsoft Access-Datenbank mithilfe von Microsoft OLE DB-Anbieter für ODBC. Der Code erstellt eine [CTable](../../data/oledb/ctable-class.md) Table-Objekt mit einem Accessor, auf der Grundlage von der Benutzerdatensatz-Klasse `CArtists`. Öffnet eine Verbindung, wird eine Sitzung für die Verbindung geöffnet und die Tabelle in der Sitzung wird geöffnet.  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -53,9 +53,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Der Benutzerdatensatz `CArtists`, wie folgt aussieht:  
+ Benutzerdatensatz `CArtists`, sieht wie folgt aus:  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  
