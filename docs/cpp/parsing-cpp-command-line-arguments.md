@@ -1,5 +1,5 @@
 ---
-title: Analysieren von C++-Befehlszeilenargumenten | Microsoft Docs
+title: Analysieren von C++-Befehlszeilenargumenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147461584f1a978be55502d783bc527b5632d20f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eca85baea71052525d70c90ac521ef5fa95a5118
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409205"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Analysieren von C++-Befehlszeilenargumenten
 **Microsoft-spezifisch**  
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Die Einfügemarke (^) wird nicht als Escape- oder Trennzeichen erkannt. Das Zeichen wird vom Befehlszeilenparser im Betriebssystem vollständig verarbeitet, bevor es an das `argv`-Array im Programm übergeben wird.  
   
--   Eine in doppelte Anführungszeichen eingeschlossene Zeichenfolge ("*Zeichenfolge*") wird als einzelnes Argument enthaltenen Leerräume interpretiert. Eine Zeichenfolge in Anführungszeichen kann in ein Argument eingebettet sein.  
+-   Eine Zeichenfolge, umgeben von doppelten Anführungszeichen ("*Zeichenfolge*") wird als ein einzelnes Argument, enthaltenen Leerräume interpretiert. Eine Zeichenfolge in Anführungszeichen kann in ein Argument eingebettet sein.  
   
 -   Wenn dem Anführungszeichen ein umgekehrter Schrägstrich (\\") vorangestellt wird, wird diese Zeichenfolge als literales Anführungszeichen (") interpretiert.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="example"></a>Beispiel  
  Das folgende Programm zeigt, wie Befehlszeilenargumente übergeben werden:  
   
-```  
+```cpp 
 // command_line_arguments.cpp  
 // compile with: /EHsc  
 #include <iostream>  

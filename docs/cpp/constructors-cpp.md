@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a05467a876a8b305aba64e49e0763cf5690a56
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 52d1727018fd2ad214e031229945daa4d843f115
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940884"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403062"
 ---
 # <a name="constructors-c"></a>Konstruktoren (C++)
 
@@ -30,7 +30,6 @@ Zum Anpassen, wie die Klasse, Elemente initialisiert werden, oder zum Aufrufen v
 Konstruktoren können optional ein Element Init Liste übernehmen. Dies ist eine effizientere Methode zum Initialisieren von Klassenmembern als Zuweisen von Werten in den Text des Konstruktors. Das folgende Beispiel zeigt eine Klasse `Box` mit drei überladene Konstruktoren. Verwenden Sie die letzten zwei Init Memberlisten:
 
 ```cpp
-
 class Box {
 public:
     // Default constructor
@@ -55,13 +54,11 @@ private:
     int m_length{ 0 };
     int m_height{ 0 };
 };
-
 ```
 
 Wenn Sie eine Instanz einer Klasse deklarieren, wählt der Compiler an, welcher Konstruktor aufrufen abhängig von den Regeln der überladungsauflösung:
 
 ```cpp
-
 int main()
 {
     Box b; // Calls Box()
@@ -73,7 +70,6 @@ int main()
     // Using function-style notation:
     Box b4(2, 4, 6); // Calls Box(int, int, int)
 }
-
 ```
 
 - Konstruktoren können deklariert werden, als **Inline**, [explizite](#explicit_constructors), **Friend** oder ["constexpr"](#constexpr_constructors).
@@ -87,7 +83,6 @@ Ein Konstruktor kann optional eine Member-Initialisiererliste werden, die Klasse
 Ein Member-Initialisiererliste ist die Verwendung bevorzugter Zuweisen von Werten in den Text des Konstruktors aus, da er direkt auf das Element initialisiert. Im folgenden Beispiel wird der Memberinitialisierer Liste enthält alle der **identifier(argument)** Ausdrücke nach dem Doppelpunkt:
 
 ```cpp
-  
     Box(int width, int length, int height)
         : m_width(width), m_length(length), m_height(height)
     {}
@@ -133,7 +128,6 @@ int main() {
     Box box1; // Invoke compiler-generated constructor
     cout << "box1.Volume: " << box1.Volume() << endl; // Outputs 0
 }
-
 ```
 
 Wenn Sie einen impliziten Standardkonstruktor verwenden, müssen Sie Elemente in der Klassendefinition initialisiert werden, wie im vorherigen Beispiel gezeigt. Ohne diese Initialisierer Elemente werden nicht initialisiert werden, und der Aufruf Volume() ergibt einen Wert für die Garbage. Im Allgemeinen ist es empfehlenswert, die zum Initialisieren von Membern, die auf diese Weise, auch wenn nicht auf einen impliziten Standardkonstruktor verlassen.
@@ -141,7 +135,6 @@ Wenn Sie einen impliziten Standardkonstruktor verwenden, müssen Sie Elemente in
 Sie können verhindern, dass den Compiler generiert einen impliziten Standardkonstruktor definieren ihn als [gelöscht](#explicitly_defaulted_and_deleted_constructors):
 
 ```cpp
-
     // Default constructor
     Box() = delete;
 
@@ -180,14 +173,12 @@ int main(){
     Box box2{ 2, 3, 4 };
     Box box3; // C2512: no appropriate default constructor available
 }
-
 ```
 
 Wenn eine Klasse keinen Standardkonstruktor hat, kann ein Array von Objekten dieser Klasse nicht allein mithilfe von Syntax in eckigen Klammern erstellt werden. Beispielsweise kann im vorherigen Codeblock ein Array von Feldern nicht folgendermaßen deklariert werden:
 
 ```cpp
 Box boxes[3]; // C2512: no appropriate default constructor available
-
 ```
 
 Allerdings können Sie einen Satz von Initialisiererlisten verwenden, um ein Array von Objekten von Feld zu initialisieren:
@@ -205,7 +196,6 @@ Ein *Kopierkonstruktor* Initialisiert ein Objekt durch die Werte aus einem Objek
 Ein Kopierkonstruktor möglicherweise eine der folgenden Signaturen:
 
 ```cpp
-
     Box(Box& other); // Avoid if possible--allows modification of other.
     Box(const Box& other);
     Box(volatile Box& other);
@@ -240,7 +230,6 @@ Der Compiler wählt ein bewegungskonstruktor in bestimmten Situationen, in dem d
 #include <string>
 #include <algorithm>
 using namespace std;
-
 
 class Box {
 public:
@@ -298,8 +287,6 @@ int main()
     cin >> ch; // keep window open
     return 0;
 }
-
-
 ```
 
 Wenn eine Klasse, die nicht über einen bewegungskonstruktor definiert, generiert der Compiler eine implizite, liegt keine benutzerdeklarierten Kopierkonstruktor, Kopierzuweisungsoperator, bewegungszuweisungsoperator oder Destruktor. Wenn keine explizite oder implizite bewegungskonstruktor definiert ist, verwenden Sie stattdessen Vorgänge, die andernfalls einen bewegungskonstruktor verwenden würde den Copy-Konstruktor. Wenn ein bewegungskonstruktor oder bewegungszuweisungsoperator eine Klasse deklariert wird, wird der implizit deklarierten Kopierkonstruktor als gelöscht definiert.
@@ -338,7 +325,6 @@ Ein Konstruktor kann deklariert werden, als ["constexpr"](constexpr-cpp.md) Wenn
 - alle nicht statischen Datenmember und untergeordnete Objekte der Klasse initialisiert werden;
 - Wenn die Klasse (a) einer Vereinigung mit variant Mitglieder oder (b) verfügt über anonyme Unions, wird nur einer der union-Member initialisiert;
 - alle nicht statischen Datenmember des Klassentyps und alle untergeordneten Objekte von Basisklasse vorhanden Constexpr-Konstruktor.
-
 
 ## <a name="init_list_constructors"></a> Initialisierer Liste Konstruktoren
 
@@ -385,13 +371,11 @@ private:
 }
 //elsewhere...
     ShippingOrder so(42, 10.8);
-
 ```
 
 Derartige Konvertierungen können in einigen Fällen hilfreich sein. Häufiger führen sie jedoch möglicherweise zu feinen, aber schwerwiegenden Fehlern in Ihrem Code. Als allgemeine Regel sollten Sie verwenden die **explizite** das Schlüsselwort für einen Konstruktor (und benutzerdefinierten Operatoren), um diese Art der impliziten typkonvertierung zu verhindern:
 
 ```cpp
-
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
@@ -412,7 +396,6 @@ Ein Konstruktor führt die Arbeit in folgender Reihenfolge aus:
 Das folgende Beispiel zeigt die Reihenfolge, in der Basisklassen- und Memberkonstruktoren im Konstruktor für eine abgeleitete Klasse aufgerufen werden. Zuerst wird der Basiskonstruktor aufgerufen. Anschließend werden die Basisklassenmember in der Reihenfolge initialisiert, in der sie in der Klassendeklaration stehen. Danach wird der abgeleitete Konstruktor aufgerufen.
 
 ```cpp
-
 #include <iostream>
 
 using namespace std;
@@ -450,12 +433,11 @@ private:
 int main() {
     DerivedContainer dc;
 }
-
 ```
 
 Die Ausgabe ist wiefolgt:
 
-```output
+```Output
 Contained1 ctor
 Contained2 ctor
 BaseContainer ctor
@@ -463,7 +445,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-Ein abgeleiteter Klassenkonstruktor ruft immer einen Basisklassenkonstruktor auf, damit er immer auf vollständig erstellte Basisklassen zurückgreifen kann, bevor zusätzliche Arbeit erforderlich ist. Die Basisklassenkonstruktoren werden in der Reihenfolge der Ableitung aufgerufen. Beispiel: Wenn ClassA von ClassB abgeleitet ist, die von ClassC abgeleitet ist, wird zuerst der ClassC-Konstruktor, dann der ClassB-Konstruktor und anschließend der ClassA-Konstruktor aufgerufen.
+Ein abgeleiteter Klassenkonstruktor ruft immer einen Basisklassenkonstruktor auf, damit er immer auf vollständig erstellte Basisklassen zurückgreifen kann, bevor zusätzliche Arbeit erforderlich ist. Die Basisklassenkonstruktoren werden in Reihenfolge der Ableitung aufgerufen – z. B. wenn `ClassA` ergibt sich aus `ClassB`, ergibt sich aus `ClassC`, wird die `ClassC` Konstruktor zuerst aufgerufen wird, und klicken Sie dann die `ClassB` Konstruktor die `ClassA` Konstruktor.
 
 Wenn eine Basisklasse keinen Standardkonstruktor hat, müssen Sie die Parameter für den Basisklassenkonstruktor im abgeleiteten Klassenkonstruktor angeben:
 
@@ -537,18 +519,15 @@ public:
 int main() {
     DerivedClass dc;
 }
-
 ```
 
 Die folgende Ausgabe sollte angezeigt werden:
 
-```output
-
+```Output
 BaseClass1 ctor
 BaseClass2 ctor
 BaseClass3 ctor
 DerivedClass ctor
-
 ```
 
 ## <a name="virtual_functions_in_constructors"></a> Virtuelle Funktionen in Konstruktoren
@@ -587,7 +566,7 @@ int main() {
 
 Die Ausgabe ist wiefolgt:
 
-```output
+```Output
 BaseClass print_it
 Derived Class print_it
 ```
@@ -666,7 +645,6 @@ Derived d1(5) calls: Base(int)
 Derived d1('c') calls: Base(char)
 Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
-
 ```
 
 Mithilfe der „using“-Anweisung werden alle Konstruktoren aus dieser Basisklasse mit Ausnahme jener, die eine identische Signatur wie die Konstruktoren in der abgeleiteten Klasse aufweisen, in den Bereich versetzt. Im Allgemeinen empfiehlt es sich, erbende Konstruktoren zu verwenden, wenn die abgeleitete Klasse keine neuen Datenmember oder Konstruktoren deklariert.
@@ -679,7 +657,6 @@ class Derived : T {
     using T::T;   // declare the constructors from T
     // ...
 };
-
 ```
 
 Eine erbende Klasse kann nicht aus mehreren Basisklassen erben, wenn diese Basisklassen über Konstruktoren mit einer identischen Signatur verfügen.

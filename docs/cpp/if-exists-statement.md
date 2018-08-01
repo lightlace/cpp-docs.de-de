@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 610a46c7906cda3c44cdf1f0aaf652552efb9bcb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ac866487c25ee4ce75abbebe9b9f9c2a5e97828
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943240"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405943"
 ---
 # <a name="ifexists-statement"></a>__if_exists-Anweisung
 Die **__if_exists** -Anweisung testet, ob der angegebene Bezeichner vorhanden ist. Wenn der Bezeichner vorhanden ist, wird der angegebene Anweisungsblock ausgeführt.  
@@ -40,8 +40,8 @@ statements
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|`identifier`|Der Bezeichner, dessen Vorhandensein Sie überprüfen möchten.|  
-|`statements`|Eine oder mehrere Anweisungen ausgeführt wird, wenn `identifier` vorhanden ist.|  
+|*identifier*|Der Bezeichner, dessen Vorhandensein Sie überprüfen möchten.|  
+|*Anweisungen*|Eine oder mehrere Anweisungen ausgeführt wird, wenn *Bezeichner* vorhanden ist.|  
   
 ## <a name="remarks"></a>Hinweise  
   

@@ -1,5 +1,5 @@
 ---
-title: Bereinigen von Ressourcen | Microsoft Docs
+title: Bereinigen von Ressourcen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,27 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 960e19400ae1d00108d57eb85d3df01ebf1dbc33
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7c589f5ac6baef0ef4420d997fa6497f4e03d5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408735"
 ---
 # <a name="cleaning-up-resources"></a>Bereinigen von Ressourcen
-Während der Ausführung des Beendigungshandlers wissen Sie möglicherweise nicht, welche Ressourcen tatsächlich zugeordnet wurden, bevor der Beendigungshandler aufgerufen wurde. Es ist möglich, dass der `__try`-Anweisungsblock unterbrochen wurde, bevor alle Ressourcen zugeordnet wurden, sodass nicht alle Ressourcen geöffnet wurden.  
+Während der Ausführung des Beendigungshandlers wissen Sie möglicherweise nicht, welche Ressourcen tatsächlich zugeordnet wurden, bevor der Beendigungshandler aufgerufen wurde. Es ist möglich, die die **__try** Anweisungsblock wurde unterbrochen, bevor alle Ressourcen zugeordnet wurden, sodass nicht alle Ressourcen geöffnet wurden.  
   
  Vorsichtshalber sollten Sie daher überprüfen, welche Ressourcen tatsächlich geöffnet sind, bevor Sie die Bereinigung der Abbruchbehandlung fortsetzen. Dazu wird diese Vorgehensweise empfohlen:  
   
 1.  Initialisieren Sie die Handles mit dem Wert NULL.  
   
-2.  Ordnen Sie im `__try`-Anweisungsblock Ressourcen zu. Beim Zuordnen der Ressourcen werden positive Werte für die Handles festgelegt.  
+2.  In der **__try** Anweisung blockiert, Ressourcen zuordnen. Beim Zuordnen der Ressourcen werden positive Werte für die Handles festgelegt.  
   
-3.  Im `__finally`-Anweisungsblock geben Sie alle Ressourcen frei, deren entsprechender Handle oder deren entsprechende Flagvariable ungleich 0 oder nicht NULL ist.  
+3.  In der **__finally** Anweisungsblock, release jede Ressource, deren entsprechender Handle oder Flagvariable ungleich NULL ist, oder nicht NULL.  
   
 ## <a name="example"></a>Beispiel  
- Beispielsweise verwendet der folgende Code einen Beendigungshandler, um drei Dateien und einen Speicherblock zu schließen, die im `__try`-Anweisungsblock zugeordnet wurden. Bevor eine Ressource bereinigt wird, überprüft der Code zunächst, ob die Ressource zugeordnet wurde.  
+ Der folgende Code verwendet beispielsweise einen Beendigungshandler drei Dateien und einen Speicherblock, die in zugeordnet wurden schließen die **__try** Anweisungsblock. Bevor eine Ressource bereinigt wird, überprüft der Code zunächst, ob die Ressource zugeordnet wurde.  
   
-```  
+```cpp 
 // exceptions_Cleaning_up_Resources.cpp  
 #include <stdlib.h>  
 #include <malloc.h>  

@@ -1,5 +1,5 @@
 ---
-title: Initialisieren von Klassen und Strukturen ohne Konstruktoren (C++) | Microsoft Docs
+title: Initialisieren von Klassen und Strukturen ohne Konstruktoren (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a547dbe4d5668439ea3002249568962a50a0036
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bca7ef417a633f186f2b7ca6f7d92af37e780420
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409335"
 ---
 # <a name="initializing-classes-and-structs-without-constructors-c"></a>Initialisieren von Klassen und Strukturen ohne Konstruktoren (C++)
 Es ist nicht immer erforderlich, einen Konstruktor für eine Klasse zu definieren, insbesondere bei einfachen. Benutzer können Objekte einer Klasse oder Struktur mithilfe einer einheitlichen Initialisierung initialisieren, wie dies aus dem folgenden Beispiel hervorgeht:  
   
-```  
+```cpp 
 #include "stdafx.h"  
 #include <Windows.h>  
   
@@ -63,10 +64,9 @@ int main()
   
     return 0;  
 }  
-  
 ```  
   
- Beachten Sie, dass wenn eine Klasse oder Struktur keinen Konstruktor verfügt, Sie die Listenelemente in der Reihenfolge, dass die Elemente in der Klasse deklariert werden. Wenn die Klasse einen Konstruktor verfügt, geben Sie die Elemente in der Reihenfolge der Parameter ein.  
+ Beachten Sie, dass wenn eine Klasse oder Struktur keinen Konstruktor verfügt, Sie die Listenelemente in der Reihenfolge angeben, dass die Elemente in der Klasse deklariert werden. Wenn die Klasse einen Konstruktor verfügt, geben Sie die Elemente in der Reihenfolge der Parameter ein.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)   

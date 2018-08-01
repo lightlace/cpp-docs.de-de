@@ -1,5 +1,5 @@
 ---
-title: Noalias | Microsoft Docs
+title: Noalias | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cbb5c1b4162f3326aade092c7e20ca42a825d13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56ee12f65ff9efe9f3b048d061b80aef691eb0f2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420118"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404394"
 ---
 # <a name="noalias"></a>noalias
 
 **Microsoft-spezifisch**
 
-`noalias` bedeutet, dass ein Funktionsaufruf nicht ändert oder sichtbaren globalen Zustand verweisen und nur den Speicher ändert *direkt* durch Zeigerparameter (Dereferenzierungen der ersten Ebene).
+**Noalias** bedeutet, dass ein Funktionsaufruf nicht ändert oder sichtbaren globalen Zustand verweisen und nur den Speicher zeigt ändert *direkt* durch Zeigerparameter (Dereferenzierungen der ersten Ebene).
 
-Wenn eine Funktion als `noalias` kommentiert wird, kann der Optimierer davon ausgehen, dass zusätzlich zu den Parametern selbst innerhalb der Funktion nur auf Dereferenzierungen der ersten Ebene von Zeigerparametern verwiesen wird oder diese geändert werden. Der sichtbare globale Zustand ist der Satz aller Daten, die nicht außerhalb des Kompilierungsbereichs definiert werden oder auf die nicht außerhalb des Kompilierungsbereichs verwiesen wird, und ihre Adresse wird nicht akzeptiert. Kompilierung bezieht sich auf alle Quelldateien ([/LTCG (Link-Time Code Generation)](../build/reference/ltcg-link-time-code-generation.md) erstellt) oder eine einzelne Quelldatei (nicht -**/LTCG** erstellen).
+Wenn eine Funktion als Anmerkung versehen ist **Noalias**, der Optimierer kann davon ausgehen, dass zusätzlich zu den Parametern selbst nur auf oberster Ebene auf Dereferenzierungen der Zeigerparameter auf die verwiesen wird oder innerhalb der Funktion geändert werden. Der sichtbare globale Zustand ist der Satz aller Daten, die nicht außerhalb des Kompilierungsbereichs definiert werden oder auf die nicht außerhalb des Kompilierungsbereichs verwiesen wird, und ihre Adresse wird nicht akzeptiert. Der kompilierungsbereich umfasst alle Quelldateien ([/LTCG (Link-Time Code Generation)](../build/reference/ltcg-link-time-code-generation.md) erstellt) oder eine einzelne Quelldatei (nicht-**"/ LTCG"** erstellen).
 
-Die `noalias` -Anmerkung gilt nur innerhalb eines Texts der mit Anmerkung versehenen Funktion. Markieren eine Funktion als `__declspec(noalias)` wirkt sich nicht auf das Aliasing von Zeigern, die von der Funktion zurückgegeben.
+Die **Noalias** -Anmerkung gilt nur innerhalb des Texts, der mit Anmerkungen versehenen Funktion. Markieren eine Funktion als **__declspec(noalias)** wirkt sich nicht auf das Aliasing von Zeigern, die von der Funktion zurückgegeben.
 
-Eine andere Anmerkung, die Aliasing auswirken kann, finden Sie unter [__declspec(restrict)](../cpp/restrict.md).
+Eine andere Anmerkung, die Aliasing auswirken können, finden Sie unter [__declspec(restrict)](../cpp/restrict.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel veranschaulicht die Verwendung von `__declspec(noalias)`.
+Das folgende Beispiel veranschaulicht die Verwendung von **__declspec(noalias)**.
 
-Wenn die Funktion `multiply` , dass zugreift kommentiert wird `__declspec(noalias)`, es weist den Compiler, dass diese Funktion den globalen Status außer durch die Zeiger in der Parameterliste nicht verändert wird.
+Wenn die Funktion `multiply` , dass mit Anmerkungen zugreift versehen **__declspec(noalias)**, weist den Compiler, dass diese Funktion den globalen Status außer durch die Zeiger in der Parameterliste nicht ändert.
 
 ```C
 // declspec_noalias.c
@@ -109,7 +109,6 @@ int main()
 ```
 
 ## <a name="see-also"></a>Siehe auch
-
-[__declspec](../cpp/declspec.md)  
-[Schlüsselwörter](../cpp/keywords-cpp.md)  
-[__declspec(restrict)](../cpp/restrict.md)  
+ [__declspec](../cpp/declspec.md)  
+ [Schlüsselwörter](../cpp/keywords-cpp.md)  
+ [__declspec(restrict)](../cpp/restrict.md)  

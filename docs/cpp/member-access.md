@@ -1,5 +1,5 @@
 ---
-title: Memberzugriff | Microsoft Docs
+title: Memberzugriff | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,29 +19,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8896e473f1a419f24636d7c503924b51426be24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 99f65d2b03f54eb16db56bf81948aadfb184cfa1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420084"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402366"
 ---
 # <a name="member-access"></a>Memberzugriff
-Klassenmemberzugriff kann gesteuert werden, indem der Memberzugriffsoperator überladen (**->**). Dieser Operator wird bei dieser Verwendung als unärer Operator betrachtet, und die überladene Operatorfunktion muss eine Klassenmemberfunktion sein. Daher ist die Deklaration für eine solche Funktion:  
+Klassenmemberzugriff kann gesteuert werden, durch überladen den Memberzugriffsoperator (**->**). Dieser Operator wird bei dieser Verwendung als unärer Operator betrachtet, und die überladene Operatorfunktion muss eine Klassenmemberfunktion sein. Daher ist die Deklaration für eine solche Funktion:  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 class-type *operator->()  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- wobei *Klassentyp* ist der Name der Klasse, zu der dieser Operator gehört. Die Operatorfunktion für den Memberzugriff muss eine nicht statische Memberfunktion sein.  
+ wo *Klassentyp* ist der Name der Klasse zu der dieser Operator gehört. Die Operatorfunktion für den Memberzugriff muss eine nicht statische Memberfunktion sein.  
   
  Dieser Operator wird (oft in Verbindung mit dem Zeiger-Dereferenzierungsoperator) verwendet, um "intelligente Zeiger" zu implementieren, die vor einer Dereferenzierung oder Zählung validiert werden.  
   
- Das Sprachelement **.** Memberzugriffsoperator kann nicht überladen werden.  
+ Das Sprachelement **.** Memberzugriffsoperator kann werden nicht überladen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Operatorüberladung](../cpp/operator-overloading.md)

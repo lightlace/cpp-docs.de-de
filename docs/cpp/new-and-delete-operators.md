@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb8f04962593dff13559f49f7f7c23014968c266
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940759"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406662"
 ---
 # <a name="new-and-delete-operators"></a>Operatoren "new" und "delete"
 
@@ -152,11 +152,11 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- Nur eine der beiden oben beschriebenen Formen kann für eine bestimmte Klasse vorhanden sein. Die erste Form akzeptiert ein einzelnes Argument vom Typ **"void" \*** , das einen Zeiger auf das Objekt beim Aufheben der Zuordnung enthält. Die zweite Form – Größeninformationen – akzeptiert zwei Argumente: das erste Argument ist ein Zeiger auf den Speicherblock beim Aufheben der Zuordnung und die zweite ist die Anzahl der freizugebenden Bytes. Der Rückgabetyp der beiden Formen **"void"** (**Delete-Operator** kann keinen Wert zurückgeben).  
+ Nur eine der beiden oben beschriebenen Formen kann für eine bestimmte Klasse vorhanden sein. Die erste Form akzeptiert ein einzelnes Argument vom Typ `void *`, das einen Zeiger auf das Objekt beim Aufheben der Zuordnung enthält. Die zweite Form – Größeninformationen – akzeptiert zwei Argumente: das erste Argument ist ein Zeiger auf den Speicherblock beim Aufheben der Zuordnung und die zweite ist die Anzahl der freizugebenden Bytes. Der Rückgabetyp der beiden Formen **"void"** (**Delete-Operator** kann keinen Wert zurückgeben).  
   
  Um eine schnellere suchen, die für die Kategorie der richtigen Größe des Objekts, das gelöscht werden, der oft nicht in der Nähe der Zuordnung selbst gespeichert und wahrscheinlich nicht zwischengespeichert, die zweite Form ist; die zweite Form ist besonders nützlich, wenn ein **Delete-Operator** Funktion von einer Basisklasse wird verwendet, um ein Objekt einer abgeleiteten Klasse zu löschen.  
   
- Die **Delete-Operator** -Funktion ist statisch und nicht aus diesem Grund virtuell sein. Die `operator delete` Funktion folgt der Zugriffssteuerung wie beschrieben in [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md).  
+ Die **Delete-Operator** -Funktion ist statisch und nicht aus diesem Grund virtuell sein. Die **Delete-Operator** Funktion folgt der Zugriffssteuerung wie beschrieben in [Memberzugriffssteuerung](../cpp/member-access-control-cpp.md).  
   
  Das folgende Beispiel zeigt eine benutzerdefinierte **new-Operator** und **Delete-Operator** Funktionen, die dazu dienen, speicherzuordnungen und Aufhebungen von speicherzuordnungen zu protokollieren:  
   
@@ -229,4 +229,3 @@ void f() {
    delete [] pX;  
 }  
 ```  
-

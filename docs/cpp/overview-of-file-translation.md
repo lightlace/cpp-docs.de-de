@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dd4643c21ebb8626252230b90880af9f9499c0d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eec47e9810e0cc846cc351330512256a32f95aac
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943199"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406844"
 ---
 # <a name="overview-of-file-translation"></a>Übersicht über die Dateiübersetzung
 C++-Programme wie C-Programme bestehen aus mindestens einer Datei. Jede dieser Dateien wird in der folgenden konzeptionellen Reihenfolge übersetzt (die tatsächliche Reihenfolge folgt der "als ob"-Regel: Übersetzung muss so erfolgen, als wären diese Schritte befolgt worden):  

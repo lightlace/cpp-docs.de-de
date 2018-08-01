@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943840"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407779"
 ---
 # <a name="pointers-to-members"></a>Zeiger auf Member
 Deklarationen von Zeigern auf Member sind Sonderfälle von Zeigerdeklarationen.  Sie können mithilfe der folgenden Sequenz deklariert werden:  
@@ -79,7 +79,7 @@ int main()
 }  
 ```  
   
- Im vorherigen Beispiel `pwCaption` ist ein Zeiger auf einen Member der Klasse `Window` weist den Typ, der **Char\***. Der Typ von `pwCaption` lautet `char * Window::* `. Im nächsten Codefragment werden Zeiger auf die Memberfunktionen `SetCaption` und `GetCaption` deklariert.  
+ Im vorherigen Beispiel `pwCaption` ist ein Zeiger auf einen Member der Klasse `Window` weist den Typ, der `char*`. Der Typ von `pwCaption` lautet `char * Window::* `. Im nächsten Codefragment werden Zeiger auf die Memberfunktionen `SetCaption` und `GetCaption` deklariert.  
   
 ```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -103,7 +103,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
   
  Der Unterschied zwischen der **.\***  und **-> \*** Operatoren (der Pointer-to-Member-Operatoren) ist, die die **.\***  Operator wählt Elemente zwar angegeben, ein Objekt oder einen Objektverweis, der **-> \*** Operator wählt Elemente über einen Zeiger. (Weitere Informationen zu diesen Operatoren finden Sie unter [Ausdrücke mit Zeiger-auf-Member-Operatoren](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- Das Ergebnis der Pointer-to-Member-Operatoren ist der Typ des Members – in diesem Fall **Char \*** .  
+ Das Ergebnis der Pointer-to-Member-Operatoren ist der Typ des Members – in diesem Fall `char *`.  
   
  Im folgenden Codefragment werden die Memberfunktionen `GetCaption` und `SetCaption` mithilfe der Zeiger auf Member aufgerufen:  
   
@@ -174,6 +174,3 @@ int main()
 //Output: Print function for class Base  
 Print function for class Derived  
 ```  
-  
-## <a name="see-also"></a>Siehe auch  
- 

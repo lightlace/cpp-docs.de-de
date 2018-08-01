@@ -1,5 +1,5 @@
 ---
-title: Übersicht über Memberfunktionen | Microsoft Docs
+title: Übersicht über Memberfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b34be19c5fe67c087579e3d1cf0643d5afd71dc5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21de116740161a965bd4790eff751d10cf878b79
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409115"
 ---
 # <a name="overview-of-member-functions"></a>Übersicht über Memberfunktionen
-Memberfunktionen sind entweder statisch oder nicht statisch. Das Verhalten von statischen Memberfunktionen unterscheidet sich von anderen Memberfunktionen, da statische Memberfunktionen nicht über ein implizites haben **dies** Argument. Nicht statische Memberfunktionen haben einen **dies** Zeiger. Memberfunktionen können, ob statisch oder nicht statisch, entweder inner- oder außerhalb der Klassendeklaration definiert werden.  
+Memberfunktionen sind entweder statisch oder nicht statisch. Das Verhalten von statischen Memberfunktionen unterscheidet sich von anderen Memberfunktionen, da statische Memberfunktionen nicht über ein implizites haben **dies** Argument. Nicht statische Memberfunktionen haben eine **dies** Zeiger. Memberfunktionen können, ob statisch oder nicht statisch, entweder inner- oder außerhalb der Klassendeklaration definiert werden.  
   
  Wenn eine Memberfunktion innerhalb einer Klassendeklaration definiert ist, wird sie als Inlinefunktion behandelt, und es ist nicht erforderlich, den Funktionsnamen mit dem Klassennamen zu qualifizieren. Obwohl innerhalb von Klassendeklarationen definierte Funktionen bereits als Inlinefunktionen behandelt werden, können Sie die **Inline** Schlüsselwort zum Dokumentieren von Code.  
   
  Ein Beispiel des Deklarierens einer Funktion innerhalb einer Klassendeklaration folgt:  
   
-```  
+```cpp 
 // overview_of_member_functions1.cpp  
 class Account  
 {  
@@ -51,11 +52,11 @@ int main()
 }  
 ```  
   
- Wenn eine Memberfunktion Definition außerhalb der Klassendeklaration ist, wird dies als behandelt eine Inlinefunktion nur, wenn er als explizit deklariert wird **Inline**. Darüber hinaus muss der Funktionsname in der Definition mit dem Klassennamen mithilfe des Bereichsauflösungsoperators (`::`) qualifiziert sein.  
+ Wenn eine Memberfunktion Definition außerhalb der Klassendeklaration ist, wird es als behandelt eine Inline-Funktion nur, wenn er als explizit deklariert wird **Inline**. Darüber hinaus muss der Funktionsname in der Definition mit dem Klassennamen mithilfe des Bereichsauflösungsoperators (`::`) qualifiziert sein.  
   
  Das folgende Beispiel ist mit der vorherigen Deklaration der Klasse `Account` identisch, mit der Ausnahme, dass die Funktion `Deposit` außerhalb der Klassendeklaration definiert ist:  
   
-```  
+```cpp 
 // overview_of_member_functions2.cpp  
 class Account  
 {  
@@ -81,4 +82,3 @@ int main()
 >  Obwohl Memberfunktionen entweder innerhalb einer Klassendeklaration definiert werden können oder getrennt, können keine Memberfunktionen einer Klasse hinzugefügt werden, nachdem die Klasse definiert ist.  
   
  Die Klassen, die Memberfunktionen enthalten, können viele Deklarationen haben, aber die Memberfunktionen selbst dürfen nur eine Definition in einem Programm haben. Mehrfache Definitionen verursachen zur Verknüpfungszeit eine Fehlermeldung. Wenn eine Klasse Inlinefunktionsdefinitionen enthält, müssen die Funktionsdefinitionen identisch sein, um dieser ODR (one definition rule) zu entsprechen.  
-  

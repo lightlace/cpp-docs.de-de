@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664c3555602dfc16ce811b065e0d38f8fe93e733
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5384d4e97ebb4f3f6152278e916c02bb350090ea
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392769"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401937"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -67,20 +67,20 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Parameter
 
-*w*<br/>
-Der Wert zwischen-1 und 1 für die den Arkuskosinus (der umgekehrte Kosinus) berechnet werden soll.
+*w*  
+Der Wert zwischen-1 und 1, für die den Arkuskosinus (dem Arkuskosinus) berechnet werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Acos** Funktion gibt den Arkuskosinus von *x* im Bereich von 0 bis π zurück.
+Die **Acos** Funktion gibt den Arkuskosinus *x* im Bereich von 0 bis π rad.
 
 In der Standardeinstellung Wenn *x* ist kleiner als-1 oder größer als 1 ist, **Acos** einen unbestimmten Wert zurück.
 
 |Eingabe|SEH-Ausnahme|Matherr-Ausnahme|
 |-----------|-------------------|-----------------------|
-|± ∞|**UNGÜLTIG**|**_DOMAIN**|
-|± QNAN,IND|Keine|**_DOMAIN**|
-|&#124;x&#124;>1|**UNGÜLTIG**|**_DOMAIN**|
+|± ∞|INVALID|_DOMAIN|
+|± QNAN,IND|Keine|_DOMAIN|
+|&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Hinweise
 
@@ -88,13 +88,13 @@ Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **Acos** 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionale Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|
 |-------------|---------------------|----------------------|
 |**ACOS**, **Acosf**, **Acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm fordert zur Eingabe eines Werts im – 1 bis 1 auf. Eingabewerte außerhalb dieses Bereichs erzeugen **_DOMAIN** Fehlermeldungen. Wenn ein gültiger Wert eingegeben wird, gibt das Programm den Arkussinus und den Arkuskosinus dieses Werts aus.
+Dieses Programm fordert zur Eingabe eines Werts im – 1 bis 1 auf. Eingabewerte außerhalb dieses Bereichs erzeugen `_DOMAIN`-Fehlermeldungen. Wenn ein gültiger Wert eingegeben wird, gibt das Programm den Arkussinus und den Arkuskosinus dieses Werts aus.
 
 ```C
 // crt_asincos.c
@@ -144,10 +144,10 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>Siehe auch
 
-[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
-[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
-[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
-[tan, tanf, tanl](tan-tanf-tanl.md)<br/>
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)  
+[asin, asinf, asinl](asin-asinf-asinl.md)  
+[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)  
+[cos, cosf, cosl](cos-cosf-cosl.md)  
+[_matherr](matherr.md)  
+[sin, sinf, sinl](sin-sinf-sinl.md)  
+[tan, tanf, tanl](tan-tanf-tanl.md)  

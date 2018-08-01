@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 74b79edb24396896a6c8a50965081e9466720ca4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943555"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407824"
 ---
 # <a name="event"></a>__event
 Deklariert ein Ereignis.  
@@ -31,7 +31,6 @@ Deklariert ein Ereignis.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 __event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
@@ -67,7 +66,7 @@ __event HRESULT OnClick(int* b, char* s);
  Finden Sie unter [Ereignisbehandlung in systemeigenem C++](../cpp/event-handling-in-native-cpp.md) Beispielcode.  
   
 ## <a name="com-events"></a>COM-Ereignisse  
- COM-Ereignisse sind Schnittstellen. Die Parameter einer Methode in einer Quellschnittstelle des Ereignisses muss `in` Parameter (Dies wird jedoch nicht streng erzwungen), da ein `out` Parameter ist nicht hilfreich, wenn Sie Multicasting. Eine Warnung der Stufe 1 wird ausgegeben, wenn Sie verwenden eine `out` Parameter.  
+ COM-Ereignisse sind Schnittstellen. Die Parameter einer Methode in einer Quellschnittstelle des Ereignisses muss *in* Parameter (Dies wird jedoch nicht streng erzwungen), da ein *out* Parameter ist nicht hilfreich, wenn Sie Multicasting. Eine Warnung der Stufe 1 wird ausgegeben, wenn Sie verwenden eine *out* Parameter.  
   
  Der Rückgabetyp ist in der Regel HRESULT oder **"void"**, jedoch können beliebiger ganzzahliger Typ sein, einschließlich **Enum**. Wenn ein Ereignis einen ganzzahligen Rückgabetyp verwendet und ein Ereignishandler einen Wert ungleich 0 (null) zurückgibt, handelt es sich um eine Fehlerbedingung. In diesem Fall werden durch das ausgelöste Ereignis Aufrufe anderer Delegaten abgebrochen. Beachten Sie, dass der Compiler eine Quellschnittstelle des Ereignisses als automatisch markiert einen [Quelle](../windows/source-cpp.md) in der generierten IDL-Datei.  
   

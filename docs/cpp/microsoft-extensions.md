@@ -1,5 +1,5 @@
 ---
-title: Microsoft-Erweiterungen | Microsoft Docs
+title: Microsoft-Erweiterungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,26 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beac75a8a27fc4638b541228330e83e7b665fbcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419822"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408374"
 ---
 # <a name="microsoft-extensions"></a>Microsoft-Erweiterungen
 *ASM-Anweisung*:  
- **__asm***Assemblyanweisung* **;** Abonnieren von    
+ **__asm***Assemblyanweisung* **;** Abonnieren    
   
- **__asm {***Assembly Anweisungsliste***};** Abonnieren von      
+ **__asm {***Assembly-Anweisung-List***};** Abonnieren      
   
  *Assembly-Anweisung-List*:  
- *Assembly-Anweisung* **;** Abonnieren von  
+ *Assembly-Anweisung* **;** Abonnieren  
   
- *Assembly-Anweisung* **;** *Assembly Anweisungsliste* **;** Abonnieren von  
+ *Assembly-Anweisung* **;** *Assembly-Anweisung-List* **;** Abonnieren  
   
  *MS-Modifizierer-List*:  
- *MS-Modifizierer ms-Modifizierer-List*abonnieren  
+ *MS-Modifier-ms-Modifizierer-List*deaktivieren  
   
  *MS-Modifizierer*:  
  **__cdecl**  
@@ -50,7 +50,7 @@ ms.locfileid: "32419822"
   
  *Basis-Modifizierer*  
   
- *Basis-Modifizierer*:  
+ *Basis-Modifier*:  
  **__based (** *basierten Typ* **)**  
   
  *basierten Typ*:  

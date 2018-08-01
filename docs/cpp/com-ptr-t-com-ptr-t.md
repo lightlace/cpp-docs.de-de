@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939070"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403825"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Microsoft-spezifisch**  
   
- Erstellt ein `_com_ptr_t`-Objekt.  
+ Erstellt eine **_com_ptr_t** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -150,10 +150,10 @@ explicit _com_ptr_t(
  True gibt an, `AddRef` aufgerufen, um den Verweiszähler des gekapselten Schnittstellenzeigers zu inkrementieren.  
   
  *CP*  
- Ein `_com_ptr_t`-Objekt.  
+ Ein **_com_ptr_t** Objekt.  
   
  *p*  
- Ein unformatierter Schnittstellenzeiger, dessen Typ von dem Typ des intelligenten Zeigers dieses `_com_ptr_t`-Objekts abweicht.  
+ Ein unformatierter Schnittstellenzeiger, dessen Typ sich von den Typ dieses intelligenten Zeigers **_com_ptr_t** Objekt.  
   
  *varSrc*  
  Ein `_variant_t`-Objekt.  

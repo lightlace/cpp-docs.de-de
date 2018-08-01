@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee52b42c65a34316454ea6653447938712590327
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1c454872a3f8d1c7f41ba2f6cea7d81402b6327f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943975"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403468"
 ---
 # <a name="class-member-overview"></a>Übersicht über Klassenmember
 Eine Klasse oder Struktur besteht aus Membern. Die von einer Klasse ausgeführte Arbeit erfolgt über die Memberfunktionen. Den Zustand, den sie verwaltet, wird in Datenmembern gespeichert. Initialisierung von Membern und Bereinigungsvorgänge wie Freigeben von Arbeitsspeicher erfolgt, und Freigeben von Ressourcen von Destruktoren erfolgt. In C++11 und höher können Datenmember (und sollten in der Regel) beim Deklarieren initialisiert werden.  
@@ -124,7 +124,6 @@ Weitere Informationen finden Sie unter [speziellen Memberfunktionen](../cpp/spec
  Nicht statische Memberdeklaratoren können in C++11 und höher Initialisierer enthalten.  
   
 ```cpp 
-  
 class CanInit  
 {  
 public:  

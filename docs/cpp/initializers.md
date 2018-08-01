@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 79deaacbb00638c690d052668f60d9d072a2060d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939862"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408163"
 ---
 # <a name="initializers"></a>Initialisierer
 Ein Initialisierer gibt den Anfangswert einer Variablen an. Sie können Variablen in diesen Kontexten initialisieren:  
@@ -46,7 +46,6 @@ Ein Initialisierer gibt den Anfangswert einer Variablen an. Sie können Variable
     ```cpp  
     Point get_new_point(int x, int y) { return { x, y }; }  
     Point get_new_point(int x, int y) { return Point{ x, y }; }  
-  
     ```  
   
  Initialisierer können diese Formate annehmen:  
@@ -93,7 +92,7 @@ Ein Initialisierer gibt den Anfangswert einer Variablen an. Sie können Variable
   
 -   Char-Variablen werden initialisiert, um `'\0'`.  
   
--   Zeiger werden mit `nullptr` initialisiert.  
+-   Zeiger werden initialisiert, um **"nullptr"**.  
   
 -   Arrays, [POD](../standard-library/is-pod-class.md) Klassen, Strukturen und Unions, haben Sie ihre Member mit einem Wert von 0 (null) initialisiert.  
   
@@ -214,7 +213,6 @@ int main() {
     int a{};     // value of a is 0  
     double b{};  // value of b is 0.00000000000000000  
 }  
-  
 ```  
   
 ### <a name="copy-initialization"></a>Kopierinitialisierung  
@@ -533,4 +531,3 @@ Entscheidungsdiagramm zur Initialisierung von Verweistypen
   
 ### <a name="initialization-of-external-variables"></a>Initialisierung von externen Variablen  
  Deklarationen von automatischen, statischen und externen Variablen können Initialisierer enthalten. Allerdings können Deklarationen von externen Variablen Initialisierer enthalten, nur dann, wenn die Variablen nicht, als deklariert werden **"extern"**.
-  

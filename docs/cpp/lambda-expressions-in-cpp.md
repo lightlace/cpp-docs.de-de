@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8457371ef266c5628e225eff8f05328190e52d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c7b6d49ae82048d5223eea385f1503c28a990ed
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941966"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402964"
 ---
 # <a name="lambda-expressions-in-c"></a>Lambdaausdrücke in C++
 In C ++ 11 und höher ein Lambda-Ausdruck – häufig bezeichnet ein *Lambda*– ist eine bequeme Möglichkeit, ein anonymes Funktionsobjekt zu definieren (einen *Closure*) direkt an der Position, in dem es aufgerufen oder als Argument übergeben, Um eine Funktion. Lambda-Ausdrücke werden in der Regel verwendet, um ein paar Codezeilen zu kapseln, die an Algorithmen oder asynchrone Methoden übergeben werden. Dieser Artikel definiert, was Lambdas sind, vergleicht sie mit anderen Programmierverfahren, beschreibt ihre Vorteile und bietet ein grundlegendes Beispiel.  
@@ -46,7 +46,6 @@ void abssort(float* x, unsigned n) {
         } // end of lambda expression  
     );  
 }  
-  
 ```  
   
  In dieser Abbildung werden die Bestandteile eines Lambda-Ausdrucks dargestellt:  
@@ -107,7 +106,7 @@ void f(Args... args) {
 }  
 ```  
   
- Übergeben Sie zum Verwenden von Lambda-Ausdrücken in einer Klassenmethode den `this`-Zeiger auf die Erfassungsklausel, um den Zugriff auf die Methoden und Datenmember der einschließenden Klasse bereitzustellen. 
+ Um Lambda-Ausdrücke im Text einer Klassenmethode verwenden möchten, übergeben die **dies** Zeiger an die Erfassungsklausel, um Zugriff auf die Methoden und Datenmember der einschließenden Klasse bereitzustellen. 
  
 **Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): die **dies** Zeiger kann nach Wert erfasst werden, indem Sie angeben `*this` in der Erfassungsklausel. Erfassung nach Wert bedeutet, dass die gesamte *Closure*, ist die anonymes Funktionsobjekt, Encapulates Lambda-Ausdrucks und wird in jeder Aufrufposition, an dem der Lambda-Ausdruck aufgerufen wird, kopiert. Erfassung nach Wert ist nützlich, wenn das Lambda in parallelen oder asynchrone Vorgänge, insbesondere auf bestimmter Hardwarearchitekturen wie NUMA ausgeführt wird. 
 
@@ -141,8 +140,7 @@ pNums = make_unique<vector<int>>(nums);
 auto y = [] (int first, int second)  
 {  
     return first + second;  
-};  
-  
+};   
 ```  
   
  In **C++ 14**, wenn der Typ generisch ist, können Sie das Schlüsselwort "Auto" verwenden, als Typspezifizierer. Das weist den Compiler an, den Funktionsaufrufoperator als Vorlage zu erstellen. Jede Instanz des auto-Schlüsselworts in einer Parameterliste entspricht einem Typparameter.  
@@ -340,7 +338,6 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     {
         return [n] { return n + 1; }();
     }
-
 ``` 
 Ein Lambda-Ausdruck ist implizit `constexpr` Wenn das Ergebnis die Anforderungen erfüllt, eine `constexpr` Funktion:
 ```cpp

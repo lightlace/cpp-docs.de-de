@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 313e4602c06c1baf090ed7a66c51b308a3f6f586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943943"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402749"
 ---
 # <a name="additive-operators--and--"></a>Additive Operatoren: + und -
 ## <a name="syntax"></a>Syntax  
@@ -115,7 +115,7 @@ for( int i = 0; i < 10; ++i )
 >  Code in Form von `pIntArray = pIntArray + 1` ist in C++-Programmen selten. Um ein Inkrement auszuführen, werden diese Formen bevorzugt: `pIntArray++` oder `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Zeigersubtraktion  
- Wenn beide Operanden Zeiger sind, ist das Ergebnis der Subtraktion die Differenz (in Arrayelementen) zwischen den Operanden. Der subtraktionsausdruck gibt ein ganzzahliges Ergebnis mit Vorzeichen vom Typ **Ptrdiff_t** (definiert in der standardincludedatei \<stddef.h >).  
+ Wenn beide Operanden Zeiger sind, ist das Ergebnis der Subtraktion die Differenz (in Arrayelementen) zwischen den Operanden. Der subtraktionsausdruck gibt ein ganzzahliges Ergebnis mit Vorzeichen vom Typ `ptrdiff_t` (definiert in der standardincludedatei \<stddef.h >).  
   
  Einer der Operanden kann vom ganzzahligen Typ sein, solange er der zweite Operand ist. Das Ergebnis der Subtraktion ist vom selben Datentyp wie der ursprüngliche Zeiger. Der Wert der Subtraktion ist ein Zeiger auf die (*n* - *ich*) te Arrayelement, in denen *n* Elements verweist den ursprünglichen Zeiger und den *ich* ist der ganzzahlige Wert des zweiten Operanden.  
   

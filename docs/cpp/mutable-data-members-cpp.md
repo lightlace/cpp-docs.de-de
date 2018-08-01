@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d2fc42021a01a1260b57f9516e53c439c8e604
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: adc8f9c456d28089d57bc1f13b61ad8efa10b6b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943880"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402919"
 ---
 # <a name="mutable-data-members-c"></a>Änderbare Datenmember (C++)
 Dieses Schlüsselwort kann nur auf nicht statische und nicht konstante Datenmember einer Klasse angewendet werden. Wenn ein Datenmember deklariert wird **änderbare**, ist es zulässig, die dieses Datenelement aus einen Wert zuweisen einer **const** Member-Funktion.  
@@ -29,7 +29,6 @@ Dieses Schlüsselwort kann nur auf nicht statische und nicht konstante Datenmemb
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 mutable member-variable-declaration;  
 ```  
   

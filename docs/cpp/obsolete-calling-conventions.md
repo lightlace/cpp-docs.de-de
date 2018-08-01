@@ -1,5 +1,5 @@
 ---
-title: Veraltete Aufrufkonventionen | Microsoft Docs
+title: Veraltete Aufrufkonventionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d2a6188cf9d8c8283a6c03a2ca6c701e28baf0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 922103e808541e2829350749a04d6004ba36577f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419845"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403419"
 ---
 # <a name="obsolete-calling-conventions"></a>Veraltete Aufrufkonventionen
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
  Die **__pascal**, **__fortran**, und **__syscall** Aufrufkonventionen werden nicht mehr unterstützt. Sie können ihre Funktionalität emulieren, indem Sie eine der unterstützten Aufrufkonventionen und geeignete Linkeroptionen verwenden.  
   
- \<Windows.h > unterstützt jetzt die **WINAPI** -Makro, das in die entsprechende Aufrufkonvention für das Ziel übersetzt. Verwendung **WINAPI** , in dem zuvor verwendeten **PASCAL** oder **__far \__pascal**.  
+ \<Windows.h > unterstützt jetzt das WINAPI-Makro, das in die entsprechende Aufrufkonvention für das Ziel übersetzt. Verwenden Sie WINAPI, in dem Sie zuvor Pascal-SCHREIBWEISE verwendet, oder **__far \__pascal**.  
   
 **Ende Microsoft-spezifisch**  
   

@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d08ac1375fa383543eaafb5b3ce49cd2bbfbc4da
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ce4272ecfee4b3d02d8bf79f7816200a392c9735
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941079"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404827"
 ---
 # <a name="exit-function"></a>exit-Funktion
-Die `exit` -Funktion, in der standardincludedatei deklariert \<stdlib.h >, beendet ein C++-Programm.  
+Die **beenden** -Funktion, in der standardincludedatei deklariert \<stdlib.h >, beendet ein C++-Programm.  
   
- Der als Argument bereitgestellte Wert `exit` an das Betriebssystem als des Programms Rückgabecode oder Exitcode zurückgegeben wird. Gemäß der Konvention bedeutet ein Rückgabecode von Null, dass das Programm erfolgreich abgeschlossen wurde.  
+ Der als Argument bereitgestellte Wert **beenden** an das Betriebssystem als des Programms Rückgabecode oder Exitcode zurückgegeben wird. Gemäß der Konvention bedeutet ein Rückgabecode von Null, dass das Programm erfolgreich abgeschlossen wurde.  
   
 > [!NOTE]
 >  Sie können die Konstanten EXIT_FAILURE und EXIT_SUCCESS, definiert \<stdlib.h >, um den Erfolg oder Fehler des Programms anzugeben.  
   
- Ausgeben einer **zurückgeben** -Anweisung aus der `main` Funktion entspricht dem Aufrufen der `exit` Funktion mit dem Rückgabewert als Argument.  
+ Ausgeben einer **zurückgeben** -Anweisung aus der `main` Funktion entspricht dem Aufrufen der **beenden** Funktion mit dem Rückgabewert als Argument.  
   
  Weitere Informationen finden Sie unter [beenden](../c-runtime-library/reference/exit-exit-exit.md) in die *Run-Time Library Reference*.  
   

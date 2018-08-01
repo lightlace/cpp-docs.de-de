@@ -18,18 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a401caad212978372bcb02b412fa8a9648b7170
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943968"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407587"
 ---
 # <a name="argument-definitions"></a>Argumentdefinitionen
 Argumente im Prototyp:  
   
 ```cpp 
-  
 int main( int argc, char* argv[], char* envp[]);
 int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);  
 ```  
@@ -45,16 +44,16 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  Das erste Befehlszeilenargument ist immer `argv` **[1]** und das letzte ist `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
->  Gemäß der Konvention ist `argv`**[0]** der Befehl, mit dem das Programm aufgerufen wird.  Es ist jedoch möglich, einen Prozess mit [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) und bei der Verwendung der ersten und zweiten Argument (`lpApplicationName` und `lpCommandLine`), `argv` **[0]** möglicherweise nicht die Name der ausführbaren Datei; Verwenden Sie [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) Name der ausführbaren Datei und den vollständig qualifizierten Pfad abrufen.  
+>  Gemäß der Konvention ist `argv`**[0]** der Befehl, mit dem das Programm aufgerufen wird.  Es ist jedoch möglich, einen Prozess mit [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) und bei der Verwendung der ersten und zweiten Argument (*LpApplicationName* und *LpCommandLine*), `argv` **[0]** möglicherweise nicht die ausführbare Datei benennen; verwenden Sie [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) Name der ausführbaren Datei und den vollständig qualifizierten Pfad abrufen.  
   
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
  *envp*  
- Die *Envp* Array, das eine verbreitete Erweiterung in vielen UNIX-Systemen ist, wird in Microsoft C++ verwendet. Es ist ein Zeichenfolgenarray, das die Variablen darstellt, die in der Benutzerumgebung festgelegt werden. Das Array wird mit einem NULL-Eintrag beendet. Sie können deklariert werden, als ein Array von Zeigern auf **Char (Char** \*Envp []**)** oder als Zeiger auf Zeiger **Char (Char** \* \* Envp **)**. Wenn das Programm **"wmain"** anstelle von **main**, verwenden Sie die **"wchar_t"** -Datentyp anstelle von **Char**. Der Umgebungsblock, die an **main** und **Wmain** ist eine "fixierte" Kopie der aktuellen Umgebung. Wenn Sie später, die Umgebung durch einen Aufruf von ändern **Putenv** oder `_wputenv`, der aktuellen Umgebung (wie vom `getenv` / `_wgetenv` und `_environ` /  `_wenviron` Variablen) wird die Änderung, aber der Block verweist Envp wird nicht geändert. Finden Sie unter [Anpassen der Befehlszeilenverarbeitung](../cpp/customizing-cpp-command-line-processing.md) Informationen zum Unterdrücken der umgebungsverarbeitung. Dieses Argument ist in C ANSI-kompatibel, aber nicht in C++.  
+ Die *Envp* Array, das eine verbreitete Erweiterung in vielen UNIX-Systemen ist, wird in Microsoft C++ verwendet. Es ist ein Zeichenfolgenarray, das die Variablen darstellt, die in der Benutzerumgebung festgelegt werden. Das Array wird mit einem NULL-Eintrag beendet. Sie können deklariert werden, als ein Array von Zeigern auf **Char (Char** \*Envp []**)** oder als Zeiger auf Zeiger **Char (Char** \* \* Envp **)**. Wenn das Programm `wmain` anstelle von `main`, verwenden Sie die `wchar_t` -Datentyp anstelle von **Char**. Der Umgebungsblock, die an `main` und `wmain` ist eine "fixierte" Kopie der aktuellen Umgebung. Wenn Sie später, die Umgebung durch einen Aufruf von ändern `putenv` oder `_wputenv`, der aktuellen Umgebung (wie vom `getenv` / `_wgetenv` und `_environ` /  `_wenviron` Variable) wird ändern, aber der verweist Envp Block wird nicht geändert. Finden Sie unter [Anpassen der Befehlszeilenverarbeitung](../cpp/customizing-cpp-command-line-processing.md) Informationen zum Unterdrücken der umgebungsverarbeitung. Dieses Argument ist in C ANSI-kompatibel, aber nicht in C++.  
   
 **Ende Microsoft-spezifisch**  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie mit der *Argc*, *Argv*, und *Envp* Argumente **main**:  
+ Das folgende Beispiel zeigt, wie Sie mit der *Argc*, *Argv*, und *Envp* Argumente `main`:  
   
 ```cpp 
 // argument_definitions.cpp  

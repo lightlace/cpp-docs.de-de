@@ -1,5 +1,5 @@
 ---
-title: Memberfunktionsvorlagen | Microsoft Docs
+title: Memberfunktionsvorlagen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb7eeed732f8d9e69dd2571b69cf1c7247a38991
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7767b833fb80926e425e14a209c3d97a778e72b5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419978"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404225"
 ---
 # <a name="member-function-templates"></a>Memberfunktionsvorlagen
 
@@ -95,7 +95,7 @@ int main()
   
  Membervorlagenfunktionen können keine virtuellen Funktionen sein und können keine virtuellen Funktionen einer Basisklasse überschreiben, wenn sie mit dem gleichen Namen wie eine virtuelle Funktion der Basisklasse deklariert werden.  
   
-Das folgende Beispiel zeigt eine auf Vorlagen basierende benutzerdefinierte Konvertierung:  
+Das folgende Beispiel zeigt eine auf Vorlagen basierende benutzerdefinierte Konvertierungen:  
   
 ```cpp
 // templated_user_defined_conversions.cpp  
@@ -116,5 +116,4 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-
  [Funktionsvorlagen](../cpp/function-templates.md)

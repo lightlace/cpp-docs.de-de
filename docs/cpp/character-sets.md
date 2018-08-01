@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0627eaa2606d13ced457ae336bd2a0fb4dc83801
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 25370d7b7e5ddf460ace1ce349c9fc501feb2343
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414782"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407074"
 ---
 # <a name="character-sets"></a>Zeichensätze
 Der Text eines C++-Programms wird in Quelldateien gespeichert, die eine bestimmte Zeichencodierung verwenden. Der C++-Standard gibt einen einfachen Quellzeichensatz für Quelldateien und einen einfachen Ausführungszeichensatz für kompilierte Dateien an. Visual C++ ermöglicht die Verwendung eines zusätzlichen Satzes von gebietsschemaspezifischen Zeichen in Quelldateien und kompilierten Dateien.  
@@ -57,7 +57,6 @@ Der Text eines C++-Programms wird in Quelldateien gespeichert, die eine bestimmt
 ```cpp  
 auto \u30AD = 42; // \u30AD is 'キ'  
 if (キ == 42) return true; // \u30AD and キ are the same to the compiler  
-  
 ```  
   
  Das Format von Sonderzeichen in der Windows-Zwischenablage ist von den Gebietsschemaeinstellungen der Anwendung abhängig. Das Ausschneiden und Einfügen dieser Zeichen in Ihren Code aus einer anderen Anwendung kann zu unerwarteten Zeichencodierungen führen. Dies kann in Ihrem Code ohne ersichtlichen Grund zu Analysefehlern führen. Es wird empfohlen, dass Sie für Ihre Quelldateicodierung eine Unicode-Codepage festlegen, bevor Sie Sonderzeichen einfügen. Außerdem wird empfohlen, dass Sie einen Eingabemethoden-Editor oder eine App zur Zeichenzuordnung verwenden, um Sonderzeichen zu generieren.  
@@ -65,4 +64,4 @@ if (キ == 42) return true; // \u30AD and キ are the same to the compiler
  **Ende Microsoft-spezifisch**  
   
 ### <a name="basic-execution-character-set"></a>einfache Ausführungszeichensatz  
- Der *einfache Ausführungszeichensatz* und der *einfache Ausführungsbreitzeichensatz* bestehen aus allen Zeichen des einfachen Quellzeichensatzes sowie aus den Steuerzeichen, die Warnung, Rücktaste, Wagenrücklauf und NULL darstellen.   Der *Ausführungszeichensatz* und der *Ausführungsbreitzeichensatz* sind Obermengen der grundlegenden Sätze. Sie umfassen die durch die Implementierung definierten Quellzeichen außerhalb des einfachen Quellzeichensatzes. Der Ausführungszeichensatz weist eine gebietsschemaspezifische Darstellung auf.
+ Der *einfache Ausführungszeichensatz* und der *einfache Ausführungsbreitzeichensatz* bestehen aus allen Zeichen des einfachen Quellzeichensatzes sowie aus den Steuerzeichen, die Warnung, Rücktaste, Wagenrücklauf und NULL darstellen. Der *Ausführungszeichensatz* und der *Ausführungsbreitzeichensatz* sind Obermengen der grundlegenden Sätze. Sie umfassen die durch die Implementierung definierten Quellzeichen außerhalb des einfachen Quellzeichensatzes. Der Ausführungszeichensatz weist eine gebietsschemaspezifische Darstellung auf.

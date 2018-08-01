@@ -1,5 +1,5 @@
 ---
-title: Eigenschaft (C++) | Microsoft Docs
+title: Eigenschaft (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a791615f7fd91a7ccfcda45b23fc524ebd9b6400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4673101d41b896ed3fc19aa1998aa9329064b41
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409065"
 ---
 # <a name="property-c"></a>property (C++)
 **Microsoft-spezifisch**  
@@ -31,18 +32,17 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
    __declspec( property( get=get_func_name ) ) declarator  
    __declspec( property( put=put_func_name ) ) declarator  
    __declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Compiler erkennt einen Datenmember mit diesem Attribut deklariert wird, auf der rechten Seite eines Operators Memberauswahl ("**.**"oder"**->**"), konvertiert Sie den Vorgang, um eine **Abrufen** oder **put** -Funktion, je nachdem, ob ein solcher Ausdruck ein l-Wert oder ein r-Wert. In den schwierigeren Kontexten, z. B. "`+=`", eine neue Version wird ausgeführt, indem Sie beide **abrufen** und **put**.  
+ Erkennt der Compiler einen Datenmember, die mit diesem Attribut deklariert werden, auf der rechten Seite eines Operators Memberauswahl ("**.**"oder"**->**"), konvertiert sie den Vorgang zu einem `get` oder `put` -Funktion, je nachdem, ob ein solcher Ausdruck ein l-Wert oder r-Wert. In den schwierigeren Kontexten, z. B. "`+=`", erfolgt eine Neuerstellung beider Ansätze `get` und `put`.  
   
  Dieses Attribut kann in der Deklaration eines leeren Arrays in einer Klassen- oder Strukturdefinition ebenfalls verwendet werden. Zum Beispiel:  
   
-```  
+```cpp 
 __declspec(property(get=GetX, put=PutX)) int x[];  
 ```  
   
@@ -52,7 +52,7 @@ __declspec(property(get=GetX, put=PutX)) int x[];
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // declspec_property.cpp  
 struct S {  
    int i;  

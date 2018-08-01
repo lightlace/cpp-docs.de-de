@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 80058aa22de10088c3901d0c129635288bf880b5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943297"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403455"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Allgemeine Regeln für die Überladung von Operatoren
 Die folgenden Regeln schränken die Art und Weise ein, wie überladene Operatoren implementiert werden. Aber sie gelten nicht für die [neue](../cpp/new-operator-cpp.md) und [löschen](../cpp/delete-operator-cpp.md) Operatoren, die separat behandelt werden.  
@@ -59,7 +59,7 @@ Die folgenden Regeln schränken die Art und Weise ein, wie überladene Operatore
   
 -   Überladene Operatoren können keine Standardargumente haben.  
   
--   Alle überladenen Operatoren außer der Zuweisung (`operator=`) werden von abgeleiteten Klassen geerbt.  
+-   Alle überladenen Operatoren außer der Zuweisung (**Operator =**) werden von abgeleiteten Klassen geerbt.  
   
 -   Das erste Argument für mit Memberfunktionen überladene Operatoren weist immer den Klassentyp des Objekts auf, für das der Operator aufgerufen wird (die Klasse, in der der Operator deklariert ist, oder eine Klasse, die von dieser Klasse abgeleitet ist). Es werden keine Konvertierungen für das erste Argument bereitgestellt.  
   
@@ -72,7 +72,7 @@ var++;
 ++var;  
 ```  
   
- Klassentypen, die Operatoren überladen, können nicht auf dieser Identität basieren. Darüber hinaus sind einige der Anforderungen, die für die Verwendung dieser Operatoren für grundlegende Typen gelten, für überladene Operatoren weniger strikt. Zum Beispiel erfordert der Additions-/Zuweisungsoperator, `+=`, dass der linke Operand ein L-Wert ist, wenn er auf grundlegende Typen angewendet wird. Wenn der Operator überladen wird, gibt es keine solche Anforderung.  
+ Klassentypen, die Operatoren überladen, können nicht auf dieser Identität basieren. Darüber hinaus sind einige der Anforderungen, die für die Verwendung dieser Operatoren für grundlegende Typen gelten, für überladene Operatoren weniger strikt. Z. B. der Additions-/Zuweisungsoperator, **+=**, muss der linke Operand ein l-Wert, wenn auf grundlegende Typen angewendet werden. es ist dies nicht erforderlich, wenn der Operator überladen wird.  
   
 > [!NOTE]
 > Aus Gründen der Konsistenz ist es oft am besten, beim Definieren überladener Operatoren das Modell der integrierten Typen zu befolgen. Wenn sich die Semantik eines überladenen Operators deutlich von seiner Bedeutung in anderen Kontexten unterscheidet, kann das eher verwirrend als nützlich sein.  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 813c90db941f2eb760c4e3a36d15eca64a293bec
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 73c15cfb08bab96acf85bc517165926faced86ad
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955464"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406190"
 ---
 # <a name="multiple-base-classes"></a>Mehrere Basisklassen
 Eine Klasse kann von mehr als einer Basisklasse abgeleitet werden. In einem mehrfachvererbungsmodell (, in denen Klassen aus mehr als einer Basisklasse abgeleitet werden), die Basisklassen angegeben sind, mit der *Base-List* grammatikelement. Beispielsweise kann die Klassendeklaration für `CollectionOfBook`, abgeleitet von `Collection` und `Book`, angegeben werden:  
@@ -97,9 +97,9 @@ Objektlayout mit virtueller und nicht virtueller Vererbung
 > [!NOTE]
 >  Virtuelle Vererbung bietet wesentliche Vorteile im Vergleich zur nicht virtuellen Vererbung. Allerdings kann es zu Mehraufwand bei der Verarbeitung kommen.  
   
- Wenn eine abgeleitete Klasse eine virtuelle Funktion überschreibt, die sie von einer virtuellen Basisklasse erbt, und wenn ein Konstruktor oder Destruktor der abgeleiteten Basisklasse die Funktion mithilfe eines Zeigers auf die virtuelle Basisklasse aufruft, führt der Compiler möglicherweise zusätzliche ausgeblendete "vtordisp"-Felder in die Klassen mit virtuellen Basen ein. Die /vd0-Compileroption unterdrückt das Hinzufügen des ausgeblendeten vtordisp-Destruktor-/Destruktorverschiebungsmember. Die /vd1-Compileroption, der Standard, ermöglicht diese, wo notwendig. Deaktivieren Sie vtordisps nur dann, wenn Sie sicher sind, dass alle Klassenkonstruktoren und -destruktoren virtuelle Funktionen virtuell aufrufen.  
+ Wenn eine abgeleitete Klasse eine virtuelle Funktion überschreibt, die sie von einer virtuellen Basisklasse erbt, und wenn ein Konstruktor oder Destruktor der abgeleiteten Basisklasse die Funktion mithilfe eines Zeigers auf die virtuelle Basisklasse aufruft, führt der Compiler möglicherweise zusätzliche ausgeblendete "vtordisp"-Felder in die Klassen mit virtuellen Basen ein. Die `/vd0` -Compileroption unterdrückt das Hinzufügen der ausgeblendete Vtordisp Konstruktor-/Destruktorverschiebung. Die `/vd1` -Compileroption, Standard, ermöglicht es ihnen, wo sie erforderlich sind. Deaktivieren Sie vtordisps nur dann, wenn Sie sicher sind, dass alle Klassenkonstruktoren und -destruktoren virtuelle Funktionen virtuell aufrufen.  
   
- Die /vd- Compileroption wirkt sich auf das gesamte Kompilierungsmodul aus. Verwenden der **Vtordisp** Pragma, um zu unterdrücken und anschließend wieder aktivieren Vtordisp-Felder auf Basis einer Klasse-von-Klasse:  
+ Die `/vd` Compileroption wirkt sich auf die gesamte Kompilierungsmodul. Verwenden der `vtordisp` Pragma zu unterdrücken und anschließend wieder aktivieren `vtordisp` Felder auf der Basis einer Klasse von-Klasse:  
   
 ```cpp 
 #pragma vtordisp( off )  

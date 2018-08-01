@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 60fc445d51cfa72a6c72984ff19b877d916ded53
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026633"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407760"
 ---
 # <a name="comerror-class"></a>_com_error-Klasse
 **Microsoft-spezifisch**  
   
- Ein `_com_error`-Objekt stellt eine Ausnahmebedingung dar, die von den Fehlerbehandlungs-Wrapperfunktionen in den Headerdateien erkannt wird, die von der Typbibliothek oder einer der COM-Unterstützungsklassen generiert werden. Die `_com_error` -Klasse kapselt die HRESULT-Fehlercode und alle zugehörigen `IErrorInfo Interface` Objekt.  
+ Ein **_com_error** Objekt stellt eine Ausnahmebedingung, die von den Fehlerbehandlungs-Wrapperfunktionen in den Headerdateien, die aus der Typbibliothek generiert oder von einem der COM-Unterstützungsklassen erkannt. Die **_com_error** -Klasse kapselt die HRESULT-Fehlercode und alle zugehörigen `IErrorInfo Interface` Objekt.  
   
 ### <a name="construction"></a>Konstruktion  
   
 |||  
 |-|-|  
-|[_com_error](../cpp/com-error-com-error.md)|Erstellt ein `_com_error`-Objekt.|  
+|[_com_error](../cpp/com-error-com-error.md)|Erstellt eine **_com_error** Objekt.|  
   
 ### <a name="operators"></a>Operatoren  
   
 |||  
 |-|-|  
-|[operator =](../cpp/com-error-operator-equal.md)|Weist ein vorhandenes `_com_error`-Objekt einem anderen zu.|  
+|[operator =](../cpp/com-error-operator-equal.md)|Weist ein vorhandenes **_com_error** zu einem anderen Objekt.|  
   
 ### <a name="extractor-functions"></a>Funktionen des Extrahierungsprogramms  
   
@@ -62,7 +62,7 @@ ms.locfileid: "39026633"
   
 |||  
 |-|-|  
-|[ErrorMessage](../cpp/com-error-errormessage.md)|Ruft die Zeichenfolgenmeldung für das im `_com_error`-Objekt gespeicherte HRESULT ab.|  
+|[ErrorMessage](../cpp/com-error-errormessage.md)|Ruft die Zeichenfolgennachricht ab, für die gespeicherte HRESULT in die **_com_error** Objekt.|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode für HRESULT-Zuordnungen  
   

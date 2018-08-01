@@ -1,5 +1,5 @@
 ---
-title: Klassenvorlagen | Microsoft Docs
+title: Klassenvorlagen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9ed1669d3157327f161643320f20ec5787e17d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7818836406677aa1613c757a1d688cc93ca33045
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415685"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405093"
 ---
 # <a name="class-templates"></a>Klassenvorlagen
 Dieses Thema beschreibt die Regeln, die spezifisch für C++-Klassenvorlagen sind.  
@@ -81,11 +81,10 @@ void X<T>::mf(const U &u)
 int main()  
 {  
 }  
-  
 ```  
   
 ## <a name="nested-class-templates"></a>Geschachtelte Klassenvorlagen  
- Vorlagen können in Klassen oder Klassenvorlagen definiert werden. In diesem Fall werden sie als Membervorlagen bezeichnet. Membervorlagen, die Klassen sind, werden als geschachtelte Klassenvorlagen bezeichnet. Membervorlagen, die Funktionen sind in diskutiert werden [Memberfunktionsvorlagen](../cpp/member-function-templates.md).  
+ Vorlagen können in Klassen oder Klassenvorlagen definiert werden. In diesem Fall werden sie als Membervorlagen bezeichnet. Membervorlagen, die Klassen sind, werden als geschachtelte Klassenvorlagen bezeichnet. Membervorlagen, die Funktionen sind finden Sie im [Memberfunktionsvorlagen](../cpp/member-function-templates.md).  
   
  Geschachtelte Klassenvorlagen werden als Klassenvorlagen innerhalb des Bereichs der äußeren Klasse deklariert. Sie können innerhalb oder außerhalb der einschließenden Klasse definiert sein.  
   

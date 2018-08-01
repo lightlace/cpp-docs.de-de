@@ -1,5 +1,5 @@
 ---
-title: 'Bitweiser exklusiver OR -Operator: ^ | Microsoft Docs'
+title: 'Bitweiser exklusiver OR -Operator: ^ | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d080fa28e8f70cb6a4086709c4a5fc6215c4519
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe2f64c20c0d741608dfb2631c2e36026a31e8bb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409851"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406675"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>Bitweiser exklusiver OR-Operator: ^
 ## <a name="syntax"></a>Syntax  
@@ -40,7 +40,7 @@ Der bitweise exklusive OR-Operator (**^**) vergleicht jedes Bit seines ersten Op
 Beide Operanden im bitweisen exklusiven OR-Operator müssen vom Ganzzahltyp sein. Die üblichen arithmetischen Konvertierungen finden Sie im [Standardkonvertierungen](standard-conversions.md) auf die Operanden angewendet werden.  
   
 ## <a name="operator-keyword-for-"></a>Operator-Schlüsselwort für "^"  
-Die **Xor** Operator ist die textentsprechung von **^**. Es gibt zwei Möglichkeiten, den Zugriff auf die **Xor** -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit der ["/ Za"](../build/reference/za-ze-disable-language-extensions.md) -Compileroption (spracherweiterungen deaktivieren).  
+Die **Xor** -Operator ist die ausgeschriebene Variante von **^**. Es gibt zwei Möglichkeiten, den Zugriff auf die **Xor** -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit der [/Za](../build/reference/za-ze-disable-language-extensions.md) -Compileroption (spracherweiterungen deaktivieren).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -60,5 +60,3 @@ int main() {
   
 ## <a name="see-also"></a>Siehe auch  
  [C++-Built-in-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
-
-

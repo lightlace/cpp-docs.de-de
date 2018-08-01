@@ -1,5 +1,5 @@
 ---
-title: 'Umwandlungsoperator: () | Microsoft Docs'
+title: 'Umwandlungsoperator: () | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef2d370f4344e4a66c70989582da8d7ac7d5186
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e7f9c723f605a4f66d5e2bdbb4c39f50645b58b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408745"
 ---
 # <a name="cast-operator-"></a>Umwandlungsoperator: ()
 Eine Typumwandlung stellt eine Möglichkeit zum expliziten Konvertieren des Typs eines Objekts in einer bestimmten Situation bereit.  
@@ -27,9 +28,7 @@ Eine Typumwandlung stellt eine Möglichkeit zum expliziten Konvertieren des Typs
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      unary-expression  
-( type-name ) cast-expression  
+unary-expression ( type-name ) cast-expression  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
@@ -39,7 +38,7 @@ Eine Typumwandlung stellt eine Möglichkeit zum expliziten Konvertieren des Typs
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // expre_CastOperator.cpp  
 // compile with: /EHsc  
 // Demonstrate cast operator  
@@ -59,7 +58,7 @@ int main()
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // expre_CastOperator2.cpp  
 // The following sample shows how to define and use a cast operator.   
 #include <string.h>  
@@ -129,7 +128,7 @@ Raw Bytes after cast:   Exciting
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke mit Unäroperatoren](../cpp/expressions-with-unary-operators.md)   
- [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++-Built-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operator für explizite Typkonvertierung:)](../cpp/explicit-type-conversion-operator-parens.md)   
  [Umwandlungsoperatoren](../cpp/casting-operators.md)   
  [Umwandlungsoperatoren](../c-language/cast-operators.md)

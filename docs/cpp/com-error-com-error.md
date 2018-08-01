@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec16faa9881fc1c69dca5f8f39b8797cf0fcff0d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c1389635c3ef026e8b3a7dfe13976cca58a15a82
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943508"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406717"
 ---
 # <a name="comerrorcomerror"></a>_com_error::_com_error
 **Microsoft-spezifisch**  
   
- Erstellt ein `_com_error`-Objekt.  
+ Erstellt eine **_com_error** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 _com_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = NULL,  
@@ -48,23 +47,23 @@ _com_error( const _com_error& that ) throw( );
  `IErrorInfo`-Objekt  
   
  `bool fAddRef=false`  
- Veranlasst den Konstruktor, AddRef auf einer nicht-Null Aufrufen `IErrorInfo` Schnittstelle. Dies ermöglicht eine richtige Verweiszählung im typischen Fall, in dem Besitz der Schnittstelle in das `_com_error`-Objekt übergeben wird, wie z. B.:  
+ Veranlasst den Konstruktor, AddRef auf einer nicht-Null Aufrufen `IErrorInfo` Schnittstelle. Dadurch wird eine richtige verweiszählung im typischen Fall, in dem Besitz der Schnittstelle übergeben wird, die **_com_error** Objekt, z. B.:  
   
 ```cpp 
 throw _com_error(hr, perrinfo);  
 ```  
   
- Wenn Sie nicht möchten, dass Ihr Code zum Übertragen des Besitzes zu der `_com_error` -Objekt, und die `AddRef` ist erforderlich, um den offset der `Release` in die `_com_error` Destruktor, erstellen Sie wie folgt auf das Objekt:  
+ Wenn Sie nicht möchten, dass Ihr Code zum Übertragen des Besitzes zu der **_com_error** -Objekt, und die `AddRef` ist erforderlich, um den offset der `Release` in die **_com_error** Destruktor, erstellen Sie das Objekt als Die folgende:  
   
 ```cpp 
 _com_error err(hr, perrinfo, true);  
 ```  
   
  *,*  
- Ein vorhandenes `_com_error`-Objekt.  
+ Eine vorhandene **_com_error** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Der erste Konstruktor erstellt ein neues Objekt angegeben wird, ein HRESULT und optionalen `IErrorInfo` Objekt. Der zweite Konstruktor erstellt eine Kopie eines vorhandenen `_com_error`-Objekts.  
+ Der erste Konstruktor erstellt ein neues Objekt angegeben wird, ein HRESULT und optionalen `IErrorInfo` Objekt. Der zweite Konstruktor erstellt eine Kopie eines vorhandenen **_com_error** Objekt.  
   
  **Ende Microsoft-spezifisch**  
   

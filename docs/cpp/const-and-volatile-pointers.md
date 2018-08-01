@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63e2da6286e6a8e10ecf29a37ec9d74e9f1dfc0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943224"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408189"
 ---
 # <a name="const-and-volatile-pointers"></a>const- und volatile-Zeiger
 Die [const](../cpp/const-cpp.md) und [flüchtige](../cpp/volatile-cpp.md) Schlüsselwörter zu ändern, wie Zeiger behandelt werden. Die **const** -Schlüsselwort Gibt an, dass der Zeiger nach der Initialisierung nicht geändert werden kann; der Zeiger ist danach vor Änderungen geschützt.  
@@ -70,7 +70,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error  
 ```  
   
- Die Deklaration von `pch2` deklariert einen Zeiger, mit dem ein konstantes Objekt möglicherweise geändert wird, und ist daher nicht zulässig. Die Deklaration von `pch3` gibt an, dass die **Zeiger** ist konstant, nicht das Objekt die Deklaration ist aus demselben Grund unzulässig der `pch2` Deklaration ist nicht zulässig.  
+ Die Deklaration von `pch2` deklariert einen Zeiger, mit dem ein konstantes Objekt möglicherweise geändert wird, und ist daher nicht zulässig. Die Deklaration von `pch3` gibt an, dass der Zeiger konstant ist nicht das Objekt die Deklaration ist nicht zulässig, aus demselben Grund der `pch2` Deklaration ist nicht zulässig.  
   
  Die folgenden acht Zuweisungen zeigen die Zuweisung durch einen Zeiger und die Änderung des Zeigerwerts für die vorhergehenden Deklarationen. Gehen Sie vorerst davon aus, dass die Initialisierung für `pch1` durch `pch8` korrekt war.  
   
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  Die vorhergehende Anweisung deklariert eine Funktion, [Strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), wobei zwei der drei Argumente des Typs Zeiger zu sind **Char**. Da die Argumente als Verweis übergeben werden und nicht anhand des Werts sähe die Funktion beide ändern `strDestination` und `strSource` Wenn `strSource` wurden nicht als deklariert **const**. Die Deklaration von `strSource` als **const** stellt sicher, dass dem Aufrufer `strSource` kann nicht von der aufgerufenen Funktion geändert werden.  
   
 > [!NOTE]
->  Da es eine standardkonvertierung von ist *Typename* **\*** zu **const** *Typename* **\***, es ist zulässig, ein Argument des Typs übergeben **Char \***  zu [Strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Das Gegenteil ist jedoch nicht "true"; keine implizite Konvertierung existiert, zum Entfernen der **const** Attribut aus einem Objekt oder Zeiger.  
+>  Da es eine standardkonvertierung von ist *Typename* **\*** zu **const** *Typename* **\***, es ist zulässig, ein Argument des Typs übergeben `char *` zu [Strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Das Gegenteil ist jedoch nicht "true"; keine implizite Konvertierung existiert, zum Entfernen der **const** Attribut aus einem Objekt oder Zeiger.  
   
  Ein **const** Zeiger eines bestimmten Typs in einen Zeiger des gleichen Typs zugewiesen werden kann. Ein Zeiger, die ist jedoch nicht **const** kann nicht zugewiesen werden, um eine **const** Zeiger. Der folgende Code zeigt korrekte und inkorrekte Zuweisungen:  
   

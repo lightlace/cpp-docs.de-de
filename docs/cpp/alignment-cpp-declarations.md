@@ -1,5 +1,5 @@
 ---
-title: (Ausrichtung (c++ Deklarationen) | Microsoft Docs
+title: (Ausrichtung (c++ Deklarationen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f39fe0cf3706a67e2aa42aa89de5914808e9cec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9031bea449968e22212c241b8418b505710cca8d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409135"
 ---
 # <a name="alignment-c-declarations"></a>Ausrichtung (C++-Deklarationen)
-Eine der Funktionen von C++ auf niedriger Ebene ist die Möglichkeit zum Angeben der präzisen Ausrichtung von Objekten im Speiche, um eine bestimmte Hardwarearchitektur optimal zu nutzen. Standardmäßig richtet der Compiler Klassen- und Strukturmember auf ihren Größenwert aus: bool und char werden an Ein-Byte-Grenzen ausgerichtet, short an Zwei-Byte-, int an Vier-Byte-, long long, double und long double an Acht-Byte-Grenzen. In den meisten Szenarien müssen Sie sich nie mit der Ausrichtung befassen, da die Standardausrichtung bereits optimal ist. In einigen Fällen jedoch erzielen Sie bedeutende Leistungsverbesserungen oder Speicherplatzeinsparungen, indem Sie eine benutzerdefinierte Ausrichtung für Ihre Datenstrukturen angeben. Vor Visual Studio 2015 konnten Sie die Microsoft-spezifischen Schlüsselwörter __alignof und declspec(alignas) verwenden, um eine Ausrichtung anzugeben, die größer als der Standardwert ist. Starten Sie in Visual Studio 2015 zu verwendende der C ++ 11-Standardschlüsselwörter [Alignof und Alignas](../cpp/alignof-and-alignas-cpp.md) für maximale Codeportabilität. Die neuen Schlüsselwörter verhalten sich wie die Microsoft-spezifischen Erweiterungen, und die Dokumentation für diese Erweiterungen gilt auch für die neuen Schlüsselwörter. Finden Sie unter [__alignof-Operator](../cpp/alignof-operator.md) und [ausrichten](../cpp/align-cpp.md) für Weitere Informationen. Der C++-Standard kein Packverhalten für die Ausrichtung an Grenzen, die kleiner als der Compilerstandardwert für die Zielplattform, sodass trotzdem mithilfe des Microsoft #pragma [Pack](../preprocessor/pack.md) in diesem Fall.  
+Eine der Funktionen von C++ auf niedriger Ebene ist die Möglichkeit zum Angeben der präzisen Ausrichtung von Objekten im Speiche, um eine bestimmte Hardwarearchitektur optimal zu nutzen. Standardmäßig richtet der Compiler Klassen- und Strukturmember auf ihren Größenwert aus: bool und char werden an Ein-Byte-Grenzen ausgerichtet, short an Zwei-Byte-, int an Vier-Byte-, long long, double und long double an Acht-Byte-Grenzen. In den meisten Szenarien müssen Sie sich nie mit der Ausrichtung befassen, da die Standardausrichtung bereits optimal ist. In einigen Fällen jedoch erzielen Sie bedeutende Leistungsverbesserungen oder Speicherplatzeinsparungen, indem Sie eine benutzerdefinierte Ausrichtung für Ihre Datenstrukturen angeben. Vor Visual Studio 2015 konnten Sie die Microsoft-spezifischen Schlüsselwörter __alignof und declspec(alignas) verwenden, um eine Ausrichtung anzugeben, die größer als der Standardwert ist. Starten Sie in Visual Studio 2015 sollten die C ++ 11-Standardschlüsselwörter verwenden [Alignof und Alignas](../cpp/alignof-and-alignas-cpp.md) für maximale Codeportabilität. Die neuen Schlüsselwörter verhalten sich wie die Microsoft-spezifischen Erweiterungen, und die Dokumentation für diese Erweiterungen gilt auch für die neuen Schlüsselwörter. Finden Sie unter [__alignof-Operator](../cpp/alignof-operator.md) und [ausrichten](../cpp/align-cpp.md) für Weitere Informationen. Der C++-Standard kein Packverhalten für die Ausrichtung an Grenzen, die kleiner als die Standardeinstellung des Compilers für die Zielplattform, daher Sie weiterhin mithilfe des Microsoft #pragma müssen [Pack](../preprocessor/pack.md) in diesem Fall.  
   
- Die C++-Standardbibliothek bietet die [Aligned_storage-Klasse](../standard-library/aligned-storage-class.md) für die Zuordnung von Arbeitsspeicher für Datenstrukturen mit benutzerdefinierten Ausrichtungen und die [Aligned_union-Klasse](../standard-library/aligned-union-class.md) zum Angeben der Ausrichtung für Unions mit nicht trivialen Konstruktoren oder Destruktoren.  
+ Die C++-Standardbibliothek bietet die [Aligned_storage-Klasse](../standard-library/aligned-storage-class.md) zur Zuteilung von Arbeitsspeicher für Datenstrukturen mit benutzerdefinierten Ausrichtungen und die [Aligned_union-Klasse](../standard-library/aligned-union-class.md) zum Angeben der Ausrichtung für Unions mit nicht trivialen Konstruktoren oder Destruktoren.  
   
 ## <a name="about-alignment"></a>Infos zur Ausrichtung  
  Die Ausrichtung ist eine Eigenschaft einer Speicheradresse, ausgedrückt als numerisches Adressmodulo der Potenz 2. Beispielsweise ist die Adresse 0x0001103F modulo 4 gleich 3. Diese Adresse wird als 4n+3 ausgerichtet bezeichnet, wobei 4 die gewählte Potenz von 2 angibt. Die Ausrichtung einer Adresse hängt von der ausgewählten Zweierpotenz ab. Das gleiche Adressmodulo 8 ist 7. Eine Adresse wird als an X ausgerichtet betrachtet, wenn die Ausrichtung Xn+ 0 ist.  
@@ -34,7 +35,7 @@ Eine der Funktionen von C++ auf niedriger Ebene ist die Möglichkeit zum Angeben
   
  Darüber hinaus füllt der Compiler Strukturen auf eine Weise, die jedes Element der Struktur natürlich ausrichtet. Sehen Sie sich die Struktur „struct x_“ im folgenden Codebeispiel an:  
   
-```  
+```cpp 
 struct x_  
 {  
    char a;     // 1 byte  
@@ -49,7 +50,7 @@ struct x_
   
  Im folgenden Codebeispiel wird veranschaulicht, wie der Compiler die aufgefüllte Struktur in „memory:Copy“ platziert.  
   
-```  
+```cpp 
 // Shows the actual memory layout  
 struct x_  
 {  
@@ -60,7 +61,6 @@ struct x_
    char d;           // 1 byte  
    char _pad1[1];    // padding to make sizeof(x_) multiple of 4  
 }  
-  
 ```  
   
 1.  Beiden Deklarationen geben „sizeof(struct x_)“ als 12 Bytes zurück.  
@@ -98,7 +98,6 @@ adr offset   element
 0x0020   short c;  
 0x0022   char d;  
 0x0023   char _pad1[1];  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
