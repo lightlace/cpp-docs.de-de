@@ -1,5 +1,5 @@
 ---
-title: Standardargumente | Microsoft Docs
+title: Standardargumente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1113108f711eccbce9be96852f7f7f28e537c9d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ddcd094ae828272744060cea5604865d17562890
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409195"
 ---
 # <a name="default-arguments"></a>Standardargumente
-In vielen Fällen haben Funktionen Argumente, die so selten verwendet werden, dass ein Standardwert genügt. Für dieses Szenario ermöglicht die Standardargumentfunktion, nur die Argumente für eine Funktion anzugeben, die für einen bestimmten Aufruf von Bedeutung sind. Um dieses Konzept zu veranschaulichen, betrachten Sie das Beispiel [Funktionsüberladung](../cpp/function-overloading.md).  
+In vielen Fällen haben Funktionen Argumente, die so selten verwendet werden, dass ein Standardwert genügt. Für dieses Szenario ermöglicht die Standardargumentfunktion, nur die Argumente für eine Funktion anzugeben, die für einen bestimmten Aufruf von Bedeutung sind. Um dieses Konzept zu veranschaulichen, betrachten Sie in das Beispiel [Funktionsüberladung](../cpp/function-overloading.md).  
   
-```  
+```cpp 
 // Prototype three print functions.  
 int print( char *s );                  // Print a string.  
 int print( double dvalue );            // Print a double.  
@@ -39,7 +40,7 @@ int print( double dvalue, int prec );  // Print a double with a
   
  Bei vielen Anwendungen kann ein angemessener Standardwert für `prec` angegeben werden, und die Anforderung für zwei Funktionen entfällt:  
   
-```  
+```cpp 
 // Prototype two print functions.  
 int print( char *s );                    // Print a string.  
 int print( double dvalue, int prec=2 );  // Print a double with a  
@@ -48,7 +49,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
   
  Die Implementierung der `print` Funktion ist leicht verändert, um die Tatsache widerzuspiegeln, dass nur eine solche Funktion für den Typ vorhanden ist **doppelte**:  
   
-```  
+```cpp 
 // default_arguments.cpp  
 // compile with: /EHsc /c  
   
@@ -81,7 +82,7 @@ int print( double dvalue, int prec ) {
   
  Um die neue `print`-Funktion aufrufen, verwenden Sie Code wie den folgenden:  
   
-```  
+```cpp 
 print( d );    // Precision of 2 supplied by default argument.  
 print( d, 0 ); // Override default argument to achieve other  
 //  results.  
@@ -91,13 +92,13 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   Standardargumente werden nur in Funktionsaufrufen verwendet, in denen nachfolgende Argumente ausgelassen werden – sie müssen die letzten Argumente sein. Daher ist der folgende Code ungültig:  
   
-    ```  
+    ```cpp 
     int print( double dvalue = 0.0, int prec );  
     ```  
   
 -   Ein Standardargument kann nicht in späteren Deklarationen neu definiert werden, auch wenn die Neudefinition mit dem Original identisch ist. Daher generiert der folgende Code einen Fehler:  
   
-    ```  
+    ```cpp 
     // Prototype for print function.  
     int print( double dvalue, int prec = 2 );  
   
@@ -116,9 +117,6 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   Standardargumente können für Zeiger auf Funktionen bereitgestellt werden. Zum Beispiel:  
   
-    ```  
+    ```cpp 
     int (*pShowIntVal)( int i = 0 );  
     ```  
-  
-## <a name="see-also"></a>Siehe auch  
- 

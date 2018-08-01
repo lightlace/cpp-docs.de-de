@@ -1,5 +1,5 @@
 ---
-title: 'Eine&#39;s Komplementoperator: ~ | Microsoft Docs'
+title: 'Eine&#39;s Komplementoperator: ~ | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a10c8f3df2a1f2f27ee33450a52132e8184d4232
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79d34a4057ccbe5c10a6d22a14eed4317e62c464
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409155"
 ---
 # <a name="one39s-complement-operator-"></a>Eine&#39;s Komplementoperator: ~
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 ~ cast-expression  
 ```  
   
@@ -38,11 +38,11 @@ ms.lasthandoff: 05/03/2018
  Der Einerkomplementoperator (`~`), der manchmal als "bitweiser Komplementoperator" bezeichnet wird, ergibt eine bitweise Einerkomplement seines Operanden. Das bedeutet, dass jedes Bit, das 1 im Operanden ist, 0 im Ergebnis ist. Umgekehrt ist jedes Bit, das 0 im Operanden ist, im Ergebnis 1. Der Operand für den Einerkomplementoperator muss ein ganzzahliger Typ sein.  
   
 ## <a name="operator-keyword-for-"></a>Operator-Schlüsselwort für ~  
- Der `compl`-Operator ist die Textentsprechung von `~`. Es gibt zwei Möglichkeiten, den Zugriff auf die `compl` -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit ["/ Za"](../build/reference/za-ze-disable-language-extensions.md).  
+ Die **Compl** -Operator ist die ausgeschriebene Variante von `~`. Es gibt zwei Möglichkeiten, den Zugriff auf die **Compl** -Operator in Programmen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit [/Za](../build/reference/za-ze-disable-language-extensions.md).  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // expre_One_Complement_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -59,9 +59,9 @@ int main () {
   
  In diesem Beispiel ist der neue Wert, der `y` zugewiesen ist, das Einerkomplement des Werts ohne Vorzeichen 0xFFFF oder 0x0000.  
   
- Ganzzahlige Erweiterung wird für ganzzahlige Operanden durchgeführt, und der resultierende Typ ist der Typ, auf den der Operand erweitert wird. Finden Sie unter [Standardkonvertierungen](standard-conversions.md) für Weitere Informationen über die Durchführung der heraufstufung.  
+ Ganzzahlige Erweiterung wird für ganzzahlige Operanden durchgeführt, und der resultierende Typ ist der Typ, auf den der Operand erweitert wird. Finden Sie unter [Standardkonvertierungen](standard-conversions.md) für Weitere Informationen über die Ausführung der heraufstufung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke mit Unäroperatoren](../cpp/expressions-with-unary-operators.md)   
- [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++-Built-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Unäre arithmetische Operatoren](../c-language/unary-arithmetic-operators.md)

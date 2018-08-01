@@ -1,5 +1,5 @@
 ---
-title: Globale Funktionen des Compilers COM | Microsoft Docs
+title: Globale Compiler-COM-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4116d82ef38d7aaab29fe682e0881ac2e2ff5903
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa138b045fcb5851a65b68d898b99a8cab269f6e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412188"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402532"
 ---
 # <a name="compiler-com-global-functions"></a>Globale COM-Funktionen des Compilers
 **Microsoft-spezifisch**  
@@ -29,13 +29,13 @@ ms.locfileid: "32412188"
   
 |Funktion|Beschreibung|  
 |--------------|-----------------|  
-|[_com_raise_error](../cpp/com-raise-error.md)|Löst ein [_com_error](../cpp/com-error-class.md) in Reaktion auf einen Fehler.|  
+|[_com_raise_error](../cpp/com-raise-error.md)|Löst eine [_com_error](../cpp/com-error-class.md) in Reaktion auf einen Fehler.|  
 |[_set_com_error_handler](../cpp/set-com-error-handler.md)|Ersetzt die Standardfunktion für die COM-Fehlerbehandlung.|  
-|[ConvertBSTRToString](../cpp/convertbstrtostring.md)|Konvertiert eine `BSTR` -Wert in einen **Char \*** .|  
-|[ConvertStringToBSTR](../cpp/convertstringtobstr.md)|Konvertiert eine **Char \***  -Wert in einen `BSTR`.|  
+|[ConvertBSTRToString](../cpp/convertbstrtostring.md)|Konvertiert eine `BSTR` -Werts in einen `char *`.|  
+|[ConvertStringToBSTR](../cpp/convertstringtobstr.md)|Konvertiert eine `char *` -Werts in einen `BSTR`.|  
   
 **Ende Microsoft-spezifisch**  
   
 ## <a name="see-also"></a>Siehe auch  
- [Compiler-COM-Unterstützungsklassen](../cpp/compiler-com-support-classes.md)   
+ [Compilerklassen für COM-Unterstützung](../cpp/compiler-com-support-classes.md)   
  [COM-Unterstützung des Compilers](../cpp/compiler-com-support.md)

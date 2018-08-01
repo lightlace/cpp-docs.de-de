@@ -1,5 +1,5 @@
 ---
-title: Verweistyp Funktionsargumente | Microsoft Docs
+title: Verweistyp Funktionsargumente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83d78aad4285ad711581dbed1c88ef6b9a8a9b24
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad8fc85a37aec80d09ed6df9280a78de0540f01
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409055"
 ---
 # <a name="reference-type-function-arguments"></a>Verweistyp-Funktionsargumente
 Häufig ist es effizienter, Verweise anstelle großer Objekte an Funktionen zu übergeben. Dies ermöglicht es dem Compiler, die Adresse des Objekts zu übergeben, während die Syntax beibehalten wird, die verwendet worden wäre, um auf das Objekt zuzugreifen. Betrachten Sie das folgende Beispiel, in dem die `Date`-Struktur verwendet wird:  
   
-```  
+```cpp 
 // reference_type_function_arguments.cpp  
 struct Date  
 {  
@@ -66,17 +67,17 @@ int main()
 }  
 ```  
   
- Der vorhergehende Code zeigt, dass Member einer Struktur, die als Verweis übergebene zugegriffen werden, mit dem Memberauswahloperator (**.**) anstelle der Zeiger Objektmember-auswahloperators (**->**).  
+ Der vorhergehende Code zeigt, dass Member einer Struktur, die als Verweis übergeben wird, zugegriffen werden mit dem Memberauswahloperator (**.**) anstelle der Zeiger Objektmember-auswahloperators (**->**).  
   
- Obwohl als Verweistypen Argumente übergeben wurden die Syntax von nichtzeigertypen überwachen, behalten sie ein wichtiges Merkmal der Zeigertypen: sie sind änderbar, es sei denn, die als deklariert sind **const**. Da die Absicht des vorangehenden Codes nicht in der Änderung des `GDate` -Objekts liegt, ist ein geeigneterer Funktionsprototyp:  
+ Obwohl als Verweistypen Argumente übergeben wurden, die Syntax von nichtzeigertypen überwachen, behalten sie ein wichtiges Merkmal der Zeigertypen: sie sind änderbar, es sei denn, die als deklariert **const**. Da die Absicht des vorangehenden Codes nicht in der Änderung des `GDate` -Objekts liegt, ist ein geeigneterer Funktionsprototyp:  
   
-```  
+```cpp 
 long JulianFromGregorian( const Date& GDate );  
 ```  
   
  Der Prototyp garantiert, dass die Funktion `JulianFromGregorian` das Argument nicht ändert.  
   
- Jeder Prototyp einen Verweistyp Funktion kann ein Objekt vom selben Typ in seiner Stelle akzeptieren, da es eine standardkonvertierung von ist *Typename* auf * Typename ***&**.  
+ Alle Funktionen Prototyp einen Verweistyp übernehmen kann stattdessen ein Objekt des gleichen Typs an seiner Stelle annehmen, da es eine standardkonvertierung von ist *Typename* , * Typename ***&**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verweise](../cpp/references-cpp.md)

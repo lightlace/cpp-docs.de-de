@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a21b7dd00aa0bb0894da4cc13cf0f6f40078ee1b
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c2204e69ee6df64a08e3f5cf03191ad1e7e0535
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941826"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402460"
 ---
 # <a name="compiler-com-support"></a>COM-Unterstützung des Compilers
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
@@ -28,7 +28,7 @@ ms.locfileid: "37941826"
   
  Mithilfe der [#import-präprozessoranweisung](../preprocessor/hash-import-directive-cpp.md), der Compiler kann eine Typbibliothek lesen und konvertiert ihn in eine C++-Headerdatei, die beschreibt, die COM-als Schnittstellen Klassen. Ein Satz von `#import`-Attributen ist für die Benutzersteuerung des Inhalts der resultierenden Typbibliothek-Headerdateien verfügbar.  
   
- Sie können der [__declspec](../cpp/declspec.md) erweitertes Attribut [Uuid](../cpp/uuid-cpp.md) ein COM-Objekt einen global eindeutigen Bezeichner (GUID) zuweisen. Das Schlüsselwort [__uuidof](../cpp/uuidof-operator.md) können verwendet werden, um die COM-Objekt zugeordnete GUID zu extrahieren. Eine andere `__declspec` Attribut [Eigenschaft](../cpp/property-cpp.md), kann verwendet werden, um anzugeben der **erhalten** und **festgelegt** Methoden für einen Datenmember eines COM-Objekts.  
+ Sie können der [__declspec](../cpp/declspec.md) erweitertes Attribut [Uuid](../cpp/uuid-cpp.md) ein COM-Objekt einen global eindeutigen Bezeichner (GUID) zuweisen. Das Schlüsselwort [__uuidof](../cpp/uuidof-operator.md) können verwendet werden, um die COM-Objekt zugeordnete GUID zu extrahieren. Eine andere **__declspec** Attribut [Eigenschaft](../cpp/property-cpp.md), kann verwendet werden, um anzugeben der `get` und `set` Methoden für einen Datenmember eines COM-Objekts.  
   
  Ein Satz von COM-Unterstützung globale Funktionen und Klassen dient zur Unterstützung der `VARIANT` und `BSTR` Typen, intelligente Zeiger zu implementieren und zu kapseln die Error-Objekt, das ausgelöst wird, indem `_com_raise_error`:  
   

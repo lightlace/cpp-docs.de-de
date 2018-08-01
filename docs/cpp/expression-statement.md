@@ -1,5 +1,5 @@
 ---
-title: Ausdrucksanweisung | Microsoft Docs
+title: Ausdrucksanweisung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60879ca8792e3259a69b7a9a3de6cd83dce0d6d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d94acdfff2fdea2cc35d0856940270ba82e131af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411580"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405255"
 ---
 # <a name="expression-statement"></a>Ausdrucksanweisung
 Ausdrucksanweisungen bewirken die Auswertung von Ausdrücken. Keine Übertragung der Steuerung oder Iteration tritt infolge einer Ausdrucksanweisung auf.  
@@ -34,7 +34,7 @@ Ausdrucksanweisungen bewirken die Auswertung von Ausdrücken. Keine Übertragung
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Alle Ausdrücke in einer Ausdrucksanweisung werden ausgewertet und alle Nebeneffekte werden abgeschlossen, bevor die nächste Anweisung ausgeführt wird. Die häufigsten Ausdrucksanweisungen sind Zuweisungen und Funktionsaufrufe.  Da der Ausdruck optional ist, wird ein Semikolon allein als eine leere Ausdrucksanweisung genannt betrachtet die [null](../cpp/null-statement.md) Anweisung.  
+ Alle Ausdrücke in einer Ausdrucksanweisung werden ausgewertet und alle Nebeneffekte werden abgeschlossen, bevor die nächste Anweisung ausgeführt wird. Die häufigsten Ausdrucksanweisungen sind Zuweisungen und Funktionsaufrufe.  Da der Ausdruck optional ist, wird ein Semikolon allein als eine leere Ausdrucksanweisung, um genannte betrachtet die [null](../cpp/null-statement.md) Anweisung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über C++-Anweisungen](../cpp/overview-of-cpp-statements.md)

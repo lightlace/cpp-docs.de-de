@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen und Verwenden von Unique_ptr-Instanzen | Microsoft Docs'
+title: 'Gewusst wie: Erstellen und Verwenden von Unique_ptr-Instanzen | Microsoft-Dokumentation'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4562fcb738cc7f692c1bffe1b4b06e413392dd60
-ms.sourcegitcommit: ee9fb774e82dfbda1dfaeb197aed36b97e408978
+ms.openlocfilehash: eed34b3c356b36c824e22739697b7967575792f6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34755770"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402649"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Gewusst wie: Erstellen und Verwenden von unique_ptr-Instanzen
-Ein [Unique_ptr](../standard-library/unique-ptr-class.md) teilt der Zeiger nicht. Es kann nicht in eine andere kopiert werden `unique_ptr`, als Wert an eine Funktion übergeben oder in einen Algorithmus für die C++-Standardbibliothek, die Kopien erfordert verwendet. Ein `unique_ptr`-Objekt kann nur verschoben werden. Dies bedeutet, dass der Besitz der Arbeitsspeicherressource einem anderen `unique_ptr`-Objekt übertragen wird und das ursprüngliche `unique_ptr`-Objekt diese Ressource nicht mehr besitzt. Es empfiehlt sich, ein Objekt auf einen Besitzer zu beschränken, da mehrere Besitzer die Komplexität der Programmlogik erhöhen. Deshalb verwenden, wenn Sie einen intelligenten Zeiger für ein einfaches C++-Objekt benötigen, `unique_ptr`, und bei der Erstellung einer `unique_ptr`, verwenden Sie die [Make_unique](../standard-library/memory-functions.md#make_unique) Hilfsfunktion.  
+Ein [Unique_ptr](../standard-library/unique-ptr-class.md) der Zeiger wird nicht freigegeben. Es kann nicht in eine andere kopiert werden `unique_ptr`, als Wert an eine Funktion übergeben oder in einen C++-Standardbibliothek-Algorithmus, die Kopien erfordert verwendet. Ein `unique_ptr`-Objekt kann nur verschoben werden. Dies bedeutet, dass der Besitz der Arbeitsspeicherressource einem anderen `unique_ptr`-Objekt übertragen wird und das ursprüngliche `unique_ptr`-Objekt diese Ressource nicht mehr besitzt. Es empfiehlt sich, ein Objekt auf einen Besitzer zu beschränken, da mehrere Besitzer die Komplexität der Programmlogik erhöhen. Wenn Sie einen intelligenten Zeiger für ein einfaches C++-Objekt benötigen, daher können `unique_ptr`, und beim Erstellen einer `unique_ptr`, verwenden die [Make_unique](../standard-library/memory-functions.md#make_unique) Hilfsfunktion.  
   
  Das folgende Diagramm veranschaulicht die Eigentumsübertragung zwischen zwei `unique_ptr`-Instanzen.  
   
- ![Verschieben den Besitz von einer eindeutigen&#95;Ptr](../cpp/media/unique_ptr.png "Unique_ptr")  
+ ![Verschieben den Besitz der einen eindeutigen&#95;Ptr](../cpp/media/unique_ptr.png "Unique_ptr")  
   
- `unique_ptr` wird definiert, der `<memory>` -Header in der C++-Standardbibliothek. Es ist genau so effizient wie einen unformatierten Zeiger und kann in C++-Standardbibliothek Container verwendet werden. Das Hinzufügen von `unique_ptr` -Instanzen, die C++-Standardbibliothek Containern ist effizient, da der bewegungskonstruktor des der `unique_ptr` entfällt die Notwendigkeit für einen Kopiervorgang.  
+ `unique_ptr` wird definiert, der `<memory>` -Header in der C++-Standardbibliothek. Dabei handelt es sich genau so effizient wie ein unformatierter Zeiger in C++-Standardbibliothek-Containern verwendet werden können. Das Hinzufügen von `unique_ptr` -Instanzen, die C++-Standardbibliothek-Containern ist effizient, da der bewegungskonstruktor des der `unique_ptr` entfällt die Notwendigkeit für einen Kopiervorgang ab.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie `unique_ptr`-Instanzen erstellt und zwischen Funktionen übergeben werden.  
@@ -48,7 +48,7 @@ Ein [Unique_ptr](../standard-library/unique-ptr-class.md) teilt der Zeiger nicht
  [!code-cpp[stl_smart_pointers#212](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_3.cpp)]  
   
 ## <a name="example"></a>Beispiel  
- Können Sie [Make_unique](../standard-library/memory-functions.md#make_unique) zum Erstellen einer `unique_ptr` in ein Array, kann jedoch nicht `make_unique` zum Initialisieren der Elemente des Arrays.  
+ Können Sie [Make_unique](../standard-library/memory-functions.md#make_unique) zum Erstellen einer `unique_ptr` in ein Array, kann jedoch nicht `make_unique` um die Arrayelemente zu initialisieren.  
   
  [!code-cpp[stl_smart_pointers#213](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_4.cpp)]  
   

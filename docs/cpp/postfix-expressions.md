@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6299249b477b568579063f7ee61060514c3028bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943935"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403140"
 ---
 # <a name="postfix-expressions"></a>Postfixausdrücke
 Postfixausdrücke bestehen aus primären Ausdrücken bzw. Ausdrücken, in denen Postfixoperatoren einem primären Ausdruck folgen. Die Postfix-Operatoren sind in der folgenden Tabelle aufgeführt.  
@@ -33,14 +33,13 @@ Postfixausdrücke bestehen aus primären Ausdrücken bzw. Ausdrücken, in denen 
 |[Subscript-operator](../cpp/subscript-operator.md)|**[ ]**|  
 |[Funktionsaufrufoperator](../cpp/function-call-operator-parens.md)|**( )**|  
 |[Operator für die explizite Konvertierung](../cpp/explicit-type-conversion-operator-parens.md)|*Typname* **)**|  
-|[Memberzugriffsoperator](../cpp/member-access-operators-dot-and.md)|**.** oder **->**|  
-|[Postfixinkrement-Operators](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
+|[Memberzugriffsoperator](../cpp/member-access-operators-dot-and.md)|**.** Oder **->**|  
+|[Postfixinkrement-Operators](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|  
 |[Postfixdekrement-Operators](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   
  Die folgende Syntax beschreibt mögliche Postfixausdrücke:  
   
 ```  
-  
 primary-expression   
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )  
 ```  
@@ -51,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- Im obigen Ausdruck ist "func" ein primärer Ausdruck, "func(1)" ist ein Funktions-Postfixausdruck, "func(1)->GetData" ist ein Postfixausdruck, der einen Member der Klasse angibt, "func(1)>GetData()" ist ein weiterer Funktions-Postfixausdruck, und der gesamte Ausdruck ist ein Postfixausdruck, der den Rückgabewert von "GetData" erhöht.  Die Bedeutung des Ausdrucks als Ganzes ist "Funktion aufrufen, dabei 1 als Argument übergeben und einen Zeiger für eine Klasse als Rückgabewert erhalten.  Dann 'GetValue ()' für diese Klasse aufrufen und den zurückgegebenen Wert erhöhen."  
+ Im obigen Ausdruck `func` ist ein primärer Ausdruck, `func(1)` ist eine Funktions-postfixausdruck, `func(1)->GetData` ist ein postfixausdruck, der einen Member der Klasse `func(1)->GetData()` ist eine andere Funktions-postfixausdruck, und die gesamte Ausdruck ist ein postfixausdruck, den Rückgabewert von GetData.  Die Bedeutung des Ausdrucks als Ganzes ist „Funktion aufrufen, dabei 1 als Argument übergeben und einen Zeiger für eine Klasse als Rückgabewert erhalten.  Rufen Sie anschließend `GetValue()` für diese Klasse, klicken Sie dann den zurückgegebenen Wert erhöhen.  
   
  Die oben aufgeführten Ausdrücke sind Zuweisungsausdrücke, was bedeutet, dass das Ergebnis dieser Ausdrücke ein "r-value" sein muss.  
   
@@ -191,7 +190,7 @@ void print( const char *string, const char *terminator )
 }  
 ```  
   
- Das vorangehende Programm deklariert eine Funktion, `print`, die zwei Argumente akzeptiert. Das zweite Argument, `terminator`, weist jedoch einen Standardwert, `"\n"`, auf. In `main`, die ersten beiden Aufrufe von `print` ermöglichen das zweite Standardargument, geben Sie eine neue Zeile ein, um die gedruckte Zeichenfolge zu beenden. Der dritte Aufruf gibt einen expliziten Wert für das zweite Argument zurück. Die Ausgabe des Programms lautet  
+ Das vorangehende Programm deklariert eine Funktion, `print`, die zwei Argumente akzeptiert. Allerdings das zweite Argument, *Abschlusszeichen*, hat den Standardwert `"\n"`. In `main`, die ersten beiden Aufrufe von `print` ermöglichen das zweite Standardargument, geben Sie eine neue Zeile ein, um die gedruckte Zeichenfolge zu beenden. Der dritte Aufruf gibt einen expliziten Wert für das zweite Argument zurück. Die Ausgabe des Programms lautet  
   
 ```Output 
 hello,  

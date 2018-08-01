@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4895153abe248265e0aacfbe636b9a4bd46ed205
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eaa3921d0f1f89df11cf5e3809c9e90e4a03dd3b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941196"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408465"
 ---
 # <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
 **Microsoft-spezifisch**  
@@ -31,19 +31,17 @@ ms.locfileid: "37941196"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 BSTR* GetAddress( );  
-  
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf den `BSTR` umschlossen von `_bstr_t`.  
   
 ## <a name="remarks"></a>Hinweise  
- `GetAddress` wirkt sich auf alle `_bstr_t`-Objekte aus, die ein `BSTR` freigeben. Mehr als eine `_bstr_t` können Freigeben einer `BSTR` durch die Verwendung des Kopierkonstruktors und und **Operator =**.  
+ **GetAddress** wirkt sich auf alle `_bstr_t` Objekte die Freigabe einer `BSTR`. Mehr als eine `_bstr_t` können Freigeben einer `BSTR` durch die Verwendung des Kopierkonstruktors und und **Operator =**.  
   
 ## <a name="example"></a>Beispiel  
- Finden Sie unter [_bstr_t:: Assign](../cpp/bstr-t-assign.md) ein mit `GetAddress`.  
+ Finden Sie unter [_bstr_t:: Assign](../cpp/bstr-t-assign.md) ein mit **GetAddress**.  
   
  **Ende Microsoft-spezifisch**  
   

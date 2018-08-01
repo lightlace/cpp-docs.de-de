@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 365f9196f3d482098c29bf4b04610120ecbbeec4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941550"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406041"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Objektlebenszeit und Ressourcenverwaltung (Modern C++)
 Im Gegensatz zu verwalteten Sprachen keine C++ Garbagecollection (GC), die keine länger-verwendete Arbeitsspeicher automatisch freigibt, während ein Programm ausgeführt wird. In C++ bezieht ressourcenverwaltung direkt auf die Lebensdauer eines Objekts. Dieses Dokument beschreibt die Faktoren, die Objektlebensdauer in C++ für die Verwaltung auswirken.  
@@ -42,7 +42,6 @@ auto p = make_shared<widget>(); // no leak, and exception safe
 p->draw();   
   
 } // no delete required, out-of-scope triggers smart pointer destructor  
-  
 ```  
   
  Verwendung `unique_ptr` für eindeutigen Besitz, z. B. in der *"pimpl"* Idiom. (Finden Sie unter [Pimpl für Kompilierzeitkapselung](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Stellen Sie eine `unique_ptr` die primäre Zielgruppe für alle expliziten **neue** Ausdrücke.  
@@ -61,7 +60,6 @@ class node {
   ...  
 };  
 node::node() : parent(...) { children.emplace_back(new node(...) ); }  
-  
 ```  
   
  Bei der Optimierung der Leistung erforderlich ist, müssen Sie möglicherweise mit *gut gekapseltes* zuständige Zeiger und explizite Aufrufe zu löschen. Ein Beispiel ist, wenn Sie Ihre eigenen Low-Level-Datenstruktur implementieren.  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ad0c50330d174a6139ce6e588b278e03cd99562
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5deee0209866580afd038fbce068a9275f5b5874
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943610"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406967"
 ---
 # <a name="novtable"></a>novtable
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
@@ -30,7 +30,7 @@ ms.locfileid: "37943610"
   
  Diese Form der **__declspec** kann auf eine beliebige Klassendeklaration angewendet werden, aber nur auf reine Schnittstellenklassen, d. h. Klassen, die auf ihre eigenen nie instanziiert werden angewendet werden soll. Die **__declspec** beendet den Compiler generiert Code, um die Vfptr in den Konstruktoren und der Destruktor der Klasse zu initialisieren. In vielen Fällen werden hierdurch die einzigen Verweise auf "vtable" entfernt, die der Klasse zugeordnet sind, sodass der Linker diese entfernt. Mit dieser Form des **__declspec** kann zu einer erheblichen Verringerung Codegröße führen.  
   
- Wenn Sie versuchen, eine Klasse zu instanziieren, die mit `novtable` gekennzeichnet ist, und dann auf einen Klassenmember zugreifen, tritt eine Zugriffsverletzung (AV) auf.  
+ Wenn Sie versuchen, eine Klasse, die mit instanziieren **Novtable** , und klicken Sie dann auf einen Klassenmember zuzugreifen, erhalten Sie eine zugriffsverletzung (AV).  
   
 ## <a name="example"></a>Beispiel  
   

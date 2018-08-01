@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc5ec18eec5be6ee0cc696768be65cd62b74bdc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 546006fcf1c559317b4afff424976db8109442e7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392782"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404751"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -66,14 +66,14 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parameter
 
-*w*<br/>
+*w*  
 Gleitkommawert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Acosh** Funktionen geben den umgekehrten hyperbolischen Cosinus (hyperbolischen arcuscosinus) von *x*. Diese Funktionen sind in der Domäne gültig *x* ≥ 1. Wenn *x* ist kleiner als 1, **Errno** festgelegt ist, um **EDOM** und das Ergebnis ist ein stilles NaN. Wenn *x* ist ein stilles NaN, undefiniert oder unendlich ist, wird der gleiche Wert zurückgegeben.
+Die **Acosh** Funktionen geben den umgekehrten hyperbolischen Cosinus (hyperbolischen arcuscosinus) von *x*. Diese Funktionen sind in der Domäne gültig *x* ≥ 1. Wenn *x* ist kleiner als 1, `errno` nastaven NA hodnotu `EDOM` und das Ergebnis ist ein stilles NaN. Wenn *x* wird eine stille NaN, undefiniert oder unendlich ist, wird der gleiche Wert zurückgegeben.
 
-|Eingabe|SEH-Ausnahme|**_matherr** Ausnahme|
+|Eingabe|SEH-Ausnahme|`_matherr` -Ausnahme|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|Keine|Keine|
 |*X* < 1|Keine|Keine|
@@ -120,9 +120,9 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>Siehe auch
 
-[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
-[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
-[cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
-[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
-[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)<br/>
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)  
+[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)  
+[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)  
+[cosh, coshf, coshl](cosh-coshf-coshl.md)  
+[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)  
+[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)  

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1284e4f6e096ab8021c597b841a8e983673561bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0edf350289d04824dc2e06e4e11144a4f3141770
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943592"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407032"
 ---
 # <a name="range-based-for-statement-c"></a>Bereichsbasiert für Anweisung (C++)
 Führt `statement` für jedes Element in `expression` wiederholt und nacheinander aus.  
@@ -25,7 +25,6 @@ Führt `statement` für jedes Element in `expression` wiederholt und nacheinande
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 for ( for-range-declaration : expression )  
    statement   
 ```  
@@ -90,7 +89,6 @@ int main()
     cout << endl;  
     cout << "end of vector test" << endl;  
 }  
-  
 ```  
   
  Es folgt die Ausgabe:  

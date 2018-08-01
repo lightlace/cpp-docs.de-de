@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 33ed35d02547acdbc9a08928a6e698c3e039d745
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028150"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405570"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++)
 In diesem Thema wird beschrieben, wie zum Schreiben einer *bewegungskonstruktor* und ein bewegungszuweisungsoperator für eine C++-Klasse. Ein bewegungskonstruktor ermöglicht die Ressourcen, die im Besitz von einem Rvalue-Objekt, das in einen l-Wert ohne kopieren verschoben werden. Weitere Informationen zur bewegungssemantik finden Sie unter [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
@@ -250,7 +250,7 @@ int main()
   
  Dieses Beispiel erzeugt die folgende Ausgabe:  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.  
 In ~MemoryBlock(). length = 0.  
@@ -273,7 +273,7 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  Bevor Sie Visual Studio 2010 erzeugt in diesem Beispiel wird die folgende Ausgabe:  
   
-```  
+```Output  
 In MemoryBlock(size_t). length = 25.  
 In MemoryBlock(const MemoryBlock&). length = 25. Copying resource.  
 In ~MemoryBlock(). length = 25. Deleting resource.  
@@ -304,7 +304,6 @@ In ~MemoryBlock(). length = 75. Deleting resource.
  Werden sowohl ein Bewegungskonstruktor als auch ein Bewegungszuweisungsoperator für die Klasse bereitgestellt, kann redundanter Code vermeiden werden, indem der Bewegungskonstruktor für den Aufruf des Bewegungszuweisungsoperators geschrieben wird. Im folgenden Beispiel wird eine überarbeitete Version des Bewegungskonstruktors, der den Bewegungszuweisungsoperator aufruft, veranschaulicht:  
   
 ```cpp
-  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  

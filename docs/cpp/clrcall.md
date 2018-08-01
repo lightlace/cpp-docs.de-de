@@ -1,5 +1,5 @@
 ---
-title: __clrcall | Microsoft Docs
+title: __clrcall | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4012eac44f376ccdeeb57227e562c672f6ba7ffe
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 27564ce9c3cf795d7999745e82c733092bccd719
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704580"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401856"
 ---
 # <a name="clrcall"></a>__clrcall
 
 **Microsoft-spezifisch**
 
-Gibt an, dass eine Funktion nur aus verwaltetem Code aufgerufen werden kann.  Verwenden Sie `__clrcall` für alle virtuellen Funktionen, die nur aus verwaltetem Code aufgerufen werden. Allerdings kann diese Aufrufkonvention nicht für Funktionen verwendet werden, die vom nativem Code aufgerufen werden.
+Gibt an, dass eine Funktion nur aus verwaltetem Code aufgerufen werden kann.  Verwendung **__clrcall** für alle virtuellen Funktionen, die nur aus verwaltetem Code aufgerufen wird. Allerdings kann diese Aufrufkonvention nicht für Funktionen verwendet werden, die vom nativem Code aufgerufen werden.
 
-Verwenden Sie `__clrcall`, um die Leistung zu verbessern, wenn aus einer verwalteten Funktion eine virtuelle verwaltete Funktion oder aber aus einer verwalteten Funktion ein verwalteter Funktionszeiger aufgerufen wird.
+Verwendung **__clrcall** zur Verbesserung der Leistung beim Aufrufen von einer verwalteten Funktion für eine virtuelle verwaltete Funktion oder verwaltete Funktion mit verwalteter Funktionszeiger.
 
-Einstiegspunkte sind separate, vom Compiler generierte Funktionen. Wenn eine Funktion sowohl über die systemeigenen als auch über verwaltete Einstiegspunkte verfügt, ist eine von ihnen die tatsächliche Funktion mit der Funktionsimplementierung. Die andere Funktion ist eine separate Funktion (ein Thunk), welche die tatsächliche Funktion aufruft und die Common Language Runtime PInvoke ausführen lässt. Wenn Sie eine Funktion als `__clrcall` markieren, geben Sie an, dass die Funktionsimplementierung MSIL sein muss und dass die systemeigene Einstiegspunktfunktion nicht generiert wird.
+Einstiegspunkte sind separate, vom Compiler generierte Funktionen. Wenn eine Funktion sowohl über die systemeigenen als auch über verwaltete Einstiegspunkte verfügt, ist eine von ihnen die tatsächliche Funktion mit der Funktionsimplementierung. Die andere Funktion ist eine separate Funktion (ein Thunk), welche die tatsächliche Funktion aufruft und die Common Language Runtime PInvoke ausführen lässt. Wenn eine Funktion als markieren **__clrcall**, Sie geben die funktionsimplementierung MSIL sein muss und dass die systemeigene Einstiegspunktfunktion nicht generiert wird.
 
-Wenn `__clrcall` nicht angegeben ist und die Adresse einer systemeigenen Funktion verwendet wird, verwendet der Compiler den systemeigenen Einstiegspunkt. `__clrcall` gibt an, dass die Funktion verwaltet wird und keine Notwendigkeit besteht, den Übergang von verwaltet zu systemeigen zu durchlaufen. In diesem Fall verwendet der Compiler den verwalteten Einstiegspunkt.
+Wenn die Adresse einer systemeigenen Funktion Wenn **__clrcall** nicht angegeben ist, verwendet der Compiler den systemeigenen Einstiegspunkt. **__clrcall** gibt an, dass die Funktion verwaltet wird und es nicht erforderlich ist, durchlaufen den Übergang von verwaltet zu systemeigen. In diesem Fall verwendet der Compiler den verwalteten Einstiegspunkt.
 
-Wenn **"/ CLR"** (nicht **/CLR: pure** oder **/CLR: safe**) wird verwendet, und `__clrcall` ist nicht verwendet wird, gibt die Adresse des systemeigenen Eintrags zurück Übernahme der Adresse einer Funktion immer Zeigen Sie die Funktion. Wenn `__clrcall` verwendet wird, wird der Einstiegspunkt der systemeigenen Funktion nicht erstellt. Daher wird die Adresse der verwalteten Funktion und keine Einstiegspunkt-Thunkfunktion zurückgegeben. Weitere Informationen finden Sie unter [doppeltes Thunking](../dotnet/double-thunking-cpp.md). Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
+Wenn `/clr` (nicht `/clr:pure` oder `/clr:safe`) wird verwendet, und **__clrcall** wird nicht verwendet wird, übernehmen die Adresse einer Funktion immer die Adresse die systemeigene Einstiegspunktfunktion zurückgegeben. Wenn **__clrcall** wird verwendet, die systemeigene Einstiegspunktfunktion wird nicht erstellt, damit Sie die Adresse der verwalteten Funktion keinen Einstiegspunkt-thunkfunktion abrufen. Weitere Informationen finden Sie unter [doppeltes Thunking](../dotnet/double-thunking-cpp.md). Die **/CLR: pure** und **/CLR: safe** Compileroptionen in Visual Studio 2015 als veraltet markiert und in Visual Studio 2017 nicht unterstützt werden.
 
-[/ CLR (common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md) impliziert, dass alle Funktionen Funktionszeiger und `__clrcall` und der Compiler nicht gestattet, eine Funktion innerhalb der Kompiliereinheit alles außer gekennzeichnet werden `__clrcall`. Wenn **/CLR: pure** verwendet wird, `__clrcall` kann nur für Funktionszeiger und externe Deklarationen angegeben werden.
+[/ CLR (common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) bedeutet, dass alle Funktionen Funktionszeiger und **__clrcall** und der Compiler nicht erlaubt, dass eine Funktion in der Kompiliereinheit etwas anderes als markiertwerden **__clrcall**. Wenn **/CLR: pure** verwendet wird, **__clrcall** kann nur für Funktionszeiger und externe Deklarationen angegeben werden.
 
-Sie können direkt aufrufen `__clrcall` Funktionen von vorhandenem C++-Code, der kompiliert wurde **"/ CLR"** solange diese Funktion eine MSIL-Implementierung verfügt. `__clrcall` Funktionen können nicht direkt über Funktionen, die Inline-Asm haben, und rufen Sie die CPU-spezifische Intrinisics, z. B. aufgerufen werden, auch wenn diese Funktionen mit kompiliert werden, **"/ CLR"**.
+Sie können direkt aufrufen **__clrcall** Funktionen aus vorhandenen C++-Code, die mithilfe von kompiliert wurde **"/ CLR"** solange diese Funktion eine MSIL-Implementierung verfügt. **__clrcall** Funktionen können nicht direkt über Funktionen, die Inline-Asm haben, und rufen die CPU-spezifische Intrinisics, z. B. nicht aufgerufen werden, auch wenn diese Funktionen mit kompiliert werden `/clr`.
 
-`__clrcall`-Funktionszeiger sollen nur in der Anwendungsdomäne verwendet werden, in der sie erstellt wurden.  Anstatt `__clrcall`-Funktionszeiger über Anwendungsdomänen hinweg zu übergeben, verwenden Sie <xref:System.CrossAppDomainDelegate>. Weitere Informationen finden Sie unter [Anwendungsdomänen und Visual C++](../dotnet/application-domains-and-visual-cpp.md).
+**__clrcall** Funktionszeiger nur sollen in der Anwendungsdomäne verwendet werden, in dem sie erstellt wurden.  Statt der Übergabe von **__clrcall** -Funktionszeiger über Anwendungsdomänen hinweg, verwenden Sie <xref:System.CrossAppDomainDelegate>. Weitere Informationen finden Sie unter [Anwendungsdomänen und Visual C++](../dotnet/application-domains-and-visual-cpp.md).
 
 ## <a name="example"></a>Beispiel
 
-Beachten Sie, dass Code nach Bedarf generiert wird, wenn eine Funktion mit `__clrcall` deklariert wird. Dies ist beispielsweise der Fall, wenn eine Funktion aufgerufen wird.
+Beachten Sie, dass, wenn eine Funktion deklariert wird, mit **__clrcall**, Code generiert werden, wenn erforderlich, z. B. Wenn Funktion aufgerufen wird.
 
 ```cpp
 // clrcall2.cpp
@@ -103,6 +103,5 @@ int main() {
 ```
 
 ## <a name="see-also"></a>Siehe auch
-
-- [Argumentübergabe und Benennungskonventionen](../cpp/argument-passing-and-naming-conventions.md)
-- [Schlüsselwörter](../cpp/keywords-cpp.md)
+ [Argumentübergabe und Benennungskonventionen](../cpp/argument-passing-and-naming-conventions.md)  
+ [Schlüsselwörter](../cpp/keywords-cpp.md)

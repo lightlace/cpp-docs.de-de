@@ -1,5 +1,5 @@
 ---
-title: Zuweisungsoperatoren | Microsoft Docs
+title: Zuweisungsoperatoren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4318d7913b180c3fbadcf9d655e402c9b0ad7ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: dd26c8b9fd044c9f6372ef0a680fbc770620e43d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408985"
 ---
 # <a name="assignment-operators"></a>Zuweisungsoperatoren
 ## <a name="syntax"></a>Syntax  
@@ -61,8 +62,8 @@ assignment-operator : one of
 ## <a name="remarks"></a>Hinweise  
  Zuweisungsoperatoren speichern einen Wert in dem Objekt, das durch den linken Operanden festgelegt ist. Es gibt drei Arten von Zuweisungsvorgängen: 
 
-1. einfache Zuweisung, in dem der Wert des zweiten Operanden in dem durch den ersten Operanden angegebenen Objekt gespeichert ist. 1. verbundzuweisung, in dem ein Arithmetik-, UMSCHALT oder bitweise Operation erfolgt vor dem Speichern des Ergebnisses.
-1. Verschieben Sie Zuweisung (für Klassentypen), in welchen Ressourcen, ohne zu kopieren übertragen werden.
+1. einfache Zuweisung, in dem der Wert des zweiten Operanden in dem Objekt durch den ersten Operanden angegeben gespeichert wird. 1. verbundzuweisung, in dem ein Arithmetik-, UMSCHALT oder bitweise Operation erfolgt vor dem Speichern der Ergebnisse.
+1. Verschieben Sie Zuweisung (für Klassentypen), in welche Ressourcen, ohne zu kopieren übertragen werden.
 
 
 Alle Zuweisungsoperatoren in der folgenden Tabelle außer der = und & & = Operatoren sind Verbundzuweisungsoperatoren.  
@@ -82,7 +83,7 @@ Alle Zuweisungsoperatoren in der folgenden Tabelle außer der = und & & = Operat
 |**&=**|Rufen Sie den bitweisen AND-Operator des ersten und zweiten Operanden auf. Speichern Sie das Ergebnis in dem Objekt, das durch den ersten Operanden angegeben wird.|  
 |**^=**|Rufen Sie den bitweisen exklusiven OR-Operator des ersten und zweiten Operanden auf. Speichern Sie das Ergebnis in dem Objekt, das durch den ersten Operanden angegeben wird.|  
 |**\|=**|Rufen Sie den bitweisen inklusiven OR-Operator des ersten und zweiten Operanden auf. Speichern Sie das Ergebnis in dem Objekt, das durch den ersten Operanden angegeben wird.|
-|**&&=**| Bewegungszuweisungsoperator (für nur Klassentypen). Wenn der zweite Operand ein Rvalue ist, verschieben Sie die Ressourcen auf den ersten Operanden (ohne sie zu kopieren). Finden Sie unter [Bewegungskonstruktoren und bewegungszuweisungsoperatoren](move-constructors-and-move-assignment-operators-cpp.md) für Weitere Informationen.|
+|**&&=**| Move-Zuweisungsoperator (für nur Klassentypen). Ist der zweite Operand ein Rvalue-Wert, verschieben Sie die Ressourcen auf den ersten Operanden (ohne sie zu kopieren). Finden Sie unter [Bewegungskonstruktoren und bewegungszuweisungsoperatoren](move-constructors-and-move-assignment-operators-cpp.md) für Weitere Informationen.|
   
  **Operatorschlüsselwörter**  
   
@@ -94,11 +95,11 @@ Alle Zuweisungsoperatoren in der folgenden Tabelle außer der = und & & = Operat
 |**\|=**|`or_eq`|  
 |**^=**|`xor_eq`|  
   
- Es gibt zwei Möglichkeiten, diese Operatorschlüsselwörter in Ihren Programmen zuzugreifen: Fügen Sie die Headerdatei `iso646.h`, oder Kompilieren Sie mit der ["/ Za"](../build/reference/za-ze-disable-language-extensions.md) -Compileroption (spracherweiterungen deaktivieren).  
+ Es gibt zwei Möglichkeiten, um auf diese Operatorschlüsselwörter in Ihren Programmen zuzugreifen: Einschließen der Headerdatei `iso646.h`, oder Kompilieren Sie mit der [/Za](../build/reference/za-ze-disable-language-extensions.md) -Compileroption (spracherweiterungen deaktivieren).  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp 
 // expre_Assignment_Operators.cpp  
 // compile with: /EHsc  
 // Demonstrate assignment operators  
@@ -125,11 +126,11 @@ int main() {
   
  Objekte vom Typ "const" und "volatile" können L-Werten von Typen zugewiesen werden, die nur "volatile" oder die weder "const" noch "volatile" sind.  
   
- Die Zuweisung zu Objekten des Klassentyps (Struktur-, Union- und Klassentypen) wird durch eine Funktion mit dem Namen "operator=" ausgeführt. Das Standardverhalten dieser Operatorfunktion besteht darin, eine bitweise Kopie auszuführen. Allerdings kann dieses Verhalten mithilfe von überladenen Operatoren geändert werden. (Siehe [überladene Operatoren](../cpp/operator-overloading.md) für Weitere Informationen.)  
+ Die Zuweisung zu Objekten des Klassentyps (Struktur-, Union- und Klassentypen) wird durch eine Funktion mit dem Namen "operator=" ausgeführt. Das Standardverhalten dieser Operatorfunktion besteht darin, eine bitweise Kopie auszuführen. Allerdings kann dieses Verhalten mithilfe von überladenen Operatoren geändert werden. (Finden Sie unter [überladene Operatoren](../cpp/operator-overloading.md) für Weitere Informationen.)  
   
  Ein Objekt einer eindeutig abgeleiteten Klasse von einer angegebenen Basisklasse kann einem Objekt der Basisklasse zugewiesen werden. Umgekehrt gilt dies nicht, da eine implizite Konvertierung von einer abgeleiteten Klasse in eine Basisklasse vorliegt, jedoch nicht von der Basisklasse in die abgeleitete Klasse. Zum Beispiel:  
   
-```  
+```cpp 
 // expre_SimpleAssignment.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -160,14 +161,14 @@ int main()
   
  Für Klassentypobjekte unterscheidet sich die Zuweisung von der Initialisierung. Um zu sehen, wie unterschiedlich Zuweisung und Initialisierung sein können, betrachten Sie diesen Code:  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B = A;  
 ```  
   
  Der vorhergehende Code zeigt einen Initialisierer; er ruft den Konstruktor für `UserType2` auf, der ein Argument vom Typ `UserType1` akzeptiert. Mit dem Code  
   
-```  
+```cpp 
 UserType1 A;  
 UserType2 B;  
   
@@ -176,7 +177,7 @@ B = A;
   
  kann die Zuweisungsanweisung  
   
-```  
+```cpp 
 B = A;   
 ```  
   
@@ -189,11 +190,11 @@ B = A;
 -   Aufruf eines Konstruktors `UserType2::UserType2`, sofern ein solcher Konstruktor vorhanden ist, der ein `UserType1`-Argument akzeptiert und das Ergebnis kopiert.  
   
 ## <a name="compound-assignment"></a>Verbundzuweisung  
- Die Verbundzuweisungsoperatoren, in der Tabelle angezeigten [Zuweisungsoperatoren](../cpp/assignment-operators.md), werden in der Form angegeben *e1* `op` =  *e2*, wobei *e1* ist ein änderbarer l-Wert nicht vom Typ const und *e2* ist eines der folgenden:  
+ Die Verbundzuweisungsoperatoren, in der Tabelle gezeigt [Zuweisungsoperatoren](../cpp/assignment-operators.md), sind im Formular angegeben habe *e1* `op` =  *e2*, wobei *e1* ist ein änderbarer l-Wert nicht vom const-Typ und *e2* ist eine der folgenden:  
   
 -   Ein arithmetischer Typ  
   
--   Ein Zeiger ist, wenn `op` wird + "oder" -  
+-   Ein Zeiger ist, wenn `op` ist + oder –  
   
  Die *e1* `op` =  *e2* Formular verhält sich wie *e1* *= e1* `op` *e2*, aber *e1* wird nur einmal ausgewertet.  
   
@@ -206,5 +207,5 @@ B = A;
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke mit binären Operatoren](../cpp/expressions-with-binary-operators.md)   
- [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++-Built-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C-Zuweisungsoperatoren](../c-language/c-assignment-operators.md)

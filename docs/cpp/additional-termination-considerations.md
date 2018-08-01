@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50cf3d7e5168ba40acde386b62cf02c0933f8ca4
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 54780b11e07819ca78eba89d9af5a8ba018cc9e4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941248"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401807"
 ---
 # <a name="additional-termination-considerations"></a>Weitere Überlegungen zur Beendigung
-Können Sie ein C++-Programm mit beenden **beenden**, **zurückgeben**, oder **Abbrechen**. Mit der Funktion `atexit` können Sie eine Beendigung der Verarbeitung hinzufügen. Diese Funktionen werden in den folgenden Abschnitten beschrieben.  
+Sie können ein C++-Programm beenden, mithilfe von `exit`, **zurückgeben**, oder `abort`. Mit der Funktion `atexit` können Sie eine Beendigung der Verarbeitung hinzufügen. Diese Funktionen werden in den folgenden Abschnitten beschrieben.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Starten und Beenden](../cpp/startup-and-termination-cpp.md)

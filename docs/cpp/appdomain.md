@@ -1,5 +1,5 @@
 ---
-title: AppDomain | Microsoft Docs
+title: AppDomain | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52108e79a50d596dbb1f1afdfb2f64b93421d860
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 52b371d0dedc03c3f14ede1472221077d081ae8f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705230"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402301"
 ---
 # <a name="appdomain"></a>appdomain
 
@@ -34,13 +34,13 @@ Wenn alle Anwendungsdomänen innerhalb eines Prozesses in der Common Language Ru
 
 `__declspec(appdomain)` ist nur gültig, wenn eines der **"/ CLR"** -Compileroptionen verwendet wird. Nur eine globale Variable, eine statische Membervariable oder eine statische lokale Variable kann mit `__declspec(appdomain)` markiert werden. Es ist nicht zulässig, `__declspec(appdomain)` auf statische Member von verwalteten Typen anzuwenden, da diese immer dieses Verhalten aufweisen.
 
-Mit `__declspec(appdomain)` ähnelt der Verwendung [Thread-lokalen Threadspeicher (TLS)](../parallel/thread-local-storage-tls.md). Threads verfügen über einen eigenen Speicher, genau wie Anwendungsdomänen. Die Verwendung `__declspec(appdomain)` stellt sicher, dass die globale Variable einen eigenen Speicher in jeder Anwendungsdomäne aufweist, die für die Anwendung erstellt wird.
+Mithilfe von `__declspec(appdomain)` funktioniert ähnlich wie [threadlokaler Speicher (TLS)](../parallel/thread-local-storage-tls.md). Threads verfügen über einen eigenen Speicher, genau wie Anwendungsdomänen. Die Verwendung `__declspec(appdomain)` stellt sicher, dass die globale Variable einen eigenen Speicher in jeder Anwendungsdomäne aufweist, die für die Anwendung erstellt wird.
 
 Es gibt Einschränkungen beim Kombinieren der Verwendung von pro-Prozess und Appdomain-Variablen. finden Sie unter [Prozess](../cpp/process.md) für Weitere Informationen.
 
 Beim Programmstart werden beispielsweise alle pro-Prozess-Variablen initialisiert, gefolgt von alle pro-AppDomain-Variablen. Wenn eine pro-Prozess-Variable initialisiert wird, kann sie also nicht vom Wert einer pro-AppDomain-Variablen abhängen. Es ist nicht üblich, die Verwendung (Zuweisung) der pro-Prozess- und pro-AppDomain-Variablen zu kombinieren.
 
-Informationen zum Aufrufen einer Funktion in einer bestimmten Anwendungsdomäne finden Sie unter [Call_in_appdomain-Funktion](../dotnet/call-in-appdomain-function.md).
+Informationen dazu, wie eine Funktion in einer bestimmten Anwendungsdomäne aufgerufen wird, finden Sie unter [Call_in_appdomain-Funktion](../dotnet/call-in-appdomain-function.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -145,6 +145,5 @@ __declspec(process) CGlobal::~CGlobal destructor
 ```
 
 ## <a name="see-also"></a>Siehe auch
-
-- [__declspec](../cpp/declspec.md)
-- [Schlüsselwörter](../cpp/keywords-cpp.md)
+[__declspec](../cpp/declspec.md)  
+[Schlüsselwörter](../cpp/keywords-cpp.md)  

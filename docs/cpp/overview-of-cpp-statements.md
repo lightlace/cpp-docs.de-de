@@ -1,5 +1,5 @@
 ---
-title: Übersicht über C++-Anweisungen | Microsoft Docs
+title: Übersicht über C++-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2858807816178115dd34c05d6c88c3dd6fecdee3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 426709857447d972365aa034059bcd34305d6d40
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421746"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402509"
 ---
 # <a name="overview-of-c-statements"></a>Übersicht über C++-Anweisungen
 C++-Anweisungen werden nacheinander ausgeführt, außer wenn diese Sequenz von einer Ausdrucksanweisung, einer Selektionsanweisung, einer Iterationsanweisung oder einer Sprunganweisung speziell geändert wird.  
@@ -27,7 +27,6 @@ C++-Anweisungen werden nacheinander ausgeführt, außer wenn diese Sequenz von e
  Anweisungen können folgende Typen aufweisen:  
   
 ```  
-  
 labeled-statement  
 expression-statement  
 compound-statement  
@@ -36,10 +35,9 @@ iteration-statement
 jump-statement  
 declaration-statement  
 try-throw-catch  
-  
 ```  
   
- In den meisten Fällen ist die C++-Anweisungssyntax identisch mit dem ANSI C. Der Hauptunterschied zwischen den beiden, die in C ist, Deklarationen nur am Anfang eines Blocks zulässig. C++ fügt die *deklarationsanweisung*, die diese Einschränkung entfernt. Dadurch können Sie Variablen an einem Punkt im Programm einführen, an dem ein vorausberechneter Initialisierungswert berechnet werden kann.  
+ In den meisten Fällen ist die Syntax der C++-Anweisung identisch mit der ANSI C. Der Hauptunterschied zwischen den beiden, die in C ist, Deklarationen nur am Anfang eines Blocks zulässig. C++ fügt die *deklarationsanweisung*, wodurch effektiv diese Einschränkung entfernt. Dadurch können Sie Variablen an einem Punkt im Programm einführen, an dem ein vorausberechneter Initialisierungswert berechnet werden kann.  
   
  Das Deklarieren von Variablen innerhalb von Blöcken ermöglicht Ihnen auch die genaue Steuerung des Gültigkeitsbereichs und der Lebensdauer dieser Variablen.  
   

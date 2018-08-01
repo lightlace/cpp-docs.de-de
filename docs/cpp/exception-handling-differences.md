@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dafb3c41bd490e7c123e1aefe9ccaa04a4e6b233
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b9c17c0abbd8286d05423ac52abc2e2109253f6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943556"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404622"
 ---
 # <a name="exception-handling-differences"></a>Unterschiede bei der Ausnahmebehandlung
 Der Hauptunterschied zwischen der strukturierten Ausnahmebehandlung und C++-Ausnahmebehandlung ist, dass die C++-Ausnahmebehandlung Typen behandelt, während C Modell für die strukturierte Ausnahmebehandlung mit Ausnahmen eines bestimmten Typs behandelt – insbesondere  **ganze Zahl ohne Vorzeichen**. Das bedeutet, dass C-Ausnahmen über einen Ganzzahlwert ohne Vorzeichen identifiziert werden und C++-Ausnahmen über den Datentyp. Wenn in C eine Ausnahme ausgelöst wird, führt jeder mögliche Handler einen Filter aus, der den C-Ausnahmekontext validiert und bestimmt, ob die Ausnahme akzeptiert, an einen anderen Handler übergeben oder ignoriert wird. Wenn eine Ausnahme in C++ ausgelöst wird, kann sie einem beliebigen Typ angehören.  
@@ -87,7 +87,6 @@ public:
       return nSE;  
    }  
 };  
-  
 ```  
   
  Um diese Klasse zu verwenden, installieren Sie eine benutzerdefinierte C-Ausnahmeübersetzungsfunktion, die bei jedem Auslösen einer C-Ausnahme vom internen Mechanismus für die Ausnahmebehandlung aufgerufen wird. In der Übersetzungsfunktion können Sie eine beliebige typisierte Ausnahme auslösen (z. B. eine `SE_Exception` Typ oder einen Klassentyp abgeleitet `SE_Exception`), die abgefangen werden kann, von einem entsprechenden übereinstimmenden C++ **catch** Handler. Die Übersetzungsfunktion kann einfach zurückkehren. Sie hat also die Ausnahme nicht bearbeitet. Wenn die Übersetzungsfunktion selbst eine C-Ausnahme auslöst [beenden](../c-runtime-library/reference/terminate-crt.md) aufgerufen wird.  

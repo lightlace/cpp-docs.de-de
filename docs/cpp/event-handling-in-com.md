@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f60a0a8a53d77c2d8aa111ce812bf64ab11c4910
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1a4fddaa53aed54fd33afee9205fcc9a3819f1b6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943285"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406866"
 ---
 # <a name="event-handling-in-com"></a>Ereignisbehandlung in COM
 In COM-Ereignisbehandlung richten Sie eine Ereignisquelle und einen Ereignisempfänger mithilfe der [Event_source](../windows/event-source.md) und [Event_receiver](../windows/event-receiver.md) -Attribute angeben `type` = `com`. Diese Attribute fügen den geeigneten Code für benutzerdefinierte Schnittstellen, Dispatchschnittstellen und duale Schnittstellen ein, damit die Klassen, auf die sie angewendet werden, Ereignisse über COM-Verbindungspunkte auslösen und behandeln können.  
   
 ## <a name="declaring-events"></a>Deklarieren von Ereignissen  
- In einer ereignisquellklasse verwenden die [__event](../cpp/event.md) -Schlüsselwort in einer Schnittstellendeklaration, um die Methoden dieser Schnittstelle als Ereignisse zu deklarieren. Die Ereignisse der Schnittstelle werden ausgelöst, wenn Sie die Ereignisse als Schnittstellenmethoden aufrufen. Methoden für Ereignisschnittstellen können NULL oder mehr Parameter haben (die muss alle `in` Parameter). Der Rückgabetyp kann „void“ oder ein ganzzahliger Typ sein.  
+ In einer ereignisquellklasse verwenden die [__event](../cpp/event.md) -Schlüsselwort in einer Schnittstellendeklaration, um die Methoden dieser Schnittstelle als Ereignisse zu deklarieren. Die Ereignisse der Schnittstelle werden ausgelöst, wenn Sie die Ereignisse als Schnittstellenmethoden aufrufen. Methoden für Ereignisschnittstellen können NULL oder mehr Parameter haben (die muss alle *in* Parameter). Der Rückgabetyp kann „void“ oder ein ganzzahliger Typ sein.  
   
 ## <a name="defining-event-handlers"></a>Definieren von Ereignishandlern  
  In einer Ereignisempfängerklasse definieren Sie Ereignishandler, die Methoden mit Signaturen sind (Rückgabetypen, Argumente und Aufrufkonventionen), die mit dem Ereignis übereinstimmen, das sie behandeln. Für COM-Ereignisse müssen Aufrufkonventionen nicht übereinstimmen; finden Sie unter [Layoutabhängige COM-Ereignisse](#vcconeventhandlingincomanchorlayoutdependentcomevents) unten Weitere Informationen.  

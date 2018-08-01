@@ -1,5 +1,5 @@
 ---
-title: 'Dereferenzierungsoperator: * | Microsoft Docs'
+title: 'Dereferenzierungsoperator: * | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63fbe4042bb86f1ac7810302eeaa1b7978422b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80fdbe14539c5b32c2da80a5de75fbe0a2b64241
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409125"
 ---
 # <a name="indirection-operator-"></a>Dereferenzierungsoperator: *
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 * cast-expression  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der unäre Dereferenzierungsoperator (**\***) dereferenziert einen Zeiger, d. h. konvertiert einen Zeigerwert in einen l-Wert. Der Operand des Dereferenzierungsoperators muss ein Zeiger auf einen Typ sein. Das Ergebnis des Dereferenzierungsausdrucks ist der Typ, aus dem der Zeigertyp abgeleitet wird. Die Verwendung der **\*** -Operators in diesem Kontext unterscheidet sich von seiner Bedeutung als binärer Operator Multiplikation ist.  
+ Der unäre Dereferenzierungsoperator (**\***) dereferenziert einen Zeiger, d. h. einen Zeigerwert in einen l-Wert konvertiert. Der Operand des Dereferenzierungsoperators muss ein Zeiger auf einen Typ sein. Das Ergebnis des Dereferenzierungsausdrucks ist der Typ, aus dem der Zeigertyp abgeleitet wird. Die Verwendung der **\*** -Operators in diesem Kontext unterscheidet sich von seiner Bedeutung als binärer Operator, der Multiplikation ist.  
   
  Wenn der Operand auf eine Funktion verweist, ist das Ergebnis ein Funktionsbezeichner. Wenn an einen Speicherort verwiesen wird, ist das Ergebnis ein l-Wert, der den Speicherort festlegt.  
   
  Der Dereferenzierungsoperator kann kumulativ verwendet werden, um Zeiger zu Zeigern zu dereferenzieren. Zum Beispiel:  
   
-```  
+```cpp 
 // expre_Indirection_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate indirection operator  
@@ -70,6 +70,6 @@ int main() {
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke mit Unäroperatoren](../cpp/expressions-with-unary-operators.md)   
- [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++-Built-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Address-of-Operator: &](../cpp/address-of-operator-amp.md)   
  [Dereferenzierungs- und Address-of-Operatoren](../c-language/indirection-and-address-of-operators.md)

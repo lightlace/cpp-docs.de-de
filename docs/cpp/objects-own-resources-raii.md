@@ -1,5 +1,5 @@
 ---
-title: Objekteigene Ressourcen (RAII) | Microsoft Docs
+title: Objekteigene Ressourcen (RAII) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd3f1df54e5b5881ed15efeb98a6e6070f400a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 265eccc4c1a9f51a03e5a84433a9f7e9cc6d6a92
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419930"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402135"
 ---
 # <a name="objects-own-resources-raii"></a>Objekteigene Ressourcen (RAII)
 Stellen Sie sicher, dass die eigene Ressourcen Objekte. Dieses Prinzip ist auch bekannt als "Resource Acquisition is Initialization" oder "RAII."  
   
 ## <a name="example"></a>Beispiel  
- Übergeben Sie jedes Objekt "Neues" als Konstruktorargument in ein anderes benanntes Objekt, das er (fast immer Unique_ptr) besitzt.  
+ Übergeben Sie jedes "Neues"-Objekt als Konstruktorargument an einem anderen benannten Objekt, das es (fast immer "unique_ptr") besitzt.  
   
 ```cpp  
 void f() {  
@@ -34,7 +34,7 @@ void f() {
   // automatic exception safety, as if "finally { p->dispose(); x.w.dispose(); }"  
 ```  
   
- Übergeben Sie eine neue Ressource immer sofort in ein anderes Objekt aus, das er besitzt.  
+ Übergeben Sie eine neue Ressource immer sofort in ein anderes Objekt, das es besitzt.  
   
 ```cpp  
 void g() {  
@@ -46,5 +46,5 @@ void g() {
   
 ## <a name="see-also"></a>Siehe auch  
  [Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C++-Sprachreferenz](../cpp/cpp-language-reference.md)   
+ [C++ Language Reference (C++-Programmiersprachenreferenz)](../cpp/cpp-language-reference.md)   
  [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6f9a11b6cf2a0045729acbc79d8e45103064ea
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 68f13848c01f91f9302246a763dd478ee8fccdda
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940185"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403922"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues und Rvalues (Visual C++)
 
@@ -79,5 +79,6 @@ int main()
 Die Begriffe *Lvalue* und *Rvalue* werden häufig verwendet werden, wenn Sie auf Objektverweise beziehen. Weitere Informationen über Verweise finden Sie unter [Lvalue-Verweisdeklarator: &](../cpp/lvalue-reference-declarator-amp.md) und [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Siehe auch
-
- [Grundlegende Konzepte](../cpp/basic-concepts-cpp.md) [Lvalue-Verweisdeklarator: &](../cpp/lvalue-reference-declarator-amp.md) [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md)
+ [Grundlegende Konzepte](../cpp/basic-concepts-cpp.md)  
+ [Lvalue-Verweisdeklarator: &](../cpp/lvalue-reference-declarator-amp.md)  
+ [Rvalue-Verweisdeklarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md)

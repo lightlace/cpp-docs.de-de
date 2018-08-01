@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 810a5c16df1027aba976bea3c165b19f765d15a6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c9ad0cbfa614c132a75e25f46b34e37ec3a5fc64
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941839"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407003"
 ---
 # <a name="comerrorwcode"></a>_com_error::WCode
 **Microsoft-spezifisch**  
@@ -31,16 +31,14 @@ ms.locfileid: "37941839"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 WORD WCode ( ) const throw( );  
-  
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
  Falls das HRESULT innerhalb des Bereichs 0 x 80040200 bis 0x8004ffff liegt, ist die `WCode` Methode gibt das HRESULT minus 0 x 80040200 zurück; andernfalls wird 0 (null) zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `WCode` Methode wird verwendet, um eine Zuordnung rückgängig zu machen, die in COM-Unterstützungscode vorgenommen wird. Der Wrapper für eine `dispinterface` Eigenschaft oder Methode ruft eine unterstützungsroutine auf, die die Argumente und Aufrufe verpackt `IDispatch::Invoke`. Bei der Rückgabe, wenn ein Fehler HRESULT von DISP_E_EXCEPTION zurückgegeben wird, die Fehlerinformationen abgerufen aus der `EXCEPINFO` Zeitstruktur `IDispatch::Invoke`. Der Fehlercode kann entweder ein 16-Bit-Wert, der in gespeicherten der `wCode` Mitglied der `EXCEPINFO` Struktur oder ein vollständiger 32-Bit-Wert in der `scode` Mitglied der `EXCEPINFO` Struktur. Wenn ein 16-Bit `wCode` zurückgegeben wird, müssen Sie zuerst auf einem 32-Bit-Fehler-HRESULT zugeordnet werden.  
+ Die `WCode` Methode wird verwendet, um eine Zuordnung rückgängig zu machen, die in COM-Unterstützungscode vorgenommen wird. Der Wrapper für eine `dispinterface` Eigenschaft oder Methode ruft eine unterstützungsroutine auf, die die Argumente und Aufrufe verpackt `IDispatch::Invoke`. Bei der Rückgabe, wenn ein Fehler-HRESULT von `DISP_E_EXCEPTION` zurückgegeben wird, wird die Fehlerinformationen abgerufen, von der `EXCEPINFO` Zeitstruktur `IDispatch::Invoke`. Der Fehlercode kann entweder ein 16-Bit-Wert, der in gespeicherten der `wCode` Mitglied der `EXCEPINFO` Struktur oder ein vollständiger 32-Bit-Wert in der `scode` Mitglied der `EXCEPINFO` Struktur. Wenn ein 16-Bit `wCode` zurückgegeben wird, müssen Sie zuerst auf einem 32-Bit-Fehler-HRESULT zugeordnet werden.  
   
  **Ende Microsoft-spezifisch**  
   

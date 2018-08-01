@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66371ead4c2070769b45bf5b181677431936c84
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 895a2e3a78c425511f978454d07cf9574f7d8337
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943574"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403718"
 ---
 # <a name="declarations-and-definitions-c"></a>Deklarationen und Definitionen (C++)
 Deklarationen führen Namen in einem Programm, z. B. die Namen von Variablen, Namespaces, Funktionen und Klassen. Deklarationen geben außerdem die Typinformationen als auch andere Eigenschaften des Objekts an, das deklariert wird. Ein Name muss deklariert werden, bevor er verwendet werden kann. In C++ bestimmt der Punkt, an dem ein Name deklariert wird, ob er für den Compiler sichtbar ist. Sie können nicht auf eine Funktion oder Klasse, die zu einem späteren Zeitpunkt in der Kompilierungseinheit deklariert ist, verweisen; Sie können *Vorwärtsdeklarationen* , diese Einschränkung zu umgehen.  
@@ -61,7 +61,6 @@ public:
  Beispiele für Deklarationen, die keine Definitionen sind:  
   
 ```cpp 
-  
 extern int i;  
 char *strchr( const char *Str, const char Target );  
 ```  

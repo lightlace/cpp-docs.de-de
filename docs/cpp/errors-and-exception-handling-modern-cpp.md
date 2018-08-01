@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee05e7008795056ee197ce45f68084e6c633f23c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f9d9d21514b0ea90021c9b0543cd742ed6a6206f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939740"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407233"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Behandeln von Fehlern und Ausnahmen (Modern C++)
 In modernem C++ ist in den meisten Szenarien die Verwendung von Ausnahmen die bevorzugte Methode zum Mitteilen und Behandeln von logischen Fehlern und Laufzeitfehler. Dies gilt besonders, wenn der Stapel möglicherweise einige Funktionsaufrufe zwischen der Funktion enthält, die den Fehler entdeckt, und der Funktion, die über den Kontext für die Fehlerbehandlung verfügt. Ausnahmen stellen eine formale, gut definierte Methode für den Code bereit, der Fehler erkennt, um die Informationen an die Aufrufliste (call stack) zu übergeben.  
@@ -68,7 +68,6 @@ int main()
    //...  
    return 0;  
 }  
-  
 ```  
   
  Ausnahmen in C++ ähneln denen in Sprachen wie C# und Java. In der **versuchen Sie es** blockieren, wenn eine Ausnahme ist *ausgelöst* wird *abgefangen* vom ersten zugehörigen **catch** Block, dessen Typ, die von übereinstimmt, der Diese Ausnahme. Das heißt, springt die Ausführung von der **auslösen** Anweisung, um die **catch** Anweisung. Ist kein verwendbarer catch-Block vorhanden, wird `std::terminate` aufgerufen und das Programm beendet. In C++ kann jeder Typ ausgelöst werden. Es wird jedoch empfohlen, einen Typ auslösen, der direkt oder indirekt von `std::exception` abgeleitet ist. Im vorherigen Beispiel der Ausnahmetyp, [Invalid_argument](../standard-library/invalid-argument-class.md), wird in der Standardbibliothek in definiert die [ \<Stdexcept >](../standard-library/stdexcept.md) Headerdatei. C++ stellt keine bereit und ist nicht erforderlich, eine **schließlich** Block, um sicherzustellen, dass alle Ressourcen freigegeben werden, wenn eine Ausnahme ausgelöst wird. Die RAII-Technik (Resource Acquisition Is Initialization, Ressourcenbelegung ist Initialisierung), die intelligente Zeiger verwendet, bietet die erforderliche Funktionalität zur Ressourcenbereinigung. Weitere Informationen finden Sie unter [Vorgehensweise: Entwurf für die Ausnahmesicherheit](../cpp/how-to-design-for-exception-safety.md). Weitere Informationen über die C++-stapelentlademechanismus finden Sie unter [Ausnahmen und Stapel entladen](../cpp/exceptions-and-stack-unwinding-in-cpp.md).  
@@ -97,7 +96,7 @@ int main()
  Ausnahmen und Assertionen sind zwei verschiedene Mechanismen zum Erkennen von Laufzeitfehlern in einem Programm. Verwenden Sie Assertionen, um während der Entwicklung Bedingungen zu ermitteln, die niemals zutreffen dürfen, wenn der gesamte Code fehlerfrei ist. Es gibt keine Möglichkeit, einen solchen Fehler mit einer Ausnahme zu behandeln, weil der Fehler darauf hinweist, dass etwas im Code behoben werden muss. Der Fehler stellt keine Bedingung dar, die das Programm zur Laufzeit beheben muss. Eine Assertion beendet die Ausführung in der Anweisung, damit Sie den Programmzustand im Debugger überprüfen können. Dagegen setzt eine Ausnahme die Programmausführung bis zum ersten entsprechenden catch-Handler fort. Verwenden Sie Ausnahmen, um Fehlerbedingungen zu überprüfen, die zur Laufzeit auftreten können (beispielsweise "Datei nicht gefunden" oder "Nicht genügend Arbeitsspeicher"), auch wenn der Code korrekt ist. Sie sollten die Programmausführung nach solchen Bedingungen nicht sofort beenden, sondern vorher zumindest noch eine entsprechende Meldung in eine Protokolldatei schreiben. Überprüfen Sie immer Argumente für öffentliche Funktionen mithilfe von Ausnahmen. Auch wenn die Funktion fehlerfrei ist, haben Sie möglicherweise keine vollständige Kontrolle über die Argumente, die ein Benutzer übergibt.  
   
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++-Ausnahmen und Windows SEH-Ausnahmen  
- Sowohl C-Programme als auch C++-Programme können den Mechanismus der strukturierten Ausnahmebehandlung (Structured Exception Handling, SEH) im Windows-Betriebssystem verwenden. Die Konzepte in SEH entsprechen denen für C++-Ausnahmen, außer dass SEH verwendet die `__try`, `__except`, und `__finally` anstelle von erstellt **versuchen** und **catch**. In Visual C++ werden C++-Ausnahmen für SEH implementiert. Wenn Sie jedoch C++-Code schreiben, verwenden Sie die Syntax für C++-Ausnahmen.  
+ Sowohl C-Programme als auch C++-Programme können den Mechanismus der strukturierten Ausnahmebehandlung (Structured Exception Handling, SEH) im Windows-Betriebssystem verwenden. Die Konzepte in SEH entsprechen denen für C++-Ausnahmen, außer dass SEH verwendet die **__try**, **__except**, und **__finally** anstelle von erstellt **Testen** und **catch**. In Visual C++ werden C++-Ausnahmen für SEH implementiert. Wenn Sie jedoch C++-Code schreiben, verwenden Sie die Syntax für C++-Ausnahmen.  
   
  Weitere Informationen zu SEH finden Sie unter [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md).  
   

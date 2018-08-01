@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fceb9ce3433a4255619a6c7bac4e952b15ac04d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 343aa01d9f8e7b3146976fe046c6b2d7473ca1ec
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941287"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407246"
 ---
 # <a name="decltype--c"></a>Decltype (C++)
-Der `decltype`-Typspezifizierer ergibt den Typ eines angegebenen Ausdrucks. Die `decltype` Typspezifizierer verwenden, zusammen mit den [auto-Schlüsselwort](../cpp/auto-cpp.md), eignet sich vor allem für Entwickler, die Vorlagenbibliotheken schreiben. Verwendung **automatisch** und `decltype` um eine Vorlagenfunktion deklarieren, deren Rückgabetyp Typ hängt von den Typen seiner Vorlagenargumente. Oder verwenden Sie **automatisch** und `decltype` um eine Vorlagenfunktion zu deklarieren, die einen Aufruf einer anderen Funktion umschließt, und klicken Sie dann den Rückgabetyp der umschlossenen Funktion zurückgibt.  
+Die **"decltype"** Typspezifizierer ergibt den Typ des angegebenen Ausdrucks. Die **"decltype"** Typspezifizierer verwenden, zusammen mit den [auto-Schlüsselwort](../cpp/auto-cpp.md), eignet sich vor allem für Entwickler, die Vorlagenbibliotheken schreiben. Verwendung **automatisch** und **"decltype"** um eine Vorlagenfunktion deklarieren, deren Rückgabetyp Typ hängt von den Typen seiner Vorlagenargumente. Oder verwenden Sie **automatisch** und **"decltype"** um eine Vorlagenfunktion zu deklarieren, die einen Aufruf einer anderen Funktion umschließt, und klicken Sie dann den Rückgabetyp der umschlossenen Funktion zurückgibt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ decltype( expression )
  Der Typ des der *Ausdruck* Parameter.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Typspezifizierer `decltype` wird in Visual C++ 2010 oder höher unterstützt und kann mit systemeigenem oder verwaltetem Code verwendet werden. `decltype(auto)` (C++14) wird in Visual Studio 2015 und höher unterstützt.  
+ Die **"decltype"** Typspezifizierer wird in Visual C++ 2010 oder höhere Versionen unterstützt und kann mit systemeigenem oder verwaltetem Code verwendet werden. `decltype(auto)` (C++14) wird in Visual Studio 2015 und höher unterstützt.  
   
  Der Compiler verwendet die folgenden Regeln, um zu bestimmen, welche die *Ausdruck* Parameter.  
   
@@ -55,7 +55,7 @@ decltype( expression )
   
 -   Wenn die *Ausdruck* -Parameter ist ein [Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` ist der Typ des *Ausdruck*. Wenn die *Ausdruck* -Parameter ist ein [Lvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` ist ein [Lvalue-Verweis](../cpp/lvalue-reference-declarator-amp.md) in den Typ des *Ausdruck*.  
   
- Im folgenden Codebeispiel werden einige Verwendungsmöglichkeiten des `decltype`-Typspezifizierers veranschaulicht. Angenommen, Sie haben die folgenden Anweisungen codiert.  
+ Im folgenden Codebeispiel wird veranschaulicht einige Verwendungsmöglichkeiten für die **"decltype"** Typspezifizierer. Angenommen, Sie haben die folgenden Anweisungen codiert.  
   
 ```cpp  
 int var;  
@@ -64,7 +64,7 @@ struct A { double x; }
 const A* a = new A();  
 ```  
   
- Überprüfen Sie als Nächstes die Typen, die von den vier `decltype`-Anweisungen in der folgenden Tabelle zurückgegeben werden.  
+ Als Nächstes sehen Sie die Typen, die von den vier zurückgegebenen **"decltype"** Anweisungen in der folgenden Tabelle.  
   
 |Anweisung|Typ|Hinweise|  
 |---------------|----------|-----------|  
@@ -76,16 +76,16 @@ const A* a = new A();
 ## <a name="decltype-and-auto"></a>"decltype" und "auto"  
  In C ++ 14 können Sie `decltype(auto)` ohne nachstehenden Rückgabetyp um eine Vorlagenfunktion zu deklarieren, deren Rückgabetyp hängt von den Typen seiner Vorlagenargumente.  
   
- In C ++ 11 können Sie mithilfe der `decltype` Typspezifizierer für einen nachstehenden Rückgabetyp, zusammen mit den **automatisch** -Schlüsselwort verwenden, um eine Vorlagenfunktion zu deklarieren, deren Rückgabetyp von den Typen seiner Vorlagenargumente abhängt. Betrachten Sie das folgende Codebeispiel, in dem der Rückgabetyp der Vorlagenfunktion von den Typen der Vorlagenargumente abhängt. Im Codebeispiel das *unbekannte* Platzhalter gibt an, dass der Rückgabetyp kann nicht angegeben werden.  
+ In C ++ 11 können Sie mithilfe der **"decltype"** Typspezifizierer für einen nachstehenden Rückgabetyp, zusammen mit den **automatisch** -Schlüsselwort verwenden, um eine Vorlagenfunktion zu deklarieren, deren Rückgabetyp hängt von den Typen von der Vorlage Argumente. Betrachten Sie das folgende Codebeispiel, in dem der Rückgabetyp der Vorlagenfunktion von den Typen der Vorlagenargumente abhängt. Im Codebeispiel das *unbekannte* Platzhalter gibt an, dass der Rückgabetyp kann nicht angegeben werden.  
   
 ```cpp  
 template<typename T, typename U>  
 UNKNOWN func(T&& t, U&& u){ return t + u; };   
 ```  
   
- Die Einführung des `decltype`-Typspezifizierers ermöglicht es den Entwicklern, den Typ des Ausdrucks zu erhalten, den die Vorlagenfunktion zurückgibt. Verwenden der *alternative funktionsdeklarationssyntax* , die später angezeigt wird, die **automatisch** -Schlüsselwort, und die `decltype` Typspezifizierer deklariert eine *spät angegebenen* der Rückgabetyp. Der spät angegebene Rückgabetyp wird bestimmt, wenn die Deklaration kompiliert wird, anstatt wenn sie codiert wird.  
+ Die Einführung der **"decltype"** Typspezifizierers ermöglicht es einem Entwickler, die den Typ des Ausdrucks zu erhalten, die die Template-Funktion zurückgibt. Verwenden der *alternative funktionsdeklarationssyntax* , die später angezeigt wird, die **automatisch** -Schlüsselwort, und die **"decltype"** Typspezifizierer deklariert eine  *spät angegebenen* Typ zurückgeben. Der spät angegebene Rückgabetyp wird bestimmt, wenn die Deklaration kompiliert wird, anstatt wenn sie codiert wird.  
   
- Der folgende Prototyp veranschaulicht die Syntax einer alternativen Funktionsdeklaration. Beachten Sie, dass die **const** und **flüchtige** Qualifizierer und die **auslösen** [Ausnahmespezifikation](../cpp/exception-specifications-throw-cpp.md) sind optional. Die *Function_body* -Platzhalter stellt eine verbundanweisung, der angibt, Wirkungsweise der Funktion dar. Als empfohlene Vorgehensweise bei der Codierung der *Ausdruck* Platzhalter in der `decltype` Anweisung sollte die vom angegebenen Ausdruck übereinstimmen der **zurückgeben** -Anweisung, sofern vorhanden, in der *Function_body* .  
+ Der folgende Prototyp veranschaulicht die Syntax einer alternativen Funktionsdeklaration. Beachten Sie, dass die **const** und **flüchtige** Qualifizierer und die **auslösen** [Ausnahmespezifikation](../cpp/exception-specifications-throw-cpp.md) sind optional. Die *Function_body* -Platzhalter stellt eine verbundanweisung, der angibt, Wirkungsweise der Funktion dar. Als empfohlene Vorgehensweise bei der Codierung der *Ausdruck* Platzhalter in der **"decltype"** Anweisung sollte die vom angegebenen Ausdruck übereinstimmen der **zurückgeben** ggf. in der -Anweisung*Function_body*.  
   
  **automatische** *Function_name* **(** *Parameter*<sub>opt</sub> **)**  **const**<sub>opt</sub> **flüchtige**<sub>opt</sub> **->** **"decltype" (** *Ausdruck* **)** **auslösen**<sub>opt</sub> **{** *Function_body* **};**  
   
@@ -101,16 +101,15 @@ auto myFunc(T&& t, U&& u) -> decltype (forward<T>(t) + forward<U>(u))
 template<typename T, typename U>  
 decltype(auto) myFunc(T&& t, U&& u)   
         { return forward<T>(t) + forward<U>(u); };  
-  
 ```  
   
 ## <a name="decltype-and-forwarding-functions-c11"></a>„decltyp“ und Weiterleitungsfunktionen (C++11)  
  Weiterleitungsfunktionen umschließen Aufrufe von anderen Funktionen. Denken Sie an eine Funktionsvorlage, die ihre Argumente oder die Ergebnisse eines Ausdrucks, der diese Argumente beinhaltet, an eine andere Funktion weiterleitet. Darüber hinaus gibt die Weiterleitungsfunktion das Ergebnis des Aufrufs der anderen Funktion zurück. In diesem Szenario muss der Rückgabetyp der Weiterleitungsfunktion mit dem Rückgabetyp der umschlossenen Funktion identisch sein.  
   
- Sie können in diesem Szenario keinen geeigneten Typausdruck ohne den `decltype`-Typspezifizierer schreiben. Der `decltype`-Typspezifizierer aktiviert generische Weiterleitungsfunktionen, denn er verliert keine erforderlichen Informationen darüber, ob eine Funktion einen Verweistyp zurückgibt. Ein Codebeispiel für eine Weiterleitungsfunktion finden Sie im vorherigen `myFunc`-Vorlagenfunktionsbeispiel.  
+ Sie können in diesem Szenario keinen geeigneten Typausdruck ohne keinen der **"decltype"** Typspezifizierer. Die **"decltype"** Typspezifizierer aktiviert generische Weiterleitungsfunktionen, da er verliert, keine erforderlichen Informationen, ob eine Funktion einen Verweistyp zurückgibt. Ein Codebeispiel für eine Weiterleitungsfunktion finden Sie im vorherigen `myFunc`-Vorlagenfunktionsbeispiel.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird der spät angegebene Rückgabetyp der `Plus()`-Vorlagenfunktion deklariert. Die `Plus`-Funktion verarbeitet ihre beiden Operanden mit der `operator+`-Überladung. Demzufolge hängen die Interpretation des Plus-Operators (+) und der Rückgabetyp der `Plus`-Funktion von den Typen der Funktionsargumente ab.  
+ Im folgenden Codebeispiel wird der spät angegebene Rückgabetyp der `Plus()`-Vorlagenfunktion deklariert. Die `Plus` -Funktion verarbeitet ihre beiden Operanden mit dem **Operator +-** überladen. Demzufolge hängen die Interpretation des Plus-Operators (+) und der Rückgabetyp der `Plus`-Funktion von den Typen der Funktionsargumente ab.  
   
 ```cpp  
 // decltype_1.cpp  
@@ -210,4 +209,3 @@ static_assert(test2, "PASS2");
  Visual C++ 2010 oder höhere Versionen  
   
  `decltype(auto)` erfordert Visual Studio 2015 oder höher.  
-  

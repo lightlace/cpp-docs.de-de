@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37df4146b23404463ec869e00a8cf5298b7acf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 45dc0dfe85e7693cdea9c6e469ff347d75c13d57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941004"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402945"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Auslassungszeichen- und Variadic-Vorlagen
 In diesem Artikel wird gezeigt, wie die Auslassungspunkte (`...`) mit variadic Vorlagen von C++ verwendet werden. Das Auslassungszeichen hatte wird häufig in C und C++ verwendet. Hierzu gehören Variablenargumentlisten für Funktionen. Die `printf()`-Funktion der C-Laufzeitbibliothek ist eines der bekanntesten Beispiele.  
@@ -47,7 +47,7 @@ template<typename ... Arguments> class classname;
   
  Beachten Sie, dass in diesem Artikel die Konvention verwendet wird, die im ersten Beispiel gezeigt wird (die Auslassungszeichen werden an `typename` angefügt).  
   
- In den vorherigen Beispielen ist `Arguments` ein Parameterpaket. Die `classname`-Klasse kann eine variable Anzahl von Argumenten akzeptieren, wie in den folgenden Beispielen gezeigt.  
+ In den obigen Beispielen *Argumente* ein parameterpaket. Die `classname`-Klasse kann eine variable Anzahl von Argumenten akzeptieren, wie in den folgenden Beispielen gezeigt.  
   
 ```cpp  
 template<typename... Arguments> class vtclass;  
@@ -56,14 +56,12 @@ vtclass< > vtinstance1;
 vtclass<int> vtinstance2;  
 vtclass<float, bool> vtinstance3;  
 vtclass<long, std::vector<int>, std::string> vtinstance4;  
-  
 ```  
   
  Mit einer variadic-Vorlagenklassendefinition können Sie auch mindestens einen Parameter anfordern:  
   
 ```cpp  
 template <typename First, typename... Rest> class classname;  
-  
 ```  
   
  Hier ist ein einfaches Beispiel *Variadic-Vorlagenfunktion* Syntax:  
@@ -72,7 +70,7 @@ template <typename First, typename... Rest> class classname;
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- Die `Arguments` parameterpaket wird erweitert für die Verwendung, wie im nächsten Abschnitt gezeigt **Variadic-Vorlagen**.  
+ Die *Argumente* parameterpaket wird erweitert für die Verwendung, wie im nächsten Abschnitt gezeigt **Variadic-Vorlagen**.  
   
  Andere Formen der variadic-Vorlagenfunktionssyntax sind möglich, darunter diese Beispiele:  
   
@@ -86,14 +84,12 @@ template <typename... Arguments> returntype functionname(Arguments*... args);
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
-  
 ```  
   
  Wie bei variadic-Vorlagenklassendefinitionen können Sie Funktionen ausführen, die mindestens einen Parameter erfordern:  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
-  
 ```  
   
  Variadic-Vorlagen verwenden den Operator `sizeof...()` (nicht verknüpft mit dem älteren `sizeof()`-Operator):  
@@ -108,7 +104,6 @@ void tfunc(const Arguments&... args)
   
     helper_func(xobj, args...);  
 }  
-  
 ```  
   
 ## <a name="more-about-ellipsis-placement"></a>Weitere Informationen zur Platzierung von Auslassungszeichen  
@@ -160,13 +155,11 @@ int main()
     print(100, 200, 300);  
     print("first", 2, "third", 3.14159);  
 }  
-  
 ```  
   
 ## <a name="output"></a>Ausgabe  
   
-```  
-  
+```Output  
 1  
 10, 20  
 100, 200, 300  
@@ -175,4 +168,3 @@ first, 2, third, 3.14159
   
 > [!NOTE]
 >  Die meisten Implementierungen, die Variadic-Vorlagenfunktionen enthalten verwenden, Rekursion irgendeiner Art, aber es ist etwas anders als herkömmliche Rekursion.  Herkömmliche Rekursion umfasst eine Funktion, die selbst mithilfe der gleichen Signatur aufruft. (Sie ist überladen oder vorlagenbasiert, aber dieselbe Signatur wird jedes Mal ausgewählt.) Variadic-Rekursion beinhaltet den Aufruf einer variadic-Funktionsvorlage, indem eine unterschiedliche (fast immer abnehmende) Anzahl von Argumenten verwendet und somit verhindert wird, dass sich die Signatur jedes Mal ändert. Eine "Basisfall" ist dennoch erforderlich, aber die Art der Rekursion ist anders.  
-  

@@ -1,5 +1,5 @@
 ---
-title: Alignof und Alignas (C++) | Microsoft Docs
+title: Alignof und Alignas (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2988d1260cac91e2614765aba8ae1b9be9b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c10821f7e71c928fa749c2b85bd076cb9af6d04a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407983"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402415"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof und alignas (C++)
-Der `alignas`-Typspezifizierer ist eine portierbare, in C++ standardmäßige Art und Weise, die benutzerdefinierte Ausrichtung von Variablen und benutzerdefinierte Typen anzugeben. Der `alignof`-Operator ist ebenfalls eine standardmäßige, portierbare Art und Weise, die Ausrichtung eines angegebenen Typs oder einer Variable abzurufen.  
+Die **Alignas** Typspezifizierer ist eine portierbare, C++-Standardmethode, die eine benutzerdefinierte Ausrichtung von Variablen und benutzerdefinierte Typen anzugeben. Die **"alignof"** -Operator ist ebenfalls eine standardmäßige, portierbare Möglichkeit, die Ausrichtung eines angegebenen Typs oder einer Variablen zu erhalten.  
   
 ## <a name="example"></a>Beispiel  
- Sie können `alignas` in einer Klasse oder in einzelnen Membern verwenden. Werden mehrere `alignas`-Spezifizierer gefunden, wählt der Compiler den strengsten davon aus (denjenigen mit dem größten Wert).  
+ Sie können **Alignas** auf eine Klasse union, oder auf einzelne Elemente. Wenn mehrere **Alignas** Spezifizierer gefunden, wählt der Compiler den strengsten davon aus (denjenigen mit dem größten Wert) wählen.  
   
 ```cpp  
 // alignas_alignof.cpp

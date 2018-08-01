@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ce233b4ffa33873b752ebc409fb8570856acbff
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b3c4592255c56aae6bc4d959757164fd9c11f2a5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940198"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407808"
 ---
 # <a name="algorithms-modern-c"></a>Algorithmen (Modern C++)
 Für moderne C++-Programmierung empfehlen wir die Verwendung von der Algorithmen in der [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md). Im Folgenden sind einige wichtige Beispiele aufgeführt:  
@@ -69,14 +69,14 @@ auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ### <a name="range-based-for-loops"></a>Bereichsbasierte For-Schleifen  
  Die bereichsbasierte **für** Schleife ist eine C ++ 11-Sprachfunktion, nicht auf ein C++-Standardbibliothek-Algorithmus. Sie verdient jedoch im Rahmen dieser Diskussion über Schleifen Erwähnung. Bereichsbasierte **für** -Schleifen sind eine Erweiterung von der **für** Schlüsselwort und bieten eine komfortable und effiziente Möglichkeit, Schleifen schreiben, die einen Wertebereich durchlaufen. C++-Standardbibliothek-Container, Zeichenfolgen und Arrays sind vorgefertigte für bereichsbasierte **für** Schleifen. Um diese neue Iterationssyntax für den benutzerdefinierten Typ zu aktivieren, fügen Sie die folgende Unterstützung hinzu:  
   
--   Ein **beginnen** -Methode, die einen Iterator zum Anfang der Struktur zurückgibt und ein **End** -Methode, die einen Iterator an das Ende der Struktur zurückgibt.  
+-   Eine `begin`-Methode, die einen Iterator zum Anfang der Struktur zurückgibt und eine `end`-Methode, die einen Iterator an das Ende der Struktur zurückgibt.  
   
 -   Unterstützung im Iterator für diese Methoden: **-Operator *** **Operator! =**, und **"Operator++"** (präfixversion).  
   
  Diese Methoden können entweder Member oder eigenständige Funktionen sein.  
   
 ## <a name="random-numbers"></a>Zufallszahlen  
- Es ist kein Geheimnis, die die alte CRT **rand()** Funktion verfügt über viele Fehler enthält, die zu der C++-Community erläutert wurden. In modernem C++, die Sie für den Umgang mit diese Schwachpunkt haben keine – ebenso wenig müssen Sie Ihre eigenen gleichmäßig verteilten Zufallszahlen-Generator zu erfinden, da die Tools zum schnellen und einfachen Erstellen sie in der C++-Standardbibliothek, verfügbar sind, siehe [ \<random >](../standard-library/random.md).  
+ Es ist bekannt, dass die alte Funktion CRT `rand()`-Funktion viele Fehler enthält, die ausführlich in der C++-Community erläutert wurden. In modernem C++, die Sie für den Umgang mit diese Schwachpunkt haben keine – ebenso wenig müssen Sie Ihre eigenen gleichmäßig verteilten Zufallszahlen-Generator zu erfinden, da die Tools zum schnellen und einfachen Erstellen sie in der C++-Standardbibliothek, verfügbar sind, siehe [ \<random >](../standard-library/random.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   

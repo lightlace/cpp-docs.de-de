@@ -1,5 +1,5 @@
 ---
-title: __cdecl | Microsoft Docs
+title: __cdecl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d07c34c11037132b9f9695ec889bb681c7f43951
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c0a9e4db3e1fcbd24358d6dedd2d4ada80672c2a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414492"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406545"
 ---
 # <a name="cdecl"></a>__cdecl
 **Microsoft-spezifisch**  
   
- `__cdecl` ist die Standardaufrufkonvention für C- und C++-Programme. Da der Stapel vom Aufrufer bereinigt wird, können Sie tun **Vararg** Funktionen. Die `__cdecl` -Aufrufkonvention erstellt größere ausführbare Dateien als [__stdcall](../cpp/stdcall.md), da hier jeder Funktionsaufruf stapelbereinigungscode enthalten muss. Die folgende Liste zeigt die Implementierung dieser Aufrufkonvention.  
+ **__cdecl** ist die Standardaufrufkonvention für C- und C++-Programme. Da der Stapel vom Aufrufer bereinigt wird, können sie tun `vararg` Funktionen. Die **__cdecl** -Aufrufkonvention erstellt größere ausführbare Dateien als [__stdcall](../cpp/stdcall.md), da jeder Funktionsaufruf stapelbereinigungscode enthalten muss. Die folgende Liste zeigt die Implementierung dieser Aufrufkonvention.  
   
 |Element|Implementierung|  
 |-------------|--------------------|  
 |Reihenfolge der Argumentübergabe|Von rechts nach links.|  
 |Stapelwartungszuständigkeit|Aufgerufene Funktion ruft die Argumente vom Stapel auf.|  
-|Namensergänzungskonvention|Namen, außer wenn Unterstrich (_) vorangestellt wird \__cdecl-Funktionen, die C-Bindung verwenden, werden exportiert.|  
+|Namensergänzungskonvention|Namen, außer wenn Unterstrich (_) vorangestellt ist \__cdecl-Funktionen, die C-Bindung verwenden, werden exportiert.|  
 |Konvention zur Umwandlung von Groß- in Kleinbuchstaben und umgekehrt|Groß-/Kleinbuchstaben werden nicht umgewandelt.|  
   
 > [!NOTE]
 >  Weitere Informationen finden Sie unter [ergänzte Namen](../build/reference/decorated-names.md).  
   
- Platzieren Sie den `__cdecl`-Modifizierer vor einer Variablen oder einem Funktionsnamen. Da der C-benennungs- und Aufrufkonventionen die Standardeinstellung sind nur dann Sie müssen verwenden `__cdecl` in X86 Code ist, wenn Sie angegeben haben die **/GV** (Vectorcall), **/GZ** (Stdcall) oder  **/ Gr** (Fastcall)-Compileroption. Die [/GD](../build/reference/gd-gr-gv-gz-calling-convention.md) Compiler Option erzwingt die `__cdecl` Aufrufkonvention.  
+ Ort der **__cdecl** Modifizierer vor einer Variablen oder einem Funktionsnamen. Da es sich bei der Benennung c und C-Aufrufkonventionen die Standardeinstellung sind, nur dann hierarchieverwaltungstools **__cdecl** in X86 Code ist, wenn Sie angegeben haben die `/Gv` (Vectorcall), `/Gz` (Stdcall) oder `/Gr` (Fastcall) Compileroption. Die [/GD](../build/reference/gd-gr-gv-gz-calling-convention.md) Compiler-Option erzwingt, dass die **__cdecl** Aufrufkonvention.  
   
- Auf ARM- und x64-Prozessoren wird `__cdecl` zwar vom Compiler akzeptiert, aber normalerweise ignoriert. Gemäß der Konvention zu ARM und x64 werden Argumente in Register übergeben, wenn dies möglich ist, und darauf folgende Argumente werden auf den Stapel übergeben. In X64 codieren, verwenden Sie `__cdecl` überschreiben die **/GV** -Compileroption und verwenden die standardmäßige X64-Aufrufkonvention.  
+ Auf ARM und X64 Prozessoren **__cdecl** , akzeptiert jedoch in der Regel vom Compiler ignoriert wird. Gemäß der Konvention zu ARM und x64 werden Argumente in Register übergeben, wenn dies möglich ist, und darauf folgende Argumente werden auf den Stapel übergeben. In X64 codieren, verwenden Sie **__cdecl** zum Überschreiben der **/GV** Compileroption und das Verwenden der standardmäßige X64-Aufrufkonvention.  
   
  Wenn die Funktion bei nicht statischen Klassenfunktionen abweichend definiert ist, muss der Aufrufkonventionsmodifizierer nicht in der abweichenden Definition angegeben werden. Das bedeutet, dass für nicht statische Membermethoden der Klasse zum Zeitpunkt der Definition die während der Deklaration angegebene Aufrufkonvention angenommen wird. Bei dieser Klassendefinition:  
   

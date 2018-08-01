@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144e770a90427d12d79a18c346d74140d07c5c5c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8acd615cb2f05e62019f5076a423ae0f8218815a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958584"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406005"
 ---
 # <a name="address-of-operator-amp"></a>Address-of-Operator: &amp;
 ## <a name="syntax"></a>Syntax  
@@ -37,7 +37,7 @@ ms.locfileid: "38958584"
   
  Der address-of-Operator kann nur auf Variablen vom Typ „Basis“, „Struktur“, „Klasse“ oder „Union“ angewendet werden, die auf Dateibereichsebene deklariert wurden, oder auf indizierte Arrayverweise. In diesen Ausdrücken kann ein konstanter Ausdruck, der nicht den address-of-Operator einschließt, dem address-of-Ausdruck hinzugefügt oder von diesem subtrahiert werden.  
   
- Bei Anwendung auf Funktionen oder L-Werte ist das Ergebnis des Ausdrucks ein Zeigertyp (ein R-Wert), der vom Typ des Operanden abgeleitet wird. Wenn der Operand ist z. B. **Char**, das Ergebnis des Ausdrucks ist ein Zeiger auf **Char**. Der Address-of-Operator, auf angewendet **const** oder **flüchtige** -Objekte **const-Typ \***  oder **volatile-Typ \*** , wobei **Typ** ist der Typ des ursprünglichen Objekts.  
+ Bei Anwendung auf Funktionen oder L-Werte ist das Ergebnis des Ausdrucks ein Zeigertyp (ein R-Wert), der vom Typ des Operanden abgeleitet wird. Wenn der Operand ist z. B. **Char**, das Ergebnis des Ausdrucks ist ein Zeiger auf **Char**. Der Address-of-Operator, auf angewendet **const** oder **flüchtige** -Objekte `const type *` oder `volatile type *`, wobei **Typ** ist der Typ des ursprünglichen -Objekt.  
   
  Wenn die Address-of-Operator auf ein qualifizierter Name angewendet wird, hängt das Ergebnis an, ob die *qualifizierten Namen* einen statischen Member angibt. Wenn dies der Fall ist, ist das Ergebnis ein Zeiger auf den Typ, der in der Deklaration des Members angegeben wird. Wenn der Member nicht statisch ist, wird das Ergebnis ist ein Zeiger auf die Member *Namen* der Klasse erkennbar *qualified-Class-Name*. (Finden Sie unter [Primärausdrücke](../cpp/primary-expressions.md) für Weitere Informationen zu *qualified-Class-Name*.) Das folgende Codefragment zeigt, wie sich das Ergebnis unterscheidet, abhängig davon, ob der Member statisch ist.  
   
@@ -82,7 +82,7 @@ int main() {
   
 ## <a name="output"></a>Ausgabe  
   
-```  
+```Output  
 &d equals &rd  
 ```  
   
@@ -109,7 +109,7 @@ int main() {
   
 ## <a name="output"></a>Ausgabe  
   
-```  
+```Output  
 25  
 ```  
   

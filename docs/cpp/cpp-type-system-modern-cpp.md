@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c8df38f1869ab4c3b8e80101ca4dbbc27f9018e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027273"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407860"
 ---
 # <a name="c-type-system-modern-c"></a>C++- Typsystem (Modern C++)
 Das Konzept der *Typ* in C++ sehr wichtig ist. Jede Variable, jedes Funktionsargument und jeder Rückgabewert muss über einen Typ verfügen, um kompiliert werden zu können. Außerdem wird jedem Ausdruck (einschließlich Literalwerten) vom Compiler implizit ein Typ angegeben, bevor der Ausdruck ausgewertet wird. Einige Beispiele für Typen sind **Int** zum Speichern von ganzzahliger Werten **doppelte** zum Speichern von Gleitkommawerten (auch bekannt als *skalare* -Datentypen), oder die Standardbibliotheksklasse [Std:: basic_string](../standard-library/basic-string-class.md) zum Speichern von Text. Sie können einen eigenen Typ erstellen, durch die Definition einer **Klasse** oder **Struktur**. Der Typ gibt den Speicher an, der für die Variable (oder das Ausdrucksergebnis) zugeordnet ist, die Wertarten, die in dieser Variablen gespeichert werden können, wie diese Werte (als Bitmuster) interpretiert werden, und die Vorgänge, die darauf ausgeführt werden können. In diesem Artikel ist eine informelle Übersicht der Hauptfunktionen des C++-Typsystems enthalten.  
@@ -41,7 +41,6 @@ Das Konzept der *Typ* in C++ sehr wichtig ist. Jede Variable, jedes Funktionsarg
  Im folgenden Beispiel werden einige einfache Variablendeklarationen dargestellt, jeweils mit einigen Beschreibungen. In dem Beispiel wird auch die Verwendung der Typinformationen durch den Compiler dargestellt, um bestimmte nachfolgende Vorgänge in den Variablen zuzulassen oder zu verweigern.  
   
 ```cpp  
-  
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
                              // point value.  
@@ -56,7 +55,6 @@ string result = "zero";      // error. Can’t redefine a variable with
                              // new type.  
 int maxValue;                // Not recommended! maxValue contains   
                              // garbage bits until it is initialized.  
-  
 ```  
   
 ## <a name="fundamental-built-in-types"></a>Grundlegende (integrierte) Typen  
@@ -96,10 +94,10 @@ PI = .75 //Error. Cannot modify const variable.
   
  Die **const** Qualifizierer wird häufig verwendet, in der Funktions- und Variablendeklarationen und "const-Richtigkeit" ist ein wichtiges Konzept in C++; im Wesentlichen bedeutet verwenden **const** zu garantieren, zum Zeitpunkt der Kompilierung dass die Werte nicht versehentlich geändert werden. Weitere Informationen finden Sie unter [const](../cpp/const-cpp.md).  
   
- Ein **const** Typ unterscheidet sich von seiner nicht Const-Version, z. B. `const int` ist ein eigenständiger Typ von **Int**. Können Sie die C++ **"const_cast"** Operators für jene seltenen Fälle, wenn Sie entfernen müssen *Konstanz* aus einer Variablen. Weitere Informationen finden Sie unter [Typumwandlungen und Typsicherheit](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
+ Ein **const** Typ unterscheidet sich von seiner nicht Const-Version, z. B. **const Int** ist ein eigenständiger Typ von **Int**. Können Sie die C++ **"const_cast"** Operators für jene seltenen Fälle, wenn Sie entfernen müssen *Konstanz* aus einer Variablen. Weitere Informationen finden Sie unter [Typumwandlungen und Typsicherheit](../cpp/type-conversions-and-type-safety-modern-cpp.md).  
   
 ## <a name="string-types"></a>String-Typen  
- Genaugenommen hat die C++-Sprache keine integrierte String-Datentyp; **Char** und `wchar_t` speichern einzelne Zeichen: Sie müssen ein Array dieser Typen an eine Zeichenfolge, Ungefährer deklarieren, der einen abschließenden null-Wert hinzufügen (z. B. ASCII `'\0'`) auf das Arrayelement eine direkt hinter dem letzten gültigen Zeichen (so genannte eine *Zeichenfolge im C-Stil*). Für Zeichenfolgen im C-Stil ist das Schreiben von viel mehr Code oder die Verwendung externer Hilfsprogrammbibliotheken für Zeichenfolgefunktionen erforderlich. Aber in modernem C++ haben wir die Standardbibliothekstypen `std::string` (8-Bit-Version **Char**--Zeichenfolgen) oder `std::wstring` (16-Bit-Version `wchar_t`--Zeichenfolgen). Diese C++-Standardbibliothek-Container können als systemeigene Zeichenfolgentypen betrachtet werden, da sie Teil der Standardbibliotheken sind, die in jeder kompatiblen C++-Buildumgebung enthalten sind. Verwenden Sie einfach die `#include <string>`-Direktive, um diese Typen im Programm bereitzustellen. (Wenn Sie MFC oder ATL verwenden, ist auch die CString-Klasse verfügbar, aber Sie ist nicht Bestandteil des C++-Standards.) Von der Verwendung von auf NULL endenden Zeichenarrays (die bereits erwähnten Zeichenfolgen im C-Stil) wird im modernen C++ Abstand genommen.  
+ Genaugenommen hat die C++-Sprache keine integrierte String-Datentyp; **Char** und **"wchar_t"** speichern einzelne Zeichen: Sie müssen ein Array dieser Typen an eine Zeichenfolge, Ungefährer deklarieren, der einen abschließenden null-Wert hinzufügen (z. B. ASCII `'\0'`) auf das Arrayelement eine hinter dem letzten gültigen Zeichen (so genannte eine *Zeichenfolge im C-Stil*). Für Zeichenfolgen im C-Stil ist das Schreiben von viel mehr Code oder die Verwendung externer Hilfsprogrammbibliotheken für Zeichenfolgefunktionen erforderlich. Aber in modernem C++ haben wir die Standardbibliothekstypen `std::string` (8-Bit-Version **Char**--Zeichenfolgen) oder `std::wstring` (16-Bit-Version **"wchar_t"**--Zeichenfolgen). Diese C++-Standardbibliothek-Container können als systemeigene Zeichenfolgentypen betrachtet werden, da sie Teil der Standardbibliotheken sind, die in jeder kompatiblen C++-Buildumgebung enthalten sind. Verwenden Sie einfach die `#include <string>`-Direktive, um diese Typen im Programm bereitzustellen. (Wenn Sie MFC oder ATL verwenden, ist auch die CString-Klasse verfügbar, aber Sie ist nicht Bestandteil des C++-Standards.) Von der Verwendung von auf NULL endenden Zeichenarrays (die bereits erwähnten Zeichenfolgen im C-Stil) wird im modernen C++ Abstand genommen.  
   
 ## <a name="user-defined-types"></a>Benutzerdefinierte Typen  
  Beim Definieren einer **Klasse**, **Struktur**, **Union**, oder **Enum**, dieses Konstrukt wird in den restlichen Code verwendet, als handele es sich um ein grundlegender Typ . Es verfügt über eine bekannte Größe im Arbeitsspeicher und bestimmte Regeln zur Verwendung gelten zur Kompilierzeitüberprüfung und zur Laufzeit für die Lebensdauer des Programms. Die wichtigsten Unterschiede zwischen den grundlegenden integrierten Typen und den benutzerdefinierten Typen sind wie folgt:  
@@ -116,19 +114,16 @@ PI = .75 //Error. Cannot modify const variable.
  Als Erstes sollten Sie wissen, dass bei der Deklaration einer unformatierter Zeigervariable nur Speicher zugeordnet wird, der zum Speichern der Adresse des Speicherorts belegt wird, auf den der Zeiger verweist, wenn er dereferenziert wird. Speicherbelegung für den Datenwert selbst (so genannte *Sicherungsspeicher*) wurde noch nicht zugeordnet. Das heißt, indem Sie eine unformatierte Zeigervariable deklarieren, erstellen Sie eine Speicheradressenvariable, keine tatsächliche Datenvariable. Das Dereferenzieren einer Zeigervariable vor der Sicherstellung, dass sie eine gültige Adresse auf einen Sicherungsspeicher enthält, verursacht nicht definiertes Verhalten (normalerweise ein schwerwiegender Fehler) im Programm. Im folgenden Beispiel wird die Verwendung dieses Fehlertyps veranschaulicht.  
   
 ```cpp  
-  
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
                     // a serious error. We are dereferencing an  
                     // uninitialized pointer variable with no  
                     // allocated memory to point to.  
-  
 ```  
   
  Das Beispiel dereferenziert einen Zeigertyp, ohne dass Arbeitsspeicher zum Speichern der tatsächlichen Ganzzahldaten belegt ist oder dass ein gültiger Speicherort zu zugewiesen wurde. Der folgende Code korrigiert diese Fehler:  
   
 ```cpp  
-  
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
     int* pNumber = &number;   // Declare and initialize a local integer  
@@ -140,7 +135,6 @@ int* pNumber;       // Declare a pointer-to-int variable.
                               // pNumber, the integer variable called  
                               // "number". Note "number" was changed, not  
                               // "pNumber".  
-  
 ```  
   
  Im korrigierten Codebeispiel wird lokaler Stapelarbeitsspeicher zum Erstellen von Sicherungsspeicher, auf den `pNumber` verweist, verwendet. Wir verwenden der Einfachheit halber einen grundlegenden Typ. In der Praxis-Sicherungsspeicher für Zeiger sind die meisten häufig benutzerdefinierte Typen, die dynamisch zugeordnete in einem Bereich des Arbeitsspeichers, die aufgerufen werden die *Heap* (oder *freien Speicher*) mithilfe einer **neue** -schlüsselwortausdruck (in der Programmierung im C-Stil, die ältere `malloc()` C Runtime Library-Funktion verwendet wurde). Nach der Zuweisung werden diese Variablen in der Regel als Objekte bezeichnet insbesondere dann, wenn sie eine Klassendefinition basieren. Arbeitsspeicher, der mit ist **neue** müssen gelöscht werden, von einer entsprechenden **löschen** Anweisung (oder, wenn Sie verwendet die `malloc()` Funktion zuordnen, die C-Runtime-Funktion `free()`).  
@@ -148,14 +142,12 @@ int* pNumber;       // Declare a pointer-to-int variable.
  Es ist jedoch leicht vergessen, eine dynamisch zugeordnete Objekt – besonders bei komplexem Code löschen, das eine bezeichneten Ressourcenfehler verursacht eine *Speicherverlust*. Aus diesem Grund wird vor der Verwendung unformatierter Zeigern in modernem C++ abgesehen. Es ist fast immer besser, einen unformatierten Zeiger in umschließen einer [intelligenten Zeiger](../cpp/smart-pointers-modern-cpp.md), wird die den Arbeitsspeicher automatisch freigibt, sobald sein Destruktor aufgerufen wird (wenn der Code den Bereich für den intelligenten Zeiger verlässt); mithilfe eines intelligenten Zeigers Sie praktisch Entfernen Sie eine ganze Klasse von Fehlern in Ihren C++-Programmen. Im folgenden Beispiel wird angenommen, dass `MyClass` ein benutzerdefinierter Typ ist, der eine öffentliche Methode `DoSomeWork();` umfasst.  
   
 ```cpp  
-  
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  
     pMc->DoSomeWork();  
 }  
   // No memory leak. Out-of-scope automatically calls the destructor  
   // for the unique_ptr, freeing the resource.  
-  
 ```  
   
  Weitere Informationen zu intelligenten Zeigern finden Sie unter [intelligente Zeiger](../cpp/smart-pointers-modern-cpp.md).  

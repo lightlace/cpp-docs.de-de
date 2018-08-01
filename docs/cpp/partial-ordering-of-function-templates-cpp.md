@@ -1,5 +1,5 @@
 ---
-title: Partielle Reihenfolge von Funktionsvorlagen (C++) | Microsoft Docs
+title: Partielle Reihenfolge von Funktionsvorlagen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60936a46732e4b2ed827a5efb08740661d9bb0d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75689c07718bf066105920b566087c08a220a7de
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408805"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Partielle Reihenfolge von Funktionsvorlagen (C++)
 
 Es können mehrere Funktionsvorlagen, die der Argumentliste eines Funktionsaufrufs entsprechen, verfügbar sein. C++ definiert eine partielle Reihenfolge von Funktionsvorlagen, um anzugeben, welche Funktion aufgerufen werden soll. Die Reihenfolge ist partiell, da es mehrere Vorlagen geben kann, die als genauso spezialisiert betrachtet werden.
 
-Der Compiler wählt die speziellste Vorlagenfunktion aus, die aus den möglichen Übereinstimmungen verfügbar ist. Wenn eine Funktionsvorlage einen Typ akzeptiert z. B. __T__, und eine andere Funktionsvorlage __T\*__  verfügbar ist, die __T\*__  Version wird als spezialisiert und ist der generischen __T__ -Version vorzuziehen, wenn das Argument ein Zeigertyp ist, auch wenn beide Übereinstimmungen zulässig wären.
+Der Compiler wählt die speziellste Vorlagenfunktion aus, die aus den möglichen Übereinstimmungen verfügbar ist. Wenn eine Funktionsvorlage einen Typ akzeptiert z. B. __T__, und eine andere Funktionsvorlage __T\*__  verfügbar ist, die __T\*__  Version wird als bezeichnet. Weitere spezialisierte und wird bevorzugt die generische __T__ Version, wenn das Argument ein Zeigertyp ist, auch wenn beide Übereinstimmungen zulässig wären.
 
 Verwenden Sie folgenden Prozess, um zu ermitteln, ob ein Funktionsvorlagenkandidat spezialisierter ist:
 
@@ -36,17 +37,17 @@ Verwenden Sie folgenden Prozess, um zu ermitteln, ob ein Funktionsvorlagenkandid
 
 4. Wiederholen Sie den gleichen Prozess umgekehrt mit T1 und T2.
 
-5. Wenn eine Vorlage eine gültige Vorlagenargumentliste für die andere Vorlage ist, das Gegenteil aber nicht zutrifft, wird die Vorlage als weniger spezialisiert angesehen als die andere Vorlage. Wenn beide Vorlagen mit dem vorherigen Schritt Formular gültige Argumente miteinander, Sie als werden genauso spezialisiert behandelt, und ein Mehrdeutiger Aufruf führt Wenn Sie versuchen zu verwenden.
+5. Wenn eine Vorlage eine gültige Vorlagenargumentliste für die andere Vorlage ist, das Gegenteil aber nicht zutrifft, wird die Vorlage als weniger spezialisiert angesehen als die andere Vorlage. Wenn beide Vorlagen, die mit den vorherigen Schritt Formular gültige Argumente füreinander wird, klicken Sie dann diese werden als einheitlich spezialisiert behandelt werden, und ein Mehrdeutiger Aufruf führt versuchen, bei deren Verwendung.
 
 6. Mithilfe dieser Regeln können Sie:
 
      1. Eine Vorlagenspezialisierung für einen bestimmten Typ ist spezialisierter als eine, die ein generisches Typargument verwendet.
 
-     2. Eine Vorlage nur dauert __T\*__  ist spezialisierter als eine dauert __T__, da eine hypothetische geben __X\*__  ist ein gültiges Argument für eine __T__ Vorlagenarguments, aber __X__ ist kein gültiges Argument für eine __T\*__  Vorlagenargument.
+     2. Eine Vorlage aus, nur dass __T\*__  ist spezialisierter als eine dauert nur __T__, da es sich bei einem hypothetischen geben __X\*__  ist ein gültiges Argument für eine __T__ Template-Argument, aber __X__ ist kein gültiges Argument für eine __T\*__  Template-Argument.
 
-     3. __const T__ ist spezialisierter als __T__, da __const X__ ist ein gültiges Argument für eine __T__ Vorlagenarguments, aber __X__ ist kein gültiges Argument für eine __const T__ Vorlagenargument.
+     3. __const T__ ist spezialisierter als __T__, da __const X__ ist ein gültiges Argument für eine __T__ Template-Argument, aber __X__ ist kein gültiges Argument für eine __const T__ Template-Argument.
 
-     4. __const T\*__  ist spezialisierter als __T\*__, da __const X\*__  ist ein gültiges Argument für eine __T\*__  Vorlagenarguments, aber __X\*__  ist kein gültiges Argument für eine __const T\*__  Vorlagenargument.
+     4. __const T\*__  ist spezialisierter als __T\*__, da __const X\*__  ist ein gültiges Argument für eine __T\*__  Template-Argument, aber __X\*__  ist kein gültiges Argument für eine __const T\*__  Template-Argument.
 
 ## <a name="example"></a>Beispiel
 
@@ -85,12 +86,11 @@ int main() {
   
 ### <a name="output"></a>Ausgabe  
   
-```  
+```Output  
 Less specialized function called  
 More specialized function called  
 Even more specialized function for const T*  
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-
-[Funktionsvorlagen](../cpp/function-templates.md)
+ [Funktionsvorlagen](../cpp/function-templates.md)

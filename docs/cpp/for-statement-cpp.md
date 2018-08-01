@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: feb14056e3054cdf0e802b16ce9ff20f67da43fe
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940818"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401573"
 ---
 # <a name="for-statement-c"></a>for-Anweisung (C++)
 Führt eine Anweisung wiederholt aus, bis die Bedingung false ergibt. Weitere Informationen zu den bereichsbasierter for-Anweisung, finden Sie unter [bereichsbasiert für Anweisung (C++)](../cpp/range-based-for-statement-cpp.md).  
@@ -137,9 +137,9 @@ for (int i = 0 ; i < 5 ; i++) {
   
  In der Standardeinstellung unter [/Ze](../build/reference/za-ze-disable-language-extensions.md), eine Variable deklariert, die einer **für** Schleife bleibt im Gültigkeitsbereich, bis die **für** Schleife des einschließenden Bereich endet.  
   
- [/ Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) ermöglicht Standardverhalten der ohne Angabe der/Za in for-Schleifen deklarierten Variablen.  
+ [/ Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) ermöglicht Standardverhalten der ohne Angabe in for-Schleifen deklarierten Variablen `/Za`.  
   
- Es ist auch möglich, mit der Bereichsdefinition Differenzen der **für** Schleife, um Variablen unter/Ze erneut wie folgt deklariert:  
+ Es ist auch möglich, mit der Bereichsdefinition Differenzen der **für** Schleife um Deklarieren von Variablen unter `/Ze` wie folgt:  
   
 ```cpp  
 // for_statement5.cpp  

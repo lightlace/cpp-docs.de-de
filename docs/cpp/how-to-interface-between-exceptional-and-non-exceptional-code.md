@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e6c3217360f504d2433551d6ad624a378f4403af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940117"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407971"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Gewusst wie: Verbinden von Code, der Ausnahmen zulässt, mit Code ohne Ausnahmen
 In diesem Artikel wird beschrieben, wie die konsistente Ausnahmebehandlung in einem C++-Modul implementiert wird und wie diese Ausnahmen zu und von Fehlercodes an den Ausnahmegrenzen übertragen werden.  
@@ -161,7 +161,6 @@ int main ( int argc, char* argv[] )
         cout.copyfmt(state); // restore previous formatting  
     }  
 }  
-  
 ```  
   
 ## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Aufrufen von Ausnahmecode von Nicht-Ausnahmecode aus  
@@ -194,7 +193,6 @@ BOOL DiffFiles2(const string& file1, const string& file2)
     }   
     return FALSE;   
 }  
-  
 ```  
   
  Bei Konvertierungen von Ausnahmen in Fehlercodes besteht ein mögliches Problem darin, dass Fehlercodes häufig nicht die umfangreichen Informationen enthalten, die eine Ausnahme speichern kann. Um dieses Problem zu beheben, geben Sie einen **catch** Block für jeden einzelnen Ausnahmetyp, die ausgelöst werden kann, und führen Sie die Protokollierung, um die Details der Ausnahme aufzuzeichnen, bevor es in einen Fehlercode konvertiert wird. Diesen Ansatz kann viele codewiederholungen erstellt, wenn mehrere Funktionen, die alle den gleichen Satz von verwenden **catch** Blöcke. Ist eine gute Möglichkeit zur Vermeidung von codewiederholungen refactoring dieser Blöcke in eine private Hilfsfunktion, die implementiert die **versuchen** und **catch** blockiert und ein Funktionsobjekt, das aufgerufen wird, in der akzeptiert**versuchen** Block. Übergeben Sie den Code in jeder öffentlichen Funktion als Lambdaausdruck an die Hilfsfunktion.  
@@ -217,7 +215,6 @@ bool Win32ExceptionBoundary(Func&& f)
     }   
     return false;   
 }  
-  
 ```  
   
  Das folgende Beispiel zeigt, wie der Lambdaausdruck geschrieben wird, der das Funktionselement definiert. Wenn ein Funktionselement „inline“ mithilfe eines Lambdaausdrucks definiert wird, ist es oft besser lesbar, als wenn es als benanntes Funktionsobjekt geschrieben worden wäre.  
@@ -237,7 +234,6 @@ bool DiffFiles3(const string& file1, const string& file2)
         return true;   
     });   
 }  
-  
 ```  
   
  Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../cpp/lambda-expressions-in-cpp.md).  

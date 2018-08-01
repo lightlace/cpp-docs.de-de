@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223bf6996d5142cbe8d3521c65596beb40312f2c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5a68a0a67748e79fe4379cb5f820cca0c845f392
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941183"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405482"
 ---
 # <a name="namespaces-c"></a>Namespaces (C++)
 Ein Namespace ist ein deklarativer Bereich, der einen Gültigkeitsbereich für die darin enthaltenen Bezeichner darstellt (die Namen von Typen, Funktionen, Variablen usw.). Namespaces werden verwendet, um Code in logischen Gruppen zu organisieren und Namenskonflikte zu vermeiden, die insbesondere dann auftreten können, wenn die Codebasis mehrere Bibliotheken enthält. Alle Bezeichner im Gültigkeitsbereich des Namespaces sind ohne Qualifizierung füreinander sichtbar. Bezeichner außerhalb des Namespaces können die Member zugreifen, indem Sie den vollqualifizierten Namen für jeden Bezeichner, z. B. mit `std::vector<std::string> vec;`, oder ansonsten durch eine [using-Deklaration](../cpp/using-declaration.md) für einen einzelnen Bezeichner (`using std::string`), oder eine [using-Direktive](../cpp/namespaces-cpp.md#using_directives) für alle Bezeichner im Namespace (`using namespace std;`). Der Code in Headerdateien muss immer den vollqualifizierten Namespacenamen verwenden.  
@@ -59,7 +59,6 @@ ContosoData::Func(mgr);
 using ContosoData::ObjectManager;  
 ObjectManager mgr;  
 mgr.DoSomething();  
-  
 ```  
   
  Verwendung einer using-Anweisung, um den gesamten Namespaceinhalt in den Gültigkeitsbereich einzubinden:  
@@ -70,7 +69,6 @@ using namespace ContosoData;
 ObjectManager mgr;  
 mgr.DoSomething();  
 Func(mgr);  
-  
 ```  
   
 ## <a id="using_directives"></a> using-Direktiven  
@@ -91,11 +89,10 @@ namespace ContosoDataServer
 {  
     void Foo();  
     int Bar();  
-  
 }  
 ```  
   
- Funktionsimplementierungen in contosodata.cpp sollten den vollqualifizierten Namen verwenden, auch wenn man eine `using` -Direktive am Anfang der Datei:  
+ Funktionsimplementierungen in contosodata.cpp sollten den vollqualifizierten Namen verwenden, auch wenn man eine **mit** -Direktive am Anfang der Datei:  
   
 ```cpp  
 #include "contosodata.h"  
@@ -154,7 +151,6 @@ namespace ContosoDataServer
   
     int Bar(){...};  
     int Baz(int i) { return Details::CountImpl; }      
-  
 }  
 ```  
   
@@ -211,7 +207,6 @@ namespace Parent
      template<>  
      class C<int> {};  
 }  
-  
 ```  
   
  Inlinenamespaces können als Mechanismus für die Versionskontrolle verwendet werden, um Änderungen an der öffentlichen Schnittstelle einer Bibliothek zu verwalten. Sie können beispielsweise einen einzelnen übergeordneten Namespace erstellen und jede Version der Schnittstelle in einem eigenen Namespace kapseln, der innerhalb des übergeordneten Namespaces geschachtelt ist. Der Namespace, der die aktuelle oder bevorzugte Version enthält, wird als Inlinenamespace qualifiziert und daher so verfügbar gemacht, als handele es sich um einen direkten Member des übergeordnete Namespaces. Clientcode, der Parent::Class aufruft, wird automatisch an den neuen Code gebunden. Clients, die die ältere Version verwenden möchten, können weiterhin darauf zugreifen, indem sie den vollqualifizierten Pfad zu dem geschachtelten Namespace verwenden, der diesen Code enthält.  
@@ -252,7 +247,6 @@ namespace Contoso
       };  
     }  
 }  
-  
 ```  
   
 ## <a id="namespace_aliases"></a> Namespace-Aliase  
@@ -262,7 +256,6 @@ namespace Contoso
 namespace a_very_long_namespace_name { class Foo {}; }  
 namespace AVLNN = a_very_long_namespace_name;  
 void Bar(AVLNN::Foo foo){ }  
-  
 ```  
   
 ## <a name="anonymous-or-unnamed-namespaces"></a>anonyme oder unbenannte Namespaces  

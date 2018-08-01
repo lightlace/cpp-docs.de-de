@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208561"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404937"
 ---
 # <a name="overview-of-declarators"></a>Übersicht über Deklaratoren
 Deklaratoren sind die Komponenten einer Deklaration, die Namen von Objekten oder Funktionen angeben. Deklaratoren geben auch an, ob das benannte Objekt ein Objekt, ein Zeiger, ein Verweis oder ein Array ist.  Obwohl Deklaratoren nicht den Basistyp angeben, ändern sie die Typinformationen im Basistyp, sodass dieser abgeleitete Typen, wie Zeiger, Verweise und Arrays, angibt.  Auf Funktionen angewendet arbeitet der Deklarator mit dem Typspezifizierer, um den Rückgabetyp einer Funktion vollständig als Objekt, Zeiger oder Verweis anzugeben. (Bezeichner, die in beschriebenen [Deklarationen und Definitionen](declarations-and-definitions-cpp.md), übermitteln Eigenschaften, z. B. Typ und Speicherklasse. Modifizierer, erläutert in diesem Abschnitt und in [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md), ändern Deklaratoren.) Die folgende Abbildung zeigt eine vollständige Deklaration von `MyFunction` und ruft die Komponenten der Deklaration auf.  
@@ -172,13 +172,11 @@ int a, *b, c[5], **d, &e=a;
   - Zeiger-Operator Deklarator   
   - (Deklarator)  
 
-  
 - und *Zeiger-Operator* ist einer der:  
   
   - \* [cv-Qualifizierer]  
   - & [cv-Qualifizierer]:: geschachtelten namesspezifizierer \* [cv-Qualifizierer]  
 
-  
  Da ein Deklarator Deklaratoren enthalten kann, ist es möglich, anhand der oben genannten Regeln komplexere abgeleitete Typen zu erstellen (z. B. Arrays von Zeigern, Funktionen, die Arrays von Funktionszeigern zurückgeben).  Um die einzelnen Schritte der Konstruktion zu bilden, beginnen Sie mit dem Bezeichner, der den Basisdatentyp darstellt, und wenden Sie die Syntaxregel oben mit dem vorherigen Ausdruck als `declarator` an.  Die Anwendung der Syntaxregeln sollte der umgekehrten Reihenfolge des Ausdrucks auf Englisch entsprechen.  Wenn die Anwendung die *Zeiger-Operator* -Syntaxregel auf einen Array- oder Funktionsausdruck, verwenden Sie Klammern, wenn einen Zeiger auf das Array oder eine Funktion, wie die letzte Zeile in der folgenden Tabelle werden sollen.  
   
  Das folgende Beispiel zeigt die Konstruktion von "Zeiger zu Array von 10 Zeigern zu int".  

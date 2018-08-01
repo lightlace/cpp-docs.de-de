@@ -1,5 +1,5 @@
 ---
-title: Argumentübergabe und Benennungskonventionen für | Microsoft Docs
+title: Argumentübergabe und Benennungskonventionen für | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43aa3430b641f6333c6c35d618f9e9de123b7390
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e1a6a8e837a44a966f262f581db04f1589233c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413485"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404040"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Argumentübergabe und Benennungskonventionen
 **Microsoft-spezifisch**  
@@ -42,9 +42,9 @@ ms.locfileid: "32413485"
 > [!NOTE]
 >  Wenn eine Struktur, Union oder Klasse nach Wert aus einer Funktion zurückgegeben wird, müssen alle Definitionen des Typs identisch sein, andernfalls können zur Laufzeit Fehler im Programm auftreten.  
   
- Informationen zum Definieren Ihrer eigenen Funktionscode Prolog und Epilog finden Sie unter [Naked-Funktionsaufrufe](../cpp/naked-function-calls.md).  
+ Informationen zum Definieren Sie eigene Prolog- und epilogsequenzen Funktionscode, finden Sie unter [Naked-Funktionsaufrufe](../cpp/naked-function-calls.md).  
   
- Informationen zum Standard-Aufrufkonventionen in Code, der Ziele X64-Plattformen finden Sie unter [Überblick X64 Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md). Informationen zum Aufrufen von Konvention Probleme im Code, der ARM-Plattformen ausgerichtet ist, finden Sie unter [häufige Visual C++ ARM-Migrationsprobleme](../build/common-visual-cpp-arm-migration-issues.md).  
+ Informationen zum Standard-Standardaufrufkonventionen im Code, die Ziele X64 Plattformen finden Sie unter [Überblick X64 Aufrufkonventionen](../build/overview-of-x64-calling-conventions.md). Weitere Informationen zu aufrufkonventionsproblemen im Code, der ARM-Plattformen abzielt, finden Sie unter [häufige Visual C++ ARM-Migrationsprobleme](../build/common-visual-cpp-arm-migration-issues.md).  
   
  Die folgenden Aufrufkonventionen werden vom Visual C/C++-Compiler unterstützt.  
   

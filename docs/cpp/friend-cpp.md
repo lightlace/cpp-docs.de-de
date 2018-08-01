@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 931f9d7cc17afe974837c8a622b82c124ef6be57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942080"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407016"
 ---
 # <a name="friend-c"></a>Friend (C++)
 In einigen Fällen ist es bequemer auf Memberebene Zugriff auf Funktionen, die nicht Member einer Klasse sind oder auf alle Elemente in einer separaten Klasse gewährt. Nur der Klassenimplementierer kann seine „Friends“ deklarieren. Eine Funkion oder Klasse kann sich nicht selbst als „Friend“ einer Klasse deklarieren. Verwenden Sie in der Klassendefinition einer, die **Friend** -Schlüsselwort und den Namen der einer nicht-Member-Funktion oder einer anderen Klasse Zugriff auf die privaten und geschützten Member einer Klasse gewähren. In der Vorlagendefinition eines kann ein Typparameter als Friend deklariert werden.  
@@ -59,7 +59,7 @@ friend class F;
 friend F;  
 ```  
   
- Das erste Formular führt eine neue Klasse F aus, wenn keine vorhandenen Klasse mit diesem Namen in der innersten Namespace gefunden wurde.  **C ++ 11**: zweite Formular führt eine neue Klasse keinen; er kann verwendet werden, wenn die Klasse wurde bereits deklariert, und es verwendet werden, muss Wenn Sie ein Vorlagentyp-Parameter oder eine Typdefinition als Friend zu deklarieren.  
+ Das erste Formular führt eine neue Klasse F aus, wenn keine vorhandenen Klasse mit diesem Namen in der innersten Namespace gefunden wurde. **C ++ 11**: zweite Formular führt eine neue Klasse keinen; er kann verwendet werden, wenn die Klasse wurde bereits deklariert, und es verwendet werden, muss Wenn Sie ein Vorlagentyp-Parameter oder eine Typdefinition als Friend zu deklarieren.  
   
  Verwendung `class friend F` bei der referenzierte Typ wurde nicht noch deklariert:  
   

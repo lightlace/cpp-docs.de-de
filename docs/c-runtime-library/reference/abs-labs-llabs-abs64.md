@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc426bbbc28e6eb3b7e6e4a0fa9fab7e74f62093
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b783ee6e4a5ea511a26068ffb89fcc09236f20b1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391752"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408127"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 
@@ -76,7 +76,7 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>Parameter
 
-*n*<br/>
+*n*  
 Ein numerischer Wert.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -85,18 +85,18 @@ Die **abs**, **Labs**, **Llabs** und **_abs64** Funktionen geben den absoluten W
 
 ## <a name="remarks"></a>Hinweise
 
-Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **abs** verwenden und zurückgeben **lange**, **lange** **lange**,  **"float"**, **doppelte**, und **lange** **doppelte** Werte. Diese Überladungen sind im Header \<cmath> definiert. In einem C-Programm **abs** immer Double und gibt ein "int".
+Da C++ das Überladen zulässt, können Sie Überladungen von Aufrufen **abs** verwenden und zurückgeben **lange**, **lange** **lange**,  **"float"**, **doppelte**, und **lange** **doppelte** Werte. Diese Überladungen sind im Header \<cmath> definiert. In einem C-Programm **abs** immer Double und gibt eine **Int**.
 
-**Microsoft Specific**: Da der Bereich von negativen ganzen Zahlen, die mithilfe eines Ganzzahltyps darstellbare größer als der entsprechende Bereich von positiven ganzen Zahlen, die ist mithilfe dieses Typs dargestellt werden können, ist es möglich ist, geben Sie ein Argument an diese Funktionen, die konvertiert werden können. Wenn der Absolute Wert des Arguments nicht über den Rückgabetyp dargestellt werden kann die **abs** -Funktionen den Argumentwert unverändert zurück. Insbesondere `abs(INT_MIN)` gibt **INT_MIN**, `labs(LONG_MIN)` gibt **LONG_MIN**, `llabs(LLONG_MIN)` gibt **LLONG_MIN**, und `_abs64(_I64_MIN)` Gibt **_I64_MIN**. Dies bedeutet, dass die **abs** Funktionen nicht verwendet werden, um einen positiven Wert sicherzustellen.
+**Microsoft Specific**: Da der Bereich von negativen ganzen Zahlen, die dargestellt werden kann, mithilfe eines Ganzzahltyps größer als der entsprechende Bereich von positiven ganzen Zahlen, die ist mithilfe dieses Typs dargestellt werden können, ist es möglich, diese Argument bereitgestellt Funktionen, die nicht konvertiert werden können. Wenn der Absolute Wert des Arguments durch den Rückgabetyp dargestellt werden, kann die **abs** Funktionen geben den Argumentwert unverändert zurück. Insbesondere gibt `abs(INT_MIN)` `INT_MIN` zurück, `labs(LONG_MIN)` gibt `LONG_MIN` zurück, `llabs(LLONG_MIN)` gibt `LLONG_MIN` zurück und `_abs64(_I64_MIN)` gibt `_I64_MIN` zurück. Dies bedeutet, dass die **abs** Funktionen können nicht verwendet werden, um einen positiven Wert sicherzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher C-Header|Erforderlicher C++-Header|
+|-Routine zurückgegebener Wert|Erforderlicher C-Header|Erforderlicher C++-Header|
 |-------------|-----------------------|---------------------------|
 |**Abs**, **Labs**, **Llabs**|\<math.h> oder\<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> oder \<math.h|
 |**_abs64**|\<stdlib.h>|\<cstdlib> oder \<stdlib.h>|
 
-Verwenden Sie die überladene Versionen der **abs** in C++, fügen Sie der \<Cmath > Header.
+Verwenden Sie die überladenen Version von **abs** in C++, müssen Sie enthalten die \<Cmath > Header.
 
 ## <a name="example"></a>Beispiel
 
@@ -157,8 +157,8 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 
 ## <a name="see-also"></a>Siehe auch
 
-[Datenkonvertierung](../../c-runtime-library/data-conversion.md)<br/>
-[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)<br/>
-[_cabs](cabs.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
-[imaxabs](imaxabs.md)<br/>
+[Datenkonvertierung](../../c-runtime-library/data-conversion.md)  
+[Gleitkommaunterstützung](../../c-runtime-library/floating-point-support.md)  
+[_cabs](cabs.md)  
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)  
+[imaxabs](imaxabs.md)  

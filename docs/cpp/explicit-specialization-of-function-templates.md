@@ -1,5 +1,5 @@
 ---
-title: Explizite Spezialisierung von Funktionsvorlagen | Microsoft Docs
+title: Explizite Spezialisierung von Funktionsvorlagen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35eda35a7d2474826ce151292121be224955420
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8b6a56a0a1dce5d07007898dec486d0e3b080c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410732"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407688"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>Explizite Spezialisierung von Funktionsvorlagen
 Bei einer Funktionsvorlage können Sie ein spezielles Verhalten für einen bestimmten Typ definieren, indem Sie eine explizite Spezialisierung (Überschreibung) der Funktionsvorlage für diesen Typ angeben. Zum Beispiel:  
@@ -32,7 +32,7 @@ Bei einer Funktionsvorlage können Sie ein spezielles Verhalten für einen besti
 template<> void MySwap(double a, double b);  
 ```  
   
- Diese Deklaration ermöglicht es Ihnen, definieren Sie eine andere Funktion für **doppelte** Variablen. Wie Nichtvorlagenfunktionen, standardmäßige typkonvertierungen (z. B. Höherstufen einer Variable des Typs **"float"** auf **doppelte**) angewendet werden.  
+ Diese Deklaration können Sie eine andere Funktion für definieren **doppelte** Variablen. Ebenso wie nicht auf Vorlagen basierende Funktionen, standardmäßige typkonvertierungen (z. B. Höherstufen einer Variable des Typs **"float"** zu **doppelte**) angewendet werden.  
   
 ## <a name="example"></a>Beispiel  
   

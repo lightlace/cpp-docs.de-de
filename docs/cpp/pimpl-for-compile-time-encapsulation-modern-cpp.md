@@ -1,5 +1,5 @@
 ---
-title: Pimpl für Compilierungszeitkapselung (Modern C++) | Microsoft Docs
+title: Pimpl für Kompilierzeitkapselung (Modern C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,26 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f611a898018cee5edc031be1db2fd35af8857e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e80c4bd86cd4c7400e3937fcb8d164fe6b14106
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420154"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404654"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl für Kompilierzeitkapselung (Modern C++)
-Die *"pimpl" Idiom* eine moderne C++-Technik, um die Kopplung verringert, und trennen Sie die Schnittstellen-Implementierung ausgeblendet wird. "Pimpl" ist die Kurzform für "Zeiger auf Implementierung." Sie können bereits mit dem Konzept vertraut sein, aber wissen, dass sie von anderen Namen an, wie sich zu mir Cat oder Compiler Firewall Idiom.  
+Die *"pimpl" Idiom* ist eine moderne C++-Methode zum Ausblenden der Implementierung, um die Kopplung zu minimieren und Schnittstellen zu trennen. "Pimpl" ist die Kurzform für "-Zeiger zu Implementierung" Sie können bereits mit dem Konzept vertraut sein, aber andere Namen, wie sich zu mir Cat oder eine Compiler-Firewall-Idiom erkennbar.  
   
 ## <a name="why-use-pimpl"></a>Gründe für die Verwendung von "pimpl"  
- So sieht wie das Idiom "pimpl" der Softwareentwicklung verbessert werden kann:  
+ Hier ist, wie das Idiom "pimpl" für den Lebenszyklus der Softwareentwicklung verbessern kann:  
   
 -   Minimierung der Kompilierung Abhängigkeiten.  
   
--   Die Trennung der Schnittstelle sowie die Implementierung.  
+-   Trennung von Benutzeroberfläche und Implementierung.  
   
 -   Portabilität.  
   
-## <a name="pimpl-header"></a>Header "pimpl"  
+## <a name="pimpl-header"></a>"Pimpl"-header  
   
 ```cpp  
 // my_class.h  
@@ -40,10 +40,9 @@ class my_class {
 private:  
    class impl; unique_ptr<impl> pimpl; // opaque type here  
 };  
-  
 ```  
   
- Die Ausdrucksweise "pimpl" vermeidet Rebuild überlappend und Objektlayouts jedoch fehleranfällig. Es ist für die (transitiv) beliebten Typen geeignet.  
+ Das Idiom "pimpl" werden die Neuerstellung kaskadierende und fehleranfällig Objektlayouts vermieden. Es eignet sich gut für (transitiv) beliebte Typen.  
   
 ## <a name="pimpl-implementation"></a>Implementierung von "pimpl"  
  Definieren der `impl` Klasse in der CPP-Datei.  
@@ -61,9 +60,9 @@ my_class::my_class(): pimpl( new impl )
 ```  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
- Erwägen Sie, ob die Unterstützung für nicht auslösend Swap Spezialisierung hinzuzufügen.  
+ Erwägen Sie, um Unterstützung für nicht auslösend Swap Spezialisierung hinzuzufügen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Willkommen zurück bei C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C++-Sprachreferenz](../cpp/cpp-language-reference.md)   
+ [C++ Language Reference (C++-Programmiersprachenreferenz)](../cpp/cpp-language-reference.md)   
  [C++-Standardbibliothek](../standard-library/cpp-standard-library-reference.md)

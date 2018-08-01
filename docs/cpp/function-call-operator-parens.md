@@ -1,5 +1,5 @@
 ---
-title: 'Funktionsaufrufoperator: () | Microsoft Docs'
+title: 'Funktionsaufrufoperator: () | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb1cdd4ec5dc556f0427914ca8ec746ad3ad2ccc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b0c4cde0c50064c5a88469e8f9061a0321902e4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408995"
 ---
 # <a name="function-call-operator-"></a>Funktionsaufrufoperator: ()
-Ein postfixausdruck, gefolgt von der Funktionsaufrufoperator **()**, gibt einen Funktionsaufruf.  
+Ein postfixausdruck, gefolgt von den Funktionsaufrufoperator **()**, gibt einen Funktionsaufruf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,31 +40,31 @@ postfix-expression
 ## <a name="remarks"></a>Hinweise  
  Die Argumente für den Funktionsaufrufoperator sind null oder mehr Ausdrücke, die durch Trennzeichen getrennt sind – die tatsächlichen Argumente der Funktion.  
   
- Die *postfixausdruck* muss zu einer Funktionsadresse (z. B. einen Funktionsbezeichner oder den Wert eines Funktionszeigers) ausgewertet und *Argument-Expression-List* ist eine Liste von Ausdrücken (getrennt durch Trennzeichen getrennt), deren Werte (Argumente) an die Funktion übergeben werden. Das *argument-expression-list*-Argument kann leer sein.  
+ Die *Postfix-Expression* muss zu einer Funktionsadresse (z. B. einen Funktionsbezeichner oder den Wert eines Funktionszeigers) ausgewertet und *Argument-Expression-List* ist eine Liste von Ausdrücken (getrennt durch Kommas), deren Werte (die Argumente) an die Funktion übergeben werden. Das *argument-expression-list*-Argument kann leer sein.  
   
- Die *postfixausdruck* muss von einem der folgenden Typen sein:  
+ Die *Postfix-Expression* muss eines der folgenden Typen sein:  
   
 -   Funktion, die den Typ `T` zurückgibt. Eine Beispieldeklaration ist  
   
-    ```  
+    ```cpp 
     T func( int i )  
     ```  
   
 -   Zeiger auf eine Funktion, die den Typ `T` zurückgibt. Eine Beispieldeklaration ist  
   
-    ```  
+    ```cpp 
     T (*func)( int i )  
     ```  
   
 -   Verweis auf eine Funktion, die den Typ `T` zurückgibt. Eine Beispieldeklaration ist  
   
-    ```  
+    ```cpp 
     T (&func)(int i)  
     ```  
   
 -   Zeiger auf eine Memberfunktion dereferenziert die Rückgabe des Typs `T`. Beispiele für Funktionsaufrufe sind  
   
-    ```  
+    ```cpp 
     (pObject->*pmf)();  
     (Object.*pmf)();  
     ```  
@@ -71,7 +72,7 @@ postfix-expression
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Standardbibliotheksfunktion `strcat_s` mit drei Argumenten aufgerufen:  
   
-```  
+```cpp 
 // expre_Function_Call_Operator.cpp  
 // compile with: /EHsc  
   
@@ -104,7 +105,7 @@ Welcome to C++
 ## <a name="function-call-results"></a>Ergebnisse des Funktionsaufrufs  
  Ein Funktionsaufruf wird zu einem r-value ausgewertet, es sei denn, die Funktion ist als Referenztyp deklariert. Funktionen mit dem Verweisrückgabetyp werden zu L-Werten ausgewertet und können wie folgt auf der linken Seite einer Zuweisungsanweisung verwendet werden:  
   
-```  
+```cpp 
 // expre_Function_Call_Results.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -134,11 +135,11 @@ int main()
 }  
 ```  
   
- Der vorhergehende Code definiert eine Klasse mit dem Namen `Point`, die private Daten enthält, die darstellen, Objekte *x* und *y* Koordinaten. Diese Datenobjekte müssen geändert und ihre Werte abgerufen werden. Dieses Programm ist nur einer von mehreren Entwürfen für eine solche Klasse. Eine Verwendung der Funktionen `GetX` und `SetX` oder `GetY` und `SetY` ist ein anderer möglicher Entwurf.  
+ Der vorhergehende Code definiert eine Klasse namens `Point`, enthält private Objekte, die darstellen, *x* und *y* Koordinaten. Diese Datenobjekte müssen geändert und ihre Werte abgerufen werden. Dieses Programm ist nur einer von mehreren Entwürfen für eine solche Klasse. Eine Verwendung der Funktionen `GetX` und `SetX` oder `GetY` und `SetY` ist ein anderer möglicher Entwurf.  
   
  Funktionen, die Klassentypen, Zeiger auf Klassentypen oder Verweise auf Klassentypen zurückgeben, können als linker Operand für Memberauswahloperatoren verwendet werden. Daher ist der folgende Code gültig:  
   
-```  
+```cpp 
 // expre_Function_Results2.cpp  
 class A {  
 public:  
@@ -183,5 +184,5 @@ int main() {
   
 ## <a name="see-also"></a>Siehe auch  
  [Postfixausdrücke](../cpp/postfix-expressions.md)   
- [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++-Built-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Funktionsaufruf](../c-language/function-call-c.md)   

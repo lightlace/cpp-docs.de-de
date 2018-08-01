@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2f6359cb50146dac6e502cf68469c877c776617b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943322"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407714"
 ---
 # <a name="nested-class-declarations"></a>Geschachtelte Klassendeklarationen
 Eine Klasse kann im Bereich einer anderen Klasse deklariert werden. Eine solche Klasse wird als "geschachtelte Klasse" bezeichnet. Geschachtelte Klassen gelten als innerhalb des Bereichs der einschließenden Klasse befindlich und sind für die Verwendung innerhalb dieses Bereichs verfügbar. Um auf eine geschachtelte Klasse aus einem anderen als dem unmittelbar einschließenden Bereich zu verweisen, müssen Sie einen vollqualifizierten Namen angeben.  
