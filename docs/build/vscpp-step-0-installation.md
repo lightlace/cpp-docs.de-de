@@ -1,5 +1,5 @@
 ---
-title: C++-Unterstützung in Visual Studio zu installieren | Microsoft Docs
+title: Installieren von C++-Unterstützung in Visual Studio | Microsoft-Dokumentation
 description: Installieren Sie Visual Studio-Unterstützung für Visual C++
 ms.custom: mvc
 ms.date: 06/21/2018
@@ -14,66 +14,66 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5807110caf730c72d93de7e1265199b63f1d6bff
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 3cc9c124a5b3f2fea92f729d7d11df579cc25a39
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322484"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376058"
 ---
-# <a name="install-c-support-in-visual-studio"></a>C++-Unterstützung in Visual Studio installieren
+# <a name="install-c-support-in-visual-studio"></a>Installieren von C++-Unterstützung in Visual Studio
 
-Wenn Sie noch nicht heruntergeladen und installiert noch Visual Studio und Visual C++-Tools, sieht die erste Schritte.
+Wenn Sie noch nicht heruntergeladen und Visual Studio und Visual C++-Tools noch nicht installiert, sieht aus wie für den Einstieg.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Einer breitbandinternetverbindung. Visual Studio-Installer kann mehrere Gigabyte an Daten herunterladen.
+- Eine Breitband-Internetverbindung. Visual Studio-Installer kann mehrere Gigabyte Daten herunterladen.
 
-- Ein Computer, der Microsoft Windows 7 oder höher ausgeführt wird. Wir empfehlen Windows 10 Entwicklung optimale Ergebnisse zu erzielen. Stellen Sie sicher, dass die neuesten Updates vor der Installation von Visual Studio auf das System angewendet werden.
+- Ein Computer, der Microsoft Windows 7 oder höher ausgeführt wird. Wir empfehlen die Windows 10, für die bestmögliche entwicklungserfahrung. Stellen Sie sicher, dass die neuesten Updates für Ihr System angewendet werden, vor der Installation von Visual Studio.
 
-- Ausreichend freier Speicherplatz vorhanden. Visual Studio erfordert mindestens 7GB Speicherplatz und dauert mindestens 50GB, wenn viele allgemeine Optionen installiert werden. Es wird empfohlen, dass die Installation auf dem Laufwerk "c:".
+- Ausreichend freier Speicherplatz auf dem Datenträger. Visual Studio erfordert mindestens 7GB Speicherplatz und dauert mindestens 50GB, wenn viele allgemeine Optionen installiert sind. Es wird empfohlen, dass Sie es auf Ihrem Laufwerk "c:" installieren.
 
-Ausführliche Informationen zu den freien Speicherplatz und die Anforderungen an das Betriebssystem, finden Sie unter [Visual Studio-Produktfamilie System Produktanforderungen](/visualstudio/productinfo/vs2017-system-requirements-vs). Das Installationsprogramm gibt an, wie viel Speicherplatz für die Optionen erforderlich ist, die Sie auswählen.
+Weitere Informationen zu den freien Speicherplatz und den Anforderungen des Betriebssystems, finden Sie unter [Visual Studio Systemanforderungen der Produktfamilie](/visualstudio/productinfo/vs2017-system-requirements-vs). Das Installationsprogramm gibt an, wie viel Speicherplatz für die Optionen erforderlich ist, die Sie auswählen.
 
 ## <a name="installation"></a>Installation
 
 1. Laden Sie das neueste Visual Studio 2017-Installationsprogramm für Windows herunter.
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Installieren von Visual Studio 2017 Community</a>
+   > [Installieren von Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
    >[!Tip]
    > Die Community Edition eignet sich für einzelne Entwickler, Schulungsumgebungen, akademische Forschung und Open Source-Entwicklung. Installieren Sie für andere Verwendungen <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> oder <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
 
-1. Suchen Sie die Installationsdatei heruntergeladen und führen Sie es. Kann in Ihrem Browser angezeigt werden, oder Sie finden es vielleicht in Ihrem Ordner "Downloads". Das Installationsprogramm benötigt Administratorrechte zum Ausführen. Sie wird möglicherweise eine **User Account Control** Dialogfeld bestätigen Sie gewähren der Berechtigung, lassen das Installationsprogramm, nehmen Sie Änderungen an Ihrem System aus, wählen Sie **Ja**. Wenn Sie Probleme haben, suchen Sie die heruntergeladene Datei im Datei-Explorer mit der rechten Maustaste auf das Symbol "Installationsprogramm", und wählen **als Administrator ausführen** aus dem Kontextmenü.
+1. Suchen Sie die Installer-Datei, die Sie heruntergeladen haben und ihn ausführen. Sie können in Ihrem Browser angezeigt werden, oder Umständen ist es in Ihrem Ordner "Downloads". Das Installationsprogramm benötigt Administratorrechte ausgeführt. Sie sehen möglicherweise eine **User Account Control** Dialogfeld werden Sie aufgefordert, erteilen Sie Berechtigungen zum können des Installationsprogramms, nehmen Sie Änderungen an Ihrem System aus, wählen **Ja**. Wenn Sie Probleme auftreten, suchen Sie die heruntergeladene Datei im Datei-Explorer, mit der rechten Maustaste auf das Symbol "Installer" aus, und wählen **als Administrator ausführen** aus dem Kontextmenü.
 
-   ![Führen Sie das Installationsprogramm von Visual Studio 2017](../build/media/vscpp-concierge-run-installer.gif "führen Sie das Installationsprogramm von Visual Studio")
+   ![Führen Sie das Visual Studio 2017-Installationsprogramm](../build/media/vscpp-concierge-run-installer.gif "führen Sie den Visual Studio-Installer")
 
-1. Der Installer bietet Ihnen eine Liste von Workloads, bei denen es sich um Gruppen von verwandten Optionen für bestimmte Entwicklungsbereiche handelt. Unterstützung für C++ ist jetzt Teil des optionalen Arbeitslasten, die standardmäßig installiert sind.
+1. Der Installer bietet Ihnen eine Liste von Workloads, bei denen es sich um Gruppen von verwandten Optionen für bestimmte Entwicklungsbereiche handelt. Unterstützung für C++ ist jetzt Teil der optionalen Workloads, die standardmäßig installiert sind.
 
-   ![Desktop-Entwicklung mit C++](../build/media/desktop-development-with-cpp.png "Desktopentwicklung mit C++")
+   ![Desktopentwicklung mit C++](../build/media/desktop-development-with-cpp.png "Desktopentwicklung mit C++")
 
-    Wählen Sie für C++, die **Desktopentwicklung mit C++** Arbeitslast und wählen Sie dann **installieren**.
+    Wählen Sie für C++, die **Desktopentwicklung mit C++** Workload und wählen Sie dann **installieren**.
 
-   ![Installieren Sie die Desktopentwicklung C++ Arbeitslast](../build/media/vscpp-concierge-choose-workload.gif "installieren Sie die Desktop-Entwicklung mit C++-Arbeitslast")
+   ![Installieren Sie die Desktopentwicklung mit C++-Arbeitslast](../build/media/vscpp-concierge-choose-workload.gif "installieren Sie die Desktopentwicklung mit C++-Arbeitslast")
 
-1. Wählen Sie nach Abschluss der Installation der **starten** Schaltfläche, um Visual Studio starten.
+1. Wählen Sie nach Abschluss der Installation der **starten** Schaltfläche zum Starten von Visual Studio.
 
-   Beim erstmaligen Ausführen von Visual Studio werden Sie aufgefordert, zur Anmeldung mit einem Microsoft-Account. Wenn Sie über keins verfügen, können Sie es kostenloses erstellen. Sie müssen zudem ein Design auswählen. Keine Sorge, Sie können ihn später ändern Sie nach Bedarf. 
+   Beim ersten Ausführen von Visual Studio werden Sie aufgefordert, sich mit einem Microsoft Account anmelden. Wenn Sie über keins verfügen, können Sie es kostenloses erstellen. Sie müssen auch ein Design auswählen. Keine Sorge, Sie können ihn später ändern, wenn Sie möchten. 
 
-   Dauert möglicherweise Visual Studio einige Minuten, um für die Verwendung der ersten Ausführung vorzubereiten. Hier ist, wie es in einer kurzen Zeitraffervideos aussieht:
+   Es dauert Visual Studio mehrere Minuten zum ersten Mal ausführen, sie vorzubereiten. So sieht es wie in der eine schnelle, die mit:
 
-   ![Melden Sie sich bei Visual Studio 2017](../build/media/vscpp-quickstart-first-run.gif "2017 von Visual Studio anmelden")
+   ![Melden Sie sich bei Visual Studio 2017](../build/media/vscpp-quickstart-first-run.gif "melden Sie sich bei Visual Studio 2017")
 
    Visual Studio startet viel schneller, wenn Sie es erneut ausführen.
 
-1. Überprüfen Sie beim Öffnen von Visual Studio, um festzustellen, ob das Flagsymbol in der Titelleiste hervorgehoben ist:
+1. Wenn Visual Studio geöffnet wird, überprüfen Sie, wenn markiert ist, dass Sie das Symbol in der Titelleiste an:
 
-   ![Visual Studio 2017 Benachrichtigungskennzeichen](../build/media/vscpp-first-start-page-flag.png "Visual Studio 2017 Benachrichtigungskennzeichen")
+   ![Visual Studio 2017-Benachrichtigungskennzeichen](../build/media/vscpp-first-start-page-flag.png "Benachrichtigungshinweis für Visual Studio 2017")
 
-   Wenn er hervorgehoben wird, wählen Sie diese so öffnen die **Benachrichtigungen** Fenster. Wenn alle Updates für Visual Studio verfügbar sind, wird empfohlen, dass Sie diese jetzt installieren. Sobald die Installation abgeschlossen ist, starten Sie Visual Studio neu.
+   Wenn er hervorgehoben wird, wählen Sie diese zum Öffnen der **Benachrichtigungen** Fenster. Wenn keine Updates für Visual Studio verfügbar sind, empfehlen wir, dass Sie dies jetzt tun. Sobald die Installation abgeschlossen ist, starten Sie Visual Studio neu.
 
-Wenn Visual Studio ausgeführt wird, werden Sie mit dem nächsten Schritt fortfahren.
+Wenn Visual Studio ausgeführt wird, können Sie mit dem nächsten Schritt fortfahren.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
