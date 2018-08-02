@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Iidcount-Konstante | Microsoft Docs'
+title: 'Chaininterfaces:: Iidcount-Konstante | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5327b706fb6b461d7bbe449df5482c8f0c485ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d089e9639d83150e501b32577de94fc43b516c1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860001"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463940"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>ChainInterfaces::IidCount-Konstante
-Die Gesamtanzahl der Schnittstellen-IDs enthalten, die in den Schnittstellen, die vom Vorlagenparameter angegeben `I0` über `I9`.  
+Die Gesamtanzahl der Schnittstellen-IDs enthalten, die in den Schnittstellen, die vom Vorlagenparameter angegeben *I0* über *I9*.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +37,7 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
  Die Gesamtanzahl der Schnittstellen-IDs.  
   
 ## <a name="remarks"></a>Hinweise  
- Vorlagenparameter `I0` und `I1` sind erforderlich, und die Parameter `I2` über `I9` sind optional. Die Anzahl von IID für jede Schnittstelle ist in der Regel 1.  
+ Vorlagenparameter *I0* und *I1* sind erforderlich, und die Parameter *I2* über *I9* sind optional. Die Anzahl der IID jeder Schnittstelle ist in der Regel 1.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  

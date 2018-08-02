@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 00939b514c243f673baf7f0997f1ca3860251626
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941040"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462650"
 ---
 # <a name="typeinfo-class"></a>type_info-Klasse
-Die `type_info` Klasse beschreibt die Typinformationen, die innerhalb des Programms vom Compiler generiert werden. Objekte dieser Klasse speichern effektiv einen Zeiger auf einen Namen für den Typ. Die `type_info` Klasse speichert auch einen codierten Wert für das Vergleichen von zwei Typen für Gleichheit oder Sortierreihenfolge. Die Codierungsregeln und die Sortierreihenfolge für Typen sind nicht spezifiziert und können je nach Programm unterschiedlich sein.  
+Die **Type_info** Klasse beschreibt die Typinformationen, die innerhalb des Programms vom Compiler generiert werden. Objekte dieser Klasse speichern effektiv einen Zeiger auf einen Namen für den Typ. Die **Type_info** Klasse speichert auch einen codierten Wert für das Vergleichen von zwei Typen für Gleichheit oder Sortierreihenfolge. Die Codierungsregeln und die Sortierreihenfolge für Typen sind nicht spezifiziert und können je nach Programm unterschiedlich sein.  
   
- Die `<typeinfo>` Headerdatei-Druckertreiber eingeschlossen werden muss die `type_info` Klasse. Die Schnittstelle für die `type_info` -Klasse ist:  
+ Die `<typeinfo>` Headerdatei-Druckertreiber eingeschlossen werden muss die **Type_info** Klasse. Die Schnittstelle für die **Type_info** -Klasse ist:  
   
 ```cpp
 class type_info {  
@@ -42,11 +42,11 @@ public:
 };  
 ```  
   
- Objekte können nicht instanziiert werden die `type_info` -Klasse direkt verwenden, da die Klasse nur einen privaten Kopierkonstruktor aufweist. Die einzige Möglichkeit, ein (temporäres) `type_info` Objekt ist die Verwendung der [Typeid](../cpp/typeid-operator.md) Operator. Da der Zuweisungsoperator auch privat ist, Sie nicht kopieren oder zuweisen können Objekte der Klasse `type_info`.  
+ Objekte können nicht instanziiert werden die **Type_info** -Klasse direkt verwenden, da die Klasse nur einen privaten Kopierkonstruktor aufweist. Die einzige Möglichkeit, ein (temporäres) **Type_info** Objekt ist die Verwendung der [Typeid](../cpp/typeid-operator.md) Operator. Da der Zuweisungsoperator auch privat ist, Sie nicht kopieren oder zuweisen können Objekte der Klasse **Type_info**.  
   
- `type_info::hash_code` definiert eine Hashfunktion, die geeignet ist, Werte des Typs `typeinfo` einer Verteilung von Indexwerten.  
+ `type_info::hash_code` definiert eine Hashfunktion, die geeignet ist, Werte des Typs **Typeinfo** einer Verteilung von Indexwerten.  
   
- Die Operatoren `==` und `!=` können verwendet werden, um auf Gleichheit und Ungleichheit verglichen werden soll, mit anderen `type_info` -Objekten.  
+ Die Operatoren `==` und `!=` können verwendet werden, um auf Gleichheit und Ungleichheit verglichen werden soll, mit anderen **Type_info** -Objekten.  
   
  Es gibt keine Verbindung zwischen der Sortierreihenfolge von Typen und Vererbungsbeziehungen. Verwenden der `type_info::before` Member-Funktion, um die Sortierreihenfolge von Typen zu ermitteln. Es gibt keine Garantie, `type_info::before` ergibt das gleiche Ergebnis in verschiedenen Programmen oder sogar von verschiedenen Ausführungen desselben Programms. Auf diese Weise `type_info::before` ist vergleichbar mit dem Address-of `(&)` Operator.  
   

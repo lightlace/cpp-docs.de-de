@@ -1,5 +1,5 @@
 ---
-title: C-Stil mit Clr - wandelt (C + c++ / CLI) | Microsoft Docs
+title: C-stilartige Umwandlungen mit / Clr (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384aa6d1d7a4329f52157f1d002dcda2feb5cb8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ffb2e5a7276925c5f03d06a909803d001532f35
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860397"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464583"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>C-stilartige Umwandlungen mit /clr (C++/CLI)
 Das folgende Thema gilt nur für die Common Language Runtime.  
   
- Mit CLR-Typen verwendet, versucht der Compiler die C-Format eine Umwandlung in einen der unten aufgeführten, in der folgenden Reihenfolge Umwandlungen zuordnen:  
+ Wenn mit CLR-Typen verwendet wird, versucht der Compiler Umwandlung im C-Format in eines der Umwandlungen zurückzuführen, die unten aufgeführten, in der folgenden Reihenfolge zugeordnet:  
   
 1.  const_cast  
   
 2.  safe_cast  
   
-3.  "safe_cast" plus const_cast-Operator  
+3.  "safe_cast" und "const_cast"  
   
 4.  static_cast  
   
-5.  Static_cast plus const_cast-Operator  
+5.  "static_cast" plus "const_cast"  
   
- Wenn keines der oben aufgeführten Umwandlungen gültig ist und der Typ des Ausdrucks und der Zieltyp CLR-Verweistypen sind, wird eine laufzeitüberprüfung (Castclass MSIL-Anweisung) Umwandlung im C-Stil zugeordnet. Andernfalls eine Umwandlung im C-Format ist als ungültig betrachtet, und der Compiler eines Fehlers.  
+ Wenn keines der oben aufgeführten Umwandlungen gültig ist und den Typ des Ausdrucks und den Typ des CLR-Verweistypen sind, wird eine laufzeitüberprüfung (Castclass MSIL-Anweisung) Umwandlung im C-Stil zugeordnet. Andernfalls wird eine Umwandlung im C-Stil ist ungültig, und gibt der Compiler einen Fehler.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Umwandlung im C-Format wird nicht empfohlen. Beim Kompilieren mit [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md), verwenden Sie ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md).  
+ Eine Umwandlung im C-Stil wird nicht empfohlen. Beim Kompilieren mit [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md), verwenden Sie ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md).  
   
- Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine `const_cast`.  
+ Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"const_cast"**.  
   
-```  
+```cpp  
 // cstyle_casts_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -56,9 +56,9 @@ int main() {
 }  
 ```  
   
- Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine `safe_cast`.  
+ Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"safe_cast"**.  
   
-```  
+```cpp  
 // cstyle_casts_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -68,9 +68,9 @@ int main() {
 }  
 ```  
   
- Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine `safe_cast` plus `const_cast`.  
+ Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"safe_cast"** plus **"const_cast"**.  
   
-```  
+```cpp  
 // cstyle_casts_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -89,9 +89,9 @@ int main() {
 }  
 ```  
   
- Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine `static_cast`.  
+ Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"static_cast"**.  
   
-```  
+```cpp  
 // cstyle_casts_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -110,9 +110,9 @@ int main() {
 }  
 ```  
   
- Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine `static_cast` plus `const_cast`.  
+ Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"static_cast"** plus **"const_cast"**.  
   
-```  
+```cpp  
 // cstyle_casts_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,9 +131,9 @@ int main() {
 }  
 ```  
   
- Das folgende Beispiel zeigt eine Umwandlung im C-Format, das eine Überprüfung zur Laufzeit zugeordnet.  
+ Das folgende Beispiel zeigt eine Umwandlung im C-Format, das eine laufzeitüberprüfung zugeordnet.  
   
-```  
+```cpp  
 // cstyle_casts_6.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -152,9 +152,9 @@ int main() {
 }  
 ```  
   
- Das folgende Beispiel zeigt ein ungültige C-Format umgewandelt, die bewirkt, dass der Compiler einen Fehler ausgeben.  
+ Das folgende Beispiel zeigt ein ungültige C-Format umgewandelt, wodurch den Compiler einen Fehler ausgeben.  
   
-```  
+```cpp  
 // cstyle_casts_7.cpp  
 // compile with: /clr  
 using namespace System;  

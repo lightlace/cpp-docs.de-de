@@ -1,5 +1,5 @@
 ---
-title: Co-Klasse | Microsoft Docs
+title: Co-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5eb9c7e632151c039b76a0f389cd18c68c0740ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33867011"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463115"
 ---
 # <a name="coclass"></a>coclass
 Erstellt ein COM-Objekt, die eine COM-Schnittstelle implementieren können.  
@@ -30,62 +30,60 @@ Erstellt ein COM-Objekt, die eine COM-Schnittstelle implementieren können.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [coclass]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Coclass** C++-Attribut ein Konstrukt Co-Klasse in der generierten IDL-Datei platziert.  
+ Die **Co-Klasse** C++-Attribut wird ein Co-Klasse-Konstrukt in der generierten IDL-Datei.  
   
- Wenn Sie eine Co-Klasse zu definieren, können Sie auch angeben der [Uuid](../windows/uuid-cpp-attributes.md), [Version](../windows/version-cpp.md), [threading](../windows/threading-cpp.md), [Vi_progid](../windows/vi-progid.md), und [progid ](../windows/progid.md) Attribute. Wenn eines dieser nicht angegeben ist, wird er erstellt werden.  
+ Wenn Sie eine Co-Klasse zu definieren, können Sie auch angeben der [Uuid](../windows/uuid-cpp-attributes.md), [Version](../windows/version-cpp.md), [threading](../windows/threading-cpp.md), [Vi_progid](../windows/vi-progid.md), und [progid ](../windows/progid.md) Attribute. Wenn eines dieser Projekte nicht angegeben ist, wird er erstellt werden.  
   
- Enthält zwei Headerdateien Klassen mit der **Coclass** Attribut, und geben Sie an einer GUID, die der Compiler verwendet den gleiche GUID für beide Klassen und werden. Dies führt zu einem Fehler "MIDL".  Daher sollten Sie verwenden die `uuid` -Attribut bei der Verwendung **Coclass**.  
+ Wenn zwei Headerdateien Klassen mit enthalten die **Co-Klasse** Attribut, und geben Sie nicht von einer GUID, die der Compiler verwendet die gleiche GUID für beide Klassen aus, und dies führt zu einem MIDL-Fehler.  Daher sollten Sie verwenden die `uuid` -Attribut bei Verwendung von **Co-Klasse**.  
   
  **ATL-Projekte**  
   
- Wenn dieses Attribut in einem ATL-Projekt, vor die Definition einer Klasse oder Struktur steht es:  
+ Wenn dieses Attribut die Definition einer Klasse oder Struktur in einem ATL-Projekt steht es:  
   
--   Fügen Code oder Daten zur Unterstützung der automatischen Registrierung für das Objekt.  
+-   Fügt Code oder Daten zur Unterstützung der automatischen Registrierung für das Objekt an.  
   
--   Fügt Code- oder Datenmenge um ein COM-Klassenfactory für das Objekt zu unterstützen.  
+-   Fügt Code oder Daten zum Unterstützen von COM-Klassenfactory für das Objekt an.  
   
--   Fügt Code- oder Datenmenge implementieren **IUnknown** , und stellen Sie dem Objekt ein COM-erstellbares Objekt.  
+-   Fügt Code oder Daten implementieren `IUnknown` , und stellen Sie dem Objekt ein COM-erstellbares Objekt.  
   
- Insbesondere werden die folgenden Basisklassen auf das Zielobjekt hinzugefügt:  
+ Insbesondere werden die folgenden Basisklassen des Zielobjekts hinzugefügt:  
   
--   [CComCoClass Klasse](../atl/reference/ccomcoclass-class.md) die Factory und Aggregation Standardmodell von Klasse für das Objekt enthält.  
+-   [CComCoClass-Klasse](../atl/reference/ccomcoclass-class.md) stellt Standard-Klasse Factory und Aggregation für das Objekt.  
   
--   [CComObjectRootEx Klasse](../atl/reference/ccomobjectrootex-class.md) verfügt über eine Vorlage basierend auf der threading Modellklasse gemäß der [threading](../windows/threading-cpp.md) Attribut. Wenn die **threading** Attribut ist nicht angegeben wird, die Standardeinstellung Threadingmodell Apartment.  
+-   [CComObjectRootEx-Klasse](../atl/reference/ccomobjectrootex-class.md) verfügt über eine Vorlage anhand der threading Modellklasse, die gemäß der [threading](../windows/threading-cpp.md) Attribut. Wenn die `threading` Attribut nicht angegeben wird, der Standardwert threading-Modell ist Apartment.  
   
--   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) wird hinzugefügt, wenn die [Noncreatable](../windows/noncreatable.md) Attribut wurde nicht für das Zielobjekt angegeben.  
+-   [IProvideClassInfo2Impl](../atl/reference/iprovideclassinfo2impl-class.md) wird hinzugefügt, wenn die [Noncreatable](../windows/noncreatable.md) Attribut ist nicht für das Zielobjekt angegeben.  
   
- Zum Schluss wird eine duale Schnittstelle, die nicht mit eingebetteten IDL definiert ist mit dem entsprechenden ersetzt [IDispatchImpl](../atl/reference/idispatchimpl-class.md) Klasse. Wenn die duale Schnittstelle in der eingebetteten IDL definiert ist, wird die Schnittstelle in der Basisliste nicht geändert werden.  
+ Abschließend wird jeder duale Schnittstelle, die nicht mit der eingebetteten IDL definiert ist mit dem entsprechenden ersetzt [IDispatchImpl](../atl/reference/idispatchimpl-class.md) Klasse. Wenn die duale Schnittstelle in der eingebetteten IDL definiert ist, wird die Schnittstelle in der Basisliste nicht geändert werden.  
   
- Die **Coclass** Attribut auch stellt die folgenden Funktionen zur Verfügung über eingefügten Code oder in der Groß-/Kleinschreibung `GetObjectCLSID`, als statische Methode in der Basisklasse `CComCoClass`:  
+ Die **Co-Klasse** Attribut macht zudem die folgenden Funktionen verfügbar über den eingefügten Code oder im Fall von `GetObjectCLSID`, als statische Methode in der Basisklasse `CComCoClass`:  
   
 -   `UpdateRegistry` registriert die Klassenfactorys der Zielklasse an.  
   
--   `GetObjectCLSID`, die mit der Registrierung, verknüpft ist kann auch zum Abrufen der CLSID der Zielklasse verwendet werden.  
+-   `GetObjectCLSID`, die Registrierung, bezieht kann auch zum Abrufen der CLSID der Zielklasse verwendet werden.  
   
--   **GetObjectFriendlyName** Standardmäßig gibt eine Zeichenfolge im Format "\<*Name der Zielklasse*> `Object`". Wenn diese Funktion bereits vorhanden ist, wird er nicht hinzugefügt. Fügen Sie diese Funktion der Zielklasse zurückzugebenden einen benutzerfreundlicheren Namen als die automatisch generiert.  
+-   `GetObjectFriendlyName` Standardmäßig gibt eine Zeichenfolge im Format "\<*Zielklassenname*> `Object`". Wenn diese Funktion bereits vorhanden ist, wird er nicht hinzugefügt. Fügen Sie diese Funktion auf die Zielklasse, um einen aussagekräftigeren Namen als automatisch generierte zurückzugeben.  
   
--   **GetProgID**, bezieht sich auf die Registrierung, gibt die Zeichenfolge angegeben, mit der [progid](../windows/progid.md) Attribut.  
+-   `GetProgID`, die Registrierung, verknüpft ist, gibt die Zeichenfolge, die mit angegebenen die [progid](../windows/progid.md) Attribut.  
   
--   **GetVersionIndependentProgID** hat die gleiche Funktion wie **GetProgID**, jedoch wird die Zeichenfolge, die mit angegebenen [Vi_progid](../windows/vi-progid.md).  
+-   `GetVersionIndependentProgID` hat die gleiche Funktion wie `GetProgID`, jedoch wird die Zeichenfolge, die mit angegebenen [Vi_progid](../windows/vi-progid.md).  
   
- Die folgenden Änderungen, die die COM-Zuordnung miteinander verbunden sind, werden an die Zielklasse vorgenommen:  
+ Die folgenden Änderungen, die mit der COM-Zuordnung verknüpft sind, werden für die Zielklasse vorgenommen:  
   
--   Eine COM-Zuordnung wird hinzugefügt, und für alle Schnittstellen abgeleitet von der Zielklasse und alle Einträge, die gemäß der [Einstiegspunkte für COM-Schnittstellen](../mfc/com-interface-entry-points.md) Attribut oder denen der [Aggregate](../windows/aggregates.md) Attribut.  
+-   Eine COM-Zuordnung wird hinzugefügt, und für alle Schnittstellen, die die Zielklasse abgeleitet und alle Einträge, die gemäß der [Einstiegspunkte für COM-Schnittstellen](../mfc/com-interface-entry-points.md) Attribut oder die von der [Aggregate](../windows/aggregates.md) Attribut.  
   
 -   Ein [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto) Makro wird in der COM-Zuordnung eingefügt.
   
- Der Name der Co-Klasse, die in der IDL-Datei für die Klasse generierte müssen den gleichen Namen wie die Klasse.  Verwenden Sie z. B. und verweisen auf die im folgenden Beispiel wird für den Zugriff auf die Klassen-ID für einen Co-Klasse CMyClass, in einem Client über die MIDL-generierten Headerdatei CLSID_CMyClass aus.  
+ Der Name der Co-Klasse in der IDL-Datei für die Klasse generiert, müssen den gleichen Namen wie die Klasse.  Verwenden Sie zum Beispiel, und verweisen auf die im folgenden Beispiel wird für den Zugriff auf die Klassen-ID für eine Co-Klasse CMyClass, in einem Client über die MIDL-generierten Headerdatei CLSID_CMyClass aus.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt, wie Sie die **Coclass** Attribut:  
+ Der folgende Code zeigt, wie Sie mit der **Co-Klasse** Attribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_coclass1.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -101,9 +99,9 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- Im folgende Beispiel wird gezeigt, wie die standardmäßige Implementierung einer Funktion zu überschreiben, die in den vom eingefügten Code angezeigt wird der **Coclass** Attribut. Weitere Informationen zum Anzeigen von eingefügtem Code finden Sie unter [/Fx](../build/reference/fx-merge-injected-code.md) . Alle Basisklassen oder Schnittstellen, mit denen Sie für eine Klasse wird werden in den eingefügten Code angezeigt.   Darüber hinaus wird, wenn eine Klasse ist standardmäßig in den eingefügten Code enthalten, und Sie explizit dieser Klasse als Basis für die Co-Klasse angeben, die Attributanbieter das Formular im Code angegeben verwenden.  
+ Das folgende Beispiel zeigt, wie die standardmäßige Implementierung einer Funktion überschrieben, das in den mittels eingefügten Code wird die **Co-Klasse** Attribut. Weitere Informationen zum Anzeigen von eingefügtem Code finden Sie unter [/Fx](../build/reference/fx-merge-injected-code.md) . Alle Basisklassen oder Schnittstellen, mit denen Sie für eine Klasse wird werden in den eingefügten Code angezeigt.   Darüber hinaus wird, wenn eine Klasse ist standardmäßig in den eingefügten Code enthalten, und Sie explizit dieser Klasse als Basis für die Co-Klasse angeben, Attributanbieter das Formular angegeben, die in Ihrem Code verwenden.  
   
-```  
+```cpp  
 // cpp_attr_ref_coclass2.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -143,7 +141,7 @@ public:
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`|  
+|**Betrifft**|**Klasse**, **Struktur**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

@@ -1,5 +1,5 @@
 ---
-title: Parametertypen (Komponentenerweiterungen für C++)-Attribut | Microsoft Docs
+title: Attributtypen der Parameter (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64da24a9811046672c317c24bba5332bf09303f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 79d89eec82725b28bdbe43f08ac2c05cdb889f6e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860306"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466968"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>Attributparametertypen (Komponentenerweiterungen für C++)
-Der Compiler müssen Attributen übergebenen Werte zum Zeitpunkt der Kompilierung bekannt sein.  Attributparameter können die folgenden Typen entsprechen:  
+Werte für Attribute übergeben, müssen für den Compiler zum Zeitpunkt der Kompilierung bekannt sein.  Zuordnen von Parametern können die folgenden Typen entsprechen:  
   
--   `bool`  
+-   **bool**  
   
--   `char`, `unsigned char`  
+-   **Char**, **unsigned Char**  
   
--   `short`, `unsigned short`  
+-   **short**, **unsigned short**  
   
--   `int`, `unsigned int`  
+-   **Int**, **ganze Zahl ohne Vorzeichen**  
   
--   `long`, `unsigned long`  
+-   **lange**, **unsigned long**  
   
--   `__int64`, `unsigned __int64`  
+-   **__int64**, **__int64 ohne Vorzeichen**  
   
--   `float`, `double`  
+-   **"float"**, **double**  
   
--   `wchar_t`  
+-   **wchar_t**  
   
 -   `char*`, `wchar_t*` oder `System::String*`  
   
@@ -47,13 +47,13 @@ Der Compiler müssen Attributen übergebenen Werte zum Zeitpunkt der Kompilierun
   
 -   `System::Object ^`  
   
--   `enum`  
+-   **enum**  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // attribute_parameter_types.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -77,11 +77,11 @@ ref struct MyStruct {
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Wenn Sie Attribute angeben, müssen alle unbenannten (mit Feldern fester Breite) Argumente keine benannten Argumente voranstellen.  
+ Wenn Sie Attribute angeben, müssen alle unbenannten (Positions-) Argumente vor benannten Argumenten stehen.  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // extending_metadata_c.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -110,11 +110,11 @@ ref class ClassD {};   // Positional and named
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Attributparameter können eindimensionale Arrays der vorherigen Typen sein.  
+ Zuordnen von Parametern können eindimensionale Arrays der vorherigen Typen sein.  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // extending_metadata_d.cpp  
 // compile with: /clr /c  
 using namespace System;  

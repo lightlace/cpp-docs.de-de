@@ -1,5 +1,5 @@
 ---
-title: CloakedIid-Struktur | Microsoft Docs
+title: CloakedIid-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57ad76b48b92519eaeed089dfb14817c38273588
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e0155006987165f5b192aac73bb31991081a231
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856159"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461222"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid-Struktur
-Zeigt „RuntimeClass“-, „Implements“- und „ChainInterfaces“-Vorlagen an, dass auf die angegebene Schnittstelle in der IID-Liste nicht zugegriffen werden kann.  
+Gibt an, um die `RuntimeClass`, `Implements` und `ChainInterfaces` Vorlagen, dass die angegebene Schnittstelle nicht zugegriffen werden kann, in der IID-Liste ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,11 +35,11 @@ struct CloakedIid : T;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
+ *T*  
  Die Schnittstelle, die ausgeblendet ist (verdeckt).  
   
 ## <a name="remarks"></a>Hinweise  
- Folgender Ausdruck ist ein Beispiel für die Verwendung CloakedIid: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
+ Im folgenden ist ein Beispiel dafür, wie `CloakedIid` wird verwendet: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `T`  

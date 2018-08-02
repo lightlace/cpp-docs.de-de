@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c4426f3d25681e3ee46bf4d5da615d185babb0f0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939376"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462361"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Willkommen zurück bei C++ (Modern C++)
 C++ ist eine der am häufigsten verwendeten Programmiersprachen der Welt. Gut geschriebene C++-Programme sind schnell und effizient. Die Sprache ist flexibler als andere Sprachen, da sie verwendet werden kann, um eine breite Palette von Apps zu erstellen: lustige und aufregende Spiele, leistungsstarke wissenschaftliche Software, Gerätetreiber, eingebettete Programme und Windows-Clientapps. Seit mehr als 20 Jahren wird C++ zum Lösen von Problemen wie dieser und vieler anderer. Ihnen ist möglicherweise nicht bekannt, dass eine zunehmende Anzahl von C++-Programmierern sich von der uneleganten Programmierung im C-Stil von einst abgewandt haben, hin zu einem modernen C++.  
@@ -49,7 +49,6 @@ C++ ist eine der am häufigsten verwendeten Programmiersprachen der Welt. Gut ge
  Die Programmiersprache C++ selbst hat sich auch entwickelt. Vergleichen Sie die folgenden Codeausschnitte. In diesem Ausschnitt wird ursprünglicher C++-Code verwendet:  
   
 ```cpp  
-
 #include <vector>
 
 void f()
@@ -81,7 +80,6 @@ void f()
  In diesem wird gezeigt, wie die gleiche Aufgabe in modernem C++ erreicht wird:  
   
 ```cpp
-
 #include <memory>  
 #include <vector>  
 
@@ -99,7 +97,6 @@ void f()
         }
     }
 }
-
 ```
 
  In modernem C++ ist die Verwendung der Ausnahmebehandlung "neu/löschen" oder "explizit" nicht erforderlich, da Sie statt dessen intelligente Zeiger nutzen können. Bei Verwendung der **automatisch** typableitung und [Lambda-Funktion](../cpp/lambda-expressions-in-cpp.md), Sie können Code schneller und schreiben. soll sie festgezogen und ihn besser verstehen. Und eine bereichsbasierte **für** Schleife ist sauberer, einfacher zu verwenden und weniger anfällig für unbeabsichtigte Fehler als eine C-Stil **für** Schleife. Sie können Bausteine mit minimalen Codezeilen verbinden, um die App zu schreiben. Außerdem können Sie diesen Code ausnahme- und arbeitsspeichersicher erstellen und haben keinen Zuordnungs-/Freigabe- oder Fehlercodes zu verarbeiten.  

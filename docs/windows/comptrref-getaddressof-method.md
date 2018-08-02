@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Getaddressof-Methode | Microsoft Docs'
+title: 'Comptrref:: Getaddressof-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc8e80fe97bc0a4ace0cb53e43f306ad2b85309
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 435b853268d1fe8c324d217d1ad14f71e4b5a295
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883306"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462936"
 ---
 # <a name="comptrrefgetaddressof-method"></a>ComPtrRef::GetAddressOf-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,10 +34,10 @@ InterfaceType* const * GetAddressOf() const;
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die Adresse eines Zeigers auf die Schnittstelle, die vom aktuellen ComPtrRef-Objekt dargestellt wird.  
+ Adresse eines Zeigers auf die Schnittstelle, die vom aktuellen **ComPtrRef** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Ruft die Adresse eines Zeigers auf die Schnittstelle, die vom aktuellen ComPtrRef-Objekt dargestellt wird.  
+ Ruft die Adresse eines Zeigers auf die Schnittstelle, die vom aktuellen **ComPtrRef** Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

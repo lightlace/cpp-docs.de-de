@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: * Operator | Microsoft Docs'
+title: 'Comptrref:: * Operator | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03de935ab9195cddf3ea9936b694b55ba2cec34c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 55d4fa6156c4ef2032111c0306c3cff8dce14059
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883471"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461451"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator*-Operator
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,10 +34,10 @@ InterfaceType* operator *();
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Zeiger auf die Schnittstelle, die vom aktuellen ComPtrRef-Objekt dargestellt wird.  
+ Zeiger auf die Schnittstelle, die vom aktuellen **ComPtrRef** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Ruft ab, die Zeiger auf die Schnittstelle, die vom aktuellen ComPtrRef-Objekt dargestellt wird.  
+ Ruft ab, der Zeiger auf die Schnittstelle, die vom aktuellen **ComPtrRef** Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Creatormap:: Factorycache-Datenmember | Microsoft Docs'
+title: 'Creatormap:: Factorycache-Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ce9beccabd06e4182e05e4a1e447db189986ef2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c472ba45042711fc12f3dad07184a393f894e78
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871148"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466776"
 ---
 # <a name="creatormapfactorycache-data-member"></a>CreatorMap::factoryCache-Datenmember
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ FactoryCache* factoryCache;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Den Zeiger auf den kanalfactorycache für die CreatorMap gespeichert.  
+ Speichert den Zeiger auf den Cache Factory für die **CreatorMap**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

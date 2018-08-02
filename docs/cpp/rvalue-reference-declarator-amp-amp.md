@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21d1c1ad928ef61573271263a9a1112e944e2472
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e4fb22334e809215f5f00b7d06170f6a018e3312
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943561"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462387"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Rvalue-Verweisdeklarator: &amp;&amp;
 Enthält einen Verweis auf einen rvalue-Ausdruck.  
@@ -29,7 +29,6 @@ Enthält einen Verweis auf einen rvalue-Ausdruck.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 type-id && cast-expression  
 ```  
   
@@ -41,7 +40,7 @@ type-id && cast-expression
 ## <a name="move-semantics"></a>Verschiebesemantik  
  Rvalue-Verweise unterstützen die Implementierung der *move-Semantik*, kann die erheblich die Leistung Ihrer Anwendungen erhöhen. Mithilfe der Verschiebesemantik können Sie Code schreiben, der Ressourcen (wie dynamisch zugeordneten Speicher) von einem Objekt zu einem anderen überträgt. Die Verschiebesemantik funktioniert, da sie das Übertragen von Ressourcen von temporären Objekten ermöglicht, auf die nicht an anderer Stelle im Programm verwiesen werden kann.  
   
- Um Move-Semantik zu implementieren, stellen Sie in der Regel eine *bewegungskonstruktor* und optional einen bewegungszuweisungsoperator (`operator=`), auf die Klasse. Kopier- und Zuordnungsvorgänge, deren Quellen rvalues sind, nutzen dann automatisch die Verschiebesemantik. Im Gegensatz zum standardmäßigen Kopierkonstruktor stellt der Compiler keinen standardmäßigen Bewegungskonstruktor bereit. Weitere Informationen wie einen bewegungskonstruktor geschrieben und wie Sie es in Ihrer Anwendung verwenden, finden Sie unter [Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
+ Um Move-Semantik zu implementieren, stellen Sie in der Regel eine *bewegungskonstruktor* und optional einen bewegungszuweisungsoperator (**Operator =**), auf die Klasse. Kopier- und Zuordnungsvorgänge, deren Quellen rvalues sind, nutzen dann automatisch die Verschiebesemantik. Im Gegensatz zum standardmäßigen Kopierkonstruktor stellt der Compiler keinen standardmäßigen Bewegungskonstruktor bereit. Weitere Informationen wie einen bewegungskonstruktor geschrieben und wie Sie es in Ihrer Anwendung verwenden, finden Sie unter [Bewegungskonstruktoren und Bewegungszuweisungsoperatoren (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).  
   
  Sie können auch gewöhnliche Funktionen und Operatoren überladen, um die Verschiebesemantik zu nutzen. Visual C++ 2010 stellt die Move-Semantik in der C++-Standardbibliothek. Beispielsweise implementiert die `string`-Klasse Vorgänge, die Verschiebesemantik ausführen. Betrachten Sie das folgende Beispiel, in dem mehrere Zeichenfolgen verkettet werden und das Ergebnis ausgegeben wird:  
   
@@ -59,7 +58,7 @@ int main()
 }  
 ```  
   
- Vor Visual C++ 2010 hat jeder Aufruf von `operator+` belegt und gibt ein neues temporäres `string` -Objekt (einem Rvalue). `operator+` kann keine Zeichenfolge der anderen anfügen, da er nicht weiß, ob die Quellzeichenfolgen lvalues oder rvalues sind. Wenn die Quellzeichenfolgen beide lvalues sind, wird möglicherweise an anderer Stelle im Programm auf sie verwiesen, und sie dürfen deshalb nicht geändert werden. Indem Sie rvalue-Verweise verwenden, kann `operator+` dahingehend geändert werden, dass rvalues, auf die nicht an anderer Stelle im Programm verwiesen werden kann, akzeptiert werden können. Daher kann `operator+` jetzt eine Zeichenfolge an eine andere anfügen. Dadurch kann die Anzahl dynamischer Speicherbelegungen beträchtlich reduziert werden, die die `string`-Klasse ausführen muss. Weitere Informationen zu den `string` Klasse, finden Sie unter [Basic_string-Klasse](../standard-library/basic-string-class.md).  
+ Vor Visual C++ 2010 hat jeder Aufruf von **Operator +-** belegt und gibt ein neues temporäres `string` -Objekt (einem Rvalue). **Operator +-** einer Zeichenfolge kann nicht in den anderen angefügt werden, da er nicht weiß, ob die Quellzeichenfolgen Lvalues oder Rvalues sind. Wenn die Quellzeichenfolgen beide lvalues sind, wird möglicherweise an anderer Stelle im Programm auf sie verwiesen, und sie dürfen deshalb nicht geändert werden. Mit Rvalue-Referenzen, **Operator +-** Rvalues, werden die an anderer Stelle im Programm verwiesen werden, kann nicht geändert werden können. Aus diesem Grund **Operator +-** können jetzt eine Zeichenfolge in eine andere anfügen. Dadurch kann die Anzahl dynamischer Speicherbelegungen beträchtlich reduziert werden, die die `string`-Klasse ausführen muss. Weitere Informationen zu den `string` Klasse, finden Sie unter [Basic_string-Klasse](../standard-library/basic-string-class.md).  
   
  Die Verschiebesemantik ist auch hilfreich, wenn der Compiler keine Rückgabewertoptimierung (Return Value Optimization, RVO) oder benannte Rückgabewertoptimierung (Named Return Value Optimization, NRVO) verwenden kann. In diesen Fällen ruft der Compiler den Verschiebekonstruktor auf, wenn der Typ diesen definiert. Weitere Informationen zur benannten Rückgabewertoptimierung finden Sie unter [benannte Rückgabewertoptimierung in Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
   

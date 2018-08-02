@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Trytransitiontoerror-Methode | Microsoft Docs'
+title: 'Asyncbase:: Trytransitiontoerror-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97fcade98e82a289c172c7651f62f3de0394fe16
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc677304ae7ab61e6726366869e85f731cd92484
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863503"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463206"
 ---
 # <a name="asyncbasetrytransitiontoerror-method"></a>AsyncBase::TryTransitionToError-Methode
-Gibt an, ob der angegebene Fehlercode Zustand "Interner Fehler" ändern kann.  
+Gibt an, ob der angegebene Fehlercode auf den internen Fehlerzustand ändern kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,14 +36,14 @@ bool TryTransitionToError(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `error`  
- Ein Fehler-HRESULT.  
+ *Fehler*  
+ Ein fehlerhaftes HRESULT.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Wenn der Zustand "Interner Fehler" geändert wurde. andernfalls `false`.  
+ **"true"** bei der internen Fehlerzustand geändert wurde, andernfalls **"false"**.  
   
 ## <a name="remarks"></a>Hinweise  
- Dieser Vorgang ändert den Status "Fehler" nur, wenn der Status "Fehler" bereits mit S_OK festgelegt ist. Dieser Vorgang hat keine Auswirkung, wenn der Status "Fehler" bereits angezeigt wird, abgeschlossen, abgebrochen oder geschlossen ist.  
+ Dieser Vorgang ändert den Status "Fehler" nur dann, wenn der Status "Fehler" S_OK bereits festgelegt ist. Dieser Vorgang hat keine Auswirkungen, wenn der Status "Fehler" bereits angezeigt wird, abgeschlossen, abgebrochen oder geschlossen ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** async.h  

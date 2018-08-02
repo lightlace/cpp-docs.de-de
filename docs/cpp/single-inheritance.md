@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b06bceadf9a274253693dc8f33f3d04e6500115
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f4f0f2a82c02bcb58f89d604978d31eb01ebd1fd
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028620"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465686"
 ---
 # <a name="single-inheritance"></a>Einfache Vererbung
 In der einfachen Vererbung, eine häufige Art der Vererbung, haben Klassen nur eine Basisklasse. Betrachten Sie die Beziehung, wie in der folgenden Abbildung veranschaulicht.  
@@ -164,4 +164,3 @@ int main() {
   
 > [!NOTE]
 >  Die Basisklasse zu zwingen, eine Funktion wie `PrintNameOf` zu implementieren, führt häufig nicht zum optimalen Entwurf. [Virtuelle Funktionen](../cpp/virtual-functions.md) bieten andere Entwurfsalternativen.  
-  

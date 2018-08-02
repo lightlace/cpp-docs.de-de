@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be93b3c8d011fb34c6259fe5f044a9c463e4b20
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7e093bc006a5b2c8ebba6fd2967a2a549d46c574
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941212"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466048"
 ---
 # <a name="using-wmain-instead-of-main"></a>Verwenden von "wmain" anstelle von "main"
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
- Im Unicode-Programmiermodell, können Sie definieren eine Breitzeichen-Version von der `main` Funktion. Verwendung `wmain` anstelle von `main` sollten Sie portablen Code schreiben, die der Unicode-Spezifikation entspricht.  
+ Im Unicode-Programmiermodell, können Sie definieren eine Breitzeichen-Version von der `main` Funktion. Verwendung **Wmain** anstelle von `main` sollten Sie portablen Code schreiben, die der Unicode-Spezifikation entspricht.  
   
- Sie deklarieren die formalen Parameter, um `wmain` mithilfe eines ähnlichen Formats wie für `main`. Sie können anschließend Breitzeichen-Argumente und optional einen Breitzeichen-Umgebungszeiger übergeben, der auf das Programm verweist. Die *Argv* und *Envp* Parameter `wmain` sind vom Typ `wchar_t*`.  
+ Sie deklarieren die formalen Parameter, um **Wmain** mithilfe eines ähnlichen Formats wie für `main`. Sie können anschließend Breitzeichen-Argumente und optional einen Breitzeichen-Umgebungszeiger übergeben, der auf das Programm verweist. Die *Argv* und *Envp* Parameter **Wmain** sind vom Typ `wchar_t*`.  
   
  Wenn ein Programm verwendet eine `main` -Funktion, die Multibyte-zeichenumgebung wird vom Betriebssystem beim Programmstart erstellt. Eine breitzeichenkopie der Umgebung ist nur bei Bedarf erstellt (z. B. durch einen Aufruf der [_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md) oder [_wputenv](../c-runtime-library/reference/putenv-wputenv.md) Funktionen). Wenn bereits eine MBCS-Umgebung vorhanden ist, wird beim ersten Aufruf von `_wputenv` oder beim ersten Aufruf von `_wgetenv` eine entsprechende Breitzeichen-Zeichenfolgenumgebung erstellt. Auf diese Umgebung zeigt dann die globale Variable `_wenviron`, die eine Breitzeichenversion der globalen Variablen `_environ` ist. Zu diesem Zeitpunkt sind zwei Kopien der Umgebung (MBCS und Unicode) gleichzeitig vorhanden und werden während der Lebensdauer des Programms vom Betriebssystem verwaltet.  
   
- Auf ähnliche Weise, wenn ein Programm verwendet eine `wmain` -Funktion, eine Umgebung MBCS (ASCII) wird erstellt, auf dem ersten Aufruf von `_putenv` oder `getenv`, und verweist die `_environ` globale Variable.  
+ Auf ähnliche Weise, wenn ein Programm verwendet eine **"wmain"** -Funktion, eine Umgebung MBCS (ASCII) wird erstellt, auf dem ersten Aufruf von `_putenv` oder `getenv`, und verweist die `_environ` globale Variable.  
   
  Weitere Informationen zur MBCS-Umgebung finden Sie unter [Einzelbyte- und Mehrbyte-Zeichensätze](../c-runtime-library/single-byte-and-multibyte-character-sets.md) in die *Run-Time Library Reference.*  
   

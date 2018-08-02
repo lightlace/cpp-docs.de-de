@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d150d2419885c2f0273e376fd58750417ced6756
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f63b2d129e0eb6e9986942e4286eb1728d4be797
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943496"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462218"
 ---
 # <a name="this-pointer"></a>this-Zeiger
 Die **dies** ist ein Zeiger kann nur innerhalb der nicht statischen Memberfunktionen des zugegriffen eine **Klasse**, **Struktur**, oder **Union** Typ. Er zeigt auf das Objekt, für das die Memberfunktion aufgerufen wird. Statische Memberfunktionen haben keine **dies** Zeiger.  
@@ -31,7 +31,6 @@ Die **dies** ist ein Zeiger kann nur innerhalb der nicht statischen Memberfunkti
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 this   
 this->member-identifier  
 ```  
@@ -201,4 +200,3 @@ int main()
   
 ## <a name="see-also"></a>Siehe auch  
  [Schlüsselwörter](../cpp/keywords-cpp.md)   
- 

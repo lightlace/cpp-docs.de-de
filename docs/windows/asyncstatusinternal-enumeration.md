@@ -1,5 +1,5 @@
 ---
-title: AsyncStatusInternal-Enumeration | Microsoft Docs
+title: AsyncStatusInternal-Enumeration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 150169442aa68395b4dc8a4f4c74951e877f18f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a68189c461453dc72585ff4034df5ba69bb41bd5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863724"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464875"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal-Enumeration
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,23 +34,23 @@ enum AsyncStatusInternal;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Gibt eine Zuordnung zwischen internen Enumerationen für den Status von asynchronen Vorgängen und die **Windows::Foundation::AsyncStatus** Enumeration.  
+ Gibt eine Zuordnung zwischen internen Enumerationen für den Status von asynchronen Vorgängen und die `Windows::Foundation::AsyncStatus` Enumeration.  
   
 ## <a name="members"></a>Member  
- `_Created`  
- Entspricht:: Windows::Foundation::AsyncStatus:: erstellt  
+ *_Erstellt*  
+ Äquivalent zu:: Windows::Foundation::AsyncStatus:: erstellt  
   
- `_Started`  
- Entspricht:: Windows::Foundation::AsyncStatus:: gestartet  
+ *_Started*  
+ Äquivalent zu:: Windows::Foundation::AsyncStatus:: gestartet  
   
- `_Completed`  
- Entspricht:: Windows::Foundation::AsyncStatus:: abgeschlossen  
+ *_Completed*  
+ Äquivalent zu:: Windows::Foundation::AsyncStatus:: abgeschlossen  
   
- `_Cancelled`  
- Entspricht:: Windows::Foundation::AsyncStatus:: abgebrochen  
+ *_Cancelled*  
+ Äquivalent zu:: Windows::Foundation::AsyncStatus:: abgebrochen  
   
- `_Error`  
- Entspricht:: Windows::Foundation::AsyncStatus::Error  
+ *_Error*  
+ Äquivalent zu:: Windows::Foundation::AsyncStatus::Error  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** async.h  

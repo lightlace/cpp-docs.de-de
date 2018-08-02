@@ -1,5 +1,5 @@
 ---
-title: Farben, Fenster "(Bildbearbeitung für Symbole) | Microsoft Docs
+title: Farben (Bildbearbeitung für Symbole)-Fenster | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,36 +26,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a327fd99028bf8e1a6d7724a515f264aa04a4e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ee53735c84d586aa41cd4a1c5d3e8a70051c88e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860371"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460970"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Fenster "Farben" (Bildbearbeitung für Symbole)
-Das Fenster „Farben“ besteht aus zwei Teilen:  
+Die **Farben** Fenster besteht aus zwei Teilen:  
   
-1.  Die Farbpalette, die ein Array der Farbbeispiele ist, die verwendbare Farben repräsentiert. Sie können auf die Beispiele klicken, um Vordergrund- und Hintergrundfarben auszuwählen, wenn Sie die Grafiktools verwenden.  
+1.  Die **Farben (Palette)**, dies ist ein Array der farbbeispiele, die Farben darstellen können. Sie können auf die Beispiele klicken, um Vordergrund- und Hintergrundfarben auszuwählen, wenn Sie die Grafiktools verwenden.  
   
-2.  Die Farbanzeige, die die Vordergrund- und Hintergrundfarben sowie die Auswahl für die Bildschirm- und invertierte Farbe angibt.  
+2.  Die **Farbanzeige**, zeigt die Vordergrund- und Hintergrundfarben und Selektoren für die Bildschirm- und invertierte Farbe.  
   
      ![Fenster "Farben"](../windows/media/vccolorswindow.gif "VcColorsWindow")  
 Fenster "Farben"  
   
 > [!NOTE]
->  Die **Bildschirm Farbe** und **invertierte Farbe** Tools sind nur für Symbole und Cursor verfügbar.  
+>  Die **Bildschirm Farbe** und **invertierte Farbe** Tools sind nur verfügbar für Symbole und Cursor.  
   
- Sie können das Fenster "Farben" mit der [Grafik-Editor-Symbolleiste](../windows/toolbar-image-editor-for-icons.md).  
-  
-
+ Sie können das Fenster "Farben" mit der [Symbolleiste der Bildbearbeitung](../windows/toolbar-image-editor-for-icons.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anzeigen oder Ausblenden des Fensters "Farben"](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)   
+ [Anzeigen oder Ausblenden der Fenster "Farben"](../windows/displaying-or-hiding-the-colors-window-image-editor-for-icons.md)   
  [Erstellen transparenter oder invertierter Bereiche in Gerätebildern](../windows/creating-transparent-or-inverse-regions-in-device-images.md)   
  [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Benutzerdefinierte Farbe-Auswahl (Dialogfeld)](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)   
+ [Dialogfeld Benutzerdefinierte Farben](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)   
  [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

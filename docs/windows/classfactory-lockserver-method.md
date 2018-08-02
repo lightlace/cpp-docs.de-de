@@ -1,5 +1,5 @@
 ---
-title: 'ClassFactory:: Lockserver-Methode | Microsoft Docs'
+title: 'ClassFactory:: Lockserver-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e09a795688c7e2b31771126f9e4036ddfbd8e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860319"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462705"
 ---
 # <a name="classfactorylockserver-method"></a>ClassFactory::LockServer-Methode
-Erhöht oder verringert die Anzahl der zugrunde liegenden Objekte, die vom aktuellen Objekt ClassFactory nachverfolgt werden.  
+Erhöht oder verringert die Anzahl der zugrunde liegenden Objekte nachverfolgt werden, von der aktuellen **ClassFactory** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,14 +36,14 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `fLock`  
- `true` die Anzahl der überwachten Objekte zu erhöhen. `false` um die Anzahl der überwachten Objekte zu verringern.  
+ *Bestand*  
+ **"true"** erhöht die Anzahl der überwachten Objekte. **"false"** um die Anzahl der überwachten Objekte zu verringern.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls E_FAIL zurück.  
+ S_OK, wenn erfolgreich; andernfalls E_FAIL.  
   
 ## <a name="remarks"></a>Hinweise  
- ClassFactory der nachverfolgt Objekte in einer zugrunde liegenden Instanz, von der [Modul](../windows/module-class.md) Klasse.  
+ ClassFactory verfolgt des Objekte in einer zugrunde liegenden Instanz, von der [Modul](../windows/module-class.md) Klasse.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

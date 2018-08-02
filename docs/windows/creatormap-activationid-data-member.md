@@ -1,5 +1,5 @@
 ---
-title: 'Creatormap:: ActivationID-Datenmember | Microsoft Docs'
+title: 'Creatormap:: ActivationID-Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c4ff889f808eda00e5b2ce426cd800678b4829f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70a331bbbf34a623b02e9d8bc9aa0b80fbee2216
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881795"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467130"
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId-Datenmember
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,14 +37,14 @@ union {
 ```  
   
 ## <a name="parameters"></a>Parameter  
- `clsid`  
+ *clsid*  
  Eine Schnittstellen-ID.  
   
- `getRuntimeName`  
- Eine Funktion, die die Windows-Runtime-Namen eines Objekts abgerufen.  
+ *getRuntimeName*  
+ Eine Funktion, die den Windows-Runtime-Namen eines Objekts abruft.  
   
 ## <a name="remarks"></a>Hinweise  
- Stellt eine Objekt-ID, die entweder durch eine klassische COM-Klassen-ID oder der Name einer Windows-Runtime identifiziert wird.  
+ Stellt eine Objekt-ID, die durch eine klassische COM-Klassen-ID oder Name einer Windows-Runtime identifiziert wird.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

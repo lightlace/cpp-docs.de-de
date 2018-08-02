@@ -1,5 +1,5 @@
 ---
-title: Auswahlanweisungen (C++) | Microsoft Docs
+title: Auswahlanweisungen (C++) | Microsoft-Dokumentation
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f72e3c8145b2909495e53645af8ba500a102ebc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 10e1d9d6a86b4379575c100316ef8e9832bad6d8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421272"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464427"
 ---
 # <a name="selection-statements-c"></a>Auswahlanweisungen (C++)
 Die C++-auswahlanweisungen [Wenn](../cpp/if-else-statement-cpp.md) und [wechseln](../cpp/switch-statement-cpp.md), bieten eine Möglichkeit, Codeabschnitte bedingt auszuführen.  
   
- Die [__if_exists](../cpp/if-exists-statement.md) und [__if_not_exists](../cpp/if-not-exists-statement.md) Anweisungen ermöglichen es Ihnen, Code abhängig vom Vorhandensein eines Symbols bedingt einfügen.  
+ Die [__if_exists](../cpp/if-exists-statement.md) und [__if_not_exists](../cpp/if-not-exists-statement.md) -Anweisungen ermöglichen Ihnen, Code abhängig vom Vorhandensein eines Symbols bedingt einschließen möchten.  
   
  Weitere Informationen über die Syntax für jede Anweisung erhalten Sie in den einzelnen Themen.  
   

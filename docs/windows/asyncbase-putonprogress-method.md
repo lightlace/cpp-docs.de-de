@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Putonprogress-Methode | Microsoft Docs'
+title: 'Asyncbase:: Putonprogress-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c12709bdcac615937c938468bcf0e2daca437675
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a9460664ed58cf39f7b295e1406649ad1d66ca9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859786"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467416"
 ---
 # <a name="asyncbaseputonprogress-method"></a>AsyncBase::PutOnProgress-Methode
 Legt die Adresse des ereignishandlers Status mit dem angegebenen Wert fest.  
@@ -36,7 +36,7 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `progressHandler`  
+ *progressHandler*  
  Die Adresse, die auf der der Status-Ereignishandler festgelegt ist.  
   
 ## <a name="return-value"></a>Rückgabewert  

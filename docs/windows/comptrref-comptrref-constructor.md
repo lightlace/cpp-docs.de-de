@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Comptrref-Konstruktor | Microsoft Docs'
+title: 'Comptrref:: Comptrref-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d738d6d00a3ca4c344bcea37b09db7e9c494b50b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24844588a18f269ee6f3a19286e6755b11b1c6bf
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870658"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463631"
 ---
 # <a name="comptrrefcomptrref-constructor"></a>ComPtrRef::ComPtrRef-Konstruktor
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,11 +36,11 @@ ComPtrRef(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `ptr`  
- Der zugrunde liegenden Wert eines anderen ComPtrRef-Objekts.  
+ *ptr*  
+ Der zugrunde liegenden Wert eines anderen **ComPtrRef** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Initialisiert eine neue Instanz der ComPtrRef-Klasse aus dem angegebenen Zeiger auf ein anderes ComPtrRef-Objekt.  
+ Initialisiert eine neue Instanz der dem **ComPtrRef** Klasse aus dem angegebenen Zeiger auf einen anderen **ComPtrRef** Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

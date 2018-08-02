@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bec66d25be2cb56c75f42f60af2ccd5e3f759ad
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e773a0188eb3450ab1a13a24fc556fa8e8c4f874
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943896"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464268"
 ---
 # <a name="transfers-of-control"></a>Übertragung der Steuerung
 Können Sie die **Goto** Anweisung oder ein **Fall** -Bezeichnung in einer **wechseln** Anweisung, um ein Programm angeben, die hinter einem Initialisierer brancht. Solcher Code ist nicht zulässig, es sei denn, die Deklaration, die den Initialisierer enthält, befindet sich in einem Block, der von dem Block eingeschlossen wird, in dem die Sprunganweisung auftritt.  
@@ -60,4 +60,3 @@ int main()
  Im vorherigen Beispiel das **Goto** -Anweisung versucht, die Kontrolle über die Initialisierung der zu übertragenden `i`. Wenn jedoch `i` zwar deklariert, aber nicht initialisiert ist, wäre die Übertragung gültig.  
   
  Die Objekte `total` und `ch`, deklariert im-Block, der als dient der *Anweisung* von der **während** -Anweisung werden zerstört, wenn es sich bei diesen Block beendet wird, mit der  **Break** Anweisung.  
-  

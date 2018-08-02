@@ -1,5 +1,5 @@
 ---
-title: Schreiben eines Beendigungshandlers | Microsoft Docs
+title: Schreiben eines Beendigungshandlers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37319e50e7d2429ca9b64c5fc81d8c7c4418ed5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d9773817337bce2f054b279724db9859cc2faa41
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423235"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462832"
 ---
 # <a name="writing-a-termination-handler"></a>Schreiben eines Beendigungshandlers
 Im Gegensatz zu einem Ausnahmehandler wird ein Beendigungshandler immer ausgeführt, unabhängig davon, ob der geschützte Codeblock ordnungsgemäß beendet wurde. Der Beendigungshandler sollte nur sicherstellen, dass Ressourcen, wie Arbeitsspeicher, Handles und Dateien ordnungsgemäß geschlossen werden, unabhängig davon, wie die Ausführung eines Codeabschnitts beendet wird.  
@@ -35,7 +35,7 @@ Im Gegensatz zu einem Ausnahmehandler wird ein Beendigungshandler immer ausgefü
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
   
--   [Die Try-finally-Anweisung](../cpp/try-finally-statement.md)  
+-   [Try-finally-Anweisung](../cpp/try-finally-statement.md)  
   
 -   [Bereinigen von Ressourcen](../cpp/cleaning-up-resources.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Comptr-Konstruktor | Microsoft Docs'
+title: 'Comptr:: Comptr-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a632c96c39ccd40f008556287af95944530cdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d08eb264ff3b4fc2f0170d6aee742ff29611613e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871174"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465369"
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr-Konstruktor
-Initialisiert eine neue Instanz der ComPtr-Klasse. Überladungen stellen Standard-, Kopier-, Verschiebe- und Konvertierungskonstruktoren bereit.  
+Initialisiert eine neue Instanz der dem **ComPtr** Klasse. Überladungen stellen Standard-, Kopier-, Verschiebe- und Konvertierungskonstruktoren bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,22 +59,22 @@ WRL_NOTHROW ComPtr(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `U`  
- Der Typ des `other`-Parameters.  
+ *U*  
+ Der Typ des der *andere* Parameter.  
   
- `other`  
- Ein Objekt vom Typ `U`.  
+ *other*  
+ Ein Objekt des Typs *U*.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 ## <a name="remarks"></a>Hinweise  
- Der erste Konstruktor ist der Standardkonstruktor, welche Parameterarrayelements ein leeres Objekt erstellt. Gibt an, der zweite Konstruktor [__nullptr](../windows/nullptr-cpp-component-extensions.md), denen explizit ein leeres Objekt erstellt.  
+ Der erste Konstruktor ist der Standardkonstruktor, der implizit ein leeres Objekt erstellt. Gibt an, der zweite Konstruktor [__nullptr](../windows/nullptr-cpp-component-extensions.md), die explizit erstellt ein leeres Objekt.  
   
  Der dritte Konstruktor erstellt ein Objekt aus dem Objekt, das durch einen Zeiger angegeben.  
   
- Die vierten und fünften Konstruktoren sind Kopierkonstruktoren. Der fünfte Konstruktor kopiert ein Objekt aus, wenn er in den aktuellen Typ konvertiert wird.  
+ Die vierten und fünften Konstruktoren sind Kopierkonstruktoren Der fünfte Konstruktor kopiert ein Objekt aus, wenn es auf den aktuellen Typ konvertiert werden kann.  
   
- Die sechsten und siebten Konstruktoren sind bewegungskonstruktoren. Der siebte Konstruktor verschiebt ein Objekt aus, wenn er in den aktuellen Typ konvertiert wird.  
+ Die sechsten und siebten Konstruktoren sind Move-Konstruktoren. Der siebte Konstruktor verschiebt ein Objekt aus, wenn es auf den aktuellen Typ konvertiert werden kann.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Argtraits:: args-Konstante | Microsoft Docs'
+title: 'Argtraits:: args-Konstante | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f87b29634d5b9acef2e2ccb3f7b4d5f227433d38
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b6f0059d167b04c9a4b177d1851ad88133ef5cd3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855772"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466555"
 ---
 # <a name="argtraitsargs-constant"></a>ArgTraits::args-Konstante
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,10 +34,10 @@ static const int args = -1; ;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Behält die Anzahl von Parametern auf die Invoke-Methode einer Schnittstelle des Delegaten.  
+ Verfolgt die Anzahl von Parametern für die `Invoke` Methode einer Schnittstelle des Delegaten.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn `args` gleich-1 gibt an, es kann keine Übereinstimmung für die Invoke-Methodensignatur.  
+ Wenn `args` gleich-1 gibt an, es darf keine Übereinstimmung für die `Invoke` Methodensignatur.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  

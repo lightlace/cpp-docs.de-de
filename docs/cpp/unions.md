@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48c9962c7a0798b9c3fd4d5d9e1af223d41ac552
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939208"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460871"
 ---
 # <a name="unions"></a>Unions
 Ein **Union** ist ein benutzerdefinierten Typ, in dem alle Member denselben Speicherbereich gemeinsam nutzen. Das heißt, eine Union kann niemals mehr als ein Objekt aus seiner Liste der Member enthalten. Es heißt zudem, unabhängig davon, über wie viele Member eine Union verfügt, sie immer nur so viel Arbeitsspeicher verwendet, um das größte Member zu speichern.  
@@ -35,7 +35,7 @@ Ein **Union** ist ein benutzerdefinierten Typ, in dem alle Member denselben Spei
 union [name]  { member-list };  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *name*  
  Der Typname, der für die Union angegeben wurde.  
   
@@ -149,7 +149,6 @@ void Initialize()
     second.wind = { 204,1418859354, 14, 27 };  
     inputs.push(second);  
 }  
-  
 ```  
   
  Beachten Sie, dass die Union in der Eingabestruktur im vorherigen Beispiel keinen Namen aufweist. Hierbei handelt es sich um eine anonyme Union. Der Zugriff auf ihre Member ist so möglich, als wären sie direkte Member der Struktur. Weitere Informationen über anonyme Unions finden Sie im folgenden Abschnitt.  
@@ -603,7 +602,6 @@ private:
         WindData wind;  
     };  
 };  
-  
 ```  
   
  Unions können keine Verweise speichern. Unions unterstützen keine Vererbung. Daher kann eine Union an sich nicht als eine Basisklasse verwendet werden, aus einer andere Klasse erben oder virtuelle Funktionen aufweisen.  
@@ -633,7 +631,6 @@ int main()
  10  
  3.141600  
 */  
-  
 ```  
   
  Die `NumericType`-Union ist im Arbeitsspeicher angeordnet (konzeptionell), wie in der folgenden Abbildung dargestellt.  
@@ -654,7 +651,7 @@ Zusätzlich zu den Einschränkungen für benannte Unions unterliegen diesen zus�
   
 -   Sie müssen auch als deklariert werden **statische** Wenn Sie im Datei- oder Namespacebereich deklariert.  
   
--   Sie dürfen nur öffentliche Member besitzen; private und geschützte Member in anonymen Unions generieren Fehler.  
+-   Sie können nur verfügen **öffentliche** Member. **private** und **geschützt** Member in anonymen Unions generieren Fehler.  
   
 -   Sie können keine Memberfunktionen aufweisen.  
   

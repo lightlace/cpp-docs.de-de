@@ -1,5 +1,5 @@
 ---
-title: Tile_static-Schlüsselwort | Microsoft Docs
+title: Tile_static-Schlüsselwort | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 092ba4a438378f12ae1ab332bce906df38b267e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f905904668aaba0e16aa20b646085e8e1a973d4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422162"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461874"
 ---
 # <a name="tilestatic-keyword"></a>tile_static-Schlüsselwort
-Das Schlüsselwort `tile_static` wird verwendet, um eine Variable zu deklarieren, auf die von allen Threads in einer Kachel mit Threads zugegriffen werden kann. Die Lebensdauer der Variable beginnt, wenn die Ausführung den Punkt der Deklaration erreicht, und sie endet dann, wenn die Kernelfunktion zurückgegeben wird. Weitere Informationen zur Verwendung von Kacheln finden Sie unter [mithilfe von Kacheln](../parallel/amp/using-tiles.md).  
+Die **Tile_static** Schlüsselwort wird verwendet, um eine Variable zu deklarieren, die von allen Threads in einer Kachel mit Threads zugegriffen werden kann. Die Lebensdauer der Variable beginnt, wenn die Ausführung den Punkt der Deklaration erreicht, und sie endet dann, wenn die Kernelfunktion zurückgegeben wird. Weitere Informationen zur Verwendung von Kacheln finden Sie unter [mithilfe von Kacheln](../parallel/amp/using-tiles.md).  
   
- Das Schlüsselwort `tile_static` weist die folgenden Einschränkungen auf.  
+ Die **Tile_static** Schlüsselwort weist die folgenden Einschränkungen:  
   
 -   Es kann nur für Variablen verwendet werden, die sich in einer Funktion befinden, die den Modifizierer `restrict(amp)` aufweist.  
   
 -   Es kann nicht für Variablen verwendet werden, die Zeiger- oder Verweistypen sind.  
   
--   Eine `tile_static`-Variable kann keinen Initialisierer aufweisen. Standardkonstruktoren und -destruktoren werden nicht automatisch aufgerufen.  
+-   Ein **Tile_static** Variable kann keinen Initialisierer aufweisen. Standardkonstruktoren und -destruktoren werden nicht automatisch aufgerufen.  
   
--   Der Wert einer nicht initialisierten `tile_static`-Variablen ist nicht definiert.  
+-   Der Wert einer nicht initialisierten **Tile_static** Variable ist nicht definiert.  
   
--   Wenn eine `tile_static`-Variable in einem Aufrufdiagramm deklariert wird, die durch einen nicht angeordneten Aufruf von `parallel_for_each` beginnt, wird eine Warnung ausgegeben, und das Verhalten der Variablen ist nicht definiert.  
+-   Wenn eine **Tile_static** Variable wird deklariert, in einem Aufrufdiagramm, das durch einen nicht angeordneten Aufruf stammt `parallel_for_each`, wird eine Warnung generiert, und das Verhalten der Variablen ist nicht definiert.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie eine `tile_static`-Variable verwendet werden kann, um Daten über mehrere Threads in einer Kachel zu sammeln.  
+ Das folgende Beispiel zeigt wie eine **Tile_static** Variable kann verwendet werden, um Daten über mehrere Threads in einer Kachel zu sammeln.  
   
 ```cpp  
 // Sample data:  
@@ -150,7 +150,6 @@ for (int i = 0; i < 4; i++) {
 // 3 3 8 8 3 3  
 // 5 5 2 2 4 4  
 // 5 5 2 2 4 4  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

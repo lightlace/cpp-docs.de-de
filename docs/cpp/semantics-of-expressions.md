@@ -1,5 +1,5 @@
 ---
-title: Semantik von Ausdrücken | Microsoft Docs
+title: Semantik von Ausdrücken | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8419ea4e446c8bf2f555c680079ccb91cc26afb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3675e8bca6f62a1fbc7e30beefc6cbf6efbf197c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424126"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462741"
 ---
 # <a name="semantics-of-expressions"></a>Semantik von Ausdrücken
-Ausdrücke werden entsprechend der Rangfolge und Gruppierung ihrer Operatoren ausgewertet. ([Operatorrangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md) in [lexikalische Konventionen](../cpp/lexical-conventions.md), zeigt die Beziehungen an die C++ Operatoren für Ausdrücke vorgeben.)  
+Ausdrücke werden entsprechend der Rangfolge und Gruppierung ihrer Operatoren ausgewertet. ([Operatorrangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md) in [lexikalische Konventionen](../cpp/lexical-conventions.md), zeigt den Beziehungen der C++ Operatoren für Ausdrücke vorgeben.)  
   
 ## <a name="order-of-evaluation"></a>Reihenfolge der Auswertung  
  Betrachten Sie das folgende Beispiel:  
@@ -70,16 +70,16 @@ Reihenfolge der Auswertung von Ausdrücken mit Klammern
  Ausdrücke, wie in der Abbildung oben, werden ausschließlich für ihre Nebeneffekte ausgewertet – in diesem Fall, um Informationen zum Standardausgabegerät zu übertragen.  
   
 ## <a name="notation-in-expressions"></a>Notation in Ausdrücken  
- Die Programmiersprache C++ gibt beim Angeben von Operanden bestimmte Kompatibilitäten an. Die folgende Tabelle zeigt die Typen der Operanden an Operatoren, die Operanden des Typs erfordern akzeptabel *Typ*.  
+ Die Programmiersprache C++ gibt beim Angeben von Operanden bestimmte Kompatibilitäten an. Die folgende Tabelle zeigt die Typen der Operanden an Operatoren, die Operanden des Typs erfordern akzeptable *Typ*.  
   
 ### <a name="operand-types-acceptable-to-operators"></a>Operandentypen, die für Operatoren zulässig sind  
   
 |Typ erwartet|Typen zulässig|  
 |-------------------|-------------------|  
-|*Typ*|`const` *Datentyp*<br /> `volatile` *Datentyp*<br /> *type*&<br /> `const` *Datentyp*&<br /> `volatile` *Datentyp*&<br /> `volatile const` *Datentyp*<br /> `volatile const` *Datentyp*&|  
-|*type*\*|*type*\*<br /> `const` *Datentyp*\*<br /> `volatile` *Datentyp*\*<br /> `volatile const` *Datentyp*\*|  
-|`const` *Datentyp*|*Typ*<br /> `const` *Datentyp*<br />`const` *Datentyp*&|  
-|`volatile` *Datentyp*|*Typ*<br /> `volatile` *Datentyp*<br /> `volatile` *Datentyp*&|  
+|*Typ*|`const` *Typ*<br /> `volatile` *Typ*<br /> *type*&<br /> `const` *Typ*&<br /> `volatile` *Typ*&<br /> `volatile const` *Typ*<br /> `volatile const` *Typ*&|  
+|*type*\*|*type*\*<br /> `const` *Typ*\*<br /> `volatile` *Typ*\*<br /> `volatile const` *Typ*\*|  
+|`const` *Typ*|*Typ*<br /> `const` *Typ*<br />`const` *Typ*&|  
+|`volatile` *Typ*|*Typ*<br /> `volatile` *Typ*<br /> `volatile` *Typ*&|  
   
  Da die vorangehenden Regeln immer in Kombination verwendet werden können, kann ein const-Zeiger auf ein flüchtiges Objekt angegeben werden, wo ein Zeiger erwartet wird.  
   

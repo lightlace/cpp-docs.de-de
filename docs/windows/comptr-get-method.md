@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Get-Methode | Microsoft Docs'
+title: 'Comptr:: Get-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da8c4446d10f87514ec49feef95d05df2de721f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7fbf9b1e21492294f6e26fb743f611ac4f4685f0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870727"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460796"
 ---
 # <a name="comptrget-method"></a>ComPtr::Get-Methode
-Ruft einen Zeiger auf die Schnittstelle ab, die diesem ComPtr-Objekt zugeordnet ist.  
+Ruft einen Zeiger auf die Schnittstelle, die mit dieser verknüpft ist **ComPtr**.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ T* Get() const;
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die Schnittstelle, die diesem ComPtr zugeordnet ist.  
+ Zeiger auf die Schnittstelle, die mit dieser verknüpft ist **ComPtr**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

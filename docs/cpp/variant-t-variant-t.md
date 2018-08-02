@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14386e737d136b91f8864eeaa182038b62df72e0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 4ef7551047449167ff60372da146618fbdc4e564
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943316"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464161"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft-spezifisch**  
@@ -32,7 +32,6 @@ ms.locfileid: "37943316"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 _variant_t( ) throw( );  
   
 _variant_t(  
@@ -200,7 +199,7 @@ _variant_t(
  Ein **ganze Zahl ohne Vorzeichen** Wert in die neue kopiert werden `_variant_t` Objekt.  
   
  *i8Src*  
- Ein __**int64** Wert in die neue kopiert werden `_variant_t` Objekt.  
+ Ein **__int64** Wert in die neue kopiert werden `_variant_t` Objekt.  
   
  *ui8Src*  
  Ein **__int64 ohne Vorzeichen** Wert in die neue kopiert werden `_variant_t` Objekt.  
@@ -215,7 +214,7 @@ _variant_t(
   
 -   **_variant_t (_variant_t &***Var_t_Src***)** erstellt eine `_variant_t` Objekt von einem anderen `_variant_t` Objekt.     Der Varianttyp wird beibehalten.  
   
--   **_variant_t (VARIANT &***VarSrc* **, "bool"**`fCopy`**)** erstellt eine `_variant_t` -Objekt aus einem vorhandenen `VARIANT` -Objekt.       Wenn `fCopy` ist **"false"**, **VARIANT** Objekt ist auf das neue Objekt angefügt, ohne dass eine Kopie.  
+-   **_variant_t (VARIANT &***VarSrc* **, "bool"**`fCopy`**)** erstellt eine `_variant_t` -Objekt aus einem vorhandenen `VARIANT` -Objekt.       Wenn *fCopy* ist **"false"**, **VARIANT** Objekt ist auf das neue Objekt angefügt, ohne dass eine Kopie.  
   
 -   **_variant_t (short***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** erstellt eine `_variant_t` Objekt des Typs, die von einem VT_I2oderVT_BOOL**kurze** Integer-Wert.       Alle anderen `VARTYPE` führt zu einem Fehler E_INVALIDARG zurückgegeben.  
   

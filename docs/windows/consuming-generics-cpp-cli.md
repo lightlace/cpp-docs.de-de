@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Generika (C + c++ / CLI) | Microsoft Docs
+title: Verwenden von Generika (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 286d032a3ae01bf146d25583bff18ef94e6cccd6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8282079099b0b67b144f768a69f724e39305385
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870818"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460490"
 ---
 # <a name="consuming-generics-ccli"></a>Verwenden von Generika (C++/CLI)
-Generika in einer .NET-Sprache geschrieben, möglicherweise in anderen .NET-Sprachen verwendet werden. Im Gegensatz zu Vorlagen bleibt eine generische in einer kompilierten Assembly noch generische. Daher kann eine instanziieren, den generischen Typ in einer anderen Assembly und sogar in einer anderen Sprache als die Assembly, in der der generische Typ definiert wurde.  
+Generika in einer .NET-Sprache erstellt, möglicherweise in anderen .NET-Sprachen verwendet werden. Im Gegensatz zu Vorlagen bleibt noch eine generische in einer kompilierten Assembly generische. Daher kann eine instanziieren Sie den generischen Typ in einer anderen Assembly und sogar in einer anderen Sprache als die Assembly, in der der generische Typ definiert wurde.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -32,7 +32,7 @@ Generika in einer .NET-Sprache geschrieben, möglicherweise in anderen .NET-Spra
   
 ### <a name="code"></a>Code  
   
-```  
+```cs  
 // consuming_generics_from_other_NET_languages.cs  
 // compile with: /target:library  
 // a C# program  
@@ -95,7 +95,7 @@ public class CircularList<ItemType> {
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // consuming_generics_from_other_NET_languages_2.cpp  
 // compile with: /clr  
 #using <consuming_generics_from_other_NET_languages.dll>  

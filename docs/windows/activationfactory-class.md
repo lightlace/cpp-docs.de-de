@@ -1,5 +1,5 @@
 ---
-title: ActivationFactory-Klasse | Microsoft Docs
+title: ActivationFactory-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6775e9466ed337a070b6a234a4d65bb949a009e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 18ce213d6c4bedd0bcaa2be1af33281ae69f6ad1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857954"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461504"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory-Klasse
 Ermöglicht, dass eine oder mehrere Klassen durch die Windows-Runtime aktiviert werden.  
@@ -39,23 +39,23 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `I0`  
+ *I0*  
  Die nullte-Schnittstelle.  
   
- `I1`  
+ *I1*  
  Die erste Schnittstelle.  
   
- `I2`  
+ *I2*  
  Die zweite Schnittstelle.  
   
 ## <a name="remarks"></a>Hinweise  
- ActivationFactory bietet Registrierungsmethoden und grundlegende Funktionalität für die IActivationFactory-Schnittstelle. ActivationFactory ermöglicht Ihnen, eine benutzerdefinierte Factory-Implementierung zu senden.  
+ **ActivationFactory** bietet Registrierungsmethoden und die grundlegende Funktionalität für die `IActivationFactory` Schnittstelle. **ActivationFactory** können Sie eine benutzerdefinierte Factory-Implementierung bereitzustellen.  
   
  Das folgende Codefragment veranschaulicht symbolisch ActivationFactory verwenden.  
   
  [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../windows/codesnippet/CPP/activationfactory-class_1.cpp)]  
   
- Das folgende Codefragment zeigt, wie die [implementiert](../windows/implements-structure.md) Struktur mehr als drei Schnittstellen-IDs angeben.  
+ Das folgende Codefragment zeigt, wie Sie mit der [implementiert](../windows/implements-structure.md) Struktur an mehr als drei Schnittstellen-IDs.  
   
  `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`  
   
@@ -65,18 +65,18 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ActivationFactory::ActivationFactory-Konstruktor](../windows/activationfactory-activationfactory-constructor.md)|Initialisiert die ActivationFactory-Klasse.|  
+|[ActivationFactory::ActivationFactory-Konstruktor](../windows/activationfactory-activationfactory-constructor.md)|Initialisiert die **ActivationFactory** Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ActivationFactory::AddRef-Methode](../windows/activationfactory-addref-method.md)|Inkrementiert den Verweiszähler des aktuellen ActivationFactory-Objekts.|  
+|[ActivationFactory::AddRef-Methode](../windows/activationfactory-addref-method.md)|Inkrementiert den Verweiszähler des aktuellen **ActivationFactory** Objekt.|  
 |[ActivationFactory::GetIids-Methode](../windows/activationfactory-getiids-method.md)|Ruft ein Array von implementierten Schnittstellen-IDs ab.|  
-|[ActivationFactory::GetRuntimeClassName-Methode](../windows/activationfactory-getruntimeclassname-method.md)|Ruft die Laufzeitklasse-Namen des Objekts, das den aktuellen ActivationFactory instanziiert.|  
+|[ActivationFactory::GetRuntimeClassName-Methode](../windows/activationfactory-getruntimeclassname-method.md)|Ruft den Common Language Runtime-Klassennamen des Objekts ab, die die aktuelle **ActivationFactory** instanziiert.|  
 |[ActivationFactory::GetTrustLevel-Methode](../windows/activationfactory-gettrustlevel-method.md)|Ruft die Vertrauensebene des Objekts, das den aktuellen ActivationFactory instanziiert.|  
 |[ActivationFactory::QueryInterface-Methode](../windows/activationfactory-queryinterface-method.md)|Ruft einen Zeiger auf die angegebene Schnittstelle ab.|  
-|[ActivationFactory::Release-Methode](../windows/activationfactory-release-method.md)|Dekrementiert den Verweiszähler des aktuellen ActivationFactory-Objekts.|  
+|[ActivationFactory::Release-Methode](../windows/activationfactory-release-method.md)|Dekrementiert den Verweiszähler des aktuellen **ActivationFactory** Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `I0`  

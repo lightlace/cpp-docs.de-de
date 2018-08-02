@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c278c39908312f76a8b62a529beaed884c07a81d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943538"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461519"
 ---
 # <a name="subscripting"></a>Indizierung 
 Der Indexoperator (**[]**), wie der Funktionsaufrufoperator wird als binärer Operator betrachtet. Der Indexoperator muss eine nicht statische Memberfunktion sein, die ein einzelnes Argument akzeptiert. Dieses Argument kann einen beliebigen Typ aufweisen und legt den gewünschten Arrayindex fest.  
@@ -98,9 +98,9 @@ Element: [10] = 10
 ```  
   
 ## <a name="comments"></a>Kommentare  
- Wenn `i` im vorangehenden Programm 10 erreicht, erkennt `operator[]`, dass ein Index außerhalb des gültigen Bereichs verwendet wird, und gibt eine Fehlermeldung aus.  
+ Wenn `i` in der vorangehenden Programm 10 erreicht **[]-Operator** erkennt, dass ein Index außerhalb des gültigen Bereichs verwendet wird und eine Fehlermeldung ausgegeben.  
   
- Beachten Sie, dass die Funktion `operator[]` einen Verweistyp zurückgibt. Dadurch wird sie zu einem L-Wert, und Sie können auf beiden Seiten von Zuweisungsoperatoren indizierte Ausdrücke verwenden.  
+ Beachten Sie, dass die Funktion **[]-Operator** einen Verweistyp zurückgibt. Dadurch wird sie zu einem L-Wert, und Sie können auf beiden Seiten von Zuweisungsoperatoren indizierte Ausdrücke verwenden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Operatorüberladung](../cpp/operator-overloading.md)

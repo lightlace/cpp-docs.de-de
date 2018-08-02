@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 953c03f7c8125713afddd3b3567615be585fc9db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956592"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463147"
 ---
 # <a name="references-c"></a>Verweise (C++)
 Ein Verweis, z. B. ein Zeiger ist, speichert die Adresse eines Objekts, das sich an anderer Stelle im Speicher befindet. Im Gegensatz zu einem Zeiger kann sich ein Verweis nach der Initialisierung nicht auf ein anderes Objekt beziehen oder auf null gesetzt werden. Es gibt zwei Arten von verweisen: Lvalue-Verweise, die auf einer benannten Variable und Rvalue-Verweise, die verweisen beziehen auf eine [temporäres Objekt](../cpp/temporary-objects.md). Der &-Operator gibt einen Lvalue-Verweis und der & &-Operator gibt einen Rvalue-Verweis oder einen universellen Verweis (Rvalue oder Lvalue) je nach Kontext.  
@@ -114,12 +114,8 @@ int main() {
 4  
 ```  
   
-## <a name="comment"></a>Kommentar  
- Themen in diesem Abschnitt:  
-  
--   [Verweistyp-Funktionsargumente](../cpp/reference-type-function-arguments.md)  
-  
--   [Verweistyp-Funktionsrückgaben](../cpp/reference-type-function-returns.md)  
-  
--   [Verweise auf Zeiger](../cpp/references-to-pointers.md)  
+## <a name="see-also"></a>Siehe auch
+ [Verweistyp-Funktionsargumente](../cpp/reference-type-function-arguments.md)  
+ [Verweistyp-Funktionsrückgaben](../cpp/reference-type-function-returns.md)  
+ [Verweise auf Zeiger](../cpp/references-to-pointers.md)  
   

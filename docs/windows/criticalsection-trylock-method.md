@@ -1,5 +1,5 @@
 ---
-title: 'CriticalSection:: TryLock-Methode | Microsoft Docs'
+title: 'CriticalSection:: TryLock-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4ee99d82212d0d6cdd610b4565bd9292a0265dc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1b9d238d4f5475475e5dc367aae196937630a0e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883951"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465421"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock-Methode
-Versucht, einen kritischen Abschnitt ohne Blockierung zu geben. Wenn der Aufruf erfolgreich ist, übernimmt der aufrufende Thread den Besitz der kritische Abschnitt.  
+Versucht, einen kritischen Abschnitt ohne Blockierung zu geben. Wenn der Aufruf erfolgreich ist, übernimmt der aufrufende Thread den kritischen Abschnitt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,14 +38,14 @@ static SyncLock TryLock(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `cs`  
- Ein benutzerdefiniertes kritischen Abschnitt-Objekt.  
+ *cs*  
+ Ein Kritischer Abschnitt Benutzer angegebene-Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Wert ungleich NULL, wenn der kritische Abschnitt erfolgreich eingegeben wird oder der aktuelle Thread besitzt bereits den kritischen Abschnitt. 0 (null), wenn ein anderer Thread den kritischen Abschnitt bereits besitzt.  
+ Einen Wert ungleich NULL, wenn der kritische Abschnitt erfolgreich eingegeben wird oder der aktuelle Thread besitzt bereits den kritischen Abschnitt. NULL, wenn ein anderer Thread den kritischen Abschnitt bereits im Besitz.  
   
 ## <a name="remarks"></a>Hinweise  
- Die erste **TryLock** Funktion wirkt sich auf das aktuelle Objekt von kritischen Abschnitts. Die zweite **TryLock** Funktion wirkt sich auf ein benutzerdefiniertes kritischen Abschnitts.  
+ Die erste **TryLock** Funktion wirkt sich auf das aktuelle Objekt des kritischen Abschnitts. Die zweite **TryLock** Funktion wirkt sich auf einen vom Benutzer angegebenen kritischen Abschnitt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

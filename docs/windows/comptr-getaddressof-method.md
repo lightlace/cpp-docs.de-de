@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Getaddressof-Methode | Microsoft Docs'
+title: 'Comptr:: Getaddressof-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2da8e134c4ba1ec01a6694cd886d44b14c6cac8c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e11cd204c2c89c7fca9a824450d6136eb65520db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870236"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461183"
 ---
 # <a name="comptrgetaddressof-method"></a>ComPtr::GetAddressOf-Methode
-Ruft die Adresse des [ptr_](../windows/comptr-ptr-data-member.md) -Datenmembers ab, der einen Zeiger auf die Schnittstelle enthält, der dieses ComPtr-Objekt entspricht.  
+Ruft die Adresse der [Ptr_](../windows/comptr-ptr-data-member.md) Datenmember, der einen Zeiger auf die von dieser Schnittstelle enthält **ComPtr**.  
   
 ## <a name="syntax"></a>Syntax  
   

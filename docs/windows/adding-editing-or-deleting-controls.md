@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen, bearbeiten oder Löschen von Steuerelementen | Microsoft Docs
+title: Hinzufügen, bearbeiten oder Löschen von Steuerelementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 715093e10d4ed2f72f5a2f6cf1f7ec93f7b5a6d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c54068d6938e217798c6fc17c9ece5c13ffcaa0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856712"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467364"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Hinzufügen, Bearbeiten oder Löschen von Steuerelementen
-Mit dem Dialog-Editor, können Sie hinzufügen, ändern Sie die Größe, bearbeiten und Löschen von Steuerelementen in Dialogfeldern. Sie können auch die Eigenschaften eines Steuerelements, z. B. seine ID, bearbeiten oder ob es sichtbare zur Laufzeit handelt.  
+Verwenden des Dialog-Editors, können Sie hinzufügen, ändern Sie die Größe, bearbeiten und löschen Steuerelemente in Dialogfeldern. Sie können auch die Eigenschaften eines Steuerelements, z. B. die ID, bearbeiten oder ob es sichtbare zur Laufzeit ist.  
   
- Mithilfe des Kontextmenüs der Dialog-Editor zum schnellen Hinzufügen von registrierten ActiveX-Steuerelementen zu einem Dialogfeld, und Sie können ActiveX-Steuerelemente zur Toolbox für den Schnellzugriff hinzufügen (Weitere Informationen finden Sie unter [Dialogfeld "Toolbox" anpassen](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)).  
+ Können Sie das Kontextmenü der Dialog-Editor schnell registrierten ActiveX-Steuerelemente zum Dialogfeld hinzufügen, und Sie können ActiveX-Steuerelemente zur Toolbox für den Schnellzugriff hinzufügen (Weitere Informationen finden Sie unter [Dialogfeld "Toolbox" anpassen](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).  
   
 -   [Hinzufügen eines Steuerelements zu einem Dialogfeld](adding-a-control-to-a-dialog-box.md)  
   
@@ -35,15 +35,15 @@ Mit dem Dialog-Editor, können Sie hinzufügen, ändern Sie die Größe, bearbei
   
 -   [Fügen Sie mehrerer Steuerelemente hinzu](adding-multiple-controls.md)  
   
--   [Fügen Sie ein ActiveX-Steuerelement in einem Dialogfeld](viewing-and-adding-activex-controls-to-a-dialog-box.md)  
+-   [Hinzufügen von ActiveX-Steuerelement in einem Dialogfeld](viewing-and-adding-activex-controls-to-a-dialog-box.md)  
   
--   [Bearbeiten Sie die Eigenschaften eines Steuerelements oder Steuerelemente](editing-control-properties.md)  
+-   [Bearbeiten Sie die Eigenschaften eines Steuerelements oder-Steuerelemente](editing-control-properties.md)  
   
 -   [Löschen eines Steuerelements](deleting-a-control.md)  
   
--   [Ein- oder Ausblenden der Fenster "Toolbox"](showing-or-hiding-the-dialog-editor-toolbar.md)  
+-   [Anzeigen oder Ausblenden der Fenster "Toolbox"](showing-or-hiding-the-dialog-editor-toolbar.md)  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  

@@ -1,5 +1,5 @@
 ---
-title: 'Comptrref:: Operator ==-Operator | Microsoft Docs'
+title: 'Comptrref:: Operator ==-Operator | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b7cc1d89a0e113164530245467afd94becdc1e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 606059712e60ba181998155b55ae02ba8b27c4da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880773"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463953"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator==-Operator
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,18 +55,18 @@ bool operator==(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `a`  
+ *a*  
  Ein Verweis auf ein ComPtrRef-Objekt.  
   
- `b`  
+ *b*  
  Ein Verweis auf ein anderes ComPtrRef-Objekt, oder ein Zeiger auf einen anonymen Typ (`void*`).  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der erste Operator liefert `true` Wenn Objekt `a` Objekt entspricht `b`ist, andernfalls `false`.  
+ Der erste Operator ergibt **"true"** Wenn Objekt *eine* Objekt entspricht *b*ist, andernfalls **"false"**.  
   
- Der zweite und dritte Operator yield `true` Wenn Objekt `a` gleich `nullptr`ist, andernfalls `false`.  
+ Führen Sie die zweite und dritte Operator **"true"** Wenn Objekt *eine* gleich **"nullptr"** ist, andernfalls **"false"**.  
   
- Die vierten und fünften Operatoren ergeben `true` Wenn Objekt `a` Objekt entspricht `b`ist, andernfalls `false`.  
+ Die vierten und fünften-Operatoren ergeben **"true"** Wenn Objekt *eine* Objekt entspricht *b*ist, andernfalls **"false"**.  
   
 ## <a name="remarks"></a>Hinweise  
  Gibt an, ob zwei ComPtrRef-Objekte gleich sind.  

@@ -1,5 +1,5 @@
 ---
-title: ArgTraitsHelper-Struktur | Microsoft Docs
+title: ArgTraitsHelper-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6205d69962d70d9da76c932fdd8b3f66f491ebc9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bb8dfeff0e1f3e659e0d3c6514904df39286c45
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857700"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466636"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,11 +35,11 @@ struct ArgTraitsHelper;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Ein Delegat-Schnittstelle.  
   
 ## <a name="remarks"></a>Hinweise  
- Unterstützt definiert allgemeine Merkmale Delegatargumente.  
+ Hilft, die gemeinsamen Merkmale der Argumente des Delegaten definieren.  
   
 ## <a name="members"></a>Member  
   
@@ -54,7 +54,7 @@ struct ArgTraitsHelper;
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[ArgTraitsHelper::args-Konstante](../windows/argtraitshelper-args-constant.md)|Hilft [argtraits:: args](../windows/argtraits-args-constant.md) die Anzahl von Parametern für die Invoke-Methode einer Schnittstelle Delegaten beibehalten.|  
+|[ArgTraitsHelper::args-Konstante](../windows/argtraitshelper-args-constant.md)|Hilft [argtraits:: args](../windows/argtraits-args-constant.md) behalten Sie die Anzahl der Parameter der `Invoke` Methode einer Schnittstelle des Delegaten.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `ArgTraitsHelper`  

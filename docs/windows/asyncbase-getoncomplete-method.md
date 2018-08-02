@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Getoncomplete-Methode | Microsoft Docs'
+title: 'Asyncbase:: Getoncomplete-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa1bf81c8b377da44fb4b81cdb2b0142e90032e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15a561924cad314d09209e205ac73430f6d8be01
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33865109"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466571"
 ---
 # <a name="asyncbasegetoncomplete-method"></a>AsyncBase::GetOnComplete-Methode
-Kopiert die Adresse des aktuellen ereignishandlers Abschluss der angegebenen Variablen.  
+Kopiert die Adresse des aktuellen ereignishandlers Abschluss an die angegebene Variable.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +36,7 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `completeHandler`  
+ *completeHandler*  
  Der Speicherort, in dem die Adresse des aktuellen ereignishandlers Abschluss gespeichert ist.  
   
 ## <a name="return-value"></a>Rückgabewert  

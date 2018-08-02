@@ -1,5 +1,5 @@
 ---
-title: 'Bereichsauflösungsoperator::: | Microsoft Docs'
+title: 'Bereichsauflösungsoperator::: | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7caea3a32c0bb983518f7610918c78c8c31c63a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baf3678d204042bdea5e892a6e89d041b5091f38
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420940"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467078"
 ---
 # <a name="scope-resolution-operator-"></a>Bereichsauflösungsoperator: ::
-Der Bereichsauflösungsoperator `::` wird zur Identifikation und eindeutigen Angabe von Bezeichnern in unterschiedlichen Geltungsbereichen verwendet. Weitere Informationen zum Bereich finden Sie unter [Bereich](../cpp/scope-visual-cpp.md).  
+Der Bereichsauflösungsoperator **::** wird verwendet, um zu identifizieren und eindeutigen Angabe von Bezeichnern in unterschiedlichen geltungsbereichen verwendet. Weitere Informationen zum Bereich finden Sie unter [Bereich](../cpp/scope-visual-cpp.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,9 +62,7 @@ int main() {
     // A class name used to disambiguate  
     NamespaceA::ClassA a1;  
     a1.x = 2;  
-  
 }  
-  
 ```  
   
  Ein Bereichsauflösungsoperator ohne Bereichsqualifizierer verweist auf den globalen Namespace.  
@@ -101,7 +99,6 @@ namespace NamespaceB {
   
 namespace NamespaceC{  
     using namespace B;  
-  
 }  
 int main() {  
     NamespaceB::ClassB c_b;  
@@ -110,7 +107,6 @@ int main() {
     c_b.x = 3;  
     c_c.x = 4;  
 }  
-  
 ```  
   
  Bereichsauflösungsoperatoren können verkettet werden. Im folgenden Beispiel identifiziert `NamespaceD::NamespaceD1` den geschachtelten Namespace `NamespaceD1`, und `NamespaceE::ClassE::ClassE1` identifiziert die geschachtelte Klasse `ClassE1`.  
@@ -123,7 +119,6 @@ namespace NamespaceD{
 }  
   
 namespace NamespaceE{  
-  
     class ClassE{  
     public:  
         class ClassE1{  
@@ -138,7 +133,6 @@ int main() {
     NamespaceE::ClassE::ClassE1 e1;  
     e1.x = 7  ;  
 }  
-  
 ```  
   
 ## <a name="with-static-members"></a>Mit statischen Members  
@@ -158,11 +152,10 @@ int main() {
     int gx1 = ClassG::x;  
     int gx2 = ClassG::get_x();   
 }  
-  
 ```  
   
 ## <a name="with-scoped-enumerations"></a>Mit bereichsbezogenen Enumerationen  
- Der Bereichsauflösungsoperator wird außerdem mit den Werten einer bereichsbezogenen Enumeration verwendet [Enumerationsdeklarationen](../cpp/enumerations-cpp.md), wie im folgenden Beispiel:  
+ Der Bereichsauflösungsoperator wird auch mit den Werten einer bereichsbezogenen Enumeration verwendet [Enumerationsdeklarationen](../cpp/enumerations-cpp.md), wie im folgenden Beispiel:  
   
 ```cpp  
 enum class EnumA{  
@@ -172,12 +165,10 @@ enum class EnumA{
 };  
   
 int main() {  
-  
     EnumA enum_value = EnumA::First;  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Integrierte C++-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++-Built-Operatoren, Rangfolge und Assoziativität](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Namespaces](../cpp/namespaces-cpp.md)   

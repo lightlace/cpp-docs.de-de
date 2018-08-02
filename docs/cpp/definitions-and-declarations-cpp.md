@@ -12,16 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 951a7d5c4c171a6662c55d9ae7906cc1500cd137
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5d192234a2b3cd3d72bef15e11678ebc41ccede0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406730"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462887"
 ---
 # <a name="definitions-and-declarations-c"></a>Definitionen und Deklarationen (C++)
-## <a name="microsoft-specific"></a>Microsoft-spezifisch
- Die DLL-Schnittstelle bezieht sich auf alle Elemente (Funktionen und Daten), die bekanntermaßen von einem Programm im System exportiert werden. d. h. alle Elemente, die als deklariert sind **Dllimport** oder **Dllexport**. Alle Deklarationen, die in der DLL-Schnittstelle eingeschlossen geben die **Dllimport** oder **Dllexport** Attribut. Die Definition muss jedoch angeben, nur die **Dllexport** Attribut. Beispielsweise verursacht die folgende Funktionsdefinition einen Compilerfehler:
+**Microsoft Specific** die DLL-Schnittstelle bezieht sich auf alle Elemente (Funktionen und Daten), von denen bekannt, die durch ein Programm im System exportiert werden, d. h., alle Elemente, die als deklariert sind **Dllimport** oder **Dllexport** . Alle Deklarationen, die in der DLL-Schnittstelle eingeschlossen geben die **Dllimport** oder **Dllexport** Attribut. Die Definition muss jedoch angeben, nur die **Dllexport** Attribut. Beispielsweise verursacht die folgende Funktionsdefinition einen Compilerfehler:
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport

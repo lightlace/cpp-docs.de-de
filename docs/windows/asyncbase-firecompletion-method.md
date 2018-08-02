@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Firecompletion-Methode | Microsoft Docs'
+title: 'Asyncbase:: Firecompletion-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cd18d340a11575ed9f6f52d92a5910dcee1faec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa5988516f3836749357b15295ac228b78fe3f04
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859734"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467240"
 ---
 # <a name="asyncbasefirecompletion-method"></a>AsyncBase::FireCompletion-Methode
-Wird der Ereignishandler für den Abschluss des Vorgangs aufgerufen, oder setzt den internen Status Delegaten zurück.  
+Ruft den Ereignishandler für den Abschluss, oder setzt den internen Status-Delegaten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +38,7 @@ virtual void FireCompletion();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die erste Version des FireCompletion() setzt den internen Status zuweisungsanordnung zurück. Die zweite Version wird den Ereignishandler für den Abschluss des Vorgangs aufgerufen, wenn der asynchrone Vorgang abgeschlossen ist.  
+ Die erste Version des **FireCompletion()** der Delegatvariablen internen Status zurückgesetzt. Die zweite Version wird der Abschluss-Ereignishandler aufgerufen, wenn der asynchrone Vorgang abgeschlossen ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** async.h  

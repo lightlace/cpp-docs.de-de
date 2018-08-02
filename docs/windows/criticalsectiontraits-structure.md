@@ -1,5 +1,5 @@
 ---
-title: CriticalSectionTraits-Struktur | Microsoft Docs
+title: CriticalSectionTraits-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b10d130190308520771e37e97d34238f75670ad
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870550"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466682"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits-Struktur
-Spezialisiert ein CriticalSection-Objekt, um einen ungültigen kritischen Abschnitt oder eine Funktion zum Freigeben eines kritischen Abschnitts zu unterstützen.  
+Spezialisiert auf ein CriticalSection-Objekt einen ungültigen kritischen Bereich oder eine Funktion, die einen kritischen Abschnitt release unterstützen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,14 +39,14 @@ struct CriticalSectionTraits;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`Type`|Ein `typedef` , einen Zeiger zu einem kritischen Abschnitt definiert. `Type` wird definiert als `typedef CRITICAL_SECTION* Type;`.|  
+|`Type`|Ein **Typedef** , die einen Zeiger auf einen kritischen Abschnitt definiert. `Type` wird definiert als `typedef CRITICAL_SECTION* Type;`.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CriticalSectionTraits::GetInvalidValue-Methode](../windows/criticalsectiontraits-getinvalidvalue-method.md)|CriticalSection Vorlage spezialisiert, damit, dass die Vorlage immer ungültig ist.|  
-|[CriticalSectionTraits::Unlock-Methode](../windows/criticalsectiontraits-unlock-method.md)|Eine Vorlage CriticalSection spezialisiert, damit sie freigeben Besitzer des Objekts angegebenen kritischen Abschnitt unterstützt.|  
+|[CriticalSectionTraits::GetInvalidValue-Methode](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Spezialisiert hat eine `CriticalSection` Vorlage so, dass die Vorlage immer ungültig ist.|  
+|[CriticalSectionTraits::Unlock-Methode](../windows/criticalsectiontraits-unlock-method.md)|Spezialisiert hat eine `CriticalSection` Vorlage so, dass die It freigeben Besitzer des Objekts angegebenen kritischen Abschnitt unterstützt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `CriticalSectionTraits`  

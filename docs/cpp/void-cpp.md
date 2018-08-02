@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81dd7717940bb6f78063b0fba64dd5d7f8cad583
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: dbb46302c2ae8834ab9a2a626a3bfb77c41996a2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943543"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461477"
 ---
 # <a name="void-c"></a>void (C++)
 Wenn als Rückgabetyp einer Funktion verwendet die **"void"** -Schlüsselwort Gibt an, dass die Funktion keinen Wert zurückgibt. Wenn es für die Parameterliste einer Funktion verwendet wird, gibt "void" an, dass die Funktion keine Parameter akzeptiert. Bei Verwendung in der Deklaration eines Zeigers gibt "void" an, dass der Zeiger "universal" ist.  
   
- Ist der Typ eines Zeigers **"void" \*** , der Zeiger auf eine beliebige Variable, die nicht mit deklariert ist zeigen kann die **const** oder **flüchtige** Schlüsselwort. Ein void-Zeiger kann nicht dereferenziert werden, es sei denn, er wird in einen anderen Typ umgewandelt. Ein void-Zeiger kann in jeden anderen Datenzeigertyp konvertiert werden.  
+ Ist der Typ eines Zeigers `void *`, der Zeiger auf eine beliebige Variable, die nicht mit deklariert ist zeigen kann die **const** oder **flüchtige** Schlüsselwort. Ein void-Zeiger kann nicht dereferenziert werden, es sei denn, er wird in einen anderen Typ umgewandelt. Ein void-Zeiger kann in jeden anderen Datenzeigertyp konvertiert werden.  
   
  Ein void-Zeiger kann auf eine Funktion, jedoch nicht auf einen Klassenmember in C++ zeigen.  
   

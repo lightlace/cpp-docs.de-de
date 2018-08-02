@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895a2e3a78c425511f978454d07cf9574f7d8337
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: fdf87e9db7ecd419897615ab45cc967360b67fc2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403718"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462400"
 ---
 # <a name="declarations-and-definitions-c"></a>Deklarationen und Definitionen (C++)
 Deklarationen führen Namen in einem Programm, z. B. die Namen von Variablen, Namespaces, Funktionen und Klassen. Deklarationen geben außerdem die Typinformationen als auch andere Eigenschaften des Objekts an, das deklariert wird. Ein Name muss deklariert werden, bevor er verwendet werden kann. In C++ bestimmt der Punkt, an dem ein Name deklariert wird, ob er für den Compiler sichtbar ist. Sie können nicht auf eine Funktion oder Klasse, die zu einem späteren Zeitpunkt in der Kompilierungseinheit deklariert ist, verweisen; Sie können *Vorwärtsdeklarationen* , diese Einschränkung zu umgehen.  
@@ -39,7 +39,7 @@ Deklarationen führen Namen in einem Programm, z. B. die Namen von Variablen, Na
   
 5.  Ist eine **Typedef** Anweisung.  
   
- Beispiele für Deklarationen, die auch Definitionen sind:  
+Beispiele für Deklarationen, die auch Definitionen sind:  
   
 ```cpp 
 // Declare and define int variables i and j.  
@@ -58,7 +58,7 @@ public:
 };  
 ```  
   
- Beispiele für Deklarationen, die keine Definitionen sind:  
+Beispiele für Deklarationen, die keine Definitionen sind:  
   
 ```cpp 
 extern int i;  

@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Operator ==-Operator | Microsoft Docs'
+title: 'Comptr:: Operator ==-Operator | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 703204541a05c260e77562729703677b98fb8e9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9750f0d49f4c7a580b2c99d0c833c5381ba20997
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883354"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467338"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator==-Operator
-Gibt an, ob zwei ComPtr-Objekte gleich sind.  
+Gibt an, ob zwei **ComPtr** Objekte gleich sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,20 +42,19 @@ bool operator==(
    decltype(__nullptr),  
    const ComPtr<T>& a  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `a`  
- Ein Verweis auf ein ComPtr-Objekt.  
+ *a*  
+ Ein Verweis auf eine **ComPtr** Objekt.  
   
- `b`  
- Ein Verweis auf ein anderes ComPtr-Objekt.  
+ *b*  
+ Ein Verweis auf einen anderen **ComPtr** Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der erste Operator liefert `true` Wenn Objekt `a` Objekt entspricht `b`ist, andernfalls `false`.  
+ Der erste Operator ergibt **"true"** Wenn Objekt *eine* Objekt entspricht *b*ist, andernfalls **"false"**.  
   
- Der zweite und dritte Operator yield `true` Wenn Objekt `a` gleich `nullptr`ist, andernfalls `false`.  
+ Führen Sie die zweite und dritte Operator **"true"** Wenn Objekt *eine* gleich **"nullptr"** ist, andernfalls **"false"**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

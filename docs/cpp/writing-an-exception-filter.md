@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4b02144f55231a7b4472cd62322fd61a543d18
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943286"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462117"
 ---
 # <a name="writing-an-exception-filter"></a>Schreiben eines Ausnahmefilters
 Sie können eine Ausnahme behandeln, indem Sie entweder auf die Ebene des Ausnahmehandlers wechseln oder die Ausführung fortsetzen. Anstatt den Code im Ausnahmehandler, um die Ausnahme und das durchfallen zu behandeln, können Sie *Filter* bereinigen Sie das Problem, und klicken Sie dann durch-1 zurückzugeben, normalen Fluss fortzusetzen, ohne dass den Stapel gelöscht.  

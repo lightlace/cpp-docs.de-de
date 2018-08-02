@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Cancastto-Methode | Microsoft Docs'
+title: 'Chaininterfaces:: Cancastto-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2286c347fbd68f34fac807e80facca0a0286aa6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5839edd90f61f9f4aa96ea1d921d2179660be554
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860293"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461209"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo-Methode
-Gibt an, ob die angegebene Schnittstellen-ID in jeweils die durch die Vorlagenparameter nicht standardmäßiger definiert spezialisierungen umgewandelt werden kann.  
+Gibt an, ob die angegebene Schnittstellen-ID in jede der durch die nicht dem Standard-Vorlagenparameter definiert spezialisierungen umgewandelt werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,14 +37,14 @@ __forceinline bool CanCastTo(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `riid`  
+ *riid*  
  Eine Schnittstellen-ID.  
   
- `ppv`  
+ *ppv*  
  Ein Zeiger auf die letzte Schnittstellen-ID, die erfolgreich umgewandelt wurde.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Wenn alle Umwandlungsvorgänge erfolgreich war; andernfalls `false`.  
+ **"true"** Wenn alle Umwandlungsvorgänge erfolgreich war; andernfalls **"false"**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  

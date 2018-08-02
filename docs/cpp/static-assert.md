@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc51fab2dade4c6bed0456dd353258df82722de5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6fa9b8fb7fe85aca21e90195534f33201bee59fc
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943839"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464933"
 ---
 # <a name="staticassert"></a>static_assert
 Überprüft eine Softwareassertion zur Kompilierzeit. Wenn der angegebene Konstante Ausdruck "false" ist, zeigt der Compiler die angegebene Meldung, aus, wenn eine bereitgestellt wird und die Kompilierung schlägt mit Fehler C2338 fehl; Andernfalls hat die Deklaration keine Auswirkungen.  
@@ -42,15 +42,15 @@ static_assert( constant-expression );
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|`constant-expression`|Ein ganzzahliger konstanter Ausdruck, der in einen booleschen Wert konvertiert werden kann.<br /><br /> Wenn der ausgewertete Ausdruck 0 (false) ist, wird der `string-literal`-Parameter angezeigt, und bei der Kompilierung tritt ein Fehler auf. Wenn der Ausdruck ungleich Null (True), ist die **"static_assert"** Deklaration hat keine Auswirkungen.|  
-|`string-literal`|Eine Meldung, die angezeigt wird, wenn der `constant-expression`-Parameter 0 (null) ist. Die Meldung ist eine Zeichenfolge von Zeichen in der [Basis-Zeichensatz](../c-language/ascii-character-set.md) von der Compilers, d. h., nicht [Multibyte-oder Breitzeichen](../c-language/multibyte-and-wide-characters.md).|  
+|*constant-expression*|Ein ganzzahliger konstanter Ausdruck, der in einen booleschen Wert konvertiert werden kann.<br /><br /> Wenn der ausgewertete Ausdruck 0 (null) ist (false), die *Zeichenfolgenliteral* Parameter angezeigt wird, und die Kompilierung schlägt fehl. Wenn der Ausdruck ungleich Null (True), ist die **"static_assert"** Deklaration hat keine Auswirkungen.|  
+|*string-literal*|Eine Nachricht, die angezeigt wird, wenn die *Konstantenausdruck* -Parameter ist 0 (null). Die Meldung ist eine Zeichenfolge von Zeichen in der [Basis-Zeichensatz](../c-language/ascii-character-set.md) von der Compilers, d. h., nicht [Multibyte-oder Breitzeichen](../c-language/multibyte-and-wide-characters.md).|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `constant-expression` Parameter eine **"static_assert"** Deklaration stellt einen *Softwareassertion*. Eine Softwareassertion gibt eine Bedingung an, die an einer bestimmten Stelle im Programm "true" sein muss. Wenn die Bedingung "true" ist die **"static_assert"** Deklaration hat keine Auswirkungen. Wenn die Bedingung "false" ist, tritt bei der Assertion ein Fehler auf, der Compiler zeigt die Nachricht im `string-literal`-Parameter an, und bei der Kompilierung tritt ein Fehler auf. Der Zeichenfolgenliteral-Parameter ist optional, in Visual Studio 2017 und höher. 
+ Die *Konstantenausdruck* Parameter eine **"static_assert"** Deklaration stellt einen *Softwareassertion*. Eine Softwareassertion gibt eine Bedingung an, die an einer bestimmten Stelle im Programm "true" sein muss. Wenn die Bedingung "true" ist die **"static_assert"** Deklaration hat keine Auswirkungen. Wenn die Bedingung false ist, schlägt die Assertion fehl, zeigt der Compiler die Nachricht in *Zeichenfolgenliteral* -Parameter und der Kompilierung tritt ein Fehler. Der Zeichenfolgenliteral-Parameter ist optional, in Visual Studio 2017 und höher. 
   
- Die **"static_assert"** -Deklaration testet eine Softwareassertion zur Kompilierzeit. Im Gegensatz dazu die [assert-Makro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) Makro testet eine Softwareassertion zur Laufzeit und fallen Kosten an, zur Laufzeit auf Speicherplatz und Zeit. Die **"static_assert"** -Deklaration ist besonders nützlich zum Debuggen von Vorlagen, da Vorlagenargumente in aufgenommen werden können die `constant-expression` Parameter.  
+ Die **"static_assert"** -Deklaration testet eine Softwareassertion zur Kompilierzeit. Im Gegensatz dazu die [assert-Makro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) Makro testet eine Softwareassertion zur Laufzeit und fallen Kosten an, zur Laufzeit auf Speicherplatz und Zeit. Die **"static_assert"** -Deklaration ist besonders nützlich zum Debuggen von Vorlagen, da Vorlagenargumente in aufgenommen werden können die *Konstantenausdruck* Parameter.  
   
- Der Compiler überprüft die **"static_assert"** -Deklaration auf Syntaxfehler, wenn die Deklaration gefunden wird. Der Compiler wertet den `constant-expression`-Parameter sofort aus, wenn er nicht von einem Vorlagenparameter abhängt. Andernfalls wertet der Compiler den `constant-expression`-Parameter aus, wenn die Vorlage instanziiert wird. Daher gibt der Compiler möglicherweise eine Diagnosemeldung aus: einmal, wenn die Deklaration gefunden wird, und noch einmal, wenn die Vorlage instanziiert wird.  
+ Der Compiler überprüft die **"static_assert"** -Deklaration auf Syntaxfehler, wenn die Deklaration gefunden wird. Der Compiler wertet die *Konstantenausdruck* Parameter sofort, wenn es nicht von einem Vorlagenparameter abhängt. Der Compiler andernfalls wertet der *Konstantenausdruck* Parameter an, wenn die Vorlage instanziiert wird. Daher gibt der Compiler möglicherweise eine Diagnosemeldung aus: einmal, wenn die Deklaration gefunden wird, und noch einmal, wenn die Vorlage instanziiert wird.  
   
  Sie können die **"static_assert"** Schlüsselwort an den Namespace, Klassen- oder Blockbereich. (Die **"static_assert"** -Schlüsselwort ist technisch gesehen eine Deklaration, obwohl es keine neuen Namen in das Programm einführt, da es im Namespacebereich verwendet werden kann.)  
   
@@ -64,7 +64,7 @@ static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```  
   
 ## <a name="description"></a>Beschreibung  
- Im folgenden Beispiel die **"static_assert"** Deklaration über einen Klassenbereich. Die **"static_assert"** überprüft, ob ein Vorlagenparameter ist eine *plain old Data* (POD)-Typ. Der Compiler überprüft die **"static_assert"** -Deklaration wird deklariert, jedoch wird nicht ausgewertet den `constant-expression` Parameter bis der `basic_string` -Klassenvorlage in instanziiert `main()`.  
+ Im folgenden Beispiel die **"static_assert"** Deklaration über einen Klassenbereich. Die **"static_assert"** überprüft, ob ein Vorlagenparameter ist eine *plain old Data* (POD)-Typ. Der Compiler überprüft die **"static_assert"** -Deklaration wird deklariert, jedoch wird nicht ausgewertet den *Konstantenausdruck* Parameter bis der `basic_string` -Klassenvorlage in instanziiert`main()`.  
   
 ## <a name="example"></a>Beispiel  
   

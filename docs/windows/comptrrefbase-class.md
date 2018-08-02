@@ -1,5 +1,5 @@
 ---
-title: ComPtrRefBase-Klasse | Microsoft Docs
+title: ComPtrRefBase-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13744a1629ede5575dc992ea15b90e22961a8570
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0342500fc41c650967e17919ebdc9605d4261cb5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883579"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464242"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase-Klasse
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,8 +37,8 @@ class ComPtrRefBase;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Ein [ComPtr\<T >](../windows/comptr-class.md) Typ "oder" daraus abgeleitete, nicht nur die Schnittstelle, die durch das comptr-Objekt dargestellt wird.  
+ *T*  
+ Ein [ComPtr\<T >](../windows/comptr-class.md) Typ oder einem Typ abgeleitet ist, nicht nur die Schnittstelle der **ComPtr**.  
   
 ## <a name="remarks"></a>Hinweise  
  Stellt die Basisklasse für die [ComPtrRef](../windows/comptrref-class.md) Klasse.  
@@ -49,20 +49,20 @@ class ComPtrRefBase;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`InterfaceType`|Ein Synonym für den Typ des Vorlagenparameters `T`.|  
+|`InterfaceType`|Ein Synonym für den Typ des Vorlagenparameters *T*.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ComPtrRefBase::operator IInspectable**-Operator](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) -Datenmember auf einen Zeiger-auf-a-Zeiger-to "iinspectable"-Schnittstelle.|  
-|[ComPtrRefBase::operator IUnknown**-Operator](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) -Datenmember auf einen Zeiger an eine-Zeiger-an der IUnknown-Schnittstelle.|  
+|[ComPtrRefBase::operator IInspectable**-Operator](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) Datenmembers, der einen Zeiger an eine-Zeiger-an der Schnittstelle "iinspectable".|  
+|[ComPtrRefBase::operator IUnknown**-Operator](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) -Datenmember auf einen Zeiger auf-a-Zeiger-IUnknown-Schnittstelle.|  
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[ComPtrRefBase::ptr_-Datenmember](../windows/comptrrefbase-ptr-data-member.md)|Zeiger auf den Typ, der durch den aktuellen Vorlagenparameter angegeben.|  
+|[ComPtrRefBase::ptr_-Datenmember](../windows/comptrrefbase-ptr-data-member.md)|Zeiger auf den Typ, durch den aktuellen Vorlagenparameter angegeben.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `ComPtrRefBase`  

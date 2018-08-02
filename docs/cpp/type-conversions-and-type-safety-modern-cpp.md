@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38edaa7dfa97fd34ab70b21785a416c3ed072d55
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7ccdbc71679a197e0464b4ec42dba948754c4c5c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940552"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462263"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Typumwandlungen und Typsicherheit (Modern C++)
 In diesem Dokument werden allgemeine Typkonvertierungsprobleme behandelt, und es wird beschrieben, wie Sie diese im C++-Code vermeiden können.  
@@ -75,7 +75,6 @@ num2 = -1;
 num = num2;  
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;  
 // Prints: unsigned val = 65535 signed val = -1  
-  
 ```  
   
  Beachten Sie, dass die Werte in beide Richtungen neu interpretiert werden. Wenn Ihr Programm seltsame Ergebnisse erzeugt, in denen das Vorzeichen des Werts anders als erwartet umgekehrt erscheint, suchen Sie nach impliziten Konvertierungen zwischen ganzzahligen Typen mit und ohne Vorzeichen. Im folgenden Beispiel, das Ergebnis des Ausdrucks (0 - 1) wird vom implizit konvertiert **Int** zu **ganze Zahl ohne Vorzeichen** ist bei im gespeichert `num`. Dies führt zu einer Neuinterpretation des Bitmusters.  
@@ -83,7 +82,6 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 ```cpp  
 unsigned int u3 = 0 - 1;  
 cout << u3 << endl; // prints 4294967295  
-  
 ```  
   
  Der Compiler warnt nicht vor impliziten Konvertierungen zwischen ganzzahligen Typen mit und ohne Vorzeichen. Daher wird empfohlen, Konvertierungen zwischen Typen mit und ohne Vorzeichen grundsätzlich zu vermeiden. Wenn sie sich nicht vermeiden lassen, fügen Sie Ihrem Code eine Laufzeitüberprüfung hinzu, um festzustellen, ob der konvertierte Wert größer oder gleich Null und kleiner oder gleich dem maximalen Wert des Typs mit Vorzeichen ist. Werte in diesem Bereich werden von Typen mit Vorzeichen in Typen ohne Vorzeichen oder Typen ohne Vorzeichen in Typen mit Vorzeichen übertragen, ohne neu interpretiert zu werden.  
@@ -93,7 +91,6 @@ cout << u3 << endl; // prints 4294967295
   
 ```cpp  
 char* s = "Help" + 3;  
-  
 ```  
   
 ## <a name="explicit-conversions-casts"></a>Explizite Konvertierungen (Umwandlungen)  
@@ -104,7 +101,6 @@ char* s = "Help" + 3;
 ```cpp  
 (int) x; // old-style cast, old-style syntax  
 int(x); // old-style cast, functional syntax  
-  
 ```  
   
  Der Umwandlungsoperator im C-Format ist mit dem Aufrufoperator () identisch und daher unauffällig im Code und leicht zu übersehen. Beide sind fehlerhaft, da sind schwer zu erkennen, auf einen Blick oder suchen Sie nach, und sie jedoch ausreichend unterschiedlich sind, um eine beliebige Kombination von Aufrufen **statische**, **const**, und **"reinterpret_cast"**. Zu ermitteln, was bei einer Umwandlung im alten Stil tatsächlich geschieht, kann kompliziert und fehleranfällig sein. Wenn eine Umwandlung erforderlich ist, empfiehlt es sich aus diesen Gründen, einen der folgenden C++-Umwandlungsoperatoren zu verwenden, die manchmal deutlich typsicherer sind und die Programmierabsicht genauer zum Ausdruck bringen:  
@@ -121,7 +117,6 @@ int(x); // old-style cast, functional syntax
     // No error but not necessarily safe.  
     Base* b = new Base();  
     Derived* d2 = static_cast<Derived*>(b);  
-  
     ```  
   
      Weitere Informationen finden Sie unter ["static_cast"](../cpp/static-cast-operator.md).  
@@ -147,7 +142,6 @@ int(x); // old-style cast, functional syntax
     }  
   
     //Output: d3 is null;  
-  
     ```  
   
      Weitere Informationen finden Sie unter [Dynamic_cast](../cpp/dynamic-cast-operator.md).  
@@ -161,7 +155,6 @@ int(x); // old-style cast, functional syntax
        const double pi = 3.14;  
        Func(const_cast<double&>(pi)); //No error.  
     }  
-  
     ```  
   
      Weitere Informationen finden Sie unter ["const_cast"](../cpp/const-cast-operator.md).  
@@ -181,7 +174,6 @@ int(x); // old-style cast, functional syntax
                       // to do this?  
     int k = reinterpret_cast<int>(str);// Programming intent is clear.  
                                        // However, it is not 64-bit safe.  
-  
     ```  
   
      Weitere Informationen finden Sie unter [Reinterpret_cast-Operator](../cpp/reinterpret-cast-operator.md).  

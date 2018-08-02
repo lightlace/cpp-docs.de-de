@@ -1,5 +1,5 @@
 ---
-title: Appobject | Microsoft Docs
+title: Appobject | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aca26e156bbb6a883ed6d55a6a01da128982c127
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c0171c8cf836c95afecb74cf1909688bbbe030db
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856972"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466370"
 ---
 # <a name="appobject"></a>appobject
-Identifiziert die Co-Klasse als ein Anwendungsobjekt, die mit einer vollständigen .exe-Anwendung verknüpft ist, und gibt an, dass die Funktionen und Eigenschaften der Co-Klasse in diesem global verfügbar sind [Typbibliothek](../mfc/automation-clients-using-type-libraries.md).  
+Identifiziert die Co-Klasse als ein Anwendungsobjekt, die mit einer vollständigen .exe-Anwendung verknüpft und gibt an, dass die Funktionen und Eigenschaften der Co-Klasse in diesem global verfügbare [Typbibliothek](../mfc/automation-clients-using-type-libraries.md).  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [appobject]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Appobject** C++-Attribut hat die gleiche Funktionalität wie die [Appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt eine einfache Klassendefinition ein Attributblock, die enthält vorangestellt **Appobject**:  
+ Der folgende Code zeigt eine einfache Klassendefinition vorangestellt wird ein Attributblock, die enthält **Appobject**:  
   
-```  
+```cpp  
 // cpp_attr_ref_appobject.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -62,9 +60,9 @@ class A : public ICustom {
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`|  
+|**Betrifft**|**Klasse**, **Struktur**|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**coclass**|  
+|**Erforderliche Attribute**|`coclass`|  
 |**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  

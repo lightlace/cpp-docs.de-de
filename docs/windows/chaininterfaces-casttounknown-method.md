@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Casttounknown-Methode | Microsoft Docs'
+title: 'Chaininterfaces:: Casttounknown-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 696d632037f2a1fdc68e298b247e46720b81a343
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c9479180134e8a873e1d79f91deb3d29700d40a2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855093"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467169"
 ---
 # <a name="chaininterfacescasttounknown-method"></a>ChainInterfaces::CastToUnknown-Methode
-Wandelt den Schnittstellenzeiger des Typs definiert, indem die `I0` Vorlagenparameter in einen Zeiger auf IUnknown.  
+Wandelt den Schnittstellenzeiger, der den vom definierten Typ der *I0* Template-Parameter auf einen Zeiger auf IUnknown.  
   
 ## <a name="syntax"></a>Syntax  
   

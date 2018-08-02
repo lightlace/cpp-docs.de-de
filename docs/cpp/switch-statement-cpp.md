@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d4ab0694936fe4ad25b3c56bf286e9416e4e935
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a5a8858d48a38d42dea7fba0fdce7c3a4d407a3a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943603"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462185"
 ---
 # <a name="switch-statement-c"></a>switch-Anweisung (C++)
 Ermöglicht die Auswahl von mehreren Codeabschnitten, abhängig vom Wert eines ganzzahligen Ausdrucks.  
@@ -164,7 +164,6 @@ int main(int argc, char *argv[])
   
  Ein **wechseln** Anweisung kann geschachtelt sein. In solchen Fällen **Fall** oder **Standard** Bezeichnungen ordnen Sie die nächstgelegene **wechseln** -Anweisung, die sie umschließt.  
 
- 
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
  Microsoft C beschränkt nicht die Anzahl der Case-Werten in einer **wechseln** Anweisung. Die Anzahl wird nur durch den verfügbaren Speicher beschränkt. ANSI C erfordert, dass mindestens 257 Case-Bezeichnungen werden innerhalb von einer **wechseln** Anweisung.  
   
@@ -175,4 +174,3 @@ int main(int argc, char *argv[])
 ## <a name="see-also"></a>Siehe auch  
  [Auswahlanweisungen](../cpp/selection-statements-cpp.md)   
  [Schlüsselwörter](../cpp/keywords-cpp.md)   
- 
