@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d294eef323d96ddbfecad8f740826a5a038d7b4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: eae00467e2866ba8c0ff9aeb275224d1249ae361
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943309"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404960"
 ---
 # <a name="examples-of-lambda-expressions"></a>Beispiele für Lambdaausdrücke
 Dieser Artikel zeigt, wie Lambdaausdrücke in Ihren Programmen zu verwenden sind. Eine Übersicht über Lambda-Ausdrücke, finden Sie unter [Lambda-Ausdrücke](../cpp/lambda-expressions-in-cpp.md). Weitere Informationen zur Struktur eines Lambda-Ausdrucks finden Sie unter [Lambda-Ausdruckssyntax](../cpp/lambda-expression-syntax.md).  
@@ -204,7 +204,6 @@ int main()
     // Print the result.  
     cout << timestwoplusthree << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>Ausgabe  
@@ -256,7 +255,6 @@ int main()
     // Print the result, which is (7+8)*2.  
     cout << answer << endl;  
 }  
-  
 ```  
   
 ### <a name="output"></a>Ausgabe  
@@ -276,7 +274,6 @@ int main()
  Sie können die **dies** -Zeiger explizit in eine Funktion, wie hier gezeigt:  
   
 ```cpp  
-
 // capture "this" by reference
 void ApplyScale(const vector<int>& v) const  
 {  
@@ -290,7 +287,6 @@ void ApplyScale2(const vector<int>& v) const
    for_each(v.begin(), v.end(),   
       [*this](int n) { cout << n * _scale << endl; });  
 }  
-
 ```  
   
  Sie können auch Erfassen der **dies** Zeiger implizit:  
@@ -344,7 +340,6 @@ int main()
     Scale s(3);  
     s.ApplyScale(values);  
 }  
-  
 ```  
   
 ### <a name="output"></a>Ausgabe  
@@ -354,7 +349,6 @@ int main()
 6  
 9  
 12  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -365,7 +359,7 @@ int main()
 ##  <a name="templateLambdaExpressions"></a> Verwenden von Lambdaausdrücken mit Vorlagen  
   
 ### <a name="example"></a>Beispiel  
- Da Lambda-Ausdrücke typisiert sind, können Sie sie mit C++-Vorlagen verwenden. Im folgenden Beispiel werden die Funktionen `negate_all` und `print_all` dargestellt. Die `negate_all`-Funktion wendet den unären `operator-` auf jedes Element im `vector`-Objekt an. Die `print_all`-Funktion gibt jedes Element im `vector`-Objekt auf der Konsole aus.  
+ Da Lambda-Ausdrücke typisiert sind, können Sie sie mit C++-Vorlagen verwenden. Im folgenden Beispiel werden die Funktionen `negate_all` und `print_all` dargestellt. Die `negate_all` -Funktion wendet den unären **Operator -** auf jedes Element in der `vector` Objekt. Die `print_all`-Funktion gibt jedes Element im `vector`-Objekt auf der Konsole aus.  
   
 ### <a name="code"></a>Code  
   
@@ -405,7 +399,6 @@ int main()
     cout << "After negate_all():" << endl;  
     print_all(v);  
 }  
-  
 ```  
   
 ### <a name="output"></a>Ausgabe  
@@ -418,7 +411,6 @@ After negate_all():
 -34  
 43  
 -56  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
@@ -502,7 +494,6 @@ int main()
         Console::WriteLine(s + Convert::ToChar(ch));   
     }("Hello");  
 }  
-  
 ```  
   
 ### <a name="output"></a>Ausgabe  
