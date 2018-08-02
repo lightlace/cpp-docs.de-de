@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 069d206418fd392e28114d977b3448f8306a3119
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 020ae54cdaaddc2f05a8c3b6e285bc2fd0403ee8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943879"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463713"
 ---
 # <a name="unhook"></a>__unhook
 Trennt eine Handlermethode von einem Ereignis.  
@@ -31,8 +31,7 @@ Trennt eine Handlermethode von einem Ereignis.
 ## <a name="syntax"></a>Syntax  
   
 ```cpp 
-  
-      long  __unhook(  
+long  __unhook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -61,11 +60,11 @@ long  __unhook(
  Der Name der Schnittstelle von verknüpft wird *Empfänger*, nur für COM-Ereignisempfängern, bei denen die *Layout_dependent* Parameter der [Event_receiver](../windows/event-receiver.md) -Attribut ist **"true"**.  
   
  *source*  
- Ein Zeiger auf eine Instanz der Ereignisquelle. Je nach Code `type` im angegebenen **Event_receiver**, *Quelle* kann einen der folgenden sein:  
+ Ein Zeiger auf eine Instanz der Ereignisquelle. Je nach Code `type` im angegebenen `event_receiver`, *Quelle* kann einen der folgenden sein:  
   
 -   Ein systemeigener Ereignisquellen-Objektzeiger.  
   
--   Ein **IUnknown**-basierte Zeiger (COM-Quelle).  
+-   Ein `IUnknown`-basierte Zeiger (COM-Quelle).  
   
 -   Ein Zeiger des verwalteten Objekts (für verwaltete Ereignisse).  
   

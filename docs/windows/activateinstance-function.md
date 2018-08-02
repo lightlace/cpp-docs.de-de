@@ -1,5 +1,5 @@
 ---
-title: ActivateInstance-Funktion | Microsoft Docs
+title: ActivateInstance-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0bf945dd8225ca3c153d7f497ded6b83ebd022d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413bf73d5aeaef2c210be89f3c6f4ca3a4254ba4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855574"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461970"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance-Funktion
 Registriert, und ruft eine Instanz eines angegebenen Typs, der definiert, die in einer angegebenen Klasse-ID ab  
@@ -39,14 +39,14 @@ inline HRESULT ActivateInstance(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Ein Typ zu aktivieren.  
+ *T*  
+ Ein Typ, zu aktivieren.  
   
- `activatableClassId`  
- Der Name des Klassen-ID, das Parameter definiert `T`.  
+ *activatableClassId*  
+ Der Name des Klassen-ID, die Parameter definiert *T*.  
   
- `instance`  
- Wenn dieser Vorgang abgeschlossen wird, einen Verweis auf eine Instanz von `T`.  
+ *Instanz*  
+ Wenn dieser Vorgang abgeschlossen ist, einen Verweis auf eine Instanz von *T*.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn erfolgreich; andernfalls ein Fehler HRESULT, das die Ursache des Fehlers angibt.  

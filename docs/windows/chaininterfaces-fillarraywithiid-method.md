@@ -1,5 +1,5 @@
 ---
-title: 'Chaininterfaces:: Fillarraywithiid-Methode | Microsoft Docs'
+title: 'Chaininterfaces:: Fillarraywithiid-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e6283b86b8e225771f259df9b5377fffa3667fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bd9f899457c3a6045d7a5525c9fb560e23f10d3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855941"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461035"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>ChainInterfaces::FillArrayWithIid-Methode
-Speichert die Schnittstellen-ID, indem definiert die `I0` Vorlagenparameter in einer angegebenen Position in einem angegebenen Array von Schnittstellen-IDs.  
+Speichert die Schnittstellen-ID, durch definiert die *I0* Template-Parameter in einer angegebenen Position in einem angegebenen Array von Schnittstellen-IDs.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +37,10 @@ __forceinline static void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `index`  
- Zeiger auf einen Indexwert in der `iids` Array.  
+ *index*  
+ Zeiger auf einen Indexwert in der *Iids* Array.  
   
- `iids`  
+ *IIDs*  
  Ein Array von Schnittstellen-IDs.  
   
 ## <a name="requirements"></a>Anforderungen  

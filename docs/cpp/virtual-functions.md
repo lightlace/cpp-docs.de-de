@@ -1,5 +1,5 @@
 ---
-title: Virtuelle Funktionen | Microsoft Docs
+title: Virtuelle Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1fc04a09e48ac50f6f27d4ffd3e01dbd3dac8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54444200b9a38c427a8192d1c16e6835712ff1f6
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467918"
 ---
 # <a name="virtual-functions"></a>Virtuelle Funktionen
 Eine virtuelle Funktion ist eine Memberfunktion, von der Sie erwarten, dass sie in abgeleiteten Klassen neu definiert wird. Wenn Sie mit einem Zeiger oder einem Verweis auf die Basisklasse auf ein abgeleitetes Klassenobjekt verweisen, können Sie eine virtuelle Funktion für dieses Objekt aufrufen und die Version der abgeleiteten Klasse für die Funktion ausführen.  
@@ -29,7 +30,7 @@ Eine virtuelle Funktion ist eine Memberfunktion, von der Sie erwarten, dass sie 
   
  Angenommen, eine Basisklasse eine Funktion, die als deklariert enthält [virtuellen](../cpp/virtual-cpp.md) und eine abgeleitete Klasse definiert die gleiche Funktion. Die Funktion der abgeleiteten Klasse wird für Objekte der abgeleiteten Klasse aufgerufen, selbst wenn sie unter Verwendung eines Zeigers oder eines Verweises auf die Basisklasse aufgerufen wird. Das folgende Beispiel zeigt eine Basisklasse, die eine Implementierung von der Funktion `PrintBalance` sowie von zwei abgeleiteten Klassen bereitstellt.  
   
-```  
+```cpp 
 // deriv_VirtualFunctions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -85,7 +86,7 @@ int main() {
   
  Das folgende Beispiel zeigt, wie sich virtuelle und nicht virtuelle Funktionen verhalten, wenn sie durch Zeiger aufgerufen werden:  
   
-```  
+```cpp 
 // deriv_VirtualFunctions2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -140,7 +141,7 @@ int main() {
   
 ### <a name="output"></a>Ausgabe  
   
-```  
+```Output  
 Derived::NameOf  
 Invoked by Base  
 Derived::NameOf  
@@ -151,13 +152,13 @@ Invoked by Derived
   
  Da virtuelle Funktionen nur für Objekte von Klassentypen aufgerufen werden, kann nicht deklariert werden globale oder statische Funktionen als **virtuellen**.  
   
- Die **virtuellen** -Schlüsselwort kann verwendet werden, wenn in einer abgeleiteten Klasse deklarieren überschreibender Funktionen, jedoch ist es nicht erforderlich, überschreibungen virtueller Funktionen immer virtuell sind.  
+ Die **virtuellen** Schlüsselwort kann verwendet werden, wenn in einer abgeleiteten Klasse deklarieren überschreibender Funktionen, jedoch ist es nicht erforderlich, überschreibungen virtueller Funktionen immer virtuell sind.  
   
- Virtuelle Funktionen in einer Basisklasse müssen definiert werden, es sei denn, sie deklariert werden, mithilfe der *pure-Specifier*. (Weitere Informationen über rein virtuelle Funktionen finden Sie unter [abstrakte Klassen](../cpp/abstract-classes-cpp.md).)  
+ Virtuelle Funktionen in einer Basisklasse müssen definiert werden, es sei denn, sie deklariert werden, mit der *pure-Specifier*. (Weitere Informationen über rein virtuelle Funktionen finden Sie unter [abstrakte Klassen](../cpp/abstract-classes-cpp.md).)  
   
  Der Mechanismus für den virtuellen Funktionsaufruf kann unterdrückt werden, indem Sie den Funktionsnamen explizit mithilfe des Bereichsauflösungsoperators (`::`) qualifizieren. Betrachten Sie das vorherige Beispiel, das die `Account`-Klasse enthält. Um `PrintBalance` in der Basisklasse aufrufen, verwenden Sie beispielsweise folgenden Code:  
   
-```  
+```cpp 
 CheckingAccount *pChecking = new CheckingAccount( 100.00 );  
   
 pChecking->Account::PrintBalance();  //  Explicit qualification.  
@@ -168,4 +169,3 @@ pAccount->Account::PrintBalance();   //  Explicit qualification.
 ```  
   
  Beide Aufrufe von `PrintBalance` im vorherigen Beispiel unterdrücken den Mechanismus zum virtuellen Funktionsaufruf.  
-  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c41e2cf0765c036715377038357d587a755196f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5040319bee3fa74319bb30ca45ff11f2f5d72720
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943959"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465931"
 ---
 # <a name="user-defined-type-conversions-c"></a>Benutzerdefinierte Typkonvertierungen (C++)
 Ein *Konvertierung* produziert einen neuen Wert eines bestimmten Typs aus einem Wert eines anderen Typs. *Standardkonvertierungen* sind in der C++-Sprache und Unterstützung, die integrierten Typen, und Sie können erstellen, integriert *benutzerdefinierte Konvertierungen* zum Durchführen von Konvertierungen, aus, oder zwischen benutzerdefinierten Typen.  
@@ -79,7 +79,7 @@ Ein *Konvertierung* produziert einen neuen Wert eines bestimmten Typs aus einem 
   
  Die **explizite** -Schlüsselwort kann angewendet werden, um konvertierungskonstruktoren seit C ++ 98 und Konvertierungsfunktionen seit C ++ 11. Die folgenden Abschnitte enthalten weitere Informationen zur Verwendung der **explizite** Schlüsselwort.  
   
-##  <a name="ConvCTOR"></a> Konvertierungskonstruktoren  
+## <a name="ConvCTOR"></a> Konvertierungskonstruktoren  
  Konvertierungskonstruktoren definieren Konvertierungen von benutzerdefinierten oder integrierten Typen zu einem benutzerdefinierten Typ. Das folgende Beispiel zeigt einen konvertierungskonstruktor, der von den integrierten Typ konvertiert **doppelte** in einen benutzerdefinierten Typ `Money`.  
   
 ```cpp 
@@ -181,7 +181,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << balance << std::endl;  
 }  
-  
 ```  
   
  Beachten Sie, dass die Membervariable `amount` privat ist und dass eine öffentliche zum Typ Konvertierungsfunktion **doppelte** wird eingeführt, um den Wert des zurückzugeben `amount`. In der Funktion `display_balance` erfolgt eine implizite Konvertierung, wenn der Wert von `balance` durch den Operator zum Einfügen des Datenstroms `<<` in die Standardausgabe geschrieben wird. Da kein Operator zum Einfügen des Stream für den benutzerdefinierten Typ definiert ist `Money`, aber es ein für den integrierten Typ gibt **doppelte**, der Compiler kann die Konvertierungsfunktion von mithilfe `Money` zu **Double** um den Operator Einfügen des Datenstroms zu erfüllen.  
@@ -226,8 +225,6 @@ void display_balance(const Money balance)
 {  
     std::cout << "The balance is: " << (double)balance << std::endl;  
 }  
-  
 ```  
   
  Die Konvertierungsfunktion **Operator double** wurde explizit, und eine explizite Umwandlung in den Typ **doppelte** wurde eingeführt, in der Funktion `display_balance` zum Durchführen der Konvertierung. Ohne diese Umwandlung wäre der Compiler nicht in der Lage, den geeigneten Operator zum Einfügen des Datenstroms `<<` für den Typ `Money` zu ermitteln, und ein Fehler wäre die Folge.  
-  

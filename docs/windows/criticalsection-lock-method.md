@@ -1,5 +1,5 @@
 ---
-title: 'CriticalSection:: Lock-Methode | Microsoft Docs'
+title: 'CriticalSection:: Lock-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c873494a702802b8ead3dab9cac28557664f618
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a4fee4991459ddbab0ac370f025776529a6bd1e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871324"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464547"
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock-Methode
-Wartet auf den Besitz des Objekts angegebenen kritischen Abschnitts. Gibt die Funktion, wenn der aufrufende Thread den Besitz gewährt wird.  
+Wartet auf den Besitz des Objekts angegebenen kritischen Abschnitt. Gibt die Funktion zurück, wenn der aufrufende Thread den Besitz gewährt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,14 +38,14 @@ SyncLock Lock();
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `cs`  
- Ein benutzerdefiniertes kritischen Abschnitt-Objekt.  
+ *cs*  
+ Ein Kritischer Abschnitt Benutzer angegebene-Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Eine Sperrobjekt, das verwendet werden kann, um den aktuellen kritischen Abschnitt zu entsperren.  
   
 ## <a name="remarks"></a>Hinweise  
- Die erste **Sperre** Funktion wirkt sich auf das aktuelle Objekt von kritischen Abschnitts. Die zweite **Sperre** Funktion wirkt sich auf ein benutzerdefiniertes kritischen Abschnitts.  
+ Die erste **Sperre** Funktion wirkt sich auf das aktuelle Objekt des kritischen Abschnitts. Die zweite **Sperre** Funktion wirkt sich auf einen vom Benutzer angegebenen kritischen Abschnitt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

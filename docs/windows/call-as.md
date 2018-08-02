@@ -1,5 +1,5 @@
 ---
-title: Aufruf als | Microsoft Docs
+title: Call_as | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68707ea7e00665d12165c7838b1a2ad3440f944d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860865"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465869"
 ---
 # <a name="callas"></a>call_as
-Ermöglicht eine [lokale](../windows/local-cpp.md) Funktion, um eine remote-Funktion zugeordnet werden, wenn die remote-Funktion aufgerufen wird, die lokale Funktion aufgerufen wird.  
+Ermöglicht einem [lokalen](../windows/local-cpp.md) Funktion, um eine remote-Funktion, damit die lokale Funktion aufgerufen wird, wenn die remote-Funktion aufgerufen wird, zugeordnet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ call_as(  
+[ call_as(  
    function  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parameter  
  *function*  
- Die lokale-Funktion, die Sie aufgerufen werden, wenn eine remote-Funktion aufgerufen wird.  
+ Die lokale Funktion, die aufgerufen werden, wenn eine remote-Funktion aufgerufen wird, werden sollen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Aufruf als** C++-Attribut hat die gleiche Funktionalität wie die [Aufruf als](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL-Attribut.  
+ Die **Call_as** C++-Attribut hat die gleiche Funktionalität wie die [Call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt, wie Sie verwenden können **Aufruf als** zuordnen eine Funktion nicht remotefähig (**f1**) an eine remotefähige-Funktion (**Remf1**):  
+ Der folgende Code zeigt, wie Sie verwenden können **Call_as** , eine Funktion nicht remotefähige zuzuordnen (**f1**) an eine remotefähige-Funktion (**Remf1**):  
   
-```  
+```cpp  
 // cpp_attr_ref_call_as.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -73,5 +72,5 @@ __interface IMInterface {
   
 ## <a name="see-also"></a>Siehe auch  
  [IDL-Attribute](../windows/idl-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [local](../windows/local-cpp.md)   

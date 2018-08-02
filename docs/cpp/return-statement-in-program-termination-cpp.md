@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb594eb10e8068d5f5b3ed124d5e77b48ced728e
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6c08edff8237462cbc2c55dc5541e3da663ed0a3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943144"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461112"
 ---
 # <a name="return-statement-in-program-termination-c"></a>return-Anweisung in Programmbeendigung (C++)
-Ausgeben einer `return` -Anweisung vom **main** ist funktionell gleichwertig mit Aufrufen der **beenden** Funktion. Betrachten Sie das folgende Beispiel:  
+Ausgeben einer **zurückgeben** -Anweisung vom `main` ist funktionell gleichwertig mit Aufrufen der `exit` Funktion. Betrachten Sie das folgende Beispiel:  
   
 ```cpp 
 // return_statement.cpp  
@@ -36,7 +36,7 @@ int main()
 }  
 ```  
   
- Die **beenden** und **zurückgeben** Anweisungen im vorherigen Beispiel funktional identisch sind. Allerdings erfordert C++, dass Funktionen, die andere als Rückgabetypen **"void"** geben einen Wert zurück. Die **zurückgeben** -Anweisung können Sie zum Zurückgeben eines Werts aus `main`.  
+ Die `exit` und **zurückgeben** Anweisungen im vorherigen Beispiel funktional identisch sind. Allerdings erfordert C++, dass Funktionen, die andere als Rückgabetypen **"void"** geben einen Wert zurück. Die **zurückgeben** -Anweisung können Sie zum Zurückgeben eines Werts aus `main`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Programmbeendigung](../cpp/program-termination.md)

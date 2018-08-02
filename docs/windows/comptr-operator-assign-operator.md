@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Operator = | Microsoft Docs'
+title: 'Comptr:: Operator = | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4066db37de8a993802970784f09141352fef028
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fac3a845ea7c512f5a7ccffdabdf67ce26029ff8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871200"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466162"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator=-Operator
-Weist dem aktuellen ComPtr-Objekt einen Wert zu.  
+Weist einen Wert mit dem aktuellen **ComPtr**.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,29 +57,29 @@ WRL_NOTHROW ComPtr& operator=(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `U`  
+ *U*  
  Eine Klasse.  
   
- `other`  
- Ein Zeiger, Verweis oder Rvalue-Verweis auf einen Typ oder eine andere comptr-Objekt.  
+ *other*  
+ Ein Zeiger, Verweis oder Rvalue-Verweis auf einen Typ oder eine andere **ComPtr**.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf das aktuelle comptr-Objekt.  
+ Ein Verweis auf das aktuelle **ComPtr**.  
   
 ## <a name="remarks"></a>Hinweise  
- Die erste Version dieses Operators weist einen leeren Wert zu dem aktuellen comptr-Objekt.  
+ Die erste Version dieses Operators weist einen leeren Wert der aktuellen **ComPtr**.  
   
- In der zweiten Version wird das Zuweisen von Schnittstellenzeiger nicht identisch mit den aktuellen ComPtr-Schnittstellenzeiger ist die zweite Schnittstellenzeiger auf dem aktuellen comptr-Objekt zugewiesen.  
+ In der zweiten Version, ist der Zuweisen von Schnittstellenzeiger nicht identisch mit dem aktuellen **ComPtr** -Schnittstellenzeiger, der zweite Schnittstellenzeiger wird zugewiesen, mit dem aktuellen **ComPtr**.  
   
- In der dritten Version ist das Zuweisen von Schnittstellenzeiger auf das aktuelle comptr-Objekt zugewiesen.  
+ In der dritten Version erhält der zuweisen Schnittstellenzeiger mit dem aktuellen **ComPtr**.  
   
- In der vierten Version wird der Schnittstellenzeiger auf das Zuweisen von Werts nicht mit den aktuellen ComPtr-Schnittstellenzeiger ist die zweite Schnittstellenzeiger auf das aktuelle comptr-Objekt zugewiesen.  
+ In der vierten Version ist der Schnittstellenzeiger des zuweisen Werts nicht identisch mit dem aktuellen **ComPtr** -Schnittstellenzeiger, der zweite Schnittstellenzeiger wird zugewiesen, mit dem aktuellen **ComPtr**.  
   
- Die fünfte Version ist eine Kopie-Operator. Ein Verweis auf ein comptr-Objekt wird auf dem aktuellen comptr-Objekt zugewiesen.  
+ Die fünfte Version ist ein Operator kopieren. Ein Verweis auf eine **ComPtr** zugewiesen ist, mit dem aktuellen **ComPtr**.  
   
- Der sechste Version ist ein Kopie-Operator, der verwendet die move-Semantik; Ein Rvalue-Verweis auf ein comptr-Objekt, wenn jeder Typ statisch ist, umgewandelt, und klicken Sie dann auf dem aktuellen comptr-Objekt zugewiesen werden soll.  
+ Die sechste Version ist ein Copy-Operator, der verwendet die move-Semantik; Ein Rvalue-Verweis auf eine **ComPtr** wenn keinerlei statisch ist, umgewandelt, und klicken Sie dann auf den aktuellen zugewiesen **ComPtr**.  
   
- Die siebte Version ist ein Kopie-Operator, der verwendet die move-Semantik; Ein Rvalue-Verweis auf ein comptr-Objekt des Typs `U` ist statisch dann umgewandelt und dem aktuellen comptr-Objekt zugewiesen.  
+ Die siebte Version ist ein Copy-Operator, der verwendet die move-Semantik; Ein Rvalue-Verweis auf eine **ComPtr** vom Typ *U* ist statische dann umgewandelt und mit dem aktuellen zugewiesen **ComPtr**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

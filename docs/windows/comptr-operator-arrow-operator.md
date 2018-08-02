@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: -&gt; Operator | Microsoft Docs'
+title: 'Comptr:: -&gt; Operator | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb3571207f328ad044ffd3f2f9b83bcebc7677e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ff18dee2b8d951ab9233e92478eb967e4a02eb9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870184"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464297"
 ---
 # <a name="comptroperator-gt-operator"></a>Comptr:: -&gt; Operator
 Ruft einen Zeiger auf den Typ ab, der durch den aktuellen Vorlagenparameter angegeben ist.  
@@ -34,10 +34,10 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Zeiger auf den Typ, der von der aktuellen vorlagentypname angegeben.  
+ Zeiger auf den Typ, von der aktuellen vorlagentypname angegeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Hilfsfunktion entfernt unnötigen Aufwand verursacht werden, das STDMETHOD-Makro. Diese Funktion macht IUnknown-Typen anstelle von virtuellen privaten.  
+ Diese Hilfsfunktion entfernt unnötigen Mehraufwand verursacht werden, die STDMETHOD-Makro. Diese Funktion macht `IUnknown` Typen **private** anstelle von **virtuellen**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

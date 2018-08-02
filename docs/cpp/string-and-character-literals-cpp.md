@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 79ec82ec00e912d597cfeda608e1b77cf08ab4e8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208548"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466942"
 ---
 # <a name="string-and-character-literals--c"></a>Zeichenfolgen- und Zeichenliterale (C++)
 C++ unterstützt verschiedene Zeichenfolgen- und Zeichentypen und bietet Möglichkeiten Literalwerte dieser einzelnen Typen auszudrücken. In Ihrem Quellcode stellen Sie die Inhalte Ihrer Zeichen- und Zeichenfolgenliterale mit einem Zeichensatz dar. Universelle Zeichennamen und Escapezeichen ermöglichen es Ihnen, eine beliebige Zeichenfolge darzustellen, indem Sie nur den grundlegenden Quellzeichensatz verwenden. Ein unformatiertes Zeichenfolgenliteral ermöglicht es Ihnen, die Verwendung von Escapezeichen zu vermeiden, und kann verwendet werden, um alle Typen von Zeichenfolgenliteralen auszudrücken. Sie können auch std::string-Literale erstellen, ohne zusätzliche Erstellungs- oder Konvertierungsschritte ausführen zu müssen.  
@@ -146,7 +146,7 @@ int main() {
   
  **Microsoft-spezifisch**  
   
- Um einen Wert in ein normales Zeichen literal (die ohne Präfix) zu erstellen, konvertiert der Compiler das Zeichen oder die Zeichenfolge zwischen einfachen Anführungszeichen in 8-Bit-Werte in eine 32-Bit-Ganzzahl. Mehrere Zeichen im Literal belegen entsprechende Bytes nach Bedarf vom höherwertigen zum niederwertigen Byte. Zum Erstellen einer **Char** Wert ist, nimmt der Compiler das niederwertige Byte. Um einen `wchar_t` - oder einen `char16_t` -Wert zu erstellen, nimmt der Compiler das niederwertige Wort. Der Compiler warnt, dass das Ergebnis abgeschnitten wird, wenn irgendwelche Bits über dem zugewiesenen Byte oder Word Bits festgelegt sind.  
+ Um einen Wert in ein normales Zeichen literal (die ohne Präfix) zu erstellen, konvertiert der Compiler das Zeichen oder die Zeichenfolge zwischen einfachen Anführungszeichen in 8-Bit-Werte in eine 32-Bit-Ganzzahl. Mehrere Zeichen im Literal belegen entsprechende Bytes nach Bedarf vom höherwertigen zum niederwertigen Byte. Zum Erstellen einer **Char** Wert ist, nimmt der Compiler das niederwertige Byte. Zum Erstellen einer **"wchar_t"** oder `char16_t` Wert ist, nimmt der Compiler das niederwertige Wort. Der Compiler warnt, dass das Ergebnis abgeschnitten wird, wenn irgendwelche Bits über dem zugewiesenen Byte oder Word Bits festgelegt sind.  
   
 ```cpp  
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'  
@@ -231,7 +231,7 @@ const char* str2 = u8"\U0001F607 is O:-)";
 ```  
   
 ### <a name="wide-string-literals"></a>Breite Zeichenfolgenliterale  
- Ein breites Zeichenfolgenliteral ist ein Null-terminierte Array eines Konstanten `wchar_t` , die über das Präfix "`L`" und das jedes Schriftzeichen außer das doppelte Anführungszeichen ("), umgekehrter Schrägstrich (\\), oder die Zeilenendemarke enthält. Ein Breitzeichenfolgenliteral kann die Escapesequenzen, die oben aufgelistet sind, sowie jeden universellen Zeichennamen enthalten.  
+ Ein breites Zeichenfolgenliteral ist ein Null-terminierte Array eines Konstanten **"wchar_t"** , die über das Präfix "`L`" und das jedes Schriftzeichen außer das doppelte Anführungszeichen ("), umgekehrter Schrägstrich (\\), oder die Zeilenendemarke enthält. Ein Breitzeichenfolgenliteral kann die Escapesequenzen, die oben aufgelistet sind, sowie jeden universellen Zeichennamen enthalten.  
   
 ```cpp  
 const wchar_t* wide = L"zyxw";  
@@ -319,7 +319,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
   
  **Microsoft-spezifisch**  
   
- In Visual C++ können Sie ein Zeichenfolgenliteral verwenden, um einen Zeiger auf ein nicht konstantes initialisieren **Char** oder `wchar_t`. Dies ist in C99-Code zulässig, in C++98 jedoch veraltet und wurde in C++11 entfernt. Ein Versuch, die Zeichenfolge zu ändern, verursacht eine Zugriffsverletzung, wie in diesem Beispiel:  
+ In Visual C++ können Sie ein Zeichenfolgenliteral verwenden, um einen Zeiger auf ein nicht konstantes initialisieren **Char** oder **"wchar_t"**. Dies ist in C99-Code zulässig, in C++98 jedoch veraltet und wurde in C++11 entfernt. Ein Versuch, die Zeichenfolge zu ändern, verursacht eine Zugriffsverletzung, wie in diesem Beispiel:  
   
 ```cpp  
 wchar_t* str = L"hello";  

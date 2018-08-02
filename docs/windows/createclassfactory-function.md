@@ -1,5 +1,5 @@
 ---
-title: CreateClassFactory-Funktion | Microsoft Docs
+title: CreateClassFactory-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95d08573515bee89fd86d6b37e3982dde2b29978
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff853fce39b2052b82df921bf6743b0db361408c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870472"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461324"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory-Funktion
 Erstellt eine Factory, die Instanzen der angegebenen Klasse erstellt.  
@@ -37,27 +37,26 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
    REFIID riid,   
    _Outptr_ IUnknown **ppFactory  
 ) throw();  
-  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `flags`  
- Eine Kombination aus einem oder mehreren [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) Enumerationswerte.  
+ *flags*  
+ Eine Kombination aus einem oder mehreren [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) -Enumerationswerte fest.  
   
- `entry`  
- Zeiger auf eine [CreatorMap](../windows/creatormap-structure.md) , Initialisierung und Registrierung Informationen über Parameter enthält `riid`.  
+ *entry*  
+ Zeiger auf eine [CreatorMap](../windows/creatormap-structure.md) mit Initialisierungs- und Registrierung Informationen zum Parameter *Riid*.  
   
- `riid`  
+ *riid*  
  Verweis auf eine Schnittstellen-ID.  
   
- `ppFactory`  
- Wenn dieser Vorgang erfolgreich, einen Zeiger an eine Klassenfactory ausgeführt wird.  
+ *ppFactory*  
+ Wenn dieser Vorgang erfolgreich, einen Zeiger auf eine Klassenfactory ausgeführt wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Assert-Fehler wird ausgegeben, wenn Vorlagenparameter `Factory` nicht IClassFactory-Schnittstelle abgeleitet.  
+ Ein Assert-Fehler wird ausgegeben, wenn Vorlagenparameter *Factory* nicht abgeleitet werden, aus der Schnittstelle `IClassFactory`.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

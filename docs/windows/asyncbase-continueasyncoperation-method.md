@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Continueasyncoperation-Methode | Microsoft Docs'
+title: 'Asyncbase:: Continueasyncoperation-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: caf7cd1cbee97761c6877ec6ab3a51ea956cbfd1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7b5d2b10b571a3517beab98eaa839d5c7fd86c2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859591"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460832"
 ---
 # <a name="asyncbasecontinueasyncoperation-method"></a>AsyncBase::ContinueAsyncOperation-Methode
-Bestimmt, ob der asynchrone Vorgang der Verarbeitung fortsetzen oder Anhalten sollte.  
+Bestimmt, ob der asynchrone Vorgang im Fortsetzen der Verarbeitung oder anhalten soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ inline bool ContinueAsyncOperation();
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Wenn der aktuelle Status des asynchronen Vorgangs ist *gestartet*, was bedeutet, dass den Vorgang fortgesetzt werden sollte. Andernfalls `false`, was bedeutet, dass den Vorgang sollte beendet werden.  
+ **"true"** ist von der aktuelle Status des asynchronen Vorgangs *Schritte*, was bedeutet, dass den Vorgang sollte weiterhin. Andernfalls **"false"**, was bedeutet, dass den Vorgang sollte beendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** async.h  

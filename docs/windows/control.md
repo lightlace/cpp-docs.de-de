@@ -1,5 +1,5 @@
 ---
-title: Steuerelement | Microsoft Docs
+title: Steuerelement | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8e80736ca84b551f197cc475aed4c7b54b9bf52
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93ffba61c9e0edaf3d127a7ddfb12b098ae484ca
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870831"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466486"
 ---
 # <a name="control"></a>Steuerelement
-Gibt an, dass der benutzerdefinierte Datentyp eines Steuerelements.  
+Gibt an, dass der benutzerdefinierte Typ eines Steuerelements.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [control]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Steuerelement** -Attributs impliziert die [Coclass](../windows/coclass.md) Attribut. Die **Steuerelement** C++-Attribut hat die gleiche Funktionalität wie die [Steuerelement](http://msdn.microsoft.com/library/windows/desktop/aa366764) MIDL-Attribut.  
+ Die **Steuerelement** -Attributs impliziert die [Co-Klasse](../windows/coclass.md) Attribut. Die **Steuerelement** C++-Attribut hat die gleiche Funktionalität wie die [Steuerelement](http://msdn.microsoft.com/library/windows/desktop/aa366764) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // cpp_attr_ref_control.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -61,7 +59,7 @@ class CTest : public ICustom {};
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`|  
+|**Betrifft**|**Klasse**, **Struktur**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

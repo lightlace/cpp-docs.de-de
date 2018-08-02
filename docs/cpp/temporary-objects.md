@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d914b668140f1cbf372e29bcdd4f4b526397fb9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3a34fa07431892493e12a6f38603965da1dbc824
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943208"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466854"
 ---
 # <a name="temporary-objects"></a>Temporäre Objekte
 In einigen Fällen muss der Compiler temporäre Objekte erstellen. Diese temporären Objekte können aus folgenden Gründen erstellt werden:  
@@ -54,4 +54,3 @@ In einigen Fällen muss der Compiler temporäre Objekte erstellen. Diese tempor�
 |------------------------------|-----------------------|  
 |Ergebnis der Ausdrucksauswertung|Alle temporären Dateien, die als Ergebnis der Auswertung von Ausdrücken erstellt werden zerstört, am Ende der Ausdrucksanweisung (d. h. das Semikolon), oder am Ende der steuernden Ausdrücke für **für**, **Wenn**, **während**, **führen**, und **wechseln** Anweisungen.|  
 |Initialisieren von **const** Verweise|Wenn ein Initialisierer kein l-Wert desselben Typs wie der initialisierte Verweis ist, wird ein temporäres Objekt des zugrunde liegenden Objekttyps erstellt und mit dem Initialisierungsausdruck initialisiert. Dieses temporäre Objekt wird zerstört, sobald das Verweisobjekt, an das es gebunden ist, zerstört wurde.|  
-  

@@ -1,5 +1,5 @@
 ---
-title: 'ClassFactory:: QueryInterface-Methode | Microsoft Docs'
+title: 'ClassFactory:: QueryInterface-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b939fdd593c031eb3e750ff6b41a275fa5685cda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c0132ddeb7a8bfa30f95d3e4c85ec03962361f3
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855987"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467091"
 ---
 # <a name="classfactoryqueryinterface-method"></a>ClassFactory::QueryInterface-Methode
 Ruft einen Zeiger auf die Schnittstelle, die durch Parameter angegeben wird.  
@@ -36,11 +36,11 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `riid`  
+ *riid*  
  Eine Schnittstellen-ID.  
   
- `ppvObject`  
- Wenn dieser Vorgang abgeschlossen wird, einen Zeiger auf die Schnittstelle, die vom Parameter angegebenen `riid`.  
+ *ppvObject*  
+ Wenn dieser Vorgang abgeschlossen ist, einen Zeiger auf die Schnittstelle, die vom Parameter angegebene *Riid*.  
   
 ## <a name="return-value"></a>Rückgabewert  
  „S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt.  

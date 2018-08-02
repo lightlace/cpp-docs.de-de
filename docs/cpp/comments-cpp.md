@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a412c2b4dd87bc3e8e3e1b77a524d2a5925aaf60
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a819c435135d2ee9c310f8fd4a5628d2d9d0acb1
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405057"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466812"
 ---
 # <a name="comments-c"></a>Kommentare (C++)
 Ein Kommentar ist Text, den der Compiler ignoriert, der jedoch für Programmierer hilfreich ist. Kommentare werden in der Regel verwendet, um Code zu Referenzzwecken mit Anmerkungen zu versehen. Der Compiler behandelt sie als Leerzeichen. Sie können Kommentare beim Testen verwenden, um bestimmte Codezeilen als inaktiv zu markieren; allerdings `#if` / `#endif` -präprozessoranweisungen besser dafür da können Sie Code, der Kommentare enthält umgeben, aber Kommentare nicht schachteln.  
   
- Es gibt folgende Möglichkeiten, einen C++-Kommentar zu schreiben:  
+Es gibt folgende Möglichkeiten, einen C++-Kommentar zu schreiben:  
   
 -   Die Zeichen `/*` (Schrägstrich, Sternchen), gefolgt von einer beliebigen Folge von Zeichen (einschließlich neuer Zeilen), gefolgt von den Zeichen `*/`. Diese Syntax ist mit der Syntax von ANSI C identisch.  
   

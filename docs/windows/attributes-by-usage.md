@@ -1,5 +1,5 @@
 ---
-title: Attribute nach Verwendung | Microsoft Docs
+title: Attribute nach Verwendung | Microsoft-Dokumentation
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94ac32d1eac8a22603d31e23695540fe23cdd26b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72da3eeebdf99ca637708e9e493f64730a350327
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860631"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465518"
 ---
 # <a name="attributes-by-usage"></a>Attribute nach Verwendung
-Dieses Thema enthält Attribute gemäß dem C++-Sprachelemente, die für die sie gelten.  
+Dieses Thema enthält Attribute gemäß der Sprachelemente von C++ für die sie gelten.  
   
- Wenn ein Attribut ein Visual C++-Elements, das nicht im Bereich für das Attribut ist vorausgeht, wird der Attributblock als Kommentar behandelt.  
+ Wenn ein Attribut ein Visual C++-Element vorangestellt, die nicht im Bereich für das Attribut ist ist, wird der Attributblock als Kommentar behandelt.  
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
@@ -33,12 +33,12 @@ Dieses Thema enthält Attribute gemäß dem C++-Sprachelemente, die für die sie
 |[Schnittstellenattribut](../windows/interface-attributes.md)|Gilt für die [__interface](../cpp/interface.md) C++-Schlüsselwort.|  
 |[Klassenattribute](../windows/class-attributes.md)|Gilt für die C++-Schlüsselwort.|  
 |[Methodenattribut](../windows/method-attributes.md)|Gilt für die Methoden in einer Klasse, Co-Klasse oder Schnittstelle.|  
-|[Parameterattribute](../windows/parameter-attributes.md)|Gilt für die Parameter einer Methode in einer Klasse oder Schnittstelle.|  
-|[Datenmemberattribute](../windows/data-member-attributes.md)|Gilt für die Datenelemente in eine Klasse, Co-Klasse oder Schnittstelle.|  
+|[Parameterattribute](../windows/parameter-attributes.md)|Gilt für den Parameter einer Methode in einer Klasse oder Schnittstelle.|  
+|[Datenmemberattribute](../windows/data-member-attributes.md)|Gilt für Datenmember einer Klasse, Co-Klasse oder Schnittstelle.|  
 |[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)|Gilt für die C++-Schlüsselwörter.|  
-|[Arrayattribute](../windows/array-attributes.md)|Gilt für Arrays oder **SAFEARRAY**s.|  
-|[Eigenständige Attribute](../windows/stand-alone-attributes.md)|Eher wie eine Codezeile arbeitet, jedoch kann nicht ausgeführt werden, auf ein C++-Schlüsselwort. Eigenständiges Attribut-Anweisungen erfordern ein Semikolon am Ende der Zeile.|  
-|[Benutzerdefinierte Attribute](../windows/custom-attributes-cpp.md)|Ermöglicht dem Benutzer, um Metadaten zu erweitern.|  
+|[Arrayattribute](../windows/array-attributes.md)|Gilt für Arrays oder `SAFEARRAY`s.|  
+|[Eigenständige Attribute](../windows/stand-alone-attributes.md)|Funktioniert ähnlich wie eine einzige Zeile Code arbeitet jedoch nicht auf ein C++-Schlüsselwort. Eigenständige Attribut-Anweisungen erfordern ein Semikolon am Ende der Zeile.|  
+|[Benutzerdefinierte Attribute](../windows/custom-attributes-cpp.md)|Ermöglicht dem Benutzer um Metadaten zu erweitern.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [C++-Attributreferenz](../windows/cpp-attributes-reference.md)   

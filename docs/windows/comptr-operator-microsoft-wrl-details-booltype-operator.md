@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: booltype-Operator | Microsoft Docs'
+title: 'Comptr:: booltype-Operator | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,15 +13,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5efd641e5c908e5f1c4d4a3cdb78cd146b634f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a4ec737c3f24899e50220c3e862283b88a826b9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883159"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461163"
 ---
 # <a name="comptroperator-microsoftwrldetailsbooltype-operator"></a>ComPtr::operator Microsoft::WRL::Details::BoolType-Operator
-Gibt an, ob ein ComPtr-Objekt die Objektlebensdauer einer Schnittstelle verwaltet.  
+Gibt an, ob eine **ComPtr** die Objektlebensdauer einer Schnittstelle verwaltet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,7 +30,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn eine Schnittstelle mit diesem comptr-Objekt, die Adresse des verknüpft ist die [boolstruct::](../windows/boolstruct-member-data-member.md) -Datenmember ist, andernfalls `nullptr`.  
+ Wenn eine Schnittstelle zugeordnet ist **ComPtr**, die Adresse der [boolstruct::](../windows/boolstruct-member-data-member.md) -Datenmember ist, andernfalls **"nullptr"**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

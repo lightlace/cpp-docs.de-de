@@ -1,5 +1,5 @@
 ---
-title: 'CriticalSection:: IsValid-Methode | Microsoft Docs'
+title: 'CriticalSection:: IsValid-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d004fd43a6cad78df62a19e5b703867a990861f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: add94320728ad21d07a1953f14ac911883580982
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870373"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461235"
 ---
 # <a name="criticalsectionisvalid-method"></a>CriticalSection::IsValid-Methode
 Gibt an, ob der aktuelle kritische Abschnitt gültig ist.  
@@ -34,7 +34,7 @@ bool IsValid() const;
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Standardmäßig immer zurück `true`.  
+ Immer in der Standardeinstellung gibt **"true"**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

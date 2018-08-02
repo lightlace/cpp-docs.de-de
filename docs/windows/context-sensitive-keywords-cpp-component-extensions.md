@@ -1,5 +1,5 @@
 ---
-title: Kontextbezogene Schlüsselwörter (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Kontextbezogene Schlüsselwörter (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871522"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466123"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Kontextbezogene Schlüsselwörter (Komponentenerweiterungen für C++)
 *Kontextbezogene Schlüsselwörter* sind Sprachelemente, die nur in bestimmten Kontexten erkannt werden. Außerhalb des jeweiligen Kontexts kann ein kontextbezogenes Schlüsselwort ein benutzerdefiniertes Symbol sein.  
@@ -46,7 +46,7 @@ ms.locfileid: "33871522"
   
 -   `internal`   
   
--   [Zeichenfolgenliterale](../windows/literal-cpp-component-extensions.md)  
+-   [Zeichenfolgenliteral](../windows/literal-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
@@ -54,9 +54,9 @@ ms.locfileid: "33871522"
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where` (Teil [Generika](../windows/generics-cpp-component-extensions.md))  
+-   `where` (Teil der [Generika](../windows/generics-cpp-component-extensions.md))  
   
- Zur besseren Lesbarkeit empfiehlt es sich um die Verwendung von kontextbezogenen Schlüsselwörtern als benutzerdefinierte Symbole einschränken.  
+ Für die Lesbarkeit zu erhöhen sollten Sie die Verwendung von kontextbezogenen Schlüsselwörtern als benutzerdefinierte Symbole einschränken.  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
  **Hinweise**  
@@ -77,9 +77,9 @@ ms.locfileid: "33871522"
 ### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Im folgenden Codebeispiel wird dargestellt, wie das kontextbezogene Schlüsselwort `property` im entsprechenden Kontext verwendet werden kann, um eine Eigenschaft und eine Variable zu definieren.  
+ Das folgende Codebeispiel zeigt, dass im geeigneten Kontext, der **Eigenschaft** kontextbezogenes Schlüsselwort kann verwendet werden, um eine Eigenschaft und eine Variable definieren.  
   
-```  
+```cpp  
 // context_sensitive_keywords.cpp  
 // compile with: /clr  
 public ref class C {  

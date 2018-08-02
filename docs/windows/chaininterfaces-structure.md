@@ -1,5 +1,5 @@
 ---
-title: ChainInterfaces-Struktur | Microsoft Docs
+title: ChainInterfaces-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18814a4ad87cefa39201d369926c0778931d4d64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861135"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461532"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces-Struktur
 Gibt Überprüfungs- und Initialisierungsfunktionen an, die auf einen Satz von Schnittstellen-IDs angewendet werden können.  
@@ -61,44 +61,44 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `I0`  
+ *I0*  
  (Erforderlich) Schnittstellen-ID 0.  
   
- `I1`  
+ *I1*  
  (Erforderlich) Schnittstellen-ID 1.  
   
- `I2`  
+ *I2*  
  (Optional) Schnittstellen-ID 2.  
   
- `I3`  
+ *I3*  
  (Optional) Schnittstellen-ID 3.  
   
- `I4`  
+ *I4*  
  (Optional) Schnittstellen-ID 4.  
   
- `I5`  
+ *I5*  
  (Optional) Schnittstellen-ID 5.  
   
- `I6`  
+ *I6*  
  (Optional) Schnittstellen-ID 6.  
   
- `I7`  
+ *I7*  
  (Optional) Schnittstellen-ID 7.  
   
- `I8`  
+ *I8*  
  (Optional) Schnittstellen-ID 8.  
   
- `I9`  
- (Optional) Schnittstellen-ID 9.  
+ *I9*  
+ (Optional) Schnittstellen-ID-9.  
   
- `DerivedType`  
+ *DerivedType*  
  Ein abgeleiteter Typ.  
   
- `BaseType`  
+ *BaseType*  
  Der Basistyp eines abgeleiteten Typs.  
   
- `hasImplements`  
- Ein boolescher Wert, auch wenn `true`, können keine bedeutet eine ["mixin"](../windows/mixin-structure.md) Struktur mit einer Klasse, die nicht von abgeleitet ist die [implementiert](../windows/implements-structure.md) Struktur.  
+ *hasImplements*  
+ Ein boolescher Wert, auch wenn **"true"**, bedeutet, dass Sie nicht verwenden eine [MixIn](../windows/mixin-structure.md) Struktur mit einer Klasse, die nicht von abgeleitet ist die [implementiert](../windows/implements-structure.md) abgeschrägten Designs.  
   
 ## <a name="members"></a>Member  
   
@@ -106,16 +106,16 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ChainInterfaces::CanCastTo-Methode](../windows/chaininterfaces-cancastto-method.md)|Gibt an, ob die angegebene Schnittstellen-ID an jeden der von den Vorlagenparametern ChainInterface definiert spezialisierungen umgewandelt werden kann.|  
-|[ChainInterfaces::CastToUnknown-Methode](../windows/chaininterfaces-casttounknown-method.md)|Wandelt den Schnittstellenzeiger des Typs definiert, indem die `I0` Vorlagenparameter in einen Zeiger auf IUnknown.|  
-|[ChainInterfaces::FillArrayWithIid-Methode](../windows/chaininterfaces-fillarraywithiid-method.md)|Speichert die Schnittstellen-ID, indem definiert die `I0` Vorlagenparameter in einer angegebenen Position in einem angegebenen Array von Schnittstellen-IDs.|  
-|[ChainInterfaces::Verify-Methode](../windows/chaininterfaces-verify-method.md)|Stellt sicher, dass jede Schnittstelle durch den Vorlagenparameter definiert `I0` über `I9` erbt von IUnknown und/oder "iinspectable", und dass `I0` erbt von `I1` über `I9`.|  
+|[ChainInterfaces::CanCastTo-Methode](../windows/chaininterfaces-cancastto-method.md)|Gibt an, ob die angegebene Schnittstellen-ID in jede der von den Vorlagenparametern ChainInterface definiert spezialisierungen umgewandelt werden kann.|  
+|[ChainInterfaces::CastToUnknown-Methode](../windows/chaininterfaces-casttounknown-method.md)|Wandelt den Schnittstellenzeiger, der den vom definierten Typ der *I0* Template-Parameter auf einen Zeiger auf IUnknown.|  
+|[ChainInterfaces::FillArrayWithIid-Methode](../windows/chaininterfaces-fillarraywithiid-method.md)|Speichert die Schnittstellen-ID, durch definiert die *I0* Template-Parameter in einer angegebenen Position in einem angegebenen Array von Schnittstellen-IDs.|  
+|[ChainInterfaces::Verify-Methode](../windows/chaininterfaces-verify-method.md)|Stellt sicher, dass jede Schnittstelle Vorlagenparameter definiert *I0* über *I9* erbt `IUnknown` und/oder `IInspectable`, und dass *I0* erbt von *I1* über *I9*.|  
   
 ### <a name="protected-constants"></a>Geschützte Konstanten  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[ChainInterfaces::IidCount-Konstante](../windows/chaininterfaces-iidcount-constant.md)|Die Gesamtanzahl der Schnittstellen-IDs enthalten, die in den Schnittstellen, die vom Vorlagenparameter angegeben `I0` über `I9`.|  
+|[ChainInterfaces::IidCount-Konstante](../windows/chaininterfaces-iidcount-constant.md)|Die Gesamtanzahl der Schnittstellen-IDs enthalten, die in den Schnittstellen, die vom Vorlagenparameter angegeben *I0* über *I9*.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `I0`  

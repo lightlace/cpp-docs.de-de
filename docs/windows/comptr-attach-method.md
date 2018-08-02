@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Attach-Methode | Microsoft Docs'
+title: 'Comptr:: Attach-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 590a50fbaca22b088af39f31e2e6349a3ebc18dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f852f8f360be90e7d17e9aaa09e7d584ad98fc33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870102"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461067"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach-Methode
-Verknüpft dieses ComPtr-Objekt mit dem Schnittstellentyp, der durch den Typparameter der aktuellen Vorlage angegeben ist.  
+Dies ordnet **ComPtr** mit dem Schnittstellentyp, der von der aktuellen Vorlagentyp-Parameter angegeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,8 +36,8 @@ void Attach(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `other`  
- Ein Schnittstellentyp.  
+ *other*  
+ Ein Schnittstellentyp ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

@@ -1,5 +1,5 @@
 ---
-title: Bindbare | Microsoft Docs
+title: Bindbare | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1cf16bfbeee2231133e60429a4a25e9d4fe85c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a216aa5fb5be727e82313c30aa2aa72d887cb4c
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861804"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467143"
 ---
 # <a name="bindable"></a>bindable
 Gibt an, dass die Eigenschaft die Datenbindung unterstützt.  
@@ -30,26 +30,24 @@ Gibt an, dass die Eigenschaft die Datenbindung unterstützt.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [bindable]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die **bindbare** C++-Attribut hat die gleiche Funktionalität wie die [bindbare](http://msdn.microsoft.com/library/windows/desktop/aa366738) MIDL-Attribut. Können Sie sie auf Eigenschaften, die definiert, mit der [Propget](../windows/propget.md), [Propput](../windows/propput.md), oder [Propputref](../windows/propputref.md) Attribute, oder Sie können eine bindbare Methode manuell definieren.  
+ Die **bindbare** C++-Attribut hat die gleiche Funktionalität wie die [bindbare](http://msdn.microsoft.com/library/windows/desktop/aa366738) MIDL-Attribut. Können Sie sie auf die definierte Eigenschaften mit dem die [Propget](../windows/propget.md), [Propput](../windows/propput.md), oder [Propputref](../windows/propputref.md) Attribute, oder Sie können eine bindbare Methode manuell definieren.  
   
- Die folgende MFC-Beispiele veranschaulichen die Verwendung der **bindbare**:  
+ Die folgenden MFC-Beispiele veranschaulichen die Verwendung der **bindbare**:  
   
--   [Beispiele für Steuerelemente: MFC-basierte ActiveX-Steuerelemente](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
+-   [Steuerelementbeispiele: MFC-basierte ActiveX-Steuerelemente](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
   
--   [CIRC-Beispiel: ActiveX-Steuerelement](http://msdn.microsoft.com/en-us/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
+-   [CIRC-Beispiel: ActiveX-Steuerelement](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
   
--   [TESTHELP-Beispiel: ActiveX-Steuerelement mit QuickInfos und Hilfe](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
+-   [TESTHELP-Beispiel: ActiveX-Steuerelement mit QuickInfos und Hilfe](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code zeigt, wie Sie verwenden können **bindbare** für eine Eigenschaft:  
   
-```  
+```cpp  
 // cpp_attr_ref_bindable.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -85,7 +83,7 @@ __interface IPropDemo : IDispatch {
   
 ## <a name="see-also"></a>Siehe auch  
  [IDL-Attribute](../windows/idl-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [defaultbind](../windows/defaultbind.md)   
  [displaybind](../windows/displaybind.md)   
  [immediatebind](../windows/immediatebind.md)   

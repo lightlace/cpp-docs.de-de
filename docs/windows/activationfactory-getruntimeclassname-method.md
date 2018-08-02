@@ -1,5 +1,5 @@
 ---
-title: 'Activationfactory:: Getruntimeclassname-Methode | Microsoft Docs'
+title: 'Activationfactory:: Getruntimeclassname-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db270c88b4335be48016ff2b8bdcf2b5e3951cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db26591bc4d0f1912c968c331266200baeea9917
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854875"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463667"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName-Methode
-Ruft die Laufzeitklasse-Namen des Objekts, das den aktuellen ActivationFactory instanziiert.  
+Ruft den Common Language Runtime-Klassennamen des Objekts ab, die die aktuelle **ActivationFactory** instanziiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,8 +36,8 @@ STDMETHOD(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `runtimeName`  
- Wenn dieser Vorgang abgeschlossen ist, enthält ein Handle für eine Zeichenfolge, die die Laufzeitklasse-Namen des Objekts, das den aktuellen ActivationFactory instanziiert.  
+ *runtimeName*  
+ Wenn dieser Vorgang abgeschlossen ist, ein Handle für eine Zeichenfolge, die den Common Language Runtime-Klassennamen des Objekts enthält, die die aktuelle **ActivationFactory** instanziiert.  
   
 ## <a name="return-value"></a>Rückgabewert  
  „S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt.  

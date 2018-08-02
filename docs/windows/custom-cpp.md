@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefiniert (C++) | Microsoft Docs
+title: Benutzerdefiniert (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b37d87d5380b9d4dac69cee702654285461ead6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7222d7021665a76c7e087033f5152d2836008caa
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871626"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460931"
 ---
 # <a name="custom-c"></a>custom (C++)
 Definiert die Metadaten für ein Objekt in der Typbibliothek.  
@@ -30,8 +30,7 @@ Definiert die Metadaten für ein Objekt in der Typbibliothek.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ custom(  
+[ custom(  
    uuid,   
    value  
 ) ];  
@@ -42,7 +41,7 @@ Definiert die Metadaten für ein Objekt in der Typbibliothek.
  Eine eindeutige ID.  
   
  *Wert*  
- Ein Wert, der eine Variante abgelegt werden kann.  
+ Ein Wert, der in eine Variante platziert werden kann.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **benutzerdefinierte** C++-Attribut bewirkt, dass die Informationen in der Typbibliothek versetzt werden soll. Sie benötigen ein Tool, das den benutzerdefinierten Wert aus der Typbibliothek liest.  
@@ -55,9 +54,9 @@ Definiert die Metadaten für ein Objekt in der Typbibliothek.
   
 |||  
 |-|-|  
-|**Betrifft**|Nicht-COM- `interface`, **Klasse**, `enum`s, `idl_module` Methoden, die Schnittstellenmember, die Parameter für die Benutzeroberfläche, `typedef`s, **Union**s, `struct`s|  
+|**Betrifft**|Nicht-COM- **Schnittstelle**, **Klasse**, **Enum**s, `idl_module` Methoden, die Schnittstellenmember, die Parameter für die Benutzeroberfläche, **Typedef**s, **Union**s, **Struktur**s|  
 |**Wiederholbar**|Ja|  
-|**Erforderliche Attribute**|**Co-Klasse** (wenn auf die Klasse verwendet wird)|  
+|**Erforderliche Attribute**|**Co-Klasse** (wenn es sich um eine Klasse verwendet wird)|  
 |**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
@@ -67,6 +66,6 @@ Definiert die Metadaten für ein Objekt in der Typbibliothek.
  [Eigenständige Attribute](../windows/stand-alone-attributes.md)   
  [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
  [Parameterattribute](../windows/parameter-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [Klassenattribute](../windows/class-attributes.md)   
  [Schnittstellenattribut](../windows/interface-attributes.md)   

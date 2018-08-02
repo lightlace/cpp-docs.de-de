@@ -1,5 +1,5 @@
 ---
-title: AsWeak-Funktion | Microsoft Docs
+title: AsWeak-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 039d210e9a204c485e2f44c39ea87b4d35089d88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854823"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462624"
 ---
 # <a name="asweak-function"></a>AsWeak-Funktion
 Ruft einen schwachen Verweis zur angegebenen Instanz ab.  
@@ -38,14 +38,14 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Ein Zeiger auf den Typ des Parameters `p`.  
+ *T*  
+ Ein Zeiger auf den Typ des Parameters *p*.  
   
- `p`  
+ *p*  
  Eine Instanz eines Typs.  
   
- `pWeak`  
- Wenn dieser Vorgang abgeschlossen wird, einen Zeiger auf einen schwachen Verweis auf Parameter `p`.  
+ *pWeak*  
+ Wenn dieser Vorgang abgeschlossen ist, einen Zeiger auf einen schwachen Verweis auf Parameter *p*.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn dieser Vorgang erfolgreich ist; andernfalls ein Fehler HRESULT, das die Ursache des Fehlers angibt.  

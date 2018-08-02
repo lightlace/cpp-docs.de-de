@@ -1,5 +1,5 @@
 ---
-title: 'Asyncbase:: Trytransitiontocompleted-Methode | Microsoft Docs'
+title: 'Asyncbase:: Trytransitiontocompleted-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f628acd1424af11cab5040b2c65d528f1774dff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f2185b83a393860904903f4b82b3c3b42a2c3b33
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861258"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39460741"
 ---
 # <a name="asyncbasetrytransitiontocompleted-method"></a>AsyncBase::TryTransitionToCompleted-Methode
-Gibt an, ob die aktuelle asynchrone Vorgang abgeschlossen ist.  
+Gibt an, ob der aktuelle asynchrone Vorgang abgeschlossen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +36,7 @@ bool TryTransitionToCompleted(
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Wenn der asynchrone Vorgang abgeschlossen wurde. andernfalls `false`.  
+ **"true"** Wenn der asynchrone Vorgang abgeschlossen wurde, andernfalls **"false"**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** async.h  

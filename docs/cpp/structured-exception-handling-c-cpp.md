@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64ff69a4ab75189dd069e774eb05266e6140ff77
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1edcf2cb24273f475b1ba98e5e973f5704c0cec8
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940494"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461701"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Obwohl bei Windows und Visual C++ die strukturierte Ausnahmebehandlung (SEH) unterstützt wird, ist die Verwendung der ISO-Standard-C++-Ausnahmebehandlung empfehlenswert, da Code damit besser portierbar und flexibler ist. Trotzdem ist die Verwendung von SEH in vorhandenem Code oder für bestimmte Arten von Programmen möglicherweise erforderlich.  
@@ -72,7 +72,7 @@ Obwohl bei Windows und Visual C++ die strukturierte Ausnahmebehandlung (SEH) unt
 -   [Verwendung einer strukturieren Ausnahmebehandlung mit C++](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>Beispiel  
- Wie bereits erwähnt werden Destruktoren für lokale Objekte aufgerufen werden, wenn Sie verwenden Sie SEH in einem C++-Programms und kompilieren sie mit der **/EH** Option sowie gewissen Modifizierern, z. B. **/EHsc** und   **/EHa**. Allerdings entspricht das Verhalten während der Ausführung bei zusätzlicher Verwendung von C++-Ausnahmen möglicherweise nicht Ihren Erwartungen. Im folgenden Beispiel werden diese unterschiedlichen Verhaltensweisen veranschaulicht.  
+ Wie bereits erwähnt werden Destruktoren für lokale Objekte aufgerufen, wenn SEH in einem C++-Programm verwendet und mithilfe der `/EH` - Option sowie gewissen Modifizierern, z. B. `/EHsc` und `/EHa` kompiliert wird. Allerdings entspricht das Verhalten während der Ausführung bei zusätzlicher Verwendung von C++-Ausnahmen möglicherweise nicht Ihren Erwartungen. Im folgenden Beispiel werden diese unterschiedlichen Verhaltensweisen veranschaulicht.  
   
 ```cpp  
 #include <stdio.h>  
@@ -119,7 +119,6 @@ int main()
   
     return 0;  
 }  
-  
 ```  
   
  Bei Verwendung von **/EHsc** kompiliert diesen Code aber das Steuerelement für die lokalen Tests `CPPEX` ist nicht definiert ist, besteht keine Ausführung von der `TestClass` Destruktor und die Ausgabe sieht wie folgt:  

@@ -1,5 +1,5 @@
 ---
-title: Einschränkungen für generische Typparameter (C + c++ / CLI) | Microsoft Docs
+title: Einschränkungen für generische Typparameter (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,48 +18,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c9787eb87ab701d067762a436d92b2fba3fabcbb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883341"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465297"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Einschränkungen für generische Typparameter (C++/CLI)
-Im generischen Typ oder die Methodendeklarationen können Sie einen Typparameter mit Einschränkungen qualifizieren. Eine Einschränkung ist erforderlich, die Typen als Typargumente verwendet erfüllen müssen. Z. B. möglicherweise eine Einschränkung, dass das Typargument eine bestimmte Schnittstelle implementieren oder von einer bestimmten Klasse erben muss.  
+Im generischen Typ oder Methodendeklarationen können Sie einen Typparameter mit Einschränkungen qualifizieren. Eine Einschränkung ist erforderlich, die Typen als Typargumente verwendet erfüllen müssen. Z. B. möglicherweise eine Einschränkung, dass das Typargument eine bestimmte Schnittstelle implementieren oder von einer bestimmten Klasse erben muss.  
   
  Einschränkungen sind optional. eine Einschränkung für einen Parameter nicht angegeben ist gleichbedeutend mit diesen Parameter auf einschränken <xref:System.Object>.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 where type-parameter: constraint list  
 ```  
   
 #### <a name="parameters"></a>Parameter  
  *Type-parameter*  
- Einer der Typparameter eingeschränkt wird.  
+ Einer der Typparameter eingeschränkt werden.  
   
  *Einschränkungsliste*  
  *Einschränkungsliste* ist eine durch Trennzeichen getrennte Liste der Einschränkung-Spezifikationen. Die Liste zählen Schnittstellen, die durch den Typparameter implementiert werden.  
   
- Die Liste kann auch eine Klasse enthalten. Für das Typargument eine Basisklasse Einschränkung nicht erfüllen muss es derselben Klasse wie die Einschränkung oder die Einschränkung abgeleitet.  
+ Die Liste kann auch eine Klasse enthalten. Für das Typargument eine basisklasseneinschränkung erfüllen muss es derselben Klasse wie die Einschränkung oder von der Einschränkung abgeleitet werden.  
   
- Sie können auch angeben, `gcnew()` an, dass das Typargument muss einen öffentlichen parameterlosen Konstruktor; haben oder `ref class` an, dass das Typargument muss ein Verweistyp, einschließlich einer Klasse, Schnittstelle, Delegat oder Arraytyp; oder `value class` an Geben Sie das Typargument ein Werttyp sein muss. Jeder Werttyp außer Nullable\<T > angegeben werden können.  
+ Sie können auch angeben, `gcnew()` an, dass das Typargument muss einen öffentlichen parameterlosen Konstruktor; haben oder **Verweisklasse** an, dass der Typ Argument muss ein Verweistyp, einschließlich jeder Klasse, Schnittstelle, Delegat oder Array sein -Typ oder **Wertklasse** an, dass der Typ das Argument muss ein Werttyp sein. Jeder Werttyp außer Nullable\<T > kann angegeben werden.  
   
- Sie können auch einen generischen Parameter als Einschränkung angeben. Das Typargument für den Typ angegeben, dass Sie typisiert sind muss sein oder vom Typ der Einschränkung abgeleitet werden. Dies ist eine Einschränkung für einen naked bezeichnet.  
+ Sie können auch einen generischen Parameter als Einschränkung angeben. Das Typargument für den Typ angegeben, dass Sie typisiert werden kann oder Ableitung vom Typ der Einschränkung. Dies ist eine Einschränkung für einen reinen bezeichnet.  
   
 ## <a name="remarks"></a>Hinweise  
- Besteht aus die Constraint-Klausel **, in denen** gefolgt von einem Type-Parameter, einen Doppelpunkt (**:**), und die Einschränkung, der angibt, die Art der Einschränkung für den Typparameter angeben. **wobei** ist ein kontextbezogenes Schlüsselwort; Siehe [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md) für Weitere Informationen. Trennen Sie mehrere **, in denen** Klauseln mit einem Leerzeichen.  
+ Die Einschränkungsklausel besteht aus **, in denen** gefolgt von einem Typparameter, der einen Doppelpunkt (**:**), und die Einschränkung, die die Art der Einschränkung des Typparameters angibt. **wo** ist ein kontextbezogenes Schlüsselwort; Siehe [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md) für Weitere Informationen. Trennen Sie mehrere **, in denen** Klauseln mit einem Leerzeichen.  
   
- Einschränkungen werden angewendet, um die Typparameter Platzierung von Einschränkungen auf die Typen, die als Argumente für einen generischen Typ oder Methode verwendet werden kann.  
+ Einschränkungen werden angewendet, um die Typparameter um Einschränkungen für die Typen zu platzieren, die als Argumente für einen generischen Typ oder Methode verwendet werden kann.  
   
- Klassen- und schnittstelleneinschränkungen angeben, dass die Argumenttypen müssen sein oder von einer angegebenen Klasse erben und eine angegebene Schnittstelle implementieren.  
+ Klassen- und schnittstelleneinschränkungen angeben, dass die Argumenttypen müssen oder von einer angegebenen Klasse erben oder implementieren eine angegebene Schnittstelle.  
   
- Das Anwenden von Einschränkungen auf einen generischen Typ oder Methode kann es sich um Code in den Typ oder Methode, die bekannten Funktionen von eingeschränkten Typen nutzen. Sie können beispielsweise eine generische Klasse deklarieren, so, dass der Typparameter implementiert die **"IComparable"\<T >** Schnittstelle:  
+ Das Anwenden von Einschränkungen auf einer generischen Typ- oder kann es sich um Code in diesen Typ oder Methode, die bekannte Features der eingeschränkten Typen nutzen. Sie können z. B. eine generische Klasse deklarieren, dass der Typparameter implementiert die `IComparable<T>` Schnittstelle:  
   
-```  
+```cpp  
 // generics_constraints_1.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -68,17 +67,17 @@ where T : IComparable<T>
 ref class List {};  
 ```  
   
- Diese Einschränkung ist erforderlich, dass ein Typargument für verwendet `T` implementiert `IComparable<T>` zum Zeitpunkt der Kompilierung. Sie können auch Methoden der Schnittstelle, wie z. B. **CompareTo**, aufgerufen werden. In einer Instanz des Typparameters ist keine Typumwandlung erforderlich, Schnittstellenmethoden aufrufen.  
+ Diese Einschränkung ist erforderlich, dass ein Typargument für verwendet `T` implementiert `IComparable<T>` zum Zeitpunkt der Kompilierung. Sie können außerdem Schnittstellenmethoden, z. B. `CompareTo`, aufgerufen werden. In einer Instanz des Typparameters ist keine Umwandlung erforderlich, Schnittstellenmethoden aufrufen.  
   
- Statische Methoden in das Typargument Klasse können nicht durch den Typparameter aufgerufen werden. Sie können nur durch den tatsächlichen benannten Typ aufgerufen werden.  
+ Statische Methoden in den Typ des Arguments-Klasse können nicht durch den Typparameter nicht aufgerufen werden; Sie können nur über den tatsächlichen benannten Typ aufgerufen werden.  
   
- Eine Einschränkung handelt es sich nicht um einen Werttyp ist, einschließlich integrierte Typen wie z. B. `int` oder **doppelte**. Da Werttypen Klassen abgeleitet haben können, würde nur eine Klasse jemals die Einschränkung erfüllen können. In diesem Fall kann die generische mit den Typparameter ersetzt wird, durch den bestimmte Werttyp umgeschrieben werden.  
+ Eine Einschränkung handelt es sich nicht um einen Werttyp, einschließlich integrierte Typen wie z. B. **Int** oder **doppelte**. Da Werttypen können keine Klassen abgeleitet haben, würde nur eine Klasse jemals die Einschränkung zu erfüllen können. In diesem Fall kann die generische zusammen mit dem Typparameter ersetzt werden, durch den bestimmten Werttyp umgeschrieben werden.  
   
- Einschränkungen sind in einigen Fällen erforderlich, da der Compiler die Verwendung von Methoden oder andere Features eines unbekannten Typs dürfen, es sei denn, die Einschränkungen impliziert, dass der unbekannte Typ auf die Methoden oder Schnittstellen unterstützt.  
+ Einschränkungen sind in einigen Fällen erforderlich, da der Compiler nicht die Verwendung von Methoden oder andere Features eines unbekannten Typs werden kann, wenn die Einschränkungen impliziert, dass es sich bei der unbekannte Typ die Methoden oder Schnittstellen unterstützt.  
   
- In einer durch Trennzeichen getrennte Liste können mehrere Einschränkungen für den gleichen Typparameter angegeben werden  
+ Mehrere Einschränkungen für den gleichen Typparameter können in eine durch Trennzeichen getrennte Liste angegeben werden  
   
-```  
+```cpp  
 // generics_constraints_2.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -88,9 +87,9 @@ where T : List<T>, IComparable<T>
 ref class List {};  
 ```  
   
- Mit mehreren Typparametern, verwenden Sie eine **, in dem** -Klausel für jeden Typparameter. Zum Beispiel:  
+ Bei mehreren Typparametern, verwenden Sie eine **, in denen** -Klausel für jeden Typparameter. Zum Beispiel:  
   
-```  
+```cpp  
 // generics_constraints_3.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -102,15 +101,15 @@ generic <typename K, typename V>
 ref class Dictionary {};  
 ```  
   
- Zusammenfassend gilt: Verwenden Sie Einschränkungen in Ihrem Code anhand der folgenden Regeln:  
+ Zusammenfassend lässt sich sagen, verwenden Sie Einschränkungen in Ihrem Code gemäß den folgenden Regeln:  
   
--   Wenn mehrere Einschränkungen aufgelistet sind, können die Einschränkungen in beliebiger Reihenfolge aufgelistet werden.  
+-   Wenn mehrere Einschränkungen aufgeführt sind, können die Einschränkungen in beliebiger Reihenfolge aufgeführt.  
   
 -   Einschränkungen können auch Klassentypen, z. B. abstrakte Basisklassen sein. Allerdings können keine Einschränkungen Werttypen oder versiegelte Klassen sein.  
   
--   Einschränkungen können selbst nicht Typparameter, jedoch können sie die Typparameter in einen offenen konstruierten Typ beinhalten. Zum Beispiel:  
+-   Einschränkungen können sich selbst nicht Typparameter, aber sie können die Typparameter in offenen konstruierten Typen umfassen. Zum Beispiel:  
   
-    ```  
+    ```cpp  
     // generics_constraints_4.cpp  
     // compile with: /c /clr  
     generic <typename T>  
@@ -122,9 +121,9 @@ ref class Dictionary {};
     ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie mit Einschränkungen für Typparameter Instanzmethoden aufrufen.  
+ Das folgende Beispiel zeigt das Aufrufen von Instanzmethoden für Typparameter mit Einschränkungen.  
   
-```  
+```cpp  
 // generics_constraints_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -183,13 +182,13 @@ int main() {
 ```  
   
 ## <a name="example"></a>Beispiel  
- Wenn ein generischer Typparameter als Einschränkung verwendet wird, ist es eine Einschränkung für einen naked aufgerufen. Naked typeinschränkungen sind nützlich, wenn eine Memberfunktion mit einem eigenen Typparameter, die diesen Parameter an den Typparameter der enthaltenden Typs zu beschränken muss.  
+ Wenn ein generischer Typparameter als Einschränkung verwendet wird, spricht man von einer reinen typeinschränkung. Naked-typeinschränkungen sind nützlich, wenn eine Memberfunktion mit ihren eigenen Typparameter dieser Parameter auf den Typparameter des enthaltenden Typs einschränken muss.  
   
- Im folgenden Beispiel wird T naked eine Einschränkung für einen im Kontext der Add-Methode.  
+ Im folgenden Beispiel `T` ein naked typconstraint im Kontext der `Add` Methode.  
   
- Typeinschränkungen für naked-können auch im Allgemeinen Klassendefinitionen verwendet werden. Die Nützlichkeit der naked typeinschränkungen mit generischen Klassen ist beschränkt, da der Compiler keinerlei wissen über eine Einschränkung für einen naked übernehmen kann, mit dem Unterschied, dass es abgeleitet <xref:System.Object>. Verwenden Sie naked typeinschränkungen in generischen Klassen in Szenarien, in denen Sie eine vererbungsbeziehung zwischen zwei Typparameter erzwingen möchten.  
+ Naked-typeinschränkungen können auch in generischen Klassendefinitionen verwendet werden. Das Verwenden von naked-typeinschränkungen für generische Klassen ist beschränkt, da der Compiler keine Informationen über eine Einschränkung für einen reinen annehmen kann, außer dass es abgeleitet <xref:System.Object>. Verwenden Sie naked-typeinschränkungen in generischen Klassen in Szenarien, in denen Sie eine vererbungsbeziehung zwischen zwei Typparametern erzwingen möchten.  
   
-```  
+```cpp  
 // generics_constraints_6.cpp  
 // compile with: /clr /c  
 generic <class T>  

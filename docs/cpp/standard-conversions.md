@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e08daba1e80523e7992f52ec353826bb53417682
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 1365e950077a65150d8f71fd640f69d1750068c9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028358"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462309"
 ---
 # <a name="standard-conversions"></a>Standardkonvertierungen
 Die Programmiersprache C++ definiert Konvertierungen zwischen ihren grundlegenden Typen. Sie definiert auch Konvertierungen für Zeiger- und Verweistypen sowie und für abgeleitete "pointer-to-member"-Typen. Diese Konvertierungen werden als Standardkonvertierungen bezeichnet. (Weitere Informationen zu Typen, Standardtypen und abgeleiteten Typen finden Sie unter [Typen](http://msdn.microsoft.com/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -95,7 +95,6 @@ long_num2 = int_num * long_num2;
  Objekte aus Ganzzahltypen mit Vorzeichen können in entsprechende Typen ohne Vorzeichen konvertiert werden. Wenn diese Konvertierungen erfolgen, ändert sich das eigentliche Bitmuster nicht. Die Daten werden jedoch anders interpretiert. Codebeispiel:  
   
 ```cpp 
-  
 #include <iostream>  
   
 using namespace std;  
@@ -107,7 +106,6 @@ int main()
     cout << (u = i) << "\n";  
 }  
 // Output: 65533  
-  
 ```  
   
  Im vorherigen Beispiel eine **kurz signiert**, `i`definiert und mit einer negativen Zahl initialisiert. Der Ausdruck `(u = i)` bewirkt, dass `i` zu konvertierenden ein **unsigned short** vor der Zuweisung zu `u`.  
@@ -163,7 +161,6 @@ cout << (float)1E300 << endl;
  Das folgende Codebeispiel veranschaulicht die Konvertierungsregeln, die in der Tabelle beschrieben werden:  
   
 ```cpp 
-  
 double dVal;  
 float fVal;  
 int iVal;  
@@ -249,12 +246,12 @@ int main()
  Der Zeiger `pA` ist vom Typ `A *`, der als "Zeiger auf ein Objekt vom Typ `A`" interpretiert werden kann. Mitglieder der `bObject` `(`wie z. B. `BComponent` und `BMemberFunc`) gelten nur für geben `B` und sind daher nicht zugegriffen werden kann, über `pA`. Der `pA`-Zeiger erlaubt nur Zugriff auf die Eigenschaften (Memberfunktionen und Daten) des Objekts, die in der Klasse `A` definiert sind.  
   
 ### <a name="pointer-to-function"></a>Zeiger auf Funktion  
- Ein Zeiger auf eine Funktion konvertiert werden kann, Typ **"void" \*** , wenn Typ **"void" \***  ist groß genug, um diesen Zeiger aufzunehmen.  
+ Ein Zeiger auf eine Funktion konvertiert werden kann, Typ `void *`, wenn Typ `void *` ist groß genug, um diesen Zeiger aufzunehmen.  
   
 ### <a name="pointer-to-void"></a>Zeiger auf void  
  Zeiger vom Typ **"void"** konvertiert werden kann, auf die Zeiger in einen anderen Typ, aber nur mit einer expliziten Typumwandlung (im Gegensatz zu c). (Finden Sie unter [Ausdrücke mit expliziten Typkonvertierungen](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae) für Weitere Informationen zu Typumwandlungen.) Ein Zeiger auf einen beliebigen Typ kann implizit konvertiert werden, um einen Zeiger auf den Typ **"void"**. Ein Zeiger auf ein unvollständiges Objekt eines Typs konvertiert werden kann, auf einen Zeiger auf **"void"** (implizit) und zurück (explizit). Das Ergebnis einer solchen Konvertierung entspricht dem Wert des ursprünglichen Zeigers. Ein Objekt gilt als unvollständig, wenn es zwar deklariert ist, die Informationen zur Bestimmung seiner Größe oder Basisklasse jedoch unzureichend sind.  
   
- Ein Zeiger auf ein Objekt, das nicht ist **const** oder **flüchtige** implizit in einen Zeiger vom Typ konvertiert werden kann **"void" \*** .  
+ Ein Zeiger auf ein Objekt, das nicht ist **const** oder **flüchtige** implizit in einen Zeiger vom Typ konvertiert werden kann `void *`.  
   
 ### <a name="const-and-volatile-pointers"></a>const- und volatile-Zeiger  
  C++ stellt keine standardkonvertierung von einem **const** oder **flüchtige** Typ in einen Typ, der nicht **const** oder **flüchtige**. Allerdings kann jede Art der Konvertierung mithilfe expliziter Typumwandlungen festgelegt werden (einschließlich unsicherer Konvertierungen).  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e7b022925e22f021a2ddad1b3b9ef52924b25a3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9c49457aecb93b16ffb294f88e4f6643826492e2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939106"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465692"
 ---
 # <a name="results-of-calling-example"></a>Ergebnisse des Aufrufbeispiels
 ## <a name="microsoft-specific"></a>Microsoft-spezifisch  
@@ -32,7 +32,7 @@ ms.locfileid: "37939106"
  Der ergänzte C-Funktionsname ist "_MyFunc".  
   
  ![CDECL-Aufrufkonvention](../cpp/media/vc37i01.gif "vc37I01")  
-Die __cdecl-Aufrufkonvention  
+Die **__cdecl** Aufrufkonvention  
   
 ## <a name="stdcall-and-thiscall"></a>thiscall und __stdcall  
  Der ergänzte C-Name (**__stdcall**) ist "_MyFunc@20." Der ergänzte C++-Name ist herstellereigen.  

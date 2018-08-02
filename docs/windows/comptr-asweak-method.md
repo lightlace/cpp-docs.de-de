@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Asweak-Methode | Microsoft Docs'
+title: 'Comptr:: Asweak-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f262191304471a171e9c3370046dbdac71869cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e72d53f478fb1660fd0ad2fb8704916c9f04e75
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870076"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465221"
 ---
 # <a name="comptrasweak-method"></a>ComPtr::AsWeak-Methode
 Ruft einen schwachen Verweis (WeakReference) auf das aktuelle Objekt ab.  
@@ -36,8 +36,8 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `pWeakRef`  
- Wenn dieser Vorgang abgeschlossen wird, einen Zeiger auf einen schwachen Verweis-Objekt.  
+ *pWeakRef*  
+ Wenn dieser Vorgang abgeschlossen ist, einen Zeiger auf einen schwachen Verweis-Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  

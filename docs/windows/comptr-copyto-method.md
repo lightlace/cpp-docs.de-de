@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: CopyTo-Methode | Microsoft Docs'
+title: 'Comptr:: CopyTo-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 680c1278ca2b17c7ea35e72946fb5d5030c5e7c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 724803fbbf04bd697dfc85f6576ed5706d708eae
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870870"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464440"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo-Methode
-Kopiert die aktuelle oder angegebene-Schnittstelle, die diesem comptr-Objekt an den angegebenen Zeiger zugeordnet ist.  
+Kopiert die aktuelle oder angegebene-Schnittstelle, die zugeordneten **ComPtr** an den angegebenen Zeiger.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,24 +46,24 @@ HRESULT CopyTo(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `U`  
+ *U*  
  Ein Typname.  
   
- `ptr`  
- Wenn dieser Vorgang abgeschlossen wird, einen Zeiger auf die angeforderte Schnittstelle.  
+ *ptr*  
+ Wenn dieser Vorgang abgeschlossen ist, einen Zeiger auf die angeforderte Schnittstelle.  
   
- `riid`  
+ *riid*  
  Eine Schnittstellen-ID.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls ein HRESULT, der angibt, warum die implizite QueryInterface-Vorgang fehlgeschlagen ist.  
+ S_OK, wenn erfolgreich; andernfalls ein HRESULT, das gibt an, warum das implizite `QueryInterface` Fehler beim Vorgang.  
   
 ## <a name="remarks"></a>Hinweise  
- Die erste Funktion gibt eine Kopie des einen Zeiger auf die Schnittstelle, die diesem comptr-Objekt zugeordnet. Diese Funktion gibt immer S_OK zurück.  
+ Die erste Funktion gibt eine Kopie eines Zeigers auf die Schnittstelle zugeordneten **ComPtr**. Diese Funktion gibt stets S_OK zurück.  
   
- Die zweite Funktion führt eine QueryInterface-Operation für die Schnittstelle, die diesem comptr-Objekt für die angegebene Schnittstelle zugeordneten der `riid` Parameter.  
+ Die zweite Funktion führt eine `QueryInterface` Vorgang für die Schnittstelle zugeordneten **comptr-Objekt** für die angegebene Schnittstelle die *Riid* Parameter.  
   
- Die dritte Funktion führt eine QueryInterface-Operation für die Schnittstelle, die diesem comptr-Objekt für die zugrunde liegende Schnittstelle des zugeordneten der `U` Parameter.  
+ Die dritte Funktion führt eine `QueryInterface` Vorgang für die Schnittstelle zugeordneten **comptr-Objekt** für die zugrunde liegenden Schnittstelle die *U* Parameter.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

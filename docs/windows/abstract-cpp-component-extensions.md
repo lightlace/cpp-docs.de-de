@@ -1,5 +1,5 @@
 ---
-title: abstrakt (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Abstract (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dcaef98df96b54025cd44a52a2e27a7bc5a83545
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857554"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463241"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract (Komponentenerweiterungen für C++)
-Das `abstract`-Schlüsselwort nimmt eine der folgenden Deklarationen vor:  
+Die **abstrakte** -Schlüsselwort deklariert entweder:  
   
 -   Ein Typ kann als Basistyp verwendet werden, aber der Typ selbst kann nicht instanziiert werden.  
   
@@ -36,25 +36,23 @@ Das `abstract`-Schlüsselwort nimmt eine der folgenden Deklarationen vor:
  **Syntax**  
   
 ```  
-  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
-  
 ```  
   
  **Hinweise**  
   
- Die erste Beispielsyntax deklariert eine Klasse als abstrakt. Die *Klassendeklaration* Komponente kann entweder eine systemeigene C++-Deklaration (`class` oder `struct`), oder eine C++-erweiterungsdeklaration (`ref class` oder `ref struct`) Wenn die **/Zw** oder **"/ CLR"** -Compileroption angegeben ist.  
+ Die erste Beispielsyntax deklariert eine Klasse als abstrakt. Die *-Klassendeklaration* Komponente kann entweder eine native C++-Deklaration sein (**Klasse** oder **Struktur**), oder eine C++-erweiterungsdeklaration (**Verweisklasse** oder **Referenzstruktur**) Wenn die `/ZW` oder `/clr` -Compileroption angegeben ist.  
   
  Die zweite Beispielsyntax deklariert eine virtuelle Memberfunktion als abstrakt. Das Deklarieren einer Funktion als abstrakt ist mit dem Deklarieren als rein virtuelle Funktion identisch. Das Deklarieren einer Memberfunktion als abstrakt bewirkt, dass auch die einschließende Klasse als abstrakt deklariert wird.  
   
- Die `abstract` Schlüsselwort wird im systemeigenen und plattformspezifischen Code unterstützt; d. h. kompiliert werden können, mit oder ohne die **/Zw** oder **"/ CLR"** -Compileroption.  
+ Die **abstrakte** Schlüsselwort in systemeigenem und plattformspezifischem Code unterstützt wird; d. h., kompiliert werden kann, mit oder ohne die `/ZW` oder `/clr` -Compileroption.  
   
- Sie können zur Kompilierzeit erkennen, wenn ein Typ abstrakt mit ist der `__is_abstract(type)` Merkmal "Typ". Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Sie können zur Kompilierzeit erkennen, wenn ein Typ abstrakt ist mit ist der `__is_abstract(type)` Typeigenschaft. Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- Das `abstract`-Schlüsselwort ist ein kontextbezogener Überschreibungsspezifizierer. Weitere Informationen zu kontextbezogenen Schlüsselwörtern finden Sie unter [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md). Weitere Informationen zu überschreibungsspezifizierern finden Sie unter [wie: Deklarieren Sie Überschreibungsspezifizierer in nativen Kompilierungen](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ Die **abstrakte** -Schlüsselwort ist ein kontextbezogener Überschreibungsspezifizierer. Weitere Informationen zu kontextbezogenen Schlüsselwörtern finden Sie unter [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md). Weitere Informationen zu überschreibungsspezifizierern finden Sie unter [wie: Deklarieren Sie Überschreibungsspezifizierer in nativen Kompilierungen](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
  Weitere Informationen finden Sie unter [Verweisklassen und Strukturen](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
@@ -72,7 +70,7 @@ virtualreturn-typemember-function-identifier() abstract ;
   
  Das folgende Codebeispiel generiert einen Fehler, da Klasse `X` als `abstract` gekennzeichnet ist.  
   
-```  
+```cpp  
 // abstract_keyword.cpp  
 // compile with: /clr  
 ref class X abstract {  
@@ -87,9 +85,9 @@ int main() {
   
  **Beispiel**  
   
- Das folgende Codebeispiel generiert einen Fehler, da es eine systemeigene Klasse instanziiert, die als `abstract` gekennzeichnet ist. Dieser Fehler tritt auf, mit oder ohne die **"/ CLR"** -Compileroption.  
+ Das folgende Codebeispiel generiert einen Fehler, da es eine systemeigene Klasse instanziiert, die als `abstract` gekennzeichnet ist. Dieser Fehler tritt mit und ohne Compileroption `/clr` auf.  
   
-```  
+```cpp  
 // abstract_keyword_2.cpp  
 class X abstract {  
 public:  
@@ -99,14 +97,13 @@ public:
 int main() {  
    X * MyX = new X; // C3622: 'X': a class declared as 'abstract'  
                     // cannot be instantiated. See declaration of 'X'}  
-  
 ```  
   
  **Beispiel**  
   
  Das folgende Codebeispiel generiert einen Fehler, da Funktion `f` eine Definition enthält, aber als `abstract` gekennzeichnet ist. Die letzte Anweisung im Beispiel zeigt, dass das Deklarieren einer abstrakten virtuellen Funktion dem Deklarieren einer rein virtuellen Funktion entspricht.  
   
-```  
+```cpp  
 // abstract_keyword_3.cpp  
 // compile with: /clr  
 ref class X {  

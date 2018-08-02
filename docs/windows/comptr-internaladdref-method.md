@@ -1,5 +1,5 @@
 ---
-title: 'Comptr:: Internaladdref-Methode | Microsoft Docs'
+title: 'Comptr:: Internaladdref-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55f2ffc540ba6680636b85e73b7b4fbe96068ab3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e1ae5d4216efc790fae0bc4d86bbe828fc28c473
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870285"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463092"
 ---
 # <a name="comptrinternaladdref-method"></a>ComPtr::InternalAddRef-Methode
-Inkrementiert den Verweiszähler der Schnittstelle, die diesem ComPtr-Objekt zugeordnet ist.  
+Inkrementiert den Verweiszähler der Schnittstelle zugeordneten **ComPtr**.  
   
 ## <a name="syntax"></a>Syntax  
   

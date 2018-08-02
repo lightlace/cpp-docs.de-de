@@ -1,5 +1,5 @@
 ---
-title: ArgTraits-Struktur | Microsoft Docs
+title: ArgTraits-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 162fbdea86aef81582902340102d54777e3f861b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 667aa3d2d29e4ce541d957b20b2246380e237a6b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858041"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462042"
 ---
 # <a name="argtraits-structure"></a>ArgTraits-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -118,41 +118,41 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `TMemberFunction`  
- TypeName-Parameter für eine ArgTraits-Struktur, die alle Invoke-Methodensignatur zuordnen kann.  
+ *TMemberFunction*  
+ TypeName-Parameter für eine ArgTraits-Struktur, die einer entsprechen, kann keine `Invoke` Methodensignatur.  
   
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Ein Delegat-Schnittstelle.  
   
- `TArg1`  
- Der Typ des ersten Arguments der Invoke-Methode.  
+ *TArg1*  
+ Der Typ, der das erste Argument von der `Invoke` Methode.  
   
- `TArg2`  
- Der Typ des zweiten Arguments der Invoke-Methode.  
+ *TArg2*  
+ Der Typ des zweiten Arguments des der `Invoke` Methode.  
   
- `TArg3`  
- Der Typ des dritten Arguments der Invoke-Methode.  
+ *TArg3*  
+ Der Typ des dritten Arguments der der `Invoke` Methode.  
   
- `TArg4`  
- Der Typ des vierten Arguments der Invoke-Methode.  
+ *TArg4*  
+ Der Typ des vierten Arguments der der `Invoke` Methode.  
   
- `TArg5`  
- Der Typ des fünften Arguments der Invoke-Methode.  
+ *TArg5*  
+ Der Typ des fünften Arguments der der `Invoke` Methode.  
   
- `TArg6`  
- Der Typ des sechsten Arguments der Invoke-Methode.  
+ *TArg6*  
+ Der Typ des sechsten Arguments der der `Invoke` Methode.  
   
- `TArg7`  
- Der Typ des siebten Arguments der Invoke-Methode.  
+ *TArg7*  
+ Der Typ des siebten Arguments der der `Invoke` Methode.  
   
- `TArg8`  
- Der Typ des das achte Argument für die Invoke-Methode.  
+ *TArg8*  
+ Der Typ des Arguments achte der `Invoke` Methode.  
   
- `TArg9`  
- Der Typ des neunten Arguments der Invoke-Methode.  
+ *TArg9*  
+ Der Typ des neunten Arguments der der `Invoke` Methode.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ArgTraits` Struktur deklariert einen Delegaten angegebenen Schnittstelle und eine anonyme Memberfunktion, die eine angegebene Anzahl von Parametern verfügt.  
+ Die `ArgTraits` Struktur deklariert einen Delegaten angegebenen Schnittstelle und eine anonyme Memberfunktion, die eine angegebene Anzahl von Parametern.  
   
 ## <a name="members"></a>Member  
   
@@ -174,7 +174,7 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[ArgTraits::args-Konstante](../windows/argtraits-args-constant.md)|Behält die Anzahl von Parametern auf die Invoke-Methode einer Schnittstelle des Delegaten.|  
+|[ArgTraits::args-Konstante](../windows/argtraits-args-constant.md)|Verfolgt die Anzahl von Parametern für die `Invoke` Methode einer Schnittstelle des Delegaten.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `ArgTraits`  

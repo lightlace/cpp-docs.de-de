@@ -1,5 +1,5 @@
 ---
-title: Rückruffunktion (Windows Runtime C++-Vorlagenbibliothek) | Microsoft Docs
+title: Callback-Funktion (Windows Runtime C++-Vorlagenbibliothek) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27d89f60f27c71cec0f158375805e3e8487fd7a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860852"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461491"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Rückruffunktion (C++-Vorlagenbibliothek der Windows-Runtime)
 Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.  
@@ -199,56 +199,56 @@ ComPtr<TDelegateInterface> Callback(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  Ein Vorlagenparameter, der die Schnittstelle des Delegaten angibt, der beim Eintreten eines Ereignisses aufgerufen wird.  
   
- `TCallback`  
+ *TCallback*  
  Ein Vorlagenparameter, der den Typ eines Objekts angibt, das ein Objekt und seine Rückrufmemberfunktion darstellt.  
   
- `TCallbackObject`  
+ *TCallbackObject*  
  Ein Vorlagenparameter, der das Objekt angibt, dessen Memberfunktion die Methode ist, die beim Eintreten eines Ereignisses aufgerufen wird.  
   
- `TArg1`  
+ *TArg1*  
  Ein Vorlagenparameter, der den Typ des ersten Rückrufmethodenarguments angibt.  
   
- `TArg2`  
+ *TArg2*  
  Ein Vorlagenparameter, der den Typ des zweiten Rückrufmethodenarguments angibt.  
   
- `TArg3`  
+ *TArg3*  
  Ein Vorlagenparameter, der den Typ des dritten Rückrufmethodenarguments angibt.  
   
- `TArg4`  
+ *TArg4*  
  Ein Vorlagenparameter, der den Typ des vierten Rückrufmethodenarguments angibt.  
   
- `TArg5`  
+ *TArg5*  
  Ein Vorlagenparameter, der den Typ des fünften Rückrufmethodenarguments angibt.  
   
- `TArg6`  
+ *TArg6*  
  Ein Vorlagenparameter, der den Typ des sechsten Rückrufmethodenarguments angibt.  
   
- `TArg7`  
+ *TArg7*  
  Ein Vorlagenparameter, der den Typ des siebten Rückrufmethodenarguments angibt.  
   
- `TArg8`  
+ *TArg8*  
  Ein Vorlagenparameter, der den Typ des achten Rückrufmethodenarguments angibt.  
   
- `TArg9`  
+ *TArg9*  
  Ein Vorlagenparameter, der den Typ des neunten Rückrufmethodenarguments angibt.  
   
- `callback`  
+ *Rückruf*  
  Ein Objekt, das das Rückrufobjekt und seine Memberfunktion darstellt.  
   
- `object`  
+ *object*  
  Das Objekt, dessen Memberfunktion beim Eintreten eines Ereignisses aufgerufen wird.  
   
- `method`  
+ *Methode*  
  Die Memberfunktion, die beim Eintreten eines Ereignisses aufgerufen wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein Objekt, dessen Memberfunktion die angegebene Rückrufmethode ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Basis eines Delegatobjekts muss "IUnknown" und nicht "IInspectable" lauten.  
+ Die Basis eines Delegatobjekts muss `IUnknown`, nicht `IInspectable`.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  

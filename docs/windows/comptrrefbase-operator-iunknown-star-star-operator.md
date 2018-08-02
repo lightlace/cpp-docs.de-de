@@ -1,5 +1,5 @@
 ---
-title: 'Comptrrefbase:: Operator IUnknown **-Operator | Microsoft Docs'
+title: 'Comptrrefbase:: Operator IUnknown ** | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 816c71d2c14b373e63de2b2c8725eb87b40d91e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2ec20dca7bb0a37adae576a8b5a9adfad027b21
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870314"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465814"
 ---
 # <a name="comptrrefbaseoperator-iunknown-operator"></a>ComPtrRefBase::operator IUnknown**-Operator
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,9 +34,9 @@ operator IUnknown**() const;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) -Datenmember auf einen Zeiger an eine-Zeiger-an der IUnknown-Schnittstelle.  
+ Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) Datenmembers, der einen Zeiger an eine-Zeiger-an die `IUnknown` Schnittstelle.  
   
- Ein Fehler wird ausgegeben, wenn die aktuelle ComPtrRefBase von IUnknown abgeleitet werden, nicht.  
+ Ein Fehler wird ausgegeben, wenn die aktuelle **ComPtrRefBase** nicht abgeleitet `IUnknown`.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

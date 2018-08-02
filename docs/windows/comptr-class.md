@@ -1,5 +1,5 @@
 ---
-title: ComPtr-Klasse | Microsoft Docs
+title: ComPtr-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94146661b9a00b17732ce75f75bcc0194dcbddd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21503e38bb612f935e26f6eaaa93df2097e10445
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882787"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465336"
 ---
 # <a name="comptr-class"></a>ComPtr-Klasse
-Erstellt einen *intelligenten Zeigertyp* , der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. ComPtr verwaltet automatisch einen Verweiszähler für den zugrunde liegenden Schnittstellenzeiger und gibt die Schnittstelle frei, wenn der Verweiszähler auf 0 geht.  
+Erstellt einen *intelligenten Zeigertyp* , der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. **ComPtr** automatisch verwaltet einen Verweiszähler für den zugrunde liegenden Schnittstellenzeiger und gibt die Schnittstelle frei, wenn der Verweiszähler auf Null geht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,16 +38,16 @@ friend class ComPtr;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Die Schnittstelle, der das ComPtr-Objekt entspricht.  
+ *T*  
+ Die Schnittstelle, die die **ComPtr** darstellt.  
   
- `U`  
- Eine Klasse, für die das aktuelle ComPtr-Objekt ein Freund ist. (Die Vorlage, die diesen Parameter verwendet, ist geschützt.)  
+ *U*  
+ Eine Klasse, die aktuelle **ComPtr** ist ein Friend. (Die Vorlage, die diesen Parameter verwendet, ist geschützt.)  
   
 ## <a name="remarks"></a>Hinweise  
- ComPtr<> deklariert einen Typ, der den zugrunde liegenden Schnittstellenzeiger darstellt. ComPtr <> verwenden, um eine Variable deklarieren und verwenden Sie dann auf den Pfeil-Memberzugriffsoperator (`->`) auf eine Schnittstellenmemberfunktion zuzugreifen.  
+ `ComPtr<>` deklariert einen Typ, der den zugrunde liegenden Schnittstellenzeiger darstellt. Verwenden Sie `ComPtr<>` auf eine Variable deklarieren und verwenden Sie dann auf den Pfeil-Memberzugriffsoperator (`->`) auf eine Schnittstellenmemberfunktion zuzugreifen.  
   
- Weitere Informationen zu intelligenten Zeigern finden Sie in der MSDN Library im Thema [COM Coding Practices](http://msdn.microsoft.com/en-us/76aca556-b4d6-4e67-a2a3-4439900f0c39)im Unterabschnitt „Intelligente Zeiger für COM“.  
+ Weitere Informationen zu intelligenten Zeigern finden Sie unter der Unterabschnitt "Intelligente Zeiger für COM" den [COM Coding Practices](http://msdn.microsoft.com/76aca556-b4d6-4e67-a2a3-4439900f0c39)in der MSDN Library.  
   
 ## <a name="members"></a>Member  
   
@@ -55,54 +55,54 @@ friend class ComPtr;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`InterfaceType`|Ein Synonym für den Typ, der durch den `T` -Vorlagenparameter angegeben ist.|  
+|`InterfaceType`|Ein Synonym für den vom angegebenen Typ der *T* Template-Parameter.|  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ComPtr::ComPtr-Konstruktor](../windows/comptr-comptr-constructor.md)|Initialisiert eine neue Instanz der ComPtr-Klasse. Überladungen stellen Standard-, Kopier-, Verschiebe- und Konvertierungskonstruktoren bereit.|  
-|[ComPtr::~ComPtr-Destruktor](../windows/comptr-tilde-comptr-destructor.md)|Hebt die Initialisierung einer Instanz von ComPtr auf.|  
+|[ComPtr::ComPtr-Konstruktor](../windows/comptr-comptr-constructor.md)|Initialisiert eine neue Instanz der dem **ComPtr** Klasse. Überladungen stellen Standard-, Kopier-, Verschiebe- und Konvertierungskonstruktoren bereit.|  
+|[ComPtr::~ComPtr-Destruktor](../windows/comptr-tilde-comptr-destructor.md)|Hebt die Initialisierung einer Instanz von **ComPtr**.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ComPtr::As-Methode](../windows/comptr-as-method.md)|Gibt ein ComPtr-Objekt zurück, das die Schnittstelle darstellt, die durch den angegebenen Vorlagenparameter gekennzeichnet ist.|  
-|[ComPtr::AsIID-Methode](../windows/comptr-asiid-method.md)|Gibt ein ComPtr-Objekt zurück, das die Schnittstelle darstellt, die durch die angegebene Schnittstellen-ID gekennzeichnet ist.|  
+|[ComPtr::As-Methode](../windows/comptr-as-method.md)|Gibt eine **ComPtr** -Objekt, das die Schnittstelle, die durch den angegebenen Vorlagenparameter gekennzeichnet darstellt.|  
+|[ComPtr::AsIID-Methode](../windows/comptr-asiid-method.md)|Gibt eine **ComPtr** Objekt, das die Schnittstelle, die die angegebene Schnittstellen-ID identifizierte darstellt.|  
 |[ComPtr::AsWeak-Methode](../windows/comptr-asweak-method.md)|Ruft einen schwachen Verweis (WeakReference) auf das aktuelle Objekt ab.|  
-|[ComPtr::Attach-Methode](../windows/comptr-attach-method.md)|Verknüpft dieses ComPtr-Objekt mit dem Schnittstellentyp, der durch den Typparameter der aktuellen Vorlage angegeben ist.|  
-|[ComPtr::CopyTo-Methode](../windows/comptr-copyto-method.md)|Kopiert die aktuelle oder angegebene-Schnittstelle, die diesem ComPtr-Objekt zugeordnet ist, in den angegebenen Ausgabezeiger.|  
-|[ComPtr::Detach-Methode](../windows/comptr-detach-method.md)|Hebt die Zuordnung dieses ComPtr-Objekts zu der Benutzeroberfläche auf, der das Objekt entspricht.|  
-|[ComPtr::Get-Methode](../windows/comptr-get-method.md)|Ruft einen Zeiger auf die Schnittstelle ab, die diesem ComPtr-Objekt zugeordnet ist.|  
-|[ComPtr::GetAddressOf-Methode](../windows/comptr-getaddressof-method.md)|Ruft die Adresse des [ptr_](../windows/comptr-ptr-data-member.md) -Datenmembers ab, der einen Zeiger auf die Schnittstelle enthält, der dieses ComPtr-Objekt entspricht.|  
-|[ComPtr::ReleaseAndGetAddressOf-Methode](../windows/comptr-releaseandgetaddressof-method.md)|Gibt die Schnittstelle frei, die diesem ComPtr-Objekt zugeordnet ist, und ruft dann die Adresse des [ptr_](../windows/comptr-ptr-data-member.md) -Datenmembers ab, der einen Zeiger auf die Schnittstelle enthält, die freigegeben wurde.|  
-|[ComPtr::Reset](../windows/comptr-reset.md)|Gibt alle Verweise für den Zeiger auf die Schnittstelle an, die diesem ComPtr zugeordnet ist.|  
-|[ComPtr::Swap-Methode](../windows/comptr-swap-method.md)|Tauscht die Schnittstelle, die von dem aktuellen ComPtr-Objekt verwaltet wird, gegen der Schnittstelle, die vom angegebenen ComPtr-Objekt verwaltet wird.|  
+|[ComPtr::Attach-Methode](../windows/comptr-attach-method.md)|Dies ordnet **ComPtr** mit dem Schnittstellentyp, der von der aktuellen Vorlagentyp-Parameter angegeben.|  
+|[ComPtr::CopyTo-Methode](../windows/comptr-copyto-method.md)|Kopiert die aktuelle oder angegebene-Schnittstelle, die zugeordneten **ComPtr** auf den angegebenen Ausgabezeiger.|  
+|[ComPtr::Detach-Methode](../windows/comptr-detach-method.md)|Hebt die Zuordnung dieser **ComPtr** von der Schnittstelle, die es darstellt.|  
+|[ComPtr::Get-Methode](../windows/comptr-get-method.md)|Ruft einen Zeiger auf die Schnittstelle, die mit dieser verknüpft ist **ComPtr**.|  
+|[ComPtr::GetAddressOf-Methode](../windows/comptr-getaddressof-method.md)|Ruft die Adresse der [Ptr_](../windows/comptr-ptr-data-member.md) Datenmember, der einen Zeiger auf die von dieser Schnittstelle enthält **ComPtr**.|  
+|[ComPtr::ReleaseAndGetAddressOf-Methode](../windows/comptr-releaseandgetaddressof-method.md)|Gibt die Schnittstelle frei zugeordneten **comptr-Objekt** und ruft dann die Adresse der [Ptr_](../windows/comptr-ptr-data-member.md) Datenmember, der einen Zeiger auf die Schnittstelle enthält, die veröffentlicht wurde.|  
+|[ComPtr::Reset](../windows/comptr-reset.md)|Gibt alle Verweise für den Zeiger auf die Schnittstelle, die mit dieser verknüpft ist **ComPtr**.|  
+|[ComPtr::Swap-Methode](../windows/comptr-swap-method.md)|Tauscht die Schnittstelle, die von der aktuellen verwalteten **ComPtr** mit der Schnittstelle, die durch das angegebene verwaltete **ComPtr**.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ComPtr::InternalAddRef-Methode](../windows/comptr-internaladdref-method.md)|Inkrementiert den Verweiszähler der Schnittstelle, die diesem ComPtr-Objekt zugeordnet ist.|  
-|[ComPtr::InternalRelease-Methode](../windows/comptr-internalrelease-method.md)|Führt einen COM-Freigabe-Vorgang für die Schnittstelle aus, die diesem ComPtr-Objekt zugeordnet ist.|  
+|[ComPtr::InternalAddRef-Methode](../windows/comptr-internaladdref-method.md)|Inkrementiert den Verweiszähler der Schnittstelle zugeordneten **ComPtr**.|  
+|[ComPtr::InternalRelease-Methode](../windows/comptr-internalrelease-method.md)|Führt einen COM-Freigabe-Vorgang für die Schnittstelle zugeordneten **ComPtr**.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ComPtr::operator Microsoft::WRL::Details::BoolType-Operator](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)|Gibt an, ob ein ComPtr-Objekt die Objektlebensdauer einer Schnittstelle verwaltet.|  
-|[ComPtr::operator&-Operator](../windows/comptr-operator-ampersand-operator.md)|Ruft die Adresse des aktuellen ComPtr-Objekts ab.|  
-|[ComPtr::operator=-Operator](../windows/comptr-operator-assign-operator.md)|Weist dem aktuellen ComPtr-Objekt einen Wert zu.|  
+|[ComPtr::operator Microsoft::WRL::Details::BoolType-Operator](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)|Gibt an, ob eine **ComPtr** die Objektlebensdauer einer Schnittstelle verwaltet.|  
+|[ComPtr::operator&-Operator](../windows/comptr-operator-ampersand-operator.md)|Ruft die Adresse des aktuellen **ComPtr**.|  
+|[ComPtr::operator=-Operator](../windows/comptr-operator-assign-operator.md)|Weist einen Wert mit dem aktuellen **ComPtr**.|  
 |[ComPtr::operator->-Operator](../windows/comptr-operator-arrow-operator.md)|Ruft einen Zeiger auf den Typ ab, der durch den aktuellen Vorlagenparameter angegeben ist.|  
-|[ComPtr::operator==-Operator](../windows/comptr-operator-equality-operator.md)|Gibt an, ob zwei ComPtr-Objekte gleich sind.|  
-|[ComPtr::operator!=-Operator](../windows/comptr-operator-inequality-operator.md)|Gibt an, ob zwei ComPtr-Objekte ungleich sind.|  
+|[ComPtr::operator==-Operator](../windows/comptr-operator-equality-operator.md)|Gibt an, ob zwei **ComPtr** Objekte gleich sind.|  
+|[ComPtr::operator!=-Operator](../windows/comptr-operator-inequality-operator.md)|Gibt an, ob zwei **ComPtr** -Objekte ungleich sind.|  
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[ComPtr::ptr_-Datenmember](../windows/comptr-ptr-data-member.md)|Enthält einen Zeiger auf die Schnittstelle, die diesem ComPtr-Objekt zugeordnet ist und von ihm verwaltet wird.|  
+|[ComPtr::ptr_-Datenmember](../windows/comptr-ptr-data-member.md)|Enthält einen Zeiger auf die Schnittstelle, die zugeordnet wird, und das von diesem verwaltet **ComPtr**.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `ComPtr`  

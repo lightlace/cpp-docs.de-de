@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4772c62db1443beaf6a5fff962a52a71823674bc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d757c645ae131b88ffb99e571d1e08214eda8129
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943743"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462864"
 ---
 # <a name="varianttoperator-"></a>_variant_t::operator =
 **Microsoft-spezifisch**  
@@ -31,7 +31,6 @@ ms.locfileid: "37943743"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 _variant_t& operator=(  
    const VARIANT& varSrc   
 );  
@@ -128,37 +127,37 @@ _variant_t& operator=(
 ## <a name="remarks"></a>Hinweise  
  Der Operator weist dem `_variant_t`-Objekt einen neuen Wert zu:  
   
--   **Operator = (***VarSrc***)** weist ein vorhandenes `VARIANT` zu einem `_variant_t` Objekt.      
+-   **Operator = (***VarSrc***)** weist ein vorhandenes `VARIANT` zu einem `_variant_t` Objekt.  
   
--   **Operator = (***pVarSrc***)** weist ein vorhandenes `VARIANT` zu einem `_variant_t` Objekt.      
+-   **Operator = (***pVarSrc***)** weist ein vorhandenes `VARIANT` zu einem `_variant_t` Objekt.  
   
 -   **Operator = (***Var_t_Src***)** weist ein vorhandenes `_variant_t` -Objekt an eine `_variant_t` Objekt.      
   
--   **Operator = (***sSrc***)** weist eine **kurze** ganzzahliger Wert und einem `_variant_t` Objekt.      
+-   **Operator = (***sSrc***)** weist eine **kurze** ganzzahliger Wert und einem `_variant_t` Objekt.  
   
--   **Operator = (**`lSrc`**)** weist eine **lange** ganzzahliger Wert und einem `_variant_t` Objekt.      
+-   **Operator = (**`lSrc`**)** weist eine **lange** ganzzahliger Wert und einem `_variant_t` Objekt.  
   
--   **Operator = (***FltSrc***)** weist eine **"float"** numerischer Wert für eine `_variant_t` Objekt.      
+-   **Operator = (***FltSrc***)** weist eine **"float"** numerischer Wert für eine `_variant_t` Objekt.  
   
--   **Operator = (***DblSrc***)** weist eine **doppelte** numerischer Wert für eine `_variant_t` Objekt.      
+-   **Operator = (***DblSrc***)** weist eine **doppelte** numerischer Wert für eine `_variant_t` Objekt.  
   
--   **Operator = (***CySrc***)** weist eine `CY` -Objekt an eine `_variant_t` Objekt.      
+-   **Operator = (***CySrc***)** weist eine `CY` -Objekt an eine `_variant_t` Objekt.  
   
--   **Operator = (***BstrSrc***)** weist eine `BSTR` -Objekt an eine `_variant_t` Objekt.      
+-   **Operator = (***BstrSrc***)** weist eine `BSTR` -Objekt an eine `_variant_t` Objekt.  
   
--   **Operator = (***WstrSrc***)** weist eine Unicodezeichenfolge einem `_variant_t` Objekt.      
+-   **Operator = (***WstrSrc***)** weist eine Unicodezeichenfolge einem `_variant_t` Objekt.  
   
--   **Operator = (**`strSrc`**)** weist eine Multibytezeichenfolge einem `_variant_t` Objekt.      
+-   **Operator = (**`strSrc`**)** weist eine Multibytezeichenfolge einem `_variant_t` Objekt.  
   
--   **Operator = (** `bSrc` **)** weist eine **"bool"** -Werts in einen `_variant_t` Objekt.    
+-   **Operator = (** `bSrc` **)** weist eine **"bool"** -Werts in einen `_variant_t` Objekt.  
   
--   **Operator = (***pDispSrc***)** weist eine `VT_DISPATCH` -Objekt an eine `_variant_t` Objekt.      
+-   **Operator = (***pDispSrc***)** weist eine `VT_DISPATCH` -Objekt an eine `_variant_t` Objekt.  
   
--   **Operator = (***pIUnknownSrc***)** weist eine `VT_UNKNOWN` -Objekt an eine `_variant_t` Objekt.      
+-   **Operator = (***pIUnknownSrc***)** weist eine `VT_UNKNOWN` -Objekt an eine `_variant_t` Objekt.  
   
--   **Operator = (***DecSrc***)** weist eine `DECIMAL` -Werts in einen `_variant_t` Objekt.      
+-   **Operator = (***DecSrc***)** weist eine `DECIMAL` -Werts in einen `_variant_t` Objekt.  
   
--   **Operator = (** `bSrc` **)** weist eine `BYTE` -Werts in einen `_variant_t` Objekt.    
+-   **Operator = (** `bSrc` **)** weist eine `BYTE` -Werts in einen `_variant_t` Objekt.  
   
  **Ende Microsoft-spezifisch**  
   

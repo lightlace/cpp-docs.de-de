@@ -28,17 +28,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea792bde6e50f0e4149f802a5c852192def0fefa
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943321"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39464859"
 ---
 # <a name="try-finally-statement"></a>try-finally-Anweisung
 **Microsoft-spezifisch**  
   
- Die folgende Syntax beschreibt die `try-finally`-Anweisung:  
+ Die folgende Syntax beschreibt die **Try-finally-** Anweisung:  
   
 ```cpp 
 __try {  
@@ -55,7 +55,7 @@ __finally {
   
  **__finally** *Compound-Statement*  
   
- Die `try-finally`-Anweisung ist eine Microsoft-Erweiterung für die Programmiersprachen C und C++, die es Zielanwendungen ermöglicht, Bereinigungscode auszuführen, wenn die Ausführung eines Codeblocks unterbrochen wird. Die Bereinigung besteht aus Aufgaben wie z. B. Neuzuweisung von Arbeitsspeicher, Schließen von Dateien und Freigeben von Dateihandles. Die `try-finally`-Anweisung ist besonders nützlich für Routinen, in denen an mehreren Stellen eine Fehlerüberprüfung durchgeführt wird, die eine vorzeitige Rückgabe von der Routine verursachen könnte.  
+ Die **Try-finally-** -Anweisung ist eine Microsoft-Erweiterung der Programmiersprachen C und C++, die es ermöglicht zielanwendungen Bereinigungscode bei der Ausführung eines Codeblocks unterbrochen wird. Die Bereinigung besteht aus Aufgaben wie z. B. Neuzuweisung von Arbeitsspeicher, Schließen von Dateien und Freigeben von Dateihandles. Die **Try-finally-** -Anweisung ist besonders nützlich für Routinen, die mehrfach haben, in dem eine Überprüfung statt, für einen Fehler, die verursachen könnten vorzeitige, von der Routine Rückgabe.  
   
  Weitere Informationen und ein Codebeispiel finden Sie unter [versuchen-except-Anweisung](../cpp/try-except-statement.md). Weitere Informationen über die strukturierte Ausnahmebehandlung im Allgemeinen, finden Sie unter [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Weitere Informationen zur Behandlung von Ausnahmen in verwalteten Anwendungen finden Sie unter [Ausnahmebehandlung unter/CLR](../windows/exception-handling-cpp-component-extensions.md).  
   
@@ -83,16 +83,16 @@ Reihenfolge für das Beenden bei Handlerausführung
 >  Das Verhalten des Try-finally-unterscheidet sich von einigen anderen Sprachen, die die Verwendung von unterstützen **schließlich**, wie z. B. c#.  Ein einzelnes **__try** möglicherweise, jedoch nicht beide von **__finally** und **__except**.  Wenn beide zusammen verwendet werden sollen, muss eine äußere try-except-Anweisung die innere try-finally-Anweisung einschließen.  Es gelten andere Regeln für die Angabe, wann ein einzelner Block ausgeführt wird.  
   
 ## <a name="the-leave-keyword"></a>Das __leave-Schlüsselwort  
- Die **__leave-** Schlüsselwort ist nur innerhalb der geschützte Bereich der gültigen eine `try-finally` -Anweisung und deren Auswirkung besteht darin, am Ende des abgesicherten Abschnitts wechseln. Die Ausführung wird mit der ersten Anweisung im Beendigungshandler fortgesetzt.  
+ Die **__leave-** Schlüsselwort ist nur innerhalb der geschützte Bereich der gültigen eine **Try-finally-** -Anweisung und deren Auswirkung besteht darin, am Ende des abgesicherten Abschnitts wechseln. Die Ausführung wird mit der ersten Anweisung im Beendigungshandler fortgesetzt.  
   
  Ein **Goto** -Anweisung kann auch aus dem abgesicherten Abschnitt Herausspringen, jedoch wird die Leistung beeinträchtigt, da es eine stapelentladung aufruft. Die **__leave-** -Anweisung ist effizienter, da sie keine stapelentladung verursacht.  
   
 ## <a name="abnormal-termination"></a>Nicht ordnungsgemäße Beendigung  
- Beenden einer `try-finally` Anweisung mit der [Longjmp](../c-runtime-library/reference/longjmp.md) Run-Time-Funktion wird als nicht ordnungsgemäße Beendigung angesehen. Es ist nicht zulässig, wechseln in einem **__try** -Anweisung, jedoch aus einer solchen zulässig. Alle **__finally** Anweisungen, die zwischen dem Anfangspunkt aktiv sind (normale Beendigung der **__try** Block) und das Ziel (die **__except** blockiert wird, die Ausnahme behandelt) muss ausgeführt werden. Dies wird als "lokale Entladung" bezeichnet.  
+ Beenden einer **Try-finally-** Anweisung mit der [Longjmp](../c-runtime-library/reference/longjmp.md) Run-Time-Funktion wird als nicht ordnungsgemäße Beendigung angesehen. Es ist nicht zulässig, wechseln in einem **__try** -Anweisung, jedoch aus einer solchen zulässig. Alle **__finally** Anweisungen, die zwischen dem Anfangspunkt aktiv sind (normale Beendigung der **__try** Block) und das Ziel (die **__except** blockiert wird, die Ausnahme behandelt) muss ausgeführt werden. Dies wird als "lokale Entladung" bezeichnet.  
   
  Wenn eine **versuchen** Block vorzeitig aus irgendeinem Grund auch durch Herausspringen aus dem Block beendet wird, führt das System die zugeordnete **schließlich** Block als Teil der Prozess der stapelentladung. In solchen Fällen die [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) -Funktion zurückgegeben wird **"true"** bei Aufruf innerhalb der **schließlich** blockieren; andernfalls wird **"false"**.  
   
- Der Beendigungshandler wird nicht aufgerufen, wenn ein Prozess während der Ausführung einer `try-finally`-Anweisung abgebrochen wird.  
+ Der Beendigungshandler wird nicht aufgerufen, wenn ein Prozess, während der Ausführung abgebrochen wird einer **Try-finally-** Anweisung.  
   
  **Ende Microsoft-spezifisch**  
   

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 26b4cbfb798e47b1add5b1d46c2ea1adb538898b
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939831"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465967"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Einheitliche Initialisierung und Delegierung von Konstruktoren
 In modernem C++ können Sie *geschweifter Klammern Initialisierung* für den beliebigen Typs, ohne das Gleichheitszeichen. Außerdem können Sie delegierende Konstruktoren verwenden, um den Code zu vereinfachen, wenn mehrere Konstruktoren ähnliche Aufgaben ausführen.  
@@ -50,7 +50,6 @@ int main()
     class_a c3{ "yy", 4.4 };  
     class_a c3_1("zz", 5.5);  
 }  
-  
 ```  
   
  Wenn eine Klasse nicht standardmäßige Konstruktoren enthält, ist die Reihenfolge, in der Klassenmember im Initialisierer für geschweifte Klammern angezeigt werden, die Reihenfolge, in der die entsprechenden Parameter im Konstruktor angezeigt werden, und nicht die Reihenfolge, in der die Member deklariert werden (wie für `class_a` im vorherigen Beispiel). Wenn der Typ andernfalls keinen deklarierten Konstruktor hat, ist die Reihenfolge, in der die Member im Initialisierer für geschweifte Klammern angezeigt werden, dieselbe Reihenfolge, in der sie deklariert werden. In diesem Fall können Sie beliebig viele öffentliche Member initialisieren, Sie dürfen jedoch keinen Member überspringen. Das folgende Beispiel zeigt die Reihenfolge, die für die Initialisierung mit geschweiften Klammern verwendet wird, wenn kein deklarierter Konstruktor vorhanden ist:  
@@ -97,7 +96,6 @@ int main()
 class_d* cf = new class_d{4.5};  
 kr->add_d({ 4.5 });  
 return { 4.5 };  
-  
 ```  
   
 ## <a name="initializerlist-constructors"></a>initializer_list-Konstruktoren  
@@ -117,7 +115,6 @@ initializer_list<int> ilist1{ 5, 6, 7 };
 initializer_list<int> ilist2( ilist1 );  
 if (ilist1.begin() == ilist2.begin())  
     cout << "yes" << endl; // expect "yes"  
-  
 ```  
   
  Die Standard-Bibliothekscontainerklassen sowie `string`, `wstring` und `regex` verfügen über `initializer_list`-Konstruktoren. Die folgenden Beispiele zeigen, wie die Initialisierung mit geschweiften Klammern mit diesen Konstruktoren durchgeführt wird:  
@@ -178,7 +175,6 @@ int main() {
   
     class_c c1{ 1, 3, 2 };  
 }  
-  
 ```  
   
  Während Sie das vorherige Beispiel schrittweise ausführen, achten Sie darauf, ob der `class_c(int, int, int)`-Konstruktor zuerst den `class_c(int, int)`-Konstruktor aufruft, der wiederum `class_c(int)` aufruft. Jeder der Konstruktoren führt nur die Aufgaben aus, die nicht von den anderen Konstruktoren ausgeführt werden.  
@@ -201,7 +197,6 @@ public:
     double m_double{ 1.0 };  
     string m_string;  
 };  
-  
 ```  
   
  Im folgenden Beispiel wird die Verwendung von nicht statischen Datenmemberinitialisierern verdeutlicht. Wenn ein Konstruktor auch einen angegebenen Datenmember initialisiert, wird der Memberinitialisierer überschrieben:  

@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Formatierung oder Sonderzeichen zu einer Zeichenfolge | Microsoft Docs
+title: Hinzufügen von Formatierung oder Sonderzeichen zu einer Zeichenfolge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 429ba8d836579bd3bc1d1dd8844494bf9cd17a7a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 35592793b0fe606d3b88bef900d528d2c1231406
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864596"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39463839"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string"></a>Hinzufügen von Formatierung oder Sonderzeichen zu einer Zeichenfolge
-### <a name="to-add-formatting-or-special-characters-to-a-string"></a>Hinzufügen von Formatierung oder Sonderzeichen zu einer Zeichenfolge  
+### <a name="to-add-formatting-or-special-characters-to-a-string"></a>Um eine Zeichenfolge formatierungs-oder Sonderzeichen hinzufügen  
   
 1.  Öffnen Sie durch Doppelklicken auf das Symbol in der Zeichenfolgentabelle [Ressourcenansicht](../windows/resource-view-window.md).  
   
@@ -35,9 +35,9 @@ ms.locfileid: "33864596"
   
 2.  Wählen Sie die Zeichenfolge, die Sie ändern möchten.  
   
-3.  In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), keines der standardmäßigen Escapesequenzen für den Text im unten aufgeführten Hinzufügen der **Beschriftung** ein, und drücken Sie **EINGABETASTE**.  
+3.  In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), fügen Sie eine der standardmäßigen Escape-Sequenzen auf den Text im unten aufgeführten der **Beschriftung** Feld, und drücken Sie **EINGABETASTE**.  
   
-    |Um dies zu erhalten|Geben Sie Folgendes|  
+    |Um dies zu erhalten.|Geben Sie Folgendes|  
     |-----------------|---------------|  
     |Zeilenwechsel|\n|  
     |Wagenrücklauf|\r|  
@@ -47,9 +47,9 @@ ms.locfileid: "33864596"
     |Warnung (Glocke)|\a|  
   
 > [!NOTE]
->  Die Zeichenfolgen-Editor unterstützt nicht den vollständigen Satz von ASCII-Zeichen mit Escapezeichen. Sie können nur die oben aufgeführten verwenden.  
+>  Die Zeichenfolgen-Editor unterstützt nicht den vollständigen Satz von ASCII-Zeichen in Escapezeichen. Sie können nur die oben aufgeführten verwenden.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Exemplarische Vorgehensweise: Verwenden von Ressourcen für die Lokalisierung mit ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Anforderungen**  
   

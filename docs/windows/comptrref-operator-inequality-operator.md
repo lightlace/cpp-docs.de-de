@@ -1,5 +1,5 @@
 ---
-title: Comptrref::! =-Operator | Microsoft Docs
+title: Comptrref::! =-Operator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d5a6e7389215452177add30b587004c312aeae1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ebe71706ce1091ee21fc6fbd63e65b201c096b5
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883553"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462923"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator!=-Operator
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,21 +55,21 @@ bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `a`  
- Ein Verweis auf ein ComPtrRef-Objekt.  
+ *a*  
+ Ein Verweis auf eine **ComPtrRef** Objekt.  
   
- `b`  
- Ein Verweis auf ein anderes ComPtrRef-Objekt oder ein Zeiger auf ein anonymes Objekt (`void*`).  
+ *b*  
+ Ein Verweis auf einen anderen **ComPtrRef** Objekt oder ein Zeiger auf ein anonymes Objekt (`void*`).  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der erste Operator liefert `true` Wenn Objekt `a` stimmt nicht mit der Objekt- `b`ist, andernfalls `false`.  
+ Der erste Operator ergibt **"true"** Wenn Objekt *eine* ist nicht gleich Objekt *b*ist, andernfalls **"false"**.  
   
- Der zweite und dritte Operator yield `true` Wenn Objekt `a` stimmt nicht mit `nullptr`ist, andernfalls `false`.  
+ Führen Sie die zweite und dritte Operator **"true"** Wenn Objekt *eine* ist nicht gleich **"nullptr"** ist, andernfalls **"false"**.  
   
- Die vierten und fünften Operatoren ergeben `true` Wenn Objekt `a` stimmt nicht mit der Objekt- `b`ist, andernfalls `false`.  
+ Die vierten und fünften-Operatoren ergeben **"true"** Wenn Objekt *eine* ist nicht gleich Objekt *b*ist, andernfalls **"false"**.  
   
 ## <a name="remarks"></a>Hinweise  
- Gibt an, ob zwei ComPtrRef-Objekte nicht gleich sind.  
+ Gibt an, ob zwei **ComPtrRef** -Objekte ungleich sind.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

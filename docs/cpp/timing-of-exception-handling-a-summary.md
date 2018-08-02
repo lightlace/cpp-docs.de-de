@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8f45b6ee85924106e949a7487f133b8e3fbe0b9e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939415"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39465008"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Zeitliche Steuerung der Ausnahmebehandlung: Eine Zusammenfassung
 Ein Beendigungshandler wird ausgeführt, unabhängig davon, wie die **__try** -Anweisungsblock beendet wird. Ursachen gehören das Herausspringen aus dem **__try** Block, eine `longjmp` -Anweisung, die überträgt die Steuerung aus den Block, und das Entladen des Stapels aufgrund einer Ausnahmebehandlung.  
