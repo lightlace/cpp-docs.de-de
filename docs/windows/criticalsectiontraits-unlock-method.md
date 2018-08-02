@@ -1,5 +1,5 @@
 ---
-title: 'Criticalsectiontraits:: Unlock-Methode | Microsoft Docs'
+title: 'Criticalsectiontraits:: Unlock-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35a632a6c88ed29ef5e30e942c1341246de75e71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f66f185692c200ea459b88363143c0cc1af9d55
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883497"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39466009"
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock-Methode
-Eine Vorlage CriticalSection spezialisiert, damit sie freigeben Besitzer des Objekts angegebenen kritischen Abschnitt unterstützt.  
+Spezialisiert auf die Vorlage CriticalSection, damit sie freigeben Besitzer des Objekts angegebenen kritischen Abschnitt unterstützt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +36,13 @@ inline static void Unlock(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `cs`  
- Ein Zeiger auf ein kritisches Abschnittsobjekt.  
+ *cs*  
+ Ein Zeiger auf ein Objekt des kritischen Abschnitts.  
   
 ## <a name="remarks"></a>Hinweise  
  Die *Typ* Modifizierer ist definiert als `typedef CRITICAL_SECTION* Type;`.  
   
- Weitere Informationen finden Sie unter "LeaveCriticalSection Function" im Abschnitt "Synchronisierungsfunktionen" der Windows-API-Dokumentation.  
+ Weitere Informationen finden Sie unter "LeaveCriticalSection-Funktion" im Abschnitt "Synchronisierung Functions" von der Windows-API-Dokumentation.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  
