@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178c75efa84ebc7d27c19feb81e81314dc4c5bd7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a445e9c435f9e077899a2a473dc5862f98a36bf4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943585"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405518"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Numerisch, Boolean und Zeigerliterale (C++)
 Bei einem Literal handelt es sich um ein Programmelement, das direkt einen Wert darstellt. In diesem Artikel werden Literale der Typen Ganzzahl, Gleitkomma, Boolesch und Zeiger erläutert. Weitere Informationen über Zeichenfolgen- und Zeichenliterale finden Sie unter [Zeichenfolgen und Zeichen Literale (C++)](../cpp/string-and-character-literals-cpp.md). Sie können auch Ihre eigenen Literale auf Grundlage dieser Kategorien definieren; Weitere Informationen finden Sie unter [benutzerdefinierte Literale (C++)](../cpp/user-defined-literals-cpp.md)  
@@ -33,7 +33,6 @@ const int answer = 42; // integer literal
 double d = sin(108.87);     //floating point literal passed to sin function  
 bool b = true;              // boolean literal  
 MyClass* mc = nullptr;      // pointer literal  
-  
 ```  
   
  In manchen Fällen ist es wichtig, dem Compiler darüber zu informieren, wie er ein Literal interpretieren soll oder welcher bestimmte Typ ihm erteilt werden soll. Dies setzen Sie um, indem Sie Prä- und Suffixe an das Literal anfügen. Beispielsweise informiert das Präfix „0x“ den Compiler darüber, die darauffolgende Zahl als einen hexadezimalen Wert, beispielsweise „0x35“, zu interpretieren. Das ULL-Suffix informiert den Compiler an, den Wert zu behandeln, als ein **long long ohne Vorzeichen** -Typ wie in 5894345ull zu behandeln. In den folgenden Abschnitten finden Sie die vollständige Liste der Prä- und Suffixe für jeden Literaltyp.  
@@ -129,7 +128,6 @@ void func( long double );
  Ein binäres Literale kann durch die Verwendung des Präfix `0B` oder `0b`, gefolgt durch eine Sequenz von mehreren 1 und 0 angegeben werden.  
   
 ```cpp 
-  
 auto x = 0B001101 ; // int  
 auto y = 0b000001 ; // int  
 ```  
@@ -140,7 +138,6 @@ auto y = 0b000001 ; // int
 ```cpp 
 if (num < 100)  
     return "Success";  
-  
 ```  
   
  Im vorherigen Beispiel empfiehlt sich eher die Verwendung einer benannten Konstante, die eine klare Bedeutung vermittelt, beispielsweise „MAXIMUM_ERROR_THRESHOLD“. Wenn Endbenutzer den Rückgabewert „Success“ anzeigen, empfiehlt sich eher die Verwendung einer benannten Zeichenfolgenkonstante, die an einer einzelnen Position in einer Datei gespeichert werden kann, wo sie in mehrere Sprachen lokalisiert werden kann. Die Verwendung von benannten Konstanten hilft anderen Benutzern und Ihnen, den Zweck des Codes zu verstehen.  

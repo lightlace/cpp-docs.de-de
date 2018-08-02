@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1506870ff0b5bb2aea55874d32f62b1da63c7302
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943315"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406570"
 ---
 # <a name="function-overloading"></a>Funktionsüberladung
 C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gültigkeitsbereich zu. Diese heißen *überladen* Funktionen. Überladene Funktionen ermöglichen Ihnen das Bereitstellen anderer Semantiken für eine Funktion in Abhängigkeit von die Art und Anzahl von Argumenten. 
@@ -163,7 +163,7 @@ F1 = Add( F2, 23 );
   
  Die vorhergehende Anweisung erstellt zwei Sätze:  
   
-|Satz 1: Kandidatenfunktionen, deren erstes Argument vom Typ "fraction" ist|Satz 2: Kandidatenfunktionen, deren zweites Argument in den Typ "int" konvertiert werden kann|  
+|Satz 1: Kandidatenfunktionen, deren erstes Argument vom Typ „fraction“ ist|Satz 2: Candidate Funktionen, deren zweites Argument konvertiert werden können Typ **Int**|  
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |Variant 1|Variant 1 (**Int** konvertiert werden kann, um **lange** mithilfe einer standardkonvertierung)|  
 |Variant 3||  
@@ -178,7 +178,7 @@ F1 = Add( 3, 6 );
   
  Der vorhergehende Funktionsaufruf erstellt die folgenden Sätze:  
   
-|Satz 1: Kandidatenfunktionen, deren erstes Argument vom Typ „int“ ist|Satz 2: Kandidatenfunktionen, deren zweites Argument vom Typ „int“ ist|  
+|Satz 1: Kandidatenfunktionen, haben ersten Argument vom Typ **Int**|Satz 2: Kandidatenfunktionen, haben zweites Argument vom Typ **Int**|  
 |---------------------------------------------------------------------|----------------------------------------------------------------------|  
 |Variant 2 (**Int** konvertiert werden kann, um **lange** mithilfe einer standardkonvertierung)|Variant 1 (**Int** konvertiert werden kann, um **lange** mithilfe einer standardkonvertierung)|  
   
@@ -282,7 +282,7 @@ volatile Over&
   
 3.  Übereinstimmung mithilfe von Standardkonvertierungen. Jede beliebige Sequenz, die nicht als genaue Übereinstimmung klassifiziert wird, oder eine Übereinstimmung mithilfe von Erweiterungen, die nur Standardkonvertierungen und triviale Konvertierungen enthält, wird als Übereinstimmung mithilfe von Standardkonvertierungen klassifiziert. In dieser Kategorie gelten die folgenden Regeln:  
   
-    -   Konvertierung von einem Zeiger auf eine abgeleitete Klasse, in einen Zeiger auf eine direkte oder indirekte Basisklasse empfiehlt sich, die zum Konvertieren von **"void" \***  oder **const Void \*** .  
+    -   Konvertierung von einem Zeiger auf eine abgeleitete Klasse, in einen Zeiger auf eine direkte oder indirekte Basisklasse empfiehlt sich, die zum Konvertieren von `void *` oder `const void *`.  
   
     -   Die Konvertierung von einem Zeiger auf eine abgeleitete Klasse in einen Zeiger auf eine Basisklasse erzeugt eine bessere Übereinstimmung, je näher die Basisklasse der direkten Basisklasse ist. Angenommen, die Klassenhierarchie folgt der in der folgenden Abbildung dargestellten Klassenhierarchie.  
   
@@ -439,7 +439,6 @@ int main()
     auto v2 = C().get_data(); // get the original. prints "rvalue"
     return 0;
 }
-
 ```
   
 ## <a name="restrictions-on-overloading"></a>Einschränkungen beim Überladen  
@@ -466,7 +465,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     Die vorhergehenden zwei Funktionen verfügen über identische Argumentlisten. `PSTR` ist ein Synonym für den Typ **Char \*** . Im Memberbereich generiert dieser Code einen Fehler.  
+     Die vorhergehenden zwei Funktionen verfügen über identische Argumentlisten. `PSTR` ist ein Synonym für den Typ `char *`. Im Memberbereich generiert dieser Code einen Fehler.  
   
 -   Aufgelistete Typen sind verschiedene Typen und können verwendet werden, um zwischen überladenen Funktionen zu unterscheiden.  
   
@@ -573,8 +572,5 @@ double Account::Deposit( double dAmount, char *szPassword )
 }  
 ```
 
-
-
-  
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen (C++)](../cpp/functions-cpp.md)
