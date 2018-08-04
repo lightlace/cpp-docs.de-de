@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cc9c124a5b3f2fea92f729d7d11df579cc25a39
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: a8043ff1c25c08c6adcb640defba1bc967a2fb8b
+ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376058"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496557"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installieren von C++-Unterstützung in Visual Studio
 
@@ -43,7 +43,7 @@ Weitere Informationen zu den freien Speicherplatz und den Anforderungen des Betr
    > [Installieren von Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
    >[!Tip]
-   > Die Community Edition eignet sich für einzelne Entwickler, Schulungsumgebungen, akademische Forschung und Open Source-Entwicklung. Installieren Sie für andere Verwendungen <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> oder <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
+   > Die Community Edition eignet sich für einzelne Entwickler, Schulungsumgebungen, akademische Forschung und Open Source-Entwicklung. Installieren Sie für andere Verwendungen [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) oder [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 1. Suchen Sie die Installer-Datei, die Sie heruntergeladen haben und ihn ausführen. Sie können in Ihrem Browser angezeigt werden, oder Umständen ist es in Ihrem Ordner "Downloads". Das Installationsprogramm benötigt Administratorrechte ausgeführt. Sie sehen möglicherweise eine **User Account Control** Dialogfeld werden Sie aufgefordert, erteilen Sie Berechtigungen zum können des Installationsprogramms, nehmen Sie Änderungen an Ihrem System aus, wählen **Ja**. Wenn Sie Probleme auftreten, suchen Sie die heruntergeladene Datei im Datei-Explorer, mit der rechten Maustaste auf das Symbol "Installer" aus, und wählen **als Administrator ausführen** aus dem Kontextmenü.
 
