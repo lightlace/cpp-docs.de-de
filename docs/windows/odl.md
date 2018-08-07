@@ -1,5 +1,5 @@
 ---
-title: ODL | Microsoft Docs
+title: ODL | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 559d149cfbe2fac7a5d648d56cb4e34d427cedc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 984731d85bafe3c0e6bb0d8f6092800019b40663
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877695"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608185"
 ---
 # <a name="odl"></a>odl
-Identifiziert eine Schnittstelle als Schnittstelle Objekt Description Language (ODL). MIDL-Compiler erfordert keine der **Odl** -Attribut; es wird nur für Kompatibilität mit älteren ODL-Dateien erkannt.  
+Gibt eine Schnittstelle als Schnittstelle Objekt Description Language (ODL). Der MIDL-Compiler ist nicht erforderlich. die **Odl** Attributgruppen; es wird nur für die Kompatibilität mit älteren ODL-Dateien erkannt.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [odl]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
@@ -40,7 +38,7 @@ Identifiziert eine Schnittstelle als Schnittstelle Objekt Description Language (
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // cpp_attr_ref_odl.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -66,7 +64,7 @@ public:
   
 |||  
 |-|-|  
-|**Betrifft**|`interface`|  
+|**Betrifft**|**interface**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

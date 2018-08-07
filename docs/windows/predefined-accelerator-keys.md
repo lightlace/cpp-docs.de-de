@@ -1,5 +1,5 @@
 ---
-title: Vordefinierte Zugriffstasten | Microsoft Docs
+title: Vordefinierte Zugriffstasten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42f1151f90fa6a418564f30b9ec6570645a91b42
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880795"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608416"
 ---
 # <a name="predefined-accelerator-keys"></a>Vordefinierte Zugriffstasten
 Es gibt eine Anzahl vordefinierter Zugriffstasten, die Teil eines Windows-Anwendungsprojekts sein können. Einige dieser virtuellen Tasten sind für die Windows-Umgebung. Andere unterstützen Browser oder Unicode-Anwendungen. Dieser Tasten können in beliebigen Zugriffstasten verwendet werden.  
@@ -62,10 +62,10 @@ Es gibt eine Anzahl vordefinierter Zugriffstasten, die Teil eines Windows-Anwend
 |VK_NONCONVERT|IME-Nicht-Konvertierung|  
 |VK_OEM_1|Windows: für US-Standardtastatur die „;:“-Taste|  
 |VK_OEM_102|Windows: entweder Taste für spitze Klammer oder für umgekehrten Schrägstrich auf der RT-102-Tasten-Tastatur|  
-|VK_OEM_2|Windows: für US-Standardtastatur die "/?" Key|  
+|VK_OEM_2|Windows: für die US-Standardtastatur die "/?" Key|  
 |VK_OEM_3|Windows: für US-Standardtastatur die „`~“-Taste|  
 |VK_OEM_4|Windows: für US-Standardtastatur die „[{“-Taste|  
-|VK_OEM_5|Windows: für US-Standardtastatur die "\\&#124;" Schlüssel|  
+|VK_OEM_5|Windows: für die US-Standardtastatur die "\\&#124;' Schlüssel|  
 |VK_OEM_6|Windows: für US-Standardtastatur die „]}“-Taste|  
 |VK_OEM_7|Windows: für US-Standardtastatur die „einfache/doppelte Anführungszeichen“-Taste|  
 |VK_OEM_COMMA|Windows: für alle Länder/Regionen die „,“-Taste|  
@@ -83,7 +83,7 @@ Es gibt eine Anzahl vordefinierter Zugriffstasten, die Teil eines Windows-Anwend
 |VK_XBUTTON1|Windows: X1-Maustaste|  
 |VK_XBUTTON2|Windows: X2-Maustaste|  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.*  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  

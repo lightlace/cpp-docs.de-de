@@ -1,5 +1,5 @@
 ---
-title: Max_is | Microsoft Docs
+title: Max_is | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 697eff3264c7e4a627086b072ae45b3c7ffedac2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3fae7ee95255d72d2799a5913821606f770e2b3b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878969"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608429"
 ---
 # <a name="maxis"></a>max_is
-Legt fest, den maximalen Wert für eine gültige Arrayindex.  
+Legt fest, den maximalen Wert für ein gültiges Array-Index.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ max_is(  
+[ max_is(  
    "expression"  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parameter  
  *Ausdruck*  
- Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argument Slots sind zulässig.  
+ Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argumentliste Slots sind zulässig.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Max_is** C++-Attribut hat die gleiche Funktionalität wie die [Max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) MIDL-Attribut.  
@@ -49,7 +48,7 @@ Legt fest, den maximalen Wert für eine gültige Arrayindex.
   
 |||  
 |-|-|  
-|**Betrifft**|Im Feld `struct` oder **Union**, Parameter interface, Schnittstelle Methode|  
+|**Betrifft**|Im Feld **Struktur** oder **Union**, Schnittstellenparameter,-Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|**size_is**|  
@@ -57,7 +56,7 @@ Legt fest, den maximalen Wert für eine gültige Arrayindex.
  Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Beispiel  
- Finden Sie unter [First_is](../windows/first-is.md) für ein Beispiel für einen Abschnitt eines Arrays angeben.  
+ Finden Sie unter [First_is](../windows/first-is.md) ein Beispiel für einen Abschnitt eines Arrays angeben.  
   
 ## <a name="see-also"></a>Siehe auch  
  [IDL-Attribute](../windows/idl-attributes.md)   

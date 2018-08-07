@@ -1,5 +1,5 @@
 ---
-title: Idl_module | Microsoft Docs
+title: Idl_module | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11547a3fb1bd46a1e2edb8ce9dd0a6547464f796
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bfda47ced14d7c112d27d0036b4d636e32c91907
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882523"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607559"
 ---
 # <a name="idlmodule"></a>idl_module
 Gibt einen Einstiegspunkt in eine DLL-Datei an.  
@@ -30,8 +30,7 @@ Gibt einen Einstiegspunkt in eine DLL-Datei an.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ idl_module (   
+[ idl_module (   
    name=module_name,   
    dllname=dll,   
    uuid="uuid",   
@@ -44,47 +43,47 @@ Gibt einen Einstiegspunkt in eine DLL-Datei an.
 function declaration  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- **name**  
+### <a name="parameters"></a>Parameter  
+ *name*  
  Ein benutzerdefinierter Name für den Codeblock, der in der IDL-Datei angezeigt wird.  
   
- **DLL-Namen** (optional)  
+ *DllName* (optional)  
  Die DLL-Datei, die den Export enthält.  
   
- `uuid` (optional)  
+ *UUID* (optional)  
  Eine eindeutige ID.  
   
- **Helpstring** (optional)  
- Eine Zeichenfolge, die zum Beschreiben der Typbibliothek.  
+ *Helpstring* (optional)  
+ Eine Zeichenfolge, die die Typbibliothek beschrieben wird.  
   
- **helpstringcontext** (optional)  
- Die ID eines Hilfethemas in einer HLP oder CHM-Datei.  
+ *Helpstringcontext* (optional)  
+ Die ID eines Hilfethemas in eine .hlp oder CHM-Datei.  
   
- **helpcontext** (optional)  
+ *HelpContext* (optional)  
  Die Hilfe-ID für diese Typbibliothek.  
   
- **hidden** (optional)  
- Parameter, der verhindert, dass die Bibliothek angezeigt wird. Weitere Informationen finden Sie unter [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL-Attribut.  
+ *Ausgeblendete* (optional)  
+ Ein Parameter, der verhindert, dass die Bibliothek angezeigt wird. Weitere Informationen finden Sie unter [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL-Attribut.  
   
- ***Eingeschränkte*** (optional)  
- Mitglieder der Bibliothek können nicht nach dem Zufallsprinzip aufgerufen werden. Weitere Informationen finden Sie unter [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL-Attribut.  
+ *Eingeschränkte* (optional)  
+ Mitglieder der Bibliothek können nicht beliebig aufgerufen werden. Weitere Informationen finden Sie unter [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL-Attribut.  
   
  *Funktionsdeklaration*  
  Die Funktion, die Sie definieren.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `idl_module` C++-Attribut ermöglicht die Angabe den Einstiegspunkt in eine DLL-Datei aus einer DLL-Datei importieren können.  
+ Die **Idl_module** C++-Attribut ermöglicht die Angabe den Einstiegspunkt in eine DLL-Datei, dem Sie Daten aus einer DLL-Datei importieren können.  
   
- Die **Idl_module** Attribut hat ähnliche Funktionen der [Modul](http://msdn.microsoft.com/library/windows/desktop/aa367099) MIDL-Attribut.  
+ Die **Idl_module** Attribut hat ähnliche Funktionen wie die [Modul](http://msdn.microsoft.com/library/windows/desktop/aa367099) MIDL-Attribut.  
   
- Sie können etwas von einem COM-Objekt exportieren, die Sie aus einer DLL-Datei exportieren können, indem Sie einen DLL-Einstiegspunkt in den bibliotheksblock einer IDL-Datei einfügen.  
+ Sie können alles von einer COM-Objekt exportieren, die Sie aus einer DLL-Datei exportieren können, indem Sie einen DLL-Einstiegspunkt in den bibliotheksblock einer IDL-Datei einfügen.  
   
- Ihre Striches `idl_module` in zwei Schritten. Zunächst müssen Sie ein Paar von Namen/DLL definieren. Klicken Sie dann bei Verwendung von `idl_module` um einen Einstiegspunkt anzugeben, geben Sie den Namen und zusätzliche Attribute.  
+ Ihre müssen **Idl_module** in zwei Schritten. Zunächst müssen Sie ein Paar aus Name/DLL definieren. Klicken Sie dann bei Verwendung von **Idl_module** um ein Einstiegspunkt anzugeben, geben Sie den Namen und alle zusätzlichen Attribute.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt, wie Sie die `idl_module` Attribut:  
+ Der folgende Code zeigt, wie Sie mit der **Idl_module** Attribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_module.cpp  
 // compile with: /LD  
 [idl_quote("midl_pragma warning(disable:2461)")];  

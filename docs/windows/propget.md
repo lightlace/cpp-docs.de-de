@@ -1,5 +1,5 @@
 ---
-title: Propget | Microsoft Docs
+title: Propget | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 339cb03b645e3aff0a6bb806e431c7be274340d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3552a8c64260345b6a956878c459182089e1af0f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881858"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607546"
 ---
 # <a name="propget"></a>propget
 Gibt eine Eigenschaft Accessor-Funktion.  
@@ -30,9 +30,7 @@ Gibt eine Eigenschaft Accessor-Funktion.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [propget]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
@@ -50,12 +48,12 @@ Gibt eine Eigenschaft Accessor-Funktion.
 |**Betrifft**|Methode|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|**Propput**, **Propputref**|  
+|**Ungültige Attribute**|`propput`, `propputref`|  
   
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [IDL-Attribute](../windows/idl-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [propput](../windows/propput.md)   
  [propputref](../windows/propputref.md)   

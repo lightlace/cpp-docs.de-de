@@ -1,5 +1,5 @@
 ---
-title: Invertieren der Farben in einer Markierung (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Invertieren der Farben in einer Markierung (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f29c9698a14d5cd8773d12a1719614e19ca67c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c187f0fac784bdd0c162334abcfdc23f8a6c1804
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874079"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608916"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Invertieren der Farben in einer Markierung (Bildbearbeitung für Symbole)
 Der Grafik-Editor bietet eine bequeme Möglichkeit zum Invertieren von Farben im ausgewählten Teil des Bilds, damit Sie feststellen können, wie ein Bild mit invertierten Farben aussieht.  
@@ -34,9 +34,7 @@ Der Grafik-Editor bietet eine bequeme Möglichkeit zum Invertieren von Farben im
   
 1.  Auf der **Image** Menü klicken Sie auf **Farben umkehren**.  
   
-
-  
- Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
  Keiner  
   

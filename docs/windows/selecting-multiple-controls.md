@@ -1,5 +1,5 @@
 ---
-title: Markieren mehrerer Steuerelemente | Microsoft Docs
+title: Markieren mehrerer Steuerelemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60da452fe4373d47f5278fa45520a45235f76df0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fd2160a2e9eef9165aea835d093978fec35e5fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888707"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608266"
 ---
 # <a name="selecting-multiple-controls"></a>Markieren mehrerer Steuerelemente
 ### <a name="to-select-multiple-controls"></a>Zum Auswählen mehrerer Steuerelemente  
@@ -32,29 +32,28 @@ ms.locfileid: "33888707"
   
 2.  Ziehen Sie den Mauszeiger, um ein Auswahlfeld um Steuerelemente zu zeichnen, die Sie in einem Dialogfeld auswählen möchten.  
   
-     Wenn Sie die Maustaste loslassen, alle Steuerelemente inneren und überschneidenden das Auswahlfeld aktiviert sind.  
+     Wenn Sie die Maustaste loslassen, alle Steuerelemente innerhalb und sich überschneiden, werden das Auswahlfeld ausgewählt.  
   
      \- oder –  
   
--   Halten Sie die UMSCHALTTASTE gedrückt, und klicken Sie auf die Steuerelemente, die Sie in der Auswahl einschließen möchten.  
+-   Halten Sie die **UMSCHALT** gedrückt, und klicken Sie auf die Steuerelemente, die Sie in der Auswahl einschließen möchten.  
   
      \- oder –  
   
--   Halten Sie die STRG-Taste gedrückt, und klicken Sie auf die Steuerelemente, die Sie in der Auswahl einschließen möchten.  
+-   Halten Sie die **STRG** gedrückt, und klicken Sie auf die Steuerelemente, die Sie in der Auswahl einschließen möchten.  
   
-#### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Ein Steuerelement aus einer Gruppe von ausgewählten Steuerelemente zu entfernen oder Hinzufügen des Steuerelements zu einer Gruppe von ausgewählten Steuerelemente  
+### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Ein Steuerelement aus einer Gruppe von ausgewählten Steuerelemente zu entfernen oder Hinzufügen des Steuerelements auf eine Gruppe von ausgewählten Steuerelemente  
   
-1.  Halten Sie mit einer Gruppe von Steuerelementen, die ausgewählt werden soll die UMSCHALTTASTE gedrückt, und klicken Sie auf das Steuerelement, das Sie verwenden möchten, um die vorhandene Auswahl hinzufügen oder daraus entfernen.  
+1.  Mit der eine Gruppe von Steuerelementen, die ausgewählt werden soll, halten Sie die **UMSCHALT** gedrückt, und klicken Sie auf das Steuerelement, das Sie verwenden möchten, um die vorhandene Auswahl hinzufügen oder daraus entfernen.  
   
     > [!NOTE]
-    >  Die STRG-Taste gedrückt, und klicken auf ein Steuerelement in einer Auswahl vornehmen, die in die Auswahl des bestimmenden Steuerelements steuern. Weitere Informationen finden Sie unter [Festlegen des bestimmenden Steuerelements](../windows/specifying-the-dominant-control.md).  
+    >  Die STRG-Taste gedrückt halten und durch Klicken auf ein Steuerelement in einer Auswahl treffen, die in die Auswahl des bestimmenden Steuerelements zu steuern. Weitere Informationen finden Sie unter [Festlegen des bestimmenden Steuerelements](../windows/specifying-the-dominant-control.md).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  
  [Auswählen von Steuerelementen](../windows/selecting-controls.md)   
  [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)
-

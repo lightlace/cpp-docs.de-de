@@ -1,5 +1,5 @@
 ---
-title: 'Makeallocator:: Makeallocator-Konstruktor | Microsoft Docs'
+title: 'Makeallocator:: Makeallocator-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b9095daa4ff1dca77c78c11ac41d8747d889d32
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 06e12754594fe2f155be9502c2059fb6ba5f84e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874940"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608208"
 ---
 # <a name="makeallocatormakeallocator-constructor"></a>MakeAllocator::MakeAllocator-Konstruktor
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ MakeAllocator();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Initialisiert eine neue Instanz der MakeAllocator-Klasse.  
+ Initialisiert eine neue Instanz der dem **MakeAllocator** Klasse.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  

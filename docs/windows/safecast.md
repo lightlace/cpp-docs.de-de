@@ -1,5 +1,5 @@
 ---
-title: SafeCast | Microsoft Docs
+title: SafeCast | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95a3f8508c17936626558ecc6a8d01e21688d403
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a5b1c5fed776e5e9312843160a740fd3d801b196
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892451"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608546"
 ---
 # <a name="safecast"></a>SafeCast
-Wandelt einen Typ von der Anzahl in einen anderen Typ.  
+Wandelt einen Typ der Zahl in einen anderen Typ.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,21 +37,21 @@ inline bool SafeCast (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- [in] `From`  
- Die Quelle zu konvertierende Zahl. Dies muss vom Typ t sein.  
+### <a name="parameters"></a>Parameter  
+ [in] *Aus*  
+ Die Quelle zu konvertierende Zahl. Dies muss vom Typ `T`.  
   
- [out] `To`  
- Ein Verweis auf die neue Zahlentyp. Dies muss vom Typ u sein.  
+ [out] *Auf*  
+ Ein Verweis auf die neue Zahlentyp. Dies muss vom Typ `U`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Wenn kein Fehler auftritt. `false` , wenn ein Fehler auftritt.  
+ **"true"** Wenn kein Fehler auftritt. **"false"** Wenn ein Fehler auftritt.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode ist Teil des [SafeInt-Bibliothek](../windows/safeint-library.md) und ohne Erstellen einer Instanz von für eine einzelnes Umwandlungsoperation dient der [SafeInt-Klasse](../windows/safeint-class.md).  
+ Diese Methode ist Teil des [SafeInt-Bibliothek](../windows/safeint-library.md) und ist für eine einzelne Umwandlungsoperation ohne eine Instanz des für die [SafeInt-Klasse](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Diese Methode sollte nur verwendet werden, wenn ein einzelner Vorgang geschützt werden muss. Wenn mehrere Vorgänge vorhanden sind, sollten Sie verwenden die `SafeInt` Klasse anstelle von den einzelnen eigenständigen Funktionen aufrufen.  
+>  Diese Methode sollte nur verwendet werden, wenn Sie ein einzelnen Vorgang geschützt werden muss. Wenn mehrere Vorgänge vorhanden sind, sollten Sie verwenden die `SafeInt` Klasse anstelle von den einzelnen eigenständigen Funktionen.  
   
  Weitere Informationen zu den Vorlagentypen T "und" U, finden Sie unter [SafeInt-Funktionen](../windows/safeint-functions.md).  
   

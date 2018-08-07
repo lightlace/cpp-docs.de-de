@@ -1,5 +1,5 @@
 ---
-title: Oleautomation | Microsoft Docs
+title: Oleautomation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8093a36199eeddf2a96ae0830c56ac0acde51cfe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e8c7ea92e914543d80b199ef9d52435eb7116d9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882289"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608006"
 ---
 # <a name="oleautomation"></a>oleautomation
 Gibt an, dass eine Schnittstelle mit der Automatisierung kompatibel ist.  
@@ -30,16 +30,14 @@ Gibt an, dass eine Schnittstelle mit der Automatisierung kompatibel ist.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [oleautomation]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Oleautomation** C++-Attribut hat die gleiche Funktionalität wie die [Oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Siehe Beispiele für ["DefaultValue"](../windows/defaultvalue.md) und [nonextensible](../windows/nonextensible.md) für ein Beispiel für die Verwendung von **Oleautomation**.  
+ Finden Sie unter den Beispielen für [Defaultvalue](../windows/defaultvalue.md) und [nonextensible](../windows/nonextensible.md) für ein Beispiel für die Verwendung von **Oleautomation**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -47,7 +45,7 @@ Gibt an, dass eine Schnittstelle mit der Automatisierung kompatibel ist.
   
 |||  
 |-|-|  
-|**Betrifft**|`interface`|  
+|**Betrifft**|**interface**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|**dispinterface**|  

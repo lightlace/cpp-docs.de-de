@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Getruntimeclassname-Methode | Microsoft Docs'
+title: 'Runtimeclass:: Getruntimeclassname-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cfe3cc4a8a304bbd04fde9e6c38e2b9170e2e73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7706a16a860cf554068dd3416e7c1f8b1fcea311
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892438"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608773"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName-Methode
 
-Ruft die Laufzeitklasse-Namen des aktuellen RuntimeClass-Objekts ab.
+Ruft den Common Language Runtime-Klassennamen des aktuellen **RuntimeClass** Objekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ STDMETHOD( GetRuntimeClassName )(
 ### <a name="parameters"></a>Parameter
 
 *runtimeName*  
-Wenn dieser Vorgang abgeschlossen wird, der Name der Common Language Runtime-Klasse.
+Wenn dieser Vorgang abgeschlossen ist, den Namen der Common Language Runtime-Klasse.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -56,5 +56,4 @@ Ein Assert-Fehler wird ausgegeben, wenn &#95;&#95;WRL_STRICT&#95;&#95; oder &#95
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Siehe auch
-
-[RuntimeClass-Klasse](../windows/runtimeclass-class.md)
+ [RuntimeClass-Klasse](../windows/runtimeclass-class.md)

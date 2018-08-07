@@ -1,5 +1,5 @@
 ---
-title: 'Implements:: cancastto-Methode | Microsoft Docs'
+title: 'Implements:: cancastto-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fd6e6736c74e1ce895031e17c1d5268eb4ce646
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53b17558998812895ece4b47f5de03700e502b8e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877072"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608942"
 ---
 # <a name="implementscancastto-method"></a>Implements::CanCastTo-Methode
 Ruft einen Zeiger auf die angegebene Schnittstelle.  
@@ -36,15 +36,15 @@ __forceinline HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `riid`  
+### <a name="parameters"></a>Parameter  
+ *riid*  
  Ein Verweis auf eine Schnittstellen-ID.  
   
- `ppv`  
- Wenn erfolgreich, ein Zeiger auf die Schnittstelle von angegeben `riid`.  
+ *ppv*  
+ Wenn erfolgreich, ein Zeiger auf die Schnittstelle durch angegeben *Riid*.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler, z. B. E_NOINTERFACE angibt.  
+ S_OK, wenn erfolgreich; andernfalls ein HRESULT, der den Fehler, z.B. E_NOINTERFACE angibt.  
   
 ## <a name="remarks"></a>Hinweise  
  Dies ist eine interne Hilfsmethode-Funktion, die einen QueryInterface-Vorgang ausführt.  

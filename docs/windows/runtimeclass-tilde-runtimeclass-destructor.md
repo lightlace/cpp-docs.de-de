@@ -1,5 +1,5 @@
 ---
-title: 'RuntimeClass:: ~ RuntimeClass-Destruktor | Microsoft Docs'
+title: 'RuntimeClass:: ~ RuntimeClass-Destruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b48ead21adc8b641840727af236c3c6e58efee9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13f537a9f5f6a66107a381324ccef1a6bef2ff32
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892188"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608028"
 ---
 # <a name="runtimeclassruntimeclass-destructor"></a>RuntimeClass::~RuntimeClass-Destruktor
-Hebt die Initialisierung der aktuellen Instanz der RuntimeClass-Klasse auf.  
+Hebt die Initialisierung der aktuellen Instanz von der **RuntimeClass** Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   

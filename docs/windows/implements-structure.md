@@ -1,5 +1,5 @@
 ---
-title: Implementiert Struktur | Microsoft Docs
+title: Struktur implementiert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ecbf0b77feef7abeb67f8d0dc300da067d1f2da
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0dc23a9c90fc2112d67180ceae86ebde0e057b06
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880915"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607805"
 ---
 # <a name="implements-structure"></a>Implements-Struktur
-Implementiert „QueryInterface“ und „GetIid“ für die angegebene Schnittstelle.  
+Implementiert `QueryInterface` und `GetIid` für die angegebene Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,44 +58,44 @@ template <
 struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `I0`  
+### <a name="parameters"></a>Parameter  
+ *I0*  
  Die nullte Schnittstellen-ID. (Erforderlich)  
   
- `I1`  
+ *I1*  
  Die erste Schnittstellen-ID. (Optional)  
   
- `I2`  
+ *I2*  
  Die zweite Schnittstellen-ID. (Optional)  
   
- `I3`  
+ *I3*  
  Die dritte Schnittstellen-ID. (Optional)  
   
- `I4`  
+ *I4*  
  Die vierte Schnittstellen-ID. (Optional)  
   
- `I5`  
+ *I5*  
  Die fünfte Schnittstellen-ID. (Optional)  
   
- `I6`  
+ *I6*  
  Die sechste Schnittstellen-ID. (Optional)  
   
- `I7`  
+ *I7*  
  Die siebte Schnittstellen-ID. (Optional)  
   
- `I8`  
+ *I8*  
  Die achte Schnittstellen-ID. (Optional)  
   
- `I9`  
+ *I9*  
  Die neunte Schnittstellen-ID. (Optional)  
   
- `flags`  
- Konfigurationsflags, die für die Klasse. Eine oder mehrere [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) Enumerationen, die im angegebenen eine [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) Struktur.  
+ *flags*  
+ Von konfigurationsflags für die Klasse. Eine oder mehrere [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) Enumerationen, die im angegebenen ein [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) Struktur.  
   
 ## <a name="remarks"></a>Hinweise  
- Aus der Liste der angegebenen Schnittstellen abgeleitet und implementiert Helper-Vorlagen für QueryInterface und "GetIID".  
+ Aus der Liste der angegebenen Schnittstellen abgeleitet und implementiert Helper-Vorlagen für `QueryInterface` und `GetIid`.  
   
- Jede `I0` über `I9` Schnittstellenparameter leiten von entweder IUnknown "iinspectable", oder die [ChainInterfaces](../windows/chaininterfaces-structure.md) Vorlage. Die `flags` Parameter bestimmt, ob die Unterstützung für IUnknown oder "iinspectable" generiert wird.  
+ Jede *I0* über *I9* Schnittstellenparameter muss abgeleitet werden, entweder `IUnknown`, `IInspectable`, oder die [ChainInterfaces](../windows/chaininterfaces-structure.md) Vorlage. Die *Flags* Parameter bestimmt, ob die Unterstützung für generiert wird, `IUnknown` oder `IInspectable`.  
   
 ## <a name="members"></a>Member  
   
@@ -110,14 +110,14 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[Implements::CanCastTo-Methode](../windows/implements-cancastto-method.md)|Ruft einen Zeiger auf die angegebene Schnittstelle.|  
-|[Implements::CastToUnknown-Methode](../windows/implements-casttounknown-method.md)|Ruft einen Zeiger auf die zugrunde liegenden IUnknown-Schnittstelle.|  
-|[Implements::FillArrayWithIid-Methode](../windows/implements-fillarraywithiid-method.md)|Fügt die Schnittstellen-ID, die durch den aktuellen nullte Vorlagenparameter in das angegebene Array-Element angegeben.|  
+|[Implements::CastToUnknown-Methode](../windows/implements-casttounknown-method.md)|Ruft einen Zeiger auf die zugrunde liegende `IUnknown` Schnittstelle.|  
+|[Implements::FillArrayWithIid-Methode](../windows/implements-fillarraywithiid-method.md)|Fügt die Schnittstellen-ID, die durch den aktuellen nullten Vorlagenparameter angegeben wird, in das angegebene Array-Element.|  
   
 ### <a name="protected-constants"></a>Geschützte Konstanten  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[Implements::IidCount-Konstante](../windows/implements-iidcount-constant.md)|Enthält die Anzahl der implementierten Schnittstellen-IDs an.|  
+|[Implements::IidCount-Konstante](../windows/implements-iidcount-constant.md)|Enthält die Anzahl von implementierten Schnittstellen-IDs.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `I0`  

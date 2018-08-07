@@ -1,5 +1,5 @@
 ---
-title: Objekt (C++) | Microsoft Docs
+title: Objekt (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 601d67fb48f0ae826474d33e7dca0fbffff9478c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c0705c5d841b63cd3f537ab39dbbe9122fea869
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879707"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607909"
 ---
 # <a name="object-c"></a>object (C++)
-Identifiziert eine benutzerdefinierte Schnittstelle an.  
+Gibt eine benutzerdefinierte Schnittstelle an.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [object]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn vor der Schnittstellendefinition einer, die **Objekt** C++-Attribut bewirkt, dass die Schnittstelle in der IDL-Datei als eine benutzerdefinierte Schnittstelle abgelegt werden soll.  
+ Wenn eine Schnittstellendefinition, vor der **Objekt** C++-Attribut wird die Schnittstelle in der IDL-Datei als eine benutzerdefinierte Schnittstelle platziert werden.  
   
- Alle mit Objekt markierte Schnittstelle erben muss **IUnknown**. Diese Bedingung erfüllt wird, wenn einer der Basisschnittstellen erben **IUnknown**. Wenn keine Basisschnittstellen erben **IUnknown**, der Compiler führt dazu, dass die Schnittstelle, die mit markierten **Objekt** Ableitung **IUnknown**.  
+ Alle mit Objekt markierte Schnittstelle erben muss `IUnknown`. Diese Bedingung erfüllt wird, wenn einer der Basisschnittstellen erben `IUnknown`. Wenn keine Basisschnittstellen erben `IUnknown`, der Compiler führt dazu, dass die Schnittstelle, die mit markierten **Objekt** für die Ableitung `IUnknown`.  
   
 ## <a name="example"></a>Beispiel  
- Finden Sie unter [Nonbrowsable](../windows/nonbrowsable.md) ein Beispiel zum Verwenden von **Objekt**.  
+ Finden Sie unter [Nonbrowsable](../windows/nonbrowsable.md) ein Beispiel zur Verwendung für **Objekt**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -49,7 +47,7 @@ Identifiziert eine benutzerdefinierte Schnittstelle an.
   
 |||  
 |-|-|  
-|**Betrifft**|`interface`|  
+|**Betrifft**|**interface**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

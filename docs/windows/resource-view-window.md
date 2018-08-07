@@ -1,5 +1,5 @@
 ---
-title: Ressourcenansicht (Fenster) | Microsoft Docs
+title: Ressourcenansicht (Fenster) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b207bfa9236b4e0de1f01f98cc7e83124048a3a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877383"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608308"
 ---
 # <a name="resource-view-window"></a>Fenster "Ressourcenansicht"
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "33877383"
 >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
 > [!TIP]
->  Mit einem Klick mit der rechten Maustaste in das Fenster "Ressourcenansicht" wird ein Kontextmenü mit Befehlen geöffnet. Außerdem kann das Fenster mit einem Doppelklick auf die Titelleiste verankert bzw. die Verankerung gelöst werden. Durch Klicken mit der rechten Maustaste auf die Titelleiste werden zusätzliche Befehle zum Steuern des Fensterverhaltens angezeigt. Weitere Informationen finden Sie unter [Fensterverwaltung](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+>  Mit einem Klick mit der rechten Maustaste in das Fenster "Ressourcenansicht" wird ein Kontextmenü mit Befehlen geöffnet. Außerdem kann das Fenster mit einem Doppelklick auf die Titelleiste verankert bzw. die Verankerung gelöst werden. Durch Klicken mit der rechten Maustaste auf die Titelleiste werden zusätzliche Befehle zum Steuern des Fensterverhaltens angezeigt. Weitere Informationen finden Sie unter [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
 #### <a name="to-open-the-resource-view-window"></a>So öffnen Sie das Fenster "Ressourcenansicht"  
   
@@ -43,11 +43,9 @@ ms.locfileid: "33877383"
   
      \- oder –  
   
-2.  Drücken Sie **STRG + UMSCHALT + E**.  
+2.  Drücken Sie **STRG**+**UMSCHALT**+**E**.  
   
-
-  
-### <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  
