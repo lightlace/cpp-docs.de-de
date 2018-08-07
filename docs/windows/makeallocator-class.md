@@ -1,5 +1,5 @@
 ---
-title: MakeAllocator-Klasse | Microsoft Docs
+title: MakeAllocator-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38724e6371f5c0ae508fc18e4bc75dc2287dbe19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87f1191bc90cd2aec9207f3a4657349c9859bf4
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878059"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605918"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator-Klasse
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
@@ -44,19 +43,19 @@ template<typename T>
 class MakeAllocator<T, true>;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
+### <a name="parameters"></a>Parameter  
+ *T*  
  Ein Typname.  
   
- `hasWeakReferenceSupport`  
- `true` Zuweisen von Arbeitsspeicher für ein Objekt, das schwache Verweise unterstützt; `false` belegen von Speicher für ein Objekt, das schwache Verweise nicht unterstützt.  
+ *hasWeakReferenceSupport*  
+ **"true"** zum Zuweisen von Arbeitsspeicher für ein Objekt, das schwache Verweise; unterstützt. **"false"** zum Zuweisen von Arbeitsspeicher für ein Objekt, das schwache Verweise nicht unterstützt.  
   
 ## <a name="remarks"></a>Hinweise  
- Belegt Speicher für eine aktivierbare Klasse, mit oder ohne Unterstützung der schwache Verweis.  
+ Belegt Speicher für eine aktivierbare Klasse, mit oder ohne Unterstützung von schwachen Verweis.  
   
- Überschreiben Sie die MakeAllocator-Klasse, um eine benutzerdefinierte Zuordnung Speichermodell implementieren.  
+ Überschreiben der **MakeAllocator** Klasse, um eine benutzerdefinierte Zuordnung Speichermodell zu implementieren.  
   
- MakeAllocator wird normalerweise verwendet, um Speicherverluste zu verhindern, wenn während der Erstellung ein Objekts auslöst.  
+ **MakeAllocator** wird normalerweise verwendet, um Speicherverluste zu verhindern, wenn ein Objekt während der Erstellung auslöst.  
   
 ## <a name="members"></a>Member  
   
@@ -64,15 +63,15 @@ class MakeAllocator<T, true>;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[MakeAllocator::MakeAllocator-Konstruktor](../windows/makeallocator-makeallocator-constructor.md)|Initialisiert eine neue Instanz der MakeAllocator-Klasse.|  
-|[MakeAllocator::~MakeAllocator-Destruktor](../windows/makeallocator-tilde-makeallocator-destructor.md)|Hebt die Initialisierung der aktuellen Instanz der MakeAllocator-Klasse.|  
+|[MakeAllocator::MakeAllocator-Konstruktor](../windows/makeallocator-makeallocator-constructor.md)|Initialisiert eine neue Instanz der dem **MakeAllocator** Klasse.|  
+|[MakeAllocator::~MakeAllocator-Destruktor](../windows/makeallocator-tilde-makeallocator-destructor.md)|Hebt die Initialisierung der aktuellen Instanz von der **MakeAllocator** Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[MakeAllocator::Allocate-Methode](../windows/makeallocator-allocate-method.md)|Belegt Speicher aus, und ordnet dieses dem aktuellen MakeAllocator-Objekt.|  
-|[MakeAllocator::Detach-Methode](../windows/makeallocator-detach-method.md)|Hebt die Zuordnung von belegten Arbeitsspeicher die [Allocate](../windows/makeallocator-allocate-method.md) Methode aus dem aktuellen MakeAllocator-Objekt.|  
+|[MakeAllocator::Allocate-Methode](../windows/makeallocator-allocate-method.md)|Weist Speicher zu und ordnet es die aktuellen **MakeAllocator** Objekt.|  
+|[MakeAllocator::Detach-Methode](../windows/makeallocator-detach-method.md)|Hebt die Zuordnung von belegten Arbeitsspeicher die [Allocate](../windows/makeallocator-allocate-method.md) Methode aus dem aktuellen **MakeAllocator** Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `MakeAllocator`  

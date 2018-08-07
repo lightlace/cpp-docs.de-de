@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Gettrustlevel-Methode | Microsoft Docs'
+title: 'Runtimeclass:: Gettrustlevel-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc588950cc8752a7c2b8e1ddf00b2193aaf0f395
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98bd73d2c067e6d5bbb4425782de594bbaa47bc1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892630"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606623"
 ---
 # <a name="runtimeclassgettrustlevel-method"></a>RuntimeClass::GetTrustLevel-Methode
 
-Ruft die Vertrauensebene des aktuellen RuntimeClass-Objekts ab.
+Ruft die Vertrauensebene des aktuellen **RuntimeClass** Objekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ STDMETHOD(GetTrustLevel)(
 ### <a name="parameters"></a>Parameter
 
 *trustLvl*  
-Wenn dieser Vorgang abgeschlossen wird, die Vertrauensebene der aktuellen RuntimeClass-Objekt.
+Wenn dieser Vorgang abgeschlossen ist, die Vertrauensebene des aktuellen **RuntimeClass** Objekt.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -47,7 +47,7 @@ Stets S_OK.
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Assert-Fehler wird ausgegeben, wenn &#95; &#95;WRL_STRICT&#95; &#95; oder &#95; &#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95; &#95; ist nicht definiert.
+Ein Assert-Fehler wird ausgegeben, wenn &#95;&#95;WRL_STRICT&#95;&#95; oder &#95;&#95;WRL_FORCE_INSPECTABLE_CLASS_MACRO&#95;&#95; ist nicht definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,5 +56,4 @@ Ein Assert-Fehler wird ausgegeben, wenn &#95; &#95;WRL_STRICT&#95; &#95; oder &#
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Siehe auch
-
-[RuntimeClass-Klasse](../windows/runtimeclass-class.md)
+ [RuntimeClass-Klasse](../windows/runtimeclass-class.md)

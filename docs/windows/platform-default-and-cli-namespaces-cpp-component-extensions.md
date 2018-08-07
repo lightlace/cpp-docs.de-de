@@ -1,5 +1,5 @@
 ---
-title: Plattform, Default- und Cli-Namespaces (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Platform-, Default- und Cli-Namespaces (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,37 +19,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b466a94aba9f19907a5438a8b8e623d65aa0ac2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bf7219b4e57c82beeace1545c10b643470c9aca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880741"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603549"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Platform-, default- und cli-Namespaces (Komponentenerweiterungen für C++)
-Ein Namespace qualifiziert die Namen von Sprachelementen, sodass sie keinen Konflikt mit ansonsten identischen Namen an anderer Stelle im Quellcode verursachen. Angenommen, ein Konflikt von geschachteltem Klassennamen könnten verhindern, dass den Compiler erkennen [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md). Namespaces werden vom Compiler verwendet, jedoch nicht in der kompilierten Assembly beibehalten.  
+Ein Namespace qualifiziert die Namen von Sprachelementen, sodass sie keinen Konflikt mit ansonsten identischen Namen an anderer Stelle im Quellcode verursachen. Z. B. ein Namenskonflikt möglicherweise verhindern, dass den Compiler erkennt [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md). Namespaces werden vom Compiler verwendet, jedoch nicht in der kompilierten Assembly beibehalten.  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
  Beim Erstellen des Projekts stellt Visual C++ einen Standardnamespace für das Projekt bereit. Sie können den Namespace manuell umbenennen, obwohl in Windows-Runtime der Namen der winmd-Datei den Namen des Stammnamespace übereinstimmen muss.  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
- Weitere Informationen finden Sie unter [Namespaces und typsichtbarkeit (C + c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
+ Weitere Informationen finden Sie unter [Namespaces und typsichtbarkeit (C++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Syntax**  
+### <a name="syntax"></a>Syntax  
   
 ```  
 using namespace cli;  
 ```  
   
- **Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
- Die C + c++ / CLI unterstützt die `cli` Namespace. Beim Kompilieren mit **"/ CLR"** die `using` -Anweisung im Syntaxabschnitt wird impliziert.  
+ C++ / CLI unterstützt die **Cli** Namespace. Beim Kompilieren mit `/clr`, **mit** -Anweisung im Syntaxabschnitt wird impliziert.  
   
- Die folgenden Sprachfunktionen sind im `cli`-Namespace:  
+ Die folgenden Sprachfunktionen sind in der **Cli** Namespace:  
   
 -   [Arrays](../windows/arrays-cpp-component-extensions.md)  
   
@@ -60,14 +60,13 @@ using namespace cli;
 -   ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
- Im folgenden Codebeispiel wird veranschaulicht, dass es möglich ist, ein Symbol im `cli`-Namespace als benutzerdefiniertes Symbol im Code zu verwenden.  Sobald dies geschehen ist, müssen Sie die Verweise jedoch explizit oder implizit auf das `cli`-Sprachelement des gleichen Namens qualifizieren.  
+ Im folgenden Codebeispiel wird veranschaulicht, dass es möglich ist, verwenden Sie ein Symbol in der **Cli** Namespace als benutzerdefiniertes Symbol im Code.  Sobald Sie dies erledigt haben, Sie müssen jedoch explizit oder implizit qualifiziert die Verweise auf die **Cli** Language-Element mit dem gleichen Namen.  
   
-```  
+```cpp  
 // cli_namespace.cpp  
 // compile with: /clr  
 using namespace cli;  

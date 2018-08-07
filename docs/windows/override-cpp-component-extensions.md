@@ -1,5 +1,5 @@
 ---
-title: außer Kraft setzen (Komponentenerweiterungen für C++) | Microsoft Docs
+title: außer Kraft setzen (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6818256aafc64702e5423a5560c251e6d46750fa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 855f2c18423fd6c1ca708034214e6f5c7048d6d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878878"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605560"
 ---
 # <a name="override--c-component-extensions"></a>override (Komponentenerweiterungen für C++)
-Das kontextbezogene `override`-Schlüsselwort gibt an, dass ein Member eines Typs eine Basisklasse oder einen Basisschnittstellenmember überschreibt.  
+Die **überschreiben** kontextbezogenes Schlüsselwort Gibt an, dass ein Member eines Typs eine Basisklasse oder einen Basisschnittstellenmember überschreibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `override` Schlüsselwort ist gültig, beim Kompilieren für systemeigene Ziele (standardmäßige Compileroption), Windows-Runtime-Ziele (**/Zw** -Compileroption), oder der common Language Runtime-Ziele (**"/ CLR"** Compiler (Option).  
+ Die **überschreiben** Schlüsselwort ist gültig, beim Kompilieren für systemeigene Ziele (standardmäßige Compileroption), Windows-Runtime-Ziele (`/ZW` -Compileroption), oder der common Language Runtime-Ziele (`/clr` -Compileroption).  
   
  Weitere Informationen zu überschreibungsspezifizierern finden Sie unter [Überschreibungsspezifizierer](../cpp/override-specifier.md) und [Überschreibungsspezifizierer und Native Kompilierungen](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
  Weitere Informationen zu kontextbezogenen Schlüsselwörtern finden Sie unter [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
 ## <a name="examples"></a>Beispiele  
- **Beispiel**  
   
- Das folgende Codebeispiel zeigt, dass `override` auch in systemeigenen Kompilierungen verwendet werden kann.  
+ Das folgende Codebeispiel zeigt, dass **überschreiben** kann auch in nativen Kompilierungen verwendet werden.  
   
-```cpp#  
+```cpp  
 // override_keyword_1.cpp  
 // compile with: /c  
 struct I1 {  
@@ -50,11 +49,11 @@ struct X : public I1 {
 };  
 ```  
   
- **Beispiel**  
+### <a name="example"></a>Beispiel
+
+ Das folgende Codebeispiel zeigt, dass **überschreiben** in Windows-Runtime-Kompilierungen verwendet werden kann.  
   
- Das folgende Codebeispiel zeigt, dass `override` auch in Windows-Runtime-Kompilierungen verwendet werden kann.  
-  
-```cpp#  
+```cpp 
 // override_keyword_2.cpp  
 // compile with: /ZW /c  
 ref struct I1 {  
@@ -66,15 +65,15 @@ ref struct X : public I1 {
 };  
 ```  
   
- **Anforderungen**  
+#### <a name="requirements"></a>Anforderungen  
   
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
+    
+### <a name="example"></a>Beispiel
+
+ Das folgende Codebeispiel zeigt, dass **überschreiben** in common Language Runtime-Kompilierungen verwendet werden kann.  
   
- **Beispiel**  
-  
- Das folgende Codebeispiel zeigt, dass `override` auch in Common Language Runtime-Kompilierungen verwendet werden kann.  
-  
-```cpp#  
+```cpp  
 // override_keyword_3.cpp  
 // compile with: /clr /c  
 ref struct I1 {  
@@ -86,10 +85,10 @@ ref struct X : public I1 {
 };  
 ```  
   
- **Anforderungen**  
+#### <a name="requirements"></a>Anforderungen  
   
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überschreibungsspezifizierer](../cpp/override-specifier.md)   
+ [override-Bezeichner](../cpp/override-specifier.md)   
  [Überschreibungsspezifizierer](../windows/override-specifiers-cpp-component-extensions.md)

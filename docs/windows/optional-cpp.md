@@ -1,5 +1,5 @@
 ---
-title: Optional (C++) | Microsoft Docs
+title: Optional (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07a15be3f90c7ab1fd7d5064f8a69371560b7e71
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 50273c511ff682410252a4c9d6ddafd11d0a92dc
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878212"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603705"
 ---
 # <a name="optional-c"></a>optional (C++)
-Gibt ein optionaler Parameter für eine Memberfunktion an.  
+Gibt einen optionalen Parameter für eine Memberfunktion an.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [optional]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die **optional** C++-Attribut hat die gleiche Funktionalität wie die [optional](http://msdn.microsoft.com/library/windows/desktop/aa367132) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende code zeigt, wie **optional** verwendet werden können:  
+ Der folgende code zeigt, wie **optional** verwendet werden kann:  
   
-```  
+```cpp  
 // cpp_attr_ref_optional.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

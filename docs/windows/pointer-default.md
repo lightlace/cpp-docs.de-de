@@ -1,5 +1,5 @@
 ---
-title: Pointer_default | Microsoft Docs
+title: Pointer_default | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee904f9243cf642d3a942d4bc323f5ec381b0480
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 562bc3ebd0c80423eb94d2bc328f72aed8e67985
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877461"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604385"
 ---
 # <a name="pointerdefault"></a>pointer_default
-Gibt das Standardattribut für die Zeiger für alle Zeiger, mit Ausnahme der obersten Ebene Zeiger, die in Parameterlisten angezeigt werden.  
+Gibt an, das Standardattribut für die Zeiger für alle Zeiger, mit Ausnahme der obersten Ebene Zeigern, die in der Parameterliste angezeigt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ pointer_default(  
+[ pointer_default(  
    value  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parameter  
  *Wert*  
- Ein Wert, der beschreibt, den Zeigertyp: **Ptr**, `ref`, oder **eindeutige**.  
+ Ein Wert, der der Zeigertyp beschreibt: **Ptr**, **Ref**, oder **eindeutige**.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Pointer_default** C++-Attribut hat die gleiche Funktionalität wie die [Pointer_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Siehe das Beispiel für ["DefaultValue"](../windows/defaultvalue.md) für ein Beispiel für die Verwendung von **Pointer_default**.  
+ Siehe das Beispiel für [Defaultvalue](../windows/defaultvalue.md) für ein Beispiel für die Verwendung von **Pointer_default**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -52,7 +51,7 @@ Gibt das Standardattribut für die Zeiger für alle Zeiger, mit Ausnahme der obe
   
 |||  
 |-|-|  
-|**Betrifft**|`interface`|  
+|**Betrifft**|**interface**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

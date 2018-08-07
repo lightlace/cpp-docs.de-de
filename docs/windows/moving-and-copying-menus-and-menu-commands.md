@@ -1,5 +1,5 @@
 ---
-title: Verschieben und Kopieren von Menüs und Menübefehlen | Microsoft Docs
+title: Verschieben und Kopieren von Menüs und Menübefehlen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0da935ebdce7de61d5ed6b1a816f87b7cef7ce98
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccab1e53fcbb407b6af7683b7aaaef75b0bb9789
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878436"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606589"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>Verschieben und Kopieren von Menüs und Menübefehlen
 Sie können Menüs und Menübefehle mithilfe der Drag-and-Drop-Methode oder mithilfe von Befehlen im Kontextmenü (Rechtsklickmenü) verschieben oder kopieren.  
@@ -55,7 +55,7 @@ Sie können Menüs und Menübefehle mithilfe der Drag-and-Drop-Methode oder mith
   
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)aus.  
   
- **Anforderungen**  
+## <a name="requirements"></a>Anforderungen  
   
  Win32  
   

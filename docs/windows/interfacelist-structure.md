@@ -1,5 +1,5 @@
 ---
-title: InterfaceList-Struktur | Microsoft Docs
+title: InterfaceList-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52acf2f0b9936903b4359e21e23ae50c95d2f31a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 267ef2d9e1b24028016831e050385997ac0037e6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876734"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604839"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,15 +37,15 @@ template <
 struct InterfaceList;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
- Einen Schnittstellennamen; die erste Schnittstelle in der Liste rekursiv.  
+### <a name="parameters"></a>Parameter  
+ *T*  
+ Der Schnittstellenname einer; die erste Schnittstelle in der Liste rekursiv.  
   
- `U`  
- Einen Schnittstellennamen; die verbleibenden Schnittstellen in der Liste rekursiv.  
+ *U*  
+ Der Schnittstellenname einer; die verbleibenden Schnittstellen in der Liste rekursiv.  
   
 ## <a name="remarks"></a>Hinweise  
- So erstellen eine rekursive Liste von Schnittstellen verwendet.  
+ Verwendet, um eine rekursive Liste von Schnittstellen erstellen.  
   
 ## <a name="members"></a>Member  
   
@@ -53,8 +53,8 @@ struct InterfaceList;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`FirstT`|Synonym für den Vorlagenparameter `T`.|  
-|`RestT`|Synonym für den Vorlagenparameter `U`.|  
+|`FirstT`|Synonym für den Vorlagenparameter *T*.|  
+|`RestT`|Synonym für den Vorlagenparameter *U*.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `InterfaceList`  

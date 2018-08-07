@@ -1,5 +1,5 @@
 ---
-title: Importieren Sie | Microsoft Docs
+title: Importieren Sie | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,45 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b371cd1094a49f8a629cb6f8e880fd1210670f91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b7498ce36243d2f7a7014b8fa9041a1a7378d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877266"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604706"
 ---
 # <a name="import"></a>import
-Gibt eine andere IDL, ODL oder Header-Datei enthält Definitionen, die Sie von Ihrem wichtigsten IDL verweisen möchten.  
+Gibt eine andere IDL, Header oder ODL-Datei enthält Definitionen, die Sie von Ihrem wichtigsten IDL verweisen möchten.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ import(  
+[ import(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `idl_file`  
+### <a name="parameters"></a>Parameter  
+ *idl_file*  
  Der Name einer IDL-Datei, die in der Typbibliothek des aktuellen Projekts importiert werden sollen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **importieren** C++-Attribut bewirkt, dass ein `#import` Anweisung unten versetzt werden die `import "docobj.idl"` -Anweisung in der generierten IDL-Datei. Die **importieren** Attribut hat die gleiche Funktionalität wie die [importieren](http://msdn.microsoft.com/library/windows/desktop/aa367047) MIDL-Attribut.  
+ Die **importieren** C++-Attribut bewirkt, dass ein `#import` Anweisung unten platziert werden die `import "docobj.idl"` -Anweisung in der generierten IDL-Datei. Die **importieren** Attribut hat die gleiche Funktionalität wie die [importieren](http://msdn.microsoft.com/library/windows/desktop/aa367047) MIDL-Attribut.  
   
- Die **importieren** Attribut wird nur die angegebene Datei in der IDL-Datei, die vom Projekt; generiert werden, die **importieren** Attribut ist nicht möglich, die Konstrukte in der angegebenen Datei aus dem Quellcode aufrufen in Ihrem Projekt.  Um Konstrukte in der angegebenen Datei aus dem Quellcode in Ihrem Projekt aufrufen zu können, verwenden Sie entweder [#import](../preprocessor/hash-import-directive-cpp.md) und `embedded_idl` -Attribut, oder Sie können schließen die .h-Datei für die `idl_file`, wenn eine .h-Datei vorhanden ist.  
+ Die **importieren** Attribut wird nur die angegebene Datei in der IDL-Datei, die von Ihrem Projekt generiert wird die **importieren** Attribut ist nicht möglich, die Konstrukte in der angegebenen Datei aus dem Quellcode aufrufen in Ihrem Projekt.  Um Konstrukte in der angegebenen Datei aus dem Quellcode in Ihrem Projekt aufzurufen, verwenden Sie entweder [#import](../preprocessor/hash-import-directive-cpp.md) und `embedded_idl` -Attribut, oder Sie können die h-Datei für enthalten die *Idl_file*, wenn eine .h-Datei vorhanden ist.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code  
   
-```  
+```cpp  
 // cpp_attr_ref_import.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
 [import(import.idl)];  
 ```  
   
- erzeugt den folgenden Code in der generierten IDL-Datei:  
+ Der folgende Code in der generierten IDL-Datei generiert:  
   
 ```  
 import "docobj.idl";  
@@ -86,5 +85,5 @@ library MyLib {
  [Eigenständige Attribute](../windows/stand-alone-attributes.md)   
  [importidl](../windows/importidl.md)   
  [importlib](../windows/importlib.md)   
- [Einschließen](../windows/include-cpp.md)   
+ [einschließen](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   

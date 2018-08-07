@@ -1,5 +1,5 @@
 ---
-title: HStringReference-Klasse | Microsoft Docs
+title: HStringReference-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90e94471fe114eafec91a19ddad5d47ce39a8de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14ad6e511baa4c7b61a2205311bfb9ea4322a5b1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879554"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605099"
 ---
 # <a name="hstringreference-class"></a>HStringReference-Klasse
 Stellt ein HSTRING dar, das aus einer vorhandenen Zeichenfolge erstellt wird.  
@@ -32,7 +32,7 @@ class HStringReference;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die Lebensdauer des Hintergrundpuffers im neuen HSTRING wird nicht von Windows-Runtime verwaltet. Der Aufrufer ordnet eine Quellzeichenfolge auf dem Stapelrahmen zu, um eine Heapzuweisung zu vermeiden und das Risiko eines Speicherverlusts auszuschließen. Außerdem muss der Aufrufer sicherstellen, dass die Quellzeichenfolge während der Lebensdauer des angefügten HSTRING unverändert bleibt. Weitere Informationen finden Sie unter [WindowsCreateStringReference Funktion](http://msdn.microsoft.com/en-us/0361bb7e-da49-4289-a93e-de7aab8712ac).  
+ Die Lebensdauer des Hintergrundpuffers im neuen HSTRING wird nicht von der Windows-Runtime verwaltet. Der Aufrufer ordnet eine Quellzeichenfolge auf dem Stapelrahmen zu, um eine Heapzuweisung zu vermeiden und das Risiko eines Speicherverlusts auszuschließen. Außerdem muss der Aufrufer sicherstellen, dass die Quellzeichenfolge während der Lebensdauer des angefügten HSTRING unverändert bleibt. Weitere Informationen finden Sie unter [WindowsCreateStringReference-Funktion](http://msdn.microsoft.com/0361bb7e-da49-4289-a93e-de7aab8712ac).  
   
 ## <a name="members"></a>Member  
   
@@ -40,20 +40,20 @@ class HStringReference;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[HStringReference::HStringReference-Konstruktor](../windows/hstringreference-hstringreference-constructor.md)|Initialisiert eine neue Instanz der HStringReference-Klasse.|  
+|[HStringReference::HStringReference-Konstruktor](../windows/hstringreference-hstringreference-constructor.md)|Initialisiert eine neue Instanz der dem **HStringReference** Klasse.|  
   
 ### <a name="members"></a>Member  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|[HStringReference::CopyTo-Methode](../windows/hstringreference-copyto-method.md)|Kopiert das aktuelle HStringReference-Objekt zu einem HSTRING-Objekt.|  
+|[HStringReference::CopyTo-Methode](../windows/hstringreference-copyto-method.md)|Kopiert das aktuelle **HStringReference** Objekt zu einem HSTRING-Objekt.|  
 |[HStringReference::Get-Methode](../windows/hstringreference-get-method.md)|Ruft den Wert des zugrunde liegenden HSTRING-Handles ab.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[HStringReference::Operator=-Operator](../windows/hstringreference-operator-assign-operator.md)|Verschiebt den Wert eines anderen HStringReference-Objekts zum aktuellen HStringReference-Objekt.|  
+|[HStringReference::Operator=-Operator](../windows/hstringreference-operator-assign-operator.md)|Verschiebt den Wert eines anderen **HStringReference** -Objekt mit dem aktuellen **HStringReference** Objekt.|  
 |[HStringReference::Operator==-Operator](../windows/hstringreference-operator-equality-operator.md)|Gibt an, ob die zwei Parameter gleich sind.|  
 |[HStringReference::Operator!=-Operator](../windows/hstringreference-operator-inequality-operator.md)|Gibt an, ob die zwei Parameter ungleich sind.|  
   

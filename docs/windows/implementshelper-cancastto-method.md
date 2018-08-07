@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Cancastto-Methode | Microsoft Docs'
+title: 'Implementshelper:: Cancastto-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6de971f2de2421a2d7987dab30ba73fa2d225b15
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a60f2e45e276592c7c1223526cd002bdc6e79013
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876552"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605478"
 ---
 # <a name="implementshelpercancastto-method"></a>ImplementsHelper::CanCastTo-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 HRESULT CanCastTo(  
    REFIID riid,  
    _Deref_out_ void **ppv  
@@ -42,14 +41,14 @@ HRESULT CanCastTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `riid`  
+### <a name="parameters"></a>Parameter  
+ *riid*  
  Verweis auf eine Schnittstellen-ID.  
   
- `ppv`  
- Wenn dieser Vorgang erfolgreich ist, ein Zeiger auf die Schnittstelle gemäß `riid` oder `iid`.  
+ *ppv*  
+ Wenn dieser Vorgang erfolgreich ist, ein Zeiger auf die Schnittstelle angegeben *Riid* oder *Iid*.  
   
- `iid`  
+ *IID*  
  Verweis auf eine Schnittstellen-ID.  
   
 ## <a name="return-value"></a>Rückgabewert  

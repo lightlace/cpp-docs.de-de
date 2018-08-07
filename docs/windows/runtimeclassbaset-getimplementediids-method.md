@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclassbaset:: Getimplementediids-Methode | Microsoft Docs'
+title: 'Runtimeclassbaset:: Getimplementediids-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ea6ff871ef0ce886b393c948fc45accf3d8e245
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf29b5db15f88528012914476572cb1ccb21a07c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892233"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603250"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +38,18 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
- Der Typ des `implements`-Parameters.  
+### <a name="parameters"></a>Parameter  
+ *T*  
+ Der Typ des der *implementiert* Parameter.  
   
- `implements`  
- Zeiger auf den vom Parameter angegebenen Typ `T`.  
+ *Implementiert*  
+ Zeiger auf den vom Parameter angegebenen Typ *T*.  
   
- `iidCount`  
- Die maximale Anzahl von Schnittstellen-IDs abzurufen.  
+ *iidCount*  
+ Die maximale Anzahl von Schnittstellen-IDs abrufen.  
   
- `iids`  
- Wenn dieser Vorgang erfolgreich abgeschlossen, ein Array von Schnittstellen-IDs, die vom Typ implementiert wird `T`.  
+ *IIDs*  
+ Wenn dieser Vorgang erfolgreich abgeschlossen, ein Array von die Schnittstellen-IDs, die vom Typ implementiert wird *T*.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler beschreibt.  

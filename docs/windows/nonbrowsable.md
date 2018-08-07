@@ -1,5 +1,5 @@
 ---
-title: Nonbrowsable | Microsoft Docs
+title: Nonbrowsable | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bb752c02eb200e952cf247684675ebd377eeaaa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a7bdd285ed74c7792a34cfe99e0a900d42d6bc26
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877367"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604589"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 Gibt an, dass ein Schnittstellenmember nicht in einem Eigenschaftenbrowser angezeigt werden soll.  
@@ -30,9 +30,7 @@ Gibt an, dass ein Schnittstellenmember nicht in einem Eigenschaftenbrowser angez
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [nonbrowsable]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
@@ -40,7 +38,7 @@ Gibt an, dass ein Schnittstellenmember nicht in einem Eigenschaftenbrowser angez
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // cpp_attr_ref_nonbrowsable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

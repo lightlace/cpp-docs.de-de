@@ -1,5 +1,5 @@
 ---
-title: Ändern der Größe eines Bilds (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Größenänderungen bei Bildern (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,29 +20,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6636e1f92907c301c6e66abd63f744375bffeb8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 41494e8b88f41c4c842e95e9f8a9f5da0247739f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879047"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605642"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>Größenänderungen bei Bildern (Bildbearbeitung für Symbole)
-Das Verhalten der Bild-Editor beim Ändern der Bildgröße, hängt davon ab, ob Sie wurde [ausgewählten](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) das gesamte Bild oder einen Teil davon.  
+Das Verhalten des Grafik-Editors bei größenänderungen bei Bildern, hängt davon ab, ob Sie wurde [ausgewählten](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) das gesamte Bild oder nur eines Teils davon.  
   
- Wenn die Auswahl nur einen Teil des Abbilds enthält, die Grafik-Editor verkleinert die Auswahl durch das Löschen von Zeilen oder Spalten von Pixeln und füllen die frei werdenden Regionen mit der aktuellen Hintergrundfarbe, oder es gestreckt wird die Auswahl durch Duplizieren, Zeilen oder Spalten von Pixeln.  
+ Wenn die Auswahl nur einen Teil des Bilds enthält, der Bild-Editor reduziert die Auswahl durch das Löschen von Zeilen oder Spalten von Pixeln und füllen die frei werdenden Regionen mit der aktuellen Hintergrundfarbe oder streckt die Auswahl von Zeilen oder Spalten von Pixeln duplizieren.  
   
- Wenn die Auswahl auf das gesamte Bild enthält, die Grafik-Editor entweder verkleinert und das Bild wird gestreckt oder abgeschnitten und erweitert sie.  
+ Wenn die Auswahl auf das gesamte Bild enthält, der Bild-Editor entweder verkleinert und das Bild wird gestreckt oder schneidet und erweitert ihn.  
   
- Es gibt zwei Mechanismen zum Ändern der Bildgröße: Ziehpunkte und [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Sie können die Ziehpunkte zum Ändern der Größe des gesamten oder einen Teil eines Images ziehen. Ziehpunkte, die Sie ziehen können, sind gefüllt. Sie können keine Handles ziehen, die leer sind. Sie können im Eigenschaftenfenster ändern Sie das gesamte Bild nur nicht auf einen ausgewählten Teil.  
+ Es gibt zwei Mechanismen zum Ändern der Bildgröße: Ziehpunkte und [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Sie können den Ziehpunkt zum Ändern der Größe des gesamten oder einen Teil eines Images ziehen. Ziehpunkte, die Sie ziehen können, sind gefüllt. Sie können keine Handles ziehen, die leer sind. Sie können im Eigenschaftenfenster zum Ändern der Größe nur des gesamten Bilds nicht für eine ausgewählte Komponente verwenden.  
   
  ![Ziehpunkte in einer Bitmap](../mfc/media/vcimageeditorsizinghandles.gif "VcImageEditorSizingHandles")  
 Ziehpunkte  
   
 > [!NOTE]
->  Die Kachel Raster-Option ausgewählt haben die [Rastereinstellungen (Dialogfeld)](../windows/grid-settings-dialog-box-image-editor-for-icons.md), dann Größenänderung wird an die nächste Kachel Rasterlinie ausgerichtet. Wenn nur die Pixelraster Option ist (Standardeinstellung) ausgewählt Ändern der Größe von Momentaufnahmen zum nächsten verfügbaren Pixel.  
+>  Wenn Sie die Kachel Grid-Option ausgewählt haben die [Rastereinstellungen (Dialogfeld)](../windows/grid-settings-dialog-box-image-editor-for-icons.md), klicken Sie dann Ändern der Größe von Snapshots an der nächsten Kachel. Wenn nur die Pixelraster Option ist (Standardeinstellung), ausgewählt Ändern der Größe von Snapshots und dem nächsten verfügbaren Pixel.  
   
--   [Größenänderung eines ganzen Bildes](../windows/resizing-an-entire-image-image-editor-for-icons.md)  
+-   [Größenänderung eines ganzen Bilds](../windows/resizing-an-entire-image-image-editor-for-icons.md)  
   
 -   [Abschneiden oder Erweitern eines ganzen Bildes](cropping-or-extending-an-entire-image-image-editor-for-icons.md)  
   
@@ -50,7 +50,7 @@ Ziehpunkte
   
 -   [Verkleinern oder Strecken eines Teiles eines Bildes](../windows/shrinking-or-stretching-part-of-an-image-image-editor-for-icons.md)  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  Keiner  
@@ -59,4 +59,3 @@ Ziehpunkte
  [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
-

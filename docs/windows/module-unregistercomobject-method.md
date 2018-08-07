@@ -1,5 +1,5 @@
 ---
-title: 'Module:: unregistercomobject-Methode | Microsoft Docs'
+title: 'Module:: unregistercomobject-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de4cc44d88f59e18f2c1644e9b27a9214ad32962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c19e7b5388438b8c3c2359672360e4a2ee3001a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881935"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602629"
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject-Methode
-Hebt die Registrierung auf ein oder mehrere COM-Objekte, wird verhindert, dass andere Anwendungen eine Verbindung zu ihnen herstellen.  
+Hebt die Registrierung für ein oder mehrere COM-Objekte, die verhindert, dass andere Anwendungen herstellen können.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,18 +36,18 @@ virtual HRESULT UnregisterCOMObject(
    unsigned int count  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `serverName`  
- (Nicht verwendet wird)  
+### <a name="parameters"></a>Parameter  
+ *ServerName*  
+ (Nicht verwendeten)  
   
- `cookies`  
- Ein Array von Zeigern auf Werte, die die Objekte der Klasse um aufgehoben werden. Das Array erstellt wurde, durch die [RegisterCOMObject](../windows/module-registercomobject-method.md) Methode.  
+ *Cookies*  
+ Ein Array von Zeigern auf Werte, die identifizieren, Objekte der Klasse, deren Registrierung aufgehoben werden. Das Array erstellt wurde, indem die [RegisterCOMObject](../windows/module-registercomobject-method.md) Methode.  
   
- `count`  
+ *count*  
  Die Anzahl der Klassen zum Aufheben der Registrierung.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn dieser Vorgang erfolgreich ist; Andernfalls ist fehlgeschlagen Fehler HRESULT, das den Grund angibt.  
+ S_OK, wenn dieser Vorgang erfolgreich ist; andernfalls ein Fehler HRESULT, das den Grund angibt Fehler aufgetreten.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

@@ -1,5 +1,5 @@
 ---
-title: 'Module:: registerwinrtobject-Methode | Microsoft Docs'
+title: 'Module:: registerwinrtobject-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 097bf70ebd280d9494ff70ea1d80f53615f3d898
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 42ec736126e2381b00542bf71afca0b9db187df7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874953"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603756"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject-Methode
-Registriert ein oder mehrere Windows-Runtime-Objekte an, damit andere Anwendungen herstellen können.  
+Registriert ein oder mehrere Windows-Runtime-Objekte an, damit andere Anwendungen eine Verbindung damit herstellen können.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,21 +36,21 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
    unsigned int count)  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `serverName`  
+### <a name="parameters"></a>Parameter  
+ *ServerName*  
  Ein Name, der eine Teilmenge der von diesem Vorgang betroffenen Objekte angibt.  
   
- `activatableClassIds`  
+ *activatableClassIds*  
  Ein Array von aktivierbare CLSIDs registrieren.  
   
- `cookie`  
+ *Cookie*  
  Ein Wert, der die Objekte der Klasse identifiziert, die registriert wurden. Dieser Wert wird später verwendet, um die Registrierung aufzuheben.  
   
- `count`  
+ *count*  
  Die Anzahl von Objekten zu registrieren.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; Andernfalls ist fehlgeschlagen Fehler HRESULT, z. B. CO_E_OBJISREG, die den Grund angibt.  
+ S_OK, wenn erfolgreich; andernfalls ein Fehler HRESULT, z. B. CO_E_OBJISREG, die den Grund angibt Fehler aufgetreten.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

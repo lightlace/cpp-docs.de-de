@@ -1,5 +1,5 @@
 ---
-title: RaiseException-Funktion | Microsoft Docs
+title: RaiseException-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2af97ac13386db450318f4d1f384517a8dd77baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e93b7281b079918641bf36ebcd72968a98eb95ec
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882182"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602665"
 ---
 # <a name="raiseexception-function"></a>RaiseException-Funktion
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,17 +35,17 @@ inline void __declspec(noreturn)   RaiseException(
       DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `hr`  
- Ausnahmecode: der ausgelösten Ausnahme; d. h. das HRESULT des eines fehlgeschlagenen Vorgangs.  
+### <a name="parameters"></a>Parameter  
+ *HR*  
+ Der Ausnahmecode, der die Ausnahme ausgelöst wird; d. h. das HRESULT des einen fehlgeschlagenen Vorgang.  
   
- `dwExceptionFlags`  
- Ein Flag, das angibt, eine vernachlässigbar Ausnahme (der Wert des Kennzeichens ist 0 (null)) oder noncontinuable Ausnahme (Flagwert ist ungleich null). Standardmäßig ist die Ausnahme fortfahren verhindert.  
+ *dwExceptionFlags*  
+ Ein Flag, der angibt, ein vernachlässigbare Ausnahme (der Flagwert ist 0 (null)), oder eine noncontinuable Ausnahme (Flag-Wert ungleich NULL ist). Standardmäßig ist die Ausnahme nicht fortsetzbare.  
   
 ## <a name="remarks"></a>Hinweise  
- Löst eine Ausnahme in den aufrufenden Thread aus.  
+ Löst eine Ausnahme aus, in dem aufrufenden Thread aus.  
   
- Weitere Informationen finden Sie unter Windows **RaiseException** Funktion.  
+ Weitere Informationen finden Sie in der Windows `RaiseException` Funktion.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** internal.h  

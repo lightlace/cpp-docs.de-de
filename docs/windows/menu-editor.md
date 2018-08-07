@@ -1,5 +1,5 @@
 ---
-title: Menü-Editor | Microsoft Docs
+title: Menü-Editor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5626e370dbeac9339dd603781e96f64377308899
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879437"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606249"
 ---
 # <a name="menu-editor"></a>Menü-Editor
 Menüs ermöglichen Ihnen das Anordnen von Befehlen in einer logischen und leicht verständlichen Weise. Mit dem Menü-Editor können Sie Menüs erstellen und bearbeiten, indem Sie direkt an einer Menüleiste arbeiten, die der in Ihrer fertig gestellten Anwendung sehr ähnlich ist.  
   
- In Visual C++-Projekten können Sie den Menü-Editor für folgende Zwecke verwenden:  
+In Visual C++-Projekten können Sie den Menü-Editor für folgende Zwecke verwenden:  
   
 -   [Erstellen von Menüs](../windows/creating-a-menu.md)  
   
@@ -64,15 +64,14 @@ Menüs ermöglichen Ihnen das Anordnen von Befehlen in einer logischen und leich
     > [!NOTE]
     >  Bei MFC-Programmen (Microsoft Foundation Class Library) und ATL-Programmen können Sie Code-Assistenten verwenden, um Menübefehle mit Code zu verknüpfen. Weitere Informationen finden Sie unter [Hinzufügen von Ereignissen](../ide/adding-an-event-visual-cpp.md).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)   
+ [Working with Resource Files (Arbeiten mit Ressourcendateien)](../windows/working-with-resource-files.md)   
  [Ressourcen-Editoren](../windows/resource-editors.md)   
  [Benutzeroberflächenobjekte und Befehls-IDs](../mfc/user-interface-objects-and-command-ids.md)   
  [Menüs](../mfc/menus-mfc.md)   
  [Menüs](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
-

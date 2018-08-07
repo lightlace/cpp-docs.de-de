@@ -1,5 +1,5 @@
 ---
-title: Move-Funktion | Microsoft Docs
+title: Move-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8da1a3c839add5d056674896b5a3c6a32145924f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d058919d0906b458c6c4e81d65c9438c95a22b85
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876770"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607302"
 ---
 # <a name="move-function"></a>Move-Funktion
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,20 +36,20 @@ inline typename RemoveReference<T>::Type&& Move(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
+### <a name="parameters"></a>Parameter  
+ *T*  
  Der Typ des Arguments.  
   
- `arg`  
+ *arg*  
  Ein Argument zu verschieben.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Parameter `arg` nach Verweis oder Rvalue-Verweis Traits, sofern vorhanden, wurden entfernt.  
+ Parameter *Arg* nach Verweis "oder" Rvalue-Verweis "traits", sofern vorhanden, wurden entfernt.  
   
 ## <a name="remarks"></a>Hinweise  
- Verschiebt das angegebene Argument zwischen Speicherorten.  
+ Verschiebt das angegebene Argument von einem Speicherort.  
   
- Weitere Informationen finden Sie unter der **verschieben Semantik** Abschnitt [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Weitere Informationen finden Sie unter den **verschieben Semantik** Abschnitt [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** internal.h  

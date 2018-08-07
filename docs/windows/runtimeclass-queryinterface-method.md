@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: QueryInterface-Methode | Microsoft Docs'
+title: 'Runtimeclass:: QueryInterface-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84f5183d0273abfc23834099c07987dca6b3da7f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 15f611a9fe361e401e1884cb1794f8d1ef1f5591
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892104"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603536"
 ---
 # <a name="runtimeclassqueryinterface-method"></a>RuntimeClass::QueryInterface-Methode
 Ruft einen Zeiger auf die angegebene Schnittstellen-ID.  
@@ -30,7 +30,6 @@ Ruft einen Zeiger auf die angegebene Schnittstellen-ID.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 STDMETHOD(  
    QueryInterface  
 )  
@@ -38,12 +37,12 @@ STDMETHOD(
    _Deref_out_ void **ppvObject);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `riid`  
+### <a name="parameters"></a>Parameter  
+ *riid*  
  Eine Schnittstellen-ID.  
   
- `ppvObject`  
- Wenn diese Opereation abgeschlossen wird, einen Zeiger auf die angegebene Schnittstelle die `riid` Parameter.  
+ *ppvObject*  
+ Wenn diese Opereation abgeschlossen ist, einen Zeiger auf die angegebene Schnittstelle die *Riid* Parameter.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  

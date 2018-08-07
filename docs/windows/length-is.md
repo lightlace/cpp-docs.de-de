@@ -1,5 +1,5 @@
 ---
-title: Length_is | Microsoft Docs
+title: Length_is | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d41c2c4747f69b5ddfae4cd5863c072cd2316ec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e0294c7cc118c4014e998ad570d7e1e453ea2c6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879606"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606500"
 ---
 # <a name="lengthis"></a>length_is
-Gibt die Anzahl von Arrayelementen übermittelt werden sollen.  
+Gibt die Anzahl von Elementen übertragen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ length_is(  
+[ length_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *Ausdruck*  
- Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argument Slots sind zulässig.  
+ Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argumentliste Slots sind zulässig.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Length_is** C++-Attribut hat die gleiche Funktionalität wie die [Length_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Finden Sie unter [First_is](../windows/first-is.md) für ein Beispiel für einen Abschnitt eines Arrays angeben.  
+ Finden Sie unter [First_is](../windows/first-is.md) ein Beispiel für einen Abschnitt eines Arrays angeben.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -52,7 +51,7 @@ Gibt die Anzahl von Arrayelementen übermittelt werden sollen.
   
 |||  
 |-|-|  
-|**Betrifft**|Im Feld `struct` oder **Union**, Parameter interface, Schnittstelle Methode|  
+|**Betrifft**|Im Feld **Struktur** oder **Union**, Schnittstellenparameter,-Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

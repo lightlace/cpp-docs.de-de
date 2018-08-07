@@ -1,5 +1,5 @@
 ---
-title: 'Roinitializewrapper:: Roinitializewrapper-Konstruktor | Microsoft Docs'
+title: 'Roinitializewrapper:: Roinitializewrapper-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f2af40c671760bb8d4e667c209598c46b24665
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 193f0d16b03991e24cb16a90b3310512f6e86054
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889204"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604397"
 ---
 # <a name="roinitializewrapperroinitializewrapper-constructor"></a>RoInitializeWrapper::RoInitializeWrapper-Konstruktor
-Initialisiert eine neue Instanz der RoInitializeWrapper-Klasse.  
+Initialisiert eine neue Instanz der dem **RoInitializeWrapper** Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,12 +31,12 @@ Initialisiert eine neue Instanz der RoInitializeWrapper-Klasse.
 RoInitializeWrapper(   RO_INIT_TYPE flags)  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `flags`  
- Einer der RO_INIT_TYPE Enumerationen, die zur Unterstützung von Windows-Runtime angibt.  
+### <a name="parameters"></a>Parameter  
+ *flags*  
+ Einer der RO_INIT_TYPE Enumerationen, die angibt, die von der Windows-Runtime-Unterstützung.  
   
 ## <a name="remarks"></a>Hinweise  
- RoInitializeWrapper-Klasse ruft Windows::Foundation::Initialize (*Flags*).  
+ Die **RoInitializeWrapper** Klasse ruft `Windows::Foundation::Initialize(flags)`.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

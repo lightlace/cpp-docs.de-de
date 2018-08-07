@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Verify-Methode | Microsoft Docs'
+title: 'Interfacetraits:: Verify-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5c16ebda96d5d1c8ff12532e728f32501ea4db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 404c5fc8680089aeac49b0cda655e9cbd0d4ecd9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875499"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603043"
 ---
 # <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ __forceinline static void Verify();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Stellt sicher, dass Base ordnungsgemäß abgeleitet ist.  
+ Überprüft, ob `Base` ordnungsgemäß abgeleitet ist.  
   
  Weitere Informationen zu `Base`, finden Sie im Abschnitt Öffentliche Typedefs [InterfaceTraits-Struktur](../windows/interfacetraits-structure.md).  
   

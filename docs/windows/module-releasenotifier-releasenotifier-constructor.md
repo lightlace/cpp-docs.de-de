@@ -1,5 +1,5 @@
 ---
-title: Module::ReleaseNotifier::ReleaseNotifier Konstruktor | Microsoft Docs
+title: Module::ReleaseNotifier::ReleaseNotifier-Konstruktor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf21e1abc88c0fac0b9d20653fdb45c3706466d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93dca0500971f0bcfdefd017457e02bf6a033660
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882468"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608468"
 ---
 # <a name="modulereleasenotifierreleasenotifier-constructor"></a>Module::ReleaseNotifier::ReleaseNotifier-Konstruktor
-Initialisiert eine neue Instanz der releasenotifier-Klasse.  
+Initialisiert eine neue Instanz der dem **releasenotifier** Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,9 +33,9 @@ Initialisiert eine neue Instanz der releasenotifier-Klasse.
 ReleaseNotifier(bool release) throw();  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `release`  
- `true` Diese Instanz gelöscht, wenn die Release-Methode aufgerufen wird; `false` diese Instanz nicht gelöscht.  
+### <a name="parameters"></a>Parameter  
+ *release*  
+ **"true"** So löschen Sie diese Instanz bei der `Release` Methode wird aufgerufen. **"false"** diese Instanz nicht gelöscht.  
   
 ## <a name="exceptions"></a>Ausnahmen  
   

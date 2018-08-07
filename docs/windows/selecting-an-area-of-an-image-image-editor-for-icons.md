@@ -1,5 +1,5 @@
 ---
-title: Markieren eines Bilds (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Markieren eines Bildbereichs (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,38 +20,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cb7528e25604e873f6da92193a97cf79700799
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 29877cf71d35f9c24001833a73192caa61f325be
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890107"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606786"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Markieren eines Bildbereichs (Bildbearbeitung für Symbole)
-Sie können Auswahlwerkzeuge verwenden, um einen Bereich eines Bilds zu definieren, den Sie Ausschneiden, kopieren, löschen, ändern Sie die Größe, umkehren oder verschieben möchten. Mit der **Rechteckauswahl** Tool können Sie definieren, und wählen Sie einen rechteckigen Bereich des Bilds. Mit der **Unregelmäßige Auswahl** Tool können Sie einen Überblick über den Bereich, die Sie auswählen, für das Ausschneiden, kopieren, oder einen anderen Vorgang möchten Freihandlinie zeichnen.  
+Sie können Tools für die Auswahl verwenden, um einen Bereich eines Bildes zu definieren, die Sie Ausschneiden, kopieren, löschen, ändern Sie die Größe, umkehren, oder verschieben möchten. Mit der **Rechteckauswahl** Tool können Sie definieren, und wählen Sie einen rechteckigen Bereich des Bilds. Mit der **Unregelmäßige Auswahl** Tool können Sie einen Freihand über den Bereich, die Sie auswählen, für das Ausschneiden, kopieren oder andere Vorgänge möchten zeichnen.  
   
 > [!NOTE]
->  Finden Sie unter der **Rechteckauswahl** und **Unregelmäßige Auswahl** Tools in dargestellte [Grafik-Editor-Symbolleiste](../windows/toolbar-image-editor-for-icons.md) oder Anzeigen von QuickInfos, die jede Schaltfläche auf der zugeordneten**Bildbearbeitung** Symbolleiste.  
+>  Finden Sie unter der **Rechteckauswahl** und **Unregelmäßige Auswahl** Tools in dargestellte [Symbolleiste der Bildbearbeitung](../windows/toolbar-image-editor-for-icons.md) oder die QuickInfos jeder Schaltfläche auf der **Bildbearbeitung** Symbolleiste.  
   
  Sie können auch einen benutzerdefinierten Pinsel aus einer Auswahl erstellen. Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Pinseln](../windows/creating-a-custom-brush-image-editor-for-icons.md).  
   
-### <a name="to-select-an-area-of-an-image"></a>Wählen Sie einen Bereich eines Bilds  
+### <a name="to-select-an-area-of-an-image"></a>Um einen Bereich eines Bilds  
   
-1.  Auf der **Bildbearbeitung** Symbolleiste (oder aus der **Image** im Menü **Tools** Befehl), klicken Sie auf die gewünschte Auswahltool.  
+1.  Auf der **Bild-Editor** Symbolleiste (oder von der **Image** Menü **Tools** Befehl), klicken Sie auf das Auswahlwerkzeug werden sollen.  
   
-2.  Verschieben Sie die Einfügemarke an einer Ecke Randes des Bildbereichs, die Sie auswählen möchten. Fadenkreuz angezeigt werden, wenn die Einfügemarke befindet sich auf das Bild.  
+2.  Verschieben Sie die Einfügemarke an einer Ecke des Bereichs, Image, das Sie auswählen möchten. Fadenkreuz wird angezeigt, wenn die Einfügemarke auf das Bild ist.  
   
-3.  Ziehen Sie die Einfügemarke in die entgegengesetzte Ecke des Bereichs, den Sie auswählen möchten. Ein Rechteck zeigt an, welche Pixel ausgewählt werden. Alle Pixel innerhalb des Rechtecks, einschließlich der unter dem Rechteck sind in der Auswahl enthalten.  
+3.  Ziehen Sie die Einfügemarke in die entgegengesetzte Ecke des Bereichs, die Sie auswählen möchten. Ein Rechteck zeigt an, welche Pixel ausgewählt werden. Alle Pixel innerhalb des Rechtecks, u. a. die das Rechteck, sind in der Auswahl enthalten.  
   
 4.  Lassen Sie die Maustaste los. Der Markierungsrahmen umschließt den ausgewählten Bereich.  
   
 ### <a name="to-select-an-entire-image"></a>Auswählen ein ganzen Bildes  
   
-1.  Klicken Sie auf das Bild außerhalb der aktuellen Auswahl. Die Auswahlrahmen ändert den Fokus, und das gesamte Bild erneut umfasst.  
+1.  Klicken Sie auf das Bild außerhalb der aktuellen Auswahl. Die Markierungsrahmen umgeben ändert den Fokus, und das gesamte Bild wieder umfasst.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
  Keiner  
   
@@ -59,4 +59,3 @@ Sie können Auswahlwerkzeuge verwenden, um einen Bereich eines Bilds zu definier
  [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
-

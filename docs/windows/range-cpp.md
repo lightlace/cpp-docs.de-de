@@ -1,5 +1,5 @@
 ---
-title: Bereich (C++) | Microsoft Docs
+title: Bereich (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac5f0e81a7d29d89e32735224afed67f3d9c9101
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8c7ab6dcfa4a085facf835343404de3ed4998a3
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877929"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603441"
 ---
 # <a name="range-c"></a>range (C++)
 Gibt einen Bereich der zulässigen Werte für die Argumente oder Felder, deren Werte zur Laufzeit festgelegt werden.  
@@ -30,8 +30,7 @@ Gibt einen Bereich der zulässigen Werte für die Argumente oder Felder, deren W
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ range(  
+[ range(  
    low,   
    high  
 ) ]  
@@ -42,14 +41,14 @@ Gibt einen Bereich der zulässigen Werte für die Argumente oder Felder, deren W
  Der untere Bereichswert.  
   
  *high*  
- Der Wert der hohe Bereich.  
+ Der Wert des hohen Bereichs.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Bereich** C++-Attribut hat die gleiche Funktionalität wie die [Bereich](http://msdn.microsoft.com/library/windows/desktop/aa367151) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // cpp_attr_ref_range.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -69,7 +68,7 @@ __interface ICustom {
   
 |||  
 |-|-|  
-|**Betrifft**|Schnittstellenmethode Schnittstellenparameter|  
+|**Betrifft**|Parameter für die Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  
@@ -78,6 +77,6 @@ __interface ICustom {
   
 ## <a name="see-also"></a>Siehe auch  
  [IDL-Attribute](../windows/idl-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [Parameterattribute](../windows/parameter-attributes.md)   
  [Datenmemberattribute](../windows/data-member-attributes.md)   

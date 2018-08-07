@@ -1,5 +1,5 @@
 ---
-title: Überschreibungsspezifizierer (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Überschreibungsspezifizierer (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4eb610157d1d56c00b48e98086137351e9fd43a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f84379e57dc5730227726d28c6947d0274b615c5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882761"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603913"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Überschreibungsspezifizierer (Komponentenerweiterungen für C++)
 *Überschreibungsspezifizierer* ändern wie geerbte Typen und Member von geerbten Typen, die in abgeleiteten Typen Verhalten.  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
- **Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
  Weitere Informationen zu Überschreibungsspezifizierern finden Sie unter:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33882761"
   
 -   [Überschreibungsspezifizierer und Native Kompilierungen](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
   
- `abstract` und `sealed` sind auch in Typdeklarationen gültig, in denen sie nicht als Überschreibungsspezifizierer auftreten.  
+ **abstrakte** und **versiegelten** sind auch in Typdeklarationen, gültig, in dem sie fungieren nicht als Überschreibungsspezifizierer auftreten.  
   
  Weitere Informationen zu den Funktionen der Basisklasse explizit überschrieben, finden Sie unter [explizite Überschreibungen](../windows/explicit-overrides-cpp-component-extensions.md).  
   
@@ -49,13 +49,13 @@ ms.locfileid: "33882761"
  (Es gibt keine Hinweise für diese Sprachfunktion, die nur für Windows-Runtime gelten.)  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
  (Es gibt keine Hinweise für diese Sprachfunktion, die nur für Common Language Runtime gelten.)  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ## <a name="see-also"></a>Siehe auch  
  [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

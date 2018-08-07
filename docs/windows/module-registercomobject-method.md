@@ -1,5 +1,5 @@
 ---
-title: 'Module:: registercomobject-Methode | Microsoft Docs'
+title: 'Module:: registercomobject-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c002dd64049006c8ee74c709c585a3a9d0f253a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c997b4221dee913a6eaad55f6f114b0ad9d820e
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873978"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606539"
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject-Methode
-Registriert ein oder mehrere COM-Objekte, damit andere Anwendungen herstellen können.  
+Registriert eine oder mehrere COM-Objekte an, damit andere Anwendungen eine Verbindung damit herstellen können.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,29 +39,29 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
   
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `serverName`  
+### <a name="parameters"></a>Parameter  
+ *ServerName*  
  Den vollqualifizierten Namen eines Servers.  
   
- `clsids`  
- Ein Array von CLSIDs registrieren.  
+ *CLSIDs*  
+ Ein Array von CLSID registrieren.  
   
- `factories`  
+ *Factorys*  
  Ein Array von IUnknown-Schnittstellen, der die Objekte der Klasse, deren Verfügbarkeit veröffentlicht wird.  
   
- `cookies`  
- Bei Abschluss des Vorgangs Objekte ein Array von Zeigern auf Werte, die die Klasse zu identifizieren, die registriert wurden. Diese Werte werden später verwendet, die Registrierung aufzuheben.  
+ *Cookies*  
+ Wenn der Vorgang abgeschlossen ist, Objekte ein Array von Zeigern auf Werte, die die Klasse zu identifizieren, die registriert wurden. Diese Werte werden später verwendet werden. die Registrierung aufzuheben.  
   
- `count`  
- Die Anzahl der CLSIDs registrieren.  
+ *count*  
+ Die Anzahl der CLSID registrieren.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK Wenn Successfu; Andernfalls ist fehlgeschlagen HRESULT z. B. CO_E_OBJISREG, die den Grund angibt.  
+ S_OK Wenn erfo; andernfalls ein HRESULT, z. B. CO_E_OBJISREG, der den Grund angibt. der Vorgang konnte nicht.  
   
 ## <a name="remarks"></a>Hinweise  
- Die COM-Objekte werden mit dem Enumerator CLSCTX_LOCAL_SERVER der Enumeration CLSCTX registriert.  
+ Die COM-Objekte werden bei der CLSCTX_LOCAL_SERVER-Enumerator, der die Enumeration CLSCTX registriert.  
   
- Der Typ der Verbindung auf die registrierte Objekte wird durch eine Kombination des aktuellen angegeben `comflag` Template-Parameter und den Enumerator REGCLS_SUSPENDED REGCLS-Enumeration.  
+ Die Art der Verbindung auf die registrierten Objekte wird durch eine Kombination aus dem aktuellen angegeben *Comflag* Template-Parameter und den REGCLS_SUSPENDED-Enumerator, der die REGCLS-Enumeration.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

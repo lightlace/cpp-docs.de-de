@@ -1,5 +1,5 @@
 ---
-title: Library_block | Microsoft Docs
+title: Library_block | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbd97897138edffba12baf47d64465b1f6ca0df4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 806dcb96916b2e92bffc2d217e318a8853672ae8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877890"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605070"
 ---
 # <a name="libraryblock"></a>library_block
-Fügt ein Konstrukt in der IDL-Bibliothek-Block vor.  
+Fügt ein Konstrukt in den bibliotheksblock IDL.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [library_block]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie ein Konstrukt in den bibliotheksblock platzieren, stellen Sie sicher, dass er Sie übergeben wird, in der Typbibliothek, unabhängig davon, ob die Funktion verwiesen wird. Standardmäßig nur Konstrukte geändert, indem die [Coclass](../windows/coclass.md), [Dispinterface](../windows/dispinterface.md), und [Idl_module](../windows/idl-module.md) Attribute werden in den bibliotheksblock platziert.  
+ Wenn Sie ein Konstrukt in den bibliotheksblock platzieren, stellen Sie sicher, dass er übergeben wird in der Typbibliothek, unabhängig davon, ob die Funktion verwiesen wird. Standardmäßig nur Konstrukte geändert, indem die [Co-Klasse](../windows/coclass.md), [Dispinterface](../windows/dispinterface.md), und [Idl_module](../windows/idl-module.md) Attribute in den bibliotheksblock platziert werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Code wird eine benutzerdefinierte Schnittstelle innerhalb des Blocks Bibliothek platziert.  
+ Im folgenden Code wird eine benutzerdefinierte Schnittstelle in den bibliotheksblock platziert.  
   
-```  
+```cpp  
 // cpp_attr_ref_library_block.cpp  
 // compile with: /LD  
 #include <windows.h>  

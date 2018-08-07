@@ -1,5 +1,5 @@
 ---
-title: Nullptr (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Nullptr (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33a276c383618531103a76b1f20c6ad478d57c10
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccfb2b234550f5b7fc03e717d92e74b1fd5d5f74
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880687"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604446"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (Komponentenerweiterungen für C++)
-Die `nullptr` Schlüsselwort stellt einen *null-Zeigerwert*. Verwenden Sie einen null-Zeiger-Wert, um anzugeben, dass ein Objekthandle, innerer Zeiger oder ein systemeigener Zeiger nicht auf ein Objekt verweist.  
+Die **"nullptr"** Schlüsselwort stellt einen *null-Zeigerwert*. Verwenden Sie einen null-Zeiger-Wert, um anzugeben, dass ein Objekthandle, innerer Zeiger oder systemeigener Zeiger-Typ nicht auf ein Objekt verweist.  
   
- Verwendung `nullptr` mit verwaltetem oder systemeigenem Code. Der Compiler gibt geeignete, aber unterschiedliche Anweisungen für verwalteten und systemeigenen null-Zeiger-Werte. Informationen zur Verwendung der ISO C++ Standardversion des this-Schlüsselwort finden Sie unter [Nullptr](../cpp/nullptr.md).  
+ Verwendung **"nullptr"** mit verwaltetem oder systemeigenem Code. Der Compiler gibt geeignete sind, aber unterschiedliche Anweisungen für verwalteten und systemeigenen null-Zeiger-Werte. Informationen zur Verwendung der ISO standard C++-Version dieses Schlüsselworts finden Sie unter ["nullptr"](../cpp/nullptr.md).  
   
- Die `__nullptr` -Schlüsselwort ist ein Microsoft-spezifische-Schlüsselwort, das die gleiche Bedeutung wie hat `nullptr`, sondern gilt für nur nativen Code. Bei Verwendung von `nullptr` mit systemeigenen C/C++-code, und kompilieren Sie mit der ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption, der Compiler nicht ermitteln, ob `nullptr` gibt einen Wert für systemeigenen oder verwalteten null-Zeiger. Um Ihre Absicht klar, auf dem Compiler zu machen, verwenden `nullptr` einen verwalteten Wert angeben oder `__nullptr` einen einheitlichen Wert angeben.  
+ Die **__nullptr** -Schlüsselwort ist ein Microsoft-spezifische Schlüsselwort, die die gleiche Bedeutung wie **"nullptr"**, aber nur systemeigenen Code gilt. Bei Verwendung von **"nullptr"** mit systemeigenen C/C++-code, und kompilieren Sie mit der ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md) -Compileroption verwenden, die der Compiler nicht ermitteln, ob **"nullptr"** gibt ein systemeigenes oder verwaltet die null-Zeigerwert. Verwenden, um dem Compiler machen Ihre Absicht **"nullptr"** einen verwalteten Wert angeben oder **__nullptr** einen systemeigenen Wert angeben.  
   
- Die `nullptr` -Schlüsselwort ist äquivalent zu `Nothing` in Visual Basic und `null` in C# geschrieben.  
+ Die **"nullptr"** -Schlüsselwort ist äquivalent zu **nichts** in Visual Basic und **null** in C# geschrieben.  
   
 ## <a name="usage"></a>Verwendung  
- Die `nullptr` -Schlüsselwort kann verwendet werden, ein Handle, systemeigene Zeiger oder Funktionsargument verwendet werden kann.  
+ Die **"nullptr"** Schlüsselwort kann überall dort verwendet werden ein Handle, systemeigenen Zeiger oder Funktionsargument verwendet werden kann.  
   
- Die `nullptr` -Schlüsselwort ist kein Typ und wird nicht unterstützt, für die Verwendung mit:  
+ Die **"nullptr"** -Schlüsselwort ist kein Typ und wird nicht unterstützt, für die Verwendung mit:  
   
 -   [sizeof](../cpp/sizeof-operator.md)  
   
@@ -43,7 +43,7 @@ Die `nullptr` Schlüsselwort stellt einen *null-Zeigerwert*. Verwenden Sie einen
   
 -   `throw nullptr` (obwohl `throw (Object^)nullptr;` funktioniert)  
   
- Die `nullptr` -Schlüsselwort kann verwendet werden, bei der Initialisierung des folgenden Zeigertypen:  
+ Die **"nullptr"** Schlüsselwort kann bei der Initialisierung der folgenden Zeigertypen verwendet werden:  
   
 -   Systemeigener Zeiger  
   
@@ -53,16 +53,16 @@ Die `nullptr` Schlüsselwort stellt einen *null-Zeigerwert*. Verwenden Sie einen
   
 -   Verwaltete innerer Zeiger  
   
- Die `nullptr` -Schlüsselwort kann verwendet werden, um festzustellen, ob ein Zeiger oder Handle Objektverweis null ist, bevor der Verweis verwendet wird.  
+ Die **"nullptr"** -Schlüsselwort kann verwendet werden, um zu testen, wenn ein Zeiger oder Handle Verweis gleich null ist, bevor der Verweis verwendet wird.  
   
- Funktionsaufrufe zwischen Sprachen, die null-Zeiger-Werte für die Überprüfung von Fehlern verwenden, sollten richtig interpretiert werden.  
+ Funktionsaufrufe zwischen Sprachen, die null-Zeiger-Werte für die fehlerüberprüfung verwenden sollten richtig interpretiert werden.  
   
- Sie können nicht initialisiert werden, ein Handle auf 0 (null); nur `nullptr` kann verwendet werden. Zuweisung von Konstanten 0 in ein Objekthandle erzeugt ein geschachtelter `Int32` und eine Umwandlung in den `Object^`.  
+ Ein Handle für 0 (null) kann nicht initialisiert werden; nur **"nullptr"** kann verwendet werden. Zuweisung der Konstante 0 in ein Objekthandle erzeugt eine geschachtelte `Int32` und eine Umwandlung in `Object^`.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird veranschaulicht, dass die `nullptr` -Schlüsselwort kann verwendet werden, wo ein Handle, systemeigene Zeiger oder Funktionsargument genutzt werden. Im Beispiel wird veranschaulicht, die die `nullptr` -Schlüsselwort kann verwendet werden, um einen Verweis zu überprüfen, bevor sie verwendet wird.  
+ Im folgenden Codebeispiel wird veranschaulicht, dass die **"nullptr"** -Schlüsselwort kann verwendet werden, wo ein Handle, systemeigene Zeiger ist, oder Funktionsargument verwendet werden kann. Und im Beispiel wird veranschaulicht, die die **"nullptr"** -Schlüsselwort kann verwendet werden, um einen Verweis zu überprüfen, bevor sie verwendet wird.  
   
-```  
+```cpp  
 // mcpp_nullptr.cpp  
 // compile with: /clr  
 value class V {};  
@@ -88,11 +88,10 @@ int main() {
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Beispiel**  
   
- Das folgende Codebeispiel zeigt, dass `nullptr` und 0 (null) für systemeigenen Zeiger synonym verwendet werden kann.  
+ Das folgende Codebeispiel zeigt, dass **"nullptr"** und 0 (null) für systemeigene Zeiger austauschbar verwendet werden kann.  
   
-```  
+```cpp  
 // mcpp_nullptr_1.cpp  
 // compile with: /clr  
 class MyClass {  
@@ -130,11 +129,10 @@ pMyClass == 0
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Beispiel**  
   
- Das folgende Codebeispiel zeigt, dass `nullptr` wird als ein Handle für einen beliebigen Typ oder einen systemeigenen Zeiger auf einen beliebigen Typ interpretiert. Im Falle funktionsüberladung mit Handles für verschiedene Typen, wird ein Mehrdeutigkeitsfehler generiert. Die `nullptr` müsste explizit in einen Typ umgewandelt werden.  
+ Das folgende Codebeispiel zeigt, dass **"nullptr"** wird als ein Handle für einen beliebigen Typ oder einen systemeigenen Zeiger auf einen beliebigen Typ interpretiert. Bei einem funktionsüberladung mit Handles auf verschiedene Arten, werden einem Mehrdeutigkeitsfehler generiert. Die **"nullptr"** explizit in einen Typ umgewandelt werden müssten.  
   
-```  
+```cpp  
 // mcpp_nullptr_2.cpp  
 // compile with: /clr /LD  
 void f(int *){}  
@@ -149,11 +147,10 @@ void f_null() {
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Beispiel**  
   
- Im folgenden Codebeispiel wird veranschaulicht, Umwandlung `nullptr` zulässig ist, und gibt ein Zeiger oder Handle an der Cast-Typ, enthält die `nullptr` Wert.  
+ Im folgenden Codebeispiel wird veranschaulicht, die Umwandlung **"nullptr"** zulässig ist, und eines Zeigers bzw. Handles zurückgegeben, zu der Cast-Typ, enthält die **"nullptr"** Wert.  
   
-```  
+```cpp  
 // mcpp_nullptr_3.cpp  
 // compile with: /clr /LD  
 using namespace System;  
@@ -171,11 +168,10 @@ int main() {
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Beispiel**  
   
- Das folgende Codebeispiel zeigt, dass `nullptr` als Funktionsparameter verwendet werden können.  
+ Das folgende Codebeispiel zeigt, dass **"nullptr"** als Funktionsparameter verwendet werden können.  
   
-```  
+```cpp  
 // mcpp_nullptr_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -195,11 +191,10 @@ test
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Beispiel**  
   
- Im folgenden Codebeispiel wird veranschaulicht, dass Handles deklariert und nicht explizit initialisiert sind, standardmäßig initialisiert sie sind `nullptr`.  
+ Das folgende Codebeispiel zeigt, dass Ziehpunkte deklariert und nicht explizit initialisiert, standardmäßig initialisiert sie sind **"nullptr"**.  
   
-```  
+```cpp  
 // mcpp_nullptr_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -225,11 +220,10 @@ NULL
 ```  
   
 ## <a name="example"></a>Beispiel  
- **Beispiel**  
   
- Das folgende Codebeispiel zeigt, dass `nullptr` kann an einen systemeigenen Zeiger zugewiesen werden, bei der Kompilierung **"/ CLR"**.  
+ Das folgende Codebeispiel zeigt, dass **"nullptr"** kann in einen systemeigenen Zeiger zugewiesen werden, wenn die Kompilierung mit `/clr`.  
   
-```  
+```cpp  
 // mcpp_nullptr_6.cpp  
 // compile with: /clr  
 int main() {  
@@ -239,7 +233,7 @@ int main() {
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- Compileroption: (nicht erforderlich; unterstützt durch alle Codegenerierungsoptionen, einschließlich **/Zw** und **"/ CLR"**)  
+ Compileroption: (nicht erforderlich, die von allen Optionen zur codegenerierung, einschließlich der unterstützten `/ZW` und `/clr`)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)   

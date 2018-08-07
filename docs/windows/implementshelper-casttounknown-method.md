@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Casttounknown-Methode | Microsoft Docs'
+title: 'Implementshelper:: Casttounknown-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e5a5c71fd0a6ca8fa3b04ad39f46ba5583fbd670
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ed779d1655cb2ab4243bb7384d8ec2e07214d8df
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874498"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604238"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,10 +34,10 @@ IUnknown* CastToUnknown();
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die zugrunde liegende IUnknown-Schnittstelle.  
+ Zeiger auf die zugrunde liegende IUnknown-Schnittstelle.  
   
 ## <a name="remarks"></a>Hinweise  
- Ruft einen Zeiger auf die zugrunde liegenden IUnknown-Schnittstelle für die aktuelle Implements-Struktur.  
+ Ruft einen Zeiger auf die zugrunde liegende `IUnknown` Schnittstelle für den aktuellen `Implements` Struktur.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  

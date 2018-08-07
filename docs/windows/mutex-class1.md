@@ -1,5 +1,5 @@
 ---
-title: Mutex Class1 | Microsoft Docs
+title: Mutex Class1 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a9e9674dd8ac5aa7d444a77df66c1aff4a70299
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cd9c3dbbcbffff32f7c1611b6b49ee19ada7e52c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878410"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606773"
 ---
 # <a name="mutex-class1"></a>Mutex Class1
 Stellt ein Synchronisierungsobjekt, das ausschließlich auf eine freigegebene Ressource steuert.  
@@ -39,25 +39,25 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|**SyncLock**|Ein Synonym für eine Klasse, die synchrone Sperren unterstützt.|  
+|`SyncLock`|Ein Synonym für eine Klasse, die synchrone Sperren unterstützt.|  
   
 ### <a name="public-constructor"></a>Öffentlicher Konstruktor  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[Mutex::Mutex-Konstruktor](../windows/mutex-mutex-constructor.md)|Initialisiert eine neue Instanz der Mutex-Klasse.|  
+|[Mutex::Mutex-Konstruktor](../windows/mutex-mutex-constructor.md)|Initialisiert eine neue Instanz der dem **Mutex** Klasse.|  
   
 ### <a name="public-members"></a>Öffentliche Member  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[Mutex::Lock-Methode](../windows/mutex-lock-method.md)|Wartet, bis das aktuelle Objekt oder die Mutex-Objekt, das dem angegebenen Handle zugeordnete frei Mutex oder das angegebene Timeoutintervall abgelaufen.|  
+|[Mutex::Lock-Methode](../windows/mutex-lock-method.md)|Wartet, bis das aktuelle Objekt, oder die **Mutex** Objekt verknüpft, die mit dem angegebenen Handle, Versionen, die den Mutex oder das angegebene Timeoutintervall verstrichen ist.|  
   
 ### <a name="public-operator"></a>Öffentlicher Operator  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[Mutex::operator=-Operator](../windows/mutex-operator-assign-operator.md)|Weist (wechselt) der angegebene Mutex-Objekt in der aktuellen Mutex-Objekt.|  
+|[Mutex::operator=-Operator](../windows/mutex-operator-assign-operator.md)|Zugewiesen (bewegt) der angegebenen **Mutex** -Objekt mit dem aktuellen **Mutex** Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `Mutex`  

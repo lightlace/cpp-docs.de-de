@@ -1,5 +1,5 @@
 ---
-title: Module::GenericReleaseNotifier::GenericReleaseNotifier Konstruktor | Microsoft Docs
+title: Module::GenericReleaseNotifier::GenericReleaseNotifier-Konstruktor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb07c7f53e27e380ba5775369611299cad0f60d4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b0683220710a62c8583fa95fbfe3221ae93307eb
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875057"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603935"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier-Konstruktor
-Initialisiert eine neue Instanz der genericreleasenotifier-Klasse.  
+Initialisiert eine neue Instanz der dem **genericreleasenotifier** Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      GenericReleaseNotifier(  
+GenericReleaseNotifier(  
    T callback,   
    bool release  
 ) throw() : ReleaseNotifier(release), callback_(callback);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `callback`  
- Ein Lambda, Funktionselement oder Zeiger auf Funktion Ereignishandler, die mit der Funktion klammeroperator aufgerufen werden können (`()`).  
+### <a name="parameters"></a>Parameter  
+ *Rückruf*  
+ Ein Lambda, Funktionselement oder Zeiger auf Funktion-Ereignishandler, der mit dem Klammernoperator-Funktion aufgerufen werden kann (`()`).  
   
- `release`  
- Geben Sie `true` So aktivieren Sie das zugrunde liegende Aufrufen [Modul:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) Methode; andernfalls geben `false`.  
+ *release*  
+ Geben Sie **"true"** aktivieren aufrufen, die zugrunde liegende [Modul:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) Methode geben Sie andernfalls **"false"**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

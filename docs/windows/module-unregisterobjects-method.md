@@ -1,5 +1,5 @@
 ---
-title: 'Module:: unregisterobjects-Methode | Microsoft Docs'
+title: 'Module:: unregisterobjects-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b711338c436eda3e64d9b51ef0d3137975d834a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb477b2d5c0a6eabf1e3304c0cadcb34d3910fe5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874118"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607439"
 ---
 # <a name="moduleunregisterobjects-method"></a>Module::UnregisterObjects-Methode
-Hebt die Registrierung auf die Objekte im angegebenen Modul, damit andere Clientanwendungen auf sie keine Verbindung herstellen können.  
+Hebt die Registrierung auf die Objekte in das angegebene Modul, damit andere Anwendungen darauf keine Verbindung herstellen können.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT UnregisterObjects(
    const wchar_t* serverName);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `module`  
- Ein Zeiger auf ein Modul.  
+### <a name="parameters"></a>Parameter  
+ *Modul*  
+ Zeiger auf ein Modul.  
   
- `serverName`  
- Eine qualifizierte Name, der eine Teilmenge der von diesem Vorgang betroffenen Objekte angibt.  
+ *ServerName*  
+ Einen qualifizierten Namen, der eine Teilmenge der von diesem Vorgang betroffenen Objekte angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn dieser Vorgang erfolgreich ist; andernfalls failed Fehler HRESULT, das den Grund angibt, diesen Vorgang.  
+ S_OK, wenn dieser Vorgang erfolgreich ist; andernfalls Fehler Fehler HRESULT, das den Grund angibt, diesen Vorgang.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

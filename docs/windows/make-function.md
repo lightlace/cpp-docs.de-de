@@ -1,5 +1,5 @@
 ---
-title: Make-Funktion | Microsoft Docs
+title: Make-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f381a00b5ac1f105080355f1d3e3cd15efa5abf8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9941f2b1bce67fb09c69db6278de94c102f88473
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878072"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604868"
 ---
 # <a name="make-function"></a>Make-Funktion
-Initialisiert die angegebene Windows-Runtime-Klasse. Verwenden Sie diese Funktion, eine Komponente zu instanziieren, die im selben Modul definiert ist.  
+Initialisiert die angegebene Windows-Runtime-Klasse. Verwenden Sie diese Funktion, um eine Komponente zu instanziieren, die im Modul definiert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -171,66 +171,66 @@ template <
 ComPtr<T> Make();  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
- Eine benutzerdefinierte Klasse, die erbt `WRL::RuntimeClass`.  
+### <a name="parameters"></a>Parameter  
+ *T*  
+ Eine benutzerdefinierte-Klasse, die von erbt `WRL::RuntimeClass`.  
   
- `TArg1`  
- Typ des Arguments 1, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
+ *TArg1*  
+ Typ des Arguments 1, der auf die angegebene Runtime-Klasse übergeben wird.  
   
- `TArg2`  
- Typ des Arguments 2, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
+ *TArg2*  
+ Typ des Arguments, 2, das auf die angegebene Runtime-Klasse übergeben wird.  
   
- `TArg3`  
- Typ des Arguments 3, die an die angegebene Runtime-Klasse übergeben wird.  
+ *TArg3*  
+ Typ des Arguments, 3, das auf die angegebene Runtime-Klasse übergeben wird.  
   
- `TArg4`  
- Typ des Arguments 4, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
+ *TArg4*  
+ Typ des Arguments, 4, der auf die angegebene Runtime-Klasse übergeben wird.  
   
- `TArg5`  
- Typ des Arguments 5, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
+ *TArg5*  
+ Typ des Arguments, 5, der auf die angegebene Runtime-Klasse übergeben wird.  
   
- `TArg6`  
- Typ des Arguments 6, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
+ *TArg6*  
+ Typ des Arguments, 6, die an die angegebene Runtime-Klasse übergeben wird.  
   
- `TArg7`  
- Typ des Arguments 7, die an die angegebene Runtime-Klasse übergeben wird.  
+ *TArg7*  
+ Typ des Arguments, 7, das auf die angegebene Runtime-Klasse übergeben wird.  
   
- `TArg8`  
- Typ des Arguments 8, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
+ *TArg8*  
+ Typ des Arguments, 8, das auf die angegebene Runtime-Klasse übergeben wird.  
   
- `TArg9`  
- Typ des Arguments 9, die an die angegebene Runtime-Klasse übergeben wird.  
+ *TArg9*  
+ Typ des Arguments, 9, die an die angegebene Runtime-Klasse übergeben wird.  
   
- `arg1`  
- Argument 1, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
+ *arg1*  
+ Argument 1, das an die angegebene Runtime-Klasse übergeben wird.  
   
- `arg2`  
- Argument 2, das an die angegebene Runtime-Klasse übergeben wird.  
+ *Arg2*  
+ Argument 2, auf die angegebene Runtime-Klasse übergeben wird.  
   
- `arg3`  
+ *Arg3*  
  Argument 3, das an die angegebene Runtime-Klasse übergeben wird.  
   
- `arg4`  
- Argument 4, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
+ *Arg4*  
+ Argument 4, das an die angegebene Runtime-Klasse übergeben wird.  
   
- `arg5`  
- Argument 5, der auf dem angegebenen Common Language Runtime-Klasse übergeben wird.  
+ *Arg5*  
+ Argument 5, für die angegebene Runtime-Klasse übergeben wird.  
   
- `arg6`  
- Argument 6, das an die angegebene Runtime-Klasse übergeben wird.  
+ *Arg6*  
+ Argument 6, auf die angegebene Runtime-Klasse übergeben wird.  
   
- `arg7`  
+ *Arg7*  
  Argument 7, das an die angegebene Runtime-Klasse übergeben wird.  
   
- `arg8`  
+ *Arg8*  
  Argument 8, das an die angegebene Runtime-Klasse übergeben wird.  
   
- `arg9`  
- Argument 9, die an die angegebene Runtime-Klasse übergeben wird.  
+ *Arg9*  
+ Argument 9, auf die angegebene Runtime-Klasse übergeben wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein `ComPtr<T>` -Objekt, wenn erfolgreich, andernfalls `nullptr`.  
+ Ein `ComPtr<T>` -Objekt, wenn erfolgreich; andernfalls **"nullptr"**.  
   
 ## <a name="remarks"></a>Hinweise  
  Finden Sie unter [Vorgehensweise: WRL-Komponenten direkt instanziieren](../windows/how-to-instantiate-wrl-components-directly.md) um die Unterschiede zwischen dieser Funktion zu erfahren und [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md), und ein Beispiel.  

@@ -1,5 +1,5 @@
 ---
-title: Requestedit | Microsoft Docs
+title: Requestedit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d741494d33cba7b1d19e2ce081bad35eaaf283e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a9b0102ad6ba7b11ea2f0c738983385ffda632ca
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878254"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606474"
 ---
 # <a name="requestedit"></a>requestedit
-Gibt an, dass die Eigenschaft unterstützt die **OnRequestEdit** Benachrichtigung.  
+Gibt an, dass die Eigenschaft unterstützt die `OnRequestEdit` Benachrichtigung.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [requestedit]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
@@ -56,7 +54,7 @@ Gibt an, dass die Eigenschaft unterstützt die **OnRequestEdit** Benachrichtigun
   
 ## <a name="see-also"></a>Siehe auch  
  [IDL-Attribute](../windows/idl-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [Datenmemberattribute](../windows/data-member-attributes.md)   
  [defaultbind](../windows/defaultbind.md)   
  [displaybind](../windows/displaybind.md)   
