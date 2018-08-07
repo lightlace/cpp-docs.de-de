@@ -1,5 +1,5 @@
 ---
-title: Importidl | Microsoft Docs
+title: Importidl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5284c631813271f5682343c74cff693d1ea785e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd930ef70e5bb2b87c584c1d821cdf4528580a31
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877474"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607182"
 ---
 # <a name="importidl"></a>importidl
 Fügt die angegebenen IDL-Datei in der generierten IDL-Datei an.  
@@ -30,24 +30,23 @@ Fügt die angegebenen IDL-Datei in der generierten IDL-Datei an.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ importidl(  
+[ importidl(  
    idl_file  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `idl_file`  
- Identifiziert den Namen der IDL-Datei, die Sie mit der IDL-Datei, die generiert wird, und für Ihre Anwendung zusammenführen möchten.  
+### <a name="parameters"></a>Parameter  
+ *idl_file*  
+ Identifiziert den Namen der IDL-Datei, die mit der IDL-Datei, die generiert wird, und für Ihre Anwendung zusammengeführt werden sollen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Importidl** C++-Attribut wird im Abschnitt außerhalb des Blocks für die Bibliothek (in `idl_file`) in der generierten IDL-Datei des Programms und die Bibliothekabschnitt (in `idl_file`) in der Bibliothek Teil des Programms generierten IDL-Datei.  
+ Die **Importidl** C++-Attribut wird im Abschnitt außerhalb des bibliotheksblocks (in *Idl_file*) in der generierten IDL-Datei des Programms und die Bibliothekabschnitt (in *Idl_file*) in die Bibliothek Teil Ihres Programms IDL-Datei generiert.  
   
  Sie verwenden möchten **Importidl**, z. B. Wenn Sie eine handcodierten IDL-Datei mit der generierten IDL-Datei verwenden möchten.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // cpp_attr_ref_importidl.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -72,5 +71,5 @@ Fügt die angegebenen IDL-Datei in der generierten IDL-Datei an.
  [Eigenständige Attribute](../windows/stand-alone-attributes.md)   
  [Importieren](../windows/import.md)   
  [importlib](../windows/importlib.md)   
- [Einschließen](../windows/include-cpp.md)   
+ [einschließen](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   

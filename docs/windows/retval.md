@@ -1,5 +1,5 @@
 ---
-title: Retval | Microsoft Docs
+title: Retval | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c0bf7ecd989b51a17c853c6d2986db204c3ce34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d6f17f44e520018f82dc82abe88427a2410d68e7
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888720"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606350"
 ---
 # <a name="retval"></a>retval
-Kennzeichnet den Parameter, der den Rückgabewert des Members empfängt.  
+Legt fest, den Parameter, der den Rückgabewert des Members empfängt.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [retval]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Retval** C++-Attribut hat die gleiche Funktionalität wie die [Retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) MIDL-Attribut.  
   
- **Retval** muss für das letzte Argument in der Deklaration einer Funktion angezeigt werden.  
+ **Retval** muss für das letzte Argument in einer Funktion Deklaration angezeigt werden.  
   
 ## <a name="example"></a>Beispiel  
  Siehe das Beispiel für [bindbare](../windows/bindable.md) für ein Beispiel für die Verwendung von **Retval**.  
@@ -49,7 +47,7 @@ Kennzeichnet den Parameter, der den Rückgabewert des Members empfängt.
   
 |||  
 |-|-|  
-|**Betrifft**|Parameter, für die Schnittstellen-Methode|  
+|**Betrifft**|Parameter, für die Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|**out**|  
 |**Ungültige Attribute**|**in**|  

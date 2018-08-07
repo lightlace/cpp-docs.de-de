@@ -1,5 +1,5 @@
 ---
-title: 'Implements:: casttounknown-Methode | Microsoft Docs'
+title: 'Implements:: casttounknown-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 857d13736a92bbbc2c6f1228b3444081ffc18de5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a490e3b8dc620cb3f0f440b2e28cce1f2e69c76d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874485"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607247"
 ---
 # <a name="implementscasttounknown-method"></a>Implements::CastToUnknown-Methode
-Ruft einen Zeiger auf die zugrunde liegenden IUnknown-Schnittstelle.  
+Ruft einen Zeiger auf die zugrunde liegende `IUnknown` Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,10 +34,10 @@ __forceinline IUnknown* CastToUnknown();
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Dieser Vorgang wird immer erfolgreich, und gibt den IUnknown-Zeiger zurück.  
+ Dieser Vorgang immer erfolgreich ist, und gibt die `IUnknown` Zeiger.  
   
 ## <a name="remarks"></a>Hinweise  
- Interne Hilfsfunktion.  
+ Interne Hilfsmethode-Funktion.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  

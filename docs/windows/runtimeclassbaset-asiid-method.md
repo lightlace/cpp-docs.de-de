@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclassbaset:: Asiid-Methode | Microsoft Docs'
+title: 'Runtimeclassbaset:: Asiid-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35d218666f785685e95d737574ff44e276ce84b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1174db6702fc68b01f60491ef203265bbd6f4c14
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892129"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607426"
 ---
 # <a name="runtimeclassbasetasiid-method"></a>RuntimeClassBaseT::AsIID-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +38,18 @@ __forceinline static HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
- Ein Typ, die Schnittstellen-ID, die vom Parameter angegebenen implementiert `riid`.  
+### <a name="parameters"></a>Parameter  
+ *T*  
+ Ein Typ, die Schnittstellen-ID, die vom Parameter angegebene implementiert *Riid*.  
   
- `implements`  
- Eine Variable des Typs von Template-Parameter angegebenen `T`.  
+ *Implementiert*  
+ Eine Variable des Typs von Template-Parameter angegebenen *T*.  
   
- `riid`  
- Der Schnittstellen-ID abgerufen werden soll.  
+ *riid*  
+ Die Schnittstellen-ID abgerufen werden soll.  
   
- `ppvObject`  
- Wenn dieser Vorgang erfolgreich ist, wird ein Zeiger-auf-a-Zeiger auf die Schnittstelle vom-Parameter angegebenen `riid`.  
+ *ppvObject*  
+ Wenn dieser Vorgang erfolgreich ist, wird ein Zeiger-auf-a-Zeiger auf die Schnittstelle vom-Parameter angegebenen *Riid*.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler beschreibt.  

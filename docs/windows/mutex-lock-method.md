@@ -1,5 +1,5 @@
 ---
-title: 'Mutex:: Lock-Methode | Microsoft Docs'
+title: 'Mutex:: Lock-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c96ef497331fecf8125c51a7b8bd669ec758927
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880871"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603523"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock-Methode
-Wartet, bis das aktuelle Objekt oder die Mutex-Objekt, das dem angegebenen Handle zugeordnete frei Mutex oder das angegebene Timeoutintervall abgelaufen.  
+Wartet, bis das aktuelle Objekt, oder die **Mutex** Objekt verknüpft, die mit dem angegebenen Handle, Versionen, die den Mutex oder das angegebene Timeoutintervall verstrichen ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,12 +40,12 @@ static SyncLock Lock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `milliseconds`  
- Das Timeoutintervall in Millisekunden. Der Standardwert ist INFINITE, der unbegrenzt wartet.  
+### <a name="parameters"></a>Parameter  
+ *Millisekunden*  
+ Das Timeoutintervall in Millisekunden. Der Standardwert ist UNENDLICH sein, was die unbegrenzt wartet.  
   
- `h`  
- Das Handle des ein Mutex-Objekt.  
+ *h*  
+ Das Handle für ein **Mutex** Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
   

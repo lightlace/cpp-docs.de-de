@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassType-Enumeration | Microsoft Docs
+title: RuntimeClassType-Enumeration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43ab0a738af4c6bc92d42c0884827b574946d2ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4464d236a85e06bf907f738657a4a0707e14a5e1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892402"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603500"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType-Enumeration
-Gibt den Typ des [RuntimeClass](../windows/runtimeclass-class.md) -Instanz, die unterstützt wird.  
+Gibt den Typ der [RuntimeClass](../windows/runtimeclass-class.md) -Instanz, die unterstützt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,8 +40,8 @@ enum RuntimeClassType;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |`ClassicCom`|Eine klassische COM-Runtime-Klasse.|  
-|`Delegate`|Entspricht **ClassicCom**.|  
-|`InhibitFtmBase`|Deaktiviert die `FtmBase` Unterstützung beim `__WRL_CONFIGURATION_LEGACY__` ist nicht definiert.|  
+|`Delegate`|Entspricht `ClassicCom`.|  
+|`InhibitFtmBase`|Deaktiviert die `FtmBase` -Unterstützung während der `__WRL_CONFIGURATION_LEGACY__` ist nicht definiert.|  
 |`InhibitWeakReference`|Deaktiviert die Unterstützung von schwachen Verweis.|  
 |`WinRt`|Eine Windows-Runtime-Klasse.|  
 |`WinRtClassicComMix`|Die Kombination aus `WinRt` und `ClassicCom`.|  

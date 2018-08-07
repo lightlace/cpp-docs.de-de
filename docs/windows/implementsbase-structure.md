@@ -1,5 +1,5 @@
 ---
-title: ImplementsBase-Struktur | Microsoft Docs
+title: ImplementsBase-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae5d91f5e7d8f2a057ba05ede5051e14f9787fb0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b6584277586f8b9bbefca020b66fb00a0ad74a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875772"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603963"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,9 +34,9 @@ struct ImplementsBase;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Zum Überprüfen der Vorlage Parametertypen in [Implements-Struktur](../windows/implements-structure.md).  
+ Zum Überprüfen der Vorlage Parametertypen in verwendet [Implements-Struktur](../windows/implements-structure.md).  
   
- ImplementsBase-Struktur ist standardmäßig leer.  
+ Die **ImplementsBase** Struktur ist standardmäßig leer.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `ImplementsBase`  

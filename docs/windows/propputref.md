@@ -1,5 +1,5 @@
 ---
-title: Propputref | Microsoft Docs
+title: Propputref | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ac9784e450746a4474879aae346a4242bbe2fd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc11561401ff34b629fecdc31a00ffb845d6a2d8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878189"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606799"
 ---
 # <a name="propputref"></a>propputref
 Gibt eine eigenschaftseinstellungsfunktion an, die einen Verweis anstelle eines Werts verwendet.  
@@ -30,9 +30,7 @@ Gibt eine eigenschaftseinstellungsfunktion an, die einen Verweis anstelle eines 
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [propputref]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
@@ -50,12 +48,12 @@ Gibt eine eigenschaftseinstellungsfunktion an, die einen Verweis anstelle eines 
 |**Betrifft**|Methode|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|**Propget**, **Propput**|  
+|**Ungültige Attribute**|`propget`, `propput`|  
   
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [IDL-Attribute](../windows/idl-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [propget](../windows/propget.md)   
  [propput](../windows/propput.md)   

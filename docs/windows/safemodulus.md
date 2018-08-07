@@ -1,5 +1,5 @@
 ---
-title: SafeModulus | Microsoft Docs
+title: SafeModulus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 653293ac04be1e3a04e90412a9d9d8b988773329
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6eaac98e7794ba9a2475cf7b56641d3a779f84d5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888867"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604884"
 ---
 # <a name="safemodulus"></a>SafeModulus
 Führt die Modulo-Operation für zwei Zahlen.  
@@ -38,26 +38,26 @@ inline bool SafeModulus (
 ) throw ();  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- [in] `t`  
- Der Divisor. Dies muss vom Typ t sein.  
+### <a name="parameters"></a>Parameter  
+ [in] *t*  
+ Der Divisor. Dies muss vom Typ `T`.  
   
- [in] `u`  
- Der Dividend. Dies muss vom Typ u sein.  
+ [in] *u*  
+ Der Dividend. Dies muss vom Typ `U`.  
   
- [out] `result`  
- Der Parameter, in denen `SafeModulus` speichert das Ergebnis.  
+ [out] *Ergebnis*  
+ Der Parameter, in denen **SafeModulus** speichert das Ergebnis.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Wenn kein Fehler auftritt. `false` , wenn ein Fehler auftritt.  
+ **"true"** Wenn kein Fehler auftritt. **"false"** Wenn ein Fehler auftritt.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode ist Teil des [SafeInt-Bibliothek](../windows/safeint-library.md) und ohne Erstellen einer Instanz von für eine einzelnes Modulo-Operation dient der [SafeInt-Klasse](../windows/safeint-class.md).  
+ Diese Methode ist Teil des [SafeInt-Bibliothek](../windows/safeint-library.md) und ist ohne eine Instanz des für einen einzelnen Modulo-Vorgang für die [SafeInt-Klasse](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Diese Methode sollte nur verwendet werden, wenn eine einzelne mathematische Operation, die geschützt werden muss. Wenn mehrere Vorgänge vorhanden sind, sollten Sie verwenden die `SafeInt` Klasse anstelle von den einzelnen eigenständigen Funktionen aufrufen.  
+>  Diese Methode sollte nur verwendet werden, wenn eine einzelne mathematische Operation, die geschützt werden muss. Wenn mehrere Vorgänge vorhanden sind, sollten Sie verwenden die `SafeInt` Klasse anstelle von den einzelnen eigenständigen Funktionen.  
   
- Weitere Informationen zu den Vorlagentypen T "und" U, finden Sie unter [SafeInt-Funktionen](../windows/safeint-functions.md).  
+ Weitere Informationen zu den Vorlagentypen `T` und `U`, finden Sie unter [SafeInt-Funktionen](../windows/safeint-functions.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** safeint.h  

@@ -1,5 +1,5 @@
 ---
-title: Includelib (C++) | Microsoft Docs
+title: Includelib (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 252a5d953dd05edc494daf8c4a45322d5511f979
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10ab341dc4c90a26315ea5e30f03bc71e628b64
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878891"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603380"
 ---
 # <a name="includelib-c"></a>includelib (C++)
-Bewirkt, dass eine IDL oder .h-Datei, in der generierten IDL-Datei eingeschlossen werden sollen.  
+Bewirkt, dass eine IDL- oder h-Datei, die in der generierten IDL-Datei eingeschlossen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ includelib(  
+[ includelib(  
    name.idl  
 ) ];  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *Name.idl*  
- Der Name der IDL-Datei, die als Teil der generierten IDL-Datei eingeschlossen werden sollen.  
+ Der Name der IDL-Datei, die als Teil der generierten IDL-Datei enthalten sein sollen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `includelib` C++-Attribut bewirkt, dass eine IDL oder .h-Datei, in der generierten IDL-Datei eingeschlossen werden sollen, nachdem die `importlib` Anweisung.  
+ Die **Includelib** C++-Attribut bewirkt, dass eine IDL- oder h-Datei in der generierten IDL-Datei eingeschlossen werden, nach der `importlib` Anweisung.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code ist in einer CPP-Datei gezeigt:  
+ Der folgende Code wird in einer CPP-Datei dargestellt:  
   
-```  
+```cpp  
 // cpp_attr_ref_includelib.cpp  
 // compile with: /LD  
 [module(name="MyLib")];  
@@ -71,5 +70,5 @@ Bewirkt, dass eine IDL oder .h-Datei, in der generierten IDL-Datei eingeschlosse
  [Eigenständige Attribute](../windows/stand-alone-attributes.md)   
  [Importieren](../windows/import.md)   
  [importidl](../windows/importidl.md)   
- [Einschließen](../windows/include-cpp.md)   
+ [einschließen](../windows/include-cpp.md)   
  [importlib](../windows/importlib.md)   

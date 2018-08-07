@@ -1,5 +1,5 @@
 ---
-title: __identifier (C + c++ / CLI) | Microsoft Docs
+title: __identifier (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,41 +18,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a96363fcfbc753e727c6cbb6a5efbbb5606b6c40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6eac892da91c5f3640bdd243a0b3c6525faa5c2a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877682"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603344"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
-Ermöglicht die Verwendung von Visual C++-Schlüsselwörter als Bezeichner an.  
+Ermöglicht die Verwendung von Visual C++-Schlüsselwörter als Bezeichner.  
   
 ## <a name="all-platforms"></a>Alle Plattformen  
-**Syntax**  
+### <a name="syntax"></a>Syntax  
   
 ```  
 __identifier(  
 Visual_C++_keyword  
 )  
-  
 ```  
   
-**Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
-Verwenden der `__identifier` Schlüsselwort für Bezeichner entsprechen, die keine Schlüsselwörter sind zulässig, jedoch als stilistischen dringend abgeraten.  
+Verwenden der **__identifier** Schlüsselwort für Bezeichner entsprechen, die keine Schlüsselwörter sind zulässig, jedoch nicht empfohlen, als eine Frage des Stils.  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Im folgenden Beispiel eine Klasse mit dem Namen `template` in c# erstellt und als DLL verteilt wird. In der Visual C++-Programm, verwendet der `template` -Klasse, die `__identifier` Schlüsselwort verbirgt die Tatsache, `template` ist ein standard C++-Schlüsselwort.  
+ Im folgenden Beispiel wird eine Klasse namens `template` in c# erstellt wurde und als eine DLL-Datei verteilt wird. In der Visual C++-Programm, das verwendet die `template` -Klasse, die **__identifier** Schlüsselwort verbirgt die Tatsache, **Vorlage** ist ein standard C++-Schlüsselwort.  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -60,7 +59,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /ZW  
 #using <identifier_template.dll>  
@@ -71,19 +70,18 @@ int main() {
 ```  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
- Die `__identifier` -Schlüsselwort ist gültig, wenn die **"/ CLR"** -Compileroption.  
+ Die **__identifier** Schlüsselwort ist gültig, mit der `/clr` -Compileroption.  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
- Im folgenden Beispiel eine Klasse mit dem Namen `template` in c# erstellt und als DLL verteilt wird. In der Visual C++-Programm, verwendet der `template` -Klasse, die `__identifier` Schlüsselwort verbirgt die Tatsache, `template` ist ein standard C++-Schlüsselwort.  
+ Im folgenden Beispiel wird eine Klasse namens `template` in c# erstellt wurde und als eine DLL-Datei verteilt wird. In der Visual C++-Programm, das verwendet die `template` -Klasse, die **__identifier** Schlüsselwort verbirgt die Tatsache, **Vorlage** ist ein standard C++-Schlüsselwort.  
   
-```  
+```cs  
 // identifier_template.cs  
 // compile with: /target:library  
 public class template {  
@@ -91,7 +89,7 @@ public class template {
 }  
 ```  
   
-```  
+```cpp  
 // keyword__identifier.cpp  
 // compile with: /clr  
 #using <identifier_template.dll>  

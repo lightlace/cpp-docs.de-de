@@ -1,5 +1,5 @@
 ---
-title: Einfügen eines neuen Menüs zwischen vorhandenen Menüs | Microsoft Docs
+title: Einfügen eines neuen Menüs zwischen vorhandenen Menüs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73a4b243823d14cd3015a7d92f7ba52a08dc68d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b7b3fefbbe402babcb5291a2c9073a311a2e6451
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876331"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607107"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>Einfügen eines neuen Menüs zwischen vorhandenen Menüs
 ### <a name="to-insert-a-new-menu-between-existing-menus"></a>So fügen Sie ein neues Menüs zwischen vorhandenen Menüs ein  
   
-1.  Wählen Sie einen vorhandenen Menünamen, und drücken Sie die **einfügen** Schlüssel. Die **neues Element** vor dem ausgewählten Element eingefügt wird.  
+1.  Wählen Sie einen vorhandenen Menünamen, und drücken Sie die **einfügen** Schlüssel. Die **neues Element** Feld vor dem ausgewählten Element eingefügt wird.  
   
      \- oder –  
   
 2.  Mit der rechten Maustaste in der Menüleiste, und wählen Sie **neue einfügen** aus dem Kontextmenü.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.*  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.  
   
- Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
  Win32  
   

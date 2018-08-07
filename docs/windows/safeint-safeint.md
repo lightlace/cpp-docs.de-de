@@ -1,5 +1,5 @@
 ---
-title: 'SafeInt:: SafeInt | Microsoft Docs'
+title: 'SafeInt:: SafeInt | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7154349105c1953ad314b7928e7be8385179c42
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d6bcac8dec2e85f0ea7d1d4530ed6ff1b7acc08
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888746"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604342"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
-Erstellt ein `SafeInt`-Objekt.  
+Erstellt eine **SafeInt** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,32 +53,32 @@ SafeInt (
 )  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- [in] `i`  
- Der Wert für die neue `SafeInt` Objekt. Diese Angabe muss einen Parameter vom Typ "T" oder "U, abhängig vom Konstruktor.  
+### <a name="parameters"></a>Parameter  
+ [in] *ich*  
+ Der Wert für die neue **SafeInt** Objekt. Dabei muss es sich um einen Parameter vom Typ T oder U, je nach den Konstruktor handeln.  
   
- [in] `b`  
- Der boolesche Wert für die neue `SafeInt` Objekt.  
+ [in] *b*  
+ Der boolesche Wert für die neue **SafeInt** Objekt.  
   
- [in] `u`  
- Ein `SafeInt` Typ u. Die neue `SafeInt` -Objekt verfügt insgesamt über den gleichen Wert wie `u`, jedoch vom Typ T.  
+ [in] *u*  
+ Ein **SafeInt** u Die neue **SafeInt** Objekt hat den gleichen Wert wie *u*, aber vom Typ "t".  
   
  U  
- Der Typ der Daten in der `SafeInt`. Dies kann vom Typ Boolesch, Zeichen oder ganze Zahl sein. Wenn es ein Ganzzahltyp ist, es kann sein mit oder ohne Vorzeichen zwischen 8 und 64-Bit.  
+ Der Typ der Daten in die **SafeInt**. Dies kann entweder ein boolescher Wert, Zeichen oder ganze Zahl sein. Wenn sie ein ganzzahliger Typ ist, es kann sein mit oder ohne Vorzeichen und zwischen 8 und 64-Bit sein.  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen zu den Vorlagentypen `T` und `E`, finden Sie unter [SafeInt-Klasse](../windows/safeint-class.md).  
   
- Der input-Parameter des Konstruktors `i` oder `u`, muss vom Typ Boolean, Zeichen oder ganze Zahl sein. Wenn es sich um einen anderen Typ des Parameters, ist die `SafeInt` -Klasse ruft [Static_assert](../cpp/static-assert.md) an, dass ein ungültiger Eingabeparameter.  
+ Der Eingabeparameter für den Konstruktor *ich* oder *u*, muss ein boolescher Wert, Zeichen oder Integer-Typ sein. Wenn es sich um einen anderen Typ des Parameters ist die **SafeInt** -Klasse ruft ["static_assert"](../cpp/static-assert.md) an, dass ein ungültiger Eingabeparameter.  
   
- Die Konstruktoren, die den Vorlagentyp verwenden `U` automatisch in den vom angegebenen Typ konvertieren den Eingabeparameter `T`. Die `SafeInt` Klasse konvertiert die Daten ohne Verlust von Daten. Er meldet an den Fehlerhandler `E` , wenn sie die Daten in den Typ konvertieren kann `T` ohne Datenverlust.  
+ Die Konstruktoren, mit denen den Vorlagentyp `U` automatisch in den vom angegebenen Typ konvertieren den Eingabeparameter `T`. Die **SafeInt** Klasse konvertiert die Daten ohne Verlust von Daten. Er meldet sich an den Fehlerhandler `E` wenn er die Daten in den Typ konvertieren kann `T` ohne Datenverlust.  
   
- Wenn Sie erstellen eine `SafeInt` aus einem booleschen Parameter müssen Sie den Wert sofort initialisiert werden. Sie können nicht erstellt werden ein `SafeInt` mithilfe des Codes `SafeInt<bool> sb;`. Dadurch wird einen Compilerfehler generiert.  
+ Bei der Erstellung einer **SafeInt** in einen booleschen Parameter, müssen Sie den Wert sofort zu initialisieren. Sie können nicht erstellt werden ein **SafeInt** mithilfe des Codes `SafeInt<bool> sb;`. Dadurch wird einen Compilerfehler generiert.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** safeint.h  
   
- **Namespace:** msl::utilities  
+ **Namespace:** MSL:: Utilities  
   
 ## <a name="see-also"></a>Siehe auch  
  [SafeInt-Bibliothek](../windows/safeint-library.md)   

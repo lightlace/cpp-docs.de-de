@@ -1,5 +1,5 @@
 ---
-title: IID_PPV_ARGS_Helper-Funktion | Microsoft Docs
+title: IID_PPV_ARGS_Helper-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cef979ae284a303b120df7d14ae71f311498423
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 508c9a5d34fa8e9c4fa339e9917ae069874159ad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882341"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608377"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper-Funktion
-Stellt sicher, dass der Typ des angegebenen Arguments abgeleitet die `IUnknown` Schnittstelle.  
+Stellt sicher, dass der Typ des angegebenen Arguments abgeleitet der `IUnknown` Schnittstelle.  
   
 > [!IMPORTANT]
->  Diese Spezialisierung einer Klassenvorlage unterstützt die WRL-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden. Verwendung [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) stattdessen.  
+>  Diese Spezialisierung einer Klassenvorlage unterstützt die WRL-Infrastruktur und nicht direkt aus Ihrem Code verwendet werden soll. Verwendung [IID_PPV_ARGS](http://msdn.microsoft.com/library/windows/desktop/ee330727.aspx) stattdessen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,20 +40,20 @@ void** IID_PPV_ARGS_Helper(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
- Der Typ des Arguments `pp`.  
+ *T*  
+ Der Typ des Arguments *pp*.  
   
- `pp`  
+ *PP*  
  Ein doppelt indirekter Zeiger.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Argument `pp` umgewandelt in einen Zeiger-auf-a-Zeiger auf `void`.  
+ Argument *pp* Umwandeln in einen Zeiger-auf-a-Zeiger auf **"void"**.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Fehler während der Kompilierung wird generiert, wenn die Vorlagenparameter `T` nicht ableiten `IUnknown`.  
+ Es wird ein Fehler während der Kompilierung generiert, wenn der Vorlagenparameter *T* nicht abgeleitet `IUnknown`.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  
   
 ## <a name="see-also"></a>Siehe auch  
- [Referenz (Windows-Runtime-Bibliothek)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)
+ [Referenz (Windows-Runtime-Bibliothek)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

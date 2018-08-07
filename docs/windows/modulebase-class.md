@@ -1,5 +1,5 @@
 ---
-title: ModuleBase-Klasse | Microsoft Docs
+title: ModuleBase-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bfee0c0cd7ff7bd7f4525a291184f08f1e2898e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b298bcab4c2b3547f2b285fe21d4967f4696fb9d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878735"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605057"
 ---
 # <a name="modulebase-class"></a>ModuleBase-Klasse
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,8 +42,8 @@ class ModuleBase;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ModuleBase::ModuleBase-Konstruktor](../windows/modulebase-modulebase-constructor.md)|Initialisiert eine Instanz der Module-Klasse.|  
-|[ModuleBase::~ModuleBase-Destruktor](../windows/modulebase-tilde-modulebase-destructor.md)|Hebt die Initialisierung der aktuellen Instanz der Module-Klasse.|  
+|[ModuleBase::ModuleBase-Konstruktor](../windows/modulebase-modulebase-constructor.md)|Initialisiert eine Instanz der `Module`-Klasse.|  
+|[ModuleBase::~ModuleBase-Destruktor](../windows/modulebase-tilde-modulebase-destructor.md)|Hebt die Initialisierung der aktuellen Instanz von der `Module` Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   

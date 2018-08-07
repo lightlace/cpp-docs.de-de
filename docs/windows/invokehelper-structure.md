@@ -1,5 +1,5 @@
 ---
-title: InvokeHelper-Struktur | Microsoft Docs
+title: InvokeHelper-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b612530c1a29588cd837b2cdbeef37faf84c8b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2975cd066dd15f9179b2e1f0f3fc72084c9c573b
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880406"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604267"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -88,16 +88,16 @@ template<
 struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `TDelegateInterface`  
- `TCallback`  
+### <a name="parameters"></a>Parameter  
+ *TDelegateInterface*  
+ *TCallback*  
  Der Typ des Ereignishandlerfunktion.  
   
- `argCount`  
- Die Anzahl der Argumente in der eine Spezialisierung InvokeHelper.  
+ *argCount*  
+ Die Anzahl von Argumenten in eine **InvokeHelper** Spezialisierung.  
   
 ## <a name="remarks"></a>Hinweise  
- Stellt eine Implementierung der Methode Invoke() basierend auf der angegebenen Nummer und Typ der Argumente.  
+ Stellt eine Implementierung der `Invoke()` -Methode basierend auf der angegebenen Nummer und Typ der Argumente.  
   
 ## <a name="members"></a>Member  
   
@@ -111,19 +111,19 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[InvokeHelper::InvokeHelper-Konstruktor](../windows/invokehelper-invokehelper-constructor.md)|Initialisiert eine neue Instanz der InvokeHelper-Klasse.|  
+|[InvokeHelper::InvokeHelper-Konstruktor](../windows/invokehelper-invokehelper-constructor.md)|Initialisiert eine neue Instanz der dem **InvokeHelper** Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[InvokeHelper::Invoke-Methode](../windows/invokehelper-invoke-method.md)|Ruft den Ereignishandler, dessen Signatur mit der angegebene Anzahl von Argumenten enthält.|  
+|[InvokeHelper::Invoke-Methode](../windows/invokehelper-invoke-method.md)|Ruft den Ereignishandler, dessen Signatur mit die angegebene Anzahl von Argumenten enthält.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[InvokeHelper::callback_-Datenmember](../windows/invokehelper-callback-data-member.md)|Stellt den Ereignishandler, der beim Eintreten eines Ereignisses aufgerufen.|  
+|[InvokeHelper::callback_-Datenmember](../windows/invokehelper-callback-data-member.md)|Stellt den Ereignishandler aufgerufen wird, wenn ein Ereignis auftritt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `InvokeHelper`  

@@ -1,5 +1,5 @@
 ---
-title: Hstringreference::&lt; Operator | Microsoft Docs
+title: Hstringreference::&lt; Operator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b486157fb42883af724f2356e7f85701e405035
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 489d97252dcb4d20b7ef2f8557991a4e6016743d
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877292"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605531"
 ---
 # <a name="hstringreferenceoperatorlt-operator"></a>Hstringreference::&lt; Operator
-Gibt an, ob der erste Parameter ist kleiner als der zweite Parameter.  
+Gibt an, ob der erste Parameter kleiner als der zweite Parameter.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,15 +33,15 @@ inline bool operator<(
     const HStringReference& rhs) throw()  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `lhs`  
- Der erste Parameter, verglichen werden soll. `lhs` Ein Verweis auf ein HStringReference kann sein.  
+### <a name="parameters"></a>Parameter  
+ *LHS*  
+ Der erste Parameter, verglichen werden soll. *LHS* möglich ein Verweis auf ein **HStringReference**.  
   
- `rhs`  
- Der zweite Parameter, verglichen werden soll.  `rhs` Ein Verweis auf ein HStringReference kann sein.  
+ *RS*  
+ Der zweite Parameter, verglichen werden soll.  *RS* möglich ein Verweis auf ein **HStringReference**.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Wenn die `lhs` Parameter ist kleiner als das `rhs` Parameter ist, andernfalls `false`.  
+ **"true"** Wenn die *Lhs* -Parameter ist kleiner als der *RS* Parameter ist, andernfalls **"false"**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

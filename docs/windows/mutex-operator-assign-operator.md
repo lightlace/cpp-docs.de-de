@@ -1,5 +1,5 @@
 ---
-title: 'Mutex:: Operator = | Microsoft Docs'
+title: 'Mutex:: Operator = | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8791d3c947206be399f475bb8c895b2b5e032133
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 837c8ed508b713f790d1a6a56310705a00f12b3f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875486"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602745"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator=-Operator
-Weist (wechselt) der angegebene Mutex-Objekt in der aktuellen Mutex-Objekt.  
+Zugewiesen (bewegt) der angegebenen **Mutex** -Objekt mit dem aktuellen **Mutex** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ Mutex& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `h`  
- Ein Rvalue-Verweis auf ein Mutex-Objekt.  
+### <a name="parameters"></a>Parameter  
+ *h*  
+ Ein Rvalue-Verweis auf eine **Mutex** Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf das aktuelle Mutex-Objekt.  
+ Ein Verweis auf das aktuelle **Mutex** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter der **verschieben Semantik** Abschnitt [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Weitere Informationen finden Sie unter den **verschieben Semantik** Abschnitt [Rvalue-Verweisdeklarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

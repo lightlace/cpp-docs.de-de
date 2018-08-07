@@ -1,5 +1,5 @@
 ---
-title: Requires_category | Microsoft Docs
+title: Requires_category | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a6822773292fd651eaae3be5c00fb2b693a80a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9ddcfe01ec5bd838a84ddad351f43802a8142b44
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882315"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606100"
 ---
 # <a name="requirescategory"></a>requires_category
-Gibt die erforderliche Komponentenkategorien der Zielklasse an.  
+Gibt die erforderliche Komponentenkategorien der Zielklasse.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-     [ requires_category(   
+[ requires_category(   
   requires_category  
 ) ]  
 ```  
@@ -41,14 +40,14 @@ Gibt die erforderliche Komponentenkategorien der Zielklasse an.
  Die ID der Kategorie erforderlich.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Requires_category** C++-Attribut gibt an, die erforderlich sind, von der Zielklasse Komponentenkategorien. Weitere Informationen finden Sie unter [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category).  
+ Die **Requires_category** C++-Attribut gibt die Komponentenkategorien, die erforderlich sind, indem Sie die Zielklasse an. Weitere Informationen finden Sie unter [REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category).  
   
  Dieses Attribut erfordert, dass die Attribute [coclass](../windows/coclass.md), [progid](../windows/progid.md), oder [vi_progid](../windows/vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch auf demselben Element angewendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code erfordert, dass das Objekt die Steuerelement-Kategorie implementieren.  
+ Der folgende Code erfordert, dass das Objekt die Kategorie "Steuerelement" implementieren.  
   
-```  
+```cpp  
 // cpp_attr_ref_requires_category.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -68,9 +67,9 @@ class CMyClass {};
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`|  
+|**Betrifft**|**Klasse**, **Struktur**|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Ein Attribut oder mehrere Attribute der folgenden: **coclass**, **progid**, oder **vi_progid**.|  
+|**Erforderliche Attribute**|Eine oder mehrere der folgenden: `coclass`, `progid`, oder `vi_progid`.|  
 |**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  

@@ -1,5 +1,5 @@
 ---
-title: Idl_quote | Microsoft Docs
+title: Idl_quote | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8844a4770d0a4746c9d9de32a593d0770dcc9a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878511"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606513"
 ---
 # <a name="idlquote"></a>idl_quote
-Ermöglicht es Ihnen IDL-Konstrukte zu verwenden, die nicht in der aktuellen Version von Visual C++ unterstützt werden, und lassen sie die pass-through an der generierten IDL-Datei.  
+Ermöglicht es Ihnen, die IDL-Konstrukte verwenden, die in der aktuellen Version von Visual C++ nicht unterstützt werden, und lassen sie die an der generierten IDL-Datei übergeben.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ idl_quote(  
+[ idl_quote(  
    text  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parameter  
  *Text*  
- Der Attributname, das Visual C++-Compiler, pass-through an der generierten IDL-Datei ohne einen Compilerfehler zurückgegeben werden soll.  
+ Der Attributname, die Visual C++-Compiler mit der generierten IDL-Datei übergeben, ohne einen Compilerfehler zurückgegeben werden sollen.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die **Idl_quote** C++-Attribut dient als eigenständiges Attribut (mit einem Semikolon nach der schließenden Klammer einfügen), klicken Sie dann *Text* befindet sich in der zusammengeführten IDL-Datei ist. Wenn **Idl_quote** wird verwendet, auf ein Symbol *Text* innerhalb des Attributblocks für das Symbol befindet.  
+ Wenn die **Idl_quote** C++-Attribut dient als eigenständiges Attribut für den (durch ein Semikolon nach der schließenden Klammer), klicken Sie dann *Text* befindet sich in der zusammengeführten IDL-Datei unverändert. Wenn **Idl_quote** wird verwendet, auf ein Symbol, *Text* befindet sich innerhalb des Attributblocks für das Symbol.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt, wie Sie ein nicht unterstütztes Attribut angeben können (mit **in**, dies wird jedoch unterstützt) sowie zum Definieren und verwenden ein nicht definierter IDL-Konstrukt:  
+ Der folgende Code zeigt, wie Sie ein nicht unterstütztes Attribut angeben können (mit **in**, das unterstützt wird) und das Definieren und verwenden Sie ein nicht definierter IDL-Konstrukt:  
   
-```  
+```cpp  
 // cpp_attr_ref_idl_quote.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -79,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- Dieser Code bewirkt, dass MYFLOT und MYDUB und die *Text* Eintrag in der generierten IDL-Datei abgelegt werden soll. Die *Namen* Parameter erzwingt *Text* vor allem abgelegt werden soll, die verweist *Namen* in der generierten IDL-Datei. Die *Abhängigkeiten* Parameter erzwingt, dass die Abhängigkeit Listendefinitionen vor platziert werden *Text* in der generierten IDL-Datei.  
+ Dieser Code bewirkt, dass MYFLOT und MYDUB und *Text* Eintrag in der generierten IDL-Datei platziert werden. Die *Namen* erzwingt, dass Parameter *Text* , vor allem platziert werden soll, die verweist *Namen* in der generierten IDL-Datei. Die *Abhängigkeiten* Parameter erzwingt, dass die Abhängigkeit Listendefinitionen, bevor Sie platziert werden soll *Text* in der generierten IDL-Datei.  
   
 ## <a name="requirements"></a>Anforderungen  
   

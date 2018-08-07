@@ -1,5 +1,5 @@
 ---
-title: No_injected_text | Microsoft Docs
+title: No_injected_text | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74336ffaa5e1f9f1990acedf1669526c9152b82b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1b629f805cf07736dd7988cac6afb857a23b5e5
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880347"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603419"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
-Verhindert, dass den Compiler Code aufgrund der Verwendung des Attributs injiziert.  
+Verhindert, dass den Compiler Einfügen von Code durch Verwendung des Attributs.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ no_injected_text(  
+[ no_injected_text(  
    boolean  
 ) ];  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `boolean`(optional)  
- **"true"** ggf. keinen Code eingeschleust, **"false"** damit Code eingefügt werden kann. **"true"** ist die Standardeinstellung.  
+ *boolesche* (optional)  
+ **"true"** ggf. kein Code eingefügt, **"false"** damit Code eingefügt werden kann. **"true"** ist die Standardeinstellung.  
   
 ## <a name="remarks"></a>Hinweise  
- Die häufigste Verwendung von der **No_injected_text** C++-Attribut wird durch die [/FX](../build/reference/fx-merge-injected-code.md) -Compileroption fügt die **No_injected_text** Attribut in der MRG-Datei.  
+ Die häufigste Verwendung von der **No_injected_text** C++-Attribut ist, indem die [/FX](../build/reference/fx-merge-injected-code.md) Compileroption, die fügt die **No_injected_text** Attribut in der MRG-Datei.  
   
 ## <a name="requirements"></a>Anforderungen  
   

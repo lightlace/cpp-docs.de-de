@@ -1,5 +1,5 @@
 ---
-title: Attributzwecke | Microsoft Docs
+title: Attributzwecke | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ea3b731cc22d144e2e20dc70f14e6b0b76b1479
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ca7757c1b9a8ebf034f68b9a380c09d4a5b08f1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877835"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607023"
 ---
 # <a name="purpose-of-attributes"></a>Attributzwecke
-Attribute Erweiterung von C++ Richtungen derzeit nicht möglich ohne Unterbrechung der klassischen Struktur der Sprache. Attribute können Provider (separate DLLs) Sprachfunktionalität dynamisch zu erweitern. Das Hauptziel der Attribute ist zum Vereinfachen der Erstellung von COM-Komponenten, zusätzlich zu erhöhen die Produktivität Maß der Komponentenentwickler. Attribute können angewendet werden, nahezu alle C++-Konstrukt, z. B. Klassen, Datenmember oder Memberfunktionen. Im folgenden finden eine Hervorhebung der Vorteile dieser neuen Technologie:  
+Attribute erweitern C++ in Anweisungen, die derzeit nicht möglich, ohne die klassischen Struktur der Sprache. Attribute können Anbieter (separate DLLs), um Funktionalität Language dynamisch zu erweitern. Das Hauptziel von Attributen ist zur Vereinfachung der Erstellung von COM-Komponenten sowie gleichzeitig die Produktivität der Komponentenentwickler. Es können Attribute angewendet werden, nahezu jedem C++-Konstrukt, wie z. B. Klassen, die Datenmember oder Memberfunktionen. Im folgenden finden eine Hervorhebung der Vorteile dieser neuen Technologie:  
   
 -   Stellt eine vertraute und einfache Aufrufkonvention.  
   
--   Verwendet eingefügten Code, der im Gegensatz zu Makros, die vom Debugger erkannt wird.  
+-   Verwendet eingefügten Code, der, im Gegensatz zu Makros, die vom Debugger erkannt wird.  
   
 -   Ermöglicht die einfache Ableitung von Basisklassen ohne aufwändige Implementierungsdetails.  
   
--   Ersetzt die großen Anteil der IDL-Code, die von einer COM‑Komponente mit wenigen präzise Attribute erforderlich.  
+-   Ersetzt die große Menge der IDL-Code, die von einer COM‑Komponente, einige Attribute, die präzise erforderlich.  
   
- Beispielsweise, um einen einfachen Ereignisempfänger für eine generische ATL-Klasse zu implementieren, Sie können gelten die [Event_receiver](../windows/event-receiver.md) Attribut an eine bestimmte Klasse z. B. `CMyReceiver`. Die **Event_receiver** Attribut wird dann kompiliert, vom Visual C++-Compiler, die richtige Codepage in der Objektdatei einfügt.  
+ Beispielsweise um einen einfachen Ereignisempfänger für eine generische ATL-Klasse zu implementieren, Sie können Anwenden der [Event_receiver](../windows/event-receiver.md) Attribut für eine bestimmte Objektklasse, z. B. `CMyReceiver`. Die `event_receiver` Attribut wird dann kompiliert, vom Visual C++-Compiler, die den entsprechenden Code in der Objektdatei einfügt.  
   
 ```  
 [event_receiver(com)]  
@@ -44,7 +44,7 @@ class CMyReceiver
 }  
 ```  
   
- Sie können dann festlegen, um die **CMyReceiver** Methoden `handler1` und `handler2` zum Behandeln von Ereignissen (mit der systeminternen Funktion [__hook](../cpp/hook.md)) von einer Ereignisquelle, die Sie mithilfe von erstellen,können[Event_source](../windows/event-source.md).  
+ Anschließend können Sie festlegen, um die `CMyReceiver` Methoden `handler1` und `handler2` zum Behandeln von Ereignissen (verwenden die intrinsische Funktion [__hook](../cpp/hook.md)) aus einer Ereignisquelle, die Sie erstellen können, mit [Event_source](../windows/event-source.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konzepte](../windows/attributed-programming-concepts.md)

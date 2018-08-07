@@ -1,5 +1,5 @@
 ---
-title: IsSame-Struktur | Microsoft Docs
+title: IsSame-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52dd1920ad32719e4fbff5a0138e737367d97ff4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc770ce418f458109ab2b047a5bb0f7e006ae499
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877669"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603584"
 ---
 # <a name="issame-structure"></a>IsSame-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,15 +41,15 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T1`  
+### <a name="parameters"></a>Parameter  
+ *T1*  
  Ein Typ.  
   
- `T2`  
- Ein anderer Typ.  
+ *T2*  
+ Einen anderen Typ.  
   
 ## <a name="remarks"></a>Hinweise  
- Überprüft, ob ein Typ angegebener ist identisch mit einem anderen angegebenen Typ.  
+ Überprüft, ob es sich bei einem Typ angegeben ist identisch mit einer anderen angegebenen Typ.  
   
 ## <a name="members"></a>Member  
   

@@ -1,5 +1,5 @@
 ---
-title: 'MakeAllocator:: ~ MakeAllocator-Destruktor | Microsoft Docs'
+title: 'MakeAllocator:: ~ MakeAllocator-Destruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0734f895315f1c8ba7577d531c54a9dc11381e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e31f666ca6263a9b9b770261a0899bcad1bc8fd
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877098"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606308"
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>MakeAllocator::~MakeAllocator-Destruktor
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Hebt die Initialisierung der aktuellen Instanz der MakeAllocator-Klasse.  
+ Hebt die Initialisierung der aktuellen Instanz von der **MakeAllocator** Klasse.  
   
  Dieser Destruktor werden bei Bedarf auch den zugrunde liegenden belegten Speicher gelöscht.  
   

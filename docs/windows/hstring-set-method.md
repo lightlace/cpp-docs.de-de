@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Set-Methode | Microsoft Docs'
+title: 'Hstring:: Set-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39c227e19cdadae80f32c25515a10dd0810f5726
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aecdafe81dcebc7867d30c46be1fee271e60154c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882416"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606396"
 ---
 # <a name="hstringset-method"></a>HString::Set-Methode
-Legt den Wert des aktuellen HString-Objekts auf die angegebene Zeichenfolge mit Breitzeichen oder den angegebenen HString-Parameter fest.  
+Legt den Wert des aktuellen **HString** Objekt, das die angegebene Zeichenfolge mit Breitzeichen oder **HString** Parameter.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 HRESULT Set(  
           const wchar_t* str) throw();  
 HRESULT Set(   
@@ -40,15 +39,15 @@ HRESULT Set(
            ) throw();  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `str`  
+### <a name="parameters"></a>Parameter  
+ *str*  
  Eine Zeichenfolge mit Breitzeichen.  
   
- `len`  
- Die maximale Länge von der `str` Parameter, der mit dem aktuellen HString-Objekt zugewiesen ist.  
+ *Len*  
+ Die maximale Länge von der *str* Parameter, der mit dem aktuellen zugewiesen ist **HString** Objekt.  
   
- `hstr`  
- Ein vorhandenes HString-Objekt.  
+ *HSTR*  
+ Eine vorhandene **HString** Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

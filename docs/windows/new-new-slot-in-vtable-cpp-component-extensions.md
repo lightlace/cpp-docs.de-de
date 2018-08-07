@@ -1,5 +1,5 @@
 ---
-title: New (neuer Slot in Vtable) (Komponentenerweiterungen für C++) | Microsoft Docs
+title: New (neuer Slot in Vtable) (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32452b4fd44aed2bc399165b3184d974f22d90b6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879782"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607010"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (neuer Slot in vtable) (Komponentenerweiterungen für C++)
-Das Schlüsselwort `new` gibt an, dass ein virtuelles Member einen neuen Platz im vtable erhält.  
+Die **neue** -Schlüsselwort Gibt an, dass ein virtueller Member einen neuen Platz im Vtable erhält.  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
  (Es gibt keine Hinweise für diese Sprachfunktion, die für alle Laufzeiten gültig sind.)  
@@ -32,25 +32,24 @@ Das Schlüsselwort `new` gibt an, dass ein virtuelles Member einen neuen Platz i
  In Windows-Runtime unterstützt nicht.  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
- In einem **"/ CLR"** Kompilierung `new` gibt an, dass ein virtuelles Member einen neuen Platz im Vtable erhält,, aus dem die Funktion überschreibt keine Basisklassenmethode.  
+ In einem `/clr` Kompilierung **neue** gibt an, dass ein virtueller Member einen neuen Platz im Vtable erhält; dass die Funktion eine Methode der Basisklasse nicht überschreibt.  
   
- `new` veranlasst, dass der newslot-Modifizierer dem IL für die Funktion hinzugefügt wird.  Weitere Informationen zu "newslot" finden Sie unter:  
+ **neue** bewirkt, dass den Newslot-Modifizierer dem IL für die Funktion hinzugefügt werden.  Weitere Informationen zu "newslot" finden Sie unter:  
   
--   [MethodInfo.GetBaseDefinition-Methode](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [MethodInfo.GetBaseDefinition-Methode](https://msdn.microsoft.com/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [MethodAttributes-Enumeration](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [MethodAttributes-Enumeration](https://msdn.microsoft.com/library/system.reflection.methodattributes.aspx)  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
- Im folgenden Beispiel werden die Auswirkungen von `new` gezeigt.  
+ Das folgende Beispiel zeigt die Auswirkungen der **neue**.  
   
-```  
+```cpp  
 // newslot.cpp  
 // compile with: /clr  
 ref class C {  

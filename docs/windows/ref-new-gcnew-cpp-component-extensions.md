@@ -1,5 +1,5 @@
 ---
-title: REF neue Gcnew (Komponentenerweiterungen für C++) | Microsoft Docs
+title: REF neu, Gcnew (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,41 +20,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9533675d2894b3c3d99e3fb57abded8ea4e99d7a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51aec80ee24d96cf08d55778e108492d16ecfcc9
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879060"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606184"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (Komponentenerweiterungen für C++)
-Die `ref new` -aggregatschlüsselwort ordnet eine Instanz eines Typs, die Garbage Collection auf, wenn das Objekt wird nicht zugegriffen werden kann, die ein Handle zurückgibt ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) auf das zugeordnete Objekt.  
+Die **Ref neue** -aggregatschlüsselwort ordnet eine Instanz eines Typs, der die Garbage Collection, die ein Handle zurückgibt, wenn das Objekt wird nicht zugegriffen werden kann ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) auf das zugeordnete Objekt.  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
- Bei Arbeitsspeicher für eine Instanz eines durch `ref new` zugeordneten Typs wird die Zuordnung automatisch aufgehoben.  
+ Arbeitsspeicher für eine Instanz eines Typs, die von zugeordnet ist **Ref neue** wird die Zuordnung automatisch aufgehoben.  
   
- Ein `ref new`-Vorgang löst `OutOfMemoryException` aus, wenn es nicht verwendet werden kann, um Arbeitsspeicher zuzuordnen.  
+ Ein **Ref neue** -Vorgang löst `OutOfMemoryException` es kann kein Arbeitsspeicher belegt ist.  
   
- Weitere Informationen darüber, wie Arbeitsspeicher für systemeigene C++-Typen zugeordnet und freigegeben wird, finden Sie unter [die neue "und" delete](../cpp/new-and-delete-operators.md).  
+ Weitere Informationen darüber, wie der Arbeitsspeicher für systemeigene C++-Typen zugeordnet und freigegeben wird, finden Sie unter [der neuen "und" delete](../cpp/new-and-delete-operators.md).  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
- Verwenden Sie `ref new`, um Arbeitsspeicher für Windows-Runtime-Objekte zuzuordnen, deren Lebensdauer zu automatisch verwalten möchten. Die Zuordnung des Objekts wird automatisch aufgehoben, wenn sein Verweiszähler bei 0 liegt. Dies ist der Fall, nachdem die letzte Kopie des Verweises den Gültigkeitsbereich verlassen hat. Weitere Informationen finden Sie unter [Verweisklassen und Strukturen](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+ Verwendung **Ref neue** Zuweisen von Arbeitsspeicher für die Windows-Runtime-Objekte, deren Lebensdauer automatisch verwaltet werden soll. Die Zuordnung des Objekts wird automatisch aufgehoben, wenn sein Verweiszähler bei 0 liegt. Dies ist der Fall, nachdem die letzte Kopie des Verweises den Gültigkeitsbereich verlassen hat. Weitere Informationen finden Sie unter [Verweisklassen und Strukturen](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- Der Arbeitsspeicher für einen verwalteten Typ (Verweis oder Werttyp) wird durch `gcnew` zugeordnet, und mithilfe der Garbage Collection wird dessen Zuordnung aufgehoben.  
+ Arbeitsspeicher für einen verwalteten Typ (Typ: Verweis- oder Werttyp) wird zugewiesen, indem Sie **Gcnew**, und mithilfe der Garbagecollection freigegeben.  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
- Im folgenden Beispiel verwendet `gcnew` zum Zuordnen eines „Message“-Objekts verwendet.  
+ Im folgenden Beispiel wird **Gcnew** ein Message-Objekt zugewiesen werden.  
   
-```  
+```cpp  
 // mcppv2_gcnew_1.cpp  
 // compile with: /clr  
 ref struct Message {  
@@ -69,11 +68,9 @@ int main() {
 }  
 ```  
   
- **Beispiel**  
+ Im folgenden Beispiel wird **Gcnew** einen geschachtelter Werttyp für die Verwendung, wie einem Verweistyp erstellen.  
   
- Im folgenden Beispiel wird `gcnew` zum Erstellen eines geschachtelten Werttyps verwendet, der wie ein Verweistyp verwendet werden soll.  
-  
-```  
+```cpp  
 // example2.cpp : main project file.  
 // compile with /clr  
 using namespace System;  

@@ -1,5 +1,5 @@
 ---
-title: Eingeschränkte | Microsoft Docs
+title: Eingeschränkte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1d688d4ebca5d2cc01901f5fe1afaa4536b71bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79b4e53947e0e87fb70211ca40bc54f4500855f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892877"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602771"
 ---
 # <a name="restricted"></a>restricted
-Gibt an, dass ein Mitglied aus einem Modul, Schnittstelle oder Disp-Schnittstelle kann nicht nach dem Zufallsprinzip aufgerufen werden.  
+Gibt an, dass ein Mitglied aus einem Modul, Schnittstelle oder Disp-Schnittstelle nicht beliebig aufgerufen werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ restricted(  
+[ restricted(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `interfaces`  
- Eine oder mehrere Schnittstellen, die nach dem Zufallsprinzip nicht auf ein COM-Objekt aufgerufen werden können. Dieser Parameter ist nur gültig, wenn auf eine Klasse angewendet werden.  
+### <a name="parameters"></a>Parameter  
+ *interfaces*  
+ Eine oder mehrere Schnittstellen, die auf ein COM-Objekt nicht beliebig aufgerufen werden können. Dieser Parameter ist nur gültig, wenn Sie auf eine Klasse angewendet werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **eingeschränkte** C++-Attribut hat die gleiche Funktionalität wie die [eingeschränkte](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL-Attribut.  
+ Die **eingeschränkten** C++-Attribut hat die gleiche Funktionalität wie die [eingeschränkten](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt, wie Sie die **eingeschränkte** Attribut:  
+ Der folgende Code zeigt, wie Sie mit der **eingeschränkten** Attribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_restricted.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -75,9 +74,9 @@ class c : public a, public b
   
 |||  
 |-|-|  
-|**Betrifft**|-Schnittstellenmethode, `interface`, **Klasse**, `struct`|  
+|**Betrifft**|-Schnittstellenmethode, **Schnittstelle**, **Klasse**, **Struktur**|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**coclass** (bei Anwendung auf **class** oder `struct`)|  
+|**Erforderliche Attribute**|**Co-Klasse** (bei Anwendung auf **Klasse** oder **Struktur**)|  
 |**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  

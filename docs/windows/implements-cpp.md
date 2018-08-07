@@ -1,5 +1,5 @@
 ---
-title: implementiert (C++) | Microsoft Docs
+title: implementiert (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 118487d533e8f4701f52804ebbe1e669d29fc4cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880692"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606461"
 ---
 # <a name="implements-c"></a>implements (C++)
-Gibt die Dispatchschnittstellen, die Mitglieder der IDL-Co-Klasse werden erzwungen werden.  
+Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse angehören.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ implements(   
+[ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
 )]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- **interfaces**  
+### <a name="parameters"></a>Parameter  
+ *interfaces*  
  Eine durch Trennzeichen getrennte Liste von Schnittstellen, die ein Mitglied der IDL-Co-Klasse. Ist eine kurzmethode zur Angabe einer einzelnen Schnittstelle **implementiert (***Interface_name***)**.  
   
- **Disp-Schnittstellen**  
- Eine durch Trennzeichen getrennte Liste der Disp-Schnittstelle, die ein Mitglied der IDL-Co-Klasse. Ist eine kurzmethode zur Angabe einer einzelnen Dispinterface **implementiert (Disp** * = Dispinterface_name ***)**.  
+ *Disp-Schnittstellen*  
+ Eine durch Trennzeichen getrennte Liste von die Disp-Schnittstelle, die ein Mitglied der IDL-Co-Klasse. Ist eine kurzmethode zur Angabe einer einzelnen Dispinterface **implementiert (Disp-Schnittstellen** * = Dispinterface_name ***)**.  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig werden nur COM-Schnittstellen, die Basisklassen der Co-Klasse sind in der IDL-Co-Klasse hinzugefügt. **implementiert** können Sie andere Schnittstellen, die Mitglieder der IDL-Co-Klasse werden zu erzwingen.  
+ Standardmäßig werden nur COM-Schnittstellen, die der Co-Klassen sind in der IDL-Co-Klasse hinzugefügt. **implementiert** können Sie andere Schnittstellen IDL-Co-Klasse Mitglieder zu erzwingen.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -53,7 +52,7 @@ Gibt die Dispatchschnittstellen, die Mitglieder der IDL-Co-Klasse werden erzwung
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`|  
+|**Betrifft**|**Klasse**, **Struktur**|  
 |**Wiederholbar**|Ja|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  
@@ -61,9 +60,9 @@ Gibt die Dispatchschnittstellen, die Mitglieder der IDL-Co-Klasse werden erzwung
  Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel besteht aus drei Teilen: einer IDL-Datei und die zugehörigen .h-Datei und einer C++-Datei.  
+ Im folgende Beispiel besteht aus drei Teilen: einer IDL-Datei und die zugehörigen .h-Datei und einer C++-Datei.  
   
- Angenommen Sie, die folgende IDL-Datei, die für den Compiler verfügbar.  
+ Angenommen Sie die IDL-Datei, die an den Compiler verfügbar.  
   
 ```  
 // attr_implements.idl  
@@ -113,9 +112,9 @@ library odod
 ```  
   
 ## <a name="example"></a>Beispiel  
- Und die folgenden .h-Datei, die auch für den Compiler verfügbar sein muss.  
+ Und die folgenden .h-Datei, die muss auch für den Compiler verfügbar sein.  
   
-```  
+```cpp  
 // attr_implements.h  
 // this ALWAYS GENERATED file contains definitions for the interfaces  
   
@@ -430,9 +429,9 @@ CBar;
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Programm ohne implementiert werden IBar1 IBar2 und gegebenen nicht in der Co-Klasse in der generierten IDL-Datei sein.  
+ Im folgenden Programm ohne implementiert `IBar1`, `IBar2`, und `ISna` werden nicht in der `coclass` in der generierten IDL-Datei.  
   
-```  
+```cpp  
 // attr_implements.cpp  
 // compile with: /LD /link /idlout:out.idl  
 #define _ATL_ATTRIBUTES 1  

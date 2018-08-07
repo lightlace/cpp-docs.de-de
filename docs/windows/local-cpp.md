@@ -1,5 +1,5 @@
 ---
-title: lokale (C++) | Microsoft Docs
+title: lokal (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17a57ad56402b345aa64e4e4fd02bc57dd7f0321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: efa937c1eaabb23fe5a360444f8c2105b735b260
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877916"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604199"
 ---
 # <a name="local-c"></a>local (C++)
-Bei Verwendung in der Schnittstelle Header können Sie die MIDL-Compiler als ein Header-Generator zu verwenden. Wenn in einer einzelnen Funktion verwendet wird, kennzeichnet eine lokale Prozedur für die keine Stubs generiert werden.  
+Wenn in der Kopfzeile der Schnittstelle verwendet wird, können Sie Sie den MIDL-Compiler als ein Header-Generator zu verwenden. Bei Verwendung in einer einzelnen Funktion kennzeichnet eine lokale Prozedur, die für die keine Stubs generiert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [local]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die `local` C++-Attribut hat die gleiche Funktionalität wie die [lokale](http://msdn.microsoft.com/library/windows/desktop/aa367071) MIDL-Attribut.  
+ Die **lokalen** C++-Attribut hat die gleiche Funktionalität wie die [lokalen](http://msdn.microsoft.com/library/windows/desktop/aa367071) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Finden Sie unter [Aufruf als](../windows/call-as.md) ein Beispiel zum Verwenden von `local`.  
+ Finden Sie unter [Call_as](../windows/call-as.md) ein Beispiel zur Verwendung für **lokalen**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -47,15 +45,15 @@ Bei Verwendung in der Schnittstelle Header können Sie die MIDL-Compiler als ein
   
 |||  
 |-|-|  
-|**Betrifft**|`interface`,-Schnittstellenmethode|  
+|**Betrifft**|**Schnittstelle**,-Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|**dispinterface**|  
+|**Ungültige Attribute**|`dispinterface`|  
   
  Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [IDL-Attribute](../windows/idl-attributes.md)   
  [Schnittstellenattribut](../windows/interface-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [call_as](../windows/call-as.md)   

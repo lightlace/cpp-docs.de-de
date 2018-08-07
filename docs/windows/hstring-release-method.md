@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Release-Methode | Microsoft Docs'
+title: 'Hstring:: Release-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fd7e09980d82cdef346202ef8a1fde4d7cb1c66
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c784a0f91a5809ae1880ae6abf5bfa1e45f9a4c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875291"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604920"
 ---
 # <a name="hstringrelease-method"></a>HString::Release-Methode
-Löscht den zugrunde liegenden Zeichenfolgenwert und initialisiert das aktuelle HString-Objekt auf einen leeren Wert.  
+Löscht den zugrunde liegenden Zeichenfolgenwert und initialisiert die aktuelle **HString** Objekt auf einen leeren Wert.  
   
 ## <a name="syntax"></a>Syntax  
   

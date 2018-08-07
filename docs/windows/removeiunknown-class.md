@@ -1,5 +1,5 @@
 ---
-title: RemoveIUnknown-Klasse | Microsoft Docs
+title: RemoveIUnknown-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb005bc3cbf411a7d5b5ddbfa44cd6aecf802105
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 69775303c5a12f82ef2a31cc61112af4b14d3aad
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879541"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606168"
 ---
 # <a name="removeiunknown-class"></a>RemoveIUnknown-Klasse
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,14 +39,14 @@ template <
 class RemoveIUnknown : public T;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
+### <a name="parameters"></a>Parameter  
+ *T*  
  Eine Klasse.  
   
 ## <a name="remarks"></a>Hinweise  
- Stellt einen Typ, der entspricht einer `IUnknown`-Basis Typ ist jedoch nicht virtuelle `QueryInterface`, `AddRef`, und `Release` Memberfunktionen.  
+ Ist einen Typ, der entspricht einer `IUnknown`-Basis-Typ, weist jedoch nicht virtuelle `QueryInterface`, `AddRef`, und `Release` Memberfunktionen.  
   
- Standardmäßig bieten COM-Methoden virtuellen `QueryInterface`, `AddRef`, und lassen Sie die Methoden. Allerdings `ComPtr` nicht den Mehraufwand für virtuelle Methoden erfordern. `RemoveIUnknown` Dieser Aufwand durch die Bereitstellung von privaten, nicht virtuelle eliminiert `QueryInterface`, `AddRef`, und `Release` Methoden.  
+ COM-Methoden in der Standardeinstellung bieten virtuelle `QueryInterface`, `AddRef`, und `Release` Methoden. Allerdings `ComPtr` erfordert nicht die Zusatzaufwand virtueller Methoden. `RemoveIUnknown` entfällt dieser Mehraufwand durch die Bereitstellung von privaten, nicht virtuelle `QueryInterface`, `AddRef`, und `Release` Methoden.  
   
 ## <a name="members"></a>Member  
   
@@ -54,7 +54,7 @@ class RemoveIUnknown : public T;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`ReturnType`|Ein Synonym für einen Typ, der Vorlagenparameter entspricht `T` , hat jedoch nicht virtuelle IUnknown-Member.|  
+|`ReturnType`|Ein Synonym für einen Typ, die Template-Parameter entspricht *T* aber nicht virtuelle `IUnknown` Member.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `T`  

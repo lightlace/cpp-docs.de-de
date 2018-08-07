@@ -1,5 +1,5 @@
 ---
-title: IsBaseOfStrict-Struktur | Microsoft Docs
+title: IsBaseOfStrict-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db8f315c0589ceb7cd9411873152fe644985818e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f9066a9cd8985b132c1fbd9f6a97bcd0654003d2
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876890"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604502"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,17 +42,17 @@ template <
 struct IsBaseOfStrict<Base, Base>;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `Base`  
+### <a name="parameters"></a>Parameter  
+ *Basis*  
  Der Basistyp.  
   
- `Derived`  
+ *Abgeleitete*  
  Der abgeleitete Typ.  
   
 ## <a name="remarks"></a>Hinweise  
  Testet, ob ein Typ die Basis eines anderen ist.  
   
- Die erste Vorlage testet, ob ein Typ von einem Basistyp abgeleitet ist ergeben **"true"** oder **"false"**. Die zweite Vorlage testet, ob ein Typ von sich selbst zu abgeleitet ist, ergibt immer **"false"**.  
+ Die erste Vorlage testet, ob ein Typ von einem Basistyp abgeleitet ist, die ergeben können **"true"** oder **"false"**. Die zweite Vorlage testet, ob ein Typ von sich selbst zu abgeleitet ist, die führt zu immer **"false"**.  
   
 ## <a name="members"></a>Member  
   

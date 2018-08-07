@@ -1,5 +1,5 @@
 ---
-title: ID | Microsoft Docs
+title: ID | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c674765a0dfc06648d64a2b3b4e820bb467e700
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b36a45dad71f2144c3e3d0990ab7715d00e8ff21
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882446"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39605707"
 ---
 # <a name="id"></a>ID
-Gibt eine `dispid` -Parameter für eine Memberfunktion (eine Eigenschaft oder eine Methode in einer Schnittstelle oder Disp-Schnittstelle).  
+Gibt an, eine *Dispid* Parameter für eine Memberfunktion (eine Eigenschaft oder eine Methode, in eine Schnittstelle oder Disp-Schnittstelle).  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ id(  
+[ id(  
    dispid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `dispid`  
+### <a name="parameters"></a>Parameter  
+ *DISPID*  
  Die Dispatch-ID für die Schnittstellenmethode.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Id** C++-Attribut hat die gleiche Funktionalität wie die [Id](http://msdn.microsoft.com/library/windows/desktop/aa367040) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [bindbare](../windows/bindable.md) ein Beispiel zum Verwenden von **Id**.  
+ Siehe das Beispiel für [bindbare](../windows/bindable.md) ein Beispiel zur Verwendung für **Id**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -61,8 +60,8 @@ Gibt eine `dispid` -Parameter für eine Memberfunktion (eine Eigenschaft oder ei
   
 ## <a name="see-also"></a>Siehe auch  
  [IDL-Attribute](../windows/idl-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [Datenmemberattribute](../windows/data-member-attributes.md)   
- ["DefaultValue"](../windows/defaultvalue.md)   
+ [DefaultValue](../windows/defaultvalue.md)   
  [in](../windows/in-cpp.md)   
  [out](../windows/out-cpp.md)   

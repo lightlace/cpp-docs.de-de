@@ -1,5 +1,5 @@
 ---
-title: Schnittstellenklasse (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Schnittstellenklasse (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,61 +18,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 03c081abc457d025ca2818c887deeb5baf4c4de7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880858"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604485"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (Komponentenerweiterungen für C++)
-Deklariert eine Schnittstelle.  Informationen zu systemeigenen Schnittstellen finden Sie unter [__interface](../cpp/interface.md).  
+Deklariert eine Schnittstelle.  Weitere Informationen zu systemeigenen Schnittstellen, finden Sie unter [__interface](../cpp/interface.md).  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
- **Syntax**  
+
+### <a name="syntax"></a>Syntax  
   
 ```  
-  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
- **Parameter**  
+### <a name="parameters"></a>Parameter  
   
  *interface_access*  
- Der Zugriff auf eine Schnittstelle außerhalb der Assembly.  Mögliche Werte sind **öffentlichen** und `private`.  Standardmäßig ist `private` festgelegt.  Sind keine geschachtelten Schnittstellen ein *Interface_access* Spezifizierer.  
+ Der Zugriff auf eine Schnittstelle außerhalb der Assembly.  Mögliche Werte sind **öffentliche** und **private**.  **private** ist die Standardeinstellung. Sind keine verschachtelte Schnittstellen ein *Interface_access* Spezifizierer.  
   
  *name*  
  Der Name der Schnittstelle.  
   
  *inherit_access*  
- Der Zugriff auf *Base_interface*.  Die einzige Eingabehilfen für zulässig ist eine Basisschnittstelle `public` (Standard).  
+ Der Zugriff auf *Base_interface*.  Die einzige Eingabehilfen für zulässig ist eine Basisschnittstelle **öffentliche** (Standard).  
   
  *Base_interface* (optional)  
  Eine Basisschnittstelle für die Schnittstelle *Namen*.  
   
- **Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
- **Struktur, Schnittstelle** entspricht **Schnittstellenklasse**.  
+ **Schnittstelle Struktur** entspricht **Schnittstellenklasse**.  
   
- Eine Schnittstelle kann Deklarationen für Funktionen, Ereignisse und Eigenschaften enthalten.  Alle Schnittstellenmember besitzen öffentliche zugreifbarkeit. Eine Schnittstelle kann auch statische Datenmember, Funktionen, Ereignisse und Eigenschaften enthalten, und diese statischen Member müssen in der Schnittstelle definiert werden.  
+ Eine Schnittstelle kann Deklarationen für Funktionen, Ereignisse und Eigenschaften enthalten.  Alle Schnittstellenmember über öffentliche Barrierefreiheit verfügen. Eine Schnittstelle kann auch enthalten, statische Datenmember, Funktionen, Ereignisse und Eigenschaften, und diese statischen Member müssen in der Schnittstelle definiert werden.  
   
- Eine Schnittstelle definiert, wie eine Klasse implementiert werden kann. Eine Schnittstelle ist keine Klasse und Klassen können nur Schnittstellen implementieren. Wenn eine Funktion, die in einer Schnittstelle deklariert eine Klasse definiert wird, wird die Funktion implementiert, nicht außer Kraft gesetzt. Aus diesem Grund schließt Namenssuche Schnittstellenmember nicht.  
+ Eine Schnittstelle definiert, wie eine Klasse implementiert werden kann. Eine Schnittstelle ist keine Klasse an, und Klassen können nur Schnittstellen implementieren. Wenn eine Klasse in einer Schnittstelle deklarierten definiert wird, wird die Funktion implementiert, nicht außer Kraft gesetzt. Aus diesem Grund umfasst Namenssuche Schnittstellenmember nicht.  
   
  Eine Klasse oder Struktur, die von einer Schnittstelle abgeleitet wird, muss alle Member der Schnittstelle implementieren. Bei der Implementierung der Schnittstelle *Namen* müssen Sie auch die Schnittstellen implementieren die `base_interface` Liste.  
   
  Weitere Informationen finden Sie unter:  
   
--   [Statische Schnittstellenkonstruktoren](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)  
+-   [Statischen Schnittstellenkonstruktors](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)  
   
 -   [Generische Schnittstellen (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
   
- Informationen zu anderen CLR-Typen finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Weitere Informationen zu anderen CLR-Typen finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md).  
   
  Sie können zur Kompilierzeit erkennen, wenn ein Typ eine Schnittstelle mit ist `__is_interface_class(type)`. Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- In der Entwicklungsumgebung können Sie F1-Hilfe zu dieser Schlüsselwörter abrufen, indem Sie das Schlüsselwort Hervorhebung (`interface class`, z. B.), und drücken F1.  
+ In der Entwicklungsumgebung können Sie F1-Hilfe für diese Schlüsselwörter abrufen, indem Sie die Hervorhebung des Schlüsselworts (`interface class`, z. B.) und durch Drücken von F1.  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
  **Hinweise**  
@@ -80,7 +80,7 @@ interface class
  (Es gibt keine Hinweise für diese Sprachfunktion, die nur für Windows-Runtime gelten.)  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **Hinweise**  
@@ -88,14 +88,13 @@ interface class
  (Es gibt keine Hinweise für diese Sprachfunktion, die nur für Common Language Runtime gelten.)  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
  Im folgenden Codebeispiel wird veranschaulicht, wie eine Schnittstelle für das Verhalten der Clock-Funktion definieren kann.  
   
-```  
+```cpp  
 // mcppv2_interface_class.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -201,11 +200,9 @@ OnClick: 7, 3.14159
 in Function_1  
 ```  
   
- **Beispiel**  
+ Das folgende Codebeispiel zeigt zwei Möglichkeiten zum Implementieren von Funktionen mit derselben Signatur deklariert in mehreren Schnittstellen und die Verwendung dieser Schnittstellen durch eine Klasse.  
   
- Das folgende Codebeispiel zeigt zwei Möglichkeiten zum Implementieren von Funktionen die gleiche Signatur in mehreren Schnittstellen und die Verwendung dieser Schnittstellen durch eine Klasse deklariert.  
-  
-```  
+```cpp  
 // mcppv2_interface_class_2.cpp  
 // compile with: /clr /c  
 interface class I {  

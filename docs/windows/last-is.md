@@ -1,5 +1,5 @@
 ---
-title: Last_is | Microsoft Docs
+title: Last_is | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f27c0a12ddf5fe87f7065a16d042bd0afcfc0315
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d0519409e71457ca025318a591772faf33592abe
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877520"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606067"
 ---
 # <a name="lastis"></a>last_is
-Gibt den Index des letzten Arrayelements übermittelt werden sollen.  
+Gibt den Index des letzten Elements Array übertragen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ last_is(  
+[ last_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *Ausdruck*  
- Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argument Slots sind zulässig.  
+ Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argumentliste Slots sind zulässig.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Last_is** C++-Attribut hat die gleiche Funktionalität wie die [Last_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Finden Sie unter [First_is](../windows/first-is.md) für ein Beispiel für einen Abschnitt eines Arrays angeben.  
+ Finden Sie unter [First_is](../windows/first-is.md) ein Beispiel für einen Abschnitt eines Arrays angeben.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -52,7 +51,7 @@ Gibt den Index des letzten Arrayelements übermittelt werden sollen.
   
 |||  
 |-|-|  
-|**Betrifft**|Im Feld `struct` oder **Union**, Parameter interface, Schnittstelle Methode|  
+|**Betrifft**|Im Feld **Struktur** oder **Union**, Schnittstellenparameter,-Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

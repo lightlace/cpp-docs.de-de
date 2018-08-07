@@ -1,5 +1,5 @@
 ---
-title: Satype | Microsoft Docs
+title: Satype | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a77021cbcf6622701a1025ef33000196ba7bb6d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a5376e0e830654c15dc31522b07ed53af4492bf
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888681"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603393"
 ---
 # <a name="satype"></a>satype
-Gibt den Datentyp, der die **SAFEARRAY** Struktur.  
+Gibt den Datentyp, der die `SAFEARRAY` Struktur.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ satype(  
+[ satype(  
    data_type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *data_type*  
- Der Datentyp für die **SAFEARRAY** Datenstruktur, die als Parameter an eine Schnittstellenmethode übergeben wird.  
+ Der Datentyp für die `SAFEARRAY` -Datenstruktur, die für eine Schnittstellenmethode als Parameter übergeben wird.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -46,20 +45,20 @@ Gibt den Datentyp, der die **SAFEARRAY** Struktur.
   
 |||  
 |-|-|  
-|**Betrifft**|Parameter, für die Schnittstellen-Methode|  
+|**Betrifft**|Parameter, für die Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Satype** C++-Attribut gibt den Datentyp, der die **SAFEARRAY**.  
+ Die **Satype** C++-Attribut gibt den Datentyp, der die `SAFEARRAY`.  
   
 > [!NOTE]
->  Eine Dereferenzierungsebene aus gelöscht wird die **SAFEARRAY** Zeiger in der generierten IDL-Datei aus, wie sie in der CPP-Datei deklariert ist.  
+>  Eine Dereferenzierungsebene aus gelöscht wird die `SAFEARRAY` Zeiger in der generierten IDL-Datei aus, wie sie in der CPP-Datei deklariert ist.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // cpp_attr_ref_satype.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -73,5 +72,5 @@ __interface A {
 ## <a name="see-also"></a>Siehe auch  
  [Compilerattribute](../windows/compiler-attributes.md)   
  [Parameterattribute](../windows/parameter-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [ID](../windows/id.md)   

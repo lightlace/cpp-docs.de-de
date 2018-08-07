@@ -1,5 +1,5 @@
 ---
-title: Iid_is | Microsoft Docs
+title: Iid_is | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9ef3a14211e223b9902dc9843639d217ceaf1b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f0dd12df088d8fc55cc4f1a8eaf71bcbb7d4e93
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878001"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603289"
 ---
 # <a name="iidis"></a>iid_is
-Gibt die IID der COM-Schnittstelle, die einen Schnittstellenzeiger verweist.  
+Gibt die IID für die COM-Schnittstelle, die einen Schnittstellenzeiger einen verweist.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ iid_is(  
+[ iid_is(  
    "expression"  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parameter  
  *Ausdruck*  
- Ein Ausdruck der C#-Sprache, der eine IID einer COM-Schnittstelle angibt, auf einen Schnittstellenzeiger verweist.  
+ Ein Ausdruck der C-Sprache, der eine IID einer COM-Schnittstelle angibt, auf einen Schnittstellenzeiger zeigt.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Iid_is** C++-Attribut hat die gleiche Funktionalität wie die [Iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) MIDL-Attribut.  
@@ -46,7 +45,7 @@ Gibt die IID der COM-Schnittstelle, die einen Schnittstellenzeiger verweist.
 ## <a name="example"></a>Beispiel  
  Der folgende Code zeigt die Verwendung von **Iid_is**:  
   
-```  
+```cpp  
 // cpp_attr_ref_iid_is.cpp  
 // compile with: /LD  
 #include "wtypes.h"  

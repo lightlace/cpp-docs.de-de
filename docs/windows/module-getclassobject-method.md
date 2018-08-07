@@ -1,5 +1,5 @@
 ---
-title: 'Module:: GetClassObject-Methode | Microsoft Docs'
+title: 'Module:: GetClassObject-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9205b04fc27e1c6e0e6133a08c3c2f69ffdfc314
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63ff6c63702cda709f4431d9c7e5be5a4bdb8449
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878537"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602652"
 ---
 # <a name="modulegetclassobject-method"></a>Module::GetClassObject-Methode
-Ermittelt einen Cache von Klassenfactorys.  
+Ruft einen Cache von Klassenfactorys.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,23 +38,23 @@ Ermittelt einen Cache von Klassenfactorys.
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `clsid`  
+### <a name="parameters"></a>Parameter  
+ *clsid*  
  Klassen-ID.  
   
- `riid`  
+ *riid*  
  Schnittstellen-ID, die Sie anfordern.  
   
- `ppv`  
- Ein Zeiger auf das zurückgegebene Objekt.  
+ *ppv*  
+ Zeiger auf das zurückgegebene Objekt.  
   
- `serverName`  
- Den Namen des Servers, der in beiden angegeben ist die `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, oder `ActivatableClass` Makro; oder `nullptr` der Standardservername abgerufen.  
+ *ServerName*  
+ Den Namen des Servers, der entweder angegeben ist die `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, oder `ActivatableClass` Makro; oder **"nullptr"** um den Standardnamen für den Server zu erhalten.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode nur für COM, nicht die Windows-Runtime. Diese Methode macht nur IClassFactory Methoden.  
+ Verwenden Sie diese Methode nur für COM, nicht die Windows-Runtime. Diese Methode macht nur `IClassFactory` Methoden.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

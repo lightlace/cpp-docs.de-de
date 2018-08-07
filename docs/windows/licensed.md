@@ -1,5 +1,5 @@
 ---
-title: lizenziert | Microsoft Docs
+title: lizenzierte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7d915d53b246c98372ce8647e35fb996e9a7c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66e195480814fe7ebf228b180ac5999d1ab92bab
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875746"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39603801"
 ---
 # <a name="licensed"></a>licensed
-Gibt an, dass das COM-Objekt, das auf die es angewendet wird lizenziert, und muss mit instanziiert werden **IClassFactory2**.  
+Gibt an, dass das COM-Objekt, das auf die es angewendet wird lizenziert, und muss mit instanziiert werden `IClassFactory2`.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [licensed]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
@@ -40,7 +38,7 @@ Gibt an, dass das COM-Objekt, das auf die es angewendet wird lizenziert, und mus
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // cpp_attr_ref_licensed.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -65,9 +63,9 @@ public:
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`|  
+|**Betrifft**|**Klasse**, **Struktur**|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**coclass**|  
+|**Erforderliche Attribute**|`coclass`|  
 |**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  

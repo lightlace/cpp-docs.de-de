@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Casttobase-Methode | Microsoft Docs'
+title: 'Interfacetraits:: Casttobase-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cd8fa2106ac3792c0352aa40ea34b049c1e5ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4f284514472796f22d176325a0223848a827c85c
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878524"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606448"
 ---
 # <a name="interfacetraitscasttobase-method"></a>InterfaceTraits::CastToBase-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,12 +36,12 @@ static __forceinline Base* CastToBase(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
- Der Typ des Parameters `ptr`.  
+### <a name="parameters"></a>Parameter  
+ *T*  
+ Der Typ des Parameters *Ptr*.  
   
- `ptr`  
- Zeiger auf einen Typ `T`.  
+ *ptr*  
+ Zeiger auf einen Typ *T*.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein Zeiger auf `Base`.  

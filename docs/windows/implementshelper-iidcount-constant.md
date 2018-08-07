@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Iidcount-Konstante | Microsoft Docs'
+title: 'Implementshelper:: Iidcount-Konstante | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa63cfa765d54d20b943aa3a4aabf3dc51a16984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f08564088d00df332db43f207284dae9fc99109
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874001"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39604254"
 ---
 # <a name="implementshelperiidcount-constant"></a>ImplementsHelper::IidCount-Konstante
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 static const unsigned long IidCount;  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Enthält die Anzahl der implementierten Schnittstellen-IDs im aktuellen Objekt implementiert.  
+ Enthält die Anzahl der implementierten Schnittstellen-IDs in der aktuellen `Implements` Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  

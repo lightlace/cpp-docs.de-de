@@ -1,5 +1,5 @@
 ---
-title: RuntimeClass-Klasse | Microsoft Docs
+title: RuntimeClass-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d777dd15e484ae296139bbe2bdc9b0cddcab2d59
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889006"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39606331"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass-Klasse
-Stellt eine WinRT- oder COM-Klasse, die die angegebenen Schnittstellen erbt und die angegebene Windows-Runtime, Klassisches COM und schwachen Verweis Unterstützung bietet.  
+Stellt eine WinRT oder COM-Klasse, die die angegebene Schnittstelle erbt und die angegebenen Windows-Runtime, Klassisches COM und schwachen Verweis-Unterstützung.  
   
-Diese Klasse stellt die Implementierung Textbaustein WinRT und COM-Klassen, die die Implementierung von `QueryInterface`, `AddRef`, `Release` usw. verwaltet den Verweiszähler des Moduls und bietet Unterstützung für das Klassenfactory für Bereitstellung aktivierbare Objekte.
+Diese Klasse stellt die Codebausteine-Implementierung von WinRT und COM-Klassen, die die Implementierung von `QueryInterface`, `AddRef`, `Release` usw. verwaltet den Verweiszähler des Moduls und verfügt über Unterstützung für die Bereitstellung der Klassenfactory für aktivierbare Objekte.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,15 +36,15 @@ template <typename ...TInterfaces> class RuntimeClass
 template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 ```
   
-#### <a name="parameters"></a>Parameter  
- `classFlags`  
-Optionale Parameter. Eine Kombination aus einem oder mehreren [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) Enumerationswerte. Die `__WRL_CONFIGURATION_LEGACY__` Makro kann definiert werden, um den Standardwert des ClassFlags für alle Common Language Runtime-Klassen im Projekt ändern. Wenn definiert, sind RuntimeClass-Instanzen in der Standardeinstellung nicht agile. Wenn Sie nicht definiert ist, sind RuntimeClass-Instanzen standardmäßig agile. Zur Vermeidung Mehrdeutigkeit immer angeben der Microsoft::WRL::FtmBase in `TInterfaces` oder RuntimeClassType::InhibitFtmBase. Beachten Sie: Wenn InhibitFtmBase und FtmBase sind, dass sowohl das Objekt verwendet wird nicht agil sein.
+### <a name="parameters"></a>Parameter  
+ *classFlags*  
+Optionale Parameter. Eine Kombination aus einem oder mehreren [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) -Enumerationswerte fest. Die `__WRL_CONFIGURATION_LEGACY__` Makro definiert werden kann, um den Standardwert ClassFlags für alle Common Language Runtime-Klassen im Projekt zu ändern. Wenn definiert, sind RuntimeClass-Instanzen standardmäßig nicht agile. Wenn Sie nicht definiert ist, sind RuntimeClass-Instanzen standardmäßig agile. Um zu vermeiden Mehrdeutigkeit Geben Sie immer die `Microsoft::WRL::FtmBase` in `TInterfaces` oder `RuntimeClassType::InhibitFtmBase`. Beachten Sie, wenn InhibitFtmBase und FtmBase sind, dass sowohl das Objekt verwendet, werden als agile.
  
- `TInterfaces`  
-Die Liste der Schnittstellen das Objekt implementiert, hinter IUnknown, "iinspectable" oder anderen Schnittstellen von gesteuert [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Es listet möglicherweise auch andere Klassen aus, insbesondere Microsoft::WRL::FtmBase abgeleitet werden, um das agil machen, das Objekt und dazu führen, dass IMarshal implementieren.
+ *TInterfaces*  
+Die Liste der Schnittstellen das Objekt implementiert, über `IUnknown`, `IInspectable` oder anderen Schnittstellen gesteuert durch [RuntimeClassType](../windows/runtimeclasstype-enumeration.md). Kann auch andere Klassen von, abgeleitet werden, insbesondere auflisten `Microsoft::WRL::FtmBase` agil machen, das Objekt, und dazu führen, dass implementieren `IMarshal`.
   
 ## <a name="members"></a>Member  
-`RuntimeClassInitialize` Eine Funktion, die das Objekt initialisiert werden, wenn die MakeAndInitialize-Vorlagenfunktion verwendet wird, um das Objekt zu erstellen. Es gibt S_OK, wenn das Objekt erfolgreich initialisiert wurde oder eine COM-Fehlercode zurück, wenn Fehler bei der Initialisierung. Die COM-Fehlercode wird als der Rückgabewert der MakeAndInitialize weitergegeben. Beachten Sie, dass die RuntimeClassInitialize-Methode nicht aufgerufen wird, wenn die Vorlagenfunktion Stellen verwendet wird, um das Objekt zu erstellen.
+`RuntimeClassInitialize` Eine Funktion, die das Objekt initialisiert, wenn die `MakeAndInitialize` Vorlagenfunktion zum Erstellen des Objekts verwendet wird. Es gibt S_OK zurück, wenn das Objekt erfolgreich initialisiert wurde, oder eine COM-Fehlercode zurück, wenn Fehler bei der Initialisierung. Die COM-Fehlercode als Rückgabewert der weitergegeben wird `MakeAndInitialize`. Beachten Sie, dass die `RuntimeClassInitialize` Methode wird nicht aufgerufen, wenn die `Make` Vorlagenfunktion zum Erstellen des Objekts verwendet wird.
 
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -62,4 +62,4 @@ Dies ist ein Implementierungsdetail.
 **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Siehe auch  
-[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

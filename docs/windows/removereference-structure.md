@@ -1,5 +1,5 @@
 ---
-title: RemoveReference-Struktur | Microsoft Docs
+title: RemoveReference-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126394e3a63016eccf1f5451d032753bb8f81da8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3152cf46460dbeb8f5c8adfd5a7550f97eaca98
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881262"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39602710"
 ---
 # <a name="removereference-structure"></a>RemoveReference-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,12 +38,12 @@ template<class T>
 struct RemoveReference<T&&>;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
+### <a name="parameters"></a>Parameter  
+ *T*  
  Eine Klasse.  
   
 ## <a name="remarks"></a>Hinweise  
- Entfernt das Merkmal "Verweis" oder "Rvalue-Verweis" aus der angegebenen Klassenvorlagenparameter.  
+ Entfernt das Merkmal "Verweis" oder "Rvalue-Verweis" aus der angegebenen Klasse Template-Parameter.  
   
 ## <a name="members"></a>Member  
   
