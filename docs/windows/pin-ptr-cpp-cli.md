@@ -1,5 +1,5 @@
 ---
-title: Pin_ptr (C + c++ / CLI) | Microsoft Docs
+title: Pin_ptr (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afc99a352e0bde7918cab460293ff23061377551
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a87dadfd4787e4bd0100efb8fe7ffe2b1e7a8899
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880165"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39607851"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
-Deklariert eine *feste Zeiger*, der nur mit der common Language Runtime verwendet wird.  
+Deklariert eine *festen Zeiger*, das verwendet wird, nur mit der common Language Runtime.  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
  (Es gibt keine Hinweise für diese Sprachfunktion, die für alle Laufzeiten gültig sind.)  
@@ -37,7 +37,7 @@ Deklariert eine *feste Zeiger*, der nur mit der common Language Runtime verwende
  (Diese Sprachfunktion wird in der Windows-Runtime nicht unterstützt.)  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- Ein *feste Zeiger* ein inneren Zeigers, der verhindert, das Objekt dass verweist auf dem Heap der Garbage Collection verschoben. Der Wert, der einen festen Zeiger ist, also nicht von der common Language Runtime geändert. Dies ist erforderlich, wenn Sie die Adresse einer verwalteten Klasse an eine nicht verwaltete Funktion übergeben, sodass die Adresse nicht unerwartet während der Auflösung des nicht verwalteten Funktionsaufrufs ändert.  
+ Ein *festen Zeiger* ein innerer Zeiger, der verhindert, das Objekt dass verweist auf dem Heap der Garbage Collection verschoben. Der Wert, der einen festen Zeiger ist, also nicht von der common Language Runtime geändert werden. Dies ist erforderlich, wenn Sie die Adresse einer verwalteten Klasse an eine nicht verwaltete Funktion übergeben, damit, dass die Adresse nicht unerwartet während der Auflösung des nicht verwalteten Funktionsaufrufs ändert.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -47,35 +47,35 @@ Deklariert eine *feste Zeiger*, der nur mit der common Language Runtime verwende
   
 ### <a name="parameters"></a>Parameter  
  *cv_qualifier*  
- `const` oder `volatile` Qualifizierer. Standardmäßig ist ein fester Zeiger `volatile`. Es ist jedoch nicht um einen Fehler, deklarieren einen festen Zeiger redundant `volatile`.  
+ **const** oder **flüchtige** Qualifizierer. Standardmäßig ist ein fester Zeiger **flüchtige**. Es ist redundant, jedoch nicht um einen Fehler, deklarieren einen festen Zeiger **flüchtige**.  
   
  *Typ*  
- Der `initializer`-Typ.  
+ Der Typ des *Initialisierer*.  
   
  *var*  
- Der Name des der `pin_ptr` Variable.  
+ Der Name des der **Pin_ptr** Variable.  
   
  *initializer*  
- Ein Element ein Verweistyp, ein Element ein verwaltetes Array oder ein anderes Objekt, das einen systemeigenen Zeiger zugewiesen werden können.  
+ Ein Member eines Verweistyps, Element eines verwalteten Arrays oder jedes andere Objekt, das Sie in einen systemeigenen Zeiger zuweisen können.  
   
 ### <a name="remarks"></a>Hinweise  
- Ein `pin_ptr` eine Obermenge der Funktionen der systemeigenen Zeiger darstellt. Aus diesem Grund kann Elemente, die einen systemeigenen Zeiger zugewiesen werden kann auch zum zugewiesen eine `pin_ptr`. Ein innerer Zeiger ist zulässig, um den gleichen Satz von Vorgängen wie systemeigene Zeiger, einschließlich Vergleich und Zeigerarithmetik auszuführen.  
+ Ein **Pin_ptr** eine Obermenge der Funktionen der einen systemeigenen Zeiger darstellt. Aus diesem Grund Elemente, die in einen systemeigenen Zeiger zugewiesen werden, kann auch zugewiesen werden eine **Pin_ptr**. Ein innerer Zeiger ist zulässig, um den gleichen Satz von Vorgängen wie systemeigene Zeiger, einschließlich Vergleich und Zeigerarithmetik auszuführen.  
   
- Ein Objekt oder untergeordnete Objekt einer verwalteten Klasse kann angeheftet werden in diesem Fall wird die common Language Runtime nicht es während der Garbagecollection verschoben. Hauptverwendungszweck für diese ist einen Zeiger auf verwaltete Daten, die als übergebener Parameter eines nicht verwalteten Funktionsaufrufs zu übergeben. Während einer Collection-Zyklus die Laufzeit überprüfen Sie die Metadaten für die feste Zeiger erstellt wird und das Element, auf die verwiesen, wird nicht verschoben.  
+ Ein Objekt oder untergeordnete Objekt einer verwalteten Klasse kann angeheftet werden in diesem Fall wird die common Language Runtime nicht es während der Garbagecollection verschoben. Hauptverwendungszweck für diese ist einen Zeiger auf die verwaltete Daten, die als übergebener Parameter eines nicht verwalteten Funktionsaufrufs zu übergeben. Während einer Collection-Zyklus, der die Laufzeit prüft die Metadaten für den festen Zeiger erstellt und ändert sich nicht auf das Element, dem es verweist.  
   
- Anheften eines Objekts pins auch die Wertfelder; d. h. type Felder von primitiven oder Wert. Allerdings deklariert Felder von Trackinghandle (`%`) nicht angeheftet werden.  
+ Anheften eines Objekts befestigt auch die Wertfelder; Felder des primitiven oder Wert, also geben zu können. Allerdings Felder definiert, indem Trackinghandle (`%`) sind nicht verknüpft.  
   
- Anheften eines untergeordneten Objekts in ein verwaltetes Objekt definierten wirkt sich das anheften als ganze Objekt aus.  
+ Anheften von einem untergeordneten Objekt in ein verwaltetes Objekt definiert, hat die Auswirkung der Verknüpfung mit dem das gesamte Objekt.  
   
- Wenn der feste Zeiger neu zugewiesen wird, um einen neuen Wert zu verweisen, die vorherige Instanz, auf die gezeigt wird nicht mehr als fixiert betrachtet.  
+ Wenn der feste Zeiger neu zugewiesen wird, um einen neuen Wert zu verweisen, die vorherige Instanz gezeigt wird nicht mehr als fixiert.  
   
- Ein Objekt fixiert ist nur eine `pin_ptr` darauf verweist. Das Objekt ist nicht mehr fixiert, wenn der feste Zeiger den Gültigkeitsbereich verlässt oder auf festgelegt ist [Nullptr](../windows/nullptr-cpp-component-extensions.md). Nach der `pin_ptr` sinkt außerhalb des gültigen Bereichs, das Objekt, das angeheftet wurde im Heap durch den Garbage Collector verschoben werden können. Jeder systemeigene Zeiger, die weiterhin auf das Objekt verweisen werden nicht aktualisiert werden, und Verweises auf eine von ihnen konnte eine nicht behebbare Ausnahme auslösen.  
+ Ein Objekt fixiert ist zwar nur eine **Pin_ptr** darauf verweist. Das Objekt ist nicht mehr fixiert, wenn der feste Zeiger den Gültigkeitsbereich verlässt oder NA hodnotu nastaven ["nullptr"](../windows/nullptr-cpp-component-extensions.md). Nach der **Pin_ptr** wurde außerhalb des gültigen Bereichs, der das Objekt, das angeheftet wurde im Heap vom Garbage Collector verschoben werden können. Systemeigene Zeiger, die nach wie vor auf das Objekt verweisen werden nicht aktualisiert werden, und Entfernen des Verweises auf eine von ihnen könnte eine nicht behebbare Ausnahme auslösen.  
   
- Wenn keine feste Zeiger auf das Objekt verweisen (alle feste Zeiger ist ein Fehler aufgetreten, außerhalb des gültigen Bereichs, zugewiesen wurden, um auf andere Objekte verweisen oder zugewiesen wurden [Nullptr](../windows/nullptr-cpp-component-extensions.md)), das Objekt ist garantiert nicht angeheftet werden.  
+ Wenn keine festen Zeiger auf das Objekt verweisen (alle festen Zeiger ist, die außerhalb des gültigen Bereichs ein Fehler aufgetreten, zugewiesen wurden, um auf andere Objekte verweisen oder zugewiesen wurden ["nullptr"](../windows/nullptr-cpp-component-extensions.md)), das Objekt ist definitiv nicht angeheftet werden.  
   
- Ein fester Zeiger verweisen auf einen Verweis Handle Werttyp oder mittels Boxing gepackter Typhandle, Member eines verwalteten Typs oder ein Element von einem verwalteten Array. Es kann nicht auf einen Verweistyp verweisen.  
+ Ein fester Zeiger kann auf eine Verweis-Handle, Werttyp oder geschachtelten Typs-Handle, Member eines verwalteten Typs oder ein Element eines verwalteten Arrays zeigen. Es kann nicht auf einen Verweistyp verweisen.  
   
- Übernahme der Adresse einer `pin_ptr` , verweist auf ein systemeigenes Objekt verursacht nicht definiertes Verhalten.  
+ Übernehmen der Adresse einer **Pin_ptr** verweist auf ein systemeigenes Objekt führt dazu, dass nicht definiertem Verhalten.  
   
  Feste Zeiger können nur auf dem Stapel als nicht statische lokale Variablen deklariert werden.  
   
@@ -89,21 +89,20 @@ Deklariert eine *feste Zeiger*, der nur mit der common Language Runtime verwende
   
 -   der Zieltyp einer Typumwandlung.  
   
- `pin_ptr` befindet sich in der `cli` Namespace. Weitere Informationen finden Sie unter [Plattform, Default- und Cli-Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ **Pin_ptr** befindet sich in der `cli` Namespace. Weitere Informationen finden Sie unter [Platform-, Default- und Cli-Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
   
- Weitere Informationen zu inneren Zeigern, finden Sie unter [Interior_ptr (C + c++ / CLI)](../windows/interior-ptr-cpp-cli.md).  
+ Weitere Informationen zu inneren Zeigern, finden Sie unter [Interior_ptr (C++ / CLI)](../windows/interior-ptr-cpp-cli.md).  
   
- Weitere Informationen zum Festhalten von Zeigern, finden Sie unter [wie: Anheften von Zeigern und Arrays](../windows/how-to-pin-pointers-and-arrays.md) und [wie: Deklarieren Festhalten von Zeigern und Werttypen](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
+ Weitere Informationen zu Festhalten von Zeigern, finden Sie unter [Vorgehensweise: Anheften von Zeigern und Arrays](../windows/how-to-pin-pointers-and-arrays.md) und [wie: Deklarieren Anheften von Zeigern und Werttypen](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
- Im folgenden Beispiel wird `pin_ptr` , die die Position des ersten Elements eines Arrays zu beschränken.  
+ Im folgenden Beispiel wird **Pin_ptr** um die Position des ersten Elements eines Arrays zu beschränken.  
   
-```  
+```cpp  
 // pin_ptr_1.cpp  
 // compile with: /clr   
 using namespace System;  
@@ -153,11 +152,9 @@ int main() {
 45  
 ```  
   
- **Beispiel**  
+ Das folgende Beispiel zeigt, dass ein innerer Zeiger zu einem festen Zeiger konvertiert werden kann und der Rückgabetyp des Address-of-Operators (`&`) ein innerer Zeiger ist, wenn der Operand, auf dem verwalteten Heap ist.  
   
- Das folgende Beispiel zeigt, dass ein innerer Zeiger zu einem festen Zeiger konvertiert werden kann und der Rückgabetyp des Address-of-Operators (`&`) wird ein innerer Zeiger, wenn der Operand auf dem verwalteten Heap ist.  
-  
-```  
+```cpp  
 // pin_ptr_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -191,11 +188,9 @@ int main() {
 1  
 ```  
   
- **Beispiel**  
-  
  Das folgende Beispiel zeigt, dass ein fester Zeiger in einen anderen Typ umgewandelt werden kann.  
   
-```  
+```cpp  
 // pin_ptr_3.cpp  
 // compile with: /clr  
 using namespace System;  

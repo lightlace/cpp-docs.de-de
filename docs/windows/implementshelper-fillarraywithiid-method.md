@@ -1,5 +1,5 @@
 ---
-title: 'Implementshelper:: Fillarraywithiid-Methode | Microsoft Docs'
+title: 'Implementshelper:: Fillarraywithiid-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9313ade1f5731319732a2ee3efc0af191af14f05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da38eddae5ab9c49da98a4c5e9f383d59d110ee1
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879922"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608321"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,14 +36,14 @@ void FillArrayWithIid(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `index`  
- Ein nullbasierter Index, der das Array Startelement für diesen Vorgang angibt. Wenn dieser Vorgang abgeschlossen ist, `index` um 1 erhöht.  
+ *index*  
+ Ein nullbasierter Index, der das Startelement "Array" für diesen Vorgang angibt. Klicken Sie nach Abschluss dieses Vorgangs *Index* um 1 erhöht.  
   
- `iids`  
- Ein Array des Typs IIDs.  
+ *IIDs*  
+ Ein Array vom Typ IIDs werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- Fügt die Schnittstellen-ID, die durch den aktuellen nullte Vorlagenparameter in das angegebene Array-Element angegeben.  
+ Fügt die Schnittstellen-ID, die durch den aktuellen nullten Vorlagenparameter angegeben wird, in das angegebene Array-Element.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  

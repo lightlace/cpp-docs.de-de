@@ -1,5 +1,5 @@
 ---
-title: 'Runtimeclass:: Getweakreference-Methode | Microsoft Docs'
+title: 'Runtimeclass:: Getweakreference-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e49703e96728e7287206aa264ce12deaad611495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bb0d5e6ca19749a4647ec85311e1fce0e7561b59
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888216"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608533"
 ---
 # <a name="runtimeclassgetweakreference-method"></a>RuntimeClass::GetWeakReference-Methode
-Ruft einen Zeiger auf das Objekt schwachen Verweis für das aktuelle RuntimeClass-Objekt.  
+Ruft einen Zeiger auf das schwachen Verweis-Objekt ab, für die aktuelle **RuntimeClass** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,9 +35,9 @@ STDMETHOD(
 )(_Deref_out_ IWeakReference **weakReference);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `weakReference`  
- Wenn dieser Vorgang abgeschlossen wird, einen Zeiger auf einen schwachen Verweis-Objekt.  
+### <a name="parameters"></a>Parameter  
+ *weakReference*  
+ Wenn dieser Vorgang abgeschlossen ist, einen Zeiger auf einen schwachen Verweis-Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Stets S_OK.  

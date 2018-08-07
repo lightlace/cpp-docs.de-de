@@ -1,5 +1,5 @@
 ---
-title: 'Modulebase:: Modulebase-Konstruktor | Microsoft Docs'
+title: 'Modulebase:: Modulebase-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b18d33b962c277347e74819e5ff34f3562821f45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c9d82f38e44f1d0c9562982da109a8deffa4fbff
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875889"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608929"
 ---
 # <a name="modulebasemodulebase-constructor"></a>ModuleBase::ModuleBase-Konstruktor
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ ModuleBase();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Initialisiert eine Instanz der Module-Klasse.  
+ Initialisiert eine Instanz der `Module`-Klasse.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  

@@ -1,5 +1,5 @@
 ---
-title: nonextensible | Microsoft Docs
+title: nonextensible | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87cdbf66676ed2a3e6054006270b39ad80325857
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f670da3ad4858f3c09903f2ed3ec6aa58268180
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881600"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608494"
 ---
 # <a name="nonextensible"></a>nonextensible
-Gibt an, dass die `IDispatch` Implementierung enthält nur die Eigenschaften und Methoden aufgelistet, die in die schnittstellenbeschreibung und können nicht mit zusätzlichen Elementen zur Laufzeit erweitert werden.  
+Gibt an, dass die `IDispatch` -Implementierung enthält nur die Eigenschaften und Methoden aufgeführt, die in der schnittstellenbeschreibung und können nicht zur Laufzeit zusätzliche Member erweitert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [nonextensible]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
@@ -41,9 +39,9 @@ Gibt an, dass die `IDispatch` Implementierung enthält nur die Eigenschaften und
  Verwenden von **nonextensible** erfordert außerdem die [Oleautomation](../windows/oleautomation.md) Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt eine Verwendung von der **nonextensible** Attribut:  
+ Der folgende Code zeigt eine Verwendung der **nonextensible** Attribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_nonextensible.cpp  
 // compile with: /LD  
 #include "unknwn.h"  
@@ -64,9 +62,9 @@ __interface IFireTabCtrl
   
 |||  
 |-|-|  
-|**Betrifft**|`interface`|  
+|**Betrifft**|**interface**|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**Duale** und **Oleautomation**, oder **Disp-Schnittstelle**|  
+|**Erforderliche Attribute**|`dual` und `oleautomation`, oder `dispinterface`|  
 |**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  

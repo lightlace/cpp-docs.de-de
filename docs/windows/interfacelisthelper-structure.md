@@ -1,5 +1,5 @@
 ---
-title: InterfaceListHelper-Struktur | Microsoft Docs
+title: InterfaceListHelper-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ad091114d6be6f35f1a0341961dc5122840ace8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91012112cebf6fe33858df8904691944a810f69a
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878046"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608130"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,41 +50,41 @@ template <
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T0`  
- Vorlagenparameter 0 (null) ist erforderlich.  
+### <a name="parameters"></a>Parameter  
+ *T0*  
+ Template-Parameter 0 (null) ist erforderlich.  
   
- `T1`  
+ *T1*  
  Template-Parameter 1, die standardmäßig nicht angegeben wird.  
   
- `T2`  
- Template-Parameter 2, die standardmäßig nicht angegeben wird. Der dritte Vorlagenparameter.  
+ *T2*  
+ Vorlagenparameter 2, die standardmäßig nicht angegeben wird. Der dritte Vorlagenparameter.  
   
- `T3`  
+ *T3*  
  Template-Parameter 3, die standardmäßig nicht angegeben wird.  
   
- `T4`  
+ *T4*  
  Vorlagenparameter 4, die standardmäßig nicht angegeben wird.  
   
- `T5`  
- Vorlagenparameter 5, die standardmäßig nicht angegeben wird.  
+ *T5*  
+ Template-Parameter 5, die standardmäßig nicht angegeben wird.  
   
- `T6`  
+ *T6*  
  Vorlagenparameter 6, die standardmäßig nicht angegeben wird.  
   
- `T7`  
+ *T7*  
  Vorlagenparameter 7, die standardmäßig nicht angegeben wird.  
   
- `T8`  
+ *T8*  
  Vorlagenparameter 8, die standardmäßig nicht angegeben wird.  
   
- `T9`  
+ *T9*  
  Vorlagenparameter 9, die standardmäßig nicht angegeben wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Erstellt einen InterfaceList-Typ durch Anwenden der angegebenen Parameter Vorlagenargumente rekursiv.  
+ Erstellt eine `InterfaceList` Typs rekursiv die angegebenen Parameter Vorlagenargumente angewendet.  
   
- InterfaceListHelper-Vorlage verwendet Vorlagenparameter `T0` definieren die ersten Daten Member in einem InterfaceList-Struktur, und klicken Sie dann rekursiv die InterfaceListHelper-Vorlage auf alle verbleibenden Vorlagenparameter angewendet. InterfaceListHelper wird beendet, wenn keine verbleibenden Vorlagenparameter vorhanden sind.  
+ Die **InterfaceListHelper** Vorlage verwendet die Template-Parameter *T0* definieren Sie das erste Element der Daten in eine `InterfaceList` -Struktur, und klicken Sie dann rekursiv gilt die  **InterfaceListHelper** Vorlage, um alle verbleibenden Vorlagenparameter. **InterfaceListHelper** wird beendet, wenn keine verbleibenden Vorlagenparameter vorhanden sind.  
   
 ## <a name="members"></a>Member  
   

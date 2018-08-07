@@ -1,5 +1,5 @@
 ---
-title: 'Interfacetraits:: Casttounknown-Methode | Microsoft Docs'
+title: 'Interfacetraits:: Casttounknown-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2fdc46f57f834c3e8217049574ea504aae16f03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad2c0a438eee870ac86301f0a56ef525eb53d8c8
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878124"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608650"
 ---
 # <a name="interfacetraitscasttounknown-method"></a>InterfaceTraits::CastToUnknown-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,18 +36,18 @@ static __forceinline IUnknown* CastToUnknown(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
- Der Typ des Parameters `ptr`.  
+### <a name="parameters"></a>Parameter  
+ *T*  
+ Der Typ des Parameters *Ptr*.  
   
- `ptr`  
- Zeiger auf den Typ `T`.  
+ *ptr*  
+ Zeiger auf den Typ *T*.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Zeiger auf das IUnknown aus dem `Base` abgeleitet ist.  
+ Zeiger auf IUnknown aus dem `Base` abgeleitet ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Wandelt den angegebenen Zeiger auf ein IUnknown-Zeiger.  
+ Wandelt den angegebenen Zeiger auf einen Zeiger auf `IUnknown`.  
   
  Weitere Informationen zu `Base`, finden Sie im Abschnitt Öffentliche Typedefs [InterfaceTraits-Struktur](../windows/interfacetraits-structure.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Einschließlich gemeinsam genutzter (schreibgeschützter) oder berechneter Symbole | Microsoft Docs
+title: Einschließlich gemeinsam genutzter (schreibgeschützter) oder berechneter Symbole | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c56e8af65d27bda8ef04655f40bdd2e335067d3c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 436ceb757f9cce5e1436b13f2d32a331295f4bf6
+ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879226"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39608611"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Einfügen gemeinsam genutzter (schreibgeschützter) oder berechneter Symbole
-Wenn die Entwicklungsumgebung erstmals eine durch eine andere Anwendung erstellte Ressourcendatei liest, markiert sie alle einbezogenen Headerdateien als schreibgeschützt. Anschließend können Sie die [Ressourcenincludes (Dialogfeld)](../windows/resource-includes-dialog-box.md) um zusätzliche schreibgeschützte Symbolheaderdateien hinzuzufügen.  
+Wenn die Entwicklungsumgebung erstmals eine durch eine andere Anwendung erstellte Ressourcendatei liest, markiert sie alle einbezogenen Headerdateien als schreibgeschützt. Anschließend können Sie die [Dialogfeld Ressourcenincludes](../windows/resource-includes-dialog-box.md) um zusätzliche schreibgeschützte Symbolheaderdateien hinzuzufügen.  
   
  Ein Grund, weshalb Sie möglicherweise schreibgeschützte Symboldefinitionen verwenden möchten, ist der Plan, Symboldateien unter verschiedenen Projekten freizugeben.  
   
@@ -60,14 +60,14 @@ Wenn die Entwicklungsumgebung erstmals eine durch eine andere Anwendung erstellt
     > [!NOTE]
     >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  In der **Direktiven für schreibgeschützte Symbole** verwenden die **#include** Compiler-Direktive, um die Datei anzugeben, in dem Sie die schreibgeschützten Symbole beibehalten werden soll.  
+2.  In der **Anweisungen für schreibgeschützte Symbole** können Sie über die **#include** Compilerdirektive, um die Datei angeben, werden die schreibgeschützten Symbole beibehalten werden soll.  
   
      Rufen Sie nicht die Datei „Resource.h“ auf. Hierbei handelt es sich nämlich für gewöhnlich um den Dateinamen, der durch die Hauptsymbol-Headerdatei verwendet wird.  
   
     > [!NOTE]
-    >  **Wichtige** die Eingabe im Feld Direktiven für schreibgeschützte Symbole in der Ressourcendatei enthalten ist, genau wie Sie es eingeben. Stellen Sie sicher, dass die Eingabe weder Schreib- noch Syntaxfehler aufweist.  
+    >  **Wichtige** Eingabe im Feld Direktiven für schreibgeschützte Symbole in der Ressourcendatei enthalten ist, genau, wie Sie es eingeben. Stellen Sie sicher, dass die Eingabe weder Schreib- noch Syntaxfehler aufweist.  
   
-     Verwenden der **Direktiven für schreibgeschützte Symbole** Feld zum Einfügen von Dateien mit Symboldefinitionen nur. Beziehen Sie keine Ressourcendefinitionen ein. Ansonsten werden doppelte Ressourcendefinitionen erstellt, wenn die Datei gespeichert wird.  
+     Verwenden der **Anweisungen für schreibgeschützte Symbole** Kontrollkästchen, um Dateien mit Symboldefinitionen nur einzubeziehen. Beziehen Sie keine Ressourcendefinitionen ein. Ansonsten werden doppelte Ressourcendefinitionen erstellt, wenn die Datei gespeichert wird.  
   
 3.  Platzieren Sie die Symbole in der von Ihnen angegebenen Datei.  
   
@@ -75,9 +75,7 @@ Wenn die Entwicklungsumgebung erstmals eine durch eine andere Anwendung erstellt
   
 4.  Klicken Sie auf **OK**.  
   
-
-  
- Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
  Win32  
   
