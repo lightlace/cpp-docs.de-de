@@ -1,5 +1,5 @@
 ---
-title: Standard (C++) | Microsoft Docs
+title: Standard (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb701b91fc1e076dcf4e6540bf8bcaf6141ec6c6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872964"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570856"
 ---
 # <a name="default-c"></a>default (C++)
 Gibt an, dass die benutzerdefinierte Schnittstelle oder Disp-Schnittstelle innerhalb einer Co-Klasse die Standard-Programmierschnittstelle darstellt.  
@@ -32,8 +32,7 @@ Gibt an, dass die benutzerdefinierte Schnittstelle oder Disp-Schnittstelle inner
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ default(  
+[ default(  
    interface1,  
    interface2  
 ) ]  
@@ -54,9 +53,9 @@ Gibt an, dass die benutzerdefinierte Schnittstelle oder Disp-Schnittstelle inner
  Das C++-Attribut **default** hat die gleiche Funktion wie das MIDL-Attribut [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) . Das **default** -Attribut wird auch mit dem [case](../windows/case-cpp.md) -Attribut verwendet.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt, wie **default** bei der Definition einer Co-Klasse verwendet wird, um **ICustomDispatch** als Standard-Programmierschnittstelle anzugeben:  
+ Der folgende code zeigt, wie **Standard** werden auf der Definition einer Co-Klasse angegeben `ICustomDispatch` als Standard-Programmierschnittstelle:  
   
-```  
+```cpp  
 // cpp_attr_ref_default.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -113,9 +112,9 @@ int main() {
   
 |||  
 |-|-|  
-|**Betrifft**|**class**, `struct`, Datenelement|  
+|**Betrifft**|**Klasse**, **Struktur**,-Datenmember|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**coclass** (bei Anwendung auf **class** oder `struct`)|  
+|**Erforderliche Attribute**|**Co-Klasse** (bei Anwendung auf **Klasse** oder **Struktur**)|  
 |**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  

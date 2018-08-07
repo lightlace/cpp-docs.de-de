@@ -1,5 +1,5 @@
 ---
-title: Defaultcollelem | Microsoft Docs
+title: Defaultcollelem | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da53f10932ffc0696d567bc1140e3e92a609e2c8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04317a516b94ae5fc70b61cd3ae33269ad437dce
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870909"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569884"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
-Zur Optimierung der Visual Basic-Code verwendet.  
+Für die Optimierung für Visual Basic-Code verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [defaultcollelem]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Defaultcollelem** C++-Attribut hat die gleiche Funktionalität wie die [Defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt die Verwendung einer Schnittstelle Methode der **Defaultcollelem** Attribut:  
+ Der folgende Code zeigt eine Schnittstelle-Methode mit dem **Defaultcollelem** Attribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultcollelem.cpp  
 // compile with: /LD  
 #include <unknwn.h>  

@@ -1,5 +1,5 @@
 ---
-title: Helpstringcontext | Microsoft Docs
+title: Helpstringcontext | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97b4b43f8cbd8f08cca4f6cf2f21294a625f289c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 16f113610beb4c6427af5627ea8dfd725e02600d
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874576"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569998"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
-Gibt die ID des Hilfethemas in einer HLP oder CHM-Datei an.  
+Gibt die ID des Hilfethemas in eine .hlp oder CHM-Datei an.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ helpstringcontext(  
+[ helpstringcontext(  
    contextID  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `contextID`  
+### <a name="parameters"></a>Parameter  
+ *contextID*  
  Eine 32-Bit-Hilfekontextbezeichner in der Hilfedatei.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -45,7 +44,7 @@ Gibt die ID des Hilfethemas in einer HLP oder CHM-Datei an.
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringcontext.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -68,7 +67,7 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `interface`,-Schnittstellenmethode|  
+|**Betrifft**|**Klasse**, **Schnittstelle**,-Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  
@@ -79,5 +78,5 @@ __interface IMyI
  [IDL-Attribute](../windows/idl-attributes.md)   
  [Schnittstellenattribut](../windows/interface-attributes.md)   
  [Klassenattribute](../windows/class-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [Modul](../windows/module-cpp.md)   

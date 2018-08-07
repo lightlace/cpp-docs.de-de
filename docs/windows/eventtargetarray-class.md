@@ -1,5 +1,5 @@
 ---
-title: EventTargetArray-Klasse | Microsoft Docs
+title: EventTargetArray-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4461004a1681d9095449c51fb9cb3973d5017693
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2757589509e4a2b091c5057ef2065866a8829494
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881308"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570420"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray-Klasse
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +36,7 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
 ## <a name="remarks"></a>Hinweise  
  Stellt ein Array von Ereignishandlern.  
   
- Die Ereignishandler, die zugeordnet sind ein [EventSource](../windows/eventsource-class.md) Objekt in einem geschützten EventTargetArray-Datenmember gespeichert sind.  
+ Ereignishandler, die zugeordnet sind ein [EventSource](../windows/eventsource-class.md) Objekt befinden sich in einem geschützten **EventTargetArray** -Datenmember.  
   
 ## <a name="members"></a>Member  
   
@@ -44,17 +44,17 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[EventTargetArray::EventTargetArray-Konstruktor](../windows/eventtargetarray-eventtargetarray-constructor.md)|Initialisiert eine neue Instanz der EventTargetArray-Klasse.|  
-|[EventTargetArray::~EventTargetArray-Destruktor](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Hebt die Initialisierung der aktuellen EventTargetArray-Klasse.|  
+|[EventTargetArray::EventTargetArray-Konstruktor](../windows/eventtargetarray-eventtargetarray-constructor.md)|Initialisiert eine neue Instanz der dem **EventTargetArray** Klasse.|  
+|[EventTargetArray::~EventTargetArray-Destruktor](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|Hebt die Initialisierung der aktuellen **EventTargetArray** Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[EventTargetArray::AddTail-Methode](../windows/eventtargetarray-addtail-method.md)|Fügt den angegebenen Ereignishandler an das Ende des internen Arrays von Ereignishandlern an.|  
-|[EventTargetArray::Begin-Methode](../windows/eventtargetarray-begin-method.md)|Ruft die Adresse des ersten Elements im internen Array von Ereignishandlern.|  
-|[EventTargetArray::End-Methode](../windows/eventtargetarray-end-method.md)|Ruft die Adresse des letzten Elements im internen Array von Ereignishandlern.|  
-|[EventTargetArray::Length-Methode](../windows/eventtargetarray-length-method.md)|Ruft die aktuelle Anzahl der Elemente im internen Array von Ereignishandlern.|  
+|[EventTargetArray::Begin-Methode](../windows/eventtargetarray-begin-method.md)|Ruft die Adresse des ersten Elements in das interne Array der Ereignishandler ab.|  
+|[EventTargetArray::End-Methode](../windows/eventtargetarray-end-method.md)|Ruft die Adresse des letzten Elements in das interne Array der Ereignishandler ab.|  
+|[EventTargetArray::Length-Methode](../windows/eventtargetarray-length-method.md)|Ruft die aktuelle Anzahl der Elemente in das interne Array der Ereignishandler ab.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `EventTargetArray`  

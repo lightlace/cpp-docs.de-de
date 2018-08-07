@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Hstring-Konstruktor | Microsoft Docs'
+title: 'Hstring:: Hstring-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3188e137d3a39fb26ca4151f72073306038e46f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96b77ec87e3219206d353f56293fc201c46f5d7e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876877"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568770"
 ---
 # <a name="hstringhstring-constructor"></a>HString::HString-Konstruktor
-Initialisiert eine neue Instanz der HString-Klasse.  
+Initialisiert eine neue Instanz der dem **HString** Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,16 +33,16 @@ HString(HString&& other) throw();
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `hstr`  
+ *HSTR*  
  Ein HSTRING-Handle.  
   
- `other`  
- Ein vorhandenes HString-Objekt.  
+ *other*  
+ Eine vorhandene **HString** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Der erste Konstruktor initialisiert ein neues HString-Objekt, das leer ist.  
+ Der erste Konstruktor initialisiert eine neue **HString** -Objekt, das leer ist.  
   
- Der zweite Konstruktor initialisiert ein neues HString-Objekt, auf den Wert des vorhandenen `other` Parameter, und klicken Sie dann zerstört die `other` Parameter.  
+ Der zweite Konstruktor initialisiert eine neue **HString** Objekt, das den Wert des vorhandenen *andere* Parameter, und klicken Sie dann zerstört die *andere* Parameter.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

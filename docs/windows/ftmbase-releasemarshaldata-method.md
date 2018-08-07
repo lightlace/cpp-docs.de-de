@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: ReleaseMarshalData-Methode | Microsoft Docs'
+title: 'Ftmbase:: ReleaseMarshalData-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d56bc92e11d458a1872975f5a81a19c96566d59
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6c536d3708141250c6e0ab19cacb22fe989dc236
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873650"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568757"
 ---
 # <a name="ftmbasereleasemarshaldata-method"></a>FtmBase::ReleaseMarshalData-Methode
 Zerstört ein gemarshalltes Datenpaket.  
@@ -36,8 +36,8 @@ STDMETHODIMP ReleaseMarshalData(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `pStm`  
- Ein Zeiger auf einen Stream, der enthält das Datenpaket zerstört werden.  
+ *pStm*  
+ Zeiger auf ein Stream, der enthält das Datenpaket zerstört werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  

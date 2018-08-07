@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: Addtail-Methode | Microsoft Docs'
+title: 'Eventtargetarray:: Addtail-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0bc56e13c8d07841ceb1f341228d7a963fda2dd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b469adedebda2beb64c531c82d10f90cc4114742
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872282"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570173"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,14 +35,14 @@ void AddTail(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `element`  
- Zeiger auf der Ereignishandler angefügt werden soll.  
+### <a name="parameters"></a>Parameter  
+ *Element*  
+ Zeiger auf den Ereignishandler, angefügt werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
  Fügt den angegebenen Ereignishandler an das Ende des internen Arrays von Ereignishandlern an.  
   
- AddTail() soll von EventSource-Klasse intern verwendet werden.  
+ **AddTail()** soll nur intern von verwendet werden. die `EventSource` Klasse.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  

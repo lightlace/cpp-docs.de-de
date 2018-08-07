@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verbessern der Leistung mit Generika (Visual C++) | Microsoft Docs'
+title: 'Vorgehensweise: Verbessern der Leistung mit Generika (Visual C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da74cce5f41c3399fb102180cfdfe8c1215c8bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7e2476111ad5c0aaaeb5bed6fe8e806b4930071
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877565"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571515"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>Gewusst wie: Verbessern der Leistung mit Generika (Visual C++)
-Mit Generika können Sie wiederverwendbaren Code, die auf einem Typparameter basierenden erstellen. Der tatsächliche Typ des Typparameters wird verzögert, bis von Clientcode aufgerufen. Weitere Informationen zu Generika finden Sie unter [Generika](../windows/generics-cpp-component-extensions.md).  
+Mit Generika können Sie wiederverwendbaren Code, die auf einem Typparameter basierenden erstellen. Der tatsächliche Typ des Typparameters wird verzögert, bis von Clientcode aufgerufen wird. Weitere Informationen zu Generika finden Sie unter [Generika](../windows/generics-cpp-component-extensions.md).  
   
- In diesem Artikel wird erläutert, wie Generika zur Verbesserung der Leistung einer Anwendung, die Auflistungen verwendet.  
+ In diesem Artikel wird erläutert, wie Generika können die Leistung einer Anwendung zu erhöhen, die Auflistungen verwendet.  
   
 ## <a name="example"></a>Beispiel  
- Viele Auflistungsklassen in .NET Framework enthält die <xref:System.Collections?displayProperty=fullName> Namespace. Die meisten dieser Auflistungen arbeiten mit Objekten des Typs <xref:System.Object?displayProperty=fullName>. Auf diese Weise können Auflistungen zum Speichern von beliebigen Typs, da alle Typen in .NET Framework auch Werttypen abgeleitet sein <xref:System.Object?displayProperty=fullName>. Es gibt jedoch zwei Nachteile dieser Vorgehensweise.  
+ Viele Auflistungsklassen im Lieferumfang von .NET Framework die <xref:System.Collections?displayProperty=fullName> Namespace. Die meisten dieser Sammlungen ausgeführt werden, für Objekte vom Typ <xref:System.Object?displayProperty=fullName>. Dadurch können Sammlungen, um einen beliebigen Typ zu speichern, da alle Typen in .NET Framework auch Werttypen abgeleitet <xref:System.Object?displayProperty=fullName>. Es gibt jedoch zwei Nachteile dieses Ansatzes.  
   
- Zuerst, wenn die Auflistung Werttypen wie ganzen Zahlen gespeichert ist, der Wert muss mittels Boxing konvertiert, bevor Sie der Auflistung hinzugefügt werden und mittels Unboxing zurückkonvertiert, wenn der Wert aus der Auflistung abgerufen wird. Hierbei handelt es sich um kostenintensive Vorgänge.  
+ Zuerst, wenn die Auflistung Werttypen wie z. B. ganze Zahlen gespeichert werden, der Wert muss mittels Boxing konvertiert, bevor Sie der Auflistung hinzugefügt werden und mittels Unboxing zurückkonvertiert, wenn der Wert aus der Auflistung abgerufen wird. Hierbei handelt es sich um kostenintensive Vorgänge.  
   
- Zweitens besteht keine Möglichkeit, die steuern, welche Typen für eine Sammlung hinzugefügt werden können. Es ist durchaus zulässig, eine ganze Zahl und eine Zeichenfolge in die gleiche Sammlung hinzufügen, obwohl dies ist wahrscheinlich nicht beabsichtigt war. Damit für Ihren Code typsicher sein können, müssen Sie daher überprüfen Sie, ob der Typ, der aus der Auflistung abgerufen wirklich Inhalte als erwartet wurde.  
+ Zweitens besteht keine Möglichkeit, die steuern, welche Typen für eine Sammlung hinzugefügt werden können. Es ist durchaus legal, eine ganze Zahl oder eine Zeichenfolge der gleichen Auflistung hinzufügen, obwohl dies ist wahrscheinlich nicht beabsichtigt war. In der Reihenfolge für Ihren Code typsicher gelten kann, müssen Sie daher überprüfen, dass der Typ, der aus der Auflistung abgerufen wirklich Was erwartet wurde.  
   
- Im folgenden Codebeispiel wird veranschaulicht, die zwei wichtigsten vor-und Nachteile von .NET Framework-Auflistungen vor Generika.  
+ Im folgenden Codebeispiel wird veranschaulicht, die zwei größere Nachteile von der .NET Framework-Auflistungen vor Generika.  
   
-```  
+```cpp  
 // perf_pre_generics.cpp  
 // compile with: /clr  
   
@@ -87,11 +87,11 @@ Popped an int: 7
 ```  
   
 ## <a name="example"></a>Beispiel  
- Die neue <xref:System.Collections.Generic?displayProperty=fullName> -Namespace enthält viele der gleichen Sammlungen finden der <xref:System.Collections?displayProperty=fullName> -Namespace, jedoch auf generische Parameter akzeptieren geändert wurden. Diese Auswertung eliminiert die zwei Nachteile von nicht-generische Auflistungen: das Boxing und unboxing eines Werttypen und der Unfähigkeit, die Typen anzugeben, in den Auflistungen gespeichert werden. Vorgänge für die beiden Auflistungen sind identisch. Sie unterscheiden sich nur in der Weise, wie sie instanziiert werden.  
+ Die neue <xref:System.Collections.Generic?displayProperty=fullName> -Namespace enthält viele der gleichen Sammlungen finden Sie in der <xref:System.Collections?displayProperty=fullName> -Namespace, aber sie generische Typparameter akzeptieren geändert wurden. Dadurch, dass zwei Nachteile von nicht generischen Auflistungen: das Boxing und unboxing eines Werttypen und die Unfähigkeit, die Typen angeben, in den Auflistungen gespeichert werden. Vorgänge für die beiden Auflistungen sind identisch. Sie unterscheiden sich nur in der Weise, wie sie instanziiert werden.  
   
- Vergleichen Sie das Beispiel oben mit diesem Beispiel für die Verwendung einen generischen geschrieben <xref:System.Collections.Generic.Stack%601> Auflistung. Auf große Sammlungen, die häufig zugegriffen werden, werden in diesem Beispiel wird die Leistung erheblich größer als das vorhergehende Beispiel.  
+ Vergleichen Sie das Beispiel oben in diesem Beispiel, das einen generischen verwendet geschrieben <xref:System.Collections.Generic.Stack%601> Auflistung. Für große Auflistungen, die häufig zugegriffen werden, werden in diesem Beispiel wird die Leistung deutlich höher als im vorherigen Beispiel.  
   
-```  
+```cpp  
 // perf_post_generics.cpp  
 // compile with: /clr  
   

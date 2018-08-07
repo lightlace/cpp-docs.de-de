@@ -1,5 +1,5 @@
 ---
-title: Generische Schnittstellen (Visual C++) | Microsoft Docs
+title: Generische Schnittstellen (Visual C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e16a2ab8a1ee0c9255f394d033bda2a7afc2b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878696"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571174"
 ---
 # <a name="generic-interfaces-visual-c"></a>Generische Schnittstellen (Visual C++)
-Die Einschränkungen, um die Typparameter für Klassen gelten, sind identisch mit denen, die für Typparameter für Schnittstellen gelten (siehe [generische Klassen (C + c++ / CLI)](../windows/generic-classes-cpp-cli.md)).  
+Die Einschränkungen für Typparameter für Klassen sind identisch mit denen, die Typparameter für Schnittstellen gelten (finden Sie unter [generische Klassen (C++ / CLI)](../windows/generic-classes-cpp-cli.md)).  
   
- Die Regeln zur Steuerung der funktionsüberladung sind identisch für Funktionen in generischen Klassen oder generische Schnittstellen.  
+ Die Regeln, die beim Überladen von Funktionen steuern, sind für Funktionen innerhalb von generischen Klassen oder generischen Schnittstellen gleich.  
   
- Explizite schnittstellenimplementierungen für Member arbeiten mit konstruierten Schnittstellentypen in die gleiche Weise wie bei einfachen Schnittstellentypen (siehe folgende Beispiele).  
+ Explizite schnittstellenimplementierungen für Member arbeiten mit konstruierte Schnittstellentypen in die gleiche Weise wie bei einfachen Schnittstellentypen (siehe die folgenden Beispielen).  
   
- Weitere Informationen zu Schnittstellen finden Sie unter [Schnittstellenklasse](../windows/interface-class-cpp-component-extensions.md).  
+ Weitere Informationen zu den Schnittstellen, finden Sie unter [Schnittstellenklasse](../windows/interface-class-cpp-component-extensions.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,33 +44,33 @@ Die Einschränkungen, um die Typparameter für Klassen gelten, sind identisch mi
  Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".  
   
  *Klassenschlüssel*  
- **Klasse** oder **Typname**  
+ **Klasse** oder **Typename**  
   
- `type-parameter-identifier(s)`  
- IDs durch Kommas getrennte Liste.  
+ *type-parameter-identifier(s)*  
+ Liste der durch Trennzeichen getrennte IDs.  
   
- `type-parameter-constraints-clauses`  
- Hat das Format im angegebenen [Einschränkungen für generische Typparameter (C + c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ *Type-Parameter-Einschränkungen-Klauseln*  
+ Nimmt die Form, die im angegebenen [Einschränkungen für generische Typparameter (C++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
  *Zugriffsmodifizierer* (optional)  
- Zugriffsmodifizierer (z. B. **öffentlichen, privaten**).  
+ Zugriffsmodifizierer (z. B. **öffentliche, private**).  
   
  *identifier*  
- Name der Schnittstelle.  
+ Der Name der Schnittstelle.  
   
  *Base-List* (optional)  
- Eine Liste mit mindestens explizite Basisschnittstellen durch Kommas getrennt.  
+ Eine Liste, die eine oder mehrere explizite Basisschnittstelle durch Kommas getrennt enthält.  
   
- *Interface-Text*  
+ *Interface-body*  
  Deklarationen der Schnittstellenmember.  
   
  *Deklaratoren* (optional)  
- Deklarationen von Variablen basierend auf diesen Typ.  
+ Deklarationen von Variablen, die auf diesem Typ basiert.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie zum Deklarieren und Instanziieren einer generischen Schnittstelle. Im Beispiel die generische Schnittstelle `IList<ItemType>` deklariert ist. Es wird dann durch zwei generischen Klassen implementiert `List1<ItemType>` und `List2<ItemType>`, mit anderen Implementierungen.  
+ Im folgenden Beispiel wird veranschaulicht, wie zum Deklarieren und Instanziieren einer generischen Schnittstelle wird. Im Beispiel ist die generische Schnittstelle `IList<ItemType>` deklariert wird. Es wird dann implementiert, indem zwei generischen Klassen `List1<ItemType>` und `List2<ItemType>`, mit verschiedenen Implementierungen.  
   
-```  
+```cpp  
 // generic_interface.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -244,9 +244,9 @@ List2
 ```  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel deklariert eine generische Schnittstelle `IMyGenIface`, und zwei nicht generischen Schnittstellen `IMySpecializedInt` und `ImySpecializedString`, spezialisiert werden, die `IMyGenIface`. Zwei speziellen Schnittstellen werden dann von zwei Klassen implementiert `MyIntClass` und `MyStringClass`. Das Beispiel zeigt, wie spezialisieren generische Schnittstellen, Instanziieren von generischen und nicht generischen Schnittstellen, und rufen Sie die explizit implementierten Member für die Schnittstellen.  
+ Das folgende Beispiel deklariert eine generische Schnittstelle `IMyGenIface`, und zwei nicht generischen Schnittstellen `IMySpecializedInt` und `ImySpecializedString`, spezialisiert, die `IMyGenIface`. Die beiden spezialisierten Schnittstellen werden dann durch zwei Klassen, implementiert `MyIntClass` und `MyStringClass`. Das Beispiel zeigt, wie generische Schnittstellen spezialisiert, Instanziieren von generischen und nicht generischen Schnittstellen und rufen Sie die explizit implementierten Member für die Schnittstellen.  
   
-```  
+```cpp  
 // generic_interface2.cpp  
 // compile with: /clr  
 // Specializing and implementing generic interfaces.  

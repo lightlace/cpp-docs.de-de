@@ -1,5 +1,5 @@
 ---
-title: 'EventSource:: InvokeAll-Methode | Microsoft Docs'
+title: 'EventSource:: InvokeAll-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00bce09f9e081bb0cd5c01115b05e4d3268d7293
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 04a31c7d080ff4fbfae094e07ab02d912966f4b1
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882614"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570651"
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll-Methode
-Ruft jede zugeordnete aktuellen Ereignishandler [EventSource](../windows/eventsource-class.md) -Objekt mit den angegebenen Argumenttypen und -Argumente.  
+Ruft jede Ereignishandler verknüpft ist, mit dem aktuellen [EventSource](../windows/eventsource-class.md) -Objekt mit den angegebenen Argumenttypen und der Argumente.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -183,66 +183,66 @@ void InvokeAll(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T0`  
- Der Typ der Ereignisarguments Handler nullte.  
+### <a name="parameters"></a>Parameter  
+ *T0*  
+ Der Typ des Arguments nullten Event Handler.  
   
- `T1`  
- Der Typ des ersten Arguments der Ereignis-Handler.  
+ *T1*  
+ Der Typ, der das erste Argument der Ereignis-Handler.  
   
- `T2`  
+ *T2*  
  Der Typ des zweiten Arguments der Ereignis-Handler.  
   
- `T3`  
+ *T3*  
  Der Typ des dritten Arguments der Ereignis-Handler.  
   
- `T4`  
- Der Typ der vierten Handler Ereignisarguments.  
+ *T4*  
+ Der Typ des vierten Arguments der Ereignis-Handler.  
   
- `T5`  
- Der Typ der fünften Handler Ereignisarguments.  
+ *T5*  
+ Der Typ des fünften Arguments der Ereignis-Handler.  
   
- `T6`  
- Der Typ der sechsten Handler Ereignisarguments.  
+ *T6*  
+ Der Typ des sechsten Arguments der Ereignis-Handler.  
   
- `T7`  
- Der Typ der siebten Handler Ereignisarguments.  
+ *T7*  
+ Der Typ des siebten Arguments der Ereignis-Handler.  
   
- `T8`  
- Der Typ der Ereignisarguments Handler achte.  
+ *T8*  
+ Der Typ des Arguments achte Event Handler.  
   
- `T9`  
- Der Typ des neunten Handler Ereignisarguments.  
+ *T9*  
+ Der Typ des neunten Arguments der Ereignis-Handler.  
   
- `arg0`  
- Das Argument der nullte Ereignis-Handler.  
+ *arg0*  
+ Das Argument der nullten Ereignis-Handler.  
   
- `arg1`  
+ *arg1*  
  Das erste Argument der Ereignis-Handler.  
   
- `arg2`  
+ *Arg2*  
  Das zweite Argument der Ereignis-Handler.  
   
- `arg3`  
+ *Arg3*  
  Das dritte Argument der Ereignis-Handler.  
   
- `arg4`  
- Das vierte Argument des Ereignis-Handler.  
+ *Arg4*  
+ Das vierte Argument der Ereignis-Handler.  
   
- `arg5`  
+ *Arg5*  
  Das fünfte Argument der Ereignis-Handler.  
   
- `arg6`  
- Das sechste Ereignis-Handler-Argument.  
+ *Arg6*  
+ Das sechste Handler Ereignisargument.  
   
- `arg7`  
- Das siebte Ereignis-Handler-Argument.  
+ *Arg7*  
+ Das siebte Handler Ereignisargument.  
   
- `arg8`  
- Das achte-Ereignis-Handler-Argument.  
+ *Arg8*  
+ Das achte Handler Ereignisargument.  
   
- `arg9`  
- Das neunte Ereignis-Handler-Argument.  
+ *Arg9*  
+ Das neunte Handler Ereignisargument.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  

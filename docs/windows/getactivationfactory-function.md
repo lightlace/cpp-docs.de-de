@@ -1,5 +1,5 @@
 ---
-title: GetActivationFactory-Funktion | Microsoft Docs
+title: GetActivationFactory-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1a4bf31ff44c74362e21e8888630273fcc049e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2cbb5be3603f79a7df1cb330ca06775357666854
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881337"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570310"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory-Funktion
-Ruft eine aktivierungsfactory für den durch den Vorlagenparameter angegebenen Typ ab.  
+Ruft eine aktivierungsfactory für den durch die Template-Parameter angegebenen Typ ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,18 +39,18 @@ inline HRESULT GetActivationFactory(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `T`  
- Ein Vorlagenparameter, der den Typ der aktivierungsfactory angibt.  
+### <a name="parameters"></a>Parameter  
+ *T*  
+ Ein Vorlagenparameter, der angibt, welche die aktivierungsfactory.  
   
- `activatableClassId`  
- Der Name der Klasse, die die aktivierungsfactory erstellt werden kann.  
+ *activatableClassId*  
+ Der Name der Klasse, die die Aktivierungs-Factory erstellt werden kann.  
   
- `factory`  
- Wenn dieser Vorgang abgeschlossen wird, einen Verweis auf die aktivierungsfactory für Typ `T`.  
+ *Factory*  
+ Wenn dieser Vorgang abgeschlossen ist, einen Verweis auf die aktivierungsfactory für den Typ *T*.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls ein Fehler HRESULT, das angibt, warum diese Operation fehlgeschlagen ist.  
+ S_OK, wenn erfolgreich; andernfalls ein Fehler HRESULT, der angibt, warum dieser Vorgang fehlgeschlagen ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

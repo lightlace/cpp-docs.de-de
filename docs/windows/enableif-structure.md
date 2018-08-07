@@ -1,5 +1,5 @@
 ---
-title: EnableIf-Struktur | Microsoft Docs
+title: EnableIf-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1fec2f00c40b833cc9a65db1db58920543aa90d7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 82a9bc4000919d2bbe2b8598351d3fe6a4730ba9
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873377"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569029"
 ---
 # <a name="enableif-structure"></a>EnableIf-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,14 +43,14 @@ struct EnableIf<true, T>;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
+ *T*  
  Ein Typ.  
   
- `b`  
+ *b*  
  Ein boolescher Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- Definiert einen Datenmember des Typs, der durch den zweiten Vorlagenparameter angegeben wird, wenn der erste Vorlagenparameter ergibt `true`.  
+ Definiert einen Datenmember des Typs durch den zweiten Vorlagenparameter angegeben wird, wenn der erste Vorlagenparameter ergibt **"true"**.  
   
 ## <a name="members"></a>Member  
   
@@ -58,7 +58,7 @@ struct EnableIf<true, T>;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`type`|Wenn Vorlagenparameter `b` ergibt `true`, die teilweise Spezialisierung definiert Datenmember `type` Typ `T`.|  
+|`type`|Wenn Vorlagenparameter *b* ergibt **"true"**, die teilweise Spezialisierung definiert Datenmember `type` Typ `T`.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `EnableIf`  

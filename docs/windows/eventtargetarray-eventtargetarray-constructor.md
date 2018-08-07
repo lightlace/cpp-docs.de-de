@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: Eventtargetarray-Konstruktor | Microsoft Docs'
+title: 'Eventtargetarray:: Eventtargetarray-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fbfd12ea513044f1062e60f5c73f5089683f043d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831c9a524f8120c855382d198a5f53ac312cada6
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872714"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569787"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray-Konstruktor
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,9 +36,9 @@ EventTargetArray(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `hr`  
- Nachdem diese Vorgänge Konstruktor Parameter `hr` gibt an, ob die Zuordnung des Arrays erfolgreich war oder nicht. Die folgende Tabelle enthält die möglichen Werte für `hr`.  
+### <a name="parameters"></a>Parameter  
+ *HR*  
+ Nach diesem Konstruktor-Vorgänge Parameter *hr* gibt an, ob das Array Zuordnung erfolgreich war oder nicht. Die folgende Tabelle enthält die möglichen Werte für *hr*.  
   
  S_OK  
  Der Vorgang wurde erfolgreich ausgeführt.  
@@ -47,15 +47,15 @@ EventTargetArray(
  Arbeitsspeicher konnte nicht für das Array zugeordnet werden.  
   
  S_FALSE  
- Parameter `items` ist kleiner oder gleich 0 (null).  
+ Parameter *Elemente* ist kleiner als oder gleich 0 (null).  
   
- `items`  
- Die Anzahl von Arrayelementen zu reservieren.  
+ *Elemente*  
+ Die Anzahl der Elemente des Arrays zugewiesen werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Initialisiert eine neue Instanz der EventTargetArray-Klasse.  
+ Initialisiert eine neue Instanz der dem **EventTargetArray** Klasse.  
   
- EventTargetArray wird verwendet, um ein Array von Ereignishandlern in einem EventSource-Objekt beizubehalten.  
+ **EventTargetArray** wird verwendet, um ein Array von Ereignishandlern in behalten eine `EventSource` Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  

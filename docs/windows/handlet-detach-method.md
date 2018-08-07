@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Detach-Methode | Microsoft Docs'
+title: 'Handlet:: Detach-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 100d215099494c9b2714fd2c42dee69644a5006c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc11d6be992584adb1ce2075e73d080cc3a43f47
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878462"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569478"
 ---
 # <a name="handletdetach-method"></a>HandleT::Detach-Methode
-Hebt die Zuordnung der aktuellen HandleT-Objekts aus der zugrunde liegende Handle.  
+Hebt die Zuordnung der aktuellen **HandleT** Objekt aus der zugrunde liegende Handle.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +37,7 @@ typename HandleTraits::Type Detach();
  Das zugrunde liegende Handle.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn dieser Vorgang abgeschlossen ist, wird die aktuelle HandleT auf einen ungültigen Zustand festgelegt.  
+ Wenn dieser Vorgang abgeschlossen ist, die aktuelle **HandleT** auf einen ungültigen Zustand festgelegt ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

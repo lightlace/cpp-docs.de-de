@@ -1,5 +1,5 @@
 ---
-title: 'EventSource:: Add-Methode | Microsoft Docs'
+title: 'EventSource:: Add-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92af8746b4d2b5ba2f379cc8660b5345b2c5f175
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90750f965768d5ecda40e074f9a136407613d2d2
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873237"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570381"
 ---
 # <a name="eventsourceadd-method"></a>EventSource::Add-Methode
-Fügt den Ereignishandler, die durch die Schnittstelle des angegebenen Delegaten dargestellt wird, auf den Satz der Ereignishandler für das aktuelle EventSource-Objekt.  
+Fügt den Ereignishandler, die durch die Schnittstelle für die angegebenen Delegaten dargestellt wird, auf den Satz von Ereignishandlern für die aktuelle **EventSource** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,12 +36,12 @@ HRESULT Add(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `delegateInterface`  
- Die Schnittstelle mit einem Delegatobjekt, der einen Ereignishandler darstellt.  
+### <a name="parameters"></a>Parameter  
+ *delegateInterface*  
+ Die Schnittstelle an ein Delegatobjekt, das einen Ereignishandler darstellt.  
   
- `token`  
- Wenn dieser Vorgang abgeschlossen wird, ein Handle, das das Ereignis darstellt. Verwenden Sie dieses Token als Parameter an die [Remove()](../windows/eventsource-remove-method.md) Methode, um den Ereignishandler zu verwerfen.  
+ *token*  
+ Wenn dieser Vorgang abgeschlossen ist, ein Handle, das das Ereignis darstellt. Verwenden Sie dieses Token als Parameter an die ["Remove()""](../windows/eventsource-remove-method.md) Methode, um den Ereignishandler zu verwerfen.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  

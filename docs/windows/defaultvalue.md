@@ -1,5 +1,5 @@
 ---
-title: "\"DefaultValue\" | Microsoft Docs"
+title: DefaultValue | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c838f057d9c5e59193d0578fe8aa871b1b75ee9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873416"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569985"
 ---
 # <a name="defaultvalue"></a>defaultvalue
-Ermöglicht die Festlegung eines standardmäßigen Werts für einen typisierten optionale Parameter.  
+Ermöglicht die Angabe eines Standardwerts für einen typisierten optionalen Parameter.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [ defaultvalue= value ]  
 ```  
   
@@ -39,12 +38,12 @@ Ermöglicht die Festlegung eines standardmäßigen Werts für einen typisierten 
  Der Standardwert für den Parameter.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **"DefaultValue"** C++-Attribut hat die gleiche Funktionalität wie die ["DefaultValue"](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL-Attribut.  
+ Die **Defaultvalue** C++-Attribut hat die gleiche Funktionalität wie die [Defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt die Verwendung einer Schnittstelle Methode der **"DefaultValue"** Attribut:  
+ Der folgende Code zeigt eine Schnittstelle-Methode mit dem **Defaultvalue** Attribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvalue.cpp  
 // compile with: /LD  
 #include <windows.h>  

@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: GetMarshalSizeMax-Methode | Microsoft Docs'
+title: 'Ftmbase:: GetMarshalSizeMax-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a298e63bc67dadf33a5e653d0eecf165a530d82
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c39c313f06bb4dd1f4dbc095df159a38625e9db8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873793"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570213"
 ---
 # <a name="ftmbasegetmarshalsizemax-method"></a>FtmBase::GetMarshalSizeMax-Methode
-Rufen Sie die obere Grenze für die Anzahl der Bytes, die erforderlich sind, um den angegebenen Schnittstellenzeiger auf das angegebene Objekt zu marshallen.  
+Rufen Sie die obere Grenze für die Anzahl von Bytes erforderlich, um den angegebenen Schnittstellenzeiger für das angegebene Objekt gemarshallt werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,31 +40,31 @@ STDMETHODIMP GetMarshalSizeMax(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `riid`  
- Verweis auf den Bezeichner der Schnittstelle, die gemarshallt werden.  
+### <a name="parameters"></a>Parameter  
+ *riid*  
+ Verweis auf den Bezeichner der Schnittstelle, die gemarshallt werden soll.  
   
- `pv`  
+ *PV*  
  Der Schnittstellenzeiger, gemarshallt werden soll; NULL kann sein.  
   
- `dwDestContext`  
- Zielkontext, in dem die angegebene Schnittstelle werden rückgängig gemacht werden.  
+ *dwDestContext*  
+ Zielkontext, in dem die angegebene Schnittstelle zum Marshalling rückgängig gemacht werden wird.  
   
- Geben Sie eine oder mehrere MSHCTX-Enumerationswerte.  
+ Geben Sie einen oder mehrere MSHCTX-Enumerationswerte.  
   
- Methodeninformationen kann derzeit, die entweder in einem anderen Apartment des aktuellen Prozesses (MSHCTX_INPROC) oder in einem anderen Prozess auf dem gleichen Computer wie der aktuelle Prozess (MSHCTX_LOCAL) auftreten.  
+ Rückgängigmachen des Marshallens kann derzeit, die entweder in ein anderes Apartment des aktuellen Prozesses (MSHCTX_INPROC) oder in einem anderen Prozess auf dem gleichen Computer wie der aktuelle Prozess (MSHCTX_LOCAL) auftreten.  
   
- `pvDestContext`  
+ *pvDestContext*  
  Für die zukünftige Verwendung reserviert. NULL muss sein.  
   
- `mshlflags`  
- Flag, das angibt, ob die Daten, die gemarshallt werden zurück an den Clientprozess übertragen werden – der Normalfall – handschriftlichen auf eine globale Tabelle, in dem von mehreren Clients abgerufen werden können. Geben Sie eine oder mehrere MSHLFLAGS-Enumerationswerte.  
+ *mshlflags*  
+ Flag, das angibt, ob die Daten gemarshallt werden zurück an den Clientprozess übertragen werden – der Normalfall – oder in einer globalen Tabelle, in dem sie, indem mehrere Clients abgerufen werden geschrieben. Geben Sie einen oder mehrere MSHLFLAGS-Enumerationswerte.  
   
- `pSize`  
- Wenn dieser Vorgang abgeschlossen wird, Zeiger auf die obere Grenze für die Menge der Daten in den Marshalling Stream geschrieben werden.  
+ *pSize*  
+ Wenn dieser Vorgang abgeschlossen ist, Zeiger auf die obere Grenze für die Menge der Daten in den Marshalling Stream geschrieben werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls E_FAIL oder E_NOINTERFACE.  
+ S_OK, wenn erfolgreich; andernfalls E_FAIL oder E_NOINTERFACE an.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** ftm.h  

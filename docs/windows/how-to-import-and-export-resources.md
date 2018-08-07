@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Importieren und Exportieren von Ressourcen | Microsoft Docs'
+title: 'Vorgehensweise: Importieren und Exportieren von Ressourcen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e526ab335436730f4132b5b7127ec9079432a4a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49cdee9cfed3b5694fcea899b9250c5f9dd214b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879177"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570479"
 ---
 # <a name="how-to-import-and-export-resources"></a>Gewusst wie: Importieren und Exportieren von Ressourcen
 Sie können grafische Ressourcen (Bitmaps, Symbole, Cursor und Symbolleisten), HTML-Dateien und benutzerdefinierte Ressourcen für die Verwendung in Visual C++ importieren. Die können dieselben Dateitypen aus einem Visual C++-Projekt exportieren, um Dateien zu trennen, die außerhalb der Entwicklungsumgebung verwendet werden können.  
@@ -42,30 +42,28 @@ Sie können grafische Ressourcen (Bitmaps, Symbole, Cursor und Symbolleisten), H
   
 ### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>So importieren Sie eine einzelne Ressource in Ihre aktuelle Ressourcendatei  
   
-1.  In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste des Knotens für die Ressourcenskriptdatei (* .rc) Datei, die Sie eine Ressource hinzufügen möchten.  
+1.  In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste des Knotens für das Ressourcenskript (* .rc)-Datei zu dem beim Hinzufügen einer Ressource werden sollen.  
   
-2.  Klicken Sie auf **Import** im Kontextmenü.  
+2.  Klicken Sie auf **Import** im Kontextmenü auf.  
   
 3.  Suchen Sie nach dem Dateinamen der Bitmap- (.bmp), Symbol- (.ico), Cursor- (.cur), HTML- (.html) oder einer anderen zu importierenden Datei, und wählen Sie ihn aus.  
   
-4.  Klicken Sie auf **OK** die Ressource hinzugefügt, um die ausgewählte Datei in **Ressource** anzeigen.  
+4.  Klicken Sie auf **OK** zum Hinzufügen der Ressource zur ausgewählten Datei in **Ressource** anzeigen.  
   
     > [!NOTE]
     >  Der Importvorgang funktioniert auf die gleiche Weise, und zwar unabhängig davon, welchen bestimmten Ressourcentyp Sie ausgewählt haben. Die importierte Ressource wird automatisch zum richtigen Knoten für diesen Ressourcentyp hinzugefügt.  
   
 ### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>So exportieren Sie Bitmaps, Symbole oder Cursor als eine getrennte Datei (für die Verwendung außerhalb von Visual C++)  
   
-1.  In **Ressource** zeigen Sie an der rechten Maustaste auf die Ressource, die Sie exportieren möchten.  
+1.  In **Ressource** Anzeigen der rechten Maustaste auf die Ressource, die Sie exportieren möchten.  
   
-2.  Klicken Sie auf **exportieren** im Kontextmenü.  
+2.  Klicken Sie auf **exportieren** im Kontextmenü auf.  
   
-3.  In der **Ressource exportieren** Dialogfeld Feld, nehmen Sie den aktuellen Dateinamen an oder geben Sie einen neuen ein.  
+3.  In der **Ressource exportieren** Dialogfeld Feld, oder übernehmen Sie den aktuellen Dateinamen geben Sie eine neue Ressourcengruppe.  
   
-4.  Navigieren Sie zu dem Ordner, in dem Sie soll zum Speichern der Datei, und klicken Sie auf **exportieren**.  
+4.  Navigieren Sie zu dem Ordner, in dem Sie die Datei speichern, und klicken Sie auf möchten **exportieren**.  
   
-
-  
- Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
  Win32  
   

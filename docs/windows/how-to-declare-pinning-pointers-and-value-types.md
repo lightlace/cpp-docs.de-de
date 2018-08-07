@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Deklarieren von festen Zeigern und Werttypen | Microsoft Docs'
+title: 'Vorgehensweise: Deklarieren von festen Zeigern und Werttypen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40187b7da9083ddaa5342e4bdfeba556fb900e7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57c6ed79f9ecb74533a7ffaf2861af8bee9e257a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880383"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569754"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Gewusst wie: Deklarieren von festen Zeigern und Werttypen
-Ein Werttyp kann implizit geschachtelt werden. Sie können dann einen festen Zeiger auf das Wertobjekt für den Typ deklarieren, selbst und Verwenden einer **Pin_ptr** in den Typ des geschachtelten Werts.  
+Ein Werttyp kann implizit geschachtelt werden. Sie können dann einen festen Zeiger auf das Wertobjekt für den Typ deklarieren, sich selbst und Verwenden einer **Pin_ptr** in den Typ des geschachtelten Werts.  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // pin_ptr_value.cpp  
 // compile with: /clr  
 value struct V {  
@@ -50,7 +50,7 @@ int main() {
   
 ### <a name="output"></a>Ausgabe  
   
-```  
+```Output  
 8  
 7  
 7  

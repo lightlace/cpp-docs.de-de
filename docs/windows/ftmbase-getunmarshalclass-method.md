@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: GetUnmarshalClass-Methode | Microsoft Docs'
+title: 'Ftmbase:: GetUnmarshalClass-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09afd9f977dbc779eb1dc10e9553d2ca88538fcc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 329d43227aa131728db72086f99cb86797a5e1e3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873302"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571151"
 ---
 # <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass-Methode
-Ruft die CLSID, die COM verwendet, um die DLL, die den Code für den entsprechenden Proxy zu suchen. COM lädt diese DLL aus, um eine nicht initialisierte Instanz des Proxys zu erstellen.  
+Ruft die CLSID, die COM verwendet, um die DLL, die den Code für den entsprechenden Proxy zu suchen. COM lädt diese DLL-Datei um eine nicht initialisierte Instanz des Proxys zu erstellen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,30 +40,30 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `riid`  
- Verweis auf den Bezeichner der Schnittstelle, die gemarshallt werden.  
+### <a name="parameters"></a>Parameter  
+ *riid*  
+ Verweis auf den Bezeichner der Schnittstelle, die gemarshallt werden soll.  
   
- `pv`  
- Zeiger auf die Schnittstelle, die gemarshallt werden; NULL kann sein, wenn der Aufrufer nicht über einen Zeiger auf die gewünschte Schnittstelle besitzt.  
+ *PV*  
+ Zeiger auf die Schnittstelle, die gemarshallt werden; Wenn der Aufrufer nicht über einen Zeiger auf die gewünschte Schnittstelle verfügt, kann NULL sein.  
   
- `dwDestContext`  
- Zielkontext, in dem die angegebene Schnittstelle werden rückgängig gemacht werden.  
+ *dwDestContext*  
+ Zielkontext, in dem die angegebene Schnittstelle zum Marshalling rückgängig gemacht werden wird.  
   
- Geben Sie eine oder mehrere MSHCTX-Enumerationswerte.  
+ Geben Sie einen oder mehrere MSHCTX-Enumerationswerte.  
   
- Methodeninformationen kann entweder in einem anderen Apartment des aktuellen Prozesses (MSHCTX_INPROC) oder in einem anderen Prozess auf dem gleichen Computer wie der aktuelle Prozess (MSHCTX_LOCAL) auftreten.  
+ Rückgängigmachen des Marshallens kann entweder in ein anderes Apartment des aktuellen Prozesses (MSHCTX_INPROC) oder in einem anderen Prozess auf dem gleichen Computer wie der aktuelle Prozess (MSHCTX_LOCAL) auftreten.  
   
- `pvDestContext`  
+ *pvDestContext*  
  Für die zukünftige Verwendung reserviert. NULL muss sein.  
   
- `mshlflags`  
- Wenn dieser Vorgang abgeschlossen wird, Zeiger auf die CLSID zum Erstellen eines Proxys im Clientprozess verwendet werden.  
+ *mshlflags*  
+ Wenn dieser Vorgang abgeschlossen ist, Zeiger auf die CLSID zum Erstellen eines Proxys im Clientprozess verwendet werden.  
   
- `pCid`  
+ *pCid*  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; Anderenfalls "S_FALSE".  
+ S_OK, wenn erfolgreich; andernfalls S_FALSE.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** ftm.h  

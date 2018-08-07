@@ -1,5 +1,5 @@
 ---
-title: 'Hstring:: Detach-Methode | Microsoft Docs'
+title: 'Hstring:: Detach-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 621476f092b3dbaad994e63a329f1a8c567f55b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bfd4390cdc786836b08e77b4ee699e44cc42618
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33885453"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569725"
 ---
 # <a name="hstringdetach-method"></a>HString::Detach-Methode
-Hebt die Zuordnung des angegebenen HString-Objekts zu seinem zugrunde liegenden Wert auf.  
+Hebt die Zuordnung der angegebenen **HString** Objekt von seinem zugrunde liegenden Wert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,7 +32,7 @@ HSTRING Detach() throw()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der zugrunde liegenden HString-Wert vor dem Trennvorgang gestartet werden soll.  
+ Die zugrunde liegende **HString** Wert vor dem Trennvorgang gestartet.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

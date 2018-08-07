@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase::: UnmarshalInterface-Methode | Microsoft Docs'
+title: 'Ftmbase::: UnmarshalInterface-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 964ce5cc33b51c54446874522317814279cdd960
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d7b34f1af7734fa22db3a9f296bc021917356f8a
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877718"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570027"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase:::UnmarshalInterface-Methode
-Initialisiert einen neu erstellten Proxy, und gibt einen Schnittstellenzeiger, der diesem Proxy zurück.  
+Initialisiert einen neu erstellten Proxy, und gibt einen Schnittstellenzeiger zurück, auf diesen Proxy.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,17 +38,17 @@ STDMETHODIMP UnmarshalInterface(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `pStm`  
- Zeiger auf der Stream, aus dem Schnittstellenzeiger rückgängig gemacht werden.  
+ *pStm*  
+ Zeiger auf der Stream, aus dem der Schnittstellenzeiger auf das Marshalling rückgängig gemacht werden.  
   
- `riid`  
- Verweis auf den Bezeichner der Schnittstelle, die rückgängig gemacht werden.  
+ *riid*  
+ Verweis auf den Bezeichner der Schnittstelle an Marshalling rückgängig gemacht werden.  
   
- `ppv`  
- Wenn dieser Vorgang abgeschlossen wird, die Adresse einer Zeigervariablen, die den Schnittstellenzeiger in angeforderte empfängt `riid`. Wenn dieser Vorgang erfolgreich ist, wird *`ppv` enthält den angeforderten Schnittstellenzeiger auf der Schnittstelle, die rückgängig gemacht werden.  
+ *ppv*  
+ Wenn dieser Vorgang abgeschlossen ist, die Adresse einer Zeigervariablen, die die im angeforderten Schnittstellenzeiger empfängt *Riid*. Wenn dieser Vorgang erfolgreich ist, ist **Ppv* enthält den angeforderten Schnittstellenzeiger, der die Schnittstelle für das Marshalling rückgängig gemacht werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls E_NOINTERFACE oder E_FAIL zurück.  
+ S_OK, wenn erfolgreich; andernfalls E_NOINTERFACE oder E_FAIL.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** ftm.h  

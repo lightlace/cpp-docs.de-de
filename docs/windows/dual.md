@@ -1,5 +1,5 @@
 ---
-title: Duale | Microsoft Docs
+title: Duale | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 460e3f5316bc4b4509e563fda2354106164b3b1a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b52359d1f50f5ea3bad4075432fd8ae0e468d2df
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872379"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571017"
 ---
 # <a name="dual"></a>dual
-Fügt eine Schnittstelle in der IDL-Datei als eine duale Schnittstelle.  
+Fügt eine Schnittstelle in der IDL-Datei als eine duale Schnittstelle an.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [dual]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die **duale** C++-Attribut vorangestellt ist, eine Schnittstelle, die er bewirkt, dass die Schnittstelle in der bibliotheksblock in der generierten IDL-Datei abgelegt werden soll.  
+ Wenn die **dual** C++-Attribut einer Schnittstelle vorangeht, wird die Schnittstelle, in den bibliotheksblock in der generierten IDL-Datei platziert werden soll.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code ist ein Attributblock, die verwendet **duale** vor einer Schnittstellendefinition:  
+ Der folgende Code ist ein Attributblock, die verwendet **dual** vor einer Schnittstellendefinition:  
   
-```  
+```cpp  
 // cpp_attr_ref_dual.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -79,7 +77,7 @@ __interface IStatic : IDispatch
   
 |||  
 |-|-|  
-|**Betrifft**|`interface`|  
+|**Betrifft**|**interface**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|**dispinterface**|  

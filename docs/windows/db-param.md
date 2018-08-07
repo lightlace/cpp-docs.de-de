@@ -1,5 +1,5 @@
 ---
-title: Db_param | Microsoft Docs
+title: Db_param | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce7cf5c8e92e7fd6e6e10d7bef0519b1ced4cf62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c7ce3c5b76dfa8602a46e947d1e8925ec2bf14c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880693"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569442"
 ---
 # <a name="dbparam"></a>db_param
-Ordnet die angegebene Membervariable ein Eingabe- oder Ausgabespalte-Parameter und begrenzt die Variable.  
+Ordnet die angegebenen Member-Variable mit einem Eingabe- oder ausgabeadapter-Parameter und Variablen begrenzt.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ db_param(   
+[ db_param(   
    ordinal,   
    paramtype="DBPARAMIO_INPUT",   
    dbtype,   
@@ -43,48 +42,48 @@ Ordnet die angegebene Membervariable ein Eingabe- oder Ausgabespalte-Parameter u
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `ordinal`  
- Die Nummer der Spalte (**DBCOLUMNINFO** Ordnungszahl), ein Feld in das Rowset, das zum Binden von Daten entspricht.  
+ *Ordinal*  
+ Die Nummer der Spalte (DBCOLUMNINFO-Ordnungszahl) für ein Feld in das Rowset, um Daten zu binden.  
   
  *ParamType-Objekt* (optional)  
- Der Typ, für den Parameter festgelegt werden. Anbieter unterstützen nur Parameter e/a-Typen, die von der zugrunde liegenden Datenquelle unterstützt werden. Der Typ ist eine Kombination aus einem oder mehreren **DBPARAMIOENUM** Werte:  
+ Der Typ, für den Parameter festlegen. Anbieter unterstützen nur e/a-Parametertypen, die von der zugrunde liegenden Datenquelle unterstützt werden. Der Typ ist eine Kombination aus einem oder mehreren DBPARAMIOENUM-Werten:  
   
--   **DBPARAMIO_INPUT** Ein Eingabeparameter.  
+-   DBPARAMIO_INPUT Eingabeparameter.  
   
--   **DBPARAMIO_OUTPUT** Ein Ausgabeparameter.  
+-   DBPARAMIO_OUTPUT ein Output-Parameter.  
   
--   **DBPARAMIO_NOTPARAM** Der Accessor hat keine Parameter. Festlegen von **eParamIO** auf diesen Wert in der Zeile Accessoren daran erinnert werden dem Benutzer, dass Parameter ignoriert werden.  
+-   DBPARAMIO_NOTPARAM der Accessor hat keine Parameter. Festlegen von `eParamIO` auf diesen Wert in Zeile Accessoren daran erinnert werden dem Benutzer, dass Parameter ignoriert werden.  
   
  *DbType* (optional)  
- OLE DB- ["Typindikator" als](https://msdn.microsoft.com/en-us/library/ms711251.aspx) für den Eintrag in der Spalte.  
+ OLE DB [Typindikator](https://msdn.microsoft.com/library/ms711251.aspx) für den Eintrag in der Spalte.  
   
  *Genauigkeit* (optional)  
- Die Genauigkeit für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der **bPrecision** Element von der [DBBINDING-Struktur](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ Die Genauigkeit für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bPrecision` Element der [DBBINDING-Struktur](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *Skalierung* (optional)  
- Die Dezimalstellen für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der **bScale** Element von der [DBBINDING-Struktur](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ Die Dezimalstellen für den Eintrag in der Spalte verwendet werden soll. Weitere Informationen finden Sie unter der Beschreibung der `bScale` Element der [DBBINDING-Struktur](https://msdn.microsoft.com/library/ms716845.aspx)  
   
  *Status* (optional)  
- Eine Membervariable verwendet, um den Status dieser Spalte zu halten. Der Status gibt an, ob der Spaltenwert wie z. B. einen Datenwert oder ein anderer Wert ist **NULL**. Mögliche Werte finden Sie unter [Status](https://msdn.microsoft.com/en-us/library/ms722617.aspx) in der *OLE DB Programmer's Reference*.  
+ Eine Membervariable verwendet, um den Status dieser Spalte zu speichern. Der Status gibt an, ob der Wert der Spalte einen Datenwert oder einen anderen Wert, z. B. die NULL ist. Mögliche Werte finden Sie unter [Status](https://msdn.microsoft.com/library/ms722617.aspx) in die *OLE DB-Programmierreferenz*.  
   
  *Länge* (optional)  
- Eine Membervariable dar, das die Größe der Spalte in Bytes enthält.  
+ Eine Membervariable verwendet, um die Größe der Spalte in Bytes zu speichern.  
   
 ## <a name="remarks"></a>Hinweise  
- **Db_param** Parameter definiert, dass Sie in Befehlen verwenden; aus diesem Grund verwenden Sie es mit **Db_command**. Beispielsweise können Sie **Db_param** zum Binden von Parametern in SQL-Abfragen oder gespeicherte Prozeduren. Parameter in einer gespeicherten Prozedur werden durch Fragezeichen (?) gekennzeichnet, und die Datenelemente in der Reihenfolge der Parameter gebunden werden soll.  
+ **Db_param** Parameter definiert, dass Sie in den Befehlen verwenden; aus diesem Grund verwenden Sie ihn mit `db_command`. Beispielsweise können Sie **Db_param** zum Binden von Parametern in SQL-Abfragen oder gespeicherte Prozeduren. Parameter in einer gespeicherten Prozedur sind gekennzeichnet durch die Fragezeichen (?), und die Datenmember in der Reihenfolge der Parameter gebunden werden soll.  
   
- **Db_param** Memberdaten, die in der OLE DB teilnehmen können, begrenzt `ICommandWithParameters`-basierten Bindung. Der Parametertyp (Eingabe oder Ausgabe), OLE DB-Typ, Genauigkeit, Dezimalstellen, Status und Länge für den angegebenen Parameter festgelegt. Dieses Attribut fügt die OLE DB-Consumer-Makros BEGIN_PARAM_MAP... END_PARAM_MAP. Jedes Element aus, markieren Sie mit, der **Db_param** Attribut nimmt einen Eintrag in der Zuordnung in Form einer COLUMN_ENTRY.  
+ **Db_param** begrenzt Memberdaten, die in der OLE DB teilnehmen kann `ICommandWithParameters`-basierten Bindung. Der Parametertyp (Eingabe oder Ausgabe), OLE DB-Typ, Genauigkeit, Dezimalstellen, Status und Länge für den angegebenen Parameter festgelegt. Dieses Attribut fügt die Makros für OLE DB-Consumer BEGIN_PARAM_MAP... END_PARAM_MAP. Jedes Element, markieren Sie Sie mit, der **Db_param** Attribut nimmt einen Eintrag in der Zuordnung in Form einer COLUMN_ENTRY.  
   
  **Db_param** dient in Verbindung mit der [Db_table](../windows/db-table.md) oder [Db_command](../windows/db-command.md) Attribute.  
   
- Wenn vom Consumer-Attribut-Anbieter dieses Attribut auf eine Klasse angewendet werden, wird der Compiler die Klasse umbenennen \_ *Klassenname*-Accessor, in dem *Klassenname* der eingegebene Name ist der Klasse und der Compiler erstellt auch eine Klasse mit dem Namen *Klassenname*, die sich daraus ableitet \_ *Klassenname*Accessor.  In dieser Klassenansicht werden beide Klassen angezeigt.  
+ Wenn der Consumer Attributanbieter dieses Attribut auf eine Klasse angewendet wird, wird der Compiler die Klasse umbenennen \_ *Klassenname*Accessor, in denen *Klassenname* ist der Name, der Sie zugewiesen haben die Klasse und der Compiler erstellt auch eine Klasse namens *Klassenname*, die sich daraus ableitet \_ *Klassenname*Accessor.  In dieser Klassenansicht werden beide Klassen angezeigt.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine Command-Klasse, die basierend auf der SalesbyYear gespeicherte Prozedur in der Northwind-Datenbank. Sie ordnet den ersten Parameter in der gespeicherten Prozedur mit der `m_RETURN_VALUE` Variable, und wird als Output-Parameter definiert. Sie ordnet die letzten beiden (Eingabeparameter) mit `m_Beginning_Date` und `m_Ending_Date`.  
+ Das folgende Beispiel erstellt eine Command-Klasse, die basierend auf der SalesbyYear gespeicherte Prozedur in der Datenbank Northwind. Wird den ersten Parameter in der gespeicherten Prozedur mit der `m_RETURN_VALUE` Variable, und definiert es als ein Ausgabeparameter. Es ordnet die beiden letzten Parameter (Eingabe) mit `m_Beginning_Date` und `m_Ending_Date`.  
   
  Im folgenden Beispiel wird die `nOutput` Variable mit einem Ausgabeparameter.  
   
-```  
+```cpp  
 // db_param.cpp  
 // compile with: /LD  
 #include <atlbase.h>  
@@ -124,7 +123,7 @@ struct CSalesbyYear {
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`, Member, Methode, lokal|  
+|**Betrifft**|**Klasse**, **Struktur**, Member, Methode, lokal|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

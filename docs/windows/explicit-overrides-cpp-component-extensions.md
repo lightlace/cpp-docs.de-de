@@ -1,5 +1,5 @@
 ---
-title: Explizite Überschreibungen (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Explizite Überschreibungen (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,64 +15,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4eb418a6ded829e4eeeef3bf108894f9faf3d77e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 225580be17afcc1bda6feab63d3efe79f932b757
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879502"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570323"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Explizite Überschreibungen (Komponentenerweiterungen für C++)
-In diesem Thema erläutert, wie einen Member einer Basisklasse oder Schnittstelle explizit zu überschreiben. Eine benannte (explizite) überschreiben, sollte nur verwendet werden, um eine Methode mit einer abgeleiteten Methode überschreiben, die einen anderen Namen aufweist.  
+In diesem Thema wird erläutert, wie ein Member einer Basisklasse oder Schnittstelle explizit zu überschreiben. Benannte Überschreibung (explizite) sollte nur verwendet werden, um eine Methode mit einer abgeleiteten Methode überschreiben, die einen anderen Namen aufweist.  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
  **Syntax**  
   
 ```  
-  
-      overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
+overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
   
  **Parameter**  
   
- *Überschreiben von funktionsdeklarator*  
- Der Typ, Namen und die Argumentliste Rückgabeliste der überschreibenden Funktion.  Beachten Sie, dass die überschreibende Funktion keinen haben den gleichen Namen wie die Funktion, die überschrieben wird.  
+ *Überschreiben der funktionsdeklarator*  
+ Typ, Name und Argument Rückgabeliste der überschreibenden Funktion.  Beachten Sie, dass die überschreibende Funktion nicht unbedingt den gleichen Namen wie die überschriebene Funktion haben.  
   
  *Typ*  
- Der Basistyp, die eine Funktion zum Außerkraftsetzen enthält.  
+ Der Basistyp, der eine Funktion, die außer Kraft setzen enthält.  
   
  *function*  
- Eine durch Trennzeichen getrennte Liste von mindestens einem Funktionsnamen überschreiben.  
+ Eine durch Trennzeichen getrennte Liste für eine oder mehrere Funktionsnamen zu überschreiben.  
   
- *Überschreiben von Funktionsdefinition*  
- Die Funktion Text-Anweisungen, die die überschreibende Funktion definieren.  
+ *Überschreiben der Funktionsdefinition*  
+ Die Funktion Text-Anweisungen, die die überschreibende Funktion zu definieren.  
   
  **Hinweise**  
   
- Explizite verwenden Sie Außerkraftsetzungen, um einen Alias für die Signatur einer Methode zu erstellen, oder um unterschiedliche Implementierungen für Methoden Witht die gleiche Signatur bereitzustellen.  
+ Explizite verwenden Sie Außerkraftsetzungen, um einen Alias für die Signatur einer Methode zu erstellen oder um unterschiedliche Implementierungen für Methoden Witht die gleiche Signatur bereitzustellen.  
   
  Informationen zum Ändern des Verhaltens von geerbten Typen geerbte Typ- und Typmemberdeklarationen finden Sie unter [Überschreibungsspezifizierer](../windows/override-specifiers-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **Hinweise**  
   
- Für Informationen zu expliziten in systemeigenem Code überschreibt oder Code kompiliert mit **/CLR: oldSyntax**, finden Sie unter [explizite Überschreibungen](../cpp/explicit-overrides-cpp.md).  
+ Informationen über explizite überschreibungen in nativem Code oder Code kompiliert wird, mit `/clr:oldSyntax`, finden Sie unter [explizite Überschreibungen](../cpp/explicit-overrides-cpp.md).  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Das folgende Codebeispiel zeigt einen einfachen, implizite "Override" und Implementierung eines Elements in eine Basisschnittstelle nicht über explizite überschreibungen.  
+ Das folgende Codebeispiel zeigt eine einfache, implizite Override "und" Implementierung eines Members in eine Basisschnittstelle, nicht über explizite überschreibungen.  
   
-```  
+```cpp  
 // explicit_override_1.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -100,10 +99,9 @@ X::f override of I1::f
   
  **Beispiel**  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie alle Schnittstellenmember mit einer allgemeinen Signatur, die mit expliziten Überschreibungssyntax zu implementieren.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie alle Schnittstellenmember mit einer gemeinsamen Signatur, die mit der explizite Überschreibungssyntax implementiert wird.  
   
-```  
-  
+```cpp  
 // explicit_override_2.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -137,7 +135,7 @@ X::f override of I1::f and I2::f
   
  **Beispiel**  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie eine Funktion zum Überschreiben von der Funktion einen anderen Namen verwenden kann, die implementiert wird.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie eine Funktion zum Überschreiben von der Funktion einen anderen Namen haben kann, die implementiert wird.  
   
 ```  
 // explicit_override_3.cpp  
@@ -167,9 +165,9 @@ X::g
   
  **Beispiel**  
   
- Das folgende Codebeispiel zeigt eine explizite schnittstellenimplementierung, die eine sichere typauflistung implementiert.  
+ Das folgende Codebeispiel zeigt eine explizite schnittstellenimplementierung, die eine sichere Auflistung implementiert.  
   
-```  
+```cpp  
 // explicit_override_4.cpp  
 // compile with: /clr /LD  
 using namespace System;  
