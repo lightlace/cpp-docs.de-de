@@ -1,5 +1,5 @@
 ---
-title: Delegate (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Delegat (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73d40bb33509f89273b37f7704cd1922a8d5adc2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c2a1297fff3c4604ffb181a907b982f9d2e1de4
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879658"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570362"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (Komponentenerweiterungen für C++)
 Deklariert einen Typ, der einen Funktionszeiger darstellt.  
@@ -32,12 +32,12 @@ Deklariert einen Typ, der einen Funktionszeiger darstellt.
  Die Windows-Runtime und die common Language Runtime unterstützen Delegaten.  
   
 ### <a name="remarks"></a>Hinweise  
- `delegate` ist ein kontextbezogenes Schlüsselwort. Weitere Informationen finden Sie unter [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ **Delegieren** ist ein kontextbezogenes Schlüsselwort. Weitere Informationen finden Sie unter [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
- Um zum Zeitpunkt der Kompilierung festzustellen, ob ein Typ ein Delegat ist, verwenden die `__is_delegate()` Merkmal "Typ". Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Verwenden Sie zum Zeitpunkt der Kompilierung erkennen, wenn ein Typ eines Delegaten ist der `__is_delegate()` Typeigenschaft. Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
- C + c++ / CX unterstützt Delegaten mit der folgenden Syntax.  
+ C++ / CX unterstützt Delegaten mit der folgenden Syntax.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -49,24 +49,23 @@ delegate-type-identifier
 (  
 [ parameters ]  
 )  
-  
 ```  
   
 ### <a name="parameters"></a>Parameter  
  *Zugriff*  
- (optional) Der Zugriff auf den Delegaten kann u. `public` (Standard) oder `private`. Der Funktionsprototyp kann auch mit qualifiziert werden die `const` oder `volatile` Schlüsselwörter.  
+ (optional) Der Zugriff auf den Delegaten, der sein kann **öffentliche** (Standard) oder **private**. Der Funktionsprototyp kann auch qualifiziert werden, mit der **const** oder **flüchtige** Schlüsselwörter.  
   
  *Rückgabetyp*  
- Der Rückgabetyp der Funktionsprototypen.  
+ Der Rückgabetyp von den Funktionsprototyp.  
   
- *Delegaten Typbezeichner*  
- Der Name des deklarierten Delegattyps.  
+ *Delegate-Type-identifier*  
+ Der Name des der deklarierten Delegattyp.  
   
  *Parameter*  
- (Optional) Die Typen und Bezeichner der Funktionsprototypen.  
+ (Optional) Die Typen und Bezeichner, der den Funktionsprototyp.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden der *Delegaten Typbezeichner* deklariert ein Ereignis mit den gleichen Prototyp wie der Delegat. Weitere Informationen finden Sie unter [Delegaten (C + c++ / CX)](../cppcx/delegates-c-cx.md).  
+ Verwenden der *Delegate-Type-Identifier* um ein Ereignis mit den gleichen Prototyp wie den Delegaten zu deklarieren. Weitere Informationen finden Sie unter [Delegaten (C++ / CX)](../cppcx/delegates-c-cx.md).  
   
 ### <a name="requirements"></a>Anforderungen  
  Compileroption: **/ZW**  
@@ -80,44 +79,43 @@ delegate-type-identifier
 access  
 delegate  
 function_declaration  
-  
 ```  
   
 ### <a name="parameters"></a>Parameter  
  *Zugriff*  
- (optional) Der Zugriff auf den Delegaten außerhalb der Assembly kann öffentlich oder privat sein.  Die Standardeinstellung ist privat.  Innerhalb einer Klasse kann ein Delegat beliebigem Zugriff verfügen.  
+ (optional) Der Zugriff auf den Delegaten außerhalb der Assembly kann öffentlich oder privat sein.  Der Standardwert ist privat.  Innerhalb einer Klasse kann ein Delegat aller Zugriffsebenen verfügen.  
   
  *function_declaration*  
- Die Signatur der Funktion, die an den Delegaten gebunden werden kann. Der Rückgabetyp eines Delegaten kann verwalteten Typ sein. Aus Gründen der Interoperabilität wird empfohlen, dass der Rückgabetyp eines Delegaten ein CLS-Typ sein.  
+ Die Signatur der Funktion, die an den Delegaten gebunden werden kann. Der Rückgabetyp eines Delegaten kann es sich um einen verwalteten Typ sein. Aus Gründen der Interoperabilität empfiehlt es sich, dass der Rückgabetyp eines Delegaten ein CLS-Typ sein.  
   
- Definieren Sie einen ungebundenen Delegaten, der erste Parameter im *Function_declaration* muss der Typ des der `this` Zeiger für das Objekt. 
+ Definieren Sie einen ungebundenen Delegaten, der erste Parameter im *Function_declaration* muss der Typ des der **dies** Zeiger für das Objekt. 
   
 ### <a name="remarks"></a>Hinweise  
- Delegaten sind multicast: "" Funktionszeiger auf eine oder mehrere Methoden innerhalb einer verwalteten Klasse gebunden werden kann. Die **Delegieren** -Schlüsselwort definiert ein multicast-Delegat mit einer bestimmten Methodensignatur.  
+ Delegaten sind multicast: "" Funktionszeiger auf eine oder mehrere Methoden in einer verwalteten Klasse gebunden werden kann. Die **Delegieren** -Schlüsselwort definiert einen multicast-Delegat mit einer bestimmten Methodensignatur.  
   
- Ein Delegat kann auch an eine Methode, eine Wertklasse, z. B. eine statische Methode gebunden werden.  
+ Ein Delegat kann auch an eine Methode einer Wertklasse, z. B. eine statische Methode gebunden werden.  
   
  Ein Delegat weist folgende Merkmale auf:  
   
--   Es erbt von **System:: MulticastDelegate**.  
+-   Sie erbt von `System::MulticastDelegate`.  
   
--   Er verfügt über einen Konstruktor, der zwei Argumente akzeptiert: einen Zeiger auf eine verwaltete Klasse oder **NULL** (im Fall der Bindung an eine statische Methode) und eine vollständig qualifizierte Methode des angegebenen Typs.  
+-   Es hat einen Konstruktor, der zwei Argumente akzeptiert: einen Zeiger auf eine verwaltete Klasse oder NULL (im Fall von der Bindung an eine statische Methode) und eine vollständig qualifizierte Methode des angegebenen Typs.  
   
 -   Er verfügt über eine Methode mit dem Namen `Invoke`, deren Signatur der deklarierten Signatur des Delegaten entspricht.  
   
- Wenn ein Delegat aufgerufen wird, dessen ausgeschlossener heißen in der Reihenfolge, das sie angefügt wurden.  
+ Wenn ein Delegat aufgerufen wird, werden die Funktion(en) aufgerufen, in der Reihenfolge, in der sie zugeordnet wurden.  
   
- Der Rückgabewert eines Delegaten ist der Rückgabewert der letzte angefügte Member-Funktion.  
+ Der Rückgabewert eines Delegaten ist der Rückgabewert die letzte angefügte Member-Funktion.  
   
  Delegaten können nicht überladen werden.  
   
  Delegaten können gebunden oder ungebunden sein.  
   
- Wenn Sie einen gebundenen Delegaten instanziieren, wird das erste Argument ein Objektverweis sein.  Das zweite Argument der einen Delegaten-Instanziierung ist entweder die Adresse einer Methode eines Objekts verwaltete Klasse oder ein Zeiger auf eine Methode eines Werttyps sein.   Das zweite Argument der einen Delegaten Instanziierung muss benennen Sie die Methode mit der vollständigen Klasse Scope-Syntax und Anwenden der Address-of-Operators.  
+ Wenn Sie einen gebundenen Delegaten instanziieren, muss das erste Argument ein Objektverweis sein. Das zweite Argument der eine Instanziierung von Delegaten muss entweder die Adresse einer Methode ein Objekt der verwalteten Klasse oder ein Zeiger auf eine Methode eines Werttyps sein. Das zweite Argument der eine Instanziierung von Delegaten muss benennen Sie die Methode mit der vollständigen Klasse Scope-Syntax und die Address-of-Operator angewendet.  
   
- Wenn Sie einen ungebundenen Delegaten instanziieren, wird das erste Argument entweder die Adresse einer Methode eines Objekts verwaltete Klasse oder ein Zeiger auf eine Methode ein Werttyp sein.   Das Argument muss benennen Sie die Methode mit der vollständigen Klasse Scope-Syntax und den Address-of-Operator angewendet.  
+ Wenn Sie einen ungebundenen Delegaten instanziieren, muss das erste Argument entweder die Adresse einer Methode ein Objekt der verwalteten Klasse oder ein Zeiger auf eine Methode einen Werttyp sein. Das Argument muss benennen Sie die Methode mit der vollständigen Klasse Scope-Syntax und die Address-of-Operator angewendet.  
   
- Bei der Erstellung eines Delegaten an eine globale oder statische Funktion ist nur ein Parameter erforderlich: die Funktion (optional, die Adresse der Funktion).  
+ Beim Erstellen eines Delegaten an eine globale oder statische Funktion ist nur ein Parameter erforderlich: die Funktion (optional die Adresse der Funktion).  
   
  Weitere Informationen zu Delegaten finden Sie unter  
   
@@ -131,7 +129,7 @@ function_declaration
 ### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Das folgende Beispiel zeigt, wie zu deklarieren, initialisieren und Aufrufen von Delegaten.  
+ Das folgende Beispiel zeigt, wie Sie deklarieren, initialisieren und Aufrufen von Delegaten.  
   
 ```cpp  
 // mcppv2_delegate.cpp  

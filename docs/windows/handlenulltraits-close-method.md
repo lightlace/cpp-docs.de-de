@@ -1,5 +1,5 @@
 ---
-title: 'Handlenulltraits:: Close-Methode | Microsoft Docs'
+title: 'Handlenulltraits:: Close-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1319b6a75f92e057975d0f8d2c7e2753df47141
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3bc6e7adfa99e2ce25c9913309b5c5bd486bee0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873169"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569400"
 ---
 # <a name="handlenulltraitsclose-method"></a>HANDLENullTraits::Close-Methode
 Schließt das angegebene Handle.  
@@ -35,12 +35,12 @@ inline static bool Close(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `h`  
+### <a name="parameters"></a>Parameter  
+ *h*  
  Das Handle zu schließen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn behandeln `h` geschlossen erfolgreich ist, andernfalls **"false"**.  
+ **"true"** Wenn behandeln *h* geschlossen wird, erfolgreich ist; andernfalls **"false"**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: Db_accessor | Microsoft Docs
+title: Db_accessor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b81e55500a8ff44c887bed592c9472c5a8d3ea1d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68c7d70c6d1192e1b80253cf1fb3cfc3040d8fce
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874524"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570650"
 ---
 # <a name="dbaccessor"></a>db_accessor
-Gruppen **Db_column** Attribute, die Teilnahme an `IAccessor`-basierten Bindung.  
+Gruppen `db_column` Attribute, die Teilnahme an `IAccessor`-basierten Bindung.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ db_accessor(   
+[ db_accessor(   
    num,   
    auto   
 ) ]  
@@ -39,24 +38,24 @@ Gruppen **Db_column** Attribute, die Teilnahme an `IAccessor`-basierten Bindung.
   
 #### <a name="parameters"></a>Parameter  
  *num*  
- Gibt die Anzahl der Accessor (einen nullbasierten ganzzahligen Index). Sie müssen die Zugriffsmethode Zahlen in aufsteigender Reihenfolge anhand von ganzen Zahlen oder benutzerdefinierte Werte angeben.  
+ Gibt die Anzahl der Accessor (eine nullbasierte ganze Zahl Index). Sie müssen die Accessor-Zahlen in aufsteigender Reihenfolge anhand von ganzen Zahlen oder definierten Werte angeben.  
   
  *auto*  
- Ein boolescher Wert, der angibt, ob der Accessor automatisch abgerufen wird (**"true"**) oder nicht abgerufen (**"false"**).  
+ Ein boolescher Wert, der angibt, ob der Accessor automatisch abgerufen (TRUE) oder nicht (FALSE) abgerufen.  
   
 ## <a name="remarks"></a>Hinweise  
- **Db_accessor** definiert den zugrunde liegenden OLE DB-Accessor für nachfolgende **Db_column** und **Db_param** Attribute innerhalb der gleichen Klasse oder Funktion. **Db_accessor** kann auf Memberebene verwendet werden und wird verwendet, zur Gruppe **Db_column** Attribute, die Bestandteil der OLE DB- `IAccessor`-basierten Bindung. Es dient in Verbindung mit der **Db_table** oder **Db_command** Attribute. Dieses Attribut aufrufen gleicht dem Aufruf der [BEGIN_ACCESSOR](../data/oledb/begin-accessor.md) und [END_ACCESSOR](../data/oledb/end-accessor.md) Makros.  
+ **Db_accessor** definiert den zugrunde liegenden OLE DB-Accessor für nachfolgende `db_column` und `db_param` Attribute innerhalb der gleichen Klasse oder Funktion. **Db_accessor** kann verwendet werden, auf Elementebene und dient zur Gruppe `db_column` Attribute, die Teilnahme an OLE DB `IAccessor`-basierten Bindung. Es dient in Verbindung mit der `db_table` oder `db_command` Attribute. Dieses Attribut aufrufen ist vergleichbar mit einem Aufruf der [BEGIN_ACCESSOR](../data/oledb/begin-accessor.md) und [END_ACCESSOR](../data/oledb/end-accessor.md) Makros.  
   
- **Db_accessor** ein Rowset generiert und bindet sie an der entsprechenden Accessor Zuordnungen. Wenn Sie nicht aufrufen **Db_accessor**Accessor 0 wird automatisch generiert und alle spaltenbindungen werden dieser Accessorblock zugeordnet werden.  
+ **Db_accessor** ein Rowset generiert, und bindet sie an der entsprechenden Accessor-Zuordnungen. Wenn Sie nicht aufrufen **Db_accessor**Accessor 0 ist, wird automatisch generiert werden und alle spaltenbindungen dieser Accessorblock zugeordnet.  
   
- **Db_accessor** Gruppen Datenbank in eine oder mehrere Accessoren spaltenbindungen. Eine Erläuterung der Szenarien, in denen Sie mehrere Accessoren für Ereigniseigenschaften verwenden müssen, finden Sie unter [Verwenden mehrerer Accessoren für ein Rowset](../data/oledb/using-multiple-accessors-on-a-rowset.md). Siehe auch "Benutzer Datensatz Unterstützung für mehrere Accessoren" in [Benutzerdatensätze](../data/oledb/user-records.md).  
+ **Db_accessor** Gruppen Datenbank spaltenbindungen in eine oder mehrere Accessoren. Eine Erläuterung der Szenarien, in dem Sie mehrere Accessoren für Ereigniseigenschaften verwenden möchten, finden Sie unter [Verwenden mehrerer Zugriffsmethoden für ein Rowset](../data/oledb/using-multiple-accessors-on-a-rowset.md). Außerdem finden Sie unter "Benutzer Datensatz Unterstützung für mehrere Accessoren" in [Benutzerdatensätze](../data/oledb/user-records.md).  
   
- Wenn vom Consumer-Attribut-Anbieter dieses Attribut auf eine Klasse angewendet werden, wird der Compiler die Klasse umbenennen \_ *Klassenname*-Accessor, in dem *Klassenname* der eingegebene Name ist der Klasse und der Compiler erstellt auch eine Klasse mit dem Namen *Klassenname*, die sich daraus ableitet \_ *Klassenname*Accessor.  In dieser Klassenansicht werden beide Klassen angezeigt.  
+ Wenn der Consumer Attributanbieter dieses Attribut auf eine Klasse angewendet wird, wird der Compiler die Klasse umbenennen \_ *Klassenname*Accessor, in denen *Klassenname* ist der Name, der Sie zugewiesen haben die Klasse und der Compiler erstellt auch eine Klasse namens *Klassenname*, die sich daraus ableitet \_ *Klassenname*Accessor.  In dieser Klassenansicht werden beide Klassen angezeigt.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird **Db_accessor** zum Gruppieren der Spalten in der Orders-Tabelle aus der Northwind-Datenbank in beiden Accessoren. 0-Accessor ist eine automatische Zugriffsmethode und 1 der Accessor ist kein.  
+ Im folgenden Beispiel wird **Db_accessor** zum Gruppieren der Spalten in der Orders-Tabelle aus der Northwind-Datenbank in beiden Accessoren. 0-Accessor ist eine automatische Accessor, und 1 der Accessor ist kein.  
   
-```  
+```cpp  
 // cpp_attr_ref_db_accessor.cpp  
 // compile with: /LD /link /OPT:NOREF  
 #define _ATL_ATTRIBUTES  

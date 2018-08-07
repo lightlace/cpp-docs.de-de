@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: MarshalInterface-Methode | Microsoft Docs'
+title: 'Ftmbase:: MarshalInterface-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc22b83aee62b03ec5e664d08440b00718325272
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff0c1a5e41dfe46f2d88aeeb3093dbc9ee4d4005
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874615"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570056"
 ---
 # <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface-Methode
 Schreibt in einen Stream der Daten, die erforderlich sind, um eine Proxy-Objekt in einem Clientprozess zu initialisieren.  
@@ -40,28 +40,28 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `pStm`  
- Zeiger auf den Stream während des Marshallens verwendet werden.  
+### <a name="parameters"></a>Parameter  
+ *pStm*  
+ Zeiger auf den Stream, der während des Marshalling verwendet werden.  
   
- `riid`  
- Verweis auf den Bezeichner der Schnittstelle, die gemarshallt werden. Diese Schnittstelle muss von der IUnknown-Schnittstelle abgeleitet werden.  
+ *riid*  
+ Verweis auf den Bezeichner der Schnittstelle, die gemarshallt werden soll. Diese Schnittstelle muss von abgeleitet werden die `IUnknown` Schnittstelle.  
   
- `pv`  
- Zeiger auf den Schnittstellenzeiger auf das zu marshallende; NULL kann sein, wenn der Aufrufer nicht über einen Zeiger auf die gewünschte Schnittstelle besitzt.  
+ *PV*  
+ Zeiger auf den Schnittstellenzeiger auf das zu marshallende; Wenn der Aufrufer nicht über einen Zeiger auf die gewünschte Schnittstelle verfügt, kann NULL sein.  
   
- `dwDestContext`  
- Zielkontext, in dem die angegebene Schnittstelle werden rückgängig gemacht werden.  
+ *dwDestContext*  
+ Zielkontext, in dem die angegebene Schnittstelle zum Marshalling rückgängig gemacht werden wird.  
   
- Geben Sie eine oder mehrere MSHCTX-Enumerationswerte.  
+ Geben Sie einen oder mehrere MSHCTX-Enumerationswerte.  
   
- Methodeninformationen kann in einem anderen Apartment des aktuellen Prozesses (MSHCTX_INPROC) oder in einem anderen Prozess auf dem gleichen Computer wie der aktuelle Prozess (MSHCTX_LOCAL) auftreten.  
+ Rückgängigmachen des Marshallens kann in ein anderes Apartment des aktuellen Prozesses (MSHCTX_INPROC) oder in einem anderen Prozess auf dem gleichen Computer wie der aktuelle Prozess (MSHCTX_LOCAL) auftreten.  
   
- `pvDestContext`  
+ *pvDestContext*  
  Für die zukünftige Verwendung reserviert. Muss 0 (null) sein.  
   
- `mshlflags`  
- Gibt an, ob die Daten, die gemarshallt werden zurück an den Clientprozess übertragen werden – der Normalfall – handschriftlichen auf eine globale Tabelle, in dem von mehreren Clients abgerufen werden können.  
+ *mshlflags*  
+ Gibt an, ob die Daten gemarshallt werden zurück an den Prozess der übertragen werden – der Normalfall – oder in einer globalen Tabelle, in dem sie, indem mehrere Clients abgerufen werden geschrieben.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  

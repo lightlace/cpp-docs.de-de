@@ -1,5 +1,5 @@
 ---
-title: Defaultvtable | Microsoft Docs
+title: Defaultvtable | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb853e10b1745151c12f1855f841a21c2a7e126b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83949616f204ae37b42b91b03d69d8d803a1582f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882536"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569665"
 ---
 # <a name="defaultvtable"></a>defaultvtable
-Definiert eine Schnittstelle als die Vtable Standardschnittstelle für ein COM-Objekt.  
+Definiert eine Schnittstelle als die standardmäßige Vtable-Schnittstelle für ein COM-Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ defaultvtable(  
+[ defaultvtable(  
    interface  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `interface`  
- Die angegebene Schnittstelle, die Vtable Standard für das COM-Objekt sein sollen.  
+ *interface*  
+ Die angegebene-Schnittstelle, die Sie die Standard-Vtable für das COM-Objekt möchten.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Defaultvtable** C++-Attribut hat die gleiche Funktionalität wie die [Defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL-Attribut.  
@@ -46,7 +45,7 @@ Definiert eine Schnittstelle als die Vtable Standardschnittstelle für ein COM-O
 ## <a name="example"></a>Beispiel  
  Der folgende Code zeigt die Attribute für eine Klasse, mit denen **Defaultvtable** eine Standardschnittstelle an:  
   
-```  
+```cpp  
 // cpp_attr_ref_defaultvtable.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -78,7 +77,7 @@ class CMyC3 : public IMyI3 {};
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`|  
+|**Betrifft**|**Klasse**, **Struktur**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|**coclass**|  
 |**Ungültige Attribute**|Keiner|  

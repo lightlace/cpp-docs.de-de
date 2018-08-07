@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Ressource | Microsoft Docs'
+title: 'Vorgehensweise: Erstellen einer Ressource | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3a5c8ee47203f24c1995cfde9dda40912f21467
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878644"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571469"
 ---
 # <a name="how-to-create-a-resource"></a>Gewusst wie: Erstellen einer Ressource
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33878644"
   
 ### <a name="to-create-a-new-resource-in-class-view"></a>So erstellen Sie eine neue Ressource in der Klassenansicht  
   
-1.  Klicken Sie in der [Klassenansicht](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)mit der rechten Maustaste auf die Klasse, und wählen Sie **Hinzufügen**aus. Klicken Sie dann im Kontextmenü auf **Ressource hinzufügen** .  
+1.  In [Klassenansicht](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)mit der rechten Maustaste auf die Klasse, und wählen Sie **hinzufügen**, klicken Sie dann auf **Ressource hinzufügen** aus dem Kontextmenü.  
   
 2.  Wählen Sie im [Dialogfeld "Ressource hinzufügen"](../windows/add-resource-dialog-box.md)den Ressourcentyp aus, den Sie dem Projekt hinzufügen möchten.  
   
@@ -58,11 +58,12 @@ ms.locfileid: "33878644"
   
  Eine Ressource kann entweder als neue Standardressource (die auf keiner Vorlage basiert) oder als Ressource erstellt werden, die von einer [Vorlage](../windows/how-to-use-resource-templates.md)erstellt wurde.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.*  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.*
+
+
+## <a name="requirements"></a>Anforderungen  
   
- **Anforderungen**  
-  
- Win32  
+Win32  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ressourcendateien](../windows/resource-files-visual-studio.md)   

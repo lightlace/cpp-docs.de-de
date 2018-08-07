@@ -1,5 +1,5 @@
 ---
-title: Eintrag | Microsoft Docs
+title: Eintrag | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db90390be5313ddbea1103105f47b55fe9e23d62
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 933fc1db2a890fedd9d725c49bbeb6c363e2f4c8
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872314"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569637"
 ---
 # <a name="entry"></a>entry
 Gibt eine exportierte Funktion oder Konstante in einem Modul durch identifizieren den Einstiegspunkt in der DLL an.  
@@ -30,14 +30,13 @@ Gibt eine exportierte Funktion oder Konstante in einem Modul durch identifiziere
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ entry(  
+[ entry(  
    id  
 ) ]  
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `id`  
+ *ID*  
  Die ID des Einstiegspunkts.  
   
 ## <a name="remarks"></a>Hinweise  

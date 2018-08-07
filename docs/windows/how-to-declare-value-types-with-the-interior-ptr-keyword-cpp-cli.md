@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Deklarieren von Werttypen mit dem Interior_ptr-Schlüsselwort (C + c++ / CLI) | Microsoft Docs'
+title: 'Gewusst wie: Deklarieren von Werttypen mit dem Interior_ptr-Schlüsselwort (C++ / CLI) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6015d5a61589b8ed2d38b6491392fd42e4f38ef1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38cbfb171e218f70d45e5ef2e6e850d791803611
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879476"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571187"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Gewusst wie: Deklarieren von Werttypen mit dem interior_ptr-Schlüsselwort (C++/CLI)
-Ein `interior_ptr` mit einem Werttyp verwendet werden können.  
+Ein **Interior_ptr** kann mit einem Werttyp verwendet werden.  
   
 > [!IMPORTANT]
->  Diese Sprachfunktion wird unterstützt, indem Sie die **"/ CLR"** (Compileroption), jedoch nicht von der **/Zw** -Compileroption.  
+>  Diese Sprachfunktion wird unterstützt, indem die `/clr` -Compileroption verwenden, aber nicht von der `/ZW` -Compileroption.  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Die folgenden C + c++ / CLI-Beispiel zeigt, wie ein `interior_ptr` mit einem Werttyp.  
+ Der folgende C++-/ c++ / CLI-Beispiel veranschaulicht, wie ein **Interior_ptr** mit einem Werttyp.  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // interior_ptr_value_types.cpp  
 // compile with: /clr  
 value struct V {  
@@ -66,7 +66,7 @@ int main() {
   
 ### <a name="output"></a>Ausgabe  
   
-```  
+```Output  
 1  
 2  
 2  
@@ -78,13 +78,13 @@ int main() {
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- In einen Werttyp der `this` Zeiger Interior_ptr ergibt.  
+ In einen Werttyp handelt die **dies** Zeiger Interior_ptr ergibt.  
   
- Im Text einer nicht statischen Memberfunktion eines Werttyps `V`, `this` ist ein Ausdruck vom Typ `interior_ptr<V>` , dessen Wert ist die Adresse des Objekts, für das die Funktion aufgerufen wird.  
+ Im Text einer nicht statischen Memberfunktion eines Werttyps `V`, **dies** ist ein Ausdruck vom Typ `interior_ptr<V>` , deren Wert ist die Adresse des Objekts für die die Funktion aufgerufen wird.  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // interior_ptr_value_types_this.cpp  
 // compile with: /clr /LD  
 value struct V {  
@@ -99,13 +99,13 @@ value struct V {
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Im folgende Beispiel wird gezeigt, wie mit statischen Members der Address-of-Operator verwendet wird.  
+ Das folgende Beispiel zeigt, wie Sie mit der Address-of-Operator mit den statischen Membern.  
   
- Die Adresse eines statischen Members der Visual C++-Typ ergibt einen systemeigenen Zeiger.  Die Adresse eines Typmembers statischen Wert ist ein verwalteter Zeiger, da Typmember Wert auf dem Laufzeitheap belegten wird und von der Garbage Collection verschoben werden kann.  
+ Die Adresse eines statischen Members der Visual C++-Typ führt einen systemeigenen Zeiger.  Die Adresse eines statischen Wert Type-Elements ist ein verwalteter Zeiger auf, da Typmember Wert auf dem Runtime-Heap reserviert wird und vom Garbage Collector verschoben werden kann.  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // interior_ptr_value_static.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -131,7 +131,7 @@ int main() {
   
 ### <a name="output"></a>Ausgabe  
   
-```  
+```Output 
 22  
 23  
 hello  

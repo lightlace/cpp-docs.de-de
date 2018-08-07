@@ -1,5 +1,5 @@
 ---
-title: DerefHelper-Struktur | Microsoft Docs
+title: DerefHelper-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad7af9f507a29531b14ff75aa97e0aee327db380
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70031553e6a0585dc9f86df336ec2199cd7660ea
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871366"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571339"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,13 +42,13 @@ struct DerefHelper<T*>;
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `T`  
+ *T*  
  Ein Vorlagenparameter.  
   
 ## <a name="remarks"></a>Hinweise  
- In einem Funktionszeiger darstellen der `T*` Template-Parameter.  
+ Einen dereferenzierter Zeiger zum Darstellen der `T*` Template-Parameter.  
   
- DerefHelper ist in einem Ausdruck verwendet, z. B.: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
+ DerefHelper wird in einem Ausdruck verwendet, z. B.: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
   
 ## <a name="members"></a>Member  
   
@@ -56,7 +56,7 @@ struct DerefHelper<T*>;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`DerefType`|Der Bezeichner für den Vorlagenparameter dereferenziert `T*`.|  
+|`DerefType`|Bezeichner für den Vorlagenparameter von dereferenziert `T*`.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `DerefHelper`  

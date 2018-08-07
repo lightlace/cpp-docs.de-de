@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Operator = | Microsoft Docs'
+title: 'Handlet:: Operator = | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a13e8eb7e74625e185b59816b5794b0390e95e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ab629946b9fc5acec6b0fb0ba8f573a3fa90a031
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873926"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570040"
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator=-Operator
-Verschiebt den Wert des angegebenen HandleT-Objekts mit dem aktuellen HandleT-Objekt.  
+Verschiebt den Wert des angegebenen **HandleT** -Objekt mit dem aktuellen **HandleT** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HandleT& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `h`  
+### <a name="parameters"></a>Parameter  
+ *h*  
  Ein Rvalue-Verweis auf ein Handle.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf das aktuelle HandleT-Objekt.  
+ Ein Verweis auf das aktuelle **HandleT** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Dieser Vorgang wird vom Parameter angegebene HandleT-Objekt ungültig `h`.  
+ Dieser Vorgang erklärt die **HandleT** vom Parameter angegebenen Objekts *h*.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

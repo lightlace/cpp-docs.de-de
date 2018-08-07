@@ -1,5 +1,5 @@
 ---
-title: Helpstring | Microsoft Docs
+title: Helpstring | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81a3e45c5636fd193b7880e093711b5cc584bf99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e661e911cc0dd583f2ce079f8ac047a354fa596f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879005"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570930"
 ---
 # <a name="helpstring"></a>helpstring
-Gibt eine Zeichenfolge, die verwendet wird, um das Element zu beschreiben, auf dem es angewendet.  
+Gibt eine Zeichenfolge an, die zum Beschreiben des Elements verwendet wird, auf das sie angewendet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ helpstring(  
+[ helpstring(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `string`  
- Der Text, der den Hilfetext.  
+### <a name="parameters"></a>Parameter  
+ *string*  
+ Der Text des Hilfe-Zeichenfolge.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Helpstring** C++-Attribut hat die gleiche Funktionalität wie die [Helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Siehe das Beispiel für ["DefaultValue"](../windows/defaultvalue.md) ein Beispiel zum Verwenden von **Helpstring**.  
+ Siehe das Beispiel für [Defaultvalue](../windows/defaultvalue.md) ein Beispiel zur Verwendung für **Helpstring**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -52,7 +51,7 @@ Gibt eine Zeichenfolge, die verwendet wird, um das Element zu beschreiben, auf d
   
 |||  
 |-|-|  
-|**Betrifft**|`interface`, `typedef`, **Klasse**, Methode, Eigenschaft|  
+|**Betrifft**|**Schnittstelle**, **Typedef**, **Klasse**, Methode, Eigenschaft|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  
@@ -63,7 +62,7 @@ Gibt eine Zeichenfolge, die verwendet wird, um das Element zu beschreiben, auf d
  [IDL-Attribute](../windows/idl-attributes.md)   
  [Schnittstellenattribut](../windows/interface-attributes.md)   
  [Klassenattribute](../windows/class-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
  [HelpFile](../windows/helpfile.md)   
  [helpcontext](../windows/helpcontext.md)   

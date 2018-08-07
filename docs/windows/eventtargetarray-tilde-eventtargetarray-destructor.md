@@ -1,5 +1,5 @@
 ---
-title: 'EventTargetArray:: ~ EventTargetArray-Destruktor | Microsoft Docs'
+title: 'EventTargetArray:: ~ EventTargetArray-Destruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98f18c94a3e18a8e01e6ec58eddd8da702e4d97d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 96e2d817b803bb26c70390aa6f91c62ce5c28867
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871792"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571098"
 ---
 # <a name="eventtargetarrayeventtargetarray-destructor"></a>EventTargetArray::~EventTargetArray-Destruktor
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Hebt die Initialisierung des aktuellen `EventTargetArray` Klasse.  
+ Hebt die Initialisierung der aktuellen **EventTargetArray** Klasse.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  

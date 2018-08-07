@@ -1,5 +1,5 @@
 ---
-title: 'Ftmbase:: DisconnectObject-Methode | Microsoft Docs'
+title: 'Ftmbase:: DisconnectObject-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2501413196e1fd6b8b7a1a4f9985304863e02549
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f80c7e758b282c0a1976d490483c397eca43b5f5
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873000"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568627"
 ---
 # <a name="ftmbasedisconnectobject-method"></a>FtmBase::DisconnectObject-Methode
-Zwangsweise frei alle externen Verbindungen zu einem Objekt. Die Objekt-Server Ruft das Objekt Implementierung dieser Methode vor dem Herunterfahren.  
+Zwangsweise veröffentlicht alle externe Verbindungen zu einem Objekt. Das Objekt der Server Ruft die Implementierung dieser Methode vor dem Herunterfahren des Objekts.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,8 +35,8 @@ STDMETHODIMP DisconnectObject(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `dwReserved`  
+### <a name="parameters"></a>Parameter  
+ *dwReserved*  
  Für die zukünftige Verwendung reserviert. Muss 0 (null) sein.  
   
 ## <a name="return-value"></a>Rückgabewert  

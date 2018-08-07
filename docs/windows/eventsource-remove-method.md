@@ -1,5 +1,5 @@
 ---
-title: 'EventSource:: Remove-Methode | Microsoft Docs'
+title: 'EventSource:: Remove-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbf0480252fca342b8a690e93f92ae14ca5e84c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9dd026158a2bbc76e7a3e195bc5346f65821f2b7
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874381"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569494"
 ---
 # <a name="eventsourceremove-method"></a>EventSource::Remove-Methode
-Löscht den Ereignishandler, dargestellt durch das angegebene Ereignistoken für die Registrierung aus dem Satz von Ereignishandlern, die dem aktuellen EventSource-Objekt zugeordnet.  
+Löscht den Ereignishandler, die durch das angegebene Ereignis Registrierungstoken dargestellt wird, aus dem Satz von Ereignishandlern verknüpft ist, mit dem aktuellen **EventSource** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT Remove(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `token`  
- Ein Handle, das einen Ereignishandler darstellt. Dieses Token wurde zurückgegeben, wenn der Ereignishandler registriert wurde die [Add()](../windows/eventsource-add-method.md) Methode.  
+### <a name="parameters"></a>Parameter  
+ *token*  
+ Ein Handle, das einen Ereignishandler darstellt. Dieses Token zurückgegeben wurde, wenn der Ereignishandler, indem registriert wurde die [Add()](../windows/eventsource-add-method.md) Methode.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu den EventRegistrationToken-Struktur finden Sie unter der Struktur Windows::Foundation::EventRegistrationToken Thema in der Windows-Runtime-Referenzdokumentation.  
+ Weitere Informationen über die EventRegistrationToken-Struktur finden Sie unter den `Windows::Foundation::EventRegistrationToken` Struktur Thema in der Windows-Runtime-Referenzdokumentation.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  

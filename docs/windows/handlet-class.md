@@ -1,5 +1,5 @@
 ---
-title: HandleT-Klasse | Microsoft Docs
+title: HandleT-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a596bf1e086ac7b1a1a72c3504ce4f41844ba4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87a8718971a2da008b03dca1e9653d8454115adb
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876149"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570596"
 ---
 # <a name="handlet-class"></a>HandleT-Klasse
 Stellt ein Handle für ein Objekt dar.  
@@ -36,9 +36,9 @@ template <
 class HandleT;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `HandleTraits`  
- Eine Instanz von der [HandleTraits](../windows/handletraits-structure.md) Struktur, die allgemeinen Eigenschaften eines Handles definiert.  
+### <a name="parameters"></a>Parameter  
+ *HandleTraits*  
+ Eine Instanz von der [HandleTraits](../windows/handletraits-structure.md) abgeschrägten Designs, die allgemeinen Eigenschaften eines Handles definiert.  
   
 ## <a name="members"></a>Member  
   
@@ -52,36 +52,36 @@ class HandleT;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[HandleT::HandleT-Konstruktor](../windows/handlet-handlet-constructor.md)|Initialisiert eine neue Instanz der HandleT-Klasse.|  
-|[HandleT::~HandleT-Destruktor](../windows/handlet-tilde-handlet-destructor.md)|Hebt die Initialisierung einer Instanz der HandleT-Klasse.|  
+|[HandleT::HandleT-Konstruktor](../windows/handlet-handlet-constructor.md)|Initialisiert eine neue Instanz der dem **HandleT** Klasse.|  
+|[HandleT::~HandleT-Destruktor](../windows/handlet-tilde-handlet-destructor.md)|Hebt die Initialisierung einer Instanz von der **HandleT** Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[HandleT::Attach-Methode](../windows/handlet-attach-method.md)|Ordnet das angegebene Handle mit dem aktuellen HandleT-Objekt.|  
-|[HandleT::Close-Methode](../windows/handlet-close-method.md)|Schließt das aktuelle HandleT-Objekt.|  
-|[HandleT::Detach-Methode](../windows/handlet-detach-method.md)|Hebt die Zuordnung der aktuellen HandleT-Objekts aus der zugrunde liegende Handle.|  
-|[HandleT::Get-Methode](../windows/handlet-get-method.md)|Ruft den Wert des zugrunde liegenden Handles ab.|  
-|[HandleT::IsValid-Methode](../windows/handlet-isvalid-method.md)|Gibt an, ob das aktuelle HandleT-Objekt ein Handle darstellt.|  
+|[HandleT::Attach-Methode](../windows/handlet-attach-method.md)|Ordnet das angegebene Handle der aktuellen **HandleT** Objekt.|  
+|[HandleT::Close-Methode](../windows/handlet-close-method.md)|Schließt das aktuelle **HandleT** Objekt.|  
+|[HandleT::Detach-Methode](../windows/handlet-detach-method.md)|Hebt die Zuordnung der aktuellen **HandleT** Objekt aus der zugrunde liegende Handle.|  
+|[HandleT::Get-Methode](../windows/handlet-get-method.md)|Ruft den Wert, der das zugrunde liegende Handle.|  
+|[HandleT::IsValid-Methode](../windows/handlet-isvalid-method.md)|Gibt an, ob die aktuelle **HandleT** Objekt stellt ein Handle.|  
   
 ### <a name="protected-methods"></a>Geschützte Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[HandleT::InternalClose-Methode](../windows/handlet-internalclose-method.md)|Schließt das aktuelle HandleT-Objekt.|  
+|[HandleT::InternalClose-Methode](../windows/handlet-internalclose-method.md)|Schließt das aktuelle **HandleT** Objekt.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[HandleT::operator=-Operator](../windows/handlet-operator-assign-operator.md)|Verschiebt den Wert des angegebenen HandleT-Objekts mit dem aktuellen HandleT-Objekt.|  
+|[HandleT::operator=-Operator](../windows/handlet-operator-assign-operator.md)|Verschiebt den Wert des angegebenen **HandleT** -Objekt mit dem aktuellen **HandleT** Objekt.|  
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[HandleT::handle_ Data-Member](../windows/handlet-handle-data-member.md)|Enthält das Handle, das vom HandleT-Objekt dargestellt wird.|  
+|[HandleT::handle_ Data-Member](../windows/handlet-handle-data-member.md)|Enthält das Handle, das entspricht dem **HandleT** Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `HandleT`  

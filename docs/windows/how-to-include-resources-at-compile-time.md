@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Einfügen von Ressourcen zur Kompilierungszeit | Microsoft Docs'
+title: 'Vorgehensweise: Einfügen von Ressourcen zur Kompilierungszeit | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 765d78ef5371015fdce3e505e7a2454c29c6c97e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 856d448b096910c322750eccc7447689b08b328e
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880149"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571336"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Gewusst wie: Einfügen von Ressourcen zur Kompilierungszeit
-Es ist für gewöhnlich einfach und intuitiv mit der Standardanordnung sämtlicher Ressourcen in einer Ressourcenskriptdatei (.rc) zu arbeiten. Sie können jedoch Ressourcen hinzufügen in anderen Dateien zu Ihrem aktuellen Projekt zum Zeitpunkt der Kompilierung durch Auflisten der in der **Kompilierzeitdirektiven** Feld der [Ressourcenincludes (Dialogfeld)](../windows/resource-includes-dialog-box.md).  
+Es ist für gewöhnlich einfach und intuitiv mit der Standardanordnung sämtlicher Ressourcen in einer Ressourcenskriptdatei (.rc) zu arbeiten. Aber Sie können Ressourcen hinzufügen in anderen Dateien zu Ihrem aktuellen Projekt zum Zeitpunkt der Kompilierung durch Auflisten der in der **Kompilierzeitdirektiven** im Feld der [Ressourcenincludes (Dialogfeld)](../windows/resource-includes-dialog-box.md).  
   
  Es gibt verschiedene Gründe für das Platzieren von Ressourcen in einer Datei, die von der RC-Hauptdatei abweicht:  
   
@@ -45,21 +45,19 @@ Es ist für gewöhnlich einfach und intuitiv mit der Standardanordnung sämtlich
   
 -   Zum Einbeziehen von Ressourcen (beispielsweise RCDATA-Ressourcen), die ein benutzerdefiniertes Format aufweisen. RCDATA-Ressourcen weisen möglicherweise spezielle Anforderungen auf. Beispielsweise können Sie einen Ausdruck für das Feld „nameID“ nicht als Wert verwenden. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
- Wenn Sie über Abschnitte in Ihren vorhandenen RC-Dateien, die eine der folgenden Bedingungen erfüllen verfügen, platzieren Sie in den Abschnitten in einer oder mehrere RC-Dateien zu trennen, und beziehen Sie diese in Ihrem Projekt mithilfe der [Ressourcenincludes (Dialogfeld)](../windows/resource-includes-dialog-box.md). Die *Projektname*RC2-Datei im Unterverzeichnis \res eines neuen Projekts erstellt wird für diesen Zweck verwendet.  
+ Wenn Sie über Abschnitte in Ihren vorhandenen RC-Dateien, die eine der folgenden Bedingungen erfüllen verfügen, sollten Sie in den Abschnitten platzieren, in einem oder mehr getrennten RC-Datei, und beziehen Sie diese in Ihrem Projekt mithilfe der [Dialogfeld Ressourcenincludes](../windows/resource-includes-dialog-box.md). Die *Projectname*RC2-Datei erstellt, die im Unterverzeichnis \res eines neuen Projekts für diesen Zweck verwendet wird.  
   
 ### <a name="to-include-resources-in-your-project-at-compile-time"></a>So beziehen Sie Ressourcen In Ihr Projekt zum Zeitpunkt der Kompilierung ein  
   
-1.  Platzieren Sie die Ressourcen in einer Ressourcenskriptdatei mit einem eindeutigen Dateinamen. Verwenden Sie keine *Projektname*RC, da es sich um die für die Haupt-Ressourcenskriptdatei verwendeten Dateinamen handelt.  
+1.  Platzieren Sie die Ressourcen in einer Ressourcenskriptdatei mit einem eindeutigen Dateinamen. Verwenden Sie keine *Projectname*RC, da es sich um die für die Haupt-Ressourcenskriptdatei verwendeten Dateinamen handelt.  
   
-2.  Mit der rechten Maustaste in der RC-Datei (im [Ressourcenansicht](../windows/resource-view-window.md)), und wählen Sie **Ressourcenincludes** aus dem Kontextmenü.  
+2.  Mit der rechten Maustaste in der RC-Datei (in [Ressourcenansicht](../windows/resource-view-window.md)), und wählen Sie **Ressourcenincludes** aus dem Kontextmenü.  
   
-3.  In der **Kompilierzeitdirektiven** hinzu, und die [#include](../preprocessor/hash-include-directive-c-cpp.md) Compilerdirektive, um die neue Ressourcendatei in der Hauptressourcendatei in der Entwicklungsumgebung einzubeziehen.  
+3.  In der **Kompilierzeitdirektiven** hinzu, und die [#include](../preprocessor/hash-include-directive-c-cpp.md) Compilerdirektive, um die neue Ressourcendatei in der Hauptressourcendatei in der Entwicklungsumgebung enthalten.  
   
      Die auf diese Weise in die Dateien einbezogenen Ressourcen werden zum Bestandteil Ihrer ausführbaren Datei zum Zeitpunkt der Kompilierung. Sie stehen nicht direkt für die Bearbeitung oder Änderung zur Verfügung, wenn Sie die RC-Hauptdatei Ihres Projekts bearbeiten. Sie müssen einbezogene RC-Dateien einzeln öffnen. Einbezogene Dateien ohne RC-Erweiterung können durch die Ressourcen-Editoren nicht bearbeitet werden.  
   
-
-  
- Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
  Win32  
   

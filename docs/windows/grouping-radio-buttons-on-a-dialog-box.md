@@ -1,5 +1,5 @@
 ---
-title: Gruppieren von Optionsfeldern in einem Dialogfeld | Microsoft Docs
+title: Gruppieren von Optionsfeldern in einem Dialogfeld | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aee3245a65ccdccc32b40c313eecdd45cb3ea8bf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7712927a10fa34c5b6436aecd002c9621546638b
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879327"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571502"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Gruppieren von Optionsfeldern in einem Dialogfeld
 Wenn Sie einem Dialogfeld Optionsschaltflächen hinzufügen, behandeln Sie sie als Gruppe, indem Sie im Eigenschaftenfenster für die erste Schaltfläche der Gruppe die Eigenschaft „Gruppe“ festlegen. Eine Steuerelement-ID für das betreffende Optionsfeld wird dann im [Assistent zum Hinzufügen von Membervariablen](../ide/add-member-variable-wizard.md)angezeigt und ermöglicht das Hinzufügen einer Membervariablen zur Gruppe der Optionsfelder.  
@@ -60,9 +60,9 @@ Wenn Sie einem Dialogfeld Optionsschaltflächen hinzufügen, behandeln Sie sie a
   
 6.  Jetzt können Sie Ihren Code ändern, um festzulegen, welches Optionsfeld aus aktiviert angezeigt werden soll. Beispielsweise wählt „m_radioBox1 = 0;“ das erste Optionsfeld in der Gruppe aus.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
  Win32  
   
@@ -70,4 +70,3 @@ Wenn Sie einem Dialogfeld Optionsschaltflächen hinzufügen, behandeln Sie sie a
  [Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
  [Steuerelemente](../mfc/controls-mfc.md)
-

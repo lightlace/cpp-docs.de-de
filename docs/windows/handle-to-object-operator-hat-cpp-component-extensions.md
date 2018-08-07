@@ -1,5 +1,5 @@
 ---
-title: Handle für Objekt-Operator (^) (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Handle für Objekt (^) (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb322f83163a9faf3314990baabbd0a34f1a67ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881168"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569803"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Handle für Objekt (^) (Komponentenerweiterungen für C++)
-Die *handledeklarator* (`^`, Aussprache "hat"), modifiziert den [Spezifizierer](../cpp/overview-of-declarators.md) bedeutet, dass das deklarierte Objekt automatisch gelöscht werden soll, wenn das System feststellt, dass das Objekt ist nicht mehr zugegriffen werden kann.  
+Die *handledeklarator* (`^`, ausgesprochen "hat"), modifiziert den [Spezifizierer](../cpp/overview-of-declarators.md) so, dass das deklarierte Objekt automatisch gelöscht werden sollen, wenn das System feststellt, dass das Objekt ist nicht mehr zugegriffen werden kann.  
   
 ## <a name="accessing-the-declared-object"></a>Zugreifen auf das deklarierte Objekt  
  Eine Variable, die mit dem Handledeklarator deklariert wird, verhält sich wie ein Zeiger auf das Objekt. Allerdings verweist die Variable auf das gesamte Objekt, kann also nicht auf einen Member des Objekts verweisen, und unterstützt keine Zeigerarithmetik. Verwenden Sie den Dereferenzierungsoperator (`*`), um auf das Objekt zuzugreifen, und den Pfeil-Memberzugriffsoperator (`->`), um auf einen Member des Objekts zuzugreifen.  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
- Der Compiler verwendet den COM *verweiszählung* Mechanismus, um zu bestimmen, ob das Objekt nicht mehr verwendet wird und gelöscht werden kann. Dies ist möglich, da es sich bei einem Objekt, das von einer Windows Runtime-Schnittstelle abgeleitet wird, um ein COM-Objekt handelt. Der Verweiszähler wird inkrementiert, wenn das Objekt erstellt oder kopiert wird, und dekrementiert, wenn das Objekt auf NULL festgelegt wird oder den gültigen Bereichs verlässt. Wenn der Verweiszähler den Wert 0 erreicht, wird das Objekt automatisch und sofort gelöscht.  
+ Der Compiler verwendet die COM *verweiszählung* Mechanismus, um zu bestimmen, ob das Objekt nicht mehr verwendet wird und gelöscht werden kann. Dies ist möglich, da es sich bei einem Objekt, das von einer Windows Runtime-Schnittstelle abgeleitet wird, um ein COM-Objekt handelt. Der Verweiszähler wird inkrementiert, wenn das Objekt erstellt oder kopiert wird, und dekrementiert, wenn das Objekt auf NULL festgelegt wird oder den gültigen Bereichs verlässt. Wenn der Verweiszähler den Wert 0 erreicht, wird das Objekt automatisch und sofort gelöscht.  
   
  Der Vorteil des Handledeklarators ist, dass Sie in COM den Verweiszählerwert für ein Objekt nicht mehr explizit verwalten müssen, was ein langwieriger und fehleranfälliger Prozess ist. Dabei müssen Sie alle AddRef()- bzw. Release()-Methoden des Objekts aufrufen, um den Verweiszähler zu inkrementieren bzw. zu dekrementieren. Wenn Sie dagegen ein Objekt mit dem Handledeklarator deklarieren, generiert der Visual C++-Compiler Code, der den Verweiszähler automatisch anpasst.  
   
- Informationen zum Instanziieren eines Objekts finden Sie unter [Ref neue](../windows/ref-new-gcnew-cpp-component-extensions.md).  
+ Informationen dazu, wie ein Objekt instanziieren, finden Sie unter [Ref neue](../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  Compileroption: **/ZW**  
@@ -50,9 +50,9 @@ Die *handledeklarator* (`^`, Aussprache "hat"), modifiziert den [Spezifizierer](
 ### <a name="examples"></a>Beispiele  
  **Beispiel**  
   
- Dieses Beispiel zeigt, wie eine Instanz eines Referenztyps auf dem verwalteten Heap erstellt wird.  In diesem Beispiel wird außerdem gezeigt, dass Sie ein Handle mit einem anderen initialisieren können, wodurch Sie zwei Verweise auf dasselbe Objekt auf dem verwaltetem Heap mit Garbage Collection erhalten. Beachten Sie, Zuweisen von [Nullptr](../windows/nullptr-cpp-component-extensions.md) an ein Handle nicht markiert, das Objekt für die Garbagecollection.  
+ Dieses Beispiel zeigt, wie eine Instanz eines Referenztyps auf dem verwalteten Heap erstellt wird.  In diesem Beispiel wird außerdem gezeigt, dass Sie ein Handle mit einem anderen initialisieren können, wodurch Sie zwei Verweise auf dasselbe Objekt auf dem verwaltetem Heap mit Garbage Collection erhalten. Beachten Sie, dass diese Zuweisung ["nullptr"](../windows/nullptr-cpp-component-extensions.md) zu einem Handle markiert nicht das Objekt für die Garbagecollection.  
   
-```  
+```cpp  
 // mcppv2_handle.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -88,7 +88,7 @@ int main() {
   
  Das folgende Beispiel zeigt, wie ein Handle für ein Objekt auf dem verwalteten Heap deklariert wird, wobei der Objekttyp ein geschachtelter Werttyp ist. Das Beispiel zeigt auch, wie Sie den Werttyp des geschachtelten Objekts abrufen.  
   
-```  
+```cpp  
 // mcppv2_handle_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -122,7 +122,7 @@ Not a boxed int
   
  Dieses Beispiel zeigt, dass das allgemeine C++-Idiom zur Anwendung eines void*-Zeigers für den Verweis auf ein beliebiges Objekt durch Object^ ersetzt wird, das ein Handle zu einer beliebigen Verweisklasse enthalten kann. Es zeigt auch, dass sämtliche Typen, auch Arrays und Delegaten, in ein Objekthandle konvertiert werden können.  
   
-```  
+```cpp  
 // mcppv2_handle_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -171,7 +171,7 @@ Type is MyDel
   
  Dieses Beispiel zeigt, dass ein Handle dereferenzierbar ist, und dass auf einen Member mit einem dereferenzierten Handle zugegriffen werden kann.  
   
-```  
+```cpp  
 // mcppv2_handle_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -221,7 +221,7 @@ Cannot access array element 11, size is 10
   
  Dieses Beispiel zeigt, dass ein systemeigener Verweis (`&`) nicht an einen `int`-Member eines verwalteten Typs binden kann, da `int` möglicherweise in dem von der Garbage Collection bearbeiteten Heap gespeichert wird und systemeigene Verweise nicht an Objektverschiebungen im verwalteten Heap angepasst werden. Zur Behebung dieses Problems können Sie eine lokale Variable verwenden, oder ändern Sie `&` in `%`, um einen Nachverfolgungsverweis zu erhalten.  
   
-```  
+```cpp  
 // mcppv2_handle_5.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -242,7 +242,7 @@ int main() {
 ```  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ## <a name="see-also"></a>Siehe auch  
  [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)   

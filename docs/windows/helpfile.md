@@ -1,5 +1,5 @@
 ---
-title: HelpFile | Microsoft Docs
+title: HelpFile | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 926d0fec27bf323f559ad2fe0dffbd4208b1bf2a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4f25a8f3d5cc76d1b2b8d9a3d9996449f449466
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876188"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570446"
 ---
 # <a name="helpfile"></a>helpfile
-Legt den Namen der Hilfedatei für eine Typbibliothek.  
+Legt den Namen der Hilfedatei für die Typbibliothek.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ helpfile(  
+[ helpfile(  
    "filename"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *filename*  
  Der Name der Datei, die die Hilfethemen enthält.  
   
@@ -44,7 +43,7 @@ Legt den Namen der Hilfedatei für eine Typbibliothek.
  Die **Helpfile** C++-Attribut hat die gleiche Funktionalität wie die [Helpfile](http://msdn.microsoft.com/library/windows/desktop/aa366853) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [Modul](../windows/module-cpp.md) ein Beispiel zum Verwenden von **Helpfile**.  
+ Siehe das Beispiel für [Modul](../windows/module-cpp.md) ein Beispiel zur Verwendung für **Helpfile**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -52,7 +51,7 @@ Legt den Namen der Hilfedatei für eine Typbibliothek.
   
 |||  
 |-|-|  
-|**Betrifft**|`interface`, `typedef`, **Klasse**, Methode, Eigenschaft|  
+|**Betrifft**|**Schnittstelle**, **Typedef**, **Klasse**, Methode **Eigenschaft**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  
@@ -63,7 +62,7 @@ Legt den Namen der Hilfedatei für eine Typbibliothek.
  [IDL-Attribute](../windows/idl-attributes.md)   
  [Schnittstellenattribut](../windows/interface-attributes.md)   
  [Klassenattribute](../windows/class-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
  [HelpContext](../windows/helpcontext.md)   
  [helpstring](../windows/helpstring.md)   

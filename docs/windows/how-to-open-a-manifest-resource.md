@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Öffnen eine Manifestressource | Microsoft Docs'
+title: 'Vorgehensweise: Öffnen einer Manifestressource | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e877015afb0d53bd8c9bb12c092086b06ae59c2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 88d3573c4dce5c2aba85d9482b12bd62ba9fa1ad
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881841"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569946"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>Gewusst wie: Öffnen einer Manifestressource
 Beim Öffnen einer Manifestressource aus [Ressourcenansicht](../windows/resource-view-window.md)wird die Ressource im Binärformat geöffnet. Um den Inhalt einer Manifestressource in einem besser lesbaren Format anzuzeigen, müssen Sie die Ressource im Projektmappen-Explorer öffnen.  
   
 ### <a name="to-open-a-manifest-resource-in-the-text-editor"></a>Öffnen einer Manifestressource im Text-Editor  
   
-1.  Während das Projekt in `Solution Explorer`geöffnet ist, erweitern Sie den Ordner **Ressourcendateien** .  
+1.  Mit das Projekt im **Projektmappen-Explorer**, erweitern Sie die **Ressourcendateien** Ordner.  
   
 2.  Doppelklicken Sie auf die .manifest-Datei.  
   
@@ -36,13 +36,13 @@ Beim Öffnen einer Manifestressource aus [Ressourcenansicht](../windows/resource
   
 ### <a name="to-open-a-manifest-resource-in-another-editor"></a>Öffnen einer Manifestressource in einem anderen Editor  
   
-1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf die .manifest-Datei, und wählen Sie im Kontextmenü **Öffnen mit...** aus.  
+1.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die .manifest-Datei, und wählen Sie **Öffnen mit...**  aus dem Kontextmenü.  
   
 2.  Geben Sie im Dialogfeld **Öffnen mit** den zu verwendenden Editor an, und klicken Sie auf **Öffnen**.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.*  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.  
   
- Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
  Win32  
   

@@ -1,5 +1,5 @@
 ---
-title: EventSource-Klasse | Microsoft Docs
+title: EventSource-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2d466b317927cd8de259637450b68b6aaf13bd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a98d8997ebfb5b21b3e469b2aacca15cde4a5319
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876513"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570534"
 ---
 # <a name="eventsource-class"></a>EventSource-Klasse
-Stellt ein nicht-agile-Ereignis. EventSource-Memberfunktionen hinzufügen, entfernen und Ereignishandler aufrufen. Verwenden Sie für agile-Ereignisse [AgileEventSource](agileeventsource-class.md). 
+Stellt ein nicht-agile-Ereignis. **EventSource** Member-Funktionen hinzufügen, entfernen und die Ereignishandler aufruft. Verwenden Sie für agile-Ereignisse [AgileEventSource](agileeventsource-class.md). 
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,8 +34,8 @@ template<typename TDelegateInterface>
 class EventSource;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `TDelegateInterface`  
+### <a name="parameters"></a>Parameter  
+ *TDelegateInterface*  
  Die Schnittstelle, ein Delegat, der einen Ereignishandler darstellt.  
   
 ## <a name="members"></a>Member  
@@ -44,24 +44,24 @@ class EventSource;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[EventSource::EventSource-Konstruktor](../windows/eventsource-eventsource-constructor.md)|Initialisiert eine neue Instanz der EventSource-Klasse.|  
+|[EventSource::EventSource-Konstruktor](../windows/eventsource-eventsource-constructor.md)|Initialisiert eine neue Instanz der dem **EventSource** Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[EventSource::Add-Methode](../windows/eventsource-add-method.md)|Fügt den Ereignishandler, die durch die Schnittstelle des angegebenen Delegaten dargestellt wird, auf den Satz der Ereignishandler für das aktuelle EventSource-Objekt.|  
-|[EventSource::GetSize-Methode](../windows/eventsource-getsize-method.md)|Ruft die Anzahl der Ereignishandler, die dem aktuellen EventSource-Objekt zugeordnet|  
-|[EventSource::InvokeAll-Methode](../windows/eventsource-invokeall-method.md)|Ruft die jeder Ereignishandler, die dem aktuellen EventSource-Objekt, das mit den angegebenen Argumenttypen und -Argumente zugeordnet.|  
-|[EventSource::Remove-Methode](../windows/eventsource-remove-method.md)|Löscht den Ereignishandler, dargestellt durch das angegebene Ereignistoken für die Registrierung aus dem Satz von Ereignishandlern, die dem aktuellen EventSource-Objekt zugeordnet.|  
+|[EventSource::Add-Methode](../windows/eventsource-add-method.md)|Fügt den Ereignishandler, die durch die Schnittstelle für die angegebenen Delegaten dargestellt wird, auf den Satz von Ereignishandlern für die aktuelle **EventSource** Objekt.|  
+|[EventSource::GetSize-Methode](../windows/eventsource-getsize-method.md)|Ruft die Anzahl der aktuellen zugeordneten Ereignishandler **EventSource** Objekt|  
+|[EventSource::InvokeAll-Methode](../windows/eventsource-invokeall-method.md)|Ruft jede Ereignishandler verknüpft ist, mit dem aktuellen **EventSource** -Objekt mit den angegebenen Argumenttypen und der Argumente.|  
+|[EventSource::Remove-Methode](../windows/eventsource-remove-method.md)|Löscht den Ereignishandler, die durch das angegebene Ereignis Registrierungstoken dargestellt wird, aus dem Satz von Ereignishandlern verknüpft ist, mit dem aktuellen **EventSource** Objekt.|  
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[EventSource::addRemoveLock_-Datenmember](../windows/eventsource-addremovelock-data-member.md)|Synchronisiert den Zugriff auf die [Targets_](../windows/eventsource-targets-data-member.md) Array beim Hinzufügen, entfernen oder Ereignishandler aufrufen.|  
-|[EventSource::targets_-Datenmember](../windows/eventsource-targets-data-member.md)|Ein Array von ein oder mehrere Ereignishandler.|  
-|[EventSource::targetsPointerLock_-Datenmember](../windows/eventsource-targetspointerlock-data-member.md)|Synchronisiert den Zugriff auf interne Datenmember, sogar wenn Ereignishandler für diese Ereignisquelle hinzugefügt werden, entfernt oder aufgerufen.|  
+|[EventSource::addRemoveLock_-Datenmember](../windows/eventsource-addremovelock-data-member.md)|Synchronisiert den Zugriff auf die [Targets_](../windows/eventsource-targets-data-member.md) Arrays beim Hinzufügen, entfernen oder Ereignishandler aufrufen.|  
+|[EventSource::targets_-Datenmember](../windows/eventsource-targets-data-member.md)|Ein Array von einem oder mehreren Ereignishandlern.|  
+|[EventSource::targetsPointerLock_-Datenmember](../windows/eventsource-targetspointerlock-data-member.md)|Synchronisiert den Zugriff auf interne Datenmember, die auch bei der Ereignishandler für diese Ereignisquelle hinzugefügt, entfernt oder aufgerufen.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `EventSource`  
@@ -72,5 +72,5 @@ class EventSource;
  **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft:: wrl-Namespace](../windows/microsoft-wrl-namespace.md)
-[AgileEventSource-Klasse](agileeventsource-class.md)
+ [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)  
+ [AgileEventSource-Klasse](agileeventsource-class.md)

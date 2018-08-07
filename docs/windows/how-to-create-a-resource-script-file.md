@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: erstellen eine Ressourcenskriptdatei | Microsoft Docs'
+title: 'Vorgehensweise: erstellen eine Ressourcenskriptdatei | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a15352640a39ff6adc3b5a956a1f32c9fd414272
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ed35392180d0531133413a54ca2190ed65519546
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875522"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570573"
 ---
 # <a name="how-to-create-a-resource-script-file"></a>Gewusst wie: Erstellen einer Ressourcenskriptdatei
 > [!NOTE]
@@ -32,10 +32,10 @@ ms.locfileid: "33875522"
   
 ### <a name="to-create-a-new-resource-script-rc-file"></a>So erstellen Sie eine neue Ressourcenskriptdatei (RC-Datei)  
   
-1.  Verschieben Sie den Fokus auf den vorhandenen Projektordner im `Solution Explorer`, z. B. "MyProject".  
+1.  Setzen Sie den Fokus auf den vorhandenen Projektordner in **Projektmappen-Explorer**, z. B. "MyProject".  
   
     > [!NOTE]
-    >  Verwechseln Sie den Projektordner nicht mit dem Projektmappenordner im Projektmappen-Explorer. Wenn Sie den Fokus auf den Projektmappenordner verschieben, werden im Dialogfeld **Neues Element hinzufügen** (unter Schritt 3) andere Optionen angezeigt.  
+    >  Verwechseln Sie den Projektordner nicht mit dem Projektmappenordner im Projektmappen-Explorer. Wenn den Fokus verschieben, auf die **Lösung** -Ordner, Ihre Auswahl in der **neues Element hinzufügen** (Dialogfeld) (in Schritt 3) unterscheiden.  
   
 2.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
   
@@ -46,11 +46,12 @@ ms.locfileid: "33875522"
  Sie können jetzt neue Ressourcen [erstellen](../windows/how-to-create-a-resource.md) und diese der RC-Datei hinzufügen.  
   
 > [!NOTE]
->  Eine Ressourcenskriptdatei (.rc) kann nur in ein vorhandenes Projekt aufgenommen werden, das bereits in der Visual Studio-IDE geladen wurde. Es können keine eigenständige RC-Datei (außerhalb des Projekts) erstellt werden. [Ressourcenvorlagen](../windows/how-to-use-resource-templates.md) (RCT-Dateien) können jederzeit erstellt werden.  
+>  Eine Ressourcenskriptdatei (.rc) kann nur in ein vorhandenes Projekt aufgenommen werden, das bereits in der Visual Studio-IDE geladen wurde. Es können keine eigenständige RC-Datei (außerhalb des Projekts) erstellt werden. [Ressourcenvorlagen](../windows/how-to-use-resource-templates.md) (RCT-Dateien) können jederzeit erstellt werden.
+
+
+## <a name="requirements"></a>Anforderungen  
   
- Anforderungen  
-  
- Win32  
+Win32  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ressourcendateien](../windows/resource-files-visual-studio.md)   

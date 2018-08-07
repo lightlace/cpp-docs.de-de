@@ -1,5 +1,5 @@
 ---
-title: 'Dontusenewusemake:: new-Operator | Microsoft Docs'
+title: 'Dontusenewusemake:: Neuer Operator | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9785ea27c79ff0a118ff3697a22804c520b265ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 59354062dded7792dca1cd84683bba64f6a64aa0
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873679"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571424"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator new-Operator
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +37,17 @@ void* operator new(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `__unnamed0`  
- Einen unbenannten Parameter, der die Anzahl der Bytes des zu belegenden Speichers angibt.  
+ *__unnamed0*  
+ Einen unbenannten Parameter, der angibt, die Anzahl der Bytes an Arbeitsspeicher zugewiesen werden.  
   
- `placement`  
- Der Typ zugeordnet werden soll.  
+ *Platzierung*  
+ Der Typ, zugeordnet werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Bietet eine Möglichkeit, zusätzliche Argumente zu übergeben, wenn Sie beim Überladen `new`.  
+ Bietet eine Möglichkeit, zusätzliche Argumente zu übergeben, wenn Sie beim Überladen **neue**.  
   
 ## <a name="remarks"></a>Hinweise  
- Überlädt `new` und verhindert, dass er im RuntimeClass verwendet werden.  
+ Überlädt **neue** und verhindert, dass deren verwendeten `RuntimeClass`.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  

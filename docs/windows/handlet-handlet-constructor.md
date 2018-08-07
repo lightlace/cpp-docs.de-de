@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Handlet-Konstruktor | Microsoft Docs'
+title: 'Handlet:: Handlet-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a0caad909803a0f73987f3e1132920b0948d8d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f8126d4a31863ab556295946ffc170fc49f7d98
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881896"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569510"
 ---
 # <a name="handlethandlet-constructor"></a>HandleT::HandleT-Konstruktor
-Initialisiert eine neue Instanz der HandleT-Klasse.  
+Initialisiert eine neue Instanz der dem **HandleT** Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,12 +40,12 @@ HandleT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `h`  
+### <a name="parameters"></a>Parameter  
+ *h*  
  Ein Handle.  
   
 ## <a name="remarks"></a>Hinweise  
- Der erste Konstruktor initialisiert ein HandleT-Objekt, das nicht zu einem Objekt ein gültiges Handle ist. Der zweite Konstruktor erstellt ein neues HandleT-Objekt aus Parameter `h`.  
+ Der erste Konstruktor initialisiert ein **HandleT** -Objekt, das kein gültiges Handle für ein Objekt ist. Der zweite Konstruktor erstellt ein neues **HandleT** -Sitzungsobjekts Parameter *h*.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

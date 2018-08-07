@@ -1,5 +1,5 @@
 ---
-title: FtmBase-Klasse | Microsoft Docs
+title: FtmBase-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38f30c497fc8640b1f88f4ffb3fc6f14bed55a3e
-ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
+ms.openlocfilehash: ed3e9b9e66f673a3d86ded7b3d576e1203db9595
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814351"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570560"
 ---
 # <a name="ftmbase-class"></a>FtmBase-Klasse
 Stellt ein Freethread-Marshaller-Objekt dar.  
@@ -30,7 +30,6 @@ Stellt ein Freethread-Marshaller-Objekt dar.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 class FtmBase : public Microsoft::WRL::Implements<  
    Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>,   
    Microsoft::WRL::CloakedIid<IMarshal> >;  
@@ -45,25 +44,25 @@ class FtmBase : public Microsoft::WRL::Implements<
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[FtmBase::FtmBase-Konstruktor](../windows/ftmbase-ftmbase-constructor.md)|Initialisiert eine neue Instanz der FtmBase-Klasse.|  
+|[FtmBase::FtmBase-Konstruktor](../windows/ftmbase-ftmbase-constructor.md)|Initialisiert eine neue Instanz der dem **FtmBase** Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[FtmBase::CreateGlobalInterfaceTable-Methode](../windows/ftmbase-createglobalinterfacetable-method.md)|Erstellt eine globale Schnittstellentabelle (GIT).|  
-|[FtmBase::DisconnectObject-Methode](../windows/ftmbase-disconnectobject-method.md)|Zwangsweise frei alle externen Verbindungen zu einem Objekt. Die Objekt-Server Ruft das Objekt Implementierung dieser Methode vor dem Herunterfahren.|  
-|[FtmBase::GetMarshalSizeMax-Methode](../windows/ftmbase-getmarshalsizemax-method.md)|Rufen Sie die obere Grenze für die Anzahl der Bytes, die erforderlich sind, um den angegebenen Schnittstellenzeiger auf das angegebene Objekt zu marshallen.|  
-|[FtmBase::GetUnmarshalClass-Methode](../windows/ftmbase-getunmarshalclass-method.md)|Ruft die CLSID, die COM verwendet, um die DLL, die den Code für den entsprechenden Proxy zu suchen. COM lädt diese DLL aus, um eine nicht initialisierte Instanz des Proxys zu erstellen.|  
+|[FtmBase::DisconnectObject-Methode](../windows/ftmbase-disconnectobject-method.md)|Zwangsweise veröffentlicht alle externe Verbindungen zu einem Objekt. Das Objekt der Server Ruft die Implementierung dieser Methode vor dem Herunterfahren des Objekts.|  
+|[FtmBase::GetMarshalSizeMax-Methode](../windows/ftmbase-getmarshalsizemax-method.md)|Rufen Sie die obere Grenze für die Anzahl von Bytes erforderlich, um den angegebenen Schnittstellenzeiger für das angegebene Objekt gemarshallt werden soll.|  
+|[FtmBase::GetUnmarshalClass-Methode](../windows/ftmbase-getunmarshalclass-method.md)|Ruft die CLSID, die COM verwendet, um die DLL, die den Code für den entsprechenden Proxy zu suchen. COM lädt diese DLL-Datei um eine nicht initialisierte Instanz des Proxys zu erstellen.|  
 |[FtmBase::MarshalInterface-Methode](../windows/ftmbase-marshalinterface-method.md)|Schreibt in einen Stream der Daten, die erforderlich sind, um eine Proxy-Objekt in einem Clientprozess zu initialisieren.|  
 |[FtmBase::ReleaseMarshalData-Methode](../windows/ftmbase-releasemarshaldata-method.md)|Zerstört ein gemarshalltes Datenpaket.|  
-|[FtmBase:::UnmarshalInterface-Methode](../windows/ftmbase-unmarshalinterface-method.md)|Initialisiert einen neu erstellten Proxy, und gibt einen Schnittstellenzeiger, der diesem Proxy zurück.|  
+|[FtmBase:::UnmarshalInterface-Methode](../windows/ftmbase-unmarshalinterface-method.md)|Initialisiert einen neu erstellten Proxy, und gibt einen Schnittstellenzeiger zurück, auf diesen Proxy.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[FtmBase::marshaller_-Datenmember](../windows/ftmbase-marshaller-data-member.md)|Enthält einen Verweis auf die freethreaded Marshaller an.|  
+|[FtmBase::marshaller_-Datenmember](../windows/ftmbase-marshaller-data-member.md)|Enthält einen Verweis auf die freethreaded Marshaller.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `FtmBase`  

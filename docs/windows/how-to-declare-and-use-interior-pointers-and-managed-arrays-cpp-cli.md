@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Deklarieren und Verwenden von inneren Zeigern und verwalteten Arrays (C + c++ / CLI) | Microsoft Docs'
+title: 'Vorgehensweise: Deklarieren und Verwenden von inneren Zeigern und verwalteten Arrays (C++ / CLI) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 457cec66aaabb01b9c10ccc66a8f9594312195b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c02849bc3d1b45ecb6de89e103c51311af31b3c
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875304"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569842"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Gewusst wie: Deklarieren und Verwenden von inneren Zeigern und verwalteten Arrays (C++/CLI)
-Die folgenden C + c++ / CLI-Beispiel wird gezeigt, wie Sie deklarieren und einen inneren Zeiger auf ein Array verwenden können.  
+Der folgende C++-/ c++ / CLI-Beispiel wird gezeigt, wie Sie deklarieren und einen inneren Zeiger auf ein Array verwenden können.  
   
 > [!IMPORTANT]
->  Diese Sprachfunktion wird unterstützt, indem Sie die **"/ CLR"** (Compileroption), jedoch nicht von der **/Zw** -Compileroption.  
+>  Diese Sprachfunktion wird unterstützt, indem die `/clr` -Compileroption verwenden, aber nicht von der `/ZW` -Compileroption.  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="code"></a>Code  
   
-```  
+```cpp  
 // interior_ptr_arrays.cpp  
 // compile with: /clr  
 #define SIZE 10  
@@ -59,7 +59,7 @@ int main() {
   
 ### <a name="output"></a>Ausgabe  
   
-```  
+```Output  
 1st element in arr holds: 1  
 ipi points to memory address whose value is: 1  
 after incrementing ipi, it points to memory address whose value is: 2  

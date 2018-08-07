@@ -1,5 +1,5 @@
 ---
-title: Helpstringdll | Microsoft Docs
+title: Helpstringdll | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7cb3ab5fc624494d3292cd7a47031782ce7da70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27303f294f2414e2ea3f15de0c5bbfb1723628aa
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877344"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570079"
 ---
 # <a name="helpstringdll"></a>helpstringdll
-Gibt den Namen der DLL zu verwenden, um das Dokument Zeichenfolgensuche (Lokalisierung) ausführen.  
+Gibt den Namen der DLL zu verwenden, um die Suche nach Dokument (Lokalisierung) ausführen.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ helpstringdll(  
+[ helpstringdll(  
    "string"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `string`  
- Die DLL-Datei verwenden, um Dokument Zeichenfolgensuche durchzuführen.  
+### <a name="parameters"></a>Parameter  
+ *string*  
+ Die DLL zu verwenden, um die Suche nach Dokument auszuführen.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Helpstringdll** C++-Attribut hat die gleiche Funktionalität wie die [Helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // cpp_attr_ref_helpstringdll.cpp  
 // compile with: /LD  
 #include <unknwn.h>  
@@ -64,7 +63,7 @@ __interface IMyI
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `interface`,-Schnittstellenmethode|  
+|**Betrifft**|**Klasse**, **Schnittstelle**,-Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

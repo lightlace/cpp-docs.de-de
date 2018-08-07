@@ -1,5 +1,5 @@
 ---
-title: Enum Class (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Enumerationsklasse (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e17c5e2055ef478dc7cafd5a7b2677f47bb9e074
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af936151b221b11c88f6dd054779b1a74fa50571
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880604"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570547"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (Komponentenerweiterungen für C++)
 Deklariert eine Enumeration im Namespacebereich, die ein benutzerdefinierter Typ ist, der aus einem Satz von benannten Konstanten besteht, die als Enumeratoren bezeichnet werden.  
@@ -26,13 +26,12 @@ Deklariert eine Enumeration im Namespacebereich, die ein benutzerdefinierter Typ
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
  **Hinweise**  
   
- C++/CX und C++/CLI unterstützen `public enum class` und `private enum class` , die der standardmäßigen C++- `enum class` ähneln, jedoch einen Zugriffsspezifizierer haben. Unter **/clr**ist der C++11- `enum class` -Typ zulässig, jedoch wird die Warnung C4472 generiert, die sicherstellen soll, dass Sie tatsächlich den ISO-Enumerationstyp und nicht den C++/CX- und C++/CLI-Typ verwenden möchten. Weitere Informationen zu der ISO-Standard C++ `enum` -Schlüsselwort verwenden, finden Sie unter [Enumerationen](../cpp/enumerations-cpp.md).  
+ C++ / CX und C++ / CLI-Unterstützung **öffentliche Enumerationsklasse** und **private Enumerationsklasse** ähneln sich der c++- **Enumerationsklasse** aber zusätzlich den Zugriff auf Spezifizierer. Unter **"/ CLR"**, C ++ 11 **Enumerationsklasse** -Typ zulässig, jedoch generiert die Warnung C4472, was beabsichtigt ist, um sicherzustellen, dass Sie tatsächlich den ISO-Enumerationstyp und nicht die C++ / CX und C++ / CLI-Typ. Weitere Informationen zu der ISO C++ **Enum** -Schlüsselwort, finden Sie unter [Enumerationen](../cpp/enumerations-cpp.md).  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
  **Syntax**  
   
 ```  
-  
       access  
       enum class  
       enumeration-identifier  
@@ -43,7 +42,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  **Parameter**  
   
  *Zugriff*  
- Der Zugriff auf die Enumeration, die `public` oder `private`sein kann.  
+ Der Zugriff der Enumeration, die möglicherweise **öffentliche** oder **private**.  
   
  *enumeration-identifier*  
  Der Name der Enumeration.  
@@ -51,7 +50,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  *underlying-type*  
  (Optional) Der zugrunde liegende Typ der Enumeration.  
   
- (Optional. Nur Windows-Runtime) der zugrunde liegende Typ der Enumeration, die möglich `bool`, `char`, `char16`, `int16`, `uint16`, `int`, `uint32`, `int64`, oder `uint64`.  
+ (Optional. Nur Windows-Runtime) der zugrunde liegende Typ der Enumeration, die möglicherweise **"bool"**, **Char**, `char16`, `int16`, `uint16`, **Int**, `uint32`, `int64`, oder `uint64`.  
   
  *enumerator-list*  
  Eine durch Komma getrennte Liste mit Enumeratornamen.  
@@ -69,7 +68,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
   
 -   Wenn der *underlying-type* numerisch ist und ein Enumerator den maximalen Wert für diesen Typ angibt, kann der Wert der folgenden implizit definierten Enumeration nicht dargestellt werden.  
   
--   Wenn der *underlying-type* `bool`ist und mehr als zwei Enumeratoren implizit definiert werden, können die Enumeratoren, die auf die ersten beiden folgen, nicht dargestellt werden.  
+-   Wenn *vom zugrunde liegenden Typ* ist **"bool"**, und mehr als zwei Enumeratoren implizit definiert, die Enumeratoren, die ersten beiden nicht dargestellt werden können.  
   
 -   Wenn der *underlying-type* `char16`ist und der Enumerationswert von 0xD800 bis 0xDFFF reicht, kann der Wert dargestellt werden. Der Wert ist jedoch logisch falsch, da er die Hälfte ein Unicode-Ersatzzeichenpaars darstellt und nicht isoliert angezeigt werden soll.  
   
@@ -80,7 +79,6 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
  **Syntax**  
   
 ```  
-  
       access  
       enum class  
       name [:type] { enumerator-list } var;  
@@ -89,19 +87,19 @@ accessenum structname [:type] { enumerator-list } var;
   
  **Parameter**  
   
- `access`  
- Die Zugriff der Enumeration.  Er kann entweder **öffentlich** oder `private`sein.  
+ *Zugriff*  
+ Die Zugriff der Enumeration. Kann es sich um **öffentliche** oder **private**.  
   
- `enumerator-list`  
+ *enumerator-list*  
  Eine durch Komma getrennte Liste der Bezeichner (Enumeratoren) in der Enumeration.  
   
- `name`  
- Der Name der Enumeration.  Anonyme verwaltete Enumerationen sind nicht zulässig.  
+ *name*  
+ Der Name der Enumeration. Anonyme verwaltete Enumerationen sind nicht zulässig.  
   
- `type` (optional)  
- Der zugrunde liegende Typ der *Bezeichner*.  Dabei kann es sich um einen beliebigen skalaren Typ handeln, wie Versionen von „int“, „short“ oder „long“ mit oder ohne Vorzeichen.  `bool` oder `char` ist ebenfalls zulässig.  
+ *Typ* (optional)  
+ Der zugrunde liegende Typ der *Bezeichner*. Dies kann einen beliebigen skalaren Typ, z. B. Versionen mit oder ohne Vorzeichen von sein **Int**, **kurze**, oder **lange**.  **"bool"** oder **Char** ist ebenfalls zulässig.  
   
- `var` (optional)  
+ *Var* (optional)  
  Der Name einer Variablen des Enumerationstyps.  
   
  **Hinweise**  
@@ -145,9 +143,9 @@ static const int mon = 1;
   
  In Visual C++ 2002 und Visual C++ 2003 wurden Enumeratoren schwach eingefügt (sichtbar im einschließenden Bereich, es sei denn, es gibt einen anderen Bezeichner mit demselben Namen).  
   
- Wenn eine standardmäßige C++-Enumeration (ohne **class** oder `struct`) definiert ist, wird die Enumeration beim Kompilieren mit **/clr** als verwaltete Enumeration kompiliert.  Die Enumeration hat weiterhin die Semantik einer nicht verwalteten Enumeration.  Hinweis: Der Compiler fügt ein Attribut ( `Microsoft::VisualC::NativeEnumAttribute`) ein, das der Visual C++-Compiler erkennt. So wird gekennzeichnet, dass der Programmierer möchte, dass die Enumeration eine systemeigene Enumeration ist.  Andere Compiler erkennen einfach die Standardenumeration als verwaltete Enumeration.  
+ Wenn eine standardmäßige C++-Enumeration definiert ist (ohne **Klasse** oder **Struktur**) kompilieren mit `/clr` wird die Enumeration als verwaltete Enumeration kompiliert werden.  Die Enumeration hat weiterhin die Semantik einer nicht verwalteten Enumeration.  Hinweis: Der Compiler fügt ein Attribut ( `Microsoft::VisualC::NativeEnumAttribute`) ein, das der Visual C++-Compiler erkennt. So wird gekennzeichnet, dass der Programmierer möchte, dass die Enumeration eine systemeigene Enumeration ist.  Andere Compiler erkennen einfach die Standardenumeration als verwaltete Enumeration.  
   
- Eine benannte, Standardenumeration, die mit /clr kompiliert wurde, ist in der Assembly als verwaltete Enumeration sichtbar und kann von einem anderen verwalteten Compiler genutzt werden.   Eine unbenannte Standardenumeration ist jedoch nicht öffentlich aus der Assembly sichtbar.  
+ Eine benannte, standardenumeration kompiliert, mit `/clr` werden in der Assembly als verwaltete Enumeration sichtbar und können von einem anderen verwalteten Compiler genutzt werden.   Eine unbenannte Standardenumeration ist jedoch nicht öffentlich aus der Assembly sichtbar.  
   
  In Visual C++ 2002 und Visual C++ 2003 würde eine Standardenumeration, die als Typ in einem Funktionsparameter verwendet wird, wie folgt aussehen:  
   
@@ -228,7 +226,6 @@ convert to int: 1
 1  
   
 1  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

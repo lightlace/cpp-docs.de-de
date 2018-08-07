@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: angeben Includeverzeichnissen für Ressourcen | Microsoft Docs'
+title: 'Vorgehensweise: angeben Includeverzeichnissen für Ressourcen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9778f774464e8da003a535e3c4dba0aef6ed24cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db09d29f0049152f734ada8a78c510e4424d8dd3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875278"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569539"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Gewusst wie: Festlegen von Includeverzeichnissen für Ressourcen
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>So legen Sie Includeverzeichnisse für eine spezifische RC-Datei fest  
   
 1.  Mit der rechten Maustaste im Projektmappen-Explorer auf der RC-Datei, und wählen Sie **Eigenschaften** aus dem Kontextmenü.  
   
-2.  In der **Eigenschaftenseiten** (Dialogfeld), klicken Sie auf die **Ressourcen** im linken Bereich den Knoten geben Sie dann die Zusätzliche Includeverzeichnisse in der **Zusätzliche Includeverzeichnisse** Diese Eigenschaft.  
+2.  In der **Eigenschaftenseiten** Dialogfeld klicken Sie auf die **Ressourcen** Knoten im linken Bereich, geben Sie dann die zusätzlichen "include"-Verzeichnissen in die **Zusätzliche Includeverzeichnisse** Diese Eigenschaft.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in .NET Framework-Entwicklerhandbuch. Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Exemplarische Vorgehensweise: Verwenden von Ressourcen für die Lokalisierung mit ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in .NET Framework-Entwicklerhandbuch. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Anforderungen**  
+## <a name="requirements"></a>Anforderungen  
   
  Win32  
   

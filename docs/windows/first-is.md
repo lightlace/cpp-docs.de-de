@@ -1,5 +1,5 @@
 ---
-title: First_is | Microsoft Docs
+title: First_is | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8292dfb329d5e5db15f8329cbdead443215bbee8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8d11fdaf451ba1e77c997f49726cd9b86f66172f
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875005"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39569262"
 ---
 # <a name="firstis"></a>first_is
-Gibt den Index des ersten Arrayelements übermittelt werden sollen.  
+Gibt den Index des ersten Arrayelements übertragen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ first_is(  
+[ first_is(  
    "expression"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *Ausdruck*  
- Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argument Slots sind zulässig.  
+ Eine oder mehrere Programmiersprache C-Ausdrücke. Leere Argumentliste Slots sind zulässig.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **First_is** C++-Attribut hat die gleiche Funktionalität wie die [First_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt verschiedene Möglichkeiten zum Angeben von eines Abschnitts in einem Array:  
+ Der folgende Code zeigt verschiedene Möglichkeiten, geben Sie einen Abschnitt in einem Array:  
   
-```  
+```cpp  
 // cpp_attr_ref_first_is.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -72,7 +71,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
   
 |||  
 |-|-|  
-|**Betrifft**|Im Feld `struct` oder **Union**, Parameter interface, Schnittstelle Methode|  
+|**Betrifft**|Im Feld **Struktur** oder **Union**, Schnittstellenparameter,-Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

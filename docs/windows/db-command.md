@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70399b15081de89d8da49268c8d62d3ad390858d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "38954980"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571437"
 ---
 # <a name="dbcommand"></a>db_command
 Erstellt einen OLE DB-Befehl.  
@@ -133,7 +133,7 @@ Wenn *bulk_fetch* kleiner als 1 ist, gibt `SetRows` 0 (Null) zurück.
 ## <a name="remarks"></a>Hinweise  
 **db_command** erstellt ein [CCommand](../data/oledb/ccommand-class.md) -Objekt, das von einem OLE DB-Consumer verwendet wird, um einen Befehl auszuführen.  
   
-Sie können **db_command** entweder mit einem Klassen- oder Funktionsbereich verwenden. Der Hauptunterschied liegt im Bereich des `CCommand` -Objekts. Ist der Gültigkeitsbereich auf die Funktion beschränkt, werden Daten wie z.B. Bindungen bei Beendigung der Funktion ebenfalls beendet. Sowohl die Klasse als auch die Funktion Bereich Verwendungen umfassen die Klasse des OLE DB-Consumervorlagen **CCommand\<>**, unterscheiden sich die Vorlagenargumente für die Fälle Funktion und der Klasse. Während bei Verwendung des Funktionsbereichs Bindungen zu einem **Accessor** hergestellt werden, der lokale Variablen enthält,erfordert die Verwendung des Klassenbereichs eine von `CAccessor`abgeleitete Klasse als Argument Wenn es als Klassenattribut verwendet wird, funktioniert **db_command** zusammen mit **db_column**.  
+Sie können **db_command** entweder mit einem Klassen- oder Funktionsbereich verwenden. Der Hauptunterschied liegt im Bereich des `CCommand` -Objekts. Ist der Gültigkeitsbereich auf die Funktion beschränkt, werden Daten wie z.B. Bindungen bei Beendigung der Funktion ebenfalls beendet. Sowohl die Klasse als auch die Funktion Bereich Verwendungen umfassen die Klasse des OLE DB-Consumervorlagen `CCommand<>`, unterscheiden sich die Vorlagenargumente für die Fälle Funktion und der Klasse. Während bei Verwendung des Funktionsbereichs Bindungen zu einem **Accessor** hergestellt werden, der lokale Variablen enthält,erfordert die Verwendung des Klassenbereichs eine von `CAccessor`abgeleitete Klasse als Argument Wenn es als Klassenattribut verwendet wird, funktioniert **db_command** zusammen mit **db_column**.  
   
 Mit**db_command** können Befehle ausgeführt werden, die kein Resultset zurückgeben.  
   

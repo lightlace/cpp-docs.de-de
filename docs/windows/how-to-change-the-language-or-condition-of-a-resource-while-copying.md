@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ändern von Sprache oder Bedingung einer Ressource während des Kopiervorgangs | Microsoft Docs'
+title: 'Vorgehensweise: Ändern der Sprache oder Bedingung einer Ressource während des Kopierens | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcddbc0bb5a2afe807cbe8ca7643a831c28ad50f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0681a5e0c88f44d5616724f5564660ecb05fbdc3
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880136"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570495"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Gewusst wie: Ändern der Sprache oder Bedingung einer Ressource während des Kopierens
 Beim Kopieren in eine Ressource können Sie ihre Sprachen- und/oder Bedingungseigenschaft ändern.  
   
--   Die Ressourcensprache ermittelt lediglich die Sprache für die Ressource. Dies dient der [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) um die Ressource zu bestimmen, für die Sie suchen. (Ressourcen können für jede Sprache Unterschiede aufweisen, die nicht mit dem Text zusammenhängen, z. B. Tastenkombinationen, die nur auf einer japanischen Tastatur funktionieren, oder eine Bitmap, die nur für Builds in Chinesisch gilt usw.)  
+-   Die Ressourcensprache ermittelt lediglich die Sprache für die Ressource. Dies dient der [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) können Sie die Ressource zu identifizieren, für die Sie suchen. (Ressourcen können für jede Sprache Unterschiede aufweisen, die nicht mit dem Text zusammenhängen, z. B. Tastenkombinationen, die nur auf einer japanischen Tastatur funktionieren, oder eine Bitmap, die nur für Builds in Chinesisch gilt usw.)  
   
 -   Die Bedingung einer Ressource stellt ein definiertes Symbol dar, das eine Bedingung angibt, unter der diese bestimmte Ressourcenkopie zu verwenden ist.  
   
@@ -40,19 +40,17 @@ IDD_AboutBox (Finnish - XX33)
   
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>So kopieren Sie eine vorhandene Ressource und ändern die Sprache oder Bedingung  
   
-1.  In der RC-Datei oder in der [Ressourcenansicht](../windows/resource-view-window.md) Fenster mit der rechten Maustaste der Ressource, die Sie kopieren möchten.  
+1.  In der RC-Datei oder in der [Ressourcenansicht](../windows/resource-view-window.md) Fenster mit der rechten Maustaste in der Ressource, die Sie kopieren möchten.  
   
 2.  Wählen Sie **Kopie einfügen** aus dem Kontextmenü.  
   
-3.  In der **Ressourcenkopie** (Dialogfeld):  
+3.  In der **Ressourcenkopie** Dialogfeld:  
   
     -   Für die **Sprache** Listenfeld, wählen Sie die Sprache.  
   
     -   In der **Bedingung** geben die Bedingung.  
   
-
-  
- Anforderungen  
+## <a name="requirements"></a>Anforderungen  
   
  Win32  
   

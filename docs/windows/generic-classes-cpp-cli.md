@@ -1,5 +1,5 @@
 ---
-title: Generische Klassen (C + c++ / CLI) | Microsoft Docs
+title: Generische Klassen (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07a5cb6abaca56901af26895b1304a9b7079ced9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 751c7f9efe4f5db612419d5837cc2d6f304f43da
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881399"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39570671"
 ---
 # <a name="generic-classes-ccli"></a>Generische Klassen (C++/CLI)
 Eine generische Klasse wird im folgenden Format deklariert:  
@@ -43,46 +43,46 @@ class-body
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- In der oben aufgeführten Syntax werden die folgenden Begriffe verwendet:  
+ In der obigen Syntax werden die folgenden Begriffe verwendet:  
   
  `attributes` (optional)  
  Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".  
   
  *Klassenschlüssel*  
- Entweder `class` oder `typename`  
+ Entweder **Klasse** oder **Typename**  
   
  *Type-Parameter-Bezeichner*,  
- Durch Trennzeichen getrennte Liste von Bezeichnern, die die Namen der Typparameter angeben.  
+ Durch Trennzeichen getrennte Liste der Bezeichner, die Sie den Namen der Typparameter angeben.  
   
  *Einschränkungsklauseln*  
  Eine Liste (nicht durch Trennzeichen getrennt) der **, in denen** Klauseln, die die Einschränkungen für die Typparameter angeben. Hat das Format an:  
   
- `where`  *Typ der Parameterbezeichner*`:`*Einschränkungsliste*   `...`  
+ `where`  *Type-Parameter-Identifier*`:`*Einschränkungsliste*   `...`  
   
  *Liste der Einschränkung*  
  *Klasse oder Schnittstelle*[`,` *...* ]  
   
  *Zugriffsmodifizierer*  
- Der Zugriffsmodifizierer für die generische Klasse. Für die Windows-Runtime ist die einzige zulässige Modifizierer `private`. Für die common Language Runtime die zulässige Modifizierer sind `private` und `public`.  
+ Der Zugriffsmodifizierer für die generische Klasse. Für die Windows-Runtime ist der einzige zulässige Modifizierer **private**. Für die common Language Runtime, zulässige Modifizierer sind **private** und **öffentliche**.  
   
  *identifier*  
- Der Name der generischen Klasse, eine beliebige gültige C++-Bezeichner.  
+ Der Name der generischen Klasse, jeder gültige C++-Bezeichner.  
   
  *Modifizierer* (optional)  
- Zulässige Modifizierer sind `sealed` und **abstrakte**.  
+ Zulässige Modifizierer sind **versiegelten** und **abstrakte**.  
   
  *Base-list*  
- Eine Liste mit einer Basisklasse und allen implementierten Schnittstellen, die alle durch Kommas getrennt.  
+ Eine Liste mit der eine Basisklasse und alle implementierten Schnittstellen, die alle durch Kommas getrennt.  
   
- *Klasse zum Textteil gehöriger*  
+ *Text der Klasse*  
  Der Text der Klasse, die Felder, Memberfunktionen usw. enthält.  
   
  *Deklaratoren*  
  Deklarationen von Variablen dieses Typs. Zum Beispiel: `^` *Bezeichner*[`,` ...]  
   
- Sie können generische Klassen, wie diese deklarieren (Beachten Sie, dass das Schlüsselwort **Klasse** kann verwendet werden, anstelle von **Typename**). In diesem Beispiel `ItemType`, `KeyType` und `ValueType` sind die unbekannte Typen, die an dem Punkt angegeben sind, in denen der Typ. `HashTable<int, int>` wird von ein konstruierter Typ des generischen Typs `HashTable<KeyType, ValueType>`. Eine Anzahl von verschiedenen konstruierte Typen kann aus eines einzelnen generischen Typs erstellt werden. Konstruierte Typen, die von generischen Klassen erstellt werden wie andere Typ des Ref-Klasse behandelt.  
+ Sie können generische Klassen, wie diese deklarieren (Beachten Sie, dass das Schlüsselwort **Klasse** kann verwendet werden, anstelle von **Typename**). In diesem Beispiel `ItemType`, `KeyType` und `ValueType` sind die unbekannte Typen, die zum Zeitpunkt angegeben werden, in denen der Typ. `HashTable<int, int>` ist ein konstruierter Typ des generischen Typs `HashTable<KeyType, ValueType>`. Eine Reihe verschiedener konstruierten Typen kann aus einer einzelnen generischen Typs erstellt werden. Konstruierte Typen, die von generischen Klassen erstellt werden wie jede andere Ref-Klasse behandelt.  
   
-```  
+```cpp  
 // generic_classes_1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -104,11 +104,11 @@ int main() {
 }  
 ```  
   
- Beide Werttypen (entweder integrierte Typen wie `int` oder `double`, oder eine benutzerdefinierte Werttypen) und Verweistypen als generisches Typargument verwendet werden können. Die Syntax in der generischen Methodendefinition entspricht dem unabhängig. Der unbekannte Typ ist syntaktisch, behandelt, als handele es sich um einen Referenztyp darstellt. Allerdings kann die Common Language Runtime zu bestimmen, wenn der tatsächlich verwendete Datentyp ein Werttyp ist, und ersetzen den entsprechenden generierten Code für den direkten Zugriff auf Member. Form von generischen Typargumenten verwendete Werttypen nicht geschachtelt sind und daher die Leistungseinbuße Boxing nicht beeinträchtigt. Muss innerhalb des Texts der generischen verwendete Syntax **T ^** und "**->**"anstelle von"**.**". Alle Verwendungen von [Ref neue Gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) für den Typ Parameter werden entsprechend interpretiert, von der Laufzeit als die einfache Erstellung eines Werttyps Wenn das Typargument ein Werttyp ist.  
+ Sowohl Werttypen (entweder integrierte Typen wie **Int** oder **doppelte**, oder eine benutzerdefinierte Werttypen) und Verweistypen als ein generisches Typargument verwendet werden können. Die Syntax in der generischen Methodendefinition ist unabhängig davon identisch. Syntaktisch gesehen wird der unbekannte Typ behandelt, als handele es sich um einen Verweistyp handelt. Allerdings kann die Laufzeit zu bestimmen, wenn der tatsächlich verwendete Typ ein Werttyp ist, und ersetzen den entsprechenden generierten Code für den direkten Zugriff auf Member. Werttypen, die als generische Typargumente verwendet nicht geschachtelt sind und beeinträchtigt daher nicht die Leistungseinbußen durch Boxing zugeordnet werden. Die Syntax, die innerhalb des Texts der generischen verwendet werden sollte `T^` und `->` anstelle von `.`. Jede Verwendung von [Ref neue Gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) für den Typ Parameter werden entsprechend interpretiert, von der Runtime als die einfache Erstellung eines Werttyps Wenn das Typargument ein Werttyp ist.  
   
- Sie können auch mit eine generische Klasse deklarieren [Einschränkungen für generische Typparameter (C + c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) auf die Typen, die für den Typparameter verwendet werden können. Im folgenden Beispiel verwendet einen beliebigen Typ für `ItemType` implementieren müssen die `IItem` Schnittstelle. Bei dem Versuch, verwenden Sie `int`, z. B. die nicht implementiert `IItem`, wäre ein Kompilierzeitfehler, da das Typargument nicht der Einschränkung entspricht.  
+ Sie können auch eine generische Klasse mit deklarieren [Einschränkungen für generische Typparameter (C++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) auf die Typen, die für den Typparameter verwendet werden können. Im folgenden Beispiel wird jeder Typ für verwendet `ItemType` müssen implementieren die `IItem` Schnittstelle. Es wird versucht, verwenden Sie **Int**, z. B. dem implementiert nicht `IItem`, ergibt einen Fehler während der Kompilierung aus, da das Typargument nicht der Einschränkung entspricht.  
   
-```  
+```cpp  
 // generic_classes_2.cpp  
 // compile with: /clr /c  
 interface class IItem {};  
@@ -117,9 +117,9 @@ where ItemType : IItem
 ref class Stack {};  
 ```  
   
- Generische Klassen im selben Namespace können nicht überladen werden, indem Sie nur ändern, die Anzahl oder die Datentypen der Typparameter. Jedoch wenn jede Klasse in einem anderen Namespace befindet, können sie überladen werden. Angenommen, Sie haben die folgenden zwei Klassen `MyClass` und `MyClass<ItemType>`, in den Namespaces `A` und `B`. Die beiden Klassen können dann in einem dritten Namespace "c:" überladen werden  
+ Generische Klassen, die im selben Namespace können nicht überladen werden, indem Sie nur ändern, die Anzahl oder die Datentypen der Typparameter. Aber wenn jede Klasse in einem anderen Namespace befindet, können sie überladen werden. Betrachten Sie beispielsweise die folgenden zwei Klassen, `MyClass` und `MyClass<ItemType>`, in den Namespaces `A` und `B`. Die beiden Klassen können dann in einem dritten Namespace "c:" überladen werden  
   
-```  
+```cpp  
 // generic_classes_3.cpp  
 // compile with: /clr /c  
 namespace A {  
@@ -144,9 +144,9 @@ namespace C {
 }  
 ```  
   
- Die Basisklasse und Basisschnittstellen darf nicht Typparameter sein. Allerdings kann die Basisklasse den Typparameter als Argument, wie im folgenden Fall umfassen:  
+ Die Basisklasse und die Basisschnittstellen darf nicht die Parameter vom Typ sein. Allerdings kann die Basisklasse den Typparameter als Argument an, wie im folgenden Fall umfassen:  
   
-```  
+```cpp  
 // generic_classes_4.cpp  
 // compile with: /clr /c  
 generic <typename ItemType>  
@@ -156,18 +156,18 @@ generic <typename ItemType>
 ref class MyClass : IInterface<ItemType> {};  
 ```  
   
- Konstruktoren und Destruktoren werden einmal für jede Objektinstanz (wie gewohnt;) ausgeführt statische Konstruktoren werden einmal für jeden konstruierten Typ ausgeführt.  
+ Konstruktoren und Destruktoren werden einmal für jede Objektinstanz (wie gewohnt); ausgeführt statische Konstruktoren werden einmal für jede konstruierten Typ ausgeführt.  
   
-## <a name="fields-in-generic-classes"></a>Felder im generische Klassen  
- Dieser Abschnitt zeigt die Verwendung der Instanz und statische Felder in generischen Klassen.  
+## <a name="fields-in-generic-classes"></a>Felder in generische Klassen  
+ In diesem Abschnitt veranschaulicht die Verwendung der Instanz und statischen Feldern in generischen Klassen.  
   
-### <a name="instance-variables"></a>Nachrichteninstanzvariablen  
- Nachrichteninstanzvariablen einer generischen Klasse möglich, Typen und Variable Initialisierer, die Typparameter von einschließenden Klasse enthalten.  
+### <a name="instance-variables"></a>Instanzvariablen  
+ Instanzvariablen einer generischen Klasse haben, Typen und Variablen Initialisierer, die Typparameter aus der einschließenden Klasse enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden die drei verschiedene Instanzen der generischen Klasse, MyClass\<ItemType >, werden mithilfe der entsprechenden Typargumente erstellt (`int`, **doppelte**, und **Zeichenfolge**).  
+ Im folgenden Beispiel drei verschiedene Instanzen der generischen Klasse, MyClass\<ItemType >, werden die entsprechenden Typargumente mit erstellt (**Int**, **doppelte**, und **Zeichenfolge**).  
   
-```  
+```cpp  
 // generics_instance_fields1.cpp  
 // compile with: /clr  
 // Instance fields on generic classes  
@@ -206,14 +206,14 @@ String field = ABC
 ```  
   
 ## <a name="static-variables"></a>Statische Variablen  
- Bei der Erstellung eines neuen generischen Typs neue Instanzen von statischen Variablen werden erstellt, und für diesen Typ statischer Konstruktor ausgeführt wird.  
+ Klicken Sie auf die Erstellung eines neuen generischen Typs neue Instanzen von statischen Variablen werden erstellt, und alle statischer Konstruktor für diesen Typ wird ausgeführt.  
   
- Statische Variablen können die Typparameter von einschließenden Klasse.  
+ Statische Variablen können Typparameter aus der einschließenden Klasse.  
   
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird die Verwendung von statische Felder und ein statischer Konstruktor innerhalb einer generischen Klasse veranschaulicht.  
   
-```  
+```cpp  
 // generics_static2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -267,18 +267,18 @@ Test1
 ```  
   
 ## <a name="methods-in-generic-classes"></a>Methoden in generische Klassen  
- Methoden in generischen Klassen können generisch sein selbst; nicht generische Methoden werden implizit durch die Klassentypparameter parametrisiert werden.  
+ Methoden in generische Klassen können generisch sein selbst; nicht generische Methoden werden durch den Typparameter der Klasse implizit parametrisiert.  
   
- Die folgenden speziellen Regeln gelten für Methoden innerhalb von generischen Klassen:  
+ Die folgenden besonderen Regeln gelten für Methoden in der generischen Klassen:  
   
--   Methoden in generischen Klassen können als Parameter, lokale Variablen oder Rückgabetypen Typparameter verwenden.  
+-   Methoden in generische Klassen können Parameter vom Typ als Parameter, Rückgabetypen und lokale Variablen verwenden.  
   
--   Methoden in generischen Klassen können offene oder geschlossene konstruierte Typen als Parameter, lokale Variablen oder Rückgabetypen.  
+-   Methoden in generische Klassen können offene oder geschlossene konstruierte Typen als Parameter, Rückgabetypen und lokale Variablen verwenden.  
   
 ### <a name="non-generic-methods-in-generic-classes"></a>Nicht generische Methoden in generische Klassen  
- Methoden in generischen Klassen, die keine zusätzliche Typparameter werden in der Regel als nichtgenerischen bezeichnet, obwohl sie implizit von der einschließenden generischen Klasse parametrisiert werden.  
+ Methoden in generische Klassen, die keine zusätzliche Typparameter aufweisen werden in der Regel als nicht generische bezeichnet, obwohl sie implizit von der einschließenden generischen Klasse parametrisiert werden.  
   
- Die Signatur einer nicht generischen Methode kann eine oder mehrere Typparameter von einschließenden Klasse entweder direkt oder indirekt in offenen konstruierte Typen enthalten. Zum Beispiel:  
+ Die Signatur einer nicht generischen Methode kann eine oder mehrere Typparameter der einschließenden Klasse entweder direkt oder in einen offenen konstruierten Typ enthalten. Zum Beispiel:  
   
  `void MyMethod(MyClass<ItemType> x) {}`  
   
@@ -287,7 +287,7 @@ Test1
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel deklariert eine nicht generische Methode `ProtectData`, innerhalb einer generischen Klasse `MyClass<ItemType>`. Die Methode verwendet den Typparameter der Klasse `ItemType` in der Signatur in offenen konstruierten Typen.  
   
-```  
+```cpp  
 // generics_non_generic_methods1.cpp  
 // compile with: /clr  
 // Non-generic methods within a generic class.  
@@ -341,11 +341,11 @@ Amount: $123.00**
 ```  
   
 ## <a name="generic-methods-in-generic-classes"></a>Generische Methoden in generische Klassen  
- Sie können generische Methoden in generischen und nicht generischen Klassen deklarieren. Zum Beispiel:  
+ Sie können generische Methoden in generischen und nicht generische Klassen deklarieren. Zum Beispiel:  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // generics_method2.cpp  
 // compile with: /clr /c  
 generic <typename Type1>  
@@ -365,14 +365,14 @@ public:
 };  
 ```  
   
- Die nicht generische Methode ist weiterhin generisch ist, in dem Sinne, dass es durch die Klasse Typparameter parametrisiert ist, verfügt aber über keine zusätzlichen Typparameter.  
+ Die nicht generische Methode ist weiterhin generisch ist, in dem Sinne, dass sie wird von Typparameter der Klasse, aber es keine zusätzliche Typparameter ist.  
   
- Alle Arten von Methoden in generischen Klassen können generische, einschließlich statischen, Instanz und virtuelle Methoden sein.  
+ Alle Arten von Methoden in generische Klassen können generische, einschließlich statischer, Instanz und virtuelle Methoden sein.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird veranschaulicht, deklarieren und Verwenden von generischen Methoden innerhalb von generischen Klassen:  
+ Das folgende Beispiel zeigt das Deklarieren und Verwenden von generischen Methoden innerhalb von generischen Klassen:  
   
-```  
+```cpp  
 // generics_generic_method2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -418,9 +418,9 @@ MyMethod returned: Hello World!
 ```  
   
 ## <a name="using-nested-types-in-generic-classes"></a>Verwenden von geschachtelten Typen in generische Klassen  
- Ebenso wie bei normalen Klassen können Sie andere Typen innerhalb einer generischen Klasse deklarieren. Die Deklaration der geschachtelten Klasse wird implizit durch die Typparameter der Deklaration der äußeren Klasse parametrisiert. Daher wird eine unterschiedliche geschachtelte Klasse für jede äußere konstruierten Typ definiert. Beispielsweise ist in der Deklaration  
+ Ebenso wie bei normalen Klassen können Sie andere Typen innerhalb einer generischen Klasse deklarieren. Deklaration der geschachtelten Klasse ist von den Typparametern der Deklaration der äußeren Klasse implizit parametrisiert. Daher wird eine unterschiedliche geschachtelte Klasse für jede äußere konstruierten Typ definiert. Z. B. in der Deklaration  
   
-```  
+```cpp  
 // generic_classes_5.cpp  
 // compile with: /clr /c  
 generic <typename ItemType>  
@@ -429,11 +429,11 @@ ref struct Outer {
 };  
 ```  
   
- Der äußere Typ\<Int >:: innere ist nicht identisch mit der äußere Typ\<doppelte >:: inneren.  
+ Der Typ Outer\<Int >:: innere entspricht nicht dem Typ Outer\<double >:: inneren.  
   
- Wie bei generischen Methoden in generischen Klassen können weitere Typparameter für den geschachtelten Typ definiert werden. Wenn Sie die gleichen Typparameternamen in der inneren und äußeren Klasse verwenden, wird der innere Typparameter den Typparameter des äußeren ausblenden.  
+ Wie bei generischen Methoden in generische Klassen können weitere Typparameter für den geschachtelten Typ definiert werden. Wenn Sie die gleichen Typparameternamen in der inneren und äußeren Klasse verwenden, wird der innere Typparameter den Typparameter des äußeren ausgeblendet.  
   
-```  
+```cpp  
 // generic_classes_6.cpp  
 // compile with: /clr /c  
 generic <typename ItemType>  
@@ -447,15 +447,15 @@ ref class Outer {
 };  
 ```  
   
- Da es keine Möglichkeit zum Verweisen auf den äußeren Typparameter angeben gibt, erzeugt der Compiler eine Warnung in dieser Situation.  
+ Da keine Möglichkeit zum Verweisen auf den Parameter des äußeren Typs vorhanden ist, erzeugt der Compiler eine Warnung in dieser Situation.  
   
- Wenn konstruierte geschachtelte generische Typen identisch sind, ist der Typparameter des äußeren Typs, obwohl der innere Typ implizit durch die Typparameter des äußeren Typs parametrisiert ist nicht in der Typparameterliste für den inneren Typ enthalten. Im obigen Beispiel wäre ein Name eines konstruierten Typs Outer\<Int >:: innere\<Zeichenfolge >.  
+ Wenn konstruierte geschachtelte generische Typen benannt werden, ist der Typparameter für den äußeren Typ in der Liste der Typparameter für den internen Typ, nicht enthalten, obwohl der innere Typ implizit durch die Typparameter des äußeren Typs parametrisiert ist. Im obigen Fall wäre ein Name eines konstruierten Typs Outer\<Int >:: innere\<Zeichenfolge >.  
   
- Im folgende Beispiel wird veranschaulicht, erstellen und lesen eine verknüpfte Liste mit geschachtelten Typen in generischen Klassen.  
+ Das folgende Beispiel veranschaulicht das Erstellen und lesen eine verknüpfte Liste, das Verwenden von geschachtelten Typen in generischen Klassen.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // generics_linked_list.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -546,7 +546,7 @@ Reading nodes:
   
 ## <a name="properties-events-indexers-and-operators-in-generic-classes"></a>Eigenschaften, Ereignisse, Indexer und Operatoren in generische Klassen  
   
--   Eigenschaften, Ereignisse, Indexer und Operatoren können die Typparameter von einschließenden generischen Klasse als Rückgabewerte, Parameter oder lokalen Variablen, z. B. wenn `ItemType` ist ein Typparameter von einer Klasse:  
+-   Eigenschaften, Ereignisse, Indexer und Operatoren können die Typparameter von einschließenden generischen Klasse als Rückgabewerte, Parameter oder lokale Variablen, z. B. wenn `ItemType` ein Parameter vom Typ einer Klasse ist:  
   
     ```  
     public ItemType MyProperty {}  
@@ -555,9 +555,9 @@ Reading nodes:
 -   Eigenschaften, Ereignisse, Indexer und Operatoren können nicht sich selbst nicht parametrisiert werden.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel zeigt die Deklarationen von einer Instanzeigenschaft innerhalb einer generischen Klasse.  
+ Dieses Beispiel zeigt eine Instance-Eigenschaft innerhalb einer generischen Klasse Deklarationen.  
   
-```  
+```cpp  
 // generics_generic_properties1.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -596,7 +596,7 @@ John, 234
 ## <a name="example"></a>Beispiel  
  Das nächste Beispiel zeigt eine generische Klasse mit einem Ereignis.  
   
-```  
+```cpp  
 // generics_generic_with_event.cpp  
 // compile with: /clr  
 // Declare a generic class with an event and  
@@ -656,12 +656,12 @@ int main() {
 ```  
   
 ## <a name="generic-structs"></a>Generische Strukturen  
- Die Regeln zum Deklarieren und Verwenden von generischen Strukturen sind identisch für generische Klassen, mit Ausnahme der Unterschiede in der Visual C++-Sprachreferenz in notiert haben.  
+ Die Regeln für das Deklarieren und Verwenden von generischen Strukturen sind identisch mit denen für generische Klassen, mit Ausnahme der Unterschiede in der Visual C++-Sprachreferenz in notiert haben.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel deklariert eine generische Struktur `MyGenStruct`, mit einem Feld `myField`, und weist die Werte verschiedener Typen (`int`, **doppelte**, **String ^**) auf dieses Feld.  
+ Das folgende Beispiel deklariert eine generische Struktur, `MyGenStruct`, mit dem Feld `myField`, und weist die Werte verschiedener Typen (**Int**, **doppelte**, `String^`) auf dieses Feld.  
   
-```  
+```cpp  
 // generics_generic_struct1.cpp  
 // compile with: /clr  
 using namespace System;  

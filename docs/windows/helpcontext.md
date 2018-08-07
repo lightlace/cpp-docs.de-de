@@ -1,5 +1,5 @@
 ---
-title: HelpContext | Microsoft Docs
+title: HelpContext | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 317e204c7292c4a7cccb1f81f6bc9d2a2fbfd407
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2089bca316fb37304765ac14475b73cadaf79342
+ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877214"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39571359"
 ---
 # <a name="helpcontext"></a>helpcontext
 Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der Hilfedatei.  
@@ -30,21 +30,20 @@ Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ helpcontext(  
+[ helpcontext(  
    id  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `id`  
- Die Kontext-ID des Hilfethemas. Finden Sie unter [HTML-Hilfe: kontextbezogene Hilfe für Programme](../mfc/html-help-context-sensitive-help-for-your-programs.md) für Weitere Informationen zum Kontext-IDs.  
+### <a name="parameters"></a>Parameter  
+ *ID*  
+ Die Kontext-ID des Hilfethemas. Finden Sie unter [HTML-Hilfe: kontextbezogene Hilfe für Programme](../mfc/html-help-context-sensitive-help-for-your-programs.md) Weitere Informationen zum Kontext-IDs.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Helpcontext** C++-Attribut hat die gleiche Funktionalität wie die [Helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Siehe das Beispiel für ["DefaultValue"](../windows/defaultvalue.md) ein Beispiel zum Verwenden von **Helpcontext**.  
+ Siehe das Beispiel für [Defaultvalue](../windows/defaultvalue.md) ein Beispiel zur Verwendung für **Helpcontext**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -52,7 +51,7 @@ Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der
   
 |||  
 |-|-|  
-|**Betrifft**|`interface`, `typedef`, **Klasse**, Methode, Eigenschaft|  
+|**Betrifft**|**Schnittstelle**, **Typedef**, **Klasse**, Methode, Eigenschaft|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  
@@ -63,7 +62,7 @@ Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der
  [IDL-Attribute](../windows/idl-attributes.md)   
  [Schnittstellenattribut](../windows/interface-attributes.md)   
  [Klassenattribute](../windows/class-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
  [HelpFile](../windows/helpfile.md)   
  [helpstring](../windows/helpstring.md)   
