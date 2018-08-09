@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f852f8f360be90e7d17e9aaa09e7d584ad98fc33
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 78b5039268bd122ade815ed6040a1df546e0f293
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461067"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641329"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach-Methode
 Dies ordnet **ComPtr** mit dem Schnittstellentyp, der von der aktuellen Vorlagentyp-Parameter angegeben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void Attach(  
    _In_opt_ InterfaceType* other  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *other*  
  Ein Schnittstellentyp ist.  
   

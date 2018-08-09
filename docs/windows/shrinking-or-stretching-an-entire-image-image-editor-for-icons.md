@@ -1,5 +1,5 @@
 ---
-title: Verkleinern oder Strecken eines ganzen Bilds (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Verkleinern oder Strecken eines ganzen Bilds (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41019945e6ad585b20cba81ea611d575b11e02a4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22d504966fbc162dfe695156a98c0dec86155a9f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889916"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646997"
 ---
 # <a name="shrinking-or-stretching-an-entire-image-image-editor-for-icons"></a>Verkleinern oder Strecken eines ganzen Bilds (Bildbearbeitung für Symbole)
 ### <a name="to-shrink-or-stretch-an-entire-image"></a>So verkleinern oder Strecken eines ganzen Bildes  
   
 1.  Wählen Sie das gesamte Bild.  
   
-     Wenn ein Teil des Abbilds derzeit ausgewählt ist, und Sie das gesamte Bild auswählen möchten, klicken Sie auf eine beliebige Stelle auf dem Bild außerhalb der aktuellen Markierungsrahmen umgeben.  
+     Wenn ein Teil des Images derzeit ausgewählt ist, und Sie das gesamte Bild auswählen möchten, klicken Sie auf das Bild außerhalb des Rahmens der aktuellen Auswahl.  
   
-2.  Halten Sie die **UMSCHALT** Taste, und ziehen Sie einen Ziehpunkt, bis das Bild die gewünschte Größe ist.  
+2.  Halten Sie die **UMSCHALT** gedrückt, und ziehen Sie einen Ziehpunkt, bis das Bild, das die gewünschte Größe hat.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- **Anforderungen**  
-  
+## <a name="requirements"></a>Anforderungen  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Ändern der Bildgröße](../windows/resizing-an-image-image-editor-for-icons.md)
-
+ [Größenänderungen bei Bildern](../windows/resizing-an-image-image-editor-for-icons.md)

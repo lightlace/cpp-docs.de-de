@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8171c4a57621a4f17a5f0ddb0745faa70fde6524
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7989f28ae9c9e3af4c73ec454487d34dd7cff570
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465284"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644754"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType-Enumeration
 Gibt den Typ der zurückgegebenen Ergebnisse der `GetResults()` Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 enum AsyncResultType;  
 ```  
   
@@ -40,7 +40,7 @@ enum AsyncResultType;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |`MultipleResults`|Mehrere Resultsets, die progressiv zwischen dargestellt werden `Start` Zustand und vor dem `Close()` aufgerufen wird.|  
-|`SingleResult`|Ein einzelnes Ergebnis, das angezeigt wird, nachdem das Abschlussereignis tritt auf.|  
+|`SingleResult`|Ein einzelnes Ergebnis, das nach dem vorgelegt wird die `Complete` Ereignis auftritt.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** async.h  

@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten von Zugriffstastentabellen | Microsoft Docs
+title: Bearbeiten von Zugriffstastentabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e1f20e6e50fad1f77e495fb47c62b162524cc72
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 761a5eefb80d47da0194e9c718f67bfe2d7b69de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872938"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641533"
 ---
 # <a name="editing-accelerator-tables"></a>Bearbeiten von Zugriffstastentabellen
-In Visual C++ können Sie eine Zugriffstastentabelle direkt mit direkte Bearbeitung im Zugriffstasten-Editor bearbeiten.  
+Sie können eine Zugriffstastentabelle in Visual C++ bearbeiten, direkt mit der direkten Bearbeitung in der **Accelerator** Editor.  
   
- Die folgenden Verfahren beziehen sich auf die Verwendung von Standardeigenschaftenseiten, direkte Bearbeitung und der Property-Seite-Methode müssen jedoch das gleiche Ergebnis. Vorgenommene Änderungen mithilfe von Eigenschaftenseiten, oder verwenden die direkte Bearbeitung werden sofort in der Zugriffstastentabelle dargestellt.  
+ Die folgenden Verfahren beziehen sich auf die Verwendung von standard-Eigenschaftenseiten können jedoch die direkte Bearbeitung und der Seitenmethode für das gleiche Ergebnis. Änderungen mithilfe von Eigenschaftenseiten oder mithilfe der direkten Bearbeitung werden sofort in der tastenkombinationstabelle dargestellt.  
   
 -   [Bearbeiten einer Zugriffstastentabelle](../windows/editing-in-an-accelerator-table.md)  
   
@@ -42,7 +42,7 @@ In Visual C++ können Sie eine Zugriffstastentabelle direkt mit direkte Bearbeit
   
 -   [Ändern der Eigenschaften mehrerer Zugriffstasten](../windows/changing-the-properties-of-multiple-accelerator-keys.md)  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  

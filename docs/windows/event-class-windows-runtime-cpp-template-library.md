@@ -1,5 +1,5 @@
 ---
-title: Event-Klasse (Windows Runtime C++-Vorlagenbibliothek) | Microsoft Docs
+title: Event-Klasse (Windows Runtime C++-Vorlagenbibliothek) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 12c9e5bfe01de0a9864ff1e94364e0c42178ad11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c07d58f244bf2e7e6c9329196bae7b5bb323ce12
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872925"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644163"
 ---
 # <a name="event-class-windows-runtime-c-template-library"></a>Ereignisklasse (C++-Vorlagenbibliothek der Windows-Runtime)
 Stellt ein Ereignis dar.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 class Event : public HandleT<HandleTraits::EventTraits>;  
 ```  
   
@@ -37,13 +37,13 @@ class Event : public HandleT<HandleTraits::EventTraits>;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Event::Event Constructor (C++-Vorlagenbibliothek der Windows Runtime)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Initialisiert eine neue Instanz der Ereignisklasse.|  
+|[Event::Event Constructor (C++-Vorlagenbibliothek der Windows Runtime)](../windows/event-event-constructor-windows-runtime-cpp-template-library.md)|Initialisiert eine neue Instanz der dem **Ereignis** Klasse.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[Event::operator=-Operator](../windows/event-operator-assign-operator.md)|Weist den angegebenen Ereignisverweis der aktuellen Ereignisinstanz zu.|  
+|[Event::operator=-Operator](../windows/event-operator-assign-operator.md)|Weist dem angegebenen **Ereignis** Verweis auf das aktuelle **Ereignis** Instanz.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `HandleT`  

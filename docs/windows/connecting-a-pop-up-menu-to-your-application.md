@@ -1,5 +1,5 @@
 ---
-title: Verbinden eines Popupmenüs mit der Anwendung | Microsoft Docs
+title: Verbinden eines Popupmenüs mit der Anwendung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 533fc4eea9299d51183a91febb371ff8142e0a7b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5bfe5c4dba3dc8e86eb9a47a6e163af94872b933
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879528"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641261"
 ---
 # <a name="connecting-a-pop-up-menu-to-your-application"></a>Verbinden eines Popupmenüs mit der Anwendung
 ### <a name="to-connect-a-pop-up-menu-to-your-application"></a>So verbinden Sie ein Popupmenü mit Ihrer Anwendung  
@@ -32,7 +32,7 @@ ms.locfileid: "33879528"
   
 2.  Fügen Sie dem Meldungshandler folgenden Code hinzu.  
   
-    ```  
+    ```cpp  
     CMenu menu;  
     VERIFY(menu.LoadMenu(IDR_MENU1));  
     CMenu* pPopup = menu.GetSubMenu(0);  
@@ -41,12 +41,9 @@ ms.locfileid: "33879528"
     ```  
   
     > [!NOTE]
-    >  Die [CPoint](../atl-mfc-shared/reference/cpoint-class.md) **übergeben durch die Nachricht Handler ist, in Bildschirmkoordinaten.**  
+    >  Die [CPoint](../atl-mfc-shared/reference/cpoint-class.md) übergeben durch die Nachricht Handler ist, in Bildschirmkoordinaten.  
   
-
-  
- **Anforderungen**  
-  
+## <a name="requirements"></a>Anforderungen  
  MFC  
   
 ## <a name="see-also"></a>Siehe auch  

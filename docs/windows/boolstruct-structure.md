@@ -1,5 +1,5 @@
 ---
-title: BoolStruct-Struktur | Microsoft Docs
+title: BoolStruct-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af2827d85a1df647dca2c02c5c6ee5a12a416d51
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14e3d81ca273bf96b4812f08a46904c9d521c5cf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860121"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650481"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct-Struktur
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 struct BoolStruct;  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- BoolStruct-Struktur definiert, ob ein comptr-Objekt die Objektlebensdauer einer Schnittstelle verwaltet wird. BoolStruct wird intern von verwendet die [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) Operator.  
+ Die **BoolStruct** Struktur definiert, ob eine `ComPtr` die Objektlebensdauer einer Schnittstelle verwaltet. **BoolStruct** werden intern von der [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) Operator.  
   
 ## <a name="members"></a>Member  
   
@@ -42,7 +42,7 @@ struct BoolStruct;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[BoolStruct::Member-Datenmember](../windows/boolstruct-member-data-member.md)|Gibt an, dass eine [ComPtr](../windows/comptr-class.md) ist, oder verwalten die Objektlebensdauer einer Schnittstelle nicht der Fall ist.|  
+|[BoolStruct::Member-Datenmember](../windows/boolstruct-member-data-member.md)|Gibt an, dass eine [ComPtr](../windows/comptr-class.md) ist, oder ist nicht der Fall, die Objektlebensdauer einer Schnittstelle verwalten.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `BoolStruct`  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine QuickInfo für eine Symbolleisten-Schaltfläche | Microsoft Docs
+title: Erstellen einer QuickInfo für eine Symbolleisten-Schaltfläche | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,44 +19,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41c2fa538a7888a2f14ae34fde9133b2872d13ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 27f4c5e3da313352358223de1499ef379db02bd7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871766"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647777"
 ---
 # <a name="creating-a-tool-tip-for-a-toolbar-button"></a>Erstellen einer QuickInfo für eine Symbolleisten-Schaltfläche
-### <a name="to-create-a-tool-tip"></a>So erstellen eine QuickInfo  
+### <a name="to-create-a-tool-tip"></a>Zum Erstellen einer QuickInfo  
   
 1.  Wählen Sie die Symbolleisten-Schaltfläche.  
   
-2.  In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window)in der **Prompt** Eigenschaftenfeld, fügen Sie eine Beschreibung der Schaltfläche für die Statusleiste, nachdem die Nachricht, \n und der QuickInfo-Name des Tools hinzufügen.  
+2.  In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window)in die **Eingabeaufforderung** Eigenschaftenfeld, fügen Sie eine Beschreibung der Schaltfläche für die Statusleiste, nachdem die Nachricht, fügen `\n` und den Namen des Tools Tipp.  
   
- Ein allgemeines Beispiel für eine QuickInfo ist die Schaltfläche "Drucken" in WordPad:  
+ Ein gängiges Beispiel für eine QuickInfo ist die **Drucken** Schaltfläche **WordPad**:  
   
- 1. Öffnen Sie WordPad.  
+ 1. Open **WordPad**.  
   
  2. Zeigen Sie den Mauszeiger auf die **Drucken** Symbolleisten-Schaltfläche.  
   
- 3. Beachten Sie, dass das Wort "Drucken" jetzt unter den Mauszeiger unverankert ist.  
+ 3. Beachten Sie, dass das Wort `Print` nun unverankert ist, unter der Maus.  
   
- 4. Betrachten Sie die Statusleiste (ganz unten in der WordPad-Fenster) – Beachten Sie, dass es jetzt der Text zeigt "Das aktive Dokument gedruckt".  
+ 4. Sehen Sie sich die Statusleiste (ganz unten auf der die **WordPad** Fenster): Beachten Sie, dass es jetzt der Text zeigt `Prints the active document`.  
   
- "Drucken" in Schritt 3 ist der "Tipp Name des Tools", und die "das aktive Dokument gedruckt" in Schritt 4 ist "Beschreibung der Schaltfläche für die Statusleiste."  
+ Die `Print` in **Schritt 3** ist der "Tool-Tipp-Name", und die `Prints the active document` aus **Schritt 4** lautet "Beschreibung der Schaltfläche für die Statusleiste."  
   
- Wenn Sie möchten diesen Effekt mit der **Symbolleiste** -Editor Festlegen der **Prompt** Eigenschaft, um **druckt die \nKonsolendokument**.  
+ Wenn Sie möchten diesen Effekt mit der **Symbolleiste** -Editor Festlegen der **Eingabeaufforderung** Eigenschaft `Prints the active document\nPrint`.  
   
 > [!NOTE]
->  Sie können bearbeiten, indem Aufforderungstext der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).  
+>  Können Sie bearbeiten, Aufforderungstext mithilfe der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- Anforderungen  
-  
+## <a name="requirements"></a>Anforderungen  
  MFC oder ATL  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen, verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md)   
+ [Erstellen, verschieben und Bearbeiten von Symbolleistenschaltflächen](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Symbolleisten-Editor](../windows/toolbar-editor.md)
-

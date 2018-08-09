@@ -1,5 +1,5 @@
 ---
-title: Nachverfolgungsverweisoperator (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Nachverfolgungsverweisoperator (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c460174fad6a287acfd434b1589e73153aa0b121
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890858"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651830"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Nachverfolgungsverweisoperator (Komponentenerweiterungen für C++)
-Ein *Nachverfolgungsverweis* (`%`) verhält sich wie ein normaler C++-Verweis (`&`) mit dem Unterschied, dass wenn ein Objekt zu einem Nachverfolgungsverweis zugewiesen wird, wird das Objekt Verweiszähler erhöht.  
+Ein *Nachverfolgungsverweis* (`%`) verhält sich wie ein normaler C++-Verweis (`&`) mit dem Unterschied, dass wenn ein Objekt zu einem Nachverfolgungsverweis zugewiesen wird, wird die verweiszählung des Objekts erhöht.  
   
 ## <a name="all-platforms"></a>Alle Plattformen  
  Ein Nachverfolgungsverweis verfügt über die folgenden Eigenschaften.  
   
 -   Die Zuweisung eines Objekts zu einem Nachverfolgungsverweis bewirkt, dass der Verweiszähler des Objekts erhöht wird.  
   
--   Wenn Sie einen * dereferenzieren, ist das Ergebnis ein systemeigener Verweis (&). Wenn Sie einen ^ dereferenzieren, ist das Ergebnis ein Nachverfolgungsverweis (%). Solange Sie über einen % zu einem Objekt verfügen, bleibt das Objekt im Speicher erhalten.  
+-   Eines systemeigenen Verweises (`&`) ist das Ergebnis, wenn Sie dereferenzieren einer `*`. Ein Nachverfolgungsverweis (`%`) ist das Ergebnis, wenn Sie dereferenzieren einer `^`. Solange Sie haben eine `%` auf ein Objekt, das Objekt im Speicher aktiv zu bleiben.  
   
 -   Der Punktzugriffsoperator (`.`) für Member wird verwendet, um auf einen Member des Objekts zuzugreifen.  
   
 -   Nachverfolgungsverweise gelten für Werttypen und Handles (beispielsweise `String^`).  
   
--   Einem Nachverfolgungsverweis kann kein NULL- oder `nullptr`-Wert zugewiesen werden. Ein Nachverfolgungsverweis kann einem anderen gültigen Objekt so oft wie erforderlich neu zugewiesen werden.  
+-   Ein Nachverfolgungsverweis kann ein NULL-Wert nicht zugewiesen werden oder **"nullptr"** Wert. Ein Nachverfolgungsverweis kann einem anderen gültigen Objekt so oft wie erforderlich neu zugewiesen werden.  
   
 -   Ein Nachverfolgungsverweis kann nicht als unärer Adressenübernahmeoperator (Take-Address-Operator) verwendet werden.  
   
@@ -55,7 +55,6 @@ Foo^ spFoo2 = %srFoo;
  Im folgenden Beispiel wird das Übergeben einer ^-Funktion gezeigt, die ein % aufweist.  
   
 ```  
-  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -85,11 +84,10 @@ ref class Foo sealed {};
 -   [Vorgehensweise: Verwenden von Nachverfolgungsverweisen in C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
  Das folgende Beispiel für C++/CLI veranschaulicht, wie ein Nachverfolgungsverweis mit systemeigenen und verwalteten Typen verwendet wird.  
   
-```  
+```cpp  
 // tracking_reference_1.cpp  
 // compile with: /clr  
 ref class MyClass {  
@@ -123,14 +121,11 @@ int main() {
   
    delete[] pi;  
 }  
-  
 ```  
-  
- **Beispiel**  
   
  Das folgende Beispiel für C++/CLI veranschaulicht, wie ein Nachverfolgungsverweis an ein Array gebunden wird.  
   
-```  
+```cpp  
 // tracking_reference_2.cpp  
 // compile with: /clr  
 using namespace System;  

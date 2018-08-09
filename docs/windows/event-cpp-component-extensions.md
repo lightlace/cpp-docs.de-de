@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 107d721e4603fc1f22a5ff793a867b290472f10c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 6b3ee48394eede37873ce074c275290307215815
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570401"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649135"
 ---
 # <a name="event--c-component-extensions"></a>event (Komponentenerweiterungen für C++)
 Die **Ereignis** -Schlüsselwort deklariert eine *Ereignis*, d. h. eine Benachrichtigung an die registrierten Abonnenten (*Ereignishandler*), die Aktionen von Interesse ist aufgetreten.  
@@ -31,9 +31,9 @@ Die **Ereignis** -Schlüsselwort deklariert eine *Ereignis*, d. h. eine Benachri
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
  C++ / CX unterstützt das Deklarieren einer *Ereignismember* oder *Event-Block*. Ein Ereignismember ist die Kurzschreibweise für das Deklarieren eines Event-Blocks. Standardmäßig deklariert ein Ereignismember die Funktionen `add()`, `remove()` und `raise()`, die explizit in einem Event-Block deklariert werden. Um die Funktionen in einem Ereignismember anzupassen, deklarieren Sie stattdessen einen Event-Block und überschreiben Sie dann die Funktionen, die Sie benötigen.  
   
- **Syntax**  
+### <a name="syntax"></a>Syntax
   
-```  
+```cpp  
 // event data member  
 modifiereventdelegate^ event_name;     
   
@@ -46,8 +46,7 @@ modifiereventdelegate^ event_name
 }  
 ```  
   
- **Parameter**  
-  
+### <a name="parameters"></a>Parameter
  *Modifizierer*  
  Ein Modifizierer, der entweder für die Ereignisdeklaration oder eine Ereigniszugriffsmethode verwendet werden kann.  Mögliche Werte sind **statische** und **virtuellen**.  
   
@@ -63,7 +62,7 @@ modifiereventdelegate^ event_name
  *Parameter*  
  (optional) Parameter für die `raise` -Methode, die der Signatur der entsprechen den *Delegieren* Parameter.  
   
- **Hinweise**  
+### <a name="remarks"></a>Hinweise
   
  Ein Ereignis ist eine Zuordnung zwischen einem Delegaten und einer Memberfunktion (Ereignishandler), die auf das Auslösen des Ereignisses reagiert und es Clients beliebiger Klassen ermöglicht, Methoden zu registrieren, die mit der Signatur und dem Rückgabetyp des zugrundeliegenden Delegaten übereinstimmen.  
   
@@ -87,14 +86,14 @@ modifiereventdelegate^ event_name
  Wenn Sie beabsichtigen, einen Ereignishandler hinzuzufügen und dann zu entfernen, müssen Sie die EventRegistrationToken-Struktur speichern, die durch den Vorgang des Hinzufügens zurückgegeben wird. Dann müssen Sie im Entfernungsvorgang die gespeicherte EventRegistrationToken-Struktur verwenden, um den zu entfernenden Ereignishandler zu identifizieren.  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  Die **Ereignis** Schlüsselwort können Sie ein Ereignis zu deklarieren. Ein Ereignis ist eine Methode, anhand derer eine Klasse Benachrichtigungen übermitteln kann, wenn etwas von Interesse geschieht.  
   
- **Syntax**  
+### <a name="syntax"></a>Syntax
   
-```  
+```cpp  
 // event data member  
 modifiereventdelegate^ event_name;   
   
@@ -107,8 +106,7 @@ modifiereventdelegate^ event_name
 }  
 ```  
   
- **Parameter**  
-  
+### <a name="parameters"></a>Parameter
  *Modifizierer*  
  Ein Modifizierer, der entweder für die Ereignisdeklaration oder eine Ereigniszugriffsmethode verwendet werden kann.  Mögliche Werte sind **statische** und **virtuellen**.  
   
@@ -124,8 +122,7 @@ modifiereventdelegate^ event_name
  *Parameter*  
  (optional) Parameter für die `raise` -Methode, die der Signatur der entsprechen den *Delegieren* Parameter.  
   
- **Hinweise**  
-  
+### <a name="remarks"></a>Hinweise
  Ein Ereignis ist eine Zuordnung zwischen einem Delegaten und einer Memberfunktion (Ereignishandler), die auf das Auslösen des Ereignisses reagiert und es Clients beliebiger Klassen ermöglicht, Methoden zu registrieren, die mit der Signatur und dem Rückgabetyp des zugrundeliegenden Delegaten übereinstimmen.  
   
  Der Delegat kann eine oder mehrere zugeordnete Methoden haben, die aufgerufen werden, wenn der Code angibt, dass das Ereignis aufgetreten ist. Ein Ereignis in einem Programm kann für andere Programme verfügbar gemacht werden, die auf die .NET Framework Common Language Runtime abzielen.  
@@ -171,11 +168,10 @@ modifiereventdelegate^ event_name
 -   [Ereignisse in einer Schnittstelle](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
-  
+
  Im folgenden Codebeispiel wird das Deklarieren von Paaren von Delegaten, Ereignissen und Ereignishandlers veranschaulicht, das Abonnieren (Hinzufügen) der Ereignishandler, das Aufrufen der Ereignishandler und dann das Kündigen des Abonnements (Entfernen) der Ereignishandler.  
   
 ```cpp  
@@ -229,15 +225,11 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
 ```Output  
 OnClick: 7, 3.14159  
   
 OnDblClick: Hello  
 ```  
-  
- **Beispiel**  
   
  Im folgenden Codebeispiel wird die Logik zum Generieren der `raise`-Methode eines trivialen Ereignisses veranschaulicht: Wenn das Ereignis einen oder mehrere Abonnenten aufweist, wird beim impliziten oder expliziten Aufrufen der `raise`-Methode der Delegat aufgerufen. Wenn der Rückgabetyp des Delegattyps Typ ist kein **"void"** und es sind keine Ereignisabonnenten, die `raise` Methode gibt den Standardwert für den Delegattyp zurück. Wenn keine Ereignisabonnenten vorhanden sind, wird beim Aufrufen der `raise`-Methode einfach zurückgegeben und keine Ausnahme ausgelöst. Wenn der Rückgabetyp des Delegaten nicht **"void"**, Typ des Delegaten wird zurückgegeben.  
   
@@ -272,8 +264,6 @@ int main() {
    Console::WriteLine(c.i);     
 }  
 ```  
-  
- **Ausgabe**  
   
 ```Output  
 0  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f7f392df62892ea0e053e9d243f85772fa0605d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9c45aa289b4b41ddfaf141dcaf790734284af7c8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463077"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643549"
 ---
 # <a name="comptrref-class"></a>ComPtrRef-Klasse
 Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template <  
    typename T  
 >  
@@ -55,7 +55,7 @@ class ComPtrRef : public ComPtrRefBase<T>;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ComPtrRef::GetAddressOf-Methode](../windows/comptrref-getaddressof-method.md)|Ruft die Adresse eines Zeigers auf die Schnittstelle, die durch das aktuelle ComPtrRef-Objekt dargestellt wird.|  
+|[ComPtrRef::GetAddressOf-Methode](../windows/comptrref-getaddressof-method.md)|Ruft die Adresse eines Zeigers auf die Schnittstelle, die vom aktuellen **ComPtrRef** Objekt.|  
 |[ComPtrRef::ReleaseAndGetAddressOf-Methode](../windows/comptrref-releaseandgetaddressof-method.md)|Löscht die aktuelle **ComPtrRef** Objekt und gibt einen Zeiger-auf-ein-Zeiger auf die Schnittstelle, die durch dargestellt wurde die **ComPtrRef** Objekt.|  
   
 ### <a name="public-operators"></a>Öffentliche Operatoren  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97c07b5cf97578c49da9d4a72b5a232b559ec0ab
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: c9a7caba7ccfb8f5764a1f460835ff540c838975
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463865"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641040"
 ---
 # <a name="classfactory-class"></a>ClassFactory-Klasse
 Implementiert die grundlegende Funktion der `IClassFactory`-Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template <  
    typename I0 = Details::Nil,  
    typename I1 = Details::Nil,  
@@ -45,7 +45,7 @@ class ClassFactory : public Details::RuntimeClass<
       false>;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *I0*  
  Die nullte-Schnittstelle.  
   
@@ -56,7 +56,7 @@ class ClassFactory : public Details::RuntimeClass<
  Die zweite Schnittstelle.  
   
 ## <a name="remarks"></a>Hinweise  
- Nutzen `ClassFactory` eine benutzerdefinierte Factoryimplementierung bereitstellen.  
+ Nutzen **ClassFactory** eine benutzerdefinierte Factoryimplementierung bereitstellen.  
   
  Das folgende Muster für die Programmierung veranschaulicht, wie die [implementiert](../windows/implements-structure.md) Struktur, die mehr als drei Schnittstellen für eine Klassenfactory angeben.  
   
@@ -74,10 +74,10 @@ class ClassFactory : public Details::RuntimeClass<
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ClassFactory::AddRef-Methode](../windows/classfactory-addref-method.md)|Inkrementiert den Verweiszähler für das aktuelle ClassFactory-Objekt.|  
-|[ClassFactory::LockServer-Methode](../windows/classfactory-lockserver-method.md)|Erhöht oder verringert die Anzahl der zugrunde liegenden Objekte, die vom aktuellen ClassFactory-Objekt nachverfolgt werden.|  
+|[ClassFactory::AddRef-Methode](../windows/classfactory-addref-method.md)|Inkrementiert den Verweiszähler für den aktuellen **ClassFactory** Objekt.|  
+|[ClassFactory::LockServer-Methode](../windows/classfactory-lockserver-method.md)|Erhöht oder verringert die Anzahl der zugrunde liegenden Objekte nachverfolgt werden, von der aktuellen **ClassFactory** Objekt.|  
 |[ClassFactory::QueryInterface-Methode](../windows/classfactory-queryinterface-method.md)|Ruft einen Zeiger auf die Schnittstelle, die durch Parameter angegeben wird.|  
-|[ClassFactory::Release-Methode](../windows/classfactory-release-method.md)|Dekrementiert den Verweiszähler für das aktuelle ClassFactory-Objekt.|  
+|[ClassFactory::Release-Methode](../windows/classfactory-release-method.md)|Dekrementiert den Verweiszähler für den aktuellen **ClassFactory** Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `I0`  

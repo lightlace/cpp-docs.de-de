@@ -1,5 +1,5 @@
 ---
-title: Generika (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Generika (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 968ccdc38906f2b9c279821cb34d166d03211562
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b22a12dca79bc3cc5c505120f64b318e454e526e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878111"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643448"
 ---
 # <a name="generics--c-component-extensions"></a>Generika (Komponentenerweiterungen für C++)
-Generika sind parametrisierte Typen und Methoden. Finden Sie in diesem Abschnitt die generischen Funktionen von Windows-Runtime und die common Language Runtime unterstützt werden, und die von der common Language Runtime unterstützt werden. Außerdem lernen Sie, wie Sie Ihre eigenen generischen Methoden und Typen in Visual C++ zu erstellen und zum Verwenden von generischer Typen in .NET Framework-Sprache in Visual C++ erstellt. Schließlich enthält dieser Abschnitt einen Vergleich der Generika und C++-Vorlagen.  
+Generika sind parametrisierte Typen und Methoden. Finden Sie in diesem Abschnitt heraus, welche generischen Funktionen sowohl für die Windows-Runtime als auch für die common Language Runtime unterstützt werden und die von der common Language Runtime unterstützt werden. Außerdem lernen Sie, wie Sie Ihre eigenen generischen Methoden und Typen in Visual C++ zu erstellen, und wie Sie mit generischen Typen in .NET Framework-Sprache in Visual C++ erstellt wurden. Schließlich enthält dieser Abschnitt einen Vergleich von Generika und C++-Vorlagen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- **Von Windows-Runtime und die Common Language Runtime unterstützt werden**  
+### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Von der Windows-Runtime und die Common Language Runtime unterstützt werden 
   
  [Übersicht über Generika in Visual C++](../windows/overview-of-generics-in-visual-cpp.md)  
  Informationen zu Generika sind, die Motivation für die Sprachfunktion, Definitionen von Begriffen verwendet, um generische Typen und Informationen zur Verwendung von Verweistypen und Werttypen als Typparameter für generische Typen beschreiben.  
@@ -44,12 +44,12 @@ Generika sind parametrisierte Typen und Methoden. Finden Sie in diesem Abschnitt
  Informationen zur Verwendung von Einschränkungen in generischen Typen.  
   
  [Verwenden von Generika (C++/CLI)](../windows/consuming-generics-cpp-cli.md)  
- Informationen zum Verwenden von Generika in .NET Assemblys, möglicherweise in anderen Sprachen, in Visual C++ erstellte definiert.  
+ Informationen zum Verwenden von Generika in .NET Assemblys, möglicherweise in anderen Sprachen in Visual C++ erstellte definiert.  
   
  [Generika und Vorlagen (Visual C++)](../windows/generics-and-templates-visual-cpp.md)  
- Ein Vergleich der Generika und Vorlagen, jede verwenden und wie diese sinnvoll kombiniert werden.  
+ Ein Vergleich von Generika und Vorlagen, die jeder verwenden und wie sie sinnvoll kombiniert werden soll.  
   
- **Von der Common Language Runtime unterstützt**  
+### <a name="supported-by-the-common-language-runtime"></a>Von der Common Language Runtime unterstützt werden
   
  [Generische Funktionen (C++/CLI)](../windows/generic-functions-cpp-cli.md)  
  Informationen zum Definieren und Verwenden von generischen Funktionen und Methoden.  
@@ -59,7 +59,7 @@ Generika sind parametrisierte Typen und Methoden. Finden Sie in diesem Abschnitt
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Vorgehensweise: Durchlaufen einer generischen Auflistung mit der for-each-Klausel](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
- Mithilfe der [für jedes in](../dotnet/for-each-in.md) -Schlüsselwort für eine generische Auflistung.  
+ Mithilfe der [für jedes im](../dotnet/for-each-in.md) -Schlüsselwort in einer generischen Auflistung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

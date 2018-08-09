@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21a1dd4f26db41f7e32f3f76fd3b4c82e513397a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 58ba6d598223e63f5b28adcaedad653ffc6f386a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461688"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645567"
 ---
 # <a name="arrays-c-component-extensions"></a>Arrays (Komponentenerweiterungen für C++)
 Die `Platform::Array<T>` Typ in C++ / CX oder **Array** -Schlüsselwort in C++ / CLI, deklariert ein Array aus dem angegebenen Parametertyp und der ursprüngliche Wert.  
@@ -52,7 +52,7 @@ Die `Platform::Array<T>` Typ in C++ / CX oder **Array** -Schlüsselwort in C++ /
   
  Im ersten Beispiel der Syntax wird die **Ref neue** -aggregatschlüsselwort ein Array zuweisen. Im zweite Beispiel wird ein lokales Array deklariert.  
   
-```  
+```cpp  
 [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]  
   
@@ -83,7 +83,7 @@ Die `Platform::Array<T>` Typ in C++ / CX oder **Array** -Schlüsselwort in C++ /
  Sie können zur Kompilierzeit erkennen, ob ein Typ ein Array mit verweiszählung mit `__is_ref_array(type)`. Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ### <a name="examples"></a>Beispiele  
  Das folgende Beispiel erstellt ein eindimensionales Array, das 100 Elemente verfügt.  
@@ -106,7 +106,7 @@ int main() {
   
  Im ersten Beispiel der Syntax wird die **Gcnew** Schlüsselwort, um ein Array zuweisen. Im zweite Beispiel wird ein lokales Array deklariert.  
   
-```  
+```cpp  
 [qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]  
   
@@ -139,7 +139,7 @@ int main() {
   
 ### <a name="remarks"></a>Hinweise  
   
- `array` befindet sich in der [Platform-, Default- und Cli-Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Namespace.  
+ **Array** befindet sich in der [Platform-, Default- und Cli-Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Namespace.  
   
  Wie standard C++ die Indizes eines Arrays sind nullbasiert, und ein Array mit eckigen Klammern ([]) indiziert wird. Im Gegensatz zu standard C++ werden die Indizes der ein mehrdimensionales Array in eine Liste von Indizes für jede Dimension statt eines Satzes von eckigen Klammern ([])-Operatoren für die einzelnen Dimensionen angegeben. Z. B. *Bezeichner*[*index1*, *index2*] anstelle von *Bezeichner*[*index1*] [ *index2*].  
   
@@ -152,7 +152,7 @@ int main() {
  Zum Zeitpunkt der Kompilierung können Sie erkennen, ob ein Typ ein common Language Runtime (CLR)-Array mit `__is_ref_array(type)`. Weitere Informationen finden Sie unter [Compilerunterstützung für Typmerkmale](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
  Das folgende Beispiel erstellt ein eindimensionales Array, das 100 Elemente verfügt, und ein dreidimensionales Array, das über 3 Elemente in der ersten Dimension, 5 Elemente in der Sekunde und 6 Elemente im dritten verfügt.  

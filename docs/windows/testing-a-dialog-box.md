@@ -1,5 +1,5 @@
 ---
-title: Testen eines Dialogfelds | Microsoft Docs
+title: Testen eines Dialogfelds | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57bb9e827caae0e328971077d902673f2428c80b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889541"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652069"
 ---
 # <a name="testing-a-dialog-box"></a>Testen eines Dialogfelds
 Beim Entwerfen eines Dialogfelds können Sie dessen Laufzeitverhalten simulieren und testen, ohne das Programm zu kompilieren. In diesem Modus können Sie folgende Aufgaben ausführen:  
@@ -38,22 +38,20 @@ Beim Entwerfen eines Dialogfelds können Sie dessen Laufzeitverhalten simulieren
     > [!NOTE]
     >  Verbindungen mit Dialogfeldcode, die mithilfe des Assistenten hergestellt wurden, sind nicht Teil der Simulation.  
   
- Während des Testverfahrens wird ein Dialogfeld normalerweise relativ zum Hauptprogrammfenster angezeigt. Wenn die Dialogfeldeigenschaft "Absolute Ausrichtung" auf "True" gesetzt ist, wird das Dialogfeld relativ zur oberen linken Bildschirmecke angezeigt.  
+ Während des Testverfahrens wird ein Dialogfeld normalerweise relativ zum Hauptprogrammfenster angezeigt. Wenn Sie des Dialogfelds festgelegt haben **Absolute Ausrichtung** Eigenschaft **"true"**, im Dialogfeld angezeigt, an der Position, die relativ zu der oberen linken Ecke des Bildschirms ist.  
   
 ### <a name="to-test-a-dialog-box"></a>So testen Sie ein Dialogfeld  
   
 1.  Wenn der Dialog-Editor das aktuelle Fenster ist, wählen Sie in der Menüleiste **Testdialogfeld**, **Format**aus.  
   
-2.  Drücken Sie zum Beenden der Simulation ESC, oder wählen Sie in dem von Ihnen getesteten Dialogfeld die Schaltfläche **Schließen** aus.  
+2.  Um die Simulation zu beenden, drücken Sie die **Esc**, oder wählen Sie einfach die **schließen** Schaltfläche im Dialogfeld für die Tests.  
   
- Informationen zur Vorgehensweise beim Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index).  
+ Weitere Informationen zur Vorgehensweise beim Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index).  
   
- Anforderungen  
-  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  
  [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
  [Dialog-Editor](../windows/dialog-editor.md)   
  [Ein- oder Ausblenden der Symbolleiste des Dialog-Editors](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
-

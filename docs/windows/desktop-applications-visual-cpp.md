@@ -13,12 +13,12 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4cd8e8c6e3b9626000a8bef3d86a89f5e122d611
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 22f90be7d89a006ccbfdfde2f4c2580a7b2a13de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571528"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643844"
 ---
 # <a name="desktop-applications-visual-c"></a>Desktopanwendungen (Visual C++)
 Ein *Desktopanwendung* in C++ ist eine native Anwendung, die den vollständigen Satz von Windows-APIs und entweder ausgeführt wird, die in einem Fenster oder in der Systemkonsole zugreifen können. Desktopanwendung in C++ können unter Windows XP bis Windows 10 ausführen können (Obwohl Windows XP wird nicht mehr offiziell unterstützt, und es gibt viele Windows-APIs, die seit damals eingeführt wurden).
@@ -26,11 +26,12 @@ Ein *Desktopanwendung* in C++ ist eine native Anwendung, die den vollständigen 
 Eine Desktopanwendung unterscheidet sich von einer app (Universelle Windows Plattform), die auf PCs unter Windows 10 und auch auf XBox, Windows Phone, Surface Hub und anderen Geräten ausgeführt werden können. Weitere Informationen zu desktop-Visual-Studio. UWP-Anwendungen finden Sie unter [wählen Sie Ihre Technologie](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
 
 
-**Desktop-Brücke** unter Windows 10 können Sie Ihre vorhandene desktop-Anwendung oder COM-Objekt als UWP-app-Paket und hinzufügen, UWP Funktionen, z. B. touch oder Aufrufen von APIs aus des modernen Windows-API-Satz. Sie können auch eine UWP-app hinzufügen, um eine desktop-Lösung in Visual Studio, und sie in einem einzelnen Paket und Windows-APIs verwenden, um die Kommunikation zwischen ihnen.  
+### <a name="desktop-bridge"></a>Desktop-Brücke
+In Windows 10 können Sie Ihrer vorhandenen Desktopanwendung oder COM-Objekt als UWP-app-Paket und UWP-Features wie z. B. Touch hinzufügen oder APIs aus dem Satz der modernen Windows-API aufrufen. Sie können auch eine UWP-app hinzufügen, um eine desktop-Lösung in Visual Studio, und sie in einem einzelnen Paket und Windows-APIs verwenden, um die Kommunikation zwischen ihnen.  
    
 In Visual Studio 2017 Version 15.4 und höher können Sie ein Windows-Anwendungsprojekt Paket zum Packen Ihrer vorhandenen Desktopanwendung Arbeit erheblich vereinfachen erstellen. Einige Einschränkungen in Bezug auf welche Registrierungsaufrufe oder APIs, die desktop-Anwendung verwendet, aber in vielen Fällen können Sie alternative Codepfade, um ähnliche Funktionalität zu erzielen, während der Ausführung in einem app-Paket erstellen. Weitere Informationen finden Sie unter [Desktop Bridge](/windows-uwp/porting/desktop-to-uwp-root).  
   
- **Terminologie**  
+### <a name="terminology"></a>Terminologie  
   
 -   Ein *Win32* Anwendung ist eine Windows-Desktopanwendung in C++, die können Verwenden von systemeigenen [C-APIs für Windows und/oder COM-APIs](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT- und APIs der .NET-Standardbibliothek und 3. Bibliotheken von Drittanbietern. Eine Win32-Anwendung in einem Fenster verlangt vom Entwickler explizit mit Windows-Nachrichten innerhalb einer Prozedur-Funktion von Windows zu arbeiten. Trotz des Namens kann eine Win32-Anwendung als eine (x86) 32-Bit oder 64-Bit-(x64) binäre kompiliert werden. In der Visual Studio-IDE sind die Begriffe X86 und die Win32-Synonym.  
   

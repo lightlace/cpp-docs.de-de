@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 785a89b1a5a174fc5ce453a6d2f87a18c508edf6
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: bb4221a0432acdfcccb4e7ce77a2d16245e48a03
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462348"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650871"
 ---
 # <a name="activationfactoryaddref-method"></a>ActivationFactory::AddRef-Methode
 Inkrementiert den Verweiszähler des aktuellen **ActivationFactory** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 STDMETHOD_(  
    ULONG,  
    AddRef  

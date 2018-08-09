@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6497d6da630095f4d7691edb076fc354b87e5a13
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 18308cc66e2a01aa5e0396f098096ee9d49416bf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569213"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644329"
 ---
 # <a name="dispinterface"></a>dispinterface
 Fügt eine Schnittstelle in die IDL-Datei als Verteilschnittstelle ein.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [dispinterface]  
 ```  
   
@@ -40,7 +40,7 @@ Fügt eine Schnittstelle in die IDL-Datei als Verteilschnittstelle ein.
   
  Das Beispiel für die Verwendung von [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) in der MIDL-Dokumentation:  
   
-```  
+```cpp  
 dispinterface helloPro   
    { interface hello; };   
 ```  
@@ -59,7 +59,7 @@ dispinterface helloPro
 |**Betrifft**|**interface**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|**dual**, **object**, **oleautomation**, `local`, **ms_union**|  
+|**Ungültige Attribute**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|  
   
  Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
   

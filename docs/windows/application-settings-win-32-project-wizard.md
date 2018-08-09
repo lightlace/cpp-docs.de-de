@@ -18,17 +18,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6d2cd31306baaa0d9c8f137122fed1d4ae97295
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 948b720df6094ddd4124bb496cabb3c83a3cacf0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464683"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652987"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Anwendungseinstellungen, Win32-Projekt-Assistent
 Auf dieser Seite des Assistenten können Sie Optionen für das Win32-Projekt festlegen.  
   
- **Anwendungstyp**  
+## <a name="application-type"></a>Anwendungstyp  
  Erstellt den angegebenen Anwendungstyp.  
   
 |Option|Beschreibung|  
@@ -38,7 +38,7 @@ Auf dieser Seite des Assistenten können Sie Optionen für das Win32-Projekt fes
 |**DLL**|Erstellt eine Win32-Dynamic Link Library (DLL). Eine Win32-DLL ist eine in C oder C++ geschriebene Binärdatei, die anstelle von MFC-Klassenaufrufen Win32-API-Aufrufe verwendet. Sie fungiert als gemeinsam genutzte Funktionsbibliothek, die von mehreren Anwendungen gleichzeitig eingesetzt werden kann.<br /><br /> Sie können einer DLL-Anwendung keine MFC- oder ATL-Unterstützung hinzufügen. Sie können angeben, dass von der DLL Symbole exportiert werden.|  
 |**Statische Bibliothek**|Erstellt eine statische Bibliothek. Eine statische Bibliothek ist eine Datei, die Objekte sowie zugehörige Funktionen und Daten enthält, die bei der Erstellung der ausführbaren Datei mit dem Programm verknüpft werden. In diesem Thema wird erläutert, wie Sie die Erstellung von Startdateien und [Projekteigenschaften](../ide/property-pages-visual-cpp.md) für eine statische Bibliothek. Eine statische Bibliothek bietet die folgenden Vorteile:<br /><br /> – Eine statische Win32-Bibliothek ist hilfreich, wenn die Anwendung, die, der Sie gerade arbeiten, Aufrufe der Win32-API anstelle von MFC ausführt.<br />-Der Verknüpfungsvorgang ist identisch, ob die übrigen Teile Ihrer Windows-Anwendung in C oder C++ geschrieben wird.<br />– Sie können eine statische Bibliothek zu einem MFC-basierten Programm oder zu einem MFC-fremden Programm verknüpfen.|  
   
- **Zusätzliche Optionen**  
+## <a name="additional-options"></a>Zusätzliche Optionen  
  Definiert abhängig vom Anwendungstyp die Unterstützung sowie Optionen für die Anwendung.  
   
 |Option|Beschreibung|  
@@ -48,7 +48,7 @@ Auf dieser Seite des Assistenten können Sie Optionen für das Win32-Projekt fes
 |**Vorkompilierter Header**|Legt fest, dass das statische Bibliotheksprojekt einen vorkompilierten Header verwendet.|  
 |Security Development Lifecycle (SDL)-Prüfungen|Weitere Informationen zu SDL finden Sie unter [Prozessleitfaden für die Microsoft Security Development Lifecycle (SDL)](../build/reference/sdl-enable-additional-security-checks.md)|  
   
- **Hinzufügen von Unterstützung für**  
+## <a name="add-support-for"></a>Unterstützung hinzufügen für  
  Fügen Sie Unterstützung für eine der in Visual C++ enthaltenen Bibliotheken hinzu.  
   
 |Option|Beschreibung|  

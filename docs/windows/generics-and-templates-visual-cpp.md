@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ebb476b0a8c384759c9d44101e7bac7083103b2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbe4837a347c78bb3b7c05094adf442b69fa2f39
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570765"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649490"
 ---
 # <a name="generics-and-templates-visual-c"></a>Generika und Vorlagen (Visual C++)
 Generika und Vorlagen sind Sprachfunktionen, die Unterstützung für parametrisierte Typen ermöglichen. Allerdings unterscheiden sich und haben unterschiedliche Verwendungen. Dieses Thema enthält eine Übersicht über die Unterschiede.  
@@ -51,7 +51,7 @@ Generika und Vorlagen sind Sprachfunktionen, die Unterstützung für parametrisi
   
 ## <a name="combining-templates-and-generics"></a>Kombinieren von Vorlagen und Generika  
   
--   Der grundlegende Unterschied in Generika wirkt sich zum Erstellen von Anwendungen, die Vorlagen und Generika kombinieren. Nehmen wir beispielsweise an, dass Sie eine Klasse verfügen, der Sie erstellen einen generischen Wrapper für diese Vorlage für andere Sprachen als generische verfügbar machen möchten. Keine der generischen dauert einen Typparameter, den dann an die Vorlage übergeben werden soll, da die Vorlage dieser Parameter vom Typ zur Kompilierzeit muss, aber die generische wird nicht den Typparameter bis zur Laufzeit aufgelöst werden. Schachteln einer Vorlage in eine generische funktioniert entweder nicht, da es gibt keine Möglichkeit, um die Vorlagen zum Zeitpunkt der Kompilierung für beliebige generische Typen zu erweitern, der zur Laufzeit instanziiert werden kann.  
+Der grundlegende Unterschied in Generika wirkt sich zum Erstellen von Anwendungen, die Vorlagen und Generika kombinieren. Nehmen wir beispielsweise an, dass Sie eine Klasse verfügen, der Sie erstellen einen generischen Wrapper für diese Vorlage für andere Sprachen als generische verfügbar machen möchten. Keine der generischen dauert einen Typparameter, den dann an die Vorlage übergeben werden soll, da die Vorlage dieser Parameter vom Typ zur Kompilierzeit muss, aber die generische wird nicht den Typparameter bis zur Laufzeit aufgelöst werden. Schachteln einer Vorlage in eine generische funktioniert entweder nicht, da es gibt keine Möglichkeit, um die Vorlagen zum Zeitpunkt der Kompilierung für beliebige generische Typen zu erweitern, der zur Laufzeit instanziiert werden kann.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -94,8 +94,6 @@ int main() {
    MyRef<int>^ mref = gcnew MyRef<int>(11);  
 }  
 ```  
-  
-### <a name="output"></a>Ausgabe  
   
 ```Output  
 F  

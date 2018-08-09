@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 654ef60c924a14e861971c651899c8baea0300ef
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ee858346fdb70e136edfbc562c2dfffb1f63e462
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462705"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652370"
 ---
 # <a name="classfactorylockserver-method"></a>ClassFactory::LockServer-Methode
 Erhöht oder verringert die Anzahl der zugrunde liegenden Objekte nachverfolgt werden, von der aktuellen **ClassFactory** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 STDMETHOD(  
    LockServer  
 )(BOOL fLock);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *Bestand*  
  **"true"** erhöht die Anzahl der überwachten Objekte. **"false"** um die Anzahl der überwachten Objekte zu verringern.  
   
@@ -43,7 +43,7 @@ STDMETHOD(
  S_OK, wenn erfolgreich; andernfalls E_FAIL.  
   
 ## <a name="remarks"></a>Hinweise  
- ClassFactory verfolgt des Objekte in einer zugrunde liegenden Instanz, von der [Modul](../windows/module-class.md) Klasse.  
+ **ClassFactory** verfolgt des Objekte in einer zugrunde liegenden Instanz, von der [Modul](../windows/module-class.md) Klasse.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

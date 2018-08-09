@@ -1,5 +1,5 @@
 ---
-title: Dialog-Editor | Microsoft Docs
+title: Dialog-Editor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,25 +21,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b8cb99b2002dab3fb04ffa8c5b117a49d23adc1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8c2f5339237bec053df6bf26fb161854f83f572a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33875857"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651849"
 ---
 # <a name="dialog-editor"></a>Dialog-Editor
-Mit dem Dialog-Editor ist die Bearbeitung und Erstellung von Dialogfeldressourcen möglich. Sie öffnen den Dialog-Editor durch Doppelklicken auf ein Dialogfeld RC-Datei in das Fenster "Ressourcenansicht" (**Ansicht &#124; Ressourcenansicht**). Beachten Sie, dass die Ressourcenansicht in Express-Editionen nicht verfügbar ist.  
+Die **Dialogfeld** -Editor können Sie zum Erstellen oder Bearbeiten von Dialogfeldressourcen. Sie öffnen den Dialog-Editor durch Doppelklicken auf ein Dialogfeld für die RC-Datei in die **Ressourcenansicht** Fenster (**Ansicht** > **Ressourcenansicht**). Beachten Sie, dass **Ressourcenansicht** ist in Express-Editionen nicht verfügbar.  
   
- Einer der ersten Schritte beim Erstellen eines neuen Dialogfelds (oder einer Dialogfeldvorlage) ist das Hinzufügen von Steuerelementen zum Dialogfeld. Steuerelemente lassen sich im Dialog-Editor so anordnen, dass sie einer bestimmten Größe, Form oder Ausrichtung entsprechen. Außerdem können sie bei der Arbeit innerhalb des Dialogfelds verschoben werden. Steuerelemente lassen sich darüber hinaus problemlos löschen.  
+ Einer der ersten Schritte beim Erstellen eines neuen Dialogfelds (oder einer Dialogfeldvorlage) ist das Hinzufügen von Steuerelementen zum Dialogfeld. In der **Dialogfeld** -Editor, ordnen Sie Steuerelemente entsprechend einer bestimmten Größe, Form oder Ausrichtung, oder Sie verschieben sie rund um die Arbeit in das Dialogfeld. Steuerelemente lassen sich darüber hinaus problemlos löschen.  
   
  Um ein Dialogfeld später wiederzuverwenden, können Sie es als Vorlage speichern. Auch das Wechseln zwischen dem Entwurf des Dialogfelds und dem Bearbeiten des Codes, mit dem das Feld implementiert wird, ist denkbar einfach.  
   
- Der Dialog-Editor bietet zusätzlich die Möglichkeit, die Eigenschaften einzelner oder mehrerer Steuerelemente zu bearbeiten. Sie können die Aktivierreihenfolge ändern, d. h., die Reihenfolge, in der die Steuerelemente beim Drücken der TAB-TASTE den Fokus erhalten, oder Sie definieren eine Zugriffstaste (Tastenkombination), mit der der Benutzer ein Steuerelement über die Tastatur auswählen kann. Eine Liste der vordefinierten Zugriffstasten finden Sie unter [Zugriffstasten für den Dialog-Editor](../windows/accelerator-keys-for-the-dialog-editor.md).  
+ Der Dialog-Editor bietet zusätzlich die Möglichkeit, die Eigenschaften einzelner oder mehrerer Steuerelemente zu bearbeiten. Sie können die Aktivierreihenfolge ändern, d. h. die Reihenfolge an, bei dem Steuerelemente erhalten, Fokus, wenn die **Registerkarte** gedrückt wird, oder Sie definieren eine Zugriffstaste (Tastenkombination), die Benutzern ermöglicht, wählen Sie ein Steuerelement unter Verwendung der Tastaturfokus. Eine Liste der vordefinierten Zugriffstasten finden Sie unter [Zugriffstasten für den Dialog-Editor](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- Im Dialog-Editor wird außerdem die Verwendung benutzerdefinierter Steuerelemente einschließlich ActiveX-Steuerelementen unterstützt. Außerdem können [Formularansichten](../mfc/reference/cformview-class.md), [Datensatzansichten](../data/record-views-mfc-data-access.md)oder [Dialogleisten](../mfc/dialog-bars.md)bearbeitet werden.  
+ Die **Dialogfeld** Editor ermöglicht auch das Ihnen die Verwendung benutzerdefinierter Steuerelemente einschließlich ActiveX-Steuerelemente. Außerdem können [Formularansichten](../mfc/reference/cformview-class.md), [Datensatzansichten](../data/record-views-mfc-data-access.md)oder [Dialogleisten](../mfc/dialog-bars.md)bearbeitet werden.  
   
- Beginnend mit Visual Studio 2015, können Dialog-Editor Sie dynamische Layouts definieren, die angeben, wie die Steuerelemente verschoben und Größe ändern, wenn der Benutzer die Größe eines Dialogfelds ändert. Weitere Informationen finden Sie unter [Dynamic Layout](../mfc/dynamic-layout.md).  
+ Ab Visual Studio 2015 wird können den Dialog-Editor Sie dynamische Layouts definieren, die angeben, wie Sie Steuerelemente zum Verschieben und anpassen, wenn der Benutzer die Größe eines Dialogfelds ändert. Weitere Informationen finden Sie unter [Dynamic Layout](../mfc/dynamic-layout.md).  
   
 -   [Erstellen eines neuen Dialogfelds](../windows/creating-a-new-dialog-box.md)  
   
@@ -60,9 +60,9 @@ Mit dem Dialog-Editor ist die Bearbeitung und Erstellung von Dialogfeldressource
 -   [Problembehandlung beim Dialog-Editor](../windows/troubleshooting-the-dialog-editor.md)  
   
     > [!TIP]
-    >  Im Dialog-Editor können Sie in vielen Fällen durch Klicken mit der rechten Maustaste ein Kontextmenü aufrufen, das die gängigsten Befehle enthält.  
+    >  Bei der Verwendung der **Dialogfeld** -Editor in vielen Fällen können Sie die rechte Maustaste gedrückt, um ein Kontextmenü mit häufig verwendeten Befehlen anzuzeigen klicken.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  
@@ -73,4 +73,3 @@ Mit dem Dialog-Editor ist die Bearbeitung und Erstellung von Dialogfeldressource
  [Steuerelementklassen](../mfc/control-classes.md)   
  [Dialogfeldklassen](../mfc/dialog-box-classes.md)   
  [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)
-

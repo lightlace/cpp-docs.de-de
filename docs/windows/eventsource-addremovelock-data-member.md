@@ -1,5 +1,5 @@
 ---
-title: 'EventSource:: Addremovelock_-Datenmember | Microsoft Docs'
+title: 'EventSource:: Addremovelock_-Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46763a6376a18ae469833c3eee6a0d5d9f15ee45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9d45ba6670d94ae1a58a1a46fab41dbb2ee6f1c6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872652"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646539"
 ---
 # <a name="eventsourceaddremovelock-data-member"></a>EventSource::addRemoveLock_-Datenmember
-Synchronisiert den Zugriff auf die [Targets_](../windows/eventsource-targets-data-member.md) Array beim Hinzufügen, entfernen oder Ereignishandler aufrufen.  
+Synchronisiert den Zugriff auf die [Targets_](../windows/eventsource-targets-data-member.md) Arrays beim Hinzufügen, entfernen oder Ereignishandler aufrufen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 Wrappers::SRWLock addRemoveLock_;  
 ```  
   

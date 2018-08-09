@@ -1,5 +1,5 @@
 ---
-title: Eigenschaft "Modifizierer" Accelerator | Microsoft Docs
+title: Eigenschaft "Modifizierer" Accelerator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d99d4656f2835f9adb60f310e429c4ccb97ac7b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0788536e776661b9a84a6cccc648a7db68389ae5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854053"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644254"
 ---
 # <a name="accelerator-modifier-property"></a>Eigenschaft "Modifizierer" von Zugriffstasten
-Die folgenden sind Einträge zulässig für die Eigenschaft "Modifizierer" in der Zugriffstastentabelle.  
+Die folgenden sind Einträge zulässig für die Eigenschaft "Modifizierer" in der tastenkombinationstabelle.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Keine**|Benutzer drückt die Schlüssel-Wert. Dies ist am effizientesten mit den ASCII/ANSI-Werten 001 bis 026, was interpretiert wird als ^ A bis ^ Z (STRG + A bis STRG-Z).|  
-|**ALT-Taste**|Der Benutzer muss vor dem Schlüssel-Wert die ALT-Taste drücken.|  
-|**STRG**|Benutzer muss vor dem Schlüssel-Wert die STRG-Taste drücken. Mit dem ASCII-Typ ist ungültig.|  
-|**Umschalttaste gedrückt**|Der Benutzer muss die UMSCHALTTASTE gedrückt, bevor der Schlüssel-Wert drücken.|  
-|**Strg + Alt**|Der Benutzer muss die STRG-Taste und bevor der Schlüssel-Wert die ALT-Taste drücken. Mit dem ASCII-Typ ist ungültig.|  
-|**STRG + UMSCHALT**|Benutzer muss drücken Sie die STRG-Taste und die UMSCHALTTASTE gedrückt, bevor der Schlüssel-Wert. Mit dem ASCII-Typ ist ungültig.|  
-|**ALT + UMSCHALT**|Benutzer muss drücken Sie die ALT-Taste und die UMSCHALTTASTE gedrückt, bevor der Schlüssel-Wert. Mit dem ASCII-Typ ist ungültig.|  
-|**Strg + Alt + Umschalt**|Benutzer drücken vor dem Schlüssel-Wert STRG und ALT, UMSCHALT. Mit dem ASCII-Typ ist ungültig.|  
+|**Keine**|Benutzer drückt nur die **Schlüssel** Wert. Dies ist am effizientesten mit den ASCII/ANSI-Werten 001 bis 026, was interpretiert wird als ^ A bis ^ Z (STRG + A über STRG + Z).|  
+|**ALT**|Drücken Sie die Benutzer muss die **Alt** Schlüssel vor der **Schlüssel** Wert.|  
+|**STRG**|Drücken Sie die Benutzer muss die **STRG** Schlüssel vor der **Schlüssel** Wert. Mit dem ASCII-Typ nicht gültig.|  
+|**UMSCHALTTASTE**|Drücken Sie die Benutzer muss die **UMSCHALT** Schlüssel vor der **Schlüssel** Wert.|  
+|**Strg + Alt +**|Drücken Sie die Benutzer muss die **STRG** Schlüssel und die **Alt** Schlüssel vor der **Schlüssel** Wert. Mit dem ASCII-Typ nicht gültig.|  
+|**STRG + UMSCHALT**|Drücken Sie die Benutzer muss die **STRG** Schlüssel und die **UMSCHALT** Schlüssel vor der **Schlüssel** Wert. Mit dem ASCII-Typ nicht gültig.|  
+|**ALT + UMSCHALT**|Drücken Sie die Benutzer muss die **Alt** Schlüssel und die **UMSCHALT** Schlüssel vor der **Schlüssel** Wert. Mit dem ASCII-Typ nicht gültig.|  
+|**Strg + Alt + Umschalt**|Der Benutzer muss drücken **STRG**, **Alt**, und **UMSCHALT** vor der **Schlüssel** Wert. Mit dem ASCII-Typ nicht gültig.|  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  

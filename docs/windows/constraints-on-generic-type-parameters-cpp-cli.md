@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33829d868eb90cde7259a482b8fc80f9cd6fd677
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: bee7bf263e3537811be1b992f463b7f1269863ff
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465297"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649782"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Einschränkungen für generische Typparameter (C++/CLI)
 Im generischen Typ oder Methodendeklarationen können Sie einen Typparameter mit Einschränkungen qualifizieren. Eine Einschränkung ist erforderlich, die Typen als Typargumente verwendet erfüllen müssen. Z. B. möglicherweise eine Einschränkung, dass das Typargument eine bestimmte Schnittstelle implementieren oder von einer bestimmten Klasse erben muss.  
@@ -32,11 +32,11 @@ Im generischen Typ oder Methodendeklarationen können Sie einen Typparameter mit
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 where type-parameter: constraint list  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *Type-parameter*  
  Einer der Typparameter eingeschränkt werden.  
   
@@ -45,7 +45,7 @@ where type-parameter: constraint list
   
  Die Liste kann auch eine Klasse enthalten. Für das Typargument eine basisklasseneinschränkung erfüllen muss es derselben Klasse wie die Einschränkung oder von der Einschränkung abgeleitet werden.  
   
- Sie können auch angeben, `gcnew()` an, dass das Typargument muss einen öffentlichen parameterlosen Konstruktor; haben oder **Verweisklasse** an, dass der Typ Argument muss ein Verweistyp, einschließlich jeder Klasse, Schnittstelle, Delegat oder Array sein -Typ oder **Wertklasse** an, dass der Typ das Argument muss ein Werttyp sein. Jeder Werttyp außer Nullable\<T > kann angegeben werden.  
+ Sie können auch angeben **gcnew()** an, dass das Typargument muss einen öffentlichen parameterlosen Konstruktor; haben oder **Verweisklasse** an, dass das Typargument muss ein Verweistyp, einschließlich jede Klasse sein Schnittstelle, Delegaten oder Arraytyp; oder **Wertklasse** an, dass der Typ das Argument muss ein Werttyp sein. Jeder Werttyp außer Nullable\<T > kann angegeben werden.  
   
  Sie können auch einen generischen Parameter als Einschränkung angeben. Das Typargument für den Typ angegeben, dass Sie typisiert werden kann oder Ableitung vom Typ der Einschränkung. Dies ist eine Einschränkung für einen reinen bezeichnet.  
   

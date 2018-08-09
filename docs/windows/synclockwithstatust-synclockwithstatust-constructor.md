@@ -1,5 +1,5 @@
 ---
-title: 'Synclockwithstatust:: Synclockwithstatust-Konstruktor | Microsoft Docs'
+title: 'Synclockwithstatust:: Synclockwithstatust-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f665866a43e45d6526aa33f17c05eacebdd84aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21ce2054cabf257594cb3fa376236b9a1e504a59
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891349"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647754"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT-Konstruktor
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,20 +40,20 @@ explicit SyncLockWithStatusT(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `other`  
- Ein Rvalue-Verweis auf ein anderes SyncLockWithStatusT-Objekt.  
+### <a name="parameters"></a>Parameter  
+ *other*  
+ Ein Rvalue-Verweis auf einen anderen **SyncLockWithStatusT** Objekt.  
   
- `sync`  
- Ein Verweis auf ein anderes SyncLockWithStatusT-Objekt.  
+ *sync*  
+ Ein Verweis auf einen anderen **SyncLockWithStatusT** Objekt.  
   
- `status`  
- Der Wert des der [Status_](../windows/synclockwithstatust-status-data-member.md) Datenmember der `other` Parameter oder die `sync` Parameter.  
+ *status*  
+ Der Wert des der [Status_](../windows/synclockwithstatust-status-data-member.md) Datenmember der *andere* Parameter oder die *Sync* Parameter.  
   
 ## <a name="remarks"></a>Hinweise  
- Initialisiert eine neue Instanz der SyncLockWithStatusT-Klasse.  
+ Initialisiert eine neue Instanz der dem **SyncLockWithStatusT** Klasse.  
   
- Der erste Konstruktor initialisiert das aktuelle SyncLockWithStatusT-Objekt aus einem anderen Parameter gemäß SyncLockWithStatusT `other`, und klicken Sie dann die anderen SyncLockWithStatusT-Objekt ungültig. Der zweite Konstruktor ist `protected`, und die aktuelle SyncLockWithStatusT-Objekt, das einen ungültigen Status initialisiert.  
+ Der erste Konstruktor initialisiert die aktuelle **SyncLockWithStatusT** Objekt von einem anderen **SyncLockWithStatusT** vom-Parameter angegebenen *andere*, und klicken Sie dann Erklärt die andere **SyncLockWithStatusT** Objekt. Der zweite Konstruktor ist **geschützt**, und initialisiert die aktuelle **SyncLockWithStatusT** Objekt, das einen ungültigen Status.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

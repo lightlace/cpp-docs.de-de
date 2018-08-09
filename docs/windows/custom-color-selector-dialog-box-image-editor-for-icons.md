@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Farbe-Auswahl (Dialogfeld) (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Dialogfeld Benutzerdefinierte Farben (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,42 +18,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a278ad0a1ba67c7c8f9fb86d20ca842b92b1e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2d32083194efc81fdfe2be1c38eec4ce9ce175d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880256"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642811"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Benutzerdefinierte Farbauswahl (Dialogfeld) (Bildbearbeitung für Symbole)
-Dieses Dialogfeld können Sie die Farben anpassen, die Sie für das Bild. Weitere Informationen finden Sie unter [anpassen oder Ändern von Farben](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
+Dieses Dialogfeld können Sie die Farben anpassen, die Sie für Ihr Image verwenden. Weitere Informationen finden Sie unter [anpassen oder Ändern von Farben](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
  **Farbverlauf Farbanzeige**  
- Ändert die Werte einer ausgewählten Farbe. Positionieren Sie das Fadenkreuz, auf die Farbe, die Sie ändern möchten. Klicken Sie dann den Schieberegler nach oben oder unten zum Ändern die Brillanz oder RGB-Werte der Farbe.  
+ Ändert die Werte einer ausgewählten Farbe. Positionieren Sie das Fadenkreuz, auf die Farbe, die Sie ändern möchten. Klicken Sie dann den Schieberegler nach oben oder unten, um Änderungen der Helligkeit oder RGB-Werte der Farbe.  
   
  **Helligkeits-Symbolleiste**  
- Legt die Helligkeit für die Farbe, die Sie im Feld Farbverlauf Farbanzeige auswählen. Klicken Sie auf, und ziehen Sie den weißen Pfeil oben die Schwelle für größere Helligkeit oder nach unten bei kleiner. Beachten Sie, dass die erste Farbfeld zeigt die Farbe an, die Sie ausgewählt haben und die Auswirkungen der die Brillanz legen Sie fest.  
+ Legt die Helligkeit für die Farbe, die Sie, in Auswählen der **Farbverlauf Farbanzeige** Feld. Klicken Sie auf, und ziehen Sie die weiße Pfeile, um die Leiste für größere Helligkeit oder nach unten bei kleiner. Beachten Sie, dass die **Farbe** Feld zeigt die Farbe, die Sie ausgewählt haben und die Auswirkungen der die Helligkeit, die Sie festlegen.  
   
  **Farbe**  
- Listet den Farbton (Farbwert Wheel), der die Farbe, die Sie definieren. Mögliche Werte liegen zwischen 0 und 240, wobei 0 ist rot, 60 ist gelb 120 ist Grün, 180 beträgt Zyan, 200 ist Magenta und 240 ist Blau aus.  
+ Listet den Farbton (Farbwert für rad) der Farbe, die Sie definieren. Werte zwischen 0 und 240, in denen 0 ist rot, 60 ist gelb gekennzeichnet, 120 ist Grün, 180 beträgt Cyan, Magenta "200" lautet und 240 ist Blau.  
   
- **Farbt.:**  
- Listet den Farbton (Farbwert Wheel), der die Farbe, die Sie definieren. Mögliche Werte liegen zwischen 0 und 240, wobei 0 ist rot, 60 ist gelb 120 ist Grün, 180 beträgt Zyan, 200 ist Magenta und 240 ist Blau aus.  
+ **Hue**  
+ Listet den Farbton (Farbwert für rad) der Farbe, die Sie definieren. Werte zwischen 0 und 240, in denen 0 ist rot, 60 ist gelb gekennzeichnet, 120 ist Grün, 180 beträgt Cyan, Magenta "200" lautet und 240 ist Blau.  
   
  **Sätt.:**  
- Gibt an, der Sättigungswert der ausgewählten Farbe, die Sie definieren. Die Sättigung ist die Menge des in einem angegebenen Farbton. Mögliche Werte liegen zwischen 0 und 240 aus.  
+ Gibt an, der Sättigungswert der Farbe, die Sie definieren. Die Sättigung ist die Menge des in einem angegebenen Farbton. Werte zwischen 0 und 240.  
   
- **LUM**  
- Listet die Brillanz (Helligkeit), der die Farbe, die Sie definieren. Mögliche Werte liegen zwischen 0 und 240 aus.  
+ **Hell.:**  
+ Listet die Brillanz (Helligkeit) der Farbe, die Sie definieren. Werte zwischen 0 und 240.  
   
  **Rot**  
- Gibt den roten Wert der Farbe, die Sie definieren. Mögliche Werte liegen zwischen 0 bis 255 ein.  
+ Gibt den Wert der Farbe, die Sie definieren. Werte zwischen 0 und 255 liegen.  
   
  **Grün**  
- Gibt den grünen Wert der Farbe, die Sie definieren. Mögliche Werte liegen zwischen 0 bis 255 ein.  
+ Gibt den grünen Wert der Farbe, die Sie definieren. Werte zwischen 0 und 255 liegen.  
   
- **Blaue**  
- Gibt den blauen Wert der Farbe, die Sie definieren. Mögliche Werte liegen zwischen 0 bis 255 ein.  
+ **Blau**  
+ Gibt den blauen Wert der Farbe, die Sie definieren. Werte zwischen 0 und 255 liegen.  
   
 ## <a name="requirements"></a>Anforderungen  
  Keiner  

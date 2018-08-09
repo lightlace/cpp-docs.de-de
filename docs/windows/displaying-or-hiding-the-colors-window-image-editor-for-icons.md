@@ -1,5 +1,5 @@
 ---
-title: Anzeigen oder Ausblenden des Fensters "Farben" (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Anzeigen oder Ausblenden des Fensters "Farben" (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0aed218fb12a1d115bbcd92f058ec72182864677
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872041"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645109"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Anzeigen oder Ausblenden des Fensters "Farben" (Bildbearbeitung für Symbole)
 ### <a name="to-display-colors-window"></a>Zum Anzeigen des Fensters "Farben"  
   
-1.  Mit der rechten Maustaste ein **Bildbearbeitung** Bereich, und wählen Sie **Fenster "Farben" anzeigen** aus dem Kontextmenü.  
+1.  Mit der rechten Maustaste einen **Bildbearbeitung** Bereich, und wählen Sie **Fenster "Farben" anzeigen** aus dem Kontextmenü.  
   
      \- oder –  
   
-2.  Klicken Sie auf **Fenster "Farben" anzeigen** auf die [Menü "Bild"](../windows/image-menu-image-editor-for-icons.md).  
+2.  Klicken Sie auf **anzeigen Fenster "Farben"** auf die [des bildmenüs](../windows/image-menu-image-editor-for-icons.md).  
   
 ### <a name="to-hide-the-colors-window"></a>So blenden Sie das Fenster "Farben" aus  
   
-1.  Lösen Sie das Fenster. Dadurch kann das Fenster automatisch im Hintergrund, wenn es nicht verwendet wird.  
+1.  Lösen Sie das Fenster. Dadurch kann das Fenster automatisch ausgeblendet, wenn er nicht verwendet wird.  
   
  \- oder –  
   
 -   Klicken Sie auf die **schließen** Schaltfläche.  
   
- Anforderungen  
-  
+## <a name="requirements"></a>Anforderungen  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  

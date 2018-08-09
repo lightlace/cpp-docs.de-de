@@ -1,5 +1,5 @@
 ---
-title: HANDLENullTraits-Struktur | Microsoft Docs
+title: HANDLENullTraits-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4b7daa319b927d168d39f0981c00b5fbe92063c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e009b31f95f2cdf80231021c38848fbc30ce20d3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33877877"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645437"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits-Struktur
-Definiert die gemeinsame Merkmale eines Handles nicht initialisiert.  
+Definiert die allgemeinen Merkmale eines nicht initialisierten Handles.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 struct HANDLENullTraits;  
 ```  
   
@@ -39,7 +39,7 @@ struct HANDLENullTraits;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`Type`|Ein Synonym für HANDLE.|  
+|`Type`|Ein Synonym für den HANDLE.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   

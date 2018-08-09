@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: feece642928db70a2b78dd3a4117b695b19f4af9
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 0aed7c8ef617152144bbe211f83f442fe93d525e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466071"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648284"
 ---
 # <a name="accelerator-editor"></a>Zugriffstasten-Editor
 Eine Zugriffstastentabelle ist eine Windows-Ressource, die eine Liste mit Zugriffstasten (auch als Tastenkombinationen bezeichnet) und die Befehlsbezeichner enthält, die ihnen zugeordnet sind. Ein Programm kann über mehrere Zugriffstastentabellen verfügen.  
@@ -36,7 +36,7 @@ Eine Zugriffstastentabelle ist eine Windows-Ressource, die eine Liste mit Zugrif
   
  Sie können [Klassenansicht](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) um Zugriffstastenbefehle mit Code zu verknüpfen.  
   
- Im Zugriffstasten-Editor ist Folgendes möglich:  
+ Mit der **Accelerator** -Editor können Sie:  
   
 -   [Festlegen von Zugriffstasteneigenschaften](../windows/setting-accelerator-properties.md)  
   
@@ -47,12 +47,12 @@ Eine Zugriffstastentabelle ist eine Windows-Ressource, die eine Liste mit Zugrif
 -   [Verwenden vordefinierter Zugriffstasten](../windows/predefined-accelerator-keys.md)  
   
     > [!TIP]
-    >  Im Zugriffstasten-Editor können Sie mit der rechten Maustaste klicken, um ein Kontextmenü mit häufig verwendeten Befehlen anzuzeigen. Die verfügbaren Befehle hängen davon ab, auf was der Zeiger verweist.  
+    >  Bei der Verwendung der **Accelerator** -Editor, Sie können mit der rechten Maustaste ein Kontextmenü mit häufig verwendeten Befehlen anzuzeigen. Die verfügbaren Befehle hängen davon ab, auf was der Zeiger verweist.  
   
     > [!NOTE]
     >  Windows lässt die Erstellung leerer Zugriffstastentabellen nicht zu. Wenn Sie eine Zugriffstastentabelle ohne Einträge erstellen, wird diese beim Speichern automatisch gelöscht.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  

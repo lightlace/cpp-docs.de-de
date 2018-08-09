@@ -1,5 +1,5 @@
 ---
-title: 'Factorycache:: Cookie-Datenmember | Microsoft Docs'
+title: 'Factorycache:: Cookie-Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27daf229da4c6707afcbf97f7ab8ce08cd8ce900
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f3636cdb2c30d08547fd9085141aa9283bdc85c7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874446"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652382"
 ---
 # <a name="factorycachecookie-data-member"></a>FactoryCache::cookie-Datenmember
-Unterstützt die Windows Runtime C++ Template Library-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Windows Runtime C++ Template Library-Infrastruktur, und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 union {   
    WINRT_REGISTRATION_COOKIE winrt;  
    DWORD com;   
@@ -37,7 +37,7 @@ union {
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Enthält einen Wert, der ein registrierten Windows-Runtime oder COM-Klassenobjekt bezeichnet und wird später verwendet werden, um stattdessen das Aufheben der Registrierung.  
+ Enthält einen Wert an, der ein registriertes Windows-Runtime oder COM-Klasse-Objekt identifiziert, und wird später beim Aufheben der Registrierung des Objekts verwendet.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

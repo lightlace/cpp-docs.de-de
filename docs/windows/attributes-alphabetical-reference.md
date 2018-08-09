@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bbb461fe4e8cdabf7da9925323d9271a1047440
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cb7c8dc889a37ca52c527a65f68a84d81e9553cc
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464888"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648177"
 ---
 # <a name="attributes-alphabetical-reference"></a>Alphabetische Attributreferenz
 Die folgenden Attribute sind in Visual C++ verfügbar.  
@@ -118,7 +118,7 @@ Die folgenden Attribute sind in Visual C++ verfügbar.
 |[satype](../windows/satype.md)|Gibt den Datentyp, der die `SAFEARRAY`.|  
 |[size_is](../windows/size-is.md)|Gibt an, die Größe des Arbeitsspeichers für Größe Zeiger zugewiesen, die Größe der Zeiger auf Zeiger, die Größe und Einzel- oder mehrdimensionale Arrays.|  
 |[source](../windows/source-cpp.md)|Gibt an, dass ein Member der Klasse, Eigenschaft oder Methode eine Ereignisquelle ist.|  
-|[string](../windows/string-cpp.md)|Gibt an, dass das eindimensionale **Char**, **"wchar_t"**, **Byte**, oder das entsprechende Array oder der Zeiger auf ein solches Array muss als Zeichenfolge behandelt werden.|  
+|[string](../windows/string-cpp.md)|Gibt an, dass das eindimensionale **Char**, **"wchar_t"**, `byte`, oder das entsprechende Array oder der Zeiger auf ein solches Array muss als Zeichenfolge behandelt werden.|  
 |[support_error_info](../windows/support-error-info.md)|Unterstützt die Windows-Fehlerberichterstattung für das Zielobjekt.|  
 |[switch_is](../windows/switch-is.md)|Gibt den Ausdruck oder einen Bezeichner fungiert als die union kombiniert werden sollen, die die union-Member auswählt.|  
 |[switch_type](../windows/switch-type.md)|Gibt den Typ der Variablen als die union Discriminant verwendet.|  

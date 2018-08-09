@@ -1,5 +1,5 @@
 ---
-title: 'Boolstruct:: Datenmember | Microsoft Docs'
+title: 'Boolstruct:: Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f01f2c642686c1cf7c01fe9322e06f165d5ada9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 14c78a92ac66ee998e11f7101a6a8306be73862a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859812"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641114"
 ---
 # <a name="boolstructmember-data-member"></a>BoolStruct::Member-Datenmember
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 int Member;  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Gibt an, dass eine [ComPtr](../windows/comptr-class.md) ist, oder verwalten die Objektlebensdauer einer Schnittstelle nicht der Fall ist.  
+ Gibt an, dass eine [ComPtr](../windows/comptr-class.md) ist, oder ist nicht der Fall, die Objektlebensdauer einer Schnittstelle verwalten.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** internal.h  

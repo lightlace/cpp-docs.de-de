@@ -1,5 +1,5 @@
 ---
-title: VerifyInterfaceHelper-Struktur | Microsoft Docs
+title: VerifyInterfaceHelper-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c7f414189c60946264ce49c5d6065d91d92b8bd4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d468913dcca511702deeb77b08306dd0256d6091
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890251"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641248"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper-Struktur
-Unterstützt die Windows Runtime C++ Template Library-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Windows Runtime C++ Template Library-Infrastruktur, und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,14 +42,14 @@ template <
 struct VerifyInterfaceHelper<false, I>;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `I`  
- Eine Schnittstelle zu überprüfen.  
+### <a name="parameters"></a>Parameter  
+ *I*  
+ Eine Schnittstelle, um zu überprüfen.  
   
- `isWinRTInterface`  
+ *isWinRTInterface*  
   
 ## <a name="remarks"></a>Hinweise  
- Überprüft, ob die Schnittstelle mit dem Vorlagenparameter angegebene bestimmte Anforderungen erfüllt.  
+ Überprüft, ob die die Template-Parameter angegebene Schnittstelle bestimmte Anforderungen erfüllt.  
   
 ## <a name="members"></a>Member  
   

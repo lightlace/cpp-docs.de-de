@@ -1,5 +1,5 @@
 ---
-title: 'Factorycache:: Factory-Datenmember | Microsoft Docs'
+title: 'Factorycache:: Factory-Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a85fed4ff169c43762f82dd0524cc88a6e24370e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c714c13cb206fbc6535997c2ad32d9f652e229ea
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881438"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643523"
 ---
 # <a name="factorycachefactory-data-member"></a>FactoryCache::factory-Datenmember
-Unterstützt die Windows Runtime C++ Template Library-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Windows Runtime C++ Template Library-Infrastruktur, und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 IUnknown* factory;  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Verweist auf ein Windows-Runtime oder COM-Klassenfactory.  
+ Verweist auf eine Windows-Runtime oder COM-Klassenfactory.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

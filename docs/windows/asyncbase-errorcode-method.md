@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 580df181e544ced6594b049b85d7f147bd2fe22e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a5f4ccbe1789914f5a7c378f5cb847aaa1c49bb8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464615"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644702"
 ---
 # <a name="asyncbaseerrorcode-method"></a>AsyncBase::ErrorCode-Methode
 Ruft den Fehlercode für den aktuellen asynchronen Vorgang ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 inline void ErrorCode(  
    HRESULT *error  
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *Fehler*  
  Der Speicherort, in dem dieser Vorgang den Fehlercode der aktuellen speichert.  
   

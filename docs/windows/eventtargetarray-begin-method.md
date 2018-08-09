@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: Begin-Methode | Microsoft Docs'
+title: 'Eventtargetarray:: Begin-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ef0c9726b089c798ff8b9a98a04da40099cf888a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b5dc081a24495fc8939f3069dc68bed4f75beaaf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871587"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642824"
 ---
 # <a name="eventtargetarraybegin-method"></a>EventTargetArray::Begin-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 ComPtr<IUnknown>* Begin();  
 ```  
   
@@ -37,7 +37,7 @@ ComPtr<IUnknown>* Begin();
  Die Adresse des ersten Elements im internen Array von Ereignishandlern.  
   
 ## <a name="remarks"></a>Hinweise  
- Ruft die Adresse des ersten Elements im internen Array von Ereignishandlern.  
+ Ruft die Adresse des ersten Elements in das interne Array der Ereignishandler ab.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  

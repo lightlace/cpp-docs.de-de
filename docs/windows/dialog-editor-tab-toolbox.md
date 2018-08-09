@@ -1,5 +1,5 @@
 ---
-title: Registerkarte "Dialog-Editor", Toolbox | Microsoft Docs
+title: Registerkarte "Dialog-Editor", Toolbox | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,25 +21,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 40e0a13f9379200ee01e0279f9d069f1d58f3a60
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882575"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649421"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Registerkarte "Dialog-Editor", "Toolbox"
-Die Registerkarte "Dialog-Editor" wird angezeigt, der [Fenster "Toolbox"](/visualstudio/ide/reference/toolbox) beim Arbeiten im Dialog-Editor. Um dem neuen Dialogfeld Steuerelemente hinzuzufügen, ziehen Sie Steuerelemente aus der Toolbox auf die Sie erstellen (Dialogfeld) (Weitere Informationen finden Sie unter [Hinzufügen eines Steuerelements zu einem Dialogfeld](adding-a-control-to-a-dialog-box.md)). Sie können Sie die Steuerelemente beliebig verschieben oder ihre Größe und Form ändern.  
+Die **Dialog-Editor** Registerkarte wird angezeigt, der [Fenster "Toolbox"](/visualstudio/ide/reference/toolbox) beim Arbeiten der **Dialogfeld** Editor. Um dem neuen Dialogfeld Steuerelemente hinzuzufügen, ziehen Sie Steuerelemente aus der **Toolbox** an das Dialogfeld, das Sie erstellen (Weitere Informationen finden Sie unter [Hinzufügen eines Steuerelements zu einem Dialogfeld](adding-a-control-to-a-dialog-box.md)). Sie können Sie die Steuerelemente beliebig verschieben oder ihre Größe und Form ändern.  
   
- Diese Standardsteuerelemente sind in der Toolbox verfügbar:  
+ Die Standardsteuerelemente sind in der **Toolbox** sind:  
   
--   [Button-Steuerelement](../mfc/reference/cbutton-class.md)  
+-   [Schaltflächen-Steuerelement](../mfc/reference/cbutton-class.md)  
   
 -   [Kontrollkästchen-Steuerelement](../mfc/reference/styles-used-by-mfc.md#button-styles)  
   
 -   [Kombinationsfeld-Steuerelement](../mfc/reference/ccombobox-class.md)  
   
--   [Edit-Steuerelement](../mfc/reference/cedit-class.md)  
+-   [Steuerelement bearbeiten](../mfc/reference/cedit-class.md)  
   
 -   Gruppenfeld  
   
@@ -55,7 +55,7 @@ Die Registerkarte "Dialog-Editor" wird angezeigt, der [Fenster "Toolbox"](/visua
   
 -   [Bildlaufleisten-Steuerelement](../mfc/reference/cscrollbar-class.md)  
   
- Die [allgemeine Windows-Steuerelemente](../mfc/controls-mfc.md) in der Toolbox verfügbaren bieten gesteigerte Funktionalität in Ihrer Anwendung. Dazu zählen:  
+ Die [Windows-Standardsteuerelemente](../mfc/controls-mfc.md) zur Verfügung, in der **Toolbox** bieten gesteigerte Funktionalität in Ihrer Anwendung. Dazu zählen:  
   
 -   [Schieberegler-Steuerelement](../mfc/slider-control-styles.md)  
   
@@ -65,9 +65,9 @@ Die Registerkarte "Dialog-Editor" wird angezeigt, der [Fenster "Toolbox"](/visua
   
 -   [Abkürzungstasten-Steuerelement](../mfc/using-a-hot-key-control.md)  
   
--   [Strukturelement-Steuerelement](../mfc/list-control-and-list-view.md)  
+-   [Listensteuerelement](../mfc/list-control-and-list-view.md)  
   
--   [Strukturansicht-Steuerelements](../mfc/tree-control-styles.md)  
+-   [Strukturansicht-Steuerelement](../mfc/tree-control-styles.md)  
   
 -   [Registerkarten-Steuerelement](../mfc/tab-controls-and-property-sheets.md)  
   
@@ -83,15 +83,15 @@ Die Registerkarte "Dialog-Editor" wird angezeigt, der [Fenster "Toolbox"](/visua
   
 -   [Benutzerdefiniertes Steuerelement](custom-controls-in-the-dialog-editor.md)  
   
- Sie können benutzerdefinierte Steuerelemente zum Dialogfeld hinzufügen, durch Auswählen der **benutzerdefiniertes Steuerelement** Symbol in der Toolbox und ziehen es auf das Dialogfeld. Hinzufügen ein Syslink-Steuerelements fügen Sie ein benutzerdefiniertes Steuerelement hinzu, und ändern Sie das Steuerelement **Klasse** Eigenschaft **Syslink**. Dadurch werden die Eigenschaften aktualisiert und die Syslink-Steuerelementeigenschaften angezeigt. Informationen zur MFC-Wrapperklasse finden Sie unter [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
+ Sie können benutzerdefinierte Steuerelemente zum Dialogfeld hinzufügen, durch Auswählen der **benutzerdefiniertes Steuerelement** Symbol in der **Toolbox** und ziehen diesen an das Dialogfeld. Hinzufügen einer **Syslink** steuern, fügen Sie ein benutzerdefiniertes Steuerelement hinzu, und Ändern des Steuerelements **Klasse** Eigenschaft **Syslink**. Dies bewirkt, dass die Eigenschaften aktualisieren und Anzeigen der **Syslink** Steuerelementeigenschaften. Informationen zur MFC-Wrapperklasse finden Sie unter [CLinkCtrl](../mfc/reference/clinkctrl-class.md).  
   
- Sie können auch [ActiveX-Steuerelemente hinzufügen, um das Dialogfeld](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
+ Sie können außerdem [ActiveX-Steuerelemente hinzufügen, um das Dialogfeld](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
- Ferner lässt sich das Toolbox-Fenster für die leichtere Verwendung anpassen. Weitere Informationen finden Sie unter [Verwenden der Toolbox](/visualstudio/ide/using-the-toolbox).  
+ Sie können auch anpassen, die **Toolbox** Fenster zur einfacheren Verwendung. Weitere Informationen finden Sie unter [Verwenden der Toolbox](/visualstudio/ide/using-the-toolbox).  
 
- Weitere Informationen zur Verwendung des RichEdit 1.0-Steuerelements mit MFC finden Sie unter [Verwenden des RichEdit 1.0-Steuerelements mit MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
+ Weitere Informationen zur Verwendung der **RichEdit 1.0** mit MFC zu steuern, finden Sie unter [Verwenden des RichEdit 1.0-Steuerelements mit MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  
@@ -101,7 +101,6 @@ Die Registerkarte "Dialog-Editor" wird angezeigt, der [Fenster "Toolbox"](/visua
  [Steuerelementklassen](../mfc/control-classes.md)   
  [Dialogfeldklassen](../mfc/dialog-box-classes.md)   
  [Stile des Schiebeleisten Steuerelements](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)   
- [Beispiele für Rich-Edit-Steuerelemente](../mfc/rich-edit-control-examples.md)   
+ [Beispiele für RichEdit-Steuerelemente](../mfc/rich-edit-control-examples.md)   
  [Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)
-

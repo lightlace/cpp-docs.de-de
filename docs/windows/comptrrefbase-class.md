@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0342500fc41c650967e17919ebdc9605d4261cb5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 18f7f08362c14ab0d09019a5b9348750c96ddbd7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464242"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643409"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase-Klasse
 Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template <  
    typename T  
 >  
 class ComPtrRefBase;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *T*  
  Ein [ComPtr\<T >](../windows/comptr-class.md) Typ oder einem Typ abgeleitet ist, nicht nur die Schnittstelle der **ComPtr**.  
   
@@ -55,8 +55,8 @@ class ComPtrRefBase;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ComPtrRefBase::operator IInspectable**-Operator](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) Datenmembers, der einen Zeiger an eine-Zeiger-an der Schnittstelle "iinspectable".|  
-|[ComPtrRefBase::operator IUnknown**-Operator](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) -Datenmember auf einen Zeiger auf-a-Zeiger-IUnknown-Schnittstelle.|  
+|[ComPtrRefBase::operator IInspectable**-Operator](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) Datenmembers, der einen Zeiger an eine-Zeiger-an die `IInspectable` Schnittstelle.|  
+|[ComPtrRefBase::operator IUnknown**-Operator](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Wandelt das aktuelle [Ptr_](../windows/comptrrefbase-ptr-data-member.md) Datenmembers, der einen Zeiger an eine-Zeiger-an die `IUnknown` Schnittstelle.|  
   
 ### <a name="protected-data-members"></a>Geschützte Datenmember  
   

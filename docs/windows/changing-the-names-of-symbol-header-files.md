@@ -1,5 +1,5 @@
 ---
-title: Ändern der Namen von Symbolheaderdateien | Microsoft Docs
+title: Ändern der Namen von Symbolheaderdateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 953ac59958748bd58fa7e9027c595bf7905e5f27
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6d1c3436190ff36724eba1601a51608371b8d0a4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864228"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649945"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>Ändern der Namen von Symbolheaderdateien
-Normalerweise werden alle Symboldefinitionen in der Datei Resource.h gespeichert. Jedoch müssen Sie den Namen dieser Includedatei möglicherweise ändern, sodass Sie z. B. mit mehr als eine Ressourcendatei im selben Verzeichnis arbeiten können.  
+Normalerweise alle Symboldefinitionen, die in gespeichert werden `Resource.h`. Jedoch müssen Sie den Namen dieser Includedatei möglicherweise ändern, sodass Sie z. B. mit mehr als eine Ressourcendatei im selben Verzeichnis arbeiten können.  
   
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>So ändern Sie den Namen den Symbolheaderdatei für die Ressource  
   
@@ -41,12 +41,11 @@ Normalerweise werden alle Symboldefinitionen in der Datei Resource.h gespeichert
     > [!NOTE]
     >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  In der **Symbolheaderdatei** geben den neuen Namen für die Includedatei.  
+2.  In der **Symbolheaderdatei** geben den neuen Namen für die Include-Datei.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.*  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.  
   
- Anforderungen  
-  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

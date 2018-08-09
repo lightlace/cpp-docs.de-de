@@ -1,5 +1,5 @@
 ---
-title: 'Weakref:: Asiid-Methode | Microsoft Docs'
+title: 'Weakref:: Asiid-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 69108681b181d0b2fce20f9e30a009b6b93c2180
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9e5ff6510463a6fed06534236612feb460919e37
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891297"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643484"
 ---
 # <a name="weakrefasiid-method"></a>WeakRef::AsIID-Methode
-Legt den angegebenen ComPtr-Zeigerparameter so fest, dass er die angegebene Schnittstellen-ID darstellt.  
+Setzt den angegebenen `ComPtr` Parameter für den Zeiger auf die angegebene Schnittstellen-ID darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,27 +36,27 @@ HRESULT AsIID(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `riid`  
+### <a name="parameters"></a>Parameter  
+ *riid*  
  Eine Schnittstellen-ID.  
   
- `ptr`  
- Wenn dieser Vorgang abgeschlossen wird, ein Objekt, das den Parameter `riid`darstellt.  
+ *ptr*  
+ Wenn dieser Vorgang abgeschlossen ist, ein Objekt, das Parameter repräsentiert *Riid*.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
--   S_OK, wenn dieser Vorgang erfolgreich ausgeführt wurde; andernfalls ein HRESULT, das den Grund für den Fehler beim Vorgang angibt, und `ptr` wird auf `nullptr`festgelegt.  
+-   S_OK, wenn dieser Vorgang erfolgreich ist; andernfalls ein HRESULT, der den Grund angibt. der Vorgang fehlgeschlagen ist, und *Ptr* nastaven NA hodnotu **"nullptr"**.  
   
--   S_OK, wenn dieser Vorgang erfolgreich ausgeführt wurde, das aktuelle WeakRef-Objekt aber bereits freigegeben wurde. Der `ptr` -Parameter wird auf `nullptr`festgelegt.  
+-   S_OK, wenn dieser Vorgang ist, aber das aktuelle erfolgreich **WeakRef** Objekt bereits freigegeben wurde. Parameter *Ptr* nastaven NA hodnotu **"nullptr"**.  
   
--   S_OK, wenn dieser Vorgang erfolgreich ausgeführt wurde, das aktuelle WeakRef-Objekt aber nicht vom Parameter `riid`abgeleitet ist. Der `ptr` -Parameter wird auf `nullptr`festgelegt. (Weitere Informationen finden Sie in den Hinweisen.)  
+-   S_OK, wenn dieser Vorgang ist, aber das aktuelle erfolgreich **WeakRef** abgeleitetes Objekt ist nicht vom Parameter *Riid*. Parameter *Ptr* nastaven NA hodnotu **"nullptr"**. (Weitere Informationen finden Sie in den Hinweisen.)  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Fehler wird ausgegeben, wenn der Parameter `riid` nicht von „IInspectable“ abgeleitet ist. Dieser Fehler hat Vorrang vor den Rückgabewert.  
+ Ein Fehler wird ausgegeben, wenn Parameter *Riid* stammt nicht aus `IInspectable`. Dieser Fehler hat Vorrang vor den Rückgabewert.  
   
  Die erste Vorlage ist die Form, die Sie in Ihrem Code verwenden sollten. Die zweite Vorlage (die hier nicht dargestellt, aber in der Headerdatei deklariert ist) ist eine interne Hilfsspezialisierung, die C++-Sprachfeatures unterstützt, wie etwa das Schlüsselwort [auto](../cpp/auto-cpp.md) zur Typableitung.  
   
- Beginnend mit dem Windows 10 SDK legt diese Methode die WeakRef-Instanz nicht auf `nullptr` fest, wenn der schwache Verweis nicht abgerufen werden konnte, daher sollten Sie Code zur Fehlerprüfung vermeiden, der WeakRef auf `nullptr`überprüft. Überprüfen Sie stattdessen `ptr` für `nullptr`.  
+ Ab Windows 10-SDKS können dieser Methode ist nicht festgelegt die **WeakRef** -Instanz **"nullptr"** Wenn der schwache Verweis nicht abgerufen werden kann, so vermeiden Sie Code zur fehlerüberprüfung, die die überprüft**WeakRef** für **"nullptr"**. Überprüfen Sie stattdessen *Ptr* für **"nullptr"**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

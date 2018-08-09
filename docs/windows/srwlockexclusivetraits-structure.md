@@ -1,5 +1,5 @@
 ---
-title: SRWLockExclusiveTraits-Struktur | Microsoft Docs
+title: SRWLockExclusiveTraits-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b5d56c4e0c31b56e5bdc92a9d209b58cd15ffb1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49f1f50b3fa9e34da8831c1cec138b6aefec27a5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889276"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649272"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits-Struktur
-Beschreibt allgemeine Eigenschaften des SRWLock-Klasse, im Sperrmodus für exklusive.  
+Beschreibt die allgemeinen Merkmale der `SRWLock` Klasse im Sperrmodus für exklusive.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,8 +45,8 @@ struct SRWLockExclusiveTraits;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[SRWLockExclusiveTraits::GetInvalidValue-Methode](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Ruft ein SRWLockExclusiveTraits-Objekt, das immer ungültig ist.|  
-|[SRWLockExclusiveTraits::Unlock-Methode](../windows/srwlockexclusivetraits-unlock-method.md)|Gibt die exklusive Kontrolle über das angegebene SRWLock-Objekt frei.|  
+|[SRWLockExclusiveTraits::GetInvalidValue-Methode](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Ruft eine **SRWLockExclusiveTraits** -Objekt, das immer ungültig ist.|  
+|[SRWLockExclusiveTraits::Unlock-Methode](../windows/srwlockexclusivetraits-unlock-method.md)|Exklusive Kontrolle über den angegebenen Versionen `SRWLock` Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `SRWLockExclusiveTraits`  

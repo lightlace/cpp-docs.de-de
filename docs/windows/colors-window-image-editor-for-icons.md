@@ -26,12 +26,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ee53735c84d586aa41cd4a1c5d3e8a70051c88e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 23befed8800027553f69032a5f5cc32816396951
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460970"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648209"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Fenster "Farben" (Bildbearbeitung für Symbole)
 Die **Farben** Fenster besteht aus zwei Teilen:  
@@ -46,7 +46,7 @@ Fenster "Farben"
 > [!NOTE]
 >  Die **Bildschirm Farbe** und **invertierte Farbe** Tools sind nur verfügbar für Symbole und Cursor.  
   
- Sie können das Fenster "Farben" mit der [Symbolleiste der Bildbearbeitung](../windows/toolbar-image-editor-for-icons.md).  
+ Sie können die **Farben** -Fenster mit der [Symbolleiste der Bildbearbeitung](../windows/toolbar-image-editor-for-icons.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  Keiner  

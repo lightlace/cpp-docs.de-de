@@ -1,5 +1,5 @@
 ---
-title: Erstellen, verschieben und Bearbeiten des Symbolleistenschaltflächen | Microsoft Docs
+title: Erstellen, verschieben und Bearbeiten von Symbolleistenschaltflächen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 69d2ba11978a68cd49513c5d115cc87068e6c5ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6cf110357b7b58424e0fd2a23ce04ba0bfacb0e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871340"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651452"
 ---
 # <a name="creating-moving-and-editing-toolbar-buttons"></a>Erstellen, Verschieben und Bearbeiten von Schaltflächen der Symbolleiste
-Sie können problemlos erstellen, verschieben, kopieren und Bearbeiten von Schaltflächen der Symbolleiste.  
+Sie können ganz einfach erstellen, verschieben, kopieren und Bearbeiten von Symbolleistenschaltflächen.  
   
- Standardmäßig wird eine neue oder leere Schaltfläche am rechten Ende der Symbolleiste angezeigt. Sie können mit dieser Schaltfläche verschieben, vor dem Bearbeiten. Wenn Sie eine Schaltfläche "Neu" erstellen, wird eine weitere leere Schaltfläche rechts neben der Schaltfläche mit den bearbeiteten angezeigt. Wenn Sie eine Symbolleiste speichern, wird die Schaltfläche "leere" nicht gespeichert.  
+ Standardmäßig wird eine neue oder leere Schaltfläche am rechten Ende der Symbolleiste angezeigt. Sie können diese Schaltfläche, verschieben, bevor Sie ihn bearbeiten. Wenn Sie eine neue Schaltfläche erstellen, wird eine andere, leere Schaltfläche rechts neben der bearbeiteten Schaltfläche angezeigt. Wenn Sie eine Symbolleiste speichern, wird die Schaltfläche "leere" nicht gespeichert werden.  
   
--   [Erstellen einer neuen Symbolleisten-Schaltfläche](creating-a-new-toolbar-button.md)  
+-   [Erstellen Sie eine neue Symbolleisten-Schaltfläche](creating-a-new-toolbar-button.md)  
   
 -   [Verschieben einer Symbolleisten-Schaltfläche](moving-a-toolbar-button.md)  
   
--   [Kopieren von Schaltflächen von einer Symbolleiste](../windows/copying-buttons-from-a-toolbar.md)  
+-   [Schaltflächen zum Kopieren von einer Symbolleiste](../windows/copying-buttons-from-a-toolbar.md)  
   
 -   [Löschen einer Symbolleisten-Schaltfläche](deleting-a-toolbar-button.md)  
   
@@ -42,13 +42,12 @@ Sie können problemlos erstellen, verschieben, kopieren und Bearbeiten von Schal
   
 -   [Schließen Sie ein Leerzeichen zwischen den Schaltflächen einer Symbolleiste](../windows/removing-space-between-buttons-on-a-toolbar.md)  
   
--   [Bearbeiten Sie die Eigenschaftenseite einer Symbolleiste](../windows/changing-the-properties-of-a-toolbar-button.md)  
+-   [Ändern der Eigenschaften einer Symbolleiste](../windows/changing-the-properties-of-a-toolbar-button.md)  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  MFC oder ATL  
   
 ## <a name="see-also"></a>Siehe auch  
  [Symbolleisten-Editor](../windows/toolbar-editor.md)
-

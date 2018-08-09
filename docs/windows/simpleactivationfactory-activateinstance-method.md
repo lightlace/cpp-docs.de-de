@@ -1,5 +1,5 @@
 ---
-title: 'Simpleactivationfactory:: Activateinstance-Methode | Microsoft Docs'
+title: 'Simpleactivationfactory:: Activateinstance-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5af4bfd22302b7694b9bafbc1452d636b19cb3c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe1342c3927183ae5eec30c8dd0a40ee95f37277
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889420"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646561"
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance-Methode
 
@@ -39,7 +39,7 @@ STDMETHOD( ActivateInstance )(
 ### <a name="parameters"></a>Parameter
 
 *ppvObject*  
-Wenn dieser Vorgang abgeschlossen wird, Zeiger auf eine Instanz des Objekts gemäß der `Base` Klassenvorlagenparameter.
+Wenn dieser Vorgang abgeschlossen ist, Zeiger auf eine Instanz des Objekts gemäß der `Base` Klassenvorlagenparameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -47,7 +47,7 @@ S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn &#95; &#95;WRL_STRICT&#95; &#95; wird definiert, ein Assert-Fehler wird ausgegeben, wenn in der Klasse Template-Parameter angegebene Basisklasse abgeleitet ist nicht [RuntimeClass](../windows/runtimeclass-class.md), oder ist nicht mit der WinRt konfiguriert oder WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) -Enumerationswert.
+Wenn &#95; &#95;WRL_STRICT&#95; &#95; wird definiert, ein Assert-Fehler wird ausgegeben, wenn die Klassenvorlagenparameter angegebene Basisklasse abgeleitet ist nicht [RuntimeClass](../windows/runtimeclass-class.md), oder ist nicht konfiguriert, mit der WinRt oder WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) Enumerationswert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,5 +56,4 @@ Wenn &#95; &#95;WRL_STRICT&#95; &#95; wird definiert, ein Assert-Fehler wird aus
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Siehe auch
-
-[SimpleActivationFactory-Klasse](../windows/simpleactivationfactory-class.md)
+ [SimpleActivationFactory-Klasse](../windows/simpleactivationfactory-class.md)

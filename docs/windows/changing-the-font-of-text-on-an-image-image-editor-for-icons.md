@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16d01d634b44b4e6da425c40e011106021638305
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1a180a8923dd5a9e8cb257b12ee0d2ba09df8ed5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461737"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642993"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Ändern der Schriftart von Text in einem Bild (Bildbearbeitung für Symbole)
 Das folgende Verfahren ist ein Beispiel an:  
@@ -31,13 +31,13 @@ Das folgende Verfahren ist ein Beispiel an:
   
 ### <a name="to-change-the-font-of-text-on-an-image"></a>Ändern die Schriftart von Text in einem Bild  
   
-1.  Erstellen einer C++-Windows Forms-Anwendung. Weitere Informationen finden Sie unter [Erstellen eines Windows-Anwendungsprojekts](http://msdn.microsoft.com/b2f93fed-c635-4705-8d0e-cf079a264efa). Die [Vorlage für Windows Forms-Anwendung](http://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea) Datei app.ico zu Ihrem Projekt standardmäßig hinzugefügt.  
+1.  Erstellen einer C++-Windows Forms-Anwendung. Weitere Informationen finden Sie unter [Erstellen eines Windows-Anwendungsprojekts](http://msdn.microsoft.com/b2f93fed-c635-4705-8d0e-cf079a264efa). Die [Vorlage für Windows Forms-Anwendung](http://msdn.microsoft.com/1babdebf-ab3f-4a64-a608-98499a5b9cea) Fügt eine Datei mit dem Namen `app.ico` zu Ihrem Projekt standardmäßig.  
   
-2.  Doppelklicken Sie im Projektmappen-Explorer auf die Datei app.ico. Die [Bildbearbeitung](../windows/image-editor-for-icons.md) wird geöffnet.  
+2.  In **Projektmappen-Explorer**, doppelklicken Sie auf die Datei app.ico. Die [Bildbearbeitung](../windows/image-editor-for-icons.md) wird geöffnet.  
   
 3.  Von der **Image** , wählen Sie im Menü **Tools** und wählen Sie dann **Texttool**. Die [Text Texttool (Dialogfeld)](../windows/text-tool-dialog-box-image-editor-for-icons.md) wird angezeigt.  
   
-4.  In der **Texttool** (Dialogfeld), Typ `C++` in den leeren Textbereich. Dieser Text wird angezeigt, in einem in der Größe veränderbaren Feld in der oberen linken Ecke des app.ico, in der **Bildbearbeitung**.  
+4.  In der **Texttool** (Dialogfeld), Typ `C++` in den leeren Textbereich. Dieser Text wird angezeigt, in einem in der Größe veränderbaren befindet sich in der oberen linken Ecke des `app.ico`in die **Bildbearbeitung**.  
   
 5.  In der **Bildbearbeitung**, ziehen Sie das Kontrollkästchen in der Größe veränderbaren in der Mitte des app.ico, um die Lesbarkeit von Text zu verbessern.  
   
@@ -51,7 +51,7 @@ Das folgende Verfahren ist ein Beispiel an:
   
 10. Klicken Sie auf die **OK** Schaltfläche. Die **Schriftart für Texttool** wird das Dialogfeld zu schließen und die schriftarteinstellungen der neuen in den Text gelten.  
   
-11. Klicken Sie auf die **schließen** Schaltfläche der **Texttool** Dialogfeld. Das Feld mit veränderbarer Größe, um den Text aus dem Bild-Editor, verschwinden.  
+11. Klicken Sie auf die **schließen** Schaltfläche der **Texttool** Dialogfeld. Das Feld mit veränderbarer Größe, um den Text nicht mehr auf die **Bildbearbeitung**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)   

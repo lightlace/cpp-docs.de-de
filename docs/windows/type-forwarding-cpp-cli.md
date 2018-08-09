@@ -1,5 +1,5 @@
 ---
-title: Typweiterleitung (C + c++ / CLI) | Microsoft Docs
+title: Typweiterleitung (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9caa2e18a1ec851967857eb068797e092835f587
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 627b0a881795a963e3739accc351ee684b7b8232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891093"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644933"
 ---
 # <a name="type-forwarding-ccli"></a>Typweiterleitung (C++/CLI)
-*Typweiterleitung* können Sie einen Typ aus einer Assembly (Assembly A) in einer anderen Assembly (Assembly B) verschieben, so, dass es nicht erforderlich ist, Clients neu kompiliert, die Assembly a zu verarbeiten  
+*Typweiterleitung* können Sie einen Typ aus einer Assembly (Assembly A) in einer anderen Assembly (Assembly B), zu verschieben, so, dass es nicht erforderlich ist, Clients, die Assembly a zu verwenden, neu kompilieren  
   
 ## <a name="all-platforms"></a>Alle Plattformen  
- Diese Funktion wird in alle Laufzeiten nicht unterstützt.  
+ Dieses Feature wird in alle Laufzeiten nicht unterstützt.  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
- Diese Funktion ist in Windows-Runtime nicht unterstützt.  
+ Dieses Feature wird in der Windows-Runtime nicht unterstützt.  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- Im folgenden Codebeispiel wird veranschaulicht, wie zum Weiterleiten von Typen zu verwenden.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie die typweiterleitung wird.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -45,24 +45,24 @@ ms.locfileid: "33891093"
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `new`  
+ *new*  
  Die Assembly, in der Sie die Typdefinition verschieben.  
   
- `type`  
- Der Typ, dessen Definition, die Sie in einer anderen Assembly verschieben.  
+ *Typ*  
+ Der Typ, dessen Definition, die Sie in eine andere Assembly verschieben.  
   
 ### <a name="remarks"></a>Hinweise  
- Nachdem eine Komponente (Assembly) ausgeliefert wird, und wird von Clientanwendungen verwendet wird, können Sie Typ, Weiterleitung an einen Typ aus der Komponente (Assembly) in einer anderen Assembly zu verschieben, werden die aktualisierten Komponente (und alle zusätzlichen erforderlichen Assemblys) ausgeliefert und dem Client Anwendungen funktionieren weiterhin ohne erneut kompiliert wird.  
+ Wenn eine Komponente (Assembly) enthalten ist und von Clientanwendungen verwendet wird, können Sie die typweiterleitung zum Verschieben eines Typs von der Komponente (Assembly) in einer anderen Assembly ausgeliefert, die aktualisierte Komponente (und alle zusätzlichen Assemblys, die erforderlich sind) und dem Client Anwendungen sind weiterhin funktionsfähig, ohne Sie erneut kompiliert wird.  
   
- Typweiterleitung funktioniert nur für Komponenten, die von einer vorhandenen Anwendung verwiesen wird. Wenn Sie eine Anwendung neu erstellen, müssen die entsprechenden Assemblyverweise für alle Typen, die in der Anwendung verwendet werden.  
+ Typweiterleitung funktioniert nur für Komponenten, die von einer vorhandenen Anwendung verwiesen wird. Wenn Sie eine Anwendung neu erstellen, muss die entsprechenden Assemblyverweise für alle Typen, die in der Anwendung verwendeten vorhanden sein.  
   
- Wenn Sie einen Typ (A) aus einer Assembly weitergeleitet werden, müssen Sie Hinzufügen der `TypeForwardedTo` Attribut für diesen Typ als auch einen Assemblyverweis. Die Assembly, die Sie verweisen, muss eine der folgenden enthalten:  
+ Wenn einen Typ (Typ A) aus einer Assembly weiterleiten zu können, müssen Sie Hinzufügen der `TypeForwardedTo` -Attribut für diesen Typ als auch ein Assemblyverweis. Die Assembly, die Sie verweisen, muss es sich um einen der folgenden enthalten:  
   
 -   Die Definition für den Typ a  
   
--   Ein `TypeForwardedTo` Attribut für Geben Sie einen als auch einen Assemblyverweis.  
+-   Ein `TypeForwardedTo` Attribut geben Sie einen als auch ein Assemblyverweis.  
   
- Beispiele für Typen, die weitergeleitet werden können:  
+ Beispiele für Typen, die weitergeleitet werden können, sind:  
   
 -   Verweisklassen  
   
@@ -80,15 +80,15 @@ ms.locfileid: "33891093"
   
 -   Geschachtelte Typen (Wenn Sie einen geschachtelten Typ weiterleiten möchten, Sie sollten weiterleiten den einschließenden Typ)  
   
- Sie können einen Typ an einer Assembly in einer beliebigen Sprache für die common Language Runtime erstellt weiterleiten.  
+ Sie können einen Typ in einer Assembly, die in alle Sprachen für die common Language Runtime erstellt weiterleiten.  
   
- Wenn eine Quellcodedatei, die zum Erstellen der Assembly A.dll eine Typdefinition enthält (`ref class MyClass`), und Sie diesen Typ verschieben möchten Definition auf Assembly B.dll, Sie würden:  
+ Wenn eine Quellcodedatei, die verwendet wird, zum Erstellen einer Assembly A.dll eine Typdefinition enthält also (`ref class MyClass`), und Sie diesen Typ verschieben möchten Definition Assembly B.dll, Sie würden:  
   
-1.  Verschieben der `MyClass` Geben Sie die Definition einer Quellcodedatei, die zum Erstellen von B.dll verwendet.  
+1.  Verschieben der `MyClass` Typdefinition auf eine Quellcodedatei, die zum Erstellen von B.dll verwendet.  
   
 2.  Erstellen Sie die Assembly B.dll  
   
-3.  Löschen der `MyClass` Typdefinition im Quellcode verwendet, um A.dll erstellen, und Ersetzen Sie es durch Folgendes:  
+3.  Löschen der `MyClass` Typdefinition aus dem Quellcode verwendet, um A.dll erstellen, und Ersetzen Sie ihn durch Folgendes:  
   
     ```  
     #using "B.dll"  
@@ -97,7 +97,7 @@ ms.locfileid: "33891093"
   
 4.  Erstellen Sie die Assembly A.dll.  
   
-5.  Verwenden Sie A.dll ohne erneute Kompilierung Clientanwendungen.  
+5.  Verwenden Sie A.dll ohne erneute Kompilierung von Clientanwendungen.  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**
+ Compileroption: `/clr`

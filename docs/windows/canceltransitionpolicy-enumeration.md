@@ -1,5 +1,5 @@
 ---
-title: CancelTransitionPolicy-Enumeration | Microsoft Docs
+title: CancelTransitionPolicy-Enumeration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64f588e67066fed690271aa7d78fcbe726c67177
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bd203ee0413b60bc7aa713e7923fd4d69bde665e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860345"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642957"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy-Enumeration
-Gibt an, wie ein asynchroner Vorgang, den Übergang zu einem abgeschlossenen Zustand des Versuchs abgeschlossen oder Verhalten sich Fehler in Bezug auf eine Clientanforderung Zustand "abgebrochen".  
+Gibt an, wie ein asynchroner Vorgang, den Übergang zu einem abschließenden Zustand Versuchs abgeschlossen ist oder Fehler in Bezug auf eine Clientanforderung Zustand "abgebrochen" Verhalten.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 enum CancelTransitionPolicy;  
 ```  
   
@@ -41,8 +41,8 @@ enum CancelTransitionPolicy;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`RemainCanceled`|Wenn der asynchrone Vorgang derzeit in einer Clientanforderung Zustand "abgebrochen" ist, bedeutet dies, dass es sich im Zustand "abgebrochen" im Gegensatz zu den Übergang zu einer Terminal abgeschlossen oder den Status "Fehler" verbleibt.|  
-|`TransitionFromCanceled`|Wenn der asynchrone Vorgang derzeit in einer Clientanforderung Zustand "abgebrochen" ist, gibt dies an, dass Zustand übergehen sollten von dem Zustand, den abschließenden Zustand "abgebrochen" abgeschlossen oder Fehler, wie durch den Aufruf bestimmt, die dieses Flag nutzt.|  
+|`RemainCanceled`|Wenn der asynchrone Vorgang derzeit ein vom Client angefordertes Zustand "abgebrochen" ist, bedeutet dies, dass es sich bei es verbleibt im Zustand "abgebrochen" im Gegensatz zu den Übergang zu einer Terminal abgeschlossen oder der Status "Fehler".|  
+|`TransitionFromCanceled`|Wenn der asynchrone Vorgang derzeit ein vom Client angefordertes Zustand "abgebrochen" ist, gibt dies an, dass Zustand wechseln sollte von dem Zustand "abgebrochen", den abschließenden Zustand abgeschlossen oder einen Fehler, die durch den Aufruf festgelegt, der dieses Flag verwendet.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** async.h  

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20c651c6e671c7c4895fc7dba85d16fdeb998ad5
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: e5aa4c7279fcee6ffd7ca17bcf788bbef7737a9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570700"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647517"
 ---
 # <a name="dbcolumn"></a>db_column
 Bindet eine angegebene Spalte auf eine Variable im Rowset.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ db_column(   
    ordinal,   
    dbtype,   
@@ -44,7 +44,7 @@ Bindet eine angegebene Spalte auf eine Variable im Rowset.
  *Ordinal*  
  Die Spaltenordnungszahl (`DBCOLUMNINFO` Ordnungszahl) oder einen Spaltennamen (ANSI oder Unicode-Zeichenfolge) für ein Feld in das Rowset, um Daten zu binden. Wenn Sie Zahlen verwenden, können Sie mit der überspringen aufeinander folgende Ordnungszahlen (z. B.: 1, 2, 3, 5). Der Name darf Leerzeichen enthalten, wenn der OLE DB-Anbieter, die, den Sie verwenden, dies unterstützt. Beispielsweise können Sie eine der folgenden Formate:  
   
-```  
+```cpp  
 [db_column("2")] TCHAR szCity[30];  
 [db_column(L"city_name")] TCHAR szCity[30];  
 ```  

@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e68e2b729f8120a33b296fa485d145101b3d6e5b
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: a9fa20fc180d9b77f5d909ea06d12d69c1ef89d1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466708"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652684"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Komponentenerweiterungen für Laufzeitplattformen
 Visual C++ bietet Spracherweiterungen zur Unterstützung der Programmierung mit Laufzeitplattformen. Mithilfe von C++ / CX können Sie programmieren, universelle Windows-Plattform-Anwendungen und Komponenten, die in systemeigenen Code kompiliert. Obwohl Sie durch direktes Programmieren mit der Windows-Runtime-COM-Schnittstellen, universelle Windows-Plattform-Anwendungen erstellen können, mithilfe von C++ / CX, Sie können mit Konstruktoren, Ausnahmen und andere moderne C++-programmierausdrücken arbeiten. Um C++-Programmierung in einer verwalteten ausführungsumgebung auf der .NET-Plattform zu aktivieren, können Sie C++ / CLI.  
   
- **Zwei Laufzeiten, ein Satz von Erweiterungen**  
+### <a name="two-runtimes-one-set-of-extensions"></a>Zwei Laufzeiten, ein Satz von Erweiterungen  
   
- C++ / CX ist eine Teilmenge von C++ / CLI. Für Erweiterungen, die für C++ / CX und C++ / CLI, die Semantik abhängig, ob Sie die common Language Runtime (CLR) oder die Windows-Runtime verwenden möchten. Geben Sie zum Kompilieren Ihre app auf der Windows-Runtime ausgeführt, die **/Zw** -Compileroption. Geben Sie in der CLR ausgeführt um kompilieren, der **"/ CLR"** -Compileroption. Diese Schalter werden automatisch festgelegt, wenn Sie Visual Studio zur Erstellung eines Projekt verwenden.  
+ C++ / CX ist eine Teilmenge von C++ / CLI. Für Erweiterungen, die für C++ / CX und C++ / CLI, die Semantik abhängig, ob Sie die common Language Runtime (CLR) oder die Windows-Runtime verwenden möchten. Geben Sie zum Kompilieren Ihre app auf der Windows-Runtime ausgeführt, die `/ZW` -Compileroption. Um sie für die Ausführung auf der CLR zu kompilieren, geben Sie die `/clr`-Compileroption an. Diese Schalter werden automatisch festgelegt, wenn Sie Visual Studio zur Erstellung eines Projekt verwenden.  
   
  Weitere Informationen zum Erstellen von apps der universellen Windows-Plattform in C++ finden Sie unter [Roadmap für Windows-Runtime-apps mit C++](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx).  
   
@@ -86,7 +86,7 @@ Visual C++ bietet Spracherweiterungen zur Unterstützung der Programmierung mit 
 |**nullptr**|Nein|Gibt an, dass ein Handle oder ein Zeiger nicht auf ein Objekt zeigt.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>Vorlagenkonstrukte  
- Die folgenden Sprachkonstrukte werden nicht als Schlüsselwörter, sondern als Vorlagen implementiert. Bei Angabe der **/Zw** Compileroption, die sie definiert sind, der `lang` Namespace. Bei Angabe der **"/ CLR"** Compileroption, die sie definiert sind, der `cli` Namespace.  
+ Die folgenden Sprachkonstrukte werden nicht als Schlüsselwörter, sondern als Vorlagen implementiert. Wenn Sie die `/ZW`-Compileroption angeben, werden sie im `lang`-Namespace definiert. Wenn Sie die `/clr`-Compileroption angeben, werden sie im `cli`-Namespace definiert.  
   
 |Stichwort|Zweck|Referenz|  
 |-------------|-------------|---------------|  

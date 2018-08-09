@@ -1,5 +1,5 @@
 ---
-title: Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste | Microsoft Docs
+title: Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,47 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ee46502fee6f37d926580863dfc91edb276a846
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6a22f67bdb0d9d88cd2bb448628734db30f75885
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889344"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643172"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Festlegen der Größe des Kombinationsfelds und seiner Dropdownliste
-Sie können ein Kombinationsfeld Größe, wenn Sie ihn zum Dialogfeld hinzufügen. Sie können auch die Größe des im Dropdown-Listenfeld angeben.  
+Sie können ein Kombinationsfeld Größe, wenn Sie sie zum Dialogfeld hinzufügen. Sie können auch die Größe des im Dropdown-Listenfeld angeben.  
   
-### <a name="to-size-a-combo-box"></a>Ein Kombinationsfeld Größe anpassen  
+### <a name="to-size-a-combo-box"></a>Die Größe eines Kombinationsfelds  
   
-1.  Wählen Sie das Kombinationsfeld Steuerelement in einem Dialogfeld an.  
+1.  Wählen Sie das Kombinationsfeld-Steuerelement in einem Dialogfeld an.  
   
-     Zu Beginn sind nur den rechten und linken Ziehpunkt aktiv.  
+     Anfangs sind nur die Rechte und linke Ziehpunkt aktiv.  
   
-2.  Verwenden Sie den Ziehpunkt, um die Breite des Kombinationsfelds festzulegen.  
+2.  Verwenden Sie die Ziehpunkte, um die Breite des Kombinationsfelds festzulegen.  
   
  Sie können auch die vertikale Größe des der Dropdownteil des Kombinationsfelds festlegen.  
   
-#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Die Größe des Kombinationsfelds Dropdown-Listenfeld festlegen  
+#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Zum Festlegen von der Größe des Kombinationsfeld-Dropdown-Liste  
   
-1.  Klicken Sie auf die Schaltfläche Dropdown-Pfeil rechts neben dem Kombinationsfeld.  
+1.  Klicken Sie auf die Dropdown-Pfeil-Schaltfläche rechts neben dem Kombinationsfeld.  
   
      ![Pfeil in einem Kombinationsfeld in einem MFC-Projekt](../mfc/media/vccomboboxarrow.gif "VcComboBoxArrow")  
   
-     Die Gliederung des Steuerelements ändert die Größe des Kombinationsfelds mit der Dropdownliste-Bereich erweitert angezeigt werden soll.  
+     Die Gliederung des Steuerelements ändert die Größe des Kombinationsfelds mit den erweiterten Dropdown-Listenfeld-Bereich angezeigt.  
   
-2.  Verwenden Sie den unteren Ziehpunkt, um die Anfangsgröße des Bereichs Dropdown-Liste zu ändern.  
+2.  Verwenden Sie den unteren Ziehpunkt, um die Anfangsgröße des Bereichs, Dropdown-Listenfeld ändern.  
   
      ![Kombinationsfeld&#45;Box-Sizing in einem MFC-Projekt](../mfc/media/vccomboboxsizing.gif "VcComboBoxSizing")  
   
-3.  Klicken Sie auf den Dropdown Pfeil erneut aus, um den Teil der Dropdown-Liste des Kombinationsfelds zu schließen.  
+3.  Klicken Sie auf den Dropdown-Pfeil erneut aus, um der Teil der Dropdown-Listenfeld des Kombinationsfelds geschlossen.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hinzufügen von Werten zu einem Kombinationsfeld-Steuerelement](../windows/adding-values-to-a-combo-box-control.md)   
  [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
  [Steuerelemente](../mfc/controls-mfc.md)
-

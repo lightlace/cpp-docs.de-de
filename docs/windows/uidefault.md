@@ -1,5 +1,5 @@
 ---
-title: UIDefault | Microsoft Docs
+title: UIDefault | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad24d6e874b1c2efd9b57118e20fe78bfa037bd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ef4cfba786bd5c310a24727b59575b9eb45bd183
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890150"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651612"
 ---
 # <a name="uidefault"></a>uidefault
-Gibt an, dass die Typmember Informationen das Standardelement für die Anzeige in der Benutzeroberfläche.  
+Gibt an, dass der Typinformationsmember das Standardelement für die Anzeige in der Benutzeroberfläche.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [uidefault]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Uidefault** C++-Attribut hat die gleiche Funktionalität wie die [Uidefault](http://msdn.microsoft.com/library/windows/desktop/aa367292) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt ein Beispiel der **Uidefault**:  
+ Der folgende Code zeigt ein Beispiel für **Uidefault**:  
   
-```  
+```cpp  
 // cpp_attr_ref_uidefault.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

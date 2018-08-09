@@ -1,5 +1,5 @@
 ---
-title: Wire_marshal | Microsoft Docs
+title: Wire_marshal | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c13889c15476ff263658d7b5b4024e7a5deebe5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 37bdb19c8439e9ec6d11d0ace9c064165cf27056
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890212"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646682"
 ---
 # <a name="wiremarshal"></a>wire_marshal
-Gibt einen Datentyp, der für die Übertragung anstelle eines Typs programmspezifische Daten verwendet wird.  
+Gibt einen Datentyp, der für die Übertragung anstelle eines Typs anwendungsspezifische Daten verwendet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [wire_marshal]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
@@ -41,7 +39,7 @@ Gibt einen Datentyp, der für die Übertragung anstelle eines Typs programmspezi
 ## <a name="example"></a>Beispiel  
  Der folgende Code veranschaulicht die Verwendung der **Wire_marshal**:  
   
-```  
+```cpp  
 // cpp_attr_ref_wire_marshal.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -63,7 +61,7 @@ Gibt einen Datentyp, der für die Übertragung anstelle eines Typs programmspezi
   
 |||  
 |-|-|  
-|**Betrifft**|`typedef`|  
+|**Betrifft**|**typedef**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

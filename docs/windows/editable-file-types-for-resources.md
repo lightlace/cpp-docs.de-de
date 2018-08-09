@@ -1,5 +1,5 @@
 ---
-title: Editierbare Dateitypen für Ressourcen | Microsoft Docs
+title: Editierbare Dateitypen für Ressourcen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11d3229341ece1bbee0820a7e2320b8ef6b0381b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870249"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648430"
 ---
 # <a name="editable-file-types-for-resources"></a>Editierbare Dateitypen für Ressourcen
 Sie können die folgenden Dateitypen öffnen und die darin enthaltenen Ressourcen bearbeiten.  
@@ -38,8 +38,6 @@ Sie können die folgenden Dateitypen öffnen und die darin enthaltenen Ressource
 |.exe|Ausführbare Dateien.|  
 |.dll|Dynamic Link Library-Dateien.|  
 |.bmp, .ico, .dib und .cur|Bitmap-, Symbol-, Symbolleisten- und Cursordateien|  
-  
-
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  

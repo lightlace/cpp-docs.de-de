@@ -1,5 +1,5 @@
 ---
-title: Kopieren von Schaltflächen von einer Symbolleiste | Microsoft Docs
+title: Kopieren von Schaltflächen von einer Symbolleiste | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c006d243af78ea7f642ec36f49ce46fcfc732c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bc7ea145b76f17ccd8b29b287faa3ef921e7dc73
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880230"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646279"
 ---
 # <a name="copying-buttons-from-a-toolbar"></a>Kopieren von Schaltflächen von einer Symbolleiste
-### <a name="to-copy-buttons-from-a-toolbar"></a>Kopieren von Schaltflächen von einer Symbolleiste  
+### <a name="to-copy-buttons-from-a-toolbar"></a>Zum Kopieren von Schaltflächen von einer Symbolleiste  
   
 1.  Halten Sie die **STRG** Schlüssel.  
   
-2.  In der **Symbolleiste anzeigen** Bereich, ziehen Sie der Schaltfläche entweder am neuen Speicherort auf der Symbolleiste oder an einem Speicherort auf einer anderen Symbolleiste.  
+2.  In der **Symbolleiste anzeigen** Bereich, ziehen Sie die Schaltfläche mit den neuen Speicherort auf der Symbolleiste oder an einem Speicherort auf einer anderen Symbolleiste.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- Anforderungen  
-  
+## <a name="requirements"></a>Anforderungen  
  MFC oder ATL  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen, verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md)   
+ [Erstellen, verschieben und Bearbeiten von Symbolleistenschaltflächen](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Symbolleisten-Editor](../windows/toolbar-editor.md)
-

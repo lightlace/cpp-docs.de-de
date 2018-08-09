@@ -1,5 +1,5 @@
 ---
-title: Ändern der Eigenschaften einer Ressource | Microsoft Docs
+title: Ändern der Eigenschaften einer Ressource | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 237eea6a468e983072ed300ff2a13f1cbc6ba363
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5a0b58e5adf95de44bbecb51cf56dbbfeaccacad
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861791"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648924"
 ---
 # <a name="changing-the-properties-of-a-resource"></a>Ändern der Eigenschaften einer Ressource
 ### <a name="to-edit-the-properties-of-a-resource"></a>So bearbeiten Sie die Eigenschaften einer Ressource  
   
-1.  In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste der Ressource, die Sie bearbeiten möchten und wählen **Eigenschaften** aus dem Kontextmenü.  
+1.  In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste in der Ressource, die Sie verwenden möchten, bearbeiten, und wählen **Eigenschaften** aus dem Kontextmenü.  
   
-     **Hinweis** Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
+     > [!NOTE] 
+     > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), ändern Sie die Eigenschaften der Ressource.  
   
 ### <a name="to-undo-a-change-youve-made-to-the-properties-of-a-resource"></a>So machen Sie eine an den Eigenschaften einer Ressource vorgenommene Änderung rückgängig  
   
-1.  Stellen Sie sicher, dass die Ressource in der Ressourcenansicht den Fokus besitzt.  
+1.  Stellen Sie sicher, dass die Ressource den Fokus besitzt, **Ressourcenansicht**.  
   
 2.  Wählen Sie **Rückgängig** aus der **bearbeiten** Menü.  
   
-
-  
- **Anforderungen**  
-  
+## <a name="requirements"></a>Anforderungen  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  

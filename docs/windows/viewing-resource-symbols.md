@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Ressourcensymbolen | Microsoft Docs
+title: Anzeigen von Ressourcensymbolen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,30 +19,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea57af6ef6ff91b7149006f63963cff55f6eebc4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9857ea9f12b74983b0af8933249450a61ed907c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891106"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649353"
 ---
 # <a name="viewing-resource-symbols"></a>Anzeigen von Ressourcensymbolen
 ### <a name="to-view-resource-symbols"></a>So zeigen Sie Ressourcensymbole an  
   
-1.  In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste der RC-Datei.  
+1.  In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste in der RC-Datei.  
   
     > [!NOTE]
     >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Wählen Sie **Ressourcensymbole** aus dem Kontextmenü anzeigen eine Ressourcensymboltabelle im die [Ressourcensymbole (Dialogfeld)](../windows/resource-symbols-dialog-box.md).  
+2.  Wählen Sie **Ressourcensymbole** aus dem Kontextmenü zum Anzeigen einer Ressourcensymboltabelle im der [Dialogfeld Ressourcensymbole](../windows/resource-symbols-dialog-box.md).  
   
     > [!NOTE]
-    >  Überprüfen Sie zum Anzeigen vordefinierter Symbole das **schreibgeschützte Symbole anzeigen** Kontrollkästchen.  
+    >  Vordefinierte Symbole sehen Sie die **schreibgeschützte Symbole anzeigen** Kontrollkästchen.  
   
-
-  
- **Anforderungen**  
-  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

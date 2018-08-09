@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0681a5e0c88f44d5616724f5564660ecb05fbdc3
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b3ad3ef6acb06eaef04197dc4ecffe27c2d7656d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570495"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650214"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>Gewusst wie: Ändern der Sprache oder Bedingung einer Ressource während des Kopierens
 Beim Kopieren in eine Ressource können Sie ihre Sprachen- und/oder Bedingungseigenschaft ändern.  
@@ -34,7 +34,7 @@ Beim Kopieren in eine Ressource können Sie ihre Sprachen- und/oder Bedingungsei
   
  Sprache und Bedingung einer Ressource werden im Arbeitsbereichsfenster nach dem Ressourcennamen in Klammern angezeigt. In diesem Beispiel verwendet die Ressource mit dem Namen „IDD_AboutBox“ Finnisch als Sprache und „XX33“ als Bedingung.  
   
-```  
+```cpp  
 IDD_AboutBox (Finnish - XX33)  
 ```  
   
@@ -51,7 +51,6 @@ IDD_AboutBox (Finnish - XX33)
     -   In der **Bedingung** geben die Bedingung.  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

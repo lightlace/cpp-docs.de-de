@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc55ab1dad4ee9ba088aaae92f76e58b29683b29
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b74f4ca4ab2940dde9dfc567b8fa45ea8f03279e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569803"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642769"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Handle für Objekt (^) (Komponentenerweiterungen für C++)
 Die *handledeklarator* (`^`, ausgesprochen "hat"), modifiziert den [Spezifizierer](../cpp/overview-of-declarators.md) so, dass das deklarierte Objekt automatisch gelöscht werden sollen, wenn das System feststellt, dass das Objekt ist nicht mehr zugegriffen werden kann.  
@@ -36,7 +36,7 @@ Die *handledeklarator* (`^`, ausgesprochen "hat"), modifiziert den [Spezifiziere
  Informationen dazu, wie ein Objekt instanziieren, finden Sie unter [Ref neue](../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
 ## <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  Das System verwendet die CLR *Garbage Collector* Mechanismus, um zu bestimmen, ob das Objekt nicht mehr verwendet wird und gelöscht werden kann. Die Common Language Runtime verwaltet einen Heap, auf dem sie Objekten Arbeitsspeicher zuordnet, und verwendet im Programm verwaltete Verweise (Variablen), die den Speicherort von Objekten auf dem Heap angeben. Wenn ein Objekt nicht mehr verwendet wird, wird der Arbeitsspeicher freigegeben, den das Objekt auf dem Heap belegt. In regelmäßigen Abständen komprimiert der Garbage Collector den Heap, damit der freigegebene Arbeitsspeicher optimal verwendet werden kann. Das Komprimieren des Heaps kann Objekte auf dem Heap verschieben, wodurch die von den verwalteten Verweisen bezeichneten Speicherorte ungültig werden. Deshalb berücksichtigt der Garbage Collector die Positionen in allen verwalteten Verweisen und aktualisiert sie automatisch, damit sie weiterhin die aktuellen Positionen der Objekte auf dem Heap angeben.  
@@ -48,7 +48,6 @@ Die *handledeklarator* (`^`, ausgesprochen "hat"), modifiziert den [Spezifiziere
  Weitere Informationen finden Sie unter [wie: Deklarieren Sie in systemeigenen Typen behandelt](../dotnet/how-to-declare-handles-in-native-types.md).  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
  Dieses Beispiel zeigt, wie eine Instanz eines Referenztyps auf dem verwalteten Heap erstellt wird.  In diesem Beispiel wird außerdem gezeigt, dass Sie ein Handle mit einem anderen initialisieren können, wodurch Sie zwei Verweise auf dasselbe Objekt auf dem verwaltetem Heap mit Garbage Collection erhalten. Beachten Sie, dass diese Zuweisung ["nullptr"](../windows/nullptr-cpp-component-extensions.md) zu einem Handle markiert nicht das Objekt für die Garbagecollection.  
   
@@ -77,14 +76,10 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
 ```Output  
 1  
 2  
 ```  
-  
- **Beispiel**  
   
  Das folgende Beispiel zeigt, wie ein Handle für ein Objekt auf dem verwalteten Heap deklariert wird, wobei der Objekttyp ein geschachtelter Werttyp ist. Das Beispiel zeigt auch, wie Sie den Werttyp des geschachtelten Objekts abrufen.  
   
@@ -109,18 +104,14 @@ int main() {
    int n = 100;  
    Test(n);  
 }  
-```  
-  
- **Ausgabe**  
+```   
   
 ```Output  
 Not a boxed int  
 100  
 ```  
   
- **Beispiel**  
-  
- Dieses Beispiel zeigt, dass das allgemeine C++-Idiom zur Anwendung eines void*-Zeigers für den Verweis auf ein beliebiges Objekt durch Object^ ersetzt wird, das ein Handle zu einer beliebigen Verweisklasse enthalten kann. Es zeigt auch, dass sämtliche Typen, auch Arrays und Delegaten, in ein Objekthandle konvertiert werden können.  
+ Dieses Beispiel zeigt, dass das allgemeine C++-Idiom zur Anwendung mit einer `void*` Zeiger auf ein beliebiges Objekt verweisen, wird durch ersetzt `Object^`, die ein Handle einer beliebigen Reference-Klasse enthalten kann. Es zeigt auch, dass sämtliche Typen, auch Arrays und Delegaten, in ein Objekthandle konvertiert werden können.  
   
 ```cpp  
 // mcppv2_handle_3.cpp  
@@ -157,8 +148,6 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
 ```Output  
 Type is System.Collections.ArrayList  
   
@@ -166,8 +155,6 @@ Type is System.Int32
   
 Type is MyDel  
 ```  
-  
- **Beispiel**  
   
  Dieses Beispiel zeigt, dass ein Handle dereferenzierbar ist, und dass auf einen Member mit einem dereferenzierten Handle zugegriffen werden kann.  
   
@@ -209,17 +196,13 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
 ```Output  
 Array value: 7  
   
 Cannot access array element 11, size is 10  
 ```  
   
- **Beispiel**  
-  
- Dieses Beispiel zeigt, dass ein systemeigener Verweis (`&`) nicht an einen `int`-Member eines verwalteten Typs binden kann, da `int` möglicherweise in dem von der Garbage Collection bearbeiteten Heap gespeichert wird und systemeigene Verweise nicht an Objektverschiebungen im verwalteten Heap angepasst werden. Zur Behebung dieses Problems können Sie eine lokale Variable verwenden, oder ändern Sie `&` in `%`, um einen Nachverfolgungsverweis zu erhalten.  
+ Dieses Beispiel zeigt, dass die ein systemeigenen Verweises (`&`) kann nicht gebunden werden ein **Int** Member eines verwalteten Typs, als die **Int** kann in Heaps mit Garbage collection gespeichert werden, und native Verweise nicht nachverfolgt. objektverschiebung im verwalteten Heap. Zur Behebung dieses Problems können Sie eine lokale Variable verwenden, oder ändern Sie `&` in `%`, um einen Nachverfolgungsverweis zu erhalten.  
   
 ```cpp  
 // mcppv2_handle_5.cpp  

@@ -1,5 +1,5 @@
 ---
-title: Ziele (Komponentenerweiterungen für C++)-Attribut | Microsoft Docs
+title: Attribut-Ziele (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,99 +15,86 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0de383c6d97f12a1caecbc8fbc7063513a898f50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f89eb3fcc48d8341190ceb5fe74a25570543e0cd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862022"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645590"
 ---
 # <a name="attribute-targets-c-component-extensions"></a>Attributziele (Komponentenerweiterungen für C++)
-Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribut wird definiert, um auf bestimmte Sprachelemente zu übernehmen. Beispielsweise könnte ein Attribut definiert werden, um gelten nur für Klassen und Strukturen.  Die folgende Liste enthält die möglichen syntaktischen Elemente, die auf denen ein benutzerdefiniertes Attribut verwendet werden kann. Kombinationen dieser Werte (mithilfe von logischen oder) kann verwendet werden.  
+Attribut Nutzung Bezeichner können Sie die Attributziele angeben.  Jedes Attribut wird definiert, um für die bestimmte Sprachelemente zu übernehmen. Beispielsweise kann ein Attribut definiert werden, um nur für Klassen und Strukturen zu übernehmen.  Die folgende Liste enthält die möglichen syntaktische Elemente, die auf denen ein benutzerdefiniertes Attribut verwendet werden kann. Kombinationen dieser Werte (Verwendung eines logischen oder) kann verwendet werden.  
   
- An Attributziel, übergeben Sie eine oder mehrere <xref:System.AttributeTargets> Enumeratoren <xref:System.AttributeUsageAttribute> Wenn Sie das Attribut zu definieren.  
+ Attributziel, um eine oder mehrere übergeben an <xref:System.AttributeTargets> Enumeratoren zur <xref:System.AttributeUsageAttribute> , wenn das Attribut zu definieren.  
   
- Im folgenden finden eine Liste der gültigen Attributtyp Ziele:  
+ Im folgenden finden eine Liste der Ziele, gültiges Attribut:  
   
 -   `All` (gilt für alle Konstrukte)  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::All)]  
     ref class Attr : public Attribute {};  
   
     [assembly:Attr];  
-  
     ```  
   
--   `Assembly` (gilt für eine Assembly als Ganzes)  
+-   `Assembly` (gilt für eine gesamte Assembly)  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Assembly)]  
     ref class Attr : public Attribute {};  
   
     [assembly:Attr];  
-  
     ```  
   
 -   `Module` (gilt für ein Modul als Ganzes)  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Module)]  
     ref class Attr : public Attribute {};  
   
     [module:Attr];  
-  
     ```  
   
 -   `Class`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Class)]  
     ref class Attr : public System::Attribute {};  
   
     [Attr]   // same as [class:Attr]  
     ref class MyClass {};  
-  
     ```  
   
 -   `Struct`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Struct)]  
     ref class Attr : public Attribute {};  
   
     [Attr]   // same as [struct:Attr]  
     value struct MyStruct{};  
-  
     ```  
   
 -   `enum`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Enum)]  
     ref class Attr : public Attribute {};  
   
     [Attr]   // same as [enum:Attr]  
     enum struct MyEnum{e, d};  
-  
     ```  
   
 -   `Constructor`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Constructor)]  
     ref class Attr : public Attribute {};  
@@ -115,13 +102,11 @@ Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribu
     ref struct MyStruct{  
     [Attr] MyStruct(){}   // same as [constructor:Attr]  
     };  
-  
     ```  
   
 -   `Method`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Method)]  
     ref class Attr : public Attribute {};  
@@ -129,13 +114,11 @@ Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribu
     ref struct MyStruct{  
     [Attr] void Test(){}   // same as [method:Attr]  
     };  
-  
     ```  
   
 -   `Property`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Property)]  
     ref class Attr : public Attribute {};  
@@ -143,13 +126,11 @@ Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribu
     ref struct MyStruct{  
     [Attr] property int Test;   // same as [property:Attr]  
     };  
-  
     ```  
   
 -   `Field`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Field)]  
     ref class Attr : public Attribute {};  
@@ -157,13 +138,11 @@ Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribu
     ref struct MyStruct{  
     [Attr] int Test;   // same as [field:Attr]  
     };  
-  
     ```  
   
 -   `Event`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Event)]  
     ref class Attr : public Attribute {};  
@@ -173,26 +152,22 @@ Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribu
     ref struct MyStruct{  
     [Attr] event ClickEventHandler^ OnClick;   // same as [event:Attr]  
     };  
-  
     ```  
   
 -   `Interface`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Interface)]  
     ref class Attr : public Attribute {};  
   
     [Attr]   // same as [event:Attr]  
     interface struct MyStruct{};  
-  
     ```  
   
 -   `Parameter`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Parameter)]  
     ref class Attr : public Attribute {};  
@@ -201,26 +176,22 @@ Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribu
     void Test([Attr] int i);  
     void Test2([parameter:Attr] int i);  
     };  
-  
     ```  
   
 -   `Delegate`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::Delegate)]  
     ref class Attr : public Attribute {};  
   
     [Attr] delegate void Test();  
     [delegate:Attr] delegate void Test2();  
-  
     ```  
   
 -   `ReturnValue`  
   
-    ```  
-  
+    ```cpp  
     using namespace System;  
     [AttributeUsage(AttributeTargets::ReturnValue)]  
     ref class Attr : public Attribute {};  
@@ -229,28 +200,27 @@ Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribu
     // Note required specifier  
     [returnvalue:Attr] int Test() { return 0; }  
     };  
-  
     ```  
   
- Ein Attribut ist in der Regel das Language-Element, für das er gilt, direkt vorangestellt. In einigen Fällen ist jedoch die Position eines Attributs nicht ausreichend, um das beabsichtigte Ziel für das Attribut zu bestimmen. Betrachten Sie das folgende Beispiel:  
+ Ein Attribut steht in der Regel direkt das Language-Element, das auf dem es angewendet. In einigen Fällen ist jedoch die Position eines Attributs nicht ausreichen, um das beabsichtigte Ziel des Attributs bestimmt. Betrachten Sie das folgende Beispiel:  
   
-```  
+```cpp  
 [Attr] int MyFn(double x)...  
 ```  
   
- Syntaktisch, besteht keine Möglichkeit mitteilen, ob das Attribut an die Methode oder Rückgabewert der Methode angewendet werden soll (in diesem Fall wird standardmäßig an die Methode). In solchen Fällen kann eine Verwendung der Attributspezifizierer verwendet werden. Beispielsweise verwenden, um das Attribut für den Rückgabewert gelten zu machen, die `returnvalue` Spezifizierer wie folgt:  
+ Syntaktisch gesehen besteht keine Möglichkeit, festzustellen, ob das Attribut an die Methode oder Rückgabewert der Methode angewendet werden soll (in diesem Fall wird standardmäßig an die Methode). In solchen Fällen kann einem Nutzung Attributspezifizierer verwendet werden. Damit wird das Attribut auf den zurückgegebenen Wert anwenden, verwenden Sie z. B. die `returnvalue` Spezifizierer wie folgt:  
   
-```  
+```cpp  
 [returnvalue:Attr] int MyFn(double x)... // applies to return value  
 ```  
   
- Attribut Nutzung Spezifizierer sind in den folgenden Situationen erforderlich:  
+ Attribut Nutzung Bezeichner sind in den folgenden Situationen erforderlich:  
   
--   Ein Attribut auf Assemblyebene oder Modul angeben.  
+-   Um ein Attribut auf Assemblyebene oder Modul anzugeben.  
   
 -   So geben Sie an, dass ein Attribut für den Rückgabewert einer Methode, nicht die Methode gilt:  
   
-    ```  
+    ```cpp  
     [method:Attr] int MyFn(double x)...     // Attr applies to method  
     [returnvalue:Attr] int MyFn(double x)...// Attr applies to return value  
     [Attr] int MyFn(double x)...            // default: method  
@@ -258,15 +228,15 @@ Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribu
   
 -   So geben Sie an, dass ein Attribut für einen Eigenschaftenaccessor nicht die Eigenschaft gilt:  
   
-    ```  
+    ```cpp  
     [method:MyAttr(123)] property int Property()    
     [property:MyAttr(123)] property int Property()  
     [MyAttr(123)] property int get_MyPropy() // default: property  
     ```  
   
--   So geben Sie an, dass ein Attribut für ein Ereignis Accessor, nicht auf das Ereignis gilt:  
+-   So geben Sie an, dass ein Attribut eines Ereignisses Accessor, nicht das Ereignis für die gilt:  
   
-    ```  
+    ```cpp  
     delegate void MyDel();  
     ref struct X {  
        [field:MyAttr(123)] event MyDel* MyEvent;   //field  
@@ -275,15 +245,15 @@ Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribu
     }  
     ```  
   
- Eine Verwendung der Attributspezifizierer gilt nur für das Attribut, das unmittelbar; Das heißt  
+ Ein Attributspezifizierer-Nutzung gilt nur für das Attribut, das unmittelbar. Das heißt  
   
-```  
+```cpp  
 [returnvalue:Attr1, Attr2]  
 ```  
   
  unterscheidet sich von  
   
-```  
+```cpp  
 [returnvalue:Attr1, returnvalue:Attr2]  
 ```  
   
@@ -294,8 +264,7 @@ Attribut Nutzung Spezifizierer können Sie Attributziele angeben.  Jedes Attribu
   
 ### <a name="code"></a>Code  
   
-```  
-  
+```cpp  
 using namespace System;  
 [AttributeUsage(AttributeTargets::Class | AttributeTargets::Struct, AllowMultiple = true )]  
 ref struct Attr : public Attribute {  

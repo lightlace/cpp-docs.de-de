@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a68189c461453dc72585ff4034df5ba69bb41bd5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: eeaef23178829163725b78685b3460913f53f2c2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464875"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652798"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal-Enumeration
 Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 enum AsyncStatusInternal;  
 ```  
   
@@ -37,20 +37,20 @@ enum AsyncStatusInternal;
  Gibt eine Zuordnung zwischen internen Enumerationen für den Status von asynchronen Vorgängen und die `Windows::Foundation::AsyncStatus` Enumeration.  
   
 ## <a name="members"></a>Member  
- *_Erstellt*  
- Äquivalent zu:: Windows::Foundation::AsyncStatus:: erstellt  
+ `_Created`  
+ Entspricht `::Windows::Foundation::AsyncStatus::Created`.  
   
- *_Started*  
- Äquivalent zu:: Windows::Foundation::AsyncStatus:: gestartet  
+ `_Started`  
+ Entspricht `::Windows::Foundation::AsyncStatus::Started`.  
   
- *_Completed*  
- Äquivalent zu:: Windows::Foundation::AsyncStatus:: abgeschlossen  
+ `_Completed`  
+ Entspricht `::Windows::Foundation::AsyncStatus::Completed`.  
   
- *_Cancelled*  
- Äquivalent zu:: Windows::Foundation::AsyncStatus:: abgebrochen  
+ `_Cancelled`  
+ Entspricht `::Windows::Foundation::AsyncStatus::Cancelled`.  
   
- *_Error*  
- Äquivalent zu:: Windows::Foundation::AsyncStatus::Error  
+ `_Error`  
+ Entspricht `::Windows::Foundation::AsyncStatus::Error`.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** async.h  

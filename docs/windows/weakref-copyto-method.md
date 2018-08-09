@@ -1,5 +1,5 @@
 ---
-title: 'Weakref:: CopyTo-Methode | Microsoft Docs'
+title: 'Weakref:: CopyTo-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 817d984e995e7ac33ba80f978a282a8c0bac3e4f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 90756dc8ff515a8c956778bf8c6392332a8f9ca9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890634"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652746"
 ---
 # <a name="weakrefcopyto-method"></a>WeakRef::CopyTo-Methode
 Weist einer Schnittstelle einen Zeiger zu, falls verfügbar zur angegebenen Zeigervariablen.  
@@ -45,23 +45,23 @@ HRESULT CopyTo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `U`  
- Zeiger auf eine „IInspectable“-Schnittstelle. Ein Fehler wird ausgegeben, wenn `U` nicht von „IInspectable“ abgeleitet ist.  
+### <a name="parameters"></a>Parameter  
+ *U*  
+ Zeiger ein `IInspectable` Schnittstelle. Ein Fehler wird ausgegeben, wenn *U* stammt nicht aus `IInspectable`.  
   
- `riid`  
- Eine Schnittstellen-ID. Ein Fehler wird ausgegeben, wenn `riid` nicht von **IWeakReference**abgeleitet ist.  
+ *riid*  
+ Eine Schnittstellen-ID. Ein Fehler wird ausgegeben, wenn *Riid* stammt nicht aus `IWeakReference`.  
   
- `ptr`  
- Ein doppelt indirekter Zeiger auf „IInspectable“ oder „IWeakReference“.  
+ *ptr*  
+ Ein doppelt indirekter Zeiger auf `IInspectable` oder `IWeakReference`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- „S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt. Weitere Informationen finden Sie in den Hinweisen.  
+ „S_OK“ im Erfolgsfall, andernfalls ein HRESULT, das den Fehler beschreibt. Weitere Informationen finden Sie in den **Hinweisen**.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Rückgabewert „S_OK“ bedeutet, dass dieser Vorgang erfolgreich war, gibt aber nicht an, ob der schwache Verweis zu einem starken Verweis aufgelöst wurde. Wenn „S_OK“ zurückgegeben wird, prüfen Sie, ob der Parameter `p` ein starker Verweis ist; das heißt, der Parameter `p` ist kein `nullptr`.  
+ Der Rückgabewert „S_OK“ bedeutet, dass dieser Vorgang erfolgreich war, gibt aber nicht an, ob der schwache Verweis zu einem starken Verweis aufgelöst wurde. Wenn S_OK zurückgegeben wird, testen Sie diesen Parameter *p* ein starker Verweis, d. h. Parameter *p* ist kein **"nullptr"**.  
   
- Beginnend mit dem Windows 10 SDK legt diese Methode die WeakRef-Instanz nicht auf `nullptr` fest, wenn der schwache Verweis nicht abgerufen werden konnte, daher sollten Sie Code zur Fehlerprüfung vermeiden, der WeakRef auf `nullptr`überprüft. Überprüfen Sie stattdessen `ptr` für `nullptr`.  
+ Ab Windows 10-SDKS können dieser Methode ist nicht festgelegt der **WeakRef** Instanz **"nullptr"** Wenn der schwache Verweis nicht abgerufen werden kann, so vermeiden Sie Fehler beim Überprüfen von Code, der WeakRef überprüft. **"nullptr"**. Überprüfen Sie stattdessen *Ptr* für **"nullptr"**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

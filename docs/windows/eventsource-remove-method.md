@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9dd026158a2bbc76e7a3e195bc5346f65821f2b7
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 36a057bbad39e61576828c5a02f6863248b235cf
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569494"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641404"
 ---
 # <a name="eventsourceremove-method"></a>EventSource::Remove-Methode
 Löscht den Ereignishandler, die durch das angegebene Ereignis Registrierungstoken dargestellt wird, aus dem Satz von Ereignishandlern verknüpft ist, mit dem aktuellen **EventSource** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Remove(  
    EventRegistrationToken token  
 );  
@@ -43,7 +43,7 @@ HRESULT Remove(
  S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen über die EventRegistrationToken-Struktur finden Sie unter den `Windows::Foundation::EventRegistrationToken` Struktur Thema in der Windows-Runtime-Referenzdokumentation.  
+ Weitere Informationen zu den `EventRegistrationToken` Struktur, siehe die **Windows::Foundation::EventRegistrationToken Struktur** Thema in der **Windows-Runtime** Referenzdokumentation.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  

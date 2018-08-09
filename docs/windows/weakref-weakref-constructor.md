@@ -1,5 +1,5 @@
 ---
-title: 'Weakref:: Weakref-Konstruktor | Microsoft Docs'
+title: 'Weakref:: Weakref-Konstruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae70dabdd86fedf82c26c0c7d9a09d842e2310e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eafbddea6ae651d74d8f33be8efa58c25a8a0d3d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891047"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641472"
 ---
 # <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef-Konstruktor
-Initialisiert eine neue Instanz der WeakRef-Klasse.  
+Initialisiert eine neue Instanz der dem **WeakRef** Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,12 +52,12 @@ WeakRef(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `ptr`  
- Ein Zeiger, ein Verweis oder ein Rvalue-Verweis auf ein vorhandenes Objekt, das das aktuelle WeakRef-Objekt initialisiert.  
+### <a name="parameters"></a>Parameter  
+ *ptr*  
+ Ein Zeiger, Verweis oder Rvalue-Verweis auf ein vorhandenes Objekt, das das aktuelle initialisiert **WeakRef** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Der erste Konstruktor initialisiert ein leeres WeakRef-Objekt. Der zweite Konstruktor initialisiert ein WeakRef-Objekt von einem Zeiger auf die Schnittstelle "iweakreference". Der dritte Konstruktor initialisiert ein WeakRef-Objekt aus einem Verweis auf ein ComPtr\<"iweakreference" > Objekt. Der vierte und fünfte Konstruktor initialisiert ein WeakRef-Objekt aus einem anderen WeakRef-Objekt.  
+ Der erste Konstruktor initialisiert ein leeres **WeakRef** Objekt. Der zweite Konstruktor initialisiert ein **WeakRef** Objekt von einem Zeiger auf die `IWeakReference` Schnittstelle. Der dritte Konstruktor initialisiert ein **WeakRef** Objekt aus einem Verweis auf eine `ComPtr<IWeakReference>` Objekt. Der vierte und fünfte Konstruktor initialisiert ein **WeakRef** Objekt von einem anderen **WeakRef** Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

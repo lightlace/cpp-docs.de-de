@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fb431c6aad10f7e974ed139ddf83cfb0a58d30a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 73b51afda48fe0653767a40120cc6c0cdc0e831b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465869"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644946"
 ---
 # <a name="callas"></a>call_as
 Ermöglicht einem [lokalen](../windows/local-cpp.md) Funktion, um eine remote-Funktion, damit die lokale Funktion aufgerufen wird, wenn die remote-Funktion aufgerufen wird, zugeordnet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ call_as(  
    function  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *function*  
  Die lokale Funktion, die aufgerufen werden, wenn eine remote-Funktion aufgerufen wird, werden sollen.  
   
@@ -43,7 +43,7 @@ Ermöglicht einem [lokalen](../windows/local-cpp.md) Funktion, um eine remote-Fu
  Die **Call_as** C++-Attribut hat die gleiche Funktionalität wie die [Call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt, wie Sie verwenden können **Call_as** , eine Funktion nicht remotefähige zuzuordnen (**f1**) an eine remotefähige-Funktion (**Remf1**):  
+ Der folgende Code zeigt, wie Sie verwenden können **Call_as** , eine Funktion nicht remotefähige zuzuordnen (`f1`) an eine remotefähige-Funktion (`Remf1`):  
   
 ```cpp  
 // cpp_attr_ref_call_as.cpp  

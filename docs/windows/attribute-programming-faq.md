@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5cdc7bb8a97be6fbc8c77c06caaddf95a3095323
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: cd89a2a46535c145e4ef6f84cee0b5604346f4b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463742"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645200"
 ---
 # <a name="attribute-programming-faq"></a>Fragen und Antworten zur attributierten Programmierung
 In diesem Thema werden die folgenden häufig gestellten Fragen beantwortet:  
@@ -46,7 +46,7 @@ In diesem Thema werden die folgenden häufig gestellten Fragen beantwortet:
 -   [Kann ich verwenden Attribute für eine Klasse, die von einer Klasse, die Attribute auch verwendet abgeleitet?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Was ist ein HRESULT?  
- Ein `HRESULT` wird von ein einfachen Datentyp, der häufig als Rückgabewert von Attributen und ATL im Allgemeinen verwendet wird. Die folgende Tabelle beschreibt die verschiedenen Werte. Weitere Werte sind in den Header-Datei "Winerror.h" enthalten.  
+ Ein HRESULT ist ein einfacher Datentyp, der häufig als Rückgabewert von Attributen und ATL im Allgemeinen verwendet wird. Die folgende Tabelle beschreibt die verschiedenen Werte. Weitere Werte sind in den Header-Datei "Winerror.h" enthalten.  
   
 |name|Beschreibung|Wert|  
 |----------|-----------------|-----------|  
@@ -65,7 +65,7 @@ In diesem Thema werden die folgenden häufig gestellten Fragen beantwortet:
 ##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Wenn habe ich den Parameternamen für ein Attribut angeben?  
  In den meisten Fällen Wenn das Attribut auf einen einzelnen Parameter, hat dieser Parameter heißt. Dieser Name ist nicht erforderlich, wenn Sie das Attribut in Ihrem Code einfügen. Z. B. die folgende Syntax, der die [aggregierbaren](../windows/aggregatable.md) Attribut:  
   
-```  
+```cpp  
 [coclass, aggregatable(value=allowed)]  
 class CMyClass  
 {  
@@ -75,7 +75,7 @@ class CMyClass
   
  ist genau identisch:  
   
-```  
+```cpp  
 [coclass, aggregatable(allowed)]  
 class CMyClass  
 {  
@@ -104,7 +104,7 @@ class CMyClass
   
  Folgendes ist zulässig:  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1"), /* Multiple-line  
                                        comment */  
@@ -114,7 +114,7 @@ class CMyClass
   
  Die folgenden nicht zulässig ist:  
   
-```  
+```cpp  
 [ coclass,  
    progid("MyClass.CMyClass.1" /* Multiple-line comment */ ),  
    threading("both" // Single-line comment)  
@@ -125,10 +125,10 @@ class CMyClass
  Sie können sowohl attributierte Klassen von anderen Klassen erben, die selbst oder nicht zugeordnet werden kann. Das Ergebnis der Ableitung von einer attributierte Klasse ist dasselbe wie eine Ableitung von dieser Klasse nach Attributanbieter seinen Code umgewandelt hat. Attribute werden nicht auf abgeleitete Klassen durch Vererbung von C++ übertragen. Einem Attributanbieter transformiert nur Code ausgetreten ist, dessen Attribute.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Wie kann ich die Attribute in einem nicht attributierte ATL-Projekt verwenden?  
- Möglicherweise ein nicht attributierte ATL-Projekt, das verfügt über eine IDL-Datei, und starten attributierter Objekte hinzufügen möchten. In diesem Fall verwenden Sie den Assistenten zum Hinzufügen einer Klasse, um den Code bereitstellen.  
+ Möglicherweise ein nicht attributierte ATL-Projekt, das verfügt über eine IDL-Datei, und starten attributierter Objekte hinzufügen möchten. In diesem Fall verwenden Sie die **Assistenten zum Hinzufügen von Klasse** auf den Code bereitstellen.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Wie kann ich eine IDL-Datei in einem attributierten Projekt verwenden?  
- Sie möglicherweise eine IDL-Datei, die Sie in Ihrem attributierten ATL-Projekt verwenden möchten. In diesem Fall würden Sie verwenden die [Importidl](../windows/importidl.md) Attribut, kompilieren Sie die IDL-Datei in eine .h-Datei (finden Sie unter den [Eigenschaftenseiten "MIDL"](../ide/midl-property-pages.md) im Dialogfeld Eigenschaftenseiten des Projekts), und fügen Sie dann die .h-Datei in Ihrem Projekt .  
+ Sie möglicherweise eine IDL-Datei, die Sie in Ihrem attributierten ATL-Projekt verwenden möchten. In diesem Fall würden Sie verwenden die [Importidl](../windows/importidl.md) Attribut, kompilieren Sie die IDL-Datei in eine .h-Datei (finden Sie unter den [Eigenschaftenseiten "MIDL"](../ide/midl-property-pages.md) des Projekts **Eigenschaftenseiten** Dialogfeld), und Schließen Sie dann die .h-Datei in Ihr Projekt.  
   
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Kann ich Code ändern, die von einem Attribut eingefügt wird?  
  Einige Attribute fügen Code in Ihr Projekt. Sie können den eingefügten Code anzeigen, indem Sie mit der [/FX](../build/reference/fx-merge-injected-code.md) -Compileroption. Es ist auch möglich, Code aus der eingefügten Datei kopieren und fügen ihn in Ihren Quellcode. Dadurch können Sie das Verhalten des Attributs zu ändern. Allerdings müssen Sie möglicherweise andere Teile Ihres Codes auch ändern.  

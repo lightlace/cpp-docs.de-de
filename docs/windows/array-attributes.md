@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac37f1b5b5df8f39e584b8e5476af81a4b09ecff
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 10f97f1ce98bbc3de81e1888aad7c36f237f6396
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464336"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650348"
 ---
 # <a name="array-attributes"></a>Arrayattribute
 Die folgenden Attribute gelten für Arrays oder `SAFEARRAY`s.  
@@ -28,8 +28,8 @@ Die folgenden Attribute gelten für Arrays oder `SAFEARRAY`s.
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |[library_block](../windows/library-block.md)|Fügt ein Konstrukt in bibliotheksblock der IDL-Datei an.|  
-|[satype](../windows/satype.md)|Gibt den Datentyp, der die SAFEARRAY-Datenstruktur an.|  
-|[string](../windows/string-cpp.md)|Gibt an, dass das eindimensionale **Char**, **"wchar_t"**, **Byte** (oder Äquivalent) Array oder der Zeiger auf ein solches Array muss als Zeichenfolge behandelt werden.|  
+|[satype](../windows/satype.md)|Gibt den Datentyp, der die `SAFEARRAY` Struktur.|  
+|[string](../windows/string-cpp.md)|Gibt an, dass das eindimensionale **Char**, **"wchar_t"**, `byte` (oder Äquivalent) Array oder der Zeiger auf ein solches Array muss als Zeichenfolge behandelt werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Attribute nach Verwendung](../windows/attributes-by-usage.md)

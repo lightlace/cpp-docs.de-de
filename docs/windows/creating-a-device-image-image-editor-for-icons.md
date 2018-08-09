@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Gerätebilds (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Erstellen eines Gerätebilds (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,33 +22,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8fc1ce4bd5a6e125ece7461d100950f255dee44
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbdc52cca73d568cb365deb345ec6465488e3b40
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873224"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641342"
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>Erstellen eines Gerätebilds (Bildbearbeitung für Symbole)
-Wenn Sie eine neue Symbols oder Cursors mit Ressource, das Bild-Editor erstellen erstellt zunächst ein Bild in einem bestimmten Format (32 x 32, 16 Farben für Symbole und 32 x 32, Monochrom für Cursor). Sie können Bilder in verschiedenen Größen und Formate auf das erste Symbol oder Cursor hinzufügen und jede zusätzliche Bild nach Bedarf für die verschiedenen Anzeigegeräte bearbeiten. Sie können ein Bild auch durch Ausschneiden und Einfügen aus einem vorhandenen Image-Typ oder von einer Bitmap in einem Graphics-Programm erstellt bearbeiten.  
+Bei der Erstellung ein neues Symbol oder Cursor-Ressource, die **Image** Editor erstellt zunächst ein Image eines bestimmten Formats (32 × 32, 16 Farben für Symbole und 32 × 32, Monochrom für Cursor). Sie können dann Hinzufügen von Bildern in verschiedenen Größen und Formate zu dem ersten Symbol oder Cursor und jedes zusätzliche Image Bedarf bearbeiten, für die verschiedenen Anzeigegeräten. Sie können ein Bild auch bearbeiten, indem eine Ausschneiden und Einfügen-Operation aus einem vorhandenen Imagetyp oder aus einer Bitmap in einem Grafikprogramm erstellte.  
   
- Beim Öffnen der Symbols oder Cursors mit Ressourcen in der [bildbearbeitung](../windows/image-editor-for-icons.md), das Bild, das das aktuellen Anzeigegerät am ehesten entspricht, wird standardmäßig geöffnet.  
+ Beim Öffnen der Ressource Symbol oder Cursor in die [bildbearbeitung](../windows/image-editor-for-icons.md), das Bild, das das aktuelle Anzeigegerät am ehesten entspricht, wird standardmäßig geöffnet.  
   
-### <a name="to-create-a-new-icon-or-cursor"></a>So erstellen ein neues Symbol oder cursor  
+### <a name="to-create-a-new-icon-or-cursor"></a>Erstellen Sie ein neues Symbol oder cursor  
   
-1.  In [Ressourcenansicht](../windows/resource-view-window.md), mit der rechten Maustaste der RC-Datei, und wählen Sie dann **Ressource einfügen** aus dem Kontextmenü. (Falls Sie eine Bildressource in der RC-Datei, z. B. einen Cursor, noch können Sie einfach auf Rechtsklicken der **Cursor** Ordner, und wählen **Cursor einfügen** aus dem Kontextmenü.)  
+1.  In [Ressourcenansicht](../windows/resource-view-window.md)mit der rechten Maustaste auf die RC-Datei, und wählen Sie **Ressource einfügen** aus dem Kontextmenü. (Wenn Sie bereits über eine vorhandene imageressource in der RC-Datei, z. B. einen Cursor, haben Sie können einfach mit der rechten Maustaste die **Cursor** Ordner, und wählen **Cursor einfügen** aus dem Kontextmenü.)  
   
     > [!NOTE]
     >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  In der [Dialogfeld "Ressource einfügen"](../windows/add-resource-dialog-box.md)Option **Symbol** oder **Cursor** , und klicken Sie auf **neu**. Für Symbole wird hierdurch eine Symbolressource mit 32 x 32 Pixel und 16 Farben erstellt. Bei Cursorn 32 x 32 Pixel, wird die Bildtypen (2-Farbe) erstellt.  
+2.  In der [Ressource einfügen (Dialogfeld)](../windows/add-resource-dialog-box.md)Option **Symbol** oder **Cursor** , und klicken Sie auf **neu**. Für Symbole erstellt dies eine Symbolressource mit 32 × 32 Pixel, 16 Farben. Bei Cursorn 32 × 32 Pixel, wird die Monochrome (2 Farben)-Abbild erstellt.  
   
-     Wenn ein Pluszeichen (**+**) wird neben der Image-Ressourcentyp im angezeigt, die **Ressource einfügen** (Dialogfeld), es bedeutet, dass die Symbolleistenvorlagen verfügbar sind. Klicken Sie auf das Pluszeichen (+) erweitern die Liste der Vorlagen, wählen Sie eine Vorlage, und klicken Sie auf **neu**.  
+     Wenn ein Pluszeichen (**+**) wird neben der Image-Ressourcentyp in der **Ressource einfügen** Dialogfeld es bedeutet, dass die Symbolleistenvorlagen verfügbar sind. Klicken Sie auf das Pluszeichen, um der Liste der Vorlagen erweitern, wählen Sie eine Vorlage aus, und auf **neu**.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- **Anforderungen**  
-  
+## <a name="requirements"></a>Anforderungen  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  

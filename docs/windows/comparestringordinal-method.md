@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58e808510868e375672ee5de0b27c4bed3c568e0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7084b16536533c9605b741adb596a2a7d383c153
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464050"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649997"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal-Methode
 Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
@@ -33,7 +33,7 @@ inline INT32 CompareStringOrdinal(
    HSTRING rhs)  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *LHS*  
  Das erste HSTRING, verglichen werden soll.  
   

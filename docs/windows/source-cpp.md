@@ -1,5 +1,5 @@
 ---
-title: Quelle (C++) | Microsoft Docs
+title: Quelle (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11ee58fb2d500a7194fb08ee18b1af5cc7897830
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07f9c9f93b213b13694f2741b5210614626d82f9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889861"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651521"
 ---
 # <a name="source-c"></a>source (C++)
-Für eine Klasse gibt Schnittstellen für Verbindungspunkte der COM-Objekt. Auf eine Eigenschaft oder Methode gibt Sie an, dass das Element zurückgibt, ein Objekt oder eine Variante, die Quelle von Ereignissen ist.  
+Gibt an für eine Klasse das COM-Objekt-Schnittstellen für Verbindungspunkte aus. Auf eine Eigenschaft oder Methode gibt Sie an, dass das Element zurückgibt, ein Objekt oder eine Variante, die eine Ereignisquelle ist.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ source(  
+[ source(  
    interfaces  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `interfaces`  
- Eine oder mehrere Schnittstellen, die Sie angeben, wenn Sie die Quelle anwenden Attribut auf eine Klasse. Dieser Parameter wird nicht verwendet werden, wenn die Quelle auf eine Eigenschaft oder Methode angewendet wird.  
+### <a name="parameters"></a>Parameter  
+ *interfaces*  
+ Eine oder mehrere Schnittstellen, die Sie angeben, wenn Sie die Quelle anwenden Attribut auf eine Klasse. Dieser Parameter wird nicht verwendet werden, wenn Quelle auf eine Eigenschaft oder Methode angewendet wird.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Quelle** C++-Attribut hat die gleiche Funktionalität wie die [Quelle](http://msdn.microsoft.com/library/windows/desktop/aa367166) MIDL-Attribut.  
   
- Sie können der [Standard](../windows/default-cpp.md) Attribut, um die Standard-Quellschnittstelle für ein Objekt anzugeben.  
+ Können Sie die [Standard](../windows/default-cpp.md) Attribut, um die Standard-Quellschnittstelle für ein Objekt anzugeben.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // cpp_attr_ref_source.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -85,9 +84,9 @@ class NN : public b
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`, `interface`|  
+|**Betrifft**|**Klasse**, **Struktur**, **Schnittstelle**|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**Co-Klasse** (wenn es sich um eine Klasse oder Struktur angewendet wird)|  
+|**Erforderliche Attribute**|`coclass` (wenn es sich um eine Klasse oder Struktur angewendet wird)|  
 |**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
@@ -95,5 +94,5 @@ class NN : public b
 ## <a name="see-also"></a>Siehe auch  
  [IDL-Attribute](../windows/idl-attributes.md)   
  [Klassenattribute](../windows/class-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [coclass](../windows/coclass.md)   

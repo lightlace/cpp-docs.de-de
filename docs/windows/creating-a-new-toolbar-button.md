@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer neuen Symbolleistenschaltfläche | Microsoft Docs
+title: Erstellen einer neuen Symbolleistenschaltfläche | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,55 +20,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d883fbb34fe45be2ad84860ea7564350346749f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f174bb24ef7782424b07ac681aed601a719cd6d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873026"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650981"
 ---
 # <a name="creating-a-new-toolbar-button"></a>Erstellen einer neuen Symbolleisten-Schaltfläche
-### <a name="to-create-a-new-toolbar-button"></a>Zum Erstellen einer neuen Symbolleisten-Schaltfläche  
+### <a name="to-create-a-new-toolbar-button"></a>Erstellen Sie eine neue Symbolleisten-Schaltfläche  
   
 1.  In [Ressourcenansicht](../windows/resource-view-window.md) erweitern Sie den Ressourcenordner (z. B. Projekt1.rc).  
   
     > [!NOTE]
     >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Erweitern Sie die **Symbolleiste** Ordner, und wählen Sie eine Symbolleiste zu bearbeiten.  
+2.  Erweitern Sie die **Symbolleiste** Ordner, und wählen Sie eine Symbolleiste zur Bearbeitung.  
   
-3.  Weisen Sie eine ID, auf die leere Schaltfläche am rechten Ende der Symbolleiste. Können Sie dies tun, indem Sie bearbeiten die **ID** Eigenschaft in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Beispielsweise empfiehlt es sich um einer Symbolleisten-Schaltfläche auf die gleiche ID wie eine Menüoption zu gewähren. In diesem Fall verwenden Sie im Dropdown-Listenfeld auswählen der **ID** der Menüoption.  
+3.  Weisen Sie eine ID, auf die leere Schaltfläche am rechten Ende der Symbolleiste. Bearbeiten Sie dazu die **ID** -Eigenschaft in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Beispielsweise empfiehlt es sich um einer Symbolleisten-Schaltfläche, die gleiche ID wie eine Menüoption gewähren. In diesem Fall verwenden Sie im Dropdown-Listenfeld auswählen der **ID** der Menüoption.  
   
      - oder -   
   
-     Wählen Sie die leere Schaltfläche am rechten Ende der Symbolleiste (im Symbolleisten Ansichtsbereich), und beginnen Sie zeichnen. Die Befehls-ID eine Standard-Schaltfläche zugewiesen ist (ID_BUTTON\<n >).  
+     Wählen Sie die leere Schaltfläche am rechten Ende der Symbolleiste (in der **Symbolleiste anzeigen** Bereich) und Zeichnen zu beginnen. Die Befehls-ID eine Standard-Schaltfläche zugewiesen ist (ID_BUTTON\<n >).  
   
- Sie können auch kopieren und fügen Sie ein Bild auf einer Symbolleiste als eine Schaltfläche "Neu".  
+ Sie können auch kopieren und fügen Sie ein Image auf einer Symbolleiste als neue Schaltfläche.  
   
-#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>So fügen Sie ein Bild zu einer Symbolleiste als Schaltfläche hinzu  
+### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Hinzufügen eines Bilds zu einer Symbolleiste als Schaltfläche  
   
 1.  In [Ressourcenansicht](../windows/resource-view-window.md), öffnen Sie die Symbolleiste, indem Sie darauf doppelklicken.  
   
-2.  Als Nächstes öffnen Sie das Bild, das Sie hinzufügen möchten, klicken Sie auf der Symbolleiste angezeigt wird.  
+2.  Öffnen Sie als Nächstes das Bild, das Sie hinzufügen, klicken Sie auf der Symbolleiste möchten.  
   
     > [!NOTE]
-    >  Wenn Sie das Bild in Visual Studio öffnen, wird es in der Grafik-Editor geöffnet. Sie können auch das Bild in anderen Programmen öffnen.  
+    >  Wenn Sie das Bild in Visual Studio öffnen, öffnen sie in der **Image** Editor. Sie können das Bild auch in anderen Grafikprogrammen öffnen.  
   
-3.  Aus der **bearbeiten** Menü wählen **Kopie**.  
+3.  Von der **bearbeiten** Menü wählen **Kopie**.  
   
-4.  Wechseln Sie auf der Symbolleiste angezeigt wird, indem Sie auf der Registerkarte am oberen Rand des Quellcodefensters.  
+4.  Wechseln Sie zu der Symbolleiste, indem Sie auf der Registerkarte am oberen Rand des Fensters Datenquelle.  
   
-5.  Aus der **bearbeiten** Menü wählen **einfügen**.  
+5.  Von der **bearbeiten** Menü wählen **einfügen**.  
   
-     Das Bild wird als eine Schaltfläche "Neu" auf der Symbolleiste angezeigt.  
+     Das Bild wird auf der Symbolleiste als neue Schaltfläche angezeigt.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  MFC oder ATL  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaften von Symbolleisten-Schaltfläche](../windows/toolbar-button-properties.md)   
- [Erstellen, verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md)   
+ [Erstellen, verschieben und Bearbeiten von Symbolleistenschaltflächen](../windows/creating-moving-and-editing-toolbar-buttons.md)   
  [Symbolleisten-Editor](../windows/toolbar-editor.md)
-

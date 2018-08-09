@@ -1,5 +1,5 @@
 ---
-title: Vararg | Microsoft Docs
+title: Vararg | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2de377bc31898c91bb6db63e160b536428ae8d0e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f842d27f6b0dfc72a48f1bc7fbcb8fcccb0c26e3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890966"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650403"
 ---
 # <a name="vararg"></a>vararg
 Gibt an, dass die Funktion eine Variable Anzahl von Argumenten akzeptiert.  
@@ -30,9 +30,7 @@ Gibt an, dass die Funktion eine Variable Anzahl von Argumenten akzeptiert.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [vararg]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
@@ -41,7 +39,7 @@ Gibt an, dass die Funktion eine Variable Anzahl von Argumenten akzeptiert.
 ## <a name="example"></a>Beispiel  
  Der folgende Code veranschaulicht die Verwendung der **Vararg**:  
   
-```  
+```cpp  
 // cpp_attr_ref_vararg.cpp  
 // compile with: /LD  
 #include "unknwn.h"  

@@ -1,5 +1,5 @@
 ---
-title: eindeutige (C++) | Microsoft Docs
+title: eindeutige (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebb492d576e82c276aeb1cb464a39b558040fdc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 826d296e4c11571151ff0cd3265465b4307d2d92
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890135"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643964"
 ---
 # <a name="unique-c"></a>unique (C++)
 Gibt einen eindeutigen Zeiger.  
@@ -30,16 +30,14 @@ Gibt einen eindeutigen Zeiger.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [unique]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die **eindeutige** C++-Attribut hat die gleiche Funktionalität wie die [eindeutige](http://msdn.microsoft.com/library/windows/desktop/aa367294) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Finden Sie unter der [Ref](../windows/ref-cpp.md) Beispiel für ein Beispiel für die Verwendung von **eindeutige**.  
+ Finden Sie unter den [Ref](../windows/ref-cpp.md) Beispiel für ein Beispiel für die Verwendung von **eindeutige**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -47,7 +45,7 @@ Gibt einen eindeutigen Zeiger.
   
 |||  
 |-|-|  
-|**Betrifft**|`typedef`, `struct`, **Union**, Parameter interface, Schnittstelle Methode|  
+|**Betrifft**|**TypeDef**, **Struktur**, **Union**, Schnittstellenparameter,-Schnittstellenmethode|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

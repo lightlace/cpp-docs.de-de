@@ -1,5 +1,5 @@
 ---
-title: 'Handlet:: Get-Methode | Microsoft Docs'
+title: 'Handlet:: Get-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb1f4432b112daf6a0f00a4568302a75b6b40f3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b7b31161ab0539a6b31b574c8cf306b4ae33378
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882965"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651596"
 ---
 # <a name="handletget-method"></a>HandleT::Get-Methode
-Ruft den Wert des zugrunde liegenden Handles ab.  
+Ruft den Wert, der das zugrunde liegende Handle.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typename HandleTraits::Type Get() const;  
 ```  
   

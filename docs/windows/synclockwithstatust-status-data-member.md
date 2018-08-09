@@ -1,5 +1,5 @@
 ---
-title: 'Synclockwithstatust:: Status_-Datenmember | Microsoft Docs'
+title: 'Synclockwithstatust:: Status_-Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a6d8fb587ed86063e19a44cd391ea04d75b2a68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d1dc6cbab11a41707aa60aa37d63ae0e5042ba5a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888451"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652847"
 ---
 # <a name="synclockwithstatuststatus-data-member"></a>SyncLockWithStatusT::status_-Datenmember
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ DWORD status_;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Enthält das Ergebnis der zugrunde liegenden Wartevorgang nach einer Sperre auf Grundlage des aktuellen SyncLockWithStatusT-Objekts ein Objekt zu.  
+ Das Ergebnis der zugrunde liegenden Wartevorgang enthält, nachdem ein Vorgang für ein Objekt abhängig von der aktuellen **SyncLockWithStatusT** Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

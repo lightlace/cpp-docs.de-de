@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80fcd19d07387bd8f9a7c2a8107f0d84a07f8540
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: e4beb2f64448af585537347f0bf0bc7474f541c5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568980"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653169"
 ---
 # <a name="handlethandle-data-member"></a>HandleT::handle_ Data-Member
 Enthält das Handle, das entspricht dem **HandleT** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typename HandleTraits::Type handle_;  
 ```  
   

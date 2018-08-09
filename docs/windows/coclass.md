@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99a8924776249a3a919a03ca76b4562c39994d4f
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2043ca568f36d7fc0eaaffbf940cabb423de5620
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463115"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647839"
 ---
 # <a name="coclass"></a>coclass
 Erstellt ein COM-Objekt, die eine COM-Schnittstelle implementieren können.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [coclass]  
 ```  
   
@@ -78,7 +78,7 @@ Erstellt ein COM-Objekt, die eine COM-Schnittstelle implementieren können.
   
 -   Ein [OBJECT_ENTRY_AUTO](../atl/reference/object-map-macros.md#object_entry_auto) Makro wird in der COM-Zuordnung eingefügt.
   
- Der Name der Co-Klasse in der IDL-Datei für die Klasse generiert, müssen den gleichen Namen wie die Klasse.  Verwenden Sie zum Beispiel, und verweisen auf die im folgenden Beispiel wird für den Zugriff auf die Klassen-ID für eine Co-Klasse CMyClass, in einem Client über die MIDL-generierten Headerdatei CLSID_CMyClass aus.  
+ Der Name der Co-Klasse in der IDL-Datei für die Klasse generiert, müssen den gleichen Namen wie die Klasse.  Zum Beispiel, und verweisen auf das folgende Beispiel die Klassen-ID für eine Co-Klasse den Zugriff auf `CMyClass`, verwenden Sie in einem Client über die MIDL-generierten Headerdatei `CLSID_CMyClass`.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code zeigt, wie Sie mit der **Co-Klasse** Attribut:  
@@ -99,7 +99,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};  
 ```  
   
- Das folgende Beispiel zeigt, wie die standardmäßige Implementierung einer Funktion überschrieben, das in den mittels eingefügten Code wird die **Co-Klasse** Attribut. Weitere Informationen zum Anzeigen von eingefügtem Code finden Sie unter [/Fx](../build/reference/fx-merge-injected-code.md) . Alle Basisklassen oder Schnittstellen, mit denen Sie für eine Klasse wird werden in den eingefügten Code angezeigt.   Darüber hinaus wird, wenn eine Klasse ist standardmäßig in den eingefügten Code enthalten, und Sie explizit dieser Klasse als Basis für die Co-Klasse angeben, Attributanbieter das Formular angegeben, die in Ihrem Code verwenden.  
+ Das folgende Beispiel zeigt, wie die standardmäßige Implementierung einer Funktion überschrieben, das in den mittels eingefügten Code wird die **Co-Klasse** Attribut. Weitere Informationen zum Anzeigen von eingefügtem Code finden Sie unter [/Fx](../build/reference/fx-merge-injected-code.md) . Alle Basisklassen oder Schnittstellen, mit denen Sie für eine Klasse wird werden in den eingefügten Code angezeigt. Darüber hinaus wird, wenn eine Klasse ist standardmäßig in den eingefügten Code enthalten, und Sie explizit dieser Klasse als Basis für die Co-Klasse angeben, Attributanbieter das Formular angegeben, die in Ihrem Code verwenden.  
   
 ```cpp  
 // cpp_attr_ref_coclass2.cpp  

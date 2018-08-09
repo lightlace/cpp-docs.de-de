@@ -1,5 +1,5 @@
 ---
-title: Standard-Steuerelementereignisse | Microsoft Docs
+title: Standard Steuerelementereignisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,43 +18,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a50b0deeb525481afb1da7221689924c41930bff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d9ffea9bf6ffbbc6d34e130b2031297ff1ef3f99
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874095"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649619"
 ---
 # <a name="default-control-events"></a>Standardereignisse für Steuerelemente
-Die folgenden Namen von Steuerelementen haben die zugehörigen Standardereignissen:  
+Die folgenden Steuerelementnamen haben die Standard-Hinweise:  
   
 |Steuerelementname|Standardereignis|  
 |------------------|-------------------|  
-|Animieren|**ACN_START**|  
-|Kontrollkästchen|**BN_CLICKED**|  
-|Kombinationsfeld|**CBN_SELCHANGE**|  
-|Benutzerdefiniert|**TTN_GETDISPINFO**|  
-|Datums-/Zeitauswahl|**DTN_DATETIMECHANGE**|  
-|Eingabefeld|**EN_CHANGE**|  
+|Animieren|ACN_START|  
+|Kontrollkästchen|BN_CLICKED|  
+|Kombinationsfeld|CBN_SELCHANGE|  
+|Benutzerdefiniert|TTN_GETDISPINFO|  
+|Datums-/ Zeitauswahl|DTN_DATETIMECHANGE|  
+|Bearbeitungsfeld|EN_CHANGE-EREIGNIS|  
 |Gruppenfeld|(Nicht zutreffend)|  
-|Abkürzungstaste|**NM_OUTOFMEMORY**|  
-|IP-Adresse|**IPN_FIELDCHANGED**|  
-|Liste|**LVN_ITEMCHANGE**|  
-|Listenfeld|**LBN_SELCHANGE**|  
-|Monatskalender|**MCN_SELCHANGE**|  
+|Abkürzungstaste|NM_OUTOFMEMORY|  
+|IP-Adresse|IPN_FIELDCHANGED|  
+|Liste|LVN_ITEMCHANGE|  
+|Listenfeld|LBN_SELCHANGE|  
+|Monatskalender|MCN_SELCHANGE|  
 |Bildsteuerelement|(Nicht zutreffend)|  
-|Status|**NM_CUSTOMDRAW**|  
-|Push-Schaltfläche|**BN_CLICKED**|  
-|Optionsfeld|**BN_CLICKED**|  
-|Rich-edit|**EN_CHANGE**|  
-|Bildlaufleiste|**NM_THEMECHANGED**|  
-|Slider|**NM_CUSTOMDRAW**|  
-|Drehfeld|**UDN_DELTAPOS**|  
+|Status|NM_CUSTOMDRAW|  
+|Schaltfläche|BN_CLICKED|  
+|Optionsfeld|BN_CLICKED|  
+|Rich-edit|EN_CHANGE-EREIGNIS|  
+|Bildlaufleiste|NM_THEMECHANGED|  
+|Slider|NM_CUSTOMDRAW|  
+|Drehfeld|UDN_DELTAPOS|  
 |Statischer Text|(Nicht zutreffend)|  
-|Registerkarte|**TCN_SELCHANGE**|  
-|Struktur|**TVN_SELCHANGE**|  
+|Registerkarte|TCN_SELCHANGE|  
+|Struktur|TVN_SELCHANGE|  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  
@@ -66,4 +66,3 @@ Die folgenden Namen von Steuerelementen haben die zugehörigen Standardereigniss
  [Definieren eines Meldungshandlers für eine reflektierte Meldung](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)   
  [Deklarieren einer Variablen, die basierend auf der neuen Steuerelementklasse](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)   
  [Überschreiben einer virtuellen Funktion](../ide/overriding-a-virtual-function-visual-cpp.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Verknüpfen von Menübefehlen mit Statusleistentext in MFC-Anwendungen | Microsoft Docs
+title: Verknüpfen von Menübefehlen mit Statusleistentext in MFC-Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 17326bdb8fe01c9ad329db0a6c7e8178fdbb25e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d868c9270e23e2ee1fa0dcdc1845d9762cefb16c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864241"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649400"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Verknüpfen von Menübefehlen mit Statusleistentext in MFC-Anwendungen
-Die Anwendung kann für die vom Benutzer auszuwählenden Menübefehle beschreibenden Text anzeigen. Dazu müssen Sie im Eigenschaftenfenster jedem Menübefehl mit der **Eingabeaufforderung** -Eigenschaft eine Textzeichenfolge zuweisen. Wenn eine Zeichenfolge in der [Zeichenfolgentabelle](../windows/string-editor.md) die gleiche ID wie der Befehl aufweist, zeigt eine MFC-Anwendung automatisch diese Zeichenfolgenressource in der Statusleiste der ausgeführten Anwendung an, wenn ein Benutzer auf ein Menüelement zeigt.  
+Die Anwendung kann für die vom Benutzer auszuwählenden Menübefehle beschreibenden Text anzeigen. Zu diesem Zweck eine Textzeichenfolge zuweisen, um jedem Menübefehl mit der **Eingabeaufforderung** -Eigenschaft in der **Eigenschaften** Fenster. Wenn eine Zeichenfolge in der [Zeichenfolgentabelle](../windows/string-editor.md) die gleiche ID wie der Befehl aufweist, zeigt eine MFC-Anwendung automatisch diese Zeichenfolgenressource in der Statusleiste der ausgeführten Anwendung an, wenn ein Benutzer auf ein Menüelement zeigt.  
   
 ### <a name="to-associate-a-menu-command-with-a-status-bar-text-string"></a>So ordnen Sie einer Statusleisten-Zeichenfolge ein Menübefehl zu  
   
@@ -32,10 +32,7 @@ Die Anwendung kann für die vom Benutzer auszuwählenden Menübefehle beschreibe
   
 2.  Geben Sie im [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window)den zugeordneten Statusleistentext im Feld **Eingabeaufforderung** ein.  
   
-
-  
- **Anforderungen**  
-  
+## <a name="requirements"></a>Anforderungen  
  MFC  
   
 ## <a name="see-also"></a>Siehe auch  

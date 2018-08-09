@@ -1,5 +1,5 @@
 ---
-title: 'Comptrrefbase:: Ptr_-Datenmember | Microsoft Docs'
+title: 'Comptrrefbase:: Ptr_-Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d45181e5db5fe16b6eada23ba8d6c72193fe3ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ff52245f518158c3ca5c44c6af88307d9a55ab4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883566"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644842"
 ---
 # <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_-Datenmember
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 T* ptr_;  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Zeiger auf den Typ, der durch den aktuellen Vorlagenparameter angegeben.  
+ Zeiger auf den Typ, durch den aktuellen Vorlagenparameter angegeben.  
   
 ## <a name="remarks"></a>Hinweise  
- `ptr_` die geschützten Daten gehört.  
+ **Ptr_** ist das Element für die geschützten Daten.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

@@ -1,5 +1,5 @@
 ---
-title: SemaphoreTraits-Struktur | Microsoft Docs
+title: SemaphoreTraits-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c5bdb20a765b56fd90a46389eba2a869890e4fd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6bcbb520ba92bdf15245b2401c74c3b271111034
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892604"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645723"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits-Struktur
-Definiert die gemeinsame Merkmale eines Semaphore-Objekts.  
+Definiert die allgemeinen Merkmale einer **Semaphor** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,7 +39,7 @@ struct SemaphoreTraits : HANDLENullTraits;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[SemaphoreTraits::Unlock-Methode](../windows/semaphoretraits-unlock-method.md)|Versionen Kontrolle über eine freigegebene Ressource.|  
+|[SemaphoreTraits::Unlock-Methode](../windows/semaphoretraits-unlock-method.md)|Releases-Steuerelement eine gemeinsam genutzte Ressource.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `HANDLENullTraits`  

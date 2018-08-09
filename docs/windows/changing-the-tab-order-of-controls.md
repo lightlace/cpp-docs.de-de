@@ -1,5 +1,5 @@
 ---
-title: Ändern der Aktivierreihenfolge von Steuerelementen | Microsoft Docs
+title: Ändern der Aktivierreihenfolge von Steuerelementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,68 +20,67 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33e6e9624e7e927860a184361d45f855f3a1e4f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32368ca6731c53255587a2083c9fe685eb8fefd0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861544"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641846"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>Ändern der Aktivierreihenfolge von Steuerelementen
-Die Aktivierreihenfolge ist die Reihenfolge, in der die TAB-Taste den Eingabefokus von einem Steuerelement zum nächsten in einem Dialogfeld wird verschoben. In der Regel geht die Tab-Reihenfolge von links nach rechts und von oben nach unten in einem Dialogfeld. Jedes Steuerelement verfügt über eine **Tabstop** -Eigenschaft, die bestimmt, ob ein Steuerelement den Eingabefokus erhält.  
+Die Aktivierreihenfolge ist die Reihenfolge, in der **Registerkarte** -Taste wird den Eingabefokus von einem Steuerelement verschoben, an den nächsten in einem Dialogfeld. In der Regel wird die Aktivierreihenfolge auf, von links nach rechts und von oben nach unten in einem Dialogfeld. Jedes Steuerelement verfügt über eine **Tabstop** -Eigenschaft, die bestimmt, ob ein Steuerelement den Eingabefokus erhält.  
   
-### <a name="to-set-input-focus-for-a-control"></a>Eingabefokus für ein Steuerelement festlegen.  
+### <a name="to-set-input-focus-for-a-control"></a>Eingabefokus für ein Steuerelement festgelegt.  
   
-1.  In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window)Option **"true"** oder **"false"** in der **Tabstop** Eigenschaft.  
+1.  In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window)Option **"true"** oder **"false"** in die **Tabstop** Eigenschaft.  
   
- Auch Steuerelemente, die nicht die Tabstop-Eigenschaft auf "true" muss als Teil der Aktivierreihenfolge festgelegt haben. Dies kann wichtig sein, z. B., wenn Sie [definieren Zugriffstasten (Mnemonik)](../windows/defining-mnemonics-access-keys.md) für Steuerelemente, die keine Beschriftungen aufweisen. Statischer Text, der eine Zugriffstaste für eine verwandte Steuerelement enthält muss die dazugehörigen Steuerelement in der Aktivierreihenfolge unmittelbar vorangestellt sein.  
+ Selbst Steuerelemente, die keine der **Tabstop** -Eigenschaftensatz auf **"true"** müssen Teil der Aktivierreihenfolge. Dies kann wichtig sein, z. B., wenn Sie [definieren Sie Zugriffstasten (mnemonischen Zeichen)](../windows/defining-mnemonics-access-keys.md) für Steuerelemente, die keine Beschriftungen. Statischer Text, der eine Zugriffstaste für ein verwandtes Steuerelement enthält muss das zugehörige Steuerelement in der Aktivierreihenfolge unmittelbar vorangestellt sein.  
   
 > [!NOTE]
->  Wenn das Dialogfeld überlappende Steuerelemente enthält, kann durch das Ändern der Aktivierreihenfolge die Gruppierung ändern, auf dem die Steuerelemente angezeigt werden. Steuerelemente, die weiter unten in der Aktivierreihenfolge stammen werden immer auf alle überlappende Steuerelemente angezeigt, die ihnen in der Aktivierreihenfolge vorausgehen.  
+>  Wenn das Dialogfeld überlappende Steuerelemente enthält, unter Umständen ändern der Aktivierreihenfolge verändern, wie die Steuerelemente angezeigt werden. Steuerelemente, die weiter unten in der Aktivierreihenfolge erläutert werden immer auf überlappende Steuerelemente angezeigt, die ihnen in der Aktivierreihenfolge vorausgehen.  
   
-#### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Anzeigen die aktuellen Aktivierreihenfolge für alle Steuerelemente in einem Dialogfeld  
+### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>Anzeigen die aktuellen Aktivierreihenfolge für alle Steuerelemente in einem Dialogfeld  
   
 1.  Auf der **Format** Menü klicken Sie auf **Aktivierreihenfolge**.  
   
  \- oder –  
   
--   Drücken Sie STRG + d  
+-   Drücken Sie **STRG**+**D**.  
   
-#### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>So ändern Sie die Reihenfolge der Registerkarten für alle Steuerelemente in einem Dialogfeld  
+### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>So ändern Sie die Aktivierreihenfolge für alle Steuerelemente in einem Dialogfeld  
   
 1.  Auf der **Format** Menü klicken Sie auf **Aktivierreihenfolge**.  
   
      Eine Zahl in der oberen linken Ecke der einzelnen Steuerelemente zeigt seine Position in der aktuellen Aktivierreihenfolge.  
   
-2.  Legen Sie die Reihenfolge der Registerkarten durch Klicken auf jedes Steuerelement in der Reihenfolge möchten, führen die TAB-Taste.  
+2.  Festlegen der Aktivierreihenfolge durch Klicken auf jedes Steuerelement in der gewünschten Reihenfolge der **Registerkarte** Schlüssel folgen.  
   
-3.  Drücken Sie **EINGABETASTE** beenden **Aktivierreihenfolge** Modus.  
+3.  Drücken Sie **EINGABETASTE** beendet **Aktivierreihenfolge** Modus.  
   
     > [!TIP]
-    >  Sobald Sie Aktivierreihenfolge Modus eingegeben haben, drücken Sie ESC-Taste oder die EINGABETASTE, um die Möglichkeit zum Ändern der Aktivierreihenfolge zu deaktivieren.  
+    >  Nach der Eingabe **Aktivierreihenfolge** -Modus können Sie durch Drücken **Esc** oder **EINGABETASTE** So deaktivieren Sie die Möglichkeit zum Ändern der Aktivierreihenfolge.  
   
-#### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>So ändern Sie die Reihenfolge der Registerkarten für zwei oder mehr Steuerelemente  
+### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>So ändern Sie die Aktivierreihenfolge für zwei oder mehr Steuerelementen  
   
-1.  Aus der **Format** Menü wählen **Aktivierreihenfolge**.  
+1.  Von der **Format** Menü wählen **Aktivierreihenfolge**.  
   
-2.  Geben Sie an, die Änderung in der Reihenfolge, in denen beginnt. Halten Sie sich zu diesem Zweck die **STRG** Taste, und klicken Sie auf das Steuerelement vor diejenige, in dem Sie die Reihenfolge geänderte, um zu beginnen.  
+2.  Geben Sie die Änderung in der Reihenfolge, in denen beginnt. Dazu halten Sie die **STRG** gedrückt, und klicken Sie auf das Steuerelement vor dem ersten, die Reihenfolge geänderte werden sollen.  
   
-     Beispielsweise, wenn Sie die Reihenfolge der Steuerelemente 7 bis 9 ändern möchten, halten Sie STRG GEDRÜCKT, und wählen Sie dann Steuerelement 6 zuerst.  
+     Z. B., wenn Sie die Reihenfolge der Steuerelemente ändern möchten `7` über `9`, halten Sie die **STRG**, wählen Sie dann das Steuerelement `6` erste.  
   
     > [!NOTE]
-    >  Doppelklicken Sie auf das Steuerelement, um ein bestimmtes Steuerelement Nummer 1 (zuerst in der Aktivierreihenfolge) festzulegen.  
+    >  Für ein bestimmtes Steuerelement festzulegen, Anzahl `1` (zuerst in der Aktivierreihenfolge), doppelklicken Sie auf das Steuerelement.  
   
-3.  Lassen Sie die STRG-Taste, und klicken Sie auf die Steuerelemente in der Reihenfolge an, dass Sie die TAB-Taste, um von diesem Punkt folgen soll.  
+3.  Version der **STRG** Schlüssel, und klicken Sie dann die Steuerelemente in der gewünschten Reihenfolge der **Registerkarte** -Taste, um von diesem Punkt folgen.  
   
-4.  Drücken Sie **EINGABETASTE** beenden **Aktivierreihenfolge** Modus.  
+4.  Drücken Sie **EINGABETASTE** beendet **Aktivierreihenfolge** Modus.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
  [Steuerelemente](../mfc/controls-mfc.md)
-

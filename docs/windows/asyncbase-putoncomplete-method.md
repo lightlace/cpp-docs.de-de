@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33ca905d25fb010eb6d5c511f22ba40446ffd385
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e982e6f053b207b1d57ed5c0df483a9d9ab778eb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465602"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646971"
 ---
 # <a name="asyncbaseputoncomplete-method"></a>AsyncBase::PutOnComplete-Methode
 Legt die Adresse des ereignishandlers Abschluss auf den angegebenen Wert fest.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 STDMETHOD(  
    PutOnComplete  
 )(TComplete* completeHandler);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *completeHandler*  
  Die Adresse, die auf die der Abschluss-Ereignishandler festgelegt ist.  
   

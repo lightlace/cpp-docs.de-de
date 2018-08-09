@@ -1,5 +1,5 @@
 ---
-title: 'Semaphore:: Operator = | Microsoft Docs'
+title: 'Semaphore:: Operator = | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25287e642bd368470b207ed237f44ca70773064e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eee563a52a24d2b78157b640ae6e84217c03af64
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892526"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651277"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator=-Operator
-Verschiebt das angegebene Handle aus einem Semaphorobjekt mit dem aktuellen Semaphore-Objekt.  
+Verschiebt das angegebene Handle von einem **Semaphor** -Objekt mit dem aktuellen **Semaphor** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,12 +35,12 @@ Semaphore& operator=(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `h`  
- Rvalue-Verweis auf eine Semaphorobjekt.  
+### <a name="parameters"></a>Parameter  
+ *h*  
+ Rvalue-Verweis auf eine **Semaphor** Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Verweis auf das aktuelle Semaphore-Objekt.  
+ Ein Verweis auf das aktuelle **Semaphor** Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

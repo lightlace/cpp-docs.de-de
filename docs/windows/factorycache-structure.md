@@ -1,5 +1,5 @@
 ---
-title: FactoryCache-Struktur | Microsoft Docs
+title: FactoryCache-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04356316b67f3c341fe1dd1821750fcd3136aa40
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a09128bd334fc6e0987e39eaf51c19aadce34ea
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874030"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647546"
 ---
 # <a name="factorycache-structure"></a>FactoryCache-Struktur
-Unterstützt die Windows Runtime C++ Template Library-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Windows Runtime C++ Template Library-Infrastruktur, und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 struct FactoryCache;  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Enthält den Speicherort einer Klassenfactory und ein Wert, der einem registrierten wrt identifiziert oder COM-Klassenobjekt.  
+ Enthält den Speicherort, der eine Klassenfactory und ein Wert, der einen registrierten wrt-identifiziert oder COM-Klassenobjekt.  
   
 ## <a name="members"></a>Member  
   
@@ -42,8 +42,8 @@ struct FactoryCache;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[FactoryCache::cookie-Datenmember](../windows/factorycache-cookie-data-member.md)|Enthält einen Wert, der ein registrierten Windows-Runtime oder COM-Klassenobjekt bezeichnet und wird später verwendet werden, um stattdessen das Aufheben der Registrierung.|  
-|[FactoryCache::factory-Datenmember](../windows/factorycache-factory-data-member.md)|Verweist auf ein Windows-Runtime oder COM-Klassenfactory.|  
+|[FactoryCache::cookie-Datenmember](../windows/factorycache-cookie-data-member.md)|Enthält einen Wert an, der ein registriertes Windows-Runtime oder COM-Klasse-Objekt identifiziert, und wird später beim Aufheben der Registrierung des Objekts verwendet.|  
+|[FactoryCache::factory-Datenmember](../windows/factorycache-factory-data-member.md)|Verweist auf eine Windows-Runtime oder COM-Klassenfactory.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `FactoryCache`  

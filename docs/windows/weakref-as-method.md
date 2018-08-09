@@ -1,5 +1,5 @@
 ---
-title: 'Weakref:: As-Methode | Microsoft Docs'
+title: 'Weakref:: As-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e694b4c86194402f48d335aac353e48c3de79a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 938c7c796bf88d4ea1e49f1f59d274b5017aa7de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890682"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649301"
 ---
 # <a name="weakrefas-method"></a>WeakRef::As-Methode
-Legt den angegebenen ComPtr-Zeigerparameter so fest, dass er die angegebene Schnittstelle darstellt.  
+Setzt den angegebenen `ComPtr` Parameter für den Zeiger auf die angegebene Schnittstelle darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* ptr  
@@ -42,27 +41,27 @@ HRESULT As(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `U`  
+### <a name="parameters"></a>Parameter  
+ *U*  
  Eine Schnittstellen-ID.  
   
- `ptr`  
- Wenn dieser Vorgang abgeschlossen wird, ein Objekt das den Parameter `U`darstellt.  
+ *ptr*  
+ Wenn dieser Vorgang abgeschlossen ist, ein Objekt, das Parameter repräsentiert *U*.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
--   S_OK, wenn dieser Vorgang erfolgreich ausgeführt wurde; andernfalls ein HRESULT, das den Grund für den Fehler beim Vorgang angibt, und `ptr` wird auf `nullptr`festgelegt.  
+-   S_OK, wenn dieser Vorgang erfolgreich ist; andernfalls ein HRESULT, der den Grund angibt. der Vorgang fehlgeschlagen ist, und *Ptr* nastaven NA hodnotu **"nullptr"**.  
   
--   S_OK, wenn dieser Vorgang erfolgreich ausgeführt wurde, das aktuelle WeakRef-Objekt aber bereits freigegeben wurde. Der `ptr` -Parameter wird auf `nullptr`festgelegt.  
+-   S_OK, wenn dieser Vorgang ist, aber das aktuelle erfolgreich **WeakRef** Objekt bereits freigegeben wurde. Parameter *Ptr* nastaven NA hodnotu **"nullptr"**.  
   
--   S_OK, wenn dieser Vorgang erfolgreich ausgeführt wurde, das aktuelle WeakRef-Objekt aber nicht vom Parameter `U`abgeleitet ist. Der `ptr` -Parameter wird auf `nullptr`festgelegt.  
+-   S_OK, wenn dieser Vorgang ist, aber das aktuelle erfolgreich **WeakRef** abgeleitetes Objekt ist nicht vom Parameter *U*. Parameter *Ptr* nastaven NA hodnotu **"nullptr"**.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Fehler wird ausgegeben, wenn der Parameter `U` „IWeakReference“ ist oder nicht von „IInspectable“ abgeleitet ist.  
+ Ein Fehler wird ausgegeben, wenn Parameter *U* ist `IWeakReference`, oder Sie stammt nicht aus `IInspectable`.  
   
  Die erste Vorlage ist die Form, die Sie in Ihrem Code verwenden sollten. Die zweite Vorlage ist eine interne Hilfsspezialisierung, die C++-Sprachfeatures unterstützt, wie etwa das Schlüsselwort [auto](../cpp/auto-cpp.md) zur Typableitung.  
   
- Beginnend mit dem Windows 10 SDK legt diese Methode die WeakRef-Instanz nicht auf `nullptr` fest, wenn der schwache Verweis nicht abgerufen werden konnte, daher sollten Sie Code zur Fehlerprüfung vermeiden, der WeakRef auf `nullptr`überprüft. Überprüfen Sie stattdessen `ptr` für `nullptr`.  
+ Ab Windows 10-SDKS können dieser Methode ist nicht festgelegt die **WeakRef** -Instanz **"nullptr"** Wenn der schwache Verweis nicht abgerufen werden konnte, so vermeiden Sie Code zur fehlerüberprüfung, die der WeakRef überprüft **"nullptr"**. Überprüfen Sie stattdessen *Ptr* für **"nullptr"**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** client.h  

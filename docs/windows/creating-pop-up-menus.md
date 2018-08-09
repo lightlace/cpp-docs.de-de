@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Popupmenüs | Microsoft Docs
+title: Erstellen von Popupmenüs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 218ed28a8b44100beead46ab13e04ad07d86c7e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4e58951fe214efda0002f3ea864e67d0ea35423c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871496"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648073"
 ---
 # <a name="creating-pop-up-menus"></a>Erstellen von Popupmenüs
 [Popupmenüs](../mfc/menus-mfc.md) enthalten häufig verwendete Befehle. Sie können kontextbezogen für die Position des Zeigers sein. Für das Verwenden von Popupmenüs in Ihrer Anwendung muss das Menü selbst erstellt und anschließend mit dem Anwendungscode verbunden werden.  
@@ -36,7 +36,7 @@ ms.locfileid: "33871496"
   
 1.  [Erstellen eines Menüs](../windows/creating-a-menu.md) mit einem leeren Titel (also ohne Angabe einer **Beschriftung**).  
   
-2.  [Hinzufügen eines Menübefehls zum neuen Menü](../windows/adding-commands-to-a-menu.md). Kehren Sie zum ersten Menübefehl unter dem leeren Menütitel zurück (in der temporäre Beschriftung steht „hier tippen“). Geben Sie eine **Beschriftung** und weitere Informationen ein.  
+2.  [Hinzufügen eines Menübefehls zum neuen Menü](../windows/adding-commands-to-a-menu.md). Verschieben Sie in der ersten Menübefehl unter dem leeren Menütitel (die temporäre Beschriftung sagt `Type Here`). Geben Sie eine **Beschriftung** und weitere Informationen ein.  
   
      Wiederholen Sie diesen Vorgang für alle anderen Menübefehle im Popupmenü.  
   
@@ -45,10 +45,7 @@ ms.locfileid: "33871496"
     > [!TIP]
     >  Weitere Informationen zur Anzeige der Popupmenüs finden Sie unter [Anzeigen eines Menüs als Popupmenü](../windows/viewing-a-menu-as-a-pop-up-menu.md).  
   
-
-  
- **Anforderungen**  
-  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -1,5 +1,5 @@
 ---
-title: Defaultbind | Microsoft Docs
+title: Defaultbind | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a92d4a7b617b8963c3ffbd78638a7a97515d8509
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c9930fefabd6fb12aaad64f07c078e5e422d827
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33871460"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644085"
 ---
 # <a name="defaultbind"></a>defaultbind
 Gibt an, die einfache, bindbare Eigenschaft, die das Objekt am besten darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```cpp  
 [defaultbind]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Defaultbind** C++-Attribut hat die gleiche Funktionalität wie die [Defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [bindbare](../windows/bindable.md) ein Beispiel zum Verwenden von **Defaultbind**.  
+ Siehe das Beispiel für [bindbare](../windows/bindable.md) ein Beispiel zur Verwendung für **Defaultbind**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -56,7 +54,7 @@ Gibt an, die einfache, bindbare Eigenschaft, die das Objekt am besten darstellt.
   
 ## <a name="see-also"></a>Siehe auch  
  [IDL-Attribute](../windows/idl-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [Datenmemberattribute](../windows/data-member-attributes.md)   
  [displaybind](../windows/displaybind.md)   
  [immediatebind](../windows/immediatebind.md)   

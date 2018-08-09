@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18ce213d6c4bedd0bcaa2be1af33281ae69f6ad1
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 43e4932f93c4b9954343df2aecd4db3b13ebc147
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461504"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649204"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory-Klasse
 Ermöglicht, dass eine oder mehrere Klassen durch die Windows-Runtime aktiviert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template <  
    typename I0 = Details::Nil,  
    typename I1 = Details::Nil,  
@@ -38,7 +38,7 @@ template <
 class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *I0*  
  Die nullte-Schnittstelle.  
   
@@ -74,7 +74,7 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
 |[ActivationFactory::AddRef-Methode](../windows/activationfactory-addref-method.md)|Inkrementiert den Verweiszähler des aktuellen **ActivationFactory** Objekt.|  
 |[ActivationFactory::GetIids-Methode](../windows/activationfactory-getiids-method.md)|Ruft ein Array von implementierten Schnittstellen-IDs ab.|  
 |[ActivationFactory::GetRuntimeClassName-Methode](../windows/activationfactory-getruntimeclassname-method.md)|Ruft den Common Language Runtime-Klassennamen des Objekts ab, die die aktuelle **ActivationFactory** instanziiert.|  
-|[ActivationFactory::GetTrustLevel-Methode](../windows/activationfactory-gettrustlevel-method.md)|Ruft die Vertrauensebene des Objekts, das den aktuellen ActivationFactory instanziiert.|  
+|[ActivationFactory::GetTrustLevel-Methode](../windows/activationfactory-gettrustlevel-method.md)|Ruft der Vertrauensebene des Objekts ab, das aktuelle **ActivationFactory** instanziiert.|  
 |[ActivationFactory::QueryInterface-Methode](../windows/activationfactory-queryinterface-method.md)|Ruft einen Zeiger auf die angegebene Schnittstelle ab.|  
 |[ActivationFactory::Release-Methode](../windows/activationfactory-release-method.md)|Dekrementiert den Verweiszähler des aktuellen **ActivationFactory** Objekt.|  
   
