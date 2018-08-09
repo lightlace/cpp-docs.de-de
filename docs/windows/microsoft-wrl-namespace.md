@@ -1,5 +1,5 @@
 ---
-title: 'Microsoft:: wrl-Namespace | Microsoft Docs'
+title: 'Microsoft:: wrl-Namespace | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,19 +24,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37d4d5391da4dfb6e25754eb1350224acb97e972
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3b1f5d0472fbe9ceb997460b525153a9ad87a69
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881649"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020251"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL-Namespace
 Definiert die grundlegenden Typen, aus denen die Windows Runtime C++ Template Library besteht.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 namespace Microsoft::WRL;  
 ```  
   
@@ -70,8 +70,8 @@ namespace Microsoft::WRL;
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[ChainInterfaces-Struktur](../windows/chaininterfaces-structure.md)|Gibt Überprüfungs- und Initialisierungsfunktionen an, die auf einen Satz von Schnittstellen-IDs angewendet werden können.|  
-|[CloakedIid-Struktur](../windows/cloakediid-structure.md)|Zeigt „RuntimeClass“-, „Implements“- und „ChainInterfaces“-Vorlagen an, dass auf die angegebene Schnittstelle in der IID-Liste nicht zugegriffen werden kann.|  
-|[Implements-Struktur](../windows/implements-structure.md)|Implementiert „QueryInterface“ und „GetIid“ für die angegebene Schnittstelle.|  
+|[CloakedIid-Struktur](../windows/cloakediid-structure.md)|Gibt an, um die `RuntimeClass`, `Implements` und `ChainInterfaces` Vorlagen, dass die angegebene Schnittstelle nicht zugegriffen werden kann, in der IID-Liste ist.|  
+|[Implements-Struktur](../windows/implements-structure.md)|Implementiert `QueryInterface` und `GetIid` für die angegebene Schnittstelle.|  
 |[MixIn-Struktur](../windows/mixin-structure.md)|Stellt sicher, dass eine Runtime-Klasse aus Windows-Runtime-Schnittstellen (sofern vorhanden) und dann aus klassischen COM-Schnittstellen abgeleitet wird.|  
 |[RuntimeClassFlags-Struktur](../windows/runtimeclassflags-structure.md)|Enthält den Typ für eine Instanz von einem [RuntimeClass](../windows/runtimeclass-class.md).|  
   
@@ -79,22 +79,22 @@ namespace Microsoft::WRL;
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[AsyncResultType-Enumeration](../windows/asyncresulttype-enumeration.md)|Gibt den Typ des durch die Methode „GetResults()“ zurückgegebenen Ergebnisses zurück.|  
+|[AsyncResultType-Enumeration](../windows/asyncresulttype-enumeration.md)|Gibt den Typ der zurückgegebenen Ergebnisse der `GetResults()` Methode.|  
 |[ModuleType-Enumeration](../windows/moduletype-enumeration.md)|Gibt an, ob ein Modul einen In-Process-Server oder einen Out-of-Process-Server unterstützen sollte. |  
-|[RuntimeClassType-Enumeration](../windows/runtimeclasstype-enumeration.md)|Gibt den Typ des [RuntimeClass](../windows/runtimeclass-class.md) -Instanz, die unterstützt wird.|  
+|[RuntimeClassType-Enumeration](../windows/runtimeclasstype-enumeration.md)|Gibt den Typ der [RuntimeClass](../windows/runtimeclass-class.md) -Instanz, die unterstützt wird.|  
   
 ### <a name="functions"></a>Funktionen  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[AsWeak-Funktion](../windows/asweak-function.md)|Ruft einen schwachen Verweis zur angegebenen Instanz ab.|  
-|[Rückruffunktion](../windows/callback-function-windows-runtime-cpp-template-library.md)|Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.|  
+|[Callback-Funktion](../windows/callback-function-windows-runtime-cpp-template-library.md)|Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.|  
 |[CreateActivationFactory-Funktion](../windows/createactivationfactory-function.md)|Erstellt eine Instanzen der angegebenen Klasse erstellende Factory, die durch die Windows-Runtime aktiviert werden kann.|  
 |[CreateClassFactory-Funktion](../windows/createclassfactory-function.md)|Erstellt eine Factory, die Instanzen der angegebenen Klasse erstellt.|  
 |[Make-Funktion](../windows/make-function.md)|Initialisiert die angegebene Windows-Runtime-Klasse.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Header:** async.h, client.h, corewrappers.h, event.h, ftm.h, implements.h, internal.h, module.h  
+ **Header:** async.h client.h corewrappers.h event.h ftm.h implements.h internal.h, module.h  
   
  **Namespace:** Microsoft::WRL  
   

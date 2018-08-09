@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 862498b012955c3b77a13b37ae07bbee66dd8dfa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a8a19de393e7451f045d840552127743f87e00ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651404"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019172"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Ein- oder Ausblenden der Symbolleiste des Dialog-Editors
-Wenn Sie den Dialog-Editor öffnen, wird die Dialog-Editor-Symbolleiste automatisch am oberen Rand der Projektmappe angezeigt.  
+Beim Öffnen der **Dialogfeld** -Editor die **Dialog-Editor** Symbolleiste wird automatisch am oberen Rand der Projektmappe angezeigt.  
   
 ### <a name="dialog-editor-toolbar"></a>Symbolleiste des Dialog-Editors  
   
@@ -40,9 +40,9 @@ Wenn Sie den Dialog-Editor öffnen, wird die Dialog-Editor-Symbolleiste automati
 |![Schaltfläche "Vertikal zentrieren"](../mfc/media/vcdialogeditorvertical.png "VcDialogEditorVertical")|Vertikal|![Raster der Umschaltfläche](../mfc/media/vcdialogeditortogglegrid.png "VcDialogEditorToggleGrid")|Raster umschalten|  
 |![Schaltfläche "Horizontal zentrieren"](../mfc/media/vcdialogeditorhorizontal.png "VcDialogEditorHorizontal")|Horizontal|![Führungslinien Umschaltfläche](../mfc/media/vcdialogeditortoggleguides.png "VcDialogEditorToggleGuides")|Führungslinien ein-/ausschalten|  
   
- Die Dialog-Editor-Symbolleiste enthält Schaltflächen zum Anordnen des Layouts von Steuerelementen auf das Dialogfeld, z. B. Größe und Ausrichtung. Dialog-Editor-Symbolleisten-Schaltflächen entsprechen Befehle im Menü Format. Weitere Informationen finden Sie unter [Zugriffstasten für den Dialog-Editor](../windows/accelerator-keys-for-the-dialog-editor.md).  
+ Die **Dialog-Editor** Symbolleiste enthält Schaltflächen zum Anordnen des Layouts von Steuerelementen auf der das Dialogfeld, z. B. Größe und Ausrichtung. **Dialog-Editor** Symbolleisten-Schaltflächen entsprechen den Befehlen für die **Format** Menü. Weitere Informationen finden Sie unter [Zugriffstasten für den Dialog-Editor](../windows/accelerator-keys-for-the-dialog-editor.md).  
   
- Wenn Sie im Dialog-Editor arbeiten, können Sie die Anzeige der Symbolleiste des Dialog-Editor wechseln, durch Auswahl aus der Liste der verfügbaren Symbolleisten und Windows.  
+ Wenn Sie sind der **Dialogfeld** -Editor können Sie die Anzeige der Umschalten der **Dialog-Editor** Symbolleiste, indem Sie ihn aus der Liste der verfügbaren Symbolleisten und Fenstern auswählen.  
   
 ### <a name="to-show-or-hide-the-dialog-editor-toolbar"></a>Zum Anzeigen oder Ausblenden der Symbolleiste des Dialog-editor  
   

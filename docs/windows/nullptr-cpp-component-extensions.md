@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccfb2b234550f5b7fc03e717d92e74b1fd5d5f74
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a52f2a11634ff79bcb58302d4b2a4d7ceed362cc
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604446"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017122"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (Komponentenerweiterungen für C++)
 Die **"nullptr"** Schlüsselwort stellt einen *null-Zeigerwert*. Verwenden Sie einen null-Zeiger-Wert, um anzugeben, dass ein Objekthandle, innerer Zeiger oder systemeigener Zeiger-Typ nicht auf ein Objekt verweist.  
@@ -116,8 +116,6 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
 ```Output  
 pMyClass == nullptr  
   
@@ -184,8 +182,6 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
 ```Output  
 test  
 ```  
@@ -212,8 +208,6 @@ int main() {
    x -> Test();  
 }  
 ```  
-  
- **Ausgabe**  
   
 ```Output  
 NULL  

@@ -1,5 +1,5 @@
 ---
-title: Unicode und MBCS | Microsoft Docs
+title: Unicode und MBCS | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,17 +23,17 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e10c07e11cbe940b5f7cfee460ddd33f6f5ff1f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9cd3e3369e2da18d707de20afc900a0bc4c9f249
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857349"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020381"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode und MBCS
 Die MFC-Bibliothek (Microsoft Foundation Classes), die C-Laufzeitbibliothek für Visual C++ und die Visual C++-Entwicklungsumgebung unterstützen Sie bei der internationalen Programmierung. Sie bieten:  
   
--   Unterstützung für den Unicode-Standard unter Windows. Unicode ist der aktuelle Standard und sollte möglichst verwendet werden.  
+-   Unterstützung für die Unicode-Standard unter Windows. Unicode ist der aktuelle Standard und sollte möglichst verwendet werden.  
   
      Unicode ist ein 16-Bit-Verfahren für die Zeichencodierung, in dem die Zeichensätze aller Sprachen codiert werden können. Alle ASCII-Zeichen sind in Unicode als erweiterte Zeichen enthalten.  
   
@@ -48,7 +48,7 @@ Die MFC-Bibliothek (Microsoft Foundation Classes), die C-Laufzeitbibliothek für
 > [!NOTE]
 >  In der vorliegenden Dokumentation umschreibt der Begriff MBCS jede Nicht-Unicode-Unterstützung für Mehrbytezeichen. In Visual C++ ist MBCS gleichbedeutend mit DBCS. Zeichensätze, die "breiter" als zwei Byte sind, werden nicht unterstützt.  
   
- Der ASCII-Zeichensatz ist definitionsgemäß eine Teilmenge jedes Mehrbyte-Zeichensatzes. In vielen Multibyte-Zeichensätzen sind die Zeichen im Bereich von 0x00 bis 0x7F mit den gleichwertigen Zeichen des ASCII-Zeichensatzes identisch. Z. B. in ASCII- und MBCS-Zeichenfolgen, das 1-Byte- **NULL** Zeichen ('\0') wurde der Wert 0 x 00 und gibt an, das abschließende Nullzeichen.  
+ Der ASCII-Zeichensatz ist definitionsgemäß eine Teilmenge jedes Mehrbyte-Zeichensatzes. In vielen Multibyte-Zeichensätzen sind die Zeichen im Bereich von 0x00 bis 0x7F mit den gleichwertigen Zeichen des ASCII-Zeichensatzes identisch. Z. B. in ASCII- und MBCS-Zeichenfolgen, das 1-Byte-NULL-Zeichen ('\0') wurde der Wert 0 x 00, und gibt an, das abschließende Nullzeichen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Text und Zeichenfolgen](../text/text-and-strings-in-visual-cpp.md)   

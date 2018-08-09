@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed779d1655cb2ab4243bb7384d8ec2e07214d8df
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 99430222c0df705297f013381b4497730c7c9fa5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604238"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016235"
 ---
 # <a name="implementshelpercasttounknown-method"></a>ImplementsHelper::CastToUnknown-Methode
 Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 IUnknown* CastToUnknown();  
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Zeiger auf die zugrunde liegende IUnknown-Schnittstelle.  
+ Zeiger auf die zugrunde liegende `IUnknown` Schnittstelle.  
   
 ## <a name="remarks"></a>Hinweise  
  Ruft einen Zeiger auf die zugrunde liegende `IUnknown` Schnittstelle für den aktuellen `Implements` Struktur.  

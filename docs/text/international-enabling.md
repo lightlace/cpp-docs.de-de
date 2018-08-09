@@ -1,5 +1,5 @@
 ---
-title: Aktivierung der internationalen Programmierung | Microsoft Docs
+title: Aktivierung der internationalen Programmierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,34 +18,34 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f4edcae610f17409c319c7b4bd39dc137e1211e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5afb7bd027fca215e1c10c111132ee881ad49548
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858701"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018064"
 ---
 # <a name="international-enabling"></a>Aktivierung der Internationalen Programmierung
-Den meisten herkömmlichen C- und C++-Code Annahmen zu Zeichen und zeichenfolgenbearbeitung, die nicht gut für internationale Anwendungen funktionieren. MFC und die Laufzeitbibliothek Unicode oder MBCS zu unterstützen, besteht noch immer Arbeit für Sie ausführen. Dieser Abschnitt erläutert Sie leitet die Bedeutung von "Aktivierung der internationalen Programmierung" in Visual C++:  
+Die meisten herkömmlichen C- und C++-Code Annahmen zum Zeichen und zeichenfolgenbearbeitung, die nicht gut für internationale Anwendungen funktionieren. Während sowohl für MFC-als auch für die Laufzeitbibliothek Unicode oder MBCS unterstützen, ist immer noch Arbeit für Sie ausführen. In diesem Abschnitt wird die Bedeutung von "Aktivierung der internationalen Programmierung" um Sie zu leiten, Visual C++ erläutert:  
   
--   Unicode und MBCS mittels portable Datentypen in MFC-Funktion Parameterlisten aktiviert sind und Rückgabetypen. Diese Typen sind in der entsprechenden Möglichkeiten, je nachdem, ob Ihr Build das Symbol definiert bedingt definiert **_UNICODE** bzw. das Symbol **_MBCS** (d. h. DBCS). Unterschiedliche Varianten der MFC-Bibliotheken werden automatisch mit der Anwendung verknüpft, je nachdem, die welche dieser beiden Symbole der Build definiert.  
+-   Unicode und MBCS mittels portable Datentypen in der Parameterliste von MFC-Funktion aktiviert sind, und Rückgabetypen. Diese Typen werden bedingt definiert, auf die entsprechende Weise, je nachdem, ob Ihr Build das Symbol definiert `_UNICODE` oder Symbol `_MBCS` (bedeutet, dass DBCS). Verschiedene Varianten von MFC-Bibliotheken werden automatisch mit Ihrer Anwendung verknüpft, je nachdem, die welche dieser zwei Symbole, die Ihren Build definiert.  
   
--   Klassenbibliothekscode werden portable Laufzeitfunktionen und auf andere Weise verwendet, um die richtige Unicode oder MBCS-Verhalten zu gewährleisten.  
+-   Klassenbibliothekscode werden portable Laufzeitfunktionen und andere Weise verwendet, um richtige Unicode oder MBCS-Verhalten sicherzustellen.  
   
--   Weiterhin müssen Sie bestimmte Arten von Aufgaben Internationalisierung im Code behandeln:  
+-   Sie müssen immer noch bestimmte Arten von Tasks für Internationalisierung in Ihrem Code behandeln:  
   
-    -   Verwenden Sie die gleichen portable-Laufzeit-Funktionen, die MFC portable unter entweder Umgebung vornehmen.  
+    -   Verwenden Sie die gleichen portable Laufzeit-Funktionen, die MFC portable unter entweder Umgebung vornehmen.  
   
-    -   Stellen von Zeichenfolgenliteralen und Zeichen portable unter entweder Umgebung mithilfe der **_T** Makro. Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+    -   Stellen von Zeichenfolgenliteralen und Zeichen portable unter beiden-Umgebung mithilfe der `_T` Makro. Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
   
-    -   Vorsichtsmaßnahmen Sie beim Analysieren von Zeichenfolgen unter MBCS. Diese Vorsichtsmaßnahmen sind unter Unicode nicht erforderlich. Weitere Informationen finden Sie unter [Tipps für die MBCS-Programmierung](../text/mbcs-programming-tips.md).  
+    -   Vorsichtsmaßnahmen Sie bei der Analyse der MBCS-Zeichenfolgen. Diese Vorsichtsmaßnahmen sind unter Unicode nicht erforderlich. Weitere Informationen finden Sie unter [Tipps für die MBCS-Programmierung](../text/mbcs-programming-tips.md).  
   
-    -   Achten Sie darauf, wenn in Ihrer Anwendung die Mischen von ANSI (8-Bit) und (16-Bit) Unicodezeichen. Es ist möglich, verwenden Sie die ANSI-Zeichen in einigen Teilen des Programms und Unicode-Zeichen in anderen, jedoch kann nicht in die gleiche Zeichenfolge kombinieren.  
+    -   Achten Sie darauf, wenn Sie ANSI (8-Bit) und Unicode (16-Bit)-Zeichen in Ihrer Anwendung mischen. Es ist möglich, ANSI-Zeichen in einigen Teilen des Programms und Unicode-Zeichen in anderen Fällen verwenden, aber Sie können diese nicht in die gleiche Zeichenfolge mischen.  
   
-    -   Führen Sie keine hartcodierten Zeichenfolgen in Ihrer Anwendung. Stattdessen richten sie STRINGTABLE-Ressourcen durch die Anwendung RC-Datei hinzugefügt. Die Anwendung kann dann ohne quellcodeänderungen oder Neukompilierung lokalisiert werden. Weitere Informationen zu STRINGTABLE-Ressourcen finden Sie unter [Zeichenfolgen-Editor](../windows/string-editor.md).  
+    -   Führen Sie die Zeichenfolgen nicht hartcodieren, in Ihrer Anwendung. Stattdessen können stellen Sie diese STRINGTABLE Ressourcen, indem diese RC-Datei der Anwendung hinzugefügt wird. Ihre Anwendung kann dann ohne Änderungen am Quellcode oder Neukompilierung lokalisiert werden. Weitere Informationen zu STRINGTABLE-Ressourcen finden Sie unter [Zeichenfolgen-Editor](../windows/string-editor.md).  
   
 > [!NOTE]
->  Zeichensätze für Europäische und MBCS haben einige Zeichen, z. B. Buchstaben mit Akzent, deren Zeichencodes größer als 0 x 80. Da der Großteil des Codes mit Vorzeichen Zeichen verwendet werden, diese Zeichen größer als 0 x 80 sind signaturerweitert bei der Konvertierung in `int`. Dies ist ein Problem für die Arrayindizierung, da die signaturerweitert Zeichen negativ ist, außerhalb des Arrays indiziert. Sprachen, die MBCS verwenden, z. B. Japanisch verwenden, sind ebenfalls eindeutig. Da ein Zeichen von 1 oder 2 Bytes bestehen kann, sollten Sie immer beide Bytes gleichzeitig bearbeiten.  
+>  Zeichensätze für Europäische und MBCS müssen einige Zeichen, z. B. Akzentbuchstaben mit Zeichencodes größer als 0 x 80. Da der Großteil des Codes mit Zeichen verwendet werden, diese größer als 0 x 80 Zeichen sind Vorzeichen erweitert, wenn in konvertiert **Int**. Dies ist ein Problem für die Arrayindizierung, da die signaturerweitert mit Zeichen negativ ist, außerhalb des Arrays indiziert. Sprachen, die MBCS verwenden, z. B. Japanisch, zu verwenden, sind ebenfalls eindeutig. Da ein Zeichen von 1 oder 2 Bytes bestehen kann, sollten Sie immer beide Bytes zur gleichen Zeit bearbeiten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Unicode und MBCS](../text/unicode-and-mbcs.md)   

@@ -1,5 +1,5 @@
 ---
-title: Vordefinierte MFC-Symbole | Microsoft Docs
+title: Vordefinierte MFC-Symbole | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 068fcf9e4cfb45bb3d20d54df69d5b4bceb7cd53
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882059"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018493"
 ---
 # <a name="mfc-predefined-symbols"></a>Vordefinierte MFC-Symbole
-MFC-Projekte enthalten immer mehrere Headerdateien, die von Windows unterstützt. Diese werden über hinzugefügt #include-Anweisungen in der Datei "stdafx.h":  
+MFC-Projekte enthalten immer mehrere Headerdateien, die von Windows unterstützt. Diese werden hinzugefügt, über `#include` Anweisungen in der `StdAfx.h` Datei:  
   
-```  
+```cpp  
 #include <afxwin.h>      //MFC core and standard components  
 #include <afxext.h>      //MFC extensions  
 #include <afxdisp.h      //MFC automation classes  
@@ -34,7 +34,7 @@ MFC-Projekte enthalten immer mehrere Headerdateien, die von Windows unterstützt
 #include <afxcmn.h>      //MFC support for Windows common controls.  
 ```  
   
- Die Header-Dateien enthalten die Symbol-ID-Werte für allgemeine MFC-Werte. Diese Symbole sind nur verfügbar, wenn Sie in einem MFC-Projekt arbeiten. Beachten Sie, dass die Namenspräfixe standard Symbol das Präfix AFX_ folgen.  
+ Die Headerdateien enthalten die Symbol-ID-Werte für allgemeine MFC-Werte. Diese Symbole sind nur verfügbar, wenn Sie in einem MFC-Projekt arbeiten. Beachten Sie, dass das Präfix AFX_ die standardmäßige Namenspräfixe folgt.  
   
 |||  
 |-|-|  
@@ -186,7 +186,7 @@ MFC-Projekte enthalten immer mehrere Headerdateien, die von Windows unterstützt
 |AFX_IDS_INVALID_DATETIMESPAN|AFX_IDS_ITALIC|  
 |AFX_IDS_LINKSOURCE_FORMAT|AFX_IDS_MANUAL|  
 |AFX_IDS_MDICHILD|AFX_IDS_MEMORY_EXCEPTION|  
-|AFX_IDS_METAFILE_FORMAT|AFX_IDS_MINI SCHRIFTART|  
+|AFX_IDS_METAFILE_FORMAT|SCHRIFTART-AFX_IDS_MINI|  
 |AFX_IDS_NOT_DOCOBJECT|AFX_IDS_NOT_SUPPORTED_-AUSNAHME|  
 |AFX_IDS_OBJ_TITLE_INPLACE|AFX_IDS_OBJECT_MENUITEM|  
 |AFX_IDS_OCC_SCALEUNITS_PIXELS|AFX_IDS_ONEPAGE|  

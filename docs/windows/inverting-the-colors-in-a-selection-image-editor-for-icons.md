@@ -20,22 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c187f0fac784bdd0c162334abcfdc23f8a6c1804
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b86fe4b06298f75321e8cd5aeae551b9d6fa368b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608916"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016391"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Invertieren der Farben in einer Markierung (Bildbearbeitung für Symbole)
-Der Grafik-Editor bietet eine bequeme Möglichkeit zum Invertieren von Farben im ausgewählten Teil des Bilds, damit Sie feststellen können, wie ein Bild mit invertierten Farben aussieht.  
+Die **Image** Editor bietet eine bequeme Möglichkeit zum Invertieren von Farben im ausgewählten Teil des Bilds, sodass Sie erkennen können, wie ein Bild mit invertierten Farben aussieht.  
   
 ### <a name="to-invert-colors-in-the-current-selection"></a>So kehren Sie Farben in der aktuellen Auswahl um  
   
 1.  Auf der **Image** Menü klicken Sie auf **Farben umkehren**.  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 404c5fc8680089aeac49b0cda655e9cbd0d4ecd9
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b5b160a941343fce656313f588065573d7b00c90
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603043"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017947"
 ---
 # <a name="interfacetraitsverify-method"></a>InterfaceTraits::Verify-Methode
 Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 __forceinline static void Verify();  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Überprüft, ob `Base` ordnungsgemäß abgeleitet ist.  
   
- Weitere Informationen zu `Base`, finden Sie im Abschnitt Öffentliche Typedefs [InterfaceTraits-Struktur](../windows/interfacetraits-structure.md).  
+ Weitere Informationen zu `Base`, finden Sie unter den **öffentliche Typedefs** im Abschnitt [InterfaceTraits-Struktur](../windows/interfacetraits-structure.md).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  

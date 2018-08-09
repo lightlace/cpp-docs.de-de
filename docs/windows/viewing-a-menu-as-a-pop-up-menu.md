@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05695e834ae244d276141185a913e8f35ef45922
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef77de72a9120a774e3676d649adb267074e1a72
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652200"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015610"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Anzeigen eines Menüs als Popupmenü
-Wenn Sie im Menü-Editor arbeiten, wird eine Menüressource normalerweise als Menüleiste angezeigt. Sie verfügen jedoch möglicherweise über Menüressourcen, die während der Ausführung des Programms zur Menüleiste der Anwendung hinzugefügt werden.  
+Normalerweise, wenn Sie arbeiten der **Menü** -Editor wird eine Menüressource als Menüleiste angezeigt. Sie verfügen jedoch möglicherweise über Menüressourcen, die während der Ausführung des Programms zur Menüleiste der Anwendung hinzugefügt werden.  
   
 ### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>So zeigen Sie eine Menüressource als ein Popupmenü an  
   

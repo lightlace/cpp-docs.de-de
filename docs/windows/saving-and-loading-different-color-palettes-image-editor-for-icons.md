@@ -21,18 +21,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14cad19c53e8cd741bf16bab49420169e93f6af6
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: b990046e4f43e70218fc1a7f6eb885638c2051bf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606971"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015942"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>Speichern und Laden von verschiedenen Farbpaletten (Bildbearbeitung für Symbole)
-Sie können das Speichern und Laden Sie eine Farbpalette mit [Farben angepasst](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (Standardmäßig wird die zuletzt verwendete Farbpalette beim Start von Visual Studio automatisch geladen.)  
+Sie können das Speichern und Laden eine **Farben** Palette mit [Farben angepasst](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (Standardmäßig die **Farben** zuletzt verwendete Farbpalette wird automatisch geladen, wenn Sie Visual Studio starten.)  
   
 > [!TIP]
->  Da die Bildbearbeitung nicht die standardmäßige Farbpalette wiederherstellen kann, sollten Sie diese unter einem Namen, wie z. B. standard.pal oder default.pal speichern, damit Sie die Standardeinstellungen problemlos wiederherstellen können.  
+>  Da die **Image** -Editor verfügt über keine Möglichkeit zum Wiederherstellen der standardmäßigen **Farben** Palette, speichern Sie die Standardeinstellung **Farben** unter einem Namen wie z. B.  *Standard.PAL* oder *default.pal* , damit Sie die Standardeinstellungen problemlos wiederherstellen können.  
   
 ### <a name="to-save-a-custom-colors-palette"></a>So speichern Sie eine benutzerdefinierte Farbpalette  
   
@@ -46,10 +46,9 @@ Sie können das Speichern und Laden Sie eine Farbpalette mit [Farben angepasst](
   
 1.  Von der **Image** Menü wählen **Palette laden**.  
   
-2.  In der [Palettenfarben laden (Dialogfeld)](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), navigieren Sie zum richtigen Verzeichnis, und wählen Sie die Palette, die Sie laden möchten. Farbpaletten werden mit der Dateierweiterung „.pal“ gespeichert.  
+2.  In der [Palettenfarben laden (Dialogfeld)](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md), navigieren Sie zum richtigen Verzeichnis, und wählen Sie die Palette, die Sie laden möchten. **Farbe** Paletten werden mit der Erweiterung. PAL gespeichert.  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  

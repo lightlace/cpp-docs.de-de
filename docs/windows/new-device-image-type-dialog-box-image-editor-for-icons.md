@@ -1,5 +1,5 @@
 ---
-title: Neue &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Neue &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 966066be4dbbce5586860dd3bb6c99893094b6ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 579a74e24f0abb2af13f96a0e5171dada249c0cf
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879619"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019285"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Neue &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (Bildbearbeitung für Symbole)
-Ermöglicht Ihnen die Erstellung ein neuen Gerätebildes eines angegebenen Typs. So öffnen die **neu \<Gerät > Image** (Dialogfeld), klicken Sie auf **Neuer Bildtyp** auf der **Image** im Menü.  
+Können Sie ein neues Gerätebild eines angegebenen Typs erstellt. Zum Öffnen der **neu \<Gerät > Image** im Dialogfeld klicken Sie auf **Neuer Bildtyp** auf die **Image** im Menü.  
   
- **Ziel-Bildtyp**  
- Listet die verfügbaren Bildtypen an. Wählen Sie den "Image", die, den Sie öffnen möchten:  
+### <a name="target-image-type"></a>Ziel-Bildtyp  
+ Listet die verfügbaren Images. Wählen Sie den Image-Typ, die, den Sie öffnen möchten:  
   
 ||||  
 |-|-|-|  
 |– 16 x 16, 16 Farben|-48 x 48, 16 Farben|-96 x 96, 16 Farben|  
 |– 16 x 16, 256 Farben|-48 x 48, 256 Farben|-96 x 96, 256 Farben|  
 |– 16 x 16, Monochrom|-48 x 48, Monochrom|-96 x 96, Monochrom|  
-|-32 x 32 Pixel und 16 Farben|-64, x 64, 16 Farben||  
-|-32 x 32, 256 Farben|-64, x 64, 256 Farben||  
-|-32 x 32, Monochrom|-64, x 64, Monochrom||  
+|-32 x 32, 16 Farben|-64 x 64-16 Farben||  
+|-32 x 32, 256 Farben|-64 x 64, 256 Farben||  
+|-32 x 32, Monochrom|-64 x 64, Monochrom||  
   
 > [!NOTE]
->  Alle vorhandenen Images werden in dieser Liste nicht angezeigt.  
+>  Alle vorhandenen Bilder werden in dieser Liste nicht angezeigt werden.  
   
- **Benutzerdefiniert**  
+### <a name="custom"></a>Benutzerdefiniert  
  Öffnet die [benutzerdefiniertes Bild (Dialogfeld)](custom-image-dialog-box-image-editor-for-icons.md) in dem Sie ein neues Image mit einer benutzerdefinierten Größe und Anzahl der Farben erstellen können.  
   
 ## <a name="requirements"></a>Anforderungen  

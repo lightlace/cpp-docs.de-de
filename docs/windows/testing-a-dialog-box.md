@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf9e5e24e77a14b3baf86c1b83d653dd833ebbbb
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652069"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019677"
 ---
 # <a name="testing-a-dialog-box"></a>Testen eines Dialogfelds
 Beim Entwerfen eines Dialogfelds können Sie dessen Laufzeitverhalten simulieren und testen, ohne das Programm zu kompilieren. In diesem Modus können Sie folgende Aufgaben ausführen:  
@@ -42,7 +42,7 @@ Beim Entwerfen eines Dialogfelds können Sie dessen Laufzeitverhalten simulieren
   
 ### <a name="to-test-a-dialog-box"></a>So testen Sie ein Dialogfeld  
   
-1.  Wenn der Dialog-Editor das aktuelle Fenster ist, wählen Sie in der Menüleiste **Testdialogfeld**, **Format**aus.  
+1.  Wenn die **Dialogfeld** Editor wird das aktive Fenster, in der Menüleiste, wählen Sie **Format** > **Testdialogfeld**.  
   
 2.  Um die Simulation zu beenden, drücken Sie die **Esc**, oder wählen Sie einfach die **schließen** Schaltfläche im Dialogfeld für die Tests.  
   

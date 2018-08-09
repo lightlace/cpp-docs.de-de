@@ -1,5 +1,5 @@
 ---
-title: ModuleType-Enumeration | Microsoft Docs
+title: ModuleType-Enumeration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d36355c9f64f9f5c827ef8c4d5b3cb6a77d17b65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 831f1fbcb2da205fa08286a1fbbbf414e66075d4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876835"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019929"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType-Enumeration
 Gibt an, ob ein Modul einen In-Process-Server oder einen Out-of-Process-Server unterstützen sollte.   
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 enum ModuleType;  
 ```  
   
@@ -41,7 +41,7 @@ enum ModuleType;
 |----------|-----------------|  
 |`InProc`|In-Process-Server.|  
 |`OutOfProc`|Ein Out-of-Process-Server.|  
-|`DisableCaching`|Deaktivieren Sie Zwischenspeichermechanismus für Modul an.|  
+|`DisableCaching`|Deaktivieren Sie Zwischenspeichermechanismus Modul.|  
 |`InProcDisableCaching`|Kombination von `InProc` und `DisableCaching`.|  
 |`OutOfProcDisableCaching`|Kombination von `OutOfProc` und `DisableCaching`.|  
   

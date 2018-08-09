@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fd2160a2e9eef9165aea835d093978fec35e5fd
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 42629df8eeda1bbd2bda2057dfee619b52928cba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608266"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015585"
 ---
 # <a name="selecting-multiple-controls"></a>Markieren mehrerer Steuerelemente
 ### <a name="to-select-multiple-controls"></a>Zum Auswählen mehrerer Steuerelemente  
@@ -47,7 +47,7 @@ ms.locfileid: "39608266"
 1.  Mit der eine Gruppe von Steuerelementen, die ausgewählt werden soll, halten Sie die **UMSCHALT** gedrückt, und klicken Sie auf das Steuerelement, das Sie verwenden möchten, um die vorhandene Auswahl hinzufügen oder daraus entfernen.  
   
     > [!NOTE]
-    >  Die STRG-Taste gedrückt halten und durch Klicken auf ein Steuerelement in einer Auswahl treffen, die in die Auswahl des bestimmenden Steuerelements zu steuern. Weitere Informationen finden Sie unter [Festlegen des bestimmenden Steuerelements](../windows/specifying-the-dominant-control.md).  
+    >  Gedrückt der **STRG** und dann auf ein Steuerelement in eine Auswahl treffen, die in die Auswahl des bestimmenden Steuerelements zu steuern. Weitere Informationen finden Sie unter [Festlegen des bestimmenden Steuerelements](../windows/specifying-the-dominant-control.md).  
   
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   

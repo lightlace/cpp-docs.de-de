@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dc93b6dc6d6a5fbf6bcd8899793e07bd6446de1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 3e7354dc422027207bc1dab357487ffcce48a4ca
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604355"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018593"
 ---
 # <a name="module-c"></a>module (C++)
 Definiert den Bibliotheksblock in der IDL-Datei.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ module (  
    type=dll,  
    name=string,  
@@ -50,8 +50,8 @@ Definiert den Bibliotheksblock in der IDL-Datei.
 ```  
   
 ### <a name="parameters"></a>Parameter  
- *Typ* (optional)  
- Einer der folgenden Werte ist möglich:  
+*Typ* (optional)  
+Einer der folgenden Werte ist möglich:  
   
 -   `dll` Fügt Funktionen und Klassen, mit die die resultierende DLL als in-Process-com-Server verwendet werden können. Dies ist der Standardwert.  
   
@@ -61,51 +61,51 @@ Definiert den Bibliotheksblock in der IDL-Datei.
   
 -   `unspecified` Deaktiviert die Einfügung von ATL-Code im Zusammenhang mit dem Modulattribut: Einfügung der ATL-Modulklasse, globalen Instanz _AtlModule und von Einstiegspunkt zeigen Funktionen. Einfügen von ATL-Code aufgrund von anderen Attributen im Projekt wird nicht deaktiviert.  
   
- *name* (optional)  
- Der Name des Bibliotheksblocks.  
+*name* (optional)  
+Der Name des Bibliotheksblocks.  
   
- *Version* (optional)  
- Die Versionsnummer, die Sie dem Bibliotheksblock zuweisen möchten. Der Standardwert ist 1,0.  
+*Version* (optional)  
+Die Versionsnummer, die Sie dem Bibliotheksblock zuweisen möchten. Der Standardwert ist 1,0.  
   
- *uuid*  
- Eindeutige ID für die Bibliothek. Wenn Sie diesen Parameter weglassen, wird automatisch eine ID für die Bibliothek generiert. Müssen Sie möglicherweise Abrufen der *Uuid* des Blocks Bibliothek, die Sie mithilfe des Bezeichners können **__uuidof (***Libraryname***)**.  
+*uuid*  
+Eindeutige ID für die Bibliothek. Wenn Sie diesen Parameter weglassen, wird automatisch eine ID für die Bibliothek generiert. Müssen Sie möglicherweise Abrufen der *Uuid* des Blocks Bibliothek, die Sie mithilfe des Bezeichners können **__uuidof (***Libraryname***)**.  
   
- *lcid*  
- Der Lokalisierungsparameter. Weitere Informationen finden Sie unter [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) .  
+*lcid*  
+Der Lokalisierungsparameter. Weitere Informationen finden Sie unter [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) .  
   
- *Steuerelement* (optional)  
- Gibt an, dass alle Co-Klassen in der Bibliothek Steuerelemente sind.  
+*Steuerelement* (optional)  
+Gibt an, dass alle Co-Klassen in der Bibliothek Steuerelemente sind.  
   
- *helpstring*  
- Gibt die Typbibliothek an.  
+*helpstring*  
+Gibt die Typbibliothek an.  
   
- *Helpstringdll* (optional)  
- Gibt den Namen der DLL-Datei zum Ausführen der Suche nach einem Dokument an. Weitere Informationen finden Sie unter [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) .  
+*Helpstringdll* (optional)  
+Gibt den Namen der DLL-Datei zum Ausführen der Suche nach einem Dokument an. Weitere Informationen finden Sie unter [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) .  
   
- *HelpFile* (optional)  
- Der Name der Hilfedatei für die Typbibliothek.  
+*HelpFile* (optional)  
+Der Name des der **Hilfe** -Datei für die Typbibliothek.  
   
- *HelpContext* (optional)  
- Die Hilfe-ID für diese Typbibliothek.  
+*HelpContext* (optional)  
+Die **Hilfe-ID** für diese Typbibliothek.  
   
- *Helpstringcontext* (optional)  
- Weitere Informationen finden Sie unter [helpstringcontext](../windows/helpstringcontext.md) .  
+*Helpstringcontext* (optional)  
+Weitere Informationen finden Sie unter [helpstringcontext](../windows/helpstringcontext.md) .  
   
- *Ausgeblendete* (optional)  
- Verhindert, dass die gesamte Bibliothek angezeigt wird. Dies ist für die Verwendung mit Steuerelementen vorgesehen. Hosts müssen eine neue Typbibliothek erstellen, die das Steuerelement mit erweiterten Eigenschaften umschließt. Weitere Informationen finden Sie unter [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL-Attribut.  
+*Ausgeblendete* (optional)  
+Verhindert, dass die gesamte Bibliothek angezeigt wird. Dies ist für die Verwendung mit Steuerelementen vorgesehen. Hosts müssen eine neue Typbibliothek erstellen, die das Steuerelement mit erweiterten Eigenschaften umschließt. Weitere Informationen finden Sie unter [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL-Attribut.  
   
- *Eingeschränkte* (optional)  
- Mitglieder der Bibliothek können nicht willkürlich aufgerufen werden. Weitere Informationen finden Sie unter [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL-Attribut.  
+*Eingeschränkte* (optional)  
+Mitglieder der Bibliothek können nicht willkürlich aufgerufen werden. Weitere Informationen finden Sie unter [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL-Attribut.  
   
- *benutzerdefinierte* (optional)  
- Ein oder mehrere Attribute; dies ist vergleichbar mit dem [custom](../windows/custom-cpp.md) -Attribut. Der erste Parameter für *benutzerdefinierte* ist die GUID des Attributs. Zum Beispiel:  
+*benutzerdefinierte* (optional)  
+Ein oder mehrere Attribute; dies ist vergleichbar mit dem [custom](../windows/custom-cpp.md) -Attribut. Der erste Parameter für *benutzerdefinierte* ist die GUID des Attributs. Zum Beispiel:  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
 ```  
   
- *resource_name*  
- Die Zeichenfolgenressource-ID der RGS-Datei, die verwendet wird, um die APP-ID der DLL, ausführbaren Datei oder des Diensts zu registrieren. Wenn das Modul vom Typ Dienst ist, wird dieses Argument auch verwendet, um die ID der Zeichenfolge mit dem Dienstnamen zu erhalten.  
+*resource_name*  
+Die Zeichenfolgenressource-ID der RGS-Datei, die verwendet wird, um die APP-ID der DLL, ausführbaren Datei oder des Diensts zu registrieren. Wenn das Modul vom Typ Dienst ist, wird dieses Argument auch verwendet, um die ID der Zeichenfolge mit dem Dienstnamen zu erhalten.  
   
 > [!NOTE]
 >  Die RGS-Datei und die Zeichenfolge, die den Namen des Diensts enthält, sollten den gleichen numerischen Wert enthalten.  
