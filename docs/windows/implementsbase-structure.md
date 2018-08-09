@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e0b6584277586f8b9bbefca020b66fb00a0ad74a
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 5729bfdf46504ab798966bdf8051ab3a3f7cbca0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603963"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011532"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase-Struktur
 Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 struct ImplementsBase;  
 ```  
   

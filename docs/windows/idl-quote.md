@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96e316add17ff45425bd51a7e32b276b234c6906
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cbb36012d9a249669e3029c79dcf9c35bcdfc7a4
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606513"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011577"
 ---
 # <a name="idlquote"></a>idl_quote
 Ermöglicht es Ihnen, die IDL-Konstrukte verwenden, die in der aktuellen Version von Visual C++ nicht unterstützt werden, und lassen sie die an der generierten IDL-Datei übergeben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ idl_quote(  
    text  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *Text*  
  Der Attributname, die Visual C++-Compiler mit der generierten IDL-Datei übergeben, ohne einen Compilerfehler zurückgegeben werden sollen.  
   
@@ -78,7 +78,7 @@ __interface IStatic{
 };  
 ```  
   
- Dieser Code bewirkt, dass MYFLOT und MYDUB und *Text* Eintrag in der generierten IDL-Datei platziert werden. Die *Namen* erzwingt, dass Parameter *Text* , vor allem platziert werden soll, die verweist *Namen* in der generierten IDL-Datei. Die *Abhängigkeiten* Parameter erzwingt, dass die Abhängigkeit Listendefinitionen, bevor Sie platziert werden soll *Text* in der generierten IDL-Datei.  
+ Dieser Code verursacht `MYFLOT` und `MYDUB` und *Text* Eintrag in der generierten IDL-Datei platziert werden. Die *Namen* erzwingt, dass Parameter *Text* , vor allem platziert werden soll, die verweist *Namen* in der generierten IDL-Datei. Die *Abhängigkeiten* Parameter erzwingt, dass die Abhängigkeit Listendefinitionen, bevor Sie platziert werden soll *Text* in der generierten IDL-Datei.  
   
 ## <a name="requirements"></a>Anforderungen  
   

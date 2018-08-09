@@ -16,17 +16,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b14684adcefcf975750f64a4a7402083943b9f71
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 1546beabadda06c5433450f67e340eaaabb0aa26
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604081"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012273"
 ---
 # <a name="manifest-resources"></a>Manifestressourcen
 Manifestressourcen sind XML-Dateien zur Beschreibung der von einer Anwendung verwendeten Abhängigkeiten. In Visual Studio wird durch die vom MFC-Assistenten generierte Manifestdatei z. B. definiert, welche DLLs allgemeiner Windows-Steuerelemente, Version 5.0 oder 6.0, von der Anwendung verwendet werden sollen:  
   
-```  
+```xml  
 <description>Your app description here</description>   
 <dependency>   
     <dependentAssembly>   

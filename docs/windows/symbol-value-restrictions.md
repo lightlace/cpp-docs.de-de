@@ -1,5 +1,5 @@
 ---
-title: Symbolwerten | Microsoft Docs
+title: Symbolwerten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3432ca82d9557fbcb47da65be148bedb0f47f8b8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e6b594ad7fe1d805511d5e2cd1b67bd0d791e8e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889542"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013400"
 ---
 # <a name="symbol-value-restrictions"></a>Beschränkungen bei Symbolwerten
 Bei einem Symbolwert kann es sich um eine beliebige Ganzzahl handeln, die in normaler Form für „#define preprocessor“-Anweisungen ausgedrückt wird. Hier sind einige Beispiele für Symbolwerte:  
@@ -45,13 +45,13 @@ Bei einem Symbolwert kann es sich um eine beliebige Ganzzahl handeln, die in nor
   
 -   Es ist nicht möglich, einen Symbolwert mithilfe von anderen Symbolzeichenfolgen zu definieren. Beispielsweise wird die folgende Symboldefinition nicht unterstützt:  
   
-    ```  
+    ```cpp  
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported  
     ```  
   
 -   Sie können Präprozessormakros mit Argumenten nicht als Wertdefinitionen verwenden. Zum Beispiel:  
   
-    ```  
+    ```cpp  
     #define   IDD_ABOUT  ID(7) //not supported  
     ```  
   
@@ -61,12 +61,10 @@ Bei einem Symbolwert kann es sich um eine beliebige Ganzzahl handeln, die in nor
   
  Weitere Informationen über Zahlenbereiche finden Sie unter [TN023: MFC-Standardressourcen](../mfc/tn023-standard-mfc-resources.md).  
   
-
-  
 ## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ändern des numerischen Werts eines Symbols](../windows/changing-a-symbol-s-numeric-value.md)   
+ [Ändern des numerischen Werts eines Symbols des](../windows/changing-a-symbol-s-numeric-value.md)   
  [Beschränkungen bei Symbolnamen](../windows/symbol-name-restrictions.md)   
  [Vordefinierte Symbol-IDs](../windows/predefined-symbol-ids.md)

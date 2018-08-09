@@ -24,15 +24,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97816db8075d04b6d05950bb65c25aa12382b728
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5fca755c46d3fc5628adc2c724b9307a346d1fe7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646929"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014002"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Anzeigen und Bearbeiten von Ressourcen in einem Ressourcen-Editor
-Jeder Ressourcentyp hat einen Ressourcen-Editor für diesen Ressourcentyp. Sie können neu anordnen, ändern Sie die Größe, Steuerelemente und Features hinzufügen oder anderweitig Aspekte einer Ressource mit dem zugehörigen-Editor ändern. Sie können auch eine Ressource in bearbeiten [Textformat](../windows/how-to-open-a-resource-script-file-in-text-format.md) und [Binärformat](../windows/opening-a-resource-for-binary-editing.md).  
+Jeder Ressourcentyp hat einen **Ressource** Editor, die speziell für diesen Ressourcentyp. Sie können neu anordnen, ändern Sie die Größe, Steuerelemente und Features hinzufügen oder anderweitig Aspekte einer Ressource mit dem zugehörigen-Editor ändern. Sie können auch eine Ressource in bearbeiten [Textformat](../windows/how-to-open-a-resource-script-file-in-text-format.md) und [Binärformat](../windows/opening-a-resource-for-binary-editing.md).  
   
  Einige Ressourcentypen sind einzelne Dateien, die importiert und auf verschiedene Weise verwendet werden können. Dazu gehören, Bitmaps, Symbole, Cursor, Symbolleisten und html-Dateien. Solche Ressourcen müssen Dateinamen sowie [Ressourcenbezeichner](../windows/symbols-resource-identifiers.md). Andere, befinden sich z. B. Dialogfelder, Menüs und Zeichenfolgentabellen in Win32-Projekte nur als Teil einer Ressourcenskriptdatei (.rc) oder eine Ressourcenvorlagendatei (.rct).  
   
@@ -46,16 +46,16 @@ Jeder Ressourcentyp hat einen Ressourcen-Editor für diesen Ressourcentyp. Sie k
   
 1.  Wählen Sie **Ressourcenansicht** aus der **Ansicht** Menü.  
   
-2.  Wenn das Fenster "Ressourcenansicht" nicht das oberste Fenster ist, klicken Sie auf die **Ressourcenansicht** Tab, um es in den Vordergrund zu bringen.  
+2.  Wenn die **Ressourcenansicht** nicht das oberste Fenster ist, klicken Sie auf die **Ressourcenansicht** Tab, um es in den Vordergrund zu bringen.  
   
-3.  Ressourcenansicht nutzen zu können erweitern Sie den Ordner für das Projekt, das Ressourcen enthält, die Sie anzeigen möchten. Wenn Sie eine Ressource anzeigen möchten, erweitern Sie z. B. den Ordner Dialog.  
+3.  Von **Ressourcenansicht**, erweitern Sie den Ordner für das Projekt, das Ressourcen enthält, angezeigt werden soll. Wenn Sie eine Ressource anzeigen möchten, erweitern Sie beispielsweise die **Dialogfeld** Ordner.  
   
     > [!NOTE]
     >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
-4.  Doppelklicken Sie auf die Ressource, z. B. IDD_ABOUTBOX.  
+4.  Doppelklicken Sie auf die Ressource ist z. B. **IDD_ABOUTBOX**.  
   
-     Die Ressource wird im geeigneten Editor geöffnet. Beispielsweise wird für Ressourcen innerhalb des Dialog-Editors die Ressource geöffnet.  
+     Die Ressource wird im geeigneten Editor geöffnet. Z. B. für Dialogfeldressourcen, die Ressource geöffnet wird innerhalb der **Dialogfeld** Editor.  
   
      Sie können auch [Ressourcen in einer RC (Ressourcenskript)-Datei anzeigen, ohne dass ein Projekt öffnen](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
@@ -75,7 +75,7 @@ Jeder Ressourcentyp hat einen Ressourcen-Editor für diesen Ressourcentyp. Sie k
   
 ### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>So zeigen Sie eine verwaltete Ressource in einem Ressourcen-Editor an  
   
-1.  In **Projektmappen-Explorer**, doppelklicken Sie auf die Ressource, z. B. Bitmap1.bmp.  
+1.  In **Projektmappen-Explorer**, doppelklicken Sie auf die Ressource ist z. B. **Bitmap1.bmp**.  
   
      Die Ressource wird im geeigneten Editor geöffnet.  
   
@@ -83,7 +83,7 @@ Jeder Ressourcentyp hat einen Ressourcen-Editor für diesen Ressourcentyp. Sie k
   
 1.  In **Projektmappen-Explorer**, mit der rechten Maustaste in der Ressource, die Sie verwenden möchten, löschen, und wählen **löschen** aus dem Kontextmenü.  
   
-### <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Anforderungen  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  

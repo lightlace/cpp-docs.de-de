@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1e1ecfb118fb391cf392b411a4664513972ed42
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5ec69b663b2a866701c2587d3913d23310aaf997
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642524"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013261"
 ---
 # <a name="transmitas"></a>transmit_as
 Weist den Compiler einen dargestellten Typ, den Client- und serveranwendungen bearbeiten zu können, müssen, mit einem übertragenen Typ zuordnen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ transmit_as(  
    type  
 ) ]  

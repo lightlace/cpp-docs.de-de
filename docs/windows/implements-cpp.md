@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0fe0c8919eb1959dab426c3c0db47f227c51b66
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 0f2f7fa3cd908612e912a58d8c789369f11fcc52
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606461"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010372"
 ---
 # <a name="implements-c"></a>implements (C++)
 Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse angehören.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
@@ -44,7 +44,7 @@ Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse ang
  Eine durch Trennzeichen getrennte Liste von die Disp-Schnittstelle, die ein Mitglied der IDL-Co-Klasse. Ist eine kurzmethode zur Angabe einer einzelnen Dispinterface **implementiert (Disp-Schnittstellen** * = Dispinterface_name ***)**.  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig werden nur COM-Schnittstellen, die der Co-Klassen sind in der IDL-Co-Klasse hinzugefügt. **implementiert** können Sie andere Schnittstellen IDL-Co-Klasse Mitglieder zu erzwingen.  
+ In der Standardeinstellung nur COM-Schnittstellen, sind die Basisklassen von der `coclass` in der IDL-Co-Klasse hinzugefügt werden. **implementiert** können Sie andere Schnittstellen sollen von IDL erzwingen `coclass` Member.  
   
 ## <a name="requirements"></a>Anforderungen  
   

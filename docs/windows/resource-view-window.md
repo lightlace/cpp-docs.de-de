@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf2c5cb434b07c9323594448a25da7251010bbad
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8b936b1014c2dd6640f64ca929628f6f0a74dc79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608308"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012328"
 ---
 # <a name="resource-view-window"></a>Fenster "Ressourcenansicht"
 > [!NOTE]
@@ -35,9 +35,9 @@ ms.locfileid: "39608308"
 >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
 > [!TIP]
->  Mit einem Klick mit der rechten Maustaste in das Fenster "Ressourcenansicht" wird ein Kontextmenü mit Befehlen geöffnet. Außerdem kann das Fenster mit einem Doppelklick auf die Titelleiste verankert bzw. die Verankerung gelöst werden. Durch Klicken mit der rechten Maustaste auf die Titelleiste werden zusätzliche Befehle zum Steuern des Fensterverhaltens angezeigt. Weitere Informationen finden Sie unter [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+>  Sie können mit der rechten Maustaste auf die **Ressourcenansicht** Fenster aus, um ein Kontextmenü mit Befehlen zu starten. Außerdem kann das Fenster mit einem Doppelklick auf die Titelleiste verankert bzw. die Verankerung gelöst werden. Durch Klicken mit der rechten Maustaste auf die Titelleiste werden zusätzliche Befehle zum Steuern des Fensterverhaltens angezeigt. Weitere Informationen finden Sie unter [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
-#### <a name="to-open-the-resource-view-window"></a>So öffnen Sie das Fenster "Ressourcenansicht"  
+### <a name="to-open-the-resource-view-window"></a>So öffnen Sie das Fenster "Ressourcenansicht"  
   
 1.  Klicken Sie auf **Ressourcenansicht** auf die **Ansicht** Menü.  
   

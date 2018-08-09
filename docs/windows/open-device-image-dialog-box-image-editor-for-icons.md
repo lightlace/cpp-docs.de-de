@@ -1,5 +1,5 @@
 ---
-title: Open &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Open &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fdb7fb2baf2b12105475679a237fef6b69f5728
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e3cfcf2ec4fdd5a559cf52bc84ee6e50031797c9
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881704"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013326"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>Open &lt;Gerät&gt; Bildeigenschaften (Dialogfeld) (Bildbearbeitung für Symbole)
-Verwenden Sie dieses Dialogfeld, um Gerätebildern zu öffnen. Vorhandene Gerätebildern in die aktuelle Ressource (Bilder, die die aktuelle Ressource gehören) aufgeführt.  
+Verwenden Sie das Dialogfeld zu öffnen, um Gerätebildern zu öffnen. Vorhandene Images mit der Geräte in der aktuellen Ressourcendatei (Bilder, die Teil der aktuellen Ressource) aufgeführt.  
   
- **Aktuelle Bilder**  
- Listet die bildkomprimierung in der Ressource an. Wählen Sie den "Image", die, den Sie öffnen möchten.  
+### <a name="current-images"></a>Aktuellen Images  
+ Listet die Images, die in der Ressource enthalten. Wählen Sie den Image-Typ, die, den Sie öffnen möchten.  
   
 ## <a name="requirements"></a>Anforderungen  
  Keiner  
@@ -36,4 +36,3 @@ Verwenden Sie dieses Dialogfeld, um Gerätebildern zu öffnen. Vorhandene Gerät
 ## <a name="see-also"></a>Siehe auch  
  [Menü "Bild"](../windows/image-menu-image-editor-for-icons.md)   
  [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
-
