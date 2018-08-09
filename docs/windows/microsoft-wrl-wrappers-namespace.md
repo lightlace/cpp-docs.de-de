@@ -1,5 +1,5 @@
 ---
-title: Microsoft::wrl::Wrappers Namespace | Microsoft Docs
+title: Microsoft::wrl::Wrappers-Namespace | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa666c1a5de2962a4479b355966c1e8282f2989b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9667a3660f46db0a61991545108d66bf0cac9f38
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33878280"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017795"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers-Namespace
-Definiert die Wrappertypen von Resource Acquisition ist Initialisierung (RAII)-, die die Verwaltung der Lebensdauer von Objekten, Zeichenfolgen und Handles zu vereinfachen.  
+Definiert die Resource Acquisition ist Initialisierung (RAII) Wrappertypen, die die Verwaltung der Lebensdauer von Objekten, Zeichenfolgen und Handles zu vereinfachen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Wrappers;  
 ```  
   
@@ -53,7 +53,7 @@ namespace Microsoft::WRL::Wrappers;
 |[Mutex-Klasse](../windows/mutex-class1.md)|Stellt ein Synchronisierungsobjekt, das ausschließlich auf eine freigegebene Ressource steuert.|  
 |[RoInitializeWrapper-Klasse](../windows/roinitializewrapper-class.md)|Initialisiert die Windows-Runtime.|  
 |[Semaphore-Klasse](../windows/semaphore-class.md)|Stellt ein Synchronisierungsobjekt, das eine freigegebene Ressource steuert, die eine begrenzte Anzahl von Benutzern unterstützen können.|  
-|[SRWLock-Klasse](../windows/srwlock-class.md)|Stellt eine slim Reader/Writer-Sperre.|  
+|[SRWLock-Klasse](../windows/srwlock-class.md)|Stellt eine slim Reader-/Writer-Sperre.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

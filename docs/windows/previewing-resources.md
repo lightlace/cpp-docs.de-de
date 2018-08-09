@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ff41dd0aad30382eb5229679054a74526652737
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8393988bf6d831c8b9718d6685785d523303f3fa
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605018"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016404"
 ---
 # <a name="previewing-resources"></a>Anzeigen von Ressourcen in der Vorschau
 Anzeigen einer Vorschau Ihrer Ressourcen, können Sie grafische Ressourcen anzeigen, ohne sie zu öffnen. Anzeigen einer Vorschau ist auch nützlich für ausführbare Dateien, nachdem Sie diese kompiliert haben, da die Ressourcen-IDs in Zahlen zu ändern. Da diese numerischen Bezeichnern nicht oft genug Informationen bereitstellen, kann die Vorschau der Ressourcen schnell identifizieren.  
@@ -48,9 +48,10 @@ Anzeigen einer Vorschau Ihrer Ressourcen, können Sie grafische Ressourcen anzei
   
 ### <a name="to-preview-resources"></a>Vorschau der Ressourcen  
   
-1.  In [Ressourcenansicht](../windows/resource-view-window.md) oder ein Dokumentfenster, und wählen Sie die Ressource, z. B. IDD_ABOUTBOX.  
+1.  In [Ressourcenansicht](../windows/resource-view-window.md) oder ein Dokumentfenster, und wählen Sie die Ressource ein, z. B. **IDD_ABOUTBOX**.  
   
-     **Hinweis** Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
+     > [!NOTE]
+     > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  In der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window), klicken Sie auf die **Eigenschaftenseiten** Schaltfläche.  
   
@@ -58,12 +59,11 @@ Anzeigen einer Vorschau Ihrer Ressourcen, können Sie grafische Ressourcen anzei
   
 3.  Auf der **Ansicht** Menü klicken Sie auf **Eigenschaftenseiten**.  
   
-     Die Eigenschaftenseite für die Ressource wird geöffnet, eine Vorschau der jeweiligen Ressource angezeigt. Sie können dann mithilfe des Aufwärts- und nach-unten-Pfeiltasten zum Navigieren der Strukturansicht-Steuerelement in der Ressource oder das Dokumentfenster. Die Eigenschaftenseite bleibt geöffnet und zeigt alle Ressourcen, die Fokus besitzt und kann in der Vorschau angezeigt werden.  
+     Die **Eigenschaftenseite** für die Ressource wird geöffnet, eine Vorschau der jeweiligen Ressource angezeigt. Anschließend können Sie die **einrichten** und **unten** Pfeiltasten, um der Struktur navigieren zu steuern, **Ressourcenansicht** oder das Dokumentfenster. Die **Eigenschaftenseite** bleibt geöffnet und zeigt Sie alle Ressourcen, die Fokus besitzt und kann in der Vorschau angezeigt werden.  
   
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen 
-  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

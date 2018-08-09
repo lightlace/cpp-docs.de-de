@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8345829e5d561ead3be0052770e022f704eabc3b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fde195d465116f2fa3055d5981c2c465c4bf31ba
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646123"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019463"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Verwenden eines Zeichentools (Bildbearbeitung für Symbole)
-Die bildbearbeitung Freihandzeichnen und Tools, die alle auf die gleiche Weise funktionieren löschen: Wählen Sie das Tool und, falls erforderlich, [auswählen von Vordergrund- und Hintergrundfarben](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) und Optionen für Größe und Form. Klicken Sie dann den Mauszeiger auf das Bild und klicken oder ziehen, um zu zeichnen und zu löschen.  
+Die **Image** Editor Freihandzeichnen und Tools, die alle auf die gleiche Weise funktionieren löschen: Wählen Sie das Tool und, falls erforderlich, [auswählen von Vordergrund- und Hintergrundfarben](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) und Optionen für Größe und Form. Klicken Sie dann den Mauszeiger auf das Bild und klicken oder ziehen, um zu zeichnen und zu löschen.  
   
  Bei der Auswahl der **Radierer** -Tool, **Pinsel** -Tool oder **Airbrush** Tool die Optionsauswahl des Tools-Optionen angezeigt.  
   

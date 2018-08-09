@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1850507b9d00ab717a2602d4e230968f5222f077
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: fd5f7bb72e1107fe561acef4d6cc3f3ecb87ed59
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604280"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016855"
 ---
 # <a name="method-attributes"></a>Methodenattribut
 Die folgenden Attribute gelten für die Methoden in einer Klasse, Co-Klasse oder Schnittstelle.  
@@ -39,8 +39,8 @@ Die folgenden Attribute gelten für die Methoden in einer Klasse, Co-Klasse oder
 |[defaultbind](../windows/defaultbind.md)|Gibt an, die einfache, bindbare Eigenschaft, die das Objekt am besten darstellt.|  
 |[defaultcollelem](../windows/defaultcollelem.md)|Für die Optimierung für Visual Basic-Code verwendet.|  
 |[displaybind](../windows/displaybind.md)|Gibt eine Eigenschaft, die dem Benutzer als bindungsfähig angezeigt werden soll.|  
-|[helpcontext](../windows/helpcontext.md)|Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der Hilfedatei.|  
-|[helpfile](../windows/helpfile.md)|Legt den Namen der Hilfedatei für die Typbibliothek.|  
+|[helpcontext](../windows/helpcontext.md)|Gibt eine Kontext-ID, mit dem die Benutzerinformationen zu diesem Element in der **Hilfe** Datei.|  
+|[helpfile](../windows/helpfile.md)|Legt den Namen der der **Hilfe** -Datei für eine Typbibliothek.|  
 |[helpstring](../windows/helpstring.md)|Gibt eine Zeichenfolge an, die zum Beschreiben des Elements verwendet wird, auf das sie angewendet wird.|  
 |[helpstringcontext](../windows/helpstringcontext.md)|Gibt die ID des Hilfethemas in eine .hlp oder CHM-Datei an.|  
 |[helpstringdll](../windows/helpstringdll.md)|Gibt den Namen der DLL zu verwenden, um die Suche nach Dokument (Lokalisierung) ausführen.|  

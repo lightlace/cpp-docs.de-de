@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9066a9cd8985b132c1fbd9f6a97bcd0654003d2
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: d4690c15adac7be66ca916b1fc0f769e6c50190c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604502"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017899"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict-Struktur
 Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template <  
    typename Base,  
    typename Derived  

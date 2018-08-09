@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49cdee9cfed3b5694fcea899b9250c5f9dd214b7
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: e912e2aaae53fa0c7f9e506ce70128238bf15a78
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570479"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018415"
 ---
 # <a name="how-to-import-and-export-resources"></a>Gewusst wie: Importieren und Exportieren von Ressourcen
 Sie können grafische Ressourcen (Bitmaps, Symbole, Cursor und Symbolleisten), HTML-Dateien und benutzerdefinierte Ressourcen für die Verwendung in Visual C++ importieren. Die können dieselben Dateitypen aus einem Visual C++-Projekt exportieren, um Dateien zu trennen, die außerhalb der Entwicklungsumgebung verwendet werden können.  
@@ -64,7 +64,6 @@ Sie können grafische Ressourcen (Bitmaps, Symbole, Cursor und Symbolleisten), H
 4.  Navigieren Sie zu dem Ordner, in dem Sie die Datei speichern, und klicken Sie auf möchten **exportieren**.  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

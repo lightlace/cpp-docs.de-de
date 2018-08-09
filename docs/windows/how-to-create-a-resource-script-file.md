@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed35392180d0531133413a54ca2190ed65519546
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 8da6d316050120e6eaac31b12998e5dbf0f3a012
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570573"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020264"
 ---
 # <a name="how-to-create-a-resource-script-file"></a>Gewusst wie: Erstellen einer Ressourcenskriptdatei
 > [!NOTE]
->  Der Ressourcen-Editor ist in Express-Editionen nicht verfügbar.  
+>  Die **Ressourcen-Editor-** ist in Express-Editionen nicht verfügbar.  
 >   
 >  Diese Materialien beziehen sich auf Windows-Desktopanwendungen. Für Projekte in .NET-Sprachen werden keine Ressourcenskriptdateien verwendet. Weitere Informationen finden Sie unter [Ressourcendateien](../windows/resource-files-visual-studio.md).  
   
 ### <a name="to-create-a-new-resource-script-rc-file"></a>So erstellen Sie eine neue Ressourcenskriptdatei (RC-Datei)  
   
-1.  Setzen Sie den Fokus auf den vorhandenen Projektordner in **Projektmappen-Explorer**, z. B. "MyProject".  
+1.  Setzen Sie den Fokus auf den vorhandenen Projektordner in **Projektmappen-Explorer**, z. B. `MyProject`.  
   
     > [!NOTE]
-    >  Verwechseln Sie den Projektordner nicht mit dem Projektmappenordner im Projektmappen-Explorer. Wenn den Fokus verschieben, auf die **Lösung** -Ordner, Ihre Auswahl in der **neues Element hinzufügen** (Dialogfeld) (in Schritt 3) unterscheiden.  
+    >  Verwechseln Sie nicht mit dem Projektmappenordner im Projektordner **Projektmappen-Explorer**. Wenn den Fokus verschieben, auf die **Lösung** -Ordner, Ihre Auswahl in der **neues Element hinzufügen** (Dialogfeld) (in Schritt 3) unterscheiden.  
   
 2.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
   
@@ -48,10 +48,8 @@ ms.locfileid: "39570573"
 > [!NOTE]
 >  Eine Ressourcenskriptdatei (.rc) kann nur in ein vorhandenes Projekt aufgenommen werden, das bereits in der Visual Studio-IDE geladen wurde. Es können keine eigenständige RC-Datei (außerhalb des Projekts) erstellt werden. [Ressourcenvorlagen](../windows/how-to-use-resource-templates.md) (RCT-Dateien) können jederzeit erstellt werden.
 
-
-## <a name="requirements"></a>Anforderungen  
-  
-Win32  
+## <a name="requirements"></a>Anforderungen    
+ Win32  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ressourcendateien](../windows/resource-files-visual-studio.md)   

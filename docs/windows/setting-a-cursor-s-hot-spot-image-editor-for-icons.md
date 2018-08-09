@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d4c00ef825274fc9db6c71522cdb789e07c3b05
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 923ff59044b57d22636c9997e6eb7268ade7860e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648664"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017138"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Festlegen eines Cursors&#39;Hotspot "s" (Bildbearbeitung für Symbole)
-Den Hotspot, der eine [Cursor](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) ist der Punkt, auf die Windows verweist, in die Position des Cursors nachverfolgen. Standardmäßig wird den Hotspot auf der linken oberen Ecke des Cursors (Koordinaten 0,0) festgelegt. Die Eigenschaft "Hotspot" in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) zeigt die Koordinaten des HotSpot.  
+Den Hotspot, der eine [Cursor](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) ist der Punkt, auf die Windows verweist, in die Position des Cursors nachverfolgen. Standardmäßig wird den Hotspot auf der linken oberen Ecke des Cursors (Koordinaten 0,0) festgelegt. Die **Hotspot** -Eigenschaft in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) zeigt die Koordinaten des HotSpot.  
   
 ### <a name="to-set-a-cursors-hot-spot"></a>Festlegen des Hotspots eines Cursors  
   
@@ -42,7 +42,6 @@ Den Hotspot, der eine [Cursor](../windows/icons-and-cursors-image-resources-for-
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  

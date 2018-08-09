@@ -1,5 +1,5 @@
 ---
-title: MutexTraits-Struktur | Microsoft Docs
+title: MutexTraits-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0406ec7938a623be7b16e0535e9d2c0c769f8392
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: deebac1516724469882391c3c856a9ed7a588c88
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874589"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018977"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits-Struktur
-Definiert die gemeinsame Merkmale der [Mutex](../windows/mutex-class1.md) Klasse.  
+Definiert die allgemeinen Merkmale der [Mutex](../windows/mutex-class1.md) Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 struct MutexTraits : HANDLENullTraits;  
 ```  
   

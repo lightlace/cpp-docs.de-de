@@ -17,22 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ff08e42ac1afe3954b485e11ed6433449a6ee2ff
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b44156ae26d77247a909e45061b00a6a1d892d79
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571469"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016927"
 ---
 # <a name="how-to-create-a-resource"></a>Gewusst wie: Erstellen einer Ressource
 > [!NOTE]
->  Die Ressourcenansicht wird in Express-Editionen nicht unterstützt.  
+>  **Ressourcenansicht** wird in Express-Editionen nicht unterstützt.  
   
 ### <a name="to-create-a-new-resource-in-resource-view"></a>So erstellen Sie eine neue Ressource in der Ressourcenansicht  
   
-1.  Klicken Sie, während sich der Fokus in der [Ressourcenansicht](../windows/resource-view-window.md)befindet, auf das Menü **Bearbeiten** , und wählen Sie **Ressource hinzufügen** aus (oder klicken Sie mit der rechten Maustaste in der Ressourcenansicht auf die RC-Datei, und wählen Sie im Kontextmenü den Befehl **Ressource hinzufügen** aus).  
+1.  Mit dem Schwerpunkt auf die RC-Datei in [Ressourcenansicht](../windows/resource-view-window.md), klicken Sie auf die **bearbeiten** Menü, und wählen Sie **Ressource hinzufügen** (oder mit der rechten Maustaste in der RC-Datei **Ressourcenansicht** , und wählen Sie **Ressource hinzufügen** aus dem Kontextmenü).  
   
-     **Hinweis** Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
+     > [!NOTE] 
+     > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
 2.  Wählen Sie im [Dialogfeld "Ressource hinzufügen"](../windows/add-resource-dialog-box.md)den Ressourcentyp aus, den Sie dem Projekt hinzufügen möchten.  
   
@@ -54,16 +55,14 @@ ms.locfileid: "39571469"
   
 1.  Wählen Sie im Menü **Projekt** den Befehl **Ressource hinzufügen**aus.  
   
- Wenn Sie eine neue Ressource erstellen, wird der Ressource von Visual C++ ein eindeutiger Name zugewiesen, z. B. "IDD_Dialog1". Sie können diese Ressourcen-ID anpassen, indem Sie die Ressourceneigenschaften entweder im zugehörigen Ressourcen-Editor oder im [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window)bearbeiten.  
+ Wenn Sie eine neue Ressource erstellen, Visual C++ weist einen eindeutigen Namen, z. B. `IDD_Dialog1`. Sie können diese Ressourcen-ID anpassen, indem Sie die Ressourceneigenschaften entweder im zugehörigen Ressourcen-Editor oder im [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window)bearbeiten.  
   
  Eine Ressource kann entweder als neue Standardressource (die auf keiner Vorlage basiert) oder als Ressource erstellt werden, die von einer [Vorlage](../windows/how-to-use-resource-templates.md)erstellt wurde.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.*
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
 
-
-## <a name="requirements"></a>Anforderungen  
-  
-Win32  
+## <a name="requirements"></a>Anforderungen    
+ Win32  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ressourcendateien](../windows/resource-files-visual-studio.md)   

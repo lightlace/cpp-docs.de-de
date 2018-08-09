@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30656ca7271b91adf50fed5bbc4f8dfd3c6c6acb
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 8d4573dfddd8287bb52f919f5fbceb0485b0911d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608812"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015117"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Übertragen einer Farbe eines Bilds auf andere Elemente (Bildbearbeitung für Symbole)
 Die **Farbe auswählen**, oder verwandelt, Tool macht eine beliebige Farbe auf das Bild der aktuellen Vordergrund- oder Hintergrundfarbe, je nachdem, ob Sie links oder die rechte Maustaste drücken. Zum Abbrechen der **Farbe auswählen** tool, und wählen Sie ein anderes Tool.  
@@ -41,14 +41,13 @@ Die **Farbe auswählen**, oder verwandelt, Tool macht eine beliebige Farbe auf d
 2.  Wählen Sie die Farbe, die Sie aus dem Image übernehmen möchten.  
   
     > [!NOTE]
-    >  Nachdem Sie eine Farbe auswählen, wird der Bild-Editor des zuletzt verwendeten Tools erneut aktiviert.  
+    >  Nachdem Sie eine Farbe aus, übernehmen die **Image** -Editor-Datencenter erneut funktionsfähig, die zuletzt verwendete Tool.  
   
 3.  Verwenden die linke Maustaste gedrückt für die Vordergrundfarbe darstellt, oder die rechte Maustaste der Hintergrundfarbe gezeichnet werden soll.  
   
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  

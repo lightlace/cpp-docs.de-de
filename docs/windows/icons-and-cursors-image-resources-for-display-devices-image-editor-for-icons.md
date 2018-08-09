@@ -26,22 +26,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 384db46d495b342d40dd4f7588583c5b6048810c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9c00d4da36df4672c8e701c0a41c88e5014eeae8
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604615"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017833"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Symbole und Cursor: Bildressourcen für Anzeigegeräte (Bildbearbeitung für Symbole)
-Symbole und Cursor sind grafische Ressourcen, die mehrere Bilder in verschiedenen Größen und Farbschemas für verschiedene Arten von Anzeigegeräten enthalten können. Außerdem weist ein Cursor einen „Hotspot“ auf, den Ort, den Windows zum Nachverfolgen seiner Position verwendet. Sowohl Symbole als auch Cursor werden mit dem Bild-Editor bearbeitet, wie Bitmaps und andere Bilder auch.  
+Symbole und Cursor sind grafische Ressourcen, die mehrere Bilder in verschiedenen Größen und Farbschemas für verschiedene Arten von Anzeigegeräten enthalten können. Außerdem weist ein Cursor einen „Hotspot“ auf, den Ort, den Windows zum Nachverfolgen seiner Position verwendet. Sowohl Symbole und Cursor werden erstellt und bearbeitet, mithilfe der **Image** -Editor wie Bitmaps und andere Bilder auch.  
   
- Wenn Sie ein neues Symbol oder einen neuen Cursor erstellen, erstellt der Bild-Editor zunächst ein Bild eines Standardtyps. Das Bild ist anfänglich mit der Bildschirmfarbe (transparent) gefüllt. Wenn es sich bei dem Bild um einen Cursor handelt, befindet sich der Hotspot anfangs in der oberen linken Ecke (Koordinaten 0,0).  
+ Bei der Erstellung eines neuen Symbols oder Cursors, der **Image** Editor erstellt zunächst ein Bild eines Standardtyps. Das Bild ist anfänglich mit der Bildschirmfarbe (transparent) gefüllt. Wenn es sich bei dem Bild um einen Cursor handelt, befindet sich der Hotspot anfangs in der oberen linken Ecke (Koordinaten 0,0).  
   
- Standardmäßig unterstützt der Bild-Editor die Erstellung weiterer Bilder für die in der folgenden Tabelle aufgelisteten Geräte. Sie können Bilder für andere Geräte erstellen, indem Sie im Dialogfeld [Benutzerdefiniertes Bild](custom-image-dialog-box-image-editor-for-icons.md)die Parameter für Breite, Höhe und Anzahl der Farben eingeben.  
+ In der Standardeinstellung die **Image** -Editor unterstützt die Erstellung weiterer Bilder für die Geräte, die in der folgenden Tabelle gezeigt. Sie können Bilder für andere Geräte erstellen, indem Sie im Dialogfeld [Benutzerdefiniertes Bild](custom-image-dialog-box-image-editor-for-icons.md)die Parameter für Breite, Höhe und Anzahl der Farben eingeben.  
   
 > [!NOTE]
->  Mit der Bildbearbeitung können Sie 32-Bit-Bilder anzeigen, sie aber nicht bearbeiten.  
+>  Mithilfe der **Bildbearbeitung**, können Sie die 32-Bit-Images anzeigen, aber nicht bearbeiten.  
   
 |Farbe|Breite (in Pixel)|Höhe (in Pixel)|  
 |-----------|----------------------|-----------------------|  

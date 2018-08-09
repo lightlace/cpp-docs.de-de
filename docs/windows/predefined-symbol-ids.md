@@ -1,5 +1,5 @@
 ---
-title: Vordefinierte Symbol-IDs | Microsoft Docs
+title: Vordefinierte Symbol-IDs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c28d5d3d04bc48e7c79d634406d40292d869e36
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b459fbf77b75a61350fd1aa69c00749ceb1afc4c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876422"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017239"
 ---
 # <a name="predefined-symbol-ids"></a>Vordefinierte Symbol-IDs
 Wenn Sie ein neues Projekt beginnen sind je nach Projekttyp einige Symbol-IDs für die Verwendung vordefiniert. Diese Symbol-IDs unterstützen verschiedene Bibliotheken und Projekttypen wie MFC. Sie stellen allgemeine Aufgaben dar, die in jeder Anwendung oder Aktionen von Hardwareelementen, wie z. B. Maus oder Drucker, in der Regel enthalten sind.  
@@ -38,8 +38,6 @@ Wenn Sie ein neues Projekt beginnen sind je nach Projekttyp einige Symbol-IDs f�
   
     > [!NOTE]
     >  Vordefinierte Symbole sind stets schreibgeschützt.  
-  
-
   
 ## <a name="requirements"></a>Anforderungen  
  Win32, MFC oder ATL  

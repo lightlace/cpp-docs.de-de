@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffbc9f7f6a242f119fd0cd164242883e904d7114
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 6ce5b1740d09f9d4eb0f90d96cc5a0f6fd70379b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607318"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020199"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Festlegen der gleichen Breite, Höhe oder Größe für Steuerelemente
 Sie können eine Gruppe von Steuerelementen basierend auf der Größe des bestimmenden Steuerelements ändern. Sie können auch [Ändern der Größe eines Steuerelements basierend auf die Abmessungen des seine Beschriftungstext](../windows/sizing-individual-controls.md).  
@@ -43,7 +43,6 @@ Sie können eine Gruppe von Steuerelementen basierend auf der Größe des bestim
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -1,5 +1,5 @@
 ---
-title: Text und Zeichenfolgen in Visual C++ | Microsoft Docs
+title: Text und Zeichenfolgen in Visual C++ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16c44993f3cd9598bc42f9151264e09ac3b7a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8eaf5425bab79d31391e6ccd82e03c667de1271c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856032"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40016625"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Text und Zeichenfolgen in Visual C++
 Ein wichtiger Aspekt bei der Entwicklung von Anwendungen für internationale Märkte ist die korrekte Darstellung lokaler Zeichensätze. Mit dem ASCII-Zeichensatz werden Zeichen im Bereich zwischen 0 x 00 und 0 x 7 F definiert. Von anderen Zeichensätzen (hauptsächlich europäischer Herkunft) werden wie beim ASCII-Zeichensatz die Zeichen innerhalb des Bereichs von 0 x 00 bis 0 x 7 F definiert; zusätzlich wird ein erweiterter Zeichensatz im Bereich von 0 x 80 bis 0 x FF definiert. Daher ist ein Einzelbyte-Zeichensatz (Single-Byte Character Set, SBCS) mit 8 Bits ausreichend, um den ASCII-Zeichensatz sowie viele andere Zeichensätze für europäische Sprachen darzustellen. Einige außereuropäische Zeichensätze, z. B. das japanische Kanji, enthalten jedoch so viele Zeichen, dass sie nicht mehr in Einzelbytecodierung dargestellt werden können. Sie müssen daher mit einem Mehrbyte-Zeichensatz (Multibyte Character Set, MBCS) codiert werden.  
@@ -64,7 +64,7 @@ Ein wichtiger Aspekt bei der Entwicklung von Anwendungen für internationale Mä
  [Internationalisierung](../c-runtime-library/internationalization.md)  
  Beschreibt die internationale Unterstützung in der C-Laufzeitbibliothek.  
   
- [Internationale Beispiele](http://msdn.microsoft.com/en-us/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
+ [Internationale Beispiele](http://msdn.microsoft.com/aa8d390c-cf4c-4dd8-9dea-74d81f93f2f8)  
  Enthält Verknüpfungen mit Beispielen, die die Internationalisierung in Visual C++ demonstrieren.  
   
  [Zeichenfolgen in Sprach- und Länder-/Regionseinstellungen](../c-runtime-library/locale-names-languages-and-country-region-strings.md)  

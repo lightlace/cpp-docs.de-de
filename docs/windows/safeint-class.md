@@ -17,19 +17,19 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1e4ac8898b48c4b64d0b12b945ab45b1c5f1436
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a575538d2527aba25d62dff1a8ba4d89402f5cfb
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606155"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019331"
 ---
 # <a name="safeint-class"></a>SafeInt-Klasse
 Erweitert die primitiven ganze Zahl, um Ganzzahlüberlauf zu vermeiden, und können Sie verschiedene Arten von ganzen Zahlen vergleichen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>  
 class SafeInt;  
 ```  
@@ -193,19 +193,19 @@ class SafeInt;
   
  Seien Sie vorsichtig bei der Verwendung der **SafeInt** -Klasse zusammen mit den `?:` ternärer Operator. Erwägen Sie die folgende Codezeile ein.  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : -1;  
 ```  
   
  Der Compiler konvertiert in dieses:  
   
-```  
+```cpp  
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);  
 ```  
   
  Wenn `flag` ist **"false"**, der Compiler löst eine Ausnahme aus, anstatt den Wert von-1 bis `x`. Um dieses Verhalten zu vermeiden, ist daher der korrekte Code verwendet die folgende Zeile an.  
   
-```  
+```cpp  
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   

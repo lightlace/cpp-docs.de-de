@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad663760efb5f969a7b7cf1b14d187b0382197b7
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2939d5d99c0657e6caa68e8cc6fbb9e6361fcaf7
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39643977"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017041"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>Anzeigen und Hinzufügen von ActiveX-Steuerelementen zu einem Dialogfeld
 Visual Studio ermöglicht Ihnen das Einfügen von ActiveX-Steuerelementen in Ihr Dialogfeld.  
@@ -51,7 +51,7 @@ Visual Studio ermöglicht Ihnen das Einfügen von ActiveX-Steuerelementen in Ihr
     > [!CAUTION]
     >  Der Vertrieb ist möglicherweise nicht für alle ActiveX-Steuerelemente auf Ihrem System rechtlich zulässig. Informieren Sie sich im Lizenzvertrag für die Software, die die Steuerelemente installiert hat, oder wenden Sie sich an den Hersteller der Software.  
   
-     Sie können Steuerelemente für den leichteren Zugriff im Toolbox-Fenster platzieren. Weitere Informationen finden Sie unter [Dialogfeld Toolbox anpassen](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).  
+     Sie können Steuerelemente im Platzieren der **Toolbox** Fenster für den leichteren Zugriff. Weitere Informationen finden Sie unter [Dialogfeld Toolbox anpassen](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).  
   
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   

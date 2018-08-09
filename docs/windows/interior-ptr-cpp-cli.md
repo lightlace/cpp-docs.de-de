@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2960a95195e3f77194faf9df5ac626e09658e93
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: a6478e8ee5474687928692763c5231091f7ad1ce
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605122"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017018"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 Ein *innerer Zeiger* deklariert einen Zeiger auf die in einen Verweistyp handelt, aber nicht auf das Objekt selbst. Ein innerer Zeiger kann mit Verweis-Handle, Werttyp, geschachtelte Typhandle, Member eines verwalteten Typs oder auf ein Element eines verwalteten Arrays verweisen.  
@@ -116,9 +116,7 @@ int main() {
    (*p2)->data = 3;  
    Console::WriteLine((*p2)->data);  
 }  
-```  
-  
- **Ausgabe**  
+``` 
   
 ```Output  
 1  

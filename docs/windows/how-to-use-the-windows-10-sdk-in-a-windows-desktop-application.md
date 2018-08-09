@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 937afdb400fff6f0944d8690412257cb66a9c25c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034779"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40017996"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Gewusst wie: Verwenden des Windows 10-SDKs in einer Windows-Desktopanwendung
 Wenn Sie ein klassisches Windows-desktop-Projekt in Visual Studio 2017 erstellen, ist es wird standardmäßig eingerichtet, mit der Version von Windows 10 SDK zu erstellen, die installiert wurde, wenn die C++-Desktop-Workload installiert oder zuletzt aktualisiert wurde. Diese Version des Windows SDK ist kompatibel, mit Windows 7 und höher. Finden Sie unter [verwenden der Windows-Header](/windows/desktop/WinProg/using-the-windows-headers) Informationen für bestimmte Versionen von Windows.
@@ -31,7 +31,6 @@ Wenn Sie eine frühere Version des SDK abzielen möchten, können Sie öffnen **
   
 1.  Stellen Sie sicher, dass das Windows 10-SDK installiert ist. Das Windows 10 SDK installiert ist, als Teil der **Desktopentwicklung mit C++** arbeitsauslastung. Eine eigenständige Version finden Sie unter [Downloads und tools für Windows 10](https://developer.microsoft.com/windows/downloads).
 
-  
 2.  Öffnen Sie das Kontextmenü für den Projektknoten, und wählen Sie **SDK-Version neu zuweisen**aus.  
   
      ![Neuzuweisen von SDK-Version](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
@@ -52,7 +51,7 @@ Wenn Sie eine frühere Version des SDK abzielen möchten, können Sie öffnen **
   
      ![Version der Zielplattform](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     Diese Aktion ändert die Werte der Projektmakros, die Pfade zu den Headerdateien und Bibliotheksdateien enthalten. Um herauszufinden, was geändert haben, im Abschnitt "Visual C++-Verzeichnisse" des Dialogfeld "Projekteigenschaften", wählen Sie eine der Eigenschaften wie z. B. den Includeverzeichnissen aus, wählen Sie zum Öffnen der Dropdownliste aus, und wählen \<Bearbeiten >. Das Dialogfeld **Includeverzeichnisse** wird angezeigt.  
+     Diese Aktion ändert die Werte der Projektmakros, die Pfade zu den Headerdateien und Bibliotheksdateien enthalten. Um herauszufinden, was geändert, in der **Visual C++-Verzeichnisse** im Abschnitt der **Projekteigenschaften** Dialogfeld Wählen Sie eine der Eigenschaften wie die **Includeverzeichnisse**, auswählen Öffnen der Dropdownliste aus, und wählen \<Bearbeiten >. Das Dialogfeld **Includeverzeichnisse** wird angezeigt.  
   
      ![Dialogfeld für die Verzeichnisse enthalten](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
@@ -66,7 +65,7 @@ Wenn Sie eine frühere Version des SDK abzielen möchten, können Sie öffnen **
   
 1.  Öffnen Sie das Kontextmenü für den Projektknoten, und wählen Sie **SDK-Version neu zuweisen**aus.  
   
-2.  Wählen Sie in der Dropdown-Liste „Version der Zielplattform“ den Eintrag „8.1“ aus.  
+2.  In der **Zielplattformversion** Dropdownliste wählen **8.1**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Windows-Desktopanwendungen (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

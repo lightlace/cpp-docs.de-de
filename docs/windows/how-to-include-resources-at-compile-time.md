@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 856d448b096910c322750eccc7447689b08b328e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 28374482abd5d2e039c92adbd34f261bdc259b9d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571336"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018915"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Gewusst wie: Einfügen von Ressourcen zur Kompilierungszeit
 Es ist für gewöhnlich einfach und intuitiv mit der Standardanordnung sämtlicher Ressourcen in einer Ressourcenskriptdatei (.rc) zu arbeiten. Aber Sie können Ressourcen hinzufügen in anderen Dateien zu Ihrem aktuellen Projekt zum Zeitpunkt der Kompilierung durch Auflisten der in der **Kompilierzeitdirektiven** im Feld der [Ressourcenincludes (Dialogfeld)](../windows/resource-includes-dialog-box.md).  
@@ -37,7 +37,7 @@ Es ist für gewöhnlich einfach und intuitiv mit der Standardanordnung sämtlich
   
 -   Zum Hinzufügen von Kommentaren zu Ressourcenanweisungen, die beim Speichern der RC-Datei nicht gelöscht werden.  
   
-     .rc- oder resource.h-Dateien werden von Ressourcen-Editoren nicht direkt gelesen. Der Ressourcencompiler kompiliert sie in .aps-Dateien, die von den Ressourcen-Editoren genutzt werden. Diese Datei ist ein Kompilierungsschritt und speichert nur symbolische Daten. Wie bei einer normalen Kompilierung werden Informationen, die nicht symbolisch sind (z. B. Kommentare) während der Kompilierung verworfen. Sobald die .aps-Datei nicht mehr mit der .rc-Datei synchron ist, wird die .rc-Datei neu generiert (z. B. überschreibt der Ressourcen-Editor beim Speichern die .rc-Datei und resource.h-Datei). Alle Änderungen an den Ressourcen selbst bleiben in der .rc-Datei, aber Kommentare gehen immer verloren, sobald die .rc-Datei überschrieben wird.  
+     Die Ressourcen-Editoren nicht direkt RC gelesen oder `resource.h` Dateien. Der Ressourcencompiler kompiliert sie in .aps-Dateien, die von den Ressourcen-Editoren genutzt werden. Diese Datei ist ein Kompilierungsschritt und speichert nur symbolische Daten. Wie bei einer normalen Kompilierung werden Informationen, die nicht symbolisch sind (z. B. Kommentare) während der Kompilierung verworfen. Sobald die .aps-Datei mit der RC-Datei nicht mehr synchron, die RC-Datei erneut generiert wird (Wenn Sie speichern, überschreibt der Ressourcen-Editor z. B. die RC-Datei und die `resource.h` Datei). Alle Änderungen an den Ressourcen selbst bleiben in der .rc-Datei, aber Kommentare gehen immer verloren, sobald die .rc-Datei überschrieben wird.  
   
 -   Zum Einbeziehen von bereits entwickelten und getesteten Ressourcen, die nicht weiter geändert werden müssen. (Einbezogene Dateien ohne RC-Erweiterung können durch die Ressourcen-Editoren nicht bearbeitet werden.)  
   
@@ -58,7 +58,6 @@ Es ist für gewöhnlich einfach und intuitiv mit der Standardanordnung sämtlich
      Die auf diese Weise in die Dateien einbezogenen Ressourcen werden zum Bestandteil Ihrer ausführbaren Datei zum Zeitpunkt der Kompilierung. Sie stehen nicht direkt für die Bearbeitung oder Änderung zur Verfügung, wenn Sie die RC-Hauptdatei Ihres Projekts bearbeiten. Sie müssen einbezogene RC-Dateien einzeln öffnen. Einbezogene Dateien ohne RC-Erweiterung können durch die Ressourcen-Editoren nicht bearbeitet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

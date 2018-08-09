@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3ed2559457a7fd3231c625b285dea44f81da877
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 1efde876cadd5a8620bef83c37a61b8b471dba8b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646841"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40019237"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Hinzufügen von Dateien zu leeren Win32-Anwendungen
 ### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>So fügen Sie Ihre Dateien einer leeren Windows-Desktop-Anwendung hinzu  
@@ -43,4 +43,4 @@ ms.locfileid: "39646841"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen einer leeren Windows-Desktopanwendung](../windows/creating-an-empty-windows-desktop-application.md)   
- [Bereitstellen von Anwendungen](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Bereitstellen von Anwendungen](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

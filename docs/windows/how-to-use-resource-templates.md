@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da0d33c51fa50c7291eaa6421e9b857cd6f82d36
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: b0a123c336df3f47550f8bb825a621eff53a8cb5
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569455"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40015546"
 ---
 # <a name="how-to-use-resource-templates"></a>Gewusst wie: Verwenden von Ressourcenvorlagen
 Eine Ressourcenvorlage ist eine benutzerdefinierte Ressource, die Sie als RCT-Datei gespeichert haben. Eine Ressourcenvorlage kann dann als Ausgangspunkt für die Erstellung weiterer Ressourcen dienen. Ressourcenvorlagen sparen Zeit bei der Entwicklung von zusätzlichen Ressourcen oder Gruppen von Ressourcen, die Funktionen wie Standardsteuerelemente oder andere wiederkehrende Elemente gemeinsam nutzen. Zum Beispiel können Sie eine Hilfeschaltfläche und ein Symbol eines Firmenlogos in mehrere Dialogfelder einfügen. Um dies schnell zu tun, erstellen Sie eine neue Dialogfeldvorlage, und passen Sie sie mit dem Logo und der Hilfeschaltfläche an.  
@@ -46,7 +46,7 @@ Eine Ressourcenvorlage ist eine benutzerdefinierte Ressource, die Sie als RCT-Da
   
 4.  Geben Sie einen Namen und Speicherort für die neue RCT-Datei, und klicken Sie auf **öffnen**.  
   
-5.  Die neue RCT-Datei wird dem Projekt hinzugefügt und wird im Projektmappen-Explorer unter dem **Ressourcen** Ordner.  
+5.  Die neue RCT-Datei wird dem Projekt hinzugefügt und wird im **Projektmappen-Explorer** unter der **Ressourcen** Ordner.  
   
      Sie können jetzt Doppelklicken Sie auf die RCT-Datei, um sie in einem Dokumentfenster zu öffnen, und klicken Sie dann Ressourcen hinzufügen (mit der rechten Maustaste in der Datei im Dokumentfenster, und wählen Sie **Ressource hinzufügen** aus dem Kontextmenü). Dann können Sie diese Ressourcen anpassen und die RCT-Datei speichern.  
   
@@ -76,7 +76,6 @@ Eine Ressourcenvorlage ist eine benutzerdefinierte Ressource, die Sie als RCT-Da
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

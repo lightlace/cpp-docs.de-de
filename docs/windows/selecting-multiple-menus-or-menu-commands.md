@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 53225576941afff3a94c3dd276feb980e2bd6562
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 02293fce154fa9c4c98c583de02e8967f4d3957b
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644855"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020212"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Auswählen mehrerer Menüs oder Menübefehle
 Sie können mehrere Menünamen oder Menübefehle zum Durchführen von Massenvorgängen wie z. B. dem Löschen oder Ändern der Eigenschaften auswählen.  
@@ -34,7 +34,6 @@ Sie können mehrere Menünamen oder Menübefehle zum Durchführen von Massenvorg
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

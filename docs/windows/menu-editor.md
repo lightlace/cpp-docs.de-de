@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6aae190e20776c252b7f40651d5c0bdb13111dab
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 21e6d35a555ecff327bcd4b68318c17da194cb41
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606249"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018334"
 ---
 # <a name="menu-editor"></a>Menü-Editor
-Menüs ermöglichen Ihnen das Anordnen von Befehlen in einer logischen und leicht verständlichen Weise. Mit dem Menü-Editor können Sie Menüs erstellen und bearbeiten, indem Sie direkt an einer Menüleiste arbeiten, die der in Ihrer fertig gestellten Anwendung sehr ähnlich ist.  
+Menüs ermöglichen Ihnen das Anordnen von Befehlen in einer logischen und leicht verständlichen Weise. Mit der **Menü** -Editor, die Sie erstellen und Bearbeiten von Menüs direkt mit einer Menüleiste, die in der fertigen Anwendung gleicht arbeiten können.  
   
-In Visual C++-Projekten können Sie den Menü-Editor für folgende Zwecke verwenden:  
+Bei Visual C++-Projekten können Sie die **Menü** -Editor, um:  
   
 -   [Erstellen von Menüs](../windows/creating-a-menu.md)  
   
@@ -59,10 +59,10 @@ In Visual C++-Projekten können Sie den Menü-Editor für folgende Zwecke verwen
 -   [Ändern von Menübefehleigenschaften](../windows/menu-command-properties.md)  
   
     > [!TIP]
-    >  Im Menü-Editor können Sie in vielen Fällen durch Klicken mit der rechten Maustaste ein Popupmenü aufrufen, das die gängigsten Befehle enthält. Die verfügbaren Befehle hängen davon ab, auf was der Zeiger verweist.  
+    >  Bei der Verwendung der **Menü** -Editor in vielen Fällen können Sie die rechte Maustaste gedrückt, um ein Popupmenü mit häufig verwendeten Befehlen anzuzeigen klicken. Die verfügbaren Befehle hängen davon ab, auf was der Zeiger verweist.  
   
     > [!NOTE]
-    >  Bei MFC-Programmen (Microsoft Foundation Class Library) und ATL-Programmen können Sie Code-Assistenten verwenden, um Menübefehle mit Code zu verknüpfen. Weitere Informationen finden Sie unter [Hinzufügen von Ereignissen](../ide/adding-an-event-visual-cpp.md).  
+    >  Für die Microsoft Foundation Class-Bibliothek (MFC) und ATL-Programmen, können Sie **Codeassistenten** um Menübefehle mit Code zu verknüpfen. Weitere Informationen finden Sie unter [Hinzufügen von Ereignissen](../ide/adding-an-event-visual-cpp.md).  
   
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   

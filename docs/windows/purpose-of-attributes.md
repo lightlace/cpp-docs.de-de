@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ca7757c1b9a8ebf034f68b9a380c09d4a5b08f1
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 4f44d6e4db7e09033e9c3f05d94cbf5294b306a3
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39607023"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40018281"
 ---
 # <a name="purpose-of-attributes"></a>Attributzwecke
 Attribute erweitern C++ in Anweisungen, die derzeit nicht möglich, ohne die klassischen Struktur der Sprache. Attribute können Anbieter (separate DLLs), um Funktionalität Language dynamisch zu erweitern. Das Hauptziel von Attributen ist zur Vereinfachung der Erstellung von COM-Komponenten sowie gleichzeitig die Produktivität der Komponentenentwickler. Es können Attribute angewendet werden, nahezu jedem C++-Konstrukt, wie z. B. Klassen, die Datenmember oder Memberfunktionen. Im folgenden finden eine Hervorhebung der Vorteile dieser neuen Technologie:  
@@ -35,7 +35,7 @@ Attribute erweitern C++ in Anweisungen, die derzeit nicht möglich, ohne die kla
   
  Beispielsweise um einen einfachen Ereignisempfänger für eine generische ATL-Klasse zu implementieren, Sie können Anwenden der [Event_receiver](../windows/event-receiver.md) Attribut für eine bestimmte Objektklasse, z. B. `CMyReceiver`. Die `event_receiver` Attribut wird dann kompiliert, vom Visual C++-Compiler, die den entsprechenden Code in der Objektdatei einfügt.  
   
-```  
+```cpp  
 [event_receiver(com)]  
 class CMyReceiver   
 {  
