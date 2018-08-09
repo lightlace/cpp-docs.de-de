@@ -1,5 +1,5 @@
 ---
-title: Anzeigen und Hinzufügen von ActiveX-Steuerelemente in einem Dialogfeld | Microsoft Docs
+title: Anzeigen und Hinzufügen von ActiveX-Steuerelemente in einem Dialogfeld | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61448cba890c03feaf2d9fcbda5cdb93478f4c04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad663760efb5f969a7b7cf1b14d187b0382197b7
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891165"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643977"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>Anzeigen und Hinzufügen von ActiveX-Steuerelementen zu einem Dialogfeld
 Visual Studio ermöglicht Ihnen das Einfügen von ActiveX-Steuerelementen in Ihr Dialogfeld.  
@@ -46,21 +46,19 @@ Visual Studio ermöglicht Ihnen das Einfügen von ActiveX-Steuerelementen in Ihr
      Das Steuerelement wird im Dialogfeld angezeigt, wo Sie es bearbeiten oder Handler für es erstellen können, ganz wie bei jedem anderen Steuerelement.  
   
     > [!NOTE]
-    >  Sie können ActiveX-Steuerelemente zum [Toolbox](/visualstudio/ide/reference/toolbox)-Fenster hinzufügen. Weitere Informationen finden Sie unter [Verwalten von Elementen und Registerkarten in der Toolbox](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db).  
+    >  Sie können ActiveX-Steuerelemente zum [Toolbox](/visualstudio/ide/reference/toolbox)-Fenster hinzufügen. Weitere Informationen finden Sie unter [Verwalten von Elementen und Registerkarten in der Toolbox](http://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db).  
   
     > [!CAUTION]
     >  Der Vertrieb ist möglicherweise nicht für alle ActiveX-Steuerelemente auf Ihrem System rechtlich zulässig. Informieren Sie sich im Lizenzvertrag für die Software, die die Steuerelemente installiert hat, oder wenden Sie sich an den Hersteller der Software.  
   
-     Sie können Steuerelemente für den leichteren Zugriff im Toolbox-Fenster platzieren. Weitere Informationen finden Sie unter [Dialogfeld „Toolbox anpassen“](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb).  
+     Sie können Steuerelemente für den leichteren Zugriff im Toolbox-Fenster platzieren. Weitere Informationen finden Sie unter [Dialogfeld Toolbox anpassen](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- **Anforderungen**  
-  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  
  [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
- [MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls (MFC-ActiveX-Steuerelemente)](../mfc/mfc-activex-controls.md)   
  [ActiveX-Steuerelementcontainer](../mfc/activex-control-containers.md)
-

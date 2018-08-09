@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Steuerelemente im Dialog-Editor | Microsoft Docs
+title: Benutzerdefinierte Steuerelemente im Dialog-Editor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,36 +21,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c2bca249958e4d25ab5377540525da34802ac04
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0b197baa61d741452219529e44be0e9ba1a154ce
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33880243"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651050"
 ---
 # <a name="custom-controls-in-the-dialog-editor"></a>Benutzerdefinierte Steuerelemente im Dialog-Editor
-Dialog-Editor können Sie vorhandene verwenden "custom" oder "User"-Steuerelemente in einer Dialogfeldvorlage.  
+Der Dialog-Editor können Sie vorhandene "Benutzerdefiniert" oder "User"-Steuerelemente in eine Dialogfeldvorlage.  
   
 > [!NOTE]
->  Benutzerdefinierte Steuerelemente in diesem Sinn dürfen nicht mit ActiveX-Steuerelementen verwechselt werden. ActiveX-Steuerelemente wurden benutzerdefinierte OLE-Steuerelemente bezeichnet. Verwechseln Sie nicht auch diese Steuerelemente mit den ownerdrawn-Steuerelementen in Windows.  
+>  Benutzerdefinierte Steuerelemente in diesem Zusammenhang sind nicht zu verwechseln mit ActiveX-Steuerelementen. ActiveX-Steuerelemente wurden benutzerdefinierte OLE-Steuerelemente bezeichnet. Verwechseln Sie nicht auch diese Steuerelemente mit den ownerdrawn-Steuerelementen in Windows.  
   
- Diese Funktion dient als die vom Windows-Steuerelemente verwenden können. Zur Laufzeit ist eine Fensterklasse (nicht identisch mit einer C++-Klasse) zugeordnet das Steuerelement. Einem häufiger für die gleiche Aufgabe besteht darin, jedes Steuerelement, z. B. ein statisches Steuerelement in einem Dialogfeld installieren. Klicken Sie dann zur Laufzeit, in der [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) -Funktion, das entsprechende Steuerelement entfernen und durch Ihr eigenes benutzerdefiniertes Steuerelement ersetzen.  
+ Diese Funktion dient als die vom Windows-Steuerelemente verwenden zu können. Zur Laufzeit für das Steuerelement eine Fensterklasse (nicht die gleiche als C++-Klasse) zugeordnet ist. Eine allgemeinere Möglichkeit zum Ausführen der gleichen Aufgabe besteht darin Kontrolle, z. B. ein statisches Steuerelement in einem Dialogfeld zu installieren. Klicken Sie dann zur Laufzeit in die [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funktionieren, entfernen Sie das Steuerelement aus, und durch Ihr eigenes benutzerdefiniertes Steuerelement ersetzen.  
   
- Dies ist eine alte Technik. Heute sind in den meisten Fällen empfohlen, ein ActiveX-Steuerelement oder eine Unterklasse eines allgemeinen Windows-Steuerelements zu schreiben.  
+ Dies ist eine alte Technik. Noch heute in den meisten Fällen sollten Sie ein ActiveX-Steuerelement oder eine Unterklasse eines allgemeinen Steuerelements von Windows zu schreiben.  
   
- Für diese benutzerdefinierte Steuerelemente werden können nur:  
+ Für benutzerdefinierte Steuerelemente sind Sie auf:  
   
 -   Festlegen des Speicherorts im Dialogfeld an.  
   
 -   Eingeben einer Beschriftung.  
   
--   Identifizieren den Namen des Windows-Klasse des Steuerelements (der Anwendungscode muss das Steuerelement mit diesem Namen registriert).  
+-   Identifizieren den Namen der Windows-Klasse des Steuerelements (Ihr Anwendungscode muss das Steuerelement mit diesem Namen registrieren).  
   
--   Geben Sie einen 32-Bit-Hexadezimalwert, das Format des Steuerelements festlegt.  
+-   Geben einen 32-Bit-Hexadezimalwert, das Format des Steuerelements legt diese fest.  
   
--   Festlegen der erweiterten Stils.  
+-   Wenn den erweiterten Stil.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  
@@ -58,4 +58,3 @@ Dialog-Editor können Sie vorhandene verwenden "custom" oder "User"-Steuerelemen
 ## <a name="see-also"></a>Siehe auch  
  [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
  [Steuerelemente](../mfc/controls-mfc.md)
-

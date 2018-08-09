@@ -1,5 +1,5 @@
 ---
-title: Verwenden der 256-Farben-Palette (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Verwenden der 256-Farben-Palette (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,35 +20,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5dc78dfa5d549b37b99125cfcef5c25ae6c76b9e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890904"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645151"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Verwenden der 256-Farben-Palette (Bildbearbeitung für Symbole)
-Um eine Auswahl aus der 256-Farben-Palette zu zeichnen, müssen Sie die Farben in den Farben (Palette) Wählen Sie in der [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md).  
+Um mit einer Auswahl aus der 256-Farben-Palette zu zeichnen, müssen Sie die Farben aus der Farbpalette auswählen der [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md).  
   
 ### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Wählen Sie eine Farbe aus der 256-Farben-Palette für große Symbole  
   
-1.  Wählen Sie die "große Symbole" oder die Cursor, oder erstellen Sie eine neue großes Symbol oder Cursor.  
+1.  Wählen Sie die große Symbole oder Cursor, oder erstellen Sie eine neue große Symbole oder Cursor.  
   
-2.  Wählen Sie eine Farbe aus der 256 Farben der **Farben** Palette in den **Farben** Fenster.  
+2.  Wählen Sie eine Farbe aus der 256 Farben der **Farben** Palette in der **Farben** Fenster.  
   
-     Die ausgewählte Farbe wird die aktuelle Farbe in der Farbpalette, die **Farben** Fenster.  
+     Die ausgewählte Farbe wird die aktuelle Farbe in der Farbpalette der **Farben** Fenster.  
   
     > [!NOTE]
-    >  Die erste Palette 256-Farben-Images zum entspricht der Palette, die von der Windows-API CreateHalftonePalette zurückgegeben. Alle Symbole für die Windows-Shell vorgesehen, sollten diese Palette verwenden, um Flackern während Palette Realisierung zu verhindern.  
+    >  Die anfängliche Palette verwendet für 256-Farben-Images entspricht die Palette von zurückgegebenen der `CreateHalftonePalette` Windows-API. Alle Symbole, die für die Windows-Shell vorgesehen, sollten diese Palette verwenden, um Flimmern während der Realisierung der Palette zu vermeiden.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- Anforderungen  
-  
+## <a name="requirements"></a>Anforderungen  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Erstellen eines 256-Farben-Symbols oder Cursors](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)   
  [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

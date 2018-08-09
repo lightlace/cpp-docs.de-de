@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92add8f79abd3aac7c11142fa67ea3b4bcd237d5
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dcf5a095167e48a52405978a105cadaddfa870f2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466201"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647813"
 ---
 # <a name="asyncbase-class"></a>AsyncBase-Klasse
 Implementiert den asynchronen Zustandsautomat der Windows-Runtime.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template <  
    typename TComplete,  
    typename TProgress = Details::Nil,  
@@ -44,7 +44,7 @@ template <
 class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Implements<IAsyncInfo>;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *TComplete*  
  Ein Ereignishandler, der aufgerufen wird, wenn ein asynchroner Vorgang abgeschlossen ist.  
   
@@ -52,7 +52,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> : public Microsoft::WRL::Im
  Ein Ereignishandler, der aufgerufen wird, wenn Sie ein aktiven asynchroner Vorgang, den aktuellen Status des Vorgangs meldet.  
   
  *ResultType-Element*  
- Eines der [AsyncResultType](../windows/asyncresulttype-enumeration.md) -Enumerationswerte fest. Standardmäßig wird "SingleResult".  
+ Eines der [AsyncResultType](../windows/asyncresulttype-enumeration.md) -Enumerationswerte fest. In der Standardeinstellung `SingleResult`.  
   
 ## <a name="members"></a>Member  
   

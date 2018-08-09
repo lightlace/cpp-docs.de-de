@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428004d3390b95c700c53fd157b62a1b3fbe3d0b
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4efe507011d70df689162b52f72d730f0ae99f58
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571174"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650052"
 ---
 # <a name="generic-interfaces-visual-c"></a>Generische Schnittstellen (Visual C++)
 Die Einschränkungen für Typparameter für Klassen sind identisch mit denen, die Typparameter für Schnittstellen gelten (finden Sie unter [generische Klassen (C++ / CLI)](../windows/generic-classes-cpp-cli.md)).  
@@ -34,14 +34,14 @@ Die Einschränkungen für Typparameter für Klassen sind identisch mit denen, di
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [attributes] generic <class-key type-parameter-identifier[, ...]>  
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  *Attribute* (optional)  
- Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".  
+ Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter **Attribute**.  
   
  *Klassenschlüssel*  
  **Klasse** oder **Typename**  

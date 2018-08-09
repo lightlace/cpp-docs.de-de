@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: End-Methode | Microsoft Docs'
+title: 'Eventtargetarray:: End-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00827d42bb01263d6b4fd9b5aea3b0fc7f7c76e1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5e64cfcd0ad8a71a67815b592908d57725fef9f1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33874264"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648645"
 ---
 # <a name="eventtargetarrayend-method"></a>EventTargetArray::End-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 ComPtr<IUnknown>* End();  
 ```  
   
@@ -37,7 +37,7 @@ ComPtr<IUnknown>* End();
  Die Adresse des letzten Elements im internen Array von Ereignishandlern.  
   
 ## <a name="remarks"></a>Hinweise  
- Ruft die Adresse des letzten Elements im internen Array von Ereignishandlern.  
+ Ruft die Adresse des letzten Elements in das interne Array der Ereignishandler ab.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  

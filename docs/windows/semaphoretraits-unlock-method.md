@@ -1,5 +1,5 @@
 ---
-title: 'Semaphoretraits:: Unlock-Methode | Microsoft Docs'
+title: 'Semaphoretraits:: Unlock-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0914c6ff83e881f92963fc8a548ddeff587db75e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98e210ad99a333b6abf68f574916d4f9da5ab67e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892246"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650426"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock-Methode
-Versionen Kontrolle über eine freigegebene Ressource.  
+Releases-Steuerelement eine gemeinsam genutzte Ressource.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,12 +35,12 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `h`  
- Handle für einen Semaphorobjekt.  
+### <a name="parameters"></a>Parameter  
+ *h*  
+ Handle für ein **Semaphor** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Unlock-Vorgang nicht erfolgreich ist, gibt Unlock() einen Fehler, der die Ursache des Fehlers angibt.  
+ Wenn sich "Entsperren"-Vorgangs nicht erfolgreich ist **Unlock()** gibt einen Fehler, der die Ursache des Fehlers angibt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

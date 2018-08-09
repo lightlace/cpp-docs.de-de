@@ -20,19 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e7b1f849aff584da6f575bc822a71acc683520e6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461808"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646318"
 ---
 # <a name="attribute"></a>Attribut
 Ermöglicht Ihnen die Erstellung ein benutzerdefiniertes Attributs.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
@@ -40,7 +40,7 @@ Ermöglicht Ihnen die Erstellung ein benutzerdefiniertes Attributs.
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *AllowOn*  
  Gibt die Language-Elemente, die auf denen das benutzerdefinierte Attribut angewendet werden kann. Der Standardwert ist `System::AttributeTargets::All` (finden Sie unter [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).  
   
@@ -48,16 +48,16 @@ Ermöglicht Ihnen die Erstellung ein benutzerdefiniertes Attributs.
  Gibt an, ob das benutzerdefinierte Attribut wiederholt für ein Konstrukt angewendet werden kann. Der Standardwert lautet FALSE.  
   
  *Geerbt*  
- Gibt an, ob das Attribut von Unterklassen geerbt werden. Der Compiler bietet keine spezielle Unterstützung für diese Funktion; Es ist die Aufgabe die Attribut-Consumer (z. B. Reflektion) diese Informationen zu berücksichtigen. Wenn *geerbte* TRUE ist, wird das Attribut geerbt. Wenn *AllowMultiple* ist "true", das Attribut sammeln sich daher auf der abgeleitete Member; Wenn *AllowMultiple* ist "false", das Attribut wird außer Kraft setzen (oder ersetzen) bei der Vererbung. Wenn *geerbte* false festgelegt ist, wird das Attribut nicht geerbt werden. Der Standardwert ist TRUE.  
+ Gibt an, ob das Attribut von Unterklassen geerbt werden. Der Compiler bietet keine spezielle Unterstützung für diese Funktion; Es ist die Aufgabe der Attribut-Consumer (`Reflection`, z. B.), die diese Informationen zu berücksichtigen. Wenn *geerbte* TRUE ist, wird das Attribut geerbt. Wenn *AllowMultiple* ist "true", das Attribut sammeln sich daher auf der abgeleitete Member; Wenn *AllowMultiple* ist "false", das Attribut wird außer Kraft setzen (oder ersetzen) bei der Vererbung. Wenn *geerbte* false festgelegt ist, wird das Attribut nicht geerbt werden. Der Standardwert ist TRUE.  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Die `attribute` Attribut ist jetzt veraltet.  Verwenden Sie das common Language Runtime-Attribut System.Attribute direkt, um benutzerdefinierte Attirbutes zu erstellen.  Weitere Informationen finden Sie unter [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md).  
+>  Die **Attribut** Attribut ist jetzt veraltet.  Verwenden Sie die common Language Runtime-Attribut `System.Attribute` , direkt an eine benutzerdefinierte Attirbutes zu erstellen. Weitere Informationen finden Sie unter [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md).  
   
- Sie definieren eine [benutzerdefiniertes Attribut](../windows/custom-attributes-cpp.md) durch Platzieren der `attribute` Attribut für eine verwaltete Definition der Klasse oder Struktur. Der Name der Klasse wird das benutzerdefinierte Attribut. Zum Beispiel:  
+ Sie definieren eine [benutzerdefiniertes Attribut](../windows/custom-attributes-cpp.md) durch Platzieren der **Attribut** Attribut für eine verwaltete Definition der Klasse oder Struktur. Der Name der Klasse wird das benutzerdefinierte Attribut. Zum Beispiel:  
   
-```  
+```cpp  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
@@ -115,7 +115,7 @@ ref class ClassC {};
   
  Finden Sie unter [User-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md) eine Erläuterung zum Attribut abzielt.  
   
- Die `attribute` Attribut hat eine *AllowMultiple* Parameter, der angibt, ob das benutzerdefinierte Attribut einzelne verwendet wird oder Multiuse (können werden mehr als einmal auf die gleiche Entität).  
+ Die **Attribut** Attribut hat eine *AllowMultiple* Parameter, der angibt, ob das benutzerdefinierte Attribut einzelne verwendet wird oder Multiuse (können werden mehr als einmal auf die gleiche Entität).  
   
 ```cpp  
 // cpp_attr_ref_attribute_3.cpp  
@@ -130,21 +130,21 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- Benutzerdefinierte Attributklassen stammen direkt oder indirekt von <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, welche macht Attributdefinitionen in Metadaten schnell und einfach zu identifizieren. Die `attribute` -Attributs impliziert die Vererbung von System:: Attribute, sodass explizite Ableitung nicht erforderlich ist:  
+ Benutzerdefinierte Attributklassen stammen direkt oder indirekt von <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, welche macht Attributdefinitionen in Metadaten schnell und einfach zu identifizieren. Die **Attribut** -Attributs impliziert die Vererbung von `System::Attribute`, sodass die explizite Ableitung nicht erforderlich ist:  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr  
 ```  
   
  für die folgende Syntax:  
   
-```  
+```cpp  
 [ attribute(Class) ]  
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` ist ein Alias für <xref:System.AttributeUsageAttribute?displayProperty=fullName> (keine Attribute-Attribut; Dies ist eine Ausnahme aus, um die Benennungsregel Attribut).  
+ **Attribut** ist ein Alias für <xref:System.AttributeUsageAttribute?displayProperty=fullName> (keine Attribute-Attribut; Dies ist eine Ausnahme aus, um die Benennungsregel Attribut).  
   
 ## <a name="requirements"></a>Anforderungen  
   

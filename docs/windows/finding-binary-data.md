@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee50f78c4fcc39561fbd94ef3a0af28746cfbaa9
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 4a5b880e9b0425ecb0de5e59a29b216af174fa8e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568685"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652281"
 ---
 # <a name="finding-binary-data"></a>Suchen von Binärdaten
 Sie können für ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Z. B. um "Hello" zu suchen, Sie können entweder die Zeichenfolge "Hello" oder suchen für "48 65 6 c 6 C 6F" (die hexadezimale Entsprechung).  
@@ -44,7 +44,6 @@ Sie können für ASCII-Zeichenfolgen oder hexadezimale Bytes suchen. Z. B. um "H
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  

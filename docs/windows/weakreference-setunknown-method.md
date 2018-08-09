@@ -1,5 +1,5 @@
 ---
-title: 'WeakReference:: Setunknown-Methode | Microsoft Docs'
+title: 'WeakReference:: Setunknown-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28b25645b21d3101e2f2b2004f02f29482320808
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2a46db38bf17b1af5ae748cf90689509d6d21b0d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891014"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647679"
 ---
 # <a name="weakreferencesetunknown-method"></a>WeakReference::SetUnknown-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,12 +35,12 @@ void SetUnknown(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `unk`  
- Ein Zeiger auf die `IUnknown` Schnittstelle eines Objekts.  
+### <a name="parameters"></a>Parameter  
+ *UNK*  
+ Ein Zeiger auf die `IUnknown` -Schnittstelle eines Objekts.  
   
 ## <a name="remarks"></a>Hinweise  
- Legt den starken Verweis des aktuellen `WeakReference` Objekt, das den angegebenen Schnittstellenzeiger auf.  
+ Den starken Verweis des aktuellen legt **WeakReference** Objekt, das den angegebenen Schnittstellenzeiger auf.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** implements.h  
@@ -48,5 +48,5 @@ void SetUnknown(
  **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Siehe auch
-[WeakReference-Klasse](../windows/weakreference-class1.md)  
+ [WeakReference-Klasse](../windows/weakreference-class1.md)  
  [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

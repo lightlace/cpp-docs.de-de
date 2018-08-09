@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7b34f1af7734fa22db3a9f296bc021917356f8a
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a1991454daa76fcf7878a7487080124b5a34dbeb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570027"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644033"
 ---
 # <a name="ftmbaseunmarshalinterface-method"></a>FtmBase:::UnmarshalInterface-Methode
 Initialisiert einen neu erstellten Proxy, und gibt einen Schnittstellenzeiger zurück, auf diesen Proxy.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 STDMETHODIMP UnmarshalInterface(  
    __in IStream *pStm,  
    __in REFIID riid,  
@@ -37,7 +37,7 @@ STDMETHODIMP UnmarshalInterface(
 ) override;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *pStm*  
  Zeiger auf der Stream, aus dem der Schnittstellenzeiger auf das Marshalling rückgängig gemacht werden.  
   

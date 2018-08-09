@@ -1,5 +1,5 @@
 ---
-title: 'Eventtargetarray:: Length-Methode | Microsoft Docs'
+title: 'Eventtargetarray:: Length-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eab14d842935e99f8e5f8a96b24b5675d61e418d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30386120492bcabd7ec1fc07f82e5e1ffd9c1821
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33886089"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653104"
 ---
 # <a name="eventtargetarraylength-method"></a>EventTargetArray::Length-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 size_t Length();  
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die aktuelle Anzahl der Elemente im internen Array von Ereignishandlern.  
+ Die aktuelle Anzahl der Elemente in das interne Array von Ereignishandlern.  
   
 ## <a name="remarks"></a>Hinweise  
- Ruft die aktuelle Anzahl der Elemente im internen Array von Ereignishandlern.  
+ Ruft die aktuelle Anzahl der Elemente in das interne Array der Ereignishandler ab.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** event.h  

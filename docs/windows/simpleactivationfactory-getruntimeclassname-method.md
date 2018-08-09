@@ -1,5 +1,5 @@
 ---
-title: 'Simpleactivationfactory:: Getruntimeclassname-Methode | Microsoft Docs'
+title: 'Simpleactivationfactory:: Getruntimeclassname-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e001d0269c21026bdd00abcdd4d257f11d601cf6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c6c6731c4c7787f3d81a4e67eac2861a46bfe1a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889032"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644407"
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>SimpleActivationFactory::GetRuntimeClassName-Methode
 
-Ruft die Laufzeitklasse-Namen, der eine Instanz der Klasse, die gemäß der `Base` Klassenvorlagenparameter.
+Ruft den Common Language Runtime-Klassennamen einer Instanz der Klasse gemäß den `Base` Klassenvorlagenparameter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ STDMETHOD( GetRuntimeClassName )(
 ### <a name="parameters"></a>Parameter
 
 *runtimeName*  
-Wenn dieser Vorgang abgeschlossen wird, der Name der Common Language Runtime-Klasse.
+Wenn dieser Vorgang abgeschlossen ist, den Namen der Common Language Runtime-Klasse.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -45,7 +45,7 @@ S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn &#95; &#95;WRL_STRICT&#95; &#95; wird definiert, ein Assert-Fehler wird ausgegeben, wenn die Klasse, wird angegeben die `Base` Klassenvorlagenparameter wird nicht von abgeleiteten [RuntimeClass](../windows/runtimeclass-class.md), oder ist nicht konfiguriert, mit der WinRT- oder WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) -Enumerationswert.
+Wenn &#95; &#95;WRL_STRICT&#95; &#95; wird definiert, ein Assert-Fehler wird ausgegeben, wenn die Klasse, wird angegeben der `Base` Klassenvorlagenparameter wird nicht von abgeleiteten [RuntimeClass](../windows/runtimeclass-class.md), oder ist nicht konfiguriert, mit der WinRT- oder WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) Enumerationswert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,5 +54,4 @@ Wenn &#95; &#95;WRL_STRICT&#95; &#95; wird definiert, ein Assert-Fehler wird aus
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Siehe auch
-
-[SimpleActivationFactory-Klasse](../windows/simpleactivationfactory-class.md)
+ [SimpleActivationFactory-Klasse](../windows/simpleactivationfactory-class.md)

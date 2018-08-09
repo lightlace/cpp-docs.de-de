@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd6cc88ba01d7cfc5d7d5712ddeaaef0418bb12a
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d79c371b98e0dd1091fc5db2280efdee3abbf6e9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462783"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646188"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 Fügt einen Eintrag Schnittstelle in der COM-Zuordnung der Zielklasse.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ com_interface_entry(   
   com_interface_entry  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *COM_INTERFACE_ENTRY*  
  Eine Zeichenfolge mit den tatsächlichen Text des Eintrags. Eine Liste der möglichen Werte, finden Sie unter [COM_INTERFACE_ENTRY-Makros](../atl/reference/com-interface-entry-macros.md).  
   
@@ -58,7 +58,7 @@ Fügt einen Eintrag Schnittstelle in der COM-Zuordnung der Zielklasse.
   
  Diese Einschränkung ist notwendig, da den ersten Eintrag in die schnittstellenzuordnung von ATL als Identität verwendet `IUnknown`; aus diesem Grund der Eintrag muss eine gültige Schnittstelle sein. Das folgende Codebeispiel ist beispielsweise ungültig, da der erste Eintrag in die schnittstellenzuordnung eine tatsächliche COM-Schnittstelle nicht angegeben ist.  
   
-```  
+```cpp  
 [ coclass, com_interface_entry =  
     "COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)"  
 ]  
@@ -100,7 +100,7 @@ class CMyClass: public IMyClass, public IDebugTest
   
  Der resultierende COM-Objekt-Zuordnung für `CMyBaseClass` lautet wie folgt:  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CMyClass)  
     COM_INTERFACE_ENTRY (IMyClass)  
     COM_INTERFACE_ENTRY_NOINTERFACE(IDebugTest)  
@@ -119,7 +119,7 @@ END_COM_MAP()
 |-|-|  
 |**Betrifft**|**Klasse**, **Struktur**|  
 |**Wiederholbar**|Ja|  
-|**Erforderliche Attribute**|Ein Attribut oder mehrere Attribute der folgenden: **coclass**, **progid**, oder **vi_progid**.|  
+|**Erforderliche Attribute**|Eine oder mehrere der folgenden: `coclass`, `progid`, oder `vi_progid`.|  
 |**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  

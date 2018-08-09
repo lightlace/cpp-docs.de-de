@@ -1,5 +1,5 @@
 ---
-title: Typeid (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Typeid (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3298ed426535ae7db93e5603dac8222bbe8f6470
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33888366"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644072"
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (Komponentenerweiterungen für C++)
 Ruft einen Wert ab, der den Typ eines Objekts angibt.  
   
 > [!WARNING]
->  Dieses Thema behandelt die C++-Komponentenerweiterungsversion von "typeid". Die ISO C++-Version dieses Schlüsselwort, finden Sie unter [Typeid-Operator](../cpp/typeid-operator.md).  
+>  Dieses Thema behandelt die C++-Komponentenerweiterungsversion von "typeid". Für die ISO C++-Version dieses Schlüsselworts finden Sie unter [Typeid-Operator](../cpp/typeid-operator.md).  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
   
@@ -49,29 +49,27 @@ Platform::Type^ type = T::typeid;
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `T`  
+ *T*  
  Ein Typname.  
   
 ### <a name="remarks"></a>Hinweise  
- In C + c++ / CX können Typeid gibt eine [Platform:: Type](../cppcx/platform-type-class.md) , der aus Laufzeittypinformationen erstellt wird.  
+ In C++ / CX Typeid gibt eine [Platform:: Type](../cppcx/platform-type-class.md) , der aus Laufzeittypinformationen erstellt wird.  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Syntax**  
+### <a name="syntax"></a>Syntax  
   
 ```  
-  
 type::typeid  
 ```  
   
- **Parameter**  
-  
+### <a name="parameters"></a>Parameter   
  *Typ*  
- Der Name eines Typs (abstrakter Deklarator), für den das System::Type-Objekt gelten soll.  
+ Der Name eines Typs (abstrakter Deklarator), die für die Sie möchten die `System::Type` Objekt.  
   
- **Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
  `typeid` wird verwendet, um <xref:System.Type> für einen Typ zur Kompilierzeit abzurufen.  
   
@@ -79,19 +77,18 @@ type::typeid
   
  `typeid` muss in der Lage sein, einen Typnamen (type) zur Kompilierungszeit auszuwerten, während GetType den Typ auswertet, der zur Laufzeit zurückgeben wird.  
   
- `typeid` Hierbei kann es sich um einen systemeigenen Typ-Namen oder die common Language Runtime-Alias für den systemeigenen Typ dauern; finden Sie unter [.NET Framework-Entsprechungen in systemeigenen C++-Typen (C + c++ / CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) für Weitere Informationen.  
+ `typeid` Hierbei kann es sich um einen systemeigenen typenamen- oder common Language Runtime-Alias für den systemeigenen Typnamen dauern; finden Sie unter [.NET Framework-Entsprechungen in Native C++-Typen (C++ / CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) für Weitere Informationen.  
   
- `typeid` funktioniert auch mit systemeigenen Typen, obwohl noch ein System::Type zurückgegeben wird.  Verwenden Sie zum Abrufen einer Struktur Type_info [Typeid-Operator](../cpp/typeid-operator.md).  
+ `typeid` funktioniert auch mit systemeigenen Typen, obwohl noch ein System::Type zurückgegeben wird.  Rufen Sie eine Type_info-Struktur mit [Typeid-Operator](../cpp/typeid-operator.md).  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
- Im folgenden Beispiel wird das typeid-Schlüsselwort mit dem GetType()-Member verglichen.  
+ Im folgenden Beispiel wird das Typeid-Schlüsselwort, um die `GetType()` Member.  
   
-```  
+```cpp  
 // keyword__typeid.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -121,14 +118,11 @@ typeid and GetType returned the same System::Type
 G  
   
 System.Single*  
-  
 ```  
-  
- **Beispiel**  
   
  Das folgende Beispiel zeigt, dass eine Variable des Typs System::Type verwendet werden kann, um die Attribute für einen Typ abzurufen.  Außerdem wird veranschaulicht, dass Sie für einige Typen eine Typdefinition erstellen müssen, um `typeid` zu verwenden.  
   
-```  
+```cpp  
 // keyword__typeid_2.cpp  
 // compile with: /clr  
 using namespace System;  

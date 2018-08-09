@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f7c1f02c3791e75d3f42db6a942f5b2055234517
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 7d15c4cd43dd74b6c699027be9841f5f4a610518
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570609"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646110"
 ---
 # <a name="dbsource"></a>db_source
 Erstellt eine Verbindung mit einer Datenquelle.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ db_source(   
    db_source,   
    name,   
@@ -45,7 +45,7 @@ Erstellt eine Verbindung mit einer Datenquelle.
  Bei Verwendung von **Db_source** für eine Klasse, *Namen* ist eine Instanz von einem Datenquellenobjekt an, die die **Db_source** angewendet werden (siehe Beispiel 1). Bei Verwendung von **Db_source** Inline in der Implementierung einer Methode *Namen* ist eine Variable (lokal in der Methode), die für den Datenzugriff verwendet werden kann (siehe Beispiel 2). Übergeben Sie das *Namen* auf die *Source_name* Parameter `db_command` , einen Befehl die Datenquelle zugeordnet werden soll.  
   
  *HRESULT* (optional)  
- Identifiziert die Variable, die `HRESULT` von diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.  
+ Identifiziert die Variable, die das HRESULT des diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.  
   
 ## <a name="remarks"></a>Hinweise  
  **Db_source** erstellt eine [CDataSource](../data/oledb/cdatasource-class.md) und [CSession](../data/oledb/csession-class.md) -Objekt, das zusammen eine Verbindung mit einer OLE DB-Consumer-Datenquelle darstellen.  

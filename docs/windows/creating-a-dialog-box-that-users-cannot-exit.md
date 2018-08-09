@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Dialogfelds, die Benutzer nicht beendet werden können | Microsoft Docs
+title: Erstellen eines Dialogfelds, das Benutzern nicht beendet werden können | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc04c9ccfb0fdc74e57142bf746681411bbba495
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b176fbc4e420c08a2262b532cf1310ada56c978a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884462"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644179"
 ---
 # <a name="creating-a-dialog-box-that-users-cannot-exit"></a>Erstellen eines Dialogfelds, das vom Benutzer nicht beendet werden kann
 Sie können ein Laufzeitdialogfeld erstellen, das von Benutzern nicht beendet werden kann. Diese Art Dialogfeld ist nützlich für Anmeldungen und für Sperren von Anwendungen oder Dokumenten.  
@@ -37,12 +37,12 @@ Sie können ein Laufzeitdialogfeld erstellen, das von Benutzern nicht beendet we
   
      Zur Laufzeit kann ein Benutzer ein modales Dialogfeld, das diese Eigenschaften aufweist, nicht beenden.  
   
- Um das Testen dieser Art von Dialogfeldern zu ermöglichen, erkennt die Funktion zum Testen von Dialogfeldern, wenn ESC gedrückt wird. (ESC wird auch als virtuelle Taste „VK_ESCAPE“ bezeichnet.) Unabhängig davon, wie das Laufzeitverhalten des Dialogfelds ausgelegt wurde, im Testmodus können Sie es durch Drücken von ESC beenden.  
+ Zum Testen dieser Art von Dialogfeld zu aktivieren, erkennt der Testfunktion für Dialogfeld Feld beim **Esc** gedrückt wird. (**Esc** ist auch bekannt als die virtuelle Taste "VK_ESCAPE".) Unabhängig davon, wie Sie das Dialogfeld zur Laufzeit Verhalten konzipiert ist, können Sie beenden ihn im Testmodus durch Drücken von **Esc**.  
   
 > [!NOTE]
->  Um bei MFC-Anwendungen ein Dialogfeld zu erstellen, das von Benutzern nicht beendet werden kann, müssen Sie das Standardverhalten von `OnOK` und `OnCancel` außer Kraft setzen, denn selbst wenn Sie die zugeordneten Schaltflächen löschen, kann das Dialogfeld immer noch durch Drücken von EINGABETASTE oder ESC geschlossen werden.  
+>  Für MFC-Anwendungen, um ein Dialogfeld erstellen, die Benutzer nicht beendet werden können, müssen Sie überschreiben das Standardverhalten des `OnOK` und `OnCancel` denn selbst wenn Sie die zugeordneten Schaltflächen löschen, das Dialogfeld immer noch durch Drücken von kann geschlossen werden  **Geben Sie** oder **Esc**.  
   
- Informationen zur Vorgehensweise beim Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index).  
+ Weitere Informationen zur Vorgehensweise beim Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  
@@ -51,4 +51,3 @@ Sie können ein Laufzeitdialogfeld erstellen, das von Benutzern nicht beendet we
  [Vorgehensweise: Erstellen einer Ressource](../windows/how-to-create-a-resource.md)   
  [Ressourcendateien](../windows/resource-files-visual-studio.md)   
  [Dialog-Editor](../windows/dialog-editor.md)
-

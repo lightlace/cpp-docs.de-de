@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8eade0c6a77e70fe156f80c2809a8cca0ed89b38
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 532f3714bc48db545a33b76eb07b641b8e3e5490
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571437"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650088"
 ---
 # <a name="dbcommand"></a>db_command
 Erstellt einen OLE DB-Befehl.  
@@ -41,7 +41,6 @@ Erstellt einen OLE DB-Befehl.
 ```  
   
 ### <a name="parameters"></a>Parameter  
-
 *command*  
 Eine Befehlszeichenfolge, die den Text eines OLE DB-Befehls enthält. Ein einfaches Beispiel lautet:  
   
@@ -112,12 +111,12 @@ Die Variable `CSession` oder die Instanz einer Klasse, auf die das `db_source` -
 **db_command** stellt sicher, dass die Variable für *source_name* gültig ist, um den Gültigkeitsbereich der angegebenen Variablen auf eine Funktion oder als global festzulegen.  
   
 *HRESULT* (optional)  
-Identifiziert die Variable, die `HRESULT` von diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.  
+Identifiziert die Variable, die das HRESULT des diesem Datenbankbefehl erhält. Wenn die Variable nicht existiert, wird sie automatisch durch das Attribut eingefügt.  
   
 *bindings* (optional)  
 Ermöglicht die Trennung der Bindungsparameter vom OLE DB-Befehl.  
   
-Bei Angabe ein Werts für *Bindungen*, **Db_command** analysiert den zugeordneten Wert und nicht die \[ *Bindtype*] Parameter. Dies ermöglicht Ihnen die Verwendung der OLE DB-Anbietersyntax. Geben Sie zum Deaktivieren der Analyse ohne Bindungsparameter **Bindings=""**.  
+Bei Angabe ein Werts für *Bindungen*, **Db_command** analysiert den zugeordneten Wert und nicht die \[ *Bindtype*] Parameter. Dies ermöglicht Ihnen die Verwendung der OLE DB-Anbietersyntax. Geben Sie zum Deaktivieren der Analyse ohne Bindungsparameter `Bindings=""`.  
   
 Wenn Sie einen Wert für nicht angeben *Bindungen*, **Db_command** analysiert Bindung Parameterblock, Suche nach "**(**", gefolgt von **\[** _Bindtype_**]** in Klammern, gefolgt von einem oder mehreren zuvor deklarierten C++-Membervariablen, gefolgt von "**)**". Der in Klammern gefasste Text wird aus dem sich ergebenden Befehl entfernt, und diese Parameter werden verwendet, um die Spalten- und Parameterbindungen für diesen Befehl zu erstellen.  
   
@@ -133,7 +132,7 @@ Wenn *bulk_fetch* kleiner als 1 ist, gibt `SetRows` 0 (Null) zurück.
 ## <a name="remarks"></a>Hinweise  
 **db_command** erstellt ein [CCommand](../data/oledb/ccommand-class.md) -Objekt, das von einem OLE DB-Consumer verwendet wird, um einen Befehl auszuführen.  
   
-Sie können **db_command** entweder mit einem Klassen- oder Funktionsbereich verwenden. Der Hauptunterschied liegt im Bereich des `CCommand` -Objekts. Ist der Gültigkeitsbereich auf die Funktion beschränkt, werden Daten wie z.B. Bindungen bei Beendigung der Funktion ebenfalls beendet. Sowohl die Klasse als auch die Funktion Bereich Verwendungen umfassen die Klasse des OLE DB-Consumervorlagen `CCommand<>`, unterscheiden sich die Vorlagenargumente für die Fälle Funktion und der Klasse. Während bei Verwendung des Funktionsbereichs Bindungen zu einem **Accessor** hergestellt werden, der lokale Variablen enthält,erfordert die Verwendung des Klassenbereichs eine von `CAccessor`abgeleitete Klasse als Argument Wenn es als Klassenattribut verwendet wird, funktioniert **db_command** zusammen mit **db_column**.  
+Sie können **db_command** entweder mit einem Klassen- oder Funktionsbereich verwenden. Der Hauptunterschied liegt im Bereich des `CCommand` -Objekts. Ist der Gültigkeitsbereich auf die Funktion beschränkt, werden Daten wie z.B. Bindungen bei Beendigung der Funktion ebenfalls beendet. Sowohl die Klasse als auch die Funktion Bereich Verwendungen umfassen die Klasse des OLE DB-Consumervorlagen `CCommand<>`, unterscheiden sich die Vorlagenargumente für die Fälle Funktion und der Klasse. Des Funktionsbereichs Bindungen werden versucht, eine `Accessor` , enthält lokale Variablen, erfordert, während die Verwendung der-Klasse ableitet, eine `CAccessor`-abgeleitete Klasse als Argument. Wenn es als Klassenattribut verwendet wird, funktioniert **db_command** zusammen mit **db_column**.  
   
 Mit**db_command** können Befehle ausgeführt werden, die kein Resultset zurückgeben.  
   

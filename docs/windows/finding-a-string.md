@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91e9523b063e9decbcb97ce9f5d8229a9c670b2
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 67d3d4ba38563b4716a87d4b57a4753fe1b49e9c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568935"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652093"
 ---
 # <a name="finding-a-string"></a>Suchen von Zeichenfolgen
 Sie können eine oder mehrere Zeichenfolgen in der Zeichenfolgentabelle suchen und verwenden Sie [reguläre Ausdrücke](/visualstudio/ide/using-regular-expressions-in-visual-studio) mit der **in Dateien suchen** Befehl (**bearbeiten** Menü), suchen Sie alle Vorkommnisse von Zeichenfolgen die einem Muster entsprechen.  
@@ -49,7 +49,6 @@ Sie können eine oder mehrere Zeichenfolgen in der Zeichenfolgentabelle suchen u
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Exemplarische Vorgehensweise: Verwenden von Ressourcen für die Lokalisierung mit ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

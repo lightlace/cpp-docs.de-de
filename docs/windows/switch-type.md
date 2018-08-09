@@ -1,5 +1,5 @@
 ---
-title: Switch_type | Microsoft Docs
+title: Switch_type | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1870e1ee623d8495e9f19dd8f32ea9382070bc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f79aa2683948d54f900c92304cdff29647819a74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890179"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650595"
 ---
 # <a name="switchtype"></a>switch_type
-Identifiziert den Typ der Variablen als die union Discriminant verwendet.  
+Gibt den Typ der Variablen als die union Discriminant verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [switch_type(  
 type  
 }]  
-  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `type`  
- Der Switchtyp kann eine ganze Zahl, Zeichen, Boolean oder eines Enumerationswerts Typ sein.  
+### <a name="parameters"></a>Parameter  
+ *Typ*  
+ Der Switchtyp kann es sich um eine ganze Zahl "," Zeichen "," Boolesch "oder" Enumeration-Typ sein.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Switch_type** C++-Attribut hat die gleiche Funktionalität wie die [Switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL-Attribut.  
   
  C++-Attribute unterstützen keine [gekapselt Unions](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Nonencapsulated Unions](http://msdn.microsoft.com/library/windows/desktop/aa367119) werden nur in der folgenden Form unterstützt:  
   
-```  
+```cpp  
 // cpp_attr_ref_switch_type.cpp  
 // compile with: /LD  
 #include <windows.h>  
@@ -64,7 +62,7 @@ struct SizedValue2 {
 ```  
   
 ## <a name="example"></a>Beispiel  
- Finden Sie unter der [Fall](../windows/case-cpp.md) Beispiel für ein Beispiel für die Verwendung von **Switch_type**.  
+ Finden Sie unter den [Fall](../windows/case-cpp.md) Beispiel für ein Beispiel für die Verwendung von **Switch_type**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -72,7 +70,7 @@ struct SizedValue2 {
   
 |||  
 |-|-|  
-|**Betrifft**|`typedef`|  
+|**Betrifft**|**typedef**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

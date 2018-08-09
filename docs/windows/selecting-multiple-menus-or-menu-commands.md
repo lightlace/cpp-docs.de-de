@@ -1,5 +1,5 @@
 ---
-title: Auswählen mehrerer Menüs oder Menübefehle | Microsoft Docs
+title: Auswählen mehrerer Menüs oder Menübefehle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e261227c5c34d203cdeda20a8d1409319f63be97
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53225576941afff3a94c3dd276feb980e2bd6562
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891908"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644855"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Auswählen mehrerer Menüs oder Menübefehle
 Sie können mehrere Menünamen oder Menübefehle zum Durchführen von Massenvorgängen wie z. B. dem Löschen oder Ändern der Eigenschaften auswählen.  
   
 ### <a name="to-select-multiple-menu-commands"></a>Auswählen mehrerer Menübefehle  
   
-1.  Halten Sie die STRG-Taste gedrückt, und klicken Sie dann auf die gewünschten Menüs oder Untermenübefehle.  
+1.  Halten Sie die **STRG** Schlüssel, klicken Sie auf die Menüs oder Untermenübefehle werden sollen.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.*  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.  
   
- **Anforderungen**  
+## <a name="requirements"></a>Anforderungen  
   
  Win32  
   

@@ -1,5 +1,5 @@
 ---
-title: 'SRWLOCK:: Srwlock_-Datenmember | Microsoft Docs'
+title: 'SRWLOCK:: Srwlock_-Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 77b6d10e4343fd17c8bd65e232d29923214eff0c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cf6e43c6e8672e8bd3b1f895658a1c16dbe77faa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889107"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647491"
 ---
 # <a name="srwlocksrwlock-data-member"></a>SRWLock::SRWLock_ Data-Member
-Enthält die zugrunde liegenden Sperren der Variable für das aktuelle SRWLock-Objekt.  
+Enthält die zugrunde liegende Sperre-Variable für den aktuellen **SRWLock** Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   

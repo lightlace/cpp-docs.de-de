@@ -1,5 +1,5 @@
 ---
-title: Windows-Desktopanwendungen (C++) | Microsoft Docs
+title: Windows-Desktopanwendungen (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9e24921a2a33ab31a9a5e6b7c3a33dbfec6c47e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f78fa02b991fbdf7c18457a8018ea46b0c240585
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890701"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647956"
 ---
 # <a name="windows-desktop-applications-c"></a>Windows-Desktopanwendungen (C++)
-In diesem Abschnitt wird erläutert, wie zum Erstellen von C++-desktopanwendungen, die in einem Fenster ausgeführt wird.  
+In diesem Abschnitt wird erläutert, wie C++-desktop-Anwendungen zu erstellen, die in einem Fenster ausgeführt wird.  
+
 > [!TIP]  
-> Für Windows 10 können Sie Desktop-App-Konverter verwenden, um Ihre vorhandenen desktop-Anwendung für die Bereitstellung über den Microsoft Store verpacken. Weitere Informationen finden Sie im Blogbeitrag [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) und unter [Überführen Ihrer Desktop-App auf die universelle Windows-Plattform (UWP) mit Desktop Bridge](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
+> Für Windows 10 können Sie den Desktop App Converter zum Packen Ihrer vorhandenen Desktopanwendung für die Bereitstellung über den Microsoft Store verwenden. Weitere Informationen finden Sie im Blogbeitrag [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) und unter [Überführen Ihrer Desktop-App auf die universelle Windows-Plattform (UWP) mit Desktop Bridge](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- In diesen Themen wird davon ausgegangen, dass Sie die Grundlagen der Programmiersprache C++ beherrschen.  
+ In diesen Artikeln wird davon ausgegangen, dass Sie die Grundlagen der Programmiersprache C++ beherrschen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -47,4 +48,3 @@ In diesem Abschnitt wird erläutert, wie zum Erstellen von C++-desktopanwendunge
   
 ## <a name="see-also"></a>Siehe auch  
  [Visual C++ in Visual Studio](../visual-cpp-in-visual-studio.md)
-

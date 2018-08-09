@@ -23,26 +23,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b13acb5d637b4a733f2a2b9c66c8ded977c7847
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2b1b285437170c4059d5cd0d66d19188c99badd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569933"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646785"
 ---
 # <a name="eventreceiver"></a>event_receiver
 Erstellt einen Ereignisempfänger (Senke).  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ event_receiver(  
    type   
    [, layout_dependent=false]   
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *Typ*  
  Eine Enumeration von einem der folgenden Werte:  
   
@@ -50,13 +50,13 @@ Erstellt einen Ereignisempfänger (Senke).
   
 -   `com` für COM-Code. Dieser Wert erfordert, dass Sie folgende Headerdateien einschließen:  
   
-    ```  
+    ```cpp  
     #define _ATL_ATTRIBUTES  
     #include <atlbase.h>  
     #include <atlcom.h>  
     ```  
   
- **layout_dependent**  
+ *layout_dependent*  
  Geben Sie *Layout_dependent* nur, wenn `type` = **com**. *Layout_dependent* ist ein boolescher Wert:  
   
 -   **"true"** bedeutet, dass die Signatur des Delegaten, den Fall, dass Empfänger genau übereinstimmen muss, sie in dieser Quelle verknüpft sind. Der Empfänger Ereignishandlernamen müssen es sich um den in der Quellschnittstelle des relevanten Ereignisses angegebenen Namen übereinstimmen. Verwenden Sie `coclass` beim *Layout_dependent* ist **"true"**. Es ist etwas effizienter an **"true"**.  
@@ -81,7 +81,7 @@ Erstellt einen Ereignisempfänger (Senke).
 |-|-|  
 |**Betrifft**|**Klasse**, **Struktur**|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|**Co-Klasse** beim *Layout_dependent*=**"true"**|  
+|**Erforderliche Attribute**|`coclass` Wenn *Layout_dependent*=**"true"**|  
 |**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  

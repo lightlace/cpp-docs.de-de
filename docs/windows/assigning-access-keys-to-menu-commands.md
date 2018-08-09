@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Tastenkombinationen zu Menübefehlen | Microsoft Docs
+title: Zuordnen von Tastenkombinationen zu Menübefehlen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,29 +22,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 44a21e5930d0d8f2fcaad79cc5cef5bc984ad8b5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4745bd188f42b5df976750f952a91ce0e30a9cd9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857898"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645798"
 ---
 # <a name="assigning-access-keys-to-menu-commands"></a>Zuordnen von Tastenkombinationen zu Menübefehlen
 Sie können Ihren Menüs und Menübefehlen eine Zugriffstaste (ein mnemonisches Zeichen, das dem Benutzer die Auswahl des Menüs mit der Tastatur ermöglicht) zuweisen.  
   
 ### <a name="to-assign-an-access-shortcut-key-to-a-menu-command"></a>So weisen Sie einem Menübefehl eine Zugriffstaste (Tastenkombination) zu  
   
-1.  Geben Sie vor einem Buchstaben im Namen des Menüs oder Befehls ein kaufmännisches Und-Zeichen (**&**) ein, um diesen Buchstaben als die entsprechende Zugriffstaste festzulegen. Beispielsweise legt „&Datei“ ALT+D als Tastenkombination für das Dateimenü in Anwendungen fest, die für Microsoft Windows erstellt wurden.  
+1.  Geben Sie ein kaufmännisches und-Zeichen (`&`) vor einen Buchstaben im Namen des Menüs oder Befehlsnamen, um diesen Buchstaben als die entsprechende Zugriffstaste festzulegen. Z. B. "& Datei" legt **Alt**+**F** als Tastenkombination für den **Datei** Menü in Anwendungen für Microsoft Windows.  
   
      Das Menüelement gibt einen sichtbaren Hinweis darauf, dass einem der Buchstaben eine Zugriffstaste zugeordnet ist. Der Buchstabe, der auf das kaufmännische Und-Zeichen folgt, wird unterstrichen dargestellt (abhängig vom Betriebssystem).  
   
     > [!NOTE]
     >  Achten Sie darauf, dass alle Zugriffstasten in einem Menü eindeutig sind, indem Sie mit der rechten Maustaste auf das Menü klicken und im Kontextmenü **Mnemonik überprüfen** auswählen.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- Anforderungen  
-  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

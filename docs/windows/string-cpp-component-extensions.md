@@ -1,5 +1,5 @@
 ---
-title: Zeichenfolge (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Zeichenfolge (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c60edae6e4eaf7cef3841a1ac03dea414f298b6a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889240"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645992"
 ---
 # <a name="string--c-component-extensions"></a>Zeichenfolge (Komponentenerweiterungen für C++)
-Der Visual C++-Compiler unterstützt *Zeichenfolgen*, sind Objekte, die Text als eine Folge von Zeichen darstellen. Visual C++ unterstützt Zeichenfolgenvariablen, deren Wert implizit ist, und Literale, deren Wert eine explizite Zeichenfolge in Anführungszeichen ist.  
+Der Visual C++-Compiler unterstützt *Zeichenfolgen*, die Objekte, die Darstellung von Text als eine Folge von Zeichen sind. Visual C++ unterstützt Zeichenfolgenvariablen, deren Wert implizit ist, und Literale, deren Wert eine explizite Zeichenfolge in Anführungszeichen ist.  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
  Die Windows-Runtime und die Common Language Runtime stellen Zeichenfolgen als Objekte dar, deren belegter Speicher automatisch verwaltet wird. Das heißt, dass es nicht erforderlich ist, den Arbeitsspeicher für eine Zeichenfolge explizit zu verwerfen, wenn die Zeichenfolgenvariable außerhalb des gültigen Bereichs liegt oder die Anwendung beendet wird. Um anzugeben, dass die Lebensdauer eines Zeichenfolgenobjekts automatisch verwaltet werden soll, deklarieren Sie den String-Datentyp mit der [Handle-to-Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) Modifizierer.  
@@ -41,19 +41,18 @@ using namespace default;
    Platform::String^ MyString1 = "The quick brown fox";  
    String^ MyString2 = "jumped over the lazy dog.";  
    String^ MyString3 = "Hello, world!";  
-  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen und Beispiele zu Zeichenfolgen finden Sie unter [Platform:: String, Std:: wstring und Literale (Plattform)](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
+ Weitere Informationen und Beispiele zu Zeichenfolgen finden Sie unter [Platform:: String, Std:: wstring und Literale (Plattform)](http://msdn.microsoft.com/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- In diesem Thema wird erläutert, wie der Visual C++-Compiler Zeichenfolgenliterale verarbeitet, bei der Ausführung mit der **"/ CLR"** -Compileroption. Mit **"/ CLR"**, müssen Sie auch verwenden, die common Language Runtime (CLR), C + c++ / CLI-Syntax und verwaltete Objekte. Weitere Informationen zu **"/ CLR"**, finden Sie unter [/CLR (Common Language Runtime-Kompilierung)](../build/reference/clr-common-language-runtime-compilation.md).  
+ In diesem Thema wird erläutert, wie der Visual C++-Compiler Zeichenfolgenliterale verarbeitet, wenn er mit der `/clr`-Compileroption ausgeführt wird. Um `/clr` zu verwenden, müssen Sie ebenfalls die Common Language Runtime (CLR), C++/CLI-Syntax und verwaltete Objekte verwenden. Weitere Informationen zu `/clr`, finden Sie unter [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).  
   
- Beim Kompilieren mit **"/ CLR"**, konvertiert der Compiler Zeichenfolgenliterale in Zeichenfolgen des Typs <xref:System.String>. Um die Abwärtskompatibilität mit vorhandenem Code beizubehalten, bestehen dabei die folgenden beiden Ausnahmen:  
+ Beim Kompilieren mit `/clr` konvertiert der Compiler Zeichenfolgenliterale in Zeichenfolgen des Typs <xref:System.String>. Um die Abwärtskompatibilität mit vorhandenem Code beizubehalten, bestehen dabei die folgenden beiden Ausnahmen:  
   
 -   Ausnahmebehandlung. Wenn ein Zeichenfolgenliteral ausgelöst wird, fängt der Compiler dieses auch als Zeichenfolgenliteral ab.  
   
@@ -78,7 +77,6 @@ using namespace default;
  Compileroption: **/clr**  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
  Im folgenden Codebeispiel wird das Verketten und Vergleichen von Zeichenfolgen veranschaulicht.  
   
@@ -169,8 +167,6 @@ abc
 n is empty  
 ```  
   
- **Beispiel**  
-  
  Im folgenden Beispiel wird gezeigt, dass Sie die vom Compiler bereitgestellten Operatoren überladen können und vom Compiler eine Funktionsüberladung basierend auf dem <xref:System.String>-Typ gefunden wird.  
   
 ```cpp  
@@ -230,8 +226,6 @@ String ^ a
   
 const char * a  
 ```  
-  
- **Beispiel**  
   
  Im folgenden Beispiel wird gezeigt, dass der Compiler zwischen systemeigenen Zeichenfolgen und <xref:System.String>-Zeichenfolgen unterscheidet.  
   

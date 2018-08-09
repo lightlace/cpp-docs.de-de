@@ -26,15 +26,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e94945212b9a7215397a1179432e87178d236b42
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: a2aacfcda168b3abdb5d46826a0351f85a4b3d48
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571284"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645395"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Anpassen oder Ändern von Farben (Bildbearbeitung für Symbole)
-Der bildbearbeitung [Farben (Palette)](../windows/colors-window-image-editor-for-icons.md) werden anfänglich 16 Standardfarben angezeigt. Neben den bereits angezeigten Farben können Sie eigene benutzerdefinierten Farben erstellen. Sie können dann [speichern und Laden Sie eine benutzerdefinierte Farbpalette](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
+Die **Image** Anmerkung der Redaktion [Farben (Palette)](../windows/colors-window-image-editor-for-icons.md) werden anfänglich 16 Standardfarben angezeigt. Neben den bereits angezeigten Farben können Sie eigene benutzerdefinierten Farben erstellen. Sie können dann [speichern und Laden Sie eine benutzerdefinierte Farbpalette](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
   
 ### <a name="to-change-colors-on-the-colors-palette"></a>So ändern Sie die Farben in der Farbpalette  
   
@@ -51,7 +51,6 @@ Der bildbearbeitung [Farben (Palette)](../windows/colors-window-image-editor-for
 5.  Klicken Sie auf **OK** auf die neue Farbe hinzuzufügen.  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  

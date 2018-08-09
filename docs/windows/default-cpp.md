@@ -19,26 +19,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16f2e9587d3fa9bc9d8472c348e92555b5bbb4bb
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: fbd2ab9481d8658bac75b62a4afa18f3ff77f0d5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570856"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646256"
 ---
 # <a name="default-c"></a>default (C++)
 Gibt an, dass die benutzerdefinierte Schnittstelle oder Disp-Schnittstelle innerhalb einer Co-Klasse die Standard-Programmierschnittstelle darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ default(  
    interface1,  
    interface2  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *interface1*  
  Die Standardschnittstelle, die für Skriptumgebungen verfügbar gemacht wird, die ein Objekt auf Grundlage der Klasse erstellen, die mit dem **default** -Attribut definiert ist.  
   

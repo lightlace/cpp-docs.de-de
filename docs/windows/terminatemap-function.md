@@ -1,5 +1,5 @@
 ---
-title: TerminateMap-Funktion | Microsoft Docs
+title: TerminateMap-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b4787fec0a6b4b9f55c500b66786372945d9a523
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d33cbd46903a37bf42e417a100d26c9b706058c0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890348"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645937"
 ---
 # <a name="terminatemap-function"></a>TerminateMap-Funktion
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,21 +36,21 @@ inline bool TerminateMap(
     bool forceTerminate) throw()  
 ```  
   
-## <a name="parameters"></a>Parameter  
- `module`  
+### <a name="parameters"></a>Parameter  
+ *Modul*  
  Ein [Modul](../windows/module-class.md).  
   
- `serverName`  
- Der Name einer Teilmenge von Klassenfactorys in das vom Parameter angegebene Modul `module`.  
+ *ServerName*  
+ Der Name einer Teilmenge von Klassenfactorys in das Modul, das vom Parameter angegebene *Modul*.  
   
- `forceTerminate`  
- `true` zum Beenden der Klasse sind Factorys unabhängig von der sie aktiv; `false` Klassenfactorys nicht beendet, wenn alle Factory aktiv ist.  
+ *forceTerminate*  
+ **"true"** zum Beenden der Klasse sind Factorys unabhängig von der sie aktiv ist; **"false"** Klassenfactorys nicht beendet, wenn jede Factory aktiv ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Wenn alle Klassenfactorys beendet wurden. andernfalls `false`.  
+ **"true"** wären alle Klassenfactorys beendet ist, andernfalls **"false"**.  
   
 ## <a name="remarks"></a>Hinweise  
- Fährt den Klassenfactorys im angegebenen Modul.  
+ Klassenfactorys im angegebenen Modul wird heruntergefahren.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** module.h  

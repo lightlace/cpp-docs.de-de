@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f16a10ef5119730fb492c4adb890aedcc09d3174
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 7765ab5159f7cfd604f67b79a05fde8eaf57fad8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461532"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646704"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces-Struktur
 Gibt Überprüfungs- und Initialisierungsfunktionen an, die auf einen Satz von Schnittstellen-IDs angewendet werden können.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template <  
    typename I0,  
    typename I1,  
@@ -60,7 +60,7 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *I0*  
  (Erforderlich) Schnittstellen-ID 0.  
   
@@ -106,8 +106,8 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ChainInterfaces::CanCastTo-Methode](../windows/chaininterfaces-cancastto-method.md)|Gibt an, ob die angegebene Schnittstellen-ID in jede der von den Vorlagenparametern ChainInterface definiert spezialisierungen umgewandelt werden kann.|  
-|[ChainInterfaces::CastToUnknown-Methode](../windows/chaininterfaces-casttounknown-method.md)|Wandelt den Schnittstellenzeiger, der den vom definierten Typ der *I0* Template-Parameter auf einen Zeiger auf IUnknown.|  
+|[ChainInterfaces::CanCastTo-Methode](../windows/chaininterfaces-cancastto-method.md)|Gibt an, ob die angegebene Schnittstellen-ID in jede der von definiert spezialisierungen umgewandelt werden kann die **ChainInterface** Vorlagenparameter.|  
+|[ChainInterfaces::CastToUnknown-Methode](../windows/chaininterfaces-casttounknown-method.md)|Wandelt den Schnittstellenzeiger, der den vom definierten Typ der *I0* Template-Parameter auf einen Zeiger auf `IUnknown`.|  
 |[ChainInterfaces::FillArrayWithIid-Methode](../windows/chaininterfaces-fillarraywithiid-method.md)|Speichert die Schnittstellen-ID, durch definiert die *I0* Template-Parameter in einer angegebenen Position in einem angegebenen Array von Schnittstellen-IDs.|  
 |[ChainInterfaces::Verify-Methode](../windows/chaininterfaces-verify-method.md)|Stellt sicher, dass jede Schnittstelle Vorlagenparameter definiert *I0* über *I9* erbt `IUnknown` und/oder `IInspectable`, und dass *I0* erbt von *I1* über *I9*.|  
   

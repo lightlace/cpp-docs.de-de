@@ -1,5 +1,5 @@
 ---
-title: 'Synclockwithstatust:: IsLocked-Methode | Microsoft Docs'
+title: 'Synclockwithstatust:: IsLocked-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a564c4223b09d9295ff0ac3159e165944c4d885d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ebe723811efe62efa85a1cc2fa35736689306c7e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892552"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645632"
 ---
 # <a name="synclockwithstatustislocked-method"></a>SyncLockWithStatusT::IsLocked-Methode
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,10 +34,10 @@ bool IsLocked() const;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Gibt an, ob das aktuelle SyncLockWithStatusT-Objekt eine Ressource besitzt. SyncLockWithStatusT-Objekt ist *gesperrt*.  
+ Gibt an, ob die aktuelle **SyncLockWithStatusT** Objekt besitzt eine Ressource, d. h. die **SyncLockWithStatusT** Objekt *gesperrt*.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** ist das SyncLockWithStatusT-Objekt gesperrt ist, andernfalls **"false"**.  
+ **"true"** Wenn die **SyncLockWithStatusT** Objekt gesperrt ist; andernfalls **"false"**.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

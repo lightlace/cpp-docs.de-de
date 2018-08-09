@@ -1,5 +1,5 @@
 ---
-title: Kopieren eines Gerätebilds (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Kopieren eines Gerätebilds (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b48691dde50c1f0829d5393c9023509c863ed39c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e842dcb70e6f4a4ec4751ed7f4f231b41af2d288
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883980"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645658"
 ---
 # <a name="copying-a-device-image-image-editor-for-icons"></a>Kopieren eines Gerätebilds (Bildbearbeitung für Symbole)
 ### <a name="to-copy-a-device-image"></a>Kopieren ein Gerätebildes  
   
-1.  Auf der **Image** Menü klicken Sie auf **Bildtyp öffnen** , und wählen Sie ein Bild aus der aktuellen Liste der Bilder. Wählen Sie z. B. ein Symbol mit 32 x 32 Pixel und 16 Farben aus.  
+1.  Auf der **Image** Menü klicken Sie auf **Bildtyp öffnen** , und wählen Sie ein Image aus der aktuellen Images aus. Wählen Sie beispielsweise ein Symbol mit 32 × 32 Pixel, 16 Farben.  
   
-2.  Kopieren Sie das aktuell angezeigte Symbolbild (**STRG + C**).  
+2.  Kopieren Sie das aktuell angezeigte Symbolbild (**STRG**+**C**).  
   
-3.  Öffnen Sie ein anderes Bild des Symbols in einer anderen **Bildbearbeitung** Fenster. Öffnen Sie z. B. 16 x 16, 16 Farben-Version des Symbols.  
+3.  Öffnen Sie ein anderes Bild des Symbols in einer anderen **Bildbearbeitung** Fenster. Öffnen Sie z. B. 16 × 16 Pixel und 16 Farben-Version des Symbols.  
   
-4.  Fügen Sie das Symbolbild (**STRG + V**) von einem **Bildbearbeitung** Fenster in den anderen. Wenn Sie eine größere Größe in einen kleineren Schriftgrad einfügen, können Sie das Symbol "-Handles zum Ändern der Bildgröße verwenden.  
+4.  Fügen Sie das Symbolbild (**STRG**+**V**) von einem **Bildbearbeitung** Fenster in den anderen. Wenn Sie eine größere Größe in eine kleinere Größe einfügen möchten, können Sie die Ziehpunkte des Symbols, zum Ändern der Bildgröße.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- Anforderungen  
-  
+## <a name="requirements"></a>Anforderungen  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  
  [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
  [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)
-

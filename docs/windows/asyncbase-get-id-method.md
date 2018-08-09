@@ -17,25 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea5efa31a3ebff3c86800a023e3525589952c2fc
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ab02da2dcae788e5eb4b1db15508d2f272ec546a
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464713"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651557"
 ---
 # <a name="asyncbasegetid-method"></a>AsyncBase::get_Id-Methode
 Ruft das Handle des asynchronen Vorgangs ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 STDMETHOD(  
    get_Id  
 )(unsigned int *id) override;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *ID*  
  Der Speicherort, an dem das Handle gespeichert werden.  
   

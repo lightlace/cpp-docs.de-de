@@ -1,5 +1,5 @@
 ---
-title: 'SyncLockT:: ~ SyncLockT-Destruktor | Microsoft Docs'
+title: 'SyncLockT:: ~ SyncLockT-Destruktor | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c91c677a18c66c875107f48c2e04ba45be88fb48
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 87f32ce0583154deb2e3e5cd0afc77ce8728695d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892734"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646717"
 ---
 # <a name="synclocktsynclockt-destructor"></a>SyncLockT::~SyncLockT-Destruktor
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,9 +34,9 @@ Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Hebt die Initialisierung einer Instanz der SyncLockT-Klasse.  
+ Hebt die Initialisierung einer Instanz von der **SyncLockT** Klasse.  
   
- Dieser Destruktor entsperrt auch die aktuellen SyncLockT-Instanz.  
+ Dieser Destruktor entsperrt auch die aktuelle **SyncLockT** Instanz.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

@@ -1,5 +1,5 @@
 ---
-title: Steuerelemente in Dialogfeldern | Microsoft Docs
+title: Steuerelemente in Dialogfeldern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a837766bbbe57186f8355895c98ff04d8048bdc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: acbbbe0ecf1151f6159799592a8211bcf11fe7a1
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873120"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39646942"
 ---
 # <a name="controls-in-dialog-boxes"></a>Steuerelemente in Dialogfeldern
-Sie können Steuerelemente hinzufügen, um ein Dialogfeld mithilfe der [Registerkarte "Dialog-Editor"](../windows/dialog-editor-tab-toolbox.md) in der [Fenster "Toolbox"](/visualstudio/ide/reference/toolbox), können Sie wählen das Steuerelement, Sie möchten, und ziehen sie das Dialogfeld. Standardmäßig wird das Fenster "Toolbox" auf automatisch im Hintergrund festgelegt. Es wird auf den linken Rand der Projektmappe als Registerkarte angezeigt, wenn der Dialog-Editor geöffnet ist. Sie können jedoch das Fenster "Toolbox" an Position anheften, indem Sie auf die **automatisch im Hintergrund** Schaltfläche in der oberen rechten Ecke des Fensters. Weitere Informationen zum Steuern des Verhaltens von diesem Fenster finden Sie unter [Fensterverwaltung](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
+Sie können Steuerelemente hinzufügen, um ein Dialogfeld unter Verwendung der [Registerkarte "Dialog-Editor"](../windows/dialog-editor-tab-toolbox.md) in die [Fenster "Toolbox"](/visualstudio/ide/reference/toolbox), können Sie wählen Sie das Steuerelement, Sie möchten, und ziehen Sie es in das Dialogfeld. Standardmäßig wird das Fenster "Toolbox" automatisch im Hintergrund festgelegt. Es wird als eine Registerkarte am linken Rand Ihrer Lösung angezeigt, wenn der Dialog-Editor geöffnet ist. Sie können jedoch anheften der **Toolbox** Einblick in die Position, indem Sie auf die **automatisch im Hintergrund** Schaltfläche in der oberen rechten Ecke des Fensters. Weitere Informationen zum Steuern des Verhaltens des in diesem Fenster finden Sie unter [Fensterverwaltung](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
- Die schnellste Möglichkeit zum Hinzufügen von Steuerelementen zu einem Dialogfeld, vorhandene Steuerelemente neu positionieren oder Steuerelemente von einem Dialogfeld in eine andere verschieben ist die Verwendung die Drag-and-Drop-Methode. Die Position des Steuerelements wird eine gepunktete Linie umrandet, bis sie in das Dialogfeld gelöscht wird. Wenn Sie ein Dialogfeld mit der Drag-and-Drop-Methode ein Steuerelement hinzufügen, erhält das Steuerelement eine Standardhöhe entsprechenden auf diesen Typ des Steuerelements.  
+ Die schnellste Möglichkeit zum Hinzufügen von Steuerelementen zu einem Dialogfeld, vorhandene Steuerelemente neu positionieren oder verschieben Sie die Steuerelemente in einem Dialogfeld in eine andere ist die Verwendung die Drag & Drop-Methode. Die Position des Steuerelements wird in einer gepunkteten Linie beschrieben werden, bis sie in das Dialogfeld gelöscht wird. Wenn Sie ein Steuerelement an ein Dialogfeld mit der Drag & Drop-Methode hinzufügen, erhält das Steuerelement eine Standardhöhe für diese Art von Steuerelement geeignet.  
   
- Beim Hinzufügen eines Steuerelements zu einem Dialogfeld oder Positionieren sie möglicherweise die endgültige Position von Führungslinien oder Ränder bestimmt werden oder ob Sie das Layoutraster aktiviert haben.  
+ Wenn Sie ein Dialogfeld, das ein Steuerelement hinzufügen oder ihn neu anzuordnen, möglicherweise die endgültige Position von Führungslinien oder Ränder bestimmt werden oder ob Sie das Layoutraster aktiviert haben.  
   
- Nachdem Sie das Dialogfeld ein Steuerelement hinzugefügt haben, können Sie Eigenschaften wie z. B. die Beschriftung, im Ändern der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Sie können mehrere Steuerelemente auswählen und alle auf einmal, deren Eigenschaften zu ändern.  
+ Nachdem Sie das Dialogfeld ein Steuerelement hinzugefügt haben, können Sie Eigenschaften wie z. B. die Beschriftung, im Ändern der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Sie können mehrere Steuerelemente auswählen und alle gleichzeitig, ihre Eigenschaften ändern.  
   
 -   [Hinzufügen, Bearbeiten oder Löschen von Steuerelementen](adding-editing-or-deleting-controls.md)  
   
@@ -55,7 +55,7 @@ Sie können Steuerelemente hinzufügen, um ein Dialogfeld mithilfe der [Register
   
 -   [Festlegen der Position und Größe eines Dialogfelds](../windows/specifying-the-location-and-size-of-a-dialog-box.md)  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  
@@ -64,4 +64,3 @@ Sie können Steuerelemente hinzufügen, um ein Dialogfeld mithilfe der [Register
  [Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)   
  [Dialog-Editor](../windows/dialog-editor.md)
-

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e46063bc94fae25d414d25ae67b5418ee5aa8c27
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: aa178126b3a749e3af67b9dae3711c0a5cf9f408
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465856"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645785"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass-Makros
 
@@ -64,7 +64,7 @@ Ein Name, der eine Teilmenge der Factorys im Modul angibt.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie nicht diese Makros mit klassischen COM-es sei denn, Sie verwenden die `#undef` Richtlinie, um sicherzustellen, dass die **&#95; &#95;WRL_WINRT_STRICT&#95; &#95;** Makrodefinition entfernt wird.
+Verwenden Sie nicht diese Makros mit klassischen COM-es sei denn, Sie verwenden die `#undef` Richtlinie, um sicherzustellen, dass die `__WRL_WINRT_STRICT__` Makrodefinition entfernt wird.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75476fec3dcabda2990d3ca3f5dcf017688a176d
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e362ec513cb7cb14f5fd3abb8a028c6e0eab616b
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466123"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644228"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Kontextbezogene Schlüsselwörter (Komponentenerweiterungen für C++)
 *Kontextbezogene Schlüsselwörter* sind Sprachelemente, die nur in bestimmten Kontexten erkannt werden. Außerhalb des jeweiligen Kontexts kann ein kontextbezogenes Schlüsselwort ein benutzerdefiniertes Symbol sein.  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
- **Hinweise**  
+### <a name="remarks"></a>Hinweise
   
  Die folgende Liste enthält die kontextbezogenen Schlüsselwörter:  
   
@@ -59,23 +59,22 @@ ms.locfileid: "39466123"
  Für die Lesbarkeit zu erhöhen sollten Sie die Verwendung von kontextbezogenen Schlüsselwörtern als benutzerdefinierte Symbole einschränken.  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
- **Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
  (Es gibt keine plattformspezifischen Hinweise für diese Funktion.)  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
  (Es gibt keine plattformspezifischen Hinweise für diese Funktion.)  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
  Das folgende Codebeispiel zeigt, dass im geeigneten Kontext, der **Eigenschaft** kontextbezogenes Schlüsselwort kann verwendet werden, um eine Eigenschaft und eine Variable definieren.  
   
@@ -99,8 +98,6 @@ int main() {
    System::Console::WriteLine(++property);  
 }  
 ```  
-  
- **Ausgabe**  
   
 ```Output  
 100  

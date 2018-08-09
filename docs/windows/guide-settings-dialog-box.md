@@ -23,37 +23,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 265c6c1931b0e48399039e507be45c73c710142d
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 271a56881f2710a7fb7c18dadeb7c36d4d6a3232
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568890"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647995"
 ---
 # <a name="guide-settings-dialog-box"></a>Dialogfeld "Führungslinieneinstellungen"
 ## <a name="layout-guides"></a>Layoutführungslinien  
  Zeigt die Einstellungen für die Layoutführungslinien.  
   
- **Keine**  
+### <a name="none"></a>Keiner  
   
  Blendet die Layout-Tools.  
   
- **Lineale und Führungslinien**  
+### <a name="rulers-and-guides"></a>Lineale und Führungslinien  
   
  Wenn aktiviert, wird die Layouttools Lineale hinzugefügt; Führungslinien können in die Lineale platziert werden. Die Standard-Handbücher sind die Ränder, die durch Ziehen von verschoben werden können. Klicken Sie auf die Lineale, um eine Anleitung zu platzieren. Steuerelemente "Ausrichten" in den Anleitungen, wenn die Steuerelemente über oder neben dem Namen verschoben werden. Steuerelemente werden auch mit einer Anleitung verschieben, nachdem sie sie verbunden sind. Wenn Sie ein Steuerelement in ein auf jeder Seite angefügt ist und eine Anleitung verschoben wird, wird das Steuerelement geändert.  
   
- **Raster**  
+### <a name="grid"></a>Raster  
   
  Erstellt eine Layoutraster für Telefone. Neue Steuerelemente werden automatisch auf das Raster ausgerichtet.  
   
 ## <a name="grid-spacing"></a>Rasterweite  
  Zeigt die Einstellungen für den Rasterabstand in Box Dialogeinheiten (DLUs).  
   
- **Breite: DLUs**  
+### <a name="width-dlus"></a>Breite: DLUs  
   
  Legt die Breite des Layoutrasters in DLUs fest. Eine horizontale DLU ist die durchschnittliche Breite der Dialogfeld-Schriftart geteilt durch vier.  
   
- **Height: DLUs**  
+### <a name="height-dlus"></a>Height: DLUs 
   
  Legt die Höhe des Layoutrasters in DLUs fest. Eine vertikale DLU ist die durchschnittliche Höhe des geteilt durch acht Dialogfeld-Schriftart.  
   

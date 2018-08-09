@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen eines Bildes für ein anderes Anzeigegerät (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Hinzufügen eines Bilds für ein anderes Anzeigegerät (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2819509bd5b3b42bc1d07cfb6ed1bedbd8a6bd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2bf056dac289a88d2e94cb740c0ff1e7b4bedd33
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857362"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651791"
 ---
 # <a name="adding-an-image-for-a-different-display-device-image-editor-for-icons"></a>Hinzufügen eines Bilds für ein anderes Anzeigegerät (Bildbearbeitung für Symbole)
-### <a name="to-add-an-image-for-a-different-display-device"></a>Hinzufügen eines Bildes für ein anderes Anzeigegerät  
+### <a name="to-add-an-image-for-a-different-display-device"></a>Hinzufügen eines Bilds für ein anderes Anzeigegerät  
   
-1.  Auf der **Image** Menü klicken Sie auf **Neuer Bildtyp** (oder mit der rechten Maustaste die **Grafik-Editor** Bereich, und wählen Sie **Neuer Bildtyp** aus der Kontextmenü).  
+1.  Auf der **Image** Menü klicken Sie auf **neues Gerätebild** (oder mit der rechten Maustaste die **Bild-Editor** Bereich, und wählen Sie **neues Gerätebild** aus der Kontextmenü).  
   
-2.  Wählen Sie den Typ des Bilds, das Sie hinzufügen möchten. Sie können auch klicken **benutzerdefinierte** beim Erstellen eines Symbols, deren Größe nicht in der Standardliste verfügbar ist.  
+2.  Wählen Sie den Typ des Bilds, die Sie hinzufügen möchten. Sie können auch klicken **benutzerdefinierte** erstellen, deren Größe nicht verfügbar, in der Liste ist.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- Anforderungen  
-  
+## <a name="requirements"></a>Anforderungen  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  
  [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
  [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
  [Symbole und Cursor: Bildressourcen für Anzeigegeräte](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
-

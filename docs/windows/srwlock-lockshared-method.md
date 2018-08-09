@@ -1,5 +1,5 @@
 ---
-title: 'SRWLOCK:: Lockshared-Methode | Microsoft Docs'
+title: 'SRWLOCK:: Lockshared-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fccc72814ca5c4fff417e0b6221ef0f3c045a5bb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8dfc50ae0732471f8cb91b2c380d4c4772350f47
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33895748"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652125"
 ---
 # <a name="srwlocklockshared-method"></a>SRWLock::LockShared-Methode
-Ruft ein Objekt SRWLock im freigegebenen Modus ab.  
+Ruft eine **SRWLock** Objekt im freigegebenen Modus.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,12 +37,12 @@ static SyncLockShared LockShared(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `lock`  
- Zeiger auf ein SRWLock-Objekt.  
+### <a name="parameters"></a>Parameter  
+ *lock*  
+ Zeiger auf ein **SRWLock** Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein SRWLock-Objekt im freigegebenen Modus.  
+ Ein **SRWLock** Objekt im freigegebenen Modus.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

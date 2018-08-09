@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d55241ddefce0e4fcd7f72698779d6e4ec97e20
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 3bded6992abc5b22e2c02a3364431a3f68b76ad6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464992"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649847"
 ---
 # <a name="comptrreleaseandgetaddressof-method"></a>ComPtr::ReleaseAndGetAddressOf-Methode
 Gibt die Schnittstelle frei zugeordneten **comptr-Objekt** und ruft dann die Adresse der [Ptr_](../windows/comptr-ptr-data-member.md) Datenmember, der einen Zeiger auf die Schnittstelle enthält, die veröffentlicht wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 T** ReleaseAndGetAddressOf();  
 ```  
   

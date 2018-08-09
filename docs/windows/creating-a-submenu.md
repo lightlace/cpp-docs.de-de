@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Untermenüs | Microsoft Docs
+title: Erstellen eines Untermenüs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1383e12761bc9d5cb0558072061bddac4da42d67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54e429281acedb716ba9a0253dabfd8754ab63d9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883380"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39647474"
 ---
 # <a name="creating-a-submenu"></a>Erstellen eines Untermenüs
 ### <a name="to-create-a-submenu"></a>So erstellen Sie ein Untermenü  
@@ -33,10 +33,9 @@ ms.locfileid: "33883380"
   
 3.  Fügen Sie dem Untermenü weitere Menübefehle hinzu.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.*  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.  
   
- **Anforderungen**  
-  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

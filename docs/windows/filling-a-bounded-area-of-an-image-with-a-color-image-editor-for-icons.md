@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ae915dbcd9e2190f33e29e236170951fcec3d01
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: dc632f251e618e5816b1b8d8ea8280cba3d7b217
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569871"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652489"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Füllen von begrenzten Bereichen eines Bilds mit einer Farbe (Bildbearbeitung für Symbole)
 Die bildbearbeitung bietet die **füllen** Tool für das Füllen alle Bildbereiche mit der aktuellen zeichnen oder die aktuelle Hintergrundfarbe.  
@@ -44,7 +44,6 @@ Die bildbearbeitung bietet die **füllen** Tool für das Füllen alle Bildbereic
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  

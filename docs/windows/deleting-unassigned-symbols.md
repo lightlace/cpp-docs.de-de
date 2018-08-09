@@ -1,5 +1,5 @@
 ---
-title: Löschen nicht zugewiesener Symbole | Microsoft Docs
+title: Löschen nicht zugewiesener Symbole | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 947249b4a0a9bd2233d76671b1b5bf05c70337db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 93de27e028d0665cccc3ba373b26524d911607a0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882939"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648196"
 ---
 # <a name="deleting-unassigned-symbols"></a>Löschen nicht zugewiesener Symbole
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>So löschen Sie ein nicht zugewiesenes (nicht verwendetes) Symbol  
   
-1.  In der [Ressourcensymbole (Dialogfeld)](../windows/resource-symbols-dialog-box.md), wählen Sie das Symbol, das Sie löschen möchten, und klicken Sie auf **löschen**.  
+1.  In der [Dialogfeld Ressourcensymbole](../windows/resource-symbols-dialog-box.md), wählen Sie das Symbol, das Sie löschen möchten, und klicken Sie auf **löschen**.  
   
     > [!NOTE]
     >  Stellen Sie vor dem Löschen eines nicht verwendeten Symbols in einer Ressourcendatei sicher, dass es nicht an anderer Stelle im Programm oder durch die Ressourcendateien zum Zeitpunkt der Kompilierung verwendet wird.  
   
-
-  
- **Anforderungen**  
-  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

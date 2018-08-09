@@ -1,5 +1,5 @@
 ---
-title: SRWLockSharedTraits-Struktur | Microsoft Docs
+title: SRWLockSharedTraits-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a18edef3fa658608459244143a5e48738f0c3a9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c606a1a7d32a02442e767a31543a76a4dccf295e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889634"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652473"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits-Struktur
-Beschreibt allgemeine Merkmale der SRWLock-Klasse in freigegebene Sperren an.  
+Beschreibt die allgemeinen Merkmale der `SRWLock` Klasse in freigegebene sperren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,8 +45,8 @@ struct SRWLockSharedTraits;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[SRWLockSharedTraits::GetInvalidValue-Methode](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Ruft ein SRWLockSharedTraits-Objekt, das immer ungültig ist.|  
-|[SRWLockSharedTraits::Unlock-Methode](../windows/srwlocksharedtraits-unlock-method.md)|Gibt die exklusive Kontrolle über das angegebene SRWLock-Objekt frei.|  
+|[SRWLockSharedTraits::GetInvalidValue-Methode](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|Ruft eine **SRWLockSharedTraits** -Objekt, das immer ungültig ist.|  
+|[SRWLockSharedTraits::Unlock-Methode](../windows/srwlocksharedtraits-unlock-method.md)|Exklusive Kontrolle über den angegebenen Versionen `SRWLock` Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `SRWLockSharedTraits`  

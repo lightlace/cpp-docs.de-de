@@ -1,5 +1,5 @@
 ---
-title: Ändern eines Symbols&#39;s numerischen Wert | Microsoft Docs
+title: Ändern eines Symbols&#39;Zahlenwert s | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8beacf5195e108d98a0004fe79c2a66cb2b3b610
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ada5ed80a1077dc2fc50494dcf6fcae609b0b0c9
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860384"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652431"
 ---
-# <a name="changing-a-symbol39s-numeric-value"></a>Ändern eines Symbols&#39;s numerischen Wert
-Mit einer einzelnen Ressource verknüpfte Symbole, Sie können für die [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) um den Symbolwert zu ändern. Sie können die [Ressourcensymbole (Dialogfeld)](../windows/resource-symbols-dialog-box.md) so ändern Sie den Wert von Symbolen wird derzeit nicht auf eine Ressource zugewiesen. Weitere Informationen finden Sie unter [ändern nicht zugewiesener Symbole](../windows/changing-unassigned-symbols.md).  
+# <a name="changing-a-symbol39s-numeric-value"></a>Ändern eines Symbols&#39;s numerischer Wert
+Symbole, die eine einzelne Ressource zugeordnet werden, können Sie die [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window) den Symbolwert zu ändern. Können Sie die [Dialogfeld Ressourcensymbole](../windows/resource-symbols-dialog-box.md) so ändern Sie den Wert von Symbolen, die derzeit nicht auf eine Ressource zugewiesen. Weitere Informationen finden Sie unter [ändern nicht zugewiesener Symbole](../windows/changing-unassigned-symbols.md).  
   
 ### <a name="to-change-a-symbol-value-assigned-to-a-single-resource-or-object"></a>So ändern Sie einen zu einer einzelnen Ressource oder einem Objekt zugewiesenen Symbolwert  
   
@@ -36,7 +36,7 @@ Mit einer einzelnen Ressource verknüpfte Symbole, Sie können für die [Fenster
     > [!NOTE]
     >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  In der **Eigenschaften** geben den Symbolnamen, gefolgt von einem Gleichheitszeichen und eine ganze Zahl in die **ID** Feld, z. B.:  
+2.  In der **Eigenschaften** geben den Symbolnamen, gefolgt von einem Gleichheitszeichen und einer ganzen Zahl in die **ID** Feld, z. B.:  
   
     ```  
     IDC_EDITNAME=5100  
@@ -44,10 +44,9 @@ Mit einer einzelnen Ressource verknüpfte Symbole, Sie können für die [Fenster
   
  Der neue Wert wird in der Symbolheaderdatei gespeichert, wenn Sie das nächste Mal das Projekt speichern. Nur der Symbolnamen verbleibt weiterhin im Feld „ID“ sichtbar. Nach der Überprüfung werden das Gleichheitszeichen und der Wert nicht mehr angezeigt.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)aus.  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, zum Zugreifen auf Ressourcen, zum Anzeigen statischer Ressourcen und zum Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften finden Sie unter [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)aus.  
   
- Anforderungen  
-  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

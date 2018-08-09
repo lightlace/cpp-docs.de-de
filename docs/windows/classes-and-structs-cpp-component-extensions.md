@@ -18,20 +18,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f8dc4dfc3268930c80caece85b06b9a1a25d58
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9e9f044a7aebdb96162edc0dcd4c33ed3c89e3b2
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461022"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644881"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Klassen und Strukturen (Komponentenerweiterungen für C++)
 Deklariert eine Klasse oder Struktur, deren *Objektlebensdauer* automatisch verwaltet wird. Wenn auf das Objekt nicht mehr zugegriffen werden kann oder den Gültigkeitsbereich verlässt, verwirft Visual C++ automatisch den Speicher, der dem Objekt zugeordnet ist.  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
- **Syntax**  
+### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
       class_access  
       ref class  
       name  
@@ -42,7 +42,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
   
 ```  
   
- **Parameter**  
+### <a name="parameters"></a>Parameter  
   
  *Class_access* (optional)  
  Der Zugriff auf die Klasse oder Struktur, außerhalb der Assembly. Mögliche Werte sind **öffentliche** und **private** (**private** ist die Standardeinstellung). Geschachtelte Klassen oder Strukturen können keine *Class_access* Spezifizierer.  
@@ -54,14 +54,14 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  [abstrakte](../windows/abstract-cpp-component-extensions.md) und [versiegelten](../windows/sealed-cpp-component-extensions.md) sind gültige Modifizierer.  
   
  *Inherit_access* (optional)  
- Die Zugriff zu `base_type`. Der einzige zulässige Zugriff ist **öffentliche** (**öffentliche** ist die Standardeinstellung).  
+ Der Zugriff auf *Base_type*. Der einzige zulässige Zugriff ist **öffentliche** (**öffentliche** ist die Standardeinstellung).  
   
  *Base_type* (optional)  
  Ein Basistyp. Jedoch kann ein Werttyp nicht als Basistyp dienen.  
   
  Weitere Informationen finden Sie unter der sprachspezifische Beschreibungen für diesen Parameter in der Windows-Runtime und die Common Language Runtimesections.  
   
- **Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
  Die Standard-Memberzugriff eines Objekts deklariert mit **Verweisklasse** oder **Wertklasse** ist **private**. Und die Standard-Memberzugriff eines Objekts deklariert mit **Referenzstruktur** oder **wertstruktur** ist **öffentliche**.  
   
@@ -88,29 +88,27 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 -   [Generische Klassen (C++/CLI)](../windows/generic-classes-cpp-cli.md)  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
- **Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
  Finden Sie unter [Verweisklassen und Strukturen](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx) und [Wertklassen und Strukturen](http://msdn.microsoft.com/library/windows/apps/hh699861.aspx).  
   
- **Parameter**  
-  
+### <a name="parameters"></a>Parameter  
  *Base_type* (optional)  
- Ein Basistyp. Ein **Verweisklasse** oder **Referenzstruktur** kann von NULL oder mehr Schnittstellen und 0 (null) oder ein erben `ref` Typen. Ein **Wertklasse** oder **wertstruktur** kann nur von NULL oder mehr Schnittstellen erben.  
+ Ein Basistyp. Ein **Verweisklasse** oder **Referenzstruktur** kann von NULL oder mehr Schnittstellen und 0 (null) oder ein erben **Ref** Typen. Ein **Wertklasse** oder **wertstruktur** kann nur von NULL oder mehr Schnittstellen erben.  
   
  Beim Deklarieren eines Objekts mithilfe der **Verweisklasse** oder **Referenzstruktur** Schlüsselwörter, erfolgt das Objekt durch ein Handle für ein Objekt, d. h. einen Verweiszähler-Zeiger auf das Objekt. Wenn die deklarierte Variable den Gültigkeitsbereich verlässt, wird der Compiler automatisch das zugrunde liegende Objekt löschen. Wenn das Objekt als Parameter in einem Aufruf verwendet wird oder in einer Variablen gespeichert ist, wird ein Handle für das Objekt tatsächlich übergeben oder gespeichert.  
   
  Beim Deklarieren eines Objekts mithilfe der **Wertklasse** oder **wertstruktur** Schlüsselwörter, die Objektlebensdauer das deklarierte Objekt wird nicht überwacht. Das Objekt ist wie jede andere Standard-C++-Klasse oder -Struktur.  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Hinweise**  
+### <a name="remarks"></a>Hinweise  
   
  Die folgende Tabelle enthält die Unterschiede zwischen der Syntax dargestellt, der **alle Laufzeiten** Abschnitt, die spezifisch für C++ / CLI.  
   
- **Parameter**  
-  
+### <a name="parameters"></a>Parameter  
  *Base_type* (optional)  
  Ein Basistyp. Ein **Verweisklasse** oder **Referenzstruktur** erben kann, von 0 (null) oder mehr verwalteten Schnittstellen und NULL oder einem Referenztypen. Ein **Wertklasse** oder **wertstruktur** kann nur von NULL oder mehr verwalteten Schnittstellen erben.  
   
@@ -119,7 +117,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
  Die **Wertklasse** und **wertstruktur** Schlüsselwörter teilen dem Compiler, dass der Wert der zugeordneten Klasse oder Struktur an Funktionen übergeben oder in Elemente gespeichert.  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ## <a name="see-also"></a>Siehe auch  
  [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

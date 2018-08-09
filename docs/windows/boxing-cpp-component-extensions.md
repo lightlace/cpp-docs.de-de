@@ -1,5 +1,5 @@
 ---
-title: Boxing (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Boxing (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,40 +15,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f689255af653e5dfdf69250e4988aa809393461
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05a0d83de045ed29b20ff14acc7fc81fb684a93e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861356"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39650621"
 ---
 # <a name="boxing--c-component-extensions"></a>Boxing (Komponentenerweiterungen für C++)
-Visual C++-Compiler kann Werttypen konvertieren, auf Objekte in einem Vorgang namens *Boxing*, und Konvertieren von Objekten in Werttypen in einem Vorgang namens *unboxing*.  
+Visual C++-Compiler kann Werttypen konvertieren, auf Objekte in ein so genanntes *Boxing*, und Konvertieren von Objekten in Werttypen in einem Vorgang namens *unboxing*.  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
  (Es gibt keine Hinweise für diese Sprachfunktion, die für alle Laufzeiten gültig sind.)  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
- C + c++ / CX unterstützt eine Kurzsyntax für Boxing-Werttypen und unboxing-Verweistypen. Ein Werttyp mittels Boxing konvertiert, wenn sie einer Variable des Typs `Object` zugewiesen wird. Eine `Object`-Variable wird mittels Unboxing konvertiert, wenn sie einer Werttypvariable zugeordnet ist und der Unboxing-Typ in Klammern angegeben wird; d. h., wenn die Objektvariable in einen Werttyp umgewandelt wird.  
+ C++ / CX unterstützt eine Kurzsyntax für Boxing-Werttypen und unboxing-Verweistypen. Ein Werttyp mittels Boxing konvertiert, wenn sie einer Variable des Typs `Object` zugewiesen wird. Eine `Object`-Variable wird mittels Unboxing konvertiert, wenn sie einer Werttypvariable zugeordnet ist und der Unboxing-Typ in Klammern angegeben wird; d. h., wenn die Objektvariable in einen Werttyp umgewandelt wird.  
   
-```  
-  
+```cpp  
   Platform::Object^  
   object_variable  = value_variable;  
 value_variable = (value_type) object_variable;  
-  
 ```  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ### <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird ein `DateTime`-Wert mittels Boxing und Unboxing konvertiert. Zunächst ruft das Beispiel einen DateTime-Wert ab, der das aktuelle Datum und die Uhrzeit darstellt, und weist ihm eine DateTime-Variable zu. Anschließend wird die DateTime durch Zuweisen einer Objektvariabler mittels Boxing konvertiert. Schließlich wird der Boxing-Wert mittels Unboxing zurückkonvertiert, indem ihm eine andere DateTime-Variable zugewiesen wird.  
+ Im folgenden Beispiel wird ein `DateTime`-Wert mittels Boxing und Unboxing konvertiert. Zunächst das Beispiel ruft eine `DateTime` -Wert, der der aktuelle Datum und Uhrzeit darstellt, und weist sie einer `DateTime` Variable. Die `DateTime` geschachtelt ist, durch die Zuweisung zu einem `Object` Variable. Schließlich der geschachtelte Wert wird mittels Unboxing zurückkonvertiert durch Zuweisen einer anderen `DateTime` Variable.  
   
- Um das Beispiel zu testen, erstellen Sie ein BlankApplication-Projekt, ersetzen Sie die BlankPage::OnNavigatedTo()-Methode und geben Sie dann bei der schließenden Klammer Haltepunkte und die Zuweisung zur Variable str1 an. Im Beispiel wird die schließende Klammer erreicht, untersuchen Sie str1.  
+ Um das Beispiel zu testen, erstellen eine `BlankApplication` Projekt, ersetzen Sie die `BlankPage::OnNavigatedTo()` -Methode, und geben Sie dann Haltepunkte auf der schließenden geschweiften Klammer und die Zuweisung zur Variable `str1`. Überprüfen Sie im Beispiel wird die schließende Klammer erreicht, `str1`.  
   
-```  
-  
+```cpp  
 void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)  
 {  
     using namespace Windows::Globalization::DateTimeFormatting;  
@@ -78,13 +75,12 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
     String^ str2 = dtf->Format(dtAnother);  
     OutputDebugString(str2->Data());  
 }  
-  
 ```  
   
- Weitere Informationen finden Sie unter [Boxing (C + c++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx).  
+ Weitere Informationen finden Sie unter [Boxing (C++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx).  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- Visual C++-Compiler konvertiert nun Boxing-Werttypen in  <xref:System.Object>.  Dies ist möglich durch eine compiler-definierte Konvertierung zur Konvertierung von Werttypen in <xref:System.Object>.  
+ Visual C++-Compiler konvertiert nun Boxing-Werttypen in  <xref:System.Object>. Dies ist möglich durch eine compiler-definierte Konvertierung zur Konvertierung von Werttypen in <xref:System.Object>.  
   
  Mit Boxing und Unboxing können Werttypen wie Objekte behandelt werden. Werttypen, einschließlich Strukturtypen und integrierten Typen wie int, können in und aus dem Typ <xref:System.Object> konvertiert werden.  
   
@@ -99,10 +95,9 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 -   [Standardumwandlungen und implizites Boxing](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
  Das folgende Beispiel zeigt wie implizites Boxing funktioniert.  
   
@@ -175,8 +170,6 @@ int main() {
    func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)  
 }  
 ```  
-  
- **Ausgabe**  
   
 ```Output  
 1  

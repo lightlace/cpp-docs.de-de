@@ -19,23 +19,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40f79bc6afe47bfed92d096dace59ef97eed68e1
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 2429b86ad872ea310d690187c7283b8498ece3f5
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568877"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645125"
 ---
 # <a name="generic-functions-ccli"></a>Generische Funktionen (C++/CLI)
 Eine generische Funktion ist eine Funktion, die mit den beiden Typparametern deklariert wird. Wenn aufgerufen, werden die tatsächliche Typen anstelle der Type-Parameter verwendet.  
   
 ## <a name="all-platforms"></a>Alle Plattformen  
- **Hinweise**  
+### <a name="remarks"></a>Hinweise
   
  Diese Funktion gilt nicht für alle Plattformen.  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
- **Hinweise**  
+### <a name="remarks"></a>Hinweise
   
  Dieses Feature wird in der Windows-Runtime nicht unterstützt.  
   
@@ -47,7 +47,7 @@ Eine generische Funktion ist eine Funktion, die mit den beiden Typparametern dek
   
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [attributes] [modifiers]  
 return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
@@ -94,7 +94,6 @@ return-type identifier<type-parameter identifier(s)>
  Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
  Im folgenden Codebeispiel wird veranschaulicht, eine generische Funktion.  
   
@@ -129,8 +128,6 @@ int main() {
 }  
 ```  
   
- **Beispiel**  
-  
  Generische Funktionen können basierend auf der Signatur "oder" Arity "," die Anzahl der Typparameter für eine Funktion überladen werden. Darüber hinaus können generische Funktionen mit nicht generischen Funktionen mit dem gleichen Namen, überladen werden, solange die Funktionen in einigen Typparametern unterscheiden sich. Die folgenden Funktionen können zum Beispiel können überladen werden:  
   
 ```cpp  
@@ -146,8 +143,6 @@ ref struct MyClass {
    void MyMythod(int i) {}  
 };  
 ```  
-  
- **Beispiel**  
   
  Im folgenden Beispiel wird eine generische Funktion, um das erste Element in einem Array zu finden. Deklariert `MyClass`, die von der Basisklasse erbt `MyBaseClass`. `MyClass` enthält eine generische Funktion `MyFunction`, ruft eine weitere generische Funktion `MyBaseClassFunction`, innerhalb der Basisklasse. In `main`, die generische Funktion `MyFunction`, wird mit verschiedenen Typargumenten aufgerufen.  
   
@@ -184,8 +179,6 @@ int main() {
    myObj->MyFunction<String^>("Hello generic functions!"));  
 }  
 ```  
-  
- **Ausgabe**  
   
 ```Output  
 My function returned an int: 2003  

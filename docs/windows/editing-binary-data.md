@@ -1,5 +1,5 @@
 ---
-title: Binärdaten bearbeiten | Microsoft Docs
+title: Bearbeiten von Binärdaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5259adc079381ce37da704a67a69b51758cb2aef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 24b2a5eeeaa0d07ebfc1cf1a7fcdb1b2b7274f03
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33884475"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651715"
 ---
 # <a name="editing-binary-data"></a>Bearbeiten von Binärdaten
 ### <a name="to-edit-a-resource-in-the-binary-editor"></a>So bearbeiten Sie eine Ressource im Binär-editor  
   
 1.  Wählen Sie das Byte, die, das Sie bearbeiten möchten.  
   
-     Die TAB-Taste verschiebt den Fokus zwischen der Hexadezimal- und ASCII-Abschnitte der binär-Editor. Die Bild-auf und Bild-ab-Tasten können Sie um über die Ressource einen Bildschirm zu einem Zeitpunkt zu verschieben.  
+     Die **Registerkarte** Schlüssel verschiebt den Fokus zwischen der Hexadezimal- und ASCII-Teile der **binäre** Editor. Können Sie die **Bild-auf** und **Seite nach unten** Schlüssel im einem Bildschirm "Resource" zu einem Zeitpunkt zu verschieben.  
   
 2.  Geben Sie den neuen Wert ein.  
   
-     Der Wert ändert sich unmittelbar im Hexadezimalformat und ASCII-Abschnitte und der Fokus auf den nächsten Wert in der Zeile.  
+     Der Wert Änderungen sofort in der sowohl Hexadezimal- und ASCII-Abschnitte und der Fokus wechselt zum nächsten Wert in Zeile.  
   
     > [!NOTE]
-    >  Binäre-Editor nimmt Änderungen automatisch ein, wenn Sie den Editor zu schließen.  
+    >  Die **binäre** Editor nimmt Änderungen automatisch, wenn Sie den Editor zu schließen.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
-### <a name="requirements"></a>Anforderungen  
-  
+## <a name="requirements"></a>Anforderungen   
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  
  [Binary Editor](binary-editor.md)
-

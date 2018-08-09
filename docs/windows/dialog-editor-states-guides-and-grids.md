@@ -1,5 +1,5 @@
 ---
-title: Dialog-Editor-Status (Führungslinien und Raster) | Microsoft Docs
+title: Dialog-Editor-Status (Führungslinien und Raster) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efce034d681fc13d59020619af4731e36cd30674
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b1405597e933e36e6a080c5c1defd98006a1064f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872834"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649317"
 ---
 # <a name="dialog-editor-states-guides-and-grids"></a>Modi des Dialog-Editors (Führungslinien und Raster)
-Sie können Steuerelemente in Dialogfeldern mit dem Dialog-Editor in einem von drei unterschiedlichen Zuständen annehmen angeordnet werden:  
+Sie können Anordnen von Steuerelementen in Dialogfeldern, mit der **Dialogfeld** -Editor in einer von drei verschiedenen Zuständen:  
   
--   Mit dem Führungslinien und Ränder (Standardeinstellung)  
+-   Mit dem Führungslinien und Ränder auf (Standardeinstellung)  
   
 -   Mit das Layoutraster für  
   
--   Ohne Funktionen andocken oder Ausrichtung  
+-   Ohne jegliche Features andocken oder Ausrichtung  
   
- Die [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) enthält Schaltflächen, die den Status zu steuern. Klicken Sie auf das entsprechende Symbol, um den Status zu ändern. Sie können auch die Status ändern, mit der **Handbuch Einstellungen** Befehl die **Format** Menü.  
+ Die [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) enthält Schaltflächen, die den Status zu steuern. Klicken Sie auf das entsprechende Symbol, um den Status zu ändern. Sie können auch die Status ändern, mit der **Einstellungen für Führungslinien** Befehl die **Format** Menü.  
   
 -   [Erstellen und Festlegen von Führungslinien und Rändern](creating-and-setting-guides-and-margins.md)  
   
@@ -41,7 +41,7 @@ Sie können Steuerelemente in Dialogfeldern mit dem Dialog-Editor in einem von d
   
 -   [Ändern des Layoutrasters](../windows/modifying-the-layout-grid.md)  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  
@@ -50,4 +50,3 @@ Sie können Steuerelemente in Dialogfeldern mit dem Dialog-Editor in einem von d
  [Anordnung von Steuerelementen in Dialogfeldern](../windows/arrangement-of-controls-on-dialog-boxes.md)   
  [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
  [Steuerelemente (MFC)](../mfc/controls-mfc.md)
-

@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1590d07a7b37e7dd3abf09377a03734299cb124c
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: b49e7cbd30445250bdf0710973ba65e47823b36c
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460957"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652252"
 ---
 # <a name="asyncbasegetstatus-method"></a>AsyncBase::get_Status-Methode
 Ruft einen Wert, der den Status des asynchronen Vorgangs angibt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 STDMETHOD(  
    get_Status  
 )(AsyncStatus *status) override;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *status*  
- Der Speicherort, an dem der Status gespeichert werden. Weitere Informationen finden Sie unter Windows::Foundation::AsyncStatus-Enumeration.  
+ Der Speicherort, an dem der Status gespeichert werden. Weitere Informationen finden Sie unter `Windows::Foundation::AsyncStatus` Enumeration.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn erfolgreich; andernfalls E_ILLEGAL_METHOD_CALL.  

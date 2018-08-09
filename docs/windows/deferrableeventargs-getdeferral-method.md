@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13cd6b361fccc49de6142a0640ff96dbab3cb92c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 38958be32b03d0fe4a65a0dfe732d4a15c4ce633
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571203"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645083"
 ---
 # <a name="deferrableeventargsgetdeferral-method"></a>DeferrableEventArgs::GetDeferral-Methode
 Ruft einen Verweis auf die [Verzögerung](http://go.microsoft.com/fwlink/p/?linkid=526520) Objekt, das ein zurückgestelltes Ereignis darstellt.  
@@ -29,7 +29,7 @@ Ruft einen Verweis auf die [Verzögerung](http://go.microsoft.com/fwlink/p/?link
 HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *Ergebnis*  
  Ein Zeiger, der auf die [Verzögerung](http://go.microsoft.com/fwlink/p/?linkid=526520) Objekt, wenn der Aufruf abgeschlossen ist.  
   

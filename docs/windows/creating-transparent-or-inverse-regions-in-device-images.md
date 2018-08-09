@@ -30,12 +30,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c8ebecf984254175a15075e8d8a4125f9fc5ec17
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8ec3a5775baf04d6e0583734b2e833950bc2fdec
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462533"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643562"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Erstellen transparenter oder invertierter Bereiche in Gerätebildern (Bildbearbeitung für Symbole)
 In der [bildbearbeitung](../windows/image-editor-for-icons.md), das erste Symbol oder Cursor Abbild ein transparent Attribut aufweist. Obwohl das Symbol und der Cursor rechteckigen sind, werden viele nicht in dieser Form angezeigt, da Teile des Bilds transparent sind; der zugrunde liegenden Bildes auf dem Bildschirm zeigt durch das Symbol oder Cursor. Wenn Sie ein Symbol ziehen, möglicherweise Teile des Bilds in eine invertierte Farbe angezeigt. Sie erstellen diese Auswirkungen durch Festlegen der Bildschirmfarbe und invertierte Farbe in der [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md).  
@@ -43,7 +43,7 @@ In der [bildbearbeitung](../windows/image-editor-for-icons.md), das erste Symbol
  Die Bildschirm- und invertierte Farben, die Sie auf die Symbole anwenden und Cursor entweder Form und Farbe des abgeleiteten Bildes oder invertierter Bereiche bestimmt. Die Farben zeigen die Teile des Bilds, das diese Attribute besitzen. Sie können die Farben ändern, die die Attribute Fensterfarbe und Inverse Farbe im Bearbeitungsmodus darstellen. Diese Änderungen wirken sich nicht auf die Darstellung des Symbols oder Cursors in Ihrer Anwendung aus.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der **Hilfe** beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-transparent-or-inverse-regions"></a>Erstellen transparenter oder invertierter Bereiche  
   
@@ -60,12 +60,11 @@ In der [bildbearbeitung](../windows/image-editor-for-icons.md), das erste Symbol
      Die Komplementärfarbe wird automatisch für die andere festgelegt.  
   
     > [!TIP]
-    >  Wenn Sie die Auswahl Fensterfarbe bzw. invertierte Farbe Doppelklicken der [benutzerdefinierte Farbauswahl (Dialogfeld)](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) angezeigt wird.  
+    >  Doppelklicken auf die **Fensterfarbe** oder **Inverse Farbe** Auswahl der [benutzerdefinierte Farbauswahl (Dialogfeld)](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) angezeigt wird.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  

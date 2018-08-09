@@ -1,5 +1,5 @@
 ---
-title: Switch_is | Microsoft Docs
+title: Switch_is | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05805bff0044838aaea2af2013fa951c5d3be9a1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e77c29df5fa86ccdf88a6962577cd8c70e45e2ee
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892792"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651365"
 ---
 # <a name="switchis"></a>switch_is
-Gibt den Ausdruck oder einen Bezeichner fungiert als die union kombiniert werden sollen, die den union-Member auswählt.  
+Gibt den Ausdruck oder einen Bezeichner fungiert als die union kombiniert werden sollen, die die union-Member auswählt.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [switch_is]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Switch_is** C++-Attribut hat die gleiche Funktionalität wie die [Switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Finden Sie unter der [Fall](../windows/case-cpp.md) Beispiel für ein Beispiel für die Verwendung von **Switch_is**.  
+ Finden Sie unter den [Fall](../windows/case-cpp.md) Beispiel für ein Beispiel für die Verwendung von **Switch_is**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -47,7 +45,7 @@ Gibt den Ausdruck oder einen Bezeichner fungiert als die union kombiniert werden
   
 |||  
 |-|-|  
-|**Betrifft**|`typedef`|  
+|**Betrifft**|**typedef**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  

@@ -1,5 +1,5 @@
 ---
-title: 'Srwlockexclusivetraits:: Unlock-Methode | Microsoft Docs'
+title: 'Srwlockexclusivetraits:: Unlock-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0babd7efcae7bbd91fd81362e7b0f612f177477f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1863acc925bf66aa10435f2dadd9d9d73a43300
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892589"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39648021"
 ---
 # <a name="srwlockexclusivetraitsunlock-method"></a>SRWLockExclusiveTraits::Unlock-Methode
-Gibt die exklusive Kontrolle über das angegebene SRWLock-Objekt frei.  
+Exklusive Kontrolle über den angegebenen Versionen `SRWLock` Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,9 +35,9 @@ inline static void Unlock(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `srwlock`  
- Handle für ein SRWLock-Objekt.  
+### <a name="parameters"></a>Parameter  
+ *SRWLOCK*  
+ Handle für ein `SRWLock` Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

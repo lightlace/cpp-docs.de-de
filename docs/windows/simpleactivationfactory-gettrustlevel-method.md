@@ -1,5 +1,5 @@
 ---
-title: 'Simpleactivationfactory:: Gettrustlevel-Methode | Microsoft Docs'
+title: 'Simpleactivationfactory:: Gettrustlevel-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b08ce574a8370eb0029a702f8fa4a4b12c6e93c1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22fa30a3662897b171245da194573ec17da2f64e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892617"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645187"
 ---
 # <a name="simpleactivationfactorygettrustlevel-method"></a>SimpleActivationFactory::GetTrustLevel-Methode
-Ruft die Vertrauensebene einer Instanz der Klasse, die gemäß der `Base` Klassenvorlagenparameter.  
+Ruft die Vertrauensebene der eine Instanz der Klasse, die gemäß der `Base` Klassenvorlagenparameter.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,9 +33,9 @@ STDMETHOD(
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `trustLvl`  
- Wenn dieser Vorgang abgeschlossen wird, die Vertrauensebene des aktuellen Klassenobjekts.  
+### <a name="parameters"></a>Parameter  
+ *trustLvl*  
+ Wenn dieser Vorgang abgeschlossen ist, die Vertrauensebene des aktuellen Klassenobjekts.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Stets S_OK.  

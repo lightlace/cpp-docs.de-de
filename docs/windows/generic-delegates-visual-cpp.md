@@ -16,19 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96c4c878edb0125aca2d4782afd53ce0967452a5
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 5aa0bc804b3308a9b77c93cf40a2ba9cab7558a8
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571310"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652905"
 ---
 # <a name="generic-delegates-visual-c"></a>Generische Delegaten (Visual C++)
 Sie können generische Typparameter mit Delegaten verwenden. Weitere Informationen zu Delegaten finden Sie unter [Delegate (Komponentenerweiterungen)](../windows/delegate-cpp-component-extensions.md).  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [attributes]   
 generic < [class | typename] type-parameter-identifiers>  
 [type-parameter-constraints-clauses]  
@@ -36,7 +36,7 @@ generic < [class | typename] type-parameter-identifiers>
 ([formal-parameters]);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *Attribute* (Optional)  
  Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".  
   

@@ -1,5 +1,5 @@
 ---
-title: HANDLETraits-Struktur | Microsoft Docs
+title: HANDLETraits-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1aae09030ff6cad518028833ce5d4f7b06300a69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f722745b1283f25bd284adb3b55dcb340d78f07
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876647"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39649912"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits-Struktur
-Definiert die gemeinsame Merkmale eines Handles.  
+Definiert die allgemeinen Merkmale eines Handles.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 struct HANDLETraits;  
 ```  
   
@@ -39,7 +39,7 @@ struct HANDLETraits;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|`Type`|Ein Synonym für HANDLE.|  
+|`Type`|Ein Synonym für den HANDLE.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   

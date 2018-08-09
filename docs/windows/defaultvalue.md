@@ -17,23 +17,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 11ec7cf883fe8c9454cf538efc0835b9c77b1f92
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deda09913f2774a2b3b246a285df0c8b6f1c62eb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569985"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39652824"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 Ermöglicht die Angabe eines Standardwerts für einen typisierten optionalen Parameter.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ defaultvalue= value ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *Wert*  
  Der Standardwert für den Parameter.  
   

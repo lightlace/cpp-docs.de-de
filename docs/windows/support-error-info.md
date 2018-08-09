@@ -1,5 +1,5 @@
 ---
-title: Support_error_info | Microsoft Docs
+title: Support_error_info | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0c366a379d15e50aabdc3c2157f57f85b6b5b33b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ddf76345234ba44b2634c04ee1e2899913ed2078
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889929"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39653058"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 Implementiert die Unterstützung für die Zurückgabe ausführlicher Fehler.  
@@ -30,25 +30,24 @@ Implementiert die Unterstützung für die Zurückgabe ausführlicher Fehler.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ support_error_info(  
+[ support_error_info(  
    error_interface=uuid  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- **error_interface**  
- Der Bezeichner der Schnittstelle, die **IErrorInfo**implementiert.  
+### <a name="parameters"></a>Parameter  
+ *error_interface*  
+ Der Bezeichner der Schnittstelle implementieren `IErrorInfo`.  
   
 ## <a name="remarks"></a>Hinweise  
- Das **support_error_info** C++-Attribut implementiert die Unterstützung für die Zurückgabe ausführlicher, kontextbezogener Fehler am Zielobjekt an den Client. Für das Objekt, das Fehler unterstützt, müssen die Methoden der **IErrorInfo** -Schnittstelle implementiert werden. Weitere Informationen finden Sie unter [Unterstützung IDispatch und IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md).  
+ Das **support_error_info** C++-Attribut implementiert die Unterstützung für die Zurückgabe ausführlicher, kontextbezogener Fehler am Zielobjekt an den Client. Für das Objekt, das Fehler, die Methoden unterstützt die `IErrorInfo` Schnittstelle muss von dem Objekt implementiert werden. Weitere Informationen finden Sie unter [Unterstützung IDispatch und IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md).  
   
- Dieses Attribut fügt dem Zielobjekt die [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) -Klasse als Basisklasse hinzu. Dies führt zu einer standardmäßigen Implementierung von **ISupportErrorInfo** und kann verwendet werden, wenn eine einzelne Schnittstelle Fehler bei einem Objekt generiert.  
+ Dieses Attribut fügt dem Zielobjekt die [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) -Klasse als Basisklasse hinzu. Dies führt zu einer standardmäßigen Implementierung von `ISupportErrorInfo` und kann verwendet werden, wenn eine einzelne Schnittstelle Fehler bei einem Objekt generiert.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code fügt dem **-Objekt die Standardunterstützung für die** ISupportErrorInfo `CMyClass` -Schnittstelle hinzu.  
+ Der folgende Code fügt standardmäßig Unterstützung für die `ISupportErrorInfo` Schnittstelle zu den `CMyClass` Objekt.  
   
-```  
+```cpp  
 // cpp_attr_ref_support_error_info.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  

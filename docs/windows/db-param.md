@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c7ce3c5b76dfa8602a46e947d1e8925ec2bf14c
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 6f9938f96e65053d396cdfb608bea1e21eb1df74
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39569442"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39651381"
 ---
 # <a name="dbparam"></a>db_param
 Ordnet die angegebenen Member-Variable mit einem Eingabe- oder ausgabeadapter-Parameter und Variablen begrenzt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ db_param(   
    ordinal,   
    paramtype="DBPARAMIO_INPUT",   
@@ -41,7 +41,7 @@ Ordnet die angegebenen Member-Variable mit einem Eingabe- oder ausgabeadapter-Pa
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *Ordinal*  
  Die Nummer der Spalte (DBCOLUMNINFO-Ordnungszahl) für ein Feld in das Rowset, um Daten zu binden.  
   

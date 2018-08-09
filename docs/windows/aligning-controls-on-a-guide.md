@@ -1,5 +1,5 @@
 ---
-title: Ausrichten von Steuerelementen an einer Führungslinie | Microsoft Docs
+title: Ausrichten von Steuerelementen an einer Führungslinie | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,41 +25,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a7c8cc57b4d2e7150ff09858cfd5b315beb37962
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1a586a3a17e829d883dff96c12f6a2fdabe669f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857837"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643857"
 ---
 # <a name="aligning-controls-on-a-guide"></a>Ausrichten von Steuerelementen an einer Führungslinie
-Die Ziehpunkte des Steuerelemente ausrichten an Führungslinien, wenn die Steuerelemente verschoben werden, und Führungslinien an Steuerelemente ausrichten (wenn es keine Steuerelemente zuvor ausgerichtet). Wenn eine Orientierungshilfe verschoben wird, verschieben sowie Steuerelemente, die darauf ausgerichtet sind. Steuerelemente, die "angedockt", um mehr als eine Anleitung sind angepasst, wenn eine der Führungslinien verschoben wird.  
+Die Ziehpunkte des Steuerelementen ausrichten an Führungslinien, wenn die Steuerelemente verschoben werden, und Anleitungen an Steuerelementen ausrichten, (wenn vorhanden im Handbuch ausgerichtet sind). Wenn eine Anleitung verschoben wird, verschieben sowie Steuerelemente, die darauf ausgerichtet sind. Steuerelemente, die an mehr als ein Handbuch Rasterlinie ausgerichtet werden geändert, wenn eine der Anleitungen verschoben wird.  
   
- Die Teilstriche in der Lineale, die bestimmen, den Abstand von Führungslinien und Steuerelemente werden durch Dialogeinheiten (DLUs) definiert. Eine DLU basiert auf der Größe der Dialogfeld-Schriftart, normalerweise 8 Punkt MS Shell Dlg. Eine horizontale DLU ist die durchschnittliche Breite der Dialogfeld-Schriftart geteilt durch vier. Eine vertikale DLU entspricht der durchschnittlichen Höhe der Schriftart, dividiert durch 8.  
+ Die Teilstriche in die Lineale, die bestimmen, den Abstand von Führungslinien und Steuerelemente werden durch Dialogeinheiten (DLUs) definiert. Eine DLU basiert auf der Größe der Dialogfeld-Schriftart, normalerweise 8 Punkt MS Shell Dlg. Eine horizontale DLU ist die durchschnittliche Breite der Dialogfeld-Schriftart geteilt durch vier. Eine vertikale DLU ist die durchschnittliche Höhe der Schriftart geteilt durch acht.  
   
-### <a name="to-size-a-group-of-controls-with-guides"></a>Eine Gruppe von Steuerelementen mit Führungslinien Größe anpassen  
+### <a name="to-size-a-group-of-controls-with-guides"></a>Eine Gruppe von Steuerelementen mit Guides Größe  
   
-1.  Ausrichten von einer Seite eines Steuerelements (bzw. der Steuerelemente) in ein.  
+1.  Richten Sie eine Seite des Steuerelements (oder Steuerelemente), um eine Anleitung.  
   
-2.  Ziehen Sie eine Anleitung für die andere Seite des Steuerelements (bzw. der Steuerelemente).  
+2.  Ziehen Sie eine Anleitung für die der anderen Seite des Steuerelements (oder Steuerelemente).  
   
-     Bei Bedarf mit mehreren Steuerelementen, die Größe jedes Element in der zweiten Anleitung ausrichten.  
+     Bei Bedarf mit mehreren Steuerelementen, die Größe jedes in der zweiten Anleitung ausrichten.  
   
-3.  Verschieben Sie entweder Anleitung zur Größe des Steuerelements (bzw. der Steuerelemente).  
+3.  Verschieben Sie entweder Anleitung, die Größe des Steuerelements (bzw. der Steuerelemente).  
   
 ### <a name="to-change-the-intervals-of-the-tick-marks"></a>So ändern Sie die Intervalle der Teilstriche  
   
-1.  Aus der **Format** Menü wählen **Handbuch Einstellungen**.  
+1.  Von der **Format** Menü wählen **Einstellungen für Führungslinien**.  
   
-2.  In der [Handbuch Einstellungen (Dialogfeld)](../windows/guide-settings-dialog-box.md)in der **Rasterabstand** Feld, geben Sie eine neue Breite und Höhe in DLUs.  
+2.  In der [im Dialogfeld "Einstellungen" Handbuch](../windows/guide-settings-dialog-box.md)in die **Rasterweite** an eine neue Breite und Höhe in DLUs.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
- Anforderungen  
-  
+## <a name="requirements"></a>Anforderungen  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dialog-Editor-Status (Führungslinien und Raster)](../windows/dialog-editor-states-guides-and-grids.md)   
  [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)
-

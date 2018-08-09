@@ -15,26 +15,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 225580be17afcc1bda6feab63d3efe79f932b757
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 1dcf129f551900792638018fa846557120e53e96
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570323"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39644351"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Explizite Überschreibungen (Komponentenerweiterungen für C++)
 In diesem Thema wird erläutert, wie ein Member einer Basisklasse oder Schnittstelle explizit zu überschreiben. Benannte Überschreibung (explizite) sollte nur verwendet werden, um eine Methode mit einer abgeleiteten Methode überschreiben, die einen anderen Namen aufweist.  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
- **Syntax**  
+### <a name="syntax"></a>Syntax
   
-```  
+```cpp  
 overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
-  
- **Parameter**  
-  
+
+### <a name="parameters"></a>Parameter 
  *Überschreiben der funktionsdeklarator*  
  Typ, Name und Argument Rückgabeliste der überschreibenden Funktion.  Beachten Sie, dass die überschreibende Funktion nicht unbedingt den gleichen Namen wie die überschriebene Funktion haben.  
   
@@ -47,7 +46,7 @@ overriding-function-declarator = function { overriding-function-definition }
  *Überschreiben der Funktionsdefinition*  
  Die Funktion Text-Anweisungen, die die überschreibende Funktion zu definieren.  
   
- **Hinweise**  
+### <a name="remarks"></a>Hinweise
   
  Explizite verwenden Sie Außerkraftsetzungen, um einen Alias für die Signatur einer Methode zu erstellen oder um unterschiedliche Implementierungen für Methoden Witht die gleiche Signatur bereitzustellen.  
   
@@ -59,15 +58,14 @@ overriding-function-declarator = function { overriding-function-definition }
  Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Hinweise**  
+### <a name="remarks"></a>Hinweise
   
  Informationen über explizite überschreibungen in nativem Code oder Code kompiliert wird, mit `/clr:oldSyntax`, finden Sie unter [explizite Überschreibungen](../cpp/explicit-overrides-cpp.md).  
   
 ### <a name="requirements"></a>Anforderungen  
  Compileroption: `/clr`  
   
-### <a name="examples"></a>Beispiele  
- **Beispiel**  
+### <a name="examples"></a>Beispiele   
   
  Das folgende Codebeispiel zeigt eine einfache, implizite Override "und" Implementierung eines Members in eine Basisschnittstelle, nicht über explizite überschreibungen.  
   
@@ -91,13 +89,9 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
 ```Output  
 X::f override of I1::f  
 ```  
-  
- **Beispiel**  
   
  Im folgenden Codebeispiel wird veranschaulicht, wie alle Schnittstellenmember mit einer gemeinsamen Signatur, die mit der explizite Überschreibungssyntax implementiert wird.  
   
@@ -126,18 +120,14 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
 ```Output  
 X::f override of I1::f and I2::f  
 X::f override of I1::f and I2::f  
 ```  
   
- **Beispiel**  
-  
  Im folgenden Codebeispiel wird veranschaulicht, wie eine Funktion zum Überschreiben von der Funktion einen anderen Namen haben kann, die implementiert wird.  
   
-```  
+```cpp  
 // explicit_override_3.cpp  
 // compile with: /clr  
 interface struct I1 {  
@@ -157,13 +147,9 @@ int main() {
 }  
 ```  
   
- **Ausgabe**  
-  
 ```Output  
 X::g  
 ```  
-  
- **Beispiel**  
   
  Das folgende Codebeispiel zeigt eine explizite schnittstellenimplementierung, die eine sichere Auflistung implementiert.  
   

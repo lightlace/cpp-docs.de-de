@@ -1,5 +1,5 @@
 ---
-title: Accelerator-Typeigenschaft | Microsoft Docs
+title: Accelerator-Type-Eigenschaft | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb1ba8f117fadab7cccb835ba8889d57bcc9f184
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: da825a4f2052f05b24ff724d709c7c8a4b6a3db3
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856500"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39645684"
 ---
 # <a name="accelerator-type-property"></a>Eigenschaft "Typ" von Zugriffstasten
-Die Zugriffstaste **Typ** -Eigenschaft bestimmt, ob die Tastenkombination der Accelerator-ID zugeordnet, eine virtuelle Tastenkombination oder ein ASCII/ANSI-Schlüsselwert ist:  
+Die Zugriffstaste **Typ** Eigenschaft bestimmt, ob die Tastenkombination mit der ID der Zugriffstaste verknüpft ist eine virtuelle Tastenkombination oder einen ASCII/ANSI-Schlüsselwert ist:  
   
--   Wenn die **Typ** Eigenschaft ist **ASCII**, die [Modifizierer](../windows/accelerator-modifier-property.md) möglicherweise keine nur oder ALT-Taste, oder es kann eine Zugriffstaste, die STRG-Taste verwendet, haben (gemäß den Schlüssel mit dem vorangehenden eine ^).  
+-   Wenn die **Typ** -Eigenschaft ist ASCII, die [Modifizierer](../windows/accelerator-modifier-property.md) möglicherweise nur `None` oder `Alt`, oder es kann eine Zugriffstaste verwendet die **STRG** Schlüssel (angegeben durch den Schlüssel mit dem vorherigen eine `^`).  
   
--   Wenn die **Typ** Eigenschaft **VIRTKEY**, eine beliebige Kombination von und Tastenwerte ist gültig.  
+-   Wenn die **Typ** -Eigenschaft ist VIRTKEY, eine beliebige Kombination von `Modifier` und `Key` Werte gilt.  
   
     > [!NOTE]
-    >  Wenn geben einen Wert in die Zugriffstastentabelle, und weisen den Wert, der als ASCII/ANSI behandelt werden sollen, klicken Sie einfach auf den Typ des Eintrags in der Tabelle und wählen Sie ASCII aus der Dropdownliste aus. Allerdings bei Verwendung der **Nächste Taste** Befehl (**bearbeiten** Menü) zum Angeben des Schlüssels müssen Sie ändern die **Typ** Eigenschaft von VIRTKEY in ASCII *vor* Schlüssel eingeben.  
+    >  Wenn Sie verwenden möchten, geben einen Wert in die Zugriffstastentabelle, und den Wert als ASCII/ANSI, klicken Sie behandelt werden die **Typ** für den Eintrag in der Tabelle und wählen Sie ASCII aus der Dropdownliste aus. Jedoch bei Verwendung der **Nächste Taste** Befehl (**bearbeiten** im Menü) an die `Key`, müssen Sie ändern die **Typ** Eigenschaft von VIRTKEY ASCII *vor* eingeben der `Key` Code.  
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  
