@@ -1,5 +1,5 @@
 ---
-title: Beschränkungen bei Symbolnamen | Microsoft Docs
+title: Beschränkungen bei Symbolnamen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59ee6ce257609c4761e43630a66de9cb9b996269
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30852b22c9ff4cc74c8f0c57b3a5ed9d79a34838
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892334"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011447"
 ---
 # <a name="symbol-name-restrictions"></a>Beschränkungen bei Symbolnamen
 Die Einschränkungen für Symbolnamen lauten wie folgt:  
@@ -52,8 +52,6 @@ Die Einschränkungen für Symbolnamen lauten wie folgt:
 |Steuerelemente und untergeordnete Fenster|IDC_|Steuerelement|  
 |Zeichenfolgen|IDS_|Zeichenfolge in der Zeichenfolgentabelle|  
 |MFC|AFX_|Reserviert für vordefinierte MFC-Symbole|  
-  
-
   
 ## <a name="requirements"></a>Anforderungen  
  Win32  

@@ -15,23 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26ca5d70f6632c35da64215376e0dddd6eca9fcb
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: ed78c9276603c8b6dbdab74a32ea1940bf39544f
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39571001"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012569"
 ---
 # <a name="hstringisvalid-method"></a>HString::IsValid-Methode
 Gibt an, ob die aktuelle **HString** Objekt leer ist oder nicht.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 bool IsValid() const throw()  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  **"true"** Wenn die aktuelle **HString** Objekt ist nicht leer ist, andernfalls **"false"**.  
   
 ## <a name="requirements"></a>Anforderungen  

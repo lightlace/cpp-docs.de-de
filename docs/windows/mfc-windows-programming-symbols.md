@@ -1,5 +1,5 @@
 ---
-title: MFC-Symbole für die Programmierung der Windows | Microsoft Docs
+title: Symbole für eine Windows-Programmierung mit MFC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f91622e4d795b7c85cdf6f304ed6a76dd5a9364
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882692"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012780"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Symbole für die Windows-Programmierung mit MFC
-Diese Symbole sind auch Teil der MFC-Unterstützungsdateien, aber sie Standardfunktionen für Windows-Anwendung und Aktionen unterstützen. Hauptsächlich Sie werden mit Menüs verwendet. Bei der Arbeit mit Menüs im Menü-Editor werden diese Symbole zugeordnete allgemeine Menübefehle im Eigenschaftenfenster angezeigt. Für die Instanz, wenn die Anwendung ein Dateimenü mit dem Befehl "Beenden", dieses Befehls zugeordnet werden das Symbol ID_APP_EXIT in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).  
+Diese Symbole stellen ebenfalls einen Teil der MFC-Unterstützungsdateien, aber sie die Standardfunktionen für Windows-Anwendung und Aktionen unterstützen. Diese werden hauptsächlich mit Menüs verwendet. Beim Arbeiten mit Menüs in die **Menü-Editor**, diese Symbole werden angezeigt, der **Eigenschaftenfenster** allgemeine Menübefehle zugeordnet. Z. B. wenn die Anwendung verfügt eine **Datei** Menü mit einer **beenden** Befehl ",", mit dem Befehl mit dem Symbol ID_APP_EXIT verknüpft werden in der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window).  
   
 ||||  
 |-|-|-|  
@@ -61,7 +61,7 @@ Diese Symbole sind auch Teil der MFC-Unterstützungsdateien, aber sie Standardfu
 |ID_WINDOW_NEW|ID_WINDOW_SPLIT|ID_WINDOW_TILE_HORIZ|  
 |ID_WINDOW_TILE_VERT|ID_WIZBACK|ID_WIZFINISH|  
 |ID_WIZNEXT|IDABORT|IDC_STATIC|  
-|IDCANCEL|"IDD_ABOUTBOX"|IDIGNORE|  
+|IDCANCEL|IDD_ABOUTBOX|IDIGNORE|  
 |IDNO|IDOK|IDP_OLE_INIT_FAILED|  
 |IDRETRY|IDYES||  
   

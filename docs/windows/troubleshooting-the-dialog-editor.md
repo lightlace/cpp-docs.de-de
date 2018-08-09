@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e7b7accec826bc6c52ab9c6f677ce980f40c6f20
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 242881100dfd9a27946bcbe74d449d078c373852
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648619"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011103"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>Problembehandlung beim Dialog-Editor
-Im folgenden sind einige Probleme, die Sie beim Arbeiten im Dialog-Editor berücksichtigen sollten.  
+Im folgenden sind einige Punkte, die davon Sie bedenken sollten bei der Arbeit der **Dialogfeld** Editor.  
   
 -   [Das Dialogfeld funktioniert nach dem Hinzufügen von Steuerelementen nicht mehr](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)  
   

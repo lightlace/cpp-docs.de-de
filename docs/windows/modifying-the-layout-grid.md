@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9817c1f24490d333f1596292f3b9ea1aa3ba40ae
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9bafa66a382566ed096f70c752c461d8f3e2ca85
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606935"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40010288"
 ---
 # <a name="modifying-the-layout-grid"></a>Ändern des Layoutrasters
 Beim Anordnen von Steuerelementen in einem Dialogfeld oder platziert werden, können Sie das Layoutraster für die eine genauere Positionierung verwenden. Wenn das Raster aktiviert ist, scheinen die Steuerelemente ", die gepunkteten Zeilen im Raster ausrichten" einzurasten. Sie können Aktivieren dieses Feature "am Raster ausrichten" ein, und deaktivieren und Ändern der Größe der Rasterzellen des Layouts.  
@@ -35,7 +35,7 @@ Beim Anordnen von Steuerelementen in einem Dialogfeld oder platziert werden, kö
   
 2.  In der [im Dialogfeld "Einstellungen" Handbuch](../windows/guide-settings-dialog-box.md)aktivieren oder Deaktivieren der **Raster** Schaltfläche.  
   
-     Sie können weiterhin steuern das Raster im einzelnen Dialogfeld-Editor-Fenster mit den **Raster umschalten** Schaltfläche der [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
+     Sie können weiterhin steuern das Raster in einzelnen **Dialogfeld** -Editor-Fenster mit den **Raster umschalten** Schaltfläche der [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
 ### <a name="to-change-the-size-of-the-layout-grid"></a>Ändern die Größe des Layoutrasters  
   
@@ -46,7 +46,6 @@ Beim Anordnen von Steuerelementen in einem Dialogfeld oder platziert werden, kö
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Win32  
   
 ## <a name="see-also"></a>Siehe auch  

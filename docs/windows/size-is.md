@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6b5309d62db094bf706fe7d3d1bcec99c3ec9a9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8dbb3bfbf61c4ad7303c6cee272e14fc91bc9656
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645450"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011854"
 ---
 # <a name="sizeis"></a>size_is
 Geben Sie die Größe des Arbeitsspeichers für Größe Zeiger zugewiesen, Größe der Zeiger auf Zeiger, die Größe und Einzel- oder mehrdimensionale Arrays.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ size_is(  
    "expression"  
 ) ]  

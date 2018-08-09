@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e645d39a6373362a33e4efd25019d43cad348bbc
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 66d97de05956df985f4c0d699682210721b60c82
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651830"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011841"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Nachverfolgungsverweisoperator (Komponentenerweiterungen für C++)
 Ein *Nachverfolgungsverweis* (`%`) verhält sich wie ein normaler C++-Verweis (`&`) mit dem Unterschied, dass wenn ein Objekt zu einem Nachverfolgungsverweis zugewiesen wird, wird die verweiszählung des Objekts erhöht.  
@@ -46,7 +46,7 @@ Ein *Nachverfolgungsverweis* (`%`) verhält sich wie ein normaler C++-Verweis (`
 ## <a name="windows-runtime"></a>Windows-Runtime  
  Ein Nachverfolgungsverweis verhält sich wie ein Standard-C++-Verweis, und zwar mit Ausnahme, dass ein % per Referenzzählung behandelt wird. Der folgende Ausschnitt zeigt die Konvertierung zwischen %- und ^-Typen:  
   
-```  
+```cpp  
 Foo^ spFoo = ref new Foo();  
 Foo% srFoo = *spFoo;  
 Foo^ spFoo2 = %srFoo;  
@@ -54,7 +54,7 @@ Foo^ spFoo2 = %srFoo;
   
  Im folgenden Beispiel wird das Übergeben einer ^-Funktion gezeigt, die ein % aufweist.  
   
-```  
+```cpp  
 ref class Foo sealed {};  
   
     // internal or private  
@@ -139,8 +139,6 @@ int main() {
    Console::WriteLine(a[0]);  
 }  
 ```  
-  
- **Ausgabe**  
   
 ```Output  
 21  

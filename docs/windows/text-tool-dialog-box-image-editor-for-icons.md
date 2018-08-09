@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld für Texttool (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Im Dialogfeld für Texttool (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 039158b65664a24280fa8ebac0938892c3fdeb08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d868a79af6e521146f7ba510f8831f6cd1f14f6c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890287"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012845"
 ---
 # <a name="text-tool-dialog-box-image-editor-for-icons"></a>Text-Tool (Dialogfeld) (Bildbearbeitung für Symbole)
-Verwenden der **Texttool** (Dialogfeld), um einen Cursor, Bitmap oder Symbol Ressource Text hinzuzufügen.  
+Verwenden der **Texttool** Dialogfeld zum Hinzufügen von Text mit einem Cursor, Bitmap oder Symbol.  
   
  Um dieses Dialogfeld zuzugreifen, öffnen die [Bildbearbeitung](../windows/window-panes-image-editor-for-icons.md). Wählen Sie **Tools** aus der **Image** Menü, und wählen Sie dann die **Texttool** Befehl.  
   
- **Schaltfläche "Schriftart"**  
- Öffnet die [Schriftart für Texttool (Dialogfeld)](../windows/text-tool-font-dialog-box-image-editor-for-icons.md), in dem Sie die Schriftart, Format oder die Cursor Schriftgrad ändern können. Änderungen werden auf den in den Textbereich angezeigten Text angewendet.  
+### <a name="font-button"></a>Schaltfläche "Schriftart"  
+ Öffnet die [Schriftart für Texttool (Dialogfeld)](../windows/text-tool-font-dialog-box-image-editor-for-icons.md), in dem Sie die Schriftart, Schriftschnitt oder Schriftgrad Cursor ändern können. Änderungen werden angewendet, um den Text in die **Text** Bereich.  
   
- **Textbereich**  
- Zeigt den Text, der als Teil der Ressource angezeigt wird. Anfangs ist dieser Bereich leer.  
+### <a name="text-area"></a>Textbereich  
+ Zeigt den Text, der als Teil der Ressource angezeigt wird. Dieser Bereich ist zunächst leer.  
   
 > [!NOTE]
->  Wenn **transparenten Hintergrund** festgelegt ist, wird nur der Text in das Image platziert werden. Wenn **nicht transparenter Hintergrund** festgelegt ist, wird ein umschließendes Rechteck, das ausgefüllt, mit der [Hintergrundfarbe](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md), hinter dem Text eingefügt wird. Weitere Informationen finden Sie unter [Auswählen eines transparenten oder deckenden Hintergrundes](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+>  Wenn **transparenten Hintergrund** festgelegt ist, wird nur der Text in das Image platziert werden. Wenn **nicht transparenter Hintergrund** festgelegt ist, wird ein umschließendes Rechteck, gefüllt mit dem [Hintergrundfarbe](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md), hinter dem Text platziert werden. Weitere Informationen finden Sie unter [Auswählen eines transparenten oder deckenden Hintergrundes](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
   
- Sie können mit der rechten Maustaste auf die **Texttool** (Dialogfeld), auf ein Standard-Kontextmenü zuzugreifen, die eine Liste der standard-Windows-Befehle enthält.  
+ Sie können mit der rechten Maustaste auf die **Texttool** im Dialogfeld ein standardmäßigen Kontextmenü zugreifen, die eine Liste der standard-Windows-Befehle enthält.  
   
 ## <a name="requirements"></a>Anforderungen  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  
  [Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)
-

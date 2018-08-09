@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 428c62db8f1444f497d6fede7affea34560b4b0e
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 26d1b0ae8923835b0ce06c7312fa185693c6586e
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605954"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014506"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>Öffnen einer Ressource für die Binärbearbeitung
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>So öffnen Sie eine Windows-Desktopressource zur Binärbearbeitung  
@@ -36,7 +36,7 @@ ms.locfileid: "39605954"
 2.  Klicken Sie mit der rechten Maustaste auf die Ressource, und klicken Sie im Kontextmenü auf **Binärdaten öffnen** .  
   
     > [!NOTE]
-    >  Wenn Sie das Fenster [Ressourcenansicht](../windows/resource-view-window.md) verwenden, um eine Ressource in einem Format zu öffnen, das von Visual Studio nicht erkannt wird (etwa eine RCDATA- oder eine benutzerdefinierte Ressource), wird die Ressource automatisch im Binär-Editor geöffnet.  
+    >  Bei Verwendung der [Ressourcenansicht](../windows/resource-view-window.md) Fenster aus, um eine Ressource in einem Format zu öffnen, dass Visual Studio nicht (etwa eine RCDATA- oder eine benutzerdefinierte Ressource), die Ressource erkennt wird automatisch geöffnet, der **binäre** Editor.  
   
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>So öffnen Sie eine verwaltete Ressource für die Binärbearbeitung  
   
@@ -58,10 +58,9 @@ Binärdaten für ein Dialogfeld in der Darstellung im Binär-Editor
  Nur bestimmte ASCII-Werte werden im Binär-Editor dargestellt (0x20 bis 0x7E). Erweiterte Zeichen werden im Bereich „ASCII-Wert“ des Binär-Editors (dem rechten Bereich) als Punkte dargestellt. Die "druckbaren" Zeichen sind die ASCII-Werte 32 bis 126.  
   
 > [!NOTE]
->  Wenn Sie den Binär-Editor für eine Ressource verwenden möchten, die bereits in einem anderen Editor-Fenster bearbeitet wird, schließen Sie zuerst das andere Editor-Fenster.  
+>  Wenn Sie verwenden möchten. die **binäre** -Editor auf eine Ressource, die bereits in einem anderen Editorfenster bearbeitet wird schließen Sie zuerst das andere Editorfenster.  
   
 ## <a name="requirements"></a>Anforderungen  
-  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -20,17 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe9c73a09e2a0f220ee4454baefb07b7e65fcafa
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 505b97d1b3883568fc85795898f16f9821d8b930
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641646"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011727"
 ---
 # <a name="toolbar-editor"></a>Symbolleisten-Editor
-Mithilfe des Symbolleisten-Editors können Sie Symbolleistenressourcen erstellen und Bitmaps in Symbolleistenressourcen konvertieren. Der Symbolleisten-Editor verwendet eine grafische Anzeige, um eine Symbolleiste und Schaltflächen anzuzeigen, die der Darstellung in einer fertig gestellten Anwendung sehr ähnlich sehen.  
+Die **Symbolleiste** -Editor können Sie Symbolleistenressourcen erstellen und Bitmaps in Symbolleistenressourcen konvertieren. Die **Symbolleiste** Editor verwendet eine grafische Übersicht, um anzuzeigen, eine Symbolleiste und Schaltflächen, mit denen ähneln, wie sie in einer fertigen Anwendung aussehen werden.  
   
- Mit dem Symbolleisten-Editor können Sie die folgenden Aktionen ausführen:  
+ Mit der **Symbolleiste** -Editor können Sie:  
   
 -   [Erstellen neuer Symbolleisten und Schaltflächen](../windows/creating-new-toolbars.md)  
   
@@ -40,12 +40,12 @@ Mithilfe des Symbolleisten-Editors können Sie Symbolleistenressourcen erstellen
   
 -   [Erstellen von QuickInfos](../windows/creating-a-tool-tip-for-a-toolbar-button.md)  
   
- Das Fenster des Symbolleisten-Editors zeigt zwei Ansichten eines Schaltflächensymbols an, ebenso wie das Fenster des Bild-Editors. Die beiden Bereiche sind durch einen Fensterteiler getrennt. Zum Ändern der relativen Größe der Fensterbereiche kann der Fensterteiler seitlich gezogen werden. Der aktive Bereich ist von einem Markierungsrahmen umgeben. Oberhalb der beiden Ansichten des Bilds befindet sich die betreffende Symbolleiste.  
+ Die **Symbolleiste** -Editor-Fenster zeigt zwei Ansichten eines Schaltflächensymbols an, dem die Bild-Editor-Fenster. Die beiden Bereiche sind durch einen Fensterteiler getrennt. Zum Ändern der relativen Größe der Fensterbereiche kann der Fensterteiler seitlich gezogen werden. Der aktive Bereich ist von einem Markierungsrahmen umgeben. Oberhalb der beiden Ansichten des Bilds befindet sich die betreffende Symbolleiste.  
   
  ![Symbolleisten-Editor](../mfc/media/vctoolbareditor.gif "VcToolbarEditor")  
 Symbolleisten-Editor  
   
- Der Symbolleisten-Editor ähnelt dem Bild-Editor in funktionaler Hinsicht. Die Menüelemente, die Grafiktools und das Bitmapraster sind die gleichen wie im Bild-Editor. Im Menü „Bild“ gibt es einen Menübefehl, mit dem Sie zwischen dem Symbolleisten-Editor und dem Bild-Editor umschalten können. Weitere Informationen zur Verwendung der Grafiksymbolleiste, der Farbpalette oder des Bildmenüs finden Sie unter [Bild-Editor](../windows/image-editor-for-icons.md).  
+ Die **Symbolleiste** -Editor ähnelt dem **Image** -Editor-Funktionen. Menüelemente, grafische Tools und Bitmapraster sind dieselben wie in der **Image** Editor. Steht der Menübefehl im auf der **Image** Menü können Sie zwischen wechseln die **Symbolleiste** Editor und die **Image** Editor. Weitere Informationen zur Verwendung der **Grafiken** Symbolleiste **Farben** Palette, oder **Image** im Menü finden Sie unter [Bild-Editor](../windows/image-editor-for-icons.md).  
   
  Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   

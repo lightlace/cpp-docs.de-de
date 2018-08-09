@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be817ac4bddcc169ab2ecb3a9106e9594642e2f0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 0287d27d975ce93e88a7a4b70a683188901ca958
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645151"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011815"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>Verwenden der 256-Farben-Palette (Bildbearbeitung für Symbole)
-Um mit einer Auswahl aus der 256-Farben-Palette zu zeichnen, müssen Sie die Farben aus der Farbpalette auswählen der [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md).  
+Um mit einer Auswahl aus der 256-Farben-Palette zu zeichnen, müssen Sie die Farben auswählen der **Farben** Palette in der [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md).  
   
 ### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Wählen Sie eine Farbe aus der 256-Farben-Palette für große Symbole  
   
@@ -36,7 +36,7 @@ Um mit einer Auswahl aus der 256-Farben-Palette zu zeichnen, müssen Sie die Far
   
 2.  Wählen Sie eine Farbe aus der 256 Farben der **Farben** Palette in der **Farben** Fenster.  
   
-     Die ausgewählte Farbe wird die aktuelle Farbe in der Farbpalette der **Farben** Fenster.  
+     Die ausgewählte Farbe wird die aktuelle Farbe in der **Farben** Palette in der **Farben** Fenster.  
   
     > [!NOTE]
     >  Die anfängliche Palette verwendet für 256-Farben-Images entspricht die Palette von zurückgegebenen der `CreateHalftonePalette` Windows-API. Alle Symbole, die für die Windows-Shell vorgesehen, sollten diese Palette verwenden, um Flimmern während der Realisierung der Palette zu vermeiden.  

@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49256b556eddb1feadbfd01b298aba62ad1a51ee
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 9effc65b150c68a5191712b364c80ad42dd276ad
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604225"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012127"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details-Namespace
 Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 namespace Microsoft::WRL::Details;  
 ```  
   
@@ -50,7 +50,7 @@ namespace Microsoft::WRL::Details;
 |----------|-----------------|  
 |[ArgTraits-Struktur](../windows/argtraits-structure.md)|Deklariert einen angegebenen Delegaten, Benutzeroberfläche und eine anonyme Memberfunktion, die eine angegebene Anzahl von Parametern.|  
 |[ArgTraitsHelper-Struktur](../windows/argtraitshelper-structure.md)|Hilft, die gemeinsamen Merkmale der Argumente des Delegaten definieren.|  
-|[BoolStruct-Struktur](../windows/boolstruct-structure.md)|Definiert, ob ein comptr-Objekt die Objektlebensdauer einer Schnittstelle verwaltet wird. BoolStruct werden intern von der [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) Operator.|  
+|[BoolStruct-Struktur](../windows/boolstruct-structure.md)|Definiert, ob eine `ComPtr` die Objektlebensdauer einer Schnittstelle verwaltet. `BoolStruct` wird intern von verwendet die [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) Operator.|  
 |[CreatorMap-Struktur](../windows/creatormap-structure.md)|Enthält Informationen zum Initialisieren, registrieren und Aufheben der Registrierung Objekten.|  
 |[DerefHelper-Struktur](../windows/derefhelper-structure.md)|Einen dereferenzierter Zeiger zum Darstellen der `T*` Template-Parameter.|  
 |[EnableIf-Struktur](../windows/enableif-structure.md)|Definiert einen Datenmember des Typs durch den zweiten Vorlagenparameter angegeben wird, wenn der erste Vorlagenparameter ergibt **"true"**.|  

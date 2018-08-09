@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 74b4ea6b82de65f691d5d0350e161725625e4e1f
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: cda56029b94d2c4be55ce133d96adb76663491ae
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604485"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012832"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (Komponentenerweiterungen für C++)
 Deklariert eine Schnittstelle.  Weitere Informationen zu systemeigenen Schnittstellen, finden Sie unter [__interface](../cpp/interface.md).  
@@ -32,14 +32,13 @@ Deklariert eine Schnittstelle.  Weitere Informationen zu systemeigenen Schnittst
 
 ### <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 interface_access  
 interface class  
  name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
 ### <a name="parameters"></a>Parameter  
-  
  *interface_access*  
  Der Zugriff auf eine Schnittstelle außerhalb der Assembly.  Mögliche Werte sind **öffentliche** und **private**.  **private** ist die Standardeinstellung. Sind keine verschachtelte Schnittstellen ein *Interface_access* Spezifizierer.  
   
@@ -75,7 +74,7 @@ interface class
  In der Entwicklungsumgebung können Sie F1-Hilfe für diese Schlüsselwörter abrufen, indem Sie die Hervorhebung des Schlüsselworts (`interface class`, z. B.) und durch Drücken von F1.  
   
 ## <a name="windows-runtime"></a>Windows-Runtime  
- **Hinweise**  
+### <a name="remarks"></a>Hinweise 
   
  (Es gibt keine Hinweise für diese Sprachfunktion, die nur für Windows-Runtime gelten.)  
   
@@ -83,7 +82,7 @@ interface class
  Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
- **Hinweise**  
+### <a name="remarks"></a>Hinweise
   
  (Es gibt keine Hinweise für diese Sprachfunktion, die nur für Common Language Runtime gelten.)  
   
@@ -183,8 +182,6 @@ int main() {
    hi->Function_1();  
 }  
 ```  
-  
- **Ausgabe**  
   
 ```Output  
 in Function_3  

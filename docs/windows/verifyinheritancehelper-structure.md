@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a67e63748ee7650b2e99a6112f9725daf6cf13c6
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7ed375a30ddadf72b7eee8a2cc852dec6620a992
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652935"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011116"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper-Struktur
 Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template <  
    typename I,  
    typename Base  

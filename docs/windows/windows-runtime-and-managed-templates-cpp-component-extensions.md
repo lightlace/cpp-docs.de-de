@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6fe449842cc019520a3d73528db05a26b17dcd99
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641459"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011561"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows-Laufzeit und verwaltete Vorlagen (Komponentenerweiterungen für C++)
 Vorlagen können Sie einen Prototyp der einer Windows-Runtime oder der common Language Runtime-Typ definieren, und klicken Sie dann mithilfe von verschiedenen Vorlagentypparameter instanziieren Variationen dieses Typs.  
@@ -44,7 +44,7 @@ Vorlagen können Sie einen Prototyp der einer Windows-Runtime oder der common La
   
 ### <a name="examples"></a>Beispiele  
   
- Es ist möglich, das Instanziieren eines generischen Typs mit einem verwalteten Typ Template-Parameter, aber eine verwaltete Vorlage mit einem generischen Typparameter für die Vorlage kann nicht instanziiert werden.  Dies ist, da es sich bei generische Typen zur Laufzeit aufgelöst werden.  Weitere Informationen finden Sie unter [Generika und Vorlagen (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
+ Es ist möglich, das Instanziieren eines generischen Typs mit einem verwalteten Typ Template-Parameter, aber eine verwaltete Vorlage mit einem generischen Typparameter für die Vorlage kann nicht instanziiert werden. Dies ist, da es sich bei generische Typen zur Laufzeit aufgelöst werden. Weitere Informationen finden Sie unter [Generika und Vorlagen (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -77,7 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- Kann nicht auf Vorlagen definiert, die in einer referenzierten Assembly mit C++ / CLI-Language-Syntax, aber Sie können mithilfe von Reflektion.  Wenn Sie eine Vorlage nicht instanziiert wird, wird es nicht in den Metadaten ausgegeben.  Wenn Sie eine Vorlage instanziiert wird, werden nur auf die verwiesen wird Member-Funktionen in den Metadaten angezeigt.  
+ Kann nicht auf Vorlagen definiert, die in einer referenzierten Assembly mit C++ / CLI-Language-Syntax, aber Sie können mithilfe von Reflektion. Wenn Sie eine Vorlage nicht instanziiert wird, wird es nicht in den Metadaten ausgegeben. Wenn Sie eine Vorlage instanziiert wird, werden nur auf die verwiesen wird Member-Funktionen in den Metadaten angezeigt.  
   
 ```cpp  
 // managed_templates_3.cpp  

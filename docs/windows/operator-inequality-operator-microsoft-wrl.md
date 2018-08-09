@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 517184dffac0c35772e61284a18eca764fbb5cc8
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 66009eb2e78268a4ee35a1c6023bfcb8dfda84b0
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603979"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40011652"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!=-Operator (Microsoft::WRL)
 Ungleichheitsoperator für [ComPtr](../windows/comptr-class.md) und [ComPtrRef](../windows/comptrref-class.md) Objekte.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 WRL_NOTHROW bool operator!=(  
    const ComPtr<T>& a,  
    const ComPtr<U>& b  

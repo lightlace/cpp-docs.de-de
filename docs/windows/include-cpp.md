@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 93ced38ca30a2fd4a61bb3a3664967416fcaf599
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c21bb7cf58c3c397237768942d60f79958f3278a
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39603487"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013560"
 ---
 # <a name="include-c"></a>include (C++)
 Gibt einen oder mehrere Headerdateien, die in der generierten IDL-Datei eingeschlossen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [ include(  
    header_file  
 ) ];  
@@ -45,7 +45,7 @@ Gibt einen oder mehrere Headerdateien, die in der generierten IDL-Datei eingesch
  Die **enthalten** C++-Attribut hat die gleiche Funktionalität wie die [enthalten](http://msdn.microsoft.com/library/windows/desktop/aa367052) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt ein Beispiel zur Verwendung **enthalten**. In diesem Beispiel enthält die Datei include.h nur ein #include-Anweisung.  
+ Der folgende Code zeigt ein Beispiel zur Verwendung **enthalten**. In diesem Beispiel enthält die Datei include.h nur eine `#include` Anweisung.  
   
 ```cpp  
 // cpp_attr_ref_include.cpp  

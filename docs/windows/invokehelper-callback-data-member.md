@@ -1,5 +1,5 @@
 ---
-title: 'InvokeHelper:: Callback_-Datenmember | Microsoft Docs'
+title: 'InvokeHelper:: Callback_-Datenmember | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4a9c624f6f9e06108aa25930a2b035cbed685ef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d6d767a77b68ad8585da711861d942abbe6b686
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33876344"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40013492"
 ---
 # <a name="invokehelpercallback-data-member"></a>InvokeHelper::callback_-Datenmember
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 TCallback callback_;  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Stellt den Ereignishandler, der beim Eintreten eines Ereignisses aufgerufen.  
+ Stellt den Ereignishandler aufgerufen wird, wenn ein Ereignis auftritt.  
   
  Die `TCallback` Template-Parameter gibt den Typ des ereignishandlers.  
   

@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63725d5d3e0edaea328d5753640aa74bdf35c7e0
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 6cb96b90a069c12e65c53158717d9a89fb0aed3d
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606747"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40014099"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits-Struktur
 Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 template<  
    typename I0  
 >  
@@ -69,7 +69,7 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 |[InterfaceTraits::CastToBase-Methode](../windows/interfacetraits-casttobase-method.md)|Wandelt den angegebenen Zeiger auf einen Zeiger auf `Base`.|  
 |[InterfaceTraits::CastToUnknown-Methode](../windows/interfacetraits-casttounknown-method.md)|Wandelt den angegebenen Zeiger auf einen Zeiger auf `IUnknown`.|  
 |[InterfaceTraits::FillArrayWithIid-Methode](../windows/interfacetraits-fillarraywithiid-method.md)|Weist die Schnittstellen-ID des `Base` auf das Arrayelement, das durch die Indexargument angegeben wird.|  
-|[InterfaceTraits::Verify-Methode](../windows/interfacetraits-verify-method.md)|Stellt sicher, dass Base ordnungsgemäß abgeleitet ist.|  
+|[InterfaceTraits::Verify-Methode](../windows/interfacetraits-verify-method.md)|Überprüft, ob `Base` ordnungsgemäß abgeleitet ist.|  
   
 ### <a name="public-constants"></a>Öffentliche Konstanten  
   

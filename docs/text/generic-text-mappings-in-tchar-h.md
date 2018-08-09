@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von generischem Text in Tchar.h | Microsoft Docs
+title: Zuordnungen für generischen Text in Tchar.h | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,19 +22,19 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7ed29b03a37c9b911a954192152115b1458fd94
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4fd66a0e2f45def3aa22342ca30eaa64846ebf4c
+ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33867102"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40012009"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Zuordnungen für generischen Text in Tchar.h
 Um die Codeübertragung für internationale Anwendungen zu vereinfachen, stellt die [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-Laufzeitbibliothek [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-spezifische Zuordnungen für generischen Text für viele Datentypen, Routinen und andere Objekte zur Verfügung. Mit diesen Zuordnungen, die in Tchar.h definiert sind, können Sie generischen Code schreiben, der für Einzelbyte-, Mehrbyte- oder [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]-Zeichensätze kompiliert werden kann, abhängig von einer eindeutigen Konstante, die Sie mithilfe einer `#define`-Anweisung definieren. Zuordnungen für generischen Text sind [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-Erweiterungen, die nicht [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]-kompatibel sind.  
   
  Mit Tchar.h können Sie Einzelbyte-, MBCS- (Mehrbyte-Zeichensätze) und [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]-Anwendungen aus denselben Quellen erstellen. Mit Tchar.h werden Makros (mit dem Präfix `_tcs`) definiert, die der Funktion `str`, `_mbs` oder `wcs` zugeordnet werden, vorausgesetzt, die Präprozessordefinitionen sind richtig. Definieren Sie zur Erstellung von MBCS das `_MBCS`-Symbol. Definieren Sie zur Erstellung von [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] das `_UNICODE`-Symbol. Um eine Einzelbyte-Anwendung zu erstellen, geben Sie nichts an (Standardeinstellung). Standardmäßig wird `_MBCS` für MFC-Anwendungen definiert.  
   
- Der `_TCHAR`-Datentyp wird in Tchar.h bedingt definiert. Wenn das `_UNICODE`-Symbol für den jeweiligen Build definiert ist, wird `_TCHAR` als `wchar_t` definiert. Andernfalls (für Einzelbyte- und MBCS-Builds) wird er als `char` definiert. (`wchar_t`, der Unicode-Basisdatentyp für Breitzeichen, ist das 16-Bit-Gegenstück zum 8-Bit-Datentyp `char` mit Vorzeichen.) Verwenden Sie für internationale Anwendungen die `_tcs`-Funktionsreihe, bei der anstelle von Bytes `_TCHAR`-Einheiten verwendet werden. Beispielsweise `_tcsncpy` Kopien `n` `_TCHARs`, nicht `n` Bytes.  
+ Der `_TCHAR`-Datentyp wird in Tchar.h bedingt definiert. Wenn das Symbol `_UNICODE` wird definiert, für den Build, `_TCHAR` ist definiert als **"wchar_t"** ist, andernfalls für Einzelbyte- und MBCS-Builds als definiert **Char**. (**"wchar_t"**, die Unicode-Breitzeichen-Basisdatentyp, ist das 16-Bit-Gegenstück zu einem 8-Bit-signiert **Char**.) Verwenden Sie für internationale Anwendungen die `_tcs`-Funktionsreihe, bei der anstelle von Bytes `_TCHAR`-Einheiten verwendet werden. Z. B. `_tcsncpy` Kopien `n` `_TCHARs`, nicht `n` Bytes.  
   
  Da für einige Funktionen zur Zeichenfolgenbehandlung bei Einzelbyte-Zeichensätzen (SBCS) `char*`-Parameter (mit Vorzeichen) erforderlich sind, wird bei der Definition von `_MBCS` eine Compiler-Warnung ausgegeben, die auf einen Typenkonflikt hinweist. Es gibt drei Möglichkeiten, diese Warnung zu vermeiden:  
   
@@ -58,14 +58,14 @@ Um die Codeübertragung für internationale Anwendungen zu vereinfachen, stellt 
   
 |Generischer Text<br /><br /> Datentypname|_UNICODE &<br /><br /> _MBCS nicht definiert|_MBCS<br /><br /> Definiert|_UNICODE<br /><br /> Definiert|  
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|  
-|`_TCHAR`|`char`|`char`|`wchar_t`|  
-|`_TINT`|`int`|`unsigned int`|`wint_t`|  
-|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
-|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
-|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` oder `_TEXT`|Ohne Auswirkung (wird vom Präprozessor entfernt)|Ohne Auswirkung (wird vom Präprozessor entfernt)|`L` (wandelt das folgende Zeichen oder eine Zeichenfolge, die die [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] Entsprechung)|  
+|`_TCHAR`|**char**|**char**|**wchar_t**|  
+|`_TINT`|**int**|**unsigned int**|`wint_t`|  
+|`_TSCHAR`|**Char mit Vorzeichen**|**Char mit Vorzeichen**|**wchar_t**|  
+|`_TUCHAR`|**unsigned char**|**unsigned char**|**wchar_t**|  
+|`_TXCHAR`|**char**|**unsigned char**|**wchar_t**|  
+|`_T` oder `_TEXT`|Ohne Auswirkung (wird vom Präprozessor entfernt)|Ohne Auswirkung (wird vom Präprozessor entfernt)|`L` (konvertiert das nächste Zeichen oder eine Zeichenfolge, die die [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] Entsprechung)|  
   
- Eine Liste der Zuordnungen für generischen Text von Routinen, Variablen und andere Objekte, finden Sie unter [Zuordnen von generischem Text](../c-runtime-library/generic-text-mappings.md) in die Run-Time Library Reference.  
+ Eine Liste mit generischen textzuordnungen von Routinen, Variablen und andere Objekte, finden Sie unter [Zuordnungen für generischen Text](../c-runtime-library/generic-text-mappings.md) in der Run-Time Library Reference.  
   
 > [!NOTE]
 >  Verwenden Sie die `str`-Funktionsreihe nicht mit Unicode-Zeichenfolgen, da diese wahrscheinlich eingebettete NULL-Bytes enthalten. Ebenso sollten Sie die `wcs`-Funktionsreihe nicht mit Zeichenfolgen vom Typ MBCS (oder SBCS) verwenden.  
