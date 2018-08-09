@@ -18,24 +18,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 589318286c48351e3eae6e3a83f42741a805ce68
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 2dce9b2ce59eb98c59c7a6cf04be52f3d439fdb0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463755"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642850"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente
 
 Für Project-Dialogfelder, die bereits von einer Klasse zugeordnet sind, können Sie nutzen einige Verknüpfungen bei der Erstellung von Ereignishandlern. Sie können schnell einen Handler für das Standardereignis des Steuerelements Benachrichtigung oder für eine relevante Windows-Meldung erstellen.
 
-## <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Um einen Handler für das Standardereignis des Steuerelements Benachrichtigung zu erstellen.
+### <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Um einen Handler für das Standardereignis des Steuerelements Benachrichtigung zu erstellen.
 
-1. Doppelklicken Sie auf das Steuerelement. Text-Editor wird geöffnet.
+1. Doppelklicken Sie auf das Steuerelement. Die **Text** -Editor wird geöffnet.
 
-2. Fügen Sie im Text-Editor Handlercode für Benachrichtigungen Steuerelement hinzu.
+2. Hinzufügen des Steuerelements Handlercode für Benachrichtigungen in der **Text** Editor.
 
-## <a name="to-create-a-handler-for-any-applicable-windows-message"></a>So erstellen Sie einen Ereignishandler für eine relevante Windows-Meldung
+### <a name="to-create-a-handler-for-any-applicable-windows-message"></a>So erstellen Sie einen Ereignishandler für eine relevante Windows-Meldung
 
 1. Klicken Sie auf das Steuerelement für das Benachrichtigungsereignis verarbeitet werden sollen.
 
@@ -52,12 +52,12 @@ Für Project-Dialogfelder, die bereits von einer Klasse zugeordnet sind, können
     > [!NOTE]
     > Alternativ können Sie das Dialogfeld "auswählen", und klicken Sie auf die **Steuerelementereignisse** Schaltfläche, um die Liste der allgemeinen Windows-Ereignisse für alle Steuerelemente im Dialogfeld anzuzeigen.
 
-3. In der **Eigenschaften** , klicken Sie auf der rechten Spalte neben der zu behandelnden Ereignisses, und wählen Sie dann den vorgeschlagenen Namen Benachrichtigungsereignis (z. B. **OnBnClickedOK** Handles **BN_CLICKED** ).
+3. In der **Eigenschaften** , klicken Sie auf der rechten Spalte neben der zu behandelnden Ereignisses, und wählen Sie dann den vorgeschlagenen Namen Benachrichtigungsereignis (z. B. `OnBnClickedOK` BN_CLICKED behandelt).
 
     > [!NOTE]
     > Alternativ können Sie einen Ereignishandlernamen Ihrer Wahl, statt die Auswahl der standardmäßigen Ereignishandlernamen bereitstellen.
 
-   Nachdem Sie das Ereignis ausgewählt haben, wird Visual Studio wird der Text-Editor geöffnet und zeigt den Ereignishandler Code. Beispielsweise wird der folgende Code hinzugefügt, für den standardmäßigen **OnBnClickedOK**:
+   Nachdem Sie das Ereignis ausgewählt haben, öffnet Visual Studio die **Text-Editor** und den Ereignishandler Code angezeigt. Beispielsweise wird der folgende Code hinzugefügt, für den standardmäßigen `OnBnClickedOK`:
 
     ```cpp
     void CAboutDlg::OnBnClickedOk(void)
@@ -68,19 +68,17 @@ Für Project-Dialogfelder, die bereits von einer Klasse zugeordnet sind, können
 
 Wenn Sie verwenden möchten, fügen den Ereignishandler auf eine Klasse als diejenige implementieren Sie das Dialogfeld, verwenden Sie die [Ereignishandler-Assistent](../ide/event-handler-wizard.md). Weitere Informationen finden Sie unter [Hinzufügen eines Ereignishandlers](../ide/adding-an-event-handler-visual-cpp.md).
 
-Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
-### <a name="requirements"></a>Anforderungen
-
-Win32
+## <a name="requirements"></a>Anforderungen
+ Win32
 
 ## <a name="see-also"></a>Siehe auch
-
-[Standardereignisse für Steuerelemente](../windows/default-control-events.md)  
-[Definieren von Membervariablen für Dialogfeld-Steuerelemente](../windows/defining-member-variables-for-dialog-controls.md)  
-[Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)  
-[Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)  
-[Hinzufügen einer Memberfunktion](../ide/adding-a-member-function-visual-cpp.md)  
-[Adding a Member Variable (Hinzufügen einer Membervariablen)](../ide/adding-a-member-variable-visual-cpp.md)  
-[Überschreiben einer virtuellen Funktion](../ide/overriding-a-virtual-function-visual-cpp.md)  
-[MFC Message Handler (MFC-Meldungshandler)](../mfc/reference/adding-an-mfc-message-handler.md)  
+ [Standardereignisse für Steuerelemente](../windows/default-control-events.md)  
+ [Definieren von Membervariablen für Dialogfeld-Steuerelemente](../windows/defining-member-variables-for-dialog-controls.md)  
+ [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)  
+ [Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)  
+ [Hinzufügen einer Memberfunktion](../ide/adding-a-member-function-visual-cpp.md)  
+ [Adding a Member Variable (Hinzufügen einer Membervariablen)](../ide/adding-a-member-variable-visual-cpp.md)  
+ [Überschreiben einer virtuellen Funktion](../ide/overriding-a-virtual-function-visual-cpp.md)  
+ [MFC Message Handler (MFC-Meldungshandler)](../mfc/reference/adding-an-mfc-message-handler.md)  

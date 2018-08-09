@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit Ressourcendateien | Microsoft Docs
+title: Arbeiten mit Ressourcendateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc416561b36566235ed422cd8989b4218f34da81
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a009c8e1d9a3db682a81e1f054ef999cffaf266d
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891609"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641443"
 ---
 # <a name="working-with-resource-files"></a>Arbeiten mit Ressourcendateien
 > [!WARNING]
->  Dieser Abschnitt gilt für in C++ erstellte Windows-Desktopanwendungen. Informationen zu Ressourcen in universellen Windows-Plattform-apps in C++ geschrieben wurden, finden Sie unter [Definieren von App-Ressourcen](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4).  
+>  Dieser Abschnitt gilt für in C++ erstellte Windows-Desktopanwendungen. Weitere Informationen zu Ressourcen in die universelle Windows-Plattform-apps in C++ geschrieben wurden, finden Sie unter [Definieren von App-Ressourcen](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).  
 >   
->  Weitere Informationen zum Hinzufügen von Ressourcen in C + c++ / CLI-Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.*  
+>  Informationen zum Hinzufügen von Ressourcen zu C++ / CLI-Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.  
   
  Ressourcen können aus einer Vielzahl an Elementen bestehen, darunter Schnittstellenelemente, über die dem Benutzer Informationen bereitgestellt werden (z. B. eine Bitmap, ein Symbol oder ein Cursor); benutzerdefinierte Ressourcen, die die von einer Anwendung benötigten Daten enthalten; Versionsressourcen, die von Setup-APIs verwendet werden, sowie Menü- und Dialogfeldressourcen.  
   
  Sie können Ihrem Projekt neue Ressourcen hinzufügen und diese mit dem entsprechenden Ressourcen-Editor ändern. Die meisten Visual C++-Assistenten generieren automatisch ein RC-Datei für Ihr Projekt.  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Ressourcendateien](../windows/resource-files-visual-studio.md)  
@@ -50,13 +50,12 @@ ms.locfileid: "33891609"
  [Visual C++](../visual-cpp-in-visual-studio.md)  
  Enthält Links zur Visual C++-Dokumentation  
   
- [Einführung in Visual Studio](http://msdn.microsoft.com/en-us/99997089-56ff-4d60-81a9-447062dc98ac)  
+ [Einführung in Visual Studio](http://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
  Beschreibt den vollständigen Satz an Entwicklungstools, die alle die gleiche integrierte Entwicklungsumgebung (IDE) verwenden, sodass sie Tools freigeben können und die Erstellung von Projektmappen in verschiedenen Sprachen erleichtern.  
   
  [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)  
  Bietet Links zu Informationen über die Verwendung des Dokumentationssatzes, Support-Kontaktdaten sowie über die Bereitstellung von Barrierefreiheitsfunktionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Windows-Desktopanwendungen](../windows/windows-desktop-applications-cpp.md)   
+ [Windows-Desktop-Anwendungen](../windows/windows-desktop-applications-cpp.md)   
  [Menüs und weitere Ressourcen](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-

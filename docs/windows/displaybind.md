@@ -1,5 +1,5 @@
 ---
-title: Displaybind | Microsoft Docs
+title: Displaybind | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fcb46d4eeb4cede778aefc4210a022b08a22ca9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8fdd9efe3b60fa9dc53d1c63191e19657cb70d75
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33879886"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641739"
 ---
 # <a name="displaybind"></a>displaybind
-Gibt eine Eigenschaft, die für den Benutzer als bindbar angezeigt werden sollen.  
+Gibt eine Eigenschaft, die dem Benutzer als bindungsfähig angezeigt werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```cpp  
 [displaybind]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Displaybind** C++-Attribut hat die gleiche Funktionalität wie die [Displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) MIDL-Attribut.  
   
 ## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [bindbare](../windows/bindable.md) ein Beispiel zum Verwenden von **Displaybind**.  
+ Siehe das Beispiel für [bindbare](../windows/bindable.md) ein Beispiel zur Verwendung für **Displaybind**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -56,7 +54,7 @@ Gibt eine Eigenschaft, die für den Benutzer als bindbar angezeigt werden sollen
   
 ## <a name="see-also"></a>Siehe auch  
  [IDL-Attribute](../windows/idl-attributes.md)   
- [Methodenattribut](../windows/method-attributes.md)   
+ [Methodenattribute](../windows/method-attributes.md)   
  [Datenmemberattribute](../windows/data-member-attributes.md)   
  [defaultbind](../windows/defaultbind.md)   
  [immediatebind](../windows/immediatebind.md)   

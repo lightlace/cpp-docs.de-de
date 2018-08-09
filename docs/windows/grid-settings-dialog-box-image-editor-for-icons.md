@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld "Einstellungen Raster" (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Dialogfeld "Einstellungen Grid" (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8e3a1aba4040ce4e9f36cf15438cfd1c44492e4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46c08686d2586801aea46c23e7105dc1b6ead639
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33873575"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643133"
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>Rastereinstellungen (Dialogfeld) (Bildbearbeitung für Symbole)
-Können Sie die rastereinstellungen für das Bild angeben und Gitternetzlinien auf das bearbeitete Bild angezeigt. Die Zeilen eignen sich für das Bild zu bearbeiten, aber nicht als Teil des Abbilds selbst gespeichert sind.  
+Können Sie die Einstellungen für das Image angeben, und zeigt Rasterlinien, auf das Bild bearbeitet. Die Zeilen sind nützlich für das Abbild zu bearbeiten, aber Sie werden nicht als Teil des Bilds selbst gespeichert.  
   
  **Pixelraster**  
- Wenn dieses Kontrollkästchen aktiviert, zeigt ein Raster aus, um die einzelnen Pixel in der Grafik-Editor. Das Raster wird nur bei 4 × und höherer Auflösung angezeigt.  
+ Dieses Kontrollkästchen aktiviert, wird ein Raster aus, um die einzelnen Pixel in der Grafik-Editor angezeigt. Das Raster, die nur auf 4 × und höherer Auflösung angezeigt wird.  
   
- **Kachel-Raster**  
- Bei Auswahl dieser Option zeigt ein Raster aus, um Blöcke von Pixeln in der Grafik-Editor, durch das Raster Abstandswerte angegeben.  
+ **Linienraster**  
+ Bei Auswahl dieser Option zeigt ein Raster aus, um Blöcke von Pixeln, des Grafik-Editors, die durch die Werte der Raster-Abstand angegeben.  
   
  **Breite**  
- Gibt die Breite jeder Kachel-Blocks. Dies ist hilfreich beim Zeichnen von Bitmaps, enthält mehrere Images, die in regelmäßigen Abständen angeordnet sind.  
+ Gibt die Breite jedes Blocks Kachel. Dies ist nützlich, beim Zeichnen von Bitmaps, enthält mehrere Images, die in regelmäßigen Abständen angeordnet sind.  
   
  **Höhe**  
- Gibt die Höhe jeder Kachel-Blocks. Dies ist hilfreich beim Zeichnen von Bitmaps, enthält mehrere Images, die in regelmäßigen Abständen angeordnet sind.  
+ Gibt die Höhe jedes Blocks Kachel. Dies ist nützlich, beim Zeichnen von Bitmaps, enthält mehrere Images, die in regelmäßigen Abständen angeordnet sind.  
   
 ## <a name="requirements"></a>Anforderungen  
  Keiner  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ändern der Bildgröße](../windows/resizing-an-image-image-editor-for-icons.md)   
+ [Größenänderungen bei Bildern](../windows/resizing-an-image-image-editor-for-icons.md)   
  [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
-

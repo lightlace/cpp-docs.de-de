@@ -19,19 +19,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 751c7f9efe4f5db612419d5837cc2d6f304f43da
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: deeb40e54c0324874d9c99a42a98e7e852394dc4
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39570671"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643188"
 ---
 # <a name="generic-classes-ccli"></a>Generische Klassen (C++/CLI)
 Eine generische Klasse wird im folgenden Format deklariert:  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 [attributes]  
 generic <class-key type-parameter-identifier(s)>  
 [constraint-clauses]  
@@ -45,7 +45,7 @@ class-body
 ## <a name="remarks"></a>Hinweise  
  In der obigen Syntax werden die folgenden Begriffe verwendet:  
   
- `attributes` (optional)  
+ *Attribute* (optional)  
  Zusätzliche deklarative Informationen. Weitere Informationen zu Attributen und Attributklassen finden Sie unter "Attribute".  
   
  *Klassenschlüssel*  
@@ -57,7 +57,7 @@ class-body
  *Einschränkungsklauseln*  
  Eine Liste (nicht durch Trennzeichen getrennt) der **, in denen** Klauseln, die die Einschränkungen für die Typparameter angeben. Hat das Format an:  
   
- `where`  *Type-Parameter-Identifier*`:`*Einschränkungsliste*   `...`  
+ `where`  *Type-Parameter-Identifier*`:`*Einschränkungsliste*  `...`  
   
  *Liste der Einschränkung*  
  *Klasse oder Schnittstelle*[`,` *...* ]  
@@ -429,7 +429,7 @@ ref struct Outer {
 };  
 ```  
   
- Der Typ Outer\<Int >:: innere entspricht nicht dem Typ Outer\<double >:: inneren.  
+ Der Typ `Outer<int>::Inner` entspricht nicht dem Typ `Outer<double>::Inner`.  
   
  Wie bei generischen Methoden in generische Klassen können weitere Typparameter für den geschachtelten Typ definiert werden. Wenn Sie die gleichen Typparameternamen in der inneren und äußeren Klasse verwenden, wird der innere Typparameter den Typparameter des äußeren ausgeblendet.  
   
@@ -449,7 +449,7 @@ ref class Outer {
   
  Da keine Möglichkeit zum Verweisen auf den Parameter des äußeren Typs vorhanden ist, erzeugt der Compiler eine Warnung in dieser Situation.  
   
- Wenn konstruierte geschachtelte generische Typen benannt werden, ist der Typparameter für den äußeren Typ in der Liste der Typparameter für den internen Typ, nicht enthalten, obwohl der innere Typ implizit durch die Typparameter des äußeren Typs parametrisiert ist. Im obigen Fall wäre ein Name eines konstruierten Typs Outer\<Int >:: innere\<Zeichenfolge >.  
+ Wenn konstruierte geschachtelte generische Typen benannt werden, ist der Typparameter für den äußeren Typ in der Liste der Typparameter für den internen Typ, nicht enthalten, obwohl der innere Typ implizit durch die Typparameter des äußeren Typs parametrisiert ist. Im obigen Fall wäre ein Name eines konstruierten Typs `Outer<int>::Inner<string>`.  
   
  Das folgende Beispiel veranschaulicht das Erstellen und lesen eine verknüpfte Liste, das Verwenden von geschachtelten Typen in generischen Klassen.  
   
@@ -548,7 +548,7 @@ Reading nodes:
   
 -   Eigenschaften, Ereignisse, Indexer und Operatoren können die Typparameter von einschließenden generischen Klasse als Rückgabewerte, Parameter oder lokale Variablen, z. B. wenn `ItemType` ein Parameter vom Typ einer Klasse ist:  
   
-    ```  
+    ```cpp  
     public ItemType MyProperty {}  
     ```  
   

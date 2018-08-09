@@ -1,5 +1,5 @@
 ---
-title: Synchronisieren | Microsoft Docs
+title: Synchronisieren von | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 304ceece506465df0a51c56b247407d351fd23b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 371a974742975cec9fab9c2f822fe0540dc57ab0
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33889796"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39643497"
 ---
 # <a name="synchronize"></a>synchronize
 Synchronisiert den Zugriff auf die Zielmethode.  
@@ -30,22 +30,20 @@ Synchronisiert den Zugriff auf die Zielmethode.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 [synchronize]  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die **synchronisieren** C++-Attribut implementiert die Unterstützung für die Zielmethode eines Objekts zu synchronisieren. Synchronisierung ermöglicht mehrere Objekte, die eine gemeinsame Ressource (z. B. eine Methode einer Klasse) verwendet, durch steuern den Zugriff der Zielmethode.  
+ Die **synchronisieren** C++-Attribut implementiert die Unterstützung für die Zielmethode eines Objekts zu synchronisieren. Synchronisierung kann mehrere Objekte, die eine gemeinsame Ressource (z. B. eine Methode einer Klasse) verwendet, indem Sie steuern den Zugriff auf die Zielmethode.  
   
- Der Code wird eingefügt, die von diesem Attribut Ruft die geeignete `Lock` Methode (bestimmt durch das Threadingmodell) am Anfang der Zielmethode. Wenn die Methode beendet wird, `Unlock` wird automatisch aufgerufen. Weitere Informationen zu diesen Funktionen finden Sie unter [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
+ Der Code, der von diesem Attribut eingefügt aufruft, die richtigen `Lock` -Methode (bestimmt durch das threading-Modell) zu Beginn der Zielmethode. Wenn die Methode beendet wird, `Unlock` wird automatisch aufgerufen. Weitere Informationen zu diesen Funktionen finden Sie unter [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
   
- Dieses Attribut erfordert, dass die Attribute [coclass](../windows/coclass.md), [progid](../windows/progid.md), oder [vi_progid](../windows/vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch auf demselben Element angewendet werden. Wenn ein einzelnes Attribut verwendet wird, werden die anderen beiden automatisch angewendet. Wenn z.B. **progid** angewendet wird, werden **vi_progid** und **coclass** ebenso angewendet.  
+ Dieses Attribut erfordert, dass die Attribute [coclass](../windows/coclass.md), [progid](../windows/progid.md), oder [vi_progid](../windows/vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch auf demselben Element angewendet werden. Wenn ein einzelnes Attribut verwendet wird, werden die anderen beiden automatisch angewendet. Z. B. wenn `progid` angewendet wird, `vi_progid` und `coclass` werden ebenfalls angewendet.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code stellt die Synchronisierung für die `UpdateBalance` Methode der `CMyClass` Objekt.  
   
-```  
+```cpp  
 // cpp_attr_ref_synchronize.cpp  
 // compile with: /LD  
 #define _ATL_ATTRIBUTES  
@@ -76,9 +74,9 @@ class CMyClass {
   
 |||  
 |-|-|  
-|**Betrifft**|, Klassenmethode.|  
+|**Betrifft**|, Klassenmethode|  
 |**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Ein Attribut oder mehrere Attribute der folgenden: **coclass**, **progid**, oder **vi_progid**.|  
+|**Erforderliche Attribute**|Eine oder mehrere der folgenden: `coclass`, `progid`, oder `vi_progid`.|  
 |**Ungültige Attribute**|Keiner|  
   
  Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  

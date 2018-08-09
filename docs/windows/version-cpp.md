@@ -1,5 +1,5 @@
 ---
-title: Version (C++) | Microsoft Docs
+title: Version (C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43da63d75d3541915eba3e561ee08fe1048fa579
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c2d0c72ffbb805b526429562a5f39a09285b70f
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890608"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642278"
 ---
 # <a name="version-c"></a>version (C++)
 Identifiziert eine bestimmte Version mehrere Versionen einer Klasse.  
@@ -31,21 +31,20 @@ Identifiziert eine bestimmte Version mehrere Versionen einer Klasse.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ version(  
+[ version(  
    "version"  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+### <a name="parameters"></a>Parameter  
  *version*  
- Die Versionsnummer der Co-Klasse. Wenn nicht angegeben, wird 1.0 in der IDL-Datei gespeichert.  
+ Die Versionsnummer der `coclass`. Wenn nicht angegeben, wird 1.0 in der IDL-Datei platziert werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Version** C++-Attribut hat die gleiche Funktionalität wie die [Version](http://msdn.microsoft.com/library/windows/desktop/aa367306) MIDL-Attribut und der generierten IDL-Datei übergeben wird.  
+ Die **Version** C++-Attribut hat die gleiche Funktionalität wie die [Version](http://msdn.microsoft.com/library/windows/desktop/aa367306) MIDL-Attribut, und wird in der generierten IDL-Datei übergeben.  
   
 ## <a name="example"></a>Beispiel  
- Finden Sie unter der [bindbare](../windows/bindable.md) Beispiel für ein Beispiel für die Verwendung von **Version**.  
+ Finden Sie unter den [bindbare](../windows/bindable.md) Beispiel für ein Beispiel für die Verwendung von **Version**.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -53,7 +52,7 @@ Identifiziert eine bestimmte Version mehrere Versionen einer Klasse.
   
 |||  
 |-|-|  
-|**Betrifft**|**Klasse**, `struct`|  
+|**Betrifft**|**Klasse**, **Struktur**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|**coclass**|  
 |**Ungültige Attribute**|Keiner|  

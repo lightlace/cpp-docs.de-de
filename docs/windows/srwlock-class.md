@@ -1,5 +1,5 @@
 ---
-title: SRWLock-Klasse | Microsoft Docs
+title: SRWLock-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec31b1469f437ff2776ed9da52fbcd7557fca8e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23881f2065276aa7ae7b6ee95b5449abb07dd2de
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891752"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641952"
 ---
 # <a name="srwlock-class"></a>SRWLock-Klasse
-Stellt eine slim Reader/Writer-Sperre.  
+Stellt eine slim Reader-/Writer-Sperre.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ class SRWLock;
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Eine slim Reader/Writer-Sperre wird zum Synchronisieren des Zugriffs auf ein Objekt oder eine Ressource threadübergreifend verwendet. Weitere Informationen finden Sie unter [Synchronisierungsfunktionen](http://msdn.microsoft.com/en-us/9b6359c2-0113-49b6-83d0-316ad95aba1b).  
+ Eine slim Reader-/Writer-Sperre wird zum Synchronisieren des Zugriffs über Threads auf ein Objekt oder eine Ressource verwendet. Weitere Informationen finden Sie unter [Synchronisierungsfunktionen](http://msdn.microsoft.com/9b6359c2-0113-49b6-83d0-316ad95aba1b).  
   
 ## <a name="members"></a>Member  
   
@@ -42,30 +42,30 @@ class SRWLock;
   
 |||  
 |-|-|  
-|**SyncLockExclusive**|Synonym für ein SRWLock-Objekt, das im exklusiven Modus abgerufen wird.|  
-|**SyncLockShared**|Synonym für ein SRWLock-Objekt, das im freigegebenen Modus abgerufen wird.|  
+|`SyncLockExclusive`|Synonym für einen **SRWLock** -Objekt, das im exklusiven Modus abgerufen wird.|  
+|`SyncLockShared`|Synonym für einen **SRWLock** -Objekt, das im freigegebenen Modus abgerufen wird.|  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[SRWLock::SRWLock-Konstruktor](../windows/srwlock-srwlock-constructor.md)|Initialisiert eine neue Instanz der SRWLock-Klasse.|  
-|[SRWLock::~SRWLock-Destruktor](../windows/srwlock-tilde-srwlock-destructor.md)|Hebt die Initialisierung einer Instanz der SRWLock-Klasse.|  
+|[SRWLock::SRWLock-Konstruktor](../windows/srwlock-srwlock-constructor.md)|Initialisiert eine neue Instanz der dem **SRWLock** Klasse.|  
+|[SRWLock::~SRWLock-Destruktor](../windows/srwlock-tilde-srwlock-destructor.md)|Hebt die Initialisierung einer Instanz von der **SRWLock** Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[SRWLock::LockExclusive-Methode](../windows/srwlock-lockexclusive-method.md)|Ruft ein Objekt SRWLock, im exklusiven Modus ab.|  
-|[SRWLock::LockShared-Methode](../windows/srwlock-lockshared-method.md)|Ruft ein Objekt SRWLock im freigegebenen Modus ab.|  
-|[SRWLock::TryLockExclusive-Methode](../windows/srwlock-trylockexclusive-method.md)|Versucht, ein SRWLock-Objekt im exklusiven Modus für das aktuelle oder angegebene SRWLock-Objekt zu erhalten.|  
-|[SRWLock::TryLockShared-Methode](../windows/srwlock-trylockshared-method.md)|Versucht, ein SRWLock-Objekt im freigegebenen Modus für das aktuelle oder angegebene SRWLock-Objekt zu erhalten.|  
+|[SRWLock::LockExclusive-Methode](../windows/srwlock-lockexclusive-method.md)|Ruft eine **SRWLock** Objekt im exklusiven Modus.|  
+|[SRWLock::LockShared-Methode](../windows/srwlock-lockshared-method.md)|Ruft eine **SRWLock** Objekt im freigegebenen Modus.|  
+|[SRWLock::TryLockExclusive-Methode](../windows/srwlock-trylockexclusive-method.md)|Versucht, für eine **SRWLock** Objekt im exklusiven Modus für den aktuellen oder angegebenen **SRWLock** Objekt.|  
+|[SRWLock::TryLockShared-Methode](../windows/srwlock-trylockshared-method.md)|Versucht, für eine **SRWLock** Objekt im freigegebenen Modus für den aktuellen oder angegebenen **SRWLock** Objekt.|  
   
 ### <a name="protected-data-member"></a>Geschützte Datenmember  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[SRWLock::SRWLock_ Data-Member](../windows/srwlock-srwlock-data-member.md)|Enthält die zugrunde liegenden Sperren der Variable für das aktuelle SRWLock-Objekt.|  
+|[SRWLock::SRWLock_ Data-Member](../windows/srwlock-srwlock-data-member.md)|Enthält die zugrunde liegende Sperre-Variable für den aktuellen **SRWLock** Objekt.|  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  `SRWLock`  

@@ -1,5 +1,5 @@
 ---
-title: Synclockt-Methode | Microsoft Docs
+title: 'Synclockt:: Unlock-Methode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4073d6e2b8924ae08e6af10a8e028f273f1fdfd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fa03dd41b66bb36d5dc7059863e13267e5dd77bd
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892305"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642122"
 ---
 # <a name="synclocktunlock-method"></a>SyncLockT::Unlock-Method
-Unterstützt die WRL-Infrastruktur und ist nicht direkt aus Ihrem Code verwendet werden soll.  
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ void Unlock();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Kontrolle über die Ressource frei, die für das aktuelle SyncLockT-Objekt frei, sofern vorhanden.  
+ Gibt die Steuerung der Ressource frei, die von der aktuellen frei **SyncLockT** Objekt, sofern vorhanden.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** corewrappers.h  

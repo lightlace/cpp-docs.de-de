@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac043a76ab70c77bd8cdb3a2dd0c66498e409171
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 6474b659070793ddfa4e21d15e65be30f16a49bb
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463241"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641807"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract (Komponentenerweiterungen für C++)
 Die **abstrakte** -Schlüsselwort deklariert entweder:  
@@ -33,16 +33,16 @@ Die **abstrakte** -Schlüsselwort deklariert entweder:
 -   Eine Typmemberfunktion kann nur in einem abgeleiteten Typ definiert werden.  
   
 ## <a name="all-platforms"></a>Alle Plattformen  
- **Syntax**  
+### <a name="syntax"></a>Syntax 
   
-```  
+```cpp  
       class-declaration  
       class-identifier  
       abstract {}  
 virtualreturn-typemember-function-identifier() abstract ;  
 ```  
   
- **Hinweise**  
+### <a name="remarks"></a>Hinweise
   
  Die erste Beispielsyntax deklariert eine Klasse als abstrakt. Die *-Klassendeklaration* Komponente kann entweder eine native C++-Deklaration sein (**Klasse** oder **Struktur**), oder eine C++-erweiterungsdeklaration (**Verweisklasse** oder **Referenzstruktur**) Wenn die `/ZW` oder `/clr` -Compileroption angegeben ist.  
   
@@ -58,17 +58,16 @@ virtualreturn-typemember-function-identifier() abstract ;
  Weitere Informationen finden Sie unter [Verweisklassen und Strukturen](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime 
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
- Das folgende Codebeispiel generiert einen Fehler, da Klasse `X` als `abstract` gekennzeichnet ist.  
+ Im folgenden Codebeispiel wird einen Fehler generiert, da Klasse `X` RuntimeCompatibility **abstrakte**.  
   
 ```cpp  
 // abstract_keyword.cpp  
@@ -83,9 +82,7 @@ int main() {
 }  
 ```  
   
- **Beispiel**  
-  
- Das folgende Codebeispiel generiert einen Fehler, da es eine systemeigene Klasse instanziiert, die als `abstract` gekennzeichnet ist. Dieser Fehler tritt mit und ohne Compileroption `/clr` auf.  
+ Das folgende Codebeispiel generiert einen Fehler, da es sich um eine systemeigene Klasse instanziiert, die markiert ist **abstrakte**. Dieser Fehler tritt mit und ohne Compileroption `/clr` auf.  
   
 ```cpp  
 // abstract_keyword_2.cpp  
@@ -99,9 +96,7 @@ int main() {
                     // cannot be instantiated. See declaration of 'X'}  
 ```  
   
- **Beispiel**  
-  
- Das folgende Codebeispiel generiert einen Fehler, da Funktion `f` eine Definition enthält, aber als `abstract` gekennzeichnet ist. Die letzte Anweisung im Beispiel zeigt, dass das Deklarieren einer abstrakten virtuellen Funktion dem Deklarieren einer rein virtuellen Funktion entspricht.  
+ Im folgenden Codebeispiel wird einen Fehler generiert, da Funktion `f` enthält eine Definition, aber ist als **abstrakte**. Die letzte Anweisung im Beispiel zeigt, dass das Deklarieren einer abstrakten virtuellen Funktion dem Deklarieren einer rein virtuellen Funktion entspricht.  
   
 ```cpp  
 // abstract_keyword_3.cpp  

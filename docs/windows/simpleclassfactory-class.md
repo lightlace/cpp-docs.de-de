@@ -1,5 +1,5 @@
 ---
-title: SimpleClassFactory-Klasse | Microsoft Docs
+title: SimpleClassFactory-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: debb78ba4be2731b8cffce1133518b0b4a04f63d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21b52876cb2a6c7bbf110a06cdfb29abdf1930d6
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33892760"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641824"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory-Klasse
 Stellt einen grundlegenden Mechanismus zum Erstellen einer Basisklasse bereit.  
@@ -34,14 +34,14 @@ template<typename Base>
 class SimpleClassFactory : public ClassFactory<>;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `Base`  
+### <a name="parameters"></a>Parameter  
+ *Basis*  
  Eine Basisklasse.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Basisklasse muss einen Standardkonstruktor bereitstellen.  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie mit SimpleClassFactory mit der [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) Makro.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit **SimpleClassFactory** mit der [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) Makro.  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
   

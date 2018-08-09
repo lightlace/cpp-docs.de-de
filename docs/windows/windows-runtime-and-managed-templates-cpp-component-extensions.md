@@ -1,5 +1,5 @@
 ---
-title: Windows-Runtime und verwaltete Vorlagen (Komponentenerweiterungen für C++) | Microsoft Docs
+title: Windows-Laufzeit und verwaltete Vorlagen (Komponentenerweiterungen für C++) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9053b101428ac26e96446d9c6756ec5de35e06c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec064bc8ea40fd4835c4f779e0120e1daa445d7e
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891362"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641459"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows-Laufzeit und verwaltete Vorlagen (Komponentenerweiterungen für C++)
-Vorlagen ermöglichen es Ihnen, einen Prototyp eines Windows-Runtime oder der common Language Runtime-Typ definieren und dann mithilfe von verschiedenen Vorlagentypparameter instanziieren Variationen dieses Typs.  
+Vorlagen können Sie einen Prototyp der einer Windows-Runtime oder der common Language Runtime-Typ definieren, und klicken Sie dann mithilfe von verschiedenen Vorlagentypparameter instanziieren Variationen dieses Typs.  
   
 ## <a name="all-runtimes"></a>Alle Laufzeiten  
- Sie können Vorlagen von Werttypen oder Referenztypen erstellen.  Weitere Informationen zum Erstellen von Werttypen oder Referenztypen, finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Sie können Vorlagen von Werttypen oder Referenztypen erstellen.  Weitere Informationen zum Erstellen von Werttypen oder Referenztypen finden Sie unter [Klassen und Strukturen](../windows/classes-and-structs-cpp-component-extensions.md).  
   
  Weitere Informationen zu Standard-c++-Klassenvorlagen, finden Sie unter [Klassenvorlagen](../cpp/class-templates.md).  
   
@@ -34,18 +34,17 @@ Vorlagen ermöglichen es Ihnen, einen Prototyp eines Windows-Runtime oder der co
  (Es gibt keine Hinweise für diese Sprachfunktion, die nur für Windows-Runtime gelten.)  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/ZW**  
+ Compileroption: `/ZW`  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- Es gibt einige Einschränkungen für das Erstellen von Klassenvorlagen von verwalteten Typen, bei denen in den folgenden Codebeispielen dargestellt werden.  
+ Es gibt einige Einschränkungen für das Erstellen von Klassenvorlagen von verwalteten Typen, die in den folgenden Codebeispielen veranschaulicht werden.  
   
 ### <a name="requirements"></a>Anforderungen  
- Compileroption: **/clr**  
+ Compileroption: `/clr`  
   
 ### <a name="examples"></a>Beispiele  
- **Beispiel**  
   
- Es ist möglich, beim Instanziieren eines generischen Typs mit einem verwalteten Typ Template-Parameter, aber eine verwaltete Vorlage mit einem generischen Typparameter für die Vorlage kann nicht instanziiert werden.  Dies liegt daran generische Typen zur Laufzeit aufgelöst werden.  Weitere Informationen finden Sie unter [Generika und Vorlagen (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
+ Es ist möglich, das Instanziieren eines generischen Typs mit einem verwalteten Typ Template-Parameter, aber eine verwaltete Vorlage mit einem generischen Typparameter für die Vorlage kann nicht instanziiert werden.  Dies ist, da es sich bei generische Typen zur Laufzeit aufgelöst werden.  Weitere Informationen finden Sie unter [Generika und Vorlagen (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -67,9 +66,7 @@ ref class R {
 };  
 ```  
   
- **Beispiel**  
-  
- Ein generischer Typ oder die Funktion kann nicht in einer verwalteten Vorlage geschachtelt werden.  
+ Ein generischer Typ oder Funktion kann nicht in einer Vorlage für verwaltete geschachtelt werden.  
   
 ```cpp  
 // managed_templates_2.cpp  
@@ -80,9 +77,7 @@ template<class T> public ref class R {
 };  
 ```  
   
- **Beispiel**  
-  
- Kann nicht auf Vorlagen definiert, die in einer referenzierten Assembly C + c++ / CLI-Sprachsyntax, aber Sie können mithilfe von Reflektion.  Wenn eine Vorlage nicht instanziiert wird, wird er nicht in den Metadaten ausgegeben.  Wenn eine Vorlage instanziiert wird, werden nur auf die verwiesen wird Memberfunktionen in den Metadaten angezeigt.  
+ Kann nicht auf Vorlagen definiert, die in einer referenzierten Assembly mit C++ / CLI-Language-Syntax, aber Sie können mithilfe von Reflektion.  Wenn Sie eine Vorlage nicht instanziiert wird, wird es nicht in den Metadaten ausgegeben.  Wenn Sie eine Vorlage instanziiert wird, werden nur auf die verwiesen wird Member-Funktionen in den Metadaten angezeigt.  
   
 ```cpp  
 // managed_templates_3.cpp  
@@ -112,9 +107,7 @@ int main() {
 }  
 ```  
   
- **Beispiel**  
-  
- Sie können die verwalteten Modifizierer einer Klasse in eine teilweise Spezialisierung oder explizite Spezialisierung einer Klassenvorlage ändern.  
+ Sie können die verwalteten Modifizierer einer Klasse in eine teilweise Spezialisierung oder eine explizite Spezialisierung einer Klassenvorlage ändern.  
   
 ```cpp  
 // managed_templates_4.cpp  
@@ -139,7 +132,6 @@ interface class A<T%> {};
 // native class  
 template <>  
 class A <int> {};  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

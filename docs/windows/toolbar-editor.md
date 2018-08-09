@@ -1,5 +1,5 @@
 ---
-title: Symbolleisten-Editor | Microsoft Docs
+title: Symbolleisten-Editor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cc902a0bb90194c463ebb874234f65230cd502b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fe9c73a09e2a0f220ee4454baefb07b7e65fcafa
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891310"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39641646"
 ---
 # <a name="toolbar-editor"></a>Symbolleisten-Editor
 Mithilfe des Symbolleisten-Editors können Sie Symbolleistenressourcen erstellen und Bitmaps in Symbolleistenressourcen konvertieren. Der Symbolleisten-Editor verwendet eine grafische Anzeige, um eine Symbolleiste und Schaltflächen anzuzeigen, die der Darstellung in einer fertig gestellten Anwendung sehr ähnlich sehen.  
@@ -47,7 +47,7 @@ Symbolleisten-Editor
   
  Der Symbolleisten-Editor ähnelt dem Bild-Editor in funktionaler Hinsicht. Die Menüelemente, die Grafiktools und das Bitmapraster sind die gleichen wie im Bild-Editor. Im Menü „Bild“ gibt es einen Menübefehl, mit dem Sie zwischen dem Symbolleisten-Editor und dem Bild-Editor umschalten können. Weitere Informationen zur Verwendung der Grafiksymbolleiste, der Farbpalette oder des Bildmenüs finden Sie unter [Bild-Editor](../windows/image-editor-for-icons.md).  
   
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *.NET Framework-Entwicklerhandbuch.* Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing und Lokalisieren von .NET Framework-Anwendungen](/dotnet/standard/globalization-localization/index).  
+ Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Anforderungen  
  MFC oder ATL  
@@ -55,4 +55,3 @@ Symbolleisten-Editor
 ## <a name="see-also"></a>Siehe auch  
  [Ressourcen-Editoren](../windows/resource-editors.md)   
  [Menüs und weitere Ressourcen](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
-

@@ -1,5 +1,5 @@
 ---
-title: Transmit_as | Microsoft Docs
+title: Transmit_as | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0c4d5fc3101e7eb0e09f33c95cb0f73dd0d2b3d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c1e1ecfb118fb391cf392b411a4664513972ed42
+ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890411"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39642524"
 ---
 # <a name="transmitas"></a>transmit_as
-Weist den Compiler an, ordnen einen übertragenen Typ einen dargestellten Typ, den Client- und serveranwendungen zu bearbeiten.  
+Weist den Compiler einen dargestellten Typ, den Client- und serveranwendungen bearbeiten zu können, müssen, mit einem übertragenen Typ zuordnen.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      [ transmit_as(  
+[ transmit_as(  
    type  
 ) ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `type`  
- Gibt den Datentyp, der zwischen Client und Server übertragenen Daten.  
+### <a name="parameters"></a>Parameter  
+ *Typ*  
+ Gibt den Datentyp, der zwischen Client und Server übertragen werden.  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Transmit_as** C++-Attribut hat die gleiche Funktionalität wie die [Transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL-Attribut.  
@@ -46,7 +45,7 @@ Weist den Compiler an, ordnen einen übertragenen Typ einen dargestellten Typ, d
 ## <a name="example"></a>Beispiel  
  Der folgende Code veranschaulicht die Verwendung der der **Transmit_as** Attribut:  
   
-```  
+```cpp  
 // cpp_attr_ref_transmit_as.cpp  
 // compile with: /LD  
 #include "windows.h"  
@@ -80,7 +79,7 @@ struct _TREE_NODE_TYPE * right;
   
 |||  
 |-|-|  
-|**Betrifft**|`typedef`|  
+|**Betrifft**|**typedef**|  
 |**Wiederholbar**|Nein|  
 |**Erforderliche Attribute**|Keiner|  
 |**Ungültige Attribute**|Keiner|  
