@@ -19,7 +19,7 @@ ms.locfileid: "33841568"
 |-|
 |[cv_status](#cv_status)|
 
-## <a name="cv_status"> cv_status-Enumeration</a>
+## <a name="cv_status"></a>  cv_status-Enumeration
 
 Liefert symbolische Namen für die Rückgabewerte der Methoden der Vorlagenklasse [condition_variable](../standard-library/condition-variable-class.md).
 

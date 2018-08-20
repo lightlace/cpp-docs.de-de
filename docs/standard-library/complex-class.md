@@ -89,7 +89,7 @@ Für die drei Gleitkommatypen sind explizite Spezialisierungen der Vorlagenklass
 
 **Namespace:** std
 
-## <a name="complex">complex::complex</a>
+## <a name="complex"></a>  complex::complex
 
 Erstellt eine komplexe Zahl aus den angegebenen reellen und imaginären Teilen oder eine Kopie einer anderen komplexen Zahl.
 
@@ -174,7 +174,7 @@ int main( )
 }
 ```
 
-## <a name="imag">complex::imag</a>
+## <a name="imag"></a>  complex::imag
 
 Extrahiert die imaginäre Komponente einer komplexen Zahl.
 
@@ -311,7 +311,7 @@ int main() {
 }
 ```
 
-## <a name="op_add_eq">complex::operator+=</a>
+## <a name="op_add_eq"></a>  complex::operator+=
 
 Fügt der komplexen Zielzahl eine Zahl hinzu, die komplex ist oder vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl, der sie hinzugefügt wird
 
@@ -413,7 +413,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="complex__operator-_eq">complex::operator-=</a>
+## <a name="complex__operator-_eq"></a>  complex::operator-=
 
 Subtrahiert eine Zahl von der komplexen Zielzahl, wobei die subtrahiert Zahl komplex ist oder vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl, von der sie subtrahiert wurde
 
@@ -519,7 +519,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq">complex::operator/=</a>
+## <a name="op_div_eq"></a>  complex::operator/=
 
 Dividiert eine komplexe Zielzahl durch einen komplexen Faktor oder einen Faktor vom gleichen Typ wie die Real- und Imaginärteile der komplexen Zahl
 
