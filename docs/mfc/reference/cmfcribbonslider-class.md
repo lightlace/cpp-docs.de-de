@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 307b7f769035a9ddb84a3d0e51e0ff6d8a016472
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850851"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540220"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider-Klasse
 Die `CMFCRibbonSlider` -Klasse implementiert ein Schieberegler-Steuerelement, das einer menübandleiste oder einer Menüband-Statusleiste hinzugefügt werden können. Das Schieberegler-Steuerelement im Menüband ähnelt den Zoomschiebereglern, die in Office 2007-Anwendungen verwendet werden.  
@@ -152,7 +152,7 @@ int GetRangeMin() const;
  Das minimale Inkrement, das der Schieberegler auf das Schieberegler-Steuerelement übertragen werden kann.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -186,7 +186,7 @@ BOOL HasZoomButtons() const;
  True, wenn der Schieberegler Zoomschaltflächen hat. "False" andernfalls.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual void OnDraw(CDC* pDC);

@@ -1,5 +1,5 @@
 ---
-title: Detect_mismatch | Microsoft Docs
+title: Detect_mismatch | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f30afed5acdb9da433f7ce5f992df9bcb6dc8f5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: f165d24dc1a3044fb89474aef58a2992fa6feed9
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33953958"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538435"
 ---
 # <a name="detectmismatch"></a>detect_mismatch
 Platziert einen Datensatz in einem Objekt. Der Linker überprüft diese Datensätze auf potenzielle Konflikte.  
@@ -35,14 +35,16 @@ Platziert einen Datensatz in einem Objekt. Der Linker überprüft diese Datensä
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie das Projekt verknüpfen, löst der Linker einen `LNK2038`-Fehler aus, wenn das Projekt zwei Objekte enthält, die den gleichen `name`, jedoch einen unterschiedlichen `value` aufweisen. Verwenden Sie dieses Pragma, um zu verhindern, dass inkonsistente Objektdateien verknüpft werden.  
+ 
+Wenn Sie das Projekt verknüpfen, löst der Linker einen `LNK2038`-Fehler aus, wenn das Projekt zwei Objekte enthält, die den gleichen `name`, jedoch einen unterschiedlichen `value` aufweisen. Verwenden Sie dieses Pragma, um zu verhindern, dass inkonsistente Objektdateien verknüpft werden.  
   
- Name und Wert sind Zeichenfolgenliterale und befolgen im Zusammenhang mit Escapezeichen und Verkettungen die Regeln für Zeichenfolgenliterale. Es muss die Groß-/Kleinschreibung beachtet werden. Außerdem können Kommas, Gleichheitszeichen, Anführungszeichen oder das `null`-Zeichen enthalten sein.  
+Name und Wert sind Zeichenfolgenliterale und befolgen im Zusammenhang mit Escapezeichen und Verkettungen die Regeln für Zeichenfolgenliterale. Beachtet, und darf keine Kommas, Gleichheitszeichen, Anführungszeichen enthalten oder die **null** Zeichen.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel erstellt zwei Dateien, die unterschiedliche Versionsnummern für die gleiche Versionsbezeichnung aufweisen.  
+ 
+Dieses Beispiel erstellt zwei Dateien, die unterschiedliche Versionsnummern für die gleiche Versionsbezeichnung aufweisen.  
   
-```  
+```cpp  
 // pragma_directive_detect_mismatch_a.cpp  
 #pragma detect_mismatch("myLib_version", "9")  
 int main ()  
@@ -54,7 +56,8 @@ int main ()
 #pragma detect_mismatch("myLib_version", "1")  
 ```  
   
- Wenn Sie beide Dateien kompilieren, indem Sie die Befehlszeile `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp` verwenden, erhalten Sie den Fehler `LNK2038`.  
+Wenn Sie beide Dateien kompilieren, indem Sie die Befehlszeile `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp` verwenden, erhalten Sie den Fehler `LNK2038`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -18,30 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0201619d463d677eae312d70a543a19887dbdb40
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6e9f14b696ff67b52c365617682c0cc4c43432cd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011789"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602815"
 ---
 # <a name="insert-activex-control-dialog-box"></a>ActiveX-Steuerelement einfügen (Dialogfeld)
-Dieses Dialogfeld können Sie [Einfügen von ActiveX-Steuerelemente in Ihrem Dialogfeld](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md) bei der Verwendung der [Dialog-Editor](../windows/dialog-editor.md).  
-  
-### <a name="activex-control"></a>ActiveX-Steuerelement 
- Zeigt eine Liste von ActiveX-Steuerelementen. Einfügen eines Steuerelements in diesem Dialogfeld ist eine Wrapperklasse nicht generieren. Wenn Sie eine Wrapperklasse benötigen, verwenden Sie [Klassenansicht](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) erstellen (Weitere Informationen finden Sie unter [Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)). Wenn ein ActiveX-Steuerelement in diesem Dialogfeld nicht angezeigt wird, versuchen Sie es Installieren des Steuerelements entsprechend des Anbieters-Anweisungen.  
-  
-### <a name="path"></a>Pfad  
- Zeigt die Datei, die in der das ActiveX-Steuerelement gefunden wird.  
-  
- Sie können Steuerelemente im Platzieren der **Toolbox** Fenster für den leichteren Zugriff. Weitere Informationen finden Sie unter [Dialogfeld Toolbox anpassen](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Registerkarte "Dialog-Editor", Toolbox](../windows/dialog-editor-tab-toolbox.md)   
- [Ressourcendateien](../windows/resource-files-visual-studio.md)   
- [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)
+
+Dieses Dialogfeld können Sie [Einfügen von ActiveX-Steuerelemente in Ihrem Dialogfeld](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md) bei der Verwendung der [Dialog-Editor](../windows/dialog-editor.md).
+
+### <a name="activex-control"></a>ActiveX-Steuerelement
+
+Zeigt eine Liste von ActiveX-Steuerelementen. Einfügen eines Steuerelements in diesem Dialogfeld ist eine Wrapperklasse nicht generieren. Wenn Sie eine Wrapperklasse benötigen, verwenden Sie [Klassenansicht](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) erstellen (Weitere Informationen finden Sie unter [Hinzufügen einer Klasse](../ide/adding-a-class-visual-cpp.md)). Wenn ein ActiveX-Steuerelement in diesem Dialogfeld nicht angezeigt wird, versuchen Sie es Installieren des Steuerelements entsprechend des Anbieters-Anweisungen.
+
+### <a name="path"></a>Pfad
+
+Zeigt die Datei, die in der das ActiveX-Steuerelement gefunden wird.
+
+Sie können Steuerelemente im Platzieren der **Toolbox** Fenster für den leichteren Zugriff. Weitere Informationen finden Sie unter [Dialogfeld Toolbox anpassen](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Registerkarte „Dialog-Editor“, „Toolbox“](../windows/dialog-editor-tab-toolbox.md)  
+[Ressourcendateien](../windows/resource-files-visual-studio.md)  
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)

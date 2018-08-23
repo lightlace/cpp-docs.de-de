@@ -248,16 +248,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825c761f920e48f31bab667790981e5c422f3612
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337481"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540646"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Implementiert die Basisfunktionalität für Fenster im Registerkartenformat.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -401,7 +401,7 @@ class CMFCBaseTabCtrl : public CWnd
 ## <a name="remarks"></a>Hinweise  
  Die `CMFCBaseTabCtrl` -Klasse stellt eine abstrakte Klasse dar. Daher kann sie nicht instanziiert werden. Um ein Fenster im Registerkartenformat zu erstellen, müssen die eine Klasse von `CMFCBaseTabCtrl`ableiten. Die MFC-Bibliothek enthält einige Beispiele zu abgeleiteten Klassen, zu denen [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md) und [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)zählen.  
   
- Ab [!INCLUDE[vs_dev14](../../ide/includes/vs_dev14_md.md)]unterstützt diese Klasse Microsoft Active Accessibility.  
+ Ab Visual Studio 2015 unterstützt diese Klasse Microsoft Active Accessibility.  
   
 ## <a name="customization-tips"></a>Anpassungstipps  
  Die folgenden Tipps beziehen sich auf die `CMFCBaseTabCtrl Class` und alle Klassen, die von dieser erben:  

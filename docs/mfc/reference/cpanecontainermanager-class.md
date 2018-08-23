@@ -1,5 +1,5 @@
 ---
-title: CPaneContainerManager Klasse | Microsoft Docs
+title: CPaneContainerManager-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c988f062fc870359a8f1ae1265fb91d02dbb3d
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: a3a0372d5892ec4b563275d0a5bb8f309cf6fc47
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079376"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540835"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager-Klasse
-Die `CPaneContainerManager` Klasse verwaltet den Speicher und die Anzeige des aktuellen andocklayouts.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Die `CPaneContainerManager` Klasse verwaltet die Speicherung und die Anzeige des aktuellen andocklayouts.  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -191,12 +191,12 @@ class CPaneContainerManager : public CObject
 |[CPaneContainerManager::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||  
   
 ### <a name="remarks"></a>Hinweise  
- Erstellt das Framework automatisch Instanzen von `CPaneContainerManager` Objekte und bettet sie entweder in [CPaneDivider Klasse](../../mfc/reference/cpanedivider-class.md) Objekte oder in [CMultiPaneFrameWnd Klasse](../../mfc/reference/cmultipaneframewnd-class.md) Objekte.  
+ Erstellt das Framework automatisch Instanzen von `CPaneContainerManager` Objekte und bettet sie entweder in [CPaneDivider-Klasse](../../mfc/reference/cpanedivider-class.md) Objekte oder [CMultiPaneFrameWnd-Klasse](../../mfc/reference/cmultipaneframewnd-class.md) Objekte.  
   
  Die `CPaneContainerManager` Klasse speichert einen Zeiger auf den Stamm einer binären Struktur, die von basiert [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) Objekte.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht das Abrufen eines Verweises auf ein `CPaneContainerManager` Objekt. Dieser Codeausschnitt ist Teil der [legen Sie die Größe Beispiel](../../visual-cpp-samples.md).  
+ Das folgende Beispiel zeigt, wie Sie einen Verweis auf eine `CPaneContainerManager` Objekt. Dieser Codeausschnitt ist Teil der [legen Sie die Größe Beispiel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]  
   
@@ -241,7 +241,7 @@ virtual BOOL AddPaneContainerManager(
  [in] *bOuterEdge*  
  [in] *pTargetControlBar*  
  [in] *DwAlignment*  
- [in] *viele*  
+ [in] *bCopy*  
   
 ### <a name="return-value"></a>Rückgabewert  
   
@@ -352,7 +352,7 @@ BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- [in] *pWnd*  
+ [in] *aufnehmen*  
   
 ### <a name="return-value"></a>Rückgabewert  
   

@@ -26,40 +26,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: debb2b1e8435cc53ec82ab1f957710850d7b5de3
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 4e8ec15272fd9e49173149655c0806f7873f2a1d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010690"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590953"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Speichern von Bitmaps als GIFs oder JPEGs (Bildbearbeitung für Symbole)
-Wenn Sie eine Bitmap zu erstellen, wird das Bild im Bitmapformat (BMP) erstellt. Sie können jedoch das Image als GIF- oder JPEG oder in anderen Grafikformaten speichern.  
-  
+
+Wenn Sie eine Bitmap zu erstellen, wird das Bild im Bitmapformat (BMP) erstellt. Sie können jedoch das Image als GIF- oder JPEG oder in anderen Grafikformaten speichern.
+
 > [!NOTE]
->  Dieser Prozess gilt nicht für Symbole und Cursor.  
-  
-### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Zum Erstellen und speichern eine Bitmap als GIF- oder JPEG  
-  
-1.  Von der **Datei** Menü wählen **öffnen**, klicken Sie dann auf **Datei**.  
-  
-2.  In der **neuen Dateidialogfeld**, klicken Sie auf die **Visual C++** Ordner, wählen Sie dann **Bitmapdatei (BMP)** in die **Vorlagen** ein, und klicken Sie auf  **Open**.  
-  
-     Die Bitmap wird im der **Image** Editor.  
-  
-3.  Nehmen Sie Änderungen an der neuen Bitmap, je nach Bedarf.  
-  
-4.  Mit der Bitmap, die noch geöffnet, in der **Image** -Editor, klicken Sie auf **speichern *Dateiname*BMP als** auf die **Datei** Menü.  
-  
-5.  In der **Datei speichern unter** Dialogfeld Geben Sie den Namen, erhalten die Datei und die Erweiterung, die das Dateiformat gibt an, Sie in möchten, sollen, die **Dateiname** Feld. Z. B. *: MeineDatei.gif*.  
-  
-     > [!NOTE]
-     > Sie müssen erstellen oder öffnen die Bitmap außerhalb des Projekts, um ihn als ein anderes Dateiformat zu speichern. Wenn Sie beim Erstellen oder öffnen Sie diese in Ihrem Projekt die **speichern** Befehl nicht verfügbar. Weitere Informationen finden Sie unter [Anzeigen von Ressourcen eine Ressource außerhalb eines Projekts (eigenständig)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
-  
-6.  Klicken Sie auf **Speichern**.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)   
- [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
+> Dieser Prozess gilt nicht für Symbole und Cursor.
+
+### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>Zum Erstellen und speichern eine Bitmap als GIF- oder JPEG
+
+1. Von der **Datei** Menü wählen **öffnen**, klicken Sie dann auf **Datei**.
+
+2. In der **neuen Dateidialogfeld**, klicken Sie auf die **Visual C++** Ordner, wählen Sie dann **Bitmapdatei (BMP)** in die **Vorlagen** ein, und klicken Sie auf  **Open**.
+
+   Die Bitmap wird im der **Image** Editor.
+
+3. Nehmen Sie Änderungen an der neuen Bitmap, je nach Bedarf.
+
+4. Mit der Bitmap, die noch geöffnet, in der **Image** -Editor, klicken Sie auf **speichern *Dateiname*BMP als** auf die **Datei** Menü.
+
+5. In der **Datei speichern unter** Dialogfeld Geben Sie den Namen, erhalten die Datei und die Erweiterung, die das Dateiformat gibt an, Sie in möchten, sollen, die **Dateiname** Feld. Z. B. *: MeineDatei.gif*.
+
+   > [!NOTE]
+   > Sie müssen erstellen oder öffnen die Bitmap außerhalb des Projekts, um ihn als ein anderes Dateiformat zu speichern. Wenn Sie beim Erstellen oder öffnen Sie diese in Ihrem Projekt die **speichern** Befehl nicht verfügbar. Weitere Informationen finden Sie unter [Anzeigen von Ressourcen eine Ressource außerhalb eines Projekts (eigenständig)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+
+6. Klicken Sie auf **Speichern**.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="see-also"></a>Siehe auch
+
+[Bearbeiten von Grafischen Ressourcen](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

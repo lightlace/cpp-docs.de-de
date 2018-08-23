@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: InvalidCastException-Klasse | Microsoft Docs'
+title: 'Platform:: InvalidCastException-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::InvalidCastException
 ms.assetid: 0215131d-1251-4913-9561-824410e045b6
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ebae678ea52c9728dc7e6d10f5f2104e94002d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec74810503fa86d6b5d102aa0fd1ca34b4fef1c6
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087117"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589102"
 ---
 # <a name="platforminvalidcastexception-class"></a>Platform::InvalidCastException-Klasse
 Wird ausgelöst, wenn eine Umwandlung oder eine explizite Konvertierung ungültig ist.  
@@ -36,9 +36,9 @@ public ref class InvalidCastException : COMException,    IException,    IPrintab
  Weitere Informationen finden Sie unter der [COMException](../cppcx/platform-comexception-class.md) -Klasse.  
   
 ### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
+ **Unterstützter Client (Min.):** Windows 8  
   
- **Unterstützter Server:** Windows Server 2012  
+ **Unterstützter Server (Min.):** Windows Server 2012  
   
  **Namespace:** Platform  
   

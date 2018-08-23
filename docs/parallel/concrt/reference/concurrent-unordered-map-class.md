@@ -1,5 +1,5 @@
 ---
-title: Concurrent_unordered_map-Klasse | Microsoft Docs
+title: Concurrent_unordered_map-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 932cfe232b07a9020af450ad33bb34101827ac79
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c570bd05edd81fc08f49785a1bc50668953553b0
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695528"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538847"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map-Klasse
 Die `concurrent_unordered_map`- Klasse ist ein parallelitätssicherer Container, mit dem eine Folge von Elementen variierender Länge des Typs `std::pair<const K, _Element_type>` gesteuert wird. Die Sequenz wird so dargestellt, dass parallelitätssichere Vorgänge für Anfügen, Elementzugriff, Iteratorzugriff und Iteratordurchläufe ermöglicht werden.  
@@ -133,7 +133,7 @@ template <typename K,
   
  **Namespace:** Parallelität  
   
-##  <a name="at"></a> am 
+##  <a name="at"></a> an 
 
  Sucht ein Element in der `concurrent_unordered_map` mit einem angegebenen Schlüsselwert. Diese Methode ist nebenläufigkeitssicher.  
   
@@ -153,9 +153,9 @@ const mapped_type& at(const key_type& KVal) const;
 ### <a name="remarks"></a>Hinweise  
  Wenn der Argumentschlüsselwert nicht gefunden wird, löst die Funktion ein Objekt der `out_of_range`-Klasse aus.  
   
-##  <a name="begin"></a> Beginnen 
+##  <a name="begin"></a> beginnen 
 
- Gibt einen Iterator auf das erste Element in der gleichzeitigen Container zurück. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen Iterator, der auf das erste Element in der gleichzeitigen Container verweist. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 iterator begin();
@@ -164,29 +164,29 @@ const_iterator begin() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator auf das erste Element in der gleichzeitigen Container.  
+ Ein Iterator für das erste Element in der gleichzeitigen Container.  
   
 ##  <a name="cbegin"></a> cbegin 
 
- Gibt einen Konstanten Iterator auf das erste Element in der gleichzeitigen Container zurück. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen const-Iterator auf das erste Element in der gleichzeitigen Container zurück. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 const_iterator cbegin() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Einen Konstanten Iterator auf das erste Element in der gleichzeitigen Container.  
+ Ein const-Iterator für das erste Element in der gleichzeitigen Container.  
   
 ##  <a name="cend"></a> cend 
 
- Gibt einen Konstanten Iterator auf den Speicherort adressiert, das letzte Element in der gleichzeitigen Container zurück. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen const-Iterator auf den Speicherort adressiert, der das letzte Element in der gleichzeitigen Container zurück. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 const_iterator cend() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Eine const-Iterator für den Speicherort adressiert, das letzte Element in der gleichzeitigen Container.  
+ Ein const-Iterator für den Speicherort adressiert, der das letzte Element in der gleichzeitigen Container.  
   
 ##  <a name="clear"></a> Deaktivieren 
 
@@ -240,7 +240,7 @@ concurrent_unordered_map(
  Die Hashfunktion für diese ungeordneten Zuordnung.  
   
  `key_equality`  
- Die Gleichheit Vergleichsfunktion für diese ungeordneten Zuordnung.  
+ Die Vergleichsfunktion des Gleichheit für diese ungeordneten Zuordnung.  
   
  `_Allocator`  
  Die Zuweisung für diese ungeordneten Zuordnung.  
@@ -257,19 +257,19 @@ concurrent_unordered_map(
 ### <a name="remarks"></a>Hinweise  
  Alle Konstruktoren speichern ein Zuweisungsobjekt `_Allocator` und initialisieren die ungeordnete Zuordnung.  
   
- Der erste Konstruktor gibt eine leere ursprüngliche Zuordnung an und gibt explizit an die Anzahl der Buckets, geben Sie die Hashfunktion, der auf Gleichheitsfunktion und der Zuweisung verwendet werden soll.  
+ Der erste Konstruktor gibt eine leere ursprüngliche Zuordnung an, und gibt explizit an die Anzahl der Buckets, geben Sie die Hash-Funktion, der auf Gleichheitsfunktion und der Zuweisung verwendet werden soll.  
   
- Der zweite Konstruktor gibt eine Zuweisung für die der ungeordneten Zuordnung.  
+ Der zweite Konstruktor gibt eine Zuweisung für der ungeordneten Zuordnung.  
   
  Der dritte Konstruktor gibt vom Iteratorbereich bereitgestellte Werte [ `_Begin`, `_End`).  
   
- Die vierten und fünften Konstruktoren geben eine Kopie der gleichzeitigen ungeordneten Zuordnung `_Umap`.  
+ Die vierten und fünften Konstruktoren geben eine Kopie für die gleichzeitige ungeordnete Zuordnung `_Umap`.  
   
- Der letzte Konstruktor gibt eine Verschiebung des parallele ungeordneten Zuordnung `_Umap`.  
+ Der letzte Konstruktor gibt eine Verschiebung von die gleichzeitige ungeordnete Zuordnung `_Umap`.  
   
 ##  <a name="count"></a> Anzahl 
 
- Zählt die Anzahl von Elementen, die einem angegebenen Schlüssel entsprechen. Diese Funktion ist nebenläufigkeitssicher.  
+ Zählt die Anzahl der Elemente, die einem angegebenen Schlüssel entsprechen. Diese Funktion ist nebenläufigkeitssicher.  
   
 ```
 size_type count(const key_type& KVal) const;
@@ -280,7 +280,7 @@ size_type count(const key_type& KVal) const;
  Der zu suchende Schlüssel.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Anzahl von denen Anzahl der Häufigkeit, mit die der Schlüssel im Container angezeigt wird.  
+ Die Anzahl der multipliziert mit der Häufigkeit, mit die der Schlüssel im Container angezeigt wird.  
   
 ##  <a name="empty"></a> leere 
 
@@ -291,14 +291,14 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- `true` Wenn der gleichzeitigen Container leer ist, ist `false` andernfalls.  
+ `true` Wenn die gleichzeitige Container leer ist, `false` andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
- Bei gleichzeitigen Einfügevorgängen kann, und zwar unabhängig davon, ob die parallele Container leer ist geändert werden unmittelbar nach dem Aufrufen dieser Funktion vor der Rückgabewert auch gelesen wird.  
+ Bei gleichzeitigen Einfügevorgängen, und zwar unabhängig davon, ob der gleichzeitigen Container leer ist möglicherweise ändern sofort nach dem Aufrufen dieser Funktion, bevor der Rückgabewert noch gelesen werden.  
   
 ##  <a name="end"></a> Ende 
 
- Gibt einen Iterator, der auf den Speicherort adressiert, das letzte Element in der gleichzeitigen Container zurück. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt einen Iterator, der auf den Speicherort adressiert, der das letzte Element in der gleichzeitigen Container verweist. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 iterator end();
@@ -307,7 +307,7 @@ const_iterator end() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator auf den Speicherort adressiert, der das letzte Element in der gleichzeitigen Container.  
+ Ein Iterator für den Speicherort adressiert, der das letzte Element in der gleichzeitigen Container.  
   
 ##  <a name="equal_range"></a> equal_range 
 
@@ -325,13 +325,13 @@ std::pair<const_iterator,
   
 ### <a name="parameters"></a>Parameter  
  `KVal`  
- Der Schlüsselwert gesucht werden soll.  
+ Der Schlüsselwert, der gesucht werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [Paar](http://msdn.microsoft.com/en-us/c5a37023-d939-4eb2-ae24-ce8e0cd4505d) , in dem das erste Element ist ein Iterator zum Anfang und das zweite Element ist ein Iterator zum Ende des Bereichs.  
+ Ein [Paar](http://msdn.microsoft.com/en-us/c5a37023-d939-4eb2-ae24-ce8e0cd4505d) , in dem das erste Element ist ein Iterator am Anfang und das zweite Element ist ein Iterator an das Ende des Bereichs.  
   
 ### <a name="remarks"></a>Hinweise  
- Es ist möglich, dass gleichzeitige einfügungen, die dazu führen, dass zusätzliche Schlüssel nach der Begin-Iterator und vor den End-Iterator eingefügt werden.  
+ Es ist möglich, dass gleichzeitige einfügungen, die dazu führen, dass zusätzliche Product Keys, nach der Begin-Iterator und vor dem Enditerator eingefügt werden soll.  
   
 ##  <a name="find"></a> Suchen 
 
@@ -345,10 +345,10 @@ const_iterator find(const key_type& KVal) const;
   
 ### <a name="parameters"></a>Parameter  
  `KVal`  
- Der Schlüsselwert gesucht werden soll.  
+ Der Schlüsselwert, der gesucht werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator, der auf den Speicherort der verweist der das erste Element, das den angegebenen Schlüssel zugeordnet oder der Iterator `end()` Wenn kein solches Element vorhanden ist.  
+ Ein Iterator, der auf den Speicherort des ersten Elements, das den Schlüssel übereinstimmt, oder der Iterator `end()` Wenn kein solches Element vorhanden ist.  
   
 ##  <a name="get_allocator"></a> get_allocator 
 
@@ -404,7 +404,7 @@ typename std::enable_if<!std::is_same<const_iterator,
   
 ### <a name="parameters"></a>Parameter  
  `_Iterator`  
- Der itertatortyp für die Einfügung verwendet.  
+ Der itertatortyp für Einfügung verwendet.  
   
  `V`  
  Der Typ des Werts in der Zuordnung eingefügt werden soll.  
@@ -413,25 +413,25 @@ typename std::enable_if<!std::is_same<const_iterator,
  Der Wert eingefügt werden soll.  
   
  `_Where`  
- Die Anfangsposition eine Einfügemarke gesucht werden soll.  
+ Die Startposition für eine Einfügemarke zu suchen.  
   
  `first`  
- Der Anfang des Bereichs, der eingefügt.  
+ Der Anfang des Bereichs, der eingefügt werden soll.  
   
  `last`  
- Das Ende des Bereichs, der eingefügt.  
+ Das Ende des Bereichs, der eingefügt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Paar, das ein Iterator und einem booleschen Wert enthält. Finden Sie im Abschnitt "Hinweise" Weitere Details.  
+ Ein Paar, das ein Iterator und einen booleschen Wert enthält. Finden Sie im Abschnitt "Hinweise" Weitere Details.  
   
 ### <a name="remarks"></a>Hinweise  
- Die erste Memberfunktion bestimmt, ob ein Element X in der Sequenz vorhanden ist, dessen Schlüssel hat, der entsprechende Reihenfolge `value`. Wenn nicht der Fall, wird die derartiges Element X erstellt und initialisiert sie mit `value`. Die Funktion dann bestimmt den Iterator `where` , der festlegt, X. Wenn eine Einfügung aufgetreten ist, gibt die Funktion `std::pair(where, true)`. Andernfalls wird zurückgegeben `std::pair(where, false)`.  
+ Die erste Memberfunktion bestimmt, ob ein Element X in der Sequenz vorhanden ist, dessen Schlüssel wurde mit entsprechender Sortierung `value`. Wenn nicht der Fall, wird Sie dieses Element X erstellt und initialisiert sie mit `value`. Die Funktion dann bestimmt den Iterator `where` bestimmt, X. Wenn eine Einfügung aufgetreten ist, gibt die Funktion `std::pair(where, true)`. Andernfalls wird `std::pair(where, false)` zurückgegeben.  
   
- Die zweite Memberfunktion gibt Insert ( `value`), wobei `_Where` als Ausgangspunkt in der kontrollierten Sequenz, für die Einfügemarke gesucht werden soll.  
+ Die zweite Memberfunktion gibt die Einfügung ( `value`), wobei `_Where` als Ausgangspunkt innerhalb der kontrollierten Sequenz ein, um nach der Einfügemarke zu suchen.  
   
  Die dritte Memberfunktion fügt die Sequenz von Elementwerten, aus dem Bereich [ `first`, `last`).  
   
- Die letzten beiden Memberfunktionen Verhalten sich wie die ersten beiden, außer dass `value` wird verwendet, um den eingefügten Wert zu erstellen.  
+ Die letzten beiden Memberfunktionen Verhalten sich identisch zu den ersten beiden, außer dass `value` wird verwendet, um der eingefügte Wert zu erstellen.  
   
 ##  <a name="key_eq"></a> key_eq 
 
@@ -446,18 +446,18 @@ key_equal key_eq() const;
   
 ##  <a name="load_factor"></a> load_factor 
 
- Berechnet, und gibt den aktuellen Lastfaktor des Containers. Der Ladefaktor ist die Anzahl der Elemente im Container dividiert durch die Anzahl der Buckets an.  
+ Berechnet, und gibt den aktuellen Lastfaktor des Containers. Der Ladefaktor ist die Anzahl der Elemente im Container geteilt durch die Anzahl der Buckets an.  
   
 ```
 float load_factor() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Der Ladefaktor für den Container.  
+ Der Load-Faktor für den Container.  
   
 ##  <a name="max_load_factor"></a> max_load_factor 
 
- Ruft ab oder legt den maximalen Lastfaktor des Containers. Vom Höchstlastfaktor liegt die höchste Anzahl von Elementen in jeder Bucket sein kann, bevor der Container seine interne Tabelle vergrößert wird.  
+ Übernimmt oder bestimmt den Höchstlastfaktor des Containers. Der Höchstlastfaktor ist die größte Anzahl von Elementen, als in jedem Bucket befinden darf, bevor der Container seiner interne Tabelle wächst.  
   
 ```
 float max_load_factor() const;
@@ -469,11 +469,11 @@ void max_load_factor(float _Newmax);
  `_Newmax`  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die erste Memberfunktion gibt den gespeicherten maximalen Lastfaktor zurück. Die zweite Memberfunktion gibt keinen Wert zurück, aber löst ein [Out_of_range](../../../standard-library/out-of-range-class.md) -Ausnahme aus, wenn Sie der angegebenen Lastfaktor ungültig ist...  
+ Die erste Memberfunktion gibt den gespeicherten maximalen Lastfaktor zurück. Die zweite Memberfunktion löst jedoch keinen Rückgabewert eine [Out_of_range](../../../standard-library/out-of-range-class.md) -Ausnahme aus, wenn Sie der angegebenen Lastfaktor ist ungültig...  
   
 ##  <a name="max_size"></a> max_size 
 
- Gibt die maximale Größe der gleichzeitigen Container, von der Zuweisung bestimmt. Diese Methode ist nebenläufigkeitssicher.  
+ Gibt die maximale Größe der gleichzeitigen Container, durch die Zuweisung bestimmt. Diese Methode ist nebenläufigkeitssicher.  
   
 ```
 size_type max_size() const;
@@ -483,7 +483,7 @@ size_type max_size() const;
  Die maximale Anzahl von Elementen, die in diesen gleichzeitigen Container eingefügt werden können.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Wert für die obere Grenze kann tatsächlich größer sein als was Container tatsächlich aufnehmen kann.  
+ Dieser Wert für die obere Grenze möglicherweise tatsächlich größer, was der Container tatsächlich enthalten kann.  
   
 ##  <a name="operator_at"></a> []-Operator 
 
@@ -507,7 +507,7 @@ mapped_type& operator[](key_type&& kval);
 ### <a name="remarks"></a>Hinweise  
  Wenn der Argumentschlüsselwert nicht gefunden wird, wird er zusammen mit dem Standardwert des Datentyps eingefügt.  
   
- `operator[]` kann zum Einfügen von Elementen in einer Zuordnung verwendet werden `m` mit `m[key] = DataValue;`, wobei `DataValue` ist der Wert der `mapped_type` des Elements mit einem Schlüsselwert der `key`.  
+ `operator[]` kann verwendet werden, um das Einfügen von Elementen in einer Zuordnung `m` mit `m[key] = DataValue;`, wobei `DataValue` ist der Wert des der `mapped_type` des Elements mit einem Schlüsselwert von `key`.  
   
  Wenn `operator[]` zum Einfügen von Elementen verwendet wird, gibt der zurückgegebene Verweis nicht an, ob eine Einfügung ein bereits vorhandenes Element ändert oder ein neues erstellt. Die Memberfunktionen `find` und [einfügen](#insert) können verwendet werden, um zu bestimmen, ob ein Element mit einem angegebenen Schlüssel bereits vor einer Einfügung vorhanden ist.  
   
@@ -529,7 +529,7 @@ concurrent_unordered_map& operator= (concurrent_unordered_map&& _Umap);
  Ein Verweis auf das `concurrent_unordered_map`-Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Nachdem alle vorhandenen Elemente gelöscht, einen gleichzeitigen Vektor `operator=` kopiert oder verschiebt den Inhalt der `_Umap` in den gleichzeitigen Vektor.  
+ Nachdem alle vorhandenen Elemente gelöscht, einen gleichzeitigen Vektor, `operator=` kopiert oder verschiebt den Inhalt der `_Umap` in den gleichzeitigen Vektor.  
   
 ##  <a name="rehash"></a> Rehash- 
 
@@ -544,7 +544,7 @@ void rehash(size_type _Buckets);
  Die gewünschte Anzahl von Buckets.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Memberfunktion ändert die Anzahl der Buckets in mindestens `_Buckets` und erstellt ggf. die Hashtabelle neu. Die Anzahl der Buckets muss eine Potenz von 2 sein. Wenn keine Potenz von 2, wird er auf die nächste größten Potenz von 2 aufgerundet werden.  
+ Die Memberfunktion ändert die Anzahl der Buckets in mindestens `_Buckets` und erstellt ggf. die Hashtabelle neu. Die Anzahl von Buckets muss eine Potenz von 2 sein. Wenn keine Potenz von 2 ist, wird es auf die größten nächste Potenz von 2 aufgerundet werden.  
   
  Löst ein [Out_of_range](../../../standard-library/out-of-range-class.md) -Ausnahme aus, wenn die Anzahl der Buckets ungültig ist (0 oder größer als die maximale Anzahl von Buckets).  
   
@@ -560,7 +560,7 @@ size_type size() const;
  Die Anzahl der Elemente im Container.  
   
 ### <a name="remarks"></a>Hinweise  
- Bei gleichzeitigen Einfügevorgängen kann die Anzahl der Elemente in der gleichzeitigen Container ändern, unmittelbar bevor der Rückgabewert auch gelesen wurde, wird durch das Aufrufen dieser Funktion.  
+ Bei gleichzeitigen Einfügevorgängen kann die Anzahl der Elemente in der gleichzeitigen Container ändern, sofort nach dem Aufrufen dieser Funktion, bevor der Rückgabewert noch gelesen werden.  
   
 ##  <a name="swap"></a> Swap 
 
@@ -572,11 +572,11 @@ void swap(concurrent_unordered_map& _Umap);
   
 ### <a name="parameters"></a>Parameter  
  `_Umap`  
- Die `concurrent_unordered_map` Objekt für den Tauschvorgang.  
+ Die `concurrent_unordered_map` Objekt, mit dem getauscht.  
   
 ##  <a name="unsafe_begin"></a> unsafe_begin 
 
- Gibt einen Iterator zurück, auf das erste Element in diesem Container für einen bestimmten Bucket.  
+ Gibt einen Iterator zum ersten Element in diesem Container für die einem bestimmten Bucket.  
   
 ```
 local_iterator unsafe_begin(size_type _Bucket);
@@ -589,7 +589,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
  Der Bucket-Index.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator, der auf den Anfang des Buckets verweist.  
+ Ein Iterator, der auf den Anfang des Buckets zeigt.  
   
 ##  <a name="unsafe_bucket"></a> unsafe_bucket 
 
@@ -627,14 +627,14 @@ size_type unsafe_bucket_size(size_type _Bucket);
   
 ### <a name="parameters"></a>Parameter  
  `_Bucket`  
- Der Bucket gesucht werden soll.  
+ Der zu suchenden-Bucket.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Die aktuelle Anzahl der Buckets in diesem Container.  
   
 ##  <a name="unsafe_cbegin"></a> unsafe_cbegin 
 
- Gibt einen Iterator zurück, auf das erste Element in diesem Container für einen bestimmten Bucket.  
+ Gibt einen Iterator zum ersten Element in diesem Container für die einem bestimmten Bucket.  
   
 ```
 const_local_iterator unsafe_cbegin(size_type _Bucket) const;
@@ -645,11 +645,11 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
  Der Bucket-Index.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator, der auf den Anfang des Buckets verweist.  
+ Ein Iterator, der auf den Anfang des Buckets zeigt.  
   
 ##  <a name="unsafe_cend"></a> unsafe_cend 
 
- Gibt einen Iterator zurück, um den Speicherort adressiert, das letzte Element in einem bestimmten Bucket.  
+ Gibt einen Iterator zurück, auf den Speicherort adressiert, der das letzte Element in einem bestimmten Bucket.  
   
 ```
 const_local_iterator unsafe_cend(size_type _Bucket) const;
@@ -660,11 +660,11 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
  Der Bucket-Index.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator, der auf den Anfang des Buckets verweist.  
+ Ein Iterator, der auf den Anfang des Buckets zeigt.  
   
 ##  <a name="unsafe_end"></a> unsafe_end 
 
- Gibt einen Iterator zurück, bis zum letzten Element in diesem Container für einen bestimmten Bucket.  
+ Gibt einen Iterator zurück, auf das letzte Element in diesem Container für die einem bestimmten Bucket.  
   
 ```
 local_iterator unsafe_end(size_type _Bucket);
@@ -677,7 +677,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
  Der Bucket-Index.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Iterator, der auf das Ende der Buckets verweist.  
+ Ein Iterator das Ende der Buckets auf.  
   
 ##  <a name="unsafe_erase"></a> unsafe_erase 
 
@@ -700,10 +700,10 @@ size_type unsafe_erase(
  Die Position des Iterators, an der gelöscht werden soll.  
   
  `_Begin`  
- Die Position des ersten Elements im Bereich von Elementen, die gelöscht werden.  
+ Die Position des ersten Elements im Bereich von Elementen, die gelöscht werden soll.  
   
  `_End`  
- Die Position des ersten Elements hinter dem Bereich von Elementen, die gelöscht werden.  
+ Die Position des ersten Elements außerhalb des Bereichs von Elementen gelöscht werden soll.  
   
  `KVal`  
  Der Schlüsselwert, der gelöscht werden soll.  
@@ -714,11 +714,11 @@ size_type unsafe_erase(
 ### <a name="remarks"></a>Hinweise  
  Die erste Memberfunktion entfernt das Element der kontrollierten Sequenz verweist `_Where`. Die zweite Memberfunktion entfernt die Elemente im Bereich [ `_Begin`, `_End`).  
   
- Die dritte Memberfunktion entfernt die Elemente im Bereich, der von `concurrent_unordered_map::equal_range`(KVal).  
+ Die dritte Memberfunktion entfernt die Elemente im Bereich von gesetzte `concurrent_unordered_map::equal_range`(KVal).  
   
 ##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count 
 
- Gibt die maximale Anzahl der Buckets in diesem Container zurück.  
+ Gibt die maximale Anzahl von Buckets, die in diesem Container zurück.  
   
 ```
 size_type unsafe_max_bucket_count() const;

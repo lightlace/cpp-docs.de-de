@@ -15,26 +15,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e73b11ae5a29289c44bf762082397dd4ed4f826
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7733b4f642db9cf281ac78aca7dc90ebcda35562
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016690"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603907"
 ---
 # <a name="moduleobjectcount-data-member"></a>Module::objectCount_-Datenmember
-Behält Überblick darüber, wie viele Klassen erstellt wurden die [stellen](../windows/make-function.md) Funktion.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-volatile long objectCount_;  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Siehe auch
- [Module-Klasse](../windows/module-class.md)
+
+Behält Überblick darüber, wie viele Klassen erstellt wurden die [stellen](../windows/make-function.md) Funktion.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+volatile long objectCount_;
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+[Module-Klasse](../windows/module-class.md)

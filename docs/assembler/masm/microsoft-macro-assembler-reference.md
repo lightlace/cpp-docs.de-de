@@ -1,5 +1,5 @@
 ---
-title: Referenz zum Microsoft Macro Assembler | Microsoft Docs
+title: Referenz zum Microsoft Macro Assembler | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,37 +17,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 713e11262a660bcd42aea27bcb0da9e5f7f0c956
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: edf1289b20d710ff6b579a56150d01568fb21fbd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052826"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575480"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Referenz zum Microsoft Macro Assembler
-Microsoft Macro Assembler (MASM) bietet verschiedene Vorteile gegenüber Inlineassembly. MASM enthält eine Makrosprache, die Features wie die Verarbeitung von Schleifen, arithmetische und Text Zeichenfolge verfügt. MASM Ihnen außerdem mehr Kontrolle über die Hardware, da es sich um die Anweisungssets der 386, 486 und Pentium-Prozessoren unterstützt. Mithilfe von MASM können Sie auch der Mehraufwand für Zeit und Speicherplatz reduziert.  
+Der Microsoft Macro Assembler (MASM) bietet verschiedene Vorteile gegenüber Inlineassembly. MASM enthält eine Makrosprache mit Funktionen wie Schleifen, arithmetische und Text zeichenfolgenverarbeitung. MASM Ihnen außerdem mehr Kontrolle über die Hardware, da es sich um die-Befehlssätze der 386, 486 und Pentium-Prozessoren unterstützt. Verwenden Sie MASM, können Sie auch Zeit und Speicherbedarf reduzieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [ML- und ML64-Befehlszeilenoption](../../assembler/masm/ml-and-ml64-command-line-reference.md)  
- Beschreibt die Befehlszeilenoptionen ML.exe und ML64.exe an.  
+ Beschreibt die Befehlszeilenoptionen ML.exe "und" ML64.exe an.  
   
  [ML-Fehlermeldungen](../../assembler/masm/ml-error-messages.md)  
- Beschreibt ML.exe Schwerwiegender und nicht schwerwiegende Fehlermeldungen und Warnungen.  
+ Beschreibt ML.exe Schwerwiegender und-Fehlermeldungen und Warnungen.  
   
  [Anweisungen – Referenz](../../assembler/masm/directives-reference.md)  
- Enthält Links zu Artikeln über die Verwendung der Direktiven in MASM.  
+ Enthält Links zu Artikeln, in denen die Verwendung von Anweisungen in MASM erläutert.  
   
  [Symbole – Verweis](../../assembler/masm/symbols-reference.md)  
- Enthält Links zu Artikeln über die Verwendung von Symbolen in MASM.  
+ Enthält Links zu Artikeln, in denen die Verwendung von Symbolen in MASM erläutert.  
   
  [Operatoren – Referenz](../../assembler/masm/operators-reference.md)  
- Enthält Links zu Artikeln über die Verwendung von Operatoren in MASM.  
+ Enthält Links zu Artikeln, in denen die Verwendung von Operatoren in MASM erläutert.  
   
  [Programmierungshandbücher von Prozessorherstellern](../../assembler/masm/processor-manufacturer-programming-manuals.md)  
- Enthält Links zu Websites, die Informationen zur Programmierung zu Prozessoren, die nicht hergestellt enthalten können, verkauft wurde, oder von Microsoft unterstützt.  
+ Enthält Links zu Websites, die Informationen zur Programmierung zu Prozessoren, die nicht hergestellt enthalten können, verkauft, oder von Microsoft unterstützt wird.  
   
  [MASM für x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)  
- Informationen zum Erstellen der Ausgabe von Dateien für [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  
+ Informationen dazu, wie Sie die Ausgabedateien für X64 zu erstellen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Visual C++](../../visual-cpp-in-visual-studio.md)  

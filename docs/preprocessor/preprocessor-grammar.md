@@ -1,5 +1,5 @@
 ---
-title: Präprozessor-Grammatik | Microsoft Docs
+title: Präprozessor-Grammatik | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,97 +16,98 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1871d1b8281f4dd74733133ede70ed80430246b3
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843365"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539421"
 ---
 # <a name="preprocessor-grammar"></a>Präprozessor-Grammatik
-**#define***Bezeichner* *-Token-String*abonnieren  
+**#define***Bezeichner* *-Token-Zeichenfolge*deaktivieren    
   
- *#* **Definieren Sie***Bezeichner*[**(** *Bezeichner*opt **,** *...*  **,** *Bezeichner*opt **)**] *-Token-String*abonnieren  
+*#* **Definieren Sie***Bezeichner*[**(** *Bezeichner*opt **,** *...*  **,** *Bezeichner*opt **)**] *-Token-Zeichenfolge*deaktivieren    
   
- **definiert (***Bezeichner* **)**  
+**definiert (***Bezeichner* **)**   
   
- **definiert***Bezeichner*  
+**definiert***Bezeichner*   
   
- `#include` **"***Path-Spec***"**  
+`#include` **"***Path-Spec***"**  
   
- `#include` **\<***Path-spec***>**  
+`#include` **\<***Path-spec***>**  
   
- **#line***Ziffernfolge***"** *Filename* **"** abonnieren  
+**#line***Ziffernfolge***"** *Filename* **"** deaktivieren      
   
- *#* **Undef***Bezeichner*   
+*#* **Undef***Bezeichner*   
   
- **#error***-Token-Zeichenfolge*  
+**#error***-Token-Zeichenfolge*   
   
- **#pragma***-Token-Zeichenfolge*   
+**#pragma***-Token-Zeichenfolge*   
   
- *bedingte* :  
- *If-Teil Elif-Teile*opt*else-Teil*opt*Endif-Zeile*  
+*bedingte* :  
+*Elif Teile von If-Part*opt*else-Teil*opt*Endif-Zeile*  
   
- *If-Teil* :  
- *if-linetext*  
+*If-Part* :  
+*if-linetext*  
   
- *If-Line-* :  
- **#if***Konstantenausdruck*  
+*If-Line-* :  
+**#if***konstanter Ausdruck*  
   
- **#ifdef***Bezeichner*   
+**#ifdef***Bezeichner*  
   
- **#ifndef***Bezeichner*  
+**#ifndef***Bezeichner*  
   
- *Elif-Teile* :  
- *Elif-Line-text*  
+*Elif-Teile* :  
+*Elif-Line text*  
   
- *Elif-Teile Elif-Line-text*  
+*Elif-Teile Elif-Line text*  
   
- *Elif-Line-* :  
- **#elif***Konstantenausdruck*   
+*Elif-Line-* :  
+**#elif***konstanter Ausdruck*  
   
- *else-Teil* :  
- *else-linetext*  
+*else-Teil* :  
+*else-linetext*  
   
- *Else-Line* :  
- `#else`  
+*Else-Line* :  
+`#else`  
   
- *Endif-Line-* :  
- `#endif`  
+*Endif-Line-* :  
+`#endif`  
   
- *Ziffernfolge* :  
- *digit*  
+*Digit-Sequence* :  
+*digit*  
   
- *digit-sequence digit*  
+*digit-sequence digit*  
   
- *Ziffer* : einer der  
- **0 1 2 3 4 5 6 7 8 9**  
+*Ziffer* : eines der  
+**0 1 2 3 4 5 6 7 8 9**  
   
- *Token-String* :  
- Zeichenfolge von Tokens  
+*Token-Zeichenfolge* :  
+Zeichenfolge von Tokens  
   
- *Token* :  
- *keyword*  
+*Token* :  
+*keyword*  
   
- *identifier*  
+*identifier*  
   
- *constant*  
+*constant*  
   
- *operator*  
+*operator*  
   
- `punctuator`  
+`punctuator`  
   
- *FileName* :  
- Gültiger Dateiname des Betriebssystems  
+*FileName* :  
+Gültiger Dateiname des Betriebssystems  
   
- *Path-Spec* :  
- Gültiger Dateipfad  
+*Path-Spec* :  
+Gültiger Dateipfad  
   
- *Text* :  
- Eine beliebige Textsequenz  
+*Text* :  
+Eine beliebige Textsequenz  
   
 > [!NOTE]
->  Die folgenden Nichtterminale werden der [lexikalische Konventionen](../cpp/lexical-conventions.md) Teil der *C++-Sprachreferenz*: `constant`, `constant` - *Ausdruck* , *Bezeichner*, *Schlüsselwort*, `operator`, und `punctuator`.  
+> Die folgenden Nichtterminale werden in der [lexikalische Konventionen](../cpp/lexical-conventions.md) Teil der *C++-Sprachreferenz*: `constant`, `constant` - *Ausdruck* , *Bezeichner*, *Schlüsselwort*, `operator`, und `punctuator`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grammatikzusammenfassung (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+ 
+[Grammatikzusammenfassung (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

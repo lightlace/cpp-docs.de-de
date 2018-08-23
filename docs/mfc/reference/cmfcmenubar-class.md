@@ -116,16 +116,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fb3c0295b56f394fae97be7d14e3dccb5cd46b3
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d8961cc929196c21838fd21132146deddabcc1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853776"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544471"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar-Klasse
 Eine Menüleiste, die Andocken implementiert.  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -439,7 +439,7 @@ void EnableHelpCombobox(
  Die Breite der Schaltfläche für das Kombinationsfeld in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Die **Hilfe** Kombinationsfeld ähnelt der **helfen** Kombinationsfeld in der Menüleiste des [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
+ Die **Hilfe** Kombinationsfeld ähnelt der **Hilfe** Kombinationsfeld in der Menüleiste von Microsoft Word.  
   
  Wenn Sie beim Aufrufen dieser Methode *UiID* auf 0 festgelegt, diese Methode blendet Sie aus dem Kombinationsfeld. Andernfalls zeigt diese Methode im Kombinationsfeld automatisch auf der rechten Seite der Menüleiste. Nachdem Sie diese Methode aufrufen, rufen [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) auf einen Zeiger auf die eingefügten abrufen [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) Objekt.  
   

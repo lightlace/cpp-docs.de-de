@@ -1,5 +1,5 @@
 ---
-title: Make_public | Microsoft Docs
+title: Make_public | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27db5ac934973178e2485327090ed70f994becec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bdec8afa2088cad5faf700b3946926bb9d85748
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849586"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544448"
 ---
 # <a name="makepublic"></a>make_public
 Gibt an, dass für einen systemeigenen Typ der öffentliche Assemblyzugriff gewährt wird.  
@@ -35,16 +35,17 @@ Gibt an, dass für einen systemeigenen Typ der öffentliche Assemblyzugriff gew�
 ```  
   
 ### <a name="parameters"></a>Parameter  
- `type` ist der Name des Typs, der den öffentlichen Assemblyzugriff aufweisen soll.  
+*Typ* ist der Name des Typs öffentliche Assemblyzugriff gewährt werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
-`make_public` ist sinnvoll, wenn der systemeigene Typ, auf den Sie verweisen möchten, aus einer H-Datei stammt, die Sie nicht ändern können. Soll der systemeigene Typ in der Signatur einer öffentlichen Funktion in einem Typ mit öffentlicher Assemblysichtbarkeit verwendet werden, muss der systemeigene Typ auch über den öffentlichen Assemblyzugriff verfügen, sonst gibt der Compiler eine Warnung aus.  
+
+**Make_public** ist nützlich, wenn der systemeigene Typ, die Sie verweisen möchten aus einer h-Datei ist, die Sie nicht ändern können. Soll der systemeigene Typ in der Signatur einer öffentlichen Funktion in einem Typ mit öffentlicher Assemblysichtbarkeit verwendet werden, muss der systemeigene Typ auch über den öffentlichen Assemblyzugriff verfügen, sonst gibt der Compiler eine Warnung aus.  
   
-`make_public` muss im globalen Bereich angegeben werden und ist nur wirksam von diesem Deklarationspunkt bis zum Ende der Quellcodedatei.  
+**Make_public** muss im globalen Gültigkeitsbereich angegeben werden, und ist nur an dem Punkt am Ende der Quellcodedatei an die It über deklariert ist.  
   
 Der systemeigene Typ kann implizit oder explizit privat sein; finden Sie unter [Typsichtbarkeit](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) für Weitere Informationen.  
   
-## <a name="example"></a>Beispiel  
+## <a name="examples"></a>Beispiele  
 Beim folgenden Beispiel handelt es sich um die Inhalte einer H-Datei, welche die Definitionen für zwei systemeigene Strukturen enthält.  
   
 ```cpp  
@@ -52,9 +53,8 @@ Beim folgenden Beispiel handelt es sich um die Inhalte einer H-Datei, welche die
 struct Native_Struct_1 { int i; };  
 struct Native_Struct_2 { int i; };  
 ```  
-  
-## <a name="example"></a>Beispiel  
-Das folgende Codebeispiel verwendet die Headerdatei und veranschaulicht, dass der Compiler – sofern die systemeigenen Strukturen nicht explizit unter Verwendung von `make_public` als öffentlich gekennzeichnet sind – eine Warnung generiert, wenn Sie versuchen, die systemeigenen Strukturen in der Signatur einer öffentlicher Funktion in einem öffentlichen verwalteten Typ zu verwenden.  
+
+Das folgende Codebeispiel verwendet die Headerdatei und zeigt, es sei denn, Sie explizit die systemeigenen Strukturen als öffentlich kennzeichnen mit **Make_public**, generiert der Compiler eine Warnung, wenn Sie versuchen, verwenden die systemeigenen Strukturen in der die Signatur einer öffentlicher Funktion in einem öffentlich verwalteten Typ.  
   
 ```cpp  
 // make_public_pragma.cpp  
@@ -69,5 +69,6 @@ public ref struct A {
 };  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
+
 [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

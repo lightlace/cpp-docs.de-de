@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72ed322c78723826615e1264642eb53f6f9eb14d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 825a63b38f443ce770739fe614ab6a4a44b8de39
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404073"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42572737"
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
 
@@ -106,15 +106,15 @@ Das zu verwendende Gebietsschema.
 
 Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden. Der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Wenn ein Fehler auftritt oder wenn das Ende des Dateistreams vor der ersten Konvertierung erreicht wird, des Rückgabewerts ist **EOF** für **Fscanf** und **Fwscanf**.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *Stream* oder *Format* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** auf **EINVAL**.
+Diese Funktionen überprüfen ihre Parameter. Wenn *Stream* oder *Format* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** zu **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Fscanf** -Funktion liest Daten aus der aktuellen Position des *Stream* in die Speicherorte, die vom *Argument* (sofern vorhanden). Jede *Argument* muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. *Format* steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie die *Format* Argument für **Scanf**; finden Sie unter [Scanf](scanf-scanf-l-wscanf-wscanf-l.md) für eine Beschreibung des *Format*.
+Die **Fscanf** -Funktion liest Daten aus der aktuellen Position des *Stream* in die Speicherorte, die vom *Argument* (sofern vorhanden). Jede *Argument* muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. *Format* steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie der *Format* Argument für **Scanf**; finden Sie unter [Scanf](scanf-scanf-l-wscanf-wscanf-l.md) für eine Beschreibung der *Format*.
 
-**Fwscanf** ist eine Breitzeichen-Version von **Fscanf**; das Formatierungsargument **Fwscanf** ist eine Breitzeichen-Zeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Fscanf** unterstützt derzeit nicht die Eingabe aus einem Unicode-Stream.
+**Fwscanf** ist eine Breitzeichen-Version von **Fscanf**; das Formatargument für **Fwscanf** ist eine Breitzeichen-Zeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Fscanf** unterstützt derzeit keine Eingabe aus einem unicodestream.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -123,7 +123,7 @@ Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, v
 |**_ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
 |**_ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
-Weitere Informationen finden Sie unter [Feldern für die Formatangabe – Funktionen Scanf und Wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Weitere Informationen finden Sie unter [Formatangabefelder: scanf- und Wscanf-Funktionen](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 ## <a name="requirements"></a>Anforderungen
 

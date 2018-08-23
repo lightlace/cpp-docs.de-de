@@ -25,15 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c6e304547af06d5de6d81bae2ceace119e4681d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: aee6122e8dbcf85f882e5b78475a2c332b855721
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339795"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572748"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl-Klasse
-Stellt eine Implementierung der [IGetDataSource](https://msdn.microsoft.com/library/ms709721.aspx) Objekt.  
+Stellt eine Implementierung der [IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\)) Objekt.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -71,7 +71,7 @@ STDMETHOD(GetDataSource)(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IGetDataSource::GetDataSource](https://msdn.microsoft.com/library/ms725443.aspx) in die *OLE DB-Programmierreferenz*.  
+ Finden Sie unter [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="remarks"></a>Hinweise  
  Nützlich, wenn Sie auf Eigenschaften in das neue Datenquellenobjekt zugreifen müssen.  

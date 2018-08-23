@@ -1,5 +1,5 @@
 ---
-title: verwaltete, unverwaltete | Microsoft Docs
+title: verwaltete, unverwaltete | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 316866ac047b607ec4c92d7c6d4f8ff233ed9a3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 908ed745e82b17dd688f062ac7021c6adf3f4851
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846375"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540194"
 ---
 # <a name="managed-unmanaged"></a>managed, unmanaged
 Aktivieren Sie die Steuerung auf Funktionsebene für Kompilierfunktionen als verwaltet oder nicht verwaltet.  
@@ -35,31 +35,31 @@ Aktivieren Sie die Steuerung auf Funktionsebene für Kompilierfunktionen als ver
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      #pragma managed  
+#pragma managed  
 #pragma unmanaged  
 #pragma managed([push,] on | off)  
 #pragma managed(pop)  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md) Compileroption bietet Steuerung auf Modulebene für kompilierfunktionen als verwaltet oder nicht verwaltet.  
+
+Die ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md) Compileroption stellt Steuerung auf Modulebene für kompilierfunktionen als verwaltet oder nicht verwaltet.  
   
- Eine nicht verwaltete Funktion wird für die systemeigene Plattform kompiliert, und die Ausführung dieses Teils des Programms wird von der Common Language Runtime an die systemeigene Plattform übergeben.  
+Eine nicht verwaltete Funktion wird für die systemeigene Plattform kompiliert, und die Ausführung dieses Teils des Programms wird von der Common Language Runtime an die systemeigene Plattform übergeben.  
   
- Funktionen werden standardmäßig als verwaltet kompiliert beim **"/ CLR"** verwendet wird.  
+Funktionen werden standardmäßig als verwaltet kompiliert, wenn `/clr` verwendet wird.  
   
- Beim Anwenden dieser Pragmas:  
+Beim Anwenden dieser Pragmas:  
   
--   Fügen Sie das Pragma hinzu, das einer Funktion vorangeht, sich jedoch nicht innerhalb eines Funktionsrumpfs befindet.  
+- Fügen Sie das Pragma hinzu, das einer Funktion vorangeht, sich jedoch nicht innerhalb eines Funktionsrumpfs befindet.  
   
--   Fügen Sie das Pragma nach `#include`-Anweisungen hinzu. Verwenden Sie diese Pragmas nicht vor `#include`-Anweisungen.  
+- Fügen Sie das Pragma nach `#include`-Anweisungen hinzu. Verwenden Sie diese Pragmas nicht vor `#include`-Anweisungen.  
   
- Der Compiler ignoriert die `managed` und `unmanaged` Pragmas Wenn **"/ CLR"** nicht in der Kompilierung verwendet wird.  
+Der Compiler ignoriert die **verwaltet** und **nicht verwalteten** Pragmas Wenn `/clr` nicht in der Kompilierung verwendet wird.  
   
- Wenn eine Vorlagenfunktion instanziiert wird, bestimmt der Pragmazustand zum Zeitpunkt der Definition, ob die Vorlage verwaltet oder nicht verwaltet ist.  
+Wenn eine Vorlagenfunktion instanziiert wird, bestimmt der Pragmazustand zum Zeitpunkt der Definition, ob die Vorlage verwaltet oder nicht verwaltet ist.  
   
- Weitere Informationen finden Sie unter [Initialisierung gemischter Assemblys](../dotnet/initialization-of-mixed-assemblies.md).  
+Weitere Informationen finden Sie unter [Initialization of Mixed Assemblies](../dotnet/initialization-of-mixed-assemblies.md).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -98,4 +98,5 @@ In unmanaged function.
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

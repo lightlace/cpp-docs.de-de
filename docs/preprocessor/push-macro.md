@@ -1,5 +1,5 @@
 ---
-title: Push_macro | Microsoft Docs
+title: Push_macro | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e41ef7bf7b93e4b2a533dddcb82fee904cb428
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70b472ba11445cdc5aa2a192d02d82c51d724b8c
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912991"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539990"
 ---
 # <a name="pushmacro"></a>push_macro
-Speichert den Wert von der *Macro_name* -Makros oben im Stapel für dieses Makro.  
+Speichert den Wert der *Macro_name* -Makros oben im Stapel für dieses Makro.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #pragma push_macro("  
 macro_name  
 ")  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können den Wert für abrufen *Macro_name* mit **Pop_macro**.  
+ 
+Sie können den Wert für abrufen *Macro_name* mit `pop_macro`.  
   
- Finden Sie unter [Pop_macro](../preprocessor/pop-macro.md) ein Beispiel.  
+Finden Sie unter [Pop_macro](../preprocessor/pop-macro.md) ein Beispiel.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

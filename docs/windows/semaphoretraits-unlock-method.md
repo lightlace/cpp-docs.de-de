@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81f2214ef6a3e33b573a88ac4e23ae6aad64ea01
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e993c58ea6fc84e0b4001b488632858e5251d67b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015689"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583970"
 ---
 # <a name="semaphoretraitsunlock-method"></a>SemaphoreTraits::Unlock-Methode
-Releases-Steuerelement eine gemeinsam genutzte Ressource.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-inline static void Unlock(  
-   _In_ Type h  
-);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *h*  
- Handle für ein **Semaphor** Objekt.  
-  
-## <a name="remarks"></a>Hinweise  
- Wenn sich "Entsperren"-Vorgangs nicht erfolgreich ist **Unlock()** gibt einen Fehler, der die Ursache des Fehlers angibt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Siehe auch  
- [SemaphoreTraits-Struktur](../windows/semaphoretraits-structure.md)
+
+Releases-Steuerelement eine gemeinsam genutzte Ressource.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+inline static void Unlock(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*h*  
+Handle für ein **Semaphor** Objekt.
+
+## <a name="remarks"></a>Hinweise
+
+Wenn sich "Entsperren"-Vorgangs nicht erfolgreich ist **Unlock()** gibt einen Fehler, der die Ursache des Fehlers angibt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Siehe auch
+
+[SemaphoreTraits-Struktur](../windows/semaphoretraits-structure.md)

@@ -1,5 +1,5 @@
 ---
-title: CTooltipManager Klasse | Microsoft Docs
+title: CTooltipManager-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d0cb0774af7c1c900f31b4e83bb03dba8bd255
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 9de39d2054f3c75e00e8827ebb4aaefac9970d59
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121085"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538312"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager-Klasse
 Verwaltet Laufzeitinformationen über QuickInfos. Die `CTooltipManager` -Klasse wird einmal pro Anwendung instanziiert.  
@@ -55,7 +55,7 @@ class CTooltipManager : public CObject
 |[CTooltipManager::UpdateTooltips](#updatetooltips)||  
   
 ## <a name="remarks"></a>Hinweise  
- Verwendung [CMFCToolTipCtrl Klasse](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, und `CTooltipManager` zusammen, um benutzerdefinierte QuickInfos in Ihrer Anwendung zu implementieren. Ein Beispiel zur Verwendung dieser QuickInfo-Klassen finden Sie unter der [CMFCToolTipCtrl Klasse](../../mfc/reference/cmfctooltipctrl-class.md) Thema.  
+ Verwendung [CMFCToolTipCtrl-Klasse](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, und `CTooltipManager` zusammen, um benutzerdefinierte QuickInfos in Ihrer Anwendung zu implementieren. Ein Beispiel zur Verwendung dieser QuickInfo-Klassen finden Sie unter den [CMFCToolTipCtrl-Klasse](../../mfc/reference/cmfctooltipctrl-class.md) Thema.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -77,36 +77,36 @@ static BOOL CreateToolTip(
   
 ### <a name="parameters"></a>Parameter  
  [out] *pToolTip*  
- Ein Verweis auf ein QuickInfo-Zeiger. Es wird festgelegt, um auf die neu erstellte QuickInfo zu verweisen, wenn die Funktion zurückgibt.  
+ Ein Verweis auf ein QuickInfo-Zeiger. Es wird festgelegt, um auf die neu erstellte QuickInfo zu verweisen, bei Rückgabe der Funktion.  
   
  [in] *pWndParent*  
  Übergeordnete Element der QuickInfo.  
   
- [in] *%nbenachrichtigungen zu*  
+ [in] *nType*  
  Der Typ der QuickInfo.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Wert ungleich NULL, wenn eine QuickInfo erfolgreich erstellt wurde.  
+ Ungleich NULL, wenn eine QuickInfo wurde erfolgreich erstellt wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie [CTooltipManager::DeleteToolTip](#deletetooltip) das QuickInfo-Steuerelement zu löschen, die in zurückgegeben wird *pToolTip*.  
+ Rufen Sie [CTooltipManager::DeleteToolTip](#deletetooltip) So löschen Sie das QuickInfo-Steuerelement, das zurück übergeben wird *pToolTip*.  
   
- Die [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) legt die visuelle Darstellung-Parameter, der jede QuickInfo, die sie erstellt auf der QuickInfo Grundlage eingeben, *%nbenachrichtigungen zu* angibt. Um die Parameter für einen oder mehrere Typen von QuickInfo zu ändern, rufen [ctooltipmanager:: Settooltipparams](#settooltipparams).  
+ Die [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) legt die visuelle Darstellung-Parameter, der jede QuickInfo erstellt auf der QuickInfo Grundlage eingeben, die *nType* angibt. Um die Parameter für einen oder mehrere QuickInfo-Typen zu ändern, rufen [ctooltipmanager:: Settooltipparams](#settooltipparams).  
   
- Gültige QuickInfo-Typen sind in der folgenden Tabelle aufgeführt:  
+ Gültige QuickInfo-Typen werden in der folgenden Tabelle aufgelistet:  
   
-|QuickInfo-Typ|Steuerelement-Kategorie|Beispieltypen|  
+|QuickInfo-Typ|Kategorie "Steuerelement"|Beispieltypen|  
 |------------------|----------------------|-------------------|  
 |AFX_TOOLTIP_TYPE_BUTTON|Eine Schaltfläche.|CMFCButton|  
-|AFX_TOOLTIP_TYPE_CAPTIONBAR|Eine Titelleiste.|CMFCCaptionBar|  
-|AFX_TOOLTIP_TYPE_DEFAULT|Jedes Steuerelement, das nicht eine der anderen Kategorien passen.|Keine|  
-|AFX_TOOLTIP_TYPE_DOCKBAR|Ein andockbares Fenster.|CDockablePane|  
+|AFX_TOOLTIP_TYPE_CAPTIONBAR|Titelleiste.|CMFCCaptionBar|  
+|AFX_TOOLTIP_TYPE_DEFAULT|Jedes Steuerelement, das nicht mit einer anderen Kategorie passt.|Keine|  
+|AFX_TOOLTIP_TYPE_DOCKBAR|Einen andockbaren Bereich.|CDockablePane|  
 |AFX_TOOLTIP_TYPE_EDIT|Ein Textfeld.|Keine|  
-|AFX_TOOLTIP_TYPE_MINIFRAME|Eine Miniframe.|CPaneFrameWnd|  
-|AFX_TOOLTIP_TYPE_PLANNER|Ein Planer.|Keine|  
-|AFX_TOOLTIP_TYPE_RIBBON|Eine menübandleiste.|CMFCRibbonBar CMFCRibbonPanelMenuBar|  
+|AFX_TOOLTIP_TYPE_MINIFRAME|Ein Benutzer.|CPaneFrameWnd|  
+|AFX_TOOLTIP_TYPE_PLANNER|Eine Planner.|Keine|  
+|AFX_TOOLTIP_TYPE_RIBBON|Eine menübandleiste.|CMFCRibbonBar, CMFCRibbonPanelMenuBar|  
 |AFX_TOOLTIP_TYPE_TAB|Ein Registerkarten-Steuerelement.|CMFCTabCtrl|  
-|AFX_TOOLTIP_TYPE_TOOLBAR|Eine Symbolleiste.|CMFCToolBar CMFCPopupMenuBar|  
+|AFX_TOOLTIP_TYPE_TOOLBAR|Eine Symbolleiste.|CMFCToolBar, CMFCPopupMenuBar|  
 |AFX_TOOLTIP_TYPE_TOOLBOX|Eine Toolbox.|Keine|  
   
 ##  <a name="deletetooltip"></a>  CTooltipManager::DeleteToolTip  
@@ -118,13 +118,13 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
   
 ### <a name="parameters"></a>Parameter  
  [in, out] *pToolTip*  
- Ein Verweis auf einen Zeiger zu einer QuickInfo, die gelöscht werden.  
+ Ein Verweis auf einen Zeiger auf eine QuickInfo ein, die zerstört werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode für jede [CToolTipCtrl-Klasse](../../mfc/reference/ctooltipctrl-class.md) erstellte [CTooltipManager::CreateToolTip](#createtooltip). Das übergeordnete Steuerelement sollte rufen diese Methode aus der `OnDestroy` Handler. Dies ist erforderlich, die QuickInfo ordnungsgemäß aus dem Framework zu entfernen. Diese Methode legt *pToolTip* auf NULL vor dem zurückgeben.  
+ Rufen Sie diese Methode für die einzelnen [CToolTipCtrl-Klasse](../../mfc/reference/ctooltipctrl-class.md) erstellte [CTooltipManager::CreateToolTip](#createtooltip). Das übergeordnete Steuerelement sollten diese Methode aus Aufrufen seiner `OnDestroy` Handler. Dies ist erforderlich, um die QuickInfo aus dem Framework ordnungsgemäß zu entfernen. Diese Methode legt *pToolTip* auf NULL, bevor sie zurückkehrt.  
   
 ##  <a name="settooltipparams"></a>  Ctooltipmanager:: Settooltipparams  
- Passt die Darstellung der QuickInfo-Steuerelements für die angegebene Windows-Steuerelementtypen an.  
+ Passt die Darstellung der QuickInfo-Steuerelements für die angegebenen Windows-Steuerelementtypen.  
   
 ```  
 void SetTooltipParams(
@@ -138,17 +138,17 @@ void SetTooltipParams(
  Gibt die Steuerelementtypen an.  
   
  [in] *pRTC*  
- Benutzerdefinierte QuickInfo-Runtime-Klasse.  
+ Runtime-Klasse, der benutzerdefinierte QuickInfo angezeigt.  
   
  [in] *pParams*  
  QuickInfo-Parameter.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode legt die Laufzeitklasse und die ursprünglichen Parameter, die die [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) beim Erstellen von QuickInfos verwendet. Wenn ein Steuerelement ruft [CTooltipManager::CreateToolTip](#createtooltip) und übergibt in einer QuickInfo-Typ, einer der Typen erkennbar *nTypes*, der QuickInfo-Manager erstellt ein QuickInfo-Steuerelement, das eine Instanz von der Runtime-Klasse, die vom angegebenen *pRTC* und übergibt die Parameter, die vom angegebenen *pParams* auf die neue QuickInfo.  
+ Diese Methode legt die Runtime-Klasse und die ursprünglichen Parameter, die die [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) verwendet beim Erstellen von QuickInfos. Wenn ein Steuerelement ruft [CTooltipManager::CreateToolTip](#createtooltip) und übergibt in einer QuickInfo-Typ, eine der folgenden Datentypen von *nTypes*, der QuickInfo-Manager erstellt ein QuickInfo-Steuerelement, das eine Instanz von der Runtime-Klasse, die anhand des *pRTC* und übergibt die vom angegebenen Parametern *pParams* auf die neue QuickInfo.  
   
- Wenn Sie diese Methode aufrufen, alle vorhandenen Besitzer der QuickInfo die AFX_WM_UPDATETOOLTIPS Meldung aus, und sie müssen die QuickInfos neu erstellen, mit [CTooltipManager::CreateToolTip](#createtooltip).  
+ Wenn Sie diese Methode aufrufen, alle vorhandenen Besitzer der QuickInfo die AFX_WM_UPDATETOOLTIPS Meldung aus, und sie müssen ihre QuickInfos neu erstellen, mit [CTooltipManager::CreateToolTip](#createtooltip).  
   
- *nTypes* kann eine beliebige Kombination aus gültigen QuickInfo eingibt, [CTooltipManager::CreateToolTip](#createtooltip) verwendet, oder es kann AFX_TOOLTIP_TYPE_ALL sein. Wenn Sie AFX_TOOLTIP_TYPE_ALL übergeben, werden alle QuickInfo Berechtigungstypen beeinflusst.  
+ *nTypes* kann eine beliebige Kombination aus gültigen QuickInfo-Typen, die [CTooltipManager::CreateToolTip](#createtooltip) verwendet wird, oder er kann AFX_TOOLTIP_TYPE_ALL sein. Wenn Sie AFX_TOOLTIP_TYPE_ALL übergeben, sind alle Typen von QuickInfo betroffen.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie die `SetTooltipParams` Methode der `CTooltipManager` Klasse. Dieser Codeausschnitt ist Teil des [Draw Client-Beispiels](../../visual-cpp-samples.md).  
@@ -172,22 +172,22 @@ static void SetTooltipText(
  Ein Zeiger auf ein TOOLINFO-Objekt.  
   
  [in, out] *pToolTip*  
- Ein Zeiger auf das QuickInfo-Steuerelement für die den Text und die Beschreibung festgelegt.  
+ Ein Zeiger auf das QuickInfo-Steuerelement für die Text und Beschreibung festgelegt.  
   
- [in] *%nbenachrichtigungen zu*  
- Gibt den Typ des Steuerelements, der dieser QuickInfo zugeordnet ist.  
+ [in] *nType*  
+ Gibt den Typ des Steuerelements, das dieser QuickInfo zugeordnet ist.  
   
  [in] *StrText*  
- Der Text, der als QuickInfo-Text festgelegt.  
+ Der Text als QuickInfo-Text festlegen.  
   
  [in] *LpszDescr*  
  Ein Zeiger auf die QuickInfo-Beschreibung. NULL kann sein.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Wert der *%nbenachrichtigungen zu* muss der gleiche Wert wie die *%nbenachrichtigungen zu* Parameter [CTooltipManager::CreateToolTip](#createtooltip) beim Erstellen der QuickInfo angezeigt.  
+ Der Wert des *nType* muss der gleiche Wert wie die *nType* Parameter [CTooltipManager::CreateToolTip](#createtooltip) beim Erstellen der QuickInfos.  
   
 ##  <a name="updatetooltips"></a>  CTooltipManager::UpdateTooltips  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 void UpdateTooltips();

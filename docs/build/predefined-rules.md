@@ -1,5 +1,5 @@
 ---
-title: Vordefinierte Regeln | Microsoft Docs
+title: Vordefinierte Regeln | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a21847bb9363099fa64825b45a90003de053da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52c9440a0320bbc59e5d2552a53e13fae5e29f05
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369759"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571870"
 ---
 # <a name="predefined-rules"></a>Vordefinierte Regeln
 Von vordefinierten Rückschlussregeln werden Befehls- und Optionenmakros von NMAKE verwendet.  
@@ -30,8 +30,8 @@ Von vordefinierten Rückschlussregeln werden Befehls- und Optionenmakros von NMA
 |----------|-------------|------------------------|--------------------|----------------------------|  
 |.asm.exe|$(AS) $(AFLAGS) $<|ml $<|Nein|x86|  
 |.asm.obj|$(AS) $(AFLAGS) /c $<|ml /c $<|ja|x86|  
-|.asm.exe|$(AS) $(AFLAGS) $<|ml64 $<|Nein|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|.asm.obj|$(AS) $(AFLAGS) /c $<|ml64 /c $<|ja|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|.asm.exe|$(AS) $(AFLAGS) $<|ml64 $<|Nein|x64|  
+|.asm.obj|$(AS) $(AFLAGS) /c $<|ml64 /c $<|ja|x64|  
 |.c.exe|$(CC) $(CFLAGS) $<|cl $<|nein|alle|  
 |.c.obj|$(CC) $(CFLAGS) /c $<|cl /c $<|ja|alle|  
 |.cc.exe|$(CC) $(CFLAGS) $<|cl $<|nein|alle|  

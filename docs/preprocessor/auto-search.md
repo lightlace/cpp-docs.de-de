@@ -1,5 +1,5 @@
 ---
-title: Auto_search | Microsoft Docs
+title: Auto_search | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5de12c9db3eec4fe84a93321bdb2d9d96d629ecd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6cea1e1fa31c21a399dace0a58983f97cc87988c
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33913043"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540431"
 ---
 # <a name="autosearch"></a>auto_search
 **C++-spezifisch**  
   
- Gibt an, dass, wenn auf eine Typbibliothek mit #import verwiesen wird und diese selbst auf eine andere Typbibliothek verweist, der Compiler einen impliziten #import für die andere Typbibliothek ausführen kann.  
+Gibt an, dass beim Verweis auf eine Typbibliothek mit `#import` selbst auf eine andere Typbibliothek verweist, und der Compiler ist möglich, eine implizite `#import` für die andere Typbibliothek.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,6 +37,7 @@ auto_search
 ## <a name="remarks"></a>Hinweise  
  **Ende C++-spezifisch**  
   
-## <a name="see-also"></a>Siehe auch  
- [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
- [#import-Direktive](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>Siehe auch 
+
+[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
+[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

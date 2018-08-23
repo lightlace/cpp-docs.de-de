@@ -1,5 +1,5 @@
 ---
-title: No_dual_interfaces | Microsoft Docs
+title: No_dual_interfaces | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8923adb4cf2e92d72bf656064c6de8fc66e2a91
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1e919e48b79c9fe98a7a33257ebd0f70061d788
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850781"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539595"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
 **C++-spezifisch**  
   
- Ändert die Art, mit der der Compiler Wrapperfunktionen für Methoden der dualen Schnittstelle generiert.  
+Ändert die Art, mit der der Compiler Wrapperfunktionen für Methoden der dualen Schnittstelle generiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,10 +35,12 @@ no_dual_interfaces
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Normalerweise ruft der Wrapper die Methode über die virtuelle Funktionstabelle für die Schnittstelle auf. Mit `no_dual_interfaces`, ruft der Wrapper stattdessen **IDispatch:: Invoke** zum Aufrufen der Methode.  
+ 
+Normalerweise ruft der Wrapper die Methode über die virtuelle Funktionstabelle für die Schnittstelle auf. Mit **No_dual_interfaces**, ruft der Wrapper stattdessen `IDispatch::Invoke` zum Aufrufen der Methode.  
   
- **Ende C++-spezifisch**  
+**Ende C++-spezifisch**  
   
 ## <a name="see-also"></a>Siehe auch  
- [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
- [#import-Direktive](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
+[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

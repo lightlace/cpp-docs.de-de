@@ -1,5 +1,5 @@
 ---
-title: Code_seg | Microsoft Docs
+title: Code_seg | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f958d1652f82f297ae530c1e24bdf331976e0dc0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 052e9a55d443fa263ecf8443c9e3933baeb1f3b8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839072"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538654"
 ---
 # <a name="codeseg"></a>code_seg
 Gibt das Textsegment an, in dem Funktionen in der OBJ-Datei gespeichert werden.  
@@ -35,37 +35,39 @@ Gibt das Textsegment an, in dem Funktionen in der OBJ-Datei gespeichert werden.
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die `code_seg`-Pragmadirektive steuert nicht die Platzierung von Objektcode, der für instanziierte Vorlagen generiert wird, oder von Code, der implizit vom Compiler generiert wird – beispielsweise spezielle Memberfunktionen. Wir empfehlen die Verwendung der [__declspec(code_seg(...)) ](../cpp/code-seg-declspec.md) -Attribut stattdessen, denn es Ihnen ermöglicht die Kontrolle über die Platzierung des gesamten Objektcodes. Dies umfasst vom Compiler generierten Code.  
+ 
+Die **Code_seg** Pragmaanweisung steuert nicht die Platzierung von Objektcode, der für instanziierte Vorlagen generiert, oder von Code, die implizit vom Compiler generiert werden – beispielsweise spezielle Memberfunktionen. Wir empfehlen die Verwendung der [__declspec(code_seg(...)) ](../cpp/code-seg-declspec.md) Attribut stattdessen, denn es Ihnen ermöglicht die Kontrolle über die Platzierung des gesamten Objektcodes. Dies umfasst vom Compiler generierten Code.  
   
- Ein *Segment* in einer OBJ-Datei ist ein benannter Codeblock, der Daten, die als eine Einheit in den Arbeitsspeicher geladen wird. Ein *Textsegment* ist ein Segment, das ausführbaren Code enthält. In diesem Artikel die Begriffe *Segment* und *Abschnitt* synonym verwendet werden.  
+Ein *Segment* in einer OBJ-Datei ist einem benannten Block von Daten, die als eine Einheit in den Speicher geladen wird. Ein *Textsegment* ist ein Segment, das ausführbaren Code enthält. In diesem Artikel die Begriffe *Segment* und *Abschnitt* werden synonym verwendet.  
   
- Die `code_seg`-Pragmadirektive teilt dem Compiler mit, allen nachfolgenden Objektcode von der Übersetzungseinheit in ein Textsegment mit dem Namen `segment-name` zu platzieren. Standardmäßig wird das Textsegment, dass für Funktionen in einer OBJ-Datei verwendet wird, .text genannt.  
+Die **Code_seg** Pragmaanweisung teilt dem Compiler mit allen nachfolgenden Objektcode von der Übersetzungseinheit in ein Textsegment mit dem Namen einfügen *Segment-Name*. Standardmäßig wird das Textsegment, dass für Funktionen in einer OBJ-Datei verwendet wird, .text genannt.  
   
- Eine `code_seg`-Pragmadirektive ohne Parameter setzt den Textsegmentname für den nachfolgenden Objektcode auf .text zurück.  
+Ein **Code_seg** Pragmaanweisung ohne Parameter setzt den textsegmentnamen für den nachfolgenden Objektcode auf .text zurück.  
   
- **Push** (optional)  
- Legt einen Datensatz auf den internen Compilerstapel. Ein **Push** kann ein `identifier` und `segment-name`.  
+*Push* (optional)  
+Legt einen Datensatz auf den internen Compilerstapel. Ein *Push* kann ein *Bezeichner* und *Segment-Name*.  
   
- **POP** (optional)  
- Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
+*POP* (optional)  
+Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
   
- `identifier` (optional)  
- Bei Verwendung mit **Push**, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit **pop**, Datensätze vom internen Stapel bis `identifier` entfernt wird; Wenn `identifier` befindet sich nicht im internen Stapel nichts per pop ausgelesen wird.  
+*Bezeichner* (optional)  
+Bei Verwendung mit *Push*, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit *pop*, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.  
   
- `identifier` ermöglicht, mehrere Datensätze mit nur einem per pop ausgelesen werden **pop** Befehl.  
+*Bezeichner* ermöglicht, mehrere Datensätze mit nur einem entfernen *pop* Befehl.  
   
- "`segment-name`" (optional)  
- Der Name eines Segments. Bei Verwendung mit **pop**, wird der Stapel geholt und `segment-name` wird zum aktiven textsegmentnamen.  
+"*Segment-Name*" (optional)  
+Der Name eines Segments. Bei Verwendung mit *pop*, wird das Element im Stapel geholt und *Segment-Name* wird von der aktiven textsegmentnamen.  
   
- "`segment-class`" (optional)  
- Ignoriert, aber eingeschlossen, um die Kompatibilität mit Versionen von C++ vor der Version 2.0 zu gewährleisten.  
+"*Segmentklasse*" (optional)  
+Ignoriert, aber eingeschlossen, um die Kompatibilität mit Versionen von C++ vor der Version 2.0 zu gewährleisten.  
   
- Sie können die [DUMPBIN. EXE-Datei](../build/reference/dumpbin-command-line.md) Anwendung OBJ-Dateien anzeigen. Versionen von DUMPBIN für jede unterstützte Zielarchitektur werden in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] eingeschlossen.  
+Sie können die [DUMPBIN. EXE-Datei](../build/reference/dumpbin-command-line.md) Anwendung zum Anzeigen der OBJ-Dateien. Versionen von DUMPBIN für jede unterstützte Zielarchitektur werden in Visual Studio enthalten.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird gezeigt, wie Sie mithilfe der Pragmadirektive `code_seg` steuern können, wo der Objektcode platziert wird:  
+
+Dieses Beispiel zeigt, wie Sie mit der **Code_seg** Pragma-Direktive, um zu steuern, wo der Objektcode platziert:  
   
-```  
+```cpp  
 // pragma_directive_code_seg.cpp  
 void func1() {                  // stored in .text  
 }  
@@ -86,10 +88,11 @@ int main() {
 }  
 ```  
   
- Eine Liste der Namen, die zum Erstellen eines Abschnitts nicht verwendet werden soll, finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md).  
+Eine Liste von Namen, die beim Erstellen eines Abschnitts nicht verwendet werden soll, finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md).  
   
- Sie können auch Abschnitte für initialisierte Daten angeben ([Data_seg](../preprocessor/data-seg.md)), nicht initialisierte Daten ([Bss_seg](../preprocessor/bss-seg.md)), und const-Variablen ([Const_seg](../preprocessor/const-seg.md)).  
+Sie können auch Abschnitte für initialisierte Daten angeben ([Data_seg](../preprocessor/data-seg.md)), nicht initialisierte Daten ([Bss_seg](../preprocessor/bss-seg.md)), und const-Variablen ([Const_seg](../preprocessor/const-seg.md)).  
   
 ## <a name="see-also"></a>Siehe auch  
- [code_seg (__declspec)](../cpp/code-seg-declspec.md)   
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[code_seg (__declspec)](../cpp/code-seg-declspec.md)   
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

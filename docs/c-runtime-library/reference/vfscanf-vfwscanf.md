@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b7194aa5b7c60b03e3701567ffdb236f32f0b3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e4a9c2d36ef8b60eed7b8277c39a8ca7ab998d9
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413270"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42573044"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 
@@ -72,13 +72,13 @@ Variablenargumentenliste.
 
 Jede dieser Funktionen gibt die Anzahl der Felder zurück, die erfolgreich konvertiert und zugewiesen wurden; der Rückgabewert umfasst keine Felder, die gelesen, aber nicht zugewiesen wurden. Ein Rückgabewert von 0 gibt an, dass keine Felder zugewiesen wurden. Wenn ein Fehler auftritt oder wenn das Ende des Dateistreams vor der ersten Konvertierung erreicht wird, des Rückgabewerts ist **EOF** für **Vfscanf** und **Vfwscanf**.
 
-Diese Funktionen überprüfen ihre Parameter. Wenn *Stream* oder *Format* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** auf **EINVAL**.
+Diese Funktionen überprüfen ihre Parameter. Wenn *Stream* oder *Format* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen zurück **EOF** und **Errno** zu **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Vfscanf** -Funktion liest Daten aus der aktuellen Position des *Stream* in die Speicherorte, die sich durch die *Arglist* Argumentliste. Jedes Argument in der Liste muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. *Format* steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie die *Format* Argument für **Scanf**; finden Sie unter [Scanf](scanf-scanf-l-wscanf-wscanf-l.md) für eine Beschreibung des *Format*.
+Die **Vfscanf** -Funktion liest Daten aus der aktuellen Position des *Stream* in die Speicherorte, die von erhalten die *Arglist* Argumentliste. Jedes Argument in der Liste muss ein Zeiger auf eine Variable eines Typs, der einem Typspezifizierer in entspricht *Format*. *Format* steuert die Interpretation der Eingabefelder und hat die gleiche form und Funktion wie der *Format* Argument für **Scanf**; finden Sie unter [Scanf](scanf-scanf-l-wscanf-wscanf-l.md) für eine Beschreibung der *Format*.
 
-**Vfwscanf** ist eine Breitzeichen-Version von **Vfscanf**; das Formatierungsargument **Vfwscanf** ist eine Breitzeichen-Zeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Vfscanf** Eingabe aus einem Unicode-Stream nicht unterstützt.
+**Vfwscanf** ist eine Breitzeichen-Version von **Vfscanf**; das Formatargument für **Vfwscanf** ist eine Breitzeichen-Zeichenfolge. Diese Funktionen verhalten sich identisch, wenn der Stream im ANSI-Modus geöffnet ist. **Vfscanf** unterstützt keine Eingabe aus einem unicodestream.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 

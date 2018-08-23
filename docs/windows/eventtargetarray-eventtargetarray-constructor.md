@@ -17,51 +17,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59753f592f099f80396f408fa531756ba91b308e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 2bbf6cb67973d7538aa7aea0d846cbadf030d585
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652538"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590651"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray-Konstruktor
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-EventTargetArray(  
-   _Out_ HRESULT* hr,  
-   size_t items  
-);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *HR*  
- Nach diesem Konstruktor-Vorgänge Parameter *hr* gibt an, ob das Array Zuordnung erfolgreich war oder nicht. Die folgende Tabelle enthält die möglichen Werte für *hr*.  
-  
- S_OK  
- Der Vorgang wurde erfolgreich ausgeführt.  
-  
- E_OUTOFMEMORY  
- Arbeitsspeicher konnte nicht für das Array zugeordnet werden.  
-  
- S_FALSE  
- Parameter *Elemente* ist kleiner als oder gleich 0 (null).  
-  
- *Elemente*  
- Die Anzahl der Elemente des Arrays zugewiesen werden.  
-  
-## <a name="remarks"></a>Hinweise  
- Initialisiert eine neue Instanz der dem **EventTargetArray** Klasse.  
-  
- **EventTargetArray** wird verwendet, um ein Array von Ereignishandlern in behalten eine `EventSource` Objekt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [EventTargetArray-Klasse](../windows/eventtargetarray-class.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+EventTargetArray(
+   _Out_ HRESULT* hr,
+   size_t items
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*HR*  
+Nach diesem Konstruktor-Vorgänge Parameter *hr* gibt an, ob das Array Zuordnung erfolgreich war oder nicht. Die folgende Tabelle enthält die möglichen Werte für *hr*.
+
+S_OK der Vorgang war erfolgreich.
+
+E_OUTOFMEMORY Arbeitsspeicher konnte nicht für das Array zugeordnet werden.
+
+S_FALSE Parameter *Elemente* ist kleiner als oder gleich 0 (null).
+
+*Elemente*  
+Die Anzahl der Elemente des Arrays zugewiesen werden.
+
+## <a name="remarks"></a>Hinweise
+
+Initialisiert eine neue Instanz der dem **EventTargetArray** Klasse.
+
+**EventTargetArray** wird verwendet, um ein Array von Ereignishandlern in behalten eine `EventSource` Objekt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[EventTargetArray-Klasse](../windows/eventtargetarray-class.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

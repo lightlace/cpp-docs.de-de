@@ -25,15 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 57ad4c5e9f119a7c9904376db4f77c35de4290f2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e176cc20dc3f6f13eb868133b99c0ce7e86d25c4
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337127"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572837"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl-Klasse
-Stellt eine Implementierung der [IConvertType](https://msdn.microsoft.com/library/ms715926.aspx) Schnittstelle.  
+Stellt eine Implementierung der [IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\)) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -73,7 +73,7 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IConvertType::CanConvert](https://msdn.microsoft.com/library/ms711224.aspx) in die *OLE DB-Programmierreferenz*.  
+ Finden Sie unter [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwendet OLE DB-Datenkonvertierung in `MSADC.DLL`.  

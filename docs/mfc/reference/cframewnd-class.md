@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2dee6c5157858fef2bd26101ac128ff3d53d23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337381"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539837"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd-Klasse
 Stellt die Funktionalität eines Windows-SDI-Rahmenfensters (Single Document Interface) bereit, wobei es sich um ein überlappendes oder ein Popupfenster handeln kann. Ebenfalls bereitgestellt werden Member zum Verwalten des Fensters.  
@@ -1010,7 +1010,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 ### <a name="remarks"></a>Hinweise  
  Wenn der Wert des der *nStyle* Parameter ungültig ist, im Debugmodus befindet und löst diese Methode bestätigt [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) im Releasemodus. Bei andere Laufzeitfehler, diese Methode Assertionen im Debugmodus befindet und löst eine Ausnahme, abgeleitet aus den [CException](../../mfc/reference/cexception-class.md) Klasse.  
   
- Diese Methode wirkt sich auf den Zustand des Menüs in Anwendungen für [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] und höher.  
+ Diese Methode wirkt sich auf den Zustand des Menüs in Anwendungen für Windows Vista und höher.  
   
 ##  <a name="setmessagetext"></a>  CFrameWnd::SetMessageText  
  Rufen Sie diese Funktion, um eine Zeichenfolge in der Statusleiste zu platzieren, das eine ID von 0 hat.  

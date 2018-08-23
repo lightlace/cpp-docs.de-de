@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8043ff1c25c08c6adcb640defba1bc967a2fb8b
-ms.sourcegitcommit: 66f4f12d3851c897ca69cf62da1697e95b2b97c2
+ms.openlocfilehash: bfc91d25e4c843eaa004b59eab076bcfbe188253
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39496557"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571386"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Installieren von C++-Unterstützung in Visual Studio
 
@@ -61,7 +61,7 @@ Weitere Informationen zu den freien Speicherplatz und den Anforderungen des Betr
 
    Beim ersten Ausführen von Visual Studio werden Sie aufgefordert, sich mit einem Microsoft Account anmelden. Wenn Sie über keins verfügen, können Sie es kostenloses erstellen. Sie müssen auch ein Design auswählen. Keine Sorge, Sie können ihn später ändern, wenn Sie möchten. 
 
-   Es dauert Visual Studio mehrere Minuten zum ersten Mal ausführen, sie vorzubereiten. So sieht es wie in der eine schnelle, die mit:
+   Es dauert Visual Studio mehrere Minuten auf vorzubereiten verwenden den ersten, die sie ausführen. So sieht es wie in der eine schnelle, die mit:
 
    ![Melden Sie sich bei Visual Studio 2017](../build/media/vscpp-quickstart-first-run.gif "melden Sie sich bei Visual Studio 2017")
 

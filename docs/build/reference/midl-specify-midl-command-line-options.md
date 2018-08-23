@@ -1,5 +1,5 @@
 ---
-title: -MIDL (Optionen für MIDL-Befehlszeile festlegen) | Microsoft Docs
+title: -MIDL (MIDL-Befehlszeilenoptionen angeben) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d125042041af1e20b6dfc4a02197c2124adbeb9a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b3f20fddd657d1e5e57caf65ecc8e2c52afbf12
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375187"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42571385"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Optionen für MIDL-Befehlszeile festlegen)
 ```  
@@ -37,12 +37,12 @@ ms.locfileid: "32375187"
  Dabei gilt:  
   
  `file`  
- Der Name der Datei, die mit [MIDL-Befehlszeilenoptionen](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
+ Der Name der Datei, die enthält [MIDL-Befehlszeilenoptionen](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
   
 ## <a name="remarks"></a>Hinweise  
- Bei allen Optionen für die Konvertierung einer IDL-Datei in eine TLB-Datei müssen im erhalten `file`; MIDL-Befehlszeilenoptionen können nicht in der Linker-Befehlszeile angegeben werden. / MIDL nicht angegeben ist, wird die MIDL-Compiler mit nur die Namen der IDL-Datei und keine anderen Optionen aufgerufen werden.  
+ Bei allen Optionen für die Konvertierung einer IDL-Datei in eine TLB-Datei zugewiesen werden, der `file`; MIDL-Befehlszeilenoptionen können nicht auf dem Linker Befehlszeile angegeben werden. Wenn/MIDL nicht angegeben ist, wird der MIDL-Compiler mit nur den IDL-Dateinamen und keine anderen Optionen aufgerufen werden.  
   
- Die Datei muss es sich um eine MIDL-Befehlszeilenoption pro Zeile enthalten.  
+ Die Datei sollte eine MIDL-Befehlszeilenoption pro Zeile enthalten.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
@@ -62,6 +62,6 @@ ms.locfileid: "32375187"
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Optionen des Linkers](../../build/reference/linker-options.md)   
  [/ IDLOUT (Namen der MIDL-Ausgabedateien)](../../build/reference/idlout-name-midl-output-files.md)   
- [/ IGNOREIDL (Attribute nicht in verarbeiten "MIDL")](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
+ [/ IGNOREIDL (keine Attribute in MIDL verarbeiten)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
  [/ TLBOUT (Name. TLB-Datei)](../../build/reference/tlbout-name-dot-tlb-file.md)   
  [Erstellen eines attributierten Programms](../../windows/building-an-attributed-program.md)

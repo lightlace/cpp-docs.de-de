@@ -1,5 +1,5 @@
 ---
-title: Komponente | Microsoft Docs
+title: Komponente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb453e8fe9d21c25292c4e5f94de90dcc67676a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d854212d8ca7ef1b347787bd66f6b498dad0f4b1
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849326"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539036"
 ---
 # <a name="component"></a>component
 Steuert das Sammeln von Browserinformationen oder Abhängigkeitsinformationen aus Quelldateien.  
@@ -31,67 +31,67 @@ Steuert das Sammeln von Browserinformationen oder Abhängigkeitsinformationen au
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      #pragma component( browser, { on | off }[, references [, name ]] )  
+#pragma component( browser, { on | off }[, references [, name ]] )  
 #pragma component( minrebuild, on | off )  
 #pragma component( mintypeinfo, on | off )  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
   
-## <a name="browser"></a>Browser  
- Sie können das Sammeln aktivieren oder deaktivieren, und Sie können angeben, dass bestimmte Namen beim Sammeln von Informationen ignoriert werden.  
+### <a name="browser"></a>Browser  
+Sie können das Sammeln aktivieren oder deaktivieren, und Sie können angeben, dass bestimmte Namen beim Sammeln von Informationen ignoriert werden.  
   
- Die Aktivierung oder Deaktivierung steuert das Sammeln von Browserinformationen ab dem nächsten Pragma. Zum Beispiel:  
+Die Aktivierung oder Deaktivierung steuert das Sammeln von Browserinformationen ab dem nächsten Pragma. Zum Beispiel:  
   
 ```  
 #pragma component(browser, off)  
 ```  
   
- Dieser Code stoppt das Sammeln von Browserinformationen durch den Compiler.  
+Dieser Code stoppt das Sammeln von Browserinformationen durch den Compiler.  
   
 > [!NOTE]
->  Aktiviert das Sammeln von Browserinformationen mit diesem Pragma [Browserinformationen muss zunächst aktiviert](../build/reference/building-browse-information-files-overview.md).  
+> So aktivieren auf das Sammeln von Browserinformationen mit diesem Pragma [Browseinformationen muss zunächst aktiviert werden](../build/reference/building-browse-information-files-overview.md).  
   
- Die **Verweise** Option kann verwendet werden, mit oder ohne die *Namen* Argument. Mit **Verweise** ohne *Namen* aktiviert oder deaktiviert das Sammeln von verweisen (andere Browserinformationen gesammelt werden allerdings weiterhin). Zum Beispiel:  
+Die `references` Option kann verwendet werden, mit oder ohne die *Namen* Argument. Mithilfe von `references` ohne *Namen* aktiviert oder deaktiviert das Sammeln von verweisen (andere Browserinformationen weiterhin gesammelt werden, jedoch werden). Zum Beispiel:  
   
 ```  
 #pragma component(browser, off, references)  
 ```  
   
- Dieser Code stoppt das Sammeln von Verweisinformationen durch den Compiler.  
+Dieser Code stoppt das Sammeln von Verweisinformationen durch den Compiler.  
   
- Mit **Verweise** mit *Namen* und **deaktiviert** wird verhindert, dass Verweise auf *Namen* im Suchfenster Informationen angezeigt werden. Verwenden Sie die folgende Syntax, um Namen und Typen zu ignorieren, die für Sie nicht relevant sind, und die Größe von Browserinformationsdateien zu reduzieren. Zum Beispiel:  
+Mithilfe von `references` mit *Namen* und `off` wird verhindert, dass Verweise auf *Namen* im Suchfenster Informationen angezeigt werden. Verwenden Sie die folgende Syntax, um Namen und Typen zu ignorieren, die für Sie nicht relevant sind, und die Größe von Browserinformationsdateien zu reduzieren. Zum Beispiel:  
   
 ```  
 #pragma component(browser, off, references, DWORD)  
 ```  
   
- Verweise auf ignoriert **DWORD** ab diesem Punkt. Sie können das Sammeln von Verweisen auf aktivieren `DWORD` Sichern auf mit **auf**:  
+ignoriert Verweise auf DWORD ab diesem Punkt an. Sie können das Sammeln von Verweisen auf DWORD wieder über aktivieren `on`:  
   
 ```  
 #pragma component(browser, on, references, DWORD)  
 ```  
   
- Dies ist die einzige Möglichkeit zum Sammeln von Verweisen auf fortsetzen *Namen*; Sie müssen alle explizit aktivieren *Namen* , die Sie deaktiviert haben.  
+Dies ist die einzige Möglichkeit, setzen Sie fort, das Sammeln von Verweisen auf *Namen*; Sie müssen explizit aktivieren, auf einem *Namen* , die Sie deaktiviert haben.  
   
- Um zu verhindern, dass den Präprozessor erweitert *Namen* (beispielsweise bei der Erweiterung **NULL** auf **0**), Anführungszeichen setzen:  
+Um zu verhindern, dass den Präprozessor erweitert *Namen* (z. B. das Erweitern von NULL, 0), platzieren Sie Anführungszeichen:  
   
 ```  
 #pragma component(browser, off, references, "NULL")  
 ```  
   
-## <a name="minimal-rebuild"></a>Minimale Neuerstellung  
- Die minimale Wiederaufbaufunktion in Visual C++ erfordert, dass der Compiler C++-Klassenabhängigkeitsinformationen erstellt und speichert, wofür Speicherplatz benötigt wird. Um Speicherplatz zu sparen, können Sie `#pragma component( minrebuild, off )` Wenn es nicht erforderlich, Abhängigkeitsinformationen z. B. in unveränderlichen Headerdateien zu sammeln. Fügen Sie `#pragma component(minrebuild, on)` nach der Sicherung für unveränderlicher Klassen, die Auflistung von Abhängigkeiten zu aktivieren.  
+### <a name="minimal-rebuild"></a>Minimale Neuerstellung  
+Die minimale Wiederaufbaufunktion in Visual C++ erfordert, dass der Compiler C++-Klassenabhängigkeitsinformationen erstellt und speichert, wofür Speicherplatz benötigt wird. Um Speicherplatz zu sparen, können Sie `#pragma component( minrebuild, off )` jedes Mal, wenn Sie möchten keine Abhängigkeitsinformationen z. B. in unveränderlichen Headerdateien zu sammeln. Fügen Sie `#pragma component(minrebuild, on)` nach dem Sichern der unveränderlicher Klassen, aktivieren Sie die Auflistung von Abhängigkeiten auf.  
   
-## <a name="reduce-type-information"></a>Reduzieren von Typinformationen  
- Die **Mintypeinfo** Option reduziert die Debuginformationen für den angegebenen Bereich. Diese Informationen haben einen beträchtlichen Umfang und wirken sich auf PDB- und OBJ-Dateien aus. Sie können Klassen und Strukturen im mintypeinfo-Bereich nicht debuggen. Die Verwendung der mintypeinfo-Option kann hilfreich sein, um die folgende Warnung zu vermeiden:  
+### <a name="reduce-type-information"></a>Reduzieren von Typinformationen  
+Die `mintypeinfo` Option reduziert die Debuginformationen für den angegebenen Bereich. Diese Informationen haben einen beträchtlichen Umfang und wirken sich auf PDB- und OBJ-Dateien aus. Sie können Klassen und Strukturen im mintypeinfo-Bereich nicht debuggen. Die Verwendung der mintypeinfo-Option kann hilfreich sein, um die folgende Warnung zu vermeiden:  
   
 ```  
 LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subsequent type information  
 ```  
   
- Weitere Informationen finden Sie unter der [minimale Neuerstellung aktivieren](../build/reference/gm-enable-minimal-rebuild.md) (/ Gm)-Compileroption.  
+Weitere Informationen finden Sie unter den [minimale Neuerstellung aktivieren](../build/reference/gm-enable-minimal-rebuild.md) (/ Gm)-Compileroption.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

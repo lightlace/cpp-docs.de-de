@@ -1,5 +1,5 @@
 ---
-title: _AddressOfReturnAddress | Microsoft Docs
+title: _AddressOfReturnAddress | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bdfe58f5b42b4c06b3eda3f641bb9f2a4c628cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b0b259c730a7db343cc08ff077cf57043f292a6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326910"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538297"
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
 **Microsoft-spezifisch**  
   
- Enthält die Adresse des Speicherorts, der die Absenderadresse für die aktuelle Funktion enthält. Diese Adresse kann nicht verwendet werden, um den Zugriff auf andere Speicher-Speicherorte (z. B. die Argumente der Funktion).  
+ Enthält die Adresse des Speicherorts im Arbeitsspeicher, der die Absenderadresse für die aktuelle Funktion enthält. Diese Adresse kann nicht auf andere Speicherorte (z. B. die Argumente der Funktion) verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,12 +40,12 @@ void * _AddressOfReturnAddress();
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`_AddressOfReturnAddress`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_AddressOfReturnAddress`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn `_AddressOfReturnAddress` wird verwendet, in einem Programm kompiliert mit ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md), die Funktion mit der `_AddressOfReturnAddress` Aufruf als eine systemeigene Funktion kompiliert wird. Wenn eine Funktion kompiliert, als verwaltete Aufrufe an die Funktion mit `_AddressOfReturnAddress`, `_AddressOfReturnAddress` Verhalten sich möglicherweise nicht wie erwartet.  
+ Beim `_AddressOfReturnAddress` wird verwendet, in einem Programm mit kompiliert ["/ CLR"](../build/reference/clr-common-language-runtime-compilation.md), die Funktion, die `_AddressOfReturnAddress` Aufruf als eine native Funktion kompiliert wird. Wenn eine Funktion als kompiliert verwaltete Aufrufe an die Funktion mit `_AddressOfReturnAddress`, `_AddressOfReturnAddress` Verhalten sich ggf. nicht wie erwartet.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   

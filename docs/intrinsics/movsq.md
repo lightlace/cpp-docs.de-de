@@ -1,5 +1,5 @@
 ---
-title: __movsq | Microsoft Docs
+title: __movsq | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e0eacba00f9c0fb397b1fe37d2be8b108b6a59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0231c2514805479c0ec999698ebd027ab51e3119
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336972"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538858"
 ---
 # <a name="movsq"></a>__movsq
 **Microsoft-spezifisch**  
   
- Generiert eine Zeichenfolge mit einer wiederholten verschieben (`rep movsq`) Anweisung.  
+ Generiert eine Zeichenfolge mit einem wiederholten verschieben (`rep movsq`) Anweisung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,18 +48,18 @@ void __movsq(
  Die Quelle des Vorgangs.  
   
  [in] `Count`  
- Die Anzahl der Quadwort zu kopieren.  
+ Die Anzahl der Vierfachwörtern kopieren.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__movsq`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsq`|x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Das Ergebnis ist, die die erste `Count` Quadwort verweist `Source` kopiert werden, um die `Dest` Zeichenfolge.  
+ Das Ergebnis ist, die erste `Count` Vierfachwörtern verweist `Source` kopiert werden, um die `Dest` Zeichenfolge.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   

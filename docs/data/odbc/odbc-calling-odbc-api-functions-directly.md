@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 386bc03234ccb29b293a413944f221189f466c80
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c0bd8ade91e2e543e8ccf1c0a9b04525b8d81b43
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336594"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572746"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: Direktes Aufrufen von ODBC-API-Funktionen
 Die Datenbankklassen bieten eine einfachere Schnittstelle zu einem [Datenquelle](../../data/odbc/data-source-odbc.md) als ODBC ist. Daher sind die Klassen nicht alle ODBC-API kapseln. Für alle Funktionen, die außerhalb der Fähigkeiten der Klassen liegt, müssen Sie ODBC API-Funktionen direkt aufrufen. Sie müssen z. B. den ODBC-Katalogfunktionen aufrufen (`::SQLColumns`, `::SQLProcedures`, `::SQLTables`, usw.) direkt.  
@@ -48,7 +48,7 @@ Die Datenbankklassen bieten eine einfachere Schnittstelle zu einem [Datenquelle]
   
 -   Wenn Sie fertig sind, heben Sie die Zuordnung "Storage".  
   
- Weitere Informationen zu diesen Schritten finden Sie unter den [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/library/ms710252.aspx) -SDK in der MSDN-Dokumentation.  
+ Weitere Informationen zu diesen Schritten finden Sie unter den [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) -SDK in der MSDN-Dokumentation.  
   
  Zusätzlich zu diesen Schritten müssen Sie auch zusätzliche Schritte zum Überprüfen von Rückgabewerten der Funktion, stellen Sie sicher, dass das Programm nicht wartet, für einen asynchronen Aufruf abzuschließen, und so weiter. Sie können diese letzten Schritte vereinfachen, mit der AFX_SQL_ASYNC und AFX_SQL_SYNC-Makros. Weitere Informationen finden Sie unter [Makros und Globals](../../mfc/reference/mfc-macros-and-globals.md) in die *MFC-Referenz*.  
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: af146c37490d86a839f717d387c4072fbd649a87
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 425d404272ad21ad5c732a4db210379eedc7515f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339435"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575475"
 ---
 # <a name="ole-db-templates"></a>OLE DB-Vorlagen
 Der OLE DB-Vorlagen erleichtern das OLE DB-Datenzugriff. Visual C++ bietet Vorlagenklassen, die viele häufig verwendeten OLE DB-Schnittstellen implementieren. Sie können die Visual C++-Consumervorlagen zum Schreiben einer OLE DB-Client (Consumer)-Anwendung und die Anbietervorlagen zum Schreiben einer Serveranwendung (Provider) verwenden.  
@@ -38,7 +38,7 @@ Der OLE DB-Vorlagen erleichtern das OLE DB-Datenzugriff. Visual C++ bietet Vorla
  [Übersicht über die OLE DB-Programmierung](../../data/oledb/ole-db-programming-overview.md)  
  Informationen zu Neuheiten OLE DB und erläutert, Universal Data Access in der OLE DB.  
   
- [OLE DB-Programmierreferenz](https://msdn.microsoft.com/library/ms713643.aspx)  
+ [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\))  
  Enthält Links zur Windows-SDK-Dokumentation über OLE DB.  
   
  [Beispiele für OLE DB-Vorlagen](../../visual-cpp-samples.md)  

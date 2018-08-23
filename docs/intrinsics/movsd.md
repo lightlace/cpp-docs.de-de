@@ -1,5 +1,5 @@
 ---
-title: __movsd | Microsoft Docs
+title: __movsd | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 802e3845e72516e6dd0f09fd2a350a65565cd502
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 659da66ea74088247a9eb46ae25f9920050719a1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326923"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539256"
 ---
 # <a name="movsd"></a>__movsd
 **Microsoft-spezifisch**  
@@ -48,18 +48,18 @@ void __movsd(
  Die Quelle des Vorgangs.  
   
  [in] `Count`  
- Die Anzahl der Doppelwort zu kopieren.  
+ Die Anzahl der Doppelwort kopieren.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__movsd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsd`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Das Ergebnis ist, die die erste `Count` Doppelwort verweist `Source` kopiert werden, um die `Dest` Zeichenfolge.  
+ Das Ergebnis ist, die erste `Count` die zeigt Doppelwort `Source` kopiert werden, um die `Dest` Zeichenfolge.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   

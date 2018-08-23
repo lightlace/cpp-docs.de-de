@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerVS2005 Klasse | Microsoft Docs
+title: CMFCVisualManagerVS2005-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7282730779360ecc0bb93f0ae827b46ddff19d0
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e3ce4384ebce3140f8d3ccadf781f3d45b92340b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038060"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538660"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005-Klasse
-`CMFCVisualManagerVS2005` ermöglicht es einer Anwendung eine Microsoft Visual Studio 2005-Darstellung.  
+`CMFCVisualManagerVS2005` Ermöglicht es einer Anwendung eine Microsoft Visual Studio 2005-Darstellung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -70,8 +70,8 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|Das Framework ruft diese Methode auf, wenn es sich um einen Bereich zeichnet, der im Registerformat und angedockt ist. (Überschreibt [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|  
-|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|Das Framework ruft diese Methode, um der Border Size eines Fensters MDITabs bestimmen, bevor sie das Fenster zeichnet. (Überschreibt [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|  
+|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|Das Framework ruft diese Methode auf, wenn es sich um einen Bereich zeichnet, der im Registerkartenformat und angedockt ist. (Überschreibt [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|  
+|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|Das Framework ruft diese Methode, um die Rahmenstärke eines Fensters MDITabs zu ermitteln, bevor sie das Fenster zeichnet. (Überschreibt [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|  
 |[CMFCVisualManagerVS2005::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|(Überschreibt [CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor).)|  
 |[CMFCVisualManagerVS2005::GetTabFrameColors](#gettabframecolors)|(Überschreibt [CMFCVisualManagerOffice2003::GetTabFrameColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors).)|  
 |[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|Gibt zurück, ob der automatisch ausblendbaren Schaltflächen in der aktuellen visuellen Manager überlappen. (Überschreibt [CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons).)|  
@@ -88,12 +88,12 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(Überschreibt [CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors).)|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie die CMFCVisualManagerVS2005-Klasse so ändern Sie die visuelle Darstellung der Anwendung zu entsprechen, die von der [!INCLUDE[vsprvsext](../../mfc/reference/includes/vsprvsext_md.md)].  
+ Sie verwenden die CMFCVisualManagerVS2005-Klasse so ändern Sie die visuelle Darstellung Ihrer Anwendung, die von der Microsoft Visual Studio 2005 ähneln.  
   
- Alle Member dieser Klasse werden virtuelle Funktionen, die von der Vorgänger dieser Klasse abgeleitet sind [CMFCVisualManager Klasse](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Alle Member dieser Klasse sind virtuelle Funktionen, die von den Vorgänger dieser Klasse abgeleitet sind [CMFCVisualManager-Klasse](../../mfc/reference/cmfcvisualmanager-class.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie die visuellen Manager Visual Studio 2005 verwenden. Dieser Codeausschnitt ist Teil der [Desktop Warnung Demobeispiel](../../visual-cpp-samples.md).  
+ Im folgende Beispiel wird veranschaulicht, wie mit den visuellen Manager VS 2005. Dieser Codeausschnitt ist Teil der [Desktop Warnung Demobeispiel](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]  
   

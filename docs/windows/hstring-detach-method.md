@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21bfc0516fdcdf3287c5ce2a0203038e88cd290f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 4b794dea5c8b3b0fcde82c414e0cf24710cafb86
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015554"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602496"
 ---
 # <a name="hstringdetach-method"></a>HString::Detach-Methode
-Hebt die Zuordnung der angegebenen **HString** Objekt von seinem zugrunde liegenden Wert.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
+
+Hebt die Zuordnung der angegebenen **HString** Objekt von seinem zugrunde liegenden Wert.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 HSTRING Detach() throw()  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die zugrunde liegende **HString** Wert vor dem Trennvorgang gestartet.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HString-Klasse](../windows/hstring-class.md)
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Die zugrunde liegende **HString** Wert vor dem Trennvorgang gestartet.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HString-Klasse](../windows/hstring-class.md)

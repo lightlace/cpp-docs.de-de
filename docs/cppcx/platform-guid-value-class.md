@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: GUID-Wertklasse | Microsoft Docs'
+title: 'Platform:: GUID-Wertklasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 102585cf7148923f584591102712278847ee7573
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089450"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601253"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid-Wertklasse
 Stellt einen [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) -Typ im Windows Runtime-Typsystem dar.  
@@ -42,12 +42,12 @@ public value struct Guid
 |[Operator()](#operator-call)|Konvertiert ein GUID in ein GUID.|  
   
 ### <a name="remarks"></a>Hinweise  
- Ein Beispiel für das Generieren einer neuen Platform::Guid mithilfe der Windows-Funktion [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx)finden Sie unter [WinRT-Komponente: Wie generiert man eine GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
+ Ein Beispiel für eine neue Platform:: GUID mithilfe der Windows-Funktion [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), finden Sie unter [WinRT-Komponente: wie generiert eine GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)  
   
 ### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
+ **Unterstützter Client (Min.):** Windows 8  
   
- **Unterstützter Server:** Windows Server 2012  
+ **Unterstützter Server (Min.):** Windows Server 2012  
   
  **Namespace:** Platform  
   
@@ -134,7 +134,7 @@ Platform::Guid::operator==
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- "True", wenn zwei Guids identisch sind.
+ True, wenn zwei Guids identisch sind.
 
 ## <a name="operator-inequality"></a> GUID::Operator! =-Operator
 Vergleicht zwei Guids.  
@@ -146,7 +146,7 @@ Platform::Guid::operator!=
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- "True", wenn zwei Guids nicht gleich sind.
+ True, wenn die zwei Guids nicht gleich sind.
 
 
 
@@ -164,4 +164,4 @@ Platform::Guid operator()
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)
+ [Platform-namespace](../cppcx/platform-namespace-c-cx.md)

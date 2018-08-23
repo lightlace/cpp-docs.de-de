@@ -1,5 +1,5 @@
 ---
-title: MFC-ODBC-Consumer-Assistenten | Microsoft Docs
+title: MFC-ODBC-Consumer-Assistent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,59 +17,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8a707df6878cd0031cb2ec9b06285e568503992
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39a8a2b4c1ef915e98f2f646ad3764a7ab55f7af
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371423"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540041"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC-ODBC-Consumer-Assistent
-"Suchergebnisse" Zusammenfassung hier einfügen.  
+Fügen Sie hier "Suchergebnisse" Zusammenfassung.  
   
  Dieser Assistent richtet eine ODBC-Recordset-Klasse und datenbindungen, die zum Zugriff auf die angegebene Datenquelle.  
   
 ## <a name="uielement-list"></a>UIElement-Liste  
  **Datenquelle**  
- Die **Datenquelle** Schaltfläche können Sie die angegebene Datenquelle mit dem angegebenen ODBC-Treiber einrichten. Weitere Informationen zu Datenquellendateien (DSN), finden Sie unter [Dateidatenquellen](https://msdn.microsoft.com/library/ms715401.aspx) im ODBC-SDK. Die **Auswählen einer Datenquelle** Dialogfeld verfügt über zwei Registerkarten:  
+ Die **Datenquelle** Schaltfläche können Sie festlegen, um die angegebene Datenquelle, die mit dem angegebenen ODBC-Treiber. Weitere Informationen zu Datenquellendateien (DSN), finden Sie unter [Dateidatenquellen](/previous-versions/windows/desktop/ms715401\(v=vs.85\)) im ODBC-SDK. Die **Auswählen einer Datenquelle** Dialogfeld verfügt über zwei Registerkarten:  
   
--   **Dateidatenquelle** Registerkarte: die **Suchen in** Feld gibt das Verzeichnis, in dem Auswählen von Dateien, die als Datenquellen verwendet werden. Der Standardwert ist \Programme\Gemeinsame Dateien\ODBC\Data Sources. Die vorhandenen Dateidatenquellen (DSN-Dateien) werden im Hauptfenster Listenfeld angezeigt. Sie können entweder Einrichten der Datenquellen mit der **Datei-DSN** Registerkarte die [ODBC-Datenquellen-Administrator](https://msdn.microsoft.com/library/ms714024.aspx), oder neue erstellen mithilfe dieses Dialogfelds.  
+-   **Datei-Datenquelle** Registerkarte: die **Suchen in** Feld gibt das Verzeichnis, wählen Sie die Dateien als Datenquellen verwendet werden soll. Der Standardwert ist \Programme\Gemeinsame Dateien\ODBC\Data Sources. Die vorhandene Datei-Datenquellen (DSN-Dateien) werden in der wichtigsten Listenfelder angezeigt. Können Sie entweder die Datenquellen vor der Nutzung der **Datei-DSN** Registerkarte die [ODBC-Datenquellenadministrator](/previous-versions/windows/desktop/ms714024\(v=vs.85\)), oder erstellen Sie mithilfe dieses Dialogfelds neue.  
   
-     In diesem Dialogfeld eine neue Datenquelle erstellen, klicken Sie auf `New` zum Angeben eines Namens DSN; die **neue Datenquelle erstellen** Dialogfeld wird angezeigt. In der **neue Datenquelle erstellen** Dialogfeld Feld, wählen Sie einen geeigneten Treiber aus, und klicken Sie auf `Next`; klicken Sie auf **Durchsuchen**, und wählen Sie den Namen der Datei, die als Datenquelle verwendet werden (Sie haben "Alle Dateien" auswählen keine DSN-Dateien anzeigen, z. B. xls-Dateien); Klicken Sie auf `Next`, und klicken Sie dann auf **Fertig stellen**. (Wenn Sie eine nicht-DSN-Datei ausgewählt haben, erhalten Sie ein Dialogfeld treiberspezifische, z. B. "ODBC Microsoft Excel Setup" die Datei in einem DSN konvertiert wird.)  
+     In diesem Dialogfeld eine neue Datenquelle erstellen, klicken Sie auf `New` an einen DSN-Namen, den **neue Datenquelle erstellen** Dialogfeld wird angezeigt. In der **neue Datenquelle erstellen** Dialogfeld Feld, wählen Sie einen geeigneten Treiber aus, und klicken Sie auf `Next`; klicken Sie auf **Durchsuchen**, und wählen Sie den Namen der Datei, die als Datenquelle verwendet werden (Sie haben "Alle Dateien" auswählen keine DSN-Dateien anzeigen, wie z. B. xls-Dateien); Klicken Sie auf `Next`, und klicken Sie dann auf **Fertig stellen**. (Wenn Sie eine nicht-DSN-Datei ausgewählt haben, erhalten Sie ein Dialogfeld treiberspezifische, z. B. "ODBC Microsoft Excel Setup" die Datei in einem DSN konvertiert.)  
   
     > [!NOTE]
-    >  Sie können auch eine neue Datei-Datenquelle, die vorher mit dem ODBC-Datenquellen-Administrator erstellen. Aus der **starten** klicken Sie im Menü **Einstellungen**, **Systemsteuerung**, **Verwaltung**, **Datenquellen (ODBC)**, und klicken Sie dann **ODBC-Datenquellenadministrator**.  
+    >  Sie können auch eine neue Datei-Datenquelle, die zuvor mit der ODBC-Datenquellen-Administrator erstellen. Von der **starten** , wählen Sie im Menü **Einstellungen**, **Systemsteuerung**, **Verwaltung**, **Datenquellen (ODBC)**, und klicken Sie dann **ODBC-Datenquellenadministrator**.  
   
-     Die **DSN-Name** das können Sie einen Namen für die Datei als Datenquelle angeben. Sie müssen sicherstellen, dass der DSN-Name mit der entsprechenden Dateierweiterung, z. B. xls für Excel-Dateien oder MDB für den Zugriff auf Dateien endet.  
+     Die **DSN-Namen** im können Sie einen Namen für die Datei als Datenquelle angeben. Sie müssen sicherstellen, dass die entsprechende Dateierweiterung, z. B. xls für Excel-Dateien oder MDB für den Zugriff auf Dateien der DSN-Namen endet.  
   
-     Weitere Informationen zu DSNs, finden Sie unter [Dateidatenquellen](https://msdn.microsoft.com/library/ms715401.aspx) im ODBC-SDK.  
+     Weitere Informationen zu DSNs, finden Sie unter [Dateidatenquellen](/previous-versions/windows/desktop/ms715401\(v=vs.85\)) im ODBC-SDK.  
   
--   **Computer-Datenquelle** Registerkarte: auf dieser Registerkarte sind System- und Benutzerdatenquellen aufgelistet. Benutzerdatenquellen sind spezifisch für einen Benutzer auf diesem Computer. System-Datenquellen können von allen Benutzern, die auf diesem Computer oder auf einer systemweiten-Dienst verwendet werden. Finden Sie unter [Computer Datenquellen](https://msdn.microsoft.com/library/ms710952.aspx) in ODBC-SDK  
+-   **Computer-Datenquelle** Registerkarte: System- und Benutzerdatenquellen auf dieser Registerkarte aufgelistet. Benutzerdatenquellen sind spezifisch für einen Benutzer auf diesem Computer. System-Datenquellen können von allen Benutzern, die auf diesem Computer oder in einem systemweiten-Dienst verwendet werden. Finden Sie unter [Computerdatenquellen](/previous-versions/windows/desktop/ms710952\(v=vs.85\)) in ODBC-SDK  
   
- Weitere Informationen über ODBC-Datenquellen finden Sie unter [Datenquellen](https://msdn.microsoft.com/library/ms711688.aspx) im ODBC-SDK.  
+ Weitere Informationen zu ODBC-Datenquellen, finden Sie unter [Datenquellen](/previous-versions/windows/desktop/ms711688\(v=vs.85\)) im ODBC-SDK.  
   
- Klicken Sie auf **OK** um den Vorgang abzuschließen. Die **Datenbankobjekt auswählen** Dialogfeld wird angezeigt. Wählen Sie in diesem Dialogfeld die Tabelle oder Sicht, die vom Consumer verwendet wird. Beachten Sie, dass Sie mehrere Sichten und Tabellen auswählen können, indem Sie die Steuerelement-Taste gedrückt halten, während Sie auf die Elemente auf.  
+ Klicken Sie auf **OK** um den Vorgang abzuschließen. Die **Datenbankobjekt auswählen** Dialogfeld wird angezeigt. Wählen Sie in diesem Dialogfeld die Tabelle, oder zeigen Sie an, die vom Consumer verwendet wird. Beachten Sie, dass Sie mehrere Ansichten und Tabellen auswählen können, durch die Control-Taste gedrückt halten, während Sie auf die Elemente auf.  
   
  **Klasse**  
- Der Name der Consumerklasse, die standardmäßig anhand des Namens der Datei oder der Computer-Datenquelle, die Sie ausgewählt haben.  
+ Der Name der Consumerklasse, die standardmäßig anhand des Namens der Datei oder der Computer-Datenquelle, die Sie ausgewählt.  
   
- **.h-Datei**  
- Der Name der Headerdatei der Consumer, der standardmäßig anhand des Namens der Datei oder der Computer-Datenquelle, die Sie ausgewählt haben.  
+ **H-Datei**  
+ Der Name der Headerdatei der Consumer, der standardmäßig anhand des Namens der Datei oder der Computer-Datenquelle, die Sie ausgewählt.  
   
  **CPP-Datei**  
- Der Name der Implementierungsdatei der Consumer, der standardmäßig anhand des Namens der Datei oder der Computer-Datenquelle, die Sie ausgewählt haben.  
+ Der Name der Implementierungsdatei die Consumer, der standardmäßig anhand des Namens der Datei oder der Computer-Datenquelle, die Sie ausgewählt.  
   
  **Type**  
  Gibt an, ob das Recordset ein Dynaset (Standard) oder eine Momentaufnahme ist.  
   
--   **Dynaset**: Gibt an, dass das Recordset ein Dynaset ist. Ein Dynaset ist das Ergebnis einer Abfrage, die eine indizierte Sicht in der abgefragten Datenbank Daten bereitstellt. Ein Dynaset wird lediglich einen integralen Index auf die ursprünglichen Daten zwischengespeichert, und daher Leistungsvorteile gegenüber einer Momentaufnahme erhalten. Der Index-verweist direkt auf jeden Datensatz gefunden, die als Ergebnis einer Abfrage und gibt an, ob ein Eintrag entfernt wird. Sie haben auch Zugriff auf aktualisierte Informationen in den abgefragten Datensätzen. Dies ist die Standardeinstellung.  
+-   **Dynaset**: Gibt an, dass das Recordset ein Dynaset ist. Ein Dynaset ist das Ergebnis einer Abfrage, die eine indizierte Sicht in der abgefragten Datenbank Daten bereitstellt. Ein Dynaset speichert nur ganzzahligen Index für die ursprünglichen Daten, und daher Leistungsvorteile erhalten, über eine Momentaufnahme aus. Die Index-verweist direkt auf jeden Datensatz gefunden, die als Ergebnis einer Abfrage und gibt an, ob ein Eintrag entfernt wird. Sie haben auch Zugriff auf aktualisierte Informationen in den abgefragten Einträgen an. Dies ist die Standardeinstellung.  
   
--   **Momentaufnahme**: Gibt an, dass das Recordset eine Momentaufnahme ist. Eine Momentaufnahme ist das Ergebnis einer Abfrage und einen Einblick in einer Datenbank an einem Punkt zeitlich ist. Alle Datensätze, die als Ergebnis der Abfrage gefunden werden zwischengespeichert, sodass keine Änderungen an den ursprünglichen Datensätzen angezeigt.  
+-   **Momentaufnahme**: Gibt an, dass das Recordset eine Momentaufnahme ist. Eine Momentaufnahme ist das Ergebnis einer Abfrage und einen Einblick in einer Datenbank an einem bestimmten Punkt ist, in Zeit. Alle Datensätze gefunden wurden, als Ergebnis der Abfrage werden zwischengespeichert, sodass keine Änderungen an den ursprünglichen Datensätzen angezeigt wird.  
   
- **Alle Spalten binden**  
- Gibt an, ob alle Spalten in der ausgewählten Tabelle gebunden sind. Wenn Sie dieses Kontrollkästchen (Standard) auswählen, werden alle Spalten gebunden. Wenn Sie dieses Kontrollkästchen nicht aktivieren, werden keine Spalten gebunden, und Sie müssen diese manuell in die Recordset-Klasse binden.  
+ **Binden Sie alle Spalten**  
+ Gibt an, ob alle Spalten in der ausgewählten Tabelle gebunden sind. Wenn Sie dieses Kontrollkästchen (Standard) auswählen, werden alle Spalten gebunden. Wenn Sie dieses Kontrollkästchen nicht auswählen, werden keine Spalten gebunden, und Sie müssen diese manuell in die Recordset-Klasse binden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-ODBC-nutzen](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
- [Hinzufügen neuer Funktionen mit Code-Assistenten](../../ide/adding-functionality-with-code-wizards-cpp.md)
+ [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)
 

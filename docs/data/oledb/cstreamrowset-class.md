@@ -38,12 +38,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b9f1c7aef4116ae057d771e66b5027c5783f64e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2a8e4af6e85dbfa3b617471b592f806ae1ef5548
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338011"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571966"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset-Klasse
 Verwendet eine `CCommand` oder `CTable` Deklaration.  
@@ -69,7 +69,7 @@ class CStreamRowset
 |||  
 |-|-|  
 |[CStreamRowset](#cstreamrowset)|Konstruktor. Instanziiert und initialisiert die `CStreamRowset` Objekt.|  
-|[Schließen](#close)|Versionen der [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx) Schnittstellenzeiger in der Klasse.|  
+|[Schließen](#close)|Versionen der [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) Schnittstellenzeiger in der Klasse.|  
   
 ## <a name="remarks"></a>Hinweise  
  Verwendung `CStreamRowset` in Ihre `CCommand` oder `CTable` Deklaration, z. B.:  
@@ -99,7 +99,7 @@ CStreamRowset();
 ```  
 
 ## <a name="close"></a> CStreamRowset:: Close
-Versionen der [ISequentialStream](https://msdn.microsoft.com/library/ms718035.aspx) Schnittstellenzeiger in der Klasse.  
+Versionen der [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\)) Schnittstellenzeiger in der Klasse.  
   
 ### <a name="syntax"></a>Syntax  
   

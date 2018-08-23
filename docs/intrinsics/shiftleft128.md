@@ -1,5 +1,5 @@
 ---
-title: __shiftleft128 | Microsoft Docs
+title: __shiftleft128 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc63cdd252e2acb23d8a6e842138d91e6c9b9c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3ca2c389b00126ff477b8e184d690afce07c484
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339994"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541027"
 ---
 # <a name="shiftleft128"></a>__shiftleft128
 **Microsoft-spezifisch**  
@@ -55,7 +55,7 @@ unsigned __int64 __shiftleft128(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__shiftleft128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__shiftleft128`|x64|  
   
  **Headerdatei** \<intrin.h >  
   

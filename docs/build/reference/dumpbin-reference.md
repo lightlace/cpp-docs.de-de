@@ -1,5 +1,5 @@
 ---
-title: DUMPBIN-Referenz | Microsoft Docs
+title: DUMPBIN-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,20 +20,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46d116ad1efde9ae144e17eb9a4ac2ad996add13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4858fe41db5e9a5ac6208881a045e7915b9bdfee
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372655"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572477"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN-Referenz
-Die Microsoft COFF-Binärdateidumper (DUMPBIN. EXE-Datei) zeigt Informationen zu den Binärdateien Common Object File Format (COFF). Verwenden von DUMPBIN COFF-Objektdateien, Standardbibliotheken von COFF-Objekten, ausführbaren Dateien und Dynamic Link Libraries (DLLs) untersuchen.  
+Die Microsoft COFF-Binärdateidumper (DUMPBIN. EXE-Datei) zeigt Informationen über Common Object File Format (COFF)-Binärdateien. Sie können DUMPBIN verwenden, um COFF-Objektdateien, standard-Bibliotheken von COFF-Objekten, ausführbaren Dateien und Dynamic Link Libraries (DLLs) zu überprüfen.  
   
 > [!NOTE]
->  Sie können dieses Tool nur von der [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]-Eingabeaufforderung aus starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.  
+>  Sie können dieses Tool nur über die Visual Studio-Eingabeaufforderung starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.  
   
- Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in den Dateien erstellt wird, mit der [/GL](../../build/reference/gl-whole-program-optimization.md) -Compileroption.  
+ Nur die [/Headers](../../build/reference/headers.md) DUMPBIN-Option ist verfügbar für die Verwendung in Dateien mit der ["/ GL"](../../build/reference/gl-whole-program-optimization.md) -Compileroption.  
   
 -   [DUMPBIN-Befehlszeile](../../build/reference/dumpbin-command-line.md)  
   

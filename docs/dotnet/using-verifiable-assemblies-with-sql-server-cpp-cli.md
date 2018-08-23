@@ -1,5 +1,5 @@
 ---
-title: Verwenden überprüfbarer Assemblys mit SQLServer (C + c++ / CLI) | Microsoft Docs
+title: Verwenden überprüfbarer Assemblys mit SQLServer (C++ / CLI) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,27 +15,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f172eea3108771e129636e9aa95d721d45c99609
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b35675ba0081ec4ea7a1c9559f9a8fb71347cd54
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168645"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583818"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Verwenden überprüfbarer Assemblys mit SQL Server (C++/CLI)
-Erweiterte gespeicherte Prozeduren, die als Dynamic Link Libraries (DLLs), verpackt bieten eine Möglichkeit zum Erweitern der Funktionalität von SQL Server über Funktionen, die mit Visual C++ entwickelt wurde. Erweiterte gespeicherte Prozeduren werden als Funktionen in DLLs implementiert. Zusätzlich zu den Funktionen, erweiterte gespeicherte Prozeduren können auch definieren [von benutzerdefinierten Typen](../cpp/classes-and-structs-cpp.md) und [Aggregatfunktionen](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (z. B. SUM oder AVG).  
+Erweiterte gespeicherte Prozeduren, die als Dynamic Link Libraries (DLLs), bieten Sie eine Möglichkeit zum Erweitern der Funktionalität von SQL Server über Funktionen, die mit Visual C++ entwickelt wurden. Erweiterte gespeicherte Prozeduren werden als Funktionen in DLLs implementiert. Zusätzlich zu Funktionen, erweiterte gespeicherte Prozeduren können auch definieren [-benutzerdefinierte Typen](../cpp/classes-and-structs-cpp.md) und [Aggregatfunktionen](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (z. B. SUM oder AVG).  
   
- Wenn ein Client eine erweiterte gespeicherte Prozedur ausgeführt wird, sucht SQL Server für die DLL der erweiterten gespeicherten Prozedur zugeordnet, und lädt diese DLL. SQL Server die angeforderte erweiterte gespeicherte Prozedur aufruft und in einem angegebenen Sicherheitskontext ausgeführt. Die erweiterte gespeicherte Prozedur, und klicken Sie dann übergibt Resultsets und Parameter an den Server zurückgegeben.  
+ Wenn ein Client eine erweiterte gespeicherte Prozedur ausgeführt wird, sucht SQL Server für die DLL der erweiterten gespeicherten Prozedur zugeordnet, und lädt die DLL. SQL Server die angeforderte erweiterte gespeicherte Prozedur aufruft und in einem angegebenen Sicherheitskontext ausgeführt. Die erweiterte gespeicherte Prozedur, und klicken Sie dann übergibt Ergebnis und Parameter an den Server gibt.  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] Stellt Erweiterungen in Transact-SQL (T-SQL), die überprüfbare Assemblys in SQL Server installieren können. Der SQL Server-Berechtigungssatz gibt den Sicherheitskontext an, mit der Sicherheit die folgenden Ebenen:  
+ SQL Server bietet Erweiterungen in Transact-SQL (T-SQL), damit Sie überprüfbare Assemblys in SQL Server installieren können. Der SQL Server-Berechtigungssatz gibt den Sicherheitskontext, mit den folgenden Ebenen der Sicherheit:  
   
--   Uneingeschränkt: Ausführen von Code auf eigenes Risiko; Code muss nicht überprüfbar typsicher sein.  
+-   Uneingeschränkten Modus: Ausführen von Code auf eigenes Risiko; Code muss nicht überprüfbar typsicher sein.  
   
--   Im abgesicherten Modus: Führen Sie überprüfbar typsicheren Code; mit/clr: safe kompiliert.  
+-   Im abgesicherten Modus: Führen Sie überprüfbar typsicheren Code mit/clr: safe kompiliert.  
   
- Im Abgesicherter Modus erfordert, dass die ausgeführten Assemblys überprüfbar typsicher sein.  
+ Im Abgesicherter Modus erfordert, dass der ausgeführte Assemblys überprüfbar typsicher sein.  
   
- Erstellen und eine überprüfbare Assembly in SQL Server laden, verwenden Sie die Transact-SQL-Befehle CREATE ASSEMBLY und DROP ASSEMBLY wie folgt:  
+ Verwenden Sie zum Erstellen und Laden eine überprüfbare Assembly in SQL Server, die Transact-SQL-Befehle erstellen und die DROP ASSEMBLY wie folgt:  
   
 ```  
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH   
@@ -43,9 +43,9 @@ CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
 DROP ASSEMBLY <assemblyName>  
 ```  
   
- Die PERMISSION_SET-Befehl gibt den Sicherheitskontext und kann die Werte eingeschränkt, SAFE oder erweiterte aufweisen.  
+ Die PERMISSION_SET-Befehl gibt den Sicherheitskontext und kann die Werte nicht eingeschränkt, SAFE oder erweiterte aufweisen.  
   
- Darüber hinaus können Sie die CREATE FUNCTION-Befehl verwenden, zum Binden an die Namen von Methoden in einer Klasse:  
+ Darüber hinaus können Sie den Befehl CREATE FUNCTION, zum Binden an Methodennamen in einer Klasse:  
   
 ```  
 CREATE FUNCTION <FunctionName>(<FunctionParams>)  
@@ -78,12 +78,12 @@ select dbo.GetQuoteNoEA('MSFT')
 go  
 ```  
   
- SQL-Skripts können interaktiv in SQL Query Analyzer oder in der Befehlszeile mit dem Hilfsprogramm sqlcmd.exe ausgeführt werden. Die folgende Befehlszeile eine Verbindung mit "EigenerServer", wird die Standarddatenbank verwendet, verwendet eine vertrauenswürdige Verbindung, MyScript.sql Eingaben und Ausgaben MyResult.txt.  
+ SQL-Skripts können in SQL Query Analyzer oder in der Befehlszeile mit dem Hilfsprogramm sqlcmd.exe interaktiv ausgeführt werden. Die folgende Befehlszeile eine Verbindung mit "myserver", wird die Standarddatenbank verwendet, verwendet eine vertrauenswürdige Verbindung, MyScript.sql Eingaben und Ausgaben MyResult.txt.  
   
 ```  
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Migrieren zu/CLR: safe (C + c++ / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
+ [Gewusst wie: Migrieren zu/CLR: safe (C++ / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
  [Klassen und Strukturen](../cpp/classes-and-structs-cpp.md)

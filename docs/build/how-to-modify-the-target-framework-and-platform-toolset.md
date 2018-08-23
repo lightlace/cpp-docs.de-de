@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ändern des Zielframeworks und Plattformtoolset | Microsoft Docs'
+title: 'Vorgehensweise: Ändern des Zielframeworks und Plattformtoolset | Microsoft-Dokumentation'
 ms.custom: conceptual
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f21ec9d205e009438fac97914ec4b684713102a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c53960b7ef972d605902a260de9e7ef344a31274
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371901"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571869"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Gewusst wie: Ändern des Zielframeworks und des Plattformtoolsets
-Sie können Visual C++-projekteinstellungen, um andere Versionen von .NET Framework abzielen und verschiedene Plattformtoolsets verwendet ändern. Standardmäßig wird vom Projektsystem die .NET Framework-Version und die Toolsetversion verwendet, die der von Ihnen zum Erstellen des Projekts verwendeten Version von Visual Studio entsprechen. Sie können das Toolset der Zielplattform ändern, indem Sie die Projekteigenschaften ändern. Das Zielframework kann durch Bearbeiten der Projektdatei (.vcxproj) geändert werden. Sie müssen keine separate CodeBase für jedes Kompilierungsziel verwenden.  
+Sie können Visual C++-projekteinstellungen, um verschiedene Versionen von .NET Framework als Ziel und verschiedene Plattformtoolsets verwendet ändern. Standardmäßig wird vom Projektsystem die .NET Framework-Version und die Toolsetversion verwendet, die der von Ihnen zum Erstellen des Projekts verwendeten Version von Visual Studio entsprechen. Sie können das Toolset der Zielplattform ändern, indem Sie die Projekteigenschaften ändern. Das Zielframework kann durch Bearbeiten der Projektdatei (.vcxproj) geändert werden. Sie müssen keine separate CodeBase für jedes Kompilierungsziel verwenden.  
   
 > [!IMPORTANT]
->  Einige Editionen unterstützen möglicherweise geänderte Zielframeworks oder Plattformtoolsets nicht. Weitere Informationen zur Kompatibilität finden Sie unter [Port, migrieren und Aktualisieren von Visual Studio-Projekten](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects).  
+>  Einige Editionen unterstützen möglicherweise geänderte Zielframeworks oder Plattformtoolsets nicht. Weitere Informationen zur Kompatibilität finden Sie unter [Übertragung, Migration und Upgrade der Visual Studio-Projekte](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects).  
   
  Wenn Sie das Zielframework ändern, ändern Sie auch das Plattformtoolset in eine Version, die das Zielframework unterstützt. Um zum Beispiel .NET Framework 4.5 als Ziel festzulegen, müssen Sie ein kompatibles Plattformtoolset wie Visual Studio 2015 (v140), Visual Studio 2013 (v120) oder Visual Studio 2012 (v110) verwenden. Sie können das **Windows7.1SDK** -Plattformtoolset verwenden, um .NET Framework 2.0, 3,0, 3,5 und 4 sowie x86, Itanium und x64-Plattformen als Ziel festzulegen.  
   
 > [!NOTE]
 >  Zum Ändern des Toolsets der Zielplattform muss die zugehörige Version von Visual Studio oder die Windows-Plattform SDK installiert sein. Um beispielsweise die Itanium-Plattform mit dem **Windows7.1SDK** -Plattformtoolset als Ziel festzulegen, muss [Microsoft Windows-SDK für Windows 7 und .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) installiert sein. Sie können aber auch eine andere Visual Studio-Version für die Entwicklung verwenden, sofern Sie die richtige Frameworkversion und das richtige Plattformtoolset als Ziel festlegen.  
   
- Sie können die Zielplattform zusätzlich erweitern, indem Sie ein benutzerdefiniertes Plattformtoolset erstellen. Weitere Informationen finden Sie unter [C++ systemeigene Festlegung von Zielversionen](http://go.microsoft.com/fwlink/p/?linkid=196619) auf Visual C++-Blog.  
+ Sie können die Zielplattform zusätzlich erweitern, indem Sie ein benutzerdefiniertes Plattformtoolset erstellen. Weitere Informationen finden Sie unter [C++ Native Festlegung von Zielversionen](http://go.microsoft.com/fwlink/p/?linkid=196619) im Visual C++-Blog.  
   
 ### <a name="to-change-the-target-framework"></a>So ändern Sie das Zielframework  
   
@@ -63,7 +63,7 @@ Sie können Visual C++-projekteinstellungen, um andere Versionen von .NET Framew
   
 3.  Erweitern Sie im linken Bereich des Dialogfelds **Konfigurationseigenschaften** , und wählen Sie dann **Allgemein**aus.  
   
-4.  Wählen Sie im rechten Bereich **Plattformtoolset** und dann das gewünschte Toolset aus der Dropdownliste aus. Wenn Sie beispielsweise das [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)] -Toolset installiert haben, wählen Sie **Visual Studio 2010 (v100)** für das Projekt aus.  
+4.  Wählen Sie im rechten Bereich **Plattformtoolset** und dann das gewünschte Toolset aus der Dropdownliste aus. Wählen Sie beispielsweise, wenn Sie das Toolset von Visual Studio 2010 installiert haben, **Visual Studio 2010 (v100)** für Ihr Projekt verwendet.  
   
 5.  Klicken Sie auf die Schaltfläche **OK** .  
   

@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 483584c7b38db05c920134cfc675538be36a3816
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 0adcca7c8080d6603e4e4de8c2002b2ace6f9ad9
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028020"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42544454"
 ---
 # <a name="colecontrol-class"></a>COleControl-Klasse
 Eine leistungsstarke Basisklasse zum Entwickeln von OLE-Steuerelementen.  
@@ -1410,7 +1410,7 @@ BOOL GetAmbientProperty(
 |VT_I2|**kurze\***|  
 |VT_I4|**long\***|  
 |VT_R4|**float\***|  
-|VT_R8|**Double\***|  
+|VT_R8|**Double-Wert\***|  
 |VT_CY|**CY\***|  
 |DEN WERT VT_COLOR|OLE_COLOR *|  
 |VT_DISPATCH|LPDISPATCH *|  

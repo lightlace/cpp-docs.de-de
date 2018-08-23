@@ -1,5 +1,5 @@
 ---
-title: Optimieren der | Microsoft Docs
+title: Optimieren der | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bff0e4cc40bfa0e355f348c02f01cb0c7445b596
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8222d909ad23157b4e3ed32a6920abadd77709b6
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849248"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538269"
 ---
 # <a name="optimize"></a>optimize
 Gibt die Optimierungen an, die für jede einzelne Funktion durchgeführt werden sollen.  
@@ -31,34 +31,34 @@ Gibt die Optimierungen an, die für jede einzelne Funktion durchgeführt werden 
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #pragma optimize( "[optimization-list]", {on | off} )  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die **optimieren** Pragma muss außerhalb der Funktion angezeigt werden und wird wirksam, die erste Funktion definiert, nachdem das Pragma angezeigt wird. Die **auf** und **deaktiviert** -Argumenten werden Optionen, die im angegebenen aktiviert die *Optimierungsliste* ein- oder ausschalten.  
+
+Die **optimieren** -Pragma muss außerhalb der Funktion angezeigt werden und wird wirksam, die erste Funktion definiert, nachdem das Pragma angezeigt wird. Die *auf* und *aus* -Argumenten werden Optionen, die im angegebenen aktiviert die *Optimierungsliste* ein- oder ausschalten.  
   
- Die *Optimierungsliste* kann 0 (null) oder mehrere Parameter in der folgenden Tabelle gezeigt.  
+Die *Optimierungsliste* 0 (null) oder mehrere Parameter in der folgenden Tabelle aus.  
   
 ### <a name="parameters-of-the-optimize-pragma"></a>Parameter des optimize-Pragmas  
   
 |Parameter|Typ der Optimierung|  
 |--------------------|--------------------------|  
-|**g**|Aktivieren globale Optimierungen.|  
-|**s** oder **t**|Geben kurze oder schnelle Sequenzen von Computercode an.|  
-|**y**|Generieren Framezeiger im Programmstapel.|  
+|*g*|Aktivieren globale Optimierungen.|  
+|*s* oder *t*|Geben kurze oder schnelle Sequenzen von Computercode an.|  
+|*y*|Generieren Framezeiger im Programmstapel.|  
   
- Hierbei handelt es sich um dieselben Buchstaben verwendet werden, mit der [/o](../build/reference/o-options-optimize-code.md) Compileroptionen. Beispielsweise ist Folgendes Pragma entspricht der **/OS** Compileroption:  
+Hierbei handelt es sich um dieselben Buchstaben verwendet werden, mit der [/o](../build/reference/o-options-optimize-code.md) Compileroptionen. Beispielsweise ist folgendes Pragma mit der `/Os`-Compileroption identisch:  
   
 ```  
 #pragma optimize( "ts", on )  
 ```  
   
- Mithilfe der **optimieren** Pragma mit einer leeren Zeichenfolge (**""**) ist eine besondere Form der Direktive:  
+Mithilfe der **optimieren** Pragma mit einer leeren Zeichenfolge (**""**) ist eine besondere Form der Anweisung:  
   
- Bei Verwendung der **deaktiviert** Parameter, er wird in der Tabelle weiter oben in diesem Thema aufgeführt sind, deaktiviert Optimierungen.  
+Bei Verwendung der *aus* -Parameter, die in der Tabelle weiter oben in diesem Thema aufgeführt sind, deaktiviert Optimierungen herausstellt.  
   
- Bei Verwendung der **auf** Parameter, die Optimierungen auf zurückgesetzt, die Sie angegeben haben, mit der [/o](../build/reference/o-options-optimize-code.md) -Compileroption.  
+Bei Verwendung der *auf* Parameter, die Optimierungen auf die zurückgesetzt, die Sie angegeben haben, mit der [/o](../build/reference/o-options-optimize-code.md) -Compileroption.  
   
 ```  
 #pragma optimize( "", off )  
@@ -69,4 +69,5 @@ Gibt die Optimierungen an, die für jede einzelne Funktion durchgeführt werden 
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

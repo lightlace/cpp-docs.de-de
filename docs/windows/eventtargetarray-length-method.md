@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30386120492bcabd7ec1fc07f82e5e1ffd9c1821
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 88f8402cb6a01bc46aa25f99b2b8c60151a698ce
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39653104"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604035"
 ---
 # <a name="eventtargetarraylength-method"></a>EventTargetArray::Length-Methode
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-size_t Length();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die aktuelle Anzahl der Elemente in das interne Array von Ereignishandlern.  
-  
-## <a name="remarks"></a>Hinweise  
- Ruft die aktuelle Anzahl der Elemente in das interne Array der Ereignishandler ab.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [EventTargetArray-Klasse](../windows/eventtargetarray-class.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+size_t Length();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Die aktuelle Anzahl der Elemente in das interne Array von Ereignishandlern.
+
+## <a name="remarks"></a>Hinweise
+
+Ruft die aktuelle Anzahl der Elemente in das interne Array der Ereignishandler ab.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[EventTargetArray-Klasse](../windows/eventtargetarray-class.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Fenv_access | Microsoft Docs
+title: Fenv_access | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/12/2018
 ms.technology:
@@ -18,28 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2f6f379e61ea84c1142bd94be49b55a50b28753
-ms.sourcegitcommit: 1ac8f983eeaacd09135a249dea00f10e1c94e0e3
+ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36963322"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540428"
 ---
 # <a name="fenvaccess"></a>fenv_access
-
-Deaktiviert (**auf**) oder aktiviert (**deaktiviert**) Optimierungen, mit denen gleitkommaumgebung zu ändern, könnte zu kennzeichnen, Tests und den Modus geändert hat.
+Deaktiviert (**auf**) oder aktiviert (**aus**) Optimierungen, welche Gleitkommaausnahme zu kennzeichnen, Tests und Modus ändert.
 
 ## <a name="syntax"></a>Syntax
 
-> **#pragma Fenv_access (** { **auf** | **deaktiviert** } **)**  
+> **#pragma fenv_access führen (** { **auf** | **aus** } **)**  
 
 ## <a name="remarks"></a>Hinweise
 
-Standardmäßig **Fenv_access** ist **deaktiviert**. Wenn der Compiler, die voraussichtlich Code nicht zugreifen oder gleitkommaumgebung zu bearbeiten, dann können sie viele gleitkommacode Optimierungen durchführen. Legen Sie **Fenv_access** auf **auf** dem Compiler informiert, dass Ihr Code gleitkommaumgebung Statusflags, Ausnahmen, testen oder Steuerelement Modus Flags festgelegt zugreift. Der Compiler wird diese Optimierungen deaktiviert, sodass der Code konsistent gleitkommaumgebung zugreifen kann. 
+In der Standardeinstellung **Fenv_access** ist **aus**. Wenn der Compiler, die davon ausgehen kann Ihren Code nicht zugreifen oder die gleitkommaumgebung bearbeiten, und es viele gleitkommacode Optimierungen durchführen. Legen Sie **Fenv_access** zu **auf** an den Compiler darüber zu informieren, dass Ihr Code die Gleitkommaausnahme-Statusflags, Ausnahmen, zu testen oder Steuerelement Modus-Flags festlegen zugreift. Der Compiler deaktiviert diese Optimierungen, damit Ihr Code die gleitkommaumgebung einheitlich zugreifen kann. 
 
-Weitere Informationen zu Gleitkommaverhalten, finden Sie unter [/fp (Festlegen von Floating-Verhalten)](../build/reference/fp-specify-floating-point-behavior.md).
+Weitere Informationen zum Gleitkommaverhalten finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](../build/reference/fp-specify-floating-point-behavior.md).
 
-Die Arten von Optimierungen, mit denen unterliegen **Fenv_access** sind:
+Die Arten von Optimierungen, unterliegen **Fenv_access** sind:
 
 - Globale allgemeine Teilausdruckbeseitigung
 
@@ -55,7 +54,7 @@ Andere Gleitkommapragmas umfassen:
 
 ## <a name="examples"></a>Beispiele
 
-In diesem Beispiel wird **Fenv_access** auf **auf** gleitkommasteuerelements Register für das 24-Bit-Präzision festlegen:
+In diesem Beispiel wird **Fenv_access** zu **auf** gleitkommasteuerelements für die Genauigkeit von 24-Bit-Register festlegen:
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
@@ -85,7 +84,7 @@ int main() {
 out=9.999999776482582e-003
 ```
 
-Wenn Sie auskommentieren `#pragma fenv_access (on)` aus dem vorherigen Beispiel beachten Sie, dass die Ausgabe anders ist, da der Compiler eine kompilierzeitauswertung, die nicht den steuermodus verwendet vornimmt.
+Wenn Sie auskommentieren `#pragma fenv_access (on)` aus dem vorherigen Beispiel beachten Sie, dass die Ausgabe anders ist, da der Compiler kompilierzeitauswertung, ist das nicht den steuermodus verwendet wird.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp

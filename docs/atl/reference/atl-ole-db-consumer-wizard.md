@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc15e9eaf7068756aa4d945cf494156498af6f9
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2a03e29ed5197d27b421135b1561f3edc88af596
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025983"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571954"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL-OLE DB-Consumer-Assistent
 Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum Zugriff auf die angegebene Datenquelle über den angegebenen OLE DB-Anbieter.  
@@ -33,7 +33,7 @@ Dieser Assistent richtet eine OLE DB-Consumer-Klasse mit datenbindungen, die zum
   
 ## <a name="uielement-list"></a>UIElement-Liste  
 **Datenquelle**  
-Die **Datenquelle** Schaltfläche können Sie die angegebene Datenquelle, die mit dem angegebenen OLE DB-Anbieter einrichten. Wenn Sie auf diese Schaltfläche, klicken Sie auf die **Datenlinkeigenschaften** Dialogfeld wird angezeigt. Weitere Informationen zum Erstellen von Verbindungszeichenfolgen und die **Datenlinkeigenschaften** im Dialogfeld finden Sie unter [Data Link-API – Übersicht](https://msdn.microsoft.com/library/ms718102.aspx) in der Windows SDK-Dokumentation.  
+Die **Datenquelle** Schaltfläche können Sie die angegebene Datenquelle, die mit dem angegebenen OLE DB-Anbieter einrichten. Wenn Sie auf diese Schaltfläche, klicken Sie auf die **Datenlinkeigenschaften** Dialogfeld wird angezeigt. Weitere Informationen zum Erstellen von Verbindungszeichenfolgen und die **Datenlinkeigenschaften** im Dialogfeld finden Sie unter [Data Link-API – Übersicht](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) in der Windows SDK-Dokumentation.  
   
 > [!NOTE]
 >  In früheren Versionen, die UMSCHALT-Taste die **Datenquelle** Schaltfläche geöffnet, ein Dialogfeld Datei öffnen, damit Sie eine Data Link (UDL) auswählen können. Diese Funktionalität wird nicht mehr unterstützt.  
@@ -176,7 +176,7 @@ Klicken Sie auf **OK** um den Vorgang abzuschließen. Die **Datenbankobjekt ausw
  Wählen Sie diese Option aus, wenn Sie verwenden möchten `CCommand` oder `db_command` der Befehls- und Klassendeklarationen erstellen. Dies ist die Standardauswahl.  
   
  **Unterstützung**  
- Wählen Sie die Kontrollkästchen, um die Art der Updates, die im Consumer unterstützt werden (der Standardwert ist "None") anzugeben. Folgendes wird festgelegt, [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) und die entsprechenden Einträge für [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) -Zuordnung in der Eigenschaft festgelegt.  
+ Wählen Sie die Kontrollkästchen, um die Art der Updates, die im Consumer unterstützt werden (der Standardwert ist "None") anzugeben. Folgendes wird festgelegt, [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\)) und die entsprechenden Einträge für [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\)) -Zuordnung in der Eigenschaft festgelegt.  
   
  **Änderung**  
  Gibt an, dass die Consumer Updates der Daten der Zeile im Rowset unterstützt.  
@@ -190,4 +190,4 @@ Klicken Sie auf **OK** um den Vorgang abzuschließen. Die **Datenbankobjekt ausw
 ## <a name="see-also"></a>Siehe auch  
  [ATL-OLE DB-Consumers](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [Adding Functionality with Code Wizards (Hinzufügen neuer Funktionen mit Code-Assistenten)](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Verbindungszeichenfolgen und Datenverknüpfungen (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)
+ [Verbindungszeichenfolgen und Datenverknüpfungen (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

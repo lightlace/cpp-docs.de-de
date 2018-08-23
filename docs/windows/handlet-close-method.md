@@ -17,31 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7cbe76cdea5c8fadef818ede1d63d88e4437bdae
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ab919b3aeba45462a15900429493225f00909d5a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651066"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602453"
 ---
 # <a name="handletclose-method"></a>HandleT::Close-Methode
-Schließt das aktuelle **HandleT** Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-void Close();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Das Handle, das das aktuelle zugrunde liegende **HandleT** wird geschlossen, und die **HandleT** auf einen ungültigen Zustand festgelegt ist.  
-  
- Wenn das Handle nicht ordnungsgemäß geschlossen wird, wird eine Ausnahme im aufrufenden Thread ausgelöst.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HandleT-Klasse](../windows/handlet-class.md)
+
+Schließt das aktuelle **HandleT** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void Close();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Das Handle, das das aktuelle zugrunde liegende **HandleT** wird geschlossen, und die **HandleT** auf einen ungültigen Zustand festgelegt ist.
+
+Wenn das Handle nicht ordnungsgemäß geschlossen wird, wird eine Ausnahme im aufrufenden Thread ausgelöst.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HandleT-Klasse](../windows/handlet-class.md)

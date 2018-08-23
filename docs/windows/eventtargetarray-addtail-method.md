@@ -17,38 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e80bf6d4313be5c90b4b4486cb31f3705252f33
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 6609bba6d7adbddda152007e4db45c82f8039bc0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651264"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603677"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail-Methode
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-void AddTail(  
-   _In_ IUnknown* element  
-);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *Element*  
- Zeiger auf den Ereignishandler, angefügt werden soll.  
-  
-## <a name="remarks"></a>Hinweise  
- Fügt den angegebenen Ereignishandler an das Ende des internen Arrays von Ereignishandlern an.  
-  
- **AddTail()** soll nur intern von verwendet werden. die `EventSource` Klasse.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [EventTargetArray-Klasse](../windows/eventtargetarray-class.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void AddTail(
+   _In_ IUnknown* element
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Element*  
+Zeiger auf den Ereignishandler, angefügt werden soll.
+
+## <a name="remarks"></a>Hinweise
+
+Fügt den angegebenen Ereignishandler an das Ende des internen Arrays von Ereignishandlern an.
+
+**AddTail()** soll nur intern von verwendet werden. die `EventSource` Klasse.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[EventTargetArray-Klasse](../windows/eventtargetarray-class.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5c3bd275c189e7c99bbc275caf31436b5f5a1d5e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 69a96cf199e7ce131e91f750cdd83ebc915c38d8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340084"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571955"
 ---
 # <a name="cdatasource-class"></a>CDataSource-Klasse
 Entspricht einer OLE DB-Datenquellenobjekt, das eine Verbindung über einen Anbieter mit einer Datenquelle darstellt.  
@@ -153,7 +153,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IDBProperties:: GetProperties](https://msdn.microsoft.com/library/ms714344.aspx) in die *OLE DB-Programmierreferenz* in das Windows SDK.  
+ Finden Sie unter [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\)) in die *OLE DB-Programmierreferenz* in das Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard-HRESULT.  
@@ -238,10 +238,10 @@ HRESULT Open(LPCSTR szProgID,
  [in] Die `CLSID` des Datenanbieters.  
   
  *pPropSet*  
- [in] Ein Zeiger auf ein Array von [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) Strukturen, die Eigenschaften und Werte festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](https://msdn.microsoft.com/library/ms713696.aspx) in die *OLE DB-Programmierreferenz* in das Windows SDK.  
+ [in] Ein Zeiger auf ein Array von [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen, die Eigenschaften und Werte festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) in die *OLE DB-Programmierreferenz* in das Windows SDK.  
   
  *nPropertySets*  
- [in] Die Anzahl der [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) Strukturen zu übergeben, der *DBPROPSET* Argument.  
+ [in] Die Anzahl der [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen zu übergeben, der *DBPROPSET* Argument.  
   
  *pName*  
  [in] Der Name der Datenbank, zu der eine Verbindung hergestellt werden soll.  
@@ -253,7 +253,7 @@ HRESULT Open(LPCSTR szProgID,
  [in] Das Benutzerkennwort.  
   
  *nInitMode*  
- [in] Initialisierungsmodus der Datenbank. Finden Sie unter [Eigenschaften zur Datenquelleninitialisierung](https://msdn.microsoft.com/library/ms723127.aspx)in die *OLE DB-Programmierreferenz* im Windows SDK für eine Liste gültiger initialisierungsmodi. Wenn *nInitMode* ist 0 (null), ohne Initialisierung Modus ist in der zum Öffnen der Verbindung verwendeten Eigenschaftensatz enthalten.  
+ [in] Initialisierungsmodus der Datenbank. Finden Sie unter [Eigenschaften zur Datenquelleninitialisierung](/previous-versions/windows/desktop/ms723127\(v=vs.85\))in die *OLE DB-Programmierreferenz* im Windows SDK für eine Liste gültiger initialisierungsmodi. Wenn *nInitMode* ist 0 (null), ohne Initialisierung Modus ist in der zum Öffnen der Verbindung verwendeten Eigenschaftensatz enthalten.  
   
  *szProgID*  
  [in] Ein Programmbezeichner.  
@@ -293,7 +293,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
  *szFileName*  
  [in] Der Name einer Datei, in der Regel eine Datenquellenverbindungsdatei (UDL-Datei).  
   
- Weitere Informationen zu Datenverknüpfungsdateien (UDL-Dateien), finden Sie unter [Data Link-API – Übersicht](https://msdn.microsoft.com/library/ms718102.aspx) im Windows SDK.  
+ Weitere Informationen zu Datenverknüpfungsdateien (UDL-Dateien), finden Sie unter [Data Link-API – Übersicht](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard-HRESULT.  
@@ -376,10 +376,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
  [in] Programm-ID eines Datenanbieters.  
   
  *DBPROPSET*  
- [in] Ein Zeiger auf ein Array von [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) Strukturen, die Eigenschaften und Werte festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](https://msdn.microsoft.com/library/ms713696.aspx) in die *OLE DB-Programmierreferenz* in das Windows SDK. Wenn das Datenquellenobjekt initialisiert wird, müssen die Eigenschaften zur Eigenschaftsquelle „Datenquelle“ gehören. Wenn die gleiche Eigenschaft in mehr als einmal angegeben ist *DBPROPSET*, dann ist der anbieterspezifischen welcher Wert verwendet wird. Wenn *UlPropSets* 0 (null), ist dieser Parameter wird ignoriert.  
+ [in] Ein Zeiger auf ein Array von [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen, die Eigenschaften und Werte festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) in die *OLE DB-Programmierreferenz* in das Windows SDK. Wenn das Datenquellenobjekt initialisiert wird, müssen die Eigenschaften zur Eigenschaftsquelle „Datenquelle“ gehören. Wenn die gleiche Eigenschaft in mehr als einmal angegeben ist *DBPROPSET*, dann ist der anbieterspezifischen welcher Wert verwendet wird. Wenn *UlPropSets* 0 (null), ist dieser Parameter wird ignoriert.  
   
  *ulPropSets*  
- [in] Die Anzahl der [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) Strukturen zu übergeben, der *DBPROPSET* Argument. Wenn dies 0 (null) ist, ignoriert der Anbieter *DBPROPSET*.  
+ [in] Die Anzahl der [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen zu übergeben, der *DBPROPSET* Argument. Wenn dies 0 (null) ist, ignoriert der Anbieter *DBPROPSET*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard-HRESULT.  

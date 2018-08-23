@@ -1,5 +1,5 @@
 ---
-title: __readdr | Microsoft Docs
+title: __readdr | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee18591ea3729551f00267fef6e4594a45f673ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd45e8919e7b1f0347511e2c3ad782975ecbe71a
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332974"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540030"
 ---
 # <a name="readdr"></a>__readdr
-Liest den Wert, der die angegebene Debug-Registers.  
+Liest den Wert des angegebenen Debug-Registers.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,7 +35,7 @@ unsigned __int64 __readdr(unsigned int DebugRegister);
   
 #### <a name="parameters"></a>Parameter  
  [in] `DebugRegister`  
- Registrieren Sie eine Konstante von 0 bis 7, die das Debuggen identifiziert.  
+ Registrieren Sie eine Konstante, von 0 bis 7, die das Debuggen identifiziert.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der Wert des angegebenen Debug-Registers.  
@@ -47,7 +47,7 @@ unsigned __int64 __readdr(unsigned int DebugRegister);
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__readdr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readdr`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

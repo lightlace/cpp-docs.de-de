@@ -1,5 +1,5 @@
 ---
-title: Tipps zum Verbessern von zeitkritischem Code | Microsoft Docs
+title: Tipps zum Verbessern von zeitkritischem Code | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e05d0aa49a895a9632b07fe07bf38d9e6d4d6b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fbc04563ffa16dfb9471bd0a54fa53df159538e3
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379509"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572286"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Tipps zum Verbessern von zeitkritischem Code
 Für das Schreiben von schnellem Code müssen Sie alle Aspekte Ihrer Anwendung und der Interaktion mit dem System verstehen. In den folgenden Themen finden Sie Alternativen zu einigen der offensichtlicheren Codierungstechniken, damit Sie sicherstellen können, dass die zeitkritischen Teile Ihres Codes eine zufriedenstellende Leistung erbringen.  
@@ -92,9 +92,9 @@ Für das Schreiben von schnellem Code müssen Sie alle Aspekte Ihrer Anwendung u
 ##  <a name="_core_sorting_and_searching"></a> Sortieren und Durchsuchen  
  Das Sortieren ist im Vergleich zu vielen typischen Vorgängen an sich zeitaufwendig. Die beste Methode, um eine unnötige Verlangsamung zu vermeiden, besteht darin, das Sortieren in kritischen Zeiten zu vermeiden. Möglicherweise können Sie Folgendes tun:  
   
--   Verzögern der Sortierung bis zu einem Zeitpunkt Leistung nicht kritisch.  
+-   Verzögern der Sortierung, die bis zu einer nicht-leistungskritischen Zeit.  
   
--   Sortieren Sie die Daten zu einem Zeitpunkt früher, die Leistung nicht kritisch.  
+-   Sortieren der Daten zu einem Zeitpunkt früher, die Leistung nicht kritisch.  
   
 -   Reines Sortieren des Teils der Daten, der wirklich sortiert werden muss  
   
@@ -113,19 +113,19 @@ Für das Schreiben von schnellem Code müssen Sie alle Aspekte Ihrer Anwendung u
 ##  <a name="_core_mfc_and_class_libraries"></a> MFC- und Klassenbibliotheken  
  Die Microsoft Foundation Classes (MFC) können das Schreiben von Code erheblich vereinfachen. Wenn Sie zeitkritischen Code schreiben, sollte Ihnen der einigen der Klassen innewohnende Mehraufwand bewusst sein. Untersuchen Sie den MFC-Code, den Ihr zeitkritischer Code verwendet, um zu sehen, ob er Ihren Leistungsanforderungen entspricht. In der folgenden Liste sind die MFC-Klassen und -Funktionen aufgeführt, die Ihnen bewusst sein sollten:  
   
--   `CString` MFC Ruf die C-Laufzeitbibliothek auf, um Speicher für eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) dynamisch. Allgemein gesagt ist `CString` ebenso effizient wie jede andere dynamisch zugeordnete Zeichenfolge. Wie bei jeder dynamisch zugewiesenen Zeichenfolge besteht der Mehraufwand der dynamischen Zuordnung und Freigabe. Oft, dient ein einfaches `char`-Array im Stapel demselben Zweck und ist schneller. Verwenden Sie nicht `CString`, um eine konstante Zeichenfolge zu speichern. Verwenden Sie stattdessen `const char *`. Jeder Vorgang, den Sie mit einem `CString`-Objekt durchführen, hat irgendeinen Mehraufwand. Verwenden die Laufzeitbibliothek [Zeichenfolgenfunktionen](../../c-runtime-library/string-manipulation-crt.md) möglicherweise schneller.  
+-   `CString` MFC Ruf die C-Laufzeitbibliothek zum Belegen des Arbeitsspeichers für eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) dynamisch. Allgemein gesagt ist `CString` ebenso effizient wie jede andere dynamisch zugeordnete Zeichenfolge. Wie bei jeder dynamisch zugewiesenen Zeichenfolge besteht der Mehraufwand der dynamischen Zuordnung und Freigabe. Oft, dient ein einfaches `char`-Array im Stapel demselben Zweck und ist schneller. Verwenden Sie nicht `CString`, um eine konstante Zeichenfolge zu speichern. Verwenden Sie stattdessen `const char *`. Jeder Vorgang, den Sie mit einem `CString`-Objekt durchführen, hat irgendeinen Mehraufwand. Mithilfe der Laufzeit-Bibliothek [Zeichenfolgenfunktionen](../../c-runtime-library/string-manipulation-crt.md) möglicherweise schneller.  
   
--   `CArray` Ein [CArray](../../mfc/reference/carray-class.md) bietet Flexibilität, dass ein reguläres Array nicht bietet, aber Ihr Programm diese möglicherweise nicht benötigt. Wenn Sie bestimmte Grenzen für das Array kennen, können Sie stattdessen ein globales festes Array verwenden. Wenn Sie `CArray` benutzen, verwenden Sie `CArray::SetSize`, um die Größe festzulegen und die Anzahl der Elemente anzugeben, um die es wachsen kann, wenn eine Neuzuordnung erforderlich ist. Andernfalls kann das Hinzufügen von Elementen dazu führen, dass Ihr Array häufig neu zugeordnet und kopiert wird, was ineffizient ist und den Arbeitsspeicher fragmentieren kann. Ihnen sollte auch bewusst sein, dass beim Einfügen eines Elements in ein Array `CArray` nachfolgende Elemente im Arbeitsspeicher verschiebt und möglicherweise das Array vergrößern muss. Diese Aktionen können zu Cachefehlern und Seitenfehlern führen. Wenn Sie den Code durchsehen, den die MFC verwenden, sehen Sie möglicherweise, dass Sie etwas Spezifischeres für Ihr Szenario schreiben können, um die Leistung zu verbessern. Da `CArray` eine Vorlage ist, können Sie beispielsweise `CArray`-Spezialisierungen für bestimmte Typen bereitstellen.  
+-   `CArray` Ein [CArray](../../mfc/reference/carray-class.md) flexibel, dass ein normales Array nicht, aber Ihr Programm möglicherweise nicht benötigen. Wenn Sie bestimmte Grenzen für das Array kennen, können Sie stattdessen ein globales festes Array verwenden. Wenn Sie `CArray` benutzen, verwenden Sie `CArray::SetSize`, um die Größe festzulegen und die Anzahl der Elemente anzugeben, um die es wachsen kann, wenn eine Neuzuordnung erforderlich ist. Andernfalls kann das Hinzufügen von Elementen dazu führen, dass Ihr Array häufig neu zugeordnet und kopiert wird, was ineffizient ist und den Arbeitsspeicher fragmentieren kann. Ihnen sollte auch bewusst sein, dass beim Einfügen eines Elements in ein Array `CArray` nachfolgende Elemente im Arbeitsspeicher verschiebt und möglicherweise das Array vergrößern muss. Diese Aktionen können zu Cachefehlern und Seitenfehlern führen. Wenn Sie den Code durchsehen, den die MFC verwenden, sehen Sie möglicherweise, dass Sie etwas Spezifischeres für Ihr Szenario schreiben können, um die Leistung zu verbessern. Da `CArray` eine Vorlage ist, können Sie beispielsweise `CArray`-Spezialisierungen für bestimmte Typen bereitstellen.  
   
--   `CList` [CList](../../mfc/reference/clist-class.md) ist eine doppelt verknüpfte Liste elementeinfügung fast am Anfang, am Ende und an einer bekannten Position (`POSITION`) in der Liste. Für die Suche nach einem Element nach Wert oder Index ist jedoch eine sequenzielle Suche erforderlich, die langsam sein kann, wenn die Liste lang ist. Wenn für Ihren Code keine doppelt verknüpfte Liste erforderlich ist, sollten Sie die Verwendung von `CList` in Betracht ziehen. Die Verwendung einer einfach verknüpften Liste spart den Mehraufwand der Aktualisierung eines zusätzlichen Zeigers für alle Vorgänge sowie den Arbeitsspeicher für diesen Zeiger. Der zusätzliche Arbeitsspeicher ist nicht hervorragend, aber eine weitere Gelegenheit für Cachefehler oder Seitenfehler.  
+-   `CList` [CList](../../mfc/reference/clist-class.md) ist eine doppelt verknüpfte Liste, also elementeinfügung am Anfang, fast am Ende und an einer bekannten Position (`POSITION`) in der Liste. Für die Suche nach einem Element nach Wert oder Index ist jedoch eine sequenzielle Suche erforderlich, die langsam sein kann, wenn die Liste lang ist. Wenn für Ihren Code keine doppelt verknüpfte Liste erforderlich ist, sollten Sie die Verwendung von `CList` in Betracht ziehen. Die Verwendung einer einfach verknüpften Liste spart den Mehraufwand der Aktualisierung eines zusätzlichen Zeigers für alle Vorgänge sowie den Arbeitsspeicher für diesen Zeiger. Der zusätzliche Arbeitsspeicher ist nicht hervorragend, aber eine weitere Gelegenheit für Cachefehler oder Seitenfehler.  
   
 -   `IsKindOf` Diese Funktion kann mehrere Aufrufe generieren und Zugriff auf die viel Arbeitsspeicher in verschiedenen Datenbereichen, was zu einer schlechten Positionierung von verweisen. Sie ist nützlich für einen Debugbuild (zum Beispiel in einem ASSERT-Aufruf), Sie sollten aber vermeiden, sie in einem Releasebuild zu verwenden.  
   
--   `PreTranslateMessage` Verwendung `PreTranslateMessage` , wenn eine bestimmte Fensterstruktur tastaturbeschleuniger benötigt oder Sie Meldungsbehandlung in die Meldungsverteilschleife einfügen müssen. `PreTranslateMessage` ändert MFC-Dispatchmeldungen. Wenn Sie `PreTranslateMessage` überschreiben, tun Sie das nur auf der erforderlichen Ebene. Es ist beispielsweise nicht erforderlich, `CMainFrame::PreTranslateMessage` zu überschreiben, wenn Sie nur an Meldungen interessiert sind, die an untergeordnete Elemente einer bestimmten Ansicht gehen. Überschreiben Sie stattdessen `PreTranslateMessage` für die Ansichtsklasse.  
+-   `PreTranslateMessage` Verwendung `PreTranslateMessage` bei eine bestimmte Struktur von Windows Fensterstruktur tastaturbeschleuniger benötigt oder wenn Sie die Behandlung von Nachrichten in die Meldungsverteilschleife einfügen müssen. `PreTranslateMessage` ändert MFC-Dispatchmeldungen. Wenn Sie `PreTranslateMessage` überschreiben, tun Sie das nur auf der erforderlichen Ebene. Es ist beispielsweise nicht erforderlich, `CMainFrame::PreTranslateMessage` zu überschreiben, wenn Sie nur an Meldungen interessiert sind, die an untergeordnete Elemente einer bestimmten Ansicht gehen. Überschreiben Sie stattdessen `PreTranslateMessage` für die Ansichtsklasse.  
   
-     Umgehen Sie nicht den normalen Dispatchpfad, indem Sie `PreTranslateMessage` verwenden, um Meldungen zu verarbeiten, die an ein beliebiges Fenster gesendet werden. Verwendung [Fensterprozeduren](../../mfc/registering-window-classes.md) und MFC-meldungszuordnungen zu diesem Zweck.  
+     Umgehen Sie nicht den normalen Dispatchpfad, indem Sie `PreTranslateMessage` verwenden, um Meldungen zu verarbeiten, die an ein beliebiges Fenster gesendet werden. Verwendung [Fensterprozeduren](../../mfc/registering-window-classes.md) und MFC-meldungszuordnungen für diesen Zweck.  
   
--   `OnIdle` Ereignisse im Leerlauf können zu unerwarteten Zeiten Sie nicht erwarten, z. B. zwischen `WM_KEYDOWN` und `WM_KEYUP` Ereignisse. Timer können eine effizientere Methode zum Auslösen Ihres Codes sein. Erzwingen Sie nicht, dass `OnIdle` wiederholt aufgerufen wird, indem falsche Meldungen generiert werden oder immer `TRUE` von einer Überschreibung von `OnIdle` zurückgegeben wird, wodurch Ihr Thread niemals in den Ruhezustand kommen würde. Auch hier kann ein Timer oder ein separater Thread angemessener sein.  
+-   `OnIdle` Ereignisse im Leerlauf können zu unerwarteten Zeiten, die nicht erwartet, z. B. zwischen `WM_KEYDOWN` und `WM_KEYUP` Ereignisse. Timer können eine effizientere Methode zum Auslösen Ihres Codes sein. Erzwingen Sie nicht, dass `OnIdle` wiederholt aufgerufen wird, indem falsche Meldungen generiert werden oder immer `TRUE` von einer Überschreibung von `OnIdle` zurückgegeben wird, wodurch Ihr Thread niemals in den Ruhezustand kommen würde. Auch hier kann ein Timer oder ein separater Thread angemessener sein.  
   
 ##  <a name="vcovrsharedlibraries"></a> Freigegebene Bibliotheken  
  Eine Wiederverwendung von Code ist wünschenswert. Wenn Sie jedoch den Code einer anderen Person verwenden, sollten Sie sicherstellen, dass Sie genau wissen, was dieser an den Stellen bewirkt, an denen Leistung für Sie wichtig ist. Diese beste Möglichkeit, um dies zu verstehen, besteht darin, den Quellcode Schritt für Schritt durchzugehen oder mit Tools wie PView oder dem Leistungsmonitor zu messen.  
@@ -137,7 +137,7 @@ Für das Schreiben von schnellem Code müssen Sie alle Aspekte Ihrer Anwendung u
   
  In einigen Fällen kann die Verwendung des Standardheaps jedoch die Positionierung von Verweisen reduzieren. Verwenden Sie den Prozess-Viewer, Spy++ oder den Leistungsmonitor, um die Auswirkung der Verschiebung von Objekten von Heap zu Heap zu messen.  
   
- Messen Sie Ihre Heaps, damit Sie jede Zuordnung im Heap erklären können. Verwenden Sie die C-Laufzeit [debugheaproutinen](/visualstudio/debugger/crt-debug-heap-details) Prüfpunkt und den Heap. Sie können die Ausgabe in ein Tabellenkalkulationsprogramm wie Microsoft Excel lesen und Pivottables verwenden, um die Ergebnisse anzuzeigen. Beachten Sie die Gesamtanzahl, die Größe und die Verteilung der Zuordnungen. Vergleichen Sie diese mit der Größe der Workingsets. Sehen Sie sich auch das Clustering der Objekte verwandter Größe an.  
+ Messen Sie Ihre Heaps, damit Sie jede Zuordnung im Heap erklären können. Verwenden Sie die C-Laufzeit [debugheaproutinen](/visualstudio/debugger/crt-debug-heap-details) Prüfpunkt und dump für Ihren Heap. Sie können die Ausgabe in ein Tabellenkalkulationsprogramm wie Microsoft Excel lesen und Pivottables verwenden, um die Ergebnisse anzuzeigen. Beachten Sie die Gesamtanzahl, die Größe und die Verteilung der Zuordnungen. Vergleichen Sie diese mit der Größe der Workingsets. Sehen Sie sich auch das Clustering der Objekte verwandter Größe an.  
   
  Sie können außerdem die Leistungsindikatoren ansehen, um die Speicherauslastung zu überwachen.  
   
@@ -153,9 +153,9 @@ Für das Schreiben von schnellem Code müssen Sie alle Aspekte Ihrer Anwendung u
 ##  <a name="_core_small_working_set"></a> Kleines Workingset  
  Kleinere Workingsets bedeuten eine bessere Positionierung von Verweisen, weniger Seitenfehler und mehr Cachetreffer. Die Verarbeitung von Workingsets ist die engste Metrik, die das Betriebssystem direkt für das Messen der Positionierung von Verweisen bereitstellt.  
   
--   Verwenden Sie zum Festlegen der oberen und unteren Grenzen des Workingsets [SetProcessWorkingSetSize](http://msdn.microsoft.com/library/windows/desktop/ms683226.aspx).  
+-   Verwenden Sie zum Festlegen der obere und untere Grenze des Workingsets [SetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-getprocessworkingsetsize).  
   
--   Verwenden Sie zum Abrufen der oberen und unteren Grenzen des Workingsets [GetProcessWorkingSetSize](http://msdn.microsoft.com/library/windows/desktop/ms686234.aspx).  
+-   Rufen Sie die obere und untere Grenze des Workingsets mit [GetProcessWorkingSetSize](/windows/desktop/api/winbase/nf-winbase-setprocessworkingsetsize).  
   
 -   Zum Anzeigen der Größe des Workingsets verwenden Sie Spy++.  
   

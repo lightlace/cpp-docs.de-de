@@ -1,5 +1,5 @@
 ---
-title: Bibliotheksunterstützung für Multithreading | Microsoft Docs
+title: Bibliotheksunterstützung für Multithreading | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b25d506b5364dcbc26d3e32f5b0eb34188b30bd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4f775cbb78ff81ba6f1c2761d7969feabd932bd7
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685671"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42538643"
 ---
 # <a name="library-support-for-multithreading"></a>Bibliotheksunterstützung für Multithreading
-Alle Versionen der CRT unterstützen jetzt die Multi-threading davon ausgenommen sind die Versionen nicht sperrende einige Funktionen. Finden Sie unter [Multithread-Bibliotheken Leistung](../c-runtime-library/multithreaded-libraries-performance.md) für Weitere Informationen.  
+Alle Versionen der CRT unterstützen jetzt das Multithreading, mit Ausnahme von der nicht sperrende Versionen einiger Funktionen. Finden Sie unter [Leistung von Multithreadbibliotheken](../c-runtime-library/multithreaded-libraries-performance.md) für Weitere Informationen.  
   
- Finden Sie unter [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md) für Weitere Informationen über CRT-Versionen.  
+Finden Sie unter [CRT-Bibliotheksfunktionen](../c-runtime-library/crt-library-features.md) Weitere Informationen zum CRT-Versionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Multithreading bei C und Win32](../parallel/multithreading-with-c-and-win32.md)
+
+[Multithreading bei C und Win32](../parallel/multithreading-with-c-and-win32.md)

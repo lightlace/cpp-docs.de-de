@@ -1,5 +1,5 @@
 ---
-title: __indwordstring | Microsoft Docs
+title: __indwordstring | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe9f7616a20dc09265028cf414aa15340b68c70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00c0f8e67a535d126eab3a19bf17b0bf8bfd7440
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333413"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544459"
 ---
 # <a name="indwordstring"></a>__indwordstring
 **Microsoft-spezifisch**  
@@ -42,10 +42,10 @@ void __indwordstring(
   
 #### <a name="parameters"></a>Parameter  
  [in] `Port`  
- Der Port, aus dem gelesen werden soll.  
+ Der Port, der gelesen werden.  
   
  [out] `Buffer`  
- Die aus den Port gelesenen Daten werden hier geschrieben.  
+ Die vom Port gelesenen Daten werden hier geschrieben.  
   
  [in] `Count`  
  Die Anzahl der Bytes, der zu lesenden Daten.  
@@ -54,7 +54,7 @@ void __indwordstring(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__indwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__indwordstring`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

@@ -1,5 +1,5 @@
 ---
-title: __indword | Microsoft Docs
+title: __indword | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dcfb321d526bb449335f87e7a83ba2a0aba7e60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0fb7c8d6816475232f5a7ed5d50b2b6036a829d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325538"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541021"
 ---
 # <a name="indword"></a>__indword
 **Microsoft-spezifisch**  
   
- Liest ein Doppelwort der Daten aus dem angegebenen Port mit der `in` Anweisung.  
+ Liest ein Doppelwort der Daten aus dem angegebenen Port mithilfe der `in` Anweisung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,16 +40,16 @@ unsigned long __indword(
   
 #### <a name="parameters"></a>Parameter  
  [in] `Port`  
- Der Port, aus dem gelesen werden soll.  
+ Der Port, der gelesen werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Das Wort, die aus den Port gelesen werden.  
+ Lesen Sie das Wort aus den Port.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__indword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__indword`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

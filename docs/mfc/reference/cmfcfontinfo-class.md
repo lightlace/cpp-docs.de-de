@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ff2d857938881f1c3d9f02a1d8465a5a4e97c7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ff2f4a6962ee70882ba85a15ea213f7fe6ffe11f
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852418"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544478"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo-Klasse
 Die `CMFCFontInfo` Klasse beschreibt die Namen und andere Attribute einer Schriftart.  
@@ -115,7 +115,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="return-value"></a>Rückgabewert  
   
 ### <a name="remarks"></a>Hinweise  
- In dieser Dokumentation werden die Begriffe verwendet *Zeichensatz* und *Skript* Synonym verwenden lassen. Ein *Skript*, auch bekannt als ein Schriftsystem, d.h. ist eine Sammlung von Zeichen und Regeln für diese Zeichen in eine oder mehrere Sprachen schreiben. Die Auflistung von Zeichen enthält, die Alphabet und Satzzeichen im Skript verwendet. Lateinischer Schrift wird z. B. für Englisch verwendet, wie es in den Vereinigten Staaten gesprochen wird, und die Buchstaben, die Zeichen von A bis Z enthält. Die `lfCharSet` Mitglied der ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur gibt einen Zeichensatz an. Gibt ANSI_CHARSET z. B. den Wert der [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] Zeichensatz, der des lateinischen Alphabets enthält.  
+ In dieser Dokumentation werden die Begriffe verwendet *Zeichensatz* und *Skript* Synonym verwenden lassen. Ein *Skript*, auch bekannt als ein Schriftsystem, d.h. ist eine Sammlung von Zeichen und Regeln für diese Zeichen in eine oder mehrere Sprachen schreiben. Die Auflistung von Zeichen enthält, die Alphabet und Satzzeichen im Skript verwendet. Lateinischer Schrift wird z. B. für Englisch verwendet, wie es in den Vereinigten Staaten gesprochen wird, und die Buchstaben, die Zeichen von A bis Z enthält. Die `lfCharSet` Mitglied der ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) Struktur gibt einen Zeichensatz an. Der Wert ANSI_CHARSET gibt beispielsweise die ANSI-Zeichensatz, der des lateinischen Alphabets enthält.  
   
 ##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
  Ruft die verketteten Namen einer Schriftart und das Zeichen legen Sie (Skript).  

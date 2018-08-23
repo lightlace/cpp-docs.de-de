@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c45a9ab0e709366d5f391e574c9b8b3a5db4a53a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 5cc725907c93955777cd09b5745651855892e4cd
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881726"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571598"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap-Klasse
 Diese Klasse implementiert [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mithilfe der Win32-Heapreservierungsfunktionen.  
@@ -162,7 +162,7 @@ CWin32Heap(
   
  Der Parameter HEAP_NO_SERIALIZE gibt an, dass es sich bei gegenseitiger Ausschluss nicht verwendet wird, wenn die Heapfunktionen reservieren und Freigeben von Arbeitsspeicher, die einen entsprechenden Zunahme der Leistung.  
   
- Der dritte Parameter beträgt standardmäßig 0; dadurch kann das Heap nach Bedarf vergrößert werden. Finden Sie unter [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) eine Erläuterung der Arbeitsspeichergrößen und Kennzeichen.  
+ Der dritte Parameter beträgt standardmäßig 0; dadurch kann das Heap nach Bedarf vergrößert werden. Finden Sie unter [HeapCreate](/windows/desktop/api/heapapi/nf-heapapi-heapcreate) eine Erläuterung der Arbeitsspeichergrößen und Kennzeichen.  
   
 ##  <a name="dtor"></a>  CWin32Heap:: ~ CWin32Heap  
  Der Destruktor.  

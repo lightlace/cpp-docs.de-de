@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: writeonlyarray-Klasse | Microsoft Docs'
+title: 'Platform:: writeonlyarray-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c1f1f0260d4f1d1c4a6fb640b7cbf1e9d3f2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3871b6ad3aead88c32c906726f689d949eb945ba
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091486"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603345"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray-Klasse
 Stellt ein eindimensionales Array dar, das als Eingabeparameter verwendet wird, wenn der Aufrufer ein Array für die zu füllende Methode übergibt.  
@@ -48,10 +48,10 @@ private ref class WriteOnlyArray<T, 1>
 
 |[Writeonlyarray:: Begin](#begin)| Ein Iterator, der auf das erste Element des Arrays zeigt. |  
 |[Writeonlyarray:: Data](#data)| Ein Zeiger auf den Datenpuffer. |  
-|[Writeonlyarray:: End](#end)| Ein Iterator, der auf eine Position hinter dem letzten Element im Array zeigt. |  
-|[Writeonlyarray:: Fastpass](#fastpass)| Gibt an, ob das Array den FastPass-Mechanismus verwenden kann, der eine Optimierung, die transparent vom System ausgeführt wird. Verwenden Sie dies nicht in Ihrem Code |  
+|[Writeonlyarray:: End](#end)| Ein Iterator, der auf eine Stelle hinter dem letzten Element im Array zeigt. |  
+|[Writeonlyarray:: Fastpass](#fastpass)| Gibt an, ob das Array den FastPass-Mechanismus verwendet werden kann, der eine Optimierung, die transparent vom System ausgeführt wird. Verwenden Sie dies nicht in Ihrem Code |  
 |[Writeonlyarray:: length](#length)| Gibt die Anzahl der Elemente des Arrays zurück. |  
-|[Writeonlyarray:: Set](#set)| Legt das angegebene Element mit dem angegebenen Wert fest. |  
+|[Writeonlyarray:: Set](#set)| Das angegebene Element auf den angegebenen Wert festgelegt. |  
 
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
@@ -191,5 +191,5 @@ T& set(
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Platform-Namespace](platform-namespace-c-cx.md)   
+ [Plattform-Namespace](platform-namespace-c-cx.md)   
  [Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e24c5286afbe20b1f5b71a67b0d10385f80874
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1077a9567509d98b68a864d7478ab84b94d11054
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208795"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540247"
 ---
 # <a name="colecurrency-class"></a>COleCurrency-Klasse
 Kapselt den `CURRENCY` -Datentyp der OLE-Automatisierung.  
@@ -137,11 +137,11 @@ COleCurrency(
   
 - COleCurrency (`curSrc`) erstellt eine `COleCurrency` -Objekt aus einem vorhandenen `COleCurrency` Objekt. Das neue Objekt hat den gleichen Status wie das Quellobjekt.  
   
-- COleCurrency (`varSrc`) erstellt eine `COleCurrency` Objekt. Versucht, Konvertieren einer [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) Struktur oder `COleVariant` Objekt, das ein Währungswert (VT_CY). Wenn die Konvertierung erfolgreich ist, wird der konvertierte Wert in die neue kopiert `COleCurrency` Objekt. Ist dies nicht der Fall, den Wert des der `COleCurrency` Objekt auf 0 (null) und dessen Status als ungültig festgelegt ist.  
+- COleCurrency (`varSrc`) erstellt eine `COleCurrency` Objekt. Versucht, Konvertieren einer [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Struktur oder `COleVariant` Objekt, das ein Währungswert (VT_CY). Wenn die Konvertierung erfolgreich ist, wird der konvertierte Wert in die neue kopiert `COleCurrency` Objekt. Ist dies nicht der Fall, den Wert des der `COleCurrency` Objekt auf 0 (null) und dessen Status als ungültig festgelegt ist.  
   
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency' Objekt aus den angegebenen numerischen Komponenten. Wenn der Bruchteil den absoluten Wert größer als 10.000 ist, wird die entsprechende Anpassung an die Einheiten vorgenommen. Beachten Sie, dass die Einheiten und der Teil mit Bruchzahlen von long-Werte mit Vorzeichen angegeben werden.  
   
- Weitere Informationen finden Sie unter den [Währung](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) und [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) Einträge in das Windows SDK.  
+ Weitere Informationen finden Sie unter den [Währung](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) und [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Einträge in das Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  Die folgenden Beispiele zeigen die Auswirkungen der Konstruktoren Parameter 0 (null) oder zwei Parameter:  
@@ -304,7 +304,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **Operator = (** *VarSrc* **)** Wenn die Konvertierung der `VARIANT` Wert (oder [COleVariant](../../mfc/reference/colevariant-class.md) Objekt) zu einer Währung ( `VT_CY`) ist erfolgreich ist, wird der konvertierte Wert in diese kopiert `COleCurrency` -Objekt und seinen Status zu ungültig festgelegt ist. Wenn die Konvertierung nicht erfolgreich ist, ist der Wert des der `COleCurrency` Objekt auf 0 und dessen Status als ungültig festgelegt ist.  
   
- Weitere Informationen finden Sie unter den [Währung](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) und [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) Einträge in das Windows SDK.  
+ Weitere Informationen finden Sie unter den [Währung](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e) und [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Einträge in das Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
@@ -450,7 +450,7 @@ throw(COleException*);
 ### <a name="remarks"></a>Hinweise  
  Spezifikationen der lokalen Sprache (Gebietsschema-IDs) verwendet für die Bedeutung des nicht numerische Zeichen in der Quellzeichenfolge.  
   
- Eine Erläuterung der Gebietsschema-ID-Werten, finden Sie unter [unterstützen mehrere Sprachen](http://msdn.microsoft.com/47dc5add-232c-4268-b977-43e12da81ede).  
+ Eine Erläuterung der Gebietsschema-ID-Werten, finden Sie unter [unterstützen mehrere Sprachen](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages).  
   
  Wenn die Zeichenfolge in eine Währung erfolgreich konvertiert wurde, den Wert dieses `COleCurrency` Objekt auf diesen Wert und ihren Status auf ungültig festgelegt ist.  
   

@@ -1,5 +1,5 @@
 ---
-title: __svm_invlpga | Microsoft Docs
+title: __svm_invlpga | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e48fc39fd972387ee9fbbe587dc53bf61f2ae59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 656d0edf1a4f2e740599490e6ce77cbc97426850
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330394"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540225"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Microsoft-spezifisch**  
   
- Erklärt die Zuordnungseintrags Adresse des Computers Übersetzung aussehen-Aside-Puffer. Parameter geben die virtuelle Adresse und die Adresse Raum-ID der Seite, um die für ungültig zu erklären.  
+ Erklärt den Adresseintrag für die Zuordnung im Puffer suchen-Aside-Übersetzung, des Computers an. Parameter geben die virtuelle Adresse und die Adresse Raum-ID der Seite für ungültig erklärt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,17 +41,17 @@ void __svm_invlpga(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `Va`|Die virtuelle Adresse der Seite, um die für ungültig zu erklären.|  
-|[in] `ASID`|Die Adresse Speicherplatz Bezeichner (ASID) der Seite, um die für ungültig zu erklären.|  
+|[in] `Va`|Die virtuelle Adresse der Seite für ungültig erklärt werden soll.|  
+|[in] `ASID`|Die Adresse Speicherplatz Bezeichner (ASID) der Seite für ungültig erklärt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__svm_invlpga` -Funktion ist gleichbedeutend mit der `INVLPGA` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593 Revision 3.11, an die [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) Standort.  
+ Die `__svm_invlpga` -Funktion ist gleichbedeutend mit der `INVLPGA` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593, Version 3.11, auf die [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) Standort.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__svm_invlpga`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_invlpga`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

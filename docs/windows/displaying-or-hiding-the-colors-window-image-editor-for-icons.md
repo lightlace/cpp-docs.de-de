@@ -18,33 +18,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6300b02fccad672eef19b387d595a42e4b94ef2
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 757360f231f15bc7166008e0e8d003bebab9eb3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645109"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578754"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Anzeigen oder Ausblenden des Fensters "Farben" (Bildbearbeitung für Symbole)
-### <a name="to-display-colors-window"></a>Zum Anzeigen des Fensters "Farben"  
-  
-1.  Mit der rechten Maustaste einen **Bildbearbeitung** Bereich, und wählen Sie **Fenster "Farben" anzeigen** aus dem Kontextmenü.  
-  
-     \- oder –  
-  
-2.  Klicken Sie auf **anzeigen Fenster "Farben"** auf die [des bildmenüs](../windows/image-menu-image-editor-for-icons.md).  
-  
-### <a name="to-hide-the-colors-window"></a>So blenden Sie das Fenster "Farben" aus  
-  
-1.  Lösen Sie das Fenster. Dadurch kann das Fenster automatisch ausgeblendet, wenn er nicht verwendet wird.  
-  
- \- oder –  
-  
--   Klicken Sie auf die **schließen** Schaltfläche.  
-  
-## <a name="requirements"></a>Anforderungen  
- Keiner  
-  
-## <a name="see-also"></a>Siehe auch  
- [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md)   
- [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
+
+### <a name="to-display-colors-window"></a>Zum Anzeigen des Fensters "Farben"
+
+1. Mit der rechten Maustaste einen **Bildbearbeitung** Bereich, und wählen Sie **Fenster "Farben" anzeigen** aus dem Kontextmenü.
+
+   \- oder –
+
+2. Klicken Sie auf **anzeigen Fenster "Farben"** auf die [des bildmenüs](../windows/image-menu-image-editor-for-icons.md).
+
+### <a name="to-hide-the-colors-window"></a>So blenden Sie das Fenster "Farben" aus
+
+1. Lösen Sie das Fenster. Dadurch kann das Fenster automatisch ausgeblendet, wenn er nicht verwendet wird.
+
+\- oder –
+
+- Klicken Sie auf die **schließen** Schaltfläche.
+
+## <a name="requirements"></a>Anforderungen
+
+Keiner
+
+## <a name="see-also"></a>Siehe auch
+
+[Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md)  
+[Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)

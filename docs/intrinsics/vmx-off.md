@@ -1,5 +1,5 @@
 ---
-title: __vmx_off | Microsoft Docs
+title: __vmx_off | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82d94d1cd08d08a57cedf3709d18a46639e56925
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bae7d672cf592514d60c9ec68bbf4464507b94ff
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335405"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539431"
 ---
 # <a name="vmxoff"></a>__vmx_off
 **Microsoft-spezifisch**  
   
- Vorgang der virtuellen Maschine (VMX)-Erweiterungen im Prozessor wird deaktiviert.  
+ VM-Erweiterungen (VMX) Vorgang im Prozessor wird deaktiviert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +36,13 @@ void __vmx_off();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__vmx_off` -Funktion ist gleichbedeutend mit der `VMXOFF` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie für Weitere Informationen suchen, für das Dokument "Intel Virtualization technische Spezifikation für der IA-32 Intel Architecture" Dokumentnummer C97063-002 auf der [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
+ Die `__vmx_off` -Funktion ist gleichbedeutend mit der `VMXOFF` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__vmx_off`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_off`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

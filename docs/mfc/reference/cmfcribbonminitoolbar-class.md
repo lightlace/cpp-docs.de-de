@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 789a8165a12977d11220d299e2c99549121dba64
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852886"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541267"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar-Klasse
 Implementiert eine kontextbezogene Popup-Symbolleiste.  
@@ -162,7 +162,7 @@ BOOL ShowWithContextMenu(
  Verwenden Sie diese Funktion, um eine Minisymbolleiste anzuzeigen, die ein Kontextmenü angezeigt hat. Im Kontextmenü ist positionierte 15 Pixel unterhalb der Minisymbolleiste.  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 BOOL IsContextMenuMode() const;  
@@ -173,7 +173,7 @@ BOOL IsContextMenuMode() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual BOOL IsRibbonMiniToolBar() const;  

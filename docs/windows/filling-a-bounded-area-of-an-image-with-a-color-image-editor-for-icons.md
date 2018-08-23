@@ -18,34 +18,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc632f251e618e5816b1b8d8ea8280cba3d7b217
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 47b8837cafaab2501e201a747fd9463e1e00639e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652489"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42580968"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Füllen von begrenzten Bereichen eines Bilds mit einer Farbe (Bildbearbeitung für Symbole)
-Die bildbearbeitung bietet die **füllen** Tool für das Füllen alle Bildbereiche mit der aktuellen zeichnen oder die aktuelle Hintergrundfarbe.  
-  
+
+Die bildbearbeitung bietet die **füllen** Tool für das Füllen alle Bildbereiche mit der aktuellen zeichnen oder die aktuelle Hintergrundfarbe.
+
 > [!TIP]
->  Wenn Sie den Cursor auf eine Symbolleisten-Schaltfläche zeigen, werden QuickInfos angezeigt. Diese Tipps können Sie die Funktion der einzelnen Schaltflächen zu identifizieren.  
-  
-### <a name="to-use-the-fill-tool"></a>Um das Füllwerkzeug verwenden  
-  
-1.  Auf der **Bild-Editor** Symbolleiste (oder die **Image** Menü **Tools** Befehl), klicken Sie auf die **füllen** Tool.  
-  
-2.  Wählen Sie bei Bedarf, zeichnen Farben: In der [Farben (Palette)](../windows/colors-window-image-editor-for-icons.md), klicken Sie auf die linke Maustaste gedrückt, wählen Sie eine Vordergrundfarbe oder der rechten Maustaste auf eine Hintergrundfarbe auswählen.  
-  
-3.  Verschieben der **Füllung** Tool, um den Bereich, die Sie füllen möchten.  
-  
-4.  Klicken Sie auf der linken oder rechten Maustaste Füllen von mit die Vordergrundfarbe oder die Farbe des Hintergrunds.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Anforderungen  
- Keiner  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)
+> Wenn Sie den Cursor auf eine Symbolleisten-Schaltfläche zeigen, werden QuickInfos angezeigt. Diese Tipps können Sie die Funktion der einzelnen Schaltflächen zu identifizieren.
+
+### <a name="to-use-the-fill-tool"></a>Um das Füllwerkzeug verwenden
+
+1. Auf der **Bild-Editor** Symbolleiste (oder die **Image** Menü **Tools** Befehl), klicken Sie auf die **füllen** Tool.
+
+2. Wählen Sie bei Bedarf, zeichnen Farben: In der [Farben (Palette)](../windows/colors-window-image-editor-for-icons.md), klicken Sie auf die linke Maustaste gedrückt, wählen Sie eine Vordergrundfarbe oder der rechten Maustaste auf eine Hintergrundfarbe auswählen.
+
+3. Verschieben der **Füllung** Tool, um den Bereich, die Sie füllen möchten.
+
+4. Klicken Sie auf der linken oder rechten Maustaste Füllen von mit die Vordergrundfarbe oder die Farbe des Hintergrunds.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Keiner
+
+## <a name="see-also"></a>Siehe auch
+
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)

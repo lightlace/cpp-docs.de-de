@@ -1,5 +1,5 @@
 ---
-title: Veraltete ANSI-APIs | Microsoft Docs
+title: Veraltete ANSI-APIs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d612cca5d0c95b411f5278fe92404166d26b53b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95eed7834e46f6a42a363e8a8f8134945beb54fc
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342058"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545824"
 ---
 # <a name="deprecated-ansi-apis"></a>Veraltete ANSI-APIs
-Die Microsoft Foundation Class (MFC)-Bibliothek ist in Bezug auf Klassen und Methoden, die auf den Unicode-Zeichensatz basieren migrieren. Folglich sind die ANSI-Versionen von mehreren MFC-Methoden veraltet. Verwenden Sie die Unicode-Versionen dieser Methoden in Zukunft Anwendungen.  
+Die Microsoft Foundation Class (MFC)-Bibliothek ist die Migration in Bezug auf Klassen und Methoden, die auf den Unicode-Zeichensatz basieren. Daher sind die ANSI-Versionen mehrerer MFC-Methoden veraltet. Verwenden Sie in Ihren künftigen Anwendungen die Unicode-Versionen dieser Methoden.  
   
- Ab Windows-Standardsteuerelemente Version 6.1, gelieferten [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)], die folgenden ANSI-Methoden sind veraltet.  
+ Beginnend mit Windows-Standardsteuerelemente, Version 6.1, Windows Vista gelieferten, sind die folgenden ANSI-Methoden veraltet.  
   
 ## <a name="cbutton-class"></a>CButton-Klasse  
   

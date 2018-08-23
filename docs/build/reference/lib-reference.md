@@ -1,5 +1,5 @@
 ---
-title: LIB-Referenz | Microsoft Docs
+title: LIB-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a77056c6a3d0427c865658cd945e74e29d672b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b6eb6e9a1b7be12d125a68d3873401ccdeb7be3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371940"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571792"
 ---
 # <a name="lib-reference"></a>LIB-Referenz
-Die Microsoft-Bibliotheks-Manager (LIB.exe) erstellt und verwaltet eine Bibliothek mit Objektdateien Common Object File Format (COFF). LIB kann auch zum Erstellen von Exportdateien und Importbibliotheken Verweise auf exportierte Definitionen verwendet werden.  
+Die Microsoft-Bibliotheksverwaltung (LIB.exe) erstellt und verwaltet eine Bibliothek mit Objektdateien Common Object File Format (COFF). LIB kann auch zum Erstellen von Exportdateien und Importbibliotheken Verweise auf exportierte Definitionen verwendet werden.  
   
 > [!NOTE]
->  Sie können dieses Tool nur von der [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]-Eingabeaufforderung aus starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.  
+>  Sie können dieses Tool nur über die Visual Studio-Eingabeaufforderung starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.  
   
 -   [Übersicht über LIB](../../build/reference/overview-of-lib.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: -ALLOWBIND (DLL-Bindung verhindern) | Microsoft Docs
+title: -ALLOWBIND (DLL-Bindung verhindern) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31968e27c46cb5ea220a4cfe19c36820c4cf8444
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0bff9ec6502aab5787c492a15e008bc29926163
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369639"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572285"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (DLL-Bindung verhindern)
 ```  
@@ -37,15 +37,15 @@ ms.locfileid: "32369639"
 ## <a name="remarks"></a>Hinweise  
  /ALLOWBIND:NO legt ein Bit im Header einer DLL fest, das Bind.exe darauf hinweist, dass das Image nicht gebunden werden darf. Möglicherweise möchten Sie nicht, dass eine DLL gebunden wird, wenn sie digital signiert wurde (die Bindung macht die Signatur ungültig).  
   
- Sie können eine vorhandene DLL zur ALLOWBIND-Funktionalität mit Bearbeiten der [/ALLOWBIND](../../build/reference/allowbind.md) Dienstprogramms EDITBIN-Option.  
+ Sie können eine vorhandene DLL für die/ALLOWBIND-Funktionalität mit Bearbeiten der [/ALLOWBIND](../../build/reference/allowbind.md) Option des EDITBIN-Hilfsprogramms.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).  
   
 2.  Erweitern Sie **Konfigurationseigenschaften**, **Linker**, und wählen Sie **Befehlszeile**.  
   
-3.  Geben Sie `/ALLOWBIND:NO` in **Zusatzoptionen**.  
+3.  Geben Sie `/ALLOWBIND:NO` in **zusätzliche Optionen**.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   
@@ -54,5 +54,5 @@ ms.locfileid: "32369639"
 ## <a name="see-also"></a>Siehe auch  
  [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
  [Optionen des Linkers](../../build/reference/linker-options.md)   
- [BindImage-Funktion](http://msdn.microsoft.com/library/windows/desktop/ms679278.aspx)   
- [BindImageEx-Funktion](http://msdn.microsoft.com/library/windows/desktop/ms679279.aspx)
+ [BindImage-Funktion](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)   
+ [BindImageEx-Funktion](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

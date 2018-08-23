@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da9e69cd7ea5e7eabdd826e021e57dac3ba8e6aa
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d6aa313252d2ba06cf0a912f31564dec3d65e0e8
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208857"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573070"
 ---
 # <a name="csid-class"></a>CSid-Klasse
 Diese Klasse ist ein Wrapper für eine `SID` -Struktur (Sicherheits-ID).  
@@ -332,13 +332,13 @@ bool LoadAccount(
  Der Systemname. Diese Zeichenfolge kann der Name eines Remotecomputers sein. Wenn diese Zeichenfolge NULL ist, wird stattdessen das lokale System verwendet.  
   
  *pSid*  
- Ein Zeiger auf eine [SID](http://msdn.microsoft.com/library/windows/desktop/aa379594\(v=vs.85\).aspx) Struktur.  
+ Ein Zeiger auf eine [SID](/windows/desktop/api/winnt/ns-winnt-_sid) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" bei Erfolg bei "false". Um erweiterte Fehlerinformationen abzurufen, rufen Sie `GetLastError` auf.  
   
 ### <a name="remarks"></a>Hinweise  
- `LoadAccount` versucht, eine Sicherheits-ID für den angegebenen Namen zu suchen. Finden Sie unter [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) Weitere Details.  
+ `LoadAccount` versucht, eine Sicherheits-ID für den angegebenen Namen zu suchen. Finden Sie unter [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) Weitere Details.  
   
 ##  <a name="operator_eq"></a>  CSid::operator =  
  Zuweisungsoperator.  

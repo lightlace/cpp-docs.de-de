@@ -19,39 +19,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8ea040d5a549c61ba17f059260cb399d82bc430
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b87859735c2a67fa2c8ddd7c253418bb2c19d888
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013966"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583668"
 ---
 # <a name="version-information-editor"></a>Versionsinfo-Editor
-Versionsinformationen bestehen aus einer Firmen- und einer Produkt-ID, einer Produktseriennummer und Copyright- und Markenbestimmungen. Mit der **Versionsinformationen** -Editor erstellt und verwaltet diese Daten, die in der Versionsinformationsressource gespeichert wird. Die Versionsinformationsressource ist für eine Anwendung nicht erforderlich, sie stellt aber einen sinnvollen Ort dar, alle Informationen zusammenzuführen, die zur Identifizierung der Anwendung dienen. Versionsinformationen werden auch von Setup-APIs verwendet.  
-  
- Eine Versionsinformationsressource weist einen oberen Block und mindestens einen unteren Block auf: ein einzelner Block mit unveränderlichen Informationen oben und mindestens ein weiterer Versionsinformationsblock darunter (für andere Sprachen und/oder Zeichensätze). Der obere Block weist sowohl editierbare Zahlenfelder als auch auswählbare Dropdownlisten auf. Die unteren Blöcke weisen nur editierbare Textfelder auf.  
-  
+
+Versionsinformationen bestehen aus einer Firmen- und einer Produkt-ID, einer Produktseriennummer und Copyright- und Markenbestimmungen. Mit der **Versionsinformationen** -Editor erstellt und verwaltet diese Daten, die in der Versionsinformationsressource gespeichert wird. Die Versionsinformationsressource ist für eine Anwendung nicht erforderlich, sie stellt aber einen sinnvollen Ort dar, alle Informationen zusammenzuführen, die zur Identifizierung der Anwendung dienen. Versionsinformationen werden auch von Setup-APIs verwendet.
+
+Eine Versionsinformationsressource weist einen oberen Block und mindestens einen unteren Block auf: ein einzelner Block mit unveränderlichen Informationen oben und mindestens ein weiterer Versionsinformationsblock darunter (für andere Sprachen und/oder Zeichensätze). Der obere Block weist sowohl editierbare Zahlenfelder als auch auswählbare Dropdownlisten auf. Die unteren Blöcke weisen nur editierbare Textfelder auf.
+
 > [!NOTE]
->  Der Windows-Standard sieht nur eine Versionsressource mit dem Namen VS_VERSION_INFO vor.  
-  
- Die **Versionsinformationen** -Editor können Sie:  
-  
--   [Bearbeiten einer Zeichenfolge in einer Versionsinformationsressource](../windows/editing-a-string-in-a-version-information-resource.md)  
-  
--   [Hinzufügen von Versionsinformationen für eine andere Sprache (neuer Versionsinformationsblock)](../windows/adding-version-information-for-another-language.md)  
-  
--   [Löschen eines Versionsinformationsblocks](../windows/deleting-a-version-information-block.md)  
-  
--   [Zugreifen auf Versionsinformationen aus dem Programm](../windows/accessing-version-information-from-within-your-program.md)  
-  
-    > [!NOTE]
-    >  Bei der Verwendung der **Versionsinformationen** -Editor, in vielen Fällen, Sie können mit der rechten Maustaste, ein Kontextmenü mit ressourcenspezifische Befehle angezeigt. Beispielsweise wenn Sie klicken, während Sie auf einen Blockheadereintrag zeigen, zeigt das Kontextmenü der **neue Versionsblockinformationen** und **Versionsblockinformationen löschen** Befehle.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ressourcen-Editoren](../windows/resource-editors.md)   
- [Menüs und weitere Ressourcen](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+> Der Windows-Standard sieht nur eine Versionsressource mit dem Namen VS_VERSION_INFO vor.
+
+Die **Versionsinformationen** -Editor können Sie:
+
+- [Bearbeiten einer Zeichenfolge in einer Versionsinformationsressource](../windows/editing-a-string-in-a-version-information-resource.md)
+
+- [Hinzufügen von Versionsinformationen für eine andere Sprache (neuer Versionsinformationsblock)](../windows/adding-version-information-for-another-language.md)
+
+- [Löschen eines Versionsinformationsblocks](../windows/deleting-a-version-information-block.md)
+
+- [Zugreifen auf Versionsinformationen aus dem Programm](../windows/accessing-version-information-from-within-your-program.md)
+
+   > [!NOTE]
+   > Bei der Verwendung der **Versionsinformationen** -Editor, in vielen Fällen, Sie können mit der rechten Maustaste, ein Kontextmenü mit ressourcenspezifische Befehle angezeigt. Beispielsweise wenn Sie klicken, während Sie auf einen Blockheadereintrag zeigen, zeigt das Kontextmenü der **neue Versionsblockinformationen** und **Versionsblockinformationen löschen** Befehle.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Ressourcen-Editor](../windows/resource-editors.md)  
+[Menüs und weitere Ressourcen](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

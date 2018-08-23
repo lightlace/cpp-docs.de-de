@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: e741055950449ea07c719cf6cd4c33a34d6f43b3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337721"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571677"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset-Klasse
 Abruft und verändert die Zeilen, die auf Daten in einer Massenoperation zu arbeiten, indem mehrere Zeilenhandles mit einem einzigen Aufruf abgerufen.  
@@ -160,7 +160,7 @@ class CBulkRowset : public CRowset<TAccessor>
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
 
 ## <a name="addrefrows"></a> CBulkRowset:: Addrefrows
-Aufrufe [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) erhöht den Verweiszähler für alle Zeilen, die derzeit von der Bulk-Rowset abgerufen.  
+Aufrufe [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) erhöht den Verweiszähler für alle Zeilen, die derzeit von der Bulk-Rowset abgerufen.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -246,7 +246,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
  [in] Die Anzahl Anzahl von Zeilen aus das Lesezeichen die Zielzeile. Wenn *lSkip* 0 (null), wird die erste Zeile abgerufen wird, den mit Lesezeichen versehenen Zeile. Wenn *lSkip* 1 ist, die erste Zeile abgerufen wird die Zeile nach der Lesezeichen versehenen Zeile. Wenn *lSkip* ist-1. die erste Zeile abgerufen wird die Zeile vor den mit Lesezeichen versehenen Zeile.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Finden Sie unter [IRowset:: GetData](https://msdn.microsoft.com/library/ms716988.aspx) in die *OLE DB-Programmierreferenz*. 
+ Finden Sie unter [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
 
 ## <a name="movetoratio"></a> CBulkRowset:: Movetoratio
 Ruft Zeilen ab der ein Bruchteil Ausgangsposition im Rowset ab.  
@@ -273,10 +273,10 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- Wo `RowsetSize` ist die Größe des Rowsets, gemessen in Zeilen. Die Genauigkeit zu dieser Formel hängt von dem Anbieter ab. Weitere Informationen finden Sie unter [IRowsetScroll:: GetRowsAtRatio](https://msdn.microsoft.com/library/ms709602.aspx) in die *OLE DB-Programmierreferenz*.   
+ Wo `RowsetSize` ist die Größe des Rowsets, gemessen in Zeilen. Die Genauigkeit zu dieser Formel hängt von dem Anbieter ab. Weitere Informationen finden Sie unter [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.   
 
 ## <a name="releaserows"></a> CBulkRowset:: ReleaseRows
-Aufrufe [IRowset:: ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) dekrementiert den Verweiszähler für alle Zeilen, die derzeit von der Bulk-Rowset abgerufen.  
+Aufrufe [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) dekrementiert den Verweiszähler für alle Zeilen, die derzeit von der Bulk-Rowset abgerufen.  
   
 ### <a name="syntax"></a>Syntax  
   

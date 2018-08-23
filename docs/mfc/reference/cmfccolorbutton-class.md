@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac1b2c7f078acaa929cbfec0ac85456e6d72ee20
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ee49dede1a71e8bd2a01e98a3bdd2dd53ef63d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850107"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42541419"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton-Klasse
 Die `CMFCColorButton` und [CMFCColorBar-Klasse](../../mfc/reference/cmfccolorbar-class.md) Klassen werden zusammen verwendet, um ein Farben-Auswahlsteuerelement zu implementieren.  
@@ -276,7 +276,7 @@ virtual void OnDrawBorder(
  Verweist auf den Gerätekontext zum Zeichnen des Rahmens.  
   
  [in] *RectClient*  
- Ein Rechteck, in den Gerätekontext, die von angegeben ist das der *pDC* Parameter, der definiert, die Grenzen der Schaltfläche gezeichnet werden soll.  
+ Ein Rechteck, in den Gerätekontext, die angegeben wird die *pDC* Parameter, der definiert, die Grenzen der Schaltfläche gezeichnet werden soll.  
   
  [in] *UiState*  
  Gibt den visuellen Zustand der Schaltfläche an.  

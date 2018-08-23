@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5dc081a24495fc8939f3069dc68bed4f75beaaf
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 738ee52eb68cfbb03a380ffac52efdb4010b5205
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642824"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42602130"
 ---
 # <a name="eventtargetarraybegin-method"></a>EventTargetArray::Begin-Methode
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-ComPtr<IUnknown>* Begin();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die Adresse des ersten Elements im internen Array von Ereignishandlern.  
-  
-## <a name="remarks"></a>Hinweise  
- Ruft die Adresse des ersten Elements in das interne Array der Ereignishandler ab.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [EventTargetArray-Klasse](../windows/eventtargetarray-class.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+ComPtr<IUnknown>* Begin();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Die Adresse des ersten Elements im internen Array von Ereignishandlern.
+
+## <a name="remarks"></a>Hinweise
+
+Ruft die Adresse des ersten Elements in das interne Array der Ereignishandler ab.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[EventTargetArray-Klasse](../windows/eventtargetarray-class.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

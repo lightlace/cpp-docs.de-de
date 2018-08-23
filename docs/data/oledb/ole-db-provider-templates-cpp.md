@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 204abfb28ed58051f27f62b522ed0b02a0a78585
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4983234cdbc64f4ca8364c5afcc2d8e735ba2d01
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339574"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572745"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB-Anbietervorlagen (C++)
 OLE DB ist ein wichtiger Teil der Microsoft Universal Data Access-Strategie. Der OLE DB-Entwurf ermöglicht leistungsstarke Datenzugriff aus einer beliebigen Datenquelle an. Tabellendaten können durch OLE DB angezeigt werden, unabhängig davon, ob sie eine Datenbank stammen. Die Flexibilität bietet Ihnen eine enorme Menge Energie.  
@@ -63,7 +63,7 @@ OLE DB ist ein wichtiger Teil der Microsoft Universal Data Access-Strategie. Der
  Anbieter können Komplexität und Funktionalität stark variieren. Es ist hilfreich, die Anbieter in nur-Lese und aktualisierbare Anbieter kategorisieren:  
   
 -   Visual C++ 6.0 unterstützt nur nur-Lese Anbieter. [Erstellen einen OLE DB-Anbieter](../../data/oledb/creating-an-ole-db-provider.md) wird erläutert, wie einen nur-Lese Anbieter erstellt.  
--   Visual C++ unterstützt aktualisierbare Anbieter, die aktualisiert werden können (Schreiben) dem Datenspeicher. Weitere Informationen zu aktualisierbaren Anbietern finden Sie unter [Erstellen eines aktualisierbaren Anbieters](../../data/oledb/creating-an-updatable-provider.md); die [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) Beispiel ist ein Beispiel eines aktualisierbaren Anbieters.  
+-   Visual C++ unterstützt aktualisierbare Anbieter, die aktualisiert werden können (Schreiben) dem Datenspeicher. Weitere Informationen zu aktualisierbaren Anbietern finden Sie unter [Erstellen eines aktualisierbaren Anbieters](../../data/oledb/creating-an-updatable-provider.md); die [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) Beispiel ist ein Beispiel eines aktualisierbaren Anbieters.  
   
  Weitere Informationen finden Sie unter:  
   
@@ -75,5 +75,5 @@ OLE DB ist ein wichtiger Teil der Microsoft Universal Data Access-Strategie. Der
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenzugriff](../data-access-in-cpp.md)   
- [OLE DB-SDK-Dokumentation](https://msdn.microsoft.com/library/ms722784.aspx)   
- [OLE DB-Programmierreferenz](https://msdn.microsoft.com/library/ms713643.aspx)
+ [OLE DB-SDK-Dokumentation](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
+ [OLE DB-Programmierreferenz](/previous-versions/windows/desktop/ms713643\(v=vs.85\))

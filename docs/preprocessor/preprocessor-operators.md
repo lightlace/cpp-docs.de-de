@@ -1,5 +1,5 @@
 ---
-title: Präprozessor-Operatoren | Microsoft Docs
+title: Präprozessor-Operatoren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da6ff2a87007892cb5a76e7fc003e1d172056fb0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fca1c097a01f34fb2cc708489338391dfced982f
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839337"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539038"
 ---
 # <a name="preprocessor-operators"></a>Präprozessoroperatoren
-Vier präprozessorspezifische Operatoren werden im Kontext der `#define`-Direktive verwendet (die jeweilige Zusammenfassung finden Sie in der nachfolgenden Liste). Zeichenfolgenoperatoren, Zeichenoperatoren und Operatoren zum Einfügen eines Tokens werden in den nächsten drei Abschnitten erläutert. Informationen zu den **definiert** -Operator, finden Sie unter [#if-, #elif, #else- und #endif-Direktiven](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
+Vier präprozessorspezifische Operatoren werden im Kontext der `#define`-Direktive verwendet (die jeweilige Zusammenfassung finden Sie in der nachfolgenden Liste). Zeichenfolgenoperatoren, Zeichenoperatoren und Operatoren zum Einfügen eines Tokens werden in den nächsten drei Abschnitten erläutert. Informationen zu den `defined` -Operator, finden Sie unter [#if-, #elif-, #else- und #endif-Direktiven](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
   
 |Operator|Aktion|  
 |--------------|------------|  
@@ -33,6 +33,7 @@ Vier präprozessorspezifische Operatoren werden im Kontext der `#define`-Direkti
 |[definierter operator](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|Vereinfacht das Schreiben von zusammengesetzten Ausdrücken in bestimmten Makroanweisungen.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Präprozessordirektiven](../preprocessor/preprocessor-directives.md)   
- [Vordefinierte Makros](../preprocessor/predefined-macros.md)   
- [C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)
+ 
+[Präprozessoranweisungen](../preprocessor/preprocessor-directives.md)   
+[Vordefinierte Makros](../preprocessor/predefined-macros.md)   
+[C/C++-Präprozessorreferenz](../preprocessor/c-cpp-preprocessor-reference.md)

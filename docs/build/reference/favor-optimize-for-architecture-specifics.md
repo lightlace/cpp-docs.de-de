@@ -1,5 +1,5 @@
 ---
-title: -favor (optimieren für Besonderheiten der Architektur) | Microsoft Docs
+title: -favor (optimieren für Besonderheiten der Architektur) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91f91373eef29adcb9a632e80520ed6713d3e39b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75081c3a2e8918bfe8abf43373d755ca258f2595
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376220"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572373"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (Optimieren für Besonderheiten der Architektur)
-**/ favor:** `option` erzeugt Code, der für eine bestimmte Architektur oder für spezifische Merkmale der Mikroarchitekturen von-der AMD und der Intel-Architekturen optimiert ist.  
+**/ favor:** `option` generiert Code, der für eine bestimmte Architektur oder für die Einzelheiten der Micro-Architekturen, in der AMD und Intel-Architekturen optimiert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,31 +35,31 @@ ms.locfileid: "32376220"
   
 ## <a name="remarks"></a>Hinweise  
  **/ favor: Blend**  
- (X86- und X64) erzeugt Code, der für spezifische Merkmale der Mikroarchitekturen von-der AMD und der Intel-Architekturen optimiert ist. Während **/favor: Blend** erzielen möglicherweise nicht die optimale Leistung möglich für einen bestimmten Prozessor, es bietet die beste Leistung über eine Breite Palette von X86- und X64 Prozessoren. Standardmäßig **/favor: Blend** wirksam wird.  
+ (X86- und X64) erzeugt den Code, der für die Einzelheiten der Micro-Architekturen, in der AMD und Intel-Architekturen optimiert ist. Während **/favor: Blend** erhalten möglicherweise nicht die beste Leistung für einen bestimmten Prozessor möglich ist, wurde entwickelt, um die beste Leistung für eine Vielzahl von X86 und X64-Prozessoren zu gewährleisten. In der Standardeinstellung **/favor: Blend** ist aktiviert.  
   
  **/favor:Atom**  
- (X86- und X64) erzeugt Code, der für die Einzelheiten der Intel Atom-Prozessor und Intel Centrino Atom-Prozessor-Technologie optimiert ist. Mithilfe von generierten Code **/favor:ATOM** auch Intel SSSE3, SSE3 SSE2 und SSE-Anweisungen für Intel-Prozessoren erzeugen.  
+ (X86- und X64) erzeugt den Code, der für die Einzelheiten der Intel Atom-Prozessor und Intel Centrino Atom-Prozessortechnologien optimiert ist. Mithilfe von generierten Code **/favor:ATOM** Intel SSSE3, SSE3, SSE und SSE2-Anweisungen für Intel-Prozessoren kann auch erstellt werden.  
   
  **/favor:AMD64**  
- (nur X64) optimiert den generierten Code für die AMD Opteron und Athlon-Prozessoren, die 64-Bit-Erweiterungen unterstützen. Der optimierte Code kann auf alle X64 kompatible Plattformen ausgeführt. Mithilfe von generierten Code **/favor:AMD64** möglicherweise schlechter Leistung auf Intel-Prozessoren, die Intel64 unterstützen.  
+ (nur X64) optimiert den generierten Code für AMD Opteron und Athlon-Prozessoren, 64-Bit-Erweiterungen unterstützen. Der optimierte Code kann auf alle X64 kompatible Plattformen ausführen. Mithilfe von generierten Code **/favor:AMD64** möglicherweise unzureichende Leistung auf Intel-Prozessoren, die Intel64 zu unterstützen.  
   
  **/favor:Intel64**  
- (nur X64) optimiert den generierten Code für Intel-Prozessoren, die Intel64, zu unterstützen, die in der Regel eine bessere Leistung für diese Plattform ergibt. Der resultierende Code kann auf alle X64 ausführen Plattform. Mit generierten Code **/favor:INTEL64** möglicherweise schlechter Leistung AMD Opteron und Athlon-Prozessoren, die 64-Bit-Erweiterungen unterstützen.  
+ (nur X64) optimiert den generierten Code für Intel-Prozessoren, die Intel64, zu unterstützen, die in der Regel eine bessere Leistung für diese Plattform liefert. Der resultierende Code kann auf alle X64 ausführen Plattform. Mit generierten Code **/favor:INTEL64** möglicherweise unzureichende Leistung auf AMD Opteron und Athlon-Prozessoren, 64-Bit-Erweiterungen unterstützen.  
   
 > [!NOTE]
 >  Intel64-Architektur wurde zuvor als Extended Memory 64 Technology bezeichnet, und die entsprechende Compileroption wurde **/favor:EM64T**.  
   
- Informationen über das Programm für die [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] -Architektur finden Sie unter [X64 Softwarekonventionen](../../build/x64-software-conventions.md).  
+ Informationen über das Programmieren für die X64-Architektur finden Sie unter [X64 Softwarekonventionen](../../build/x64-software-conventions.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).  
   
 2.  Wählen Sie die **C/C++-** Ordner.  
   
 3.  Wählen Sie die **Befehlszeile** Eigenschaftenseite.  
   
-4.  Geben Sie die Compileroption "in der **Zusatzoptionen** Feld.  
+4.  Geben Sie die Compileroption in der **zusätzliche Optionen** Feld.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   

@@ -38,15 +38,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e95ab02abaf4dd536ad6a081708a76cf54cca6b0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2bc335a0c83e57b8abfeb708d9c6acce977010dd
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337241"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571780"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl-Klasse
-Stellt eine Implementierung der [IColumnsInfo](https://msdn.microsoft.com/library/ms724541.aspx) Schnittstelle.  
+Stellt eine Implementierung der [IColumnsInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -88,7 +88,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) in die *OLE DB-Programmierreferenz*.  
+ Finden Sie unter [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
 
 ## <a name="mapcolumnids"></a> Icolumnsinfoimpl:: Mapcolumnids
 Gibt ein Array von Ordnungszahlen der Spalten in einem Rowset, das durch die angegebenen Spalten-IDs gekennzeichnet sind.  
@@ -102,7 +102,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IColumnsInfo::MapColumnIDs](https://msdn.microsoft.com/library/ms714200.aspx) in die *OLE DB-Programmierreferenz*.  
+ Finden Sie unter [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Anbietervorlagen](../../data/oledb/ole-db-provider-templates-cpp.md)   

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e82f22861016f5046cde1fa3a37889c994f111c8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 378ecc3c02a78bc99fa999090119e75a45dc27a7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852453"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540618"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar-Klasse
 Die `CMFCRibbonStatusBar` -Klasse implementiert ein Statusleisten-Steuerelement, das Menübandelemente anzeigen kann.  
@@ -259,7 +259,7 @@ BOOL CreateEx(
  TRUE, wenn "false" auf die Statusleiste erfolgreich, andernfalls erstellt wird.  
   
 ##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
@@ -340,7 +340,7 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual BOOL GetExtendedArea(CRect& rect) const;  
@@ -354,7 +354,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 int GetSpace() const;  
@@ -365,7 +365,7 @@ int GetSpace() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 BOOL IsBottomFrame() const;  
@@ -376,7 +376,7 @@ BOOL IsBottomFrame() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;  
@@ -426,7 +426,7 @@ virtual void OnDrawInformation(
  Überschreiben Sie diese Methode in einer abgeleiteten Klasse, wenn Sie die Darstellung der Zeichenfolge in der Statusleiste anpassen möchten. Verwenden der [CMFCRibbonStatusBar::SetInformation](#setinformation) Methode, um die Statusleiste in den Informationen im Modus versetzen. In diesem Modus wird die Statusleiste Blendet alle Bereiche und zeigt die Informationszeichenfolge gemäß *StrInfo*.  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual void RecalcLayout();

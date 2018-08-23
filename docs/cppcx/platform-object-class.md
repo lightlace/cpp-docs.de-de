@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: Object-Klasse | Microsoft Docs'
+title: 'Platform:: Object Class | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7fc6dc1df1d1e22032dbe7322b9a6ead8334ddc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19c302f08485b6db89ea2a6b66106244ed95b48c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091880"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601737"
 ---
 # <a name="platformobject-class"></a>Platform::Object-Klasse
 Stellt gemeinsames Verhalten für Verweisklassen und referenzstrukturen in Windows-Runtime-apps bereit. Alle Verweisklassen- und Referenzstruktur-Instanzen sind implizit konvertierbar in Platform::Object^ und können seine virtuelle ToString-Methode überschreiben.  
@@ -117,11 +117,11 @@ Object::GetType()
  Ein [Platform:: Type](../cppcx/platform-type-class.md) -Objekt, das den Laufzeittyp des Objekts beschreibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Die statische [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) dienen zum Abrufen einer [Platform:: TypeCode-Enumeration](../cppcx/platform-typecode-enumeration.md) Wert, der den aktuellen Typ darstellt. Dies ist besonders für integrierte Typen hilfreich. Der Typencode für eine Verweisklasse außer [Platform:: String](../cppcx/platform-string-class.md) ist Objekt (1).  
+ Die statische [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) kann zum Abrufen einer [Platform:: TypeCode-Enumeration](../cppcx/platform-typecode-enumeration.md) -Wert, der den aktuellen Typ darstellt. Dies ist besonders für integrierte Typen hilfreich. Der Typencode für eine Verweisklasse außer [Platform:: String](../cppcx/platform-string-class.md) ist Objekt (1).  
   
- Die [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) Klasse wird in der Windows-APIs als sprachenunabhängige Methode für Übergabe von Typinformationen zwischen Windows-Komponenten und-Apps verwendet. T[tplatform:: Type Class](../cppcx/platform-type-class.md) verfügt über Operatoren zum Konvertieren zwischen `Type` und `TypeName`.  
+ Die [TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) Klasse wird in den Windows-APIs als sprachenunabhängige Methode für die Übergabe von Typinformationen zwischen Windows-Komponenten und-Apps verwendet. Der Buchstabe T[Platform:: Type Class](../cppcx/platform-type-class.md) verfügt über Operatoren zum Konvertieren zwischen `Type` und `TypeName`.  
   
- Verwenden der [Typeid](../windows/typeid-cpp-component-extensions.md) -Operator zum Zurückgeben einer `Platform::Type` Objekt für einen Klassennamen ein, zum Beispiel beim Navigieren zwischen XAML-Seiten:  
+ Verwenden der [Typeid](../windows/typeid-cpp-component-extensions.md) Operator, um zurückzugeben eine `Platform::Type` Objekt für einen Klassennamen, zum Beispiel beim Navigieren zwischen XAML-Seiten:  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
@@ -129,7 +129,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
   
 ## <a name="see-also"></a>Siehe auch  
  [Platform:: Type-Klasse](../cppcx/platform-type-class.md)   
- [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)   
+ [Platform-namespace](../cppcx/platform-namespace-c-cx.md)   
  [Typsystem] (.. /cppcx/Type-System-c-CX.MD
   
 ## <a name="ctor"></a>  Object:: Object-Konstruktor
@@ -160,7 +160,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
 ### <a name="return-value"></a>Rückgabewert  
  `true`, wenn die beiden Objekte identisch sind, andernfalls `false`.  
  
-## <a name="tostring"></a>  Object:: ToString-Methode (C + c++ / CX)
+## <a name="tostring"></a>  Object:: ToString-Methode (C++ / CX)
 Gibt eine Zeichenfolge zurück, die das aktuelle Objekt darstellt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -185,4 +185,4 @@ public:
 };  
 ```  
 ## <a name="see-also"></a>Siehe auch  
- [Platform-Namespace](platform-namespace-c-cx.md)
+ [Plattform-Namespace](platform-namespace-c-cx.md)

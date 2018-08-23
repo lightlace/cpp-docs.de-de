@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57290d2985036ea3df2863e175d742c819a3fe03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2b0bcdc5ee6c4c2b71837f1cdd958f50d8d0b4a
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405057"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573164"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -72,14 +72,14 @@ int _CrtDbgReportW(
 
 ### <a name="parameters"></a>Parameter
 
-*Definition*<br/>
+*reportType*<br/>
 Berichtstyp: **_CRT_WARN**, **_CRT_ERROR**, und **_CRT_ASSERT**.
 
 *filename*<br/>
-Zeiger auf den Namen der Quelldatei, in der assert/Bericht aufgetreten ist, oder **NULL**.
+Zeiger auf den Namen der Quelldatei, in dem assert/Bericht aufgetreten ist, oder **NULL**.
 
 *linenumber*<br/>
-Zeilennummer in der Quelldatei, in der assert/Bericht aufgetreten ist, oder **NULL**.
+Zeilennummer in der Quelldatei, in dem assert/Bericht aufgetreten ist, oder **NULL**.
 
 *moduleName*<br/>
 Zeiger auf den Namen des Moduls (.exe oder .dll), in dem die Assertion oder der Bericht aufgetreten ist.
@@ -92,35 +92,35 @@ Von verwendete optionale ersatzargumente *Format*.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Für alle berichtsziele **_CrtDbgReport** und **_CrtDbgReportW** 1, wenn ein Fehler auftritt und 0 zurückgeben, wenn keine Fehler auftreten. Wenn das Berichtsziel jedoch das Fenster einer Debugmeldung ist und der Benutzer auf die Schaltfläche **Wiederholen** klickt, dann geben diese Funktionen 1 zurück. Wenn der Benutzer im Fenster der Debugmeldung auf die Schaltfläche **Abbrechen** klickt, brechen diese Funktionen sofort ab und geben keinen Wert zurück.
+Für alle berichtsziele **_CrtDbgReport** und **_CrtDbgReportW** 1, wenn ein Fehler tritt auf, und 0 zurückgeben, wenn keine Fehler aufgetreten sind. Wenn das Berichtsziel jedoch das Fenster einer Debugmeldung ist und der Benutzer auf die Schaltfläche **Wiederholen** klickt, dann geben diese Funktionen 1 zurück. Wenn der Benutzer im Fenster der Debugmeldung auf die Schaltfläche **Abbrechen** klickt, brechen diese Funktionen sofort ab und geben keinen Wert zurück.
 
-Die [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) Debuggen Makros Aufruf **_CrtDbgReport** Berichte an ihre Debugberichte zu generieren. Die Breitzeichenversionen dieser Makros sowie [_ASSERT-und _ASSERTE](assert-asserte-assert-expr-macros.md), [_RPTW](rpt-rptf-rptw-rptfw-macros.md) und [_RPTFW](rpt-rptf-rptw-rptfw-macros.md), verwenden Sie **_CrtDbgReportW** an Generieren Sie die Debug-Berichte. Wenn **_CrtDbgReport** oder **_CrtDbgReportW** 1 zurück, vorausgesetzt, dass der Just-in-Time (JIT)-Debuggen aktiviert ist, starten diese Makros den Debugger.
+Die [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) Debuggen-Makros rufen **_CrtDbgReport** Berichte um ihre Debugberichte zu generieren. Die Breitzeichenversionen dieser Makros sowie [_ASSERT-, _ASSERTE](assert-asserte-assert-expr-macros.md), [_RPTW](rpt-rptf-rptw-rptfw-macros.md) und [_RPTFW](rpt-rptf-rptw-rptfw-macros.md), verwenden Sie **_CrtDbgReportW** auf Generieren Sie die Debug-Berichte. Wenn **_CrtDbgReport** oder **_CrtDbgReportW** 1 zurück, sofern die just-in-Time (JIT)-Debuggen aktiviert ist, starten diese Makros des Debuggers.
 
 ## <a name="remarks"></a>Hinweise
 
-**_CrtDbgReport** und **_CrtDbgReportW** können den Debugbericht an drei verschiedene Ziele senden: eine debugberichtsdatei, einen Debugmonitor (Visual Studio-Debugger) oder ein debugmeldungsfenster. Mit den zwei Konfigurationsfunktionen [_CrtSetReportMode](crtsetreportmode.md) und [_CrtSetReportFile](crtsetreportfile.md) werden die Ziele für die einzelnen Berichtstypen angegeben. Mithilfe dieser Funktionen können die Berichtsziele für die einzelnen Berichtstypen separat gesteuert werden. Es ist beispielsweise möglich, anzugeben, dass eine *Definition* von **_CRT_WARN** werden nur zum Debugmonitor gesendet, während er sich eine *Definition* von **_CRT_ASSERT** an ein debugmeldungsfenster und einer benutzerdefinierten Berichtsdatei gesendet werden.
+**_CrtDbgReport** und **_CrtDbgReportW** können den Debugbericht an drei verschiedene Ziele senden: eine debugberichtsdatei, einen Debugmonitor (der Visual Studio-Debugger) oder Fenster einer Debugmeldung. Mit den zwei Konfigurationsfunktionen [_CrtSetReportMode](crtsetreportmode.md) und [_CrtSetReportFile](crtsetreportfile.md) werden die Ziele für die einzelnen Berichtstypen angegeben. Mithilfe dieser Funktionen können die Berichtsziele für die einzelnen Berichtstypen separat gesteuert werden. Es ist beispielsweise möglich, anzugeben, dass eine *ReportType* von **_CRT_WARN** nur zum Debugmonitor gesendet, während er sich eine *ReportType* von **_CRT_ASSERT** an ein debugmeldungsfenster und einer benutzerdefinierten Berichtsdatei gesendet werden.
 
-**_CrtDbgReportW** ist die Breitzeichen-Version des **_CrtDbgReport**. Alle seine Ausgabe- und Zeichenfolgenparameter sind in Zeichenfolgen mit Breitzeichen. Ansonsten sind sie mit der Einzelbytezeichenversion identisch.
+**_CrtDbgReportW** ist die Breitzeichen-Version von **_CrtDbgReport**. Alle seine Ausgabe- und Zeichenfolgenparameter sind in Zeichenfolgen mit Breitzeichen. Ansonsten sind sie mit der Einzelbytezeichenversion identisch.
 
-**_CrtDbgReport** und **_CrtDbgReportW** erstellen die benutzermeldung für den Debugbericht durch das Ersetzen der *Argument*[**n**]-Argumente der *Format* "string", mit den gleichen Regeln definiert werden, indem Sie die **Printf** oder **"wprintf"** Funktionen. Diese Funktionen generiert den Debugbericht und bestimmen das Ziel bzw. die Ziele, basierend auf den aktuellen berichtsmodi und Datei für definierten *Definition*. Wenn der Bericht an ein debugmeldungsfenster gesendet wird die *Filename*, **LineNumber**, und *"ModuleName"* befinden sich die Informationen im Fenster angezeigt.
+**_CrtDbgReport** und **_CrtDbgReportW** erstellen die benutzermeldung für den Debugbericht und Ersetzen Sie dabei die *Argument*[**n**]-Argumente in der *Format* string "," über die gleichen Regeln die **Printf** oder **Wprintf** Funktionen. Diese Funktionen generiert den Debugbericht und bestimmen das Ziel bzw. die Ziele, basierend auf den aktuellen berichtsmodi und der Datei definiert für *ReportType*. Wenn der Bericht an ein debugmeldungsfenster gesendet wird die *Filename*, **LineNumber**, und *ModuleName* befinden sich in den Informationen im Fenster angezeigt.
 
-Die folgende Tabelle listet die verfügbaren Optionen für den Berichtsmodus bzw. Modi und der Datei sowie das resultierende Verhalten von **_CrtDbgReport** und **_CrtDbgReportW**. Diese Optionen werden als Bitflags in \<crtdbg.h>. definiert.
+Die folgende Tabelle listet die verfügbaren Optionen für den Berichtsmodus oder Modi und die Datei- und das resultierende Verhalten von **_CrtDbgReport** und **_CrtDbgReportW**. Diese Optionen werden als Bitflags in \<crtdbg.h>. definiert.
 
 |Berichtsmodus|Berichtsdatei|**_CrtDbgReport**, **_CrtDbgReportW** Verhalten|
 |-----------------|-----------------|------------------------------------------------|
 |**_CRTDBG_MODE_DEBUG**|Nicht zutreffend|Schreibt die Meldung in die Windows-API[OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx)|
-|**_CRTDBG_MODE_WNDW**|Nicht zutreffend|Ruft die Windows-API [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) zum Erstellen eines Meldungsfelds auf, um die Meldung zusammen mit den Schaltflächen **Abbrechen**, **Wiederholen** und **Ignorieren** anzuzeigen Wenn ein Benutzer klickt **Abort**, **_CrtDbgReport** oder **_CrtDbgReport** sofort abgebrochen. Wenn ein Benutzer auf **Wiederholen** klickt, wird 1 zurückgegeben. Wenn ein Benutzer klickt **ignorieren**, die Ausführung wird fortgeführt und **_CrtDbgReport** und **_CrtDbgReportW** geben 0 zurück. Wenn ein Fehlerzustand vorliegt, führt das Klicken auf **Ignorieren** häufig zu einem „undefinierten Verhalten“.|
-|**_CRTDBG_MODE_FILE**|**__HFILE**|Schreibt eine Meldung in die benutzerdefinierte **BEHANDELN**, mithilfe der Windowsfunktion [WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747.aspx) -API und wird nicht überprüft die Gültigkeit der Dateihandle; die Anwendung ist dafür verantwortlich, für die Berichtsdatei zu öffnen, und übergeben eine gültige Datei behandeln.|
-|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Schreibt eine Meldung in **"stderr"**.|
-|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Schreibt eine Meldung in **"stdout"**.|
+|**_CRTDBG_MODE_WNDW**|Nicht zutreffend|Ruft die Windows-API [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) zum Erstellen eines Meldungsfelds auf, um die Meldung zusammen mit den Schaltflächen **Abbrechen**, **Wiederholen** und **Ignorieren** anzuzeigen Wenn ein Benutzer klickt **Abbrechen**, **_CrtDbgReport** oder **_CrtDbgReport** sofort abgebrochen. Wenn ein Benutzer auf **Wiederholen** klickt, wird 1 zurückgegeben. Wenn ein Benutzer klickt **ignorieren**, die Ausführung wird fortgeführt und **_CrtDbgReport** und **_CrtDbgReportW** gibt 0 zurück. Wenn ein Fehlerzustand vorliegt, führt das Klicken auf **Ignorieren** häufig zu einem „undefinierten Verhalten“.|
+|**_CRTDBG_MODE_FILE**|**__HFILE**|Schreibt eine Meldung an den Benutzer bereitgestellten **BEHANDELN**, mit der Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) -API und unterstützt nicht die Gültigkeit des Dateihandles; die Anwendung ist verantwortlich für das Öffnen der Berichtsdatei, und übergeben eine gültige Datei Handle.|
+|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Schreibt eine Meldung an **"stderr"**.|
+|**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Schreibt eine Meldung an **"stdout"**.|
 
 Der Bericht entweder an ein Ziel, an zwei oder drei Ziele oder an kein Ziel gesendet werden. Weitere Informationen zum Angeben des Berichtsmodus bzw. der Berichtsmodi und der Berichtsdatei finden Sie unter den Funktionen [_CrtSetReportMode](crtsetreportmode.md) und [_CrtSetReportFile](crtsetreportfile.md). Weitere Informationen zum Verwenden der Debugmakros und der Berichtsfunktionen finden Sie unter [Makros für die Berichterstellung](/visualstudio/debugger/macros-for-reporting).
 
-Wenn Ihre Anwendung mehr Flexibilität als derjenigen benötigt **_CrtDbgReport** und **_CrtDbgReportW**, Sie können Ihre eigene Berichtsfunktion schreiben und sie in der C-Laufzeitbibliothek reporting Mechanismus, mit dem [_CrtSetReportHook](crtsetreporthook.md) Funktion.
+Wenn Ihre Anwendung mehr Flexibilität als die **_CrtDbgReport** und **_CrtDbgReportW**, Sie können Ihre eigene Berichtsfunktion schreiben und sie in der C-Laufzeitbibliothek-berichterstellung Mechanismus, mit der [_CrtSetReportHook](crtsetreporthook.md) Funktion.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_CrtDbgReport**|\<crtdbg.h>|
 |**_CrtDbgReportW**|\<crtdbg.h>|

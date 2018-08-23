@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c0468a9df7b79e79b3e20074c43fc1621058d71
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7f5c24623e10de23e42041592eb1b2f417f1ed5b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339704"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571693"
 ---
 # <a name="supporting-schema-rowsets"></a>Supporting Schema Rowsets
-Schemarowsets können Kunden zum Abrufen von Informationen über einen Datenspeicher ohne Kenntnis der zugrunde liegenden Struktur bzw. das Schema. Ein Datenspeicher kann z. B. Tabellen, die in einer benutzerdefinierten Hierarchie organisiert werden, damit es keine Möglichkeit gäbe, um das Schema mit Ausnahme des sicherzustellen, dass in diesem Artikel haben. (Ein weiteres Beispiel: Beachten Sie, dass die Visual C++-Assistenten-Schemarowsets verwenden, um Accessoren für den Consumer zu generieren.) Um den Consumer zu diesem Zweck zu ermöglichen, des Anbieters Session-Objekt macht Methoden verfügbar, auf die [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) Schnittstelle. In Visual C++-Anwendungen, die Sie verwenden die [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) Klasse implementieren `IDBSchemaRowset`.  
+Schemarowsets können Kunden zum Abrufen von Informationen über einen Datenspeicher ohne Kenntnis der zugrunde liegenden Struktur bzw. das Schema. Ein Datenspeicher kann z. B. Tabellen, die in einer benutzerdefinierten Hierarchie organisiert werden, damit es keine Möglichkeit gäbe, um das Schema mit Ausnahme des sicherzustellen, dass in diesem Artikel haben. (Ein weiteres Beispiel: Beachten Sie, dass die Visual C++-Assistenten-Schemarowsets verwenden, um Accessoren für den Consumer zu generieren.) Um den Consumer zu diesem Zweck zu ermöglichen, des Anbieters Session-Objekt macht Methoden verfügbar, auf die [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) Schnittstelle. In Visual C++-Anwendungen, die Sie verwenden die [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) Klasse implementieren `IDBSchemaRowset`.  
   
  `IDBSchemaRowsetImpl` unterstützt die folgenden Methoden:  
   
@@ -64,7 +64,7 @@ Schemarowsets können Kunden zum Abrufen von Informationen über einen Datenspei
 -   In **C***ShortName***SessionColSchemaRowset**, Sie übergeben den Namen der Tabelle als eine `DBID`.  
   
 ## <a name="setting-restrictions"></a>Festlegen von Einschränkungen  
- Ein wichtiges Konzept bei der Schemarowset-Unterstützung ist Einschränkungen, die Sie dazu das `SetRestrictions`. Einschränkungen ermöglichen es Consumern, nur die übereinstimmende Zeilen abzurufen (z. B. Suche nach allen Spalten in der Tabelle „MyTable“). Einschränkungen sind optional, und wenn keine unterstützt werden (Standardeinstellung), werden immer alle Daten zurückgegeben. Ein Beispiel für einen Anbieter, die Einschränkungen unterstützt, finden Sie unter den [UpdatePV](http://msdn.microsoft.com/c8bed873-223c-4a7d-af55-f90138c6f38f) Beispiel.  
+ Ein wichtiges Konzept bei der Schemarowset-Unterstützung ist Einschränkungen, die Sie dazu das `SetRestrictions`. Einschränkungen ermöglichen es Consumern, nur die übereinstimmende Zeilen abzurufen (z. B. Suche nach allen Spalten in der Tabelle „MyTable“). Einschränkungen sind optional, und wenn keine unterstützt werden (Standardeinstellung), werden immer alle Daten zurückgegeben. Ein Beispiel für einen Anbieter, die Einschränkungen unterstützt, finden Sie unter den [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) Beispiel.  
   
 ## <a name="setting-up-the-schema-map"></a>Einrichten der Schemazuordnung  
  Richten Sie eine schemazuordnung in Session.h in UpdatePV wie diese:  
@@ -93,7 +93,7 @@ class CUpdateSessionTRSchemaRowset :
   
  Beachten Sie, dass `CUpdateSession` erbt `IDBSchemaRowsetImpl`, sodass sie die Einschränkung, die für die Behandlung von Methoden hat. Mithilfe von `CSchemaRowsetImpl`, deklarieren Sie die drei untergeordneten Klassen (aufgeführt in der oben gezeigten Schema-Karte): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, und `CUpdateSessionPTSchemaRowset`. Jede dieser untergeordneten Klassen verfügt über eine `Execute` Methode, die einen entsprechenden Satz von Einschränkungen (Suchkriterien) behandelt. Jede `Execute` Methode vergleicht die Werte der `cRestrictions` und `rgRestrictions` Parameter. Siehe dazu die Beschreibung dieser Parameter in [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).  
   
- Weitere Informationen darüber, welche Einschränkungen einem bestimmten Schemarowset entsprechen, finden Sie in der Tabelle der Schemarowset-GUIDs in [IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx) in die *OLE DB-Programmierreferenz* in der Windows SDK.  
+ Weitere Informationen darüber, welche Einschränkungen einem bestimmten Schemarowset entsprechen, finden Sie in der Tabelle der Schemarowset-GUIDs in [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) in die *OLE DB-Programmierreferenz* in der Windows SDK.  
   
  Angenommen, Sie unterstützt die **TABLE_NAME** Einschränkungen im Hinblick auf `DBSCHEMA_TABLES`, würden Sie Folgendes tun:  
   

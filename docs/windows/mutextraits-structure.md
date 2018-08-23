@@ -17,39 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: deebac1516724469882391c3c856a9ed7a588c88
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 529265c4b1e5f510a92295a1ceff6d0a012163fe
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018977"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584170"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits-Struktur
-Definiert die allgemeinen Merkmale der [Mutex](../windows/mutex-class1.md) Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-struct MutexTraits : HANDLENullTraits;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[MutexTraits::Unlock-Methode](../windows/mutextraits-unlock-method.md)|Gibt die exklusive Kontrolle über eine freigegebene Ressource frei.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `HANDLENullTraits`  
-  
- `MutexTraits`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL::Wrappers::HandleTraits-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+
+Definiert die allgemeinen Merkmale der [Mutex](../windows/mutex-class1.md) Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+struct MutexTraits : HANDLENullTraits;
+```
+
+## <a name="members"></a>Member
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[MutexTraits::Unlock-Methode](../windows/mutextraits-unlock-method.md)|Gibt die exklusive Kontrolle über eine freigegebene Ressource frei.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`HANDLENullTraits`
+
+`MutexTraits`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL::Wrappers::HandleTraits-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

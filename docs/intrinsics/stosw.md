@@ -1,5 +1,5 @@
 ---
-title: __stosw | Microsoft Docs
+title: __stosw | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a9f73b401d953c026c60d504fbb016838720b7c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf41c1c91d8c0b5d2d7626d1fc0eee67aa96ff32
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329344"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538479"
 ---
 # <a name="stosw"></a>__stosw
 **Microsoft-spezifisch**  
@@ -45,21 +45,21 @@ void __stosw(
  Das Ziel des Vorgangs.  
   
  [in] `Data`  
- Die Daten zu speichern.  
+ Die zu speichernden Daten.  
   
  [in] `Count`  
- Die Länge des Blocks von Wörtern zu schreiben.  
+ Die Länge des Blocks Wörter zu schreiben.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__stosw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosw`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Das Ergebnis ist, die das Wort `Data` wird geschrieben, in einen Block von `Count` Wörter der `Dest` Zeichenfolge.  
+ Das Ergebnis ist, die das Wort `Data` wird geschrieben, in einen Block von `Count` Wörter den `Dest` Zeichenfolge.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   

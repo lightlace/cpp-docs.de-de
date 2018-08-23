@@ -1,5 +1,5 @@
 ---
-title: EDITBIN-Referenz | Microsoft Docs
+title: EDITBIN-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c20191fdb133fe09ed4f6a462cd777098acd5f05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6e1e9963328d328767d97b3af34e20b1d2a1840b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372307"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572363"
 ---
 # <a name="editbin-reference"></a>EDITBIN-Referenz
-Der Microsoft COFF-Binär-Editor (EDITBIN. EXE-Datei) ändert die Binärdateien Common Object File Format (COFF). EDITBIN können um Objektdateien, ausführbaren Dateien und Dynamic Link Libraries (DLL) zu ändern.  
+Die Microsoft COFF-Binärdatei-Editor (EDITBIN. EXE-Datei) ändert, Binärdateien Common Object File Format (COFF). EDITBIN können Sie die um Objektdateien, ausführbaren Dateien und Dynamic Link Libraries (DLL) zu ändern.  
   
 > [!NOTE]
->  Sie können dieses Tool nur von der [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]-Eingabeaufforderung aus starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.  
+>  Sie können dieses Tool nur über die Visual Studio-Eingabeaufforderung starten. Sie können es nicht von einer Systemeingabeaufforderung oder vom Datei-Explorer aus starten.  
   
- EDITBIN ist nicht verfügbar für die Verwendung in den Dateien erstellt wird, mit der [/GL](../../build/reference/gl-whole-program-optimization.md) -Compileroption. Alle Änderungen auf die Binärdateien, die mit/GL erzeugten müssen erreicht werden, indem Sie neu zu kompilieren und verknüpfen.  
+ EDITBIN ist nicht verfügbar für die Verwendung in Dateien mit der ["/ GL"](../../build/reference/gl-whole-program-optimization.md) -Compileroption. Änderungen an Binärdateien, die mit "/ GL" erstellt wurde, müssen Sie erreicht werden, indem Sie neu zu kompilieren und verknüpfen.  
   
 -   [EDITBIN-Befehlszeile](../../build/reference/editbin-command-line.md)  
   

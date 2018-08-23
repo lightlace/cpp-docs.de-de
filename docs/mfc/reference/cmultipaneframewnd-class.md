@@ -90,17 +90,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 05f80ef1a7fd4e21bda2fd9705c4ed1be391e9a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852341"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540031"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd-Klasse
 Die `CMultiPaneFrameWnd` -Klasse erweitert [CPaneFrameWnd-Klasse](../../mfc/reference/cpaneframewnd-class.md). Es können mehrere Bereiche unterstützt werden. Anstelle eines einzelnen eingebetteten Handles für eine Steuerleiste `CMultiPaneFrameWnd` enthält eine [CPaneContainerManager-Klasse](../../mfc/reference/cpanecontainermanager-class.md) -Objekt, das dem Benutzer ermöglicht, eine Andocken `CMultiPaneFrameWnd` in einen anderen und dynamisch mehrere unverankerte zu erstellen, die im Registerkartenformat Windows.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ## <a name="syntax"></a>Syntax  
   

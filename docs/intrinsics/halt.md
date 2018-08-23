@@ -1,5 +1,5 @@
 ---
-title: __halt | Microsoft Docs
+title: __halt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a36790eb1df098e6f663a30894c29a9ea14587b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 007b3be0fc26d9a011d961540f9dc4057498b137
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327202"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540445"
 ---
 # <a name="halt"></a>__halt
 **Microsoft-spezifisch**  
   
- Mikroprozessors angehalten, bis aktiviert Interrupt, einen nicht maskierbaren Interrupt (NMI) oder eine Zurücksetzung auftritt.  
+ Hält den Mikroprozessor, bis eine aktivierte Unterbrechung, einen nicht maskierbaren Interrupt (NMI) oder eine Zurücksetzung erfolgt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,12 +40,12 @@ void __halt( void );
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__halt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__halt`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__halt` -Funktion ist gleichbedeutend mit dem `HLT` computeranweisung und ist nur im Kernelmodus verfügbar. Weitere Informationen zu suchen, für das Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set-Reference" auf der [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
+ Die `__halt` -Funktion ist gleichbedeutend mit der `HLT` computeranweisung und steht nur im Kernelmodus ausgeführt. Weitere Informationen zu suchen, nach dem Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set Reference," auf die [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
   
 **Ende Microsoft-spezifisch**  
   

@@ -17,42 +17,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 240ab47099b9e97e9a6bb794083858fe042605d2
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 3409e0e2c1cac5f3934902523edd2653839989ed
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018694"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42575757"
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject-Methode
-Hebt die Registrierung für ein oder mehrere COM-Objekte, die verhindert, dass andere Anwendungen herstellen können.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-virtual HRESULT UnregisterCOMObject(  
-   const wchar_t* serverName,  
-   DWORD* cookies,  
-   unsigned int count  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *ServerName*  
- (Nicht verwendeten)  
-  
- *Cookies*  
- Ein Array von Zeigern auf Werte, die identifizieren, Objekte der Klasse, deren Registrierung aufgehoben werden. Das Array erstellt wurde, indem die [RegisterCOMObject](../windows/module-registercomobject-method.md) Methode.  
-  
- *count*  
- Die Anzahl der Klassen zum Aufheben der Registrierung.  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn dieser Vorgang erfolgreich ist; andernfalls ein Fehler HRESULT, das den Grund angibt Fehler aufgetreten.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Siehe auch
- [Module-Klasse](../windows/module-class.md)
+
+Hebt die Registrierung für ein oder mehrere COM-Objekte, die verhindert, dass andere Anwendungen herstellen können.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+virtual HRESULT UnregisterCOMObject(
+   const wchar_t* serverName,
+   DWORD* cookies,
+   unsigned int count
+```
+
+### <a name="parameters"></a>Parameter
+
+*ServerName*  
+(Nicht verwendeten)
+
+*Cookies*  
+Ein Array von Zeigern auf Werte, die identifizieren, Objekte der Klasse, deren Registrierung aufgehoben werden. Das Array erstellt wurde, indem die [RegisterCOMObject](../windows/module-registercomobject-method.md) Methode.
+
+*count*  
+Die Anzahl der Klassen zum Aufheben der Registrierung.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn dieser Vorgang erfolgreich ist; andernfalls ein Fehler HRESULT, das den Grund angibt Fehler aufgetreten.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+[Module-Klasse](../windows/module-class.md)

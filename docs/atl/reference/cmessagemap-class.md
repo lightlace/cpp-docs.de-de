@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 663ee462bf03e76ab15cbac05790c89dcaf07dca
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ae6f41c2e8e8d142ee143d7ba0829751e1c230a3
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884853"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572275"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap-Klasse
 Diese Klasse ermöglicht, dass ein Objekt des meldungszuordnungen über ein anderes Objekt zugegriffen werden kann.  
@@ -50,7 +50,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="remarks"></a>Hinweise  
  `CMessageMap` ist eine abstrakte Basisklasse, die ein Objekt der Nachricht ermöglicht Zuordnungen enthalten, die von einem anderen Objekt zugegriffen werden. Damit kann für ein Objekt, dessen meldungszuordnungen verfügbar zu machen, muss die Klasse von abgeleitet werden `CMessageMap`.  
   
- ATL verwendet `CMessageMap` enthaltene Support für Windows und Verketten von dynamische Nachricht zuordnen. Beispielsweise jede Klasse mit einer [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) Objekt muss abgeleitet `CMessageMap`. Der folgende Code stammt aus dem [SUBEDIT](../../visual-cpp-samples.md) Beispiel. Über [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` Klasse automatisch abgeleitet `CMessageMap`.  
+ ATL verwendet `CMessageMap` enthaltene Support für Windows und Verketten von dynamische Nachricht zuordnen. Beispielsweise jede Klasse mit einer [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) Objekt muss abgeleitet `CMessageMap`. Der folgende Code stammt aus dem [SUBEDIT](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit) Beispiel. Über [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` Klasse automatisch abgeleitet `CMessageMap`.  
   
  [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   

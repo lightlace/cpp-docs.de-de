@@ -1,5 +1,5 @@
 ---
-title: __movsw | Microsoft Docs
+title: __movsw | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1b1bb1b877c0816650b78d5c6132e526afd5586
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f25cea28d18f8377def35959be573c1a41f9098b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334440"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541030"
 ---
 # <a name="movsw"></a>__movsw
 **Microsoft-spezifisch**  
@@ -48,18 +48,18 @@ void __movsw(
  Die Quelle des Vorgangs.  
   
  [in] `Count`  
- Die Anzahl der Wörter zu kopieren.  
+ Die Anzahl von Wörtern zu kopieren.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__movsw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__movsw`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Das Ergebnis ist, die die erste `Count` Wörter verweist `Source` kopiert werden, um die `Dest` Zeichenfolge.  
+ Das Ergebnis ist, die erste `Count` Wörter verweist `Source` kopiert werden, um die `Dest` Zeichenfolge.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   

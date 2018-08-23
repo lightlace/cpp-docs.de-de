@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: IDisposable-Schnittstelle | Microsoft Docs'
+title: 'Platform:: IDisposable-Schnittstelle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68c5425d5d65acc194287a97068df7da15f37275
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3899c25d71ad08cc058280271080c19d11222ed
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086968"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589785"
 ---
 # <a name="platformidisposable-interface"></a>Platform::IDisposable-Schnittstelle
 Wird verwendet, um nicht verwaltete Ressourcen freizugeben.  
@@ -48,8 +48,8 @@ public interface class IDisposable
 |Löschen|Wird verwendet, um nicht verwaltete Ressourcen freizugeben.|  
   
 ### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
+ **Unterstützter Client (Min.):** Windows 8  
   
- **Unterstützter Server:** Windows Server 2012  
+ **Unterstützter Server (Min.):** Windows Server 2012  
   
  **Namespace:** Platform

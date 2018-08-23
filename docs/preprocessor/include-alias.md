@@ -1,5 +1,5 @@
 ---
-title: Include_alias | Microsoft Docs
+title: Include_alias | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33838929"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539796"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -36,7 +36,7 @@ Gibt an, dass *Short_filename* als Alias für verwendet werden soll *Long_filena
 
 ## <a name="remarks"></a>Hinweise
 
-Einige Dateisysteme unterstützen längere Headerdateinamen als das 8.3-FAT-Dateisystem. Der Compiler kann die längeren Namen nicht einfach bis 8.3 abschneiden, da die ersten acht Zeichen der längeren Headerdateinamen möglicherweise nicht eindeutig sind. Wenn der Compiler erkennt die *Long_filename* Zeichenfolge ist, ersetzt er *Short_filename*, und sucht nach der Headerdatei *Short_filename* stattdessen. Dieses Pragma muss vor den entsprechenden `#include`-Direktiven eingefügt werden. Zum Beispiel:
+Einige Dateisysteme unterstützen längere Headerdateinamen als das 8.3-FAT-Dateisystem. Der Compiler kann die längeren Namen nicht einfach bis 8.3 abschneiden, da die ersten acht Zeichen der längeren Headerdateinamen möglicherweise nicht eindeutig sind. Jedes Mal, wenn der Compiler erkennt die *Long_filename* Zeichenfolge ist, ersetzt er *Short_filename*, und sucht nach der Headerdatei *Short_filename* stattdessen. Dieses Pragma muss vor den entsprechenden `#include`-Direktiven eingefügt werden. Zum Beispiel:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -50,7 +50,7 @@ Einige Dateisysteme unterstützen längere Headerdateinamen als das 8.3-FAT-Date
 #include "GraphicsMenu.h"
 ```
 
-Der Alias, nach dem gesucht wird, muss genau der Spezifikation entsprechen. Dies gilt für den Gebrauch von Groß-/Kleinschreibung, Rechtschreibung, doppelten Anführungszeichen und spitzen Klammern. Die **Include_alias** Pragma führt einfache zeichenfolgenabgleiche von Dateinamen durch; keine weitere dateinamenvalidierung wird durchgeführt. Zum Beispiel wird bei folgenden Anweisungen
+Der Alias, nach dem gesucht wird, muss genau der Spezifikation entsprechen. Dies gilt für den Gebrauch von Groß-/Kleinschreibung, Rechtschreibung, doppelten Anführungszeichen und spitzen Klammern. Die **Include_alias** Pragma führt einfache zeichenfolgenabgleiche die Dateinamen durch; keine weitere dateinamenvalidierung wird durchgeführt. Zum Beispiel wird bei folgenden Anweisungen
 
 ```cpp
 #pragma include_alias("mymath.h", "math.h")
@@ -58,7 +58,7 @@ Der Alias, nach dem gesucht wird, muss genau der Spezifikation entsprechen. Dies
 #include "sys/mymath.h"
 ```
 
-kein Aliasing (Ersetzung) ausgeführt, da die Headerdateizeichenfolgen nicht genau übereinstimmen. Darüber hinaus die Headerdateinamen, die als Argumente für die/Yu- und/Yc-Compileroptionen verwendet oder die **Hdrstop** Pragma werden nicht ersetzt. Wenn beispielsweise die Quelldatei die folgenden Anweisungen enthält,
+kein Aliasing (Ersetzung) ausgeführt, da die Headerdateizeichenfolgen nicht genau übereinstimmen. Darüber hinaus die Headerdateinamen, die als Argumente für die `/Yu` und `/Yc` Compileroptionen, oder die `hdrstop` Pragma werden nicht ersetzt. Wenn beispielsweise die Quelldatei die folgenden Anweisungen enthält,
   
 ```cpp
 #include <AppleSystemHeaderStop.h>
@@ -68,7 +68,7 @@ sollte die entsprechende Compileroption Folgendes sein:
 
 > /YcAppleSystemHeaderStop.h
 
-Sie können die **Include_alias** Pragma verwenden, um alle Headerdateinamen zu einem anderen zuordnen. Zum Beispiel:
+Sie können die **Include_alias** Pragma, um einen anderen Headerdateinamen einem beliebigen zuzuordnen. Zum Beispiel:
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )
@@ -77,7 +77,7 @@ Sie können die **Include_alias** Pragma verwenden, um alle Headerdateinamen zu 
 #include <stdio.h>
 ```
 
-Mischen Sie die Dateinamen, die in Anführungszeichen eingeschlossen sind, nicht mit den Dateinamen in spitzen Klammern. Angenommen, die beiden oben erwähnten **#pragma Include_alias** Direktiven, die der Compiler führt keinen Ersatz für die folgenden `#include` Direktiven:
+Mischen Sie die Dateinamen, die in Anführungszeichen eingeschlossen sind, nicht mit den Dateinamen in spitzen Klammern. Angenommen, die beiden oben erwähnten `#pragma include_alias` der Compiler führt keinen Ersatz für die folgenden `#include` Anweisungen:
 
 ```cpp
 #include <api.h>
@@ -90,14 +90,14 @@ Außerdem generiert die folgende Anweisung einen Fehler:
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-Beachten Sie, dass der Dateiname in Fehlermeldungen oder als Wert des vordefinierten gemeldet **&#95; &#95;Datei&#95; &#95;** -Makro, ist der Name der Datei, nachdem die Ersetzung ausgeführt wurde. Beispielsweise finden Sie die Ausgabe nach den folgenden Anweisungen ein:
+Beachten Sie, dass der Dateiname in Fehlermeldungen oder als Wert für die vordefinierten gemeldet `__FILE__` Makro verwenden, ist der Name der Datei aus, nachdem die Ersetzung ausgeführt wurde. Beispielsweise sehen Sie die Ausgabe nach den folgenden Anweisungen ein:
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )
 #include "VeryLongFileName.H"
 ```
 
-Ein Fehler in VERYLONGFILENAME. H erzeugt die folgende Fehlermeldung angezeigt:
+Fehler im VERYLONGFILENAME. H erzeugt die folgende Fehlermeldung angezeigt:
 
 ```Output
 myfile.h(15) : error C2059 : syntax error

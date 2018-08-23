@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58090351829f6a12ae90d56e8985bf615966f65
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 731229f8aca9d564e418382a54e097ff61316586
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852269"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543162"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl-Klasse
 Die Klasse `CNetAddressCtrl` stellt das Netzwerkadressen-Steuerelement dar, das verwendet werden kann, um IPv4-, IPv6- und benannte DNS-Adressen einzugeben und ihr Format zu überprüfen.  
@@ -72,7 +72,7 @@ class CNetAddressCtrl : public CEdit
   
  Die folgende Abbildung zeigt ein Dialogfeld, das eine Netzwerkadressen-Steuerelement enthält. Der Text Box (1) für das Netzwerkadressen-Steuerelement enthält eine ungültige Netzwerk-Adresse. Die QuickInfo-Meldung (2) wird angezeigt, wenn die Netzwerkadresse ungültig ist.  
   
- ![Dialogfeld mit einem Netzwerkadressen-Steuerelement und Infotipps. ] (../../mfc/reference/media/cnetaddctrl.png "Cnetaddctrl")  
+ ![Dialogfeld mit einem Netzwerkadressen-Steuerelement und Infotipps. ](../../mfc/reference/media/cnetaddctrl.png "Cnetaddctrl")  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird ein Teil eines Dialogfelds, das eine Netzwerkadresse überprüft. Die Ereignishandler für drei Optionsfeldern angeben, dass die Netzwerkadresse auf einem von drei Adresstypen sein kann. Der Benutzer gibt eine Adresse in das Textfeld des Netzwerk-Steuerelements, und dann eine drückt, um die Adresse zu überprüfen. Wenn die Adresse gültig ist, wird eine Erfolgsmeldung angezeigt; Andernfalls wird die Fehlermeldung für den vordefinierten Infotipp angezeigt.  
@@ -98,7 +98,7 @@ class CNetAddressCtrl : public CEdit
 ## <a name="requirements"></a>Anforderungen  
  **Header:** afxcmn.h  
   
- Diese Klasse wird von unterstützt [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] und höher.  
+ Diese Klasse wird in Windows Vista und höheren Versionen unterstützt.  
   
  Zusätzliche Anforderungen für diese Klasse werden in beschrieben [erstellen Anforderungen für Windows Vista-Standardsteuerelementen](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   

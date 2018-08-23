@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0cd0df9311d11b30c3ef42d8492c71cb78abb4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883631"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42573230"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT-Klasse
 Diese Klasse stellt eine `CSimpleStringT` Objekt.  
@@ -467,7 +467,7 @@ PXSTR GetBufferSetLength(int nLength);
   
  Der Arbeitsspeicherpuffer wird automatisch freigegeben wird, wenn die `CSimpleStringT` -Objekt zerstört wird.  
   
- Wenn Sie nachverfolgen die Länge der Zeichenfolge selbst, nicht fügen Sie keine Null-Abschlusszeichen. Sie müssen die endgültige Zeichenfolgenlänge angeben, wenn Sie mit den Puffer freigibt `ReleaseBuffer`. Wenn Sie ein abschließendes Nullzeichen beim Aufrufen Anfügen `ReleaseBuffer`, übergeben Sie – 1 (Standard) für die Dauer zum `ReleaseBuffer`, und `ReleaseBuffer` führt eine `strlen` im Puffer, um zu bestimmen, seine Länge.  
+ Wenn Sie die Länge der Zeichenfolge selbst mitverfolgen, fügen Sie das abschließende Nullzeichen nicht. Sie müssen die endgültige Zeichenfolgenlänge angeben, wenn Sie mit den Puffer freigibt `ReleaseBuffer`. Wenn Sie ein abschließendes Nullzeichen beim Aufrufen Anfügen `ReleaseBuffer`, übergeben Sie – 1 (Standard) für die Dauer zum `ReleaseBuffer`, und `ReleaseBuffer` führt eine `strlen` im Puffer, um zu bestimmen, seine Länge.  
   
  Weitere Informationen zum zählen der Verweise finden Sie unter den folgenden Artikeln:  
   

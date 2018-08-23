@@ -1,5 +1,5 @@
 ---
-title: Data_seg | Microsoft Docs
+title: Data_seg | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a463d966c681557525bb9512762731c01a7ce30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b1be97919f0f5b55d6e63eca8e59eb15e8ef9dff
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841231"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42545779"
 ---
 # <a name="dataseg"></a>data_seg
 Gibt das Datensegment an, in dem initialisierte Variablen in der OBJ-Datei gespeichert werden.  
@@ -31,37 +31,37 @@ Gibt das Datensegment an, in dem initialisierte Variablen in der OBJ-Datei gespe
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind in diesem Thema gleichbedeutend.  
+## <a name="remarks"></a>Hinweise 
+
+Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind austauschbar, in diesem Thema.  
   
- OBJ-Dateien können angezeigt werden, mit der [Dumpbin](../build/reference/dumpbin-command-line.md) Anwendung. Das Standardsegment für initialisierte Variablen in der OBJ-Datei ist ".data". Nicht initialisierte Variablen werden als mit Null initialisiert behandelt und in ".bss" gespeichert.  
+OBJ-Dateien können angezeigt werden, mit der [Dumpbin](../build/reference/dumpbin-command-line.md) Anwendung. Das Standardsegment für initialisierte Variablen in der OBJ-Datei ist ".data". Nicht initialisierte Variablen werden als mit Null initialisiert behandelt und in ".bss" gespeichert.  
   
- **Data_seg** ohne Parameter setzt das Segment auf .data.  
+**Data_seg** ohne Parameter setzt das Segment auf ".Data".  
   
- **Push**(optional)  
- Legt einen Datensatz auf den internen Compilerstapel. Ein **Push** kann ein *Bezeichner* und *Segmentnamen*.  
+*Push* (optional)  
+Legt einen Datensatz auf den internen Compilerstapel. Ein *Push* kann ein *Bezeichner* und *Segment-Name*.  
   
- **POP** (optional)  
- Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
+*POP* (optional)  
+Entfernt einen Datensatz von der obersten Position des internen Compilerstapels.  
   
- *Bezeichner* (optional)  
- Bei Verwendung mit **Push**, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit **pop**, Datensätze vom internen Stapel bis *Bezeichner* entfernt wird; Wenn *Bezeichner* befindet sich nicht im internen Stapel nichts per pop ausgelesen wird.  
+*Bezeichner* (optional)  
+Bei Verwendung mit *Push*, den Datensatz im internen compilerstapel ein Name zugewiesen. Bei Verwendung mit *pop*, Datensätze vom internen Stapel bis *Bezeichner* wird entfernt; Wenn *Bezeichner* wurde nicht gefunden im internen Stapel, nichts per pop ausgelesen wird.  
   
- *Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen **pop** Befehl.  
+*Bezeichner* ermöglicht, mehrere Datensätze mit einem einzelnen entfernen *pop* Befehl.  
   
- *"Segmentnamen"*(optional)  
- Der Name eines Segments. Bei Verwendung mit **pop**, wird der Stapel geholt und *Segmentnamen* wird zum aktiven Segmentnamen.  
+*"Segment-Name"*(optional)  
+Der Name eines Segments. Bei Verwendung mit *pop*, wird das Element im Stapel geholt und *Segment-Name* wird zum aktiven Segmentnamen.  
   
- *"Segmentklasse"* (optional)  
- Zum Gewährleisten der Kompatibilität mit C++ vor Version 2.0 eingeführt. Wird ignoriert.  
+*"Segment-Class"* (optional)  
+Zum Gewährleisten der Kompatibilität mit C++ vor Version 2.0 eingeführt. Wird ignoriert.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // pragma_directive_data_seg.cpp  
 int h = 1;                     // stored in .data  
 int i = 0;                     // stored in .bss  
@@ -78,11 +78,12 @@ int main() {
 }  
 ```  
   
- Daten mithilfe von zugeordnet **Data_seg** alle Informationen über den Speicherort wird nicht beibehalten.  
+Daten, die mit **Data_seg** behält keine Informationen über den Speicherort.  
   
- Finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md) eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden.  
+Finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md) eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden.  
   
- Sie können auch Abschnitte für const-Variablen angeben ([Const_seg](../preprocessor/const-seg.md)), nicht initialisierte Daten ([Bss_seg](../preprocessor/bss-seg.md)), und Funktionen ([Code_seg](../preprocessor/code-seg.md)).  
+Sie können auch Abschnitte für const-Variablen angeben ([Const_seg](../preprocessor/const-seg.md)), nicht initialisierte Daten ([Bss_seg](../preprocessor/bss-seg.md)), und Funktionen ([Code_seg](../preprocessor/code-seg.md)).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

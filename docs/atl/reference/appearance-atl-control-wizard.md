@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd95e3e25cd015fd326c236f15a965e3fb9e801
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 8bc6080bf66ad9bb9d436832b1066214f8cdbfb7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025879"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42575478"
 ---
 # <a name="appearance-atl-control-wizard"></a>Darstellung, ATL-Steuerelement-Assistent
 Fügen Sie hier "Suchergebnisse" Zusammenfassung.  
@@ -97,5 +97,5 @@ Zusätzliches Verhalten-Optionen für das Steuerelement fest.
   
 ## <a name="see-also"></a>Siehe auch  
  [ATL-Steuerelement-Assistent](../../atl/reference/atl-control-wizard.md)   
- [SUBEDIT-Beispiel: Eine übergeordnete Klasse ein Standard-Windows-Steuerelement](http://msdn.microsoft.com/30e46bdc-ed92-417c-b6b8-359017265a7b)
+ [SUBEDIT-Beispiel: Eine übergeordnete Klasse ein Standard-Windows-Steuerelement](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/SubEdit)
 

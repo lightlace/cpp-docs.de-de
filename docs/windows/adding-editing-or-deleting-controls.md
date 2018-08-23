@@ -17,38 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4488ca0e32bc9522e29028536efdcd5fea925301
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d8b1b1452eceefbe6e04200d8aded544fdc4d1da
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649984"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590975"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Hinzufügen, Bearbeiten oder Löschen von Steuerelementen
-Mithilfe der **Dialogfeld** -Editor die Größe ändern, bearbeiten und löschen Sie die Steuerelemente in Dialogfeldern hinzufügen. Sie können auch die Eigenschaften eines Steuerelements, z. B. die ID, bearbeiten oder ob es sichtbare zur Laufzeit ist.  
-  
- Können Sie das Kontextmenü in der **Dialogfeld** -Editor, um schnell hinzufügen registriert ActiveX-Steuerelemente in einem Dialogfeld aus, und Sie können ActiveX-Steuerelemente zum Hinzufügen der **Toolbox** für den Schnellzugriff (Weitere Informationen finden Sie unter [Toolbox anpassen](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).  
-  
--   [Hinzufügen eines Steuerelements zu einem Dialogfeld](adding-a-control-to-a-dialog-box.md)  
-  
--   [Ändern der Steuerelementgröße beim Hinzufügen](sizing-a-control-while-you-add-it.md)  
-  
--   [Fügen Sie mehrerer Steuerelemente hinzu](adding-multiple-controls.md)  
-  
--   [Hinzufügen von ActiveX-Steuerelement in einem Dialogfeld](viewing-and-adding-activex-controls-to-a-dialog-box.md)  
-  
--   [Bearbeiten Sie die Eigenschaften eines Steuerelements oder-Steuerelemente](editing-control-properties.md)  
-  
--   [Löschen eines Steuerelements](deleting-a-control.md)  
-  
--   [Anzeigen oder Ausblenden der Fenster "Toolbox"](showing-or-hiding-the-dialog-editor-toolbar.md)  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Steuerelemente in Dialogfeldern](controls-in-dialog-boxes.md)   
- [Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](adding-event-handlers-for-dialog-box-controls.md)   
- [Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)
+
+Mithilfe der **Dialogfeld** -Editor die Größe ändern, bearbeiten und löschen Sie die Steuerelemente in Dialogfeldern hinzufügen. Sie können auch die Eigenschaften eines Steuerelements, z. B. die ID, bearbeiten oder ob es sichtbare zur Laufzeit ist.
+
+Können Sie das Kontextmenü in der **Dialogfeld** -Editor, um schnell hinzufügen registriert ActiveX-Steuerelemente in einem Dialogfeld aus, und Sie können ActiveX-Steuerelemente zum Hinzufügen der **Toolbox** für den Schnellzugriff (Weitere Informationen finden Sie unter [Toolbox anpassen](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb)).
+
+- [Hinzufügen eines Steuerelements zu einem Dialogfeld](adding-a-control-to-a-dialog-box.md)
+
+- [Ändern der Steuerelementgröße beim Hinzufügen](sizing-a-control-while-you-add-it.md)
+
+- [Fügen Sie mehrerer Steuerelemente hinzu](adding-multiple-controls.md)
+
+- [Hinzufügen von ActiveX-Steuerelement in einem Dialogfeld](viewing-and-adding-activex-controls-to-a-dialog-box.md)
+
+- [Bearbeiten Sie die Eigenschaften eines Steuerelements oder-Steuerelemente](editing-control-properties.md)
+
+- [Löschen eines Steuerelements](deleting-a-control.md)
+
+- [Anzeigen oder Ausblenden der Fenster "Toolbox"](showing-or-hiding-the-dialog-editor-toolbar.md)
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Steuerelemente in Dialogfeldern](controls-in-dialog-boxes.md)  
+[Hinzufügen von Ereignishandlern für Dialogfeld-Steuerelemente](adding-event-handlers-for-dialog-box-controls.md)  
+[Dialogfeld-Steuerelemente und Variablentypen](../ide/dialog-box-controls-and-variable-types.md)

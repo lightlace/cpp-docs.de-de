@@ -1,5 +1,5 @@
 ---
-title: -Homeparams (Registerparameter in den Stapel kopieren) | Microsoft Docs
+title: -Homeparams (Registerparameter in den Stapel kopieren) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ffc9b37ebdcbb380186c7840f5ebd956708a2dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bfd6b8c77d972eb4606e7095bc5f733e7db16ea6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374397"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572361"
 ---
 # <a name="homeparams-copy-register-parameters-to-stack"></a>/homeparams (Registerparameter in den Stapel kopieren)
 Erzwingt, dass in Registern übergebene Parameter beim Funktionseinstieg in ihre Speicherorte auf dem Stapel geschrieben werden.  
@@ -34,17 +34,17 @@ Erzwingt, dass in Registern übergebene Parameter beim Funktionseinstieg in ihre
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Compileroption gilt nur für die [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] -Compiler (systemeigene und Cross-Compiler).  
+ Diese Compileroption steht nur für die X64-Compiler (systemeigene und cross-Compiler).  
   
- Wenn Parameter übergeben werden, eine [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] Kompilierung Aufrufkonventionen Stapelspeicher für Parameter erforderlich, dies gilt auch für Parameter, die in Registern übergeben. Weitere Informationen finden Sie unter [Parameterübergabe](../../build/parameter-passing.md). Allerdings werden standardmäßig in einem Releasebuild die Registerparameter nicht in den Stapel, in der räumlichen Ausdehnung geschrieben werden, die bereits für die Parameter bereitgestellt wird. Dies erschwert es einen optimierten (Version)-Build des Programms zu debuggen.  
+ Wenn Parameter übergeben werden, in x X64 Kompilierung Aufrufkonventionen Stapelspeicher für Parameter erforderlich, auch für Parameter, die in Registern übergeben. Weitere Informationen finden Sie unter [Parameterübergabe](../../build/parameter-passing.md). Allerdings werden standardmäßig in einem Releasebuild die Registerparameter nicht in den Stapel, in den Bereich geschrieben werden, die bereits für die Parameter bereitgestellt wird. Dies erschwert es einem optimierten (Release) Build des Programms zu debuggen.  
   
- Verwenden Sie für einen Releasebuild **/homeparams** um sicherzustellen, dass die Anwendung zu debuggen. **/ homeparams** einer verminderten Leistung, da es eine Schleife beim Laden der Registerparameter auf den Stapel erforderlich sind.  
+ Verwenden Sie für einen Releasebuild **/homeparams in den** um sicherzustellen, dass Sie Ihre Anwendung debuggen können. **/ homeparams in den** einer verminderten Leistung, da eine Schleife, um die Registerparameter auf dem Stapel Laden erforderlich ist.  
   
- In einem Debugbuild wird der Stapel immer mit in Registern übergebene Parameter aufgefüllt.  
+ In einem Debugbuild wird der Stapel immer mit Parametern in Registern übergeben aufgefüllt.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).  
   
 2.  Klicken Sie auf den Ordner **C/C++** .  
   

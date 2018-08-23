@@ -16,30 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 02aa14eccddca4bc3631957d6aa3d3d1b2af6894
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 29c58b94293ed00ba95d4288458788a0b2edd679
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463453"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601705"
 ---
 # <a name="compiler-attributes"></a>Compilerattribute
-Compilerattribute bieten eine Vielzahl von Funktionen.  
-  
-|Attribut|Beschreibung|  
-|---------------|-----------------|  
-|[emitidl](../windows/emitidl.md)|Bestimmt, ob alle nachfolgenden IDL-Attribute verarbeitet und in der generierten IDL-Datei platziert werden.|  
-|[event_receiver](../windows/event-receiver.md)|Erstellt einen Ereignisempfänger an.|  
-|[event_source](../windows/event-source.md)|Erstellt eine Ereignisquelle.|  
-|[export](../windows/export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|  
-|[Implementiert](../windows/implements-cpp.md)|Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse angehören.|  
-|[importidl](../windows/importidl.md)|Fügt die angegebenen IDL-Datei in der generierten IDL-Datei an.|  
-|[importlib](../windows/importlib.md)|Stellt Typen, die bereits in einer anderen Typbibliothek kompiliert wurden, der erstellten Typbibliothek zur Verfügung.|  
-|[includelib](../windows/includelib-cpp.md)|Bewirkt, dass eine IDL- oder h-Datei, die in der generierten IDL-Datei eingeschlossen werden.|  
-|[library_block](../windows/library-block.md)|Fügt ein Konstrukt in bibliotheksblock der IDL-Datei an.|  
-|[no_injected_text](../windows/no-injected-text.md)|Verhindert, dass den Compiler Einfügen von Code durch Verwendung des Attributs.|  
-|[satype](../windows/satype.md)|Gibt den Datentyp, der die `SAFEARRAY`.|  
-|[version](../windows/version-cpp.md)|Identifiziert eine bestimmte Version mehrere Versionen einer Schnittstelle oder Klasse an.|  
-  
-## <a name="see-also"></a>Siehe auch  
- [Attribute nach Gruppen](../windows/attributes-by-group.md)
+
+Compilerattribute bieten eine Vielzahl von Funktionen.
+
+|Attribut|Beschreibung|
+|---------------|-----------------|
+|[emitidl](../windows/emitidl.md)|Bestimmt, ob alle nachfolgenden IDL-Attribute verarbeitet und in der generierten IDL-Datei platziert werden.|
+|[event_receiver](../windows/event-receiver.md)|Erstellt einen Ereignisempfänger an.|
+|[event_source](../windows/event-source.md)|Erstellt eine Ereignisquelle.|
+|[export](../windows/export.md)|Bewirkt, dass eine Datenstruktur, in der IDL-Datei platziert wird.|
+|[Implementiert](../windows/implements-cpp.md)|Gibt die Dispatch-Schnittstellen, die erzwungen werden, um die IDL-Co-Klasse angehören.|
+|[importidl](../windows/importidl.md)|Fügt die angegebenen IDL-Datei in der generierten IDL-Datei an.|
+|[importlib](../windows/importlib.md)|Stellt Typen, die bereits in einer anderen Typbibliothek kompiliert wurden, der erstellten Typbibliothek zur Verfügung.|
+|[includelib](../windows/includelib-cpp.md)|Bewirkt, dass eine IDL- oder h-Datei, die in der generierten IDL-Datei eingeschlossen werden.|
+|[library_block](../windows/library-block.md)|Fügt ein Konstrukt in bibliotheksblock der IDL-Datei an.|
+|[no_injected_text](../windows/no-injected-text.md)|Verhindert, dass den Compiler Einfügen von Code durch Verwendung des Attributs.|
+|[satype](../windows/satype.md)|Gibt den Datentyp, der die `SAFEARRAY`.|
+|[version](../windows/version-cpp.md)|Identifiziert eine bestimmte Version mehrere Versionen einer Schnittstelle oder Klasse an.|
+
+## <a name="see-also"></a>Siehe auch
+
+[Attribute nach Gruppen](../windows/attributes-by-group.md)

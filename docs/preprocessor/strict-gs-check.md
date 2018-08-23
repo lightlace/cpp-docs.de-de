@@ -1,5 +1,5 @@
 ---
-title: Strict_gs_check | Microsoft Docs
+title: Strict_gs_check | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b58b02781f266b24fa321b3849f42b2e090b860
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9a5e9ce2480612cdc84982cd1474e003d9151557
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842975"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538636"
 ---
 # <a name="strictgscheck"></a>strict_gs_check
 Dieses Pragma bietet eine verbesserte Sicherheitsüberprüfung.  
@@ -36,16 +36,18 @@ Dieses Pragma bietet eine verbesserte Sicherheitsüberprüfung.
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Weist den Compiler an, einen zufällig ausgewählten Cookie im Funktionsstapel einzufügen, um verschiedene Kategorien eines stapelbasierten Pufferüberlaufs zu erkennen. Standardmäßig fügt die Compileroption /GS (Puffer-Sicherheitsüberprüfung) kein Cookie für alle Funktionen ein. Weitere Informationen finden Sie unter [/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md).  
+ 
+Weist den Compiler an, einen zufällig ausgewählten Cookie im Funktionsstapel einzufügen, um verschiedene Kategorien eines stapelbasierten Pufferüberlaufs zu erkennen. In der Standardeinstellung die `/GS` -Compileroption (Puffer-Sicherheitsüberprüfung) ist ein Cookie für alle Funktionen nicht eingefügt werden. Weitere Informationen finden Sie unter [/GS (Puffer-Sicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md).  
   
- Sie müssen mit /GS (Puffer-Sicherheitsüberprüfung) kompilieren, um strict_gs_check zu aktivieren.  
+Muss der Kompilierung mit `/GS` (Puffer-Sicherheitsüberprüfung) aktivieren **Strict_gs_check**.  
   
- Verwenden Sie dieses Pragma in Codemodulen, die potenziell schädlichen Daten ausgesetzt sind. Dieses Pragma ist sehr aggressiv und wird auf Funktionen angewendet, die einen solchen Schutz möglicherweise nicht benötigen. Es wird jedoch optimiert, um die Auswirkung auf die Leistung der resultierenden Anwendung zu minimieren.  
+Verwenden Sie dieses Pragma in Codemodulen, die potenziell schädlichen Daten ausgesetzt sind. Dieses Pragma ist sehr aggressiv und wird auf Funktionen angewendet, die einen solchen Schutz möglicherweise nicht benötigen. Es wird jedoch optimiert, um die Auswirkung auf die Leistung der resultierenden Anwendung zu minimieren.  
   
- Auch wenn Sie das Pragma verwenden, sollten Sie sich bemühen, sicheren Code zu schreiben. D. h., stellen Sie sicher, dass der Code keine Pufferüberläufe hat. Strict_gs_check kann Ihre Anwendung von Pufferüberläufe schützen, die im Code vorhanden.  
+Auch wenn Sie das Pragma verwenden, sollten Sie sich bemühen, sicheren Code zu schreiben. Das heißt, stellen Sie sicher, dass Ihr Code keine Pufferüberläufe hat. **Strict_gs_check** schützen Sie Ihre Anwendung vor Pufferüberläufen, die in Ihrem Code bleiben kann.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Code tritt ein Pufferüberlauf auf, wenn wir ein Array in ein lokales Array kopieren. Wenn Sie diesen Code mit /GS kompilieren, wird kein Cookie in den Stapel eingefügt, da der Arraydatentyp ein Zeiger ist. Durch Hinzufügen des strict_gs_check-Pragmas wird das Stapelcookie in den Funktionsstapel gezwungen.  
+ 
+Im folgenden Code tritt ein Pufferüberlauf auf, wenn wir ein Array in ein lokales Array kopieren. Beim Kompilieren dieses Codes mit `/GS`, kein Cookie wird im Stapel eingefügt, da der Arraydatentyp ein Zeiger ist. Hinzufügen der **Strict_gs_check** Pragma wird das stapelcookie in den funktionsstapel erzwungen.  
   
 ```cpp  
 // pragma_strict_gs_check.cpp  
@@ -70,9 +72,9 @@ void ** ReverseArray(void **pData,
   
     return pData;  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [/GS (Puffersicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md)
+ 
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[/GS (Puffersicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md)

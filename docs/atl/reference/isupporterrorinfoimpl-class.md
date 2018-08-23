@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849107cc9f0d0611eb3dc9259fc317f73a961407
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c2862945fa95ca45d8544eda0bb06080c5e45c2e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026172"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572177"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl-Klasse
-Diese Klasse stellt eine Standardimplementierung von der [ISupportErrorInfo Schnittstelle](http://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32) und kann verwendet werden, wenn nur eine einzelne Schnittstelle Fehler bei einem Objekt generiert.  
+Diese Klasse stellt eine Standardimplementierung von der [ISupportErrorInfo Schnittstelle](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) und kann verwendet werden, wenn nur eine einzelne Schnittstelle Fehler bei einem Objekt generiert.  
   
 > [!IMPORTANT]
 >  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
@@ -43,7 +43,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
 #### <a name="parameters"></a>Parameter  
  *piid*  
- Ein Zeiger auf eine Schnittstelle, unterstützt die IID [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447).  
+ Ein Zeiger auf eine Schnittstelle, unterstützt die IID [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).  
   
 ## <a name="members"></a>Member  
   
@@ -51,10 +51,10 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Gibt an, ob die Schnittstelle durch identifiziert `riid` unterstützt die [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) Schnittstelle.|  
+|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Gibt an, ob die Schnittstelle durch identifiziert `riid` unterstützt die [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) Schnittstelle.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [ISupportErrorInfo Schnittstelle](http://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32) wird sichergestellt, dass die Fehlerinformationen an den Client zurückgegeben werden kann. Objekten, `IErrorInfo` müssen implementieren `ISupportErrorInfo`.  
+ Die [ISupportErrorInfo Schnittstelle](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) wird sichergestellt, dass die Fehlerinformationen an den Client zurückgegeben werden kann. Objekten, `IErrorInfo` müssen implementieren `ISupportErrorInfo`.  
   
  Klasse `ISupportErrorInfoImpl` stellt eine Standardimplementierung von `ISupportErrorInfo` und kann verwendet werden, wenn nur eine einzelne Schnittstelle Fehler bei einem Objekt generiert. Zum Beispiel:  
   
@@ -69,14 +69,14 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
  **Header:** atlcom.h  
   
 ##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
- Gibt an, ob die Schnittstelle durch identifiziert `riid` unterstützt die [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) Schnittstelle.  
+ Gibt an, ob die Schnittstelle durch identifiziert `riid` unterstützt die [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) Schnittstelle.  
   
 ```
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [ISupportErrorInfo:: InterfaceSupportsErrorInfo](http://msdn.microsoft.com/a54ef18d-ee3f-4483-ac4a-99d758f0960a) in das Windows SDK.  
+ Finden Sie unter [ISupportErrorInfo:: InterfaceSupportsErrorInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) in das Windows SDK.  
   
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
  Rufen Sie diese Methode, um die Anzahl der Threads im Pool verfügbar machen.  

@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97d8e923d89085161feb7dcec38d3b0e3972b96e
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 317eae9ee404e603eaf37b2d512724c6b3d0c9f9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028420"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538889"
 ---
 # <a name="cwnd-class"></a>CWnd-Klasse
 Stellt die Basisfunktionalität aller Fensterklassen der Microsoft Foundation Class-Bibliothek bereit.  
@@ -2258,7 +2258,7 @@ virtual BOOL DestroyWindow();
   
  Die `DestroyWindow` Memberfunktion zerstört auch nicht modale Dialogfelder erstellt [CDialog::Create](../../mfc/reference/cdialog-class.md#create).  
   
- Wenn die `CWnd` zerstört wird, ist ein untergeordnetes Fenster und verfügt nicht über die [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) Stil festgelegt ist, wird die [WM_PARENTNOTIFY ](https://msdn.microsoft.com/library/ms632638.aspx) Nachricht wird gesendet, das übergeordnete Element.  
+ Wenn die `CWnd` zerstört wird, ist ein untergeordnetes Fenster und verfügt nicht über die [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) Stil festgelegt ist, wird die [WM_PARENTNOTIFY ](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) Nachricht wird gesendet, das übergeordnete Element.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
@@ -7780,7 +7780,7 @@ afx_msg void OnNcXButtonUp(
 >  Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.  
   
 ##  <a name="onnextmenu"></a>  CWnd::OnNextMenu  
- Das Framework ruft diese Memberfunktion wenn wenn die nach links oder rechts-Taste, um zwischen der Menüleiste und dem Systemmenü zu wechseln verwendet wird.  
+ Das Framework ruft diese Memberfunktion auf, wenn die nach links oder rechts-Taste verwendet wird, um zwischen der Menüleiste und dem Systemmenü zu wechseln.  
   
 ```  
 afx_msg void OnNextMenu(
@@ -8260,7 +8260,7 @@ afx_msg void OnSessionChange(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode empfängt die [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) Benachrichtigung, die im Windows SDK beschrieben wird.  
   
- Die *nSessionState* Parameter gibt an, dass eine-Sitzung von der Konsole oder einem remote-Terminal getrennt oder verbunden ist, ein Benutzer, oder deaktivieren angemeldet, eine Sitzung gesperrt oder entsperrt ist oder eine Sitzung zu ferngesteuerter Status geändert hat. Weitere Informationen finden Sie unter den *wParam-Parameter* Parameter von der die [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) Nachricht.  
+ Die *nSessionState* Parameter gibt an, dass eine-Sitzung von der Konsole oder einem remote-Terminal getrennt oder verbunden ist, ein Benutzer, oder deaktivieren angemeldet, eine Sitzung gesperrt oder entsperrt ist oder eine Sitzung zu ferngesteuerter Status geändert hat. Weitere Informationen finden Sie unter der *wParam* Parameter, der die [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) Nachricht.  
   
 > [!NOTE]
 >  Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.  
@@ -8983,7 +8983,7 @@ afx_msg void OnUnInitMenuPopup(
 >  Diese Memberfunktion wird vom Framework aufgerufen, um der Anwendung die Bearbeitung einer Windows-Meldung zu ermöglichen. Die Parameter, die an die Funktion übergeben werden, stellen die Parameter dar, die vom Framework empfangen wurden, als die Nachricht empfangen wurde. Wenn Sie die Basisklassenimplementierung dieser Funktion aufrufen, verwendet diese Implementierung die Parameter, die mit der Meldung ursprünglich übergeben wurden, und nicht die Parameter, die Sie der Funktion übergeben.  
   
 ##  <a name="onupdateuistate"></a>  CWnd::OnUpdateUIState  
- Aufgerufen wird, um den Benutzeroberflächenstatus (UI) für das angegebene Fenster und alle zugehörigen untergeordneten Fenster zu ändern.  
+ Wird aufgerufen, um den Benutzeroberflächenstatus für das angegebene Fenster und alle zugehörigen untergeordneten Fenster zu ändern.  
   
 ```  
 afx_msg void OnUpdateUIState(

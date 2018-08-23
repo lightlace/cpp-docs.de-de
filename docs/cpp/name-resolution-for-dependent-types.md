@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: ad833d0fb4309ed4fed0eba4c162c9d6d46bf95d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402685"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42588216"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Namensauflösung für abhängige Typen
 Verwendung **Typename** für qualifizierte Namen in Vorlagendefinitionen, um dem Compiler mitzuteilen, dass der angegebene qualifizierte Name einen Typ bezeichnet. Weitere Informationen finden Sie unter [Typename](../cpp/typename.md).  
@@ -98,7 +98,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>Vorlagenmehrdeutigkeit  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] erzwingt die Standardregeln für C++98/03/11 für Mehrdeutigkeit mit dem "template"-Schlüsselwort. Im folgenden Beispiel würde Visual C++ 2010 sowohl die nicht konformen Zeilen als auch die konformen Zeilen akzeptieren.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] akzeptiert nur die konformen Zeilen.  
+ Visual Studio 2012 setzt die C ++ 98/03/11-Standardregeln für Mehrdeutigkeit mit dem Schlüsselwort "Template". Im folgenden Beispiel würde Visual C++ 2010 sowohl die nicht konformen Zeilen als auch die konformen Zeilen akzeptieren.  Visual Studio 2012 akzeptiert nur die konformen Zeilen.  
   
 ```cpp  
 #include <iostream>  

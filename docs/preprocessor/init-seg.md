@@ -1,5 +1,5 @@
 ---
-title: Init_seg | Microsoft Docs
+title: Init_seg | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,74 +19,74 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3be66fc2639253d1bbcfec21f544d5537e084e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 078026836b5f5c1fafe89e5f5e49bf0693be9250
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840523"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42544433"
 ---
 # <a name="initseg"></a>init_seg
 **C++-spezifisch**  
   
- Gibt ein Schlüsselwort oder einen Codeabschnitt an, der sich auf die Reihenfolge auswirkt, in der Startcode ausgeführt wird.  
+Gibt ein Schlüsselwort oder einen Codeabschnitt an, der sich auf die Reihenfolge auswirkt, in der Startcode ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #pragma init_seg({ compiler | lib | user | "section-name" [, func-name]} )  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind in diesem Thema gleichbedeutend.  
+ 
+Die Bedeutung der Begriffe *Segment* und *Abschnitt* sind austauschbar, in diesem Thema.  
   
- Da die Initialisierung eines globalen statischen Objekts ausführenden Code umfassen kann, müssen Sie ein Schlüsselwort angeben, das definiert, wann die Objekte erstellt werden sollen. Es ist besonders wichtig, verwenden Sie die **Init_seg** Pragma in Dynamic Link Libraries (DLLs) oder Bibliotheken, die eine Initialisierung erforderlich ist.  
+Da die Initialisierung eines globalen statischen Objekts ausführenden Code umfassen kann, müssen Sie ein Schlüsselwort angeben, das definiert, wann die Objekte erstellt werden sollen. Es ist besonders wichtig ist, verwendet der **Init_seg** Pragma in Dynamic Link Libraries (DLLs) oder Bibliotheken, die eine Initialisierung erforderlich ist.  
   
- Die Optionen für die **Init_seg** Pragma sind:  
+Die Optionen, um die **Init_seg** Pragma sind:  
   
- **compiler**  
- Reserviert für die Initialisierung der Microsoft C-Laufzeitbibliothek. Objekte in dieser Gruppe werden zuerst erstellt.  
+*compiler*  
+Reserviert für die Initialisierung der Microsoft C-Laufzeitbibliothek. Objekte in dieser Gruppe werden zuerst erstellt.  
   
- **lib**  
- Verfügbar für die Initialisierungen der Klassenbibliotheken von Drittanbietern. Objekte in dieser Gruppe werden erstellt, nach denen als gekennzeichnete **Compiler** aber vor allen anderen.  
+*lib*  
+Verfügbar für die Initialisierungen der Klassenbibliotheken von Drittanbietern. Objekte in dieser Gruppe werden erstellt, nach denen als *Compiler* aber vor allen anderen.  
   
- **user**  
- Verfügbar für alle beliebigen Benutzer. Objekte in dieser Gruppe werden zuletzt erstellt.  
+*user*  
+Verfügbar für alle beliebigen Benutzer. Objekte in dieser Gruppe werden zuletzt erstellt.  
   
- *Abschnitt-name*  
- Ermöglicht die explizite Angabe des Abschnitts für Initialisierung. Objekte in einem vom Benutzer angegebenen *Abschnittsname* werden nicht implizit erstellt; allerdings werden ihre Adressen im Abschnitt mit dem Namen von platziert *Abschnittsname*.  
+*Name des Abschnitts*  
+Ermöglicht die explizite Angabe des Abschnitts für Initialisierung. Objekte in einem vom Benutzer angegebenen *Abschnittsname* sind nicht implizit erstellt werden; allerdings werden ihre Adressen im Abschnitt mit dem Namen von platziert *Abschnittsname*.  
   
- Der angegebene Abschnittsname enthält Zeiger auf Hilfsfunktionen, die die globalen Objekte erstellen, die in diesem Modul nach dem Pragma deklariert wurden.  
+Der angegebene Abschnittsname enthält Zeiger auf Hilfsfunktionen, die die globalen Objekte erstellen, die in diesem Modul nach dem Pragma deklariert wurden.  
   
- Eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden, finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md).  
+Eine Liste der Namen sollten Sie beim Erstellen eines Abschnitts nicht verwenden, finden Sie unter [/SECTION](../build/reference/section-specify-section-attributes.md).  
   
- *func-name*  
- Gibt eine Funktion an, die statt `atexit` aufgerufen werden soll, wenn das Programm beendet wird. Diese Hilfsfunktion ruft zudem [Atexit](../c-runtime-library/reference/atexit.md) mit einem Zeiger auf den Destruktor für das globale Objekt. Wenn Sie einen Funktionsbezeichner im Pragma des Formulars angeben,  
+*func-name*  
+Gibt eine Funktion an, die statt `atexit` aufgerufen werden soll, wenn das Programm beendet wird. Diese Hilfsfunktion ruft zudem [von "atexit"](../c-runtime-library/reference/atexit.md) mit einem Zeiger auf den Destruktor für das globale Objekt. Wenn Sie einen Funktionsbezeichner im Pragma des Formulars angeben,  
   
 ```  
 int __cdecl myexit (void (__cdecl *pf)(void))  
 ```  
   
- wird die Funktion anstelle von `atexit` für die Laufzeitbibliothek von C aufgerufen. Dadurch können Sie eine Liste mit Destruktoren erstellen, die aufgerufen werden müssen, wenn Sie bereit sind, die Objekte zu zerstören.  
+wird die Funktion anstelle von `atexit` für die Laufzeitbibliothek von C aufgerufen. Dadurch können Sie eine Liste mit Destruktoren erstellen, die aufgerufen werden müssen, wenn Sie bereit sind, die Objekte zu zerstören.  
   
- Wenn Sie die Initialisierung verzögern müssen (z. B. in einer DLL), können Sie den Abschnittsnamen auch explizit angeben. Anschließend müssen Sie die Konstruktoren für jedes statische Objekt aufrufen.  
+Wenn Sie die Initialisierung verzögern müssen (z. B. in einer DLL), können Sie den Abschnittsnamen auch explizit angeben. Anschließend müssen Sie die Konstruktoren für jedes statische Objekt aufrufen.  
   
- Der Bezeichner für die Ersetzung von `atexit` weist keine Anführungszeichen auf.  
+Der Bezeichner für die Ersetzung von `atexit` weist keine Anführungszeichen auf.  
   
- Die Objekte werden in den Abschnitten platziert, die von den anderen XXX_seg-Pragmas definiert sind.  
+Die Objekte werden in den Abschnitten platziert, die von den anderen XXX_seg-Pragmas definiert sind.  
   
- Die Objekte, die im Modul deklariert wurden, werden nicht automatisch von der C-Laufzeit initialisiert. Sie müssen das selbst tun.  
+Die Objekte, die im Modul deklariert wurden, werden nicht automatisch von der C-Laufzeit initialisiert. Sie müssen das selbst tun.  
   
- Standardmäßig sind `init_seg`-Abschnitte schreibgeschützt. Wenn der Abschnittsname .CRT ist, legt der Compiler automatisch das Attribut auf schreibgeschützt fest, auch wenn es den Schreibzugriff gestattet hat.  
+Standardmäßig sind `init_seg`-Abschnitte schreibgeschützt. Wenn der Abschnittsname .CRT ist, legt der Compiler automatisch das Attribut auf schreibgeschützt fest, auch wenn es den Schreibzugriff gestattet hat.  
   
- Sie können keine angeben **Init_seg** mehr als einmal in einer Übersetzungseinheit.  
+Sie können keine angeben **Init_seg** mehr als einmal in einer Übersetzungseinheit.  
   
- Auch wenn das Objekt über keinen benutzerdefinierten Konstruktor verfügt, einen Konstruktor, der im Code nicht explizit definiert wurde, generiert der Compiler möglicherweise einen, um die v-table-Zeiger zu binden.  Deshalb muss der Code den vom Compiler generierten Konstruktor aufrufen.  
+Auch wenn das Objekt über keinen benutzerdefinierten Konstruktor verfügt, einen Konstruktor, der im Code nicht explizit definiert wurde, generiert der Compiler möglicherweise einen, um die v-table-Zeiger zu binden.  Deshalb muss der Code den vom Compiler generierten Konstruktor aufrufen.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```cpp  
 // pragma_directive_init_seg.cpp  
 #include <stdio.h>  
 #pragma warning(disable : 4075)  
@@ -166,4 +166,5 @@ A()
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

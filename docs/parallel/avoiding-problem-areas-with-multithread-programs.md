@@ -1,5 +1,5 @@
 ---
-title: Vermeiden von Problembereichen bei Multithreadprogrammen | Microsoft Docs
+title: Vermeiden von Problembereichen bei Multithreadprogrammen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5af4c1ca6a86b2cff457aee12e8337103ce7f42d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 49c5e624b437f39270fb880fe526d55e7ed83e5d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686613"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540806"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Vermeiden von Problembereichen bei Multithreadprogrammen
-Es gibt mehrere Probleme, die Sie erstellen, verknüpfen oder Ausführen einer C-Multithreadprogramm auftreten können. Einige der häufigsten Probleme werden in der folgenden Tabelle beschrieben. (Eine ähnliche Erläuterung von MFC-Sicht, finden Sie unter [Multithreading: Tipps für die Programmierung](../parallel/multithreading-programming-tips.md).)  
+Es gibt mehrere Probleme, die auftreten können, erstellen, verknüpfen oder eine C-Multithreadprogramm ausführen. Einige der häufigsten Probleme werden in der folgenden Tabelle beschrieben. (Eine vergleichbare Erläuterung von MFC-Sicht, finden Sie unter [Multithreading: Tipps für die Programmierung](../parallel/multithreading-programming-tips.md).)  
   
 |Problem|Mögliche Ursache|  
 |-------------|--------------------|  
-|Sie erhalten ein Meldungsfeld angezeigt, dass das Programm eine Schutz-Verletzung verursacht hat.|Viele Win32-Programmierfehler zu Verletzungen der Schutz führen. Eine häufige Ursache von Verletzungen der Schutz wird der indirekte Zuweisung zu null-Zeiger. Da dies führt dazu, dass das Programm versucht auf Arbeitsspeicher zuzugreifen, die nicht zu der er gehört, wird ein Verstoß Schutz ausgegeben.<br /><br /> Eine einfache Möglichkeit zum Ermitteln der Ursache eines Verstoßes Schutz wird das Programm mit Debuginformationen kompiliert, und führen Sie es dann mithilfe des Debuggers in der Visual C++-Umgebung. Wenn die allgemeine schutzverletzung tritt auf, Windows übergibt die Steuerung an den Debugger, und der Cursor befindet sich auf die Zeile, die das Problem verursacht hat.|  
-|Das Programm generiert zahlreiche Fehler in der Kompilierung und Verknüpfung.|Sie können viele potenzielle Probleme vermeiden, indem der Compiler Warnstufe auf die höchsten Werte festlegen und heeding die Warnmeldungen an. Mithilfe der Ebene 3 oder Ebene 4 Warnungsoptionen können Sie unbeabsichtigte datenkonvertierungen, fehlende Funktionsprototypen und Verwendung von nicht-ANSI-Features erkennen.|  
+|Sie erhalten ein Meldungsfeld anzeigt, dass das Programm eine Schutz-Verletzung verursacht hat.|Verstöße gegen den Zugriffsschutz zu viele Win32-Programmierung-Fehlern führen. Eine häufige Ursache für den Schutz von Verletzungen ist die indirekte Zuweisung zu null-Zeiger. Da dies in Ihrem Programm auf Speicher zugreift, die nicht zu der er gehört führt, wird ein Schutz gegen ausgegeben.<br /><br /> Eine einfache Möglichkeit, um die Ursache eines Verstoßes Schutz zu erkennen ist, das Programm mit Debuginformationen kompiliert, und führen Sie es über den Debugger in Visual C++-Umgebung. Wenn der Schutzverletzungsfehler auftritt, Windows überträgt die Steuerung an den Debugger, und der Cursor befindet sich in der Zeile, die das Problem verursacht hat.|  
+|Das Programm generiert zahlreiche Fehler in der Kompilierung und Verknüpfung.|Sie können viele Probleme vermeiden, durch die Warnstufe des Compilers auf die höchsten Werte festlegen und die gewonnenen der Warnmeldungen an. Mit der Ebene 3 oder die Optionen für Warnung der Stufe 4, können Sie unbeabsichtigte datenkonvertierungen, fehlende Funktionsprototypen und Verwendung von nicht-ANSI-Funktionen erkennen.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Multithreading bei C und Win32](../parallel/multithreading-with-c-and-win32.md)
+
+[Multithreading bei C und Win32](../parallel/multithreading-with-c-and-win32.md)

@@ -1,5 +1,5 @@
 ---
-title: Erstellen von C/c ++ ‑Programme | Microsoft Docs
+title: Erstellen von C/C++-Programmen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2894c503dde89668bfb90b615c7b0966fe5fe2e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fa07308d04d14395b0ca9773e2a0c81ed0c2bc2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360974"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571863"
 ---
 # <a name="building-cc-programs"></a>Erstellen von C/C++-Programmen
 
-Sie können Projekte in Visual C++ entweder in Visual Studio oder der Befehlszeile entwickeln. Der Visual Studio-IDE verwendet [MSBuild](../build/msbuild-visual-cpp.md) Projekte und Projektmappen zu erstellen. In der Befehlszeile können Sie den C-/C++-Compiler (cl.exe) und den Linker (link.exe) für einfache Projekte nutzen. Zum Erstellen komplexerer Projekte in der Befehlszeile können Sie MSBuild verwenden oder [NMAKE](../build/nmake-reference.md). Eine Übersicht über die zur Verwendung von [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] um Projekte und Projektmappen zu erstellen, finden Sie unter [kompilieren und generieren](/visualstudio/ide/compiling-and-building-in-visual-studio).  
+Sie können Projekte in Visual C++ entweder in Visual Studio oder der Befehlszeile entwickeln. Visual Studio-IDE verwendet [MSBuild](../build/msbuild-visual-cpp.md) Projekte und Projektmappen zu erstellen. In der Befehlszeile können Sie den C-/C++-Compiler (cl.exe) und den Linker (link.exe) für einfache Projekte nutzen. Um komplexere Projekte in der Befehlszeile zu erstellen, können Sie MSBuild verwenden oder [NMAKE](../build/nmake-reference.md). Eine Übersicht über das Visual Studio zum Erstellen von Projekten und Projektmappen verwenden, finden Sie unter [kompilieren und generieren](/visualstudio/ide/compiling-and-building-in-visual-studio).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 

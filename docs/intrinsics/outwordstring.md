@@ -1,5 +1,5 @@
 ---
-title: __outwordstring | Microsoft Docs
+title: __outwordstring | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc25fdc4d43b7454761787264583b5e4f8fa47e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abc221b81b6ace3afb165585b7e24655d348c2b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333693"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540465"
 ---
 # <a name="outwordstring"></a>__outwordstring
 **Microsoft-spezifisch**  
   
- Generiert die `rep outsw` -Anweisung, die sendet `Count` beginnenden Wörtern `Buffer` Ausgang von angegebenen e/a- `Port`.  
+ Generiert die `rep outsw` -Anweisung, die sendet `Count` Wörter, die beginnend bei `Buffer` der e/a-Port anhand des `Port`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,19 +42,19 @@ void __outwordstring(
   
 #### <a name="parameters"></a>Parameter  
  [in] `Port`  
- Der Port, an die die Daten gesendet werden soll.  
+ Der Port, der die Daten zu senden.  
   
  [in] `Buffer`  
- Ein Zeiger auf die Daten auf den angegebenen Port gesendet werden.  
+ Ein Zeiger auf Daten, die über den angegebenen Port gesendet werden.  
   
  [in] `Count`  
- Die Anzahl der Wörter zu senden.  
+ Die Anzahl von Wörtern zu senden.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__outwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outwordstring`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

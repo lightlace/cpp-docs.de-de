@@ -18,35 +18,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b936b1014c2dd6640f64ca929628f6f0a74dc79
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b941013e2acfcee7a0f6fec16410ae7e200e56e0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012328"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578653"
 ---
 # <a name="resource-view-window"></a>Fenster "Ressourcenansicht"
+
 > [!NOTE]
->  Wird in Express-Editionen nicht unterstützt.  
-  
- In der Ressourcenansicht werden die im Projekt enthaltenen Ressourcendateien angezeigt. Bei Erweitern des obersten Ordners (z. B. Projekt1.rc) werden die Ressourcentypen aus dieser RC-Datei angezeigt. Beim Erweitern der einzelnen Ressourcentypen werden die einzelnen Ressourcen dieses Typs angezeigt.  
-  
+> Wird in Express-Editionen nicht unterstützt.
+
+In der Ressourcenansicht werden die im Projekt enthaltenen Ressourcendateien angezeigt. Bei Erweitern des obersten Ordners (z. B. Projekt1.rc) werden die Ressourcentypen aus dieser RC-Datei angezeigt. Beim Erweitern der einzelnen Ressourcentypen werden die einzelnen Ressourcen dieses Typs angezeigt.
+
 > [!NOTE]
->  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
-  
+> Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
+
 > [!TIP]
->  Sie können mit der rechten Maustaste auf die **Ressourcenansicht** Fenster aus, um ein Kontextmenü mit Befehlen zu starten. Außerdem kann das Fenster mit einem Doppelklick auf die Titelleiste verankert bzw. die Verankerung gelöst werden. Durch Klicken mit der rechten Maustaste auf die Titelleiste werden zusätzliche Befehle zum Steuern des Fensterverhaltens angezeigt. Weitere Informationen finden Sie unter [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
-  
-### <a name="to-open-the-resource-view-window"></a>So öffnen Sie das Fenster "Ressourcenansicht"  
-  
-1.  Klicken Sie auf **Ressourcenansicht** auf die **Ansicht** Menü.  
-  
-     \- oder –  
-  
-2.  Drücken Sie **STRG**+**UMSCHALT**+**E**.  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)
+> Sie können mit der rechten Maustaste auf die **Ressourcenansicht** Fenster aus, um ein Kontextmenü mit Befehlen zu starten. Außerdem kann das Fenster mit einem Doppelklick auf die Titelleiste verankert bzw. die Verankerung gelöst werden. Durch Klicken mit der rechten Maustaste auf die Titelleiste werden zusätzliche Befehle zum Steuern des Fensterverhaltens angezeigt. Weitere Informationen finden Sie unter [Windows Management](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+### <a name="to-open-the-resource-view-window"></a>So öffnen Sie das Fenster "Ressourcenansicht"
+
+1. Klicken Sie auf **Ressourcenansicht** auf die **Ansicht** Menü.
+
+   \- oder –
+
+2. Drücken Sie **STRG**+**UMSCHALT**+**E**.
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Arbeiten mit Ressourcendateien](../windows/working-with-resource-files.md)

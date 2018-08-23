@@ -17,33 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 764a47fe03a2ad9f4e4d3d64a5627acc9c72d1b5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a0c8e9ba093c6be4b1e0d5747c16a8dc8887cd2c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40018870"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591087"
 ---
 # <a name="weakreferenceincrementstrongreference-method"></a>WeakReference::IncrementStrongReference-Methode
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-ULONG IncrementStrongReference();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die Anzahl inkrementiert starken Verweis.  
-  
-## <a name="remarks"></a>Hinweise  
- Inkrementiert die Anzahl der starken Verweis des aktuellen **WeakReference** Objekt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [WeakReference-Klasse](../windows/weakreference-class1.md)  
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+ULONG IncrementStrongReference();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Die Anzahl inkrementiert starken Verweis.
+
+## <a name="remarks"></a>Hinweise
+
+Inkrementiert die Anzahl der starken Verweis des aktuellen **WeakReference** Objekt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[WeakReference-Klasse](../windows/weakreference-class1.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

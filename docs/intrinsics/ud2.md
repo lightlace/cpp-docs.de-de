@@ -1,5 +1,5 @@
 ---
-title: __ud2 | Microsoft Docs
+title: __ud2 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c282456f74fa86940e3d1ffc77d0226a28ed0b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eeb63aa411278c2ca6b2217d9243331b57cd7624
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326162"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539441"
 ---
 # <a name="ud2"></a>__ud2
 **Microsoft-spezifisch**  
@@ -36,15 +36,15 @@ void __ud2();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der Prozessor wird eine ungültige Opcode-Ausnahme auslöst, wenn Sie eine nicht definierte Anweisung auszuführen.  
+ Der Prozessor, wird eine Ungültiger Opcode-Ausnahme auslöst, wenn Sie eine nicht definierte Anweisung ausführen.  
   
- Die `__ud2` -Funktion ist gleichbedeutend mit dem `UD2` computeranweisung und ist nur im Kernelmodus verfügbar. Weitere Informationen zu suchen, für das Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set-Reference" auf der [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
+ Die `__ud2` -Funktion ist gleichbedeutend mit der `UD2` computeranweisung und steht nur im Kernelmodus ausgeführt. Weitere Informationen zu suchen, nach dem Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set Reference," auf die [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__ud2`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ud2`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

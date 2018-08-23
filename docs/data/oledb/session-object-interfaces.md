@@ -19,36 +19,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 01d08fb35a1e954aad07153f63ad3ed34282570d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 8208a372989fac5fa7c7b0c13b83eb27a4d1444b
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337845"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572659"
 ---
 # <a name="session-object-interfaces"></a>Sitzungsobjekt-Schnittstellen
 Die folgende Tabelle zeigt die erforderlichen und optionalen Schnittstellen, die durch OLE DB für ein Objekt definiert.  
   
 |Interface|Erforderlich?|Vom OLE DB-Vorlagen implementiert?|  
 |---------------|---------------|--------------------------------------|  
-|[IGetDataSource](https://msdn.microsoft.com/library/ms709721.aspx)|Erforderlich|Ja|  
-|[IOpenRowset](https://msdn.microsoft.com/library/ms716946.aspx)|Erforderlich|Ja|  
-|[ISessionProperties](https://msdn.microsoft.com/library/ms713721.aspx)|Erforderlich|Ja|  
-|[IAlterIndex](https://msdn.microsoft.com/library/ms714943.aspx)|Optional|Nein|  
-|[IAlterTable](https://msdn.microsoft.com/library/ms719764.aspx)|Optional|Nein|  
-|[IBindResource](https://msdn.microsoft.com/library/ms714936.aspx)|Optional|Nein|  
-|[ICreateRow](https://msdn.microsoft.com/library/ms716832.aspx)|Optional|Nein|  
-|[IDBCreateCommand](https://msdn.microsoft.com/library/ms711625.aspx)|Optional|Ja|  
-|[IDBSchemaRowset](https://msdn.microsoft.com/library/ms713686.aspx)|Optional|Ja|  
-|[IIndexDefinition](https://msdn.microsoft.com/library/ms711593.aspx)|Optional|Nein|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/library/ms715816.aspx)|Optional|Ja|  
-|[ITableCreation](https://msdn.microsoft.com/library/ms713639.aspx)|Optional|Nein|  
-|[ITableDefinition](https://msdn.microsoft.com/library/ms714277.aspx)|Optional|Nein|  
-|[ITableDefinitionWithConstraints](https://msdn.microsoft.com/library/ms720947.aspx)|Optional|Nein|  
-|[ITransaction](https://msdn.microsoft.com/library/ms723053.aspx)|Optional|Nein|  
-|[ITransactionJoin](https://msdn.microsoft.com/library/ms718071.aspx)|Optional|Nein|  
-|[ITransactionLocal](https://msdn.microsoft.com/library/ms714893.aspx)|Optional|Nein|  
-|[ITransactionObject](https://msdn.microsoft.com/library/ms713659.aspx)|Optional|Nein|  
+|[IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\))|Erforderlich|Ja|  
+|[IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\))|Erforderlich|Ja|  
+|[ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\))|Erforderlich|Ja|  
+|[IAlterIndex](/previous-versions/windows/desktop/ms714943\(v=vs.85\))|Optional|Nein|  
+|[IAlterTable](/previous-versions/windows/desktop/ms719764\(v=vs.85\))|Optional|Nein|  
+|[IBindResource](/previous-versions/windows/desktop/ms714936\(v=vs.85\))|Optional|Nein|  
+|[ICreateRow](/previous-versions/windows/desktop/ms716832\(v=vs.85\))|Optional|Nein|  
+|[IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\))|Optional|Ja|  
+|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))|Optional|Ja|  
+|[IIndexDefinition](/previous-versions/windows/desktop/ms711593\(v=vs.85\))|Optional|Nein|  
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|Ja|  
+|[ITableCreation](/previous-versions/windows/desktop/ms713639\(v=vs.85\))|Optional|Nein|  
+|[ITableDefinition](/previous-versions/windows/desktop/ms714277\(v=vs.85\))|Optional|Nein|  
+|[ITableDefinitionWithConstraints](/previous-versions/windows/desktop/ms720947\(v=vs.85\))|Optional|Nein|  
+|[ITransaction](/previous-versions/windows/desktop/ms723053\(v=vs.85\))|Optional|Nein|  
+|[ITransactionJoin](/previous-versions/windows/desktop/ms718071\(v=vs.85\))|Optional|Nein|  
+|[ITransactionLocal](/previous-versions/windows/desktop/ms714893\(v=vs.85\))|Optional|Nein|  
+|[ITransactionObject](/previous-versions/windows/desktop/ms713659\(v=vs.85\))|Optional|Nein|  
   
  Das Sitzungsobjekt erstellt ein Rowsetobjekt. Wenn der Anbieter Befehle unterstützt, der die Sitzung auch erstellt ein Command-Objekt (`CCommand`, implementiert der OLE DB `TCommand`). Das Command-Objekt implementiert die `ICommand` -Schnittstelle und verwendet die `ICommand::Execute` Methode zum Ausführen von Befehlen auf das Rowset, wie in der folgenden Abbildung dargestellt.  
   
