@@ -21,38 +21,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 526ac2f916eb239aee938522f331cf221138f5fa
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 566ed55df84accef0c3e5308e750a2684c36b91c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568653"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606793"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Ausnahmebehandlung (Komponentenerweiterungen für C++)
-Anwendungen kompiliert wird, mit der `/ZW` Compileroption oder `/clr` Compileroption, die beide verwenden *Ausnahmen* , unerwartete Fehler während der Ausführung des Programms zu behandeln. Die folgenden Themen wird erläutert, für die Ausnahmebehandlung in beiden C++ / CX- oder C++ / CLI-Anwendungen.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Grundlegende Konzepte zur Verwendung verwalteter Ausnahmen](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
- Beschreibt, Auslösen von Ausnahmen, und Verwenden von **versuchen**/**catch** Blöcke.  
-  
- [Unterschiede im Ausnahmebehandlungsverhalten unter/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
- Erläutert die Unterschiede in das Standardverhalten der C++-Ausnahmebehandlung.  
-  
- [finally](../dotnet/finally.md)  
- Erläutert, wie die finally-Schlüsselwort.  
-  
- [Vorgehensweise: Definieren und Installieren eines globalen Ausnahmehandlers](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
- Veranschaulicht, wie nicht behandelte Ausnahmen erfasst werden können.  
-  
- [Vorgehensweise: Abfangen von Ausnahmen, die von der MSIL ausgelöst wurden, in nativem Code](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
- Erläutert, wie zum Abfangen von CLR und C++-Ausnahmen in systemeigenem Code.  
-  
- [Vorgehensweise: Definieren und Installieren eines globalen Ausnahmehandlers](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
- Veranschaulicht, wie nicht behandelte Ausnahmen abgefangen.  
-  
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)  
- Beschreibt die Behandlung von Ausnahmen in C++.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+
+Anwendungen kompiliert wird, mit der `/ZW` Compileroption oder `/clr` Compileroption, die beide verwenden *Ausnahmen* , unerwartete Fehler während der Ausführung des Programms zu behandeln. Die folgenden Themen wird erläutert, für die Ausnahmebehandlung in beiden C++ / CX- oder C++ / CLI-Anwendungen.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[Grundlegende Konzepte zur Verwendung verwalteter Ausnahmen](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
+Beschreibt, Auslösen von Ausnahmen, und Verwenden von **versuchen**/**catch** Blöcke.
+
+[Unterschiede im Ausnahmebehandlungsverhalten unter/CLR](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
+Erläutert die Unterschiede in das Standardverhalten der C++-Ausnahmebehandlung.
+
+[finally](../dotnet/finally.md)  
+Erläutert, wie die finally-Schlüsselwort.
+
+[Vorgehensweise: Definieren und Installieren eines globalen Ausnahmehandlers](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+Veranschaulicht, wie nicht behandelte Ausnahmen erfasst werden können.
+
+[Vorgehensweise: Abfangen von Ausnahmen, die von der MSIL ausgelöst wurden, in nativem Code](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
+Erläutert, wie zum Abfangen von CLR und C++-Ausnahmen in systemeigenem Code.
+
+[Vorgehensweise: Definieren und Installieren eines globalen Ausnahmehandlers](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+Veranschaulicht, wie nicht behandelte Ausnahmen abgefangen.
+
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+[Ausnahmebehandlung](../cpp/exception-handling-in-visual-cpp.md)  
+Beschreibt die Behandlung von Ausnahmen in C++.
+
+## <a name="see-also"></a>Siehe auch
+
+[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

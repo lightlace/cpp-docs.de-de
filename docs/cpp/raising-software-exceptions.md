@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eb98f0b66090a9c9e5f09b0cde3e3f94a6c0248
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5b4469d7d53a7374f62e0ec232a7836e80ab75d8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405187"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606414"
 ---
 # <a name="raising-software-exceptions"></a>Auslösen von Softwareausnahmen
 Einige der häufigsten Programmfehlerquellen werden vom System nicht als Ausnahmen gekennzeichnet. Wenn Sie beispielsweise versuchen, einen Speicherblock zu belegen, jedoch unzureichend Arbeitsspeicher vorhanden ist, löst die Laufzeit oder API-Funktion keine Ausnahme aus, sondern gibt einen Fehlercode zurück.  
@@ -68,7 +68,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
 ```  
   
- Wenn Sie einfach eine Ausnahme auslösen möchten, können Sie die letzten drei Parameter auf 0 festlegen. Die drei letzten Parameter übergeben zusätzliche Informationen und legen Flags fest, die Handler beim Fortsetzen der Ausführung hindern. Finden Sie unter den [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) Funktion in der [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] für Weitere Informationen.  
+ Wenn Sie einfach eine Ausnahme auslösen möchten, können Sie die letzten drei Parameter auf 0 festlegen. Die drei letzten Parameter übergeben zusätzliche Informationen und legen Flags fest, die Handler beim Fortsetzen der Ausführung hindern. Finden Sie unter den [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) Funktion im Windows SDK für Weitere Informationen.  
   
  In den Ausnahmebehandlungsfiltern können Sie dann die Codes testen, die Sie definiert haben. Zum Beispiel:  
   

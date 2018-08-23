@@ -17,29 +17,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 40d374219e6b9eb05a74f5b62f710691b4e9342a
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 7f89922fb107c1454ec81dfd8a9ac213608da962
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016891"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610842"
 ---
 # <a name="moduleterminate-method"></a>Module::Terminate-Methode
-Bewirkt, dass alle Factorys, die durch das Modul zum Herunterfahren instanziiert.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-void Terminate();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Gibt die Factorys im Cache frei.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Siehe auch
- [Module-Klasse](../windows/module-class.md)
+
+Bewirkt, dass alle Factorys, die durch das Modul zum Herunterfahren instanziiert.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void Terminate();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Gibt die Factorys im Cache frei.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+[Module-Klasse](../windows/module-class.md)

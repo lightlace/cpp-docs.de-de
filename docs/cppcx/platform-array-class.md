@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: Array-Klasse | Microsoft Docs'
+title: 'Platform:: Array-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65c45265714f869de10bdfd450c2b1349d6b526b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: fa689035a6e95db7f9471d4972063ec35486e0cb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704671"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605884"
 ---
 # <a name="platformarray-class"></a>Platform::Array-Klasse
 Stellt ein änderbares, eindimensionales Array dar, das über die Anwendungsbinärdateischnittstelle (ABI) empfangen und übergeben werden kann.  
@@ -37,7 +37,7 @@ private ref class Array<TArg, 1> :
 ```  
   
 ### <a name="members"></a>Member  
- Platform:: Array erbt alle Methoden aus [Platform:: writeonlyarray-Klasse](../cppcx/platform-writeonlyarray-class.md) und implementiert die `Value` Eigenschaft von der [Platform:: iboxarray-Schnittstelle](../cppcx/platform-iboxarray-interface.md).  
+ Platform:: Array erbt alle Methoden aus [Platform:: writeonlyarray-Klasse](../cppcx/platform-writeonlyarray-class.md) und implementiert die `Value` Eigenschaft der [Platform:: iboxarray-Schnittstelle](../cppcx/platform-iboxarray-interface.md).  
   
 ### <a name="public-constructors"></a>Öffentliche Konstruktoren  
   
@@ -57,13 +57,13 @@ private ref class Array<TArg, 1> :
 ### <a name="remarks"></a>Hinweise  
  Die Array-Klasse wird versiegelt und kann nicht vererbt werden.  
   
- Das Windows-Runtime-Typsystem unterstützt nicht das Konzept von verzweigten Arrays und aus diesem Grund können Sie ein IVector übergeben < Platform:: Array\<T >> als Rückgabewert oder Methodenparameter. Um ein verzweigtes Array oder eine Sequenz von Sequenzen an die ABI zu übergeben, verwenden Sie `IVector<IVector<T>^>`.  
+ Der Windows-Runtime-Typsystem unterstützt nicht das Konzept von verzweigten Arrays, und Sie können nicht aus diesem Grund übergeben Sie ein IVector < Platform:: Array\<T >> als Rückgabewert oder Methodenparameter. Um ein verzweigtes Array oder eine Sequenz von Sequenzen an die ABI zu übergeben, verwenden Sie `IVector<IVector<T>^>`.  
   
  Weitere Informationen zur Verwendung von Platform:: Array finden Sie unter [Array und WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
   
- Das Windows-Runtime-Typsystem unterstützt nicht das Konzept von verzweigten Arrays und aus diesem Grund können Sie ein IVector übergeben < Platform:: Array\<T >> als Rückgabewert oder Methodenparameter. Um ein verzweigtes Array oder eine Sequenz von Sequenzen an die ABI zu übergeben, verwenden Sie `IVector<IVector<T>^>`.  
+ Der Windows-Runtime-Typsystem unterstützt nicht das Konzept von verzweigten Arrays, und Sie können nicht aus diesem Grund übergeben Sie ein IVector < Platform:: Array\<T >> als Rückgabewert oder Methodenparameter. Um ein verzweigtes Array oder eine Sequenz von Sequenzen an die ABI zu übergeben, verwenden Sie `IVector<IVector<T>^>`.  
   
- Diese Klasse wird im Header "vccorlib.h" definiert, der automatisch vom Compiler eingeschlossen wird. Es ist in IntelliSense, aber nicht im Objektkatalog angezeigt, da es sich nicht um einen öffentlichen Typ, der in der Datei platform.winmd definiert ist.  
+ Diese Klasse wird im Header "vccorlib.h" definiert, der automatisch vom Compiler eingeschlossen wird. Es ist in IntelliSense, aber nicht im Objektkatalog angezeigt, da es sich nicht um ein öffentlicher, in platform.winmd definierter Typ ist.  
   
 ### <a name="requirements"></a>Anforderungen  
  Compileroption: **/ZW**  
@@ -121,5 +121,5 @@ property Array^ Value;
  Ein Handle für das aktuelle Array.  
 
 ## <a name="see-also"></a>Siehe auch  
- [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)   
+ [Platform-namespace](../cppcx/platform-namespace-c-cx.md)   
  [Array und WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

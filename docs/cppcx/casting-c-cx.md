@@ -1,36 +1,36 @@
 ---
-title: Umwandlung von Typen (C + c++ / CX) | Microsoft Docs
+title: Umwandlung (C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/19/2018
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66c0e6bc9d987c400c709e74586e6e37ccc0b715
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: ea0ac57b178baed76e6ccb7418c778c1ba2306f4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305994"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613301"
 ---
 # <a name="casting-ccx"></a>Umwandlung von Typen (C++/CX)
 
-Vier verschiedene Umwandlungsoperatoren von Windows-Runtime-Typen: [Static_cast Operator](../cpp/static-cast-operator.md), [Dynamic_cast Operator](../cpp/dynamic-cast-operator.md), **Safe_cast Operator**, und [ Reinterpret_cast-Operator](../cpp/reinterpret-cast-operator.md). **"safe_cast"** und **Static_cast** löst eine Ausnahme aus, wenn die Konvertierung nicht durchgeführt werden kann; [Static_cast Operator](../cpp/static-cast-operator.md) führt außerdem die typüberprüfung zur Kompilierzeit. **Dynamic_cast** gibt **Nullptr** Ausfall den Typ konvertieren. Obwohl **Reinterpret_cast** einen Wert ungleich Null, gibt er möglicherweise ungültig. Aus diesem Grund empfehlen wir die Verwendung nicht **Reinterpret_cast** , außer Sie wissen, dass die Umwandlung erfolgreich ist. Darüber hinaus wird empfohlen, keine C-stilartige Umwandlungen zu, in die C verwenden + c++ / CX code, da sie identisch sind **Reinterpret_cast**.
+Vier verschiedene Umwandlungsoperatoren von Windows-Runtime-Typen: [Static_cast-Operator](../cpp/static-cast-operator.md), [Dynamic_cast-Operator](../cpp/dynamic-cast-operator.md), **Safe_cast Operator**, und [ Reinterpret_cast-Operator](../cpp/reinterpret-cast-operator.md). **Safe_cast** und **"static_cast"** eine Ausnahme ausgelöst wird, wenn die Konvertierung kann nicht ausgeführt werden; [Static_cast-Operator](../cpp/static-cast-operator.md) führt auch die typüberprüfung zur Kompilierzeit. **Dynamic_cast** gibt **"nullptr"** bei einem Fehler, den Typ zu konvertieren. Obwohl **"reinterpret_cast"** gibt einen Wert ungleich Null, es ist möglicherweise ungültig. Aus diesem Grund wird empfohlen, dass Sie nicht verwenden, **"reinterpret_cast"** , wenn Sie wissen, dass die Umwandlung erfolgreich ist. Darüber hinaus wird empfohlen, dass Sie in Ihrem C + keine C-stilartige Umwandlungen verwenden c++ / CX zu code, da sie identisch sind **"reinterpret_cast"**.
 
 Der Compiler und die Laufzeit führen ebenfalls implizite Umwandlungen aus – beispielsweise bei Boxingvorgängen, wenn ein Werttyp oder ein integrierter Datentyp als Argumente an eine Methode mit dem Parametertyp `Object^`übergeben werden. Theoretisch sollte eine implizite Umwandlung zur Laufzeit nie Ausnahmen verursachen. Wenn der Compiler eine implizite Konvertierung nicht ausführen kann, löst dies einen Fehler zur Kompilierzeit aus.
 
-Windows-Runtime ist eine Abstraktion über COM, wodurch die HRESULT-Fehlercodes anstelle der Ausnahmen verwendet. Im Allgemeinen gibt [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) einen COM-Fehler auf niedriger Ebene bei E_NOINTERFACE an.
+Windows-Runtime ist eine Abstraktion über COM, das HRESULT-Fehlercodes anstelle der Ausnahmen verwendet. Im Allgemeinen gibt [Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md) einen COM-Fehler auf niedriger Ebene bei E_NOINTERFACE an.
 
 ## <a name="staticcast"></a>static_cast
 
-Ein **Static_cast** aktiviert ist, zum Zeitpunkt der Kompilierung zu bestimmen, ob zwischen den zwei Typen eine vererbungsbeziehung besteht. Die Umwandlung verursacht einen Compilerfehler, wenn die Typen nicht verknüpft sind.
+Ein **"static_cast"** aktiviert ist, zum Zeitpunkt der Kompilierung zu bestimmen, ob zwischen den beiden Typen eine vererbungsbeziehung besteht. Die Umwandlung verursacht einen Compilerfehler, wenn die Typen nicht verknüpft sind.
 
-Ein **Static_cast** auf einer Verweisklasse bewirkt auch, dass eine laufzeitüberprüfung ausgeführt werden. Ein **Static_cast** Klasse kann auf einer Verweisklasse kompilierzeitüberprüfung übergeben aber trotzdem noch fehlschlagen, zur Laufzeit; in diesem Fall eine `Platform::InvalidCastException` ausgelöst wird. Im Allgemeinen müssen Sie diese Ausnahmen nicht behandeln, da sie fast immer Programmierfehler angeben, die Sie in der Regel während der Entwicklung und der Testphase beheben können.
+Ein **"static_cast"** auf einer Verweisklasse bewirkt auch, dass eine laufzeitüberprüfung ausgeführt werden. Ein **"static_cast"** Klasse kann auf einer Verweisklasse kompilierzeitüberprüfung übergeben aber dennoch nicht zur Laufzeit; in diesem Fall eine `Platform::InvalidCastException` ausgelöst. Im Allgemeinen müssen Sie diese Ausnahmen nicht behandeln, da sie fast immer Programmierfehler angeben, die Sie in der Regel während der Entwicklung und der Testphase beheben können.
 
-Verwendung **Static_cast** , wenn der Code explizit eine Beziehung zwischen den beiden Typen deklariert, und Sie aus diesem Grund Sie sicher sind, dass die Umwandlung funktioniert.
+Verwendung **"static_cast"** Wenn der Code explizit eine Beziehung zwischen den beiden Typen deklariert, und Sie aus diesem Grund Sie sicher sind, dass die Umwandlung funktioniert.
 
 ```cpp
     interface class A{};
@@ -43,7 +43,7 @@ Verwendung **Static_cast** , wenn der Code explizit eine Beziehung zwischen den 
 
 ## <a name="safecast"></a>safe_cast
 
-Die **"safe_cast"** -Operator ist Teil von Windows-Runtime. Er führt eine Laufzeittypüberprüfung aus und löst `Platform::InvalidCastException` aus, wenn die Konvertierung fehlschlägt. Verwendung **"safe_cast"** Wenn ein Laufzeitfehler eine Ausnahmebedingung angibt. Der primäre Zweck von **"safe_cast"** helfen bei der Entwicklung und Testphase Phasen an der Stelle, wo sie auftreten. Sie müssen die Ausnahme nicht behandeln, da der Ausnahmefehler selbst den Fehlerpunkt identifiziert.
+Die **"safe_cast"** -Operator ist Teil von Windows-Runtime. Er führt eine Laufzeittypüberprüfung aus und löst `Platform::InvalidCastException` aus, wenn die Konvertierung fehlschlägt. Verwendung **"safe_cast"** Wenn ein Laufzeitfehler eine Ausnahmebedingung angibt. Der primäre Zweck von **"safe_cast"** wird zur Identifizierung von Programmierfehlern während der Entwicklung und Testphase bei der Suche, die zum Zeitpunkt ihres Auftretens. Sie müssen die Ausnahme nicht behandeln, da der Ausnahmefehler selbst den Fehlerpunkt identifiziert.
 
 Verwenden Sie safe_cast, wenn der Code nicht die Beziehung deklariert, aber Sie sicher sind, dass die Umwandlung funktioniert.
 
@@ -62,7 +62,7 @@ Verwenden Sie safe_cast, wenn der Code nicht die Beziehung deklariert, aber Sie 
 
 ## <a name="dynamiccast"></a>dynamic_cast
 
-Verwendung **Dynamic_cast** bei Umwandlung ein Objekts (genauer gesagt, ein Zirkumflexzeichen **^**) in einen stärker abgeleiteten Typ. Sie erwarten entweder, dass das Zielobjekt eventuell **Nullptr** oder dass die Umwandlung möglicherweise fehlschlägt, und Sie diese Bedingung in Form eines regulären Codepfads und nicht mit einer Ausnahme behandeln möchten. Z. B. in der **leere App (universelle Windows)** -Projektvorlage, die `OnLaunched` Methode bei Verwendungen temporärer Tabellen app.xamp.cpp **Dynamic_cast** zu prüfen, ob die app-Fenster über Inhalt verfügt. Es ist kein Fehler, wenn kein Inhalt vorhanden ist; es ist eine erwartete Bedingung. `Windows::Current::Content` ist ein `Windows::UI::XAML::UIElement` und die Konvertierung erfolgt in einen `Windows::UI.XAML::Controls::Frame`, der ein besser abgeleiteter Typ in der Vererbungshierarchie ist.
+Verwendung **Dynamic_cast** bei Umwandlung ein Objekts (genauer gesagt ein Caretzeichen **^**) in einen stärker abgeleiteten Typ erwarten entweder, dass das Ziel eventuell **"nullptr"** oder dass die Umwandlung möglicherweise fehlschlägt, und Sie diese Bedingung als einen regulären Codepfads und nicht mit einer Ausnahme behandeln möchten. Z. B. in der **leere App (Universelles Windows)** -Projektvorlage, die `OnLaunched` -Methode in der app.xamp.cpp verwendet **Dynamic_cast** zu prüfen, ob die app-Fenster über Inhalt verfügt. Es ist kein Fehler, wenn kein Inhalt vorhanden ist; es ist eine erwartete Bedingung. `Windows::Current::Content` ist ein `Windows::UI::XAML::UIElement` und die Konvertierung erfolgt in einen `Windows::UI.XAML::Controls::Frame`, der ein besser abgeleiteter Typ in der Vererbungshierarchie ist.
 
 ```cpp
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)
@@ -85,11 +85,11 @@ Eine weitere Verwendungsmöglichkeit der **Dynamic_cast** ist die Überprüfung 
 
 ## <a name="dynamiccast-and-tracking-references-"></a>dynamic_cast und Nachverfolgungsverweise (%)
 
-Sie können auch Anwenden einer **Dynamic_cast** auf einen Nachverfolgungsverweis, aber in diesem Fall verhält sich die Umwandlung wie **"safe_cast"**. Es wird ausgelöst, `Platform::InvalidCastException` bei einem Fehler, da ein Nachverfolgungsverweis Indexschlüsselwert kann nicht **Nullptr**.
+Sie können auch Anwenden einer **Dynamic_cast** zu einem Nachverfolgungsverweis, aber in diesem Fall verhält sich die Umwandlung wie **"safe_cast"**. Sie löst `Platform::InvalidCastException` bei einem Fehler, da ein Nachverfolgungsverweis Wert keinen **"nullptr"**.
 
 ## <a name="reinterpretcast"></a>reinterpret_cast
 
-Es wird empfohlen, nicht [reinterpret_cast](../cpp/reinterpret-cast-operator.md) zu verwenden, da weder eine Kompilierzeitüberprüfung noch eine Laufzeitüberprüfung ausgeführt wird. Im schlimmsten Fall einen **Reinterpret_cast** ermöglicht es Programmierfehler, wechseln zur Entwicklungszeit unerkannt bleiben und subtile oder katastrophale Fehler im Programmverhalten verursachen. Deshalb wird empfohlen, die Verwendung von **Reinterpret_cast** nur in den seltenen Fällen, wenn Sie eine Umwandlung zwischen nicht verknüpften Typen müssen und Sie wissen, dass die Umwandlung erfolgt. Ein Beispiel für eine seltene Verwendung ist ein Windows-Runtime-Typen in seinem zugrunde liegenden ABI-Typ konvertiert – dies bedeutet, dass Sie übernehmen die verweiszählung für das Objekt steuern. Hierzu wird empfohlen, den intelligenten [ComPtr Class](../cpp/com-ptr-t-class.md) -Zeiger verwenden. Andernfalls müssen Sie Release auf der Schnittstelle ausdrücklich aufrufen. Das folgende Beispiel veranschaulicht, wie eine Verweisklasse zu `IInspectable*`umgewandelt werden kann.
+Es wird empfohlen, nicht [reinterpret_cast](../cpp/reinterpret-cast-operator.md) zu verwenden, da weder eine Kompilierzeitüberprüfung noch eine Laufzeitüberprüfung ausgeführt wird. Im schlimmsten Fall eine **"reinterpret_cast"** Programmierfehler unentdeckt zum Zeitpunkt der Entwicklung und subtile oder katastrophale Fehler im Programmverhalten verursachen kann. Daher wird empfohlen, dass Sie verwenden **"reinterpret_cast"** nur in den seltenen Fällen müssen Sie eine Umwandlung zwischen nicht verknüpften Typen ein, und Sie wissen, dass die Umwandlung erfolgreich ist. Ein Beispiel für eine seltene Verwendung ist, um einen Windows-Runtime-Typ in seinem zugrunde liegenden ABI-Typ zu konvertieren — Dies bedeutet, dass Sie die Kontrolle über die verweiszählung für das Objekt vorliegen. Hierzu wird empfohlen, den intelligenten [ComPtr Class](../cpp/com-ptr-t-class.md) -Zeiger verwenden. Andernfalls müssen Sie Release auf der Schnittstelle ausdrücklich aufrufen. Das folgende Beispiel veranschaulicht, wie eine Verweisklasse zu `IInspectable*`umgewandelt werden kann.
 
 ```cpp
 #include <wrl.h>
@@ -99,7 +99,7 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 // ...
 ```
 
-Bei Verwendung von **Reinterpret_cast** zum Konvertieren von OneWindows Common Language Runtime-Schnittstelle in einen anderen wird das Objekt zweimal freigegeben. Verwenden Sie daher diese Umwandlung nur, wenn Sie nicht in eine[!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] -Schnittstelle konvertieren.
+Bei Verwendung von **"reinterpret_cast"** um von OneWindows-Runtime-Schnittstelle in eine andere zu konvertieren, wird das Objekt zweimal freigegeben werden. Nur verwenden Sie daher diese Umwandlung, wenn Sie in einer nicht - Visual C++-Erweiterungen Komponentenschnittstelle konvertieren.
 
 ## <a name="abi-types"></a>ABI-Typen
 
@@ -107,13 +107,13 @@ Bei Verwendung von **Reinterpret_cast** zum Konvertieren von OneWindows Common L
 
 - ABI-Typen befinden sich in einer speziellen Namespace-ABI – z. B. `ABI::Windows::Storage::Streams::IBuffer*`.
 
-- Konvertierungen zwischen einem Windows-Runtime--Schnittstellentyp und seinem entsprechenden ABI-Typ sind immer sicher – d. h. `IBuffer^` auf `ABI::IBuffer*`.
+- Konvertierungen zwischen einem Windows-Runtime-Schnittstelle und seinem entsprechenden ABI-Typ sind immer sicher – d. h. `IBuffer^` zu `ABI::IBuffer*`.
 
-- Eine Windows-Runtime-Laufzeitklasse sollte immer in konvertiert werden `IInspectable*` oder ihre Standardschnittstelle, falls bekannt ist.
+- Eine Windows-Runtime-Runtime-Klasse sollte immer in konvertiert werden `IInspectable*` oder ihre Standardschnittstelle, falls bekannt ist.
 
 - Nachdem Sie die Konvertierung in ABI-Typen durchgeführt haben, verfügen Sie über die Lebensdauer des Typs und müssen den COM-Regeln folgen. Wir empfehlen zum Vereinfachen der Lebensdauerverwaltung von ABI-Zeigern, `WRL::ComPtr` zu verwenden.
 
-Die folgende Tabelle enthält die Fälle, in denen es sicher ist **Reinterpret_cast**. In jedem Fall ist die Umwandlung in beide Richtungen sicher.
+Die folgende Tabelle enthält die Fälle, in dem gefahrlos verwenden **"reinterpret_cast"**. In jedem Fall ist die Umwandlung in beide Richtungen sicher.
 
 |||
 |-|-|
@@ -129,5 +129,5 @@ Die folgende Tabelle enthält die Fälle, in denen es sicher ist **Reinterpret_c
 ## <a name="see-also"></a>Siehe auch
 
 - [Typsystem](../cppcx/type-system-c-cx.md)
-- [Visual C++-Sprachreferenz](../cppcx/visual-c-language-reference-c-cx.md)
+- [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
 - [Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)

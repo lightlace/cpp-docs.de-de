@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden von Buildereignissen in MSBuild-Projekten | Microsoft Docs'
+title: 'Vorgehensweise: Verwenden von Buildereignissen in MSBuild-Projekten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2367c85dbd4a4ef7b10d927592c0fb10a417f0e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59863911072b491eb19a1296f3cb40d4f4ab4dce
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369772"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613055"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Gewusst wie: Verwenden von Buildereignissen in MSBuild-Projekten
-Ein Buildereignis ist ein Befehl, [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] führt zu einem bestimmten Zeitpunkt im Buildprozess. Die *Präbuild* Ereignis tritt auf, bevor der Build gestartet wird; die *Linkervorstufen* Ereignis tritt auf, vor dem Starten der Link Schritt; und die *Postbuild* Ereignis tritt auf, nach der Erstellung erfolgreich beendet wurde. Ein Buildereignis tritt nur dann, wenn der zugeordnete Buildschritt auftritt. Z. B. die Prälinkereignis nicht ausgeführt, wenn der Linkschritt nicht ausgeführt werden kann.  
+Ein Buildereignis ist ein Befehl, den MSBuild zu einem bestimmten Zeitpunkt im Buildprozess ausführt. Die *vor dem Erstellen* Ereignis tritt auf, bevor der Build gestartet wird; die *Prälinkereignis* Ereignis tritt auf, bevor Sie die Link-Schritt-beginnt; und die *Postbuild* Ereignis tritt auf, nach der Erstellung erfolgreich beendet wurde. Ein Buildereignis tritt nur auf, wenn der zugeordnete Buildschritt tritt ein, an. Z. B. das Prälinkereignis nicht ausgeführt, wenn der Linkschritt nicht ausgeführt werden kann.  
   
- Jede der drei Buildereignisse wird in einer Elementdefinitionsgruppe durch ein Command-Element dargestellt (`<Command>`), die ausgeführt wird und Message-Element (`<Message>`), angezeigt wird, wenn **MSBuild** führt das Buildereignis. Jedes Element ist optional, und wenn Sie das gleiche Element mehrfach angeben, wird das letzte Vorkommen hat Vorrang vor.  
+ Jede der drei Build-Ereignissen wird in eine Elementdefinitionsgruppe durch ein Befehlselement dargestellt (`<Command>`), die ausgeführt wird und ein Nachrichtenelement (`<Message>`), angezeigt wird, wenn **MSBuild** führt das Ereignis erstellt. Jedes Element ist optional, und wenn Sie das gleiche Element mehrmals angeben, wird das letzte Vorkommen hat Vorrang vor.  
   
- Ein optionales *Buildvorgang verwenden* Element (`<`* build-Ereignis ***UseInBuild**`>`) kann angegeben werden, in einer Eigenschaftsgruppe, um anzugeben, ob das Buildereignis ausgeführt wird. Der Wert des Inhalts einer *Buildvorgang verwenden* Element ist entweder `true` oder `false`. Standardmäßig wird ein Buildereignis ausgeführt, es sei denn, das entsprechende *Buildvorgang verwenden* -Elementgruppe ist `false`.  
+ Eine optionale *in Buildvorgang verwenden* Element (`<`* erstellen-Ereignis ***UseInBuild**`>`) kann angegeben werden, in eine Eigenschaftengruppe, um anzugeben, ob das Ereignis erstellt, ausgeführt wird. Der Wert des Inhalts einer *in Buildvorgang verwenden* Element ist entweder `true` oder `false`. Standardmäßig wird ein Buildereignis ausgeführt, es sei denn, der entsprechenden *in Buildvorgang verwenden* Element nastaven NA hodnotu `false`.  
   
  Die folgende Tabelle enthält die XML-Element für jeden Build:  
   
@@ -38,16 +38,16 @@ Ein Buildereignis ist ein Befehl, [!INCLUDE[vstecmsbuild](../build/includes/vste
 |`PreLinkEvent`|Dieses Ereignis ausgeführt wird, bevor der Linkschritt beginnt.|  
 |`PostBuildEvent`|Dieses Ereignis wird ausgeführt, nachdem der Build abgeschlossen ist.|  
   
- Die folgende Tabelle enthält alle *Buildvorgang verwenden* Element:  
+ Die folgende Tabelle führt jede *in Buildvorgang verwenden* Element:  
   
 |XML-Element|Beschreibung|  
 |-----------------|-----------------|  
-|`PreBuildEventUseInBuild`|Gibt an, ob zum Ausführen der *Präbuild* Ereignis.|  
-|`PreLinkEventUseInBuild`|Gibt an, ob zum Ausführen der *Linkervorstufen* Ereignis.|  
+|`PreBuildEventUseInBuild`|Gibt an, ob zum Ausführen der *Präbuildereignis* Ereignis.|  
+|`PreLinkEventUseInBuild`|Gibt an, ob zum Ausführen der *Prälinkereignis* Ereignis.|  
 |`PostBuildEventUseInBuild`|Gibt an, ob zum Ausführen der *Postbuild* Ereignis.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel hinzugefügt werden kann, innerhalb des Project-Elements der Datei "MyProject.vcxproj" im erstellten [Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines Visual C++-Projekts](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Ein *Präbuild* Ereignis macht eine Kopie von "Main.cpp". es kann ein *Linkervorstufen* Ereignis macht eine Kopie des main.obj; und ein *Postbuild* Ereignis erstellt eine Kopie des myproject.exe. Wenn das Projekt mit einer Releasekonfiguration erstellt wird, werden die Buildereignisse ausgeführt. Wenn das Projekt mit einer Debugkonfiguration erstellt wird, werden die Buildereignisse nicht ausgeführt.  
+ Im folgende Beispiel hinzugefügt werden kann, innerhalb des Project-Elements der Datei "MyProject.vcxproj" im erstellten [Exemplarische Vorgehensweise: Verwenden von MSBuild zum Erstellen eines Visual C++-Projekts](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Ein *vor dem Erstellen* Ereignis ist eine Kopie von "Main.cpp"; eine *Prälinkereignis* Ereignis ist eine Kopie des main.obj; und ein *nach der Erstellung* Ereignis erstellt eine Kopie des myproject.exe. Wenn das Projekt mit einer Releasekonfiguration erstellt wird, werden die Buildereignisse ausgeführt. Wenn das Projekt erstellt wird, eine Debugkonfiguration verwenden, werden die Buildereignisse nicht ausgeführt.  
   
 ```  
 <ItemDefinitionGroup>  

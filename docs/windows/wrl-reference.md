@@ -1,5 +1,5 @@
 ---
-title: WRL-Referenz | Microsoft Docs
+title: WRL-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,32 +13,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98a1a1a1ed78d423173c83c1892aced77e9f84e3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5fcd354194a5fe1b28fec774b8ee26550dacf778
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33890943"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610903"
 ---
 # <a name="wrl-reference"></a>WRL-Referenz
-Dieser Abschnitt enthält Referenzinformationen für Windows Runtime C++ Template Library (WRL).  
+Dieser Abschnitt enthält Referenzinformationen für die Windows Runtime C++ Template Library (WRL).
   
 > [!NOTE]
->  Der Windows Runtime C++ Template Library definiert die Funktionalität, die unterstützt der C++-Vorlagenbibliothek für Windows-Runtime-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden. Diese Funktion wird in dieser Dokumentation aufgeführt.  
+> Die Windows Runtime C++ Template Library definiert Funktionen, die die C++-Vorlagenbibliothek für Windows-Runtime-Infrastruktur unterstützt und nicht direkt aus Ihrem Code verwendet werden soll. Diese Funktionalität wird in dieser Dokumentation aufgeführt.
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
+## <a name="in-this-section"></a>In diesem Abschnitt
  [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)  
- Definiert die grundlegenden Typen, aus denen die Windows Runtime C++ Template Library besteht.  
+ Definiert die grundlegenden Typen, aus denen die Windows Runtime C++ Template Library besteht.
   
  [Microsoft::WRL::Wrappers-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)  
- Definiert die Wrappertypen von Resource Acquisition ist Initialisierung (RAII)-, die die Verwaltung der Lebensdauer von Objekten, Zeichenfolgen und Handles zu vereinfachen.  
+ Definiert die Resource Acquisition ist Initialisierung (RAII) Wrappertypen, die die Verwaltung der Lebensdauer von Objekten, Zeichenfolgen und Handles zu vereinfachen.
   
  [Microsoft::WRL::Wrappers::HandleTraits-Namespace](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)  
- Beschreibt die Merkmale von allgemeinen Handle basierende Ressourcentypen zur Verfügung.  
+ Beschreibt die Eigenschaften der verwendeten Ressourcentypen von Handles basierende.
   
  [Windows::Foundation-Namespace](../windows/windows-foundation-namespace.md)  
- Aktiviert grundlegende Windows-Runtime-Funktionen, wie das Objekt und Factory erstellen.  
+ Aktiviert grundlegende Windows-Runtime-Funktionen, z. B. Objekt und Factory-Erstellung.
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte
  [C++-Vorlagenbibliothek für Windows-Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)  
- Führt ein Windows Runtime C++ Template Library, eine COM-basierten Vorlagenbibliothek, die eine Low-Level Methode zum Erstellen und Verwenden von Windows-Runtime-Komponenten bereitstellt.
+ Führt Windows Runtime C++ Template Library, eine COM-basierten Vorlagenbibliothek, die eine niederschwelligen Zugang zur Erstellung und Verwendung von Windows-Runtime-Komponenten bereitstellt.

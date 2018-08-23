@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::BackInsertIterator Klasse | Microsoft Docs
+title: Platform::Collections::BackInsertIterator-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0be32b550cd0e19facb127ca6a052b03ef1eaf5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2c0678dbb78aaa115c0c4f3120a8bc0d74bf1c65
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090017"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612623"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator-Klasse
 Stellt einen Iterator dar, der Elemente am Ende einer sequenziellen Auflistung einfügt, anstatt sie zu überschreiben.  
@@ -78,7 +78,7 @@ explicit BackInsertIterator(
   
 #### <a name="parameters"></a>Parameter  
  `v`  
- Ein IVector\<T >-Objekt.  
+ Ein IVector\<T > Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
  Ein `BackInsertIterator` fügt Elemente nach dem letzten Element des Objekts ein, das vom Parameter `v` angegeben wird.  
@@ -136,4 +136,4 @@ BackInsertIterator operator++(int);
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Platform-Namespace](platform-namespace-c-cx.md)
+ [Plattform-Namespace](platform-namespace-c-cx.md)

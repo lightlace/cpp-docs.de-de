@@ -18,36 +18,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab47494f18bfca8a94e6fc4697cf354eb71c5321
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 1bb0c91473e0e3a565bf2a1a7273a35eb3ea5916
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014086"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42607025"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another"></a>Verschieben von Zeichenfolgen zwischen Ressourcendateien
-### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Eine Zeichenfolge aus einer Ressource-Skriptdatei auf einen anderen zu verschieben.  
-  
-1.  Öffnen Sie die Zeichenfolgentabellen in beide RC-Dateien ein. (Weitere Informationen finden Sie unter [Anzeigen von Ressourcen eine Ressource außerhalb eines Projekts](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).)  
-  
-    > [!NOTE]
-    >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Mit der rechten Maustaste in der Zeichenfolge, die Sie verschieben möchten und wählen Sie **Ausschneiden** aus dem Kontextmenü.  
-  
-3.  Platzieren Sie den Cursor in der Ziel- **Zeichenfolgen-Editor** Fenster.  
-  
-4.  In der RC-Datei in das Sie verschieben, die Zeichenfolge möchten, mit der Maustaste, und wählen Sie **einfügen** aus dem Kontextmenü.  
-  
-    > [!NOTE]
-    >  Wenn die **ID** oder **Wert** der verschobenen Zeichenfolge Konflikte mit vorhandenen **ID** oder **Wert** in der Zieldatei, entweder die **ID** oder **Wert** der verschobenen Zeichenfolge ändert. Wenn eine Zeichenfolge mit dem gleichen vorhanden ist **ID**, **ID** der verschobenen Zeichenfolge ändert. Wenn eine Zeichenfolge mit dem gleichen vorhanden ist **Wert**, **Wert** der verschobenen Zeichenfolge ändert.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Exemplarische Vorgehensweise: Verwenden von Ressourcen für die Lokalisierung mit ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zeichenfolgen-Editor](../windows/string-editor.md)   
- [Ressourcendateien](../windows/resource-files-visual-studio.md)   
- [Anpassen von Fensterlayouts](/visualstudio/ide/customizing-window-layouts-in-visual-studio)   
+
+### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Eine Zeichenfolge aus einer Ressource-Skriptdatei auf einen anderen zu verschieben.
+
+1. Öffnen Sie die Zeichenfolgentabellen in beide RC-Dateien ein. (Weitere Informationen finden Sie unter [Anzeigen von Ressourcen eine Ressource außerhalb eines Projekts](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).)
+
+   > [!NOTE]
+   > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
+
+2. Mit der rechten Maustaste in der Zeichenfolge, die Sie verschieben möchten und wählen Sie **Ausschneiden** aus dem Kontextmenü.
+
+3. Platzieren Sie den Cursor in der Ziel- **Zeichenfolgen-Editor** Fenster.
+
+4. In der RC-Datei in das Sie verschieben, die Zeichenfolge möchten, mit der Maustaste, und wählen Sie **einfügen** aus dem Kontextmenü.
+
+   > [!NOTE]
+   > Wenn die **ID** oder **Wert** der verschobenen Zeichenfolge Konflikte mit vorhandenen **ID** oder **Wert** in der Zieldatei, entweder die **ID** oder **Wert** der verschobenen Zeichenfolge ändert. Wenn eine Zeichenfolge mit dem gleichen vorhanden ist **ID**, **ID** der verschobenen Zeichenfolge ändert. Wenn eine Zeichenfolge mit dem gleichen vorhanden ist **Wert**, **Wert** der verschobenen Zeichenfolge ändert.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten (diejenigen, die die common Language Runtime), finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](http://msdn.microsoft.com/9a96220d-a19b-4de0-9f48-01e5d82679e5) und [Exemplarische Vorgehensweise: Verwenden von Ressourcen für die Lokalisierung mit ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Zeichenfolgen-Editor](../windows/string-editor.md)  
+[Ressourcendateien](../windows/resource-files-visual-studio.md)  
+[Anpassen von Fensterlayouts](/visualstudio/ide/customizing-window-layouts-in-visual-studio)  

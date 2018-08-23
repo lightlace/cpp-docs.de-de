@@ -26,33 +26,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2aacfcda168b3abdb5d46826a0351f85a4b3d48
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5eb9b7da8b09fbac1e462394c6ae087b61814ede
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39645395"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598774"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Anpassen oder Ändern von Farben (Bildbearbeitung für Symbole)
-Die **Image** Anmerkung der Redaktion [Farben (Palette)](../windows/colors-window-image-editor-for-icons.md) werden anfänglich 16 Standardfarben angezeigt. Neben den bereits angezeigten Farben können Sie eigene benutzerdefinierten Farben erstellen. Sie können dann [speichern und Laden Sie eine benutzerdefinierte Farbpalette](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
-  
-### <a name="to-change-colors-on-the-colors-palette"></a>So ändern Sie die Farben in der Farbpalette  
-  
-1.  Von der **Image** Menü wählen **Farben anpassen**.  
-  
-2.  In der [benutzerdefinierte Farbauswahl (Dialogfeld)](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), definieren Sie die Farbe, indem Sie RGB- oder HSL-Werte in die entsprechenden Textfelder eingeben, oder wählen Sie eine Farbe in der **Farbverlauf Farbanzeige** Feld.  
-  
-3.  Legen Sie die Helligkeit durch Verschieben des Schiebereglers auf der **Helligkeit** Leiste.  
-  
-4.  Viele benutzerdefinierte Farben werden gedithert. Wenn Sie der Volltonfarbe entspricht, die der Ditheringfarbe Farbe am nächsten möchten, doppelklicken Sie auf die **Farbe** Feld.  
-  
-     Wenn Sie später die geditherte Farbe angezeigt werden sollen, verschieben Sie den Schieberegler auf die **Helligkeit** Balken- oder verschieben Sie das Fadenkreuz, in der **Farbverlauf Farbanzeige** Feld erneut aus, um das dithering wiederherzustellen.  
-  
-5.  Klicken Sie auf **OK** auf die neue Farbe hinzuzufügen.  
-  
-## <a name="requirements"></a>Anforderungen  
- Keiner  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)
+
+Die **Image** Anmerkung der Redaktion [Farben (Palette)](../windows/colors-window-image-editor-for-icons.md) werden anfänglich 16 Standardfarben angezeigt. Neben den bereits angezeigten Farben können Sie eigene benutzerdefinierten Farben erstellen. Sie können dann [speichern und Laden Sie eine benutzerdefinierte Farbpalette](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).
+
+### <a name="to-change-colors-on-the-colors-palette"></a>So ändern Sie die Farben in der Farbpalette
+
+1. Von der **Image** Menü wählen **Farben anpassen**.
+
+2. In der [benutzerdefinierte Farbauswahl (Dialogfeld)](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), definieren Sie die Farbe, indem Sie RGB- oder HSL-Werte in die entsprechenden Textfelder eingeben, oder wählen Sie eine Farbe in der **Farbverlauf Farbanzeige** Feld.
+
+3. Legen Sie die Helligkeit durch Verschieben des Schiebereglers auf der **Helligkeit** Leiste.
+
+4. Viele benutzerdefinierte Farben werden gedithert. Wenn Sie der Volltonfarbe entspricht, die der Ditheringfarbe Farbe am nächsten möchten, doppelklicken Sie auf die **Farbe** Feld.
+
+   Wenn Sie später die geditherte Farbe angezeigt werden sollen, verschieben Sie den Schieberegler auf die **Helligkeit** Balken- oder verschieben Sie das Fadenkreuz, in der **Farbverlauf Farbanzeige** Feld erneut aus, um das dithering wiederherzustellen.
+
+5. Klicken Sie auf **OK** auf die neue Farbe hinzuzufügen.
+
+## <a name="requirements"></a>Anforderungen
+
+Keiner
+
+## <a name="see-also"></a>Siehe auch
+
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Arbeiten mit Farben](../windows/working-with-color-image-editor-for-icons.md)

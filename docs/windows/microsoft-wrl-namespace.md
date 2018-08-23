@@ -24,79 +24,82 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3b1f5d0472fbe9ceb997460b525153a9ad87a69
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5ffea6dede3bc6bcc7c28b2326299362e78ed2b9
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020251"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599300"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL-Namespace
-Definiert die grundlegenden Typen, aus denen die Windows Runtime C++ Template Library besteht.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-namespace Microsoft::WRL;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="typedefs"></a>Typedefs  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|`InhibitWeakReferencePolicy`|`RuntimeClassFlags<WinRt &#124; InhibitWeakReference>`|  
-  
-### <a name="classes"></a>Klassen  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[ActivationFactory-Klasse](../windows/activationfactory-class.md)|Ermöglicht, dass eine oder mehrere Klassen durch die Windows-Runtime aktiviert werden.|  
-|[AsyncBase-Klasse](../windows/asyncbase-class.md)|Implementiert den asynchronen Zustandsautomat der Windows-Runtime.|  
-|[ClassFactory-Klasse](../windows/classfactory-class.md)|Implementiert die grundlegende Funktion der `IClassFactory`-Schnittstelle.|  
-|[ComPtr-Klasse](../windows/comptr-class.md)|Erstellt einen *intelligenten Zeigertyp* , der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. ComPtr verwaltet automatisch einen Verweiszähler für den zugrunde liegenden Schnittstellenzeiger und gibt die Schnittstelle frei, wenn der Verweiszähler auf 0 geht.|  
-|[DeferrableEventArgs-Klasse](../windows/deferrableeventargs-class.md)|Eine für die Ereignisargumenttypen für Verzögerungen verwendete Vorlagenklasse.|  
-|[EventSource-Klasse](../windows/eventsource-class.md)|Stellt ein Ereignis dar. `EventSource`-Memberfunktionen fügen Ereignishandler hinzu, entfernen sie und rufen sie auf.|  
-|[FtmBase-Klasse](../windows/ftmbase-class.md)|Stellt ein Freethread-Marshaller-Objekt dar.|  
-|[Module-Klasse](../windows/module-class.md)|Stellt eine Auflistung von zugehörigen Objekten dar.|  
-|[RuntimeClass-Klasse](../windows/runtimeclass-class.md)|Stellt eine instanziierte Klasse dar, die die angegebene Anzahl von Schnittstellen erbt, und gewährt Unterstützung für die angegebene Windows-Runtime, klassisches COM und schwache Verweise.|  
-|[SimpleActivationFactory-Klasse](../windows/simpleactivationfactory-class.md)|Stellt einen grundlegenden Mechanismus für das Erstellen einer Windows-Runtime oder einer klassischen COM-Basisklasse bereit.|  
-|[SimpleClassFactory-Klasse](../windows/simpleclassfactory-class.md)|Stellt einen grundlegenden Mechanismus zum Erstellen einer Basisklasse bereit.|  
-|[WeakRef-Klasse](../windows/weakref-class.md)|Stellt einen *schwachen Verweis* dar, der nur durch die Windows-Runtime und nicht durch die klassische COM verwendet werden kann. Ein schwacher Verweis repräsentiert ein Objekt, auf das möglicherweise zugegriffen werden kann.|  
-  
-### <a name="structures"></a>Strukturen  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[ChainInterfaces-Struktur](../windows/chaininterfaces-structure.md)|Gibt Überprüfungs- und Initialisierungsfunktionen an, die auf einen Satz von Schnittstellen-IDs angewendet werden können.|  
-|[CloakedIid-Struktur](../windows/cloakediid-structure.md)|Gibt an, um die `RuntimeClass`, `Implements` und `ChainInterfaces` Vorlagen, dass die angegebene Schnittstelle nicht zugegriffen werden kann, in der IID-Liste ist.|  
-|[Implements-Struktur](../windows/implements-structure.md)|Implementiert `QueryInterface` und `GetIid` für die angegebene Schnittstelle.|  
-|[MixIn-Struktur](../windows/mixin-structure.md)|Stellt sicher, dass eine Runtime-Klasse aus Windows-Runtime-Schnittstellen (sofern vorhanden) und dann aus klassischen COM-Schnittstellen abgeleitet wird.|  
-|[RuntimeClassFlags-Struktur](../windows/runtimeclassflags-structure.md)|Enthält den Typ für eine Instanz von einem [RuntimeClass](../windows/runtimeclass-class.md).|  
-  
-### <a name="enumerations"></a>Enumerationen  
-  
-|name|Beschreibung|  
-|----------|-----------------|  
-|[AsyncResultType-Enumeration](../windows/asyncresulttype-enumeration.md)|Gibt den Typ der zurückgegebenen Ergebnisse der `GetResults()` Methode.|  
-|[ModuleType-Enumeration](../windows/moduletype-enumeration.md)|Gibt an, ob ein Modul einen In-Process-Server oder einen Out-of-Process-Server unterstützen sollte. |  
-|[RuntimeClassType-Enumeration](../windows/runtimeclasstype-enumeration.md)|Gibt den Typ der [RuntimeClass](../windows/runtimeclass-class.md) -Instanz, die unterstützt wird.|  
-  
-### <a name="functions"></a>Funktionen  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[AsWeak-Funktion](../windows/asweak-function.md)|Ruft einen schwachen Verweis zur angegebenen Instanz ab.|  
-|[Callback-Funktion](../windows/callback-function-windows-runtime-cpp-template-library.md)|Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.|  
-|[CreateActivationFactory-Funktion](../windows/createactivationfactory-function.md)|Erstellt eine Instanzen der angegebenen Klasse erstellende Factory, die durch die Windows-Runtime aktiviert werden kann.|  
-|[CreateClassFactory-Funktion](../windows/createclassfactory-function.md)|Erstellt eine Factory, die Instanzen der angegebenen Klasse erstellt.|  
-|[Make-Funktion](../windows/make-function.md)|Initialisiert die angegebene Windows-Runtime-Klasse.|  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** async.h client.h corewrappers.h event.h ftm.h implements.h internal.h, module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL::Wrappers-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)
+
+Definiert die grundlegenden Typen, aus denen die Windows Runtime C++ Template Library besteht.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+namespace Microsoft::WRL;
+```
+
+## <a name="members"></a>Member
+
+### <a name="typedefs"></a>Typedefs
+
+|Name|Beschreibung|
+|----------|-----------------|
+|`InhibitWeakReferencePolicy`|`RuntimeClassFlags<WinRt &#124; InhibitWeakReference>`|
+
+### <a name="classes"></a>Klassen
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[ActivationFactory-Klasse](../windows/activationfactory-class.md)|Ermöglicht, dass eine oder mehrere Klassen durch die Windows-Runtime aktiviert werden.|
+|[AsyncBase-Klasse](../windows/asyncbase-class.md)|Implementiert den asynchronen Zustandsautomat der Windows-Runtime.|
+|[ClassFactory-Klasse](../windows/classfactory-class.md)|Implementiert die grundlegende Funktion der `IClassFactory`-Schnittstelle.|
+|[ComPtr-Klasse](../windows/comptr-class.md)|Erstellt einen *intelligenten Zeigertyp* , der die Schnittstelle darstellt, die vom Vorlagenparameter angegeben wird. ComPtr verwaltet automatisch einen Verweiszähler für den zugrunde liegenden Schnittstellenzeiger und gibt die Schnittstelle frei, wenn der Verweiszähler auf 0 geht.|
+|[DeferrableEventArgs-Klasse](../windows/deferrableeventargs-class.md)|Eine für die Ereignisargumenttypen für Verzögerungen verwendete Vorlagenklasse.|
+|[EventSource-Klasse](../windows/eventsource-class.md)|Stellt ein Ereignis dar. `EventSource`-Memberfunktionen fügen Ereignishandler hinzu, entfernen sie und rufen sie auf.|
+|[FtmBase-Klasse](../windows/ftmbase-class.md)|Stellt ein Freethread-Marshaller-Objekt dar.|
+|[Module-Klasse](../windows/module-class.md)|Stellt eine Auflistung von zugehörigen Objekten dar.|
+|[RuntimeClass-Klasse](../windows/runtimeclass-class.md)|Stellt eine instanziierte Klasse dar, die die angegebene Anzahl von Schnittstellen erbt, und gewährt Unterstützung für die angegebene Windows-Runtime, klassisches COM und schwache Verweise.|
+|[SimpleActivationFactory-Klasse](../windows/simpleactivationfactory-class.md)|Stellt einen grundlegenden Mechanismus für das Erstellen einer Windows-Runtime oder einer klassischen COM-Basisklasse bereit.|
+|[SimpleClassFactory-Klasse](../windows/simpleclassfactory-class.md)|Stellt einen grundlegenden Mechanismus zum Erstellen einer Basisklasse bereit.|
+|[WeakRef-Klasse](../windows/weakref-class.md)|Stellt einen *schwachen Verweis* dar, der nur durch die Windows-Runtime und nicht durch die klassische COM verwendet werden kann. Ein schwacher Verweis repräsentiert ein Objekt, auf das möglicherweise zugegriffen werden kann.|
+
+### <a name="structures"></a>Strukturen
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[ChainInterfaces-Struktur](../windows/chaininterfaces-structure.md)|Gibt Überprüfungs- und Initialisierungsfunktionen an, die auf einen Satz von Schnittstellen-IDs angewendet werden können.|
+|[CloakedIid-Struktur](../windows/cloakediid-structure.md)|Gibt an, um die `RuntimeClass`, `Implements` und `ChainInterfaces` Vorlagen, dass die angegebene Schnittstelle nicht zugegriffen werden kann, in der IID-Liste ist.|
+|[Implements-Struktur](../windows/implements-structure.md)|Implementiert `QueryInterface` und `GetIid` für die angegebene Schnittstelle.|
+|[MixIn-Struktur](../windows/mixin-structure.md)|Stellt sicher, dass eine Runtime-Klasse aus Windows-Runtime-Schnittstellen (sofern vorhanden) und dann aus klassischen COM-Schnittstellen abgeleitet wird.|
+|[RuntimeClassFlags-Struktur](../windows/runtimeclassflags-structure.md)|Enthält den Typ für eine Instanz von einem [RuntimeClass](../windows/runtimeclass-class.md).|
+
+### <a name="enumerations"></a>Enumerationen
+
+|name|Beschreibung|
+|----------|-----------------|
+|[AsyncResultType-Enumeration](../windows/asyncresulttype-enumeration.md)|Gibt den Typ der zurückgegebenen Ergebnisse der `GetResults()` Methode.|
+|[ModuleType-Enumeration](../windows/moduletype-enumeration.md)|Gibt an, ob ein Modul einen In-Process-Server oder einen Out-of-Process-Server unterstützen sollte. |
+|[RuntimeClassType-Enumeration](../windows/runtimeclasstype-enumeration.md)|Gibt den Typ der [RuntimeClass](../windows/runtimeclass-class.md) -Instanz, die unterstützt wird.|
+
+### <a name="functions"></a>Funktionen
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[AsWeak-Funktion](../windows/asweak-function.md)|Ruft einen schwachen Verweis zur angegebenen Instanz ab.|
+|[Callback-Funktion](../windows/callback-function-windows-runtime-cpp-template-library.md)|Erstellt ein Objekt, dessen Memberfunktion eine Rückrufmethode ist.|
+|[CreateActivationFactory-Funktion](../windows/createactivationfactory-function.md)|Erstellt eine Instanzen der angegebenen Klasse erstellende Factory, die durch die Windows-Runtime aktiviert werden kann.|
+|[CreateClassFactory-Funktion](../windows/createclassfactory-function.md)|Erstellt eine Factory, die Instanzen der angegebenen Klasse erstellt.|
+|[Make-Funktion](../windows/make-function.md)|Initialisiert die angegebene Windows-Runtime-Klasse.|
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** async.h client.h corewrappers.h event.h ftm.h implements.h internal.h, module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL::Wrappers-Namespace](../windows/microsoft-wrl-wrappers-namespace.md)

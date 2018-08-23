@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a54cab831d3e3180a28f892fcf37c7351c22bc33
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c2cef491aac3350c1692c2f87236f3cbf01dd9b0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014961"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612077"
 ---
 # <a name="synclockwithstatustgetstatus-method"></a>SyncLockWithStatusT::GetStatus-Methode
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-DWORD GetStatus() const;  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Das Ergebnis eines Vorgangs warten auf das Objekt, das basierend auf den **SyncLockWithStatusT** Klasse, z. B. eine [Mutex](../windows/mutex-class1.md) oder [Semaphor](../windows/semaphore-class.md). 0 (null) gibt an, dass es sich bei der "Wait"-Vorgang auf den signalisierten Zustand zurückgegeben; Andernfalls ist einen anderen Status aufgetreten, z. B. Timeoutwert verstrichen.  
-  
-## <a name="remarks"></a>Hinweise  
- Ruft den Wartestatus "des aktuellen **SyncLockWithStatusT** Objekt.  
-  
- Die GetStatus()-Funktion ruft den Wert des zugrunde liegenden [Status_](../windows/synclockwithstatust-status-data-member.md) -Datenmember. Bei der ein Objekt auf Grundlage der **SyncLockWithStatusT** Klasse führt einen Vorgang, der das Objekt zuerst wartet darauf, dass das Objekt verfügbar sind. Das Ergebnis des Wartevorgangs befindet sich in der `status_` -Datenmember. Mögliche Werte für die `status_` Datenmember sind die Rückgabewerte des Wartevorgangs. Weitere Informationen finden Sie auf die Rückgabewerte von der `WaitForSingleObjectEx()` -Funktion in der MSDN Library.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [SyncLockWithStatusT-Klasse](../windows/synclockwithstatust-class.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+DWORD GetStatus() const;
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Das Ergebnis eines Vorgangs warten auf das Objekt, das basierend auf den **SyncLockWithStatusT** Klasse, z. B. eine [Mutex](../windows/mutex-class1.md) oder [Semaphor](../windows/semaphore-class.md). 0 (null) gibt an, dass es sich bei der "Wait"-Vorgang auf den signalisierten Zustand zurückgegeben; Andernfalls ist einen anderen Status aufgetreten, z. B. Timeoutwert verstrichen.
+
+## <a name="remarks"></a>Hinweise
+
+Ruft den Wartestatus "des aktuellen **SyncLockWithStatusT** Objekt.
+
+Die GetStatus()-Funktion ruft den Wert des zugrunde liegenden [Status_](../windows/synclockwithstatust-status-data-member.md) -Datenmember. Bei der ein Objekt auf Grundlage der **SyncLockWithStatusT** Klasse führt einen Vorgang, der das Objekt zuerst wartet darauf, dass das Objekt verfügbar sind. Das Ergebnis des Wartevorgangs befindet sich in der `status_` -Datenmember. Mögliche Werte für die `status_` Datenmember sind die Rückgabewerte des Wartevorgangs. Weitere Informationen finden Sie auf die Rückgabewerte von der `WaitForSingleObjectEx()` -Funktion in der MSDN Library.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[SyncLockWithStatusT-Klasse](../windows/synclockwithstatust-class.md)

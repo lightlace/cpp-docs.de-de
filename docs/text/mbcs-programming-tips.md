@@ -1,5 +1,5 @@
 ---
-title: Tipps für die MBCS-Programmierung | Microsoft Docs
+title: Tipps für die MBCS-Programmierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - multibyte characters [C++]
 ms.assetid: d8ad36b8-917f-474e-8adb-69462adecd17
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eb6e298961580c959235a97f37793df41d1124f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5beaab3fe1642b3988e9d0dcbf258eab02e26b7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855278"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610308"
 ---
 # <a name="mbcs-programming-tips"></a>Tipps für die MBCS-Programmierung
 Verwenden Sie bei Neuentwicklungen für alle Zeichenfolgen, die die Endbenutzer möglicherweise sehen können, die Unicode-Zeichencodierung. MBCS ist eine Legacytechnologie, die durch Unicode ersetzt wurde. Dieser Abschnitt enthält Tipps für Entwickler, die vorhandene Programme verwalten müssen, die MBCS verwenden und für die eine Konvertierung in Unicode nicht sinnvoll ist. Die Hinweise beziehen sich sowohl auf MFC-Anwendungen als auch auf Anwendungen, die ohne MFC geschrieben werden. Folgende Themen werden behandelt:  

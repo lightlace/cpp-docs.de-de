@@ -1,5 +1,5 @@
 ---
-title: Platform::Metadata::FlagsAttribute-Attribut | Microsoft Docs
+title: Platform::Metadata::FlagsAttribute-Attribut | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata::FlagsAttribute Attribute
 ms.assetid: 56f4a191-cc81-4742-aff8-bd2219c0735c
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b86c7502ce62f81d84a5ea43ecdd56186cfd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a318b9608fdf57291444e7b6331e2c2c36f118b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087577"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609913"
 ---
 # <a name="platformmetadataflagsattribute-attribute"></a>Platform::Metadata::FlagsAttribute-Attribut
 Gibt an, dass eine Enumeration als Bitfeld, d. h. als Gruppe von Flags, behandelt werden kann.  
@@ -40,9 +40,9 @@ public ref class Flags abstract : Attribute
 ### <a name="remarks"></a>Hinweise  
   
 ### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
+ **Unterstützter Client (Min.):** Windows 8  
   
- **Unterstützter Server:** Windows Server 2012  
+ **Unterstützter Server (Min.):** Windows Server 2012  
   
  **Namespace:** Platform::Metadata  
   

@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5729bfdf46504ab798966bdf8051ab3a3f7cbca0
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c65f47e77b7109ab1f6abfdd22b02bc34c31ef48
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011532"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600268"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase-Struktur
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-struct ImplementsBase;  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Zum Überprüfen der Vorlage Parametertypen in verwendet [Implements-Struktur](../windows/implements-structure.md).  
-  
- Die **ImplementsBase** Struktur ist standardmäßig leer.  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `ImplementsBase`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+struct ImplementsBase;
+```
+
+## <a name="remarks"></a>Hinweise
+
+Zum Überprüfen der Vorlage Parametertypen in verwendet [Implements-Struktur](../windows/implements-structure.md).
+
+Die **ImplementsBase** Struktur ist standardmäßig leer.
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`ImplementsBase`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

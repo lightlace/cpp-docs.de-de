@@ -1,5 +1,5 @@
 ---
-title: -Clr (Common Language Runtime-Kompilierung) | Microsoft Docs
+title: -Clr (Common Language Runtime-Kompilierung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1284d0300fcea3adc5f2884a7d1eff7862ff2b65
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b7ec520d27d52bb3e50a58780d822363016ef76
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379613"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606862"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime-Kompilierung)
 Ermöglicht Anwendungen und Komponenten, Funktionen aus der Common Language Runtime (CLR) zu verwenden.  
@@ -48,15 +48,15 @@ Ermöglicht Anwendungen und Komponenten, Funktionen aus der Common Language Runt
   
  Weitere Informationen finden Sie unter  
   
- [Gemischte (systemeigene und verwaltete) Assemblys](../../dotnet/mixed-native-and-managed-assemblies.md) und  
+ [Gemischte (Native und verwaltete) Assemblys](../../dotnet/mixed-native-and-managed-assemblies.md) und  
   
- [How to: Migrate to /clr](../../dotnet/how-to-migrate-to-clr.md).  
+ [Gewusst wie: Migrieren auf/CLR](../../dotnet/how-to-migrate-to-clr.md).  
   
  **/clr:pure**  
  /clr:pure ist veraltet. Diese Option wird von einer zukünftigen Version des Compilers möglicherweise nicht unterstützt. Es wird empfohlen, dass Sie Code, der reines MSIL sein muss, nach C# portieren.  
   
  **/clr:safe**  
- /clr:safe ist veraltet. Diese Option wird von einer zukünftigen Version des Compilers möglicherweise nicht unterstützt. Es wird empfohlen, dass Sie Code portieren, die sichere MSIL in c# sein müssen. 
+ /clr:safe ist veraltet. Diese Option wird von einer zukünftigen Version des Compilers möglicherweise nicht unterstützt. Es wird empfohlen, dass Sie Code portieren, der sichere MSIL in c# werden muss. 
   
  **/clr:noAssembly**  
  Legt fest, dass ein Assemblymanifest nicht in die Ausgabedatei eingefügt wird. Standardmäßig ist die **noAssembly** -Option nicht wirksam.  
@@ -68,7 +68,7 @@ Ermöglicht Anwendungen und Komponenten, Funktionen aus der Common Language Runt
  Vor Visual C++ 2005 war bei Verwendung von **/clr:noAssembly** die Angabe von **/LD**erforderlich. **/LD** ist jetzt bei der Angabe von **/clr:noAssembly**impliziert.  
   
  **/clr:initialAppDomain**  
- Ermöglicht, dass eine [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] -Anwendung mit Version 1 von CLR ausgeführt wird. Bei Verwendung von **InitialAppDomain**, und klicken Sie dann einige Probleme auftreten, die in beschriebenen [Fehler: AppDomainUnloaded-Ausnahme bei Verwendung verwalteter Erweiterungen für Visual C++-Komponenten](http://go.microsoft.com/fwlink/p/?linkid=169465) auf Microsoft Support-Website.  
+ Ermöglicht Visual C++-Anwendung auf Version 1 der CLR ausgeführt. Bei Verwendung von **InitialAppDomain**, einige der Probleme angezeigt werden kann, die hier erörtert werden [Fehler: AppDomainUnloaded-Ausnahme bei der Verwendung verwalteter Erweiterungen für Visual C++-Komponenten](http://go.microsoft.com/fwlink/p/?linkid=169465) auf der Microsoft Support-Website.  
   
  Eine Anwendung, die mit **initialAppDomain** kompiliert wurde, sollte nicht mit einer Anwendung verwendet werden, die ASP.NET verwendet, da Version 1 von CLR die Unterstützung hierfür fehlt.  
   
@@ -82,13 +82,13 @@ Ermöglicht Anwendungen und Komponenten, Funktionen aus der Common Language Runt
   
  Eine mithilfe von **/clr** kompilierte Anwendung kann verwaltete Daten enthalten.  
   
- Zum Aktivieren des Debuggens einer verwalteten Anwendung finden Sie unter [/ASSEMBLYDEBUG (DebuggableAttribute hinzufügen)](../../build/reference/assemblydebug-add-debuggableattribute.md).  
+ Debuggen einer verwalteten Anwendung aktivieren, finden Sie unter [ASSEMBLYDEBUG (DebuggableAttribute hinzufügen)](../../build/reference/assemblydebug-add-debuggableattribute.md).  
   
  Auf dem Heap der Garbage Collection werden nur CLR-Typen instanziiert. Weitere Informationen finden Sie unter [Klassen und Strukturen](../../windows/classes-and-structs-cpp-component-extensions.md). Um eine Funktion in systemeigenem Code zu kompilieren, verwenden Sie das `unmanaged` -Pragma. Weitere Informationen finden Sie unter [verwaltete, unverwaltete](../../preprocessor/managed-unmanaged.md).  
   
  In der Standardeinstellung ist **/clr** nicht aktiv. Wenn **/clr** aktiviert ist, ist auch **/MD** aktiv. Weitere Informationen finden Sie unter [/MD, /MT, /LD (Laufzeitbibliothek verwenden)](../../build/reference/md-mt-ld-use-run-time-library.md). **/MD** stellt sicher, dass die dynamisch verknüpften Multithread-Versionen der Laufzeitroutinen aus den standardmäßigen Headerdateien (. h) ausgewählt werden. Multithreading ist für die verwaltete Programmierung erforderlich, da der CLR-Garbage Collector Finalizer in einem Hilfsthread ausführt.  
   
- Wenn Sie bei der Kompilierung **/c**, können Sie angeben, die CLR-Typ der generierten Ausgabedatei mit [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
+ Wenn Sie mit der Kompilierung **/c**, Sie können angeben, die CLR-Typ der generierten Ausgabedatei mit [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
   
  **/clr** impliziert **/EHa**, und keine anderen **/EH** -Optionen werden für **/clr**unterstützt. Weitere Informationen finden Sie unter [/EH (Ausnahmebehandlungsmodell)](../../build/reference/eh-exception-handling-model.md).  
   
@@ -131,7 +131,7 @@ class {} x;
     >   
     >  Legen Sie beim Debuggen einer **/clr** -Anwendung außerdem die Eigenschaft **Debuggertyp** auf **Gemischt** oder **Nur verwaltet**fest. Weitere Informationen finden Sie unter [Projekteinstellungen für eine C++-Debugkonfiguration](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration).  
   
-     Informationen zum Erstellen eines Moduls finden Sie unter [/NOASSEMBLY (Erstellen eines MSIL-Moduls)](../../build/reference/noassembly-create-a-msil-module.md).  
+     Weitere Informationen dazu, wie das Erstellen eines Moduls finden Sie unter [/NOASSEMBLY (MSIL-Modul erstellen)](../../build/reference/noassembly-create-a-msil-module.md).  
   
 #### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   

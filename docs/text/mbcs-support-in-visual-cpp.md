@@ -28,16 +28,16 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d00495f95b3c67e4a6fc3613b949b8ae2946bd6
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f595a048d9f2e5795f69b7d1da6c4c6cf4ca0fa2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010385"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608679"
 ---
 # <a name="mbcs-support-in-visual-c"></a>MBCS-Unterstützung in Visual C++
 Wenn in einer MBCS-aktivierten Version von Windows ausführen, ist das Visual C++-Entwicklungssystem (einschließlich der integrierten Quellcode-Code-Editor, Debugger und über die Befehlszeile-Tools) MBCS-aktiviert, mit Ausnahme der Fenster "Arbeitsspeicher".  
@@ -53,7 +53,7 @@ Wenn in einer MBCS-aktivierten Version von Windows ausführen, ist das Visual C+
   
  Der IME aktiviert, indem die ALT-Taste +\` Tastenkombination, die als eine Reihe von Schaltflächen (eine Indicator) und eine Konvertierungsfenster angezeigt wird. Im Fenster auf der die Einfügemarke positioniert. Die Anwendung muss behandeln `WM_MOVE` und `WM_SIZE` Nachrichten durch Neupositionieren der Konvertierung-Fenster, um die neue Position und Größe des Zielfensters entsprechen.  
   
- Wenn Sie die Benutzer der Anwendung, um die Möglichkeit haben, Kanji Zeichen eingeben möchten, muss die Anwendung Windows IME behandeln. Weitere Informationen zu IME-Programmierung, finden Sie unter [Eingabemethoden-Editor](https://msdn.microsoft.com/library/ms776145.aspx).  
+ Wenn Sie die Benutzer der Anwendung, um die Möglichkeit haben, Kanji Zeichen eingeben möchten, muss die Anwendung Windows IME behandeln. Weitere Informationen zu IME-Programmierung, finden Sie unter [Eingabemethoden-Editor](/previous-versions/windows/desktop/ms776145\(v=vs.85\)).  
   
 ## <a name="visual-c-debugger"></a>Visual C++-Debugger  
  Visual C++-Debugger ermöglicht das Festlegen von Haltepunkten für den IME-Nachrichten. Darüber hinaus kann das Fenster "Arbeitsspeicher" Double-Byte-Zeichen anzeigen.  

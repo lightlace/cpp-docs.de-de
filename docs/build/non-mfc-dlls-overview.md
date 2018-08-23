@@ -1,5 +1,5 @@
 ---
-title: 'MFC-fremde DLLs: Übersicht | Microsoft Docs'
+title: 'MFC-fremde DLLs: Übersicht | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61ad8e6d1107dfdacc91c32d48ca1e3624a0211
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 037f6d7bc80956536a7098ee67275425c41a2f68
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368641"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613218"
 ---
 # <a name="non-mfc-dlls-overview"></a>MFC-fremde DLLs: Übersicht
-Eine MFC - fremde DLL ist eine DLL, die nicht MFC intern verwendet und in der DLL exportierten Funktionen von MFC oder MFC-fremde ausführbare Dateien aufgerufen werden können. Funktionen sind in der Regel aus einer MFC - fremde DLL über die standard-C-Schnittstelle exportiert.  
+Eine MFC - fremde DLL ist eine DLL, die keine MFC intern verwendet, und die exportierten Funktionen in der DLL können von entweder MFC oder MFC-fremde ausführbare Dateien aufgerufen werden. Funktionen werden in der Regel aus einer MFC - fremde DLL über die standard-C-Schnittstelle exportiert.  
   
- Weitere Informationen über MFC-DLLs finden Sie unter [Dynamic Link Libraries](http://msdn.microsoft.com/library/windows/desktop/ms682589) in der [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ Weitere Informationen über MFC - fremde DLLs finden Sie unter [Dynamic Link Libraries](http://msdn.microsoft.com/library/windows/desktop/ms682589) im Windows SDK.  
   
 ## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?  
   

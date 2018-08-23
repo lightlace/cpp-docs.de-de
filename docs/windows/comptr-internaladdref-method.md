@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30cba8b29ad6100826f580dd625bc18e2b8f9e16
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7d9217a91b6b6ceda3a0743f94186dc52cbb7f80
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641290"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613349"
 ---
 # <a name="comptrinternaladdref-method"></a>ComPtr::InternalAddRef-Methode
-Inkrementiert den Verweiszähler der Schnittstelle zugeordneten **ComPtr**.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-void InternalAddRef() const;  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Methode ist geschützt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtr-Klasse](../windows/comptr-class.md)
+
+Inkrementiert den Verweiszähler der Schnittstelle zugeordneten **ComPtr**.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void InternalAddRef() const;
+```
+
+## <a name="remarks"></a>Hinweise
+
+Diese Methode ist geschützt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtr-Klasse](../windows/comptr-class.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 126133c5e542414f1fb38635e1cb14314bc55d52
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5e367f956fbaeb36837733d619b19cdc8363ca3a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020394"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606826"
 ---
 # <a name="runtimeclassgetruntimeclassname-method"></a>RuntimeClass::GetRuntimeClassName-Methode
 
@@ -37,6 +37,7 @@ STDMETHOD( GetRuntimeClassName )(
 ```
 
 ### <a name="parameters"></a>Parameter
+
 *runtimeName*  
 Wenn dieser Vorgang abgeschlossen ist, den Namen der Common Language Runtime-Klasse.
 
@@ -55,4 +56,5 @@ Ein Assert-Fehler wird ausgegeben, wenn `__WRL_STRICT__` oder `__WRL_FORCE_INSPE
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Siehe auch
- [RuntimeClass-Klasse](../windows/runtimeclass-class.md)
+
+[RuntimeClass-Klasse](../windows/runtimeclass-class.md)

@@ -15,29 +15,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed78c9276603c8b6dbdab74a32ea1940bf39544f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 05efb34a2d03264ca0fb6da1da22a2610c800c30
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012569"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600815"
 ---
 # <a name="hstringisvalid-method"></a>HString::IsValid-Methode
-Gibt an, ob die aktuelle **HString** Objekt leer ist oder nicht.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
+
+Gibt an, ob die aktuelle **HString** Objekt leer ist oder nicht.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 bool IsValid() const throw()  
-```  
-  
-### <a name="parameters"></a>Parameter  
- **"true"** Wenn die aktuelle **HString** Objekt ist nicht leer ist, andernfalls **"false"**.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HString-Klasse](../windows/hstring-class.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+**"true"** Wenn die aktuelle **HString** Objekt ist nicht leer ist, andernfalls **"false"**.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HString-Klasse](../windows/hstring-class.md)

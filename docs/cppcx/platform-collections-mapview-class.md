@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::MapView Klasse | Microsoft Docs
+title: Platform::Collections::MapView-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b5000ad06e542aa4616a29150601b8d628fc097
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7abf07b24947a4c800b2b21f91fdf9840dd799d5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091530"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605470"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView-Klasse
 Stellt eine schreibgeschützte Ansicht einer *Zuordnung*dar, die eine Auflistung von Schlüssel-Wert-Paaren ist.  
@@ -48,10 +48,10 @@ ref class MapView sealed;
  Der Typ des Werts im Schlüssel-Wert-Paar.  
   
  `C`  
- Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der MapView zu bestimmen. Standardmäßig [Std:: less\<K >](../standard-library/less-struct.md).  
+ Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der MapView zu bestimmen. In der Standardeinstellung [Std:: less\<K >](../standard-library/less-struct.md).  
   
 ### <a name="remarks"></a>Hinweise  
- MapView ist eine konkrete C++ Implementierung der [Windows::Foundation::Collections::IMapView \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) Schnittstelle, die über die anwendungsbinärdateischnittstelle (ABI) übergeben wird. Weitere Informationen finden Sie unter [Auflistungen (C++/CX)](../cppcx/collections-c-cx.md).  
+ MapView ist eine konkrete C++ Implementierung der [Windows::Foundation::Collections::IMapView \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) -Schnittstelle, die über die anwendungsbinärdateischnittstelle (ABI) übergeben wird. Weitere Informationen finden Sie unter [Auflistungen (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Member  
   
@@ -94,7 +94,7 @@ virtual Windows::Foundation::Collections::IIterator<
  Ein Iterator, der das erste Element in der Kartenansicht angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine einfache Möglichkeit, den von First() zurückgegeben Iterator zu halten, den Rückgabewert einer Variablen zuzuweisen, die mit deklariert wird ist das **Auto** typableitungsschlüsselwort. Beispielsweise `auto x = myMapView->First();`.  
+ Den Rückgabewert einer Variablen zuweisen, die mit deklariert ist eine bequeme Möglichkeit, den von First() zurückgegeben Iterator zu halten ist die **automatisch** typableitungs-Schlüsselwort. Beispielsweise `auto x = myMapView->First();`.  
   
 
 
@@ -174,7 +174,7 @@ MapView(
  Der Eingabeiterator des ersten Elements nach einem Bereich von Elementen, die verwendet werden, um die aktuelle MapView zu initialisieren.  
   
  il  
- Ein [Std:: initializer_list < Std:: Pair\<K, V >>](../standard-library/initializer-list-class.md) , deren Elemente in die MapView eingefügt werden.  
+ Ein [Std:: initializer_list < Std:: Pair\<K, V >>](../standard-library/initializer-list-class.md) , dessen Elemente in die MapView eingefügt werden.  
 
 
 
@@ -217,4 +217,4 @@ void Split(
  Diese Methode führt keine Operationen aus und hat keine Auswirkungen.  
     
 ## <a name="see-also"></a>Siehe auch  
- [Platform-Namespace](platform-namespace-c-cx.md)
+ [Plattform-Namespace](platform-namespace-c-cx.md)

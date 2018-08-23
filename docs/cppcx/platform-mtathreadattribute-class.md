@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: MTAThreadAttribute-Klasse | Microsoft Docs'
+title: 'Platform:: MTAThreadAttribute-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd035a3a11898230cb7f8a14db0b98ff1611120
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 389767cdbd09cb5a2139b9302fc25fe02fb8a056
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089164"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613458"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute-Klasse
 Legt Multithreaded Apartment (MTA) als Threadingmodell für Anwendungen fest.  
@@ -42,7 +42,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 |[MTAThreadAttribute-Konstruktor 1](#ctor) Konstruktor|Initialisiert eine neue Instanz der Klasse.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
- Das MTAThreadAttribute-Attribut erbt von [Platform:: Object-Klasse](../cppcx/platform-object-class.md). „MTAThreadAttribute“ wird zudem überladen oder weist die folgenden Member auf:  
+ Das MTAThreadAttribute-Attribut erbt von [Platform:: Object Class](../cppcx/platform-object-class.md). „MTAThreadAttribute“ wird zudem überladen oder weist die folgenden Member auf:  
   
 |name|Beschreibung|  
 |----------|-----------------|  
@@ -116,4 +116,4 @@ public:String^ ToString()
  Eine Zeichenfolge, die das aktuelle Objekt darstellt.  
     
 ## <a name="see-also"></a>Siehe auch  
- [Platform-Namespace](platform-namespace-c-cx.md)
+ [Plattform-Namespace](platform-namespace-c-cx.md)

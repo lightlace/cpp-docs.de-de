@@ -15,26 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f68e51de101ad8ef7adfb4d9ad061a66071ef48
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 58f8ac0383e2aeed2f042da7d4968e6b19a36d68
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39605430"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600172"
 ---
 # <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
-Löscht die aktuelle **releasenotifier** Objekt, wenn das Objekt, mit dem Parameter erstellt wurde **"true"**.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-void Release() throw();  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Module::ReleaseNotifier-Klasse](../windows/module-releasenotifier-class.md)
+
+Löscht die aktuelle **releasenotifier** Objekt, wenn das Objekt, mit dem Parameter erstellt wurde **"true"**.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void Release() throw();
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Module::ReleaseNotifier-Klasse](../windows/module-releasenotifier-class.md)

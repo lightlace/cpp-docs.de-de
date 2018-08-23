@@ -17,48 +17,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9667a3660f46db0a61991545108d66bf0cac9f38
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 51964bb2d4cb13394f9efb0e36d572cf9309637d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017795"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605666"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers-Namespace
-Definiert die Resource Acquisition ist Initialisierung (RAII) Wrappertypen, die die Verwaltung der Lebensdauer von Objekten, Zeichenfolgen und Handles zu vereinfachen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-namespace Microsoft::WRL::Wrappers;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="typedefs"></a>Typedefs  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|`FileHandle`|`HandleT<HandleTraits::FileHandleTraits>`|  
-  
-### <a name="classes"></a>Klassen  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[CriticalSection-Klasse](../windows/criticalsection-class.md)|Stellt ein kritisches Abschnittsobjekt dar.|  
-|[Ereignisklasse (C++-Vorlagenbibliothek der Windows-Runtime)](../windows/event-class-windows-runtime-cpp-template-library.md)|Stellt ein Ereignis dar.|  
-|[HandleT-Klasse](../windows/handlet-class.md)|Stellt ein Handle für ein Objekt dar.|  
-|[HString-Klasse](../windows/hstring-class.md)|Bietet Unterstützung für die Bearbeitung von HSTRING-Handles.|  
-|[HStringReference-Klasse](../windows/hstringreference-class.md)|Stellt ein HSTRING dar, das aus einer vorhandenen Zeichenfolge erstellt wird.|  
-|[Mutex-Klasse](../windows/mutex-class1.md)|Stellt ein Synchronisierungsobjekt, das ausschließlich auf eine freigegebene Ressource steuert.|  
-|[RoInitializeWrapper-Klasse](../windows/roinitializewrapper-class.md)|Initialisiert die Windows-Runtime.|  
-|[Semaphore-Klasse](../windows/semaphore-class.md)|Stellt ein Synchronisierungsobjekt, das eine freigegebene Ressource steuert, die eine begrenzte Anzahl von Benutzern unterstützen können.|  
-|[SRWLock-Klasse](../windows/srwlock-class.md)|Stellt eine slim Reader-/Writer-Sperre.|  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)
+
+Definiert die Resource Acquisition ist Initialisierung (RAII) Wrappertypen, die die Verwaltung der Lebensdauer von Objekten, Zeichenfolgen und Handles zu vereinfachen.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+namespace Microsoft::WRL::Wrappers;
+```
+
+## <a name="members"></a>Member
+
+### <a name="typedefs"></a>Typedefs
+
+|Name|Beschreibung|
+|----------|-----------------|
+|`FileHandle`|`HandleT<HandleTraits::FileHandleTraits>`|
+
+### <a name="classes"></a>Klassen
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[CriticalSection-Klasse](../windows/criticalsection-class.md)|Stellt ein kritisches Abschnittsobjekt dar.|
+|[Ereignisklasse (C++-Vorlagenbibliothek der Windows-Runtime)](../windows/event-class-windows-runtime-cpp-template-library.md)|Stellt ein Ereignis dar.|
+|[HandleT-Klasse](../windows/handlet-class.md)|Stellt ein Handle für ein Objekt dar.|
+|[HString-Klasse](../windows/hstring-class.md)|Bietet Unterstützung für die Bearbeitung von HSTRING-Handles.|
+|[HStringReference-Klasse](../windows/hstringreference-class.md)|Stellt ein HSTRING dar, das aus einer vorhandenen Zeichenfolge erstellt wird.|
+|[Mutex-Klasse](../windows/mutex-class1.md)|Stellt ein Synchronisierungsobjekt, das ausschließlich auf eine freigegebene Ressource steuert.|
+|[RoInitializeWrapper-Klasse](../windows/roinitializewrapper-class.md)|Initialisiert die Windows-Runtime.|
+|[Semaphore-Klasse](../windows/semaphore-class.md)|Stellt ein Synchronisierungsobjekt, das eine freigegebene Ressource steuert, die eine begrenzte Anzahl von Benutzern unterstützen können.|
+|[SRWLock-Klasse](../windows/srwlock-class.md)|Stellt eine slim Reader-/Writer-Sperre.|
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

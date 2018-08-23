@@ -17,58 +17,62 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0596b15daff5567e2572bf8c1f2b401cdf300a49
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 7619868e131476143c144e695e842708d1b54a6b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642411"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606444"
 ---
 # <a name="asyncuuid"></a>async_uuid
-Gibt an, die UUID, die den MIDL-Compiler definiert synchrone und asynchrone Versionen einer COM-Schnittstelle weiterleitet.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-[async_uuid (  
-   uuid  
-)]  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *uuid*  
- Eine UUID, die die Version der Schnittstelle angibt.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Async_uuid** C++-Attribut hat die gleiche Funktionalität wie die [Async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
-  
-```cpp  
-// cpp_attr_ref_async_uuid.cpp  
-// compile with: /LD  
-#include <Windows.h>  
-[module(name="Test")];  
-[object, uuid("9e66a290-4365-11d2-a997-00c04fa37ddb"),   
-async_uuid("e8583106-38fd-487e-912e-4fc8645c677e")]  
-__interface ICustom {  
-   HRESULT Custom([in] long l, [out, retval] long *pLong);  
-};  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|`interface`|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|**Duale**, **Disp-Schnittstelle**|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [Schnittstellenattribut](../windows/interface-attributes.md)   
+
+Gibt an, die UUID, die den MIDL-Compiler definiert synchrone und asynchrone Versionen einer COM-Schnittstelle weiterleitet.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[async_uuid (
+   uuid
+)]
+```
+
+### <a name="parameters"></a>Parameter
+
+*uuid*  
+Eine UUID, die die Version der Schnittstelle angibt.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Async_uuid** C++-Attribut hat die gleiche Funktionalität wie die [Async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// cpp_attr_ref_async_uuid.cpp
+// compile with: /LD
+#include <Windows.h>
+[module(name="Test")];
+[object, uuid("9e66a290-4365-11d2-a997-00c04fa37ddb"),
+async_uuid("e8583106-38fd-487e-912e-4fc8645c677e")]
+__interface ICustom {
+   HRESULT Custom([in] long l, [out, retval] long *pLong);
+};
+```
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|`interface`|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|**Duale**, **Disp-Schnittstelle**|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[Schnittstellenattribut](../windows/interface-attributes.md)  

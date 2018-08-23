@@ -1,5 +1,5 @@
 ---
-title: Systeminterne Funktionen "_InterlockedExchange" | Microsoft Docs
+title: Funktionen "_InterlockedExchange" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8637772d81031b9f9b30ef8cbee63b55c5b5b8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6af43074e78ffb66299b9eeda97dd18f073d77fd
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338239"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599398"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>Intrinsische Funktionen „_InterlockedExchange“
 **Microsoft-spezifisch**  
@@ -165,12 +165,12 @@ __int64 _InterlockedExchange64_rel(
   
 |Systemintern|Architektur|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|X86, ARM, x64|\<intrin.h>|  
 |`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|  
-|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, x64|\<immintrin.h>|  
   
 ## <a name="remarks"></a>Hinweise  
- `_InterlockedExchange` Stellt systeminterne Compiler-Unterstützung für die Win32- [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedExchange](http://msdn.microsoft.com/library/ms683590.aspx) Funktion.  
+ `_InterlockedExchange` bietet systeminterne compilerunterstützung für die Win32-Windows-SDK [InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange) Funktion.  
   
  Es gibt mehrere Varianten von `_InterlockedExchange`, die sich basierend auf den beinhalteten Datentypen und in Abhängigkeit davon unterscheiden, ob prozessorspezifische Semantiken zum Abrufen bzw. Freigeben verwendet werden.  
   
@@ -183,7 +183,7 @@ __int64 _InterlockedExchange64_rel(
  Diese Routinen sind nur als systeminterne Funktionen verfügbar.  
   
 ## <a name="example"></a>Beispiel  
- Ein Beispiel zum Verwenden von `_InterlockedExchange`, finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+ Ein Beispiel zur Verwendung `_InterlockedExchange`, finden Sie unter [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
 **Ende Microsoft-spezifisch**  
   

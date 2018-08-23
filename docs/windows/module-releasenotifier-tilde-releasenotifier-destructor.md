@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c854f11f64d8ec66d9c00ea8b4833f28f7bf6cdc
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 26ea9df5d5a615254b941c72d2847bbe9f22847d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011473"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599966"
 ---
 # <a name="modulereleasenotifierreleasenotifier-destructor"></a>Module::ReleaseNotifier::~ReleaseNotifier-Destruktor
-Hebt die Initialisierung der aktuellen Instanz von der **releasenotifier** Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-WRL_NOTHROW virtual ~ReleaseNotifier();  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Module::ReleaseNotifier-Klasse](../windows/module-releasenotifier-class.md)
+
+Hebt die Initialisierung der aktuellen Instanz von der **releasenotifier** Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+WRL_NOTHROW virtual ~ReleaseNotifier();
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Module::ReleaseNotifier-Klasse](../windows/module-releasenotifier-class.md)

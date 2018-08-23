@@ -15,46 +15,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7084b16536533c9605b741adb596a2a7d383c153
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 952de0ca136d29eb0b170856410b18a1d65120c1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649997"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612887"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal-Methode
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-inline INT32 CompareStringOrdinal(  
-   HSTRING lhs,   
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+inline INT32 CompareStringOrdinal(
+   HSTRING lhs,
    HSTRING rhs)  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *LHS*  
- Das erste HSTRING, verglichen werden soll.  
-  
- *RS*  
- Das zweite HSTRING, verglichen werden soll.  
-  
-## <a name="return-value"></a>Rückgabewert  
-  
-|Wert|Bedingung|  
-|-----------|---------------|  
-|-1|*LHS* ist kleiner als *RS*.|  
-|0|*LHS* gleich *RS*.|  
-|1|*LHS* ist größer als *RS*.|  
-  
-## <a name="remarks"></a>Hinweise  
- Vergleicht zwei angegebene HSTRING-Objekte und gibt eine ganze Zahl, die ihre relative Position in einer Sortierreihenfolge angibt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL::Wrappers::Details-Namespace](../windows/microsoft-wrl-wrappers-details-namespace.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*LHS*  
+Das erste HSTRING, verglichen werden soll.
+
+*RS*  
+Das zweite HSTRING, verglichen werden soll.
+
+## <a name="return-value"></a>Rückgabewert
+
+|Wert|Bedingung|
+|-----------|---------------|
+|-1|*LHS* ist kleiner als *RS*.|
+|0|*LHS* gleich *RS*.|
+|1|*LHS* ist größer als *RS*.|
+
+## <a name="remarks"></a>Hinweise
+
+Vergleicht zwei angegebene HSTRING-Objekte und gibt eine ganze Zahl, die ihre relative Position in einer Sortierreihenfolge angibt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL::Wrappers::Details-Namespace](../windows/microsoft-wrl-wrappers-details-namespace.md)
