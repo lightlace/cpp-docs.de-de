@@ -1,28 +1,28 @@
 ---
-title: Attribute (C + c++ / CX) | Microsoft Docs
+title: Attribute (C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 627e89c844b97637897c9b5eb6c1cc7e32081fd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7db8d6c527842cd3784623002fba001a4174c1fc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086843"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601137"
 ---
 # <a name="attributes-ccx"></a>Attribute (C++/CX)
-Ein Attribut ist eine spezielle Verweisklasse, die in Windows-Runtime-Typen und Methoden, um bestimmte Verhalten bei der Metadatenerstellung anzugeben eckigen vorangestellt werden kann. Mehrere vordefinierte Attribute – beispielsweise [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)– werden häufig verwendet, in C + c++ / CX-Code. Dieses Beispiel zeigt, wie das Attribut auf eine Klasse angewendet wird:  
+Ein Attribut ist eine besondere Art von Ref-Klasse, die in eckigen Klammern auf Windows-Runtime-Typen und Methoden, um bestimmte Verhalten bei der Metadatenerstellung anzugeben vorangestellt werden kann. Mehrere vordefinierte Attribute, z. B. [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)– werden häufig verwendet, in C++ / CX-Code. Dieses Beispiel zeigt, wie das Attribut auf eine Klasse angewendet wird:  
   
  [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]  
   
 ## <a name="custom-attributes"></a>Benutzerdefinierte Attribute  
- Sie können auch benutzerdefinierte Attribute definieren. Benutzerdefinierte Attribute müssen diesen Windows-Runtime-Regeln entsprechen:  
+ Sie können auch benutzerdefinierte Attribute definieren. Benutzerdefinierte Attribute müssen diese Windows-Runtime-Regeln entsprechen:  
   
 -   Benutzerdefinierte Attribute können nur öffentliche Felder enthalten.  
   
@@ -50,5 +50,5 @@ Ein Attribut ist eine spezielle Verweisklasse, die in Windows-Runtime-Typen und 
   
 ## <a name="see-also"></a>Siehe auch  
  [Typsystem (C++/CX)](../cppcx/type-system-c-cx.md)   
- [Visual C++-Sprachreferenz](../cppcx/visual-c-language-reference-c-cx.md)   
+ [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)

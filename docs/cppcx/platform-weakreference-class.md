@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: WeakReference-Klasse | Microsoft Docs'
+title: 'Platform:: WeakReference-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8db5c855b6a377a0202183d48b8fd34e93b6072
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77cd035b6cf84b16f4f6d5d92f3dd247f1251509
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088377"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601560"
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference-Klasse
 Stellt einen schwachen Verweis auf eine Instanz einer Verweisklasse dar.  
@@ -48,7 +48,7 @@ class WeakReference
 |Member|Beschreibung|  
 |------------|-----------------|  
 |[WeakReference::operator=](#operator-assign)|Weist dem WeakReference-Objekt einen neuen Wert zu.|  
-|[WeakReference::operator-BoolType](#booltype)|Implementiert das sichere boolesche Muster.|  
+|[WeakReference::operator-BoolType](#booltype)|Implementiert das sichere boolesche Muster an.|  
   
 ### <a name="remarks"></a>Hinweise  
  Die WeakReference-Klasse selbst ist keine Verweisklasse und erbt daher nicht von Platform::Object^ und kann nicht in der Signatur einer öffentlichen Methode verwendet werden.  
@@ -66,7 +66,7 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die letzte Überladung in der Liste oben ermöglicht es Ihnen, einer WeakReference-Variable eine Verweisklasse zuzuweisen. In diesem Fall wird die Umwandlung zu [Platform:: Object](../cppcx/platform-object-class.md)^. Sie wiederherstellen den ursprünglichen Typ später durch Angabe als Argument für den Typparameter in der [WeakReference:: Resolve\<T >](#resolve) Memberfunktion.  
+ Die letzte Überladung in der Liste oben ermöglicht es Ihnen, einer WeakReference-Variable eine Verweisklasse zuzuweisen. In diesem Fall ist die Verweisklasse zu Typumwandlung [Platform:: Object](../cppcx/platform-object-class.md)^. Sie den ursprünglichen Typ später wiederherstellen durch Angabe als Argument für den Typparameter in der [WeakReference:: Resolve\<T >](#resolve) Member-Funktion.  
   
 ## <a name="booltype"></a> WeakReference-BoolType
 Implementiert das sichere boolesche Muster für die WeakReference-Klasse. Nicht explizit vom Code aufzurufen.  
@@ -132,4 +132,4 @@ MyClass^ copy2 = wr.Resolve<MyClass>();
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)
+ [Platform-namespace](../cppcx/platform-namespace-c-cx.md)

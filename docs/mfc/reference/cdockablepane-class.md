@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05d7897bf7b18d804d787f865b80b615b7564919
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: a2ce93a17dd2666469b8e6d56e1a106d508855f7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028290"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540840"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implementiert einen Bereich, der entweder in eine Docksite angedockt oder in einer Seite im Registerformat enthalten sein kann.  
@@ -927,7 +927,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ### <a name="remarks"></a>Hinweise  
  Das Framework ruft diese Methode zum Behandeln von Andocken eines unverankerten Bereichs.  
   
- Für unverankerte Symbolleisten sowie andockbare Bereiche, die den Andockmodus DT_IMMEDIATE verwenden verzögert das Framework die Dock-Befehl aus, um dem Benutzer ermöglichen, bevor Andocken auftritt, verschieben Sie das Fenster aus den Clientbereich des übergeordneten Rahmens. Die Länge der Verzögerung in Millisekunden gemessen wird und wird gesteuert, indem die [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) Datenmember... Der Standardwert von [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) ist 200. Dieses Verhalten emuliert das Andockverhalten des [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)] 2007.  
+ Für unverankerte Symbolleisten sowie andockbare Bereiche, die den Andockmodus DT_IMMEDIATE verwenden verzögert das Framework die Dock-Befehl aus, um dem Benutzer ermöglichen, bevor Andocken auftritt, verschieben Sie das Fenster aus den Clientbereich des übergeordneten Rahmens. Die Länge der Verzögerung in Millisekunden gemessen wird und wird gesteuert, indem die [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) Datenmember... Der Standardwert von [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) ist 200. Dieses Verhalten emuliert das Andockverhalten des Microsoft Word 2007.  
   
  Für verzögerte Andocken Staaten (CS_DELAY_DOCK und CS_DELAY_DOCK_TO_TAB) führt das Framework keine andocken, bis der Benutzer die Maustaste loslässt. Wenn ein Bereich den Andockmodus DT_STANDARD verwendet wird, zeigt das Framework ein Rechteck auf die voraussichtliche Andockposition aus. Wenn ein Bereich den Andockmodus DT_SMART verwendet wird, zeigt das Framework intelligente andockmarker und halb transparent Rechtecke an die voraussichtliche Andockposition an. Rufen Sie zum Angeben des Andockmodus für die im Eigenschaftenbereich die [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) Methode. Weitere Informationen zu intelligentes Andocken, finden Sie unter [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).  
   
@@ -1186,7 +1186,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
  Reduzieren Sie für eine schnellere Animationseffekt diesen Wert. Erhöhen Sie für den Animationseffekt langsamer diesen Wert.  
   
 ##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);

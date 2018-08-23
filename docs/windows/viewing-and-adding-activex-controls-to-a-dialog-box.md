@@ -19,46 +19,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2939d5d99c0657e6caa68e8cc6fbb9e6361fcaf7
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 95dbd8003f95ee0c0e809d9017ec5093b782ae99
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017041"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604660"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>Anzeigen und Hinzufügen von ActiveX-Steuerelementen zu einem Dialogfeld
-Visual Studio ermöglicht Ihnen das Einfügen von ActiveX-Steuerelementen in Ihr Dialogfeld.  
-  
-### <a name="to-see-the-activex-controls-you-have-available"></a>So zeigen Sie die verfügbaren ActiveX-Steuerelemente an  
-  
-1.  Öffnen Sie ein Dialogfeld im Dialog-Editor.  
-  
-2.  Klicken Sie an einer beliebigen Stelle im Körper des Dialogfelds mit der rechten Maustaste.  
-  
-3.  Klicken Sie im Kontextmenü auf **ActiveX-Steuerelement einfügen**.  
-  
-     Das Dialogfeld [ActiveX-Steuerelement einfügen](../windows/insert-activex-control-dialog-box.md) wird angezeigt und stellt alle ActiveX-Steuerelemente auf dem System dar. Unten im Dialogfeld wird der Pfad der Datei des ActiveX-Steuerelements angezeigt.  
-  
-### <a name="to-add-an-activex-control-to-a-dialog-box"></a>So fügen Sie einem Dialogfeld ein Active X-Steuerelement hinzu  
-  
-1.  Wählen Sie im Dialogfeld [ActiveX-Steuerelement einfügen](../windows/insert-activex-control-dialog-box.md)das Steuerelement aus, das Sie Ihrem Dialogfeld hinzufügen möchten, und klicken Sie auf **OK**.  
-  
-     Das Steuerelement wird im Dialogfeld angezeigt, wo Sie es bearbeiten oder Handler für es erstellen können, ganz wie bei jedem anderen Steuerelement.  
-  
-    > [!NOTE]
-    >  Sie können ActiveX-Steuerelemente zum [Toolbox](/visualstudio/ide/reference/toolbox)-Fenster hinzufügen. Weitere Informationen finden Sie unter [Verwalten von Elementen und Registerkarten in der Toolbox](http://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db).  
-  
-    > [!CAUTION]
-    >  Der Vertrieb ist möglicherweise nicht für alle ActiveX-Steuerelemente auf Ihrem System rechtlich zulässig. Informieren Sie sich im Lizenzvertrag für die Software, die die Steuerelemente installiert hat, oder wenden Sie sich an den Hersteller der Software.  
-  
-     Sie können Steuerelemente im Platzieren der **Toolbox** Fenster für den leichteren Zugriff. Weitere Informationen finden Sie unter [Dialogfeld Toolbox anpassen](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
- [MFC ActiveX Controls (MFC-ActiveX-Steuerelemente)](../mfc/mfc-activex-controls.md)   
- [ActiveX-Steuerelementcontainer](../mfc/activex-control-containers.md)
+
+Visual Studio ermöglicht Ihnen das Einfügen von ActiveX-Steuerelementen in Ihr Dialogfeld.
+
+### <a name="to-see-the-activex-controls-you-have-available"></a>So zeigen Sie die verfügbaren ActiveX-Steuerelemente an
+
+1. Öffnen Sie ein Dialogfeld im Dialog-Editor.
+
+2. Klicken Sie an einer beliebigen Stelle im Körper des Dialogfelds mit der rechten Maustaste.
+
+3. Klicken Sie im Kontextmenü auf **ActiveX-Steuerelement einfügen**.
+
+   Das Dialogfeld [ActiveX-Steuerelement einfügen](../windows/insert-activex-control-dialog-box.md) wird angezeigt und stellt alle ActiveX-Steuerelemente auf dem System dar. Unten im Dialogfeld wird der Pfad der Datei des ActiveX-Steuerelements angezeigt.
+
+### <a name="to-add-an-activex-control-to-a-dialog-box"></a>So fügen Sie einem Dialogfeld ein Active X-Steuerelement hinzu
+
+1. Wählen Sie im Dialogfeld [ActiveX-Steuerelement einfügen](../windows/insert-activex-control-dialog-box.md)das Steuerelement aus, das Sie Ihrem Dialogfeld hinzufügen möchten, und klicken Sie auf **OK**.
+
+   Das Steuerelement wird im Dialogfeld angezeigt, wo Sie es bearbeiten oder Handler für es erstellen können, ganz wie bei jedem anderen Steuerelement.
+
+   > [!NOTE]
+   > Sie können ActiveX-Steuerelemente zum [Toolbox](/visualstudio/ide/reference/toolbox)-Fenster hinzufügen. Weitere Informationen finden Sie unter [Verwalten von Elementen und Registerkarten in der Toolbox](http://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db).
+
+   > [!CAUTION]
+   > Der Vertrieb ist möglicherweise nicht für alle ActiveX-Steuerelemente auf Ihrem System rechtlich zulässig. Informieren Sie sich im Lizenzvertrag für die Software, die die Steuerelemente installiert hat, oder wenden Sie sich an den Hersteller der Software.
+
+   Sie können Steuerelemente im Platzieren der **Toolbox** Fenster für den leichteren Zugriff. Weitere Informationen finden Sie unter [Dialogfeld Toolbox anpassen](http://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)  
+[MFC-ActiveX-Steuerelemente](../mfc/mfc-activex-controls.md)  
+[ActiveX-Steuerelementcontainer](../mfc/activex-control-containers.md)

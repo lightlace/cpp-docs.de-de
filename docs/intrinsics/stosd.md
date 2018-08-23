@@ -1,5 +1,5 @@
 ---
-title: __stosd | Microsoft Docs
+title: __stosd | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d00b5e3b39f17203ba915d6b4344438803db88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e63ee47c98e898fe5cba1a24078029f6afe10b15
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327131"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539076"
 ---
 # <a name="stosd"></a>__stosd
 **Microsoft-spezifisch**  
@@ -45,21 +45,21 @@ void __stosd(
  Das Ziel des Vorgangs.  
   
  [in] `Data`  
- Die Daten zu speichern.  
+ Die zu speichernden Daten.  
   
  [in] `Count`  
- Die Länge des Textblocks Doppelwort schreiben.  
+ Die Länge des Blocks des Doppelwort schreiben.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__stosd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__stosd`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Das Ergebnis ist, zeigt das Doppelwort `Data` wird geschrieben, in einen Block von `Count` Doppelwort an der Speicheradresse verweist `Dest`.  
+ Das Ergebnis ist, das zeigt Doppelwort `Data` wird geschrieben, in einen Block von `Count` die zeigt Doppelwort an der Speicheradresse `Dest`.  
   
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   

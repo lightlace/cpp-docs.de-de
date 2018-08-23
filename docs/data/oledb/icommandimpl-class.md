@@ -63,15 +63,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 07453e3040594332857ba75455b1847a3914fdd2
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d6adec1a87463515f3fa87dfd4ca31fda650e902
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337793"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572751"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl-Klasse
-Stellt die Implementierung für die [ICommand](https://msdn.microsoft.com/library/ms709737.aspx) Schnittstelle.  
+Stellt die Implementierung für die [ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\)) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -124,7 +124,7 @@ STDMETHOD(Cancel)();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [ICommand::Cancel](https://msdn.microsoft.com/library/ms714402.aspx) in die *OLE DB-Programmierreferenz*.  
+ Finden Sie unter [ICommand::Cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
 
 ## <a name="cancelexecution"></a> ICommandImpl:: Cancelexecution
 Bricht die Ausführung des aktuellen Befehls ab.  
@@ -178,7 +178,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 ### <a name="remarks"></a>Hinweise  
  Um mehr als ein Rowset zu erstellen, oder geben Sie Ihren eigenen Bedingungen für das Erstellen von anderen Rowsets, platzieren Sie die verschiedenen Aufrufe zum `CreateRowset` aus `Execute`.  
   
- Finden Sie unter [ICommand:: Execute](https://msdn.microsoft.com/library/ms718095.aspx) in die *OLE DB-Programmierreferenz.*  
+ Finden Sie unter [ICommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) in die *OLE DB-Programmierreferenz.*  
 
 ## <a name="execute"></a> ICommandImpl:: Execute
 Führt den Befehl.  
@@ -194,7 +194,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [ICommand:: Execute](https://msdn.microsoft.com/library/ms718095.aspx) in die *OLE DB-Programmierreferenz*.  
+ Finden Sie unter [ICommand:: Execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="remarks"></a>Hinweise  
  Die Ausgangsschnittstelle angefordert werden, dass eine Schnittstelle, die abgerufen werden, aus dem Rowsetobjekt, das diese Funktion erstellt.  
@@ -212,7 +212,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [ICommand::GetDBSession](https://msdn.microsoft.com/library/ms719622.aspx) in die *OLE DB-Programmierreferenz*.  
+ Finden Sie unter [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="remarks"></a>Hinweise  
  Nützlich zum Abrufen von Eigenschaften aus der Sitzung.  

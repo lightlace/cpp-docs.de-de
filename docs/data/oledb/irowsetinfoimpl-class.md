@@ -37,15 +37,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f1f726459e72d57aa8e855df4f4f3ec5d566f687
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d07c0e64e969e599393a657d4c41a8dd544901c9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337072"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571688"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl-Klasse
-Stellt eine Implementierung für die [IRowsetInfo](https://msdn.microsoft.com/library/ms724541.aspx) Schnittstelle.  
+Stellt eine Implementierung für die [IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax
 
@@ -92,7 +92,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IRowsetInfo:: GetProperties](https://msdn.microsoft.com/library/ms719611.aspx) in die *OLE DB-Programmierreferenz*. 
+ Finden Sie unter [IRowsetInfo:: GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
 
 ## <a name="getreferencedrowset"></a> Irowsetinfoimpl:: Getreferencedrowset
 Gibt einen Schnittstellenzeiger auf das Rowset, für das ein Lesezeichen gilt, zurück.  
@@ -106,7 +106,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IRowsetInfo::GetReferencedRowset](https://msdn.microsoft.com/library/ms721145.aspx) in die *OLE DB-Programmierreferenz*. Die *iOrdinal* -Parameter muss eine Lesezeichenspalte sein. 
+ Finden Sie unter [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. Die *iOrdinal* -Parameter muss eine Lesezeichenspalte sein. 
 
 ## <a name="getspecification"></a> Irowsetinfoimpl:: Getspecification
 Gibt einen Schnittstellenzeiger zurück, für das Objekt (Befehl oder Sitzung), die dieses Rowset erstellt.  
@@ -119,7 +119,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [IRowsetInfo::GetSpecification](https://msdn.microsoft.com/library/ms716746.aspx) in die *OLE DB-Programmierreferenz*.  
+ Finden Sie unter [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode mit [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) zum Abrufen von Eigenschaften aus dem Daten-Quellobjekt.  

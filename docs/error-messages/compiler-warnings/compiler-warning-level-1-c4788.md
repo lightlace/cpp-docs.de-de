@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4788 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4788 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a43fb9d79c63637b2bff9a27661a9f848ef6dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23e86de5ebab3f99c7d98e502e280b5defb51e10
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284198"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538859"
 ---
 # <a name="compiler-warning-level-1-c4788"></a>Compilerwarnung (Stufe 1) C4788
 'Bezeichner': Der Bezeichner wurde auf 'Anzahl' Zeichen gekürzt.  
   
- Durch den Compiler wird die für einen Funktionsnamen zugelassene maximale Länge eingeschränkt. Wenn der Compiler Funclets für EH/SEH-Code generiert wird, bildet Sie der Funclet-Name vorangestellt den Funktionsnamen mit Text, z. B. "__catch," "\__unwind", oder eine andere Zeichenfolge.  
+ Durch den Compiler wird die für einen Funktionsnamen zugelassene maximale Länge eingeschränkt. Wenn der Compiler Funclets für EH/SEH-Code generiert, werden durch den Namen der Funktion mit etwas Text voranstellen der Funclet-Name bildet, z. B. "__catch," "\__unwind", oder eine andere Zeichenfolge.  
   
  Wenn der erstellte funclet-Name zu lang ist, wird dieser vom Compiler gekürzt, und es wird C4788 ausgegeben.  
   
@@ -43,4 +43,4 @@ typedef C1<x, y, z<T>>::C2<a,b,c> new_class ;
 new_class::f  
 ```  
   
- Diese Warnung tritt nur im [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]-Compiler auf.
+ Diese Warnung tritt nur in der X64 Compiler.

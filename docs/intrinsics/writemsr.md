@@ -1,5 +1,5 @@
 ---
-title: __writemsr | Microsoft Docs
+title: __writemsr | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76131f4d07dec1713c80b4cd4f98f729b9ecf07b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9a3fdc9b094ebb81db1bfe841d7974c5df89ca0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323523"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538856"
 ---
 # <a name="writemsr"></a>__writemsr
 **Microsoft-spezifisch**  
@@ -41,7 +41,7 @@ void __writemsr(
   
 #### <a name="parameters"></a>Parameter  
  [in] `Register`  
- Das Modell bestimmte Register.  
+ Das Modell bestimmte registrieren.  
   
  [in] `Value`  
  Der zu schreibende Wert.  
@@ -50,7 +50,7 @@ void __writemsr(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__writemsr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writemsr`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

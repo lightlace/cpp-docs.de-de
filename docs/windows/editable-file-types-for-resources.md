@@ -19,28 +19,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e17bada862cf2d7c5b86815ae140e298060ecb40
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8319786603470ca7ef8ab58897261b1be0a3503a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648430"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603525"
 ---
 # <a name="editable-file-types-for-resources"></a>Editierbare Dateitypen für Ressourcen
-Sie können die folgenden Dateitypen öffnen und die darin enthaltenen Ressourcen bearbeiten.  
-  
-|Dateiname|Beschreibung|  
-|---------------|-----------------|  
-|.rc|Ressourcenskriptdateien|  
-|.rct|Ressourcenvorlagendateien|  
-|.res|Ressourcendateien|  
-|.resx|Verwaltete Ressourcendateien|  
-|.exe|Ausführbare Dateien.|  
-|.dll|Dynamic Link Library-Dateien.|  
-|.bmp, .ico, .dib und .cur|Bitmap-, Symbol-, Symbolleisten- und Cursordateien|  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ressourcendateien](../windows/resource-files-visual-studio.md)
+
+Sie können die folgenden Dateitypen öffnen und die darin enthaltenen Ressourcen bearbeiten.
+
+|Dateiname|Beschreibung|
+|---------------|-----------------|
+|.rc|Ressourcenskriptdateien|
+|.rct|Ressourcenvorlagendateien|
+|.res|Ressourcendateien|
+|.resx|Verwaltete Ressourcendateien|
+|.exe|Ausführbare Dateien.|
+|.dll|Dynamic Link Library-Dateien.|
+|.bmp, .ico, .dib und .cur|Bitmap-, Symbol-, Symbolleisten- und Cursordateien|
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Ressourcendateien](../windows/resource-files-visual-studio.md)

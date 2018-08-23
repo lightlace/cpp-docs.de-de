@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ae538b66e4e8de7611f7b2f276c354a87dad2ef
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 250286e12d2062bd33c2d2b517e901e7b6c27d55
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017890"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603003"
 ---
 # <a name="weakrefweakref-destructor"></a>WeakRef::~WeakRef-Destruktor
-Hebt die Initialisierung der aktuellen Instanz von der **WeakRef** Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-~WeakRef();  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [WeakRef-Klasse](../windows/weakref-class.md)
+
+Hebt die Initialisierung der aktuellen Instanz von der **WeakRef** Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+~WeakRef();
+```
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[WeakRef-Klasse](../windows/weakref-class.md)

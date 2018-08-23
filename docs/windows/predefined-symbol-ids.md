@@ -16,31 +16,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b459fbf77b75a61350fd1aa69c00749ceb1afc4c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: ee34744a110b31eba125e4b6cbef48207081f5d7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017239"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578639"
 ---
 # <a name="predefined-symbol-ids"></a>Vordefinierte Symbol-IDs
-Wenn Sie ein neues Projekt beginnen sind je nach Projekttyp einige Symbol-IDs für die Verwendung vordefiniert. Diese Symbol-IDs unterstützen verschiedene Bibliotheken und Projekttypen wie MFC. Sie stellen allgemeine Aufgaben dar, die in jeder Anwendung oder Aktionen von Hardwareelementen, wie z. B. Maus oder Drucker, in der Regel enthalten sind.  
-  
- Diese Symbol-IDs gewinnen bei der Arbeit mit Ressourcen an Bedeutung. Sie sind verfügbar, wenn Sie Tastenkombinationstabellen bearbeiten. Einige davon sind bereits mit virtuellen Tasten verknüpft. Sie sind auch verfügbar, die Ihnen mit der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Sie können vordefinierte Symbol-IDs neuen Ressourcen zuweisen oder diesen Tastenkombinationen zuweisen. Auf diese Weise wird die der Symbol-ID zugewiesene Funktion automatisch der Tastenkombination zugewiesen.  
-  
- Diese Bibliotheken verfügen über vordefinierte Symbole, die als Teil des Projekts angezeigt werden:  
-  
--   [Vordefinierte MFC-Symbole](../windows/mfc-predefined-symbols.md)  
-  
--   [Vordefinierte ATL-Symbole](../windows/atl-predefined-symbols.md)  
-  
--   [Vordefinierte Win32-Symbole](../windows/win32-predefined-symbols.md)  
-  
-    > [!NOTE]
-    >  Vordefinierte Symbole sind stets schreibgeschützt.  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32, MFC oder ATL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)
+
+Wenn Sie ein neues Projekt beginnen sind je nach Projekttyp einige Symbol-IDs für die Verwendung vordefiniert. Diese Symbol-IDs unterstützen verschiedene Bibliotheken und Projekttypen wie MFC. Sie stellen allgemeine Aufgaben dar, die in jeder Anwendung oder Aktionen von Hardwareelementen, wie z. B. Maus oder Drucker, in der Regel enthalten sind.
+
+Diese Symbol-IDs gewinnen bei der Arbeit mit Ressourcen an Bedeutung. Sie sind verfügbar, wenn Sie Tastenkombinationstabellen bearbeiten. Einige davon sind bereits mit virtuellen Tasten verknüpft. Sie sind auch verfügbar, die Ihnen mit der [Fenster "Eigenschaften"](/visualstudio/ide/reference/properties-window). Sie können vordefinierte Symbol-IDs neuen Ressourcen zuweisen oder diesen Tastenkombinationen zuweisen. Auf diese Weise wird die der Symbol-ID zugewiesene Funktion automatisch der Tastenkombination zugewiesen.
+
+Diese Bibliotheken verfügen über vordefinierte Symbole, die als Teil des Projekts angezeigt werden:
+
+- [Vordefinierte MFC-Symbole](../windows/mfc-predefined-symbols.md)
+
+- [Vordefinierte ATL-Symbole](../windows/atl-predefined-symbols.md)
+
+- [Vordefinierte Win32-Symbole](../windows/win32-predefined-symbols.md)
+
+   > [!NOTE]
+   > Vordefinierte Symbole sind stets schreibgeschützt.
+
+## <a name="requirements"></a>Anforderungen
+
+Win32, MFC oder ATL
+
+## <a name="see-also"></a>Siehe auch
+
+[Symbole: Ressourcenbezeichner](../windows/symbols-resource-identifiers.md)

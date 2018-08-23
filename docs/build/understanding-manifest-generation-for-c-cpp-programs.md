@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu Manifestgenerierung für C/c ++ ‑Programme | Microsoft Docs
+title: Verständnis der Manifestgenerierung für C/C++-Programme | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb6a65c718b88e4072c0ddad19411bb8ea4ddcff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40dbc61009cdfaa5621335cfb78dd10eae2138ca
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381627"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572273"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Manifestgenerierung für C/C++-Programme
-Ein [manifest](http://msdn.microsoft.com/library/aa375365) ist ein XML-Dokument, das eine externe XML-Datei oder eine Ressource sein kann, die in einer Anwendung oder Assembly eingebettet. Das Manifest einer [isolierte Anwendung](http://msdn.microsoft.com/library/aa375190) dient zum Verwalten der Namen und Versionen freigegebener Seite-an-Seite-Assemblys, die an die die Anwendung zur Laufzeit gebunden werden soll. Das Manifest einer Seite-an-Seite-Assembly gibt seine Abhängigkeiten auf den Namen, Versionen, Ressourcen und andere Assemblys an.  
+Ein [manifest](http://msdn.microsoft.com/library/aa375365) ist ein XML-Dokument, die eine externe XML-Datei oder eine Ressource sein können, die in einer Anwendung oder eine Assembly eingebettet. Das Manifest eine [isolierte Anwendung](http://msdn.microsoft.com/library/aa375190) wird verwendet, um die Verwaltung der Namen und Versionen freigegebener Seite-an-Seite-Assemblys, die an die die Anwendung zur Laufzeit gebunden werden soll. Das Manifest einer Seite-an-Seite-Assembly gibt seine Abhängigkeiten für Namen, Versionen, Ressourcen und anderen Assemblys.  
   
- Es gibt zwei Möglichkeiten, ein Manifest für isolierte Anwendung oder eine Seite-an-Seite-Assembly zu erstellen. Zunächst kann der Verfasser der Assembly manuell eine Manifestdatei Regeln und benennungsanforderungen erstellen. Auch wenn ein Programm nur auf Visual C++-Assemblys wie CRT, MFC, ATL oder anderen abhängig ist, kann dann ein Manifest automatisch vom Linker generiert werden.  
+ Es gibt zwei Möglichkeiten, ein Manifest für isolierte Anwendung oder eine Seite-an-Seite-Assembly zu erstellen. Zunächst kann eine Manifestdatei Regeln befolgen, und nennen Sie die Anforderungen von der Verfasser der Assembly manuell erstellen. Auch wenn ein Programm nur auf Visual C++-Assemblys wie CRT, MFC, ATL oder anderen abhängig ist, kann dann ein Manifest automatisch vom Linker generiert werden.  
   
- Die Header der Visual C++-Bibliotheken enthalten Assemblyinformationen, und wenn die Clientbibliotheken im Anwendungscode enthalten sind, diese Assemblyinformationen wird vom Linker verwendet werden um ein Manifest für die endgültige Binärdatei zu bilden. Der Linker bettet die Manifestdatei in die Binärdatei nicht und kann nur das Manifest als externe Datei zu generieren. Mit einem Manifest als externe Datei funktioniert nicht für alle Szenarien. Beispielsweise empfiehlt es sich, dass private Assemblys Manifeste eingebettet haben. In Befehlszeilenbuilds beispielsweise solche, die NMAKE verwenden, um Code zu erstellen, kann ein Manifest mit dem manifest Tool eingebettet werden. Weitere Informationen finden Sie unter [Manifesten in der Befehlszeile](../build/manifest-generation-at-the-command-line.md). Beim Erstellen von in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], ein Manifest eingebettet werden kann, durch Festlegen einer Eigenschaft für das Manifesttool in der **Projekteigenschaften** Dialogfeld; Siehe [Manifesten in Visual Studio](../build/manifest-generation-in-visual-studio.md).  
+ Die Header der C++-Bibliotheken enthalten die Assemblyinformationen aus, und wenn Bibliotheken im Anwendungscode enthalten sind, wird diese Assemblyinformationen vom Linker ein Manifest für die endgültige Binärdatei bilden verwendet. Der Linker bettet die Manifestdatei in die Binärdatei nicht und kann nur das Manifest als externe Datei generieren. Müssen ein Manifest als externe Datei funktionieren nicht für alle Szenarien. Beispielsweise empfiehlt es sich, dass private Assemblys Manifeste eingebettet haben. In Befehlszeilenbuilds wie z. B. Dateien, die Nmake verwenden, um Code zu erstellen, kann ein Manifest mit dem Tool manifest eingebettet werden. Weitere Informationen finden Sie unter [Manifest Generation an der Befehlszeile](../build/manifest-generation-at-the-command-line.md). Wenn Sie in Visual Studio zu erstellen, kann ein Manifest eingebettet werden, durch Festlegen einer Eigenschaft für das Manifesttool in die **Projekteigenschaften** Dialogfeld; Siehe [Manifest Generation in Visual Studio](../build/manifest-generation-in-visual-studio.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konzept der isolierten Anwendungen und Seite-an-Seite-Assemblys](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 42909a9ddc24131c759886c4d169c4fd7484ca98
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7832985c6095aecae5098461d36947ff4268d262
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340416"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571783"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referenz der OLE DB-Anbietervorlagen
 Die Klassen und Schnittstellen für OLE DB-Anbieter-Vorlagen können in folgenden Kategorien gruppiert werden. Das Referenzmaterial enthält zudem Informationen zu den [Makros für OLE DB-Anbietervorlagen](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -60,7 +60,7 @@ Die Klassen und Schnittstellen für OLE DB-Anbieter-Vorlagen können in folgende
  Öffnet und gibt ein Rowset, das alle Zeilen aus einer einzelnen Basistabelle oder einem Index enthält. Verbindliche Schnittstelle für ein Sitzungsobjekt.  
   
  [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)  
- Implementiert die OLE DB [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) -Schnittstelle, die ermöglicht, der die Werte der Spalten in vorhandenen Zeilen löschen von Zeilen sowie das Einfügen neuer Zeilen aktualisiert.  
+ Implementiert die OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) -Schnittstelle, die ermöglicht, der die Werte der Spalten in vorhandenen Zeilen löschen von Zeilen sowie das Einfügen neuer Zeilen aktualisiert.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
  Diese Klasse erbt von [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) und überschreibt [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` führt die gleichen Funktionen wie `IObjectWithSite` kann jedoch auch die OLE DB-Eigenschaften `DBPROPCANSCROLLBACKWARDS` und `DBPROPCANFETCHBACKWARDS`.  
@@ -75,13 +75,13 @@ Die Klassen und Schnittstellen für OLE DB-Anbieter-Vorlagen können in folgende
  Implementiert die Rowset-Eigenschaften mithilfe der Eigenschaft-Zuordnung, die definiert, die in Ihrer Klasse des Befehls festgelegt. Erforderliche Schnittstelle für Rowsets.  
   
  [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)  
- Implementiert die OLE DB [IRowsetLocate](https://msdn.microsoft.com/library/ms721190.aspx) -Schnittstelle, die beliebige Zeilen aus einem Rowset abruft. Stellen Sie zur Unterstützung von OLE DB-Lesezeichen in einem Rowset, das Rowset, das von dieser Klasse erben.  
+ Implementiert die OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\)) -Schnittstelle, die beliebige Zeilen aus einem Rowset abruft. Stellen Sie zur Unterstützung von OLE DB-Lesezeichen in einem Rowset, das Rowset, das von dieser Klasse erben.  
   
  [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)  
- Broadcast-implementiert Funktionen zum Listener auf dem Verbindungspunkt empfehlen `IID_IRowsetNotify` von Änderungen an den Inhalt des Rowsets. Implementieren von Consumern, die Benachrichtigungen verarbeitet [IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx) und registrieren Sie ihn auf diesen Verbindungspunkt verweist.  
+ Broadcast-implementiert Funktionen zum Listener auf dem Verbindungspunkt empfehlen `IID_IRowsetNotify` von Änderungen an den Inhalt des Rowsets. Implementieren von Consumern, die Benachrichtigungen verarbeitet [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)) und registrieren Sie ihn auf diesen Verbindungspunkt verweist.  
   
  [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)  
- Implementiert die OLE DB [IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx) -Schnittstelle, die Consumer die Übertragung von Änderungen mit Verzögerung ermöglicht [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) auf die Datenquelle und die Änderungen vor der Übertragung rückgängig zu machen.  
+ Implementiert die OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) -Schnittstelle, die Consumer die Übertragung von Änderungen mit Verzögerung ermöglicht [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) auf die Datenquelle und die Änderungen vor der Übertragung rückgängig zu machen.  
   
 ## <a name="command-classes"></a>Command-Klassen  
  [ICommandImpl](../../data/oledb/icommandimpl-class.md)  
@@ -114,7 +114,7 @@ Die Klassen und Schnittstellen für OLE DB-Anbieter-Vorlagen können in folgende
   
  [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)  
   
- Implementiert die OLE DB [IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx) Schnittstelle, Hinzufügen von Einträgen zu und Abrufen von Datensätzen aus einem Datenelement.  
+ Implementiert die OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) Schnittstelle, Hinzufügen von Einträgen zu und Abrufen von Datensätzen aus einem Datenelement.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Referenz der OLE DB Consumervorlagen](../../data/oledb/ole-db-consumer-templates-reference.md)   

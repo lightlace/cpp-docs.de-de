@@ -1,5 +1,5 @@
 ---
-title: CPaneDivider Klasse | Microsoft Docs
+title: CPaneDivider-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -94,17 +94,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7315adc855b0bfbe1cc4ffae87c416fbaa584d57
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: d19ede21d90353f9741a5a1250eddf049de71aa6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079363"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538298"
 ---
 # <a name="cpanedivider-class"></a>CPaneDivider-Klasse
-[!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
- Die `CPaneDivider` Klasse zwei Bereiche unterteilt, zwei Gruppen unterteilt oder trennt eine Bereichsgruppe vom Clientbereich Hauptrahmenfenster.  
+ Die `CPaneDivider` Klasse zwei Bereiche unterteilt, zwei Gruppen unterteilt oder trennt eine Bereichsgruppe vom Clientbereich des Fensters Hauptrahmenfenster.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -163,24 +163,24 @@ class CPaneDivider : public CBasePane
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CPaneDivider::GetPanes](#getpanes)|Gibt die Liste der Bereiche, die sich in der [CPaneContainer Klasse](../../mfc/reference/cpanecontainer-class.md). Diese Methode sollte nur für Standard-bereichsteiler aufgerufen werden.|  
-|[CPaneDivider::GetPaneDividers](#getpanedividers)|Gibt die Liste der bereichsteiler, die sich in der [CPaneContainer Klasse](../../mfc/reference/cpanecontainer-class.md). Diese Methode sollte nur für Standard-bereichsteiler aufgerufen werden.|  
+|[CPaneDivider::GetPanes](#getpanes)|Gibt die Liste der Bereiche, die im befinden die [CPaneContainer-Klasse](../../mfc/reference/cpanecontainer-class.md). Diese Methode sollte nur für Standard-bereichsteiler aufgerufen werden.|  
+|[CPaneDivider::GetPaneDividers](#getpanedividers)|Gibt die Liste der bereichsteiler, die im befinden die [CPaneContainer-Klasse](../../mfc/reference/cpanecontainer-class.md). Diese Methode sollte nur für Standard-bereichsteiler aufgerufen werden.|  
   
 ### <a name="data-members"></a>Datenmember  
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Gibt die Standardbreite in Pixel, der alle bereichsteiler in der Anwendung an.|  
-|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Enthält einen Zeiger auf die laufzeitklasseninformationen zu einem `CPaneDivider`-abgeleitetes Objekt.|  
+|[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Gibt die Standardbreite des in der Anwendung alle bereichsteiler in Pixel an.|  
+|[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Enthält einen Zeiger auf die Common Language Runtime-Klasseninformationen über eine `CPaneDivider`-abgeleitetes Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Erstellt das Framework `CPaneDivider` -Objekte automatisch, wenn ein Bereich angedockt ist.  
+ Erstellt das Framework `CPaneDivider` -Objekte automatisch, wenn Sie ein Bereich angedockt ist.  
   
  Es gibt zwei Arten von bereichsteiler:  
   
--   ein Standard-bereichsteiler wird erstellt, wenn eine Gruppe von Bereichen auf einer Seite eines Hauptrahmenfenster angedockt ist. Standard bereichsteiler enthält einen Zeiger auf die [CPaneContainerManager Klasse](../../mfc/reference/cpanecontainermanager-class.md) und leitet den Großteil der Vorgänge für die Gruppe von Bereichen (z. B. Ändern der Größe von eines Bereichs oder einen anderen Andocken Bereich oder Container) für den Container-Manager. Jede andockbaren Bereich steht ein Zeiger auf die Standard-bereichsteiler.  
+-   ein Standard-bereichsteiler wird erstellt, wenn eine Gruppe von Bereichen an das Hauptrahmenfenster eine Seite angedockt wird. Standardmäßige bereichsteiler enthält einen Zeiger auf die [CPaneContainerManager-Klasse](../../mfc/reference/cpanecontainermanager-class.md) und leitet die meisten Vorgänge für die Gruppe von Bereichen (z. B. Ändern der Größe eines Bereichs oder einer anderen Andocken Bereich oder Container) an den Container-Manager. Jede andockbarer Bereich wird einen Zeiger auf die Standard-bereichsteiler verwaltet.  
   
--   Ein reguläre bereichsteiler teilt nur zwei Bereiche in einem Container. Weitere Informationen finden Sie unter [CPaneContainer Klasse](../../mfc/reference/cpanecontainer-class.md).  
+-   Ein reguläre bereichsteiler dividiert einfach zwei Bereiche in einem Container. Weitere Informationen finden Sie unter [CPaneContainer-Klasse](../../mfc/reference/cpanecontainer-class.md).  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Codebeispiel zeigt den Abruf eines `CPaneDivider`-Objekts aus einem `CWorkspaceBar`-Objekt. Dieser Codeausschnitt ist Teil der [MDI-Registerkarten Demobeispiel](../../visual-cpp-samples.md).  
@@ -440,7 +440,7 @@ const CBasePane* GetFirstPane() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getpanedividers"></a>  CPaneDivider::GetPaneDividers  
- Gibt die Liste der bereichsteiler, die sich in der [CPaneContainer Klasse](../../mfc/reference/cpanecontainer-class.md). Diese Methode sollte nur für Standard-bereichsteiler aufgerufen werden.  
+ Gibt die Liste der bereichsteiler, die im befinden die [CPaneContainer-Klasse](../../mfc/reference/cpanecontainer-class.md). Diese Methode sollte nur für Standard-bereichsteiler aufgerufen werden.  
   
 ```  
 void GetPaneDividers(CObList& lstSliders);
@@ -448,10 +448,10 @@ void GetPaneDividers(CObList& lstSliders);
   
 ### <a name="parameters"></a>Parameter  
  [out] *LstSliders*  
- Enthält die Liste der bereichsteiler, die im Bereich Container befinden.  
+ Enthält die Liste der bereichsteiler, die sich im Bereich Container befinden.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sollte für Standard-bereichsteiler nur aufgerufen werden. Ein Standard-bereichsteiler ist eine Trennlinie, die den gesamten Bereich Containergröße.  
+ Diese Methode sollte für die Standard-bereichsteiler nur aufgerufen werden. Ein Standard-bereichsteiler ist eine Trennlinie, die der gesamte Bereich der Containergröße.  
   
 ##  <a name="getpanedividerstyle"></a>  CPaneDivider::GetPaneDividerStyle  
 
@@ -465,7 +465,7 @@ DWORD GetPaneDividerStyle() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="getpanes"></a>  CPaneDivider::GetPanes  
- Gibt die Liste der Bereiche, die sich in der [CPaneContainer Klasse](../../mfc/reference/cpanecontainer-class.md). Diese Methode sollte aufgerufen werden, nur für Standard-bereichsteiler abrufen.  
+ Gibt die Liste der Bereiche, die im befinden die [CPaneContainer-Klasse](../../mfc/reference/cpanecontainer-class.md). Diese Methode sollte aufgerufen werden, nur für Standard-bereichsteiler abzurufen.  
   
 ```  
 void GetPanes(CObList& lstBars);
@@ -473,10 +473,10 @@ void GetPanes(CObList& lstBars);
   
 ### <a name="parameters"></a>Parameter  
  [out] *LstBars*  
- Enthält die Liste von Bereichen, die in den Bereich-Container befinden.  
+ Enthält die Liste der Bereiche, die sich im Bereich Container befinden.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sollte für Standard-bereichsteiler nur aufgerufen werden. Ein Standard-bereichsteiler ist eine Trennlinie, die den gesamten Bereich Containergröße.  
+ Diese Methode sollte für die Standard-bereichsteiler nur aufgerufen werden. Ein Standard-bereichsteiler ist eine Trennlinie, die der gesamte Bereich der Containergröße.  
   
 ##  <a name="getrootcontainerrect"></a>  CPaneDivider::GetRootContainerRect  
 
@@ -570,7 +570,7 @@ BOOL IsHorizontal() const;
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="m_ndefaultwidth"></a>  CPaneDivider::m_nDefaultWidth  
- Gibt die Standardbreite in Pixel, der alle bereichsteiler in der Anwendung an.  
+ Gibt die Standardbreite des in der Anwendung alle bereichsteiler in Pixel an.  
   
 ```  
 AFX_IMPORT_DATA static int m_nDefaultWidth;  
@@ -592,17 +592,17 @@ virtual void Move(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="m_psliderrtc"></a>  CPaneDivider::m_pSliderRTC  
- Enthält einen Zeiger auf die Laufzeit-Klasseninformationen zu einem `CPaneDivider`-abgeleitetes Objekt.  
+ Enthält einen Zeiger auf die Klasse zur Laufzeit über eine `CPaneDivider`-abgeleitetes Objekt.  
   
 ```  
 AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;  
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Setzen Sie diese Membervariable, wenn Sie einen benutzerdefinierte bereichsteiler erstellen. Dies kann das Framework der bereichsteiler zu erstellen, wenn der Bereich gezeichnet wird.  
+ Legen Sie diese Membervariable, wenn Sie einen benutzerdefinierten bereichsteiler erstellen. Dadurch wird das Framework, um Ihre bereichsteiler zu erstellen, wenn der Bereich gezeichnet wird.  
   
 ### <a name="example"></a>Beispiel  
- Im folgende Beispiel wird gezeigt, wie zum Festlegen der `m_pSliderRTC` Membervariablen gespeichert:  
+ Im folgende Beispiel veranschaulicht die legen Sie die `m_pSliderRTC` Membervariable:  
   
 ```  
 class CMySplitter : public CPaneDivider  

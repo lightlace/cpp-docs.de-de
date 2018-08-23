@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 932185002032ab86ca80b2b3384bfe6cbb69f8b1
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 59e890e9d38ff0a37114f2f15217a748c21fff44
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338709"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572949"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Unterstützen von Transaktionen in OLE DB
 Ein [Transaktion](../../data/transactions-mfc-data-access.md) ist eine Möglichkeit, eine Gruppe oder einem Batch zusammenfassen, eine Reihe von Updates mit einer Datenquelle, damit entweder alle erfolgreich ausgeführt werden und gleichzeitig ein Commit ausgeführt werden, oder (Wenn eine der davon ausfällt) sind keine ein Commit ausgeführt, und die gesamte Transaktion zurückgesetzt wird. Dadurch wird sichergestellt, die Integrität des Ergebnisses, auf die Datenquelle.  
   
  OLE DB unterstützt Transaktionen mit den folgenden drei Methoden:  
   
--   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx)  
+-   [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
   
--   [ITransaction::Commit](https://msdn.microsoft.com/library/ms713008.aspx)  
+-   [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
   
--   [ITransaction::Abort](https://msdn.microsoft.com/library/ms709833.aspx)  
+-   [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Beziehung zwischen Sitzungen und Transaktionen  
  Ein einzelnes Objekt kann eine oder mehrere Sitzungsobjekte erstellen, von die jeder innerhalb oder außerhalb des Bereichs einer Transaktion zu einem bestimmten Zeitpunkt sein kann.  
@@ -55,7 +55,7 @@ Ein [Transaktion](../../data/transactions-mfc-data-access.md) ist eine Möglichk
  Aufrufen von `ITransaction::Commit` oder `ITransaction::Abort` beendet die Transaktion. `Commit` bewirkt, dass alle Änderungen innerhalb des Bereichs der Transaktion, die mit dem Datenspeicher angewendet werden. `Abort` bewirkt, dass alle Änderungen innerhalb des Bereichs der Transaktion abgebrochen werden soll und dem Datenspeicher wird im Status belassen, es vor der die Transaktion gestartet wurde.  
   
 ## <a name="nested-transactions"></a>Geschachtelte Transaktionen  
- Ein [geschachtelten Transaktionen](https://msdn.microsoft.com/library/ms716985.aspx) tritt auf, wenn Sie eine neue lokale Transaktion starten, wenn die Sitzung bereits eine aktive Transaktion vorhanden ist. Die neue Transaktion wird als eine geschachtelte Transaktion unter der aktuellen Transaktion gestartet. Wenn der Anbieter geschachtelte Transaktionen nicht unterstützt, wird beim Aufrufen `StartTransaction` bei bereits gibt eine aktive Transaktion in der Sitzung wird XACT_E_XTIONEXISTS zurückgegeben.  
+ Ein [geschachtelten Transaktionen](/previous-versions/windows/desktop/ms716985\(v=vs.85\)) tritt auf, wenn Sie eine neue lokale Transaktion starten, wenn die Sitzung bereits eine aktive Transaktion vorhanden ist. Die neue Transaktion wird als eine geschachtelte Transaktion unter der aktuellen Transaktion gestartet. Wenn der Anbieter geschachtelte Transaktionen nicht unterstützt, wird beim Aufrufen `StartTransaction` bei bereits gibt eine aktive Transaktion in der Sitzung wird XACT_E_XTIONEXISTS zurückgegeben.  
   
 ## <a name="distributed-transactions"></a>Verteilte Transaktionen  
  Eine verteilte Transaktion ist eine Transaktion, die verteilte Daten aktualisiert. d. h. die Daten auf mehreren vernetzten Computersystemen befinden. Wenn Sie Transaktionen über ein verteiltes System unterstützen möchten, sollten Sie .NET Framework anstelle der OLE DB-transaktionsunterstützung verwenden.  

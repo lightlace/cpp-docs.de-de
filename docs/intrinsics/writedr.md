@@ -1,5 +1,5 @@
 ---
-title: __writedr | Microsoft Docs
+title: __writedr | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fab96a22dec9b4cf2914fa2c02dd973bcd7ace8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 598b95df8fd2f4dd2826fcfa1f59a7e2daa8d523
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329182"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540238"
 ---
 # <a name="writedr"></a>__writedr
-Schreibt den angegebenen Wert, der die angegebene Debug-Register.  
+Schreibt den angegebenen Wert dem angegebenen Debug-Register.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,10 +35,10 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
   
 #### <a name="parameters"></a>Parameter  
  [in] `DebugRegister`  
- Registrieren Sie eine Zahl zwischen 0 und 7, die das Debuggen bezeichnet.  
+ Registrieren Sie eine Zahl von 0 bis 7, die das Debuggen identifiziert.  
   
  [in] `DebugValue`  
- Registrieren Sie ein Wert zum Schreiben in das Debuggen.  
+ Ein Wert zum Schreiben in das Debuggen registrieren.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese systeminternen Funktionen sind nur im Kernelmodus verfügbar, und die Routinen sind nur als systeminterne Funktionen verfügbar.  
@@ -47,7 +47,7 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__writedr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__writedr`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

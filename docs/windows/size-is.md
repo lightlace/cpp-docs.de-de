@@ -17,52 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8dbb3bfbf61c4ad7303c6cee272e14fc91bc9656
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 6d282731320ba52299cb0b6f2813f5f42a229b46
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40011854"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583747"
 ---
 # <a name="sizeis"></a>size_is
-Geben Sie die Größe des Arbeitsspeichers für Größe Zeiger zugewiesen, Größe der Zeiger auf Zeiger, die Größe und Einzel- oder mehrdimensionale Arrays.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-[ size_is(  
-   "expression"  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *Ausdruck*  
- Die Größe des Arbeitsspeichers für Größe Zeiger.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Size_is** C++-Attribut hat die gleiche Funktionalität wie die [Size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) MIDL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
- Siehe das Beispiel für [First_is](../windows/first-is.md) ein Beispiel dafür, wie Sie einen Abschnitt eines Arrays an.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|Im Feld **Struktur** oder **Union**, Schnittstellenparameter,-Schnittstellenmethode|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|`max_is`|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameterattribute](../windows/parameter-attributes.md)   
- [first_is](../windows/first-is.md)   
- [last_is](../windows/last-is.md)   
- [max_is](../windows/max-is.md)   
- [length_is](../windows/length-is.md)   
+
+Geben Sie die Größe des Arbeitsspeichers für Größe Zeiger zugewiesen, Größe der Zeiger auf Zeiger, die Größe und Einzel- oder mehrdimensionale Arrays.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[ size_is(
+   "expression"
+) ]
+```
+
+### <a name="parameters"></a>Parameter
+
+*Ausdruck*  
+Die Größe des Arbeitsspeichers für Größe Zeiger.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Size_is** C++-Attribut hat die gleiche Funktionalität wie die [Size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+Siehe das Beispiel für [First_is](../windows/first-is.md) ein Beispiel dafür, wie Sie einen Abschnitt eines Arrays an.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|Im Feld **Struktur** oder **Union**, Schnittstellenparameter,-Schnittstellenmethode|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|`max_is`|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Parameterattribute](../windows/parameter-attributes.md)  
+[first_is](../windows/first-is.md)  
+[last_is](../windows/last-is.md)  
+[max_is](../windows/max-is.md)  
+[length_is](../windows/length-is.md)  

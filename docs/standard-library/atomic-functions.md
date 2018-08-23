@@ -68,12 +68,12 @@ helpviewer_keywords:
 - std::kill_dependency [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df0c7ea332cda65aa3621de581eb39419ee9b9d4
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: b70f4df63b5a885403b91c1470c3066c33f5f123
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028316"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540440"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt;-Funktionen
 
@@ -164,7 +164,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="remarks"></a>Hinweise
 
-Ein *atomischen Vergleichs- und Austausch-Vorgang* vergleicht den Wert, der in dem Objekt gespeichert wird, auf das von *Atom* anhand des Werts, auf das von *"exp"*. Wenn die Werte gleich sind, die der Wert, der in dem Objekt gespeichert wird, auf das von *Atom* durch ersetzt `Val` mithilfe einer `read-modify-write` Vorgang und der Speicherreihenfolge bestellen Sie Einschränkungen, die vom angegebenwerden*Order1*. Wenn die Werte nicht gleich sind, ersetzt den Wert, auf das von *"exp"* mit dem Wert, der in dem Objekt gespeichert wird, auf das von *Atom* und, die Einschränkungen für die Speicherreihenfolge angewendet gemäß *Order2*.
+Ein *atomischen Vergleichs- und Austausch-Vorgang* vergleicht den Wert, der in dem Objekt gespeichert wird, auf das von *Atom* anhand des Werts, auf das von *"exp"*. Wenn die Werte gleich sind, den Wert, der in dem Objekt gespeichert wird, auf das von *Atom* durch ersetzt *Wert* mithilfe einer `read-modify-write` Vorgang und Anwenden von Einschränkungen der arbeitsspeicherreihenfolge, die gemäß *Order1*. Wenn die Werte nicht gleich sind, ersetzt den Wert, auf das von *"exp"* mit dem Wert, der in dem Objekt gespeichert wird, auf das von *Atom* und, die Einschränkungen für die Speicherreihenfolge angewendet gemäß *Order2*.
 
 ## <a name="atomic_compare_exchange_weak"></a> atomic_compare_exchange_weak
 

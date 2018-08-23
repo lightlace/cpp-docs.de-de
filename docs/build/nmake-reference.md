@@ -1,5 +1,5 @@
 ---
-title: NMAKE-Referenz | Microsoft Docs
+title: NMAKE-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ffd955400b1b27efc192a7fe0df4ef31164cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00113372d86e488882c687afb56bd5e52bb74c21
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372678"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573062"
 ---
 # <a name="nmake-reference"></a>NMAKE-Referenz
-Bei Microsoft Program Maintenance Utility (NMAKE.EXE) handelt es sich um ein in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] enthaltenes Befehlszeilentools, das Projekte auf Grundlage von in einer Beschreibungsdatei enthaltenen Befehlen erstellt.  
+Das Microsoft Program Maintenance Utility (NMAKE. EXE-Datei) ist ein Befehlszeilenprogramm in Visual Studio, die basierend auf Befehle, die in einer Beschreibungsdatei enthaltenen Projekte erstellt.  
   
- Zum Verwenden von NMAKE müssen Sie es in einem Developer-Eingabeaufforderungsfenster ausführen. Ein Developer-Eingabeaufforderungsfenster verfügt über die für die Tools, Bibliotheken und „include“-Dateipfade festgelegten Umgebungsvariablen, die für das Erstellen an der Befehlszeile erforderlich sind. Details dazu, wie Sie ein Developer-Eingabeaufforderungsfenster zu öffnen, finden Sie unter [Erstellen von C/C++-Code in der Befehlszeile](../build/building-on-the-command-line.md).  
+ Zum Verwenden von NMAKE müssen Sie es in einem Developer-Eingabeaufforderungsfenster ausführen. Ein Developer-Eingabeaufforderungsfenster verfügt über die für die Tools, Bibliotheken und „include“-Dateipfade festgelegten Umgebungsvariablen, die für das Erstellen an der Befehlszeile erforderlich sind. Weitere Informationen darüber, wie Sie ein Developer-Eingabeaufforderungsfenster zu öffnen, finden Sie unter [Erstellen von C/C++-Code, in der Befehlszeile](../build/building-on-the-command-line.md).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
  [Ausführen von NMAKE](../build/running-nmake.md)  
@@ -42,7 +42,7 @@ Bei Microsoft Program Maintenance Utility (NMAKE.EXE) handelt es sich um ein in 
   
  [Rückschlussregeln](../build/inference-rules.md)  
   
- [Punktdirektiven](../build/dot-directives.md)  
+ [Punktanweisungen](../build/dot-directives.md)  
   
  [Präprozessorlauf eines Makefiles](../build/makefile-preprocessing.md)  
   

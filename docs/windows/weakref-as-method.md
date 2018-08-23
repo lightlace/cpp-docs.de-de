@@ -17,56 +17,61 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7dd0dca806c1568d88c20eec6a7ac63e5fb242fb
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: c2a56904fb3709137c167513d0eba426bda7ad14
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020355"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589368"
 ---
 # <a name="weakrefas-method"></a>WeakRef::As-Methode
-Setzt den angegebenen `ComPtr` Parameter für den Zeiger auf die angegebene Schnittstelle darstellt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-template<typename U>  
-HRESULT As(  
-   _Out_ ComPtr<U>* ptr  
-);  
-  
-template<typename U>  
-HRESULT As(  
-   _Out_ Details::ComPtrRef<ComPtr<U>> ptr  
-);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *U*  
- Eine Schnittstellen-ID.  
-  
- *ptr*  
- Wenn dieser Vorgang abgeschlossen ist, ein Objekt, das Parameter repräsentiert *U*.  
-  
-## <a name="return-value"></a>Rückgabewert  
-  
--   S_OK, wenn dieser Vorgang erfolgreich ist; andernfalls ein HRESULT, der den Grund angibt. der Vorgang fehlgeschlagen ist, und *Ptr* nastaven NA hodnotu **"nullptr"**.  
-  
--   S_OK, wenn dieser Vorgang ist, aber das aktuelle erfolgreich **WeakRef** Objekt bereits freigegeben wurde. Parameter *Ptr* nastaven NA hodnotu **"nullptr"**.  
-  
--   S_OK, wenn dieser Vorgang ist, aber das aktuelle erfolgreich **WeakRef** abgeleitetes Objekt ist nicht vom Parameter *U*. Parameter *Ptr* nastaven NA hodnotu **"nullptr"**.  
-  
-## <a name="remarks"></a>Hinweise  
- Ein Fehler wird ausgegeben, wenn Parameter *U* ist `IWeakReference`, oder Sie stammt nicht aus `IInspectable`.  
-  
- Die erste Vorlage ist die Form, die Sie in Ihrem Code verwenden sollten. Die zweite Vorlage ist eine interne Hilfsspezialisierung, die C++-Sprachfeatures unterstützt, wie etwa das Schlüsselwort [auto](../cpp/auto-cpp.md) zur Typableitung.  
-  
- Ab Windows 10-SDKS können dieser Methode ist nicht festgelegt die **WeakRef** -Instanz **"nullptr"** Wenn der schwache Verweis nicht abgerufen werden konnte, so vermeiden Sie Code zur fehlerüberprüfung, die der WeakRef überprüft **"nullptr"**. Überprüfen Sie stattdessen *Ptr* für **"nullptr"**.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [WeakRef-Klasse](../windows/weakref-class.md)
+
+Setzt den angegebenen `ComPtr` Parameter für den Zeiger auf die angegebene Schnittstelle darstellt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template<typename U>
+HRESULT As(
+   _Out_ ComPtr<U>* ptr
+);
+
+template<typename U>
+HRESULT As(
+   _Out_ Details::ComPtrRef<ComPtr<U>> ptr
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*U*  
+Eine Schnittstellen-ID.
+
+*ptr*  
+Wenn dieser Vorgang abgeschlossen ist, ein Objekt, das Parameter repräsentiert *U*.
+
+## <a name="return-value"></a>Rückgabewert
+
+- S_OK, wenn dieser Vorgang erfolgreich ist; andernfalls ein HRESULT, der den Grund angibt. der Vorgang fehlgeschlagen ist, und *Ptr* nastaven NA hodnotu **"nullptr"**.
+
+- S_OK, wenn dieser Vorgang ist, aber das aktuelle erfolgreich **WeakRef** Objekt bereits freigegeben wurde. Parameter *Ptr* nastaven NA hodnotu **"nullptr"**.
+
+- S_OK, wenn dieser Vorgang ist, aber das aktuelle erfolgreich **WeakRef** abgeleitetes Objekt ist nicht vom Parameter *U*. Parameter *Ptr* nastaven NA hodnotu **"nullptr"**.
+
+## <a name="remarks"></a>Hinweise
+
+Ein Fehler wird ausgegeben, wenn Parameter *U* ist `IWeakReference`, oder Sie stammt nicht aus `IInspectable`.
+
+Die erste Vorlage ist die Form, die Sie in Ihrem Code verwenden sollten. Die zweite Vorlage ist eine interne Hilfsspezialisierung, die C++-Sprachfeatures unterstützt, wie etwa das Schlüsselwort [auto](../cpp/auto-cpp.md) zur Typableitung.
+
+Ab Windows 10-SDKS können dieser Methode ist nicht festgelegt die **WeakRef** -Instanz **"nullptr"** Wenn der schwache Verweis nicht abgerufen werden konnte, so vermeiden Sie Code zur fehlerüberprüfung, die der WeakRef überprüft **"nullptr"**. Überprüfen Sie stattdessen *Ptr* für **"nullptr"**.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[WeakRef-Klasse](../windows/weakref-class.md)

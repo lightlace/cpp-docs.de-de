@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7cb3d05997cfe3d803f522962ed9e7382269bd3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 16a43c0f7ca5f54d1c920d488a236012d8b974e3
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404924"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572572"
 ---
 # <a name="bstrt-class"></a>_bstr_t-Klasse
 **Microsoft-spezifisch**  
   
- Ein `_bstr_t` -Objekt kapselt den [BSTR-Datentyp](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Die Klasse verwaltet Ressourcen belegen und freigeben, die durch Funktionsaufrufe an `SysAllocString` und `SysFreeString` und andere `BSTR` APIs, falls erforderlich. Die **_bstr_t** Klasse verwendet die verweiszählung, um übermäßigen Mehraufwand zu vermeiden.  
+ Ein `_bstr_t` -Objekt kapselt den [BSTR-Datentyp](/previous-versions/windows/desktop/automat/bstr). Die Klasse verwaltet Ressourcen belegen und freigeben, die durch Funktionsaufrufe an `SysAllocString` und `SysFreeString` und andere `BSTR` APIs, falls erforderlich. Die **_bstr_t** Klasse verwendet die verweiszählung, um übermäßigen Mehraufwand zu vermeiden.  
   
 ### <a name="construction"></a>Konstruktion  
   

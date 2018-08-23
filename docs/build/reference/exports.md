@@ -1,7 +1,7 @@
 ---
 title: EXPORTE | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c642a623e76a9e1344a90efd4f0a47ad195c553e
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: f6645ee4c890dab65cde8eab5dc18df1c31082c1
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322188"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42571602"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -49,11 +49,18 @@ EXPORTS
    func2=func1
 ```
 
-Ist der Name, den Sie exportieren, aus dem anderen Modul, geben Sie den Namen des Exports in der DLL mit *other_module.exported_name*. Wenn Ihre DLL beispielsweise eine Funktion `other_module.func1` exportiert und Sie möchten, dass Aufrufer sie als `func2` verwenden, würden Sie Folgendes angeben:
+Wenn der Name, den Sie exportieren aus einem anderen Modul ist, geben Sie den Namen des Exports in der DLL mit *other_module.exported_name*. Wenn Ihre DLL beispielsweise eine Funktion `other_module.func1` exportiert und Sie möchten, dass Aufrufer sie als `func2` verwenden, würden Sie Folgendes angeben:
 
 ```DEF
 EXPORTS
    func2=other_module.func1
+```
+
+Ist der Name, den Sie exportieren aus einem anderen Modul, die anhand der Ordinalzahl exportieren, geben Sie der Export die Ordnungszahl in der DLL können Sie mit *Other_module. #Ordinal_number*. Angenommen, Ihre DLL-Exporte eine Funktion aus dem anderen Modul, in denen ordinal 42, und Sie Aufrufern die Verwendung als `func2`, würden Sie angeben:
+
+```DEF
+EXPORTS
+   func2=other_module.#42
 ```
 
 Da Visual C++-Compiler die namensergänzung für C++-Funktionen verwendet, müssen Sie entweder die ergänzten Namen Internal_name oder definieren die exportierten Funktionen unter Verwendung von Extern "C" im Quellcode. Der Compiler ergänzt auch C-Funktionen, mit denen die [__stdcall](../../cpp/stdcall.md) -Aufrufkonvention mit einem Unterstrich (_)-Präfix und Suffix bestehend aus dem at-Zeichen (@) gefolgt von der Anzahl von Bytes (als Dezimalzahl) in der Argumentliste.  

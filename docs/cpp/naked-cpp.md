@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3366995105f6295fd1d4d89ad85896fbb625519d
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0b74c08ee2130e9742884eacfa93d6fc55110291
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402495"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573061"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Microsoft-spezifisch**  
   
- Für die deklarierten Funktionen mit den **naked** -Attribut, der Compiler generiert Code ohne Prolog-und Epilogcode. Sie können diese Funktion verwenden, um eigene Prolog-/Epilogcodesequenzen mithilfe von Inlineassemblercode zu schreiben. Naked-Funktionen sind vor allem beim Schreiben von virtuellen Gerätetreibern hilfreich.  Beachten Sie, dass die **naked** Attribut ist nur für X86- und ARM gültig und ist nicht verfügbar auf [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  
+ Für die deklarierten Funktionen mit den **naked** -Attribut, der Compiler generiert Code ohne Prolog-und Epilogcode. Sie können diese Funktion verwenden, um eigene Prolog-/Epilogcodesequenzen mithilfe von Inlineassemblercode zu schreiben. Naked-Funktionen sind vor allem beim Schreiben von virtuellen Gerätetreibern hilfreich.  Beachten Sie, dass die **naked** Attribut ist nur für X86- und ARM gültig und ist auf X64 nicht verfügbar.  
   
 ## <a name="syntax"></a>Syntax  
   

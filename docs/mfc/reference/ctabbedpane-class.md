@@ -1,5 +1,5 @@
 ---
-title: CTabbedPane Klasse | Microsoft Docs
+title: CTabbedPane-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,17 +38,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: b4bb740f445d65c37d1bee8c1e777dbd8984e1c2
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121837"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42543164"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane-Klasse
 Implementiert die Funktionalität eines Bereichs mit abtrennbaren Registerkarten.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -88,7 +88,7 @@ class CTabbedPane : public CBaseTabbedPane
 ## <a name="remarks"></a>Hinweise  
  Das Framework erstellt automatisch eine Instanz dieser Klasse, wenn ein Benutzer einen Bereich an einen anderen anfügt, indem es auf die Beschriftung des zweiten Bereichs verweist. Alle der vom Framework erstellten Bereiche im Registerkartenformat besitzen eine ID von "-1".  
   
- Um normale Registerkarten anstatt von Registerkarten im Outlook-Format anzugeben, übergeben Sie die Formatvorlage AFX_CBRS_REGULAR_TABS, die [CDockablePane:: CreateEx](../../mfc/reference/cdockablepane-class.md#createex) Methode.  
+ Um normale Registerkarten anstatt von Registerkarten von Outlook-Stil anzugeben, übergeben die AFX_CBRS_REGULAR_TABS Formatvorlage, die die [CDockablePane:: CreateEx](../../mfc/reference/cdockablepane-class.md#createex) Methode.  
   
  Wenn Sie einen Bereich im Registerkartenformat mit abtrennbaren Registerkarten erstellen, kann der Bereich automatisch durch das Framework zerstört werden. Speichern Sie daher nicht den Zeiger. Um einen Zeiger zum Bereich im Registerkartenformat zu erhalten, rufen Sie die `CBasePane::GetParentTabbedPane`-Methode auf.  
   
@@ -125,7 +125,7 @@ DockPane(pTabbededBar);
 ```  
   
 ## <a name="example"></a>Beispiel  
- So erstellen ein Steuerleistenobjekt im Registerkartenformat eine andere Möglichkeit ist die Verwendung [CDockablePane:: Attachtotabwnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). Die `AttachToTabWnd` -Methode erstellt dynamisch ein Bereichsobjekt im Registerformat mithilfe von festgelegten laufzeitklasseninformationen [CDockablePane:: Settabbedpanertc](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).  
+ Eine weitere Möglichkeit zum Erstellen Sie ein Steuerleistenobjekt im Registerkartenformat ist die Verwendung [CDockablePane:: Attachtotabwnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). Die `AttachToTabWnd` -Methode erstellt dynamisch ein Bereichsobjekt im Registerformat mithilfe von festgelegten laufzeitklasseninformationen [CDockablePane:: Settabbedpanertc](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).  
   
  In diesem Beispiel erstellen wir einen dynamischen Bereich im Registerkartenformat, fügen zwei Registerkarten an und legen die zweite Registerkarte als nicht entfernbar fest.  
   
@@ -196,7 +196,7 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
  True, um die automatische registerkartenfärbung zu aktivieren. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese statische Methode zum Aktivieren oder deaktivieren die automatische registerkartenfärbung in alle Bereiche im Registerkartenformat in der Anwendung. Wenn diese Funktion aktiviert ist, wird jede Registerkarte durch eine eigene Farbe gefüllt. Sie finden die Liste der Farben, die verwendet werden, um die Farbe der Registerkarten durch Aufrufen der [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) Methode.  
+ Verwenden Sie diese statische Methode zum Aktivieren oder deaktivieren die automatische registerkartenfärbung in alle Bereiche, die in der Anwendung im Registerkartenformat. Wenn dieses Feature aktiviert ist, wird jede Registerkarte durch eine eigene Farbe gefüllt. Sie finden die Liste der Farben, die verwendet werden, um die Farbe der Registerkarten, die durch Aufrufen der [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) Methode.  
   
  Sie können angeben, die Liste der Farben, die durch den Aufruf für Registerkarten verwendet werden [CTabbedPane::SetTabAutoColors](#settabautocolors).  
   
@@ -234,13 +234,13 @@ virtual void GetTabArea(
   
 ### <a name="parameters"></a>Parameter  
  [out] *RectTabAreaTop*  
- Enthält die Größe und Position in Bildschirmkoordinaten des oberen Registerkartenbereichs.  
+ Enthält die Größe und Position in Bildschirmkoordinaten der oberen Registerkarte-Bereich.  
   
  [out] *RectTabAreaBottom*  
- Enthält die Größe und Position des Registerkartenbereichs unteren Bereich, in Bildschirmkoordinaten.  
+ Enthält die Größe und Position des Registerkartenbereichs nach unten, in Bildschirmkoordinaten.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework ruft diese Methode, um zu bestimmen, wie einen Bereich anzudocken, den ein Benutzer gezogen wird. Wenn der Benutzer einen Bereich auf der Registerkarte "Zielbereich" "des bewegt, versucht das Framework für die hinzuzufügende als neue Registerkarte des Bereichs" Ziel ". Andernfalls wird versucht, den Bereich auf den Rand des Bereichs Ziel anzudocken die umfasst das Erstellen eines neuen Bereich-Containers mit einer bereichsteiler, der die beiden Bereiche trennt.  
+ Das Framework ruft diese Methode, um zu bestimmen, wie einen Bereich anzudocken, den ein Benutzer gezogen wird. Wenn der Benutzer einen Bereich über den Registerkartenbereich der der Bereich "Ziel" zieht, versucht das Framework ab, fügen Sie es als eine neue Registerkarte, der den Bereich "Ziel". Andernfalls wird versucht, die im Bereich der Seite klicken Sie im Bereich "Ziel" angedockt und dazu erstellen einen neuen Container für den Bereich mit einen bereichsteiler, der zwischen den beiden Fenstern.  
   
  Überschreiben Sie diese Methode in einer `CTabbedPane`-abgeleitete Klasse, um dieses Verhalten zu ändern.  
   
@@ -286,9 +286,9 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Legen Sie dieses statische Element auf "true" erzwingen, die alle Registerkarten in der Anwendung, die am oberen Rand der Seite im Registerformat angezeigt werden.  
+ Legen Sie dieses statische Element auf "true"-Force-alle Registerkarten in der Anwendung, die am oberen Rand der Seite im Registerformat angezeigt werden.  
   
- Dieser Wert muss festgelegt werden, bevor Sie ein Bereich im Registerkartenformat erstellt wurde.  
+ Sie müssen diesen Wert festlegen, bevor ein Fenster mit Registerkarten erstellt wurde.  
   
  Der Standardwert ist "false".  
   
@@ -300,7 +300,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Legen Sie diese statische Membervariable in einen Zeiger auf die laufzeitklasseninformationen eine `CMFCTabCtrl`-abgeleitetes Objekt aus, wenn Sie ein benutzerdefiniertes Fenster im Registerkartenformat in einem Bereich mit Registerkarten verwenden.  
+ Legen Sie die statischen Member-Variable auf einen Zeiger auf die laufzeitklasseninformationen der ein `CMFCTabCtrl`-abgeleitetes Objekt aus, wenn Sie ein benutzerdefiniertes Fenster im Registerkartenformat in einem Bereich im Registerkartenformat verwenden.  
   
 ##  <a name="resettabs"></a>  CTabbedPane::ResetTabs  
  Setzt alle Bereiche im Registerkartenformat auf den Standardstatus zurück.  
@@ -310,10 +310,10 @@ static void ResetTabs();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um alle Bereiche im Registerkartenformat auf ihren Standardzustand zurückgesetzt. Wenn aufgerufen wird, setzt diese Methode die Border-Größe und Farbe Status alle Bereiche im Registerkartenformat automatisch zurück.  
+ Rufen Sie diese Methode, um alle Bereiche der im Registerkartenformat auf den Standardzustand zurückgesetzt. Wenn Sie aufgerufen wird, setzt diese Methode zurück, die Border-Größen und den Auto-farbenzustand von alle Bereiche im Registerkartenformat.  
   
 ##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors  
- Legt eine Liste benutzerdefinierter Farben, die verwendet werden, wenn die Funktion für automatische Farben aktiviert ist.  
+ Legt eine Liste der Farben, die verwendet werden, wenn die Funktion für automatische Farben aktiviert ist.  
   
 ```  
 static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
@@ -321,12 +321,12 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
   
 ### <a name="parameters"></a>Parameter  
  [in] *ArColors*  
- Enthält das Array der Farben festgelegt.  
+ Enthält das Array von Farben zu legen.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode, um die Liste der Farben anpassen, die verwendet werden, wenn die Funktion für automatische Farben aktiviert ist. Dies ist eine statische Funktion und wirkt sich auf alle im Registerkartenformat Bereiche in der Anwendung.  
+ Verwenden Sie diese Methode, um die Liste der Farben anzupassen, die verwendet werden, wenn die Funktion für automatische Farben aktiviert ist. Dies ist eine statische Funktion und wirkt sich auf Bereiche, die in Ihrer Anwendung alle im Registerkartenformat.  
   
- Verwendung [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) aktivieren oder Deaktivieren der Funktion für automatische Farben.  
+ Verwendung [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) aktivieren oder deaktivieren die Funktion für automatische Farben.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Hierarchiediagramm](../../mfc/hierarchy-chart.md)   

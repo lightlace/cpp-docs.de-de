@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 111b5ea4f6c25aab2abc4897c9e4bda2a14362a9
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 73be0ee1987aa60d91976c1a4bbb73ebf66e5c1c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336939"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573154"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet-Klasse
 Erbt von der `DBPROPIDSET` -Struktur und fügt einen Konstruktor, der wichtige Felder initialisiert sowie die [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) -Zugriffsmethode.  
@@ -80,7 +80,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[operator =](#op_equal)|Weist legen Sie den Inhalt von einer Eigenschafts-ID in eine andere.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der OLE DB-Consumer `DBPROPIDSET` Strukturen, um ein Array von Eigenschaften-IDs übergeben, für die der Consumer die Eigenschaftsinformationen abrufen möchte. In einem einzelnen angegebenen Eigenschaften [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) Struktur zu einem Eigenschaftensatz gehören.  
+ Verwenden der OLE DB-Consumer `DBPROPIDSET` Strukturen, um ein Array von Eigenschaften-IDs übergeben, für die der Consumer die Eigenschaftsinformationen abrufen möchte. In einem einzelnen angegebenen Eigenschaften [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) Struktur zu einem Eigenschaftensatz gehören.  
 
 ## <a name="addpropertyid"></a> Cdbpropidset:: Addpropertyid
 Eine Eigenschafts-ID und der ID-Eigenschaftensatz hinzugefügt.  
@@ -96,7 +96,7 @@ bool AddPropertyID(DBPROPID propid) throw();
  [in] Legen Sie die Eigenschafts-ID der Eigenschafts-ID hinzugefügt werden.  
 
 ## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
-Der Konstruktor. Initialisiert die `rgProperties`, `cProperties`, und (optional) `guidPropertySet` Felder der [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) Struktur.  
+Der Konstruktor. Initialisiert die `rgProperties`, `cProperties`, und (optional) `guidPropertySet` Felder der [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) Struktur.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -126,7 +126,7 @@ void SetGUID(const GUID& guid) throw();
   
 #### <a name="parameters"></a>Parameter  
  *GUID*  
- [in] Eine GUID zum Festlegen der `guidPropertySet` Feld der [DBPROPIDSET](https://msdn.microsoft.com/library/ms717981.aspx) Struktur.  
+ [in] Eine GUID zum Festlegen der `guidPropertySet` Feld der [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
  Dieses Feld kann festgelegt werden, indem die [Konstruktor](../../data/oledb/cdbpropidset-cdbpropidset.md) ebenfalls. Rufen Sie diese Funktion, wenn Sie den Standardkonstruktor für diese Klasse verwenden.  

@@ -16,35 +16,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ce5b1740d09f9d4eb0f90d96cc5a0f6fd70379b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 5077d2dcd426182495cc7a414aca7ca411d1fa60
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020199"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605375"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Festlegen der gleichen Breite, Höhe oder Größe für Steuerelemente
-Sie können eine Gruppe von Steuerelementen basierend auf der Größe des bestimmenden Steuerelements ändern. Sie können auch [Ändern der Größe eines Steuerelements basierend auf die Abmessungen des seine Beschriftungstext](../windows/sizing-individual-controls.md).  
-  
-### <a name="to-make-controls-the-same-width-height-or-size"></a>Um machen steuert die gleiche Breite, Höhe oder Größe  
-  
-1.  [Wählen Sie die Steuerelemente](../windows/selecting-multiple-controls.md) Sie anpassen möchten.  
-  
-     Das Steuerelement zuerst in der Reihe ausgewählt ist, das dominante Steuerelement. Die endgültige Größe der Steuerelemente in der Gruppe, hängt von der Größe des bestimmenden Steuerelements ab. Weitere Informationen zum Auswählen des bestimmenden Steuerelements finden Sie unter [Festlegen des bestimmenden Steuerelements](../windows/specifying-the-dominant-control.md).  
-  
-2.  Von der **Format** Menü wählen **Größe angleichen**, wählen Sie dann eine der folgenden Befehle aus:  
-  
-    -   **Beide**  
-  
-    -   **Höhe**  
-  
-    -   **Breite**  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Sie können eine Gruppe von Steuerelementen basierend auf der Größe des bestimmenden Steuerelements ändern. Sie können auch [Ändern der Größe eines Steuerelements basierend auf die Abmessungen des seine Beschriftungstext](../windows/sizing-individual-controls.md).
+
+### <a name="to-make-controls-the-same-width-height-or-size"></a>Um machen steuert die gleiche Breite, Höhe oder Größe
+
+1. [Wählen Sie die Steuerelemente](../windows/selecting-multiple-controls.md) Sie anpassen möchten.
+
+   Das Steuerelement zuerst in der Reihe ausgewählt ist, das dominante Steuerelement. Die endgültige Größe der Steuerelemente in der Gruppe, hängt von der Größe des bestimmenden Steuerelements ab. Weitere Informationen zum Auswählen des bestimmenden Steuerelements finden Sie unter [Festlegen des bestimmenden Steuerelements](../windows/specifying-the-dominant-control.md).
+
+2. Von der **Format** Menü wählen **Größe angleichen**, wählen Sie dann eine der folgenden Befehle aus:
+
+   - **Beide**
+
+   - **Höhe**
+
+   - **Breite**
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)  
+[Steuerelemente](../mfc/controls-mfc.md)

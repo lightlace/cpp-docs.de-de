@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05bae03a94eac7a783f4ccb7248c8699729a006d
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: b6630ad9721b7a58e7da2660337660cc7916db01
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208688"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540851"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget-Klasse
 Die Basisklasse für die meldungszuordnungsarchitektur der Microsoft Foundation Class-Bibliothek.  
@@ -301,7 +301,7 @@ virtual UINT GetTypeInfoCount();
  Die Anzahl der Schnittstellen mit Typinformationen.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion im Grunde implementiert [IDispatch:: GetTypeInfoCount](http://msdn.microsoft.com/da876d53-cb8a-465c-a43e-c0eb272e2a12).  
+ Diese Memberfunktion im Grunde implementiert [IDispatch:: GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount).  
   
  Abgeleitete Klassen überschreiben, sollte dieser Funktion können Sie die Anzahl von Schnittstellen mit Typinformationen bereitgestellt (0 oder 1) zurückgegeben. Wenn Sie nicht überschrieben, `GetTypeInfoCount` gibt 0 zurück. Um zu überschreiben, verwenden die [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) Makro, das implementiert auch `GetTypeLib` und `GetTypeLibCache`.  
   

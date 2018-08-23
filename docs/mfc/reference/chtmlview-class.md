@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58a336ef74a3fdcb787dee5feeef2b76e45706bf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c3c291c7eb9b6a9cd87330f4af5135037a1f31de
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027858"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541464"
 ---
 # <a name="chtmlview-class"></a>CHtmlView-Klasse
 Stellt die Funktionalität des WebBrowser-Steuerelements im Kontext der MFC-Dokument-/Ansichtarchitektur bereit.  
@@ -243,7 +243,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetLocationURL](#getlocationurl)|Ruft die URL der Ressource ab, die aktuell im WebBrowser angezeigt wird.|  
 |[CHtmlView::GetMenuBar](#getmenubar)|Ruft einen Wert ab, der bestimmt, ob die Menüleiste angezeigt wird.|  
 |[CHtmlView::GetOffline](#getoffline)|Ruft einen Wert ab, der bestimmt, ob das Steuerelement offline ist.|  
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|Ruft einen Zeiger auf die `IDispatch` -Schnittstelle ab. Weitere Informationen finden Sie unter [Implementieren der IDispatch-Schnittstelle](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).|  
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|Ruft einen Zeiger auf die `IDispatch` -Schnittstelle ab. Weitere Informationen finden Sie unter [Implementieren der IDispatch-Schnittstelle](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).|  
 |[CHtmlView::GetProperty](#getproperty)|Ruft den aktuellen Wert einer Eigenschaft ab, die dem angegebenen Objekt zugeordnet ist.|  
 |[CHtmlView::GetReadyState](#getreadystate)|Ruft den Bereitschaftsstatus des Webbrowserobjekts ab.|  
 |[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|Gibt an, ob das WebBrowser-Steuerelement als Browser der obersten Ebene für die Zielnamenauflösung registriert ist.|  
@@ -508,7 +508,7 @@ LPDISPATCH GetApplication() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf die `IDispatch` Schnittstelle das active Document-Objekt. Weitere Informationen finden Sie unter [Implementieren der IDispatch-Schnittstelle](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Ein Zeiger auf die `IDispatch` Schnittstelle das active Document-Objekt. Weitere Informationen finden Sie unter [Implementieren der IDispatch-Schnittstelle](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).  
   
 ### <a name="remarks"></a>Hinweise  
  Betrifft Internet Explorer und WebBrowser.  

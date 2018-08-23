@@ -1,5 +1,5 @@
 ---
-title: __svm_vmload | Microsoft Docs
+title: __svm_vmload | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66cd8164da7be750310f133bb25c17f8cdb21f38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ff94cddb6c286fa651b1ba728238e0d38ab3b17
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335152"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42545819"
 ---
 # <a name="svmvmload"></a>__svm_vmload
 **Microsoft-spezifisch**  
   
- Lädt eine Teilmenge der Prozessor Status aus der angegebenen virtuellen Computer-Kontrollblock (VMCB).  
+ Lädt eine Teilmenge der Prozessorzustand aus der angegebenen virtuellen Computer-Kontrollblock (VMCB).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,16 +41,16 @@ void __svm_vmload(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|Die physische Adresse von der VMCB.|  
+|[in] `VmcbPhysicalAddress`|Die physische Adresse der VMCB.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__svm_vmload` -Funktion ist gleichbedeutend mit der `VMLOAD` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593 Revision 3.11, an die [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) Standort.  
+ Die `__svm_vmload` -Funktion ist gleichbedeutend mit der `VMLOAD` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593, Version 3.11, auf die [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) Standort.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__svm_vmload`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_vmload`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

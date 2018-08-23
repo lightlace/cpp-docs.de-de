@@ -17,64 +17,68 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52e91e8084b1f055002aba7c2f544002d31feffc
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 491f6f75a87e478966d5f0fb0cbbe8fe88a42670
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020238"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42601907"
 ---
 # <a name="msunion"></a>ms_union
-Steuert die Netzwerk-datenausrichtung Darstellung nonencapsulated Unions.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-[ms_union]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Ms_union** C++-Attribut hat die gleiche Funktionalität wie die [Ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) MIDL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
- Der folgende Code zeigt die Platzierung von **Ms_union**:  
-  
-```cpp  
-// cpp_attr_ref_ms_union.cpp  
-// compile with: /LD  
-#include <unknwn.h>  
-[object, ms_union, uuid("00000000-0000-0000-0000-000000000001")]  
-__interface IFireTabCtrl {  
-   HRESULT DisplayString([in, string] char * p1);  
-};  
-  
-[export, switch_type(short)] union _WILLIE_UNION_TYPE  {  
-   [case(24)]  
-      float fMays;  
-   [case(25)]  
-      double dMcCovey;  
-   [default]  
-      int x;  
- };  
-  
-[public] typedef _WILLIE_UNION_TYPE WILLIE_UNION_TYPE;  
-  
-[module(name="ATLFIRELib")];  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|Nonencapsulated unions|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|`dispinterface`|  
-  
- Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
+
+Steuert die Netzwerk-datenausrichtung Darstellung nonencapsulated Unions.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[ms_union]
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die **Ms_union** C++-Attribut hat die gleiche Funktionalität wie die [Ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+Der folgende Code zeigt die Platzierung von **Ms_union**:
+
+```cpp
+// cpp_attr_ref_ms_union.cpp
+// compile with: /LD
+#include <unknwn.h>
+[object, ms_union, uuid("00000000-0000-0000-0000-000000000001")]
+__interface IFireTabCtrl {
+   HRESULT DisplayString([in, string] char * p1);
+};
+
+[export, switch_type(short)] union _WILLIE_UNION_TYPE  {
+   [case(24)]
+      float fMays;
+   [case(25)]
+      double dMcCovey;
+   [default]
+      int x;
+ };
+
+[public] typedef _WILLIE_UNION_TYPE WILLIE_UNION_TYPE;
+
+[module(name="ATLFIRELib")];
+```
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|Nonencapsulated unions|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|`dispinterface`|
+
+Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  

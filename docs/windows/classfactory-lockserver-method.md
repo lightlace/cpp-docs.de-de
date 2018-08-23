@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee858346fdb70e136edfbc562c2dfffb1f63e462
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5ea76974359da2002178a342ab7d9b5523c52889
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652370"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42584137"
 ---
 # <a name="classfactorylockserver-method"></a>ClassFactory::LockServer-Methode
-Erhöht oder verringert die Anzahl der zugrunde liegenden Objekte nachverfolgt werden, von der aktuellen **ClassFactory** Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-STDMETHOD(  
-   LockServer  
-)(BOOL fLock);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *Bestand*  
- **"true"** erhöht die Anzahl der überwachten Objekte. **"false"** um die Anzahl der überwachten Objekte zu verringern.  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls E_FAIL.  
-  
-## <a name="remarks"></a>Hinweise  
- **ClassFactory** verfolgt des Objekte in einer zugrunde liegenden Instanz, von der [Modul](../windows/module-class.md) Klasse.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ClassFactory-Klasse](../windows/classfactory-class.md)
+
+Erhöht oder verringert die Anzahl der zugrunde liegenden Objekte nachverfolgt werden, von der aktuellen **ClassFactory** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD(
+   LockServer
+)(BOOL fLock);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Bestand*  
+**"true"** erhöht die Anzahl der überwachten Objekte. **"false"** um die Anzahl der überwachten Objekte zu verringern.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls E_FAIL.
+
+## <a name="remarks"></a>Hinweise
+
+**ClassFactory** verfolgt des Objekte in einer zugrunde liegenden Instanz, von der [Modul](../windows/module-class.md) Klasse.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ClassFactory-Klasse](../windows/classfactory-class.md)

@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 16fa7964af8f56ec54f6870b8866e69266bdc414
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 468b38dac2082e47e94e4bd52af50d77327f5ef4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39648788"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590688"
 ---
 # <a name="comptrrefoperator-void-operator"></a>Comptrref:: "void"\* \* Operator
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-operator void**() const;  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Löscht die aktuelle **ComPtrRef** Objekt, wandelt der Zeiger auf die Schnittstelle, die durch dargestellt wurde die **ComPtrRef** -Objekt als eine Zeiger-auf-Zeiger-auf **"void"**, und klicken Sie dann Gibt die Cast-Zeiger zurück.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtrRef-Klasse](../windows/comptrref-class.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+operator void**() const;
+```
+
+## <a name="remarks"></a>Hinweise
+
+Löscht die aktuelle **ComPtrRef** Objekt, wandelt der Zeiger auf die Schnittstelle, die durch dargestellt wurde die **ComPtrRef** -Objekt als eine Zeiger-auf-Zeiger-auf **"void"**, und klicken Sie dann Gibt die Cast-Zeiger zurück.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtrRef-Klasse](../windows/comptrref-class.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

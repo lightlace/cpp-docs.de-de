@@ -17,45 +17,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdb87fe43b5cc6a5d2c141ac534e3b5e781f91e8
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: df27ec7ca4cccb278fee524aab9d0d2dc5a25134
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019916"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589758"
 ---
 # <a name="interfacetraitscasttounknown-method"></a>InterfaceTraits::CastToUnknown-Methode
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-template<typename T>  
-static __forceinline IUnknown* CastToUnknown(  
-   _In_ T* ptr  
-);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *T*  
- Der Typ des Parameters *Ptr*.  
-  
- *ptr*  
- Zeiger auf den Typ *T*.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Zeiger auf IUnknown aus dem `Base` abgeleitet ist.  
-  
-## <a name="remarks"></a>Hinweise  
- Wandelt den angegebenen Zeiger auf einen Zeiger auf `IUnknown`.  
-  
- Weitere Informationen zu `Base`, finden Sie im Abschnitt Öffentliche Typedefs [InterfaceTraits-Struktur](../windows/interfacetraits-structure.md).  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [InterfaceTraits-Struktur](../windows/interfacetraits-structure.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template<typename T>
+static __forceinline IUnknown* CastToUnknown(
+   _In_ T* ptr
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*T*  
+Der Typ des Parameters *Ptr*.
+
+*ptr*  
+Zeiger auf den Typ *T*.
+
+## <a name="return-value"></a>Rückgabewert
+
+Zeiger auf IUnknown aus dem `Base` abgeleitet ist.
+
+## <a name="remarks"></a>Hinweise
+
+Wandelt den angegebenen Zeiger auf einen Zeiger auf `IUnknown`.
+
+Weitere Informationen zu `Base`, finden Sie im Abschnitt Öffentliche Typedefs [InterfaceTraits-Struktur](../windows/interfacetraits-structure.md).
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[InterfaceTraits-Struktur](../windows/interfacetraits-structure.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

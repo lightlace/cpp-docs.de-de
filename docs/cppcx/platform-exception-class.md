@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: Exception-Klasse | Microsoft Docs'
+title: 'Platform:: Exception-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -14,16 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6774aa0d90e9903798cd2a77a480782b669fdc57
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091559"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42586634"
 ---
 # <a name="platformexception-class"></a>Platform::Exception-Klasse
 Stellt Fehler dar, die beim Ausführen einer Anwendung auftreten. Benutzerdefinierte Ausnahmeklassen können nicht von `Platform::Exception`abgeleitet werden. Wenn Sie eine benutzerdefinierte Ausnahme benötigen, können Sie `Platform::COMException` verwenden und ein app-spezifisches HRESULT angeben.  
@@ -61,9 +61,9 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 |[Exception::Message](#message)|Eine Meldung, in der die Ausnahme beschrieben wird. Dieser Wert ist schreibgeschützt und kann nicht geändert werden, nachdem `Exception` erstellt wurde.|  
   
 ### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
+ **Unterstützter Client (Min.):** Windows 8  
   
- **Unterstützter Server:** Windows Server 2012  
+ **Unterstützter Server (Min.):** Windows Server 2012  
   
  **Namespace:** Platform  
   
@@ -81,7 +81,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 ### <a name="parameters"></a>Parameter  
  hr  
- Ein HRESULT-Wert, den Sie in der Regel aus einem Aufruf an eine COM-Methode erhalten. Wenn der Wert 0, was identisch mit S_OK ist ist, löst diese Methode [Platform:: InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) da COM-Methoden keine Ausnahmen auslösen sollen.  
+ Ein HRESULT-Wert, den Sie in der Regel aus einem Aufruf an eine COM-Methode erhalten. Wenn der Wert 0 (null) die identisch mit S_OK ist ist, löst diese Methode [Platform:: InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) da COM-Methoden keine Ausnahmen auslösen sollen.  
   
  message  
  Eine Zeichenfolge, die den Fehler beschreibt.  
@@ -92,7 +92,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Methode, um eine Ausnahme aus einem HRESULT zu erstellen, die beispielsweise aus einem Aufruf einer COM-Schnittstellen-Methode zurückgegeben wird. Sie können die Überladung verwenden, die einen String^-Parameter erhält, um eine benutzerdefinierte Meldung bereitzustellen.  
   
- Es wird dringend empfohlen, createexception zu verwenden, um eine stark typisierte Ausnahme zu erstellen und keine [Platform:: COMException](../cppcx/platform-comexception-class.md) , die lediglich HRESULT enthält.  
+ Es wird dringend empfohlen, createexception zu verwenden, erstellen Sie eine stark typisierte Ausnahme anstelle erstellen eine [Platform:: COMException](../cppcx/platform-comexception-class.md) , die lediglich HRESULT enthält.  
   
 
 
@@ -146,9 +146,9 @@ public:property String^ Message;
  In den Ausnahmen, die aus der Windows Runtime stammen, ist dieses eine vom System bereitgestellte Beschreibung des Fehlers.  
   
 ### <a name="remarks"></a>Hinweise  
- In Windows 8 ist diese Eigenschaft schreibgeschützt, da Ausnahmen in dieser Version von Windows-Runtime über die ABI nur als HRESULTS transportiert werden. Bei Windows 8.1 werden umfangreichere Ausnahmeinformationen über die ABI transportiert, und Sie können eine benutzerdefinierte Meldung bereitstellen, auf die andere Komponenten programmgesteuert zugreifen können. Weitere Informationen finden Sie unter [Ausnahmen (C + c++ / CX)](../cppcx/exceptions-c-cx.md).  
+ In Windows 8 ist diese Eigenschaft schreibgeschützt, da Ausnahmen in dieser Version der Windows-Runtime über die ABI nur als HRESULTS transportiert werden. Bei Windows 8.1 werden umfangreichere Ausnahmeinformationen über die ABI transportiert, und Sie können eine benutzerdefinierte Meldung bereitstellen, auf die andere Komponenten programmgesteuert zugreifen können. Weitere Informationen finden Sie unter [Ausnahmen (C++ / CX)](../cppcx/exceptions-c-cx.md).  
   
 
   
 ## <a name="see-also"></a>Siehe auch  
- [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)
+ [Platform-namespace](../cppcx/platform-namespace-c-cx.md)

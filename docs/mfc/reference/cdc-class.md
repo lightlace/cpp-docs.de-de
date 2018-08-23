@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 317e953d4c1a4e2637c71891fabde542ca751c8e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 791b27e9ff5648a2616c92852a1d4f824d43127b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339708"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541276"
 ---
 # <a name="cdc-class"></a>CDC-Klasse
 Definiert eine Klasse von Gerätekontextobjekten.  
@@ -2537,16 +2537,16 @@ DWORD GetCharacterPlacement(
  Ein Zeiger auf die zu verarbeitende Zeichenfolge.  
   
  *nCount*  
- Gibt die Länge der Zeichenfolge an. Bei der ANSI-Version ist es eine Byteanzahl und bei der Unicode-Funktion ist es eine Wortanzahl. Weitere Informationen finden Sie unter [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx).  
+ Gibt die Länge der Zeichenfolge an. Bei der ANSI-Version ist es eine Byteanzahl und bei der Unicode-Funktion ist es eine Wortanzahl. Weitere Informationen finden Sie unter [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa).  
   
  *nMaxExtent*  
  Gibt der maximale Wertbereich (in logischen Einheiten) an, zu dem die Zeichenfolge verarbeitet wird. Zeichen, die diesen Wertbereich bei Verarbeitung überschreiten würden, werden ignoriert. Berechnungen für alle erforderlichen Reihenfolge- oder Glyphenarrays gelten nur für die enthaltenen Zeichen. Dieser Parameter wird verwendet, nur, wenn der GCP_MAXEXTENT-Wert, in angegeben ist der *DwFlags* Parameter. Da die Funktion die Eingabezeichenfolge verarbeitet, wird jedes Zeichen und sein Wertebereich nur dann der Ausgabe, dem Wertebereich und anderen Arrays hinzugefügt, wenn der gesamte Wertebereich das Maximum noch nicht überschritten hat. Bei Erreichen des Limits wird die Verarbeitung beendet.  
   
  lpResults  
- Zeiger auf eine [GCP_Results](http://msdn.microsoft.com/library/windows/desktop/dd144842\(v=vs.85\).aspx) Struktur, die die Ergebnisse der Funktion empfängt.  
+ Zeiger auf eine [GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa) Struktur, die die Ergebnisse der Funktion empfängt.  
   
  *dwFlags*  
- Gibt das Verarbeiten der Zeichenfolge in die erforderlichen Arrays an. Dieser Parameter kann eine oder mehrere der Werte in der *DwFlags* Teil der [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx) Thema.  
+ Gibt das Verarbeiten der Zeichenfolge in die erforderlichen Arrays an. Dieser Parameter kann eine oder mehrere der Werte in der *DwFlags* Teil der [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa) Thema.  
   
  *str*  
  Ein Zeiger auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt zu verarbeiten.  
@@ -2557,7 +2557,7 @@ DWORD GetCharacterPlacement(
  Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion emuliert die Funktionen der [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx), wie im Windows SDK beschrieben.  
+ Diese Memberfunktion emuliert die Funktionen der [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa), wie im Windows SDK beschrieben.  
   
 ##  <a name="getcharabcwidths"></a>  CDC::GetCharABCWidths  
  Ruft die Breite der aufeinander folgenden Zeichen in einem angegebenen Bereich aus der aktuellen TrueType-Schriftart ab.  

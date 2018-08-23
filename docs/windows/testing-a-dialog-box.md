@@ -17,41 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 307b5ffeeaa21b4cb90779a9d516229bf2ab3167
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 94d08cc865b6388010dc07ef965f60edbf6796ac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019677"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587519"
 ---
 # <a name="testing-a-dialog-box"></a>Testen eines Dialogfelds
-Beim Entwerfen eines Dialogfelds können Sie dessen Laufzeitverhalten simulieren und testen, ohne das Programm zu kompilieren. In diesem Modus können Sie folgende Aufgaben ausführen:  
-  
--   Texteingabe, Auswahl aus Kombinationsfeldlisten, Aktivieren oder Deaktivieren von Optionen sowie Auswahl von Befehlen.  
-  
--   Testen der Aktivierreihenfolge.  
-  
--   Testen der Steuerelementgruppierung (z. B. von Optionsfeldern und Kontrollkästchen).  
-  
--   Testen der Tastenkombinationen für Steuerelemente im Dialogfeld.  
-  
-    > [!NOTE]
-    >  Verbindungen mit Dialogfeldcode, die mithilfe des Assistenten hergestellt wurden, sind nicht Teil der Simulation.  
-  
- Während des Testverfahrens wird ein Dialogfeld normalerweise relativ zum Hauptprogrammfenster angezeigt. Wenn Sie des Dialogfelds festgelegt haben **Absolute Ausrichtung** Eigenschaft **"true"**, im Dialogfeld angezeigt, an der Position, die relativ zu der oberen linken Ecke des Bildschirms ist.  
-  
-### <a name="to-test-a-dialog-box"></a>So testen Sie ein Dialogfeld  
-  
-1.  Wenn die **Dialogfeld** Editor wird das aktive Fenster, in der Menüleiste, wählen Sie **Format** > **Testdialogfeld**.  
-  
-2.  Um die Simulation zu beenden, drücken Sie die **Esc**, oder wählen Sie einfach die **schließen** Schaltfläche im Dialogfeld für die Tests.  
-  
- Weitere Informationen zur Vorgehensweise beim Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index).  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
- [Dialog-Editor](../windows/dialog-editor.md)   
- [Ein- oder Ausblenden der Symbolleiste des Dialog-Editors](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
+
+Beim Entwerfen eines Dialogfelds können Sie dessen Laufzeitverhalten simulieren und testen, ohne das Programm zu kompilieren. In diesem Modus können Sie folgende Aufgaben ausführen:
+
+- Texteingabe, Auswahl aus Kombinationsfeldlisten, Aktivieren oder Deaktivieren von Optionen sowie Auswahl von Befehlen.
+
+- Testen der Aktivierreihenfolge.
+
+- Testen der Steuerelementgruppierung (z. B. von Optionsfeldern und Kontrollkästchen).
+
+- Testen der Tastenkombinationen für Steuerelemente im Dialogfeld.
+
+   > [!NOTE]
+   > Verbindungen mit Dialogfeldcode, die mithilfe des Assistenten hergestellt wurden, sind nicht Teil der Simulation.
+
+Während des Testverfahrens wird ein Dialogfeld normalerweise relativ zum Hauptprogrammfenster angezeigt. Wenn Sie des Dialogfelds festgelegt haben **Absolute Ausrichtung** Eigenschaft **"true"**, im Dialogfeld angezeigt, an der Position, die relativ zu der oberen linken Ecke des Bildschirms ist.
+
+### <a name="to-test-a-dialog-box"></a>So testen Sie ein Dialogfeld
+
+1. Wenn die **Dialogfeld** Editor wird das aktive Fenster, in der Menüleiste, wählen Sie **Format** > **Testdialogfeld**.
+
+2. Um die Simulation zu beenden, drücken Sie die **Esc**, oder wählen Sie einfach die **schließen** Schaltfläche im Dialogfeld für die Tests.
+
+Weitere Informationen zur Vorgehensweise beim Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)  
+[Dialog-Editor](../windows/dialog-editor.md)  
+[Ein- oder Ausblenden der Symbolleiste des Dialog-Editors](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)

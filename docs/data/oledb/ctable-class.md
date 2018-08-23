@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 723d4f1e8f44c3ce376b4f39f34a191265ca4eab
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 34eb8cb8a6b839f8a4dcd8d699c7fcb4851d57f6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336725"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572278"
 ---
 # <a name="ctable-class"></a>CTable-Klasse
 Bietet eine Möglichkeit, direkt auf ein einfaches Rowset (ohne Parameter) zuzugreifen.  
@@ -100,16 +100,16 @@ HRESULT Open(const CSession& session,
  [in] Die `DBID` der Tabelle zu öffnen.  
   
  *pPropSet*  
- [in] Ein Zeiger auf ein Array von [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) Strukturen, die Eigenschaften und Werte festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](https://msdn.microsoft.com/library/ms713696.aspx) in die *OLE DB-Programmierreferenz* in das Windows SDK. Der Standardwert NULL gibt an, keine Eigenschaften.  
+ [in] Ein Zeiger auf ein Array von [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen, die Eigenschaften und Werte festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) in die *OLE DB-Programmierreferenz* in das Windows SDK. Der Standardwert NULL gibt an, keine Eigenschaften.  
   
  *ulPropSets*  
- [in] Die Anzahl der [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) Strukturen zu übergeben, der *DBPROPSET* Argument.  
+ [in] Die Anzahl der [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen zu übergeben, der *DBPROPSET* Argument.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard-HRESULT.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [IOpenRowset:: OPENROWSET](https://msdn.microsoft.com/library/ms716724.aspx) in die *OLE DB-Programmierreferenz*.  
+ Weitere Informationen finden Sie unter [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ## <a name="see-also"></a>Siehe auch  
  [OLE DB-Consumervorlagen](../../data/oledb/ole-db-consumer-templates-cpp.md)   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80556b31650cc04e66b2ad6681d60eff2fa72d5f
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d138f65e447594059dba5b536378ee004be77036
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025817"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571953"
 ---
 # <a name="atl-project-wizard"></a>ATL-Projekt-Assistent
 Die Active Template Library (ATL) ist eine Reihe von Template-basierten C++-Klassen, die das Schreiben von klein und schnell eine COM-Objekte vereinfachen. ATL-Projektassistenten erstellt ein Projekt mit den Strukturen, die COM-Objekte enthalten.  
@@ -52,7 +52,7 @@ Die Active Template Library (ATL) ist eine Reihe von Template-basierten C++-Klas
   
 -   [Optimieren des Compilers für ein ATL-Projekt](../../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)  
   
- Sie können Projekteigenschaften angeben (z. B. [angibt, ob mit der CRT statisch verknüpft](../../atl/programming-with-atl-and-c-run-time-code.md)) in der [Projekteigenschaften](../../ide/general-property-page-project.md) Seite, und Sie können festlegen, [Buildkonfigurationen](/visualstudio/ide/understanding-build-configurations) für ein ATL-Projekt. Finden Sie unter [Projekte zum Erstellen von Anwendungen mithilfe von](http://msdn.microsoft.com/3339fa90-bac2-4b95-8361-662a2e0e7dfe) für Weitere Informationen.  
+ Sie können Projekteigenschaften angeben (z. B. [angibt, ob mit der CRT statisch verknüpft](../../atl/programming-with-atl-and-c-run-time-code.md)) in der [Projekteigenschaften](../../ide/general-property-page-project.md) Seite, und Sie können festlegen, [Buildkonfigurationen](/visualstudio/ide/understanding-build-configurations) für ein ATL-Projekt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwalten von Visual C++-Projekten](../../ide/creating-and-managing-visual-cpp-projects.md)   

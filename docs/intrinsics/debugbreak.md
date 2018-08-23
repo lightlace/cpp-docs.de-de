@@ -1,5 +1,5 @@
 ---
-title: __debugbreak | Microsoft Docs
+title: __debugbreak | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3dcead3129c87b2d02f8822019af763c0fe8b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71b7dfca165e76880370368282bdbd7728315cfa
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340176"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539622"
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Microsoft-spezifisch**  
@@ -40,13 +40,13 @@ void __debugbreak();
   
 |Systemintern|Architektur|Header|  
 |---------------|------------------|------------|  
-|`__debugbreak`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`__debugbreak`|X86, ARM, x64|\<intrin.h>|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__debugbreak` Compiler systeminterne, ähnlich wie ["DebugBreak"](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), ist eine portable Win32-Methode, um einen Haltepunkt bewirkt.  
+ Die `__debugbreak` systeminterne Compilerfunktion ähnelt ["DebugBreak"](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), ist eine portable Win32-Methode, die einen Haltepunkt bewirkt.  
   
 > [!NOTE]
->  Beim Kompilieren mit **"/ CLR"**, eine Funktion, `__debugbreak` werden in MSIL kompiliert werden. `asm int 3` bewirkt, dass eine Funktion in systemeigenem Code kompiliert wird. Weitere Informationen finden Sie unter [__asm](../assembler/inline/asm.md).  
+>  Beim Kompilieren mit **"/ CLR"**, eine Funktion, `__debugbreak` in MSIL kompiliert wird. `asm int 3` bewirkt, dass eine Funktion in systemeigenem Code kompiliert wird. Weitere Informationen finden Sie unter [__asm](../assembler/inline/asm.md).  
   
  Zum Beispiel:  
   

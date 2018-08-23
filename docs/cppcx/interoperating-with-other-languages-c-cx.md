@@ -1,23 +1,23 @@
 ---
-title: Interoperabilität mit anderen Sprachen (C + c++ / CX) | Microsoft Docs
+title: Interoperabilität mit anderen Sprachen (C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e096cda810085c0e0ce9e2772c7105843e486a39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7d4aec775dc716a5e88e6b421a7cd7f818730c23
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087841"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589887"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>Interoperabilität mit anderen Sprachen (C++/CX)
-In diesem Teil der Dokumentation beschreibt, wie C + c++ / CX zu Windows-Runtime-Komponenten zu schreiben, die von anderen Programmiersprachen und Bibliotheken genutzt werden können. Sie können auch Komponenten schreiben, die nicht von allen Sprachen genutzt werden können. Dieser Abschnitt beschreibt verschiedene Aspekte zu berücksichtigen sind, wenn die C + c++ / CX-Anwendung interagiert mit Komponenten, die mithilfe von JavaScript, einer .NET Framework verwalteten Sprache oder das Windows Runtime C++ Template Library geschrieben wurden.  
+Dieser Teil der Dokumentation beschreibt, wie C++ / CX verwenden, um die Windows-Runtime-Komponenten zu erstellen, die von anderen Programmiersprachen und Bibliotheken genutzt werden können. Sie können auch Komponenten schreiben, die nicht von allen Sprachen genutzt werden können. Dieser Abschnitt beschreibt verschiedene Aspekte zu berücksichtigen sind, wenn Ihr C + c++ / CX-Anwendung interagiert mit Komponenten, die mithilfe von JavaScript, .NET Framework verwalteten Sprache oder der Windows Runtime C++ Template Library geschrieben wurden.  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
@@ -27,4 +27,4 @@ In diesem Teil der Dokumentation beschreibt, wie C + c++ / CX zu Windows-Runtime
   
 -   [WRL-integration](../cppcx/wrl-integration-c-cx.md)  
   
--   [Visual C++-Sprachreferenz](../cppcx/visual-c-language-reference-c-cx.md)
+-   [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

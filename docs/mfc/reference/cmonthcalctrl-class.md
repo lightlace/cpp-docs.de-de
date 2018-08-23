@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7160f2998eee18439baa67a93a73fcd73b5c0f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61fc3d0ddf07887af2f565fd338b337eacd130ef
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853549"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540852"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl-Klasse
 Kapselt die Funktionalität eines Monatskalender-Steuerelements.  
@@ -736,7 +736,7 @@ void SetCalendarBorder(int cxyBorder);
 |[in] *CxyBorder*|Die Breite des Rahmens, in Pixel.|  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn diese Methode erfolgreich ist, wird die Breite des Rahmens legen Sie auf die *CxyBorder* Parameter. Andernfalls wird die Breite des Rahmens auf den Standardwert, der vom aktuellen angegeben wird zurückgesetzt [Design](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), oder NULL, wenn Designs nicht verwendet werden.  
+ Wenn diese Methode erfolgreich ist, wird die Breite des Rahmens legen Sie auf die *CxyBorder* Parameter. Andernfalls wird die Breite des Rahmens auf den Standardwert, der vom aktuellen angegeben wird zurückgesetzt [Design](/windows/desktop/Controls/visual-styles-overview), oder NULL, wenn Designs nicht verwendet werden.  
   
  Diese Methode sendet die [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) -Nachricht, die im Windows SDK beschrieben wird.  
   
@@ -758,7 +758,7 @@ void SetCalendarBorderDefault();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die Breite des Rahmens nastaven NA hodnotu angegebene vom aktuellen Standardwert [Design](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), oder NULL, wenn Designs nicht verwendet werden.  
+ Die Breite des Rahmens nastaven NA hodnotu angegebene vom aktuellen Standardwert [Design](/windows/desktop/Controls/visual-styles-overview), oder NULL, wenn Designs nicht verwendet werden.  
   
  Diese Methode sendet die [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) -Nachricht, die im Windows SDK beschrieben wird.  
   

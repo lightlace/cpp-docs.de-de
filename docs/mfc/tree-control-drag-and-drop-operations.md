@@ -1,5 +1,5 @@
 ---
-title: Strukturansicht-Steuerelement Drag & Drop-Vorgänge | Microsoft Docs
+title: Strukturansicht-Steuerelement Drag & Drop-Vorgänge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73aa47a2d888c88dd58d114dd4f5ca9a3f086cd3
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 9e1c642642f94c021001ae67d2dcc3fd87f4f287
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956251"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589084"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Drag & Drop-Operationen für das Struktursteuerelement
-Ein Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sendet eine Benachrichtigung, wenn der Benutzer beginnt, ein Element zu ziehen. Sendet das Steuerelement eine [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) Benachrichtigung, wenn der Benutzer beginnt, ein Element mit der linken Maustaste ziehen und ein [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) Benachrichtigung, wenn der Benutzer beginnt mit ziehen mit der rechten Maustaste. Sie können verhindern, dass ein Strukturansicht-Steuerelement diese Benachrichtigungen senden, durch die Vergabe der Strukturansicht des TVS_DISABLEDRAGDROP-Stils.  
+Ein Strukturansicht-Steuerelement ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sendet eine Benachrichtigung, wenn der Benutzer beginnt, ein Element zu ziehen. Das Steuerelement sendet eine [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) Benachrichtigung, wenn der Benutzer beginnt, ziehen ein Element mit die linke Maustaste gedrückt und [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) Benachrichtigung, wenn der Benutzer beginnt, ziehen die Rechte Taste. Sie können verhindern, dass ein Strukturansicht-Steuerelement diese Benachrichtigungen senden, ermöglicht der Strukturansicht den TVS_DISABLEDRAGDROP-Stil.  
   
- Sie erhalten ein Bild anzuzeigenden während eines Ziehvorgangs durch Aufrufen der [Memberfunktion CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) Memberfunktion. Strukturansicht-Steuerelements erstellt eine ziehen Bitmap basierend auf der Bezeichnung des Elements gezogen wird. Strukturansicht-Steuerelements eine Bildliste erstellt, die Bitmap hinzugefügt, und gibt einen Zeiger auf die [CImageList](../mfc/reference/cimagelist-class.md) Objekt.  
+ Sie erhalten ein Bild anzuzeigenden während eines Ziehvorgangs durch Aufrufen der [Memberfunktion CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) Member-Funktion. Das Strukturansicht-Steuerelement erstellt, eine ziehen Bitmap, die basierend auf der Bezeichnung des Elements, das gezogen wird. Das Strukturansicht-Steuerelement erstellt eine Bildliste an, die Bitmap hinzugefügt, und gibt einen Zeiger auf die [CImageList](../mfc/reference/cimagelist-class.md) Objekt.  
   
- Sie müssen den Code angeben, der tatsächlich das Element zieht. Dies umfasst in der Regel mithilfe der ziehen Funktionen des Image-Liste-Funktionen und Verarbeiten der [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) und [WM_LBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms645608) (oder [WM_RBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646243)) die Nachrichten gesendet, nachdem der Ziehvorgang begonnen wurde. Weitere Informationen zu den Funktionen der Image-Liste finden Sie unter [CImageList](../mfc/reference/cimagelist-class.md) in der *MFC-Referenz* und [Bilderlisten](http://msdn.microsoft.com/library/windows/desktop/bb761389) im Windows SDK. Weitere Informationen zu einem Strukturelement-Steuerelement ziehen, finden Sie unter [ziehen die Ansicht Strukturelement](http://msdn.microsoft.com/library/windows/desktop/bb760017)auch in der [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ Sie müssen den Code bereitstellen, der tatsächlich das Element gezogen wird. Dies umfasst in der Regel mithilfe der ziehen Funktionen von der Liste Bildfunktionen und Verarbeiten der [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) und [WM_LBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms645608) (oder [WM_RBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646243)) die Nachrichten gesendet, nachdem der Ziehvorgang begonnen wurde. Weitere Informationen zu den Funktionen der Image-Liste finden Sie unter [CImageList](../mfc/reference/cimagelist-class.md) in die *MFC-Referenz* und [Bilderlisten](http://msdn.microsoft.com/library/windows/desktop/bb761389) im Windows SDK. Weitere Informationen zum Verschieben einer Strukturelement-Steuerelement, finden Sie unter [ziehen das Strukturansichtselement](http://msdn.microsoft.com/library/windows/desktop/bb760017), auch im Windows SDK.  
   
- Wenn Elemente in einem Strukturansicht-Steuerelement an das Ziel eines Drag-and-Drop-Vorgangs sind, müssen Sie wissen, wenn der Mauszeiger auf ein Zielelement befindet. Sie können feststellen, durch Aufrufen der [HitTest](../mfc/reference/ctreectrl-class.md#hittest) Memberfunktion. Sie geben einen Punkt und ganze Zahl oder die Adresse des eine [TVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb773448) Struktur, die die aktuellen Koordinaten des Mauszeigers enthält. Wenn die Funktion zurückgibt, enthält die ganze Zahl oder eine Struktur ein Flag, der angibt, der Position des Mauszeigers relativ zum Steuerelement Strukturansicht. Wenn der Cursor über ein Element in der Strukturansicht-Steuerelement befindet, enthält die Struktur das Handle des Elements als auch an.  
+ Wenn Elemente in einem Strukturansicht-Steuerelement die Ziele eines Drag & Drop-Vorgangs werden sollen, müssen Sie wissen, wenn der Mauszeiger auf ein Zielelement ist. Sie erhalten durch Aufrufen der [HitTest](../mfc/reference/ctreectrl-class.md#hittest) Member-Funktion. Sie geben Sie einen Punkt und ganze Zahl oder die Adresse einer [TVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb773448) Struktur, die die aktuellen Koordinaten des Mauszeigers enthält. Wenn die Funktion zurückgibt, enthält die ganze Zahl oder eine Struktur ein Flag, das die Position des Mauszeigers in Bezug auf die Strukturansicht-Steuerelement. Wenn der Cursor über ein Element in der Strukturansicht-Steuerelement ist, enthält die Struktur das Handle für das Element auch.  
   
- Sie können angeben, dass ein Element das Ziel eines Drag-and-Drop-Vorgangs durch Aufrufen der [SetItem](../mfc/reference/ctreectrl-class.md#setitem) Memberfunktion zum Festlegen des Status, um die `TVIS_DROPHILITED` Wert. Ein Element mit diesem Status wird in den Stil an, dass ein Drag & Drop-Ziel gezeichnet.  
+ Sie können angeben, dass ein Element das Ziel eines Drag & Drop-Vorgangs durch Aufrufen der [SetItem](../mfc/reference/ctreectrl-class.md#setitem) Member-Funktion zum Festlegen des Status, um die `TVIS_DROPHILITED` Wert. Ein Element mit diesem Status wird in den Stil an, dass ein Drag & Drop-Ziel gezeichnet wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CTreeCtrl](../mfc/using-ctreectrl.md)   

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d265b2547f35e0c8c25ee5e3aad1135945e346b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 994e9f8c48bb6d6db2a9af06613abca895b09f51
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853203"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541631"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet-Klasse
 Stellt Eigenschaftenblätter dar, auch als "Dialogfelder im Registerformat" bezeichnet.  
@@ -121,7 +121,7 @@ class CPropertySheet : public CWnd
 ## <a name="remarks"></a>Hinweise  
  Ein Eigenschaftenblatt besteht aus einem `CPropertySheet` Objekt und einer oder mehrerer [CPropertyPage](../../mfc/reference/cpropertypage-class.md) Objekte. Das Framework zeigt ein Eigenschaftenblatt, als ein Fenster mit einem Satz von Registerkartenindizes und ein Bereich, der die aktuell ausgewählte Seite enthält. Der Benutzer navigiert zu einer bestimmten Seite mithilfe der entsprechenden Registerkarte.  
   
- `CPropertySheet` bietet Unterstützung für den erweiterten [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) Struktur in eingeführte [!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)] und Windows NT-2000. Die Struktur enthält die zusätzliche Flags und Member, die mithilfe einer Bitmap im Hintergrund "Wasserzeichens" zu unterstützen.  
+ `CPropertySheet` bietet Unterstützung für den erweiterten [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) Struktur, die in Windows 98 und Windows NT, 2000 eingeführt wurden. Die Struktur enthält die zusätzliche Flags und Member, die mithilfe einer Bitmap im Hintergrund "Wasserzeichens" zu unterstützen.  
   
  Um diese neue Images automatisch in Ihrer Eigenschaftenblattobjekt anzuzeigen, übergeben Sie gültige Werte für die Bitmap und Paletteninformationen Bilder im Aufruf von [CPropertySheet::Construct](#construct) oder [CPropertySheet::CPropertySheet](#cpropertysheet).  
   

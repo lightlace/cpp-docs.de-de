@@ -1,5 +1,5 @@
 ---
-title: __rdtsc | Microsoft Docs
+title: __rdtsc | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b47a76b3045465d8c3c5c21a87020ee1e74a69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7888f00b1b95a18e839ab61fc8ff28a2646f9875
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337079"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541432"
 ---
 # <a name="rdtsc"></a>__rdtsc
 **Microsoft-spezifisch**  
   
- Generiert die `rdtsc` -Anweisung, die den Prozessor Zeitstempel zurückgegeben. Der Zeitstempel für den Prozessor zeichnet die Anzahl der seit dem letzten Rücksetzen Taktzyklen.  
+ Generiert die `rdtsc` -Anweisung, die den Prozessor Zeitstempel zurückgegeben. Der Zeitstempel für den Prozessor zeichnet die Anzahl der Uhrzyklen seit dem letzten Rücksetzen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,14 +43,14 @@ unsigned __int64 __rdtsc();
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__rdtsc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__rdtsc`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Routine ist nur als systeminterne Funktion verfügbar.  
   
- Die Interpretation des TSC Werts in dieser Generation Hardware unterscheidet sich von dem in früheren Versionen von [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]. Finden Sie unter Hardware-Handbücher für Weitere Informationen.  
+ Die Interpretation des TSC-Werts in dieser Generation von Hardware unterscheidet sich von dem in früheren Versionen von X64. Finden Sie die Hardware-Handbücher für Weitere Informationen.  
   
 ## <a name="example"></a>Beispiel  
   

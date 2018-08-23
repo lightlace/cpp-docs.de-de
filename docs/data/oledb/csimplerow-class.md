@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 94f90e4c60e5669789caadaaa827b4c12f1f157f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d5d824529e80319d95e00b6a3831af90a9506a03
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339782"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571396"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow-Klasse
 Stellt eine Standardimplementierung für den Zeilenziehpunkt, die in dient der [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) Klasse.  
@@ -109,7 +109,7 @@ HRESULT Compare(CSimpleRow* pRow);
  Ein Zeiger auf eine `CSimpleRow` Objekt.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein HRESULT-Wert, in der Regel S_OK, der angibt, die zwei Zeilen sind die gleiche Zeileninstanz oder S_FALSE, der angibt, der zwei Zeilen sind unterschiedlich. Finden Sie unter [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx) in die *OLE DB-Programmierreferenz* für weitere mögliche Rückgabewerte. 
+ Ein HRESULT-Wert, in der Regel S_OK, der angibt, die zwei Zeilen sind die gleiche Zeileninstanz oder S_FALSE, der angibt, der zwei Zeilen sind unterschiedlich. Finden Sie unter [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für weitere mögliche Rückgabewerte. 
 
 ## <a name="csimplerow"></a> Csimplerow:: Csimplerow
 Der Konstruktor.  

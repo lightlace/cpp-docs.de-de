@@ -1,5 +1,5 @@
 ---
-title: -SUBSYSTEM | Microsoft Docs
+title: -SUBSYSTEM | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c12df1a2166c9ef5a1af8a33a5764a8899909edb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 75e0086f96f39814bd1a7e77df2adccc47d698fc
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377622"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573068"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 Gibt die vom ausführbaren Image benötigte Ausführungsumgebung an.  
@@ -40,7 +40,7 @@ Gibt die vom ausführbaren Image benötigte Ausführungsumgebung an.
  Sie können jedes der folgenden Subsysteme angeben:  
   
  BOOT_APPLICATION  
- Eine in der Windows-Startumgebung ausgeführte Anwendung. Weitere Informationen zu startanwendungen finden Sie unter [zu der BCD WMI-Provider](http://msdn.microsoft.com/library/aa362639.aspx).  
+ Eine in der Windows-Startumgebung ausgeführte Anwendung. Weitere Informationen zu startanwendungen finden Sie unter [Informationen zum BCD WMI-Anbieter](/previous-versions/windows/desktop/bcd/about-bcd).  
   
  CONSOLE  
  Eine Windows-Zeichenmodusanwendung. Im Betriebssystem wird eine Konsole für Konsolenanwendungen zur Verfügung gestellt.  
@@ -68,9 +68,9 @@ Gibt die vom ausführbaren Image benötigte Ausführungsumgebung an.
   
 -   Die Werte für `major` und `minor` müssen in einem Bereich von 0 bis 65.535 liegen.  
   
- Die Wahl des Subsystems wirkt sich auf die Standardstartadresse des Programms aus. Weitere Informationen finden Sie unter [/Entry (Symbol für Einstiegspunkt)](../../build/reference/entry-entry-point-symbol.md), der Linker/Entry:*Funktion* Option.  
+ Die Wahl des Subsystems wirkt sich auf die Standardstartadresse des Programms aus. Weitere Informationen finden Sie unter [/Entry (Symbol für Einstiegspunkt)](../../build/reference/entry-entry-point-symbol.md), der Linkeroption/Entry:*Funktion* Option.  
   
- Weitere Informationen, einschließlich der Minimum- und Standardversionsnummern Werte für die Haupt- und Nebenversionsnummern Versionsnummern für jedes Subsystem, finden Sie unter der [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) (Linkeroption).  
+ Weitere Informationen, einschließlich der Minimum- und Standardversionsnummern Werte für die Haupt-und Nebenversionsnummern Zahlen für jedes Subsystem, finden Sie unter den [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) -Linkeroption.  
   
 ## <a name="see-also"></a>Siehe auch  
  [EDITBIN-Optionen](../../build/reference/editbin-options.md)

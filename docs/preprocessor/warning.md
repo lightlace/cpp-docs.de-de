@@ -1,5 +1,5 @@
 ---
-title: Warnung | Microsoft Docs
+title: Warnung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b739a3f72416b6ab58cbdba45a496e10fef4424
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 581194fdeab233e3ad07b2af6a7087bb1877e1f2
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842962"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540435"
 ---
 # <a name="warning-pragma"></a>warning-Pragma
 Aktiviert die selektive Änderung des Verhaltens der Compilerwarnmeldungen.  
@@ -40,18 +40,19 @@ Aktiviert die selektive Änderung des Verhaltens der Compilerwarnmeldungen.
 ```  
   
 ## <a name="remarks"></a>Hinweise  
+
 Die folgenden Parameter für Warnungsbezeichner stehen zur Verfügung.  
   
 |warning-specifier|Bedeutung|  
 |------------------------|-------------|  
-|`1, 2, 3, 4`|Wenden Sie die angegebene Ebene auf die angegebenen Warnung(en) an. Dadurch aktiviert sich auch eine angegebene Warnung, die standardmäßig deaktiviert ist.|  
-|`default`|Setzen Sie das Warnverhalten auf den Standardwert zurück. Dadurch aktiviert sich auch eine angegebene Warnung, die standardmäßig deaktiviert ist. Die Warnung wird auf der standardmäßigen dokumentierten Ebene generiert.<br /><br /> Weitere Informationen finden Sie unter [Compiler deaktivierte Compilerwarnungen standardmäßig](../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
-|`disable`|Geben Sie die angegebene(n) Warnung(en) nicht aus.|  
-|`error`|Melden Sie die angegebenen Warnungen als Fehler.|  
-|`once`|Zeigen Sie die angegebene(n) Meldung(en) nur einmal an.|  
-|`suppress`|Schiebt den aktuellen Zustand des Pragmas auf den Stapel, deaktiviert die angegebene Warnung für die nächste Zeile und ruft dann den Warnungsstapel auf, sodass der Pragmazustand zurückgesetzt wird.|  
+|*1, 2, 3, 4*|Wenden Sie die angegebene Ebene auf die angegebenen Warnung(en) an. Dadurch aktiviert sich auch eine angegebene Warnung, die standardmäßig deaktiviert ist.|  
+|*default*|Setzen Sie das Warnverhalten auf den Standardwert zurück. Dadurch aktiviert sich auch eine angegebene Warnung, die standardmäßig deaktiviert ist. Die Warnung wird auf der standardmäßigen dokumentierten Ebene generiert.<br /><br /> Weitere Informationen finden Sie unter [Compiler Warnings, die Are Off standardmäßig](../preprocessor/compiler-warnings-that-are-off-by-default.md).|  
+|*disable*|Geben Sie die angegebene(n) Warnung(en) nicht aus.|  
+|*Fehler*|Melden Sie die angegebenen Warnungen als Fehler.|  
+|*once*|Zeigen Sie die angegebene(n) Meldung(en) nur einmal an.|  
+|*Unterdrücken*|Schiebt den aktuellen Zustand des Pragmas auf den Stapel, deaktiviert die angegebene Warnung für die nächste Zeile und ruft dann den Warnungsstapel auf, sodass der Pragmazustand zurückgesetzt wird.|  
   
- Die folgende Codeanweisung veranschaulicht, dass ein Parameter `warning-number-list` mehrere Warnungsnummern enthalten kann und dass mehrere Parameter `warning-specifier` in der gleichen Pragmadirektive angegeben werden können.  
+Die folgende Codeanweisung veranschaulicht, dass ein Parameter `warning-number-list` mehrere Warnungsnummern enthalten kann und dass mehrere Parameter `warning-specifier` in der gleichen Pragmadirektive angegeben werden können.  
   
 ```cpp  
 #pragma warning( disable : 4507 34; once : 4385; error : 164 )  
@@ -70,9 +71,9 @@ Die folgenden Parameter für Warnungsbezeichner stehen zur Verfügung.
 #pragma warning( error : 164 )  
 ```  
   
- Der Compiler fügt 4000 zu jeder Warnungsnummer zwischen 0 und 999 hinzu.  
+Der Compiler fügt 4000 zu jeder Warnungsnummer zwischen 0 und 999 hinzu.  
   
- Bei Warnungszahlen im Bereich 4700–4999, die mit der Codegenerierung zusammenhängen, wird der Status der Warnung aktiviert, wenn der Compiler auf die geöffnete geschweifte Klammer einer Funktion stößt, und er bleibt für den Rest der Funktion aktiv. Das Verwenden des `warning`-Pragmas in der Funktion zum Ändern des Zustands einer Warnung, die eine Zahl größer als 4699 aufweist, tritt erst nach dem Ende der Funktion in Kraft. Das folgende Beispiel zeigt die korrekte Platzierung des Pragmas `warning` zur Deaktivierung einer Codegenerierungs-Warnmeldung und zur anschließenden Wiederherstellung.  
+Bei Warnungszahlen im Bereich 4700–4999, die mit der Codegenerierung zusammenhängen, wird der Status der Warnung aktiviert, wenn der Compiler auf die geöffnete geschweifte Klammer einer Funktion stößt, und er bleibt für den Rest der Funktion aktiv. Mithilfe der **Warnung** Pragma in die Funktion, die den Status einer Warnung zu ändern, die eine Zahl größer als 4699 aufweist werden erst dann wirksam nach dem Ende der Funktion. Das folgende Beispiel zeigt die korrekte Platzierung des **Warnung** Pragmas codeerstellung Warnmeldung angezeigt wird, deaktivieren und anschließenden Wiederherstellung.  
   
 ```cpp  
 // pragma_warning.cpp  
@@ -90,18 +91,19 @@ int main() {
 }  
 ```  
   
- Beachten Sie, dass im gesamten Funktionstext die letzte Einstellung des `warning`-Pragmas für die gesamte Funktion gelten wird.  
+Beachten Sie, die im gesamten Funktionstext die letzte Einstellung des der **Warnung** Pragma wird für die gesamte Funktion wirksam werden.  
   
 ## <a name="push-and-pop"></a>Push und Pop  
- Die `warning` Pragma unterstützt auch die folgende Syntax, wobei `n` eine Warnstufe (1 bis 4) darstellt.  
+ 
+Die **Warnung** Pragma unterstützt auch die folgende Syntax, wobei *n* eine Warnstufe (1 bis 4) dar.  
   
- `#pragma warning( push [ , n ] )`  
+`#pragma warning( push [ , n ] )`  
   
- `#pragma warning( pop )`  
+`#pragma warning( pop )`  
    
- Das Pragma `warning( push )` speichert den aktuellen Status "Warnung" für jede Warnung. Das Pragma `warning( push, n )` speichert den aktuellen Zustand für jede Warnung und legt die globale Warnstufe auf `n`.  
+Das Pragma `warning( push )` speichert den aktuellen Warnzustand für jede Warnung. Das Pragma `warning( push, n )` speichert den aktuellen Zustand für jede Warnung und legt die globale Warnstufe auf *n*.  
   
- Das Pragma `warning( pop )` nimmt den letzten Status "Warnung" auf dem Stapel abgelegt. Alle Änderungen, die Sie zwischen `push` und `pop` am Warnzustand vorgenommen haben, werden rückgängig gemacht. Betrachten Sie das folgende Beispiel:  
+Das Pragma `warning( pop )` Pops, die der letzte Warnzustand auf dem Stapel abgelegt. Alle Änderungen, die Sie in "Warnung" zwischen vorgenommen *Push* und *pop* werden rückgängig gemacht werden. Betrachten Sie das folgende Beispiel:  
   
 ```cpp  
 #pragma warning( push )  
@@ -112,9 +114,9 @@ int main() {
 #pragma warning( pop )   
 ```  
   
- Am Ende dieses Codes, stellt `pop` den Zustand jeder Warnung wieder her (einschließlich 4705, 4706 und 4707), der zu Beginn des Codes vorlag.  
+Am Ende dieses Codes *pop* stellt den Zustand jeder Warnung wieder her (einschließlich 4705, 4706 und 4707), sie am Anfang des Codes was.  
   
- Wenn Sie Headerdateien schreiben, können Sie `push` und `pop` verwenden, um sicherzustellen, dass Änderungen des Warnzustands, die von einem Benutzer vorgenommen wurden, nicht verhindern, dass der Header ordnungsgemäß kompiliert wird. Verwenden Sie `push` am Anfang des Headers und `pop` am Ende. Wenn Sie beispielsweise über einen Header verfügen, der nicht ordnungsgemäß auf Warnstufe 4 kompiliert, würde der folgende Code die Warnstufe auf 3 ändern und anschließend die ursprüngliche Warnstufe am Ende des Headers wiederherstellen.  
+Wenn Sie Headerdateien schreiben, können Sie *Push* und *pop* um sicherzustellen, dass-Status "Warnung" der Änderungen von einem Benutzer nicht die Header verhindern ordnungsgemäß kompiliert. Verwendung *Push* zu Beginn des Headers und *pop* am Ende. Wenn Sie beispielsweise über einen Header verfügen, der nicht ordnungsgemäß auf Warnstufe 4 kompiliert, würde der folgende Code die Warnstufe auf 3 ändern und anschließend die ursprüngliche Warnstufe am Ende des Headers wiederherstellen.  
   
 ```cpp  
 #pragma warning( push, 3 )  
@@ -122,7 +124,8 @@ int main() {
 #pragma warning( pop )   
 ```  
   
- Weitere Informationen zu Compileroptionen, die unterdrückt werden, mit denen Sie Warnungen, finden Sie unter [/Fi](../build/reference/fi-name-forced-include-file.md) und [/w](../build/reference/compiler-option-warning-level.md).  
+Weitere Informationen zu Compileroptionen, die Optionen, mit denen Sie unterdrückt Warnungen, finden Sie unter [/Fi](../build/reference/fi-name-forced-include-file.md) und [/w](../build/reference/compiler-option-warning-level.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

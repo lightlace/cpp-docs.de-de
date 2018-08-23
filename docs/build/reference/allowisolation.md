@@ -1,5 +1,5 @@
 ---
-title: -ALLOWISOLATION | Microsoft Docs
+title: -ALLOWISOLATION | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb92a7f31d48dad4a7fb608703c71ccc661e176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9511ce2d94a426756581b87d863051da25a627b
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368973"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42572850"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 Gibt das Verhalten bei der Manifestsuche an.  
@@ -36,15 +36,15 @@ Gibt das Verhalten bei der Manifestsuche an.
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- **/ ALLOWISOLATION** bewirkt, dass das Betriebssystem, Suchvorgänge und-Ladevorgänge durchführt.  
+ **/ ALLOWISOLATION** bewirkt, dass das Betriebssystem manifestsuch- und-Ladevorgänge durchführt.  
   
  **/ ALLOWISOLATION** ist die Standardeinstellung.  
   
- **/ALLOWISOLATION:No** gibt an, dass ausführbare Dateien geladen werden, als wäre es kein Manifest und Ursachen [EDITBIN-Referenz](../../build/reference/editbin-reference.md) festzulegende der `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit im optionalen-Headers `DllCharacteristics` Feld.  
+ **/ALLOWISOLATION:No** gibt an, dass ausführbare Dateien geladen werden, als gäbe es kein Manifest und bewirkt, dass [EDITBIN-Referenz](../../build/reference/editbin-reference.md) Festlegen der `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit im des optionalen Headers `DllCharacteristics` Feld.  
   
- Wenn die Isolation für eine ausführbare Datei deaktiviert ist, führt das Windows-Ladeprogramm keine Suche nach dem Anwendungsmanifest für den neu erstellen Prozess durch. Der neue Prozess verfügt nicht über eine Standard-Aktivierungskontext, selbst wenn ein Manifest in die ausführbare Datei selbst vorhanden ist oder wenn ein Manifest mit dem Namen Listenfeldsteuerelement *Name der ausführbaren Datei*. exe.manifest.  
+ Wenn die Isolation für eine ausführbare Datei deaktiviert ist, führt das Windows-Ladeprogramm keine Suche nach dem Anwendungsmanifest für den neu erstellen Prozess durch. Der neue Prozess verfügt nicht über eine Standard-Aktivierungskontext, auch wenn ein Manifest in der ausführbaren Datei vorhanden ist oder wenn ein Manifest, die den Namen verfügt *Name der ausführbaren Datei*. exe.manifest.  
   
 ## <a name="see-also"></a>Siehe auch  
  [EDITBIN-Optionen](../../build/reference/editbin-options.md)   
  [/ ALLOWISOLATION (Manifestsuche)](../../build/reference/allowisolation-manifest-lookup.md)   
- [Manifestdateienreferenz](http://msdn.microsoft.com/library/aa375632.aspx)
+ [Manifestdateienreferenz](/windows/desktop/SbsCs/manifest-files-reference)

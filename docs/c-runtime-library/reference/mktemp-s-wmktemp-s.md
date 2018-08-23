@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - wmktemp_s
@@ -41,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ed525f44150943496cddde57699035d8b62b6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb4fcd681cc5286d02f0a7b8cb4ff95b8f3dd911
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405223"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42573045"
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
 
@@ -79,7 +80,7 @@ errno_t _wmktemp_s(
 Muster des Dateinamens.
 
 *sizeInChars*<br/>
-Größe des Puffers in Einzelbyte-Zeichen in **_mktemp_s**; Breite Zeichen **_wmktemp_s**, einschließlich null-Abschlusszeichen.
+Größe des Puffers in Einzelbytezeichen in **_mktemp_s**; Breitzeichen Zeichen **_wmktemp_s**, einschließlich null-Terminator.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -89,15 +90,15 @@ Beide Funktionen geben bei Erfolg null und bei Fehlern einen Fehlercode zurück.
 
 |*nameTemplate*|*sizeInChars*|Rückgabewert|Neuen Wert im *NameTemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
-|**NULL**|alle|**EINVAL**|**NULL**|
-|Falsches Format (finden Sie unter "Hinweise" im Abschnitt für das richtige Format)|alle|**EINVAL**|Leere Zeichenfolge|
-|alle|<= Anzahl von X|**EINVAL**|Leere Zeichenfolge|
+|**NULL**|any|**EINVAL**|**NULL**|
+|Falsches Format (finden Sie unter "Hinweise" im Abschnitt für das richtige Format)|any|**EINVAL**|Leere Zeichenfolge|
+|any|<= Anzahl von X|**EINVAL**|Leere Zeichenfolge|
 
-Wenn eine der oben genannten Fehlerbedingungen auftritt, wird ein Handler für ungültige Parameter aufgerufen (siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md)). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und die Funktionen gibt **EINVAL**.
+Wenn eine der oben genannten Fehlerbedingungen auftritt, wird ein Handler für ungültige Parameter aufgerufen (siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md)). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und die Funktionen gibt **EINVAL**.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mktemp_s** -Funktion erstellt einen eindeutigen Dateinamen an, durch das Ändern der *NameTemplate* Argument, damit nach dem Aufruf der *NameTemplate* Zeiger verweist auf eine Zeichenfolge enthält den neuen Dateinamen an. **_mktemp_s** Multibyte-Zeichenfolgenargumente nach Bedarf, Erkennung von Multibyte-Zeichensequenzen entsprechend der multibyte-Codepage derzeit vom System zur Laufzeit automatisch behandelt. **_wmktemp_s** ist eine Breitzeichen-Version von **_mktemp_s**; das Argument der **_wmktemp_s** ist eine Breitzeichen-Zeichenfolge. **_wmktemp_s** und **_mktemp_s** Verhalten sich andernfalls identisch, außer dass **_wmktemp_s** verarbeitet keine Multibyte-Zeichenfolgen.
+Die **_mktemp_s** Funktion erstellt einen eindeutigen Dateinamen durch Ändern der *NameTemplate* Argument, damit nach dem Aufruf der *NameTemplate* Zeiger verweist auf eine Zeichenfolge die den neuen Dateinamen enthält. **_mktemp_s** behandelt automatisch Multibyte-Zeichenfolge nach Bedarf erkennt multibytezeichensequenzen gemäß dem multibyte-Codepage derzeit vom System zur Laufzeit. **_wmktemp_s** ist eine Breitzeichen-Version von **_mktemp_s**; das Argument der **_wmktemp_s** ist eine Breitzeichen-Zeichenfolge. **_wmktemp_s** und **_mktemp_s** Verhalten sich andernfalls identisch, außer dass **_wmktemp_s** verarbeitet keine Multibyte-Zeichenfolgen.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -105,17 +106,17 @@ Die **_mktemp_s** -Funktion erstellt einen eindeutigen Dateinamen an, durch das 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
-Die *NameTemplate* Argument hat das Format **BaseXXXXXX**, wobei *Basis* ist der Teil der neuen Dateinamen ein, den Sie angeben, und jedes "X" ein Platzhalter für ein Zeichen, das vom **_mktemp_s**. Jede Platzhalterzeichen in *NameTemplate* muss einen Großbuchstaben x **_mktemp_s** behält *Basis* und ersetzt das erste nachfolgende "X" mit einem alphanumerischen Zeichen. **_mktemp_s** ersetzt die folgenden nachgestellten x mit einem Wert fünfstellige; dieser Wert ist eine eindeutige Identifikationsnummer der aufrufende Prozess, oder in Multithreadprogrammen den aufrufenden Thread.
+Die *NameTemplate* Argument weist das Format **BaseXXXXXX**, wobei *Basis* ist der Teil den neuen Dateinamen an, die Sie angeben, und jedes X ist ein Platzhalter für ein Zeichen, das vom **_mktemp_s**. Einzelnen Platzhalterzeichen in *NameTemplate* x in Großschreibung angegeben sein **_mktemp_s** behält *Basis* und ersetzt das erste nachgestellte X mit einem alphabetischen Zeichen. **_mktemp_s** ersetzt das nächste nachgestellte x mit einem fünfstelligen Wert; dieser Wert ist eine eindeutige Zahl, die Identifizierung des aufrufenden Prozesses bzw. in Multithreadprogrammen den aufrufenden Thread.
 
-Jeden erfolgreichen Aufruf von **_mktemp_s** ändert *NameTemplate*. Bei jedem nachfolgenden Aufruf aus dem gleichen Prozess oder Thread mit dem gleichen *NameTemplate* Argument **_mktemp_s** sucht nach Dateinamen, die von zurückgegebene Namen entsprechen **_mktemp_s** in vorherigen aufrufen. Wenn keine Datei für einen angegebenen Namen existiert **_mktemp_s** zurückgegeben. Wenn Dateien vorhanden sind, für alle zuvor Namen zurückgegebenen **_mktemp_s** erstellt einen neuen Namen durch Ersetzen der alphabetischen Zeichens, die sie in den zuvor zurückgegebenen Namen mit den nächsten verfügbaren Kleinbuchstaben enthalten, in der Reihenfolge von "a" bis "Z" verwendet. Z. B. wenn *Basis* ist:
+Jeden erfolgreichen Aufruf von **_mktemp_s** ändert *NameTemplate*. Bei jedem darauffolgenden Aufruf aus demselben Prozess oder Thread mit dem gleichen *NameTemplate* Argument **_mktemp_s** sucht nach Dateinamen, die von zurückgegebene Namen entsprechen **_mktemp_s** im Rahmen vorheriger Aufrufe. Wenn keine Datei für den angegebenen Namen existiert **_mktemp_s** diesen Namen zurück. Wenn Dateien vorhanden sind, für alle zuvor Namen zurückgegebenen **_mktemp_s** erstellt einen neuen Namen durch Ersetzen der alphabetischen Zeichens, die sie in den zuvor zurückgegebenen Namen mit der nächsten verfügbaren Kleinbuchstaben, in der Reihenfolge von "a" bis "Z" verwendet. Z. B. wenn *Basis* ist:
 
 > **fn**
 
-und der fünfstellige-Wert, der vom **_mktemp_s** 12345 ist, wird der erste Name zurückgegeben:
+Der fünfstellige- Wert, der vom **_mktemp_s** 12345, ist der erste zurückgegebene Name:
 
 > **fna12345**
 
-Wenn dieser Name verwendet wird, um die Datei FNA12345 erstellen und diese Datei noch vorhanden ist, den Namen des nächste zurückgegeben, bei einem Aufruf von den gleichen Prozess oder Thread mit dem gleichen *Basis* für *NameTemplate* ist:
+Wenn dieser Name verwendet wird, um die Datei FNA12345 zu erstellen und diese Datei noch vorhanden ist, der nächste Namen, die bei einem Aufruf aus demselben Prozess oder Thread mit demselben zurückgegebenen *Basis* für *NameTemplate* ist:
 
 > **fnb12345**
 
@@ -123,13 +124,13 @@ Ist FNA12345 nicht vorhanden, lautet der nächste zurückgegebene Name erneut:
 
 > **fna12345**
 
-**_mktemp_s** können bis zu 26 eindeutige Dateinamen für eine bestimmte Kombination von erstellen *Basis* und *NameTemplate* Werte. Daher FNZ12345 ist die letzte eindeutiger Dateiname **_mktemp_s** erstellen können, für die *Basis* und *NameTemplate* in diesem Beispiel verwendeten Werte.
+**_mktemp_s** können bis zu 26 eindeutige Dateinamen für eine beliebige Kombination aus erstellen *Basis* und *NameTemplate* Werte. Daher ist FNZ12345 der letzte eindeutige Dateiname **_mktemp_s** erstellen können, für die *Basis* und *NameTemplate* in diesem Beispiel verwendeten Werte.
 
 In C++ wird die Verwendung dieser Funktionen durch Vorlagenüberladungen vereinfacht; die Überladungen können automatisch Rückschlüsse auf die Pufferlänge ziehen (wodurch kein Größenargument mehr angegeben werden muss), und sie können automatisch die älteren, nicht sicheren Funktionen durch ihre neueren, sicheren Entsprechungen ersetzen. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mktemp_s**|\<io.h>|
 |**_wmktemp_s**|\<io.h> oder \<wchar.h>|

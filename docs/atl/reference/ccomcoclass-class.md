@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33caa14a0a406b380ba53eb8ed92cf939581f862
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 6043277eff17340cd57d0a6ee1bb8e84625f45b9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026957"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572355"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass-Klasse
 Diese Klasse stellt Methoden zum Erstellen von Instanzen einer Klasse und ihre Eigenschaften abrufen.  
@@ -95,7 +95,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  [out] Die Adresse einer Zeigervariablen, die den angeforderten Schnittstellenzeiger empfängt, wenn Erstellung erfolgreich ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein standard HRESULT-Wert. Finden Sie unter [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615) im Windows SDK für eine Beschreibung der möglichen Rückgabewerte.  
+ Ein standard HRESULT-Wert. Finden Sie unter [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) im Windows SDK für eine Beschreibung der möglichen Rückgabewerte.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie die erste Überladung dieser Funktion für die typische objekterstellung; Verwenden Sie die zweite Überladung, wenn Sie das zu erstellende Objekt aggregieren möchten.  
@@ -107,7 +107,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  Beachten Sie, dass die Schnittstelle *Q* benötigen eine IID zugeordnet, die mit abgerufen werden kann die [__uuidof](../../cpp/uuidof-operator.md) Operator.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel `CDocument` ist eine vom Assistenten generierte ATL abgeleitete Klasse `CComCoClass` , implementiert die `IDocument` Schnittstelle. Die Klasse wird in der objektzuordnung mit dem Makro OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO registriert, damit Instanzen des Dokuments mithilfe von Clients erstellt werden können [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615). `CApplication` ist eine Co-Klasse, die eine Methode auf einem der eigenen COM-Schnittstellen zum Erstellen von Instanzen der Document-Klasse bereitstellt. Der folgende Code zeigt, wie einfach es zum Erstellen von Instanzen der Klasse für das Dokument mit den `CreateInstance` Member geerbt von der `CComCoClass` Basisklasse.  
+ Im folgenden Beispiel `CDocument` ist eine vom Assistenten generierte ATL abgeleitete Klasse `CComCoClass` , implementiert die `IDocument` Schnittstelle. Die Klasse wird in der objektzuordnung mit dem Makro OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO registriert, damit Instanzen des Dokuments mithilfe von Clients erstellt werden können [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication` ist eine Co-Klasse, die eine Methode auf einem der eigenen COM-Schnittstellen zum Erstellen von Instanzen der Document-Klasse bereitstellt. Der folgende Code zeigt, wie einfach es zum Erstellen von Instanzen der Klasse für das Dokument mit den `CreateInstance` Member geerbt von der `CComCoClass` Basisklasse.  
   
  [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   

@@ -1,5 +1,5 @@
 ---
-title: freigegeben (OpenMP) | Microsoft Docs
+title: freigegeben (OpenMP) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8287f96f80748272e29b22ed5c43c364f4353b86
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b2bc1a0bbf56623feccd4d3bd96f1e719e192d48
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691676"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42541787"
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
-Gibt an, dass eine oder mehrere Variablen auf allen Threads freigegeben werden soll.  
+Gibt an, dass eine oder mehrere Variablen, die auf allen Threads freigegeben werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,12 +36,12 @@ shared(var)
  wobei  
   
  `var`  
- Eine weitere Variablen freigeben. Wenn mehr als eine Variable angegeben wird, trennen Sie Namen durch ein Komma.  
+ Eine oder mehrere Variablen freigeben. Wenn mehr als eine Variable angegeben ist, trennen Sie Namen durch ein Komma.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine weitere Möglichkeit zum Freigeben von Variablen auf Threads ist mit der [Copyprivate](../../../parallel/openmp/reference/copyprivate.md) Klausel.  
+ Eine weitere Möglichkeit zum Teilen von Variablen zwischen Threads ist mit der [Copyprivate](../../../parallel/openmp/reference/copyprivate.md) Klausel.  
   
- `shared` gilt für die folgenden Direktiven:  
+ `shared` gilt für die folgenden Anweisungen:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   

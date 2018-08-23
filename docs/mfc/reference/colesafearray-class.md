@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff18423aa981fc453850084bb2f315a5600cf6fd
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 68f2e8e199fb22295ebd1fd25bbd3332c63e03b6
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027637"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42540249"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray-Klasse
 Eine Klasse zum Arbeiten mit Arrays beliebiger Dimension und beliebigen Typs.  
@@ -379,7 +379,7 @@ VARIANT Detach();
  Die zugrunde liegende `VARIANT` Wert in der `COleSafeArray` Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Die Funktion trennt die Daten in ein sicheres Array durch Festlegen der [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) des Objekts auf VT_EMPTY. Es ist der Verantwortung des Aufrufers, das Array durch Aufrufen der Windows-Funktion freizugeben [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835).  
+ Die Funktion trennt die Daten in ein sicheres Array durch Festlegen der [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) des Objekts auf VT_EMPTY. Es ist der Verantwortung des Aufrufers, das Array durch Aufrufen der Windows-Funktion freizugeben [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear).  
   
  Bei einem Fehler löst die Funktion eine [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -607,7 +607,7 @@ void PutElement(
  Zeiger auf die Daten, die dem Array zuzuweisen sind. VT_BSTR, "VT_DISPATCH" und "VT_UNKNOWN" Variante-Typen sind Zeiger und erfordern kein anderes Maß an Dereferenzierung.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion ruft automatisch die Windows-Funktionen [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) und [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) vor und nach dem Zuweisen des Elements. Ist das Datenelement eine Zeichenfolge, ein Objekt oder eine Variante, kopiert die Funktion es korrekt, und wenn das vorhandene Element eine Zeichenfolge, ein Objekt oder eine Variante ist, wird es korrekt gelöscht.  
+ Diese Funktion ruft automatisch die Windows-Funktionen [SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock) und [SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) vor und nach dem Zuweisen des Elements. Ist das Datenelement eine Zeichenfolge, ein Objekt oder eine Variante, kopiert die Funktion es korrekt, und wenn das vorhandene Element eine Zeichenfolge, ein Objekt oder eine Variante ist, wird es korrekt gelöscht.  
   
  Beachten Sie, dass Sie mehrere Sperren auf einem Array verwenden können, damit Sie Elemente in einem Array platzieren können, während das Array durch andere Vorgänge gesperrt ist.  
   

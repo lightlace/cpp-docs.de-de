@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4588829b3ec1d348405be925a75c493f4e8594b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898281e0652345f22c63076cf4b0a73294faaf04
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397752"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42573160"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
-Beendet einen Thread; **_endthread** beendet einen Thread durch die erstellte **_beginthread** und **_endthreadex** beendet einen Thread durch die erstellte **_beginthreadex**.
+Beendet einen Thread; **_endthread** beendet einen Thread, der erstellt wird **_beginthread** und **_endthreadex** beendet einen Thread, der erstellt wird **_beginthreadex**.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,14 +66,14 @@ void _endthreadex(
 
 ## <a name="remarks"></a>Hinweise
 
-Sie erreichen **_endthread** oder **_endthreadex** ausdrücklich auf einen Thread zu beenden jedoch **_endthread** oder **_endthreadex** wird aufgerufen automatisch, wenn der Thread aus der Routine zurückgegeben als Parameter an übergeben **_beginthread** oder **_beginthreadex**. Das Beenden eines Threads durch Aufruf von **Endthread** oder **_endthreadex** stellt die ordnungsgemäße Wiederherstellung der dem Thread zugeordneten Ressourcen sicher.
+Rufen Sie **_endthread** oder **_endthreadex** explizit auf einen Thread zu beenden. allerdings **_endthread** oder **_endthreadex** aufgerufen wird automatisch, wenn der Thread von der Routine zurück als Parameter an übergeben **_beginthread** oder **_beginthreadex**. Beenden eines Threads durch einen Aufruf von **Endthread** oder **_endthreadex** stellt ordnungsgemäße Wiederherstellung der dem Thread zugeordneten Ressourcen sicher.
 
 > [!NOTE]
-> Rufen Sie für eine mit „Libcmt.lib“ verknüpfte ausführbare Datei die [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) -Win32-API nicht auf, damit das Laufzeitsystem nicht an der Freigabe von zugeordneten Ressourcen gehindert wird. **_endthread** und **_endthreadex** zugeordnete Threadressourcen und rufen dann **ExitThread**.
+> Rufen Sie für eine mit „Libcmt.lib“ verknüpfte ausführbare Datei die [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) -Win32-API nicht auf, damit das Laufzeitsystem nicht an der Freigabe von zugeordneten Ressourcen gehindert wird. **_endthread** und **_endthreadex** zugeordnete Threadressourcen, und rufen dann **ExitThread**.
 
-**_endthread** schließt das Threadhandle automatisch. (Dieses Verhalten unterscheidet sich von der Win32 **ExitThread** API.) Aus diesem Grund bei Verwendung von **_beginthread** und **_endthread**, nicht explizit schließen Sie das Threadhandle durch Aufrufen von Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
+**_endthread** schließt das Threadhandle automatisch. (Dieses Verhalten unterscheidet sich vom Win32- **ExitThread** API.) Aus diesem Grund bei Verwendung von **_beginthread** und **_endthread**, explizit schließen Sie nicht das Threadhandle durch Aufrufen der Win32- ["CloseHandle"](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
 
-Wie die Win32 **ExitThread** -API, **_endthreadex** wird nicht das Threadhandle geschlossen. Aus diesem Grund bei Verwendung von **_beginthreadex** und **_endthreadex**, schließen Sie das Threadhandle durch Aufrufen von Win32 **CloseHandle** API.
+Wie Sie die Win32 **ExitThread** -API, **_endthreadex** schließt das Threadhandle nicht. Aus diesem Grund bei Verwendung von **_beginthreadex** und **_endthreadex**, müssen Sie das Threadhandle durch Aufrufen der Win32-schließen **"CloseHandle"** API.
 
 > [!NOTE]
 > **_endthread** und **_endthreadex** dazu führen, dass ausstehende C++-Destruktoren im Thread nicht aufgerufen werden.

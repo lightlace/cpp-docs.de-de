@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b5a91caab06f4d03beeea8ba542e1ebc12a8ecb
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 394136ccd11b4efd9f312c82acad7e9258309551
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407860"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571596"
 ---
 # <a name="c-type-system-modern-c"></a>C++- Typsystem (Modern C++)
 Das Konzept der *Typ* in C++ sehr wichtig ist. Jede Variable, jedes Funktionsargument und jeder Rückgabewert muss über einen Typ verfügen, um kompiliert werden zu können. Außerdem wird jedem Ausdruck (einschließlich Literalwerten) vom Compiler implizit ein Typ angegeben, bevor der Ausdruck ausgewertet wird. Einige Beispiele für Typen sind **Int** zum Speichern von ganzzahliger Werten **doppelte** zum Speichern von Gleitkommawerten (auch bekannt als *skalare* -Datentypen), oder die Standardbibliotheksklasse [Std:: basic_string](../standard-library/basic-string-class.md) zum Speichern von Text. Sie können einen eigenen Typ erstellen, durch die Definition einer **Klasse** oder **Struktur**. Der Typ gibt den Speicher an, der für die Variable (oder das Ausdrucksergebnis) zugeordnet ist, die Wertarten, die in dieser Variablen gespeichert werden können, wie diese Werte (als Bitmuster) interpretiert werden, und die Vorgänge, die darauf ausgeführt werden können. In diesem Artikel ist eine informelle Übersicht der Hauptfunktionen des C++-Typsystems enthalten.  
@@ -157,7 +157,7 @@ void someFunction() {
  Weitere Informationen über Zeiger im Allgemeinen finden Sie unter [Zeiger](../cpp/pointers-cpp.md).  
   
 ## <a name="windows-data-types"></a>Windows-Datentypen  
- In der klassischen Win32-Programmierung für C und C++ verwenden die meisten Funktionen Windows-spezifische Typdefinitionen und #define-Makros (die in `windef.h` definiert sind), um die Typen von Parametern und Rückgabewerten anzugeben. Diese Windows-Datentypen sind größtenteils nur die speziellen Namen (Aliase) für integrierte C/C++-Typen. Eine vollständige Liste dieser Typdefinitionen und Präprozessordefinitionen, finden Sie unter [Windows-Datentypen](http://msdn.microsoft.com/4553cafc-450e-4493-a4d4-cb6e2f274d46). Einige dieser Typdefinitionen, wie HRESULT und LCID, sind nützlich und beschreibend. Andere, wie INT, haben keine besondere Bedeutung und sind nur Alias für grundlegende C++-Typen. Weitere Windows-Datentypen haben Namen, die seit den Tagen der C-Programmierung und der 16-Bit-Prozessoren beibehalten werden. Sie haben keinen Zweck oder keine Bedeutung mehr bei moderner Hardware oder Betriebssystemen. Es gibt auch spezielle Datentypen, die die Windows Runtime Library, die als zugeordnete [Windows-Runtime-Basisdatentypen](http://msdn.microsoft.com/b5735851-ec07-48c1-92b4-ca9f768096f6). Für modernes C++ gilt die allgemeine Richtlinie, die grundlegenden C++-Typen vorzuziehen, es sei denn, mit dem Windows-Typ wird zusätzliche Bedeutung über die Interpretationsweise des Werts kommuniziert.  
+ In der klassischen Win32-Programmierung für C und C++ verwenden die meisten Funktionen Windows-spezifische Typdefinitionen und #define-Makros (die in `windef.h` definiert sind), um die Typen von Parametern und Rückgabewerten anzugeben. Diese Windows-Datentypen sind größtenteils nur die speziellen Namen (Aliase) für integrierte C/C++-Typen. Eine vollständige Liste dieser Typdefinitionen und Präprozessordefinitionen, finden Sie unter [Windows-Datentypen](/windows/desktop/WinProg/windows-data-types). Einige dieser Typdefinitionen, wie HRESULT und LCID, sind nützlich und beschreibend. Andere, wie INT, haben keine besondere Bedeutung und sind nur Alias für grundlegende C++-Typen. Weitere Windows-Datentypen haben Namen, die seit den Tagen der C-Programmierung und der 16-Bit-Prozessoren beibehalten werden. Sie haben keinen Zweck oder keine Bedeutung mehr bei moderner Hardware oder Betriebssystemen. Es gibt auch spezielle Datentypen, die die Windows Runtime Library, die als zugeordnete [Windows-Runtime-Basisdatentypen](/windows/desktop/WinRT/base-data-types). Für modernes C++ gilt die allgemeine Richtlinie, die grundlegenden C++-Typen vorzuziehen, es sei denn, mit dem Windows-Typ wird zusätzliche Bedeutung über die Interpretationsweise des Werts kommuniziert.  
   
 ## <a name="more-information"></a>Weitere Informationen  
  Weitere Informationen zum Typsystem von C++ finden Sie in den folgenden Themen.  

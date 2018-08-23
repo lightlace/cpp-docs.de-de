@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aae9429754dab8c539d7b94e70db72d33e4f13b
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 38d022cb3b7f2672ffe7dba6a6d9d4952fa21616
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402571"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42573256"
 ---
 # <a name="goto-statement-c"></a>goto-Anweisung (C++)
 Die **Goto** -Anweisung überträgt die Steuerung bedingungslos an die Anweisung anhand des angegebenen Bezeichners.  
@@ -36,6 +36,25 @@ goto identifier;
  Die bezeichnete Anweisung, die durch `identifier` angegeben wird, muss sich in der aktuellen Funktion befinden. Alle `identifier`-Namen sind Member eines internen Namespace und beeinträchtigen daher andere Bezeichner nicht.  
   
  Eine anweisungsbezeichnung ist nur sinnvoll ein **"GoTo"** -Anweisung; andernfalls werden anweisungsbezeichnungen ignoriert. Bezeichnungen können nicht erneut deklariert werden.  
+
+Ein **Goto** Anweisung ist nicht zulässig, um das Steuerelement an einen Speicherort übertragen, die über die Initialisierung von allen Variablen überspringt, die im Bereich an diesem Speicherort befindet. Im folgende Beispiel löst C2362 aus:
+
+```cpp
+int goto_fn(bool b)
+{
+    if (!b)
+    {
+        goto exit;  // C2362
+    }
+    else
+    { /*...*/ }
+
+    int error_code = 42;
+
+exit:
+    return error_code;
+}
+```
   
  Programmierung empfiehlt es sich beim der **Break**, **weiterhin**, und **zurückgeben** -Anweisungen anstelle von der **Goto** Anweisung immer möglich ist. Allerdings da die **Break** Anweisung, die nur eine Ebene einer Schleife beendet wird, müssen Sie möglicherweise mit einer **"GoTo"** Anweisung, um eine tief geschachtelte Schleife zu beenden.  
   

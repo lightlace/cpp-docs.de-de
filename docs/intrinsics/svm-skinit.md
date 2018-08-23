@@ -1,5 +1,5 @@
 ---
-title: __svm_skinit | Microsoft Docs
+title: __svm_skinit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e47608b7ec58e433d9be5e2f2178a825b6be2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0912b7a1ff41bf7a21da198268dbd4b8dc920a9
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338103"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42538878"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 **Microsoft-spezifisch**  
   
- Initiiert das Laden der überprüfbar sichere Software, z. B. einen Monitor für die virtuelle Maschine an.  
+ Initiiert das Laden der überprüfbar sichere Software, z. B. einen Monitor für die virtuellen Computer an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,20 +41,20 @@ void __svm_skinit(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|`SLB`|Die 32-Bit-physische Adresse eines Bytes 64K Secure Ladeprogramm Block (SLB).|  
+|`SLB`|Die 32-Bit-physische Adresse eines 64K Bytes sichere Ladeprogramm Block (SLB).|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__svm_skinit` -Funktion ist gleichbedeutend mit der `SKINIT` computeranweisung. Diese Funktion ist Teil einer Sicherheitssystem, die den Prozessor und eine vertrauenswürdige Platform Module (TPM) verwendet, stellen Sie sicher, und Laden vertrauenswürdige Software, die einen Kernel Sicherheit (SK) aufgerufen. Ein VM-Monitor ist ein Beispiel für einen Kernel Sicherheit. Das Sicherheitssystem überprüft Komponenten während der Initialisierung geladen und schützt Komponenten vor Manipulationen durch Interrupts, den Zugriff von Geräten oder ein anderes Programm, wenn der Computer über mehrere Prozessoren verfügt.  
+ Die `__svm_skinit` -Funktion ist gleichbedeutend mit der `SKINIT` computeranweisung. Diese Funktion ist Teil eines Security Systems, das der Prozessor und ein Trusted Platform Module (TPM) verwendet, um zu überprüfen, und Laden vertrauenswürdige Software, die einen Security-Kernel (SK) aufgerufen. Ein VM-Monitor ist ein Beispiel für einen Security-Kernel. Das Sicherheitssystem überprüft Programmkomponenten während der Initialisierung geladen, und schützt Komponenten vor Manipulationen durch Interrupts, den Zugriff von Geräten oder ein anderes Programm, wenn der Computer über mehrere Prozessoren verfügt.  
   
- Die `SLB` Parameter gibt die physische Adresse eines Codeblocks 64 KB Arbeitsspeicher wird aufgerufen, die *Secure Ladeprogramm Block* (SLB). Der SLB enthält, ein Programm, das sichere Ladeprogramm, das die betriebsumgebung für den Computer her und lädt anschließend die Sicherheit Kernel aufgerufen wird.  
+ Die `SLB` Parameter gibt an, die physische Adresse eines Blocks 64 KB Arbeitsspeicher wird aufgerufen, die *sichere Ladeprogramm Block* (SLB). Der SLB enthält, ein Programm, das sichere Ladeprogramm, das die betriebsumgebung für den Computer her und lädt anschließend den Security-Kernel aufgerufen wird.  
   
- Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593 Revision 3.11, an die [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) Standort.  
+ Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Weitere Informationen zu suchen, für das Dokument, "AMD64 Architecture Programmers manuelle Volume 2: System-Programmierung" Dokumentnummer 24593, Version 3.11, auf die [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) Standort.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__svm_skinit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__svm_skinit`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

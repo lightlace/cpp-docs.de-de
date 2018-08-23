@@ -1,5 +1,5 @@
 ---
-title: __fastfail | Microsoft Docs
+title: __fastfail | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b59aeb1bd2e7986e173608689b0b1c37a0ef247e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a0346be9f7a48defc702c9f2ef6aa187c37f187
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334365"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541601"
 ---
 # <a name="fastfail"></a>__fastfail
 **Microsoft-spezifisch**  
@@ -38,14 +38,14 @@ void __fastfail(unsigned int code);
  Die systeminterne `__fastfail`-Funktion gibt keinen Wert zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__fastfail` systeminterne bietet einen Mechanismus für eine *fast-Fail* Anforderung – eine Möglichkeit für einen möglicherweise beschädigten Prozess, die sofortige Beendigung anzufordern. Kritische Fehler, die den Status des Programms und des Stapels unwiederbringlich beschädigt haben können, können von der regulären Ausnahmebehandlungsfunktion nicht verarbeitet werden. Mit `__fastfail` können Sie den Prozess mit minimalem Aufwand beenden.  
+ Die `__fastfail` systeminterne bietet einen Mechanismus für eine *schnell Fehler* Anforderung – eine Möglichkeit für einen möglicherweise beschädigten Prozess, sofortige Beendigung anzufordern. Kritische Fehler, die den Status des Programms und des Stapels unwiederbringlich beschädigt haben können, können von der regulären Ausnahmebehandlungsfunktion nicht verarbeitet werden. Mit `__fastfail` können Sie den Prozess mit minimalem Aufwand beenden.  
   
  Intern wird `__fastfail` mithilfe mehrerer architekturspezifischer Mechanismen implementiert:  
   
 |Architektur|Anweisung|Speicherort für das Code-Argument|  
 |------------------|-----------------|-------------------------------|  
 |x86|int 0x29|ecx|  
-|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|int 0x29|rcx|  
+|x64|int 0x29|rcx|  
 |ARM|Opcode 0xDEFB|r0|  
   
  Eine Fast-Fail-Anforderung ist in sich abgeschlossen und erfordert in der Regel nur zwei Anweisungen, die ausgeführt werden müssen. Nachdem eine Fast-Fail-Anforderung ausgeführt wurde, leitet der Kernel die entsprechende Aktion ein. Im Benutzermoduscode bestehen keine Speicherabhängigkeiten über den Anweisungszeiger selbst hinaus, wenn ein Fast-Fail-Ereignis ausgelöst wird. Dadurch wird eine maximale Zuverlässigkeit erreicht, selbst wenn eine schwerwiegende Speicherbeschädigung vorliegt.  
@@ -62,7 +62,7 @@ void __fastfail(unsigned int code);
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__fastfail`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], ARM|  
+|`__fastfail`|X86, x 64, ARM|  
   
  **Headerdatei** \<intrin.h >  
   

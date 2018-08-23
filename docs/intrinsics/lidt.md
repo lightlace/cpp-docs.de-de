@@ -1,5 +1,5 @@
 ---
-title: __lidt | Microsoft Docs
+title: __lidt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dd972d2a7e8d75f7149b2dc2766ffca86b0b2e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6f73e37c8fddc54e91be13d83c54f126ab6b5a0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326510"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540023"
 ---
 # <a name="lidt"></a>__lidt
 **Microsoft-spezifisch**  
   
- Lädt das Interrupt Deskriptor Tabelle Register (IDTR) mit dem Wert in der angegebenen Speicheradresse.  
+ Lädt das Interrupt-Deskriptor Tabelle Register (IDTR) mit dem Wert in der angegebenen Speicheradresse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,12 +47,12 @@ void __lidt(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__lidt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__lidt`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Die `__lidt` -Funktion ist gleichbedeutend mit dem `LIDT` computeranweisung und ist nur im Kernelmodus verfügbar. Weitere Informationen zu suchen, für das Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set-Reference" auf der [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
+ Die `__lidt` -Funktion ist gleichbedeutend mit der `LIDT` computeranweisung und steht nur im Kernelmodus ausgeführt. Weitere Informationen zu suchen, nach dem Dokument "Intel Architecture-Softwareentwickler manuell, Volume 2: Instruction Set Reference," auf die [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
   
 **Ende Microsoft-spezifisch**  
   

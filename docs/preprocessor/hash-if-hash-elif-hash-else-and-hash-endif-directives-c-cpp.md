@@ -1,5 +1,5 @@
 ---
-title: '#IF, #elif-, #else- und #endif-Direktiven (C/C++) | Microsoft Docs'
+title: '#IF, #elif-, #else- und #endif-Direktiven (C/C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,87 +31,89 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 222aa7cf4960095461daa26388f2b969985a6069
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846648"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42539223"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if-, #elif-, #else- und #endif-Anweisungen (C/C++)
-Die `#if`-Direktive steuert mit den Direktiven `#elif`, `#else` und `#endif` die Kompilierung von Teilen einer Quelldatei. Wenn der Ausdruck, den Sie schreiben (nach `#if`), einen Wert ungleich 0 (null) aufweist, wird die Zeilengruppe, die unmittelbar auf die `#if`-Direktive folgt, in der Übersetzungseinheit beibehalten.  
+Die **#if** -Direktive, zusammen mit den **#elif**, **#else**, und **#endif** Steuerelemente-Kompilierung von Teilen einer Quelldatei-Anweisungen. Wenn der Ausdruck, die Sie schreiben (nach der **#if**) verfügt über einen Wert ungleich NULL, der Gruppe für Zeile unmittelbar nach der **#if** Richtlinie wird in der Übersetzungseinheit beibehalten.  
   
 ## <a name="grammar"></a>Grammatik  
- *bedingte* :  
- *If-Teil Elif-Teile*opt*else-Teil*opt*Endif-Zeile*  
+ 
+*bedingte* :  
+*Elif Teile von If-Part*opt*else-Teil*opt*Endif-Zeile*  
   
- *If-Teil* :  
- *If-Line-text*  
+*If-Part* :  
+*If-Line text*  
   
- *If-Line-* :  
- **#if***Konstantenausdruck*  
+*If-Line-* :  
+**#if***konstanter Ausdruck*   
   
- **#ifdef***Bezeichner*   
+**#ifdef***Bezeichner*   
   
- **#ifndef***Bezeichner*  
+**#ifndef***Bezeichner*   
   
- *Elif-Teile* :  
- *Elif-Line-text*  
+*Elif-Teile* :  
+*Elif-Line text*  
   
- *Elif-Teile Elif-Line-text*  
+*Elif-Teile Elif-Line text*  
   
- *Elif-Line-* :  
- **#elif***Konstantenausdruck*   
+*Elif-Line-* :  
+**#elif***konstanter Ausdruck*   
   
- *else-Teil* :  
- *Else-Line-text*  
+*else-Teil* :  
+*Else-Line text*  
   
- *Else-Line* :  
- `#else`  
+*Else-Line* :  
+`#else`  
   
- *Endif-Line-* :  
- `#endif`  
+*Endif-Line-* :  
+`#endif`  
   
- Jeder `#if`-Direktive in einer Quelldatei muss eine schließende `#endif`-Direktive zugeordnet sein. Eine beliebige Anzahl von `#elif`-Direktiven kann zwischen der `#if`- und der `#endif`-Direktive auftreten, es ist jedoch höchstens eine `#else`-Direktive zulässig. Die `#else`-Direktive muss, falls vorhanden, die letzte Direktive vor `#endif` sein.  
+Jede **#if** -Anweisung in einer Quelldatei muss eine schließende übereinstimmen **#endif** Richtlinie. Eine beliebige Anzahl von **#elif** Direktiven können angezeigt werden, zwischen den **#if** und **#endif** Direktiven, jedoch höchstens eine **#else** -Anweisung zulässig. Die **#else** Richtlinie, sofern vorhanden, muss sein die letzte Anweisung vor **#endif**.  
   
- Die Direktiven `#if`, `#elif`, `#else` und `#endif` können in Textteilen von anderen `#if`-Direktiven geschachtelt sein. Jede geschachtelte Direktive `#else`, `#elif` oder `#endif` gehört zur nächsten vorangehenden `#if`-Direktive.  
+Die **#if**, **#elif**, **#else**, und **#endif** Anweisungen können in Textteilen von anderen schachteln **#if**Anweisungen. Jede geschachtelte **#else**, **#elif**, oder **#endif** Richtlinie gehört zur nächsten vorangehenden **#if** Richtlinie.  
   
- Allen bedingten Kompilierungsdirektiven, wie z. B. `#if` und **#ifdef**, müssen schließende zugeordnet werden `#endif` -Direktiven vor dem Dateiende; andernfalls wird eine Fehlermeldung generiert. Wenn Includedateien bedingte Kompilierungsanweisungen enthalten, müssen sie die gleichen Bedingungen erfüllen: Am Ende der Includedatei dürfen sich keine bedingten Kompilierungsanweisungen ohne Entsprechung befinden.  
+Allen bedingten kompilierungsanweisungen, wie z. B. **#if** und **#ifdef**, müssen schließende zugeordnet werden **#endif** -Anweisungen vor dem Ende der Datei, andernfalls Fehler Nachricht wird generiert. Wenn Includedateien bedingte Kompilierungsanweisungen enthalten, müssen sie die gleichen Bedingungen erfüllen: Am Ende der Includedatei dürfen sich keine bedingten Kompilierungsanweisungen ohne Entsprechung befinden.  
   
- Makroersetzung wird ausgeführt, in dem Teil der Befehlszeile, folgt eine `#elif` Befehls, sodass ein Makroaufruf im verwendet werden kann die *Konstantenausdruck*.  
+Makroersetzung wird ausgeführt, in dem Teil der Befehlszeile, folgt eine **#elif** Befehl, sodass ein Makroaufruf im verwendet werden kann die *Konstantenausdruck*.  
   
- Der Präprozessor wählt eines der Vorkommnisse von *Text* zur weiteren Verarbeitung. Ein im angegebenen Block *Text* kann eine beliebige Textsequenz sein. Er kann mehr als eine Zeile umfassen. In der Regel *Text* ist Programmtext, der für den Compiler oder den Präprozessor Bedeutung hat.  
+Der Präprozessor wählt eines der Vorkommnisse des *Text* zur weiteren Verarbeitung. Ein im angegebenen Block *Text* kann eine beliebige Textsequenz sein. Er kann mehr als eine Zeile umfassen. In der Regel *Text* ist Programmtext, der für den Compiler oder den Präprozessor Bedeutung hat.  
   
- Der Präprozessor verarbeitet den ausgewählten *Text* und übergibt sie an den Compiler. Wenn *Text* enthält, werden diese Direktiven vom Präprozessor ausgeführt. Nur Textblöcke, die vom Präprozessor ausgewählt werden, werden kompiliert.  
+Der Präprozessor verarbeitet den ausgewählten *Text* und übergibt sie an den Compiler. Wenn *Text* Präprozessordirektiven, der Präprozessor enthält, werden diese Anweisungen enthält. Nur Textblöcke, die vom Präprozessor ausgewählt werden, werden kompiliert.  
   
- Der Präprozessor wählt ein einzelnes *Text* Element durch das Auswerten der Konstanten Ausdrucks nach jeder `#if` oder `#elif` Richtlinie, bis einen "true" (ungleich null) Konstanten Ausdruck gefunden wird. Er wählt den gesamten Text (einschließlich anderer Präprozessordirektiven, beginnend mit **#**) bis zu seiner zugeordneten `#elif`, `#else`, oder `#endif`.  
+Der Präprozessor wählt ein einzelnes *Text* , geordnet nach der Auswertung des konstanten Ausdrucks nach jeder **#if** oder **#elif** Richtlinie bis true (ungleich null) Konstante gefunden -Ausdruck. Er wählt den gesamten Text (einschließlich anderer präprozessoranweisungen, beginnend mit **#**) bis zu der zugehörigen **#elif**, **#else**, oder **#endif** .  
   
- Wenn alle Vorkommen von *Konstantenausdruck* "false" sind oder wenn keine `#elif` -Direktiven vorhanden sind, wählt der Präprozessor den Textblock nach der `#else` Klausel. Wenn die `#else` -Klausel weggelassen, und alle Instanzen des *Konstantenausdruck* in die `#if` -Block "false" sind, kein Textblock ausgewählt ist.  
+Wenn alle Vorkommen von *Konstantenausdruck* "false" sind oder wenn keine **#elif** -Anweisungen vorhanden sind, der Präprozessor wählt den Textblock nach der **#else** Klausel. Wenn die **#else** -Klausel weggelassen und alle Instanzen des *Konstantenausdruck* in die **#if** -Block "false", kein Textblock ausgewählt ist.  
   
- Die *Konstantenausdruck* ist ein ganzzahliger konstanter Ausdruck mit diesen zusätzlichen Einschränkungen:  
+Die *Konstantenausdruck* ist ein ganzzahliger konstanter Ausdruck mit diesen zusätzlichen Einschränkungen:  
   
--   Ausdrücke müssen einen ganzzahligen Typ aufweisen und können nur ganzzahlige Konstanten, Zeichenkonstanten, einschließen und die **definiert** Operator.  
+- Ausdrücke müssen einen ganzzahligen Typ aufweisen und kann nur ganzzahlige Konstanten und Zeichenkonstanten enthalten und die **definiert** Operator.  
   
--   Der Ausdruck kann keinen `sizeof`-Operator oder einen Typumwandlungsoperator verwenden.  
+- Der Ausdruck kann keinen `sizeof`-Operator oder einen Typumwandlungsoperator verwenden.  
   
--   Die Zielumgebung ist möglicherweise nicht in der Lage, alle Bereiche von ganzen Zahlen darzustellen.  
+- Die Zielumgebung ist möglicherweise nicht in der Lage, alle Bereiche von ganzen Zahlen darzustellen.  
   
--   Die Übersetzung stellt Typ `int` Typ **lange**, und `unsigned int` identisch `unsigned long`.  
+- Die Übersetzung stellt Typ **Int** Typ **lange**, und **ganze Zahl ohne Vorzeichen** identisch **unsigned long**.  
   
--   Das Konvertierungsprogramm kann Zeichenkonstanten in einen Satz von Codewerten übersetzen, die sich vom Satz für die Zielumgebung unterscheiden. Um die Eigenschaften der Zielumgebung zu bestimmen, überprüfen Sie die Werte der Makros von LIMITS.H in einer für die Zielumgebung erstellten Anwendung.  
+- Das Konvertierungsprogramm kann Zeichenkonstanten in einen Satz von Codewerten übersetzen, die sich vom Satz für die Zielumgebung unterscheiden. Um die Eigenschaften der Zielumgebung zu bestimmen, überprüfen Sie die Werte der Makros von LIMITS.H in einer für die Zielumgebung erstellten Anwendung.  
   
--   Der Ausdruck darf keine Umgebungsabfragen durchführen und muss von Implementierungsdetails auf dem Zielcomputer isoliert bleiben.  
+- Der Ausdruck darf keine Umgebungsabfragen durchführen und muss von Implementierungsdetails auf dem Zielcomputer isoliert bleiben.  
 
 ## <a name="defined"></a>Definition  
- Der Präprozessoroperator **definiert** in speziellen Konstanten Ausdrücken verwendet werden können, wie in der folgenden Syntax gezeigt:  
+ 
+Der Präprozessoroperator **definiert** kann in speziellen Konstanten Ausdrücken verwendet werden, wie in der folgenden Syntax gezeigt:  
   
- defined( `identifier` )  
+defined( `identifier` )  
   
- defined `identifier`  
+defined `identifier`  
   
- Dieser Konstante Ausdruck wird als "true" (ungleich null), wenn die *Bezeichner* derzeit definiert ist; andernfalls ist die Bedingung "false" (0). Ein Bezeichner, der als leerer Text definiert wird, wird als definiert betrachtet. Die **definiert** -Direktive kann verwendet werden, eine `#if` und ein `#elif` Richtlinie jedoch an keiner anderen Stelle.  
+Dieser Konstante Ausdruck wird als "true" (ungleich null), wenn die *Bezeichner* derzeit definiert ist; andernfalls ist die Bedingung "false" (0). Ein Bezeichner, der als leerer Text definiert wird, wird als definiert betrachtet. Die **definiert** -Direktive kann verwendet werden, eine **#if** und **#elif** Richtlinie allerdings an keiner anderen Stelle.  
   
- Im folgenden Beispiel steuern die `#if`-Direktive und die `#endif`-Direktive die Kompilierung von einem von drei Funktionsaufrufen:  
+Im folgenden Beispiel die **#if** und **#endif** Kompilierung des eine von drei Funktionsaufrufen:  
   
 ```  
 #if defined(CREDIT)  
@@ -123,9 +125,9 @@ Die `#if`-Direktive steuert mit den Direktiven `#elif`, `#else` und `#endif` die
 #endif  
 ```  
   
- Der Funktionsaufruf an `credit` wird kompiliert, wenn der Bezeichner `CREDIT` definiert ist. Wenn der Bezeichner `DEBIT` definiert ist, wird der Funktionsaufruf an `debit` kompiliert. Wenn keiner der Bezeichner definiert ist, wird der Aufruf an `printerror` kompiliert. Beachten Sie, dass `CREDIT` und `credit` unterschiedliche Bezeichner in C und C++ sind, da ihre Groß-/Kleinschreibung unterschiedlich ist.  
+Der Funktionsaufruf an `credit` wird kompiliert, wenn der Bezeichner `CREDIT` definiert ist. Wenn der Bezeichner `DEBIT` definiert ist, wird der Funktionsaufruf an `debit` kompiliert. Wenn keiner der Bezeichner definiert ist, wird der Aufruf an `printerror` kompiliert. Beachten Sie, dass `CREDIT` und `credit` unterschiedliche Bezeichner in C und C++ sind, da ihre Groß-/Kleinschreibung unterschiedlich ist.  
   
- Die Anweisungen für die bedingte Kompilierung im folgenden Beispiel gehen von einer zuvor definierten symbolischen Konstante aus, die `DLEVEL` heißt.  
+Die Anweisungen für die bedingte Kompilierung im folgenden Beispiel gehen von einer zuvor definierten symbolischen Konstante aus, die `DLEVEL` heißt.  
   
 ```  
 #if DLEVEL > 5  
@@ -154,20 +156,20 @@ Die `#if`-Direktive steuert mit den Direktiven `#elif`, `#else` und `#endif` die
 #endif  
 ```  
   
- Der erste `#if`-Block zeigt zwei Sätze von verschachtelten `#if`-, `#else`- und `#endif`-Direktiven. Der erste Satz von Direktiven wird nur verarbeitet, wenn `DLEVEL > 5` "true" ist. Andernfalls, die Anweisungen nach #**else** verarbeitet werden.  
+Die erste **#if** -Block zeigt zwei Sätze von verschachtelten **#if**, **#else**, und **#endif** Anweisungen. Der erste Satz von Direktiven wird nur verarbeitet, wenn `DLEVEL > 5` "true" ist. Andernfalls die Anweisungen nach **#else** verarbeitet werden.  
   
- Die Direktiven `#elif` und `#else` im zweiten Beispiel werden verwendet, um eine von vier Auswahlmöglichkeiten zu treffen, abhängig vom Wert von `DLEVEL`. Die Konstante `STACK` ist auf 0, 100 oder 200 festgelegt, abhängig von der Definition von `DLEVEL`. Wenn `DLEVEL` größer als 5 ist, wird die Anweisung  
+Die **#elif** und **#else** Anweisungen im zweiten Beispiel verwendet, um eine der vier Auswahlmöglichkeiten, basierend auf den Wert der `DLEVEL`. Die Konstante `STACK` ist auf 0, 100 oder 200 festgelegt, abhängig von der Definition von `DLEVEL`. Wenn `DLEVEL` größer als 5 ist, wird die Anweisung  
   
 ```  
 #elif DLEVEL > 5  
 display(debugptr);  
 ```  
   
- kompiliert, und `STACK` wird nicht definiert.  
+kompiliert, und `STACK` wird nicht definiert.  
   
- Eine übliche Verwendung für die bedingte Kompilierung besteht darin, mehrere Inklusionen derselben Headerdatei zu verhindern. In C++, wo Klassen häufig in den Headerdateien definiert werden, können Konstrukte wie das folgende verwendet werden, um mehrere Definitionen zu vermeiden:  
+Eine übliche Verwendung für die bedingte Kompilierung besteht darin, mehrere Inklusionen derselben Headerdatei zu verhindern. In C++, wo Klassen häufig in den Headerdateien definiert werden, können Konstrukte wie das folgende verwendet werden, um mehrere Definitionen zu vermeiden:  
   
-```  
+```cpp  
 /*  EXAMPLE.H - Example header file  */  
 #if !defined( EXAMPLE_H )  
 #define EXAMPLE_H  
@@ -180,10 +182,11 @@ class Example
 #endif // !defined( EXAMPLE_H )  
 ```  
   
- Der vorangehende Code überprüft, ob die symbolische Konstante `EXAMPLE_H` definiert ist. In diesem Fall wurde die Datei bereits eingefügt und muss nicht erneut verarbeitet werden. Wenn dies nicht der Fall ist, wird die Konstante `EXAMPLE_H` definiert, um EXAMPLE.H als bereits verarbeitet zu markieren.  
+Der vorangehende Code überprüft, ob die symbolische Konstante `EXAMPLE_H` definiert ist. In diesem Fall wurde die Datei bereits eingefügt und muss nicht erneut verarbeitet werden. Wenn dies nicht der Fall ist, wird die Konstante `EXAMPLE_H` definiert, um EXAMPLE.H als bereits verarbeitet zu markieren.  
 
-## <a name="hasinclude"></a>__has_include
-**Visual Studio 2017 15,3 und höher**: bestimmt, ob ein Header der Typbibliothek für die Aufnahme verfügbar ist:  
+## <a name="hasinclude"></a>"__has_include"
+
+**Visual Studio 2017 Version 15.3 und höher**: bestimmt, ob ein Header der Typbibliothek für die Aufnahme verfügbar ist:  
 
 ```cpp
 #ifdef __has_include
@@ -201,4 +204,5 @@ class Example
 ```
   
 ## <a name="see-also"></a>Siehe auch  
- [Präprozessordirektiven](../preprocessor/preprocessor-directives.md)
+ 
+[Präprozessordirektiven](../preprocessor/preprocessor-directives.md)

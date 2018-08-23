@@ -51,12 +51,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 72ac1a5be4f2e114e5b90b65542b09733c43d174
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 1ca0d5a4dfd8139c0941dffd22397f296b7b4354
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338862"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42573157"
 ---
 # <a name="csession-class"></a>CSession-Klasse
 Stellt eine einzelne Datenbank-Access-Sitzung dar.  
@@ -98,7 +98,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [ITransaction:: Abort](https://msdn.microsoft.com/library/ms709833.aspx) in die *OLE DB-Programmierreferenz*.  
+ Finden Sie unter [ITransaction:: Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard-HRESULT. 
@@ -127,13 +127,13 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [ITransaction:: Commit](https://msdn.microsoft.com/library/ms713008.aspx) in die *OLE DB-Programmierreferenz*.  
+ Finden Sie unter [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard-HRESULT.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [ITransaction:: Commit](https://msdn.microsoft.com/library/ms713008.aspx).  
+ Weitere Informationen finden Sie unter [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\)).  
 
 ## <a name="gettransactioninfo"></a> CSession:: Gettransactioninfo
 Gibt Informationen zu einer Transaktion zurück.  
@@ -145,13 +145,13 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [ITransaction::GetTransactionInfo](https://msdn.microsoft.com/library/ms714975.aspx) in die *OLE DB-Programmierreferenz*.  
+ Finden Sie unter [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard-HRESULT.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [ITransaction::GetTransactionInfo](https://msdn.microsoft.com/library/ms714975.aspx) in die *OLE DB-Programmierreferenz*. 
+ Weitere Informationen finden Sie unter [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
 
 ## <a name="open"></a> CSession:: Open
 Öffnet eine neue Sitzung für das Datenquellenobjekt.  
@@ -169,10 +169,10 @@ HRESULT Open(const CDataSource& ds,
  [in] Die Datenquelle für die die Sitzung ist, geöffnet werden.  
   
  *pPropSet*  
- [in] Ein Zeiger auf ein Array von [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) Strukturen, die Eigenschaften und Werte festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](https://msdn.microsoft.com/library/ms713696.aspx) in die *OLE DB-Programmierreferenz* in das Windows SDK.  
+ [in] Ein Zeiger auf ein Array von [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen, die Eigenschaften und Werte festgelegt werden. Finden Sie unter [Eigenschaftensätze und Eigenschaftengruppen](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) in die *OLE DB-Programmierreferenz* in das Windows SDK.  
   
  *ulPropSets*  
- [in] Die Anzahl der [DBPROPSET](https://msdn.microsoft.com/library/ms714367.aspx) Strukturen zu übergeben, der *DBPROPSET* Argument.  
+ [in] Die Anzahl der [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) Strukturen zu übergeben, der *DBPROPSET* Argument.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard-HRESULT.  
@@ -193,13 +193,13 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- Finden Sie unter [ITransactionLocal:: StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx) in die *OLE DB-Programmierreferenz*.  
+ Finden Sie unter [ITransactionLocal:: StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard-HRESULT.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [ITransactionLocal:: StartTransaction](https://msdn.microsoft.com/library/ms709786.aspx) in die *OLE DB-Programmierreferenz*. 
+ Weitere Informationen finden Sie unter [ITransactionLocal:: StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\)) in die *OLE DB-Programmierreferenz*. 
   
 ## <a name="see-also"></a>Siehe auch  
  [CatDB](../../visual-cpp-samples.md)   

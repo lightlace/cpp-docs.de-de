@@ -1,5 +1,5 @@
 ---
-title: CDockingPanesRow Klasse | Microsoft Docs
+title: CDockingPanesRow-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -100,17 +100,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 128334398b268c91ec7e6b938bcbd0d2e6e37dd0
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955266"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42544484"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow-Klasse
 Verwaltet eine Liste von Bereichen, die in der gleichen horizontalen oder vertikalen Zeile (Spalte) einer Docksite positioniert sind.  
 
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -224,7 +224,7 @@ virtual void AddPaneFromRow(
 ### <a name="remarks"></a>Hinweise  
   
 ##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes  
- Ordnet andockbare Bereiche in einer Zeile entsprechend den angegebenen Rand und Abstand Parameter.  
+ Ordnet die andockbare Bereiche in einer Zeile entsprechend den angegebenen Rand und Abstand von Parametern an.  
   
 ```  
 virtual void ArrangePanes(
@@ -234,13 +234,13 @@ virtual void ArrangePanes(
   
 ### <a name="parameters"></a>Parameter  
  [in] *nMargin*  
- Gibt den Offset in Pixel, der den ersten Bereich aus der linken oberen Ecke der Zeile an.  
+ Gibt den Offset in Pixel der erste Bereich aus der linken oberen Ecke der Zeile an.  
   
  [in] *nSpacing*  
- Gibt den Abstand zwischen den Bereichen in Pixel an.  
+ Gibt den Abstand in Pixel zwischen den Bereichen an.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode, um Bereiche in der Zeile anordnen, wo sie andocken werden. Nach dem Aufrufen dieser Methode müssen Sie aufrufen `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.  
+ Rufen Sie diese Methode, um Bereiche in der Zeile anzuordnen, wo sie andocken werden. Sie müssen nach dem Aufrufen dieser Methode aufrufen `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.  
   
 ##  <a name="calcfixedlayout"></a>  CDockingPanesRow::CalcFixedLayout  
 

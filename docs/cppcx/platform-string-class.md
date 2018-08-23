@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: String-Klasse | Microsoft Docs'
+title: 'Platform:: String-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -23,16 +23,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a7852140b26260b56bd4436c2ee4f7abd2300b3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094825"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42587410"
 ---
 # <a name="platformstring-class"></a>Platform::String-Klasse
 Stellt eine sequenzielle Auflistung von Unicode-Zeichen dar, die zum Darstellen von Text verwendet werden. Weitere Informationen und Beispiele finden Sie unter [Zeichenfolgen](../cppcx/strings-c-cx.md).  
@@ -81,7 +81,7 @@ public ref class String sealed : Object,
 |[String::Equals](#equals)|Gibt an, ob das angegebene Objekt gleich dem aktuellen Objekt ist.|  
 |[String::GetHashCode](#gethashcode)|Gibt den Hashcode für diese Instanz zurück.|  
 |[String::IsEmpty](#isempty)|Gibt an, ob das aktuelle String-Objekt leer ist.|  
-|[String::IsFastPass](#isfastpass)|Gibt an, ob das aktuelle String-Objekt an einem *Fast-Pass* -Vorgang teilnimmt. Bei einem Fast-Pass-Vorgang wird die Verweiszählung angehalten.|  
+|[String::IsFastPass](#isfastpass)|Gibt an, ob das aktuelle String-Objekt beteiligt ist eine *Schnelldurchlauf* Vorgang. Bei einem Fast-Pass-Vorgang wird die Verweiszählung angehalten.|  
 |[String::Length](#length)|Ruft die Länge des aktuellen Zeichenfolgenobjekts ab.|  
 |[String::ToString](#tostring)|Gibt ein neues Zeichenfolgenobjekt zurück, dessen Wert mit der aktuellen Zeichenfolge identisch ist.|  
   
@@ -99,9 +99,9 @@ public ref class String sealed : Object,
 |[String:: Operator <-Operator](#operator-less-than)|Gibt an, ob der Wert eines Zeichenfolgenobjekts kleiner als der Wert eines zweiten Zeichenfolgenobjekts ist.|  
   
 ### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
+ **Unterstützter Client (Min.):** Windows 8  
   
- **Unterstützter Server:** Windows Server 2012  
+ **Unterstützter Server (Min.):** Windows Server 2012  
   
  **Namespace:** Platform  
   
@@ -171,7 +171,7 @@ String^ Concat( String^ str1, String^ str2)
 ### <a name="return-value"></a>Rückgabewert  
  Ein neues Zeichenfolgen^-Objekt, dessen Wert die Verkettung der Werte von `str1` und `str2` ist.  
   
- Wenn `str1` ist `null` und `str2` nicht, `str1` wird zurückgegeben. Wenn `str2` ist `null` und `str1` nicht, `str2` wird zurückgegeben. Wenn `str1` und `str2` beide `null` sind, wird die leere Zeichenfolge (L "") zurückgegeben.  
+ Wenn `str1` ist `null` und `str2` nicht `str1` zurückgegeben wird. Wenn `str2` ist `null` und `str1` nicht `str2` zurückgegeben wird. Wenn `str1` und `str2` beide `null` sind, wird die leere Zeichenfolge (L "") zurückgegeben.  
   
 
 
@@ -188,7 +188,7 @@ const char16* Data()
  Ein Zeiger auf den Anfang einer `const char16` Array von Unicode-Zeichen (`char16` ist eine Typedef für `wchar_t`).  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode zum Konvertieren von `Platform::String^` zu `wchar_t*`. Wenn das `String`-Objekt den Gültigkeitsbereich verlässt, ist die Gültigkeit des Datenzeigers nicht mehr sichergestellt. Zum Speichern der Daten nach Ablauf der Lebensdauer des ursprünglichen `String` -Objekts [Wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) zum Kopieren des Arrays in den Arbeitsspeicher, die Sie selbst zugeordnet haben.  
+ Verwenden Sie diese Methode zum Konvertieren von `Platform::String^` zu `wchar_t*`. Wenn das `String`-Objekt den Gültigkeitsbereich verlässt, ist die Gültigkeit des Datenzeigers nicht mehr sichergestellt. Zum Speichern der Daten nach Ablauf der Lebensdauer des ursprünglichen `String` -Objekts [Wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) das Array in den Speicher zu kopieren, die Sie selbst zugeordnet haben.  
   
 
 
@@ -275,7 +275,7 @@ bool IsEmpty()
 
 
 ## <a name="isfastpass"></a>  String:: isfastpass-Methode
-Gibt an, ob das aktuelle String-Objekt an einem *Fast-Pass* -Vorgang teilnimmt. Bei einem Fast-Pass-Vorgang wird die Verweiszählung angehalten.  
+Gibt an, ob das aktuelle String-Objekt beteiligt ist eine *Schnelldurchlauf* Vorgang. Bei einem Fast-Pass-Vorgang wird die Verweiszählung angehalten.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -311,12 +311,12 @@ String^ str = "Hello";
 int len = str->Length(); //len = 5  
 ```  
   
- Das zurückgegebene Array von Zeichen der [String:: Data](#data) verfügt über ein zusätzliches Zeichen, das abschließende NULL oder '\0' ist. Dieses Zeichen ist ebenfalls zwei Bytes lang.  
+ Das Zeichenarray, das zurückgegeben werden, indem die [String:: Data](#data) verfügt über ein zusätzliches Zeichen, das das abschließende NULL oder '\0' ist. Dieses Zeichen ist ebenfalls zwei Bytes lang.  
   
 
 
 ## <a name="operator-plus"></a>  String:: Operator +-Operator
-Verkettet zwei [Zeichenfolge](../cppcx/platform-string-class.md) Objekte in eine neue [Zeichenfolge](../cppcx/platform-string-class.md) Objekt.
+Verkettet die beiden [Zeichenfolge](../cppcx/platform-string-class.md) Objekte in ein neues [Zeichenfolge](../cppcx/platform-string-class.md) Objekt.
   
 ### <a name="syntax"></a>Syntax  
   
@@ -382,7 +382,7 @@ bool String::operator>( String^ str1, String^ str2)
  `true`, wenn der Wert von `str1` größer als der Wert von `str2` ist, andernfalls `false`.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Operator entspricht einem expliziten Aufruf von [String:: CompareOrdinal](#compareordinal) und ein Ergebnis größer als 0 (null) abrufen.  
+ Dieser Operator entspricht beim expliziten Aufruf [String:: CompareOrdinal](#compareordinal) und erhalten ein Ergebnis größer als 0 (null).  
   
 
 
@@ -465,7 +465,7 @@ String(char16* s, unsigned int n)
  Eine Zahl, die die Länge der Zeichenfolge angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die Leistung kritisch ist und Sie die Lebensdauer der Quellzeichenfolge kontrollieren, können Sie [Platform:: stringreference](../cppcx/platform-stringreference-class.md) anstelle der Zeichenfolge.  
+ Wenn Leistung wichtig ist, und Sie die Lebensdauer der Quellzeichenfolge steuern, können Sie [Platform:: stringreference](../cppcx/platform-stringreference-class.md) anstelle der Zeichenfolge.  
 ### <a name="example"></a>Beispiel  
   
 ```cpp  
@@ -485,4 +485,4 @@ String^ String::ToString()
  Ein Zeichenfolgenobjekt, dessen Wert mit der aktuellen Zeichenfolge identisch ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)
+ [Platform-namespace](../cppcx/platform-namespace-c-cx.md)

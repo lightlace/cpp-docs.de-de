@@ -1,5 +1,5 @@
 ---
-title: __ull_rshift | Microsoft Docs
+title: __ull_rshift | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5248792d04efca518fc425a144c692cd88cf8d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c834b3b2284a7a5ae660870b840d3275c985dc9e
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333117"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42541433"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Microsoft-spezifisch**  
   
- auf X64 Verschiebt einen 64-Bit-Wert, der durch den ersten Parameter auf der rechten Seite angegeben eine Anzahl von Bits, die durch den zweiten Parameter angegeben.  
+ Verschiebt auf X64 einen 64-Bit-Wert, der durch den ersten Parameter auf der rechten Seite angegeben, um eine Anzahl von Bits, die durch den zweiten Parameter angegeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,10 +40,10 @@ unsigned __int64 __ull_rshift(
   
 #### <a name="parameters"></a>Parameter  
  [in] `mask`  
- Der 64-Bit-Ganzzahl-Wert nach rechts verschoben werden soll.  
+ Der 64-Bit-Ganzzahl-Wert, um nach rechts verschoben werden soll.  
   
  [in] `nBit`  
- Die Anzahl der zu verschiebenden modulo 32 auf X86 und modulo auf X64 64 Bits.  
+ Die Anzahl der zu verschiebenden, modulo 32 auf X86 und modulo 64 auf X64 Bits.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die Maske verschoben werden, indem `nBit` Bits.  
@@ -52,12 +52,12 @@ unsigned __int64 __ull_rshift(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__ull_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ull_rshift`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der zweite Parameter größer als 31 auf X86 (63 auf X64),, die Anzahl modulo 32 (64 auf X64) ausgeführt wird ist, um zu bestimmen, die Anzahl der zu verschiebenden Bits. Die `ull` gibt den Namen an `unsigned long long (unsigned __int64)`.  
+ Wenn der zweite Parameter größer als 31 auf X86 (63 auf X64),, die Anzahl modulo 32 (64 auf X64) ausgeführt wird ist, um zu bestimmen, die Anzahl der zu verschiebenden Bits. Die `ull` gibt den Namen `unsigned long long (unsigned __int64)`.  
   
 ## <a name="example"></a>Beispiel  
   

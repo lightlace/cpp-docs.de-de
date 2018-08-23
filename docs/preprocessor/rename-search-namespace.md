@@ -1,5 +1,5 @@
 ---
-title: Rename_search_namespace | Microsoft Docs
+title: Rename_search_namespace | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 367294991b9cbb07ee7c852d757842a20c51cc30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20072a5196ce476cf178f7c6e1071bd495202062
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850254"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538638"
 ---
 # <a name="renamesearchnamespace"></a>rename_search_namespace
 **C++-spezifisch**  
   
- Hat die gleiche Funktion wie die [Rename_namespace](../preprocessor/rename-namespace.md) -Attribut jedoch auf Typbibliotheken, mit denen Sie die #import-Direktive mit dient der [Auto_search](../preprocessor/auto-search.md) Attribut.  
+Hat die gleiche Funktionalität wie die [Rename_namespace](../preprocessor/rename-namespace.md) Attribut wird aber verwendet in Typbibliotheken, die Sie verwenden die `#import` -Direktive zusammen mit der [Auto_search](../preprocessor/auto-search.md) Attribut.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,13 +34,15 @@ ms.locfileid: "33850254"
 rename_search_namespace("NewName")  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `NewName`  
- Der neue Name des neuen Namespace.  
+### <a name="parameters"></a>Parameter  
+*Neuer Name*  
+Der neue Name des neuen Namespace.  
   
 ## <a name="remarks"></a>Hinweise  
- **Ende C++-spezifisch**  
+ 
+**Ende C++-spezifisch**  
   
 ## <a name="see-also"></a>Siehe auch  
- [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
- [#import-Direktive](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
+[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

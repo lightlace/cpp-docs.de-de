@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5699f4c8c49bd35e85479572e1b49f8080415e65
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884992"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572747"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject-Klasse
 Diese Klasse implementiert die [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) Schnittstelle für ein zusammengesetztes Objekt. Definitionsgemäß ist ein zusammengesetztes Objekt in einem äußeren Objekt enthalten. Die `CComAggObject` Klasse ist vergleichbar mit der [CComObject-Klasse](../../atl/reference/ccomobject-class.md), außer dass er eine Schnittstelle verfügbar macht, die für externe Clients direkt zugegriffen werden kann.  
@@ -63,7 +63,7 @@ class CComAggObject : public IUnknown,
 |Name|Beschreibung|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|Inkrementiert den Verweiszähler des aggregierten Objekts.|  
-|[CComAggObject::CreateInstance](#createinstance)|Diese statischen Funktion können Sie zum Erstellen eines neuen **CComAggObject <** `contained` **>** Objekt ohne den Aufwand für [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComAggObject::CreateInstance](#createinstance)|Diese statischen Funktion können Sie zum Erstellen eines neuen **CComAggObject <** `contained` **>** Objekt ohne den Aufwand für [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|Führt die endgültige Initialisierung der `m_contained`.|  
 |[CComAggObject::FinalRelease](#finalrelease)|Führt die endgültige Löschung von `m_contained`.|  
 |[CComAggObject::QueryInterface](#queryinterface)|Ruft einen Zeiger auf die angeforderte Schnittstelle ab.|  
@@ -129,7 +129,7 @@ CComAggObject(void* pv);
  Alle zugeordnete Ressourcen freigegeben, Aufrufe [FinalRelease](#finalrelease), und verringert die Modul Sperrenanzahl.  
   
 ##  <a name="createinstance"></a>  CComAggObject::CreateInstance  
- Diese statischen Funktion können Sie zum Erstellen eines neuen **CComAggObject <** `contained` **>** Objekt ohne den Aufwand für [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Diese statischen Funktion können Sie zum Erstellen eines neuen **CComAggObject <** `contained` **>** Objekt ohne den Aufwand für [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
 ```
 static HRESULT WINAPI CreateInstance(

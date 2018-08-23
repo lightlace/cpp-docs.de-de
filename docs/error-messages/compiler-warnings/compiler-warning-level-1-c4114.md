@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4114 generiert | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4114 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78402d4487eecde00c55ea5e0aad913d97226325
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9969f58b24defdb3dfa8a96437769d0b19e4569e
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283922"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42538491"
 ---
-# <a name="compiler-warning-level-1-c4114"></a>Compilerwarnung (Stufe 1) C4114 generiert
+# <a name="compiler-warning-level-1-c4114"></a>Compilerwarnung (Stufe 1) C4114
 Der gleiche Typqualifizierer wurde mehrmals verwendet  
   
- Eine Typdeklaration oder-Definition verwendet ein Typqualifizierer (**const**, `volatile`, **signiert**, oder `unsigned`) mehr als einmal. Dies bewirkt, dass eine Warnung mit Microsoft-Erweiterungen (/ Ze) und gemäß der ANSI-Kompatibilität (/ Za) einen Fehler.  
+ Eine Typdeklaration oder-Definition verwendet ein Typqualifizierer (**const**, **flüchtige**, **signiert**, oder **ohne Vorzeichen**) mehr als einmal. Dies bewirkt, dass eine Warnung mit Microsoft-Erweiterungen (/ Ze) und ANSI-Kompatibilität (/ Za).  
   
- Im folgende Beispiel wird C4114 generiert:  
+ Im folgende Beispiel wird die C4114 generiert:  
   
 ```  
 // C4114.cpp  
@@ -36,7 +36,7 @@ Der gleiche Typqualifizierer wurde mehrmals verwendet
 volatile volatile int i;   // C4114  
 ```  
   
- Im folgende Beispiel wird C4114 generiert:  
+ Im folgende Beispiel wird die C4114 generiert:  
   
 ```  
 // C4114_b.cpp  

@@ -1,5 +1,5 @@
 ---
-title: -STACK (Stapelreservierungen) | Microsoft Docs
+title: -STACK (Stapelreservierungen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8ee3fac90bcbb972278d9b3e2cf7cebd62fedf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29ed2efa73d3ec1014bf0a65e7b4b1b1b85cf879
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377873"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572279"
 ---
 # <a name="stack-stack-allocations"></a>/STACK (Stapelreservierungen)
 ```  
@@ -37,9 +37,9 @@ ms.locfileid: "32377873"
 ## <a name="remarks"></a>Hinweise  
  Durch die Option /STACK wird die Stapelgröße in Bytes festgelegt. Verwenden Sie diese Option nur zum Erstellen von EXE-Dateien.  
   
- Der `reserve`-Wert gibt die gesamte Stapelzuordnung im virtuellen Speicher an. Für ARM-, x86- und [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]-Computer beträgt die Standardstapelgröße 1 MB.  
+ Der `reserve`-Wert gibt die gesamte Stapelzuordnung im virtuellen Speicher an. Für ARM X86- und X64 Computer, die standardmäßige Stapelgröße beträgt 1 MB.  
   
- Wie das `commit`-Argument interpretiert wird, hängt vom jeweiligen Betriebssystem ab. Unter Windows RT wird damit die physische Speichermenge bezeichnet, die zu einem Zeitpunkt belegt werden soll. Die Zusicherung von virtuellem Speicher bewirkt die Belegung von Speicher in der Auslagerungsdatei. Ein höherer `commit`-Wert spart Zeit, wenn die Anwendung mehr Stapelspeicher benötigt, erhöht aber auch den Arbeitsspeicherbedarf und möglicherweise die Startzeit. Für ARM-, x86- und [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]-Computer beträgt der Standardcommitwert 4 KB.  
+ Wie das `commit`-Argument interpretiert wird, hängt vom jeweiligen Betriebssystem ab. Unter Windows RT wird damit die physische Speichermenge bezeichnet, die zu einem Zeitpunkt belegt werden soll. Die Zusicherung von virtuellem Speicher bewirkt die Belegung von Speicher in der Auslagerungsdatei. Ein höherer `commit`-Wert spart Zeit, wenn die Anwendung mehr Stapelspeicher benötigt, erhöht aber auch den Arbeitsspeicherbedarf und möglicherweise die Startzeit. Für ARM X86- und X64 Computer, der Standardcommitwert 4 KB ist.  
   
  Geben Sie die Werte für `reserve` und `commit` dezimal oder in C-Notation an.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "32377873"
   
 4.  Ändern Sie eine der folgenden Eigenschaften:  
   
-    -   **StackCommitSize**  
+    -   **Stapelcommitgröße**  
   
-    -   **StackReserveSize**  
+    -   **Stapelreservierungsgröße**  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   

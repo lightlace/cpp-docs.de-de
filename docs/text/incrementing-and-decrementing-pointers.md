@@ -1,5 +1,5 @@
 ---
-title: Inkrementieren und Dekrementieren von Zeigern | Microsoft Docs
+title: Inkrementieren und Dekrementieren von Zeigern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,23 +13,23 @@ helpviewer_keywords:
 - pointers [C++], multibyte characters
 - decrementing pointers
 ms.assetid: 0872b4a0-e2bd-4004-8319-070efb76f2fd
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82a6f792ce622481cbbab821b8a5446186bd692d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4fff5d7ec20ce052e4d831f1556432186ebc7bb
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857128"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42603359"
 ---
 # <a name="incrementing-and-decrementing-pointers"></a>Inkrementieren und Dekrementieren von Zeigern
 Verwenden Sie die folgenden Tipps:  
   
--   Zeigen Sie auf führende Bytes, die nicht auf nachfolgende Bytes. Es ist in der Regel unsicher, einen Zeiger auf ein nachfolgendes Byte haben. Normalerweise ist es sicherer, eine Zeichenfolge vorwärts statt in umgekehrter Reihenfolge zu scannen.  
+-   Zeigen Sie auf die führende Bytes, die nicht auf nachfolgende Bytes. Es ist in der Regel nicht sicher ist, um einen Zeiger auf ein nachfolgendes Byte zu erhalten. Normalerweise ist es sicherer, eine Zeichenfolge vorwärts und nicht in umgekehrter Reihenfolge zu scannen.  
   
--   Es gibt Zeiger-Inkrement/Dekrement Funktionen und Makros, die über ein ganzes Zeichen zu verschieben:  
+-   Es gibt Zeiger Inkrement/Dekrement-Funktionen und Makros, die über ein ganzes Zeichen zu verschieben:  
   
     ```  
     sz1++;  
@@ -41,9 +41,9 @@ Verwenden Sie die folgenden Tipps:
     sz1 = _mbsinc( sz1 );  
     ```  
   
-     Die `_mbsinc` und `_mbsdec` Funktionen ordnungsgemäß Inkrementieren und Dekrementieren `character` Einheiten, unabhängig von der Zeichengröße.  
+     Die `_mbsinc` und `_mbsdec` Funktionen ordnungsgemäß Inkrement- und Dekrement-im `character` Einheiten, unabhängig von der Zeichengröße.  
   
--   Dekrementiert benötigen Sie einen Zeiger an den Anfang der Zeichenfolge, wie im folgenden dargestellt:  
+-   Dekrementiert benötigen Sie einen Zeiger an den Anfang der Zeichenfolge an, wie im folgenden dargestellt:  
   
     ```  
     sz2--;  
@@ -55,15 +55,15 @@ Verwenden Sie die folgenden Tipps:
     sz2 = _mbsdec( sz2Head, sz2 );  
     ```  
   
-     Alternativ können Sie der Hauptknoten Zeiger könnte darin bestehen, ein gültiges Zeichen in der Zeichenfolge so, dass:  
+     Alternativ dazu Ihre hauptzeiger ist möglicherweise auf ein gültiges Zeichen in der Zeichenfolge, sodass:  
   
     ```  
     sz2Head < sz2  
     ```  
   
-     Sie benötigen einen Zeiger auf eine gültige führenden Bytes.  
+     Sie benötigen einen Zeiger auf eine gültige führenden Byte.  
   
--   Möglicherweise möchten Sie verwalten einen Zeiger auf das vorherige Zeichen für schnellere Aufrufe `_mbsdec`.  
+-   Möglicherweise möchten Sie einen Zeiger auf das vorherige Zeichen für schnellere Aufrufe verwalten `_mbsdec`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tipps für die MBCS-Programmierung](../text/mbcs-programming-tips.md)   

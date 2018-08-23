@@ -1,5 +1,5 @@
 ---
-title: Scheduler_ptr-Struktur | Microsoft Docs
+title: Scheduler_ptr-Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672e4a0dd5f66ab613dde8877915c799d6c4b2f4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 99c2ed2f8446b94d606c907f4d030c417e21fc01
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686983"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42541598"
 ---
 # <a name="schedulerptr-structure"></a>Scheduler_ptr-Struktur
-Stellt einen Zeiger auf einen Planer dar. Diese Klasse ist vorhanden, um die Spezifikation einer freigegebenen Lebensdauer mithilfe von "shared_ptr" oder nur eines einfachen Verweises und eines unformatierten Zeigers zu ermöglichen.  
+Stellt einen Zeiger auf einen Planer dar. Diese Klasse existiert, um die Spezifikation einer freigegebenen Lebensdauer mithilfe von "shared_ptr" oder nur eines einfachen Verweises mit unformatierten Zeigers zu ermöglichen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,7 +63,7 @@ struct scheduler_ptr;
   
  **Namespace:** Parallelität  
   
-##  <a name="get"></a>  scheduler_ptr::Get-Methode  
+##  <a name="get"></a>  scheduler_ptr:: Get-Methode  
  Gibt den Rohzeiger auf den Planer zurück.  
   
 ```
@@ -82,7 +82,7 @@ scheduler_interface* get() const;
  Behave like a pointer  
   
 ```
-Scheduler_interface * Operator -> (const);
+Scheduler_interface-*-Operator (const) ->;
 ```  
   
 ### Return Value  
@@ -93,7 +93,7 @@ Scheduler_interface * Operator -> (const);
 ```
 explizite Scheduler_ptr (Std:: shared_ptr < Scheduler_interface > Zeitplanungsmodul);
 
-explizite Scheduler_ptr (_In_opt_ Scheduler_interface * pScheduler);
+explizite Scheduler_ptr (_In_opt_ pScheduler Scheduler_interface *);
 ```  
   
 ### Parameters  

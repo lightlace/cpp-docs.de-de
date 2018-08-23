@@ -1,5 +1,5 @@
 ---
-title: Beschränkungen für das verzögerte Laden von DLLs | Microsoft Docs
+title: Beschränkungen für das verzögerte Laden von DLLs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 532d5ba64288fb70b19f10386186c0b520e67661
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40774d6307eb9b423ebd4fd303a48acbd87eda24
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375915"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42571595"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Beschränkungen für das verzögerte Laden von DLLs
 Es gibt Einschränkungen hinsichtlich des verzögerten Ladens von Importen.  
@@ -30,9 +30,9 @@ Es gibt Einschränkungen hinsichtlich des verzögerten Ladens von Importen.
   
 -   Ein verzögertes Laden von Kernel32.dll wird nicht unterstützt. Diese DLL ist erforderlich, damit die Routinen der Hilfsfunktion für das verzögerte Laden das verzögerte Laden durchführen können.  
   
--   [Binden von](../../build/reference/binding-imports.md) von Einstiegspunkten, die weitergeleitet werden, wird nicht unterstützt.  
+-   [Binden von](../../build/reference/binding-imports.md) des Eintrags an, die weitergeleitet werden, wird nicht unterstützt.  
   
--   Das verzögerte Laden einer DLL führt möglicherweise nicht zum selben Verwalten des Prozesses, wenn pro Prozess stattfindende Initialisierungen vorhanden sind, die am Einstiegspunkt der verzögert geladenen DLL stattfinden. Anderen Fällen gehört der statische TLS (Thread local Storage) mit deklarierten [__declspec(thread)](../../cpp/thread.md), die nicht behandelt, wenn die DLL über `LoadLibrary`. Der dynamische TLS ist über `TlsAlloc`, `TlsFree`, `TlsGetValue` und `TlsSetValue` immer noch zur Verwendung in statischen oder verzögert geladenen DLLs verfügbar.  
+-   Das verzögerte Laden einer DLL führt möglicherweise nicht zum selben Verwalten des Prozesses, wenn pro Prozess stattfindende Initialisierungen vorhanden sind, die am Einstiegspunkt der verzögert geladenen DLL stattfinden. Anderen Fällen gehört der statische TLS (Thread local Storage), die mithilfe von deklariert [__declspec(thread)](../../cpp/thread.md), die nicht behandelt, wenn die DLL, über geladen wird `LoadLibrary`. Der dynamische TLS ist über `TlsAlloc`, `TlsFree`, `TlsGetValue` und `TlsSetValue` immer noch zur Verwendung in statischen oder verzögert geladenen DLLs verfügbar.  
   
 -   Statische (globale) Funktionszeiger sollten für importierte Funktionen erneut initialisiert werden, nach die Funktion erstmals aufgerufen wurde. Der Grund ist, dass der Funktionszeiger bei der ersten Verwendung auf den Thunk zeigt.  
   
@@ -45,7 +45,7 @@ Es gibt Einschränkungen hinsichtlich des verzögerten Ladens von Importen.
  [LoadLibrary-Funktion](http://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)   
  [GetModuleHandle-Funktion](http://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)   
  [GetProcAddress-Funktion](http://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)   
- [TlsAlloc-Funktion](http://msdn.microsoft.com/library/windows/desktop/ms686801.aspx)   
- [TlsFree-Funktion](http://msdn.microsoft.com/library/windows/desktop/ms686804.aspx)   
- [TlsGetValue-Funktion](http://msdn.microsoft.com/library/windows/desktop/ms686812.aspx)   
- [TlsSetValue-Funktion](http://msdn.microsoft.com/library/windows/desktop/ms686818.aspx)
+ [TlsAlloc-Funktion](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)   
+ [TlsFree-Funktion](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)   
+ [TlsGetValue-Funktion](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)   
+ [TlsSetValue-Funktion](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

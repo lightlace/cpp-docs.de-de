@@ -1,5 +1,5 @@
 ---
-title: ATL-Auflistungsklassen | Microsoft Docs
+title: ATL-Auflistungsklassen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,86 +21,86 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4594b87f07cd4d89937ba640d9a04aeacf2ef866
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e3f26959fd7abd2ae1be945b1304370152301099
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359829"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572351"
 ---
 # <a name="atl-collection-classes"></a>ATL-Auflistungsklassen
-ATL stellt zahlreiche Klassen zum Speichern und Zugreifen auf Daten bereit. Welche Klasse, die Sie verwenden möchten, hängt von mehreren Faktoren ab, einschließlich ab:  
+ATL stellt viele Klassen zum Speichern und Zugreifen auf Daten bereit. Welche Klasse Sie verwenden möchten, hängt von mehreren Faktoren ab, einschließlich:  
   
 -   Die Menge der Daten gespeichert werden  
   
 -   Effizienz und Leistung beim Zugriff auf die Daten  
   
--   Die Möglichkeit für den Datenzugriff nach Index oder Schlüssel  
+-   Der Zugriff auf die Daten anhand des Indexes oder anhand des Schlüssels  
   
--   Wie die Daten sortiert werden  
+-   Wie werden die Daten sortiert.  
   
--   Persönlichen Vorlieben  
+-   Geschmackssache  
   
 ## <a name="small-collection-classes"></a>Kleine Auflistungsklassen  
- ATL stellt die folgenden Klassen für Arrays, für den Umgang mit einer kleinen Anzahl von Objekten. Diese Klassen sind jedoch eingeschränkt und intern entwickelt für die Verwendung von ATL Es wird nicht empfohlen, dass Sie sie in Ihren Programmen verwenden.  
+ ATL stellt die folgenden Klassen für Arrays bereit, für den Umgang mit einer kleinen Anzahl von Objekten. Diese Klassen sind jedoch begrenzt und intern entwickelt für die Verwendung von ATL Es wird nicht empfohlen, die Sie in Ihren Programmen verwenden.  
   
-|Klasse|Typ der datenspeicherung|  
+|Klasse|Typ des Datenspeichers|  
 |-----------|--------------------------|  
 |[CSimpleArray](../atl/reference/csimplearray-class.md)|Eine Arrayklasse für den Umgang mit einer kleinen Anzahl von Objekten implementiert.|  
 |[CSimpleMap](../atl/reference/csimplemap-class.md)|Eine Zuordnungsklasse für den Umgang mit einer kleinen Anzahl von Objekten implementiert.|  
   
-## <a name="general-purpose-collection-classes"></a>Allgemeine Batchinstanzen-Auflistungsklassen  
- Die folgenden Klassen implementieren, Arrays, Listen und Zuordnungen und dienen als Auflistungsklassen für allgemeine Zwecke:  
+## <a name="general-purpose-collection-classes"></a>Allgemeiner-Auflistungsklassen  
+ Die folgenden Klassen implementieren, Arrays, Listen und Zuordnungen und werden als allgemeine Sammlungsklassen bereitgestellt:  
   
-|Klasse|Typ der datenspeicherung|  
+|Klasse|Typ des Datenspeichers|  
 |-----------|--------------------------|  
 |[CAtlArray](../atl/reference/catlarray-class.md)|Implementiert ein Array.|  
-|[CAtlList](../atl/reference/catllist-class.md)|Implementiert eine Liste an.|  
-|[CAtlMap](../atl/reference/catlmap-class.md)|Implementiert eine Zuordnungsstruktur, bei dem Daten nach Schlüssel oder Wert verwiesen werden kann.|  
-|[CRBMap](../atl/reference/crbmap-class.md)|Implementiert eine Zuordnungsstruktur mithilfe des Algorithmus Rot Schwarz.|  
-|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implementiert eine Multimappingstruktur Rot Schwarz.|  
+|[CAtlList](../atl/reference/catllist-class.md)|Implementiert eine Liste.|  
+|[CAtlMap](../atl/reference/catlmap-class.md)|Implementiert eine Zuordnungsstruktur, bei dem Daten mit Schlüssel oder Wert verwiesen werden kann.|  
+|[CRBMap](../atl/reference/crbmap-class.md)|Implementiert eine Zuordnungsstruktur, die mit dem Rot-Schwarz-Algorithmus.|  
+|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implementiert eine Rot-Schwarz-Multimappingstruktur an.|  
   
- Diese Klassen werden viele Programmierfehler, bei der Verwendung in der Debug-Builds abfangen, aber zur besseren Übersichtlichkeit Leistung zu erzielen, werden diese Überprüfungen nicht in Verkaufsversionen ausgeführt werden.  
+ Diese Klassen werden viele Programmierfehler, bei der Verwendung in Debugbuilds abgefangen, aber zur Leistung zu erzielen, werden diese Überprüfungen nicht in Retail-Builds ausgeführt werden.  
   
-## <a name="specialized-collection-classes"></a>Spezialisierte Auflistungsklassen  
- Spezialisiertere Auflistungsklassen werden auch zum Verwalten von Speicherzeigern und Schnittstellenzeigern bereitgestellt:  
+## <a name="specialized-collection-classes"></a>Spezielle Auflistungsklassen  
+ Spezialisiertere Auflistungsklassen werden auch für die Verwaltung von Arbeitsspeicher und Benutzeroberfläche Zeigern bereitgestellt:  
   
 |Klasse|Zweck|  
 |-----------|-------------|  
-|[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|Stellt Methoden bereit, wenn ein Array von intelligenten Zeigern zu erstellen.|  
-|[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|Stellt Methoden bereit, beim Erstellen einer Liste von intelligenten Zeigern.|  
+|[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|Stellt Methoden bereit, wenn Sie ein Array von intelligenten Zeigern zu erstellen.|  
+|[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|Stellt Methoden bereit, wenn Sie eine Liste von intelligenten Zeigern zu erstellen.|  
 |[CComUnkArray](../atl/reference/ccomunkarray-class.md)|Speichert `IUnknown` Zeiger als Parameter verwendet werden soll, und die [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) Vorlagenklasse.|  
-|[CHeapPtrList](../atl/reference/cheapptrlist-class.md)|Stellt Methoden bereit, bei der eine Liste von Zeigern Heap erstellen.|  
-|[CInterfaceArray](../atl/reference/cinterfacearray-class.md)|Stellt Methoden bereit, bei der ein Array von COM-Schnittstellenzeigern erstellen.|  
-|[CInterfaceList](../atl/reference/cinterfacelist-class.md)|Stellt Methoden bereit, beim Erstellen einer Liste von COM-Schnittstellenzeigern.|  
+|[CHeapPtrList](../atl/reference/cheapptrlist-class.md)|Stellt Methoden bereit, beim Erstellen einer Liste von Heap-Zeigern.|  
+|[CInterfaceArray](../atl/reference/cinterfacearray-class.md)|Stellt Methoden bereit, wenn Sie ein Array von COM-Schnittstellenzeiger zu erstellen.|  
+|[CInterfaceList](../atl/reference/cinterfacelist-class.md)|Stellt Methoden bereit, wenn Sie eine Liste der COM-Schnittstellenzeiger zu erstellen.|  
   
 ## <a name="choosing-a-collection-class"></a>Auswahl einer Sammlungsklasse  
- Jede der verfügbaren Auflistungsklassen bietet unterschiedlichen Leistungsmerkmalen, wie in der folgenden Tabelle gezeigt.  
+ Jede der verfügbaren Auflistungsklassen bietet unterschiedliche Leistungsmerkmale, wie in der folgenden Tabelle gezeigt.  
   
--   Spalten 2 und 3 werden jeder Klasse die Reihenfolge- und Zugriffsmerkmale. In der Tabelle bedeutet der Ausdruck „geordnet“, dass die Reihenfolge, in der Elemente eingefügt und gelöscht werden, deren Reihenfolge in der Auflistung bestimmt. Es bedeutet nicht, dass die Elemente anhand ihres Inhalts sortiert werden. Der Begriff „indiziert“ bedeutet, dass die Elemente in der Auflistung über einen Ganzzahlenindex, ähnlich wie die Elemente in einem normalen Array, abgerufen werden können.  
+-   Spalten 2 und 3 beschrieben, jede Klasse in der Reihenfolge und Zugriff auf Eigenschaften. In der Tabelle bedeutet der Ausdruck „geordnet“, dass die Reihenfolge, in der Elemente eingefügt und gelöscht werden, deren Reihenfolge in der Auflistung bestimmt. Es bedeutet nicht, dass die Elemente anhand ihres Inhalts sortiert werden. Der Begriff „indiziert“ bedeutet, dass die Elemente in der Auflistung über einen Ganzzahlenindex, ähnlich wie die Elemente in einem normalen Array, abgerufen werden können.  
   
 -   Spalten 4 und 5 werden die Leistung für jede Klasse beschrieben. In Anwendungen, die viele Einfügungen in die Auflistung erfordern, ist möglicherweise die Einfügungsgeschwindigkeit besonders wichtig; für andere Programme könnte die Suchgeschwindigkeit wichtiger sein.  
   
 -   In Spalte 6 wird beschrieben, ob die einzelnen Formen doppelte Elemente zulassen.  
   
--   Die Leistung eines bestimmten Sammlung Klasse wird im Hinblick auf die Beziehung zwischen der Zeitaufwand zum Abschließen des Vorgangs und die Anzahl der Elemente in der Auflistung angegeben werden. Ein Vorgang dauert eine Zeitspanne zunimmt, linear wie die Anzahl der Elemente erhöht als einen o(n)-Algorithmus beschrieben wird. Im Gegensatz dazu, wird ein Vorgang eine bestimmte Zeitspanne, die kleiner als die Anzahl von Elementen vergrößert dauert als einen Algorithmus O (Log n) beschrieben. Aus diesem Grund übertreffen O (Log n) Algorithmen hinsichtlich der Leistung O(n) Algorithmen mehr und mehr als die Anzahl der Elemente erhöht.  
+-   Die Leistung einer bestimmten Sammlung-Klasse-Operation wird in Bezug auf die Beziehung zwischen den Zeitaufwand zum Abschließen des Vorgangs und die Anzahl der Elemente in der Auflistung angegeben. Ein Vorgang einen Anteil der Zeit zunimmt, die linear wie die wachsender Anzahl von Elementen als ein o(n)-Algorithmus beschrieben wird. Im Gegensatz dazu wird ein Vorgang eine bestimmte Zeitspanne, die kleiner als die Anzahl der Elemente steigt vergrößert als einen Algorithmus O (Log n) beschrieben. Aus diesem Grund wird im Hinblick auf Leistung, O (Log n) Algorithmen O(n) Algorithmen mehr und mehr als die Anzahl der Elemente steigt übertreffen.  
   
 ### <a name="collection-shape-features"></a>Auflistungsformfeatures  
   
-|Form|Geordnete|Indiziert|Fügen Sie ein<br /><br /> Element|Suchen nach<br /><br /> das angegebene element|Duplizieren<br /><br /> Elemente|  
+|Form|Geordnete|Indiziert|Fügen Sie ein<br /><br /> Element|Suchen nach<br /><br /> angegebene element|Duplizieren<br /><br /> Elemente|  
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|  
-|Liste|Ja|Nein|Fast (Konstante Zeit)|Langsam O(n)|Ja|  
-|Array|Ja|Nach Ganzzahl (Konstante Zeit)|Langsam O(n), außer wenn Einfügen am Ende, in der Groß-/Kleinschreibung konstanter Zeit|Langsam O(n)|Ja|  
-|Zuordnung|Nein|Nach Schlüssel (Konstante Zeit)|Fast (Konstante Zeit)|Fast (Konstante Zeit)|Nein (Schlüssel) Ja (Werte)|  
-|Rot Schwarz-Karte|Ja (nach Schlüssel)|Nach Schlüssel O (Log n)|Schnelle O (Log n)|Schnelle O (Log n)|Nein|  
-|Rot Schwarz Mehrfachzuordnung|Ja (nach Schlüssel)|Durch Schlüssel O(log n) (mehrere Werte pro Schlüssel)|Schnelle O (Log n)|Schnelle O (Log n)|Ja (mehrere Werte pro Schlüssel)|  
+|Liste|Ja|Nein|Schnell (Konstante Zeit)|Langsam O(n)|Ja|  
+|Array|Ja|Nach Ganzzahl (Konstante Zeit)|Langsam O(n), außer wenn am Ende einfügen, in konstanter Zeit und die Groß-/Kleinschreibung|Langsam O(n)|Ja|  
+|Zuordnung|Nein|Nach Schlüssel (Konstante Zeit)|Schnell (Konstante Zeit)|Schnell (Konstante Zeit)|Nein (Schlüssel) Ja (Werte)|  
+|Rot-Schwarz-Karte|Ja (per Schlüssel)|Nach Schlüssel O (Log n)|Schnelle O (Log n)|Schnelle O (Log n)|Nein|  
+|Rot-Schwarz-Mehrfachzuordnung|Ja (per Schlüssel)|Nach Schlüssel O(log n) (mehrere Werte pro Schlüssel)|Schnelle O (Log n)|Schnelle O (Log n)|Ja (mehrere Werte pro Schlüssel)|  
   
 ## <a name="using-ctraits-objects"></a>Verwenden von CTraits-Objekten  
- Wie die ATL-Auflistungsklassen verwendet werden können, um eine Vielzahl von benutzerdefinierten Datentypen speichern, kann es nützlich sein, um wichtige Funktionen wie Vergleiche zu überschreiben sein. Dies erfolgt mithilfe der CTraits-Klassen.  
+ Wie die ATL-Auflistungsklassen verwendet werden können, um eine Vielzahl von benutzerdefinierten Datentypen speichern, kann es sinnvoll, wichtige Funktionen wie z. B. Vergleiche überschreiben sein. Dies erfolgt mithilfe der CTraits-Klassen.  
   
- CTraits-Klassen sind ähnlich, jedoch flexibler als die Hilfsfunktionen für MFC-Auflistung-Klasse. finden Sie unter [Auflistungsklasse](../mfc/reference/collection-class-helpers.md) für Weitere Informationen.  
+ CTraits-Klassen sind ähnlich, aber viel flexibler als die Klasse-Hilfsfunktionen für MFC-Auflistung. finden Sie unter [Auflistungsklasse](../mfc/reference/collection-class-helpers.md) für Weitere Informationen.  
   
- Wenn Sie Ihre Auflistungsklasse erstellen zu können, müssen Sie die Option zum Angeben einer CTraits-Klasse. Diese Klasse enthält den Code, der Vorgänge wird z. B. Vergleiche, die beim Aufruf durch die anderen Methoden, die die Auflistungsklasse bilden. Z. B. List-Objekt eine eigene benutzerdefinierte Strukturen enthält, können Sie die Gleichheitstest, um nur bestimmte Membervariablen vergleichen neu definieren möchten. Auf diese Weise kann das Listenobjekt Find-Methode auf eine weitere nützliche Weise ausgeführt werden.  
+ Wenn Sie Ihre Auflistungsklasse erstellen zu können, müssen Sie die Option zum Angeben einer CTraits-Klasse. Diese Klasse enthält den Code, der Vorgänge, z. B. Vergleiche, wenn von den anderen Methoden aufgerufen werden soll, aus denen die Auflistungsklasse ausführen wird. Z. B. wenn das Listenobjekt eigene benutzerdefinierte Strukturen enthält, sollten Sie so definieren, um den Gleichheitstest auf, um nur bestimmte Membervariablen des Typs zu vergleichen. Auf diese Weise werden die Find-Methode für das List-Objekt auf nützliche Weise ausgeführt.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -115,15 +115,15 @@ ATL stellt zahlreiche Klassen zum Speichern und Zugreifen auf Daten bereit. Welc
  ![Merkmalhierarchie für Auflistungsklassen](../atl/media/vctraitscollectionclasseshierarchy.gif "Vctraitscollectionclasseshierarchy")  
   
 ## <a name="collection-classes-samples"></a>Beispiele für Auflistungsklassen  
- Die folgenden Beispiele zeigen die Auflistungsklassen:  
+ Die folgenden Beispiele veranschaulichen die Auflistungsklassen:  
   
 -   [MMXSwarm-Beispiel](../visual-cpp-samples.md)  
   
 -   [-Beispiel-Beispiel](../visual-cpp-samples.md)  
   
--   [UpdatePV-Beispiel](../visual-cpp-samples.md)  
+-   [UpdatePV-Beispiel](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)  
   
--   [Laufschriften-Beispiel](../visual-cpp-samples.md)  
+-   [Marquee-Beispiel](../visual-cpp-samples.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konzepte](../atl/active-template-library-atl-concepts.md)   

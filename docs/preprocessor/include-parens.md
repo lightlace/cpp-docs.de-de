@@ -1,5 +1,5 @@
 ---
-title: Include() | Microsoft Docs
+title: Include() | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 756aea4400d98b2bf061a54955b3df4b4eddd993
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ebadd9e453e8a34e92acee363d0dd6b6ff765910
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849274"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42538641"
 ---
 # <a name="include"></a>include()
 **C++-spezifisch**  
   
- Deaktiviert den automatische Ausschluss.  
+Deaktiviert den automatische Ausschluss.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,18 +34,20 @@ ms.locfileid: "33849274"
 include("Name1"[,"Name2", ...])  
 ```  
   
-#### <a name="parameters"></a>Parameter  
- `Name1`  
- Das erste Element, dessen Aufnahme erzwungen wird.  
+### <a name="parameters"></a>Parameter  
+*Name1*  
+Das erste Element, dessen Aufnahme erzwungen wird.  
   
- `Name2`  
- Das zweite Element, dessen Aufnahme erzwungen wird (falls erforderlich).  
+*Name2*  
+Das zweite Element, dessen Aufnahme erzwungen wird (falls erforderlich).  
   
 ## <a name="remarks"></a>Hinweise  
- Typbibliotheken können Definitionen der Elemente enthalten, die in Systemheadern oder anderen Typbibliotheken definiert sind. `#import` versucht, mehrfache Definitionsfehler dadurch zu vermeiden, dass solche Elemente automatisch ausgeschlossen werden. Wenn Elemente durch ausgeschlossen wurden, [Compilerwarnung (Stufe 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md), und es sollten keine wurden, dieses Attribut kann verwendet werden, an die automatischen Ausschluss deaktivieren. Dieses Attribut kann eine beliebige Anzahl von Argumenten akzeptieren, die jeweils der Name des einzuschließenden Typbibliothekelements sind.  
+ 
+Typbibliotheken können Definitionen der Elemente enthalten, die in Systemheadern oder anderen Typbibliotheken definiert sind. `#import` versucht, mehrfache Definitionsfehler dadurch zu vermeiden, dass solche Elemente automatisch ausgeschlossen werden. Wenn Elemente ausgeschlossen wurden durch, [Compilerwarnung (Stufe 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md), und es sollten keine wurden, dieses Attribut kann verwendet werden, um den automatischen Ausschluss zu deaktivieren. Dieses Attribut kann eine beliebige Anzahl von Argumenten akzeptieren, die jeweils der Name des einzuschließenden Typbibliothekelements sind.  
   
- **Ende C++-spezifisch**  
+**Ende C++-spezifisch**  
   
 ## <a name="see-also"></a>Siehe auch  
- [#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
- [#import-Direktive](../preprocessor/hash-import-directive-cpp.md)
+ 
+[#import-Attribute](../preprocessor/hash-import-attributes-cpp.md)   
+[#import-Anweisung](../preprocessor/hash-import-directive-cpp.md)

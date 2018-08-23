@@ -1,5 +1,5 @@
 ---
-title: Float_control | Microsoft Docs
+title: Float_control | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7ac671c938b80fc69b8214456efecf798e1e5f6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9b94e5b8eccdc63735c7cb25faa7eacb1e23670
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840354"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42543140"
 ---
 # <a name="floatcontrol"></a>float_control
 Gibt Gleitkommaverhalten für eine Funktion an.  
@@ -35,21 +35,23 @@ float_control( value,setting [push] | push | pop )
 ```  
   
 ## <a name="flags"></a>Flags  
- `value`, `setting` **[push]**  
- Gibt das Gleitkommaverhalten an. `value` kann **präzise** oder **außer**. Weitere Informationen finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](../build/reference/fp-specify-floating-point-behavior.md). `setting` kann entweder **auf** oder **deaktiviert**.  
+ 
+*Wert*, *Einstellung* *[Pushbenachrichtigungen]*  
+Gibt das Gleitkommaverhalten an. *Wert* kann `precise` oder `except`. Weitere Informationen finden Sie unter [/fp (Festlegen des Gleitkommaverhaltens)](../build/reference/fp-specify-floating-point-behavior.md). *Festlegen von* Optionen sind möglich `on` oder `off`.  
   
- Wenn `value` ist **präzise**, die Einstellungen für **präzise** und **außer** sind angegeben. **mit Ausnahme von** kann nur festgelegt werden, um **auf** beim **präzise** auch **auf**.  
+Wenn *Wert* ist `precise`, das die Einstellungen für `precise` und `except` angegeben. `except` kann nur festgelegt werden, um `on` beim `precise` nastaven NA hodnotu auch `on`.  
   
- Wenn das optionale **Push** -Token hinzugefügt wird, wird die aktuelle Einstellung für `value` wird verschoben, auf dem internen compilerstapel ab.  
+Wenn der optionale *Push* -Token hinzugefügt wird, wird die aktuelle Einstellung für *Wert* wird verschoben, auf dem internen compilerstapel ab.  
   
- **push**  
- Schieben Sie die aktuelle `float_control`-Einstellung auf den internen Compilerstapel.  
+*push*  
+Schieben Sie die aktuelle **Float_control** -Einstellung auf dem internen compilerstapel ab  
   
- **pop**  
- Entfernt die `float_control` festlegen, die von der obersten Position des internen Compilerstapels und macht das das neue `float_control` Einstellung.  
+*pop*  
+Entfernt die **Float_control** festlegen, die von der obersten Position des internen Compilerstapels und erstellt die neue **Float_control** festlegen.  
   
 ## <a name="remarks"></a>Hinweise  
- Kann nicht `float_control precise` deaktiviert, wenn **außer** befindet sich auf. Auf ähnliche Weise **präzise** kann nicht deaktiviert werden Wenn `fenv_access` befindet sich auf. Um mit dem `float_control`-Pragma vom strict-Modell zum fast-Modell überzugehen, verwenden Sie den folgenden Code:  
+ 
+Sie können `float_control precise` nicht deaktivieren, wenn `except` aktiviert ist. Ebenso kann `precise` nicht deaktiviert werden, wenn `fenv_access` aktiviert ist. Wechseln Sie vom strict-Modell zum fast-Modell mit den **Float_control** Pragma, verwenden Sie den folgenden Code:  
   
 ```  
 #pragma float_control(except, off)  
@@ -57,7 +59,7 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(precise, off)  
 ```  
   
- Um mit dem `float_control`-Pragma vom fast-Modell zum strict-Modell überzugehen, verwenden Sie den folgenden Code:  
+Wechseln Sie vom fast-Modell zum strict-Modell mit den **Float_control** Pragma, verwenden Sie den folgenden Code:  
   
 ```  
 #pragma float_control(precise, on)  
@@ -65,16 +67,17 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(except, on)  
 ```  
   
- Andere Gleitkommapragmas umfassen:  
+Andere Gleitkommapragmas umfassen:  
   
--   [fenv_access](../preprocessor/fenv-access.md)  
+- [fenv_access](../preprocessor/fenv-access.md)  
   
--   [fp_contract](../preprocessor/fp-contract.md)  
+- [fp_contract](../preprocessor/fp-contract.md)  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie eine Überlaufgleitkommaausnahme mit dem Pragma `float_control` verwendet wird.  
+ 
+Das folgende Beispiel zeigt, wie eine Gleitkomma-Stapelüberlauf-Ausnahme abgefangen wird, mithilfe von Pragma **Float_control**.  
   
-```  
+```cpp  
 // pragma_directive_float_control.cpp  
 // compile with: /EHa  
 #include <stdio.h>  
@@ -113,4 +116,5 @@ Pass
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  

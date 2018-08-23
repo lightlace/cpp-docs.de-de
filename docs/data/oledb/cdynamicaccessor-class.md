@@ -138,12 +138,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4a1b08d82e915780817a47abddcf417fe5ab715
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c1934c7857e8c7813f653b6f12be0ba523ec63fb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338245"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572839"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor-Klasse
 Können Sie eine Datenquelle zugreifen, wenn Sie keine Kenntnisse über das Datenbankschema (die zugrunde liegende Struktur) verfügen.  
@@ -165,7 +165,7 @@ class CDynamicAccessor : public CAccessorBase
 |-|-|  
 |[AddBindEntry](#addbindentry)|Fügt einen Eintrag für die Bindung den Ausgabespalten an, beim Überschreiben des Standard-Accessors.|  
 |[CDynamicAccessor](#cdynamicaccessor)|Instanziiert und initialisiert die `CDynamicAccessor` Objekt.|  
-|[Schließen](#close)|Hebt die Bindung auf alle Spalten, die den zugeordneten Arbeitsspeicher frei und gibt die [IAccessor](https://msdn.microsoft.com/library/ms719672.aspx) Schnittstellenzeiger in der Klasse.|  
+|[Schließen](#close)|Hebt die Bindung auf alle Spalten, die den zugeordneten Arbeitsspeicher frei und gibt die [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) Schnittstellenzeiger in der Klasse.|  
 |[GetBlobHandling](#getblobhandling)|Ruft ab, das BLOB mit dem Wert für die aktuelle Zeile zu verarbeiten.|  
 |[GetBlobSizeLimit](#getblobsizelimit)|Ruft die maximale BLOB-Größe in Bytes ab.|  
 |[GetBookmark](#getbookmark)|Ruft das Lesezeichen für die aktuelle Zeile.|  
@@ -202,7 +202,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
   
 #### <a name="parameters"></a>Parameter  
  *Info*  
- [in] Ein `DBCOLUMNINFO` Struktur, die Informationen enthält. Finden Sie unter "DBCOLUMNINFO-Strukturen" in [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) in die *OLE DB-Programmierreferenz*.  
+ [in] Ein `DBCOLUMNINFO` Struktur, die Informationen enthält. Finden Sie unter "DBCOLUMNINFO-Strukturen" in [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Einer der standardmäßigen HRESULT-Werte.  
@@ -233,7 +233,7 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
  Sie können auch angeben, wie `CDynamicAccessor` verarbeitet die Daten der Spalte, die als BLOB-Daten qualifiziert: kann er auf die Standardweise BLOB-Daten verarbeiten, kann es zu überspringen (nicht gebunden) BLOB-Daten, oder sie können BLOB-Daten im Anbieter reservierten Arbeitsspeicher binden.  
 
 ## <a name="close"></a> CDynamicAccessor:: Close
-Hebt die Bindung auf alle Spalten, die den zugeordneten Arbeitsspeicher frei und gibt die [IAccessor](https://msdn.microsoft.com/library/ms719672.aspx) Schnittstellenzeiger in der Klasse.  
+Hebt die Bindung auf alle Spalten, die den zugeordneten Arbeitsspeicher frei und gibt die [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) Schnittstellenzeiger in der Klasse.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -311,7 +311,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
  [in] Die Nummer der Spalte. Spaltennummern beginnen bei 1. Ein Wert von 0 verweist auf die Lesezeichenspalte, sofern vorhanden.  
   
  *pFlags*  
- [out] Ein Zeiger auf eine Bitmaske, die Spaltenmerkmale beschreibt. Siehe "DBCOLUMNFLAGS Enumerated Type", [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) in die *OLE DB-Programmierreferenz*.  
+ [out] Ein Zeiger auf eine Bitmaske, die Spaltenmerkmale beschreibt. Siehe "DBCOLUMNFLAGS Enumerated Type", [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **"true"** , wenn die Spalteneigenschaften erfolgreich abgerufen werden. Andernfalls wird **false**zurückgegeben.  
@@ -333,13 +333,13 @@ HRESULT GetColumnInfo(IRowset* pRowset,
   
 #### <a name="parameters"></a>Parameter  
  *pRowset*  
- [in] Ein Zeiger auf die [IRowset](https://msdn.microsoft.com/library/ms720986.aspx) Schnittstelle.  
+ [in] Ein Zeiger auf die [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) Schnittstelle.  
   
  *pColumns*  
  [out] Ein Zeiger auf Speicher, in dem die Anzahl der Spalten im Rowset zurückgegeben werden soll; Diese Anzahl schließt die Lesezeichenspalte ein, sofern vorhanden.  
   
  *ppColumnInfo*  
- [out] Ein Zeiger auf den Speicher für die Rückgabe ein Array von `DBCOLUMNINFO` Strukturen. Finden Sie unter "DBCOLUMNINFO-Strukturen" in [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) in die *OLE DB-Programmierreferenz*.  
+ [out] Ein Zeiger auf den Speicher für die Rückgabe ein Array von `DBCOLUMNINFO` Strukturen. Finden Sie unter "DBCOLUMNINFO-Strukturen" in [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
  *ppStringsBuffer*  
  [out] Ein Zeiger auf Speicher, in dem einen Zeiger auf den Speicher für alle Zeichenfolgenwerte zurückgegeben (Namen verwendet, entweder innerhalb *Columnid* oder *PwszName*) innerhalb eines einzelnen zuordnungsblocks.  
@@ -348,7 +348,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
  Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/library/ms722704.aspx) in die *OLE DB-Programmierreferenz* Informationen zu den Datentypen `DBORDINAL`, `DBCOLUMNINFO`, und `OLECHAR`.  
+ Finden Sie unter [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) in die *OLE DB-Programmierreferenz* Informationen zu den Datentypen `DBORDINAL`, `DBCOLUMNINFO`, und `OLECHAR`.  
 
 ## <a name="getcolumnname"></a> CDynamicAccessor:: GetColumnName
 Ruft den Namen der angegebenen Spalte ab.  
@@ -465,7 +465,7 @@ bool GetStatus(const WCHAR* pColumnName,
  [in] Ein Zeiger auf eine Zeichenfolge, die den Namen der Spalte enthält.  
   
  *pStatus*  
- [out] Ein Zeiger auf die Variable, die den Status der Spalte enthält. Finden Sie unter [DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx) in die *OLE DB-Programmierreferenz* für Weitere Informationen.  
+ [out] Ein Zeiger auf die Variable, die den Status der Spalte enthält. Finden Sie unter [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt **"true"** Wenn die angegebene Spalte gefunden wird. Andernfalls, gibt diese Funktion **"false"**.  
@@ -607,7 +607,7 @@ bool SetStatus(const WCHAR* pColumnName,
  [in] Die Nummer der Spalte. Spaltennummern beginnen bei 1. Ein Wert von 0 verweist auf die Lesezeichenspalte, sofern vorhanden.  
   
  *status*  
- [in] Folgender Spaltenstatus. Finden Sie unter [DBSTATUS](https://msdn.microsoft.com/library/ms722617.aspx) in die *OLE DB-Programmierreferenz* für Weitere Informationen.  
+ [in] Folgender Spaltenstatus. Finden Sie unter [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) in die *OLE DB-Programmierreferenz* für Weitere Informationen.  
   
  *pColumnName*  
  [in] Ein Zeiger auf eine Zeichenfolge, die den Namen der Spalte enthält.  

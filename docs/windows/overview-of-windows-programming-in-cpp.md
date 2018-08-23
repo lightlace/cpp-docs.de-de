@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a8705f6c1ed1030f1beeb7c2302f0d629c5d17d
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b66d6d3a7da6c9e3084ce2ef6fa18922e015a459
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012192"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42604278"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Übersicht über Windows-Programmierung in C++
 
@@ -26,14 +26,14 @@ Sie können Visual C++ verwenden, auf um viele Arten von Programmen zu schreiben
 - in der arbeitsspeicheranforderungen effizient
 - wirtschaftlich im Energieverbrauch 
 - der Mehrkern- und m-Core-Geräte optimal nutzen können
-- Ausführen allgemeiner computing auf dem Grafikprozessor (GPGPU)   
+- Ausführen allgemeiner computing auf dem Grafikprozessor (GPGPU)  
 - andere neue Entwicklungen in der Hardware nutzen können.
 
 Es gibt mehrere allgemeine Kategorien von Windows-Apps, die mit Visual C++ entwickelt werden können. Diese Kategorien haben verschiedene Programmiermodelle bzw. app-Modelle, die im Laufe der Jahre eingeführt wurden. Jedes Modell verwendet verschiedene Bibliotheken und APIs bieten Zugriff auf die Plattform, und Erstellen von Benutzeroberflächen, wie z. B. die Fenster und Dialogfelder. Die C++-Standardbibliothek sowie Drittanbieter-Bibliotheken können in einer dieser Kategorien mit einigen Einschränkungen für UWP verwendet werden.
 
 - [Universelle Windows-Apps](#BK_WindowsUniversal). Die dritte Kategorie von Windows-Apps wurde mit Windows 8 eingeführt und wird in Windows 10 weiterhin unterstützt. Diese Apps werden häufig einfach nur als „Windows-Apps“ bezeichnet und umfassen Desktop- und mobile Apps für eine Vielzahl von Geräten. Sie können diese Apps in C++ / CX schreiben, einer Abwandlung von C++, die Unterstützung für die Windows-Runtime-Entwicklung bietet, oder in der C++-Standardprogrammiersprache mit COM unter Verwendung der Windows-Runtime-Bibliothek (WRL). Diese Apps wurden ursprünglich für die Ausführung im Vollbildmodus entworfen, in Windows 10 haben die Benutzer jedoch die Möglichkeit, sie in einem Desktopfenster auszuführen. Diese Apps sind für Toucheingabe ausgelegt, Benutzer können sie jedoch auch problemlos mit der Maus bedienen, wenn sie dies bevorzugen oder kein Touchscreen verfügbar ist. Diese apps werden aus dem Microsoft Store, einen Fakt verteilt, die Ihnen die aufgerufenen "Store" apps geführt hat.
 
-UWP-apps werden können auf alle Windows 10-Geräten wie Tablets und Mobiltelefone sowie auf dem Desktop ausgeführt. Auf dem Desktop können Sie als Desktop-Fenster ausgeführt werden, statt sie immer im Vollbildmodus ausführen zu müssen. Diese Anwendungen können auch auf der Xbox und auf zukünftigen Geräten ausgeführt werden.  UWP-apps führen Sie auf der Windows-Runtime, die stellt Benutzeroberflächenelemente, Dienste und eine Schnittstelle zu verschiedenen Hardwaregeräten, die unter Windows unterstützt werden.  
+UWP-apps werden können auf alle Windows 10-Geräten wie Tablets und Mobiltelefone sowie auf dem Desktop ausgeführt. Auf dem Desktop können Sie als Desktop-Fenster ausgeführt werden, statt sie immer im Vollbildmodus ausführen zu müssen. Diese Anwendungen können auch auf der Xbox und auf zukünftigen Geräten ausgeführt werden.  UWP-apps führen Sie auf der Windows-Runtime, die stellt Benutzeroberflächenelemente, Dienste und eine Schnittstelle zu verschiedenen Hardwaregeräten, die unter Windows unterstützt werden.
 
 Sie können UWP-apps in C++ schreiben c++ / CX, einer Abwandlung von C++, können Sie die [C++ / WinRT-Bibliothek](https://moderncpp.com/)für einige Szenarien. UWP-apps in systemeigenen Code kompiliert und verfügen über eine Benutzeroberfläche für XAML oder DirectX verwenden. Windows-Runtime-Komponenten, die in nativem Code geschrieben werden, dass die UWP-apps, die in anderen Sprachen geschriebene nutzen können. Weitere Informationen finden Sie unter [Erstellen einer universellen Windows-Plattform-app in C++](http://go.microsoft.com/fwlink/?LinkID=534976), [Erstellen Ihres ersten UWP-Spiels mit DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), und [Erstellen von Windows-Runtime-Komponenten in C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
 
@@ -84,7 +84,7 @@ DirectX-Spiele können auf dem PC oder der Xbox ausgeführt werden. Weitere Info
 
 ## <a name="sdks-libraries-and-header-files"></a>SDKs, Bibliotheken und Headerdateien
 
-Visual C++ enthält die C-Laufzeitbibliothek (CRT), die C++-Standardbibliothek und anderen Microsoft-spezifische Bibliotheken. Die Include-Ordner, die Headerdateien für diese Bibliotheken enthalten befinden sich entweder in der Visual Studio-Installationsverzeichnis im Ordner \VC\ oder im Falle der CRT, im Windows SDK-Installationsordner.   
+Visual C++ enthält die C-Laufzeitbibliothek (CRT), die C++-Standardbibliothek und anderen Microsoft-spezifische Bibliotheken. Die Include-Ordner, die Headerdateien für diese Bibliotheken enthalten befinden sich entweder in der Visual Studio-Installationsverzeichnis im Ordner \VC\ oder im Falle der CRT, im Windows SDK-Installationsordner.
 
 Sie können die [Vcpkg-Paket-Manager](../vcpkg.md) sinnvoll, Hunderte von Drittanbieter-Open Source-Bibliotheken für Windows installieren.
 
@@ -100,7 +100,7 @@ Die Microsoft-Bibliotheken enthalten:
 
 Viele Programmierszenarien bei Windows erfordern zudem das Windows SDK, in dem die Headerdateien enthalten sind, die den Zugriff auf Komponenten des Windows-Betriebssystems ermöglichen. Standardmäßig installiert Visual Studio das Windows SDK als Komponente von der C++-Desktop-Workload, die Entwicklung von universellen Windows-apps ermöglicht. Zum Entwickeln von UWP-apps benötigen Sie die Windows 10-Version des Windows SDK. Weitere Informationen finden Sie unter [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Weitere Informationen zu Windows SDKs für frühere Versionen von Windows finden Sie unter den [Windows SDK-Archivs](https://developer.microsoft.com/windows/downloads/sdk-archive)). 
 
-**Programmieren von Dateien (x86) \Windows Kits** ist der Standardspeicherort für die für alle Versionen des Windows SDK, das Sie installiert haben.
+**Programmieren von Dateien (x86) \Windows Kits** ist der Standardspeicherort für alle Versionen des Windows SDK, das Sie installiert haben.
 
 Für andere Plattformen, wie Xbox und Azure, sind eigene SDKs verfügbar, die sie ggf. installieren müssen. Weitere Informationen finden Sie im DirectX-Developer Center sowie im Azure Developer Center.
 

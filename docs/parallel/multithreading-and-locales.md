@@ -1,5 +1,5 @@
 ---
-title: Multithreading und Gebietsschemas | Microsoft Docs
+title: Multithreading und Gebietsschemas | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19cc3817faab71c209586ad952162229f846e0a7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0506c7f4efd288417c8fbdcd4784446651c362ac
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692853"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42540004"
 ---
 # <a name="multithreading-and-locales"></a>Multithreading und Gebietsschemas
-C-Laufzeitbibliothek und C++-Standardbibliothek bieten Unterstützung für das Gebietsschema des Programms ändern. Dieses Thema behandelt Probleme, die auftreten, wenn die Gebietsschema-Funktionen der beiden Bibliotheken in einer Multithreadanwendung zu verwenden.  
+Sowohl C-Laufzeitbibliothek und C++-Standardbibliothek bieten Unterstützung für die Änderung des Gebietsschemas für Ihr Programm ein. Dieses Thema behandelt Probleme, die auftreten, wenn Sie die Gebietsschema-Funktionen der beiden Bibliotheken in einer Multithreadanwendung zu verwenden.  
   
 ## <a name="remarks"></a>Hinweise  
- Mit der C-Laufzeitbibliothek können Sie mithilfe von Multithreadanwendungen erstellen die `_beginthread` und `_beginthreadex` Funktionen. Dieses Thema behandelt nur Multithread-Anwendungen die Verwendung dieser Funktionen erstellt. Weitere Informationen finden Sie unter [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).  
+
+Mit der C-Laufzeitbibliothek können Sie mithilfe von Multithreadanwendungen erstellen die `_beginthread` und `_beginthreadex` Funktionen. Dieses Thema behandelt nur Multithread-Anwendungen unter Verwendung dieser Funktionen erstellt. Weitere Informationen finden Sie unter [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).  
   
- Um das Gebietsschema bei Verwendung von C-Laufzeitbibliothek zu ändern, verwenden die [Setlocale](../preprocessor/setlocale.md) Funktion. In früheren Versionen von Visual C++ würden diese Funktion immer das Gebietsschema der gesamten Anwendung ändern. Es gibt unterstützt jetzt legen Sie das Gebietsschema auf Basis pro Thread. Dies erfolgt mithilfe der [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) Funktion. Um anzugeben, dass [Setlocale](../preprocessor/setlocale.md) sollten nur ändern, das Gebietsschema im aktuellen Thread, Aufruf `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` in diesem Thread. Im Gegensatz dazu aufrufen `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` führt dazu, dass Thread das globale Gebietsschema verwendet, und jeder Aufruf von [Setlocale](../preprocessor/setlocale.md) auf, als Thread des Gebietsschemas in allen Threads geändert werden, die nicht explizit threadspezifische Gebietsschema aktiviert haben.  
+Verwenden Sie zum Ändern des Gebietsschemas mithilfe von C-Laufzeitbibliothek die [Setlocale](../preprocessor/setlocale.md) Funktion. In früheren Versionen von Visual C++ würde diese Funktion immer das Gebietsschema in der gesamten Anwendung ändern. Es gibt jetzt Unterstützung für das Festlegen des Gebietsschemas auf einer pro-Thread-Basis. Dies erfolgt mithilfe der [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) Funktion. Um anzugeben, dass [Setlocale](../preprocessor/setlocale.md) sollten nur ändern, das den aktuellen Thread Aufruf verwendete Gebietsschema `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` in diesem Thread. Umgekehrt wird beim Aufruf `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` führt dazu, dass dieser Thread auf das globale Gebietsschema verwendet, und jeder Aufruf von [Setlocale](../preprocessor/setlocale.md) darin, dass Thread das Gebietsschema aller Threads ändert, die nicht explizit threadspezifische Gebietsschema aktiviert haben.  
   
- Um das Gebietsschema bei Verwendung der C++-Laufzeitbibliothek zu ändern, verwenden die [Locale-Klasse](../standard-library/locale-class.md). Durch Aufrufen der [Locale](../standard-library/locale-class.md#global) -Methode, ändern Sie das Gebietsschema in allen Threads, die nicht explizit threadspezifische Gebietsschema aktiviert ist. Um das Gebietsschema in einem einzigen Thread oder Teil einer Anwendung zu ändern, erstellen Sie eine Instanz von einem `locale` Objekt in diesem Thread oder ein Teil des Codes.  
+Verwenden Sie zum Ändern des Gebietsschemas mithilfe C++-Laufzeitbibliothek die [Locale-Klasse](../standard-library/locale-class.md). Durch Aufrufen der [locale:: Global](../standard-library/locale-class.md#global) -Methode, ändern Sie das Gebietsschema in allen Threads, die nicht explizit threadspezifische Gebietsschema aktiviert ist. Um das Gebietsschema in einem einzigen Thread oder einen Teil einer Anwendung zu ändern, erstellen Sie eine Instanz einer `locale` Objekt in diesem Thread oder einen Teil des Codes.  
   
 > [!NOTE]
->  Aufrufen von [Locale](../standard-library/locale-class.md#global) ändert das Gebietsschema für die C++-Standardbibliothek und die C-Laufzeitbibliothek. Bei Aufruf [Setlocale](../preprocessor/setlocale.md) ändert nur das Gebietsschema für die C-Laufzeitbibliothek; der C++-Standardbibliothek wird nicht beeinflusst.  
+> Aufrufen von [locale:: Global](../standard-library/locale-class.md#global) ändert das Gebietsschema für C-Laufzeitbibliothek und C++-Standardbibliothek. Das Aufrufen von jedoch [Setlocale](../preprocessor/setlocale.md) ändert nur das Gebietsschema für C-Laufzeitbibliothek, die C++-Standardbibliothek ist nicht betroffen.  
   
- Den folgenden Beispielen wird veranschaulicht, wie Sie die [Setlocale](../preprocessor/setlocale.md) -Funktion, die [Locale-Klasse](../standard-library/locale-class.md), und die [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) Funktion das Gebietsschema einer Anwendung in ändern mehrere verschiedene Szenarien.  
+Die folgenden Beispiele zeigen, wie Sie mit der [Setlocale](../preprocessor/setlocale.md) -Funktion, die [Locale-Klasse](../standard-library/locale-class.md), und die [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) Funktion, um eine Anwendung in das Gebietsschema ändern mehrere verschiedene Szenarien.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel erzeugt die Hauptthread zwei untergeordnete Threads. Der erste Thread, Thread A, ermöglicht threadspezifisches Gebietsschema durch Aufrufen von `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Vom zweiten Thread, Thread B als auch den Hauptthread aktiviere threadspezifisches Gebietsschema nicht. Thread eine anschließend so ändern Sie das Gebietsschema mit der [Setlocale](../preprocessor/setlocale.md) Funktion der C-Laufzeitbibliothek.  
+ 
+In diesem Beispiel erzeugt der Hauptthread zwei untergeordnete Threads. Der erste Thread, Thread A aktiviert threadspezifisches Gebietsschema durch Aufrufen von `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Der zweite Thread, Thread B als auch den Hauptthread, aktivieren Sie threadspezifisches Gebietsschema nicht. Thread A wird anschließend fortgesetzt wird, so ändern Sie das Gebietsschema mit dem [Setlocale](../preprocessor/setlocale.md) Funktion der C-Laufzeitbibliothek.  
   
- Da Thread ein threadspezifisches Gebietsschema aktiviert ist, nur die C-Laufzeitbibliothek-Funktionen in Thread A beginnen, verwenden das Gebietsschema "Französisch" aufweist. Die C-Laufzeitbibliothek-Funktionen in Thread B und im Hauptthread weiterhin das Gebietsschema "C" verwenden. Darüber hinaus seit [Setlocale](../preprocessor/setlocale.md) wirkt sich nicht auf das C++-Standardbibliothek Gebietsschema angegeben, alle C++-Standardbibliothek Objekte weiterhin das Gebietsschema "C" verwenden.  
+Da der Thread ein threadspezifisches Gebietsschema aktiviert ist, nur die C-Laufzeitbibliothek-Funktionen im Thread A Einstieg in das Gebietsschema "Französisch" hat. Die C-Laufzeitbibliothek-Funktionen in Thread B und im Hauptthread weiterhin das Gebietsschema "C" verwenden. Da außerdem [Setlocale](../preprocessor/setlocale.md) wirkt sich nicht auf das C++-Standardbibliothek Gebietsschema angegeben, alle C++-Standardbibliothek Objekte weiterhin verwenden, das Gebietsschema "C".  
   
-```  
+```cpp  
 // multithread_locale_1.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -138,11 +140,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel erzeugt die Hauptthread zwei untergeordnete Threads. Der erste Thread, Thread A, ermöglicht threadspezifisches Gebietsschema durch Aufrufen von `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Vom zweiten Thread, Thread B als auch den Hauptthread aktiviere threadspezifisches Gebietsschema nicht. Thread eine anschließend so ändern Sie das Gebietsschema mit der [Locale](../standard-library/locale-class.md#global) Methode der C++-Standardbibliothek.  
+ 
+In diesem Beispiel erzeugt der Hauptthread zwei untergeordnete Threads. Der erste Thread, Thread A aktiviert threadspezifisches Gebietsschema durch Aufrufen von `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Der zweite Thread, Thread B als auch den Hauptthread, aktivieren Sie threadspezifisches Gebietsschema nicht. Thread A wird anschließend fortgesetzt wird, so ändern Sie das Gebietsschema mit dem [locale:: Global](../standard-library/locale-class.md#global) -Methode der C++-Standardbibliothek.  
   
- Da Thread ein threadspezifisches Gebietsschema aktiviert ist, nur die C-Laufzeitbibliothek-Funktionen in Thread A beginnen, verwenden das Gebietsschema "Französisch" aufweist. Die C-Laufzeitbibliothek-Funktionen in Thread B und im Hauptthread weiterhin das Gebietsschema "C" verwenden. Da jedoch die [Locale](../standard-library/locale-class.md#global) Methode ändert das Gebietsschema "Global", alle C++-Standardbibliothek Objekte in allen Threads Einstieg in das Gebietsschema "Französisch".  
+Da der Thread ein threadspezifisches Gebietsschema aktiviert ist, nur die C-Laufzeitbibliothek-Funktionen im Thread A Einstieg in das Gebietsschema "Französisch" hat. Die C-Laufzeitbibliothek-Funktionen in Thread B und im Hauptthread weiterhin das Gebietsschema "C" verwenden. Da jedoch die [locale:: Global](../standard-library/locale-class.md#global) Methode ändert das Gebietsschema "Global", alle C++-Standardbibliothek-Objekte in allen Threads zu starten, verwenden das Gebietsschema "Französisch".  
   
-```  
+```cpp  
 // multithread_locale_2.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -236,11 +239,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel erzeugt die Hauptthread zwei untergeordnete Threads. Der erste Thread, Thread A, ermöglicht threadspezifisches Gebietsschema durch Aufrufen von `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Vom zweiten Thread, Thread B als auch den Hauptthread aktiviere threadspezifisches Gebietsschema nicht. Thread B wird anschließend das Gebietsschema mit der [Setlocale](../preprocessor/setlocale.md) Funktion der C-Laufzeitbibliothek.  
+ 
+In diesem Beispiel erzeugt der Hauptthread zwei untergeordnete Threads. Der erste Thread, Thread A aktiviert threadspezifisches Gebietsschema durch Aufrufen von `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Der zweite Thread, Thread B als auch den Hauptthread, aktivieren Sie threadspezifisches Gebietsschema nicht. Thread B wird anschließend so ändern Sie das Gebietsschema mit dem [Setlocale](../preprocessor/setlocale.md) Funktion der C-Laufzeitbibliothek.  
   
- Da Thread B kein threadspezifische Gebietsschema aktiviert ist, beginnt die C-Laufzeitbibliothek-Funktionen in Thread B und im Hauptthread an, mit dem Gebietsschema "Französisch". Die Funktionen der C-Laufzeitbibliothek in Thread A weiterhin das Gebietsschema "C" verwenden, da Thread ein threadspezifisches Gebietsschema aktiviert wurde. Darüber hinaus seit [Setlocale](../preprocessor/setlocale.md) wirkt sich nicht auf das C++-Standardbibliothek Gebietsschema angegeben, alle C++-Standardbibliothek Objekte weiterhin das Gebietsschema "C" verwenden.  
+Da Thread B keine threadspezifische Gebietsschema aktiviert, starten Sie die C-Laufzeitbibliothek-Funktionen in Thread B und im Hauptthread unter Verwendung des Gebietsschemas "Französisch". Die Funktionen der C-Laufzeitbibliothek in Thread A weiterhin das Gebietsschema "C" zu verwenden, da der Thread ein threadspezifisches Gebietsschema aktiviert hat. Da außerdem [Setlocale](../preprocessor/setlocale.md) wirkt sich nicht auf das C++-Standardbibliothek Gebietsschema angegeben, alle C++-Standardbibliothek Objekte weiterhin verwenden, das Gebietsschema "C".  
   
-```  
+```cpp  
 // multithread_locale_3.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -338,11 +342,12 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel erzeugt die Hauptthread zwei untergeordnete Threads. Der erste Thread, Thread A, ermöglicht threadspezifisches Gebietsschema durch Aufrufen von `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Vom zweiten Thread, Thread B als auch den Hauptthread aktiviere threadspezifisches Gebietsschema nicht. Thread B wird anschließend das Gebietsschema mit der [Locale](../standard-library/locale-class.md#global) Methode der C++-Standardbibliothek.  
+ 
+In diesem Beispiel erzeugt der Hauptthread zwei untergeordnete Threads. Der erste Thread, Thread A aktiviert threadspezifisches Gebietsschema durch Aufrufen von `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Der zweite Thread, Thread B als auch den Hauptthread, aktivieren Sie threadspezifisches Gebietsschema nicht. Thread B wird anschließend so ändern Sie das Gebietsschema mit dem [locale:: Global](../standard-library/locale-class.md#global) -Methode der C++-Standardbibliothek.  
   
- Da Thread B kein threadspezifische Gebietsschema aktiviert ist, beginnt die C-Laufzeitbibliothek-Funktionen in Thread B und im Hauptthread an, mit dem Gebietsschema "Französisch". Die Funktionen der C-Laufzeitbibliothek in Thread A weiterhin das Gebietsschema "C" verwenden, da Thread ein threadspezifisches Gebietsschema aktiviert wurde. Da jedoch die [Locale](../standard-library/locale-class.md#global) Methode ändert das Gebietsschema "Global", alle C++-Standardbibliothek Objekte in allen Threads Einstieg in das Gebietsschema "Französisch".  
+Da Thread B keine threadspezifische Gebietsschema aktiviert, starten Sie die C-Laufzeitbibliothek-Funktionen in Thread B und im Hauptthread unter Verwendung des Gebietsschemas "Französisch". Die Funktionen der C-Laufzeitbibliothek in Thread A weiterhin das Gebietsschema "C" zu verwenden, da der Thread ein threadspezifisches Gebietsschema aktiviert hat. Da jedoch die [locale:: Global](../standard-library/locale-class.md#global) Methode ändert das Gebietsschema "Global", alle C++-Standardbibliothek-Objekte in allen Threads zu starten, verwenden das Gebietsschema "Französisch".  
   
-```  
+```cpp  
 // multithread_locale_4.cpp  
 // compile with: /EHsc /MD  
 #include <clocale>  
@@ -440,12 +445,13 @@ unsigned __stdcall RunThreadB(void *params)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Multithreadingunterstützung für älteren Code (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
- [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
- [setlocale](../preprocessor/setlocale.md)   
- [Internationalisierung](../c-runtime-library/internationalization.md)   
- [Gebietsschema](../c-runtime-library/locale.md)   
- [\<Clocale >](../standard-library/clocale.md)   
- [\<locale>](../standard-library/locale.md)   
- [locale-Klasse](../standard-library/locale-class.md)
+
+[Multithreadingunterstützung für älteren Code (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+[_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
+[setlocale](../preprocessor/setlocale.md)   
+[Internationalisierung](../c-runtime-library/internationalization.md)   
+[Gebietsschema](../c-runtime-library/locale.md)   
+[\<Clocale >](../standard-library/clocale.md)   
+[\<locale>](../standard-library/locale.md)   
+[locale-Klasse](../standard-library/locale-class.md)

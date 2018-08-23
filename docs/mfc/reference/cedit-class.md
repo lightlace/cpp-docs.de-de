@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e1521c73f92bbb941b1060cb5cf2051ead88ffb
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 45632fb870f1586453c2c591ef8edce23e625002
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339591"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540620"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Stellt die Funktionalität eines Windows-Bearbeitungssteuerelements bereit.  
@@ -798,7 +798,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="return-value"></a>Rückgabewert  
  Für einzeilige Bearbeitungssteuerelemente ist der Rückgabewert der Länge des Texts in das Bearbeitungssteuerelement in TCHARs.  
   
- Für mehrzeilige Bearbeitungssteuerelemente, der Rückgabewert ist die Länge der Zeile anhand des in TCHARs, die *nLine* Parameter. Für [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] Text die Länge beträgt die Anzahl der Bytes in der Zeile, für die Unicode-Text, die Länge beträgt die Anzahl der Zeichen in der Zeile. Die Länge schließt nicht die Zeichen Wagenrücklauf am Ende der Zeile.  
+ Für mehrzeilige Bearbeitungssteuerelemente, der Rückgabewert ist die Länge der Zeile anhand des in TCHARs, die *nLine* Parameter. Für ANSI-Text ist die Länge der Anzahl der Bytes in der Zeile. für Unicode-Text ist die Länge der Anzahl der Zeichen in der Zeile. Die Länge schließt nicht die Zeichen Wagenrücklauf am Ende der Zeile.  
   
  Wenn die *nLine* -Parameter ist größer als die Anzahl der Zeichen in das Steuerelement, der Rückgabewert ist 0 (null).  
   

@@ -19,30 +19,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 31a43e205ad2993f2b70188300800eb8f11fe8c8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 911810a53df47e9ea7eb0485724d23a41eef3349
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647933"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589595"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Ein- oder Ausblenden des Pixelrasters (Bildbearbeitung für Symbole)
-Für alle **Bildbearbeitung** Bereiche mit einem Vergrößerungsfaktor von 4 oder höher können Sie ein Raster, das die einzelnen Pixel in der Abbildung begrenzt anzeigen.  
-  
+
+Für alle **Bildbearbeitung** Bereiche mit einem Vergrößerungsfaktor von 4 oder höher können Sie ein Raster, das die einzelnen Pixel in der Abbildung begrenzt anzeigen.
+
 > [!TIP]
->  Wenn Sie den Cursor auf eine Symbolleisten-Schaltfläche zeigen, werden QuickInfos angezeigt. Diese Tipps können Sie die Funktion der einzelnen Schaltflächen zu identifizieren.  
-  
-### <a name="to-display-or-hide-the-pixel-grid"></a>Zum Anzeigen oder Ausblenden des Pixelrasters  
-  
-1.  Auf der **Image** Menü klicken Sie auf **Rastereinstellungen**.  
-  
-2.  Wählen Sie die **Pixelraster** Kontrollkästchen, um das Raster anzeigen oder deaktivieren Sie das Kontrollkästchen, um das Raster auszublenden.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Anforderungen  
- Keiner  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)   
- [Fensterbereiche](../windows/window-panes-image-editor-for-icons.md)
+> Wenn Sie den Cursor auf eine Symbolleisten-Schaltfläche zeigen, werden QuickInfos angezeigt. Diese Tipps können Sie die Funktion der einzelnen Schaltflächen zu identifizieren.
+
+### <a name="to-display-or-hide-the-pixel-grid"></a>Zum Anzeigen oder Ausblenden des Pixelrasters
+
+1. Auf der **Image** Menü klicken Sie auf **Rastereinstellungen**.
+
+2. Wählen Sie die **Pixelraster** Kontrollkästchen, um das Raster anzeigen oder deaktivieren Sie das Kontrollkästchen, um das Raster auszublenden.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Keiner
+
+## <a name="see-also"></a>Siehe auch
+
+[Zugriffstasten](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Fensterbereiche](../windows/window-panes-image-editor-for-icons.md)

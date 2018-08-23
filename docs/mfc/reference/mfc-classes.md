@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027812"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541827"
 ---
 # <a name="mfc-classes"></a>MFC-Klassen
 Die Klassen in der folgenden Liste sind in der Microsoft Foundation Class (MFC)-Bibliothek enthalten.  
@@ -852,7 +852,7 @@ Die Klassen in der folgenden Liste sind in der Microsoft Foundation Class (MFC)-
  Wendet die Darstellung von Microsoft Windows XP oder von Microsoft Vista an, wenn der Benutzer ein Windows XP-Design oder Vista-Design auswählt.  
   
  [CMFCVisualManagerWindows7-Klasse](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)  
- Wendet die Darstellung einer [!INCLUDE[win7](../../build/includes/win7_md.md)] -Anwendung auf eine Anwendung an.  
+ Ermöglicht es einer Anwendung die Darstellung einer Windows 7-Anwendung.  
   
  [CMFCWindowsManagerDialog-Klasse](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
  Ermöglicht es einem Benutzer, untergeordnete MDI-Fenster in einer MDI-Anwendung zu verwalten.  
@@ -1020,7 +1020,7 @@ Die Klassen in der folgenden Liste sind in der Microsoft Foundation Class (MFC)-
  Wird für einen Sonderfall des OLE-Dialogfelds "Verknüpfungen bearbeiten" verwendet, das eingesetzt werden sollte, wenn in einem Dokument nur vorhandene Links oder eingebettete Objekte aktualisiert werden müssen.  
   
  [COleVariant-Klasse](../../mfc/reference/colevariant-class.md)  
- Kapselt die [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) -Datentyp.  
+ Kapselt die [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) -Datentyp.  
   
  [CPagerCtrl-Klasse](../../mfc/reference/cpagerctrl-class.md)  
  Die Klasse `CPagerCtrl` kapselt das Windows-Pagersteuerelement, in dem der Benutzer einen Bildlauf durchführen kann, um ein Fenster innerhalb eines anderen Fensters in den sichtbaren Bereich zu verschieben, sofern es größer ist als das umgebende Fenster.  

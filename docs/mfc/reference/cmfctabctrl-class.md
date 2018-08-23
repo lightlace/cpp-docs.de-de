@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219f0bc1f5b9959a424a8c3a63ec0c4e3505eb55
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852587"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42540824"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 Die `CMFCTabCtrl` -Klasse enthält Funktionen für ein Registerkarten-Steuerelement. Das Registerkarten-Steuerelement zeigt ein andockbares Fenster an, mit flachen oder dreidimensionalen Registerkarten am oberen oder unteren Rand. Die Registerkarten können Text und ein Bild enthalten und bei Aktivierung die Farbe ändern.  
@@ -221,7 +221,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 -   Entfernbare Fenster im Registerformat.  
   
- Die `CMFCTabCtrl` Klasse kann verwendet werden, ein Dialogfeld, jedoch ist ausschließlich für Anwendungen, die Andocken Balken wie steuern [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] und [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Weitere Informationen finden Sie unter [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md).  
+ Die `CMFCTabCtrl` Klasse kann verwendet werden, ein Dialogfeld, jedoch ist ausschließlich für Anwendungen, die Andocken Balken wie Microsoft Excel und Visual Studio zu steuern. Weitere Informationen finden Sie unter [CDockablePane-Klasse](../../mfc/reference/cdockablepane-class.md).  
   
  Führen Sie diese Schritte aus, um eine geändert werden kann, fügen ein Andocken von Registerkarten-Steuerelement in Ihrer Anwendung:  
   
@@ -269,7 +269,7 @@ void ActivateMDITab(int nTab = -1);
  Der nullbasierte Index, der eine Registerkarte, um die Anzeige oder -1, der derzeit aktiven Registerkarte an.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  

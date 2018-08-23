@@ -1,5 +1,5 @@
 ---
-title: __inbytestring | Microsoft Docs
+title: __inbytestring | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fb619a3fbc38925f2d91ae344b00bf1be34db5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f31ea898462fee04d94f379e8fffd323667eda1
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327860"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539629"
 ---
 # <a name="inbytestring"></a>__inbytestring
 **Microsoft-spezifisch**  
@@ -42,10 +42,10 @@ void __inbytestring(
   
 #### <a name="parameters"></a>Parameter  
  [in] `Port`  
- Der Port, aus dem gelesen werden soll.  
+ Der Port, der gelesen werden.  
   
  [out] `Buffer`  
- Die aus den Port gelesenen Daten werden hier geschrieben.  
+ Die vom Port gelesenen Daten werden hier geschrieben.  
   
  [in] `Count`  
  Die Anzahl der Bytes, der zu lesenden Daten.  
@@ -54,7 +54,7 @@ void __inbytestring(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__inbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__inbytestring`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

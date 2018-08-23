@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d78ca2a195ac60e31e01bbe271b7f92536cc1a05
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 824bb7059e13c76af0c2f739676d32afc04aa0c7
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401481"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572165"
 ---
 # <a name="main-program-startup"></a>main: Programmstart
-Eine spezielle Funktion mit dem Namen **main** ist der Ausgangspunkt der Ausführung von C- und C++-Programme. Wenn Sie das Schreiben von Code sind, die entspricht, der [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] Programmiermodell, können Sie `wmain`, dies ist die Breitzeichen-Version von **main**.  
+Eine spezielle Funktion mit dem Namen **main** ist der Ausgangspunkt der Ausführung von C- und C++-Programme. Wenn Sie das Schreiben von Code sind, die Unicode-Programmiermodell entspricht, können Sie `wmain`, dies ist die Breitzeichen-Version von **main**.  
   
  Die **main** Funktion wird vom Compiler nicht vordefiniert. Sie muss im Programmtext angegeben werden.  
   

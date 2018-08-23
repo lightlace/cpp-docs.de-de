@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d9898dc6b918643aa8ca4ace34ce2e716344c57
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 8c1fb739d5e6206297e52fd9103cbba98c5eef01
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39463488"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42572766"
 ---
 # <a name="specifiers"></a>Spezifizierer
 In diesem Thema wird beschrieben, die *Decl-Specifiers* -Komponente (deklarationsspezifizierer) einer [Deklaration](declarations-and-definitions-cpp.md).  
@@ -34,9 +34,11 @@ In diesem Thema wird beschrieben, die *Decl-Specifiers* -Komponente (deklaration
   
  *Funktionsspezifizierer*  
   
- [friend](../cpp/friend-cpp.md)  
-  
- [Typedef] ( [Typedef](http://msdn.microsod) `(` *extended-Decl-Modifier-Seq* `)`  
+ [friend](friend-cpp.md)  
+ 
+ [TypeDef](aliases-and-typedefs-cpp.md) `(` *extended-Decl-Modifier-Seq* `)`  
+
+ [__declspec](declspec.md) `(` *extended-Decl-Modifier-Seq* `)`  
   
 ## <a name="remarks"></a>Hinweise  
  Die *Decl-Specifiers* Teil einer Deklaration ist die längste Sequenz von *Decl-Specifiers* , der als Typname, einschließlich der nicht den Zeiger oder verweismodifizierer erstellt werden können. Der Rest der Deklaration ist die *Deklarator*, der den eingeführten Namen enthält.  

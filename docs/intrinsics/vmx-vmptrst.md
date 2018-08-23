@@ -1,5 +1,5 @@
 ---
-title: __vmx_vmptrst | Microsoft Docs
+title: __vmx_vmptrst | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad1b6587f4386565ae7de84a7b6a170da98b6df8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2997ed93de7291c22ae4f147bdd2392b71385e6
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328593"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539830"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 **Microsoft-spezifisch**  
   
- Speichert die Zeiger auf die aktuelle VM-Steuerelement-Struktur (VMCS) an der angegebenen Adresse an.  
+ Speichert den Zeiger auf die aktuelle VM-Steuerelement-Struktur (VMCS) an der angegebenen Adresse an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,18 +39,18 @@ void __vmx_vmptrst(
   
 #### <a name="parameters"></a>Parameter  
  [in] *`VmcsPhysicalAddress`  
- Die Adresse, in der aktuellen VMCS Zeiger gespeichert ist.  
+ Die Adresse, wo der Zeiger für den aktuelle VMCS gespeichert werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Der VMCS-Zeiger ist eine physische 64-Bit-Adresse.  
+ Der Zeiger VMCS ist eine physische 64-Bit-Adresse.  
   
- Die `__vmx_vmptrst` -Funktion ist gleichbedeutend mit der `VMPTRST` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie für Weitere Informationen suchen, für das Dokument "Intel Virtualization technische Spezifikation für der IA-32 Intel Architecture" Dokumentnummer C97063-002 auf der [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
+ Die `__vmx_vmptrst` -Funktion ist gleichbedeutend mit der `VMPTRST` computeranweisung. Diese Funktion unterstützt die Interaktion zwischen dem Monitor des virtuellen Computers eines Hosts mit einem Gastbetriebssystem und seinen Anwendungen. Dokumentieren Sie weitere Informationen suchen Sie nach dem Dokument "Intel Virtualization Technical Specification for the IA-32 Intel Architecture," Dokumentnummer C97063-002 auf der [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) Standort.  
   
 ## <a name="requirements"></a>Anforderungen  
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__vmx_vmptrst`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__vmx_vmptrst`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   

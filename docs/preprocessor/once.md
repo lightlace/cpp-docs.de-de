@@ -1,5 +1,5 @@
 ---
-title: Sobald | Microsoft Docs
+title: Sobald | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0e0b2b3667d4a33709caa643e4d26ed70b2990
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3ce387b4b9748c7fb46a419cbc8738e2598c5ab
+ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912926"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42540799"
 ---
 # <a name="once"></a>once
 Gibt an, dass die Datei beim Kompilieren einer Quellcodedatei nur einmal vom Compiler eingefügt (geöffnet) wird.  
@@ -31,26 +31,24 @@ Gibt an, dass die Datei beim Kompilieren einer Quellcodedatei nur einmal vom Com
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #pragma once  
-  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Durch Verwendung von `#pragma once` kann die Builderstellungsdauer verringert werden, da der Compiler die Datei nicht nach dem ersten #include-Befehl der Datei in der Übersetzungseinheit öffnet und liest. Dies wird als bezeichnet *Multiple-include-Optimierung*. Es hat einen ähnlichen Effekt der *#include-Schutz* Idiom, das präprozessormakrodefinitionen verwendet, um mehrere Einschlüsse der Inhalte der Datei zu verhindern. Dadurch werden auch Verstöße gegen verhindert die *eine Definitionsregel*– die Anforderung, dass alle Vorlagen, Typen, Funktionen und Objekte nicht mehr als eine Definition im Code haben.  
+ 
+Die Verwendung von `#pragma once` kann die Builderstellungsdauer verringern, da der Compiler nicht öffnen und Lesen Sie die Datei nach dem ersten `#include` der Datei in der Übersetzungseinheit. Dies wird als bezeichnet *Multiple-include-Optimierung*. Es wurde eine ähnliche Wirkung wie das `#include guard` Idiom, das präprozessormakrodefinitionen verwendet, um mehrere Einschlüsse der Inhalte der Datei zu verhindern. Dies wird auch verhindert, dass Verstöße gegen die *eine Richtliniendefinition*– die Anforderung, dass alle Vorlagen, Typen, Funktionen und Objekte in Ihrem Code nicht mehr als eine Definition enthalten.  
   
- Zum Beispiel:  
+Zum Beispiel:  
   
 ```  
 // header.h  
 #pragma once  
-// Code placed here is included only once per translation unit  
-  
+// Code placed here is included only once per translation unit    
 ```  
   
- Wir empfehlen die `#pragma once`-Richtlinie für neuen Code, da sie den globalen Namespace nicht mit einem Präprozessorsymbol verunreinigt. Sie erfordert weniger Eingaben, ist weniger verwirrend und kann keine Symbolkonflikte verursachen – Fehler, die verursacht werden, wenn unterschiedliche Headerdateien das gleiche Präprozessorsymbol als Schutzwert verwenden. Sie ist nicht Teil des C++-Standards, wird jedoch portabel durch mehrere allgemeine Compiler implementiert.  
+Wir empfehlen die `#pragma once`-Richtlinie für neuen Code, da sie den globalen Namespace nicht mit einem Präprozessorsymbol verunreinigt. Sie erfordert weniger Eingaben, ist weniger verwirrend und kann keine Symbolkonflikte verursachen – Fehler, die verursacht werden, wenn unterschiedliche Headerdateien das gleiche Präprozessorsymbol als Schutzwert verwenden. Sie ist nicht Teil des C++-Standards, wird jedoch portabel durch mehrere allgemeine Compiler implementiert.  
   
- Die gleichzeitige Verwendung von #include-Schutz-Idiom und `#pragma once` in derselben Datei bietet keinen Vorteil. Der Compiler erkennt das #include-Schutz-Idiom und implementiert die multiple-include-Optimierung genauso wie die `#pragma once`-Richtlinie, wenn kein Nicht-Kommentarcode oder keine Präprozessordirektive vor oder nach der Standardform des Idioms steht:  
+Die gleichzeitige Verwendung von #include-Schutz-Idiom und `#pragma once` in derselben Datei bietet keinen Vorteil. Der Compiler erkennt das #include-Schutz-Idiom und implementiert die multiple-include-Optimierung genauso wie die `#pragma once`-Richtlinie, wenn kein Nicht-Kommentarcode oder keine Präprozessordirektive vor oder nach der Standardform des Idioms steht:  
   
 ```  
 // header.h  
@@ -59,13 +57,13 @@ Gibt an, dass die Datei beim Kompilieren einer Quellcodedatei nur einmal vom Com
 #ifndef HEADER_H_     // equivalently, #if !defined HEADER_H_  
 #define HEADER_H_  
 // Code placed here is included only once per translation unit  
-#endif // HEADER_H_  
-  
+#endif // HEADER_H_    
 ```  
   
- Wir empfehlen das #include-Schutz-Idiom, wenn Code für Compiler portabel sein muss, die die `#pragma once`-Richtlinie nicht implementieren, um die Konsistenz mit vorhandenem Code aufrechtzuerhalten, oder wenn die multiple-include-Optimierung nicht möglich ist. Dies kann bei komplexen Projekten passieren, wenn Dateisystemaliasing oder Alias-Includepfade verhindern, dass der Compiler identische Includedateien über den kanonischen Pfad identifiziert.  
+Es wird empfohlen die `#include guard` Idiom, wenn der Code für Compiler portabel sein muss, die keine implementieren die `#pragma once` Richtlinie, um die Konsistenz mit vorhandenem Code aufrechtzuerhalten oder wenn die Multiple-include-Optimierung nicht möglich ist. Dies kann bei komplexen Projekten passieren, wenn Dateisystemaliasing oder Alias-Includepfade verhindern, dass der Compiler identische Includedateien über den kanonischen Pfad identifiziert.  
   
- Achten Sie darauf, dass Sie `#pragma once` oder das #include-Schutz-Idiom nicht in Headerdateien verwenden, die auf ein mehrmaliges Einschließen ausgelegt sind, indem Präprozessorsymbole zum Steuern ihrer Effekte verwendet werden. Ein Beispiel dieses Entwurfs finden Sie unter der \<assert.h > Headerdatei. Achten Sie auch darauf, Includepfade zu verwalten, um zu vermeiden, mehrere Pfade für eingeschlossene Dateien zu erstellen, was die multiple-include-Optimierung für #include-Schutz und `#pragma once` verhindern kann.  
+Achten Sie darauf, dass Sie nicht mit `#pragma once` oder `#include guard` Idiom in Headerdateien, die entwickelt wurden, enthalten mehrere Male, indem Präprozessorsymbole zum Steuern ihrer Effekte. Ein Beispiel dieser Entwurf, finden Sie unter den \<assert.h > Header-Datei. Achten Sie auch darauf zum Verwalten von Standardincludepfade, um zu vermeiden, erstellen mehrere Pfade für eingeschlossene Dateien, die zunichte machen, können die Multiple-include-Optimierung für `#include guard`s und `#pragma once`.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+ 
+[Pragma-Direktiven und das __Pragma-Schlüsselwort](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

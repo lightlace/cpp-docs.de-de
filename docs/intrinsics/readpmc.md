@@ -1,5 +1,5 @@
 ---
-title: __readpmc | Microsoft Docs
+title: __readpmc | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d98db19be60bd038965763a24b83ddd0016c9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5072f49728a4ea9b7a323d3837997dd3d767358
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333790"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42539829"
 ---
 # <a name="readpmc"></a>__readpmc
 **Microsoft-spezifisch**  
   
- Generiert die `rdpmc` -Anweisung, die den vom angegebenen Leistungsindikator liest `counter`.  
+ Generiert die `rdpmc` -Anweisung, die mit der Leistungsüberwachung anhand des Leistungsindikators liest `counter`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +40,7 @@ unsigned __int64 __readpmc(
   
 #### <a name="parameters"></a>Parameter  
  [in] `counter`  
- Der Leistungsindikator, zu lesen.  
+ Der Leistungsindikator zu lesen.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Der Wert des angegebenen Leistungsindikators.  
@@ -49,12 +49,12 @@ unsigned __int64 __readpmc(
   
 |Systemintern|Architektur|  
 |---------------|------------------|  
-|`__readpmc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readpmc`|x86, x64|  
   
  **Headerdatei** \<intrin.h >  
   
 ## <a name="remarks"></a>Hinweise  
- Diese systeminterne Funktion nur im Kernelmodus verfügbar ist, und die Routine ist nur als systeminterne Funktion verfügbar.  
+ Diese systeminterne Funktion ist im Kernel-Modus ist nur verfügbar, und die Routine ist nur als systeminterne Funktion verfügbar.  
   
 **Ende Microsoft-spezifisch**  
   

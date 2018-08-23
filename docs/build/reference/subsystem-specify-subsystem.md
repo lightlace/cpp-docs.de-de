@@ -1,5 +1,5 @@
 ---
-title: -SUBSYSTEM (Subsystem angeben) | Microsoft Docs
+title: -SUBSYSTEM (Subsystem angeben) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70d6f047cf18b8b768d40533e2acc6cb2f649327
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a40cf81d0b00123692c9ea8b0e2f3111fb914fbb
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379002"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571392"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Subsystem angeben)
 ```  
@@ -46,7 +46,7 @@ ms.locfileid: "32379002"
  Die EFI_*-Subsysteme. Weitere Informationen finden Sie in der EFI-Spezifikation. Siehe z. B. die Intel-Website. Die erforderliche Mindest- und Standardversion ist Version 1.0.  
   
  NATIVE  
- Kernelmodustreiber für Windows NT. Diese Option ist üblicherweise für Windows-Systemkomponenten reserviert. Wenn [/Driver: WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) angegeben ist, ist NATIVE lautet die Standardeinstellung.  
+ Kernelmodustreiber für Windows NT. Diese Option ist üblicherweise für Windows-Systemkomponenten reserviert. Wenn [/Driver: WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) angegeben ist, ist NATIVE der Standardwert ist.  
   
  POSIX  
  Anwendung, die mit dem POSIX-Subsystem unter Windows NT ausgeführt wird.  
@@ -67,10 +67,10 @@ ms.locfileid: "32379002"
 |Subsystem|Minimum|Standard|  
 |---------------|-------------|-------------|  
 |BOOT_APPLICATION|1.0|1.0|  
-|CONSOLE|5.01 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
-|WINDOWS|5.01 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
-|NATIVE (mit DRIVER:WDM)|1.00 (x86) 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM)|1.00 (x86) 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM)|  
-|NATIVE (ohne /DRIVER:WDM)|4.00 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|4.00 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
+|CONSOLE|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6,00 (X86, X64) 6.02 (ARM)|  
+|WINDOWS|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6,00 (X86, X64) 6.02 (ARM)|  
+|NATIVE (mit DRIVER:WDM)|1,00 (x 86) 1.10 (X64, ARM)|1,00 (x 86) 1.10 (X64, ARM)|  
+|NATIVE (ohne /DRIVER:WDM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|  
 |POSIX|1.0|19.90|  
 |EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|  
   
