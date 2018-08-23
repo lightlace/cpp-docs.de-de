@@ -17,54 +17,60 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9e5c4965ab8a013fdd52e6dfa51e74bfbf54ed73
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 326974e935608c9b41866e61e72b7a85fc8cb0b2
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651534"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598530"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper-Struktur
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-template <  
-   typename T  
->  
-struct DerefHelper;  
-  
-template <  
-   typename T  
->  
-struct DerefHelper<T*>;  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *T*  
- Ein Vorlagenparameter.  
-  
-## <a name="remarks"></a>Hinweise  
- Einen dereferenzierter Zeiger zum Darstellen der `T*` Template-Parameter.  
-  
- **DerefHelper** wie z. B. in einem Ausdruck verwendet wird: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-typedefs"></a>Öffentliche Typedefs  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|`DerefType`|Bezeichner für den Vorlagenparameter von dereferenziert `T*`.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `DerefHelper`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** async.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template <
+   typename T
+>
+struct DerefHelper;
+
+template <
+   typename T
+>
+struct DerefHelper<T*>;
+```
+
+### <a name="parameters"></a>Parameter
+
+*T*  
+Ein Vorlagenparameter.
+
+## <a name="remarks"></a>Hinweise
+
+Einen dereferenzierter Zeiger zum Darstellen der `T*` Template-Parameter.
+
+**DerefHelper** wie z. B. in einem Ausdruck verwendet wird: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.
+
+## <a name="members"></a>Member
+
+### <a name="public-typedefs"></a>Öffentliche Typedefs
+
+|Name|Beschreibung|
+|----------|-----------------|
+|`DerefType`|Bezeichner für den Vorlagenparameter von dereferenziert `T*`.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`DerefHelper`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** async.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

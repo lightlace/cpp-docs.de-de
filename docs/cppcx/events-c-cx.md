@@ -1,26 +1,26 @@
 ---
-title: Ereignisse (C + c++ / CX) | Microsoft Docs
+title: Ereignisse (C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98231f0803270a9e033529e163ff2cc23cdd64e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8465572cf5b921f56e357ae554ecdeaf9943b725
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089637"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42606375"
 ---
 # <a name="events-ccx"></a>Ereignisse (C++/CX)
-Ein Windows-Runtime Typ deklarieren, kann (die veröffentlichen, hat) Ereignisse, und Clientcode in der gleichen Komponente oder in anderen Komponenten kann diese Ereignisse abonnieren, indem Sie die Zuordnung von Methoden, die aufgerufen *Ereignishandler* mit dem Ereignis. Mehrere Ereignishandler können einem einzelnen Ereignis zugeordnet werden. Wenn das Veröffentlichungsobjekt das Ereignis auslöst, werden alle Ereignishandler aufgerufen. Auf diese Weise kann eine abonnierende Klasse eine beliebige geeignete benutzerdefinierte Aktion durchführen, wenn der Herausgeber das Ereignis auslöst. Ein Ereignis hat einen Delegattyp, der die Signatur angibt, die alle Ereignishandler verwenden, um das Ereignis zu abonnieren.  
+Eine Windows-Runtime Typ deklarieren, kann (das ist, zu veröffentlichen) Ereignisse und Clientcode in der gleichen Komponente oder in anderen Komponenten können auf diese Ereignisse abonnieren, indem Sie die Zuordnung von Methoden, die aufgerufen *Ereignishandler* mit dem Ereignis. Mehrere Ereignishandler können einem einzelnen Ereignis zugeordnet werden. Wenn das Veröffentlichungsobjekt das Ereignis auslöst, werden alle Ereignishandler aufgerufen. Auf diese Weise kann eine abonnierende Klasse eine beliebige geeignete benutzerdefinierte Aktion durchführen, wenn der Herausgeber das Ereignis auslöst. Ein Ereignis hat einen Delegattyp, der die Signatur angibt, die alle Ereignishandler verwenden, um das Ereignis zu abonnieren.  
   
 ## <a name="consuming-events-in-windows-components"></a>Verwenden von Ereignissen in den Windows-Komponenten  
- Viele Komponenten in Windows-Runtime machen Ereignisse verfügbar. Beispielsweise löst ein LightSensor-Objekt ein ReadingChanged-Ereignis aus, wenn der Sensor einen neuen Lumineszenzwert meldet. Wenn Sie ein LightSensor-Objekt im Programm verwenden, können Sie eine Methode definieren, die aufgerufen wird, wenn das ReadingChanged-Ereignis ausgelöst wird. Die Methode können Sie dies wünschen alle von Ihnen gewünschten Aktionen ausführen; die einzige Voraussetzung ist, dass die Signatur die Signatur des Delegaten, die Weitere Informationen zum Erstellen eines delegatereignishandlers übereinstimmen muss und zum Abonnieren eines Ereignisses finden Sie unter [Delegaten](../cppcx/delegates-c-cx.md).  
+ Viele Komponenten in der Windows-Runtime machen Ereignisse verfügbar. Beispielsweise löst ein LightSensor-Objekt ein ReadingChanged-Ereignis aus, wenn der Sensor einen neuen Lumineszenzwert meldet. Wenn Sie ein LightSensor-Objekt im Programm verwenden, können Sie eine Methode definieren, die aufgerufen wird, wenn das ReadingChanged-Ereignis ausgelöst wird. Die Methode möglich, was er tun soll; die einzige Voraussetzung ist, dass die Signatur die Signatur des Delegaten, die für Weitere Informationen zum Erstellen eines delegatereignishandlers übereinstimmen muss und Abonnieren eines Ereignisses finden Sie unter [Delegaten](../cppcx/delegates-c-cx.md).  
   
 ## <a name="creating-custom-events"></a>Erstellen von benutzerdefinierten Ereignissen  
   
@@ -61,5 +61,5 @@ Ein Windows-Runtime Typ deklarieren, kann (die veröffentlichen, hat) Ereignisse
 ## <a name="see-also"></a>Siehe auch  
  [Typsystem](../cppcx/type-system-c-cx.md)   
  [Delegaten](../cppcx/delegates-c-cx.md)   
- [Visual C++-Sprachreferenz](../cppcx/visual-c-language-reference-c-cx.md)   
+ [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)

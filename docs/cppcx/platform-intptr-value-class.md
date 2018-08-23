@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: IntPtr-Wertklasse | Microsoft Docs'
+title: 'Platform:: IntPtr-Wertklasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b54facc94be3f43b500e38371e0eba9e00d130a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a97d77f0b84366c83f09f6a6c72afe1bbb25dc6d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088153"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612128"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr-Wertklasse
 Stellt einen Zeiger oder ein Handle mit Vorzeichen dar, dessen Größe plattformspezifisch ist (32-Bit oder 64-Bit).  
@@ -43,9 +43,9 @@ public value struct IntPtr
 |[IntPtr::ToInt32](#toint32)|Konvertiert den aktuellen IntPtr in eine 32-Bit-Ganzzahl.|  
   
 ### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
+ **Unterstützter Client (Min.):** Windows 8  
   
- **Unterstützter Server:** Windows Server 2012  
+ **Unterstützter Server (Min.):** Windows Server 2012  
   
  **Namespace:** Platform  
   
@@ -104,4 +104,4 @@ int32 IntPtr::ToInt32();
   
   
 ## <a name="see-also"></a>Siehe auch  
- [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)
+ [Platform-namespace](../cppcx/platform-namespace-c-cx.md)

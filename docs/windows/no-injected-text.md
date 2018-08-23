@@ -17,43 +17,47 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc0dcba6597b6b8a3b37c240bf1c4a58f30b6b23
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e63b0b47dcc3f53ecd5af2d51505df844f66437a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020342"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599385"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
-Verhindert, dass den Compiler Einfügen von Code durch Verwendung des Attributs.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-[ no_injected_text(  
-   boolean  
-) ];  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *boolesche* (optional)  
- **"true"** ggf. kein Code eingefügt, **"false"** damit Code eingefügt werden kann. **"true"** ist die Standardeinstellung.  
-  
-## <a name="remarks"></a>Hinweise  
- Die häufigste Verwendung von der **No_injected_text** C++-Attribut ist, indem die [/FX](../build/reference/fx-merge-injected-code.md) Compileroption, die fügt die **No_injected_text** Attribut in der MRG-Datei.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|Überall|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Compilerattribute](../windows/compiler-attributes.md)   
+
+Verhindert, dass den Compiler Einfügen von Code durch Verwendung des Attributs.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[ no_injected_text(
+   boolean
+) ];
+```
+
+### <a name="parameters"></a>Parameter
+
+*boolesche* (optional)  
+**"true"** ggf. kein Code eingefügt, **"false"** damit Code eingefügt werden kann. **"true"** ist die Standardeinstellung.
+
+## <a name="remarks"></a>Hinweise
+
+Die häufigste Verwendung von der **No_injected_text** C++-Attribut ist, indem die [/FX](../build/reference/fx-merge-injected-code.md) Compileroption, die fügt die **No_injected_text** Attribut in der MRG-Datei.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|Überall|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Compilerattribute](../windows/compiler-attributes.md)  

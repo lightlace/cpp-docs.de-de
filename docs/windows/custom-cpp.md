@@ -17,55 +17,59 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c0f4f04adb9ddc847b1c22485d10512a9d684d0
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: cb5a3ebbf3ecf1454745d507fc2f2b6f792768ac
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651894"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600420"
 ---
 # <a name="custom-c"></a>custom (C++)
-Definiert die Metadaten für ein Objekt in der Typbibliothek.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-[ custom(  
-   uuid,   
-   value  
-) ];  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *uuid*  
- Eine eindeutige ID.  
-  
- *Wert*  
- Ein Wert, der in eine Variante platziert werden kann.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **benutzerdefinierte** C++-Attribut bewirkt, dass die Informationen in der Typbibliothek versetzt werden soll. Sie benötigen ein Tool, das den benutzerdefinierten Wert aus der Typbibliothek liest.  
-  
- Die **benutzerdefinierte** Attribut hat die gleiche Funktionalität wie die [benutzerdefinierte](http://msdn.microsoft.com/library/windows/desktop/aa366766) MIDL-Attribut.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|Nicht-COM- **Schnittstelle**, **Klasse**, **Enum**s, `idl_module` Methoden, die Schnittstellenmember, die Parameter für die Benutzeroberfläche, **Typedef**s, **Union**s, **Struktur**s|  
-|**Wiederholbar**|Ja|  
-|**Erforderliche Attribute**|**Co-Klasse** (wenn es sich um eine Klasse verwendet wird)|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [Eigenständige Attribute](../windows/stand-alone-attributes.md)   
- [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameterattribute](../windows/parameter-attributes.md)   
- [Methodenattribute](../windows/method-attributes.md)   
- [Klassenattribute](../windows/class-attributes.md)   
- [Schnittstellenattribut](../windows/interface-attributes.md)   
+
+Definiert die Metadaten für ein Objekt in der Typbibliothek.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[ custom(
+   uuid,
+   value
+) ];
+```
+
+### <a name="parameters"></a>Parameter
+
+*uuid*  
+Eine eindeutige ID.
+
+*Wert*  
+Ein Wert, der in eine Variante platziert werden kann.
+
+## <a name="remarks"></a>Hinweise
+
+Die **benutzerdefinierte** C++-Attribut bewirkt, dass die Informationen in der Typbibliothek versetzt werden soll. Sie benötigen ein Tool, das den benutzerdefinierten Wert aus der Typbibliothek liest.
+
+Die **benutzerdefinierte** Attribut hat die gleiche Funktionalität wie die [benutzerdefinierte](http://msdn.microsoft.com/library/windows/desktop/aa366766) MIDL-Attribut.
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|Nicht-COM- **Schnittstelle**, **Klasse**, **Enum**s, `idl_module` Methoden, die Schnittstellenmember, die Parameter für die Benutzeroberfläche, **Typedef**s, **Union**s, **Struktur**s|
+|**Wiederholbar**|Ja|
+|**Erforderliche Attribute**|**Co-Klasse** (wenn es sich um eine Klasse verwendet wird)|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[Eigenständige Attribute](../windows/stand-alone-attributes.md)  
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Parameterattribute](../windows/parameter-attributes.md)  
+[Methodenattribut](../windows/method-attributes.md)  
+[Klassenattribute](../windows/class-attributes.md)  
+[Schnittstellenattribut](../windows/interface-attributes.md)  

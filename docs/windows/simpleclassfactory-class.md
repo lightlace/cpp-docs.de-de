@@ -17,69 +17,75 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c490e21717e44ec3e772c01f84a0f5adb08471fd
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: deb100cfcbb8d2af14501b8b5cf90569a90c2d4d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012494"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600490"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory-Klasse
-Stellt einen grundlegenden Mechanismus zum Erstellen einer Basisklasse bereit.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-template<typename Base>  
-class SimpleClassFactory : public ClassFactory<>;  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *Basis*  
- Eine Basisklasse.  
-  
-## <a name="remarks"></a>Hinweise  
- Die Basisklasse muss einen Standardkonstruktor bereitstellen.  
-  
- Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit **SimpleClassFactory** mit der [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) Makro.  
-  
- `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[SimpleClassFactory::CreateInstance-Methode](../windows/simpleclassfactory-createinstance-method.md)|Erstellt eine Instanz der angegebenen Schnittstelle.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `I0`  
-  
- `ChainInterfaces`  
-  
- `I0`  
-  
- `RuntimeClassBase`  
-  
- `ImplementsHelper`  
-  
- `DontUseNewUseMake`  
-  
- `RuntimeClassFlags`  
-  
- `RuntimeClassBaseT`  
-  
- `RuntimeClass`  
-  
- `ClassFactory`  
-  
- `SimpleClassFactory`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)
+
+Stellt einen grundlegenden Mechanismus zum Erstellen einer Basisklasse bereit.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template<typename Base>
+class SimpleClassFactory : public ClassFactory<>;
+```
+
+### <a name="parameters"></a>Parameter
+
+*Basis*  
+Eine Basisklasse.
+
+## <a name="remarks"></a>Hinweise
+
+Die Basisklasse muss einen Standardkonstruktor bereitstellen.
+
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit **SimpleClassFactory** mit der [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) Makro.
+
+`ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
+
+## <a name="members"></a>Member
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[SimpleClassFactory::CreateInstance-Methode](../windows/simpleclassfactory-createinstance-method.md)|Erstellt eine Instanz der angegebenen Schnittstelle.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`I0`
+
+`ChainInterfaces`
+
+`I0`
+
+`RuntimeClassBase`
+
+`ImplementsHelper`
+
+`DontUseNewUseMake`
+
+`RuntimeClassFlags`
+
+`RuntimeClassBaseT`
+
+`RuntimeClass`
+
+`ClassFactory`
+
+`SimpleClassFactory`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

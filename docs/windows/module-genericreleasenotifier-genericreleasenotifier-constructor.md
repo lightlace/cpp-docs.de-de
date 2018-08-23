@@ -17,36 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5aa78562c934c41b2ff2ab7b381f6b2612426651
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 98bcc3d3fcaf7aea3b2632cacb1ff38eedb868b8
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014587"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612311"
 ---
 # <a name="modulegenericreleasenotifiergenericreleasenotifier-constructor"></a>Module::GenericReleaseNotifier::GenericReleaseNotifier-Konstruktor
-Initialisiert eine neue Instanz der dem **genericreleasenotifier** Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-GenericReleaseNotifier(  
-   T callback,   
-   bool release  
-) throw() : ReleaseNotifier(release), callback_(callback);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *Rückruf*  
- Ein Lambda, Funktionselement oder Zeiger auf Funktion-Ereignishandler, der mit dem Klammernoperator-Funktion aufgerufen werden kann (`()`).  
-  
- *release*  
- Geben Sie **"true"** aktivieren aufrufen, die zugrunde liegende [Modul:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) Methode geben Sie andernfalls **"false"**.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Module::GenericReleaseNotifier-Klasse](../windows/module-genericreleasenotifier-class.md)
+
+Initialisiert eine neue Instanz der dem **genericreleasenotifier** Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+GenericReleaseNotifier(
+   T callback,
+   bool release
+) throw() : ReleaseNotifier(release), callback_(callback);
+```
+
+### <a name="parameters"></a>Parameter
+
+*Rückruf*  
+Ein Lambda, Funktionselement oder Zeiger auf Funktion-Ereignishandler, der mit dem Klammernoperator-Funktion aufgerufen werden kann (`()`).
+
+*release*  
+Geben Sie **"true"** aktivieren aufrufen, die zugrunde liegende [Modul:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) Methode geben Sie andernfalls **"false"**.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Module::GenericReleaseNotifier-Klasse](../windows/module-genericreleasenotifier-class.md)

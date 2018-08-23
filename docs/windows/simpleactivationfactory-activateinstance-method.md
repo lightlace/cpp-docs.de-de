@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 260d7e2993bd92297167c23458d37ba80919306f
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: f83c98d35ce64ef51a15bccf0f33695fd266d0af
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013384"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609569"
 ---
 # <a name="simpleactivationfactoryactivateinstance-method"></a>SimpleActivationFactory::ActivateInstance-Methode
 
@@ -37,6 +37,7 @@ STDMETHOD( ActivateInstance )(
 ```
 
 ### <a name="parameters"></a>Parameter
+
 *ppvObject*  
 Wenn dieser Vorgang abgeschlossen ist, Zeiger auf eine Instanz des Objekts gemäß der `Base` Klassenvorlagenparameter.
 
@@ -55,4 +56,5 @@ Wenn `__WRL_STRICT__` wird definiert, ein Assert-Fehler wird ausgegeben, wenn di
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Siehe auch
- [SimpleActivationFactory-Klasse](../windows/simpleactivationfactory-class.md)
+
+[SimpleActivationFactory-Klasse](../windows/simpleactivationfactory-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::Map Klasse | Microsoft Docs
+title: Platform::Collections::Map-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
@@ -19,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6831369f6327b7cef38b1a4f15013f1e3ff4043
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093180"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608987"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map-Klasse
 
@@ -53,10 +53,10 @@ ref class Map sealed;
 Der Typ des Werts im Schlüssel-Wert-Paar.
 
 *C*  
-Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Map zu bestimmen. Standardmäßig [Std:: less\<K >](../standard-library/less-struct.md).
+Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Map zu bestimmen. In der Standardeinstellung [Std:: less\<K >](../standard-library/less-struct.md).
 
 *__is_valid_winrt_type()*  
-Eine vom Compiler generierten-Funktion, die den Typ des überprüft *K* und *V* und bietet eine benutzerfreundliche Fehlermeldung ausgibt, wenn der Typ in der Zuordnung gespeichert werden kann.
+Eine vom Compiler generierten-Funktion, die überprüft, den Typ des ob *K* und *V* und bietet eine benutzerfreundliche Fehlermeldung, wenn der Typ in der Zuordnung gespeichert werden kann.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -72,7 +72,7 @@ Zulässige Typen sind:
 
 - Öffentliche Enumerationsklasse
 
-Die Zuordnung ist im Grunde genommen ein Wrapper für [std::map](../standard-library/map-class.md). Es ist eine konkrete C++-Implementierung, der die [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408) und [IObservableMap](http://msdn.microsoft.com/library/windows/apps/br226050.aspx) Windows-Runtime-Schnittstellen auf Typen, die über öffentliche übergeben werden. Wenn Sie versuchen, einen `Platform::Collections::Map` -Typ in einem öffentlichen Rückgabewert oder Parameter zu verwenden, wird der Compilerfehler C3986 ausgelöst. Sie können das Problem beheben, durch den Typ des Parameters oder des Rückgabewerts Werts zu ändern [Windows::Foundation::Collections::IMap\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408).
+Die Zuordnung ist im Grunde genommen ein Wrapper für [std::map](../standard-library/map-class.md). Es ist eine konkrete C++-Implementierung, der die [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408) und [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) Windows-Runtime-Schnittstellen Typen, die über öffentliche übergeben werden. Wenn Sie versuchen, einen `Platform::Collections::Map` -Typ in einem öffentlichen Rückgabewert oder Parameter zu verwenden, wird der Compilerfehler C3986 ausgelöst. Sie können den Fehler beheben, ändern Sie den Typ des Parameters oder des Rückgabewerts Werts, der [Windows::Foundation::Collections::IMap\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408).
 
 Weitere Informationen finden Sie unter [Sammlungen](../cppcx/collections-c-cx.md).
 
@@ -141,11 +141,11 @@ Ein Iterator, der das erste Element in der Zuordnung angibt.
 
 ### <a name="remarks"></a>Hinweise
 
-Eine einfache Möglichkeit, den von First() zurückgegeben Iterator zu halten, den Rückgabewert einer Variablen zuzuweisen, die mit deklariert wird ist das **Auto** typableitungsschlüsselwort. Beispielsweise `auto x = myMap->First();`.
+Den Rückgabewert einer Variablen zuweisen, die mit deklariert ist eine bequeme Möglichkeit, den von First() zurückgegeben Iterator zu halten ist die **automatisch** typableitungs-Schlüsselwort. Beispielsweise `auto x = myMap->First();`.
 
 ## <a name="getview"></a>  Map:: GetView-Methode
 
-Gibt eine schreibgeschützte Ansicht der aktuellen Zuordnung zurück; d. h. eine [Platform::Collections::MapView Klasse](../cppcx/platform-collections-mapview-class.md), implementiert die [Windows::Foundation::Collections::IMapView\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) Schnittstelle.
+Gibt eine schreibgeschützte Ansicht der aktuellen Zuordnung zurück; d. h. eine [Platform::Collections::MapView Klasse](../cppcx/platform-collections-mapview-class.md), implementiert der [Windows::Foundation::Collections::IMapView\<K, V >] / uwp/api/Windows.Foundation.Collections.IMapView_K_V_) Schnittstelle.
 
 ### <a name="syntax"></a>Syntax
 
@@ -196,7 +196,7 @@ Der Wertteil des Schlüssel-Wert-Paars. Der Typ des *Wert* ist der Typname *V*.
 
 ### <a name="return-value"></a>Rückgabewert
 
-`true` Wenn der Schlüssel eines vorhandenen Elements in der aktuellen Map entspricht *Schlüssel* und der Wertteil dieses Elements wird festgelegt, um *Wert*. `false` Wenn kein vorhandenes Element in der aktuellen Map entspricht *Schlüssel* und *Schlüssel* und *Wert* -Parameter zu einem Schlüssel-Wert-Paar gemacht und anschließend zur aktuellen Map hinzugefügt werden.
+`true` Wenn der Schlüssel eines vorhandenen Elements in der aktuellen Zuordnung entspricht *Schlüssel* und der Wertteil dieses Elements auf *Wert*. `false` Wenn kein vorhandenes Element in der aktuellen Zuordnung entspricht *Schlüssel* und *Schlüssel* und *Wert* Parametern zu einem Schlüssel-Wert-Paar gemacht und dann zur aktuellen Map hinzugefügt werden.
 
 ## <a name="lookup"></a>  Map:: Lookup-Methode
 
@@ -215,11 +215,11 @@ Der zum Suchen eines in der Zuordnung vorhandenen Elements verwendete Schlüssel
 
 ### <a name="return-value"></a>Rückgabewert
 
-Der Wert, der zugeordnet ist die *Schlüssel*. Der Typ des Rückgabewerts ist der Typname *V*.
+Der Wert, der mit ein paar bildet die *Schlüssel*. Der Typ des Rückgabewerts ist der Typname *V*.
 
 ### <a name="remarks"></a>Hinweise
 
-Wenn der Schlüssel nicht vorhanden ist, wird eine [Platform:: outofboundsexception](../cppcx/platform-outofboundsexception-class.md) ausgelöst wird.
+Wenn der Schlüssel nicht vorhanden ist, wird eine [Platform:: outofboundsexception](../cppcx/platform-outofboundsexception-class.md) ausgelöst.
 
 ## <a name="ctor"></a>  Map:: Map-Konstruktor
 
@@ -247,9 +247,9 @@ Der Typname der aktuellen Map.
 Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Elementwerte als Sortierschlüssel vergleichen kann, um deren relative Reihenfolge in der Map zu bestimmen.
 
 *m*  
-Ein Verweis oder [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) zu einem `map Class` wird verwendet, um die aktuelle Map zu initialisieren.
+Ein Verweis oder [Lvalues und Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) zu einem `map Class` , wird verwendet, um die aktuelle Map zu initialisieren.
 
-*erste*  
+*Erste*  
 Der Eingabeiterator des ersten Elements in einem Bereich von Elementen, die verwendet werden, um die aktuelle Map zu initialisieren.
 
 *last*  
@@ -267,11 +267,11 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert
 
-Ein [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windows/apps/br206644.aspx) , enthält Informationen über das Objekt, das das Ereignis und die Art der entstandenen Änderung ausgelöst. Siehe auch [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) und [CollectionChange-Enumeration](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Ein [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , enthält Informationen über das Objekt, das ausgelöst wird, das Ereignis, sowie die Art der entstandenen Änderung darstellt. Siehe auch [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) und [CollectionChange-Enumeration](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
 
 ## <a name="net-framework-equivalent"></a>Entsprechung in .NET Framework
 
-Windows-Runtime-apps, die mithilfe von c# oder Visual Basic-Projekt IMap\<K, V > als IDictionary\<K, V >.
+Windows-Runtime-apps, die C#-Visual Basic oder-Projekt IMap\<K, V > als IDictionary\<K, V >.
 
 ## <a name="remove"></a>  Map:: Remove-Methode
 
@@ -304,5 +304,5 @@ Die Anzahl von Elementen in der Zuordnung.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Platform-Namespace](platform-namespace-c-cx.md)  
+[Plattform-Namespace](platform-namespace-c-cx.md)  
 [Erstellen von Windows-Runtime-Komponenten in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  

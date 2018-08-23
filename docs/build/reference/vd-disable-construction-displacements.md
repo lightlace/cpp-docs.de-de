@@ -1,5 +1,5 @@
 ---
-title: -vd (Konstruktionsverschiebungen deaktivieren) | Microsoft Docs
+title: -vd (Konstruktionsverschiebungen deaktivieren) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e983da4521db077235c2b879e0d1277b9505e94
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377596"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42605867"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (Konstruktionsverschiebungen deaktivieren)
 ## <a name="syntax"></a>Syntax  
@@ -42,30 +42,30 @@ ms.locfileid: "32377596"
   
 ## <a name="arguments"></a>Argumente  
  `0`  
- Unterdrückt die Vtordisp Konstruktor-/Destruktorverschiebung. Wählen Sie diese Option nur, wenn Sie sicher sind, dass alle Klassenkonstruktoren und -Destruktoren virtuelle Aufruf Funktionen virtuell.  
+ Unterdrückt die Vtordisp Konstruktor-/Destruktorverschiebung. Wählen Sie diese Option nur, wenn Sie sicher sind, rufen Sie alle-Klasse, Konstruktoren und Destruktoren virtuelle Funktionen virtuell.  
   
  `1`  
  Ermöglicht die Erstellung des ausgeblendeten Vtordisp Konstruktor-/Destruktorverschiebung. Diese Option ist die Standardeinstellung.  
   
  `2`  
- Ermöglicht Ihnen die Verwendung [Dynamic_cast Operator](../../cpp/dynamic-cast-operator.md) für ein Objekt erstellt wird. Beispiel: eine Dynamic_cast von einer virtuellen Basisklasse in eine abgeleitete Klasse.  
+ Können Sie mit [Dynamic_cast-Operator](../../cpp/dynamic-cast-operator.md) für ein Objekt erstellt wird. Beispiel: ein Dynamic_cast von einer virtuellen Basisklasse für eine abgeleitete Klasse.  
   
- **/ vd2** Fügt ein Vtordisp-Feld hinzu, wenn Sie eine virtuelle Basisklasse mit virtuellen Funktionen haben. **/ vd1** sollten ausreichen. Im häufigsten Fall, in dem **/vd2** ist erforderlich, ist die einzige virtuelle Funktion in der virtuellen Basisklasse ein Destruktor.  
+ **"/ vd2"** Fügt ein Vtordisp-Feld hinzu, wenn Sie eine virtuelle Basisklasse mit virtuellen Funktionen verfügen. **/ vd1** sollten ausreichend sein. Die am häufigsten verwendeten Fall, in dem **"/ vd2"** ist erforderlich, ist die einzige virtuelle Funktion in der virtuellen Basisklasse einen Destruktor.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Optionen gelten nur für C++-Code, der virtuelle Basen verwendet.  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] implementiert die Unterstützung von C++ zur Erstellung Verschiebung in Situationen, in denen virtueller Vererbung verwendet wird. Konstruktionsverschiebungen lösen des Problems erstellt, wenn eine virtuelle Funktion, die in eine virtuelle Basisklasse deklariert und in einer abgeleiteten Klasse überschrieben, während der Erstellung einer weiteren abgeleiteten Klasse von einem Konstruktor aufgerufen.  
+ Visual C++ implementiert den C++-Erstellung Verschiebung-Unterstützung in Situationen, in dem virtuelle Vererbung verwendet wird. Konstruktionsverschiebungen das Problem erstellt, wenn eine virtuelle Funktion, in eine virtuelle Basisklasse deklariert und in einer abgeleiteten Klasse überschrieben, während der Erstellung einer weiteren abgeleiteten Klasse von einem Konstruktor aufgerufen.  
   
- Das Problem besteht darin, dass die virtuelle Funktion eine falsche weitergeleitet werden möglicherweise `this` daher Zeiger von Diskrepanzen zwischen der Verschiebungen mit der virtuellen Basen, einer Klasse und die Verschiebungen abgeleiteten Klassen. Die Lösung bietet eine einzelne Konstruktion Verschiebung Anpassung, die ein Vtordisp-Feld für jede virtuelle Basis einer Klasse aufgerufen.  
+ Das Problem besteht darin, dass die virtuelle Funktion eines falschen übergeben werden möglicherweise `this` daher Zeiger von Diskrepanzen zwischen der Verschiebungen mit der virtuellen Basisklassen, einer Klasse und die Verschiebungen abgeleiteten Klassen. Die Lösung bietet eine einzelne Konstruktion Verschiebung Anpassung, die ein Vtordisp-Feld, für jede virtuelle Basis einer Klasse aufgerufen.  
   
- Standardmäßig werden Vtordisp-Felder eingeführt, wenn der Code eine benutzerdefinierte Konstruktoren und Destruktoren definiert und auch virtuelle Funktionen des virtuellen Basen überschreibt.  
+ Vtordisp-Felder werden standardmäßig eingeführt, wenn der Code eine benutzerdefinierte Konstruktoren und Destruktoren definiert und überschreibt auch die virtuelle Funktionen von virtuellen Basen.  
   
- Diese Optionen beeinflussen ganze Quelldateien. Verwendung [Vtordisp](../../preprocessor/vtordisp.md) unterdrücken und dann wieder Vtordisp-Felder auf Basis einer Klasse von Klasse zu aktivieren.  
+ Diese Optionen wirken sich auf ganze Quelldateien. Verwendung [Vtordisp](../../preprocessor/vtordisp.md) unterdrücken und dann wieder Vtordisp-Felder auf Basis einer Klasse-von-Klasse zu aktivieren.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).  
   
 2.  Klicken Sie auf den Ordner **C/C++** .  
   

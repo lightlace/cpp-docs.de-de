@@ -17,36 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e67ecd6d5b4968af94ff1a82ad8be24e5b816298
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: bcad153145432997841753828b3b01b728ff365d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40014246"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608172"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared-Methode
-Versucht, für eine **SRWLock** Objekt im freigegebenen Modus für den aktuellen oder angegebenen **SRWLock** Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-WRL_NOTHROW SyncLockShared TryLockShared();  
-WRL_NOTHROW static SyncLockShared TryLockShared(  
-   _In_ SRWLOCK* lock  
-);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *lock*  
- Zeiger auf ein **SRWLock** Objekt.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Bei erfolgreicher Ausführung einen **SRWLock** Objekt im Modus für gemeinsame Nutzung und der aufrufende Thread übernimmt den Besitz der Sperre. Andernfalls ein **SRWLock** Objekt, dessen Status ungültig ist.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [SRWLock-Klasse](../windows/srwlock-class.md)
+
+Versucht, für eine **SRWLock** Objekt im freigegebenen Modus für den aktuellen oder angegebenen **SRWLock** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+WRL_NOTHROW SyncLockShared TryLockShared();
+WRL_NOTHROW static SyncLockShared TryLockShared(
+   _In_ SRWLOCK* lock
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*lock*  
+Zeiger auf ein **SRWLock** Objekt.
+
+## <a name="return-value"></a>Rückgabewert
+
+Bei erfolgreicher Ausführung einen **SRWLock** Objekt im Modus für gemeinsame Nutzung und der aufrufende Thread übernimmt den Besitz der Sperre. Andernfalls ein **SRWLock** Objekt, dessen Status ungültig ist.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[SRWLock-Klasse](../windows/srwlock-class.md)

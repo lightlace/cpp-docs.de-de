@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: ValueType-Klasse | Microsoft Docs'
+title: 'Platform:: ValueType-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1994aa6445c67bae138a51f1d3eebb2a54f9b17d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 12766e81ddd90b257830b6bf5adefd2562781d9e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088205"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611046"
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType-Klasse
 Die Basisklasse für Instanzen von Werttypen.  
@@ -41,15 +41,15 @@ public ref class ValueType : Object
  Die ValueType-Klasse wird zum Erstellen von Werttypen verwendet. „ValueType“ ist von „Object“ abgeleitet, die über Basismember verfügt. Der Compiler trennt jedoch diese Basismember von den Werttypen, die aus der ValueType-Klasse abgeleitet sind. Der Compiler fügt die Basismember wieder an, wenn ein Werttyp mittels Boxing konvertiert wird.  
   
 ### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
+ **Unterstützter Client (Min.):** Windows 8  
   
- **Unterstützter Server:** Windows Server 2012  
+ **Unterstützter Server (Min.):** Windows Server 2012  
   
  **Namespace:** Platform  
   
  **Metadaten:** platform.winmd  
 
-## <a name="tostring"></a> ValueType::ToString-Methode
+## <a name="tostring"></a> ValueType:: ToString-Methode
 Gibt eine Zeichenfolgendarstellung des Objekts zurück.  
   
 ### <a name="syntax"></a>Syntax  
@@ -62,4 +62,4 @@ Platform::String ToString();
  Ein Platform:: String-Wert, der den Wert darstellt.  
     
 ## <a name="see-also"></a>Siehe auch  
- [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)
+ [Platform-namespace](../cppcx/platform-namespace-c-cx.md)

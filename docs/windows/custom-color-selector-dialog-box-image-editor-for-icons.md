@@ -18,47 +18,50 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2d32083194efc81fdfe2be1c38eec4ce9ce175d
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 254734bec6649c7181e67d4d2330493b0f22197b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642811"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609436"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Benutzerdefinierte Farbauswahl (Dialogfeld) (Bildbearbeitung für Symbole)
-Dieses Dialogfeld können Sie die Farben anpassen, die Sie für Ihr Image verwenden. Weitere Informationen finden Sie unter [anpassen oder Ändern von Farben](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
-  
- **Farbverlauf Farbanzeige**  
- Ändert die Werte einer ausgewählten Farbe. Positionieren Sie das Fadenkreuz, auf die Farbe, die Sie ändern möchten. Klicken Sie dann den Schieberegler nach oben oder unten, um Änderungen der Helligkeit oder RGB-Werte der Farbe.  
-  
- **Helligkeits-Symbolleiste**  
- Legt die Helligkeit für die Farbe, die Sie, in Auswählen der **Farbverlauf Farbanzeige** Feld. Klicken Sie auf, und ziehen Sie die weiße Pfeile, um die Leiste für größere Helligkeit oder nach unten bei kleiner. Beachten Sie, dass die **Farbe** Feld zeigt die Farbe, die Sie ausgewählt haben und die Auswirkungen der die Helligkeit, die Sie festlegen.  
-  
- **Farbe**  
- Listet den Farbton (Farbwert für rad) der Farbe, die Sie definieren. Werte zwischen 0 und 240, in denen 0 ist rot, 60 ist gelb gekennzeichnet, 120 ist Grün, 180 beträgt Cyan, Magenta "200" lautet und 240 ist Blau.  
-  
- **Hue**  
- Listet den Farbton (Farbwert für rad) der Farbe, die Sie definieren. Werte zwischen 0 und 240, in denen 0 ist rot, 60 ist gelb gekennzeichnet, 120 ist Grün, 180 beträgt Cyan, Magenta "200" lautet und 240 ist Blau.  
-  
- **Sätt.:**  
- Gibt an, der Sättigungswert der Farbe, die Sie definieren. Die Sättigung ist die Menge des in einem angegebenen Farbton. Werte zwischen 0 und 240.  
-  
- **Hell.:**  
- Listet die Brillanz (Helligkeit) der Farbe, die Sie definieren. Werte zwischen 0 und 240.  
-  
- **Rot**  
- Gibt den Wert der Farbe, die Sie definieren. Werte zwischen 0 und 255 liegen.  
-  
- **Grün**  
- Gibt den grünen Wert der Farbe, die Sie definieren. Werte zwischen 0 und 255 liegen.  
-  
- **Blau**  
- Gibt den blauen Wert der Farbe, die Sie definieren. Werte zwischen 0 und 255 liegen.  
-  
-## <a name="requirements"></a>Anforderungen  
- Keiner  
-  
-## <a name="see-also"></a>Siehe auch  
- [Menü "Bild"](../windows/image-menu-image-editor-for-icons.md)   
- [Anpassen oder Ändern von Farben](../windows/customizing-or-changing-colors-image-editor-for-icons.md)   
- [Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md)
+
+Dieses Dialogfeld können Sie die Farben anpassen, die Sie für Ihr Image verwenden. Weitere Informationen finden Sie unter [anpassen oder Ändern von Farben](../windows/customizing-or-changing-colors-image-editor-for-icons.md).
+
+**Farbverlauf Farbanzeige**  
+Ändert die Werte einer ausgewählten Farbe. Positionieren Sie das Fadenkreuz, auf die Farbe, die Sie ändern möchten. Klicken Sie dann den Schieberegler nach oben oder unten, um Änderungen der Helligkeit oder RGB-Werte der Farbe.
+
+**Helligkeits-Symbolleiste**  
+Legt die Helligkeit für die Farbe, die Sie, in Auswählen der **Farbverlauf Farbanzeige** Feld. Klicken Sie auf, und ziehen Sie die weiße Pfeile, um die Leiste für größere Helligkeit oder nach unten bei kleiner. Beachten Sie, dass die **Farbe** Feld zeigt die Farbe, die Sie ausgewählt haben und die Auswirkungen der die Helligkeit, die Sie festlegen.
+
+**Farbe**  
+Listet den Farbton (Farbwert für rad) der Farbe, die Sie definieren. Werte zwischen 0 und 240, in denen 0 ist rot, 60 ist gelb gekennzeichnet, 120 ist Grün, 180 beträgt Cyan, Magenta "200" lautet und 240 ist Blau.
+
+**Hue**  
+Listet den Farbton (Farbwert für rad) der Farbe, die Sie definieren. Werte zwischen 0 und 240, in denen 0 ist rot, 60 ist gelb gekennzeichnet, 120 ist Grün, 180 beträgt Cyan, Magenta "200" lautet und 240 ist Blau.
+
+**Sätt.:**  
+Gibt an, der Sättigungswert der Farbe, die Sie definieren. Die Sättigung ist die Menge des in einem angegebenen Farbton. Werte zwischen 0 und 240.
+
+**Hell.:**  
+Listet die Brillanz (Helligkeit) der Farbe, die Sie definieren. Werte zwischen 0 und 240.
+
+**Rot**  
+Gibt den Wert der Farbe, die Sie definieren. Werte zwischen 0 und 255 liegen.
+
+**Grün**  
+Gibt den grünen Wert der Farbe, die Sie definieren. Werte zwischen 0 und 255 liegen.
+
+**Blau**  
+Gibt den blauen Wert der Farbe, die Sie definieren. Werte zwischen 0 und 255 liegen.
+
+## <a name="requirements"></a>Anforderungen
+
+Keiner
+
+## <a name="see-also"></a>Siehe auch
+
+[Menü "Bild"](../windows/image-menu-image-editor-for-icons.md)  
+[Anpassen oder Ändern von Farben](../windows/customizing-or-changing-colors-image-editor-for-icons.md)  
+[Fenster "Farben"](../windows/colors-window-image-editor-for-icons.md)

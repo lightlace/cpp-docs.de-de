@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::UnorderedMapView Klasse | Microsoft Docs
+title: Platform::Collections::UnorderedMapView-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -7,16 +7,16 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a2d8668f0ed5d58ce3b8028fb02d572bb04f8bc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092676"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613573"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView-Klasse
 Stellt eine schreibgeschützte Ansicht einer *Zuordnung*dar, die eine Auflistung von Schlüssel-Wert-Paaren ist.  
@@ -39,10 +39,10 @@ ref class UnorderedMapView sealed;
  Der Typ des Werts im Schlüssel-Wert-Paar.  
   
  `C`  
- Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Schlüsselwerte vergleichen kann, um deren Gleichzeit zu bestimmen. Standardmäßig [Std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
+ Ein Typ, der ein Funktionsobjekt bereitstellt, das zwei Schlüsselwerte vergleichen kann, um deren Gleichzeit zu bestimmen. In der Standardeinstellung [Std:: equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Hinweise  
- UnorderedMapView ist eine konkrete C++ Implementierung der [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) Schnittstelle, die über die anwendungsbinärdateischnittstelle (ABI) übergeben wird. Weitere Informationen finden Sie unter [Auflistungen (C++/CX)](../cppcx/collections-c-cx.md).  
+ UnorderedMapView ist eine konkrete C++ Implementierung der [Windows::Foundation::Collections::IMapView\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) -Schnittstelle, die über die anwendungsbinärdateischnittstelle (ABI) übergeben wird. Weitere Informationen finden Sie unter [Auflistungen (C++/CX)](../cppcx/collections-c-cx.md).  
   
 ### <a name="members"></a>Member  
   
@@ -71,7 +71,7 @@ ref class UnorderedMapView sealed;
  **Namespace:** Platform::Collections  
 
 ## <a name="first"></a>  UnorderedMapView::First-Methode
-Gibt einen Iterator, der angibt, das erste [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) Element in der ungeordneten Zuordnung.  
+Gibt einen Iterator, der angibt, die erste [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) Element in der ungeordneten Zuordnung.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -85,7 +85,7 @@ virtual Windows::Foundation::Collections::IIterator<
  Ein Iterator, der das erste Element in der Kartenansicht angibt.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine einfache Möglichkeit, den von First() zurückgegeben Iterator zu halten, den Rückgabewert einer Variablen zuzuweisen, die mit deklariert wird ist das **Auto** typableitungsschlüsselwort. Beispielsweise `auto x = myMapView->First();`.  
+ Den Rückgabewert einer Variablen zuweisen, die mit deklariert ist eine bequeme Möglichkeit, den von First() zurückgegeben Iterator zu halten ist die **automatisch** typableitungs-Schlüsselwort. Beispielsweise `auto x = myMapView->First();`.  
   
 
 

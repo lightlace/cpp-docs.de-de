@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: stringreference-Klasse | Microsoft Docs'
+title: 'Platform:: stringreference-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -13,16 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56f7c6b2c7699d7be96309a6ab7f060e48838475
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33097509"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609662"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference-Klasse
 Ein Optimierungstyp, den Sie verwenden können, um Zeichenfolgendaten in `Platform::String^` Eingabeparametern mit minimalem Kopiervorgängen weitere Methoden zu übergeben.  
@@ -60,16 +60,16 @@ class StringReference
 |[StringReference::operator()](#operator-call)|Konvertiert ein `StringReference` -Element in ein `Platform::String^`-Element.|  
   
 ### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
+ **Unterstützter Client (Min.):** Windows 8  
   
- **Unterstützter Server:** Windows Server 2012  
+ **Unterstützter Server (Min.):** Windows Server 2012  
   
  **Namespace:** Platform  
   
  **Header:** vccorlib.h  
 
 ## <a name="data"></a>  Stringreference:: Data-Methode
-Gibt den Inhalt dieses `StringReference` als ein Array von char16-Werten.  
+Gibt den Inhalt dieses `StringReference` als ein Array von char16-Wertearray.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -195,7 +195,7 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg)
  Die Anzahl von Elementen in `__strArg`.  
   
 ### <a name="remarks"></a>Hinweise  
- Die erste Version dieses Konstruktors ist der Standardkonstruktor. Die zweite Version initialisiert eine neue `StringReference`-Instanzklasse aus dem Objekt, das durch den `__fstrArg`-Parameter spezifiziert wird. Die dritten und vierten Überladungen initialisieren eine neue `StringReference` Instanz aus einem Array von char16-Werten. char16 stellt ein 16-Bit-UNICODE-Textzeichen dar.  
+ Die erste Version dieses Konstruktors ist der Standardkonstruktor. Die zweite Version initialisiert eine neue `StringReference`-Instanzklasse aus dem Objekt, das durch den `__fstrArg`-Parameter spezifiziert wird. Die dritten und vierten Überladungen initialisieren eine neue `StringReference` Instanz aus einem Array von char16-Wertearray. char16 stellt ein 16-Bit-UNICODE-Textzeichen dar.  
   
 
 

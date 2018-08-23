@@ -1,25 +1,25 @@
 ---
-title: Abrufen von Zeigern auf Datenpuffer (C + c++ / CX) | Microsoft Docs
+title: Abrufen von Zeigern auf Datenpuffer (C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42f363cd3af602685890cb8957cf9978c88602a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87b95044c3a0b874d155b227db736c5e4b81f1b1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090548"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613029"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Abrufen von Zeigern auf Datenpuffer (C++/CX)
 In Windows Runtime bietet die [Windows::Storage::Streams::IBuffer](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) -Schnittstelle ein sprachneutrale, streambasierte Möglichkeit zum Zugriff auf Datenpuffer. In C++ können Sie einen Rohdatenzeiger auf das zugrunde liegende Bytearray abrufen, indem Sie die IBufferByteAccess-Schnittstelle der Windows Runtime-Bibliothek verwenden, die in robuffer.h definiert ist. Wenn Sie diesen Ansatz verwenden, können Sie das Bytearray lokal ändern, ohne dass unnötige Kopien der Daten erstellt werden müssen.  
   
- Im folgenden Diagramm ist ein XAML-Imageelement dargestellt, dessen Quelle eine [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx)ist. Eine Client-App, die in einer beliebigen Sprache geschrieben ist, kann einen Verweis auf `WriteableBitmap` an den C++-Code übergeben. Dann kann C++ mit diesem Verweis zum zugrunde liegenden Puffer gelangen. In einer universellen Windows-Plattform-app, die in C++ geschrieben ist, können Sie die Funktion im folgenden Beispiel direkt im Quellcode verwenden, ohne das Verpacken in einer Windows-Runtime-Komponente.  
+ Im folgenden Diagramm ist ein XAML-Imageelement dargestellt, dessen Quelle eine [Windows::UI::Xaml::Media::Imaging WriteableBitmap](http://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx)ist. Eine Client-App, die in einer beliebigen Sprache geschrieben ist, kann einen Verweis auf `WriteableBitmap` an den C++-Code übergeben. Dann kann C++ mit diesem Verweis zum zugrunde liegenden Puffer gelangen. In einer universellen Windows-Plattform-app, die in C++ geschrieben ist, können Sie die Funktion im folgenden Beispiel direkt im Quellcode verwenden, ohne die in einer Windows-Runtime-Komponente verpacken.  
   
  ![C&#43; &#43; Code direkt auf Pixeldaten zugreift](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
   
@@ -56,11 +56,11 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 ```  
   
 ## <a name="complete-example"></a>Vollständiges Beispiel  
- Die folgenden Schritte zeigen, wie eine C#-Uwp-app erstellt wird, übergibt ein `WriteableBitmap` an eine C++-Windows-Runtime-Komponenten-DLL. Der C++-Code erhält einen Zeiger auf den Pixelpuffer und führt eine einfache direkte Änderung an dem Bild durch. Alternativ können Sie die Client-App in Visual Basic, in JavaScript oder in C++ anstelle von C# erstellen. Wenn Sie C++ verwenden, benötigen Sie die Komponenten-DLL. Sie können diese Methoden direkt der MainPage-Klasse oder einer beliebigen anderen Klasse hinzufügen, die Sie definieren.  
+ Die folgenden Schritte zeigen, wie Sie eine C#-universelle Windows Plattform-app erstellt wird, übergibt ein `WriteableBitmap` eine C++-Windows-Runtime-Komponenten-DLL. Der C++-Code erhält einen Zeiger auf den Pixelpuffer und führt eine einfache direkte Änderung an dem Bild durch. Alternativ können Sie die Client-App in Visual Basic, in JavaScript oder in C++ anstelle von C# erstellen. Wenn Sie C++ verwenden, benötigen Sie die Komponenten-DLL. Sie können diese Methoden direkt der MainPage-Klasse oder einer beliebigen anderen Klasse hinzufügen, die Sie definieren.  
   
 #### <a name="create-the-client"></a>Erstellen der Clientanwendung  
   
-1.  Verwenden Sie die Vorlage der leeren app-Projekt zum Erstellen einer C#-Uwp-app.  
+1.  Verwenden Sie die Vorlage der leeren app-Projekt zum Erstellen einer C#-universelle Windows Plattform-app.  
   
 2.  In MainPage.xaml  
   
@@ -134,7 +134,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
   
 #### <a name="create-the-c-component"></a>Erstellen der C++-Komponente  
   
-1.  Der vorhandenen Projektmappe eine neue C++-Windows-Runtime-Komponente hinzu, und nennen Sie sie `ImageManipCPP`. Fügen Sie im C#-Projekt einen Verweis darauf hinzu, indem Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf dieses Projekt klicken und erst **Hinzufügen**dann **Verweis**auswählen.  
+1.  Fügen Sie der vorhandenen Projektmappe eine neue C++-Windows-Runtime-Komponente hinzu, und nennen Sie sie `ImageManipCPP`. Fügen Sie im C#-Projekt einen Verweis darauf hinzu, indem Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf dieses Projekt klicken und erst **Hinzufügen**dann **Verweis**auswählen.  
   
 2.  In Class1.h  
   

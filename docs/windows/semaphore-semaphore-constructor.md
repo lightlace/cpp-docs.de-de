@@ -17,36 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13c0ded165e7c1510f0112d9b3b9e93f2e356775
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a585f052c42453f0eb9fe8a39a21a5561d4b00c3
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015597"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598959"
 ---
 # <a name="semaphoresemaphore-constructor"></a>Semaphore::Semaphore-Konstruktor
-Initialisiert eine neue Instanz der dem **Semaphor** Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-explicit Semaphore(  
-   HANDLE h  
-);  
-  
-WRL_NOTHROW Semaphore(  
-   _Inout_ Semaphore&& h  
-);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *h*  
- Ein Handle oder einen Rvalue-Verweis auf eine **Semaphor** Objekt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers
- 
- ## <a name="see-also"></a>Siehe auch
- [Semaphore-Klasse](../windows/semaphore-class.md)
+
+Initialisiert eine neue Instanz der dem **Semaphor** Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+explicit Semaphore(
+   HANDLE h
+);
+
+WRL_NOTHROW Semaphore(
+   _Inout_ Semaphore&& h
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*h*  
+Ein Handle oder einen Rvalue-Verweis auf eine **Semaphor** Objekt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+[Semaphore-Klasse](../windows/semaphore-class.md)

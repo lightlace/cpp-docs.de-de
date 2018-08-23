@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2214067aae84d1c6aae0a93cf008463829fafda4
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886049"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609498"
 ---
 # <a name="cstringt-class"></a>CStringT-Klasse
 Diese Klasse stellt eine `CStringT` Objekt.  
@@ -298,9 +298,9 @@ BSTR AllocSysString() const;
  In MFC-Programmen eine [CMemoryException-Klasse](../../mfc/reference/cmemoryexception-class.md) wird ausgelöst, wenn nicht genügend Arbeitsspeicher vorhanden ist. ATL-Programme eine [CAtlException](../../atl/reference/catlexception-class.md) ausgelöst. Diese Funktion wird normalerweise verwendet, um die Zeichenfolgen für die Automatisierung zurückzugeben.  
   
 
- Häufig, wenn diese Zeichenfolge an eine COM-Funktion übergeben wird als [in] Parameter, wird dadurch muss der Aufrufer die Zeichenfolge frei. Dies kann erfolgen mithilfe von [SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx), wie im Windows SDK beschrieben. Weitere Informationen finden Sie unter [zuweisen und Freigeben von Arbeitsspeicher für einen BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).  
+ Häufig, wenn diese Zeichenfolge an eine COM-Funktion übergeben wird als [in] Parameter, wird dadurch muss der Aufrufer die Zeichenfolge frei. Dies kann erfolgen mithilfe von [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), wie im Windows SDK beschrieben. Weitere Informationen finden Sie unter [zuweisen und Freigeben von Arbeitsspeicher für einen BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).  
   
- Weitere Informationen zu OLE-Allocation-Funktionen in Windows finden Sie unter [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx) im Windows SDK.  
+ Weitere Informationen zu OLE-Allocation-Funktionen in Windows finden Sie unter [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) im Windows SDK.  
 
   
 ### <a name="example"></a>Beispiel  
@@ -552,7 +552,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 - `CStringT`( `const unsigned char*` `psz` ): Ermöglicht das Erstellen einer `CStringT` von einem Zeiger auf **unsigned Char**.  
   
 > [!NOTE]
->  Definieren Sie das Makro _CSTRING_DISABLE_NARROW_WIDE_CONVERSION deaktivieren impliziter zeichenfolgenkonvertierung zwischen [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] und [!INCLUDE[TLA#tla_unicode](../../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] Zeichenfolgen. Das Makro schließt von Kompilierung-Konstruktoren, die Unterstützung der Konvertierung.  
+>  Definieren Sie das Makro _CSTRING_DISABLE_NARROW_WIDE_CONVERSION implizite zeichenfolgenkonvertierung zwischen ANSI- und Unicode-Zeichenfolgen zu deaktivieren. Das Makro schließt von Kompilierung-Konstruktoren, die Unterstützung der Konvertierung.  
   
  Beachten Sie, dass die *StrSrc* Parameter kann es sich um eine `CStringT` oder `CThisSimpleString` Objekt. Für `CStringT`, gehen Sie den Standard-Instanziierungen (`CString`, `CStringA`, oder `CStringW`); `CThisSimpleString`, verwenden Sie eine **dies** Zeiger. `CThisSimpleString` deklariert eine Instanz der [CSimpleStringT-Klasse](../../atl-mfc-shared/reference/csimplestringt-class.md), d.h. eine kleinere-Klasse mit weniger integrierter Funktionen als die `CStringT` Klasse.  
   

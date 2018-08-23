@@ -16,23 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c0f6240ae35971d9f8f9d69d1985330de6206fe
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: bf80c1cae57b46b1de57b8f1d2adf62df1a89b81
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40010846"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611766"
 ---
 # <a name="moving-a-toolbar-button"></a>Verschieben einer Symbolleisten-Schaltfläche
-### <a name="to-move-a-toolbar-button"></a>Verschieben eine Symbolleisten-Schaltfläche  
-  
-1.  In der **Symbolleiste anzeigen** Bereich, ziehen Sie die Schaltfläche, die Sie auf der Symbolleiste am neuen Speicherort verschieben möchten.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Anforderungen  
- MFC oder ATL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Erstellen, verschieben und Bearbeiten von Symbolleistenschaltflächen](../windows/creating-moving-and-editing-toolbar-buttons.md)   
- [Symbolleisten-Editor](../windows/toolbar-editor.md)
+
+### <a name="to-move-a-toolbar-button"></a>Verschieben eine Symbolleisten-Schaltfläche
+
+1. In der **Symbolleiste anzeigen** Bereich, ziehen Sie die Schaltfläche, die Sie auf der Symbolleiste am neuen Speicherort verschieben möchten.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+MFC oder ATL
+
+## <a name="see-also"></a>Siehe auch
+
+[Erstellen, Verschieben und Bearbeiten von Schaltflächen der Symbolleiste](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Symbolleisten-Editor](../windows/toolbar-editor.md)

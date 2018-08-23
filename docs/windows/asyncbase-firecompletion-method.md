@@ -17,33 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 199d84afe198c4fc41808144105ea704822aa00a
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 19b796b1fbc618bb909b186aa86d3c893c8536c5
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39646606"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600255"
 ---
 # <a name="asyncbasefirecompletion-method"></a>AsyncBase::FireCompletion-Methode
-Ruft den Ereignishandler für den Abschluss, oder setzt den internen Status-Delegaten.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-void FireCompletion(  
-   void  
-) override;  
-  
-virtual void FireCompletion();  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Die erste Version des **FireCompletion()** der Delegatvariablen internen Status zurückgesetzt. Die zweite Version wird der Abschluss-Ereignishandler aufgerufen, wenn der asynchrone Vorgang abgeschlossen ist.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [AsyncBase-Klasse](../windows/asyncbase-class.md)
+
+Ruft den Ereignishandler für den Abschluss, oder setzt den internen Status-Delegaten.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+void FireCompletion(
+   void
+) override;
+
+virtual void FireCompletion();
+```
+
+## <a name="remarks"></a>Hinweise
+
+Die erste Version des **FireCompletion()** der Delegatvariablen internen Status zurückgesetzt. Die zweite Version wird der Abschluss-Ereignishandler aufgerufen, wenn der asynchrone Vorgang abgeschlossen ist.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[AsyncBase-Klasse](../windows/asyncbase-class.md)

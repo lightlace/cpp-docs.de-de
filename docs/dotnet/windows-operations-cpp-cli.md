@@ -54,17 +54,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7a303e80b58207e555dbd9067982ee1e2c506bb3
-ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
+ms.openlocfilehash: 0f9566fb6e3117b10d0d6f4a2bccbe56fe33a28a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39110020"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42609348"
 ---
 # <a name="windows-operations-ccli"></a>Windows-Vorgänge (C++/CLI)
-Veranschaulicht verschiedene Windows-spezifische Aufgaben mit der [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+Veranschaulicht verschiedene Windows-spezifische Aufgaben, die mit dem Windows SDK.  
   
- In den folgenden Themen veranschaulichen die verschiedenen Windows-Operationen mit den [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] mithilfe von Visual C++.  
+ In den folgenden Themen veranschaulichen die verschiedenen Windows-Operationen mit dem Windows SDK, die mit Visual C++.  
 
 ## <a name="determine_shutdown"></a> Bestimmt, ob das Herunterfahren begonnen hat
 Im folgenden Codebeispiel wird veranschaulicht, zu bestimmen, ob die Anwendung oder .NET Framework gerade beendet wird. Dies ist nützlich für den Zugriff auf statische Elemente in .NET Framework, da während des Herunterfahrens können diese Konstrukte durch das System beendet werden und können nicht zuverlässig verwendet werden kann. Durch Überprüfen der <xref:System.Environment.HasShutdownStarted%2A> Eigenschaft zunächst können Sie potenzielle Fehler vermeiden, indem Sie nicht auf diese Elemente zugreifen.  

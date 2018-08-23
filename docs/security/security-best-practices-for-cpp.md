@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
 author: mikeblome
-ms.author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16a00d83f7917cf21f114b2a80fa1ad55a90875
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e941c15d734ce85513696d60da13184cfbfd2355
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015623"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610052"
 ---
 # <a name="security-best-practices-for-c"></a>Empfohlene Vorgehensweisen bezüglich der Sicherheit in C++
 
@@ -34,7 +34,7 @@ Dieser Artikel enthält Informationen über Sicherheitstools und Vorgehensweisen
  Diese Sicherheitsfunktionen sind in den Visual C++-Compiler und den Visual C++-Linker integriert:  
   
  [/guard (Ablaufsteuerungsschutz aktivieren)](../build/reference/guard-enable-control-flow-guard.md)  
- Veranlasst den Compiler, die Ablaufsteuerung für indirekte Aufrufziele zum Zeitpunkt der Kompilierung zu analysieren und dann Code einzufügen, um die Ziele zur Laufzeit zu überprüfen.  
+ Bewirkt, dass der Compiler die ablaufsteuerung für indirekte Aufrufziele zum Zeitpunkt der Kompilierung zu analysieren und dann Code einzufügen, um die Ziele zur Laufzeit zu überprüfen.  
   
  [/GS (Puffersicherheitsüberprüfung)](../build/reference/gs-buffer-security-check.md)  
  Der Compiler wird angewiesen, Überlauferkennungscode in Funktionen einzufügen, die Angriffen ausgesetzt sein können. Wenn ein Überlauf erkannt wird, wird die Programmausführung angehalten. Diese Option ist standardmäßig aktiviert.  

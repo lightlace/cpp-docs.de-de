@@ -19,68 +19,75 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c63ce7dc5dcd326de426c4e4738a11e24f93161c
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: cde444e807aa6fe2276b4bfe9b0b9c4bc0476103
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015532"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610553"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Platform-, default- und cli-Namespaces (Komponentenerweiterungen für C++)
-Ein Namespace qualifiziert die Namen von Sprachelementen, sodass sie keinen Konflikt mit ansonsten identischen Namen an anderer Stelle im Quellcode verursachen. Z. B. ein Namenskonflikt möglicherweise verhindern, dass den Compiler erkennt [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md). Namespaces werden vom Compiler verwendet, jedoch nicht in der kompilierten Assembly beibehalten.  
-  
-## <a name="all-runtimes"></a>Alle Laufzeiten  
- Beim Erstellen des Projekts stellt Visual C++ einen Standardnamespace für das Projekt bereit. Sie können den Namespace manuell umbenennen, obwohl in Windows-Runtime der Namen der winmd-Datei den Namen des Stammnamespace übereinstimmen muss.  
-  
-## <a name="windows-runtime"></a>Windows-Runtime  
- Weitere Informationen finden Sie unter [Namespaces und typsichtbarkeit (C++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).  
-  
-### <a name="requirements"></a>Anforderungen  
- Compileroption: `/ZW`  
-  
-## <a name="common-language-runtime"></a>Common Language Runtime 
-### <a name="syntax"></a>Syntax  
-  
-```cpp  
-using namespace cli;  
-```  
-  
-### <a name="remarks"></a>Hinweise  
-  
- C++ / CLI unterstützt die **Cli** Namespace. Beim Kompilieren mit `/clr`, **mit** -Anweisung im Syntaxabschnitt wird impliziert.  
-  
- Die folgenden Sprachfunktionen sind in der **Cli** Namespace:  
-  
--   [Arrays](../windows/arrays-cpp-component-extensions.md)  
-  
--   [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)  
-  
--   [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)  
-  
--   ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)  
-  
-### <a name="requirements"></a>Anforderungen  
- Compileroption: `/clr`  
-  
-### <a name="examples"></a>Beispiele  
-  
- Im folgenden Codebeispiel wird veranschaulicht, dass es möglich ist, verwenden Sie ein Symbol in der **Cli** Namespace als benutzerdefiniertes Symbol im Code.  Sobald Sie dies erledigt haben, Sie müssen jedoch explizit oder implizit qualifiziert die Verweise auf die **Cli** Language-Element mit dem gleichen Namen.  
-  
-```cpp  
-// cli_namespace.cpp  
-// compile with: /clr  
-using namespace cli;  
-int main() {  
-   array<int> ^ MyArray = gcnew array<int>(100);  
-   int array = 0;  
-  
-   array<int> ^ MyArray2 = gcnew array<int>(100);   // C2062  
-  
-   // OK  
-   cli::array<int> ^ MyArray2 = gcnew cli::array<int>(100);  
-   ::array<int> ^ MyArray3 = gcnew ::array<int>(100);  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+
+Ein Namespace qualifiziert die Namen von Sprachelementen, sodass sie keinen Konflikt mit ansonsten identischen Namen an anderer Stelle im Quellcode verursachen. Z. B. ein Namenskonflikt möglicherweise verhindern, dass den Compiler erkennt [Kontextbezogene Schlüsselwörter](../windows/context-sensitive-keywords-cpp-component-extensions.md). Namespaces werden vom Compiler verwendet, jedoch nicht in der kompilierten Assembly beibehalten.
+
+## <a name="all-runtimes"></a>Alle Laufzeiten
+
+Beim Erstellen des Projekts stellt Visual C++ einen Standardnamespace für das Projekt bereit. Sie können den Namespace manuell umbenennen, obwohl in Windows-Runtime der Namen der winmd-Datei den Namen des Stammnamespace übereinstimmen muss.
+
+## <a name="windows-runtime"></a>Windows-Runtime
+
+Weitere Informationen finden Sie unter [Namespaces und typsichtbarkeit (C++ / CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx).
+
+### <a name="requirements"></a>Anforderungen
+
+Compileroption: `/ZW`
+
+## <a name="common-language-runtime"></a>Common Language Runtime
+
+### <a name="syntax"></a>Syntax
+
+```cpp
+using namespace cli;
+```
+
+### <a name="remarks"></a>Hinweise
+
+C++ / CLI unterstützt die **Cli** Namespace. Beim Kompilieren mit `/clr`, **mit** -Anweisung im Syntaxabschnitt wird impliziert.
+
+Die folgenden Sprachfunktionen sind in der **Cli** Namespace:
+
+- [Arrays](../windows/arrays-cpp-component-extensions.md)
+
+- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+
+- [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)
+
+- ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md)
+
+### <a name="requirements"></a>Anforderungen
+
+Compileroption: `/clr`
+
+### <a name="examples"></a>Beispiele
+
+Im folgenden Codebeispiel wird veranschaulicht, dass es möglich ist, verwenden Sie ein Symbol in der **Cli** Namespace als benutzerdefiniertes Symbol im Code.  Sobald Sie dies erledigt haben, Sie müssen jedoch explizit oder implizit qualifiziert die Verweise auf die **Cli** Language-Element mit dem gleichen Namen.
+
+```cpp
+// cli_namespace.cpp
+// compile with: /clr
+using namespace cli;
+int main() {
+   array<int> ^ MyArray = gcnew array<int>(100);
+   int array = 0;
+
+   array<int> ^ MyArray2 = gcnew array<int>(100);   // C2062
+
+   // OK
+   cli::array<int> ^ MyArray2 = gcnew cli::array<int>(100);
+   ::array<int> ^ MyArray3 = gcnew ::array<int>(100);
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+
+[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

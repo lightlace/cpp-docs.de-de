@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f677557c81502a38caf7414abf71936ada456471
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 2be87f336adeb156789bb8c0ae7c8d05c8de39a4
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016300"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608636"
 ---
 # <a name="modulegetobjectcount-method"></a>Module::GetObjectCount-Methode
-Ruft die Anzahl von Objekten, die von diesem Modul verwaltet.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-virtual long GetObjectCount() const;  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Die aktuelle Anzahl von Objekten, die von diesem Modul verwaltet.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
+
+Ruft die Anzahl von Objekten, die von diesem Modul verwaltet.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+virtual long GetObjectCount() const;
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Die aktuelle Anzahl von Objekten, die von diesem Modul verwaltet.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
 ## <a name="see-also"></a>Siehe auch
- [Module-Klasse](../windows/module-class.md)
+
+[Module-Klasse](../windows/module-class.md)

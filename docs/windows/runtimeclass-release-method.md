@@ -17,35 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 317fb846fa7c4f64545762b473233e87ca049173
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: b0cb7af376e577a53f888425519108dedf01b7f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40017694"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612051"
 ---
 # <a name="runtimeclassrelease-method"></a>RuntimeClass::Release-Methode
-Führt einen COM-Freigabe-Vorgang für die aktuelle **RuntimeClass** Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-STDMETHOD_(  
-   ULONG,  
-   Release  
-)();  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  
-  
-## <a name="remarks"></a>Hinweise  
- Wenn der Verweiszähler NULL ist, wird die **RuntimeClass** Objekt wird gelöscht.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** implements.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [RuntimeClass-Klasse](../windows/runtimeclass-class.md)
+
+Führt einen COM-Freigabe-Vorgang für die aktuelle **RuntimeClass** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.
+
+## <a name="remarks"></a>Hinweise
+
+Wenn der Verweiszähler NULL ist, wird die **RuntimeClass** Objekt wird gelöscht.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** implements.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[RuntimeClass-Klasse](../windows/runtimeclass-class.md)

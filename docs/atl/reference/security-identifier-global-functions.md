@@ -1,5 +1,5 @@
 ---
-title: Globaler Bezeichner Sicherheitsfunktionen | Microsoft Docs
+title: Globale Sicherheitsfunktionen für Bezeichner | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -47,15 +47,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 153436ab5d05d0355d85ca165b2bfba9ae86d534
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b567c56c8c4ca5c25fc870e91c8c608e17280557
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365154"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42610232"
 ---
-# <a name="security-identifier-global-functions"></a>Globaler Bezeichner Sicherheitsfunktionen
-Diese Funktionen geben allgemeine bekannte SID Objekte zurück.  
+# <a name="security-identifier-global-functions"></a>Globale Sicherheitsfunktionen für Bezeichner
+Diese Funktionen geben häufig bekannte SID Objekte zurück.  
   
 > [!IMPORTANT]
 >  In der folgenden Tabelle aufgeführten Funktionen können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
@@ -196,9 +196,9 @@ CSid NetworkService() throw(...);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Verwenden Sie NetworkService, um die Benutzer NT AUTHORITY\NetworkService ein Sicherheitsobjekt CPerfMon lesen kann. NetworkService ATLServer-Code der ermöglicht die DLL-Datei unter dem NetworkService-Konto anmelden, auf eine SecurityAttribute hinzugefügt [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] und größer Betriebssystem.  
+ Verwenden Sie "NetworkService", um der Benutzer NT AUTHORITY\NetworkService ein Sicherheitsobjekt CPerfMon lesen kann. NetworkService hinzugefügt ATLServer Code, der DLL, die Anmeldung unter dem Netzwerkdienstkonto auf Windows XP Home Edition, Windows XP Professional, Windows Server 2003 und höher Betriebssystem ermöglichen, wird eine SecurityAttribute.  
   
- Wenn benutzerdefiniertes Protokoll Leistungsindikatoren mit ATLServer CPerfMon-Klasse in der Perfmon-MMC erstellt werden, können die Leistungsindikatoren nicht angezeigt, wenn die Protokolldatei anzeigen, auch wenn sie in der Ansicht Echtzeit ordnungsgemäß angezeigt werden. Benutzerdefinierte Leistungsindikatoren CPerfMon nicht die erforderlichen Berechtigungen für die Ausführung unter der Dienst "Leistung Protokolle und Warnungen" (smlogsvc.exe) verfügen, auf [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (oder höher) Betriebssystemen. Dieser Dienst führt unter dem Konto "NT AUTHORITY\NetworkService".  
+ Wenn Indikatoren des benutzerdefinierten Protokolls mit ATLServer CPerfMon-Klasse in der Perfmon-MMC erstellt werden, möglicherweise die Indikatoren nicht angezeigt, wenn die Protokolldatei anzeigen, obwohl sie ordnungsgemäß in der Ansicht in Echtzeit angezeigt werden. Benutzerdefinierte Leistungsindikatoren CPerfMon nicht die erforderlichen Berechtigungen für den Dienst "Performance-Protokolle und Warnungen" (smlogsvc.exe) auf unter Windows XP Home Edition, Windows XP Professional, Windows Server 2003 (oder höher)-Betriebssystemen ausgeführt werden müssen. Dieser Dienst wird ausgeführt, unter dem Konto "NT AUTHORITY\NetworkService".  
   
 ##  <a name="null"></a>  SIDs::NULL  
  Gibt die SECURITY_NULL_RID-SID zurück.  

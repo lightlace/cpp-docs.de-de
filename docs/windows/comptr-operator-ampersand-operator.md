@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0afff1699a4c7a3a14f07967cfb5ba5727ba0320
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f513ac83e0ee83109f42cf87b80b4fcc4960db1f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39461561"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598602"
 ---
 # <a name="comptroperatoramp-operator"></a>Comptr::&amp; Operator
-Gibt die Schnittstelle frei zugeordneten **ComPtr** -Objekt und ruft dann die Adresse des der **ComPtr** Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-Details::ComPtrRef<WeakRef> operator&()  
-  
-const Details::ComPtrRef<const WeakRef> operator&() const  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- Einen schwachen Verweis auf das aktuelle **ComPtr**.  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Methode unterscheidet sich von [comptr:: Getaddressof](../windows/comptr-getaddressof-method.md) , gibt diese Methode einen Verweis auf den Schnittstellenzeiger auf. Verwendung `ComPtr::GetAddressOf` Wenn muss die Adresse des Schnittstellenzeigers, jedoch nicht diese Schnittstelle freigeben möchten.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** client.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [ComPtr-Klasse](../windows/comptr-class.md)
+
+Gibt die Schnittstelle frei zugeordneten **ComPtr** -Objekt und ruft dann die Adresse des der **ComPtr** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+Details::ComPtrRef<WeakRef> operator&()
+
+const Details::ComPtrRef<const WeakRef> operator&() const
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+Einen schwachen Verweis auf das aktuelle **ComPtr**.
+
+## <a name="remarks"></a>Hinweise
+
+Diese Methode unterscheidet sich von [comptr:: Getaddressof](../windows/comptr-getaddressof-method.md) , gibt diese Methode einen Verweis auf den Schnittstellenzeiger auf. Verwendung `ComPtr::GetAddressOf` Wenn muss die Adresse des Schnittstellenzeigers, jedoch nicht diese Schnittstelle freigeben möchten.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** client.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[ComPtr-Klasse](../windows/comptr-class.md)

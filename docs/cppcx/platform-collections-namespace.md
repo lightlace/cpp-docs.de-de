@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: Collections-Namespace | Microsoft Docs'
+title: 'Platform:: Collections-Namespace | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
@@ -11,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b4e38d6a051481b2b5f642c6b4de3c837f8fbfd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 171fdfe8e174d0d3b5d1c69e9aa5a777a3148ee0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088036"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42612530"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections-Namespace
 
@@ -28,9 +28,9 @@ Platform:: Collections-Namespace enthält die `Map`, `MapView`, `Vector`, und `V
 
 Sie können Platform::Collections::Vector aus [std::vector](../standard-library/vector-class.md) und [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) aus [std::map](../standard-library/map-class.md)erstellen.
 
-Darüber hinaus bietet der Namespace Platform:: Collections Unterstützung für und eingabeiteratoren, und `Vector` und `VectorView` Iteratoren.
+Darüber hinaus bietet der Platform:: Collections-Namespace Unterstützung für Back INSERT- und Eingabe-Iteratoren und `Vector` und `VectorView` Iteratoren.
 
-Sie müssen einschließen (`#include`) den Header "Collection.h", um die Typen im Namespace Platform:: Collections zu verwenden.
+Sie müssen einschließen (`#include`) den Header "Collection.h" bereit, die Typen in der Platform:: Collections-Namespace verwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,7 +56,7 @@ Dieser Namespace enthält die folgenden Member.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
-[Plattformnamespace](../cppcx/platform-namespace-c-cx.md)
+[Platform-namespace](../cppcx/platform-namespace-c-cx.md)
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -68,4 +68,4 @@ Dieser Namespace enthält die folgenden Member.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Platform-Namespace](../cppcx/platform-namespace-c-cx.md)  
+[Plattform-Namespace](../cppcx/platform-namespace-c-cx.md)  

@@ -17,34 +17,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32c59c00180b26a2856b1fc210302ffff0e72f0c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: d81a3f29e99f49b03eb76f44af60c42d433e0bdc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641303"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42611231"
 ---
 # <a name="asyncbasestart-method"></a>AsyncBase::Start-Methode
-Beginnt den asynchronen Vorgang an.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-STDMETHOD(  
-   Start  
-)(void);  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn der Vorgang gestartet oder bereits gestartet. andernfalls E_ILLEGAL_STATE_CHANGE.  
-  
-## <a name="remarks"></a>Hinweise  
- **Start()** ist eine Standardimplementierung der `IAsyncInfo::Start`, und keine Arbeit erledigt. Um einen asynchronen Vorgang tatsächlich zu starten, überschreiben die `OnStart()` rein virtuelle Methode.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [AsyncBase-Klasse](../windows/asyncbase-class.md)
+
+Beginnt den asynchronen Vorgang an.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD(
+   Start
+)(void);
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn der Vorgang gestartet oder bereits gestartet. andernfalls E_ILLEGAL_STATE_CHANGE.
+
+## <a name="remarks"></a>Hinweise
+
+**Start()** ist eine Standardimplementierung der `IAsyncInfo::Start`, und keine Arbeit erledigt. Um einen asynchronen Vorgang tatsächlich zu starten, überschreiben die `OnStart()` rein virtuelle Methode.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[AsyncBase-Klasse](../windows/asyncbase-class.md)

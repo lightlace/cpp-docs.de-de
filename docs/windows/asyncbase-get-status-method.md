@@ -17,38 +17,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b49e7cbd30445250bdf0710973ba65e47823b36c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 31b333c14af6d57fb098d6aff0d0938092477de0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39652252"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42613123"
 ---
 # <a name="asyncbasegetstatus-method"></a>AsyncBase::get_Status-Methode
-Ruft einen Wert, der den Status des asynchronen Vorgangs angibt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-STDMETHOD(  
-   get_Status  
-)(AsyncStatus *status) override;  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *status*  
- Der Speicherort, an dem der Status gespeichert werden. Weitere Informationen finden Sie unter `Windows::Foundation::AsyncStatus` Enumeration.  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls E_ILLEGAL_METHOD_CALL.  
-  
-## <a name="remarks"></a>Hinweise  
- Diese Methode implementiert `IAsyncInfo::get_Status`.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** async.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [AsyncBase-Klasse](../windows/asyncbase-class.md)
+
+Ruft einen Wert, der den Status des asynchronen Vorgangs angibt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+STDMETHOD(
+   get_Status
+)(AsyncStatus *status) override;
+```
+
+### <a name="parameters"></a>Parameter
+
+*status*  
+Der Speicherort, an dem der Status gespeichert werden. Weitere Informationen finden Sie unter `Windows::Foundation::AsyncStatus` Enumeration.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls E_ILLEGAL_METHOD_CALL.
+
+## <a name="remarks"></a>Hinweise
+
+Diese Methode implementiert `IAsyncInfo::get_Status`.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** async.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[AsyncBase-Klasse](../windows/asyncbase-class.md)

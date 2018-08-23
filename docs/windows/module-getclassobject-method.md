@@ -17,49 +17,53 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 08b96712b2e66ebf527ccb1cbf408c2a7d028b60
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 3e0c8996823de35bbfd85d595556db933f34238a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012075"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42599221"
 ---
 # <a name="modulegetclassobject-method"></a>Module::GetClassObject-Methode
-Ruft einen Cache von Klassenfactorys.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
- HRESULT GetClassObject(  
-   REFCLSID clsid,  
-   REFIID riid,  
-   _Deref_out_ void **ppv,  
-   wchar_t* serverName = nullptr  
-);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *clsid*  
- Klassen-ID.  
-  
- *riid*  
- Schnittstellen-ID, die Sie anfordern.  
-  
- *ppv*  
- Zeiger auf das zurückgegebene Objekt.  
-  
- *ServerName*  
- Den Namen des Servers, der entweder angegeben ist die `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, oder `ActivatableClass` Makro; oder **"nullptr"** um den Standardnamen für den Server zu erhalten.  
-  
-## <a name="return-value"></a>Rückgabewert  
-  
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Methode nur für COM, nicht die Windows-Runtime. Diese Methode macht nur `IClassFactory` Methoden.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Siehe auch
- [Module-Klasse](../windows/module-class.md)
+
+Ruft einen Cache von Klassenfactorys.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+ HRESULT GetClassObject(
+   REFCLSID clsid,
+   REFIID riid,
+   _Deref_out_ void **ppv,
+   wchar_t* serverName = nullptr
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*clsid*  
+Klassen-ID.
+
+*riid*  
+Schnittstellen-ID, die Sie anfordern.
+
+*ppv*  
+Zeiger auf das zurückgegebene Objekt.
+
+*ServerName*  
+Den Namen des Servers, der entweder angegeben ist die `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, oder `ActivatableClass` Makro; oder **"nullptr"** um den Standardnamen für den Server zu erhalten.
+
+## <a name="return-value"></a>Rückgabewert
+
+## <a name="remarks"></a>Hinweise
+
+Verwenden Sie diese Methode nur für COM, nicht die Windows-Runtime. Diese Methode macht nur `IClassFactory` Methoden.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+[Module-Klasse](../windows/module-class.md)

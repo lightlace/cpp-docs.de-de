@@ -1,5 +1,5 @@
 ---
-title: Erweiterungen, die spezifisch für C++ sind c++ / CLI | Microsoft Docs
+title: Spezifische Erweiterungen für C++ / CLI | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52878c4b76f4aa6e11745bdaa4b994d93c842166
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52d562408d88e13b2f13fdb1efec88088e4d8551
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33872613"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42608218"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>Für C++/CLI spezifische Erweiterungen
-Die folgenden Sprachfunktionen, die in diesem Abschnitt der Dokumentation erläutert werden, gelten nur für C + c++ / CLI.  
+Die folgenden Sprachfunktionen, die in diesem Abschnitt der Dokumentation erläutert werden, gelten nur für C++ / CLI.
   
  [__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)  
   
- [C-stilartige Umwandlungen mit/CLR (C + c++ / CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
+ [C-stilartige Umwandlungen mit/CLR (C++ / CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
   
  [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)  
   
@@ -35,5 +35,5 @@ Die folgenden Sprachfunktionen, die in diesem Abschnitt der Dokumentation erläu
   
  [Variable Argumentlisten (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
  [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

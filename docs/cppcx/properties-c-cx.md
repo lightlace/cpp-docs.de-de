@@ -1,20 +1,20 @@
 ---
-title: Eigenschaften (C + c++ / CX) | Microsoft Docs
+title: Eigenschaften (C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6393b5e5849ab2198fa8d084c2c1d15838c69bdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089558"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42600854"
 ---
 # <a name="properties-ccx"></a>Eigenschaften (C++/CX)
 Windows-Runtime-Typen, die öffentliche Daten als Eigenschaften verfügbar machen. Clientcode greift auf die Eigenschaft wie auf einen öffentlichen Datenmember zu. Intern wird die Eigenschaft als Block implementiert, der eine "get"-Accessor-Methode, eine "set"-Accessor-Methode oder beide enthält. Durch Verwendung der Accessormethoden können Sie zusätzliche Aktionen ausführen, bevor oder nachdem Sie den Wert abrufen. Beispielsweise können Sie ein Ereignis auslösen oder Validierungsüberprüfungen durchführen.  
@@ -41,5 +41,5 @@ Windows-Runtime-Typen, die öffentliche Daten als Eigenschaften verfügbar mache
   
 ## <a name="see-also"></a>Siehe auch  
  [Typsystem](../cppcx/type-system-c-cx.md)   
- [Visual C++-Sprachreferenz](../cppcx/visual-c-language-reference-c-cx.md)   
+ [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)
