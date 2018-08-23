@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7fedb77b6ede8d9fa843e7e7cdd344e03efecede
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 50f428fa16fee8e1ea545953598fd3f27578310c
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337897"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42572841"
 ---
 # <a name="setting-properties-in-your-provider"></a>Festlegen von Eigenschaften im Anbieter
-Finden Sie die Eigenschaftengruppe und die Eigenschafts-ID für die gewünschte Eigenschaft an. Weitere Informationen finden Sie unter [OLE DB-Eigenschaften](https://msdn.microsoft.com/library/ms722734.aspx) in die *OLE DB-Programmierreferenz*.  
+Finden Sie die Eigenschaftengruppe und die Eigenschafts-ID für die gewünschte Eigenschaft an. Weitere Informationen finden Sie unter [OLE DB-Eigenschaften](/previous-versions/windows/desktop/ms722734\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
  Finden Sie in den Anbietercode, die vom Assistenten generiert wird die für die Eigenschaftengruppe eigenschaftenzuordnung ein. Der Name der Eigenschaftengruppe entspricht in der Regel der Name des Objekts. Befehls- und Rowsetobjekte-Eigenschaften finden Sie in den Befehl oder das Rowset; Dateneigenschaften Quell- und Initialisierung finden Sie in das neue Datenquellenobjekt.  
   
@@ -32,7 +32,7 @@ Finden Sie die Eigenschaftengruppe und die Eigenschafts-ID für die gewünschte 
   
 -   Die Eigenschafts-ID für Ihre Eigenschaft entspricht. Sie müssen die ersten sieben Zeichen ("DBPROP_") vom Anfang des Namen der Eigenschaft entfernen. Wenn Sie hinzufügen möchten z. B. `DBPROP_MAXROWS`, übergeben Sie `MAXROWS` als erstes Element. Ist dies eine benutzerdefinierte Eigenschaft, übergeben Sie die vollständige GUID-Namen (z. B. `DBMYPROP_MYPROPERTY`).  
   
--   Der variant-Typ der Eigenschaft (in [OLE DB-Eigenschaften](https://msdn.microsoft.com/library/ms722734.aspx) in die *OLE DB-Programmierreferenz*). Geben Sie die VT_ Typ (z. B. VT_BOOL oder VT_I2), der Datentyp entspricht.  
+-   Der variant-Typ der Eigenschaft (in [OLE DB-Eigenschaften](/previous-versions/windows/desktop/ms722734\(v=vs.85\)) in die *OLE DB-Programmierreferenz*). Geben Sie die VT_ Typ (z. B. VT_BOOL oder VT_I2), der Datentyp entspricht.  
   
 -   Flags, um anzugeben, ob die Eigenschaft lesbar und schreibbar ist und der Gruppe, zu der er gehört. Der folgende Code gibt beispielsweise an eine Lese-/Schreibeigenschaft, die der Rowset-Gruppe gehören:  
   

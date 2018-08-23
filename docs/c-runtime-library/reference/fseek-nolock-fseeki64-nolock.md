@@ -19,6 +19,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _fseek_nolock
@@ -39,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40eca7e4944d74e8b86d5318702c954d86a3f54f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b1ce866f7438ebc677156e6cfc9113f9725b65d
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397352"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42573227"
 ---
 # <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock, _fseeki64_nolock
 
@@ -78,11 +79,11 @@ Ursprüngliche Position.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Identisch mit [Fseek](fseek-fseeki64.md) und [_fseeki64](fseek-fseeki64.md)zugeordnet.
+Identisch mit [Fseek](fseek-fseeki64.md) und [_fseeki64](fseek-fseeki64.md)bzw.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktionen befinden sich die Versionen nicht sperrende [Fseek](fseek-fseeki64.md) und [_fseeki64](fseek-fseeki64.md)zugeordnet. Diese sind identisch mit [Fseek](fseek-fseeki64.md) und [_fseeki64](fseek-fseeki64.md) mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt werden. Diese Funktionen sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
+Diese Funktionen sind, die nicht sperrende Versionen von [Fseek](fseek-fseeki64.md) und [_fseeki64](fseek-fseeki64.md)bzw. Diese sind identisch mit [Fseek](fseek-fseeki64.md) und [_fseeki64](fseek-fseeki64.md) mit dem Unterschied, dass sie nicht vor Störungen durch andere Threads geschützt sind. Diese Funktionen sind möglicherweise schneller, da kein Mehraufwand zur Sperrung anderer Threads erforderlich ist. Verwenden Sie diese Funktionen nur in threadsicheren Kontexten wie z. B. in Singlethreadanwendungen oder in Fällen, in denen der aufrufende Bereich die Threadisolation bereits handhabt.
 
 ## <a name="requirements"></a>Anforderungen
 

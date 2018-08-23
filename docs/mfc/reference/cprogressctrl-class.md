@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1c4d1d2a7c37838a57a55189330465cd0700e8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850156"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42541460"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Statusanzeige-Steuerelements bereit.  
@@ -350,10 +350,12 @@ COLORREF SetBarColor(COLORREF clrBar);
 |[in] *ClrBar*|Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die neue Farbe der Statusleiste Indikator angibt. Geben Sie CLR_DEFAULT um dazu führen, dass die Statusanzeige auf ihre Standardfarbe verwenden.|  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die vorherige Farbe der Indikator Statusanzeige, dargestellt als eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert oder CLR_DEFAULT die Farbe der Statusleiste Indikator ist die Standardfarbe.  
+
+Die vorherige Farbe der Indikator Statusanzeige, dargestellt als eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert oder CLR_DEFAULT die Farbe der Statusleiste Indikator ist die Standardfarbe.  
   
 ### <a name="remarks"></a>Hinweise  
- Die `SetBarColor` Methode legt fest, der Statusanzeige nur Farbe, wenn eine [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] [Design](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx) ist nicht aktiv.  
+
+Die `SetBarColor` Methode wird die Statusanzeige nur Farbe, wenn eine Windows Vista [Design](/windows/desktop/Controls/visual-styles-overview) ist nicht aktiv.  
   
  Diese Methode sendet die [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) -Nachricht, die im Windows SDK beschrieben wird.  
   
