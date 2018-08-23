@@ -249,12 +249,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f63fa932de6dc578fa29dd66c9b4030a8aa3140c
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ce041b92a1e6d90089de1a68a89041f1d033e854
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338232"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42571577"
 ---
 # <a name="crowset-class"></a>CRowset-Klasse
 Kapselt ein OLE DB-Rowset-Objekt, und einige im Zusammenhang Schnittstellen und bietet Methoden für die Rowsetdaten bearbeiten.  
@@ -281,16 +281,16 @@ class CRowset
 |-|-|  
 |[AddRefRows](#addrefrows)|Inkrementiert der Verweiszähler fest, die der aktuellen Zeile zugeordnet ist.|  
 |[Schließen](#close)|Versionen von Zeilen und der aktuelle `IRowset` Schnittstelle.|  
-|[Compare](#compare)|Vergleicht zwei Lesezeichen mit [IRowsetLocate::Compare](https://msdn.microsoft.com/library/ms709539.aspx).|  
+|[Compare](#compare)|Vergleicht zwei Lesezeichen mit [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\)).|  
 |[CRowset](#crowset)|Erstellt ein neues `CRowset` -Objekt und ordnet sie (optional) eine `IRowset` Schnittstelle, die als Parameter übergeben.|  
-|[Löschen](#delete)|Löscht Zeilen aus dem Rowset mit [IRowsetChange:DeleteRows](https://msdn.microsoft.com/library/ms724362.aspx).|  
+|[Löschen](#delete)|Löscht Zeilen aus dem Rowset mit [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)).|  
 |[FindNextRow](#findnextrow)|Sucht nach der nächsten Zeile nach dem angegebenen Lesezeichen.|  
 |[GetApproximatePosition](#getapproximateposition)|Gibt die ungefähre Position eine Zeile zu einem Lesezeichen zurück.|  
 |[GetData](#getdata)|Ruft Daten aus der Zeile des Rowsets ab.|  
 |[GetDataHere](#getdatahere)|Ruft Daten aus dem angegebenen Puffer ab.|  
 |[GetOriginalData](#getoriginaldata)|Ruft ab, die Daten zuletzt von abgerufen oder übertragen mit der Datenquelle, die ausstehende Änderungen werden ignoriert.|  
 |[GetRowStatus](#getrowstatus)|Der Status aller Zeilen zurückgegeben.|  
-|[Einfügen](#insert)|Erstellt und fügt eine neue Zeile mit [IRowsetChange:InsertRow](https://msdn.microsoft.com/library/ms716921.aspx).|  
+|[Einfügen](#insert)|Erstellt und fügt eine neue Zeile mit [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)).|  
 |[IsSameRow](#issamerow)|Vergleicht die angegebene Zeile mit der aktuellen Zeile.|  
 |[MoveFirst](#movefirst)|Positioniert den weiter-Fetch-Speicherort auf die ursprüngliche Position.|  
 |[MoveLast](#movelast)|Wechselt zum letzten Datensatz.|  
@@ -298,8 +298,8 @@ class CRowset
 |[MovePrev](#moveprev)|Wechselt zum vorherigen Datensatz.|  
 |[MoveToBookmark](#movetobookmark)|Ruft die Zeile, die durch ein Lesezeichen markiert oder auf die Zeile an einem angegebenen Offset aus diesem Lesezeichen ab.|  
 |[MoveToRatio](#movetoratio)|Ruft Zeilen ab der ein Bruchteil Ausgangsposition im Rowset ab.|  
-|[ReleaseRows](#releaserows)|Aufrufe [IRowset:: ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) zum Freigeben des Handles der aktuellen Zeile.|  
-|[SetData](#setdata)|Legt Datenwerte in einer oder mehreren Spalten einer Zeile mit [IRowsetChange:SetData](https://msdn.microsoft.com/library/ms721232.aspx).|  
+|[ReleaseRows](#releaserows)|Aufrufe [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) zum Freigeben des Handles der aktuellen Zeile.|  
+|[SetData](#setdata)|Legt Datenwerte in einer oder mehreren Spalten einer Zeile mit [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)).|  
 |[Rückgängig machen](#undo)|Macht alle Änderungen, die auf eine Zeile seit der letzten Fetch oder [Update](../../data/oledb/crowset-update.md).|  
 |[Update (Aktualisieren)](#update)|Sendet alle ausstehenden Änderungen an der aktuellen Zeile seit der letzten Fetch oder aktualisieren.|  
 |[UpdateAll](#updateall)|Sendet alle ausstehenden Änderungen, die seit der letzten Fetch oder ein Update auf alle Zeilen.|  
@@ -310,7 +310,7 @@ class CRowset
  Diese Klasse ist nicht vorgesehen, werden instanziiert, sondern stattdessen als einen Vorlagenparameter übergeben `CTable` oder `CCommand` (`CRowset` ist die Standardeinstellung).  
 
 ## <a name="addrefrows"></a> CRowset:: Addrefrows
-Aufrufe [IRowset::AddRefRows](https://msdn.microsoft.com/library/ms719619.aspx) zugeordnet mit dem Zeilenhandle der aktuellen (durch eine) der Verweiszähler inkrementiert werden soll.  
+Aufrufe [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) zugeordnet mit dem Zeilenhandle der aktuellen (durch eine) der Verweiszähler inkrementiert werden soll.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -325,7 +325,7 @@ HRESULT AddRefRows() throw();
  Diese Methode inkrementiert den Verweiszähler für das aktuelle Zeilenhandle. Rufen Sie [ReleaseRows](../../data/oledb/crowset-releaserows.md) um die Anzahl der zu verringern. Die Move-Methoden zurückgegebene Zeilen haben einen Verweiszähler eines.  
 
 ## <a name="close"></a> CRowset:: Close
-Versionen von Zeilen und der aktuelle [IRowset](https://msdn.microsoft.com/library/ms720986.aspx) Schnittstelle.  
+Versionen von Zeilen und der aktuelle [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) Schnittstelle.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -337,7 +337,7 @@ void Close() throw();
  Diese Methode gibt alle Zeilen im Rowset frei.  
 
 ## <a name="compare"></a> CRowset:: Compare
-Vergleicht zwei Lesezeichen mit [IRowsetLocate::Compare](https://msdn.microsoft.com/library/ms709539.aspx).  
+Vergleicht zwei Lesezeichen mit [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539\(v=vs.85\)).  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -366,7 +366,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
  Weitere Informationen zur Verwendung von Lesezeichen im Consumer, finden Sie unter [mithilfe von Lesezeichen](../../data/oledb/using-bookmarks.md).  
 
 ## <a name="crowset"></a> CRowset:: CRowset
-Erstellt ein neues `CRowset` -Objekt und ordnet sie (optional) eine [IRowset](https://msdn.microsoft.com/library/ms720986.aspx) Schnittstelle, die als Parameter übergeben.  
+Erstellt ein neues `CRowset` -Objekt und ordnet sie (optional) eine [IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) Schnittstelle, die als Parameter übergeben.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -381,7 +381,7 @@ CRowset(IRowset* pRowset);
  [in] Ein Zeiger auf ein `IRowset` Schnittstelle mit dieser Klasse zugeordnet werden soll.  
 
 ## <a name="delete"></a> CRowset:: Delete
-Aufrufe [IRowsetChange:: DeleteRows](https://msdn.microsoft.com/library/ms724362.aspx) auf die aktuelle Zeile aus dem Rowset gelöscht.  
+Aufrufe [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) auf die aktuelle Zeile aus dem Rowset gelöscht.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -410,22 +410,22 @@ HRESULT FindNextRow(DBCOMPAREOP op,
   
 #### <a name="parameters"></a>Parameter  
  *op*  
- [in] Der Vorgang zum Vergleichen von Zeilenwerten verwenden. Werte, finden Sie unter [irowsetfind:: FindNextRow](https://msdn.microsoft.com/library/ms723091.aspx).  
+ [in] Der Vorgang zum Vergleichen von Zeilenwerten verwenden. Werte, finden Sie unter [irowsetfind:: FindNextRow](/previous-versions/windows/desktop/ms723091\(v=vs.85\)).  
   
  *pData*  
  [in] Ein Zeiger auf den Wert, der zugeordnet werden.  
   
  *wType*  
- [in] Gibt an, der den Datentyp des Value-Teil des Puffers. Informationen zu typindikatoren, finden Sie unter [Datentypen](https://msdn.microsoft.com/library/ms723969.aspx) in die *OLE DB-Programmierreferenz* im Windows SDK.  
+ [in] Gibt an, der den Datentyp des Value-Teil des Puffers. Informationen zu typindikatoren, finden Sie unter [Datentypen](/previous-versions/windows/desktop/ms723969\(v=vs.85\)) in die *OLE DB-Programmierreferenz* im Windows SDK.  
   
  *nLength*  
- [in] Die Länge in Bytes der Consumer-Datenstruktur, die für den Datenwert zugeordnet. Weitere Informationen finden Sie unter der Beschreibung der `cbMaxLen` in [DBBINDING-Strukturen](https://msdn.microsoft.com/library/ms716845.aspx) in die *OLE DB-Programmiererreferenz.*  
+ [in] Die Länge in Bytes der Consumer-Datenstruktur, die für den Datenwert zugeordnet. Weitere Informationen finden Sie unter der Beschreibung der `cbMaxLen` in [DBBINDING-Strukturen](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) in die *OLE DB-Programmiererreferenz.*  
   
  *bPrecision*  
- [in] Die maximale Genauigkeit, die beim Abrufen von Daten verwendet wird. Nur verwendet werden, wenn *wType* DBTYPE_NUMERIC ist. Weitere Informationen finden Sie unter [Konvertierungen, die im Zusammenhang mit DBTYPE_NUMERIC oder DBTYPE_DECIMAL](https://msdn.microsoft.com/library/ms719714.aspx) in die *OLE DB-Programmierreferenz*.  
+ [in] Die maximale Genauigkeit, die beim Abrufen von Daten verwendet wird. Nur verwendet werden, wenn *wType* DBTYPE_NUMERIC ist. Weitere Informationen finden Sie unter [Konvertierungen, die im Zusammenhang mit DBTYPE_NUMERIC oder DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
  *bScale*  
- [in] Die Skalierung, die beim Abrufen von Daten verwendet. Nur verwendet werden, wenn *wType* DBTYPE_NUMERIC oder DBTYPE_DECIMAL ist. Weitere Informationen finden Sie unter [Konvertierungen, die im Zusammenhang mit DBTYPE_NUMERIC oder DBTYPE_DECIMAL](https://msdn.microsoft.com/library/ms719714.aspx) in die *OLE DB-Programmierreferenz*.  
+ [in] Die Skalierung, die beim Abrufen von Daten verwendet. Nur verwendet werden, wenn *wType* DBTYPE_NUMERIC oder DBTYPE_DECIMAL ist. Weitere Informationen finden Sie unter [Konvertierungen, die im Zusammenhang mit DBTYPE_NUMERIC oder DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714\(v=vs.85\)) in die *OLE DB-Programmierreferenz*.  
   
  *bSkipCurrent*  
  [in] Die Anzahl der Zeilen aus das Lesezeichen, an dem eine Suche zu beginnen.  
@@ -596,7 +596,7 @@ HRESULT IsSameRow(HROW hRow) const throw();
  [in] Ein Handle für die Zeile, auf die aktuelle Zeile verglichen werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein standard-HRESULT. S_OK gibt an, dass die Zeilen identisch sind. Weitere Werte finden Sie unter [IRowsetIndentity::IsSameRow](https://msdn.microsoft.com/library/ms719629.aspx) in die *OLE DB-Programmierreferenz* im Windows SDK.  
+ Ein standard-HRESULT. S_OK gibt an, dass die Zeilen identisch sind. Weitere Werte finden Sie unter [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) in die *OLE DB-Programmierreferenz* im Windows SDK.  
 
 ## <a name="movefirst"></a> CRowset:: MoveFirst
 Verschiebt den Cursor auf die ursprüngliche Position und ruft die erste Zeile ab.  
@@ -611,7 +611,7 @@ HRESULT MoveFirst() throw();
  Ein standard-HRESULT.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufe [IRowset:: RestartPosition](https://msdn.microsoft.com/library/ms712877.aspx) um den weiter-Fetch-Speicherort zu verschieben, um die ursprüngliche Position (die Position, die den weiter-Fetch-Speicherort wurde, wenn das Rowset erstellt wurde) und ruft die erste Zeile ab.  
+ Aufrufe [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) um den weiter-Fetch-Speicherort zu verschieben, um die ursprüngliche Position (die Position, die den weiter-Fetch-Speicherort wurde, wenn das Rowset erstellt wurde) und ruft die erste Zeile ab.  
 
 ## <a name="movelast"></a> CRowset:: MoveLast
 Verschiebt den Cursor auf die letzte Zeile an.  
@@ -626,7 +626,7 @@ HRESULT MoveLast() throw();
  Ein standard-HRESULT.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufe [IRowset:: RestartPosition](https://msdn.microsoft.com/library/ms712877.aspx) um den nächsten-Fetch-Speicherort mit dem letzten neu positionieren, und ruft die letzte Zeile ab.  
+ Aufrufe [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) um den nächsten-Fetch-Speicherort mit dem letzten neu positionieren, und ruft die letzte Zeile ab.  
   
  Diese Methode erfordert, dass Sie festlegen, `DBPROP_CANSCROLLBACKWARDS` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält. (Sie können auch festlegen, zur Verbesserung der Leistung `DBPROP_QUICKRESTART` auf VARIANT_TRUE fest.)  
 
@@ -731,12 +731,12 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  `(nNumerator *  RowsetSize ) / nDenominator`  
   
- Wo `RowsetSize` ist die Größe des Rowsets, gemessen in Zeilen. Die Genauigkeit zu dieser Formel hängt von dem Anbieter ab. Weitere Informationen finden Sie unter [IRowsetScroll:: GetRowsAtRatio](https://msdn.microsoft.com/library/ms709602.aspx).  
+ Wo `RowsetSize` ist die Größe des Rowsets, gemessen in Zeilen. Die Genauigkeit zu dieser Formel hängt von dem Anbieter ab. Weitere Informationen finden Sie unter [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)).  
   
  Diese Methode erfordert die optionale Schnittstelle `IRowsetScroll`, ist der Fall, die für alle Anbieter, wenn diese möglicherweise nicht unterstützt wird, wird die Methode, wird E_NOINTERFACE zurückgegeben. Sie müssen auch festlegen, `DBPROP_IRowsetScroll` auf VARIANT_TRUE fest, vor dem Aufruf `Open` für die Tabelle oder einen Befehl, der das Rowset enthält.  
 
 ## <a name="releaserows"></a> CRowset:: ReleaseRows
-Aufrufe [IRowset:: ReleaseRows](https://msdn.microsoft.com/library/ms719771.aspx) zum Freigeben des Handles der aktuellen Zeile.  
+Aufrufe [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) zum Freigeben des Handles der aktuellen Zeile.  
   
 ### <a name="syntax"></a>Syntax  
   
