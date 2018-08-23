@@ -1,5 +1,5 @@
 ---
-title: Ratschläge für allgemeine MBCS-Programmierung | Microsoft Docs
+title: Ratschläge für allgemeine MBCS-Programmierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,35 +15,35 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab2b67c82a04a0c355761ec6572a9718d03c4666
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0a23ed1283241d3582c0bd548553cb2fed9a47fa
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855798"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596794"
 ---
 # <a name="general-mbcs-programming-advice"></a>Allgemeine Ratschläge für die MBCS-Programmierung
 Verwenden Sie die folgenden Tipps:  
   
--   Verwenden Sie Flexibilität erhalten Sie, wie z. B. Makros zur Laufzeit `_tcschr` und `_tcscpy` nach Möglichkeit. Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+-   Verwenden Sie für mehr Flexibilität Laufzeit-Makros wie `_tcschr` und `_tcscpy` Wenn möglich. Weitere Informationen finden Sie unter [Zuordnungen für generischen Text in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
   
 -   Verwenden Sie die C-Laufzeit `_getmbcp` Funktion zum Abrufen von Informationen über die aktuelle Codepage.  
   
--   Zeichenfolgenressourcen nicht wiederverwendet werden. Abhängig von der Zielsprache möglicherweise eine bestimmte Zeichenfolge eine andere Bedeutung, wenn übersetzt. Hauptmenü "File" auf der Anwendungsverzeichnis könnte z. B. unterschiedlich aus der Zeichenfolge "File" in einem Dialogfeld übersetzen. Wenn Sie mehr als eine Zeichenfolge mit dem gleichen Namen verwenden möchten, verwenden Sie für jede verschiedenen Zeichenfolgen-IDs.  
+-   Zeichenfolgenressourcen nicht wiederverwendet werden. Abhängig von der Zielsprache möglicherweise eine angegebene Zeichenfolge eine unterschiedliche Bedeutung, wenn übersetzt. Hauptmenü "Datei" in der Anwendung könnte z. B. unterschiedlich aus der Zeichenfolge "File" in einem Dialogfeld übersetzen. Wenn Sie mehr als eine Zeichenfolge mit dem gleichen Namen verwenden müssen, verwenden Sie für jeden anderen Zeichenfolgen-IDs.  
   
--   Möglicherweise möchten herausfinden, ob Ihre Anwendung unter einem MBCS-fähigen Betriebssystem ausgeführt wird. Zu diesem Zweck legen Sie ein Flag beim Programmstart; verlassen Sie sich nicht auf API-Aufrufe.  
+-   Sie möchten herausfinden, ob Ihre Anwendung auf einem MBCS-fähigen Betriebssystem ausgeführt wird. Zu diesem Zweck legen Sie ein Flag beim Programmstart; verlassen Sie sich nicht auf die API-Aufrufe.  
   
--   Beim Entwerfen von Dialogfeldern können Sie ca. 30 % zusätzliche Leerzeichen am Ende des statischen Text-Steuerelemente für die MBCS-Übersetzung.  
+-   Beim Entwurf von Dialogfeldern können Sie etwa 30 Prozent zusätzliche Leerzeichen am Ende von statischen Steuerelementen für die MBCS-Übersetzung.  
   
--   Gehen Sie beim Auswählen von Schriftarten für Ihre Anwendung sein, da einige Schriftarten nicht auf allen Systemen verfügbar sind.  
+-   Achten Sie darauf beim Auswählen von Schriftarten für Ihre Anwendung, da es sich bei einigen Schriftarten nicht auf allen Systemen verfügbar sind.  
   
--   Verwenden Sie bei der Auswahl der Schriftart für Dialogfelder [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) anstelle von MS Sans Serif oder Helvetica. MS Shell Dlg wird durch die richtige Schriftart vom System vor dem Erstellen des Dialogfelds "" ersetzt. Die Verwendung von MS Shell Dlg wird sichergestellt, dass alle Änderungen im Betriebssystem für den Umgang mit dieser Schriftart automatisch zur Verfügung stehen. (MFC ersetzt MS Shell Dlg durch DEFAULT_GUI_FONT oder Systemschriftart unter Windows 95, Windows 98 und Windows NT 4, da diese Systeme MS Shell Dlg nicht ordnungsgemäß behandeln.)  
+-   Verwenden Sie bei der Auswahl der Schriftart für Dialogfelder [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) anstelle von MS Sans Serif oder Helvetica. MS Shell Dlg wird durch die richtige Schriftart vom System ersetzt, vor dem Erstellen des Dialogfelds. Mithilfe von MS Shell Dlg wird sichergestellt, dass alle Änderungen an der das Betriebssystem für den Umgang mit dieser Schriftart automatisch zur Verfügung stehen. (MFC haben MS Shell Dlg DEFAULT_GUI_FONT oder Systemschriftart auf Windows 95, Windows 98 und Windows NT 4 ersetzt, da diese Systeme MS Shell Dlg nicht ordnungsgemäß behandelt werden.)  
   
--   Beim Entwerfen Ihrer Anwendung entscheiden Sie, welche Zeichenfolgen lokalisiert werden können. Im Zweifelsfall wird davon ausgegangen Sie, dass alle angegebene Zeichenfolge lokalisiert werden. Kombinieren Sie Zeichenfolgen, die lokalisiert werden können daher nicht mit denen, die nicht.  
+-   Beim Entwerfen Ihrer Anwendung entscheiden Sie, welche Zeichenfolgen lokalisiert werden können. Im Zweifelsfall wird davon ausgegangen Sie, dass jedes lokalisiert wird. Kombinieren Sie Zeichenfolgen, die lokalisiert werden können, nicht mit denjenigen, die nicht.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Tipps für die MBCS-Programmierung](../text/mbcs-programming-tips.md)   

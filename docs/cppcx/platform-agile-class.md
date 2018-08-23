@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: Agile-Klasse | Microsoft Docs'
+title: 'Platform:: Agile-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f552327156d9fc1abe5e921f3b59b1fb4132ff3d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092430"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596601"
 ---
 # <a name="platformagile-class"></a>Platform::Agile-Klasse
 Stellt ein Objekt dar, das über „MashalingBehavior=Standard“ als Agile-Objekt verfügt, das die Chancen für Threadingausnahmen zur Laufzeit erheblich verringert. `Agile<T>` ermöglicht es dem Nicht-Agile-Objekt, denselben oder einen anderen Thread aufzurufen oder von diesem aufgerufen zu werden. Weitere Informationen finden Sie unter [Threading und Marshalling](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -42,7 +42,7 @@ class Agile;
  Der Typname für die Nicht-Agile-Klasse.  
   
 ### <a name="remarks"></a>Hinweise  
- Die meisten in Windows-Runtime-Klassen sind agile. Ein Agile-Objekt kann ein „in-proc“- oder „out-of-proc“-Objekt in demselben oder einem anderen Thread aufrufen oder von diesem aufgerufen werden. Wenn es sich nicht um ein Agile-Objekt handelt, schließen Sie das Nicht-Agile-Objekt in ein `Agile<T>` -Objekt ein, das agil ist. Dann kann das `Agile<T>` -Objekt gemarshallt und das zugrunde liegende Nicht-Agile-Objekt verwendet werden.  
+ Die meisten Klassen in der Windows-Runtime sind agile. Ein Agile-Objekt kann ein „in-proc“- oder „out-of-proc“-Objekt in demselben oder einem anderen Thread aufrufen oder von diesem aufgerufen werden. Wenn es sich nicht um ein Agile-Objekt handelt, schließen Sie das Nicht-Agile-Objekt in ein `Agile<T>` -Objekt ein, das agil ist. Dann kann das `Agile<T>` -Objekt gemarshallt und das zugrunde liegende Nicht-Agile-Objekt verwendet werden.  
   
  Die `Agile<T>` -Klasse ist eine systemeigene C++-Standardklasse und erfordert `agile.h`. Es stellt das Nicht-Agile-Objekt und den *Kontext*des Agile-Objekts dar. Der Kontext gibt das Threadmodell und Marshallingverhalten eines Agile-Objekts an. Das Betriebssystem verwendet den Kontext, um zu ermitteln, wie ein Objekt gemarshallt wird.  
   
@@ -77,9 +77,9 @@ class Agile;
  `Agile`  
   
 ### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
+ **Unterstützter Client (Min.):** Windows 8  
   
- **Unterstützter Server:** Windows Server 2012  
+ **Unterstützter Server (Min.):** Windows Server 2012  
   
  **Namespace:** Platform  
   
@@ -139,7 +139,7 @@ Gibt den Handle auf das Objekt zurück, das vom aktuellen Agile-Objekt dargestel
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle auf das Objekt, das vom aktuellen Agile-Objekt dargestellt wird.  
   
- Der Typ des Rückgabewerts ist eigentlich ein nicht genannter interner Typ. Eine einfache Möglichkeit, den Rückgabewert aufzunehmen, die es einer Variablen zuzuweisen, die mit deklariert wird ist das **Auto** typableitungsschlüsselwort. Beispielsweise `auto x = myAgileTvariable->Get();`.  
+ Der Typ des Rückgabewerts ist eigentlich ein nicht genannter interner Typ. Eine einfache Möglichkeit, den zurückgegebenen Wert aufzunehmen, ist es einer Variablen zuweisen, die mit deklariert ist die **automatisch** typableitungs-Schlüsselwort. Beispielsweise `auto x = myAgileTvariable->Get();`.  
   
 ## <a name="getaddressof"></a>  Agile:: getaddressof-Methode
 Initialisiert das aktuelle Agile-Objekt neu und gibt dann die Adresse eines Handles für ein Objekt vom Typ `T`zurück.  
@@ -157,10 +157,10 @@ throw();
  Ein Typ, der durch den Typnamenparameter der Vorlage spezifiziert wird.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Adresse eines Handles auf ein Objekt vom Typ `T`.  
+ Die Adresse eines Handles für ein Objekt des Typs `T`.  
   
 ### <a name="remarks"></a>Hinweise  
- Dieser Vorgang gibt die aktuelle Darstellung eines Objekts vom Typ `T`, sofern vorhanden, werden die Agile-Objekt Datenmember initialisiert; der aktuelle threadingkontext abgerufen und gibt dann die Adresse einer Handle-to-Object-Variablen, die darstellen, können eine nicht-agile-Objekt. Damit eine Agile-Klasseninstanz ein Objekt darstellen, verwenden den Zuweisungsoperator ([Agile:: =](#operator-assign)) auf das Objekt auf der Agile-Klasseninstanz zuzuweisen.  
+ Dieser Vorgang gibt die aktuelle Darstellung eines Objekts vom Typ `T`, falls vorhanden; Datenmember für das Agile-Objekt initialisiert, erhält der aktuelle threadingkontext abgerufen; und dann gibt die Adresse einer Handle-to-Object-Variablen, die darstellen, können eine nicht-agile-Objekt. Damit eine Agile-Klasseninstanz ein Objekt dargestellt wird, verwenden Sie den Zuweisungsoperator ([Agile:: =](#operator-assign)) auf das Objekt für die Agile-Klasseninstanz zuzuweisen.  
 
 ## <a name="getaddressofforinout"></a>  Agile:: getaddressofforinout-Methode
 Gibt die Adresse eines Handles zum Objekt zurück, das vom aktuellen Agile-Objekt dargestellt wird.  
@@ -211,7 +211,7 @@ const throw();
 ### <a name="return-value"></a>Rückgabewert  
  Ein Handle auf das Objekt, das vom aktuellen Agile-Objekt dargestellt wird.  
   
- Dieser Operator gibt tatsächlich einen nicht veröffentlichten internen Typ zurück. Eine einfache Möglichkeit, den Rückgabewert aufzunehmen, die es einer Variablen zuzuweisen, die mit deklariert wird ist das **Auto** typableitungsschlüsselwort.  
+ Dieser Operator gibt tatsächlich einen nicht veröffentlichten internen Typ zurück. Eine einfache Möglichkeit, den zurückgegebenen Wert aufzunehmen, ist es einer Variablen zuweisen, die mit deklariert ist die **automatisch** typableitungs-Schlüsselwort.  
 
 ## <a name="operator-assign"></a>  Agile:: Operator =-Operator
 Weist das angegebene Objekt dem aktuellen Agile-Objekt zu.  
@@ -255,4 +255,4 @@ Weist das angegebene Objekt dem aktuellen Agile-Objekt zu.
  Der Zuweisungsvorgang speichert automatisch den Kontext des aktuellen Agile-Objekts. 
        
 ## <a name="see-also"></a>Siehe auch  
- [Platform-Namespace](platform-namespace-c-cx.md)
+ [Plattform-Namespace](platform-namespace-c-cx.md)

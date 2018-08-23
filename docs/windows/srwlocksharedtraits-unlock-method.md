@@ -17,34 +17,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b7601504c8d1caec02df4b70f97893848e7ff1a5
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: e00b898fc60953896a9c0d2b7a124e195d3bcbf1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012598"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593167"
 ---
 # <a name="srwlocksharedtraitsunlock-method"></a>SRWLockSharedTraits::Unlock-Methode
-Exklusive Kontrolle über den angegebenen Versionen `SRWLock` Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-inline static void Unlock(  
-   _In_ Type srwlock  
-);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *SRWLOCK*  
- Ein Handle für ein `SRWLock` Objekt.  
-  
-## <a name="return-value"></a>Rückgabewert  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
-  
-## <a name="see-also"></a>Siehe auch  
- [SRWLockSharedTraits-Struktur](../windows/srwlocksharedtraits-structure.md)
+
+Exklusive Kontrolle über den angegebenen Versionen `SRWLock` Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+inline static void Unlock(
+   _In_ Type srwlock
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*SRWLOCK*  
+Ein Handle für ein `SRWLock` Objekt.
+
+## <a name="return-value"></a>Rückgabewert
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+
+## <a name="see-also"></a>Siehe auch
+
+[SRWLockSharedTraits-Struktur](../windows/srwlocksharedtraits-structure.md)

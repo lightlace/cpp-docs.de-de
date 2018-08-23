@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: Type-Klasse | Microsoft Docs'
+title: 'Platform:: Type Class | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc70f0a0f714cb6f5a2f4b28d922308d8fe4d645
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e4d2931df50c6bfac126bc8e8ab1c70d61bdfe39
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255537"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596700"
 ---
 # <a name="platformtype-class"></a>Platform::Type-Klasse
-Enthält Laufzeitinformationen über einen Typ, insbesondere einen Zeichenfolgennamen und einen Typecode. Durch den Aufruf von [GetType](../cppcx/platform-object-class.md#gettype) für ein Objekt oder oder über die [Typeid](../windows/typeid-cpp-component-extensions.md) Operator auf eine Klassen- oder Strukturnamen.  
+Enthält Laufzeitinformationen über einen Typ, insbesondere einen Zeichenfolgennamen und einen Typecode. Durch den Aufruf [Object:: GetType](../cppcx/platform-object-class.md#gettype) auf ein beliebiges Objekt oder die [Typeid](../windows/typeid-cpp-component-extensions.md) Operator auf eine Klasse oder Struktur.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,14 +35,14 @@ public ref class Platform::Type :
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Die `Type` -Klasse ist in Anwendungen nützlich, in denen die Verarbeitung über eine `if` - oder `switch` -Anweisung erfolgt, die sich je nach Laufzeittyp eines Objekts verzweigt. Der Code, der die Kategorie eines Typs beschreibt wird abgerufen, wobei die [Type:: GetTypeCode](#gettypecode) Memberfunktion.  
+ Die `Type` -Klasse ist in Anwendungen nützlich, in denen die Verarbeitung über eine `if` - oder `switch` -Anweisung erfolgt, die sich je nach Laufzeittyp eines Objekts verzweigt. Der Typcode, der die Kategorie eines Typs beschreibt wird abgerufen, mit der [Type:: GetTypeCode](#gettypecode) Member-Funktion.  
   
 ## <a name="public-methods"></a>Öffentliche Methoden  
   
 |||  
 |-|-|  
 |[Type::GetTypeCode-Methode](#gettypecode)|Gibt einen [Platform::TypeCode-Enumeration](../cppcx/platform-typecode-enumeration.md) -Wert für das Objekt zurück.| 
-|[Type::ToString-Methode](#tostring)|Gibt den Namen des Typs entsprechend den Angaben in seinen Metadaten zurück.| 
+|[Type::ToString-Methode](#tostring)|Gibt den Namen des Typs in den Metadaten angegeben.| 
 
  
 ## <a name="public-properties"></a>Öffentliche Eigenschaften  
@@ -59,9 +59,9 @@ public ref class Platform::Type :
 |[Operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Ermöglicht die Konvertierung von `Platform::Type` in `Windows::UI::Xaml::Interop::TypeName`.|  
   
 ### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
+ **Unterstützter Client (Min.):** Windows 8  
   
- **Unterstützter Server:** Windows Server 2012  
+ **Unterstützter Server (Min.):** Windows Server 2012  
   
  **Namespace:** Platform  
   
@@ -69,7 +69,7 @@ public ref class Platform::Type :
 
  
 ## <a name="fullname"></a> Type::FullName-Eigenschaft
-Ruft den vollqualifizierten Namen des aktuellen Typs im Formular `Namespace.Type`.  
+Ruft ab, der den vollqualifizierten Namen des aktuellen Typs im Formular `Namespace.Type`.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -120,7 +120,7 @@ Platform::String^ ToString();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Name des Typs entsprechend den Angaben in seinen Metadaten.    
+ Ein Name des Typs in den Metadaten angegeben.    
   
 ## <a name="see-also"></a>Siehe auch  
- [Plattformnamespace](../cppcx/platform-namespace-c-cx.md)
+ [Platform-namespace](../cppcx/platform-namespace-c-cx.md)

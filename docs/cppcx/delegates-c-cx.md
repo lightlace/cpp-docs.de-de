@@ -1,23 +1,23 @@
 ---
-title: Delegaten (C + c++ / CX) | Microsoft Docs
+title: Delegaten (C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9936280d25933afb787d883139725b5a7044db6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 050b11050cc280fc6d3aa8900487442bd723a57f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092387"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592772"
 ---
 # <a name="delegates-ccx"></a>Delegaten (C++/CX)
-Die `delegate` Schlüsselwort wird verwendet, um einen Referenztyp zu deklarieren, die die Windows-Runtime-Entsprechung eines Funktionsobjekts in Standard-c++ ist. Eine Delegatdeklaration ähnlich einer Funktionssignatur; sie gibt den Rückgabetyp und die Parametertypen an, über die die umschlossene Funktion verfügen muss. Dies ist eine benutzerdefinierte Delegatdeklaration:  
+Die `delegate` Schlüsselwort wird verwendet, um einen Verweistyp deklarieren, die die Windows-Runtime-Entsprechung eines Funktionsobjekts in Standard-c++ ist. Eine Delegatdeklaration ähnlich einer Funktionssignatur; sie gibt den Rückgabetyp und die Parametertypen an, über die die umschlossene Funktion verfügen muss. Dies ist eine benutzerdefinierte Delegatdeklaration:  
   
 ```cpp  
      public delegate void PrimeFoundHandler(int result);  
@@ -29,10 +29,10 @@ Die `delegate` Schlüsselwort wird verwendet, um einen Referenztyp zu deklariere
 event PrimeFoundHandler^ primeFoundEvent;  
 ```  
   
- Verwenden Sie beim Deklarieren von Delegaten, die verfügbar gemacht werden Clients über die anwendungsbinärdateischnittstelle der Windows-Runtime, [Windows::Foundation::TypedEventHandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx). Dieser Delegat besitzt vordefinierte Proxy- und Stubbinärdateien, die es ermöglichen, dass er von JavaScript-Clients verwendet wird.  
+ Verwenden Sie beim Deklarieren von Delegaten, die verfügbar gemacht werden für Clients über die anwendungsbinärdateischnittstelle der Windows-Runtime, [Windows::Foundation::TypedEventHandler\<TSender, TResult >](http://msdn.microsoft.com/library/windows/apps/br225997.aspx). Dieser Delegat besitzt vordefinierte Proxy- und Stubbinärdateien, die es ermöglichen, dass er von JavaScript-Clients verwendet wird.  
   
 ## <a name="consuming-delegates"></a>Verwenden von Delegaten  
- Wenn Sie eine universelle Windows-Plattform-app erstellen, arbeiten Sie häufig mit Delegaten als Typ eines Ereignisses, das eine Windows-Runtime-Klasse verfügbar macht. Um ein Ereignis zu abonnieren, erstellen Sie eine Instanz des Delegattyps durch Angabe einer Funktion (oder Lambda), die mit der Delegatsignatur übereinstimmt. Verwenden Sie dann den `+=` -Operator, um das Delegatobjekt an den Ereignismember in der Klasse zu übergeben. Dies wird als Abonnieren des Ereignisses bezeichnet. Wenn die Klasseninstanz das Ereignis auslöst, wird Ihre Funktion aufgerufen, zusammen mit allen anderen Handlern, die von Ihrem Objekt oder anderen Objekten hinzugefügt wurden.  
+ Wenn Sie eine universelle Windows-Plattform-app erstellen, arbeiten Sie häufig mit einem Delegaten als Typ eines Ereignisses, das eine Windows-Runtime-Klasse verfügbar macht. Um ein Ereignis zu abonnieren, erstellen Sie eine Instanz des Delegattyps durch Angabe einer Funktion (oder Lambda), die mit der Delegatsignatur übereinstimmt. Verwenden Sie dann den `+=` -Operator, um das Delegatobjekt an den Ereignismember in der Klasse zu übergeben. Dies wird als Abonnieren des Ereignisses bezeichnet. Wenn die Klasseninstanz das Ereignis auslöst, wird Ihre Funktion aufgerufen, zusammen mit allen anderen Handlern, die von Ihrem Objekt oder anderen Objekten hinzugefügt wurden.  
   
 > [!TIP]
 >  Visual Studio übernimmt viel Arbeit für Sie, wenn Sie einen Ereignishandler erstellen. Wenn Sie beispielsweise einen Ereignishandler in XAML-Markup angeben, wird eine QuickInfo angezeigt. Wenn Sie die QuickInfo auswählen, erstellt Visual Studio automatisch die Ereignishandlermethode und ordnet sie dem Ereignis in der Veröffentlichungsklasse zu.  
@@ -50,7 +50,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 > [!WARNING]
 >  Im Allgemeinen empfiehlt es sich bei einem Ereignishandler, eine benannte Funktion statt eines Lambda-Ausdrucks zu verwenden. Andernfalls müssen Sie sorgfältig darauf achten, Zirkelverweise zu vermeiden. Eine benannte Funktion übernimmt den this-Zeiger als schwachen Verweis, ein Lambda den this-Zeiger allerdings als starken Verweis und erstellt einen Zirkelverweis. Weitere Informationen finden Sie unter [schwache Verweise und unterbrochene Zyklen](../cppcx/weak-references-and-breaking-cycles-c-cx.md).  
   
- Gemäß der Konvention verfügen Ereignishandler Delegatnamen, die von der Windows-Runtime definiert sind die Form * EventHandler, zum Beispiel RoutedEventHandler, SizeChangedEventHandler oder SuspendingEventHandler. Außerdem haben Ereignishandlerdelegaten zwei Parameter und geben "ungültig" zurück. In einem Delegaten, der keine Typparameter aufweist, ist der erste Parameter vom Typ [Platform::Object Class^](../cppcx/platform-object-class.md); er enthält einen Verweis auf den Absender, also das Objekt, das das Ereignis ausgelöst hat. Sie müssen es wieder in den ursprünglichen Typ umwandeln, bevor Sie das Argument in der Ereignishandlermethode verwenden. In einem Eventhandlerdelegaten, der über Typparameter verfügt, gibt der erste Typparameter den Typ des Absenders an und der zweite Parameter ist ein Handle auf eine Verweisklasse, die Informationen zum Ereignis enthält. Gemäß der Konvention Klasse heißt \*EventArgs. Beispielsweise verfügt ein RoutedEventHandler-Delegat über einen zweiten Parameter des Typs RoutedEventArgs^ und DragEventHander verfügt über einen zweiten Parameter des Typs DragEventArgs^.  
+ Gemäß der Konvention sind Ereignishandler Delegatnamen, die von der Windows-Runtime definiert sind, die Form * EventHandler, zum Beispiel RoutedEventHandler, SizeChangedEventHandler oder SuspendingEventHandler. Außerdem haben Ereignishandlerdelegaten zwei Parameter und geben "ungültig" zurück. In einem Delegaten, der keine Typparameter aufweist, ist der erste Parameter vom Typ [Platform::Object Class^](../cppcx/platform-object-class.md); er enthält einen Verweis auf den Absender, also das Objekt, das das Ereignis ausgelöst hat. Sie müssen es wieder in den ursprünglichen Typ umwandeln, bevor Sie das Argument in der Ereignishandlermethode verwenden. In einem Eventhandlerdelegaten, der über Typparameter verfügt, gibt der erste Typparameter den Typ des Absenders an und der zweite Parameter ist ein Handle auf eine Verweisklasse, die Informationen zum Ereignis enthält. Standardmäßig heißt diese Klasse \*EventArgs. Beispielsweise verfügt ein RoutedEventHandler-Delegat über einen zweiten Parameter des Typs RoutedEventArgs^ und DragEventHander verfügt über einen zweiten Parameter des Typs DragEventArgs^.  
   
  Gemäß der Konvention werden Delegaten, die den Code umschließen, der ausgeführt wird, wenn ein asynchroner Vorgang abgeschlossen ist, *CompletedHandler benannt. Diese Delegaten werden als Eigenschaften in der Klasse, nicht als Ereignisse definiert. Verwenden Sie deshalb nicht den `+=` -Operator, um sie zu abonnieren, sondern weisen der Eigenschaft nur ein Delegatobjekt zu.  
   
@@ -58,7 +58,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 >  C++ IntelliSense zeigt nicht die vollständige Signatur des Delegaten an; hilft Ihnen also nicht, den konkreten Typ des EventArgs-Parameters zu bestimmen. Um den Typ zu finden, können Sie zum **Objektkatalog** wechseln und sich die `Invoke` -Methode für den Delegaten ansehen.  
   
 ## <a name="creating-custom-delegates"></a>Erstellen von benutzerdefinierten Delegaten  
- Sie können eigene Delegaten, um Ereignishandler zu definieren oder Verbrauchern zu übergeben, benutzerdefinierte Funktionen für Ihre Windows-Runtime-Komponente ermöglichen definieren. Wie jeder andere Windows-Runtime-Typ kann ein Öffentlicher Delegat als generisch deklariert werden.  
+ Sie können Ihre eigenen Delegaten, Ereignishandler zu definieren oder zu Consumer übergeben benutzerdefinierter Funktionalität für Ihre Windows-Runtime-Komponente definieren. Wie jeder andere Windows-Runtime-Typ kann kein öffentlicher Delegat als generisch deklariert werden.  
   
 ### <a name="declaration"></a>Deklaration  
  Die Deklaration eines Delegaten ähnelt einer Funktionsdeklaration. Der Delegat ist hierbei jedoch ein Typ. In der Regel deklarieren Sie einen Delegaten im Namespace-Gültigkeitsbereich, Sie können jedoch auch eine Delegatdeklaration innerhalb einer Klassendeklaration schachteln. Der folgende Delegat kapselt jede Funktion, die eine `ContactInfo^` als Eingabe akzeptiert und einen `Platform::String^`zurückgibt.  
@@ -70,9 +70,9 @@ event PrimeFoundHandler^ primeFoundEvent;
  [!code-cpp[Cx_delegates#112](../cppcx/codesnippet/CPP/delegatesevents/class1.h#112)]  
   
 > [!NOTE]
->  Verwenden Sie das "^"-Symbol Wenn Sie auf den Delegattyp verweisen, ebenso, wie Sie mit Windows-Runtime Typ verweisen.  
+>  Verwenden Sie das "^" symbol, wenn Sie in den Delegattyp verweisen so, wie Sie mit einer beliebigen Windows-Laufzeit Typ verweisen.  
   
- Eine Ereignisdeklaration verfügt immer über einen Delegattyp. Dieses Beispiel zeigt eine typische delegattypsignatur Typsignatur in Windows-Runtime:  
+ Eine Ereignisdeklaration verfügt immer über einen Delegattyp. Dieses Beispiel zeigt eine typische delegattypsignatur Typsignatur in der Windows-Runtime:  
   
  [!code-cpp[cx_delegates#122](../cppcx/codesnippet/CPP/delegatesevents/class1.h#122)]  
   
@@ -86,7 +86,7 @@ event PrimeFoundHandler^ primeFoundEvent;
   
  [!code-cpp[Cx_delegates#114](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#114)]  
   
- Im nächsten Beispiel übergibt eine Client-app einen benutzerdefinierten Delegaten an eine öffentliche Methode in einer Windows-Runtime-Komponente, die den Delegaten mit jedem Element in ausführt eine `Vector`:  
+ Im nächsten Beispiel übergibt eine Client-app einen benutzerdefinierten Delegaten an eine öffentliche Methode in einer Windows-Runtime-Komponente, die den Delegaten für jedes Element im ausführt eine `Vector`:  
   
  [!code-cpp[Cx_delegates#118](../cppcx/codesnippet/CPP/clientapp/mainpage.xaml.cpp#118)]  
   
@@ -122,7 +122,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 ## <a name="delegates-and-threads"></a>Delegaten und Threads  
  Ein Delegat enthält, genau wie ein Funktionsobjekt, Code, der zu einem späteren Zeitpunkt ausgeführt wird. Wenn der Code, der den Delegaten erstellt und übergibt, und die Funktion, die den Delegaten akzeptiert und ausführt, im selben Thread ausgeführt werden, dann ist der Vorgang relativ einfach. Ist dieser Thread der UI-Thread, kann der Delegat Benutzeroberflächenobjekte wie XAML-Steuerelemente direkt bearbeiten.  
   
- Lädt eine Client-app eine Windows-Runtime-Komponente, die in einem Singlethread-Apartment läuft, und ein Delegat für diese Komponente bietet, wird der Delegat standardmäßig direkt im STA-Thread aufgerufen. Die meisten Windows-Runtime-Komponenten können entweder in STA oder MTA ausgeführt.  
+ Wenn Sie eine Client-app eine Komponente für Windows-Runtime geladen wird, die in einem Singlethread-Apartment ausgeführt wird, und stellt einen Delegaten für diese Komponente bereit, wird der Delegat standardmäßig direkt auf dem STA-Thread aufgerufen. Die meisten Windows-Runtime-Komponenten können entweder in STA oder MTA ausführen.  
   
  Wenn der Code, der den Delegaten ausführt, in einem anderen Thread ausgeführt wird (beispielsweise im Kontext eines concurrency::task-Objekts), dann sind Sie für das Synchronisieren des Zugriffs auf freigegebene Daten verantwortlich. Wenn der Delegat beispielsweise einen Verweis auf einen Vector enthält, und ein XAML-Steuerelement verfügt über einen Verweis auf denselben Vector, müssen Sie Schritte unternehmen, um Deadlocks oder Racebedingungen zu vermeiden. Diese können auftreten, wenn sowohl der Delegat als auch das XAML-Steuerelement versuchen, gleichzeitig auf den Vector zuzugreifen. Sie müssen außerdem darauf achten, dass der Delegat nicht versucht, durch Verweise lokale Variablen aufzuzeichnen, die vor Aufruf des Delegaten ungültig werden.  
   
@@ -132,5 +132,5 @@ event PrimeFoundHandler^ primeFoundEvent;
   
 ## <a name="see-also"></a>Siehe auch  
  [Typsystem](../cppcx/type-system-c-cx.md)   
- [Visual C++-Sprachreferenz](../cppcx/visual-c-language-reference-c-cx.md)   
+ [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)

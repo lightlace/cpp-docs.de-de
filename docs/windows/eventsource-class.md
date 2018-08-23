@@ -17,60 +17,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f740cbfb8aea1a0e2378d1d2ab42d3c88c77137
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 8805547c5803ae665178330063e6b77b1b3c662e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644767"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596210"
 ---
 # <a name="eventsource-class"></a>EventSource-Klasse
-Stellt ein nicht-agile-Ereignis. **EventSource** Member-Funktionen hinzufügen, entfernen und die Ereignishandler aufruft. Verwenden Sie für agile-Ereignisse [AgileEventSource](agileeventsource-class.md). 
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-template<typename TDelegateInterface>  
-class EventSource;  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *TDelegateInterface*  
- Die Schnittstelle, ein Delegat, der einen Ereignishandler darstellt.  
-  
-## <a name="members"></a>Member  
-  
-### <a name="public-constructors"></a>Öffentliche Konstruktoren  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[EventSource::EventSource-Konstruktor](../windows/eventsource-eventsource-constructor.md)|Initialisiert eine neue Instanz der dem **EventSource** Klasse.|  
-  
-### <a name="public-methods"></a>Öffentliche Methoden  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|[EventSource::Add-Methode](../windows/eventsource-add-method.md)|Fügt den Ereignishandler, die durch die Schnittstelle für die angegebenen Delegaten dargestellt wird, auf den Satz von Ereignishandlern für die aktuelle **EventSource** Objekt.|  
-|[EventSource::GetSize-Methode](../windows/eventsource-getsize-method.md)|Ruft die Anzahl der aktuellen zugeordneten Ereignishandler **EventSource** Objekt|  
-|[EventSource::InvokeAll-Methode](../windows/eventsource-invokeall-method.md)|Ruft jede Ereignishandler verknüpft ist, mit dem aktuellen **EventSource** -Objekt mit den angegebenen Argumenttypen und der Argumente.|  
-|[EventSource::Remove-Methode](../windows/eventsource-remove-method.md)|Löscht den Ereignishandler, die durch das angegebene Ereignis Registrierungstoken dargestellt wird, aus dem Satz von Ereignishandlern verknüpft ist, mit dem aktuellen **EventSource** Objekt.|  
-  
-### <a name="protected-data-members"></a>Geschützte Datenmember  
-  
-|name|Beschreibung|  
-|----------|-----------------|  
-|[EventSource::addRemoveLock_-Datenmember](../windows/eventsource-addremovelock-data-member.md)|Synchronisiert den Zugriff auf die [Targets_](../windows/eventsource-targets-data-member.md) Arrays beim Hinzufügen, entfernen oder Ereignishandler aufrufen.|  
-|[EventSource::targets_-Datenmember](../windows/eventsource-targets-data-member.md)|Ein Array von einem oder mehreren Ereignishandlern.|  
-|[EventSource::targetsPointerLock_-Datenmember](../windows/eventsource-targetspointerlock-data-member.md)|Synchronisiert den Zugriff auf interne Datenmember, die auch bei der Ereignishandler für diese Ereignisquelle hinzugefügt, entfernt oder aufgerufen.|  
-  
-## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
- `EventSource`  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** event.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)  
- [AgileEventSource-Klasse](agileeventsource-class.md)
+
+Stellt ein nicht-agile-Ereignis. **EventSource** Member-Funktionen hinzufügen, entfernen und die Ereignishandler aufruft. Verwenden Sie für agile-Ereignisse [AgileEventSource](agileeventsource-class.md).
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+template<typename TDelegateInterface>
+class EventSource;
+```
+
+### <a name="parameters"></a>Parameter
+
+*TDelegateInterface*  
+Die Schnittstelle, ein Delegat, der einen Ereignishandler darstellt.
+
+## <a name="members"></a>Member
+
+### <a name="public-constructors"></a>Öffentliche Konstruktoren
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[EventSource::EventSource-Konstruktor](../windows/eventsource-eventsource-constructor.md)|Initialisiert eine neue Instanz der dem **EventSource** Klasse.|
+
+### <a name="public-methods"></a>Öffentliche Methoden
+
+|Name|Beschreibung|
+|----------|-----------------|
+|[EventSource::Add-Methode](../windows/eventsource-add-method.md)|Fügt den Ereignishandler, die durch die Schnittstelle für die angegebenen Delegaten dargestellt wird, auf den Satz von Ereignishandlern für die aktuelle **EventSource** Objekt.|
+|[EventSource::GetSize-Methode](../windows/eventsource-getsize-method.md)|Ruft die Anzahl der aktuellen zugeordneten Ereignishandler **EventSource** Objekt|
+|[EventSource::InvokeAll-Methode](../windows/eventsource-invokeall-method.md)|Ruft jede Ereignishandler verknüpft ist, mit dem aktuellen **EventSource** -Objekt mit den angegebenen Argumenttypen und der Argumente.|
+|[EventSource::Remove-Methode](../windows/eventsource-remove-method.md)|Löscht den Ereignishandler, die durch das angegebene Ereignis Registrierungstoken dargestellt wird, aus dem Satz von Ereignishandlern verknüpft ist, mit dem aktuellen **EventSource** Objekt.|
+
+### <a name="protected-data-members"></a>Geschützte Datenmember
+
+|name|Beschreibung|
+|----------|-----------------|
+|[EventSource::addRemoveLock_-Datenmember](../windows/eventsource-addremovelock-data-member.md)|Synchronisiert den Zugriff auf die [Targets_](../windows/eventsource-targets-data-member.md) Arrays beim Hinzufügen, entfernen oder Ereignishandler aufrufen.|
+|[EventSource::targets_-Datenmember](../windows/eventsource-targets-data-member.md)|Ein Array von einem oder mehreren Ereignishandlern.|
+|[EventSource::targetsPointerLock_-Datenmember](../windows/eventsource-targetspointerlock-data-member.md)|Synchronisiert den Zugriff auf interne Datenmember, die auch bei der Ereignishandler für diese Ereignisquelle hinzugefügt, entfernt oder aufgerufen.|
+
+## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
+
+`EventSource`
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** event.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)  
+[AgileEventSource-Klasse](agileeventsource-class.md)

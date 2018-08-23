@@ -17,76 +17,81 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ec69b663b2a866701c2587d3913d23310aaf997
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 32dec06fe458ceba26aaf9348d3fb12647a2a2ae
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40013261"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593702"
 ---
 # <a name="transmitas"></a>transmit_as
-Weist den Compiler einen dargestellten Typ, den Client- und serveranwendungen bearbeiten zu können, müssen, mit einem übertragenen Typ zuordnen.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-[ transmit_as(  
-   type  
-) ]  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *Typ*  
- Gibt den Datentyp, der zwischen Client und Server übertragen werden.  
-  
-## <a name="remarks"></a>Hinweise  
- Die **Transmit_as** C++-Attribut hat die gleiche Funktionalität wie die [Transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL-Attribut.  
-  
-## <a name="example"></a>Beispiel  
- Der folgende Code veranschaulicht die Verwendung der der **Transmit_as** Attribut:  
-  
-```cpp  
-// cpp_attr_ref_transmit_as.cpp  
-// compile with: /LD  
-#include "windows.h"  
-[module(name="MyLibrary")];  
-  
-[export] typedef struct _TREE_NODE_TYPE {  
-unsigned short data;   
-struct _TREE_NODE_TYPE * left;  
-struct _TREE_NODE_TYPE * right;   
-} TREE_NODE_TYPE;  
-  
-[export] struct PACKED_NODE {  
-   unsigned short data;   // same as normal node  
-   int index;   // array index of parent  
-};  
-  
-// A left node recursive built array of  
-// the nodes in the tree.  Can be unpacked with  
-// that knowledge  
-[export] typedef struct _TREE_XMIT_TYPE {  
-   int count;  
-   [size_is(count)] PACKED_NODE node[];  
-} TREE_XMIT_TYPE;  
-  
-[transmit_as(TREE_XMIT_TYPE)] typedef TREE_NODE_TYPE * TREE_TYPE;  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
-  
-### <a name="attribute-context"></a>Attributkontext  
-  
-|||  
-|-|-|  
-|**Betrifft**|**typedef**|  
-|**Wiederholbar**|Nein|  
-|**Erforderliche Attribute**|Keiner|  
-|**Ungültige Attribute**|Keiner|  
-  
- Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [IDL-Attribute](../windows/idl-attributes.md)   
- [TypeDef, Enum, Union- und Struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)   
- [export](../windows/export.md)   
+
+Weist den Compiler einen dargestellten Typ, den Client- und serveranwendungen bearbeiten zu können, müssen, mit einem übertragenen Typ zuordnen.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+[ transmit_as(
+   type
+) ]
+```
+
+### <a name="parameters"></a>Parameter
+
+*Typ*  
+Gibt den Datentyp, der zwischen Client und Server übertragen werden.
+
+## <a name="remarks"></a>Hinweise
+
+Die **Transmit_as** C++-Attribut hat die gleiche Funktionalität wie die [Transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL-Attribut.
+
+## <a name="example"></a>Beispiel
+
+Der folgende Code veranschaulicht die Verwendung der der **Transmit_as** Attribut:
+
+```cpp
+// cpp_attr_ref_transmit_as.cpp
+// compile with: /LD
+#include "windows.h"
+[module(name="MyLibrary")];
+
+[export] typedef struct _TREE_NODE_TYPE {
+unsigned short data;
+struct _TREE_NODE_TYPE * left;
+struct _TREE_NODE_TYPE * right;
+} TREE_NODE_TYPE;
+
+[export] struct PACKED_NODE {
+   unsigned short data;   // same as normal node
+   int index;   // array index of parent
+};
+
+// A left node recursive built array of
+// the nodes in the tree.  Can be unpacked with
+// that knowledge
+[export] typedef struct _TREE_XMIT_TYPE {
+   int count;
+   [size_is(count)] PACKED_NODE node[];
+} TREE_XMIT_TYPE;
+
+[transmit_as(TREE_XMIT_TYPE)] typedef TREE_NODE_TYPE * TREE_TYPE;
+```
+
+## <a name="requirements"></a>Anforderungen
+
+### <a name="attribute-context"></a>Attributkontext
+
+|||
+|-|-|
+|**Betrifft**|**typedef**|
+|**Wiederholbar**|Nein|
+|**Erforderliche Attribute**|Keiner|
+|**Ungültige Attribute**|Keiner|
+
+Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontexte](../windows/attribute-contexts.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[IDL-Attribute](../windows/idl-attributes.md)  
+[typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
+[export](../windows/export.md)  

@@ -15,33 +15,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fc8f919dcec994be5d4f0300e9c96dde95895e16
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 7045229cc15304a88253f97e1ad3c9f171f139a0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39608520"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597127"
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator=-Operator
-Verschiebt den Wert eines anderen **HStringReference** -Objekt mit dem aktuellen **HStringReference** Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
+
+Verschiebt den Wert eines anderen **HStringReference** -Objekt mit dem aktuellen **HStringReference** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 HStringReference& operator=(HStringReference&& other) throw()  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *other*  
- Eine vorhandene **HStringReference** Objekt.  
-  
-## <a name="remarks"></a>Hinweise  
- Der Wert des vorhandenen *andere* Objekt kopiert wird, mit dem aktuellen **HStringReference** -Objekt, und klicken Sie dann die *andere* -Objekt zerstört wird.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HStringReference-Klasse](../windows/hstringreference-class.md)
+```
+
+### <a name="parameters"></a>Parameter
+
+*other*  
+Eine vorhandene **HStringReference** Objekt.
+
+## <a name="remarks"></a>Hinweise
+
+Der Wert des vorhandenen *andere* Objekt kopiert wird, mit dem aktuellen **HStringReference** -Objekt, und klicken Sie dann die *andere* -Objekt zerstört wird.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HStringReference-Klasse](../windows/hstringreference-class.md)

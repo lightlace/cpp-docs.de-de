@@ -17,39 +17,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 65e8576f069cce7d7aec2eae18ad577820ca93a4
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: a13c5b48a7e242f47903fda038331fd126832dcf
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39644741"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592230"
 ---
 # <a name="eventsourceadd-method"></a>EventSource::Add-Methode
-Fügt den Ereignishandler, die durch die Schnittstelle für die angegebenen Delegaten dargestellt wird, auf den Satz von Ereignishandlern für die aktuelle **EventSource** Objekt.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-HRESULT Add(  
-   _In_ TDelegateInterface* delegateInterface,  
-   _Out_ EventRegistrationToken* token  
-);  
-```  
-  
-### <a name="parameters"></a>Parameter  
- *delegateInterface*  
- Die Schnittstelle an ein Delegatobjekt, das einen Ereignishandler darstellt.  
-  
- *token*  
- Wenn dieser Vorgang abgeschlossen ist, ein Handle, das das Ereignis darstellt. Verwenden Sie dieses Token als Parameter an die ["Remove()""](../windows/eventsource-remove-method.md) Methode, um den Ereignishandler zu verwerfen.  
-  
-## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** event.h  
-  
- **Namespace:** Microsoft::WRL
- 
- ## <a name="see-also"></a>Siehe auch
- [EventSource-Klasse](../windows/eventsource-class.md)
+
+Fügt den Ereignishandler, die durch die Schnittstelle für die angegebenen Delegaten dargestellt wird, auf den Satz von Ereignishandlern für die aktuelle **EventSource** Objekt.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+HRESULT Add(
+   _In_ TDelegateInterface* delegateInterface,
+   _Out_ EventRegistrationToken* token
+);
+```
+
+### <a name="parameters"></a>Parameter
+
+*delegateInterface*  
+Die Schnittstelle an ein Delegatobjekt, das einen Ereignishandler darstellt.
+
+*token*  
+Wenn dieser Vorgang abgeschlossen ist, ein Handle, das das Ereignis darstellt. Verwenden Sie dieses Token als Parameter an die ["Remove()""](../windows/eventsource-remove-method.md) Methode, um den Ereignishandler zu verwerfen.
+
+## <a name="return-value"></a>Rückgabewert
+
+S_OK, wenn erfolgreich; andernfalls ein HRESULT, das den Fehler angibt.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** event.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+[EventSource-Klasse](../windows/eventsource-class.md)

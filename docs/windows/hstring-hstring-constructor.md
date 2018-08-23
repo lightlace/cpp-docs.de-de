@@ -15,39 +15,44 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96b77ec87e3219206d353f56293fc201c46f5d7e
-ms.sourcegitcommit: d5d6bb9945c3550b8e8864b22b3a565de3691fde
+ms.openlocfilehash: 80af8f463d6cd1af631c6cb37c0239e7a9e85c3f
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39568770"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595884"
 ---
 # <a name="hstringhstring-constructor"></a>HString::HString-Konstruktor
-Initialisiert eine neue Instanz der dem **HString** Klasse.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-HString(HSTRING hstr = nullptr) throw();  
-HString(HString&& other) throw();  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- *HSTR*  
- Ein HSTRING-Handle.  
-  
- *other*  
- Eine vorhandene **HString** Objekt.  
-  
-## <a name="remarks"></a>Hinweise  
- Der erste Konstruktor initialisiert eine neue **HString** -Objekt, das leer ist.  
-  
- Der zweite Konstruktor initialisiert eine neue **HString** Objekt, das den Wert des vorhandenen *andere* Parameter, und klicken Sie dann zerstört die *andere* Parameter.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HString-Klasse](../windows/hstring-class.md)
+
+Initialisiert eine neue Instanz der dem **HString** Klasse.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+HString(HSTRING hstr = nullptr) throw();
+HString(HString&& other) throw();
+```
+
+#### <a name="parameters"></a>Parameter
+
+*HSTR*  
+Ein HSTRING-Handle.
+
+*other*  
+Eine vorhandene **HString** Objekt.
+
+## <a name="remarks"></a>Hinweise
+
+Der erste Konstruktor initialisiert eine neue **HString** -Objekt, das leer ist.
+
+Der zweite Konstruktor initialisiert eine neue **HString** Objekt, das den Wert des vorhandenen *andere* Parameter, und klicken Sie dann zerstört die *andere* Parameter.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HString-Klasse](../windows/hstring-class.md)

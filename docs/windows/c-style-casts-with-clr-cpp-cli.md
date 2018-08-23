@@ -15,157 +15,161 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f22ca2b111cd8e408047bc051f16b6f01694b71e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 28a92f115e2d5fdd3185285f245abf6d282efa7a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39641488"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595005"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>C-stilartige Umwandlungen mit /clr (C++/CLI)
-Das folgende Thema gilt nur für die Common Language Runtime.  
-  
- Wenn mit CLR-Typen verwendet wird, versucht der Compiler Umwandlung im C-Format in eines der Umwandlungen zurückzuführen, die unten aufgeführten, in der folgenden Reihenfolge zugeordnet:  
-  
-1.  const_cast  
-  
-2.  safe_cast  
-  
-3.  "safe_cast" und "const_cast"  
-  
-4.  static_cast  
-  
-5.  "static_cast" plus "const_cast"  
-  
- Wenn keines der oben aufgeführten Umwandlungen gültig ist und den Typ des Ausdrucks und den Typ des CLR-Verweistypen sind, wird eine laufzeitüberprüfung (Castclass MSIL-Anweisung) Umwandlung im C-Stil zugeordnet. Andernfalls wird eine Umwandlung im C-Stil ist ungültig, und gibt der Compiler einen Fehler.  
-  
-## <a name="remarks"></a>Hinweise  
- Eine Umwandlung im C-Stil wird nicht empfohlen. Beim Kompilieren mit [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md), verwenden Sie ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md).  
-  
- Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"const_cast"**.  
-  
-```cpp  
-// cstyle_casts_1.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-ref struct R {};  
-int main() {  
-   const R^ constrefR = gcnew R();  
-   R^ nonconstR = (R^)(constrefR);   
-}  
-```  
-  
- Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"safe_cast"**.  
-  
-```cpp  
-// cstyle_casts_2.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   Object ^ o = "hello";  
-   String ^ s = (String^)o;  
-}  
-```  
-  
- Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"safe_cast"** plus **"const_cast"**.  
-  
-```cpp  
-// cstyle_casts_3.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-ref struct R {};  
-ref struct R2 : public R {};  
-  
-int main() {  
-   const R^ constR2 = gcnew R2();  
-   try {  
-   R2^ b2DR = (R2^)(constR2);  
-   }  
-   catch(InvalidCastException^ e) {  
-      System::Console::WriteLine("Invalid Exception");  
-   }  
-}  
-```  
-  
- Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"static_cast"**.  
-  
-```cpp  
-// cstyle_casts_4.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-struct N1 {};  
-struct N2 {  
-   operator N1() {  
-      return N1();  
-   }  
-};  
-  
-int main() {  
-   N2 n2;  
-   N1 n1 ;  
-   n1 = (N1)n2;  
-}  
-```  
-  
- Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"static_cast"** plus **"const_cast"**.  
-  
-```cpp  
-// cstyle_casts_5.cpp  
-// compile with: /clr  
-using namespace System;  
-struct N1 {};  
-  
-struct N2 {  
-   operator const N1*() {  
-      static const N1 n1;  
-      return &n1;  
-   }  
-};  
-  
-int main() {  
-   N2 n2;  
-   N1* n1 = (N1*)(const N1*)n2;   // const_cast + static_cast  
-}  
-```  
-  
- Das folgende Beispiel zeigt eine Umwandlung im C-Format, das eine laufzeitüberprüfung zugeordnet.  
-  
-```cpp  
-// cstyle_casts_6.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-ref class R1 {};  
-ref class R2 {};  
-  
-int main() {  
-   R1^ r  = gcnew R1();  
-   try {  
-      R2^ rr = ( R2^)(r);  
-   }  
-   catch(System::InvalidCastException^ e) {  
-      Console::WriteLine("Caught expected exception");  
-   }  
-}  
-```  
-  
- Das folgende Beispiel zeigt ein ungültige C-Format umgewandelt, wodurch den Compiler einen Fehler ausgeben.  
-  
-```cpp  
-// cstyle_casts_7.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   String^s = S"hello";  
-   int i = (int)s;   // C2440  
-}  
-```  
-  
-## <a name="requirements"></a>Anforderungen  
- Compileroption: `/clr`  
-  
-## <a name="see-also"></a>Siehe auch  
- [Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)
+
+Das folgende Thema gilt nur für die Common Language Runtime.
+
+Wenn mit CLR-Typen verwendet wird, versucht der Compiler Umwandlung im C-Format in eines der Umwandlungen zurückzuführen, die unten aufgeführten, in der folgenden Reihenfolge zugeordnet:
+
+1. const_cast
+
+2. safe_cast
+
+3. "safe_cast" und "const_cast"
+
+4. static_cast
+
+5. "static_cast" plus "const_cast"
+
+Wenn keines der oben aufgeführten Umwandlungen gültig ist und den Typ des Ausdrucks und den Typ des CLR-Verweistypen sind, wird eine laufzeitüberprüfung (Castclass MSIL-Anweisung) Umwandlung im C-Stil zugeordnet. Andernfalls wird eine Umwandlung im C-Stil ist ungültig, und gibt der Compiler einen Fehler.
+
+## <a name="remarks"></a>Hinweise
+
+Eine Umwandlung im C-Stil wird nicht empfohlen. Beim Kompilieren mit [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md), verwenden Sie ["safe_cast"](../windows/safe-cast-cpp-component-extensions.md).
+
+Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"const_cast"**.
+
+```cpp
+// cstyle_casts_1.cpp
+// compile with: /clr
+using namespace System;
+
+ref struct R {};
+int main() {
+   const R^ constrefR = gcnew R();
+   R^ nonconstR = (R^)(constrefR);
+}
+```
+
+Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"safe_cast"**.
+
+```cpp
+// cstyle_casts_2.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   Object ^ o = "hello";
+   String ^ s = (String^)o;
+}
+```
+
+Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"safe_cast"** plus **"const_cast"**.
+
+```cpp
+// cstyle_casts_3.cpp
+// compile with: /clr
+using namespace System;
+
+ref struct R {};
+ref struct R2 : public R {};
+
+int main() {
+   const R^ constR2 = gcnew R2();
+   try {
+   R2^ b2DR = (R2^)(constR2);
+   }
+   catch(InvalidCastException^ e) {
+      System::Console::WriteLine("Invalid Exception");
+   }
+}
+```
+
+Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"static_cast"**.
+
+```cpp
+// cstyle_casts_4.cpp
+// compile with: /clr
+using namespace System;
+
+struct N1 {};
+struct N2 {
+   operator N1() {
+      return N1();
+   }
+};
+
+int main() {
+   N2 n2;
+   N1 n1 ;
+   n1 = (N1)n2;
+}
+```
+
+Das folgende Beispiel zeigt eine Umwandlung im C-Format, das zugeordnet, eine **"static_cast"** plus **"const_cast"**.
+
+```cpp
+// cstyle_casts_5.cpp
+// compile with: /clr
+using namespace System;
+struct N1 {};
+
+struct N2 {
+   operator const N1*() {
+      static const N1 n1;
+      return &n1;
+   }
+};
+
+int main() {
+   N2 n2;
+   N1* n1 = (N1*)(const N1*)n2;   // const_cast + static_cast
+}
+```
+
+Das folgende Beispiel zeigt eine Umwandlung im C-Format, das eine laufzeitüberprüfung zugeordnet.
+
+```cpp
+// cstyle_casts_6.cpp
+// compile with: /clr
+using namespace System;
+
+ref class R1 {};
+ref class R2 {};
+
+int main() {
+   R1^ r  = gcnew R1();
+   try {
+      R2^ rr = ( R2^)(r);
+   }
+   catch(System::InvalidCastException^ e) {
+      Console::WriteLine("Caught expected exception");
+   }
+}
+```
+
+Das folgende Beispiel zeigt ein ungültige C-Format umgewandelt, wodurch den Compiler einen Fehler ausgeben.
+
+```cpp
+// cstyle_casts_7.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   String^s = S"hello";
+   int i = (int)s;   // C2440
+}
+```
+
+## <a name="requirements"></a>Anforderungen
+
+Compileroption: `/clr`
+
+## <a name="see-also"></a>Siehe auch
+
+[Komponentenerweiterungen für Laufzeitplattformen](../windows/component-extensions-for-runtime-platforms.md)

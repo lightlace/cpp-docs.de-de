@@ -20,29 +20,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5517695da652dfd1eaa34b6ffd68fa90eac1a397
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: 29372cc451105de81fc340da1e4e0de427551529
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40012868"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595160"
 ---
 # <a name="selecting-controls"></a>Markieren von Steuerelementen
-Auswählen von Steuerelementen auf Größe, ausrichten, verschieben, kopieren, oder löschen und anschließend den gewünschten Vorgang ausführen. In den meisten Fällen müssen Sie zu verwenden, die Tools zur größenanpassung und die Ausrichtung auf mehrere Steuerelement auswählen, die [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
-  
- Wenn ein Steuerelement ausgewählt ist, einen schattierten Rahmen mit Solid (aktiv hat) oder leere (deaktivierte) "Ziehpunkten" kleine, die Quadrate in den Auswahlrahmen angezeigt werden. Wenn mehrere Steuerelemente ausgewählt sind, hat das dominante Steuerelement gefüllte Ziehpunkte; Alle anderen ausgewählten Steuerelemente haben leere Ziehpunkte an.  
-  
- Beim Ändern der Größe oder Ausrichtung mehrerer Steuerelemente, die **Dialogfeld** Editor verwendet, das "dominante Steuerelement" um zu bestimmen, wie die anderen Steuerelemente angepasst oder ausgerichtet sind. Standardmäßig ist das dominante Steuerelement das erste Steuerelement ausgewählt.  
-  
--   [Markieren mehrerer Steuerelemente](../windows/selecting-multiple-controls.md)  
-  
--   [Festlegen des bestimmenden Steuerelements](../windows/specifying-the-dominant-control.md)  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)   
- [Steuerelemente](../mfc/controls-mfc.md)
+
+Auswählen von Steuerelementen auf Größe, ausrichten, verschieben, kopieren, oder löschen und anschließend den gewünschten Vorgang ausführen. In den meisten Fällen müssen Sie zu verwenden, die Tools zur größenanpassung und die Ausrichtung auf mehrere Steuerelement auswählen, die [Dialog-Editor-Symbolleiste](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+
+Wenn ein Steuerelement ausgewählt ist, einen schattierten Rahmen mit Solid (aktiv hat) oder leere (deaktivierte) "Ziehpunkten" kleine, die Quadrate in den Auswahlrahmen angezeigt werden. Wenn mehrere Steuerelemente ausgewählt sind, hat das dominante Steuerelement gefüllte Ziehpunkte; Alle anderen ausgewählten Steuerelemente haben leere Ziehpunkte an.
+
+Beim Ändern der Größe oder Ausrichtung mehrerer Steuerelemente, die **Dialogfeld** Editor verwendet, das "dominante Steuerelement" um zu bestimmen, wie die anderen Steuerelemente angepasst oder ausgerichtet sind. Standardmäßig ist das dominante Steuerelement das erste Steuerelement ausgewählt.
+
+- [Markieren mehrerer Steuerelemente](../windows/selecting-multiple-controls.md)
+
+- [Festlegen des bestimmenden Steuerelements](../windows/specifying-the-dominant-control.md)
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Steuerelemente in Dialogfeldern](../windows/controls-in-dialog-boxes.md)  
+[Steuerelemente](../mfc/controls-mfc.md)

@@ -1,5 +1,5 @@
 ---
-title: '##define-Direktive (C/C++) | Microsoft Docs'
+title: '##define-Anweisung (C/C++) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,37 +20,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8875c2b2c744a16f936fd2220826f23413a0e6c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bec99379998722c09422765fad1614a7b6b6db28
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846154"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591282"
 ---
 # <a name="define-directive-cc"></a>#define-Anweisung (C/C++)
-Die `#define` erstellt eine *Makro*, dies ist die Zuordnung eines Bezeichners oder parametrisierten Bezeichners zu einer tokenzeichenkette darstellt. Nachdem das Makro definiert wurde, kann der Compiler die Tokenzeichenkette für jedes Vorkommen des Bezeichners in der Quelldatei ersetzen.  
+Die **#define** erstellt eine *Makro*, d.h., dass die Zuordnung eines Bezeichners oder parametrisierten Bezeichners zu einer tokenzeichenkette darstellt. Nachdem das Makro definiert wurde, kann der Compiler die Tokenzeichenkette für jedes Vorkommen des Bezeichners in der Quelldatei ersetzen.  
   
-## <a name="syntax"></a>Syntax  
- `#define` *Bezeichner* *-Token-String*abonnieren  
+## <a name="syntax"></a>Syntax
+
+`#define` *Bezeichner* *-Token-Zeichenfolge*deaktivieren  
   
- `#define` *Bezeichner* `(` *Bezeichner*opt`,`*...*  `,` *Bezeichner*opt`)`*-Token-String*abonnieren  
+`#define` *Bezeichner* `(` *Bezeichner*opt`,`*...*  `,` *Bezeichner*opt`)`*-Token-Zeichenfolge*deaktivieren  
   
 ## <a name="remarks"></a>Hinweise  
- Die `#define` Richtlinie weist den Compiler zu ersetzen, *-Token-String* für jedes Auftreten der *Bezeichner* in der Quelldatei. Die *Bezeichner* wird ersetzt, nur, wenn sie ein Token bildet. D. h. *Bezeichner* wird nicht ersetzt werden, wenn er in einem Kommentar, der in einer Zeichenfolge oder als Teil eines längeren Bezeichners angezeigt wird. Weitere Informationen finden Sie unter [Token](../cpp/tokens-cpp.md).  
+ 
+Die **#define** -Direktive weist den Compiler ersetzen *-Token-Zeichenfolge* jedes Vorkommen von *Bezeichner* in der Quelldatei. Die *Bezeichner* wird nur ersetzt, wenn er ein Token bildet. D. h. *Bezeichner* wird nicht ersetzt werden, wenn es in einem Kommentar, in eine Zeichenfolge oder als Teil eines längeren Bezeichners erscheint. Weitere Informationen finden Sie unter [Token](../cpp/tokens-cpp.md).  
   
- Die *-Token-String* Argument besteht aus einer Reihe von Token, z. B. Schlüsselwörter, Konstanten oder vollständige-Anweisungen. Müssen mindestens ein Leerzeichen trennen *-Token-String* aus *Bezeichner*. Diese Leerstelle und alle weiteren Leerstellen nach dem letzten Token des Texts werden nicht als Teil des ersetzten Texts betrachtet.  
+Die *-Token-Zeichenfolge* -Argument besteht aus einer Reihe von Token, z. B. Schlüsselwörter, Konstanten oder vollständigen Anweisungen. Müssen durch ein oder mehrere Leerzeichen getrennt *-Token-Zeichenfolge* aus *Bezeichner*. Diese Leerstelle und alle weiteren Leerstellen nach dem letzten Token des Texts werden nicht als Teil des ersetzten Texts betrachtet.  
   
- Ein `#define` ohne eine *-Token-String* entfernt Vorkommen der *Bezeichner* aus der Quelldatei. Die *Bezeichner* bleibt definiert und getestet werden kann, mithilfe der `#if defined` und `#ifdef` Direktiven.  
+Ein `#define` ohne eine *-Token-Zeichenfolge* entfernt Vorkommen der *Bezeichner* aus der Quelldatei. Die *Bezeichner* bleibt definiert und kann getestet werden, mithilfe der `#if defined` und `#ifdef` Anweisungen.  
   
- Durch das zweite Syntaxformat wird ein funktionsähnliches Makro mit Parametern definiert. Dieses Formular akzeptiert eine optionale Liste von Parametern, die in Klammern angegeben sein müssen. Nachdem das Makro definiert, die jeder nachfolgende Vorkommen ist *Bezeichner*( *Bezeichner*opt,..., *Bezeichner*opt) wird mit einer Version von ersetzt die  *Token-String* Arguments mit tatsächlichen Argumenten für die formalen Parameter ersetzt.  
+Durch das zweite Syntaxformat wird ein funktionsähnliches Makro mit Parametern definiert. Dieses Formular akzeptiert eine optionale Liste von Parametern, die in Klammern angegeben sein müssen. Nachdem das Makro definiert, werden nachfolgende Vorkommen des ist *Bezeichner*( *Bezeichner*entscheiden,..., *Bezeichner*aktivieren) wird mit einer Version von ersetzt die  *Token-Zeichenfolge* Argument, das tatsächliche Argumente, die durch formale Parameter ersetzt wurde.  
   
- Formale Parameternamen angezeigt werden, *-Token-String* , markieren Sie die Speicherorte, in denen tatsächliche Werte ersetzt werden. Jeder Parametername kann mehrmals *-Token-String*, und die Namen können in beliebiger Reihenfolge angezeigt werden. Die Anzahl von Argumenten im Aufruf muss mit der Anzahl von Parametern in der Makrodefinition übereinstimmen. Mit der großzügigen Verwendung von Klammern wird sichergestellt, dass komplexe tatsächliche Argumente richtig interpretiert werden.  
+Formale Parameternamen werden *-Token-Zeichenfolge* auf die Speicherorte zu markieren, in denen tatsächliche Werte ersetzt werden. Jeder Parametername kann mehrmals *-Token-Zeichenfolge*, und die Namen können in beliebiger Reihenfolge angezeigt werden. Die Anzahl von Argumenten im Aufruf muss mit der Anzahl von Parametern in der Makrodefinition übereinstimmen. Mit der großzügigen Verwendung von Klammern wird sichergestellt, dass komplexe tatsächliche Argumente richtig interpretiert werden.  
   
- Die formalen Parameter in der Liste werden durch Kommas getrennt. Jeder Name in der Liste muss eindeutig sein und die Liste muss in Klammern eingeschlossen werden. Keine Leerzeichen trennen können *Bezeichner* und die öffnende Klammer. Verwenden der Verkettung Zeile – platzieren Sie einen umgekehrten Schrägstrich (`\`) unmittelbar vor dem Zeilenumbruchzeichen – für lange Anweisungen in mehreren Quellzeilen. Erstreckt sich der Gültigkeitsbereich des Namens eines formaler Parameter in die neue Zeile, die beendet *-Token-String*.  
+Die formalen Parameter in der Liste werden durch Kommas getrennt. Jeder Name in der Liste muss eindeutig sein und die Liste muss in Klammern eingeschlossen werden. Keine Leerzeichen trennen können *Bezeichner* und die öffnende Klammer. Verwenden Sie die Zeilenverkettung, platzieren Sie einen umgekehrten Schrägstrich (`\`) unmittelbar vor dem Zeilenumbruchzeichen – für lange Direktive in mehreren Quellzeilen. Der Gültigkeitsbereich eines formalen Parameternamens erstreckt sich auch auf die neue Zeile, die endet *-Token-Zeichenfolge*.  
   
- Wenn ein Makro im zweiten Syntaxformat definiert wurde, geben nachfolgende Textinstanzen, auf die eine Argumentliste folgt, einen Makro-Aufruf an. Die tatsächlichen Argumente, die eine Instanz von folgt *Bezeichner* in der Quelldatei mit der entsprechenden formalen Parameter in der Makrodefinition verglichen werden. Jede formaler Parameter in *-Token-String* , keine Zeichenfolgenoperators vorangestellt (`#`), zeichenoperatoren (`#@`), oder Einfügen eines Tokens (`##`)-Operator, oder nicht gefolgt von einer `##` Operator ist durch das entsprechende tatsächliche Argument ersetzt. Alle Makros im tatsächlichen Argument werden erweitert, bevor die Anweisung den formalen Parameter ersetzt. (Die Operatoren werden in beschrieben [Präprozessor-Operatoren](../preprocessor/preprocessor-operators.md).)  
+Wenn ein Makro im zweiten Syntaxformat definiert wurde, geben nachfolgende Textinstanzen, auf die eine Argumentliste folgt, einen Makro-Aufruf an. Die tatsächlichen Argumente, die eine Instanz von *Bezeichner* in der Quelldatei folgen, stimmen mit den entsprechenden formalen Parameter in der Makrodefinition überein. Jeder formale Parameter in *-Token-Zeichenfolge* vorangestellt, ist kein Zeichenfolgenoperator (`#`), zeichenoperator (`#@`), oder Einfügen eines Tokens (`##`)-Operator, oder nicht, gefolgt von einer `##` ist Operator durch das entsprechende tatsächliche Argument ersetzt. Alle Makros im tatsächlichen Argument werden erweitert, bevor die Anweisung den formalen Parameter ersetzt. (Die Operatoren werden in beschrieben [Präprozessor-Operatoren](../preprocessor/preprocessor-operators.md).)  
   
- Die folgenden Beispiele von Makros mit Argumenten veranschaulichen das zweite Format der `#define`-Syntax:  
+Die folgenden Beispiele von Makros mit Argumenten veranschaulichen das zweite Formular von der **#define** Syntax:  
   
 ```  
 // Macro to define cursor lines   
@@ -61,66 +63,67 @@ Die `#define` erstellt eine *Makro*, dies ist die Zuordnung eines Bezeichners od
     ((rand()%(int)(((max) + 1)-(min)))+ (min))  
 ```  
   
- Argumente mit Nebeneffekten können dazu führen, dass Makros unerwartete Ergebnisse erzeugen. Ein bestimmten formaler Parameter erscheinen auf den mehr als einmal in *-Token-String*. Wenn der formale Parameter durch einen Ausdruck mit Nebeneffekten ersetzt wird, dann wird der Ausdruck samt seinen Nebeneffekten evtl. mehrmals ausgewertet. (Siehe Beispiele unter [Tokeneinfügenden Operator (##)](../preprocessor/token-pasting-operator-hash-hash.md).)  
+Argumente mit Nebeneffekten können dazu führen, dass Makros unerwartete Ergebnisse erzeugen. Ein angegebener formaler Parameter möglicherweise mehr als einmal in *-Token-Zeichenfolge*. Wenn der formale Parameter durch einen Ausdruck mit Nebeneffekten ersetzt wird, dann wird der Ausdruck samt seinen Nebeneffekten evtl. mehrmals ausgewertet. (Finden Sie unter den Beispielen unter [Tokeneinfügenden Operator (##)](../preprocessor/token-pasting-operator-hash-hash.md).)  
   
- Die `#undef`-Direktive führt dazu, dass die Präprozessordefinition eines Bezeichners übergangen wird. Finden Sie unter [#undef-Direktive](../preprocessor/hash-undef-directive-c-cpp.md) für Weitere Informationen.  
+Die `#undef`-Direktive führt dazu, dass die Präprozessordefinition eines Bezeichners übergangen wird. Finden Sie unter [#undef-Direktive](../preprocessor/hash-undef-directive-c-cpp.md) für Weitere Informationen.  
   
- Im Falle der Name des Makros definierende *-Token-String* (auch als Ergebnis einer anderen makroerweiterung), wird er nicht erweitert.  
+Bei der Namen des definierten Makros in *-Token-Zeichenfolge* (auch als Ergebnis einer anderen makroerweiterung), wird er nicht erweitert.  
   
- Ein zweites `#define` für ein Makro mit demselben Namen generiert eine Warnung, es sei denn, die zweite Tokensequenz ist identisch mit der ersten.  
+Ein zweites **#define** für ein Makro mit dem gleichen Namen eine Warnung generiert, es sei denn, die zweite tokensequenz mit dem ersten identisch ist.  
   
- **Microsoft-spezifisch**  
+**Microsoft-spezifisch**  
   
- Mit Microsoft C/C++ können Sie ein Makro neu definieren, wenn die neue Definition mit der ursprünglichen Definition syntaktisch identisch ist. Das bedeutet, dass die beiden Definitionen über unterschiedliche Parameternamen verfügen können. Dieses Verhalten unterscheidet sich von [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C, wo die beiden Definitionen lexikalisch gleich sind.  
+Mit Microsoft C/C++ können Sie ein Makro neu definieren, wenn die neue Definition mit der ursprünglichen Definition syntaktisch identisch ist. Das bedeutet, dass die beiden Definitionen über unterschiedliche Parameternamen verfügen können. Dieses Verhalten unterscheidet sich von ANSI-C, die erfordert, dass die beiden Definitionen lexikalisch gleich sind.  
   
- Beispielsweise sind die folgenden beiden Makros identisch, abgesehen von den Parameternamen. [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C lässt keine solche Neudefinition, aber Microsoft C/C++-wird ohne Fehler kompiliert.  
+Beispielsweise sind die folgenden beiden Makros identisch, abgesehen von den Parameternamen. ANSI C lässt keine solche Neudefinition zu, aber Microsoft C/C++-wird ohne Fehler kompiliert.  
   
 ```  
 #define multiply( f1, f2 ) ( f1 * f2 )  
 #define multiply( a1, a2 ) ( a1 * a2 )  
 ```  
   
- Andererseits sind die folgenden beiden Makros nicht identisch und generieren in Microsoft C/C++ eine Warnung.  
+Andererseits sind die folgenden beiden Makros nicht identisch und generieren in Microsoft C/C++ eine Warnung.  
   
 ```  
 #define multiply( f1, f2 ) ( f1 * f2 )  
 #define multiply( a1, a2 ) ( b1 * b2 )  
 ```  
   
- **Ende Microsoft-spezifisch**  
+**Ende Microsoft-spezifisch**  
   
- In diesem Beispiel wird die `#define`-Direktive veranschaulicht:  
+Dieses Beispiel veranschaulicht die **#define** Richtlinie:  
   
 ```  
 #define WIDTH       80  
 #define LENGTH      ( WIDTH + 10 )  
 ```  
   
- Die erste Anweisung definiert den Bezeichner `WIDTH` als die ganzzahlige Konstante 80 und definiert `LENGTH` hinsichtlich `WIDTH` und der ganzzahligen Konstante 10. Jedes Vorkommen von `LENGTH` wird ersetzt durch (`WIDTH + 10`). Im Gegenzug wird jedes Vorkommen von `WIDTH + 10` durch den Ausdruck (`80 + 10`) ersetzt. Die Klammern um `WIDTH + 10` sind wichtig, da sie die Interpretation in Anweisungen steuern, z. B.:  
+Die erste Anweisung definiert den Bezeichner `WIDTH` als die ganzzahlige Konstante 80 und definiert `LENGTH` hinsichtlich `WIDTH` und der ganzzahligen Konstante 10. Jedes Vorkommen von `LENGTH` wird ersetzt durch (`WIDTH + 10`). Im Gegenzug wird jedes Vorkommen von `WIDTH + 10` durch den Ausdruck (`80 + 10`) ersetzt. Die Klammern um `WIDTH + 10` sind wichtig, da sie die Interpretation in Anweisungen steuern, z. B.:  
   
 ```  
 var = LENGTH * 20;  
 ```  
   
- Nach der Vorverarbeitungsphase wird die Anweisung:  
+Nach der Vorverarbeitungsphase wird die Anweisung:  
   
 ```  
 var = ( 80 + 10 ) * 20;  
 ```  
   
- zu 1800 ausgewertet. Ohne Klammern wird das Ergebnis:  
+zu 1800 ausgewertet. Ohne Klammern wird das Ergebnis:  
   
 ```  
 var = 80 + 10 * 20;  
 ```  
   
- die 280 ergibt.  
+die 280 ergibt.  
   
- **Microsoft-spezifisch**  
+**Microsoft-spezifisch**  
   
- Definieren von Makros und Konstanten mit der [/d](../build/reference/d-preprocessor-definitions.md) Compileroption hat dieselbe Wirkung wie die Verwendung einer `#define` -präprozessdirektive am Anfang der Datei. Maximal 30 Makros können mit der /D-Option definiert werden.  
+Definieren von Makros und Konstanten mit dem [/d](../build/reference/d-preprocessor-definitions.md) Compiler-Option hat dieselbe Wirkung wie die Verwendung einer **#define** -präprozessanweisung am Anfang der Datei. Maximal 30 Makros können mit der /D-Option definiert werden.  
   
- **Ende Microsoft-spezifisch**  
+**Ende Microsoft-spezifisch**  
   
 ## <a name="see-also"></a>Siehe auch  
- [Präprozessordirektiven](../preprocessor/preprocessor-directives.md)
+
+[Präprozessordirektiven](../preprocessor/preprocessor-directives.md)

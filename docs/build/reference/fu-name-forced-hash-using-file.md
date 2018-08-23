@@ -1,5 +1,5 @@
 ---
-title: '-FU (Name Forced #using-Datei) | Microsoft Docs'
+title: '-FU (Name Forced #using using-Datei) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c9a27d8c689b198bde47047969d38cf14b41c46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a92e8d30d2c15ac07bc5a6ff3e6438da46438674
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375674"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597500"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Name der expliziten #using-Datei)
-Eine Compileroption, mit denen Sie als Alternative zum Übergeben eines Dateinamens, [#using-Direktive](../../preprocessor/hash-using-directive-cpp.md) im Quellcode.  
+Eine Compileroption, mit denen Sie als Alternative zum Übergeben eines Dateinamens zum [#using-Direktive](../../preprocessor/hash-using-directive-cpp.md) im Quellcode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,24 +38,24 @@ Eine Compileroption, mit denen Sie als Alternative zum Übergeben eines Dateinam
   
 ## <a name="arguments"></a>Argumente  
  `file`  
- Gibt die Metadatendatei, die in dieser Kompilierung zu verweisen.  
+ Gibt die Metadatendatei, die in diesem Kompilierungsvorgang verwiesen.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Schalter/fu akzeptiert nur einen Dateinamen an. Um mehrere Dateien anzugeben, verwenden Sie/fu mit jeweils ein.  
+ Der Schalter/fu dauert nur einen Dateinamen an. Um mehrere Dateien anzugeben, verwenden Sie/fu mit jeweils ein.  
   
- Bei Verwendung von [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] und Metadaten mit Verweisen auf die [Friend-Assemblys](../../dotnet/friend-assemblies-cpp.md) Funktion, Sie können keine **/FU**. Sie müssen die Metadaten im Code verweisen, indem `#using`– zusammen mit den `[as friend]` Attribut. Friend-Assemblys werden nicht unterstützt, [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]).  
+ Wenn Sie C++ verwenden c++ / CLI und verweisen auf Metadaten mit den [Friend-Assemblys](../../dotnet/friend-assemblies-cpp.md) Funktion können keine **/FU**. Sie müssen die Metadaten im Code mithilfe von verweisen `#using`– zusammen mit den `[as friend]` Attribut. Friend-Assemblys werden nicht unterstützt, in Visual C++-komponentenerweiterungen C++ / CX.  
   
- Weitere Informationen dazu, wie eine Assembly oder ein Modul für die common Language Runtime (CLR) zu erstellen, finden Sie unter [/CLR (Common Language Runtime-Kompilierung)](../../build/reference/clr-common-language-runtime-compilation.md). Informationen zum Erstellen in [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)], finden Sie unter [Erstellen von apps und Bibliotheken](../../cppcx/building-apps-and-libraries-c-cx.md).  
+ Informationen dazu, wie Sie eine Assembly oder ein Modul für die common Language Runtime (CLR) zu erstellen, finden Sie unter [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md). Informationen zur Verwendung für die Erstellung in C++ / CX, finden Sie unter [Erstellen von apps und Bibliotheken](../../cppcx/building-apps-and-libraries-c-cx.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).  
   
 2.  Wählen Sie die **C/C++-** Ordner.  
   
 3.  Wählen Sie die **erweitert** Eigenschaftenseite.  
   
-4.  Ändern der **Force #using** Eigenschaft.  
+4.  Ändern der **erzwungene #using using** Eigenschaft.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>So legen Sie diese Compileroption programmgesteuert fest  
   

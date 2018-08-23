@@ -17,32 +17,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 80c744431fe7df32be705fcf91eef0a8691b8fa4
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d70a2c316f9e7994292f3dc29cef5bce993778ad
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40015797"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595062"
 ---
 # <a name="synclockwithstatustislocked-method"></a>SyncLockWithStatusT::IsLocked-Methode
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-bool IsLocked() const;  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Gibt an, ob die aktuelle **SyncLockWithStatusT** Objekt besitzt eine Ressource, d. h. die **SyncLockWithStatusT** Objekt *gesperrt*.  
-  
-## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn die **SyncLockWithStatusT** Objekt gesperrt ist; andernfalls **"false"**.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [SyncLockWithStatusT-Klasse](../windows/synclockwithstatust-class.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+bool IsLocked() const;
+```
+
+## <a name="remarks"></a>Hinweise
+
+Gibt an, ob die aktuelle **SyncLockWithStatusT** Objekt besitzt eine Ressource, d. h. die **SyncLockWithStatusT** Objekt *gesperrt*.
+
+## <a name="return-value"></a>Rückgabewert
+
+**"true"** Wenn die **SyncLockWithStatusT** Objekt gesperrt ist; andernfalls **"false"**.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[SyncLockWithStatusT-Klasse](../windows/synclockwithstatust-class.md)

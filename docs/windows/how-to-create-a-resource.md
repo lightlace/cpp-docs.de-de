@@ -17,54 +17,57 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b44156ae26d77247a909e45061b00a6a1d892d79
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: d269dbc83c11fa4ece55d8df8f6629d1afd52c03
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40016927"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42594512"
 ---
 # <a name="how-to-create-a-resource"></a>Gewusst wie: Erstellen einer Ressource
-> [!NOTE]
->  **Ressourcenansicht** wird in Express-Editionen nicht unterstützt.  
-  
-### <a name="to-create-a-new-resource-in-resource-view"></a>So erstellen Sie eine neue Ressource in der Ressourcenansicht  
-  
-1.  Mit dem Schwerpunkt auf die RC-Datei in [Ressourcenansicht](../windows/resource-view-window.md), klicken Sie auf die **bearbeiten** Menü, und wählen Sie **Ressource hinzufügen** (oder mit der rechten Maustaste in der RC-Datei **Ressourcenansicht** , und wählen Sie **Ressource hinzufügen** aus dem Kontextmenü).  
-  
-     > [!NOTE] 
-     > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Wählen Sie im [Dialogfeld "Ressource hinzufügen"](../windows/add-resource-dialog-box.md)den Ressourcentyp aus, den Sie dem Projekt hinzufügen möchten.  
-  
-### <a name="to-create-a-new-resource-in-solution-explorer"></a>So erstellen Sie eine neue Ressource im Projektmappen-Explorer  
-  
-1.  Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektordner, und wählen Sie **Hinzufügen**aus. Klicken Sie dann im Kontextmenü auf **Ressource hinzufügen** .  
-  
-     Wenn im Projekt noch keine RC-Datei vorhanden ist, wird mit diesem Schritt eine erstellt. Anschließend können Sie diesen Schritt wiederholen, um der neuen RC-Datei spezifische Ressourcentypen hinzuzufügen.  
-  
-2.  Wählen Sie im [Dialogfeld "Ressource hinzufügen"](../windows/add-resource-dialog-box.md)den Ressourcentyp aus, den Sie dem Projekt hinzufügen möchten.  
-  
-### <a name="to-create-a-new-resource-in-class-view"></a>So erstellen Sie eine neue Ressource in der Klassenansicht  
-  
-1.  In [Klassenansicht](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)mit der rechten Maustaste auf die Klasse, und wählen Sie **hinzufügen**, klicken Sie dann auf **Ressource hinzufügen** aus dem Kontextmenü.  
-  
-2.  Wählen Sie im [Dialogfeld "Ressource hinzufügen"](../windows/add-resource-dialog-box.md)den Ressourcentyp aus, den Sie dem Projekt hinzufügen möchten.  
-  
-### <a name="to-create-a-new-resource-from-the-project-menu"></a>So erstellen Sie eine neue Ressource über das Menü "Projekt"  
-  
-1.  Wählen Sie im Menü **Projekt** den Befehl **Ressource hinzufügen**aus.  
-  
- Wenn Sie eine neue Ressource erstellen, Visual C++ weist einen eindeutigen Namen, z. B. `IDD_Dialog1`. Sie können diese Ressourcen-ID anpassen, indem Sie die Ressourceneigenschaften entweder im zugehörigen Ressourcen-Editor oder im [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window)bearbeiten.  
-  
- Eine Ressource kann entweder als neue Standardressource (die auf keiner Vorlage basiert) oder als Ressource erstellt werden, die von einer [Vorlage](../windows/how-to-use-resource-templates.md)erstellt wurde.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
 
-## <a name="requirements"></a>Anforderungen    
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ressourcendateien](../windows/resource-files-visual-studio.md)   
- [Ressourcen-Editoren](../windows/resource-editors.md)   
- [Dialogfeld „Ressource hinzufügen“](../windows/add-resource-dialog-box.md)
+> [!NOTE]
+> **Ressourcenansicht** wird in Express-Editionen nicht unterstützt.
+
+### <a name="to-create-a-new-resource-in-resource-view"></a>So erstellen Sie eine neue Ressource in der Ressourcenansicht
+
+1. Mit dem Schwerpunkt auf die RC-Datei in [Ressourcenansicht](../windows/resource-view-window.md), klicken Sie auf die **bearbeiten** Menü, und wählen Sie **Ressource hinzufügen** (oder mit der rechten Maustaste in der RC-Datei **Ressourcenansicht** , und wählen Sie **Ressource hinzufügen** aus dem Kontextmenü).
+
+   > [!NOTE] 
+   > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
+
+2. Wählen Sie im [Dialogfeld "Ressource hinzufügen"](../windows/add-resource-dialog-box.md)den Ressourcentyp aus, den Sie dem Projekt hinzufügen möchten.
+
+### <a name="to-create-a-new-resource-in-solution-explorer"></a>So erstellen Sie eine neue Ressource im Projektmappen-Explorer
+
+1. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektordner, und wählen Sie **Hinzufügen**aus. Klicken Sie dann im Kontextmenü auf **Ressource hinzufügen** .
+
+   Wenn im Projekt noch keine RC-Datei vorhanden ist, wird mit diesem Schritt eine erstellt. Anschließend können Sie diesen Schritt wiederholen, um der neuen RC-Datei spezifische Ressourcentypen hinzuzufügen.
+
+2. Wählen Sie im [Dialogfeld "Ressource hinzufügen"](../windows/add-resource-dialog-box.md)den Ressourcentyp aus, den Sie dem Projekt hinzufügen möchten.
+
+### <a name="to-create-a-new-resource-in-class-view"></a>So erstellen Sie eine neue Ressource in der Klassenansicht
+
+1. In [Klassenansicht](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925)mit der rechten Maustaste auf die Klasse, und wählen Sie **hinzufügen**, klicken Sie dann auf **Ressource hinzufügen** aus dem Kontextmenü.
+
+2. Wählen Sie im [Dialogfeld "Ressource hinzufügen"](../windows/add-resource-dialog-box.md)den Ressourcentyp aus, den Sie dem Projekt hinzufügen möchten.
+
+### <a name="to-create-a-new-resource-from-the-project-menu"></a>So erstellen Sie eine neue Ressource über das Menü "Projekt"
+
+1. Wählen Sie im Menü **Projekt** den Befehl **Ressource hinzufügen**aus.
+
+Wenn Sie eine neue Ressource erstellen, Visual C++ weist einen eindeutigen Namen, z. B. `IDD_Dialog1`. Sie können diese Ressourcen-ID anpassen, indem Sie die Ressourceneigenschaften entweder im zugehörigen Ressourcen-Editor oder im [Eigenschaftenfenster](/visualstudio/ide/reference/properties-window)bearbeiten.
+
+Eine Ressource kann entweder als neue Standardressource (die auf keiner Vorlage basiert) oder als Ressource erstellt werden, die von einer [Vorlage](../windows/how-to-use-resource-templates.md)erstellt wurde.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Ressourcendateien](../windows/resource-files-visual-studio.md)  
+[Ressourcen-Editor](../windows/resource-editors.md)  
+[Dialogfeld „Ressource hinzufügen“](../windows/add-resource-dialog-box.md)

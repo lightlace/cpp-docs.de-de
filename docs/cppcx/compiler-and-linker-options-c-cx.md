@@ -1,23 +1,23 @@
 ---
-title: Optionen für Compiler und Linker (C + c++ / CX) | Microsoft Docs
+title: Optionen für Compiler und Linker (C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e43418555722090c325c85bd4e77204640791b32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1597acfdf608d5e8801870fcebb43109c2eb803d
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088479"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593791"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Optionen für Compiler und Linker (C++/CX)
-Eine Umgebungsvariable C + c++ / CX-Compileroptionen und Linkeroptionen unterstützen die Erstellung von apps für Windows-Runtime.  
+Eine Umgebungsvariable, C++ / CX-Compileroptionen und Linkeroptionen unterstützen die Erstellung von apps, für die Windows-Runtime.  
   
 ## <a name="library-path"></a>Bibliothekspfad  
  Die %LIBPATH%-Umgebungsvariable gibt den Standardpfad für die Suche nach WINMD-Dateien an.  
@@ -26,9 +26,9 @@ Eine Umgebungsvariable C + c++ / CX-Compileroptionen und Linkeroptionen unterst�
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Aktiviert spracherweiterungen für Windows-Runtime.<br /><br /> Der `nostdlib` -Parameter verhindert, dass der Compiler den standardmäßigen, vordefinierten Suchpfad verwendet, um Assembly- und WINMD-Dateien zu finden.<br /><br /> Die Compileroption **/ZW** gibt die folgenden Compileroptionen implizit an:<br /><br /> -   **/ Fi** "vccorlib.h", erzwingt die Einbindung der Headerdatei "vccorlib.h", die viele Typen definiert, die vom Compiler erforderlich sind.<br />-   [/ FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, erzwingt die Einbindung der Windows.winmd-Metadatendatei, die vom Betriebssystem bereitgestellt wird, und viele Typen in Windows-Runtime definiert.<br />-   **/FU** Platform.winmd: Erzwingt die Einbindung der Platform.winmd-Metadatendatei, die vom Compiler bereitgestellt wird und die meisten Typen in der Plattformfamilie von Namespaces definiert.|  
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Ermöglicht es Windows-Runtime-spracherweiterungen.<br /><br /> Der `nostdlib` -Parameter verhindert, dass der Compiler den standardmäßigen, vordefinierten Suchpfad verwendet, um Assembly- und WINMD-Dateien zu finden.<br /><br /> Die Compileroption **/ZW** gibt die folgenden Compileroptionen implizit an:<br /><br /> -   **/ Fi** vccorlib.h: Erzwingt die Einbindung der Headerdatei "vccorlib.h", die viele Typen definiert, die vom Compiler benötigt werden.<br />-   [/ FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, erzwingt die Einbindung der Windows.winmd-Metadatendatei, die vom Betriebssystem bereitgestellt wird, und viele Typen in der Windows-Runtime definiert.<br />-   **/FU** Platform.winmd: Erzwingt die Einbindung der Platform.winmd-Metadatendatei, die vom Compiler bereitgestellt wird und die meisten Typen in der Plattformfamilie von Namespaces definiert.|  
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Fügt ein durch den *dir* -Parameter angegebenes Verzeichnis zum Suchpfad hinzu, der vom Compiler für die Suche nach Assembly- und WINMD-Dateien verwendet wird.|  
-|**/FU**  *Datei*|Erzwingt die Einbindung des angegebenen Moduls oder der WINMD-Datei. D. h., Sie geben keine `#using` *Datei* im Quellcode. Der Compiler erzwingt automatisch die Einbindung der eigenen Windows-Metadatendatei „Platform.winmd“.|  
+|**/FU**  *Datei*|Erzwingt die Einbindung des angegebenen Moduls oder der WINMD-Datei. D. h. Sie müssen keine geben `#using` *Datei* in Ihrem Quellcode. Der Compiler erzwingt automatisch die Einbindung der eigenen Windows-Metadatendatei „Platform.winmd“.|  
 |/D "WINAPI_FAMILY=2"|Erstellt eine Definition, die die Verwendung einer Teilmenge des Win32-SDKS ermöglicht, die mit der Windows-Runtime kompatibel ist.|  
   
 ## <a name="linker-options"></a>Linkeroptionen  
@@ -43,7 +43,7 @@ Eine Umgebungsvariable C + c++ / CX-Compileroptionen und Linkeroptionen unterst�
 |/WINMDKEYFILE:*Dateiname*|Gibt einen Schlüssel oder ein Schlüsselpaar zum Signieren der Assembly an. Der *Dateiname* -Parameter entspricht dem Schlüssel, der zum Signieren der Metadatendatei verwendet wird.|  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn Sie **/ZW**verwenden, stellt der Compiler automatisch eine Verknüpfung zur DLL-Version der C-Laufzeit (CRT) her. Verknüpfen mit der statischen Bibliotheksversion ist nicht zulässig, und jede Verwendung von CRT-Funktionen, die in einer universellen Windows-Plattform-app nicht zulässig sind verursachen einen Kompilierzeitfehler.  
+ Wenn Sie **/ZW**verwenden, stellt der Compiler automatisch eine Verknüpfung zur DLL-Version der C-Laufzeit (CRT) her. Verknüpfen mit der statischen Bibliotheksversion ist nicht zulässig, und jede Verwendung der CRT-Funktionen, die nicht in einer universellen Windows-Plattform-app dürfen führt dazu, dass einen Fehler während der Kompilierung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von apps und Bibliotheken](../cppcx/building-apps-and-libraries-c-cx.md)

@@ -17,24 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 02293fce154fa9c4c98c583de02e8967f4d3957b
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: a90aab0fae3edbb54dfdd9176ffe47a18ad1796a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020212"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596940"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Auswählen mehrerer Menüs oder Menübefehle
-Sie können mehrere Menünamen oder Menübefehle zum Durchführen von Massenvorgängen wie z. B. dem Löschen oder Ändern der Eigenschaften auswählen.  
-  
-### <a name="to-select-multiple-menu-commands"></a>Auswählen mehrerer Menübefehle  
-  
-1.  Halten Sie die **STRG** Schlüssel, klicken Sie auf die Menüs oder Untermenübefehle werden sollen.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Menü-Editor](../windows/menu-editor.md)
+
+Sie können mehrere Menünamen oder Menübefehle zum Durchführen von Massenvorgängen wie z. B. dem Löschen oder Ändern der Eigenschaften auswählen.
+
+### <a name="to-select-multiple-menu-commands"></a>Auswählen mehrerer Menübefehle
+
+1. Halten Sie die **STRG** Schlüssel, klicken Sie auf die Menüs oder Untermenübefehle werden sollen.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Menü-Editor](../windows/menu-editor.md)

@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefiniertes Bild (Dialogfeld) (Bildbearbeitung für Symbole) | Microsoft Docs
+title: Dialogfeld "benutzerdefiniertes Image" (Bildbearbeitung für Symbole) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a0f8f4506d21c530f5131363cea9a9d142d5957
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb5e4d2fdc64499616af2492d39bfe3cac4931ae
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33883133"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595940"
 ---
 # <a name="custom-image-dialog-box-image-editor-for-icons"></a>Benutzerdefiniertes Bild (Dialogfeld) (Bildbearbeitung für Symbole)
-Ermöglicht es Ihnen, ein neues Image mit einer benutzerdefinierten Größe und Anzahl der Farben zu erstellen.
+Können Sie ein neues Image mit einer benutzerdefinierten Größe und Anzahl der Farben zu erstellen.
  **Breite**  
- Dient zur Eingabe von der Breite des benutzerdefinierten Bilds in Pixel (1-512, Max. 2048).  
+ Dient zur Eingabe der Breite des benutzerdefinierten Images in Pixel (1-512, Max. 2048).
   
  **Höhe**  
- Dient zur Sie die Höhe des benutzerdefinierten Images in Pixel (1-512, Max. 2048) eingeben.  
+ Dient zur Eingabe der Höhe für das benutzerdefinierte Image in Pixel (1-512, Max. 2048).
   
  **Farben**  
- Dient zur Sie die Anzahl der Farben für das benutzerdefinierte Bild auswählen: 2, 16 oder 256.  
+ Ein Eingabefeld für die Anzahl der Farben für das benutzerdefinierte Image auswählen: 2, 16 und 256.
   
-## <a name="requirements"></a>Anforderungen  
- Keiner  
+## <a name="requirements"></a>Anforderungen
+ Keiner
   
-## <a name="see-also"></a>Siehe auch  
- [Neue \<Gerät > Bildeigenschaften (Dialogfeld)](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)   
+## <a name="see-also"></a>Siehe auch
+ [Neue \<Gerät > Bildeigenschaften (Dialogfeld)](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)  
  [Bildbearbeitung für Symbole](../windows/image-editor-for-icons.md)
