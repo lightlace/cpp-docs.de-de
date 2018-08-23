@@ -1,20 +1,20 @@
 ---
-title: Partielle Klassen (C + c++ / CX) | Microsoft Docs
+title: Partielle Klassen (C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9457f3401ed03b13bf29f489b88472d11a4dd7a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd1d5f7559b88505929153ae1852fc42171e5208
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091854"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593025"
 ---
 # <a name="partial-classes-ccx"></a>Partielle Klassen (C++/CX)
 Eine partielle Klasse ist ein Konstrukt, das Szenarien unterstützt, in denen Sie einen Teil einer Klassendefinition ändern. Software, die automatisch Code generiert – beispielsweise der XAML Designer – ändert ebenfalls Code in der gleichen Klasse. Durch die Verwendung einer partiellen Klasse können Sie verhindern, dass der Designer Ihren Code überschreibt. In einem Visual Studio-Projekt wird der Modifizierer `partial` automatisch auf die generierte Datei angewendet.  
@@ -95,5 +95,5 @@ Eine partielle Klasse ist ein Konstrukt, das Szenarien unterstützt, in denen Si
   
 ## <a name="see-also"></a>Siehe auch  
  [Typsystem](../cppcx/type-system-c-cx.md)   
- [Visual C++-Sprachreferenz](../cppcx/visual-c-language-reference-c-cx.md)   
+ [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)

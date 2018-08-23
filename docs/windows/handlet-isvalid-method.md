@@ -17,29 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eba8dbe8ee0dad3f085104c914a731986d736e2b
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: ef93be9a6994cf0e093380941810bc735961ee1c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647874"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593275"
 ---
 # <a name="handletisvalid-method"></a>HandleT::IsValid-Methode
-Gibt an, ob die aktuelle **HandleT** Objekt stellt ein Handle.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-bool IsValid() const;  
-```  
-  
-## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn die **HandleT** stellt ein Handle ist, andernfalls **"false"**.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** corewrappers.h  
-  
- **Namespace:** Microsoft::WRL::Wrappers  
-  
-## <a name="see-also"></a>Siehe auch  
- [HandleT-Klasse](../windows/handlet-class.md)
+
+Gibt an, ob die aktuelle **HandleT** Objekt stellt ein Handle.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+bool IsValid() const;
+```
+
+## <a name="return-value"></a>Rückgabewert
+
+**"true"** Wenn die **HandleT** stellt ein Handle ist, andernfalls **"false"**.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** corewrappers.h
+
+**Namespace:** Microsoft::WRL::Wrappers
+
+## <a name="see-also"></a>Siehe auch
+
+[HandleT-Klasse](../windows/handlet-class.md)

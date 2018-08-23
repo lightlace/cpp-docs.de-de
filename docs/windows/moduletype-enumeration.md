@@ -17,38 +17,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 831f1fbcb2da205fa08286a1fbbbf414e66075d4
-ms.sourcegitcommit: 38af5a1bf35249f0a51e3aafc6e4077859c8f0d9
+ms.openlocfilehash: fe8d41aded38db7cde5316e04cfa1689845aa4e7
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40019929"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42595471"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType-Enumeration
-Gibt an, ob ein Modul einen In-Process-Server oder einen Out-of-Process-Server unterstützen sollte.   
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-enum ModuleType;  
-```  
-  
-## <a name="members"></a>Member  
-  
-### <a name="values"></a>Werte  
-  
-|Name|Beschreibung|  
-|----------|-----------------|  
-|`InProc`|In-Process-Server.|  
-|`OutOfProc`|Ein Out-of-Process-Server.|  
-|`DisableCaching`|Deaktivieren Sie Zwischenspeichermechanismus Modul.|  
-|`InProcDisableCaching`|Kombination von `InProc` und `DisableCaching`.|  
-|`OutOfProcDisableCaching`|Kombination von `OutOfProc` und `DisableCaching`.|  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** module.h  
-  
- **Namespace:** Microsoft::WRL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)
+
+Gibt an, ob ein Modul einen In-Process-Server oder einen Out-of-Process-Server unterstützen sollte. 
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+enum ModuleType;
+```
+
+## <a name="members"></a>Member
+
+### <a name="values"></a>Werte
+
+|Name|Beschreibung|
+|----------|-----------------|
+|`InProc`|In-Process-Server.|
+|`OutOfProc`|Ein Out-of-Process-Server.|
+|`DisableCaching`|Deaktivieren Sie Zwischenspeichermechanismus Modul.|
+|`InProcDisableCaching`|Kombination von `InProc` und `DisableCaching`.|
+|`OutOfProcDisableCaching`|Kombination von `OutOfProc` und `DisableCaching`.|
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** module.h
+
+**Namespace:** Microsoft::WRL
+
+## <a name="see-also"></a>Siehe auch
+
+[Microsoft::WRL-Namespace](../windows/microsoft-wrl-namespace.md)

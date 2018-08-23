@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: InvalidArgumentException-Klasse | Microsoft Docs'
+title: 'Platform:: InvalidArgumentException-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::InvalidArgumentException
 ms.assetid: 1a8d860b-3bcb-41a9-9346-6610616a0b46
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c26f0efb907520ea7e54b0b8bec8d2f4323a51cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9a2d1e2e956ae83498a5fc99878c5a4ef7bb3a
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33086674"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593998"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException-Klasse
 Wird ausgelöst, wenn eines der Argumente für eine Methode ungültig ist.  
@@ -36,9 +36,9 @@ public ref class InvalidArgumentException : COMException,    IException,    IPri
  Weitere Informationen finden Sie unter der [COMException](../cppcx/platform-comexception-class.md) -Klasse.  
   
 ### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
+ **Unterstützter Client (Min.):** Windows 8  
   
- **Unterstützter Server:** Windows Server 2012  
+ **Unterstützter Server (Min.):** Windows Server 2012  
   
  **Namespace:** Platform  
   

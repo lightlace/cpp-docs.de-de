@@ -1,23 +1,23 @@
 ---
-title: Zeichenfolgen (C + c++ / CX) | Microsoft Docs
+title: Zeichenfolgen (C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5c5e4cfe13f72585a2566773c88724f3618784
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f33b6b1738e9027c88d171fc7bacc729fb507b10
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092469"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592468"
 ---
 # <a name="strings-ccx"></a>Zeichenfolgen (C++/CX)
-Text in Windows-Runtime wird dargestellt, in C + c++ / CX, indem Sie die [Platform:: String-Klasse](../cppcx/platform-string-class.md). Verwenden der `Platform::String Class` Wenn Sie Zeichenfolgen hin und her an Methoden in Windows-Runtime-Klassen übergeben oder bei der Interaktion mit anderen Windows-Runtime-Komponenten über die Grenze der anwendungsbinärschnittstelle (ABI) hinaus. Die `Platform::String Class` stellt Methoden für einige allgemeine Zeichenfolgenoperationen bereit, aber sie ist nicht als umfassende Zeichenfolgenklasse gedacht. Verwenden Sie in Ihrem C++-Modul Standard-C++-Zeichenfolgentypen wie [wstring](../standard-library/basic-string-class.md) für sämtliche wesentliche Textverarbeitung und konvertieren Sie dann das Endergebnis zu [Platform::String](../cppcx/platform-string-class.md) , bevor Sie es zu oder von einer öffentlichen Schnittstelle übergeben. Das Konvertieren zwischen `wstring` oder `wchar_t*` und `Platform::String`ist einfach und effizient.  
+Text in der Windows-Runtime wird dargestellt, in C++ / CX, durch die [Platform:: String-Klasse](../cppcx/platform-string-class.md). Verwenden der `Platform::String Class` Wenn Sie Zeichenfolgen hin und her an Methoden in Windows-Runtime-Klassen übergeben oder wenn Sie mit anderen Windows-Runtime-Komponenten über die Grenze der anwendungsbinärschnittstelle (ABI) hinaus interagieren. Die `Platform::String Class` stellt Methoden für einige allgemeine Zeichenfolgenoperationen bereit, aber sie ist nicht als umfassende Zeichenfolgenklasse gedacht. Verwenden Sie in Ihrem C++-Modul Standard-C++-Zeichenfolgentypen wie [wstring](../standard-library/basic-string-class.md) für sämtliche wesentliche Textverarbeitung und konvertieren Sie dann das Endergebnis zu [Platform::String](../cppcx/platform-string-class.md) , bevor Sie es zu oder von einer öffentlichen Schnittstelle übergeben. Das Konvertieren zwischen `wstring` oder `wchar_t*` und `Platform::String`ist einfach und effizient.  
   
  **Fastpass**  
   
@@ -40,19 +40,19 @@ Text in Windows-Runtime wird dargestellt, in C + c++ / CX, indem Sie die [Platfo
  [!code-cpp[cx_strings#03](../cppcx/codesnippet/CPP/cppcx_strings/class1.cpp#03)]  
   
 ## <a name="string-conversions"></a>Zeichenfolgenkonvertierung  
- Eine `Platform::String` kann nur `char16` -Zeichen oder das `NULL` -Zeichen enthalten. Wenn Ihre Anwendung mit 8-Bit-Zeichen funktionieren muss, verwenden Sie die [String:: Data](../cppcx/platform-string-class.md#data) extrahieren Sie den Text als eine `const wchar_t*`. Sie können dann die entsprechenden Windows-Funktionen oder Standardbibliotheksfunktionen verwenden, um die Daten zu bearbeiten und sie zurück zu einer `wchar_t*` oder [wstring](../standard-library/basic-string-class.md)zu konvertieren. Diese können Sie dann verwenden, um neue `Platform::String`dargestellt.  
+ Eine `Platform::String` kann nur `char16` -Zeichen oder das `NULL` -Zeichen enthalten. Wenn Ihre Anwendung mit 8-Bit-Zeichen zu arbeiten, verwenden die [String:: Data](../cppcx/platform-string-class.md#data) extrahieren den Text als eine `const wchar_t*`. Sie können dann die entsprechenden Windows-Funktionen oder Standardbibliotheksfunktionen verwenden, um die Daten zu bearbeiten und sie zurück zu einer `wchar_t*` oder [wstring](../standard-library/basic-string-class.md)zu konvertieren. Diese können Sie dann verwenden, um neue `Platform::String`dargestellt.  
   
  Das folgende Codefragment zeigt, wie eine `String^` -Variable in eine und aus einer `wstring` -Variable konvertiert wird. Weitere Informationen zu der in diesem Beispiel verwendeten Zeichenfolgenbearbeitung finden Sie unter [basic_string::replace](../standard-library/basic-string-class.md#replace).  
   
  [!code-cpp[cx_strings#04](../cppcx/codesnippet/CPP/cppcx_strings/class1.cpp#04)]  
   
 ## <a name="string-length-and-embedded-null-values"></a>Zeichenfolgenlänge und eingebettete NULL-Werte  
- Die [String:: length](../cppcx/platform-string-class.md#length) gibt die Anzahl der Zeichen in der Zeichenfolge, die nicht der Anzahl von Bytes zurück. Das abschließende NULL-Zeichen wird nicht gezählt, es sei denn, Sie geben es explizit an, wenn Sie mithilfe von Stapelsemantik eine Zeichenfolge erstellen.  
+ Die [String:: length](../cppcx/platform-string-class.md#length) gibt die Anzahl der Zeichen in der Zeichenfolge, die nicht die Anzahl der Bytes zurück. Das abschließende NULL-Zeichen wird nicht gezählt, es sei denn, Sie geben es explizit an, wenn Sie mithilfe von Stapelsemantik eine Zeichenfolge erstellen.  
   
  Eine `Platform::String` kann eingebettete NULL-Werte enthalten, jedoch nur, wenn die NULL ein Ergebnis eines Verkettungsvorgangs ist. Eingebettete NULLEN werden in Zeichenfolgenliteralen nicht unterstützt. Daher können Sie eingebettete NULLEN nicht in dieser Weise verwenden, um eine `Platform::String`zu initialisieren. Eingebettete NULL-Werte in einer `Platform::String` werden ignoriert, wenn die Zeichenfolge angezeigt wird, beispielsweise wenn sie einer `TextBlock::Text` -Eigenschaft zugewiesen ist. Eingebettete NULL-Werte werden entfernt, wenn der Zeichenfolgenwert von der `Data` -Eigenschaft zurückgegeben wird.  
   
 ## <a name="stringreference"></a>StringReference  
- In einigen Fällen empfängt der Code (a) eine Std:: wstring- oder Wchar_t-Zeichenfolge oder L"" Zeichenfolgenliteral und nur übergibt diese an eine andere Methode, die eine Zeichenfolge akzeptiert ^ als Eingabeparameter. Solange der ursprüngliche Zeichenfolgenpuffer selbst gültig bleibt und nicht geändert wird, bevor die Funktion zurückgibt, können Sie die `wchar_t*` -Zeichenfolge oder das Zeichenfolgenliteral in [Platform::StringReference](../cppcx/platform-stringreference-class.md)konvertieren und dieses anstelle von `Platform::String^`übergeben. Dies ist zulässig, da `StringReference` über eine benutzerdefinierte Konvertierung zu `Platform::String^`verfügt. Mit `StringReference` können Sie vermeiden, dass eine zusätzliche Kopie der Zeichenfolgendaten erstellt wird. In Schleifen, in denen viele Zeichenfolgen übergeben werden, oder wenn sehr große Zeichenfolgen übergeben werden, können Sie mit `StringReference`eine deutliche Leistungsverbesserung erzielen. Aber, da `StringReference` im Grunde den ursprünglichen Zeichenfolgenpuffer verwendet, müssen Sie sorgfältig sein, um Speicherbeschädigungen zu vermeiden. Sie sollten `StringReference` nicht an eine asynchrone Methode übergeben, es sei denn, die ursprüngliche Zeichenfolge liegt garantiert im Bereich, wenn diese Methode zurückgibt. Ein String^, das von einem StringReference initialisiert wird, erzwingt eine Zuordnung und eine Kopie der Zeichenfolgendaten, wenn ein zweiter Zuweisungsvorgang auftritt. In diesem Fall verlieren Sie den Leistungsvorteil von `StringReference`.  
+ In einigen Fällen empfängt der Code (a) eine Std:: wstring- oder Wchar_t-Zeichenfolge oder ein L"" literal und nur übergibt diese an eine andere Methode, die eine Zeichenfolge akzeptiert ^ als Eingabeparameter. Solange der ursprüngliche Zeichenfolgenpuffer selbst gültig bleibt und nicht geändert wird, bevor die Funktion zurückgibt, können Sie die `wchar_t*` -Zeichenfolge oder das Zeichenfolgenliteral in [Platform::StringReference](../cppcx/platform-stringreference-class.md)konvertieren und dieses anstelle von `Platform::String^`übergeben. Dies ist zulässig, da `StringReference` über eine benutzerdefinierte Konvertierung zu `Platform::String^`verfügt. Mit `StringReference` können Sie vermeiden, dass eine zusätzliche Kopie der Zeichenfolgendaten erstellt wird. In Schleifen, in denen viele Zeichenfolgen übergeben werden, oder wenn sehr große Zeichenfolgen übergeben werden, können Sie mit `StringReference`eine deutliche Leistungsverbesserung erzielen. Aber, da `StringReference` im Grunde den ursprünglichen Zeichenfolgenpuffer verwendet, müssen Sie sorgfältig sein, um Speicherbeschädigungen zu vermeiden. Sie sollten `StringReference` nicht an eine asynchrone Methode übergeben, es sei denn, die ursprüngliche Zeichenfolge liegt garantiert im Bereich, wenn diese Methode zurückgibt. Ein String^, das von einem StringReference initialisiert wird, erzwingt eine Zuordnung und eine Kopie der Zeichenfolgendaten, wenn ein zweiter Zuweisungsvorgang auftritt. In diesem Fall verlieren Sie den Leistungsvorteil von `StringReference`.  
   
  Beachten Sie, dass `StringReference` ein Standard-C++-Klassentyp und keine Verweisklasse ist. Sie können ihn nicht für die öffentliche Schnittstelle von Verweisklassenverwenden, die Sie definieren.  
   

@@ -16,19 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ad3914fb5cd98b09d3b0bdfa5c4385106312d73
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 854a2d7f0dd57c181beae3e88f2de98c0d511e6c
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39651150"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597101"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item"></a>Verknüpfen einer Zugriffstaste mit einem Menüelement
-In vielen Fällen möchten Sie über ein Menüelement und eine Tastenkombination verfügen, um denselben Programmbefehl auszugeben. Hierzu weisen Sie dieselbe Ressourcen-ID zum Menüelement und zum Eintrag in der Zugriffstastentabelle Ihrer Anwendung zu. Sie können die Beschriftung des Menüelements ändern, um den Namen der Zugriffstaste anzuzeigen. Weitere Informationen über Menüelemente und Zugriffstasten finden Sie unter [Verknüpfen eines Menübefehls mit einer Zugriffstaste](../windows/associating-a-menu-command-with-an-accelerator-key.md).  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Zugriffstasten-Editor](../windows/accelerator-editor.md)   
- [Ressourcen-Editor](../windows/resource-editors.md)
+
+In vielen Fällen möchten Sie über ein Menüelement und eine Tastenkombination verfügen, um denselben Programmbefehl auszugeben. Hierzu weisen Sie dieselbe Ressourcen-ID zum Menüelement und zum Eintrag in der Zugriffstastentabelle Ihrer Anwendung zu. Sie können die Beschriftung des Menüelements ändern, um den Namen der Zugriffstaste anzuzeigen. Weitere Informationen über Menüelemente und Zugriffstasten finden Sie unter [Verknüpfen eines Menübefehls mit einer Zugriffstaste](../windows/associating-a-menu-command-with-an-accelerator-key.md).
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Zugriffstasten-Editor](../windows/accelerator-editor.md)  
+[Ressourcen-Editor](../windows/resource-editors.md)

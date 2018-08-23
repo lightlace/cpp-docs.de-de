@@ -1,20 +1,20 @@
 ---
-title: Schnittstellen (C + c++ / CX) | Microsoft Docs
+title: Schnittstellen (C++ / CX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
 ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6be3b207f6bd64685f7ec1d3f6d2271ec3b83f17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d8ed06b84ec53cddac2d76488f7d1540a92c1d52
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090647"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592551"
 ---
 # <a name="interfaces-ccx"></a>Schnittstellen (C++/CX)
 Obwohl eine Verweisklasse nur von einer konkreten Basisklasse erben kann, kann sie eine beliebige Anzahl von Schnittstellenklassen implementieren. Eine Schnittstellenklasse (oder Schnittstellenstruktur) kann (oder muss) mehrere Schnittstellenklassen erben, kann ihre Memberfunktionen überladen und darf Typparameter besitzen.  
@@ -30,7 +30,7 @@ Obwohl eine Verweisklasse nur von einer konkreten Basisklasse erben kann, kann s
   
 -   Felder und statische Member sind nicht zulässig.  
   
--   Typen, die als Eigenschaften, Methodenparameter oder Rückgabewerte verwendet werden, dass die Werte nur für Windows-Runtime-Typen werden können; Dies umfasst die grundlegenden Typen und die enumerationsklassentypen.  
+-   Typen, die werden verwendet, als Eigenschaften, Methodenparameter oder Rückgabewerte können nur Windows-Runtime-Typen sein. Dies schließt die grundlegenden Typen und Enumerationstypen-Klasse.  
   
 ## <a name="declaration-and-usage"></a>Deklaration und Verwendung  
  Im folgenden Beispiel wird die Deklaration einer Schnittstelle erläutert. Beachten Sie, dass eine Schnittstelle entweder als Klassen- oder als Strukturtyp deklariert werden kann.  
@@ -63,9 +63,9 @@ Obwohl eine Verweisklasse nur von einer konkreten Basisklasse erben kann, kann s
  [!code-cpp[cx_interfaces#06](../cppcx/codesnippet/CPP/interfacestest/class1.h#06)]  
   
 ## <a name="generic-interfaces"></a>Generische Schnittstellen  
- In C + c++ / CX, die `generic` -Schlüsselwort wird verwendet, um einen Windows-Runtime parametrisierten Typ darzustellen. Ein parametrisierter Typ wird in Metadaten ausgegeben und kann durch jeden Code genutzt werden, der in einer Programmiersprache geschrieben ist, die Typparameter unterstützt. Windows-Runtime definiert einige generische Schnittstellen – z. B. [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector)– unterstützt jedoch nicht die Erstellung von öffentlichen benutzerdefinierten generischen Schnittstellen in C + c++ / CX. Sie können jedoch private generische Schnittstellen erstellen.  
+ In C++ / CX werden die `generic` Schlüsselwort wird verwendet, um einen parametrisierten Windows-Runtime-Typ darstellen. Ein parametrisierter Typ wird in Metadaten ausgegeben und kann durch jeden Code genutzt werden, der in einer Programmiersprache geschrieben ist, die Typparameter unterstützt. Die Windows-Runtime definiert einige generischen Schnittstellen, z. B. [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector), unterstützt jedoch nicht die Erstellung von öffentlichen benutzerdefinierten generischen Schnittstellen in C++ / CX. Sie können jedoch private generische Schnittstellen erstellen.  
   
- So sieht wie Windows-Runtime-Typen verwendet werden können, um eine generische Schnittstelle zu erstellen:  
+ Hier ist, wie Windows-Runtime-Typen verwendet werden können, um eine generische Schnittstelle zu erstellen:  
   
 -   Eine generische benutzerdefinierte `interface class` in einer Komponente kann nicht in ihre Windows-Metadatendatei ausgegeben werden. Sie kann daher keine öffentliche Zugreifbarkeit besitzen und nicht von Clientcode in anderen WINMD-Dateien implementiert werden. Sie kann durch nicht öffentliche Verweisklassen in der gleichen Komponente implementiert werden. Eine öffentliche Verweisklasse kann einen generischen Schnittstellentyp als privaten Member besitzen.  
   
@@ -89,13 +89,13 @@ Obwohl eine Verweisklasse nur von einer konkreten Basisklasse erben kann, kann s
   
 -   Eine geschlossene generische Schnittstelle verfügt über einen implizit generierten UUID. Benutzer können den UUID nicht angeben.  
   
--   In der Schnittstelle wird angenommen, dass jeder Verweis auf die aktuelle Schnittstelle – in einem Methodenparameter, einem Rückgabewert oder einer Eigenschaft – auf die aktuelle Instanziierung verweist. Beispielsweise *IMyIntf* bedeutet *IMyIntf\<T >*.  
+-   In der Schnittstelle wird angenommen, dass jeder Verweis auf die aktuelle Schnittstelle – in einem Methodenparameter, einem Rückgabewert oder einer Eigenschaft – auf die aktuelle Instanziierung verweist. Z. B. *IMyIntf* bedeutet, dass *IMyIntf\<T >*.  
   
 -   Wenn der Typ eines Methodenparameters ein Typparameter ist, verwendet die Deklaration dieses Parameters oder dieser Variablen den Namen des Typparameters ohne Zeiger, systemeigenen Verweis oder Handledeklaratoren. Das heißt, schreiben Sie nie "T^".  
   
--   Auf Vorlagen basierende Verweisklassen müssen privat sein. Sie können generische Schnittstellen implementieren und Vorlagenparameter übergeben können *T* an das generische Argument *T*. Jede Instanziierung einer vorlagenbasierten Verweisklasse ist selbst eine Verweisklasse.  
+-   Auf Vorlagen basierende Verweisklassen müssen privat sein. Sie können generische Schnittstellen implementieren, und Sie können Vorlagenparameter übergeben *T* an das generische Argument *T*. Jede Instanziierung einer vorlagenbasierten Verweisklasse ist selbst eine Verweisklasse.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Typsystem](../cppcx/type-system-c-cx.md)   
- [Visual C++-Sprachreferenz](../cppcx/visual-c-language-reference-c-cx.md)   
+ [Sprachreferenz zu Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
  [Namespaceverweis](../cppcx/namespaces-reference-c-cx.md)

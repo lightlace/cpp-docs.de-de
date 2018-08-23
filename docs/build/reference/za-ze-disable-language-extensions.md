@@ -1,5 +1,5 @@
 ---
-title: -Za, - Ze (Spracherweiterungen deaktivieren) | Microsoft Docs
+title: -Za, - Ze (Spracherweiterungen deaktivieren) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,15 +28,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2949a3d60af6d9058f02d12aac1fd86dead5affa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e30fb37be6738b7100b84a1898c02ab4230c41b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378144"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597572"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Spracherweiterungen deaktivieren)
-Die **"/ Za"** (Compileroption) gibt einen Fehler für Sprachkonstrukte, die nicht mit C89 ANSI oder ISO C ++ 11 kompatibel sind. Die **"/ Ze"** (Compileroption), die standardmäßig aktiviert ist, aktiviert Microsoft-Erweiterungen.  
+Die **/Za** Compileroption gibt einen Fehler für Sprachkonstrukte, die nicht mit ANSI-C89 oder ISO C ++ 11 kompatibel sind. Die **/Ze** -Compileroption verwenden, die standardmäßig aktiviert ist, ermöglicht Microsoft-Erweiterungen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,21 +48,21 @@ Die **"/ Za"** (Compileroption) gibt einen Fehler für Sprachkonstrukte, die nic
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Die **"/ Ze"** Option ist veraltet, da ihr Verhalten standardmäßig aktiviert ist. Es wird empfohlen, die [/Zc (Übereinstimmung)](../../build/reference/zc-conformance.md) Compileroptionen Erweiterungsfunktionen sprachspezifischen steuern. Eine Liste der veralteten Compileroptionen, finden Sie unter der **veraltete und entfernte Compileroptionen** im Abschnitt [Compileroptionen nach Kategorien sortiert](../../build/reference/compiler-options-listed-by-category.md).  
+>  Die **/Ze** Option ist veraltet, da das Verhalten standardmäßig aktiviert ist. Es wird empfohlen, die [/Zc (Übereinstimmung)](../../build/reference/zc-conformance.md) Compileroptionen sprachspezifischen Erweiterungsfunktionen steuern. Eine Liste der Ersetzte Compileroptionen, finden Sie unter den **veraltete und entfernte Compileroptionen** im Abschnitt [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).  
   
- Die [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Compiler bietet eine Reihe von Features hinausgehen ANSI C89, ISO C99 oder ISO C++-Standards. Diese Funktionen werden zusammenfassend als Microsoft-Erweiterungen für C und C++ bezeichnet. Diese Erweiterungen werden standardmäßig verfügbar und nicht verfügbar, wenn die **"/ Za"** angegeben wird. Weitere Informationen zu spezifischen Erweiterungen finden Sie unter [Microsoft Extensions für C und C++](../../build/reference/microsoft-extensions-to-c-and-cpp.md).  
+ Visual C++-Compiler bietet eine Reihe von Funktionen über die angegebenen in das ANSI-C89, ISO C99 oder ISO C++-Standards. Diese Funktionen werden zusammenfassend als Microsoft-Erweiterungen für C und C++ bezeichnet. Diese Erweiterungen sind standardmäßig verfügbar und nicht verfügbar, wenn die **/Za** angegeben wird. Weitere Informationen zu spezifischen Erweiterungen finden Sie unter [Microsoft Extensions für C und C++](../../build/reference/microsoft-extensions-to-c-and-cpp.md).  
   
- Es wird empfohlen, dass Sie spracherweiterungen werden, indem deaktiviert die **"/ Za"** option, wenn Sie beabsichtigen, die port-Programms in anderen Umgebungen. Wenn **"/ Za"** angegeben ist, wird der Compiler behandelt Schlüsselwörter als einfache Bezeichner erweiterte Microsoft- und deaktiviert die anderen Microsoft-Erweiterungen automatisch definiert die `__STDC__` vordefiniertes Makro für C-Programme.  
+ Es wird empfohlen, dass Sie spracherweiterungen werden, indem deaktiviert die **/Za** option, wenn Sie Ihr Programm in andere Umgebungen zu portieren möchten. Bei der **/Za** angegeben ist, behandelt der Compiler-Schlüsselwörter als einfache Bezeichner erweiterte Microsoft, die anderen Microsoft-Erweiterungen deaktiviert und definiert automatisch die `__STDC__` vordefiniertes Makro für die C-Programmen.  
   
- Andere Compileroptionen verwendet mit **"/ Za"** kann beeinflussen, wie der Compiler die Einhaltung von Standards sicherstellt. Beispielsweise **"/ Za"** und [/fp (Festlegen von Floating-Verhalten)](../../build/reference/fp-specify-floating-point-behavior.md) möglicherweise Gleitkommatyp Promotion-Verhalten, das nicht entspricht dem ISO C99 oder C ++ 11-Standards.  
+ Andere Compileroptionen verwendet mit **/Za** kann beeinflussen, wie der Compiler stellt sicher, Einhaltung von Standards. Z. B. **/Za** und [/fp (Festlegen des Gleitkommaverhaltens)](../../build/reference/fp-specify-floating-point-behavior.md) kann vom Typ Gleitkommazahl heraufstufung zu Verhalten führen, die nicht entspricht, die ISO C99 oder C ++ 11-Standards.  
   
- Möglichkeiten zum Angeben von bestimmten standardkonforme verhaltenseinstellungen, finden Sie unter der [/Zc](../../build/reference/zc-conformance.md) -Compileroption.  
+ Möglichkeiten zum Angeben von Einstellungen für das bestimmte standardkonforme Verhalten, finden Sie unter den [/Zc](../../build/reference/zc-conformance.md) -Compileroption.  
   
- Weitere Informationen über Konformitätsprobleme mit [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)], finden Sie unter [nicht standardmäßigem Verhalten](../../cpp/nonstandard-behavior.md).  
+ Weitere Informationen über Konformitätsprobleme mit Visual C++ finden Sie unter [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).  
   
 2.  Wählen Sie im Navigationsbereich **Konfigurationseigenschaften**, **C/C++-**, **Sprache**.  
   

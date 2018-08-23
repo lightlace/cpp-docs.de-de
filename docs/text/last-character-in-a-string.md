@@ -1,5 +1,5 @@
 ---
-title: Letzte Zeichen in einer Zeichenfolge | Microsoft Docs
+title: Letzte Zeichen in einer Zeichenfolge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,32 +11,32 @@ helpviewer_keywords:
 - last character in string
 - MBCS [C++], last character in string
 ms.assetid: 0a180376-4e55-41e8-9c64-539c7b6d8047
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88cde1d2eb30103462f7ae8f8c06274a2977fc36
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c5783fcdb1bccbfe7e2a316fa1ea4285519bb1b
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855642"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42593557"
 ---
 # <a name="last-character-in-a-string"></a>Letztes Zeichen einer Zeichenfolge
 Verwenden Sie die folgenden Tipps:  
   
--   Nachfolgendes Byte Adressbereiche überlappen den ASCII-Zeichensatz in vielen Fällen. Sie können problemlos byteweise Scanvorgänge für alle Steuerzeichen (kleiner als 32) verwenden.  
+-   Nachfolgendes Byte-Bereiche überschneiden sich in vielen Fällen den ASCII-Zeichensatz. Sie können problemlos byteweise Scanvorgänge für Steuerzeichen (weniger als 32) verwenden.  
   
--   Betrachten Sie die folgende Codezeile, die überprüft werden kann, um festzustellen, ob das letzte Zeichen in einer Zeichenfolge ein umgekehrter Schrägstrich ist:  
+-   Beachten Sie die folgende Zeile des Codes, der überprüft werden kann, um festzustellen, ob das letzte Zeichen in einer Zeichenfolge ein umgekehrter Schrägstrich ist:  
   
     ```  
     if ( sz[ strlen( sz ) - 1 ] == '\\' )    // Is last character a '\'?  
         // . . .  
     ```  
   
-     Da `strlen` ist nicht MBCS-fähig ist, wird die Anzahl der Bytes, nicht die Anzahl von Zeichen in einem multibyte-Zeichenfolge zurückgegeben. Beachten Sie auch, die in einigen Codepages (z. B. 932) "\\" (0x5c) ist ein gültiges nachfolgendes Byte (`sz` ist eine C-Zeichenfolge).  
+     Da `strlen` ist nicht MBCS-fähig ist, wird die Anzahl der Bytes, die nicht die Anzahl der Zeichen in einer multibyte-Zeichenfolge. Beachten Sie auch, die in einigen Codepages (z. B. 932), "\\" (0x5c) ist ein gültiges nachfolgendes Byte (`sz` ist eine C-Zeichenfolge).  
   
-     Eine mögliche Lösung besteht darin, den Code auf diese Weise umzuschreiben:  
+     Eine mögliche Lösung ist den Code auf diese Weise neu schreiben:  
   
     ```  
     char *pLast;  

@@ -17,30 +17,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49ee69015837d27f7445db9f765739fc1d28152c
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: e4817d0f0082ef4ec0a9a588982405772d733fe0
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39642873"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42598031"
 ---
 # <a name="argtraitshelperargs-constant"></a>ArgTraitsHelper::args-Konstante
-Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```cpp  
-static const int args = Traits::args;  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Hilft [argtraitshelper:: args](../windows/argtraitshelper-args-constant.md) behalten Sie die Anzahl der Parameter der `Invoke` Methode einer Schnittstelle des Delegaten.  
-  
-## <a name="requirements"></a>Anforderungen  
- **Header:** event.h  
-  
- **Namespace:** Microsoft::WRL::Details  
-  
-## <a name="see-also"></a>Siehe auch  
- [ArgTraitsHelper-Struktur](../windows/argtraitshelper-structure.md)   
- [Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)
+
+Unterstützt die Infrastruktur von WRL und nicht direkt aus Ihrem Code verwendet werden soll.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+static const int args = Traits::args;
+```
+
+## <a name="remarks"></a>Hinweise
+
+Hilft [argtraitshelper:: args](../windows/argtraitshelper-args-constant.md) behalten Sie die Anzahl der Parameter der `Invoke` Methode einer Schnittstelle des Delegaten.
+
+## <a name="requirements"></a>Anforderungen
+
+**Header:** event.h
+
+**Namespace:** Microsoft::WRL::Details
+
+## <a name="see-also"></a>Siehe auch
+
+[ArgTraitsHelper-Struktur](../windows/argtraitshelper-structure.md)  
+[Microsoft::WRL::Details-Namespace](../windows/microsoft-wrl-details-namespace.md)

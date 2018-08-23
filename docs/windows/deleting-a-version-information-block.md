@@ -19,30 +19,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f083364f839f963867234a4d3548ac1c00258cc8
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: fd8f3bd94f163e72c908568a167b870ccf0d8051
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39649958"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42596746"
 ---
 # <a name="deleting-a-version-information-block"></a>Löschen eines Versionsinfoblockes
-### <a name="to-delete-a-version-information-block"></a>So löschen Sie einen Versionsinformationsblock  
-  
-1.  Öffnen Sie die Versionsinformationsressource, indem Sie in der [Ressourcenansicht](../windows/resource-view-window.md)auf ihr Symbol doppelklicken.  
-  
-    > [!NOTE]
-    >  Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).  
-  
-2.  Klicken Sie mit der rechten Maustaste auf den Blockheader, den Sie löschen möchten, und wählen Sie dann im Kontextmenü **Versionsinformationsblock löschen** aus.  
-  
-     Mit diesem Befehl wird der ausgewählte Header gelöscht, die verbleibenden Versionsinformationen bleiben jedoch intakt. Beachten Sie, dass die Aktion nicht rückgängig gemacht werden kann.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
+
+### <a name="to-delete-a-version-information-block"></a>So löschen Sie einen Versionsinformationsblock
+
+1. Öffnen Sie die Versionsinformationsressource, indem Sie in der [Ressourcenansicht](../windows/resource-view-window.md)auf ihr Symbol doppelklicken.
+
+   > [!NOTE]
+   > Wenn das Projekt noch keine RC-Datei enthält, informieren Sie sich unter [Erstellen einer neuen Ressourcenskriptdatei](../windows/how-to-create-a-resource-script-file.md).
+
+2. Klicken Sie mit der rechten Maustaste auf den Blockheader, den Sie löschen möchten, und wählen Sie dann im Kontextmenü **Versionsinformationsblock löschen** aus.
+
+   Mit diesem Befehl wird der ausgewählte Header gelöscht, die verbleibenden Versionsinformationen bleiben jedoch intakt. Beachten Sie, dass die Aktion nicht rückgängig gemacht werden kann.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
 ## <a name="requirements"></a>Anforderungen
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Versionsinfo-Editor](../windows/version-information-editor.md)   
- [Versionsinformationen (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Versionsinfo-Editor](../windows/version-information-editor.md)  
+[Versionsinformationen (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

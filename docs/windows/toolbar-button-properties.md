@@ -20,30 +20,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a37e15c4235886eef1dbee958ec5c3da29caab0e
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 5377616bd026ad9045345a465749f58dc22edd57
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39650117"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592964"
 ---
 # <a name="toolbar-button-properties"></a>Eigenschaften von Symbolleisten-Schaltflächen
-Die Eigenschaften einer Symbolleisten-Schaltfläche sind:  
-  
-|Eigenschaft|Beschreibung|  
-|--------------|-----------------|  
-|**ID**|Definiert die ID für die Schaltfläche. Die Dropdown-Liste enthält allgemeine **ID** Namen.|  
-|**Breite**|Legt die Breite der Schaltfläche fest. 16 Pixel wird empfohlen.|  
-|**Höhe**|Legt die Höhe der Schaltfläche fest. Beachten Sie, dass die Höhe einer Schaltfläche ändert sich die Höhe aller Schaltflächen auf der Symbolleiste. 15 Pixel wird empfohlen.|  
-|**Eingabeaufforderung**|Definiert die Nachricht in der Statusleiste angezeigt. Hinzufügen von \n und einen Namen hinzugefügt, Symbolleisten-Schaltfläche eine QuickInfo. Weitere Informationen finden Sie unter [Erstellen einer QuickInfo](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|  
-  
- **Breite** und **Höhe** gelten für alle Schaltflächen. Eine Bitmap, die zum Erstellen einer Symbolleiste verwendet wird, hat eine maximale Breite von 2048. Also, wenn Sie die Schaltflächenbreite auf 512 festlegen, können Sie nur vier Schaltflächen haben, und wenn Sie die Breite auf 513 festlegen, Sie können Sie nur drei Schaltflächen verwenden.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).  
-  
-## <a name="requirements"></a>Anforderungen  
- MFC oder ATL  
-  
-## <a name="see-also"></a>Siehe auch  
- [Ändern der Eigenschaften einer Symbolleisten-Schaltfläche](../windows/changing-the-properties-of-a-toolbar-button.md)   
- [Symbolleisten-Editor](../windows/toolbar-editor.md)
+
+Die Eigenschaften einer Symbolleisten-Schaltfläche sind:
+
+|Eigenschaft|Beschreibung|
+|--------------|-----------------|
+|**ID**|Definiert die ID für die Schaltfläche. Die Dropdown-Liste enthält allgemeine **ID** Namen.|
+|**Breite**|Legt die Breite der Schaltfläche fest. 16 Pixel wird empfohlen.|
+|**Höhe**|Legt die Höhe der Schaltfläche fest. Beachten Sie, dass die Höhe einer Schaltfläche ändert sich die Höhe aller Schaltflächen auf der Symbolleiste. 15 Pixel wird empfohlen.|
+|**Eingabeaufforderung**|Definiert die Nachricht in der Statusleiste angezeigt. Hinzufügen von \n und einen Namen hinzugefügt, Symbolleisten-Schaltfläche eine QuickInfo. Weitere Informationen finden Sie unter [Erstellen einer QuickInfo](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
+
+**Breite** und **Höhe** gelten für alle Schaltflächen. Eine Bitmap, die zum Erstellen einer Symbolleiste verwendet wird, hat eine maximale Breite von 2048. Also, wenn Sie die Schaltflächenbreite auf 512 festlegen, können Sie nur vier Schaltflächen haben, und wenn Sie die Breite auf 513 festlegen, Sie können Sie nur drei Schaltflächen verwenden.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*. Weitere Informationen zum manuellen Hinzufügen von Ressourcendateien zu verwalteten Projekten, den Zugriff auf Ressourcen, zum Anzeigen statischer Ressourcen und Zuweisen von Ressourcenzeichenfolgen zu Eigenschaften, finden Sie unter [Erstellen von Ressourcendateien für Desktop-Apps](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Weitere Informationen zur Globalisierung und Lokalisierung von Ressourcen in verwalteten apps finden Sie unter [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
+
+## <a name="requirements"></a>Anforderungen
+
+MFC oder ATL
+
+## <a name="see-also"></a>Siehe auch
+
+[Ändern der Eigenschaften einer Symbolleisten-Schaltfläche](../windows/changing-the-properties-of-a-toolbar-button.md)  
+[Symbolleisten-Editor](../windows/toolbar-editor.md)

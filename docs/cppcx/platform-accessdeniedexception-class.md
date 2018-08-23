@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: accessdeniedexception-Klasse | Microsoft Docs'
+title: 'Platform:: accessdeniedexception-Klasse | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Platform::AccessDeniedException
 ms.assetid: 6ae2155b-7b16-4587-8d2d-da05eab4c7e9
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be26bfc87be55d36954429c64094cabd6a6cf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 808de08163f0f94e4c3d0064fced7cb81f83c931
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087613"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42597935"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Platform::AccessDeniedException-Klasse
 Wird ausgelöst, wenn der Zugriff auf eine Ressource oder eine Funktion verweigert wird.  
@@ -36,9 +36,9 @@ public ref class AccessDeniedException : COMException,    IException,    IPrinta
  Wenn Sie diese Ausnahme erreicht haben, stellen Sie sicher, dass Sie die entsprechende Funktion angefordert und die erforderlichen Deklarationen im Paketmanifest der App angegeben haben. Weitere Informationen finden Sie unter [COMException](../cppcx/platform-comexception-class.md) .  
   
 ### <a name="requirements"></a>Anforderungen  
- **Unterstützter Client:** Windows 8  
+ **Unterstützter Client (Min.):** Windows 8  
   
- **Unterstützter Server:** Windows Server 2012  
+ **Unterstützter Server (Min.):** Windows Server 2012  
   
  **Namespace:** Platform  
   

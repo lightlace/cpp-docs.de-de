@@ -17,26 +17,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54e429281acedb716ba9a0253dabfd8754ab63d9
-ms.sourcegitcommit: 37a10996022d738135999cbe71858379386bab3d
+ms.openlocfilehash: 832f044cf644bd3dac30c745e13dad7d5a6fc4d1
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39647474"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591245"
 ---
 # <a name="creating-a-submenu"></a>Erstellen eines Untermenüs
-### <a name="to-create-a-submenu"></a>So erstellen Sie ein Untermenü  
-  
-1.  Klicken Sie auf den Menübefehl, für den Sie ein Untermenü erstellen möchten.  
-  
-2.  Geben Sie im Feld **Neues Element** , das rechts angezeigt wird, den Namen des neuen Menübefehls ein. Dieser neue Befehl wird im Untermenü an erster Stelle angezeigt.  
-  
-3.  Fügen Sie dem Untermenü weitere Menübefehle hinzu.  
-  
- Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.  
-  
-## <a name="requirements"></a>Anforderungen  
- Win32  
-  
-## <a name="see-also"></a>Siehe auch  
- [Menü-Editor](../windows/menu-editor.md)
+
+### <a name="to-create-a-submenu"></a>So erstellen Sie ein Untermenü
+
+1. Klicken Sie auf den Menübefehl, für den Sie ein Untermenü erstellen möchten.
+
+2. Geben Sie im Feld **Neues Element** , das rechts angezeigt wird, den Namen des neuen Menübefehls ein. Dieser neue Befehl wird im Untermenü an erster Stelle angezeigt.
+
+3. Fügen Sie dem Untermenü weitere Menübefehle hinzu.
+
+Informationen zum Hinzufügen von Ressourcen zu verwalteten Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
+
+## <a name="requirements"></a>Anforderungen
+
+Win32
+
+## <a name="see-also"></a>Siehe auch
+
+[Menü-Editor](../windows/menu-editor.md)
