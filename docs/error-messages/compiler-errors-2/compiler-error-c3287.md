@@ -28,7 +28,7 @@ Der Typ 'Typ' (Rückgabetyp von 'GetEnumerator') muss eine passende öffentliche
   
  Benutzerdefinierte Auflistungsklassen müssen Definitionen für `MoveNext` und `Current`enthalten.  
   
- Weitere Informationen finden Sie unter [How to: Iterate Over a User-Defined Collection with for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) .  
+ Weitere Informationen finden Sie unter [Gewusst wie: Durchlaufen einer benutzerdefinierten Auflistung mit der for-each-Klausel](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) .  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird C3287 generiert:  
