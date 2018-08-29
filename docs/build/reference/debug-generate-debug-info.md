@@ -1,5 +1,5 @@
 ---
-title: -DEBUG (Debuginfo generieren) | Microsoft Docs
+title: -DEBUG (Debuginfo generieren) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f93c47a0f96cf0b75b453bcea97212d4ab2fd6d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11b3799447e160a56d73441b60215f1dfcb3e227
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375726"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132134"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (Debuginfo generieren)
 ```  
@@ -44,23 +44,23 @@ Die **/DEBUG** Option werden Debuginformationen für die ausführbare Datei erst
   
 Der Linker stellt die Debuginformationen in einer Programmdatenbankdatei (PDB). Aktualisiert die PDB-Datei bei nachfolgenden Builds des Programms.  
   
-Eine ausführbare Datei (.exe-Datei oder DLL) erstellt, die für das Debuggen enthält den Namen und Pfad der entsprechenden PDB. Der Debugger liest den eingebetteten Namen und die PDB-Datei verwendet, wenn Sie das Programm debuggen. Der Linker verwendet den Basisnamen des Programms und die Erweiterung PDB-Datei auf die Programmdatenbank benennen und bettet den Pfad, in dem es erstellt wurde. Um diese Standardeinstellung zu überschreiben, legen [/PDB](../../build/reference/pdb-use-program-database.md) , und geben Sie einen anderen Dateinamen an.  
+Eine ausführbare Datei (.exe-Datei oder DLL) erstellt, die für das Debuggen enthält den Namen und Pfad der entsprechenden PDB. Der Debugger liest der eingebettete Name und die PDB-Datei verwendet, wenn Sie das Programm zu debuggen. Der Linker den Basisnamen des Programms und der Dateierweiterung ".pdb" verwendet, um die Programm-Datenbankname und bettet den Pfad, in dem es erstellt wurde. Um diese Standardeinstellung zu überschreiben, legen [/PDB](../../build/reference/pdb-use-program-database.md) , und geben Sie einen anderen Dateinamen an.  
 
-Die **Fastlink** Option private Symbolinformationen in den einzelnen Kompilierung Produkten verwendet, um die ausführbare Datei erstellt wird. Es wird eine begrenzte PDB-Datei, die in der Debuginformationen in den Objektdateien und Bibliotheken, die zum Erstellen der ausführbaren Datei, anstatt eine vollständige Kopie Indizes generiert. Diese Option, die zwischen zwei und vier Mal so schnell wie das vollständige PDB-Generierung verknüpfen kann, und es wird empfohlen, wenn Sie lokal debuggen, und die Build-Produkten zur Verfügung haben. Diese eingeschränkte PDB kann nicht verwendet werden, für das Debuggen, wenn die erforderlichen Build Produkte sind nicht verfügbar, z. B. wenn die ausführbare Datei auf einem anderen Computer bereitgestellt wird. In einem Developer-Eingabeaufforderung können Sie die mspdbcmf.exe-Tool verwenden, um eine vollständige PDB-Datei aus dieser eingeschränkten PDB zu generieren. Verwenden Sie in Visual Studio die Menüelemente Projekt- oder Build zum Generieren von vollständige PDB-Datei um eine vollständige PDB-Datei für das Projekt oder die Projektmappe zu erstellen.  
+Die **/Debug: Fastlink** Option ist in Visual Studio 2017 und höher verfügbar. Durch diese Option wird die private Symbolinformationen in die Kompilierung der einzelnen Produkte verwendet, um die ausführbare Datei zu erstellen. Es wird eine eingeschränkte PDB-Datei, die Indizes in die Debuginformationen in den Objektdateien und Bibliotheken, die zum Erstellen der ausführbaren Datei, anstatt eine vollständige Kopie generiert. Diese Option kann zwei bis vier Mal so schnell wie die vollständige PDB-Generierung verknüpfen, und es wird empfohlen, wenn Sie lokal debuggen, und die Build-Produkte zur Verfügung haben. Diese eingeschränkte PDB kann nicht verwendet werden, für das Debuggen, wenn die erforderlichen Build-Produkte sind nicht verfügbar, z. B. wenn die ausführbare Datei auf einem anderen Computer bereitgestellt wird. Das mspdbcmf.exe-Tool können Sie in einer Developer-Eingabeaufforderung um eine vollständige PDB-Datei aus dieser begrenzte PDB-Datei zu generieren. Verwenden Sie in Visual Studio die Menüelemente Projekt oder Build zum Generieren von einer vollständigen PDB-Datei, um eine vollständige PDB-Datei für das Projekt oder Projektmappe zu erstellen.  
   
-Die **/Debug: Full** Option verschiebt alle privaten Symbolinformationen aus einzelnen Kompilierung Produkten (Objektdateien und Bibliotheken) in eine einzelne PDB-Datei und kann die zeitaufwändigsten Teil des Links. Allerdings kann die vollständige PDB-Datei verwendet werden, um die ausführbare Datei zu debuggen, wenn keine anderen Build Produkte sind verfügbar, z. B. wenn die ausführbare Datei bereitgestellt wird.  
+Die **/Debug: Full** Option alle privaten Symbolinformationen aus einzelnen Kompilierung-Produkten (Objektdateien und Bibliotheken) in einer einzelnen PDB-Datei verschoben, und kann der zeitaufwändigste Teil des Links. Allerdings kann die vollständige PDB-Datei verwendet werden, um die ausführbare Datei zu debuggen, wenn keine anderen Build-Produkte sind verfügbar, z. B. wenn die ausführbare Datei bereitgestellt wird.  
   
-Die **/DEBUG: keine** Option werden keine PDB-Datei generiert.  
+Die **/DEBUG: keine** Option erzeugt eine PDB-Datei nicht.  
   
-Geben Sie bei **/DEBUG** ohne zusätzliche Optionen der Linker standardmäßig **/Debug: Full** für Befehlszeilen- und Makefile Builds für Version erstellt, in der Visual Studio-IDE und für die Debug- und Release in Visual Studio 2015 und frühere Versionen erstellt. In Visual Studio 2017 ab, das Buildsystem in der IDE standardmäßig **Fastlink** beim Angeben der **/DEBUG** option für Debugbuilds. Um Abwärtskompatibilität zu gewährleisten, werden anderen Standardeinstellungen unverändert.  
+Beim Angeben von **/DEBUG** mit keine zusätzlichen Optionen, der Linker standardmäßig **/Debug: Full** für Befehlszeilen- und Makefile-Builds, die Daten für Version erstellt werden sollen, in der Visual Studio-IDE, und für Debug und Release in Visual Studio 2015 und früheren Versionen erstellt. Ab Visual Studio 2017 ist das Buildsystem in der IDE standardmäßig **/Debug: Fastlink** beim Angeben der **/DEBUG** option für Debugbuilds. Um Abwärtskompatibilität zu gewährleisten, werden anderen Standardwerte unverändert.  
   
-Des Compilers [C7-kompatibel](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Z7) Option veranlasst den Compiler, lassen Sie die Debuginformationen in den OBJ-Dateien. Sie können auch die [Programmdatenbank](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Zi)-Compileroption, um die Debuginformationen in eine PDB-Datei für die OBJ-Datei zu speichern. Der Linker sucht nach der objektspezifischen PDB zuerst in den absoluten Pfad, der in der OBJ-Datei geschrieben, und klicken Sie dann in das Verzeichnis, die die OBJ-Datei enthält. Sie können keine PDB-Dateinamen oder den Speicherort, an den Linker ein Objekt angeben.  
+Des Compilers [C7-kompatibel](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Z7) Option veranlasst den Compiler an, die Debuginformationen in die OBJ-Dateien zu belassen. Sie können auch die [Programmdatenbank](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Zi)-Compileroption, um die Debuginformationen in eine PDB-Datei für die OBJ-Datei zu speichern. Der Linker sucht des Objekts PDB-Datei zuerst in den absoluten Pfad, in der OBJ-Datei geschrieben, und klicken Sie dann in das Verzeichnis, die die OBJ-Datei enthält. Sie können nicht die PDB-Dateinamen oder den Speicherort, an den Linker angeben.  
   
 [/ INCREMENTAL](../../build/reference/incremental-link-incrementally.md) wird impliziert, wenn "/ Debug" angegeben wird.  
   
-/ DEBUG ändert die Standardwerte für die [/OPT](../../build/reference/opt-optimizations.md) Option von REF in NOREF und ICF in NOICF, damit Sie ggf. die ursprünglichen Standardwerte müssen Sie explizit/OPT: REF "oder" / OPT: ICF angeben.  
+/ DEBUG werden die Standardwerte für die ["/ OPT"](../../build/reference/opt-optimizations.md) können von REF in NOREF und von ICF NOICF, damit Sie die ursprünglichen Standardwerte können Sie explizit/OPT: REF "oder" / OPT: ICF angeben müssen.  
   
-Es ist nicht möglich, erstellen Sie eine .exe oder .dll, die Debuginformationen enthält. Debuggen von Informationen stets in eine OBJ- oder PDB-Datei gespeichert ist.  
+Es ist nicht möglich, erstellen eine .exe oder .dll, die Debuginformationen enthält. Debuggen von Informationen wird immer in eine OBJ- oder PDB-Datei platziert.  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
@@ -70,9 +70,9 @@ Es ist nicht möglich, erstellen Sie eine .exe oder .dll, die Debuginformationen
   
 3.  Klicken Sie auf die **Debuggen** Eigenschaftenseite.  
   
-4.  Ändern der **Debuginfo generieren** Eigenschaft, um die Generierung der PDB-Datei zu aktivieren. Dadurch werden Fastlink standardmäßig in Visual Studio 2017.  
+4.  Ändern der **Debuginfo generieren** Eigenschaft, um PDB-Generierung zu aktivieren. Dies ermöglicht die/Debug: Fastlink standardmäßig in Visual Studio 2017.  
   
-4.  Ändern der **generieren vollständige Programmdatenbankdatei** Eigenschaft/Debug: full für die vollständige PDB-Generierung für alle inkrementellen Build aktivieren.  
+4.  Ändern der **vollständige Programmdatenbankdatei erstellen** Eigenschaft/Debug: full für vollständige PDB-Generierung für jede inkrementelle Builds aktivieren.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   

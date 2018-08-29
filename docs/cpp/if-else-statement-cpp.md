@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405109"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131890"
 ---
 # <a name="if-else-statement-c"></a>if-else-Anweisung (C++)
 Steuert den bedingten Branch. Anweisungen in der *If-Block* werden nur ausgeführt, wenn die *If-Ausdruck* ergibt einen Wert ungleich Null (oder "true"). Wenn der Wert des *Ausdruck* ungleich NULL ist, *statement1* und alle anderen Anweisungen im Block ausgeführt werden, und der else-Block, falls vorhanden, wird übersprungen. Wenn der Wert des *Ausdruck* 0 (null), wird der If-Block wird übersprungen, und der else-Block, falls vorhanden, wird ausgeführt. Ausdrücke, die ungleich NULL ausgewertet, werden.
@@ -119,7 +119,8 @@ int main()
     }
 }
 ```  
-## <a name="if-statement-with-an-initializer"></a>Wenn die Anweisung mit einem Initialisierer
+## <a name="if_with_init"></a> Wenn die Anweisung mit einem Initialisierer
+
 **Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): ein **Wenn** Anweisung enthält möglicherweise auch einen Ausdruck, der deklariert und initialisiert eine benannte Variable. Verwenden Sie diese Form der If-Anweisung aus, wenn die Variable nur innerhalb des Bereichs der If-Block erforderlich ist. 
 
 ```cpp
@@ -169,8 +170,8 @@ int main()
   
  Die **else** -Klausel eine `if...else` Anweisung bezieht sich auf die nächstgelegene vorherigen **Wenn** -Anweisung im gleichen Gültigkeitsbereich, der einen entsprechenden keinen **else** -Anweisung.   
 
-## <a name="constexpr-if-statements"></a>"constexpr" Wenn Anweisungen
-**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): In Funktionsvorlagen, können Sie eine `constexpr if` Anweisung, damit Verzweigungen Entscheidungen während der Kompilierung ohne zurückgreifen auf mehrere überlädt. Beispielsweise können Sie einer einzelnen Funktion schreiben, diese Handles Parameter Entpacken (keine Überladung für die NULL-Parameter ist erforderlich): 
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Wenn "constexpr"-Anweisungen
+**Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): In Funktionsvorlagen, können Sie eine **Wenn "constexpr"** Anweisung, damit Verzweigungen Entscheidungen treffen zu kompilieren auf mehreren funktionsüberladungen zurückgreifen müssen. Beispielsweise können Sie einer einzelnen Funktion schreiben, diese Handles Parameter Entpacken (keine Überladung für die NULL-Parameter ist erforderlich): 
 
 ```cpp
 template <class T, class... Rest>
@@ -180,9 +181,8 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   constexpr if (sizeof...(r)) 
+   if constexpr (sizeof...(r)) 
    {
-      
       f(r...); 
    }
    else

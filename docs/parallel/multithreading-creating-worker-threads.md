@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading: Erstellen von Arbeitsthreads | Microsoft-Dokumentation'
+title: 'Multithreading: Erstellen von Arbeitsthreads in MFC | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb5828947524c9cbeeabb47f9f6b174ac8115a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90e0af6a1b11b114e56e6c1d87cb293ab83dd768
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590599"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131188"
 ---
-# <a name="multithreading-creating-worker-threads"></a>Multithreading: Erstellen von Arbeitsthreads
+# <a name="multithreading-creating-worker-threads-in-mfc"></a>Multithreading: Erstellen von Arbeitsthreads in MFC
 Ein Arbeitsthread wird normalerweise zur Behandlung von Hintergrundaufgaben verwendet. Auf diese Weise muss der Benutzer nicht auf deren Beendung warten, um mit der Anwendung weiterarbeiten zu können. Aufgaben wie Neuberechnung und Hintergrunddruck sind gute Beispiele für Arbeitsthreads. In diesem Thema werden die notwendigen Schritte zur Erstellung eines Arbeitsthreads ausführlich erläutert. Folgende Themen werden behandelt:  
   
 - [Starten des Threads](#_core_starting_the_thread)  
@@ -64,11 +64,11 @@ Der Thread wird durch die Steuerungsfunktion definiert. Der Thread beginnt am An
 UINT MyControllingFunction( LPVOID pParam );  
 ```  
   
-Bei dem Parameter handelt es sich um einen einzelnen Wert. Der Wert, den die Funktion in diesem Parameter empfängt, ist der Wert, der bei der Erstellung des Threadobjekts an den Konstruktor übergeben wurde. Die Steuerungsfunktion kann diesen Wert auf beliebige Art und Weise interpretieren: Er kann als Skalarwert oder als Zeiger auf eine Struktur mit mehreren Parametern behandelt werden, oder er kann ignoriert werden. Falls sich der Parameter auf eine Struktur bezieht, kann diese nicht nur zur Übergabe von Daten vom Aufrufer an den Thread verwendet werden, sondern auch zur Rückgabe von Daten vom Thread an den Aufrufer. Wenn Sie eine Struktur dieser Art zur Rückgabe von Daten an den Aufrufer verwenden, muss der Aufrufer vom Thread benachrichtigt werden, sobald die Ergebnisse verfügbar sind. Weitere Informationen zur Kommunikation zwischen Arbeitsthread und Aufrufer finden Sie unter [Multithreading: Tipps für die Programmierung](../parallel/multithreading-programming-tips.md).  
+Bei dem Parameter handelt es sich um einen einzelnen Wert. Der Wert, den die Funktion in diesem Parameter empfängt, ist der Wert, der bei der Erstellung des Threadobjekts an den Konstruktor übergeben wurde. Die Steuerungsfunktion kann diesen Wert auf beliebige Art und Weise interpretieren: Er kann als Skalarwert oder als Zeiger auf eine Struktur mit mehreren Parametern behandelt werden, oder er kann ignoriert werden. Falls sich der Parameter auf eine Struktur bezieht, kann diese nicht nur zur Übergabe von Daten vom Aufrufer an den Thread verwendet werden, sondern auch zur Rückgabe von Daten vom Thread an den Aufrufer. Wenn Sie eine Struktur dieser Art zur Rückgabe von Daten an den Aufrufer verwenden, muss der Aufrufer vom Thread benachrichtigt werden, sobald die Ergebnisse verfügbar sind. Weitere Informationen zur Kommunikation zwischen Arbeitsthread und Aufrufer finden Sie unter [Multithreading: Tipps für die Programmierung](multithreading-programming-tips.md).  
   
-Wenn die Funktion beendet wird, sollte es einen UINT-Wert, der angibt, des Grunds für Beendigung zurückgeben. Normalerweise lautet dieser Exitcode 0; dies steht für eine erfolgreiche Ausführung. Andere Werte stehen für unterschiedliche Fehlertypen. Dies hängt ausschließlich von der Implementierung ab. Einige Threads verwalten eventuell einen Verwendungszähler für Objekte und geben die aktuelle Anzahl der Verwendungen des jeweiligen Objekts zurück. Um anzuzeigen, wie Anwendungen auf diesen Wert abrufen können, finden Sie unter [Multithreading: Beenden von Threads](../parallel/multithreading-terminating-threads.md).  
+Wenn die Funktion beendet wird, sollte es einen UINT-Wert, der angibt, des Grunds für Beendigung zurückgeben. Normalerweise lautet dieser Exitcode 0; dies steht für eine erfolgreiche Ausführung. Andere Werte stehen für unterschiedliche Fehlertypen. Dies hängt ausschließlich von der Implementierung ab. Einige Threads verwalten eventuell einen Verwendungszähler für Objekte und geben die aktuelle Anzahl der Verwendungen des jeweiligen Objekts zurück. Um anzuzeigen, wie Anwendungen auf diesen Wert abrufen können, finden Sie unter [Multithreading: Beenden von Threads](multithreading-terminating-threads.md).  
   
-Multithreadprogramme, die mit der MFC-Bibliothek geschrieben wurden, haben einige Einschränkungen. Die Beschreibung dieser Einschränkungen sowie weitere Tipps zur Verwendung von Threads, finden Sie unter [Multithreading: Tipps für die Programmierung](../parallel/multithreading-programming-tips.md).  
+Multithreadprogramme, die mit der MFC-Bibliothek geschrieben wurden, haben einige Einschränkungen. Die Beschreibung dieser Einschränkungen sowie weitere Tipps zur Verwendung von Threads, finden Sie unter [Multithreading: Tipps für die Programmierung](multithreading-programming-tips.md).  
   
 ##  <a name="_core_controlling_function_example"></a> Beispiel einer Steuerungsfunktion  
  
@@ -101,8 +101,8 @@ AfxBeginThread(MyThreadProc, pNewObject);
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Worüber möchten Sie mehr erfahren?  
   
-- [Multithreading: Erstellen von Benutzeroberflächenthreads](../parallel/multithreading-creating-user-interface-threads.md)  
+- [Multithreading: Erstellen von Benutzeroberflächenthreads](multithreading-creating-user-interface-threads.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  
-[Multithreading mit C++ und MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading mit C++ und MFC](multithreading-with-cpp-and-mfc.md)

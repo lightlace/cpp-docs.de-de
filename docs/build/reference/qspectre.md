@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a74c6c7c2ee7aab175d7e136e5cf02a8d9f8bfc
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: ec3509b71d78221c3e15607d34f674fc38d9f635
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39375876"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130988"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -32,7 +32,7 @@ Gibt an, der compilergenerierung von Anweisungen, um bestimmte Spectre-Variante 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **"/ qspectre"** Option veranlasst den Compiler, fügen Sie die Anweisungen, um bestimmte verringern [Spectre-Sicherheitsrisiken](https://spectreattack.com/spectre.pdf). Diese Sicherheitsrisiken namens *seitenkanalangriffe mit spekulativer Ausführung*, wirken sich auf viele Betriebssysteme und modernen Prozessoren, einschließlich der Prozessoren von Intel, AMD und ARM.
+Die **"/ qspectre"** Option ist in Visual Studio 2017 Version 15.7 und höher verfügbar. Veranlasst den Compiler zum Einfügen von Anweisungen, um bestimmte verringern [Spectre-Sicherheitsrisiken](https://spectreattack.com/spectre.pdf). Diese Sicherheitsrisiken namens *seitenkanalangriffe mit spekulativer Ausführung*, wirken sich auf viele Betriebssysteme und modernen Prozessoren, einschließlich der Prozessoren von Intel, AMD und ARM.
 
 Die **"/ qspectre"** Option ist standardmäßig deaktiviert.
 

@@ -1,7 +1,7 @@
 ---
 title: Enumerationen (C++) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/01/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 00a1b940ad6c792abbb13ec91b7376b73b2be16b
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406252"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130949"
 ---
 # <a name="enumerations-c"></a>Enumerationen (C++)
 Eine Enumeration ist ein benutzerdefinierter Typ, der aus einem Satz von benannten ganzzahligen Konstanten besteht, die als Enumeratoren bezeichnet werden.  
@@ -149,7 +149,8 @@ namespace ScopedEnumConversions
   
  Beachten Sie, dass die Zeile `hand = account_num;` noch den Fehler verursacht, der bei Enumerationen ohne Bereichsbeschränkung auftritt, wie oben beschrieben. Sie ist mit einer expliziten Umwandlung zulässig. Bei bereichsbezogenen Enumerationen ist der Versuch einer Konvertierung in der nächsten Anweisung, `account_num = Suit::Hearts;`, nicht mehr ohne eine explizite Umwandlung zulässig. 
 
-## <a name="enums-with-no-enumerators"></a>Enumerationen mit keine Enumeratoren
+## <a name="no_enumerators"></a> Enumerationen mit keine Enumeratoren
+
 **Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): durch Definieren einer Enumeration (reguläre oder Bereichsbezogene) mit einem expliziten zugrunde liegenden Typ und kein Enumeratoren, Sie können in Kraft einführen einer neuen integraler Typ, der verfügt über keine implizite Konvertierung in einen anderen Typ. Dieser Typ wird als integrierte zugrunde liegenden Typs verwenden, können Sie das Fehlerpotenzial feine zurückzuführen, dass unbeabsichtigte impliziten Konvertierungen vermeiden.  
 
 

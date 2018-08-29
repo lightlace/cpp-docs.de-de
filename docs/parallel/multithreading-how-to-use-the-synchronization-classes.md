@@ -1,7 +1,7 @@
 ---
-title: 'Multithreading: Verwendungsweise der Synchronisierungsklassen | Microsoft-Dokumentation'
+title: 'Multithreading: Verwendungsweise der MFC-Synchronisierungsklassen | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cec2f873f1fc46ebac2e0f1714c8f46ebc10eac4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e36f63f74a0edc1f6cbcf28b85adceed954cce3d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597888"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131261"
 ---
-# <a name="multithreading-how-to-use-the-synchronization-classes"></a>Multithreading: Verwendungsweise der Synchronisierungsklassen
+# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Multithreading: Verwendungsweise der MFC-Synchronisierungsklassen
 Die Synchronisierung des Zugriffs auf Ressourcen durch Threads ist ein häufiges Problem beim Schreiben von Multithreadanwendungen. Wenn zwei oder mehr Threads gleichzeitig auf dieselben Daten zugreifen, kann dies zu unerwünschten und unvorhersehbaren Ergebnissen führen. Es könnte z. B. vorkommen, dass der eine Thread den Inhalt einer Struktur aktualisiert, während der andere Thread gleichzeitig den Inhalt dieser Struktur liest. Es gibt keine Informationen darüber, welche Daten vom lesenden Thread in einem solchen Fall empfangen werden: die alten Daten, die neu geschriebenen Daten oder möglicherweise eine Kombination aus beidem. MFC enthält eine Reihe von Synchronisierungs- und Synchronisierungszugriffsklassen, die Sie bei der Lösung dieses Problems unterstützen. In diesem Thema werden die verfügbaren Klassen erläutert, und Sie erfahren, wie Sie diese in einer typischen Multithreadanwendung zum Erstellen von threadsicheren Klassen verwenden können.  
   
 Eine typische Multithreadanwendung enthält eine Klasse, die eine Ressource darstellt, die von Threads gemeinsam genutzt wird. Bei einer vorschriftsmäßig entwickelten, vollständig threadsicheren Klasse ist der Aufruf von Synchronisierungsfunktionen nicht erforderlich. Alles wird klassenintern geregelt, damit Sie sich auf die optimale Verwendung der Klasse konzentrieren können und nicht darauf, wie sie eventuell fehlerhaft werden könnte. Die beste Methode zum Erstellen einer vollständig threadsicheren Klasse ist die Einbindung der Synchronisierungsklasse in die Ressourcenklasse. Die Einbindung von Synchronisierungsklassen in eine gemeinsam genutzte Klasse ist ein einfacher Vorgang.  
@@ -63,8 +63,8 @@ singleLock.Unlock();
   
 Der Nachteil dieses Ansatzes liegt darin, dass die Klasse etwas langsamer als die gleiche Klasse ohne hinzugefügte Synchronisierungsobjekte ist. Wenn das Objekt außerdem durch mehrere Threads gelöscht werden könnte, führt eine Einbindung nicht immer zum Erfolg. In dieser Situation ist es besser, separate Synchronisierungsobjekte zu verwalten.  
   
-Informationen zum bestimmen, welche Synchronisierungsklasse in verschiedenen Situationen verwendet, finden Sie unter [Multithreading: Wenn der Synchronisierungsklassen](../parallel/multithreading-when-to-use-the-synchronization-classes.md). Weitere Informationen zur Synchronisierung finden Sie unter [Synchronisierung](http://msdn.microsoft.com/library/windows/desktop/ms686353) im Windows SDK. Weitere Informationen zur Multithreadunterstützung in MFC finden Sie unter [Multithreading mit C++ und MFC](../parallel/multithreading-with-cpp-and-mfc.md).  
+Informationen zum bestimmen, welche Synchronisierungsklasse in verschiedenen Situationen verwendet, finden Sie unter [Multithreading: Wenn der Synchronisierungsklassen](multithreading-when-to-use-the-synchronization-classes.md). Weitere Informationen zur Synchronisierung finden Sie unter [Synchronisierung](/windows/desktop/Sync/synchronization) im Windows SDK. Weitere Informationen zur Multithreadunterstützung in MFC finden Sie unter [Multithreading mit C++ und MFC](multithreading-with-cpp-and-mfc.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  
-[Multithreading mit C++ und MFC](../parallel/multithreading-with-cpp-and-mfc.md)
+[Multithreading mit C++ und MFC](multithreading-with-cpp-and-mfc.md)
