@@ -1,5 +1,5 @@
 ---
-title: -Guard (Enable Control Flow Guard) | Microsoft Docs
+title: -Guard (Ablaufsteuerungsschutz aktivieren) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5c60ff444189e9e6b7919b43649b75722ee7249
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c65bafc14f5ef29db89ddc0a4647193231f7e19
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377403"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131669"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (Ablaufsteuerungsschutz aktivieren)
 Aktivieren der Compilergenerierung von Ablaufsteuerungsschutz-Sicherheitsüberprüfungen.  
@@ -32,7 +32,9 @@ Aktivieren der Compilergenerierung von Ablaufsteuerungsschutz-Sicherheitsüberpr
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die Option **/guard:cf** veranlasst den Compiler, die Ablaufsteuerung für indirekte Aufrufziele zum Zeitpunkt der Kompilierung zu analysieren und dann Code einzufügen, um die Ziele zur Laufzeit zu überprüfen. Standardmäßig ist **/guard:cf** deaktiviert und muss explizit aktiviert werden. Um diese Option explizit zu deaktivieren, verwenden Sie **/guard:cf-**.  
+ Die Option **/guard:cf** veranlasst den Compiler, die Ablaufsteuerung für indirekte Aufrufziele zum Zeitpunkt der Kompilierung zu analysieren und dann Code einzufügen, um die Ziele zur Laufzeit zu überprüfen. Standardmäßig ist **/guard:cf** deaktiviert und muss explizit aktiviert werden. Um diese Option explizit zu deaktivieren, verwenden Sie **/guard:cf-**. 
+
+**Visual Studio 2017 und höher**: Diese Option fügt schützt für **wechseln** -Anweisungen, die generiert Tabellen zu wechseln.
   
  Wenn die **/guard:cf** Ablaufsteuerungsschutz-Option (Control Flow Guard, CFG) angegeben wurde, fügen der Compiler und der Linker zusätzliche Laufzeitsicherheitsüberprüfungen zum Erkennen von Versuchen, den Code zu beschädigen, ein. Beim Kompilieren und Verknüpfen werden alle indirekten Aufrufe im Code analysiert, um jede Stelle zu finden, die der Code erreichen kann, wenn er ordnungsgemäß ausgeführt wird. Diese Informationen werden in zusätzlichen Strukturen in den Headern der Binärdateien gespeichert. Der Compiler fügt auch eine Überprüfung vor jedem indirekten Aufruf in Ihren Code ein, um sicherzustellen, dass das Ziel eine der überprüften Positionen ist. Wenn die Überprüfung zur Laufzeit auf einem CFG-fähigen Betriebssystem fehlschlägt, schließt das Betriebssystem das Programm.  
   
@@ -46,7 +48,7 @@ Aktivieren der Compilergenerierung von Ablaufsteuerungsschutz-Sicherheitsüberpr
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).  
   
 2.  Wählen Sie **Konfigurationseigenschaften**, **C/C++**, **Codegenerierung**aus.  
   
