@@ -1,5 +1,5 @@
 ---
-title: 'Aktuelle Zeit: Allgemeine Klassen | Microsoft Docs'
+title: 'Aktuelle Zeit: Allgemeine Klassen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,37 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec71cf76f859457aa76e69b57b58db3940e974da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c99a2626c9f60c6407ca9b374bed9c83c981e5b3
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354594"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132006"
 ---
 # <a name="current-time-general-purpose-classes"></a>Aktuelle Zeit: Allgemeine Klassen
-Das folgende Verfahren veranschaulicht das Erstellen einer `CTime` Objekt, und initialisieren Sie es mit der aktuellen Uhrzeit.  
+Das folgende Verfahren zeigt, wie Sie erstellen eine `CTime` Objekt, und initialisieren Sie es mit der aktuellen Zeit.  
   
 #### <a name="to-get-the-current-time"></a>Um die aktuelle Uhrzeit abzurufen.  
   
-1.  Zuordnen einer `CTime` Objekt, wie folgt:  
+1.  Zuordnen einer `CTime` Objekt wie folgt:  
   
      [!code-cpp[NVC_ATLMFC_Utilities#171](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_1.cpp)]  
   
     > [!NOTE]
-    >  Nicht initialisiertes `CTime` Objekte werden nicht auf eine gültige Zeit initialisiert.  
+    >  Nicht initialisierte `CTime` Objekte werden nicht in eine gültige Zeit initialisiert.  
   
-2.  Rufen Sie die `CTime::GetCurrentTime` Funktion, um die aktuelle Zeit des Betriebssystems abzurufen. Diese Funktion gibt eine `CTime` -Objekt, das verwendet werden kann, zum Festlegen des Werts der `CTime`wie folgt:  
+2.  Rufen Sie die `CTime::GetCurrentTime` Funktion, um die aktuelle Uhrzeit vom Betriebssystem abzurufen. Diese Funktion gibt eine `CTime` -Objekt, das verwendet werden kann, zum Festlegen des Werts der `CTime`wie folgt:  
   
      [!code-cpp[NVC_ATLMFC_Utilities#172](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_2.cpp)]  
   
-     Da `GetCurrentTime` ist eine statische Memberfunktion aus der `CTime` -Klasse, müssen Sie seinen Namen durch den Namen der Klasse und den Bereichsauflösungsoperator qualifizieren (`::`), `CTime::GetCurrentTime()`.  
+     Da `GetCurrentTime` ist eine statische Memberfunktion von der `CTime` -Klasse, müssen Sie den Namen mit dem Namen der Klasse und den Bereichsauflösungsoperator qualifizieren (`::`), `CTime::GetCurrentTime()`.  
   
- Natürlich können die zwei Schritte zuvor in einer einzigen Anweisung wie folgt kombiniert werden:  
+ Natürlich könnten die zwei Schritte bereits in einer einzigen Anweisung wie folgt kombiniert werden:  
   
  [!code-cpp[NVC_ATLMFC_Utilities#173](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_3.cpp)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit: Allgemeine Klassen](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+
 
 
 

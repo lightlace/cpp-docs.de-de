@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25172bc44c21fcb11ec3f7c77224d3214e21c5f2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 0894ecf767d24f6e5ec5ea385b5aeca6daae41a8
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404609"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131752"
 ---
 # <a name="functions-c"></a>Funktionen (C++)
 
@@ -306,7 +306,7 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-## <a name="returning-multiple-values-from-a-function"></a>Zurückgeben von mehreren Werten aus einer Funktion
+## <a name="multi_val"></a> Zurückgeben von mehreren Werten aus einer Funktion
 
 Es gibt verschiedene Möglichkeiten, mehr als einen Wert aus einer Funktion zurückgeben:
 
