@@ -1,7 +1,7 @@
 ---
-title: 'Multithreading: Beenden von Threads | Microsoft-Dokumentation'
+title: 'Multithreading: Beenden von Threads in MFC | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-parallel
 ms.topic: conceptual
@@ -23,14 +23,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2411d11c154bef09b95d33e5b8598ba3c64dfb94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b192c0ee4bc7658fc39791545c4aa9334edd183
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608843"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131944"
 ---
-# <a name="multithreading-terminating-threads"></a>Multithreading: Beenden von Threads
+# <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Beenden von Threads in MFC
 In den beiden folgenden Fällen wird die Beendigung eines Threads ordnungsgemäß ausgelöst: die Steuerungsfunktion wird beendet, oder der Thread darf nicht vollständig ausgeführt werden. Falls z. B. in einem Textverarbeitungsprogramm ein Thread für den Hintergrunddruck verwendet wird, wird die Steuerungsfunktion normal beendet, sobald der Druckauftrag erfolgreich abgeschlossen ist. Wenn der Benutzer den Druckvorgang jedoch abbrechen möchte, muss der Thread für den Hintergrunddruck vorzeitig beendet werden. In diesem Thema wird beschrieben, wie jede Situation zu implementieren ist und wie der Exitcode des Threads nach seiner Beendigung ermittelt wird.  
   
 - [Normale Threadbeendigung](#_core_normal_thread_termination)  
@@ -67,7 +67,7 @@ Bei beiden Methoden lässt sich ermitteln, warum ein `CWinThread`-Objekt beendet
   
 ## <a name="see-also"></a>Siehe auch  
  
-[Multithreading mit C++ und MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
+[Multithreading mit C++ und MFC](multithreading-with-cpp-and-mfc.md)   
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

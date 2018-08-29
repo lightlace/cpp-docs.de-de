@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5192ebcbc6b0b9b82bcce0bd0f2041ff536016
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: f83037258ebd279f7c9ed80086a34ebf497efeed
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879367"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131682"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>Formatierung von Zeitwerten: Allgemeine Klassen
 Das folgende Verfahren zeigt, wie Zeitwerte formatiert wird.  
@@ -41,6 +41,5 @@ Verwenden der `Format` Memberfunktion entweder die [CTime](../atl-mfc-shared/ref
   
 -   [Automatisierungssupport bei der Datums- und zeitprogrammierung](../atl-mfc-shared/date-and-time-automation-support.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Datum und Uhrzeit: Allgemeine Klassen](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+
 

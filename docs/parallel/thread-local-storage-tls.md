@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71ed98e550d9db43a42289cfb26e3daaaf68027
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 43abbae434c21557a83463e1691e344123a940db
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539655"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132075"
 ---
 # <a name="thread-local-storage-tls"></a>Threadlokaler Speicher (TLS)
 Durch den threadlokalen Speicher (Thread Local Storage, TLS) kann jeder Thread in einem bestimmten Multithreadprozess Speicherplätze für threadspezifische Daten zuordnen. Dynamisch gebundene (Laufzeit) threadspezifische Daten über die TLS-API unterstützt ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Von Win32 und dem Visual C++-Compiler werden nun neben der bestehenden API-Implementierung statisch gebundene, auf einzelne Threads bezogene (Ladezeit-) Daten unterstützt.  
@@ -117,4 +117,4 @@ Die folgenden Richtlinien müssen bei der Deklaration von statisch gebundenen th
   
 ## <a name="see-also"></a>Siehe auch  
  
-[Multithreading bei C und Win32](../parallel/multithreading-with-c-and-win32.md)   
+[Multithreading bei C und Win32](multithreading-with-c-and-win32.md)   

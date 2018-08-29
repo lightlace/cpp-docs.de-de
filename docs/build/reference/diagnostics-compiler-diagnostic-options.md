@@ -1,5 +1,5 @@
 ---
-title: -Diagnose (Diagnose Compileroptionen) | Microsoft Docs
+title: -Diagnose (Diagnose-Compileroptionen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/11/2016
 ms.technology:
@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d874e26a922a7f9cce7223b574d525d37733598
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f1dce7c7c48e7c7c94da95ca187e0388b3f5d4d
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371771"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131640"
 ---
-# <a name="diagnostics-compiler-diagnostic-options"></a>/Diagnostics (Diagnose Compileroptionen)  
+# <a name="diagnostics-compiler-diagnostic-options"></a>/ Diagnostics (Diagnose-Compileroptionen)  
   
-Verwenden der **/diagnostics** Compileroption, um die Anzeige der Informationen zum Fehler und Warnungen Speicherort angeben.  
+Verwenden der **/Diagnostics** -Compileroption verwenden, um die Anzeige der Informationen zum Fehler und Warnungen Speicherort angeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,25 +37,28 @@ Verwenden der **/diagnostics** Compileroption, um die Anzeige der Informationen 
 ```  
 
 ## <a name="remarks"></a>Hinweise  
-Die **/diagnostics** -Compileroption steuert die Anzeige von Fehler- und Warnungsinformationen.  
+
+Diese Option wird in Visual Studio 2017 und höher unterstützt.
+
+Die **/Diagnostics** -Compileroption steuert die Anzeige von Fehler- und Warnungsinformationen.  
   
-Die **/diagnostics:classic** ist die Standardoption, die nur die Nummer der Zeile meldet, wo das Problem gefunden wurde.  
+Die **/diagnostics:classic** ist die Standardoption, die nur die Nummer der Zeile meldet, in dem das Problem gefunden wurde.  
   
-Die **/diagnostics:column** Option enthält auch die Spalte, in denen das Problem gefunden wurde. Dadurch können Sie die Identifizierung des spezifischen Sprachkonstrukt oder der Zeichen, das das Problem verursacht.  
+Die **/diagnostics:column** Option umfasst auch die Spalte, in dem das Problem gefunden wurde. Damit können Sie identifizieren Sie die sprachspezifischen Konstrukt oder die Zeichen, das das Problem verursacht hat.  
   
-Die **/diagnostics:caret** Option enthält die Spalte, in dem das Problem gefunden wurde, und fügt ein Caretzeichen (^) unter dem Speicherort in der Codezeile, in dem das Problem erkannt wurde.  
+Die **/diagnostics:caret** Option enthält die Spalte, in dem das Problem gefunden wurde, und fügt ein Caretzeichen (^) unter den Speicherort in der Codezeile, in dem das Problem erkannt wurde.  
   
-Beachten Sie, dass in einigen Fällen, die der Compiler erkennt kein Problem, wo es aufgetreten ist. Beispielsweise kann ein fehlendes Semikolon nicht erkannt werden, bis Weitere, unerwartete Symbole aufgetreten sind. Die Spalte wird gemeldet, und die Einfügemarke befindet, in denen der Compiler hat festgestellt, dass etwas falsch ist, die ist nicht immer wurde, in dem Sie Ihre Korrektur vornehmen müssen.  
+Beachten Sie, dass in einigen Fällen der Compiler kein Problem erkennt, wo es aufgetreten ist. Ein fehlendes Semikolon kann z. B. nicht erkannt werden, bis Weitere, unerwartete Symbole aufgetreten sind. Die Spalte wird gemeldet, und die Einfügemarke befindet, in denen der Compiler hat festgestellt, dass etwas falsch ist, dies ist nicht immer war, in dem Sie Ihre Korrekturen vornehmen müssen.  
   
-Die **/diagnostics** Option ist verfügbar in Visual Studio 2017 ab.  
+Die **/Diagnostics** Option ist ab Visual Studio 2017 verfügbar.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1. Öffnen Sie das Projekt **Eigenschaftenseiten** (Dialogfeld).   
+1. Öffnen des Projekts **Eigenschaftenseiten** Dialogfeld.   
   
 2. Unter **Konfigurationseigenschaften**, erweitern Sie die **C/C++-** Ordner, und wählen Sie die **allgemeine** Eigenschaftenseite.  
   
-3. Verwenden Sie das Dropdown-Steuerelement in der **Diagnose Format** Feld Wählen Sie eine Diagnose Anzeigeoption. Wählen Sie **OK** oder **übernehmen** zum Speichern der Änderungen.  
+3. Verwenden Sie das Dropdown-Steuerelement in der **Diagnoseformat** Feld Wählen Sie eine Diagnose Anzeigeoption. Wählen Sie **OK** oder **übernehmen** zum Speichern der Änderungen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Compileroptionen](../../build/reference/compiler-options.md)   

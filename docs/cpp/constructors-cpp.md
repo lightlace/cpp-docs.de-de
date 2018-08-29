@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f60ba71a82bf09361e55f8c6b7cab82f49d47bd
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572828"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131841"
 ---
 # <a name="constructors-c"></a>Konstruktoren (C++)
 
@@ -598,7 +598,7 @@ Das von den Konstruktoren erstellte Objekt wird vollständig initialisiert, soba
 
 ## <a name="inheriting_constructors"></a> Konstruktorvererbung (C ++ 11)
 
-Eine abgeleitete Klasse kann die Konstruktoren mithilfe einer „using“-Deklaration aus einer direkten Basisklasse erben, wie dies im folgenden Beispiel gezeigt wird:
+Eine abgeleitete Klasse kann die Konstruktoren von einer direkten Basisklasse erben, mithilfe einer **mit** Deklaration, wie im folgenden Beispiel gezeigt:
 
 ```cpp
 #include <iostream>
@@ -647,7 +647,7 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-Mithilfe der „using“-Anweisung werden alle Konstruktoren aus dieser Basisklasse mit Ausnahme jener, die eine identische Signatur wie die Konstruktoren in der abgeleiteten Klasse aufweisen, in den Bereich versetzt. Im Allgemeinen empfiehlt es sich, erbende Konstruktoren zu verwenden, wenn die abgeleitete Klasse keine neuen Datenmember oder Konstruktoren deklariert.
+**Visual Studio 2017 Version 15.7 und höher**: die **mit** -Anweisung in **/Std: c ++ 17** Modus in den Bereich versetzt alle Konstruktoren aus der Basisklasse mit Ausnahme derjenigen, die eine identische Signatur verfügen. an die Konstruktoren in der abgeleiteten Klasse. Im Allgemeinen empfiehlt es sich, erbende Konstruktoren zu verwenden, wenn die abgeleitete Klasse keine neuen Datenmember oder Konstruktoren deklariert. Siehe auch [Verbesserungen in Visual Studio 2017 Version 15.7](../cpp-conformance-improvements-2017.md#improvements_157).
 
 Eine Klassenvorlage kann alle Konstruktoren aus einem Typargument erben, wenn dieser Typ eine Basisklasse angibt:
 

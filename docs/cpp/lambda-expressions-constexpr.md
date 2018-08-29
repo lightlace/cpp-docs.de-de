@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b78fa3de7777ffc6702902cf967a405595caf12f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1b4636333861cc853130a777956ca4b88114f3c6
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408202"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131398"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>Constexpr-Lambdaausdrücke in C++
 **Visual Studio 2017 Version 15.3 und höher** (verfügbar mit [/Std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): kann ein Lambda-Ausdruck deklariert werden, als **"constexpr"** oder in einem Ausdruck Contant verwendet bei der die Initialisierung der einzelnen Data-Element, das sie erfasst oder führt ist in einem konstanten Ausdruck zulässig.  
