@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a38f3320a507b8bd4ce3095ed2c7a02b7bf573
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: dbd258761bef7789e73fe61ac288b414902d2af8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883059"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214073"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread-Klasse
-Diese Klasse implementiert die [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) Schnittstelle und ermöglicht es Objekten, die in mehreren Apartments erstellt werden.  
+Diese Klasse implementiert die [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) Schnittstelle und ermöglicht es Objekten, die in mehreren Apartments erstellt werden.  
   
 > [!IMPORTANT]
 >  Diese Klasse und ihre Member können nicht in Anwendungen verwendet werden, die in der Windows-Runtime ausgeführt werden.  
@@ -114,7 +114,7 @@ STDMETHODIMP LockServer(BOOL fLock);
  Aufrufen von `LockServer` kann ein Client eine Klassenfactory enthalten, damit mehrere Objekte können schnell erstellt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
+ [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)   
  [CComClassFactory2-Klasse](../../atl/reference/ccomclassfactory2-class.md)   
  [CComClassFactorySingleton-Klasse](../../atl/reference/ccomclassfactorysingleton-class.md)   
  [CComObjectRootEx-Klasse](../../atl/reference/ccomobjectrootex-class.md)   

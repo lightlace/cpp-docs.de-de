@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1495a0674cf29d5090c2fff3a1639f5a1646f490
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6bd5f5c0840e90efe4d1e495181cbe5667c86b48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852328"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197511"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog-Klasse
 Kapselt die Dienste, die vom allgemeinen Windows-Dialogfeld für das Drucken bereitgestellt werden.  
@@ -112,7 +112,7 @@ class CPrintDialog : public CCommonDialog
   
  Wenn Sie Ihre Anwendung drucken, ohne die Framework Beteiligung verarbeiten möchten, können Sie die `CPrintDialog` -Klasse "wie besehen" mit dem Konstruktor angegeben oder Sie können Ihre eigenen Dialogfeldklasse von ableiten `CPrintDialog` und schreiben ein Konstruktors entsprechend Ihren Anforderungen. In beiden Fällen Aufrufen dieser Dialogfelder verhält sich wie die standard-MFC-Dialogfelder, da sie von der Klasse abgeleitet sind `CCommonDialog`.  
   
- Verwenden einer `CPrintDialog` Objekt, erstellen Sie zunächst das Objekt mit der `CPrintDialog` Konstruktor. Nachdem Sie das Dialogfeld erstellt wurde, können Sie festlegen oder ändern Sie alle Werte in der [M_pd](#m_pd) Struktur zum Initialisieren der Werte der Dialogfeld-Steuerelemente. Die `m_pd` Struktur ist vom Typ [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843). Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.  
+ Verwenden einer `CPrintDialog` Objekt, erstellen Sie zunächst das Objekt mit der `CPrintDialog` Konstruktor. Nachdem Sie das Dialogfeld erstellt wurde, können Sie festlegen oder ändern Sie alle Werte in der [M_pd](#m_pd) Struktur zum Initialisieren der Werte der Dialogfeld-Steuerelemente. Die `m_pd` Struktur ist vom Typ [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda). Weitere Informationen zu dieser Struktur finden Sie im Windows-SDK.  
   
  Wenn Sie keine eigene Handles im angeben `m_pd` für die `hDevMode` und `hDevNames` Member, achten Sie darauf, dass Sie die Windows-Funktion aufrufen `GlobalFree` für diese Handles, wenn Sie das Dialogfeld abgeschlossen haben. Bei Verwendung des Frameworks einrichten-Implementierung von `CWinApp::OnFilePrintSetup`, Sie müssen keine diese Handles frei. Die Handles werden vom verwaltet `CWinApp` und freigegeben werden, `CWinApp`den Destruktor. Es ist nur erforderlich, diese Handles freizugeben, wenn mit `CPrintDialog` eigenständigen.  
   
@@ -163,7 +163,7 @@ CPrintDialog(
  Gibt an, ob das Drucken von Windows-Standarddialogfeld oder Drucken einrichten (Dialogfeld) angezeigt wird. Legen Sie diesen Parameter auf True, um anzuzeigen, das Standarddialogfeld für Windows einrichten. Legen Sie sie auf "false", um das Dialogfeld Drucken von Windows anzuzeigen. Wenn *bPrintSetupOnly* ist "false", ein Optionsfeld noch immer, in das Dialogfeld Drucken angezeigt wird einrichten.  
   
  *dwFlags*  
- Ein oder mehrere Flags, die Sie, zum Anpassen der Einstellungen im Dialogfeld verwenden können, mit dem bitweisen OR-Operator kombiniert. Beispielsweise legt das Flag PD_ALLPAGES drucken Standardbereich für alle Seiten des Dokuments. Finden Sie unter den [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) Struktur im Windows SDK für Weitere Informationen zu diesen Flags.  
+ Ein oder mehrere Flags, die Sie, zum Anpassen der Einstellungen im Dialogfeld verwenden können, mit dem bitweisen OR-Operator kombiniert. Beispielsweise legt das Flag PD_ALLPAGES drucken Standardbereich für alle Seiten des Dokuments. Finden Sie unter den [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) Struktur im Windows SDK für Weitere Informationen zu diesen Flags.  
   
  *pParentWnd*  
  Ein Zeiger auf das übergeordnete Element oder Besitzer des Dialogfelds-Fenster.  
@@ -171,13 +171,13 @@ CPrintDialog(
 ### <a name="remarks"></a>Hinweise  
  Diese Memberfunktion wird nur das Objekt erstellt. Verwenden der `DoModal` Memberfunktion, um das Dialogfeld anzuzeigen.  
   
- Beachten Sie, dass beim Aufrufen des Konstruktors mit *bPrintSetupOnly* auf "false" festgelegt, wird automatisch das PD_RETURNDC-Flag verwendet. Nach dem Aufruf `DoModal`, `GetDefaults`, oder `GetPrinterDC`, um ein druckerdomänencontroller werden im zurückgegeben `m_pd.hDC`. Dieser Domänencontroller muss freigegeben werden, mit einem Aufruf von [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) durch den Aufrufer der `CPrintDialog`.  
+ Beachten Sie, dass beim Aufrufen des Konstruktors mit *bPrintSetupOnly* auf "false" festgelegt, wird automatisch das PD_RETURNDC-Flag verwendet. Nach dem Aufruf `DoModal`, `GetDefaults`, oder `GetPrinterDC`, um ein druckerdomänencontroller werden im zurückgegeben `m_pd.hDC`. Dieser Domänencontroller muss freigegeben werden, mit einem Aufruf von [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) durch den Aufrufer der `CPrintDialog`.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#174](../../mfc/codesnippet/cpp/cprintdialog-class_1.cpp)]  
   
 ##  <a name="createprinterdc"></a>  CPrintDialog::CreatePrinterDC  
- Erstellt einen Drucker-Gerätekontext (DC) aus der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) und [DEVNAMES](../../mfc/reference/devnames-structure.md) Strukturen.  
+ Erstellt einen Drucker-Gerätekontext (DC) aus der [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) und [DEVNAMES](../../mfc/reference/devnames-structure.md) Strukturen.  
   
 ```  
 HDC CreatePrinterDC();
@@ -200,7 +200,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- IDOK oder IDCANCEL. Wenn IDCANCEL zurückgegeben wird, rufen Sie die Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) Funktion, um zu bestimmen, ob ein Fehler aufgetreten ist.  
+ IDOK oder IDCANCEL. Wenn IDCANCEL zurückgegeben wird, rufen Sie die Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) Funktion, um zu bestimmen, ob ein Fehler aufgetreten ist.  
   
  IDOK und IDCANCEL sind Konstanten, die angeben, ob der Benutzer die Schaltfläche "OK" oder "Abbrechen" aktiviert.  
   
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
   
  Nach dem Aufruf `DoModal`, Sie können andere Memberfunktionen aufrufen zum Abrufen von Einstellungen oder Informationen, die vom Benutzer eingegebene in das Dialogfeld.  
   
- Beachten Sie, dass beim Aufrufen des Konstruktors mit *bPrintSetupOnly* auf "false" festgelegt, wird automatisch das PD_RETURNDC-Flag verwendet. Nach dem Aufruf `DoModal`, `GetDefaults`, oder `GetPrinterDC`, um ein druckerdomänencontroller werden im zurückgegeben `m_pd.hDC`. Dieser Domänencontroller muss freigegeben werden, mit einem Aufruf von [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) durch den Aufrufer der `CPrintDialog`.  
+ Beachten Sie, dass beim Aufrufen des Konstruktors mit *bPrintSetupOnly* auf "false" festgelegt, wird automatisch das PD_RETURNDC-Flag verwendet. Nach dem Aufruf `DoModal`, `GetDefaults`, oder `GetPrinterDC`, um ein druckerdomänencontroller werden im zurückgegeben `m_pd.hDC`. Dieser Domänencontroller muss freigegeben werden, mit einem Aufruf von [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) durch den Aufrufer der `CPrintDialog`.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CPrintDialog::CreatePrinterDC](#createprinterdc).  
@@ -245,7 +245,7 @@ BOOL GetDefaults();
   
  In einigen Fällen ein Aufruf dieser Funktion rufen die [Konstruktor](#cprintdialog) für `CPrintDialog` mit *bPrintSetupOnly* auf "false" festgelegt. In diesen Fällen um einen druckerdomänencontroller und `hDevNames` und `hDevMode` (zwei Handles befindet sich in der `m_pd` Datenmember) werden automatisch zugewiesen.  
   
- If der Konstruktor für `CPrintDialog` aufgerufen wurde, wobei *bPrintSetupOnly* auf "false" festgelegt, diese Funktion wird nicht nur zurückgeben `hDevNames` und `hDevMode` befindet sich in `m_pd.hDevNames` und `m_pd.hDevMode`) an den Aufrufer aber gibt auch einen druckerdomänencontroller in `m_pd.hDC`. Es liegt in der Verantwortung des Aufrufers, löschen den Drucker-Gerätekontext aus, und rufen die Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) Funktion auf die Ziehpunkte, die Sie abschließend mit der `CPrintDialog` Objekt.  
+ If der Konstruktor für `CPrintDialog` aufgerufen wurde, wobei *bPrintSetupOnly* auf "false" festgelegt, diese Funktion wird nicht nur zurückgeben `hDevNames` und `hDevMode` befindet sich in `m_pd.hDevNames` und `m_pd.hDevMode`) an den Aufrufer aber gibt auch einen druckerdomänencontroller in `m_pd.hDC`. Es liegt in der Verantwortung des Aufrufers, löschen den Drucker-Gerätekontext aus, und rufen die Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) Funktion auf die Ziehpunkte, die Sie abschließend mit der `CPrintDialog` Objekt.  
   
 ### <a name="example"></a>Beispiel  
  Dieses Codefragment wird von den Standarddrucker Gerätekontext und meldet dem Benutzer die Auflösung des Druckers in Punkten pro Zoll. (Dieses Attribut der Funktionen des Druckers ist häufig als DPI-Werte bezeichnet.)  
@@ -278,7 +278,7 @@ LPDEVMODE GetDevMode() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Datenstruktur, die Informationen über die Initialisierung für Grafikgeräte und die Umgebung eines Druckertreibers enthält. Sie müssen den Arbeitsspeicher, die von dieser Struktur mit der Windows Entsperren [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) -Funktion, die im Windows SDK beschrieben wird.  
+ Die [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) Datenstruktur, die Informationen über die Initialisierung für Grafikgeräte und die Umgebung eines Druckertreibers enthält. Sie müssen den Arbeitsspeicher, die von dieser Struktur mit der Windows Entsperren [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) -Funktion, die im Windows SDK beschrieben wird.  
   
 ### <a name="remarks"></a>Hinweise  
  Mit dieser Funktion wird nach dem Aufruf [DoModal](#domodal) oder [GetDefaults](#getdefaults) Abrufen von Informationen über das Druckgerät.  
@@ -345,7 +345,7 @@ HDC GetPrinterDC() const;
  Ein Handle für den Drucker-Gerätekontext bei erfolgreicher Ausführung; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die *bPrintSetupOnly* Parameter, der die `CPrintDialog` Konstruktor wurde "false" (gibt an, dass das Drucken-Dialogfeld angezeigt wird), klicken Sie dann `GetPrinterDC` gibt ein Handle für den Drucker-Gerätekontext. Rufen Sie die Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) Funktion, um den Gerätekontext zu löschen, wenn Sie fertig sind verwenden.  
+ Wenn die *bPrintSetupOnly* Parameter, der die `CPrintDialog` Konstruktor wurde "false" (gibt an, dass das Drucken-Dialogfeld angezeigt wird), klicken Sie dann `GetPrinterDC` gibt ein Handle für den Drucker-Gerätekontext. Rufen Sie die Windows [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) Funktion, um den Gerätekontext zu löschen, wenn Sie fertig sind verwenden.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  
@@ -374,7 +374,7 @@ PRINTDLG& m_pd;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Nach dem Erstellen einer `CPrintDialog` -Objekts verwenden Sie `m_pd` festzulegende verschiedene Aspekte im Dialogfeld vor dem Aufruf der [DoModal](#domodal) Member-Funktion. Weitere Informationen zu den `m_pd` Struktur, siehe [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) im Windows SDK.  
+ Nach dem Erstellen einer `CPrintDialog` -Objekts verwenden Sie `m_pd` festzulegende verschiedene Aspekte im Dialogfeld vor dem Aufruf der [DoModal](#domodal) Member-Funktion. Weitere Informationen zu den `m_pd` Struktur, siehe [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) im Windows SDK.  
   
  Wenn Sie ändern die `m_pd` Datenmember direkt, überschreiben Sie Standardverhalten.  
   

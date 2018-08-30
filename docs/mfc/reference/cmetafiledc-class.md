@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da8f48fc993ec2b6c963bf3648359cc39dfc8ce
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fb2fd794798f96cceca893df4a69dc888196d9a6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338859"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197002"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC-Klasse
 Implementiert eine Windows-Metadatei, die eine Sequenz von Graphics Device Interface (GDI)-Befehlen enthält, dass Sie wiedergeben können, um ein gewünschtes Bild oder einen Text zu erstellen.  
@@ -66,9 +66,9 @@ class CMetaFileDC : public CDC
   
  Nachdem Sie die gewünschten Befehle an der Metadatei gesendet haben, rufen Sie die `Close` Memberfunktion, die die Metadatei Gerätekontexte schließt, und gibt ein Metadateihandle zurück. Dann verwerfen der `CMetaFileDC` Objekt.  
   
- [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) können Sie dann das Metadateihandle die Metadatei wiederholt abzuspielen. Die Metadatei kann auch bearbeitet werden von Windows-Funktionen wie z. B. [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), die eine Metadatei auf den Datenträger kopiert.  
+ [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) können Sie dann das Metadateihandle die Metadatei wiederholt abzuspielen. Die Metadatei kann auch bearbeitet werden von Windows-Funktionen wie z. B. [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea), die eine Metadatei auf den Datenträger kopiert.  
   
- Wenn die Metadatei nicht mehr benötigt wird, löschen Sie es aus dem Speicher mit der [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) Windows-Funktion.  
+ Wenn die Metadatei nicht mehr benötigt wird, löschen Sie es aus dem Speicher mit der [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) Windows-Funktion.  
   
  Sie können auch implementieren die `CMetaFileDC` Objekts, sodass er verarbeiten kann, beide Aufrufe ausgegeben und GDI-Aufrufe wie z. B. Attribut `GetTextExtent`. Solche eine Metadatei ist flexibler und können weitere einfach allgemeine GDI-Code, der aus der Ausgabe und Attribut Aufrufe häufig besteht aus wiederverwenden. Die `CMetaFileDC` -Klasse erbt, zwei Gerätekontexte, `m_hDC` und `m_hAttribDC`, aus der CDC. Die `m_hDC` Gerätekontext verarbeitet alle [CDC](../../mfc/reference/cdc-class.md) GDI Ausgabe aufrufen und die `m_hAttribDC` Gerätekontext behandelt alle Aufrufe der CDC-GDI-Attribut. In der Regel finden Sie diese beiden Kontexte, in dem gleichen Gerät zu erhalten. Im Fall von `CMetaFileDC`, das DC-Attribut ist standardmäßig auf NULL festgelegt.  
   
@@ -97,9 +97,9 @@ HMETAFILE Close();
  Eine gültige HMETAFILE, wenn die Funktion erfolgreich ist; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Windows Metafile-Handle kann auch verwendet werden, bearbeiten Sie die Metadatei mit Windows-Funktionen wie z. B. [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480).  
+ Das Windows Metafile-Handle kann auch verwendet werden, bearbeiten Sie die Metadatei mit Windows-Funktionen wie z. B. [CopyMetaFile](/windows/desktop/api/wingdi/nf-wingdi-copymetafilea).  
   
- Löschen Sie die Metadatei nach der Verwendung durch den Aufruf der Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) Funktion.  
+ Löschen Sie die Metadatei nach der Verwendung durch den Aufruf der Windows [DeleteMetaFile](/windows/desktop/api/wingdi/nf-wingdi-deletemetafile) Funktion.  
   
 ##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  Schließt eine EMF-Gerätekontext aus, und gibt ein Handle, das eine EMF-Datei identifiziert.  

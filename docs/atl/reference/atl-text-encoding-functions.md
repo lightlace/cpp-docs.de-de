@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9162c515f4fd451f3e663895953e106bb4e65135
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 061bfc2f083061d352fa7f93bb572456a5a23451
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42572182"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218371"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL-Textcodierung-Funktionen
 Diese Funktionen unterstützen, Text, Codierung und Decodierung durchführen.
@@ -451,7 +451,7 @@ inline BOOL QPDecode(
  Zeiger auf eine Variable, die die Länge in Bytes enthält *SzDest*. Wenn die Funktion erfolgreich ist, erhält die Variable die Anzahl der Bytes, die in den Puffer geschrieben. Wenn die Funktion fehlschlägt, erhält die Variable die erforderliche Länge des Puffers in Bytes an.  
   
  [in] *DwFlags*  
- Flags, die beschreibt, wie die Konvertierung ist, ausgeführt werden. Finden Sie unter [ATLSMTP_QPENCODE Flags](http://msdn.microsoft.com/library/6b15a3ab-8e57-49e4-8104-09b26ebb96c4).  
+ Flags, die beschreibt, wie die Konvertierung ist, ausgeführt werden. Finden Sie unter [ATLSMTP_QPENCODE Flags](https://msdn.microsoft.com/library/6b15a3ab-8e57-49e4-8104-09b26ebb96c4).  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" bei Erfolg bei "false".  

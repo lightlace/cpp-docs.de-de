@@ -15,21 +15,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0d857a65e0a08b105d54ba574553ab4a74fd3f9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 521e08b22abb40b6e1b1fedce2375a6e33cc7e73
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851697"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43130783"
 ---
 # <a name="supported-platforms-visual-c"></a>Unterstützte Plattformen (Visual C++)
 
-Die Apps, die mit [!INCLUDE[vsprvs](assembler/masm/includes/vsprvs_md.md)] erstellt werden, können folgendermaßen für verschiedene Plattformen eingesetzt werden.
+Die Apps, die mit Visual Studio erstellt werden, können wie folgt für verschiedene Plattformen eingesetzt werden.
 
 |Betriebssystem|x86|x64|ARM|
 |----------------------|---------|---------|---------|
 |Windows XP|X*|X*||
-|[!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)]|X*|X*||
+|Windows Server 2003|X*|X*||
 |Windows Vista|X|X||
 |Windows Server 2008|X|X||
 |Windows 7|X|X||
@@ -41,11 +41,11 @@ Die Apps, die mit [!INCLUDE[vsprvs](assembler/masm/includes/vsprvs_md.md)] erste
 |iOS **|X|X|X|
 |Linux ***|X|X|X|
 
-\* Sie können das in Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 und Visual Studio 2012 Update 1 oder höher enthaltene Windows XP-Plattformtoolset zum Erstellen von Windows XP- und [!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)]-Projekten verwenden. Weitere Informationen zum Verwenden dieses Plattformtoolsets finden Sie unter [Konfigurieren von C++11-Programmen für Windows XP](build/configuring-programs-for-windows-xp.md). Weitere Informationen zum Ändern des Plattformtoolsets finden Sie unter [Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets](build/how-to-modify-the-target-framework-and-platform-toolset.md).
+\* Sie können das in Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 und Visual Studio 2012 Update 1 oder höher enthaltene Windows XP-Plattformtoolset zum Erstellen von Windows XP- und Windows Server 2003-Projekten verwenden. Weitere Informationen zum Verwenden dieses Plattformtoolsets finden Sie unter [Konfigurieren von C++11-Programmen für Windows XP](build/configuring-programs-for-windows-xp.md). Weitere Informationen zum Ändern des Plattformtoolsets finden Sie unter [Vorgehensweise: Ändern des Zielframeworks und des Plattformtoolsets](build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
-\*\* Sie können die Workload **Mobile-Entwicklung mit C++** im Visual Studio Installer (oder die optionale Komponente **Visual C++ für plattformübergreifende Mobile-Entwicklung** im Visual Studio 2015-Setup) installieren, um iOS- oder Android-Plattformen als Ziel zu verwenden. Weitere Informationen finden Sie unter [Installieren von Visual C++ für die plattformübergreifende mobile Entwicklung](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). Um iOS-Code zu erstellen, müssen Sie einen Macintosh-Computer besitzen und weitere Anforderungen erfüllen. Eine Liste der Voraussetzungen und Installationsanweisungen finden Sie unter [Installieren und Konfigurieren von Tools zum Erstellen mit iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). Sie können x86- oder ARM-Code für die Zielhardware erstellen. Verwenden Sie x86-Konfigurationen zum Entwickeln für den iOS-Simulator, Microsoft Visual Studio-Emulator für Android und einige Android-Geräte. Verwenden Sie ARM-Konfigurationen für iOS-Geräte und die meisten Android-Geräte.
+\*\* Sie können die Workload **Mobile-Entwicklung mit C++** im Installer für Visual Studio 2017 (oder die optionale Komponente **Visual C++ für plattformübergreifende Mobile-Entwicklung** im Visual Studio 2015-Setup) installieren, um für iOS- oder Android-Plattformen zu programmieren. Weitere Informationen finden Sie unter [Installieren von Visual C++ für die plattformübergreifende mobile Entwicklung](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). Um iOS-Code zu erstellen, müssen Sie einen Macintosh-Computer besitzen und weitere Anforderungen erfüllen. Eine Liste der Voraussetzungen und Installationsanweisungen finden Sie unter [Installieren und Konfigurieren von Tools zum Erstellen mit iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). Sie können x86- oder ARM-Code für die Zielhardware erstellen. Verwenden Sie x86-Konfigurationen zum Entwickeln für den iOS-Simulator, Microsoft Visual Studio-Emulator für Android und einige Android-Geräte. Verwenden Sie ARM-Konfigurationen für iOS-Geräte und die meisten Android-Geräte.
 
-\*\*\* Sie können die Workload **Linux-Entwicklung mit C++** im Visual Studio-Installer installieren, um für Linux-Plattformen zu programmieren. Anweisungen hierzu finden Sie unter [Herunterladen, Installieren und Einrichten der Linux-Workload](linux/download-install-and-setup-the-linux-development-workload.md). Dieses Toolset kompiliert Ihre ausführbare Datei auf dem Zielcomputer, sodass Sie Builds für jede unterstützte Architektur erstellen bauen können.
+\*\*\* Sie können die Workload **Linux-Entwicklung mit C++** im Installer für Visual Studio 2017 installieren, um für Linux-Plattformen zu programmieren. Anweisungen hierzu finden Sie unter [Herunterladen, Installieren und Einrichten der Linux-Workload](linux/download-install-and-setup-the-linux-development-workload.md). Dieses Toolset kompiliert Ihre ausführbare Datei auf dem Zielcomputer, sodass Sie Builds für jede unterstützte Architektur erstellen bauen können.
 
 Informationen zum Festlegen der Zielplattformkonfiguration finden Sie unter [Vorgehensweise: Konfigurieren von Visual C++ Projekten für 64-Bit-x64-Zielplattformen](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
 

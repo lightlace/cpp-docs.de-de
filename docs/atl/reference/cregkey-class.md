@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2f295b6bf54077ad131176092b06dbeca7a2201
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 1fe661f48c583cfb82e52b6c125f6cf7fce2e714
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571798"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203557"
 ---
 # <a name="cregkey-class"></a>CRegKey-Klasse
 Diese Klasse stellt Methoden zum Bearbeiten der Einträge in der systemregistrierung.  
@@ -132,10 +132,10 @@ class CRegKey
   
  `CRegKey` Stellt eine Programmierschnittstelle für die Registrierung des Systems für einen bestimmten Computer an. Beispielsweise rufen Sie zum Öffnen eines bestimmten Registrierungsschlüssel statt `CRegKey::Open`. Rufen Sie zum Abrufen oder Ändern eines Datenwerts, `CRegKey::QueryValue` oder `CRegKey::SetValue`bzw. Rufen Sie zum Schließen eines Schlüssels `CRegKey::Close`.  
   
- Wenn Sie einen Schlüssel schließen, werden die Registrierungsdaten (geleert) auf die Festplatte geschrieben. Dieser Vorgang kann einige Sekunden dauern. Wenn Ihre Anwendung Registrierungsdaten explizit auf die Festplatte schreiben muss, können Sie rufen die [wurde von RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) Win32-Funktion. Allerdings `RegFlushKey` viele Systemressourcen verwendet und nur wenn unbedingt nötig aufgerufen werden soll.  
+ Wenn Sie einen Schlüssel schließen, werden die Registrierungsdaten (geleert) auf die Festplatte geschrieben. Dieser Vorgang kann einige Sekunden dauern. Wenn Ihre Anwendung Registrierungsdaten explizit auf die Festplatte schreiben muss, können Sie rufen die [wurde von RegFlushKey](/windows/desktop/api/winreg/nf-winreg-regflushkey) Win32-Funktion. Allerdings `RegFlushKey` viele Systemressourcen verwendet und nur wenn unbedingt nötig aufgerufen werden soll.  
   
 > [!IMPORTANT]
->  Alle Methoden, mit denen den Aufrufer an einen Registrierungsspeicherort haben die Möglichkeit zum Lesen von Daten, die nicht vertrauenswürdig ist. Verwenden Sie die Methoden, mit denen der [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) sollten berücksichtigen, die diese Funktion nicht explizit Zeichenfolgen die NULL behandelt-terminiert sind. Beide Bedingungen sollten vom aufrufenden Code überprüft werden.  
+>  Alle Methoden, mit denen den Aufrufer an einen Registrierungsspeicherort haben die Möglichkeit zum Lesen von Daten, die nicht vertrauenswürdig ist. Verwenden Sie die Methoden, mit denen der [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) sollten berücksichtigen, die diese Funktion nicht explizit Zeichenfolgen die NULL behandelt-terminiert sind. Beide Bedingungen sollten vom aufrufenden Code überprüft werden.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlbase.h  
@@ -189,13 +189,13 @@ LONG Create(
  Gibt die Klasse des Schlüssels erstellt oder geöffnet werden. Der Standardwert ist REG_NONE.  
   
  *dwOptions*  
- Optionen für den Schlüssel. Der Standardwert ist REG_OPTION_NON_VOLATILE. Eine Liste der möglichen Werte und Beschreibungen, finden Sie unter ["RegCreateKeyEx" dienen](http://msdn.microsoft.com/library/windows/desktop/ms724844) im Windows SDK.  
+ Optionen für den Schlüssel. Der Standardwert ist REG_OPTION_NON_VOLATILE. Eine Liste der möglichen Werte und Beschreibungen, finden Sie unter ["RegCreateKeyEx" dienen](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) im Windows SDK.  
   
  *samDesired*  
  Der Sicherheitszugriff für den Schlüssel. Der Standardwert ist KEY_READ &#124; KEY_WRITE. Eine Liste der möglichen Werte und Beschreibungen, finden Sie unter `RegCreateKeyEx`.  
   
  *lpSecAttr*  
- Ein Zeiger auf eine [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) -Struktur, die angibt, ob das Handle des Schlüssels von einem untergeordneten Prozess geerbt werden kann. Standardmäßig ist dieser Parameter NULL (d. h., die das Handle nicht geerbt werden kann).  
+ Ein Zeiger auf eine [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) -Struktur, die angibt, ob das Handle des Schlüssels von einem untergeordneten Prozess geerbt werden kann. Standardmäßig ist dieser Parameter NULL (d. h., die das Handle nicht geerbt werden kann).  
   
  *lpdwDisposition*  
  [out] Wenn nicht NULL ist, ruft Sie ab entweder REG_CREATED_NEW_KEY (wenn der Schlüssel nicht vorhanden war und erstellt wurde) oder REG_OPENED_EXISTING_KEY, (wenn der Schlüssel vorhanden war, und es geöffnet wurde).  
@@ -308,7 +308,7 @@ LONG EnumKey(
  Wenn die Methode erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die Methode fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WINERROR.H definiert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Rufen Sie zum Aufzählen der Unterschlüssel `CRegKey::EnumKey` mit dem Index 0 (null). Erhöhen Sie den Indexwert, und wiederholen Sie, bis die Methode ERROR_NO_MORE_ITEMS zurückgibt. Weitere Informationen finden Sie unter [RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) im Windows SDK.  
+ Rufen Sie zum Aufzählen der Unterschlüssel `CRegKey::EnumKey` mit dem Index 0 (null). Erhöhen Sie den Indexwert, und wiederholen Sie, bis die Methode ERROR_NO_MORE_ITEMS zurückgibt. Weitere Informationen finden Sie unter [RegEnumKeyEx](/windows/desktop/api/winreg/nf-winreg-regenumkeyexa) im Windows SDK.  
   
 ##  <a name="flush"></a>  CRegKey::Flush  
  Rufen Sie diese Methode, um alle Attribute des geöffneten Registrierungsschlüssels in die Registrierung zu schreiben.  
@@ -321,7 +321,7 @@ LONG Flush() throw();
  Wenn die Methode erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die Methode fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WINERROR.H definiert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) im Windows SDK.  
+ Weitere Informationen finden Sie unter [RegEnumFlush](/windows/desktop/api/winreg/nf-winreg-regflushkey) im Windows SDK.  
   
 ##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity  
  Rufen Sie diese Methode, um eine Kopie der Sicherheitsbeschreibung, die Schutz der geöffneten Registrierungsschlüssels abzurufen.  
@@ -335,7 +335,7 @@ LONG GetKeySecurity(
   
 ### <a name="parameters"></a>Parameter  
  *SI*  
- Die [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) -Wert, der die angeforderten Informationen an.  
+ Die [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) -Wert, der die angeforderten Informationen an.  
   
  *PSD*  
  Ein Zeiger auf einen Puffer, der eine Kopie der angeforderten Sicherheitsbeschreibung erhält.  
@@ -347,7 +347,7 @@ LONG GetKeySecurity(
  Wenn die Methode erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die Methode fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich NULL in WINERROR definiert ist. H.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313).  
+ Weitere Informationen finden Sie unter [RegGetKeySecurity](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity).  
   
 ##  <a name="m_hkey"></a>  CRegKey::m_hKey  
  Ein Handle des zugeordneten Registrierungsschlüssels enthält den `CRegKey` Objekt.  
@@ -404,7 +404,7 @@ LONG NotifyChangeKeyValue(
 > [!NOTE]
 >  Diese Methode benachrichtigt den Aufrufer nicht, wenn der angegebene Schlüssel gelöscht wird.  
   
- Weitere Informationen und ein Beispielprogramm, finden Sie unter [RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892).  
+ Weitere Informationen und ein Beispielprogramm, finden Sie unter [RegNotifyChangeKeyValue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue).  
   
 ##  <a name="open"></a>  CRegKey::Open  
  Rufen Sie diese Methode, um den angegebenen Schlüssel zu öffnen, und legen [M_hKey](#m_hkey) an das Handle dieses Schlüssels.  
@@ -424,7 +424,7 @@ LONG Open(
  Gibt den Namen eines Schlüssels erstellt oder geöffnet werden. Dieser Name muss ein Unterschlüssel des *hKeyParent*.  
   
  *samDesired*  
- Der Sicherheitszugriff für den Schlüssel. Der Standardwert ist KEY_ALL_ACCESS. Eine Liste der möglichen Werte und Beschreibungen, finden Sie unter ["RegCreateKeyEx" dienen](http://msdn.microsoft.com/library/windows/desktop/ms724844) im Windows SDK.  
+ Der Sicherheitszugriff für den Schlüssel. Der Standardwert ist KEY_ALL_ACCESS. Eine Liste der möglichen Werte und Beschreibungen, finden Sie unter ["RegCreateKeyEx" dienen](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn erfolgreich, wird ERROR_SUCCESS; Andernfalls definiert ein Fehlerwert ungleich NULL-in WINERROR. H.  
@@ -482,10 +482,10 @@ LONG QueryBinaryValue(
  Wenn die Methode erfolgreich ist, wird die ERROR_SUCCESS zurückgegeben. Wenn die Methode zum Lesen eines Werts fehlschlägt, wird einen Fehlercode ungleich Null zeigt in WINERROR definierten zurückgegeben. H. Wenn die Daten, die auf die verwiesen wird, nicht vom Typ REG_BINARY ist, wird die ERROR_INVALID_DATA zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode nutzt `RegQueryValueEx` und bestätigt, dass der richtige Datentyp zurückgegeben wird. Finden Sie unter [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Weitere Details.  
+ Diese Methode nutzt `RegQueryValueEx` und bestätigt, dass der richtige Datentyp zurückgegeben wird. Finden Sie unter [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Weitere Details.  
   
 > [!IMPORTANT]
->  Diese Methode ermöglicht den Aufrufer, geben Sie Registrierung an, die möglicherweise beim Lesen der Daten, die nicht vertrauenswürdig ist. Darüber hinaus die [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Funktion, die von dieser Methode verwendet nicht explizit behandelt den Zeichenfolgen, die NULL-terminiert werden. Beide Bedingungen sollten vom aufrufenden Code überprüft werden.  
+>  Diese Methode ermöglicht den Aufrufer, geben Sie Registrierung an, die möglicherweise beim Lesen der Daten, die nicht vertrauenswürdig ist. Darüber hinaus die [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Funktion, die von dieser Methode verwendet nicht explizit behandelt den Zeichenfolgen, die NULL-terminiert werden. Beide Bedingungen sollten vom aufrufenden Code überprüft werden.  
   
 ##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue  
  Rufen Sie diese Methode zum Abrufen der DWORD-Daten für einen angegebenen Wert.  
@@ -507,10 +507,10 @@ LONG QueryDWORDValue(
  Wenn die Methode erfolgreich ist, wird die ERROR_SUCCESS zurückgegeben. Wenn die Methode zum Lesen eines Werts fehlschlägt, wird einen Fehlercode ungleich Null zeigt in WINERROR definierten zurückgegeben. H. Wenn die Daten, die auf die verwiesen wird, nicht REG_DWORD-Datentyp ist, wird die ERROR_INVALID_DATA zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode nutzt `RegQueryValueEx` und bestätigt, dass der richtige Datentyp zurückgegeben wird. Finden Sie unter [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Weitere Details.  
+ Diese Methode nutzt `RegQueryValueEx` und bestätigt, dass der richtige Datentyp zurückgegeben wird. Finden Sie unter [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Weitere Details.  
   
 > [!IMPORTANT]
->  Diese Methode ermöglicht den Aufrufer, geben Sie Registrierung an, die möglicherweise beim Lesen der Daten, die nicht vertrauenswürdig ist. Darüber hinaus die [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Funktion, die von dieser Methode verwendet nicht explizit behandelt den Zeichenfolgen, die NULL-terminiert werden. Beide Bedingungen sollten vom aufrufenden Code überprüft werden.  
+>  Diese Methode ermöglicht den Aufrufer, geben Sie Registrierung an, die möglicherweise beim Lesen der Daten, die nicht vertrauenswürdig ist. Darüber hinaus die [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Funktion, die von dieser Methode verwendet nicht explizit behandelt den Zeichenfolgen, die NULL-terminiert werden. Beide Bedingungen sollten vom aufrufenden Code überprüft werden.  
   
 ##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue  
  Rufen Sie diese Methode zum Abrufen der GUID-Daten für einen angegebenen Wert.  
@@ -532,7 +532,7 @@ LONG QueryGUIDValue(
  Wenn die Methode erfolgreich ist, wird die ERROR_SUCCESS zurückgegeben. Wenn die Methode zum Lesen eines Werts fehlschlägt, wird einen Fehlercode ungleich Null zeigt in WINERROR definierten zurückgegeben. H. Wenn die Daten, die auf die verwiesen wird, keine gültige GUID ist, wird die ERROR_INVALID_DATA zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode nutzt `CRegKey::QueryStringValue` und konvertiert die Zeichenfolge in eine GUID mit [CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589).  
+ Diese Methode nutzt `CRegKey::QueryStringValue` und konvertiert die Zeichenfolge in eine GUID mit [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring).  
   
 > [!IMPORTANT]
 >  Diese Methode ermöglicht den Aufrufer, geben Sie Registrierung an, die möglicherweise beim Lesen der Daten, die nicht vertrauenswürdig ist.  
@@ -561,10 +561,10 @@ LONG QueryMultiStringValue(
  Wenn die Methode erfolgreich ist, wird die ERROR_SUCCESS zurückgegeben. Wenn die Methode zum Lesen eines Werts fehlschlägt, wird einen Fehlercode ungleich Null zeigt in WINERROR definierten zurückgegeben. H. Wenn die Daten, die auf die verwiesen wird, nicht vom Typ REG_MULTI_SZ ist, wird die ERROR_INVALID_DATA zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode nutzt `RegQueryValueEx` und bestätigt, dass der richtige Datentyp zurückgegeben wird. Finden Sie unter [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Weitere Details.  
+ Diese Methode nutzt `RegQueryValueEx` und bestätigt, dass der richtige Datentyp zurückgegeben wird. Finden Sie unter [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Weitere Details.  
   
 > [!IMPORTANT]
->  Diese Methode ermöglicht den Aufrufer, geben Sie Registrierung an, die möglicherweise beim Lesen der Daten, die nicht vertrauenswürdig ist. Darüber hinaus die [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Funktion, die von dieser Methode verwendet nicht explizit behandelt den Zeichenfolgen, die NULL-terminiert werden. Beide Bedingungen sollten vom aufrufenden Code überprüft werden.  
+>  Diese Methode ermöglicht den Aufrufer, geben Sie Registrierung an, die möglicherweise beim Lesen der Daten, die nicht vertrauenswürdig ist. Darüber hinaus die [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Funktion, die von dieser Methode verwendet nicht explizit behandelt den Zeichenfolgen, die NULL-terminiert werden. Beide Bedingungen sollten vom aufrufenden Code überprüft werden.  
   
 ##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue  
  Rufen Sie diese Methode zum Abrufen der QWORD-Daten für einen angegebenen Wert.  
@@ -586,10 +586,10 @@ LONG QueryQWORDValue(
  Wenn die Methode erfolgreich ist, wird die ERROR_SUCCESS zurückgegeben. Wenn die Methode zum Lesen eines Werts fehlschlägt, wird einen Fehlercode ungleich Null zeigt in WINERROR definierten zurückgegeben. H. Wenn die Daten, die auf die verwiesen wird, nicht vom Typ REG_QWORD ist, wird die ERROR_INVALID_DATA zurückgegeben.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode nutzt `RegQueryValueEx` und bestätigt, dass der richtige Datentyp zurückgegeben wird. Finden Sie unter [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Weitere Details.  
+ Diese Methode nutzt `RegQueryValueEx` und bestätigt, dass der richtige Datentyp zurückgegeben wird. Finden Sie unter [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Weitere Details.  
   
 > [!IMPORTANT]
->  Diese Methode ermöglicht den Aufrufer, geben Sie Registrierung an, die möglicherweise beim Lesen der Daten, die nicht vertrauenswürdig ist. Darüber hinaus die [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Funktion, die von dieser Methode verwendet nicht explizit behandelt den Zeichenfolgen, die NULL-terminiert werden. Beide Bedingungen sollten vom aufrufenden Code überprüft werden.  
+>  Diese Methode ermöglicht den Aufrufer, geben Sie Registrierung an, die möglicherweise beim Lesen der Daten, die nicht vertrauenswürdig ist. Darüber hinaus die [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Funktion, die von dieser Methode verwendet nicht explizit behandelt den Zeichenfolgen, die NULL-terminiert werden. Beide Bedingungen sollten vom aufrufenden Code überprüft werden.  
   
 ##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue  
  Rufen Sie diese Methode zum Abrufen der Zeichenfolgendaten für einen angegebenen Wert.  
@@ -615,10 +615,10 @@ LONG QueryStringValue(
  Wenn die Methode erfolgreich ist, wird die ERROR_SUCCESS zurückgegeben. Wenn die Methode zum Lesen eines Werts fehlschlägt, wird einen Fehlercode ungleich Null zeigt in WINERROR definierten zurückgegeben. H. Wenn die Daten, die auf die verwiesen wird, nicht des Typs REG_SZ ist, wird die ERROR_INVALID_DATA zurückgegeben. Wenn der Methodenrückgabe ERROR_MORE_DATA zurück, *PnChars* gleich NULL, nicht die erforderliche Puffergröße in Byte.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode nutzt `RegQueryValueEx` und bestätigt, dass der richtige Datentyp zurückgegeben wird. Finden Sie unter [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Weitere Details.  
+ Diese Methode nutzt `RegQueryValueEx` und bestätigt, dass der richtige Datentyp zurückgegeben wird. Finden Sie unter [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Weitere Details.  
   
 > [!IMPORTANT]
->  Diese Methode ermöglicht den Aufrufer, geben Sie Registrierung an, die möglicherweise beim Lesen der Daten, die nicht vertrauenswürdig ist. Darüber hinaus die [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Funktion, die von dieser Methode verwendet nicht explizit behandelt den Zeichenfolgen, die NULL-terminiert werden. Beide Bedingungen sollten vom aufrufenden Code überprüft werden.  
+>  Diese Methode ermöglicht den Aufrufer, geben Sie Registrierung an, die möglicherweise beim Lesen der Daten, die nicht vertrauenswürdig ist. Darüber hinaus die [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa) Funktion, die von dieser Methode verwendet nicht explizit behandelt den Zeichenfolgen, die NULL-terminiert werden. Beide Bedingungen sollten vom aufrufenden Code überprüft werden.  
   
 ##  <a name="queryvalue"></a>  CRegKey::QueryValue  
  Rufen Sie diese Methode zum Abrufen der Daten für das Feld mit dem angegebenen Wert [M_hKey](#m_hkey). Frühere Versionen dieser Methode werden nicht mehr unterstützt und als ATL_DEPRECATED gekennzeichnet sind.  
@@ -717,7 +717,7 @@ LONG SetBinaryValue(
  Wenn die Methode erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die Methode fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WINERROR.H definiert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode verwendet [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) auf den Wert in der Registrierung schreiben.  
+ Diese Methode verwendet [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) auf den Wert in der Registrierung schreiben.  
   
 ##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue  
  Rufen Sie diese Methode, um den DWORD-Wert des Registrierungsschlüssels festlegen.  
@@ -737,7 +737,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
  Wenn die Methode erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die Methode fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WINERROR.H definiert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode verwendet [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) auf den Wert in der Registrierung schreiben.  
+ Diese Methode verwendet [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) auf den Wert in der Registrierung schreiben.  
   
 ##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue  
  Rufen Sie diese Methode, um den GUID-Wert des Registrierungsschlüssels festlegen.  
@@ -757,7 +757,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
  Wenn die Methode erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die Methode fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WINERROR.H definiert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode nutzt `CRegKey::SetStringValue` und konvertiert die GUID in eine Zeichenfolge mithilfe ["stringfromguid2"](http://msdn.microsoft.com/library/windows/desktop/ms683893).  
+ Diese Methode nutzt `CRegKey::SetStringValue` und konvertiert die GUID in eine Zeichenfolge mithilfe ["stringfromguid2"](/windows/desktop/api/combaseapi/nf-combaseapi-stringfromguid2).  
   
 ##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue  
  Rufen Sie diese Methode zum Speichern von Daten in einem Feld angegebenen Wert, der einem angegebenen Schlüssel.  
@@ -801,16 +801,16 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |DACL_SECURITY_INFORMATION|Legt die DACL (des Schlüssels discretionary Access Control List) fest. Der Schlüssel muss über WRITE_DAC-Zugriff, oder der aufrufende Prozess muss den Besitzer des Objekts sein.|  
 |GROUP_SECURITY_INFORMATION|Legt fest, primäre Gruppe Sicherheits-ID (SID) des Schlüssels. Der Schlüssel muss WRITE_OWNER Zugriffsrechte besitzen, oder der aufrufende Prozess muss den Besitzer des Objekts sein.|  
 |OWNER_SECURITY_INFORMATION|Legt fest, Besitzer-SID des Schlüssels. Der Schlüssel muss WRITE_OWNER Zugriff, oder der aufrufende Prozess muss den Besitzer des Objekts oder die Berechtigung zum SE_TAKE_OWNERSHIP_NAME aktiviert.|  
-|SACL_SECURITY_INFORMATION|Legt fest, der mit dem Schlüssel System Access Control List (SACL). Der Schlüssel muss es sich um ACCESS_SYSTEM_SECURITY Zugriff haben. Der richtige Weg, um diesen Zugriff zu erhalten ist zum Aktivieren der SE_SECURITY_NAME [Berechtigungen](http://msdn.microsoft.com/library/windows/desktop/aa379306) in der aktuellen Zugriffstoken des Aufrufers, öffnen Sie das Handle für den ACCESS_SYSTEM_SECURITY Zugriff, und deaktivieren Sie die Berechtigung.|  
+|SACL_SECURITY_INFORMATION|Legt fest, der mit dem Schlüssel System Access Control List (SACL). Der Schlüssel muss es sich um ACCESS_SYSTEM_SECURITY Zugriff haben. Der richtige Weg, um diesen Zugriff zu erhalten ist zum Aktivieren der SE_SECURITY_NAME [Berechtigungen](https://msdn.microsoft.com/library/windows/desktop/aa379306) in der aktuellen Zugriffstoken des Aufrufers, öffnen Sie das Handle für den ACCESS_SYSTEM_SECURITY Zugriff, und deaktivieren Sie die Berechtigung.|  
   
  *PSD*  
- Zeiger auf eine [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) Struktur, die Attribute für die Sicherheit für den angegebenen Schlüssel festlegen angibt.  
+ Zeiger auf eine [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) Struktur, die Attribute für die Sicherheit für den angegebenen Schlüssel festlegen angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn die Methode erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die Methode fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WINERROR.H definiert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Legt Attribute für die Sicherheit des Schlüssels fest. Finden Sie unter [RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314) Weitere Details.  
+ Legt Attribute für die Sicherheit des Schlüssels fest. Finden Sie unter [RegSetKeySecurity](/windows/desktop/api/winreg/nf-winreg-regsetkeysecurity) Weitere Details.  
   
 ##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue  
  Rufen Sie diese Methode, um die mehrteilige Zeichenfolge des Registrierungsschlüssels festgelegt.  
@@ -830,7 +830,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
  Wenn die Methode erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die Methode fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WINERROR.H definiert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode verwendet [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) auf den Wert in der Registrierung schreiben.  
+ Diese Methode verwendet [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) auf den Wert in der Registrierung schreiben.  
   
 ##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue  
  Rufen Sie diese Methode aus, um den QWORD-Wert des Registrierungsschlüssels festzulegen.  
@@ -850,7 +850,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
  Wenn die Methode erfolgreich ist, ist der Rückgabewert ERROR_SUCCESS. Wenn die Methode fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WINERROR.H definiert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode verwendet [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) auf den Wert in der Registrierung schreiben.  
+ Diese Methode verwendet [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa) auf den Wert in der Registrierung schreiben.  
   
 ##  <a name="setstringvalue"></a>  CRegKey::SetStringValue  
  Rufen Sie diese Methode auf, um den Zeichenfolgenwert des Registrierungsschlüssels festzulegen.  
@@ -945,7 +945,7 @@ ATL_DEPRECATED LONG SetValue(
 ### <a name="remarks"></a>Hinweise  
  Die beiden ursprünglichen Versionen der `SetValue` als ATL_DEPRECATED gekennzeichnet sind, und sollte nicht mehr verwendet werden. Der Compiler gibt eine Warnung aus, wenn diese Formulare verwendet werden.  
   
- Die dritte Methodenaufrufe [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923).  
+ Die dritte Methodenaufrufe [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa).  
   
 ## <a name="see-also"></a>Siehe auch  
  [DCOM-Beispiel](../../visual-cpp-samples.md)   
