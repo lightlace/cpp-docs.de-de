@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57ae6a7d084a497ec41c9b66b314ad1fdb3e7fc
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 16d9123125cc6cb01ee5dfb03f771e263d9915f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406570"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221439"
 ---
 # <a name="function-overloading"></a>Funktionsüberladung
 C++ lässt die Angabe mehrerer Funktionen mit dem gleichen Namen im gleichen Gültigkeitsbereich zu. Diese heißen *überladen* Funktionen. Überladene Funktionen ermöglichen Ihnen das Bereitstellen anderer Semantiken für eine Funktion in Abhängigkeit von die Art und Anzahl von Argumenten. 
@@ -43,8 +43,9 @@ Sie können sowohl Memberfunktionen und nicht-Memberfunktionen überladen. Die f
 |**const** oder **volatile**|Ja, wenn auf den gesamten Funktion angewendet|
 |[ref-qualifier](#ref-qualifier)|Ja|  
   
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht, wie das Überladen verwendet werden kann.  
+## <a name="example"></a>Beispiel
+
+Das folgende Beispiel veranschaulicht, wie das Überladen verwendet werden kann.  
   
 ```cpp 
 // function_overloading.cpp  
@@ -270,9 +271,9 @@ volatile Over&
   
 1.  Genaue Übereinstimmung. Ein genaue Übereinstimmung zwischen den Typen, mit denen die Funktion aufgerufen wird und den Typen, die im Funktionsprototyp deklariert werden, ist immer die beste Übereinstimmung. Sequenzen von trivialen Konvertierungen werden als exakte Übereinstimmungen klassifiziert. Allerdings sind Sequenzen, die keine dieser Konvertierungen ausführen, besser als Sequenzen, die konvertieren:  
   
-    -   Von Zeiger in Zeiger auf **const** (`type` **\*** zu **const** `type` **\*** ).  
+    -   Von Zeiger in Zeiger auf **const** (`type` <strong>\*</strong> zu **const** `type` <strong>\*</strong> ).  
   
-    -   Von Zeiger in Zeiger auf **flüchtige** (`type` **\*** zu **flüchtige** `type` **\***).  
+    -   Von Zeiger in Zeiger auf **flüchtige** (`type` <strong>\*</strong> zu **flüchtige** `type` <strong>\*</strong>).  
   
     -   Von Verweis in Verweis auf **const** (`type` **&** zu **const** `type` **&**).  
   

@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c98cca6afb096cc9b5e88fe31aa949621d326c98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6d6422162d0497ec97c3803e0aace298536cb87a
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390023"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131738"
 ---
 # <a name="thread-local-storage"></a>Threadlokaler Speicher
 **Microsoft-spezifisch**  
   
- Der threadlokale Speicher (TLS) ist der Mechanismus, mit dem jeder Thread in einem Multithreadprozess den Speicher für threadspezifische Daten zuordnet. In den standardmäßigen Multithreadprogrammen werden Daten auf allen Threads eines angegebenen Prozesses freigegeben, während der threadlokale Speicher der Mechanismus zum Zuordnen der threadspezifischen Daten ist. Eine vollständige Erörterung der Threads finden Sie im [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] unter [Prozesse und Threads](http://msdn.microsoft.com/library/windows/desktop/ms684841).  
+ Der threadlokale Speicher (TLS) ist der Mechanismus, mit dem jeder Thread in einem Multithreadprozess den Speicher für threadspezifische Daten zuordnet. In den standardmäßigen Multithreadprogrammen werden Daten auf allen Threads eines angegebenen Prozesses freigegeben, während der threadlokale Speicher der Mechanismus zum Zuordnen der threadspezifischen Daten ist. Eine vollständige Erörterung der Threads finden Sie im Windows SDK unter [Processes and Threads (Prozesse und Threads)](/windows/desktop/ProcThread/processes-and-threads).  
   
  Die Microsoft-Programmiersprache C schließt das erweiterte Speicherklassenattribut, „thread“, mit ein, das mit dem __declspec-Schlüsselwort verwendet wird, um eine threadlokale Variable zu deklarieren. Mit folgendem Code wird z. B. eine Ganzzahl-TLS-Variable deklariert und mit einem Wert initialisiert:  
   

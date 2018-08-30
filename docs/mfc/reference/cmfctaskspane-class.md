@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51beef03fe4e92f4eacd733b2d92b04675ed4242
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1b7f83175e2bf3fe1e69ef02192749916e566edd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543180"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215252"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane-Klasse
 Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
@@ -284,7 +284,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::IsToolBox](#istoolbox)||  
 |[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|Gibt an, ob der Aufgabenbereich Wörter in Bezeichnungen umbricht.|  
 |[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|Gibt an, ob der Aufgabenbereich Wörter in Aufgaben umbricht.|  
-|[CMFCTasksPane::LoadState](#loadstate)|(Überschreibt [CDockablePane:: LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CMFCTasksPane::LoadState](#loadstate)|(Überschreibt [CDockablePane:: LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
 |[CMFCTasksPane::OnCancel](#oncancel)||  
 |[CMFCTasksPane::OnClickTask](#onclicktask)|Wird vom Framework aufgerufen, wenn der Benutzer auf ein Element im Aufgabenbereich klickt.|  
 |[CMFCTasksPane::OnOK](#onok)||  
@@ -293,8 +293,8 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|Wird vom Framework aufgerufen, wenn der Benutzer auf die Navigationsschaltfläche Startseite klickt.|  
 |[CMFCTasksPane::OnPressOtherButton](#onpressotherbutton)||  
 |[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(Überschreibt [cbasepane:: Onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
-|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Überschreibt [CDockablePane:: OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Überschreibt [CDockablePane:: PreTranslateMessage](http://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd).)|  
+|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Überschreibt [CDockablePane:: OnUpdateCmdUI](https://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Überschreibt [CDockablePane:: PreTranslateMessage](https://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd).)|  
 |[CMFCTasksPane::RecalcLayout](#recalclayout)|(Überschreibt [cpane:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|Entfernt alle Gruppen auf der angegebenen Seite.|  
 |[CMFCTasksPane::RemoveAllPages](#removeallpages)|Entfernt alle Seiten aus dem Aufgabenbereich mit Ausnahme der Standardseite (erste).|  
@@ -302,8 +302,8 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::RemoveGroup](#removegroup)|Entfernt eine Gruppe.|  
 |[CMFCTasksPane::RemovePage](#removepage)|Entfernt eine angegebene Seite aus dem Aufgabenbereich.|  
 |[CMFCTasksPane::RemoveTask](#removetask)|Entfernt eine Aufgabe aus einer Aufgabengruppe.|  
-|[CMFCTasksPane::SaveState](#savestate)|(Überschreibt [CDockablePane:: SaveState](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
-|[CMFCTasksPane::Serialize](#serialize)|(Überschreibt [CDockablePane:: SaveState](http://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|[CMFCTasksPane::SaveState](#savestate)|(Überschreibt [CDockablePane:: SaveState](https://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
+|[CMFCTasksPane::Serialize](#serialize)|(Überschreibt [CDockablePane:: SaveState](https://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6).)|  
 |[CMFCTasksPane::SetActivePage](#setactivepage)|Aktiviert eine angegebene Seite im Aufgabenbereich.|  
 |[CMFCTasksPane::SetCaption](#setcaption)|Legt den Beschriftungsnamen eines Aufgabenbereichs fest.|  
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|Legt die Höhe einer Gruppenbeschriftung fest.|  

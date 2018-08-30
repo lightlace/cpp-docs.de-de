@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c1cb1a1894f3288e2825c5eb7d521a468ccdfa7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6d27c12b491fc5f05da58a84703ea13e84e9e9c6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592813"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215369"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>Das Dialogfeld funktioniert nach dem Hinzufügen von Steuerelementen nicht mehr
 
@@ -61,11 +61,11 @@ Derzeit wird der Dialog-Editor nicht automatisch hinzugefügt Code zu Ihrem Proj
 
 ## <a name="the-fix-for-common-controls"></a>Das Update für allgemeine Steuerelemente
 
-Um allgemeine Steuerelemente in einem Dialogfeld verwenden zu können, müssen Sie rufen [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) oder `AFXInitCommonControls` vor der Erstellung des Dialogfelds.
+Um allgemeine Steuerelemente in einem Dialogfeld verwenden zu können, müssen Sie rufen [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) oder `AFXInitCommonControls` vor der Erstellung des Dialogfelds.
 
 ## <a name="the-fix-for-richedit-controls"></a>Die Fehlerbehebung für RichEdit-Steuerelemente
 
-Rufen Sie `LoadLibrary` für Rich--Steuerelemente Edit. Weitere Informationen finden Sie unter [Verwenden des RichEdit 1.0-Steuerelements mit MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [über Rich-Edit-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb787873) im Windows SDK und [Überblick über das RichEdit-Steuerelement](../mfc/overview-of-the-rich-edit-control.md).
+Rufen Sie `LoadLibrary` für Rich--Steuerelemente Edit. Weitere Informationen finden Sie unter [Verwenden des RichEdit 1.0-Steuerelements mit MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [über Rich-Edit-Steuerelemente](/windows/desktop/Controls/about-rich-edit-controls) im Windows SDK und [Überblick über das RichEdit-Steuerelement](../mfc/overview-of-the-rich-edit-control.md).
 
 ## <a name="requirements"></a>Anforderungen
 

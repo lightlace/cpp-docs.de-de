@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f21a4545bb24b0a4a9e19efa2a6ff9738272cc9f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: ef3da102cd01fa970fa50d687f6cfea57ac64325
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340442"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199750"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Bestimmen des geeigneten Zugriffsmethodentyps
 Sie können die Datentypen für ein Rowset zum Zeitpunkt der Kompilierung oder zur Laufzeit bestimmen.  
@@ -38,7 +38,7 @@ Sie können die Datentypen für ein Rowset zum Zeitpunkt der Kompilierung oder z
 |`CDynamicAccessor`|Automatisch.|Nein.|Nützlich, wenn Sie nicht, dass den Typ der Daten in einem Rowset wissen.|  
 |`CDynamicParameterAccessor`|Automatische, kann jedoch [überschreiben](../../data/oledb/overriding-a-dynamic-accessor.md).|Ja, wenn der Anbieter unterstützt `ICommandWithParameters`. Parameter, die automatisch eingebunden werden.|Langsamer als `CDynamicAccessor` aber hilfreich zum Aufrufen der generischer gespeicherter Prozeduren.|  
 |`CDynamicStringAccessor[A,W]`|Automatisch.|Nein.|Ruft Daten aus dem Datenspeicher als Zeichenfolgendaten ab.|  
-|`CManualAccessor`|Mithilfe von manuellen `AddBindEntry`.|Manuell über `AddParameterEntry`.|Sehr schnell; Parameter und Spalten werden nur einmal gebunden. Sie bestimmen den Typ des zu verwendenden Daten. (Finden Sie unter [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) ein Beispiel für.) Benötigt mehr Code als `CDynamicAccessor` oder `CAccessor`. Es ist eher wie OLE DB nicht direkt aufrufen.|  
+|`CManualAccessor`|Mithilfe von manuellen `AddBindEntry`.|Manuell über `AddParameterEntry`.|Sehr schnell; Parameter und Spalten werden nur einmal gebunden. Sie bestimmen den Typ des zu verwendenden Daten. (Finden Sie unter [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) ein Beispiel für.) Benötigt mehr Code als `CDynamicAccessor` oder `CAccessor`. Es ist eher wie OLE DB nicht direkt aufrufen.|  
 |`CXMLAccessor`|Automatisch.|Nein.|Ruft Daten aus dem Datenspeicher als Zeichenfolgedaten zugegriffen, und formatiert die Ausgabe als XML-Tags Daten.|  
   
 ## <a name="see-also"></a>Siehe auch  

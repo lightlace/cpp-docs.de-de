@@ -1,7 +1,7 @@
 ---
 title: Verwenden von „Ordner öffnen“ mit Projekten in Visual C++ | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/02/2017
+ms.date: 06/01/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,15 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d4444e70ec158d7afa35c3955bbef9af4bfa12f2
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337284"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43131322"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Verwenden von „Ordner öffnen“ mit Projekten in Visual C++
-In Visual Studio 2017 wird das Feature „Ordner öffnen“ eingeführt, durch das Sie einen Ordner mit Quelldateien öffnen und sofort mit dem Programmieren beginnen können. Dabei wird unter anderem IntelliSense, das Durchsuchen, Refactoring und Debuggen unterstützt. Es werden keine SLN- oder VCXPROJ-Dateien geladen. Bei Bedarf können Sie benutzerdefinierte Tasks sowie Build- und Startparameter über einfache JSON-Dateien angeben. Durch „Ordner öffnen“ kann Visual C++ nun nicht nur lose Dateisammlungen unterstützen, sondern auch nahezu jedes Buildsystem, z.B. CMake, Ninja, QMake (für Qt-Projekte), gyp, SCons, Gradle und Buck. 
+
+In Visual Studio 2017 und höher können Sie das Feature „Ordner öffnen“ verwenden, um einen Ordner mit Quelldateien öffnen und sofort mit dem Programmieren beginnen zu können. Dabei wird unter anderem IntelliSense, das Durchsuchen, Refactoring und Debuggen unterstützt. Es werden keine SLN- oder VCXPROJ-Dateien geladen. Bei Bedarf können Sie benutzerdefinierte Tasks sowie Build- und Startparameter über einfache JSON-Dateien angeben. Durch „Ordner öffnen“ kann Visual C++ nun nicht nur lose Dateisammlungen unterstützen, sondern auch nahezu jedes Buildsystem, z.B. CMake, Ninja, QMake (für Qt-Projekte), gyp, SCons, Gradle und Buck. 
 
 Klicken Sie im Hauptmenü auf *Datei > Öffnen > Ordner*, oder drücken Sie *STRG+UMSCHALT+ALT+O*, um „Ordner öffnen“ zu verwenden. Der Projektmappen-Explorer zeigt sofort alle Dateien im Ordner an. Sie können auf eine beliebige Datei klicken, um mit der Bearbeitung zu beginnen. Visual Studio beginnt im Hintergrund damit, die Dateien zu indizieren, um IntelliSense, Navigation und Refactoringfunktionen zu ermöglichen. Während Sie Dateien bearbeiten, erstellen, verschieben und löschen, verfolgt Visual Studio die Änderungen automatisch nach und aktualisiert den IntelliSense-Index kontinuierlich. 
   
@@ -30,7 +31,7 @@ Klicken Sie im Hauptmenü auf *Datei > Öffnen > Ordner*, oder drücken Sie *STR
 CMake ist in die Visual Studio-IDE als „CMake-Tools für Visual C++“ integriert. Dabei handelt es sich um eine Komponente der Workload für C++-Desktopentwicklung. Weitere Informationen finden Sie unter [CMake-Tools für Visual C++](cmake-tools-for-visual-cpp.md).
  
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>QMake-Projekte für das Qt-Framework
-Sie können CMake-Tools für Visual C++ verwenden, um Qt für das Erstellen von Qt-Projekten anzuzielen. Alternativ können Sie die Qt-Erweiterung für Visual Studio verwenden. Hinweis: Ab August 2017 ist die [Unterstützung für die Qt-Erweiterung für Visual Studio in Visual Studio 2017](https://download.qt.io/development_releases/vsaddin/) als Betaversion verfügbar.
+Sie können CMake-Tools für Visual C++ verwenden, um Qt für das Erstellen von Qt-Projekten anzuzielen. Alternativ können Sie für Visual Studio 2015 oder 2017 die [Qt-Erweiterung für Visual Studio](https://download.qt.io/development_releases/vsaddin/) verwenden.
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck usw.
 Sie können ein beliebiges Buildsystem in Visual C++ verwenden und trotzdem die Vorteile der Visual C++-IDE und des Visual C++-Debuggers nutzen. Wenn Sie den Stammordner Ihres Projekts öffnen, verwendet Visual C++ Heuristiken, um die Quelldateien für IntelliSense und das Durchsuchen zu indizieren. Sie können Hinweise zur Struktur Ihres Codes einfügen, indem Sie die Datei „CppProperties.json“ bearbeiten. Auf ähnliche Weise können Sie Ihr Buildprogramm konfigurieren, indem Sie die Datei „launch.vs.json“ bearbeiten. 
@@ -86,7 +87,7 @@ Eine Konfiguration kann folgende Eigenschaften aufweisen:
 #### <a name="environment-variables"></a>Umgebungsvariablen
 „CppProperties.json“ unterstützt die Erweiterung von Systemumgebungsvariablen zum Einfügen von Pfaden und anderen Eigenschaftswerten. Die Syntax zum Erweitern einer Umgebungsvariable (`%FOODIR%`) lautet `${env.FOODIR}`. Folgende vom System definierte Variablen werden ebenfalls unterstützt:
 
-|Variablenname|description|  
+|Variablenname|Beschreibung |  
 |-----------|-----------------|
 |vsdev|Die Standardumgebung von Visual Studio|
 |msvc_x86|Kompiliert mithilfe von x86-Tools für x86|
@@ -99,7 +100,7 @@ Eine Konfiguration kann folgende Eigenschaften aufweisen:
 
 Wenn die Linux-Workload installiert ist, können folgende Umgebungen verwendet werden, um Linux und WSL remote anzuzielen:
 
-|Variablenname|description|  
+|Variablenname|Beschreibung |  
 |-----------|-----------------|
 |linux_x86|Hiermit wird x86 Linux als Remotezielversion festgelegt.|
 |linux_x64|Hiermit wird x64 Linux als Remotezielversion festgelegt.|

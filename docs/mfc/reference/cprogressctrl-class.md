@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a637c1374e77127a5bf71c6fa736d2857928f1
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 05b259afe5c266db30ed31ed47e917f0ac1a5607
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541460"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196189"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Statusanzeige-Steuerelements bereit.  
@@ -143,14 +143,14 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
  *dwStyle*  
- Gibt das Statusanzeige-Steuerelement Stil. Wenden Sie eine beliebige Kombination von Fenster Stylesdescribed in [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK, zusätzlich zu den folgenden Statusanzeige Stile von Listensteuerelementen, an das Steuerelement:  
+ Gibt das Statusanzeige-Steuerelement Stil. Wenden Sie eine beliebige Kombination von Fenster Stylesdescribed in [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK, zusätzlich zu den folgenden Statusanzeige Stile von Listensteuerelementen, an das Steuerelement:  
   
 - PBS_VERTICAL zeigt Statusinformationen vertikal, von oben nach unten. Ohne dieses Flag zeigt das Statusanzeige-Steuerelement horizontal "," links nach rechts.  
   
 - PBS_SMOOTH zeigt allmählichen, smooth das Statusanzeige-Steuerelement ausfüllen. Ohne dieses Flag wird das Steuerelement mit Blöcken füllen.  
   
  *Rect*  
- Gibt an, des Statusanzeige-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Da das Steuerelement ein untergeordnetes Fenster sein muss, werden die angegebenen Koordinaten relativ zum Clientbereich befinden die *pParentWnd*.  
+ Gibt an, des Statusanzeige-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur. Da das Steuerelement ein untergeordnetes Fenster sein muss, werden die angegebenen Koordinaten relativ zum Clientbereich befinden die *pParentWnd*.  
   
  *pParentWnd*  
  Gibt an, der Statusanzeige übergeordnete Fenster des Steuerelements, in der Regel eine `CDialog`. Es darf nicht NULL sein.  
@@ -181,13 +181,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
  *dwStyle*  
- Gibt das Statusanzeige-Steuerelement Stil. Wenden Sie eine beliebige Kombination von Window-Stile, die in beschriebenen [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK.  
+ Gibt das Statusanzeige-Steuerelement Stil. Wenden Sie eine beliebige Kombination von Window-Stile, die in beschriebenen [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) im Windows SDK.  
   
  *Rect*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  
+ Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  
   
  *pParentWnd*  
  Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.  
@@ -209,10 +209,10 @@ COLORREF GetBarColor() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Farbe des aktuellen Statusanzeige, dargestellt als eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert oder CLR_DEFAULT ist die Farbe des Status Indicator die Standardfarbe.  
+ Die Farbe des aktuellen Statusanzeige, dargestellt als eine [COLORREF](/windows/desktop/gdi/colorref) Wert oder CLR_DEFAULT ist die Farbe des Status Indicator die Standardfarbe.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PBM_GETBARCOLOR](/windows/desktop/Controls/pbm-getbarcolor) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor  
  Ruft die Hintergrundfarbe des aktuellen Statusanzeige ab.  
@@ -222,10 +222,10 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die Hintergrundfarbe des aktuellen Statusanzeige, dargestellt als eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert.  
+ Die Hintergrundfarbe des aktuellen Statusanzeige, dargestellt als eine [COLORREF](/windows/desktop/gdi/colorref) Wert.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PBM_GETBKCOLOR](/windows/desktop/Controls/pbm-getbkcolor) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getpos"></a>  CProgressCtrl::GetPos  
  Ruft die aktuelle Position der Statusanzeige ab.  
@@ -282,7 +282,7 @@ int GetState() const;
 |PBST_PAUSED|Paused|  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PBM_GETSTATE](/windows/desktop/Controls/pbm-getstate) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_progressCtrl`, die für den programmgesteuerten Zugriff auf das Statusanzeige-Steuerelement verwendet wird. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -307,7 +307,7 @@ int GetStep() const;
 ### <a name="remarks"></a>Hinweise  
  Die Schrittweite ist der Betrag, einem Aufruf von [CProgressCtrl::StepIt](#stepit) erhöht die aktuelle Position der Statusanzeige.  
   
- Diese Methode sendet die [PBM_GETSTEP](http://msdn.microsoft.com/library/windows/desktop/bb760836) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PBM_GETSTEP](/windows/desktop/Controls/pbm-getstep) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_progressCtrl`, die für den programmgesteuerten Zugriff auf das Statusanzeige-Steuerelement verwendet wird. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -347,17 +347,17 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *ClrBar*|Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der die neue Farbe der Statusleiste Indikator angibt. Geben Sie CLR_DEFAULT um dazu führen, dass die Statusanzeige auf ihre Standardfarbe verwenden.|  
+|[in] *ClrBar*|Ein [COLORREF](/windows/desktop/gdi/colorref) Wert, der die neue Farbe der Statusleiste Indikator angibt. Geben Sie CLR_DEFAULT um dazu führen, dass die Statusanzeige auf ihre Standardfarbe verwenden.|  
   
 ### <a name="return-value"></a>Rückgabewert  
 
-Die vorherige Farbe der Indikator Statusanzeige, dargestellt als eine [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert oder CLR_DEFAULT die Farbe der Statusleiste Indikator ist die Standardfarbe.  
+Die vorherige Farbe der Indikator Statusanzeige, dargestellt als eine [COLORREF](/windows/desktop/gdi/colorref) Wert oder CLR_DEFAULT die Farbe der Statusleiste Indikator ist die Standardfarbe.  
   
 ### <a name="remarks"></a>Hinweise  
 
 Die `SetBarColor` Methode wird die Statusanzeige nur Farbe, wenn eine Windows Vista [Design](/windows/desktop/Controls/visual-styles-overview) ist nicht aktiv.  
   
- Diese Methode sendet die [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PBM_SETBARCOLOR](/windows/desktop/Controls/pbm-setbarcolor) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_progressCtrl`, die für den programmgesteuerten Zugriff auf das Statusanzeige-Steuerelement verwendet wird. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -381,7 +381,7 @@ COLORREF SetBkColor(COLORREF clrNew);
  Eine COLORREF-Wert, der die neue Hintergrundfarbe angibt. Geben Sie den CLR_DEFAULT-Wert, um die Standardhintergrundfarbe für die Statusanzeige zu verwenden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Wert, der angibt, die vorherige Background-Farbe oder CLR_DEFAULT die Hintergrundfarbe ist die Standardfarbe.  
+ Die [COLORREF](/windows/desktop/gdi/colorref) Wert, der angibt, die vorherige Background-Farbe oder CLR_DEFAULT die Hintergrundfarbe ist die Standardfarbe.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
@@ -408,7 +408,7 @@ BOOL SetMarquee(
 ### <a name="remarks"></a>Hinweise  
  Wenn Marquee-Modus aktiviert ist, die Statusanzeige animiert wird und wie einen Bildlauf eine Anmeldung über einen Auswahlbereich Theater.  
   
- Diese Methode sendet die [PBM_SETMARQUEE](http://msdn.microsoft.com/library/windows/desktop/bb760842) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PBM_SETMARQUEE](/windows/desktop/Controls/pbm-setmarquee) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_progressCtrl`, die für den programmgesteuerten Zugriff auf das Statusanzeige-Steuerelement verwendet wird. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -484,7 +484,7 @@ int SetState(int iState);
  Der vorherige Status des aktuellen Statusanzeige-Steuerelements.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [PBM_SETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760850) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [PBM_SETSTATE](/windows/desktop/Controls/pbm-setstate) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_progressCtrl`, die für den programmgesteuerten Zugriff auf das Statusanzeige-Steuerelement verwendet wird. Diese Variable wird im nächsten Beispiel verwendet.  

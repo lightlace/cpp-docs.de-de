@@ -1,7 +1,7 @@
 ---
 title: IDE und Tools für Visual C++-Entwicklung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/02/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3668fb438c2a0aa7fa14cff97f498a9becc67b36
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
+ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705399"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43132019"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE und Tools für Visual C++-Entwicklung
 
@@ -29,7 +29,11 @@ Zusätzlich zu den gemeinsam verwendeten Tools in der integrierten Visual Studio
 
 ## <a name="creating-a-solution-and-projects"></a>Erstellen einer Projektmappe und von Projekten
 
-Ein *Projekt* ist im Grunde eine Reihe von Quellcodedateien und Ressourcen wie Bilder oder Datendateien, aus denen eine ausführbare Datei erstellt wird. Visual Studio 2017 kann jedes Buildsystem und alle benutzerdefinierten Buildtools unterstützen, die Sie verwenden möchten, und bietet vollständige Unterstützung für IntelliSense, das Durchsuchen und das Debuggen:
+Ein *Projekt* ist im Grunde eine Reihe von Quellcodedateien und Ressourcen wie Bilder oder Datendateien, aus denen eine ausführbare Datei erstellt wird. 
+
+Visual Studio 2015 unterstützt MSBuild-Projekte. Sie können Visual Studio-Erweiterungen für andere Buildsysteme wie Qt oder CMake herunterladen.
+
+Visual Studio 2017 unterstützt alle Buildsysteme und benutzerdefinierten Buildtools, die Sie verwenden möchten, und bietet vollständige Unterstützung für IntelliSense, das Durchsuchen und das Debuggen:
 
 - MSBuild ist das native Buildsystem für Visual Studio und häufig die beste Wahl für UWP-Apps (Universelle Windows-Plattform) oder ältere Windows-Desktopanwendungen, die MFC oder ATL verwenden. Weitere Informationen zu MSBuild-basierten C++-Projekten finden Sie unter [Creating and managing MSBuild-based projects (Erstellen und Verwalten von MSBuild-basierten Projekten)](creating-and-managing-visual-cpp-projects.md).
 - CMake ist ein plattformübergreifendes Buildsystem, das in die Visual Studio-IDE integriert ist, wenn Sie die Workload „Desktopentwicklung mit C++“ installieren. Weitere Informationen finden Sie unter [CMake-Projekte in Visual C++](cmake-tools-for-visual-cpp.md).
@@ -105,13 +109,17 @@ Sie können auch den Compiler (cl.exe) und viele andere buildbezogene, eigenstä
 
 Visual Studio enthält einen Komponententest-Framework für systemeigenen C++- und C++/CLI-Code. Weitere Informationen finden Sie unter [Überprüfen von Code mit Komponententests](/visualstudio/test/unit-test-your-code) und [Schreiben von Komponententests für C/C++ mit dem Microsoft-Komponententest-Framework für C++](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp).
 
+## <a name="analyze"></a>Analysieren
+
+Visual Studio umfasst Tools für die Analyse von statischem Code für C++, einschließlich einer Implementierung zur Überprüfung der in den [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) enthaltenen Regeln. Weitere Informationen finden Sie unter [Code analysis for C/C++ overview (Übersicht: Codeanalyse für C/C++)](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+
 ## <a name="debug"></a>Debug
 
 Sie können das Programm debuggen, indem Sie **F5** drücken, wenn die Projektkonfiguration für das Debuggen festgelegt ist. Während des Debuggens können Sie mit **F9** Haltepunkte setzen, mit **F10** den Code schrittweise durchlaufen, die Werte angegebener Variablen oder Register anzeigen und in einigen Fällen sogar Änderungen am Code vornehmen und mit dem Debuggen fortfahren, ohne neu kompilieren zu müssen. Weitere Informationen finden Sie unter [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
 ## <a name="deploy-completed-applications"></a>Bereitstellen fertiger Anwendungen
 
-Sie stellen eine UWP-App über den Microsoft Store für Kunden bereit, indem Sie die Menüoption **Projekt** > **Store** verwenden. Die Bereitstellung von CRT wird automatisch im Hintergrund durchgeführt. Weitere Informationen finden Sie unter [Veröffentlichen von Windows-Apps](http://go.microsoft.com/fwlink/p/?LinkId=262280).
+Sie stellen eine UWP-App über den Microsoft Store für Kunden bereit, indem Sie die Menüoption **Projekt** > **Store** verwenden. Die Bereitstellung von CRT wird automatisch im Hintergrund durchgeführt. Weitere Informationen finden Sie unter [Veröffentlichen von Windows-Apps und -Spielen](/windows/uwp/publish/). 
 
 Wenn Sie eine systemeigene C++-Desktopanwendung auf einem anderen Computer bereitstellen, müssen Sie die Anwendung selbst sowie alle Bibliotheksdateien, von denen die Anwendung abhängt, installieren. Es gibt drei Möglichkeiten zum Bereitstellen der universellen C++-Runtime (UCRT): die zentrale Bereitstellung, die lokale Bereitstellung oder die statische Verknüpfung. Weitere Informationen finden Sie unter [Bereitstellen von Desktopanwendungen](../ide/deploying-native-desktop-applications-visual-cpp.md).
 

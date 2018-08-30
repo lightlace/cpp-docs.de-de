@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f275ae65b8c3135a110e249b0521194083683c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ad99ccf1f037d16bcff57f9a643f2332f36e7d7a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854082"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220433"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl-Klasse
 Eine Symbolleisten-Schaltfläche, die ein Datums- / Zeitauswahl-Steuerelement enthält.  
@@ -96,10 +96,10 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|Gibt einen Zeiger auf den Datums- / Zeitauswahl-Steuerelement.|  
 |[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|Ruft das Fensterhandle, das die Symbolleisten-Schaltfläche zugeordnet ist. (Überschreibt [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|  
 |`CMFCToolBarDateTimeCtrl::GetThisClass`|Durch das Framework verwendet wird, einen Zeiger zum Abrufen der [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) -Objekt, das diesem Klassentyp zugeordnet ist.|  
-|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Ruft die ausgewählte Zeit aus einem Datums- / Zeitauswahl-Steuerelement ab und setzt es in einem angegebenen [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur.|  
+|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Ruft die ausgewählte Zeit aus einem Datums- / Zeitauswahl-Steuerelement ab und setzt es in einem angegebenen [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur.|  
 |[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|Gibt den ausgewählten Zeitraum über die Zeit Zeitauswahl-Steuerelement-Schaltfläche, die eine angegebenen Befehls-ID|  
 |[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|Bestimmt, ob ein Rahmen der Schaltfläche angezeigt wird, wenn ein Benutzer die Schaltfläche auswählt. (Überschreibt [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
-|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht. (Überschreibt [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
+|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](/windows/desktop/menurc/wm-command) Nachricht. (Überschreibt [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
 |[CMFCToolBarDateTimeCtrl::OnAddToCustomizePage](#onaddtocustomizepage)|Vom Framework aufgerufen, wenn die Schaltfläche hinzugefügt wird eine **anpassen** Dialogfeld. (Überschreibt [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
 |`CMFCToolBarDateTimeCtrl::OnCalculateSize`|Wird aufgerufen, durch das Framework die Größe der Schaltfläche für den angegebenen Gerätekontext und Andockstatus berechnet. (Überschreibt [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
 |[CMFCToolBarDateTimeCtrl::OnChangeParentWnd](#onchangeparentwnd)|Vom Framework aufgerufen, wenn die Schaltfläche mit der in eine neue Symbolleiste eingefügt wird. (Überschreibt [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
@@ -250,7 +250,7 @@ virtual HWND GetHwnd();
  Diese Methode überschreibt die [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) Methode.  
   
 ##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime  
- Ruft die ausgewählte Zeit aus das zugeordnete Datum und die / Zeitauswahl-Steuerelement und fügt es in einem angegebenen [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur  
+ Ruft die ausgewählte Zeit aus das zugeordnete Datum und die / Zeitauswahl-Steuerelement und fügt es in einem angegebenen [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur  
   
 ```  
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -263,13 +263,13 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
  In der ersten Überladung ist eine [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das die Zeitinformationen System erhält. In der zweiten Überladung ist eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das die Zeitinformationen System erhält.  
   
  [out] *pTimeDest*  
- Ein Zeiger auf die [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, um die Systeminformationen für die Zeit zu erhalten. Nicht darf NULL sein.  
+ Ein Zeiger auf die [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, um die Systeminformationen für die Zeit zu erhalten. Nicht darf NULL sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
- In der ersten Überladung, die ungleich NULL, wenn die Zeit erfolgreich, um geschrieben wurde die [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, andernfalls 0. In der zweiten und dritten-Überladungen, ist der Rückgabewert einen DWORD-Wert, der gleich dem dwFlags-Element, das festgelegt wurde, in der [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) Struktur.  
+ In der ersten Überladung, die ungleich NULL, wenn die Zeit erfolgreich, um geschrieben wurde die [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, andernfalls 0. In der zweiten und dritten-Überladungen, ist der Rückgabewert einen DWORD-Wert, der gleich dem dwFlags-Element, das festgelegt wurde, in der [NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange) Struktur.  
   
 ### <a name="remarks"></a>Hinweise  
- Der Methode wird die [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) -Struktur Member DwFlags, um anzugeben, ob die Datums- / Zeitauswahl auf Datum und Uhrzeit festgelegt ist. Wenn der Wert GDT_NONE, auf das Steuerelement festgelegt `no date` Status und den Stil DTS_SHOWNONE verwendet. Wenn der zurückgegebene Wert GDT_VALID gleich ist, wird die Systemzeit am Zielspeicherort wurde erfolgreich gespeichert.  
+ Der Methode wird die [NMDATETIMECHANGE](/windows/desktop/api/commctrl/ns-commctrl-tagnmdatetimechange) -Struktur Member DwFlags, um anzugeben, ob die Datums- / Zeitauswahl auf Datum und Uhrzeit festgelegt ist. Wenn der Wert GDT_NONE, auf das Steuerelement festgelegt `no date` Status und den Stil DTS_SHOWNONE verwendet. Wenn der zurückgegebene Wert GDT_VALID gleich ist, wird die Systemzeit am Zielspeicherort wurde erfolgreich gespeichert.  
   
 ##  <a name="gettimeall"></a>  CMFCToolBarDateTimeCtrl::GetTimeAll  
  Gibt die Zeit, die vom Benutzer über die Zeit Zeitauswahl-Steuerelement-Schaltfläche, die eine angegebenen Befehls-ID ausgewählt  
@@ -296,7 +296,7 @@ static DWORD GetTimeAll(
  In der ersten Überladung ist eine [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das die Zeitinformationen System erhält. In der zweiten Überladung ist eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das die Zeitinformationen System erhält.  
   
  [out] *pTimeDest*  
- Ein Zeiger auf die [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, um die Systeminformationen für die Zeit zu erhalten. Nicht darf NULL sein.  
+ Ein Zeiger auf die [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, um die Systeminformationen für die Zeit zu erhalten. Nicht darf NULL sein.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn das Framework eine Symbolleisten-Schaltfläche nicht finden kann, die die Befehls-ID entspricht *UiCmd*, der Rückgabewert ist 0 (null), in der ersten Überladung und GDT_NONE in alle anderen Überladungen. Wenn die Symbolleisten-Schaltfläche gefunden wird, wird der Rückgabewert ist identisch mit der Rückgabewert von einem Aufruf von [CMFCToolBarDateTimeCtrl::GetTime](#gettime) auf diese Schaltfläche. Ein Rückgabewert Wert 0 (null) oder GDT_NONE kann auftreten, wenn die Schaltfläche mit der gefunden wird, der angibt, dass der Aufruf von `GetTime` hat ein gültiges Datum einem anderen Grund nicht zurückgegeben.  
@@ -318,7 +318,7 @@ virtual BOOL HaveHotBorder() const;
  Diese Methode gibt einen Wert ungleich NULL zurück, wenn das Steuerelement sichtbar ist.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarDateTimeCtrl::NotifyCommand  
- Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht.  
+ Gibt an, ob die Schaltfläche mit der verarbeitet die [WM_COMMAND](/windows/desktop/menurc/wm-command) Nachricht.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -332,9 +332,9 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  TRUE, wenn die Schaltfläche mit der verarbeitet die WM_COMMAND-Meldung oder "false" um anzugeben, dass die Nachricht von der übergeordneten Symbolleiste behandelt werden soll.  
   
 ### <a name="remarks"></a>Hinweise  
- Das Framework ruft diese Methode aus, wenn es zu senden ist ein [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) Nachricht für das übergeordnete Fenster.  
+ Das Framework ruft diese Methode aus, wenn es zu senden ist ein [WM_COMMAND](/windows/desktop/menurc/wm-command) Nachricht für das übergeordnete Fenster.  
   
- Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) durch die Verarbeitung der [DTN_DATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761737) Benachrichtigung. Aktualisiert den Zeitstatus der internen und aktualisiert die Time-Eigenschaft aller `CMFCToolBarDateTimeCtrl` Objekte mit derselben Befehls-ID  
+ Diese Methode erweitert die basisklassenimplementierung ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) durch die Verarbeitung der [DTN_DATETIMECHANGE](/windows/desktop/Controls/dtn-datetimechange) Benachrichtigung. Aktualisiert den Zeitstatus der internen und aktualisiert die Time-Eigenschaft aller `CMFCToolBarDateTimeCtrl` Objekte mit derselben Befehls-ID  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
  Vom Framework aufgerufen, wenn die Schaltfläche hinzugefügt wird eine **anpassen** Dialogfeld.  
@@ -502,7 +502,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
  In der ersten Version, die einen Verweis auf eine [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden. In der zweiten Version, ein Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden.  
   
  [in] *pTimeNew*  
- Ein Zeiger auf die [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die die Zeit enthält, auf den das Steuerelement festgelegt werden.  
+ Ein Zeiger auf die [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die die Zeit enthält, auf den das Steuerelement festgelegt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -535,7 +535,7 @@ static BOOL SetTimeAll(
  In der ersten Version einer [COleDateTime-Klasse](../../atl-mfc-shared/reference/coledatetime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden. In der zweiten Version, ein Zeiger auf eine [CTime](../../atl-mfc-shared/reference/ctime-class.md) -Objekt, das den Zeitpunkt enthält, auf den das Steuerelement festgelegt werden.  
   
  [in] *pTimeNew*  
- Ein Zeiger auf die [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die die Zeit enthält, auf den das Steuerelement festgelegt werden.  
+ Ein Zeiger auf die [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur, die die Zeit enthält, auf den das Steuerelement festgelegt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
