@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 394cd0da74171e517086886a5c0c915fc77ba49c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 96219173186b578e2469c769ade62c388d8c3c07
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541635"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201475"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane-Klasse
 Weitere Informationen finden Sie im Quellcode der **VC\\Atlmfc\\Src\\Mfc** Ordner von Visual Studio-Installation.  
@@ -323,7 +323,7 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
  Die aktuelle Textfarbe als ein RGB-Farbwert.  
   
 ### <a name="remarks"></a>Hinweise  
- Verwendung [CMFCOutlookBarPane::SetTextColor](#settextcolor) , legen Sie die aktuelle (reguläre und ausgewählte) Textfarbe der Outlook-Leiste. Sie erhalten die Standardtextfarbe durch Aufrufen der [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) -Funktion mit den COLOR_WINDOW-Index.  
+ Verwendung [CMFCOutlookBarPane::SetTextColor](#settextcolor) , legen Sie die aktuelle (reguläre und ausgewählte) Textfarbe der Outlook-Leiste. Sie erhalten die Standardtextfarbe durch Aufrufen der [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) -Funktion mit den COLOR_WINDOW-Index.  
   
 ##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture  
  Bestimmt, ob es ein Hintergrundbild für das Outlook-Leistenbereich geladen.  

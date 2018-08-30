@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16aa9377676e415f416dc4f7dae9cb9f2a40dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed85edeaf5400805d4628e10acab4cdf4af52082
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336565"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202729"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile-Klasse
 Ermöglicht den Zugriff auf Dateien auf Remotesystemen, die Internetprotokolle verwenden.  
@@ -258,7 +258,7 @@ virtual LPTSTR ReadString(
  Ein Verweis auf die [CString](../../atl-mfc-shared/reference/cstringt-class.md) Objekt, in der Zeile lesen.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf den Puffer mit unformatierten Daten abgerufen, die von der [CInternetFile](../../mfc/reference/cinternetfile-class.md) Objekt. Unabhängig vom Datentyp des übergebenen Puffers an diese Methode, alle Manipulationen der Daten (z. B. die Konvertierung in Unicode) wird nicht ausgeführt, damit Sie die zurückgegebenen Daten auf die Struktur zuordnen, müssen Sie erwarten, als ob die **"void"\***  Typ zurückgegeben wurden.  
+ Ein Zeiger auf den Puffer mit unformatierten Daten abgerufen, die von der [CInternetFile](../../mfc/reference/cinternetfile-class.md) Objekt. Unabhängig vom Datentyp des übergebenen Puffers an diese Methode, alle Manipulationen der Daten (z. B. die Konvertierung in Unicode) wird nicht ausgeführt, damit Sie die zurückgegebenen Daten auf die Struktur zuordnen, müssen Sie erwarten, als ob die **"void"** <strong>\*</strong> Typ zurückgegeben wurden.  
   
  NULL, wenn-Dateiende erreicht wurde, ohne alle Daten zu lesen. oder, wenn Boolesch, FALSE, wenn das Ende der Datei erreicht wurde, ohne alle Daten zu lesen.  
   
@@ -317,7 +317,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  Die gewünschte Puffergröße in Bytes.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  Der zugrunde liegenden WinInet-APIs nicht ausführen, Pufferung, also wählen Sie eine Puffergröße, die Ihre Anwendung zum Lesen von Daten effizient, unabhängig von der Menge der zu lesenden Daten ermöglicht. Wenn Sie jeden Aufruf [lesen](#read) normalerweise umfasst eine große Aount von Daten (z. B. mindestens vier-Kilobyte), sollte Sie keinen Puffer erforderlich. Allerdings Aufrufen `Read` abzurufenden kleine Datenblöcke, oder wenn Sie [ReadString](#readstring) , einzelne Zeilen zu einem Zeitpunkt, zu lesen, und klicken Sie dann ein Lesepuffer verbessert die Leistung der Anwendung.  
@@ -338,7 +338,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  Die Größe des Puffers in Byte.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  Wählen Sie die zugrunde liegende WinInet-APIs führen Sie keine Pufferung, also eine Puffergröße, die Ihre Anwendung zum Schreiben von Daten effizient, unabhängig von die Menge der zu schreibenden Daten ermöglicht. Wenn Sie jeden Aufruf [schreiben](#write) normalerweise umfasst eine große Menge von Daten (z. B. vier oder mehr KB jeweils) kein Puffer erforderlich. Aber wenn Sie aufrufen [schreiben](#write) um kleine Datenblöcke zu schreiben, die ein Schreibpuffer verbessert die Leistung Ihrer Anwendung.  

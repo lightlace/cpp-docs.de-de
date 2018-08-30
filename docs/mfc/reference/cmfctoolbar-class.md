@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539652"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208557"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar-Klasse
 Die `CMFCToolBar` ähnelt [CToolBar-Klasse](../../mfc/reference/ctoolbar-class.md), bietet aber zusätzliche Unterstützung für Benutzeroberflächenfunktionen. Dazu gehören flache Symbolleisten, Symbolleisten mit hervorgehobenen Bilder, große Symbole, Pagerschaltflächen, gesperrte Symbolleisten, Grundleisten-Steuerelemente, Texte unter Bildern, Hintergrundbilder und Symbolleisten im Registerkartenformat. Die `CMFCToolBar` -Klasse enthält auch integrierte Unterstützung zur Anpassung folgender Elemente und Funktionen: Symbolleisten und Menüs, Drag &amp; Drop zwischen Symbolleisten und Menüs, Schaltflächen für Kombinations- und Bearbeitungsfelder, Farbwähler und Rollup-Schaltflächen.
@@ -916,7 +916,7 @@ virtual BOOL Create(
  Ein Zeiger auf das übergeordnete Fenster der Symbolleiste.  
   
  [in] *DwStyle*  
- Der Stil für die Symbolleiste. Finden Sie unter [Toolbar-Steuerelement und Button-Stile](http://msdn.microsoft.com/library/windows/desktop/bb760439) im Windows SDK für die Liste der Stile.  
+ Der Stil für die Symbolleiste. Finden Sie unter [Toolbar-Steuerelement und Button-Stile](/windows/desktop/Controls/toolbar-control-and-button-styles) im Windows SDK für die Liste der Stile.  
   
  [in] *nID*  
  Die ID des untergeordneten Fensters der Symbolleiste.  
@@ -950,7 +950,7 @@ virtual BOOL CreateEx(
  Weitere Formate für die Erstellung der eingebetteten Steuerleistenobjekt.  
   
  [in] *DwStyle*  
- Der Stil für die Symbolleiste. Finden Sie unter [Toolbar-Steuerelement und Button-Stile](http://msdn.microsoft.com/library/windows/desktop/bb760439) eine Liste der entsprechenden Stile.  
+ Der Stil für die Symbolleiste. Finden Sie unter [Toolbar-Steuerelement und Button-Stile](/windows/desktop/Controls/toolbar-control-and-button-styles) eine Liste der entsprechenden Stile.  
   
  [in] *RcBorders*  
  Ein `CRect` Objekt, das die Breite der Symbolleiste im Fensterrahmen angibt.  
@@ -1493,7 +1493,7 @@ static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) -Wert, der die aktuelle Farbe des hervorgehobenen Text darstellen.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) -Wert, der die aktuelle Farbe des hervorgehobenen Text darstellen.  
   
 ### <a name="remarks"></a>Hinweise  
  Rufen Sie [CMFCToolBar::SetHotTextColor](#sethottextcolor) um eine neue Farbe für die markierten Symbolleistenschaltflächen festzulegen.  
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  True, wenn die Symbolleiste und gleichgeordnete auf derselben Zeile positioniert ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Die [cmfccustomizebutton:: CreatePopupMenu](http://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) Methode ruft diese Methode, um zu bestimmen, wie zum Anzeigen der **anpassen** Popup-Menü. Wenn diese Methode TRUE zurückgibt, zeigt das Framework die **Schaltflächen in einer Zeile anzeigen** Schaltfläche. Andernfalls zeigt das Framework die **Schaltflächen in zwei Reihen anzeigen** Schaltfläche.  
+ Die [cmfccustomizebutton:: CreatePopupMenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) Methode ruft diese Methode, um zu bestimmen, wie zum Anzeigen der **anpassen** Popup-Menü. Wenn diese Methode TRUE zurückgibt, zeigt das Framework die **Schaltflächen in einer Zeile anzeigen** Schaltfläche. Andernfalls zeigt das Framework die **Schaltflächen in zwei Reihen anzeigen** Schaltfläche.  
   
  Sie müssen dieser Methode normalerweise nicht verwenden. So aktivieren Sie die **Schaltflächen in einer Zeile anzeigen** oder **Schaltflächen in zwei Reihen anzeigen** , rufen [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar).  
   

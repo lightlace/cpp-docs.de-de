@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fe6616cd22ee9de9ffbb6b3a26620a7ccdebc63
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 223359e10ef0e64860a611079abf9e7e83a26fe1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598076"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222807"
 ---
 # <a name="attributed-programming-concepts"></a>Konzepte der attributierten Programmierung
 
 Visual C++ umfasst eine Vielzahl von Material, das Sie die Attribute in Ihren Programmen verwenden können. Attribute, ein neues Feature in Visual C++ dienen zur Vereinfachung der Programmierung von COM und .NET Framework common Language Runtime-Entwicklung. Wenn Sie Attribute in Ihren Quelldateien einschließen, arbeitet der Compiler, mit dem Anbieter Dynamic Link Libraries (DLL), um Code einzufügen, oder ändern Sie den Code in die generierten Objektdateien. Es gibt Attribute an, die bei der Erstellung von IDL-Dateien, Schnittstellen, Typbibliotheken und anderen COM-Elementen zu unterstützen. In der integrierten Entwicklungsumgebung (IDE) werden die Attribute von den Assistenten und das Fenster "Eigenschaften" unterstützt.
 
-Während einige der ausführliche das Schreiben von Code zum Schreiben von COM-Objekte erforderlich sind Attribute vermeiden, benötigen Sie einen Hintergrund in [com-Grundlagen](http://msdn.microsoft.com/library/windows/desktop/ms694363) optimal genutzt werden.
+Während einige der ausführliche das Schreiben von Code zum Schreiben von COM-Objekte erforderlich sind Attribute vermeiden, benötigen Sie einen Hintergrund in [com-Grundlagen](/windows/desktop/com/the-component-object-model) optimal genutzt werden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

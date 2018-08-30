@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf610316c504e61d56556a20797f55d2906bca27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea9d028454c408492378c345fb6d6c6d9dfc23cb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406913"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199590"
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
 
@@ -61,41 +61,54 @@ Die Adresse der Funktion, die Fehlerprüfungen zur Laufzeit verarbeitet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die zuvor definierte Fehlerfunktion; oder **NULL** , wenn keine zuvor definierte Funktion vorhanden ist.
+Die zuvor definierte Fehlerfunktion oder **NULL** , wenn keine zuvor definierte Funktion vorhanden ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie in neuem Code ausschließlich **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** nur in der Bibliothek aus Gründen der Abwärtskompatibilität enthalten ist.
+Verwenden Sie in neuem Code nur **_RTC_SetErrorFuncW**. **_RTC_SetErrorFunc** nur in der Bibliothek für die Abwärtskompatibilität enthalten ist.
 
-Die **_RTC_SetErrorFuncW** Rückruf gilt nur für die Komponente, die er eingebunden wurde aber nicht global.
+Die **_RTC_SetErrorFuncW** Rückruf gilt nur für die Komponente, die er eingebunden wurde, aber nicht global.
 
-Stellen Sie sicher, dass die Adresse, die Sie zum übergeben **_RTC_SetErrorFuncW** ist, die von einer gültigen Fehlerbehandlungsfunktion gehört.
+Stellen Sie sicher, dass die Adresse, die Sie übergeben **_RTC_SetErrorFuncW** ist, die von einer gültigen Fehlerbehandlungsfunktion gehört.
 
-Wenn ein Fehler einen Typ "-1" mit zugewiesen wurde [_RTC_SetErrorType](rtc-seterrortype.md), die Fehlerbehandlungsfunktion nicht aufgerufen wird.
+Wenn ein Fehler eine Art von-1 mit zugewiesen wurde [_RTC_SetErrorType](rtc-seterrortype.md), die Fehlerbehandlungsfunktion nicht aufgerufen wird.
 
 Bevor Sie diese Funktion aufrufen können, müssen Sie zuerst eine der Initialisierungsfunktionen der Laufzeitfehlerüberprüfung aufrufen. Weitere Informationen finden Sie unter [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
 
 **_RTC_error_fnW** ist wie folgt definiert:
 
-> **TypeDef-Int (__cdecl \*_RTC_error_fnW) (Int** *ErrorType* **, const Wchar_t \***  *Filename* **, Int***Linenumber* **, const Wchar_t \***  *"ModuleName"* **, const Wchar_t \***  *Format* **,...);** 
+```cpp
+typedef int (__cdecl * _RTC_error_fnW)(
+    int errorType,
+    const wchar_t * filename,
+    int linenumber,
+    const wchar_t * moduleName,
+    const wchar_t * format,
+    ... );
+```
 
 Dabei gilt:
 
-*ErrorType* den Typ des Fehlers, der angegebenen [_RTC_SetErrorType](rtc-seterrortype.md).
+*ErrorType*<br/>
+Die Art des Fehlers, der von [_RTC_SetErrorType](rtc-seterrortype.md) angegeben wird.
 
-*FileName* der Quelldatei, in dem der Fehler aufgetreten ist, oder Null, wenn keine Debuginformationen verfügbar sind.
+*filename*<br/>
+Die Quelldatei, in der der Fehler aufgetreten ist oder null, wenn keine Debuginformationen verfügbar sind.
 
-*LineNumber* der Zeile im *Filename* , in dem der Fehler aufgetreten ist, oder 0, wenn keine Debuginformationen verfügbar sind.
+*linenumber*<br/>
+Die Zeile in *filename* , in der der Fehler aufgetreten ist oder „0“, wenn keine Debuginformationen verfügbar sind.
 
-*"ModuleName"* die DLL oder Name der ausführbaren Datei, in dem der Fehler aufgetreten ist.
+*moduleName*<br/>
+Die DLL oder Name des ausführbaren Programms, wo der Fehler aufgetreten ist.
 
-*Format* Printf-Formatzeichenfolge, um eine Fehlermeldung, die mit den übrigen Parameter anzuzeigen. Das erste Argument von VA_ARGLIST ist die Fehlernummer des aufgetretenen RTC-Fehlers.
+*format*<br/>
+printf-Formatzeichenfolge, um eine Fehlermeldung mit den übrigen Parameter anzuzeigen. Das erste Argument von VA_ARGLIST ist die Fehlernummer des aufgetretenen RTC-Fehlers.
 
 Ein Beispiel für die Verwendung von **_RTC_error_fnW** finden Sie unter [Anpassen der nativen Laufzeitüberprüfung](/visualstudio/debugger/native-run-time-checks-customization).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_RTC_SetErrorFuncW**|\<rtcapi.h>|
 

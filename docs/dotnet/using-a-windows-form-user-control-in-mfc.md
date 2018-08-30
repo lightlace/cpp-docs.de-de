@@ -1,5 +1,5 @@
 ---
-title: Mithilfe einer Windows-Benutzersteuerelement in MFC bilden | Microsoft Docs
+title: Verwenden eine Windows-Benutzersteuerelement in MFC bilden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 1/08/2018
 ms.technology:
@@ -20,36 +20,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8ceb424d6c5061ac5ccafc62d8748be4de3ab3d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 795c16a46356eb9599e02b43b51066b603b8b9ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33174312"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222107"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Verwenden eines Windows Form-Benutzersteuerelements in MFC
 
-Verwenden die MFC-Windows Forms-Unterstützungsklassen, können Sie Windows Forms-Steuerelemente in einer MFC-Anwendung als ActiveX-Steuerelement in MFC-Dialogfelder oder Sichten hosten. Darüber hinaus können Windows Forms-Formulare als MFC-Dialogfelder gehostet werden.
+Verwenden der MFC-Windows Forms-Unterstützungsklassen, können Sie Windows Forms-Steuerelementen in MFC-Anwendungen als ActiveX-Steuerelement in MFC-Dialogfelder oder Ansichten hosten. Darüber hinaus können Windows Forms-Formulare als MFC-Dialogfelder gehostet werden.
 
-In den folgenden Abschnitten wird beschrieben, wie Sie:
+Den folgenden Abschnitten wird beschrieben, wie Sie:
 
-- Hosten eines Windows Forms-Steuerelements in einem MFC-Dialogfeld.
+- Hosten eines Windows Forms-Steuerelements in MFC-Dialogfeld.
 
-- Hosten Sie ein Windows Forms-Benutzersteuerelements als MFC-Ansicht an.
+- Hosten Sie ein Windows Forms-Benutzersteuerelements als MFC-Ansicht.
 
-- Hosten eines Windows Forms-Formulars als MFC-Dialogfeld.
-
-> [!NOTE]
-> MFC-Windows Forms-Integration funktioniert nur in Projekten, die dynamisch mit MFC verknüpft sind (Projekte, in denen `_AFXDLL` definiert ist).
+- Hosten Sie ein Windows Forms-Formular als MFC-Dialogfeld ein.
 
 > [!NOTE]
-> Wenn Sie Ihre Anwendung mit einer privaten (geändert) Kopie der MFC-Windows Forms-Schnittstellen-DLL (mfcmifc80.dll) erstellen, kann es nicht im GAC zu installieren, es sei denn, Sie den Microsoft-Schlüssel durch Ihren eigenen Anbieter Schlüssel zu ersetzen. Weitere Informationen zu Signieren von Assemblys, finden Sie unter [Programmieren mit Assemblys](/dotnet/framework/app-domains/programming-with-assemblies) und [Assemblys mit starken Namen (Assembly signieren) (C + c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+> MFC-Windows Forms-Integration funktioniert nur in Projekten, die dynamisch mit MFC verknüpft (Projekte, in dem `_AFXDLL` definiert ist).
 
-Beispielanwendungen, die mithilfe von Windows Forms, finden Sie unter [BirthdayPicker-Beispiel: .NET Framework-Ressourcen mit Windows Forms zeigt](http://msdn.microsoft.com/ac932aed-5502-4667-be29-709bca435317), [-Rechnerbeispiel: Windows Forms-Taschenrechner](http://msdn.microsoft.com/2283b516-3b7e-45f2-80c4-fdcfb366ce25), und [ Scribble-Beispiel: MDI-Zeichenanwendung](http://msdn.microsoft.com/f025da3e-659b-4222-b991-554a1b8b2358).
+> [!NOTE]
+> Bei der Erstellung der Anwendung eine private (geänderte) Kopie der MFC-Windows Forms-Schnittstellen-DLL (mfcmifc80.dll) kann es nicht im GAC zu installieren, es sei denn, Sie den Microsoft-Schlüssel durch Ihren eigenen Anbieter-Schlüssel zu ersetzen. Weitere Informationen zum Signieren der Assembly, finden Sie unter [Programmieren mit Assemblys](/dotnet/framework/app-domains/programming-with-assemblies) und [Assemblys mit starken Namen (Assemblysignierung) (C++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
-Eine beispielanwendung, die Windows Forms mit MFC verwendet wird, finden Sie unter [MFC und Windows Forms-Integration](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
-
-Wenn die MFC-Anwendung Windows Forms verwendet, müssen Sie mfcmifc80.dll mit der Anwendung verteilen. Weitere Informationen finden Sie unter [Verteilen der MFC-Bibliothek](../ide/redistributing-the-mfc-library.md).
+Wenn die MFC-Anwendung Windows Forms verwendet, müssen Sie mfcmifc80.dll mit Ihrer Anwendung verteilen. Weitere Informationen finden Sie unter [Neuverteilen der MFC-Bibliothek](../ide/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -89,5 +85,5 @@ Wenn die MFC-Anwendung Windows Forms verwendet, müssen Sie mfcmifc80.dll mit de
 
 ## <a name="see-also"></a>Siehe auch
 
-[Benutzeroberflächenelemente](../mfc/user-interface-elements-mfc.md)  
+[Elemente der Benutzeroberfläche](../mfc/user-interface-elements-mfc.md)  
 [Formularansichten](../mfc/form-views-mfc.md)  

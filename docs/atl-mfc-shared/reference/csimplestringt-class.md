@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd96c7028f5f37d617c86e412fa238ccf141cb58
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 0d548a5cf0384a59c3fa12d88268997f1e801704
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42573230"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196660"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT-Klasse
 Diese Klasse stellt eine `CSimpleStringT` Objekt.  
@@ -471,11 +471,11 @@ PXSTR GetBufferSetLength(int nLength);
   
  Weitere Informationen zum zählen der Verweise finden Sie unter den folgenden Artikeln:  
   
-- [Verwalten der Lebensdauer von Objekten über die Verweiszählung](http://msdn.microsoft.com/library/windows/desktop/ms687260) in das Windows SDK. 
+- [Verwalten der Lebensdauer von Objekten über die Verweiszählung](/windows/desktop/com/managing-object-lifetimes-through-reference-counting) in das Windows SDK. 
   
-- [Implementieren die Verweiszählung](http://msdn.microsoft.com/library/windows/desktop/ms693431) in das Windows SDK.
+- [Implementieren die Verweiszählung](/windows/desktop/com/implementing-reference-counting) in das Windows SDK.
   
-- [Regeln für die Verwaltung von Verweiszähler](http://msdn.microsoft.com/library/windows/desktop/ms692481) in das Windows SDK.  
+- [Regeln für die Verwaltung von Verweiszähler](/windows/desktop/com/rules-for-managing-reference-counts) in das Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht die Verwendung von `CSimpleStringT::GetBufferSetLength`.  
@@ -599,11 +599,11 @@ PXSTR LockBuffer();
   
  Weitere Informationen zum zählen der Verweise finden Sie unter den folgenden Artikeln:  
   
-- [Verwalten der Lebensdauer von Objekten über die Verweiszählung](http://msdn.microsoft.com/library/windows/desktop/ms687260) in das Windows SDK  
+- [Verwalten der Lebensdauer von Objekten über die Verweiszählung](/windows/desktop/com/managing-object-lifetimes-through-reference-counting) in das Windows SDK  
   
-- [Implementieren die Verweiszählung](http://msdn.microsoft.com/library/windows/desktop/ms693431) in das Windows SDK  
+- [Implementieren die Verweiszählung](/windows/desktop/com/implementing-reference-counting) in das Windows SDK  
   
-- [Regeln für die Verwaltung von Verweiszähler](http://msdn.microsoft.com/library/windows/desktop/ms692481) in das Windows SDK  
+- [Regeln für die Verwaltung von Verweiszähler](/windows/desktop/com/rules-for-managing-reference-counts) in das Windows SDK  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht die Verwendung von `CSimpleStringT::LockBuffer`.  

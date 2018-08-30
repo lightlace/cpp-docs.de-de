@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3da35d2134daa20faf53336902ba6612f4b9904
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 663f8f3921788e64b26a57e95537ab44c757ea17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612102"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211419"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Exemplarische Vorgehensweise: Entfernen von Arbeit aus einem Benutzeroberflächenthread
 Dieses Dokument veranschaulicht, wie die Concurrency Runtime verwenden, um die Arbeit zu verschieben, die von der Benutzeroberfläche (UI) Thread in einer Microsoft Foundation Classes (MFC)-Anwendung auf einem Arbeitsthread ausgeführt wird. In diesem Dokument wird veranschaulicht, wie die Leistung eines langwierigen Zeichenvorgangs zu verbessern.  
@@ -40,7 +40,7 @@ Dieses Dokument veranschaulicht, wie die Concurrency Runtime verwenden, um die A
   
 -   [Abbruch in der PPL](cancellation-in-the-ppl.md)  
   
- Außerdem wird empfohlen, dass Sie die Grundlagen der Entwicklung von MFC-Anwendungen und GDI + verstehen, bevor Sie in dieser exemplarischen Vorgehensweise beginnen. Weitere Informationen über MFC finden Sie unter [MFC-Desktopanwendungen](../../mfc/mfc-desktop-applications.md). Weitere Informationen zu GDI +, finden Sie unter [GDI +](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798).  
+ Außerdem wird empfohlen, dass Sie die Grundlagen der Entwicklung von MFC-Anwendungen und GDI + verstehen, bevor Sie in dieser exemplarischen Vorgehensweise beginnen. Weitere Informationen über MFC finden Sie unter [MFC-Desktopanwendungen](../../mfc/mfc-desktop-applications.md). Weitere Informationen zu GDI +, finden Sie unter [GDI +](https://msdn.microsoft.com/library/windows/desktop/ms533798).  
   
 ##  <a name="top"></a> Abschnitte  
  Diese exemplarische Vorgehensweise enthält folgende Abschnitte:  

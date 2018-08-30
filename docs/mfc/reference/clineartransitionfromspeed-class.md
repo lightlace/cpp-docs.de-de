@@ -1,5 +1,5 @@
 ---
-title: CLinearTransitionFromSpeed-Klasse | Microsoft Docs
+title: CLinearTransitionFromSpeed-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ac677549c01f7e5360cfcda7c640dbf10318c172
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039481"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203307"
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed-Klasse
 Kapselt einen Übergang mit linearer Geschwindigkeit.  
@@ -46,13 +46,13 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Erstellt ein Objekt Übergang mit linearer Geschwindigkeit und initialisiert sie mit der Geschwindigkeit und den endgültigen Wert.|  
+|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Erstellt einen Übergang mit linearer Geschwindigkeit-Objekt und initialisiert sie mit der Geschwindigkeit und endgültigen Wert.|  
   
 ### <a name="public-methods"></a>Öffentliche Methoden  
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CLinearTransitionFromSpeed::Create](#create)|Ruft den Übergangsbibliothek, um die gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
+|[CLinearTransitionFromSpeed::Create](#create)|Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen. (Überschreibt [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -62,7 +62,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 |[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|Der Absolute Wert der Geschwindigkeit der Variable.|  
   
 ## <a name="remarks"></a>Hinweise  
- Während eines Übergangs mit linearer Geschwindigkeit ändert sich der Wert der Animationsvariablen mit einer angegebenen Rate. Die Dauer des Übergangs richtet sich nach den Unterschieden zwischen dem ersten Wert und dem angegebenen Endwert. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, belegt sie mit dem Operator new. Das gekapselte IUIAnimationTransition-COM-Objekt wird von CAnimationController:: erst erstellt, ist es auf NULL. Ändern Membervariablen, nach der Erstellung dieses COM-Objekt hat keine Auswirkung.  
+ Bei einem Übergang mit linearer Geschwindigkeit, den Wert der Variablen ändert sich die Animation mit einer angegebenen Rate. Die Dauer des Übergangs richtet sich nach den Unterschieden zwischen den ursprünglichen Wert und dem angegebenen Endwert. Da alle Übergänge automatisch gelöscht werden, es wird empfohlen, sie mit dem Operator new. Das gekapselte IUIAnimationTransition COM-Objekt wird von CAnimationController:: erst erstellt, ist es auf NULL. Ändern Membervariablen des Typs an, nach der Erstellung dieses COM-Objekt hat keine Auswirkungen.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -75,7 +75,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
  **Header:** afxanimationcontroller.h  
   
 ##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
- Erstellt ein Objekt Übergang mit linearer Geschwindigkeit und initialisiert sie mit der Geschwindigkeit und den endgültigen Wert.  
+ Erstellt einen Übergang mit linearer Geschwindigkeit-Objekt und initialisiert sie mit der Geschwindigkeit und endgültigen Wert.  
   
 ```  
 CLinearTransitionFromSpeed(
@@ -91,7 +91,7 @@ CLinearTransitionFromSpeed(
  Der Wert der Animationsvariablen am Ende des Übergangs.  
   
 ##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
- Ruft den Übergangsbibliothek, um die gekapselte COM-Übergangsobjekt zu erstellen.  
+ Ruft den Übergangsbibliothek, um gekapselte COM-Übergangsobjekt zu erstellen.  
   
 ```  
 virtual BOOL Create(
@@ -101,7 +101,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
 *pLibrary*  
- Ein Zeiger auf ein [IUIAnimationTransitionLibrary-Schnittstelle](https://msdn.microsoft.com/library/windows/desktop/dd371897), die eine Bibliothek mit standard-Übergänge definiert.  
+ Ein Zeiger auf ein [IUIAnimationTransitionLibrary Schnittstelle](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), das eine Bibliothek mit standard-Übergänge definiert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn der Übergang erfolgreich erstellt wurde. andernfalls "false".  

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b238a496718088f0251faa49281fdc8939c01c7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408358"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209727"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Multiplikationsoperatoren und der Modulus-Operator
 ## <a name="syntax"></a>Syntax  
@@ -44,15 +44,15 @@ expression % expression
 ## <a name="remarks"></a>Hinweise  
  Die multiplikativen Operatoren sind:  
   
--   Multiplikation (**\***)  
+-   Multiplikation (<strong>\*</strong>)  
   
 -   Division (**/**)  
   
--   Restwert (Rest aus Division) (`%`)  
+-   Modulo (Rest aus Division) (**%**)  
   
  Diese binären Operatoren weisen eine Assoziativität von links nach rechts auf.  
   
- Die Multiplikationsoperatoren akzeptieren Operanden arithmetischer Typen. Der Moduloperator (`%`) verlangt, dass die Operanden ganzzahlig sind. (Um den Rest einer Gleitkommadivision abzurufen, verwenden Sie die Funktion zur Laufzeit [Fmod](../c-runtime-library/reference/fmod-fmodf.md).) Die Konvertierungen finden Sie im [Standardkonvertierungen](standard-conversions.md) sind auf die Operanden angewendet, und das Ergebnis ist, der den konvertierten Typ.  
+ Die Multiplikationsoperatoren akzeptieren Operanden arithmetischer Typen. Der Modulo-Operator (**%**) sind Sie strengere erforderlich, dass die Operanden eines ganzzahligen Typs sein müssen. (Um den Rest einer Gleitkommadivision abzurufen, verwenden Sie die Funktion zur Laufzeit [Fmod](../c-runtime-library/reference/fmod-fmodf.md).) Die Konvertierungen finden Sie im [Standardkonvertierungen](standard-conversions.md) sind auf die Operanden angewendet, und das Ergebnis ist, der den konvertierten Typ.  
   
  Der Multiplikationsoperator ergibt das Ergebnis der Multiplikation des ersten Operanden mit dem zweiten.  
   

@@ -1,7 +1,7 @@
 ---
-title: Compilerwarnung (Stufe 1) C4612 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4612 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0983f5d0bb89eaf1daee94468b318557bc83cd05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10a0a5640386f5e5673f39d6c2c76ee18fcc7ba7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281881"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210729"
 ---
 # <a name="compiler-warning-level-1-c4612"></a>Compilerwarnung (Stufe 1) C4612
-Fehler im Namen der Includedatei  
-  
- Diese Warnung tritt bei **#pragma include_alias** auf, wenn ein Dateiname falsch ist oder fehlt.  
-  
- Die Argumente für die **#pragma Include_alias** Anweisung können die anführung wie in (**"***Filename***"**) oder spitze Klammern wie ( **\< ***Filename***>**), aber beide müssen die gleiche Form.  
-  
-## <a name="example"></a>Beispiel  
-  
-```  
-// C4612.cpp  
-// compile with: /W1 /LD  
-#pragma include_alias("StandardIO", <stdio.h>) // C4612  
+
+> Fehler im Namen der Includedatei
+
+## <a name="remarks"></a>Hinweise
+
+Diese Warnung tritt bei **#pragma include_alias** auf, wenn ein Dateiname falsch ist oder fehlt.
+
+Die Argumente für die **#pragma Include_alias** -Anweisung kann das Angebotsformular verwenden ("*Filename*") oder spitze Klammern (\<*Filename*>), aber beide müssen Verwenden Sie die gleiche Form.
+
+## <a name="example"></a>Beispiel
+
+```cpp
+// C4612.cpp
+// compile with: /W1 /LD
+#pragma include_alias("StandardIO", <stdio.h>) // C4612
 ```

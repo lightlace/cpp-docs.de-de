@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 747f54e4ae37fe31eeea7540c1531b988d692427
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2456eed4f55fe5a5f68552cfe91e5785fc99cf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573063"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209020"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makros für OLE DB-Anbietervorlagen
 Die Makros, die OLE DB-Vorlagen-Anbieter bieten Funktionen, die in den folgenden Kategorien:  
@@ -231,7 +231,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
  [in] Ein [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) -Wert, der in Verbindung mit der Eigenschaft verwendet werden kann soll, GUID, die eine Eigenschaft zu identifizieren.  
   
 #### <a name="remarks"></a>Hinweise  
- Dieses Makro legt den Wert der Eigenschaft vom Typ `DWORD` auf einen in ATLDB.H definierten Standardwert fest. Verwenden Sie [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md), um die Eigenschaft auf einen Wert Ihrer Wahl festzulegen. Festlegen der [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) und [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) verwenden Sie für die Eigenschaft zur gleichen Zeit [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+ Dieses Makro legt den Wert der Eigenschaft vom Typ `DWORD` auf einen in ATLDB.H definierten Standardwert fest. Verwenden Sie [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md), um die Eigenschaft auf einen Wert Ihrer Wahl festzulegen. Festlegen der [VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) und [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) verwenden Sie für die Eigenschaft zur gleichen Zeit [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Beispiel  
  Siehe [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
@@ -250,7 +250,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
  [in] Ein [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) -Wert, der in Verbindung mit der Eigenschaft verwendet werden kann soll, GUID, die eine Eigenschaft zu identifizieren.  
   
  *vt*  
- [in] Die [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) dieses Eigenschaftseintrags.  
+ [in] Die [VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) dieses Eigenschaftseintrags.  
   
  *dwFlags*  
  [in] Ein [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) Wert, der diesen Eigenschaftseintrag beschreibt.  

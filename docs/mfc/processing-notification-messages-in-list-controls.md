@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Benachrichtigungsmeldungen in Listensteuerelementen | Microsoft Docs
+title: Verarbeiten von Benachrichtigungsmeldungen in Listensteuerelementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5412bbf1fcb7e139394b9563965244080e5c179
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 3362074ce0f8d4d7a3a3463d22f9089f847e747d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932080"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208709"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>Verarbeiten von Benachrichtigungsmeldungen in Listensteuerelementen
-Wie Benutzer auf Spaltenüberschriften klicken, ziehen Sie die Symbole, Bearbeiten von Bezeichnungen und So weiter, das Strukturelement-Steuerelement ([CListCtrl](../mfc/reference/clistctrl-class.md)) sendet benachrichtigungsmeldungen an das übergeordnete Fenster. Behandeln Sie diese Nachrichten, wenn Sie darauf reagieren möchten. Klickt der Benutzer auf eine Spaltenüberschrift, sollten Sie z. B. Sortieren der Elemente basierend auf dem Inhalt dieser Spalte, wie in Microsoft Outlook.  
+Wenn Benutzer auf die Spaltenüberschriften klicken, ziehen Sie Symbole, Bearbeiten von Bezeichnungen und So weiter, das Strukturelement-Steuerelement ([CListCtrl](../mfc/reference/clistctrl-class.md)) sendet benachrichtigungsmeldungen an das übergeordnete Fenster. Behandeln Sie diese Nachrichten, wenn Sie darauf reagieren möchten. Z. B. wenn der Benutzer auf eine Spaltenüberschrift klickt, empfiehlt zum Sortieren der Elemente, die basierend auf dem Inhalt dieser Spalte, wie Microsoft Outlook.  
   
- Prozess WM_NOTIFY-Meldungen vom das Strukturelement-Steuerelement in der Ansichts- oder Dialogfeldobjekt-Klasse. Verwenden des Eigenschaftenfensters zum Erstellen einer [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) Handlerfunktion mit einer Switch-Anweisung basierend auf der benachrichtigungsmeldung behandelt wird.  
+ Prozess WM_NOTIFY-Meldungen im Listensteuerelement in Ihrer Klasse Ansichts- oder Dialogfeldobjekt. Verwenden Sie das Fenster "Eigenschaften" zum Erstellen einer [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) Handlerfunktion mit einer Switch-Anweisung basierend auf der Nachricht behandelt wird.  
   
- Eine Liste der Benachrichtigungen ein Listenfeld-Steuerelement an das übergeordnete Fenster senden kann, finden Sie unter [Liste Ansicht Kontrollverweis](http://msdn.microsoft.com/library/windows/desktop/bb774737) im Windows SDK.  
+ Eine Liste mit den Benachrichtigungen, die einem Steuerelement an das übergeordnete Fenster senden kann, finden Sie unter [Liste Ansicht Steuerelementverweis](/windows/desktop/Controls/list-view-control-reference) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CListCtrl](../mfc/using-clistctrl.md)   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82c233d1f03ae4679a355b6782bb9e7dd9dad15
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c0222856d3ba2956959913305a60ceb812f13f8d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604062"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205715"
 ---
 # <a name="support-for-using-wmain"></a>Unterstützung für die Verwendung von wmain
 Visual C++ unterstützt das Definieren einer **Wmain** -Funktion und die Breitzeichen-Argumente an eine Unicode-Anwendung übergeben. Sie deklarieren die formalen Parameter, um **Wmain**, verwenden ein ähnliches Format `main`. Sie können anschließend Breitzeichen-Argumente und optional einen Breitzeichen-Umgebungszeiger übergeben, der auf das Programm verweist. Der `argv`-Parameter und der `envp`-Parameter, die auf **wmain** verweisen, sind vom Typ `wchar_t*`. Zum Beispiel:  
@@ -42,4 +42,4 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ## <a name="see-also"></a>Siehe auch  
  [Unterstützung für Unicode](../text/support-for-unicode.md)   
  [Zusammenfassung der Unicode-Programmierung](../text/unicode-programming-summary.md)   
- [WinMain-Funktion](http://msdn.microsoft.com/library/windows/desktop/ms633559)
+ [WinMain-Funktion](https://msdn.microsoft.com/library/windows/desktop/ms633559)

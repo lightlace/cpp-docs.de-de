@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9968a3601e366628b3539343dde34e956387356a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ea4bfc278e0912248c437123bd1510002a5c3829
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885763"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201626"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc-Klasse
 Diese Klasse ist ein Wrapper für die `SECURITY_DESCRIPTOR` Struktur.  
@@ -115,7 +115,7 @@ class CSecurityDesc
   
  Anwendungen sollten nicht ändern, die `SECURITY_DESCRIPTOR` Struktur direkt aus, und stattdessen sollte die bereitgestellten Klassenmethoden verwenden.  
   
- Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](http://msdn.microsoft.com/library/windows/desktop/aa374860) im Windows SDK.  
+ Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](/windows/desktop/SecAuthZ/access-control) im Windows SDK.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
@@ -155,7 +155,7 @@ bool FromString(LPCTSTR pstr) throw(...);
   
 ### <a name="parameters"></a>Parameter  
  *pStr*  
- Zeiger auf eine auf Null endende Zeichenfolge, enthält die [Zeichenfolgenformat Sicherheitsbeschreibung](http://msdn.microsoft.com/library/windows/desktop/aa379570) konvertiert werden.  
+ Zeiger auf eine auf Null endende Zeichenfolge, enthält die [Zeichenfolgenformat Sicherheitsbeschreibung](/windows/desktop/SecAuthZ/security-descriptor-string-format) konvertiert werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg True zurück. Löst eine Ausnahme bei einem Fehler.  
@@ -163,7 +163,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="remarks"></a>Hinweise  
  Die Zeichenfolge kann erstellt werden, mithilfe von [CSecurityDesc::ToString](#tostring). Die Sicherheitsbeschreibung in einer Zeichenfolge konvertieren erleichtert das Speichern und übertragen.  
   
- Diese Methode ruft [wurde von ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Diese Methode ruft [wurde von ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).  
   
 ##  <a name="getcontrol"></a>  CSecurityDesc:: Getcontrol  
  Ruft Informationen aus der Sicherheitsbeschreibung zu steuern.  
@@ -180,7 +180,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
  Gibt "true" zurück, wenn die Methode erfolgreich ist, False, wenn ein Fehler auftritt.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ruft [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
+ Diese Methode ruft [GetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa446647).  
   
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl  
  Discretionary Access Control List (DACL)-Informationen aus der Sicherheitsbeschreibung abgerufen.  
@@ -251,7 +251,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt einen Zeiger auf die [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) Struktur.  
+ Gibt einen Zeiger auf die [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) Struktur.  
   
 ##  <a name="getsacl"></a>  CSecurityDesc::GetSacl  
  Ruft die Informationen, System Access Control List (SACL) aus der Sicherheitsbeschreibung ab.  
@@ -428,7 +428,7 @@ bool IsSelfRelative() const throw();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt "true" zurück, wenn die Sicherheitsbeschreibung im selbstbezogenen Format mit alle Sicherheitsinformationen in einem zusammenhängenden Block Arbeitsspeicher ist. Gibt False zurück, wenn die Sicherheitsbeschreibung im absoluten Format ist. Weitere Informationen finden Sie unter [Absolute und Self-Relative Sicherheitsbeschreibungen](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
+ Gibt "true" zurück, wenn die Sicherheitsbeschreibung im selbstbezogenen Format mit alle Sicherheitsinformationen in einem zusammenhängenden Block Arbeitsspeicher ist. Gibt False zurück, wenn die Sicherheitsbeschreibung im absoluten Format ist. Weitere Informationen finden Sie unter [Absolute und Self-Relative Sicherheitsbeschreibungen](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).  
   
 ##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute  
  Rufen Sie diese Methode, um die Sicherheitsbeschreibung in das absolute Format zu konvertieren.  
@@ -441,7 +441,7 @@ bool MakeAbsolute() throw(...);
  Gibt true zurück, wenn die Methode erfolgreich ist, "false" andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Sicherheitsbeschreibung im absoluten Format enthält Zeiger auf die darin enthaltenen Informationen, die anstatt die Informationen selbst. Eine Sicherheitsbeschreibung im selbstbezogenen Format enthält die Informationen in einem zusammenhängenden Speicherblock. Im selbstbezogenen Sicherheitsdeskriptoren eine `SECURITY_DESCRIPTOR` Struktur beginnt immer die Informationen, aber die Sicherheitsbeschreibung der anderen Komponenten können die Struktur in einer beliebigen Reihenfolge folgen. Anstatt Speicheradressen zu verwenden, werden die Komponenten der selbstbezogenen Sicherheitsbeschreibung von Offsets vom Anfang der Sicherheitsbeschreibung identifiziert. Dieses Format ist nützlich, wenn eine Sicherheitsbeschreibung muss auf einem Datenträger gespeichert oder über ein Kommunikationsprotokoll übertragen. Weitere Informationen finden Sie unter [Absolute und Self-Relative Sicherheitsbeschreibungen](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
+ Eine Sicherheitsbeschreibung im absoluten Format enthält Zeiger auf die darin enthaltenen Informationen, die anstatt die Informationen selbst. Eine Sicherheitsbeschreibung im selbstbezogenen Format enthält die Informationen in einem zusammenhängenden Speicherblock. Im selbstbezogenen Sicherheitsdeskriptoren eine `SECURITY_DESCRIPTOR` Struktur beginnt immer die Informationen, aber die Sicherheitsbeschreibung der anderen Komponenten können die Struktur in einer beliebigen Reihenfolge folgen. Anstatt Speicheradressen zu verwenden, werden die Komponenten der selbstbezogenen Sicherheitsbeschreibung von Offsets vom Anfang der Sicherheitsbeschreibung identifiziert. Dieses Format ist nützlich, wenn eine Sicherheitsbeschreibung muss auf einem Datenträger gespeichert oder über ein Kommunikationsprotokoll übertragen. Weitere Informationen finden Sie unter [Absolute und Self-Relative Sicherheitsbeschreibungen](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).  
   
 ##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative  
  Rufen Sie diese Methode, um die Sicherheitsbeschreibung in selbstbezogenen Format zu konvertieren.  
@@ -454,7 +454,7 @@ bool MakeSelfRelative() throw(...);
  Gibt true zurück, wenn die Methode erfolgreich ist, "false" andernfalls.  
   
 ### <a name="remarks"></a>Hinweise  
- Eine Sicherheitsbeschreibung im absoluten Format enthält Zeiger auf die darin enthaltenen Informationen, anstatt mit den Informationen selbst. Eine Sicherheitsbeschreibung im selbstbezogenen Format enthält die Informationen in einem zusammenhängenden Speicherblock. Im selbstbezogenen Sicherheitsdeskriptoren eine `SECURITY_DESCRIPTOR` Struktur beginnt immer die Informationen, aber die Sicherheitsbeschreibung der anderen Komponenten können die Struktur in einer beliebigen Reihenfolge folgen. Anstatt Speicheradressen zu verwenden, werden die Komponenten der Sicherheitsbeschreibung von Offsets vom Anfang der Sicherheitsbeschreibung identifiziert. Dieses Format ist nützlich, wenn eine Sicherheitsbeschreibung muss auf einem Datenträger gespeichert oder über ein Kommunikationsprotokoll übertragen. Weitere Informationen finden Sie unter [Absolute und Self-Relative Sicherheitsbeschreibungen](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
+ Eine Sicherheitsbeschreibung im absoluten Format enthält Zeiger auf die darin enthaltenen Informationen, anstatt mit den Informationen selbst. Eine Sicherheitsbeschreibung im selbstbezogenen Format enthält die Informationen in einem zusammenhängenden Speicherblock. Im selbstbezogenen Sicherheitsdeskriptoren eine `SECURITY_DESCRIPTOR` Struktur beginnt immer die Informationen, aber die Sicherheitsbeschreibung der anderen Komponenten können die Struktur in einer beliebigen Reihenfolge folgen. Anstatt Speicheradressen zu verwenden, werden die Komponenten der Sicherheitsbeschreibung von Offsets vom Anfang der Sicherheitsbeschreibung identifiziert. Dieses Format ist nützlich, wenn eine Sicherheitsbeschreibung muss auf einem Datenträger gespeichert oder über ein Kommunikationsprotokoll übertragen. Weitere Informationen finden Sie unter [Absolute und Self-Relative Sicherheitsbeschreibungen](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).  
   
 ##  <a name="operator_eq"></a>  CSecurityDesc::operator =  
  Zuweisungsoperator.  
@@ -489,7 +489,7 @@ bool SetControl(
   
 ### <a name="parameters"></a>Parameter  
  *ControlBitsOfInterest*  
- Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die festzulegenden Steuerungsbits angibt. Eine Liste der Flags, die festgelegt werden können, finden Sie unter [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
+ Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die festzulegenden Steuerungsbits angibt. Eine Liste der Flags, die festgelegt werden können, finden Sie unter [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
  *ControlBitsToSet*  
  Eine SECURITY_DESCRIPTOR_CONTROL-Maske, die die neuen Werte für die Steuerbits gemäß gibt an die *ControlBitsOfInterest* Maske. Dieser Parameter kann eine Kombination der Flags für aufgeführt sein der *ControlBitsOfInterest* Parameter.  
@@ -498,7 +498,7 @@ bool SetControl(
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ruft [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
+ Diese Methode ruft [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
 ##  <a name="setdacl"></a>  CSecurityDesc:: SetDacl  
  Legt die Informationen in eine DACL (discretionary Access Control List) fest. Wenn eine DACL bereits in der Sicherheitsbeschreibung vorhanden ist, wird es ersetzt.  
@@ -592,7 +592,7 @@ bool ToString(
   
 ### <a name="parameters"></a>Parameter  
  *pStr*  
- Zeiger auf eine Null-terminierte Zeichenfolge, die erhält die [Zeichenfolgenformat Sicherheitsbeschreibung](http://msdn.microsoft.com/library/windows/desktop/aa379570).  
+ Zeiger auf eine Null-terminierte Zeichenfolge, die erhält die [Zeichenfolgenformat Sicherheitsbeschreibung](/windows/desktop/SecAuthZ/security-descriptor-string-format).  
   
  *SI*  
  Gibt eine Kombination von Bitflags SECURITY_INFORMATION, an die Komponenten der Sicherheitsbeschreibung aus, in die Ausgabezeichenfolge einzuschließen.  
@@ -614,12 +614,12 @@ bool ToString(
   
  Wenn die DACL NULL ist, und die SE_DACL_PRESENT-Steuerelement-Bit, in der Sicherheitsbeschreibung für die Eingabe gesetzt ist, schlägt die Methode fehl.  
   
- Wenn die DACL NULL ist, und die SE_DACL_PRESENT Steuerbit ist nicht in der Eingabe Sicherheitsbeschreibung festgelegt, muss die resultierende sicherheitsbeschreibungs-Zeichenfolge eine Komponente "d:" nicht. Finden Sie unter [Sicherheitsbeschreibungsformat Zeichenfolge](http://msdn.microsoft.com/library/windows/desktop/aa379570) Weitere Details.  
+ Wenn die DACL NULL ist, und die SE_DACL_PRESENT Steuerbit ist nicht in der Eingabe Sicherheitsbeschreibung festgelegt, muss die resultierende sicherheitsbeschreibungs-Zeichenfolge eine Komponente "d:" nicht. Finden Sie unter [Sicherheitsbeschreibungsformat Zeichenfolge](/windows/desktop/SecAuthZ/security-descriptor-string-format) Weitere Details.  
   
- Diese Methode ruft [wurde von ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Diese Methode ruft [wurde von ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiel für die Sicherheit](../../visual-cpp-samples.md)   
- [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
  [Globale Sicherheitsfunktionen](../../atl/reference/security-global-functions.md)

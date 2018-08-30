@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d2537ba803d27cc3cf90d111e69778e9d6970770
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d7a888ac987e8928a0e9667f2011ef7afe3075ca
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590144"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209052"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -36,7 +36,7 @@ Gibt an, dass ein Schnittstellenmember nicht in einem Eigenschaftenbrowser angez
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Nonbrowsable** C++-Attribut hat die gleiche Funktionalität wie die [Nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) MIDL-Attribut.
+Die **Nonbrowsable** C++-Attribut hat die gleiche Funktionalität wie die [Nonbrowsable](/windows/desktop/Midl/nonbrowsable) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 

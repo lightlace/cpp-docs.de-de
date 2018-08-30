@@ -1,5 +1,5 @@
 ---
-title: 'Wie: Marshallen von Strukturen mit PInvoke | Microsoft Docs'
+title: 'Vorgehensweise: Marshallen von Strukturen mit PInvoke | Microsoft-Dokumentation'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,36 +18,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4ff1801c9bb2de06ae2717e8f69bcd39fdf3bc98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136612"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219883"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Gewusst wie: Marshallen von Strukturen mit PInvoke
-Dieses Dokument wird erläutert, wie systemeigene Funktionen, die Strukturen im C-Format von von verwalteten Funktionen aufgerufen werden können, mit P/Invoke akzeptieren. Obwohl wir empfehlen die Verwendung von C++-Interop-Features anstelle von können P/Invoke da P/Invoke wenig Kompilierzeitfehler reporting, bietet nicht typsicher, und einfacher zu implementieren, wenn die nicht verwaltete API als DLL verpackt wird und der Quellcode nicht, P/Invoke verfügbar ist, ist die einzige Option. Andernfalls finden Sie unter den folgenden Dokumenten:  
+In diesem Dokument wird erläutert, wie native Funktionen, akzeptieren die C-Stil Strukturen aus verwalteten Funktionen durch mit P/Invoke aufgerufen werden können. Obwohl es wird empfohlen, dass Sie die C++-Interop-Funktionen nicht verwenden P/Invoke da P/Invoke wenig Fehler während der Kompilierung, berichterstellung, bietet ist nicht typsicher, und kann mühsam sein, wenn die nicht verwaltete API als DLL verpackt wird und der Quellcode nicht ist zu implementieren, P/Invoke verfügbar ist, ist die einzige Option. Andernfalls finden Sie unter den folgenden Dokumenten:  
   
 -   [Verwenden von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
   
 -   [Vorgehensweise: Marshallen von Zeichenfolgen mit PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
   
- Standardmäßig werden systemeigene und verwaltete Strukturen unterschiedlich im Arbeitsspeicher angeordnet erfolgreich übergeben von Strukturen Apartmentgrenze verwalteten und unverwalteten zusätzliche Schritte, um die Datenintegrität beizubehalten erfordert.  
+ Standardmäßig werden systemeigene und verwaltete Strukturen unterschiedlich im Arbeitsspeicher angeordnet erfolgreich zusätzliche Schritte, um die Datenintegrität beizubehalten übergeben von Strukturen über die verwalteten und nicht verwalteten Grenze erfordert werden.  
   
- Dieses Dokument erläutert die erforderlichen Schritte zum Definieren der verwalteter Entsprechungen der systemeigenen Strukturen und wie die resultierenden Strukturen an nicht verwaltete Funktionen übergeben werden können. Dieses Dokument setzt voraus, dass einfache Strukturen – diejenigen, die keine Zeichenfolgen oder Zeiger enthalten – verwendet werden. Informationen zur Interoperabilität blitfähige finden Sie unter [mithilfe von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke sind keine nicht blitfähige Typen als Rückgabewert. Blitfähige Typen verfügen über die gleiche Darstellung in verwaltetem und nicht verwaltetem Code. Weitere Informationen finden Sie unter [blitfähige und nicht blitfähige Typen](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
+ Dieses Dokument erläutert die erforderlichen Schritte zum Definieren der verwalteter Entsprechungen der systemeigenen Strukturen und wie die so erhaltenen Strukturen an nicht verwaltete Funktionen übergeben werden können. In diesem Dokument wird vorausgesetzt, dass einfache Strukturen, die, die keine Zeichenfolgen oder Zeiger enthalten – verwendet werden. Informationen über die Interoperabilität von nicht blitfähigen finden Sie unter [mithilfe C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke sind keine nicht blitfähige Typen als Rückgabewert. Blitfähige Typen haben die gleiche Darstellung in verwaltetem und nicht verwaltetem Code. Weitere Informationen finden Sie unter [blitfähige und nicht blitfähige Typen](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
   
- Marshallen von einfachen blitfähige Strukturen Apartmentgrenze verwalteten und unverwalteten erfordert, dass verwaltete Versionen aller systemeigenen Strukturen definiert werden. Diese Strukturen können gültigen Namen haben. Es gibt keine Beziehung zwischen der systemeigenen und verwalteten Version von beiden Strukturen als ihr Datenlayout. Daher ist es wichtig, dass die verwaltete Version Felder enthält, die die gleiche Größe und in der gleichen Reihenfolge wie die native Version sind. (Es gibt keinen Mechanismus zum sicherstellen, dass die verwalteten und systemeigenen Versionen der Struktur äquivalent sind, damit Inkompatibilitäten nicht offensichtlich bis zur Laufzeit werden soll. Es dem Programmierer ist dafür verantwortlich sicherzustellen, dass die beiden Strukturen dasselbe Datenlayout haben.)  
+ Marshallen von einfachen blitfähigen Strukturen über die verwalteten und nicht verwalteten Grenze erfordert, dass verwalteten Versionen der einzelnen systemeigenen Struktur definiert werden. Diese Strukturen, können alle gültigen Namen haben. Es gibt keine Beziehung zwischen der nativen und verwalteten Version der beiden Strukturen als ihr Datenlayout. Aus diesem Grund ist es wichtig, dass die verwaltete Version Felder enthält, die gleiche Größe und in der gleichen Reihenfolge wie die native Version. (Es gibt keinen Mechanismus dafür, dass die verwalteten und systemeigenen Versionen der Struktur äquivalent sind, damit Inkompatibilitäten nicht offensichtlich bis zur Laufzeit werden soll. Es ist der Programmierer dafür verantwortlich sicherzustellen, dass die beiden Strukturen das gleiche Layout verfügen.)  
   
- Da die Member des verwalteten Strukturen manchmal zur leistungsverbesserung neu angeordnet werden, ist es notwendig, verwenden die <xref:System.Runtime.InteropServices.StructLayoutAttribute> Attribut, um anzugeben, dass die Struktur sequenziell angelegt werden. Es ist auch eine gute Idee, die die Struktur Packen Einstellung identisch, die von der systemeigenen Struktur verwendet werden kann explizit festzulegen. (Zwar wird standardmäßig verwendet Visual C++ eine 8-Byte-Struktur, die für sowohl verwalteten Code packen.)  
+ Da die Elemente der verwaltete Strukturen manchmal zur leistungsverbesserung neu angeordnet werden, ist es erforderlich, verwenden die <xref:System.Runtime.InteropServices.StructLayoutAttribute> Attribut, um anzugeben, dass die Struktur nacheinander angeordnet sind. Es ist auch eine gute Idee, die die Struktur, Packen die Einstellung identisch, die von der systemeigenen Struktur verwendet werden kann explizit festgelegt. (Zwar wird standardmäßig verwendet Visual C++ eine 8-Byte-Struktur, die für sowohl verwalteten Code zu verpacken.)  
   
-1.  Verwenden Sie als Nächstes <xref:System.Runtime.InteropServices.DllImportAttribute> Einstiegspunkte, die nicht verwalteten Funktionen entsprechen, die die Struktur akzeptieren deklarieren, aber verwenden Sie die verwaltete Version der Struktur in den Funktionssignaturen Funktionssignaturen ist, wenn Sie den gleichen Namen für beide Versionen verwenden die -Struktur.  
+1.  Verwenden Sie als Nächstes <xref:System.Runtime.InteropServices.DllImportAttribute> zum Deklarieren von Einstiegspunkten, die nicht verwaltete Funktionen zu entsprechen, die die Struktur zu akzeptieren, aber verwenden die verwaltete Version der Struktur in den Funktionssignaturen, die Funktionssignaturen ist, wenn Sie den gleichen Namen für beide Versionen verwenden die -Struktur.  
   
-2.  Jetzt kann verwalteter Code die verwaltete Version der Struktur an die nicht verwalteten Funktionen übergeben, als wären sie tatsächlich verwaltete Funktionen sind. Diese Strukturen können als Wert oder als Verweis übergeben werden, wie im folgenden Beispiel gezeigt.  
+2.  Jetzt kann verwalteter Code die verwaltete Version der Struktur, die nicht verwaltete Funktionen übergeben, als wären sie tatsächlich verwalteten Funktionen sind. Diese Strukturen können als Wert oder als Verweis übergeben werden, wie im folgenden Beispiel gezeigt.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code besteht aus einem nicht verwalteten und ein verwaltetes Modul. Nicht verwaltete Modul ist eine DLL, die eine Struktur, die aufgerufen werden, Speicherort und eine Funktion namens GetDistance, das akzeptiert, zwei Instanzen der Speicherort-Struktur definiert. Das zweite Modul ist eine verwaltete befehlszeilenanwendung, die importiert der GetDistance-Funktion, aber es im Hinblick auf eine verwaltete Entsprechung der Speicherort-Struktur MLocation definiert. In der Praxis würden die gleiche Namen wahrscheinlich für beide Versionen der Struktur verwendet werden. Allerdings wird hier ein anderen Namen verwendet, um zu veranschaulichen, dass das DllImport-Prototyp im Hinblick auf die verwaltete Version definiert ist.  
+ Der folgende Code besteht aus einer nicht verwalteten und ein verwaltetes Modul. Das nicht verwaltete Modul handelt es sich um eine DLL, die eine Struktur, die aufgerufen wird, Speicherort und eine Funktion namens GetDistance, die akzeptiert zwei Instanzen die Speicherort-Struktur definiert. Das zweite Modul ist eine verwaltete befehlszeilenanwendung, die die GetDistance-Funktion importiert, aber in Bezug auf eine verwaltete Entsprechung der Location-Struktur, MLocation definiert. In der Praxis würde wahrscheinlich der gleiche Namen für beide Versionen der Struktur verwendet werden; Allerdings wird hier ein anderen Namen verwendet, um zu veranschaulichen, dass der Prototyp DllImport in Bezug auf die verwaltete Version definiert ist.  
   
- Beachten Sie, dass kein Teil der DLL bereitgestellt wird, auf den verwalteten Code, der mithilfe der herkömmlichen #include-Direktive. Tatsächlich wird die DLL zur Laufzeit nur zugegriffen, sodass Probleme mit Funktionen, die mit DllImport importiert wurden, zum Zeitpunkt der Kompilierung nicht erkannt werden.  
+ Beachten Sie, dass kein Teil der DLL verfügbar gemacht wird, auf den verwalteten Code mithilfe der herkömmlichen #include-Anweisung. In der Tat ist die DLL zur Laufzeit nur zugegriffen, sodass Probleme mit Funktionen, die mit DllImport importiert wurden, zum Zeitpunkt der Kompilierung nicht erkannt werden.  
   
 ```  
 // TraditionalDll3.cpp  

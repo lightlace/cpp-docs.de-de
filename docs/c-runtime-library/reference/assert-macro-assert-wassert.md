@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0318abde877e9b647c1781408d2e22cc9d70824e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1d2bef607e80e2e972915bd8a8b0517b7c6e5eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397840"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200666"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert-Makro, _assert, _wassert
 
-Wertet einen Ausdruck und das Ergebnis ist **"false"**, gibt eine diagnosemeldung und bricht das Programm ab.
+Wertet einen Ausdruck, wenn das Ergebnis ist **"false"**, gibt eine diagnosemeldung aus und bricht das Programm ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -73,31 +73,31 @@ void _wassert(
 
 *Nachricht* die anzuzeigende Meldung.
 
-*FileName* der Assertionsfehler der Datei des Namens der Quelle.
+*FileName* der Namen der Quelle der Datei bei der Assertion.
 
 *Zeile* die Zeilennummer in der Quelldatei mit dem Assertionsfehler.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **assert** -Makro wird normalerweise verwendet, um Logikfehler während der Programmentwicklung zu identifizieren. Verwenden, um die programmausführung zu beenden, wenn unerwartete Bedingungen, durch die Implementierung auftreten der *Ausdruck* Argument ausgewertet **"false"** nur wenn das Programm nicht ordnungsgemäß arbeitet. Assertionsprüfungen können deaktiviert werden zur Kompilierzeit durch Definition des Makros **NDEBUG**. Können Sie deaktivieren die **assert** Makro ohne Änderung der Quelldateien mit einer **/DNDEBUG** Befehlszeilenoption. Können Sie deaktivieren die **assert** -Makro im Quellcode mithilfe einer `#define NDEBUG` Richtlinie vor \<assert.h > enthalten ist.
+Die **assert** -Makro wird normalerweise verwendet, um Logikfehler während der Programmentwicklung zu identifizieren. Verwenden, um die programmausführung zu beenden, wenn unerwartete Bedingungen, durch die Implementierung auftreten der *Ausdruck* Argument ergibt **"false"** nur wenn das Programm nicht ordnungsgemäß arbeitet. Assertionsprüfungen können deaktiviert werden zur Kompilierzeit durch Definition des Makros **NDEBUG**. Können Sie deaktivieren die **assert** Makro ohne Ändern der quellcodeverwaltung für Ihre Dateien mithilfe einer **/DNDEBUG** Befehlszeilenoption. Können Sie deaktivieren die **assert** Makro in Ihrem Quellcode mit einer `#define NDEBUG` -Anweisung vor dem \<assert.h > enthalten ist.
 
-Die **assert** -Makro gibt eine diagnosemeldung aus, wenn *Ausdruck* ergibt **"false"** (0) und ruft [abort](abort.md) Programm beenden die Ausführung. Es wird keine Aktion ausgeführt, wenn *Ausdruck* ist **"true"** (ungleich null). Die Diagnosemeldung enthält den Ausdruck, für den der Fehler aufgetreten ist, den Namen der Quelldatei und die Nummer der Zeile, in der der Assertionsfehler aufgetreten ist.
+Die **assert** -Makro gibt eine diagnosemeldung aus, wenn *Ausdruck* ergibt **"false"** (0) und ruft [Abbrechen](abort.md) Programm beenden die Ausführung. Es wird keine Aktion ausgeführt, wenn *Ausdruck* ist **"true"** (ungleich null). Die Diagnosemeldung enthält den Ausdruck, für den der Fehler aufgetreten ist, den Namen der Quelldatei und die Nummer der Zeile, in der der Assertionsfehler aufgetreten ist.
 
 Die Diagnosemeldung wird in Breitzeichen ausgegeben. Daher funktioniert sie auch dann erwartungsgemäß, wenn sich Unicode-Zeichen im Ausdruck befinden.
 
-Das Ziel der Diagnosemeldung hängt vom Typ der Anwendung ab, die die Routine aufgerufen hat. Konsolenanwendungen erhalten die Meldung immer über **"stderr"**. In einer Windows-basierten Anwendung **assert** ruft Windows [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) Funktion so erstellen ein Meldungsfeld, um die Nachricht zusammen mit anzuzeigen ein **OK** Schaltfläche. Wenn der Benutzer auf **OK**klickt, wird das Programm sofort beendet.
+Das Ziel der Diagnosemeldung hängt vom Typ der Anwendung ab, die die Routine aufgerufen hat. Konsolenanwendungen erhalten die Meldung über immer **"stderr"**. In einer Windows-basierten Anwendung **assert** aufruft, die Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) Funktion, um ein Meldungsfeld, um die Nachricht zusammen mit anzuzeigen erstellen eine **OK** Schaltfläche. Wenn der Benutzer auf **OK**klickt, wird das Programm sofort beendet.
 
-Wenn die Anwendung mit einer Debugversion der Laufzeitbibliotheken verknüpft ist **assert** erstellt ein Meldungsfeld mit drei Schaltflächen: **Abort**, **wiederholen**, und **Ignorieren**. Wenn der Benutzer auf **Abbrechen**klickt, wird das Programm sofort beendet. Wenn der Benutzer auf **Wiederholen**klickt, wird der Debugger aufgerufen und der Benutzer kann das Programm debuggen, wenn Just-In-Time (JIT)-Debuggen aktiviert ist. Wenn der Benutzer klickt **ignorieren**, **assert** die normale Ausführung fort: erstellt das Meldungsfeld mit der **OK** Schaltfläche. Wenn ein Fehlerzustand vorliegt, kann das Klicken auf **Ignorieren** zu undefiniertem Verhalten führen.
+Wenn die Anwendung mit einer Debugversion der Laufzeitbibliotheken verknüpft ist **assert** erstellt ein Meldungsfeld mit drei Schaltflächen: **Abbrechen**, **wiederholen**, und **Ignorieren**. Wenn der Benutzer auf **Abbrechen**klickt, wird das Programm sofort beendet. Wenn der Benutzer auf **Wiederholen**klickt, wird der Debugger aufgerufen und der Benutzer kann das Programm debuggen, wenn Just-In-Time (JIT)-Debuggen aktiviert ist. Wenn der Benutzer klickt **ignorieren**, **assert-** die normale Ausführung fort: Erstellen das Meldungsfeld mit der **OK** Schaltfläche. Wenn ein Fehlerzustand vorliegt, kann das Klicken auf **Ignorieren** zu undefiniertem Verhalten führen.
 
 Weitere Informationen zum CRT-Debugging (C Runtime Library) finden Sie unter [CRT-Debugverfahren](/visualstudio/debugger/crt-debugging-techniques).
 
 Die **_assert** und **_wassert** Funktionen sind interne CRT-Funktionen. Sie helfen dabei, den für die Unterstützung von Assertion in Ihren Objektdateien erforderlichen Code zu minimieren. Wir empfehlen nicht, diese Funktionen direkt aufzurufen.
 
-Die **assert** Makros in den Versionen Release- und Debugversionen der C-Laufzeitbibliotheken beim **NDEBUG** ist nicht definiert. Wenn **NDEBUG** wird definiert, das Makro ist verfügbar, aber wertet das Argument nicht angehalten und wirkt sich nicht. Wenn diese Option aktiviert ist, die **assert** Makro Aufrufe **_wassert** zu seiner Implementierung. Andere Assertionsmakros, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) und [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), sind ebenfalls verfügbar, sie werten die ihnen übergebenen Ausdrücke jedoch nur aus, wenn das [_DEBUG](../../c-runtime-library/debug.md)-Makro definiert wurde und sie sich in Code befinden, der mit der Debugversion der C-Laufzeitbibliotheken gelinkt wurde.
+Die **assert** Makro ist in den Release- und Debugkonfigurationen Versionen der C-Laufzeitbibliotheken aktiviert Wenn **NDEBUG** ist nicht definiert. Wenn **NDEBUG** wird definiert, das Makro steht jedoch das Argument wird nicht ausgewertet und hat keine Auswirkungen. Wenn es aktiviert ist, die **assert** Makro Aufrufe **_wassert** für die Implementierung. Andere Assertionsmakros, [_ASSERT](assert-asserte-assert-expr-macros.md), [_ASSERTE](assert-asserte-assert-expr-macros.md) und [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md), sind ebenfalls verfügbar, sie werten die ihnen übergebenen Ausdrücke jedoch nur aus, wenn das [_DEBUG](../../c-runtime-library/debug.md)-Makro definiert wurde und sie sich in Code befinden, der mit der Debugversion der C-Laufzeitbibliotheken gelinkt wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**Assert-**, **_wassert**|\<assert.h>|
 
@@ -105,7 +105,7 @@ Die Signatur der **_assert** Funktion ist nicht in einer Headerdatei verfügbar.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Programm die **Analyze_string** Funktion verwendet die **assert** Makro so testen Sie verschiedene Bedingungen im Zusammenhang mit der Zeichenfolge und Länge. Wenn bei einer der Bedingungen ein Fehler auftritt, gibt das Programm eine Meldung aus, die auf die Ursache des Fehlers hinweist.
+In diesem Programm die **Analyze_string** Funktion verwendet die **assert** Makro so testen Sie verschiedene Bedingungen im Zusammenhang mit der Zeichenfolge und ihrer Länge. Wenn bei einer der Bedingungen ein Fehler auftritt, gibt das Programm eine Meldung aus, die auf die Ursache des Fehlers hinweist.
 
 ```C
 // crt_assert.c

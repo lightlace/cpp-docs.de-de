@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42f637c487e27b8658bcd09389eec940bb1df05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b4e82671973f2d841c6c0797fb73ad582ce203f1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880215"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214346"
 ---
 # <a name="string-data-management"></a>Zeichenfolgendatenverwaltung
 Visual C++ bietet verschiedene Möglichkeiten zum Verwalten von Zeichenfolgen:  
@@ -67,7 +67,7 @@ Visual C++ bietet verschiedene Möglichkeiten zum Verwalten von Zeichenfolgen:
  Ein `CString` Objekt sich INT_MAX (2.147.483.647) Zeichen speichern kann. Der TCHAR-Datentyp dient zum Abrufen oder Festlegen der einzelne Zeichen in einem `CString` Objekt. Im Gegensatz zu Zeichenarrays die `CString` -Klasse verfügt über eine integrierte Memory Allocation-Funktion. Auf diese Weise können `CString` Objekte nach Bedarf automatisch wachsen (d. h. Sie müssen keine wächst Gedanken einer `CString` Objekt längere Zeichenfolgen anpassen).  
   
 ##  <a name="_core_cstrings_and_const_char_pointers"></a> CString-Objekte und const Char-Zeiger  
- Ein `CString` Objekt kann auch wie eine C-Stil-Literalzeichenfolge fungieren (ein `PCXSTR`, das ist identisch mit **const Char\***  If nicht unter Unicode). Die [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) Konvertierungsoperator ermöglicht `CString` Objekte, frei für Zeiger auf Zeichen in Funktionsaufrufen ersetzt werden soll. Die **CString (LPCWSTR** `pszSrc` **)** Konstruktor ermöglicht das Zeichenzeigern, ersetzen sollen `CString` Objekte.  
+ Ein `CString` Objekt kann auch wie eine C-Stil-Literalzeichenfolge fungieren (ein `PCXSTR`, das ist identisch mit **const Char** <strong>\*</strong> If nicht unter Unicode). Die [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) Konvertierungsoperator ermöglicht `CString` Objekte, frei für Zeiger auf Zeichen in Funktionsaufrufen ersetzt werden soll. Die **CString (LPCWSTR** `pszSrc` **)** Konstruktor ermöglicht das Zeichenzeigern, ersetzen sollen `CString` Objekte.  
   
  Wird kein Versuch unternommen, um fold `CString` Objekte. Wenn Sie zwei vornehmen `CString` Objekte mit `Chicago`, z. B. die Zeichen in `Chicago` werden an zwei Orten gespeichert. (Dies möglicherweise nicht "true" für zukünftige Versionen von MFC, damit Sie nicht darauf verlassen sollten.)  
   

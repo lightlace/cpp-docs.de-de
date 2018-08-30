@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1fbdc6c2285042dc3529d837de3e4b4ffd3c4fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464859"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215530"
 ---
 # <a name="try-finally-statement"></a>try-finally-Anweisung
 **Microsoft-spezifisch**  
@@ -90,7 +90,7 @@ Reihenfolge für das Beenden bei Handlerausführung
 ## <a name="abnormal-termination"></a>Nicht ordnungsgemäße Beendigung  
  Beenden einer **Try-finally-** Anweisung mit der [Longjmp](../c-runtime-library/reference/longjmp.md) Run-Time-Funktion wird als nicht ordnungsgemäße Beendigung angesehen. Es ist nicht zulässig, wechseln in einem **__try** -Anweisung, jedoch aus einer solchen zulässig. Alle **__finally** Anweisungen, die zwischen dem Anfangspunkt aktiv sind (normale Beendigung der **__try** Block) und das Ziel (die **__except** blockiert wird, die Ausnahme behandelt) muss ausgeführt werden. Dies wird als "lokale Entladung" bezeichnet.  
   
- Wenn eine **versuchen** Block vorzeitig aus irgendeinem Grund auch durch Herausspringen aus dem Block beendet wird, führt das System die zugeordnete **schließlich** Block als Teil der Prozess der stapelentladung. In solchen Fällen die [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) -Funktion zurückgegeben wird **"true"** bei Aufruf innerhalb der **schließlich** blockieren; andernfalls wird **"false"**.  
+ Wenn eine **versuchen** Block vorzeitig aus irgendeinem Grund auch durch Herausspringen aus dem Block beendet wird, führt das System die zugeordnete **schließlich** Block als Teil der Prozess der stapelentladung. In solchen Fällen die [AbnormalTermination](/windows/desktop/Debug/abnormaltermination) -Funktion zurückgegeben wird **"true"** bei Aufruf innerhalb der **schließlich** blockieren; andernfalls wird **"false"**.  
   
  Der Beendigungshandler wird nicht aufgerufen, wenn ein Prozess, während der Ausführung abgebrochen wird einer **Try-finally-** Anweisung.  
   
@@ -100,4 +100,4 @@ Reihenfolge für das Beenden bei Handlerausführung
  [Schreiben eines Beendigungshandlers](../cpp/writing-a-termination-handler.md)   
  [Strukturierte Ausnahmebehandlung (C/C++)](../cpp/structured-exception-handling-c-cpp.md)   
  [Stichwörter](../cpp/keywords-cpp.md)   
- [Beendigungshandler Syntax](http://msdn.microsoft.com/library/windows/desktop/ms681393)
+ [Beendigungshandler Syntax](/windows/desktop/Debug/termination-handler-syntax)

@@ -1,5 +1,5 @@
 ---
-title: Leerlaufschleifen-Verarbeitung | Microsoft Docs
+title: Leerlaufschleifen-Verarbeitung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,42 +26,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20be85f7089f2a53b067d7287780159de51a8c86
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8673b9610ab77535a74b110a6b97a4421d80a253
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929555"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197750"
 ---
 # <a name="idle-loop-processing"></a>Leerlaufschleifen-Verarbeitung
-Viele Anwendungen führt langwierige Verarbeitung "in Hintergrund" In einigen Fällen geben Leistungsaspekte vor, die Verwendung von multithreading für derartige Schritte. Threads verursachen zusätzlichen, damit sie für einfache Aufgaben wie z. B. die Zeit im Leerlauf Arbeit nicht, die MFC empfohlen werden in der [OnIdle](../mfc/reference/cwinthread-class.md#onidle) Funktion. Dieser Artikel konzentriert sich auf die leerlaufverarbeitung. Weitere Informationen zu multithreading, finden Sie unter [Themen zu Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
+Viele Anwendungen führt langwierige Verarbeitung "im Hintergrund." In einigen Fällen geben Überlegungen zur Leistung vor, die Verwendung von multithreading für diese Aufgaben. Threads verursachen zusätzlichen, damit sie für einfache Aufgaben wie die Arbeit der Leerlauf-Ablaufzeitpunkt nicht empfohlen, die MFC führt Sie werden in der [OnIdle](../mfc/reference/cwinthread-class.md#onidle) Funktion. Dieser Artikel konzentriert sich auf die leerlaufverarbeitung. Weitere Informationen zu multithreading, finden Sie unter [Themen zu Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
- Einige Arten von Verarbeitung im Hintergrund werden entsprechend in Intervallen durchgeführt, die der Benutzer andernfalls nicht Interaktion mit der Anwendung verwendet wird. In einer Anwendung, die für das Betriebssystem Microsoft Windows entwickelt wurde kann eine Anwendung leerlaufzeitverarbeitung ausführen, und teilen Sie einen langwierigen Prozess in vielen kleinen Fragmenten. Nach der Verarbeitung jedes Fragment an, die Anwendung die Steuerung der Ausführung mit Windows ergibt eine [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Schleife.  
+ Einige Arten von Verarbeitung im Hintergrund werden entsprechend während Intervallen ausgeführt werden, die der Benutzer andernfalls nicht mit der Anwendung interagiert wird. In einer Anwendung, die für das Betriebssystem Microsoft Windows entwickelt wurde kann eine Anwendung leerlaufzeitverarbeitung durchführen, einen lang andauernder Vorgang in vielen kleinen Fragmenten aufteilen. Nach der Verarbeitung jedes Fragment an, die Anwendung die Steuerung der Ausführung mit Windows ergibt eine [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) Schleife.  
   
- Dieser Artikel beschreibt die zwei Möglichkeiten, um die Verarbeitung in der Anwendung im Leerlauf:  
+ In diesem Artikel wird erläutert, zwei Möglichkeiten, um die Verarbeitung in Ihrer Anwendung im Leerlauf:  
   
--   Mit **PeekMessage** in MFC Haupt-Nachrichtenschleife.  
+-   Mithilfe von **PeekMessage** in MFC Hauptnachrichtenschleife.  
   
--   Einbetten von einem anderen **PeekMessage** Schleife woanders in der Anwendung.  
+-   Einbetten von einem anderen **PeekMessage** an anderer Stelle in der Anwendung eine Schleife.  
   
-##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage in der Nachrichtenschleife MFC  
- In einer Anwendung, die mit MFC entwickelt wurde, wurde die Hauptnachricht eine Schleife in der `CWinThread` Klasse enthält eine Nachrichtenschleife, die Aufrufe der [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Win32-API. Diese Schleife auch Aufrufe der `OnIdle` Memberfunktion von `CWinThread` zwischen Nachrichten. Eine Anwendung kann in diesem Zeitraum im Leerlauf Nachrichten verarbeiten, durch Überschreiben der `OnIdle` Funktion.  
+##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage in der MFC-Nachrichtenschleife  
+ In einer Anwendung, die mit MFC entwickelt wurde, wurde die Hauptnachricht eine Schleife in der `CWinThread` -Klasse enthält eine Meldungsschleife, die Aufrufe der [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) Win32-API. Diese Schleife auch Aufrufe der `OnIdle` Memberfunktion `CWinThread` zwischen Nachrichten. Eine Anwendung kann in diesem Zeitraum im Leerlauf Nachrichten verarbeiten, durch Überschreiben der `OnIdle` Funktion.  
   
 > [!NOTE]
->  `Run`, `OnIdle`, und bestimmte weitere Memberfunktionen sind nun Elemente der Klasse `CWinThread` anstatt der Klasse `CWinApp`. `CWinApp` wird von `CWinThread` abgeleitet.  
+>  `Run`, `OnIdle`, und bestimmte andere Memberfunktionen sind nun Elemente der Klasse `CWinThread` statt der Klasse `CWinApp`. `CWinApp` wird von `CWinThread` abgeleitet.  
   
- Weitere Informationen zur Ausführung im Leerlauf Verarbeitung finden Sie unter [OnIdle](../mfc/reference/cwinthread-class.md#onidle) in der *MFC-Referenz*.  
+ Weitere Informationen zum Ausführen von leerlaufverarbeitung finden Sie unter [OnIdle](../mfc/reference/cwinthread-class.md#onidle) in die *MFC-Referenz*.  
   
-##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> PeekMessage an anderer Stelle in der Anwendung  
- Eine andere Methode zum Ausführen der Verarbeitung in einer Anwendung im Leerlauf umfasst eine Nachrichtenschleife in eine Ihrer Funktionen einbetten. Diese Nachrichtenschleife ähnelt stark MFC Haupt-Meldungsschleife gefunden [Hauptmeldungsschleife](../mfc/reference/cwinthread-class.md#run). Bedeutet, dass solche Schleife in einer Anwendung, die mit MFC entwickelt wurde, die viele der gleichen Funktionen wie die Hauptnachrichtenschleife ausführen muss. Das folgende Codefragment veranschaulicht das Schreiben einer Nachrichtenschleife, die mit MFC kompatibel ist:  
+##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> PeekMessage an anderer Stelle in Ihrer Anwendung  
+ Eine andere Methode zum Ausführen von im Leerlauf Verarbeitung in einer Anwendung umfasst eine Meldungsschleife in einer Ihrer Funktion eingebettet. Diese Meldungsschleife ist sehr ähnlich der MFC-Hauptnachrichtenschleife, finden Sie im [Hauptmeldungsschleife](../mfc/reference/cwinthread-class.md#run). Das bedeutet, solche Schleife in einer Anwendung, die mit MFC entwickelt wurden viele der gleichen Funktionen wie die primäre Meldungsschleife ausführen muss. Das folgende Codefragment zeigt, wie eine Meldungsschleife, die mit MFC kompatibel ist:  
   
  [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]  
   
- Dieser Code, der in einer Funktion eingebettet Schleifen, solange es ist im Leerlauf verarbeiten müssen. Innerhalb der Schleife eine geschachtelte Schleife wiederholt aufgerufen `PeekMessage`. Solange dieser Aufruf einen Wert ungleich NULL zurückgibt, ruft die Schleife `CWinThread::PumpMessage` Durchführung normale Nachricht Übersetzung und verteilen. Obwohl `PumpMessage` ist nicht dokumentiert ist, können Sie den Quellcode in der Datei ThrdCore.Cpp im Verzeichnis \atlmfc\src\mfc der Visual C++-Installation überprüfen.  
+ Dieser Code, eingebettet in einer Funktion die Schleife so lange, wie im Leerlauf verarbeiten müssen. Innerhalb dieser Schleife Ruft eine geschachtelte Schleife wiederholt `PeekMessage`. Solange dieser Aufruf einen Wert ungleich NULL zurückgibt, ruft die Schleife `CWinThread::PumpMessage` normale Meldung Übersetzung und Weiterleitung von ausführen. Obwohl `PumpMessage` ist nicht dokumentiert ist, können Sie Quellcode in der Datei ThrdCore.Cpp im \atlmfc\src\mfc Verzeichnis des Visual C++-Installation überprüfen.  
   
- Einmal die innere Schleife beendet, die äußere Schleife führt leerlaufverarbeitung durch eine oder mehrere Aufrufe von `OnIdle`. Der erste Aufruf ist für MFC Zwecke. Sie können zusätzliche Aufrufe an `OnIdle` möchten eigene Verarbeitung im Hintergrund.  
+ Sobald die innere Schleife beendet, die äußere Schleife führt leerlaufverarbeitung durch eine oder mehrere Aufrufe `OnIdle`. Der erste Aufruf ist für MFC Zwecke. Sie können zusätzliche Aufrufe an `OnIdle` eigene Verarbeitung im Hintergrund zu tun.  
   
- Weitere Informationen zur Ausführung im Leerlauf Verarbeitung finden Sie unter [OnIdle](../mfc/reference/cwinthread-class.md#onidle) in der Verweis auf die MFC-Bibliothek.  
+ Weitere Informationen zum Ausführen von leerlaufverarbeitung finden Sie unter [OnIdle](../mfc/reference/cwinthread-class.md#onidle) in der MFC-Bibliothek-Referenz.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Allgemeine MFC-Themen](../mfc/general-mfc-topics.md)

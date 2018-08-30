@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a83ab3aa6506e9ee620d3604149bfd181678a05
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 710dc1929662c5f5358912433be2df605bf87964
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879808"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218180"
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray-Klasse
 Diese Klasse speichert ein Array von `IUnknown` Zeiger.  
@@ -160,7 +160,7 @@ IUnknown* GetAt(int nIndex);
  Der Index des abzurufenden Elements.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ein Zeiger auf ein [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) Schnittstelle.  
+ Ein Zeiger auf ein [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) Schnittstelle.  
   
 ##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
  Rufen Sie diese Methode, um das Cookie zugeordnet erhalten einen bestimmten `IUnknown` Zeiger.  

@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a7764e15b18249a9ee3ddd452ae792c8ad172f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404479"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218385"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -80,7 +80,7 @@ Modus des zurückgegebenen Streams.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Stream zurück, der einem Ende der erstellten Pipe zugeordnet ist. Das andere Ende der Pipe ist der Standardeingabe oder Standardausgabe des erzeugten Befehls zugeordnet. Die Funktionen geben bei einem Fehler **NULL** zurück. Wenn der Fehler ein ungültiger Parameter, z. B. wenn *Befehl* oder *Modus* ist ein null-Zeiger oder *Modus* ist kein gültiger Modus, **Errno** auf festgelegt ist **EINVAL**. Gültige Modi können Sie dem Abschnitt mit den Hinweisen entnehmen.
+Gibt einen Stream zurück, der einem Ende der erstellten Pipe zugeordnet ist. Das andere Ende der Pipe ist der Standardeingabe oder Standardausgabe des erzeugten Befehls zugeordnet. Die Funktionen geben bei einem Fehler **NULL** zurück. Wenn der Fehler ein ungültiger Parameter, z. B. wenn *Befehl* oder *Modus* ist ein null-Zeiger oder *Modus* ist kein gültiger Modus ist, **Errno** auf festgelegt ist **EINVAL**. Gültige Modi können Sie dem Abschnitt mit den Hinweisen entnehmen.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [_doserrno, errno, _sys_errlist und _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -90,16 +90,16 @@ Die **_popen** Funktion erstellt eine Pipe und führt asynchron eine generierte 
 
 **"R"** der aufrufende Prozess kann die Standardausgabe von des erzeugten Befehls mit dem zurückgegebenen Stream lesen.
 
-**"w"** der aufrufende Prozess des erzeugten Befehls Standardeingabe mit dem zurückgegebenen Stream schreiben kann.
+**"w"** der aufrufende Prozess kann in Standardeingabe von des erzeugten Befehls mit dem zurückgegebenen Stream schreiben.
 
 **"b"** öffnen im binären Modus.
 
 **"t"** im Textmodus geöffnet.
 
 > [!NOTE]
-> Wenn in einem Windows-Programm verwendet die **_popen** Funktion gibt einen ungültigen Dateizeiger, der bewirkt, dass das Programm nicht mehr reagiert auf unbestimmte Zeit zurück. **_popen** in einer Konsolenanwendung ordnungsgemäß funktioniert. Um eine Windows-Anwendung erstellen, die Eingabe und Ausgabe umleitet, finden Sie unter [Erstellen eines untergeordneten Prozesses mit umgeleiteter Eingabe und Ausgabe](http://msdn.microsoft.com/library/windows/desktop/ms682499) im Windows SDK.
+> Wenn in einem Windows-Programm verwendet die **_popen** Funktionsergebnis ist einen Ungültiger Dateizeiger, der bewirkt, die Anwendung dass reagiert auf unbestimmte Zeit. **_popen** in einer Konsolenanwendung ordnungsgemäß funktioniert. Zum Erstellen einer Windows-Anwendung, die Eingabe und Ausgabe umleitet, finden Sie unter [Erstellen eines untergeordneten Prozesses mit umgeleiteter Eingabe und Ausgabe](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) im Windows SDK.
 
-**_wpopen** ist eine Breitzeichen-Version von **_popen**; das *Pfad* Argument **_wpopen** ist eine Breitzeichen-Zeichenfolge. **_wpopen** und **_popen** Verhalten sich andernfalls identisch.
+**_wpopen** ist eine Breitzeichen-Version von **_popen**; die *Pfad* Argument **_wpopen** ist eine Breitzeichen-Zeichenfolge. **_wpopen** und **_popen** Verhalten sich andernfalls identisch.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -109,7 +109,7 @@ Die **_popen** Funktion erstellt eine Pipe und führt asynchron eine generierte 
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_popen**|\<stdio.h>|
 |**_wpopen**|\<stdio.h> oder \<wchar.h>|

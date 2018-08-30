@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad48c78d46928a34a43fab5bbe660750928baf51
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 176dfc9027951f06f55dd04757b9acb7c7d8a2ec
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336760"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199624"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection-Klasse
 Verwaltet die Verbindung mit einem Gopherinternetserver.  
@@ -158,7 +158,7 @@ static CGopherLocator CreateLocator(
  Ein Zeiger auf die Auswahlzeichenfolge, die an den Gopherserver gesendet werden, um ein Element abgerufen werden. *PstrSelectorString* kann NULL sein.  
   
  *dwGopherType*  
- Gibt an, ob *PstrSelectorString* bezieht sich auf ein Verzeichnis oder ein Dokument, und gibt an, ob die Anforderung Gopher oder Gopher erfolgt. Die Attribute für die Struktur [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) im Windows SDK.  
+ Gibt an, ob *PstrSelectorString* bezieht sich auf ein Verzeichnis oder ein Dokument, und gibt an, ob die Anforderung Gopher oder Gopher erfolgt. Die Attribute für die Struktur [GOPHER_FIND_DATA](/windows/desktop/api/wininet/ns-wininet-gopher_find_dataa) im Windows SDK.  
   
  *pstrLocator*  
  Ein Zeiger auf eine Zeichenfolge, die die zu öffnende Datei identifiziert. Diese Zeichenfolge wird in der Regel von einem Aufruf zurückgegeben [CGopherFileFind:: GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator).  
@@ -197,7 +197,7 @@ BOOL GetAttribute(
  Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) , empfängt den Locatortyp.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ##  <a name="openfile"></a>  CGopherConnection:: OpenFile  
  Rufen Sie diese Memberfunktion zum Öffnen einer Datei auf einem Gopherserver.  

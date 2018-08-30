@@ -1,5 +1,5 @@
 ---
-title: C-Laufzeitfehler R6025 | Microsoft Docs
+title: C-Laufzeitfehler R6025 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abdbdbf918462dfb83eff07190c32af1f1b3d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b774c5f99387ca4403941d1461593bef8801e5de
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302025"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220631"
 ---
 # <a name="c-runtime-error-r6025"></a>C-Laufzeitfehler R6025
 rein virtuellen Funktionsaufruf  
   
 > [!NOTE]
->  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app heruntergefahren, da es sich um ein internes Problem enthält. Die häufigste Ursache für diesen Fehler ist ein Fehler in der Anwendung oder eine beschädigte Installation.  
+>  Wenn Sie diese Fehlermeldung beim Ausführen einer app auftritt, wurde die app beendet, da er ein internes Problem aufweist. Die häufigste Ursache für diesen Fehler ist ein Fehler in der app oder eine beschädigte Installation.  
 >   
 >  Sie können versuchen, diesen Fehler zu beheben, indem Sie folgende Schritte ausführen:  
 >   
->  -   Verwenden der **Apps und Funktionen** oder **Programme und Funktionen** auf der Seite der **Systemsteuerung** reparieren oder neu installieren die Anwendung.  
-> -   Überprüfen Sie **Windows Update** in der **Systemsteuerung** für Softwareupdates.  
-> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den Hersteller der app.  
+>  -   Verwenden der **Apps und Features** oder **Programme und Funktionen** auf der Seite die **Systemsteuerung** zu reparieren oder installieren Sie das Programm neu.  
+> -   Überprüfen Sie **Windows Update** in die **Systemsteuerung** für Softwareupdates.  
+> -   Überprüfen Sie nach einer aktualisierten Version der app. Wenn das Problem weiterhin besteht, wenden Sie sich an den app-Anbieter.  
   
  **Informationen für Programmierer**  
   
- Kein Objekt wurde instanziiert, um die rein virtuellen Funktionsaufruf zu behandeln.  
+ Kein Objekt ist instanziiert wurde, um die rein virtuellen Funktionsaufruf zu behandeln.  
   
- Dieser Fehler wird verursacht, durch den Aufruf einer virtuellen Funktion in einer abstrakten Klasse über einen Zeiger, die durch eine Umwandlung in den Typ der abgeleiteten Klasse erstellt wird, sondern ist tatsächlich ein Zeiger auf die Basisklasse der Klasse. Dies kann auftreten, wenn die Umwandlung von einer **"void"\***  in einen Zeiger auf eine Klasse bei der **"void"\***  während der Erstellung der Basisklasse erstellt wurde.  
+ Dieser Fehler wird verursacht durch eine virtuelle Funktion in einer abstrakten Klasse über einen Zeiger auf die wird durch eine Umwandlung in den Typ der abgeleiteten Klasse erstellt, jedoch ist eigentlich ein Zeiger auf die Basisklasse aufrufen. Dies kann auftreten, bei der Umwandlung von einer **"void"** <strong>\*</strong> in einen Zeiger auf eine Klasse bei der **"void"** <strong>\*</strong> wurde während der Erstellung der Basisklasse erstellt.  
   
- Weitere Informationen finden Sie unter der [Microsoft-Support](http://go.microsoft.com/fwlink/p/?linkid=75220) Website.
+ Weitere Informationen finden Sie unter den [Microsoft-Support](http://go.microsoft.com/fwlink/p/?linkid=75220) Website.

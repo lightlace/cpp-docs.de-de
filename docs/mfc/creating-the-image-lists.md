@@ -1,5 +1,5 @@
 ---
-title: Erstellen der Bildliste | Microsoft Docs
+title: Erstellen der Bildliste | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e5f5ac8396c32e56e4c0f2f951f45bb33714822
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53cf33a551dc95e7ed282b599673f627ff8a7b21
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341524"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220936"
 ---
 # <a name="creating-the-image-lists"></a>Erstellen der Bildliste
-Erstellen von Bildlisten identisch ist, sowohl bei Verwendung [CListView](../mfc/reference/clistview-class.md) oder [CListCtrl](../mfc/reference/clistctrl-class.md).  
+Erstellen von Bildlisten identisch ist, unabhängig davon, ob Sie [CListView](../mfc/reference/clistview-class.md) oder [CListCtrl](../mfc/reference/clistctrl-class.md).  
   
 > [!NOTE]
->  Sie nur müssen Bildlisten Strukturelement-Steuerelement enthält die `LVS_ICON` Stil.  
+>  Sie nur müssen image aufgelistet, wenn das Listensteuerelement enthält die `LVS_ICON` Stil.  
   
- Verwenden Sie die Klasse `CImageList` eine oder mehrere Bildlisten (für große Symbole, kleine Symbole und Zustände) zu erstellen. Finden Sie unter [CImageList](../mfc/reference/cimagelist-class.md), und finden Sie unter [Liste Ansicht Bilderlisten](http://msdn.microsoft.com/library/windows/desktop/bb774736) im Windows SDK.  
+ Verwenden Sie Klasse `CImageList` erstellen Sie eine oder mehrere Bildlisten (für in voller Größe Symbole, kleine Symbole und Zustände). Finden Sie unter [CImageList](../mfc/reference/cimagelist-class.md), und finden Sie unter [List View Image Lists](/windows/desktop/Controls/using-list-view-controls) im Windows SDK.  
   
- Rufen Sie [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) für jede Liste image; übergeben Sie einen Zeiger auf die entsprechenden `CImageList` Objekt.  
+ Rufen Sie [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) für jede Liste image, übergeben Sie einen Zeiger auf die entsprechenden `CImageList` Objekt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CListCtrl](../mfc/using-clistctrl.md)   

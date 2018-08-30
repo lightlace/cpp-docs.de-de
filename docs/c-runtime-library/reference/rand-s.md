@@ -37,16 +37,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8407848db8f442324127df8d7267a5350c077b2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c75b2988dd00d8141c25e67c29bcc0b082270ffe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405756"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210161"
 ---
 # <a name="rands"></a>rand_s
 
-Generiert eine pseudozufällige Zahl. Dies ist eine sicherere Version der Funktion [Rand](rand.md), mit sicherheitserweiterungen wie unter [Sicherheitsfunktionen in der CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Generiert eine pseudozufällige Zahl. Dies ist eine sicherere Version der Funktion [Rand](rand.md), mit sicherheitsverbesserungen wie in beschrieben [Sicherheitsfunktionen in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,28 +57,28 @@ errno_t rand_s(unsigned int* randomValue);
 ### <a name="parameters"></a>Parameter
 
 *randomValue*<br/>
-Ein Zeiger auf eine ganze Zahl, um den generierten Wert aufzunehmen.
+Ein Zeiger auf eine ganze Zahl, die den generierten Wert enthalten soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Null, wenn erfolgreich, andernfalls ein Fehlercode. Wenn den Eingabezeiger _RandomValue_ ist ein null-Zeiger, die Funktion wird einen Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **EINVAL** und legt **Errno** auf **EINVAL**. Wenn die Funktion fehlerhaft ist einem anderen Grund *_RandomValue_ auf 0 festgelegt ist.
+Null, wenn erfolgreich, andernfalls ein Fehlercode. Wenn der eingegebene Zeiger _RandomValue_ ein null-Zeiger ist die Funktion ruft einen Handler für ungültige Parameter auf, wie in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, gibt die Funktion **EINVAL** und **Errno** zu **EINVAL**. Wenn die Funktion, einem anderen Grund fehlschlägt *_RandomValue_ auf 0 festgelegt ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Rand_s** Funktion schreibt pseudozufällige eine ganze Zahl zwischen 0 und **UINT_MAX** auf den Eingabezeiger. Die **Rand_s** Funktion verwendet das Betriebssystem, um kryptografisch sichere Zufallszahlen generiert. Verwendet nicht den Ausgangswert von generiert die [Srand](srand.md) -Funktion, oder der verwendeten Anzahl Zufallssequenz auf [Rand](rand.md).
+Die **Rand_s** Funktion schreibt eine pseudozufällige Ganzzahl im Bereich von 0 bis **UINT_MAX** , der eingegebene Zeiger. Die **Rand_s** Funktion verwendet das Betriebssystem kryptografisch sichere Zufallszahlen zu generieren. Wird nicht vom Ausgangswert verwendet die [Srand](srand.md) -Funktion, und beeinträchtigt die Zufallszahlensequenz von verwendeten [Rand](rand.md).
 
-Die **Rand_s** -Funktion erfordert Konstanten **_CRT_RAND_S** vor der einschlussanweisung für die Funktion deklariert werden, wie im folgenden Beispiel definiert werden:
+Die **Rand_s** -Funktion erfordert, dass die Konstante **_CRT_RAND_S** vor der inklusionsanweisung für die Funktion deklariert werden, wie im folgenden Beispiel definiert werden:
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**Rand_s** richtet sich nach der [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) -API, die nur in Windows XP und höher verfügbar ist.
+**Rand_s** hängt von der [RtlGenRandom](/windows/desktop/api/ntsecapi/nf-ntsecapi-rtlgenrandom) -API, die nur in Windows XP und höher verfügbar ist.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**rand_s**|\<stdlib.h>|
 

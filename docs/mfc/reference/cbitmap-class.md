@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce8ac623337d6b1b1dafbe242a9d13979b81a01
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4a0c6b9a9f01746788a01b6528a7508db141089e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337014"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195851"
 ---
 # <a name="cbitmap-class"></a>CBitmap-Klasse
 Kapselt eine Bitmap der Windows GDI (Graphics Device Interface) und stellt Memberfunktionen zur Bearbeitung der Bitmap bereit.  
@@ -174,7 +174,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>Hinweise  
  Obwohl eine Bitmap kann nicht direkt für ein Anzeigegerät ausgewählt werden, es kann ausgewählt werden als aktuelle Bitmap für einen Gerätekontext Arbeitsspeicher mit [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) und auf einen beliebigen kompatiblen Gerätekontext kopiert werden, mithilfe der [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) oder [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) Funktion. (Die [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) Funktion kann die Bitmap für den aktuellen Pinsel direkt für den Anzeigekontext für das Gerät kopieren.)  
   
- Wenn die `BITMAP` Struktur, um die durch die *LpBitmap* Parameter ausgefüllt wurde mithilfe der `GetObject` -Funktion, die Bits der Bitmap nicht angegeben sind, und die Bitmap nicht initialisiert ist. Um die Bitmap zu initialisieren, eine Anwendung können eine Funktion wie z. B. [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) oder [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) zum Kopieren von Bits aus der Bitmap, die den ersten Parameter identifizierte `CGdiObject::GetObject` auf die Bitmap erstellt `CreateBitmapIndirect`.  
+ Wenn die `BITMAP` Struktur, um die durch die *LpBitmap* Parameter ausgefüllt wurde mithilfe der `GetObject` -Funktion, die Bits der Bitmap nicht angegeben sind, und die Bitmap nicht initialisiert ist. Um die Bitmap zu initialisieren, eine Anwendung können eine Funktion wie z. B. [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) oder [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) zum Kopieren von Bits aus der Bitmap, die den ersten Parameter identifizierte `CGdiObject::GetObject` auf die Bitmap erstellt `CreateBitmapIndirect`.  
   
  Wenn Sie fertig sind, mit der `CBitmap` mit erstelltes Objekt `CreateBitmapIndirect` funktionieren müssen zunächst die Bitmap im Gerätekontext auswählen und dann Löschen der `CBitmap` Objekt.  
   
@@ -374,7 +374,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>Hinweise  
  In der Standardeinstellung `LoadMappedBitmap` werden häufig in der Schaltfläche Symbole verwendete Farben zugeordnet.  
   
- Informationen zum Erstellen einer Bitmap zugeordneten, finden Sie unter der Windows-Funktion [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) und [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) Struktur im Windows SDK.  
+ Informationen zum Erstellen einer Bitmap zugeordneten, finden Sie unter der Windows-Funktion [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) und [COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-_colormap) Struktur im Windows SDK.  
   
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  Lädt eine vordefinierte Bitmap, die von Windows verwendet.  
@@ -428,7 +428,7 @@ operator HBITMAP() const;
 ### <a name="remarks"></a>Hinweise  
  Dieser Operator ist ein Umwandlungsoperator, die direkte Verwendung von unterstützt eine `HBITMAP` Objekt.  
   
- Weitere Informationen zur Verwendung von Grafikobjekten finden Sie unter [Grafik Objekte](http://msdn.microsoft.com/library/windows/desktop/dd144962) im Windows SDK.  
+ Weitere Informationen zur Verwendung von Grafikobjekten finden Sie unter [Grafik Objekte](/windows/desktop/gdi/graphic-objects) im Windows SDK.  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  Legt die Bits einer Bitmap auf den Bit-Werte, die vom *LpBits*.  

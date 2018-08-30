@@ -1,5 +1,5 @@
 ---
-title: Unbeschränkte Rich-Edit-Steuerelemente | Microsoft Docs
+title: Unbeschränkte Rich-Edit-Steuerelemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2b08f6c04d345b4ae3ab32c6d0f17a1d8a4647
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9e3115000b7b45d9b48a1ac0d274eb32c11f4d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343310"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218878"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Unbeschränkte Rich-Edit-Steuerelemente
-Ihre Anwendung kann ein rich-Edit-Steuerelement die Größe ändern ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) nach Bedarf, sodass sie immer die gleiche Größe wie der Inhalt ist. Ein rich-Edit-Steuerelement unterstützt diese so genannten "Unbeschränkte" Funktionalität durch das übergeordnete Fenster sendet eine [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) Benachrichtigung bei jeder Änderung der Größe ihrer Inhalte.  
+Ihre Anwendung kann die Größe ein rich-Edit-Steuerelements ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) nach Bedarf, sodass sie immer die gleiche Größe wie der Inhalt ist. Ein rich-Edit-Steuerelement unterstützt diese so genannte "grenzenlosen"-Funktion, indem Sie das übergeordnete Fenster sendet eine [EN_REQUESTRESIZE](/windows/desktop/Controls/en-requestresize) Benachrichtigung, wenn sich die Größe des Inhalts ändert.  
   
- Bei der Verarbeitung der **EN_REQUESTRESIZE** benachrichtigungsmeldung, eine Anwendung sollte das Steuerelement auf die Dimensionen in der angegebenen Größe [REQRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787950) Struktur. Eine Anwendung kann auch verschieben, alle Informationen, die neben dem Steuerelement um Änderung der Höhe des Steuerelements zu berücksichtigen. Um die Größe des Steuerelements, können Sie die `CWnd` Funktion [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos).  
+ Bei der Verarbeitung der **EN_REQUESTRESIZE** -benachrichtigungsmeldung und eine Anwendung sollte das Steuerelement, das die Dimensionen in der angegebenen Größe [REQRESIZE](/windows/desktop/api/richedit/ns-richedit-_reqresize) Struktur. Eine Anwendung möglicherweise auch verschieben, alle Informationen neben dem Steuerelement um Änderung der Höhe des Steuerelements zu berücksichtigen. Zum Ändern der Größe des Steuerelements können Sie die `CWnd` Funktion [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos).  
   
- Sie können erzwingen, dass eine unbeschränkte rich-Edit-Steuerelement zum Senden einer **EN_REQUESTRESIZE** benachrichtigungsmeldung mithilfe der [RequestResize](../mfc/reference/cricheditctrl-class.md#requestresize) Memberfunktion. Diese Meldung kann in nützlich sein, die [OnSize](../mfc/reference/cwnd-class.md#onsize) Handler.  
+ Sie können erzwingen, dass eine unbeschränkte rich-Edit-Steuerelement zum Senden einer **EN_REQUESTRESIZE** benachrichtigungsmeldung mithilfe der [RequestResize](../mfc/reference/cricheditctrl-class.md#requestresize) Member-Funktion. Diese Meldung kann nützlich sein, die [OnSize](../mfc/reference/cwnd-class.md#onsize) Handler.  
   
- Zum Empfangen von **EN_REQUESTRESIZE** benachrichtigungsmeldungen, müssen Sie die Benachrichtigung aktivieren, mit der `SetEventMask` Memberfunktion.  
+ Zum Empfangen von **EN_REQUESTRESIZE** benachrichtigungsmeldungen, müssen Sie die Benachrichtigung aktivieren, mit der `SetEventMask` Member-Funktion.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CRichEditCtrl](../mfc/using-cricheditctrl.md)   

@@ -1,7 +1,7 @@
 ---
-title: Compilerwarnung (Stufe 3) C4686 | Microsoft Docs
+title: Compilerwarnung (Stufe 3) C4686 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,42 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1edbf438951644f63aae637a68f69d173ab7e1b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 32a44cd929eb7629ef317ce9847950b613bde52c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292778"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202079"
 ---
 # <a name="compiler-warning-level-3-c4686"></a>Compilerwarnung (Stufe 3) C4686
-**'**   
- ***einen benutzerdefinierten Typ* ': mögliche Änderung im Verhalten in der UDT gibt Aufrufkonvention zurück**  
-  
- Eine Spezialisierung einer Klassenvorlage wurde nicht definiert ist, bevor sie in einem Rückgabetyp verwendet wurde. Elemente, die die Klasse instanziiert werden C4686 aufgelöst; Deklarieren Sie eine Instanz von oder zugreifen auf einen Member (C\<Int >:: nichts) sind auch Optionen.  
-  
- Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
-  
- Verwenden stattdessen Sie die folgenden,  
-  
-```  
-// C4686.cpp  
-// compile with: /W3  
-#pragma warning (default : 4686)  
-template <class T>  
-class C;  
-  
-template <class T>  
-C<T> f(T);  
-  
-template <class T>  
-class C {};  
-  
-int main() {  
-   f(1);   // C4686  
-}  
-  
-template <class T>  
-C<T> f(T) {  
-   return C<int>();  
-}  
+
+> "*einen benutzerdefinierten Typ*": mögliche verhaltensänderung, Änderung in der UDT gibt zurück Aufrufkonvention
+
+## <a name="remarks"></a>Hinweise
+
+Eine Spezialisierung einer Klassenvorlage wurde nicht definiert ist, bevor er in einem Rückgabetyp verwendet wurde. Alle Elemente, die die Klasse instanziiert wird C4686; aufgelöst werden deklarieren eine Instanz oder das Zugreifen auf einen Member (C\<Int >:: nichts) sind auch Optionen.
+
+Diese Warnung ist standardmäßig deaktiviert. Weitere Informationen finden Sie unter [Standardmäßig deaktivierte Compilerwarnungen](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+
+## <a name="example"></a>Beispiel
+
+Verwenden Sie stattdessen Folgendes:
+
+```cpp
+// C4686.cpp
+// compile with: /W3
+#pragma warning (default : 4686)
+template <class T>
+class C;
+
+template <class T>
+C<T> f(T);
+
+template <class T>
+class C {};
+
+int main() {
+   f(1);   // C4686
+}
+
+template <class T>
+C<T> f(T) {
+   return C<int>();
+}
 ```

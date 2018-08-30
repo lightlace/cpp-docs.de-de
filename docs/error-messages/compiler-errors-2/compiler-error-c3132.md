@@ -1,5 +1,5 @@
 ---
-title: Compiler-Fehler C3132 generiert | Microsoft Docs
+title: Compilerfehler C3132 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb2ecc863bc06542e4bb2e78e71ce95279c004f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb32d65b119330e49773118e38e1c8b618d03cfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252386"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204757"
 ---
-# <a name="compiler-error-c3132"></a>Compiler-Fehler C3132 generiert
-'Funktion-Parameter': Parameterarrays können nur auf einem formalen Argument vom Typ "eindimensionalem verwalteten Arrays" angewendet werden  
+# <a name="compiler-error-c3132"></a>Compilerfehler C3132
+"Funktion-Parameter": Parameterarrays können nur auf formale Argumente vom Typ "eindimensionales verwaltetes Array" angewendet werden  
   
- Die [ParamArray](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx) Attribut auf einen Parameter, die keine eindimensionale Arrays angewendet wurde.  
+ Die [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) -Attribut wurde auf einen Parameter, der kein eindimensionales Array war angewendet.  
   
- Im folgende Beispiel wird C3132 generiert:  
+ Im folgende Beispiel wird die C3132 generiert:  
   
 ```  
 // C3132.cpp  

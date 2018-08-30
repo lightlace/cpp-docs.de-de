@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYRESOURCE (verwaltete Ressource einbetten) | Microsoft Docs
+title: -ASSEMBLYRESOURCE (verwaltete Ressource einbetten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88afe292905ee46c1e939d29f787055f98058dc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acb7b173ffd22e65e20dcc9cceef61b2e2131c83
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372177"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213400"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (Verwaltete Ressource einbetten)
 ```  
@@ -38,18 +38,18 @@ ms.locfileid: "32372177"
  Die verwaltete Ressource, die Sie in dieser Assembly einbetten möchten.  
   
  *name*  
- Dies ist optional. Der logische Name für die Ressource; der Name verwendet, um die Ressource zu laden. Der Standardwert ist der Name der Datei.  
+ Dies ist optional. Der logische Name für die Ressource; der Name, der zum Laden der Ressource verwendet wird. Der Standardwert ist der Name der Datei.  
   
- Optional können Sie angeben, wenn die Datei im Assemblymanifest privat sein sollte. Standardmäßig *Namen* in der Assembly öffentlich ist.  
+ Optional können Sie angeben, wenn die Datei in das Assemblymanifest privat werden soll. In der Standardeinstellung *Namen* in der Assembly öffentlich ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie die Option/ASSEMBLYRESOURCE, um eine Ressource in einer Assembly einzubetten.  
+ Verwenden Sie die Assemblylinkressource-Option, um eine Ressource in einer Assembly einzubetten.  
   
- Ressourcen sind in der Assembly, die bei Erstellung mit der Linker öffentlich. Der Linker lässt nicht zu benennen Sie die Ressource in der Assembly.  
+ Ressourcen sind öffentlich in der Assembly, wenn der Linker erstellt. Der Linker lässt nicht zu, dass Sie die Ressource in der Assembly umbenennen.  
   
- Wenn *Filename* ist eine erstellt, z. B. durch .NET Framework-Ressourcendatei (.resources) die [Resource File Generator (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) oder in der Entwicklungsumgebung können sie Zugriff mit Membern in der **System.Resources** Namespace (siehe [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx) für Weitere Informationen). Verwenden Sie für alle anderen Ressourcen die **GetManifestResource** \* Methoden in **System.Reflection.Assembly** Klasse, um zur Laufzeit auf die Ressource zugreifen.  
+ Wenn *Filename* ist eine .NET Framework-Ressourcendatei (.resources)-Datei erstellt, z. B. durch die [Resource File Generator (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) oder in der Entwicklungsumgebung, können sie Zugriff mit Membern in der **System.Resources** Namespace (finden Sie unter [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx) Informationen). Verwenden Sie für alle anderen Ressourcen die **GetManifestResource** \* Methoden in **System.Reflection.Assembly** Klasse, um Zugriff auf die Ressource zur Laufzeit.  
   
- Andere Optionen des Linkers, die beeinflussen Generieren der Assembly sind:  
+ Andere Optionen des Linkers, die Generierung der Zielassembly betreffen sind:  
   
 -   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   

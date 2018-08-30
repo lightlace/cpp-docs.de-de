@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15623673651e2c1aa02a5c1b5baa779789961e2b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339565"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205286"
 ---
 # <a name="ccombobox-class"></a>CComboBox-Klasse
 Stellt die Funktionalität eines Windows-Kombinationsfelds bereit.  
@@ -286,7 +286,7 @@ int AddString(LPCTSTR lpszString);
  Wenn das Listenfeld nicht erstellt wurde, mit der [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) Stil, die Zeichenfolge am Ende der Liste hinzugefügt wird. Andernfalls wird die Zeichenfolge in die Liste eingefügt, und die Liste sortiert wird.  
   
 > [!NOTE]
->  Diese Funktion wird nicht von der Windows `ComboBoxEx` Steuerelement. Weitere Informationen zu diesem Steuerelement finden Sie unter [ComboBoxEx-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb775738) im Windows SDK.  
+>  Diese Funktion wird nicht von der Windows `ComboBoxEx` Steuerelement. Weitere Informationen zu diesem Steuerelement finden Sie unter [ComboBoxEx-Steuerelemente](/windows/desktop/Controls/comboboxex-controls) im Windows SDK.  
   
  Verwenden Sie zum Einfügen einer Zeichenfolge in einer bestimmten Position in der Liste der [InsertString](#insertstring) Member-Funktion.  
   
@@ -493,7 +493,7 @@ int Dir(
  Wenn der Rückgabewert größer als oder gleich 0 ist, ist es den nullbasierten Index des letzten Dateinamen zur Liste hinzugefügt. Der Rückgabewert ist CB_ERR auf, wenn ein Fehler auftritt; der Rückgabewert ist CB_ERRSPACE ist nicht genügend Speicherplatz zum Speichern der neuen Zeichenfolgen zur Verfügung.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion wird nicht von der Windows `ComboBoxEx` Steuerelement. Weitere Informationen zu diesem Steuerelement finden Sie unter [ComboBoxEx-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb775738) im Windows SDK.  
+ Diese Funktion wird nicht von der Windows `ComboBoxEx` Steuerelement. Weitere Informationen zu diesem Steuerelement finden Sie unter [ComboBoxEx-Steuerelemente](/windows/desktop/Controls/comboboxex-controls) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
@@ -537,7 +537,7 @@ int FindString(
  Wenn der Rückgabewert größer als oder gleich 0 ist, ist es der nullbasierte Index des übereinstimmenden Elements. Es ist CB_ERR, wenn die Suche nicht erfolgreich war.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion wird nicht von der Windows `ComboBoxEx` Steuerelement. Weitere Informationen zu diesem Steuerelement finden Sie unter [ComboBoxEx-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb775738) im Windows SDK.  
+ Diese Funktion wird nicht von der Windows `ComboBoxEx` Steuerelement. Weitere Informationen zu diesem Steuerelement finden Sie unter [ComboBoxEx-Steuerelemente](/windows/desktop/Controls/comboboxex-controls) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
@@ -576,13 +576,13 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
   
 ### <a name="parameters"></a>Parameter  
  *pcbi*  
- Ein Zeiger auf die [COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798) Struktur.  
+ Ein Zeiger auf die [COMBOBOXINFO](/windows/desktop/api/winuser/ns-winuser-tagcomboboxinfo) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion emuliert die Funktionen des die [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839) Nachricht, wie im Windows SDK beschrieben.  
+ Diese Memberfunktion emuliert die Funktionen des die [CB_GETCOMBOBOXINFO](/windows/desktop/Controls/cb-getcomboboxinfo) Nachricht, wie im Windows SDK beschrieben.  
   
 ##  <a name="getcount"></a>  CComboBox::GetCount  
  Rufen Sie diese Memberfunktion zum Abrufen der Anzahl der Elemente in der Listenfeld eines Kombinationsfelds an.  
@@ -625,7 +625,7 @@ BOOL GetCueBanner(
 ### <a name="remarks"></a>Hinweise  
  Hinweistext wird eine Eingabeaufforderung, die in das Eingabefeld des Kombinationsfeld-Steuerelement angezeigt wird. Der Hinweistext wird angezeigt, bis der Benutzer die Eingabe vornimmt.  
   
- Diese Methode sendet die [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [CB_GETCUEBANNER](/windows/desktop/Controls/cb-getcuebanner) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getcursel"></a>  CComboBox::GetCurSel  
  Rufen Sie diese Memberfunktion, um zu bestimmen, welches Element im Kombinationsfeld ausgewählt wird.  
@@ -754,13 +754,13 @@ DWORD_PTR GetItemData(int nIndex) const;
  Der 32-Bit-Wert, dem Element oder CB_ERR zugeordnet, wenn ein Fehler auftritt.  
   
 ### <a name="remarks"></a>Hinweise  
- Die 32-Bit-Wert kann festgelegt werden, mit der *DwItemData* Parameter eine [SetItemData](#setitemdata) Aufruf der Memberfunktion. Verwenden der `GetItemDataPtr` Member-Funktion, wenn der 32-Bit-Wert abgerufen werden soll, ein Zeiger ist ( **"void"\***).  
+ Die 32-Bit-Wert kann festgelegt werden, mit der *DwItemData* Parameter eine [SetItemData](#setitemdata) Aufruf der Memberfunktion. Verwenden der `GetItemDataPtr` Member-Funktion, wenn der 32-Bit-Wert abgerufen werden soll, ein Zeiger ist (**"void"** <strong>\*</strong>).  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
- Ruft ab, der von der Anwendung bereitgestellten 32-Bit-Wert zugeordnet ist, mit dem angegebenen Kombinationsfeld-Element als Zeiger ( **"void"\***).  
+ Ruft ab, der von der Anwendung bereitgestellten 32-Bit-Wert zugeordnet ist, mit dem angegebenen Kombinationsfeld-Element als Zeiger (**"void"** <strong>\*</strong>).  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -869,7 +869,7 @@ int GetMinVisible() const;
  Die minimale Anzahl der sichtbaren Elemente in der aktuellen Dropdown-Liste.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [CB_GETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
  Ruft ab, der nullbasierte Index des ersten sichtbaren Elements im Bereich Listenfeld des Kombinationsfelds.  
@@ -939,7 +939,7 @@ int InsertString(
  Im Gegensatz zu der [AddString](#addstring) Member-Funktion, die `InsertString` Memberfunktion bewirkt nicht, eine Liste mit den [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) Stil sortiert werden soll.  
   
 > [!NOTE]
->  Diese Funktion wird nicht von der Windows `ComboBoxEx` Steuerelement. Weitere Informationen zu diesem Steuerelement finden Sie unter [ComboBoxEx-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb775738) im Windows SDK.  
+>  Diese Funktion wird nicht von der Windows `ComboBoxEx` Steuerelement. Weitere Informationen zu diesem Steuerelement finden Sie unter [ComboBoxEx-Steuerelemente](/windows/desktop/Controls/comboboxex-controls) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
@@ -1056,7 +1056,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 ### <a name="remarks"></a>Hinweise  
  Hinweistext wird eine Eingabeaufforderung, die in das Eingabefeld des Kombinationsfeld-Steuerelement angezeigt wird. Der Hinweistext wird angezeigt, bis der Benutzer die Eingabe vornimmt.  
   
- Diese Methode sendet die [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [CB_SETCUEBANNER](/windows/desktop/Controls/cb-setcuebanner) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable *M_combobox*, d. h. verwendet, um das Kombinationsfeld-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -1133,7 +1133,7 @@ BOOL SetEditSel(
  Die Positionen sind nullbasiert. Um das erste Zeichen des Bearbeitungssteuerelements auszuwählen, geben Sie die Position des ersten 0. Die Endposition ist für das Zeichen direkt nach dem letzten Zeichen auswählen. Um die ersten vier Zeichen des Bearbeitungssteuerelements auszuwählen, würden Sie z. B. eine Startposition 0 und einer Endposition von 4 verwenden.  
   
 > [!NOTE]
->  Diese Funktion wird nicht von der Windows `ComboBoxEx` Steuerelement. Weitere Informationen zu diesem Steuerelement finden Sie unter [ComboBoxEx-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb775738) im Windows SDK.  
+>  Diese Funktion wird nicht von der Windows `ComboBoxEx` Steuerelement. Weitere Informationen zu diesem Steuerelement finden Sie unter [ComboBoxEx-Steuerelemente](/windows/desktop/Controls/comboboxex-controls) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CComboBox::GetEditSel](#geteditsel).  
@@ -1207,7 +1207,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
- Legt den 32-Bit-Wert, der das angegebene Element in einem Kombinationsfeld angegebenen Zeiger zugeordnet ( **"void"\***).  
+ Legt den 32-Bit-Wert, der das angegebene Element in einem Kombinationsfeld angegebenen Zeiger zugeordnet (**"void"** <strong>\*</strong>).  
   
 ```  
 int SetItemDataPtr(
@@ -1297,7 +1297,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [CB_SETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable *M_combobox*, d. h. verwendet, um das Kombinationsfeld-Steuerelement programmgesteuert zugreifen. Diese Variable wird im nächsten Beispiel verwendet.  

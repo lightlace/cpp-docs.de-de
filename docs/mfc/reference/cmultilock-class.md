@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a098f275ec0c7b553d7ac192d7b588ffa6dcfa1b
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ebcfda85c82d10f2493234bb340a68129f779a28
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849872"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198111"
 ---
 # <a name="cmultilock-class"></a>CMultiLock-Klasse
 Stellt den Mechanismus zur Zugriffssteuerung dar, mit dessen Hilfe der Zugriff auf Ressourcen in einem Multithreadprogramm gesteuert wird.  
@@ -128,7 +128,7 @@ DWORD Lock(
  Gibt an, ob alle Objekte, die auf die gewartet, die zur gleichen Zeit vor der Rückgabe signalisiert werden müssen. False gibt an, `Lock` zurück, wenn die Objekte, die auf die gewartet signalisiert wird.  
   
  *dwWakeMask*  
- Gibt andere Bedingungen, die zulässig sind, den Wartevorgang abgebrochen. Eine vollständige Liste der verfügbaren Optionen für diesen Parameter, finden Sie unter [MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) im Windows SDK.  
+ Gibt andere Bedingungen, die zulässig sind, den Wartevorgang abgebrochen. Eine vollständige Liste der verfügbaren Optionen für diesen Parameter, finden Sie unter [MsgWaitForMultipleObjects](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wenn `Lock` fehlschlägt, wird – 1. Im Erfolgsfall gibt es einen der folgenden Werte zurück:  

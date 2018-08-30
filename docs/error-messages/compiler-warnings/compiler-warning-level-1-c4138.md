@@ -1,5 +1,5 @@
 ---
-title: Compilerwarnung (Stufe 1) C4138 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4138 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0865935c30c4934684c7a12e50ab26f3e8b12c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc3102f18021c16663bdf61dcde6df5e6893d46c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277032"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197087"
 ---
 # <a name="compiler-warning-level-1-c4138"></a>Compilerwarnung (Stufe 1) C4138
 "*/" wurde außerhalb des Kommentars gefunden  
   
- Dem schließenden Kommentartrennzeichen geht kein öffnendes Kommentartrennzeichen voran. Der Compiler nimmt an, dass zwischen dem Sternchen (**\****) und dem Schrägstrich (/) ein Leerzeichen steht.  
+ Dem schließenden Kommentartrennzeichen geht kein öffnendes Kommentartrennzeichen voran. Der Compiler nimmt an, dass zwischen dem Sternchen (<strong>\**</strong>) und dem Schrägstrich (/) ein Leerzeichen steht.  
   
 ## <a name="example"></a>Beispiel  
   

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75742b466b284a24d6771971a831dfc91303c834
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882431"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203715"
 ---
 # <a name="composite-control-global-functions"></a>Globale Funktionen zusammengesetzter Steuerelemente
 Diese Funktionen bieten Unterstützung für das Erstellen von Dialogfeldern, und klicken Sie zum Erstellen, hosten und Lizenzierung von ActiveX-Steuerelementen.  
@@ -77,13 +77,13 @@ ATLAPI_(int) AtlAxDialogBox(
  [in] Identifiziert eine Instanz des Moduls, deren ausführbare Datei der Dialogfeldvorlage enthält.  
   
  *lpTemplateName*  
- [in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) Makro zum Erstellen dieses Werts.  
+ [in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) Makro zum Erstellen dieses Werts.  
   
  *hWndParent*  
  [in] Gibt das Fenster, das Dialogfeld besitzt.  
   
  *lpDialogProc*  
- [in] Verweist auf die Dialogfeldprozedur. Weitere Informationen über die Dialogfeldprozedur finden Sie unter [DialogProc-Funktion](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Verweist auf die Dialogfeldprozedur. Weitere Informationen über die Dialogfeldprozedur finden Sie unter [DialogProc-Funktion](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.  
@@ -99,9 +99,9 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- Weitere Informationen zum Bearbeiten des Ressourcenskripts finden Sie unter [Vorgehensweise: Öffnen einer Ressourcenskriptdatei im Textformat](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Weitere Informationen zu Ressourcendefinition Anweisungen, finden Sie unter [allgemeine Steuerelementparameter](http://msdn.microsoft.com/library/windows/desktop/aa380902) unter Windows SDK *: SDK Tools*.  
+ Weitere Informationen zum Bearbeiten des Ressourcenskripts finden Sie unter [Vorgehensweise: Öffnen einer Ressourcenskriptdatei im Textformat](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Weitere Informationen zu Ressourcendefinition Anweisungen, finden Sie unter [allgemeine Steuerelementparameter](/windows/desktop/menurc/common-control-parameters) unter Windows SDK *: SDK Tools*.  
   
- Weitere Informationen zu Dialogfeldern, die im Allgemeinen finden Sie unter [Dialogfeld](http://msdn.microsoft.com/library/windows/desktop/ms645452) und [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) im Windows SDK.  
+ Weitere Informationen zu Dialogfeldern, die im Allgemeinen finden Sie unter [Dialogfeld](/windows/desktop/api/winuser/nf-winuser-dialogboxa) und [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) im Windows SDK.  
   
 ##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  Erstellt ein nicht modales Dialogfeld aus einer vom Benutzer angegebenen Dialogfeldvorlage.  
@@ -120,13 +120,13 @@ ATLAPI_(HWND) AtlAxCreateDialog(
  [in] Identifiziert eine Instanz des Moduls, deren ausführbare Datei der Dialogfeldvorlage enthält.  
   
  *lpTemplateName*  
- [in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms648029) Makro zum Erstellen dieses Werts.  
+ [in] Identifiziert die Dialogfeldvorlage. Dieser Parameter ist entweder der Zeiger auf eine Null-terminierte Zeichenfolge, die gibt den Namen der Dialogfeldvorlage oder ein ganzzahliger Wert, der angibt, den Ressourcenbezeichner, der die Dialogfeldvorlage. Wenn der Parameter einen Ressourcenbezeichner angegeben ist, dessen höherwertiges Wort muss 0 (null) sein, und seine niederwertige Wort muss den Bezeichner enthalten. Sie können die [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) Makro zum Erstellen dieses Werts.  
   
  *hWndParent*  
  [in] Gibt das Fenster, das Dialogfeld besitzt.  
   
  *lpDialogProc*  
- [in] Verweist auf die Dialogfeldprozedur. Weitere Informationen über die Dialogfeldprozedur finden Sie unter [DialogProc-Funktion](http://msdn.microsoft.com/library/windows/desktop/ms645469).  
+ [in] Verweist auf die Dialogfeldprozedur. Weitere Informationen über die Dialogfeldprozedur finden Sie unter [DialogProc-Funktion](https://msdn.microsoft.com/library/windows/desktop/ms645469).  
   
  *dwInitParam*  
  [in] Gibt den Wert zu übergeben, um das Dialogfeld in der *lParam* -Parameter der WM_INITDIALOG-Meldung.  
@@ -137,7 +137,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 ### <a name="remarks"></a>Hinweise  
  Im daraufhin angezeigten Dialogfeld kann ActiveX-Steuerelemente enthalten.  
   
- Finden Sie unter [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) und [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) in das Windows SDK.  
+ Finden Sie unter [CreateDialog](/windows/desktop/api/winuser/nf-winuser-createdialoga) und [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) in das Windows SDK.  
   
 ##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  Erstellt ein ActiveX-Steuerelement, initialisiert es und hostet es im angegebenen Fenster.  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  Ungleich NULL, wenn die Initialisierung des Steuerelements Hostcode erfolgreich war; andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion muss aufgerufen werden, bevor Sie mit dem ATL-Steuerelement, das hosting-API. Nach einem Aufruf dieser Funktion die **"AtlAxWin"** Window-Klasse kann verwendet werden, in Aufrufen von [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) oder [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)gemäß der Beschreibung in das Windows SDK.  
+ Diese Funktion muss aufgerufen werden, bevor Sie mit dem ATL-Steuerelement, das hosting-API. Nach einem Aufruf dieser Funktion die **"AtlAxWin"** Window-Klasse kann verwendet werden, in Aufrufen von [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) oder [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)gemäß der Beschreibung in das Windows SDK.  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinInit  
  Diese Funktion hebt die Initialisierung ATLs Steuerelements durch Aufheben der Registrierung der **"AtlAxWin80"** und **"AtlAxWinLic80"** Fensterklassen.  
@@ -455,7 +455,7 @@ inline BOOL AtlAxWinTerm();
  Gibt immer "true" zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion ruft einfach [UnregisterClass](http://msdn.microsoft.com/library/windows/desktop/ms644899) wie beschrieben in das Windows SDK.  
+ Diese Funktion ruft einfach [UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) wie beschrieben in das Windows SDK.  
   
  Rufen Sie diese Funktion zu bereinigen, nachdem alle vorhandenen Hostfenster zerstört wurden, wenn Sie aufgerufen [AtlAxWinInit](#atlaxwininit) und Sie nicht mehr benötigen, um Host-Windows zu erstellen. Wenn Sie diese Funktion nicht aufrufen, werden die Fensterklasse aufgehoben automatisch beim Beenden des Prozesses.  
   

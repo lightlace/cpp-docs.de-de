@@ -1,5 +1,5 @@
 ---
-title: Projektbuildfehler prj0013 | Microsoft Docs
+title: Projektbuildfehler prj0013 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d055043d5c7e7b030557ab03ceb7181c664ce01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aeb0ac9011697c440667a538bd1805780810fb4a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318775"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221558"
 ---
 # <a name="project-build-error-prj0013"></a>Projektbuildfehler PRJ0013
 Möglicherweise sind nicht genügend Systemressourcen vorhanden. Ein Pipe, der zum Starten eines Builds erforderlich ist, konnte nicht erstellt werden.  
   
  Dieser Fehler weist darauf hin, dass möglicherweise nicht genügend Systemressourcen vorhanden sind. Sie können diesen Fehler beheben, indem Sie die Systemressourcenauslastung durch andere Prozesse/Anwendungen verringern.  
   
- Dieser Fehler kann auch auftreten, wenn Ihre Sicherheitsstufe nicht zum Erstellen von Pipes ausreicht (siehe [CreatePipe](http://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)).
+ Dieser Fehler kann auch auftreten, wenn Ihre Sicherheitsstufe nicht zum Erstellen von Pipes ausreicht (siehe [CreatePipe](https://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)).

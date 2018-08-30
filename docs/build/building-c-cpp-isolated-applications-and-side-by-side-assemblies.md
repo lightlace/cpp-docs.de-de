@@ -1,5 +1,5 @@
 ---
-title: Erstellen von C/C++-isolierten Anwendungen und Side-by-Side Assemblys | Microsoft Docs
+title: Erstellen von C/C++-Anwendungen und Seite-an-Seite-Assemblys isoliert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ca99de7403ad56ae82fdd25af8ff22167084b91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b8d806af709d6d6e2a5754bc80a34a473900177f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361283"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212911"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Erstellen von isolierten Anwendungen und parallelen Assemblys (C/C++)
-Visual C++ unterstützt ein Bereitstellungsmodell für Windows-Clientanwendungen, das auf der Idee von [isolierten Anwendungen](http://msdn.microsoft.com/library/aa375190) und [parallelen Assemblys](http://msdn.microsoft.com/library/ff951640)basiert. Standardmäßig erstellt Visual C++ alle nativen C/C++-Anwendungen als isolierte Anwendungen, die [Manifeste](http://msdn.microsoft.com/library/aa375365) verwenden, um ihre Abhängigkeiten von Visual C++-Bibliotheken zu beschreiben.  
+Visual C++ unterstützt ein Bereitstellungsmodell für Windows-Clientanwendungen, die basierend auf der Idee von [isoliert Anwendungen](/windows/desktop/SbsCs/isolated-applications) und [Side-by-Side Assemblys](/windows/desktop/SbsCs/about-side-by-side-assemblies-). Standardmäßig erstellt Visual C++ alle nativen C/C++-Anwendungen als isolierte Anwendungen, mit denen [Manifeste](https://msdn.microsoft.com/library/aa375365) um ihre Abhängigkeiten von Visual C++-Bibliotheken zu beschreiben.  
   
- Das Erstellen von C/C++-Programmen als isolierte Anwendungen bietet eine Reihe von Vorteilen. Eine isolierte Anwendung ist beispielsweise nicht betroffen, wenn andere C/C++-Anwendungen Visual C++-Bibliotheken installieren oder deinstallieren. Visual C++-Bibliotheken, die von isolierten Anwendungen verwendet werden, können trotzdem entweder in den lokalen Ordner der Anwendung oder durch Installation in den nativen Assemblycache (WinSxS) neu verteilt werden. Dennoch kann die Wartung von Visual C++-Bibliotheken für bereits bereitgestellte Anwendungen durch die Verwendung einer [Herausgeberkonfigurationsdatei](http://msdn.microsoft.com/library/aa375680)vereinfacht werden. Mit dem isolierten Anwendungsbereitstellungsmodell können Sie einfacher sicherstellen, dass C/C++-Anwendungen, die auf einem bestimmten Computer ausgeführt werden, die neueste Version der Visual C++-Bibliotheken verwenden, aber gleichzeitig die Möglichkeit offenhalten, dass Systemadministratoren und Anwendungsentwickler die explizite Versionsbindung von Anwendungen an ihre abhängigen DLLs steuern können.  
+ Das Erstellen von C/C++-Programmen als isolierte Anwendungen bietet eine Reihe von Vorteilen. Eine isolierte Anwendung ist beispielsweise nicht betroffen, wenn andere C/C++-Anwendungen Visual C++-Bibliotheken installieren oder deinstallieren. Visual C++-Bibliotheken, die von isolierten Anwendungen verwendet möglicherweise immer noch im lokalen Ordner der Anwendung oder durch Installation in den nativen Assemblycache (WinSxS); verteilt werden Allerdings Wartung von Visual C++-Bibliotheken für bereits bereitgestellte Anwendungen vereinfacht werden können, mit einem [Herausgeberkonfigurationsdatei](/windows/desktop/SbsCs/publisher-configuration). Mit dem isolierten Anwendungsbereitstellungsmodell können Sie einfacher sicherstellen, dass C/C++-Anwendungen, die auf einem bestimmten Computer ausgeführt werden, die neueste Version der Visual C++-Bibliotheken verwenden, aber gleichzeitig die Möglichkeit offenhalten, dass Systemadministratoren und Anwendungsentwickler die explizite Versionsbindung von Anwendungen an ihre abhängigen DLLs steuern können.  
   
  In diesem Abschnitt wird erläutert, wie Sie eine C/C++-Anwendung als isolierte Anwendung erstellen und sicherstellen können, dass sie über ein Manifest an Visual C++-Bibliotheken gebunden ist. Die Informationen in diesem Abschnitt gelten primäre für systemeigene, oder nicht verwaltete, Visual C++-Anwendungen. Informationen zur Bereitstellung mit Visual C++ erstellter nativer Anwendungen finden Sie unter [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).  
   
@@ -49,6 +49,6 @@ Visual C++ unterstützt ein Bereitstellungsmodell für Windows-Clientanwendungen
  [Problembehandlung bei isolierten Anwendungen und parallelen Assemblys (C/C++)](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Isolierte Anwendungen und parallele Assemblys](http://msdn.microsoft.com/library/dd408052)  
+ [Isolierte Anwendungen und Seite-an-Seite-Assemblys](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)  
   
- [Bereitstellen von Desktopanwendungen](../ide/deploying-native-desktop-applications-visual-cpp.md)
+ [Deploying Desktop Applications (Bereitstellen von Desktopanwendungen)](../ide/deploying-native-desktop-applications-visual-cpp.md)

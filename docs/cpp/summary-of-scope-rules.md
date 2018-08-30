@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4439ec167cca7a2e3314879faf4c65c842801e90
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: d58bf1d860bac7328c491164f6aeb77bed19b9cd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39465472"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195030"
 ---
 # <a name="summary-of-scope-rules"></a>Zusammenfassung der Bereichsregeln
 Die Verwendung eines Name muss innerhalb seines Bereichs eindeutig sein (bis zu dem Punkt, an dem das Überladen bestimmt wird). Wenn der Name eine Funktion kennzeichnet, muss die Funktion im Hinblick auf Anzahl und Typ der Parameter eindeutig sein. Wenn der Name eindeutig bleibt [Memberzugriff](../cpp/member-access-control-cpp.md) Regeln angewendet werden.  
   
 ## <a name="constructor-initializers"></a>Konstruktorinitialisierer  
- Konstruktorinitialisierer (beschrieben [Initialisieren von Basen und Membern](http://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) werden ausgewertet, im Gültigkeitsbereich des äußersten Blocks des Konstruktors für die sie angegeben sind. Daher können sie die Parameternamen des Konstruktors verwenden.  
+ Konstruktorinitialisierer (beschrieben [Initialisieren von Basen und Membern](https://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) werden ausgewertet, im Gültigkeitsbereich des äußersten Blocks des Konstruktors für die sie angegeben sind. Daher können sie die Parameternamen des Konstruktors verwenden.  
   
 ## <a name="global-names"></a>Globale Namen  
  Ein Name eines Objekts, einer Funktion oder eines Enumerators ist global, wenn er außerhalb einer Funktion oder Klasse eingefügt oder ihm der globale unäre Bereichsoperator (`::`) vorangestellt wird und er nicht in Verbindung mit einem dieser binären Operatoren verwendet wird:  

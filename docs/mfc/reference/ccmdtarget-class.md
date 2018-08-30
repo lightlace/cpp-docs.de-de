@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6630ad9721b7a58e7da2660337660cc7916db01
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: bb4d7a06d728bddfd4ba1ee355cb4d1e0b5b9fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540851"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43221709"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget-Klasse
 Die Basisklasse für die meldungszuordnungsarchitektur der Microsoft Foundation Class-Bibliothek.  
@@ -163,19 +163,19 @@ BOOL DoOleVerb(
  Numerischer Bezeichner des Verbs.  
   
  *lpMsg*  
- Zeiger auf die [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) Struktur, die Beschreibung des Ereignisses (z. B. einem Doppelklick), die das Verb aufgerufen hat.  
+ Zeiger auf die [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) Struktur, die Beschreibung des Ereignisses (z. B. einem Doppelklick), die das Verb aufgerufen hat.  
   
  *hWndParent*  
  Das Handle des Dokumentfensters, das das Objekt enthält.  
   
  *lpRect*  
- Zeiger auf die [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur mit den Koordinaten, in Pixel, die ein Objekt definieren, die das Begrenzungsrechteck in *HwndParent*.  
+ Zeiger auf die [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur mit den Koordinaten, in Pixel, die ein Objekt definieren, die das Begrenzungsrechteck in *HwndParent*.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn erfolgreich, andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion ist im Grunde eine Implementierung von [IOleObject](http://msdn.microsoft.com/library/windows/desktop/ms694508). Die möglichen Aktionen werden durch den aufgezählt [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
+ Diese Memberfunktion ist im Grunde eine Implementierung von [IOleObject](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb). Die möglichen Aktionen werden durch den aufgezählt [CCmdTarget::EnumOleVerbs](#enumoleverbs).  
   
 ##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
  Rufen Sie diese Funktion zum Aktivieren der OLE-Automatisierung für ein Objekt.  
@@ -229,13 +229,13 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
   
 ### <a name="parameters"></a>Parameter  
  *ppenumOleVerb*  
- Ein Zeiger auf einen Zeiger auf ein [IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084) Schnittstelle.  
+ Ein Zeiger auf einen Zeiger auf ein [IEnumOLEVERB](/windows/desktop/api/oleidl/nn-oleidl-ienumoleverb) Schnittstelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Objekt mindestens ein OLE-Verb unterstützt (in diesem Fall \* *PpenumOleVerb* verweist auf eine `IEnumOLEVERB` Enumerator-Schnittstelle), andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion ist im Grunde eine Implementierung von [IOleObject:: EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
+ Diese Memberfunktion ist im Grunde eine Implementierung von [IOleObject:: EnumVerbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs).  
   
 ##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
  Mit dieser Funktion wird zum Zuordnen einer `IDispatch` -Zeiger ist, Empfangen von Automation-Memberfunktionen einer Klasse, in der `CCmdTarget` Objekt, das die Schnittstellen implementiert die `IDispatch` Objekt.  
@@ -263,7 +263,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
   
 ### <a name="parameters"></a>Parameter  
  *pIID*  
- Ein Zeiger auf eine Schnittstellen-ID (eine [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)).  
+ Ein Zeiger auf eine Schnittstellen-ID (eine [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)).  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn erfolgreich, andernfalls "false". Im Erfolgsfall \* *pIID* festgelegt ist, um die primäre Dispatch-Schnittstellen-ID.  
@@ -288,7 +288,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
  Die `IDispatch` Zeiger, die dem Objekt zugeordnet.  
   
 ### <a name="remarks"></a>Hinweise  
- Um Objekte für diesen Aufruf `EnableAutomation` in ihren Konstruktoren, stellt sie Automation aktiviert ist, gibt diese Funktion einen Zeiger der Foundation Class-Implementierung von `IDispatch` , wird von Clients verwendet, die für die Kommunikation über die `IDispatch` Schnittstelle. Ein Verweis auf den Zeiger, durch das Aufrufen dieser Funktion wird automatisch hinzugefügt werden, daher es nicht notwendig ist, einen Aufruf an [IUnknown:: AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379).  
+ Um Objekte für diesen Aufruf `EnableAutomation` in ihren Konstruktoren, stellt sie Automation aktiviert ist, gibt diese Funktion einen Zeiger der Foundation Class-Implementierung von `IDispatch` , wird von Clients verwendet, die für die Kommunikation über die `IDispatch` Schnittstelle. Ein Verweis auf den Zeiger, durch das Aufrufen dieser Funktion wird automatisch hinzugefügt werden, daher es nicht notwendig ist, einen Aufruf an [IUnknown:: AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref).  
   
 ##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
  Ruft die Anzahl der Schnittstellen mit Typinformationen, die ein Objekt bereitstellt.  
@@ -320,7 +320,7 @@ HRESULT GetTypeInfoOfGuid(
  Ein Gebietsschemabezeichner ( `LCID`).  
   
  *GUID*  
- Die [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931) der typenbeschreibung.  
+ Die [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) der typenbeschreibung.  
   
  *ppTypeInfo*  
  Zeiger auf einen Zeiger auf die `ITypeInfo` Schnittstelle.  

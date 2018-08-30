@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a65008b01262ad6252e9942444a4e80602d4292
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: e34df871a655515bf4399b136de32db61d66ae0c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208636"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204866"
 ---
 # <a name="ctype-class"></a>ctype-Klasse
 
@@ -66,7 +66,8 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>Parameter
 
-*CharType* den Typ innerhalb eines Programms zum Codieren von Zeichen verwendet.
+*CharType*<br/>
+ Der Typ, der innerhalb eines Programms verwendet wird, um Zeichen zu codieren.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -74,17 +75,17 @@ Wie bei jedem Gebietsschemafacet hat die statische Objekt-ID einen anfänglichen
 
 Die C++-Standardbibliothek definiert zwei explizite Spezialisierungen dieser Vorlagenklasse:
 
-- [ctype](../standard-library/ctype-char-class.md)< `char`>, eine explizite Spezialisierung, deren Unterschiede gesondert beschrieben werden.
+- `ctype<char>`, eine explizite Spezialisierung, deren Unterschiede gesondert beschrieben werden. Weitere Informationen finden Sie unter [Ctype&lt;Char&gt; Klasse](../standard-library/ctype-char-class.md).
 
-- **ctype**<`wchar_t`>, die Elemente als Breitzeichen behandelt.
+- `ctype<wchar_t>`, die Elemente als Breitzeichen behandelt.
 
-Andere Spezialisierungen der Vorlagenklasse **ctype**\< **CharType**>:
+Andere spezialisierungen der Vorlagenklasse `ctype<CharType>`:
 
-- Konvertiert einen Wert ***ch*** des Typs `CharType` auf einen Wert vom Typ **Char** mit dem Ausdruck (`char`) **ch**.
+- Konvertiert einen Wert *ch* des Typs *CharType* auf einen Wert vom Typ **Char** mit dem Ausdruck `(char)ch`.
 
-- Konvertiert einen Wert ***Byte*** des Typs **Char** auf einen Wert vom Typ `CharType` mit dem Ausdruck **CharType** (**Byte**).
+- Konvertiert einen Wert *Byte* des Typs **Char** auf einen Wert vom Typ *CharType* mit dem Ausdruck `CharType(byte)`.
 
-Alle anderen Vorgänge werden für **Char** Werte in die gleiche Weise wie für die explizite Spezialisierung **Ctype**<`char`>.
+Alle anderen Vorgänge werden für **Char** Werte in die gleiche Weise wie für die explizite Spezialisierung `ctype<char>`.
 
 ### <a name="constructors"></a>Konstruktoren
 
@@ -149,7 +150,8 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parameter
 
-*_Refs* Ganzzahlwert verwendet, um den Typ für die Speicherverwaltung für das Objekt anzugeben.
+*_Refs*<br/>
+ Integerwert, der zum Angeben des Speicherverwaltungstyps für das Objekt verwendet wird.
 
 ### <a name="remarks"></a>Hinweise
 
@@ -183,15 +185,20 @@ virtual const CharType *do_is(
 
 ### <a name="parameters"></a>Parameter
 
-*MaskVal* der Maskenwert, für die das Zeichen, die zu testende ist.
+*maskVal*<br/>
+ Der Maskenwert, für den das Zeichen getestet werden soll.
 
-*CH* der Zeichen, dessen Attribute getestet werden.
+*ch*<br/>
+ Das Zeichen, dessen Attribute getestet werden sollen.
 
-*erste* ein Zeiger auf das erste Zeichen in den Bereich, dessen Attribute klassifiziert werden sollen.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in einem Bereich, dessen Attribute klassifiziert werden sollen.
 
-*letzte* ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in den Bereich, dessen Attribute klassifiziert werden sollen.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Bereich, dessen Attribute klassifiziert werden sollen.
 
-*Dest* ein Zeiger auf den Anfang des Arrays, in die Maskenwerte, die die Attribute der einzelnen Zeichen sind, gespeichert werden.
+*dest*<br/>
+ Ein Zeiger auf eine Stelle am Anfang des Arrays, an der die Maskenwerte, die die Attribute der einzelnen Zeichen beschreiben, gespeichert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -226,15 +233,20 @@ virtual const CharType* do_narrow(
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das Zeichen vom Typ `Chartype` vom Gebietsschema verwendet wird, konvertiert werden.
+*ch*<br/>
+ Das zu konvertierende Zeichen vom Typ `Chartype`, das vom Gebietsschema verwendet wird.
 
-*standardmäßige* den Standardwert zurück, die von der Memberfunktion Zeichen vom Typ zugewiesen werden `CharType` , die keine entsprechenden Zeichen vom Typ **Char**.
+*default*<br/>
+ Der Standardwert von der Memberfunktion Zeichen vom Typ zugewiesen werden `CharType` , die keine entsprechenden Zeichen vom Typ **Char**.
 
-*erste* ein Zeiger auf das erste Zeichen im Bereich von Zeichen konvertiert werden sollen.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in dem Bereich, in dem Zeichen konvertiert werden sollen.
 
-*letzte* ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen im Bereich von Zeichen konvertiert werden sollen.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Bereich, in dem Zeichen konvertiert werden sollen.
 
-*Dest* ein const-Zeiger auf das erste Zeichen des Typs **Char** im Zielbereich, in dem der konvertierten Zeichenbereich gespeichert.
+*dest*<br/>
+ Ein const-Zeiger auf das erste Zeichen des Typs **Char** im Zielbereich, in dem der konvertierten Zeichenbereich gespeichert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -263,11 +275,14 @@ virtual const CharType *do_scan_is(
 
 ### <a name="parameters"></a>Parameter
 
-*MaskVal* der Maskenwert, die von einem Zeichen zugeordnet werden.
+*maskVal*<br/>
+ Der Maskenwert, mit dem ein Zeichen übereinstimmen soll.
 
-*erste* ein Zeiger auf das erste Zeichen im Bereich gesucht werden soll.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in dem Bereich, in dem gesucht werden soll.
 
-*letzte* ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen im Bereich gesucht werden soll.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Bereich, in dem gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -294,11 +309,14 @@ virtual const CharType *do_scan_not(
 
 ### <a name="parameters"></a>Parameter
 
-*MaskVal* der Maskenwert nicht, die von einem Zeichen zugeordnet werden.
+*maskVal*<br/>
+ Der Maskenwert, mit dem ein Zeichen nicht übereinstimmen soll.
 
-*erste* ein Zeiger auf das erste Zeichen im Bereich gesucht werden soll.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in dem Bereich, in dem gesucht werden soll.
 
-*letzte* ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen im Bereich gesucht werden soll.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Bereich, in dem gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -327,11 +345,14 @@ virtual const CharType *do_tolower(
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das Zeichen in Kleinbuchstaben konvertiert werden soll.
+*ch*<br/>
+ Das Zeichen, das in einen Kleinbuchstaben umgewandelt werden soll.
 
-*erste* ein Zeiger auf das erste Zeichen im Bereich von Zeichen, dessen Fällen konvertiert werden.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in dem Zeichenbereich, in dem die Zeichen in Groß- bzw. Kleinbuchstaben umgewandelt werden sollen.
 
-*letzte* ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen im Bereich von Zeichen, dessen Fällen konvertiert werden.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Zeichenbereich, in dem die Zeichen in Groß- bzw. Kleinbuchstaben umgewandelt werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -360,11 +381,14 @@ virtual const CharType *do_toupper(
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das Zeichen in Großbuchstaben konvertiert werden soll.
+*ch*<br/>
+ Das Zeichen, das in einen Großbuchstaben umgewandelt werden soll.
 
-*erste* ein Zeiger auf das erste Zeichen im Bereich von Zeichen, dessen Fällen konvertiert werden.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in dem Zeichenbereich, in dem die Zeichen in Groß- bzw. Kleinbuchstaben umgewandelt werden sollen.
 
-*letzte* ein Zeiger auf Zeichen direkt nach dem letzten Zeichen im Bereich von Zeichen, dessen Fällen konvertiert werden.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Zeichenbereich, in dem die Zeichen in Groß- bzw. Kleinbuchstaben umgewandelt werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -394,13 +418,17 @@ virtual const char *do_widen(
 
 ### <a name="parameters"></a>Parameter
 
-*Byte* das Zeichen vom Typ **Char** im systemeigenen Zeichensatz konvertiert werden.
+*byte*<br/>
+ Das Zeichen vom Typ **Char** im systemeigenen Zeichensatz konvertiert werden.
 
-*erste* ein Zeiger auf das erste Zeichen im Bereich von Zeichen konvertiert werden sollen.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in dem Bereich, in dem Zeichen konvertiert werden sollen.
 
-*letzte* ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen im Bereich von Zeichen konvertiert werden sollen.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Bereich, in dem Zeichen konvertiert werden sollen.
 
-*Dest* ein Zeiger auf das erste Zeichen vom Typ `CharType` im Zielbereich, in dem der konvertierten Zeichenbereich gespeichert.
+*dest*<br/>
+ Ein Zeiger auf das erste Zeichen vom Typ `CharType` in dem Zielbereich, in dem der konvertierte Zeichenbereich gespeichert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -432,15 +460,20 @@ const CharType *is(
 
 ### <a name="parameters"></a>Parameter
 
-*MaskVal* der Maskenwert, für die das Zeichen, die zu testende ist.
+*maskVal*<br/>
+ Der Maskenwert, für den das Zeichen getestet werden soll.
 
-*CH* der Zeichen, dessen Attribute getestet werden.
+*ch*<br/>
+ Das Zeichen, dessen Attribute getestet werden sollen.
 
-*erste* ein Zeiger auf das erste Zeichen in den Bereich, dessen Attribute klassifiziert werden sollen.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in einem Bereich, dessen Attribute klassifiziert werden sollen.
 
-*letzte* ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in den Bereich, dessen Attribute klassifiziert werden sollen.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Bereich, dessen Attribute klassifiziert werden sollen.
 
-*Dest* ein Zeiger auf den Anfang des Arrays, in die Maskenwerte, die die Attribute der einzelnen Zeichen sind, gespeichert werden.
+*dest*<br/>
+ Ein Zeiger auf eine Stelle am Anfang des Arrays, an der die Maskenwerte, die die Attribute der einzelnen Zeichen beschreiben, gespeichert werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -508,15 +541,20 @@ const CharType* narrow(
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das Zeichen vom Typ `Chartype` vom Gebietsschema verwendet wird, konvertiert werden.
+*ch*<br/>
+ Das zu konvertierende Zeichen vom Typ `Chartype`, das vom Gebietsschema verwendet wird.
 
-*standardmäßige* den Standardwert zurück, die von der Memberfunktion Zeichen vom Typ zugewiesen werden `CharType` , die keine entsprechenden Zeichen vom Typ **Char**.
+*default*<br/>
+ Der Standardwert von der Memberfunktion Zeichen vom Typ zugewiesen werden `CharType` , die keine entsprechenden Zeichen vom Typ **Char**.
 
-*erste* ein Zeiger auf das erste Zeichen im Bereich von Zeichen konvertiert werden sollen.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in dem Bereich, in dem Zeichen konvertiert werden sollen.
 
-*letzte* ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen im Bereich von Zeichen konvertiert werden sollen.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Bereich, in dem Zeichen konvertiert werden sollen.
 
-*Dest* ein const-Zeiger auf das erste Zeichen des Typs **Char** im Zielbereich, in dem der konvertierten Zeichenbereich gespeichert.
+*dest*<br/>
+ Ein const-Zeiger auf das erste Zeichen des Typs **Char** im Zielbereich, in dem der konvertierten Zeichenbereich gespeichert.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -567,11 +605,14 @@ const CharType *scan_is(
 
 ### <a name="parameters"></a>Parameter
 
-*MaskVal* der Maskenwert, die von einem Zeichen zugeordnet werden.
+*maskVal*<br/>
+ Der Maskenwert, mit dem ein Zeichen übereinstimmen soll.
 
-*erste* ein Zeiger auf das erste Zeichen im Bereich gesucht werden soll.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in dem Bereich, in dem gesucht werden soll.
 
-*letzte* ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen im Bereich gesucht werden soll.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Bereich, in dem gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -620,11 +661,14 @@ const CharType *scan_not(
 
 ### <a name="parameters"></a>Parameter
 
-*MaskVal* der Maskenwert nicht, die von einem Zeichen zugeordnet werden.
+*maskVal*<br/>
+ Der Maskenwert, mit dem ein Zeichen nicht übereinstimmen soll.
 
-*erste* ein Zeiger auf das erste Zeichen im Bereich gesucht werden soll.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in dem Bereich, in dem gesucht werden soll.
 
-*letzte* ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen im Bereich gesucht werden soll.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Bereich, in dem gesucht werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -673,11 +717,14 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das Zeichen in Kleinbuchstaben konvertiert werden soll.
+*ch*<br/>
+ Das Zeichen, das in einen Kleinbuchstaben umgewandelt werden soll.
 
-*erste* ein Zeiger auf das erste Zeichen im Bereich von Zeichen, dessen Fällen konvertiert werden.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in dem Zeichenbereich, in dem die Zeichen in Groß- bzw. Kleinbuchstaben umgewandelt werden sollen.
 
-*letzte* ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen im Bereich von Zeichen, dessen Fällen konvertiert werden.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Zeichenbereich, in dem die Zeichen in Groß- bzw. Kleinbuchstaben umgewandelt werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -725,11 +772,14 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parameter
 
-*CH* das Zeichen in Großbuchstaben konvertiert werden.
+*ch*<br/>
+ Das Zeichen, das in einen Großbuchstaben umgewandelt werden soll.
 
-*erste* ein Zeiger auf das erste Zeichen im Bereich von Zeichen, dessen Fällen konvertiert werden.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in dem Zeichenbereich, in dem die Zeichen in Groß- bzw. Kleinbuchstaben umgewandelt werden sollen.
 
-*letzte* ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen im Bereich von Zeichen, dessen Fällen konvertiert werden.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Zeichenbereich, in dem die Zeichen in Groß- bzw. Kleinbuchstaben umgewandelt werden sollen.
 
 ### <a name="return-value"></a>Rückgabewert
 
@@ -777,13 +827,17 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 
 ### <a name="parameters"></a>Parameter
 
-*Byte* legen Sie das Zeichen vom Typ Char im nativen Zeichensatz, der konvertiert werden.
+*byte*<br/>
+ Das Zeichen vom Typ char im nativen Zeichensatz, das umgewandelt werden soll.
 
-*erste* ein Zeiger auf das erste Zeichen im Bereich von Zeichen konvertiert werden sollen.
+*Erste*<br/>
+ Ein Zeiger auf das erste Zeichen in dem Bereich, in dem Zeichen konvertiert werden sollen.
 
-*letzte* ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen im Bereich von Zeichen konvertiert werden sollen.
+*last*<br/>
+ Ein Zeiger auf das Zeichen direkt nach dem letzten Zeichen in dem Bereich, in dem Zeichen konvertiert werden sollen.
 
-*Dest* ein Zeiger auf das erste Zeichen vom Typ `CharType` im Zielbereich, in dem der konvertierten Zeichenbereich gespeichert.
+*dest*<br/>
+ Ein Zeiger auf das erste Zeichen vom Typ `CharType` in dem Zielbereich, in dem der konvertierte Zeichenbereich gespeichert wird.
 
 ### <a name="return-value"></a>Rückgabewert
 

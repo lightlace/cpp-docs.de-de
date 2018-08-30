@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd58faa0cda2162f1abe906da8e38d4d62402db8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: acf85412f6fde233d592f545b6611053a2f80e01
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850208"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215356"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Schieberegler-Steuerelements bereit.  
@@ -206,10 +206,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
  *dwStyle*  
- Gibt das Schieberegler-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Stile der Schieberegler-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb760147), in der Windows-SDK verwenden, um das Steuerelement beschrieben.  
+ Gibt das Schieberegler-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Stile der Schieberegler-Steuerelemente](/windows/desktop/Controls/trackbar-control-styles), in der Windows-SDK verwenden, um das Steuerelement beschrieben.  
   
  *Rect*  
- Gibt an, Größe und Position des Schieberegler-Steuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
+ Gibt an, Größe und Position des Schieberegler-Steuerelements. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
   
  *pParentWnd*  
  Gibt an, das Schieberegler-Steuerelement übergeordnete Fenster, in der Regel eine `CDialog`. Es darf nicht NULL sein.  
@@ -241,13 +241,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
  *dwStyle*  
- Gibt das Schieberegler-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Stile der Schieberegler-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb760147), in der Windows-SDK verwenden, um das Steuerelement beschrieben.  
+ Gibt das Schieberegler-Steuerelement-Stil. Wenden Sie eine beliebige Kombination von [Stile der Schieberegler-Steuerelemente](/windows/desktop/Controls/trackbar-control-styles), in der Windows-SDK verwenden, um das Steuerelement beschrieben.  
   
  *Rect*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  
+ Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  
   
  *pParentWnd*  
  Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.  
@@ -287,7 +287,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
  Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das Buddyfenster an die vom angegebenen Speicherort ist *fLocation*, oder NULL, wenn kein Buddyfenster an diesem Speicherort vorhanden ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), wie im Windows SDK beschrieben. Eine Beschreibung der Stile der Schieberegler-Steuerelemente, finden Sie unter [Stile von Listensteuerelementen Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TBM_GETBUDDY](/windows/desktop/Controls/tbm-getbuddy), wie im Windows SDK beschrieben. Eine Beschreibung der Stile der Schieberegler-Steuerelemente, finden Sie unter [Stile von Listensteuerelementen Trackbar](/windows/desktop/Controls/trackbar-control-styles) im Windows SDK.  
   
 ##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
  Ruft ab, die Größe und Position des umschließenden Rechtecks für ein Schieberegler-Steuerelement-Kanal.  
@@ -415,7 +415,7 @@ int GetThumbLength() const;
  Die Länge des Schiebereglers in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [TBM_GETTHUMBLENGTH](/windows/desktop/Controls/tbm-getthumblength) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
  Ruft ab, die Größe und Position des umschließenden Rechtecks für des Schiebereglers (Ziehpunkt) in einem Schiebereglersteuerelement.  
@@ -477,9 +477,9 @@ CToolTipCtrl* GetToolTips() const;
  Ein Zeiger auf eine [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) Objekt oder NULL, wenn QuickInfos nicht verwendet werden. Wenn Sie das Schieberegler-Steuerelement nicht den TBS_TOOLTIPS-Stil verwendet, ist der Rückgabewert NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209), wie im Windows SDK beschrieben. Beachten Sie, die diese Memberfunktion gibt ein `CToolTipCtrl` Objekt anstelle eines Handles für ein Steuerelement.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TBM_GETTOOLTIPS](/windows/desktop/Controls/tbm-gettooltips), wie im Windows SDK beschrieben. Beachten Sie, die diese Memberfunktion gibt ein `CToolTipCtrl` Objekt anstelle eines Handles für ein Steuerelement.  
   
- Eine Beschreibung der Stile der Schieberegler-Steuerelemente, finden Sie unter [Stile von Listensteuerelementen Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) im Windows SDK.  
+ Eine Beschreibung der Stile der Schieberegler-Steuerelemente, finden Sie unter [Stile von Listensteuerelementen Trackbar](/windows/desktop/Controls/trackbar-control-styles) im Windows SDK.  
   
 ##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
  Wird in einem Fenster als das Buddyfenster für ein Schieberegler-Steuerelement.  
@@ -505,9 +505,9 @@ CWnd* SetBuddy(
  Ein Zeiger auf eine [CWnd](../../mfc/reference/cwnd-class.md) -Objekt, das das Schieberegler-Steuerelement an diesem Speicherort bereits zugewiesen wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213), wie im Windows SDK beschrieben. Beachten Sie, dass diese Memberfunktion auf Zeigern auf `CWnd` Objekte anstelle von Fensterhandles für den Rückgabewert und die Parameter.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TBM_SETBUDDY](/windows/desktop/Controls/tbm-setbuddy), wie im Windows SDK beschrieben. Beachten Sie, dass diese Memberfunktion auf Zeigern auf `CWnd` Objekte anstelle von Fensterhandles für den Rückgabewert und die Parameter.  
   
- Eine Beschreibung der Stile der Schieberegler-Steuerelemente, finden Sie unter [Stile von Listensteuerelementen Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) im Windows SDK.  
+ Eine Beschreibung der Stile der Schieberegler-Steuerelemente, finden Sie unter [Stile von Listensteuerelementen Trackbar](/windows/desktop/Controls/trackbar-control-styles) im Windows SDK.  
   
 ##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
  Legt die Größe der Zeile für ein Schieberegler-Steuerelement fest.  
@@ -636,9 +636,9 @@ void SetThumbLength(int nLength);
 |[in] *nLength*|Die Länge des Schiebereglers in Pixel.|  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode erfordert, dass das Trackbar-Steuerelement festgelegt werden, um [TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147) Stil.  
+ Diese Methode erfordert, dass das Trackbar-Steuerelement festgelegt werden, um [TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles) Stil.  
   
- Diese Methode sendet die [TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [TBM_SETTHUMBLENGTH](/windows/desktop/Controls/tbm-setthumblength) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_sliderCtrl`, d. h. für den Zugriff auf das aktuelle Trackbar-Steuerelement. Das Beispiel definiert auch eine Variable, `thumbLength`, d. h. verwendet, um die standardmäßige Länge der Thumb-Komponente das Trackbar-Steuerelement zu speichern. Diese Variablen werden im nächsten Beispiel verwendet.  
@@ -689,13 +689,13 @@ int SetTipSide(int nLocation);
   
 ### <a name="parameters"></a>Parameter  
  *%nspeicherort*  
- Wert, der die Position, an dem das QuickInfo-Steuerelement angezeigt werden sollen darstellt. Finden Sie eine Liste der möglichen Werte, die Win32-Meldung [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240), wie im Windows SDK beschrieben.  
+ Wert, der die Position, an dem das QuickInfo-Steuerelement angezeigt werden sollen darstellt. Finden Sie eine Liste der möglichen Werte, die Win32-Meldung [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), wie im Windows SDK beschrieben.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein Wert, der vorherigen Speicherort des QuickInfo-Steuerelements darstellt. Der Rückgabewert einer der möglichen Werte für *%nspeicherort*.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht TBM_SETTIPSIDE, wie im Windows SDK beschrieben. Schieberegler-Steuerelemente, die den Stil TBS_TOOLTIPS verwenden die Anzeige von QuickInfos. Eine Beschreibung der Stile der Schieberegler-Steuerelemente, finden Sie unter [Stile von Listensteuerelementen Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht TBM_SETTIPSIDE, wie im Windows SDK beschrieben. Schieberegler-Steuerelemente, die den Stil TBS_TOOLTIPS verwenden die Anzeige von QuickInfos. Eine Beschreibung der Stile der Schieberegler-Steuerelemente, finden Sie unter [Stile von Listensteuerelementen Trackbar](/windows/desktop/Controls/trackbar-control-styles) im Windows SDK.  
   
 ##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
  Ein Schieberegler-Steuerelement wird ein QuickInfo-Steuerelement zugewiesen.  
@@ -709,7 +709,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
  Ein Zeiger auf eine [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) -Objekt, das die QuickInfo für die Verwendung mit dem Schiebereglersteuerelement enthält.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242), wie im Windows SDK beschrieben. Wenn ein Schieberegler-Steuerelement mit dem Stil TBS_TOOLTIPS erstellt wird, wird ein Standard-QuickInfo-Steuerelement, das neben dem Schieberegler, Anzeigen der aktuellen Position des Schiebereglers angezeigt wird. Eine Beschreibung der Stile der Schieberegler-Steuerelemente, finden Sie unter [Stile von Listensteuerelementen Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) im Windows SDK.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips), wie im Windows SDK beschrieben. Wenn ein Schieberegler-Steuerelement mit dem Stil TBS_TOOLTIPS erstellt wird, wird ein Standard-QuickInfo-Steuerelement, das neben dem Schieberegler, Anzeigen der aktuellen Position des Schiebereglers angezeigt wird. Eine Beschreibung der Stile der Schieberegler-Steuerelemente, finden Sie unter [Stile von Listensteuerelementen Trackbar](/windows/desktop/Controls/trackbar-control-styles) im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [MFC-Beispiel CMNCTRL2](../../visual-cpp-samples.md)   

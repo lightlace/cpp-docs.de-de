@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56fc61fa7dd7973a6ee1cc4c5a20311bf43b056f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4550d523a4410734c391e2e4d266ae536b4610b4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571591"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218668"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Problembehandlung bei isolierten Anwendungen und parallelen Assemblys (C/C++)
 Beim Laden einer C/C++-Anwendung kann ein Fehler auftreten, wenn abhängige Bibliotheken nicht gefunden werden. In diesem Artikel werden einige häufige Ursachen für Fehler beim Laden einer C/C++-Anwendung beschrieben und Schritte zur Lösung des jeweiligen Problems vorgeschlagen.  
@@ -46,14 +46,14 @@ Beim Laden einer C/C++-Anwendung kann ein Fehler auftreten, wenn abhängige Bibl
   
 3.  Wenn die Anwendung von parallelen Assemblys abhängig ist und kein Manifest vorhanden ist, müssen Sie sicherstellen, dass der Linker ein Manifest für das Projekt generiert. Überprüfen Sie die Linkeroption **Manifest generieren** in die **Projekteigenschaften** im Dialogfeld für das Projekt.  
   
-4.  Wenn das Manifest in die Binärdatei eingebettet ist, stellen Sie sicher, dass die ID von RT_MANIFEST für diesen Typ von Binärdatei korrekt ist. Weitere Informationen, welche Ressourcen-ID verwenden, finden Sie unter [verwenden-Seite-an-Seite-Assemblys als Ressource (Windows)](http://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Wenn sich das Manifest in einer separaten Datei befindet, öffnen Sie es in einem XML- oder Text-Editor. Weitere Informationen zu Manifesten und Regeln für die Bereitstellung finden Sie unter [Manifeste](http://msdn.microsoft.com/library/aa375365).  
+4.  Wenn das Manifest in die Binärdatei eingebettet ist, stellen Sie sicher, dass die ID von RT_MANIFEST für diesen Typ von Binärdatei korrekt ist. Weitere Informationen, welche Ressourcen-ID verwenden, finden Sie unter [verwenden-Seite-an-Seite-Assemblys als Ressource (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa376617.aspx). Wenn sich das Manifest in einer separaten Datei befindet, öffnen Sie es in einem XML- oder Text-Editor. Weitere Informationen zu Manifesten und Regeln für die Bereitstellung finden Sie unter [Manifeste](https://msdn.microsoft.com/library/aa375365).  
   
     > [!NOTE]
     >  Wenn sowohl ein eingebettetes Manifest als auch eine separate Manifestdatei vorhanden sind, verwendet das Ladeprogramm des Betriebssystems das eingebettete Manifest und ignoriert die separate Datei. Unter Windows XP trifft allerdings das Gegenteil zu – die separate Manifestdatei wird verwendet und das eingebettete Manifest ignoriert.  
   
-5.  Es empfiehlt sich, ein Manifest in jede DLL-Datei einzubetten, da externe Manifeste ignoriert werden, wenn eine DLL durch einen `LoadLibrary`-Aufruf geladen wird. Weitere Informationen finden Sie unter [Assemblymanifeste](http://msdn.microsoft.com/library/aa374219).  
+5.  Es empfiehlt sich, ein Manifest in jede DLL-Datei einzubetten, da externe Manifeste ignoriert werden, wenn eine DLL durch einen `LoadLibrary`-Aufruf geladen wird. Weitere Informationen finden Sie unter [Assemblymanifeste](/windows/desktop/SbsCs/assembly-manifests).  
   
-6.  Stellen Sie sicher, dass alle im Manifest aufgelisteten Assemblys ordnungsgemäß auf dem Computer installiert sind. Für jede Assembly wird im Manifest der Name, die Versionsnummer und die Prozessorarchitektur angegeben. Wenn Ihre Anwendung auf der Seite-an-Seite-Assemblys abhängig ist, überprüfen Sie, dass diese Assemblys ordnungsgemäß auf dem Computer installiert sind, damit vom Ladeprogramm des Betriebssystems gefunden werden kann wie in beschrieben [Assemblysuchsequenz](http://msdn.microsoft.com/library/aa374224). Denken Sie daran, dass 64-Bit-Assemblys nicht in 32-Bit-Prozessen geladen und unter 32-Bit-Betriebssystemen nicht ausgeführt werden können.  
+6.  Stellen Sie sicher, dass alle im Manifest aufgelisteten Assemblys ordnungsgemäß auf dem Computer installiert sind. Für jede Assembly wird im Manifest der Name, die Versionsnummer und die Prozessorarchitektur angegeben. Wenn Ihre Anwendung auf der Seite-an-Seite-Assemblys abhängig ist, überprüfen Sie, dass diese Assemblys ordnungsgemäß auf dem Computer installiert sind, damit vom Ladeprogramm des Betriebssystems gefunden werden kann wie in beschrieben [Assemblysuchsequenz](/windows/desktop/SbsCs/assembly-searching-sequence). Denken Sie daran, dass 64-Bit-Assemblys nicht in 32-Bit-Prozessen geladen und unter 32-Bit-Betriebssystemen nicht ausgeführt werden können.  
   
 ## <a name="example"></a>Beispiel  
  Wird davon ausgegangen Sie, dass es sich um die Anwendung appl.exe, gibt, die mit Visual C++ erstellt wird. Das Anwendungsmanifest ist entweder als Binärressource RT_MANIFEST, die eine ID gleich 1 hat, in APPL.EXE eingebettet, oder es ist als separate Datei "appl.exe.manifest" gespeichert. Der Inhalt des Manifests kann ungefähr so aussehen:  
@@ -82,7 +82,7 @@ Beim Laden einer C/C++-Anwendung kann ein Fehler auftreten, wenn abhängige Bibl
 </assembly>  
 ```  
   
- Seite-an-Seite-Assemblys können Sie auch [Herausgeberkonfigurationsdateien](http://msdn.microsoft.com/library/aa375682)– auch bekannt als Dateien für Gruppenrichtlinien – Global Umleiten von Anwendungen und Assemblys, um eine Version einer Seite-an-Seite-Assembly anstatt einer anderen Version derselben verwenden die Assembly. Sie können die Richtlinien für eine freigegebene Assembly im Ordner "%WINDIR%\WinSxS\Policies\" überprüfen. Hier ein Beispiel für eine Richtliniendatei:  
+ Seite-an-Seite-Assemblys können Sie auch [Herausgeberkonfigurationsdateien](/windows/desktop/SbsCs/publisher-configuration-files)– auch bekannt als Dateien für Gruppenrichtlinien – Global Umleiten von Anwendungen und Assemblys, um eine Version einer Seite-an-Seite-Assembly anstatt einer anderen Version derselben verwenden die Assembly. Sie können die Richtlinien für eine freigegebene Assembly im Ordner "%WINDIR%\WinSxS\Policies\" überprüfen. Hier ein Beispiel für eine Richtliniendatei:  
   
 ```  
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -106,7 +106,7 @@ Beim Laden einer C/C++-Anwendung kann ein Fehler auftreten, wenn abhängige Bibl
   
 2.  Öffnen der \\< AssemblyName\>\ Ordner in den Ordner, der appl.exe enthält und wenn \\< AssemblyName\>\ vorhanden ist, versuchen, laden eine Manifestdatei mit dem Namen \<AssemblyName >. Manifest aus diesem Ordner. Wenn das Manifest gefunden wird, lädt das Ladeprogramm die Assembly aus dem \\< AssemblyName\>\ Ordner. Wenn die Assembly nicht gefunden wird, schlägt das Laden fehl.  
   
- Weitere Informationen darüber, wie das Ladeprogramm nach abhängigen Assemblys sucht, finden Sie unter [Assemblysuchsequenz](http://msdn.microsoft.com/library/aa374224). Wenn das Ladeprogramm eine abhängige Assembly nicht als private Assembly finden kann, schlägt das Laden fehl, und es wird die Meldung "Das angegebene Programm kann nicht ausgeführt werden" angezeigt. Um diesen Fehler zu beheben, müssen Sie sicherstellen, dass abhängige Assemblys – und DLLs, die Teil dieser Assemblys sind – entweder als private oder als freigegebene Assemblys auf dem Computer installiert werden.  
+ Weitere Informationen darüber, wie das Ladeprogramm nach abhängigen Assemblys sucht, finden Sie unter [Assemblysuchsequenz](/windows/desktop/SbsCs/assembly-searching-sequence). Wenn das Ladeprogramm eine abhängige Assembly nicht als private Assembly finden kann, schlägt das Laden fehl, und es wird die Meldung "Das angegebene Programm kann nicht ausgeführt werden" angezeigt. Um diesen Fehler zu beheben, müssen Sie sicherstellen, dass abhängige Assemblys – und DLLs, die Teil dieser Assemblys sind – entweder als private oder als freigegebene Assemblys auf dem Computer installiert werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konzept der isolierten Anwendungen und Seite-an-Seite-Assemblys](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   

@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7aad2093ecc9511c3b15f68963b496130bf3c3f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 62ed04d8e54e4bf107ae12b9a4165b663c9d10d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882110"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203870"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject-Klasse
-Diese Klasse implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) für eine Tearoff Schnittstelle.  
+Diese Klasse implementiert [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) für eine Tearoff Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -76,7 +76,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|Ein `CComContainedObject` abgeleitetes Objekt, von Ihrer Klasse abtrennbare (die Klasse `contained`).|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComCachedTearOffObject` implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) für eine Tearoff Schnittstelle. Diese Klasse unterscheidet sich von `CComTearOffObject` , `CComCachedTearOffObject` verfügt über eine eigene `IUnknown`getrennt von den des Besitzerobjekts `IUnknown` (der Besitzer ist das Objekt, das für die die abtrennbare erstellt wird). `CComCachedTearOffObject` behält sein eigenes Verweiszähler auf seine `IUnknown` und löscht Sie selbst, sobald dessen Verweiszähler auf 0 (null) ist. Jedoch bei einer Abfrage für eines der abtrennbare Schnittstellen, den Verweiszähler des dem des Besitzerobjekts `IUnknown` erhöht.  
+ `CComCachedTearOffObject` implementiert [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) für eine Tearoff Schnittstelle. Diese Klasse unterscheidet sich von `CComTearOffObject` , `CComCachedTearOffObject` verfügt über eine eigene `IUnknown`getrennt von den des Besitzerobjekts `IUnknown` (der Besitzer ist das Objekt, das für die die abtrennbare erstellt wird). `CComCachedTearOffObject` behält sein eigenes Verweiszähler auf seine `IUnknown` und löscht Sie selbst, sobald dessen Verweiszähler auf 0 (null) ist. Jedoch bei einer Abfrage für eines der abtrennbare Schnittstellen, den Verweiszähler des dem des Besitzerobjekts `IUnknown` erhöht.  
   
  Wenn die `CComCachedTearOffObject` Objekt implementieren die abtrennbare bereits instanziiert wird und die Schnittstelle abtrennbare für in diesem Fall den gleichen abgefragt `CComCachedTearOffObject` Objekt wiederverwendet wird. Dagegen implementiert eine Tearoff Schnittstelle von einer `CComTearOffObject` wird erneut für abgefragt, über dem Objekt eine andere `CComTearOffObject` instanziiert.  
   

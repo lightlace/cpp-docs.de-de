@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8fe604074b843e7c0b76c2e671e0abd9e40770a7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 232dfb803e9327b857d26a4294786c2742a1143c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598459"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215967"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -45,7 +45,7 @@ Der Name einer Datei, die Sie möchten in der generierten IDL-Datei enthalten.
 
 Die **enthalten** C++-Attribut bewirkt, dass ein `#include` Anweisung unten platziert werden die `import "docobj.idl"` -Anweisung in der generierten IDL-Datei.
 
-Die **enthalten** C++-Attribut hat die gleiche Funktionalität wie die [enthalten](http://msdn.microsoft.com/library/windows/desktop/aa367052) MIDL-Attribut.
+Die **enthalten** C++-Attribut hat die gleiche Funktionalität wie die [enthalten](/windows/desktop/Midl/include) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 

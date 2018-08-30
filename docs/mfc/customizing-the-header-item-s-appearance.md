@@ -1,5 +1,5 @@
 ---
-title: Das Headerelement anpassen&#39;s Darstellung | Microsoft Docs
+title: Das Headerelement anpassen&#39;Darstellung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09f8bc0b61e22435ee348968f117940b57132e3
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 3523feb14d49a0e275fd3024925287aa05521f4b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930874"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195517"
 ---
-# <a name="customizing-the-header-item39s-appearance"></a>Das Headerelement anpassen&#39;s Darstellung
-Durch Festlegen der *DwStyle* Parameter bei der Erstellung von einem Headersteuerelement ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md#create)) definieren Sie die Darstellung und Verhalten des Headers Elemente oder des Headersteuerelements selbst.  
+# <a name="customizing-the-header-item39s-appearance"></a>Das Headerelement anpassen&#39;Darstellung
+Durch Festlegen der *DwStyle* Parameter bei der Erstellung von einem Kopfzeilen-Steuerelement ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md#create)), können Sie definieren, die Darstellung und Verhalten des Headers Elemente oder des Headersteuerelements selbst.  
   
- Hier wird eine Stichprobe die Formatvorlagen, die Sie festlegen können, und ihren Zweck:  
+ Hier ist eine Stichprobe der samt deren Zweck die Stile, die Sie festlegen können:  
   
--   Um einen Headerelement, das Aussehen einer Schaltfläche darzustellen, verwenden die **HDS_BUTTONS** Stil.  
+-   Um ein Headerelement, das Aussehen einer Schaltfläche zu machen, verwenden die **HDS_BUTTONS** Stil.  
   
-     Verwenden Sie dieses Format, wenn Sie zum Ausführen von Aktionen als Reaktion auf Mausklicks auf ein Headerelement, wie Daten nach einer bestimmten Spalte sortieren, wie in Microsoft Outlook verwendet werden soll.  
+     Verwenden Sie dieses Format, wenn Sie Aktionen als Reaktion auf Mausklicks auf ein Headerelement, wie z. B. das Sortieren von Daten nach einer bestimmten Spalte, wie in Microsoft Outlook ausführen möchten.  
   
--   Um die Headerelemente ein "hot Track" Erscheinungsbild verleihen, wenn der Mauszeiger darüber bewegt, verwenden die **HDS_HOTTRACK** Stil.  
+-   Um die Headerelemente die Darstellung eines "hot Track" gewähren, wenn der Mauszeiger darüber bewegt, verwenden Sie die **HDS_HOTTRACK** Stil.  
   
-     Hot Track zeigt eine 3D Gliederung Weg von der Zeiger auf ein Element in einer ansonsten flachen Leiste.  
+     Hot Track zeigt eine Gliederung 3D, übergibt der Zeiger auf ein Element in einer ansonsten flachen Leiste.  
   
--   Um anzugeben, dass das Headersteuerelement ausgeblendet werden soll, verwenden Sie die **HDS_HIDDEN** Stil.  
+-   Um anzugeben, dass das Kopfzeilen-Steuerelement ausgeblendet werden soll, verwenden Sie die **HDS_HIDDEN** Stil.  
   
-     Die **HDS_HIDDEN** Stil gibt an, dass das Headersteuerelement als Datencontainer und kein visuelles Steuerelement verwendet werden sollen. Dieses Format des Steuerelements wird nicht automatisch ausgeblendet, aber stattdessen wirkt sich auf das Verhalten des `CHeaderCtrl::Layout`. Der zurückgegebene Wert in der *cy* Mitglied der `WINDOWPOS` Struktur werden auf 0 (null) gibt an, dass das Steuerelement nicht für den Benutzer sichtbar sein soll.  
+     Die **HDS_HIDDEN** Stil gibt an, dass das Kopfzeilen-Steuerelement als Datencontainer und nicht auf ein visuelles Steuerelement verwendet werden soll. Diese Art des Steuerelements wird nicht automatisch ausgeblendet, aber stattdessen beeinflusst das Verhalten von `CHeaderCtrl::Layout`. Der zurückgegebene Wert in der *cy* Mitglied der `WINDOWPOS` Struktur werden auf 0 (null) gibt an, dass das Steuerelement nicht für den Benutzer sichtbar sein soll.  
   
- Weitere Informationen zu diesen Eigenschaften finden Sie unter [Elemente](http://msdn.microsoft.com/library/windows/desktop/bb775238) im Windows SDK. Informationen zum Hinzufügen von Elementen zum Headersteuerelement finden Sie unter [Hinzufügen von Elementen zum Headersteuerelement](../mfc/adding-items-to-the-header-control.md).  
+ Weitere Informationen zu diesen Eigenschaften finden Sie unter [Elemente](/windows/desktop/Controls/header-controls) im Windows SDK. Informationen zum Hinzufügen von Elementen zu einem Kopfzeilen-Steuerelement, finden Sie unter [Hinzufügen von Elementen zum Headersteuerelement](../mfc/adding-items-to-the-header-control.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CHeaderCtrl](../mfc/using-cheaderctrl.md)   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e137f0f41c94473d47985ceb848eeef7c7c9ca08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407779"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208515"
 ---
 # <a name="pointers-to-members"></a>Zeiger auf Member
 Deklarationen von Zeigern auf Member sind Sonderfälle von Zeigerdeklarationen.  Sie können mithilfe der folgenden Sequenz deklariert werden:  
@@ -45,7 +45,7 @@ Deklarationen von Zeigern auf Member sind Sonderfälle von Zeigerdeklarationen. 
   - Ein optionaler Microsoft-spezifischer Modifizierer. Weitere Informationen finden Sie unter [Microsoft-spezifische Modifizierer](../cpp/microsoft-specific-modifiers.md).  
 1. Der qualifizierte Name der Klasse, die die Member enthält, auf die gezeigt werden muss.  
   - Der Operator "::"  
-  - Die **\*** Operator.  
+  - Die <strong>\*</strong> Operator.  
   - Optionale **const** und/oder **flüchtige** Spezifizierer.  
   - Der Bezeichner, der den Zeiger auf ein Member benennt.  
   
@@ -101,7 +101,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- Der Unterschied zwischen der **.\***  und **-> \*** Operatoren (der Pointer-to-Member-Operatoren) ist, die die **.\***  Operator wählt Elemente zwar angegeben, ein Objekt oder einen Objektverweis, der **-> \*** Operator wählt Elemente über einen Zeiger. (Weitere Informationen zu diesen Operatoren finden Sie unter [Ausdrücke mit Zeiger-auf-Member-Operatoren](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ Der Unterschied zwischen der **.** <strong>\*</strong> und **->** <strong>\*</strong> Operatoren (der Pointer-to-Member-Operatoren) ist, die die **.** <strong>\*</strong> Operator wählt Elemente zwar angegeben, ein Objekt oder einen Objektverweis, der **->** <strong>\*</strong> Operator Wählt Elemente über einen Zeiger an. (Weitere Informationen zu diesen Operatoren finden Sie unter [Ausdrücke mit Zeiger-auf-Member-Operatoren](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
  Das Ergebnis der Pointer-to-Member-Operatoren ist der Typ des Members – in diesem Fall `char *`.  
   
@@ -123,7 +123,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>Einschränkungen für Zeiger auf Member  
- Die Adresse eines statischen Members ist kein Zeiger auf einen Member. Es ist ein regulärer Zeiger auf die eine Instanz des statischen Members. Da nur eine Instanz eines statischen Members für alle Objekte einer bestimmten Klasse, die normale Address-of vorhanden ist **(&)** und der Dereferenzierungsoperator **(\*)** Operatoren können verwendet werden.  
+ Die Adresse eines statischen Members ist kein Zeiger auf einen Member. Es ist ein regulärer Zeiger auf die eine Instanz des statischen Members. Da nur eine Instanz eines statischen Members für alle Objekte einer bestimmten Klasse, die normale Address-of vorhanden ist (**&**) und der Dereferenzierungsoperator (<strong>\*</strong>) Operatoren können verwendet werden.  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>Zeiger auf Member und virtuelle Funktionen  
  Das Aufrufen einer virtuellen Funktion durch einen Zeiger auf eine Memberfunktion verhält sich wie beim direkten Aufruf der Funktion. Die ordnungsgemäße Funktion wird in v-table gesucht und aufgerufen.  

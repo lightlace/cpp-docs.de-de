@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a8fe658776bb41d1de4e1592df7ad83299aea46
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4895491a6b697d33d3ba5c6070a75d037e894e46
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42587475"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219772"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -36,7 +36,7 @@ Identifiziert einen Verweiszeiger an.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Ref** C++-Attribut hat die gleiche Funktionalität wie die [Ref](http://msdn.microsoft.com/library/windows/desktop/aa367153) MIDL-Attribut.
+Die **Ref** C++-Attribut hat die gleiche Funktionalität wie die [Ref](/windows/desktop/Midl/ref) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 

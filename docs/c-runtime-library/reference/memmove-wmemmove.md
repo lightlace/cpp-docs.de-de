@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66ea555d08ecb92895e170c3088332a532149ad1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11f474675d8ba5b370b1f13f048e989d9c283bde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401112"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204627"
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 
@@ -69,19 +69,19 @@ Zielobjekt.
 Quellobjekt.
 
 *count*<br/>
-Anzahl der Bytes (**Memmove**) oder Zeichen (**Wmemmove**) zu kopieren.
+Anzahl von Bytes (**Memmove**) oder Zeichen (**Wmemmove**) zu kopieren.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert der *Dest*.
+Der Wert des *Dest*.
 
 ## <a name="remarks"></a>Hinweise
 
-Kopien *Anzahl* Bytes (**Memmove**) oder Zeichen (**Wmemmove**) von *Src* auf *Dest*. Wenn einige Bereiche des Quell- und des Zielbereichs überlappen, stellen beide Funktionen sicher, dass die ursprünglichen Quellbytes im überlappenden Bereich kopiert werden, bevor es sie überschreibt.
+Kopien *Anzahl* Bytes (**Memmove**) oder Zeichen (**Wmemmove**) von *Src* zu *Dest*. Wenn einige Bereiche des Quell- und des Zielbereichs überlappen, stellen beide Funktionen sicher, dass die ursprünglichen Quellbytes im überlappenden Bereich kopiert werden, bevor es sie überschreibt.
 
-**Sicherheitshinweis** Stellen Sie sicher, dass der Zielpuffer dieselbe Größe wie der Quellpuffer aufweist bzw. größer ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Sicherheitshinweis** Stellen Sie sicher, dass der Zielpuffer dieselbe Größe wie der Quellpuffer aufweist bzw. größer ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Die **Memmove** und **Wmemmove** Funktionen sind nur veraltet, wenn die Konstante **_CRT_SECURE_DEPRECATE_MEMORY** vor der einschlussanweisung namensweiterleitung definiert ist die Funktionen werden als veraltet markierte, z. B. wie im folgenden Beispiel:
+Die **Memmove** und **Wmemmove** Funktionen sind nur veraltet, wenn die Konstante **_CRT_SECURE_DEPRECATE_MEMORY** vor der inklusionsanweisung für nacheinander definiert ist die Funktionen werden als veraltet markierte, z. B. wie im folgenden Beispiel:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -97,7 +97,7 @@ oder
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**memmove**|\<string.h>|
 |**wmemmove**|\<wchar.h>|

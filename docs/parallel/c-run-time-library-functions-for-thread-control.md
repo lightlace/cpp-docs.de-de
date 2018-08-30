@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eaa1a0589cb001658b18144e06956eebd302287
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 6a0e57931b7f2af3f6232f140fd38155cfa5b2f8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131853"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195234"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funktionen der C-Laufzeitbibliothek zur Threadsteuerung
 Alle Win32-Programme weisen mindestens einen Thread auf. Jeder Thread kann zusätzliche Threads generieren. Ein Thread kann seine Aufgabe schnell abschließen oder während der gesamten Lebensdauer eines Programms aktiv bleiben.  
@@ -40,7 +40,7 @@ Mit der `_beginthread`-Funktion und der `_beginthreadex`-Funktion wird ein neuer
  
 Die `_beginthread`-Funktion und die `_beginthreadex`-Funktion erstellen einen neuen Thread. Ein Thread nutzt den Code und die Datensegmente eines Prozesses gemeinsam mit anderen Threads in diesem Prozess, verfügt jedoch über eigene, eindeutige Registerwerte, Stapelspeicher und eine aktuelle Anweisungsadresse. Das System weist jedem Thread seine bestimmte CPU-Zeit zu, damit alle Threads in einem Prozess gleichzeitig ausgeführt werden können.  
   
-`_beginthread` und `_beginthreadex` ähneln den [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) -Funktion in der Win32-API, weisen jedoch folgende Unterschiede:  
+`_beginthread` und `_beginthreadex` ähneln den [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) -Funktion in der Win32-API, weisen jedoch folgende Unterschiede:  
   
 - Sie initialisieren bestimmte Variablen der C-Laufzeitbibliothek. Dies ist nur von Bedeutung, wenn Sie die C-Laufzeitbibliothek in Threads verwenden.  
   

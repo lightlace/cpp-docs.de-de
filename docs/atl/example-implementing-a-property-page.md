@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c7329e7784fc5228bca5aa5b167d04ded51aaf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ce702c1da30e6f624477b74e381576539ef9e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852274"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214781"
 ---
 # <a name="example-implementing-a-property-page"></a>Beispiel: Das Implementieren einer Eigenschaftenseite
 Dieses Beispiel zeigt, wie Sie auf einer Eigenschaftenseite zu erstellen, das Eigenschaften anzeigt (und können Sie ändern) die [Dokumentklassen](../mfc/document-classes.md) Schnittstelle.  
@@ -70,7 +70,7 @@ Dieses Beispiel zeigt, wie Sie auf einer Eigenschaftenseite zu erstellen, das Ei
  Diese Steuerelemente werden verwendet werden, um den Dateinamen des Dokuments und den schreibgeschützten Status anzuzeigen.  
   
 > [!NOTE]
->  Die Dialogressource umfasst keinen Frame Befehlsschaltflächen noch verfügt es über das Registerkartenformat aussehen, das Sie möglicherweise erwartet haben. Diese Funktionen werden bereitgestellt, durch eine eigenschaftenseitenrahmens z. B. die durch Aufrufen von erstellt [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
+>  Die Dialogressource umfasst keinen Frame Befehlsschaltflächen noch verfügt es über das Registerkartenformat aussehen, das Sie möglicherweise erwartet haben. Diese Funktionen werden bereitgestellt, durch eine eigenschaftenseitenrahmens z. B. die durch Aufrufen von erstellt [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).  
   
 ##  <a name="vcconadding_message_handlers"></a> Hinzufügen von Meldungshandlern  
  Mit den Steuerelementen vorhanden können Sie Meldungshandler aktualisieren Sie den geänderten Status der Seite aus, wenn der Wert der beiden Steuerelemente geändert wird, hinzufügen:  

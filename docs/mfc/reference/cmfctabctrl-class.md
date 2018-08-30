@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d843b3b491973c32d8fb5ff3160327a9e82223c8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eae771aed819577708d945cb2a62997f5b45e7fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540824"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199845"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 Die `CMFCTabCtrl` -Klasse enthält Funktionen für ein Registerkarten-Steuerelement. Das Registerkarten-Steuerelement zeigt ein andockbares Fenster an, mit flachen oder dreidimensionalen Registerkarten am oberen oder unteren Rand. Die Registerkarten können Text und ein Bild enthalten und bei Aktivierung die Farbe ändern.  
@@ -186,7 +186,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Vom Framework aufgerufen, wenn der Cursor zuerst in das Fenster des Steuerelements Registerkarte gezogen wird.|  
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Wird von Framework während eines Ziehvorgangs aufgerufen, wenn die Maus über dem Drop-Ziel-Fenster verschoben wird. (Überschreibt [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|  
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Ein Popupmenü von Fenstern im Registerkartenformat angezeigt wird, wartet, bis der Benutzer eine Registerkarte wählt, und stellt der ausgewählten Registerkarte auf die aktive Registerkarte.|  
-|`CMFCTabCtrl::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. (Überschreibt [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
+|`CMFCTabCtrl::PreTranslateMessage`|Übersetzt fenstermeldungen, bevor sie um weitergeleitet werden die [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) und [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows-Funktionen. (Überschreibt [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
 |`CMFCTabCtrl::RecalcLayout`|Berechnet das interne Layout des Registerkarten-Steuerelements. (Überschreibt [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Legt die aktuelle Registerkarte ein Registerkarten-Steuerelement als aktive Registerkarte in einem mehrere Dokument Schnittstelle Registerkartengruppe fest.|  
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Aktiviert eine Registerkarte. (Überschreibt [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  
@@ -784,7 +784,7 @@ virtual DROPEFFECT OnDragEnter(
  Verweist auf ein Objekt, das Daten enthält, die der Benutzer zieht.  
   
  [in] *DwKeyState*  
- Enthält den Status der Modifizierertasten. Dieser Parameter ist eine bitweise Kombination (OR) die folgenden Werte: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON. Weitere Informationen finden Sie unter den **Meldungsparameter** Abschnitt [zu Mauseingabe](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ Enthält den Status der Modifizierertasten. Dieser Parameter ist eine bitweise Kombination (OR) die folgenden Werte: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON. Weitere Informationen finden Sie unter den **Meldungsparameter** Abschnitt [zu Mauseingabe](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *zeigen*  
  Enthält die aktuelle Position des Cursors in Clientkoordinaten.  
@@ -812,7 +812,7 @@ virtual DROPEFFECT OnDragOver(
  Zeiger auf eine [COleDataObject](../../mfc/reference/coledataobject-class.md) -Objekt, das über das Ablageziel gezogen wird.  
   
  [in] *DwKeyState*  
- Der Zustand der Zusatztasten, der eine bitweise Kombination (OR) von MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON ist. Weitere Informationen finden Sie unter "Meldungsparameter" in [zu Mauseingabe](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
+ Der Zustand der Zusatztasten, der eine bitweise Kombination (OR) von MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON und MK_RBUTTON ist. Weitere Informationen finden Sie unter "Meldungsparameter" in [zu Mauseingabe](/windows/desktop/inputdev/about-mouse-input).  
   
  [in] *zeigen*  
  Die aktuelle Mausposition.  
@@ -1000,7 +1000,7 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
   
 ### <a name="parameters"></a>Parameter  
  [out] *pScrollInfo*  
- Zeiger auf eine [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) Struktur oder NULL. Wenn diese Methode zurückgegeben wird und wenn dieser Parameter nicht NULL ist, enthält die Struktur alle Parameter der Bildlaufleiste an. Der Standardwert ist NULL.  
+ Zeiger auf eine [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) Struktur oder NULL. Wenn diese Methode zurückgegeben wird und wenn dieser Parameter nicht NULL ist, enthält die Struktur alle Parameter der Bildlaufleiste an. Der Standardwert ist NULL.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn diese Methode erfolgreich ist. andernfalls "false".  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5cf9438d2fcecb434802dc99aaa5c692ba108f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6cce467218b92f6d0827cff2b8ede56b735ab9af
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882896"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197145"
 ---
 # <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl-Klasse
 Diese Klasse implementiert `IUnknown` und erbt von der Standardimplementierung von [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).  
@@ -53,7 +53,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 |[IPropertyPage2Impl::EditProperty](#editproperty)|Gibt an, welche Eigenschaftensteuerelement den Fokus erhalten wird, wenn die Eigenschaftenseite aktiviert ist. Die ATL-Implementierung gibt E_NOTIMPL zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) Schnittstelle erweitert [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) durch Hinzufügen der `EditProperty` Methode. Diese Methode ermöglicht einen Client, wählen Sie eine bestimmte Eigenschaft in einem Eigenschaft-Page-Objekt.  
+ Die [IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) Schnittstelle erweitert [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) durch Hinzufügen der `EditProperty` Methode. Diese Methode ermöglicht einen Client, wählen Sie eine bestimmte Eigenschaft in einem Eigenschaft-Page-Objekt.  
   
  Klasse `IPropertyPage2Impl` gibt einfach auftragsantwortnachrichten zurück E_NOTIMPL für `IPropertyPage2::EditProperty`. Allerdings erbt die standardmäßige Implementierung des [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) und implementiert `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.  
   
@@ -82,7 +82,7 @@ HRESULT EditProperty(DISPID dispID);
  Gibt E_NOTIMPL zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) in das Windows SDK.  
+ Finden Sie unter [IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) in das Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [IPerPropertyBrowsingImpl-Klasse](../../atl/reference/iperpropertybrowsingimpl-class.md)   

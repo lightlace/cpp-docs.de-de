@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faa96bdb0471a4ff6a93006225a9492429d18bd2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f7edfe929a742e5ff33e76840fa1abdfd496908e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028277"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211553"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Headersteuerelements bereit.  
@@ -132,7 +132,7 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::SetOrderArray](#setorderarray)|Legt die links-nach-rechts-Reihenfolge der Elemente in einem Kopfzeilen-Steuerelement fest.|  
   
 ## <a name="remarks"></a>Hinweise  
- Einem Kopfzeilen-Steuerelement ist ein Fenster, das in der Regel über einen Satz von Spalten von Text oder Zahlen positioniert ist. Sie enthält einen Titel für jede Spalte, und es kann in Teile unterteilt werden. Der Benutzer kann etwa einem Trennblatt ziehen, die Trennung der Teile, um die Breite der einzelnen Spalten festzulegen. Eine Abbildung einem Kopfzeilen-Steuerelement, finden Sie unter [Headersteuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb775238).  
+ Einem Kopfzeilen-Steuerelement ist ein Fenster, das in der Regel über einen Satz von Spalten von Text oder Zahlen positioniert ist. Sie enthält einen Titel für jede Spalte, und es kann in Teile unterteilt werden. Der Benutzer kann etwa einem Trennblatt ziehen, die Trennung der Teile, um die Breite der einzelnen Spalten festzulegen. Eine Abbildung einem Kopfzeilen-Steuerelement, finden Sie unter [Headersteuerelemente](/windows/desktop/Controls/header-controls).  
   
  Dieses Steuerelement (und somit die `CHeaderCtrl` Klasse) ist nur für Programme, die Ausführung unter Windows 95/98 und Windows NT, Version 3.51 und höher.  
   
@@ -183,7 +183,7 @@ BOOL ClearAllFilters();
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode implementiert, das Verhalten der Win32-Nachricht [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306) mit einem Spaltenwert-1 verwendet, wie im Windows SDK beschrieben.  
+ Diese Methode implementiert, das Verhalten der Win32-Nachricht [HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter) mit einem Spaltenwert-1 verwendet, wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
@@ -203,7 +203,7 @@ BOOL ClearFilter(int nColumn);
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode implementiert, das Verhalten der Win32-Nachricht [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306), wie im Windows SDK beschrieben.  
+ Diese Methode implementiert, das Verhalten der Win32-Nachricht [HDM_CLEARFILTER](/windows/desktop/Controls/hdm-clearfilter), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
@@ -221,10 +221,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parameter  
  *dwStyle*  
- Gibt das Kopfzeilen-Steuerelement-Stil. Eine Beschreibung der Header der Stile von Listensteuerelementen, finden Sie unter [Steuerelementstile Kopfzeile](http://msdn.microsoft.com/library/windows/desktop/bb775241) im Windows SDK.  
+ Gibt das Kopfzeilen-Steuerelement-Stil. Eine Beschreibung der Header der Stile von Listensteuerelementen, finden Sie unter [Steuerelementstile Kopfzeile](/windows/desktop/Controls/header-control-styles) im Windows SDK.  
   
  *Rect*  
- Gibt an, des Kopfzeilen-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
+ Gibt an, des Kopfzeilen-Steuerelements die Größe und Position. Es kann sein, entweder eine [CRect](../../atl-mfc-shared/reference/crect-class.md) Objekt oder ein [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur.  
   
  *pParentWnd*  
  Gibt an, das Kopfzeilen-Steuerelement übergeordnete Fenster, in der Regel eine `CDialog`. Es darf nicht NULL sein.  
@@ -238,7 +238,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Hinweise  
  Sie erstellen eine `CHeaderCtrl` Objekt in zwei Schritten. Zunächst rufen Sie den Konstruktor, und rufen Sie anschließend `Create`, die das Kopfzeilen-Steuerelement erstellt, und fügt es der `CHeaderCtrl` Objekt.  
   
- Zusätzlich zu den Header Stile von Listensteuerelementen, können Sie die folgenden allgemeinen Steuerelementstile um zu ermitteln, wie das Kopfzeilen-Steuerelement positioniert, und seine Größe selbst ändert (finden Sie unter [allgemeinen Stile von Listensteuerelementen](http://msdn.microsoft.com/library/windows/desktop/bb775498) Informationen):  
+ Zusätzlich zu den Header Stile von Listensteuerelementen, können Sie die folgenden allgemeinen Steuerelementstile um zu ermitteln, wie das Kopfzeilen-Steuerelement positioniert, und seine Größe selbst ändert (finden Sie unter [allgemeinen Stile von Listensteuerelementen](/windows/desktop/Controls/common-control-styles) Informationen):  
   
 - CCS_BOTTOM bewirkt, dass das Steuerelement selbst am unteren Rand des übergeordneten Fensters den Clientbereich zu positionieren und die Breite auf das übergeordnete Element identisch sein Breite des Fensters.  
   
@@ -283,13 +283,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parameter  
  *dwExStyle*  
- Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
+ Gibt den erweiterten Stil des Steuerelements erstellt wird. Eine Liste der erweiterten Windows-Stile, finden Sie unter den *DwExStyle* -Parameter für [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) im Windows SDK.  
   
  *dwStyle*  
- Format des Headersteuerelements. Eine Beschreibung der Header der Stile von Listensteuerelementen, finden Sie unter [Steuerelementstile Kopfzeile](http://msdn.microsoft.com/library/windows/desktop/bb775241) im Windows SDK. Finden Sie unter [erstellen](#create) eine Liste der zusätzlichen Formatvorlagen.  
+ Format des Headersteuerelements. Eine Beschreibung der Header der Stile von Listensteuerelementen, finden Sie unter [Steuerelementstile Kopfzeile](/windows/desktop/Controls/header-control-styles) im Windows SDK. Finden Sie unter [erstellen](#create) eine Liste der zusätzlichen Formatvorlagen.  
   
  *Rect*  
- Ein Verweis auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  
+ Ein Verweis auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die Größe und Position des Fensters erstellt werden, in Clientkoordinaten des beschreibt *pParentWnd*.  
   
  *pParentWnd*  
  Ein Zeiger auf das Fenster, das übergeordnete Element des Steuerelements ist.  
@@ -318,7 +318,7 @@ CImageList* CreateDragImage(int nIndex);
  Ein Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) -Objekt, wenn erfolgreich; andernfalls NULL. Die zurückgegebene Liste enthält nur ein Bild.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_CREATEDRAGIMAGE](http://msdn.microsoft.com/library/windows/desktop/bb775308), wie im Windows SDK beschrieben. Er wird bereitgestellt, um Header-Element ziehen und ablegen zu unterstützen.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_CREATEDRAGIMAGE](/windows/desktop/Controls/hdm-createdragimage), wie im Windows SDK beschrieben. Er wird bereitgestellt, um Header-Element ziehen und ablegen zu unterstützen.  
   
  Die `CImageList` Objekt, zu dem der zurückgegebene Zeiger weist, ist ein temporäres Objekt, und in der nächsten Verarbeitung der Leerlauf-Ablaufzeitpunkt gelöscht wird.  
   
@@ -348,7 +348,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>Parameter  
  *lpDrawItemStruct*  
- Ein Zeiger auf eine [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) Struktur, beschreibt das Element gezeichnet werden.  
+ Ein Zeiger auf eine [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) Struktur, beschreibt das Element gezeichnet werden.  
   
 ### <a name="remarks"></a>Hinweise  
  Die `itemAction` Mitglied der `DRAWITEMSTRUCT` Struktur definiert die Zeichnen-Aktion, die ausgeführt werden soll.  
@@ -374,7 +374,7 @@ BOOL EditFilter(
  Die Spalte zu bearbeiten.  
   
  *bDiscardChanges*  
- Ein Wert, der angibt, wie den Benutzer behandelt Änderungen der bearbeiten kann, wenn der Benutzer gerade den Filter bearbeiten bei der [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) Nachricht gesendet wird.  
+ Ein Wert, der angibt, wie den Benutzer behandelt Änderungen der bearbeiten kann, wenn der Benutzer gerade den Filter bearbeiten bei der [HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter) Nachricht gesendet wird.  
   
  Geben Sie "true", die vom Benutzer oder "false" an die vom Benutzer vorgenommenen Änderungen zu übernehmen vorgenommenen Änderungen zu verwerfen.  
   
@@ -382,7 +382,7 @@ BOOL EditFilter(
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode implementiert, das Verhalten der Win32-Nachricht [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312), wie im Windows SDK beschrieben.  
+ Diese Methode implementiert, das Verhalten der Win32-Nachricht [HDM_EDITFILTER](/windows/desktop/Controls/hdm-editfilter), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
@@ -398,7 +398,7 @@ int GetBitmapMargin() const;
  Die Breite des Rands Bitmap in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_GETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775314), wie im Windows SDK beschrieben.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_GETBITMAPMARGIN](/windows/desktop/Controls/hdm-getbitmapmargin), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
@@ -414,7 +414,7 @@ int GetFocusedItem() const;
  Der nullbasierte Index des Headerelements, das den Fokus besitzt.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [HDM_GETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775330) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [HDM_GETFOCUSEDITEM](/windows/desktop/Controls/hdm-getfocuseditem) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_headerCtrl`, d. h. für den Zugriff auf das aktuelle Kopfzeilen-Steuerelement. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -437,7 +437,7 @@ CImageList* GetImageList() const;
  Ein Zeiger auf eine [CImageList](../../mfc/reference/cimagelist-class.md) Objekt.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775332), wie im Windows SDK beschrieben. Die `CImageList` Objekt, zu dem der zurückgegebene Zeiger weist, ist ein temporäres Objekt, und in der nächsten Verarbeitung der Leerlauf-Ablaufzeitpunkt gelöscht wird.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_GETIMAGELIST](/windows/desktop/Controls/hdm-getimagelist), wie im Windows SDK beschrieben. Die `CImageList` Objekt, zu dem der zurückgegebene Zeiger weist, ist ein temporäres Objekt, und in der nächsten Verarbeitung der Leerlauf-Ablaufzeitpunkt gelöscht wird.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
@@ -456,7 +456,7 @@ BOOL GetItem(
  Gibt an, der nullbasierte Index des abzurufenden Elements.  
   
  *pHeaderItem*  
- Zeiger auf ein [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) -Struktur, die das neue Element empfängt. Diese Struktur wird verwendet, mit der `InsertItem` und `SetItem` Memberfunktionen. Flags festgelegt wird, der `mask` Element stellen Sie sicher, dass die Werte in die entsprechenden Elemente bei der Rückgabe ordnungsgemäß ausgefüllt werden. Wenn die `mask` Element auf 0 (null) festgelegt ist, Werte in den anderen Strukturelementen sind bedeutungslos.  
+ Zeiger auf ein [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) -Struktur, die das neue Element empfängt. Diese Struktur wird verwendet, mit der `InsertItem` und `SetItem` Memberfunktionen. Flags festgelegt wird, der `mask` Element stellen Sie sicher, dass die Werte in die entsprechenden Elemente bei der Rückgabe ordnungsgemäß ausgefüllt werden. Wenn die `mask` Element auf 0 (null) festgelegt ist, Werte in den anderen Strukturelementen sind bedeutungslos.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -490,14 +490,14 @@ BOOL GetItemDropDownRect(
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in] *iItem*|Nullbasierte Index des ein Headerelement, dessen Stil HDF_SPLITBUTTON ist. Weitere Informationen finden Sie unter den `fmt` Mitglied der [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) Struktur.|  
-|[out] *LpRect*|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die umgebenden Rechteck Informationen zu erhalten.|  
+|[in] *iItem*|Nullbasierte Index des ein Headerelement, dessen Stil HDF_SPLITBUTTON ist. Weitere Informationen finden Sie unter den `fmt` Mitglied der [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) Struktur.|  
+|[out] *LpRect*|Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die umgebenden Rechteck Informationen zu erhalten.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Funktion erfolgreich ausgeführt wird. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [HDM_GETITEMDROPDOWNRECT](/windows/desktop/Controls/hdm-getitemdropdownrect) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_headerCtrl`, d. h. für den Zugriff auf das aktuelle Kopfzeilen-Steuerelement. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -523,13 +523,13 @@ BOOL GetItemRect(
  Der nullbasierte Index, der das Headerelement-Steuerelement.  
   
  *lpRect*  
- Ein Zeiger auf die Adresse einer [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die umschließende Rechteck Informationen empfängt.  
+ Ein Zeiger auf die Adresse einer [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die umschließende Rechteck Informationen empfängt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode implementiert, das Verhalten der Win32-Nachricht [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341), wie im Windows SDK beschrieben.  
+ Diese Methode implementiert, das Verhalten der Win32-Nachricht [HDM_GETITEMRECT](/windows/desktop/Controls/hdm-getitemrect), wie im Windows SDK beschrieben.  
   
 ##  <a name="getorderarray"></a>  CHeaderCtrl:: GetOrderArray  
  Ruft die links-nach-rechts-Reihenfolge der Elemente in einem Kopfzeilen-Steuerelement ab.  
@@ -551,7 +551,7 @@ BOOL GetOrderArray(
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_GETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775343), wie im Windows SDK beschrieben. Er wird bereitgestellt, um Header Elementreihenfolge zu unterstützen.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_GETORDERARRAY](/windows/desktop/Controls/hdm-getorderarray), wie im Windows SDK beschrieben. Er wird bereitgestellt, um Header Elementreihenfolge zu unterstützen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
@@ -567,15 +567,15 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[out] *LpRect*|Zeiger auf eine [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die umschließende Rechteck Informationen empfängt.|  
+|[out] *LpRect*|Zeiger auf eine [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) Struktur, die die umschließende Rechteck Informationen empfängt.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn diese Funktion erfolgreich ausgeführt wird. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Enthält das Kopfzeilen-Steuerelement mehr Elemente als gleichzeitig angezeigt werden kann, kann das Steuerelement eine Überlaufschaltfläche an, die gescrollt für Elemente anzeigen, die nicht sichtbar sind. Das Kopfzeilen-Steuerelement muss die HDS_OVERFLOW und HDF_SPLITBUTTON Stile zum Anzeigen der Schaltfläche "Überlauf" verfügen. Das umschließende Rechteck der Schaltfläche "Überlauf" umschließt und existiert nur, wenn die Schaltfläche "Überlauf" angezeigt wird. Weitere Informationen finden Sie unter [Steuerelementstile Kopfzeile](http://msdn.microsoft.com/library/windows/desktop/bb775241).  
+ Enthält das Kopfzeilen-Steuerelement mehr Elemente als gleichzeitig angezeigt werden kann, kann das Steuerelement eine Überlaufschaltfläche an, die gescrollt für Elemente anzeigen, die nicht sichtbar sind. Das Kopfzeilen-Steuerelement muss die HDS_OVERFLOW und HDF_SPLITBUTTON Stile zum Anzeigen der Schaltfläche "Überlauf" verfügen. Das umschließende Rechteck der Schaltfläche "Überlauf" umschließt und existiert nur, wenn die Schaltfläche "Überlauf" angezeigt wird. Weitere Informationen finden Sie unter [Steuerelementstile Kopfzeile](/windows/desktop/Controls/header-control-styles).  
   
- Diese Methode sendet die [HDM_GETOVERFLOWRECT](http://msdn.microsoft.com/library/windows/desktop/bb775345) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [HDM_GETOVERFLOWRECT](/windows/desktop/Controls/hdm-getoverflowrect) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_headerCtrl`, d. h. für den Zugriff auf das aktuelle Kopfzeilen-Steuerelement. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -598,13 +598,13 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|[in, out] *Phdhti*|Zeiger auf eine [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) Struktur, die den zu überprüfenden Punkt gibt an, und erhält die Ergebnisse des Tests.|  
+|[in, out] *Phdhti*|Zeiger auf eine [HDHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-_hd_hittestinfo) Struktur, die den zu überprüfenden Punkt gibt an, und erhält die Ergebnisse des Tests.|  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der nullbasierte Index des Headerelements, sofern vorhanden, an der angegebenen Position; andernfalls -1.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [HDM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb775349) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [HDM_HITTEST](/windows/desktop/Controls/hdm-hittest) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_headerCtrl`, d. h. für den Zugriff auf das aktuelle Kopfzeilen-Steuerelement. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -630,7 +630,7 @@ int InsertItem(
  Der nullbasierte Index des einzufügenden Elements. Wenn der Wert 0 (null) ist, wird das Element am Anfang des Headersteuerelements eingefügt. Wenn der Wert größer als der maximale Wert ist, wird das Element am Ende des Headersteuerelements eingefügt.  
   
  *phdi*  
- Zeiger auf ein [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) -Struktur, enthält Informationen über das Element eingefügt werden soll.  
+ Zeiger auf ein [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) -Struktur, enthält Informationen über das Element eingefügt werden soll.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Der Index des neuen Elements, wenn erfolgreich; andernfalls - 1.  
@@ -647,7 +647,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
   
 ### <a name="parameters"></a>Parameter  
  *pHeaderLayout*  
- Zeiger auf ein [HDLAYOUT](http://msdn.microsoft.com/library/windows/desktop/bb775249) -Struktur, die Informationen zum Festlegen der Größe und Position von einem Kopfzeilen-Steuerelement enthält.  
+ Zeiger auf ein [HDLAYOUT](/windows/desktop/api/commctrl/ns-commctrl-_hd_layout) -Struktur, die Informationen zum Festlegen der Größe und Position von einem Kopfzeilen-Steuerelement enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -673,7 +673,7 @@ int OrderToIndex(int nOrder) const;
  Der Index des Elements basierend auf der Reihenfolge, in dem Kopfzeilen-Steuerelement. Der Index wird von links nach rechts und beginnend mit 0 gezählt.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Win32-Makros [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), wie im Windows SDK beschrieben. Er wird bereitgestellt, um Header Elementreihenfolge zu unterstützen.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros [HDM_ORDERTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb775355), wie im Windows SDK beschrieben. Er wird bereitgestellt, um Header Elementreihenfolge zu unterstützen.  
   
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin  
  Legt die Breite des Rands einer Bitmap in einem Kopfzeilen-Steuerelement fest.  
@@ -690,13 +690,13 @@ int SetBitmapMargin(int nWidth);
  Die Breite des Rands Bitmap in Pixel.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_SETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775357), wie im Windows SDK beschrieben.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_SETBITMAPMARGIN](/windows/desktop/Controls/hdm-setbitmapmargin), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
 ##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout  
- Legt das Timeout-Intervall zwischen dem Zeitpunkt, die eine Änderung in den Filterattributen erfolgt und der Bereitstellung einer [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) Benachrichtigung.  
+ Legt das Timeout-Intervall zwischen dem Zeitpunkt, die eine Änderung in den Filterattributen erfolgt und der Bereitstellung einer [HDN_FILTERCHANGE](/windows/desktop/Controls/hdn-filterchange) Benachrichtigung.  
   
 ```  
 int SetFilterChangeTimeout(DWORD dwTimeOut);
@@ -710,7 +710,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
  Der Index des Filter-Steuerelements geändert wird.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_SETFILTERCHANGETIMEOUT](http://msdn.microsoft.com/library/windows/desktop/bb775359), wie im Windows SDK beschrieben.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_SETFILTERCHANGETIMEOUT](/windows/desktop/Controls/hdm-setfilterchangetimeout), wie im Windows SDK beschrieben.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
@@ -732,7 +732,7 @@ BOOL SetFocusedItem(int iItem);
  True, wenn diese Methode erfolgreich ist. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode sendet die [HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361) -Nachricht, die im Windows SDK beschrieben wird.  
+ Diese Methode sendet die [HDM_SETFOCUSEDITEM](/windows/desktop/Controls/hdm-setfocuseditem) -Nachricht, die im Windows SDK beschrieben wird.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Codebeispiel definiert die Variable `m_headerCtrl`, d. h. für den Zugriff auf das aktuelle Kopfzeilen-Steuerelement. Diese Variable wird im nächsten Beispiel verwendet.  
@@ -763,7 +763,7 @@ int SetHotDivider(int nIndex);
  Der Index des Unterteilers hervorgehoben.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_SETHOTDIVIDER](http://msdn.microsoft.com/library/windows/desktop/bb775363), wie im Windows SDK beschrieben. Er wird bereitgestellt, um Header-Element ziehen und ablegen zu unterstützen.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_SETHOTDIVIDER](/windows/desktop/Controls/hdm-sethotdivider), wie im Windows SDK beschrieben. Er wird bereitgestellt, um Header-Element ziehen und ablegen zu unterstützen.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
@@ -783,7 +783,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Ein Zeiger auf die [CImageList](../../mfc/reference/cimagelist-class.md) Objekt zuvor, dem Kopfzeilen-Steuerelement zugewiesen ist.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775365), wie im Windows SDK beschrieben. Die `CImageList` Objekt, zu dem der zurückgegebene Zeiger weist, ist ein temporäres Objekt, und in der nächsten Verarbeitung der Leerlauf-Ablaufzeitpunkt gelöscht wird.  
+ Diese Memberfunktion implementiert das Verhalten der Win32-Nachricht [HDM_SETIMAGELIST](/windows/desktop/Controls/hdm-setimagelist), wie im Windows SDK beschrieben. Die `CImageList` Objekt, zu dem der zurückgegebene Zeiger weist, ist ein temporäres Objekt, und in der nächsten Verarbeitung der Leerlauf-Ablaufzeitpunkt gelöscht wird.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CHeaderCtrl::GetImageList](#getimagelist).  
@@ -802,7 +802,7 @@ BOOL SetItem(
  Der nullbasierte Index des Elements, das bearbeitet werden.  
   
  *pHeaderItem*  
- Zeiger auf ein [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) -Struktur, die Informationen über das neue Element enthält.  
+ Zeiger auf ein [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) -Struktur, die Informationen über das neue Element enthält.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -830,7 +830,7 @@ BOOL SetOrderArray(
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Memberfunktion implementiert das Verhalten des Win32-Makros [HDM_SETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775369), wie im Windows SDK beschrieben. Er wird bereitgestellt, um Header Elementreihenfolge zu unterstützen.  
+ Diese Memberfunktion implementiert das Verhalten des Win32-Makros [HDM_SETORDERARRAY](/windows/desktop/Controls/hdm-setorderarray), wie im Windows SDK beschrieben. Er wird bereitgestellt, um Header Elementreihenfolge zu unterstützen.  
   
 ### <a name="example"></a>Beispiel  
   Siehe das Beispiel für [CHeaderCtrl:: GetOrderArray](#getorderarray).  

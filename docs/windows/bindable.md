@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c529abb1ade786bf7ec0a2d5cff5c49f6197be7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2e0ce7cffb397aaa170f13bac9fc1f4c1693d25f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601588"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214851"
 ---
 # <a name="bindable"></a>bindable
 
@@ -36,15 +36,15 @@ Gibt an, dass die Eigenschaft die Datenbindung unterstützt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **bindbare** C++-Attribut hat die gleiche Funktionalität wie die [bindbare](http://msdn.microsoft.com/library/windows/desktop/aa366738) MIDL-Attribut. Können Sie sie auf die definierte Eigenschaften mit dem die [Propget](../windows/propget.md), [Propput](../windows/propput.md), oder [Propputref](../windows/propputref.md) Attribute, oder Sie können eine bindbare Methode manuell definieren.
+Die **bindbare** C++-Attribut hat die gleiche Funktionalität wie die [bindbare](/windows/desktop/Midl/bindable) MIDL-Attribut. Können Sie sie auf die definierte Eigenschaften mit dem die [Propget](../windows/propget.md), [Propput](../windows/propput.md), oder [Propputref](../windows/propputref.md) Attribute, oder Sie können eine bindbare Methode manuell definieren.
 
 Die folgenden MFC-Beispiele veranschaulichen die Verwendung der **bindbare**:
 
-- [Steuerelementbeispiele: MFC-basierte ActiveX-Steuerelemente](http://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
+- [Steuerelementbeispiele: MFC-basierte ActiveX-Steuerelemente](https://msdn.microsoft.com/a44adf86-0ba0-4504-bedb-512b6cba2e63)
 
-- [CIRC-Beispiel: ActiveX-Steuerelement](http://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
+- [CIRC-Beispiel: ActiveX-Steuerelement](https://msdn.microsoft.com/9ba34d04-280e-49f4-90ae-41a6be44c95b)
 
-- [TESTHELP-Beispiel: ActiveX-Steuerelement mit QuickInfos und Hilfe](http://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
+- [TESTHELP-Beispiel: ActiveX-Steuerelement mit QuickInfos und Hilfe](https://msdn.microsoft.com/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)
 
 ## <a name="example"></a>Beispiel
 

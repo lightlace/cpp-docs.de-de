@@ -1,5 +1,5 @@
 ---
-title: Datentypen (MFC) | Microsoft Docs
+title: Datentypen (MFC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,24 +34,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d098a88e57ecbbedfde1a4674a915e13c28ab435
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 07745d1488b22645200d7af155d2af9b2ea73838
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121013"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199868"
 ---
 # <a name="data-types-mfc"></a>Datentypen (MFC)
-Dieses Thema listet die Datentypen, die am häufigsten in der Microsoft Foundation Class-Bibliothek verwendet. Die meisten Datentypen sind dieselben wie in der Platform Software Development Kit (SDK), während andere für MFC eindeutig sind.  
+Dieses Thema enthält die Datentypen, die am häufigsten in der Microsoft Foundation Class-Bibliothek. Die meisten Datentypen sind dieselben wie in der Platform Software Development Kit (SDK), während andere für MFC eindeutig sind.  
   
- Informationen zu den Datentypen, die in der Windows-SDK und die MFC verwendet, finden Sie unter [Windows Data Types](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
+ Informationen zu den Datentypen, die in den Windows-SDK und die MFC verwendet, finden Sie unter [Windows-Datentypen](/windows/desktop/WinProg/windows-data-types).  
   
  Die folgenden: Datentypen, die nur für die Microsoft Foundation Class-Bibliothek  
   
--   Positionieren Sie einen Wert, der die Position eines Elements in einer Auflistung zu kennzeichnen. von MFC-Auflistungsklassen verwendet.  
+-   Positionieren Sie einen Wert verwendet, um die Position eines Elements in einer Sammlung anzugeben. von MFC-Auflistungsklassen verwendet.  
   
--   Eine 32-Bit-Zeiger auf eine Konstante (nicht veränderbaren) LPCRECT `RECT` Struktur.  
+-   Eine 32-Bit-Zeiger auf eine Konstante, die (nicht veränderbar) LPCRECT `RECT` Struktur.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenübersicht](../../mfc/class-library-overview.md)   
+ [Übersicht über die Klasse](../../mfc/class-library-overview.md)   
  [Makros und globale Variablen](../../mfc/reference/mfc-macros-and-globals.md)

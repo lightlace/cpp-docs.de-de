@@ -1,5 +1,5 @@
 ---
-title: Festlegen der Bilder für ein einzelnes Element | Microsoft Docs
+title: Festlegen der Bilder für ein einzelnes Element | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,37 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aec02a07de8fad2f9ad063295090be5ace4146e6
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c64ab33f053c941bd5332269d4c952b3a318cb6b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953801"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209303"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Festlegen der Bilder für ein bestimmtes Element
-Die verschiedenen Typen von Bildern, durch die erweiterten Kombinationsfeldelement werden bestimmt anhand der Werte in der *iImage*, *iSelectedImage*, und *iOverlay* Mitglied der [ COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) Struktur. Jeder Wert ist der Index eines Bilds in der zugehörigen Bildliste des Steuerelements. Standardmäßig werden diese Member auf 0 festgelegt, verursacht das Steuerelement kein Bild für das Element an. Wenn Sie Bilder für ein bestimmtes Element verwenden möchten, können Sie die Struktur entsprechend beim Einfügen der Kombinationsfeldelement oder durch Ändern einer vorhandenen Kombinationsfeldelement ändern.  
+Die verschiedenen Typen von Bildern, die von der erweiterten Kombinationsfeldelement werden nach den Werten in bestimmt die *iImage*, *iSelectedImage*, und *iOverlay* Mitglied der [ COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) Struktur. Jeder Wert ist der Index eines Bildes in der Liste zugeordnete Bild des Steuerelements. Standardmäßig werden diese Elemente auf 0 (null) festgelegt, verursacht das Steuerelement kein Bild für das Element an. Wenn Sie Images für ein bestimmtes Element verwenden möchten, können Sie die Struktur entsprechend entweder beim Einfügen des Kombinationsfelds oder durch Ändern einer vorhandenen ComboBoxItem-Steuerelement ändern.  
   
-## <a name="setting-the-image-for-a-new-item"></a>Einstellen des Bildes für ein neues Element  
- Wenn Sie ein neues Element einfügen, initialisieren Sie die *iImage*, *iSelectedImage*, und *iOverlay* Strukturmember mit den richtigen Werten, und fügen Sie dann das Element mit einem Aufruf von [CComboBoxEx:: InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).  
+## <a name="setting-the-image-for-a-new-item"></a>Festlegen des Bildformats für ein neues Element  
+ Wenn Sie ein neues Element einfügen, initialisieren Sie die *iImage*, *iSelectedImage*, und *iOverlay* Strukturmember durch die entsprechenden Werte ein, und fügen Sie dann das Element mit einem Aufruf von [CComboBoxEx:: InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).  
   
- Das folgende Beispiel fügt ein neue erweiterte Kombinationsfeldelement (`cbi`) in der erweiterten Kombinationsfeld-Steuerelement (`m_comboEx`), stellt Indizes für alle drei Zustände Abbild:  
+ Das folgende Beispiel fügt ein neue erweiterte Kombinationsfeldelement (`cbi`) in der erweiterten Kombinationsfeld-Steuerelement (`m_comboEx`), stellt Indizes für alle drei Zustände image:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_1.cpp)]  
   
-## <a name="setting-the-image-for-an-existing-item"></a>Einstellen des Bildes für ein vorhandenes Element  
- Wenn Sie ein vorhandenes Element ändern, müssen Sie zur Bearbeitung der *Maske* Mitglied einer **COMBOBOXEXITEM** Struktur.  
+## <a name="setting-the-image-for-an-existing-item"></a>Festlegen des Bildformats für ein vorhandenes Element  
+ Wenn Sie ein vorhandenes Element ändern, müssen Sie arbeiten mit der *Maske* Mitglied einer **COMBOBOXEXITEM** Struktur.  
   
-#### <a name="to-modify-an-existing-item-to-use-images"></a>So ändern Sie ein vorhandenes Element zum Verwenden von Bildern  
+#### <a name="to-modify-an-existing-item-to-use-images"></a>So ändern Sie ein vorhandenes Element zum Verwenden von images  
   
-1.  Deklarieren Sie eine **COMBOBOXEXITEM** -Struktur, und legen Sie die *Maske* -Datenmember auf die Werte sind Sie interessiert, ändern.  
+1.  Deklarieren Sie eine **COMBOBOXEXITEM** Struktur, und legen Sie die *Maske* Datenmembers, der die Werte werden Sie ändern möchten.  
   
-2.  Diese Struktur mit einen Aufruf von stellen [:: GetItem](../mfc/reference/ccomboboxex-class.md#getitem).  
+2.  Mit dieser Struktur stellen einen Aufruf von [:: GetItem](../mfc/reference/ccomboboxex-class.md#getitem).  
   
-3.  Ändern der *Maske*, *iImage*, und *iSelectedImage* Member neu zurückgegebenen Struktur, die entsprechenden Werte verwendet.  
+3.  Ändern der *Maske*, *iImage*, und *iSelectedImage* Member das neu zurückgegebene Struktur, die entsprechenden Werte verwendet.  
   
-4.  Rufen Sie [CComboBoxEx::SetItem](../mfc/reference/ccomboboxex-class.md#setitem), und übergeben Sie die geänderte Struktur.  
+4.  Rufen Sie [CComboBoxEx::SetItem](../mfc/reference/ccomboboxex-class.md#setitem), und übergeben Sie die geänderten Struktur.  
   
- Im folgende Beispiel veranschaulicht dieses Verfahren durch Austausch der ausgewählten und nicht ausgewählten Images für das dritte Element der erweiterten Kombinationsfeld-Feld:  
+ Das folgende Beispiel zeigt dieses Verfahren durch die ausgewählte und nicht ausgewählte Bilder der dritte erweiterte Kombinationsfeldelements austauschen:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_2.cpp)]  
   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6a75fe2d973b0330c66faaae6c4daede224c5e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 25c9e21aa4b0f09db83632973d3a5046e3e2aa4a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880504"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206119"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel-Klasse
 `CComMultiThreadModel` Stellt Thread-sichere-Methoden zum Inkrementieren und Dekrementieren den Wert einer Variablen bereit.  
@@ -158,7 +158,7 @@ typedef CComCriticalSection CriticalSection;
  Finden Sie unter [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).  
   
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement  
- Diese statischen Funktion ruft die Win32-Funktion [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), welche dekrementiert der Wert der Variablen auf *p*.  
+ Diese statischen Funktion ruft die Win32-Funktion [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), welche dekrementiert der Wert der Variablen auf *p*.  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -175,7 +175,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
  `InterlockedDecrement` verhindert, dass mehrere Threads gleichzeitig die Verwendung dieser Variablen.  
   
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment  
- Diese statischen Funktion ruft die Win32-Funktion [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), die inkrementiert des Wert der Variable verweist *p*.  
+ Diese statischen Funktion ruft die Win32-Funktion [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), die inkrementiert des Wert der Variable verweist *p*.  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();

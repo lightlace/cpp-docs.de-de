@@ -1,5 +1,5 @@
 ---
-title: -ALLOWISOLATION (Manifestsuche) | Microsoft Docs
+title: -ALLOWISOLATION (Manifestsuche) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0e063aa51e136dfcc7a4445948e8a68d7a99bca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 62f467ff467d785d17601737436e0eb1ff972f37
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369837"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205492"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Manifestsuche)
 Gibt das Verhalten bei der Manifestsuche an.  
@@ -35,21 +35,21 @@ Gibt das Verhalten bei der Manifestsuche an.
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- **/ALLOWISOLATION:No** DLLs geladen, als wäre kein Manifest und führt dazu, dass den Linker Festlegen der `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit im optionalen-Headers `DllCharacteristics` Feld.  
+ **/ALLOWISOLATION:No** DLLs geladen, als ob es kein Manifest gäbe und bewirkt, dass den Linker an, legen Sie die `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit im des optionalen Headers `DllCharacteristics` Feld.  
   
- **/ ALLOWISOLATION** bewirkt, dass das Betriebssystem, Suchvorgänge und-Ladevorgänge durchführt.  
+ **/ ALLOWISOLATION** bewirkt, dass das Betriebssystem manifestsuch- und-Ladevorgänge durchführt.  
   
  **/ ALLOWISOLATION** ist die Standardeinstellung.  
   
- Wenn Isolation für eine ausführbare Datei deaktiviert ist, wird das Windows-Ladeprogramm nicht versucht, ein Anwendungsmanifest für den neu erstellten Prozess gefunden. Der neue Prozess keinen Standard-Aktivierungskontext, auch wenn es ein Manifest in die ausführbare Datei oder eine platzierten im selben Verzeichnis wie die ausführbare Datei mit dem Namen * ausführbare-Namen ***. exe.manifest**.  
+ Wenn Isolation für eine ausführbare Datei deaktiviert ist, versucht das Windows-Ladeprogramm nicht um ein Anwendungsmanifest für den neu erstellten Prozess zu finden. Der neue Prozess keinen Standard-Aktivierungskontext, selbst wenn ein Manifest in die ausführbare Datei oder in demselben Verzeichnis wie die ausführbare Datei mit dem Namen aufgenommen werden <em>Name der ausführbaren Datei</em>**. exe.manifest**.  
   
- Weitere Informationen finden Sie unter [Manifestdateienreferenz](http://msdn.microsoft.com/library/aa375632).  
+ Weitere Informationen finden Sie unter [Manifestdateienreferenz](/windows/desktop/SbsCs/manifest-files-reference).  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Linkeroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
+1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Ausführliche Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).  
   
-2.  Erweitern Sie die **Konfigurationseigenschaften** Knoten.  
+2.  Erweitern Sie den Knoten **Konfigurationseigenschaften**.  
   
 3.  Erweitern Sie die **Linker** Knoten.  
   

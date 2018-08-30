@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Elementen zum Steuerelement | Microsoft Docs
+title: Hinzufügen von Elementen zum Steuerelement | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eab0c7cb1aebf1675d078aa99941edfd9afdc5a8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2e9434e93640de190b78e92a1f009a0ad9cbecf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341364"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214436"
 ---
 # <a name="adding-items-to-the-control"></a>Hinzufügen von Elementen zum Steuerelement
-Hinzufügen von Elementen auf das Strukturelement-Steuerelement ([CListCtrl](../mfc/reference/clistctrl-class.md)), rufen Sie eine der verschiedenen Versionen von der [InsertItem](../mfc/reference/clistctrl-class.md#insertitem) Memberfunktion ist, je nachdem welche Informationen Sie. Eine Version übernimmt einen [LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) -Struktur, die Sie vorbereiten. Da die `LV_ITEM` Struktur enthält zahlreiche Elemente, stehen Ihnen mehr Kontrolle über die Attribute des Listenelements-Steuerelement.  
+Das Strukturelement-Steuerelement Elemente hinzugefügt ([CListCtrl](../mfc/reference/clistctrl-class.md)), rufen Sie eine der mehrere Versionen der [InsertItem](../mfc/reference/clistctrl-class.md#insertitem) Member-Funktion, je nachdem welche Informationen Sie. Eine Version übernimmt einen [LV_ITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Struktur, die Sie vorbereiten. Da die `LV_ITEM` Struktur enthält zahlreiche Elemente, stehen Ihnen mehr Kontrolle über die Attribute des Elements des Listensteuerelements.  
   
- Zwei wichtige Member (hinsichtlich der Berichtsansicht) von der `LV_ITEM` Struktur werden die `iItem` und `iSubItem` Elemente. Die `iItem` Member ist der nullbasierte Index des Elements verweist auf die Struktur und die `iSubItem` Member ist der einsbasierte Index des Unterelements oder 0 (null), wenn die Struktur Informationen über ein Element enthält. Mit diesen beiden Membern bestimmen Sie, pro Element, dem Typ und Wert der Unterelementinformationen, die angezeigt wird, wenn das Strukturelement-Steuerelement in der Berichtsansicht ist. Weitere Informationen finden Sie unter [CListCtrl:: SetItem](../mfc/reference/clistctrl-class.md#setitem).  
+ Zwei wichtige Member (in Bezug auf die Berichtsansicht) von der `LV_ITEM` Struktur werden die `iItem` und `iSubItem` Member. Die `iItem` Member ist der nullbasierte Index des Elements verweist auf die Struktur und die `iSubItem` Member ist der einsbasierte Index ein Unterelement oder 0 (null), wenn die Struktur Informationen über ein Element enthält. Mit diesen beiden Membern bestimmen Sie, pro Artikel, den Typ und Wert der Informationen zu den Unterelementen, die angezeigt wird, wenn das Strukturelement-Steuerelement in der Berichtsansicht ist. Weitere Informationen finden Sie unter [CListCtrl:: SetItem](../mfc/reference/clistctrl-class.md#setitem).  
   
- Zusätzliche Member geben Sie des Elements Text, Symbol ", Status und Elementdaten. "Elementdaten" ein anwendungsdefinierten Wert, der eine Listenansichtselements zugeordnet ist. Weitere Informationen zu den `LV_ITEM` -Struktur, finden Sie unter [CListCtrl:: GetItem](../mfc/reference/clistctrl-class.md#getitem).  
+ Zusätzliche Member geben Sie Text, Symbol, Status und die Daten des Elements. "Elementdaten" ein Anwendung definierter Wert, der ein Listenansichtselement zugeordnet ist. Weitere Informationen zu den `LV_ITEM` Struktur, siehe [CListCtrl:: GetItem](../mfc/reference/clistctrl-class.md#getitem).  
   
- Andere Versionen von `InsertItem` nehmen Sie eine oder mehrere unterschiedliche Werte, die für Elemente in der `LV_ITEM` -Struktur, sodass Sie nur die Elemente zu initialisieren, Sie unterstützen möchten. Im Allgemeinen können das Strukturelement-Steuerelement verwaltet den Speicher für Listenelemente, Sie jedoch speichern einige Informationen in Ihrer Anwendung stattdessen mithilfe von "Rückrufelemente". Weitere Informationen finden Sie unter [Rückrufelemente und Rückrufmaske](../mfc/callback-items-and-the-callback-mask.md) in diesem Thema und [Rückrufelemente und Rückrufmaske](http://msdn.microsoft.com/library/windows/desktop/bb774736) im Windows SDK.  
+ Andere Versionen von `InsertItem` nehmen Sie eine oder mehrere unterschiedliche Werte, die für Elemente in der `LV_ITEM` Struktur, sodass Sie nur die Member initialisiert werden, Sie unterstützen möchten. Im Allgemeinen das Strukturelement-Steuerelement verwaltet die Speicherung für Listenelemente, aber Sie können einige der Informationen in Ihrer Anwendung speichern stattdessen mit "Rückrufelemente." Weitere Informationen finden Sie unter [Rückrufelemente und Rückrufmaske](../mfc/callback-items-and-the-callback-mask.md) in diesem Thema und [Rückrufelemente und Rückrufmaske](/windows/desktop/Controls/using-list-view-controls) im Windows SDK.  
   
- Weitere Informationen finden Sie unter [hinzufügen Listenansicht Elemente und Unterelemente](http://msdn.microsoft.com/library/windows/desktop/bb774736).  
+ Weitere Informationen finden Sie unter [hinzufügen Listenansicht-Elementen und Unterelementen](/windows/desktop/Controls/using-list-view-controls).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von CListCtrl](../mfc/using-clistctrl.md)   

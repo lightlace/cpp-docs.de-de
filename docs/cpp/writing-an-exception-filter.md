@@ -14,18 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb9307b68b5d664e477f0139824ff02d00b7c134
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 447f843bcc8f07d76084d1db68890237474ce200
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39462117"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222151"
 ---
 # <a name="writing-an-exception-filter"></a>Schreiben eines Ausnahmefilters
 Sie können eine Ausnahme behandeln, indem Sie entweder auf die Ebene des Ausnahmehandlers wechseln oder die Ausführung fortsetzen. Anstatt den Code im Ausnahmehandler, um die Ausnahme und das durchfallen zu behandeln, können Sie *Filter* bereinigen Sie das Problem, und klicken Sie dann durch-1 zurückzugeben, normalen Fluss fortzusetzen, ohne dass den Stapel gelöscht.  
   
 > [!NOTE]
->  Einige Ausnahmen können nicht fortgesetzt werden. Wenn *Filter* ausgewertet wird auf-1 für eine derartige Ausnahme, löst das System eine neue Ausnahme aus. Beim Aufruf [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552), Sie bestimmen, ob die Ausnahme fortgesetzt wird.  
+>  Einige Ausnahmen können nicht fortgesetzt werden. Wenn *Filter* ausgewertet wird auf-1 für eine derartige Ausnahme, löst das System eine neue Ausnahme aus. Beim Aufruf [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552), Sie bestimmen, ob die Ausnahme fortgesetzt wird.  
   
  Der folgende Code verwendet beispielsweise einen Funktionsaufruf in der *Filter* Ausdruck: Diese Funktion behandelt das Problem, und klicken Sie dann gibt-1 zurück, um die normalen ablaufsteuerung fortzufahren:  
   
@@ -56,7 +56,7 @@ int Eval_Exception ( int n_except ) {
   
  Es ist eine gute Idee, einen Funktionsaufruf im Verwenden der *Filter* Ausdruck immer *Filter* komplexe Funktionen ausführen muss. Das Auswerten des Ausdrucks verursacht die Ausführung der Funktion, in diesem Fall `Eval_Exception`.  
   
- Beachten Sie die Verwendung von [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) , die die Ausnahme zu bestimmen. Sie müssen diese Funktion innerhalb des Filters selbst aufrufen. `Eval_Exception` kann nicht aufgerufen werden `GetExceptionCode`, jedoch muss ihr den Ausnahmecode übergeben.  
+ Beachten Sie die Verwendung von [GetExceptionCode](/windows/desktop/Debug/getexceptioncode) , die die Ausnahme zu bestimmen. Sie müssen diese Funktion innerhalb des Filters selbst aufrufen. `Eval_Exception` kann nicht aufgerufen werden `GetExceptionCode`, jedoch muss ihr den Ausnahmecode übergeben.  
   
  Dieser Handler übergibt die Steuerung an einen anderen Handler, sofern die Ausnahme keine Ganzzahl oder ein Gleitkommaüberlauf ist. Wenn dies der Fall ist, ruft der Handler eine Funktion (`ResetVars` ist nur ein Beispiel, keine API-Funktion) auf, um mehrere globale Variablen zurückzusetzen. *Anweisung Anweisungsblock 2*, die in diesem Beispiel leer ist, kann nicht ausgeführt werden, da `Eval_Exception` gibt nie EXCEPTION_EXECUTE_HANDLER (1) zurück.  
   

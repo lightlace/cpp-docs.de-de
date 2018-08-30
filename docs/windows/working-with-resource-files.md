@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d1b32fe880a278bc2b737148a90afa5bd2ad6e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592081"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211096"
 ---
 # <a name="working-with-resource-files"></a>Arbeiten mit Ressourcendateien
 
 > [!WARNING]
-> Dieser Abschnitt gilt für in C++ erstellte Windows-Desktopanwendungen. Weitere Informationen zu Ressourcen in die universelle Windows-Plattform-apps in C++ geschrieben wurden, finden Sie unter [Definieren von App-Ressourcen](http://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Dieser Abschnitt gilt für in C++ erstellte Windows-Desktopanwendungen. Weitere Informationen zu Ressourcen in die universelle Windows-Plattform-apps in C++ geschrieben wurden, finden Sie unter [Definieren von App-Ressourcen](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
 >
 > Informationen zum Hinzufügen von Ressourcen zu C++ / CLI-Projekten finden Sie unter [Ressourcen in Desktop-Apps](/dotnet/framework/resources/index) in die *(.NET Framework Developer's Guide*.
 
@@ -53,7 +53,7 @@ Beschreibt die Ressourcen-Editoren, die in Visual Studio bereitgestellt werden, 
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Enthält Links zur Visual C++-Dokumentation
 
-[Einführung in Visual Studio](http://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
+[Einführung in Visual Studio](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
 Beschreibt den vollständigen Satz an Entwicklungstools, die alle die gleiche integrierte Entwicklungsumgebung (IDE) verwenden, sodass sie Tools freigeben können und die Erstellung von Projektmappen in verschiedenen Sprachen erleichtern.
 
 [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)  
@@ -62,4 +62,4 @@ Bietet Links zu Informationen über die Verwendung des Dokumentationssatzes, Sup
 ## <a name="see-also"></a>Siehe auch
 
 [Windows-Desktop-Anwendungen](../windows/windows-desktop-applications-cpp.md)  
-[Menüs und weitere Ressourcen](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Menüs und weitere Ressourcen](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

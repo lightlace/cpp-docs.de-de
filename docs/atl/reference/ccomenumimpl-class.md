@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40a5604a1b1c469272889aa7b4e283b3ee6f23bf
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: c2b2f8ab8828c994b729180805be0a51a83b3487
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882795"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203625"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl-Klasse
 Diese Klasse stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem Array gespeichert werden.  
@@ -48,7 +48,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 #### <a name="parameters"></a>Parameter  
  *Basis*  
- Eine COM-Enumerators ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) Schnittstelle.  
+ Eine COM-Enumerator-Schnittstelle. Finden Sie unter [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) verdeutlicht. 
   
  *piid*  
  Ein Zeiger auf die Schnittstellen-ID der Enumeratorschnittstelle.  
@@ -72,11 +72,11 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|[CComEnumImpl::Clone](#clone)|Die Implementierung der [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx).|  
+|[CComEnumImpl::Clone](#clone)|Die Implementierung der **Klon** Enumerationsmethode-Schnittstelle.|  
 |[CComEnumImpl::Init](#init)|Initialisiert den Enumerator.|  
-|[CComEnumImpl::Next](#next)|Die Implementierung der [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx).|  
-|[CComEnumImpl::Reset](#reset)|Die Implementierung der [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx).|  
-|[CComEnumImpl:: Skip](#skip)|Die Implementierung der [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx).|  
+|[CComEnumImpl::Next](#next)|Die Implementierung der **Weiter**.|  
+|[CComEnumImpl::Reset](#reset)|Die Implementierung der **zurücksetzen**.|  
+|[CComEnumImpl:: Skip](#skip)|Die Implementierung der **überspringen**.|  
   
 ### <a name="public-data-members"></a>Öffentliche Datenmember  
   
@@ -89,7 +89,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_spUnk](#m_spunk)|Die `IUnknown` Zeiger, der das Objekt, das Angeben der Auflistung aufgezählt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComEnumImpl` Stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem Array gespeichert werden. Diese Klasse ist analog zu den `IEnumOnSTLImpl` -Klasse, die eine Implementierung einer Enumerator-Schnittstelle bereitstellt, basierend auf einem C++-Standardbibliothek-Container.  
+Finden Sie unter [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) ein Beispiel für Implementierungen der Dienstmethode. `CComEnumImpl` Stellt die Implementierung für eine COM-Enumerator-Schnittstelle, in dem die Elemente, die aufgezählt werden in einem Array gespeichert werden. Diese Klasse ist analog zu den `IEnumOnSTLImpl` -Klasse, die eine Implementierung einer Enumerator-Schnittstelle bereitstellt, basierend auf einem C++-Standardbibliothek-Container.  
   
 > [!NOTE]
 >  Weitere Informationen zu weiteren Unterschieden zwischen `CComEnumImpl` und `IEnumOnSTLImpl`, finden Sie unter [CComEnumImpl::Init](#init).  
@@ -175,7 +175,7 @@ enum CComEnumFlags
 >  Der Prototyp dieser Methode gibt die Elemente des Arrays als Typ `T`, wobei `T` als Vorlagenparameter für die Klasse definiert wurde. Dies ist der gleiche Typ, die mithilfe der COM-Schnittstellenmethode verfügbar gemacht wird [CComEnumImpl::Next](#next). Die Implikation hiervon ist, dass im Gegensatz zu [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), diese Klasse unterstützt keine anderen Speicher und Datentypen verfügbar. Der Datentyp der Elemente im Array muss identisch mit dem Datentyp, der mithilfe der COM-Schnittstelle verfügbar gemacht werden.  
   
 ##  <a name="clone"></a>  CComEnumImpl::Clone  
- Diese Methode bietet die Implementierung von der [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) Methode erstellen Sie ein Objekt des Typs `CComEnum`, initialisieren es mit dem gleichen Array und dem angegebenen Iterator vom aktuellen Objekt verwendet, und der Schnittstelle bei der neu erstellte Objekt.  
+ Diese Methode bietet die Implementierung von der **Klon** Methode erstellen Sie ein Objekt des Typs `CComEnum`, initialisieren es mit dem gleichen Array und dem angegebenen Iterator vom aktuellen Objekt verwendet und die Schnittstelle für das neu erstellte zurückgeben -Objekt.  
   
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -227,7 +227,7 @@ DWORD m_dwFlags;
 ```  
   
 ##  <a name="next"></a>  CComEnumImpl::Next  
- Diese Methode bietet die Implementierung der [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) Methode.  
+ Diese Methode bietet die Implementierung der **Weiter** Methode.  
   
 ```
 STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
@@ -247,7 +247,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
  Ein standard HRESULT-Wert.  
   
 ##  <a name="reset"></a>  CComEnumImpl::Reset  
- Diese Methode bietet die Implementierung der [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) Methode.  
+ Diese Methode bietet die Implementierung der **zurücksetzen** Methode.  
   
 ```
 STDMETHOD(Reset)(void);
@@ -257,7 +257,7 @@ STDMETHOD(Reset)(void);
  Ein standard HRESULT-Wert.  
   
 ##  <a name="skip"></a>  CComEnumImpl:: Skip  
- Diese Methode bietet die Implementierung der [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) Methode.  
+ Diese Methode bietet die Implementierung der **überspringen** Methode.  
   
 ```
 STDMETHOD(Skip)(ULONG celt);

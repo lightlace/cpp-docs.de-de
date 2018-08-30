@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7cbfd0e8b9ef95aac083b367980571c5535e6a7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ca91e614438695a14c6c16c05c5d778b143657eb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599041"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219382"
 ---
 # <a name="c-amp-overview"></a>Übersicht über C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) beschleunigt die Ausführung von C++-Code, indem die Vorteile Daten parallel verarbeitender Hardware, beispielsweise ein Grafikprozessor (Graphics Processing Unit, GPU) auf einer separaten Grafikkarte, genutzt werden. Sie können mithilfe von C++ AMP mehrdimensionale Datenalgorithmen programmieren, sodass die Ausführung durch die parallele Verarbeitung auf heterogener Hardware beschleunigt werden kann. Das C++ AMP-Programmiermodell umfasst mehrdimensionale Arrays, Indizierung, Arbeitsspeicherübertragung, Kacheln und eine Bibliothek mathematischer Funktionen. Sie können C++ AMP-Spracherweiterungen verwenden, um zu steuern, wie Daten von der CPU zur GPU und umgekehrt verschoben werden, sodass Sie die Leistung verbessern können.  
@@ -464,7 +464,7 @@ C++ AMP enthält eine Grafikbibliothek, die für die Programmierung beschleunigt
   
 - [Writeonly_texture_view-Klasse](../../parallel/amp/reference/writeonly-texture-view-class.md): bietet lesegeschützten Zugriff auf jede Textur.  
   
-- [Kurzer Vektor Bibliothek](http://msdn.microsoft.com/en-us/4c4f5bed-c396-493b-a238-c347563f645f): definiert einen Satz von Typen kurzer Vektoren der Länge 2, 3 und 4 auf der Grundlage von **Int**, `uint`, **"float"**, **doppelte**, [Norm](../../parallel/amp/reference/norm-class.md), oder [Unorm](../../parallel/amp/reference/unorm-class.md).  
+- [Kurzer Vektor Bibliothek](https://msdn.microsoft.com/4c4f5bed-c396-493b-a238-c347563f645f): definiert einen Satz von Typen kurzer Vektoren der Länge 2, 3 und 4 auf der Grundlage von **Int**, `uint`, **"float"**, **doppelte**, [Norm](../../parallel/amp/reference/norm-class.md), oder [Unorm](../../parallel/amp/reference/unorm-class.md).  
   
 ## <a name="universal-windows-platform-uwp-apps"></a>Apps der universellen Windows-Plattform (UWP)  
  

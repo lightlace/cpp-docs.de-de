@@ -1,7 +1,7 @@
 ---
-title: Compilerwarnung (Stufe 4) C4559 | Microsoft Docs
+title: Compilerwarnung (Stufe 4) C4559 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c853fa55482604d97c29653fadb06b0afdd44977
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d5743b33f62aa954c3765b729ab5c0297b20e32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295349"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195575"
 ---
 # <a name="compiler-warning-level-4-c4559"></a>Compilerwarnung (Stufe 4) C4559
-'Funktion': Neudefinition; die Funktion erhält __declspec(Modifizierer)  
-  
- Eine Funktion aufgenommenen oder neu deklariert wurde, und die zweite Definition oder Deklaration hinzugefügt eine __**Declspec** Modifizierer (***Modifizierer***). Diese Warnung dient nur zu Informationszwecken. Um diese Warnung zu beheben, löschen Sie eine der Definitionen.  
-  
- Im folgenden Beispiel wird C4559 generiert:  
-  
-```  
-// C4559.cpp  
-// compile with: /W4 /LD  
-void f();  
-__declspec(noalias) void f();   // C4559  
+
+> "*Funktion*": Neudefinition; die Funktion Gewinne __declspec (*Modifizierer*)
+
+## <a name="remarks"></a>Hinweise
+
+Eine Funktion neu definiert wurde, oder erneut deklariert und die zweite Definition oder Deklaration hinzugefügt. eine **__declspec** Modifizierer (*Modifizierer*). Diese Warnung dient nur zu Informationszwecken. Um diese Warnung zu beheben, löschen Sie eine der Definitionen.
+
+## <a name="example"></a>Beispiel
+
+Im folgende Beispiel wird die C4559 generiert:
+
+```cpp
+// C4559.cpp
+// compile with: /W4 /LD
+void f();
+__declspec(noalias) void f();   // C4559
 ```

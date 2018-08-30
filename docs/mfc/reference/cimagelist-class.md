@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63e6a7a45fc119309ce99640ab74006ae44a05bf
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bed3e80534a651e1e5a3d7228d0746ef8f552a9a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339132"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208840"
 ---
 # <a name="cimagelist-class"></a>CImageList-Klasse
 Stellt die Funktionalität des allgemeinen Windows-Bildlisten-Steuerelements bereit.  
@@ -260,7 +260,7 @@ CImageList();
 ```  
   
 ##  <a name="copy"></a>  CImageList::Copy  
- Diese Memberfunktion auf, die das Verhalten der Win32-Funktion [ImageList_Copy](http://msdn.microsoft.com/library/windows/desktop/bb761520), wie im Windows SDK beschrieben.  
+ Diese Memberfunktion auf, die das Verhalten der Win32-Funktion [ImageList_Copy](/windows/desktop/api/commctrl/nf-commctrl-imagelist_copy), wie im Windows SDK beschrieben.  
   
 ```  
 BOOL Copy(
@@ -588,16 +588,16 @@ BOOL DrawEx(
  Position, an dem in den angegebenen Gerätekontext gezeichnet werden soll.  
   
  *sz*  
- Die Größe des Teils des Bildes, das relativ zu der oberen linken Ecke des Bilds gezeichnet werden soll. Finden Sie unter *Dx* und *dy* in [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) im Windows SDK.  
+ Die Größe des Teils des Bildes, das relativ zu der oberen linken Ecke des Bilds gezeichnet werden soll. Finden Sie unter *Dx* und *dy* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) im Windows SDK.  
   
  *clrBk*  
- Hintergrundfarbe des Bilds. Finden Sie unter *RgbBk* in [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) im Windows SDK.  
+ Hintergrundfarbe des Bilds. Finden Sie unter *RgbBk* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) im Windows SDK.  
   
  *clrFg*  
- Die Vordergrundfarbe des Bilds. Finden Sie unter *RgbFg* in [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) im Windows SDK.  
+ Die Vordergrundfarbe des Bilds. Finden Sie unter *RgbFg* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) im Windows SDK.  
   
  *nStyle*  
- Flag, das die Zeichnungsart angibt. Finden Sie unter *fStyle* in [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) im Windows SDK.  
+ Flag, das die Zeichnungsart angibt. Finden Sie unter *fStyle* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -632,7 +632,7 @@ BOOL DrawIndirect(
   
 ### <a name="parameters"></a>Parameter  
  *pimldp*  
- Ein Zeiger auf ein [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) -Struktur, die Informationen zu den Ziehvorgang enthält.  
+ Ein Zeiger auf ein [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) -Struktur, die Informationen zu den Ziehvorgang enthält.  
   
  *pDC*  
  Ein Zeiger auf den Ziel-Gerätekontext. Sie müssen dies löschen [CDC](../../mfc/reference/cdc-class.md) Objekt, wenn Sie damit fertig sind.  
@@ -641,23 +641,23 @@ BOOL DrawIndirect(
  Der nullbasierte Index des Bilds gezeichnet werden soll.  
   
  *pt*  
- Ein [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) -Struktur, enthält der x- und y-Koordinaten, in dem das Bild gezeichnet werden.  
+ Ein [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) -Struktur, enthält der x- und y-Koordinaten, in dem das Bild gezeichnet werden.  
   
  *sz*  
- Ein [Größe](http://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur, der angibt, der Größe des Bilds gezeichnet werden soll.  
+ Ein [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) Struktur, der angibt, der Größe des Bilds gezeichnet werden soll.  
   
  *ptOrigin*  
- Ein [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die X - und y-Koordinaten angeben von oben links von den Zeichenvorgang in Bezug auf das Bild selbst enthält. Pixel des Bilds, die auf der linken Seite die X-Koordinate und höher die y-Koordinate sind, werden nicht gezeichnet.  
+ Ein [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die X - und y-Koordinaten angeben von oben links von den Zeichenvorgang in Bezug auf das Bild selbst enthält. Pixel des Bilds, die auf der linken Seite die X-Koordinate und höher die y-Koordinate sind, werden nicht gezeichnet.  
   
  *fStyle*  
  Flag, das angibt, die Zeichnungsart und optional das Überlagerungsbild. Finden Sie im Abschnitt "Hinweise" Informationen auf dem Überlagerungsbild. Die MFC-Standardimplementierung ILD_NORMAL, zeichnet das Bild, das mit der Hintergrundfarbe für die Bildliste. Wenn die Farbe des Hintergrunds der CLR_NONE führt dazu-Wert ist, wird das Bild gezeichnet transparent mit einer Maske.  
   
- Andere mögliche Formate sind unter beschrieben die *fStyle* Mitglied der [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) Struktur.  
+ Andere mögliche Formate sind unter beschrieben die *fStyle* Mitglied der [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) Struktur.  
   
  *dwRop*  
  Wert, der einen rastervorgang Code angibt. Diese Codes definieren, wie die Farbdaten für das Quellrechteck mit die Farbdaten für das Zielrechteck, um die endgültige Farbe zu erreichen kombiniert werden. MFC Standardimplementierung SRCCOPY, kopiert das Quellrechteck direkt in das Zielrechteck. Dieser Parameter wird ignoriert, wenn die *fStyle* Parameter enthält keinen das ILD_ROP-Flag.  
   
- Weitere mögliche Werte sind unter beschrieben die *DwRop* Mitglied der [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) Struktur.  
+ Weitere mögliche Werte sind unter beschrieben die *DwRop* Mitglied der [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) Struktur.  
   
  *rgbBack*  
  Die Hintergrundfarbe Image standardmäßig CLR_DEFAULT. Dieser Parameter kann eine Anwendung definierte RGB-Wert oder eine der folgenden Werte sein:  
@@ -688,7 +688,7 @@ BOOL DrawIndirect(
  Bei Verwendung mit ILS_APLHA enthält dieser Member den Wert für den alpha-Kanal. Dieser Wert kann zwischen 0 und 255 liegen, wobei 0 vollständig transparent, und 255 wird vollständig deckend sein.  
   
  *crEffect*  
- Ein [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Lichteffekts und Schatten Effekte verwendete Wert.  
+ Ein [COLORREF](/windows/desktop/gdi/colorref) Lichteffekts und Schatten Effekte verwendete Wert.  
   
 ### <a name="return-value"></a>Rückgabewert  
  True, wenn das Bild erfolgreich gezeichnet wird. andernfalls "false".  
@@ -696,7 +696,7 @@ BOOL DrawIndirect(
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie die erste Version, wenn Sie die Win32-Struktur selbst eingeben möchten. Verwenden Sie die zweite Version aus, wenn Sie verwenden möchten, nutzen Sie eine oder mehrere der MFC Standardargumente oder zu vermeiden, Verwalten der Struktur.  
   
- Ein Overlay-Image ist ein Bild, das auf das primäre Bild, das in diese Memberfunktion von angegeben gezeichnet wird die *Nbild* Parameter. Zeichnen Sie eine Overlaymaske mithilfe der [zeichnen](#draw) Member-Funktion mit den einsbasierten Index die Overlay-Maske, die mithilfe von angegeben die [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) Makro.  
+ Ein Overlay-Image ist ein Bild, das auf das primäre Bild, das in diese Memberfunktion von angegeben gezeichnet wird die *Nbild* Parameter. Zeichnen Sie eine Overlaymaske mithilfe der [zeichnen](#draw) Member-Funktion mit den einsbasierten Index die Overlay-Maske, die mithilfe von angegeben die [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) Makro.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
@@ -729,7 +729,7 @@ HICON ExtractIcon(int nImage);
  Handle des Symbols, das bei erfolgreicher Ausführung; andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode beruht auf das Verhalten der [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401) Makro auf das Symbol zu erstellen. Finden Sie in der [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401) Makro für Weitere Informationen zum Symbol für Erstellung und Bereinigung.  
+ Diese Methode beruht auf das Verhalten der [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) Makro auf das Symbol zu erstellen. Finden Sie in der [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) Makro für Weitere Informationen zum Symbol für Erstellung und Bereinigung.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_MFC_CImageList#12](../../mfc/reference/codesnippet/cpp/cimagelist-class_12.cpp)]  
@@ -798,7 +798,7 @@ static CImageList* PASCAL GetDragImage(
   
 ### <a name="parameters"></a>Parameter  
  *lpPoint*  
- Adresse von einem [Punkt](http://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die aktuelle empfängt ziehen Sie die Position.  
+ Adresse von einem [Punkt](https://msdn.microsoft.com/library/windows/desktop/dd162805) Struktur, die die aktuelle empfängt ziehen Sie die Position.  
   
  *lpPointHotSpot*  
  Adresse von einem `POINT` -Struktur, den Offset des Bilds ziehen Sie relativ zur Ziehposition empfängt.  
@@ -833,7 +833,7 @@ BOOL GetImageInfo(
  Nullbasierte Index des Bilds.  
   
  *pImageInfo*  
- Zeiger auf ein [IMAGEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761393) -Struktur, die Informationen zu dem Bild empfängt. Die Informationen in dieser Struktur kann verwendet werden, um die Bitmaps für das Image direkt zu bearbeiten.  
+ Zeiger auf ein [IMAGEINFO](/windows/desktop/api/commctrl/ns-commctrl-_imageinfo) -Struktur, die Informationen zu dem Bild empfängt. Die Informationen in dieser Struktur kann verwendet werden, um die Bitmaps für das Image direkt zu bearbeiten.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
@@ -994,7 +994,7 @@ BOOL SetDragCursorImage(
  Ungleich Null, wenn erfolgreich, andernfalls 0 (Null).  
   
 ### <a name="remarks"></a>Hinweise  
- Da die Funktionen zum Ziehen das neue Image während eines Ziehvorgangs verwenden, befolgen Sie die Windows [ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) Funktion, um den tatsächlichen Cursor nach dem Aufruf ausblenden `CImageList::SetDragCursorImage`. Andernfalls kann das System angezeigt, damit zwei Mauscursor für die Dauer des Ziehvorgangs.  
+ Da die Funktionen zum Ziehen das neue Image während eines Ziehvorgangs verwenden, befolgen Sie die Windows [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) Funktion, um den tatsächlichen Cursor nach dem Aufruf ausblenden `CImageList::SetDragCursorImage`. Andernfalls kann das System angezeigt, damit zwei Mauscursor für die Dauer des Ziehvorgangs.  
   
 ##  <a name="setimagecount"></a>  CImageList::SetImageCount  
  Rufen Sie diese Memberfunktion zum Zurücksetzen der Anzahl der Bilder in einem `CImageList` Objekt.  

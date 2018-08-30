@@ -1,7 +1,7 @@
 ---
-title: Projektbuildfehler prj0025 | Microsoft Docs
+title: Projektbuildfehler prj0025 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 087a5d5af8ed92bdd0446ae87af037acbfd38a95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 949e36424fc213459e56332c0802d2719581bac1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316984"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209811"
 ---
 # <a name="project-build-error-prj0025"></a>Projektbuildfehler PRJ0025
-Batchdatei 'Datei' enthält die Unicode-Inhalte, die nicht in ANSI-Codepage des Benutzers übersetzt werden konnte.  
-  
- ***Unicode-Inhalt der Datei***  
-  
- Das Projektsystem gefunden Unicode-Inhalt in eine benutzerdefinierte Buildregel oder Buildereignisses, die ordnungsgemäß für aktuelle ANSI-Codepage des Benutzers übersetzt werden kann.  
-  
- Die Auflösung für diesen Fehler besteht darin aktualisiert den Inhalt der Buildregel oder Buildereignisses ANSI verwenden oder um die Codepage auf dem Computer installieren und als dem als Standard festgelegt.  
-  
- Weitere Informationen zu benutzerdefinierten Buildschritte und Buildereignisse, finden Sie unter [benutzerdefinierte Buildschritte und Buildereignisse](../../ide/understanding-custom-build-steps-and-build-events.md).
+
+> Batchdatei '*Datei*"enthält Unicodeinhalt, der nicht in ANSI-Codepage des Benutzers übersetzt werden konnte.
+>
+> *Unicode-Inhalt der Datei*
+
+Das Projektsystem gefunden, Unicode-Inhalt in einer benutzerdefinierten Buildregel, oder erstellen, die ordnungsgemäß für aktuelle ANSI-Codepage des Benutzers übersetzt werden kann.
+
+Die Auflösung für diesen Fehler ist, aktualisieren Sie den Inhalt der Buildregel oder Buildereignisses unter Verwendung von ANSI oder die Codepage auf dem Computer installieren und als dem als Standard festgelegt haben.
+
+Für Weitere Informationen über benutzerdefinierte Buildschritte und Buildereignisse, finden Sie unter [benutzerdefinierte Buildschritte und Buildereignisse](../../ide/understanding-custom-build-steps-and-build-events.md).

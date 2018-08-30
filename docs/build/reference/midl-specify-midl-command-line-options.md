@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b3f20fddd657d1e5e57caf65ecc8e2c52afbf12
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 7fc5e4b0b3e19f9a71e1ada445181bede68d65a5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42571385"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222680"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Optionen für MIDL-Befehlszeile festlegen)
 ```  
@@ -37,7 +37,7 @@ ms.locfileid: "42571385"
  Dabei gilt:  
   
  `file`  
- Der Name der Datei, die enthält [MIDL-Befehlszeilenoptionen](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
+ Der Name der Datei, die enthält [MIDL-Befehlszeilenoptionen](/windows/desktop/Midl/general-midl-command-line-syntax).  
   
 ## <a name="remarks"></a>Hinweise  
  Bei allen Optionen für die Konvertierung einer IDL-Datei in eine TLB-Datei zugewiesen werden, der `file`; MIDL-Befehlszeilenoptionen können nicht auf dem Linker Befehlszeile angegeben werden. Wenn/MIDL nicht angegeben ist, wird der MIDL-Compiler mit nur den IDL-Dateinamen und keine anderen Optionen aufgerufen werden.  

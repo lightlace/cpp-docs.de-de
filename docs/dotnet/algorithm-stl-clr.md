@@ -151,12 +151,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 353044389b6be308eca2fae65f21eeae4e78532a
-ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
+ms.openlocfilehash: 93bbc86e32d75e81c342a0a0a71b823b87df62b0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376149"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196764"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 Definiert die STL/CLR-containervorlagenfunktionen, die Algorithmen ausführen.  
@@ -287,7 +287,7 @@ template<class _InIt, class _OutIt> inline
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion verhält sich wie die C++-Standardbibliothek-Funktion `copy`. Weitere Informationen finden Sie unter [Kopie](http://msdn.microsoft.com/Library/f1fec7da-e01b-40f1-b5bd-6b81e304cae1). 
+ Diese Funktion verhält sich wie die C++-Standardbibliothek-Funktion `copy`. Weitere Informationen finden Sie unter [Kopie](../standard-library/algorithm-functions.md#copy). 
 
 ## <a name="copy_backward"></a> Copy_backward (STL/CLR)
 Weist die Werte von Elementen aus einem Quellbereich einem Zielbereich zu, durchläuft die Quellelementsequenz und weist ihnen rückwärts neue Positionen zu.  
@@ -826,7 +826,7 @@ template<class _FwdIt, class _Ty> inline
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion verhält sich wie die C++-Standardbibliothek-Funktion `remove`. Weitere Informationen finden Sie unter [entfernen](http://msdn.microsoft.com/Library/77e2585c-441e-448d-bd1d-c893d1356ed8).  
+ Diese Funktion verhält sich wie die C++-Standardbibliothek-Funktion `remove`. Weitere Informationen finden Sie unter [entfernen](../standard-library/algorithm-functions.md#remove).  
 
 ## <a name="remove_copy"></a> Remove_copy (STL/CLR)
 Kopiert Elemente aus einem Quellbereich in einen Zielbereich, ohne dass Elemente eines angegebenen Werts kopiert werden und ohne die Reihenfolge der restlichen Elemente zu beeinträchtigen und das Ende eines neuen Zielbereichs zurückzugeben.  
@@ -1149,7 +1149,7 @@ Vertauscht die Werte der Elemente von zwei Objekttypen und weist den Inhalt des 
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Funktion verhält sich wie die C++-Standardbibliothek-Funktion `swap`. Weitere Informationen finden Sie unter [Swap](http://msdn.microsoft.com/Library/b471a2de-035e-4aff-b1c7-345d85d93972).  
+ Diese Funktion verhält sich wie die C++-Standardbibliothek-Funktion `swap`. Weitere Informationen finden Sie unter [Swap](../standard-library/algorithm-functions.md#swap).  
 
 ## <a name="swap_ranges"></a> Swap_ranges (STL/CLR)
 Vertauscht die Elemente eines Bereichs mit den Elementen eines anderen gleich großen Bereichs.  

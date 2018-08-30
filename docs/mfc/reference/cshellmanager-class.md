@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0752d278f0459c3558021d02fbcddb6ba234df53
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852381"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207391"
 ---
 # <a name="cshellmanager-class"></a>CShellManager-Klasse
 Implementiert mehrere Möglichkeiten für die Verwendung von Zeigern auf Bezeichnerlisten (PIDLs).  
@@ -117,7 +117,7 @@ BOOL BrowseForFolder(
  Der Titel für das Dialogfeld.  
   
  [in] *UlFlags*  
- Flags, die Optionen für das Dialogfeld angeben. Finden Sie unter [BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205) für die ausführliche Beschreibung.  
+ Flags, die Optionen für das Dialogfeld angeben. Finden Sie unter [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) für die ausführliche Beschreibung.  
   
  [out] *PiFolderImage*  
  Ein Zeiger auf den ganzzahligen Wert, der die Methode den Bildindex des ausgewählten Ordners schreibt.  
@@ -153,7 +153,7 @@ LPITEMIDLIST ConcatenateItem(
  Ein Zeiger auf die neue Elementliste aus, wenn die Funktion erfolgreich ist, andernfalls NULL.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode erstellt ein neues [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) groß genug für beide *pidl1* und *pidl2*. Anschließend kopiert *pidl1* und *pidl2* in die neue Liste.  
+ Diese Methode erstellt ein neues [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) groß genug für beide *pidl1* und *pidl2*. Anschließend kopiert *pidl1* und *pidl2* in die neue Liste.  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  Kopiert eine Elementliste an.  

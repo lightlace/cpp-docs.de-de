@@ -1,5 +1,5 @@
 ---
-title: Erstellen von C/C++-Anwendungen isolierten | Microsoft Docs
+title: Erstellen von C/C++-Anwendungen isoliert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69de94159ef792aedff35efe81e8bb663d571105
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26a21eb12d9da1caaae3dbd12fe2f3ffd1194bac
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360148"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219092"
 ---
 # <a name="building-cc-isolated-applications"></a>Erstellen isolierter C/C++-Anwendungen
-Eine isolierte Anwendung hängt Side-by-Side Assemblys und bindet an seiner Abhängigkeiten, die über ein Manifest. Es ist nicht erforderlich, für die Anwendung vollständig isoliert, um ordnungsgemäß auf dem Windows ausgeführt werden müssen. Sie können jedoch von investieren in dem Sie die Anwendung vollständig isoliert, Zeit sparen, wenn Sie Ihre Anwendung in der Zukunft service müssen. Weitere Informationen zu den Vorteilen von dem Sie die Anwendung vollständig isoliert, finden Sie unter [isolierte Anwendungen](http://msdn.microsoft.com/library/aa375190).  
+Eine isolierte Anwendung hängt nur von Seite-an-Seite-Assemblys und bindet an seine Abhängigkeiten mithilfe eines Manifests. Es ist nicht erforderlich, für die Anwendung vollständig isoliert, um ordnungsgemäß unter Windows ausgeführt werden. Sie können jedoch durch eine Investition in Ihre Anwendung isoliert, Zeit sparen, wenn Sie Ihre Anwendung in der Zukunft müssen. Weitere Informationen zu den Vorteilen der wird Ihre Anwendung isoliert, finden Sie unter [isolierte Anwendungen](/windows/desktop/SbsCs/isolated-applications).  
   
- Wenn Sie Ihre systemeigene C/C++-Anwendung mit Visual C++ erstellen, generiert Projektsystem Visual Studio standardmäßig eine Manifestdatei, die Ihre Anwendung Abhängigkeiten von Visual C++-Bibliotheken beschreibt. Wenn dies die einzigen Abhängigkeiten sind muss die Anwendung, und er eine isolierte Anwendung ist, sobald es neu mit Visual Studio erstellt wird. Wenn Ihre Anwendung zur Laufzeit andere Bibliotheken verwendet, müssen Sie möglicherweise als Seite-an-Seite-Assemblys, die die Schritte diesen Bibliotheken rebuild [Erstellen von C/C++-Seite-an-Seite-Assemblys](../build/building-c-cpp-side-by-side-assemblies.md).  
+ Wenn Sie Ihre systemeigene C/C++-Anwendung mit Visual C++ erstellen, generiert Projektsystem standardmäßig der Visual Studio eine manifest-Datei, die die Abhängigkeiten Ihrer Anwendung von Visual C++-Bibliotheken zu beschreiben. Wenn dies die einzigen Abhängigkeiten sind verfügt Ihre Anwendung, wird er einer isolierten Anwendung angezeigt wird, sobald er mit Visual Studio neu erstellt wird. Wenn Ihre Anwendung zur Laufzeit andere Bibliotheken verwendet, müssen Sie möglicherweise diese Bibliotheken als Seite-an-Seite-Assemblys, die anhand der Schritte erneut [Erstellen von C/C++-Seite-an-Seite-Assemblys](../build/building-c-cpp-side-by-side-assemblies.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konzept der isolierten Anwendungen und Seite-an-Seite-Assemblys](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   

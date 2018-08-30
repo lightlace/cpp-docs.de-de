@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0259716bb1106dbc5c2da5a3738cd78e5c8c877f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572747"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202474"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject-Klasse
-Diese Klasse implementiert die [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) Schnittstelle für ein zusammengesetztes Objekt. Definitionsgemäß ist ein zusammengesetztes Objekt in einem äußeren Objekt enthalten. Die `CComAggObject` Klasse ist vergleichbar mit der [CComObject-Klasse](../../atl/reference/ccomobject-class.md), außer dass er eine Schnittstelle verfügbar macht, die für externe Clients direkt zugegriffen werden kann.  
+Diese Klasse implementiert die [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) Schnittstelle für ein zusammengesetztes Objekt. Definitionsgemäß ist ein zusammengesetztes Objekt in einem äußeren Objekt enthalten. Die `CComAggObject` Klasse ist vergleichbar mit der [CComObject-Klasse](../../atl/reference/ccomobject-class.md), außer dass er eine Schnittstelle verfügbar macht, die für externe Clients direkt zugegriffen werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -76,7 +76,7 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::m_contained](#m_contained)|Delegaten `IUnknown` Aufrufe an die äußere unbekannte.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComAggObject` implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) für ein zusammengesetztes Objekt. `CComAggObject` verfügt über eine eigene `IUnknown` -Schnittstelle, des äußeren Objekts als `IUnknown` -Schnittstelle und verwaltet einen eigenen Verweiszähler.  
+ `CComAggObject` implementiert [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) für ein zusammengesetztes Objekt. `CComAggObject` verfügt über eine eigene `IUnknown` -Schnittstelle, des äußeren Objekts als `IUnknown` -Schnittstelle und verwaltet einen eigenen Verweiszähler.  
   
  Weitere Informationen über die Aggregation finden Sie im Artikel [Grundlagen von ARL COM-Objekten](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Parameter  
  *PP*  
- [out] Ein Zeiger auf eine **CComAggObject\<*** enthaltenen* **>** Zeiger. Wenn `CreateInstance` nicht erfolgreich ist, ist *pp* auf NULL festgelegt ist.  
+ [out] Ein Zeiger auf eine **CComAggObject\<**<em>enthaltenen</em> **>** Zeiger. Wenn `CreateInstance` nicht erfolgreich ist, ist *pp* auf NULL festgelegt ist.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Ein standard HRESULT-Wert.  

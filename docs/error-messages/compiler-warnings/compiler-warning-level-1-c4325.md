@@ -1,7 +1,7 @@
 ---
-title: Compilerwarnung (Stufe 1) C4325 | Microsoft Docs
+title: Compilerwarnung (Stufe 1) C4325 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,46 +16,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 936433987f823ae7d5d22cfd075f188dd5d4b1e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd265938afb51cc402dc84f38b7e95188c6292a7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277643"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197484"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>Compilerwarnung (Stufe 1) C4325
-**Attribute für Standardabschnitt "**   
- ***Abschnitt* "ignoriert**  
-  
- Sie können die Attribute eines Abschnitts standard nicht ändern. Zum Beispiel:  
-  
-```  
-#pragma section(".sdata", long)  
-```  
-  
- Dies würde zu überschreiben die `.sdata` Standardabschnitt verwendet die **kurze** Datentyp mit der **lange** -Datentyp.  
-  
- Standard-Abschnitten enthalten, deren Attribute nicht geändert werden dürfen,  
-  
--   .Data  
-  
--   ".sdata"  
-  
--   ".BSS"  
-  
--   .sbss  
-  
--   .Text erstellen  
-  
--   .const  
-  
--   .sconst  
-  
--   .rdata  
-  
--   .srdata  
-  
- Weitere Abschnitte können später hinzugefügt werden.  
-  
-## <a name="see-also"></a>Siehe auch  
- [section](../../preprocessor/section.md)
+
+> Attribute für Standardabschnitt "*Abschnitt*" ignoriert
+
+## <a name="remarks"></a>Hinweise
+
+Sie können die Attribute eines Abschnitts standard nicht ändern. Zum Beispiel:
+
+```cpp
+#pragma section(".sdata", long)
+```
+
+Dies überschreibt die `.sdata` Abschnitt "standard" verwendet die **kurze** Datentyp mit der **lange** -Datentyp.
+
+Standard-Abschnitten enthalten, deren Attribute, die nicht geändert werden kann,
+
+- ".Data"
+
+- .sdata
+
+- ".BSS"
+
+- .sbss
+
+- .Text
+
+- .const
+
+- .sconst
+
+- .rdata
+
+- .srdata
+
+Zusätzliche Abschnitte ggf. später hinzugefügt werden.
+
+## <a name="see-also"></a>Siehe auch
+
+[section](../../preprocessor/section.md)

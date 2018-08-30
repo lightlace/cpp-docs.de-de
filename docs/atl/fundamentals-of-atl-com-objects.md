@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaaad259fa0c864a72feaff3222f683563c8ca91
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1b9dc87340d567f876d91abc4d8ebfa1d6353cad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852314"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209986"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Grundlagen von ARL COM-Objekten
 Die folgende Abbildung zeigt die Beziehung zwischen Klassen und Schnittstellen, die verwendet werden, um ein ATL-COM-Objekt zu definieren.  
@@ -40,7 +40,7 @@ Die folgende Abbildung zeigt die Beziehung zwischen Klassen und Schnittstellen, 
   
  Da der Client keine durchlaufen, das äußere Objekt, das das innere Objekt interagieren, sind die aggregierten Objekte in der Regel effizienter. Darüber hinaus das äußere Objekt keine wissen, die Funktionalität des aggregierten Objekts, angesichts der Tatsache, dass die Schnittstelle des aggregierten Objekts direkt an den Client verfügbar ist. Allerdings können nicht von allen Objekten aggregiert werden. Für ein Objekt, aggregiert werden sollen muss sie mit Aggregation, denken Sie daran so entworfen werden.  
   
- ATL implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) in zwei Phasen:  
+ ATL implementiert [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) in zwei Phasen:  
   
 -   [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), oder [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementiert die `IUnknown` Methoden.  
   

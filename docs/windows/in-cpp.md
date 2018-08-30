@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95721a37865d7a129d9533b2b8aba7e45c912235
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6c447147802d91df0f280a82c61d919ee673970a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611780"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222989"
 ---
 # <a name="in-c"></a>in (C++)
 
@@ -36,7 +36,7 @@ Gibt an, dass ein Parameter, die von der aufrufenden Prozedur an die aufgerufene
 
 ## <a name="remarks"></a>Hinweise
 
-Die **in** C++-Attribut hat die gleiche Funktionalität wie die [in](http://msdn.microsoft.com/library/windows/desktop/aa367051) MIDL-Attribut.
+Die **in** C++-Attribut hat die gleiche Funktionalität wie die [in](/windows/desktop/Midl/in) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 

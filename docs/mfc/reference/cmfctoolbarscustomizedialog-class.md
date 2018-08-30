@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c12b23c2250f2b0d26b053410c864c8cf435469
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9132df889f057696a08afe9a1ca6ad2277c46f10
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852873"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211051"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog-Klasse
 Ein nicht modales Dialogfeld im Registerformat ( [CPropertySheet-Klasse](../../mfc/reference/cpropertysheet-class.md)), die den Benutzer die Symbolleisten, Menüs, Tastenkombinationen in Visual Studio, benutzerdefinierte Tools und visuellen Stil in einer Anwendung anpassen können. In der Regel greift der Benutzer durch Auswählen von **Anpassen** im Menü **Tools** auf dieses Dialogfeld zu.  
@@ -507,7 +507,7 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
   
 ### <a name="parameters"></a>Parameter  
  [in, out] *pAccel*  
- Zeiger auf die vorgeschlagene Tastatur-speicherzuweisung, die als ausgedrückt ist eine [ACCELERATION](http://msdn.microsoft.com/library/windows/desktop/ms646340) Struktur.  
+ Zeiger auf die vorgeschlagene Tastatur-speicherzuweisung, die als ausgedrückt ist eine [ACCELERATION](/windows/desktop/api/winuser/ns-winuser-tagaccel) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
  TRUE, wenn der Schlüssel zugewiesen oder "false" werden kann, wenn der Schlüssel kann nicht zugewiesen werden. Immer die Standardimplementierung gibt "true" zurück.  

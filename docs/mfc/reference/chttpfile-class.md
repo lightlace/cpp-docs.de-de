@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23c3e1b42c228ea971bdedff952c01078735948e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 422952ae459d6a6e4d9f768eb111c9c01cfbb5d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337459"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43219741"
 ---
 # <a name="chttpfile-class"></a>CHttpFile-Klasse
 Stellt die Funktionalität bereit, um Dateien auf einem HTTP-Server anfordern und zu lesen.  
@@ -130,7 +130,7 @@ BOOL AddRequestHeaders(
  Ein Verweis auf eine [CString](../../atl-mfc-shared/reference/cstringt-class.md) -Objekt, enthält der Anforderungsheader oder einen Header hinzugefügt werden.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  `AddRequestHeaders` fügt zusätzliche, freiem Header an das Handle des HTTP-Anforderung an. Es ist für die Verwendung durch komplexe Clients vorgesehen, die detaillierte Kontrolle über die genaue Anforderung an den HTTP-Server gesendet.  
@@ -197,10 +197,10 @@ BOOL EndRequest(
   
 ### <a name="parameters"></a>Parameter  
  *dwFlags*  
- Flags, die den Vorgang beschreiben. Eine Liste mit den geeigneten Flags, finden Sie unter [HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) im Windows SDK.  
+ Flags, die den Vorgang beschreiben. Eine Liste mit den geeigneten Flags, finden Sie unter [HttpEndRequest](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) im Windows SDK.  
   
  *lpBuffIn*  
- Zeiger auf ein initialisiertes [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) , beschreibt den Eingabepuffer für den Vorgang verwendet.  
+ Zeiger auf ein initialisiertes [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa) , beschreibt den Eingabepuffer für den Vorgang verwendet.  
   
  *dwContext*  
  Der Kontextbezeichner für den `CHttpFile`-Vorgang. Weitere Informationen zu diesem Parameter finden Sie unter "Hinweise".  
@@ -279,7 +279,7 @@ BOOL QueryInfo(
   
 - Die Anwendung fragt HTTP_QUERY_FLAG_REQUEST_HEADERS in der Regel die Header der Antwort, aber eine Anwendung kann auch die Anforderungsheader Abfragen, indem Sie die Verwendung dieses Flags.  
   
-- HTTP_QUERY_FLAG_SYSTEMTIME für Header, dessen Wert ein Datum/Uhrzeit-Zeichenfolge, z. B. "Last-Modified-Zeit," dieses Flag gibt den Headerwert als eine standardmäßige Win32- [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die keine die Anwendung erforderlich ist die Daten analysieren. Wenn Sie dieses Flag verwenden, sollten Sie verwenden die `SYSTEMTIME` außer Kraft setzen, der Funktion.  
+- HTTP_QUERY_FLAG_SYSTEMTIME für Header, dessen Wert ein Datum/Uhrzeit-Zeichenfolge, z. B. "Last-Modified-Zeit," dieses Flag gibt den Headerwert als eine standardmäßige Win32- [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) -Struktur, die keine die Anwendung erforderlich ist die Daten analysieren. Wenn Sie dieses Flag verwenden, sollten Sie verwenden die `SYSTEMTIME` außer Kraft setzen, der Funktion.  
   
 - HTTP_QUERY_FLAG_NUMBER für Header, dessen Wert eine Zahl, z. B. der Statuscode ist, dieses Flag die Daten als 32-Bit-Zahl zurückgegeben.  
   
@@ -301,10 +301,10 @@ BOOL QueryInfo(
  Ein Indexwert. Finden Sie unter *LpdwIndex*.  
   
  *pSysTime*  
- Ein Zeiger auf eine Win32- [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur.  
+ Ein Zeiger auf eine Win32- [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) Struktur.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Memberfunktion erst nach einem erfolgreichen Aufruf ["SendRequest"](#sendrequest) oder auf eine `CHttpFile` Objekt erfolgreich erstellt, indem [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
@@ -379,7 +379,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
  Ein Verweis auf einen Statuscode. Statuscodes geben an, den Erfolg oder Misserfolg des angeforderten Ereignisses. Finden Sie unter **"Hinweise"** für eine Reihe von statusbeschreibungen-Code.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
+ Ungleich Null, wenn erfolgreich, andernfalls 0 (Null). Wenn der Aufruf fehlschlägt, die Win32-Funktion [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) aufgerufen werden, um die Ursache des Fehlers zu ermitteln.  
   
 ### <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Memberfunktion erst nach einem erfolgreichen Aufruf ["SendRequest"](#sendrequest) oder auf eine `CHttpFile` Objekt erfolgreich erstellt, indem [OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).  
@@ -462,13 +462,13 @@ BOOL SendRequestEx(
  Die Anzahl der Bytes, die in der Anforderung gesendet werden.  
   
  *dwFlags*  
- Flags, die den Vorgang beschreiben. Eine Liste der entsprechenden Flags, finden Sie unter [HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) im Windows SDK.  
+ Flags, die den Vorgang beschreiben. Eine Liste der entsprechenden Flags, finden Sie unter [HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) im Windows SDK.  
   
  *dwContext*  
  Der Kontextbezeichner für den `CHttpFile`-Vorgang. Weitere Informationen zu diesem Parameter finden Sie unter "Hinweise".  
   
  *lpBuffIn*  
- Zeiger auf ein initialisiertes [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) , beschreibt den Eingabepuffer für den Vorgang verwendet.  
+ Zeiger auf ein initialisiertes [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa) , beschreibt den Eingabepuffer für den Vorgang verwendet.  
   
  *lpBuffOut*  
  Zeiger auf ein initialisiertes INTERNET_BUFFERS, die beschreibt, den Ausgabepuffer für den Vorgang verwendet.  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6b5f46e20338bdb06c5c04599402dbbefa935e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 561a82e2bea320e6230af84055716606d180e2c5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880049"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214274"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT-Klasse
 Diese Klasse stellt das Modul für eine Anwendung.  
@@ -259,7 +259,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
   
 ### <a name="parameters"></a>Parameter  
  *nShowCmd*  
- Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) Abschnitt. Der Standardwert ist SW_HIDE.  
+ Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) Abschnitt. Der Standardwert ist SW_HIDE.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
@@ -285,7 +285,7 @@ static void UninitializeCom() throw();
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Standardmäßig ruft diese Methode einfach [CoUninitialize](http://msdn.microsoft.com/library/windows/desktop/ms688715) und der Destruktor aufgerufen wird. Diese Methode überschreiben, wenn Sie außer Kraft setzen [CAtlExeModuleT](#initializecom).  
+ Standardmäßig ruft diese Methode einfach [CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) und der Destruktor aufgerufen wird. Diese Methode überschreiben, wenn Sie außer Kraft setzen [CAtlExeModuleT](#initializecom).  
   
 ##  <a name="unlock"></a>  CAtlExeModuleT::Unlock  
  Verringert die Sperrenanzahl des Moduls.  
@@ -306,7 +306,7 @@ int WinMain(int nShowCmd) throw();
   
 ### <a name="parameters"></a>Parameter  
  *nShowCmd*  
- Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559) Abschnitt.  
+ Gibt an, wie das Fenster angezeigt werden. Dieser Parameter kann sein, einen der Werte in erläutert die [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) Abschnitt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt die ausführbare Datei der Rückgabewert zurück.  

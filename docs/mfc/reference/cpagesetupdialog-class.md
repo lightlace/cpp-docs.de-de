@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a4fc1b97c30be28554faf68d5338b2a8e4ea8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c134d2e1dc6f3782446afc57b8384279a615e86f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849978"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197456"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog-Klasse
 Kapselt die Dienste, die durch das allgemeine Windows-OLE-Dialogfeld "Seiteneinrichtung" bereitgestellt werden, zusammen mit zusätzlicher Unterstützung für das Festlegen und Ändern von Druckrändern.  
@@ -146,7 +146,7 @@ CPageSetupDialog(
   
 - PSD_DISABLEORIENTATION deaktiviert das Steuerelement Seite Ausrichtung des Dialogfelds.  
   
-- Bewirkt, dass PSD_RETURNDEFAULT `CPageSetupDialog` zurückzugebenden [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) und [DEVNAMES](../../mfc/reference/devnames-structure.md) Strukturen, die für den Standarddrucker System initialisiert werden, ohne dass ein Dialogfeld angezeigt. Es wird davon ausgegangen, dass beide `hDevNames` und `hDevMode` NULL sind; andernfalls gibt die Funktion einen Fehler zurück. Wenn Sie der Standarddrucker System von einer alten Druckertreiber (älter als Windows-Version 3.0) unterstützt wird nur `hDevNames` zurückgegeben. `hDevMode` ist NULL.  
+- Bewirkt, dass PSD_RETURNDEFAULT `CPageSetupDialog` zurückzugebenden [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) und [DEVNAMES](../../mfc/reference/devnames-structure.md) Strukturen, die für den Standarddrucker System initialisiert werden, ohne dass ein Dialogfeld angezeigt. Es wird davon ausgegangen, dass beide `hDevNames` und `hDevMode` NULL sind; andernfalls gibt die Funktion einen Fehler zurück. Wenn Sie der Standarddrucker System von einer alten Druckertreiber (älter als Windows-Version 3.0) unterstützt wird nur `hDevNames` zurückgegeben. `hDevMode` ist NULL.  
   
 - PSD_DISABLEPAPER deaktiviert das Steuerelement zur Auswahl von Papier.  
   
@@ -172,7 +172,7 @@ CPageSetupDialog(
  [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
- Erstellt einen Drucker-Gerätekontext aus der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) und [DEVNAMES](../../mfc/reference/devnames-structure.md) Strukturen.  
+ Erstellt einen Drucker-Gerätekontext aus der [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) und [DEVNAMES](../../mfc/reference/devnames-structure.md) Strukturen.  
   
 ```  
 HDC CreatePrinterDC();
@@ -189,7 +189,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- IDOK oder IDCANCEL. Wenn IDCANCEL zurückgegeben wird, rufen Sie die Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) Funktion, um zu bestimmen, ob ein Fehler aufgetreten ist.  
+ IDOK oder IDCANCEL. Wenn IDCANCEL zurückgegeben wird, rufen Sie die Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) Funktion, um zu bestimmen, ob ein Fehler aufgetreten ist.  
   
  IDOK und IDCANCEL sind Konstanten, die angeben, ob der Benutzer die Schaltfläche "OK" oder "Abbrechen" aktiviert.  
   
@@ -223,7 +223,7 @@ LPDEVMODE GetDevMode() const;
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Die [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Datenstruktur, die Informationen über die Initialisierung für Grafikgeräte und die Umgebung eines Druckertreibers enthält. Sie müssen den Arbeitsspeicher, die von dieser Struktur mit der Windows Entsperren [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) -Funktion, die im Windows SDK beschrieben wird.  
+ Die [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) Datenstruktur, die Informationen über die Initialisierung für Grafikgeräte und die Umgebung eines Druckertreibers enthält. Sie müssen den Arbeitsspeicher, die von dieser Struktur mit der Windows Entsperren [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) -Funktion, die im Windows SDK beschrieben wird.  
   
 ##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName  
  Mit dieser Funktion wird nach dem Aufruf [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) zum Abrufen des Namens, der den systemeigenen Druckertreiber.  
@@ -286,7 +286,7 @@ PAGESETUPDLG m_psd;
   
  Wenn Sie ändern die `m_psd` Datenmember direkt, überschreiben Sie Standardverhalten.  
   
- Weitere Informationen zu den [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842) Struktur, finden Sie im Windows SDK.  
+ Weitere Informationen zu den [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda) Struktur, finden Sie im Windows SDK.  
   
  Siehe das Beispiel für [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
@@ -346,7 +346,7 @@ virtual UINT PreDrawPage(
   
 ### <a name="parameters"></a>Parameter  
  *wPaper*  
- Gibt einen Wert, der das Papierformat angibt. Dieser Wert kann eine der der **DMPAPER_** Werte aufgeführt, in der Beschreibung der [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) Struktur.  
+ Gibt einen Wert, der das Papierformat angibt. Dieser Wert kann eine der der **DMPAPER_** Werte aufgeführt, in der Beschreibung der [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) Struktur.  
   
  *wFlags*  
  Gibt die Ausrichtung des Papiers oder Umschlag, und gibt an, ob der Drucker einen Matrix- oder ein HPPCL (Hewlett Packard Drucker Control Language)-Gerät ist. Dieser Parameter kann einen der folgenden Werte aufweisen:  
@@ -368,7 +368,7 @@ virtual UINT PreDrawPage(
 -   0x01f Umschlag im Hochformat (Punktmatrix)  
   
  *pPSD*  
- Zeiger auf eine `PAGESETUPDLG`-Struktur. Weitere Informationen zu [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), finden Sie im Windows SDK.  
+ Zeiger auf eine `PAGESETUPDLG`-Struktur. Weitere Informationen zu [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda), finden Sie im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Wert ungleich NULL, wenn behandelt; andernfalls 0.  

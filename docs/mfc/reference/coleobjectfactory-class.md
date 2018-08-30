@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d2ac698466709931259f1df28d6c75aa38b30f2
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 656500e69f97481c90cdbea41b8c640f470e7b1c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850705"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210016"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory-Klasse
 Implementiert die OLE-Klassenfactory, die OLE-Objekte wie Server, Automatisierungsobjekte und Dokumente erstellt.  
@@ -157,7 +157,7 @@ COleObjectFactory(
   
 - `afxRegFreeThreading` Legt das threading-Modell in der Registrierung ThreadingModel = frei.  
   
-     Sie können die beiden Flags kombinieren `afxRegApartmentThreading` und `afxRegFreeThreading` festzulegende ThreadingModel = Both. Finden Sie unter [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) im Windows SDK für Weitere Informationen zum threading modellregistrierung.  
+     Sie können die beiden Flags kombinieren `afxRegApartmentThreading` und `afxRegFreeThreading` festzulegende ThreadingModel = Both. Finden Sie unter [InprocServer32](/windows/desktop/com/inprocserver32) im Windows SDK für Weitere Informationen zum threading modellregistrierung.  
   
  *lpszProgID*  
  Zeiger auf eine Zeichenfolge, enthält ein mündliche Programmbezeichner, z. B. "Microsoft Excel."  
@@ -165,7 +165,7 @@ COleObjectFactory(
 ### <a name="remarks"></a>Hinweise  
  Um das Objekt verwenden zu können, müssen jedoch Sie ihn registrieren.  
   
- Weitere Informationen finden Sie unter [Schlüssel CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) im Windows SDK.  
+ Weitere Informationen finden Sie unter [Schlüssel CLSID](/windows/desktop/com/clsid-key-hklm) im Windows SDK.  
   
 ##  <a name="getclassid"></a>  COleObjectFactory::GetClassID  
  Gibt einen Verweis auf die OLE-Klassen-ID, die dieser Factory darstellt.  
@@ -178,7 +178,7 @@ REFCLSID GetClassID() const;
  Verweis auf die OLE-Klassen-ID dieser Factory darstellt.  
   
 ### <a name="remarks"></a>Hinweise  
- Weitere Informationen finden Sie unter [Schlüssel CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) im Windows SDK.  
+ Weitere Informationen finden Sie unter [Schlüssel CLSID](/windows/desktop/com/clsid-key-hklm) im Windows SDK.  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
  Die DLL des Steuerelements einen eindeutigen Lizenzschlüssel inhaltsortsanfrage und speichert sie in den BSTR verweist *PbstrKey*.  

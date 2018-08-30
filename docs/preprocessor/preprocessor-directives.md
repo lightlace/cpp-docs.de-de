@@ -15,18 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc392454a6c5b152411fe8f6a7d0c12457389794
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a401cb74c07815f511ad37e53ac5be267029319c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540604"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212220"
 ---
 # <a name="preprocessor-directives"></a>Präprozessoranweisungen
 
 Präprozessoranweisungen wie z. B. `#define` und `#ifdef`, werden in der Regel verwendet, einfach und leicht zu kompilieren in verschiedenen ausführungsumgebungen zu vereinfachen. Anweisungen in der Quelldatei weisen den Präprozessor an, bestimmte Aktionen auszuführen. Beispielsweise kann der Präprozessor Token im Text ersetzen, den Inhalt von anderen Dateien in die Quelldatei einfügen oder die Kompilierung eines Teils der Datei unterdrücken, indem er Textabschnitte entfernt. Präprozessorzeilen werden vor der Makroerweiterung erkannt und ausgeführt. Wenn also die Erweiterung eines Makros aussieht wie ein Präprozessorbefehl, wird dieser Befehl nicht vom Präprozessor erkannt.
 
-Präprozessoranweisungen verwenden den gleichen Zeichensatz wie Quelldateianweisungen, mit der Ausnahme, dass Escapesequenzen nicht unterstützt werden. Der Zeichensatz, der in präprozessoranweisungen verwendet ist identisch mit der [ausführungszeichensatz](http://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Der Präprozessor erkennt auch negative Zeichenwerte.
+Präprozessoranweisungen verwenden den gleichen Zeichensatz wie Quelldateianweisungen, mit der Ausnahme, dass Escapesequenzen nicht unterstützt werden. Der Zeichensatz, der in präprozessoranweisungen verwendet ist identisch mit der [ausführungszeichensatz](https://msdn.microsoft.com/a7901c61-524d-47c6-beb6-d9dacc2e72ed). Der Präprozessor erkennt auch negative Zeichenwerte.
 
 Der Präprozessor erkennt die folgenden Anweisungen:
 
@@ -37,7 +37,7 @@ Der Präprozessor erkennt die folgenden Anweisungen:
 |[#else](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|[#ifdef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#line](../preprocessor/hash-line-directive-c-cpp.md)|[#endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)|
 |[#ifndef](../preprocessor/hash-ifdef-and-hash-ifndef-directives-c-cpp.md)|[#pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)|||
 
-Das Nummernzeichen (**#**) müssen werden die ersten Leerstelle in der Zeile mit der Richtlinie; können Leerzeichen zwischen dem Nummernzeichen und dem ersten Buchstaben der Anweisung angezeigt werden. Manche Direktiven enthalten Argumente oder Werte. Jeder Text, der eine Direktive (außer einem Argument oder Wert, der Teil der Direktive ist) folgt muss das einzeilige Kommentartrennzeichen vorangestellt werden (**//**) oder in Kommentartrennzeichen eingeschlossen ( __/ \*\*/__).   Zeilen, die präprozessoranweisungen enthalten fortgesetzt werden können, indem unmittelbar vor der End-of-Line-Marker, mit einem umgekehrten Schrägstrich (**\\**).
+Das Nummernzeichen (**#**) müssen werden die ersten Leerstelle in der Zeile mit der Richtlinie; können Leerzeichen zwischen dem Nummernzeichen und dem ersten Buchstaben der Anweisung angezeigt werden. Manche Direktiven enthalten Argumente oder Werte. Jeder Text, der eine Direktive (außer einem Argument oder Wert, der Teil der Direktive ist) folgt muss das einzeilige Kommentartrennzeichen vorangestellt werden (**//**) oder in Kommentartrennzeichen eingeschlossen ( __/ \*\*/__). Zeilen, die präprozessoranweisungen enthalten fortgesetzt werden können, indem unmittelbar vor der End-of-Line-Marker, mit einem umgekehrten Schrägstrich (**\\**).
 
 Präprozessoranweisungen können an beliebiger Stelle in einer Quelldatei auftreten, aber sie gelten nur für den Rest der Quelldatei.
 

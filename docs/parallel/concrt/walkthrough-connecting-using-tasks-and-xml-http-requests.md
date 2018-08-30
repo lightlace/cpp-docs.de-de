@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8333ffcb1de62f4af5ee0a3ec0412ad742af7192
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 42588b844158ebe995a9d07dc206679580db12fe
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42539658"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201167"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Exemplarische Vorgehensweise: Verbinden von Verwendungsaufgaben und XML-HTTP-Anforderungen
 Dieses Beispiel zeigt, wie Sie mit der [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) und [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) -Schnittstellen zusammen mit Aufgaben, die zum Senden von HTTP GET- und POST-Anforderungen an einen Webdienst in einer universellen Windows-Plattform (UWP ) app. Beim Kombinieren von `IXMLHTTPRequest2` mit Aufgaben können Sie Code schreiben, der mit anderen Aufgaben zusammen erstellt wird. Beispielsweise können Sie die Downloadaufgabe als Teil einer Kette von Aufgaben verwenden. Wenn Arbeit abgebrochen wird, kann die Downloadaufgabe auch weiterhin antworten.  
@@ -33,7 +33,7 @@ Dieses Beispiel zeigt, wie Sie mit der [IXMLHTTPRequest2](/previous-versions/win
   
  Dieses Dokument erläutert zunächst, wie die `HttpRequest`-Klasse und unterstützende Klassen erstellt werden. Anschließend wird veranschaulicht, wie diese Klasse aus einer UWP-app zu verwenden, die C++ und XAML verwendet wird.  
   
- Für ein vollständiges Beispiel, verwendet der `HttpReader` finden Sie mit der Klasse, die in diesem Dokument beschrieben [Entwickeln von Bing Maps-Reise-Optimierer, eine Windows Store-app in JavaScript und C++](http://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30). Ein weiteres Beispiel, das verwendet `IXMLHTTPRequest2` , aber nicht Aufgaben verwenden, finden Sie unter [Schnellstart: Verbindungsherstellung mithilfe einer XML-HTTP-Anforderung (IXMLHTTPRequest2)](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35).  
+ Für ein vollständiges Beispiel, verwendet der `HttpReader` finden Sie mit der Klasse, die in diesem Dokument beschrieben [Entwickeln von Bing Maps-Reise-Optimierer, eine Windows Store-app in JavaScript und C++](https://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30). Ein weiteres Beispiel, das verwendet `IXMLHTTPRequest2` , aber nicht Aufgaben verwenden, finden Sie unter [Schnellstart: Verbindungsherstellung mithilfe einer XML-HTTP-Anforderung (IXMLHTTPRequest2)](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35).  
   
 > [!TIP]
 >  `IXMLHTTPRequest2` und `IXMLHTTPRequest2Callback` sind die Schnittstellen, die wir, für die Verwendung in einer UWP-app empfehlen. Darüber hinaus können Sie dieses Beispiel auch für die Verwendung in einer Desktop-App anpassen.  
@@ -72,7 +72,7 @@ Dieses Beispiel zeigt, wie Sie mit der [IXMLHTTPRequest2](/previous-versions/win
   
 #### <a name="to-use-the-httprequest-class"></a>So verwenden Sie die HttpRequest-Klasse  
   
-1.  In "MainPage.xaml" definieren die [StackPanel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) -Element wie folgt.  
+1.  In "MainPage.xaml" definieren die [StackPanel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) -Element wie folgt.  
   
      [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]  
   
@@ -121,6 +121,6 @@ Dieses Beispiel zeigt, wie Sie mit der [IXMLHTTPRequest2](/previous-versions/win
  [Abbruch in der PPL](cancellation-in-the-ppl.md)   
  [Asynchrone Programmierung in C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)   
  [Erstellen von asynchronen Vorgängen in C++ für UWP-Apps](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
- [Schnellstart: Verbindungsherstellung mithilfe einer XML-HTTP-Anforderung (IXMLHTTPRequest2)](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
+ [Schnellstart: Verbindungsherstellung mithilfe einer XML-HTTP-Anforderung (IXMLHTTPRequest2)](https://msdn.microsoft.com/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
  [Task-Klasse (Concurrency Runtime)](../../parallel/concrt/reference/task-class.md)   
  [task_completion_event-Klasse](../../parallel/concrt/reference/task-completion-event-class.md)

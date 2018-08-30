@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 102585cf7148923f584591102712278847ee7573
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d971d4cce8dc3a9d01a666bc8e0e6333f85260c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601253"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201373"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid-Wertklasse
-Stellt einen [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) -Typ im Windows Runtime-Typsystem dar.  
+Stellt eine [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) Geben Sie die Windows-Runtime-Typsystem.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -151,7 +151,7 @@ Platform::Guid::operator!=
 
 
 ## <a name="operator-call"></a> GUID::Operator()-Operator
-Konvertiert implizit eine [GUID-Struktur](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID in eine Platform:: GUID.  
+Konvertiert implizit eine [GUID-Struktur](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID in eine Platform:: GUID.  
   
 ### <a name="syntax"></a>Syntax  
   

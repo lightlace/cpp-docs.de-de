@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f9ed49115a82f6e032404b862b8eca0ad922a34
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f5b99266d465629853361c07ea16f9ae620b0e24
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853068"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210827"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog-Klasse
 Wird für die OLE-Dialogfelder "Server antwortet nicht" oder "Server ausgelastet" verwendet.  
@@ -67,7 +67,7 @@ class COleBusyDialog : public COleDialog
 > [!NOTE]
 >  Vom Assistenten generierten Container-Anwendungscode verwendet diese Klasse.  
   
- Weitere Informationen finden Sie unter den [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) Struktur im Windows SDK.  
   
  Weitere Informationen zu OLE-spezifische Dialogfelder, finden Sie im Artikel [Dialogfelder in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -122,7 +122,7 @@ explicit COleBusyDialog(
 ### <a name="remarks"></a>Hinweise  
  Um das Dialogfeld anzuzeigen, rufen [DoModal](#domodal).  
   
- Weitere Informationen finden Sie unter den [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) Struktur im Windows SDK.  
   
 ##  <a name="domodal"></a>  COleBusyDialog::DoModal  
  Rufen Sie diese Funktion, um das Dialogfeld des OLE-Server ausgelastet "oder" Server antwortet nicht anzuzeigen.  
@@ -138,7 +138,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL, wenn der Benutzer das Dialogfeld abgebrochen hat.  
   
-- IDABORT, wenn ein Fehler aufgetreten. Wenn IDABORT zurückgegeben wird, rufen Sie die `COleDialog::GetLastError` Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Liste der möglichen Fehler, finden Sie unter den [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) -Funktion in das Windows SDK.  
+- IDABORT, wenn ein Fehler aufgetreten. Wenn IDABORT zurückgegeben wird, rufen Sie die `COleDialog::GetLastError` Memberfunktion, um weitere Informationen zu den Typ des Fehlers zu erhalten, die aufgetreten sind. Eine Liste der möglichen Fehler, finden Sie unter den [OleUIBusy](/windows/desktop/api/oledlg/nf-oledlg-oleuibusya) -Funktion in das Windows SDK.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn Sie die verschiedenen Dialogfeldsteuerelemente zu initialisieren, indem Sie Mitglieder festlegen möchten die [M_bz](#m_bz) Struktur, sollten Sie dies tun, vor dem Aufruf `DoModal`, allerdings nachdem das Dialogfeldobjekt erstellt wird.  
@@ -184,7 +184,7 @@ OLEUIBUSY m_bz;
 ### <a name="remarks"></a>Hinweise  
  Mitglieder dieser Struktur können direkt oder über Memberfunktionen geändert werden.  
   
- Weitere Informationen finden Sie unter den [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUIBUSY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuibusya) Struktur im Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [COleDialog-Klasse](../../mfc/reference/coledialog-class.md)   

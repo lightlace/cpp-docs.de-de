@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d9f8cab758728be6683a008ea18ad8448668605
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8de7bbfb2f00f5e1a909a83a5399e2d564747962
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583607"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213994"
 ---
 # <a name="appobject"></a>appobject
 
@@ -36,7 +36,7 @@ Identifiziert die Co-Klasse als ein Anwendungsobjekt, die mit einer vollständig
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Appobject** C++-Attribut hat die gleiche Funktionalität wie die [Appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) MIDL-Attribut.
+Die **Appobject** C++-Attribut hat die gleiche Funktionalität wie die [Appobject](/windows/desktop/Midl/appobject) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 

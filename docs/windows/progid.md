@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fff878cfecf6eb39d689c3a17c1eab0ab5c47d4f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1c395a79cc9e0399000278af1a19916c2c83bb10
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589198"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209465"
 ---
 # <a name="progid"></a>progid
 
@@ -77,4 +77,4 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 [IDL-Attribute](../windows/idl-attributes.md)  
 [Klassenattribute](../windows/class-attributes.md)  
 [typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Programm-ID-Schlüssel](http://msdn.microsoft.com/library/windows/desktop/dd542719)  
+[Programm-ID-Schlüssel](/windows/desktop/com/-progid--key)  

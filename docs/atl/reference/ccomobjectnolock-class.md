@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27dd0ad9bb64c8e708b228ec13a9fbf0e33fa589
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 85332341e1a229ce5110153c0ad6195ef0ad42c4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884115"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208174"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock-Klasse
 Diese Klasse implementiert `IUnknown` eines zusammengesetzten Objekts, aber wird nicht erhöhen, die die Sperrenanzahl Modul im Konstruktor.  
@@ -60,7 +60,7 @@ class CComObjectNoLock : public Base
 |[CComObjectNoLock::Release](#release)|Dekrementiert den Verweiszähler für das Objekt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CComObjectNoLock` ist vergleichbar mit [CComObject](../../atl/reference/ccomobject-class.md) , implementiert [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) für einen zusammengesetzten Objekt; allerdings `CComObjectNoLock` zählt nicht erhöhen die Modul-Sperre im Konstruktor.  
+ `CComObjectNoLock` ist vergleichbar mit [CComObject](../../atl/reference/ccomobject-class.md) , implementiert [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) für einen zusammengesetzten Objekt; allerdings `CComObjectNoLock` zählt nicht erhöhen die Modul-Sperre im Konstruktor.  
   
  ATL verwendet `CComObjectNoLock` intern für Klassenfactorys. Im Allgemeinen verwenden Sie diese Klasse nicht direkt.  
   
@@ -90,8 +90,8 @@ CComObjectNoLock(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Parameter  
- **void\***  
- [in] Dieser unbenannte Parameter wird nicht verwendet. Sie vorhanden ist, für die Symmetrie mit anderen **CCom *** XXX*`Object`*XXX* Konstruktoren.  
+ <em>void\*</em>  
+ [in] Dieser unbenannte Parameter wird nicht verwendet. Sie vorhanden ist, für die Symmetrie mit anderen `CComXXXObjectXXX` Konstruktoren.  
   
 ##  <a name="dtor"></a>  CComObjectNoLock:: ~ CComObjectNoLock  
  Der Destruktor.  

@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6aa313252d2ba06cf0a912f31564dec3d65e0e8
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 265da6a072c1b33a0ebbe8f485af7588521bcdea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573070"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218027"
 ---
 # <a name="csid-class"></a>CSid-Klasse
 Diese Klasse ist ein Wrapper für eine `SID` -Struktur (Sicherheits-ID).  
@@ -105,7 +105,7 @@ class CSid
   
  Anwendungen sollten nicht ändern, die `SID` Struktur direkt, sondern stattdessen verwenden Sie die Methoden, die in diese Wrapperklasse bereitgestellt. Siehe auch [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid), und [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).  
   
- Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](http://msdn.microsoft.com/library/windows/desktop/aa374860) im Windows SDK.  
+ Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](/windows/desktop/SecAuthZ/access-control) im Windows SDK.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
@@ -121,7 +121,7 @@ LPCTSTR AccountName() const throw(...);
  Gibt die LPCTSTR verweist auf den Namen des Kontos an.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode versucht, einen Namen für den angegebenen finden `SID` (Sicherheits-ID). Ausführliche Informationen finden Sie unter [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166).  
+ Diese Methode versucht, einen Namen für den angegebenen finden `SID` (Sicherheits-ID). Ausführliche Informationen finden Sie unter [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).  
   
  Wenn kein Kontoname für den `SID` gefunden werden kann, `AccountName` eine leere Zeichenfolge zurückgegeben. Dies kann auftreten, wenn eine Zeitüberschreitung im Netzwerk verhindert, dass diese Methode suchen nach dem Namen. Sie kommt auch für die Sicherheits-IDs ohne entsprechenden Konto-Namen, z. B. eine Anmeldung `SID` , eine anmeldesitzung identifiziert.  
   
@@ -202,7 +202,7 @@ LPCTSTR Domain() const throw(...);
  Gibt die `LPCTSTR` auf die Domäne verweisen.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode versucht, einen Namen für den angegebenen finden `SID` (Sicherheits-ID). Ausführliche Informationen finden Sie unter [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166).  
+ Diese Methode versucht, einen Namen für den angegebenen finden `SID` (Sicherheits-ID). Ausführliche Informationen finden Sie unter [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).  
   
  Wenn kein Kontoname für den `SID` gefunden werden kann, `Domain` gibt die Domäne als leere Zeichenfolge zurück. Dies kann auftreten, wenn eine Zeitüberschreitung im Netzwerk verhindert, dass diese Methode suchen nach dem Namen. Sie kommt auch für die Sicherheits-IDs ohne entsprechenden Konto-Namen, z. B. eine Anmeldung `SID` , eine anmeldesitzung identifiziert.  
   
@@ -222,7 +222,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
  Gibt "true" bei Erfolg bei "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) im Windows SDK für weitere Details.  
+ Finden Sie unter [EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621) im Windows SDK für weitere Details.  
   
 ##  <a name="getlength"></a>  CSid::GetLength  
  Gibt die Länge der `CSid` Objekt.  
@@ -487,7 +487,7 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt die `SID` Struktur als Zeichenfolge in ein Format für die Anzeige, Speicher oder Übertragung geeignet ist. Äquivalent zu [wurde von ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399).  
+ Gibt die `SID` Struktur als Zeichenfolge in ein Format für die Anzeige, Speicher oder Übertragung geeignet ist. Äquivalent zu [wurde von ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida).  
   
 ##  <a name="sidnameuse"></a>  CSid::SidNameUse  
  Gibt eine Beschreibung des Zustands der `CSid` Objekt.  

@@ -1,7 +1,7 @@
 ---
-title: -DYNAMICBASE (Verwendung Adresse Space Layout Randomization) | Microsoft Docs
+title: -DYNAMICBASE (Address Space Layout Randomization verwenden) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,44 +18,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85af66c4ce05057eff63292061b66202aeebe160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 896e2eca86b7694c8b3b951a8eb080a4cf9e7684
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43223422"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Address Space Layout Randomization verwenden)
-Gibt an, ob ein ausführbares Image generiert werden, die nach dem Zufallsprinzip zur Ladezeit ein REBASE werden können Address Space Layout Randomization (ASLR)-Funktion von [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-/DYNAMICBASE[:NO]  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Standardmäßig ist "/ DynamicBase" auf.  
-  
- Diese Option ändert den Header einer ausführbaren Datei, um anzugeben, ob für die Anwendung nach dem Zufallsprinzip zur Ladezeit ein Rebase ausgeführt werden soll.  
-  
- Adresse Space Layout Randomization wird unterstützt, auf [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
-  
-### <a name="to-set-this-linker-option-in-visual-studio"></a>So legen Sie diese Linkeroption in Visual Studio fest  
-  
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [arbeiten mit Projekteigenschaften](../../ide/working-with-project-properties.md).  
-  
-2.  Erweitern Sie die **Konfigurationseigenschaften** Knoten.  
-  
-3.  Erweitern Sie die **Linker** Knoten.  
-  
-4.  Wählen Sie die **erweitert** Eigenschaftenseite.  
-  
-5.  Ändern der **Zufällige Basisadresse** Eigenschaft.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
-  
-1.  Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RandomizedBaseAddress%2A>.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)   
- [Linkeroptionen](../../build/reference/linker-options.md)
+
+Gibt an, ob ein ausführbares Image generiert werden, das nach dem Zufallsprinzip ein REBASE können zur Ladezeit ausgeführt werden mit der Address Space Layout Randomization (ASLR)-Funktion von Windows, die zuerst in Windows Vista verfügbar war.
+
+## <a name="syntax"></a>Syntax
+
+> **/ DYNAMICBASE**[**: NO**]
+
+## <a name="remarks"></a>Hinweise
+
+Die **/DynamicBase** Option ändert den Header einer *ausführbares Image*, eine .dll oder .exe-Datei, um anzugeben, ob die Anwendung nach dem Zufallsprinzip ein zur Ladezeit REBASE sollte und ermöglicht es virtuelle Adresse Zuordnung Randomization, das wirkt sich die virtuellen Speicheradresse des Heaps, stapeln und anderen Betriebssystem-Zuordnungen. Die **/DynamicBase** Option gilt für 32-Bit- und 64-Bit-Images. ASLR wird unter Windows Vista und späteren Betriebssystemen unterstützt. Die Option wird von älteren Betriebssystemen ignoriert.
+
+In der Standardeinstellung **/DynamicBase** aktiviert ist. Verwenden Sie zum Deaktivieren dieser Option **/DYNAMICBASE:NO**. Die **/DynamicBase** Option ist erforderlich, damit die [/highentropyva](highentropyva-support-64-bit-aslr.md) Option aus, um die Auswirkungen haben.
+
+### <a name="to-set-this-linker-option-in-visual-studio"></a>So legen Sie diese Linkeroption in Visual Studio fest
+
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts. Weitere Informationen finden Sie unter [Working with Project Properties (Arbeiten mit Projekteigenschaften)](../../ide/working-with-project-properties.md).
+
+1. Wählen Sie die **Konfigurationseigenschaften** > **Linker** > **erweitert** Eigenschaftenseite.
+
+1. Ändern der **Zufällige Basisadresse** Eigenschaft.
+
+### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest
+
+- Siehe <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RandomizedBaseAddress%2A>.
+
+## <a name="see-also"></a>Siehe auch
+
+- [Festlegen von Linkeroptionen](../../build/reference/setting-linker-options.md)
+- [Linkeroptionen](../../build/reference/linker-options.md)
+- [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
+- [Windows ISV-Softwaresicherheitsmaßnahmen](https://msdn.microsoft.com/library/bb430720.aspx)

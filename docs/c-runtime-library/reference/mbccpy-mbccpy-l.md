@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d79ab8362eaa911b7a4aa936d6351aa29f610fa8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8fca6772c00715722acecd810595a42c60f77d86
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403169"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201386"
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
 
@@ -82,13 +82,13 @@ void _mbccpy_l(
 
 ## <a name="remarks"></a>Hinweise
 
-Die **_mbccpy** -Funktion kopiert ein Multibytezeichen von *Src* auf *Dest*.
+Die **_mbccpy** Funktion kopiert ein Multibytezeichen von *Src* zu *Dest*.
 
-Diese Funktion überprüft ihre Parameter. Wenn **_mbccpy** wird einen null-Zeiger für übergeben *Dest* oder *Src*, den Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL**.
+Diese Funktion überprüft ihre Parameter. Wenn **_mbccpy** einen null-Zeiger übergeben wird, für die *Dest* oder *Src*, Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL**.
 
-**_mbccpy** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängiges Verhalten. **_mbccpy_l** ist identisch mit **_mbccpy** mit dem Unterschied, dass **_mbccpy_l** verwendet das Gebietsschema für jedes gebietsschemaabhängige Verhalten übergeben. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**_mbccpy** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten. **_mbccpy_l** ist identisch mit **_mbccpy** mit dem Unterschied, dass **_mbccpy_l** verwendet das Gebietsschema für jedes gebietsschemaabhängige Verhalten übergeben wurde. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
-**Sicherheitshinweis** Verwenden Sie eine mit NULL endende Zeichenfolge. Die mit NULL endende Zeichenfolge darf die Größe des Zielpuffers nicht überschreiten. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795). Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen.
+**Sicherheitshinweis** Verwenden Sie eine mit NULL endende Zeichenfolge. Die mit NULL endende Zeichenfolge darf die Größe des Zielpuffers nicht überschreiten. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns). Pufferüberlaufprobleme werden häufig bei Systemangriffen eingesetzt, da sie zu einer unbefugten Ausweitung der Berechtigungen führen.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -99,7 +99,7 @@ Diese Funktion überprüft ihre Parameter. Wenn **_mbccpy** wird einen null-Zeig
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_mbccpy**|\<mbctype.h>|
 |**_mbccpy_l**|\<mbctype.h>|

@@ -1,5 +1,5 @@
 ---
-title: 'Ressourcencompiler: Warnung RC4214 | Microsoft Docs'
+title: 'Ressourcencompiler: Warnung RC4214 | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d7c18a81b2a7cf978ce056672cb318edca700fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 654996499c0fbee2c7410663fd7dfbbac3d145b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319038"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199095"
 ---
 # <a name="resource-compiler-warning-rc4214"></a>Ressourcencompiler: Warnung RC4214
 Codepage ist ungültig: ignoriert  
   
- Die RC-Datei enthalten sind, eine Codepageargument, und die angegebene Codepage ist ungültig. Finden Sie unter [IsValidCodePage](http://msdn.microsoft.com/library/windows/desktop/dd318674) für Weitere Informationen.
+ Die RC-Datei enthalten sind, eine Codepageargument, und die angegebene Codepage ist ungültig. Finden Sie unter [IsValidCodePage](/windows/desktop/api/winnls/nf-winnls-isvalidcodepage) für Weitere Informationen.

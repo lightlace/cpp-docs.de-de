@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ace66d9528534b382eda02160372bfc56aced0f5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4b505b9f6164566a1e196c601bdfe3eab4b4a991
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882994"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208581"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase-Klasse
 Diese Klasse stellt Methoden zum Erstellen und Verwalten von ATL-Steuerelementen.  
@@ -198,11 +198,11 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::m_rcPos](#m_rcpos)|Die Position in Pixel des Steuerelements, ausgedrückt in die Koordinaten des Containers.|  
 |[CComControlBase::m_sizeExtent](#m_sizeextent)|Der Umfang des Steuerelements in HIMETRIC-Einheiten (jede Einheit ist 0,01 Millimeter) für einen Bildschirm.|  
 |[CComControlBase::m_sizeNatural](#m_sizenatural)|Die physische Größe des Steuerelements in HIMETRIC-Einheiten (jede Einheit ist 0,01 Millimeter).|  
-|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Einen direkten Zeiger auf die Advise-Verbindung für den Container (des Containers [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).|  
+|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Einen direkten Zeiger auf die Advise-Verbindung für den Container (des Containers [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)).|  
 |[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|Ein `CComDispatchDriver` -Objekt, das ermöglicht Ihnen das Abrufen und Festlegen von Eigenschaften des Containers, über eine `IDispatch` Zeiger.|  
 |[CComControlBase::m_spClientSite](#m_spclientsite)|Ein Zeiger auf Client-Standort innerhalb des Containers des Steuerelements.|  
 |[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|Stellt ein Standard-Umgebung für die bereitzustellenden Advise-Verbindungen zwischen Datenobjekten advise-senken.|  
-|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Ein Zeiger auf des Containers [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), oder [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) Schnittstellenzeiger auf.|  
+|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Ein Zeiger auf des Containers [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), oder [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) Schnittstellenzeiger auf.|  
 |[CComControlBase::m_spOleAdviseHolder](#m_spoleadviseholder)|Stellt eine Standardimplementierung von eine Möglichkeit zum Speichern der Advise-Verbindungen bereit.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -245,7 +245,7 @@ CComControlBase(HWND& h);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn das Steuerelement im Fenstermodus, `~CComControlBase` zerstört es durch Aufrufen von [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682).  
+ Wenn das Steuerelement im Fenstermodus, `~CComControlBase` zerstört es durch Aufrufen von [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682).  
   
 ##  <a name="controlqueryinterface"></a>  CComControlBase::ControlQueryInterface  
  Ruft einen Zeiger auf die angeforderte Schnittstelle ab.  
@@ -447,7 +447,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
   
 ### <a name="parameters"></a>Parameter  
  *ppFont*  
- Ein Zeiger auf den Container dem ambient [IFont](http://msdn.microsoft.com/library/windows/desktop/ms680673) Schnittstelle.  
+ Ein Zeiger auf den Container dem ambient [IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont) Schnittstelle.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Einer der standardmäßigen HRESULT-Werte.  
@@ -464,7 +464,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
   
 ### <a name="parameters"></a>Parameter  
  *ppFont*  
- Ein Zeiger auf den Container dem ambient [IFontDisp](http://msdn.microsoft.com/library/windows/desktop/ms692695) Dispatch-Schnittstellen.  
+ Ein Zeiger auf den Container dem ambient [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) Dispatch-Schnittstellen.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
@@ -762,7 +762,7 @@ unsigned m_bAutoSize:1;
 > [!NOTE]
 >  Um dieses Datenelement in der Steuerelementklasse verwenden zu können, müssen Sie es als Datenmember in der Steuerelementklasse deklarieren. Die Steuerelementklasse wird dieses Datenelement nicht von der Basisklasse erben, da es in einer Union in der Basisklasse deklariert ist.  
   
- Wenn Sie beim Hinzufügen der **Größe automatisch anpassen** option die [Basiseigenschaften](../../atl/reference/stock-properties-atl-control-wizard.md) der ATL-Steuerelement-Assistent, den Assistenten auf der Registerkarte erstellt automatisch dieses Datenelement in der Steuerelementklasse, put erstellt und get-Methoden für die Eigenschaft , und unterstützt [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) Container automatisch benachrichtigt, wenn die Eigenschaft geändert.  
+ Wenn Sie beim Hinzufügen der **Größe automatisch anpassen** option die [Basiseigenschaften](../../atl/reference/stock-properties-atl-control-wizard.md) der ATL-Steuerelement-Assistent, den Assistenten auf der Registerkarte erstellt automatisch dieses Datenelement in der Steuerelementklasse, put erstellt und get-Methoden für die Eigenschaft , und unterstützt [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) Container automatisch benachrichtigt, wenn die Eigenschaft geändert.  
   
 ##  <a name="m_bdrawfromnatural"></a>  CComControlBase::m_bDrawFromNatural  
  Flag gibt an, dass `IDataObjectImpl::GetData` und `CComControlBase::GetZoomInfo` sollte die Steuerelementgröße auf festgelegt `m_sizeNatural` anstatt von `m_sizeExtent`.  
@@ -814,7 +814,7 @@ unsigned m_bInPlaceSiteEx:1;
 > [!NOTE]
 >  Um dieses Datenelement in der Steuerelementklasse verwenden zu können, müssen Sie es als Datenmember in der Steuerelementklasse deklarieren. Die Steuerelementklasse wird dieses Datenelement nicht von der Basisklasse erben, da es in einer Union in der Basisklasse deklariert ist.  
   
- Das Datenelement `m_spInPlaceSite` verweist auf eine [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), oder [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) -Schnittstelle, abhängig vom Wert der `m_bWndLess` und `m_bInPlaceSiteEx` Flags. (Der den Datenmember `m_bNegotiatedWnd` muss "true" für die `m_spInPlaceSite` Zeiger gültig ist.)  
+ Das Datenelement `m_spInPlaceSite` verweist auf eine [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), oder [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) -Schnittstelle, abhängig vom Wert der `m_bWndLess` und `m_bInPlaceSiteEx` Flags. (Der den Datenmember `m_bNegotiatedWnd` muss "true" für die `m_spInPlaceSite` Zeiger gültig ist.)  
   
  Wenn `m_bWndLess` ist "false" und `m_bInPlaceSiteEx` ist "true", `m_spInPlaceSite` ist ein `IOleInPlaceSiteEx` Schnittstellenzeiger auf. Finden Sie unter [M_spInPlaceSite](#m_spinplacesite) für eine Tabelle mit den Beziehungen zwischen diesen drei Datenmember.  
   
@@ -844,7 +844,7 @@ unsigned m_bRecomposeOnResize:1;
 > [!NOTE]
 >  Um dieses Datenelement in der Steuerelementklasse verwenden zu können, müssen Sie es als Datenmember in der Steuerelementklasse deklarieren. Die Steuerelementklasse wird dieses Datenelement nicht von der Basisklasse erben, da es in einer Union in der Basisklasse deklariert ist.  
   
- Dieses Flag aktiviert ist, indem [IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) und, falls "true" `SetExtent` benachrichtigt den Container der Änderungen anzeigen. Wenn dieses Flag festgelegt ist, wird die OLEMISC_RECOMPOSEONRESIZE in bit der [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Enumeration muss auch festgelegt werden.  
+ Dieses Flag aktiviert ist, indem [IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) und, falls "true" `SetExtent` benachrichtigt den Container der Änderungen anzeigen. Wenn dieses Flag festgelegt ist, wird die OLEMISC_RECOMPOSEONRESIZE in bit der [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) Enumeration muss auch festgelegt werden.  
   
 ##  <a name="m_brequiressave"></a>  CComControlBase::m_bRequiresSave  
  Flag zum angeben, dass das Steuerelement seit der letzten Speicherung geändert hat.  
@@ -935,7 +935,7 @@ unsigned m_bWndLess:1;
 > [!NOTE]
 >  Um dieses Datenelement in der Steuerelementklasse verwenden zu können, müssen Sie es als Datenmember in der Steuerelementklasse deklarieren. Die Steuerelementklasse wird dieses Datenelement nicht von der Basisklasse erben, da es in einer Union in der Basisklasse deklariert ist.  
   
- Das Datenelement `m_spInPlaceSite` verweist auf eine [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), oder [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) -Schnittstelle, abhängig vom Wert der `m_bWndLess` und [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex) Flags. (Der den Datenmember [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) muss "true" für die [CComControlBase::m_spInPlaceSite](#m_spinplacesite) Zeiger gültig ist.)  
+ Das Datenelement `m_spInPlaceSite` verweist auf eine [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), oder [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) -Schnittstelle, abhängig vom Wert der `m_bWndLess` und [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex) Flags. (Der den Datenmember [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) muss "true" für die [CComControlBase::m_spInPlaceSite](#m_spinplacesite) Zeiger gültig ist.)  
   
  Wenn `m_bWndLess` ist "true", `m_spInPlaceSite` ist ein `IOleInPlaceSiteWindowless` Schnittstellenzeiger auf. Finden Sie unter [CComControlBase::m_spInPlaceSite](#m_spinplacesite) für eine Tabelle, die die vollständige Beziehung zwischen diesen Datenmembern anzeigt.  
   
@@ -1008,7 +1008,7 @@ SIZE m_sizeNatural;
  Sie können die Größe in Pixeln mit der globalen Funktion konvertieren [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).  
   
 ##  <a name="m_spadvisesink"></a>  CComControlBase::m_spAdviseSink  
- Einen direkten Zeiger auf die Advise-Verbindung für den Container (des Containers [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).  
+ Einen direkten Zeiger auf die Advise-Verbindung für den Container (des Containers [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)).  
   
 ```
 CComPtr<IAdviseSink>
@@ -1058,12 +1058,12 @@ CComPtr<IDataAdviseHolder>
 > [!NOTE]
 >  Um dieses Datenelement in der Steuerelementklasse verwenden zu können, müssen Sie es als Datenmember in der Steuerelementklasse deklarieren. Die Steuerelementklasse wird dieses Datenelement nicht von der Basisklasse erben, da es in einer Union in der Basisklasse deklariert ist.  
   
- Ein Datenobjekt ist ein Steuerelement, das Daten übertragen werden kann, und implementiert [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421), deren Methoden geben Sie das Medium Format und die Übertragung der Daten.  
+ Ein Datenobjekt ist ein Steuerelement, das Daten übertragen werden kann, und implementiert [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject), deren Methoden geben Sie das Medium Format und die Übertragung der Daten.  
   
- Die Schnittstelle `m_spDataAdviseHolder` implementiert die [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) und [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) Methoden zum Einrichten und die Advise-Verbindungen auf den Container löschen. Der Container des Steuerelements muss eine Advise-Senke implementieren, durch die Unterstützung der [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) Schnittstelle.  
+ Die Schnittstelle `m_spDataAdviseHolder` implementiert die [IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise) und [IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise) Methoden zum Einrichten und die Advise-Verbindungen auf den Container löschen. Der Container des Steuerelements muss eine Advise-Senke implementieren, durch die Unterstützung der [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) Schnittstelle.  
   
 ##  <a name="m_spinplacesite"></a>  CComControlBase::m_spInPlaceSite  
- Ein Zeiger auf des Containers [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), oder [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) Schnittstellenzeiger auf.  
+ Ein Zeiger auf des Containers [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), oder [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) Schnittstellenzeiger auf.  
   
 ```
 CComPtr<IOleInPlaceSiteWindowless>
@@ -1098,7 +1098,7 @@ CComPtr<IOleAdviseHolder>
 > [!NOTE]
 >  Um dieses Datenelement in der Steuerelementklasse verwenden zu können, müssen Sie es als Datenmember in der Steuerelementklasse deklarieren. Die Steuerelementklasse wird dieses Datenelement nicht von der Basisklasse erben, da es in einer Union in der Basisklasse deklariert ist.  
   
- Die Schnittstelle `m_spOleAdviseHolder` implementiert die [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) und [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) Methoden zum Einrichten und die Advise-Verbindungen auf den Container löschen. Der Container des Steuerelements muss eine Advise-Senke implementieren, durch die Unterstützung der [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) Schnittstelle.  
+ Die Schnittstelle `m_spOleAdviseHolder` implementiert die [IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) und [IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) Methoden zum Einrichten und die Advise-Verbindungen auf den Container löschen. Der Container des Steuerelements muss eine Advise-Senke implementieren, durch die Unterstützung der [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) Schnittstelle.  
   
 ##  <a name="ondraw"></a>  CComControlBase:: OnDraw  
  Überschreiben Sie diese Methode, um Ihr Steuerelement zu zeichnen.  
@@ -1291,7 +1291,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
   
 ### <a name="parameters"></a>Parameter  
  *ADVF*  
- Empfehlen von Flags, die angeben, wie der Aufruf von [IAdviseSink::OnDataChange](http://msdn.microsoft.com/library/windows/desktop/ms687283) erfolgt. Werte reichen von der [ADVF](http://msdn.microsoft.com/library/windows/desktop/ms693742) Enumeration.  
+ Empfehlen von Flags, die angeben, wie der Aufruf von [IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange) erfolgt. Werte reichen von der [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf) Enumeration.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
@@ -1344,7 +1344,7 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
  Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- `SendOnViewChange` Aufrufe [IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337). Der einzige Wert, der *Lindex* ist-1 gibt an, dass die gesamte Ansicht von Interesse ist derzeit nicht unterstützt.  
+ `SendOnViewChange` Aufrufe [IAdviseSink::OnViewChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-onviewchange). Der einzige Wert, der *Lindex* ist-1 gibt an, dass die gesamte Ansicht von Interesse ist derzeit nicht unterstützt.  
   
 ##  <a name="setcontrolfocus"></a>  CComControlBase::SetControlFocus  
  Legt fest oder den Tastaturfokus zu oder aus dem Steuerelement entfernt.  
@@ -1361,7 +1361,7 @@ BOOL SetControlFocus(BOOL bGrab);
  Gibt TRUE zurück, wenn das Steuerelement erfolgreich den Fokus erhält. andernfalls "false".  
   
 ### <a name="remarks"></a>Hinweise  
- Für ein Steuerelement mit Fenster, die Windows-API-Funktion [SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms646312) aufgerufen wird. Bei einem fensterlosen Steuerelement [IOleInPlaceSiteWindowless::SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms679745) aufgerufen wird. Durch diesen Aufruf ein fensterloses Steuerelement den Tastaturfokus erhält und auf Windows-Meldungen reagieren kann.  
+ Für ein Steuerelement mit Fenster, die Windows-API-Funktion [SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312) aufgerufen wird. Bei einem fensterlosen Steuerelement [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) aufgerufen wird. Durch diesen Aufruf ein fensterloses Steuerelement den Tastaturfokus erhält und auf Windows-Meldungen reagieren kann.  
   
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty  
  Legt den Datenmember `m_bRequiresSave` mit dem Wert im *bDirty*.  

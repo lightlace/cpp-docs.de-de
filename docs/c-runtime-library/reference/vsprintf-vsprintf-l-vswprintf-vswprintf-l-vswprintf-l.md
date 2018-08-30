@@ -55,12 +55,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c1c4c22bb309516c751af66845acdb69b090797
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baa34ae887e12a59785bafd0551fe383fac5f7b1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417313"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220449"
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 Schreiben von formatierter Ausgabe mithilfe eines Zeigers, der auf eine Liste von Argumenten zeigt. Sicherere Versionen dieser Funktionen sind verfügbar. Informationen dazu finden Sie unter [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
@@ -132,7 +132,7 @@ int _vswprintf_l(
 Speicherort für die Ausgabe.
 
 *count*<br/>
-Maximale Anzahl von Zeichen in der Breite Zeichenfolge Versionen dieser Funktion zu speichern.
+Maximale Anzahl von Zeichen in der Breitzeichen-Version von dieser Funktion zu speichern.
 
 *format*<br/>
 Formatangabe.
@@ -145,20 +145,20 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Vsprintf** und **Vswprintf** Zurückgeben der Anzahl der Zeichen geschrieben, ohne das abschließende Null-Zeichen oder einen negativen Wert, wenn ein Ausgabefehler auftritt. Wenn *Puffer* oder *Format* ist ein null-Zeiger, rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+**Vsprintf** und **Vswprintf** Zurückgeben der Anzahl der geschriebenen Zeichen nicht einschließlich des abschließenden Zeichens Null oder ein negativer Wert, wenn ein Ausgabefehler auftritt. Wenn *Puffer* oder *Format* ist ein null-Zeiger rufen diese Funktionen den Handler für ungültige Parameter aus, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
 Weitere Informationen über diese und andere Fehlercodes finden Sie unter [errno, _doserrno, _sys_errlist, and _sys_nerr (_doserrno, errno, _sys_errlist und _sys_nerr)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und dann formatiert und schreibt die angegebenen Daten in den Speicher verweist *Puffer*.
+Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und formatiert und schreibt die angegebenen Daten in den Speicher verweist *Puffer*.
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas.
+Die Versionen dieser Funktionen mit den **_l** -Suffix sind beinahe identisch, außer dass sie den übergebenen Gebietsschemaparameter anstelle des aktuellen threadgebietsschemas Locale-Parameter verwenden.
 
 > [!IMPORTANT]
-> Mit **Vsprintf**, gibt es keine Möglichkeit, die Anzahl der Zeichen begrenzen geschrieben wird, was bedeutet, dass Code mit dieser Funktion für Pufferüberläufe anfällig ist. Verwenden Sie stattdessen [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), oder rufen Sie [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) auf, um zu bestimmen, welche Puffergröße benötigt wird. Darüber hinaus sicher, dass *Format* ist keine benutzerdefinierte Zeichenfolge. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Mithilfe von **Vsprintf**, gibt es keine Möglichkeit, die Anzahl der Zeichen begrenzen geschrieben wird, was bedeutet, dass der Code mit dieser Funktion für Pufferüberläufe anfällig ist. Verwenden Sie stattdessen [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), oder rufen Sie [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) auf, um zu bestimmen, welche Puffergröße benötigt wird. Stellen Sie außerdem sicher, dass *Format* ist keine benutzerdefinierte Zeichenfolge. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-**Vswprintf** entspricht dem ISO-C-Standard erfordert den zweiten Parameter *Anzahl*, des Typs **Size_t**. Um das alte, nicht dem Standard entsprechende Verhalten zu erzwingen, definieren **_CRT_NON_CONFORMING_SWPRINTFS**. Das alte Verhalten möglicherweise nicht in einer zukünftigen Version, sodass der Code geändert werden soll, um das neue konforme Verhalten verwendet.
+**Vswprintf** entspricht dem ISO C-Standard, die den zweiten Parameter erfordert, *Anzahl*, des Typs **"size_t"**. Um das alte, nicht dem Standard entsprechende Verhalten zu erzwingen, definieren **_CRT_NON_CONFORMING_SWPRINTFS**. Das alte Verhalten möglicherweise nicht in einer zukünftigen Version, sodass der Code geändert werden soll, um das neue konforme Verhalten verwendet.
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -171,7 +171,7 @@ In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sich
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|Optionale Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|Optionale Header|
 |-------------|---------------------|----------------------|
 |**Vsprintf**, **_vsprintf_l**|\<stdio.h> und \<stdarg.h>|\<varargs.h>*|
 |**Vswprintf**, **_vswprintf_l**|\<stdio.h> oder \<wchar.h> und \<stdarg.h>|\<varargs.h>*|

@@ -13,16 +13,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4967be81e45e52ce7c321ceb552b13a1dc59bd0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2775e0348f6bfe1e7fe960a105ebf0c31fcaae96
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604889"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214830"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Exemplarische Vorgehensweise: Erstellen einer UWP-app mithilfe von WRL und Media Foundation
 
-Erfahren Sie, wie die Windows Runtime C++ Template Library (WRL) verwenden, um eine app für die universelle Windows-Plattform (UWP) erstellen, verwendet [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).
+Erfahren Sie, wie die Windows Runtime C++ Template Library (WRL) verwenden, um eine app für die universelle Windows-Plattform (UWP) erstellen, verwendet [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
 In diesem Beispiel wird eine benutzerdefinierte Media Foundation-Transformation erstellt, in der ein Graustufeneffekt auf Bilder angewendet wird, die über eine Webcam erfasst werden. Die App verwendet C++ zum Definieren der benutzerdefinierten Transformation und C# zum Verwenden der Komponente für das Transformieren der erfassten Bilder.
 
@@ -36,7 +36,7 @@ In den meisten Fällen können Sie mithilfe C++ / CX verwenden, um die Windows-R
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Erleben Sie mit der [Windows-Runtime](http://msdn.microsoft.com/library/windows/apps/br211377.aspx).
+- Erleben Sie mit der [Windows-Runtime](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 
 - Erfahrungen mit COM.
 
@@ -52,7 +52,7 @@ In den meisten Fällen können Sie mithilfe C++ / CX verwenden, um die Windows-R
 
 - Die [InspectableClass](../windows/inspectableclass-macro.md) -Makro implementiert grundlegende COM-Funktionen wie die verweiszählung und die `QueryInterface` -Methode und legt die Laufzeit Klassennamen und die-Vertrauensstufe.
 
-- Verwenden Sie die Microsoft:: wrl::[Modulklasse](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe/locales/en-US) um DLL-Einstiegspunkt-Funktionen zu implementieren, wie z. B. ["dllgetactivationfactory"](http://msdn.microsoft.com/library/br205771.aspx), ["DllCanUnloadNow"](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), und [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
+- Verwenden Sie die Microsoft:: wrl::[Modulklasse](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe/locales/en-US) um DLL-Einstiegspunkt-Funktionen zu implementieren, wie z. B. ["dllgetactivationfactory"](https://msdn.microsoft.com/library/br205771.aspx), ["DllCanUnloadNow"](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), und [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
 
 - Verknüpfen Sie die Komponenten-DLL mit „runtimeobject.lib“. Geben Sie auch [/WINMD](../cppcx/compiler-and-linker-options-c-cx.md) der Linkerzeile an, um Windows-Metadaten zu generieren.
 
@@ -113,7 +113,7 @@ In den meisten Fällen können Sie mithilfe C++ / CX verwenden, um die Windows-R
 
 3. In `Package.appxmanifest`auf die **Funktionen** Registerkarte **Mikrofon** und **Webcam**. Beide Funktionen sind erforderlich, um Fotos von der Webcam zu erfassen.
 
-4. In `MainPage.xaml`, fügen Sie diesen Code in das Stammverzeichnis [Raster](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) Element:
+4. In `MainPage.xaml`, fügen Sie diesen Code in das Stammverzeichnis [Raster](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) Element:
 
    [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]
 
@@ -132,5 +132,5 @@ Im Beispiel wird gezeigt, wie Fotos von der standardmäßigen Webcam nacheinande
 ## <a name="see-also"></a>Siehe auch
 
 [C++-Vorlagenbibliothek für Windows-Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)  
-[Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197)  
+[Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)  
 [Beispiel für die medienerweiterungen](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

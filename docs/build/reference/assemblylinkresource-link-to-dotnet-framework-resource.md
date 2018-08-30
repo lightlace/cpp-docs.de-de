@@ -1,5 +1,5 @@
 ---
-title: -ASSEMBLYLINKRESOURCE (mit .NET Framework-Ressource verknüpfen) | Microsoft Docs
+title: -ASSEMBLYLINKRESOURCE (mit .NET Framework-Ressource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a922ac1a96a59d574f46f7b04db8b160a5079918
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e23bd9e0816c10f41e298afc9e82edbdd27e7a5f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374049"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206487"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Mit .NET Framework-Ressource verknüpfen)
 ```  
@@ -38,17 +38,17 @@ ms.locfileid: "32374049"
  Die Ressourcendatei von .NET Framework, die Sie mit der Assembly verknüpfen möchten  
   
 ## <a name="remarks"></a>Hinweise  
- Die Option/ASSEMBLYLINKRESOURCE erstellt einen Link zu einer .NET Framework-Ressource in die Ausgabedatei an. die Ressourcendatei wird nicht in die Ausgabedatei eingefügt. [/ ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) eine Ressourcendatei in die Ausgabedatei eingebettet.  
+ Die/ASSEMBLYLINKRESOURCE-Option erstellt einen Link zu einer .NET Framework-Ressource in der Ausgabedatei an. die Ressourcendatei wird nicht in der Ausgabedatei platziert. [/ ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) bettet eine Ressourcendatei in die Ausgabedatei.  
   
- Verknüpfte Ressourcen sind in der Assembly, die bei Erstellung mit der Linker öffentlich.  
+ Verknüpfte Ressourcen sind öffentlich in der Assembly, wenn der Linker erstellt.  
   
- / ASSEMBLYLINKRESOURCE erfordert, dass es sich bei der Kompilierung ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md); [/Ln](../../build/reference/ln-create-msil-module.md) oder [/noAssembly](../../build/reference/noassembly-create-a-msil-module.md) ist nicht mit/ASSEMBLYLINKRESOURCE zulässig.  
+ / ASSEMBLYLINKRESOURCE erfordert, dass die Kompilierung ["/ CLR"](../../build/reference/clr-common-language-runtime-compilation.md); [/Ln](../../build/reference/ln-create-msil-module.md) oder [/noAssembly](../../build/reference/noassembly-create-a-msil-module.md) ist mit/ASSEMBLYLINKRESOURCE nicht zulässig.  
   
- Wenn *Filename* ist eine .NET Framework-Ressourcendatei erstellt haben, z. B. durch [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) oder in der Entwicklungsumgebung können sie Zugriff mit Membern in der **System.Resources** Namespace. Weitere Informationen finden Sie unter [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx). Verwenden Sie für alle anderen Ressourcen die **GetManifestResource** \* Methoden in der **System.Reflection.Assembly** Klasse, um zur Laufzeit auf die Ressource zugreifen.  
+ Wenn *Filename* ist eine .NET Framework-Ressourcendatei erstellt haben, z. B. durch [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) oder in der Entwicklungsumgebung, können sie Zugriff mit Membern in der **System.Resources** Namespace. Weitere Informationen finden Sie unter [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). Verwenden Sie für alle anderen Ressourcen die **GetManifestResource** \* Methoden in der **System.Reflection.Assembly** Klasse, um Zugriff auf die Ressource zur Laufzeit.  
   
- *FileName* kann beliebiges Dateiformat aufweisen. Beispielsweise empfiehlt es sich um eine systemeigene DLL Teil der Assembly zu machen, damit im globalen Assemblycache installiert und aus verwaltetem Code in der Assembly zugegriffen werden kann.  
+ *FileName* kann einem beliebigen Dateiformat sein. Beispielsweise empfiehlt es sich um eine systemeigene DLL Teil der Assembly zu machen, damit es im globalen Assemblycache installiert und aus verwaltetem Code in der Assembly zugegriffen werden kann.  
   
- Andere Optionen des Linkers, die beeinflussen Generieren der Assembly sind:  
+ Andere Optionen des Linkers, die Generierung der Zielassembly betreffen sind:  
   
 -   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "32374049"
   
 3.  Klicken Sie auf die Eigenschaftenseite **Befehlszeile** .  
   
-4.  Geben Sie die Option in der **Zusatzoptionen** Feld.  
+4.  Geben Sie die Option in der **zusätzliche Optionen** Feld.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>So legen Sie diese Linkeroption programmgesteuert fest  
   

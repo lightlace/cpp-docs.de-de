@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1339f41a0764e44f46bed7ad24181ce406998c22
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 2f92408c8d8ee4ac1dd1309810ae6282f04ca315
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885600"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213322"
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>IOleInPlaceActiveObjectImpl-Klasse
 Diese Klasse stellt Methoden für die Unterstützung der Kommunikation zwischen einem in-Place-Steuerelement und seinem Container.  
@@ -66,7 +66,7 @@ class IOleInPlaceActiveObjectImpl
   
   
 ## <a name="remarks"></a>Hinweise  
- Die [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) Schnittstelle unterstützt die Kommunikation zwischen einem in-Place-Steuerelement und seinem Container, z. B. den aktiven Status des Steuerelements und die Container kommuniziert und informiert das Steuerelement muss zum Ändern der Größe sich selbst. Klasse `IOleInPlaceActiveObjectImpl` stellt eine Standardimplementierung von `IOleInPlaceActiveObject` und unterstützt `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.  
+ Die [IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) Schnittstelle unterstützt die Kommunikation zwischen einem in-Place-Steuerelement und seinem Container, z. B. den aktiven Status des Steuerelements und die Container kommuniziert und informiert das Steuerelement muss zum Ändern der Größe sich selbst. Klasse `IOleInPlaceActiveObjectImpl` stellt eine Standardimplementierung von `IOleInPlaceActiveObject` und unterstützt `IUnknown` durch Senden von Informationen an das Speicherabbild Gerät im Debugmodus wird erstellt.  
   
  **Verwandte Artikel** [ATL-Lernprogramm](../../atl/active-template-library-atl-tutorial.md), [Erstellen eines ATL-Projekts](../../atl/reference/creating-an-atl-project.md)  
   
@@ -89,7 +89,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
  Gibt E_NOTIMPL zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) in das Windows SDK.  
+ Finden Sie unter [IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) in das Windows SDK.  
   
 ##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless  
  Ermöglicht Dialogfelder ohne Modus.  
@@ -102,7 +102,7 @@ HRESULT EnableModeless(BOOL fEnable);
  Gibt S_OK zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115) in das Windows SDK.  
+ Finden Sie unter [IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) in das Windows SDK.  
   
 ##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow  
  Der Container ruft diese Funktion rufen Sie das Fensterhandle des Steuerelements.  
@@ -114,7 +114,7 @@ HRESULT GetWindow(HWND* phwnd);
 ### <a name="remarks"></a>Hinweise  
  Einige Container funktioniert nicht mit einem Steuerelement, die fensterlose, selbst wenn sie derzeit im Fenstermodus ist. In ATLs-Implementierung Wenn die `CComControl::m_bWasOnceWindowless` -Datenmember ist "true", die Funktion gibt E_FAIL zurück. Andernfalls gilt: Wenn \* *Phwnd* ist nicht NULL, `GetWindow` weist *Phwnd* in der Steuerelementklasse-Datenmember `m_hWnd` und gibt S_OK zurück.  
   
- Finden Sie unter [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) in das Windows SDK.  
+ Finden Sie unter [IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) in das Windows SDK.  
   
 ##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
  Benachrichtigt das Steuerelement aus, wenn das Dokumentfenster des Containers aktiviert oder deaktiviert wird.  
@@ -127,7 +127,7 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
  Gibt S_OK zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleInPlaceActiveObject:: OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281) in das Windows SDK.  
+ Finden Sie unter [IOleInPlaceActiveObject:: OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) in das Windows SDK.  
   
 ##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
  Benachrichtigt das Steuerelement aus, wenn der obersten Ebene Rahmenfenster des Containers aktiviert oder deaktiviert ist.  
@@ -140,7 +140,7 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
  Gibt S_OK zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleInPlaceActiveObject:: OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) in das Windows SDK.  
+ Finden Sie unter [IOleInPlaceActiveObject:: OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) in das Windows SDK.  
   
 ##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder  
  Benachrichtigt, dass der Rahmen Ändern der Größe muss das Steuerelement.  
@@ -156,7 +156,7 @@ HRESULT ResizeBorder(
  Gibt S_OK zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053) in das Windows SDK.  
+ Finden Sie unter [ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) in das Windows SDK.  
   
 ##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator  
  Verarbeitet die Tastenkombinations-menünachrichten aus dem Container.  
@@ -173,9 +173,9 @@ HRESULT TranslateAccelerator(LPMSG lpmsg);
  S_FALSE, wenn die Nachricht nicht übersetzt wurde.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IOleInPlaceActiveObject:: TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) in das Windows SDK.  
+ Finden Sie unter [IOleInPlaceActiveObject:: TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) in das Windows SDK.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CComControl-Klasse](../../atl/reference/ccomcontrol-class.md)  
- [ActiveX-Steuerelemente Schnittstellen](http://msdn.microsoft.com/library/windows/desktop/ms692724)  
+ [ActiveX-Steuerelemente Schnittstellen](/windows/desktop/com/activex-controls-interfaces)  
  [Übersicht über die Klasse](../../atl/atl-class-overview.md)

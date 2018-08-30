@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 481b50fa99e367859eab51b41a1c5e37d8602341
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609498"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197932"
 ---
 # <a name="cstringt-class"></a>CStringT-Klasse
 Diese Klasse stellt eine `CStringT` Objekt.  
@@ -705,7 +705,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 > [!NOTE]
 > `FormatMessage` versucht, den Systemspeicher für das neu formatierte Zeichenfolge zu reservieren. Wenn dieser Versuch fehlschlägt, wird automatisch eine Memory-Ausnahme ausgelöst.  
   
- Jeder Einfügung benötigen eine entsprechende Parameter folgt der *PszFormat* oder *nFormatID* Parameter. In den Meldungstext werden mehrere Escapesequenzen für die dynamische Formatierung der Nachricht unterstützt. Weitere Informationen finden Sie in der Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) -Funktion in das Windows SDK.  
+ Jeder Einfügung benötigen eine entsprechende Parameter folgt der *PszFormat* oder *nFormatID* Parameter. In den Meldungstext werden mehrere Escapesequenzen für die dynamische Formatierung der Nachricht unterstützt. Weitere Informationen finden Sie in der Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) -Funktion in das Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
@@ -730,7 +730,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 > [!NOTE]
 > `FormatMessageV` Aufrufe [CStringT::FormatMessage](#formatmessage), die versucht, den Systemspeicher für die neu formatierte Zeichenfolge zuweisen. Wenn dieser Versuch fehlschlägt, wird automatisch eine Memory-Ausnahme ausgelöst.  
   
- Weitere Informationen finden Sie in der Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) -Funktion in das Windows SDK.  
+ Weitere Informationen finden Sie in der Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) -Funktion in das Windows SDK.  
   
 ##  <a name="formatv"></a>  CStringT::FormatV  
  Formatiert eine Meldungszeichenfolge, die eine Variable Argumentliste verwenden.  

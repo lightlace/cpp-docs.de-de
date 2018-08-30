@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96c01326056a5fd3a106e09db94d2a84435f32e3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6c9fd7cedc1e16c6f784edebf35faf055b09ed82
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879664"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217187"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc-Klasse
 Diese Klasse stellt ein privates Objekt sicherheitsbeschreibungs-Objekt.  
@@ -65,7 +65,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="remarks"></a>Hinweise  
  Diese Klasse, aus abgeleiteten [CSecurityDesc](../../atl/reference/csecuritydesc-class.md), stellt Methoden zum Erstellen und verwalten die Sicherheitsbeschreibung für ein privates Objekt bereit.  
   
- Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](http://msdn.microsoft.com/library/windows/desktop/aa374860) im Windows SDK.  
+ Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](/windows/desktop/SecAuthZ/access-control) im Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CSecurityDesc](../../atl/reference/csecuritydesc-class.md)  
@@ -97,13 +97,13 @@ bool ConvertToAutoInherit(
  Gibt an, ob das neue Objekt andere Objekte enthalten kann. Der Wert "true" gibt an, dass das neue Objekt ein Container. Der Wert "false" gibt an, dass das neue Objekt kein Container ist.  
   
  *GenericMapping*  
- Zeiger auf eine [GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633) Struktur, die die Zuordnung von einzelnen generischen Rechte, bestimmte Rechte für das Objekt angibt.  
+ Zeiger auf eine [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) Struktur, die die Zuordnung von einzelnen generischen Rechte, bestimmte Rechte für das Objekt angibt.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode versucht zu bestimmen, ob die ACEs in der Zugriffssteuerungsliste (DACL) auflisten und die System Access Control List (SACL) der aktuellen Sicherheitsbeschreibung wurden aus der Sicherheitsbeschreibung des übergeordneten geerbt. Ruft die [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) Funktion.  
+ Diese Methode versucht zu bestimmen, ob die ACEs in der Zugriffssteuerungsliste (DACL) auflisten und die System Access Control List (SACL) der aktuellen Sicherheitsbeschreibung wurden aus der Sicherheitsbeschreibung des übergeordneten geerbt. Ruft die [ConvertToAutoInheritPrivateObjectSecurity](https://msdn.microsoft.com/library/windows/desktop/aa376403) Funktion.  
   
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  Der Konstruktor.  
@@ -160,7 +160,7 @@ bool Create(
  Ein Verweis auf die [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt für den Clientprozess, in dessen Namen das Objekt erstellt wird.  
   
  *GenericMapping*  
- Zeiger auf eine [GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633) Struktur, die die Zuordnung von einzelnen generischen Rechte, bestimmte Rechte für das Objekt angibt.  
+ Zeiger auf eine [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) Struktur, die die Zuordnung von einzelnen generischen Rechte, bestimmte Rechte für das Objekt angibt.  
   
  *ObjectType*  
  Zeiger auf eine `GUID` Struktur, die den Typ des Objekts mit dem aktuellen Objekt verbundenen bezeichnet. Legen Sie *ObjectType* auf NULL, wenn das Objekt nicht mit eine GUID verfügt.  
@@ -169,13 +169,13 @@ bool Create(
  Gibt an, ob das neue Objekt andere Objekte enthalten kann. Der Wert "true" gibt an, dass das neue Objekt ein Container. Der Wert "false" gibt an, dass das neue Objekt kein Container ist.  
   
  *AutoInheritFlags*  
- Ein Satz von Bitflags, die steuern, wie Access Control-Einträge (ACEs) von übernommenen *pParent*. Finden Sie unter [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581) Weitere Details.  
+ Ein Satz von Bitflags, die steuern, wie Access Control-Einträge (ACEs) von übernommenen *pParent*. Finden Sie unter [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) Weitere Details.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Methode ruft [CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405) oder [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581).  
+ Diese Methode ruft [CreatePrivateObjectSercurity](https://msdn.microsoft.com/library/windows/desktop/aa376405) oder [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581).  
   
  Die zweite Methode ermöglicht das Angeben der GUID des Objekttyp des neuen Objekts oder steuern, wie ACEs geerbt werden.  
   
@@ -193,7 +193,7 @@ bool Get(
   
 ### <a name="parameters"></a>Parameter  
  *SI*  
- Ein Satz von Bitflags, die angeben, die Teile der Sicherheitsbeschreibung abgerufen werden soll. Dieser Wert kann eine Kombination von werden die [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) Bitflags.  
+ Ein Satz von Bitflags, die angeben, die Teile der Sicherheitsbeschreibung abgerufen werden soll. Dieser Wert kann eine Kombination von werden die [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) Bitflags.  
   
  *pResult*  
  Zeiger auf eine [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) Objekt, das eine Kopie der angeforderten Informationen aus der angegebenen Sicherheitsbeschreibung empfängt.  
@@ -238,19 +238,19 @@ bool Set(
   
 ### <a name="parameters"></a>Parameter  
  *SI*  
- Ein Satz von Bitflags, die angeben, die Teile der Sicherheitsbeschreibung fest. Dieser Wert kann eine Kombination von werden die [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) Bitflags.  
+ Ein Satz von Bitflags, die angeben, die Teile der Sicherheitsbeschreibung fest. Dieser Wert kann eine Kombination von werden die [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) Bitflags.  
   
  *Änderung*  
  Zeiger auf eine [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) Objekt. Die Teile dieser Sicherheitsbeschreibung angegeben wird, durch die *Si* -Parameters auf die Sicherheitsbeschreibung des Objekts angewendet werden.  
   
  *GenericMapping*  
- Zeiger auf eine [GENERIC_MAPPING](http://msdn.microsoft.com/library/windows/desktop/aa446633) Struktur, die die Zuordnung von einzelnen generischen Rechte, bestimmte Rechte für das Objekt angibt.  
+ Zeiger auf eine [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) Struktur, die die Zuordnung von einzelnen generischen Rechte, bestimmte Rechte für das Objekt angibt.  
   
  *Token*  
  Ein Verweis auf die [CAccessToken](../../atl/reference/caccesstoken-class.md) Objekt für den Clientprozess, in dessen Namen das Objekt erstellt wird.  
   
  *AutoInheritFlags*  
- Ein Satz von Bitflags, die steuern, wie Access Control-Einträge (ACEs) von übernommenen *pParent*. Finden Sie unter [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581) Weitere Details.  
+ Ein Satz von Bitflags, die steuern, wie Access Control-Einträge (ACEs) von übernommenen *pParent*. Finden Sie unter [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) Weitere Details.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt bei Erfolg true zurück, bei einem Fehler false.  
@@ -259,7 +259,7 @@ bool Set(
  Die zweite Methode ermöglicht das Angeben des Objekttyp GUID des Objekts oder steuern, wie ACEs geerbt werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
+ [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)   
  [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
  [Globale Sicherheitsfunktionen](../../atl/reference/security-global-functions.md)   
  [CSecurityDesc-Klasse](../../atl/reference/csecuritydesc-class.md)

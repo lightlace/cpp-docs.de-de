@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0a2652730c981313ee3e168aca4a36a91fadde47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883449"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198454"
 ---
 # <a name="ccomcontrol-class"></a>CComControl-Klasse
 Diese Klasse stellt Methoden zum Erstellen und Verwalten von ATL-Steuerelementen.  
@@ -157,7 +157,7 @@ HRESULT FireOnChanged(DISPID dispID);
  Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die Steuerelementklasse abgeleitet [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), diese Methode ruft [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) zu benachrichtigen, alle verbundenen `IPropertyNotifySink` Schnittstellen, das angegebene Steuerelement -Eigenschaft geändert hat. Wenn eine Klasse nicht von abgeleitet ist `IPropertyNotifySink`, diese Methode gibt S_OK zurück. 
+ Wenn die Steuerelementklasse abgeleitet [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), diese Methode ruft [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) zu benachrichtigen, alle verbundenen `IPropertyNotifySink` Schnittstellen, das angegebene Steuerelement -Eigenschaft geändert hat. Wenn eine Klasse nicht von abgeleitet ist `IPropertyNotifySink`, diese Methode gibt S_OK zurück. 
   
  Diese Methode ist sicher aufgerufen werden, auch wenn das Steuerelement Verbindungspunkte nicht unterstützt.  
   
@@ -179,7 +179,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
  Einer der standardmäßigen HRESULT-Werte.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn die Steuerelementklasse abgeleitet [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), ruft diese Methode [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) zu benachrichtigen, alle verbundenen `IPropertyNotifySink` Schnittstellen, der angegebenen Eigenschaft des Steuerelements wird geändert. Wenn eine Klasse nicht von abgeleitet ist `IPropertyNotifySink`, diese Methode gibt S_OK zurück.  
+ Wenn die Steuerelementklasse abgeleitet [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), ruft diese Methode [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) zu benachrichtigen, alle verbundenen `IPropertyNotifySink` Schnittstellen, der angegebenen Eigenschaft des Steuerelements wird geändert. Wenn eine Klasse nicht von abgeleitet ist `IPropertyNotifySink`, diese Methode gibt S_OK zurück.  
 
   
  Diese Methode ist sicher aufgerufen werden, auch wenn das Steuerelement Verbindungspunkte nicht unterstützt.  
@@ -205,10 +205,10 @@ int MessageBox(
  Der Titel des Dateidialogfelds. Wenn NULL (Standard), den Titel "Error" wird verwendet.  
   
  *nType*  
- Gibt den Inhalt und Verhalten des Dialogfelds. Finden Sie unter den [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) Eintrag in der Windows-SDK-Dokumentation finden Sie eine Liste von den verschiedenen Meldungsfeldern verfügbar. Standardmäßig bietet ein einfaches **OK** Schaltfläche.  
+ Gibt den Inhalt und Verhalten des Dialogfelds. Finden Sie unter den [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) Eintrag in der Windows-SDK-Dokumentation finden Sie eine Liste von den verschiedenen Meldungsfeldern verfügbar. Standardmäßig bietet ein einfaches **OK** Schaltfläche.  
   
 ### <a name="return-value"></a>Rückgabewert  
- Gibt einen ganzzahligen Wert angeben, die Menüelement Werte aufgeführt [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) in der Windows SDK-Dokumentation.  
+ Gibt einen ganzzahligen Wert angeben, die Menüelement Werte aufgeführt [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) in der Windows SDK-Dokumentation.  
   
 ### <a name="remarks"></a>Hinweise  
  `MessageBox` ist nützlich, sowohl während der Entwicklung als auch eine einfache Möglichkeit, eine Warnung oder Fehlermeldung für den Benutzer anzuzeigen.  

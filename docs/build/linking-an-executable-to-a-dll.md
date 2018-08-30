@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9641545721776530ccf09a5a1ea99485f510265
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 49973d203670eaa2aa0988d9de04784d13eaec09
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572576"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196686"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Eine ausführbare Datei mit einer DLL verknüpfen  
   
@@ -76,7 +76,7 @@ Beachten Sie die beiden folgenden Schwachstellen im Zusammenhang mit der explizi
   
 -   Wenn die DLL hat eine `DllMain` Einstiegspunktfunktion, ruft das Betriebssystem die Funktion im Kontext des Threads, der Namen `LoadLibrary`. Die Einstiegspunktfunktion wird nicht aufgerufen, wenn die DLL bereits an den Prozess, aufgrund eines vorherigen Aufrufs von angefügt ist `LoadLibrary` hatte, die ohne entsprechenden Aufruf der `FreeLibrary` Funktion. Explizite Verknüpfung kann Probleme verursachen, wenn die DLL verwendet eine `DllMain` Funktion, um die Initialisierung für jeden Thread eines Prozesses ausgeführt werden, da Threads, die bereits vorhanden sein. bei `LoadLibrary` (oder `AfxLoadLibrary`) wird aufgerufen, nicht initialisiert werden.  
   
--   Wenn eine DLL statische Daten deklariert `__declspec(thread)`, es kann dazu führen, dass eine schutzverletzung, wenn explizit verknüpft. Nach dem Laden der DLL durch einen Aufruf von `LoadLibrary`, eine schutzverletzung, sobald der Code auf diese Daten verwiesen wird. (Statische Daten umfassen sowohl globale als auch lokale statische Elemente.) Aus diesem Grund bei der Erstellung einer DLL Sie vermeiden Sie die Verwendung von threadlokalen Speicher oder DLL-Benutzer über die potenziellen Fallstricke bei, das dynamische Laden der DLL informieren. Weitere Informationen finden Sie unter [mithilfe von threadlokalen Speicher in einer Dynamic Link Library (Windows SDK)](http://msdn.microsoft.com/library/windows/desktop/ms686997).  
+-   Wenn eine DLL statische Daten deklariert `__declspec(thread)`, es kann dazu führen, dass eine schutzverletzung, wenn explizit verknüpft. Nach dem Laden der DLL durch einen Aufruf von `LoadLibrary`, eine schutzverletzung, sobald der Code auf diese Daten verwiesen wird. (Statische Daten umfassen sowohl globale als auch lokale statische Elemente.) Aus diesem Grund bei der Erstellung einer DLL Sie vermeiden Sie die Verwendung von threadlokalen Speicher oder DLL-Benutzer über die potenziellen Fallstricke bei, das dynamische Laden der DLL informieren. Weitere Informationen finden Sie unter [mithilfe von threadlokalen Speicher in einer Dynamic Link Library (Windows SDK)](https://msdn.microsoft.com/library/windows/desktop/ms686997).  
   
 <a name="linking-implicitly"></a>  
   

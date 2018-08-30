@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1e400352a6eca09fd26ea1a1e2ba5cff60888bc
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: ae151d25af5ad1c77f2dcfc7af1902e562ffde51
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026100"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208307"
 ---
 # <a name="cwintraits-class"></a>CWinTraits-Klasse
 Diese Klasse stellt eine Methode für die Standardisierung der Stile, die beim Erstellen eines Objekts im Fenster verwendet.  
@@ -108,6 +108,6 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
  Die erweiterten Fensterstile des Objekts.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Klassenmember](http://msdn.microsoft.com/dbe6a147-3f01-4aea-a3fb-fe6ebadc31f8)   
+ [Klassenmember](https://msdn.microsoft.com/dbe6a147-3f01-4aea-a3fb-fe6ebadc31f8)   
  [Übersicht über die Klasse](../../atl/atl-class-overview.md)   
  [Einführung in Fenstermerkmale](../../atl/understanding-window-traits.md)

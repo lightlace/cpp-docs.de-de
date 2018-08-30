@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72ee57a4556bc8e6e761db0ea96f7b312d9948d9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 782e0789268f55e254535434e39c3aeb9b0532cb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602575"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201927"
 ---
 # <a name="c-attributes-reference"></a>C++-Attributreferenz
 
@@ -48,7 +48,7 @@ Enthält Links zu Referenzthemen für alle Attribut.
 [Attributiertes Programmieren](../windows/attributed-programming-concepts.md)  
 Bietet eine konzeptionelle Übersicht über Attribute.
 
-[Referenz](http://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
+[Referenz](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
 Enthält Links zu Themen, in denen die C- und C++-Sprachreferenzen, die im Lieferumfang von Visual C++ enthaltenen Bibliotheken, das Visual C++-Erweiterbarkeitsobjektmodell und der Microsoft Macro Assembler (MASM) beschrieben werden.
 
 [Visual C++-Beispiele](../visual-cpp-samples.md)  

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5bfff86dd688ea5029a0c0971c3f8ad6c6aef3b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541827"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213191"
 ---
 # <a name="mfc-classes"></a>MFC-Klassen
 Die Klassen in der folgenden Liste sind in der Microsoft Foundation Class (MFC)-Bibliothek enthalten.  
@@ -135,7 +135,7 @@ Die Klassen in der folgenden Liste sind in der Microsoft Foundation Class (MFC)-
  Stellt die Funktionalität eines Windows-Kontrolllistenfelds bereit.  
   
  [CClientDC-Klasse](../../mfc/reference/cclientdc-class.md)  
- Behandelt das Aufrufen der Windows-Funktionen [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) zur Erstellungszeit und [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) zur Zerstörungszeit  
+ Behandelt das Aufrufen der Windows-Funktionen [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) zur Erstellungszeit und [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) zur zerstörungszeit.  
   
  [CCmdTarget-Klasse](../../mfc/reference/ccmdtarget-class.md)  
  Basisklasse für die Meldungszuordnungsarchitektur der Microsoft Foundation Class-Bibliothek.  
@@ -861,7 +861,7 @@ Die Klassen in der folgenden Liste sind in der Microsoft Foundation Class (MFC)-
  Stellt ein Rahmenfenster mit halber Höhe dar, das in der Regel um unverankerte Symbolleisten sichtbar ist.  
   
  [CMonikerFile-Klasse](../../mfc/reference/cmonikerfile-class.md)  
- Stellt einen Datenstrom ([IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) dar, der per [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)benannt ist  
+ Stellt einen Datenstrom ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) mit dem Namen durch ein [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).  
   
  [CMonthCalCtrl-Klasse](../../mfc/reference/cmonthcalctrl-class.md)  
  Kapselt die Funktionalität eines Monatskalender-Steuerelements.  
@@ -930,7 +930,7 @@ Die Klassen in der folgenden Liste sind in der Microsoft Foundation Class (MFC)-
  Stellt Unterstützung für benutzerdefinierte clientseitige Steuerelement-Schnittstellen bereit.  
   
  [COleConvertDialog-Klasse](../../mfc/reference/coleconvertdialog-class.md)  
- Weitere Informationen finden Sie unter den [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Struktur im Windows SDK.  
+ Weitere Informationen finden Sie unter den [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) Struktur im Windows SDK.  
   
  [COleCurrency-Klasse](../../mfc/reference/colecurrency-class.md)  
  Kapselt den `CURRENCY` -Datentyp der OLE-Automatisierung.  
@@ -1173,7 +1173,7 @@ Die Klassen in der folgenden Liste sind in der Microsoft Foundation Class (MFC)-
  Kapselt einen Übergang mit sinusförmiger Geschwindigkeit und einer Amplitude, die von der ursprünglichen Geschwindigkeit der Animationsvariablen bestimmt wird.  
   
  [CSize-Klasse](../../atl-mfc-shared/reference/csize-class.md)  
- Ähnelt der Windows-Struktur [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) , bei der eine relative Koordinate oder Position implementiert wird  
+ Ähnlich wie die Windows [Größe](https://msdn.microsoft.com/library/windows/desktop/dd145106) -Struktur, die eine relative Koordinate oder Position implementiert.  
   
  [CSliderCtrl-Klasse](../../mfc/reference/csliderctrl-class.md)  
  Stellt die Funktionalität des allgemeinen Windows-Schieberegler-Steuerelements bereit.  

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81642132272b40229437c2be8bac32d160885600
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b3f29d5b2c4343ea156d1ccd1dfbf347026a127b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42578093"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202273"
 ---
 # <a name="accelerator-editor"></a>Zugriffstasten-Editor
 
@@ -35,7 +35,7 @@ Eine Zugriffstastentabelle ist eine Windows-Ressource, die eine Liste mit Zugrif
 
 Normalerweise werden Zugriffstasten als Tastenkombinationen für Programmbefehle verwendet, die auch in einem Menü oder auf einer Symbolleiste verfügbar sind. Allerdings können Sie die Zugriffstastentabelle auch verwenden, um Tastenkombinationen für Befehle zu definieren, denen kein Objekt auf der Benutzeroberfläche zugeordnet ist.
 
-Sie können [Klassenansicht](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) um Zugriffstastenbefehle mit Code zu verknüpfen.
+Sie können [Klassenansicht](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) um Zugriffstastenbefehle mit Code zu verknüpfen.
 
 Mit der **Accelerator** -Editor können Sie:
 

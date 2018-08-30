@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3408e098b7d7b29ff9ee82775954734e3e768dcb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 066f9ac076d4371692331231b5f6f212947b2001
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879981"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196483"
 ---
 # <a name="cacl-class"></a>CAcl-Klasse
 Diese Klasse ist ein Wrapper für ein `ACL` (Access Control List)-Struktur.  
@@ -92,7 +92,7 @@ class CAcl
 |[CAcl::operator =](#operator_eq)|Zuweisungsoperator.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ACL` Struktur ist der Header des eine Zugriffssteuerungsliste (Access Control List). Eine ACL enthält eine sequenzielle Liste von NULL oder mehr [ACEs](http://msdn.microsoft.com/library/windows/desktop/aa374868) (Access Control-Einträge). Einzelne ACEs in einer ACL sind nummeriert von 0 bis *n-1*, wobei *n* ist die Anzahl der ACEs in der ACL. Wenn Sie eine ACL zu bearbeiten, bezieht sich eine Anwendung auf eine Access Control Entry (ACE), in der ACL aus, nach ihrem Index.  
+ Die `ACL` Struktur ist der Header des eine Zugriffssteuerungsliste (Access Control List). Eine ACL enthält eine sequenzielle Liste von NULL oder mehr [ACEs](/windows/desktop/SecAuthZ/access-control-entries) (Access Control-Einträge). Einzelne ACEs in einer ACL sind nummeriert von 0 bis *n-1*, wobei *n* ist die Anzahl der ACEs in der ACL. Wenn Sie eine ACL zu bearbeiten, bezieht sich eine Anwendung auf eine Access Control Entry (ACE), in der ACL aus, nach ihrem Index.  
   
  Es gibt zwei ACL-Typen:  
   
@@ -104,9 +104,9 @@ class CAcl
   
  Ein Objekt kann auch auf Systemebene Sicherheitsinformationen zugeordnet, in der Form eines Systems ACL, die von einem Systemadministrator gesteuert haben. Ein System ACL können den Systemadministrator alle Versuche zum Zugriff auf ein Objekt zu überwachen.  
   
- Weitere Informationen finden Sie unter den [ACL](http://msdn.microsoft.com/library/windows/desktop/aa374872) Diskussion im Windows SDK.  
+ Weitere Informationen finden Sie unter den [ACL](/windows/desktop/SecAuthZ/access-control-lists) Diskussion im Windows SDK.  
   
- Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](http://msdn.microsoft.com/library/windows/desktop/aa374860) im Windows SDK.  
+ Eine Einführung in das Zugriffssteuerungsmodell in Windows, finden Sie unter [Zugriffssteuerung](/windows/desktop/SecAuthZ/access-control) im Windows SDK.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlsecurity.h  
@@ -129,7 +129,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Typdefinition gibt den Arraytyp verwendet, um die Access Control Entry (ACE) typspezifische Steuerungsflags definieren. Finden Sie unter den [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) Definition für die vollständige Liste der möglichen Flags.  
+ Diese Typdefinition gibt den Arraytyp verwendet, um die Access Control Entry (ACE) typspezifische Steuerungsflags definieren. Finden Sie unter den [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) Definition für die vollständige Liste der möglichen Flags.  
   
 ##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray  
  Ein Array von BYTEs.  
@@ -139,7 +139,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Diese Typdefinition gibt den Arraytyp verwendet, um die Art der Access Control Entry (ACE) Objekte, z. B. ACCESS_ALLOWED_ACE_TYPE oder ACCESS_DENIED_ACE_TYPE definieren. Finden Sie unter den [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) Definition für die vollständige Liste der möglichen Typen.  
+ Diese Typdefinition gibt den Arraytyp verwendet, um die Art der Access Control Entry (ACE) Objekte, z. B. ACCESS_ALLOWED_ACE_TYPE oder ACCESS_DENIED_ACE_TYPE definieren. Finden Sie unter den [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) Definition für die vollständige Liste der möglichen Typen.  
   
 ##  <a name="cacl"></a>  CAcl::CAcl  
  Der Konstruktor.  
@@ -205,7 +205,7 @@ void GetAclEntries(
   
  Den Inhalt jedes Arrays entsprechen, d. h. das erste Element des der `CAccessMaskArray` das erste Element im Array entspricht der `CSidArray` Array und So weiter.  
   
- Finden Sie unter [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) für Weitere Informationen zu den ACE-Typen und Flags.  
+ Finden Sie unter [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) für Weitere Informationen zu den ACE-Typen und Flags.  
   
 ##  <a name="getaclentry"></a>  CAcl::GetAclEntry  
  Ruft alle Informationen über einen Eintrag in einer Zugriffssteuerungsliste (ACL) ab.  
@@ -246,7 +246,7 @@ void GetAclEntry(
 ### <a name="remarks"></a>Hinweise  
  Diese Methode ruft alle Informationen über eine einzelne ACE, der Bereitstellung mehr Informationen als [CAcl::GetAclEntries](#getaclentries) allein zur Verfügung.  
   
- Finden Sie unter [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) für Weitere Informationen zu den ACE-Typen und Flags.  
+ Finden Sie unter [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) für Weitere Informationen zu den ACE-Typen und Flags.  
   
 ##  <a name="getlength"></a>  CAcl::GetLength  
  Gibt die Länge der Zugriffssteuerungsliste (ACL) zurück.  

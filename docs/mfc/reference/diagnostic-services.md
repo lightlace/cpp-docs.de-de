@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3fbc85ee6068c6e45f2847ae7ba45a425db8e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545833"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214678"
 ---
 # <a name="diagnostic-services"></a>Diagnosedienste
 Die Microsoft Foundation Class-Bibliothek bietet viele Diagnosedienste, die das Debuggen von Programmen erleichtern. Zu diesen Diagnosediensten zählen Makros und globale Funktionen, die Ihnen das Nachverfolgen der Speicherzuweisungen von Programmen, das Sichern des Inhalts von Objekten zur Laufzeit und das Ausgeben von Debugmeldungen zur Laufzeit ermöglichen. Die Makros und globalen Funktionen für Diagnosedienste sind in folgende Kategorien gruppiert:  
@@ -605,7 +605,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  Diese Funktion erfolgreich verwenden zu können:  
   
--   Die Datei IMAGEHLP. DLL muss auf Ihrem Pfad befinden. Wenn Sie nicht über diese DLL-Datei verfügen, wird die Funktion eine Fehlermeldung angezeigt. Finden Sie unter [Image-Hilfe-Bibliothek](http://msdn.microsoft.com/library/windows/desktop/ms680321) Informationen zu den von IMAGEHLP bereitgestellte Funktion.  
+-   Die Datei IMAGEHLP. DLL muss auf Ihrem Pfad befinden. Wenn Sie nicht über diese DLL-Datei verfügen, wird die Funktion eine Fehlermeldung angezeigt. Finden Sie unter [Image-Hilfe-Bibliothek](/windows/desktop/Debug/image-help-library) Informationen zu den von IMAGEHLP bereitgestellte Funktion.  
   
 -   Die Module, die Frames im Stapel müssen Debuginformationen einschließen. Wenn sie keine Debuginformationen enthalten, die Funktion generiert eine stapelüberwachung nach wie vor, aber die Ablaufverfolgung weniger detailliert.  
 ### <a name="requirements"></a>Anforderungen  

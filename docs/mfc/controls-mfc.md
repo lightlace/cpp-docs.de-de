@@ -1,5 +1,5 @@
 ---
-title: Steuerelemente (MFC) | Microsoft Docs
+title: Steuerelemente (MFC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd841b6bc3c55ed58db101c6226bbc24819b248f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1226584d52d9f09b34e9dae8d00095fc923396fd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353677"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206874"
 ---
 # <a name="controls-mfc"></a>Steuerelemente (MFC)
 Steuerelemente stellen Objekte dar, mit denen Benutzer arbeiten können, um Daten einzugeben oder zu ändern. Sie werden im Allgemeinen in Dialogfeldern oder auf Symbolleisten angezeigt. Diese Themenfamilie umfasst drei grundlegende Arten von Steuerelementen:  
@@ -54,7 +54,7 @@ Steuerelemente stellen Objekte dar, mit denen Benutzer arbeiten können, um Date
   
 ### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Allgemeine Windows-Steuerelemente und MFC-Klassen  
   
-|Steuerelement|MFC-Klasse|Beschreibung|Neu in Windows 95|  
+|Steuerelement|MFC-Klasse|Beschreibung|Neues in Windows 95|  
 |-------------|---------------|-----------------|------------------------|  
 |[Animation](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Zeigt aufeinander folgende Rahmen eines AVI-Videoclips an|Ja|  
 |Schaltfläche|[CButton](../mfc/reference/cbutton-class.md)|Druckknöpfe, die eine Aktion auslösen; wird auch für Kontrollkästchen, Optionsfelder und Gruppenfelder verwendet|Nein|  
@@ -107,9 +107,9 @@ Steuerelemente stellen Objekte dar, mit denen Benutzer arbeiten können, um Date
   
 -   [Beispiele](../mfc/common-control-sample-list.md)  
   
- Informationen zu allgemeinen Windows-Steuerelementen in Windows SDK finden Sie unter [Standardsteuerelementen](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
+ Informationen zu allgemeinen Windows-Steuerelementen in der Windows-SDK finden Sie unter [Standardsteuerelementen](/windows/desktop/Controls/common-controls-intro).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Benutzeroberflächenelemente](../mfc/user-interface-elements-mfc.md)   
+ [Elemente der Benutzeroberfläche](../mfc/user-interface-elements-mfc.md)   
  [Dialog-Editor](../windows/dialog-editor.md)
 

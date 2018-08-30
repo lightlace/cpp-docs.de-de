@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1f1e19ac51e36b04dd8ecfe89dbb7e3d592d869
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 625b99751c570c47456aad4903de5b8c4049ac42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611961"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207601"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (Komponentenerweiterungen für C++)
 
@@ -65,7 +65,7 @@ Der Wert jedes Enumerators ist ein konstanter Ausdruck, der entweder implizit vo
 
 ### <a name="remarks"></a>Hinweise
 
-Weitere Informationen und Beispiele finden Sie unter [Enums](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Weitere Informationen und Beispiele finden Sie unter [Enumerationen](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
 
 Beachten Sie, dass der Compiler Fehlermeldungen ausgibt, wenn der konstante Ausdruck, der den Wert eines Enumerators definiert, nicht durch den *underlying-type*dargestellt werden kann.  Der Compiler meldet jedoch keinen Fehler für einen Wert, der für den zugrunde liegenden Typ ungeeignet ist. Zum Beispiel:
 

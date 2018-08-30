@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1fff338bfce32f8233cd58aa7c0790508ce542c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4fdf98e41b552fa759f1aed3e67d531e02bc7f58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882879"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206774"
 ---
 # <a name="category-macros"></a>Kategorie-Makros
 Diese Makros definieren Zuordnungen der Kategorie.  
@@ -76,7 +76,7 @@ BEGIN_CATEGORY_MAP(theClass)
 > [!NOTE]
 >  ATL verwendet die standard-Komponenten-Kategorien-Managers, um Komponentenkategorien zu registrieren. Ist der Manager nicht auf dem System vorhanden, wenn das Modul registriert wurde, Registrierung ist erfolgreich, aber die Komponentenkategorien werden für diese Klasse nicht registriert werden.  
   
- Weitere Informationen zu den Komponentenkategorien finden Sie unter [Was sind die Komponenten-Kategorien und deren Funktionsweise](http://msdn.microsoft.com/library/windows/desktop/ms694322) im Windows SDK.  
+ Weitere Informationen zu den Komponentenkategorien finden Sie unter [Was sind die Komponenten-Kategorien und deren Funktionsweise](/windows/desktop/com/component-categories-and-how-they-work) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -107,7 +107,7 @@ IMPLEMENTED_CATEGORY(catID)
   
  Clients können Informationen über die Kategorie für die Klasse registriert verwenden, um seine Funktionen und Anforderungen zu bestimmen, ohne eine Instanz davon erstellen zu müssen.  
   
- Weitere Informationen zu den Komponentenkategorien finden Sie unter [Was sind die Komponenten-Kategorien und deren Funktionsweise](http://msdn.microsoft.com/library/windows/desktop/ms694322) im Windows SDK.  
+ Weitere Informationen zu den Komponentenkategorien finden Sie unter [Was sind die Komponenten-Kategorien und deren Funktionsweise](/windows/desktop/com/component-categories-and-how-they-work) im Windows SDK.  
   
 ### <a name="a-selection-of-stock-categories"></a>Eine Auswahl von vordefinierten Kategorien  
   
@@ -119,7 +119,7 @@ IMPLEMENTED_CATEGORY(catID)
 |einfache Datenbindung|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Erweiterte Datenbindung|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Fensterlose Steuerelemente|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Internet-Objekte|Finden Sie unter [Internetobjekte](http://msdn.microsoft.com/library/windows/desktop/ms690561) im Windows SDK für eine Beispielliste.||  
+|Internet-Objekte|Finden Sie unter [Internetobjekte](/windows/desktop/com/internet-aware-objects) im Windows SDK für eine Beispielliste.||  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
@@ -140,7 +140,7 @@ REQUIRED_CATEGORY( catID )
   
  Clients können Informationen über die Kategorie für die Klasse registriert verwenden, um seine Funktionen und Anforderungen zu bestimmen, ohne eine Instanz davon erstellen zu müssen. Beispielsweise erfordern ein Steuerelement, dass ein Container die Datenbindung zu unterstützen. Container kann feststellen, wenn sie die Funktionen, die zum Hosten des Steuerelements durch Abfragen der Kategorie-Manager für die Kategorien, die erforderlich sind, indem Sie das Steuerelement enthält. Wenn der Container eine erforderliche Funktion nicht unterstützt, kann es ablehnen, zum Hosten des COM-Objekts.  
   
- Weitere Informationen zu den Komponentenkategorien, einschließlich einer Beispielliste finden Sie unter [Was sind die Komponenten-Kategorien und deren Funktionsweise](http://msdn.microsoft.com/library/windows/desktop/ms694322) im Windows SDK.  
+ Weitere Informationen zu den Komponentenkategorien, einschließlich einer Beispielliste finden Sie unter [Was sind die Komponenten-Kategorien und deren Funktionsweise](/windows/desktop/com/component-categories-and-how-they-work) im Windows SDK.  
   
 ### <a name="a-selection-of-stock-categories"></a>Eine Auswahl von vordefinierten Kategorien  
   
@@ -152,7 +152,7 @@ REQUIRED_CATEGORY( catID )
 |einfache Datenbindung|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Erweiterte Datenbindung|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Fensterlose Steuerelemente|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Internet-Objekte|Finden Sie unter [Internetobjekte](http://msdn.microsoft.com/library/windows/desktop/ms690561) im Windows SDK für eine Beispielliste.||  
+|Internet-Objekte|Finden Sie unter [Internetobjekte](/windows/desktop/com/internet-aware-objects) im Windows SDK für eine Beispielliste.||  
   
 ### <a name="example"></a>Beispiel  
  [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]  

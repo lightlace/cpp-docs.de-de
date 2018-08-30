@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4f79b8c7fa91356828bcd76dd2bcfecddce882f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 23e76d00afc23a511c81cb7ef10703433de3cab2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606503"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195907"
 ---
 # <a name="vararg"></a>vararg
 
@@ -36,7 +36,7 @@ Gibt an, dass die Funktion eine Variable Anzahl von Argumenten akzeptiert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Vararg** C++-Attribut hat die gleiche Funktionalität wie die [Vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) MIDL-Attribut.
+Die **Vararg** C++-Attribut hat die gleiche Funktionalität wie die [Vararg](/windows/desktop/Midl/vararg) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 

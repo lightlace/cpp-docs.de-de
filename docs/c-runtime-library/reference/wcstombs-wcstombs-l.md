@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5cbc89ff9a6c353b0df1df606a08a8c2515ed04a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451731"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217133"
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
@@ -95,25 +95,25 @@ Das zu verwendende Gebietsschema.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn **Wcstombs** erfolgreich konvertiert die multibyte-Zeichenfolge gibt die Anzahl der Bytes, die in der multibyte-Ausgabezeichenfolge, die ohne das abschließende Nullzeichen (sofern vorhanden) geschrieben. Wenn die *Mbstr* Argument ist **NULL**, **Wcstombs** gibt die erforderliche Größe in Bytes, der die Zielzeichenfolge zurück. Wenn **Wcstombs** findet ein Breitzeichen, es kann nicht in einem multibyte-Zeichen konvertiert, es gibt-1 zurück, die in den Typ umgewandelt, **Size_t** und legt **Errno** auf **EILSEQ** .
+Wenn **Wcstombs** erfolgreich konvertiert die multibyte-Zeichenfolge, die Anzahl der Bytes, die in der multibyte-Ausgabezeichenfolge, ohne das abschließende Nullzeichen, (sofern vorhanden) geschrieben wird. Wenn die *Mbstr* Argument **NULL**, **Wcstombs** gibt die erforderliche Größe der Zielzeichenfolge in Bytes zurück. Wenn **Wcstombs** findet ein Breitzeichen ist, die in einem multibyte-Zeichen konvertiert werden kann 1, die in den Typ umgewandelt wird **"size_t"** und **Errno** zu **EILSEQ** .
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Wcstombs** -Funktion konvertiert die Breitzeichen-Zeichenfolge verweist *Wcstr* auf die entsprechende Multibyte-Zeichen und speichert die Ergebnisse in die *Mbstr* Array. Die *Anzahl* Parameter gibt die maximale Anzahl von Bytes, die in der multibyte-Ausgabezeichenfolge gespeichert werden können (d. h. die Größe des *Mbstr*). Es ist allgemein nicht bekannt, wie viele Bytes bei der Konvertierung einer Breitzeichenfolge benötigt werden. Einige Breitzeichen benötigen nur ein Byte in der Ausgabezeichenfolge; andere erfordern zwei. Wenn es sind zwei Bytes in der multibyte-Ausgabezeichenfolge für jedes Breitzeichen in der Eingabezeichenfolge (einschließlich den Null-Breitzeichen), ist sichergestellt, dass das Ergebnis passen.
+Die **Wcstombs** -Funktion konvertiert die Zeichenfolge mit Breitzeichen verweist *Wcstr* auf die entsprechenden Multibytezeichen und speichert die Ergebnisse in die *Mbstr* Array. Die *Anzahl* Parameter gibt die maximale Anzahl von Bytes, die in der multibyte-Ausgabezeichenfolge gespeichert werden können (d. h. die Größe des *Mbstr*). Es ist allgemein nicht bekannt, wie viele Bytes bei der Konvertierung einer Breitzeichenfolge benötigt werden. Einige Breitzeichen benötigen nur ein Byte in der Ausgabezeichenfolge; andere erfordern zwei. Wenn zwei Bytes in der multibyte-Ausgabezeichenfolge für jedes Breitzeichen in der Eingabezeichenfolge (einschließlich der Null-Breitzeichen) vorhanden sind, ist das Ergebnis garantiert passend.
 
-Wenn **Wcstombs** das Nullzeichen Breitzeichen (L '\0') erkennt, entweder vor oder bei *Anzahl* auftritt, konvertiert es in eine 8-Bit 0 und wird beendet. Daher die Multibyte-Zeichenfolge am *Mbstr* ist Null-terminierte nur, wenn **Wcstombs** trifft eine Breitzeichen-Null-Zeichen bei der Konvertierung. Wenn die Sequenzen auf verweist *Wcstr* und *Mbstr* überlappen, ist das Verhalten des **Wcstombs** ist nicht definiert.
+Wenn **Wcstombs** das Breitzeichen Null-Zeichen (L '\0') erkennt, entweder vor oder bei *Anzahl* auftritt, konvertiert es in eine 8-Bit-0 "und" beendet. Daher die Multibyte-Zeichenfolge an *Mbstr* ist Null-terminierte nur, wenn **Wcstombs** während der Konvertierung ein Breitzeichen Null findet. Wenn die Sequenzen, zeigt *Wcstr* und *Mbstr* überlappen, ist das Verhalten der **Wcstombs** ist nicht definiert.
 
-Wenn die *Mbstr* Argument ist **NULL**, **Wcstombs** gibt die erforderliche Größe in Bytes, der die Zielzeichenfolge zurück.
+Wenn die *Mbstr* Argument **NULL**, **Wcstombs** gibt die erforderliche Größe der Zielzeichenfolge in Bytes zurück.
 
-**Wcstombs** überprüft die eigenen Parameter. Wenn *Wcstr* ist **NULL**, oder wenn *Anzahl* ist größer als **INT_MAX**, ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben. [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, setzt der Funktion **Errno** auf **EINVAL** und gibt-1 zurück.
+**Wcstombs** überprüft die eigenen Parameter. Wenn *Wcstr* ist **NULL**, oder wenn *Anzahl* ist größer als **INT_MAX**, ruft diese Funktion den Handler für ungültige Parameter aus, wie in beschrieben. [Parametervalidierung](../../c-runtime-library/parameter-validation.md) . Die Funktion legt fest, wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** zu **EINVAL** und gibt-1 zurück.
 
-**Wcstombs** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; **_wcstombs_l** ist nahezu identisch, das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
+**Wcstombs** verwendet das aktuelle Gebietsschema für jedes vom Gebietsschema abhängige Verhalten; **_wcstombs_l** ist identisch, außer dass sie das übergebene Gebietsschema verwendet. Weitere Informationen finden Sie unter [Locale](../../c-runtime-library/locale.md).
 
 In C++ haben diese Funktionen Vorlagenüberladungen, mit denen die neueren, sicheren Entsprechungen dieser Funktionen aufgerufen werden. Weitere Informationen finden Sie unter [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**wcstombs**|\<stdlib.h>|
 |**_wcstombs_l**|\<stdlib.h>|
@@ -122,7 +122,7 @@ Weitere Informationen zur Kompatibilität finden Sie unter [Kompatibilität](../
 
 ## <a name="example"></a>Beispiel
 
-Dieses Programm veranschaulicht das Verhalten von der **Wcstombs** Funktion.
+Dieses Programm stellt das Verhalten der **Wcstombs** Funktion.
 
 ```C
 // crt_wcstombs.c
@@ -170,4 +170,4 @@ Convert wide-character string:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

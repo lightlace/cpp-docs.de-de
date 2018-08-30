@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77f92e2a0a5ea65fce361c19ae52745932f58deb
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a2b120ab308e8d46ac4c874681d62bbeaaa86588
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884929"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205543"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl-Klasse
 Diese Klasse stellt Methoden zum Implementieren eines-Snap-in-Node-Objekts.  
@@ -110,7 +110,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
  **Header:** atlsnap.h  
   
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
- Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841).  
+ Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).  
   
 ```
 AddMenuItems(  
@@ -146,7 +146,7 @@ AddMenuItems(
 - CCT_UNINITIALIZED Datenobjekt weist einen ungültigen Typ.  
   
 ##  <a name="command"></a>  CSnapInItemImpl::Command  
- Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842).  
+ Diese Methode implementiert die Win32-Funktion [IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842).  
   
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 - CCT_UNINITIALIZED Datenobjekt weist einen ungültigen Typ.  
   
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
- Diese Methode implementiert die Win32-Funktion [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846).  
+ Diese Methode implementiert die Win32-Funktion [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).  
   
 ```
 CreatePropertyPages(  
@@ -280,7 +280,7 @@ SCOPEDATAITEM m_scopeDataItem;
 ```  
   
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
- Die [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165) Objektstruktur-Snap-in-Daten.  
+ Die [RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165) Objektstruktur-Snap-in-Daten.  
   
 ```
 RESULTDATAITEM m_resultDataItem;

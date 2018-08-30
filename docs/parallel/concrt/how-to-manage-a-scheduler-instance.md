@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwalten einer Planerinstanz | Microsoft Docs'
+title: 'Vorgehensweise: Verwalten einer Planerinstanz | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,30 +15,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 699abcbc75dc4f0df40d07d26c0e6987d4711fe3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 20730eb275dd2dd08f7ed7112b42ff1befa8e225
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687659"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222756"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Gewusst wie: Verwalten einer Planerinstanz
 Mit Planerinstanzen können Sie bestimmte Planungsrichtlinien verschiedenen Arten von Arbeitslasten zuordnen. Dieses Thema enthält zwei grundlegende Beispiele, die zeigen, wie eine Planerinstanz erstellt und verwaltet wird.  
   
- In den Beispielen werden Planer erstellt, die die standardmäßigen Planerrichtlinien verwenden. Ein Beispiel für die Erstellung eines Planers eine benutzerdefinierte Richtlinie verwendet, finden Sie unter [Vorgehensweise: Angeben von bestimmten Planerrichtlinien](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).  
+ In den Beispielen werden Planer erstellt, die die standardmäßigen Planerrichtlinien verwenden. Ein Beispiel für die Erstellung eines Planers, eine benutzerdefinierte Richtlinie verwendet, finden Sie unter [Vorgehensweise: Angeben von bestimmten Planerrichtlinien](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).  
   
 ### <a name="to-manage-a-scheduler-instance-in-your-application"></a>So verwalten Sie eine Planerinstanz in der Anwendung  
   
-1.  Erstellen einer [Concurrency:: SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) Objekt, das die Richtlinie enthält Werte, für die zu verwendende Planer.  
+1.  Erstellen Sie eine [Concurrency:: SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) -Objekt, das die Richtlinie enthält Werte, für das Zeitplanungsmodul verwenden.  
   
 
-2.  Rufen Sie die [CurrentScheduler](reference/currentscheduler-class.md#create) Methode oder die [Scheduler](reference/scheduler-class.md#create) Methode, um eine Planerinstanz zu erstellen.  
+2.  Rufen Sie die [CurrentScheduler](reference/currentscheduler-class.md#create) Methode oder der [Scheduler](reference/scheduler-class.md#create) Methode, um eine Planerinstanz zu erstellen.  
   
-     Bei Verwendung der `Scheduler::Create` -Methode, rufen die [Concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) Methode, wenn Sie den Planer dem aktuellen Kontext zuordnen müssen.  
+     Bei Verwendung der `Scheduler::Create` -Methode, rufen die [Concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) Methode, wenn Sie den Planer mit dem aktuellen Kontext zuordnen müssen.  
   
-3.  Rufen Sie die [CreateEvent](http://msdn.microsoft.com/library/windows/desktop/ms682396) Funktion, um ein Handle für ein nicht signalisierten Automatisches Zurücksetzungobjekt zu erstellen.  
+3.  Rufen Sie die [CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa) Funktion, um ein Handle für ein nicht signalisiertes automatisches Zurücksetzen Zurücksetzungobjekt zu erstellen.  
   
-4.  Übergeben Sie das Handle für das Ereignisobjekt, das Sie gerade erstellt, um haben die [RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent) Methode oder die [Concurrency::Scheduler::RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) Methode. Hierdurch wird das Ereignis als festzulegen registriert, wenn der Planer zerstört wird.  
+4.  Übergeben Sie das Handle für das Ereignisobjekt, das Sie gerade erstellt, um haben die [RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent) Methode oder der [Concurrency::Scheduler::RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent) Methode. Hierdurch wird das Ereignis als festzulegen registriert, wenn der Planer zerstört wird.  
   
 5.  Führen Sie die Aufgaben aus, die vom aktuellen Planer geplant werden sollen.  
   
@@ -46,14 +46,14 @@ Mit Planerinstanzen können Sie bestimmte Planungsrichtlinien verschiedenen Arte
   
      Bei Verwendung der `Scheduler::Create` -Methode, rufen die [Concurrency::Scheduler::Release](reference/scheduler-class.md#release) Methode dekrementiert den Verweiszähler des dem `Scheduler` Objekt.  
   
-7.  Übergeben Sie das Handle für das Ereignis an die [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032) Funktion zu warten, bis der Planer beendet.  
+7.  Übergeben Sie das Handle für das Ereignis, das die [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) Funktion warten, bis der Planer beendet.  
   
-8.  Rufen Sie die [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) Funktion, um das Handle für das Ereignisobjekt zu schließen.  
+8.  Rufen Sie die ["CloseHandle"](https://msdn.microsoft.com/library/windows/desktop/ms724211) Funktion, um das Handle für das Ereignisobjekt zu schließen.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code veranschaulicht zwei Möglichkeiten für die Verwaltung einer Planerinstanz. In jedem Beispiel wird zunächst mit dem Standardplaner eine Aufgabe ausgeführt, die den eindeutigen Bezeichner des aktuellen Planers ausgibt. Jedes Beispiel verwendet dann eine Planerinstanz, um die gleiche Aufgabe noch einmal auszuführen. In jedem Beispiel wird schließlich der Standardplaner als aktueller Planer wiederhergestellt und die Aufgabe noch einmal ausgeführt.  
   
- Im ersten Beispiel wird die [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) Klasse, um eine Planerinstanz erstellen, und ordnen es mit dem aktuellen Kontext. Im zweiten Beispiel wird die [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) Klasse, um die gleiche Aufgabe durchzuführen. In der Regel wird die `CurrentScheduler`-Klasse verwendet, um mit dem aktuellen Planer zu arbeiten. Das zweite Beispiel, das die `Scheduler`-Klasse verwendet, ist nützlich, wenn Sie steuern möchten, wann der Planer dem aktuellen Kontext zugeordnet wird, oder wenn Sie bestimmte Planer bestimmten Aufgaben zuordnen möchten.  
+ Im ersten Beispiel wird die [Concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) Klasse, um eine Planerinstanz zu erstellen, und ordnen Sie es mit dem aktuellen Kontext. Im zweiten Beispiel wird die [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) Klasse, um die gleiche Aufgabe auszuführen. In der Regel wird die `CurrentScheduler`-Klasse verwendet, um mit dem aktuellen Planer zu arbeiten. Das zweite Beispiel, das die `Scheduler`-Klasse verwendet, ist nützlich, wenn Sie steuern möchten, wann der Planer dem aktuellen Kontext zugeordnet wird, oder wenn Sie bestimmte Planer bestimmten Aufgaben zuordnen möchten.  
   
  [!code-cpp[concrt-scheduler-instance#1](../../parallel/concrt/codesnippet/cpp/how-to-manage-a-scheduler-instance_1.cpp)]  
   
@@ -79,9 +79,9 @@ Current scheduler id: 0
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `scheduler-instance.cpp` und dann den folgenden Befehl in eine Visual Studio-Eingabeaufforderungsfenster ausführen.  
+ Kopieren Sie den Beispielcode und fügen Sie ihn in ein Visual Studio-Projekt, oder fügen Sie ihn in eine Datei mit dem Namen `scheduler-instance.cpp` und führen Sie dann den folgenden Befehl in einem Fenster von Visual Studio-Eingabeaufforderung.  
   
- **CL.exe/EHsc / Scheduler-instance.cpp**  
+ **CL.exe/EHsc Scheduler-instance.cpp**  
   
 ## <a name="see-also"></a>Siehe auch  
  [Planerinstanzen](../../parallel/concrt/scheduler-instances.md)   

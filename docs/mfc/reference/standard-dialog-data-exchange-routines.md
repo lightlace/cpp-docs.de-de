@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338412780116201b40e51ff38c4805097add4e3c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 770d110a5acd66b307e675d8c71a7de108bae6b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885974"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198496"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Standard-Dialogdatenaustauschroutinen
 Dieses Thema enthält die standardmäßige Dialogdatenaustausch (DDX) Dialogfelddaten für allgemeine MFC-Dialogfeld-Steuerelemente verwendet werden.  
@@ -159,7 +159,7 @@ void AFXAPI DDX_Check(
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansicht oder steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `DDX_Check` aufgerufen wird, *Wert* auf den aktuellen Status des Kontrollkästchen-Steuerelements festgelegt ist. Eine Liste der möglichen Status-Werte, finden Sie unter [BM_GETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775986) im Windows SDK.  
+ Wenn `DDX_Check` aufgerufen wird, *Wert* auf den aktuellen Status des Kontrollkästchen-Steuerelements festgelegt ist. Eine Liste der möglichen Status-Werte, finden Sie unter [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) im Windows SDK.  
   
  Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).  
   
@@ -296,7 +296,7 @@ void AFXAPI DDX_IPAddress(
 |1|16 bis 23|  
 |0|24 bis 31|  
   
- Verwenden Sie die Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378) , lesen den Wert ein, oder verwenden Sie [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380) um den Wert zu füllen. Diese Nachrichten werden in das Windows SDK beschrieben.  
+ Verwenden Sie die Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress) , lesen den Wert ein, oder verwenden Sie [IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress) um den Wert zu füllen. Diese Nachrichten werden in das Windows SDK beschrieben.  
   
 ### <a name="remarks"></a>Hinweise  
  Wenn `DDX_IPAddress` aufgerufen wird, *Wert* wird entweder aus dem IP-Adresse-Steuerelement, gelesen oder *Wert* richtet sich an das Steuerelement, abhängig von der Richtung des Exchange.  
@@ -488,7 +488,7 @@ void AFXAPI DDX_Scroll(
  Ein Verweis auf eine Membervariable des Dialogfelds, Formularansichts- oder Steuerungsansichtsobjekts, mit dem Daten ausgetauscht werden.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn `DDX_Scroll` aufgerufen wird, *Wert* auf die aktuelle Position des Steuerelements Thumb-Steuerelement festgelegt ist. Weitere Informationen zu den Werten, die die aktuelle Position des Steuerelements Thumb-Steuerelement zugeordnet, finden Sie unter [GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) im Windows SDK.  
+ Wenn `DDX_Scroll` aufgerufen wird, *Wert* auf die aktuelle Position des Steuerelements Thumb-Steuerelement festgelegt ist. Weitere Informationen zu den Werten, die die aktuelle Position des Steuerelements Thumb-Steuerelement zugeordnet, finden Sie unter [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) im Windows SDK.  
   
  Weitere Informationen über DDX finden Sie unter [Dialogdatenaustausch und Validierung](../../mfc/dialog-data-exchange-and-validation.md).  
   

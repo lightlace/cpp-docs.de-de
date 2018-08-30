@@ -1,7 +1,7 @@
 ---
-title: Projektbuildfehler prj0023 | Microsoft Docs
+title: Projektbuildfehler prj0023 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7351d140cefe720e6bde123e00a950a34bd3404b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47b31aa1acba3d13bfeb52e52233f90e1c12cbda
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321885"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213885"
 ---
 # <a name="project-build-error-prj0023"></a>Projektbuildfehler PRJ0023
-Tool "Tool" enthält unbekannte Eigenschaft ein ungültiger Dateiname "File".  
-  
- Der Name der Datei ***Datei***den Angaben für das Tool ***Tool***, war ungültig.  
-  
- Möglicherweise haben Sie ein Makro unbekannt oder ungültig verwendet.  
-  
- Finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md) Informationen zum Zugreifen auf Eigenschaften des Projekts.
+
+> Tool "*Tool*", unbekannte Eigenschaft enthält den ungültigen Dateinamen"*Datei*".
+
+Der Dateiname *Datei* angegeben, für das Tool *Tool* war ungültig.
+
+Möglicherweise haben Sie einen unbekannten oder ungültigen-Makro verwendet.
+
+Finden Sie unter [Einstellung von Visual C++-Projekteigenschaften](../../ide/working-with-project-properties.md) Informationen zu den Eigenschaften Ihres Projekts zuzugreifen.

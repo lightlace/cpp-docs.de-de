@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7e0bd440e2e4bd8d32525fe4be6aaad2c401f6a
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9d67f00b88be88e1cb2691414b0666bd298977dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880617"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43220179"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl-Klasse
-Diese Klasse stellt eine Standardimplementierung von der [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) und [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) Methoden.  
+Diese Klasse stellt eine Standardimplementierung von der [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) und [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) Methoden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 |[IProvideClassInfo2Impl::_tih](#_tih)|Verwaltet die Typinformationen für die Co-Klasse.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) Schnittstelle erweitert [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) durch Hinzufügen der `GetGUID` Methode. Diese Methode ermöglicht einen Client, ein Objekt des ausgehenden Schnittstellen-IID für die Standardereignissatz abzurufen. Klasse `IProvideClassInfo2Impl` stellt eine Standardimplementierung von der `IProvideClassInfo` und `IProvideClassInfo2` Methoden.  
+ Die [IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2) Schnittstelle erweitert [IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo) durch Hinzufügen der `GetGUID` Methode. Diese Methode ermöglicht einen Client, ein Objekt des ausgehenden Schnittstellen-IID für die Standardereignissatz abzurufen. Klasse `IProvideClassInfo2Impl` stellt eine Standardimplementierung von der `IProvideClassInfo` und `IProvideClassInfo2` Methoden.  
   
  `IProvideClassInfo2Impl` enthält einen statischen Member des Typs `CComTypeInfoHolder` , verwaltet die Typinformationen für die Co-Klasse.  
   
@@ -105,7 +105,7 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [Schnittstellenaufruf](http://msdn.microsoft.com/library/windows/desktop/ms690192) in das Windows SDK.  
+ Finden Sie unter [Schnittstellenaufruf](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) in das Windows SDK.  
   
 ##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID  
  Ruft die GUID für ausgehende Dispinterface des Objekts ab.  
@@ -117,7 +117,7 @@ STDMETHOD(GetGUID)(
 ```  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) in das Windows SDK.  
+ Finden Sie unter [IProvideClassInfo2::GetGUID](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) in das Windows SDK.  
   
 ##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  Der Konstruktor.  
@@ -138,7 +138,7 @@ static  tihclass
 ```     
   
 ### <a name="remarks"></a>Hinweise  
- `_tih` verwaltet die Typinformationen für die Co-Klasse.  
+ `_tih` Verwaltet die Typinformationen für die Co-Klasse.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über die Klasse](../../atl/atl-class-overview.md)

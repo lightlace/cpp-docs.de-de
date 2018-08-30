@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9523fc63e36d9a2b93dc6df1a49627ac5fbebc9b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 350f1c7c844bd386191b2a236f5bc4ada4e1672a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602154"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204527"
 ---
 # <a name="hidden"></a>hidden
 
@@ -36,7 +36,7 @@ Gibt an, dass das Element vorhanden ist, aber nicht in einem benutzerorientierte
 
 ## <a name="remarks"></a>Hinweise
 
-Die **ausgeblendeten** C++-Attribut hat die gleiche Funktionalität wie die [ausgeblendeten](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL-Attribut.
+Die **ausgeblendeten** C++-Attribut hat die gleiche Funktionalität wie die [ausgeblendeten](/windows/desktop/Midl/hidden) MIDL-Attribut.
 
 ## <a name="example"></a>Beispiel
 

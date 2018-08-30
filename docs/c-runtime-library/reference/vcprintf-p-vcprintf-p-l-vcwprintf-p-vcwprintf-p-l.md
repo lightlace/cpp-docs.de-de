@@ -51,12 +51,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03251c9f0442ffa3cda6b00b6528e424e1fe9007
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0e2271093237fbfdbc7f5e0492b1db220c469d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415633"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210360"
 ---
 # <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 
@@ -103,22 +103,22 @@ Weitere Informationen finden Sie unter [Format Specification Syntax: printf and 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl geschriebener Zeichen oder ein negativer Wert im Falle eines Ausgabefehlers. Wenn *Format* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, wie in beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** festgelegt ist, um **EINVAL** und-1 zurückgegeben.
+Die Anzahl geschriebener Zeichen oder ein negativer Wert im Falle eines Ausgabefehlers. Wenn *Format* ist ein null-Zeiger, der Handler für ungültige Parameter aufgerufen, siehe [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **Errno** nastaven NA hodnotu **EINVAL** und-1 zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und verwendet dann die **_putch** Funktion zum Formatieren und die angegebenen Daten in die Konsole schreiben. (**_vcwprintf_p** verwendet **_putwch** anstelle von **_putch**. **_vcwprintf_p** ist die Breitzeichen-Version des **_vcprintf_p**. Eine Zeichenfolge mit Breitzeichen wird als Argument akzeptiert.)
+Jede dieser Funktionen verwendet einen Zeiger auf eine Argumentliste und verwendet dann die **_putch** -Funktion zum Formatieren und die angegebenen Daten in die Konsole geschrieben. (**_vcwprintf_p** verwendet **_putwch** anstelle von **_putch**. **_vcwprintf_p** ist die Breitzeichen-Version von **_vcprintf_p**. Eine Zeichenfolge mit Breitzeichen wird als Argument akzeptiert.)
 
-Die Versionen dieser Funktionen mit dem **_l** -Suffix sind beinahe identisch, verwenden jedoch den Gebietsschemaparameter, der übergeben wird anstelle des aktuellen Gebietsschemas.
+Die Versionen dieser Funktionen, die **_l** -Suffix sind beinahe identisch, außer dass sie verwenden den Gebietsschemaparameter, der übergeben wird, anstelle des aktuellen Gebietsschemas.
 
-Jede *Argument* (sofern vorhanden) wird konvertiert und ausgegeben entsprechend der jeweiligen Formatangabe in *Format*. Die Formatangabe unterstützt positionelle Parameter, damit Sie die Reihenfolge, in der die Argumente verwendet werden, in der Formatzeichenfolge angeben können. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
+Jede *Argument* (sofern vorhanden) in konvertiert wird und die Ausgabe entsprechend der jeweiligen Formatangabe in *Format*. Die Formatangabe unterstützt positionelle Parameter, damit Sie die Reihenfolge, in der die Argumente verwendet werden, in der Formatzeichenfolge angeben können. Weitere Informationen finden Sie unter [printf-Positionsparameter](../../c-runtime-library/printf-p-positional-parameters.md).
 
 Diese Funktionen übersetzen keine Zeilenvorschubzeichen in Carriage Return-Zeilenvorschub (CR-LF) Kombinationen bei der Ausgabe. 
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+> Stellen Sie sicher, dass *format* keine benutzerdefinierte Zeichenfolge ist. Weitere Informationen finden Sie unter [Vermeiden von Pufferüberläufen](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
-Diese Funktionen überprüfen den Eingabezeiger und die Formatzeichenfolge. Wenn *Format* oder *Argument* ist **NULL**, oder wenn die Formatzeichenfolge ungültige Formatierungszeichen enthält, rufen diese Funktionen den Handler für ungültige Parameter an, wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen – 1 zurück und legen Sie **Errno** auf **EINVAL**.
+Diese Funktionen überprüfen den Eingabezeiger und die Formatzeichenfolge. Wenn *Format* oder *Argument* ist **NULL**, oder wenn die Formatzeichenfolge ungültige Formatierungszeichen enthält, rufen diese Funktionen den Handler für ungültige Parameter an, wie beschrieben in [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, geben diese Funktionen-1 zurück und legen Sie **Errno** zu **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Zuordnung generischer Textroutinen
 
@@ -129,7 +129,7 @@ Diese Funktionen überprüfen den Eingabezeiger und die Formatzeichenfolge. Wenn
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_vcprintf_p**, **_vcprintf_p_l**|\<conio.h> and \<stdarg.h>|
 |**_vcwprintf_p**, **_vcwprintf_p_l**|\<conio.h> and \<stdarg.h>|

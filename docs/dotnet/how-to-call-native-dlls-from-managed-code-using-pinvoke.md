@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Aufrufen von systemeigenen DLLs in verwaltetem Code mithilfe von PInvoke | Microsoft Docs'
+title: 'Vorgehensweise: Aufrufen von systemeigenen DLLs in verwaltetem Code mithilfe von PInvoke | Microsoft-Dokumentation'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e82690e49daf324d0ff77f89710ecdd09b208c19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ddd919fb621c971425e9763cf781e5ff0b1c731
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129186"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195666"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Gewusst wie: Aufrufen von systemeigenen DLLs in verwaltetem Code mithilfe von PInvoke
-Funktionen, die in nicht verwaltete DLLs implementiert werden, können in verwaltetem Code mithilfe des Plattformaufrufs (P/Invoke) aufgerufen werden. Wenn der Quellcode für die DLL nicht verfügbar ist, ist P/Invoke die einzige Option für die Interoperation. Im Gegensatz zu anderen bietet Visual C++ jedoch eine Alternative zum P/Invoke. Weitere Informationen finden Sie unter [mithilfe von C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+Funktionen, die in nicht verwaltete DLLs implementiert sind, können in verwaltetem Code mithilfe von Plattformaufruf (P/Invoke) Funktionen aufgerufen werden. Wenn der Quellcode für die DLL nicht verfügbar ist, ist P/Invoke die einzige Option für die Interoperation. Im Gegensatz zu anderen .NET-Sprachen bietet Visual C++ jedoch eine Alternative zum P/Invoke. Weitere Informationen finden Sie unter [mithilfe C++-Interop (implizites PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird mithilfe der Win32- [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) -Funktion zum Abrufen der aktuellen Auflösung des Bildschirms in Pixel.  
+ Im folgenden Codebeispiel wird mithilfe der Win32- [GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385) Funktion zum Abrufen der aktuellen Auflösung des Bildschirms in Pixel.  
   
- Für Funktionen, die nur systeminterne Typen als Argumente und Rückgabewerte verwenden, ist keine zusätzliche Arbeit erforderlich. Andere Datentypen wie Funktionszeiger, Arrays und Strukturen, erfordern zusätzliche Attribute, um sicherzustellen, dass der richtige Daten-Marshalling.  
+ Für Funktionen, die nur systeminterne Typen als Argumente und Rückgabewerte verwenden, ist kein zusätzlicher Aufwand erforderlich. Andere Datentypen, z. B. Funktionszeiger, Arrays und Strukturen, erfordern zusätzliche Attribute, um sicherzustellen, dass der richtige Daten-Marshalling.  
   
- Obwohl es nicht erforderlich ist, ist es empfiehlt sich, P/Invoke-Deklarationen, statische Member einer Wertklasse vornehmen, damit sie nicht im globalen Namespace vorhanden sind, wie im folgenden Beispiel veranschaulicht.  
+ Obwohl es nicht erforderlich ist, ist es empfiehlt sich, die P/Invoke-Deklarationen, statische Member einer Wertklasse vornehmen, damit sie in den globalen Namespace nicht vorhanden sind, wie im folgenden Beispiel veranschaulicht.  
   
 ```  
 // pinvoke_basic.cpp  

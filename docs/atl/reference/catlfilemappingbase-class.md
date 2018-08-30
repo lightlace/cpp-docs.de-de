@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8f07f14cca7ea0346cc6772d3dca959af07a05cd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883244"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218161"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase-Klasse
 Diese Klasse stellt eine Datei mit zugewiesenem Speicher.  
@@ -76,7 +76,7 @@ class CAtlFileMappingBase
 ## <a name="remarks"></a>Hinweise  
  -Dateizuordnung die Datei ist die Zuordnung des Inhalts einer Datei zu einem Teil des virtuellen Adressraums eines Prozesses. Diese Klasse stellt Methoden zum Erstellen von dateizuordnung Objekten, mit denen Programme auf einfache Weise zugreifen und Freigeben von Daten bereit.  
   
- Weitere Informationen finden Sie unter [Dateizuordnung](http://msdn.microsoft.com/library/windows/desktop/aa366556) im Windows SDK.  
+ Weitere Informationen finden Sie unter [Dateizuordnung](/windows/desktop/Memory/file-mapping) im Windows SDK.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** atlfile.h  
@@ -179,16 +179,16 @@ HRESULT MapFile(
  Die Dateioffset, in dem Zuordnung ist, um zu beginnen. Der Offset-Wert muss es sich um ein Vielfaches von Speicher-zuordnungsgranularität des Systems sein.  
   
  *dwMappingProtection*  
- Der Schutz für die Dateiansicht gewünscht wird, wenn die Datei zugeordnet ist. Finden Sie unter *FlProtect* in [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) im Windows SDK.  
+ Der Schutz für die Dateiansicht gewünscht wird, wenn die Datei zugeordnet ist. Finden Sie unter *FlProtect* in [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) im Windows SDK.  
   
  *dwViewDesiredAccess*  
- Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
+ Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Nachdem eine Dateizuordnungsobjekt erstellt wurde, darf die Größe der dateizuordnung Objekts von der Größe der Datei nicht überschreiten. Wenn dies der Fall ist, werden nicht alle der Inhalt der Datei für die Freigabe zur Verfügung. Weitere Informationen finden Sie unter [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) und [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
+ Nachdem eine Dateizuordnungsobjekt erstellt wurde, darf die Größe der dateizuordnung Objekts von der Größe der Datei nicht überschreiten. Wenn dies der Fall ist, werden nicht alle der Inhalt der Datei für die Freigabe zur Verfügung. Weitere Informationen finden Sie unter [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) und [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
   
 ### <a name="example"></a>Beispiel  
  Siehe das Beispiel für [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
@@ -217,19 +217,19 @@ HRESULT MapSharedMem(
  Verweist auf ein BOOL-Wert, der auf "true" fest, wenn das Zuordnungsobjekt bereits festgelegt ist vorhanden.  
   
  *lpsa*  
- Der Zeiger auf eine `SECURITY_ATTRIBUTES` -Struktur, die bestimmt, ob das zurückgegebene Handle von untergeordneten Prozessen geerbt werden kann. Finden Sie unter *LpAttributes* in [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) im Windows SDK.  
+ Der Zeiger auf eine `SECURITY_ATTRIBUTES` -Struktur, die bestimmt, ob das zurückgegebene Handle von untergeordneten Prozessen geerbt werden kann. Finden Sie unter *LpAttributes* in [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) im Windows SDK.  
   
  *dwMappingProtection*  
  Der Schutz für die Dateiansicht, gewünscht wird, wenn die Datei zugeordnet ist. Finden Sie unter *FlProtect* in `CreateFileMapping` im Windows SDK.  
   
  *dwViewDesiredAccess*  
- Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
+ Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- `MapShareMem` können Sie ein vorhandenes dateizuordnung Objekt erstellt, indem [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), um zwischen Prozessen gemeinsam genutzt werden.  
+ `MapShareMem` können Sie ein vorhandenes dateizuordnung Objekt erstellt, indem [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga), um zwischen Prozessen gemeinsam genutzt werden.  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Rufen Sie diese Methode, um eine benannte Dateizuordnungsobjekt für die angegebene Datei zu öffnen.  
@@ -253,7 +253,7 @@ HRESULT OpenMapping(
  Die Dateioffset, in dem Zuordnung ist, um zu beginnen. Der Offset-Wert muss es sich um ein Vielfaches von Speicher-zuordnungsgranularität des Systems sein.  
   
  *dwViewDesiredAccess*  
- Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
+ Gibt den Typ des Zugriffs auf die Datei anzeigen und somit den Schutz von der Seiten, die von der Datei zugeordnet. Finden Sie unter *DwDesiredAccess* in [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) im Windows SDK.  
   
 ### <a name="return-value"></a>Rückgabewert  
  Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
@@ -286,7 +286,7 @@ HRESULT Unmap() throw();
  Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Finden Sie unter [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) im Windows SDK für weitere Details.  
+ Finden Sie unter [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) im Windows SDK für weitere Details.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CAtlFileMapping-Klasse](../../atl/reference/catlfilemapping-class.md)   

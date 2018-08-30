@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2625316aa731e658d9d45e495809d2402a3cb4c5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849749"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216260"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox-Klasse
 Eine Symbolleisten-Schaltfläche, die ein Kombinationsfeld-Steuerelement, die dem Benutzer ermöglicht enthält, wählen Sie eine Schriftart aus einer Liste von Systemschriftarten.  
@@ -70,7 +70,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  Verwenden Sie zum Synchronisieren des Dokuments Schriftart mit der Schriftart im Kombinationsfeld ausgewählte die [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) Methode, um die Attribute der ausgewählten Schriftart abrufen und verwenden diese Attribute zum Erstellen einer [ CFont-Klasse](../../mfc/reference/cfont-class.md) Objekt.  
   
- Der Schriftart kombinationsfeldschaltfläche Aufrufe die Win32-Funktion [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) um zu bestimmen, die Bildschirm- und Schriftarten, die für das System verfügbar.  
+ Der Schriftart kombinationsfeldschaltfläche Aufrufe die Win32-Funktion [EnumFontFamiliesEx](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesexa) um zu bestimmen, die Bildschirm- und Schriftarten, die für das System verfügbar.  
   
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -126,7 +126,7 @@ CMFCToolBarFontComboBox();
  TRUETYPE_FONTTYPE  
   
  [in] *nCharSet*  
- Wenn auf DEFAULT_CHARSET, das Kombinationsfeld festgelegt ist, alle eindeutig benannte Schriftarten in allen Zeichensätzen enthält. (Treten zwei Schriftarten mit dem gleichen Namen, enthält das Kombinationsfeld eine davon.) Wenn auf einen gültigen Zeichen festgelegten Wert, der im Kombinationsfeld nur die Schriftarten in den angegebenen Zeichensatz enthält. Finden Sie unter ["LogFont"](http://msdn.microsoft.com/library/windows/desktop/dd145037) für eine Liste der möglichen Zeichen festlegt.  
+ Wenn auf DEFAULT_CHARSET, das Kombinationsfeld festgelegt ist, alle eindeutig benannte Schriftarten in allen Zeichensätzen enthält. (Treten zwei Schriftarten mit dem gleichen Namen, enthält das Kombinationsfeld eine davon.) Wenn auf einen gültigen Zeichen festgelegten Wert, der im Kombinationsfeld nur die Schriftarten in den angegebenen Zeichensatz enthält. Finden Sie unter ["LogFont"](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) für eine Liste der möglichen Zeichen festlegt.  
   
  [in] *DwStyle*  
  Das Format des Kombinationsfelds. (finden Sie unter [Kombinationsfeldstile](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  

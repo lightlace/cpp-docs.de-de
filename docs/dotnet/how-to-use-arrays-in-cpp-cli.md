@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden von Arrays im C + c++ / CLI | Microsoft Docs'
+title: 'Vorgehensweise: Verwenden von Arrays in C++ / CLI | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 14eb98f485dc60974253e85086bb25531de7105d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 865416872855be19f4848587e51edf8bfbbdb299
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138776"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213004"
 ---
 # <a name="how-to-use-arrays-in-ccli"></a>Gewusst wie: Verwenden von Arrays in C++/CLI
-Dieser Artikel beschreibt, wie Arrays in C + c++ / CLI.  
+Dieser Artikel beschreibt, wie Arrays in C++ / CLI.  
   
 ## <a name="single-dimension-arrays"></a>Eindimensionale arrays  
- Im folgende Beispiel wird gezeigt, wie eindimensionale Arrays von Verweistypen, Wert und systemeigenen Zeigertypen erstellt wird. Es zeigt auch, wie ein eindimensionales Array aus einer Funktion zurückgeben und eine eindimensionale Arrays an eine Funktion als Argument übergeben.  
+ Das folgende Beispiel zeigt, wie eindimensionale Arrays von Verweis, Wert und systemeigenen Zeigertypen erstellt wird. Es zeigt auch, wie Sie ein eindimensionales Array aus einer Funktion zurückgeben und wie Sie ein eindimensionales Array als Argument an eine Funktion übergeben.  
   
 ```cpp  
 // mcppv2_sdarrays.cpp  
@@ -160,7 +160,7 @@ MyStruct1[0] = 40
 MyStruct1[1] = 41  
 ```  
   
- Im folgenden Beispiel wird gezeigt, wie aggregierten Initialisierung auf verwalteten Arrays eindimensionale ausführen wird.  
+ Im folgenden Beispiel veranschaulicht die aggregierten Initialisierung für eindimensionale verwalteten Arrays ausführen.  
   
 ```cpp  
 // mcppv2_sdarrays_aggregate_init.cpp  
@@ -213,7 +213,7 @@ IntArray[1, 0] = 11
 IntArray[1, 1] = 11  
 ```  
   
- Dieses Beispiel zeigt, wie auf ein verwaltetes Array von mehrdimensionale aggregierten Initialisierung ausgeführt:  
+ Dieses Beispiel zeigt, wie aggregierten Initialisierung auf ein Array mit mehreren verwalteten ausgeführt wird:  
   
 ```cpp  
 // mcppv2_mdarrays_aggregate_initialization.cpp  
@@ -258,7 +258,7 @@ int main() {
 ```  
   
 ## <a name="jagged-arrays"></a>Verzweigte Arrays  
- In diesem Abschnitt wird gezeigt, wie zum Erstellen von eindimensionale Arrays von verwalteten Arrays von Verweistypen, Wert und systemeigenen Zeigertypen wird. Es zeigt auch, wie ein eindimensionales Array von verwalteten Arrays aus einer Funktion zurückgeben und eine eindimensionale Arrays an eine Funktion als Argument übergeben.  
+ In diesem Abschnitt veranschaulicht, wie eindimensionale Arrays aus verwalteten Arrays der Verweis, Wert und systemeigener Zeiger-Typen zu erstellen. Es zeigt auch, wie Sie ein eindimensionales Array aus verwalteten Arrays aus einer Funktion zurückgeben und wie Sie ein eindimensionales Array als Argument an eine Funktion übergeben.  
   
 ```cpp  
 // mcppv2_array_of_arrays.cpp  
@@ -461,7 +461,7 @@ MyClass0[1] = 1
 ```  
   
 ## <a name="managed-arrays-as-template-type-parameters"></a>Verwaltete Arrays als Vorlagentypparameter  
- Dieses Beispiel zeigt, wie ein verwaltetes Array als Parameter an eine Vorlage zu verwenden:  
+ Dieses Beispiel zeigt, wie Sie ein verwaltetes Array als Parameter an eine Vorlage zu verwenden:  
   
 ```cpp  
 // mcppv2_template_type_params.cpp  
@@ -490,7 +490,7 @@ Return Code: 0
 ```  
   
 ## <a name="typedefs-for-managed-arrays"></a>Typdefinitionen für verwaltete arrays  
- Dieses Beispiel zeigt, wie eine Typedef für ein verwaltetes Array getroffen:  
+ Dieses Beispiel zeigt, wie Sie eine Typedef für ein verwaltetes Array:  
   
 ```cpp  
 // mcppv2_typedef_arrays.cpp  
@@ -508,7 +508,7 @@ int main() {
 ## <a name="sorting-arrays"></a>Sortieren von arrays  
  Im Gegensatz zum standardmäßigen C++-Arrays sind verwaltete Arrays implizit eine Array-Basisklasse abgeleitet aus denen sie die gemeinsames Verhalten erben. Ein Beispiel ist die `Sort` -Methode, die verwendet werden kann, um die Elemente in jedem Array zu sortieren.  
   
- Für Arrays, die grundlegende systeminterne Typen enthalten, rufen Sie die `Sort` Methode. Sie können die Sortierkriterien überschreiben, und dies ist erforderlich, wenn für Arrays mit komplexen Typen sortiert werden soll. In diesem Fall muss der Arrayelementtyp implementieren die [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) Methode.  
+ Für Arrays, die grundlegende systeminterne Typen enthalten, können Sie Aufrufen der `Sort` Methode. Sie können die Sortierkriterien überschreiben, und dies so ist erforderlich, wenn für Arrays von komplexen Typen sortiert werden soll. In diesem Fall muss der Elementtyp des Arrays implementieren die [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) Methode.  
   
 ```cpp  
 // array_sort.cpp  
@@ -524,9 +524,9 @@ int main() {
 ```  
   
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>Sortieren von Arrays anhand benutzerdefinierte Kriterien  
- Zum Sortieren von Arrays, die grundlegende systeminterne Typen enthalten, rufen Sie einfach die `Array::Sort` Methode. Allerdings zum Sortieren-Arrays, die komplexe Typen enthalten, oder Überschreiben der Standardeinstellung Sortierkriterien überschreiben die [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) Methode.  
+ Zum Sortieren von Arrays, die grundlegende systeminterne Typen enthalten, rufen Sie einfach die `Array::Sort` Methode. Jedoch an Sort-Arrays, die komplexe Typen enthalten, oder überschreiben die Standard-Sortierkriterien, überschreiben die [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) Methode.  
   
- Im folgenden Beispiel eine Struktur mit dem Namen `Element` stammt aus <xref:System.IComparable>, und geschrieben werden, geben Sie eine <xref:System.IComparable.CompareTo%2A> Methode, die den Durchschnitt von zwei ganzen Zahlen als Sortierkriterium verwendet.  
+ Im folgenden Beispiel ist eine Struktur mit dem Namen `Element` ergibt sich aus <xref:System.IComparable>, und geben Sie einen <xref:System.IComparable.CompareTo%2A> Methode, die den Durchschnitt von zwei ganzen Zahlen als Sortierkriterium verwendet.  
   
 ```cpp  
 using namespace System;  
@@ -571,7 +571,7 @@ int main() {
 ```  
   
 ## <a name="array-covariance"></a>Array-Kovarianz  
- Wenn Reference-Klasse D, die direkte oder indirekte Basisklasse B vorhanden ist, kann ein Array vom Typ D eine Arrayvariable Typ b zugewiesen werden  
+ Wenn Reference-Klasse D, die direkte oder indirekte Basisklasse B verfügt, kann ein Array vom Typ D eine Array-Variable des Typs b zugewiesen werden  
   
 ```cpp  
 // clr_array_covariance.cpp  
@@ -584,9 +584,9 @@ int main() {
 }  
 ```  
   
- Zuweisung zu einem Arrayelement soll so beschaffen sein zuweisungskompatibel mit dem dynamischen Typ des Arrays. Bewirkt, dass eine Zuweisung zu einem Arrayelement, das einen inkompatiblen Typ verfügt `System::ArrayTypeMismatchException` ausgelöst wird.  
+ Eine Zuweisung zu einem Arrayelement muss zuweisungskompatibel sein mit dem dynamischen Typ des Arrays. Bewirkt, dass eine Zuweisung zu einem Arrayelement, das einen inkompatiblen Typ verfügt `System::ArrayTypeMismatchException` ausgelöst wird.  
   
- Array-Kovarianz gilt nicht für Arrays Werttyps-Klasse. Z. B. Arrays von Int32 können nicht auf Objekt konvertiert werden ^ auch nicht mittels Boxing-Arrays.  
+ Array-Kovarianz gilt nicht für Arrays vom Typ des Wert-Klasse. Z. B. Arrays von Int32-Objekt konvertiert werden können nicht ^ Arrays, auch nicht mittels Boxing.  
   
 ```cpp  
 // clr_array_covariance2.cpp  

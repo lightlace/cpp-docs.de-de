@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29bf1c8265a0d92200cda2704b750dfd8db3d6f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 78d846db4080c780bfa72fca52b7c9f6868edc2f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885639"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195335"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread-Klasse
 Diese Klasse einen Arbeitsthread erstellt oder verwendet eine vorhandene, wartet auf eine oder mehrere Kernel-Objekt-Handles und führt eine angegebene Client-Funktion aus, wenn einem der Handles signalisiert wird.  
@@ -232,7 +232,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
  Gibt S_OK bei Erfolg oder einen HRESULT-Fehler bei einem Fehler zurück.  
   
 ### <a name="remarks"></a>Hinweise  
- Wenn das Handle entfernt wird [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) wird für das zugeordnete Objekt, das übergeben wurde, aufgerufen werden [AddHandle](#addhandle). Wenn dieser Aufruf fehlschlägt, `CWorkerThread` rufen die Windows ["CloseHandle"](http://msdn.microsoft.com/library/windows/desktop/ms724211) Funktion auf den Ziehpunkt.  
+ Wenn das Handle entfernt wird [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) wird für das zugeordnete Objekt, das übergeben wurde, aufgerufen werden [AddHandle](#addhandle). Wenn dieser Aufruf fehlschlägt, `CWorkerThread` rufen die Windows ["CloseHandle"](https://msdn.microsoft.com/library/windows/desktop/ms724211) Funktion auf den Ziehpunkt.  
   
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  Rufen Sie diese Methode, um den Arbeitsthread zu schließen.  

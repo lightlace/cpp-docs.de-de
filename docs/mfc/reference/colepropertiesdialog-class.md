@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c32aed9d50e0575893c99a9552c74e6e491ecb9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1c44abc596f5338ad82b49bc9761abfc5bb26a1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853019"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216201"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog-Klasse
 Kapselt das allgemeine Windows-OLE-Dialogfeld "Objekteigenschaften".  
@@ -153,10 +153,10 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Rückgabewert  
  IDOK oder IDCANCEL, wenn erfolgreich; andernfalls 0. IDOK und IDCANCEL sind Konstanten, die angeben, ob der Benutzer die Schaltfläche "OK" oder "Abbrechen" aktiviert.  
   
- Wenn IDCANCEL zurückgegeben wird, können Sie die Windows aufrufen [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) Funktion, um zu bestimmen, ob ein Fehler aufgetreten ist.  
+ Wenn IDCANCEL zurückgegeben wird, können Sie die Windows aufrufen [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) Funktion, um zu bestimmen, ob ein Fehler aufgetreten ist.  
   
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp  
- Eine Struktur des Typs [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297), mit der Registerkarte Allgemein im Dialogfeld Eigenschaften für das OLE-Objekts initialisieren.  
+ Eine Struktur des Typs [OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa), mit der Registerkarte Allgemein im Dialogfeld Eigenschaften für das OLE-Objekts initialisieren.  
   
 ```  
 OLEUIGNRLPROPS m_gp;  
@@ -168,7 +168,7 @@ OLEUIGNRLPROPS m_gp;
  Weitere Informationen zu den `OLEUIGNRLPROPS` Struktur, finden Sie im Windows SDK.  
   
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp  
- Eine Struktur des Typs [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735)verwendet, um die Link-Seite des Dialogfelds Eigenschaften für das OLE-Objekts zu initialisieren.  
+ Eine Struktur des Typs [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)verwendet, um die Link-Seite des Dialogfelds Eigenschaften für das OLE-Objekts zu initialisieren.  
   
 ```  
 OLEUILINKPROPS m_lp;  
@@ -180,7 +180,7 @@ OLEUILINKPROPS m_lp;
  Weitere Informationen zu den `OLEUILINKPROPS` Struktur, finden Sie im Windows SDK.  
   
 ##  <a name="m_op"></a>  COlePropertiesDialog::m_op  
- Eine Struktur des Typs [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199)verwendet, um das Dialogfeld für allgemeine Eigenschaften für das OLE-Objekts initialisieren.  
+ Eine Struktur des Typs [OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa)verwendet, um das Dialogfeld für allgemeine Eigenschaften für das OLE-Objekts initialisieren.  
   
 ```  
 OLEUIOBJECTPROPS m_op;  
@@ -189,10 +189,10 @@ OLEUIOBJECTPROPS m_op;
 ### <a name="remarks"></a>Hinweise  
  Diese Struktur enthält Elemente für die Allgemein, links und Ansicht-Seiten zu initialisieren.  
   
- Weitere Informationen finden Sie unter den OLEUIOBJECTPROPS und [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) Strukturen im Windows SDK.  
+ Weitere Informationen finden Sie unter den OLEUIOBJECTPROPS und [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa) Strukturen im Windows SDK.  
   
 ##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh  
- Eine Struktur des Typs [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546), zu speichern, deren Mitglieder die Merkmale des Dialog-Objekts.  
+ Eine Struktur des Typs [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2), zu speichern, deren Mitglieder die Merkmale des Dialog-Objekts.  
   
 ```  
 PROPSHEETHEADER m_psh;  
@@ -206,7 +206,7 @@ PROPSHEETHEADER m_psh;
  Weitere Informationen zu den `PROPSHEETHEADER` Struktur, finden Sie im Windows SDK.  
   
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp  
- Eine Struktur des Typs [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751)verwendet, um die Ansichtsseite im Dialogfeld Eigenschaften für das OLE-Objekts initialisieren.  
+ Eine Struktur des Typs [OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa)verwendet, um die Ansichtsseite im Dialogfeld Eigenschaften für das OLE-Objekts initialisieren.  
   
 ```  
 OLEUIVIEWPROPS m_vp;  

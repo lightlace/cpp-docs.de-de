@@ -1,5 +1,5 @@
 ---
-title: 'Automatisierungsserver: Probleme mit der Objektlebensdauer | Microsoft Docs'
+title: 'Automatisierungsserver: Probleme mit der Objektlebensdauer | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e27812c20a64f5472c29a66298bcdec30bf4ef2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c139bbde88d3d0389c3426fb71ade837ee5e654
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341799"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215209"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Automatisierungsserver: Probleme mit der Objektlebensdauer
-Wenn ein Automatisierungsclient erstellt oder ein OLE-Element aktiviert, übergibt der Server, der diesem Objekt einen Zeiger an dem Client. Der Client stellt einen Verweis auf das Objekt durch einen Aufruf an die OLE-Funktion her [IUnknown:: AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). Dieser Verweis gültig ist, bis der Client ruft [IUnknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). (Clientanwendungen, die geschrieben werden, mit der Microsoft Foundation Class Library-OLE-Klassen müssen diese Aufrufe nicht; das Framework ermöglicht dies.) Das OLE-System und der Server selbst möglicherweise Verweise auf das Objekt festlegen. Ein Server sollte kein Objekt zu zerstören als externe Verweise auf das Objekt gültig bleiben.  
+Wenn ein Automatisierungsclient erstellt oder ein OLE-Element aktiviert, übergibt der Server auf dieses Objekt einen Zeiger an dem Client. Der Client richtet einen Verweis auf das Objekt durch einen Aufruf an die OLE-Funktion [IUnknown:: AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref). Dieser Verweis gültig ist, bis der Client ruft [IUnknown:: Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release). (Clientanwendungen, die geschrieben werden, mit der Microsoft Foundation Class Library-OLE-Klassen müssen diese Aufrufe nicht; das Framework erfolgt.) Das OLE-System und der Server selbst können Verweise auf das Objekt festgelegt werden. Ein Server sollte nicht Zerstören eines Objekts als externe Verweise auf das Objekt weiterhin gültig bleiben.  
   
- Das Framework verwaltet eine interne Anzahl die Anzahl der Verweise auf alle Serverobjekt, das von abgeleiteten [CCmdTarget](../mfc/reference/ccmdtarget-class.md). Diese Anzahl wird aktualisiert, wenn ein Automatisierungsclient oder andere Entität hinzufügt oder einen Verweis auf das Objekt frei.  
+ Das Framework verwaltet eine interne Anzahl die Anzahl der Verweise auf alle Serverobjekt, das von abgeleiteten [CCmdTarget](../mfc/reference/ccmdtarget-class.md). Diese Anzahl wird aktualisiert, wenn ein Automation-Client oder eine andere Entität hinzufügt, oder gibt einen Verweis auf das Objekt frei.  
   
- Wenn der Verweiszähler 0 erreicht, wird das Framework Ruft die virtuelle Funktion [CCmdTarget::OnFinalRelease](../mfc/reference/ccmdtarget-class.md#onfinalrelease). Ruft die standardmäßige Implementierung dieser Funktion die **löschen** Operator, um das Objekt gelöscht werden.  
+ Wenn der Verweiszähler 0 ist, wird das Framework Ruft die virtuelle Funktion [CCmdTarget::OnFinalRelease](../mfc/reference/ccmdtarget-class.md#onfinalrelease). Ruft die standardmäßige Implementierung dieser Funktion die **löschen** Operator, um das Objekt gelöscht werden.  
   
- Die Microsoft Foundation Class-Bibliothek bietet zusätzliche Funktionen zum Steuern des Anwendungsverhaltens aus, wenn externe Clients Verweise auf die Anwendung Objekte haben. Neben der Wartung Anzahl der Verweise auf jedes Objekt, Wartung von Servern eine globale Anzahl von aktiven Objekten. Die globalen Funktionen [AfxOleLockApp](../mfc/reference/application-control.md#afxolelockapp) und [AfxOleUnlockApp](../mfc/reference/application-control.md#afxoleunlockapp) die Anwendung die Anzahl von aktiven Objekten zu aktualisieren. Wenn diese Zahl ungleich NULL ist, wird die Anwendung nicht beendet, wenn der Benutzer aus dem Systemmenü oder über das Menü Datei beenden schließen auswählt. Stattdessen ist im Hauptfenster der Anwendung ausgeblendet (jedoch nicht zerstört) bis alle anstehenden Anforderungen abgeschlossen wurden. In der Regel `AfxOleLockApp` und `AfxOleUnlockApp` werden aufgerufen, Klassen, die Unterstützung der Automatisierung in den Konstruktoren und Destruktoren.  
+ Die Microsoft Foundation Class-Bibliothek bietet zusätzliche Funktionen zum Steuern des Anwendungsverhaltens aus, wenn externe Clients Verweise auf Objekte von der Anwendung. Neben der verwalten die Anzahl der Verweise auf jedes Objekt, Wartung von Servern eine globale Anzahl von aktiven Objekten. Die globalen Funktionen [AfxOleLockApp](../mfc/reference/application-control.md#afxolelockapp) und [AfxOleUnlockApp](../mfc/reference/application-control.md#afxoleunlockapp) der Anwendung die Anzahl von aktiven Objekten zu aktualisieren. Wenn diese Zahl ungleich NULL ist, wird die Anwendung nicht beendet, wenn der Benutzer schließen aus dem Systemmenü oder beenden aus dem Menü "Datei" auswählt. Stattdessen ist das Hauptfenster der Anwendung ausgeblendet (jedoch nicht zerstört) bis alle ausstehenden Client-Anforderungen abgeschlossen wurden. In der Regel `AfxOleLockApp` und `AfxOleUnlockApp` heißen in den Konstruktoren und Destruktoren, bzw. von Klassen, die Unterstützung der Automatisierung.  
   
- In einigen Fällen erzwingen Umständen den Server, beenden, während ein Client noch einen Verweis auf ein Objekt hat. Z. B. möglicherweise eine Ressource, von der der Server abhängig ist, nicht verfügbar, wenn der Server einen Fehler auftritt. Der Benutzer kann auch Serverdokument schließen, die Objekte enthält, auf die anderen Anwendungen Verweise haben.  
+ In einigen Fällen erzwingen Umstände den Server beendet, während ein Client noch einen Verweis auf ein Objekt enthält. Beispielsweise kann eine Ressource, von der die Server abhängig ist, nicht verfügbar ist, tritt ein Fehler auf den Server verursacht werden. Der Benutzer kann auch Serverdokument schließen, die Objekte enthält, auf die anderen Anwendungen Verweise haben.  
   
- In der Windows-SDK finden Sie unter `IUnknown::AddRef` und `IUnknown::Release`.  
+ Im Windows SDK finden Sie unter `IUnknown::AddRef` und `IUnknown::Release`.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Automatisierungsserver](../mfc/automation-servers.md)   

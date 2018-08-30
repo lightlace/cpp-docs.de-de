@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d6dffb4a4b0b4f5ef3a373cf2dcd0d93d1bd12
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e29d664824a01c0e2a0c0e738368f8d025a239ee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613200"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202156"
 ---
 # <a name="build-system-changes"></a>Buildsystemänderungen
 Das MSBuild-System wird verwendet, um Visual C++-Projekte zu erstellen. In Visual Studio 2008 und früheren Versionen wurde jedoch das VCBuild-System verwendet. Bestimmte Dateitypen und die Konzepte, die von VCBuild abhing nicht vorhanden, oder im aktuellen System unterschiedlich dargestellt werden. Dieses Dokument erläutert die Unterschiede im aktuellen Buildsystem.  
@@ -55,7 +55,7 @@ Das MSBuild-System wird verwendet, um Visual C++-Projekte zu erstellen. In Visua
   
  In der aktuellen Version wird die Vererbung durch Angeben des Werts einer Eigenschaft als die Verkettung von ein oder mehrere Literalwerte und Eigenschaftenmakros unterstützt. Die **$(Inherit)** und **$(NoInherit)** Makros werden nicht unterstützt.  
   
- Im folgenden Beispiel wird eine durch Semikolons getrennte Liste an eine Eigenschaft auf einer Eigenschaftenseite zugewiesen. Die Liste enthält die Verkettung von den  *\<Wert >* Literal und der Wert von der `MyProperty` -Eigenschaft, die mithilfe der Makro-Schreibweise erfolgt, **$(***MyProperty***)** .  
+ Im folgenden Beispiel wird eine durch Semikolons getrennte Liste an eine Eigenschaft auf einer Eigenschaftenseite zugewiesen. Die Liste enthält die Verkettung von den  *\<Wert >* Literal und der Wert von der `MyProperty` -Eigenschaft, die mithilfe der Makro-Schreibweise erfolgt, **$(**  <em>MyProperty</em>**)**.  
   
 ```  
 Property=<value>;$(MyProperty)  

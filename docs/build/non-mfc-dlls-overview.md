@@ -15,17 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 037f6d7bc80956536a7098ee67275425c41a2f68
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8acb1db66e4f6cc78ca79403aea782a936bff494
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613218"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199463"
 ---
 # <a name="non-mfc-dlls-overview"></a>MFC-fremde DLLs: Übersicht
 Eine MFC - fremde DLL ist eine DLL, die keine MFC intern verwendet, und die exportierten Funktionen in der DLL können von entweder MFC oder MFC-fremde ausführbare Dateien aufgerufen werden. Funktionen werden in der Regel aus einer MFC - fremde DLL über die standard-C-Schnittstelle exportiert.  
   
- Weitere Informationen über MFC - fremde DLLs finden Sie unter [Dynamic Link Libraries](http://msdn.microsoft.com/library/windows/desktop/ms682589) im Windows SDK.  
+ Weitere Informationen über MFC - fremde DLLs finden Sie unter [Dynamic Link Libraries](https://msdn.microsoft.com/library/windows/desktop/ms682589) im Windows SDK.  
   
 ## <a name="what-do-you-want-to-do"></a>Wie möchten Sie vorgehen?  
   

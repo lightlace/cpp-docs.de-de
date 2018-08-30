@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51933ac5aeb3c14a25b3989809aab2e09686b9a3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 90972e39bbad812f820452816ff3df982174539f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539264"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202975"
 ---
 # <a name="cusertool-class"></a>CUserTool-Klasse
 Ein Benutzertool ist ein Menüelement, das eine externe Anwendung ausführt. Die **Tools** auf der Registerkarte die **anpassen** (Dialogfeld) ( [CMFCToolBarsCustomizeDialog-Klasse](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) ermöglicht es dem Benutzer, Benutzertools hinzuzufügen, und geben den Namen, den Befehl, die Argumente und ursprüngliche Verzeichnis für jedes benutzertool.  
@@ -159,7 +159,7 @@ virtual BOOL Invoke();
  Ungleich NULL, wenn der Befehl erfolgreich ausgeführt wurde; andernfalls 0.  
   
 ### <a name="remarks"></a>Hinweise  
- Aufrufe [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) zum Ausführen eines Befehls mit dem benutzertool verknüpft ist. Die Funktion schlägt fehl, wenn der Befehl leer ist oder wenn [ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153) ein Fehler auftritt.  
+ Aufrufe [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) zum Ausführen eines Befehls mit dem benutzertool verknüpft ist. Die Funktion schlägt fehl, wenn der Befehl leer ist oder wenn [ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) ein Fehler auftritt.  
   
 ##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  Lädt das Standardsymbol für ein Tool an.  

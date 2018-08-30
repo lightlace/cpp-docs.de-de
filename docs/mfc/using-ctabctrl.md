@@ -1,5 +1,5 @@
 ---
-title: Verwenden von CTabCtrl | Microsoft Docs
+title: Verwenden von CTabCtrl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fd34d88a035e4180eff955238004a18d9af09a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9918bfa73249812a55ce2b8f5718a53ee9cec087
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383681"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217921"
 ---
 # <a name="using-ctabctrl"></a>Verwenden von CTabCtrl
-Ein "Registerkarten-Steuerelement" ist analog den Trennblättern in einem Notizbuch oder die mit der Bezeichnung Ordner in eine CAB-Datei. Verwenden Sie das Registerkarten-Steuerelement, dargestellt durch die Klasse [CTabCtrl](../mfc/reference/ctabctrl-class.md), um mehrere Seiten oder Steuerelemente für einem Benutzer jeweils einzeln, in einem Format anzeigen, die eine Peer- oder eine logische Beziehung zwischen den einzelnen Seiten vorschlägt.  
+Ein "Registerkarten-Steuerelement" entspricht etwa einem Trennblatt in einem Notizbuch oder die bezeichnete Ordner eine CAB-Datei. Verwenden Sie das Registerkarten-Steuerelement, dargestellt durch die Klasse [CTabCtrl](../mfc/reference/ctabctrl-class.md), um mehrere Seiten oder Steuerelemente für einem Benutzer einzeln, in einem Format angezeigt, das ein Peer oder eine logische Beziehung zwischen den einzelnen Seiten vorschlägt.  
   
- Weitere Informationen über Registerkarten-Steuerelemente finden Sie unter [Registerkarten-Steuerelemente](http://msdn.microsoft.com/library/windows/desktop/bb760550) im Windows SDK.  
+ Weitere Informationen zu den Registerkarten-Steuerelementen, finden Sie unter [Registerkarten-Steuerelementen](/windows/desktop/Controls/tab-controls) im Windows SDK.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Was möchten Sie mehr erfahren  
   

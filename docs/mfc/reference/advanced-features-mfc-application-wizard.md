@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cfea0f5dc62e9e7aee4ec5372464ed83bced15
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: c5a3746116679ba8cfee086b42359cce8003b282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42538891"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198125"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Erweiterte Features, MFC-Anwendungs-Assistent
 Unter diesem Thema werden die Optionen für zusätzliche Funktionen für Ihre Anwendung aufgeführt, zum Beispiel eine Hilfefunktion, Druckunterstützung usw. Legen Sie in den einzelnen Abschnitten zusätzliche Unterstützungsoptionen für die erweiterten Funktionen fest.  
@@ -47,17 +47,17 @@ Unter diesem Thema werden die Optionen für zusätzliche Funktionen für Ihre An
  Unterstützt Windows-Sockets, mit denen Sie Anwendungen schreiben können, die über TCP/IP-Netzwerke kommunizieren.  
   
  **Active Accessibility**  
- Bietet Unterstützung für [IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466) zu [CWnd](../../mfc/reference/cwnd-class.md)-abgeleiteten Klassen, die Sie zum Anpassen der Benutzeroberfläche für eine bessere Interaktion mit barrierefreiheitsclients verwenden können.  
+ Bietet Unterstützung für [IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) zu [CWnd](../../mfc/reference/cwnd-class.md)-abgeleiteten Klassen, die Sie zum Anpassen der Benutzeroberfläche für eine bessere Interaktion mit barrierefreiheitsclients verwenden können.  
   
  **Allgemeines Steuerelementmanifest**  
  Standardmäßig aktiviert. Erstellt ein Anwendungsmanifest zur Aktivierung der im Lieferumfang von Microsoft Windows XP und von neueren Betriebssystemen enthaltenen DLL für allgemeine Steuerelemente.  
   
  Version 6 der DLL für allgemeine Steuerelemente aktualisiert die Vorläuferversion eines allgemeinen Steuerelements, das von einer vorhandenen Anwendung verwendet wird, nicht automatisch. Um die DLL für allgemeine Steuerelemente, Version 6, verwenden zu können, müssen Sie ein Anwendungsmanifest erstellen, das Ihre Anwendung anweist, die neue DLL zu laden. Die DLL für allgemeine Steuerelemente unterstützt auch Windows XP-Designs.  
   
- Durch ein Anwendungsmanifest können auch andere, von Ihrer Anwendung benötigte DLLs und Versionen festgelegt werden. Weitere Informationen zu Anwendungsmanifesten finden Sie unter [isolierte Anwendungen und Seite-an-Seite-Assemblys](http://msdn.microsoft.com/library/dd408052) im Windows SDK.  
+ Durch ein Anwendungsmanifest können auch andere, von Ihrer Anwendung benötigte DLLs und Versionen festgelegt werden. Weitere Informationen zu Anwendungsmanifesten finden Sie unter [isolierte Anwendungen und Seite-an-Seite-Assemblys](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) im Windows SDK.  
   
  **Unterstützung für Neustart-Manager**  
- Bietet Unterstützung für die [Windows-Neustart-Manager](/windows/desktop/RstMgr/using-restart-manager). Dieses Video zeigt, wie Sie mit den Neustart-Manager von MFC: [How Do I: Use the New Restart Manager](http://msdn.microsoft.com/vstudio/ee886407).  
+ Bietet Unterstützung für die [Windows-Neustart-Manager](/windows/desktop/RstMgr/using-restart-manager). Dieses Video zeigt, wie Sie mit den Neustart-Manager von MFC: [How Do I: Use the New Restart Manager](https://msdn.microsoft.com/vstudio/ee886407).  
   
  **Erweiterte Framebereiche**  
  |Option|Beschreibung|  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 873527b76e9194fb4b38ee2f5598cf07028e0449
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6a98c9016281a67211a41d1c63fcb9886a0b3c35
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591510"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222509"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -40,7 +40,7 @@ Wenn das C++-Attribut **dispinterface** einer Schnittstelle vorangeht, wird die 
 
 Solange Sie keine Basisklasse festlegen, wird eine Verteilschnittstelle von `IDispatch`abgeleitet. Sie müssen eine [ID](../windows/id.md) für die Member einer Verteilschnittstelle angeben.
 
-Das Beispiel für die Verwendung von [dispinterface](http://msdn.microsoft.com/library/windows/desktop/aa366802) in der MIDL-Dokumentation:
+Das Beispiel für die Verwendung [Dispinterface](/windows/desktop/Midl/dispinterface) in der MIDL-Dokumentation:
 
 ```cpp
 dispinterface helloPro
