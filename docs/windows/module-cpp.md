@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e25f33e882769219200e6b9a6f8a0949a01d661
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a119ebcccea3881d7b595e0581e23f53c656b91c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593356"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200217"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -73,7 +73,7 @@ Die Versionsnummer, die Sie dem Bibliotheksblock zuweisen möchten. Der Standard
 Eindeutige ID für die Bibliothek. Wenn Sie diesen Parameter weglassen, wird automatisch eine ID für die Bibliothek generiert. Müssen Sie möglicherweise Abrufen der *Uuid* des Blocks Bibliothek, die Sie mithilfe des Bezeichners können **__uuidof (** *Libraryname* **)**.
 
 *lcid*  
-Der Lokalisierungsparameter. Weitere Informationen finden Sie unter [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) .
+Der Lokalisierungsparameter. Finden Sie unter [Lcid](/windows/desktop/Midl/lcid) für Weitere Informationen.
 
 *Steuerelement* (optional)  
 Gibt an, dass alle Co-Klassen in der Bibliothek Steuerelemente sind.
@@ -82,7 +82,7 @@ Gibt an, dass alle Co-Klassen in der Bibliothek Steuerelemente sind.
 Gibt die Typbibliothek an.
 
 *Helpstringdll* (optional)  
-Gibt den Namen der DLL-Datei zum Ausführen der Suche nach einem Dokument an. Weitere Informationen finden Sie unter [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) .
+Gibt den Namen der DLL-Datei zum Ausführen der Suche nach einem Dokument an. Finden Sie unter [Helpstringdll](/windows/desktop/Midl/helpstringdll) für Weitere Informationen.
 
 *HelpFile* (optional)  
 Der Name des der **Hilfe** -Datei für die Typbibliothek.
@@ -94,10 +94,10 @@ Die **Hilfe-ID** für diese Typbibliothek.
 Weitere Informationen finden Sie unter [helpstringcontext](../windows/helpstringcontext.md) .
 
 *Ausgeblendete* (optional)  
-Verhindert, dass die gesamte Bibliothek angezeigt wird. Dies ist für die Verwendung mit Steuerelementen vorgesehen. Hosts müssen eine neue Typbibliothek erstellen, die das Steuerelement mit erweiterten Eigenschaften umschließt. Weitere Informationen finden Sie unter [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL-Attribut.
+Verhindert, dass die gesamte Bibliothek angezeigt wird. Dies ist für die Verwendung mit Steuerelementen vorgesehen. Hosts müssen eine neue Typbibliothek erstellen, die das Steuerelement mit erweiterten Eigenschaften umschließt. Finden Sie unter den [ausgeblendeten](/windows/desktop/Midl/hidden) MIDL-Attribut für Weitere Informationen.
 
 *Eingeschränkte* (optional)  
-Mitglieder der Bibliothek können nicht willkürlich aufgerufen werden. Weitere Informationen finden Sie unter [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL-Attribut.
+Mitglieder der Bibliothek können nicht willkürlich aufgerufen werden. Finden Sie unter den [eingeschränkten](/windows/desktop/Midl/restricted) MIDL-Attribut für Weitere Informationen.
 
 *benutzerdefinierte* (optional)  
 Ein oder mehrere Attribute; dies ist vergleichbar mit dem [custom](../windows/custom-cpp.md) -Attribut. Der erste Parameter für *benutzerdefinierte* ist die GUID des Attributs. Zum Beispiel:
@@ -124,15 +124,15 @@ Wenn dieses Attribut in einem Projekt verwendet wird, das ATL verwendet, ändert
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) dient als Basisklasse und als für einen COM-Server erforderliche Standard-DLL-Einstiegspunkte. Diese Einstiegspunkte sind [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583), [DllRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](http://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](http://msdn.microsoft.com/library/windows/desktop/ms690368)und [DllGetClassObject](http://msdn.microsoft.com/library/windows/desktop/dd797891).
+   [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) dient als Basisklasse und als für einen COM-Server erforderliche Standard-DLL-Einstiegspunkte. Diese Einstiegspunkte sind [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457), ["DllCanUnloadNow"](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), und [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) dient als Basisklasse und ausführbarer Standardeinstiegspunkt [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) dient als Basisklasse und ausführbarer Standardeinstiegspunkt [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) dient als Basisklasse und ausführbarer Standardeinstiegspunkt [WinMain](http://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) dient als Basisklasse und ausführbarer Standardeinstiegspunkt [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **unspecified**
 
@@ -193,7 +193,7 @@ Weitere Informationen finden Sie unter [Attributkontexte](../windows/attribute-c
 [Eigenständige Attribute](../windows/stand-alone-attributes.md)  
 [typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
 [usesgetlasterror](../windows/usesgetlasterror.md)  
-[Bibliothek](http://msdn.microsoft.com/library/windows/desktop/aa367069)  
+[Bibliothek](/windows/desktop/Midl/library)  
 [helpcontext](../windows/helpcontext.md)  
 [helpstring](../windows/helpstring.md)  
 [helpfile](../windows/helpfile.md)  

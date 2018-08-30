@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b914e950fd94435768c355f327d3d48a653e0d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78e3d346bca087a6fd855e6428e6a53779cd7355
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407144"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202515"
 ---
 # <a name="setnewmode"></a>_set_new_mode
 
-Legt einen neuen handlermodus für **"malloc"**.
+Legt einen neuen handlermodus für **Malloc**.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,15 +54,15 @@ int _set_new_mode( int newhandlermode );
 ### <a name="parameters"></a>Parameter
 
 *newhandlermode*<br/>
-Neuen handlermodus für **"malloc"**; gültige Wert ist 0 oder 1.
+Neuen handlermodus für **Malloc**; gültiger Wert ist 0 oder 1.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den vorherigen Handler Modus Satz für **"malloc"**. Ein Rückgabewert Wert 1 gibt an, auf Fehler beim Zuweisen von Arbeitsspeicher, **"malloc"** vorher: die neue Handlerroutine; ein Rückgabewert von 0 gibt an, dass dies nicht der Fall. Wenn die *Newhandlermode* Argument stimmt nicht mit 0 oder 1, wird-1 zurückgegeben.
+Gibt die vorheriger Handler festgelegt für **Malloc**. Ein Rückgabewert 1 gibt an, dass bei einem Fehler bei der speicherbelegung **Malloc** vorher: die neue Handlerroutine; der Rückgabewert 0 gibt an, dass dies nicht der Fall. Wenn die *Newhandlermode* Argument ist nicht gleich 0 oder 1, wird-1 zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die C++-Funktion **_set_new_mode** legt den neuen Handlermodus für [malloc](malloc.md) fest. Der neue handlermodus gibt an, ob bei einem Fehler **"malloc"** ist, rufen Sie die neue Handlerroutine Isolationstransaktionen gemäß [_set_new_handler](set-new-handler.md). Standardmäßig **"malloc"** auf bei einem speicherbelegungsfehler nicht die neue Handlerroutine aufgerufen. Sie können dieses Standardverhalten überschreiben, damit, wenn **"malloc"** Arbeitsspeicher nicht belegen kann **"malloc"** die neue Handlerroutine genauso aufruft wie der **neue** Operator ist. Wenn dieser aus demselben Grund fehlschlägt. Weitere Informationen finden Sie unter den Operatoren [new](../../cpp/new-operator-cpp.md) und [delete](../../cpp/delete-operator-cpp.md) in der *C++-Sprachreferenz*. Um den Standardwert zu überschreiben, rufen Sie
+Die C++-Funktion **_set_new_mode** legt den neuen Handlermodus für [malloc](malloc.md) fest. Der neue handlermodus gibt an, ob bei einem Fehler **Malloc** besteht darin, rufen Sie die neue Handlerroutine mit [_set_new_handler](set-new-handler.md). In der Standardeinstellung **Malloc** Ruft die neue Handlerroutine nicht bei einem Fehler, um Speicher zu belegen. Sie können dieses Standardverhalten überschreiben, damit, wenn **"malloc"** ein Fehler auftritt, bei der speicherbelegung **"malloc"** die neue Handlerroutine aufruft, in der gleichen Weise wie die **neue** Operator ist Wenn dieser aus demselben Grund fehlschlägt. Weitere Informationen finden Sie unter den Operatoren [new](../../cpp/new-operator-cpp.md) und [delete](../../cpp/delete-operator-cpp.md) in der *C++-Sprachreferenz*. Um den Standardwert zu überschreiben, rufen Sie
 
 ```cpp
 _set_new_mode(1);
@@ -70,11 +70,11 @@ _set_new_mode(1);
 
 rechtzeitig im Programm auf, oder stellen Sie eine Verknüpfung mit Newmode.obj (siehe [Link Options (Linkoptionen)](../../c-runtime-library/link-options.md)) her.
 
-Diese Funktion überprüft seine Parameter. Wenn *Newhandlermode* wird alles außer 0 oder 1, um die Funktion wird den Handler für ungültige Parameter, als aufgerufen im beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, **_ *** Set_new_mode** gibt-1 zurück und legt **Errno** auf **EINVAL**.
+Diese Funktion überprüft seine Parameter. Wenn *Newhandlermode* wird alles außer 0 oder 1, um die Funktion den Handler für ungültige Parameter, als aufgerufen im beschrieben [Parametervalidierung](../../c-runtime-library/parameter-validation.md). Wenn die weitere Ausführung zugelassen wird, um den Vorgang fortzusetzen, <strong>_set_new_mode</strong> -1 zurück und setzt **Errno** zu `EINVAL`.
 
 ## <a name="requirements"></a>Anforderungen
 
-|Routine|Erforderlicher Header|
+|-Routine zurückgegebener Wert|Erforderlicher Header|
 |-------------|---------------------|
 |**_set_new_mode**|\<new.h>|
 

@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318951b5216513c20cdb21ac4a4fcfff9c3e0ac7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42545809"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199920"
 ---
 # <a name="styles-used-by-mfc"></a>Von MFC verwendete Stile  
   
@@ -308,7 +308,7 @@ In MFC sind die folgenden Stile für Kombinationsfelder verfügbar. Weitere Info
   
 ## <a name="edit-styles"></a>  Bearbeiten von Stilen  
   
-Bearbeiten Sie Stile anwenden, um [CEdit-Klasse](../../mfc/reference/cedit-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CEdit::Create](../../mfc/reference/cedit-class.md#create). Weitere Informationen über Stile der Edit-Steuerelemente in Windows finden Sie unter [bearbeiten Stile von Listensteuerelementen (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Bearbeiten Sie Stile anwenden, um [CEdit-Klasse](../../mfc/reference/cedit-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CEdit::Create](../../mfc/reference/cedit-class.md#create). Weitere Informationen über Stile der Edit-Steuerelemente in Windows finden Sie unter [bearbeiten Stile von Listensteuerelementen (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
 |Stil|Beschreibung|  
 |-----------|-----------------|  
@@ -403,7 +403,7 @@ Die folgenden meldungsfeldstile sind verfügbar.
   
 ## <a name="scroll-bar-styles"></a> Stile des Schiebeleisten Steuerelements  
   
-Stile des Schiebeleisten Steuerelements gelten für [CScrollBar-Klasse](../../mfc/reference/cscrollbar-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Weitere Informationen zu Bildlaufleiste Stile in Windows-Steuerelemente, finden Sie unter [Scroll-Leiste Stile von Listensteuerelementen (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Stile des Schiebeleisten Steuerelements gelten für [CScrollBar-Klasse](../../mfc/reference/cscrollbar-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Weitere Informationen zu Bildlaufleiste Stile in Windows-Steuerelemente, finden Sie unter [Scroll-Leiste Stile von Listensteuerelementen (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533).  
   
 |Stil|Beschreibung|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ Stile des Schiebeleisten Steuerelements gelten für [CScrollBar-Klasse](../../mf
   
 ## <a name="static-styles"></a> Statische Stile  
   
-Statische Stile anwenden, um [CStatic-Klasse](../../mfc/reference/cstatic-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Weitere Informationen zu Stilen der statisches Steuerelement in Windows finden Sie unter [statische Stile von Listensteuerelementen (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Statische Stile anwenden, um [CStatic-Klasse](../../mfc/reference/cstatic-class.md) Objekte. Geben Sie eine Kombination der Formate in der *DwStyle* Parameter [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Weitere Informationen zu Stilen der statisches Steuerelement in Windows finden Sie unter [statische Stile von Listensteuerelementen (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773).  
   
 |Stil|Beschreibung|  
 |-----------|-----------------|  
@@ -498,7 +498,7 @@ Erweiterte Fensterstile gelten für [CWnd-Klasse](../../mfc/reference/cwnd-class
 |WS_EX_CONTEXTHELP|Schließt ein Fragezeichen in der Titelleiste des Fensters. Wenn der Benutzer auf das Fragezeichen klickt, wird der Cursor zu einem Fragezeichen geändert. Wenn der Benutzer klicken Sie dann ein untergeordnetes Fenster klickt, empfängt das untergeordnete Element eine WM_HELP-Meldung.|  
 |WS_EX_CONTROLPARENT|Ermöglicht dem Benutzer, unter den untergeordneten Fenstern des Fensters zu navigieren, mit der TAB-Taste.|  
 |WS_EX_DLGMODALFRAME|Bezeichnet ein Fenster mit einem doppelten Rahmen, die mit einer Titelleiste, wenn Sie das WS_CAPTION-Style-Flag im angeben (optional) erstellt werden kann die *DwStyle* Parameter.|  
-|WS_EX_LAYERED|Das Fenster ist eine [überlappendes Fenster](http://msdn.microsoft.com/library/ms632599.aspx#layered). Dieses Format kann nicht verwendet werden, wenn das Fenster hat eine [-Klassenstil](http://msdn.microsoft.com/library/ms633574.aspx#class_styles) CS_OWNDC oder CS_CLASSDC. Microsoft Windows 8 unterstützt styl WS_EX_LAYERED für untergeordnete Fenster, jedoch, in denen frühere Windows-Versionen es nur für Fenster der obersten Ebene unterstützen.|  
+|WS_EX_LAYERED|Das Fenster ist eine [überlappendes Fenster](/windows/desktop/winmsg/window-features). Dieses Format kann nicht verwendet werden, wenn das Fenster hat eine [-Klassenstil](/windows/desktop/winmsg/about-window-classes) CS_OWNDC oder CS_CLASSDC. Microsoft Windows 8 unterstützt styl WS_EX_LAYERED für untergeordnete Fenster, jedoch, in denen frühere Windows-Versionen es nur für Fenster der obersten Ebene unterstützen.|  
 |WS_EX_LEFT|Bietet allgemeine Links ausgerichtete Eigenschaften an. Dies ist die Standardeinstellung.|  
 |WS_EX_LEFTSCROLLBAR|Platziert eine vertikale Bildlaufleiste auf der linken Seite des Clientbereichs.|  
 |WS_EX_LTRREADING|Zeigt den Fenstertext mit Links-nach-rechts-leserichtungseigenschaften. Dies ist die Standardeinstellung.|  
@@ -524,14 +524,14 @@ Erweiterte Fensterstile gelten für [CWnd-Klasse](../../mfc/reference/cwnd-class
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)  
+[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
+[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
 [Button-Stile (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
 [Kombinationsfeldformate (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Bearbeiten der Stile von Listensteuerelementen (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)  
+[Bearbeiten der Stile von Listensteuerelementen (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
 [Auflisten von Feld-Stile (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
 [MessageBox-Funktion (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[Stile des Schiebeleisten-Steuerelement Steuerelements (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Stile für statische Steuerelemente (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[Stile des Schiebeleisten-Steuerelement Steuerelements (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
+[Stile für statische Steuerelemente (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
 [Window-Stile (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
 [Erweiterte Fensterstile (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  

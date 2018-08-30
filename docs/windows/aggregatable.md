@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 66c85999e70e505176700ecaac69b75048ce2422
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a9d65f77126ceb4268d41610c6d5fe3a07968d02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595241"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200567"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ Ein Parameter, um anzugeben, wenn das COM-Objekt aggregiert werden können:
 
 ## <a name="remarks"></a>Hinweise
 
-Die **aggregierbaren** C++-Attribut hat die gleiche Funktionalität wie die [aggregierbaren](http://msdn.microsoft.com/library/windows/desktop/aa366721) MIDL-Attribut. Dies bedeutet, dass der Compiler übergibt die **aggregierbaren** Attribut mithilfe der generierten IDL-Datei.
+Die **aggregierbaren** C++-Attribut hat die gleiche Funktionalität wie die [aggregierbaren](/windows/desktop/Midl/aggregatable) MIDL-Attribut. Dies bedeutet, dass der Compiler übergibt die **aggregierbaren** Attribut mithilfe der generierten IDL-Datei.
 
 Dieses Attribut erfordert, dass die Attribute [coclass](../windows/coclass.md), [progid](../windows/progid.md), oder [vi_progid](../windows/vi-progid.md) (oder ein anderes Attribut, das eines der genannten impliziert) auch auf demselben Element angewendet werden. Wenn ein einzelnes Attribut verwendet wird, werden die anderen beiden automatisch angewendet. Z. B. wenn `progid` angewendet wird, `vi_progid` und `coclass` werden ebenfalls angewendet.
 
@@ -97,4 +97,4 @@ Weitere Informationen zu den Attributkontexten finden Sie unter [Attributkontext
 [IDL-Attribute](../windows/idl-attributes.md)  
 [Klassenattribute](../windows/class-attributes.md)  
 [typedef-, enum-, union- und struct-Attribute](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Aggregation](http://msdn.microsoft.com/library/windows/desktop/ms686558)  
+[Aggregation](/windows/desktop/com/aggregation)  
